@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ChowForms.ImportsAlt
 import GroundTheory.HeightsAndTheta.Heights.VerticalDivisors.StatementsChartPointTrdeg
 set_option maxSynthPendingDepth 1

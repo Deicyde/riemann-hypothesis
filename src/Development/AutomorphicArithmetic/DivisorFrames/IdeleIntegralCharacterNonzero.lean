@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocOpInfMul
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilActionMapsSchwartz
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MulRealAdEqZero
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegrableIdelesPowerDecay
 import Development.AutomorphicArithmetic.LocalEmbeddings.ConeBDefs
 open scoped TensorProduct NNReal Matrix

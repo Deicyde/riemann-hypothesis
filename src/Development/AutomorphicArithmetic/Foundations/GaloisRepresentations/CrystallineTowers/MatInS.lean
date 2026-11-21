@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.CrystallineTowers.LocTower
+import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.SplitsSelfOfIso
 
 noncomputable section
 

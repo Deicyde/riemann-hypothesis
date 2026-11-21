@@ -1,6 +1,7 @@
-import Mathlib
-import ReciprocityTheory.L2DbarEstimates.PlurisubharmonicCharts.FamilyLeCoords
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.EnormPowLeInvMeasureMulLintegralBall
+import ReciprocityTheory.L2DbarEstimates.IsLocalHomeomorph
 
 set_option autoImplicit false
 

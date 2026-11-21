@@ -1,10 +1,12 @@
-import Mathlib
-import ReciprocityTheory.DualLattices.CotangentSurjective
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.IsTight
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.StepOrderRes
-import ReciprocityTheory.DualLattices.PowMemCarrier
 import ReciprocityTheory.DualLattices.UpSmith
-import ReciprocityTheory.DualLattices.MemOfSumSingleEqZero
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 

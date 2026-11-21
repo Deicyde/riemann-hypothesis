@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.TwistedFactors.IntegralUnitBaseChange.Development
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LocalFiniteAlgebraJacobsonRadical
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsUnitOneAddJacobsonTensor
@@ -185,7 +185,7 @@ theorem main : PositivityTheory.Rg.Tf.Loc.N1 → ∀ (O O' R : Type) [CommRing O
     induction t using TensorProduct.induction_on with
     | zero => simp only [map_zero]
     | tmul k w =>
-      simp only [Algebra.TensorProduct.map_tmul, AlgHom.id_apply, AlgEquiv.toAlgHom_eq_coe,
+      simp only [Algebra.TensorProduct.map_tmul, AlgHom.id_apply,
         AlgEquiv.coe_algHom, tensorProduct_congr_refl_pow_tmul_lemma]
     | add t₁ t₂ h₁ h₂ => simp only [map_add, h₁, h₂]
   refine ⟨hunit.unit, ?_⟩

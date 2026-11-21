@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.MopBase
 
 open Matrix IsLocalRing UpperTheory.V.U3 UpperTheory.V.Alg UpperTheory.V.HV UpperTheory.V.U3.Mop

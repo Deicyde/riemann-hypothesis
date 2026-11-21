@@ -1,7 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.BasePointMemDomain
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.HeadJ
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.MemLevelZeroOfMemGroup
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.WCellMemOmPlus
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.HeadPictureEmptyWord
 
 open Matrix MeasureTheory
 open scoped ComplexConjugate

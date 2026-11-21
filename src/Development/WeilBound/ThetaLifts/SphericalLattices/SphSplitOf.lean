@@ -1,4 +1,12 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.SphericalLattices.SplitLoc
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalLatticeIndicatorFourier
+import Development.WeilBound.CoreStatements.CompactAveragingSplitting.EigenvectorLifting.PfDict
+import Development.WeilBound.CoreStatements.LocallyConstantCoinvariants.ExistsExtZ
+import Development.WeilBound.CoreStatements.LocallyConstantCoinvariants.ExistsFull
+import Development.WeilBound.CoreStatements.LocallyConstantCoinvariants.PfDict
+import Development.WeilBound.CoreStatements.LocallyConstantCoinvariants.PfSurj
 
 noncomputable section
 

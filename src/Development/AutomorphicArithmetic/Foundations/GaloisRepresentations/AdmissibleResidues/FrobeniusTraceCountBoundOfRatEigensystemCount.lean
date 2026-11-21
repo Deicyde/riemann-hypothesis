@@ -1,16 +1,9 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.AdmissibleResidues.WinDefs
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.Classifies
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.CongruenceNumberRankThree
 import Development.AutomorphicArithmetic.AutomorphicVarieties.BuildingsResidueChars.ExistsIntEqProdOfGaloisPermutedIntegral
 import Development.AutomorphicArithmetic.AutomorphicVarieties.BuildingsResidueChars.AdicNormProdLeProdOfInjectiveClasses
-import Development.AutomorphicArithmetic.AutomorphicVarieties.BuildingsResidueChars.MapTraceEqSumRootsOfCharpolyMap
-import Development.AutomorphicArithmetic.AutomorphicVarieties.BuildingsResidueChars.FrobeniusPowResDegPlaceNorm
-import Development.AutomorphicArithmetic.AutomorphicVarieties.BuildingsResidueChars.AdmissibleOfNewformAttached
-import Development.AutomorphicArithmetic.AutomorphicVarieties.BuildingsResidueChars.BlockConjugateRankThreeRep
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LadicCharacterRestrictCmFieldEqCyclotomicPow
 import Development.AutomorphicArithmetic.AutomorphicVarieties.BuildingsResidueChars.LevelTwistCyclotomicPow
 import Development.AutomorphicArithmetic.AutomorphicVarieties.BuildingsResidueChars.IsIrrTwistAndRepIsoOfTwistRepIso
-import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.CrystallineBaseChange.CqStmt
 
 open UpperTheory.V UpperTheory.V.Af UpperTheory.V.Br
 
@@ -528,7 +521,7 @@ theorem rootSum :
       Multiset.map (fun x => x ^ f i) (Multiset.map σ B) =
         Multiset.map σ (Multiset.map (fun x => x ^ f i) B) := by
     intro i σ B
-    simp [Multiset.map_map, Function.comp_def, map_pow]
+    simp [Multiset.map_map, map_pow]
   have hfib : ∀ i (s : (D i).S),
       Finite {B : Multiset ℂ // Multiset.map (fun x => x ^ f i) B = (D i).β s} ∧
         Nat.card {B : Multiset ℂ // Multiset.map (fun x => x ^ f i) B = (D i).β s} ≤ 2 ^ n := by
@@ -559,8 +552,8 @@ theorem rootSum :
   · intro σ
     choose e he using fun i => (D i).conj σ
     let mE : Multiset ℂ ≃ Multiset ℂ :=
-      ⟨Multiset.map σ, Multiset.map σ.symm, fun B => by simp [Multiset.map_map, Function.comp_def],
-        fun B => by simp [Multiset.map_map, Function.comp_def]⟩
+      ⟨Multiset.map σ, Multiset.map σ.symm, fun B => by simp [Multiset.map_map],
+        fun B => by simp [Multiset.map_map]⟩
     refine ⟨Equiv.sigmaCongrRight fun i => Equiv.prodCongr (Equiv.subtypeEquiv
       (Equiv.prodCongr (e i) mE) (fun x => ?_)) (Equiv.refl Bool), fun x => rfl⟩
     rcases x with ⟨s, B⟩

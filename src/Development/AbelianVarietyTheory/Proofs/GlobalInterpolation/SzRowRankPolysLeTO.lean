@@ -1,6 +1,4 @@
-import Mathlib
-import Formalism.SharpRestriction.InertJacobiLevels.AsmIface
-import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.PairRowIffQdRows
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ExplicitRanksBasicBoundsLargeScale
 
 open Formalism.BasicNotions Formalism.BasicNotions.LevelStarExponents Formalism.MainNotions Formalism.MainNotions.Inhab GlobalTheory.EX NumberField

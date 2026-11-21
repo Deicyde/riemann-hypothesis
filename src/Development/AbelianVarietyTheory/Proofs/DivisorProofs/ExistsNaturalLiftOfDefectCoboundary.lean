@@ -1,14 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.PrimitiveStructureSheafDegTwoVanish
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.AbelianUnobstructed
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.AbelianHodgeDeRham
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.BijectiveCechDeRhamComparisonDegreeOne
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MulEqZeroOfMemMap
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSemilinearLiftOfProjective
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AlgHomLiftsSqZeroClassifiedByDifferentialsStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AugmentationSigmaMapBasicPropertiesStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AugmentationSigmaMapNaturalStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsDifferenceDerivationOfLiftsAddSwapUniqueStatement
 open CategoryTheory AlgebraicGeometry KaehlerDifferential MonoidalCategory CartesianMonoidalCategory MonObj
 open scoped TensorProduct
 open ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory.CatCoh GlobalTheory.Cris GlobalTheory.CechDR GlobalTheory.LiftSys GlobalTheory.Obs
@@ -70,7 +63,7 @@ theorem exists_natLift_of_defect : ∀ (R R₀ : Type) [CommRing R] [CommRing R�
     have hn : mp (OAff s₀) (n.G.map a) (L.p _ b) = L.p _ (L.ρ (n.G.map a) b) := (L.nat (n.G.map a) b).symm
     rw [hn] at h0
     have h1 := (hκ T T' a).der b
-    simp only [α, AlgHom.coe_comp, Function.comp_apply] at h1
+    simp only [AlgHom.coe_comp, Function.comp_apply] at h1
     rw [hψv, hψv, map_add]
     linear_combination h0 - h1
 

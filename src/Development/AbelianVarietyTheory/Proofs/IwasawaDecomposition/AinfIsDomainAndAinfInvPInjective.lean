@@ -1,6 +1,7 @@
-import Mathlib
-import Formalism.LocalRingCardinality.AdicCompletionLocal.LocTied
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsCrisP
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.Kernel
+import Formalism.LocalRingCardinality.AdicCompletionLocal.InstIsAdicCompleteOCSpanSingletonSetCast
+import Formalism.SharpRestriction.LevelLetterCocycles.DataNLoc
 open Formalism Formalism.BasicNotions Formalism.BasicNotions.Loc GlobalTheory.MemLoc
 open scoped Formalism.Per
 

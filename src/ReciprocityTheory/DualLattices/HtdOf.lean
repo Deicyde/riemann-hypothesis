@@ -1,9 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.DualLattices.EvLatStatement
 import ReciprocityTheory.DualLattices.EvHopfStatement
 import ReciprocityTheory.DualLattices.EvActStatement
 import ReciprocityTheory.DualLattices.EvHtStatement
-import ReciprocityTheory.DualLattices.PSerFrobStatement
-import ReciprocityTheory.DualLattices.WFrobStatement
 import ReciprocityTheory.DualLattices.EvBtStatement
 import ReciprocityTheory.DualLattices.EvenTwoEvaluationSign
 import ReciprocityTheory.DualLattices.EvCotStatement

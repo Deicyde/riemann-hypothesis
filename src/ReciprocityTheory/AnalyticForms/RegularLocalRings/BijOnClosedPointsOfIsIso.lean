@@ -1,5 +1,5 @@
-import ReciprocityTheory.AnalyticForms.RegularLocalRings.StalkLoc
-import ReciprocityTheory.AnalyticForms.RegularLocalRings.FromSpecResidueFieldAppTopIso
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.SecHomSurjective
 
 namespace ReciprocityTheory.AnForm.R

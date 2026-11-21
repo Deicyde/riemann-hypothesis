@@ -1,4 +1,5 @@
-import Development.AutomorphicArithmetic.Foundations.IwahoriReduction.LangPolynomials.FixedIntegersIsUnitOfNotMemPrimeSpan
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.IwahoriReduction.LangPolynomials.DvdOfNormLe
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.MainNotions.N GlobalTheory.GalOfCusp UpperTheory.V UpperTheory.V.Af UpperTheory.V.HV GlobalTheory.Ord2 GlobalTheory.KZ GlobalTheory.Col UpperTheory.Kd.C7
 
@@ -218,7 +219,7 @@ private theorem coef_norm (c : Coef l) {x : Qbar l} (hx : x ∈ c.O) : ‖x‖ �
   obtain ⟨⟨β⟩, h⟩ := pBasEx l c
   have h1 := (h β).1
   have e := congrArg (fun y : c.O => (y : Qbar l)) (β.e.sum_repr ⟨x, hx⟩)
-  simp only [AddSubmonoidClass.coe_finset_sum, SetLike.val_smul, Algebra.smul_def] at e
+  simp only [AddSubmonoidClass.coe_finset_sum, Algebra.smul_def] at e
   rw [← e]
   refine IsUltrametricDist.norm_sum_le_of_forall_le_of_nonneg zero_le_one fun i _ => ?_
   have h2 : ‖((β.e i : c.O) : Qbar l)‖ ≤ 1 := h1 i

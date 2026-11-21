@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.DistinguishedUnitIdeals.FrobeniusDiffBijective
 import Formalism.DistinguishedUnitIdeals.WordConsts
 import Formalism.DistinguishedUnitIdeals.LemmaCFull

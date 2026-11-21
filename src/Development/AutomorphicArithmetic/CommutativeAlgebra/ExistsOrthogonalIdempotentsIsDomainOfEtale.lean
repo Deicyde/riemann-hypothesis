@@ -1,6 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.GalMapMul
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAlgClosedFractionRingOfMonicPolynomialsHaveRoo
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.Smooth.IntegralClosure
+import Mathlib.RingTheory.TotallySplit
 noncomputable section
 
 open TensorProduct Polynomial

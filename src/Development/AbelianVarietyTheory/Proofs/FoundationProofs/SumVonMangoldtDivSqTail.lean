@@ -1,7 +1,8 @@
-import Mathlib
-import Formalism.GL3MeanSquares.PrimeCountAsymptoticInProgressions
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.PrimePowerVonMangoldtSumBound
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.GeomIccOneLeTwoMulSub
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
 
 open Finset ArithmeticFunction
 

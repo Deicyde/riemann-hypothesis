@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.SmallFam
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.SmallSecTensTriv
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsAlgClosedBaseChange
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsHermitianRepresentativeIntegerCombinationStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RepresentedBundleSectionsRationalFunctionsDict
 open CategoryTheory AlgebraicGeometry TopologicalSpace Filter Topology

@@ -1,9 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.RealGroups.DiscreteSeries.DiscreteSeriesClassification.DiscreteSeriesExhaustion.MatrixCoefficientDecay.InfinitesimalCharacterPaths.TensDecomp
-import Formalism.RealPlaceAnalysis.ThirdArithmeticHolds
-import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.QmRowForm
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.ConjQdet
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.CapelliLowestGelfandConj
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalFiniteIdem
 
 noncomputable section
 

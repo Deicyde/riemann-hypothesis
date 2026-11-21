@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.OneLeHtE
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.EventuallyNormFinLeOne
 
 open NumberField IsDedekindDomain GlobalTheory.AdelicU
 open scoped TensorProduct NNReal

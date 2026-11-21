@@ -1,5 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Lemmata.GeneralBFactLeftMore.Imports
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 namespace ReciprocityTheory.AnForm.R.JacobianCriterionAlt
 

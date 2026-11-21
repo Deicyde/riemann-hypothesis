@@ -1,4 +1,5 @@
-import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.IntegrableOnOfPeriodic
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.InfFam
 import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.EqZeroOfMemFactorial
 import Formalism.LocalToGlobal.IndefiniteReal.PHeisThC
@@ -6,6 +7,7 @@ import ReciprocityTheory.AdeleApproximation.AdeleIntA
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IntegerSubgroupIntersection.IsOpenIntSub
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IntegerSubgroupIntersection.Imports
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IntegerSubgroupIntersection.IntInterAlt
+import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.StdCharExists
 
 noncomputable section
 

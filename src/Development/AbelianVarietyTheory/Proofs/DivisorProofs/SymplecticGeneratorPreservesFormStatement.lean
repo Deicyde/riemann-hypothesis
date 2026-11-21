@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SymplecticGeneratorPreservesForm
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RealisedOne
 
 open scoped Matrix
 set_option maxHeartbeats 1000000 in

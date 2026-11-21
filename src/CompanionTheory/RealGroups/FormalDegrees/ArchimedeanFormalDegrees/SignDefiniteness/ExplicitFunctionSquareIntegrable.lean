@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.RealGroups.FormalDegrees.ArchimedeanFormalDegrees.HlamStable
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.HaarMirror
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.LholClmEventually
+import CompanionTheory.RealGroups.DiscreteSeries.DiscreteSeriesClassification.ExplicitFunctionSquareIntegrable
 
 noncomputable section
 

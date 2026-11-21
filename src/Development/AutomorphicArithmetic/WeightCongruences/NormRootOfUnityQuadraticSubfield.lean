@@ -1,5 +1,13 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.ReprMem
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.Data.Rat.Star
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open NumberField IntermediateField
 

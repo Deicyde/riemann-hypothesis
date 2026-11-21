@@ -1,6 +1,10 @@
-import Formalism.LocalToGlobal.Columns.RecLevelAsm
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.RecLevelLocP
 import Formalism.LocalToGlobal.HermitianForms.IsLocBasis
+import Formalism.LocalToGlobal.Columns.RecLevelCls
+import Formalism.LocalToGlobal.Columns.RecLevelLocF
+import Formalism.LocalToGlobal.Columns.RecLevelTop
 
 open NumberField IsDedekindDomain Matrix
 open scoped TensorProduct

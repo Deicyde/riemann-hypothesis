@@ -1,6 +1,5 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.SegreChartProjObjects
-import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StPtsIntegralSegreChartProj
+import BuildAid.Leniency.Open
+import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.SegreChartObjects
 set_option maxSynthPendingDepth 1
 
 noncomputable section

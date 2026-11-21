@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.GaussianQuadFormRationalCoordsHermitian
-import Development.AbelianVarietyTheory.Definitions.SpanningFamilies.IsHeatZero
 open Matrix Complex NumberField GlobalTheory.SW
 open ReciprocityTheory.ChartRestriction.G.FD (cc herm)
 open scoped ComplexConjugate ComplexOrder Real

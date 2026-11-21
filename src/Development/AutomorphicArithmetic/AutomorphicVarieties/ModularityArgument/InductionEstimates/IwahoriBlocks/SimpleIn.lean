@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.InductionEstimates.IwahoriHeckeInjectivity.HeckeInj
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.BaseChangeDefiniteUnitary
 
 noncomputable section
 

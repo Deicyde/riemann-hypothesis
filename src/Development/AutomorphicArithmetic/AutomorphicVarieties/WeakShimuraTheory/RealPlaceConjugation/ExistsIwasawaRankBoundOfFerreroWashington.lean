@@ -1,11 +1,12 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.RbUVal
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PublishedTheorems.FerreroWashington
 import Development.AutomorphicArithmetic.AutomorphicVarieties.QuadraticExtensions.CardClDual
 import Development.AutomorphicArithmetic.AutomorphicVarieties.QuadraticExtensions.MuIff
-import Development.AutomorphicArithmetic.AutomorphicVarieties.QuadraticExtensions.LevChar
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.KummerTheory.PullOnto
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.KummerTheory.GalOfCyc
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.KummerTheory.FnCycMap
+import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.ResMapBijective
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual Formalism.HC ReciprocityTheory.Gal IsLocalRing UpperTheory.V.Base UpperTheory.V.HV UpperTheory.V.GradeZeroInterpolatingElement UpperTheory.V.Ws UpperTheory.V.Two
 open scoped Classical
@@ -67,7 +68,7 @@ theorem UpperTheory.V.Ws.exists_iwasawaRank_bound_of_ferreroWashington :
     unfold ReciprocityTheory.Gal.cycMod ReciprocityTheory.Gal.cycZ at h
     unfold UpperTheory.V.Two.galChar
     rw [Units.ext_iff] at h ⊢
-    simp only [MonoidHom.comp_apply, Units.coe_map, MonoidHom.coe_coe] at h
+    simp only [MonoidHom.comp_apply, Units.coe_map] at h
     erw [cyclotomicCharacter.toZModPow] at h
     exact h
   have hμ : ∃ ζ : K, IsPrimitiveRoot ζ (if l = 2 then 4 else l) := by

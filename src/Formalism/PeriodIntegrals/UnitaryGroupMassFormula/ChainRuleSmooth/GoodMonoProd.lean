@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ChainRuleSmooth.LossBoundNonneg
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
 
 open Matrix
 open scoped ComplexConjugate ContDiff

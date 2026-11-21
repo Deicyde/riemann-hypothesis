@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.UPartBot
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsAdmOnOfFiniteDimensional
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.IsHilbertSchmidtOfFiniteDimensional
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open MeasureTheory Matrix Formalism.REAL Formalism.MainNotions.S Formalism.L2.Theta GlobalTheory.FlagMeas GlobalTheory.RealInd GlobalTheory.OpTrace GlobalTheory.LeviFactor
 open GlobalTheory.AutomorphicL2Unitary (IsTopIrreducible IsIrredSubrep)
 open scoped InnerProductSpace
@@ -20,7 +21,7 @@ theorem memLp_matrixCoeff_span
     | zero => simpa using (MemLp.zero : MemLp (fun _ : G => (0 : ℂ)) q μ)
     | add y z _ _ hy hz =>
       have := hy.add hz
-      simp only [map_add, ContinuousLinearMap.add_apply, inner_add_right]
+      simp only [map_add, inner_add_right]
       exact this
     | smul c y _ hy =>
       have := hy.const_mul c

@@ -1,4 +1,7 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.IsAlgClosureField
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.TrivialOnInertiaOfUnr
+import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.DirichletPrimeToLPartMulLPowerPart
+import Development.AutomorphicArithmetic.AutomorphicVarieties.WeilGroupCharacters.UniversalOrdinaryDeterminantRing
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual Formalism.HC ReciprocityTheory.Gal IsLocalRing Polynomial UpperTheory.V UpperTheory.V.Base UpperTheory.V.Alg UpperTheory.V.HV UpperTheory.V.GradeZeroInterpolatingElement UpperTheory.V.Ws GlobalTheory.GalOfCusp
 
@@ -8,7 +11,7 @@ theorem UpperTheory.V.Ws.auChi :
   refine ⟨?_, ?_⟩
   · ext g
     simp only [W.pushCh, chiO, cycBar, MonoidHom.coe_comp, Function.comp_apply, Units.coe_map,
-      MonoidHom.coe_coe, RingHom.coe_comp]
+      MonoidHom.coe_coe]
     exact IsScalarTower.algebraMap_apply ℤ_[l] ℚ_[l] (PadicAlgCl l) _
   · have h1 : Continuous (algebraMap ℚ_[l] (Qbar l)) := continuous_algebraMap ℚ_[l] (Qbar l)
     have h2 : Continuous (PadicInt.Coe.ringHom (p := l)) := continuous_subtype_val

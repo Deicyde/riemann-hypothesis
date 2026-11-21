@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.HodgeSurjectivity.FormLaws
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsBaseChangeEquiv
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExteriorPowerSplit

@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.CartanFactorisation.TensMax
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 

@@ -1,8 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.DiagMod
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsUnitMulPowOfKummerVanishesOnInertiaCurve
 import Development.AbelianVarietyTheory.Definitions.Foundations.HahnPowOrderLeadingCoeff
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.EqOneOfPowEqOne
+import Development.AbelianVarietyTheory.Definitions.Foundations.Letter
 
 open scoped MatrixGroups TensorProduct
 open Polynomial

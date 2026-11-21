@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.DualWeylCoordinates.DualWeylProofs.ExtendedColumns
+import Formalism.ThetaLogCoordinates.DualWeylCoordinates.StripDataTensorColumnFamilies
 
 noncomputable section
 

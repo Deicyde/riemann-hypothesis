@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.AdelicUnitaryHaarMeasure
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ArchimedeanUnitaryGroupStabilisersUnimodular
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.LcscAdelicUnitaryGroup
 
 namespace GlobalTheory.LocalUnitaryUnimod
 

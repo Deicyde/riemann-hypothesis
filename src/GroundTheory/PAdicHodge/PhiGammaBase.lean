@@ -1,9 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.PAdicHodge.AInfGalois
-import GroundTheory.PAdicHodge.AInfXi
 import GroundTheory.PAdicHodge.TiltAlgClosed
-import GroundTheory.PAdicHodge.TiltAlgebra
-import GroundTheory.PAdicHodge.TateCpTwist
 set_option maxSynthPendingDepth 1
 
 noncomputable section

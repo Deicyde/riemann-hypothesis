@@ -1,8 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementTL
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.PairOperatorCommute
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.InvMemOfKappa
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LevelFormSesquilinearFiniteClass
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.IsAdmissibleSplittingCharPairMulTwist
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.DiagonalTransferAction
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.SignedCoordinateEqSignSmul
 
 namespace Formalism.FourierDecayAlt.P.TLB
 

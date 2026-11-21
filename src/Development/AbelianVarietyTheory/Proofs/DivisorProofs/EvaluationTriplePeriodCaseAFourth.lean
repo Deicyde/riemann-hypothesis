@@ -1,11 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousOfMemSchA
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAStabilizerThetaReal
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAStabilizerThetaFinite
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAStabilizerThetaGlobal
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LintegralIdeleMajorantFinite
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LintegralBoundLtTop
 
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -256,7 +254,7 @@ theorem dom : GlobalTheory.ThK.KP → ∀ (F E : Type) [Field F] [NumberField F]
             mul_le_mul h1 ((hMφ j _).trans (le_abs_self _)) (norm_nonneg _) (by positivity)
         _ = _ := by ring
     · rw [hUz k hk l hl]
-      simp only [map_zero, Pi.zero_apply, norm_zero, zero_mul]
+      simp only [Pi.zero_apply, norm_zero, zero_mul]
       exact mul_nonneg hC₀0 (mul_nonneg ENNReal.toReal_nonneg hA)
 
 end GlobalTheory.ConeDom

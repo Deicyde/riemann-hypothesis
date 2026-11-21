@@ -1,7 +1,7 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.GeneralizedMeasures.HeckeFinAlt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.SphericalHeckeOperators.LocHeckeInert
 import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.LocHeckeSplit
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.TraceFormula.OrbitalIntegrals.BrMain
 import Development.AutomorphicArithmetic.Foundations.Convolution.GeneralizedMeasures.PolyMem
 
 open MeasureTheory NumberField IsDedekindDomain MvPolynomial Filter

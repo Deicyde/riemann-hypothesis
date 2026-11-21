@@ -1,8 +1,6 @@
-import Mathlib
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.AdelicGaussians.UpperRightUnipotentInvariance
-import GroundTheory.AutomorphicForms.ReductionFinite
-import GroundTheory.AutomorphicForms.ReductionMahler
-import GroundTheory.AutomorphicForms.ReductionSiegel
+import BuildAid.Leniency.Open
+import GroundTheory.AutomorphicForms.ReductionHeight
+import GroundTheory.GlobalFields.IdeleGroups.Rational
 
 noncomputable section
 

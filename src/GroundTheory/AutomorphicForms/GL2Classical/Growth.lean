@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.GL2Classical.IsWeightLevelAdelicLift
+import Mathlib.NumberTheory.ModularForms.Bounds
 
 open NumberField Matrix CongruenceSubgroup UpperHalfPlane ModularForm Filter Topology
 open scoped MatrixGroups ModularForm

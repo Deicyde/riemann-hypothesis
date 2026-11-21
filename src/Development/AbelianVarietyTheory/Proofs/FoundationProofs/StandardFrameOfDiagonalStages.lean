@@ -1,11 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsReframeVStdOfPosDef
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IdentityClassLatticeEqSelfDualFrameLattice
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.DuStarPos
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.AssembleLattice
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HostCmData
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsDiagSpacesNorm
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ConjugateEmbApply
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SpacesNormHasFrame
 
 noncomputable section
 

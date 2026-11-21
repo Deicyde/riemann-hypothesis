@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MemGrassmannianRelationIdealSupMonomialSpan
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.RenVar
 open MvPolynomial NumberField ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open Classical
 

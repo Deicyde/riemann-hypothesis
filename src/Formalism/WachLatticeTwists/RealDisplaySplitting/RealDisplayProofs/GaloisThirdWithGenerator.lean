@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.RealDisplaySplitting.GaloisThirdWithGenerator
 import Formalism.WachLatticeTwists.RealDisplaySplitting.RealDisplayProofs.GaloisTheoremWithGenerator
 import Formalism.WachLatticeTwists.RealClassMaps.RealClassMapProofs.TheoremNFiveRealAllLiftThird

@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.UnipotentBlockColumnIndex
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsRapidInf
-import GroundTheory.GlobalFields.TateThesis.AdelicChar
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ExpoConjOfIsCsd
 
 noncomputable section
 
@@ -21,7 +20,7 @@ theorem posM_apply_of_blkIx {R : Type} [CommRing R] {a r m : ℕ} (x : Unipotent
   simp only [posM, Matrix.sum_apply]
   split_ifs with h
   · rw [Finset.sum_eq_single ⟨(i, j), h⟩]
-    · simp [Matrix.single_apply]
+    · simp
     · intro t _ ht
       rw [Matrix.single_apply, if_neg]
       rintro ⟨h1, h2⟩

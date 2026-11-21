@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsProd
-import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.IsProjOverCompOfIsClosedImmersion
-import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.IsProjOverIffIsProperAndExistsIsAmpleLB
-import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.EventuallySubsingletonCohTwistZOfIsProjOver
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsFlagModelHermSum
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory NumberField
 open Limits MonoidalCategory CartesianMonoidalCategory GlobalTheory.VB
 open scoped ComplexOrder

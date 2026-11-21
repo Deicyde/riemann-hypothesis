@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RegularRepresentationContinuous
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RwAppend
 open MeasureTheory Matrix Finset Filter Topology
 open scoped ContDiff ComplexConjugate InnerProductSpace ZeroAtInfty
 open PositivityTheory.RgTw (Mat G)

@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.PlaceDegreeData
-import Formalism.SharpRestriction.SmoothDesignExistence.DGamSmooth
 
 noncomputable section
 

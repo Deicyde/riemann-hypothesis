@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsBirationalModelExists
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.IsMultiHomogX
+import Mathlib.RingTheory.LocalProperties.Reduced
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.HilbertSamuel

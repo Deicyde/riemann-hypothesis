@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.IsTopologicalRingAE
-import Development.AbelianVarietyTheory.Counterexamples.HeightSurvey.StarPurelyImaginaryEqNeg
+import Mathlib.Analysis.Complex.Conformal
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Matrix GlobalTheory.FockCompare GlobalTheory.IndefiniteRowSideFullHecke.FockOrthogonalDecomposition
 open scoped TensorProduct ContDiff ComplexOrder
@@ -39,7 +39,7 @@ theorem eq_zero_of_bounded_of_creation_eq {R : Type} [NormedAddCommGroup R] [Nor
     have e1 : L 1 = u := by simp [hL]
     have eI : L Complex.I = -u' := by simp [hL]
     simp only [ContinuousLinearMap.add_apply, ContinuousLinearMap.smul_apply, ContinuousLinearMap.comp_apply,
-      ContinuousLinearMap.sub_apply, e1, eI, hre, him, smul_eq_mul, map_neg, Function.comp_apply,
+      ContinuousLinearMap.sub_apply, e1, eI, hre, him, smul_eq_mul, map_neg,
       Complex.I_re, Complex.I_im, Complex.one_re, Complex.one_im, Complex.ofReal_zero, Complex.ofReal_one]
     generalize Complex.exp _ = E
     rw [sub_eq_iff_eq_add] at e

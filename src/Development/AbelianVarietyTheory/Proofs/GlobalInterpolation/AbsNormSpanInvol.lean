@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.MaxVSpanSingleton
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.BaseLemmas
 
 open NumberField IsDedekindDomain Formalism.L2.Col

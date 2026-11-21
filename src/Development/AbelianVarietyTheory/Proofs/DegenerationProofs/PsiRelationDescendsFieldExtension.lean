@@ -1,8 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsQkPullEquiv
-import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.IsScalarFormTraceForm
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.LineBundleTrivialIsoDescendField
 import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.CorrOfValFieldExtension
+import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.ExistsIsFibreIso
 
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry NumberField
 open scoped CategoryTheory.Obj BigOperators

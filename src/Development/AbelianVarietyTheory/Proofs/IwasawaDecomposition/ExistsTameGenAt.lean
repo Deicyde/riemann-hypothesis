@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.GoodChi
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsTameGenAtOfValuationSubring
 open Formalism.BasicNotions GlobalTheory.Mem GlobalTheory.MemN NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Polynomial
 

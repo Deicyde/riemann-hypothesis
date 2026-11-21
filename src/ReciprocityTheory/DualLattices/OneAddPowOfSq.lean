@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.DualLattices.NsetExpInjectiveSurjective
+import Mathlib.Algebra.Module.StablyFree.Basic
+import ReciprocityTheory.DualLattices.SeriesState
 
 noncomputable section
 

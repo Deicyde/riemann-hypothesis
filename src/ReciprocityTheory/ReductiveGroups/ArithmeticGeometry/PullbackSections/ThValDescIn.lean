@@ -1,5 +1,7 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.ThetaValCSteps
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.FrMapComp
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.ProjectiveLattices.ThGerm
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 set_option autoImplicit false
 

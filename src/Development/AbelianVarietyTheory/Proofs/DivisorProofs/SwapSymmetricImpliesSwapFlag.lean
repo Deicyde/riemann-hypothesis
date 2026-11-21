@@ -1,8 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NontrivialIsomClassInt
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleHermitianMetricGradingStatement
 open NumberField MvPolynomial Filter Topology Formalism.BasicNotions Formalism.MainNotions Formalism.DegreeFormula GlobalTheory.FlagPoly GlobalTheory.Mean4 GlobalTheory.Mean4O GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.CovTest GlobalTheory.Published
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory GlobalTheory.ArInt
@@ -82,7 +78,7 @@ theorem swapFl_of_swap2 : ArCalc → ∀ G, Homog G → Swap2 G → SwapFl G := 
     fin_cases j
     · exact lin_single x
     · exact lin_single y
-    · simp only [hf, hAm, hn', Matrix.cons_val_two, Matrix.tail_cons, Matrix.head_cons]
+    · simp only [hf, hAm, hn']
       congr 1
       funext z
       by_cases hz : z = x ∨ z = y <;> simp [hz]
@@ -94,9 +90,9 @@ theorem swapFl_of_swap2 : ArCalc → ∀ G, Homog G → Swap2 G → SwapFl G := 
   congr 4 <;> funext z
   · rw [Function.update_eq_self, Function.update_eq_self]
   · by_cases h1 : z = x
-    · subst h1; simp [Function.update_apply, hxy, Equiv.swap_apply_left]
+    · subst h1; simp [hxy, Equiv.swap_apply_left]
     · by_cases h2 : z = y
-      · subst h2; simp [Function.update_apply, Equiv.swap_apply_right]
-      · simp [Function.update_apply, h1, h2, Equiv.swap_apply_of_ne_of_ne h1 h2]
+      · subst h2; simp [Equiv.swap_apply_right]
+      · simp [h1, h2, Equiv.swap_apply_of_ne_of_ne h1 h2]
 
 end GlobalTheory.CovTest.SwapFlProof

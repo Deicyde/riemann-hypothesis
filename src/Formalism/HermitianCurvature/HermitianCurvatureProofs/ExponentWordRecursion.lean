@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.DerivativeRulesA1
 
 open Matrix Filter Topology
@@ -81,7 +83,7 @@ lemma op_listSum {b : Bool} {X : Mat k r} (hX : inLie k r X) :
 
 lemma vf_sum (b : Bool) {ι : Type*} (s : Finset ι) (c : ι → ℝ) (Y : ι → Mat k r) (g : Mat k r) :
     vf b (∑ i ∈ s, c i • Y i) g = ∑ i ∈ s, c i • vf b (Y i) g := by
-  cases b <;> simp [vf, mulL, mulR, Finset.sum_mul, Finset.mul_sum, smul_mul_assoc, mul_smul_comm]
+  cases b <;> simp [vf, mulL, mulR, Finset.sum_mul, Finset.mul_sum]
 
 lemma op_expand {H : Mat k r → E} {X g : Mat k r} (b : Bool) (hX : inLie k r X)
     (hH : CkOn ((1 : ℕ) : ℕ∞) (GV k r) H) (hg : g ∈ GV k r) :

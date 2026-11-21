@@ -1,13 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoreConcl
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.LanglandsSquareIntegrable
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ModerateEisensteinHolomorphicDerivative
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoordsSecondKindFormPreservingGroup
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatrixOneParameterGroupEqExpOfContinuous
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ProdOfFnEqSingle
+import Mathlib.Topology.Compactness.DeltaGeneratedSpace
 open scoped TensorProduct NNReal Matrix ContDiff
 open NumberField MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SiegelSet GlobalTheory.EisRes
 open GlobalTheory.Doubling (absE)
@@ -66,7 +63,7 @@ theorem exists_coords_deriv [FiniteDimensional ℝ 𝔸] {S : Set 𝔸} (hc : Is
     refine (hP.mul' h2).congr_fderiv ?_
     ext1 z
     have e1 : (List.ofFn fun i => NormedSpace.exp ((0 : Fin d → ℝ) i • Z i)).prod = 1 := by simp
-    simp [e1, hpc]
+    simp [hpc]
   have hΦ0 : Φ 0 = 1 := by
     show P 0 * NormedSpace.exp (0 - p 0) = 1
     rw [hP0, map_zero, sub_zero, NormedSpace.exp_zero, one_mul]

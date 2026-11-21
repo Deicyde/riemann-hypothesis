@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WirtConst
+import Mathlib.LinearAlgebra.Matrix.Hermitian
 open Matrix GlobalTheory.MatDeriv
 open scoped Topology
 
@@ -26,7 +27,7 @@ theorem dMat_eq_wirt_add_conjTranspose_wirt : ∀ {E : Type} [NormedAddCommGroup
   simp only [wirt, dMat, Matrix.add_apply, Matrix.conjTranspose_apply, Matrix.smul_apply, Matrix.sub_apply,
     Matrix.of_apply, smul_eq_mul, star_mul', star_sub]
   rw [h1, h2]
-  simp only [Complex.star_def, map_mul, map_sub, Complex.conj_conj, Complex.conj_I, map_div₀, map_one, map_ofNat]
+  simp only [Complex.star_def, Complex.conj_conj, Complex.conj_I, map_div₀, map_one, map_ofNat]
   ring
 
 end GlobalTheory.MatDeriv

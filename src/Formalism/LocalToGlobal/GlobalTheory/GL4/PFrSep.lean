@@ -1,6 +1,8 @@
-import Formalism.LocalToGlobal.GlobalTheory.GL4.PFrLoc
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.GL4.PClsTieSep
 import Formalism.LocalToGlobal.GlobalTheory.GL4.PClsTieIdx
+import Formalism.LocalToGlobal.GlobalTheory.GL4.PFrCore
 
 noncomputable section
 
@@ -73,7 +75,7 @@ theorem matOf_mulVec (S : HSpace E) (γ : S.V ≃ₗ[E] S.V) (u : Fin S.rank →
 
 theorem hform_single {n : Type} [Fintype n] [DecidableEq n] (σ : E →+* E) (A : Matrix n n E) (i j : n) :
     hform σ A (Pi.single i 1) (Pi.single j 1) = A i j := by
-  simp [hform, Pi.single_apply, apply_ite σ, ite_mul, mul_ite, Finset.sum_ite_eq', Finset.sum_ite_eq]
+  simp [hform, Pi.single_apply, apply_ite σ, ite_mul, mul_ite, Finset.sum_ite_eq']
 
 theorem UJ_of_hform {n : Type} [Fintype n] [DecidableEq n] (σ : E →+* E) (J : Matrix n n E) (G : GL n E)
     (h : ∀ u w, hform σ J ((G : Matrix n n E) *ᵥ u) ((G : Matrix n n E) *ᵥ w) = hform σ J u w) : G ∈ UJ σ J := by

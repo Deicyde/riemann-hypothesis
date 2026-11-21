@@ -1,9 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.ThShort
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ThExprUniqOfChartIndep2
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsUniqueFramedPointMoveUniversalTriple
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.FrMoveTransfer
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsSimilitudeOfAutModLevelIdeal
 
 open NumberField Formalism.L2.Pj ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open scoped Classical

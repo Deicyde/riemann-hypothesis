@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.ZarIndPf
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry GlobalTheory.EtC LateralTheory.E.t_E2Cut LateralTheory.E.ZLGPf LateralTheory.E.ZarIndPf

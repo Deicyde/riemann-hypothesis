@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSmoothDetPair
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.ExistsCellOfIsSubquotient
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 open GlobalTheory.SmGL GlobalTheory.PRep GlobalTheory.IndLineGL
 open scoped TensorProduct
 
@@ -24,7 +23,7 @@ theorem vanish_of_separated (S T : Subrepresentation ρ) {z : G} {c c' : ℂ} (h
     c' • Submodule.Quotient.mk (⟨x, hx⟩ : S.toSubmodule) at h
   rw [← Submodule.Quotient.mk_smul, Submodule.Quotient.eq, Submodule.mem_comap] at h
   have h1 := h0 _ h
-  simp only [map_sub, map_smul, Submodule.coe_subtype, Submodule.coe_sub, Submodule.coe_smul] at h1
+  simp only [map_sub, map_smul, Submodule.coe_subtype] at h1
   rw [hf, hτ, ← sub_smul] at h1
   exact (smul_eq_zero.1 h1).resolve_left (sub_ne_zero.2 hcc)
 

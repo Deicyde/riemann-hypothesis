@@ -1,7 +1,8 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsHilbert
-import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.ProjectiveSpaceIncrementHyp
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.WeightedHomogeneousSubmoduleBlockWeightIntEqRing
+import Mathlib.Algebra.Module.LocalizedModule.Exact
+import Mathlib.Topology.Sheaves.Presheaf
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.IndefiniteRowSideFullHecke.HilbertSamuel

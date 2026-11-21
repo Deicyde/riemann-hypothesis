@@ -1,4 +1,6 @@
-import Formalism.LocalToGlobal.CharacterGerms.LinearCoeffExponentialEqIte
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.CharacterGerms.RowTieFB
 
 noncomputable section
 

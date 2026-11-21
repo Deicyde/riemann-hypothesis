@@ -1,11 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGCoreCut
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGaugeGQLFam
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.NFRadRedA
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.NFRadRedS
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.NFRadRedF
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.UnipotentLevelZeroEqOne
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.ChainRecursionFromSingleDescent
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BigCellInversePair
 
 open Formalism.REAL Formalism.QuantumDeterminants Formalism.FourierDecayAlt
 open scoped ContDiff

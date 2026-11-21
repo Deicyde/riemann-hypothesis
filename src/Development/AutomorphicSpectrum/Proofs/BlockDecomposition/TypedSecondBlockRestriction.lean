@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FinStable
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ConstantTermAuxiliaryStatementB
 
@@ -19,7 +20,7 @@ def levelTwo (K : Subgroup (GL (Fin (r + s)) (Af E))) (t : GL (Fin (r + s)) (Af 
 
 theorem mem_levelTwo {K : Subgroup (GL (Fin (r + s)) (Af E))} {t : GL (Fin (r + s)) (Af E)}
     {u : GL (Fin s) (Af E)} : u ∈ levelTwo K t ↔ t⁻¹ * lev (Af E) r s (1, u) * t ∈ K := by
-  simp [levelTwo, MulAut.conj_apply, Slice2.lev2]
+  simp [levelTwo, Slice2.lev2]
 
 theorem isOpen_levelTwo {K : Subgroup (GL (Fin (r + s)) (Af E))}
     (hK : IsOpen (K : Set (GL (Fin (r + s)) (Af E)))) (t : GL (Fin (r + s)) (Af E)) :

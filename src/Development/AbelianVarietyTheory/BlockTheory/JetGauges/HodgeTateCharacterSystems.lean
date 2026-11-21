@@ -1,5 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SemiabelianSchemes.AbelianSchemeQuotients.QSurjective
+import Mathlib.Algebra.DualNumber
+import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 universe u
 
@@ -167,7 +174,7 @@ lemma readFn_tangentPt {R : Type u} [CommRing R] [Algebra O R] (v : Cotangent G 
   show (Scheme.ΓSpecIso (CommRingCat.of (DualNumber R))).hom.hom
     ((Spec.map (CommRingCat.ofHom (tangentAlg v).toRingHom) ≫ fromLoc G).appTop.hom s) = _
   rw [Scheme.Hom.comp_appTop, CommRingCat.comp_apply, fromLoc, Scheme.fromSpecStalk_appTop]
-  simp only [CommRingCat.comp_apply, homOfLE_refl, op_id, CategoryTheory.Functor.map_id, CommRingCat.id_apply]
+  simp only [homOfLE_refl, op_id, CategoryTheory.Functor.map_id]
   rw [← CommRingCat.comp_apply (Scheme.Hom.appTop _), Scheme.ΓSpecIso_naturality]
   show (tangentAlg v) ((Scheme.ΓSpecIso (G.left.presheaf.stalk (origin G))).hom
     ((Scheme.ΓSpecIso (G.left.presheaf.stalk (origin G))).inv (G.left.presheaf.germ ⊤ (origin G) trivial s))) = _

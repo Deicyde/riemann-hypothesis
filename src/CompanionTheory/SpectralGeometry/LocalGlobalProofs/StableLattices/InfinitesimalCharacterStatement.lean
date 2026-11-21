@@ -1,7 +1,6 @@
-import CompanionTheory.RealGroups.DiscreteSeries.DiscreteSeriesClassification.DiscreteSeriesExhaustion.HeckeAlgebraActions.BackStable
-import Formalism.RealPlaceAnalysis.ThirdArithmeticHolds
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.CayleyHamiltonStatementStatement
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.QuantumDeterminantTensorStatement
 
 noncomputable section
 

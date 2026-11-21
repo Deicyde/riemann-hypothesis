@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.ParamsHeightRankConstant
 import Formalism.SharpRestriction.LevelLetterCocycles.QuotientHomNonvanishingBound
-import Formalism.LocalRingCardinality.DataParams
 
 noncomputable section
 

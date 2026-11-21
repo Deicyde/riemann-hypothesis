@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Jets.SupWOfSup
-import Development.AbelianVarietyTheory.Definitions.Jets.SumIoPr
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.NormSqUnitNormalizationLe
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.CapelliKFiniteCoefficient
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.BesselPeriodAdjointPair
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.CapelliEigenvalueKFiniteDiscreteSeriesCoeffStatement

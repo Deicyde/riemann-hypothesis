@@ -1,6 +1,7 @@
-import Formalism.LocalToGlobal.InertKernelTheory.FrameLatMap
-import Formalism.LocalToGlobal.InertKernelTheory.InertCoprimeLemmas.RepFrob
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.PairingIndexBounds.OrthogonalChartLevels.FdOfCharts
+import Formalism.LocalToGlobal.GroupLattices.PendingLemmas.WeightUpdateAtPlace
 
 noncomputable section
 

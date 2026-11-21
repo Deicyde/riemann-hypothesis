@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.SCoordStatementPfD
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.SCoordStatementPfE
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.SCoordStatementPfF
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
 
 namespace ReciprocityTheory.ChartRestriction.G.AR.Up.SCoF
 
@@ -86,7 +89,7 @@ theorem part1 {K Ω : Type} [Field K] [CharZero K] [Field Ω] [Algebra K Ω]
     · simp only [a, dif_pos hj]
       rw [Finset.sum_eq_single ⟨j, hj⟩]
       · simp
-      · intro b _ hb; simp [Pi.single_apply, hb]
+      · intro b _ hb; simp [hb]
       · simp
     · simp only [a, dif_neg hj]; exact hco j
   have hxU' : c 0 ∈ U := by rw [hc0]; exact hxU.2

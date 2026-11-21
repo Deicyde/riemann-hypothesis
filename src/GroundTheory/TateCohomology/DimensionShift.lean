@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.TateCohomology.Induced
-import GroundTheory.TateCohomology.InducedNorm
+import Mathlib.CategoryTheory.Monoidal.Mon
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.GroupCoh

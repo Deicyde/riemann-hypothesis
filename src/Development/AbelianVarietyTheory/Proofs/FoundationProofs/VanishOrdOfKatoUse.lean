@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.FinalTheorems
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.BlochKatoSelmerVanishes
+import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.ResMapBijective
 
 noncomputable section
 

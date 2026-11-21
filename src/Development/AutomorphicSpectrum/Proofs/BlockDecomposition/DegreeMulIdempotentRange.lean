@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MulEqOfRangeLe
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.AdelicDegreeFormula
-import GroundTheory.AutomorphicForms.AnisotropicHeight
 
 noncomputable section
 

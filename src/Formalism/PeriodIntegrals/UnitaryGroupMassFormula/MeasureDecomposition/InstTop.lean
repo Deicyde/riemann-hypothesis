@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.MeasureDecomposition.InstDefs
 
 noncomputable section
@@ -51,8 +51,8 @@ theorem instDecomp_of (hP : InstPlaceDecomp) (hG : InstFrameGram) : InstDecomp :
     ext a b
     by_cases hab : a = b
     · subst hab
-      by_cases hε : I.ε v a <;> simp [Formalism.REAL.Jm, Matrix.diagonal_mul_diagonal, hε]
-    · simp [Formalism.REAL.Jm, Matrix.diagonal_mul_diagonal, Matrix.one_apply, hab]
+      by_cases hε : I.ε v a <;> simp [Formalism.REAL.Jm, hε]
+    · simp [Formalism.REAL.Jm, hab]
   have hU : ∀ v (m : Matrix (Fin I.n) (Fin I.n) ℂ), Formalism.REAL.inUJ (I.ε v) m →
       ∃ u : Formalism.REAL.UJ (I.ε v), (((u : (Matrix (Fin I.n) (Fin I.n) ℂ)ˣ)) : Matrix (Fin I.n) (Fin I.n) ℂ) = m := by
     intro v m hm

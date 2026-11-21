@@ -1,5 +1,8 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.InductionEstimates.SpectralOperatorNorms.KillExempt
-import Development.AutomorphicArithmetic.Foundations.Convolution.BlockHeckeSlices.DatDatum
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.InductionEstimates.UnipotentBlockMatrices.UnipotentBlockPairs
+import Development.AutomorphicArithmetic.Foundations.Convolution.BlockHeckeSlices.Summand
+import Development.AutomorphicArithmetic.Foundations.Convolution.TensFun
 
 noncomputable section
 

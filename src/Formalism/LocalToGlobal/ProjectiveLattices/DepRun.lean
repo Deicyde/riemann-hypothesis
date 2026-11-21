@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.DepLaws
 import Formalism.LocalToGlobal.ProjectiveLattices.DepthTie
 import Formalism.LocalToGlobal.ProjectiveLattices.ConjNeSelfOfCM

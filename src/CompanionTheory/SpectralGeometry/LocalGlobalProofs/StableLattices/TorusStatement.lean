@@ -1,5 +1,14 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.RealGroups.UnitaryAdmissibility.ArchimedeanUnitaryDual.StSandwich
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open CompanionTheory.Rg.FlB
 
@@ -102,7 +111,7 @@ theorem tor_inv (hH : IsHerm s h) (hF : IsFrame h δ e f W) (hδ : δ ≠ 0) (u 
   rintro x ((⟨i, rfl⟩ | ⟨i, rfl⟩) | hx)
   · simp [tor_e hH hF hδ, hu i]
   · have : s (u i) ≠ 0 := (map_ne_zero s).2 (hu i)
-    simp [tor_e hH hF hδ, tor_f hH hF hδ, this]
+    simp [tor_f hH hF hδ, this]
   · simp [tor_w hH hF _ hx]
 
 theorem tor_iso_gens (hs : ∀ x, s (s x) = x) (hH : IsHerm s h) (hF : IsFrame h δ e f W) (hδ : δ ≠ 0)

@@ -1,5 +1,13 @@
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RembApply
-import Formalism.LatticeTheta.Statement
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.TraceDualDifferent
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Analysis.PSeries
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
 open NumberField nonZeroDivisors MeasureTheory GlobalTheory.LipschitzTR GlobalTheory.IndefiniteRowSideFullHecke.TraceDualDifferent
 open scoped FourierTransform RealInnerProductSpace
 
@@ -98,7 +106,7 @@ theorem summable_wt : Summable wt := by
   refine Summable.of_nonneg_of_le wt_nonneg (fun m => ?_) (hA.add hB)
   by_cases hm : m = 0
   · subst hm
-    simp [wt, Real.zero_rpow]
+    simp [wt]
   · simp only [hm, if_false, add_zero]
     have hm1 : (1 : ℝ) ≤ |(m : ℝ)| := by
       have : (1 : ℤ) ≤ |m| := Int.one_le_abs hm

@@ -1,6 +1,4 @@
-import Mathlib
-import GroundTheory.LocalFields.IntermediateField
-import GroundTheory.LocalFields.Integers
+import BuildAid.Leniency.Open
 import GroundTheory.LocalFields.LowerIndex
 
 namespace UpperTheory.Reformulated.B.RamificationLowerIndex

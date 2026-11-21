@@ -1,12 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.NefFibOfCurveDegreesNonneg
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.NefFibOfSurjectivePullback
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DominantInducedModelReductionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ProjModelClosedFiberIntegralStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NefDominantWeightPositivityStatement
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsX
 
 set_option autoImplicit false
 

@@ -1,6 +1,7 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.PlaneSupports.PlaneSupp
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.LocalAtPlace
+import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.NotIsCompactUnivFv
 
 noncomputable section
 

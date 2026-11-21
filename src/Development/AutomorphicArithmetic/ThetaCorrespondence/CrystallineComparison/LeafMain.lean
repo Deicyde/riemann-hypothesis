@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.CrystallineComparison.JOCZero
 import Development.AutomorphicArithmetic.ThetaCorrespondence.CrystallineComparison.JOCBounded
+import Development.AutomorphicArithmetic.ThetaCorrespondence.CrystallineComparison.EqToBdRPlusOfBounded
 
 noncomputable section
 

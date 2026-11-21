@@ -1,5 +1,15 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import ReciprocityTheory.CommutativeAlgebra.SaturatedChains.Integral
+import Mathlib.RingTheory.GradedAlgebra.Radical
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.KrullDimension.Polynomial
+import Mathlib.RingTheory.MvPolynomial.Ideal
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 namespace GlobalTheory
 

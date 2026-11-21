@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsLeadOfUnif
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ValCalc
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 noncomputable section
 

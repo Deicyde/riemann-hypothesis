@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.DivisorCycles.OpenCoset
 
 open Matrix PositivityTheory.AutomorphicGaloisHodgeTate.Div

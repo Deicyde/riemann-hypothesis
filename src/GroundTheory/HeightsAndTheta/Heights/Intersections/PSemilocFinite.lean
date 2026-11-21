@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsSemilocFinite
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsSemilocIntegral
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsLocRingIntClosure

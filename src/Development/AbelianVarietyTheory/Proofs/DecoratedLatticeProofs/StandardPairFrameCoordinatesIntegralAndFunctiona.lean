@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.TwTransAlt
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.SplitPointsLieOverDistinctPlacesStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ExistsVTOver
+import Development.AbelianVarietyTheory.Definitions.LatticeFrames.TwTrans
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.Forms Formalism.L2.Ker
 open NumberField IsDedekindDomain Matrix MeasureTheory GlobalTheory.Mem GlobalTheory.Mem.Col2 GlobalTheory.MixModel GlobalTheory.MixPer GlobalTheory.SeeSaw GlobalTheory.LatPair GlobalTheory.SplitWeil
@@ -33,7 +33,7 @@ theorem hasVal_mulVec {n : ℕ} (Q : Pair k (Fin n)) (b' : Matrix (Fin n) (Fin n
       exact ((h r).smul _).add ih
   convert h1 Finset.univ using 1
   funext i
-  simp [Matrix.mulVec, dotProduct, Finset.sum_apply, Pi.single_apply, Finset.mul_sum]
+  simp [Matrix.mulVec, dotProduct, Finset.sum_apply]
   refine Finset.sum_congr rfl fun c _ => ?_
   rw [mul_comm]
   rfl

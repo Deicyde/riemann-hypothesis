@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ExistsPowSubMemSpanOfIsUnitModOfIsAlgClosed
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.RationalSections.ThmISt
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsComplexPointNonvanishingStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ComplexPointConjugate
 

@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.TermAttractorConstant.LeadMinorEMulUpper
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.TermAttractorConstant.SpanFrameLtSucc
 
 noncomputable section

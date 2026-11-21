@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsCyclotomicExtensionQI
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianFormNegOnOrthogonalOfPositiveIndexOne
 open Matrix GlobalTheory.LKTrip
 
@@ -38,7 +37,7 @@ theorem exists_posDef_majorant_of_sigPosH_eq_one : ∀ {n : ℕ} (H : Matrix (Fi
   refine ⟨((2 / a : ℝ) : ℂ) • vecMulVec u (star u) - H, ?_, ?_, ?_⟩
   · unfold IsHermitian
     rw [conjTranspose_sub, conjTranspose_smul, hH.eq, conjTranspose_vecMulVec, star_star]
-    simp [Complex.star_def]
+    simp
   · intro x hx
     set q := star z ⬝ᵥ H *ᵥ x with hq
     set t : ℂ := q / (a : ℂ) with ht
@@ -71,7 +70,7 @@ theorem exists_posDef_majorant_of_sigPosH_eq_one : ∀ {n : ℕ} (H : Matrix (Fi
       push_cast; ring
     rw [e1, ← Complex.star_def, hnt]
     simp only [Complex.sub_re, Complex.add_re, Complex.mul_re, Complex.ofReal_re, Complex.ofReal_im,
-      mul_zero, sub_zero, zero_mul]
+      mul_zero, sub_zero]
     have hapos : 0 < a := hz
     by_cases h0 : x' = 0
     · have htne : t ≠ 0 := by

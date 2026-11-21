@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.FiniteSumNonzeroLargeDepth
-import Formalism.LocalToGlobal.Columns.CoefColLemmas
-import Formalism.SharpRestriction.Divisibility.PrimeDegreeVariant
 
 open MvPolynomial
 

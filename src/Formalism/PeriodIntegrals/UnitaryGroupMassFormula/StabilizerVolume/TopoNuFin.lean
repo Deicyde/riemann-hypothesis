@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerVolume.TopoAF
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerVolume.PosNear
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerVolume.ExStabSt
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerVolume.TopoMeas
 

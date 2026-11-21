@@ -1,5 +1,5 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.TorusUniformisation.ChowMahlerFamilies.IsDerAt0
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.HodgeTatePoints.ExistsDualOf
 
 open NumberField GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Num GlobalTheory.CompanionTheory.Ar.Num.FamEx PositivityTheory.HtPt.Sgp
@@ -164,10 +164,10 @@ theorem gram_cong {E : Type} [Field E] [NumberField E] {R : Type} [CommRing R] {
     congr 2
     have h1 : dl m = B m.2 • (Pi.single m.1 1 : Fin n → 𝓞 E) := by
       funext t
-      by_cases h : t = m.1 <;> simp [dl, Pi.single_apply, h, hB]
+      by_cases h : t = m.1 <;> simp [dl, h, hB]
     have h2 : (Pi.single l (bar (B m.2) * B k) : Fin n → 𝓞 E) = bar (B m.2) • (Pi.single l (B k) : Fin n → 𝓞 E) := by
       funext t
-      by_cases h : t = l <;> simp [Pi.single_apply, h]
+      by_cases h : t = l <;> simp [h]
     rw [h1, h2, hadj, hbar]
   have hexp : ∀ l c, L l c = ∑ t, ((B.repr c t : ℤ) : R ⧸ Ideal.span {(p : R)}) * L l (B t) := by
     intro l c
@@ -235,7 +235,7 @@ theorem ev_col (hRr : 1 ≤ Rr) (hact : ∀ a u, Dh.ρΩ a u = u ∘ₗ ρ (bar 
   intro V t hV
   have hdl : dl m = RingOfIntegers.basis E m.2 • (Pi.single m.1 1 : Fin n → 𝓞 E) := by
     funext j
-    by_cases h : j = m.1 <;> simp [dl, Pi.single_apply, h]
+    by_cases h : j = m.1 <;> simp [dl, h]
   have hvec : (fun j => (Hm j m : C)) =
       (fun j => (io ⟨Dh.h (dl m), Dh.h_mem _⟩ j : C)) + (p : C) • (fun j => (w j : C)) := by
     funext j

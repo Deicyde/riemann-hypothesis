@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GramFormPhiStatement
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.PhiCMinima
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FirstCohomology.ReducedBasis

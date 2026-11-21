@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.NotCoboundaryConstantOne
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsCompletedLaurentQuotPrimeEquivLaurentFp
+import Mathlib.RingTheory.AdicCompletion.LocalRing
 open GlobalTheory.K5
 
 namespace GlobalTheory.K5

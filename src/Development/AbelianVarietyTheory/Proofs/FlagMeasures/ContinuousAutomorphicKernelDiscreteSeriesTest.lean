@@ -1,9 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.CuspFrameWeights.ConvolutionSmoothL2
-import Development.AbelianVarietyTheory.Statements.CuspFrameWeights.DiscreteSpectrumKFiniteDecomposition
-import Formalism.HarderNarasimhan.ShiftInvariance
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.FiniteAdelicUnitaryCongruenceTopology
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.NormPosOfIsUnit
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.RowsAutIdemElementary
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.SummableAndTsumLeOfBoxCount
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ShellSumMajorant

@@ -1,5 +1,5 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.LevelKernelDetection.LevBMemFil
-import Formalism.SharpRestriction.LevelLetterCocycles.LevelKernelDetection.EvaluationExpansionAtRoot
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.LevelKernelDetection.XPowDvdOfComponents
 import Formalism.SharpRestriction.LevelLetterCocycles.LevelKernelDetection.CombineProd
 import Formalism.SharpRestriction.LevelLetterCocycles.LevelKernelDetection.PowerSeriesCancelBounded

@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsOpenImmersionChart
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsEquivOfIsGrpPullback
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFrameOfProjective
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsDualPullback
 
 set_option autoImplicit false
 

@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataKerI
-import Formalism.LocalRingCardinality.DataAmbForm
-import Formalism.SharpRestriction.GlobalSchurBounds.GL3Theta
 import Formalism.LocalToGlobal.KernelLattices.ThDistC
 
 open NumberField IsDedekindDomain
@@ -17,7 +16,7 @@ def cpy (E : Type) [Field E] (a b : ℕ) : Sp E a →ₗ[E] Sp E b :=
 
 theorem cpy_self (E : Type) [Field E] (a : ℕ) (x : Sp E a) : cpy E a a x = x := by
   funext l
-  simp [cpy, atNL, l.2]
+  simp [cpy, atNL]
 
 section Frames
 

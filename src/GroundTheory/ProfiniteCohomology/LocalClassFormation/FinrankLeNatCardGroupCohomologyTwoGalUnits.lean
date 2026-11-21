@@ -1,9 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.LocalClassFormation.OrderInfRes
 import GroundTheory.ProfiniteCohomology.LocalClassFormation.OrderScalars
 import GroundTheory.ProfiniteCohomology.LocalClassFormation.UnramifiedRes
 import GroundTheory.LocalFields.UnramifiedExistence
-import GroundTheory.LocalFields.FiniteExtension
+import GroundTheory.ProfiniteCohomology.LocalClassFormation.OrderBound
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

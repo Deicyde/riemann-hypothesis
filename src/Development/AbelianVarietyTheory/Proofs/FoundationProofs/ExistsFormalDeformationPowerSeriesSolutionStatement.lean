@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsFormalDeformationPowerSeriesSolution
 open Polynomial
 set_option maxHeartbeats 1000000 in

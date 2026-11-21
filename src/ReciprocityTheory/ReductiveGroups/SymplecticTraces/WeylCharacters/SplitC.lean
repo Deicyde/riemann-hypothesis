@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.HighestWeights.Weight
-import Mathlib.Analysis.InnerProductSpace.TensorProduct
-import Mathlib.LinearAlgebra.TensorProduct.Basis
 
 noncomputable section
 

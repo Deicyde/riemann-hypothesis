@@ -1,5 +1,7 @@
-import Formalism.SharpRestriction.CuspSpanNormBounds.FrobeniusCoefficientMemLp.SigmaFiniteAmplitudes.RStabInv
-import Formalism.PeriodIntegrals.ContinuousExpLie
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.BetaSesquilinearity
+import Formalism.SharpRestriction.CuspSpanNormBounds.RootMeasBig
 
 open MeasureTheory Matrix
 open scoped ENNReal

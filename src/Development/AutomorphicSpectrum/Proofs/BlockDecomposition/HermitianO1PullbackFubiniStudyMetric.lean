@@ -1,9 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsPullHermPullLine
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.EqOfIsometricTrivShift
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterRedA
-import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.Birational
-import GroundTheory.HeightsAndTheta.Heights.HeightsOfSets.IsSmoothHermConstLine
 
 set_option autoImplicit false
 noncomputable section
@@ -67,7 +64,7 @@ theorem norm_eq_fs {ι : Type} [Fintype ι] (w : ι → ℂ) (i c : ι) (hi : w 
     congr 1
     ring
   rw [hexp, hS, Real.sqrt_div hT.le, Real.sqrt_sq hi'.le, norm_div, EuclideanSpace.norm_eq]
-  simp only [PiLp.toLp_apply]
+  simp only
   field_simp
 
 theorem pullback_O1_transition_eq_blockUnit (k : Fin (m + 1)) (i j : PUnit → Fin (n k + 1))

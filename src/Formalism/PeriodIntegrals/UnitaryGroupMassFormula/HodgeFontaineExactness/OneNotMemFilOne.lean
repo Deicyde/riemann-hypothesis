@@ -1,5 +1,7 @@
-import Mathlib
-import Formalism.PeriodIntegrals.HodgeOfFon
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.WeaklyAdmissibleFiltrations.Statement
+import Mathlib.Tactic.Polynomial.Basic
 
 namespace PI.HodgeOfFon.W.Triv
 

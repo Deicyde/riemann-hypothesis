@@ -1,9 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsMaxThOne
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemFinPt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TruncMatTranspose
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemLatLevel
 
 noncomputable section
@@ -37,7 +33,7 @@ theorem exists_int_single {d : ℕ} (L : Submodule (𝓞 E) (Fin d → E)) (hL :
     intro i x hx
     have heq : (D : E) • Pi.single i x = ∑ a ∈ t i, (x * ((D : E) * f i a)) • a := by
       have : (D : E) • Pi.single i x = (x * D) • Pi.single i (1 : E) := by
-        funext k; by_cases hk : k = i <;> simp [hk, Pi.single_apply, mul_comm]
+        funext k; by_cases hk : k = i <;> simp [hk, mul_comm]
       rw [this, ← hsum i, Finset.smul_sum]
       refine Finset.sum_congr rfl fun a _ => ?_
       rw [smul_smul, mul_assoc]
@@ -63,7 +59,7 @@ theorem exists_int_single {d : ℕ} (L : Submodule (𝓞 E) (Fin d → E)) (hL :
   refine ⟨D * D', mul_ne_zero hD0 hD'0, fun y hy i l j => ?_⟩
   have := h1 i _ (h2 y hy j l)
   convert this using 1
-  funext k; by_cases hk : k = i <;> simp [hk, Pi.single_apply]; ring
+  funext k; by_cases hk : k = i <;> simp [hk]; ring
 
 variable (F) in
 

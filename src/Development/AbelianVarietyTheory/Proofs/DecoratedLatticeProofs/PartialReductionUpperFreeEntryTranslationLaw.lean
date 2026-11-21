@@ -1,7 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ChLApply
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.SchwartzBruhatCompAffineMatrixStatement
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.IntegralCoordinateShearHaarLocalFieldStatement
+import Mathlib.RingTheory.PiTensorProduct
+import Std.Tactic.BVDecide.Normalize.Prop
 open MeasureTheory ValuativeRel Matrix GlobalTheory.SplitWeil GlobalTheory.RootEx GlobalTheory.StepData
 
 noncomputable section
@@ -47,7 +50,7 @@ theorem simpleSum_elem (l m : Fin c) (h : l ≠ m) (a : k) :
     rw [embA_elem_apply]
     by_cases h1 : j.val = i.val + 1
     · have : i ≠ j := by intro e; subst e; omega
-      by_cases h2 : i = l <;> by_cases h3 : j = m <;> simp_all [Matrix.one_apply]
+      by_cases h2 : i = l <;> by_cases h3 : j = m <;> simp_all
     · by_cases h2 : i = l <;> by_cases h3 : j = m <;> simp_all
   simp [this]
 

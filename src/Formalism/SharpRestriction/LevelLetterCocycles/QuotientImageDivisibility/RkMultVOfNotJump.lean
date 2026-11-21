@@ -1,6 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.WeaklyAdmissibleFiltrations.Statement
-import Formalism.WeaklyAdmissibleFiltrations.CrystallineStableLifts.Window
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 

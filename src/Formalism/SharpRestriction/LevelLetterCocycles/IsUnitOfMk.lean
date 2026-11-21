@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.InvLevCoreOfParts
-import Formalism.SharpRestriction.LevelLetterCocycles.LemmasUnramifiedOfRingCondition
 
 noncomputable section
 

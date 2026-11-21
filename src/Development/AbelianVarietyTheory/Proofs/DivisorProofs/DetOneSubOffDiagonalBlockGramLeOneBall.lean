@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NmatEqLowMat
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.PoincareCuspForms.ExhaustionFrames
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.IsOrth
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
 open NumberField ReciprocityTheory.ChartRestriction.G.FD ReciprocityTheory.ChartRestriction.G.AR.Inst ReciprocityTheory.ChartRestriction.G.AR.Up ReciprocityTheory.L2DbarEstimates MeasureTheory GlobalTheory.IndefiniteRowSideFullHecke.ExhaustionFrames GlobalTheory.IntBall
 open scoped ENNReal Matrix
 

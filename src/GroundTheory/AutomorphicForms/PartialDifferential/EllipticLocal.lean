@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.PartialDifferential.EllipticOperators
+import Mathlib.Topology.MetricSpace.Contracting
 
 namespace GroundTheory.Automorphic.Sobolev
 

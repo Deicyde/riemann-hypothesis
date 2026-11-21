@@ -1,5 +1,7 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.TensorProductTheorem.TwoFactor
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.AutomorphicForms.TensorProductTheorem.OuterTensor
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
 
 noncomputable section
 

@@ -1,11 +1,12 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.Smooth
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.MeasurePreservingMulRight
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.HighestWeights.Weight
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.Bridge
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.HighestWeights.ContinuousTorepK
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirAlgebra.MulMulSubMulMulEqAdd
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirAlgebra.CasimirKKhwVec
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirAlgebra.RhoEqRhoCAddRhoN
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.AnalyticVectors.ConjTransposeEqOfInG
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.SmoothDefs
 
 noncomputable section
 
@@ -106,7 +107,7 @@ theorem cmpt_inK_casGen (he : ∀ a b, ε a = ε b) (p : Fin n × Fin n) : inK �
     split_ifs <;>
       simp only [Matrix.smul_apply, Matrix.sub_apply, Matrix.add_apply, Matrix.single_apply,
         smul_eq_mul] <;>
-      split_ifs <;> (try simp_all [Complex.conj_I, Complex.star_def]) <;> (try subst_vars) <;>
+      split_ifs <;> (try simp_all [Complex.conj_I]) <;> (try subst_vars) <;>
         (try simp_all [Complex.conj_I, Complex.star_def]) <;>
         (obtain ⟨h1, h2⟩ := ‹_ ∧ _›; exact absurd (h1.symm.trans h2) ‹_›)
   unfold inK inG

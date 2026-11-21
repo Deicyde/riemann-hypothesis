@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.LtChar
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FinrankInfMaximalUnramifiedExtension
+import Mathlib.Topology.MetricSpace.Ultra.TotallySeparated
 
 noncomputable section
 

@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PublishedTheorems.PoitouTateDuality.PtConclOfIsoOf
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.GelfandSpectralNormalisation.NormalisedInvariants.PoitouTateExactSecond
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsInvFamNormalised
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsSubfieldModel
+import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.PoitouTateNormalised
 
 noncomputable section
 

@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AutomorphicArithmetic.LocalEmbeddings.ConeBumpB
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.DivisorFrames.FourierSchwartzBruhatPreserved
 import Development.AutomorphicArithmetic.DivisorFrames.FourierTransformPairingTranslate
 import Development.AutomorphicArithmetic.DivisorFrames.LocalUnitsHaarComparison

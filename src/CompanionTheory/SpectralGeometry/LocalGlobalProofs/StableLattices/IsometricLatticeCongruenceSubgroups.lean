@@ -1,6 +1,16 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import CompanionTheory.RealGroups.UnitaryAdmissibility.ArchimedeanUnitaryDual.StSandwich
 import CompanionTheory.RealGroups.UnitaryAdmissibility.ArchimedeanUnitaryDual.InhabitedFinite
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open CompanionTheory.Rg.FlB CompanionTheory.Rg.Fl
 
@@ -85,7 +95,7 @@ theorem mem_UG_iff (s : L →+* L) (J : Matrix (Fin n) (Fin n) L) (g : GL (Fin n
       funext k
       by_cases hk : k = i
       · subst hk; simp
-      · simp [Pi.single_apply, hk]
+      · simp [hk]
     rw [hsi] at this
     simpa using this
 

@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.DerivativeProdSubEval
-import Formalism.SharpRestriction.LevelLetterCocycles.FrobeniusPowUniformizerFactorisation
 import Formalism.SharpRestriction.LevelLetterCocycles.CancelUnitMulUniformizerPow
 
 noncomputable section

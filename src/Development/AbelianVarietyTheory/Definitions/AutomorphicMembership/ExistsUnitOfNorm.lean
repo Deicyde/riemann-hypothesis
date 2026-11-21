@@ -1,8 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Counterexamples.LevelGroupExamples.SubsingletonOfLeOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Counterexamples.LevelGroupExamples.KerMemAbLocus
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsMonHomOfMul
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.HasArcDataIff
+import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.PeriodFormAdditiveBalancedPosDefBoundedRank
+import Mathlib.Algebra.Module.Submodule.Order
 
 noncomputable section
 
@@ -198,7 +198,7 @@ variable {R V : Type} [CommRing R] [IsDomain R] [CommRing V] [IsDomain V] {D : D
 
 theorem cT_left (χ : D.X) : (cT D (Over.mk (spMap g)) χ).left = spMap g ≫ (D.c χ).left := by simp
 
-theorem xK_eq (χ : D.X) : D.xK χ = jK R ≫ (D.c χ).left := by simp [ptK]
+theorem xK_eq (χ : D.X) : D.xK χ = jK R ≫ (D.c χ).left := by simp
 
 theorem zero_left : (toUnit (Over.mk (spMap g)) ≫ η[D.P.A]).left = spMap g ≫ eSec D.P.A := by simp [eSec]
 

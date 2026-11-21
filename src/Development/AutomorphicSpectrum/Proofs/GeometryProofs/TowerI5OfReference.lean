@@ -1,9 +1,8 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ArchBetween
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.RootHeightDifferenceBoundStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LineHeightInvariantScalingStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HeightOfZeroDimVarietyStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.JoinModelPointsProjectStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.DominantWeightGapShiftStatement
 
 noncomputable section

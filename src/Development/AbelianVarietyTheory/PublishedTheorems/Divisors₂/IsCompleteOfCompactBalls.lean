@@ -1,7 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.L2DbarEstimates.PlurisubharmonicCharts.EuclideanAtlasPointwiseNormSqUnitSection
 import ReciprocityTheory.L2DbarEstimates.PlurisubharmonicCharts.AApproxF
 import ReciprocityTheory.L2DbarEstimates.ChartDerivatives.CommFderivApply
+import Mathlib.Analysis.Matrix.PosDef
+import Mathlib.Analysis.SpecialFunctions.Gaussian.FourierTransform
+import Mathlib.MeasureTheory.Integral.IntervalIntegral.ContDiff
+import ReciprocityTheory.L2DbarEstimates.ChartDerivatives.DifferentiableAtChart
 
 namespace GlobalTheory.L2Kaehler
 
@@ -22,7 +27,7 @@ def coNormSq (H : Matrix (Fin n) (Fin n) ℂ) (v : Fin n → ℂ) : ℝ :=
 
 theorem herm_eq (H : Matrix (Fin n) (Fin n) ℂ) (ξ : Fin n → ℂ) :
     herm H ξ = (star (star ξ) ⬝ᵥ H *ᵥ star ξ).re := by
-  simp only [herm, star_star, dotProduct, Matrix.mulVec, Finset.mul_sum, Pi.star_apply,
+  simp only [herm, dotProduct, Matrix.mulVec, Finset.mul_sum, Pi.star_apply,
     RCLike.star_def]
   congr 1
   exact Finset.sum_congr rfl fun j _ => Finset.sum_congr rfl fun k _ => by
@@ -39,7 +44,7 @@ theorem coNormSq_nonneg {H : Matrix (Fin n) (Fin n) ℂ} (hH : H.PosDef) (v : Fi
     0 ≤ coNormSq H v := herm_nonneg hH.inv v
 
 theorem herm_one (ξ : Fin n → ℂ) : herm 1 ξ = ∑ k, ‖ξ k‖ ^ 2 := by
-  simp [herm, Matrix.one_apply, Complex.mul_conj, Complex.normSq_eq_norm_sq, ← Complex.ofReal_pow]
+  simp [herm, Matrix.one_apply, Complex.mul_conj, Complex.normSq_eq_norm_sq]
 
 theorem coNormSq_one (v : Fin n → ℂ) : coNormSq 1 v = ∑ k, ‖v k‖ ^ 2 := by
   rw [coNormSq_eq_herm, inv_one, herm_one]
@@ -325,7 +330,7 @@ theorem leviAt_flat (y : V n) (ξ : Fin n → ℂ) :
     simp [bas]
   rw [leviV_normSq_comp (contDiff_coord m).contDiffAt]
   change (((Complex.normSq (∑ j, wd n j (fun v : V n => v m) y * ξ j)) : ℝ) : ℂ).re = _
-  simp [this, Complex.normSq_eq_norm_sq, ← Complex.ofReal_pow]
+  simp [this, Complex.normSq_eq_norm_sq]
 
 theorem hypotheses_flat (c : Fin n → ℂ) :
     IsKaehler (atlas n) (fun _ _ => 1) ∧ IsComplete (atlas n) (fun _ _ => 1) ∧

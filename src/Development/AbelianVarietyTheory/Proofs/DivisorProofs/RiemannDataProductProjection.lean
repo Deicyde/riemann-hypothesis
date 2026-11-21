@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsProd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RiemannDualFormIndep
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory NumberField
 open Limits MonoidalCategory CartesianMonoidalCategory GlobalTheory.VB
@@ -49,7 +49,7 @@ theorem factor_diag₂ (u : HolUnif A L g) (u' : HolUnif A' L' g') (ψ : A ⟶ A
   change ∏ k, u'.fr (i k) (![T + T, T, 0] k z) ^ (![1, -2, 1] k : ℤ) =
     _ * ∏ k, u'.fr (i k) (![T + T, T, 0] k (z + l)) ^ (![1, -2, 1] k : ℤ)
   simp only [Fin.prod_univ_three, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val, LinearMap.add_apply,
-    LinearMap.zero_apply, map_add, zpow_one, zpow_neg, zpow_ofNat]
+    LinearMap.zero_apply, map_add, zpow_neg, zpow_ofNat]
   rw [h0, h1, add_zero]
   simp only [hermForm, star_add, Matrix.mulVec_add, add_dotProduct, dotProduct_add]
   generalize (T z ⬝ᵥ H.mulVec (star (T l))) = a

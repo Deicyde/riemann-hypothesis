@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Variable
 import Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.OpenCellDecomposition.OpenCellUnipotents.OpenCell
 import Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.OpenCellDecomposition.PiTensorNontriviality.ExpLow
 

@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.IsLatMeasurableConst
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.RingTheory.Complex
+import Mathlib.RingTheory.TotallySplit
 
 open MeasureTheory NumberField Matrix Finset Formalism.MainNotions.S GlobalTheory.Count GlobalTheory.FlagMeas GlobalTheory.FlagBase Module
 
@@ -70,8 +74,8 @@ theorem toMatrix_form : LinearMap.BilinForm.toMatrix (stdB E j) (form E j) =
       by_cases ha : a = a'
       · subst ha
         fin_cases s <;> fin_cases s' <;> simp
-      · simp [ha, Pi.single_eq_of_ne ha]
-    · simp [hw, Pi.single_eq_of_ne hw]
+      · simp [ha]
+    · simp [hw]
   · intro w'' _ h
     simp [Pi.single_eq_of_ne h]
   · simp

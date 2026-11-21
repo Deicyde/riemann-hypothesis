@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LeviDeterminants.ThetaBasicOf
 import Development.WeilBound.ThetaLifts.LeviDeterminants.WeilRepresentationPointwiseArchimedeanDecayBound
 

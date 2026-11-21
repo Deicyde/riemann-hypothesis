@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.CyclicCupProf
 import GroundTheory.ProfiniteCohomology.GaloisCohomology.BrauerInflation
-import GroundTheory.ProfiniteCohomology.InflationRestriction
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

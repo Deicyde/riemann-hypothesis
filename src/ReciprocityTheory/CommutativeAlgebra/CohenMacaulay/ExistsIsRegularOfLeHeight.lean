@@ -1,4 +1,7 @@
-import ReciprocityTheory.CommutativeAlgebra.CohenMacaulay.RingKrullDimQuotientOfMemAssociatedPrimes
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import ReciprocityTheory.CommutativeAlgebra.CohenMacaulay.Bridge
+import ReciprocityTheory.CommutativeAlgebra.CohenMacaulay.Unmixed
 
 namespace ReciprocityTheory.CA
 

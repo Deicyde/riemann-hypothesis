@@ -1,7 +1,6 @@
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.KFiniteThetaLifts.RationalPrimesBelowPlaces
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntInd
-import GroundTheory.LocalFields.QuadraticAbelian.WeilRepQuadratic
-import GroundTheory.AutomorphicForms.MacdonaldWhittaker
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.LocalWhittakerDuality.LocalFunctionalEquationFinite
 open NumberField IsDedekindDomain MeasureTheory Matrix Filter Topology
 open GroundTheory.Global GroundTheory.LocalField GroundTheory.Automorphic GroundTheory.Automorphic.AutomorphicForm
 open GroundTheory.Automorphic.GodementSection (localChar)
@@ -47,7 +46,7 @@ theorem GlobalTheory.CompanionTheory.WeilRd.main : ∀ (F : Type) [Field F] [Val
   have e11 : (g * dg2 m 1).val 1 1 = g.val 1 1 := by
     simp [dg2, Matrix.mul_apply, Fin.sum_univ_two]
   have edet : ((g * dg2 m 1).val).det = (g.val).det * m := by
-    simp [dg2, Matrix.det_fin_two, Matrix.mul_apply, Fin.sum_univ_two]
+    simp [dg2, Matrix.det_fin_two]
   have hΔ : (g.val).det ≠ 0 := by
     have := g.isUnit.map (Matrix.detMonoidHom)
     exact this.ne_zero

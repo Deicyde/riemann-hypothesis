@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IsPowOfGaussValuationCongrOneAlmostAllPrimes
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.DiagMod
 open scoped MatrixGroups TensorProduct
 open Matrix GlobalTheory.KZ GlobalTheory.KZ.ES
 set_option maxHeartbeats 1000000 in

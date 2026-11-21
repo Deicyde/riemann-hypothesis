@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.SphericalCoordinates.AlgebraEquivSetup.DatumToG
+import Development.AbelianVarietyTheory.Definitions.Divisors.CompactBIffCompact
 
 noncomputable section
 

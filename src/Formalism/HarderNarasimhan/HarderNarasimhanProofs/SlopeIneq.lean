@@ -1,6 +1,5 @@
-import Formalism.HarderNarasimhan.DegSupermodZ
-import Formalism.LatticeSlopes.ExistsSaturatedSlopeEqMuMax
-import Formalism.HarderNarasimhan.HarderNarasimhanProofs.SatBasic
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HarderNarasimhan.HarderNarasimhanProofs.MuChar
 
 open Module Submodule
@@ -46,10 +45,10 @@ private lemma norm_sum_smul_map_le_mul_of_bounded {A : Submodule ℤ E} {B : Sub
 
   have hyE : (((∑ i, round ((n : ℝ) * c i) • b i : A)) : E) =
       ∑ i, ((round ((n : ℝ) * c i) : ℤ) : ℝ) • ((b i : A) : E) := by
-    simp [Submodule.coe_sum, Int.cast_smul_eq_zsmul]
+    simp [Int.cast_smul_eq_zsmul]
   have heF : ((e (∑ i, round ((n : ℝ) * c i) • b i) : B) : F) =
       ∑ i, ((round ((n : ℝ) * c i) : ℤ) : ℝ) • ((e (b i) : B) : F) := by
-    simp [map_sum, map_zsmul, Submodule.coe_sum, Int.cast_smul_eq_zsmul]
+    simp [map_sum, Int.cast_smul_eq_zsmul]
   have dF : (n : ℝ) • ∑ i, c i • ((e (b i) : B) : F) =
       ((e (∑ i, round ((n : ℝ) * c i) • b i) : B) : F) +
         ∑ i, ((n : ℝ) * c i - (round ((n : ℝ) * c i) : ℝ)) • ((e (b i) : B) : F) := by

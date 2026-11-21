@@ -1,8 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.BrgStdR
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.NonzeroPlacesOverPrimes
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.SameForm
-import Formalism.LocalToGlobal.ProjectiveLattices.ParCanon
 
 noncomputable section
 

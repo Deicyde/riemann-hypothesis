@@ -1,6 +1,7 @@
-import Mathlib
-import GroundTheory.ProfiniteCohomology.CompactSupportCohomology
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.CupProducts
+import GroundTheory.ProfiniteCohomology.CompactSupportCohomology.HomApplyHomApplyEqOfCompEq
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

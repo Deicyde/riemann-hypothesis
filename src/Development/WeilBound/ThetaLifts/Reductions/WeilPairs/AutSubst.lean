@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.AutDef
 import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.AutSubstA
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFdPosFin
 
 noncomputable section
 

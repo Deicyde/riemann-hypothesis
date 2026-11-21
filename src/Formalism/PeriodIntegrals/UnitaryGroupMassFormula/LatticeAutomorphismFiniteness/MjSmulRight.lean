@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.LocalRingCardinality.DataSpaces
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LatticeAutomorphismFiniteness.MulVecMapInjective
 
 noncomputable section

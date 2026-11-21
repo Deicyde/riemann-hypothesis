@@ -1,11 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.PetIPSmulRight
-import Development.AbelianVarietyTheory.Definitions.Foundations.RepL
-import Development.AbelianVarietyTheory.Statements.CuspidalUnitaryTwists.ChapterMu
-import Development.AbelianVarietyTheory.Statements.CuspidalUnitaryTwists.CuspidalUnitaryTwistsClaim
-import CompanionTheory.EightfoldTheory.VariationTheory.AutomorphicForms.Newform
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.QExpansionFunctionInjectiveOfPolynomialGrowth
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ModularFormCoeffSeqLinearStructure
+import Mathlib.NumberTheory.DirichletCharacter.Orthogonality
+import Mathlib.RingTheory.SimpleRing.Principal
+import Std.Tactic.BVDecide.Normalize.Prop
 open UpperHalfPlane Complex MeasureTheory CongruenceSubgroup GlobalTheory.EisM UpperTheory.V.Af Filter Topology
 open scoped MatrixGroups Real ComplexConjugate Manifold ModularForm
 
@@ -36,8 +34,8 @@ theorem exists_gamma (L N : ℕ) (hL : 0 < L) (hNL : N ∣ L) (u : (ZMod N)ˣ) :
   refine ⟨⟨!![x, -y; (L : ℤ), (((v : ZMod L).val : ℕ) : ℤ)], ?_⟩, ?_, ?_⟩
   · rw [Matrix.det_fin_two_of]; linear_combination hxy
   · simp
-  · simp only [SpecialLinearGroup.coe_mk, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_one,
-      Matrix.cons_val_zero, Matrix.empty_val', Matrix.cons_val_fin_one, Matrix.head_cons]
+  · simp only [Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_one,
+      Matrix.empty_val', Matrix.cons_val_fin_one]
     rw [← hv, ZMod.unitsMap_val, ZMod.cast_eq_val, Int.cast_natCast]
 
 theorem forms_of_characters_independent : ∀ (k L N : ℕ) (a : DirichletCharacter ℂ N → ℕ → ℂ), 0 < L → N ∣ L →

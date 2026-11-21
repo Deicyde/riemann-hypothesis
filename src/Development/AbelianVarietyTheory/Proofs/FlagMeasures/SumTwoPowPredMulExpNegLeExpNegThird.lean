@@ -1,5 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.IsGaugeAll
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.ReduceModChar
 open MeasureTheory NumberField Matrix Finset Formalism.MainNotions.S GlobalTheory.Count GlobalTheory.FlagMeas
 
 namespace GlobalTheory

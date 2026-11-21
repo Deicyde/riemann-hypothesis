@@ -1,4 +1,5 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.TensFun
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.ConvolutionKernels.KernelTransforms.HopBasic
 import GroundTheory.AutomorphicForms.IwahoriFactorization
 import GroundTheory.AutomorphicForms.CuspidalAdmissible

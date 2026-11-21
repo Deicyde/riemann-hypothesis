@@ -1,4 +1,5 @@
-import Development.WeilBound.CoreStatements.HodgeTatePoints.Twexists
+import BuildAid.Leniency.Open
+import Development.AutomorphicSpectrum.Proofs.GeometryProofs.TorsionEmbeddingGeometricPoints
 
 noncomputable section
 

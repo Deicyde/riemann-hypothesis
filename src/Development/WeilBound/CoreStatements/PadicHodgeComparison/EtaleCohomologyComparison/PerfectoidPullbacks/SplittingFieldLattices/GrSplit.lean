@@ -1,5 +1,6 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.Coords
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.InclStd
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

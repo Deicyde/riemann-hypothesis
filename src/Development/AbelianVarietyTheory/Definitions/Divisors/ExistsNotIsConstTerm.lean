@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.NonarchimedeanGroupOfIsCompactIsOpen
+import Mathlib.Algebra.Polynomial.Sequence
 
 noncomputable section
 
@@ -296,7 +299,7 @@ theorem entry_le_opNorm (A : Matrix (Fin n) (Fin n) ℂ) (i j : Fin n) : ‖A i 
   unfold opNorm
   have h1 : (Matrix.toEuclideanCLM (n := Fin n) (𝕜 := ℂ) A (EuclideanSpace.single j 1)) i = A i j := by
     change ∑ d, A i d * (EuclideanSpace.single j (1 : ℂ) : EuclideanSpace ℂ (Fin n)) d = A i j
-    simp [EuclideanSpace.single_apply]
+    simp
   have h2 := ContinuousLinearMap.le_opNNNorm (Matrix.toEuclideanCLM (n := Fin n) (𝕜 := ℂ) A) (EuclideanSpace.single j 1)
   rw [PiLp.nnnorm_single, nnnorm_one, mul_one] at h2
   rw [← h1]
@@ -416,7 +419,7 @@ theorem not_zfin_exp (h : IsCMExt F E σ) (hJ : IsHermND σ J) {w : InfinitePlac
     · rintro _ ⟨t, rfl⟩
       have e : M (γ t) i i = Complex.exp (t * Complex.I) := by
         rw [hM, show t • (Complex.I • (1 : Matrix (Fin n) (Fin n) ℂ)) = Matrix.diagonal fun _ => t * Complex.I by
-          ext a b; by_cases a = b <;> simp [*, Matrix.one_apply], Matrix.exp_diagonal]
+          ext a b; by_cases a = b <;> simp [*], Matrix.exp_diagonal]
         simp [Complex.exp_eq_exp_ℂ]
       have := congrFun hp (γ t)
       simpa [T, e] using this

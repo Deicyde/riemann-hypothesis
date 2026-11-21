@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PlaceSzNonneg
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiniteCoefficientBound
 

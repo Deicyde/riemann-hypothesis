@@ -1,6 +1,6 @@
-import Formalism.ThetaLogCoordinates.FockResolutionOnto.StatementC
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.FockResolutionOnto.FockMonomialProofs.ResInto
-import Formalism.ThetaLogCoordinates.FockResolutionOnto.FockMonomialProofs.MulEarlyLettersHolds
 
 namespace Formalism.InvariantFactorPaths.L4
 
@@ -235,7 +235,7 @@ private theorem glAct_md_lemma_5 (LL : Letters N) (j : ℕ) (c d : Fin r) (B : P
     by_cases h : i'' = i'
     · subst h
       simp [Finsupp.single_apply]
-    · simp [Finsupp.single_apply, Ne.symm h, h]
+    · simp [h]
   have hmono : ∀ (a b : Fin r) (n : Fin N × Fin r →₀ ℕ) (t : ℚ_[p]) (i' : Fin N), (MultiDeg LL n ↔ B) →
       X (i', a) * pderiv (i', b) (monomial n t) ∈
         MvPolynomial.restrictSupport ℚ_[p] {n | (MultiDeg LL n ↔ B)} := by

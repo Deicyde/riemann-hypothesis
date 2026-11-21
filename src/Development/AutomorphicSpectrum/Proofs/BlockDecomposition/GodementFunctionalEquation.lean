@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.LocallyConstantMajorants.GammaSplitting.FunctionalEquationGL2GL1Complex
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntegrableMulCIff
 
@@ -62,7 +62,7 @@ theorem chC_one (p : ℤ) (s : ℂ) : chC p s 1 = 1 := by
 
 theorem chC_ne (p : ℤ) (s : ℂ) (a : ℂˣ) : chC p s a ≠ 0 := by
   unfold chC
-  exact mul_ne_zero (zpow_ne_zero _ (e_ne a)) (by simp [Complex.cpow_eq_zero_iff, r_ne a])
+  exact mul_ne_zero (zpow_ne_zero _ (e_ne a)) (by simp [Complex.cpow_eq_zero_iff])
 
 theorem chC_inv (p : ℤ) (s : ℂ) (a : ℂˣ) : chC p s a⁻¹ = chC (-p) (-s) a := by
   have h1 : chC p s a⁻¹ * chC p s a = 1 := by
@@ -357,7 +357,7 @@ theorem gC_refl (m : ℤ) (s : ℂ) (h0 : 0 < s.re) (h1 : s.re < 1) :
     simp
   · have : A = q := by rw [hA, hq]; simp
     rw [this, hq, _root_.zpow_neg, zpow_natCast, ← inv_pow, ← mul_pow]
-    simp [← mul_pow]
+    simp
 
 theorem exists_translate (f : SchwartzMap (Fin 2 → ℂ) ℂ) (g : Matrix (Fin 2) (Fin 2) ℂ) (hg : g.det ≠ 0) :
     ∃ f1 : SchwartzMap (Fin 2 → ℂ) ℂ, ∀ v, f1 v = f (Matrix.vecMul v g) := by

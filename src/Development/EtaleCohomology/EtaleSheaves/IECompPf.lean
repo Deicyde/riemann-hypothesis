@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.EtaleBaseChangeFractionFieldIndEtaleOverPolynomi
+import Mathlib.Algebra.Category.Ring.FinitePresentation
+import Mathlib.Order.CompletePartialOrder
 
 noncomputable section
 open CategoryTheory Limits

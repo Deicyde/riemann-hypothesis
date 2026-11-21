@@ -1,5 +1,7 @@
-import Formalism.LocalToGlobal.Columns.XiTopTilRefHolds
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.ChainTwFrA
+import Formalism.LocalToGlobal.Columns.XtIntAtQpow
 
 open NumberField IsDedekindDomain Module Matrix
 

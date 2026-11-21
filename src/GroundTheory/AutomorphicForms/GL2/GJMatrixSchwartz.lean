@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.GL2.GJMatrixAdelic
 import GroundTheory.AutomorphicForms.GL2.GJMatrixCoord
-import GroundTheory.AutomorphicForms.GL2.GJMatrixLocal
 
 namespace GroundTheory.Automorphic.GJMatrix
 

@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsContOnOfLocal
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdeleJoinZero
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 open IsDedekindDomain NumberField
 open scoped Classical

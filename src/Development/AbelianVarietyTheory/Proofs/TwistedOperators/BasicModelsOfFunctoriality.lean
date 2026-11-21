@@ -1,9 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.ParRowZero
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsDiscreteSeriesModelOfOrthonormalBasisCarta
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsPermOfCardFalse
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.GridParamRegularCardMinusCount
+import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.OffQOfSizeRows
 
 noncomputable section
 

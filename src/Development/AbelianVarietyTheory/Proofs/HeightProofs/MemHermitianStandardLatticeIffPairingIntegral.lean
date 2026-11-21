@@ -1,9 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.BesselHermitianTheta.TiedWeilUnr
-import Formalism.LocalToGlobal.BesselHermitianTheta.LemmasWeil
 import Development.AbelianVarietyTheory.BlockTheory.HeightDefect.ShiftMapsUpDown
-import Development.AbelianVarietyTheory.Counterexamples.HeightSurvey.SymplHAddRight
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.ExistsResolution
 
 noncomputable section
 

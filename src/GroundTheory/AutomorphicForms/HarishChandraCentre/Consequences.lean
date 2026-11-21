@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.HarishChandraCentre.Projection
-import GroundTheory.AutomorphicForms.HarishChandraCentre.Capelli
 
 namespace GroundTheory.Automorphic.HarishChandra
 

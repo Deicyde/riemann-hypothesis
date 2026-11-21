@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.SiegelWeilAnisotropicWitt
 
 noncomputable section

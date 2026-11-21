@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UltrametricCoefficientBound
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TopLeOfClosedPoint
 open CategoryTheory Limits AlgebraicGeometry IsLocalRing NumberField
 open ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.QCoh GlobalTheory.ChainPts GlobalTheory.ChainPts.PullHT
 open Formalism.MainNotions.DIV.Cons (intO)

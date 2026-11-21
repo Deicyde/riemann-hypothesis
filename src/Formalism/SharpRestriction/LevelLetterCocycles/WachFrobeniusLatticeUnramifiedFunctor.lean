@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.UsedLocalConclusion
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.FiltrationSaturationKiller
 import Formalism.SharpRestriction.LevelLetterCocycles.SecondComparisonInCoordinates
 import Formalism.SharpRestriction.LevelLetterCocycles.RingConditionOfDeltaInvariants

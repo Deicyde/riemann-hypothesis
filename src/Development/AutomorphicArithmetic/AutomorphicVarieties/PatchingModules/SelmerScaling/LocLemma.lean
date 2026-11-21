@@ -1,9 +1,11 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.SelmerScaling.EpC
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.LagTriangular
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.LagMap
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.OrdExt
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.TriProdZero
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.TriDiag
+import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.ResMapBijective
+import Mathlib.RingTheory.SimpleRing.Principal
 open IsLocalRing Matrix UpperTheory.V.Alg UpperTheory.V.W UpperTheory.V.AlgebraTools UpperTheory.V.Pa
 
 private theorem tri_diag {R : Type} [CommRing R] {n : ℕ} (A B : Matrix (Fin n) (Fin n) R)
@@ -172,7 +174,7 @@ private theorem move_idem {A B ι : Type} [Ring A] [Ring B] [Fintype ι] (π : A
   rw [e4, ← h2 a, ← h2 b]
   calc _ = (1 + Y) * f' a * ((1 - Y) * (1 + Y)) * r₁ * ((1 - Y) * (1 + Y)) * f' b * (1 - Y) := by
         simp only [mul_assoc]
-    _ = _ := by rw [hr]; simp only [mul_assoc, one_mul, mul_one]
+    _ = _ := by rw [hr]; simp only [mul_assoc, mul_one]
 
 private theorem sep_good {F R H : Type} [Field F] [Infinite F] [CommRing R] [Algebra F R] [Monoid H]
     {n : ℕ} (e : R →ₐ[F] F) (ψ : Fin n → H →* R)

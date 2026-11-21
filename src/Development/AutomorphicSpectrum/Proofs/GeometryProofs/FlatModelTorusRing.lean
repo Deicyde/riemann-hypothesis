@@ -1,10 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsFlatAnIffIsConstMul
-import Formalism.LocalToGlobal.ProjectiveLattices.VAtVNeBot
-import Formalism.LocalToGlobal.ProjectiveLattices.RulInst
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.StableEig
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.FramePointVectors
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LieOmegaLatticeVectorBundle
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsStableEigenTangentsStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExteriorCoeffRatioRegularStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.StableEigenTangentsPullbackStatement

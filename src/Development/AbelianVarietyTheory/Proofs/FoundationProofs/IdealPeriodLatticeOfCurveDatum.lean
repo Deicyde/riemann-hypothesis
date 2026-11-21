@@ -1,9 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.NormSumPairRankZeroOfCurveCoordNorm
-import Formalism.PairingDivisors.StatementH
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.SplitK
-import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.DiscrB
 import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.DedekindZetaEqSumRealEisenstein
+import Formalism.SharpRestriction.GlobalSchurBounds.StandardLatticesGL3
 open NumberField Classical Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.TaylorLogMetric Formalism.MainNotions.StandardLatticesGL3 GlobalTheory.NormSum
 open scoped BigOperators
 

@@ -1,5 +1,6 @@
-import Formalism.LocalToGlobal.GlobalTheory.GL6.IntegralTensorBasisLinIndep
-import Formalism.LocalToGlobal.GlobalTheory.CoordinateLengths.PairingContinuityBound
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.GlobalTheory.GL6.LocalBasisChangeDecompCompatible
 
 noncomputable section
 

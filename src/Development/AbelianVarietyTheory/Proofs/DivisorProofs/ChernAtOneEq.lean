@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsPosFrameQuotIn
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsTypeIsRealConst
 open Set Matrix Filter Topology
 open ReciprocityTheory.L2DbarEstimates (V)
 open GlobalTheory.HermFrame GlobalTheory.CxForm GlobalTheory.SecForm

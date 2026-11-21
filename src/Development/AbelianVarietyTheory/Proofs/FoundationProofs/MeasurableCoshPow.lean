@@ -1,6 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.StarMulOfMemKc
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsContinuousOnPolarLog
+import Development.AbelianVarietyTheory.BlockTheory.TorsionBlocks.CartanCoshPower
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.UpqLocallyCompactGroup
+import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsSvd
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.Series
 
 noncomputable section
 namespace GlobalTheory.CoshPowMeas

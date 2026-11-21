@@ -1,4 +1,9 @@
-import ReciprocityTheory.DualLattices.IsLocalOfIntegers
+import BuildAid.Leniency.Open
+import Mathlib.LinearAlgebra.Matrix.Rank
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import ReciprocityTheory.DualLattices.CotangentSurjective
 
 noncomputable section
 

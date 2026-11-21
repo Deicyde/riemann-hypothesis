@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.BrgStdR
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.NVNeZero
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LevelHyperspecialTrivialCharacterSplitsOffPlaces
@@ -13,8 +13,8 @@ theorem castGL_of_matEq {A : Type} [CommRing A] {a b : ℕ} (h : a = b) (x : GL 
     (hm : MatEq x y) : y = castGL h x := by
   subst h
   ext i j
-  simp only [castGL, Units.coe_mapEquiv, MulEquiv.coe_toMonoidHom]
-  simp [Matrix.reindexAlgEquiv_apply]
+  simp only [castGL, Units.coe_mapEquiv]
+  simp
   exact (hm.2 i j i j rfl rfl).symm
 
 theorem matEq_castGL {A : Type} [CommRing A] {a b : ℕ} (h : a = b) (x : GL (Fin a) A) : MatEq x (castGL h x) := by
@@ -56,7 +56,7 @@ theorem brgStdV_of_readsStd_one : ∀ (X : Stages) (px : PreX X.B.toPre) (I : Co
     rw [hβ] at hm
     have hx := castGL_of_matEq (rkEq X i).symm _ _ hm
     rw [hx]
-    simp only [matIn, mul_one, inv_one, one_mul, Equiv.symm_apply_apply, LinearEquiv.symm_apply_apply]
+    simp only [matIn, mul_one, inv_one, one_mul, LinearEquiv.symm_apply_apply]
     rfl
   · have hli := (P (Formalism.L2.DIV.mu0F _)).coef_li
     simp only [hcoef] at hli

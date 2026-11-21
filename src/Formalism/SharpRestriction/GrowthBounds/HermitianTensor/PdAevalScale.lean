@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.HermitianTensor.DetFactsPAlt
 
 noncomputable section
@@ -42,7 +44,7 @@ theorem pdW_det_sq : (pdW A r).det * (pdW A r).det = 1 := by
 
 theorem cofY_mapMatrix : (cofY A r).mapMatrix (genY A r) = pdZ A r := by
   ext i j
-  simp [cofY, genY, pdZ, AlgHom.mapMatrix_apply, aeval_X]
+  simp [cofY, genY, pdZ, AlgHom.mapMatrix_apply]
 
 theorem detY_eq : detY A r = (genY A r).det := rfl
 
@@ -81,7 +83,7 @@ theorem pd_ZZ : (genY A r).det • (cofY A r).mapMatrix (pdZ A r) =
     · ext i j
       fin_cases i
       fin_cases j
-      simp [pdZ, pdW, genY, Matrix.adjugate_fin_one, Matrix.det_fin_one, Matrix.mul_apply]
+      simp [pdW, genY, Matrix.adjugate_fin_one]
   · have hadjadj : (genY A r).adjugate.adjugate = (genY A r).det ^ (r - 2) • genY A r := by
       rw [Matrix.adjugate_adjugate _ (by rw [Fintype.card_fin]; omega), Fintype.card_fin]
     have hZ : (pdZ A r).adjugate =

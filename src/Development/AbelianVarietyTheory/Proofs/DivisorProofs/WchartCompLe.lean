@@ -1,8 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToRingActOpOfRingAct
-import Development.AbelianVarietyTheory.Definitions.Divisors.NonemptyHomFixRepTrivial
-import Development.AbelianVarietyTheory.Definitions.ModuliSpaces.IsGaloisCover
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.SabComp
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.GlobalSectionsRankAlgClosed
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open GlobalTheory.EndLoc

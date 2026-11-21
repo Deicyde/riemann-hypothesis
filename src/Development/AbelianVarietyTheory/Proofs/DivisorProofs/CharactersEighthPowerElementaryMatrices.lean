@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.TorMatch
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PowCompMonHom
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorMatchComp
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorMatchIdOneMul

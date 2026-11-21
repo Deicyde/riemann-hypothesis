@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.UnitLemmaGroup
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.LinearDescent
+import Mathlib.RingTheory.PicardGroup
 open GlobalTheory.UnitLemma Polynomial
 
 namespace GlobalTheory.UnitLemma

@@ -1,4 +1,4 @@
-import Formalism.LocalToGlobal.Divisibility.RecBridge
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.CoeNeZeroOfNotMem
 
 noncomputable section

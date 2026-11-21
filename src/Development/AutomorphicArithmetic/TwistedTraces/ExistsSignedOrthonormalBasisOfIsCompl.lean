@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.CuspidalMultiplicityOneTotallyComplex
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.HarishChandraRegularity.CartanBasis
 
 open MeasureTheory NumberField GroundTheory.Automorphic GroundTheory.Automorphic.Reduction GroundTheory.Automorphic.RightCosetSpace

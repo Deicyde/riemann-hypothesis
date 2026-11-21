@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SizeWindowBrackets.SlopeHypothesesRounded
 import Formalism.SizeWindowBrackets.ChainSlopeWindows.WeightedSlopeExcessDecomposition
-import Formalism.SizeWindowBrackets.ChainSlopeWindows.LevelOfCongruence
 import Formalism.SizeWindowBrackets.ChainSlopeWindows.JointDModelAppliesUnitLattice
 import Formalism.SizeWindowBrackets.ChainSlopeWindows.ExistsNsmulMem
 

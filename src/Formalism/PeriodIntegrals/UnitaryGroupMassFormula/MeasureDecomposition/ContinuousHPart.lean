@@ -1,7 +1,5 @@
-import Mathlib
-import Formalism.PeriodIntegrals.ScMuExists
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.MeasureDecomposition.InstDecomp
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.MeasureDecomposition.ContinuousUMatApply
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.MeasureDecomposition.HJMulVecGen
 
 noncomputable section
@@ -46,7 +44,7 @@ def piW (e f : Fin r → Fin n → ℂ) (z : Fin n → ℂ) : (Fin n → ℂ) �
 theorem piW_apply (e f : Fin r → Fin n → ℂ) (z x : Fin n → ℂ) :
     piW ε e f z x = x - ∑ a, hJ ε (f a) x • e a - ∑ a, hJ ε (e a) x • f a -
       ((hJ ε z z)⁻¹ * hJ ε z x) • z := by
-  simp [piW, hJL_apply, smul_eq_mul, mul_comm]
+  simp [piW, hJL_apply, smul_eq_mul]
 
 variable {ε}
 

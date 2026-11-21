@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.SiegelKlingenDeligneRibet
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.AbelContinuation
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.RayClassGroupFiniteRepresentativesStatement
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.ExistsShintaniConeDomainStatement
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.RayClassConeParametrizationStatement

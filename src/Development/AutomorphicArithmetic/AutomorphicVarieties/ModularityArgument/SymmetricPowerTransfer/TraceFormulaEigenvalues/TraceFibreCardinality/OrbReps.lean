@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.TraceFormulaEigenvalues.FormsFin
 
 open UpperTheory.V.Z.Sym MulAction in

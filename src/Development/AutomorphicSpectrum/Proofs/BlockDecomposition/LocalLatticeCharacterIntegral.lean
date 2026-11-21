@@ -1,7 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.EMatMulNegCol
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.FibreMassEq
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.SchwartzBilinear.Imports
+import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.CompletionIsLocalRing
+import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.CoordinateHaarMeasure
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerVolume.TensTop
 open scoped Matrix NNReal ENNReal TensorProduct
 open HeckeCharacterZeroLocus.SiegelWeilU GlobalTheory.CompanionTheory.WhitFree GlobalTheory.CompanionTheory.WeilSiegel.Frame GlobalTheory.CompanionTheory.AvgFree MeasureTheory
 
@@ -221,7 +224,7 @@ theorem GlobalTheory.CompanionTheory.AvgFree.nearNF_cover : ∀ (F E : Type) [Fi
   refine ⟨G, ?_, ?_, ?_⟩
   · have h1 : G.card ≤ n * Rep.card ^ n := by
       refine Finset.card_image_le.trans ?_
-      simp [Finset.card_product, Fintype.card_piFinset_const]
+      simp [Finset.card_product]
     have h2 : (G.card : ℝ≥0) ≤ n * (Rep.card : ℝ≥0) ^ n := by exact_mod_cast h1
     refine h2.trans ?_
     rw [pow_mul, inv_pow]

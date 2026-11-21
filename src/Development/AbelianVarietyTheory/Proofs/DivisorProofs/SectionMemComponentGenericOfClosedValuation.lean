@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsOpenConnectedComponentOfIsLocallyNoetherianStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SmoothGenericFibreClosurePartitionStatement
+import Mathlib.AlgebraicGeometry.Fiber
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj TopologicalSpace TensorProduct
 open scoped CategoryTheory.Obj

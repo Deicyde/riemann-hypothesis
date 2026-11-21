@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.DiscreteGroups.GlobalIrreducibility.LConvAltB
+import Mathlib.Analysis.CStarAlgebra.ContinuousLinearMap
 
 noncomputable section
 

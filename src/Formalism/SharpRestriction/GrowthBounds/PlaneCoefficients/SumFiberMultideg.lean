@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.PlaneCoefficients.RestPlOf
 
 noncomputable section

@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsRedDual
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PDivGroupBaseChangeIsConnIsEtPerfect
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DieudonneBaseChangeBasisStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrobTwistBaseChangeHomApp
 
 set_option autoImplicit false
 
@@ -68,7 +67,7 @@ theorem GlobalTheory.Dieu.EtFromConn.isTr_comp : ∀ (p : ℕ) [Fact p.Prime] (B
     · intro c x
       simp [map_smul, smul_eq_mul, map_mul]
     · intro i
-      simp only [AddMonoidHom.comp_apply, LinearMap.toAddMonoidHom_coe, RingHom.toAddMonoidHom_eq_coe,
+      simp only [AddMonoidHom.comp_apply, RingHom.toAddMonoidHom_eq_coe,
         AddMonoidHom.coe_coe]
       rw [← hbu_eq, Module.Basis.constr_basis]
   refine ⟨hbu, lbu, hlbu, fun y => ?_⟩

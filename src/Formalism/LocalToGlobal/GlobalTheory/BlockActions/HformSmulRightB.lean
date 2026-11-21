@@ -1,5 +1,6 @@
-import Formalism.LocalToGlobal.GlobalTheory.BlockActions.RestrictionSymmetric
-import Formalism.LocalToGlobal.GlobalTheory.GL4.CTEqConjTranspose
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.HermitianForms.TiedBr
 
 noncomputable section
 

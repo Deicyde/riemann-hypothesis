@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.UnitLemmaGroup
+import Mathlib.RingTheory.PiTensorProduct
 open GlobalTheory.UnitLemma Polynomial
 
 namespace GlobalTheory.UnitLemma.InvAlg

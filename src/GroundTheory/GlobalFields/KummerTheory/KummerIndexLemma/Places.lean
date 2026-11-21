@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.KummerTheory.KummerIndexLemma.PowerPlaces
 import GroundTheory.GlobalFields.SUnits
 

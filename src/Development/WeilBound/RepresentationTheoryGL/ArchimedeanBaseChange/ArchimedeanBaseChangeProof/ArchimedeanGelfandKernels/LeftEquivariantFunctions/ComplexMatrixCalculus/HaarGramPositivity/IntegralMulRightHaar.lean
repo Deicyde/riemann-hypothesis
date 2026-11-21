@@ -1,4 +1,6 @@
-import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.ArchimedeanGelfandKernels.LeftEquivariantFunctions.ComplexMatrixCalculus.SwapLaws
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.ArchimedeanGelfandKernels.LeftEquivariantFunctions.ComplexMatrixCalculus.InstBorelUK
 
 noncomputable section
 
@@ -35,7 +37,7 @@ theorem map_mul_right_haar (g : UK n) :
     rw [Measure.map_apply (measurable_mul_const g) MeasurableSet.univ, Set.preimage_univ]
   have hc : ν.haarScalarFactor μ = 1 := by
     have h1 := congrArg (fun m : Measure (UK n) => m Set.univ) hsm
-    simp only [Measure.smul_apply, smul_eq_mul] at h1
+    simp only [Measure.smul_apply] at h1
     rw [huniv] at h1
     have hne : μ Set.univ ≠ 0 := IsOpen.measure_ne_zero μ isOpen_univ Set.univ_nonempty
     have hfin : μ Set.univ ≠ ⊤ := measure_ne_top μ _

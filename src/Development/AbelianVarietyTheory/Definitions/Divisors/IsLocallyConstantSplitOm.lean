@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.HilbertNinetyQuotientHomEqIff
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilObjectsInhabited
 
 noncomputable section
@@ -87,7 +87,7 @@ theorem isLocallyConstant_splitOm (χ : (F × F)ˣ →* Circle) (hχ : Continuou
     eventually_comp_eq (p₀ := 1) (fun p v => flat σ ((flat σ).symm v * ((ugFst J p)⁻¹).valᵀ))
       (fun p v => flat σ ((flat σ).symm v * (ugFst J p).valᵀ)) (hc _ (Units.continuous_val.comp c0.inv)) (hc _ (Units.continuous_val.comp c0))
       (by simp) (by simp) (fun p v => by
-        simp only [Function.comp, LinearEquiv.symm_apply_apply, Matrix.mul_assoc, ← transpose_mul, Units.mul_inv,
+        simp only [LinearEquiv.symm_apply_apply, Matrix.mul_assoc, ← transpose_mul, Units.mul_inv,
           transpose_one, Matrix.mul_one, LinearEquiv.apply_symm_apply]) hφ] with h h1 h2
   funext u
   have h3 : splitChar (distribHaarChar F) χ (Fintype.card α) (GeneralLinearGroup.det (ugFst J h)) = 1 := by

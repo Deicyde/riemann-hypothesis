@@ -1,8 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LiePairingEqInvariantDifferential
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SpOverFstComp
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TangentPhiSurjectiveOntoDual
 set_option autoImplicit false
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry MonoidalCategory CartesianMonoidalCategory MonObj NumberField WithConv

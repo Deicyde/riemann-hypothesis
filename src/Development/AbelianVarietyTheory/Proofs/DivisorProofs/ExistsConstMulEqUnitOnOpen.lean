@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToStkACv
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsConstMulEqUnit
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ValCalc
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField MeasureTheory
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.GeometryOfNumbersTheory

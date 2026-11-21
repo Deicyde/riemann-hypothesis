@@ -1,6 +1,6 @@
-import Mathlib
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ProjectionGramMatrices.AlgebraMapNeZeroOfNotMem
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ProjectionGramMatrices.IdxDet
+import Formalism.HermitianLattices.HermitianLatticesProofs.IndexBasic
 
 noncomputable section
 

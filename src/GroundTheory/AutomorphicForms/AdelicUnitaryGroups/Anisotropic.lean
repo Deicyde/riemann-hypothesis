@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.AdelicUnitaryGroups.Topology
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.NumberTheory.NumberField.Completion.InfinitePlace
 
 set_option linter.unusedSectionVars false
 

@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.ContPf
+import Mathlib.AlgebraicGeometry.AffineTransitionLimit
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry GlobalTheory.EtC LateralTheory.E.t_E2Cut LateralTheory.E.ContPf

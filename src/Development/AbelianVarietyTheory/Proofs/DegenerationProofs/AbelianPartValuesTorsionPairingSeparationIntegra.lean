@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Degenerations.AdmissibleBaseOfCompleteDvr
-import Development.AbelianVarietyTheory.Definitions.Degenerations.HomExtSt
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ThetaCoordinatesExistUniqueSeparatePointsStatement
 import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.ExistsTorsionLift
 import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.ExistsGeneratorNeZero

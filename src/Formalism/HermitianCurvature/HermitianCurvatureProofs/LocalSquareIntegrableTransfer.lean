@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJALocCC
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.TransferSquareIntegrableHolds
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutCutTr

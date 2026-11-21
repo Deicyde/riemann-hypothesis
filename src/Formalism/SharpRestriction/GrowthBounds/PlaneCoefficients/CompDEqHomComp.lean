@@ -1,7 +1,10 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.PolynomialLevels.LowestWeightNonposOffSet
 import Formalism.SharpRestriction.GrowthBounds.PolynomialLevels.LevNMonomial
 import Formalism.SharpRestriction.GrowthBounds.PolynomialLevels.MemSpanList
 import Formalism.SharpRestriction.GrowthBounds.PlaneCoefficients.TypeBd
+import Formalism.SharpRestriction.GrowthBounds.DiagonalSupport.MemSupportSumMonomial
+import Formalism.SharpRestriction.GrowthBounds.TwistedSubstitution.JointEIntList
 
 noncomputable section
 

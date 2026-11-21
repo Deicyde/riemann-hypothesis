@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.ConcretePkgSpec
 import Formalism.LocalToGlobal.IndefiniteReal.CxCore
-import Formalism.LocalToGlobal.IndefiniteReal.LiftGoodPartComplexEqRange
 import Formalism.LocalToGlobal.IndefiniteReal.BridgeLemmas
 import Formalism.LocalToGlobal.IndefiniteReal.ArithLemmas
 import Formalism.LocalRingCardinality.HeightBoundGeFourthPowerRank

@@ -1,7 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.NotCoboundaryConstantOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.CompletedLaurentIsDVRStatementStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsBasisOnZetaPowMulQPowStatement
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Algebra.Polynomial.Eval.Irreducible
 
 noncomputable section
 
@@ -202,7 +204,7 @@ theorem dvr_of_generators {R S F : Type*} [CommRing R] [IsDomain R] [IsDiscreteV
     simpa [f, this] using hirr
   haveI : Fact (Irreducible f) := ⟨hf⟩
   have hroot : f.eval₂ ψ (Ideal.Quotient.mk J y) = 0 := by
-    simp only [f, eval₂_sub, eval₂_pow, eval₂_X_pow, eval₂_X, eval₂_C, hψ]
+    simp only [f, eval₂_sub, eval₂_pow, eval₂_X, eval₂_C, hψ]
     rw [← map_pow, hy, sub_self]
   let θ : AdjoinRoot f →+* S ⧸ J := AdjoinRoot.lift ψ _ hroot
   have hsurj : Function.Surjective θ := by

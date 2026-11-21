@@ -1,10 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutLimENF
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutLemB
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.TopFirstOfParts
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.ThetaCompactSupport
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.PBTAsm
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.SliceContOn
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.TopCellsOfParts
 import CompanionTheory.AutomorphicTheory.DiscreteGroupWaves.IntegralEqOfSqrtCauchy
 
 namespace CompanionTheory.NFCpt

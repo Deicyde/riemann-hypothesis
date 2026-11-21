@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.FockModels.TransposeWords.FockPairingHighestWeight
 import Formalism.GradedWeylDivisibility.FockSpaceTableaux.LDlatLemmas
-import Formalism.GradedWeylDivisibility.FockSpaceTableaux.LCassemLemmas
+import Formalism.GradedWeylDivisibility.FinalC
 
 open MvPolynomial
 

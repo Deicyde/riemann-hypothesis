@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.ImportsMoreBis
 import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.ImportsTerLast
 import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.InhabitLine
@@ -12,9 +13,6 @@ import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.PFibreVarie
 import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.PGenericDimGe
 import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.PComponentDim
 import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.OfSteps
-import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.ClassListMapDomainPerm
-import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.IsFieldIntersectionExample
-import GroundTheory.HeightsAndTheta.Heights.FieldsOfNumbers.Assembly
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.NumbersDVR

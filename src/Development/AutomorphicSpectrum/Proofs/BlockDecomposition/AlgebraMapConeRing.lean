@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.HodgeSurjectivity.NLeA
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.HodgeSurjectivity.CombinatorialCechAcyclic
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
+import Mathlib.Tactic.ENatToNat
 
 set_option autoImplicit false
 noncomputable section

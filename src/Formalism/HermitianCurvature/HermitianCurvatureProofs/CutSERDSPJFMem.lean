@@ -1,7 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutSERDSPair
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutSERDJNice
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.PositiveOrbitOpen
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.JfBetaAdjCOfLemmaBNorm
 
 open MeasureTheory Filter Topology
 

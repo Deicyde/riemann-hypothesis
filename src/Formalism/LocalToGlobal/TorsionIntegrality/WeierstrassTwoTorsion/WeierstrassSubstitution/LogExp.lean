@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.WeierstrassTwoTorsion.StatementZ
 import Formalism.LocalToGlobal.TorsionIntegrality.WeierstrassTwoTorsion.StatementT
 

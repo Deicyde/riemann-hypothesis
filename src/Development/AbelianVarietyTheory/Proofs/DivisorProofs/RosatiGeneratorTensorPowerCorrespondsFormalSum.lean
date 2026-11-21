@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RosVec
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TransportedGeneratorUniqueGlobalFunctionsBaseStatement
+import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.ExistsTorusAndQuotientHom
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj IsLocalRing NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open scoped CategoryTheory.Obj
@@ -107,7 +108,7 @@ theorem formEq_sig (T : Tens D D' W) (A A' : Matrix (Fin r) (Fin r) ℤ) :
     rw [ofMul_prod]
     simp only [ofMul_zpow]
     rw [Finset.sum_coe_sort (sig W A A').support (fun v => sig W A A' v • H v)]
-    simp only [F, Finsupp.liftAddHom_apply, zmultiplesHom_apply]
+    simp only [F, Finsupp.liftAddHom_apply]
     rfl
   apply Additive.ofMul.injective
   rw [hR]

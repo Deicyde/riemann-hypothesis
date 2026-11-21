@@ -1,8 +1,5 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.RegularSemisimpleFibres.ResEmbCompat
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLabel
-import Development.AbelianVarietyTheory.Proofs.CharacterTheory.IsCharacterOverSubfieldOfRepresentationStatement
-import Development.AbelianVarietyTheory.Proofs.CharacterTheory.ExistsStandardUnipotentRadicalBijOnNilradicalStatement
-import Development.AbelianVarietyTheory.Proofs.CharacterTheory.IsPrimitiveExtendZeroOfSumUnipotentRadicalStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SubsingletonJacquetOfPerm
 import Development.WeilBound.CoreStatements.FiniteTypeHarishChandra.GreenCuspLabels.GreenCuspidal
 
@@ -75,7 +72,7 @@ theorem cuspChar : CuspChar := by
     rw [← hH, finsum_mem_def, finsum_eq_sum_of_fintype]
     rw [← hz]
     refine Finset.sum_congr rfl fun u _ => ?_
-    by_cases hu : u ∈ H <;> simp [Set.indicator_apply, hu]
+    by_cases hu : u ∈ H <;> simp [hu]
   obtain ⟨k, hk, hx⟩ := GlobalTheory.CuspFormula.exists_regular F θ hθ m hm _ (hc.2 hirr) hprim
   refine ⟨k, hk, fun x => ?_⟩
   have := hx x

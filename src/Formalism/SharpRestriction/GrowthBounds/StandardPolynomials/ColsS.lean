@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.ColDef
 import Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.SymbolEq
+import Formalism.SharpRestriction.GrowthBounds.FrobeniusPaths.LiftedColumnMultidegree
+import Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.MultidegAdd
 
 noncomputable section
 

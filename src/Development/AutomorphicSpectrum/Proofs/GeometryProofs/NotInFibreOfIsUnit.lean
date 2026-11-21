@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.MemEigSpOfMemHtDual
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.GlueApplyOfNotInFibre
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.CoordsAt
 
 noncomputable section
 

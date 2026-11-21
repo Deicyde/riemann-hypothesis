@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SiegelReframe
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BundleIsomorphismLocalToGlobalStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolarisationLocalFactorSystemStatement
 open Matrix MeasureTheory GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe
@@ -14,7 +14,7 @@ variable {E : Type} [NormedAddCommGroup E] [NormedSpace ℂ E] {g : ℕ}
 theorem per_zsmul (τ : Matrix (Fin g) (Fin g) ℂ) (n : ℤ) (x : Fl g) :
     per τ (n • x) = n • per τ x := by
   ext i
-  simp [per, Matrix.vecMul, dotProduct, Finset.mul_sum, mul_assoc, mul_add]
+  simp [per, Matrix.vecMul, dotProduct, Finset.mul_sum, mul_assoc]
 
 theorem transl_mulN (τ : E → Matrix (Fin g) (Fin g) ℂ) (n : ℤ) (l : Fl g) (P : Pt E g) :
     transl τ (n • l) (mulN n P) = mulN n (transl τ l P) := by

@@ -1,8 +1,4 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.FieldsOfNumbers.Statements
-import GroundTheory.HeightsAndTheta.Heights.FieldsOfNumbers.Assembly
-import GroundTheory.HeightsAndTheta.Heights.FieldsOfNumbers.PContractRelDimLe
-import GroundTheory.HeightsAndTheta.Heights.FieldsOfNumbers.PDivPushForward
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.SemipositiveHeights.NumericalSegre
 set_option maxSynthPendingDepth 1
 

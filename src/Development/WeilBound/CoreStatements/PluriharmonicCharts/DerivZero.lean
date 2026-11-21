@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.OmHeightslockG
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PluriharmonicCharts.ExistsPeriodOfFrames
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.HolDifferentiableAt
 

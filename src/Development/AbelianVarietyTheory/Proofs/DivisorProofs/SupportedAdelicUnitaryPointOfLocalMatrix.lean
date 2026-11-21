@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFinMapsOfForall
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAt
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.HoweUnram
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.XmApply
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.KFinLoc
 open scoped TensorProduct Matrix
 
@@ -18,9 +15,9 @@ theorem uAt_of_local : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [Num
     rw [hg]
     by_cases h : i = j
     · subst h
-      simp [Matrix.one_apply, map_sub]
+      simp [map_sub]
       abel
-    · simp [Matrix.one_apply, h, map_sub]
+    · simp [h]
   ext i j
   have h1 : At (evFin F v) ((mat g - 1) i j) := (hι _).2 ⟨_, (hent i j).symm⟩
   simpa using h1 u hu

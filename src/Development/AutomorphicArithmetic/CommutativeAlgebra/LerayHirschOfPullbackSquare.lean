@@ -1,9 +1,9 @@
-import Development.AutomorphicArithmetic.BlowupCategories.SpanScale
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CommutativeAlgebra.PullCupPowEqCupPowPull
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CupHypercohomologyPullbackStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TateTwistCupProductGradedCommStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TateTwistCupProductAssocStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TateTwistCupUnitAndPrimitiveRootClassesStatement
+import Development.AutomorphicArithmetic.CupPullbacks.ConstCompSingle
 open CategoryTheory Limits AlgebraicGeometry Opposite CochainComplex CochainComplex.HomComplex GlobalTheory.EtC UpperTheory.Pbf UpperTheory.Blow
 
 private theorem ht_cast_cast {q : ℕ} {E : Spc} {n i n' i' n'' i'' : ℤ} (h1 : n = n') (h2 : i = i') (h3 : n' = n'') (h4 : i' = i'')
@@ -82,8 +82,8 @@ private theorem gysin_injective {q : ℕ} {X B : Spc} (p : B ⟶ X) (ξ : Ht q B
     Fin.cases (motive := fun j : Fin 2 => Ht q X (n - 2 * (((j : ℕ) : ℤ))) (i - ((j : ℕ) : ℤ)))
       (Ht.cast (by simp) (by simp) y0)
       (fun k => Ht.cast (by have : (k : ℕ) = 0 := by omega
-                            simp [this]) (by have : (k : ℕ) = 0 := by omega
-                                             simp [this]) y1) j
+                            simp) (by have : (k : ℕ) = 0 := by omega
+                                             simp) y1) j
   have e0 : a' 0 = Ht.cast (by simp) (by simp) y0 := rfl
   have e1 : a' 1 = Ht.cast (by simp) (by simp) y1 := rfl
   have hz := (LHp n i).1 (a₁ := a') (a₂ := 0) (by

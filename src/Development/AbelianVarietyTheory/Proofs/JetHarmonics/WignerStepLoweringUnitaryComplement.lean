@@ -1,9 +1,4 @@
-import Mathlib
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.DifferentialOperatorBracket
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.FrameExtension
-import Formalism.RealPlaceAnalysis.ThirdArithmeticHolds
-import Development.AbelianVarietyTheory.Definitions.Jets.Imports
-import Development.AbelianVarietyTheory.Definitions.Jets.WigMap
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.NormSqContractLe
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.HypAndAdj
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.PieriLoweringStepGlTensorDualStandardStatement
@@ -27,7 +22,7 @@ theorem comp_adjoint_apply {V : Type} [NormedAddCommGroup V] [InnerProductSpace 
       PiLp.inner_apply, Finset.sum_eq_single c]
     · simp
     · intro b _ hb
-      simp [PiLp.single_apply, Pi.single_apply, hb]
+      simp [hb]
     · simp
   rw [h, ha]
   rfl

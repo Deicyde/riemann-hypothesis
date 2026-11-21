@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.SphericalEisensteinSeriesOnGroup
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.HalfData
 
 noncomputable section

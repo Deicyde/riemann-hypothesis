@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.VolumeEquality.PrimeIdealOfFromSpec
 
 noncomputable section

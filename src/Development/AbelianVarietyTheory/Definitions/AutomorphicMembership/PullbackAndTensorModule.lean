@@ -1,11 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.MultiplicationLatticeSecond
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ThetaCubIsPullCubical
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.ExistsDualFamilySelfDualHermitianSpace
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.SmoothOfRelativeDimensionTensor
-import Formalism.HermitianLattices.StatementLat
-import Formalism.LocalToGlobal.ProjectiveLattices.ThShort
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.HolomorphicFamilies.CmHostUnitAddConjEqOne
+import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.ExistsLeftInverse
 
 noncomputable section
 

@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAtAlt
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -123,7 +122,7 @@ theorem lev_unitary (J : Matrix (Fin d) (Fin d) R) (J₁ : Matrix (Fin d₁) (Fi
   have hD' : J₁ * D.map c + Dᵀ * J₁ + Dᵀ * (J₁ * D.map c) = 0 := by
     rw [Matrix.map_add c (map_add c), hm1', Matrix.transpose_add, Matrix.transpose_one] at hD
     simp only [Matrix.add_mul, Matrix.mul_add, Matrix.one_mul, Matrix.mul_one, Matrix.mul_assoc] at hD
-    have := congrArg (· - J₁) hD; simp only [add_sub_cancel_right, sub_self] at this
+    have := congrArg (· - J₁) hD; simp only [sub_self] at this
     rw [← this]; abel
   simp only [lev, Matrix.transpose_add, Matrix.transpose_one, Matrix.transpose_mul, Matrix.map_add c (map_add c), hm1, map_mul',
     Matrix.add_mul, Matrix.mul_add, Matrix.one_mul, Matrix.mul_one, Matrix.mul_assoc]

@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.PrimeDegreeVariant
 
 open Formalism.BasicNotions Formalism.MainNotions

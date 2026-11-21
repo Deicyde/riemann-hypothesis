@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.VacOfShape
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.ValueDoubleUnif
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.LatticeFrames.DoubleCollapse
+import Development.AbelianVarietyTheory.Definitions.LatticeFrames.PlaceLaws
 
 noncomputable section
 

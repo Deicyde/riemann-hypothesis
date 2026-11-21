@@ -1,10 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.ChoiceOfModulusAndDiscriminant
 import Formalism.SharpRestriction.CuspSpanNormBounds.RadialRules
 import Formalism.SharpRestriction.CuspSpanNormBounds.RadialChainStatements
 import Formalism.SharpRestriction.CuspSpanNormBounds.BlockEstimateTheorem
-import Formalism.SharpRestriction.CuspSpanNormBounds.HereditaryPositivity
 import Formalism.SharpRestriction.CuspSpanNormBounds.RadialLemmaE
-import Formalism.SharpRestriction.CuspSpanNormBounds.OnePlaceEstimates
 import Formalism.FormalDegreeBessel.FinalIO
 import Formalism.SharpRestriction.CuspSpanNormBounds.PExtra
 

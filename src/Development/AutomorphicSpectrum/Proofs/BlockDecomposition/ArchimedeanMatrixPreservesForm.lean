@@ -1,6 +1,4 @@
-import Mathlib
-import Development.WeilBound.ThetaLifts.Reductions.SiegelCore
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.StabUpTo
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsHeisenbergCoords
 open NumberField MeasureTheory Matrix Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SiegelSet GlobalTheory.CompanionTheory.CFin
 open Formalism.UG (cT)

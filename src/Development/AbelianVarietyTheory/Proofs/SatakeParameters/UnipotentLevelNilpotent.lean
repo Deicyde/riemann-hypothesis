@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.KernelLattices.FirstKernelLawReading
-import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.PeriodLatticeFinitelyGenerated
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.InertKernelTheory.InertCoprimeLemmas.RepDataRec
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.NatCastMemOfPrimeDvdAbsNorm
 

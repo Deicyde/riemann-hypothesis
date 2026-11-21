@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IdealEqBotOfFlatQuotientOfMapMaximalIdeal
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.FlatOfIsFiniteOfFlatGeometricFibres
 
 open TensorProduct LinearMap

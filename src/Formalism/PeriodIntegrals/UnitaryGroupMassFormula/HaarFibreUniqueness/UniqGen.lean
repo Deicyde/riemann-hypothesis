@@ -1,5 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.GeneralLinearActions.GenusMassVolumes
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.SetTheory.ZFC.PSet
+import Mathlib.Topology.Separation.Profinite
 
 noncomputable section
 

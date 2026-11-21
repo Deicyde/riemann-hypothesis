@@ -1,4 +1,10 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.FourierProjections.PaPolyTranslate
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Analysis.Calculus.ContDiff.Bounds
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
+import Mathlib.RingTheory.SimpleRing.Principal
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.PropAA
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace ReciprocityTheory.ChartRestriction.G.I2.FPw
 
@@ -75,7 +81,7 @@ theorem ellL_apply (q : ℕ) (a v : EuclideanSpace ℂ ι) : ellL q a v = q * Re
   simp [ellL, Hf]
   left
   first
-    | (rw [PiLp.inner_apply]; exact Finset.sum_congr rfl fun x _ => by simp [mul_comm])
+    | (rw [PiLp.inner_apply]; exact Finset.sum_congr rfl fun x _ => by simp)
     | (simp [PiLp.inner_apply, mul_comm]; done)
     | (simp [EuclideanSpace.inner_eq_star_dotProduct, dotProduct, mul_comm]; done)
 

@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.RowMap
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.UnramifiedStandardAddCharConductorPropertiesStatement
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsTestRep
+import Mathlib.Topology.UniformSpace.Uniformizable
 open GlobalTheory.JR Matrix MeasureTheory Filter Topology
 
 theorem GlobalTheory.JR.WeilMix.negB_ptrB_wS_ptrB : ∀ (F E : Type) [NontriviallyNormedField F] [NontriviallyNormedField E] [NormedAlgebra F E] [StarRing E] [Unram F E] (r : ℕ) (M : Meas r F E) (ψ : AddChar F ℂ), IsStdChar ψ → ∀ f : Gl r F → ℂ, IsTest f → WeilMix.negB (WeilMix.ptrB M ψ (WeilMix.rowAct (wS F) (WeilMix.ptrB M ψ f))) = fourG M ψ f := by
@@ -40,7 +42,7 @@ theorem GlobalTheory.JR.WeilMix.negB_ptrB_wS_ptrB : ∀ (F E : Type) [Nontrivial
     simp [Function.uncurry, H, h0]
   have hint : Integrable (Function.uncurry H) (μ.prod μ) := hHc.integrable_of_hasCompactSupport hHs
   calc _ = ∫ x, G (-x) ∂μ := by
-        congr 1; funext x; simp only [G, neg_dotProduct, neg_neg]; rfl
+        congr 1; funext x; simp only [G, neg_dotProduct]; rfl
     _ = ∫ x, G x ∂μ := integral_neg_eq_self G μ
     _ = ∫ x, ∫ b', H x b' ∂μ ∂μ := by
         congr 1; funext x; simp only [G, H]; rw [integral_mul_const]

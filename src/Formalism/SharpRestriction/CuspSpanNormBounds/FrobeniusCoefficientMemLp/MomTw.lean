@@ -1,6 +1,7 @@
-import Formalism.SharpRestriction.CuspSpanNormBounds.AbsoluteAmplitudeSecondOfSource
-import Formalism.SharpRestriction.CuspSpanNormBounds.LowestKTypeMultiplicity
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.FormalDegreeBessel.FormalDegreeRatio.UnitaryWeylNormalHolds
+import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
 
 open Matrix
 

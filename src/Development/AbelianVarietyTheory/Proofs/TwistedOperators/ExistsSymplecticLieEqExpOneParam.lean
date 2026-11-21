@@ -1,7 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.RealMetaplecticRepresentation
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ContDiffOfContinuousOneParameter
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Algebra.Lie.Classical
+import Mathlib.Analysis.Normed.Algebra.MatrixExponential
+import Mathlib.Tactic.ENatToNat
 
 open scoped Matrix
 

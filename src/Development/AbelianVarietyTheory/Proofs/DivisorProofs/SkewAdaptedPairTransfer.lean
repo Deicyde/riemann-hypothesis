@@ -1,7 +1,5 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUniqueLeviElementStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenIntertwinerRestrictionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedPlaneRestrictionPairThirdStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedPlaneRestrictionPairFourthStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TensorProductSchwartzAdelicStatement
@@ -49,7 +47,7 @@ theorem eq_one_of_boxFun {R κ κ' : Type} {φ₁ : (κ → R) → ℂ} {φ₂ :
   obtain ⟨x₁, hx₁⟩ := Function.ne_iff.mp h₁
   obtain ⟨x₂, hx₂⟩ := Function.ne_iff.mp h₂
   have := congrFun h (Sum.elim x₁ x₂)
-  simp only [boxFun, Sum.elim_comp_inl, Sum.elim_comp_inr, Pi.smul_apply, smul_eq_mul, Pi.zero_apply] at this
+  simp only [boxFun, Sum.elim_comp_inl, Sum.elim_comp_inr, Pi.smul_apply, smul_eq_mul] at this
   have hne : φ₁ x₁ * φ₂ x₂ ≠ 0 := mul_ne_zero hx₁ hx₂
   have : (a - 1) * (φ₁ x₁ * φ₂ x₂) = 0 := by linear_combination this
   exact sub_eq_zero.mp ((mul_eq_zero.mp this).resolve_right hne)

@@ -1,21 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.TwistPlacesOffPrimeQZero
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.BottomExistsIntegrable
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
-import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.NormSmall
-import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.DictAt
-import Development.AbelianVarietyTheory.Statements.HeckeThetaIntegrals.ThetaIntegralsAgree
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.CuspAlongSmoothRows
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ToricSymbols
-import Development.AbelianVarietyTheory.Definitions.Foundations.NormSumPairRankZeroOfCurveCoordNorm
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsVacuumMovedThetaVacuum
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.KernelJetsOfTranslateJets
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MemGfCOfSuppAt
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.FiniteHeisenbergTranslateSelfDualVacuumFockJets
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockVacEqJets
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockJetVacuumEqConstMulPeriodScaledJet
-import Formalism.LocalToGlobal.Columns.CoefficientsModP.LatticeBasisExistsHolds
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.DIV
 open IsDedekindDomain NumberField GlobalTheory.ChiGrid GlobalTheory.FunObj GlobalTheory.RowTest GlobalTheory.RowClaim
 open Formalism.L2.Host (HChar)
@@ -98,7 +84,7 @@ theorem lat_eq_inV {D : D7} {V : HSp D} {r : GlobalTheory.IndefiniteRowSideFullH
     (r.Λ : Set (Fin V.rank → D.host.E)) = GlobalTheory.MovedDict.inV 1 (StandardLatticesGL3.stdL D V.rank) := by
   ext y
   rw [SetLike.mem_coe, h.2.1]
-  simp [GlobalTheory.MovedDict.inV, StandardLatticesGL3.stdL, Submodule.mem_pi, Submodule.mem_one]
+  simp [GlobalTheory.MovedDict.inV, StandardLatticesGL3.stdL, Submodule.mem_one]
 
 theorem vacuum_translate_minor_jet : ∀ {D : D7} {T : Type} [Finite T] {L : LevCh D T} {μ₀ : T} {sc : Consts} {G : GridData L sc} {W : G.Weil}
     {i j : Fin D.R.m} {A A' WW : HSp D} {X : Tri T A A' WW}, GlobalTheory.FunPr.Hypotheses₂ → (∀ D, GlobalTheory.NormSum.Inp D) → L.Is μ₀ → IsBottomTri W i j X →

@@ -1,5 +1,4 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.WittExactSequences.IsCompl
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PerfectTensorGeneratedLiftStatement
 open TensorProduct CrystallineSemistableComparison.D
 open scoped LaurentPolynomial
@@ -51,7 +50,7 @@ theorem pq_baseChange_polynomial : ∀ (p : ℕ) [Fact p.Prime] (A : Type) [Comm
   have hcomp : (Polynomial.C : K →+* Polynomial K).comp (algebraMap A K)
       = (Polynomial.mapRingHom (algebraMap A K)).comp (algebraMap A (Polynomial A)) := by
     ext a
-    simp [Polynomial.algebraMap_apply]
+    simp
   have key := GlobalTheory.T.perfect_tensor_generated_lift p A (Polynomial A) B K (Polynomial K) i (Ideal.span {h})
     Polynomial.C (Polynomial.mapRingHom (algebraMap A K)) i₁ hA hK hPQ hcomp hcl hC hj
   refine ⟨i₁, ?_, hC, hX⟩

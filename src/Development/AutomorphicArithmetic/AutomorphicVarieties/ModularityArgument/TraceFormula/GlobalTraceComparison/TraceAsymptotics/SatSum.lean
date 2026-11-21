@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.TraceFormula.GlobalTraceComparison.TraceAsymptotics.FinprodSplitAlt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SumSatEqOfIsCT
 
@@ -20,7 +21,7 @@ private theorem satEig_scale (q n : ℕ) (B : Multiset ℂˣ) (c : ℂˣ) (i : �
     satEig q n (B.map (· * c)) i = (c : ℂ) ^ i * satEig q n B i := by
   have e : ((B.map (· * c)).map fun b : ℂˣ => (b : ℂ)) =
       (B.map fun b : ℂˣ => (b : ℂ)).map (· * (c : ℂ)) := by
-    simp [Multiset.map_map, Function.comp_def]
+    simp [Multiset.map_map]
   simp only [satEig]
   rw [e, esymm_scale]
   ring

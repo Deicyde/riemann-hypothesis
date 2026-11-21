@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.EigLat
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.HomogeneousNonvanishing.LatticesAgreeOfHeightOne
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj GlobalTheory.CompanionTheory.Ar
 open scoped CategoryTheory.Obj

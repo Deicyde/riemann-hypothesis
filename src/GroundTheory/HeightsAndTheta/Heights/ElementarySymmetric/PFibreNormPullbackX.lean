@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PFibreNormPullback
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsPullFormsGeneric
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsFibreNormDehomRoots
+import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsFibreNormDehomIntegral
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.HilbertSamuel

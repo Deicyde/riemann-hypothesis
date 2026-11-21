@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsLUBRangeOfMatch
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EigenframeGenericAffineOpen
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.DualGramInterpGram
 
 noncomputable section
 

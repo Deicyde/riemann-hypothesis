@@ -1,18 +1,10 @@
-import Mathlib
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LogAbsEEqZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRk
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiagFirstApply
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptQ
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsUnitDetOfCartan
 import Development.AbelianVarietyTheory.Definitions.Divisors.PairsOfSquareTriple
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndicatorIntMMemSB
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LinearModelCompactConjugateExistsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LinearModelUnitaryIntertwinesStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalMomentMatrixTransform
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalCharacterNormOneUnit
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsHomSuppSplit
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalCharacterSmoothUnitaryStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepresentationLocalityUnitaryGroupVStatement
 
@@ -66,7 +58,7 @@ private theorem det_ne_zero_of_hasSig {n r s : ℕ} {M : Matrix (Fin n) (Fin n) 
   have h3 : LinearMap.range M.mulVecLin = ⊤ := by
     apply Submodule.eq_top_of_finrank_eq
     have := M.rank_le_width
-    simp only [Matrix.rank, Fintype.card_fin] at h2 this
+    simp only [Matrix.rank] at h2 this
     rw [Module.finrank_fin_fun]; omega
   have hu : IsUnit M := (Matrix.mulVec_surjective_iff_isUnit).mp (LinearMap.range_eq_top.mp h3)
   exact ((Matrix.isUnit_iff_isUnit_det M).mp hu).ne_zero
@@ -242,7 +234,7 @@ private theorem GlobalTheory.VPrimeAct.act_left : GlobalTheory.FunPr.Hypotheses�
     rw [hκ g hg φ hφ φ₁ hφ₁ hA, hs]
     funext Y
     simp only [GlobalTheory.SplitFlip.omA, Pi.smul_apply, smul_eq_mul, Fintype.card_fin, MonoidHom.inv_apply,
-      Units.val_inv_eq_inv_val, inv_inv, map_one, Units.val_one, inv_one, mul_one, GlobalTheory.SplitFlip.apow_one, Matrix.mul_one]
+      inv_inv, map_one, Units.val_one, mul_one, GlobalTheory.SplitFlip.apow_one, Matrix.mul_one]
   have eg : locMat (t.comp σ) P⁻¹ g = GlobalTheory.SplitFlip.invT (locMat t b g) := by
     change P⁻¹⁻¹ * _ * P⁻¹ = GlobalTheory.SplitFlip.invT (b⁻¹ * _ * b)
     rw [inv_inv]

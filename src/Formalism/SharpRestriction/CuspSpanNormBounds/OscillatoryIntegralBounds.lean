@@ -1,29 +1,29 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.RadialChainStatements
 import Formalism.SharpRestriction.CuspSpanNormBounds.BlockEstimateTheorem
 import Formalism.SharpRestriction.CuspSpanNormBounds.HereditaryPositivity
 import Formalism.SharpRestriction.CuspSpanNormBounds.RadialLemmaE
-import Formalism.SharpRestriction.CuspSpanNormBounds.DiagonalEntryIdentity
 import Formalism.YangianSpanCharacter.YangianRelationFirst
-import Formalism.FormalDegreeBessel.FinalWR
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.BoxOne
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.DualVolumePowerIdentity
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ChebyshevExtremalPolynomials
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.FacSuccOfNotMem
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.AdditiveCharacterPsi
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.AffineChangeOfVariables
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.StabilizerBlockPoint
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ContinuousInvUpper
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.OrbitalIntegralConvergesAbs
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.Markov
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.OneLevelInequality
 import Formalism.LatticeTheta.ThetaShiftInversion
-import Mathlib
 import Formalism.FormalDegreeBessel.FinalBF
-import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
-import Formalism.SharpRestriction.CuspSpanNormBounds.LocalDataRealPlace
 import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
 import Formalism.LatticeRigidity.RecursionUnrestrictedFalse
-import Formalism.HermitianCurvature.StatementTA
+import Mathlib.Analysis.CStarAlgebra.ContinuousLinearMap
+import Mathlib.Analysis.Calculus.ParametricIntervalIntegral
+import Mathlib.Analysis.InnerProductSpace.Reproducing
+import Mathlib.LinearAlgebra.Matrix.AbsoluteValue
+import Mathlib.MeasureTheory.Measure.Prokhorov
+import Mathlib.Topology.Algebra.ProperAction.Basic
 
 section PartA3c
 
@@ -521,8 +521,8 @@ theorem pOp_hinv {h : (Fin m → ℂ) → ℝ} {x : Fin m → ℂ} (hx : x ∈ O
   simp only [pOp, hx, if_true, wirt, wirtBar, Formalism.MainNotions.S.UnitaryLevelOperators.thLog,
     WirtingerDerivatives.fderiv_smul_apply hi.differentiableAt hf, hi.fderiv, hl.fderiv]
   simp only [ContinuousLinearMap.comp_apply, ContinuousLinearMap.smul_apply, Complex.ofRealCLM_apply, smul_eq_mul,
-    Complex.ofReal_mul, Complex.ofReal_neg, Complex.ofReal_inv, Complex.ofReal_pow, star_mul', star_add, star_star,
-    Complex.star_def, Complex.conj_ofReal, map_mul, map_add, map_inv₀, Complex.conj_I, map_div₀, map_one, map_ofNat,
+    Complex.ofReal_mul, Complex.ofReal_neg, Complex.ofReal_inv, Complex.ofReal_pow, star_mul', star_add,
+    Complex.star_def, Complex.conj_ofReal, map_inv₀, Complex.conj_I, map_div₀, map_one, map_ofNat,
     Complex.conj_conj]
   module
 
@@ -532,7 +532,7 @@ theorem pbOp_hinv {h : (Fin m → ℂ) → ℝ} {x : Fin m → ℂ} (hx : x ∈ 
       ((h x : ℂ))⁻¹ • (pbOp l f x - Formalism.MainNotions.S.UnitaryLevelOperators.thLog l h x • f x) := by
   have hi := fderiv_hinv hd h0
   have hl := fderiv_hlog hd h0
-  simp only [pbOp, hx, if_true, wirt, wirtBar, Formalism.MainNotions.S.UnitaryLevelOperators.thLog,
+  simp only [pbOp, hx, if_true, wirtBar, Formalism.MainNotions.S.UnitaryLevelOperators.thLog,
     WirtingerDerivatives.fderiv_smul_apply hi.differentiableAt hf, hi.fderiv, hl.fderiv]
   simp only [ContinuousLinearMap.comp_apply, ContinuousLinearMap.smul_apply, Complex.ofRealCLM_apply, smul_eq_mul,
     Complex.ofReal_mul, Complex.ofReal_neg, Complex.ofReal_inv, Complex.ofReal_pow]
@@ -558,7 +558,7 @@ theorem stThLog_of_core : Formalism.MainNotions.S.UnitaryLevelOperators.stThLog 
   have z2 := pbOp_zero (E := E) l
   fin_cases a <;> fin_cases b <;>
     simp [opMatMul, Tmat, TmatV, scalMat_same, scalMat_ne, Fin.sum_univ_two, k1, k2, z1, z2, cOp, ciOp, cbOp, cbiOp,
-      smul_smul, mul_comm, smul_sub, smul_add, sub_eq_add_neg, add_assoc] <;> abel
+      smul_smul, mul_comm, smul_add, sub_eq_add_neg, add_assoc] <;> abel
 
 theorem isBB (B : E →L⋆[ℂ] E →L[ℂ] ℂ) : IsBoundedBilinearMap ℝ (fun p : E × E => B p.1 p.2) where
   add_left := fun x₁ x₂ y => by simp
@@ -1113,7 +1113,7 @@ theorem ch_neg {d : ℕ} (n : Fin d → ℤ) (x : Tor d) : ch (-n) x = conj (ch 
   simp only [ch, Pi.neg_apply, fourier_neg, map_prod]
 
 theorem ch_zero {d : ℕ} (x : Tor d) : ch (0 : Fin d → ℤ) x = 1 := by
-  simp [ch, fourier_zero]
+  simp [ch]
 
 theorem ch_sub {d : ℕ} (m n : Fin d → ℤ) (x : Tor d) : ch (n - m) x = ch n x * conj (ch m x) := by
   rw [sub_eq_add_neg, ch_add, ch_neg]
@@ -2933,7 +2933,7 @@ theorem wMat_det_ne (n : ℕ) : (wMat n).det ≠ 0 := by
   have hsq : wMat n * wMat n = 1 := by
     ext i j
     simp only [wMat, Matrix.mul_apply, Matrix.of_apply, Matrix.one_apply, ite_mul, one_mul, zero_mul,
-      Finset.sum_ite_eq', Finset.sum_ite_eq, Finset.mem_univ, ↓reduceIte, Fin.rev_rev]
+      Finset.sum_ite_eq', Finset.mem_univ, ↓reduceIte, Fin.rev_rev]
     by_cases hij : i = j
     · simp [hij]
     · simp [hij, Ne.symm hij]
@@ -3507,7 +3507,7 @@ theorem ptBlock_inv (n : ℕ) (t c : ℂ) (ht : t ≠ 0) (hc : c ≠ 0) :
   refine Matrix.inv_eq_right_inv ?_
   unfold ptBlock
   rw [G5.blk_mul]
-  simp only [Matrix.smul_mul, Matrix.mul_smul, G5.wMat_mul_self, smul_smul, mul_inv_cancel₀ ht, inv_mul_cancel₀ ht, mul_inv_cancel₀ hc, one_smul,
+  simp only [Matrix.smul_mul, Matrix.mul_smul, G5.wMat_mul_self, smul_smul, inv_mul_cancel₀ ht, mul_inv_cancel₀ hc, one_smul,
     Matrix.vecMulVec_zero, add_zero, Matrix.mulVec_zero, smul_zero, Matrix.zero_vecMul, zero_dotProduct, zero_add]
   exact G5.blk_one n
 
@@ -3515,7 +3515,7 @@ theorem ptBlock_inv_mul (n : ℕ) (t c : ℂ) (ht : t ≠ 0) (hc : c ≠ 0) : (p
   rw [ptBlock_inv n t c ht hc]
   unfold ptBlock
   rw [G5.blk_mul]
-  simp only [Matrix.smul_mul, Matrix.mul_smul, G5.wMat_mul_self, smul_smul, inv_mul_cancel₀ ht, mul_inv_cancel₀ ht, inv_mul_cancel₀ hc, one_smul,
+  simp only [Matrix.smul_mul, Matrix.mul_smul, G5.wMat_mul_self, smul_smul, mul_inv_cancel₀ ht, inv_mul_cancel₀ hc, one_smul,
     Matrix.vecMulVec_zero, add_zero, Matrix.mulVec_zero, smul_zero, Matrix.zero_vecMul, zero_dotProduct, zero_add]
   exact G5.blk_one n
 
@@ -3524,8 +3524,8 @@ theorem conjB (n : ℕ) (t c : ℂ) (ht : t ≠ 0) (hc : c ≠ 0) (k : UT n → 
   rw [ptBlock_inv n t c ht hc, G5.inv_blk]
   unfold ptBlock
   rw [G5.blk_mul, G5.blk_mul]
-  simp only [Matrix.smul_mul, Matrix.mul_smul, smul_smul, mul_inv_cancel₀ ht, mul_inv_cancel₀ hc, one_smul,
-    Matrix.vecMulVec_zero, Matrix.zero_vecMulVec, add_zero, Matrix.mulVec_zero, smul_zero, Matrix.zero_vecMul, zero_dotProduct,
+  simp only [Matrix.smul_mul, Matrix.mul_smul, smul_smul, mul_inv_cancel₀ hc, one_smul,
+    Matrix.vecMulVec_zero, add_zero, Matrix.mulVec_zero, smul_zero, Matrix.zero_vecMul, zero_dotProduct,
     zero_add, mul_one, inv_mul_cancel₀ ht]
 
 theorem actB_eq (n : ℕ) (t c : ℂ) (ht : t ≠ 0) (hc : c ≠ 0) (p : Msq (n + 1) × Msq (n + 1)) (k : UT n → ℂ) :
@@ -4145,12 +4145,12 @@ theorem elementary_matrix_unipotent_upper (n : ℕ) (a : ℂ) : IsUpperUni (1 + 
   · have : ¬ ((0 : Fin (n + 2)) = i ∧ (1 : Fin (n + 2)) = i) := by
       rintro ⟨h1, h2⟩
       exact absurd (h1.trans h2.symm) (Fin.zero_ne_one (n := n))
-    simp [bivariateExponentMonomial, Matrix.single_apply, this]
+    simp [bivariateExponentMonomial, this]
   · have : ¬ ((0 : Fin (n + 2)) = i ∧ (1 : Fin (n + 2)) = j) := by
       rintro ⟨h1, h2⟩
       subst h1 h2
       exact absurd hij (by simp)
-    simp [bivariateExponentMonomial, Matrix.single_apply, this, Matrix.one_apply, hij.ne']
+    simp [bivariateExponentMonomial, this, hij.ne']
 
 theorem isUpUni_iff {d : ℕ} (u : Matrix (Fin d) (Fin d) ℂ) : IsUpUni u ↔ IsUpperUni u :=
   ⟨fun h => ⟨fun i => (h i i).2 rfl, fun i j hij => (h i j).1 hij⟩,
@@ -4350,7 +4350,7 @@ theorem blk_pow_succ {n : ℕ} (X : Matrix (Fin n) (Fin n) ℂ) (b : Fin n → �
     congr 1
     · rw [pow_succ' X (k + 1)]
       ext i j
-      simp [Matrix.vecMulVec_apply]
+      simp
     · rw [Matrix.mulVec_mulVec, ← pow_succ']
       simp
     · simp
@@ -4525,9 +4525,9 @@ theorem unrealify_J (e : ι → Fin s × Fin s) (v : ι → ℂ) : unrealify (JL
   ext i j
   apply Complex.ext
   · simp only [unrealify, emb, JLin_apply, Fintype.sum_sum_type, phiR, reals]
-    simp [Complex.re_sum, apply_ite Complex.re, Prod.ext_iff, and_assoc]
+    simp [Complex.re_sum, apply_ite Complex.re, Prod.ext_iff]
   · simp only [unrealify, emb, JLin_apply, Fintype.sum_sum_type, phiR, reals]
-    simp [Complex.im_sum, apply_ite Complex.im, Prod.ext_iff, and_assoc]
+    simp [Complex.im_sum, apply_ite Complex.im, Prod.ext_iff]
 
 theorem realify_emb (e : ι → Fin s × Fin s) (v : ι → ℂ) :
     (WithLp.equiv 2 _).symm (realifyFun (emb e v)) = JLin e (reals v) := by
@@ -4536,9 +4536,9 @@ theorem realify_emb (e : ι → Fin s × Fin s) (v : ι → ℂ) :
   rw [JLin_apply]
   cases b
   · simp only [Fintype.sum_sum_type, phiR, reals]
-    simp [realifyFun, emb, Complex.re_sum, apply_ite Complex.re, Prod.ext_iff, and_assoc]
+    simp [realifyFun, emb, Complex.re_sum, apply_ite Complex.re, Prod.ext_iff]
   · simp only [Fintype.sum_sum_type, phiR, reals]
-    simp [realifyFun, emb, Complex.im_sum, apply_ite Complex.im, Prod.ext_iff, and_assoc]
+    simp [realifyFun, emb, Complex.im_sum, apply_ite Complex.im, Prod.ext_iff]
 
 theorem lieE_eq_range {e : ι → Fin s × Fin s} (he : Function.Injective e) {S : Set (Matrix (Fin s) (Fin s) ℂ)}
     (hS : lieOf S = Set.range (emb e)) : lieE S = LinearMap.range (JIso he).toLinearMap := by

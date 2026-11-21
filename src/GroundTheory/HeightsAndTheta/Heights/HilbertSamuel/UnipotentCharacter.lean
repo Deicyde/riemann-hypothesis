@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsEuclideanSections
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PLatticeCount
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PSmallBallVolume
+import Mathlib.Analysis.Asymptotics.SpecificAsymptotics
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.HilbertSamuel

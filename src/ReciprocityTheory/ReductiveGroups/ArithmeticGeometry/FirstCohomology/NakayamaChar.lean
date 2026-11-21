@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FirstCohomology.ReducedBasisStatement
 import Lemmata.GeneralBFactExtra.Imports
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.Tactic.Polynomial.Basic
 
 namespace ReciprocityTheory.ChartRestriction.G.H1
 

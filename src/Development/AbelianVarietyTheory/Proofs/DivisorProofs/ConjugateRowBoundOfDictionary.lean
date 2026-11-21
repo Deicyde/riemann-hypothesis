@@ -1,11 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NrmOneNonneg
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairIntAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GaussianGrowthConjTorsionTranslatesVacuum
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsConstJetOperatorNormCauchyBound
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EventuallyParameterSizesTestChoices
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NatWDualWtOfLe
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DefiniteKernelNodeRankLeTotalRank
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EmbeddingsCurveFieldAboveFiniteNonempty
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockVacEqJets
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HighestWeightBelow
@@ -13,6 +13,8 @@ import Development.AbelianVarietyTheory.Proofs.FoundationProofs.TaylorConjugateT
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.BlockActionDiagonalCoefficientSpaceSmul
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaJetMapWeightedTableScale
 import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.BlockShape
+import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
+import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.DictAt
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.DIV
 open IsDedekindDomain NumberField Matrix GlobalTheory.ChiGrid GlobalTheory.FunObj GlobalTheory.RowTest GlobalTheory.RowClaim GlobalTheory.TestLat
@@ -72,7 +74,7 @@ theorem applyAt0_tr (D : D7) {a b : ℕ} {H : VC D b a → ℂ} (hH : Differenti
   have h := taylorDir_comp_clm (LinearMap.toContinuousLinearMap (trL D a b)) (coordV D) han
   have hc : ∀ k, trL D a b (coordV D k) = coordV D (trI D a b k) := fun k => by
     funext τ i j
-    simp only [trL, trI, coordV, LinearMap.coe_mk, AddHom.coe_mk, Function.Embedding.coeFn_mk]
+    simp only [trL, trI, coordV, LinearMap.coe_mk, AddHom.coe_mk]
     congr 1
     exact propext (by tauto)
   simp only [LinearMap.coe_toContinuousLinearMap', hc] at h

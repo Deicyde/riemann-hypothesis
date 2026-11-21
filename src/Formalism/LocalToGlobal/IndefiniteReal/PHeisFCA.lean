@@ -1,4 +1,5 @@
-import Formalism.LocalToGlobal.IndefiniteReal.IsWeilDatum
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.RecLevelTop
 import Formalism.LocalToGlobal.GlobalTheory.GL1.CompactFixesLattice.ExistsDenOfIsCompactAdele
 

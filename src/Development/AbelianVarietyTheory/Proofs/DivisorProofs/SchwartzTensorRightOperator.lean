@@ -1,9 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HasTemperateGrowthElim
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ClmSupBound
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PartialOperatorFderivFormulaStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PartialOperatorSchwartzSeminormBoundStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IteratedDerivativeBoundByPartialsStatement
+import Mathlib.Analysis.Calculus.ContDiff.FiniteDimension
+import Mathlib.RingTheory.PiTensorProduct
 
 open GlobalTheory.SliceSchwartz
 open scoped ContDiff

@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.LeafPairRelPf
 import Development.EtaleCohomology.EtaleSheaves.LeafDescendMapPf
+import Mathlib.AlgebraicGeometry.AffineTransitionLimit
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry Opposite LateralTheory.E.E4 LateralTheory.E.LeafDescendVCut
@@ -14,7 +16,7 @@ variable {E : Scheme.{0}} (p : E ⟶ Sp R)
 private def tR : LateralTheory.E.LeafDescendMapPf.D R p ⟶ (Functor.const _).obj (Sp R) where
   app S := pullback.snd _ _ ≫ incl S.unop.2.1
   naturality S T h := by
-    simp only [Functor.const_obj_map, Category.comp_id]
+    simp only [Functor.const_obj_map]
     erw [pullback.lift_snd_assoc]
     rw [Category.assoc, LateralTheory.E.LeafDescendMapPf.incl_incl]
     exact (Category.comp_id _).symm

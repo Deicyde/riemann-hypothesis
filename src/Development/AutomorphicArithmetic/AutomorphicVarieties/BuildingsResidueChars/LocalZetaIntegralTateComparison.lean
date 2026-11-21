@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.GammaLaurentFactors.LaurentBlockInduction.LdDefs
-import GroundTheory.AutomorphicForms.GL2.GJFEBlockConv
 import GroundTheory.AutomorphicForms.GL2.GJUnramified
 
 noncomputable section

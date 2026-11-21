@@ -1,4 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementWd
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace Formalism.FourierDecayAlt.P.Wd2
 
@@ -16,14 +22,14 @@ theorem eU_mul (a : S) (i j k l : Fin 2) :
   · subst hjk
     rw [if_pos rfl, Finset.sum_eq_single (Function.update x a j)]
     · simp (config := { contextual := true }) only [eU, Matrix.of_apply, Function.update_self,
-        Function.update_apply, true_and, mul_ite, mul_one, mul_zero, ite_mul, one_mul, zero_mul]
+        Function.update_apply, true_and, mul_ite, mul_one, mul_zero]
       by_cases hx : x a = i ∧ z a = l ∧ ∀ b, b ≠ a → x b = z b
       · simp [hx]
       · rw [if_neg hx]
         split_ifs <;> simp_all
     · intro y _ hy
       simp only [eU, Matrix.of_apply]
-      split_ifs with h1 h2 <;> simp only [mul_one, mul_zero, zero_mul]
+      split_ifs with h1 h2 <;> simp only [mul_one, mul_zero]
       exfalso
       apply hy
       funext b
@@ -188,7 +194,7 @@ theorem position_minus_core (b : S) (M N : M2 (SlopeTestRemainingChoices S A)) (
     rw [Finset.sum_mul]
     refine Finset.sum_congr rfl fun l _ => ?_
     rw [Matrix.of_apply, mul_assoc]
-  simp only [sub_mul, mul_sub, smul_mul_assoc, mul_smul_comm, one_mul, mul_one]
+  simp only [sub_mul, mul_sub, smul_mul_assoc, mul_smul_comm, mul_one]
   ext i j : 1
   simp only [Matrix.sub_apply, Matrix.smul_apply, hmd, hdm]
   rw [Matrix.mul_apply (M := d0 (ins b Nᵀ) * Q0 b) (N := M), Matrix.mul_apply (M := M) (N := Q0 b)]
@@ -261,8 +267,7 @@ theorem core_map (c : K) :
 theorem J_map : YangianSpanCharacter.T.J (SlopeTestRemainingChoices S A) = (YangianSpanCharacter.T.J A).map (Matrix.scalar (Ix S)) := by
   ext i j : 1
   fin_cases i <;> fin_cases j <;> simp [YangianSpanCharacter.T.J] <;>
-    (try (ext x y; simp only [Matrix.neg_apply, Matrix.one_apply, Matrix.diagonal_apply,
-      Matrix.smul_apply]; split_ifs <;> simp))
+    (try (ext x y; simp only [Matrix.neg_apply, Matrix.one_apply, Matrix.diagonal_apply]; split_ifs <;> simp))
 
 theorem smulJ_map (c : K) :
     algebraMap K (SlopeTestRemainingChoices S A) c • YangianSpanCharacter.T.J (SlopeTestRemainingChoices S A) =

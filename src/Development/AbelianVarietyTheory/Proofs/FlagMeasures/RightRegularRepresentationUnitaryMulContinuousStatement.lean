@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.RightRegularRepresentationUnitaryMulContinuous
-import Formalism.SharpRestriction.CuspSpanNormBounds.GlobAut
 open MeasureTheory Formalism.MainNotions.S
 open scoped InnerProductSpace
 set_option maxHeartbeats 1000000 in

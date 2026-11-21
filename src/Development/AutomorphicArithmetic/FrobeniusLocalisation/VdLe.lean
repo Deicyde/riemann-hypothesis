@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.FrobeniusLocalisation.DiffDefs
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.FrobeniusLocalisation.VdFormula
 import Development.AutomorphicArithmetic.FrobeniusLocalisation.LayerBot
 
@@ -82,7 +82,7 @@ theorem UpperTheory.HF.vd_le :
       rw [div_le_one (by linarith)]
       linarith
     simp only [Finset.range_zero, Finset.sum_empty] at hsum
-    simp only [Nat.zero_eq, zero_le, max_eq_left, Nat.cast_one]
+    simp only [zero_le, max_eq_left, Nat.cast_one]
     linarith
   · rw [arith hl k] at hsum
     rw [max_eq_right (by omega)]

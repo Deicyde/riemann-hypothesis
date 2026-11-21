@@ -1,8 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteForms.IndefSide
 import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.ConjugateWeightLatticeOfGeneral
-import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.KappaNormalise
 import Formalism.MirabolicMackeyTheory.MirabolicMackeyProofs.RamBasic
+import Formalism.QuotientMetricDivisors.PassageScaleFree
+import Mathlib.NumberTheory.NumberField.CMField
+import Std.Tactic.BVDecide.Normalize.BitVec
 
 open Module NumberField IsDedekindDomain
 open scoped Matrix ComplexOrder InnerProductSpace
@@ -69,7 +72,7 @@ theorem gramR_one (D : ℕ) : gramR (1 : Matrix (Fin D) (Fin D) K) (sb K D) = 1 
     by_cases hab : a = b
     · subst hab
       simp
-    · simp [hab, Pi.single_apply, Ne.symm hab]
+    · simp [hab, Ne.symm hab]
   rw [h, Matrix.det_one]
 
 theorem jw_std (D : ℕ) (w : HeightOneSpectrum (𝓞 K)) :
@@ -78,7 +81,7 @@ theorem jw_std (D : ℕ) (w : HeightOneSpectrum (𝓞 K)) :
       by_cases hij : i = j
       · subst hij
         simp
-      · simp [Matrix.one_apply, hij, Ne.symm hij]) (by simp) (sl K D) (sl_lattice K D) w (sb K D)
+      · simp [hij, Ne.symm hij]) (by simp) (sl K D) (sl_lattice K D) w (sb K D)
     (locB K D w)
   rw [h, gramR_one, ValuationRepresentative.vw_one, neg_zero]
 
@@ -372,8 +375,8 @@ theorem l3 : (dat K v0).L3 (num K v0) := by
   exact le_refl _
 
 theorem on : (dat K v0).ON (num K v0) := by
-  refine ⟨fun w hw => by simp [dat] at hw, fun w hw => by simp [dat] at hw, fun j => ?_⟩
-  simp [dat, num]
+  refine ⟨fun w hw => by simp at hw, fun w hw => by simp at hw, fun j => ?_⟩
+  simp
 
 def what₂ : IndefRows (df K v0) where
   toIndefData := dat K v0
@@ -410,7 +413,7 @@ abbrev cd : ColData (dc K v0) (sp K v0) (dat K v0) where
   sE := conjLinearRankOne 1
 
 theorem l1b : (cd K v0).PairingFactorsThroughPeriods := by
-  refine ⟨fun u t φ F => by simp [cd, dc, dat, df], fun _ => rfl, fun _ _ => one_ne_zero,
+  refine ⟨fun u t φ F => by simp [dc, dat, df], fun _ => rfl, fun _ _ => one_ne_zero,
     fun _ w => ValuationRepresentative.vw_one w⟩
 
 theorem l1e : (cd K v0).L1e := by
@@ -593,7 +596,7 @@ theorem l3 : (dat K v0 S a kap l).L3 (num K v0 S a kap l) := by
   exact le_refl _
 
 theorem on : (dat K v0 S a kap l).ON (num K v0 S a kap l) := by
-  refine ⟨fun w hw => ?_, fun w _ j => le_refl _, fun j => by simp [dat, num]⟩
+  refine ⟨fun w hw => ?_, fun w _ j => le_refl _, fun j => by simp⟩
   have hw' : w ∈ S := hw
   have hμ : decide (w ∈ S) = true := by simp [hw']
   have hr : (0 : ℝ) < (ramw w : ℝ) := by
@@ -613,7 +616,7 @@ theorem on : (dat K v0 S a kap l).ON (num K v0 S a kap l) := by
         X + (ramw w : ℝ) * (2 / (plc w : ℝ) ^ 2) := by push_cast; ring
     rw [h2, e]
     linarith
-  simp only [dat, num, hμ, hw', if_true, Fintype.sum_unique]
+  simp only [dat, hw', if_true, Fintype.sum_unique]
   exact key _
 
 def what₂ (hS : ∀ w, conjPl w ∈ S ↔ w ∈ S) (ha : a ≠ 0) (hk : ∀ v, 0 < kap v) (hl : ∀ v, 0 < l v) :
@@ -690,7 +693,7 @@ theorem untw : (dat K v0 S a kap l).Untwisted (num K v0 S a kap l) := by
   · simp only [IndefData.Aw, IndefData.Iw, dat, df, hμ, mp, cond_false]
     rw [matLat_one, idx_std, idx_std, jw_std]
     simp
-  · simp [num, hw']
+  · simp [hw']
 
 theorem funn : (dat K v0 S a kap l).FUN (num K v0 S a kap l) := by
   unfold IndefData.FUN IndefData.muMaxRR
@@ -723,7 +726,7 @@ theorem two.Iw_true {K : Type} [Field K] [NumberField K] [StarRing K] (v0 : Infi
     unfold matLat sl
     rw [Submodule.map_span, ← Set.range_comp]
     exact congrArg (fun s => Submodule.span (𝓞 K) s)
-      (congrArg Set.range (funext fun i => by simp [smul_one_mulVec]))
+      (congrArg Set.range (funext fun i => by simp))
   have hlin : LinearIndependent K (fun i => a • sb K 1 i) := by
     rw [linearIndependent_unique_iff]
     intro h0

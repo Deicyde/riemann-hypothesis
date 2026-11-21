@@ -1,5 +1,13 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.MirabIndex
+import Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Card
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.ReduceModChar
 
 namespace PI.MirabolicIndex₂
 
@@ -40,7 +48,7 @@ theorem one_last (n : ℕ) : (1 : Matrix (Fin (n + 1)) (Fin (n + 1)) k) (Fin.las
   by_cases h : j = Fin.last n
   · subst h
     simp [eLast]
-  · simp [eLast, h, Matrix.one_apply, Ne.symm h]
+  · simp [eLast, h, Ne.symm h]
 
 theorem row_mul_eq (n : ℕ) {a b : Matrix (Fin (n + 1)) (Fin (n + 1)) k}
     (c : Matrix (Fin (n + 1)) (Fin (n + 1)) k) (h : a (Fin.last n) = b (Fin.last n)) :

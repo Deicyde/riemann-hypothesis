@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutNFTopDomCore
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutLemB
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.TriangleInequalityAtPlace
 
 namespace Formalism.FourierDecayAlt.P.CutBP
 

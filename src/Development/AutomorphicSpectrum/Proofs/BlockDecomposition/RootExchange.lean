@@ -1,5 +1,5 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.FiniteTypeHarishChandra.SupportExistsAll
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PatternGroupStatement
 
 open ReciprocityTheory.Ty.Fin
@@ -182,10 +182,10 @@ theorem comm_entry (g : GL ι K) (r t : ι) (h : r ≠ t) (s : K) (hg : (g : Mat
       intro k
       rw [Matrix.mul_apply, Finset.sum_eq_single r]
       · by_cases hk : k = t
-        · subst hk; simp [Matrix.single_apply]
-        · simp [Matrix.single_apply, hk, Ne.symm hk]
+        · subst hk; simp
+        · simp [hk, Ne.symm hk]
       · intro b _ hb
-        simp [Matrix.single_apply, Ne.symm hb]
+        simp [Ne.symm hb]
       · simp
     rw [Matrix.mul_apply, Finset.sum_congr rfl fun k _ => by rw [h1 k]]
     simp only [ite_mul, zero_mul, Finset.sum_ite_eq', Finset.mem_univ, if_true]
@@ -216,7 +216,7 @@ theorem tv_mem {Ψ : ι → ι → Prop} (r t : ι) (h : r ≠ t) (s : K) (hrt :
       rintro ⟨rfl, rfl⟩
       exact hn hrt
     rw [tv_apply, if_neg hh]
-    simp [Matrix.one_apply, hij]
+    simp [hij]
 
 theorem comm_data {Φ Ψ : ι → ι → Prop} {E : ι → ι → K} (ψ₀ : AddChar K ℂ) (hΦ : IsPat Φ)
     (hsupp : ∀ i j, E i j ≠ 0 → Φ i j) (p q r t : ι)
@@ -259,13 +259,13 @@ theorem comm_data {Φ Ψ : ι → ι → Prop} {E : ι → ι → K} (ψ₀ : Ad
       by_cases hrt' : i = r ∧ j = t
       · obtain ⟨rfl, rfl⟩ := hrt'
         rw [(hg i i).1 rfl, (hgi j j).1 rfl]
-        simp [Matrix.one_apply, hij]
+        simp [hij]
       · have hz : (g : Matrix ι ι K) i r * ((g⁻¹ : GL ι K) : Matrix ι ι K) t j = 0 := by
           by_contra hc
           exact hn (hΨ i j (nz_of_mem hg (left_ne_zero_of_mul hc))
             (nz_of_mem hgi (right_ne_zero_of_mul hc)) hrt')
         rw [if_neg hrt', mul_assoc, hz]
-        simp [Matrix.one_apply, hij]
+        simp [hij]
   · unfold patChar
     congr 1
     have hterm : ∀ i j, E i j * ((tv r t h s * g * (tv r t h s)⁻¹ * g⁻¹ : GL ι K) : Matrix ι ι K) i j =
@@ -290,9 +290,9 @@ theorem comm_data {Φ Ψ : ι → ι → Prop} {E : ι → ι → K} (ψ₀ : Ad
             have : s * E i j * (g : Matrix ι ι K) i r * ((g⁻¹ : GL ι K) : Matrix ι ι K) t j =
               s * E i j * ((g : Matrix ι ι K) i r * ((g⁻¹ : GL ι K) : Matrix ι ι K) t j) := by ring
             rw [this, hz, mul_assoc, hz]
-            simp [Matrix.one_apply, hij]
+            simp [hij]
           · rw [mul_assoc, hz]
-            simp [Matrix.one_apply, hij]
+            simp [hij]
         · have h1 := nz_of_mem hg (left_ne_zero_of_mul hz)
           have h2 := nz_of_mem hgi (right_ne_zero_of_mul hz)
           have hpq : i = p ∧ j = q := by

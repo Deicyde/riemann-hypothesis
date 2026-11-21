@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.FdDefs
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.PmatIsHermitian
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.Residue
 
 noncomputable section
 
@@ -13,7 +17,7 @@ variable {n : ℕ}
 
 theorem sCoef_lamT (lam : Fin n → ℝ) (t : ℕ) {i : ℕ} (hi : i + 1 < n) :
     sCoef (lamT lam t) i = sCoef lam i + t := by
-  simp only [sCoef, dif_pos hi, lamT, Dvec, Pi.add_apply, Pi.smul_apply, smul_eq_mul, Fin.val_mk]
+  simp only [sCoef, dif_pos hi, lamT, Dvec, Pi.add_apply, Pi.smul_apply, smul_eq_mul]
   push_cast
   ring
 

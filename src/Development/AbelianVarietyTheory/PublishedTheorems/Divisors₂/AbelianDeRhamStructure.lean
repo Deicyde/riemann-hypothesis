@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
 
 set_option autoImplicit false

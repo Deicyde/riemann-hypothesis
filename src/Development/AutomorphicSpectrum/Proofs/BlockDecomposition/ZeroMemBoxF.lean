@@ -1,6 +1,10 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RatVInjective
-import GroundTheory.GlobalFields.Adele.Compact
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GlobalSchurBounds.GeneralLinearActions.GenusMassVolumes
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import GroundTheory.GlobalFields.Adele.Approximation
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 noncomputable section
 

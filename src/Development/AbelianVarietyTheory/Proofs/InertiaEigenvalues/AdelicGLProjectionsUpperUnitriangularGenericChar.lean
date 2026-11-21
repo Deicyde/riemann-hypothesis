@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsIdempotentElemIdemSf
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsRapidInf
 
 noncomputable section
 

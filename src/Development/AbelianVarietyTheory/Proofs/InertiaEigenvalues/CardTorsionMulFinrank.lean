@@ -1,8 +1,9 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.DataNLoc
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CyclotomicCharacterPadicBasicProperties
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsCosetRepresentativesOfFiniteSubgroupPadicI
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ChiOntoOfUnramified
+import Mathlib.NumberTheory.Padics.Hensel
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open PowerSeries Formalism.WeaklyAdmissibleFiltrations Formalism.BasicNotions Formalism.BasicNotions.Loc
 

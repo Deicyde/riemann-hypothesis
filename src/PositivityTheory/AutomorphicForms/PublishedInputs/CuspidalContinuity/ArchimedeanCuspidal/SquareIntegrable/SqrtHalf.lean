@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.SquareIntegrable.SSmooth
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.SquareIntegrable.SumIccTelescope
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.SquareIntegrable.IndicatorIntegersEq
@@ -64,7 +65,7 @@ theorem punr : SUnr := by
     have hq : (residueCard F : ℂ) = Spherical.sqrtQ F ^ 2 := (Spherical.sqrtQ_sq).symm
     rw [hrho, hq, Finset.mul_sum, Finset.mul_sum, Finset.mul_sum]
     refine Finset.sum_congr rfl fun j _ => ?_
-    simp only [Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons, Units.val_mul,
+    simp only [Matrix.cons_val_zero, Matrix.cons_val_one, Units.val_mul,
       Units.val_inv_eq_inv_val]
     exact UnramifiedWhittakerGL2.alg _ _ _ _ (Units.ne_zero _) (Units.ne_zero _) Spherical.sqrtQ_ne_zero _ _ _
   · rw [if_neg (mt hanti.1 hl), Finset.Icc_eq_empty (by omega), Finset.sum_empty]

@@ -1,4 +1,40 @@
-import Mathlib
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace ReciprocityTheory.CA.AB.RegA
 
@@ -95,7 +131,7 @@ theorem spanFinrank_maximalIdeal_quotient_succ_le (R : Type*) [CommRing R] [IsLo
   have hset : (Ideal.Quotient.mk (Ideal.span ({x} : Set R))) '' (Subtype.val ''
       (insert (⟨x, hx⟩ : maximalIdeal R) (y '' ↑(Finset.univ.erase j)))) =
       insert 0 (↑((Finset.univ.erase j).image (fun i => Ideal.Quotient.mk (Ideal.span ({x} : Set R)) (y i : R))) : Set (R ⧸ Ideal.span ({x} : Set R))) := by
-    simp only [Set.image_insert_eq, Set.image_image, Finset.coe_image, Subtype.coe_mk, hx0]
+    simp only [Set.image_insert_eq, Set.image_image, Finset.coe_image, hx0]
   rw [hmax, Ideal.map_span, hset]
   have hz : Ideal.span (insert (0 : (R ⧸ Ideal.span ({x} : Set R)))
       (↑((Finset.univ.erase j).image (fun i => Ideal.Quotient.mk (Ideal.span ({x} : Set R)) (y i : R))) : Set (R ⧸ Ideal.span ({x} : Set R)))) =
@@ -167,7 +203,7 @@ theorem spanFinrank_quotient_eq_and_ringKrullDim_add_one (R : Type*) [CommRing R
     | (rw [← Ideal.jacobson_bot]; exact IsLocalRing.maximalIdeal_le_jacobson ⊥ hx)
     | (rw [← Ideal.jacobson_bot, IsLocalRing.jacobson_eq_maximalIdeal ⊥ bot_ne_top]; exact hx)
   have hd := ringKrullDim_le_ringKrullDim_quotient_add_card ({x} : Finset R) hxj
-  simp only [Finset.coe_singleton, Finset.card_singleton, Nat.cast_one] at hd
+  simp only [Finset.card_singleton, Nat.cast_one] at hd
   have hle := ringKrullDim_le_spanFinrank_maximalIdeal (R ⧸ Ideal.span ({x} : Set R))
   obtain ⟨e1, e2⟩ := eq_natCast_and_add_one_eq_of_le (a := ringKrullDim (R ⧸ Ideal.span ({x} : Set R)))
     (d := Submodule.spanFinrank (maximalIdeal (R ⧸ Ideal.span ({x} : Set R))))

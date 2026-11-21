@@ -1,5 +1,14 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.WeylElementCommutesLevelOne
-import Formalism.FormalDegreeBessel.FinalG
+import Mathlib.MeasureTheory.Function.FactorsThrough
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Topology.Separation.CompletelyRegular
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.BitVec
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Matrix MeasureTheory Filter Topology
 open scoped ComplexConjugate ENNReal NNReal
@@ -548,7 +557,7 @@ theorem nu_hyp (CWb : ClosedWb) (CW : ClosedW) (UF : UWbFacts) (z z' : Vc k r)
   simp only [e1]
   rw [hFG _ hbm]
   congr 1
-  simp only [Matrix.mulVec_mulVec, Matrix.mul_assoc]
+  simp only [Matrix.mulVec_mulVec]
 
 theorem nu_left (CWb : ClosedWb) (CW : ClosedW) (UF : UWbFacts) (HI : HypInv) (z z' : Vc k r)
     {s : ℂ → Matrix (Fin (k + 1)) (Fin (k + 1)) ℂ} (hs : MeasSec s) (hsu : ∀ ζ, (s ζ)ᴴ * Hb k * s ζ = Hb k)
@@ -823,14 +832,14 @@ private lemma hpk_sq_lemma : Hpk k r * Hpk k r = 1 := by
   · rw [Finset.sum_eq_single i]
     · simp only [Hpk]
       split_ifs <;> (first
-          | (exfalso; (try simp only [Fin.ext_iff, Fin.val_mk, ne_eq, and_true, true_and] at *); omega)
+          | (exfalso; (try simp only [Fin.ext_iff, and_true] at *); omega)
           | (norm_num; done)
           | rfl)
     · intro l _ hl
       have : Hpk k r i l = 0 := by
         simp only [Hpk]
         split_ifs <;> (first
-          | (exfalso; (try simp only [Fin.ext_iff, Fin.val_mk, ne_eq, and_true, true_and] at *); omega)
+          | (exfalso; (try simp only [Fin.ext_iff, ne_eq] at *); omega)
           | (norm_num; done)
           | rfl)
       rw [this, zero_mul]
@@ -840,14 +849,14 @@ private lemma hpk_sq_lemma : Hpk k r * Hpk k r = 1 := by
     rw [Finset.sum_eq_single ⟨2 * r + k - i.val, hp⟩]
     · simp only [Hpk]
       split_ifs <;> (first
-          | (exfalso; (try simp only [Fin.ext_iff, Fin.val_mk, ne_eq, and_true, true_and] at *); omega)
+          | (exfalso; (try simp only [Fin.ext_iff] at *); omega)
           | (norm_num; done)
           | rfl)
     · intro l _ hl
       have : Hpk k r i l = 0 := by
         simp only [Hpk]
         split_ifs <;> (first
-          | (exfalso; (try simp only [Fin.ext_iff, Fin.val_mk, ne_eq, and_true, true_and] at *); omega)
+          | (exfalso; (try simp only [Fin.ext_iff, ne_eq] at *); omega)
           | (norm_num; done)
           | rfl)
       rw [this, zero_mul]

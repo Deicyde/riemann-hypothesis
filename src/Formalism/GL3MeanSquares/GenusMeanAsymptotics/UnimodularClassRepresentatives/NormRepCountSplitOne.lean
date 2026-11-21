@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.GenusMeanAsymptotics.UnimodularClassRepresentatives.CardSumNormFibres
 import Formalism.GL3MeanSquares.GenusMeanAsymptotics.UnimodularClassRepresentatives.ExistsSqAbsNormOfInert
+import Mathlib.Algebra.AffineMonoid.Basic
 
 open NumberField Module
 

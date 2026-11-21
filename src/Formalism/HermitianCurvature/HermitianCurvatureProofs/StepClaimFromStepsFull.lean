@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LemmaEprimeFromSteps
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.RingTheory.PiTensorProduct
 
 namespace Formalism.FourierDecayAlt.P.LEx1
 open Formalism.FourierDecayAlt.LE

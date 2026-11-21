@@ -1,4 +1,6 @@
-import Formalism.LocalToGlobal.GroupLattices.LevelCharts.LevelsOfTie
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.GroupLattices.LevelCharts.LevelsOfCh
 
 noncomputable section
 

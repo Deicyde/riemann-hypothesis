@@ -1,12 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.CoefS
-import CompanionTheory.SpectralGeometry.CountingDefinitions.AdelicEulerProducts.IsEulerProd
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.IntegralIndicatorCharOfTrivial
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.CharEqOneOfNear
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.SelfDualMap
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.ExistsLocalApproximateIdentity
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.AdelesLocallyCompactSecondCountable
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.ExistsFiniteAdeleHaarNormalized
+import Development.AutomorphicSpectrum.Proofs.GlobalProofs.IsCovolOne
 
 noncomputable section
 

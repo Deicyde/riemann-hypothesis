@@ -1,7 +1,9 @@
-import ReciprocityTheory.GroupCohomology.CupConnRightStatement
-import ReciprocityTheory.GroupCohomology.DEqZeroOfMemB
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.GroupCohomology.ResNormalHolds
 import ReciprocityTheory.GroupCohomology.InfRes
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.Topology.Algebra.ClopenNhdofOne
 
 namespace ReciprocityTheory.Coh
 

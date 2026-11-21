@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdditiveIntegralGroups.ThirdRootSubVarZeroNeZero
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdditiveIntegralGroups.DXEqDerivative
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdditiveIntegralGroups.DvCoeffMulEqZeroOfLtOrder
@@ -37,8 +39,8 @@ theorem root_rel {W : WeierstrassCurve ℂ_[p]} {wq : PowerSeries ℂ_[p]} (h : 
   have hD := congrArg D hG
   rw [map_zero] at hD
   simp only [G, map_add, map_sub, Derivation.leibniz, Derivation.leibniz_pow,
-    Derivation.map_algebraMap, smul_eq_mul, nsmul_eq_mul, smul_zero, zero_smul, mul_zero, zero_mul,
-    add_zero, zero_add, Nat.cast_ofNat] at hD
+    Derivation.map_algebraMap, smul_eq_mul, nsmul_eq_mul, mul_zero,
+    add_zero, Nat.cast_ofNat] at hD
   simp only [Gv] at hω
   simp only [Acf, Bcf, Ccf, cc]
   linear_combination (PowerSeries.subst r (omegaW W wq)) * hD -

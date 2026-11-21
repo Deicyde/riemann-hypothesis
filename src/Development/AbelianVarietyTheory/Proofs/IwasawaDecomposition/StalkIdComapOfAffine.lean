@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HomExtNormalSt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VanishesToPullChartIffOfFlat
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IdlAlongEqIdealAlong
 
 noncomputable section
@@ -66,7 +66,7 @@ theorem van_eq_top (Z : Closeds X) {x : X} (hx : x ∉ Z) :
 theorem fromSpecStalk_comap (π : X' ⟶ X) (x' : X') (q : PrimeSpectrum (X'.presheaf.stalk x')) :
     π (X'.fromSpecStalk x' q) = X.fromSpecStalk (π x') (PrimeSpectrum.comap (π.stalkMap x').hom q) := by
   have h := congrArg (fun g => g q) (Scheme.SpecMap_stalkMap_fromSpecStalk π (x := x'))
-  simp only [Scheme.Hom.comp_apply] at h
+  simp only at h
   exact h.symm
 
 theorem van_pre (π : X' ⟶ X) (Z : Closeds X) (x' : X') :

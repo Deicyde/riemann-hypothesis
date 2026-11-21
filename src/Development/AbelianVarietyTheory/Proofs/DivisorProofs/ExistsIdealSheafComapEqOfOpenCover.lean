@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ComapBcComp
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIdealSheafDataOfCompatibleStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IdealSheafGlueOfOpenImmersions
 

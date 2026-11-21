@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.EulerProducts.GenStable
 open MeasureTheory NumberField
 open scoped Classical

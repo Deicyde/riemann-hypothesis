@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.IdeleGenerators.ConstSmall
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.NewformModel
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.TwoNeZeroNat

@@ -1,11 +1,12 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.ResidueFlagPoints.ResLeCont
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.ResidueFlagPoints.ResLeMemDec
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual Formalism.HC ReciprocityTheory.Gal IsLocalRing Polynomial UpperTheory.V UpperTheory.V.Base UpperTheory.V.Alg UpperTheory.V.HV UpperTheory.V.GradeZeroInterpolatingElement UpperTheory.V.Ws GlobalTheory.CuspRep GlobalTheory.GalOfCusp
 
 private theorem aux {M : Type} [CommGroup M] (x y z : M) (a b : ℤ) (k n : ℕ) (h1 : (x * z ^ (-a)) ^ k = 1)
     (h2 : (y ^ 2 * z ^ (-b)) ^ k = 1) : ((x * y ^ n) ^ 2 * z ^ (-(2 * a + n * b))) ^ k = 1 := by
   have e : (x * y ^ n) ^ 2 * z ^ (-(2 * a + n * b)) = (x * z ^ (-a)) ^ 2 * (y ^ 2 * z ^ (-b)) ^ n := by
-    simp only [mul_pow, ← zpow_natCast, ← zpow_mul, mul_zpow]
+    simp only [← zpow_natCast, ← zpow_mul, mul_zpow]
     rw [show -(2 * a + (n:ℤ) * b) = -a * 2 + -b * n by ring, zpow_add]
     push_cast
     rw [mul_comm (n:ℤ) 2]

@@ -1,8 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HilbertKodairaSpencer
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitObj
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUniqueDetGen
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsDPModel
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TensorEvalOneTmulMul
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUniqueIsModelVal
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsModelValHomog

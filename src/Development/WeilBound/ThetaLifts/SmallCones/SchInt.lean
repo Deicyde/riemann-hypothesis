@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.SmallCones.ThetaUniq
+import Mathlib.MeasureTheory.SpecificCodomains.Pi
 
 noncomputable section
 

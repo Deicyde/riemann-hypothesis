@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LatticeBasics.HodgeTateFromSandwich
 import Development.WeilBound.ThetaLifts.LatticeBasics.ExistsIsHeckeLOfCompleted
+import Development.AbelianVarietyTheory.Definitions.Divisors.MatchingOfParts
+import Development.WeilBound.ThetaLifts.LatticeBasics.GoodNe
 
 noncomputable section
 

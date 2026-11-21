@@ -1,5 +1,38 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AdelicHermitianForms.MemPowSub
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Topology.Sheaves.Init
 open NumberField IsDedekindDomain Polynomial GlobalTheory.QNorm GlobalTheory.CNorm
 open scoped WithZero TensorProduct
 
@@ -28,7 +61,7 @@ theorem _root_.GlobalTheory.CNorm.algebraMap_norm_tensor_eq_prod_conjugates (F E
     have hx : ∀ x : E, ∑ g, v g * g x = 0 := fun x => by
       calc ∑ g, v g * g x = ∑ g, v g * g (∑ j, b.repr x j • b j) := by rw [b.sum_repr]
         _ = ∑ j, b.repr x j • ∑ g, v g * g (b j) := by
-          simp only [map_sum, Algebra.smul_def, map_mul, AlgEquiv.commutes, Finset.mul_sum]
+          simp only [map_sum, Algebra.smul_def, map_mul, Finset.mul_sum]
           rw [Finset.sum_comm]
           exact Finset.sum_congr rfl fun j _ => Finset.sum_congr rfl fun g _ => by rw [AlgEquiv.commutes]; ring
         _ = 0 := by simp [hj]
@@ -50,7 +83,7 @@ theorem _root_.GlobalTheory.CNorm.algebraMap_norm_tensor_eq_prod_conjugates (F E
       simpa [A, Algebra.leftMulMatrix_eq_repr_mul] using (b'.sum_repr (y * b' j)).symm
     have h2 := congrArg (Algebra.TensorProduct.map (AlgHom.id K K) (g : E →ₐ[F] E)) h1
     simp only [map_mul, map_sum, b', Algebra.TensorProduct.basis_apply,
-      Algebra.TensorProduct.map_tmul, AlgHom.id_apply, map_one, Algebra.smul_def,
+      Algebra.TensorProduct.map_tmul, map_one, Algebra.smul_def,
       AlgHom.commutes] at h2
     rw [Matrix.diagonal_mul, Matrix.mul_apply]
     change _ * (1 ⊗ₜ[F] (g : E →ₐ[F] E) (b j)) =

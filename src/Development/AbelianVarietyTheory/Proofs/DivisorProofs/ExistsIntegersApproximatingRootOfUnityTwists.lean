@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ResidueEqZeroIffV
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PrimeBelowComplexEmbeddingLabelIsMaximalCard
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsValuationPowPrimePowSubGeStatement
 

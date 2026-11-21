@@ -1,5 +1,9 @@
-import Mathlib
-import CompanionTheory.SpectralGeometry.CountingDefinitions.AdelicEulerProducts.HypJ
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.UnipotentAdelicQuotients.SWXSDefs
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Topology.Connected.Separation
+import Mathlib.Topology.MetricSpace.Ultra.TotallySeparated
 open HeckeCharacterZeroLocus.SiegelWeilU GlobalTheory.CompanionTheory.SW NumberField IsDedekindDomain MeasureTheory Topology
 open scoped TensorProduct ENNReal NNReal Matrix RestrictedProduct
 
@@ -18,7 +22,7 @@ theorem repr_map {R R' : Type} [CommRing R] [CommRing R'] [Algebra F R] [Algebra
   induction y using TensorProduct.induction_on with
   | zero => simp
   | tmul r e =>
-    simp [Algebra.TensorProduct.basis_repr_tmul, Algebra.smul_def]
+    simp [Algebra.TensorProduct.basis_repr_tmul]
   | add x y hx hy => simp only [map_add, Finsupp.add_apply, hx, hy]
 
 variable (R : Type) [CommRing R] [Algebra F R] [TopologicalSpace R] [IsTopologicalRing R]

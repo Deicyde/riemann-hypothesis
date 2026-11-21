@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.LogDerOne
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.LogDerivLFunctionStrip
+import Mathlib.NumberTheory.LSeries.Nonvanishing
 
 noncomputable section
 

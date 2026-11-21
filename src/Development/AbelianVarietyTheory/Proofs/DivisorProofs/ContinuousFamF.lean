@@ -1,5 +1,5 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.RangeShape
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PBConjTranspose
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StR
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousDen
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConjDiagReNonneg
@@ -7,7 +7,7 @@ import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StExpDeriv
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConjTransposeSignFormDiagEqSignedSumCol
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IteratedDerivScale
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StConstHolds
-import Mathlib
+import Formalism.RealPlaceAnalysis.RealPlaceTaylor.CompactHaarRightInvariantInst
 
 section
 
@@ -29,7 +29,7 @@ theorem iter_zero {G : ℝ → ℝ} (h1 : ∀ x, 1 ≤ x → G x = 0) {t : ℝ} 
       (continuous_const.mul continuous_id).continuousAt.eventually (lt_mem_nhds hy)
     filter_upwards [this] with x hx using h1 _ hx.le
   rw [hev.iteratedDeriv_eq k]
-  simp [iteratedDeriv_const]
+  simp
 
 theorem iter_cont {G : ℝ → ℝ} (hG : ContDiff ℝ ∞ G) (t : ℝ) (k : ℕ) :
     Continuous (iteratedDeriv k fun x => G (t * x)) :=
@@ -254,7 +254,7 @@ theorem lim2 (hEB : StEB) (hR : StR) (hL : StExpLow) (hD : StExpDeriv) (hC : StC
   have hval : ψ (nMode ε) 0 = (J 0 : ℂ) * ev (toM s) (p (nMode ε)) := by
     simp only [ψ, hEB0, inv_one, one_mul, mul_one]
     rw [integral_congr_ae (Eventually.of_forall hinv)]
-    simp [integral_const, Measure.real, muK_univ]
+    simp [integral_const, Measure.real]
   obtain ⟨η, hη, hη'⟩ := hC n ε s d hs hinj 1 one_pos
   have heq : ∀ᶠ t : ℝ in atTop, ∫ x, famF ε G p t (toM (x⁻¹ * s * x)) ∂μ =
       ∫ B, ∑ k ∈ Finset.range (Fintype.card (Mode ε) + 1),

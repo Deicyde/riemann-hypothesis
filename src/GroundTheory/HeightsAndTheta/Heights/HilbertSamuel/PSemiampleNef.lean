@@ -1,9 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsSemiampleNef
 import GroundTheory.HeightsAndTheta.Heights.Intersections.PGeoNumCut
 import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.PDivCycleMul
 import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.PVocabDivCycle
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterRed
+import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.CoordinateSecondPoint
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.HilbertSamuel

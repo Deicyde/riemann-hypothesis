@@ -1,5 +1,13 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeDeformations.HostNumber
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.LocalPublishedTheorems
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.NumberTheory.Padics.Complex
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open NumberField Matrix IsLocalRing Formalism.ConjugateSelfDual ReciprocityTheory.Gal GlobalTheory.GalOfCusp UpperTheory.V.HV UpperTheory.V.U3 UpperTheory.V.Alg UpperTheory.V.Aut UpperTheory.V.UnitaryThreeInertia
 
@@ -41,7 +49,7 @@ private theorem norm_le_one_of_det_smul_one_sub_eq_zero {K : Type*} [NormedField
     exact norm_le_zero_iff.mp this
   have hrow : t * v b = ∑ c, M b c * v c := by
     have := congrFun hv b
-    simp [Matrix.sub_mulVec, Matrix.mulVec, dotProduct, Matrix.smul_apply, Matrix.one_apply,
+    simp [Matrix.mulVec, dotProduct, Matrix.smul_apply, Matrix.one_apply,
       sub_mul, Finset.sum_sub_distrib, ite_mul, Finset.sum_ite_eq] at this
     linear_combination this
   have hbound : ‖t * v b‖ ≤ 1 * ‖v b‖ := by
@@ -75,7 +83,7 @@ theorem UpperTheory.V.UnitaryThreeInertia.rig_sep :
       apply Matrix.det_of_upperTriangular
       intro a b hab
       have hne : a ≠ b := (ne_of_lt hab).symm
-      simp [Matrix.sub_apply, Matrix.one_apply, hne, hT a b hab]
+      simp [Matrix.sub_apply, hne, hT a b hab]
     calc (x • (1 : Matrix (Fin 3) (Fin 3) (PadicAlgCl l)) - M).det
         = ((((P⁻¹ : GL (Fin 3) (PadicAlgCl l)) : Matrix (Fin 3) (Fin 3) (PadicAlgCl l))).det *
           ((P : Matrix (Fin 3) (Fin 3) (PadicAlgCl l))).det) *
@@ -86,7 +94,7 @@ theorem UpperTheory.V.UnitaryThreeInertia.rig_sep :
         ring
       _ = ∏ k, (x - T k k) := by
         rw [h1, h3]
-        simp [Matrix.sub_apply, Matrix.one_apply]
+        simp [Matrix.sub_apply]
   have hM1 : ∀ a b, ‖M a b‖ ≤ 1 := by
     intro a b
     have hdg : ‖Matrix.diagonal d a b‖ ≤ 1 := by

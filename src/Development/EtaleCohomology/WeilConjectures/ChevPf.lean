@@ -1,5 +1,9 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.WeilConjectures.ContinCut
 import Mathlib.NumberTheory.Padics.ProperSpace
+import Mathlib.Topology.Connected.Separation
+import Mathlib.Topology.MetricSpace.Ultra.TotallySeparated
 
 namespace LateralTheory.EWeil.ChevPf
 

@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.HkDefs
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.HkInd
 
 open MvPolynomial Equiv UpperTheory.V.AlgebraTools.Hk

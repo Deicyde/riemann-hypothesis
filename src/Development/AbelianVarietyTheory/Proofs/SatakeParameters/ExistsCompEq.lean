@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.HeckeCharEqOfLAdicRealisation
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.LevelLetterCocycles.DataN
 
 namespace GlobalTheory.AbsolutelyIrreduciblePullback
 

@@ -1,5 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.ThetaMetrics.ExistsEventuallyNormRiemannThetaTermLe
+import Mathlib.Algebra.Module.ZLattice.Basic
+import Mathlib.AlgebraicTopology.FundamentalGroupoid.SimplyConnected
+import Mathlib.Analysis.Calculus.DifferentialForm.Basic
+import Mathlib.LinearAlgebra.SymplecticGroup
 
 open Matrix MeasureTheory
 open scoped Real ContDiff
@@ -22,7 +27,7 @@ def symp (g : ℕ) : Fl g [⋀^Fin 2]→L[ℝ] ℝ where
   map_update_smul' := by
     intro inst v i c x
     obtain rfl : inst = instDecidableEqFin 2 := Subsingleton.elim _ _
-    fin_cases i <;> simp [riem, ← Finset.sum_sub_distrib, Finset.mul_sum] <;>
+    fin_cases i <;> simp [riem, Finset.mul_sum] <;>
       exact Finset.sum_congr rfl fun _ _ => by ring
   cont := by
     unfold riem

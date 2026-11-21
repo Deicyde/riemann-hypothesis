@@ -1,7 +1,7 @@
-import Mathlib
-import ReciprocityTheory.AnalyticForms.MaIntEmpty
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PotentialTheory.LocDens
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsComplexTaylor
+import Mathlib.Tactic.Monotonicity.Lemmas
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.HilbertSamuel

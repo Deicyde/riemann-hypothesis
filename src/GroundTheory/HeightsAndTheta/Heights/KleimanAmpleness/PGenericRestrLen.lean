@@ -1,6 +1,5 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.StatementsGenericRestrLen
-import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.ExtendTwist
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PFiniteSections
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PFibreSectionsFlat
 set_option maxSynthPendingDepth 1

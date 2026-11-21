@@ -1,5 +1,6 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.DataRigidTorsionOfDataRigid
+import Mathlib.Data.Int.Star
 
 namespace GlobalTheory
 

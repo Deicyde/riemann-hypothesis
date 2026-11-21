@@ -1,10 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SiegelReframe
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PeriodMapSymplecticTransformStatement
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlatCoordsSymplecticPullbackFormStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SiegelActionIsMulActionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SiegelPeriodMapSimplyConnectedStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PeriodFlatMapRealAnalyticStatement
+import Mathlib.RingTheory.PicardGroup
 
 open Matrix MeasureTheory GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe
 open scoped Real ContDiff

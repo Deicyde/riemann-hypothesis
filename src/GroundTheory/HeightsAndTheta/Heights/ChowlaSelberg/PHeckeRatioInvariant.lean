@@ -1,5 +1,8 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ChowlaSelberg.HeckeRatioInvariant
+import Mathlib.Data.Int.Star
+import Mathlib.Tactic.ENatToNat
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.ChowlaSelberg

@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.GaussNormAcrisLocallyMonomial
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsGauss
 open GlobalTheory.PMon.Gauss
 open scoped Formalism.Per
 set_option maxHeartbeats 1000000 in

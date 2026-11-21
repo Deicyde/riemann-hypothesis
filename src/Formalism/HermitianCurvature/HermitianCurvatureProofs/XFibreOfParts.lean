@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementTL
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.DiagonalTransferAction
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.FrameCompletion
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.Sq2UnitOfEqOneOfSq2EqDiv
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.TheoremPIntegralOfPlaces
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.HomogeneityNaturalDegree

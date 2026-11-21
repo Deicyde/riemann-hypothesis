@@ -1,4 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.FourierMatch
+import Mathlib.LinearAlgebra.Matrix.Charpoly.Univ
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Algebra.MvPolynomial
 open GlobalTheory.JR Matrix MeasureTheory Filter Topology
 
 namespace GlobalTheory.JR.OrbitProper
@@ -16,7 +23,7 @@ theorem companionMatrixOfCoeffs_pow_mulVec_first_basis (p : Fin r → k) (n : �
   | succ n ih =>
     rw [pow_succ', ← mulVec_mulVec, ih (by omega), mulVec_single_one]
     funext i
-    simp only [companion, transpose_apply, of_apply, Pi.single_apply, Fin.ext_iff]
+    simp only [companion, Pi.single_apply, Fin.ext_iff]
     have : ¬ (n + 1 = r) := by omega
     simp [this]
 
@@ -49,7 +56,7 @@ theorem Cm_sec (a : Inv r k) : Cm (sec a) = hankel a := by
   ext i j
   simp only [Cm, hankel, mom, sec, of_apply]
   rw [pow_add, ← mulVec_mulVec, companionMatrixOfCoeffs_pow_mulVec_first_basis a.1 j j.2, mulVec_single_one, dotProduct_comm]
-  simp [vecMul, dotProduct, transpose_apply, mul_comm]
+  simp [vecMul, dotProduct, mul_comm]
 
 end Alg
 

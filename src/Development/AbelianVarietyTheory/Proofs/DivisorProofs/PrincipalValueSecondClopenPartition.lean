@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ScaledBoxRadiiAtEntry
 open ValuativeRel Matrix GlobalTheory.SplitFlip GlobalTheory.FullRankCoinv GlobalTheory.RankCoinv GlobalTheory.NormalCore
 
@@ -23,7 +23,7 @@ theorem pv_add_right : ∀ (k : Type) [Field k] [ValuativeRel k] [TopologicalSpa
       have hx' : x ∈ Kf i := by
         by_contra h; exact hx (Set.indicator_of_notMem h _)
       have : x ∈ B₂ := hsub i hi hx'
-      simp [Set.indicator_of_mem this]
+      simp
       exact this
     · have hY2 := h₂.2 Y hY
       have : Y ∉ B₂ := fun h => by simp [Set.indicator_of_mem h] at hY2

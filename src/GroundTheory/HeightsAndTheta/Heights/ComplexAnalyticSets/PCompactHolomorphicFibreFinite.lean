@@ -1,6 +1,12 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StCompactHolomorphicFibreFinite
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StNonIsolatedFibreCurve
+import Mathlib.Analysis.Complex.AbsMax
+import Mathlib.Analysis.InnerProductSpace.OfNorm
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.Topology.Compactness.CountablyCompact
+import Mathlib.Topology.DerivedSet
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.IndefiniteRowSideFullHecke.ComplexSets

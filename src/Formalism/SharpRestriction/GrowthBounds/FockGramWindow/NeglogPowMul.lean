@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.FockGramWindow.BinMatNatDegreeLe
+import Formalism.SharpRestriction.GrowthBounds.FockGramWindow.GramWindow2
+import Formalism.SharpRestriction.GrowthBounds.FockGramWindow.PhiPair
+import Mathlib.Algebra.Ring.IsFormallyReal
 
 noncomputable section
 

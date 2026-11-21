@@ -1,9 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.FacWithCsNonneg
-import Development.AbelianVarietyTheory.Definitions.Divisors.MemLevEigenIffTransl
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.NormNegCmConstantEqAtAllEmbeddings
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.HalfLatticeTypes
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsCoeffTypeNormsPrincipal
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.DescentConstants
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsCoprimeOfNatCast
+import Formalism.SharpRestriction.Divisibility.LiftErrorLocal
 
 set_option autoImplicit false
 

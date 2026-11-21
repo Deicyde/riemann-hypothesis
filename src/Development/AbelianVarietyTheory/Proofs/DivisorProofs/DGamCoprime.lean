@@ -1,10 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.CardFiniteSubgroupGLIntDvd
-import Formalism.SharpRestriction.Divisibility.LocalQuadraticParts
-import Formalism.SharpRestriction.GrowthBounds.WeilJacquetShalikaLaw
-import Formalism.SharpRestriction.GlobalSchurBounds.MainIn
-import Formalism.QuotientMetricDivisors.FinalW
-import Formalism.QuotientMetricDivisors.SixthReductionExplicit
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.ElevenLe
 open Formalism.BasicNotions Formalism.BasicNotions.DV Formalism.MainNotions NumberField Classical
 
 namespace GlobalTheory.DGamCoprime

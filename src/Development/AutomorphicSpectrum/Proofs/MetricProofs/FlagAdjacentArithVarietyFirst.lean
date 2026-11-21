@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.BasePartFlagPt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.LogPeriodStatementStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.FlagAdjacentPluckerOrbitStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.BaseVectorProperties

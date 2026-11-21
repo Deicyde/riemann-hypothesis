@@ -1,6 +1,6 @@
-import Mathlib
-import Development.ResolutionOfSingularities.EmbeddedResolution.DerivativeIdeal.DerivativeIdeal
+import BuildAid.Leniency.Variable
 import Development.ResolutionOfSingularities.EmbeddedResolution.MaximalContactHypersurfaces.TunedIdeal
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 namespace FunctorialResolution.EmbeddedResolution
 

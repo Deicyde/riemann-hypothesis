@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.LagCoi
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.LagNeZero
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.CoiConjSingle
+import Mathlib.Tactic.ENatToNat
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Polynomial Matrix IsLocalRing TensorProduct
 

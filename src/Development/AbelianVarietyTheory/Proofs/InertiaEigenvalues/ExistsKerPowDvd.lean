@@ -1,13 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.EqZeroOfInAMul
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ConstantCoeffMapEqZero
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.AcrisTorsionFreeComplete
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsUniqueIsEval
-import Development.AbelianVarietyTheory.CrystallinePeriods.RingIface
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsCrisP
-import Development.AbelianVarietyTheory.CrystallinePeriods.CrisMaps
-import Development.AbelianVarietyTheory.CrystallinePeriods.CrisMapsLoc
-import Development.AbelianVarietyTheory.CrystallinePeriods.RingBasics
 
 noncomputable section
 

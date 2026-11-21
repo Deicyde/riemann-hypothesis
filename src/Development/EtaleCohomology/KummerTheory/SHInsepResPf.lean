@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.KummerTheory.SHInsepPf
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 noncomputable section
 open scoped TensorProduct

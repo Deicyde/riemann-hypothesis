@@ -1,5 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.PetersonNormSubspace
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.ProjectiveLattices.IsCombAt
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 open NumberField ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj
 

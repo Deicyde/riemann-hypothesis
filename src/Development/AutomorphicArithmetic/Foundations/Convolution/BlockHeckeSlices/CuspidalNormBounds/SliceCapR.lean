@@ -1,7 +1,6 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.BlockHeckeSlices.CapRDefs
-import Development.AutomorphicArithmetic.Foundations.Convolution.BlockHeckeSlices.CuspidalNormBounds.UmgOps
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.BlockHeckeSlices.CuspidalNormBounds.CuspUmg
-import Development.AutomorphicArithmetic.Foundations.Convolution.BlockHeckeSlices.CuspidalNormBounds.GoodSmul
 import Development.AutomorphicArithmetic.WhittakerHecke.IntegrableMulConjOfModerateGrowthOfCuspidal
 import Development.AutomorphicArithmetic.WhittakerHecke.IntegralQuotientDerivativeOneParameterEqZero
 import Development.AutomorphicArithmetic.WhittakerHecke.OneParameterSubgroupNormOne
@@ -11,7 +10,6 @@ import Development.AutomorphicArithmetic.WhittakerHecke.FunctionalQdetEqAevalShi
 import Development.AutomorphicArithmetic.WhittakerHecke.IntegrableTranslateMulConjAndInnerSelfNeZero
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.QuantumDetAdjointForm
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LieOneLMemZalg
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TransposeMulIncl
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.RingEquivPlaceCorrespondencePlaceUnder
 
 open MeasureTheory NumberField GlobalTheory.CuspRep GlobalTheory.CompanionTheory.CTFin
@@ -279,14 +277,14 @@ private theorem embGL_eq {R : Type} [CommRing R] (r s : ℕ) (g : GL (Fin r) R) 
       have h := fun X => GlobalTheory.GLSlice.extN_apply_right (R := R) (Fin.castAddEmb s) X (Fin.castAdd s a) (hne b)
       have := hne b a
       simp only [Fin.castAddEmb_apply] at this
-      simp [h, Matrix.one_apply, this]
+      simp [h, this]
   | right a =>
     have h := fun X => GlobalTheory.GLSlice.extN_apply_left (R := R) (Fin.castAddEmb s) X (hne a) b
     induction b using Fin.addCases with
     | left b =>
       have := (hne a b).symm
       simp only [Fin.castAddEmb_apply] at this
-      simp [h, Matrix.one_apply, this]
+      simp [h, this]
     | right b => simp [h, Matrix.one_apply]
 
 end

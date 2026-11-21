@@ -1,6 +1,7 @@
-import Development.AutomorphicArithmetic.FrobeniusLocalisation.SizeDefs
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.FrobeniusLocalisation.FrobGSpec
 import Development.AutomorphicArithmetic.FrobeniusLocalisation.FrobDecomp
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.PrimePairSizeCondition
 
 open UpperTheory.HF
 

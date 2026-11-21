@@ -1,6 +1,5 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.IwahoriReduction.SiegelFixedPoints.IsThBIff
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsLamOfLSmulIff
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.SpecialLinearGroupIntMapZmodSurjectiveStatement
 
 open scoped MatrixGroups Matrix
 open GlobalTheory.KZ GlobalTheory.K4 GlobalTheory.Glue GlobalTheory.KummerEisensteinGalois UpperTheory.Kd.L
@@ -140,7 +139,7 @@ private theorem exists_rd_eq (M : ℕ) (γ : SL(2, ZMod M)) : ∃ g : SL(2, ℤ)
 
 private theorem red_rd_eq_rd_of_dvd {a b : ℕ} (h : b ∣ a) (g : SL(2, ℤ)) : red h (rd a g) = rd b g := by
   ext i j
-  simp [red_apply, rd_apply]
+  simp [red_apply]
 private theorem chineseRemainder_fst_snd_eq_castHom {L Q : ℕ} (hLQ : L.Coprime Q) (x : ZMod (L * Q)) :
     (ZMod.chineseRemainder hLQ x).1 = ZMod.castHom (dvd_mul_right L Q) (ZMod L) x ∧
     (ZMod.chineseRemainder hLQ x).2 = ZMod.castHom (dvd_mul_left Q L) (ZMod Q) x := by

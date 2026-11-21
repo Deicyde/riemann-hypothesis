@@ -1,4 +1,7 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.MaxWeightGL1EqOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.SimpleTwistedTraceFormulaStable
 
 noncomputable section
 

@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import CompanionTheory.AutomorphicTheory.LocalBesselUniqueness.BesselModels.AtFormAdmOneOfSteps
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.L2NormScaling
 
 open MeasureTheory Matrix
 open scoped InnerProductSpace ENNReal ComplexConjugate

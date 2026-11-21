@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.UnipotentSums
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.FixedFrameProperty
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.HermitianXiVector
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.LinearChangeOfVariablesBis
 
 open Matrix Formalism.FourierDecayAlt Formalism.QuantumDeterminants
 open scoped ComplexConjugate

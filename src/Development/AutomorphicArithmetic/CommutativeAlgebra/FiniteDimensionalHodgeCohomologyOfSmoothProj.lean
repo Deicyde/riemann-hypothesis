@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.OmegaPullOmegaTraceOfSecTraceOne
+import BuildAid.Leniency.Open
 import GroundTheory.ArithmeticGeometry.SchemeCohomology.ProperFiniteness
+import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.SurjectiveOfLocallySurjective
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory GlobalTheory.HodgeCoh
 
 set_option maxSynthPendingDepth 1

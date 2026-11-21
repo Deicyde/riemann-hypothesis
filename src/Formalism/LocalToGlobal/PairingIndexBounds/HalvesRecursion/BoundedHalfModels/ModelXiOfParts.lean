@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.PairingIndexBounds.HalvesRecursion.BoundedHalfModels.Assemble
 import Formalism.LocalToGlobal.PairingIndexBounds.HalvesRecursion.BoundedHalfModels.AdicBoxOpenness.ClosureCharacterHolds
 import Formalism.LocalToGlobal.PairingIndexBounds.HalvesRecursion.ModelXiAll

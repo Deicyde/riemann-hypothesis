@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteForms.IndefiniteTree.ExampleSatisfiesConditionsAtFive
 import Formalism.LocalRingCardinality.DataParams
+import Mathlib.RepresentationTheory.Irreducible
 
 open NumberField IsDedekindDomain Polynomial
 

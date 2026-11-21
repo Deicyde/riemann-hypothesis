@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.HarderNarasimhan.StatementFrameF
-import Formalism.LatticeSlopes.ExistsSaturatedSlopeEqMuMax
 import Formalism.CorankShare.CorankShareProofs.SumNormSqLeHilbertSchmidt
+import Mathlib.Analysis.InnerProductSpace.Trace
 
 noncomputable section
 

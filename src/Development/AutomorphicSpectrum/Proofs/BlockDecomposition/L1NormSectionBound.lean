@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.AverageDerivativeL1Bound
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WaveKernelUniqueness
 
@@ -200,7 +201,7 @@ theorem l1_norm_section_bound {_ : MeasurableSpace (G n)} [BorelSpace (G n)] (μ
   refine (integral_mono_of_nonneg (Eventually.of_forall fun y => norm_nonneg _) hI
     (Eventually.of_forall hb)).trans_eq ?_
   rw [hF]
-  simp only [integral_smul_const, integral_const, smul_eq_mul, integral_mul_const]
+  simp only [integral_const, smul_eq_mul, integral_mul_const]
   ring
 
 theorem inner_sec (hβ : Continuous β) (v w : E.V) (y : Mat n) :

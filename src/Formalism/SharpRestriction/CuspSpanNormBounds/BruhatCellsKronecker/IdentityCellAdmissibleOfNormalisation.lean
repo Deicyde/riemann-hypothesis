@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.BruhatCellsKronecker.IdentityCellAdmissibleOfLift
 import Formalism.SharpRestriction.CuspSpanNormBounds.BruhatCellsKronecker.IdLift
 

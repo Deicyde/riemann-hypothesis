@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.RatBasisLinearIndependentInt
+import Mathlib.RingTheory.DividedPowers.SubDPIdeal
 open DividedPowers GlobalTheory.Cris GlobalTheory.PDA
 
 namespace GlobalTheory.PDA

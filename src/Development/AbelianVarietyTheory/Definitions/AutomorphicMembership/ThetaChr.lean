@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.RatInEig
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.OverIx
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.See
@@ -7,6 +8,7 @@ import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.MovedR
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.HasPartAnd
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ColNorm
 import Formalism.LocalToGlobal.ClassRec
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.HostPins
 
 noncomputable section
 

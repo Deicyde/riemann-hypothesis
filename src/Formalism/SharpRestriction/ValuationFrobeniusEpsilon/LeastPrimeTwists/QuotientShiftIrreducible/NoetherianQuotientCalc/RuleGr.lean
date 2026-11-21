@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.ValuationFrobeniusEpsilon.LeastPrimeTwists.QuotientShiftIrreducible.NoetherianQuotientCalc.EulerVanishingBelowDimension
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.Tactic.ENatToNat
 
 noncomputable section
 

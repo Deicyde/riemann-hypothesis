@@ -1,4 +1,6 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutSE2
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.LevelOneSquareIntegrableGeneral
 
 open MeasureTheory Filter Topology
 open scoped ComplexConjugate

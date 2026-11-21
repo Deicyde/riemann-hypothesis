@@ -1,5 +1,6 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.StAPrimeChartMargin
+import BuildAid.Leniency.Open
+import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.ChartVel
+import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.FlagIndices
 set_option maxSynthPendingDepth 1
 
 noncomputable section

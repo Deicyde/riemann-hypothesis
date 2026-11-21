@@ -1,4 +1,8 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementM
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace Formalism.FourierDecayAlt.P
 

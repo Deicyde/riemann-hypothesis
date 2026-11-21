@@ -1,4 +1,5 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutDec
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutLimTop
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutFpmDecay
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LimZeroNPf

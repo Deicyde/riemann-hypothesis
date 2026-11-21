@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.UnitarisableSegmentTwistPrecedesAddOneLe
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.AlgebraMapIntertwiningMapBijectiveOfIsSmooth
 open GlobalTheory.PRep GlobalTheory.SmGL GlobalTheory.LocGL
 
 noncomputable section

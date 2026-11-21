@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.AevalEqZeroOfMemConeIdeal
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlockSphereMeanEqOfFrameNormEq
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsHeightIffOfDegreeEq
 
 set_option autoImplicit false
 

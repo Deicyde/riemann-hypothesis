@@ -1,7 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.FockResolutionOnto.FockMonomialProofs.DerivativeKillsDegreeZero
 import Formalism.ThetaLogCoordinates.FockResolutionOnto.FockMonomialProofs.RestrictedLatticeDividedPower
 import Formalism.ThetaLogCoordinates.FockResolutionOnto.FockMonomialProofs.WmMulWmComm
 import Formalism.ThetaLogCoordinates.FockResolutionOnto.FockMonomialProofs.DerivativeDividedIntegral
+import Formalism.ThetaLogCoordinates.TraceIsometryWeights.DischargeHeightBound
 
 namespace Formalism.InvariantFactorPaths.L4
 

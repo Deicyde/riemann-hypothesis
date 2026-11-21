@@ -1,10 +1,7 @@
-import Mathlib
-import Formalism.HarderNarasimhan.QuotRealize
-import Formalism.HarderNarasimhan.StatementMod
+import BuildAid.Leniency.Open
 import Formalism.QuotientMetricDivisors.PassageScaleFree
 import Formalism.QuotientMetricDivisors.Complement2Normaliser
 import Formalism.PairingDivisors.StatementX
-import Formalism.TowerValuationBounds.HermitianSumValuationBound
 
 open Module NumberField IsDedekindDomain Finset
 open Formalism.DivisionValues (vw lw PlOver meanLog)

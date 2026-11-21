@@ -1,5 +1,7 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StLogLogCut
+import Mathlib.Analysis.Analytic.Polynomial
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

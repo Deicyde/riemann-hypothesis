@@ -1,11 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.CxPassSk
 import Formalism.LocalToGlobal.IndefiniteReal.EqZeroOfMemRangeAdjoint
 import Formalism.LocalToGlobal.GlobalTheory.PassageBaseSymmetricLevels
-import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.SecondStepGluing
-import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.AuxStatement14
-import Formalism.LocalToGlobal.Divisibility.RowLatLemmas
-import Formalism.LocalToGlobal.Divisibility.ProjLemmas
 
 open Module NumberField IsDedekindDomain
 open scoped Matrix ComplexOrder InnerProductSpace
@@ -153,10 +150,10 @@ theorem actMat_coord {Z : Submodule K B.S.Forms} (hZ : ∀ g : G, Z ≤ Z.comap 
 private theorem gaMat_single_lemma (g : G) :
     B.S.gaMat B.r (MonoidAlgebra.single g 1) = B.S.actMat B.r g := by
   first
-  | (simp [CSD.gaMat, MonoidAlgebra.coeff_single, Finset.sum_ite_eq']; done)
-  | (simp [CSD.gaMat, Finsupp.single_apply]; done)
-  | (simp [CSD.gaMat, MonoidAlgebra.single_apply]; done)
-  | (unfold CSD.gaMat; rw [Finset.sum_eq_single g] <;> simp_all [Finsupp.single_apply]; done)
+  | (simp [CSD.gaMat, MonoidAlgebra.coeff_single]; done)
+  | (simp [CSD.gaMat]; done)
+  | (simp [CSD.gaMat]; done)
+  | (unfold CSD.gaMat; rw [Finset.sum_eq_single g] <;> simp_all; done)
   | simp only [CSD.gaMat]
 
 theorem action_preserves_idempotent_range {X : Finset (G → K)} (hX : ∀ χ ∈ X, IsAbsIrrChar χ) (g : G)

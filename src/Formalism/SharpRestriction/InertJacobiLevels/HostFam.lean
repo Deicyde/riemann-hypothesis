@@ -1,8 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataHost
-import Formalism.FrobeniusOrbits.HostCorollaries
-import Formalism.TameInertiaTowers.TowerFieldFoundations
 import Formalism.CyclotomicNorms.StatementI
 import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.NonemptyFieldAxiomsCyclicPow
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.FrameCyclicGenerator
 
 noncomputable section
 
@@ -349,7 +350,7 @@ theorem hostOf_levelPrimes_of_odd (u0 : (Rt s).A) {T : ℕ} (Lw : ℕ) (hT : Odd
   have hc : Nat.Coprime T 16 := Nat.Coprime.pow_right 4 (Nat.coprime_two_right.2 hT)
   rw [hostOf_levelPrimes, Finset.filter_singleton, if_pos hc]
   ext p
-  simp [or_assoc]
+  simp
 
 theorem hostOf_mem_level (u0 : (Rt s).A) {T : ℕ} (Lw : ℕ) (hT : Odd T) :
     T ∈ (hostOf A u0 T Lw).levelPrimes := hostOf_T_level A u0 Lw hT

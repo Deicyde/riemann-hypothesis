@@ -1,5 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ValHalfInf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.MemSiegelOfIffRightAct
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 
@@ -355,7 +358,7 @@ theorem core (j : E →+* A) (e : n ⊕ n ≃ ι) {σ : A →+* A} (hσc : Conti
     have h8 : β q = (bc j (δ q))⁻¹ * (dg s (l q) * c q) := by rw [← hred, inv_mul_cancel_left]
     have h9 : (ν x : ℝ) = ν (GeneralLinearGroup.det (c q)⁻¹) * ∏ i, b ^ l q i := by
       rw [h7, map_mul, map_mul, hνd U hUj, mul_one, det_cti, hνσ, h8]
-      simp only [_root_.mul_inv_rev, map_mul, map_inv, inv_inv, hνd _ ⟨δ q, rfl⟩, mul_one, det_dg, map_prod, map_zpow₀,
+      simp only [_root_.mul_inv_rev, map_mul, map_inv, inv_inv, hνd _ ⟨δ q, rfl⟩, mul_one, det_dg, map_prod,
         map_zpow]
       push_cast
       simp only [hνs, _root_.inv_zpow, Finset.prod_inv_distrib, inv_inv]

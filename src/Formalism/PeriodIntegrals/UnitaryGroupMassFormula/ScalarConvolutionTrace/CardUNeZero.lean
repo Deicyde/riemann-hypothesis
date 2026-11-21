@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GGMirabolic
 
 open Finset
@@ -71,7 +72,7 @@ theorem cardU_ne_zero (F : Type) [Field F] [Fintype F] (k : ℕ) : (cardU F k : 
   unfold cardU
   refine Nat.card_ne_zero.2 ⟨⟨⟨1, ?_⟩⟩, inferInstance⟩
   first
-    | (simp [IsUni]; intro i j h; simp [Matrix.one_apply, ne_of_gt h])
+    | (simp [IsUni]; intro i j h; simp [ne_of_gt h])
     | simp [IsUni]
     | (unfold IsUni; simp)
     | (unfold IsUni; intro i j h; simp [Matrix.one_apply, ne_of_gt h])

@@ -1,8 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.ExistsParameterConditions
-import Formalism.LocalToGlobal.ProjectiveLattices.DatumOfRecordSignature
 import Formalism.LocalToGlobal.ProjectiveLattices.DatProofs
-import Formalism.LocalToGlobal.ProjectiveLattices.CuspidalL2Subspace
 
 noncomputable section
 

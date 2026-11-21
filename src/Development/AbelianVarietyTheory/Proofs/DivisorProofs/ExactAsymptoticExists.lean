@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SlopeTestRemainingChoices
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ComponentMean
-import Formalism.SharpRestriction.Divisibility.LatticeTransfer
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PowerSumDecompositionHomogeneousStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LimitsOfShiftFunctionalsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KappaIndependentOfEmbeddingStatement

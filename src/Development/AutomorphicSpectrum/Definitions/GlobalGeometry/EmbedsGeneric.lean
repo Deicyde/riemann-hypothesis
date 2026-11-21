@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.SplitComps
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsSncModel
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.TowerOrigin
 
 noncomputable section
 

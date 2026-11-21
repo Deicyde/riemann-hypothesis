@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.KummerBasic
+import Mathlib.GroupTheory.FiniteAbelian.Duality
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RepresentationTheory.Homological.GroupCohomology.Hilbert90
 
 namespace GroundTheory.ProfCoh
 

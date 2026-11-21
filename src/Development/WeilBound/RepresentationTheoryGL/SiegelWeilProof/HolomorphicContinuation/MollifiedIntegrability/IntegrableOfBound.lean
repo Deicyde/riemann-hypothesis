@@ -1,5 +1,15 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.MollifiedIntegrability.ClsBoundAlt
+import Mathlib.Analysis.Calculus.LineDeriv.IntegrationByParts
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -118,7 +128,7 @@ theorem dkl_swap (g : E n → ℂ) (k l : Fin n) (y : E n) :
 theorem contDiff_dkl {g : E n → ℂ} (hg : ContDiff ℝ (⊤ : ℕ∞) g) (k l : Fin n) :
     ContDiff ℝ (⊤ : ℕ∞) (Dkl k l g) := by
   have hd : ContDiff ℝ (⊤ : ℕ∞) (fderiv ℝ g) := (contDiff_infty_iff_fderiv.mp hg).2
-  simp only [Dkl, dirC]
+  simp only [Dkl]
   exact (hd.clm_apply contDiff_const).add (contDiff_const.mul (hd.clm_apply contDiff_const))
 
 theorem integrable_of_bound {g : E n → ℂ} (hg : Continuous g) {h : E n → ℝ} (hh : Integrable h)
@@ -157,9 +167,9 @@ theorem ibp_dkl {g : E n → ℂ} (hg : ContDiff ℝ (⊤ : ℕ∞) g) (hgi : In
   set u : E n := fun a b => (vkl k l a b).re
   set w : E n := fun a b => (vkl k l a b).im
   have hre : (fun y => fderiv ℝ g y u) = fun y => (Dkl k l g y + Dkl l k g y) / 2 := by
-    funext y; rw [dkl_swap g k l y]; simp only [Dkl, dirC, u, w]; ring
+    funext y; rw [dkl_swap g k l y]; simp only [Dkl, dirC, u]; ring
   have him : (fun y => fderiv ℝ g y w) = fun y => (Dkl k l g y - Dkl l k g y) / (2 * Complex.I) := by
-    funext y; rw [dkl_swap g k l y]; simp only [Dkl, dirC, u, w]; field_simp; ring
+    funext y; rw [dkl_swap g k l y]; simp only [Dkl, dirC, w]; field_simp; ring
   have iu : Integrable fun y => fderiv ℝ g y u := by rw [hre]; exact (h1.add h2).div_const _
   have iw : Integrable fun y => fderiv ℝ g y w := by rw [him]; exact (h1.sub h2).div_const _
   have hcont := hg.continuous

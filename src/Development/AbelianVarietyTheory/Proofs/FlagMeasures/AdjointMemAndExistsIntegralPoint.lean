@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.LowersMulZero
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.AutPointLatticeIntersectionSelfDualProperties
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.AutPointRationalEquivariance
+import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.IsLatMeasurableConst
+import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.CsApprox
 
 open MeasureTheory NumberField Matrix Finset Formalism.MainNotions.S GlobalTheory.Count GlobalTheory.FlagMeas GlobalTheory.FlagBase GlobalTheory.RadCov
 

@@ -1,9 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.OneMemNbh
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.DiscreteBranchingUpq
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.LowestKTypeDecayGapOfCompressionFormulaGap
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.LowestKTypeCompressionFormulaOfStrictLowestKType
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.NormPosOfIsUnit
 
 noncomputable section
 
@@ -70,7 +68,7 @@ theorem hsn_sq_definite {m : ℕ} {ε : Fin m → Bool} (hq : GlobalTheory.Count
         rw [Finset.card_eq_zero.1 h] at this
         simp at this
       ext a b
-      by_cases hab : a = b <;> simp [Jm, Matrix.diagonal_apply, hab, hf, Matrix.one_apply]
+      by_cases hab : a = b <;> simp [Jm, hab, hf]
     · left
       have hf : ∀ a, ε a = true := fun a => by
         by_contra ha
@@ -78,7 +76,7 @@ theorem hsn_sq_definite {m : ℕ} {ε : Fin m → Bool} (hq : GlobalTheory.Count
         rw [Finset.card_eq_zero.1 h] at this
         simp at this
       ext a b
-      by_cases hab : a = b <;> simp [Jm, Matrix.diagonal_apply, hab, hf, Matrix.one_apply]
+      by_cases hab : a = b <;> simp [Jm, hab, hf, Matrix.one_apply]
   have hu : gᴴ * g = 1 := by
     rcases hJc with h | h
     · rw [h, Matrix.mul_one] at hJ; exact hJ

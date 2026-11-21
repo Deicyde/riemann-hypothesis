@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HasWitness
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.HermitianFormAtFrameLaws
+import Formalism.LocalRingCardinality.DataHost
 
 open AlgebraicGeometry CategoryTheory NumberField Matrix MeasureTheory
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.FD GlobalTheory.ThFr GlobalTheory.Dict GlobalTheory.FrameEquiv

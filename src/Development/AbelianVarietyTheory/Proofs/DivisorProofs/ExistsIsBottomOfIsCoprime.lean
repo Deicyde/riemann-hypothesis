@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.FinitePrimesUnder
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsTwoTorsionCMPointAllConjugates
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsHeckeUNuInv
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsBetaInvHeckeU
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsHeckeUAlphaH

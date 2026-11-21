@@ -1,5 +1,7 @@
-import Formalism.SharpRestriction.GrowthBounds.RootWeights.InvariantProjectionExtremalFormula
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.RootWeights.WeightConditionFromIntegralForm
+import Formalism.SharpRestriction.GrowthBounds.RootWeights.BinomialPreservesDiagonalStable
 
 noncomputable section
 
@@ -196,7 +198,7 @@ private theorem operatorsShiftWeightsByRoots_of_isGLRep {n : ℕ} {K V : Type*} 
     · subst h1; subst h2; simp [rootW]
     · subst h1; simp [rootW, h2, Ne.symm h2]
     · subst h2; simp [rootW, h1]
-    · simp [rootW, h1, h2, Ne.symm h1, Ne.symm h2]
+    · simp [rootW, h1, h2, Ne.symm h2]
   have hc : E c c (E a b x) - E a b (E c c x) =
       ((if c = a then E c b else 0) - (if b = c then E a c else 0)) x :=
     LinearMap.congr_fun (hE.1 c c a b) x

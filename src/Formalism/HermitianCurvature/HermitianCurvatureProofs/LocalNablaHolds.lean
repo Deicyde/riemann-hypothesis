@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.XepolNatDegree
 
 open Formalism.REAL Formalism.QuantumDeterminants Formalism.FourierDecayAlt Polynomial

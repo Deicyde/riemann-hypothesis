@@ -1,9 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.ShCocOn
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsLocallyConstantCycMod
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.ExistsCoprimePowOfMemIneKer
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LocalCohomologyVanishesTameInertiaNoFixed
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.MemIntegersOfNormLeOne
+import Formalism.PadicSubsetSums.StableGradedCounts.ZBrauerNesbittAlg
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.MainNotions.N GlobalTheory.GalOfCusp UpperTheory.V UpperTheory.V.Af UpperTheory.V.HV GlobalTheory.Ord2 GlobalTheory.KZ GlobalTheory.KA
 open scoped Matrix
@@ -211,7 +211,7 @@ theorem exists_cob_of_coprime : ∀ (Γ : Type) [Group Γ] [TopologicalSpace Γ]
         congr 1
         · simp
         · ext i k
-          fin_cases i <;> simp [hc s s.2 t t.2, Matrix.mul_apply, Matrix.mulVec, dotProduct, add_comm]
+          fin_cases i <;> simp [hc s s.2 t t.2, Matrix.mul_apply, add_comm]
         · simp
         · simp }
   obtain ⟨N, hn, ho, hN⟩ := exists_open_ker M hcop

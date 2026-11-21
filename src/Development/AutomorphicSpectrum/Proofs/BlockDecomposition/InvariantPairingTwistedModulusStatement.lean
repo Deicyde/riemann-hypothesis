@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.InvariantPairingTwistedModulus
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousMulVec
 open Matrix MeasureTheory GlobalTheory.PRep GlobalTheory.SmGL GlobalTheory.BZMir GlobalTheory.BZMir.Leib GlobalTheory.RgGu.Leib GlobalTheory.CompanionTheory.LeibOrd GlobalTheory.SplitWeil GlobalTheory.JHMult GlobalTheory.CompanionTheory.BZShell GlobalTheory.CompanionTheory.MirPair
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.invariant_pairing_twisted_modulus : ∀ {k : Type} [Field k] [ValuativeRel k] [TopologicalSpace k] [IsNonarchimedeanLocalField k]

@@ -1,6 +1,5 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.WeightedHomogeneous.Statements
-import GroundTheory.HeightsAndTheta.Heights.WeightedHomogeneous.SectionInjectivityHypothesesProjectiveLine
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.WeightedHomogeneous.PointHeightDegreeHypotheses
 import GroundTheory.HeightsAndTheta.Heights.WeightedHomogeneous.POneBlockStandard
 set_option maxSynthPendingDepth 1

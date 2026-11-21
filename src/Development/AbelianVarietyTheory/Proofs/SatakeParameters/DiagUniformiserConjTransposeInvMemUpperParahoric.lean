@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ThetaMod
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ValLeOneOfMemKO
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ConjSPV
+import Formalism.LocalToGlobal.GaloisLevelStructure.DefsLevel
 open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formalism.ConjugateSelfDual ReciprocityTheory.Gal ReciprocityTheory.Aut Formalism.AUTREP Formalism.L2 Formalism.L2.Host Formalism.L2.NT NumberField IsDedekindDomain Polynomial GlobalTheory.HeightCounting GlobalTheory.RowTie GlobalTheory.SplitRead GlobalTheory.NPin GlobalTheory.BlockType GlobalTheory.SplitWeil
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
 
@@ -111,7 +111,7 @@ theorem facts_of_mem (s : SplitPlace L) (r t : ℕ)
     rw [e, valued_lt_one_iff_w] at this
     have e2 : ((Matrix.GeneralLinearGroup.map c.toRingHom a).val - 1) q p =
         c (a.val q p - if q = p then 1 else 0) := by
-      by_cases h : q = p <;> simp [Matrix.one_apply, h]
+      by_cases h : q = p <;> simp [h]
     rw [e2, hc] at this
     exact this
 

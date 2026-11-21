@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArithIntersectionFormExistsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArithClassFormPropertiesStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormsTensorProductStatement
@@ -9,15 +10,13 @@ import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIntegralSubsc
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeightOfRationalSectionViaDivisorStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LogGreenDifferenceDeterminantLe
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ScaleZeroComp
-import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormsAtOfNorms
-import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.ExistsLinearMapMultilinearMapBaseChange
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SumEulerCharTwistsFlagTrivialStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagTrivialNsmulCharPStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MultiDifferenceVanishesOfInvarianceStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ClosedSubschemeProjOverModLStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCoverInducedMetricsArithStatement
+import Formalism.LocalToGlobal.Columns.LevGCount
+import Formalism.LocalToGlobal.Columns.StdLatUnimodular
 
 open CategoryTheory AlgebraicGeometry NumberField IsDedekindDomain ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Pj GlobalTheory GlobalTheory.Cartier GlobalTheory.CechPic GlobalTheory.ArInt GlobalTheory.ProjVar GlobalTheory.TrueGeo GlobalTheory.Mean4O GlobalTheory.CoverNorm GlobalTheory.ShFam GlobalTheory.ShFam.Pad GlobalTheory.VertForm GlobalTheory.TrivFlag GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.TrueCx
@@ -219,7 +218,7 @@ theorem mem_support_wholeSym {a : ℕ → Bool} {R : Option ℝ} {g : ℕ} {x : 
 theorem parOf_rootSym (a : ℕ → Bool) (R : Option ℝ) (τ : E →+* ℂ) (i : ℕ) : parOf (rootSym Dw a R τ i) = R := by
   have h : (rootSym Dw a R τ i).support.Nonempty := by
     unfold rootSym
-    split_ifs <;> simp [Finsupp.support_single_ne_zero]
+    split_ifs <;> simp
   rw [parOf, dif_pos h]
   exact (mem_support_rootSym h.choose_spec).2
 

@@ -1,11 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TraceOfAt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.DeltaPrimeIsAuxiliarySplitSquarefreeLevel
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BaseTupleThetaSpanHasType
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaKernelVectorMovedByRootsOfUnity
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MemOfOrderDvd
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsLevelDatumReferenceTupleSmallField
-import Formalism.LocalRingCardinality.ConjSqrtMinusD
+import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsNormLeHeightPow
 
 set_option autoImplicit false
 noncomputable section

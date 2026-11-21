@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.StepJumpDirect
-import Formalism.SharpRestriction.LevelLetterCocycles.ExistsInertiaCharpolyFactorOfTameType
-import Formalism.LocalRingCardinality.SpanPowerMembership.NZTypeE
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.AwayRepIsoLoc
 open Formalism Formalism.MainNotions Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.MainNotions.N Formalism.WeaklyAdmissibleFiltrations NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Module GlobalTheory.Pass
 
@@ -87,14 +85,14 @@ theorem allRep_isoLoc (hGal : TieGal N A) (c : ℝ) (Pa : List (Part A.CG)) (hne
     intro p hpm
     have hmem : ∀ k ∈ ((List.range p.d : List ℕ) : List ℝ), ∃ n : ℕ, n < p.d ∧ (n : ℝ) = k := by
       intro k hk
-      simp [Lean.Internal.coeM] at hk
+      simp at hk
       obtain ⟨n, hn, rfl⟩ := hk
       exact ⟨n, hn, rfl⟩
     have hr : ((List.range p.d : List ℕ) : List ℝ) ≠ [] := by
       have h1 : 0 < p.d := hd p hpm
       intro h0
       have : ((0 : ℕ) : ℝ) ∈ ((List.range p.d : List ℕ) : List ℝ) := by
-        simp [Lean.Internal.coeM]
+        simp
         exact ⟨0, h1, by simp⟩
       rw [h0] at this
       simp at this
@@ -103,7 +101,7 @@ theorem allRep_isoLoc (hGal : TieGal N A) (c : ℝ) (Pa : List (Part A.CG)) (hne
       fun k hk => ?_).congr N A i ?_ fun w => ?_
     · obtain ⟨n, hn, rfl⟩ := hmem k hk
       exact h p hpm n hn
-    · simp [Lean.Internal.coeM, mul_comm]
+    · simp [mul_comm]
     · rw [spehLoc, lpTw_foldr N A (fun (k : ℝ) w => A.lpTw (A.locG p.π w) (((p.d : ℝ) - 1) / 2 - k)) w c]
       simp only [A.lpTw_add]
   exact (allRep_foldr N A i hGal (fun p => p.a * p.d) (fun p w => A.lpTw (spehLoc N A p w) c) Pa hne hp).congr

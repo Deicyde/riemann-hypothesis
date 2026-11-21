@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsSmoothHermCombLine
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ChernPartSingleton
 

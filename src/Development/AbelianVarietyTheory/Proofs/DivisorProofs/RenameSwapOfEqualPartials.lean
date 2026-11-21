@@ -1,4 +1,37 @@
-import Mathlib
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
 open MvPolynomial
 
 namespace GlobalTheory
@@ -40,9 +73,9 @@ theorem rename_swap_eq_of_pderiv_eq : ∀ (n : ℕ) (i i' : Fin (n + 1)) (K : Mv
     have h1 := congrArg (coeff (β0 + Finsupp.single i a + Finsupp.single i' b)) hK
     rw [coeff_pderiv, coeff_pderiv] at h1
     have ei : (β0 + Finsupp.single i a + Finsupp.single i' b) i = a := by
-      simp [hβ0, Finsupp.single_apply, Ne.symm hii, hii]
+      simp [hβ0, hii]
     have ei' : (β0 + Finsupp.single i a + Finsupp.single i' b) i' = b := by
-      simp [hβ0, Finsupp.single_apply, hii]
+      simp [hβ0, hii]
     rw [ei, ei'] at h1
     simp only [hf]
     have s1 : β0 + Finsupp.single i a + Finsupp.single i' b + Finsupp.single i' 1
@@ -57,10 +90,10 @@ theorem rename_swap_eq_of_pderiv_eq : ∀ (n : ℕ) (i i' : Fin (n + 1)) (K : Mv
   have hm : m = β0 + Finsupp.single i (m i) + Finsupp.single i' (m i') := by
     ext j
     by_cases hj : j = i
-    · subst hj; simp [hβ0, Finsupp.single_apply, hii]
+    · subst hj; simp [hβ0, hii]
     · by_cases hj' : j = i'
-      · subst hj'; simp [hβ0, Finsupp.single_apply, hii, Ne.symm hii]
-      · simp [hβ0, Finsupp.single_apply, hj, hj', Ne.symm hj, Ne.symm hj']
+      · subst hj'; simp [hβ0, Ne.symm hii]
+      · simp [hβ0, hj, hj']
   set m' : Fin (n + 1) →₀ ℕ := Finsupp.mapDomain (Equiv.swap i i') m with hm'
   have hmm : Finsupp.mapDomain (Equiv.swap i i') m' = m := by
     ext j
@@ -70,11 +103,11 @@ theorem rename_swap_eq_of_pderiv_eq : ∀ (n : ℕ) (i i' : Fin (n + 1)) (K : Mv
     ext j
     rw [hm', Finsupp.mapDomain_equiv_apply, Equiv.symm_swap]
     by_cases hj : j = i
-    · subst hj; simp [hβ0, Finsupp.single_apply, hii]
+    · subst hj; simp [hβ0, hii]
     · by_cases hj' : j = i'
-      · subst hj'; simp [hβ0, Finsupp.single_apply, hii, Ne.symm hii]
+      · subst hj'; simp [hβ0, Ne.symm hii]
       · rw [Equiv.swap_apply_of_ne_of_ne hj hj']
-        simp [hβ0, Finsupp.single_apply, hj, hj', Ne.symm hj, Ne.symm hj']
+        simp [hβ0, hj, hj']
   have h1 : coeff m (rename (Equiv.swap i i') K) = coeff m' K := by
     rw [← coeff_rename_mapDomain _ (Equiv.swap i i').injective K m', hmm]
   have hfm : f (m i) (m i') = coeff m K := by

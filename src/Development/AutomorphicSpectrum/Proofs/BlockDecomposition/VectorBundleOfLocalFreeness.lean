@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.HodgeWedgeFields.H1CommutesBaseChange
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.RingTheory.LocalProperties.FinitePresentation
 open CategoryTheory AlgebraicGeometry TensorProduct Opposite MonoidalCategory CartesianMonoidalCategory MonObj ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory.CatCoh GlobalTheory.Cris GlobalTheory.CechDR MainStatements.Hodge
 
 namespace GlobalTheory.CompanionTheory.Cot

@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.InflationRestriction.TransgressionLift
+import GroundTheory.ProfiniteCohomology.InflationRestriction.Coinduced
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

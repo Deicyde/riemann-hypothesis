@@ -1,14 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaKernelReal
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CharacterPartTensorSpan
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LowestDegreeComponentInvariant
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsHarmonicHighestWeight
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CasimirLtAddRoot
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCommonIrreducibleQuotient
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GlBlockFiniteDimModuleStructure
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockHarmonicHomogeneousOfKType
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MinFirst
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockHarmonicsGradedCompactStable
 
 noncomputable section
 
@@ -193,7 +187,7 @@ theorem mem_tensSpan_of_killed (F : ι → Set (Module.End ℂ V)) (A : ι → S
         by_cases hw : w = a
         · subst hw
           simp [ha]
-        · simp [hw, Function.update_of_ne hw]
+        · simp [hw]
       rw [e, PiTensorProduct.map_comp, LinearMap.comp_apply, ih]
       exact hfix a
   have hT' : PiTensorProduct.map p T = T := by

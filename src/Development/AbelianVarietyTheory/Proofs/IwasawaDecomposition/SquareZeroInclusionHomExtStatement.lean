@@ -1,8 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SquareZeroInclusionHomExt
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MulCoeEqZero
-import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.FormallyUnramifiedOfTangentMapInjective
 
 set_option autoImplicit false
 

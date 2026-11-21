@@ -1,8 +1,9 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.IsBlockProd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.EtArchPf
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.ThetaValCAlpha
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.TorusPin
+import Formalism.LocalToGlobal.ProjectiveLattices.SupNDataOfNonneg
 
 noncomputable section
 

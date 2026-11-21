@@ -1,11 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.HasGammaX
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ShintaniFormula
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.MultisetProdMapProductEqProdProd
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IwasawaCellDecomposition
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MemCellOfUnipotentIwahoriProduct
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.AdelicIwasawaCellsDisjointOffFinset
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HeckeDEqSumOfAgree
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsContinuousPadic
+import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SchurEqJtDet
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.UnipMulMemCell
 
 open NumberField IsDedekindDomain ValuativeRel Matrix MeasureTheory
 open Formalism.UG GlobalTheory.PRep GlobalTheory.LFun GlobalTheory.SmGL GlobalTheory.SplitWeil GlobalTheory.LocGL GlobalTheory.Whittaker GlobalTheory.LocLanglands
@@ -135,7 +132,7 @@ theorem val_emb₂_tD_one (K : Type) [Field K] {m j n : ℕ} (hn : m + (j + 1) =
   obtain ⟨p, rfl⟩ := (stdSum hn).surjective p
   obtain ⟨q, rfl⟩ := (stdSum hn).surjective q
   rcases p with p | p <;> rcases q with q | q <;>
-    simp [GlobalTheory.IwaCell.val_tD, Matrix.diagonal_apply, Matrix.one_apply]
+    simp [Matrix.diagonal_apply, Matrix.one_apply]
   rw [show ((GlobalTheory.IwaCell.tD ϖ a : GL (Fin m) K) : Matrix (Fin m) (Fin m) K) = _ from GlobalTheory.SmGL.val_diagT K _]
   simp [Matrix.diagonal_apply]
 
@@ -169,9 +166,9 @@ theorem whittaker_value_emb₂_tD : ∀ (E : Type) [Field E] [NumberField E] (w 
       by_cases hpq : p = q
       · subst hpq
         by_cases hp : (p : ℕ) < m
-        · simp [Matrix.diagonal_apply, GlobalTheory.JSW.padTo, hp, hpow]
-        · simp [Matrix.diagonal_apply, GlobalTheory.JSW.padTo, hp]
-      · simp [Matrix.diagonal_apply, hpq]
+        · simp [GlobalTheory.JSW.padTo, hp, hpow]
+        · simp [GlobalTheory.JSW.padTo, hp]
+      · simp [hpq]
     rw [heq]
     exact GlobalTheory.JSW.shintani_formula E w n ψ hψ W α hN hK hH ϖ hϖ _
   · refine eq_zero_of_not_antitone_int E w n ψ hψ W hN hK ϖ hϖ _ ?_ _ hv

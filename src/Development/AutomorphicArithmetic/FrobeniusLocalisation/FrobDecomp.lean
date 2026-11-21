@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.FrobeniusLocalisation.SizeDefs
-import Development.AutomorphicArithmetic.FrobeniusLocalisation.FrobGSpec
 
 open UpperTheory.HF
 

@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.SiegelWeil₂.EisensteinResidue
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.LatticeFrames.SphericalEisensteinSeriesOnGroup
 
 noncomputable section
 open scoped Matrix NNReal TensorProduct Classical

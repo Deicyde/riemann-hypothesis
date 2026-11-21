@@ -1,5 +1,8 @@
-import Mathlib
-import Development.WeilBound.ThetaLifts.Reductions.SiegelCore
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Data.Matrix.ColumnRowPartitioned
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 

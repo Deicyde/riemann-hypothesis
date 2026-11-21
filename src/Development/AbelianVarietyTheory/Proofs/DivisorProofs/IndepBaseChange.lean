@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsHeightIffOfDegreeEq
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.MemSubPtsCutBaseChangeIff
+import Mathlib.Algebra.Module.StablyFree.Basic
 
 set_option autoImplicit false
 

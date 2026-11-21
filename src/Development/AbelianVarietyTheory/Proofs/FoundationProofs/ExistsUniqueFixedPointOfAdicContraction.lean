@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.PredMulSumPadicValNatFactorialAddCardLe
+import Mathlib.RingTheory.AdicCompletion.RingHom
+import Mathlib.RingTheory.MvPowerSeries.Equiv
 
 noncomputable section
 

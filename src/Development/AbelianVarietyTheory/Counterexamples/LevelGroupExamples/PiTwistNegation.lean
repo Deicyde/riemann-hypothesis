@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.DepthTie
-import Formalism.LocalToGlobal.ProjectiveLattices.ExistsParameterConditions
 
 noncomputable section
 namespace GlobalTheory.Survey.PiTwistNegation

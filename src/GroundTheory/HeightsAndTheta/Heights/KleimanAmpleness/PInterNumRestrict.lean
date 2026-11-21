@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.InterNumRestrictSt
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.RestrLenRestrictSt
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PRestrictTwist

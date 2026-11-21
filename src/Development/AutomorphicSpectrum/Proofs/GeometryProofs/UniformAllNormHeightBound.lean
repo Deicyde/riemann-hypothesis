@@ -1,21 +1,10 @@
-import Mathlib
-import Development.AutomorphicSpectrum.PublishedTheorems.Geometry₂.NefRR
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ModelSmall
-import Development.AutomorphicSpectrum.Statements.TowerExistence.GoodTowerExistsX
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.VolumeInputs
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.OverLaUnique
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterNamed
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterSt
-import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsFlatSecRankZero
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.TowerOriginComponentBoundStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.UniformNormDegreeBoundStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.GenericFrameComponentBoundStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.FullIntersectionWeightBoundStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.UniformNormAllTowerBoundStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LowHeightOfGivenStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ModelSmallSectionsMulStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.CountVolumePowerComparisonStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.TowerWeightOfZeroStatement
 open NumberField IsDedekindDomain Filter Topology
 open Formalism.L2.Pj ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.FD Formalism.BasicNotions Formalism.MainNotions
 open GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Rec GlobalTheory.CompanionTheory.Ar.Plug
@@ -42,7 +31,7 @@ theorem encard_le_pow_of_rel {α β : Type*} {A : Set α} {B : Set β} {d : ℕ}
         rw [this]; exact hP a'.1 a'.2 i⟩)
     have h1 : ENat.card A ≤ ENat.card (Fin d → B) := ENat.card_le_card_of_injective hG
     have h2 : ENat.card (Fin d → B) = ENat.card B ^ d := by
-      simp [ENat.card_eq_coe_fintype_card, Fintype.card_fun]
+      simp [ENat.card_eq_coe_fintype_card]
     rw [h2] at h1
     exact h1
   · rw [hB.encard_eq, ENat.top_pow hd.ne']

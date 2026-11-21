@@ -1,6 +1,7 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.HomogeneousLocalization.Statements
+import BuildAid.Leniency.Open
 import GroundTheory.ArithmeticGeometry.SchemeCohomology.ProjectiveSpaceChart
+import GroundTheory.HeightsAndTheta.Heights.HomogeneousLocalization
+import Mathlib.AlgebraicGeometry.Morphisms.WeaklyEtale
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

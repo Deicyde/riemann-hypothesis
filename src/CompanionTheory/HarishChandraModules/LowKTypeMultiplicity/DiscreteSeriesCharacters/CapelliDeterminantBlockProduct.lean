@@ -1,7 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.DSInfCharCap
 import Formalism.PeriodIntegrals.IsLowUnitH
-import Formalism.RealPlaceAnalysis.StatementA
-import Formalism.RealPlaceAnalysis.StatementE
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
 
 open Matrix Finset
 open scoped InnerProductSpace

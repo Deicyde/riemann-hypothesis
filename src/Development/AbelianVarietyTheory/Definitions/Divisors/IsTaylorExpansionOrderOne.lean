@@ -1,4 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.AnalyticChartsRealizationCompPointEq
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GaussManinPeriods
 
@@ -249,7 +251,7 @@ theorem isTaylorExpansion_orderOne [DecidableEq I] {W : Opens (Tot I g)} {W₀ :
   congr 1
   · simp [Algebra.ofId_apply, Algebra.algebraMap_eq_smul_one]
   · rw [← (Equiv.funUnique (Fin 1) I).symm.sum_comp]
-    simp [iteratedFDeriv_one_apply, hd.fderiv, Algebra.ofId_apply, Algebra.algebraMap_eq_smul_one, Finset.sum_smul,
+    simp [iteratedFDeriv_one_apply, hd.fderiv, Algebra.ofId_apply, Algebra.algebraMap_eq_smul_one,
       smul_smul, mul_comm, Finset.mul_sum]
 
 end Inhabitants

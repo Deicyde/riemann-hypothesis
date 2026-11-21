@@ -1,4 +1,4 @@
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SubNatCompSubIncl
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AffineInterFiniteBasicOpenCoverStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemAdjoinRestrictedSectionsOfLocalStatement
 open AlgebraicGeometry CategoryTheory Limits Opposite GlobalTheory.QcSub

@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.StatementsModelFibreFinite
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterFib
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterBridgeB

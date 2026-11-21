@@ -1,4 +1,14 @@
-import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.SplitsOfSplitOn
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.SplitRules
+import Mathlib.AlgebraicGeometry.Morphisms.QuasiFinite
+import Mathlib.AlgebraicGeometry.Morphisms.SchemeTheoreticallyDominant
+import Mathlib.AlgebraicGeometry.Morphisms.WeaklyEtale
+import Mathlib.AlgebraicGeometry.Sites.Fpqc
+import Mathlib.CategoryTheory.ExtremalEpi
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
 
 noncomputable section
 

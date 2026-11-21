@@ -1,8 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.AdelicUnitriangularMulMemUnipotentTimesIntegral
-import GroundTheory.GlobalFields.TateThesis.AdeleMeasure
-import GroundTheory.GlobalFields.Adele.Discrete
-import GroundTheory.GlobalFields.Adele.IntegersLattice
 open NumberField IsDedekindDomain Matrix Formalism.UG GlobalTheory.CuspRep MeasureTheory
 
 namespace GlobalTheory.CellDec

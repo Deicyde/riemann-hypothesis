@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsPairOfIsTriple
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepresentationPreservesSchwartz
 
@@ -45,7 +43,7 @@ theorem twist_heis_inv : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [N
   have hcol : ∀ m, ∑ i, ∑ j, H.ι i m * (G.V.J i j * σ (H.x j)) = 0 := by
     intro m
     have h := (hH.orth (Pi.single m 1)).1
-    simp only [form, Matrix.mulVec_single_one, dotProduct, Matrix.mulVec] at h
+    simp only [form, dotProduct, Matrix.mulVec] at h
     simpa [Finset.mul_sum, Pi.single_apply, mul_ite, mul_one, mul_zero, Finset.sum_ite_eq', Finset.sum_mul] using h
   have hperp : ∀ (z : Matrix (Fin b) (Fin (b + 2 + a')) (AE F E)) (q : Fin (b + 2 + a') → AE F E),
       symp (cA σ) (-1) (incM F G.V.J) (incM F G.W.J) (incM F H.ι * z) (Matrix.vecMulVec (incV F H.x) q) = 0 := by

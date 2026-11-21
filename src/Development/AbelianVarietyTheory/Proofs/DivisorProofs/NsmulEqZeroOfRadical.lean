@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HilbertKodairaSpencer
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsCrystalPairing
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GrothendieckDeformation
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsAdditiveLiftIff
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FracIdExistsTotPos
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlatSurjectiveGeomFibre
@@ -106,8 +105,8 @@ theorem form_smul (HR : AbelianDeRham) {c d : 𝔠.elt} {b : 𝓞 F} (e : d = b 
   have := X.rm.hom
   obtain ⟨χ', hχ', k⟩ := hφ.pull (X.isLB c) (homMor (dp0 R) (𝟙 _) (𝟙 X.A))
     (homMor (dp0 R) (𝟙 _) (X.rm.act b)) (h := (lift (fst X.A X.A) (snd X.A X.A ≫ X.rm.act b)).left)
-    (by simp only [← Over.comp_left, lift_fst, lift_snd, Category.comp_id])
-    (by simp only [← Over.comp_left, lift_fst, lift_snd, Category.comp_id])
+    (by simp only [← Over.comp_left, lift_fst, Category.comp_id])
+    (by simp only [← Over.comp_left, lift_snd])
     (X.isLB (b • c)) (LBIso.symm (X.smul b c))
   obtain rfl := hχ.unique (cupSquare X HR) (X.isLB (b • c)) hχ'
   have e := k (push (dp0 R) (𝟙 _) (𝟙 X.A) x) x (push (dp0 R) (𝟙 _) (X.rm.act b) y) y (fun _ ↦ rfl) fun _ ↦ rfl

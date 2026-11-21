@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SecJets4
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.MatrixLemma
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.AbsoluteSiegel
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.TorusExt
+import Mathlib.LinearAlgebra.LinearIndependent.BaseChange
 open NumberField MeasureTheory ReciprocityTheory.GeometryOfNumbersTheory ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.LieHt
 open scoped ComplexOrder
 
@@ -66,10 +66,10 @@ theorem isBC_extFam (h : HermFam K (Fin m → K)) : IsBC h (extFam (K' := K') h)
   have e : ∀ j : Fin m, (fun k => σ ((Pi.single j (1 : K') : Fin m → K') k)) = Pi.single j 1 := by
     intro j; funext k; by_cases hk : k = j
     · subst hk; simp
-    · simp [Pi.single_apply, hk]
+    · simp [hk]
   show extForm h σ _ _ = _
   simp only [extForm, e]
-  simp [stdGram, Matrix.mulVec_single_one, dotProduct, Pi.single_apply]
+  simp [stdGram, dotProduct, Pi.single_apply]
 
 theorem exists_isBC : ∀ (K K' : Type) [Field K] [NumberField K] [Field K'] [NumberField K'] [Algebra K K'] (m : ℕ)
     (h : HermFam K (Fin m → K)), ∃ h' : HermFam K' (Fin m → K'), IsBC h h' :=

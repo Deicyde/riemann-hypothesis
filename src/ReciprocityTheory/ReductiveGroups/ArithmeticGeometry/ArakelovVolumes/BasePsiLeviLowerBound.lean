@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.FirstMinimumPos
 
 namespace ReciprocityTheory.ChartRestriction.G.AR

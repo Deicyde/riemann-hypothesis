@@ -1,5 +1,7 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.LevelOneUniformizerCoeffVanish
-import Formalism.SharpRestriction.LevelLetterCocycles.CoeffAlgMul
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.LevelLetterCocycles.QuotientImageDivisibility.SmulSAddLeft
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 noncomputable section
 

@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.RankOneUnitary
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.IsParahoricVec
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsContinuousPadic
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.NontrivialOfIrreducible
 
 noncomputable section
@@ -86,7 +87,7 @@ def speh (a : WD h) (d : ℕ) : WD h :=
 example (a : WD h) : speh a 0 = WD.lpZero h := rfl
 
 example (a : WD h) : speh a 2 = (a.lpTw (1 / 2)).lpSum ((a.lpTw (-1 / 2)).lpSum (WD.lpZero h)) := by
-  simp only [speh, List.range_succ, List.range_zero, List.nil_append, List.cons_append, List.foldr]
+  simp only [speh, List.range_succ, List.range_zero, List.nil_append, List.cons_append]
   norm_num
 
 structure RecLaws (rc : ∀ n, Irr k n → WD h) : Prop where

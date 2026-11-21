@@ -1,8 +1,6 @@
-import Mathlib
-import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
-import Formalism.LocalRingCardinality.DataDIV
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.ParConsts
-import Formalism.GelfandTransference.EnergyIdentity
 
 noncomputable section
 

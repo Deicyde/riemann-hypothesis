@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CharacterGerms.RowTiePLogExSt
 import Formalism.LocalToGlobal.CharacterGerms.RowTiePGerm
 import Formalism.LocalToGlobal.CharacterGerms.PoincEx
+import Mathlib.RingTheory.SimpleRing.Principal
 
 set_option autoImplicit false
 

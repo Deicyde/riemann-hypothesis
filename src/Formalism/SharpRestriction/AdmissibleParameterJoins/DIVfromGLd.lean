@@ -1,7 +1,6 @@
-import Formalism.SharpRestriction.Divisibility.ZetaProductPairs
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.LocalQuadraticParts
 import Formalism.SharpRestriction.GlobalSchurBounds.ProductFirstZerothParts
-import Formalism.SharpRestriction.GlobalSchurBounds.TaylorLogMetric
 import Formalism.LocalRingCardinality.Lemmas
 import Formalism.SharpRestriction.AdmissibleParameterJoins.SumLogPrimeFactorsLe
 

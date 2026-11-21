@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.GaussSumParity.LetterShift
 import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.FrobeniusLiftNorms.CoeffSubstLgFOfDegreeOne
 import Formalism.GaussJetBounds.GaussJetProofs.NormNatCastEqPowPadicValNat
+import Formalism.LocalToGlobal.TorsionIntegrality.GaussSumParity.StatementA
 
 noncomputable section
 open scoped BigOperators

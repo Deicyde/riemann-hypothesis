@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.WeakCharInertPartRealAdelicDataTransport
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinRepApply
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.FieldValuesMemFixedField
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.OmPinsTr
 
 noncomputable section
 

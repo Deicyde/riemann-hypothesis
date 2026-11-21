@@ -1,10 +1,8 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ArchimedeanSchwartz.NormChar
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsExpOfMultiset
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsIsUnitaryTwistAbsPow
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIdelicAbsValueCpowCharacterStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CuspidalLetterCentralExponentPropertiesStatement
-import GroundTheory.AutomorphicForms.TensorProductTheorem.CentralCusp
-import GroundTheory.AutomorphicForms.UnitaryAdmissible.CuspCentral
 
 noncomputable section
 

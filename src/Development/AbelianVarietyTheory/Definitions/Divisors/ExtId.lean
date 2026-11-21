@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.GalRigidOfSurjective
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorusHomOfIff
+import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsOfPoint
 
 noncomputable section
 

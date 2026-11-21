@@ -1,6 +1,4 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.GlobAut
-import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.FiniteAdelicUnitaryCongruenceTopologyStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.RationalUnitaryPointsDiscreteFundamentalDomainStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.AdelicUnitaryHaarBiInvariantStatement

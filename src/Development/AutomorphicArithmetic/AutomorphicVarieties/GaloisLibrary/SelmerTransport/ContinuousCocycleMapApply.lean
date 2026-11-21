@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.SelmerTransport.RestrictionMemInvariantH1
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -106,7 +109,7 @@ theorem coordSum_z1Map (z : ι → Z1U ρ U) (u : U) :
 theorem coordSum_h1Map (z : ι → Z1U ρ U) :
     coordSum b (h1Map ρ ρ' j hj U) (fun i => Submodule.Quotient.mk (z i)) =
       Submodule.Quotient.mk (coordSum b (continuousCocycleMap ρ ρ' j hj U) z) := by
-  simp only [coordSum_apply, h1Map_mk, ← Submodule.mkQ_apply, map_sum, map_smul]
+  simp only [coordSum_apply, ← Submodule.mkQ_apply, map_sum, map_smul]
   rfl
 
 include hj in

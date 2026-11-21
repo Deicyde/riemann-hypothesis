@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlkLat
-import Formalism.LocalToGlobal.InertKernelTheory.StatementAlg
 open NumberField Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Ker Formalism.L2.Th1.H GlobalTheory.BaseVacuum
 open Classical
 
@@ -37,7 +37,7 @@ theorem hYY_putB (D : D7) {n n' : ℕ} (k k' : Fin n' × Fin n) (x y : Fin 4 →
     intro a _
     by_cases h1 : k'' = k
     · subst h1
-      simp [Ne.symm h, h]
+      simp [h]
     · simp [h1]
 
 end GlobalTheory.BaseVacuum

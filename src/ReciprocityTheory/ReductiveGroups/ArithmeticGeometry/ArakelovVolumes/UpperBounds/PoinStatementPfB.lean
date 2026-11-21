@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.PoinStatementPfA
 
 namespace ReciprocityTheory.ChartRestriction.G.AR.Up.PoinPf
@@ -112,7 +114,7 @@ theorem norm_dmin_orth' (X : Data E r) {x : Frame X.Ψ r} (hx : IsOrth X x) (τ 
 theorem pnorm_orth' (X : Data E r) (la : Wt X.Ψ r) (P : Frame X.Ψ r → ℂ) {x : Frame X.Ψ r}
     (hx : IsOrth X x) : X.pnorm la P x = ‖P x‖ := by
   unfold Data.pnorm
-  simp [norm_div, norm_dmin_orth' X hx]
+  simp [norm_dmin_orth' X hx]
 
 theorem poin_of (hL : LocStatement (E := E)) (hB : BallStatement (E := E)) (hF : FFStatement (E := E)) :
     PoinStatement (E := E) := by

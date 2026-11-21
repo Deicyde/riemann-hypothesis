@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.PolarBasic
-import Formalism.RealPlaceAnalysis.RealPlaceTaylor.KoszulLowersPower
+import Mathlib.CategoryTheory.Countable
 
 noncomputable section
 

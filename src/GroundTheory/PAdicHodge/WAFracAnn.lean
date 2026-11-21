@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.PAdicHodge.ExtRobbaEigenGlue
 import GroundTheory.PAdicHodge.ExtRobbaIsoLift
 set_option maxSynthPendingDepth 1

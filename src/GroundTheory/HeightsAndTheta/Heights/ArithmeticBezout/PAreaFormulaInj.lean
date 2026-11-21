@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.StatementsAreaFormulaInj
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.StatementsAreaFormulaInjSet
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PProjectionFormula

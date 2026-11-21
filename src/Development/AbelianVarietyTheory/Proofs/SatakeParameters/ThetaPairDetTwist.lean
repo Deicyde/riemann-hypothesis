@@ -1,9 +1,12 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LeviRep
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ThetaIntegralIntegrableStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ExistsSchwartzBumpNearIdentityStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.UnitaryAdmissibleMatrixCoefficientStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.HermitianFormNormSqLeReMulReStatement
+import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.IsParahoricVec
+import Development.AbelianVarietyTheory.Proofs.TwistedOperators.EventuallyCompSideMulEq
+import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HasFiniteLengthOfIsIrreducible
 
 noncomputable section
 
@@ -79,7 +82,7 @@ theorem _root_.GlobalTheory.GodementJacquet.parab_mul_eMat
   simp only [Matrix.mul_apply, hE, hL, mul_ite, ite_mul, mul_one, one_mul, mul_zero, zero_mul,
     Finset.sum_ite_eq', Finset.mem_univ, if_true]
   refine Fin.addCases (fun i => ?_) (fun i => ?_) i
-  · simp [eq_comm]
+  · simp
   · rw [hlow]
     refine (Finset.sum_eq_zero fun x _ => ?_).symm
     rw [if_neg]
@@ -615,7 +618,7 @@ theorem exists_famF_ne_zero (hμ : IsSmoothChar μ) {v : V} (hv : v ≠ 0) :
     have hc : Continuous φ := Complex.continuous_re.comp hcont
     refine hc.isOpen_support.measure_pos m ⟨1, ?_⟩
     have : eMat k r t * (1 : GL (Fin r) k).val = eMat k r t := by simp
-    simp [hφ, this, hΦ1]
+    simp [hφ, hΦ1]
   have hval : gjInt m μ σ Bf Φ 1 v v = ((∫ g, φ g ∂m : ℝ) : ℂ) * Bf v v := by
     rw [← integral_complex_ofReal, ← integral_mul_const]
     refine integral_congr_ae (ae_of_all _ fun g => ?_)

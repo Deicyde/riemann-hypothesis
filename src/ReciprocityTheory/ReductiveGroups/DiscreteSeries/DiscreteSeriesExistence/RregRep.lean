@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.SquareIntegrableInnerProduct
+import Mathlib.MeasureTheory.Function.LpSpace.DomAct.Continuous
 
 noncomputable section
 

@@ -1,18 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
-import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.LanglandsSquareIntegrable
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicPlaneOrthogonalGramRestrictionStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsConstAlong
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousToGAd
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsInd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.CcGASmoothAndRderMem
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeApproximationUpwardIdele
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LineToGAdDerivative
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.InducedSectionZFinite
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoordsSecondKindFormPreservingGroup
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryLieAlgebraVectorDecomposition
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SkewPlaneStabilizerActionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLieAlgebraExpGeneratorsStatement
@@ -53,7 +44,7 @@ theorem lie_frame : ∀ (n : ℕ) (A : Matrix (Fin n) (Fin n) ℂ) (C : GL (Fin 
     exact h3.symm
   · have := congrArg (C.1 *ᵥ ·) hl
     simp only [Matrix.mulVec_smul, hx', Matrix.mulVec_mulVec, Matrix.mul_sub, Matrix.sub_mul, Matrix.mul_assoc,
-      Units.mul_inv, Matrix.mul_one, Units.mul_inv_cancel_left, Matrix.one_mulVec] at this
+      Units.mul_inv, Matrix.mul_one, Units.mul_inv_cancel_left] at this
     simpa only [Matrix.mul_assoc] using this
 
 theorem pi_exp {ι 𝔸 : Type} [Fintype ι] [NormedRing 𝔸] [NormedAlgebra ℝ 𝔸] [FiniteDimensional ℝ 𝔸] (Y : ι → 𝔸) (i : ι) :

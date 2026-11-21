@@ -1,11 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.GenericCentreSpecializes
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.LocalComponentsSurjective
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.PropZ
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.ExistsCurveOfFunctionField
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsUniqueValuationRingLift
 import Development.WeilBound.CoreStatements.TorusUniformisation.ChowMahlerFamilies.ExistsPrimeDimOneAvoiding
 import GroundTheory.ArithmeticGeometry.AbelianVarieties.JacobianSmoothness.RingKrullDimLeRingKrullDimQuotientAddOne
+import Mathlib.AlgebraicGeometry.Modules.Sheaf
+import Mathlib.AlgebraicGeometry.Noetherian
+import Mathlib.RingTheory.Valuation.AlgebraInstances
 open AlgebraicGeometry CategoryTheory Limits GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Flat
 
 namespace PositivityTheory.Xgn.CurveExistence

@@ -1,10 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.InnerToL
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DifferentiableAtOfSmooth
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WaveKernelUniqueness
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LTLTInv
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsRepUnique
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MemLpTwoOfCpt
 
 noncomputable section
 
@@ -74,7 +72,7 @@ theorem sum_co_bs (Y : Mat n) : ∑ p, co p Y • bs p = Y := by
   ext a b
   rw [Matrix.sum_apply, Fintype.sum_prod_type]
   simp only [Fintype.sum_bool, Fintype.sum_prod_type]
-  simp [co, bs, Matrix.single_apply, Finset.sum_add_distrib]
+  simp [co, bs, Matrix.single_apply]
   have e : ∀ F : Fin n → Fin n → ℂ, (∑ x, ∑ x_1, if x = a ∧ x_1 = b then F x x_1 else 0) = F a b := by
     intro F
     rw [Finset.sum_eq_single a, Finset.sum_eq_single b]

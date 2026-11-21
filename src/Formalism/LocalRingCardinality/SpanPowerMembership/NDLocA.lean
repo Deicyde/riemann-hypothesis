@@ -1,4 +1,5 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.DataNLoc
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.GaloisValuations.Global
 
 noncomputable section

@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.SmallCones.IwaGlob
 import Development.WeilBound.ThetaLifts.LocalTheory.UnramifiedCohomology.MemLatWIff
+import Development.WeilBound.ThetaLifts.SmallCones.ThetaUniq
 
 noncomputable section
 

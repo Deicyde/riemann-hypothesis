@@ -1,9 +1,5 @@
-import Mathlib
-import Formalism.GL3MeanSquares.PrimeCountAsymptoticInProgressions
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.HookFormulaTorsion.GlobalBoundRefinements
-import Formalism.SharpRestriction.InertJacobiLevels.AsmIface
-import Formalism.CyclotomicNorms.StatementI
-import Development.AbelianVarietyTheory.Definitions.Foundations.RayPrimes
 import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.QuadraticHeckeZeroEstimates
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsImagQuadIntegers
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ClassNumberLeAbsDiscrOfFinrankEqTwo

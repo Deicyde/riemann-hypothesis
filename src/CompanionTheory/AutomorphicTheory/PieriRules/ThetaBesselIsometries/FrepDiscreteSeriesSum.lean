@@ -1,7 +1,7 @@
-import Mathlib
-import CompanionTheory.AutomorphicTheory.PieriRules.PieriDegreeBounds.Imports
-import Development.AbelianVarietyTheory.Definitions.Jets.SumIoPr
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.AutomorphicTheory.PieriRules.ThetaBesselIsometries.IsDSOfIsDG
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CapelliEigenvalues.Smooth
 
 namespace GlobalTheory
 end GlobalTheory

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJmuDeg
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJmuHC
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.UhMeasurableSet

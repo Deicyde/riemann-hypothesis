@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.HilbertNinetyQuotientHomEqIff
-import Development.AutomorphicSpectrum.Proofs.MembershipProofs.LagrangianStabilizerCharacterTrivial
+import Mathlib.Order.CompletePartialOrder
 
 open Matrix ValuativeRel GlobalTheory.WeilM MeasureTheory
 open scoped ComplexConjugate NNReal

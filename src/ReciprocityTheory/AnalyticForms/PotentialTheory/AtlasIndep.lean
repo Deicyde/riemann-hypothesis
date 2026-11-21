@@ -1,5 +1,5 @@
-import ReciprocityTheory.AnalyticForms.PotentialTheory.IsPotentialPullbackStatement
-import ReciprocityTheory.AnalyticForms.PotentialTheory.LocDens
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PotentialTheory.IntegrableOnTargetOfTsupport
 import ReciprocityTheory.AnalyticForms.PotentialTheory.Partition
 

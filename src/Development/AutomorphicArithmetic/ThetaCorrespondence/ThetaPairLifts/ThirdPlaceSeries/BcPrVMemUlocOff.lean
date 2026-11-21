@@ -1,15 +1,10 @@
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.TrueGeometryLatticeVolume
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.CohomologicalCsdTempered
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.RealPack
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.FamilyConstants
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.GeoAll
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.TopReadAt
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.KeepsPairs
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.FormsAtZero
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.LinkedFamiliesFixedValues
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.LinkedFamiliesKernelFrame
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.LayerTwoFamilyClass
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.TrueW
+import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.BcPrVMemLevelVLOfMoves
+import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.IntegralCoordinateVectorsChainSpaceSelfDual
+import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.MovesLocalSuppIff
+import Formalism.LocalToGlobal.GlobalTheory.GL6.PSplitT
 
 set_option synthInstance.maxHeartbeats 200000
 
@@ -63,7 +58,7 @@ theorem bc_prV_mem_Uloc_off_alt : ∀ {B : GlobalTheory.Mem.Base} {X : GlobalThe
     · obtain ⟨r, e, -⟩ := (hLb x).1 hx j
       exact ⟨r, e⟩
     · have h := (hx0 _).1 hx ((finCongr hn).symm j)
-      simp only [LinearMap.funLeft_apply, Function.comp_apply, Equiv.apply_symm_apply] at h
+      simp only [LinearMap.funLeft_apply, Equiv.apply_symm_apply] at h
       exact ⟨⟨x j, h⟩, rfl⟩
     · refine (hx0 _).2 fun i => ?_
       obtain ⟨r, hr, -⟩ := hint j (finCongr hn i)

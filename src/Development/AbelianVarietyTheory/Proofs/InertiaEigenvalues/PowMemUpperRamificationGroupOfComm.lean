@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.NoTowerQ
-import GroundTheory.LocalFields.ConductorTransport
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.PowMemUpperRamificationGroupRealStatement
 
 open Formalism.BasicNotions Formalism.BasicNotions.Loc ValuativeRel GroundTheory.LocalField GlobalTheory.PMon.Ram

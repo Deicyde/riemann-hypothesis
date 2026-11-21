@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.CartanDecompositionGeneralLinear
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.InstBorelGL
 open MeasureTheory Matrix GlobalTheory.CompanionTheory.QL
 open scoped ComplexConjugate ValuativeRel
 set_option maxHeartbeats 1000000 in

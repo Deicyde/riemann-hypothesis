@@ -1,10 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFinMapsOfForall
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocZero
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicHeisenbergActsByLocalSchrodinger
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianTensorSkewHermitianLatticeOpenCompact
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousAtPlace
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.KFinLoc
 open scoped TensorProduct Matrix
 open scoped GlobalTheory.VacAny
@@ -23,7 +19,7 @@ lemma incM_vecMulVec {n d : ℕ} (x : Fin n → E) (y : Fin d → E) :
 lemma smul_vecMulVec {n d : ℕ} (a : AF F) (p : Fin n → AE F E) (q : Fin d → AE F E) :
     a • Matrix.vecMulVec p q = Matrix.vecMulVec p (a • q) := by
   ext i j
-  simp [Matrix.vecMulVec_apply, mul_smul_comm]
+  simp [Matrix.vecMulVec_apply]
 
 lemma vecMulVec_mul_transpose {n d : ℕ} (p : Fin n → AE F E) (q : Fin d → AE F E)
     (M : Matrix (Fin d) (Fin d) (AE F E)) :

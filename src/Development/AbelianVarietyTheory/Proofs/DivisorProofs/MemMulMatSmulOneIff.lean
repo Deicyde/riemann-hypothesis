@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.HasLevelStd
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasQIff
 
 open NumberField UpperHalfPlane GlobalTheory.HilbFam GlobalTheory.QFam
 open GlobalTheory.IndefiniteRowSideFullHecke.OmegaFactorization (Emb Frac latM qPow upperHalf cK omegaFactor IsPartialZeta HasExpansion)
@@ -31,7 +30,7 @@ theorem twist_one_of_hasLevel : ∀ (F : Type) [Field F] [NumberField F] [IsTota
   have h1 : (1 : Matrix (Fin 2) (Fin 2) (ZMod N)).map (ZMod.cast : ZMod N → ℤ)
       = (ZMod.cast (1 : ZMod N) : ℤ) • (1 : Matrix (Fin 2) (Fin 2) ℤ) := by
     ext i j
-    by_cases hij : i = j <;> simp [Matrix.one_apply, hij]
+    by_cases hij : i = j <;> simp [hij]
   unfold twist
   rw [h1]
   apply le_antisymm

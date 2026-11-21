@@ -1,4 +1,6 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.WeilGroupCharacters.RepAlg
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.ResMapBijective
+import Mathlib.Topology.Algebra.Nonarchimedean.AdicTopology
 
 open Polynomial UpperTheory.V.W
 

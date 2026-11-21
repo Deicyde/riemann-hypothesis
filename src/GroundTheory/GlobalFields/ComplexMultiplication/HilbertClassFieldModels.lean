@@ -1,5 +1,8 @@
-import Mathlib
-import GroundTheory.GlobalFields.ComplexMultiplication.FrobeniusAtPrimes
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.GlobalFields.ComplexMultiplication.AlgebraicityGalois
+import GroundTheory.GlobalFields.ComplexMultiplication.BaseChangeField
+import GroundTheory.GlobalFields.ComplexMultiplication.ReductionRespectsAdd
 
 namespace GroundTheory.Global
 namespace Elliptic

@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BaseLApply
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdjacentPullPull
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GeometricallyConnectedOfIsIsoRestrict
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TotalEqCurve
 
 set_option autoImplicit false
 

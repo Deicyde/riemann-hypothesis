@@ -1,7 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.PairingIndexBounds.OrthogonalChartLevels.FdOfCharts
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.PendingLemmas.InvarianceRepresentativesLaw
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.NatCastMemOfPlace
+import Formalism.LocalToGlobal.GroupLattices.PendingLemmas.InvarianceIffAdditiveMapsExist
 
 noncomputable section
 

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.CurveAsm
 import Formalism.LocalToGlobal.ProjectiveLattices.CompHt
 import Formalism.LocalToGlobal.ProjectiveLattices.GenSectT

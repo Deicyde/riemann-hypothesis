@@ -1,19 +1,13 @@
-import Mathlib
-import Development.AutomorphicSpectrum.PublishedTheorems.Geometry₂.NefRR
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ModelSmall
-import Development.AutomorphicSpectrum.Statements.TowerExistence.GoodTowerExistsX
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.VolumeInputs
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.OverLaUnique
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterNamed
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterSt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.TowerOriginComponentBoundStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.TowerWeightOfZeroStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.FullIntersectionHeightBoundStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.GenericFrameComponentBoundStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ModelSmallSectionsMulStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.CompLawsTowerBoundStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.UniformNormTowerBoundStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.WeightZeroSectionMembershipStatement
+import Development.AbelianVarietyTheory.Definitions.Divisors.NonemptyCuspFrame
 open NumberField IsDedekindDomain Filter Topology
 open Formalism.L2.Pj ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.FD Formalism.BasicNotions Formalism.MainNotions
 open GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Rec GlobalTheory.CompanionTheory.Ar.Plug
@@ -168,7 +162,7 @@ theorem card_le_rank (G : Top.Given) {r : ℕ} {U : ∀ σ : c.F →+* ℂ, Unf 
     intro t i j hij
     have h1 := hu t hij
     have h2 : (0 : ℤ) < ((τ + k₀ : ℕ) : ℤ) := by exact_mod_cast hτ
-    simp only [hv, Pi.smul_apply, nsmul_eq_mul]
+    simp only [hv, nsmul_eq_mul]
     exact mul_lt_mul_of_pos_left h1 h2
   have key : ∀ j i, ∃ g ∈ GlobalTheory.AllWt.cuspOn U Z (GlobalTheory.AllWt.wtOf Dw v 0), evC h Z g = trOf Rd v (f' j * f i) := by
     intro j i

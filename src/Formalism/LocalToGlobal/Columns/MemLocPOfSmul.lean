@@ -1,8 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.Columns.AdelicLemmas
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.AdjointFrobeniusPreservesRamified
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.CsSpan
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.CsApprox
+import Formalism.LocalToGlobal.Columns.Adelic
 
 open NumberField IsDedekindDomain Matrix
 open scoped TensorProduct

@@ -1,8 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ModularTowerFunctionTendstoConstTermExponential
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.EigenOfTwoStep
-import Development.AbelianVarietyTheory.Definitions.Foundations.SiegelNeZeroIff
 open scoped MatrixGroups
 open GlobalTheory.KZ
 set_option maxHeartbeats 1000000 in

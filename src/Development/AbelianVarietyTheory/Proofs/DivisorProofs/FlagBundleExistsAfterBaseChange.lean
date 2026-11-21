@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ScholzeWeinsteinB
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BcDensEqOfGram
 open NumberField MvPolynomial Filter Topology Formalism.BasicNotions Formalism.MainNotions Formalism.DegreeFormula GlobalTheory.FlagPoly GlobalTheory.Mean4 GlobalTheory.Mean4O GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.CovTest GlobalTheory.Published
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory GlobalTheory.ArInt
@@ -27,7 +25,7 @@ theorem pullbackComp_assoc_app (f : T' ⟶ P) (g : P ⟶ Y) (h : Y ⟶ B) (M : B
   simp only [NatTrans.comp_app, Functor.whiskerRight_app, Functor.associator_hom_app,
     Functor.whiskerLeft_app, Category.id_comp, eqToHom_app] at e
   rw [← e]
-  simp only [← Category.assoc, ← Functor.map_comp, Iso.hom_inv_id_app, Iso.hom_inv_id_app_assoc]
+  simp only [← Category.assoc, Iso.hom_inv_id_app]
   simp
 
 theorem pullbackCongr_hom_app {f f' : P ⟶ B} (H : f = f') (M : B.Modules) :

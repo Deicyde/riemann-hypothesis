@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.GaussianProducts.ExistsRowSec
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.ReductionDomains.KkCpt
 
 open NumberField IsDedekindDomain MeasureTheory Matrix Topology Filter

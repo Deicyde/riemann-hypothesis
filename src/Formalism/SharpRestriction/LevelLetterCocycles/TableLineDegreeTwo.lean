@@ -1,14 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.GammaSemisimpleLocalOfConsequences
-import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
-import Formalism.SharpRestriction.LevelLetterCocycles.DataNLoc
 import Formalism.SharpRestriction.LevelLetterCocycles.LocCoh
-import Formalism.WeaklyAdmissibleFiltrations.Statement
-import Formalism.WeaklyAdmissibleFiltrations.StatementTor
 import Formalism.FrobeniusContraction.HighestWeightResidueAvoids
 import Formalism.FrobeniusContraction.StatementTop
 import Formalism.GaloisCohomology.LocalTateDualityK
-import Formalism.SharpRestriction.LevelLetterCocycles.DeltaInvariantLattices
 
 noncomputable section
 

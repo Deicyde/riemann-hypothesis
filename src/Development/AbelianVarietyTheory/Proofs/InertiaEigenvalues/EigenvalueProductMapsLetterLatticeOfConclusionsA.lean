@@ -1,7 +1,7 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.UsedLocalConclusion
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.LetterConditionGlobal
-import Formalism.SharpRestriction.LevelLetterCocycles.CrystallineLiftingInputs
 import Formalism.SharpRestriction.LevelLetterCocycles.RingHypothesesOfCrystalline
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.WachOperatorProductShiftMemLatticeStatement
 open Formalism.WeaklyAdmissibleFiltrations Formalism.BasicNotions Formalism.BasicNotions.Loc

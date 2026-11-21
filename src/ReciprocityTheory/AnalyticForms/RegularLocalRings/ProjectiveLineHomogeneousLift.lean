@@ -1,4 +1,9 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.ProjectiveLineMultihomogClassify
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
+import Mathlib.Topology.UniformSpace.Uniformizable
+import ReciprocityTheory.AnalyticForms.RegularLocalRings.IsOpenAlt
 
 namespace ReciprocityTheory.AnForm.R
 
@@ -160,14 +165,14 @@ theorem projectiveLine_point_eq_ratio (i : Fin 2) (x : OnePoint ℂ) (hx : x ∈
   obtain rfl | rfl := finset_fin_two_eq_cases i
   · rw [projectiveLineSource_zero] at hx
     obtain ⟨z, rfl⟩ := hx
-    simp [homogeneousLift, projLineAffineCoordinate, onePoint_elim_coe]
+    simp [homogeneousLift, projLineAffineCoordinate]
   · obtain rfl | ⟨z, rfl⟩ := onePoint_eq_infty_or_exists_coe x
-    · exact absurd (by simp [homogeneousLift, projLineAffineCoordinate, onePoint_elim_infty]) h0
+    · exact absurd (by simp [homogeneousLift, projLineAffineCoordinate]) h0
     · have hz : z ≠ 0 := by
         intro hz
         rw [projectiveLineSource_one, Set.mem_setOf_eq] at hx
         exact hx (by rw [hz])
-      simp [homogeneousLift, projLineAffineCoordinate, onePoint_elim_coe, hz]
+      simp [homogeneousLift, projLineAffineCoordinate]
 
 theorem projectiveLine_isOpen_source (i : Fin 2) : IsOpen (projectiveLineSource i) := by
   obtain rfl | rfl := finset_fin_two_eq_cases i
@@ -258,7 +263,7 @@ theorem projectiveLine_isEmbedding (i : Fin 2) : Topology.IsEmbedding fun y : pr
       apply Subtype.ext
       rw [projectiveLineSource_zero] at hy
       obtain ⟨z, rfl⟩ := hy
-      simp [projLineAffineCoordinate, onePoint_elim_coe]
+      simp [projLineAffineCoordinate]
     · exact (OnePoint.continuous_coe.comp (continuous_apply 0)).subtype_mk _
     · apply continuous_pi
       intro l
@@ -268,7 +273,7 @@ theorem projectiveLine_isEmbedding (i : Fin 2) : Topology.IsEmbedding fun y : pr
           obtain ⟨y, hy⟩ := y
           rw [projectiveLineSource_zero] at hy
           obtain ⟨z, rfl⟩ := hy
-          simp [projLineAffineCoordinate, onePoint_elim_coe]
+          simp [projLineAffineCoordinate]
         rw [this]
         exact continuous_subtype_val
       first
@@ -281,11 +286,11 @@ theorem projectiveLine_isEmbedding (i : Fin 2) : Topology.IsEmbedding fun y : pr
     · rintro ⟨y, hy⟩
       apply Subtype.ext
       obtain rfl | ⟨w, rfl⟩ := onePoint_eq_infty_or_exists_coe y
-      · simp [projLineAffineCoordinate, onePoint_elim_infty]
+      · simp [projLineAffineCoordinate]
       · have hw : w ≠ 0 := fun h => by
           rw [projectiveLineSource_one, Set.mem_setOf_eq] at hy
           exact hy (by rw [h])
-        simp [projLineAffineCoordinate, onePoint_elim_coe, hw]
+        simp [projLineAffineCoordinate, hw]
     · exact (continuous_ite_zero_infty_inv_coe.comp (continuous_apply 0)).subtype_mk _
     · apply continuous_pi
       intro l
@@ -316,16 +321,16 @@ theorem projectiveLine_coord_image (i : Fin 2) :
     · refine ⟨(y 0 : OnePoint ℂ), coe_mem_projectiveLineSource_zero _, ?_⟩
       funext l
       rw [Subsingleton.elim l 0]
-      simp [projLineAffineCoordinate, onePoint_elim_coe]
+      simp [projLineAffineCoordinate]
     · by_cases hy : y 0 = 0
       · refine ⟨∞, infty_mem_projectiveLineSource_one, ?_⟩
         funext l
         rw [Subsingleton.elim l 0, hy]
-        simp [projLineAffineCoordinate, onePoint_elim_infty]
+        simp [projLineAffineCoordinate]
       · refine ⟨((y 0)⁻¹ : ℂ), coe_mem_projectiveLineSource_one_of_ne_zero (inv_ne_zero hy), ?_⟩
         funext l
         rw [Subsingleton.elim l 0]
-        simp [projLineAffineCoordinate, onePoint_elim_coe]
+        simp [projLineAffineCoordinate]
 
 theorem projectiveLine_inter_ne_zero {i j : Fin 2} (hij : i ≠ j) {y : OnePoint ℂ} (hy : y ∈ projectiveLineSource i ∩ projectiveLineSource j) :
     ∃ z : ℂ, z ≠ 0 ∧ y = (z : OnePoint ℂ) := by
@@ -344,14 +349,14 @@ theorem projectiveLine_transition (i j : Fin 2) (x : OnePoint ℂ) (hx : x ∈ p
     exact ⟨1, fun l => X l, by simp, fun y _ _ l => by simp⟩
   · refine ⟨X 0, fun _ => 1, ?_, ?_⟩
     · obtain ⟨z, hz, rfl⟩ := projectiveLine_inter_ne_zero hij hx
-      obtain rfl | rfl := finset_fin_two_eq_cases i <;> simp [projLineAffineCoordinate, onePoint_elim_coe, hz]
+      obtain rfl | rfl := finset_fin_two_eq_cases i <;> simp [projLineAffineCoordinate, hz]
     · intro y hy _ l
       obtain ⟨z, hz, rfl⟩ := projectiveLine_inter_ne_zero hij hy
       rw [Subsingleton.elim l 0]
       obtain rfl | rfl := finset_fin_two_eq_cases i <;> obtain rfl | rfl := finset_fin_two_eq_cases j <;>
         first
         | exact absurd rfl hij
-        | simp [projLineAffineCoordinate, onePoint_elim_coe, hz]
+        | simp [projLineAffineCoordinate, hz]
 
 theorem projLine_isCompatibleChart (i j : Fin 2) (x : OnePoint ℂ) (hx : x ∈ projectiveLineSource i ∩ projectiveLineSource j) :
     SameOrbit (fun q => eval (projLineAffineCoordinate i x) (homogeneousLift i q)) (fun q => eval (projLineAffineCoordinate j x) (homogeneousLift j q)) := by
@@ -365,11 +370,11 @@ theorem projLine_isCompatibleChart (i j : Fin 2) (x : OnePoint ℂ) (hx : x ∈ 
     · refine ⟨fun _ => w, fun _ => hw, ?_⟩
       funext q
       obtain ⟨⟨⟩, k⟩ := q
-      obtain rfl | rfl := finset_fin_two_eq_cases k <;> simp [homogeneousLift, projLineAffineCoordinate, onePoint_elim_coe, hw]
+      obtain rfl | rfl := finset_fin_two_eq_cases k <;> simp [homogeneousLift, projLineAffineCoordinate, hw]
     · refine ⟨fun _ => w⁻¹, fun _ => inv_ne_zero hw, ?_⟩
       funext q
       obtain ⟨⟨⟩, k⟩ := q
-      obtain rfl | rfl := finset_fin_two_eq_cases k <;> simp [homogeneousLift, projLineAffineCoordinate, onePoint_elim_coe, hw]
+      obtain rfl | rfl := finset_fin_two_eq_cases k <;> simp [homogeneousLift, projLineAffineCoordinate, hw]
     · exact absurd rfl hij
 
 theorem projection_surjective (z : (Σ _ : Unit, Fin 2) → ℂ)
@@ -387,7 +392,7 @@ theorem projection_surjective (z : (Σ _ : Unit, Fin 2) → ℂ)
   obtain ⟨⟨⟩, k⟩ := q
   obtain rfl | rfl := finset_fin_two_eq_cases k
   · simp [homogeneousLift, h0]
-  · simp [homogeneousLift, projLineAffineCoordinate, onePoint_elim_coe] <;> (try field_simp) <;> (try ring)
+  · simp [homogeneousLift, projLineAffineCoordinate] <;> (try field_simp) <;> (try ring)
 
 theorem projectiveLine_injective_on_orbits (i j : Fin 2) (x : OnePoint ℂ) (hx : x ∈ projectiveLineSource i) (x' : OnePoint ℂ) (hx' : x' ∈ projectiveLineSource j)
     (hD : (fun q => eval (projLineAffineCoordinate i x) (homogeneousLift i q)) ∉
@@ -440,16 +445,16 @@ theorem projectiveLine_local_inverse (i : Fin 2) (x : OnePoint ℂ) (hx : x ∈ 
     obtain ⟨v, hv, rfl⟩ := projectiveLine_mem_inter hy
     refine ⟨fun k => ?_, ?_, fun l => ?_⟩
     · rw [hpu k, hj]
-      simp [homogeneousLift, projLineAffineCoordinate, onePoint_elim_coe, hv]
-    · simp [affCoord, homogeneousLift, projLineAffineCoordinate, onePoint_elim_coe, hv, hj]
+      simp [homogeneousLift, projLineAffineCoordinate, hv]
+    · simp [affCoord, homogeneousLift, projLineAffineCoordinate, hv, hj]
     · rw [Subsingleton.elim l 0]
-      simp [affCoord, homogeneousLift, projLineAffineCoordinate, onePoint_elim_coe, hv, hj]
+      simp [affCoord, homogeneousLift, projLineAffineCoordinate, hv, hj]
   · have hx0 : ∃ w : ℂ, w ≠ 0 ∧ x = (w : OnePoint ℂ) := by
       have := hp ()
       rw [hj] at this
       obtain rfl | ⟨w, rfl⟩ := onePoint_eq_infty_or_exists_coe x
-      · exact absurd (by simp [homogeneousLift, projLineAffineCoordinate, onePoint_elim_infty]) this
-      · exact ⟨w, fun h => this (by simp [homogeneousLift, projLineAffineCoordinate, onePoint_elim_coe, h]), rfl⟩
+      · exact absurd (by simp [homogeneousLift, projLineAffineCoordinate]) this
+      · exact ⟨w, fun h => this (by simp [homogeneousLift, projLineAffineCoordinate, h]), rfl⟩
     obtain ⟨w, hw, rfl⟩ := hx0
     refine ⟨projectiveLineSource 0 ∩ projectiveLineSource 1, (projectiveLine_isOpen_source 0).inter (projectiveLine_isOpen_source 1),
       ⟨coe_mem_projectiveLineSource_zero w, coe_mem_projectiveLineSource_one_of_ne_zero hw⟩, Set.inter_subset_right, X ⟨(), 1⟩, fun _ => 1,
@@ -457,10 +462,10 @@ theorem projectiveLine_local_inverse (i : Fin 2) (x : OnePoint ℂ) (hx : x ∈ 
     obtain ⟨v, hv, rfl⟩ := projectiveLine_mem_inter hy
     refine ⟨fun k => ?_, ?_, fun l => ?_⟩
     · rw [hpu k, hj]
-      simp [homogeneousLift, projLineAffineCoordinate, onePoint_elim_coe, hv]
-    · simp [affCoord, homogeneousLift, projLineAffineCoordinate, onePoint_elim_coe, hv, hj]
+      simp [homogeneousLift, projLineAffineCoordinate, hv]
+    · simp [affCoord, homogeneousLift, projLineAffineCoordinate, hv, hj]
     · rw [Subsingleton.elim l 0]
-      simp [affCoord, homogeneousLift, projLineAffineCoordinate, onePoint_elim_coe, hv, hj]
+      simp [affCoord, homogeneousLift, projLineAffineCoordinate, hv, hj]
   · refine ⟨projectiveLineSource 1, projectiveLine_isOpen_source 1, hx, subset_rfl, 1, fun _ => X ⟨(), 0⟩,
       fun y _ => ⟨fun k => ?_, by simp, fun l => ?_⟩⟩
     · rw [hpu k, hj]
@@ -525,7 +530,7 @@ theorem projectiveLine_component_eq (i : Fin 2) (x : OnePoint ℂ) (hx : x ∈ p
         simpa [projectiveLineSncData, h0, projLineAffineCoordinate, onePoint_elim_infty] using hl
     · have hx0 : x ∈ projectiveLineSource 0 := by
         obtain rfl | ⟨w, rfl⟩ := onePoint_eq_infty_or_exists_coe x
-        · exact absurd (by simp [projLineAffineCoordinate, onePoint_elim_infty]) h0
+        · exact absurd (by simp [projLineAffineCoordinate]) h0
         · exact coe_mem_projectiveLineSource_zero w
       refine ⟨projectiveLineSource 0 ∩ projectiveLineSource 1, (projectiveLine_isOpen_source 0).inter (projectiveLine_isOpen_source 1), ⟨hx0, hx⟩,
         Set.inter_subset_right, fun k => ?_⟩

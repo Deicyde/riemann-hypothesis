@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SiegelReframe
 open Matrix MeasureTheory GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe
 open scoped Real ContDiff
@@ -17,8 +18,8 @@ theorem block_update {k : ℕ} (v : Fin k × Fin 2 → T) (a : Fin k) (b : Fin 2
   · subst hi
     by_cases hc : c = b
     · subst hc; simp
-    · simp [Function.update_apply, hc]
-  · simp [Function.update_apply, hi]
+    · simp [hc]
+  · simp [hi]
 
 theorem pairProd_key {k : ℕ} (α : T [⋀^Fin 2]→L[ℝ] ℝ) (v : Fin k × Fin 2 → T) (a : Fin k)
     (b : Fin 2) (z : T) :

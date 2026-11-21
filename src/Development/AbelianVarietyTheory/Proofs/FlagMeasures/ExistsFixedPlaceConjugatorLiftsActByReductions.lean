@@ -1,19 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.SerFixOne
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ConcreteLevelAdelicSubset
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsReductionActionChosenPlaces
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ExistsReduction
-import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.RowDictPf
-import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.RedBasicsPf
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.GoodAtReductionConjugatedUnitaryElement
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsAddEquivOfCard
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.AdelicLatticeSelfDualHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.InstCMHostS
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.WBEqPrimeComap
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Divisibility.DefGroupLemmas
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CommTensCastRSymmMap
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SurjectiveReductionOntoFiniteLevelGroup
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.RestrictedBlockUnipotentSymmetric
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsSplitPlaceEqFixedTypePrimePlace
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.FiniteAdelesCmFieldEqZeroOfComponentsStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.SplitPlaceProjectionEqZeroOfPlaceComponentEqZeroStatement
@@ -26,6 +13,7 @@ import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsRectangularCon
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.MemMaximalCompactOfTrivialOffSplitPairStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsDegreeOnePrimeFrameReducedMatricesStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.SplitPlaceBaseNeOfDistinctTypePrimesStatement
+import Formalism.SharpRestriction.Divisibility.LiftErrorLocal
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.S Formalism.MainNotions.ArithmeticCylinders Formalism.L2.Theta Formalism.IndefR.Mult Formalism.IndefR.Links Formalism.IndefR.AutomorphicEvaluation Formalism.IndefR.principalLevelFrame Formalism.L2.DIV Formalism.L2.SG.RowDict Formalism.L2.SG.RowsJoinPinned Formalism.L2.SG.RowLevelMatch Formalism.L2.SG.HidaSetting Formalism.L2.SG.PoincareInHH.PoincareSetting MeasureTheory NumberField ReciprocityTheory.Aut Formalism.AUTREP GlobalTheory.Mem.SRe GlobalTheory.LabPin
 attribute [local instance] Formalism.BasicNotions.Host.cmStar GlobalTheory.LabPin.instCM
 open scoped TensorProduct
@@ -369,7 +357,7 @@ theorem core0 (D : D7) (t : Formalism.L2.Theta.GA D (D.sp.Y 0)) (PY : RowPsi (Yc
     have h3 := smul_conj_sub_one' ((β₀⁻¹ : GL _ _).val : Matrix (Fin (INST D).n) (Fin (INST D).n) (Formalism.IndefR.Lev.EAf D))
       (β₀.val : Matrix (Fin (INST D).n) (Fin (INST D).n) (Formalism.IndefR.Lev.EAf D)) MK β₀.inv_mul f hfK
     have h4 := congrFun (congrFun h3 (Fin.cast hn.symm i)) (Fin.cast hn.symm j)
-    simp only [Matrix.smul_apply, smul_eq_mul, Matrix.sub_apply, Matrix.zero_apply] at h4
+    simp only [Matrix.zero_apply] at h4
     have hfe : f = 1 - θ (ε₀ kv + conjAL D.host.E (ε₀ kv)) := by rw [hfdef, map_sub, map_one]
     rw [hfe, hMK] at h4
     have hd : (1 : Matrix (Fin (INST D).n) (Fin (INST D).n) (Formalism.IndefR.Lev.EAf D)) (Fin.cast hn.symm i) (Fin.cast hn.symm j) ∈

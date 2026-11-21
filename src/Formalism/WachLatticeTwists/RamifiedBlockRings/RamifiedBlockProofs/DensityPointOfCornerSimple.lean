@@ -1,6 +1,7 @@
-import Formalism.WachLatticeTwists.RamifiedBlockRings.RamifiedBlockProofs.FinrankRangeEq
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.RamifiedBlockRings.RamifiedBlockProofs.IdemFactor
-import Formalism.WachLatticeTwists.RamifiedBlockRings.RamifiedBlockProofs.IdempotentImageSurjective
+import Mathlib.RingTheory.Polynomial.Resultant.Basic
 
 open Finset Classical
 
@@ -31,7 +32,7 @@ theorem blockPoly_factor {A : Type*} [CommRing A] {d S : Type*} [Fintype d] [Dec
   unfold Matrix.charpoly
   congr 1
   ext i j
-  by_cases h : i = j <;> simp [h, Matrix.charmatrix_apply, Matrix.one_apply]
+  by_cases h : i = j <;> simp [h]
 
 theorem sep_iff_resultant {K : Type*} [Field K] (f : Polynomial K) (hf : f.Monic) :
     f.resultant f.derivative f.natDegree f.natDegree ≠ 0 ↔ f.Separable := by

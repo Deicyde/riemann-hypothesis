@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.GlobAut
 import Formalism.SharpRestriction.CuspSpanNormBounds.BridgeCSchur
 

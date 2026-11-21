@@ -1,6 +1,6 @@
-import Formalism.LocalToGlobal.SiegelLatticeTheory.WeightedGaugeFactors.FactsDS
+import BuildAid.Leniency.Open
 import CompanionTheory.AutomorphicTheory.LocalBesselUniqueness.BesselModels.EFinal
-import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.EnergyConvClose
+import Formalism.LocalToGlobal.SiegelLatticeTheory.TraceIntegralEstimates.ConvGG
 
 noncomputable section
 

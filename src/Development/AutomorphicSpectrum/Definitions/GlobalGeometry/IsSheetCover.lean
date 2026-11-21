@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.MetricPeriods.IsFundSet
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.NineGeoU
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ExistsUniqueLeftBasisCoordsAdicCompletion
 
 noncomputable section
 

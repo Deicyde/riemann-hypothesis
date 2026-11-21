@@ -1,8 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.PieriBlockIdeals.Statement
 import Formalism.PieriBlockIdeals.StatementC
-import Formalism.PieriBlockIdeals.JointCW5
-import Formalism.PieriBlockIdeals.PieriColumnMinors.LabelSumNeedsLeFalse
 
 noncomputable section
 

@@ -1,10 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.KeyFormula.IsSquareDeterminantComparison
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.ThetaLawProofs.StalkOfAppLEEq
 import Development.AbelianVarietyTheory.Proofs.ThetaLawProofs.DualNumberRingHomExt
-import Development.AbelianVarietyTheory.Proofs.ThetaLawProofs.ExistsKeyPBRing
 import Development.AbelianVarietyTheory.Proofs.ThetaLawProofs.PwIsoIsGen
-import Development.AbelianVarietyTheory.Proofs.ThetaLawProofs.MemNonzeroLocusVia
 
 set_option autoImplicit false
 

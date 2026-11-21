@@ -1,4 +1,7 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.ExistsMaximal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Topology.Sheaves.Presheaf
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.SplitSt
 
 namespace ReciprocityTheory.ChartRestriction.G.I2
 

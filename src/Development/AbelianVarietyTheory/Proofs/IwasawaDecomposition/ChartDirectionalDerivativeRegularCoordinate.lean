@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.LinearIndependentVecC
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StrictPosOfExists
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsConjFsBasisOfUnitary
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 set_option autoImplicit false
 

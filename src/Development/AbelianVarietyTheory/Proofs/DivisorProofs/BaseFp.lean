@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsRingRChain
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFrob
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DivisibilityLatticeDescendsIntegralExt
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeComapFiniteProjectiveSpan
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPresentationDescends
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPresentationBaseChange

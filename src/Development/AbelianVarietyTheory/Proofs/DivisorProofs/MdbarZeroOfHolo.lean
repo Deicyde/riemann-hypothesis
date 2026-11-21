@@ -1,7 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsMetricFrOfIsMetricOn
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ChernDegreeComplex
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.DifferentiableOnOfTendstoLocallyUniformlyOn
+import Development.AbelianVarietyTheory.Definitions.Divisors.ExtFormAdjEqNegSecondForm
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import ReciprocityTheory.L2DbarEstimates.IsLocalHomeomorph
 
 set_option autoImplicit false
 

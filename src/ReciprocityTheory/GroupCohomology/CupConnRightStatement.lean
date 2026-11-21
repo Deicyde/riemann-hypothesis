@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.GroupCohomology.ContinuousContractNth
 
 namespace ReciprocityTheory.Coh

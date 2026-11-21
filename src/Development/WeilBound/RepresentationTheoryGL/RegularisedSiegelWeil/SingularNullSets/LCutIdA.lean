@@ -1,8 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.RegularisedSiegelWeil.SingularNullSets.WeakApproximationFinitePlace
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.FourierBesselBasePointIsUnfoldingBasePointSpec
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FourierZeroHolds
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.SiegelParabolicUnnMatrixBlockUpperTriangular
-import Formalism.LocalToGlobal.BesselHermitianTheta.LemmasChr
 
 noncomputable section
 

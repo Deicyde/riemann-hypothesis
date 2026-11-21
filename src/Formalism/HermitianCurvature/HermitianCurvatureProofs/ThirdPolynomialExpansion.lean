@@ -1,4 +1,6 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.SignPermutationIdentity
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.OperatorsCommuteTranslations
+import Mathlib.Algebra.Order.Ring.Star
 
 open Matrix Finset
 
@@ -33,7 +35,7 @@ theorem zb_det (i0 s : ℕ) (h : Matrix (Fin i0) (Fin i0) ℂ) (t : ℂ) :
     show Matrix.det (Matrix.of fun a b : Fin i0 => Zb i0 0 h t a.val b.val) = _
     congr 1
     ext a b
-    simp [Zb, a.isLt, b.isLt]
+    simp [Zb]
   | succ s ih =>
     rw [Matrix.det_succ_row _ (⟨i0, by omega⟩ : Fin (i0 + s + 1)), Finset.sum_eq_single (Fin.last _)]
     · have hsub : (Matrix.of fun a b : Fin (i0 + (s + 1)) => Zb i0 (s + 1) h t a.val b.val).submatrix
@@ -76,7 +78,7 @@ theorem derivative_leading_zb : DleadZb := by
   unfold Dlead
   congr 1
   ext a b
-  simp [Zb, a.isLt, b.isLt]
+  simp [Zb]
 
 theorem minors_first_case : MinorsFirstCase := by
   intro i0 s' h t c

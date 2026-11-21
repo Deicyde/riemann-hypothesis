@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PowIdeal
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SubobjectLeIffAffineSections
-import GroundTheory.ArithmeticGeometry.SchemeCohomology.ProperCohomology.FormalFunctions
-import GroundTheory.ArithmeticGeometry.SchemeCohomology.ProperCohomology.RelSerreSections
 
 set_option autoImplicit false
 

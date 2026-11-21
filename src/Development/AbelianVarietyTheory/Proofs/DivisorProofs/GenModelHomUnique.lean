@@ -1,8 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsGPull
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsHeckeMap
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HarrisTaylorObjectPullbackComp
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSiegelObjectLoweredLevel
+import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsGDatumOneOneOne
+import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsSiegelObjectOfDescendedData
 
 noncomputable section
 

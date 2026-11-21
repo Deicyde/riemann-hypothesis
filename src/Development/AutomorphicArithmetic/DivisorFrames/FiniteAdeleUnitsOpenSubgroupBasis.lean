@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.TateThesis.IdeleMeasure
+import Mathlib.Topology.Algebra.ClopenNhdofOne
 open NumberField IsDedekindDomain Filter Topology
 open scoped RestrictedProduct
 

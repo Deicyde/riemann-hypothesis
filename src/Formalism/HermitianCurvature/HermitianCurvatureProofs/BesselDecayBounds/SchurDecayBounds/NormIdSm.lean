@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.BesselDecayBounds.SchurDecayBounds.NormIdDec
 import Formalism.SharpRestriction.CuspSpanNormBounds.KfinOfMemLowKSub
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.BesselDecayBounds.SchurDecayBounds.NormIdPair
 
 open MeasureTheory Matrix
 open scoped InnerProductSpace ENNReal

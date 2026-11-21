@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedPlaneRestrictionIsPair
 
 open scoped TensorProduct NNReal Matrix
@@ -37,7 +36,7 @@ theorem piece_ix (horth : ∀ u, form σ X.J (H.ι *ᵥ u) H.x = 0 ∧ form σ X
     rw [← Matrix.mulVec_mulVec]
     change (fun i => incM F H.ι i m) ⬝ᵥ _ = 0
     have : (fun i => incM F H.ι i m) = incV F (H.ι *ᵥ Pi.single m 1) := by
-      funext i; simp [incM, incV, Matrix.mulVec_single_one]
+      funext i; simp [incM, incV]
     rw [this, incl_form, (horth _).1, map_zero]
   rw [incM_one, Matrix.transpose_one, Matrix.mul_one, Matrix.transpose_mul, hm, Matrix.mul_assoc, Matrix.mul_assoc,
     ← Matrix.mul_assoc (incM F H.ι)ᵀ, Matrix.mul_vecMulVec, hv, Matrix.zero_vecMulVec, Matrix.mul_zero]

@@ -1,6 +1,8 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.FormsFiniteness.FormsFiniteAlt
-import GroundTheory.AutomorphicForms.UnitaryAdmissible.CuspFinite
-import Formalism.RealPlaceAnalysis.ThirdArithmeticHolds
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.RealPlaceAnalysis.StatementE
+import GroundTheory.AutomorphicForms.AutomorphicFormSpaces.GKStableCartan
+import GroundTheory.AutomorphicForms.AutomorphicFormSpaces.Translation
 
 noncomputable section
 

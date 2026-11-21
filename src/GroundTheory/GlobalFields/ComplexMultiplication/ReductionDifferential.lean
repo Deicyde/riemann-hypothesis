@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.ComplexMultiplication.ReductionDegree
-import GroundTheory.GlobalFields.ComplexMultiplication.DifferentialConstantField
+import Mathlib.Algebra.DualNumber
 
 namespace GroundTheory.Global
 
@@ -143,7 +144,7 @@ theorem gauss_dual_equation (K : Type u) [Field K] [Algebra 𝒪 K] [IsFractionR
     linear_combination e
   · simp only [fst_add, fst_mul, fst_pow, fst_inl, fst_inr, snd_add, snd_mul, snd_pow, snd_inl,
       snd_inr, add_zero, zero_add, smul_eq_mul, MulOpposite.smul_eq_mul_unop, MulOpposite.unop_op,
-      nsmul_eq_mul, Nat.cast_ofNat, Nat.pred_eq_sub_one, mul_zero, zero_mul]
+      nsmul_eq_mul, Nat.cast_ofNat, Nat.pred_eq_sub_one, zero_mul]
     simp only [gaussDX, gaussDY]
     norm_num
     ring

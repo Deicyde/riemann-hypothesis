@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.KatoQuadraticCharacters.EulerFactorBounds.KatoTwistedClassNormCompatibleCyclotomic
 
 open scoped MatrixGroups Matrix Classical
@@ -128,7 +129,7 @@ private theorem lin_surj (p N : ℕ) [Fact p.Prime] (hN : (N : ZMod p) ≠ 0) (w
   · exact ⟨none, lin_dep p N none w (by simp [lin, h0])⟩
   · refine ⟨some ⟨(w 1 / w 0 / N).val, ZMod.val_lt _⟩, lin_dep p N _ w ?_⟩
     simp only [lin]
-    simp only [Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons, Nat.cast_mul, ZMod.natCast_val, ZMod.cast_id', id]
+    simp only [Matrix.cons_val_zero, Matrix.cons_val_one, Nat.cast_mul, ZMod.natCast_val, ZMod.cast_id', id]
     field_simp
     ring
 

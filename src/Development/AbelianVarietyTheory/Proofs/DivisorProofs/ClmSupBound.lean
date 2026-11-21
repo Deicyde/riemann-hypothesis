@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HasTemperateGrowthElim
+import Mathlib.Analysis.Distribution.SchwartzSpace.Deriv
 
 open GlobalTheory.SliceSchwartz
 open scoped ContDiff

@@ -1,8 +1,7 @@
-import Mathlib
-import Formalism.PeriodIntegrals.LowCyc
-import Formalism.PeriodIntegrals.KFinSmooth
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LowerSmoothStability.ExistsFinStableOfMemSSup
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousWordTranslate
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ContDiffSetIntegralNat
+import Formalism.PeriodIntegrals.UpqRep
 
 noncomputable section
 

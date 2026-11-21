@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.RowDictCore
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdelicClassFiniteness.DictAll
+import Mathlib.NumberTheory.NumberField.Ideal.Basic
+import Mathlib.NumberTheory.RamificationInertia.Basic
 
 noncomputable section
 

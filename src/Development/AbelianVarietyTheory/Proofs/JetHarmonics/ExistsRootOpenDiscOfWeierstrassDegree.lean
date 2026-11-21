@@ -1,7 +1,13 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Jets.PowerSeriesHasSumAt
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.MvPowerSeriesIntegralBoundedClosureStatement
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.PowerSeriesEvalTsumUnitDiscPropertiesStatement
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PowerSeries.WeierstrassPreparation
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Topology.Sheaves.Presheaf
 open GlobalTheory.ConvSer
 
 namespace GlobalTheory.ConvSer.DiscRoot

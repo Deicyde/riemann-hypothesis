@@ -1,5 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.LinksChar
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.StrictInterlaceIffDescEnum
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.HermitianOrthogonalExtensionData
 

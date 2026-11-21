@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.ResolutionOfSingularities.Statements
 import Development.AutomorphicSpectrum.PublishedTheorems.Geometry₂.ConclusionOfSmooth
 

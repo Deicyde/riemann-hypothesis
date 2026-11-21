@@ -1,8 +1,5 @@
-import Mathlib
-import Formalism.LocalRingCardinality.AdicCompletionLocal.LocTied
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.ConvZero
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.PowMulMemLatIff
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.GoodOfComplete
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsAddValuationFinExt
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.MemDeRhamFiltrationOfForallAinfLattice
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsNormedAway

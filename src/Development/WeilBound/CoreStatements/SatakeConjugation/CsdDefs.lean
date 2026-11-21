@@ -1,6 +1,5 @@
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsIrreducibleFixed
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HasSatakeOfIsLocComp
 
 noncomputable section
 

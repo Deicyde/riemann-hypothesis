@@ -1,10 +1,12 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.LatMod
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.VacExApp
-import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.IdemElt
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.VacExA
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.FactPrincipalDatum
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.PlaceDualB
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.LatticeVariant
+import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.FDMSubCompact
 
 noncomputable section
 
@@ -300,7 +302,7 @@ theorem lsd_fst (z : AE D) (k : Fin (Module.finrank D.host.F D.host.E)) :
   | zero => simp
   | tmul a e =>
     rw [lsd_cE_tmul, map_mul, Fock.DRho.infPart_tmul, Algebra.TensorProduct.basis_repr_tmul]
-    simp [Finsupp.smul_apply, Algebra.smul_def]
+    simp [Finsupp.smul_apply]
   | add x y hx hy =>
     have h1 : cE D.host.F D.host.E (x + y) k = cE D.host.F D.host.E x k + cE D.host.F D.host.E y k := by
       rw [map_add]; rfl
@@ -315,7 +317,7 @@ theorem lsd_snd (z : AE D) (k : Fin (Module.finrank D.host.F D.host.E)) :
   | zero => simp
   | tmul a e =>
     rw [lsd_cE_tmul, map_mul, Fock.DRho.finPart_tmul, Algebra.TensorProduct.basis_repr_tmul]
-    simp [Finsupp.smul_apply, Algebra.smul_def]
+    simp [Finsupp.smul_apply]
   | add x y hx hy =>
     have h1 : cE D.host.F D.host.E (x + y) k = cE D.host.F D.host.E x k + cE D.host.F D.host.E y k := by
       rw [map_add]; rfl

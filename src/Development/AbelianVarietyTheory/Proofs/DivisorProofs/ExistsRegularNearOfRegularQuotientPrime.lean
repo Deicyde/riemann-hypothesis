@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsRegularLocalRingOfRegularQuotient
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsMinimalLocalGeneratorsStatement
+import BuildAid.Leniency.Open
+import Mathlib.RingTheory.KrullDimension.NonZeroDivisors
+import Mathlib.Tactic.Monotonicity.Lemmas
+import ReciprocityTheory.CommutativeAlgebra.MaximalIdealSquares.RingKrullDimQuotientSpanSingletonAddOne
 
 open IsLocalRing TensorProduct
 

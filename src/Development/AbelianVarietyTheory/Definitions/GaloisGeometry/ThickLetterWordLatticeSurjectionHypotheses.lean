@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.CrystallineMapLemmas
 import Formalism.SharpRestriction.LevelLetterCocycles.RamifiedCoefficientChains
 import Formalism.SharpRestriction.LevelLetterCocycles.DecompositionData

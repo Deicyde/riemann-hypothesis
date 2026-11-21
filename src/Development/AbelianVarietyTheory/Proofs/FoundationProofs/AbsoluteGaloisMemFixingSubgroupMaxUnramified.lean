@@ -1,11 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.LocalSituation
-import Development.AbelianVarietyTheory.BlockTheory.TorsionBlocks.SelmerWindowSums
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FinrankCyclotomicExtAndCyclotomicCharSurjective
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.InclWFrobIter
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.DeRhamJumpDescentStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.GaloisUniformizerRingStableStatement
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.PadicIntegersFiniteExtensionOpenStatement
 
 noncomputable section
 
@@ -124,7 +122,7 @@ theorem sub_mem_of_gen (A : Subring R) (π : R) (σ : R → R)
     simp only [h2]
     rfl
   rw [h3, cmb, cmb, cmb, Finset.smul_sum]
-  simp only [smul_comm ((1 : O) ⊗ₜ[Z] π : O ⊗[Z] R), Matrix.of_apply]
+  simp only [smul_comm ((1 : O) ⊗ₜ[Z] π : O ⊗[Z] R)]
   abel
 
 end Bases

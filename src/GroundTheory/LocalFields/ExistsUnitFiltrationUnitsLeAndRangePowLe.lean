@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.LocalFields.UnitsBasic
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.LocalFields.UnitsPowers
 
 namespace GroundTheory.LocalField

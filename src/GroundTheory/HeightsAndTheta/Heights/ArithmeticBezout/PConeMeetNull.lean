@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.StatementsConeMeetNull
-import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.StatementsZeroLocusDimH
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.PZeroLocusDimH
+import Mathlib.RingTheory.PicardGroup
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

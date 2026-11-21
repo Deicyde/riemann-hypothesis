@@ -1,6 +1,27 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.PsiEDef
-import Formalism.LocalRingCardinality.DataSpaces
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.NumberTheory.Padics.Complex
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Connected.Separation
+import Mathlib.Topology.MetricSpace.Ultra.TotallySeparated
+import Mathlib.Topology.Sheaves.Presheaf
+import Mathlib.Topology.UniformSpace.Uniformizable
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open ValuativeRel IsDedekindDomain NumberField Filter Topology
 open scoped TensorProduct
@@ -25,7 +46,7 @@ theorem tendsto_pow_zero (K : Type) [Field K] [ValuativeRel K] [TopologicalSpace
   intro γ _
   obtain ⟨n, hn⟩ := exists_pow_lt₀ hz γ
   filter_upwards [eventually_ge_atTop n] with m hm
-  simp only [Set.mem_setOf_eq, map_pow]
+  simp only [map_pow]
   exact lt_of_le_of_lt (pow_le_pow_right_of_le_one' hz.le hm) hn
 
 theorem norm_le_one_of_isIntegral {Ω : Type} [NormedField Ω] [IsUltrametricDist Ω] {x : Ω}

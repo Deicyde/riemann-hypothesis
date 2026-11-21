@@ -1,11 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.NotMemBasicOpenOfGeom
 import Development.AbelianVarietyTheory.Definitions.ShimuraVarieties.AwayLiftCompFromZeroRingHom
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsIdealOfLocally
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.HasThetaConstantsRingBaseChange
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ThetaConstantsUniqueUpToUnit
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ThetaCosetNonvanishingOfHasTh
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ThetaPointsVanishingIdealRadicalHomogeneous
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open scoped CategoryTheory.Obj
@@ -130,7 +127,7 @@ theorem isMonHom_mul {G : Over S} [GrpObj G] [IsCommMonObj G] (f h : G ⟶ G) [I
       rw [MonObj.mul_eq_mul, MonObj.comp_mul]
       simp
     rw [MonObj.comp_mul, IsMonHom.mul_hom, IsMonHom.mul_hom, e, e, MonObj.mul_eq_mul, MonObj.comp_mul]
-    simp only [← Category.assoc, tensorHom_fst, tensorHom_snd, MonObj.comp_mul]
+    simp only [tensorHom_fst, tensorHom_snd, MonObj.comp_mul]
     exact mul_mul_mul_comm _ _ _ _
 
 theorem isMonHom_ev (X : ThObj g M I ζ s) (t : EndTerm I) : IsMonHom (X.ev t) := by

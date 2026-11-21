@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsDCReps
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.HeckeUlSqSubMemOldformsGamma1Statement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.HeckeUlSemisimpleOnLOldSpaceStatement
 open GlobalTheory.HeckeFamilyMatrices Polynomial UpperHalfPlane
@@ -15,7 +14,7 @@ theorem toGL_det (g : Matrix (Fin 2) (Fin 2) ℤ) (hg : g.det ≠ 0) :
   unfold toGL
   rw [dif_neg hg]
   simp only [Matrix.GeneralLinearGroup.mkOfDetNeZero, Matrix.det_fin_two]
-  simp [Matrix.det_fin_two]
+  simp
 
 theorem slash_smul_pos (k : ℤ) (g : Matrix (Fin 2) (Fin 2) ℤ) (hg : 0 < g.det) (c : ℂ) (f : ℍ → ℂ) :
     (c • f) ∣[k] toGL g = c • (f ∣[k] toGL g) := by

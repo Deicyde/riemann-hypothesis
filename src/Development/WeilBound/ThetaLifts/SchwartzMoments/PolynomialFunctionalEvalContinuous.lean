@@ -1,10 +1,8 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.DivisibilityProofs.PureEqPureA
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SchwartzHeisLine
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.FiniteAdeleTopology
 import Development.AutomorphicSpectrum.Proofs.AdelicProofs.SchurTranslationsCharacters
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.WeilRepresentationQuadraticDatum
-import Development.AutomorphicSpectrum.Proofs.MembershipProofs.BoundMulTranslate
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StandardAddCharSymplecticLocalLatticeEqOne
 import Development.WeilBound.ThetaLifts.SchwartzMoments.SchwartzDqTendsto
 open NumberField IsDedekindDomain MeasureTheory Filter Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun
@@ -40,7 +38,7 @@ theorem dop_apply (a : V) (L : V →L[ℝ] ℝ) (f : 𝓢(V, ℂ)) (x : V) :
 theorem dop_add (a b : V) (L M : V →L[ℝ] ℝ) (f : 𝓢(V, ℂ)) :
     dop (a + b) (L + M) f = dop a L f + dop b M f := by
   ext x
-  simp only [SchwartzMap.add_apply, dop_apply, map_add, ContinuousLinearMap.add_apply]
+  simp only [SchwartzMap.add_apply, dop_apply, map_add]
   push_cast
   ring
 

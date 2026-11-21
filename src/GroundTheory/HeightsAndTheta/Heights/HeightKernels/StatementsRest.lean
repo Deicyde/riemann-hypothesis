@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.KernelsRest
-import GroundTheory.HeightsAndTheta.Heights.RemainderTerms.Statements
 import GroundTheory.HeightsAndTheta.Heights.RemainderTerms.Inhabitants
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.RestCutBasic
 set_option maxSynthPendingDepth 1

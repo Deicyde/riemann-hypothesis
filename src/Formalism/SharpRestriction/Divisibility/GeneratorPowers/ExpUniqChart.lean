@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ExpUniqGlue
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.CIndExp
 
@@ -33,7 +35,7 @@ theorem fst_comp_tan {S : Type} [CommRing S] (d : ℕ) (j : Fin d) :
   intro i
   first
   | (simp only [AlgHom.comp_apply, Formalism.L2.Pj.jetTan, Formalism.L2.Pj.jetAug, Formalism.L2.Pj.liftJet, Ideal.Quotient.liftₐ_apply,
-      Ideal.Quotient.mkₐ_eq_mk, AlgHom.coe_toRingHom]
+      Ideal.Quotient.mkₐ_eq_mk]
      erw [Ideal.Quotient.lift_mk, Ideal.Quotient.lift_mk]
      by_cases h : i = (0, j) <;> simp [h])
   | (show TrivSqZeroExt.fst ((MvPolynomial.aeval _) (MvPolynomial.X i)) = (MvPolynomial.aeval _) (MvPolynomial.X i)

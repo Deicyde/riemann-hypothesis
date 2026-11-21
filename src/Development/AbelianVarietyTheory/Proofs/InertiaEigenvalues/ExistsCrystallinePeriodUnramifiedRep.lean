@@ -1,9 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.TwistStep
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.NormSubLtOneOfFix
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsLiftsOfNormLeOne
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.PowMulMemLatIff
 import Formalism.SharpRestriction.LevelLetterCocycles.ProdOneSubPrimitiveRoots
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.AdmSt
 
 noncomputable section
 

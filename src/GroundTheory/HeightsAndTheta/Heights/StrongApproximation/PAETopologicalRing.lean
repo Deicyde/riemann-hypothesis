@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.StrongApproximation.Statements
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Topology.Connected.Separation
+import Mathlib.Topology.MetricSpace.Ultra.TotallySeparated
 set_option maxSynthPendingDepth 1
 
 noncomputable section

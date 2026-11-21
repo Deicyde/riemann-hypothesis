@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.HeightOrbitLocalSum
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.HeightOrbitChartRing
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.HeightOrbitChartMax
@@ -8,6 +8,7 @@ import GroundTheory.HeightsAndTheta.Heights.HeightComparison.HeightLocalLengthPl
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.HeightOrbitCenterChart
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.HeightPlaceCentredSum
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.HeightOrbitChartTerm
+import Mathlib.Topology.Sheaves.Presheaf
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

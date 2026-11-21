@@ -1,13 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RestrictsToQuadraticSignPowOfRestrictsToQuadrati
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MemNormGroupIffEverywhereNorm
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsUnitaryCharOfOpenSubgroupAndHom
-import Formalism.UnipotentAdelicQuotients.ThmBInHecke
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.ExistsNontrivialHeckeChar
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OpenSigmaStableUnitNeighborhoodStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IdeleCharacterTrivialOnCongruenceStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.QuadraticCharacterExtendsToIdeleClassStatement
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 open scoped TensorProduct Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK
@@ -263,7 +259,7 @@ theorem exists_hecke_of_eta (F E : Type) [Field F] [NumberField F] [Field E] [Nu
       set u : E := (k : E) / σ (k : E) with hu
       have hxq : ((x / C x : (AF F ⊗[F] E)ˣ) : AF F ⊗[F] E) = HeckeCharacterZeroLocus.ThmBIn.incA F E u := by
         rw [hq']
-        simp only [Units.coe_map, MonoidHom.coe_coe, Units.val_div_eq_div_val]
+        simp only [Units.coe_map, Units.val_div_eq_div_val]
         rfl
       rw [hxq] at hse
       have hM0 : (M : E) ≠ 0 := by exact_mod_cast (show M ≠ 0 by omega)

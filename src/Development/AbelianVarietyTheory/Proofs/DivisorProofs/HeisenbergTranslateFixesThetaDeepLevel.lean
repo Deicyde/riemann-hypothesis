@@ -1,11 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormPeriodSq
-import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.CharLem
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StandardLatticeDoubleCosetClassesStabilisers
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.LatLevel
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.LatSDa
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.IsSelfDualCLatFrame
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.SupportedSubgroupSplitCommutePrimeIdempotents
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCongLevelIntG
 
 open NumberField MeasureTheory
 open scoped Classical

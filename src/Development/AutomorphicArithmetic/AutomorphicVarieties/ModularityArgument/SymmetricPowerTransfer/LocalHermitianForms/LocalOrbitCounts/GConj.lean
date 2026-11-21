@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.LocalHermitianForms.ScalarComm
+import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.LocalHermitianForms.NormOneIsCoboundaryUnramifiedQuadratic
+import Mathlib.RingTheory.PiTensorProduct
 
 open QuadraticAlgebra UpperTheory.V.Z.Sym UpperTheory.V.Z.Sym.Loc
 
@@ -48,7 +51,7 @@ theorem UpperTheory.V.Z.Sym.Loc.gConj : UpperTheory.V.Z.Sym.Loc.GConj := by
     intro z; ext1
     simp only [jU, Units.coe_map, Units.val_mul, MonoidHom.coe_coe]
     rw [j_apply j', j_apply j, ← hM]
-    simp [mul_add, add_mul, smul_mul_assoc, mul_smul_comm, mul_assoc]
+    simp [mul_add, add_mul, mul_assoc]
   refine ⟨⟨g, hconj⟩, fun χ hχ z => ?_⟩
   unfold gOrb
   refine orb_congr _ _ _ _ _ _ _ _ _ _ _ (Equiv.mulLeft g⁻¹) ?_ ?_ ?_ ?_ ?_

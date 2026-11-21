@@ -1,9 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.AxesVanishingStructureSheafDegOne
-import Development.AbelianVarietyTheory.Definitions.AbelianSchemeLaws.IsScalarTowerOfAlgebraMapEq
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.AbelianHodgeDeRham
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GrpObjPullbackAxesCohomologyProjectionsStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AbelianSchemeOneFormFrameAndSquareStatement
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SumWedgeGlobalOneFormsEqZeroIffStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AbelianSchemeGlobalOneFormsPrimitiveStatement
 open CategoryTheory CategoryTheory.Limits AlgebraicGeometry KaehlerDifferential MonoidalCategory CartesianMonoidalCategory MonObj TensorProduct
@@ -43,7 +38,7 @@ theorem wsum_eq_zero_of_mul : ∀ (R : Type) [CommRing R] (A : Over (Sp R)) [Grp
   intro l l'
   have h2 := key (l ∘ₗ pF (lift (𝟙 A) (toUnit A ≫ η[A]))) (l' ∘ₗ pF (lift (toUnit A ≫ η[A]) (𝟙 A)))
   simp only [Fin.sum_univ_add, U, V, Fin.append_left, Fin.append_right, LinearMap.comp_apply,
-    (hax _).1, (hax _).2.1, (hax _).2.2.2.1, (hax _).2.2.2.2.1, map_zero, mul_zero, zero_mul, sub_zero,
+    (hax _).1, (hax _).2.1, (hax _).2.2.2.1, (hax _).2.2.2.2.1, map_zero, mul_zero, sub_zero,
     zero_sub] at h2
   rw [← h2, ← Finset.sum_add_distrib]
   refine Finset.sum_congr rfl fun k _ ↦ ?_

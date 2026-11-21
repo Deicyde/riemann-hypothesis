@@ -1,6 +1,5 @@
-import Development.WeilBound.ThetaLifts.LocalTheory.SplitInv
-import Development.WeilBound.ThetaLifts.ConeHypotheses.PureEqPureA
-import Development.WeilBound.ThetaLifts.CartanFactorisation.ExistsPureML
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LatticeBasics.LeviEx
 
 noncomputable section

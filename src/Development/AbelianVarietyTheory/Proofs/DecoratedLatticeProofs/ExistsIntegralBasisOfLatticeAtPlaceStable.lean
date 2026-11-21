@@ -1,9 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.WittCoreEmbeddingPreservesSupportedUnitarySubgro
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.AdelicPointComponentsAtPlacesLatticesVacua
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.SelfDualSplitComponentIsLatticeStabilizerEq
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.IsPrincipalIdealRingSemiLoc
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.CsGlob
 
 open NumberField IsDedekindDomain Matrix
 open scoped TensorProduct
@@ -135,7 +134,7 @@ theorem exists_basis_of_dense {A E : Type} [CommRing A] [Field E] [NumberField E
       rw [Pi.sub_apply, Pi.smul_apply, smul_eq_mul, hyk k, add_sub_cancel_right]
     have e : ((ε • B'.map ι) *ᵥ y) i = ε * ι ((B' *ᵥ fun k => (N : E)⁻¹ * u k) i) +
         ∑ k, (ε * ι ((B' *ᵥ (Pi.single k (m : E) : Fin n → E)) i)) * z k := by
-      simp only [Matrix.mulVec_single, Matrix.mulVec, dotProduct_single]
+      simp only [Matrix.mulVec, dotProduct_single]
       simp only [dotProduct, map_sum, Finset.mul_sum, ← Finset.sum_add_distrib]
       refine Finset.sum_congr rfl fun k _ => ?_
       rw [hyk k, Matrix.smul_apply, Matrix.map_apply, smul_eq_mul, map_mul ι (B' i k), map_mul ι (B' i k), map_natCast]

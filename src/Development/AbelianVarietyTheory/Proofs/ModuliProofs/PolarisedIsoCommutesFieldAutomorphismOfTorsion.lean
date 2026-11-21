@@ -1,9 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Degenerations.AdmissibleBaseOfCompleteDvr
-import Development.AbelianVarietyTheory.BlockTheory.CMModuli.ThetaTowerRecognition
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsIsFib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.GenRelNeZero
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.BCTools
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsProjectiveModel
 
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry NumberField

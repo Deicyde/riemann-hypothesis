@@ -1,5 +1,8 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebraHeight.FinDefs
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.AevalMulHomog
+import Development.AutomorphicArithmetic.AutomorphicVarieties.WeilGroupCharacters.RepAlg
+import Mathlib.Tactic.ENatToNat
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open TensorProduct IsLocalRing Polynomial UpperTheory.V.W UpperTheory.V.Alg UpperTheory.V.CA
 
@@ -17,7 +20,7 @@ theorem UpperTheory.V.CA.u_poly :
       funext g
       by_cases hg : g = 1
       · subst hg; simp [MonoidAlgebra.one_def]
-      · simp [MonoidAlgebra.one_def, hg, Ne.symm hg]
+      · simp [MonoidAlgebra.one_def, hg]
     rw [h, ← MvPolynomial.comp_aeval_apply, MvPolynomial.aeval_eq_eval, h1, map_one]
   · intro x y
     have h := congrArg (MvPolynomial.aeval (R := A) (Sum.elim (fun g => x.coeff g) (fun g => y.coeff g))) hm

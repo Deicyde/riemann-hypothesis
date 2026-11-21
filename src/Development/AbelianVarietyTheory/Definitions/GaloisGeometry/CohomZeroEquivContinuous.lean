@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.IsMatrixForm
+import Mathlib.AlgebraicGeometry.Sites.ConstantSheaf
+import Mathlib.NumberTheory.Padics.PadicIntegers
 
 noncomputable section
 

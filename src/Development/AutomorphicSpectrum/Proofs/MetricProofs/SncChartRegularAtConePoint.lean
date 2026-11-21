@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.FiniteMinimalPrimes
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.ChPrime
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.AffineChartIdealPrimeAndSaturatedStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.MinimalPrimesOfMultihomogSupStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.RegularSystemOfParametersLocalRingAltBis

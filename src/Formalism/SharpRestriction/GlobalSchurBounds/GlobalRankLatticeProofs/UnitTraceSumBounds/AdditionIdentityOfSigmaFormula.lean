@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.UnitTraceSumBounds.CubeIdentityFromAdditionFormula
 
 namespace Formalism.MainNotions.Ext.CutA

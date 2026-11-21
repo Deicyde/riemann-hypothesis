@@ -1,8 +1,7 @@
-import Mathlib
-import GroundTheory.ProfiniteCohomology.GlobalClassFormation.LocalSymbol
-import GroundTheory.ProfiniteCohomology.GlobalClassFormation.LocalLimits.IsScalarTowerFiniteSubfieldAlgebraicClosure
-import GroundTheory.ProfiniteCohomology.GlobalClassFormation.LocalLimits.InfDefs
-import GroundTheory.GlobalFields.NormResidueSymbol.RangeIdeleNormLeKerIdeleSymbol
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.GlobalFields.NormResidueSymbol.Infinite
+import GroundTheory.ProfiniteCohomology.GlobalClassFormation.LocalRestriction
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

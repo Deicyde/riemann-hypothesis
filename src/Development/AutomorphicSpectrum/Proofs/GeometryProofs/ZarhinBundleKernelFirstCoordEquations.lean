@@ -1,6 +1,9 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.CoordsAt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.InjectiveOfIsCptGen
+import Mathlib.AlgebraicGeometry.ProjectiveSpectrum.Basic
+import Mathlib.RingTheory.LocalProperties.Reduced
+import Mathlib.RingTheory.PiTensorProduct
 
 noncomputable section
 

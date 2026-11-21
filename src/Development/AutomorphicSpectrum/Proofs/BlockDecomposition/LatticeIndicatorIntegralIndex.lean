@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsIntZero
-import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.SatakeExponents.UniformizerValuations.ReadMod
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FinsumOutOfLe
 
 open NumberField IsDedekindDomain Matrix

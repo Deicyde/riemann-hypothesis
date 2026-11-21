@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.ChainLawXi
-import Formalism.LocalToGlobal.Columns.ChainTw
 import Formalism.LocalToGlobal.Columns.ChainTwZero
 import Formalism.LocalToGlobal.KernelLattices.KerHypAll
 

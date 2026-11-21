@@ -1,10 +1,11 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.PBCStmt
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.MajorantIntegrals
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LatticeSummability
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LevelSizesJointMean
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.PeriodLatticeFactsSplitOfGeneral
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LocalConditionsAndQuotientSplitting
 import Lemmata.GeneralBFactRightSide.Imports
+import Mathlib.Data.Int.Star
 
 namespace Formalism.FourierDecayAlt.P.PBC
 

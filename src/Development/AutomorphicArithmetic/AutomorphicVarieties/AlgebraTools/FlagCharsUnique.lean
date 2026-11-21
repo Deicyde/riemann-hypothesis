@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.SepChars
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.ImportsExtraBis
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Tactic.Polynomial.Basic
 
 open Polynomial Matrix IsLocalRing TensorProduct
 

@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsFinSetSplitPlacesCoprimeConductor
 import GroundTheory.GlobalFields.TateThesis.Nonvanishing
-import GroundTheory.GlobalFields.TateThesis.HeckeTheorem
 
 noncomputable section
 

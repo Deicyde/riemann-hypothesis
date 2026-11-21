@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.StripEstimates.FaceMapCompSuccAboveCastSucc
+import GroundTheory.AutomorphicForms.QuotientMeasure
 
 open UpperHalfPlane ModularGroup CongruenceSubgroup Complex
 open scoped MatrixGroups Modular Pointwise ENNReal

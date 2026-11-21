@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.LeafKumDeltaPf
 import Development.EtaleCohomology.EtaleSheaves.KummerSequence.LeafKumMuMapPf
 import Development.EtaleCohomology.EtaleSheaves.KummerSequence.LeafKumMuInjPfGlue
@@ -20,7 +21,7 @@ theorem resMap_nsmul_homotopy (F : Shv ℤ) (q : ℕ) :
   have H : Homotopy (InjectiveResolution.desc (q • 𝟙 F) (injectiveResolution F) (injectiveResolution F))
       (q • 𝟙 (injectiveResolution F).cocomplex) :=
     InjectiveResolution.descHomotopy (q • 𝟙 F) _ _ (by simp)
-      (by simp [Preadditive.comp_nsmul, Preadditive.nsmul_comp, Functor.map_nsmul])
+      (by simp)
   refine (H.extend ComplexShape.embeddingUpNat).trans (Homotopy.ofEq ?_)
   exact ((ComplexShape.embeddingUpNat.extendFunctor (Shv ℤ)).map_nsmul).trans
     (congrArg (q • ·) ((ComplexShape.embeddingUpNat.extendFunctor (Shv ℤ)).map_id _))

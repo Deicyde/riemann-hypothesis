@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.LaplaceOperators.SpectralGap.NonvanishingHypotheses
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.LaplaceOperators.ReproducingKernels.ReproCoreStatement
-import Formalism.HermitianCurvature.WeylElementCommutesLevelOne
 
 noncomputable section
 

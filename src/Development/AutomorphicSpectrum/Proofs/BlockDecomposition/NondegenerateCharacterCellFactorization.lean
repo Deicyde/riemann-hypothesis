@@ -1,12 +1,10 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.AutomorphicKernels.UnitarySchrodingerModel.CoefDataExists
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CosetCell
-import Development.AbelianVarietyTheory.PublishedTheorems.SiegelWeil₂.AdelicConjTransposeBlockMatrixTwoByTwoFin
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.SiegelParabolicUnnMatrixBlockUpperTriangular
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.SummableCell
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.EisensteinCellsDecomposition
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.EisensteinRationalPoints
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousHalfTr
+import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.IdemElt
+import Formalism.SharpRestriction.CuspSpanNormBounds.BesselShellMomentBounds
 noncomputable section
 open scoped Matrix NNReal ENNReal ComplexConjugate TensorProduct
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.L2.Theta Formalism.L2.Pj Formalism.IndefR.Datum MeasureTheory
@@ -102,7 +100,7 @@ theorem unitary_rel (g : G D n) {A B C E' : Mx D n n} (hg : mat g = blk4 A B C E
       -(adj E' * A) + adj B * C = -1 ∧ -(adj E' * B) + adj B * E' = 0 := by
   have h : adj (mat g) * JR (AF D.host.F) (Jst D n) * mat g = JR (AF D.host.F) (Jst D n) := g.2
   rw [JR_Jst, hg] at h
-  simp only [adelicConjTranspose_blockMatrixTwoByTwoFin, submatrix_fromBlocks_mul, mul_zero, zero_mul, mul_one, one_mul, add_zero, zero_add, mul_neg, neg_mul] at h
+  simp only [adelicConjTranspose_blockMatrixTwoByTwoFin, submatrix_fromBlocks_mul, mul_zero, mul_one, add_zero, zero_add, mul_neg, neg_mul] at h
   exact blockMatrixTwoByTwoFin_injective h
 
 theorem mat_inv (g : G D n) {A B C E' : Mx D n n} (hg : mat g = blk4 A B C E') :

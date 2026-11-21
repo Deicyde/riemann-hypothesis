@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteForms.IndefiniteTree.FunctionalLowerBoundOfConditionsNumeric
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FpTiedIffExistsLeafFP
 
 open Module NumberField IsDedekindDomain
 open scoped Matrix nonZeroDivisors

@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.OneMemGoodCT
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ContinuousConjFin
 
 noncomputable section
 

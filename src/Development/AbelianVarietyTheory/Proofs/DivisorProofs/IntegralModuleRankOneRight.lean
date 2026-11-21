@@ -1,6 +1,4 @@
-import Mathlib
-import Formalism.RealPlaceAnalysis.ThirdArithmeticHolds
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemNilRad
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralModuleRankOneLeftStatement
 open Matrix GlobalTheory.TorFin
 

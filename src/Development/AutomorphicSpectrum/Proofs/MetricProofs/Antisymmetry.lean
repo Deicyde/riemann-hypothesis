@@ -1,17 +1,9 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.Pull1
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.TsgPolyVolPolyCoeffEven
-import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsFibreLocal
-import Development.AutomorphicSpectrum.Statements.MetricStatements.AgreementIffGuarded
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.AdjacentSwapHeightPolynomialRelationStatement
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.FlagVarietyAnalyticSystemExistsStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.ProportionalStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.WeightTransformInjectiveLinearStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.GapEqWeightSubNextStatement
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.RealisationPotentialDegreeCompatibilityStatement
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.FlagHeightPolynomialWeightForm
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.EtaleLocalizationAtPrimeTensorOfEtaleAway
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.FormPolyIsHomogeneousAndEval
 open MvPolynomial MeasureTheory Filter Topology ReciprocityTheory.AnForm ReciprocityTheory.AnForm.M ReciprocityTheory.AnForm.P ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.AI ReciprocityTheory.ChartRestriction.G.AI.I1 ReciprocityTheory.ChartRestriction.G.AI.I2 ReciprocityTheory.ChartRestriction.G.AI.I4 GlobalTheory.CompanionTheory.Ar.PB GroundTheory.Heights₂.Heights GroundTheory.Heights₂.Heights.LowerBoundFree
 
 namespace GlobalTheory.CompanionTheory.Ar.PB.Top
@@ -55,7 +47,7 @@ theorem antisymmetry : Antisymmetry := by
     apply (GlobalTheory.T.weight_transform_injective_linear).2.2 Ψ N
     rw [hS, map_mul, hdeg0]
     congr 1
-    simp [toWt, MvPolynomial.aeval_C, MvPolynomial.algebraMap_eq]
+    simp [toWt, MvPolynomial.algebraMap_eq]
 
   obtain ⟨Cst, hC⟩ := GlobalTheory.T.weighted_polynomial_homogeneous_coeff_bound Ψ N (antisymDegree Ψ N + 1)
   have hhomT : (toWt (Re.PB II)).IsHomogeneous (antisymDegree Ψ N + 1) := by

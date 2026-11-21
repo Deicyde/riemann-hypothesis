@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.TorEtPf
+import Mathlib.Algebra.Group.Pi.Units
 
 noncomputable section
 open LateralTheory.E.t_E1Cut LateralTheory.E.LCSplitPf LateralTheory.E.TorEtPf

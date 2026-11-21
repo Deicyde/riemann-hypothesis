@@ -1,8 +1,12 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.EigenvalueEndgame.EigenKilling.ConeIntegralFactorisation
 import Development.WeilBound.ThetaLifts.ConeHypotheses.PureEqPureA
 import Development.WeilBound.ThetaLifts.CartanFactorisation.IntegrableOnRight
 import Development.WeilBound.CoreStatements.LocallyConstantCoinvariants.SoStatement
 import Development.WeilBound.CoreStatements.LocallyConstantCoinvariants.ContinuousFinId
+import Development.WeilBound.ThetaLifts.FrameEstimates.HodgeTateFromSandwich
+import Development.WeilBound.ThetaLifts.LocalTheory.UnramifiedDeterminedBySpherical
 
 noncomputable section
 

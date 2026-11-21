@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.BlockMatrixPlaces.BlockDiagonalOrdinaryGSpRep
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual Formalism.HC ReciprocityTheory.Gal IsLocalRing Polynomial UpperTheory.V.Base UpperTheory.V.Alg UpperTheory.V.HV UpperTheory.V.GradeZeroInterpolatingElement UpperTheory.V.Ws UpperTheory.V.Ws.Bl
@@ -108,11 +109,11 @@ theorem UpperTheory.V.Ws.Bl.flagVec :
     refine ⟨?_, ?_⟩
     · show ∀ i j, ¬ lamW i < lamW j → Y i j = 0
       intro i j h
-      fin_cases i <;> fin_cases j <;> simp_all [lamW, Matrix.vecMulVec_apply]
+      fin_cases i <;> fin_cases j <;> simp_all [lamW]
     · show adj Y = -Y
       ext i j
       fin_cases i <;> fin_cases j <;>
-        (try simp [hYd, hw, hφ, adj_apply, sgn, Fin.rev, Matrix.vecMulVec_apply]) <;>
+        (try simp [hYd, hw, hφ, adj_apply, sgn, Fin.rev]) <;>
         first
           | linear_combination iso
           | linear_combination (-1 : R) * iso
@@ -152,19 +153,19 @@ theorem UpperTheory.V.Ws.Bl.flagVec :
     have hY : Y = 0 := congrArg Subtype.val hY0
     have f1 : u 1 1 * u 2 0 = 0 := by
       have h := congrFun (congrFun hY 1) 0
-      simp [hYd, hw, hφ, Matrix.vecMulVec_apply, -mul_eq_zero] at h
+      simp [hYd, hw, hφ, -mul_eq_zero] at h
       first | linear_combination h | linear_combination (-1 : R) * h
     have f2 : u 1 1 * u 0 0 = 0 := by
       have h := congrFun (congrFun hY 1) 2
-      simp [hYd, hw, hφ, Matrix.vecMulVec_apply, -mul_eq_zero, -neg_eq_zero, -mul_neg] at h
+      simp [hYd, hw, hφ, -mul_eq_zero, -neg_eq_zero, -mul_neg] at h
       first | linear_combination h | linear_combination (-1 : R) * h
     have f3 : u 3 1 * u 2 0 = 0 := by
       have h := congrFun (congrFun hY 3) 0
-      simp [hYd, hw, hφ, Matrix.vecMulVec_apply, -mul_eq_zero] at h
+      simp [hYd, hw, hφ, -mul_eq_zero] at h
       first | linear_combination h | linear_combination (-1 : R) * h
     have f4 : u 3 1 * u 0 0 = 0 := by
       have h := congrFun (congrFun hY 3) 2
-      simp [hYd, hw, hφ, Matrix.vecMulVec_apply, -mul_eq_zero, -neg_eq_zero, -mul_neg] at h
+      simp [hYd, hw, hφ, -mul_eq_zero, -neg_eq_zero, -mul_neg] at h
       first | linear_combination h | linear_combination (-1 : R) * h
     have J : u 2 2 * u 1 1 - u 0 2 * u 3 1 = 1 := by
       linear_combination I11 - u 3 2 * hy1 + u 1 2 * hy2 - y * I10 + y * u 2 2 * h10 -

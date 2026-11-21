@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.UnitIdSt
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.FBIdAd
 
@@ -13,7 +15,7 @@ section Generic
 
 theorem map_id_apply {S σ : Type} [CommRing S] (f : MvPowerSeries σ S) : MvPowerSeries.map (algebraMap S S) f = f := by
   ext n
-  simp [MvPowerSeries.coeff_map]
+  simp
 
 variable {E : Type} [Field E] [NumberField E] [IsCMField E] {S : Type} [CommRing S] [Algebra ℚ S] {d n : ℕ} [StarRing (𝓞 E)] (B : FB S d (𝓞 E)) {h : PS S 2 d}
   (hg : B.IsCanonGauge S h)

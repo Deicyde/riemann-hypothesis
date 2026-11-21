@@ -1,7 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.AdicExtensionMatrices.AdicContMap
 import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.AdicExtensionMatrices.UnivKill
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.UnivCond
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.CoRes
 
 open IsLocalRing Polynomial UpperTheory.V.Alg UpperTheory.V.GradeZeroInterpolatingElement UpperTheory.V.Ws
 
@@ -30,7 +30,7 @@ private theorem gsp_diag {R : Type} [CommRing R] (ν : R) (d : Fin 4 → R) (h :
     IsGSp ν (Matrix.diagonal d) := by
   have e : adj (Matrix.diagonal d) = Matrix.diagonal fun i => d i.rev := by
     ext i j
-    fin_cases i <;> fin_cases j <;> simp [adj_apply, sgn, Fin.rev, Matrix.diagonal_apply]
+    fin_cases i <;> fin_cases j <;> simp [adj_apply, sgn, Fin.rev]
   unfold IsGSp
   rw [e, Matrix.diagonal_mul_diagonal]
   ext i j

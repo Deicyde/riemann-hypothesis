@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.PartDiagCut
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace LateralTheory.E.PartDirectedPf
 local notation "PT" => LateralTheory.E.PartDiagCut.Part

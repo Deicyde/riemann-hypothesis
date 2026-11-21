@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviUnipotentHaarModulusStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousCA
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSplitBasisCompl
 
 open scoped TensorProduct NNReal Matrix ENNReal

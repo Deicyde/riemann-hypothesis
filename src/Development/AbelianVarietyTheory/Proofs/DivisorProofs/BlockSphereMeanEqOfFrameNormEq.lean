@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.AevalEqZeroOfMemConeIdeal
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.SjIffJensenInequality
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.BlockTheory.HeightDefect.SphereBlockLogMean
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LinSubstLinSubst
 
 set_option autoImplicit false
 

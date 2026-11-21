@@ -1,5 +1,7 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.FerreroWashingtonIndex.TwSingle
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.StickelbergerTheorem.StickelbergerAt
+import Development.AutomorphicArithmetic.AutomorphicVarieties.LengthEqAddEigen
 
 noncomputable section
 

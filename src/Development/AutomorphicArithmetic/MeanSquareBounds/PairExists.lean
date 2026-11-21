@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.MeanSquareBounds.PrimeSetTwoBounds
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.MeanSquareBounds.PairShare
 import Development.AutomorphicArithmetic.MeanSquareBounds.RowsOfMem
 

@@ -1,5 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.FamilyUniformisationBasePointOrthogonalBis
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.ProjectiveLattices.CuspidalL2Subspace
 
 open Module NumberField IsDedekindDomain
 

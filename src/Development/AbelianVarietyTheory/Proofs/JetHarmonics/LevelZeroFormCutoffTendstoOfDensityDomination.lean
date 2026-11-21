@@ -1,7 +1,4 @@
-import Mathlib
-import Formalism.HermitianCurvature.StatementTBB
-import Formalism.HermitianCurvature.HerGenC
-import Development.AbelianVarietyTheory.PublishedTheorems.BesselIntegrals.BesselXiIntegrable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.BigCellIntegralTopDensityEqLevelZeroStatement
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.LevelZeroCutoffEqBigCellIntegralStatement
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.TopDensityCutoffEventuallyEqSmoothCoefficientStatement

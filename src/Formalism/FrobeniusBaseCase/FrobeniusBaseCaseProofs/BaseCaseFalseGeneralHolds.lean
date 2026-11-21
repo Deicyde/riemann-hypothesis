@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.FrobeniusBaseCase.CoeffOfFirstMultiplier
-import Formalism.FrobeniusBaseCase.FrobeniusBaseCaseProofs.SecondWayHolds
+import Formalism.FrobeniusBaseCase.FrobeniusBaseCaseProofs.BaseCaseKOneHolds
+import Formalism.FrobeniusBaseCase.FrobeniusBaseCaseProofs.ChainI
 
 open MvPowerSeries
 

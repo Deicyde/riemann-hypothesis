@@ -1,7 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.HilbertEisenstein.SExpDefs
-import GroundTheory.GlobalFields.TateThesis.EulerFactorsInfinite
 import GroundTheory.GlobalFields.TateThesis.GaussianSchwartz
-import GroundTheory.GlobalFields.TateThesis.AdelePoissonUniform
 
 noncomputable section
 

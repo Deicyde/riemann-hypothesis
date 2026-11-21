@@ -1,6 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.QuasicoherentCohomology.ExistsPowMulPowEqOfIsZeroCechH
-import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.CubeComplexAcyclicIffQuasiIsoCechAug
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.QuasicoherentCohomology.IsIsoCechComplexMapPresheafCubeRes
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.AlgebraicGeometry.Modules.Sheaf
+import Mathlib.Topology.Sheaves.Flasque
 
 open CategoryTheory AlgebraicGeometry Limits TopologicalSpace Opposite
 
@@ -46,8 +49,7 @@ private theorem cubeComplex_exactAt_one_of_hom_surj_empty_inj_nonempty {A B : _r
       B.d p ((_root_.GlobalTheory.cubeComplexMap φ).f p x) := by
     intro p x
     have := congrArg (fun f => f.hom x) ((_root_.GlobalTheory.cubeComplexMap φ).comm p (p + 1))
-    simp only [_root_.GlobalTheory.cubeComplex, CochainComplex.of_d, ModuleCat.hom_comp, ModuleCat.hom_ofHom,
-      LinearMap.coe_comp, Function.comp_apply] at this
+    simp only [_root_.GlobalTheory.cubeComplex, CochainComplex.of_d, ModuleCat.hom_comp, ModuleCat.hom_ofHom] at this
     exact this.symm
   have dd : ∀ y : A.Term 0, A.d 1 (A.d 0 y) = 0 := by
     intro y

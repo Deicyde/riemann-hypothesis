@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.SmoothDS
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.SmoothBr
+import Mathlib.RingTheory.PiTensorProduct
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -167,10 +170,10 @@ theorem actM_sub (X Y : Matrix (Fin n) (Fin n) ℂ) : actM E (X - Y) = actM E X 
 theorem actM_single (a b : Fin n) : actM E (Matrix.single a b 1) = E a b := by
   unfold actM
   rw [Finset.sum_eq_single a (fun x _ hx => Finset.sum_eq_zero fun y _ => by
-      simp [Matrix.single_apply, hx, Ne.symm hx]) (fun h => absurd (Finset.mem_univ a) h),
-    Finset.sum_eq_single b (fun y _ hy => by simp [Matrix.single_apply, hy, Ne.symm hy])
+      simp [Ne.symm hx]) (fun h => absurd (Finset.mem_univ a) h),
+    Finset.sum_eq_single b (fun y _ hy => by simp [Ne.symm hy])
       (fun h => absurd (Finset.mem_univ b) h)]
-  simp [Matrix.single_apply]
+  simp
 
 end ActM
 
@@ -326,20 +329,19 @@ theorem EcL_br (hσ : IsURepOn (UJset ε) σ) (Z W : Matrix (Fin n) (Fin n) ℂ)
     inG_add (inG_bracket hA hD) (inG_bracket hB hC)
   have e : (A + Complex.I • B) * (C + Complex.I • D) - (C + Complex.I • D) * (A + Complex.I • B) =
       ((A * C - C * A) - (B * D - D * B)) + Complex.I • ((A * D - D * A) + (B * C - C * B)) := by
-    simp only [Matrix.add_mul, Matrix.mul_add, Matrix.smul_mul, Matrix.mul_smul, smul_smul,
-      Complex.I_mul_I]
+    simp only [Matrix.add_mul, Matrix.mul_add, Matrix.smul_mul, Matrix.mul_smul]
     match_scalars <;> (try ring_nf) <;> (try simp only [Complex.I_sq]) <;> ring_nf
   rw [e, EcL_of hσ hP hQ, EcL_of hσ hA hB, EcL_of hσ hC hD,
     Tm_sub hσ (inG_bracket hA hC) (inG_bracket hB hD), Tm_add hσ (inG_bracket hA hD) (inG_bracket hB hC),
     ← Tm_br hσ hA hC, ← Tm_br hσ hB hD, ← Tm_br hσ hA hD, ← Tm_br hσ hB hC]
-  simp only [add_mul, mul_add, smul_mul_assoc, mul_smul_comm, smul_smul, Complex.I_mul_I]
+  simp only [add_mul, mul_add, smul_mul_assoc, mul_smul_comm]
   match_scalars <;> (try ring_nf) <;> (try simp only [Complex.I_sq]) <;> ring_nf
 
 private theorem single_one_mul_single_one' (a b c d : Fin n) :
     Matrix.single a b (1 : ℂ) * Matrix.single c d 1 = if b = c then Matrix.single a d 1 else 0 := by
   ext i j
   rw [Matrix.mul_apply, Finset.sum_eq_single b
-    (fun k _ hk => by simp [Matrix.single_apply, hk, Ne.symm hk])
+    (fun k _ hk => by simp [Matrix.single_apply, Ne.symm hk])
     (fun h => absurd (Finset.mem_univ b) h)]
   by_cases hbc : b = c
   · subst hbc
@@ -360,9 +362,9 @@ theorem actM_EcL (hσ : IsURepOn (UJset ε) σ) (X : Matrix (Fin n) (Fin n) ℂ)
     ext i j
     simp only [Matrix.sum_apply, Matrix.smul_apply, Matrix.single_apply, smul_eq_mul, mul_ite, mul_one,
       mul_zero]
-    rw [Finset.sum_eq_single i (fun k _ hk => Finset.sum_eq_zero fun l _ => by simp [hk, Ne.symm hk])
+    rw [Finset.sum_eq_single i (fun k _ hk => Finset.sum_eq_zero fun l _ => by simp [hk])
         (fun h => absurd (Finset.mem_univ i) h),
-      Finset.sum_eq_single j (fun l _ hl => by simp [hl, Ne.symm hl])
+      Finset.sum_eq_single j (fun l _ hl => by simp [hl])
         (fun h => absurd (Finset.mem_univ j) h)]
     simp
   unfold actM
@@ -385,12 +387,11 @@ theorem inG_casGen (ε : Fin n → Bool) (p : Fin n × Fin n) : inG ε (casGen �
   have hI : star Complex.I = -Complex.I := Complex.conj_I
   apply inG_of_entry
   intro i j
-  simp only [casGen, casSg, Matrix.sub_apply, Matrix.add_apply, Matrix.smul_apply,
-    Matrix.single_apply, smul_eq_mul]
+  simp only [casGen, casSg]
   rcases lt_trichotomy a b with hab | hab | hab <;>
   by_cases hai : a = i <;> by_cases haj : a = j <;> by_cases hbi : b = i <;> by_cases hbj : b = j <;>
   by_cases ha : ε a = true <;> by_cases hb : ε b = true <;>
-  simp_all [hI, ne_of_lt, ne_of_gt, not_lt_of_gt] <;> ring_nf
+  simp_all [ne_of_lt, ne_of_gt, not_lt_of_gt] <;> ring_nf
 
 section Cas
 
@@ -404,7 +405,7 @@ theorem cas_pair_alg (x y : Module.End ℂ M) (s : ℂ) (hs : s = 1 ∨ s = -1) 
       -((1 / 2 * s) • ((Complex.I • (x + s • y)) * (Complex.I • (x + s • y)))) = x * y + y * x := by
   rw [smulI_sq]
   rcases hs with rfl | rfl <;>
-  · simp only [sub_mul, mul_sub, add_mul, mul_add, smul_mul_assoc, mul_smul_comm, smul_smul]
+  · simp only [sub_mul, mul_sub, add_mul, mul_add, smul_mul_assoc, mul_smul_comm]
     module
 
 theorem casSg_cases (ε : Fin n → Bool) (p : Fin n × Fin n) : casSg ε p = 1 ∨ casSg ε p = -1 := by
@@ -443,7 +444,7 @@ theorem cas_pair (ε : Fin n → Bool) (p : Fin n × Fin n) :
   · have hw : casWt (a, a) = 1 := by simp [casWt]
     have hs : casSg ε (a, a) = 1 := by simp [casSg]
     have hg : casGen ε (a, a) = Complex.I • Matrix.single a a 1 := by simp [casGen]
-    simp only [Prod.swap_prod_mk, hw, hs, hg, actM_smul, actM_single, smulI_sq, one_mul, mul_one,
+    simp only [Prod.swap_prod_mk, hw, hs, hg, actM_smul, actM_single, smulI_sq, mul_one,
       one_smul, neg_neg]
   · have := cas_pair_lt E ε h
     simp only [Prod.swap_prod_mk]

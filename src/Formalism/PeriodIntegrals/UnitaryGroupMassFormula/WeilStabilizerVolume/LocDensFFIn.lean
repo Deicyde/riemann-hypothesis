@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeilStabilizerVolume.LocDensFFCnt
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeilStabilizerVolume.LocDensFF
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.PicardGroup
 
 noncomputable section
 
@@ -132,12 +136,12 @@ theorem card_norm_fiber (σ : K ≃ₐ[k] K) (hfrob : ∀ x, σ x = x ^ Fintype.
   let E : {t : K // t * σ t = d} ≃ {g : Kˣ // f g = Units.mk0 d0 hd00} :=
     { toFun := fun t => ⟨Units.mk0 t.1 (fun h0 => hd0 (by rw [← t.2, h0, zero_mul])),
         Units.ext (by
-          simp only [f, Units.coe_map, Units.val_mk0, MonoidHom.coe_coe]
+          simp only [f, Units.coe_map, Units.val_mk0]
           apply (algebraMap k K).injective
           rw [← hnorm, t.2, hd0e])⟩
       invFun := fun g => ⟨g.1.1, by
         have := congrArg Units.val g.2
-        simp only [f, Units.coe_map, Units.val_mk0, MonoidHom.coe_coe] at this
+        simp only [f, Units.coe_map, Units.val_mk0] at this
         rw [hnorm, this, hd0e]⟩
       left_inv := fun t => rfl
       right_inv := fun g => Subtype.ext (Units.ext rfl) }

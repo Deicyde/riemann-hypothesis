@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.MetAndHolds
 import Development.AutomorphicArithmetic.Foundations.LocalLanglands.LocalCentralUnits.ArtEx
 

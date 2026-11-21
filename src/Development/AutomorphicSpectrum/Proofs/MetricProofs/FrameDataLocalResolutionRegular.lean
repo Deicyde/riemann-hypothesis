@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.Pull1
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.IsPeriodOn
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.UpVApply
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.FlagAdjacentChartFirst
 open MvPolynomial MeasureTheory Filter Topology Matrix ReciprocityTheory.AnForm ReciprocityTheory.AnForm.M ReciprocityTheory.AnForm.P ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.AI.I1 ReciprocityTheory.ChartRestriction.G.AI.I2 ReciprocityTheory.ChartRestriction.G.AI.I4 GlobalTheory.CompanionTheory.Ar.PB GroundTheory.Heights₂.Heights GroundTheory.Heights₂.Heights.LowerBoundFree
@@ -23,7 +22,7 @@ theorem analytic_pMat (keep : Ψ × Fin N → Prop) (s : Set (Fin e → ℂ)) (�
     AnalyticOnNhd ℂ (fun w => pMat keep (pL ε w) τ a b) s := by
   unfold pMat lowMat
   by_cases hc : b < a ∧ ((a : ℕ) < N - j ↔ (b : ℕ) < N - j)
-  · simp only [hc, dite_true]
+  · simp only [hc]
     by_cases hs : Sep keep (⟨(τ, a, b), hc⟩ : LowIdx Ψ N j)
     · simp only [cExt, hs, dite_true, pL]
       exact analytic_coord _

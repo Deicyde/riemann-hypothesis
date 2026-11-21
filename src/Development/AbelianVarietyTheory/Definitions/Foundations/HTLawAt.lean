@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.KumValUnique
-import Development.AbelianVarietyTheory.Definitions.Foundations.ZetaSysUOfHalves
 
 noncomputable section
 

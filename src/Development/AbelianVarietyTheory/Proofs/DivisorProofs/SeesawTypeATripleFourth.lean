@@ -1,11 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsPairingStdP
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MulRealAdEqZero
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ActsInf
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSeminormWeylAlg
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigALocalPartFoldStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TriplePairPeriodIdentityCaseA
@@ -121,7 +114,7 @@ theorem exists_param_eigen : ∀ (hKP : GlobalTheory.ThK.KP) (F E : Type) [Field
     refine ⟨s', ⟨max C 0, le_max_right _ _⟩, Seminorm.le_def.2 fun f => ?_⟩
     have h := hC p.1.1 hkK f
     simp only [Finset.sup_singleton] at h
-    simp only [Seminorm.comp_apply, Seminorm.smul_apply, NNReal.smul_def, smul_eq_mul, NNReal.coe_mk]
+    simp only [Seminorm.comp_apply]
     exact h.trans (mul_le_mul_of_nonneg_right (le_max_left _ _) (apply_nonneg _ _))
   let Acl : SInf F (Fin (b + 2) × Fin (b + 2 + a')) →L[ℂ] SInf F (Fin (b + 2) × Fin (b + 2 + a')) := ⟨Alin, hAc⟩
   have hAcl : ∀ f, Acl f = locOpInf (om (p.1.1, 1)) f := fun f => rfl
@@ -142,7 +135,7 @@ theorem exists_param_eigen : ∀ (hKP : GlobalTheory.ThK.KP) (F E : Type) [Field
   have hact : actAB (cA σ) ((p.1.1, 1) : UA σ G.V.J × UA σ G.W.J) u =
       Matrix.vecMulVec (mat p.1.1 *ᵥ ys) (incV F H'.x) := by
     have h := Matrix.mul_vecMulVec (mat p.1.1) ys (incV F H'.x)
-    simp only [actAB, hu, Units.val_one, Prod.snd_one, Prod.fst]
+    simp only [actAB, hu]
     simpa [mat] using h
   set w'' := GlobalTheory.ArchUniq.Coord.coordI G.M (Matrix.vecMulVec (mat p.1.1 *ᵥ ys) (incV F H'.x)) with hw''
   have hAg : Acl g = GlobalTheory.SchrPairing.schrSch hP w'' (Acl f₀) := by

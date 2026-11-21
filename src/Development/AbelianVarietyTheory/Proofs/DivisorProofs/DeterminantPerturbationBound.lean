@@ -1,5 +1,12 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SplitKOfIsAlgClosed
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.CategoryTheory.Monoidal.Cartesian.Over
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open AlgebraicGeometry CategoryTheory Limits NumberField IsDedekindDomain
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.BasicNotions Formalism.L2.Pj
 open GlobalTheory GlobalTheory.ArInt GlobalTheory.ShFam.Pad GlobalTheory.TrueGeo GlobalTheory.Cartier GlobalTheory.ProjVar GlobalTheory.Mean4O GlobalTheory.LineNorm GlobalTheory.CoverNorm GlobalTheory.VertForm GlobalTheory.HtGen
@@ -75,7 +82,7 @@ theorem det_sub_lt_of_close_on_unitBall : ∀ (C : Type) [NormedField C] [IsUltr
       ext r l
       by_cases hr : r = c
       · subst hr; simp [Matrix.updateRow_apply]
-      · simp [Matrix.updateRow_apply, hr, Function.update_of_ne hr, hA]
+      · simp [Matrix.updateRow_apply, hr, hA]
     have h3 : ∑ l, Q l c * P j l = (A.det)⁻¹ * ∑ l, A.adjugate l c * P j l := by
       rw [hQ, Matrix.inv_def, Finset.mul_sum]
       refine Finset.sum_congr rfl fun l _ => ?_

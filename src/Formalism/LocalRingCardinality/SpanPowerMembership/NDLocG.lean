@@ -1,4 +1,7 @@
-import Formalism.LocalRingCardinality.SpanPowerMembership.NDLocF
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.SpanPowerMembership.NDLocC
+import Formalism.LocalRingCardinality.SpanPowerMembership.NDLocE
 
 noncomputable section
 
@@ -112,7 +115,7 @@ def zU : (↥(OL LL))ˣ := Units.ofPowEqOne (zO LL hζ hm) N (zO_pow LL hζ hm) 
 
 theorem zU_pow : zU LL hζ hm ^ N = 1 := by
   first
-  | exact Units.ext (by simp [zU, zO_pow LL hζ hm])
+  | exact Units.ext (by simp [zU])
   | (ext; simp [zU, zO_pow LL hζ hm])
 
 def muHom : Multiplicative (ZMod N) →* (↥(OL LL))ˣ := powHom (zU LL hζ hm) N (zU_pow LL hζ hm)

@@ -1,8 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.RootOfUnityEightQMemCoeffGaloisSubfield
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.FiniteResidueFieldAdicCompletionIntegers
-import Formalism.LocalRingCardinality.SpanPowerMembership.Spaces
-import Formalism.SharpRestriction.InertJacobiLevels.HostFam
+import Formalism.LocalRingCardinality.DataSpaces
 
 open Formalism.BasicNotions NumberField IsDedekindDomain GlobalTheory.Mem
 open scoped TensorProduct

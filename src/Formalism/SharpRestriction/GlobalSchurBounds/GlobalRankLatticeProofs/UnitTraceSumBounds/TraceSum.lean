@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.StandardLatticesGL3
 
 open Formalism.MainNotions.TaylorLogMetric Formalism.MainNotions.StandardLatticesGL3 NumberField

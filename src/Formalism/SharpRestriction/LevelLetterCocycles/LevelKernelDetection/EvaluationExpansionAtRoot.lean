@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.LevelKernelDetection.TensorSumSingleEval
+import Formalism.SharpRestriction.LevelLetterCocycles.MapEvalPsPi
 
 noncomputable section
 

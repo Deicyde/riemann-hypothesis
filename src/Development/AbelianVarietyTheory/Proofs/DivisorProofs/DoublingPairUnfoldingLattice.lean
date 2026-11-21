@@ -1,17 +1,13 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAut
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RegFamOfContinuousAt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BoxC
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchActionReadingsCompatible
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchHeisenbergDerivativesExist
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DarbouxDerivativeExistence
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ProductFunctionOnSumCoordsMemAdelicSchwartzSpace
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicSchwartzConjMem
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RestrictedFinprodPureTensorAdelicSchwartz
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.WeilModelArchimedeanExponent
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MemGaussianVacuaSpanOfVacuumEquations
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DarbouxCoordinatesInsertZero
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HasCompactSupportFinprodSchwartzBruhatFiniteAdel
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLocallyConstantFinprodSchwartzBruhatFiniteAdel
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK
@@ -37,8 +33,8 @@ theorem Dop_apply (a b : κ → mixedEmbedding.mixedSpace F) (f : SInf F κ) (x 
     Dop a b f x = dH a b f x := by
   have htg : Function.HasTemperateGrowth fun x : κ → mixedEmbedding.mixedSpace F => ((trL b x : ℝ) : ℂ) :=
     (Complex.ofRealCLM.comp (trL b)).hasTemperateGrowth
-  simp only [Dop, ContinuousLinearMap.sub_apply, ContinuousLinearMap.smul_apply, SchwartzMap.sub_apply,
-    SchwartzMap.smul_apply, LineDeriv.lineDerivOpCLM_apply, SchwartzMap.lineDerivOp_apply_eq_fderiv,
+  simp only [Dop, ContinuousLinearMap.sub_apply, ContinuousLinearMap.smul_apply,
+    LineDeriv.lineDerivOpCLM_apply, SchwartzMap.lineDerivOp_apply_eq_fderiv,
     SchwartzMap.smulLeftCLM_apply_apply htg, smul_eq_mul]
   simp only [trL_apply, dotProduct, dH]
   ring

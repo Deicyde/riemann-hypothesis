@@ -1,18 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.PrinInf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.SiegelEisenstein.SplitPrincipalSets
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.ExistsPlacesSingleton
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsFinCombSingleZero
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.SqNormIntegralFundamentalDomainEqL2NormSq
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.IsBesPosOfBesselTied
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.FinitePartMemFrameStabilizerIffLocalStabilizer
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ConjPlEqCP
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LatticeReductionEqOneOfCompletionCongruence
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ReductionTrivialOfConjugatePlaceSelfDual
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.UnderEqOfMapEq
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MulAntiOfUnitary
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsEtaTildeUnramified
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.SignatureExists
 
 noncomputable section
 
@@ -45,7 +33,7 @@ theorem mem_latIn {V : HSp D} {L : Lat V} {x : V.V} : x ∈ latIn V L ↔ V.fram
 theorem hT_eq (V : HSp D) (x y : V.V) :
     V.hT x y = ∑ i, ∑ j, star (V.frame.equivFun x i) * V.gram i j * V.frame.equivFun y j := by
   conv_lhs => rw [← V.frame.sum_equivFun x, ← V.frame.sum_equivFun y]
-  simp only [map_sum, map_smulₛₗ, map_smul, LinearMap.sum_apply, LinearMap.smul_apply, smul_eq_mul, HSpace.gram,
+  simp only [map_sum, map_smulₛₗ, LinearMap.sum_apply, LinearMap.smul_apply, smul_eq_mul, HSpace.gram,
     Finset.mul_sum, starRingEnd_apply, RingHom.id_apply]
   rw [Finset.sum_comm]
   exact Finset.sum_congr rfl fun i _ => Finset.sum_congr rfl fun j _ => by ring

@@ -1,17 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BrPairFApply
-import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.InfClassAt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUniqueIsFunForm
-import Formalism.SharpRestriction.Divisibility.PrimeDegreeVariant
-import Formalism.PieriBlockIdeals.StatementLA
-import Formalism.MirabolicMackeyTheory.MirabolicMackeyProofs.RamBasic
-import Development.AbelianVarietyTheory.Statements.HeckeThetaIntegrals.FormulaAt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SumExactExponentsSmulMemLocalizedCoeffLattice
-import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.StatementWithTransposeOfBranching
-import Formalism.LocalToGlobal.Divisibility.BrJoint
-import Formalism.LocalToGlobal.Columns.CoefficientsModP
-import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.ReductionLemmaFirst
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsSmulMemOfLeLocP
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.Columns.FiniteSumNonzeroLargeDepth
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.DIV
 open IsDedekindDomain NumberField Matrix GlobalTheory.ChiGrid GlobalTheory.FunObj GlobalTheory.RowTest GlobalTheory.RowClaim GlobalTheory.TestLat GlobalTheory.SumSize
@@ -44,13 +32,13 @@ theorem latLast_isLattice : ∀ {E : Type} [Field E] [NumberField E] {n N : ℕ}
   have gm : ∀ m ∈ M, g m ∈ L := fun m hm => (hL _).2 ⟨by simpa [gC] using hm, 0, by simp [gL]⟩
   have he : e ∈ L := (hL _).2 ⟨by
       have : (fun k : Fin n => e (Fin.castSucc k)) = 0 := by
-        funext k; simp [e, Pi.single_apply, Fin.castSucc_ne_last]
+        funext k; simp [e, Fin.castSucc_ne_last]
       rw [this]; exact M.zero_mem, 1, by simp [e]⟩
   have dec : ∀ x : Fin (n + 1) → E, x = g (fun k => x (Fin.castSucc k)) + x (Fin.last n) • e := by
     intro x; ext j
     refine Fin.lastCases ?_ (fun i => ?_) j
     · simp [gL, e]
-    · simp [gC, e, Pi.single_apply, Fin.castSucc_ne_last]
+    · simp [gC, e, Fin.castSucc_ne_last]
   have hLeq : L = M.map (g.restrictScalars (𝓞 E)) ⊔ Submodule.span (𝓞 E) {e} := by
     apply le_antisymm
     · intro v hv

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.GeoNum
 import GroundTheory.HeightsAndTheta.Heights.IntegralModels.PSectionNef
 import Development.WeilBound.CoreStatements.HodgeTatePoints.GfForms

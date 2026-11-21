@@ -1,12 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsLeadOfUnif
-import Development.AbelianVarietyTheory.Definitions.Degenerations.AdmissibleBaseOfCompleteDvr
-import Development.AbelianVarietyTheory.Definitions.Uniformization.SeriesFrame
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.FamMod
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MulSecK
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.ExistsFamOfIsPullDeg
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.PullGenPf
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.ProdExpPf
 
 noncomputable section
 
@@ -120,7 +114,7 @@ theorem exists_sq (hB : D.TauBimult) (hE : D.PsiEven) (F : Type) [Field F] [Alge
         simp only [Fintype.prod_sum_type, Sum.elim_inl, Sum.elim_inr, Fintype.prod_unique, Fin.prod_univ_two,
           Fin.prod_univ_eight, e1, ei, a, mul_inv_cancel, ← pow_succ', Matrix.cons_val, Over.id_left]
         apply Additive.ofMul.injective
-        simp only [ofMul_mul, ofMul_inv, ofMul_zpow]
+        simp only [ofMul_mul, ofMul_zpow]
         push_cast
         module)
       (LB.mulGen D.P.L _ _ _ _ (LB.mulGen D.P.L _ _ _ _ s t) (LB.mulGen D.P.L _ _ _ _

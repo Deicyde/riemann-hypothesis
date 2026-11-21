@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.HermitianDescent.IsHerm
 import Development.AutomorphicArithmetic.UnitaryInvolutions.ExistsMulInvolutionEqFixedUnitOfComplete
+import Std.Tactic.BVDecide.Normalize.Prop
 open Matrix Polynomial
 open scoped TensorProduct
 

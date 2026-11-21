@@ -1,9 +1,9 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.RefLinked
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterSt
-import ReciprocityTheory.AnalyticForms.PotentialTheory.Pullback
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.AnalyticSystemRegularityProperties
-import Development.WeilBound.CoreStatements.FlagImmersions.DifferentiableAtAffCoord
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicSpectrum.Definitions.MetricPeriods.MetricsProjectionFormulaNef
+import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.CoordinateIdeals
+import Mathlib.Topology.Sheaves.Presheaf
+import ReciprocityTheory.AnalyticForms.PotentialTheory.PshShiftA
 
 noncomputable section
 

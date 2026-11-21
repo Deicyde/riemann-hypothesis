@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.FibreEqvPf
 import Development.EtaleCohomology.EtaleSheaves.AICOpenPf
 import Development.EtaleCohomology.EtaleSheaves.AlgebraicIntegralClosure.AicLoc

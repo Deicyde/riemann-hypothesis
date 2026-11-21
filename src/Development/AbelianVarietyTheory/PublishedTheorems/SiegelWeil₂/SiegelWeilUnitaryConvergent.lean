@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.SharpRestriction.Divisibility.SchurIrreducible
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.SiegelWeilAnisotropicUnitary
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.SphericalVolumeLift
 

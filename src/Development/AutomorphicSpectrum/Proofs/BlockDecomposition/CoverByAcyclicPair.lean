@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PairStructureOnLine
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.HarishChandraModules.LowKTypeMultiplicity.EigenspaceCyclicDensity.CreationOperators.GeneralizedVermaModulePolynomial
-import CompanionTheory.HarishChandraModules.LowKTypeMultiplicity.EigenspaceCyclicDensity.CreationOperators.CreAnnApply
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.MemFiltOfWords
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SgMulSelf
 
@@ -495,7 +494,7 @@ theorem freeR (n : ℕ) : ∃ (W : Type) (_ : AddCommGroup W) (_ : Module ℂ W)
     have r1 := hr p q
     have l1 := hl p q
     cases s <;> cases t <;> simp only [aR, dR, Bool.false_eq_true, if_false, if_true, sub_mul, mul_sub, add_mul, mul_add,
-      r1, l1, c1, ← c2, Prod.mk.injEq, reduceCtorEq, false_and, true_and, and_true] <;> by_cases h : p = q <;> simp [h] <;> abel
+      r1, l1, c1, ← c2, Prod.mk.injEq, reduceCtorEq, false_and, true_and] <;> by_cases h : p = q <;> simp [h] <;> abel
   · rintro ⟨s, p⟩ k t ht
     cases s
     · exact lT_mem Fil (a p) 1 (fun l z hz => hF.a_mem p l z hz) k t ht
@@ -548,7 +547,7 @@ theorem coverR_of (hS : BdSqR) : CoverR := by
     have e2 := LinearMap.congr_fun (hP.comm a' b c e) w
     simp only [Module.End.mul_apply] at e1 e2
     simp only [F1, F2, Module.End.mul_apply, LinearMap.add_apply, LinearMap.rTensor_tmul, LinearMap.lTensor_tmul,
-      map_add, e1, e2, TensorProduct.add_tmul, TensorProduct.tmul_add]
+      map_add, e1, e2]
     abel
   let S : ℕ → Set (V ⊗[ℂ] W) := fun k => {t | ∃ v z, z ∈ Fil k ∧ t = v ⊗ₜ z}
   have hin : ∀ {k : ℕ} (v : V) {z : W}, z ∈ Fil k → v ⊗ₜ[ℂ] z ∈ Submodule.span ℂ (S k) :=

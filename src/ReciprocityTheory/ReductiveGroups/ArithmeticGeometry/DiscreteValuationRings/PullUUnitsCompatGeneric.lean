@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.AppCompatGeneric
+import Mathlib.Tactic.ENatToNat
 
 set_option autoImplicit false
 
@@ -78,7 +81,7 @@ lemma pullU_of_eq_id (f : Z ⟶ Z) (hf : f = 𝟙 Z) (U V : Z.Opens) (hV : V ≤
     (c : Γ(Z, U)ˣ) : res hV (pullU f U c) = res hV' c := by
   subst hf
   ext
-  simp [res, pullU, CommRingCat.hom_id, Units.coe_map] <;> rfl
+  simp [res, pullU, Units.coe_map] <;> rfl
 
 open scoped Classical in
 

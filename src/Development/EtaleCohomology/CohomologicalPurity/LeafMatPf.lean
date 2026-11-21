@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.CohomologicalPurity.LeafClCut
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.TotallySplit
 
 noncomputable section
 open Matrix

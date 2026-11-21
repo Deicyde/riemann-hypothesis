@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PublishedTheorems.JacquetShalikaBound.FormQuasiInvariantMirabolic
+import GroundTheory.AutomorphicForms.MacdonaldWhittakerHecke
 
 noncomputable section
 

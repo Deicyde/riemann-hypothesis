@@ -1,7 +1,8 @@
-import Mathlib
-import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.TermLoc
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.EFSymmCont
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.ImportsMoreMore
+import Mathlib.RingTheory.Valuation.Extension
 
 noncomputable section
 
@@ -356,7 +357,7 @@ theorem mem_O_inl (y : (D.s.atP p).Fp) (hy : y ∈ 𝒪[(D.s.atP p).Fp]) : sg.e.
   · refine ⟨Polynomial.X ^ 2 - Polynomial.X, Polynomial.monic_X_pow_sub (by rw [Polynomial.degree_X]; norm_num), ?_⟩
     have h : sg.e.symm (1, 0) * sg.e.symm (1, 0) = sg.e.symm ((1 : (D.s.atP p).Fp), (0 : (D.s.atP p).Fp)) := by
       rw [← map_mul]; congr 1; ext <;> simp
-    simp [Polynomial.eval₂_sub, Polynomial.eval₂_X_pow, pow_two, h]
+    simp [Polynomial.eval₂_sub, pow_two, h]
 
 theorem comp_mem (z : (D.s.atP p).Ep) (hz : z ∈ (D.s.atP p).O) :
     (sg.e z).1 ∈ 𝒪[(D.s.atP p).Fp] ∧ (sg.e z).2 ∈ 𝒪[(D.s.atP p).Fp] := by

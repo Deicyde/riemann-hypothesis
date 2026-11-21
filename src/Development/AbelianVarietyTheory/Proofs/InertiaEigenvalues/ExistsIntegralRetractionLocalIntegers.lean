@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LiftQMk
+import Formalism.LocalRingCardinality.SpanPowerMembership.NDLocE
+import Mathlib.Algebra.Module.StablyFree.Basic
 open Formalism.MainNotions.N Formalism.BasicNotions.Loc GlobalTheory.UseLoc
 
 namespace GlobalTheory.UseLoc

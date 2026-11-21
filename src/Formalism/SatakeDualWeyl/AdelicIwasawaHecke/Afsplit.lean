@@ -1,6 +1,6 @@
-import Formalism.SatakeDualWeyl.StatementC
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.AfsplitC
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.RationalPointsLeHolds
 
 noncomputable section
 open Matrix TensorProduct NumberField IsDedekindDomain
@@ -48,7 +48,7 @@ theorem afsplit_stab_iff (S : Subring A) (g : GL n A) :
   have hcol : ∀ (M : Matrix n n A) (i j : n), (M *ᵥ Pi.single j (1 : A)) i = M i j := by
     intro M i j
     first
-      | simp [Matrix.mulVec_single_one]
+      | simp
       | simp [Matrix.mulVec, dotProduct, Pi.single_apply]
       | simp [Matrix.mulVec, Matrix.dotProduct, Pi.single_apply]
   constructor

@@ -1,8 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.LtChar
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConjCongr
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsUnramifiedPeriodAinfUnit
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.NonemptyClosureHomTiltField
+import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.EqZeroOfInAMul
+import Mathlib.RingTheory.Ideal.Norm.RelNorm
 
 noncomputable section
 

@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.BlowupExistsHolds
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.BlowPolSt
 open GlobalTheory.TorRef GlobalTheory.ShFam
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.blowup_exists_holds : BlowExSt := by

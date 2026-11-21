@@ -1,6 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.AMassStA
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.CNormSt
 import ReciprocityTheory.AnalyticForms.AnalyticCharts.NullZero
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.IsBergDensity
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterFS
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterSt
 
 noncomputable section
 
@@ -124,7 +129,7 @@ theorem gb_exists_scale {Δ : MvPolynomial (Fin (D + 1)) ℂ} (hΔ : Δ ≠ 0) :
     refine Fin.cases ?_ (fun i => ?_) k
     · simp
     · first
-      | (simp [hw0]; done)
+      | (simp; done)
       | (simp; field_simp)
   rw [hw']
   exact left_ne_zero_of_mul hw

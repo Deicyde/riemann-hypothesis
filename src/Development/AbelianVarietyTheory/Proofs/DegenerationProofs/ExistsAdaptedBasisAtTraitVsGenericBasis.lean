@@ -1,12 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.IsFrameIff
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsMinOn
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsIsoSection
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.SectionPowerCalculusGeometricFibre
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.MemMaximalIdeal
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.NormsOfAdapted
 import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.ExpBijFAndExpandsFLin
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsFramesOnUniformisedModelFibre
 
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry NumberField IsLocalRing
 open scoped CategoryTheory.Obj BigOperators

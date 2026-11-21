@@ -1,12 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.NearSplit
-import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.EntryMem
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PublishedTheorems.FerreroWashington
 import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.IrrIff
 import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.LMemMax
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.Clifford
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CharacterLevelBounds.PlacesQ
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.AdTransfer
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.LevelIso
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.BaseChangeUnits.CentralResidueGroups.AutQIso
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual Formalism.HC ReciprocityTheory.Gal IsLocalRing Polynomial UpperTheory.V.Base UpperTheory.V.Alg UpperTheory.V.HV UpperTheory.V.GradeZeroInterpolatingElement UpperTheory.V.Ws
@@ -101,7 +99,7 @@ private theorem gsp_map {R R' : Type} [CommRing R] [CommRing R'] (f : R →+* R'
   have e : adj (X.map f) = (adj X).map f := by ext i j; simp [adj_apply]
   rw [IsGSp, e, ← Matrix.map_mul, h]
   ext i j
-  by_cases hij : i = j <;> simp [Matrix.one_apply, hij]
+  by_cases hij : i = j <;> simp [hij]
 
 variable {Ω : Type} [Field Ω] [CharZero Ω] [IsAlgClosure ℚ Ω] {l : ℕ} [Fact l.Prime] {c : Coef l}
 

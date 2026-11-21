@@ -1,5 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsFinSetSplitPlacesCoprimeConductor
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.LinearAlgebra.ExteriorPower.Basic
+import Mathlib.NumberTheory.NumberField.CMField
+import Mathlib.RingTheory.DividedPowers.SubDPIdeal
+import Mathlib.RingTheory.Valuation.Discrete.IsDiscreteValuationRing
 
 noncomputable section
 

@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.ResMapBijective
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.LocalRingsCompletion.adicComplete
+import Mathlib.RingTheory.AdicCompletion.Topology
+import Mathlib.RingTheory.MvPowerSeries.Equiv
 
 open IsLocalRing MvPowerSeries UpperTheory.V.Alg
 

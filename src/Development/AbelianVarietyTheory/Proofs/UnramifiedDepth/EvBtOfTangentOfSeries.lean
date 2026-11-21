@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.DualLattices.EvBtStatement
 import ReciprocityTheory.DualLattices.WFrobStatement
 import ReciprocityTheory.DualLattices.PSerFrobStatement
+import Mathlib.Tactic.ENatToNat
 
 noncomputable section
 

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsUnifAt
 import Development.AutomorphicArithmetic.Foundations.Convolution.HermitianDescent.IsHerm
 

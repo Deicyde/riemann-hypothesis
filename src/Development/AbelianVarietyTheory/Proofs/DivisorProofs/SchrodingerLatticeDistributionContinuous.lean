@@ -1,9 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AveragedIntegralFunctional
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzBruhatIntegrable
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsStdCharNegOneOfStandardTraceAdelicAddChar
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsHaarAdelicVectorsBoundsPureTensorsSlices
 
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -51,13 +49,13 @@ def linI {r : ℕ} {κ : Type} [Fintype κ] (c : Fin r → κ → mixedEmbedding
     (Fin r → mixedEmbedding.mixedSpace F) →ₗ[ℝ] (κ → mixedEmbedding.mixedSpace F) where
   toFun y k := ∑ j, y j * c j k
   map_add' y y' := by funext k; simp [add_mul, Finset.sum_add_distrib]
-  map_smul' a y := by funext k; simp [Finset.smul_sum, smul_mul_assoc]
+  map_smul' a y := by funext k; simp [Finset.smul_sum]
 
 def linP {r : ℕ} {κ : Type} [Fintype κ] (a : Fin r → κ → mixedEmbedding.mixedSpace F) :
     (κ → mixedEmbedding.mixedSpace F) →ₗ[ℝ] (Fin r → mixedEmbedding.mixedSpace F) where
   toFun v i := ∑ k, a i k * v k
   map_add' y y' := by funext k; simp [mul_add, Finset.sum_add_distrib]
-  map_smul' a y := by funext k; simp [Finset.smul_sum, mul_smul_comm]
+  map_smul' a y := by funext k; simp [Finset.smul_sum]
 
 theorem exists_leftInv {r : ℕ} {κ : Type} [Fintype κ] (w : Fin r → κ → F) (hw : LinearIndependent F w) :
     ∃ A : Matrix (Fin r) κ F, ∀ i j, ∑ k, A i k * w j k = if i = j then 1 else 0 := by

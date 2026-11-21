@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.TensSmooth
 import GroundTheory.AutomorphicForms.L2LocalComponents.ArchBump
 import GroundTheory.AutomorphicForms.CuspidalProjection.OrthogonalProjectionOntoCompSubtypeL

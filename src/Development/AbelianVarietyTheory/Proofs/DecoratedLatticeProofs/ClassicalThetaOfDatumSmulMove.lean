@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.KernelLattices.ThDistC
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.KernelLattices.XiIndCClass
 open NumberField IsDedekindDomain
 
 namespace GlobalTheory.Corev.ThCLin

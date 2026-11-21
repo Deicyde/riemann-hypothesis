@@ -1,10 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.T2SpaceAdelicGeneralLinearGroupNumberField
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FiniteVolumeAdelicUnitaryQuotient
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsMulRightInvariantOfFundamentalDomain
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.DefClassNum
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.MeasurePreservingMulLeft
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.MapInfiniteGLHaarMeasureMulLeft
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.DifferentiableAtChart
 
 open NumberField IsDedekindDomain Matrix MeasureTheory Topology
 open GlobalTheory.AutomorphicL2Unitary GlobalTheory.UnitaryBC GlobalTheory.CuspRep GlobalTheory.CuspRep.CuspidalL2GL
@@ -127,7 +124,7 @@ theorem isHaarMeasure_nuGL : (nuGL E j).IsHaarMeasure := by
     ext s hs
     rw [Measure.map_apply (measurable_const_mul g) hs, nuGL_apply, nuGL_apply]
     have e1 : (fun h => g * h) ⁻¹' s = (fun h => g⁻¹ * h) '' s := by
-      ext y; simp [Set.mem_image, eq_inv_mul_iff_mul_eq]
+      ext y; simp
     have e2 : ent E j '' ((fun h => g⁻¹ * h) '' s) =
         (fun x : MatInf E j => ent E j g⁻¹ * x) '' (ent E j '' s) := by
       rw [Set.image_image, Set.image_image]

@@ -1,11 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EllipticCurveMapToAbelian
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExpConjOfOne
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsUniqueHcharOfFiniteOrder
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsNormLeHeightPow
-import Development.AbelianVarietyTheory.PublishedTheorems.PublishedFoundations.NonemptyAlgHomOfIsRayOfDvd
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.ConjTupRefl
 
 set_option autoImplicit false
 noncomputable section

@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.SatakeDualWeyl.StatementC
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LevelProductIndex.Development
 
 open Matrix NumberField IsDedekindDomain

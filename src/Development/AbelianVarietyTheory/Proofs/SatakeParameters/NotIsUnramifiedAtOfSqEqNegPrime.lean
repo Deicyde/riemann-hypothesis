@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.NotSqMulUnit
+import Mathlib.NumberTheory.NumberField.Discriminant.Different
 open NumberField IsDedekindDomain
 
 namespace GlobalTheory.SqrtNegRam

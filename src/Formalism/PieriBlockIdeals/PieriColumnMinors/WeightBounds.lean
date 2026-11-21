@@ -1,8 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.PieriBlockIdeals.LatticeInclusionRealSettingAlt
-import Formalism.PieriBlockIdeals.PieriColumnMinors.SL2BinomialLattices
 import Formalism.PieriBlockIdeals.PieriColumnMinors.RealLocalDeltaNabla
 import Formalism.PieriBlockIdeals.PieriColumnMinors.DepthNonnegative
-import Formalism.PieriBlockIdeals.PieriColumnMinors.ParameterBounds
 import Formalism.PieriBlockIdeals.PieriColumnMinors.HighestWeightProdLeadingMinors
 import Formalism.PieriBlockIdeals.PieriColumnMinors.WorkedExample
 

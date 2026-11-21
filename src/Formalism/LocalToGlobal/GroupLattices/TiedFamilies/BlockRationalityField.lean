@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.TieEvR
-import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.RecAct
 
 noncomputable section
 

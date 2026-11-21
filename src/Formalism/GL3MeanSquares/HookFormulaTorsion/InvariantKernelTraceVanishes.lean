@@ -1,5 +1,19 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.AffineFibreCountComparison
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Rat.Star
+import Mathlib.LinearAlgebra.Matrix.Rank
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
 
 namespace Formalism.HermitianLattices.RamifiedLatticeOperators.IndexDeterminantCharacterSums
 
@@ -262,7 +276,7 @@ theorem overlattice_three_orbits : Formalism.HermitianLattices.RamifiedLatticeOp
           linear_combination (-(q : ℚ)) * hm + hk
         have h2 : (⌊(q : ℚ) * sel a⌋ : ℤ) = k - q * m := by exact_mod_cast h1
         show (k : ZMod q) = ((⌊(q : ℚ) * sel a⌋ : ℤ) : ZMod q)
-        rw [h2]; push_cast; simp [ZMod.natCast_self]
+        rw [h2]; push_cast; simp
       have fv_zero : fv 0 = 0 := by
         have h := W 0 La.zero_mem 0 rfl 0 (by simp)
         simpa using h.symm

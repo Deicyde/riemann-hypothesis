@@ -1,8 +1,7 @@
-import Formalism.PeriodIntegrals.WeylForU
-import Formalism.PeriodIntegrals.UnitaryDense
-import Formalism.PeriodIntegrals.HwIrred
-import Formalism.GradedWeylDivisibility.DualWeylDominanceOf
-import Formalism.GradedWeylDivisibility.FinalC
+import BuildAid.Leniency.Open
+import Formalism.GradedWeylDivisibility.StatementA
+import Formalism.PeriodIntegrals.UpqRep
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 noncomputable section
 

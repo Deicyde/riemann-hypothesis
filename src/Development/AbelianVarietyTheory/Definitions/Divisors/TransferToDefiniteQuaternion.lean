@@ -1,6 +1,5 @@
-import Mathlib
-import CompanionTheory.EightfoldTheory.VariationTheory.PublishedTheorems.ImportsAlt
-import CompanionTheory.EightfoldTheory.VariationTheory.SelfDualForms.SelfDualWeylChambers.Imports
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.AutomorphicVarieties.IdeleGenerators.ShortLatticeUnitarize.Unitarize
 
 noncomputable section
 

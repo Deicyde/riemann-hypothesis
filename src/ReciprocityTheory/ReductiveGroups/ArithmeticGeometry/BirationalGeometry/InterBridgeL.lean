@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterBridgeE
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterBridgeK
-import ReciprocityTheory.AnalyticForms.AnalyticCharts.NullZero
+import Mathlib.Topology.Algebra.MvPolynomial
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterRedB
 
 noncomputable section
 

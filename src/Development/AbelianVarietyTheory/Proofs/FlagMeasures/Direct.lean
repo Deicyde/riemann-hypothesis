@@ -1,10 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.LocWSOf
-import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.VolPin
-import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.JacobianCoordinates
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.NCoords
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsUniquePlace
-import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
 
 noncomputable section
 open scoped Classical ENNReal

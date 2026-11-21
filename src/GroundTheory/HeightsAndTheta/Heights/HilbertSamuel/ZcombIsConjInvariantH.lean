@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsArith
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsKodairaSection
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsSectionProduct
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsPerturbSemipos

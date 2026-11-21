@@ -1,4 +1,9 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.IsCompactZetaLe
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.StatementB
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 open Matrix MeasureTheory Filter Topology
 open scoped ComplexConjugate InnerProductSpace ContDiff

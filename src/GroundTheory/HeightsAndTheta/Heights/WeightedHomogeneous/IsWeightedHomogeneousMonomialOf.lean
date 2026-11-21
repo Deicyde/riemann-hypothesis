@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.WeightedHomogeneous.Statements
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.WeightedHomogeneous.SectionInjectivityHypothesesProjectiveLine
 import GroundTheory.HeightsAndTheta.Heights.WeightedHomogeneous.PSectionSmall
 set_option maxSynthPendingDepth 1

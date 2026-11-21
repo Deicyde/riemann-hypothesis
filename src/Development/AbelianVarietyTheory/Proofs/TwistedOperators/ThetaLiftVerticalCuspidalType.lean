@@ -1,18 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RangeSndRel
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.CuspAlongSmoothRows
-import Development.AbelianVarietyTheory.Statements.HeckeThetaIntegrals.ThetaIntegralsAgree
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.ExistsAllTiedNotStable
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.DiscreteSeriesHermitianUniqueOfClassification
-import Development.AbelianVarietyTheory.BlockTheory.HeightDefect.FinitePartTypes
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.AutomorphicFormUniformLimitDiscreteSeriesSeriesStatement
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaGrowthOfThetaSquareIntegrable
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.FockVectorsOverVacuaDenseThetaFunctions
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CuspAlongOfPairLifts
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.MultTApplyRapidDec
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IntegrableOnOfRapidDec
+import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsGivenStageEqOne
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.DIV
 open IsDedekindDomain NumberField MeasureTheory GlobalTheory.ChiGrid GlobalTheory.FunObj GlobalTheory.RowTest GlobalTheory.StdFrames GlobalTheory.RowClaim GlobalTheory.FlipRun
 attribute [local instance] Formalism.BasicNotions.Host.cmStar GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField borelKw borelSpaceKw
@@ -41,7 +31,7 @@ theorem approx : GlobalTheory.IndefiniteRowSideFullHecke.CuspAlongSmoothLifts.Li
       thetaKO ((G.X i j).ω.toSgn true) ((GlobalTheory.Grid.ofSgn true _).symm h) g f := by
     intro h g f
     simp only [thetaKO, GlobalTheory.Grid.WRep.toSgn, MonoidHom.comp_apply, MonoidHom.prodMap, MonoidHom.prod_apply,
-      MonoidHom.coe_comp, Function.comp_apply, MonoidHom.coe_fst, MonoidHom.coe_snd, MulEquiv.coe_toMonoidHom,
+      MonoidHom.coe_fst, MonoidHom.coe_snd, MulEquiv.coe_toMonoidHom,
       MulEquiv.apply_symm_apply, MonoidHom.id_apply]
   obtain ⟨μW, 𝓕W, hμW⟩ := GlobalTheory.Size.exists_isCovolOne (D := D) (V := GlobalTheory.Grid.neg (G.V (i + 1) j).V) (W := (G.V i j).V)
   obtain ⟨U, hU, hΦU, hdense⟩ := GlobalTheory.FockDensity.fockDense D _ _ AF BF R.θ R.ψ hψ hθ μW 𝓕W hμW Φ hΦ

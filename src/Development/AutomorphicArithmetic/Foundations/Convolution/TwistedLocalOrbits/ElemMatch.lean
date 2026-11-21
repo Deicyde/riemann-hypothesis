@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.TwistedLocalOrbits.Match
 import Development.AutomorphicArithmetic.Foundations.Convolution.TwistedLocalOrbits.Bridge
 import Development.AutomorphicArithmetic.Foundations.Convolution.TwistedLocalOrbits.ConjDesc
@@ -7,6 +9,7 @@ import Development.AutomorphicArithmetic.Foundations.Convolution.TwistedLocalOrb
 import Development.AutomorphicArithmetic.Foundations.Convolution.TwistedLocalOrbits.StrictNormal
 import Development.AutomorphicArithmetic.Foundations.Convolution.TwistedLocalOrbits.UnitNorm
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IwahoriProjSurjective
+import Mathlib.GroupTheory.DoubleCoset
 
 open MeasureTheory ValuativeRel GlobalTheory.PRep GlobalTheory.SplitWeil GlobalTheory.IndefiniteRowSideFullHecke.IwahoriDoubleCosets PositivityTheory.Rg.Tf.Loc UpperTheory.ConvolutionTheory.Loc
 

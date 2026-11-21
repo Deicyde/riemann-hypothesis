@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.ThPinsR
 import Development.AbelianVarietyTheory.BlockTheory.TorsionBlocks.RationalFormValues
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.TensorMapDescent

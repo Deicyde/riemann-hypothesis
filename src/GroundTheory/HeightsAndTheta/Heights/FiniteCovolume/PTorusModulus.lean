@@ -1,8 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.StatementsTorusModulus
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.StatementsRadicalTorusModulus
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.StatementsSemidirectHaar
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.PUnipotentModulusMatrix
+import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.MajorantInvolutionDiagonalForm
 
 namespace GroundTheory.Heights₂.Heights.FiniteCovolume
 

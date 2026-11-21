@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.TorMain
 import Formalism.LocalToGlobal.TorsionIntegrality.TorsionTranslationPowers.NonsingularJetNorms.ScaledTorsionPointNonsingular
 import Formalism.LocalToGlobal.TorsionIntegrality.TorsionTranslationPowers.NonsingularJetNorms.ExistsFinitePartOneIdeleSplitCongruenceQuotient

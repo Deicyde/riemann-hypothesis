@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.ArchimedeanWhittaker.ComplexWhittaker.InstMeasurableSpaceU2
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.EqZeroOfForallIntegralCoeff
+import Mathlib.Data.Int.Star
+import Mathlib.MeasureTheory.Integral.BoundedContinuousFunction
 
 namespace GroundTheory.Automorphic.ArchWhittakerC
 

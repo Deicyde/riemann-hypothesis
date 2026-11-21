@@ -1,12 +1,10 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.AnnihilatorBaseChange.SpecializationMapCompUniversalSection
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.AnnihilatorBaseChange.QuotientRegularAtOfQuotientFreeOverPowerSeries
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.AnnihilatorBaseChange.ExistsUltraLimitPairOfEventualQuotientMaps
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.AnnihilatorBaseChange.ExistsPowMaximalIdealSmulFiniteEqZero
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.AnnihilatorBaseChange.YCplMemOf
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.AnnihilatorBaseChange.FibEquiv
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.Patched
-import Mathlib
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.QRegScal
 
 open IsLocalRing Matrix Filter UpperTheory.V.Alg UpperTheory.V.W UpperTheory.V.AlgebraTools UpperTheory.V.Pa UpperTheory.V.Pa.Core
 open scoped TensorProduct
@@ -26,7 +24,7 @@ private theorem loc_of_pair {R X Y Z : Type} [CommRing R] [AddCommGroup X] [Modu
     refine ⟨c * ⟨f, hf⟩, ?_⟩
     have hc' := congrArg Φ hc
     simp only [Submonoid.smul_def, LinearMap.map_smul, h1] at hc'
-    simp only [Submonoid.smul_def, Submonoid.coe_mul, mul_smul]
+    simp only [Submonoid.smul_def, mul_smul]
     exact hc'
 
 theorem UpperTheory.V.Pa.Core.pmodEx :

@@ -1,6 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.IsResidueClassZero
-import Formalism.SharpRestriction.GrowthBounds.UnramifiedQuadraticSetting
-import Formalism.SharpRestriction.GrowthBounds.DataG
 
 open NumberField Formalism.FrobeniusOrbits Formalism.BasicNotions
 

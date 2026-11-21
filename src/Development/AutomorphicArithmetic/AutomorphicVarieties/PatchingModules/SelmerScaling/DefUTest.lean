@@ -1,10 +1,8 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.SelmerScaling.EpC
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.SelmerScaling.TestEx
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.SelmerScaling.TrBndDen
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.SelmerScaling.ClosureIdeal
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.SelmerScaling.TestVal
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.SelmerScaling.PrVr
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.SelmerScaling.PrAdd
 
 open IsLocalRing Matrix UpperTheory.V.Alg UpperTheory.V.W UpperTheory.V.AlgebraTools UpperTheory.V.Pa
 
@@ -87,7 +85,7 @@ theorem UpperTheory.V.Pa.defUTest :
       simp only [Matrix.map_apply, Matrix.smul_apply, smul_eq_mul]
       by_cases hij : i = j
       · subst hij
-        simp only [Matrix.one_apply_eq, map_one, mul_one]
+        simp only [Matrix.one_apply_eq, mul_one]
         exact (hE g _).trans rfl
       · simp only [Matrix.one_apply_ne hij, map_zero, mul_zero]
     · intro w g hg

@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TripleAdaptedPlaneLocalFactor
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentQuotientUnitVolumeStatement
 
 noncomputable section
 open scoped TensorProduct NNReal Matrix
@@ -92,7 +92,7 @@ theorem exists_levi_of {n n₁ : ℕ} {Y : Spc F E n} {Y₁ : Spc F E n₁} {H :
     refine ext_mulVec_single fun k => ?_
     have hcol : incM F H.ι *ᵥ Pi.single k 1 = incV F (H.ι *ᵥ Pi.single k 1) := by
       ext i
-      simp [mulVec_single_one, incM, incV]
+      simp [incM, incV]
     rw [← mulVec_mulVec, hcol]
     exact levi_mulVec_of_orth _ _ _ _ (by rw [sf_inc, (horth _).1, map_zero]) (by rw [sf_inc, (horth _).2, map_zero])
   · have h1 := GlobalTheory.Eis.Conv.absE_halfE F E σ hcm

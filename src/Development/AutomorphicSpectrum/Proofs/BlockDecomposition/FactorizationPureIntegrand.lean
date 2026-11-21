@@ -1,5 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.BndIUnits
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.EulerProducts.GenStable
+import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.VerticalStrips.GammaZeroLevelMembership
 
 noncomputable section
 

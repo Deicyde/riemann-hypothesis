@@ -1,8 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CharacterGerms.LatticeInclusionFormsInjective
-import Formalism.LocalToGlobal.CharacterGerms.CartesianBoundOnCurves
-import Formalism.LocalToGlobal.CharacterGerms.CoeffIterateZero
-import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.TwoMulChainStartIndexAddOneOfOdd
 import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.SubstEqOfCoeffEqOfKilled
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.NatCastMulCoeffOfPderivEq
 

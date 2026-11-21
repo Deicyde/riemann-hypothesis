@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.PAdicHodge.BCrisEigenWitt
-import GroundTheory.PAdicHodge.LocalBridge
 import GroundTheory.PAdicHodge.UnramifiedACris
-import GroundTheory.PAdicHodge.UnramifiedClosure
 import GroundTheory.LocalFields.WeilGroupDefs
 set_option maxSynthPendingDepth 1
 

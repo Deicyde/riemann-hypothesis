@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CharacterGerms.FirstPartialLawAtPoints
+import Formalism.LocalToGlobal.CharacterGerms.ValuationEqPairOfBiadditiveCross
 
 noncomputable section
 

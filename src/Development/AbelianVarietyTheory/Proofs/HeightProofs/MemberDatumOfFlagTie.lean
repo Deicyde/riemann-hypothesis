@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.BesselHermitianTheta.TiedBessel
 import Development.AbelianVarietyTheory.BlockTheory.HeightDefect.BesselDatum
-import Development.AbelianVarietyTheory.Counterexamples.HeightSurvey.BesselPeriodPositionOneEqZero
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.TotallySplit
 
 noncomputable section
 
@@ -39,7 +41,7 @@ theorem hT_co (B : HSp D) (x y : B.V) :
   simp only [map_sum, LinearMap.sum_apply, LinearMap.map_smulₛₗ, LinearMap.smul_apply, map_smul, smul_eq_mul, Finset.mul_sum]
   rw [Finset.sum_comm]
   refine Finset.sum_congr rfl fun i _ => Finset.sum_congr rfl fun j _ => ?_
-  simp only [co, HSpace.gram, RingHom.id_apply, starRingEnd_apply]
+  simp only [co, HSpace.gram, starRingEnd_apply]
   ring
 
 theorem cT_mulVec (B : HSp D) {ρ : ℕ} (e : Fin ρ → B.V) (v : B.V) (i : Fin ρ) :
@@ -421,7 +423,7 @@ theorem exists_dual (hι : HSpace.IsIsomEmb A B ι) {ρ : ℕ} (e : Fin ρ → B
   refine ⟨fun j => g j - ∑ l, ((1 / 2 : D.host.E) * B.hT (g l) (g j)) • e l, fun i j => ?_, fun i j => ?_,
     fun i x => ?_, fun i => ?_⟩
   · have h2 : star (2 : D.host.E) = 2 := by simp
-    simp [map_sum, LinearMap.sum_apply, hge, heg, ee, starRingEnd_apply, ← sw, h2]
+    simp [map_sum, LinearMap.sum_apply, hge, heg, ee, starRingEnd_apply, ← sw]
     ring
   · simp [map_sum, LinearMap.sum_apply, hge, ee]
   · simp [map_sum, LinearMap.sum_apply, hgA, eA']
@@ -479,7 +481,7 @@ theorem exists_same (hι : HSpace.IsIsomEmb A B ι) (b : BesDat A B ι) (θ : D.
       ee := fun i j => by simp [HSpace.hD, ee]
       ff := fun i j => by simp [HSpace.hD, ff]
       ef := fun i j => by
-        simp only [HSpace.hD, map_smul, LinearMap.map_smulₛₗ, LinearMap.smul_apply, fe, smul_eq_mul, RingHom.id_apply,
+        simp only [HSpace.hD, map_smul, LinearMap.map_smulₛₗ, LinearMap.smul_apply, fe, smul_eq_mul,
           starRingEnd_apply, star_inv₀, star_star]
         split_ifs with h
         · subst h; simp [ht]

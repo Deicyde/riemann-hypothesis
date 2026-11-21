@@ -1,4 +1,5 @@
-import Formalism.LocalToGlobal.Columns.ChainLawPhi
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.StdBasisFlagSubmoduleOfBlockTriangular
 
 open NumberField IsDedekindDomain Module

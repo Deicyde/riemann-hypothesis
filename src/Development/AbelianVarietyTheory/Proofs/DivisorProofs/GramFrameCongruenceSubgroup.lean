@@ -1,10 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PermMMulTranspose
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RiemannianHaarIndependentOfOrthonormalFrame
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PrincipalCongruenceConjMemArithmeticGroup
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.UpqLocallyCompactGroup
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LocallyCompactSecondCountableBorelCountable
-import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.MuCardLeTwo
+import Formalism.LocalRingCardinality.DataHost
+import Formalism.PadicSubsetSums.StableGradedCounts.ZBrauerNesbittAlg
 open NumberField IsDedekindDomain MeasureTheory Matrix GlobalTheory.AdLat GlobalTheory.UCls GlobalTheory.SUVol ReciprocityTheory.ChartRestriction.G.FD ReciprocityTheory.ChartRestriction.G.AR.Up GlobalTheory.CovTop.VolUp
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.L2.Theta Formalism.MainNotions.StandardLattice Formalism.IndefR.Lev Formalism.IndefR.Datum GlobalTheory.AdelicScalar
 open scoped ENNReal
@@ -24,7 +22,7 @@ theorem dgM_mul {r : ℕ} {d : Fin r → ℝ} (hd : ∀ a, d a * d a = 1) : dgM 
 theorem dgM_transpose {r : ℕ} (d : Fin r → ℝ) : (dgM d)ᵀ = dgM d := Matrix.diagonal_transpose _
 
 theorem cj_dgM {r : ℕ} (d : Fin r → ℝ) : cj (dgM d) = dgM d := by
-  ext a b; by_cases h : a = b <;> simp [h, Matrix.diagonal_apply]
+  ext a b; by_cases h : a = b <;> simp [h]
 
 theorem frame_facts_dg {E : Type} [Field E] {r : ℕ} (τ : E →+* ℂ) (G : Matrix (Fin r) (Fin r) E)
     (M : Matrix (Fin r) (Fin r) ℂ) (d : Fin r → ℝ) (hd : ∀ a, d a * d a = 1) (h : gram τ G M = dgM d) :
@@ -51,7 +49,7 @@ theorem inner_theta_dg {ι : Type} [Fintype ι] {r : ℕ} (d : ι → Fin r → 
   have key : ∀ t a b, (starRingEnd ℂ) ((d t a : ℂ) * Y (t, a, b) * (d t b : ℂ)) = -(Y (t, b, a)) := by
     intro t a b
     have h := congrArg (fun A : Matrix (Fin r) (Fin r) ℂ => A a b) (hY t)
-    simp only [IsSkew, dgM, Matrix.add_apply, Matrix.mul_diagonal, Matrix.diagonal_mul, Matrix.transpose_apply,
+    simp only [dgM, Matrix.add_apply, Matrix.mul_diagonal, Matrix.diagonal_mul, Matrix.transpose_apply,
       Matrix.map_apply, FrameIndep.blk, Matrix.of_apply, Matrix.zero_apply] at h
     have hb : (d t b : ℂ) * d t b = 1 := by rw [← Complex.ofReal_mul, hd]; simp
     rw [map_mul, map_mul, Complex.conj_ofReal, Complex.conj_ofReal]
@@ -250,6 +248,6 @@ theorem covolume_neg_frame : ∀ (E : Type) [Field E] [NumberField E] [IsCMField
   rw [gram_neg'] at h
   rw [← neg_neg (gram _ G _), h]
   ext a b
-  by_cases hab : a = b <;> simp [hab, Matrix.diagonal_apply]
+  by_cases hab : a = b <;> simp [hab]
 
 end GlobalTheory.CovolNegFrame

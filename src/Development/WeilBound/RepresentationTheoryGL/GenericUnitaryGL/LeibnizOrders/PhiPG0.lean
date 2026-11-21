@@ -1,5 +1,6 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.GenericUnitaryGL.LeibnizOrders.LeibnizOrd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.RepresentationTheoryGL.GenericUnitaryGL.LeibnizOrders.ProdGPn
 
 noncomputable section
 

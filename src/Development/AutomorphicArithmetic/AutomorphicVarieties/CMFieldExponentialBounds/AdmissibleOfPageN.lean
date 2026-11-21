@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PrimeSetBoundDataOfPrimitiveChar
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CMFieldExponentialBounds.logpair
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CMFieldExponentialBounds.bigpair
@@ -6,6 +7,7 @@ import Development.AutomorphicArithmetic.AutomorphicVarieties.CMFieldExponential
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CMFieldExponentialBounds.ErrorTermsLeSqrtExpRpow
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CMFieldExponentialBounds.ConductorBoundsOfIsChiField
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CMFieldExponentialBounds.IsCMFieldOfIsChiField
+import Batteries.Data.Nat.Gcd
 
 noncomputable section
 

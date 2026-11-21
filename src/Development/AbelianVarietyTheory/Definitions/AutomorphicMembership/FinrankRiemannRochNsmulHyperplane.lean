@@ -1,4 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.MemRiemannRochSpaceIffRegularAtEverywhere
 import Development.AbelianVarietyTheory.Definitions.Divisors.NotHasNonzeroSecOfIsEmpty
 

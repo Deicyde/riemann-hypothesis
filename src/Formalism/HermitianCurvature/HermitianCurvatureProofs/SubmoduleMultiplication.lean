@@ -1,4 +1,11 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.ThetaExistenceInductiveFromPieces
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
+import Mathlib.Order.CompletePartialOrder
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Formalism.FourierDecayAlt.A6 Formalism.FourierDecayAlt.A5 Filter Topology Matrix
 

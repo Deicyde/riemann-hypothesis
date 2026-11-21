@@ -1,6 +1,4 @@
-import Mathlib
-import ReciprocityTheory.AnalyticForms.MaIntEmpty
-import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.MdiscSt
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.LintegralImageEqLintegralNormSqDetMul
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExtFormAdjEqNegSecondForm
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.LinearIndependentRealOfIntOfDiscrete
@@ -41,7 +39,7 @@ theorem maDens_le_prod_of_levi_le_diag {e : ℕ} (f : (Fin e → ℂ) → ℝ) (
     have hs : ∑ j, c j * ‖(Pi.single k (1 : ℂ) : Fin e → ℂ) j‖ ^ 2 = c k := by
       rw [Finset.sum_eq_single k]
       · simp
-      · intro j _ hj; simp [Pi.single_apply, hj]
+      · intro j _ hj; simp [hj]
       · simp
     rwa [hs] at h
   have hdet : (H.det).re ≤ ∏ k, c k := by

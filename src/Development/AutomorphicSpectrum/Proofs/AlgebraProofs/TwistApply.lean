@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.IsSplitGaussChars
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.EigenProjectorsSplitAction
+import Mathlib.Order.CompletePartialOrder
 
 noncomputable section
 

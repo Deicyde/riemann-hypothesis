@@ -1,8 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.MapCSmulMulVec
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.DataNLoc
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.OneAddXMulDerivativeBin
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CoordApply
+import Mathlib.Algebra.Group.Pi.Units
+import Mathlib.RingTheory.PowerSeries.Inverse
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 open PowerSeries Formalism.WeaklyAdmissibleFiltrations Formalism.BasicNotions Formalism.BasicNotions.Loc GlobalTheory.NB GlobalTheory.CycFr GlobalTheory.WachTie
 
@@ -71,7 +71,7 @@ theorem _root_.GlobalTheory.WachTie.exists_invariant_basis : ∀ {G : Type} [Gro
     haveI := Module.Finite.of_basis b
     rw [LinearMap.isUnit_iff_isUnit_det, ← LinearMap.det_toMatrix b]
     have hM : LinearMap.toMatrix b b f = 1 + (_root_.Formalism.BasicNotions.letπ : _root_.Formalism.BasicNotions.LetA O n) • LinearMap.toMatrix b b g := by
-      simp [f, map_add, LinearMap.toMatrix_id]
+      simp [f, map_add]
     rw [hM, Pi.isUnit_iff]
     intro i
     rw [PowerSeries.isUnit_iff_constantCoeff]

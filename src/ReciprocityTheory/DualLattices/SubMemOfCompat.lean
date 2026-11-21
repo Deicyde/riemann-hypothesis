@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.DualLattices.AinfTower
 import ReciprocityTheory.DualLattices.HtLinStatement
+import ReciprocityTheory.DualLattices.Imports
 
 noncomputable section
 

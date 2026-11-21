@@ -1,4 +1,11 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementTA
+import Mathlib.Analysis.InnerProductSpace.GramMatrix
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace Formalism.FourierDecayAlt.P.PointSetConstantMembership
 

@@ -1,7 +1,5 @@
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.GelfandTsetlinLowering.ZScalarVanish
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.GelfandTsetlinLowering.IoXiHw
-import Formalism.PeriodIntegrals.HwIrred
-import Formalism.PeriodIntegrals.GTBranch
 
 noncomputable section
 

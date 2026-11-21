@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.ArakelovInstances.DetOfBlockDiag
+import Mathlib.Analysis.Matrix.Normed
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.Tactic.ENatToNat
 
 set_option autoImplicit false
 

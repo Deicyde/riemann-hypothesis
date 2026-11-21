@@ -1,5 +1,15 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.DistinguishedUnitIdeals.ExistsConstOfInvariantMod
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.LaurentSeries
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 
@@ -120,7 +130,7 @@ lemma fixed_const (T : Set (Ks ≃ₐ[LL] Ks))
   first
     | (simp only [map_smul, Module.Basis.repr_self, Finsupp.coe_finset_sum, Finset.sum_apply,
         Finsupp.smul_apply, Finsupp.single_apply, smul_eq_mul, mul_ite, mul_one, mul_zero,
-        Finset.sum_ite_eq, Finset.sum_ite_eq', Finsupp.mem_support_iff]
+        Finset.sum_ite_eq', Finsupp.mem_support_iff]
        split_ifs with hj
        · exact ha j
        · rw [map_zero]
@@ -333,7 +343,7 @@ lemma cf_cst_ne (d : D) {i : ℤ} (h : i ≠ 0) : cf (cstD (LL := LL) Ks d) i = 
 lemma cf_tp (g : ℤ) (f : Amb LL Ks D) (i : ℤ) : cf (tp Ks g • f) i = cf f (i - g) := by
   first
     | (have h := HahnModule.coeff_single_smul_vadd (r := (1 : Ks)) (x := f) (a := i - g) (b := g)
-       simp only [vadd_eq_add, one_smul, sub_add_cancel, add_sub_cancel] at h
+       simp only [vadd_eq_add, one_smul, add_sub_cancel] at h
        exact h)
     | (have h := HahnModule.coeff_single_smul_vadd (r := (1 : Ks)) (x := f) (a := i - g) (b := g)
        simp only [vadd_eq_add, one_smul, sub_add_cancel, add_sub_cancel, add_comm] at h

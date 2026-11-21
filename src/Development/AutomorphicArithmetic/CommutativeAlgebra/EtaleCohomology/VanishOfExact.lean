@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.TPullTMap
+import Mathlib.CategoryTheory.Abelian.FunctorCategory
+import Mathlib.CategoryTheory.Monoidal.Mon
 
 set_option backward.isDefEq.respectTransparency false
 

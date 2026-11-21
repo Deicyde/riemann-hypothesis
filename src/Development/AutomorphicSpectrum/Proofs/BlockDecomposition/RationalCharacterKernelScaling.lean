@@ -1,15 +1,9 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ThetaPartD
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsBoundUnitary
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HermInf
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HermOf
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.TensorLocallyCompactRingStatement
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.FiniteAdeleTopologyStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RatTuple
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.SchwartzBruhatEqSumPure
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.AdelicCharacterArchimedeanFormStatement
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.StandardAdelicCharacterStatement
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.InfiniteAdeleHaarMapEqScaledVolumeStatement
+import Mathlib.Data.Finsupp.Pointwise
 open scoped Matrix NNReal ENNReal ComplexConjugate TensorProduct
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.L2.Theta Formalism.L2.Pj Formalism.IndefR.Datum MeasureTheory
 open GlobalTheory.AutomorphicL2Unitary GlobalTheory.AdelicU GlobalTheory.Doubling GlobalTheory.Cont GlobalTheory.MixModel GlobalTheory.StdUnn PositivityTheory.GramSchwartzFunctions PositivityTheory.GramSchwartzFunctions.BC GlobalTheory.CompanionTheory.SiegelND
@@ -44,7 +38,7 @@ theorem inNOh_tmul {F E : Type} [Field F] [NumberField F] [Field E] [Algebra F E
   · subst h
     exact ⟨α, hα, by simp [Algebra.TensorProduct.basis_repr_tmul]⟩
   · refine ⟨0, fun v => zero_mem _, ?_⟩
-    simp [Algebra.TensorProduct.basis_repr_tmul, Finsupp.single_apply, Ne.symm h]
+    simp [Algebra.TensorProduct.basis_repr_tmul, Ne.symm h]
 
 theorem exists_common_denom {E : Type} [Field E] [NumberField E] {d : ℕ} (ε : Fin d → E) :
     ∃ y : ℤ, y ≠ 0 ∧ ∀ k, IsIntegral ℤ ((y : E) * ε k) := by

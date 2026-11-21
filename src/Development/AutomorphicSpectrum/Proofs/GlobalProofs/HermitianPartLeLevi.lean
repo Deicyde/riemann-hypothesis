@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.IsAdaptedEmpty
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.LeviEqISupParts
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.ExistsUnitOfComm
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Matrix
@@ -49,7 +49,7 @@ theorem comm_onPart {Q G t : Matrix (Fin n) (Fin n) A} (htQ : t * Q = Q) (hQt : 
 
 theorem mul_onPart_inv {Q G H : Matrix (Fin n) (Fin n) A} (hQ : Q * Q = Q) (hGH : G * H = 1) :
     G * onPart Q H * Q = Q := by
-  simp only [onPart, Matrix.mul_add, Matrix.add_mul, Matrix.mul_sub, Matrix.sub_mul, Matrix.mul_one, Matrix.one_mul,
+  simp only [onPart, Matrix.mul_add, Matrix.add_mul, Matrix.mul_sub, Matrix.sub_mul, Matrix.mul_one,
     Matrix.mul_assoc, hQ, sub_self, zero_add]
   rw [← Matrix.mul_assoc, hGH, Matrix.one_mul]
 

@@ -1,5 +1,5 @@
-import Mathlib
-import ReciprocityTheory.SemistableReduction.SphereLogIntegrableStatement
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.PointHeight
 
 set_option autoImplicit false

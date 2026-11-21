@@ -1,4 +1,8 @@
-import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.ArchimedeanGelfandKernels.EquivariantCalculus.Equi
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.DiscreteSeriesTopClasses.IsInvOne
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Analysis.Matrix.Normed
 
 noncomputable section
 

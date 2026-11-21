@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.HermitianLattices.StatementMass
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianLattices.HermitianLatticesProofs.MassBasic
 
 noncomputable section

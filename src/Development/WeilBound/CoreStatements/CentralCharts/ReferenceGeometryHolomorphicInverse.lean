@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.CentralCharts.IsCoeffAtOfSmul
 import Development.WeilBound.CoreStatements.CentralCharts.ChartAnalytic
 import Development.WeilBound.CoreStatements.CentralCharts.OneLeDimFl

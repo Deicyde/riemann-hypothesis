@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.CayleyDegreeNondegeneracy.FibreCountOfPositions
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.LatticeGluingRadicals
+import Formalism.SharpRestriction.CuspSpanNormBounds.CntPartners
 
 noncomputable section
 

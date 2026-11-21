@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.PartnerMeanCoordinates.TheoremMXB
+import Formalism.MahlerMeasure.MahlerMeasureProofs.TheoremM
 
 namespace Formalism.InvariantFactorPaths.MC
 

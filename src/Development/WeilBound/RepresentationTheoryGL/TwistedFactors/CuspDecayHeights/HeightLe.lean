@@ -1,7 +1,6 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.CuspidalProjection.OrthogonalProjectionOntoCompSubtypeL
-import GroundTheory.AutomorphicForms.AutomorphicFormSpaces.Height
-import GroundTheory.AutomorphicForms.HarishChandraCentre
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.AutomorphicForms.CuspidalDiscreteness.CuspCompact
 
 noncomputable section
 

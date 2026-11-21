@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.TateThesis.HeckeChar
 import GroundTheory.GlobalFields.TateThesis.ArchCharsUnitary
 import GroundTheory.GlobalFields.IdeleGroups.UnitBound
+import Mathlib.NumberTheory.NumberField.ClassNumber
 
 open Topology Filter NumberField IsDedekindDomain Function Complex
 open scoped NumberField.AdeleRing

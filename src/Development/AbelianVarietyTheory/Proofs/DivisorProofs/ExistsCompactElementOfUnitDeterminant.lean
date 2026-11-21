@@ -1,23 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviBlockSizesSum
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WittRankLeSkewSignature
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IsSplitChartSplitChart
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MeasureFundDomLtTop
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TripSizesSum
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRk
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LinearWeilFunctionalTranslationEquivariant
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsEmbeddingAtEveryPlace
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GlCharacterFactorsThroughDetOfTwoNeZeroStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaActionExistsStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LinearBarFunctionalGoodPlace
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalUnitaryDeterminedBySplitImage
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqSmulOfCommuteHeisenbergLinearModelSchwartzBruhStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAt
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HermitianSelfDualLatticeSplitPlaceDictionary
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsUnitDetOfCartan
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SmGL GlobalTheory.PRep GlobalTheory.SplitWeil GlobalTheory.LeviBlockExponent GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels
   GlobalTheory.UAut GlobalTheory.SiegelSet GlobalTheory.ThK.SquareIntegrability GlobalTheory.CuspBlock GlobalTheory.LFun.SplitTie
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
@@ -65,7 +50,7 @@ theorem exists_idem {K : Type} [Field K] (O : ValuationSubring K) {n : ℕ} (hn 
     rw [e1, Matrix.single_vecMul]
     by_cases e : k = j
     · subst e; simpa using hint i l
-    · simp [Matrix.one_apply, e]
+    · simp [e]
 
 theorem keep {K : Type} [Field K] (O : ValuationSubring K) {n : ℕ} (b : GL (Fin n) K) (Q : Matrix (Fin n) (Fin n) K)
     (hQ : ∀ i j, ((b⁻¹ : GL (Fin n) K).val * Q * b.val) i j ∈ O) {c : K} (hc : c ∈ O) (y : Fin n → K)

@@ -1,9 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.GlobalClassFormation.SymbolBridgeSum
 import GroundTheory.GlobalFields.NormResidueSymbol.CyclotomicCompositum
-import GroundTheory.GlobalFields.NormResidueSymbol.RestrictNormalInfiniteLocalSymbol
 import GroundTheory.GlobalFields.NormResidueSymbol.RationalDiagonal
-import GroundTheory.GlobalFields.CyclotomicCharacters.Character
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

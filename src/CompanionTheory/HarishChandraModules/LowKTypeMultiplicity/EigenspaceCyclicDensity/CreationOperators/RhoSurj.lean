@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.HarishChandraModules.LowKTypeMultiplicity.EigenspaceCyclicDensity.LowKMultOneP
-import Formalism.RealPlaceAnalysis.ThirdArithmeticHolds
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.RepresentationTheory.AlgebraRepresentation.Basic
+import Mathlib.RingTheory.SimpleRing.Principal
 
 noncomputable section
 

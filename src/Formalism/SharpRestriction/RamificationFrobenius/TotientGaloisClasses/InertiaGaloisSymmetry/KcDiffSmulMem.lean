@@ -1,4 +1,9 @@
-import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.InertiaGaloisSymmetry.KcBase
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.ConjEMemHostFIff
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.Tactic.Polynomial.Basic
 
 open NumberField IntermediateField Ideal
 open scoped Pointwise nonZeroDivisors
@@ -150,7 +155,7 @@ theorem kc_smul_ne_bot (σ : H.E ≃ₐ[ℚ] H.E) (B : Ideal (𝓞 H.E))
   apply hB
   rw [← inv_smul_smul σ B, h]
   ext x
-  simp [Ideal.mem_pointwise_smul_iff_inv_smul_mem]
+  simp
 
 theorem kc_mem_inv_smul (σ : H.E ≃ₐ[ℚ] H.E) (B : Ideal (𝓞 H.E))
     (hB : B ≠ ⊥) (y : H.E) :

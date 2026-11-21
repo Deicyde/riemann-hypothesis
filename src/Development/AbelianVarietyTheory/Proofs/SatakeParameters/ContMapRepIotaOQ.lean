@@ -1,11 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.WeightRegularOfExt
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.RankOneUnitary
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.FiniteDimensionalWdSpace
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.DeRhamPotSemistable
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ContinuousIotaOQOfDataStatement
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LocalGaloisRepDecompositionInducedStatement
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LocalGaloisRepInducedMatchesStatement
 
 noncomputable section
 

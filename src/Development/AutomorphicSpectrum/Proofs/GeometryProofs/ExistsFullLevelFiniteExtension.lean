@@ -1,8 +1,5 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.DvrData
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.GlueApplyOfNotInFibre
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.MemEigSpOfMemHtDual
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsFullLevelAt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.TateIsoBaseChangeStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.TateIsoPullbackEquivStatement
 

@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TransportSymmetricLiftsThetaGroupTraitImports
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.QkToAkBaseChange
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.SabPull
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsLeadOfUnif
 
 noncomputable section
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj IsLocalRing NumberField

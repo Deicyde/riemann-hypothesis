@@ -1,10 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AppInjectiveOfIsDominant
-import Development.AbelianVarietyTheory.Definitions.Degenerations.OfDerivationFnOn
-import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.ExistsUniqueFactorCompletedStalkOfMap
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsMonHomExtension
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.SemiAbelianReductionAlongIsogenyStrictHenselian
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ChartPullbacks.UniformBaseChange.PullbackDegree.EpsPullbackFst
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj IsLocalRing NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open scoped CategoryTheory.Obj
@@ -56,7 +55,7 @@ theorem flat_mul {S : Scheme.{0}} (H V : Over S) [GrpObj H] [Flat H.hom] (j : V 
   have e1 : sh ≫ sh' = 𝟙 _ := by
     ext <;> simp [sh, sh', MonObj.comp_mul, GrpObj.comp_inv]
   have e2 : sh' ≫ sh = 𝟙 _ := by
-    ext <;> simp [sh, sh', MonObj.comp_mul, GrpObj.comp_inv]
+    ext <;> simp [sh, sh', MonObj.comp_mul]
   have : IsIso sh.left := ⟨sh'.left, by rw [← Over.comp_left, e1]; rfl, by rw [← Over.comp_left, e2]; rfl⟩
   have hm : (fst V V ≫ j) * (snd V V ≫ j) = (j ⊗ₘ j) ≫ sh ≫ snd H H := by
     simp [sh, Hom.mul_def]

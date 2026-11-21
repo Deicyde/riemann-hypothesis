@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsSplitK
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.Tactic.Monotonicity.Lemmas
 open scoped Matrix NNReal ENNReal ComplexConjugate TensorProduct
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.L2.Theta Formalism.L2.Pj Formalism.IndefR.Datum MeasureTheory
 open GlobalTheory.AutomorphicL2Unitary GlobalTheory.AdelicU GlobalTheory.Doubling GlobalTheory.Cont GlobalTheory.MixModel GlobalTheory.StdUnn PositivityTheory.GramSchwartzFunctions PositivityTheory.GramSchwartzFunctions.BC GlobalTheory.CompanionTheory.SiegelND
@@ -273,7 +276,7 @@ theorem bad_le (κ : K ≃+* (W → ℂ)) (μ : Measure (Fin n → Fin M → K))
     obtain ⟨w, a, s, ⟨hsa, hsb⟩, hN⟩ := hU
     choose t ht hst using fun b => exists_grid hL (s b) (hsb b)
     refine Set.mem_biUnion (x := (w, a, t)) ?_ ?_
-    · simp only [I, Finset.coe_product, Set.mem_prod, Finset.mem_coe, Finset.mem_univ,
+    · simp only [I, Finset.coe_product, Set.mem_prod, Finset.mem_coe,
         Fintype.mem_piFinset, true_and, Finset.coe_univ, Set.mem_univ]
       exact ht
     · refine ⟨_, shear_mem κ w a s t hε hL' (by linarith) hLε hsa hst hX hN, ?_⟩

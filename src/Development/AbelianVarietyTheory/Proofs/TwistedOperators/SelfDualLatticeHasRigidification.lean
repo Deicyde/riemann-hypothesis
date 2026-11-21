@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RatInOfUnit
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.AbsNormCoprimeOfSup
+import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.UnitCharTriangle
 
 noncomputable section
 

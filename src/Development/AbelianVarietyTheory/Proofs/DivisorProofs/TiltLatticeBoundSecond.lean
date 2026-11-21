@@ -1,8 +1,15 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SandwichMaps
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FontaineAinfLocalDomainXiAdicOrderStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SmulMemRange
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CharmatrixBlockDiagonal
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.LinearAlgebra.Eigenspace.Semisimple
+import Mathlib.LinearAlgebra.Eigenspace.Zero
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.TotallySplit
 open WittVector Ideal Matrix GlobalTheory.Sandwich GlobalTheory.IndefiniteRowSideFullHecke.SandwichMaps
 
 namespace GlobalTheory.IotaDet
@@ -599,7 +606,7 @@ theorem iota_existsUnique_bijective : ∀ (p : ℕ) [Fact p.Prime] (C : Type) [F
     (by intro x y; simp [actH, Matrix.map_add]) hsH
   have memE : ∀ (ρ : Λ → Matrix (Fin h) (Fin h) O) (u : Fin h → C), u ∈ eig C ρ τ ↔
       ∀ b, Matrix.toLin' ((ρ b).map (algebraMap O C)) u = algebraMap O C (τ b) • u := by
-    intro ρ u; simp [eig, Submodule.mem_iInf, Module.End.mem_eigenspace_iff]
+    intro ρ u; simp [eig, Submodule.mem_iInf]
   set V := eig C (actT D) τ with hVdef
   set W := eig C (actH D) τ with hWdef
   set Fc : Matrix (Fin h) (Fin h) C := D.F.map ((algebraMap O C).comp (fontaineTheta O p)) with hFc

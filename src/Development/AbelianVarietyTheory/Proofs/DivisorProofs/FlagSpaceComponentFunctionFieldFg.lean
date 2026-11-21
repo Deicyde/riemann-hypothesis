@@ -1,8 +1,6 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.GenRatios
-import Development.AbelianVarietyTheory.Definitions.Divisors.NormNegCmConstantEqAtAllEmbeddings
-import Development.AbelianVarietyTheory.Definitions.Divisors.P22
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.KapTrdegPf
-import Formalism.LocalToGlobal.ProjectiveLattices.FnTrdegOf
+import Development.AbelianVarietyTheory.Definitions.Divisors.Multiplier
 
 set_option autoImplicit false
 

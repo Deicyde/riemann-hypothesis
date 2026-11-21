@@ -1,6 +1,7 @@
-import Development.AutomorphicArithmetic.Foundations.UnitarySphericalFixing.SatakeParameters.RankOne
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.CohomologicalCsdTempered
-import Development.AutomorphicArithmetic.Foundations.UnitarySphericalFixing.SatakeParameters.AbsCentralAlt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Proofs.FlagMeasures.LabLPIsLabelActK
+import Development.AutomorphicArithmetic.Foundations.UnitarySphericalFixing.SatakeParameters.GoodLem
 
 set_option synthInstance.maxHeartbeats 200000
 
@@ -43,7 +44,7 @@ theorem GlobalTheory.DepthZeroRankOneLabel.wild_trivial_m_alt (D : D7) (k : Fin 
     rw [Matrix.sub_apply, Matrix.one_apply_eq] at h1
     have h2 : μ (Matrix.GeneralLinearGroup.det u) = 1 := hT _ (by
       have e : ((Matrix.GeneralLinearGroup.det u : (_)ˣ) : (D.naut.plGw k v).adicCompletion D.host.E) = u.val 0 0 := by
-        simp [Matrix.det_fin_one]
+        simp
       rw [e]; exact h1)
     change (GlobalTheory.SmGL.detRep (Fin 1) μ) u (1 : ℂ) = (1 : ℂ)
     simp [GlobalTheory.SmGL.detRep, h2]))

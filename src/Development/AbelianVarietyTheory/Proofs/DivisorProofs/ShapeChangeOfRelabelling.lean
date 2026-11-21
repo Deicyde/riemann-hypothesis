@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.SlopeTestRemainingChoices
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ComponentMean
-import Formalism.SharpRestriction.Divisibility.LatticeTransfer
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqualCoeffsOfSymmetric
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagDegreeRenameInvariant
 

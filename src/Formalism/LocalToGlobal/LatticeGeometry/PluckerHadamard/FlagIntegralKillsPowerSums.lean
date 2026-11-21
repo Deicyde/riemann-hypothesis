@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.WeightedDeltaMeans.LowerBoundLinearPower
-import Formalism.WeightedDeltaMeans.LogBaseHeightBound
 import Formalism.LocalToGlobal.LatticeGeometry.PluckerHadamard.StThmB
 import Formalism.LocalRingCardinality.HeightBoundGeFourthPowerRank
 

@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HeckeDEqSumOfAgree
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.IsSatVecUOfIsSphericalU
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsContinuousPadic
 open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formalism.ConjugateSelfDual ReciprocityTheory.Gal ReciprocityTheory.Aut Formalism.AUTREP Formalism.L2 Formalism.L2.Host Formalism.L2.NT Formalism.IndefR.NX GlobalTheory.HeightCounting NumberField IsDedekindDomain Polynomial
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
 
@@ -43,6 +44,6 @@ theorem satEig_inv_normalised : ∀ (q n k : ℕ), 0 < q → k ≤ n → ∀ (α
   intro q n k hq hk α
   rw [esymm_map_mul_const', GlobalTheory.LFun.satEig, ← mul_assoc, ← mul_assoc, exponent_eq q n k hq hk]
   congr 2
-  simp [Multiset.map_map, Function.comp_def, Units.val_inv_eq_inv_val]
+  simp [Function.comp_def, Units.val_inv_eq_inv_val]
 
 end GlobalTheory.SatEigArith

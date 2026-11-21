@@ -1,5 +1,4 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.ThetaNormCommutation.LocalComparisonSplitting.EulerFactorLevels.EulerFinOf
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IsMulCommutativeCentRealUJ
 open NumberField IsDedekindDomain Matrix Polynomial Filter
 open GlobalTheory.CuspRep GlobalTheory.PRep Formalism.UG Formalism.BasicNotions GlobalTheory.UnitaryBC Formalism.L2.Host GlobalTheory.BCT
@@ -82,7 +81,7 @@ theorem finite_torsion_centralizer : ∀ (E : Type) [Field E] [NumberField E] (n
   have hFpow : ∀ (g : GL (Fin n) E) (k : ℕ), F g ^ k = F (g ^ k) := by
     intro g k
     induction k with
-    | zero => simp [F, hBB, Matrix.map_one, Matrix.mul_one]
+    | zero => simp [F, hBB, Matrix.map_one]
     | succ k ih =>
       rw [pow_succ, ih, pow_succ]
       simp only [F, Units.val_mul]

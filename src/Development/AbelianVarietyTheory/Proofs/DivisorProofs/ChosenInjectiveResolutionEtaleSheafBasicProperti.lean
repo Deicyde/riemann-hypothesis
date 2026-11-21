@@ -1,5 +1,6 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.IndEtOfForallFinset
-import Development.AbelianVarietyTheory.Definitions.Divisors.DivisorSupportCondition
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.GalMapMul
 open CategoryTheory Limits AlgebraicGeometry Opposite CochainComplex CochainComplex.HomComplex TensorProduct GlobalTheory.EtC
 
 namespace GlobalTheory.EtC.ResBasic
@@ -10,7 +11,7 @@ theorem aug_comm : ((HomologicalComplex.singleObjXSelf (ComplexShape.up ℤ) 0 X
     (I.cochainComplexXIso 0 0 rfl).hom =
     (HomologicalComplex.singleObjXSelf (ComplexShape.up ℕ) 0 X).inv ≫ I.ι.f 0 := by
   rw [InjectiveResolution.ι'_f_zero]
-  simp only [Category.assoc, Iso.inv_hom_id_assoc, Iso.inv_hom_id, Category.comp_id]
+  simp only [Iso.inv_hom_id_assoc]
   erw [Category.assoc, Iso.inv_hom_id, Category.comp_id]
   dsimp [HomologicalComplex.singleObjXSelf, HomologicalComplex.singleObjXIsoOfEq]
   erw [Category.id_comp]
@@ -36,7 +37,7 @@ private theorem injectiveResolution_cochainComplex_exact_and_exactAt {C : Type*}
   · have hw : ((HomologicalComplex.singleObjXSelf (ComplexShape.up ℤ) 0 X).inv ≫ I.ι'.f 0) ≫
         I.cochainComplex.d 0 1 = 0 := by
       rw [I.ι'_f_zero, I.cochainComplex_d 0 1 0 1 rfl rfl]
-      simp only [Category.assoc, Iso.inv_hom_id_assoc]
+      simp only [Iso.inv_hom_id_assoc]
       erw [Category.assoc, Iso.inv_hom_id_assoc, I.ι_f_zero_comp_complex_d_assoc, zero_comp]
       rfl
     refine ⟨hw, ?_⟩

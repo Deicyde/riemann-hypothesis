@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockMap
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.DataTheta
 open scoped Matrix
 open Formalism.BasicNotions.TH
 
@@ -21,11 +22,11 @@ def lowerUnip (t : ℝ) : Matrix (Fin 2) (Fin 2) ℂ := !![1 + t * I, t * I; -(t
 
 theorem upperUnip_mem (t : ℝ) : (upperUnip t)ᴴ * signatureOneOneForm * upperUnip t = signatureOneOneForm := by
   ext i j; fin_cases i <;> fin_cases j <;>
-    simp [upperUnip, signatureOneOneForm, Matrix.mul_apply, Fin.sum_univ_two, Matrix.conjTranspose_apply, Complex.ext_iff, map_div₀, map_ofNat] <;>
+    simp [upperUnip, signatureOneOneForm, Matrix.mul_apply, Fin.sum_univ_two, Matrix.conjTranspose_apply, Complex.ext_iff] <;>
     (try constructor) <;> (first | trivial | (ring_nf; done) | (norm_num; done))
 theorem lowerUnip_mem (t : ℝ) : (lowerUnip t)ᴴ * signatureOneOneForm * lowerUnip t = signatureOneOneForm := by
   ext i j; fin_cases i <;> fin_cases j <;>
-    simp [lowerUnip, signatureOneOneForm, Matrix.mul_apply, Fin.sum_univ_two, Matrix.conjTranspose_apply, Complex.ext_iff, map_div₀, map_ofNat] <;>
+    simp [lowerUnip, signatureOneOneForm, Matrix.mul_apply, Fin.sum_univ_two, Matrix.conjTranspose_apply, Complex.ext_iff] <;>
     (try constructor) <;> (first | trivial | (ring_nf; done) | (norm_num; done))
 theorem boost_mem : (boost)ᴴ * signatureOneOneForm * boost = signatureOneOneForm := by
   ext i j; fin_cases i <;> fin_cases j <;>
@@ -37,27 +38,27 @@ theorem boostInv_mem : (boostInv)ᴴ * signatureOneOneForm * boostInv = signatur
     (try constructor) <;> (first | trivial | (ring_nf; done) | (norm_num; done))
 theorem boost_boostInv : boost * boostInv = 1 := by
   ext i j; fin_cases i <;> fin_cases j <;>
-    simp [boost, boostInv, Matrix.mul_apply, Fin.sum_univ_two, Matrix.conjTranspose_apply, Complex.ext_iff, map_div₀, map_ofNat] <;>
+    simp [boost, boostInv, Matrix.mul_apply, Fin.sum_univ_two, Complex.ext_iff] <;>
     (try constructor) <;> (first | trivial | (ring_nf; done) | (norm_num; done))
 theorem boostInv_boost : boostInv * boost = 1 := by
   ext i j; fin_cases i <;> fin_cases j <;>
-    simp [boost, boostInv, Matrix.mul_apply, Fin.sum_univ_two, Matrix.conjTranspose_apply, Complex.ext_iff, map_div₀, map_ofNat] <;>
+    simp [boost, boostInv, Matrix.mul_apply, Fin.sum_univ_two, Complex.ext_iff] <;>
     (try constructor) <;> (first | trivial | (ring_nf; done) | (norm_num; done))
 theorem upperUnip_neg (u : ℝ) : upperUnip u * upperUnip (-u) = 1 := by
   ext i j; fin_cases i <;> fin_cases j <;>
-    simp [upperUnip, Matrix.mul_apply, Fin.sum_univ_two, Matrix.conjTranspose_apply, Complex.ext_iff, map_div₀, map_ofNat] <;>
+    simp [upperUnip, Matrix.mul_apply, Fin.sum_univ_two, Complex.ext_iff] <;>
     (try constructor) <;> (first | trivial | (ring_nf; done) | (norm_num; done))
 theorem lowerUnip_neg (u : ℝ) : lowerUnip u * lowerUnip (-u) = 1 := by
   ext i j; fin_cases i <;> fin_cases j <;>
-    simp [lowerUnip, Matrix.mul_apply, Fin.sum_univ_two, Matrix.conjTranspose_apply, Complex.ext_iff, map_div₀, map_ofNat] <;>
+    simp [lowerUnip, Matrix.mul_apply, Fin.sum_univ_two, Complex.ext_iff] <;>
     (try constructor) <;> (first | trivial | (ring_nf; done) | (norm_num; done))
 theorem upperUnip_comm (u : ℝ) : boost * upperUnip u * boostInv * upperUnip (-u) = upperUnip (3 * u) := by
   ext i j; fin_cases i <;> fin_cases j <;>
-    simp [boost, boostInv, upperUnip, Matrix.mul_apply, Fin.sum_univ_two, Matrix.conjTranspose_apply, Complex.ext_iff, map_div₀, map_ofNat] <;>
+    simp [boost, boostInv, upperUnip, Matrix.mul_apply, Fin.sum_univ_two, Complex.ext_iff] <;>
     (try constructor) <;> (first | trivial | (ring_nf; done) | (norm_num; done))
 theorem lowerUnip_comm (u : ℝ) : boostInv * lowerUnip u * boost * lowerUnip (-u) = lowerUnip (3 * u) := by
   ext i j; fin_cases i <;> fin_cases j <;>
-    simp [boost, boostInv, lowerUnip, Matrix.mul_apply, Fin.sum_univ_two, Matrix.conjTranspose_apply, Complex.ext_iff, map_div₀, map_ofNat] <;>
+    simp [boost, boostInv, lowerUnip, Matrix.mul_apply, Fin.sum_univ_two, Complex.ext_iff] <;>
     (try constructor) <;> (first | trivial | (ring_nf; done) | (norm_num; done))
 
 theorem zeta_eq (x : ℝ) : (1 + 2 * I * x) / (1 - 2 * I * x) =
@@ -105,7 +106,7 @@ def inPlane (i0 : Fin R) (j0 : Fin S) (M : Matrix (Fin 2) (Fin 2) ℂ) : Mat R S
 
 variable (i0 : Fin R) (j0 : Fin S)
 theorem embT_emb : (emb i0 j0)ᵀ * emb i0 j0 = 1 := by
-  ext p q; fin_cases p <;> fin_cases q <;> simp [Matrix.mul_apply, emb, pl, Fintype.sum_sum_type, Matrix.one_apply]
+  ext p q; fin_cases p <;> fin_cases q <;> simp [Matrix.mul_apply, emb, pl, Fintype.sum_sum_type]
 theorem emb_ct : (emb i0 j0)ᴴ = (emb i0 j0)ᵀ := by
   ext p k; simp only [emb, Matrix.conjTranspose_apply, Matrix.transpose_apply, Matrix.of_apply]; split_ifs <;> simp
 theorem embT_ct : ((emb i0 j0)ᵀ)ᴴ = emb i0 j0 := by
@@ -157,7 +158,7 @@ theorem inPlane_mem (M : Matrix (Fin 2) (Fin 2) ℂ) (h : Mᴴ * signatureOneOne
     simp only [Matrix.add_mul, Matrix.mul_add, Matrix.mul_assoc, Matrix.zero_mul, Matrix.mul_zero] at this
     exact this
   rw [inPlane_ct]
-  simp only [inPlane, Matrix.add_mul, Matrix.mul_add, Matrix.one_mul, Matrix.mul_one, Matrix.mul_assoc, e1, e2, e3, embT_Jm]
+  simp only [inPlane, Matrix.add_mul, Matrix.mul_add, Matrix.one_mul, Matrix.mul_one, Matrix.mul_assoc, e2, e3, embT_Jm]
   rw [← sub_eq_zero]; rw [← sub_eq_zero] at key'; rw [← key']; abel
 
 theorem char_eq_one_rot : ∀ (R S : ℕ) (χ : Mat R S → ℂ),

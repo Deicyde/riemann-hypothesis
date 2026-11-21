@@ -1,9 +1,7 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.GlobalSectionsRankAlgClosed
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IntegralClosureHeightEqOneOfLiesOver
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.GlueApplyOfNotInFibre
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.GenWeil
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.FinrankFiniteFlatTorsionSubschemeEqCardPoints
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsHodgeLine
+import Mathlib.Algebra.Order.Star.Real
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory.CompanionTheory.Ar
@@ -87,9 +85,9 @@ theorem labels_all_once : ∀ (E : Type) [Field E] [NumberField E] [IsCMField E]
             · exact absurd h τ.2
             · rw [h, map_neg, hconj0, neg_neg]⟩
         left_inv := fun τ => Subtype.ext (RingHom.ext fun x => by
-            simp [ComplexEmbedding.conjugate_coe_eq])
+            simp)
         right_inv := fun τ => Subtype.ext (RingHom.ext fun x => by
-            simp [ComplexEmbedding.conjugate_coe_eq]) }
+            simp) }
     have hc : Nat.card (CMType H ⊕ CMType H) = Nat.card (E →+* ℂ) :=
       Nat.card_congr ((Equiv.sumCongr (Equiv.refl _) e).trans (Equiv.sumCompl _))
     rw [hc, Nat.card_eq_fintype_card, NumberField.Embeddings.card E ℂ]

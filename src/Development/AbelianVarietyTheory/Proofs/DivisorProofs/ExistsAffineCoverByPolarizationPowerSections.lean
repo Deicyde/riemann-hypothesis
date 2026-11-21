@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ResV
-import Development.AbelianVarietyTheory.Definitions.ThetaMetrics.MemNonzeroLocusIffPowFn
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.HasDefect
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry NumberField IsLocalRing
 open scoped CategoryTheory.Obj Matrix TensorProduct
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj
@@ -57,7 +57,7 @@ def chartPullPowTop :
       (gm_linComb L (K := Fin N) (fun _ => (A.hom ⁻¹ᵁ ⊤).ι) (fun _ => 1) _ y _ _
         (hb j (Set.mem_iInter.1 hj 0)) (hb j' (Set.mem_iInter.1 hj' 0))).symm)
     rw [Fintype.prod_unique]
-    simp only [backTop_ι, Category.id_comp, zpow_one, Finset.prod_const, Finset.card_univ, Fintype.card_fin,
+    simp only [Category.id_comp, zpow_one, Finset.prod_const, Finset.card_univ, Fintype.card_fin,
       zpow_natCast]
     exact gm_pow_congr A L N (backTop_ι _ _) _ _
 

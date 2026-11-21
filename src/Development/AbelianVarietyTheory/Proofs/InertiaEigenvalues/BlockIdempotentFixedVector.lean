@@ -1,9 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.NormalizedHeckeFactors.CoeffZeroNeOfMonicIrr
-import Formalism.PadicSubsetSums.CentralIdempotents.HCDisjointO
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.DetCharacterMemPrincipalCongruenceFixedVectors
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.TwoBlockEqZeroIff
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LabelOfParabolicVector
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsCharLab
 open Formalism.IrreducibleCountingLemmas.TYPES Formalism.L2.NT GlobalTheory.SerOSys
 open Polynomial CategoryTheory
 

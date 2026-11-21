@@ -1,6 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.IsWeight
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.CocharacterLieDivisors.MeetsOpenCosets
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.FiniteDimensionalWdSpace
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsContinuousPadic
+import Formalism.LocalRingCardinality.AdicCompletionLocal.LocTied
+import Mathlib.NumberTheory.NumberField.DirichletDensity
 
 noncomputable section
 

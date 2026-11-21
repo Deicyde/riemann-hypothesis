@@ -1,4 +1,13 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.SobSym
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.Analysis.Calculus.ContDiff.Bounds
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 namespace Formalism.IndefR.Eqv
 
@@ -38,7 +47,7 @@ theorem snoc_eq_cons_rot {n : ℕ} (w : V) (vs : Fin n → V) :
     (Fin.snoc vs w : Fin (n + 1) → V) = (Fin.cons w vs : Fin (n + 1) → V) ∘ finRotate (n + 1) := by
   funext i
   refine Fin.lastCases ?_ (fun j => ?_) i
-  · simp [finRotate_last]
+  · simp
   · simp only [Fin.snoc_castSucc, Function.comp_apply]
     rw [finRotate_succ_apply, Fin.coeSucc_eq_succ, Fin.cons_succ]
 

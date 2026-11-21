@@ -1,8 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.IsLatticeFamily
-import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.BundleChernComparison
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.LatticeBaseChangeLargerRingHoldsStatement
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.LatticeSecondGoodnessStatement
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.TorusUniformisation.ChowMahlerFamilies.XFamPull
 open MvPolynomial GlobalTheory.CompanionTheory.Ar.Num GroundTheory.Heights₂.Heights.NumbersDVR
 open ReciprocityTheory.ChartRestriction.G.Geo (ChartBundle chartRing)

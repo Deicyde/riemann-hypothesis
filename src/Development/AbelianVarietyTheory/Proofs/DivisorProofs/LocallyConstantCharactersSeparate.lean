@@ -1,6 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ZetaOn
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndicatorIntMMemSB
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.HilbertNinetyQuotientHomEqIff
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.Tactic.Monotonicity.Lemmas
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.Doubling GlobalTheory.ThK.Bot
@@ -21,10 +24,10 @@ theorem indicator_mem {V : Set Z} (hV : IsClopen V) {f : Z → ℂ} (hf : f ∈ 
   intro x
   by_cases hx : x ∈ V
   · filter_upwards [hV.isOpen.mem_nhds hx, ((IsLocallyConstant.iff_eventually_eq f).1 h1 x)] with y hy hy'
-    simp [Set.indicator_apply, hy, hx, hy']
+    simp [hy, hx, hy']
   · filter_upwards [hV.isClosed.isOpen_compl.mem_nhds hx] with y hy
     have hy' : y ∉ V := hy
-    simp [Set.indicator_apply, hy', hx]
+    simp [hy', hx]
 
 def PairNull (β : (Z → ℂ) → (Z → ℂ) → ℂ) (U V : Set Z) : Prop :=
   ∀ f' ∈ SB Z, ∀ g' ∈ SB Z, (∀ z ∉ U, f' z = 0) → (∀ z ∉ V, g' z = 0) → β f' g' = 0
@@ -42,13 +45,13 @@ theorem PairNull.union_right {β : (Z → ℂ) → (Z → ℂ) → ℂ}
   rw [← Set.indicator_self_add_compl V g',
     hadd2 f' hf' _ (indicator_mem hVc hg') _ (indicator_mem hVc.compl hg')]
   have a := h f' hf' (V.indicator g') (indicator_mem hVc hg') hU
-    (fun z hz => by simp [Set.indicator_apply, hz])
+    (fun z hz => by simp [hz])
   have b := h' f' hf' (Vᶜ.indicator g') (indicator_mem hVc.compl hg') hU
     (fun z hz => by
       by_cases hzV : z ∈ V
-      · simp [Set.indicator_apply, hzV]
+      · simp [hzV]
       · have : g' z = 0 := hVV' z (by simp [hzV, hz])
-        simp [Set.indicator_apply, hzV, this])
+        simp [hzV, this])
   rw [a, b, add_zero]
 
 theorem base (β : (Z → ℂ) → (Z → ℂ) → ℂ)
@@ -150,13 +153,13 @@ theorem GlobalTheory.SBOrth.sesq_eq_zero_of_mul_eq_zero : ∀ (Z : Type) [Topolo
       rw [← Set.indicator_self_add_compl U f',
         hadd1 _ (GlobalTheory.SBOrth.indicator_mem hU hf') _ (GlobalTheory.SBOrth.indicator_mem hU.compl hf') g hg]
       have a := hQ (U.indicator f') (GlobalTheory.SBOrth.indicator_mem hU hf')
-        (fun z hz => by simp [Set.indicator_apply, hz])
+        (fun z hz => by simp [hz])
       have b := hQ' (Uᶜ.indicator f') (GlobalTheory.SBOrth.indicator_mem hU.compl hf')
         (fun z hz => by
           by_cases hzU : z ∈ U
-          · simp [Set.indicator_apply, hzU]
+          · simp [hzU]
           · have : f' z = 0 := h1 z (by simp [hzU, hz])
-            simp [Set.indicator_apply, hzU, this])
+            simp [hzU, this])
       rw [a, b, add_zero]
     · intro x hx
       obtain ⟨U, V, hU, hV, hxU, hgV, hP⟩ := inner x hx

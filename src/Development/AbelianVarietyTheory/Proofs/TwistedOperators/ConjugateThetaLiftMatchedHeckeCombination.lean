@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.ConjScalarThm
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ReadingsExistRow
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.HoweUnram
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ThetaLiftGoodProjectorIntertwinesMatchedHecke
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsThetaPForms
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ConjFormsSpherical

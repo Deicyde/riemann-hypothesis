@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutDec
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.OpApplyContinuousOn
 
 namespace Formalism.FourierDecayAlt.P.CutBP
 

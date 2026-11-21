@@ -1,7 +1,5 @@
-import Mathlib
-import Formalism.WeaklyAdmissibleFiltrations.Statement
-import Formalism.CoboundaryTransfers.Statement
-import Formalism.SharpRestriction.LevelLetterCocycles.DataNLoc
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.UnitDualParts
 
 noncomputable section

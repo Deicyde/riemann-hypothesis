@@ -1,4 +1,9 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.EisensteinTranslationProducts.CMQuasiPeriodConst
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.Polynomial.Basic
 
 noncomputable section
 open scoped BigOperators ComplexConjugate

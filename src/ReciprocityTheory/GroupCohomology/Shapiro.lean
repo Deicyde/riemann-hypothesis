@@ -1,8 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.GroupCohomology.CupConnRightStatement
-import ReciprocityTheory.GroupCohomology.HomogExistsStatement
-import ReciprocityTheory.GroupCohomology.DEqZeroOfMemB
 import ReciprocityTheory.GroupCohomology.HomogIso
 import ReciprocityTheory.GroupCohomology.PrismOpZeroEval
+import Mathlib.Tactic.Polynomial.Basic
 
 namespace ReciprocityTheory.Coh
 

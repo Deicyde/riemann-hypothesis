@@ -1,4 +1,5 @@
-import Development.AbelianVarietyTheory.Definitions.Foundations.FinalTheorems
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.InertiaTorsionQuotientConjInvariantDecompositionStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.CyclotomicCharCongruentOneOnDecompositionGroupStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ImportsAlt

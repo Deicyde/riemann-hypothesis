@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.KummerSequence.TwLocGenPfSec
+import Development.EtaleCohomology.EtaleSheaves.KummerSequence.LeafKumMuInjPf
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry Opposite GlobalTheory.EtC

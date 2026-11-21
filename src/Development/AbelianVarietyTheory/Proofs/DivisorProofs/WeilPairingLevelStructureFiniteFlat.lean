@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsMulVal
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsGlobalOfLocalPrime
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiniteHopfPointsSeparate
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LevelStructureLocalPointsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GrouplikeOfMultiplicativeFunctionHopfStatement
 set_option autoImplicit false

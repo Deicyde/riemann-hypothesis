@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.HzUnit
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.CosInj
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.UnitRatio
 

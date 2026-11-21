@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.BlockActions.CTExtUnitary
+import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.AfsplitB
 
 noncomputable section
 

@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.GenericFiniteMaps
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GenFiniteCompDegreeMul
 open CategoryTheory AlgebraicGeometry TopologicalSpace Opposite Limits
 open GlobalTheory.IndefiniteRowSideFullHecke.GenericFiniteMaps

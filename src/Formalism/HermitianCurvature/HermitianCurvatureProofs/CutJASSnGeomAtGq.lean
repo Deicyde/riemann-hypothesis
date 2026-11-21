@@ -1,7 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJASSnGeomCut
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BigCellHermitian
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.BigCellDecomposition
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.LongWeylElement
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.GramSchmidtFrames.WbPartOfInWb
 
 open Formalism.FourierDecayAlt
 

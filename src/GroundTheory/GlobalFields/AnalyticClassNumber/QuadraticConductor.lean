@@ -1,9 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.AnalyticClassNumber.QuadraticLegendre
 import GroundTheory.GlobalFields.AnalyticClassNumber.QuadraticDirichletConductor
 import GroundTheory.GlobalFields.AnalyticClassNumber.QuadraticHurwitzZero
 import GroundTheory.GlobalFields.Artin.ConductorInduction
 import GroundTheory.GlobalFields.Artin.ConductorOneDim
+import GroundTheory.GlobalFields.AnalyticClassNumber.ClassNumberFormula
 set_option maxSynthPendingDepth 1
 
 noncomputable section

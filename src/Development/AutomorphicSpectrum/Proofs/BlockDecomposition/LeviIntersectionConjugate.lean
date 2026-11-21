@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.GeometricLemmaFiltration
-import GroundTheory.AutomorphicForms.GeometricLemma
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LeviRefinementBlockOrderStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LeviRefinementParabolicStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LeviEquivContinuousStatement

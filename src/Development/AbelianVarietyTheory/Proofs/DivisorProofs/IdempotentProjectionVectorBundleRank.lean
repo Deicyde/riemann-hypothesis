@@ -1,9 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsBaseEqChain
-import Development.AbelianVarietyTheory.Definitions.Divisors.FaithfulSMulAlgClosure
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PrismaticDieudonnePerfd
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsIsoRestrictPushforwardUnit
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EAComm
 
 set_option autoImplicit false

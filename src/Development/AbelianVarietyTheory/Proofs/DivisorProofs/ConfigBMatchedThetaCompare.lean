@@ -1,20 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KStab
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolEqISupFockDeg
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KEqOnId
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OffPartLe
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsArchOperatorCompactUnitaryWStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolynomialFockSpaceStableArchimedeanMaximalCompaStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchActionReadingsCompatibleStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LowPartInvariantSubmoduleDenseStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LowPartCompactStableStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MaxCompactLeviLiftStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedPairDescentCaseBStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBMatchedIntegral
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAThetaLiftCompatible
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.IndLine
@@ -141,7 +129,7 @@ theorem exists_map : GlobalTheory.ThK.KP → ∀ (F E : Type) [Field F] [NumberF
       R₁.p g = R₁.p g' → R.p f = R.p f' := by
     intro k k' k₁ k₁' g g' f f' h h' he
     have := hrel Bool Finset.univ (fun i => cond i 1 (-1)) (fun i => cond i k k') (fun i => cond i k₁ k₁')
-      (fun i => cond i g g') (fun i => cond i f f') (fun i _ => by cases i; exacts [h', h]) (by simp [Fintype.sum_bool, he])
+      (fun i => cond i g g') (fun i => cond i f f') (fun i _ => by cases i; exacts [h', h]) (by simp [he])
     simpa [Fintype.sum_bool, ← sub_eq_add_neg, sub_eq_zero] using this
 
   have h1₁ : (1 : UA σ G₁.W.J) ∈ KInf σ G₁.W B.emb := kInf_one

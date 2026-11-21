@@ -1,5 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.GeneralLinearActions.GenusMassVolumes
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Compactness.Paracompact
+import Mathlib.Topology.Separation.CompletelyRegular
+import Mathlib.Topology.Sheaves.Presheaf
 
 open MeasureTheory Topology
 open scoped ENNReal NNReal

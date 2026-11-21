@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.FinTensMemLatO
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.LatticeGeometry.CmTypeMeetsConjugatePair
+import Formalism.LocalToGlobal.BesselHermitianTheta.TiedWeil
 
 noncomputable section
 

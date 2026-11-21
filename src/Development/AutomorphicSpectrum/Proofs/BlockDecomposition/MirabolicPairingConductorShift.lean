@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ShearGL
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MirabolicCoefficientTranslation
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SetIntegralInvMulVec
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MirabolicPairingConductorBoundStatement
 open Matrix MeasureTheory GlobalTheory.PRep GlobalTheory.SmGL GlobalTheory.LocGL GlobalTheory.BZSeg GlobalTheory.BZMir GlobalTheory.SplitWeil GlobalTheory.CompanionTheory.MirFourier GlobalTheory.CompanionTheory.BZOnto.PerpSmall ValuativeRel Zc
 open scoped Topology

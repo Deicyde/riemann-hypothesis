@@ -1,4 +1,5 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.TopFirstOfParts
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.StatementHeads
 
 open MeasureTheory Matrix
 

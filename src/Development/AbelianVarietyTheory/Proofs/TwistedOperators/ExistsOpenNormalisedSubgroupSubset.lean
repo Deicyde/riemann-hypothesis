@@ -1,8 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HasFiniteLengthOfIsIrreducible
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.BlockTriangularOneAddMat
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IwasawaBlockTriangular
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IwahoriProjSurjective
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.T2SpaceGeneralLinearGroup
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.PadicIsNonarchimedeanLocalField
+import Mathlib.Topology.Algebra.ClopenNhdofOne
+import Mathlib.Topology.Algebra.Nonarchimedean.TotallyDisconnected
 
 open MeasureTheory GlobalTheory.PRep GlobalTheory.SplitWeil GlobalTheory.SmGL Topology
 open scoped ENNReal

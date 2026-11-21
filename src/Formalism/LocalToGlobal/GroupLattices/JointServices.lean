@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.WeilJacquetShalikaLaw
 import Formalism.SharpRestriction.Divisibility.LocalQuadraticParts
 import Formalism.LocalToGlobal.Divisibility.TiedLemmas

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.CuspIso
 
 open CategoryTheory AlgebraicGeometry TopologicalSpace Limits NumberField
@@ -68,8 +69,8 @@ theorem decomp (la : AllWt.Weight Dw) (hla : GapGe 0 la) (hN : 0 < Dw.p + Dw.q) 
   funext τ' i
   rw [Finset.sum_apply, Finset.sum_apply, Finset.sum_disjSum, Finset.sum_product, Finset.univ_product_univ.symm,
     Finset.sum_product]
-  simp only [Sum.elim_inl, Sum.elim_inr, Pi.smul_apply, smul_eq_mul, piece_apply, unitWt_apply, Fintype.sum_bool,
-    mul_ite, mul_zero, if_true, if_false]
+  simp only [Sum.elim_inl, Sum.elim_inr, Pi.smul_apply, piece_apply, unitWt_apply, Fintype.sum_bool,
+    if_true]
   rw [Finset.sum_eq_single (s := Finset.univ) τ' (fun x _ hx => by simp [Ne.symm hx]) (by simp),
     Finset.sum_eq_single (s := Finset.univ) τ' (fun x _ hx => by simp [Ne.symm hx]) (by simp)]
   simp only [if_true, nsmul_eq_mul, Bool.false_eq_true, if_false, mul_one]

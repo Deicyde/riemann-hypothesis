@@ -1,7 +1,8 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Theta.RealSignature
-import GroundTheory.AutomorphicForms.AdelicUnitaryGroups
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.HermitianLocalForms
+import GroundTheory.AutomorphicForms.AdelicUnitaryGroups.Topology
+import GroundTheory.AutomorphicForms.HermitianBinaryValues
 
 namespace GroundTheory.Heights₂.Theta
 

@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.CasimirAlgebra.KugaCoordinates.IsStarRep
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GelfandInvariantsCentralCharacter
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.GelfValTwoEqCvalR

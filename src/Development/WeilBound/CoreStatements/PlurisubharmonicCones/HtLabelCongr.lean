@@ -1,4 +1,5 @@
-import Development.WeilBound.CoreStatements.PlurisubharmonicCones.ProdSqrtLead
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.DivisibilityProofs.RootOriginComparisonSubset
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ExistsUniqueLeftBasisCoordsAdicCompletion
 

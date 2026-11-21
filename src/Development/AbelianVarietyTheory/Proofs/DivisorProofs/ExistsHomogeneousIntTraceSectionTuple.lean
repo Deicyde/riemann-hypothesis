@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsRatioOfWeight
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TraceMonicOverMvPolynomialStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemPolyringOfIntegralClosureRangeStatement

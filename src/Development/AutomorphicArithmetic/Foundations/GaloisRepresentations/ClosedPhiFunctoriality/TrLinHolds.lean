@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ClosedPhiFunctoriality.IntBasisAlt
 open NumberField IsDedekindDomain Formalism Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.WeaklyAdmissibleFiltrations Formalism.MainNotions.N TensorProduct PowerSeries GlobalTheory.Prism GlobalTheory.BKReal GlobalTheory.Per GlobalTheory.BSP GlobalTheory.MemLoc GlobalTheory.Pst GlobalTheory.BKLim GlobalTheory.Cong GlobalTheory.WeilDeligne Matrix
 open scoped Formalism.Per NNReal
@@ -38,7 +38,7 @@ theorem UpperTheory.Gal.ClosedPhiFromClosedTrace.trLin_holds :
       intro y
       rw [hexp (T y) i]
       simp only [hrepr, map_sum, map_mul, Matrix.mul_apply, X, Tm, Matrix.of_apply,
-        Matrix.map_apply, Finset.mul_sum, Finset.sum_mul]
+        Matrix.map_apply, Finset.sum_mul]
       rw [Finset.sum_comm]
       refine Finset.sum_congr rfl fun m _ => Finset.sum_congr rfl fun m' _ => by ring
     rw [Matrix.mul_apply]

@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.AdelicLattices.FactPrimes
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsFlatSecRankZero
 import Development.AutomorphicSpectrum.Proofs.AdelicProofs.SumLogEmbeddingsEqNorm
 import Development.WeilBound.CoreStatements.SesquilinearFractions.NPlaces

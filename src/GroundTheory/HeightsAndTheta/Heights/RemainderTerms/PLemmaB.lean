@@ -1,5 +1,4 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.RemainderTerms.Statements
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.RemainderTerms.StatementsSchur
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.AltPush
 set_option maxSynthPendingDepth 1

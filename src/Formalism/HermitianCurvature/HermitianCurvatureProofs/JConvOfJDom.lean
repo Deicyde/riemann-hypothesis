@@ -1,4 +1,4 @@
-import Formalism.HermitianCurvature.StatementJF
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.SmoothnessOnGoodSet
 
 open Matrix MeasureTheory Filter

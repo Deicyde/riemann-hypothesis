@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SiegelReframe
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NonvanishingHolomorphicExpLogConvexStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MultiplierExponentialHolomorphicLocalStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CocycleHolomorphicCoboundaryLocalStatement
@@ -213,7 +213,7 @@ theorem factor_degree_zero_normal_form : ∀ {g : ℕ} {E : Type} [NormedAddComm
     · have hsk : s (Pi.single (Sum.inl k) 1) P.1 = s' k P.1 := by
         rw [hs]
         dsimp only
-        rw [Finset.sum_eq_single k (fun m _ hm => by simp [Pi.single_apply, hm]) (by simp)]
+        rw [Finset.sum_eq_single k (fun m _ hm => by simp [hm]) (by simp)]
         simp
       have h2 := hψ₂ k P hP
       rw [ha'] at h2
@@ -225,7 +225,7 @@ theorem factor_degree_zero_normal_form : ∀ {g : ℕ} {E : Type} [NormedAddComm
       linear_combination (2 * π * Complex.I) * h2
     · have hsk : s (Pi.single (Sum.inr k) 1) P.1 = 0 := by
         rw [hs]
-        simp [Pi.single_apply]
+        simp
       rw [hsk, transl_inr]
       have h1 := hψ₁ k P (h21 hP)
       have h2 := hψ₂per k P hP

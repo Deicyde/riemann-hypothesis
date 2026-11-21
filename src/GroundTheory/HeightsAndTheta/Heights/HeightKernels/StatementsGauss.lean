@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.KernelsMatrix
 import GroundTheory.GlobalFields.TateThesis.LatticePoissonBasic
+import Mathlib.Analysis.Fourier.FourierTransform
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

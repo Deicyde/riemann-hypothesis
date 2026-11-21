@@ -1,15 +1,13 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.WeilDeligneUnramified.UnitaryTwoForm
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.WeilDeligneUnramified.WeilCharpolySupport.CharPolSupp
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.WeilDeligneUnramified.WeilCharpolySupport.GalExW
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.WeilDeligneUnramified.WeilCharpolySupport.PlainOf
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.GeneralizedEigenspaces.WeightKernels.TwistRatios.UfFacts
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.GeneralizedEigenspaces.WeightKernels.TwistRatios.BadClosed
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.GeneralizedEigenspaces.WeightKernels.TwistRatios.Spread
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.GeneralizedEigenspaces.WeightKernels.TwistRatios.RegElt
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.GeneralizedEigenspaces.WeightKernels.TwistRatios.ExistsNonzeroLowerEntryOfIrreducible
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.GeneralizedEigenspaces.WeightKernels.TwistRatios.NoKappa
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AbsPowOfRealInjective
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LocalArtinExistsHolds
 
 noncomputable section
 
@@ -48,7 +46,7 @@ private theorem uf_of_pol {l : ℕ} [Fact l.Prime] (ι : Qbar l ≃+* ℂ) {k : 
 private theorem two_roots {K : Type} [Field K] (x : Kˣ) :
     (((x ^ 2 : Kˣ) : K) + (((x ^ 2)⁻¹ : Kˣ) : K)) = ((x : K) + ((x⁻¹ : Kˣ) : K)) ^ 2 - 2 := by
   have h0 : (x : K) ≠ 0 := x.ne_zero
-  simp only [Units.val_pow_eq_pow_val, Units.val_inv_eq_inv_val, inv_pow]
+  simp only [Units.val_pow_eq_pow_val, Units.val_inv_eq_inv_val]
   field_simp
   ring
 

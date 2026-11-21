@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.FrobeniusSmoothVectors.PresDefs
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisCochains.GLinkQuot
 

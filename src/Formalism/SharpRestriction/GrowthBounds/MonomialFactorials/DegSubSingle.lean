@@ -1,5 +1,7 @@
-import Formalism.SharpRestriction.GrowthBounds.MonomialFactorials.BlockValuationZpOfLatticeInclusion
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PolynomialDimension.MultinomialDepth.PartnerM
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 noncomputable section
 

@@ -1,7 +1,9 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.RemainderTerms.PSameFactorFormula
 import GroundTheory.HeightsAndTheta.Heights.RemainderTerms.PowerSums
 import GroundTheory.HeightsAndTheta.Heights.RemainderTerms.JacobiTrudi
+import Mathlib.Data.Int.Star
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights
@@ -149,7 +151,7 @@ theorem OtherFactorFormula.proof (hA : LemmaA.Statement) (hB : LemmaB.Statement)
     have h := hCI r (fun i => a + nu i) (fun i j hij => Nat.add_le_add_left (hanti hij) a)
     have hs2 : ∑ i, (a + nu i) = r * a + k := by
       rw [Finset.sum_add_distrib, hs]
-      simp [Finset.sum_const, Finset.card_univ, Fintype.card_fin, mul_comm]
+      simp [Finset.sum_const, Finset.card_univ, Fintype.card_fin]
     rw [hs2] at h
     rw [h]
   rw [hTeq, hprod] at hres

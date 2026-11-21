@@ -1,11 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SlantProductSecondAction
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CoboundaryCup1
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CoboundaryCup0
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ValSuccAbove
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsFactorOfExactIsField
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsDualFunctionalsOfLinearIndependent
-import Development.WeilBound.CoreStatements.AutomorphicKernels.AbelianDeRham.AbelianHodgeDeRham.H1DimGeAbelianDim
+import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.HodgeWedgeFields.IsPullbackH2Structure
 
 set_option autoImplicit false
 

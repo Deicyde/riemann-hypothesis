@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.ShortValDesc
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.PlaceIntegralUnramified
-import Formalism.LocalToGlobal.ProjectiveLattices.ChartDirectionsIntegral
 
 set_option autoImplicit false
 

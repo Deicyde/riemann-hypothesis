@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.PAdicHodge.WAFracLemmaO
 import GroundTheory.PAdicHodge.WAFracHelp
 import GroundTheory.PAdicHodge.WAFracAlg

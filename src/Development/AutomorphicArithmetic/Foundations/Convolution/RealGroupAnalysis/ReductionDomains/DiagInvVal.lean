@@ -1,5 +1,4 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.ReductionDomains.ContinuousEntry
-import GroundTheory.GlobalFields.TateThesis.AdeleScaling
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.ReductionDomains.CdMeas
 
 open NumberField IsDedekindDomain MeasureTheory Matrix Topology Filter
@@ -33,7 +32,7 @@ private theorem cD_ratS {F : Type} [Field F] [NumberField F] (t : Fˣ)
   rw [M.val_ratS]
   ext i j
   fin_cases i <;> fin_cases j <;>
-    simp [cD, cR, M.val_ratS, diag_inv_val, diag_val, rt, map_mul]
+    simp [cD, cR, M.val_ratS, diag_inv_val, rt, map_mul]
 
 private theorem cD_mem {F : Type} [Field F] [NumberField F] (t : Fˣ) {x : G1 F} (hx : x ∈ Gam F) :
     cD (IdeleGroup.diagonal F t) x ∈ Gam F := by

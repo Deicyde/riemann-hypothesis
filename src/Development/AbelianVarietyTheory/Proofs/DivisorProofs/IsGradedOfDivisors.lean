@@ -1,9 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MumfordUShimOf
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.MumfordProportionality
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsAlgAtlasAtlasOf
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RestrictChernPart
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.RingKrullDimIntegers
+import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.AntisymmFibrePointTwo
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Pj ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.Mean4 GlobalTheory.Mean4O
 open scoped Classical
 
@@ -33,7 +31,7 @@ def ofDivisors (Δ : ι → X.Dv) : Fr (ratOf X) (fun _ : ι => 1) 0 where
     have e (i : ι) (a b : Fin 1) : (A * (fun i => Matrix.diagonal fun _ => (g i : X.Fn)⁻¹ :
         Mat (fun _ : ι => 1) X.Fn)⁻¹) i a b = A i 0 0 * g i := by
       rw [Subsingleton.elim a 0, Subsingleton.elim b 0]
-      simp [Matrix.mul_apply, Matrix.inv_def]
+      simp [Matrix.mul_apply]
     refine ⟨fun h i => ?_, fun h i => ?_⟩
     · have h' := ((hg i z' (hz'' i)).generatesAt_iff).1 (h i)
       refine ⟨fun a b => ?_, ?_, ?_, fun a b ha => absurd ha (by simp)⟩
@@ -52,7 +50,7 @@ theorem isGraded_ofDivisors (Δ : ι → X.Dv) : IsGraded (lineFlag (ofDivisors 
     fun i => CartierDiv.isEqn_iff_generatesAt_inv.1 (hg i), g x.1, ?_, hg x.1⟩
   obtain ⟨i, a⟩ := x
   rw [Subsingleton.elim a 0]
-  simp [Matrix.inv_def]
+  simp
 
 end GlobalTheory.ChernWeilLine
 

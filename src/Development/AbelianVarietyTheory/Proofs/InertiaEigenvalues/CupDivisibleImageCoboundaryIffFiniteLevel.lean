@@ -1,10 +1,5 @@
-import Mathlib
-import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
-import Formalism.LocalRingCardinality.AdicCompletionLocal.LocTied
-import Formalism.SharpRestriction.LevelLetterCocycles.LocalSituation
-import Formalism.SharpRestriction.LevelLetterCocycles.LocCoh
-import Formalism.GaloisCohomology.LocalTateDualityK
-import Formalism.SharpRestriction.LevelLetterCocycles.RamificationTwoAndConjugationAtQAndD
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IoLMk
 open Formalism Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.WeaklyAdmissibleFiltrations Formalism.MainNotions.N TensorProduct Module
 
@@ -50,7 +45,7 @@ theorem pair_shift {V' : Type} [AddCommGroup V'] [Module LL V'] (m : V →ₗ[LL
     (hk : c * π = k) (hu : m a (f (w - c • y)) = u) (hv : m t (f y) = v) :
     u - k * v = m a (f w) - c * m â (f y) := by
   subst hâ hk hu hv
-  simp only [map_sub, map_add, map_smul, LinearMap.sub_apply, LinearMap.add_apply,
+  simp only [map_sub, map_add, map_smul, LinearMap.add_apply,
     LinearMap.smul_apply, smul_eq_mul]
   ring
 

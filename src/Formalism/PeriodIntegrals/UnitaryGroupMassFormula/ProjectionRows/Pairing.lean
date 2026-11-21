@@ -1,7 +1,6 @@
-import Mathlib
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ProjectionRows.LatticeFinitelyGenerated
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ProjectionRows.LocFree
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ProjectionRows.Adapted
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.DataArith
 
 noncomputable section
 

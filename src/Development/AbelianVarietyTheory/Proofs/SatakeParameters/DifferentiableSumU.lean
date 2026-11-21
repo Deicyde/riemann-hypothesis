@@ -1,8 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.KernelLattices.ThDistC
-import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.IsAdmissibleFlagPairOfUnitriangularLeftAutomorph
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.SelfDualLatticeNorms.SelfDualComap
-import Formalism.LocalToGlobal.GlobalTheory.GL3.PStdOK
 
 noncomputable section
 

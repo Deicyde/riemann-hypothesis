@@ -1,4 +1,15 @@
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.HenselianStabilizerConjugacy.IsSelfDual
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.CuspSpanNormBounds.FractionFieldToGenericStalkAlgebraMapEq
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.Valuation.Integral
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
 
 noncomputable section
 
@@ -152,7 +163,7 @@ theorem locE_qbasis (L : LocE F E) [IsNonarchimedeanLocalField F] [CharZero F] :
         have : algebraMap F E (a1 + a2) + algebraMap F E (((c1 + c2 : 𝒪[F]) : F) * e) * δ =
             (algebraMap F E a1 + algebraMap F E ((c1 : F) * e) * δ) +
               (algebraMap F E a2 + algebraMap F E ((c2 : F) * e) * δ) := by
-          push_cast; simp only [map_add, add_mul, map_mul]; ring
+          push_cast; simp only [add_mul]; ring
         rw [this]; exact add_mem h1 h2
       zero_mem' := ⟨0, by simp⟩
       smul_mem' := by

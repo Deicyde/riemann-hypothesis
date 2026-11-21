@@ -1,7 +1,7 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.DiscreteSeriesCoefficientsCuspidal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.NonzeroTypes.Tensor2
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.TypesNZeroCJDefs
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.LitAut
 
 set_option maxHeartbeats 800000
 set_option synthInstance.maxHeartbeats 200000

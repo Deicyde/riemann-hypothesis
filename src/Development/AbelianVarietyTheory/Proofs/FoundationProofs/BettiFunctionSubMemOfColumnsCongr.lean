@@ -1,5 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.EigenOfTwoStep
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.Letter
+import Mathlib.Tactic.ReduceModChar
 open scoped MatrixGroups TensorProduct
 open Matrix GlobalTheory.KZ
 

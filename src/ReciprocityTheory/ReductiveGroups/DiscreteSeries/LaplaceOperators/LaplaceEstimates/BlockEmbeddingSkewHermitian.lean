@@ -1,8 +1,8 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.LaplaceOperators.LaplaceEstimates.SIntEquiv
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.LaplaceOperators.LaplaceFoundations.BasePointPsiExpFormula
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.LaplaceOperators.CapelliIdentity.Central
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.HighestWeights.FromHC
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.HighestWeights.Weight
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.LaplaceOperators.TransportGeo
 
 noncomputable section
 

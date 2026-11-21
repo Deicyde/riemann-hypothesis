@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.LinkExactAff
 import Development.AutomorphicArithmetic.AutomorphicVarieties.TensorHomCubes.StabDirectedSystem
+import Mathlib.Data.Finsupp.Pointwise
 
 open GlobalTheory.SeqCx Matrix UpperTheory.V.KL
 
@@ -52,7 +53,7 @@ theorem unimodular_partner_aff : ∀ (R : Type) [CommRing R] (s : ℕ), StableRa
     have h1 : f0 (Finsupp.single k c) = c * a k := by
       rw [← Finsupp.smul_single_one, map_smul, smul_eq_mul]
     rw [hφ, h1, Finset.sum_eq_single k
-      (fun b _ hb => by simp [Finsupp.single_apply, Ne.symm hb])
+      (fun b _ hb => by simp [Ne.symm hb])
       (fun h => absurd (Finset.mem_range.2 hk) h)]
     simp only [Finsupp.single_eq_same, Finsupp.single_apply, if_neg (show k ≠ j by omega), mul_zero,
       sub_zero]
@@ -60,7 +61,7 @@ theorem unimodular_partner_aff : ∀ (R : Type) [CommRing R] (s : ℕ), StableRa
   have hφj : φ (Finsupp.single j 1) = 0 := by
     rw [hφ, Finset.sum_eq_zero (fun i hi => by
       have := Finset.mem_range.1 hi
-      simp [Finsupp.single_apply, show j ≠ i by omega])]
+      simp [show j ≠ i by omega])]
     simp [a]
   let b' : R := φ v + a j * v j
   let r : Fin (n + 1) → R := fun i => if (i : ℕ) < n then v i else b'
@@ -84,14 +85,14 @@ theorem unimodular_partner_aff : ∀ (R : Type) [CommRing R] (s : ℕ), StableRa
     simp only [y, Finsupp.finset_sum_apply]
     exact Finset.sum_eq_zero fun i _ => by
       have := i.isLt
-      simp [Finsupp.single_apply, show (i : ℕ) ≠ m by omega]
+      simp [show (i : ℕ) ≠ m by omega]
   have hyi : ∀ i : Fin n, y i = -(t i * a j) := by
     intro i
     simp only [y, Finsupp.finset_sum_apply]
     rw [Finset.sum_eq_single i]
     · simp
     · intro b _ hb
-      simp [Finsupp.single_apply, Fin.val_ne_of_ne hb]
+      simp [Fin.val_ne_of_ne hb]
     · intro h
       exact absurd (Finset.mem_univ i) h
   let x : ℕ →₀ R := Finsupp.single j 1 + y

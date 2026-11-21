@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.FormPos
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.ComponentFamilySettingOfSettingBis
 
 namespace Formalism.FourierDecayAlt.P.PBL
 
@@ -198,7 +201,7 @@ theorem stdS_app (S : C.HidaSetting E Wp Wq) (j : ℕ) (H : C.LPt) (c : ℂ) (hH
     stdS S (H ++ [(1, c)]) = stdS S H ++ [(1, (lamS S j : ℂ) * c)] := by
   unfold stdS
   rw [tapp_lemma, hH]
-  simp only [D.toStd, Nat.sub_self, pow_zero, mul_one, List.append_nil]
+  simp only [D.toStd, Nat.sub_self, pow_zero, mul_one]
   unfold lamS
   rw [Nat.add_comm 1 j]
 

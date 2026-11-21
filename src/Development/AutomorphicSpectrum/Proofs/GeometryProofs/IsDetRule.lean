@@ -1,6 +1,9 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsFlatAnIffIsConstMul
-import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsFlatSecRankZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsConstMul
+import Formalism.LocalToGlobal.ProjectiveLattices.IsCombAt
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.Signature
 
 noncomputable section
 

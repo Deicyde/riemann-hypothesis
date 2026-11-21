@@ -1,5 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.UnipotentAdelicQuotients.BruhatFunctionExistsVariant
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 universe u
 

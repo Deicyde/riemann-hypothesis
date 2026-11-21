@@ -1,8 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PotentialTheory.PshShiftA
 import GroundTheory.HeightsAndTheta.Heights.Regularisation.GlueCharts
 import GroundTheory.HeightsAndTheta.Heights.StabilizerCovolume.PhiISemipositive
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.PlurisubharmonicLocalStatement
+import Mathlib.Topology.Algebra.Order.LiminfLimsup
 
 open Filter Topology Metric Set
 open ReciprocityTheory.AnForm.A (IsPsh coordDiv limsupExt molli shrink polyMax)

@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.BaseIdealIdeal
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsCompletedStrictHens
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsIdealSheafAwayFromP
 import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.MapSpanBaseChangeEquivSubmoduleOf
 open CategoryTheory CategoryTheory.Limits AlgebraicGeometry
@@ -15,7 +13,7 @@ theorem map_eq_baseChange {R S : Type} [CommRing R] [CommRing S] [Algebra R S] (
   rw [Submodule.baseChange_eq_span, Submodule.map_span, Ideal.map]
   congr 1
   ext y
-  simp [Algebra.TensorProduct.rid_tmul, Algebra.smul_def]
+  simp [Algebra.smul_def]
 
 theorem map_inf_of_flat {R S : Type} [CommRing R] [CommRing S] (f : R →+* S) (hf : f.Flat)
     (I J : Ideal R) : Ideal.map f (I ⊓ J) = Ideal.map f I ⊓ Ideal.map f J := by

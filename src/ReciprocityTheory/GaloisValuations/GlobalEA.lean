@@ -1,5 +1,7 @@
-import ReciprocityTheory.GaloisValuations.Global
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.Hypotheses.Descent
+import Mathlib.FieldTheory.Galois.Profinite
 
 noncomputable section
 

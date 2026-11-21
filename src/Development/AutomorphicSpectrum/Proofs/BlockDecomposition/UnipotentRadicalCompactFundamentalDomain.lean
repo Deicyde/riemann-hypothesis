@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GoodConstOfAniso
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CompactModNearOfFiltration
+import Development.AbelianVarietyTheory.Definitions.Divisors.LocallyCompactUnipFlag
 
 noncomputable section
 

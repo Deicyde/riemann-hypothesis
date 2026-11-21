@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Jets.PowerSeriesHasSumAt
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.FormalGroupNatMulSeriesEvalOpenDiscPropertiesStatement
 
 open GlobalTheory.ConvSer

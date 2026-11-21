@@ -1,5 +1,8 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.MultihomogeneousIdeals.MemDivSuppOfDivCycleNeZero
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.MultihomogeneousIdeals.ExistsMonomialNotMem
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Data.Finsupp.Interval
+import Mathlib.RingTheory.LocalProperties.Reduced
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.MultihomogeneousIdeals.CycDim
 
 noncomputable section
 
@@ -25,7 +28,7 @@ theorem weight_mw (m : (Σ k, ι k) →₀ ℕ) :
   rw [Fintype.sum_sigma, Finset.sum_eq_single k]
   · simp
   · intro b _ hb
-    simp [Pi.single_apply, Ne.symm hb]
+    simp [Ne.symm hb]
   · simp
 
 theorem mem_weighted_of_isMultiHomog {f : MRingOver F ι} {a : K → ℕ}

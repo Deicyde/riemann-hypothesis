@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SiegelReframe
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LogNormSqHolomorphicDdcZeroStatement
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.DifferentiableOnOfTendstoLocallyUniformlyOn
 

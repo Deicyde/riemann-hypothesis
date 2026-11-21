@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.GoodGeneric
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.HeckeOpsIffHeckeLiftsAt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.BlockTheory.ThetaLiftGeometry.LocalizationParts
+import Formalism.LocalToGlobal.IndefiniteReal.BaseLiftsPackageOfPrimitiveLinks
 
 noncomputable section
 

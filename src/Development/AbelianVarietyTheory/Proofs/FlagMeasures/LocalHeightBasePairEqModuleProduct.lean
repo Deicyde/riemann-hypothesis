@@ -1,10 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.NGHTie
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.LocalSplitTypeMixedSecond
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.StepNormOneOfLeaves
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.LocFacts
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.LocalHeightScaling
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.LocalModelModulusPropertiesOnUnits
+import Formalism.SharpRestriction.CuspSpanNormBounds.BruhatCellsKronecker.GlobalConditionOfLocalAgreement
 
 noncomputable section
 open scoped Classical
@@ -214,7 +214,7 @@ theorem place_eq (D : D7) (Z : LocDat D) (p : PlF D) (P : Formalism.MainNotions.
       x ^ (2 * D.R.rS * (D.R.rS + 1)) := by rw [hx, map_pow]
   rw [hxa]
   unfold GPt
-  simp only [map_mul, map_pow, hcjx, hcjE, star_mul, map_sub, map_natCast, Nat.cast_mul]
+  simp only [map_mul, map_pow, hcjx, hcjE, map_sub, map_natCast, Nat.cast_mul]
   have h1 := hs1 (D.R.rS + 1)
   have h2 := hs1 D.R.rS
   have h1' : (D.s.atP p).ιE (sgnL D.host.E D.R.rS (D.R.rS + 1)) * (D.s.atP p).ιE (star (sgnL D.host.E D.R.rS (D.R.rS + 1))) = 1 := by

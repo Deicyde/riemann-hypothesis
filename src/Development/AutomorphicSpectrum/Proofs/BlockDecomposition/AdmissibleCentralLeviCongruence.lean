@@ -1,5 +1,7 @@
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.SquareIntegrableTempered.CasselmanCriterion.Zj
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.SupercuspidalCoefficients
+import Development.AbelianVarietyTheory.Definitions.Divisors.T2SpaceGeneralLinearGroup
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open GlobalTheory.PRep GlobalTheory.SplitWeil GlobalTheory.SmGL GlobalTheory.LocGL GlobalTheory.JHMult
 
 namespace GlobalTheory.CompanionTheory.JacquetCoeff

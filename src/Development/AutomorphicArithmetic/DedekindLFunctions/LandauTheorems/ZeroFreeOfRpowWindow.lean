@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.DedekindLFunctions.LandauZeroFreeCriterion
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.DedekindLFunctions.LandauTheorems.lemmaL
 import Development.AutomorphicArithmetic.DedekindLFunctions.LandauTheorems.WindowHypOfRpow
 

@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.StabilizerCovolume.Objects
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.StabilizerCovolume.ULogBound
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.FrameDefinitions.Weights
 set_option maxSynthPendingDepth 1

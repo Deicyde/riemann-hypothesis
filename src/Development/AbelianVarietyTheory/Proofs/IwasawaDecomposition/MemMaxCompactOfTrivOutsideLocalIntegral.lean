@@ -1,4 +1,9 @@
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.GEquivIntL
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.AlgebraicWeights.InertDatumExists
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.PicardGroup
+import Std.Tactic.BVDecide.Normalize.Prop
 open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formalism.ConjugateSelfDual ReciprocityTheory.Gal ReciprocityTheory.Aut Formalism.AUTREP Formalism.L2 Formalism.L2.Host Formalism.L2.NT Formalism.IndefR.NX GlobalTheory.HeightCounting NumberField IsDedekindDomain Polynomial Formalism.UG GlobalTheory.SatInd
 
 noncomputable section
@@ -21,7 +26,7 @@ theorem tensor_decomp_zero {K M N : Type*} [Field K] [AddCommGroup M] [Module K 
   have h' := congrArg (TensorProduct.equivFinsuppOfBasisLeft b) h
   have h0 := DFunLike.congr_fun h' 0
   have h1 := DFunLike.congr_fun h' 1
-  simp [map_add, TensorProduct.equivFinsuppOfBasisLeft_apply_tmul_apply] at h0 h1
+  simp [map_add] at h0 h1
   exact ⟨h0, h1⟩
 
 variable (L : Type) [Field L] [NumberField L] [IsCMField L]

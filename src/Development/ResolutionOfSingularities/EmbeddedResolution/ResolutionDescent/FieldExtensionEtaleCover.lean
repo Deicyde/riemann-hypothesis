@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.ResolutionOfSingularities.EmbeddedResolution.AlgebraicPreliminaries.DisjointUnionOfOpens
-import Development.ResolutionOfSingularities.Foundations.BlowupUniversalProperty
 import Development.ResolutionOfSingularities.EmbeddedResolution.ResolutionOfSingularities
 universe u
 

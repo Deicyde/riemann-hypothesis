@@ -1,8 +1,8 @@
-import Mathlib
-import Formalism.DegreeFormula.PointDegree.PowSum
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.DegreeFormula.PointDegree.PermExpInj
-import Development.AbelianVarietyTheory.Definitions.Foundations.CurveCl
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ShiftFunctionalPowerSumStatement
+import Mathlib.Algebra.Order.Ring.Star
 
 open MvPolynomial Formalism.DegreeFormula GlobalTheory.FlagPoly
 

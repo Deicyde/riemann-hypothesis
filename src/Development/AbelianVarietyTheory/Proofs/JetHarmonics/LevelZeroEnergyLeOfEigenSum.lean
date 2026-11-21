@@ -1,8 +1,4 @@
-import Mathlib
-import Formalism.HermitianCurvature.StatementU
-import Formalism.HermitianCurvature.StatementQ
-import Formalism.HermitianCurvature.LetterProductDoubleDegreeCount
-import Development.AbelianVarietyTheory.PublishedTheorems.BesselIntegrals.BesselXiIntegrable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.BetaFinsetSumSmulOfXiExists
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.BetaSelfReNonneg
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.BetaCapelliSymmOfXiExists

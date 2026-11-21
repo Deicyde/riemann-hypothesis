@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.RealClassMaps.RealClassMapLiftEveryThirdPlace
 import Formalism.WachLatticeTwists.RealClassMaps.RealClassMapProofs.TopAll
 

@@ -1,5 +1,7 @@
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IntegrandSZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.WittDecompSymplInclIsotropicInclAnisotropic
+import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.SphericalZero
 open scoped ComplexConjugate Matrix NNReal
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.L2.Theta Formalism.L2.Pj Formalism.IndefR.Datum MeasureTheory IsDedekindDomain NumberField
 open GlobalTheory.AutomorphicL2Unitary GlobalTheory.Cusp GlobalTheory.AdelicU GlobalTheory.Doubling GlobalTheory.Cont
@@ -28,7 +30,7 @@ theorem stackRows_gram (A : HSp D) {k l : ℕ} (X Y : Matrix (Fin A.rank) (Fin k
   rw [GlobalTheory.Doubling.gram_hdbl, GlobalTheory.Doubling.dblGram, GlobalTheory.Doubling.blkMat, stackRows, stackRows,
     conjTranspose_submatrix, submatrix_mul_equiv, submatrix_mul_equiv, submatrix_id_id,
     conjTranspose_fromRows_eq_fromCols_conjTranspose, fromCols_mul_fromBlocks, fromCols_mul_fromRows]
-  simp only [Matrix.mul_zero, Matrix.zero_mul, add_zero, zero_add, Matrix.mul_neg, Matrix.neg_mul, sub_eq_add_neg]
+  simp only [Matrix.mul_zero, add_zero, zero_add, Matrix.mul_neg, Matrix.neg_mul, sub_eq_add_neg]
 
 def dblDec (A : HSp D) : HypDec (dblSp A) (zeroSp D) A.rank where
   e := stackRows A.gram⁻¹ A.gram⁻¹

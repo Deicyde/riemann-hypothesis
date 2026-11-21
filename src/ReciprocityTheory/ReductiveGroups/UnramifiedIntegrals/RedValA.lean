@@ -1,5 +1,4 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.RedDefs
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.EisensteinTranslationProducts.HasCMByStable
 
 noncomputable section

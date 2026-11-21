@@ -1,8 +1,10 @@
-import Mathlib
-import GroundTheory.ProfiniteCohomology.LocalClassFormation.FinrankLeNatCardGroupCohomologyTwoGalUnits
-import GroundTheory.ProfiniteCohomology.GaloisCohomology.BrauerInflation
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.LocalFields.SeparableClosure
 import GroundTheory.LocalFields.MaximalUnramified
+import GroundTheory.ProfiniteCohomology.GaloisCohomology.Brauer
+import GroundTheory.ProfiniteCohomology.LocalClassFormation.OrderScalars
+import GroundTheory.ProfiniteCohomology.LocalClassFormation.Unramified
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

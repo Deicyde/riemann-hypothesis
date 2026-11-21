@@ -1,4 +1,6 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.GermLocalOfFibres
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.StatementKB
 
 namespace Formalism.FourierDecayAlt.P.GermRealisation
 

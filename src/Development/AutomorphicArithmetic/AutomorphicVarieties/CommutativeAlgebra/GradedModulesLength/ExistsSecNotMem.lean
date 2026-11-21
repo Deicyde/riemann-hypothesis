@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.GradedModulesLength.ToDegInjective
 
 open IsLocalRing Filter Formalism.MainNotions.V.Pf.V2.Calc UpperTheory.V.Alg UpperTheory.V.Alg.M
@@ -14,7 +16,7 @@ private theorem toDeg_single_one (i : Fin k) : toDeg (Finsupp.single i 1) = e i 
   by_cases h : j = i
   · subst h
     simp [toDeg, e]
-  · simp [toDeg, e, h, Finsupp.single_apply, Ne.symm h]
+  · simp [toDeg, e, h]
 
 private theorem exists_sec_notMem {p : Ideal (rees N)} (hp : ¬ Irr (reesGr N) ≤ p) (i : Fin k) :
     ∃ (f : A) (hf : f ∈ N i), sec N i f hf ∉ p := by

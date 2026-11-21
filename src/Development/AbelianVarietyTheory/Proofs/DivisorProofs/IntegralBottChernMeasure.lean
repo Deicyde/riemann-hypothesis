@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecondCountableTopologySphere
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TotalEqOfNonneg
 open CategoryTheory AlgebraicGeometry Set Matrix MeasureTheory OnePoint
@@ -19,9 +19,9 @@ theorem re_dens_ofValues_one (β : V 1 → V 1 → ℂ) :
     (dens (ofValues β : Alt 1)).re = 2 * diagVal β (EuclideanSpace.single 0 1) := by
   obtain ⟨c, hc, e⟩ := vol_eq 1
   have hv : (vol 1 : Alt 1) = (Complex.I / 2) • ((sym (0, 0) : Ev 1) : Alt 1) := by
-    simp [vol, Fin.prod_univ_one]
+    simp [vol]
   have ho : (ofValues β : Alt 1) = β (EuclideanSpace.single 0 1) (EuclideanSpace.single 0 1) • ((sym (0, 0) : Ev 1) : Alt 1) := by
-    simp [ofValues, Fin.sum_univ_one, GlobalTheory.GoodMetric.coordVec]
+    simp [ofValues, GlobalTheory.GoodMetric.coordVec]
   have hr : (bas 1).repr (vol 1 : Alt 1) Finset.univ = c := by simp [e]
   rw [hv, _root_.map_smul, Finsupp.smul_apply, smul_eq_mul] at hr
   have hr0 : (bas 1).repr ((sym (0, 0) : Ev 1) : Alt 1) Finset.univ ≠ 0 := by

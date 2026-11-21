@@ -1,8 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StZIntPoint
 import GroundTheory.HeightsAndTheta.Heights.Intersections.CompsDim
 import GroundTheory.HeightsAndTheta.Heights.Intersections.FourierIntegralBound
 import GroundTheory.HeightsAndTheta.Heights.FieldsOfNumbers.Assembly
+import Mathlib.RingTheory.Nullstellensatz
 set_option maxSynthPendingDepth 1
 
 noncomputable section

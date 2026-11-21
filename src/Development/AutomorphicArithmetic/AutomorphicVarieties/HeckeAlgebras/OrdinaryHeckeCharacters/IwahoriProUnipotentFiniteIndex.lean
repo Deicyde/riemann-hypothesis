@@ -1,5 +1,6 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.HeckeAlgebras.ContinuousTorusCharacter
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.HeckeAlgebras.OrdinaryHeckeCharacters.IwMemMul
+import Mathlib.Topology.Sheaves.Presheaf
 
 open IsLocalRing Matrix UpperTheory.V.Hi
 

@@ -1,5 +1,7 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.ConvolutionKernels.AnalyticSeries.NeZeroOne
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.NormCharacterPowers.OrderAsym
+import Development.AutomorphicArithmetic.Foundations.Convolution.ConvolutionKernels.AnalyticSeries.AnalyticAtTsum
+import Development.WeilBound.RepresentationTheoryGL.JacquetShalikaBounds.AbsoluteRigidity.SubtypeIteSums.CommonOfLandauEuler
 
 noncomputable section
 

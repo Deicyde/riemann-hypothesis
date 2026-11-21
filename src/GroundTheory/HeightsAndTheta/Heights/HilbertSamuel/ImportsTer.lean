@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.IntConst
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
+import Mathlib.MeasureTheory.Function.L2Space
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.HilbertSamuel

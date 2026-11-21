@@ -1,9 +1,13 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.AdmissibleDesigns.NonemptyPl
 import Formalism.SharpRestriction.LevelLetterCocycles.ExistsInertiaCharpolyFactorOfTameType
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.FiniteExtensionTopology.AddPreservesExpCongruence
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.FiniteExtensionTopology.ExpCongruenceExtendsToSum
 import Formalism.AdicCompletionExports.AdicCompleteRingEquiv.IsAdicCompleteOfRingEquiv
 import Development.AutomorphicArithmetic.CyclotomicBounds.FactorizationConductorLeLocalLevel
+import Formalism.SharpRestriction.LevelLetterCocycles.GoodCongruenceDataOf
+import Mathlib.NumberTheory.Padics.ProperSpace
 
 variable [hT2Core : Fact ReciprocityTheory.ChartRestriction.T2.Core]
 

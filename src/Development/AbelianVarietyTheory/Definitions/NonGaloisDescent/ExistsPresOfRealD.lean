@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.JSmul
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsIsResCharP
 
 noncomputable section
 namespace GlobalTheory.Present

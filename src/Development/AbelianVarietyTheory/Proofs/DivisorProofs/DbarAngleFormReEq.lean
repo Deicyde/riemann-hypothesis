@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TotalEqOfNonneg
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.EqOfIsometricTrivShift
 open CategoryTheory AlgebraicGeometry TopologicalSpace Filter Topology MeasureTheory
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open GlobalTheory GlobalTheory.CxPts GlobalTheory.VB GlobalTheory.HermFrame GlobalTheory.CurveDens GlobalTheory.Cartier
@@ -43,7 +43,7 @@ theorem angleForm_alg (n : ℕ) (q P D H β β' L L' : ℂ) (a a' : ℝ) (ha : 0
   · rw [h1, h2]
     simp only [Complex.sq_norm, Complex.normSq_apply, Complex.add_re, Complex.add_im, Complex.sub_re,
       Complex.sub_im, Complex.mul_re, Complex.mul_im, Complex.ofReal_re, Complex.ofReal_im,
-      Complex.conj_re, Complex.conj_im, Complex.neg_re, Complex.neg_im]
+      Complex.conj_re, Complex.conj_im]
     field_simp
     ring
   · rw [h1]
@@ -51,7 +51,7 @@ theorem angleForm_alg (n : ℕ) (q P D H β β' L L' : ℂ) (a a' : ℝ) (ha : 0
       Complex.ofReal_one]
     simp only [Complex.sq_norm, Complex.normSq_apply, Complex.add_re, Complex.add_im, Complex.sub_re,
       Complex.sub_im, Complex.mul_re, Complex.mul_im, Complex.ofReal_re, Complex.ofReal_im,
-      Complex.conj_re, Complex.conj_im, Complex.neg_re, Complex.neg_im]
+      Complex.conj_re, Complex.conj_im]
     field_simp
     ring
 

@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasTraitsOnOfHasTraitsP
-import ReciprocityTheory.AnalyticForms.RegularLocalRings.FinalTheorems
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsThetaMemberThroughModelPointStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSemiAbelianExtendingModelAboveThetaSystemStatement
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj IsLocalRing
@@ -21,7 +19,7 @@ theorem zhAbove_surjective {X₁ : GSet} {Y : RatModel X₁.o₁ X₁.Ω₁} {π
   have hg : genericPoint X₁.M.Z ∈ Set.range πY := by
     refine ⟨Y.pt (IsLocalRing.closedPoint X₁.Ω₁), ?_⟩
     have e := congrArg (fun f : Sp X₁.Ω₁ ⟶ X₁.M.Z => f (IsLocalRing.closedPoint X₁.Ω₁)) hH
-    simp only [Scheme.Hom.comp_apply] at e
+    simp only at e
     exact e.trans (X₁.M.pt_apply _)
   intro z
   have : z ∈ closure ({genericPoint X₁.M.Z} : Set X₁.M.Z) := by

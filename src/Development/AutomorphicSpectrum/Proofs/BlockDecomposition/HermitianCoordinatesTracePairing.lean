@@ -1,10 +1,10 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsBlockNFZeroOne
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntegrableOfMulUnimodular
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsWeilFormulas
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousHermPart
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ThetaSumInvariantUnipotentTranslate
-import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.GinfCSecondCountable
+import Development.AbelianVarietyTheory.Proofs.HeightProofs.EmbeddingXiZeroNeZero
+import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.NumFieldHosCountable
 
 noncomputable section
 open scoped Matrix NNReal ENNReal ComplexConjugate TensorProduct
@@ -57,7 +57,7 @@ def tB (σ : E →ₐ[F] E) : LinearMap.BilinForm F (hermF σ r) :=
       simp only [tF, Submodule.coe_smul, Matrix.smul_mul, Matrix.trace_smul, map_smul, smul_eq_mul]
       ring)
     (fun a b c => by
-      simp only [tF, Submodule.coe_add, Matrix.mul_add, Matrix.trace_add, map_add, mul_add])
+      simp only [tF, Submodule.coe_add, Matrix.trace_add, map_add, mul_add])
     (fun c a b => by
       simp only [tF, Submodule.coe_smul, Matrix.mul_smul, Matrix.trace_smul, map_smul, smul_eq_mul]
       ring)

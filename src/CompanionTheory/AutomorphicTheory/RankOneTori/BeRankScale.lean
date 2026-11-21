@@ -1,7 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.AutomorphicTheory.RankOneEstimates.RankOne
-import Formalism.SharpRestriction.CuspSpanNormBounds.IsPtRepTrDat
 import Formalism.SharpRestriction.CuspSpanNormBounds.FrobeniusCoefficientMemLp.SigmaFiniteAmplitudes.SigmaFiniteOfUnfold
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BesselNeZeroOfCyclicOrbit
+import Formalism.SharpRestriction.CuspSpanNormBounds.SpanMemOfImage
+import Formalism.SharpRestriction.CuspSpanNormBounds.StarVecMulDM
 
 open MeasureTheory Matrix Formalism.QuantumDeterminants Formalism.MainNotions.S Formalism.MainNotions.FrameBoundFromBesselTorus Formalism.FourierDecayAlt.P
 open scoped InnerProductSpace ENNReal

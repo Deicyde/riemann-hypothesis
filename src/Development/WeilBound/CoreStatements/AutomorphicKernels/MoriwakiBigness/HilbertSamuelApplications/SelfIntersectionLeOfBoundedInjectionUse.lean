@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.AutomorphicKernels.MoriwakiBigness.HilbertSamuelApplications.SmallGeneratedCountUpperOfUse
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.HilbertSamuelG3OfMoriwaki
+import Development.AutomorphicSpectrum.Proofs.MetricProofs.PackingStatement
+import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PNefOnGenericOfSemipos
 open MvPolynomial ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.ArakelovGeometry Filter Topology NumberField
 
 namespace GlobalTheory.CompanionTheory.Ar.Giv

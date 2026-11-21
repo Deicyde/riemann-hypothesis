@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.PAdicHodge.KerTheta
+import Mathlib.RingTheory.AdicCompletion.LocalRing
+import Mathlib.RingTheory.Perfectoid.BDeRham
 set_option maxSynthPendingDepth 1
 
 noncomputable section

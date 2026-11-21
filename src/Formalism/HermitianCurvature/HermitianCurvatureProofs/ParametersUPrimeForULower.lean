@@ -1,9 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementTop
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.RealInputsBuiltClosedForm
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.UnipotentCoordinatesMeasurePreserving
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.DifferentialOperatorBracket
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.HighestWeightPolynomials
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.FrameCompletion
+import Mathlib.Analysis.CStarAlgebra.ContinuousLinearMap
 
 section PartBasic
 
@@ -22,7 +22,7 @@ variable {Wp Wq : Type} [NormedAddCommGroup Wp] [InnerProductSpace ℂ Wp] [Norm
 theorem hsInner_eq [FiniteDimensional ℂ Wq] (X Y : Wq →L[ℂ] Wp) :
     Formalism.FourierDecayAlt.B.hsInner X Y = ∑ i, inner ℂ (Y (stdOrthonormalBasis ℂ Wq i)) (X (stdOrthonormalBasis ℂ Wq i)) := by
   first
-    | (simp only [Formalism.FourierDecayAlt.B.hsInner, Formalism.FourierDecayAlt.B.hsVec, PiLp.inner_apply, PiLp.toLp_apply]; done)
+    | (simp only [Formalism.FourierDecayAlt.B.hsInner, Formalism.FourierDecayAlt.B.hsVec, PiLp.inner_apply]; done)
     | (unfold Formalism.FourierDecayAlt.B.hsInner Formalism.FourierDecayAlt.B.hsVec; rw [PiLp.inner_apply]; rfl)
     | (simp [Formalism.FourierDecayAlt.B.hsInner, Formalism.FourierDecayAlt.B.hsVec, PiLp.inner_apply]; done)
 
@@ -263,7 +263,7 @@ theorem typ_EB_adj (hπ : IsCRepOn (UWset k r z) π) (hc : ContinuousOn π (UWse
   simp only [ContinuousLinearMap.add_apply, ContinuousLinearMap.smul_apply, inner_add_left, inner_add_right,
     inner_smul_left, inner_smul_right, Complex.conj_I]
   rw [typ_dOp_skew hπ hc hu h1, typ_dOp_skew hπ hc hu h2]
-  simp only [neg_smul, one_smul, ContinuousLinearMap.neg_apply, inner_neg_right]
+  simp only [neg_smul, one_smul, inner_neg_right]
   ring
 
 end adj

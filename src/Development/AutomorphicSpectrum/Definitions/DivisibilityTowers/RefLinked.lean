@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.HasBaseDegreeSetting
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Statements.MetricStatements.AgreementIffGuarded
+import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.Proportional
 
 noncomputable section
 

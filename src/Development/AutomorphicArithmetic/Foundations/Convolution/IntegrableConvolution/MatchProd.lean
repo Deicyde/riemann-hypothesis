@@ -1,9 +1,8 @@
-import Mathlib
-import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.ThickFrames
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.FinSplit
 import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.MatchFin
 import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.SplitLoc
-import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.GlueBasic
+import GroundTheory.AutomorphicForms.WhittakerGroups
 
 open MeasureTheory NumberField IsDedekindDomain
 open GroundTheory.Automorphic GroundTheory.Automorphic.Reduction GroundTheory.Global GroundTheory.Global.SemiLocal

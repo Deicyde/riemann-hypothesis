@@ -1,16 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EqTopOfTranslates
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsNormLeHeightPow
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SetIntegralMulLeft
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SplitPlaceTransvectionActsPositivelyInvariantForStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ContinuousMovPair
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.RationalSymplecticPointsSelfAnnihilator
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.StandardAdelicCharacterLocalComponentNeOne
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TransvectionSubgroupCocompactHaarFundamentalDoma
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicTransvectionSubgroupEqAdelesClosed
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.ExistsIntegralSplitIdempotentOverTwo
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.InfPartOneSubEInfSmul
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.EqZeroOfLintegralEqZero
 import Formalism.LocalToGlobal.GroupLattices.TrivialTransfer.OneAddPowOfSq
 
 noncomputable section
@@ -56,7 +49,7 @@ theorem hO_along (a : Fin S.rank → AE D) (y : WO S T) :
   ring
 
 theorem symplO_along {y : WO S T} (h : row S T ξ y = 0) (a : Fin S.rank → AE D) : symplO S T (along S T ξ a) y = 0 := by
-  simp only [symplO, hO_along, h, Pi.zero_apply, RingHom.map_zero, mul_zero, zero_mul, Finset.sum_const_zero, map_zero]
+  simp only [symplO, hO_along, h, Pi.zero_apply, mul_zero, zero_mul, Finset.sum_const_zero, map_zero]
 
 theorem symplOH_along (h : IsoVec T ξ) (a b : Fin S.rank → AE D) :
     symplOH S T (along S T ξ a) (along S T ξ b) = 0 := by

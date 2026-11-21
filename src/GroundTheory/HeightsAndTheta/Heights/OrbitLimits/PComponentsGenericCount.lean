@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StComponentsGenericCount
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.PComponentsPairPoly
+import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.Assembly
 set_option maxSynthPendingDepth 1
 
 noncomputable section

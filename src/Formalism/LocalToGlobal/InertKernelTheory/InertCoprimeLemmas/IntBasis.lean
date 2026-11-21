@@ -1,9 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.InertKernelTheory.DefsBasis
-import Formalism.FrobeniusOrbits.RealSubfieldLeCompositum
-import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.OrderOfSignGroupDvdTwo
-import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.CardTrivialFirstComponent
 import Formalism.LocalToGlobal.GlobalTheory.GL3.IsometryLinkageTrivialLevel
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.IntRing
+import Formalism.LocalToGlobal.InertKernelTheory.DefsInt
 
 noncomputable section
 

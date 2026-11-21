@@ -1,4 +1,6 @@
-import Development.EtaleCohomology.CohomologicalPurity.LeafTubeCut
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.EtaleCohomology.CohomologicalPurity.LeafTubeCutHoc
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry Opposite GlobalTheory.EtC

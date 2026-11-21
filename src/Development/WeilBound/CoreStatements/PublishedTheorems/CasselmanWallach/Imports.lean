@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PublishedTheorems.CasselmanWallach.SmoothSeminormAndSobolevBounds
-import Development.WeilBound.HeckeVectors.SmoothVectors.SobolevApproximation.PCDense
 import CompanionTheory.HarishChandraModules.KFiniteAnalyticVectors.AnalyticIntertwiners.HarishChandraModulesIndefiniteUnitaryGroup
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CasselmanWallachOfHyp
 

@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.BaseChangeIsobaricNOf
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsEquivOfIsSubquotient
 import Development.AutomorphicArithmetic.ThetaCorrespondence.FockModels.TwoAtCharZero

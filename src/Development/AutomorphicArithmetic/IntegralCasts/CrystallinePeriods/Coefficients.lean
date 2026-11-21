@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.Section
 import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.ExistsFactorialMulEqPow
+import Mathlib.RingTheory.WittVector.Isocrystal
 
 noncomputable section
 

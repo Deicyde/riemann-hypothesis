@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.VerticalDivisors.OfFreeParAlgIndep
-import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.LineInhabitant
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

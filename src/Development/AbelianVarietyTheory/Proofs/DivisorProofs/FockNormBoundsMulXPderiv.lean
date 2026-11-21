@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.Divisibility.SchurIrreducible
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.IsFockIPOfFockData
 open Formalism.BasicNotions.TH Formalism.MainNotions.SchurIrreducible GlobalTheory.FockAlg MvPolynomial
 
@@ -28,7 +28,7 @@ theorem mfact_add {σ : Type} [DecidableEq σ] (α : σ →₀ ℕ) (i : σ) :
   have : Finsupp.erase i (α + Finsupp.single i 1) = Finsupp.erase i α := by
     ext j; by_cases hj : j = i
     · simp [hj]
-    · simp [Finsupp.erase_ne hj, Finsupp.single_eq_of_ne hj]
+    · simp [Finsupp.erase_ne hj]
   rw [this]
   simp [Nat.factorial_succ]
   ring

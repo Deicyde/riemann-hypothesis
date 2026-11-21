@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.PrinInf
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.ExistsIsParamFunOne
 import Development.AbelianVarietyTheory.Definitions.Foundations.NotHasParamOfSubsingleton
@@ -9,8 +10,6 @@ import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsSelfDu
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIdempotentSumAuxiliaryPlaces
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.HermitianSpaceOppositeFormSignatureCondition
 import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.LevelADef
-import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsAuxiliaryPlaceNotMemFinset
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsIsSplitChartOne
 
 noncomputable section
 

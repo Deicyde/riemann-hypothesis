@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrobKerIdealLeAugIdeal
 import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.AevalSurjectiveOfSpanCotangent
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.HopfAlgebra.Quotient
+import Mathlib.RingTheory.MvPolynomial.Ideal
 
 set_option autoImplicit false
 

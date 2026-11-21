@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IndEtOfForallFinset
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.FlatMapMaximalIdealIsSeparable
+import Mathlib.Tactic.Polynomial.Basic
 open GlobalTheory.EtC
 
 namespace GlobalTheory.LocalIndEtAIC

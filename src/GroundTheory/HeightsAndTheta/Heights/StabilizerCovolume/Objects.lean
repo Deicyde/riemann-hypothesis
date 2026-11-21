@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.StabilizerCovolume.ThreeLeLevel
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.StabilizerCovolume.GaussCM
 import GroundTheory.HeightsAndTheta.Heights.StabilizerCovolume.TwistVecLinearIndependent
 set_option maxSynthPendingDepth 1

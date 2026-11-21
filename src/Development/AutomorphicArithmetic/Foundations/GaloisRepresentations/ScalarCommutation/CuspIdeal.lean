@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ScalarCommutation.TypeSlice
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsCuspSpaceBot
-import GroundTheory.AutomorphicForms.MeasuresModulus
+import GroundTheory.AutomorphicForms.GLnLocal
 
 set_option autoImplicit false
 

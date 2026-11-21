@@ -1,6 +1,13 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LogFactorialIndices.StatementIdx
 import Lemmata.DiscreteValuationQuotients.LenQuotSpan
 import Lemmata.GeneralBFactSecondExtra.Key
+import Mathlib.Algebra.Module.Lattice
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
 
 open Module Submodule
 

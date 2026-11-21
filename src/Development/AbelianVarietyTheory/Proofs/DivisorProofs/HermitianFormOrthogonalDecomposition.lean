@@ -1,5 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeSocleOverOfSimple
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open scoped Topology
 
 namespace GlobalTheory

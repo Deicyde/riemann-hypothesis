@@ -1,12 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.ResBound
-import Formalism.LocalRingCardinality.AdicCompletionLocal.LocTied
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.TwistedPhiGammaModelCharacterEqStandardStatement
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ModelObjAndAbcStatement
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ModelPreimageOfInjectiveFinDimRepModelHomStatement
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ModelPushOfSurjective
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.MapExactMiddle
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.MapAevalNab
+import Mathlib.LinearAlgebra.Eigenspace.Minpoly
+import Mathlib.RingTheory.Etale.Weakly
 
 noncomputable section
 namespace GlobalTheory.TopSteps.ExtPair

@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.CompactOrbits.LocStep
+import Mathlib.NumberTheory.LocalField.Basic
+import Mathlib.RingTheory.PicardGroup
 
 noncomputable section
 

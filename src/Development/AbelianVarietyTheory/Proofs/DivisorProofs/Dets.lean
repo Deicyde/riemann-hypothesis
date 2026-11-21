@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.PointShiftSt
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 set_option autoImplicit false
 

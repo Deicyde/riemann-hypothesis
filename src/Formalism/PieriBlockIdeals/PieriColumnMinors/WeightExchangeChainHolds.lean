@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.PieriBlockIdeals.WEChain
 import Formalism.PieriBlockIdeals.PieriColumnMinors.ContentLinkageHolds
 import Formalism.PieriBlockIdeals.PieriColumnMinors.WeightExchangeBoundHolds

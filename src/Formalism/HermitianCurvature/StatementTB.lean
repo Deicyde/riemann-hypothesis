@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementK
+import Mathlib.Analysis.CStarAlgebra.Module.Constructions
+import Mathlib.LinearAlgebra.Matrix.PosDef
 
 namespace Formalism.FourierDecayAlt.TB
 

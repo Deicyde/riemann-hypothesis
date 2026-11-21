@@ -1,11 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.LevelChainSharpColumnValuationOfPointKernelLiftL
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.AssembleLattice
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.BaseDataEmbeddingConj
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.EventuallyThickCardLeCyclicOrder
 import Formalism.SharpRestriction.GlobalSchurBounds.GL3Columns
-import Formalism.SharpRestriction.ElevenLe
-import Formalism.LocalRingCardinality.DataParams
 
 open Formalism.BasicNotions Classical NumberField GlobalTheory.LvT
 open Formalism.MainNotions.product_first_zeroth_parts (tops)

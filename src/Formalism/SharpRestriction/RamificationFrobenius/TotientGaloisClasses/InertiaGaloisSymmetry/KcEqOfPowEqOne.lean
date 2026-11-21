@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.InertiaGaloisSymmetry.KcBase
+import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.MuCardLeTwo
 
 open NumberField IntermediateField Ideal
 open scoped Pointwise nonZeroDivisors

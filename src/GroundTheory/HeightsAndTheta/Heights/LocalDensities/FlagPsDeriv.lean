@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.LocalDensities.FlagPsLine
+import GroundTheory.HeightsAndTheta.Heights.LocalDensities.LeviLine
+import Mathlib.Analysis.InnerProductSpace.Calculus
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.FourB
@@ -79,10 +82,10 @@ theorem rowPoly_eval (u : LowerPair N → ℂ) (t : ℝ) :
   refine Matrix.ext fun a c => ?_
   by_cases h : Fin.castLE hi a < c
   · have h2 : c ≠ Fin.castLE hi a := fun h' => by rw [h'] at h; exact lt_irrefl _ h
-    simp only [Matrix.map_apply, rowPoly, Matrix.of_apply, coe_evalRingHom, eval_add, eval_mul,
+    simp only [Matrix.map_apply, rowPoly, Matrix.of_apply, coe_evalRingHom, eval_mul,
       eval_X, eval_C, Matrix.conjTranspose_apply, Matrix.submatrix_apply, id_eq,
-      Matrix.add_apply, Matrix.one_apply, lowerMatrix, dif_pos h, if_neg h2, eval_zero, zero_add]
-    simp [Complex.real_smul, mul_comm]
+      Matrix.add_apply, Matrix.one_apply, lowerMatrix, dif_pos h, if_neg h2, zero_add]
+    simp [Complex.real_smul]
   · by_cases h2 : c = Fin.castLE hi a
     · subst h2; simp [rowPoly, lowerMatrix]
     · simp [rowPoly, lowerMatrix, h, h2]

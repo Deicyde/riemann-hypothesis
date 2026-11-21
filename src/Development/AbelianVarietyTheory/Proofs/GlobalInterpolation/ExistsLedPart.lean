@@ -1,13 +1,6 @@
-import Mathlib
-import Formalism.SharpRestriction.InertJacobiLevels.AsmIface
-import Formalism.LocalToGlobal.GlobalTheory.IsResidueClassZero
-import Formalism.SharpRestriction.GrowthBounds.SmallOrderPrimes
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.Lemmas
-import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.PairRowIffQdRows
-import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.DisjointExceptional
-import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.ThinScalesIffHostBound
-import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.LogCondLeThree
-import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.AuxiliaryPrimeMemAvoidedPrimes
 import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.SetUnipotentTranslate
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ExistsRefill
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.MemLocSub

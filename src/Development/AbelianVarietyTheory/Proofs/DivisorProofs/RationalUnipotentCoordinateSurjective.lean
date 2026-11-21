@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoC
 open scoped TensorProduct Matrix
 open NumberField IsDedekindDomain MeasureTheory Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.ThK.UnipDom
@@ -32,7 +32,7 @@ lemma fm_neg_right (a u : Fin n → E) : fm σ J a (-u) = - fm σ J a u := by
 
 lemma fm_skew (hσ : ∀ e, σ (σ e) = e) (hJ : ∀ i j, σ (J j i) = -J i j) (a b : Fin n → E) :
     fm σ J b a = - σ (fm σ J a b) := by
-  simp only [GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.form, dotProduct, Matrix.mulVec, map_sum, map_mul, hσ, Finset.mul_sum, map_neg]
+  simp only [GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.form, dotProduct, Matrix.mulVec, map_sum, map_mul, hσ, Finset.mul_sum]
   rw [Finset.sum_comm, ← Finset.sum_neg_distrib]
   refine Finset.sum_congr rfl fun i _ => ?_
   rw [← Finset.sum_neg_distrib]
@@ -75,7 +75,7 @@ lemma eich_neg (hσ : ∀ e, σ (σ e) = e) (hJ : ∀ i j, σ (J j i) = -J i j) 
   have e1 : fm σ J (eich σ J x (-w) v) x = fm σ J v x := by
     simp only [eich, fm_add_left, fm_smul_left, fm_neg_left, hxx, hwx]; ring
   have e2 : fm σ J (eich σ J x (-w) v) w = fm σ J v w - fm σ J v x * fm σ J w w := by
-    simp only [eich, fm_add_left, fm_smul_left, fm_neg_left, fm_neg_right, hxw, fm_add_right]; ring
+    simp only [eich, fm_add_left, fm_smul_left, fm_neg_left, fm_neg_right, hxw]; ring
   have e3 : fm σ J (-w) (-w) = fm σ J w w := by rw [fm_neg_left, fm_neg_right, neg_neg]
   rw [eich, e1, e2]
   simp only [eich, e3, fm_neg_right]
@@ -259,7 +259,7 @@ theorem exists_unip_rat_coA : ∀ (F E : Type) [Field F] [NumberField F] [Field 
   have hMιm : M * H'.ι = H'.ι + Matrix.vecMulVec H'.x α := by
     apply Matrix.ext_of_mulVec_single; intro k
     rw [← Matrix.mulVec_mulVec, hMι, Matrix.add_mulVec, Matrix.vecMulVec_mulVec, dotProduct_single_one]
-    ext i; simp [MulOpposite.smul_eq_mul_unop, mul_comm]
+    ext i; simp
   refine ⟨⟨_, hmem⟩, Subgroup.subset_closure ⟨?_, ?_⟩, Subgroup.mem_subgroupOf.2 ⟨γE, rfl⟩, ?_⟩
   · show M.map f *ᵥ incV F H'.x = incV F H'.x
     rw [hmv, hMx]

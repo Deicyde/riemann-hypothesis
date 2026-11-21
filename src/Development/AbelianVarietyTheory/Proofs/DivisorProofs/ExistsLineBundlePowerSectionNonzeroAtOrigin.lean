@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoefTwistPull
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.EndoEqOfSections
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.ValuationNonnegIffSpanMultiplicationTranslates
 
 open CategoryTheory CategoryTheory.Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry IsLocalRing
@@ -39,7 +37,7 @@ theorem exists_sec_value_ne_zero : LL → ∀ (R : Type) [CommRing R] [IsDomain 
     rw [cst_eq, map_zero]
   rw [h0, zero_mul] at h1
   have h2 : sA t (ptSecT A.A (1 : TFK (R := R) F ⟶ A.A)).left z J = sval (s j) χ z J :=
-    (ht _ _ z J hJ).trans ((VVRank.sval_pullTo _ _ _ _ z hJ).trans (by simp only [χ, Category.assoc]))
+    (ht _ _ z J hJ).trans ((VVRank.sval_pullTo _ _ _ _ z hJ).trans (by simp only [χ]))
   have hu : IsUnit (sval (s j) χ z J) :=
     (AmpleSpan.mem_nonzeroLocus_iff_gs (s j) χ z (hJ.mem (fun _ : Fin k => (A.A.hom ⁻¹ᵁ ⊤).ι) χ)).1 hj
   rw [← h2, h1] at hu

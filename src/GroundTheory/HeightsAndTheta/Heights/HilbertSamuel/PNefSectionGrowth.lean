@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsNefSectionGrowth
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsNefShiftPolynomial
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsShiftSectionBound
+import Mathlib.Analysis.Polynomial.Basic
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.HilbertSamuel

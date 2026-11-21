@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.IdeleGroups.SIdeleGroups.Galois
-import GroundTheory.GlobalFields.IdeleGroups.GaloisOnAdeles.Action
 import GroundTheory.ProfiniteCohomology.ColimitUnion
+import Mathlib.FieldTheory.Galois.Profinite
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

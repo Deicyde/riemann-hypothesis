@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsUniqueIsTanFrameOfIsEmpty
-import Development.AbelianVarietyTheory.Definitions.Divisors.P22
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WedgeOrdVpBaseChangeOfNeBot
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.FormallyUnramifiedOfTangentMapInjective
+import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.ExistsNormalFormArcDatumFramedPointRootOfUnity
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 set_option autoImplicit false
 set_option synthInstance.maxHeartbeats 400000
@@ -42,7 +43,7 @@ theorem tan_iff (hπ : IsGrpPullback A Xo.univ.t.G x π) (w : epsR K ⟶ A) : Is
     · have a : η[A].left ≫ A.hom = 𝟙 _ := Over.w η[A]
       rw [Category.assoc, hw, a, ← Geo.Tor.spMap_comp]
       have : (TrivSqZeroExt.fstHom K K K).toRingHom.comp (algebraMap K (DualNumber K)) = RingHom.id K := by
-        ext r; simp [TrivSqZeroExt.algebraMap_eq_inl]
+        ext r; simp
       rw [this]
       exact Spec.map_id _
   · intro h

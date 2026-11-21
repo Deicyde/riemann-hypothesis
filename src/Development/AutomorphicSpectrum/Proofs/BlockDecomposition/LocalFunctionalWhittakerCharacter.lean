@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.GaugeTopology.SSmoothW
 
 open MeasureTheory Matrix GroundTheory.LocalField GroundTheory.Automorphic
@@ -32,9 +33,9 @@ def tvEquiv (a y z : F) : (Fin 2 → F) ≃ᵐ (Fin 2 → F) where
   measurable_toFun := by
     refine measurable_pi_iff.2 fun i => ?_
     fin_cases i
-    · simp only [tv]
+    · simp only
       exact (Continuous.measurable (by fun_prop) : Measurable fun x : Fin 2 → F => y + x 0 - a * (z + x 1))
-    · simp only [tv]
+    · simp only
       exact (Continuous.measurable (by fun_prop) : Measurable fun x : Fin 2 → F => z + x 1)
   measurable_invFun := by
     refine measurable_pi_iff.2 fun i => ?_

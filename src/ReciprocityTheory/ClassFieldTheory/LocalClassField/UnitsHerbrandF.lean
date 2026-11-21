@@ -1,7 +1,7 @@
-import Mathlib
-import ReciprocityTheory.ClassFieldTheory.LocalClassField.ExistsIntEKMulVbar
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ClassFieldTheory.LocalClassField.GalBasic
-import ReciprocityTheory.ClassFieldTheory.LocalClassField.UnitsHerbrandE
 
 namespace ReciprocityTheory.DiscreteGroups.LocalClassField
 

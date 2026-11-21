@@ -1,5 +1,7 @@
-import Formalism.SharpRestriction.CuspSpanNormBounds.FrobeniusCoefficientMemLp.SigmaFiniteAmplitudes.FlipOneThree
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.KFinOfLowUnitH
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.FdegOfSchur
+import Formalism.SharpRestriction.CuspSpanNormBounds.FrobeniusCoefficientMemLp.SigmaFiniteAmplitudes.FlipOneTwo
 
 noncomputable section
 

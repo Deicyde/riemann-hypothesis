@@ -1,5 +1,7 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.OrthonormalFlagTranslateHolds
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.NsqMulVecLeOpN
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Tactic.Polynomial.Basic
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.IsotropicCoefficientSplitting
 
 namespace ReciprocityTheory.ChartRestriction.G.FD.OrthonormalChartBounds
 

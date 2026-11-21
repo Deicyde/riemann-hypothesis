@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.IwahoriReduction.LangPolynomials.RepSmul
 import Development.AutomorphicArithmetic.Foundations.IwahoriReduction.LangPolynomials.RepUniq
 

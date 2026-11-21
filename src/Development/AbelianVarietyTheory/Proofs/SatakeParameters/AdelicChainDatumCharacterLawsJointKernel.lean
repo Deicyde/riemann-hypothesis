@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.UnderTie
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ChartPointsExistAndClassPointsRepresentativesStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.CouplingCosetEqChartPointCosetStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.StepCharacterLawsNormOneIdelesOfKernelChainStatement
@@ -12,8 +12,6 @@ import Development.AbelianVarietyTheory.Proofs.SatakeParameters.FiniteDatumDepen
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.AdelicDatumLevelEquivarianceFirstCoupledStepStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.SymmTransSymm
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LastStepAdelicDatumLevelEquivarianceStatement
-import Formalism.LocalToGlobal.Divisibility.DivisibilityProofs.TuplesP
-import Formalism.LocalToGlobal.GlobalTheory.GL6.PBwLocBases
 
 noncomputable section
 
@@ -55,7 +53,7 @@ theorem exists_u1Af_det (k : ℕ) (hk : k ≤ D.R.m) {g : GL (Fin (D.R.N k)) (D.
     rw [← Matrix.diagonal_one]
     congr 1; funext _; rw [mul_comm]; exact h2
   · apply Units.ext
-    simp [Matrix.GeneralLinearGroup.val_det_apply, Matrix.det_fin_one]
+    simp [Matrix.GeneralLinearGroup.val_det_apply]
 
 end Pt
 

@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExtId
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasRigidCoords
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsPeriodGens
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecHom
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LineBundleIsoOfActionCompatibleMatchStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DivisionPointsCorrespondMatchedPullbacksStatement

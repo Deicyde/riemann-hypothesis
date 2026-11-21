@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.FrameTopAlt
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.RatioParts
+import Development.AbelianVarietyTheory.Definitions.LatticeFrames.CosInj
 
 set_option genSizeOfSpec false
 noncomputable section

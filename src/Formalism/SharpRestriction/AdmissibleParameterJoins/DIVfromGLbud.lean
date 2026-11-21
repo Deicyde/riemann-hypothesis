@@ -1,5 +1,7 @@
-import Formalism.SharpRestriction.AdmissibleParameterJoins.DIVfromGLl
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.AdmissibleParameterJoins.DIVfromGLo
+import Formalism.SharpRestriction.Divisibility.WeightDegreeSizes
 
 noncomputable section
 

@@ -1,16 +1,6 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PlaceDivisors.StChartFH
-import ReciprocityTheory.DualLattices.TowerZeroSurjective
-import ReciprocityTheory.DualLattices.LinPairStatement
-import ReciprocityTheory.DualLattices.LengthDegreeAbelianVariety
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ChartPullbacks.UniversalCharts.LePreimageOfNil
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.Clauses
-import ReciprocityTheory.DualLattices.SubMemOfCompat
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SemiabelianSchemes.Biextensions.GenericFiberCubeInclusion
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.RosVal
-import Development.AbelianVarietyTheory.Definitions.ModuliSpaces.IsSeparatedOfIsQProjOver
-import Development.AbelianVarietyTheory.Definitions.TeichmullerDepth.IsEigBasisIff
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.EigenspaceDimAddSplitExactTransposeStatement
+import Mathlib.Data.Matrix.ColumnRowPartitioned
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry TensorProduct Matrix
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor.Germ ReciprocityTheory.ChartRestriction.G.Pdiv.ChartF ReciprocityTheory.ChartRestriction.G.Pdiv.AvDefs
 open ReciprocityTheory.PGsh ReciprocityTheory.PGsh.Up ReciprocityTheory.PGsh.Be2 GlobalTheory.ChF
@@ -23,7 +13,7 @@ private theorem td_mem {C OE κ : Type} [Field C] [CommRing OE] [Fintype κ] [De
     (ρ : OE → Matrix κ κ C) (τ : OE →+* C) (x : κ → C) :
     x ∈ (⨅ a : OE, Module.End.eigenspace (Matrix.toLin' ((ρ a).map (algebraMap C C))) (τ a)) ↔
       ∀ a, ρ a *ᵥ x = τ a • x := by
-  simp [Submodule.mem_iInf, Module.End.mem_eigenspace_iff]
+  simp [Submodule.mem_iInf]
 
 private theorem td_reindex {C OE κ κ' : Type} [Field C] [CommRing OE] [Fintype κ] [DecidableEq κ]
     [Fintype κ'] [DecidableEq κ'] (e : κ' ≃ κ) (ρ : OE → Matrix κ κ C) (τ : OE →+* C) :

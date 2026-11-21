@@ -1,9 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.PoitouTate.PtCompactDualMapEqZeroOfPtCompactToGlobalEqZero
-import GroundTheory.ProfiniteCohomology.RealPlaces.DevissageNatural
 import GroundTheory.ProfiniteCohomology.RealPlaces.LocalDualityDefs
-import GroundTheory.ProfiniteCohomology.RealPlaces.NormHomotopy
-import GroundTheory.ProfiniteCohomology.InflationRestriction.DegreeOne
+import GroundTheory.ProfiniteCohomology.RealPlaces.DevissageDefs
 set_option maxSynthPendingDepth 1
 
 noncomputable section

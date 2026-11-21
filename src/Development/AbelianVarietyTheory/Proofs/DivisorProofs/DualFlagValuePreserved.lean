@@ -1,17 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsGradedRankOne
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsX
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VanishingOnRegularFlagged
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagVarietyArithDimension
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AnnSeqShortExact
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DualFlagGradedIsometricStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DualPullbackHermitianIsometry
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsIsoOfEpiVectorBundleSameRank
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ClsDivPullEqVPull
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFlagBundleIff
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBcFiniteOfIso
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdjacentRefl
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToBidualDualMapEigenImageInclusion
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsFlagModelOfIsIsometry
 
 set_option autoImplicit false
@@ -231,7 +224,7 @@ theorem exists_isArFun_vdmPol (hC : ArCalc) {k : Type} [CommRing k] {Y : Scheme.
     aeval_vdmPol]
   rintro (_ | i)
   · exact ⟨Pi.single none 1, by simp [lin, Pi.single_apply, apply_ite], by simp [Pi.single_apply, h₀]⟩
-  · exact ⟨Pi.single (some i.rev) (-1), by simp [lin, Pi.single_apply, apply_ite, ite_smul],
+  · exact ⟨Pi.single (some i.rev) (-1), by simp [lin, Pi.single_apply, apply_ite],
       by simp [Pi.single_apply, h₁]⟩
 
 theorem eq_genericPoint {k : Type} [CommRing k] {X : Scheme.{0}} [IsIntegral X] {p : X ⟶ Sp k} {d : ℕ}

@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerVolume.RestrProd
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerVolume.TensTop
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerVolume.DensFibV
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdelicLocalCompactness.AdeleLC
 
 noncomputable section
 
@@ -82,8 +81,8 @@ theorem transform_indicator (hLo : IsOpen (L : Set V)) (y : V) :
         (L : Set V).indicator (fun _ => (1 : ℂ)) := by
       funext x
       by_cases hx : x ∈ L
-      · simp [Set.indicator_apply, hx, hy x hx]
-      · simp [Set.indicator_apply, hx]
+      · simp [hx, hy x hx]
+      · simp [hx]
     rw [hfun, integral_indicator_const _ hLo.measurableSet]
     simp [Measure.real]
   · rw [Set.indicator_apply, if_neg hy]
@@ -97,9 +96,9 @@ theorem transform_indicator (hLo : IsOpen (L : Set V)) (y : V) :
       rw [hχ x x0 y]
       by_cases hx : x ∈ L
       · have hx' : x0 + x ∈ L := L.add_mem hx0 hx
-        simp [Set.indicator_apply, hx, hx']
+        simp [hx, hx']
       · have hx' : x0 + x ∉ L := fun h => hx (by simpa using L.sub_mem h hx0)
-        simp [Set.indicator_apply, hx, hx']
+        simp [hx, hx']
     simp_rw [hshift, integral_const_mul] at key
     have h2 : (χ x0 y - 1) * ∫ x, f x ∂μ = 0 := by rw [sub_mul, key, one_mul, sub_self]
     rcases mul_eq_zero.1 h2 with h | h
@@ -117,7 +116,7 @@ theorem testEx_of_lattice (hLc : IsCompact (L : Set V)) (hLo : IsOpen (L : Set V
   · first
     | exact IsClopen.continuous_indicator ⟨hLcl, hLo⟩ continuous_const
     | exact continuous_indicator (by simp [IsClopen.frontier_eq ⟨hLcl, hLo⟩]) continuous_const.continuousOn
-  · exact HasCompactSupport.intro hLc (fun x hx => by simp [Set.indicator_apply, hx])
+  · exact HasCompactSupport.intro hLc (fun x hx => by simp [hx])
   · have hT : (fun y => ∫ x, (L : Set V).indicator (fun _ => (1 : ℂ)) x * χ x y ∂μ) =
         (ann χ (L : Set V)).indicator (fun _ => ((μ.real (L : Set V) : ℝ) : ℂ)) := by
       funext y
@@ -129,7 +128,7 @@ theorem testEx_of_lattice (hLc : IsCompact (L : Set V)) (hLo : IsOpen (L : Set V
     | exact integrableOn_const.2 (Or.inr hfin)
     | exact integrableOn_const hfin.ne
     | exact integrableOn_const_iff.2 (Or.inr hfin)
-  · simp [Set.indicator_apply, L.zero_mem]
+  · simp [L.zero_mem]
 
 end Lattice
 
@@ -171,7 +170,7 @@ theorem testEx_of_trivial (hχ : ∀ x y, χ x y = 1) (L : AddSubgroup V)
       intro x hx
       have h1 : x ∉ L := fun h => hx (Or.inl h)
       have h2 : -t + x ∉ L := fun h => hx (Or.inr ⟨-t + x, h, by abel⟩)
-      simp [hg, Set.indicator_apply, h1, h2]
+      simp [hg, h1, h2]
     · have h0 : ∀ y, ∫ x, (g x - g (-t + x)) * χ x y ∂μ = 0 := by
         intro y
         simp only [hχ, mul_one]
@@ -179,7 +178,7 @@ theorem testEx_of_trivial (hχ : ∀ x y, χ x y = 1) (L : AddSubgroup V)
       simp only [h0]
       exact integrable_zero _ _ _
     · have hn : -t ∉ L := fun h => ht (by simpa using L.neg_mem h)
-      simp [hg, Set.indicator_apply, hn, ht, L.zero_mem]
+      simp [hg, hn, L.zero_mem]
 
 end Triv
 

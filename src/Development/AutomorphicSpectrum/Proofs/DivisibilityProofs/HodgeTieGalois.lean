@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Statements.GeometryStatements.CmpPair
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.CmpSt
 import Development.AutomorphicSpectrum.Statements.GeometryStatements.PadicIntegersHenselianFiniteResidue
-import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.Proportional
 import Development.AutomorphicSpectrum.Proofs.DivisibilityProofs.TowerSymmetryLimitCompatStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.CmTypeHostAutPermutationStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsUniqueHostAutEmbeddingStatement

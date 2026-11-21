@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.FerreroWashingtonIndex.TwSingle
+import Mathlib.NumberTheory.Padics.Hensel
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Topology.Sheaves.Presheaf
 
 open UpperTheory.V.FW
 

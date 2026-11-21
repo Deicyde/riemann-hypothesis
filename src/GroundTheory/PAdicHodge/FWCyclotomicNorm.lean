@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.PAdicHodge.CyclotomicTower
 import GroundTheory.PAdicHodge.TiltValuation
+import Mathlib.Data.Int.Star
+import Mathlib.NumberTheory.Padics.RingHoms
 set_option maxSynthPendingDepth 1
 
 noncomputable section

@@ -1,11 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ReindexDblIncM
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LagrInt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InfPartFPlaceIdem
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.Periodic
 import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.InvHerm
 import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.LeviGLInvVal
-import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.OneAddPow
 import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.MfacInvMul
 open scoped TensorProduct Matrix
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes MeasureTheory

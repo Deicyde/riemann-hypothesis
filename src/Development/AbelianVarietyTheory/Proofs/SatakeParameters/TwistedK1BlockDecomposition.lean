@@ -1,10 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.XiAtPenultimateEqXiCpl1
-import Formalism.LocalToGlobal.Columns.KOneCharacterTrivialNearOne
-import Formalism.LocalToGlobal.Columns.ChainTwTopQ
-import Formalism.LocalToGlobal.Columns.DiagUnitMemAndNormalizesKOne
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.PhiTopTargetTwist
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.ChainTopLawTw
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.CongruenceLevelEqDepthSucc
+import Development.AbelianVarietyTheory.Proofs.SatakeParameters.MemZmuOfPowPred
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.L2.Col Formalism.L2.DIV Formalism.L2.Ker GlobalTheory.Mem.Col2 GlobalTheory.TopStep
 
 namespace GlobalTheory.BlockDecompositionK1
@@ -165,7 +163,7 @@ theorem exists_block_of_twisted_k1 : ∀ {E : Type} [Field E] [NumberField E] [S
   obtain ⟨j, hj⟩ := exists_glint_of_matrix A hAint hdet
   have hj' : ∀ i l, j.1 (Pi.single l 1) i = g.1 (Pi.single (Br.iC rfl l) 1) (Br.iC rfl i) := fun i l => by
     rw [hj]
-    simp [Matrix.mulVec_single_one, A]
+    simp [A]
   refine ⟨j, ?_, inv_extI_mul_mem rfl (c + 1) g j hj' hB hC hD⟩
   show redGL n P j ∈ btG n _ (coarse r [b])
   rw [mem_btG]

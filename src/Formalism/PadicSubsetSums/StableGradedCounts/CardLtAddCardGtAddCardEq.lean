@@ -1,3 +1,5 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.PadicSubsetSums.CentralIdempotents.FactorOverLocalSubalgebraMonic
 import Formalism.PadicSubsetSums.StableGradedCounts.ZReuse
 import Formalism.PadicSubsetSums.StableGradedCounts.ZCircleCharExtends
@@ -5,6 +7,9 @@ import Formalism.PadicSubsetSums.StableGradedCounts.FactorOverLocalSubalgebra
 import Formalism.PadicSubsetSums.StableGradedCounts.CharpolyFactorAnnihilator
 import Formalism.PadicSubsetSums.StableGradedCounts.ZGoodCuspidal
 import Formalism.PadicSubsetSums.StableGradedCounts.ZBrauerNesbitt
+import Mathlib.Analysis.Complex.LocallyUniformLimit
+import Mathlib.Analysis.Normed.Module.MultipliableUniformlyOn
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 open Polynomial Filter Topology
 

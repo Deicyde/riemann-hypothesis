@@ -1,12 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsDimEqOne
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PadicNormDegreeEqPadicNormDetTateModuleStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DetAevalEqProdArootsCharpolyStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqOfNormProdAevalEq
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MultiplicativePolynomialFunctionEqNormFormStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HomDegreeIntegerCombinationIsHomogeneousStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsIsogenyCompIffAndDegreeMulStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TateModuleFreeFinrankTwoMulDimStatement
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry
 open scoped CategoryTheory.Obj CategoryTheory.MonObj TensorProduct
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -36,7 +33,7 @@ theorem map_eq_charpoly_vmap : ∀ (K : Type) [Field K] (l : ℕ) [Fact l.Prime]
   have hPn : ∀ n : ℤ, P.eval (n : ℚ) = δ (Polynomial.C n - Polynomial.X) := by
     intro n
     rw [hP n]
-    simp only [δ, map_sub, map_intCast, Polynomial.aeval_C, Polynomial.aeval_X, algebraMap_int_eq, eq_intCast]
+    simp only [δ, map_sub, map_intCast, Polynomial.aeval_X, eq_intCast]
   have hroots := GlobalTheory.T.multiplicative_polynomialFunction_eq_normForm (PadicAlgCl l) A.dim δ P hmul hpoly hPm hPd hPn
   apply GlobalTheory.PadicRootNorm.eq_of_norm_prod_aeval_eq l
   · exact hPm.map _
@@ -59,7 +56,7 @@ theorem map_eq_charpoly_vmap : ∀ (K : Type) [Field K] (l : ℕ) [Fact l.Prime]
       induction G using Polynomial.induction_on with
       | C a => simp
       | add p q hp hq => simp only [map_add, hp, hq]
-      | monomial n a _ => simp only [map_mul, map_pow, Polynomial.aeval_C, Polynomial.aeval_X, algebraMap_int_eq, eq_intCast, map_intCast]
+      | monomial n a _ => simp only [map_mul, map_pow, Polynomial.aeval_X, eq_intCast, map_intCast]
     rw [hψ, hev F]
     have h3 : ψ (Polynomial.aeval f F) = (tend l A (Polynomial.aeval f F)).baseChange ℚ_[l] := rfl
     rw [h3, LinearMap.det_baseChange, PadicAlgCl.norm_extends]

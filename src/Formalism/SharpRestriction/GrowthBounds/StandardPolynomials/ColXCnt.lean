@@ -1,4 +1,4 @@
-import Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.ColsDef
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.FrobeniusPaths.ColOKOfPath
 
 noncomputable section

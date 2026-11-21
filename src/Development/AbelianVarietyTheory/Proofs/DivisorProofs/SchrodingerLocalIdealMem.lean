@@ -1,12 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocCharEqValZpow
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TmulMemLocId
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedPlaneHermitianIdealCoprimeStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedPlaneSkewIdealCoprimeStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSchroedingerEigenvectorCompactCocycle
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicHeisenbergActsByLocalSchrodinger
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GoodModelEigenContinuous
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigALocalUnitLevi
 open scoped TensorProduct NNReal Matrix nonZeroDivisors
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -60,7 +54,7 @@ theorem mem_conjI_iff_span (σ : E →ₐ[F] E) (𝔠 : FractionalIdeal (𝓞 E)
   rw [conjI, FractionalIdeal.mem_extended_iff]
   have h : (IsLocalization.map E (conjO σ) (conjO_le σ) : E →+* E) = (σ : E →+* E) :=
     IsLocalization.ringHom_ext (𝓞 E)⁰ (RingHom.ext fun x => by
-      simp [IsLocalization.map_eq, conjO, RingOfIntegers.mapRingHom_apply])
+      simp [conjO, RingOfIntegers.mapRingHom_apply])
   have h' : (IsLocalization.map E (conjO σ) (conjO_le σ) : E → E) = σ := congrArg DFunLike.coe h
   rw [h']
 

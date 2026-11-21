@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsAuxiliaryVectorWittDec
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links MeasureTheory IsDedekindDomain NumberField Matrix
 open GlobalTheory.MixModel GlobalTheory.MixPer GlobalTheory.Grow GlobalTheory.Unf GlobalTheory.ChiGrid GlobalTheory.FunObj GlobalTheory.SepRows GlobalTheory.Asc
@@ -130,7 +131,7 @@ theorem sum_mem_sumLat {n k l : ℕ} (M : Matrix (Fin n) (Fin l) D.host.E) (Λ :
     · exact hu q
     · exact (𝔟 q).val.zero_mem
   · funext i
-    simp only [Matrix.mulVec_zero, Pi.zero_apply, zero_add, Matrix.mulVec, dotProduct, Finset.mul_sum]
+    simp only [Matrix.mulVec_zero, zero_add, Matrix.mulVec, dotProduct, Finset.mul_sum]
     rw [Finset.sum_comm]
     refine Finset.sum_congr rfl fun p _ => ?_
     simp only [mul_ite, mul_zero, Finset.sum_ite_eq', Finset.mem_univ, if_true]

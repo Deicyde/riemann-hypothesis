@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralModelPAdicComparisonStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BLieLieComb
 
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry
 open NumberField IsDedekindDomain
@@ -86,7 +84,7 @@ theorem liftW : ∀ (E : Type) [Field E] [NumberField E] [IsCMField E] (H : Reci
         have e3 : (TrivSqZeroExt.fstHom ℂ_[p] ℂ_[p] ℂ_[p]).toRingHom.comp (algebraMap ℂ_[p] (DualNumber ℂ_[p])) =
             RingHom.id _ := by
           ext s
-          simp [TrivSqZeroExt.algebraMap_eq_inl]
+          simp
         rw [e3]
         exact Spec.map_id _
     rw [← Category.assoc, hA, one_left_comp_of_isGrpPullback hψ, one_left_eq, one_left_eq]

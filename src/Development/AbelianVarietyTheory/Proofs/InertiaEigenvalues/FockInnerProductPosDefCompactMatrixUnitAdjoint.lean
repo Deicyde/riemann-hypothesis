@@ -1,17 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.LengthPosOfPosDef
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.AdjFormula
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.ParamsEx
-import Formalism.LocalToGlobal.IndefiniteReal.LinksStage
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsNormLeHeightPow
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.HoweUnram
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.GaussianBinomialClosedForm
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.SqNormIntegralFundamentalDomainEqL2NormSq
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ActOfMemGfC
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.RaisingLoweringOperators
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.TranslateMemCoefLatFn
-import Development.AbelianVarietyTheory.Definitions.Foundations.ForallEventuallyFinLocIff
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.RealLowestKTypeCoeffSquareIntegrable
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsKHwMap
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix
 open Formalism.L2.Theta Formalism.L2.DIV Formalism.L2.Indef
@@ -213,9 +201,9 @@ theorem kop_eq (w : GlobalTheory.ExportSeries.Weight D n) (τ : D.what₂.Tau) (
   unfold kop fockT
   rw [Finset.sum_eq_single a, Finset.sum_eq_single b]
   · simp
-  · intro k _ hk; simp [Matrix.single_apply, Ne.symm hk]
+  · intro k _ hk; simp [Ne.symm hk]
   · simp
-  · intro k _ hk; simp [Matrix.single_apply, Ne.symm hk]
+  · intro k _ hk; simp [Ne.symm hk]
   · simp
 
 theorem fadj_term (w : GlobalTheory.ExportSeries.Weight D n) (τ : D.what₂.Tau) (a b : Fin m) (j : Fin n) (h : Cpt w τ a b) :
@@ -244,7 +232,7 @@ theorem fadj_half (a b : Fin m) :
   by_cases h : a = b
   · subst h
     simp only [if_true, LinearMap.smul_apply, Module.End.one_apply, LinearMap.map_smulₛₗ₂, map_smul]
-    simp [Complex.conj_ofReal, map_ofNat]
+    simp [map_ofNat]
   · simp [h, Ne.symm h]
 
 theorem fockForm_kop_adjoint : ∀ (D : D7) (n m : ℕ), ∃ B : PolF D m n →ₗ⋆[ℂ] PolF D m n →ₗ[ℂ] ℂ,

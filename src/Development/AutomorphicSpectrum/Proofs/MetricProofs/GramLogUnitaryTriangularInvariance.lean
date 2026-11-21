@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.InFlagDomainOne
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.IsOpenFlagDomainNondegenerateMinorsStatement
 
 noncomputable section
@@ -62,7 +61,7 @@ theorem gramOf_isHermitian {N : ℕ} (hd : Fin N → ℝ) (g : Matrix (Fin N) (F
   ext i j
   by_cases h : i = j
   · subst h; simp
-  · simp [diagonal_apply, h, Ne.symm h]
+  · simp [h, Ne.symm h]
 
 theorem continuous_gramHead {N : ℕ} (hd : Fin N → ℝ) (k : ℕ) :
     Continuous fun g : Matrix (Fin N) (Fin N) ℂ => gramHead hd k g := by

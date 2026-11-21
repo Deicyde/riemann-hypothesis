@@ -1,8 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SplitFrames
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FinPartAlgebraMap
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.AdelicUnitaryEqRealMulFiniteSplit
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.SignatureConjugationInvariant
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.AdelicDataRowMeasureScaleTrivialTuple
+import Development.AbelianVarietyTheory.Proofs.HeightProofs.IntegralTransport
 
 noncomputable section
 

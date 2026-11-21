@@ -1,5 +1,7 @@
-import Formalism.LocalToGlobal.GroupLattices.FockModels.TestSideDef
-import Formalism.LocalToGlobal.GroupLattices.FockModels.DualInclusionLattices
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.LatticeSystems
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
 
 open MvPolynomial
 
@@ -79,7 +81,7 @@ theorem beta_dualB {V : Type} [AddCommGroup V] [Module Kf V] {I : Type} [Fintype
   unfold dualB
   rw [Module.Basis.map_apply, LinearEquiv.apply_symm_apply]
   ext x
-  simp [Module.Basis.dualBasis_apply]
+  simp
 
 theorem dualB_repr {V : Type} [AddCommGroup V] [Module Kf V] {I : Type} [Fintype I] [DecidableEq I]
     (β : V ≃ₗ[Kf] Module.Dual Kf V) (b : Module.Basis I Kf V) (Q : V) (a : I) :

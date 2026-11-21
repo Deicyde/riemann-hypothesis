@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HarderNarasimhan.StatementPl
+import Mathlib.RepresentationTheory.Basic
 
 open Module NumberField IsDedekindDomain
 

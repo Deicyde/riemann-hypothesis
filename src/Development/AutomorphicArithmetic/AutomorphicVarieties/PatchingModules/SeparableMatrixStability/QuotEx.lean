@@ -1,6 +1,7 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.SeparableMatrixStability.MapEta
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.SeparableMatrixStability.PlProps
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.QuotProf
+import Mathlib.NumberTheory.Padics.RingHoms
 
 open IsLocalRing Matrix Filter UpperTheory.V.Alg UpperTheory.V.W UpperTheory.V.AlgebraTools UpperTheory.V.Pa
 

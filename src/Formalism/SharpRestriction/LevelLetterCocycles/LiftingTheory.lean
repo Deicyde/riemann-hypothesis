@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.GammaSemisimpleLocalOfConsequences
-import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
 import Formalism.LagrangeIdealLifts.Statement
-import Formalism.SharpRestriction.LevelLetterCocycles.DeltaInvariantLattices
 
 noncomputable section
 

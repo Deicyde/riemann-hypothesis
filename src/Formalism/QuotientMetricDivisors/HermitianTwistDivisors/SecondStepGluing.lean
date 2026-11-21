@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.QuotientMetricDivisors.LatticeGlueUnique
-import Formalism.HermitianLattices.HermitianLatticesProofs.LocBasic
-import Formalism.HermitianLattices.HermitianLatticesProofs.IndexBasic
 import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.ReductionSecondStep
 
 open Module NumberField IsDedekindDomain

@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.QuotientImageDivisibility.SmulSAddLeft
-import Formalism.SharpRestriction.LevelLetterCocycles.QuotientImageDivisibility.CmpOfMemX
+import Formalism.SharpRestriction.LevelLetterCocycles.ArcCoordinatesOfMembership
 
 noncomputable section
 open Classical

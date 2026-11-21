@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.SamePartIffOfNeZero
+import Mathlib.Tactic.Polynomial.Basic
 
 open Polynomial Classical GlobalTheory.BadShare
 

@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ColMapEqColMapV
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.OmEqSumLattice
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsThetaAtOfVac
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.InvVolConjLevelOne
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.DIV
 open IsDedekindDomain NumberField MeasureTheory GlobalTheory.ChiGrid GlobalTheory.FunObj GlobalTheory.ExpansionInvariance
 attribute [local instance] Formalism.BasicNotions.Host.cmStar GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField borelKw borelSpaceKw
@@ -23,7 +22,7 @@ theorem sum_prod_partial_eq_zero (s : Finset δ) (a : δ → ℂ) (F : δ → �
     set c : δ → ℂ := fun d => a d * ((∏ i ∈ A, T i (F d i) (y i)) * ∏ i ∈ (insert b A)ᶜ, F d i (x i)) with hc
     have hbA : b ∈ Aᶜ := Finset.mem_compl.2 hb
     have hcompl : (insert b A)ᶜ = (Aᶜ).erase b := by
-      ext i; simp [Finset.mem_erase, and_comm]
+      ext i; simp [Finset.mem_erase]
     have hφ : (∑ d ∈ s, c d • F d b) = 0 := by
       funext z
       have := ih (Function.update x b z)

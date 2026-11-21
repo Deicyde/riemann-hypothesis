@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeVectorPairingOneIdealMultiple
-import Mathlib
 open NumberField
 open scoped nonZeroDivisors
 set_option maxHeartbeats 1000000 in

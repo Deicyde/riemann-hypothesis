@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.HermiteNormalForms.SmulNeZeroLat
 import Development.AutomorphicArithmetic.AutomorphicVarieties.HermiteNormalForms.Blockdet
+import Mathlib.NumberTheory.NumberField.Discriminant.Basic
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open NumberField Matrix UpperTheory.V UpperTheory.V.KT
 open scoped ComplexOrder

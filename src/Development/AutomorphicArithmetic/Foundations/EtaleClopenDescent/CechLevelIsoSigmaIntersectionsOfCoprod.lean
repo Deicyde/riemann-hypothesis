@@ -1,5 +1,7 @@
-import Mathlib
-import Development.EtaleCohomology.EtaleSheaves.CechYoneda
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.EtaleCohomology.EtaleSheaves.CechSigmaOf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry Opposite

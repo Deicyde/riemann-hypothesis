@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralModelLevelPPowerStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralModelLevelPPowerTangentStatement
 

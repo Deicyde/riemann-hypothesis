@@ -1,5 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.TransferToDefiniteQuaternion
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.BaseChangeDefiniteUnitary
+import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.RealCusp
 
 noncomputable section
 

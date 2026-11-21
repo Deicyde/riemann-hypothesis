@@ -1,5 +1,4 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.IsInertiaInfiniteCyclotomic
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PublishedTheorems.KisinCrTrivial
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.RtCompl
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.TorAut
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.ChartCount

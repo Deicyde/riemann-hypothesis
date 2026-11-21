@@ -1,4 +1,7 @@
-import Development.WeilBound.CoreStatements.HodgeTatePoints.TwhopfMain
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicSpectrum.Proofs.GeometryProofs.FiniteOpenHopfOrder
+import Development.WeilBound.CoreStatements.HodgeTatePoints.TwhopfFin
 
 open CategoryTheory AlgebraicGeometry MonoidalCategory CartesianMonoidalCategory MonObj GlobalTheory.CompanionTheory.Ar.BT
   GlobalTheory.CompanionTheory.Ar.BT.SubOrder PositivityTheory.HtPt.Twhopf

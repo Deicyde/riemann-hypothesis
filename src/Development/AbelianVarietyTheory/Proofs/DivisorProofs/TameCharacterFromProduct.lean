@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FactorResIEqResS
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiniteUnitChineseRemainder
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.SupportedSubgroupSplitCommutePrimeIdempotents
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.TameInvariantLevelAction
 
 set_option autoImplicit false
 

@@ -1,11 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.TiedColumnData
-import Formalism.SharpRestriction.GlobalSchurBounds.ThickPlacesCorollaryOfAnyTranslate
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.FixedVectorEqOfStandardData
-import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.ComparisonZeroEmbedding
-import Formalism.SharpRestriction.GrowthBounds.ChartedClasses.ClsChartedLabAt
-import Formalism.SharpRestriction.GrowthBounds.TwistedLevelAgreement.StepInTwK
-import Formalism.SharpRestriction.GrowthBounds.BaseLevels.LevelsGEmpty
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LevelsTwG
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TrueColumnSpacesStandardInFrameCoords
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SplittingFstMemIntegersStatement
@@ -87,7 +81,7 @@ theorem stepBasis_std : ∀ {K : Ctx} {B : Base} {f : Fr B.toPre} {T : TwDat B} 
           exact this ▸ hz
       rw [hmap, ← e1]
       refine (e2 _).trans ?_
-      simp only [TC.baseL, Set.mem_setOf_eq, reV, LinearEquiv.funCongrLeft_apply, LinearMap.funLeft_apply]
+      simp only [TC.baseL, reV, LinearEquiv.funCongrLeft_apply]
       constructor
       · intro H a
         obtain ⟨r, hr1, hr2⟩ := H (finCongr hr a)

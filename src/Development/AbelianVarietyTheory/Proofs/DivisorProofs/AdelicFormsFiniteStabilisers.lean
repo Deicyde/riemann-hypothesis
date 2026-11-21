@@ -1,9 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.TwistedLevelValues
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.IntegralFundamentalDomainEqSumDoubleCoset
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.MeasureToRealEqMass
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaIntegrandIntegrable
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.AdelicUnitaryTopology
+import Formalism.LocalToGlobal.Columns.LevGCount
+import Formalism.LocalToGlobal.Divisibility.DefGroup
+import Formalism.LocalToGlobal.IndefiniteReal.Bridge
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix Formalism.L2.Theta Formalism.L2.DIV Formalism.L2.Indef Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.Mult
 open scoped TensorProduct InnerProductSpace Pointwise
@@ -84,7 +83,7 @@ theorem _root_.GlobalTheory.InnerClassSum.integral_inner_eq_adInner {G H W : Typ
   have hmem : ∀ i (γ : Γ), γ ∈ _root_.Formalism.IndefR.Bridge.stab (π.comp Γ.subtype) J (y i) ↔ (a i)⁻¹ * (γ : G) * a i ∈ K := by
     intro i γ
     unfold _root_.Formalism.IndefR.Bridge.stab
-    simp [hK_def, Subgroup.mem_comap, MulAut.conj_apply, ← ha i, map_mul, map_inv]
+    simp [hK_def, Subgroup.mem_comap, ← ha i, map_mul, map_inv]
   have hK0 : ν K ≠ 0 := by rw [h1]; exact one_ne_zero
   have hKt : ν K ≠ ⊤ := by rw [h1]; exact ENNReal.one_ne_top
   have hfin : ∀ i, {γ : Γ | (a i)⁻¹ * (γ : G) * a i ∈ K}.Finite := fun i =>

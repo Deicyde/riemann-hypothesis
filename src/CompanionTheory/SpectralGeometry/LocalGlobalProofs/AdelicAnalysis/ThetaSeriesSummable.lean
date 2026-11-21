@@ -1,8 +1,9 @@
-import Mathlib
-import CompanionTheory.SpectralGeometry.CountingDefinitions.AdelicEulerProducts.CountData
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.FiniteAdeleTopologyStatement
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.SummableGaussianCoset
 import ReciprocityTheory.ThetaSummability.TailSumEstimates.LatSumPi
+import Mathlib.Analysis.Normed.Group.Tannery
 open NumberField IsDedekindDomain MeasureTheory Matrix Topology GlobalTheory.CompanionTheory.SW.Core
 open scoped ENNReal NNReal MatrixGroups
 
@@ -47,7 +48,7 @@ theorem summable_pi_integers (F : Type) [Field F] [NumberField F] (ι : Type) [F
     (fun _ _ => (Real.exp_pos _).le) (fun _ => summable_integers F ha)).1
   have h2 := (e.arrowCongr (Equiv.refl (𝓞 F))).summable_iff.2 h
   refine h2.congr fun r => ?_
-  simp only [Function.comp, Equiv.arrowCongr_apply, Equiv.coe_refl, Function.id_comp, id]
+  simp only [Function.comp, Equiv.arrowCongr_apply, Equiv.coe_refl, id]
   rw [Equiv.prod_comp e.symm (fun j => Real.exp (-a * ∑ w : InfinitePlace F, (w (r j : F)) ^ 2)),
     ← Real.exp_sum, Finset.mul_sum]
 

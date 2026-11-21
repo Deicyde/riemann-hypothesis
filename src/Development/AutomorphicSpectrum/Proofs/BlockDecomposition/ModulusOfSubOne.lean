@@ -1,11 +1,6 @@
-import Mathlib
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.KFiniteThetaLifts.RationalPrimesBelowPlaces
-import GroundTheory.LocalFields.QuadraticAbelian.WeilRepQuadratic
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DetThreePointsEqExpansion
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WhittakerAdditiveCharacterEquivariance
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WhittakerSmoothness
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WhittakerWellDefined
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SecSet
 open NumberField IsDedekindDomain MeasureTheory Topology GroundTheory.Global GroundTheory.LocalField GroundTheory.Automorphic GroundTheory.Automorphic.AutomorphicForm Ad3 Ad3.K Ad3.K.QuadraticBaseChangeGL3
 open GroundTheory.Automorphic.GodementSection (localChar)
 open GroundTheory.Global.AdicLiesOver

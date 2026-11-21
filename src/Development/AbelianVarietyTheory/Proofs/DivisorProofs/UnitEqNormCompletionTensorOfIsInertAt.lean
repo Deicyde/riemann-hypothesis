@@ -1,11 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFinMapsOfForall
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.HoweDualityGL
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HoweDualityUnitary
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ComplementaryThetaInert
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.IsAdicCompleteAndCardQuotientAdicCompletionInteg
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.IsFieldAdicCompletionTensorOfInert
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
+import Formalism.LocalToGlobal.Columns.StdLatUnimodular
+import Mathlib.Algebra.Polynomial.Degree.IsMonicOfDegree
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.KFinLoc
 open scoped TensorProduct Matrix
 
@@ -27,7 +25,7 @@ theorem exists_root_quadratic_of_approx {F : Type} [Field F] [NumberField F]
   obtain ⟨a, ha, -⟩ := HenselianRing.is_henselian (I := Ideal.span {a₀ ^ 2 + p * a₀ + q}) _ hf a₀
     (by simpa using Ideal.subset_span (Set.mem_singleton _)) (by
       have : eval a₀ (derivative (X ^ 2 + C p * X + C q : (v.adicCompletionIntegers F)[X])) = 2 * a₀ + p := by
-        simp only [derivative_add, derivative_X_pow, derivative_mul, derivative_C, derivative_X, eval_add, eval_mul, eval_C, eval_X, eval_pow, zero_mul, zero_add, mul_one, add_zero, eval_natCast, Nat.cast_ofNat]
+        simp only [derivative_add, derivative_X_pow, derivative_mul, derivative_C, derivative_X, eval_add, eval_mul, eval_C, eval_X, eval_pow, zero_mul, zero_add, mul_one, add_zero, Nat.cast_ofNat]
         ring
       rw [this]; exact hd.map _)
   exact ⟨a, by simpa [IsRoot] using ha⟩
@@ -240,7 +238,7 @@ theorem exists_int_sol {F : Type} [Field F] [NumberField F] (v : HeightOneSpectr
     rwa [sub_add_cancel] at this
   obtain ⟨r, s, hQ, hder⟩ := exists_approx_mod v b c u₀ h2 hroot hu₀v
   have hQm := (hιm _).2 hQ
-  simp only [map_sub, map_add, map_mul, map_pow, map_ofNat] at hQm
+  simp only [map_sub, map_add, map_mul, map_pow] at hQm
   rcases hder with hA | hB
   · obtain ⟨a, ha⟩ := exists_root_quadratic_of_approx v (-(ι b * ι s)) (ι c * ι s ^ 2 - U) (ι r)
       (by

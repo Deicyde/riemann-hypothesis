@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.BesselHermitianTheta.AllTied
-import Formalism.SharpRestriction.Divisibility.InnerProductFormulaField
 
 noncomputable section
 

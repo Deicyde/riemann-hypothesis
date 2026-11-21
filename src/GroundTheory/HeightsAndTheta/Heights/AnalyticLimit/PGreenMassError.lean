@@ -1,12 +1,12 @@
-import Mathlib
-import ReciprocityTheory.AnalyticForms.PotentialTheory.ProjectiveLineFubiniStudyFacts
-import ReciprocityTheory.AnalyticForms.PotentialTheory.HessCEqZeroOfEventuallyEqZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PotentialTheory.PLCurveA
 import ReciprocityTheory.AnalyticForms.PotentialTheory.PshShiftA
-import ReciprocityTheory.AnalyticForms.PotentialTheory.MaMeasureA
 import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.GreenMassError
 import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.SystemIndependence
 import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.ConvergenceRate
+import ReciprocityTheory.AnalyticForms.PotentialTheory.SNCAtlas
+import ReciprocityTheory.AnalyticForms.PotentialTheory.Stokes
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.AnalyticLimit

@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PotentialTheory.StokesC
 import ReciprocityTheory.AnalyticForms.PotentialTheory.ContDiffAtOfIsPotential
+import Mathlib.RingTheory.PiTensorProduct
 
 namespace ReciprocityTheory.AnForm.M
 

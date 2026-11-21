@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.RootPushforwardDensity
 import Formalism.HermitianCurvature.StatementG
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 namespace Formalism.FourierDecayAlt.P.PBK
 

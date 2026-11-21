@@ -1,5 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.MaxWeightGL1EqOne
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open MeasureTheory Matrix
 
 namespace GlobalTheory

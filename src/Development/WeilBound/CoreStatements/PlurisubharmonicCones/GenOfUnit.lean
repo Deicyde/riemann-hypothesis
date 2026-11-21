@@ -1,9 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.PotentialsBoundedRegSettingEqReference
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.GrGenOfIsFlagVBOn
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LatticeTensorPowerDegree
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.GenMapStalkMap
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.DetLatticeFrameGenStatement
 
 open AlgebraicGeometry CategoryTheory GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Cusp
 

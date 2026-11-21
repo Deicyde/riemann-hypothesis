@@ -1,8 +1,13 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.FibreSt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.ChooseLePowDivFactorial
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.SupLeL2NormSections
-import ReciprocityTheory.GeometryOfNumbers.SphericalMonomials.SupStMonoNormSqPos
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.LemCone
+import Mathlib.AlgebraicTopology.FundamentalGroupoid.SimplyConnected
+import Mathlib.Analysis.Analytic.Polynomial
+import Mathlib.Analysis.Convex.Contractible
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import Mathlib.RingTheory.TotallySplit
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.HSClosing
 
 namespace ReciprocityTheory.ChartRestriction.G.ArakelovGeometry
 

@@ -1,8 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.OpNormPiLe
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.AestronglyMeasurableGermIntegrand
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.PsiContOf
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CornerBlockActionInvariant
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CoreLF
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LeftFubiniOfCore
 
 open Matrix MeasureTheory

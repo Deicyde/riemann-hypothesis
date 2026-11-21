@@ -1,6 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.StarDepthToFunNonneg
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MinkowskiWeylOrthantConeIntegralConstraints
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsBaryStageStart
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsStrictIff
 open NumberField ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.Toroidal GlobalTheory.LocM GlobalTheory.TorRef GlobalTheory.PolFan GlobalTheory.PolCell
 
 namespace GlobalTheory.StarCover
@@ -85,7 +87,7 @@ theorem toReal_apply' {X : Type} [AddCommGroup X] (β : LinearMap.BilinForm ℤ 
 
 theorem comb_apply {X : Type} [AddCommGroup X] {m : ℕ} (r : Fin m → ℝ) (γ : Fin m → LinearMap.BilinForm ℤ X)
     (x y : X) : (∑ j, r j • toReal (γ j)) x y = ∑ j, r j * (γ j x y : ℝ) := by
-  simp [LinearMap.sum_apply, toReal_apply']
+  simp [LinearMap.sum_apply]
 
 theorem castR_mem_rcone {n m : ℕ} (u : Fin m → Fin n → ℚ) (j : Fin m) :
     castR (u j) ∈ rcone (Finset.univ.image u) := by

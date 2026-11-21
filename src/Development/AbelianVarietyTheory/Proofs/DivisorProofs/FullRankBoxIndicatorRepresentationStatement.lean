@@ -1,9 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRankBoxIndicatorRepresentation
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRk
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ShearGLTransposeMul
 open scoped Matrix
 open GlobalTheory.WeilM GlobalTheory.FullRankCoinv
 

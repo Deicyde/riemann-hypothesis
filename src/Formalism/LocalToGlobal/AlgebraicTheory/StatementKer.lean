@@ -1,5 +1,8 @@
-import Formalism.LocalToGlobal.AlgebraicTheory.StatementD
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.KernelLattices.ThDistC
+import Formalism.LocalToGlobal.AlgebraicTheory.StatementB
+import Formalism.LocalToGlobal.TorsionIntegrality.GaussianEigenFrames.StatementC
 
 noncomputable section
 open scoped BigOperators ComplexConjugate

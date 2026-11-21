@@ -1,6 +1,9 @@
-import Mathlib
-import Development.ResolutionOfSingularities.Foundations.Blowup.BlowupBasic
+import BuildAid.Leniency.Open
 import Development.ResolutionOfSingularities.EmbeddedResolution.ResolutionDescent.StandardSmoothLiftRelativeDimension
+import Mathlib.AlgebraicGeometry.Modules.Sheaf
+import Mathlib.AlgebraicGeometry.Morphisms.Smooth
+import Mathlib.Combinatorics.Quiver.ReflQuiver
+import Mathlib.Tactic.ENatToNat
 universe u
 
 open CategoryTheory AlgebraicGeometry

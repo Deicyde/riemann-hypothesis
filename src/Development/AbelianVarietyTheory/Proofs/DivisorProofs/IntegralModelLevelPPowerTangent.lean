@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralModelPAdicComparisonStatement
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PAdicPointFrameMapStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PAdicPointCompleteFieldStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralModelPAdicOverInclusionStatement
@@ -117,7 +115,7 @@ theorem norm_minor_sub_le {p : ℕ} [Fact p.Prime] {E : Type} [Field E] [NumberF
     congr 1
     ext k k'
     simp only [RingHom.mapMatrix_apply, Matrix.map_apply, Matrix.of_apply, hMex, map_sum, map_mul, map_smul,
-      LinearMap.sum_apply, LinearMap.smul_apply, e, smul_eq_mul, Finset.sum_mul, Finset.mul_sum]
+      LinearMap.sum_apply, LinearMap.smul_apply, e, smul_eq_mul, Finset.sum_mul]
     rw [Finset.sum_comm]
     refine Finset.sum_congr rfl fun a _ => Finset.sum_congr rfl fun b _ => ?_
     change ((β (T (I k') a) : ℂ_[p]) * ((P.al₀ (ta a)).1 (xb b) : ℂ_[p])) * (U k b : ℂ_[p]) =

@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.WittSmallGroupEmbeddingMemPointwiseStabilizerIso
+import Formalism.LocalToGlobal.ProjectiveLattices.HalfOneAddSqrtNegIsIntegral
 
 noncomputable section
 
@@ -104,7 +106,7 @@ theorem splitS (h1 : mt S n ⬝ d.jX = d.jX) :
   · simp only [Matrix.add_mul, d.extX_apply, d.extY_apply, d.matrixExtendByZero_apply, Matrix.mul_assoc, d.pX_j0, d.pY_j0, d.p0_j0,
       Matrix.mul_zero, zero_add, add_zero, Matrix.mul_one, ptS]
   · simp only [Matrix.add_mul, d.extX_apply, d.extY_apply, d.matrixExtendByZero_apply, Matrix.mul_assoc, d.pX_jY, d.pY_jY, d.p0_jY,
-      Matrix.mul_zero, zero_add, add_zero, Matrix.mul_one, etaS]
+      Matrix.mul_zero, add_zero, Matrix.mul_one, etaS]
 
 theorem cenS_eq (h1 : mt S n ⬝ d.jX = d.jX) :
     cenS d T x n = -symplOH S T (d.extY T (etaS d n x)) (d.extX T x) := by

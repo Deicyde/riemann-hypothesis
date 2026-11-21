@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementTBB
 import Formalism.FormalDegreeBessel.FinalG
+import Mathlib.Data.Set.Finite.List
 
 namespace Formalism.FourierDecayAlt.P.TBBx2
 

@@ -1,4 +1,7 @@
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.projection2.Assemble
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.PeriodIntegrals.OneCosetSharp
+import Mathlib.RingTheory.PicardGroup
 
 noncomputable section
 

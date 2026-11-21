@@ -1,5 +1,6 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.PmatIsHermitian
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.Residue
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 noncomputable section
 

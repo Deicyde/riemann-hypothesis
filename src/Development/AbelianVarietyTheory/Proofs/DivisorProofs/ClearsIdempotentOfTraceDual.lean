@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ConjugateOrderData
 open NumberField IsDedekindDomain TensorProduct GlobalTheory.CMVal GlobalTheory.IndefiniteRowSideFullHecke.DifferentConductorValuations
 open Classical
@@ -71,7 +71,7 @@ theorem clearsIdem_top_of_dual : ∀ (E : Type) [Field E] [NumberField E] [IsCMF
       conv_lhs => rw [← bQ.sum_repr (x : E)]
       rw [map_sum]
       simp only [bd, map_smul, LinearMap.BilinForm.apply_dualBasis_left, smul_eq_mul, mul_ite, mul_one, mul_zero,
-        Finset.sum_ite_eq, Finset.sum_ite_eq', Finset.mem_univ, if_true]
+        Finset.sum_ite_eq', Finset.mem_univ, if_true]
     rw [h1]
     exact (integralBasis_repr_apply E x j).trans (eq_intCast _ _)
   choose z hz using fun j => hD σ (bd j) (hint j)

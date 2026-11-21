@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.DetCharacterMemPrincipalCongruenceFixedVectors
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.BlockSplitAll
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsTypeGroupBlockLift
+import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.DetCharacterIrreducibleLabel
 open GlobalTheory.GLq GlobalTheory.GLp GlobalTheory.SerSys
 
 namespace GlobalTheory.SerSys.BlockLift

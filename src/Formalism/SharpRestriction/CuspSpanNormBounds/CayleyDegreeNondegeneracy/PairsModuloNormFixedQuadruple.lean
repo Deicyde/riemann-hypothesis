@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.CayleyDegreeNondegeneracy.PrimitiveMeanOverWords
-import Formalism.SharpRestriction.CuspSpanNormBounds.AutLzFiniteOfLoop
 
 noncomputable section
 

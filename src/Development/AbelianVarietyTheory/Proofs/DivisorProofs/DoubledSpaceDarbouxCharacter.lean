@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
 open scoped TensorProduct NNReal Matrix
@@ -216,7 +216,7 @@ theorem exists_rat_unitary [CharZero F] [CharZero E] (σ : E →ₐ[F] E) (hσ :
   have iso : ∀ m m', lagCol x ι m ⬝ᵥ dbl J *ᵥ (fun s => σ (lagCol x ι m' s)) = 0 := by
     intro m m'
     rcases m with (_ | _) | k <;> rcases m' with (_ | _) | k' <;>
-      simp only [lagCol, dbl_form, f0, f1, xx, fxι, fxι', sub_zero, zero_sub, neg_zero, sub_self]
+      simp only [lagCol, dbl_form, f0, f1, xx, fxι, fxι', sub_self]
   have dual : ∀ m m', lagCol x ι m ⬝ᵥ dbl J *ᵥ (fun s => σ (lagDual y ι V m' s)) = if m = m' then 1 else 0 := by
     intro m m'
     rcases m with (_ | _) | k <;> rcases m' with (_ | _) | k' <;>
@@ -227,7 +227,7 @@ theorem exists_rat_unitary [CharZero F] [CharZero E] (σ : E →ₐ[F] E) (hσ :
     simp only [Matrix.mul_apply, map_apply, one_apply] at this
     simp only [mulVec, dotProduct]
     rw [this]
-    simp [eq_comm]
+    simp
   have h₁ : (Matrix.of fun s j => lagCol x ι (e j) s)ᵀ * dbl J * (Matrix.of fun s j => lagCol x ι (e j) s).map σ = 0 := by
     ext j j'; rw [entry_eq]; exact iso _ _
   have k₁ : (Matrix.of fun s j => lagCol x ι (e j) s)ᵀ * dbl J *
@@ -390,7 +390,7 @@ theorem siegelRule_plane : ∀ (F E : Type) [Field F] [NumberField F] [Field E] 
       · simp only [Matrix.mul_apply, transpose_apply, hCy', incM, map_apply, of_apply, fromCols_apply_inl,
           fromCols_apply_inr, Matrix.add_apply, vecMulVec_apply, incV]
         rw [← e.symm.sum_comp]
-        simp [Fintype.sum_sum_type, lagCol, mulVec, dotProduct, Pi.single_apply, hιA]
+        simp [Fintype.sum_sum_type, lagCol]
     rw [hz]; exact hinv _ _ _ φ hφ
 
   let dv : (Unit ⊕ Unit) ⊕ Fin d₁ → AE F E :=
@@ -419,7 +419,7 @@ theorem siegelRule_plane : ∀ (F E : Type) [Field F] [NumberField F] [Field E] 
       rw [this, hpb]; simp [dv]
     · have : (fun r => ιA (lagCol H'.x H'.ι (Sum.inr k) r)) =
           fun r => Matrix.fromRows (incM F H'.ι) (incM F H'.ι) r k := by
-        funext r; cases r <;> simp [lagCol, incM, hιA, mulVec, dotProduct, Pi.single_apply]
+        funext r; cases r <;> simp [lagCol, incM, hιA]
       rw [this]
       ext r
       have := congrFun (congrFun hpc r) k

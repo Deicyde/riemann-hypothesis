@@ -1,4 +1,5 @@
-import Formalism.WachLatticeTwists.CharacterSplitJumps.StatPropLocContBK
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.TraceFormulas.LatDefs
 
 open Formalism.NG (KO annih)

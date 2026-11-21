@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.SplitClassesAll.StatSrcNB
 import Formalism.WachLatticeTwists.HerrComplexInjectivity.LiftCaseAHerrSources
 

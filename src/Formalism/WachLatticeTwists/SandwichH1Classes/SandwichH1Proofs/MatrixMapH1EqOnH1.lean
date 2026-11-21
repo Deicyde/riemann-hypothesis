@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.SandwichH1Classes.HypothesisWGivesUnitCongruence
 import Formalism.WachLatticeTwists.SandwichH1Classes.SandwichH1Proofs.GmIApply
 

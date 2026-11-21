@@ -1,5 +1,7 @@
-import Formalism.SharpRestriction.GrowthBounds.FrobeniusPaths.NmHContrPos
-import Formalism.SharpRestriction.GrowthBounds.FrobeniusPaths.ExteriorWedgeSqZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.ObjPol
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 noncomputable section
 

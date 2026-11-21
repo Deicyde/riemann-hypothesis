@@ -1,4 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.SpectralGeometry.CountingDefinitions.AdelicEulerProducts.CountData
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
 open NumberField IsDedekindDomain MeasureTheory Matrix Topology GlobalTheory.CompanionTheory.SW.Core
 open scoped ENNReal NNReal MatrixGroups
 
@@ -83,9 +90,9 @@ theorem main : ∀ (F : Type) [Field F] [NumberField F], ∀ (ρ : InfinitePlace
     have ha : (ρ w (a : F) : ℝ) ≠ 0 := by simp
     have hinv : ρ w ((a⁻¹ : Fˣ) : F) = (ρ w (a : F))⁻¹ := by simp
     have hc : ((ρ w (a : F) : ℝ) : ℂ) ≠ 0 := by exact_mod_cast ha
-    simp [mob, mMat, hinv]
+    simp [mob, mMat]
     field_simp
   · funext w
-    simp [mob, wMat, neg_div, div_neg]
+    simp [mob, wMat, div_neg]
 
 end GlobalTheory.CompanionTheory.SW.Core.Mobius

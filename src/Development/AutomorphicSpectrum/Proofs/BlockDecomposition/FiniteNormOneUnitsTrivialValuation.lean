@@ -1,9 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsReps
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.UnramifiedThetaValueIndicator
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntegralBasisLocalIntegrality
-import GroundTheory.LocalFields.ExistsUnitFiltrationUnitsLeRangeNormUnits
 import GroundTheory.GlobalFields.SemilocalAlgebras.NormTrace
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LFunctionEquationGlobal
 open NumberField IsDedekindDomain MeasureTheory GroundTheory.Global GroundTheory.LocalField GroundTheory.Automorphic Ad3 Ad3.K Ad3.K.QuadraticBaseChangeGL3 Ad3.K.QuadraticBaseChangeGL3.Th
 open GroundTheory.Automorphic.GodementSection (localChar)
 open GroundTheory.Automorphic.Reduction (finAt infAt maxCompact)
@@ -83,7 +83,7 @@ variable {c : HeckeCharacter K} {v : Pl}
 theorem order_unit_field_datum_zero (w : PlK K) [w.asIdeal.LiesOver v.asIdeal] (σ : Kv K w ≃ₐ[Qv v] Kv K w) (η : (Qv v)ˣ →* ℂˣ)
     (Φ : Kv K w → ℂ) (κ : Kˣ) : ord ((k1 (LM.ns (c := c) w σ η Φ) κ : (Qv v)ˣ) : Qv v) = 0 := by
   have h : e1 (LM.ns (c := c) w σ η Φ) (κ : K) ≠ 0 := by simp [e1]
-  simp [k1, h, e1, ord]
+  simp [k1, e1, ord]
 
 theorem split_datum_unit_coordinate (w₁ w₂ : PlK K) [w₁.asIdeal.LiesOver v.asIdeal] [w₂.asIdeal.LiesOver v.asIdeal]
     (Φ : Qv v × Qv v → ℂ) (κ : Kˣ) (h : dg1 v w₁ (κ : K) ≠ 0) :

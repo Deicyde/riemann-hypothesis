@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LatticeAutomorphismApprox.LinLeg
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 noncomputable section
 
@@ -96,8 +98,8 @@ private theorem exists_pr_orthogonal_left_sub_smul_mem {K : Type} [Field K] (O :
   refine ⟨u0 - g • w, Λ1.sub_mem hu0 (smem O hg hw), fun j => ?_, w, hw, rfl⟩
   rw [← hS]
   constructor
-  · simp [pr_sub_right, pr_sum_right, pr_add_right, pr_smul_right, e1, e2, e3, e4]
-  · simp [pr_sub_right, pr_sum_right, pr_add_right, pr_smul_right, e1, e2, e3, e4]
+  · simp [pr_sub_right, pr_sum_right, pr_add_right, pr_smul_right, e1, e3]
+  · simp [pr_sub_right, pr_sum_right, pr_add_right, pr_smul_right, e2, e4]
 
 private theorem exists_pr_orthogonal_right_sub_smul_mem {K : Type} [Field K] (O : ValuationSubring K) {n r : ℕ}
     (P : Matrix (Fin n) (Fin n) K) (Λ2 : Submodule O (Fin n → K)) (a a' α α' : Fin r → Fin n → K)
@@ -117,8 +119,8 @@ private theorem exists_pr_orthogonal_right_sub_smul_mem {K : Type} [Field K] (O 
   refine ⟨φ0 - g • w, Λ2.sub_mem hφ0 (smem O hg hw), fun j => ?_, w, hw, rfl⟩
   rw [← hS]
   constructor
-  · simp [pr_sub_left, pr_sum_left, pr_add_left, pr_smul_left, e1, e2, e3, e4]
-  · simp [pr_sub_left, pr_sum_left, pr_add_left, pr_smul_left, e1, e2, e3, e4]
+  · simp [pr_sub_left, pr_sum_left, pr_add_left, pr_smul_left, e1, e4]
+  · simp [pr_sub_left, pr_sum_left, pr_add_left, pr_smul_left, e2, e3]
 
 private theorem exists_isAdmissible_of_chain_lemma_8 {K : Type} [Field K] {O : ValuationSubring K} {n r : ℕ}
     {P : Matrix (Fin n) (Fin n) K} {Λ1 Λ2 : Submodule O (Fin n → K)} {a a' α α' : Fin r → Fin n → K}

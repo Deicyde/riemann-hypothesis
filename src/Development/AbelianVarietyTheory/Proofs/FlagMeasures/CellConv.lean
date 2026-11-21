@@ -1,13 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.OnePlaceKF
-import Development.AbelianVarietyTheory.Definitions.Jets.SideFam
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.CellDataExists
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.CellDataSupport
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.AmplitudesRelevantCellMonomialRep
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsUnipotentHaarMeasureRatioStatement
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.SymmetricMeasureL2NormEqResolutionL2
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.IntegrableUnipotentNormRpowNeg
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.SliceLastLevel
 open BranchingSupport GlobalTheory.CellAmp Formalism.BasicNotions Formalism.MainNotions.S Formalism.QuantumDeterminants Matrix MeasureTheory Finset
 open scoped InnerProductSpace ENNReal
 

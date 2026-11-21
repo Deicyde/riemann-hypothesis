@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsFlagModelHermSum
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.EqOfIsometricTrivShift
+import Development.AbelianVarietyTheory.Definitions.Divisors.ReferenceMetricMulDualEqOne
 
 set_option autoImplicit false
 set_option synthInstance.maxHeartbeats 400000

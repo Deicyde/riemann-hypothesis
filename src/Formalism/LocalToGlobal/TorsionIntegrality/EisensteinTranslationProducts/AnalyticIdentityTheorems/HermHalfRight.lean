@@ -1,4 +1,10 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.EisensteinTranslationProducts.ThetaZeroLogDerivative
+import Formalism.LocalToGlobal.TorsionIntegrality.EisensteinTranslationProducts.Legendre
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 open scoped BigOperators ComplexConjugate
@@ -105,7 +111,7 @@ theorem th0Basic_of (hb : SgStarBasic) (hq : SgStarQuasi) (hi : AltEInt) : Theta
         = Complex.exp ((Real.pi : ℂ) * herm L (z - t) (t + t) + (Real.pi : ℂ) * herm L (t + t) (t + t) / 2)
           * Complex.exp (-(Real.pi : ℂ) * herm L z t) := by
       rw [← Complex.exp_add]; congr 1
-      simp only [herm, map_add, map_neg, map_sub]; ring
+      simp only [herm, map_add]; ring
     rw [h1, h3]
     linear_combination (-sgStar L (z - t) / sgStar L t) * key
   · intro z

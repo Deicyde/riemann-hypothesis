@@ -1,7 +1,7 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.ValuationResidueLemmas
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.AlgebraMapOLInjective
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.NormOrderStatement
+import Mathlib.LinearAlgebra.SymmetricAlgebra.Basis
+import Mathlib.LinearAlgebra.TensorAlgebra.Basis
 
 open NumberField ReciprocityTheory.ChartRestriction.G.T0
 open scoped TensorProduct

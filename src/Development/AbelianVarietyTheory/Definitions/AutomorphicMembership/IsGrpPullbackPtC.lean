@@ -1,11 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.MultiplicationLatticeSecond
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.PullbackAndTensorModule
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.RankOneBaseWeightEqCmTheta
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsGrpPullbackAbVarModel
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsEndPullEndPull
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.CardTorsionPointsUnconditional
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsPushEquiv
 
 set_option autoImplicit false
 

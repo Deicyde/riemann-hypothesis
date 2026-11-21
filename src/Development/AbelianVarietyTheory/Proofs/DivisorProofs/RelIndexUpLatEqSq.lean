@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.LineOppositeParabolicUnitaryLeviSectionEq
-import Formalism.SatakeDualWeyl.StatementE
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemGUIffAdjJ
+import Mathlib.RingTheory.TotallySplit
 
 open GlobalTheory.LGrp GlobalTheory.BorelUMod Formalism.UG
 

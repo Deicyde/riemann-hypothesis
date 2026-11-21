@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.IsAlgebraicOfTrdegEq
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GenericRegularity.FinrankHostDivTwo
 import Development.AbelianVarietyTheory.Proofs.GenericRegularity.ExtendByZeroConstMul
 

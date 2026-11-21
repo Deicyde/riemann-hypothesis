@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.GenericIrreducibility.CentralProd2
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.StdQuotGenericOfStdSubGeneric
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CentralCharacterEqProdSupercuspidalSupport
+import GroundTheory.LocalFields.PadicLogSeries
 
 noncomputable section
 
@@ -41,7 +44,7 @@ theorem thetaW_scalar (N : ℕ) (z : kˣ) :
   by_cases hij : i = j
   · subst hij
     simp
-  · simp [Matrix.diagonal_apply, hij, Ne.symm hij]
+  · simp [hij, Ne.symm hij]
 
 theorem hasCentralChar_comp_thetaW {N : ℕ} {V : Type} [AddCommGroup V] [Module ℂ V]
     (π : Representation ℂ (GL (Fin N) k) V) (ω : kˣ →* ℂˣ) (h : HasCentralChar π ω) :

@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.CmQuadraticFormEqAlternatingForm
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.DataIdx
 
 noncomputable section
 

@@ -1,7 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.TiedRec
 import Formalism.LocalToGlobal.Columns.Record
-import Formalism.LocalToGlobal.Columns.RecLevelStep
-import Formalism.LocalToGlobal.Columns.RowFormsLemmas
 
 open NumberField IsDedekindDomain Module Matrix
 open scoped TensorProduct

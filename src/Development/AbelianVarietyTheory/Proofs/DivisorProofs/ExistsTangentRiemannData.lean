@@ -1,10 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TendstoUniformlyOfFamAt
-import Development.AbelianVarietyTheory.Definitions.Divisors.HypothesesX
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsX
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqZeroOfFderivEqZero
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.CmHostRootComplexEqPmSqrt
 
 noncomputable section
 

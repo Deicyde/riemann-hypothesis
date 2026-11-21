@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RowSizesNR
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.BasePlaceNotMemChiGridBadPlaces
 
 noncomputable section
 

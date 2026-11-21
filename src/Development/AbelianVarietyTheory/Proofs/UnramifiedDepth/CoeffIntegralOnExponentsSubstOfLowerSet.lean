@@ -1,8 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.CharacterGerms.LatticeInclusionFormsInjective
-import Formalism.LocalToGlobal.CharacterGerms.CartesianBoundOnCurves
-import Formalism.LocalToGlobal.CharacterGerms.CoeffIterateZero
-import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.TwoMulChainStartIndexAddOneOfOdd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.CharacterGerms.GeNatCast
+import Mathlib.RingTheory.MvPowerSeries.Substitution
 
 open Formalism.L2.FormalSeriesBounds Formalism.IncomingBounds GlobalTheory.MainTerm Classical
 

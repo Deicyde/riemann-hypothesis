@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GenericRankPushforward
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsTorsionFreeOfForallExists
 open CategoryTheory AlgebraicGeometry TopologicalSpace Opposite Limits
 open GlobalTheory.VB
 set_option maxHeartbeats 1000000 in

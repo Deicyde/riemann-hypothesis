@@ -1,8 +1,7 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.DegOUnif
-import Development.AbelianVarietyTheory.BlockTheory.UniformisationCharts.OLinearMaps
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.GtCoordEndRatioDescends
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.GlobalFnsHolds
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsMonHomOfMul
 
 set_option autoImplicit false
 

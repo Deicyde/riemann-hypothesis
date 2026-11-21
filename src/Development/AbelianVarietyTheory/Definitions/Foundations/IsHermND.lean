@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.FractionFieldToGenericStalkAlgebraMapEq
+import Mathlib.RingTheory.PiTensorProduct
 
 noncomputable section
 open ValuativeRel Formalism.MainNotions.S.Loc

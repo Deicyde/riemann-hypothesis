@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.RegularSemisimpleFibres.ResEmbCompat
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.Stabilizer
-import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.SmoothOf
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.SmoothTensorFactor
 open NumberField IsDedekindDomain ValuativeRel Polynomial Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.BasicNotions Formalism.L2.Host
 open GlobalTheory.PRep GlobalTheory.SmGL GlobalTheory.SplitWeil GlobalTheory.LocGL GlobalTheory.CuspRep GlobalTheory.WeilDeligne GlobalTheory.LocLanglands GlobalTheory.Shin
@@ -55,7 +56,7 @@ private theorem position_tprod (σ : ∀ a, Representation ℂ (G a) (V a)) (a :
   funext b
   by_cases h : b = a
   · subst h; simp
-  · simp [h, Pi.mulSingle_eq_of_ne h]
+  · simp [h]
 
 private theorem position_smooth [∀ a, TopologicalSpace (G a)] [∀ a, IsTopologicalGroup (G a)] (σ : ∀ a, Representation ℂ (G a) (V a))
     (hσ : ∀ a, GlobalTheory.PRep.IsSmooth (σ a)) (a : Fin s) : GlobalTheory.PRep.IsSmooth (intersection_update_fsHerm_neg_one σ a) :=

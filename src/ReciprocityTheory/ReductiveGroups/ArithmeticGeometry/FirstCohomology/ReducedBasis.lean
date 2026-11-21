@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FirstCohomology.ReducedBasisStatement
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FirstCohomology.SpanFlag
 

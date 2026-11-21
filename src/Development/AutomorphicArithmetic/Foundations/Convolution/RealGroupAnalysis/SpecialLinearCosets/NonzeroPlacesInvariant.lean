@@ -1,5 +1,4 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.SpecialLinearCosets.GoodU
-import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.WeilRepresentation.ImportsMore
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.WeilRepresentation.One
 
 open NumberField IsDedekindDomain MeasureTheory Matrix Topology Filter
@@ -13,7 +12,7 @@ private theorem diagonal_mul_gl_conj {F : Type} [Field F] [NumberField F] (t : (
   ext i j
   have h1 : (t : A F) * ((t⁻¹ : (A F)ˣ) : A F) = 1 := Units.mul_inv t
   fin_cases i <;> fin_cases j <;>
-    simp [dM, cD, gl, Matrix.mul_apply, Fin.sum_univ_two, Matrix.SpecialLinearGroup.toGL, mul_assoc, h1, mul_comm]
+    simp [dM, cD, gl, Matrix.mul_apply, Fin.sum_univ_two, Matrix.SpecialLinearGroup.toGL, mul_comm]
 
 private theorem Wf_tr {F : Type} [Field F] [NumberField F] (f : GL (Fin 2) (A F) → ℂ) (x g₀ : G1 F) (t : (A F)ˣ) :
     Wf (fun g => f (g * gl g₀)) (gl x * dM t) = Wf f (gl (x * cD t g₀) * dM t) := by

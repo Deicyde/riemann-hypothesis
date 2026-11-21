@@ -1,5 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.InvariantSeriesBidegreeOneOne
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
 
 namespace Formalism.HermitianLattices.IntegralLatticeDensity
 

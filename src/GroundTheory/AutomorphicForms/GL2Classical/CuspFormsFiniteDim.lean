@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.GL2Classical.EigenQExpansion
+import Mathlib.NumberTheory.ModularForms.LevelOne.DimensionFormula
+import Mathlib.NumberTheory.ModularForms.NormTrace
 
 open NumberField Matrix CongruenceSubgroup ModularForm Complex Filter
 open UpperHalfPlane hiding I I_re I_im

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.RankWeightComponentEq
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LevelHyperspecialTrivialCharacterSplitsOffPlaces
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix
@@ -45,7 +46,7 @@ theorem lower_row (h : r + t = n) (A : Matrix (Fin r) (Fin r) k) {a : Fin n} (ha
     simp only [Matrix.one_apply, (rowIx h).symm.injective.eq_iff]
   rw [e1, hj]
   rcases (rowIx h).symm b with j' | j'
-  · simp [Matrix.fromBlocks_apply₂₁, Matrix.one_apply]
+  · simp [Matrix.fromBlocks_apply₂₁]
   · simp [Matrix.fromBlocks_apply₂₂, Matrix.one_apply]
 
 theorem mem_blockTri_diag (h : r + t = n) (A : Matrix (Fin r) (Fin r) k) {b : Fin n → ℕ}

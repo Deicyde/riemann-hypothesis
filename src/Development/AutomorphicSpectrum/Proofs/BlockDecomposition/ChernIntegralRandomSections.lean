@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ChernDegreeComplex
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsPresents
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.JoinCol
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GaussianWeightTotalMassStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SigmaCompactDisjointRefinementStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MeasurableLocalZeroCountStatement

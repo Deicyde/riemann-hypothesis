@@ -1,7 +1,7 @@
-import Mathlib
-import Formalism.RealPlaceAnalysis.ThirdArithmeticHolds
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.LastComatrixRowInvertsDual
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.TensorDualStandardRel
+import Mathlib.RingTheory.SimpleRing.Principal
 
 open Formalism.REAL
 

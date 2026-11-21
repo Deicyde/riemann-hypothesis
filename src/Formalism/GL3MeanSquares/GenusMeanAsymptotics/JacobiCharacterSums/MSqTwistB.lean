@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.GenusMeanAsymptotics.JacobiCharacterSums.MSqTwistA
+import Batteries.Data.Nat.Gcd
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Topology.Sheaves.Presheaf
 
 open Finset Classical
 
@@ -109,7 +112,7 @@ theorem sum_jac_cls_eq_zero (m₀ s a₀ : ℕ) [NeZero (m₀ * s)] (h1 : 1 < s)
   have hN : 0 < m₀ * s := Nat.pos_of_ne_zero (NeZero.ne _)
   obtain ⟨u, hu1, hus, hJu⟩ := exists_jacobiSym_neg_one_in_residue_class m₀ s h1 hodd hsq hcop
   have hre := sum_clsB_mul_mod_eq_sum m₀ s a₀ u hN hu1 hus (fun x => (jacobiSym (x : ℤ) s : ℝ))
-  simp only [jacobiSym_mul_mod_eq_mul, hJu, Int.cast_mul, Int.cast_neg, Int.cast_one, mul_neg, mul_one,
+  simp only [jacobiSym_mul_mod_eq_mul, hJu, Int.cast_neg, mul_neg, mul_one,
     Finset.sum_neg_distrib] at hre
   linarith
 

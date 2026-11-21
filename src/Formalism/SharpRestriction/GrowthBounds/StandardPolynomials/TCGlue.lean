@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.TopWeightFalseZeroEqOne
+import Formalism.SharpRestriction.GrowthBounds.CoarseMultiplicity.WeightWLet
+import Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.IoDVariableLastEqTopEnd
 
 noncomputable section
 

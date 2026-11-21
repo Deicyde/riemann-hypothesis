@@ -1,12 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.ToHLat
 import Formalism.LocalToGlobal.Divisibility.FramesLemmas
 import Formalism.LocalToGlobal.Divisibility.ProjLemmas
 import Formalism.LocalToGlobal.GlobalTheory.HLatOpsP
-import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.ClassSumDualGeOfFamily
 import Formalism.LocalToGlobal.Columns.AtTRank
 import Formalism.LocalToGlobal.Columns.RowFormsGood
-import Formalism.LocalToGlobal.Columns.ColFormsInst
 
 open NumberField IsDedekindDomain Module
 open scoped Matrix ComplexOrder
@@ -133,7 +132,7 @@ theorem PosH.isoMat_fcoord {h : S.Ok} (hp : S.PosH h) (U : Submodule K S.EqFun) 
       (S.isoMat h U v).mulVec (fcoord (S.subB h U) (restrFrame (S.subMat h U) (S.hGram h)) v x) := by
   have hs := Formalism.L2.DIV.restrFrameSpec K _ _ (S.hGram h) hp (S.subMat h U) (S.subMat_injective h U) v
   rw [thl_fcoord_coord (S.hB h), thl_fcoord_coord (S.subB h U), S.hB_equivFun h]
-  simp only [Formalism.HermitianLatticesTheory.fcoord, Formalism.HermitianLatticesTheory.vecAt, Pi.basisFun_repr, isoMat, Matrix.mulVec_mulVec]
+  simp only [Formalism.HermitianLatticesTheory.fcoord, isoMat, Matrix.mulVec_mulVec]
   rw [Matrix.mul_assoc ((stdFrame (S.hGram h) v)⁻¹ * _), Matrix.mul_nonsing_inv _ hs.1, Matrix.mul_one,
     ← Matrix.mulVec_mulVec, ← S.subB_equivFun h U x]
   congr 1

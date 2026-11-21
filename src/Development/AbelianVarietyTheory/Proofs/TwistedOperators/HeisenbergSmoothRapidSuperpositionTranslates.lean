@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousFourierGau
+import Mathlib.Analysis.Calculus.ContDiff.FiniteDimension
+import Mathlib.Tactic.Polynomial.Basic
 
 open MeasureTheory Complex
 open scoped ContDiff Real

@@ -1,4 +1,5 @@
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ExistsIsHaarMeasureSUJ
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.PosPartUnitaryMul
 open MeasureTheory Matrix Finset Formalism.MainNotions.S Formalism.REAL Formalism.QuantumDeterminants GlobalTheory.Dec GlobalTheory.DSId GlobalTheory.DSSU
 open scoped InnerProductSpace
 

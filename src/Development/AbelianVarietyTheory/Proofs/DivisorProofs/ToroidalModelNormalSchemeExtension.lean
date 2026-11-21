@@ -1,17 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GrBasis
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLocGrLat
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSplitting
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SplitTorusCyclotomicPoint
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ProjectiveModuleRankGenericSpread
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ModuliTangentFrameBaseChange
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TangentBasisIntegerAction
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsProjectorEigenDecomposition
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TangentBasisActionOnModel
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsVarietyConnectedComponentGenericFibre
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FlagSpaceComponentUniquePointEachFlag
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsFlagComponentPointOverGeometricBasePoint
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToroidalChartSectionBound
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsAffineTangentBasisLocally
 open NumberField MvPolynomial Filter Topology Formalism.BasicNotions Formalism.MainNotions Formalism.DegreeFormula GlobalTheory.FlagPoly GlobalTheory.Mean4 GlobalTheory.Mean4O GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.CovTest GlobalTheory.Published
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory GlobalTheory.ArInt
@@ -79,7 +74,7 @@ theorem split_of_minor {R : Type} [CommRing R] [IsDomain R] {g M r : ℕ} {D N :
     have h2 : P.map φ * U.map φ = φ D • U.map φ := by
       rw [← map_mul_rect φ, hPU]; ext i j; simp
     have h3 : (H.submatrix I id).map φ * U.map φ = φ N • (1 : Matrix (Fin r) (Fin r) _) := by
-      rw [← map_mul_rect φ, hIU]; ext i j; by_cases hij : i = j <;> simp [Matrix.one_apply, hij]
+      rw [← map_mul_rect φ, hIU]; ext i j; by_cases hij : i = j <;> simp [hij]
     have := mul_mul_eq_smul_of_field (FractionRing R) g r (φ D) (φ N) (P.map φ)
       (U.map φ) ((H.submatrix I id).map φ) ((map_ne_zero_iff _ hinj).2 hD) ((map_ne_zero_iff _ hinj).2 hN) h1 hr h2 h3
     apply Matrix.map_injective hinj
@@ -648,7 +643,7 @@ theorem exists_orth_isEigProj (Z : ReciprocityTheory.ChartRestriction.G.Geo.Tor.
     constructor
     · intro h
       refine ⟨(D : K)⁻¹ • cf, ?_⟩
-      simp [Matrix.mulVec_smul, h, smul_smul, hDK]
+      simp [h, smul_smul, hDK]
     · rintro ⟨y, rfl⟩
       show ((P τ).map ψ).mulVec (((P τ).map ψ).mulVec y) = (D : K) • ((P τ).map ψ).mulVec y
       rw [Matrix.mulVec_mulVec, hPK, Matrix.smul_mulVec]

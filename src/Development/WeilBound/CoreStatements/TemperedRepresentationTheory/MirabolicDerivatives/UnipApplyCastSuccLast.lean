@@ -1,5 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.NonemptyEquivMultiProdOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.SmoothPartStable
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.PiTensorProduct
 
 noncomputable section
 
@@ -95,7 +98,7 @@ theorem MirU_le_Mir (n : ℕ) : MirU k n ≤ Mir k n := by
   by_cases h : j = Fin.last n
   · subst h
     simp [GlobalTheory.BZMir.colMat, GlobalTheory.BZMir.eLast]
-  · simp [GlobalTheory.BZMir.colMat, GlobalTheory.BZMir.eLast, Matrix.one_apply_ne (Ne.symm h), h, Pi.single_apply]
+  · simp [GlobalTheory.BZMir.colMat, GlobalTheory.BZMir.eLast, Matrix.one_apply_ne (Ne.symm h), h]
 
 def glEmbMat (n : ℕ) (A : Matrix (Fin n) (Fin n) k) : Matrix (Fin (n + 1)) (Fin (n + 1)) k :=
   fun i j => Fin.lastCases (Fin.lastCases 1 (fun _ => 0) j) (fun i' => Fin.lastCases 0 (fun j' => A i' j') j) i
@@ -132,7 +135,7 @@ theorem glEmb_mem_Mir (n : ℕ) (g : GL (Fin n) k) : glEmb k n g ∈ Mir k n := 
   ext j
   cases j using Fin.lastCases with
   | last => simp [GlobalTheory.BZMir.glEmbMat, GlobalTheory.BZMir.eLast]
-  | cast b => simp [GlobalTheory.BZMir.glEmbMat, GlobalTheory.BZMir.eLast, Pi.single_apply, Fin.castSucc_ne_last]
+  | cast b => simp [GlobalTheory.BZMir.glEmbMat, GlobalTheory.BZMir.eLast, Fin.castSucc_ne_last]
 
 end Group
 

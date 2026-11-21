@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MemNonzeroLocusSecOfRat
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.DualGramInterpGram
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.DeterminantSectionRule
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TriIff
 
 open CategoryTheory AlgebraicGeometry Limits NumberField IsDedekindDomain Filter Topology Matrix
 open ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Pj Formalism.L2.Geo

@@ -1,8 +1,8 @@
-import Mathlib
-import Formalism.PieriBlockIdeals.Statement
+import BuildAid.Leniency.Open
 import Formalism.PieriBlockIdeals.StatementW
-import Formalism.RankGapBounds.CloudMinFalse
 import Formalism.PieriBlockIdeals.StatementLA
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Combinatorics.Quiver.ReflQuiver
 
 open MvPolynomial CategoryTheory TensorProduct
 

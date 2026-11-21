@@ -1,5 +1,15 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HermitianTensor
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.GroupTheory.FiniteAbelian.Basic
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
 
 namespace GroundTheory.Heights₂.Heights
 

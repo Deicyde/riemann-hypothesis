@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.SerFixOne
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.InstCMHostS
-import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.RowDictPf
+import Formalism.LocalToGlobal.IndefiniteReal.SubgroupCharExtensionOneApply
 
 noncomputable section
 

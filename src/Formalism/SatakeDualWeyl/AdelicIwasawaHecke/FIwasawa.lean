@@ -1,5 +1,7 @@
-import Formalism.SatakeDualWeyl.StatementF
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.FIwasawaE
+import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.SphericalA
 
 open Formalism.UG Matrix
 

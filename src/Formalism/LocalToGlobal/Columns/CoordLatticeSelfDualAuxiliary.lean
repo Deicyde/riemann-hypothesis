@@ -1,7 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.LevPackPSameCar
 import Formalism.LocalToGlobal.Columns.LastVectorMemSpan
 import Formalism.LocalToGlobal.Columns.TiedXpU
-import Formalism.LocalToGlobal.Columns.CharactersLevelZeroAgree
+import Formalism.LocalToGlobal.Columns.CoordLatticeSelfDualEqStd
 
 open NumberField IsDedekindDomain Module Matrix
 open scoped TensorProduct

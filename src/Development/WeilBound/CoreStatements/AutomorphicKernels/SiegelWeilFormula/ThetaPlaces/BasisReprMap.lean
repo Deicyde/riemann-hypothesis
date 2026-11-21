@@ -1,4 +1,7 @@
-import Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.ThetaPlaces.RelReal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Formalism.UnipotentAdelicQuotients.SWXSDefs
 
 noncomputable section
 
@@ -17,7 +20,7 @@ theorem basis_repr_map' {J : Type} (b : Module.Basis J k B) (ρ : R →ₐ[k] S)
       ρ ((Algebra.TensorProduct.basis R b).repr x i) := by
   induction x using TensorProduct.induction_on with
   | zero => simp
-  | tmul a m => simp [Algebra.TensorProduct.basis_repr_tmul, Algebra.smul_def]
+  | tmul a m => simp [Algebra.TensorProduct.basis_repr_tmul]
   | add x y hx hy => simp [hx, hy]
 
 end Repr

@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.IsIntersectionFamily
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.Polynomial.Basic
 set_option maxSynthPendingDepth 1
 
 noncomputable section

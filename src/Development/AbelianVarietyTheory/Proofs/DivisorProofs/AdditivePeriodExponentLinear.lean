@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SiegelReframe
 open Matrix MeasureTheory GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe
 open scoped Real ContDiff
@@ -93,8 +93,8 @@ theorem flat_of_exp_eq {g : ℕ} {E : Type} [NormedAddCommGroup E] [NormedSpace 
       apply Subtype.ext
       ext i
       simp only [he, Pi.basisFun_apply, Submodule.coe_sum, Submodule.coe_smul_of_tower,
-        Finset.sum_apply, Pi.smul_apply, Pi.single_apply, zsmul_eq_mul, Pi.mul_apply, Pi.intCast_apply,
-        mul_ite, mul_one, mul_zero, Finset.sum_ite_eq, Finset.sum_ite_eq', Finset.mem_univ, if_true, hn]
+        Finset.sum_apply, Pi.single_apply, zsmul_eq_mul, Pi.mul_apply, Pi.intCast_apply,
+        mul_ite, mul_one, mul_zero, Finset.sum_ite_eq, Finset.mem_univ, if_true, hn]
     have := congrArg F hsum
     simp only [map_sum, map_zsmul] at this
     simp only [F, AddMonoidHom.mk'_apply] at this

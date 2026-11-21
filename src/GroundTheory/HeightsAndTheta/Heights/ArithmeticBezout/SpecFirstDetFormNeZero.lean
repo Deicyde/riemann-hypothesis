@@ -1,7 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.LatticePointLogCount
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterSt
 import GroundTheory.HeightsAndTheta.Heights.Intersections.Statements
+import Mathlib.NumberTheory.Ostrowski
+import Mathlib.RingTheory.SimpleRing.Principal
+import Std.Tactic.BVDecide.Normalize.Prop
 set_option maxSynthPendingDepth 1
 
 noncomputable section

@@ -1,5 +1,5 @@
-import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.AuxUOfFirstTheoremPlaceBound
-import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.JpSubstExpand
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.ValuationBoundAdd
 
 noncomputable section

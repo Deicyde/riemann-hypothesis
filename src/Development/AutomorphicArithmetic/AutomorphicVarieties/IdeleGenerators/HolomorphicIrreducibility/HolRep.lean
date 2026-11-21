@@ -1,10 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.IdeleGenerators.HolomorphicIrreducibility.HolCap
 import Development.AutomorphicArithmetic.AutomorphicVarieties.IdeleGenerators.HolomorphicIrreducibility.UopSum
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.RDual2
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.TemperedLocalComponents.SatR
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CapCommuteRtInfGL
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.AbsPowOneNotIsAlgRat
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsUnitaryOfCharIff
+import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.TemperedLocalComponents.LocCompR
+import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.TemperedLocalComponents.SatLoc
 
 noncomputable section
 
@@ -64,7 +64,7 @@ private theorem lie_eq_sum (X : Matrix (Fin a) (Fin a) (TR.Rinf F)) :
   let L : Matrix (Fin a) (Fin a) (TR.Rinf F) →ₗ[ℝ] Module.End ℂ (TR.Sm F a) := TR.lie F a
   have e : X = ∑ v, ∑ i, ∑ j, X i j v • Matrix.single i j (Pi.single v 1 : TR.Rinf F) := by
     ext i j v
-    simp [Matrix.sum_apply, Matrix.single_apply, ite_and, Pi.single_apply, ite_apply]
+    simp [Matrix.sum_apply, Matrix.single_apply, ite_and, Pi.single_apply]
   change L X = _
   conv_lhs => rw [e]
   simp only [map_sum, map_smul]
@@ -458,7 +458,7 @@ theorem UpperTheory.V.Sd.holRep :
           rw [Nat.cast_sub (by omega)]; push_cast; ring, Real.rpow_natCast]
       simp
     have h9 : algSat 2 (normV w) {α, β} = {r * α, r * β} := by
-      simp only [algSat, hr, Multiset.insert_eq_cons, Multiset.map_cons, Multiset.map_singleton]
+      simp only [algSat, hr, Multiset.insert_eq_cons]
       norm_num
     rw [h9, h6, ← h8, show (ω.val w : ℂˣ) * (r * r * (((ν.val w : ℂˣ) : ℂ) * (ν.val w : ℂˣ))) = r * α * (r * β) by
       linear_combination (-(r * r)) * h7]

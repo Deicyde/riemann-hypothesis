@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.P2PowMemSpanCUniformizerPowP1PowMulXPow
 import Mathlib.RingTheory.PowerSeries.Substitution
-import Mathlib.Analysis.SpecialFunctions.Log.Base
 
 namespace Formalism.MainNotions.N.FrobeniusPowerSeries
 

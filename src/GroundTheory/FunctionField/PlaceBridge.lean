@@ -1,5 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.FunctionField.PlaceSum
+import Mathlib.LinearAlgebra.SymmetricAlgebra.Basis
+import Mathlib.LinearAlgebra.TensorAlgebra.Basis
+import Mathlib.NumberTheory.FunctionField
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.TotallySplit
 
 namespace GroundTheory.FunctionField
 

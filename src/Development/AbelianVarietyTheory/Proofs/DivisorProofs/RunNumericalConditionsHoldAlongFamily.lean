@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.SingleIndexPlacesAreTwisted
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.OnWithOfIsEmpty
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndexBoundParameterRequirementsEventuallyFamilyStatement
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.RowsOfPageFix
 import Formalism.LocalRingCardinality.NFLeTwoMulTSq

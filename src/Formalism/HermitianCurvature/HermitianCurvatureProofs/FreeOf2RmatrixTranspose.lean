@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementFr
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.PositionInsertionDiagonalCompat
 

@@ -1,8 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ThetaCorrespondenceLargeRankStatement
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.GeometricLemmaOfFiltration
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GeometricLemmaFiltrationUnconditional
 import Development.AutomorphicArithmetic.ThetaCorrespondence.GeneralLinearGroups.ImportsAlt
+import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ThetaCorrespondenceLargeRank
 
 noncomputable section
 

@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.TateTwists.acycPf
+import Mathlib.Algebra.Homology.ShortComplex.ModuleCat
+import Mathlib.CategoryTheory.Sites.EpiMono
 
 open CategoryTheory Limits AlgebraicGeometry Opposite CochainComplex GlobalTheory.EtC
 

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FirstCohomology.OneCHyp
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ExistsZeroGt
 
@@ -33,7 +35,7 @@ theorem exists_zero_qk (hB : D.TauBimult) (k : ℕ) :
     refine ⟨by rw [hz.1, cPoint_zero], fun χ y J hJ => ?_⟩
     have hc := isCub_cubV (c := D.cub) hJ
     have h1 := tau_mul (σ := 𝟙 (TF (R := R) F)) (z := y) (J := J) hJ hB 0 0 χ
-    simp only [th, add_zero, cPoint_zero, hc.face, _root_.mul_one, Over.id_left] at h1
+    simp only [th, cPoint_zero, hc.face, _root_.mul_one, Over.id_left] at h1
     rw [add_zero] at h1
     rw [hz.2 χ y J hJ]
     exact (mul_left_cancel (h1.symm.trans (_root_.mul_one _).symm)).symm

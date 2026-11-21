@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.L2DbarEstimates.PlurisubharmonicCharts.FamilyLeCoords
 
 namespace GlobalTheory.OTY

@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.CharacterColumnKernels.IdempotentNormalForms.CharacterColumnKernelsOfBlockChiCOfBlockChiOne
 
 open Finset Classical

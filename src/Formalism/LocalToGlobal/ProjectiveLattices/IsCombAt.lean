@@ -1,4 +1,5 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.FlagBasis
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ThetaPt
 import Formalism.LocalToGlobal.ProjectiveLattices.EmbKCoe
 import Formalism.LocalToGlobal.ProjectiveLattices.AlgebraMapCAt

@@ -1,4 +1,5 @@
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.FourierMatch
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsMulStarEqOfNormOneUnramifiedQuadraticStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.UnramifiedQuadraticIntegralTraceFormPerfectStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.NormOneAddEqOne

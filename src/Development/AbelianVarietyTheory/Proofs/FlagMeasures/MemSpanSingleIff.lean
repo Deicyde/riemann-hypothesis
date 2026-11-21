@@ -1,9 +1,8 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.FractionFieldToGenericStalkAlgebraMapEq
-import Formalism.SharpRestriction.CuspSpanNormBounds.PsiEDef
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsHermND
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ComplementReferenceCompactSubgroup
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.GFrames
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
 open ValuativeRel Formalism.MainNotions.S.Loc GlobalTheory.HL NumberField IsDedekindDomain
 open scoped Pointwise ENNReal Classical
 
@@ -27,7 +26,7 @@ theorem _root_.GlobalTheory.HL.Glue.mem_span_single_iff {R : Type} [CommRing R] 
       intro i
       by_cases h : i = j
       · subst h; simp [O.one_mem]
-      · simp [Pi.single_apply, h, O.zero_mem]
+      · simp [h, O.zero_mem]
     | zero => intro i; simpa using O.zero_mem
     | add a b _ _ ha hb => intro i; simpa using O.add_mem (ha i) (hb i)
     | smul c a _ ha => intro i; simpa [Subring.smul_def] using O.mul_mem c.2 (ha i)

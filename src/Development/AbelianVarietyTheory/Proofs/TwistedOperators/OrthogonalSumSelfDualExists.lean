@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RatInOfUnit
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsGLSubmatrix
 import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsAHEqOfMemRatPts
+import Formalism.LocalToGlobal.IndefiniteReal.LocalNewformFunction
 
 noncomputable section
 

@@ -1,14 +1,10 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.RealDescent.RealLeviDescent.HighestVectorsRegularLine
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WtRInjective
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SumMemOfStable
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.UnitaryEuclideanModelStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsCompactLieActionStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HighestWeightAntitoneOfFiniteDimensionalStableStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DualOperatorCommutesLieStatement
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsHighestWeightInInvariantSubmoduleStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HighestWeightOfUnitaryDerivativeStatement
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntertwinerEqZeroOfVanishOnHighestStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HighestWeightIntegralOfUnitaryStatement
 
 noncomputable section
@@ -111,9 +107,9 @@ theorem sum_single' {M : Type*} [AddCommGroup M] [Module ℂ M] (x : Fin n → F
     ∑ i, ∑ j, (Matrix.single a b c : Matrix (Fin n) (Fin n) ℂ) i j • x i j = c • x a b := by
   classical
   rw [Finset.sum_eq_single a (fun i _ hi => Finset.sum_eq_zero fun j _ => by
-        simp [Matrix.single_apply, Ne.symm hi]) (by simp),
-      Finset.sum_eq_single b (fun j _ hj => by simp [Matrix.single_apply, Ne.symm hj]) (by simp)]
-  simp [Matrix.single_apply]
+        simp [Ne.symm hi]) (by simp),
+      Finset.sum_eq_single b (fun j _ hj => by simp [Ne.symm hj]) (by simp)]
+  simp
 
 theorem eq_zero_of_skew {M : Type*} [AddCommGroup M] [Module ℂ M] (x : Fin n → Fin n → M)
     (h : ∀ X : Matrix (Fin n) (Fin n) ℂ, Xᴴ = -X → ∑ i, ∑ j, X i j • x i j = 0) (a b : Fin n) : x a b = 0 := by

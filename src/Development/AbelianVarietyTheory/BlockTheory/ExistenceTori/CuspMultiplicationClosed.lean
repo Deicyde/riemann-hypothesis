@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.UnFree
-import Formalism.LocalToGlobal.ProjectiveLattices.JFDFree
-import Formalism.LocalToGlobal.ProjectiveLattices.IsCombAt
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.SiegelSpaceAlgebraHolds
 
 noncomputable section

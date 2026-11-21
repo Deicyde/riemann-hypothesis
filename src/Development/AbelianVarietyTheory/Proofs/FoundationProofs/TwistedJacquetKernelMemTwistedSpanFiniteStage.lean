@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.OrderedConst
+import Development.AbelianVarietyTheory.Definitions.Foundations.SmoothPartStable
+import Mathlib.Order.CompletePartialOrder
 open GlobalTheory.PRep GlobalTheory.SmGL GlobalTheory.SplitWeil ValuativeRel GlobalTheory.PsType
 
 namespace GlobalTheory.PsType

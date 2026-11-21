@@ -1,7 +1,4 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.RemainderTerms.Statements
-import GroundTheory.HeightsAndTheta.Heights.RemainderTerms.IsFlagIntegralOne
-import GroundTheory.HeightsAndTheta.Heights.RemainderTerms.FlagBasic
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.RemainderTerms.IsPowerSumDecompositionHomogeneousComponent
 import GroundTheory.HeightsAndTheta.Heights.RemainderTerms.FlagIntegralRealEqMulDdConst
 set_option maxSynthPendingDepth 1

@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.WHyp
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.Tactic.ENatToNat
 open GlobalTheory.JR Matrix MeasureTheory Filter Topology
 open scoped NNReal ENNReal Pointwise
 
@@ -46,7 +50,7 @@ theorem pt_scale_eq_rg_mS : ∀ (F E : Type) [NontriviallyNormedField F] [Nontri
     (fun b' => Φ (a * (s : A.K), b') * A.psiK ψ (x * b' * (u * ((s⁻¹ : A.Kˣ) : A.K))))
   simp only [pt, rg, mS, fourB, kx]
   simp only [Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.empty_val',
-    Matrix.cons_val_fin_one, Matrix.head_cons, Matrix.head_fin_const, mul_zero, add_zero, zero_add]
+    Matrix.cons_val_fin_one, mul_zero, add_zero, zero_add]
   rw [eq_inv_mul_iff_mul_eq₀ (by exact_mod_cast hs0)] at key
   rw [← key, ← integral_const_mul]
   refine integral_congr_ae (Eventually.of_forall fun b => ?_)

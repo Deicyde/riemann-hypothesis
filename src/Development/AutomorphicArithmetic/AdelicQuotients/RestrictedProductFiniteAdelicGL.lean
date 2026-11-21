@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.LocalGroupAnalysis.SelmerRankBoundLaurent
-import GroundTheory.AutomorphicForms.ReductionFinite
 
 open NumberField IsDedekindDomain Topology Filter
 open GroundTheory.Automorphic GroundTheory.Automorphic.Reduction

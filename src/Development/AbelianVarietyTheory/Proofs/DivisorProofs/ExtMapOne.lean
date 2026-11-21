@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExtMapApply
 open Matrix MeasureTheory Set GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe GlobalTheory.TorsionForm
 open scoped ContDiff
@@ -24,7 +24,7 @@ theorem wedge_single_of_lt {m : ℕ} (i : Fin m) (T : Finset (Fin m)) (hT : ∀ 
     by_cases hi : i ∈ S
     · have hne : S.erase i ≠ T := by
         intro h; apply hS; rw [← h, Finset.insert_erase hi]
-      simp [wedge, hi, Pi.single_apply, hne]
+      simp [wedge, hi, hne]
     · simp [wedge, hi]
 
 theorem sum_one_smul_wedge {m : ℕ} (i : Fin m) (x : Ext m) :

@@ -1,5 +1,7 @@
-import Mathlib
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LatticeReferenceFrame.WBasis
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LatticeReferenceFrame.PPAssemble
+import Mathlib.RingTheory.PiTensorProduct
 
 noncomputable section
 

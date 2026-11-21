@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.SobolevIteration.DifferentiableUpdate
 import Formalism.LocalToGlobal.BesselHermitianTheta.TiedType
 
@@ -214,7 +216,7 @@ theorem word_pds {k : ℕ} (l : List (Matrix (Fin n) (Fin n) ℂ)) (hl : l.lengt
           by_cases h : i = ⟨j, by omega⟩
           · subst h
             simp [hr ⟨j, by omega⟩ (le_refl j) hjk]
-          · simp [h, Pi.single_apply, Function.update_apply]
+          · simp [h]
         have h1 : pds L' (orb ρ Z u j) (Function.update r ⟨j, by omega⟩ t) =
             pds L' (fun r' => orb ρ Z u j (Function.update r' ⟨j, by omega⟩ t)) r := by
           rw [pds_update L' _ hne t (contDiff_orb Z hZ hu j)]
@@ -254,7 +256,7 @@ lemma pd_last_orb {k : ℕ} (Z : Fin (k + 1) → Matrix (Fin n) (Fin n) ℂ) (hZ
     rw [orb_zero_split]
     have hc : ∀ i : Fin k, (r + t • Pi.single (Fin.last k) (1 : ℝ) : Fin (k + 1) → ℝ) i.castSucc = r i.castSucc := by
       intro i
-      simp [Pi.single_apply, Fin.castSucc_ne_last]
+      simp [Fin.castSucc_ne_last]
     have hl : (r + t • Pi.single (Fin.last k) (1 : ℝ) : Fin (k + 1) → ℝ) (Fin.last k) = r (Fin.last k) + t := by simp
     simp only [hc, hl]
     rw [add_smul, Matrix.exp_add_of_commute _ _ (((Commute.refl (Z (Fin.last k))).smul_left _).smul_right _),
@@ -296,7 +298,7 @@ lemma word_eval (l : List (Matrix (Fin n) (Fin n) ℂ)) (hl : ∀ Y ∈ l, Y ∈
       intro h'
       rw [h'] at h
       simp at h
-    simp [Pi.single_apply, this]
+    simp [this]
   have := hL v hv _ hr
   rw [List.drop_zero] at this
   rw [← this, orb_last]

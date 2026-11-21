@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.TwistedFactors.SelmerRankBounds.EllipticityFromProductFormula
 import Development.AutomorphicArithmetic.Foundations.Convolution.HermitianDescent.SeparableOfMap
-import Development.AutomorphicArithmetic.Foundations.Convolution.HermitianDescent.ConjSep
 import Development.AutomorphicArithmetic.Foundations.Convolution.HermitianDescent.GalField
 open PositivityTheory.Rg.Tf.Geo
 

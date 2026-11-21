@@ -1,6 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.StatementsBridge
 import GroundTheory.HeightsAndTheta.Heights.FieldsOfNumbers.Statements
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.LocalProperties.Reduced
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Topology.Sheaves.Presheaf
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.NumbersDVR

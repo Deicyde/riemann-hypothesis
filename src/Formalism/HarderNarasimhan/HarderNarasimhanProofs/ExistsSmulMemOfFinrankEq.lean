@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.HarderNarasimhan.DegSupermodZ
 import Formalism.LatticeSlopes.ExistsSaturatedSlopeEqMuMax
-import Formalism.LatticeSlopes.LatticeSlopesProofs.DiscreteTopologyOfLe
 
 open Module Submodule
 

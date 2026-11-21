@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCyclotomicExtensionQI
 import GroundTheory.GlobalFields.LocalAtPlace
+import Mathlib.Topology.Connected.Separation
+import Mathlib.Topology.MetricSpace.Ultra.TotallySeparated
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 
@@ -74,22 +78,22 @@ def tensorInt (O : Subring R) : Subring (R ⊗[ℚ] F) where
   carrier := {x | ∀ i j, Algebra.leftMulMatrix (Algebra.TensorProduct.basis R (Module.finBasis ℚ F)) x i j ∈ O}
   mul_mem' := by
     intro x y hx hy i j
-    simp only [Set.mem_setOf_eq, map_mul, Matrix.mul_apply]
+    simp only [map_mul, Matrix.mul_apply]
     exact sum_mem fun k _ ↦ mul_mem (hx i k) (hy k j)
   one_mem' := by
     intro i j
-    simp only [Set.mem_setOf_eq, map_one, Matrix.one_apply]
+    simp only [map_one, Matrix.one_apply]
     split_ifs
     · exact O.one_mem
     · exact O.zero_mem
   add_mem' := by
     intro x y hx hy i j
-    simp only [Set.mem_setOf_eq, map_add, Matrix.add_apply]
+    simp only [map_add, Matrix.add_apply]
     exact add_mem (hx i j) (hy i j)
   zero_mem' := by intro i j; simp
   neg_mem' := by
     intro x hx i j
-    simp only [Set.mem_setOf_eq, map_neg, Matrix.neg_apply]
+    simp only [map_neg, Matrix.neg_apply]
     exact neg_mem (hx i j)
 
 def mulMatAlg (A : Type) [Ring A] [Algebra ℚ A] [Module.Finite ℚ A] :
@@ -101,22 +105,22 @@ def tensorIntAlg (A : Type) [Ring A] [Algebra ℚ A] [Module.Finite ℚ A] (O : 
   carrier := {x | ∀ i j, mulMatAlg R A x i j ∈ O}
   mul_mem' := by
     intro x y hx hy i j
-    simp only [Set.mem_setOf_eq, map_mul, Matrix.mul_apply]
+    simp only [map_mul, Matrix.mul_apply]
     exact sum_mem fun k _ ↦ mul_mem (hx i k) (hy k j)
   one_mem' := by
     intro i j
-    simp only [Set.mem_setOf_eq, map_one, Matrix.one_apply]
+    simp only [map_one, Matrix.one_apply]
     split_ifs
     · exact O.one_mem
     · exact O.zero_mem
   add_mem' := by
     intro x y hx hy i j
-    simp only [Set.mem_setOf_eq, map_add, Matrix.add_apply]
+    simp only [map_add, Matrix.add_apply]
     exact add_mem (hx i j) (hy i j)
   zero_mem' := by intro i j; simp
   neg_mem' := by
     intro x hx i j
-    simp only [Set.mem_setOf_eq, map_neg, Matrix.neg_apply]
+    simp only [map_neg, Matrix.neg_apply]
     exact neg_mem (hx i j)
 
 theorem isOpen_isCompact_tensorIntAlg (A : Type) [Ring A] [Algebra ℚ A] [Module.Finite ℚ A] (O : Subring R)

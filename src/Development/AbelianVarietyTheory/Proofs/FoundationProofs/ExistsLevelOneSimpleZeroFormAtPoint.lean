@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.FiniteIndexOfGammaLe
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.EisensteinWronskianNeZeroStatement
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.JInvariantEqualSl2OrbitStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.EllipticPointsStabilizerStatement
+import Mathlib.Data.Int.Star
 open UpperHalfPlane Filter GlobalTheory.OddFrame
 open ModularForm (E₄ E₆)
 open scoped MatrixGroups ModularForm Manifold Topology

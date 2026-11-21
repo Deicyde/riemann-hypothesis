@@ -1,4 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LocallyCompactSpaceOfIsClosed
 
 noncomputable section
@@ -152,7 +154,7 @@ def partRep {Γ : Type} [Group Γ] (ρ : Representation E Γ M) (hρ : ∀ γ, C
     exact Subtype.ext (by ext v; simp)
   map_mul' a b := by
     ext φ : 1
-    exact Subtype.ext (by simp [LinearMap.comp_assoc]; rfl)
+    exact Subtype.ext (by simp; rfl)
 
 @[simp] theorem coe_partRep {Γ : Type} [Group Γ] (ρ : Representation E Γ M) (hρ : ∀ γ, Commutes R (ρ γ)) (γ : Γ)
     (φ : part π K R) :

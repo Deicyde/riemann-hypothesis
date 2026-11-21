@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.UnFree
-import Formalism.LocalToGlobal.ProjectiveLattices.FibreUniformisationLevelTwo
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open NumberField Matrix ReciprocityTheory.ChartRestriction.G.FD ReciprocityTheory.ChartRestriction.G.Geo.Tor
 
 namespace GlobalTheory
@@ -17,7 +17,7 @@ theorem frame_col_top_letter : ∀ (E : Type) [Field E] [NumberField E] [IsCMFie
   have hτ : conjEmb τ₁ ∈ X.Ψ := by
     rw [hc, X.cmType]
     have hcc : ComplexEmbedding.conjugate (ComplexEmbedding.conjugate τ₁) = τ₁ := by
-      ext z; simp [ComplexEmbedding.conjugate_coe_eq]
+      ext z; simp
     rw [hcc]; exact h1
   have hr : 0 < r := by have := X.p0_le; omega
   let τ' : X.Ψ := ⟨conjEmb τ₁, hτ⟩

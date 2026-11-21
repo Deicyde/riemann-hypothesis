@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsUnifAt
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsContinuousPadic
 
 noncomputable section
 

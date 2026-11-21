@@ -1,6 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LatticeRigidity.StatementC
 import Formalism.YangianSpanCharacter.StatementT
 import Formalism.LatticeTheta.Statement
+import Mathlib.Analysis.CStarAlgebra.Module.Constructions
+import Mathlib.RingTheory.Polynomial.Chebyshev
 
 namespace Formalism.FourierDecayAlt.F7
 

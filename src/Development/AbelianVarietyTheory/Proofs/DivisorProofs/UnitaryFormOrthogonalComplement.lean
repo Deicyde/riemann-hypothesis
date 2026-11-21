@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RestrActApply
+import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HighestWeightTensor
 
 open Formalism.BasicNotions.TH Formalism.MainNotions.SchurIrreducible GlobalTheory.FockAlg GlobalTheory.SteepMult
 

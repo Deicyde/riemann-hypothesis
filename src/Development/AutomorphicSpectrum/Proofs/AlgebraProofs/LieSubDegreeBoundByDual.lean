@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.IsSplitGaussChars
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.GapCondExample
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.FrobeniusLatticeDegreeMulP
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.LinearIndependentMapVec
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.SubDegreeMonoInjectiveHomStatement
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.SubDegreeBotAndMaxExistsStatement

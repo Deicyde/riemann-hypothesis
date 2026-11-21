@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.IsNoetherianRingOfIsAdicComplete
+import Mathlib.RingTheory.AdicCompletion.LocalRing
 
 open IsLocalRing
 

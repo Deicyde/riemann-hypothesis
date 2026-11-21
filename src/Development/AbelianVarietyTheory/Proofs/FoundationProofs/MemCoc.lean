@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.ShCocOn
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsLocallyConstantCycMod
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.FinalTheorems
 
 noncomputable section
 

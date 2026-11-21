@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecondCountableTopologySphere
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagOmegaFormReal
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContDiffOnExtTrace
-import ReciprocityTheory.L2DbarEstimates.ChartDerivatives.HoloSmooth
 
 set_option autoImplicit false
 

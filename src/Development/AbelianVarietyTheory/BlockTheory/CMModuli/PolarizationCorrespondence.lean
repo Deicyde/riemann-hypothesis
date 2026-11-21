@@ -1,7 +1,14 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsGrpPullback
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.NonzeroLocus
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ThickTransComp
+import Mathlib.Algebra.DualNumber
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SemiabelianSchemes.CubicalStructures.CubicalPullBaseChangeSt
 
 set_option autoImplicit false
 
@@ -51,7 +58,7 @@ def epsZero : 𝟙_ (Over (Sp R)) ⟶ SpEps R :=
     change spMap (epsRed R) ≫ spMap (algebraMap R (DualNumber R)) = 𝟙 _
     rw [← Spec.map_comp, ← CommRingCat.ofHom_comp]
     have : (epsRed R).comp (algebraMap R (DualNumber R)) = RingHom.id R := by
-      ext a; simp [epsRed, TrivSqZeroExt.algebraMap_eq_inl]
+      ext a; simp [epsRed]
     rw [this, CommRingCat.ofHom_id, Spec.map_id])
 
 def epsScale (c : R) : SpEps R ⟶ SpEps R :=

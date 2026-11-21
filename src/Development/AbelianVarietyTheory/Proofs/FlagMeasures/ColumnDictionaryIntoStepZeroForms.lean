@@ -1,4 +1,4 @@
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.LevelMatchIff
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.AdFormsOfEquivariant
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ColsSharpDictionary
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.TransportRationalPointsStabiliserFrameStatement

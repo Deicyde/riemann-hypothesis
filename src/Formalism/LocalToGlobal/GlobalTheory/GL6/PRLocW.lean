@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.GL6.PRLocV
 import Formalism.LocalToGlobal.GlobalTheory.BaseLatticeSelfDual
-import Formalism.LocalToGlobal.GlobalTheory.GL6.PBwLocBases
 
 noncomputable section
 

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.AutomorphicFormSpaces.HasModerateGrowthZero
 
 open NumberField IsDedekindDomain Topology Filter Set

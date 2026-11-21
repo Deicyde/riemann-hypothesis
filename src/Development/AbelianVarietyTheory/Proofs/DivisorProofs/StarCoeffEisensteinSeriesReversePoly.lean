@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.NormalizedHeckeFactors.CoeffZeroNeOfMonicIrr
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IrreducibleCharacterSeries.ConjugateCharacterFormula
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RootsReverseProd
 

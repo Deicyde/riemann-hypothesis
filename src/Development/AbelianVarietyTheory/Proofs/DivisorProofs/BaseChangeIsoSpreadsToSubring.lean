@@ -1,5 +1,4 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.Clauses
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.ThetaLawProofs.MorphismDescendsToSubring
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MorphismsEqSpreadToSubring
 

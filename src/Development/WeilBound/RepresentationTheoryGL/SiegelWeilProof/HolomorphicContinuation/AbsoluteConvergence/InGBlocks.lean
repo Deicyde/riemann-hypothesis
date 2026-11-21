@@ -1,5 +1,13 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.AbsoluteConvergence.VacOut
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.IsSingTest
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.LinearAlgebra.Matrix.DotProduct
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 
@@ -25,7 +33,7 @@ theorem inG_blocks (g : M2 n) (h : InG g) :
   unfold InG at h'
   rw [← fromBlocks_toBlocks g, fromBlocks_conjTranspose, JJ, fromBlocks_multiply,
     fromBlocks_multiply, fromBlocks_inj] at h'
-  simp only [Matrix.mul_zero, Matrix.zero_mul, Matrix.mul_one, Matrix.one_mul, Matrix.mul_neg,
+  simp only [Matrix.mul_zero, Matrix.mul_one, Matrix.mul_neg,
     Matrix.neg_mul, add_zero, zero_add] at h'
   obtain ⟨h1, h2, h3, h4⟩ := h'
   refine ⟨?_, ?_, ?_⟩

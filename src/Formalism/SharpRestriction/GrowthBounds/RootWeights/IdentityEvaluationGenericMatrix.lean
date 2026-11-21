@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.RootWeights.MulLaurentSup
+import Formalism.SharpRestriction.GrowthBounds.CovariantDegrees
 
 noncomputable section
 
@@ -13,7 +15,7 @@ private theorem mapRingHom_laurent_C' {A B : Type*} [CommRing A] [CommRing B] (f
   first
   | simp [LaurentPolynomial.C_apply, AddMonoidAlgebra.mapRingHom_single]
   | simp [LaurentPolynomial.C_apply, Finsupp.mapRange_single]
-  | (ext k; simp [LaurentPolynomial.C_apply, Finsupp.single_apply]; split_ifs <;> simp)
+  | (ext k; simp [LaurentPolynomial.C_apply]; split_ifs <;> simp)
   | (ext k; simp [LaurentPolynomial.C_apply, AddMonoidAlgebra.coeff_single]; split_ifs <;> simp)
   | rfl
 
@@ -107,7 +109,7 @@ theorem mul_ph_gLinv (R : Type*) [CommRing R] (n : ℕ) : (mul_ph R n).mapMatrix
   have hab := congrFun (congrFun hadj a) b
   simp only [RingHom.mapMatrix_apply, Matrix.map_apply] at hab
   simp only [gLinv, RingHom.mapMatrix_apply, Matrix.map_apply, mul_ph_C, map_mul, mul_ev_inv,
-    mul_ev_alg, one_mul, hab, Matrix.one_apply]
+    mul_ev_alg, hab, Matrix.one_apply]
   split_ifs <;> simp
 
 theorem mul_ph_twist (R : Type*) [CommRing R] (n : ℕ) (j : Fin n) (k : ℤ) :

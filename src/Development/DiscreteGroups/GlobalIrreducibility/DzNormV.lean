@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.ConjugateSelfDual.Statement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.DiscreteGroups.GlobalIrreducibility.ExistsOfMemKOne
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual Filter Topology

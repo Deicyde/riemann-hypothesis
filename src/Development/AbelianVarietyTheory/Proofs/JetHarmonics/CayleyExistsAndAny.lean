@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Jets.SideFam
-import Development.AbelianVarietyTheory.Definitions.Jets.SumIoPr
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Counterexamples.JetSurvey.ExistsIsCayleyUIff
+import Development.AbelianVarietyTheory.Definitions.Jets.SumIoPrAlt
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 open BranchingSupport Formalism.FourierDecayAlt Formalism.FourierDecayAlt.ThreeDimData Matrix MeasureTheory Finset
 open scoped InnerProductSpace ENNReal
@@ -206,7 +207,7 @@ theorem _root_.GlobalTheory.CayleyChoice.cayley_exists_and_any : ∀ (k r : ℕ)
         rw [show 2 * (m + 1) + 2 = 2 * m + 2 + 1 + 1 by ring, sum_range_succ, sum_range_succ, ih]
         have h1 : (2 * m + 2) % 2 = 0 := by omega
         have h2 : (2 * m + 2 + 1) % 2 ≠ 0 := by omega
-        simp [h1, h2]
+        simp [h1]
     obtain ⟨j, rfl⟩ : ∃ j, k = j + 1 := ⟨k - 1, by omega⟩
     rw [card_filter]
     simp only [_root_.PI.BesselPeriodGGP.eps48, Nat.add_sub_cancel]

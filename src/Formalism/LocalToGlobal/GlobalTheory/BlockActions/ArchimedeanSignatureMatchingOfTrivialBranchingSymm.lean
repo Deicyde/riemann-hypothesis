@@ -1,5 +1,8 @@
-import Formalism.LocalToGlobal.HermitianForms.TiedBrProof
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.HermitianForms.TiedSym
+import Formalism.LocalToGlobal.HermitianForms.TiedBrCo
+import Formalism.LocalToGlobal.HermitianForms.TiedBrRep
 
 noncomputable section
 

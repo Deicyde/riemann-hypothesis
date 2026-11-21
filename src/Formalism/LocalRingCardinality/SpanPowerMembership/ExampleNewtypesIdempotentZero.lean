@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataJet
 import Formalism.LocalRingCardinality.SpanPowerMembership.PlacesOverNcardOfSplitInj
 import Formalism.CyclotomicNorms.NonsquarefreeBounds.NonsquarefreeMonicBoundHolds

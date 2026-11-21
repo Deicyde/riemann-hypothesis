@@ -1,5 +1,6 @@
-import Mathlib
-import Development.EtaleCohomology.EtaleSheaves.LineHigh
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.GalMapMul
+import Mathlib.Tactic.Polynomial.Basic
 
 noncomputable section
 open Polynomial GlobalTheory.EtC

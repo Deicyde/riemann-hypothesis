@@ -1,4 +1,18 @@
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IwaStmt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.RingTheory.DedekindDomain.FiniteAdeleRing
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Algebra.Valued.LocallyCompact
+import Mathlib.Topology.Connected.Separation
+import Mathlib.Topology.MetricSpace.Ultra.TotallySeparated
 
 noncomputable section
 
@@ -11,7 +25,7 @@ variable {F : Type} [Field F] [NumberField F]
 theorem val_algebraMap_F (v : HeightOneSpectrum (𝓞 F)) (t : F) :
     Valued.v (algebraMap F (v.adicCompletion F) t) = v.valuation F t := by
   rw [algebraMap_adicCompletion]
-  simp [valuedAdicCompletion_eq_valuation']
+  simp
 
 theorem exists_int_near (v : HeightOneSpectrum (𝓞 F)) (x : v.adicCompletion F)
     (hx : Valued.v x ≤ 1) :

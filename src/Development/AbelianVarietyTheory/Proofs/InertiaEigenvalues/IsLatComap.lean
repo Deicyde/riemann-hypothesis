@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.PowerSeriesOneAddConstMulXMulInv
+import Mathlib.RingTheory.PowerSeries.Ideal
 
 noncomputable section
 namespace GlobalTheory.LatticeComap

@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.ResolutionOfSingularities.Statements
-import Development.ResolutionOfSingularities.Foundations.Blowup.BlowupIsoOffCenter
+import Development.ResolutionOfSingularities.Foundations.Blowup.BlowupCoproduct
 
 noncomputable section
 

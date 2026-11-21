@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.FrameEstimates.TowerRallisLemma
 import Development.AutomorphicSpectrum.Proofs.TwistedProofs.ExtensionEmbeddingEvInfRealAd
 import Development.AutomorphicSpectrum.Proofs.TwistedProofs.EqZeroOfPiInf

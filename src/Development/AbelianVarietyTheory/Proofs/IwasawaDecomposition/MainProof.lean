@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IncreasingRowChoicePerColumn
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ColumnMinorProductsFockReproducingIdentityStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.DualBasesColProdStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IntegralMinorsIffBasisStatement

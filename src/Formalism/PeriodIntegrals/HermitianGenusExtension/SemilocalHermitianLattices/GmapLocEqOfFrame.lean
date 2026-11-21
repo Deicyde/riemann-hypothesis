@@ -1,8 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.HermitianGenusExtension.SemilocalHermitianLattices.ExistsIsomFrame
-import Formalism.PeriodIntegrals.HermitianGenusExtension.SemilocalHermitianLattices.IsHermSemilocalLocRing
-import Formalism.PeriodIntegrals.HermitianGenusExtension.SemilocalHermitianLattices.UnimodularOfMemGenusOrtho
 import Formalism.HermitianLattices.HermitianLatticesProofs.TraceReal
-import Formalism.HermitianLattices.HermitianLatticesProofs.IsomAct
+import Formalism.PeriodIntegrals.HermitianGenusExtension.SemilocalHermitianLattices.AlgebraMapNeZeroOfMemHcompl
 
 open NumberField Module
 

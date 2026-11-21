@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.TranscendenceTraces.IsolateSpec
 
 open CategoryTheory Limits AlgebraicGeometry Opposite CochainComplex CochainComplex.HomComplex GlobalTheory.EtC UpperTheory.Gal.TranscendenceTraces
@@ -30,7 +30,7 @@ theorem UpperTheory.Gal.TranscendenceTraces.multOpen_of :
     · rw [Category.assoc (pullback.lift z (𝟙 (gp Ω)) _)]
       simp only [m, pullback.map, pullback.lift_fst, pullback.lift_fst_assoc]
     · rw [Category.assoc (pullback.lift z (𝟙 (gp Ω)) _)]
-      simp only [m, pullback.map, pullback.lift_snd, pullback.lift_snd_assoc, Category.comp_id]
+      simp only [m, pullback.map, pullback.lift_snd, Category.comp_id]
   have hl := length_stalk_eq m (pt (pullback.lift z (𝟙 (gp Ω)) (by simp)))
   rw [← pt_comp, hx] at hl
   simp only [mult, Wt.comap]

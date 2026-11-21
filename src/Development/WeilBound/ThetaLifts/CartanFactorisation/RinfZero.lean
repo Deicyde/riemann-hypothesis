@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.CartanFactorisation.ExistsBeta
 import Development.WeilBound.CoreStatements.LocalThetaKernels.Locrep
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HoweDualityReal
+import Development.WeilBound.ThetaLifts.ConeHypotheses.PureEqPureA
 
 noncomputable section
 

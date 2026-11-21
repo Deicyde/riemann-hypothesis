@@ -1,5 +1,6 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.PairSums.SumPair
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.PoitouTateNineTermTransgressionZeroApply
 
 noncomputable section
 

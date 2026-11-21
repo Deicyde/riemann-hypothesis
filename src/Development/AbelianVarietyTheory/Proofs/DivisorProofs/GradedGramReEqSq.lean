@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.HodgeFrameGram
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ModelHodgeGram
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.DualGramInterpGram
+import Development.AbelianVarietyTheory.Definitions.Divisors.LeTwoMulOfForallScale
 open Matrix
 open scoped ComplexOrder
 open GlobalTheory.HodgeLocGeo

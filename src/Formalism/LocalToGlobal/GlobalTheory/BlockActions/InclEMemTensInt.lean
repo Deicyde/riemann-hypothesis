@@ -1,5 +1,6 @@
-import Formalism.LocalToGlobal.GlobalTheory.BlockActions.LatSOfMem
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.AfsplitB
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SatakeDualWeyl.Statement
 
 noncomputable section
 

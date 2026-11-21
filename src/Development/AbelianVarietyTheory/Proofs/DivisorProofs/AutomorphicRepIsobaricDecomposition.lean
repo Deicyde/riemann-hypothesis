@@ -1,14 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BaseChangeDefinite
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.IsNormalisedOfIsDiscrete
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsNormalisedThetaSub
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsSplitAtOfIsSplitPl
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SatakeParameterSphericalProductSpehQuotients
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.BaseChangeSpehOfDiscreteSeries
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SpehShapeIffOfDiscreteSpectrum
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.BlockValAe
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsConjugateSplitPlaceOffStableSet
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsFamilyIffRationalHecke
+import Development.AbelianVarietyTheory.Definitions.Foundations.NotHasParamOfSubsingleton
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S IsDedekindDomain NumberField Formalism.L2.Theta
 open Formalism.IndefR.Mult Formalism.UG GlobalTheory.SphPar GlobalTheory.CuspRep GlobalTheory.UnitaryBC
@@ -37,7 +32,7 @@ theorem spehSat_eq (q d : ℕ) (B : Multiset ℂˣ) : GlobalTheory.SphGal.spehSa
 
 theorem bcPar_eq (n : ℕ) (α : Fin (n / 2) → ℂˣ) :
     bcPar n (fun i => (α i : ℂ)) = (GlobalTheory.LGrp.bcParam n α).map (fun z : ℂˣ => (z : ℂ)) := by
-  simp [bcPar, GlobalTheory.LGrp.bcParam, Multiset.map_add, Multiset.map_map, Function.comp_def, Multiset.map_replicate]
+  simp [bcPar, GlobalTheory.LGrp.bcParam, Multiset.map_add, Function.comp_def, Multiset.map_replicate]
 
 end GlobalTheory.HostBC
 

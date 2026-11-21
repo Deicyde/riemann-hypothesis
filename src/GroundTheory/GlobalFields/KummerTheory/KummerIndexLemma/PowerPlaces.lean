@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.KummerTheory.KummerIndexLemma.HasEnoughRootsOfUnityOfRingHom
 import GroundTheory.GlobalFields.KummerTheory.SplittingKummer
 import GroundTheory.GlobalFields.SplittingFromInequality
-import GroundTheory.GlobalFields.IdeleGroups.LocalNorms
 
 noncomputable section
 

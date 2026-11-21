@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.KunnethLefschetz.EtaleCharts.FinCover
 import Development.ResolutionOfSingularities.Foundations.Blowup.AffineBlowupUniversal
 import Development.ResolutionOfSingularities.EmbeddedResolution.StrictTransformCharts.BlowupFlatBaseChange
@@ -5,6 +6,7 @@ import Development.AutomorphicArithmetic.WhittakerHecke.SurjectiveEvalCoordBlowu
 import Development.AutomorphicArithmetic.WhittakerHecke.ExistsAffineBlowupCoordinateChartCover
 import Development.AutomorphicArithmetic.WhittakerHecke.IsAffineOpenImagePullbackOpenImmersionChart
 import Development.AutomorphicArithmetic.WhittakerHecke.IdealSheafComapEqSpecIdealSheafOfEqMap
+import Mathlib.AlgebraicGeometry.Morphisms.WeaklyEtale
 
 open CategoryTheory Limits AlgebraicGeometry TensorProduct
 open FunctorialResolution.Blowup FunctorialResolution.EmbeddedResolution

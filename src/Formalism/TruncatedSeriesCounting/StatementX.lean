@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.WindowSums.Statement
+import BuildAid.Leniency.Open
 import Formalism.TruncatedSeriesCounting.RamifiedValuationInequality
 
 noncomputable section

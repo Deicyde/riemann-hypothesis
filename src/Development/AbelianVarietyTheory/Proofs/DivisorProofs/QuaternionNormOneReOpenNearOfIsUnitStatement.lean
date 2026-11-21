@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.QuaternionNormOneReOpenNearOfIsUnit
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TraceOpen
 open NumberField IsDedekindDomain GlobalTheory.QSA
 open scoped Quaternion Topology
 set_option maxHeartbeats 1000000 in

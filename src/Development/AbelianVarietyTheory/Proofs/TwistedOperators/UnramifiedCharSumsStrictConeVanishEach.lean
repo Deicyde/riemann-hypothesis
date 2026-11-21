@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.ExponentSeparation
-import Development.AbelianVarietyTheory.Counterexamples.DegenerateExamples.ExistsStrictAnti
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
 
 open GlobalTheory GlobalTheory.PRep GlobalTheory.SplitWeil GlobalTheory.SmGL ValuativeRel
 

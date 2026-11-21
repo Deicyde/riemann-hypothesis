@@ -1,8 +1,6 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.ThmELiftAtOf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.CrystallineLiftingEveryOrdering
-import Formalism.SharpRestriction.LevelLetterCocycles.ThmELiftAtBc
-import Formalism.SharpRestriction.LevelLetterCocycles.BoundedNumeratorPowerSummability
-import Formalism.LocalRingCardinality.SpanPowerMembership.NDLocE
 
 noncomputable section
 

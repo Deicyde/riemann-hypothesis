@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.LinkedUnramifiedChains.CmpPrime
+import Mathlib.LinearAlgebra.Charpoly.BaseChange
+import Mathlib.LinearAlgebra.Eigenspace.Zero
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 open Polynomial TensorProduct
 

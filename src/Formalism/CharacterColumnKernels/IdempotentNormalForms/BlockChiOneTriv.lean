@@ -1,6 +1,6 @@
-import Formalism.CharacterColumnKernels.StatBlockChiOneTriv
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.CharacterColumnKernels.IdempotentNormalForms.LengthEqKerAddRange
-import Formalism.CharacterColumnKernels.IdempotentNormalForms.LengthKerSmulLe
 
 open Finset
 

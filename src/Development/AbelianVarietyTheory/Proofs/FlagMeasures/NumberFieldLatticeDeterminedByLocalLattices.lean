@@ -1,11 +1,10 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.FractionFieldToGenericStalkAlgebraMapEq
-import Formalism.SharpRestriction.CuspSpanNormBounds.PsiEDef
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsHermND
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ComplementReferenceCompactSubgroup
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.GFrames
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.IsIntegralOfQuad
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ImportsSide
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.Tactic.Monotonicity.Lemmas
 open ValuativeRel Formalism.MainNotions.S.Loc GlobalTheory.HL NumberField IsDedekindDomain
 open scoped Pointwise ENNReal Classical
 
@@ -54,7 +53,7 @@ theorem exists_coeffs (Λ : Submodule (𝓞 E) (Fin n → E))
     apply Subtype.ext
     ext i
     simp only [Submodule.coe_smul, Submodule.coe_sum, Finset.sum_apply, Pi.smul_apply,
-      smul_eq_mul, Algebra.smul_def (R := 𝓞 E) (A := E), Pi.single_apply]
+      Algebra.smul_def (R := 𝓞 E) (A := E), Pi.single_apply]
     have h4 : ∀ x, algebraMap (𝓞 E) E (b x) * (algebraMap (𝓞 E) E D * if i = x then 1 else 0) =
         if i = x then algebraMap (𝓞 E) E (b x) * algebraMap (𝓞 E) E D else 0 := by
       intro x
@@ -111,7 +110,7 @@ theorem bc_single (p : HeightOneSpectrum (𝓞 F)) (i : Fin n) :
   ext j
   by_cases h : j = i
   · subst h; simp [Places.bc]
-  · simp [Places.bc, Pi.single_apply, h]
+  · simp [Places.bc, h]
 
 theorem int_mem (p : HeightOneSpectrum (𝓞 F)) (o : 𝓞 E) : (A.loc p).ιE (o : E) ∈ (A.L p).O :=
   ((PlacesInt.integers_local A).1 (o : E)).2 ⟨o, rfl⟩ p

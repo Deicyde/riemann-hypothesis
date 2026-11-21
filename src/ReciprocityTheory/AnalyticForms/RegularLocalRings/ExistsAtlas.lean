@@ -1,5 +1,5 @@
-import ReciprocityTheory.AnalyticForms.RegularLocalRings.IsOpenAlt
-import ReciprocityTheory.AnalyticForms.RegularLocalRings.AnChart
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PotentialTheory.IsPotentialOfFun
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.AtlasA
 

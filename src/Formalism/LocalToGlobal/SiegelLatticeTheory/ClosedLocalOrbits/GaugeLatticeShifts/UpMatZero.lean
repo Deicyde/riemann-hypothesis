@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.DetUpMatSub
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.GradedDegreeZeroIsLocal
 
 noncomputable section
 

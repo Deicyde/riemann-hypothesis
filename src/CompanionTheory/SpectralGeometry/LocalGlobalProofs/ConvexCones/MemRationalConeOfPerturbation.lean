@@ -1,5 +1,6 @@
-import Mathlib
-import CompanionTheory.SpectralGeometry.CountingDefinitions.VoronoiMeans.VorFunEvalEqFineMean
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsStrictIff
 
 set_option autoImplicit false
 

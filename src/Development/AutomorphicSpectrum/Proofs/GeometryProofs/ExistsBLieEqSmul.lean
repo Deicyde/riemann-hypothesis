@@ -1,20 +1,15 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ModelSmall
-import Development.AutomorphicSpectrum.Statements.TowerExistence.GoodTowerExistsX
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.VolumeInputs
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.OverLaUnique
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterNamed
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterSt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BoundStatementHolds
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsMapToModel
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HodgeTateInclusionRaynaudExtensionAlgebraicPoint
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LinearIndependentEvLieOfLieTie
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AlCSurjectiveAndLinearIndependentBLie
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLieTieOfFrMap
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TestValueEqConstMulReadingSecZ
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.HolomorphicFamilies.RamifiedEigenLiftsGeneral
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsLocalRingTrivSqZeroExt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsHTFrameCpAndNonempty
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.HolomorphicFamilies.EigRamHelp
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.HolomorphicFamilies.EigRamVal
 
 set_option autoImplicit false
 
@@ -92,7 +87,7 @@ theorem exists_bLie_eq_smul (q : O) (hq0 : q ≠ 0) (hcok : ∀ f : omega P.Gt, 
       simp [mul_comm]
     · intro i _ hij
       rw [hyF]
-      simp [hij, Ne.symm hij]
+      simp [hij]
     · simp
   choose b hb using hint
   have hx : P.bLie (F b) = algebraMap O C q • u := by
@@ -133,7 +128,7 @@ theorem delta_smul_proj_mem {_ : DecidableEq (E →+* C)} (i : E →+* C) {δ : 
     have h2 : ∑ j, i (ReciprocityTheory.ChartRestriction.G.TB.trDual (integralBasis E) j) * k (integralBasis E j) =
         ReciprocityTheory.ChartRestriction.G.TB.evAt i (ReciprocityTheory.ChartRestriction.G.TB.idemOf (integralBasis E) k) := by
       simp only [ReciprocityTheory.ChartRestriction.G.TB.idemOf, ReciprocityTheory.ChartRestriction.G.TB.evAt, map_sum,
-        Algebra.TensorProduct.productMap_apply_tmul, map_mul]
+        Algebra.TensorProduct.productMap_apply_tmul]
       rfl
     have h3 : ∑ j, i ((r j : 𝓞 E) : E) * k ((ω j : 𝓞 E) : E) =
         i (δ : E) * ReciprocityTheory.ChartRestriction.G.TB.evAt i (ReciprocityTheory.ChartRestriction.G.TB.idemOf (integralBasis E) k) := by

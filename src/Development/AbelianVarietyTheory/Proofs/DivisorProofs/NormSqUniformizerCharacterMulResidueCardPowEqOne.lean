@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntIndMemSB
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzBruhatLintegralSqNeTopStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SubInvMulOutMemIff
 

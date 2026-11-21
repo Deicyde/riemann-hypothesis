@@ -1,7 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.LatRepA
-import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.SumFourEqTrace
 import Development.WeilBound.ThetaLifts.TowerModels.PlaneCodiff
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.FinTensMemLatO
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaFunctionHeisenbergInvariant
 
 noncomputable section
 

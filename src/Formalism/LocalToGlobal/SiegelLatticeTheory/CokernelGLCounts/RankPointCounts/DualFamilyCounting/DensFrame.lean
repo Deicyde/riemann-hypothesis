@@ -1,9 +1,11 @@
-import Mathlib
-import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.DualFamilyCounting.LocGlobInt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.DualFamilyCounting.SecondFlagXsLeBigBlock
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.LocFacts
-import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.CntNotInt
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.PairCorankPositivity.EqZeroOfMulVec
+import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.DualFamilyCounting.NotIntDensOfSteps
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CountNonIntegrality.NGCong
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CountNonIntegrality.NGDiff
 
 open NumberField Module Formalism.MainNotions.S Formalism.MainNotions.S.Lat Formalism.MainNotions.S.LocalSplitGroups Formalism.L2.SG.CntLocal
 open Classical ValuativeRel
@@ -296,7 +298,7 @@ theorem amat_inl (p : PlF D) (g : Loc.SplitG (M p).L) {V : Type} [AddCommGroup V
     ∑ d, amat p g d (Sum.inl a) • v d = v (Sum.inl a) := by
   simp only [amat, Fintype.sum_sum_type, Matrix.fromBlocks_apply₁₁, Matrix.fromBlocks_apply₂₁,
     Matrix.zero_apply, zero_smul, Finset.sum_const_zero, add_zero, Matrix.one_apply, ite_smul, one_smul,
-    Finset.sum_ite_eq', Finset.sum_ite_eq, Finset.mem_univ, if_true]
+    Finset.sum_ite_eq', Finset.mem_univ, if_true]
 
 theorem amat_inr (p : PlF D) (g : Loc.SplitG (M p).L) {V : Type} [AddCommGroup V] [Module (D.s.atP p).Ep V]
     (v : Fin (D.R.rS + 1) ⊕ Fin (D.R.rS + 1) → V) (a : Fin (D.R.rS + 1)) :

@@ -1,9 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAdaptedFrame
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchimedeanPolynomialTensorWeight
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MaximalCompactOneParameterLinesOfLieLines
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TensorIrreducibleModules
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TprodMemTensSpan
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaKernelReal
 
 noncomputable section
 

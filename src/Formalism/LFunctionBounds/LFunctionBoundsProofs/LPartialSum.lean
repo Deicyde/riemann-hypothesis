@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.LFunctionBounds.PositivityBound
 import Formalism.LFunctionBounds.LFunctionBoundsProofs.LFunctionEqGOfOneLt
 

@@ -1,7 +1,9 @@
-import Formalism.WachLatticeTwists.RamifiedBlockRings.RamifiedBlockProofs.RankDiagIte
-import Formalism.WachLatticeTwists.RamifiedBlockRings.RightIdealImageOfSurjective
-import Formalism.TruncatedSeriesCounting.TruncatedSeriesProofs.BridgeDet
-import Formalism.CharacterColumnKernels.IdempotentNormalForms.IsUnitDetOfConst
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.CharacterColumnKernels.IdempotentNormalForms.GlobalConcreteOf
+import Formalism.WachLatticeTwists.RamifiedBlockRings.RamifiedBlockProofs.RingDataObjects
+import Formalism.WachLatticeTwists.RamifiedBlockRings.Statement
+import Mathlib.RingTheory.PiTensorProduct
 
 open Finset Classical
 
@@ -20,8 +22,8 @@ theorem blockPoly_map {A B : Type*} [CommRing A] [CommRing B] (f : A →+* B) {d
   ext i j
   by_cases h : i = j
   · subst h
-    simp [Matrix.one_apply]
-  · simp [Matrix.one_apply, h]
+    simp
+  · simp [h]
 
 theorem r_mem' {O K : Type} [CommRing O] [CommRing K] [Algebra O K] {X : Type} (T : Subalgebra O (X → O))
     {d : Type} [Fintype d] [DecidableEq d] {G : Type} [Monoid G] (r : G →* (X → Matrix d d K)) (g : G) :

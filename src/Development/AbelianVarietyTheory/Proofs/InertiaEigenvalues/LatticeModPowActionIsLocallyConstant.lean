@@ -1,10 +1,7 @@
-import Mathlib
-import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
-import Formalism.LocalRingCardinality.AdicCompletionLocal.LocTied
-import Formalism.SharpRestriction.LevelLetterCocycles.LocalSituation
-import Formalism.SharpRestriction.LevelLetterCocycles.LocCoh
-import Formalism.GaloisCohomology.LocalTateDualityK
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsOpenOfFgOfSpanEqTop
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
 open Formalism Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.WeaklyAdmissibleFiltrations Formalism.MainNotions.N TensorProduct Module
 open scoped Pointwise
 
@@ -36,8 +33,7 @@ theorem actQ_pow_isLocallyConstant : ∀ (l : ℕ) [Fact l.Prime] (G : Type) [Gr
       Submodule.mem_smul_pointwise_iff_exists]
     refine ⟨⟨w, hw⟩, Submodule.mem_top, ?_⟩
     apply Subtype.ext
-    simp only [Submodule.coe_smul, Submodule.coe_sub, actT, LinearMap.restrict_coe_apply,
-      LinearMap.coe_restrictScalars]
+    simp only [Submodule.coe_smul, Submodule.coe_sub, actT]
     rw [← algebraMap_smul LL ((l : O) ^ r) w, map_pow, map_natCast]
     exact hwe
 

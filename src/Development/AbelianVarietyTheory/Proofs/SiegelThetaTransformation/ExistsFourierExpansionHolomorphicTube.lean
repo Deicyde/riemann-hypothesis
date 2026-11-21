@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SpanningFamilies.IsHeatZero
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.GCauchyStatement
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.ThetaLawProofs.NormLeTsumOfCubeFourierCoeffLe
 
 open Matrix Complex NumberField GlobalTheory.SW Filter Topology
@@ -113,7 +111,7 @@ theorem _root_.GlobalTheory.exists_fourier_expansion_tube :
       (fun z hz i ↦ by
         have hm := hper z hz (Pi.single i 1)
         have hs : (fun j ↦ ((Pi.single i (1 : ℤ) : ι → ℤ) j : ℂ)) = Pi.single i 1 := by
-          funext j; by_cases hj : j = i <;> simp [Pi.single_apply, hj]
+          funext j; by_cases hj : j = i <;> simp [hj]
         rw [hs] at hm
         simp only [h]
         rw [hm]
@@ -144,7 +142,7 @@ theorem _root_.GlobalTheory.exists_fourier_expansion_tube :
     · rw [norm_mul, Complex.norm_exp, mul_comm]
       have hre : (-(2 * π * I * ∑ i, (ν i : ℂ) * ((x i : ℂ) + I * y i))).re =
           2 * π * ∑ i, (ν i : ℝ) * y i := by
-        simp [Complex.re_sum, Complex.im_sum, Complex.mul_re, Complex.mul_im, Finset.mul_sum]
+        simp [Complex.re_sum, Complex.mul_re, Complex.mul_im, Finset.mul_sum]
       rw [hre]
       exact mul_le_mul_of_nonneg_left (hM x) (Real.exp_pos _).le
     · simp [Measure.real, hvol]

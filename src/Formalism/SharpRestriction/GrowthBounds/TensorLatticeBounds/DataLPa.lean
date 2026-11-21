@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.TensorLatticeBounds.DataForm
 import Formalism.SharpRestriction.GrowthBounds.LatticeSystems
 

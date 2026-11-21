@@ -1,4 +1,10 @@
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CovariantVectorMove.SumPermEqSumFirstColumnSplit
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.PeriodIntegrals.QmDefs
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open Finset Formalism.REAL
 
@@ -243,7 +249,7 @@ theorem Nc_last : Nc E η a b w m = ∑ j : Fin (m + 1),
     rw [hu, Units.val_mul, Units.val_pow_eq_pow_val, Units.val_neg, Units.val_one]
   have h0 : Fc E η a b w m (j.cycleRange.symm * Equiv.Perm.decomposeFin.symm (0, σ) * finRotate (m + 1))
       (Fin.last m) = η (a j) := by
-    simp [Fc, finRotate_last, Equiv.Perm.decomposeFin_symm_apply_zero, Fin.cycleRange_symm_zero]
+    simp [Fc, Equiv.Perm.decomposeFin_symm_apply_zero, Fin.cycleRange_symm_zero]
   have h1 : (fun i : Fin m => Fc E η a b w m
       (j.cycleRange.symm * Equiv.Perm.decomposeFin.symm (0, σ) * finRotate (m + 1)) i.castSucc) =
       fun k : Fin m => Tm E (w - ((k : ℕ) : ℂ)) ((a ∘ j.succAbove) (σ k)) (b k) := by

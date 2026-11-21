@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.CoordAtConstMulIff
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsBaseChange
 
@@ -72,7 +73,7 @@ theorem core {k : Type} [Field k] [Algebra c.F k] (P : FrPt Xo c k) {ex : Ix Dw 
         exact ⟨_, (Scheme.Hom.comp_apply _ _ _).symm⟩
       rwa [Scheme.range_fromSpecStalk] at this
     · have := congrArg (fun q : Sp k ⟶ gen Z => q (IsLocalRing.closedPoint (CommRingCat.of k))) hp
-      simp only [Scheme.Hom.comp_apply] at this
+      simp only at this
       exact ⟨_, this.symm⟩
   haveI : ∀ z : Y.Y.X, Mono (stalkPt Y.Y z) := fun z => inferInstanceAs (Mono (Y.Y.X.fromSpecStalk z))
   let ρ := (Y.Y.X.presheaf.stalkSpecializes hsp).hom

@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.SchurIrreducible
-import Development.AbelianVarietyTheory.BlockTheory.TorsionBlocks.HeckeCharacterParameters
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SameBlockOfPosC
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.DoubleCoverUpqKsetGeneratedByExp
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.IsKStableOnOfLieStableFiniteDim
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.FiniteDimensionalStableLeISupEigen
@@ -18,7 +17,7 @@ theorem kset_one (T : GrpData p q) : (1 : T.G) ∈ T.Kset := by
   have : a ≠ b := by
     rintro rfl
     cases a <;> simp [sameBlock] at hab
-  simp [Matrix.one_apply, this]
+  simp [this]
 
 theorem kset_mul (T : GrpData p q) {g h : T.G} (hg : g ∈ T.Kset) (hh : h ∈ T.Kset) :
     g * h ∈ T.Kset := by

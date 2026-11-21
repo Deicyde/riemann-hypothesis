@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqSplitFinMulSplitInf
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IntertwiningGlOfUnitary
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsAutRepOfVecFun

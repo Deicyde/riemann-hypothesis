@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.BaseChangeCB
 
 namespace ReciprocityTheory.AnForm.R

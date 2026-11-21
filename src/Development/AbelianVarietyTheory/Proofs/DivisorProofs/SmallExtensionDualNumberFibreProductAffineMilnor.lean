@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SameIdIff
-import Development.AbelianVarietyTheory.Definitions.Divisors.NotIsIsoSpMapDnFst
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsCrystalPairing
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AffineMilnorSquareOfCartesianRingSquareStatement
 
 set_option autoImplicit false
@@ -84,7 +81,7 @@ theorem smallExt_fibre_ring : ∀ (C : Type) [CommRing C] [IsLocalRing C] (e : C
     · show x * x = 0
       ext
       · simp [h0]
-      · simp [DualNumber.snd_mul, h0]
+      · simp [h0]
   refine ⟨P, inferInstance, i, p, σ, q, rfl, hσi, rfl, ?_, ?_, ?_, ?_⟩
   · exact IsClosedImmersion.spec_of_surjective _ hsurj
   · refine ⟨fun x ↦ ?_⟩

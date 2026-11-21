@@ -1,8 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.SpanPowerMembership.NZLevB
 import Formalism.LocalToGlobal.GroupLattices.FockModels.Cartan
-import Formalism.LocalToGlobal.GroupLattices.FockModels.WeylDim
-import Formalism.LocalToGlobal.GroupLattices.FockModels.SpanTopOf
-import Formalism.SharpRestriction.GrowthBounds.DataG
+import Formalism.PeriodIntegrals.AdmissibleModel.WeylDim
 
 open MvPolynomial
 

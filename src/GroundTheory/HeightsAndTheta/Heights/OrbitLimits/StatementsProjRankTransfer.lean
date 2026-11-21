@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StatementsProjMaxRank
+import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StatementsProjFullRankDense
 set_option maxSynthPendingDepth 1
 
 noncomputable section

@@ -1,4 +1,5 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.BlockHeckeSlices.DatCons
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.BlockHeckeSlices.CuspidalNormBounds.SliceShift
 import Development.AutomorphicArithmetic.Foundations.Convolution.BlockHeckeSlices.CuspidalNormBounds.CompBound
 

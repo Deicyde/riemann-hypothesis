@@ -1,7 +1,8 @@
-import Mathlib
-import ReciprocityTheory.Hypotheses.GalCoh
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.IsUnramifiedOutsideIffLeMaxUnramifiedOutside
-import GroundTheory.ProfiniteCohomology.ContinuousCochains
+import Mathlib.RingTheory.PicardGroup
+import ReciprocityTheory.GaloisValuations.Global
 
 open NumberField IsDedekindDomain CategoryTheory GroundTheory.ProfCoh ReciprocityTheory.Gal Formalism.ConjugateSelfDual
 open scoped Pointwise IntermediateField

@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CharacterGerms.CoeffSubstEqSum
 import Formalism.LocalToGlobal.CharacterGerms.RowTieProj
+import Formalism.LocalToGlobal.CharacterGerms.RowTiePGerm
 
 noncomputable section
 

@@ -1,14 +1,10 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion
-import Development.AbelianVarietyTheory.Definitions.AbelianSchemeLaws.FirstCohomologyVanishesSpecOfIsLocalRing
-import Development.AbelianVarietyTheory.Definitions.Degenerations.OfDerivationFnOn
-import Development.AbelianVarietyTheory.Definitions.Degenerations.PlOrdSomeOfAssociated
-import Development.AbelianVarietyTheory.Statements.SemistableTorsion.SemistableFin
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.GeometricallyIntegralIffGeometricallyConnectedOf
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ProdIrrAndWeakNeronStatement
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ModelMapGenericallyOpenImmersionCalculusStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.GenericIsomorphismProductModelsStatement
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsAutomorphismPermutationMaxOrderMembersStatement
+import Mathlib.Topology.Algebra.Semigroup
+import Mathlib.Topology.Connected.Separation
+import Mathlib.Topology.Separation.Lemmas
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry
 open scoped CategoryTheory.Obj
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -73,7 +69,7 @@ noncomputable def shearIso : A ⊗ A ≅ A ⊗ A where
   hom_inv_id := by
     ext <;> simp [shear, MonObj.comp_mul, GrpObj.comp_inv]
   inv_hom_id := by
-    ext <;> simp [shear, MonObj.comp_mul, GrpObj.comp_inv]
+    ext <;> simp [shear, MonObj.comp_mul]
 
 instance : IsIso (shear A true) := (shearIso A).isIso_hom
 

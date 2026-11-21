@@ -1,6 +1,9 @@
-import Formalism.LocalRingCardinality.SpanPowerMembership.TrivialSubgroupEigenspaceTop
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.SpanPowerMembership.NZTypeI
 import Formalism.LocalRingCardinality.SpanPowerMembership.NZTypeL
+import Formalism.LocalRingCardinality.SpanPowerMembership.EmbeddingBaseFieldCondition
+import Formalism.SharpRestriction.InertJacobiLevels.ResCharConj
 
 noncomputable section
 

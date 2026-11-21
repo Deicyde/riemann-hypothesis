@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.CuspidalDiscreteness.CuspCompact
 import GroundTheory.AutomorphicForms.CuspidalDiscreteness.DecayUniform
-import GroundTheory.AutomorphicForms.DiscreteSpectrumAbstract
 
 open MeasureTheory Set Filter Topology Function
 open NumberField IsDedekindDomain

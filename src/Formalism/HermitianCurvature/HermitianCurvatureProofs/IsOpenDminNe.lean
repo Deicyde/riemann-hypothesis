@@ -1,7 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LocOfSmoothOnH
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.VLetZeroNear
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.TheoremPIntegralOfPlaces
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.OrbitalIntegralIdentities
 
 open Matrix
 

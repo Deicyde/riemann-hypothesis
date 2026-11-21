@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.LeafInclPiecePf
 import Development.AutomorphicArithmetic.CommutativeAlgebra.LimitOfCofilteredAffineBaseChangeSquares
 import Development.AutomorphicArithmetic.CommutativeAlgebra.LimitCompactOfCofilteredCartesianAffineTransitio
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry Opposite LateralTheory.E.E4 LateralTheory.E.LeafDescendVCut LateralTheory.E.LeafDescendFPPf

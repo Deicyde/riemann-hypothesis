@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.StalkGerm
 
 noncomputable section
@@ -31,17 +33,17 @@ theorem toO_res (p : X ⟶ S) (s : S) {V U : S.Opens} (h : V ≤ U) (hV : s ∈ 
 theorem toO_f (f : Y ⟶ X) (p : X ⟶ S) (s : S) (U : S.Opens) (hs : s ∈ U) :
     pullback.map (f ≫ p) (S.fromSpecStalk s) p (S.fromSpecStalk s) f (𝟙 _) (𝟙 _) (by simp) (by simp) ≫ toO p s U hs =
       toO (f ≫ p) s U hs ≫ fO f p U := by
-  simp only [toO, resO, fO]; rw [pullback.map_comp]; try rw [pullback.map_comp]
+  simp only [toO, fO]; rw [pullback.map_comp]; try rw [pullback.map_comp]
   all_goals (try congr 1) <;> simp
 
 theorem res_f (f : Y ⟶ X) (p : X ⟶ S) {V U : S.Opens} (h : V ≤ U) :
     resO (f ≫ p) h ≫ fO f p U = fO f p V ≫ resO p h := by
-  simp only [toO, resO, fO]; rw [pullback.map_comp]; try rw [pullback.map_comp]
+  simp only [resO, fO]; rw [pullback.map_comp]; try rw [pullback.map_comp]
   all_goals (try congr 1) <;> simp
 
 theorem res_res (p : X ⟶ S) {W V U : S.Opens} (h1 : W ≤ V) (h2 : V ≤ U) :
     resO p h1 ≫ resO p h2 = resO p (h1.trans h2) := by
-  simp only [toO, resO, fO]; rw [pullback.map_comp]; try rw [pullback.map_comp]
+  simp only [resO]; rw [pullback.map_comp]; try rw [pullback.map_comp]
   all_goals (try congr 1) <;> simp
 
 theorem StalkGerm_of (hS : StalkCont) : StalkGerm := by

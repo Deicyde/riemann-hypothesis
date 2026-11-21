@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.MemParahoricTimesPrincipalCongruenceIff
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 namespace Formalism.FourierDecayAlt.P
 

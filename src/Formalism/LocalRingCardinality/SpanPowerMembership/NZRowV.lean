@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataKerI
 
 noncomputable section
@@ -115,7 +117,7 @@ theorem eval_applyAt0 (P : MvPolynomial (KM.XZ Lt N0 N1) ℤ) :
     rw [Finsupp.prod_sumElim]
     rfl
   rw [hprod, ← fac_ThE N0 N1 l e.2]
-  simp only [eq_intCast, Int.cast_id]
+  simp only [eq_intCast]
   ring
 
 theorem sum_xz {p : ℕ} (hp : p ≤ N0) (s : Lt) (i : Fin p) (b : Fin N1) :

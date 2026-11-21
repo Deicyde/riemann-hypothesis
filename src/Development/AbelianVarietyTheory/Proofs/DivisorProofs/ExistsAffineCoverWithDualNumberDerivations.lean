@@ -1,8 +1,8 @@
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsKSIffKsRel
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EvRFrMapOfIsReduced
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PrimeSpectrumDualNumberEq
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SndEqSum
+import Development.AbelianVarietyTheory.Definitions.Divisors.BarCompSubsetClosure
+import Mathlib.Algebra.TrivSqZeroExt.Ideal
 open CategoryTheory AlgebraicGeometry TopologicalSpace Limits NumberField ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj GlobalTheory.CechPic GlobalTheory.Vanishing GlobalTheory.CompHS GlobalTheory.TangentOrigin
 open GlobalTheory.FlagMod GlobalTheory.TopForm
 open GlobalTheory.FlagTan (dimFlag psiSet TIx HIx VIx IsTanFrame IsDef IsVert KSIso kap)
@@ -37,7 +37,7 @@ def derivHom {k A : Type} [CommRing k] [CommRing A] [Algebra k A] (δ : Derivati
     · simp
     · simp [Derivation.leibniz, smul_eq_mul, mul_comm]
   map_zero' := by ext <;> simp
-  map_add' a b := by ext <;> simp [add_comm, add_left_comm, add_assoc]
+  map_add' a b := by ext <;> simp [add_left_comm, add_assoc]
 
 theorem snd_eq_sum_of_basis {k A : Type} [CommRing k] [CommRing A] [Algebra k A] {D : ℕ}
     (f : Fin D → A) (B : Module.Basis (Fin D) A Ω[A⁄k]) (hB : ∀ i, B i = KaehlerDifferential.D k A (f i))

@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemNilRad
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Tactic.Polynomial.Basic
 open Matrix GlobalTheory.TorFin
 open scoped ContDiff
 

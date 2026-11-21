@@ -1,7 +1,7 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.CechPairings.Imports
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.ConeSectionRestriction.Precomp
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.ConeSectionRestriction.CechDefs
+import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.CechPairings.TotPairing
+import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.InclStd
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false
@@ -23,7 +23,7 @@ theorem powK_pull {K : Type} [CommRing K] {X : Scheme.{0}} (q : X ⟶ Spec (Comm
         (CH.Mor.restrict (O (smFun X q)) g).hom.mapH 0 (CH.oneH (thA (smFun X q)))
     have h0 : CH.d (CH.modF (g ⋙ thA (smFun X q))) 0 (cupPowC (g ⋙ thA (smFun X q)) z 0) = 0 := by
       funext s
-      simp only [CH.d, cupPowC, LinearMap.coe_mk, AddHom.coe_mk, Fin.sum_univ_two]
+      simp only [CH.d, cupPowC, LinearMap.coe_mk, AddHom.coe_mk]
       simp [CH.modF]
     refine ⟨h0, ?_⟩
     unfold CH.oneH

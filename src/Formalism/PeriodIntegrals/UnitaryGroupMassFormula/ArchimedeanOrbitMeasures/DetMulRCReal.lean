@@ -1,5 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ArchimedeanOrbitMeasures.TupPlace
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
+import Mathlib.RingTheory.Complex
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.TotallySplit
 
 noncomputable section
 
@@ -82,7 +89,7 @@ def mulLC {c : ℕ} (A : Matrix (Fin m) (Fin m) ℂ) : (Fin m → Fin c → ℂ)
 theorem mulLC_apply {c : ℕ} (A : Matrix (Fin m) (Fin m) ℂ) (Y : Fin m → Fin c → ℂ) :
     mulLC A Y = (A * Matrix.of Y : Matrix (Fin m) (Fin c) ℂ) := by
   ext j i
-  simp [mulLC, trC, mulRC, Matrix.vecMul, Matrix.mulVec, Matrix.mul_apply, dotProduct, mul_comm]
+  simp [mulLC, trC, mulRC, Matrix.mulVec, Matrix.mul_apply, dotProduct]
 
 theorem det_mulLC_real {c : ℕ} (A : Matrix (Fin m) (Fin m) ℂ) :
     ((mulLC (c := c) A).restrictScalars ℝ).det = Complex.normSq A.det ^ c := by

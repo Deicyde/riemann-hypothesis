@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.TateCohomology.ConjAction
 import GroundTheory.ProfiniteCohomology.InflationRestriction.DegreeOne
 set_option maxSynthPendingDepth 1

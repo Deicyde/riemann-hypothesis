@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.LaTIsPrime
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Tactic.Polynomial.Basic
 
 namespace PI.HtPlacesSumWork
 

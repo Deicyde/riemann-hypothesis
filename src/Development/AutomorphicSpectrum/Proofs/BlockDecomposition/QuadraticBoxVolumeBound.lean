@@ -1,5 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CoreR
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open MeasureTheory Topology GlobalTheory.CompanionTheory.WeilSiegel.Inf0
 open scoped ENNReal NNReal Matrix
 

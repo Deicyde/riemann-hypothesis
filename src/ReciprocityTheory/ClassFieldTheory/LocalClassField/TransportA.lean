@@ -1,5 +1,13 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ClassFieldTheory.LocalClassField.TransportDefs
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.NumberTheory.Padics.WithVal
+import Mathlib.Topology.Connected.Separation
+import Mathlib.Topology.MetricSpace.Ultra.TotallySeparated
+import Mathlib.Topology.UniformSpace.Uniformizable
 
 namespace ReciprocityTheory.DiscreteGroups.LocalClassField
 

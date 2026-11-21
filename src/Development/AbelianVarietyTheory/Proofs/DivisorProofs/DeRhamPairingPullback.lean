@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DualMapCompDualMap
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KodairaSpencerUniqueValueAbelianSchemeField
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLieCombIffIsCombAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLiftsOfCechKodairaSpencerDeformationStatement
@@ -117,7 +116,7 @@ theorem isKSValue_of_isCechKS (P : GlobalTheory.Published.AbelianDeRham) {K : Ty
     have hsum := hrep.add (IsRep.sum Finset.univ fun a _ ↦ IsRep.sum Finset.univ fun b _ ↦
       (hr b).smul (θ a b * tanVal (u a) ω₀))
     have hF1 := GlobalTheory.T.crystallineClass_mem_hodgeFiltration_of_cechRep_zero K _ _ J _ hV _ (hsum.congr (F' := 0) fun j j' Q _ _ ↦ by
-      simp only [Pi.add_apply, Finset.sum_apply, Pi.smul_apply, Pi.zero_apply, Algebra.smul_def, map_mul,
+      simp only [Pi.add_apply, Finset.sum_apply, Pi.zero_apply, Algebra.smul_def, map_mul,
         Finset.sum_mul]
       rw [neg_add_eq_zero]
       exact Finset.sum_congr rfl fun a _ ↦ Finset.sum_congr rfl fun b _ ↦ mul_right_comm _ _ _)

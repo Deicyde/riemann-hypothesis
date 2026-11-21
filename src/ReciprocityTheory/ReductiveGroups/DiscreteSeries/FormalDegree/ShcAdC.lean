@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.HasDerivAtMexpCommAddBracket
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.DetPbC
 

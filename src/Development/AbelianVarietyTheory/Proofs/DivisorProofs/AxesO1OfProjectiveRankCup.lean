@@ -1,10 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.PrimitiveStructureSheafDegTwoVanish
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.AbelianUnobstructed
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.AbelianHodgeDeRham
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.BijectiveCechDeRhamComparisonDegreeOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StructureSheafPullbackRelationsBasicStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AbelianSquareAffineH1VanishStatement
+import Development.AbelianVarietyTheory.Definitions.ThetaMetrics.MemNonzeroLocusIffPowFn
 open CategoryTheory AlgebraicGeometry KaehlerDifferential MonoidalCategory CartesianMonoidalCategory MonObj
 open scoped TensorProduct
 open ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory.CatCoh GlobalTheory.Cris GlobalTheory.CechDR GlobalTheory.LiftSys GlobalTheory.Obs
@@ -55,8 +53,8 @@ theorem isPullO_id {X : Scheme.{0}} (s : X ⟶ Sp R) (h : 𝟙 X ≫ s = s ≫ s
     { app := fun p ↦ (homOfLE (show p.unop.1.1 ≤ p.unop.1.2 from p.unop.2)).op
       naturality := fun _ _ _ ↦ Subsingleton.elim _ _ } ?_ a
   intro p b
-  simp only [pairRes, pairPull, secPull, Sec.res, CoefMap.restrict]
-  simp [Scheme.Hom.appLE, mp]
+  simp only [pairRes, pairPull, CoefMap.restrict]
+  simp [mp]
   rfl
 
 abbrev pb {Y A : Over (Sp R)} (f : Y ⟶ A) : HO1 A.hom →ₗ[R] HO1 Y.hom := pullHO1 (overW f)

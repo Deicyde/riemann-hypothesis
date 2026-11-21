@@ -1,4 +1,5 @@
-import Development.WeilBound.ThetaLifts.SmallCones.ThetaUniq
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.SmallCones.MatCancel
 import Development.WeilBound.ThetaLifts.TowerModels.ExistsRefl
 import Development.WeilBound.ThetaLifts.LatticeBasics.EulerProd

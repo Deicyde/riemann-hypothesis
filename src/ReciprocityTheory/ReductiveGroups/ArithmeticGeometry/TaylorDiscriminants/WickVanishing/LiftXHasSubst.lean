@@ -1,5 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.GermSC
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.DiscriminantEstimates.DiscriminantTheorems.WickFormula
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Tactic.ENatToNat
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.DiscriminantEstimates.WickFormula
+import Std.Tactic.BVDecide.Normalize.Bool
 
 set_option autoImplicit false
 
@@ -31,8 +36,8 @@ theorem nabla_add (B : FB R d O) (h : PS k 2 d) (m : ℕ) (u u' φ φ' : Fin d �
     nabla k B h m (u + u') (φ + φ') G = nabla k B h m u φ G + nabla k B h m u' φ' G := by
   first
   | (unfold nabla Dx
-     simp only [Pi.add_apply, Prod.fst_add, Prod.snd_add, map_add, add_mul, mul_add, Finset.sum_add_distrib, Dof_add,
-       liftX_add, smul_add, add_smul]
+     simp only [Pi.add_apply, map_add, add_mul, mul_add, Finset.sum_add_distrib, Dof_add,
+       liftX_add]
      ring)
   | (unfold nabla
      revert G u u' φ φ' m h B
@@ -117,7 +122,7 @@ theorem perm_inl (s : ι → Bool) :
       (List.ofFn fun i => (sideE s).symm (Sum.inl i)) := by
   rw [List.perm_ext_iff_of_nodup ((Finset.nodup_toList _).filter _) ?_]
   · intro x
-    simp only [List.mem_filter, Finset.mem_toList, Finset.mem_univ, true_and, List.mem_ofFn, Set.mem_range]
+    simp only [List.mem_filter, Finset.mem_toList, Finset.mem_univ, true_and, List.mem_ofFn]
     constructor
     · intro hx
       exact ⟨Fintype.equivFin _ ⟨x, hx⟩, by rw [sideE_symm_inl]; simp⟩
@@ -132,7 +137,7 @@ theorem perm_inr (s : ι → Bool) :
       (List.ofFn fun j => (sideE s).symm (Sum.inr j)) := by
   rw [List.perm_ext_iff_of_nodup ((Finset.nodup_toList _).filter _) ?_]
   · intro x
-    simp only [List.mem_filter, Finset.mem_toList, Finset.mem_univ, true_and, List.mem_ofFn, Set.mem_range,
+    simp only [List.mem_filter, Finset.mem_toList, Finset.mem_univ, true_and, List.mem_ofFn,
       Bool.not_eq_true']
     constructor
     · intro hx

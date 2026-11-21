@@ -1,11 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.MassDataInst
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.DualFamilyCounting.NcWeil
-import Formalism.PeriodIntegrals.VolFromSW
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeilStabilizerVolume.Assembly
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CovolumeFrames.StepSize
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CovolumeFrames.StepFrameStd
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LevelStructures.FrameStd
 
 noncomputable section
 
@@ -42,7 +38,7 @@ theorem covol_eq_covolBy_w (hV : Formalism.L2.SG.Pf.NcWeil.VolStabW F E σ M J) 
     exact ⟨fun h => h.1, fun h => ⟨h, x.2⟩⟩
   have hex' : ∃ 𝓕 : Set (stabT (AF F) σ J X0),
       IsFundamentalDomain (ratOf (K := stabT (AF F) σ J X0)) 𝓕 μ' := ⟨G', by rw [← hr]; exact hG'⟩
-  simp only [covol, covolBy, dif_pos hex, dif_pos hex']
+  simp only [covol, covolBy, dif_pos hex']
   split_ifs with h
   · exact congrArg ENNReal.toReal ((hB.2 h.choose h.choose_spec).2 hex'.choose
       (by rw [hr]; exact hex'.choose_spec))

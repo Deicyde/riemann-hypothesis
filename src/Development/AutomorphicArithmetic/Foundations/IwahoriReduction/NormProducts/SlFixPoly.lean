@@ -1,10 +1,10 @@
-import Development.AutomorphicArithmetic.Foundations.IwahoriReduction.NormProducts.LUnH
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsTowerPlaceAtUpperHalfPlanePointStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ModularTowerMemAdjoinJOfSlTwoIntInvariantStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.FiniteDimensionalLevStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsGaloisConjValuationSubringSameTraceStatement
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.OverAffineJLineComapSlGal
 import Development.AutomorphicArithmetic.Foundations.IwahoriReduction.NormProducts.BddOrder
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsTowerPlaceAtUpperHalfPlanePoint
 
 open GlobalTheory.KZ GlobalTheory.K4 UpperTheory.Kd.K4 Polynomial
 open scoped Matrix MatrixGroups
@@ -88,8 +88,8 @@ private theorem jPoly_coe_eq_aeval_jK {Ω : Type} [Field Ω] [Algebra ℚ Ω] {�
   | add p q hp hq => simp only [map_add, Subfield.coe_add, hp, hq]
   | monomial n c =>
     rw [← Polynomial.C_mul_X_pow_eq_monomial]
-    simp only [jPoly, Polynomial.coe_eval₂RingHom, Polynomial.eval₂_mul, Polynomial.eval₂_C,
-      Polynomial.eval₂_X_pow, Polynomial.eval₂_X, map_mul, map_pow, Polynomial.aeval_C, Polynomial.aeval_X]
+    simp only [jPoly, Polynomial.coe_eval₂RingHom, Polynomial.eval₂_C,
+      Polynomial.eval₂_X, map_mul, map_pow, Polynomial.aeval_C, Polynomial.aeval_X]
     push_cast
     rfl
 

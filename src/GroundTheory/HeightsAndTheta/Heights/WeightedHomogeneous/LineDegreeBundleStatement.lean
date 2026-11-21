@@ -1,6 +1,6 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.WeightedHomogeneous.Statements
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.WeightedHomogeneous.SectionInjectivityHypothesesProjectiveLine
+import GroundTheory.HeightsAndTheta.Heights.KernelsLattice
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.IndefiniteRowSideFullHecke.Close

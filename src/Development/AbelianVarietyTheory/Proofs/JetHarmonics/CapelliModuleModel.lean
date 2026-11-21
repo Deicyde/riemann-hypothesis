@@ -1,9 +1,6 @@
-import Mathlib
-import Formalism.HermitianCurvature.StatementU
-import Formalism.HermitianCurvature.StatementQ
-import Formalism.HermitianCurvature.LetterProductDoubleDegreeCount
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.BaseIndexConstantInjective
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.DilationUnipotentWeylMeasure
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.QminorIntertwiningApply
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.CkOnInCCCongrOnGroup
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.OperatorEabPreservesSmoothClassCCStatement

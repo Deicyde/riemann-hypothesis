@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.IntegralIndicatorCharOfTrivial
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.EqOneOfPowNear
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 open Filter Topology
 

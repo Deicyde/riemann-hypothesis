@@ -1,7 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.FWExist
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsUnitaryOnTheta
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.MemLatOIffExistsActO
+import Formalism.LocalToGlobal.IndefiniteReal.SubgroupCharExtensionOneApply
 
 noncomputable section
 

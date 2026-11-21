@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.Procyclic
-import GroundTheory.ProfiniteCohomology.CohomologicalDimension.SubsingletonCohomologyOfPrimaryOfFinite
 import GroundTheory.ProfiniteCohomology.GaloisCohomology.Kummer
 set_option maxSynthPendingDepth 1
 

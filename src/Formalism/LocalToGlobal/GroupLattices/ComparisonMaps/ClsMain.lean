@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.ClsOrb
+import Formalism.LocalToGlobal.GroupLattices.LevelGatherings.PtGComp
 
 noncomputable section
 

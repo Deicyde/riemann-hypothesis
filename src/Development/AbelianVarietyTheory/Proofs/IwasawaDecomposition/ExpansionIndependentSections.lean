@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SvalUpSec
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.ScalCompSpecMap
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsLocalBasisAlong
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HomExtNormalSt
 
 noncomputable section
 

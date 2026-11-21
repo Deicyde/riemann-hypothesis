@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.VerticalStrips.UnramifiedEulerProductIntegral
-import GroundTheory.AutomorphicForms.GL2.IdeleModuleDetOfMemMaxCompact
 
 noncomputable section
 
@@ -78,8 +77,8 @@ def rowEquiv (γ : GL (Fin 2) ℚ) : NZ ≃ NZ where
   invFun ξ := ⟨ξ.1 ᵥ* ((γ⁻¹ : GL (Fin 2) ℚ) : Matrix (Fin 2) (Fin 2) ℚ), fun h => ξ.2 (by
     have := congrArg (· ᵥ* (γ : Matrix (Fin 2) (Fin 2) ℚ)) h
     simpa [Matrix.vecMul_vecMul, ← Units.val_mul] using this)⟩
-  left_inv ξ := Subtype.ext (by simp [Matrix.vecMul_vecMul, ← Units.val_mul])
-  right_inv ξ := Subtype.ext (by simp [Matrix.vecMul_vecMul, ← Units.val_mul])
+  left_inv ξ := Subtype.ext (by simp [Matrix.vecMul_vecMul])
+  right_inv ξ := Subtype.ext (by simp [Matrix.vecMul_vecMul])
 
 theorem th_linv (Φ : (Fin 2 → 𝔸[ℚ]) → ℂ) : LInv (th Φ) := by
   intro γ g

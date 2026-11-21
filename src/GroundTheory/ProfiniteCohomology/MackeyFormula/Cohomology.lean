@@ -1,8 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.MackeyFormula
 import GroundTheory.ProfiniteCohomology.Shapiro
 import GroundTheory.ProfiniteCohomology.LocalEulerCharacteristic.InnerConj
 import GroundTheory.ProfiniteCohomology.CompactSupportCohomology.HomApplyHomApplyEqOfCompEq
+import GroundTheory.ProfiniteCohomology.ClassFormations.IsIsoCohomologyMapAlongResSubgroupOfHom
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

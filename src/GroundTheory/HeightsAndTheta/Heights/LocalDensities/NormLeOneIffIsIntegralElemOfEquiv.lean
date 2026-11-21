@@ -1,6 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.LocalDensities.Statements
 import GroundTheory.HeightsAndTheta.Heights.LocalDensities.LeviFormGbPotOne
+import Mathlib.Analysis.Normed.Unbundled.SpectralNorm
+import Mathlib.NumberTheory.Padics.HeightOneSpectrum
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.RegularLocalRing.Defs
 set_option maxSynthPendingDepth 1
 
 noncomputable section

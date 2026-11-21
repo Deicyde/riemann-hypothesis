@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRk
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SubMemTwistSpan
 
@@ -57,11 +58,11 @@ def dgl {m : ℕ} (i₀ : Fin m) (t : kˣ) : GL (Fin m) k where
   val_inv := by
     rw [diagonal_mul_diagonal, ← diagonal_one]
     congr 1; ext i
-    by_cases h : i = i₀ <;> simp [h, Function.update_apply]
+    by_cases h : i = i₀ <;> simp [h]
   inv_val := by
     rw [diagonal_mul_diagonal, ← diagonal_one]
     congr 1; ext i
-    by_cases h : i = i₀ <;> simp [h, Function.update_apply]
+    by_cases h : i = i₀ <;> simp [h]
 
 theorem dgl_val {m : ℕ} (i₀ : Fin m) (t : kˣ) :
     (dgl i₀ t).1 = diagonal (Function.update (1 : Fin m → k) i₀ (t : k)) := rfl
@@ -70,7 +71,7 @@ theorem gdet_dgl {m : ℕ} (i₀ : Fin m) (t : kˣ) : gdet (dgl i₀ t) = t := b
   ext
   simp only [gdet, Matrix.GeneralLinearGroup.val_det_apply, dgl_val, det_diagonal]
   rw [← Finset.mul_prod_erase _ _ (Finset.mem_univ i₀)]
-  rw [Finset.prod_eq_one (fun i hi => by simp [Function.update_apply, (Finset.ne_of_mem_erase hi)])]
+  rw [Finset.prod_eq_one (fun i hi => by simp [(Finset.ne_of_mem_erase hi)])]
   simp
 
 end GlobalTheory.NormalCore

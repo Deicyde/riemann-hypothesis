@@ -1,5 +1,8 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.MembershipCriterionOfLevelZero
-import Formalism.SharpRestriction.LevelLetterCocycles.QuotientImageDivisibility.MemOfExp
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.LevelLetterCocycles.IndepStep
+import Formalism.SharpRestriction.LevelLetterCocycles.LocalizationQuotientSeparatedDvd
+import Formalism.SharpRestriction.LevelLetterCocycles.QuotientImageDivisibility.ExpPowSubOne
 
 noncomputable section
 
@@ -157,7 +160,7 @@ theorem hor_exp [IsDomain O] (Ti : Comparison₂ W levB) (hR : Formalism.MainNot
     simp only [hcc, hy 0 hM, (hsol j).2]
     rw [Finset.sum_eq_single j]
     · simp
-    · intro m _ hm; simp [Pi.single_apply, hm]
+    · intro m _ hm; simp [hm]
     · intro h; exact absurd (Finset.mem_univ j) h
   · rw [if_neg (by omega)]
     obtain ⟨x', hx'Δ, hx'e⟩ := (hsol j).1 M κ y hy

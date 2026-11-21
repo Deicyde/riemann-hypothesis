@@ -1,5 +1,8 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.LocalHermitianForms.LatticeFrames.LatticeHomothetyOfEqUnimodular
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.LocalHermitianForms.LocalOrbitCounts.Descent
+import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.LocalHermitianForms.LatticeFrames.ExistsPsi
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -364,7 +367,7 @@ theorem fix_down (L : IsLoc O Δ) (hσ : Δ * σ ^ 2 = algebraMap O K ε) (h1 : 
       obtain ⟨v', w', rfl⟩ := mkL_surj hσ0 x
       obtain ⟨hv'0, h0w'⟩ := hsplit v' w' hx
       rw [isInt_herm_mkL_iff_bf_integral L hσ hσ0]
-      simp only [map_zero, LinearMap.zero_apply, mul_zero, sub_zero]
+      simp only [map_zero, mul_zero, sub_zero]
       exact ⟨h v' hv'0, h w' (hswap1 w' h0w')⟩
   · ext v
     constructor

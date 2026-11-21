@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.RealLowestKTypeCoeffSquareIntegrable
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.HalfLinearCocycle
-import Development.AbelianVarietyTheory.BlockTheory.TorsionBlocks.LocalIntegralGL
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Divisibility.DefGroupLemmas
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LevelAndTwistPlacesSplitDistinct
 

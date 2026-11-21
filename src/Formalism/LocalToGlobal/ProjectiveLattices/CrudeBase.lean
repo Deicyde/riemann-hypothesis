@@ -1,4 +1,6 @@
-import Formalism.LocalToGlobal.ProjectiveLattices.PlaceBelow
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.CocycleRightZeroThd
 
 set_option autoImplicit false
 

@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ThetaKeyFormula.ZeroSetFinite
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.CoordIdealIsMultiProjPrime
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.KeyFormula

@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsSwap
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.GeoNum
 set_option maxSynthPendingDepth 1

@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.UnitTraceSumBounds.CubeOfTwoIdentities
 import Formalism.SharpRestriction.GlobalSchurBounds.StatementTranslationInvariantSeventh
-import Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.UnitTraceSumBounds.TestVectorMemSchwartzBruhat
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.HostFacts
 
 namespace Formalism.MainNotions.Ext.CutA
 
@@ -104,7 +105,7 @@ theorem okpTwo_holds (D : D7) : OkpTwo D := by
       | simp
   unfold OKp
   refine subset_closure ⟨2, ?_⟩
-  simp only [tauK, tauKc, hz, hc, hφ, hl, Prod.mk.injEq, and_self]
+  simp only [tauK, tauKc, hz, hc, hφ, hl]
 
 theorem cube_of (H : CubeOfTwoIdentities) (D : D7) (h2 : cube2 D) (h3 : cube3 D) : cube D := by
   intro p _ cc δ g hA

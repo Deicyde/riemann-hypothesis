@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IsAbelianGaloisHost
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.GeometricComponentEmbedding
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.RamifiedPlacesSplitEigen
 
 set_option autoImplicit false
 

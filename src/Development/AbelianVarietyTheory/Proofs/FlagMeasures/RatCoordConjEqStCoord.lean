@@ -1,6 +1,4 @@
-import Mathlib
-import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.LoopTerm
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.OfRoots
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.RatCoordCont
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsUniquePlace
 

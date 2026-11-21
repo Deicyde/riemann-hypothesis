@@ -1,5 +1,12 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HermOf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -74,7 +81,7 @@ theorem isLat_intVec (m : ℕ) : IsLat (intVec K m) := by
     by_cases h : j = i
     · subst h
       exact ⟨1, by simp⟩
-    · exact ⟨0, by simp [Pi.single_apply, h]⟩
+    · exact ⟨0, by simp [h]⟩
 
 end Lat
 

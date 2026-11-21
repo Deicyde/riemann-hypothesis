@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Variable
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsLocModelIsPrimeOf
 
 set_option autoImplicit false

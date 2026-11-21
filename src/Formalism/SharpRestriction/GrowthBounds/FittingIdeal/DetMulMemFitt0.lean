@@ -1,7 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.DualLattices.MatEquivApply
-import ReciprocityTheory.DualLattices.BlockOneMulMulBlockOne
-import ReciprocityTheory.DualLattices.ProdDvdOfIso
-import ReciprocityTheory.DualLattices.HasLenCokerDet
 import Formalism.LocalToGlobal.CharacterGerms.ExistsStrictMonoMinor
 
 noncomputable section

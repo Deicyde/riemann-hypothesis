@@ -1,8 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.DiscreteGroups.GlobalIrreducibility.DzMatchCut
-import Development.DiscreteGroups.GlobalIrreducibility.DzGalRes
 import Development.DiscreteGroups.GlobalIrreducibility.DzTame
-import Development.DiscreteGroups.GlobalIrreducibility.DzNormV
 
 noncomputable section
 

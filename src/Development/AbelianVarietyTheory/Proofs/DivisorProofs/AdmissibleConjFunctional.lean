@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StarMemAdelicSchwartzSpaceNumberField
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -52,4 +51,4 @@ theorem GlobalTheory.AdmConj.conj_mem_adm : ∀ (F : Type) [Field F] [NumberFiel
   rw [hl', GlobalTheory.AdmConj.conjForm_apply, ← hT₀]
   congr 2
   funext x
-  simp [pureA, GlobalTheory.AdmConj.conjCLM_apply, star_mul']
+  simp [pureA, GlobalTheory.AdmConj.conjCLM_apply]

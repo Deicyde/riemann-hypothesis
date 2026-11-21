@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.CuspidalNoRadicalFixed
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.CuspDiscreteDecompositionOfTraceClass
+import Development.AbelianVarietyTheory.Definitions.Foundations.MemL2OfAutomorphicEmbedding
 open MeasureTheory Set Filter NumberField IsDedekindDomain
 open GlobalTheory.AdelicU GlobalTheory.OpTrace GlobalTheory.Orb GlobalTheory.AutomorphicL2Unitary GlobalTheory.AutMult Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.L2.Theta Formalism.IndefR.Mult
@@ -32,7 +32,7 @@ theorem hasSum_trace_restrict {K : Type} [NormedAddCommGroup K] [InnerProductSpa
       have h3 : ⟪v ⟨i, j⟩, x⟫_ℂ = 0 :=
         (Submodule.mem_orthogonal _ _).1 hx _ (Submodule.subset_span ⟨⟨i, j⟩, rfl⟩)
       have h4 : ⟪x, (b i j : K)⟫_ℂ = 0 := inner_eq_zero_symm.1 h3
-      simp [inner_smul_right, h4]
+      simp [h4]
     have h5 : ⟪x, y⟫_ℂ = 0 := by
       have := h1.unique (hasSum_zero.congr_fun fun j => (h2 j))
       simpa using this

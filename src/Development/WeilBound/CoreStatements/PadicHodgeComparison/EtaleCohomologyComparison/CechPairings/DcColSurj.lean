@@ -1,6 +1,5 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.CechPairings.CechAugRow
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.CechPairings.MapHComp
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.TotalComplexFlipIsomorphismStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.NatTransUpToSqPullbackStatement
 set_option backward.isDefEq.respectTransparency false

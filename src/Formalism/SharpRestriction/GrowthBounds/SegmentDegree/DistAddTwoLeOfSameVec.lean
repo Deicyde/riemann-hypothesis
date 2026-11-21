@@ -1,5 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.FourHundredSixteenLeA
 import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.TypicalPathOrdersSmall
+import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.GoodPathWeightOfParts
+import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.ReflectionMemGlevCastSucc
+import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.SortGetDSpec
 
 noncomputable section
 

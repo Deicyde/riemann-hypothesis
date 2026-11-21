@@ -1,7 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.HeckeAlgebras.CtrlDefs
 import Development.AutomorphicArithmetic.AutomorphicVarieties.HeckeAlgebras.OrdinaryHeckeCharacters.CtrlEq
-import Development.AutomorphicArithmetic.AutomorphicVarieties.HeckeAlgebras.OrdinaryHeckeCharacters.UOpLevel
-import Development.AutomorphicArithmetic.AutomorphicVarieties.HeckeAlgebras.OrdinaryHeckeCharacters.IwMemMul
+import Mathlib.RingTheory.PiTensorProduct
 
 open IsLocalRing Matrix UpperTheory.V.Hi
 
@@ -81,7 +81,7 @@ theorem UpperTheory.exists_integral_form_lifting_controlMap :
       have hθ' : algebraMap O Ω (((θ t)⁻¹ : Oˣ) : O) = (algebraMap O Ω (θ t))⁻¹ := map_units_inv (algebraMap O Ω) (θ t)
       simp only [hr, ite_mul, zero_mul, Finset.sum_ite_eq', Finset.mem_univ, if_true]
       rw [hχ, hθ', hθ t]
-      simp only [MonoidHom.comp_apply, Units.coe_map, Units.val_inv_eq_inv_val, MonoidHom.coe_coe]
+      simp only [MonoidHom.comp_apply, Units.coe_map, Units.val_inv_eq_inv_val]
       rw [mul_inv, mul_assoc]
       rfl
     · intro k

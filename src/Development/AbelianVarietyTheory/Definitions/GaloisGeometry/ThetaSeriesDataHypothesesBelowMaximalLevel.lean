@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.InertKernelTheory.StatementAdmAt
-import Formalism.SharpRestriction.GrowthBounds.ChartedClasses.ClsChartedLabAt
-import Formalism.LocalToGlobal.GroupLattices.PendingLemmas.FrobeniusSqIterateTeichmuller
 
 noncomputable section
 

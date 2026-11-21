@@ -1,9 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.LocalEmbeddings.ConeBumpB
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalWeilActionCompatibilityStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EvaluationIsoBTriplePairStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MulRealAdEqZero
 import Development.AbelianVarietyTheory.Definitions.Divisors.PairsOfSquareTriple
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK
@@ -100,7 +102,7 @@ private theorem coef_eq {B : Base F E} {n n₁ r s i₀ i₁ : ℕ} {X : Spc F E
     exact Finset.sum_congr rfl fun i _ => Finset.sum_congr rfl fun j _ => by ring
   have hu : incM F H.ι *ᵥ u = ∑ j, u j • incV F (H.ι *ᵥ Pi.single j 1) := by
     funext i
-    simp [incV, incM, Matrix.mulVec, dotProduct, Pi.single_apply, mul_comm]
+    simp [incV, incM, Matrix.mulVec, dotProduct, mul_comm]
   have e : (fun i => cA σ ((a • incV F H.x + incM F H.ι *ᵥ u + t • incV F H.y) i)) =
       cA σ a • (fun i => cA σ (incV F H.x i)) + ∑ j, cA σ (u j) • (fun i => cA σ (incV F (H.ι *ᵥ Pi.single j 1) i)) +
         cA σ t • fun i => cA σ (incV F H.y i) := by
@@ -109,7 +111,7 @@ private theorem coef_eq {B : Base F E} {n n₁ r s i₀ i₁ : ℕ} {X : Spc F E
   have h0 : ∀ v, form σ X.J H.x (H.ι *ᵥ v) = 0 := fun v => by rw [hsym, (hA.orth v).1, map_zero]
   rw [e]
   simp only [Matrix.mulVec_add, Matrix.mulVec_sum, Matrix.mulVec_smul, dotProduct_add, dotProduct_sum, dotProduct_smul,
-    formA_inc, hA.xx, hA.xy, h0, map_zero, map_one, smul_zero, Finset.sum_const_zero, zero_add, smul_eq_mul, mul_one, mul_zero, hc]
+    formA_inc, hA.xx, hA.xy, h0, map_zero, map_one, Finset.sum_const_zero, zero_add, smul_eq_mul, mul_one, mul_zero, hc]
 
 omit [NumberField E] in
 private theorem unit_move {n : ℕ} {J : Matrix (Fin n) (Fin n) E} (k : UA σ J) (x u : Fin n → AE F E) :

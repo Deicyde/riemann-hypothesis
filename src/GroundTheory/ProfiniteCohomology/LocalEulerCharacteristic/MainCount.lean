@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.LocalFields.Integers
 import GroundTheory.LocalFields.LubinTateTorsion
+import Mathlib.RepresentationTheory.Coinduced
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

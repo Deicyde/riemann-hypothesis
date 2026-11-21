@@ -1,5 +1,7 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.DeRham
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.DifferentialTranslates.DifferentiableAtOm
+import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.HasCohomology
 
 noncomputable section
 

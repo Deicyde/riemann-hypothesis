@@ -1,8 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.LevTrue
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.TwArgs
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TwistedArgsColumnHeq
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.BaseRankEqOfRealisation
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.DivisionPairOfAdelicFormsFaceColumnsData
+import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsStdFr
 
 noncomputable section
 

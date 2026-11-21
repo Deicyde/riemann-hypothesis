@@ -1,4 +1,5 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.GaussianForms.NApply
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.ThetaLiftTrivialOrbitTermsVanish
 
 open NumberField IsDedekindDomain MeasureTheory Matrix Topology Filter
 open Neutral.B1 Formalism.L2.Host Formalism.ConjugateSelfDual GlobalTheory.CuspRep GlobalTheory.GalOfCusp UpperTheory.V UpperTheory.V.Af UpperTheory.V.Published GroundTheory.Global GroundTheory.Automorphic.GJMatrix
@@ -57,7 +58,7 @@ theorem UpperTheory.ConvolutionTheory.R2.C.unrOf :
     intro i j
     by_cases hij : i = j
     · simp [Matrix.one_apply, hij]
-    · simp [Matrix.one_apply, hij]
+    · simp [hij]
   set X : Fin 2 × Fin 2 → FiniteAdeleRing (𝓞 F) F :=
     fun p => (g p.1 p.2).2 - ((1 : Matrix (Fin 2) (Fin 2) (A F)) p.1 p.2).2 with hX
   have hXm : ∀ p, X p ∈ U := by

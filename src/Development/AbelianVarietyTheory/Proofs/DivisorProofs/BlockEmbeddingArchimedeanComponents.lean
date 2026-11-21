@@ -1,17 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviBlockSizesSum
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WittRankLeSkewSignature
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IsSplitChartSplitChart
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MeasureFundDomLtTop
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TripSizesSum
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsBlockEmb
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.DifferentiableAtChart
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.ExistsHeightLeTwoMulQuotHeight
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.RamificationIdxEqOneOfIsSquare
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SmGL GlobalTheory.PRep GlobalTheory.SplitWeil GlobalTheory.LeviBlockExponent GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels
   GlobalTheory.UAut GlobalTheory.SiegelSet GlobalTheory.ThK.SquareIntegrability GlobalTheory.CuspBlock GlobalTheory.LFun.SplitTie
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
@@ -120,7 +109,7 @@ theorem map_star_of_continuous {ι : Type} [Fintype ι] (ψ : (ι → ℂ) →+*
       funext k
       by_cases hk : k = i
       · subst hk; simp
-      · simp [Pi.single_apply, hk]
+      · simp [hk]
     calc ψ y = ψ y * ψ (Pi.single i 1) := by rw [he, mul_one]
       _ = ψ (y * Pi.single i 1) := (map_mul _ _ _).symm
       _ = φ (y i) * ψ (Pi.single i 1) := by rw [h3, map_mul]; rfl

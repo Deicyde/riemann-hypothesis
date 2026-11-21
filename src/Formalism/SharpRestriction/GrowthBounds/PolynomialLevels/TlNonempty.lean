@@ -1,5 +1,5 @@
-import Formalism.SharpRestriction.GrowthBounds.PlaneCoefficients.PlaneCoeffOneTTens
-import Formalism.SharpRestriction.GrowthBounds.DiagonalSupport.ValuationOneEqZero
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.TwistedSubstitution.PlaneCoeff
 
 noncomputable section
 

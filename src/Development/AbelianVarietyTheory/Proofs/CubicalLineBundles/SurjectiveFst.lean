@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.ShimuraVarieties.OpensRangeChartYSupOpensRangeChartZ
-import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.AddXYZOrChordXYZOrOriginXYZNeZero
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ThetaUnifAV
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.EigLatBasis
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsLieBasis
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -17,7 +16,7 @@ variable {R : Type} [CommRing R] (W : WeierstrassCurve R)
 theorem equation_inr (c : R) : (W.map (algebraMap R (DualNumber R))).toProjective.Equation
     ![TrivSqZeroExt.inr c, -1, 0] := by
   rw [equation_origin_iff]
-  simp [pow_succ, TrivSqZeroExt.inr_mul_inr]
+  simp [pow_succ]
 
 def vec (c : R) : Spec (.of (DualNumber R)) ⟶ scheme W :=
   ptHom W (algebraMap R (DualNumber R)) ![TrivSqZeroExt.inr c, -1, 0]
@@ -46,7 +45,7 @@ theorem fst_vec (c : R) :
   refine (SpecMap_ptHom W _ _ _ (TrivSqZeroExt.fstHom R R R).toRingHom).trans ?_
   rw [zero, ← pt_smul W (A := R) _ _ isUnit_one.neg]
   refine ptHom_congr W _ _ _ ?_ ?_ _
-  · ext a; simp [TrivSqZeroExt.algebraMap_eq_inl]
+  · ext a; simp
   · ext1 j
     fin_cases j <;> simp
 

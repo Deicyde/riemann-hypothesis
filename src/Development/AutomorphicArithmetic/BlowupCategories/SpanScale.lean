@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CupPullbacks.ConstCompSingle
+import Mathlib.RingTheory.PiTensorProduct
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry Opposite GlobalTheory.EtC UpperTheory.Pbf
@@ -102,7 +104,7 @@ def Act.Hom.comp {a b c : Act} (φ : Act.Hom a b) (ψ : Act.Hom b c) : Act.Hom a
   d := φ.d ≫ ψ.d
   g := φ.g ≫ ψ.g
   eq A u x := by
-    simp only [NatTrans.comp_app, types_comp_apply, ConcreteCategory.comp_apply]
+    simp only [NatTrans.comp_app, ConcreteCategory.comp_apply]
     rw [φ.eq, ψ.eq]
 
 def Act.Hom.fn {a b : Act} (φ : Act.Hom a b) (A : CommRingCat.{0}) : Ob a A ⥤ Ob b A where

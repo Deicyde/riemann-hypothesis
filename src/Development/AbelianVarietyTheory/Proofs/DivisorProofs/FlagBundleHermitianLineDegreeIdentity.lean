@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.LineSCShortExact
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralSubOfIsForm
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousOnCosSq
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleCurvatureAtPointStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalDensityBoundNearPointStatement
 open CategoryTheory AlgebraicGeometry MvPolynomial MeasureTheory

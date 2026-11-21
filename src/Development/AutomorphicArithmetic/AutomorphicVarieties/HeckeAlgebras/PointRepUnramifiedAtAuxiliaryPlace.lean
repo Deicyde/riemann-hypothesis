@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.WeilGroupCharacters.ArithmeticPointClassicality
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LevelCohomology.SoCoefOf
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CompactGroupRepDefinedOverFiniteExtension
@@ -5,7 +6,6 @@ import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.De
 import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.CopNormLt
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.ExistsNontrivialCharacterPgroup
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.DecEmb
-import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.LocalRingsCompletion.dvrFinite
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.DeterminantRepresentations.MapApi
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.DeterminantRepresentations.RepApi
 
@@ -431,8 +431,8 @@ theorem UpperTheory.V.Hi.point_rep_unramified_at_auxiliary_place {l : ℕ} [Fact
     delta GFrame.eps
     have hε1 : (V.frame.ε (V.pr e1).1 : ℤ_[l]ˣ) = cycZ (Lp L) Ω l (resP L Ω e1) :=
       DFunLike.congr_fun V.hε (resP L Ω e1)
-    simp only [pushCh, MonoidHom.comp_apply, Units.coe_map, Subgroup.coe_subtype, hε1,
-      MonoidHom.coe_coe, RingHom.comp_apply, Units.val_one, IsLocalRing.ResidueField.algebraMap_eq]
+    simp only [pushCh,
+      Units.val_one, IsLocalRing.ResidueField.algebraMap_eq]
     change ((residue c.O).comp (algebraMap ℤ_[l] c.O)) ((V.frame.ε (V.pr e1).1 : ℤ_[l]ˣ) : ℤ_[l]) = 1
     rw [hε1, RingHom.comp_apply]
     exact hcon

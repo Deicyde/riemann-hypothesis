@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.CongNormal
-import Formalism.LocalToGlobal.IndefiniteReal.PeterssonHilbertSpace
 import Formalism.LocalToGlobal.Columns.MtRowRep
+import Formalism.LocalToGlobal.IndefiniteReal.PrincipalLevelFrame
 
 noncomputable section
 
@@ -37,7 +39,7 @@ def conjSub (U : Submodule ℂ (Formalism.AUTREP.GAf L n → ℂ)) : Submodule �
     show (fun g => star ((a • f) g)) ∈ U
     have : (fun g => star ((a • f) g)) = star a • (fun g => star (f g)) := by
       funext g
-      simp [mul_comm]
+      simp
     rw [this]
     exact U.smul_mem _ hf
 

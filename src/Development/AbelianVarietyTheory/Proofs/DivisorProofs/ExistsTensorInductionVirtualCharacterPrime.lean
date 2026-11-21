@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.OrthSubrepresentation
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CharacterTheory.MemVirtualCharactersIffSubCharacters
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsTensorInductionCharStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsVirtualCharacterSemidirectOrbitCrossTermsStatement

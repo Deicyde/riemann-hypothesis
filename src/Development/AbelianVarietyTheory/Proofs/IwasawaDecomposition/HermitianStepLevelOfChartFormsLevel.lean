@@ -1,9 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.StdLvPr
-import Formalism.LocalToGlobal.HermitianForms.TiedTwJSym
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TrueColumnSpacesStandardInFrameCoords
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LevelPrimeUnramifiedUniformizer
-import Formalism.LocalToGlobal.Columns.RecLevelLocT
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ValNatCastLtOne
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.UlocOfTrivDisc
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ULocDualHformOne

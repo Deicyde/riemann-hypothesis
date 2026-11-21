@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.BadElt
+import Mathlib.Algebra.DirectSum.LinearMap
 open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.ArithmeticCylinders GlobalTheory.BadCount Module
 
 namespace GlobalTheory.BadCount

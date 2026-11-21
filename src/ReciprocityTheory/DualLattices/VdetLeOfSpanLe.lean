@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.DualLattices.ValuationDetEqOfSpanEq
 import ReciprocityTheory.DualLattices.IsUnitDetOfSpanEq
-import ReciprocityTheory.DualLattices.VIntCastLtOneOfDvd
 
 noncomputable section
 

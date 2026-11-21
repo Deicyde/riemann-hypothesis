@@ -1,10 +1,6 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.HtDefs
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.UniformizerOfResidueIndep
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.GoodPrimesProperties
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.HNormPts
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.IntNsg
-import ReciprocityTheory.SemistableReduction.TorusL2CauchyInequality
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.FsumEqSum
 
 namespace ReciprocityTheory.ChartRestriction.G.T0
 

@@ -1,10 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.DivPowerCompatTwoFormDerivativeCompOneForm
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFreeThickeningLevelFinitelyManyElementsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HomSpecPointsLevelsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsQuotientNilCrystallineThickeningOfSubDPIdeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SmoothSectionsMonoReductionAffineInfStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.QuotientSubDPIdeal
 
 set_option autoImplicit false
 
@@ -96,7 +94,7 @@ theorem exists_cop : ∀ (D : Data) (Λ : Lift D) (n : ℕ) (U : AffOp D.X) (T :
     have e : g'.φ.comp ψ = b.φ.comp ((Λ.e U).toAlgHom.comp pres) := by
       apply MvPolynomial.algHom_ext
       intro i
-      simp only [AlgHom.comp_apply, hψX, map_add, AlgEquiv.toAlgHom_eq_coe, AlgHom.coe_coe]
+      simp only [AlgHom.comp_apply, hψX, map_add]
       rw [hg'τ i, ← Thick.comp_φ, hg'u]
       simp only [c]
       abel

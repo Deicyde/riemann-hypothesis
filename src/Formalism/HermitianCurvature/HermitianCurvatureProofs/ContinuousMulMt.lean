@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.BesselNonvanishingReduction
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.HighestWeightUniqueness.FrameInvMulVecNegativeVector
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BesselNeZeroOfCyclicOrbit
 
 open MeasureTheory Matrix
 open scoped InnerProductSpace ENNReal
@@ -310,7 +311,7 @@ theorem sigma_inner {ε : Fin (2 * r + k + 1) → Bool} {lam : Fin (2 * r + k + 
     simp only [Matrix.mul_assoc]
     rw [← Matrix.mul_assoc P⁻¹ P, hPiP, Matrix.one_mul]
   have hm := hmul _ hm1 _ hm2
-  simp only [prod, hggi, conj, Matrix.mul_one, Matrix.one_mul, hPiP, hPPi] at hm h1
+  simp only [prod, hggi, conj, Matrix.mul_one, hPiP, hPPi] at hm h1
 
   have hsg : ∀ w, σ g (σ g⁻¹ w) = w := fun w => by
     have := congrArg (fun T : H →L[ℂ] H => T w) hm

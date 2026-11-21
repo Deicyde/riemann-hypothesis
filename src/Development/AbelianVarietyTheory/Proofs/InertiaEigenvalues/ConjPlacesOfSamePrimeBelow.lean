@@ -1,5 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ExistsNotCongPow
+import BuildAid.Leniency.Open
+import Formalism.ConjugateSelfDual.Statement
+import Mathlib.RingTheory.PicardGroup
+import ReciprocityTheory.GaloisValuations.GlobalB
 open NumberField IsDedekindDomain Polynomial Formalism.ConjugateSelfDual ReciprocityTheory.Gal
 open scoped Pointwise
 

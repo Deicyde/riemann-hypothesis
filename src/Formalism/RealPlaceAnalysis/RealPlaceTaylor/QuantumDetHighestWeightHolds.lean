@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Open
 import Formalism.RealPlaceAnalysis.StatementE
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open Finset
 
@@ -19,8 +24,8 @@ theorem rttRelation : RTT := by
     rw [← h0]
     abel
   simp only [shiftedGenerator_eq_smul_add, Algebra.algebraMap_eq_smul_one]
-  simp only [add_mul, mul_add, sub_mul, mul_sub, smul_mul_assoc, mul_smul_comm, one_mul, mul_one, smul_smul,
-    smul_add, smul_sub]
+  simp only [add_mul, mul_add, mul_sub, smul_mul_assoc, mul_smul_comm, one_mul, mul_one, smul_smul,
+    smul_add]
   rw [h']
   split_ifs <;> module
 

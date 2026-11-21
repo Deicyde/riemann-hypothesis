@@ -1,5 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.SimpleSum
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.MatrixMeasurableSpace
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.UniformSpace.Uniformizable
 
 open MeasureTheory ValuativeRel Matrix GlobalTheory.SplitWeil GlobalTheory.RootEx
 

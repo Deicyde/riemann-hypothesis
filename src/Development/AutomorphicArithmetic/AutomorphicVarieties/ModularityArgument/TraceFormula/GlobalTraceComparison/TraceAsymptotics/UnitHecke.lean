@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.TraceFormula.GlobalTraceComparison.TraceAsymptotics.FinprodSplitAlt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RelIndexNeZeroOfSubsetCpt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CharpolyNrmLTwConj
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsCompactSupportDcos
 
 noncomputable section

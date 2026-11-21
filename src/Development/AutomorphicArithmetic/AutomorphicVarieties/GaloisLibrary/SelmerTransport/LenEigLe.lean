@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.SelmerTransport.RestrictionMemInvariantH1
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.SelmerTransport.LenRoots
+import Mathlib.GroupTheory.FiniteAbelian.Basic
+import Mathlib.RingTheory.RootsOfUnity.EnoughRootsOfUnity
 
 open ReciprocityTheory.Gal UpperTheory.V.Base
 

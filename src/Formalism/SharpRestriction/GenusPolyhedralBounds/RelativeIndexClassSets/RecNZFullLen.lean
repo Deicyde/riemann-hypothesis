@@ -1,4 +1,10 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GenusPolyhedralBounds.RelativeIndexClassSets.RecNZFullFacts
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 
@@ -142,15 +148,15 @@ theorem length_pi_span_quot (A O : Type*) [CommRing A] [CommRing O] [Algebra A O
   have hs : ∀ i : ι, algebraMap A O ∘ (Pi.single i (1 : A) : ι → A) = Pi.single i (1 : O) := by
     intro i
     ext k
-    by_cases h : k = i <;> simp [Pi.single_apply, h]
+    by_cases h : k = i <;> simp [h]
   have h2 : Ψ ∘ₗ Φbar = LinearMap.id := by
     apply Submodule.linearMap_qext
     refine LinearMap.ext fun v => ?_
-    simp only [LinearMap.comp_apply, LinearMap.id_apply, Submodule.mkQ_apply, Submodule.liftQ_apply]
+    simp only [LinearMap.comp_apply, LinearMap.id_apply, Submodule.mkQ_apply]
     change Ψ (∑ i, v i ⊗ₜ[A] (Submodule.Quotient.mk (Pi.single i 1) : (ι → A) ⧸ N)) = _
     rw [map_sum]
     simp only [Ψ, TensorProduct.AlgebraTensorModule.lift_tmul, LinearMap.toSpanSingleton_apply,
-      LinearMap.smul_apply, Submodule.liftQ_apply]
+      LinearMap.smul_apply]
     change ∑ i, v i • (Submodule.Quotient.mk (algebraMap A O ∘ Pi.single i 1) : (ι → O) ⧸ S) = _
     have hv : v = ∑ i, v i • Pi.single i (1 : O) := by
       ext k

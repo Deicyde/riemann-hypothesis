@@ -1,12 +1,12 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.GL6.CongruenceNoKernelOfLevelZeroIdentities
 import Formalism.LocalToGlobal.GlobalTheory.GL6.DiagonalSlopes.DiamondCommDistinctPlaces
 import Formalism.LocalToGlobal.GlobalTheory.GL6.DiagonalSlopes.PSplitT
 import Formalism.LocalToGlobal.GlobalTheory.GL6.DiagonalSlopes.AdmissibleStabilisersOfCompatibleForms
 import Formalism.LocalToGlobal.GlobalTheory.GL6.DiagonalSlopes.ComplexSpanBlockActionStable
-import Formalism.LocalToGlobal.GlobalTheory.GL6.DiagonalSlopes.LocalUnitaryOfMatchingZero
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.CsEquiv
 import Formalism.LocalToGlobal.LatticeGeometry.GeometryDefinitions.PClassE
-import Formalism.LocalToGlobal.GlobalTheory.EqGlobOfHat
+import Formalism.LocalToGlobal.GlobalTheory.GL6.DiagonalSlopes.StabiliserOfLocalTransport
 
 noncomputable section
 

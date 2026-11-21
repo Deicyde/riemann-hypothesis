@@ -1,5 +1,7 @@
-import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.LevelA
-import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.LevelASt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.UnimodInst
+import Formalism.LocalToGlobal.IndefiniteReal.SubgroupCharExtensionOneApply
 
 noncomputable section
 

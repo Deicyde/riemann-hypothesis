@@ -1,7 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.GroupLattices.DownNaturalLevelZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.GL6.PRLocV
-import Formalism.LocalToGlobal.GlobalTheory.GL6.PBwLocBases
 import Formalism.LocalToGlobal.GlobalTheory.GL6.PBwLcInt
 
 noncomputable section

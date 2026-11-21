@@ -1,7 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.TraceFormula.GlobalTraceComparison.TraceAsymptotics.BlkOneMem
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeckeOperatorConstantTermSum
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiniteDimensionalFixedOpenSubgroupGLw
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EvenOrdLConjGramDetOfUnitGramAdicCompletion
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SatakeParametersOfTwist
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.HasSatakeGLOfIsSatVecGL
 
 noncomputable section
 
@@ -78,7 +81,7 @@ private theorem tri_of_eq {g : GL (Fin N) R} {m : GL (Fin r) R × GL (Fin s) R} 
   have e : m.1.val * ((m.1⁻¹).val * Y) = Y := by
     rw [← Matrix.mul_assoc, ← Units.val_mul]; simp
   rw [Units.val_mul, ← Matrix.submatrix_mul_equiv _ _ _ (GlobalTheory.ResW.blkE h), a, nU_sub, GlobalTheory.ResW.HeckeCT.blk_sub, Matrix.fromBlocks_multiply]
-  simp [e]
+  simp
 
 private theorem tri_blk_nU (m : GL (Fin r) R × GL (Fin s) R) (X : Matrix (Fin r) (Fin s) R) :
     Tri h (GlobalTheory.ResW.blk h m * nU h X) m := by

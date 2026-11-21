@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeFinIntEq
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaActionExistsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchroedingerActionLocallyConstant

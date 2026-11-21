@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.PhMeasCore
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
 
 open MeasureTheory Matrix Filter Topology
 open scoped InnerProductSpace ContDiff

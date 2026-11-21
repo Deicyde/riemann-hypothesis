@@ -1,6 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.Rationality.FunKerSt
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.Rationality.RationalityHolds
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.Rationality.DescPf
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Topology.Sheaves.Presheaf
 
 namespace ReciprocityTheory.ChartRestriction.G.FreeQuotientRank
 

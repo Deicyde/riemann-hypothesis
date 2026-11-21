@@ -1,14 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinRelAlt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinRel
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSplittingSplitOm
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicHeisenbergActsByLocalSchrodinger
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchrodingerPreservesSchwartzBruhat
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StandardAdelicCharacterNontrivialAtPlaces
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatAtVAtStable
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousAtPlace
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianTensorSkewHermitianLatticeOpenCompact
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicSchwartzFinitePureTensors
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsotropicSubspaceInvariantSchwartzStatement
@@ -87,7 +80,7 @@ theorem GlobalTheory.ThK.IsoUniq.finRel_unique : GlobalTheory.ThK.KP → ∀ (F 
         · rw [Matrix.mulVec_add, Matrix.vecMulVec_add]; exact atAdd hy hy'
         · rw [Matrix.add_vecMulVec, Matrix.mulVec_add, Matrix.vecMulVec_add, map_add, map_add]; abel
       zero_mem' := ⟨0, 0, by simpa [vz0, vz1, vz] using at0,
-        by simpa [vz0, vz1, vz] using at0, by simp [vz0, vz1, vz]⟩
+        by simpa [vz0, vz1, vz] using at0, by simp [vz0, vz]⟩
       smul_mem' := by
         rintro c _ ⟨z, y, hz, hy, rfl⟩
         refine ⟨GlobalTheory.LatVac.liftV v c • z, GlobalTheory.LatVac.liftV v c • y, ?_, ?_, ?_⟩
@@ -143,10 +136,10 @@ theorem GlobalTheory.ThK.IsoUniq.finRel_unique : GlobalTheory.ThK.KP → ∀ (F 
         rintro u (⟨z, rfl⟩ | ⟨y, rfl⟩) hat
         · refine hw _ ⟨z, 0, hat, ?_, ?_⟩
           · simpa [vz0, vz1, vz] using at0
-          · simp [vz0, vz1, vz]
+          · simp [vz]
         · refine hw _ ⟨0, y, ?_, hat, ?_⟩
           · simpa [vz0, vz1, vz] using at0
-          · simp [vz0, vz1, vz]
+          · simp [vz0]
       obtain ⟨z₀, hz₀, y₀, hy₀, z, hz, rfl⟩ := hperp w hw'
       have hu : GlobalTheory.LatVac.locCo M.co v (Matrix.vecMulVec z₀ (incV F H'.x)) +
           GlobalTheory.LatVac.locCo M.co v (Matrix.vecMulVec (incV F H.x) (incM F H'.ι *ᵥ y₀)) ∈ U :=
@@ -188,4 +181,4 @@ theorem GlobalTheory.ThK.IsoUniq.main : GlobalTheory.ThK.KP → ∀ (F E : Type)
   have hfe : (fun v => ev' v (φ i v)) = fun v => ev v (φ i v) := funext fun v => hfin v _ (hφ i v)
   rw [hfe]
   funext x
-  simp only [GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.pure, Pi.smul_apply, smul_eq_mul, ContinuousLinearMap.smul_apply, SchwartzMap.smul_apply, mul_assoc]
+  simp only [GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.pure, Pi.smul_apply, smul_eq_mul, ContinuousLinearMap.smul_apply, mul_assoc]

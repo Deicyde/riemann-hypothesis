@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HypOneZeroZero
+import BuildAid.Leniency.Open
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.LocalGramFiberRankOneSetFormula
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.TrMMemFramesEIff
 
 noncomputable section
 

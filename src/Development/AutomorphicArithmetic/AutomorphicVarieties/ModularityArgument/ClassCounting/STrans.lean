@@ -1,6 +1,9 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ClassCounting.LemmaKOfSteps
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ClassCounting.SChain
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ClassCounting.SPrism
+import Mathlib.GroupTheory.SemidirectProduct
+import Mathlib.LinearAlgebra.Projectivization.Action
 
 open NumberField IsDedekindDomain UpperTheory.V UpperTheory.V.KL UpperTheory.V.ZK
 open scoped LinearAlgebra.Projectivization
@@ -151,7 +154,7 @@ private theorem tr_cob [Fintype X] {a : G → X → X} {c c' : G → X → M} (h
     ext g : 1
     show (⟨c' g, g⟩ : W) = β⁻¹ * ⟨c g, g⟩ * β⁻¹⁻¹
     refine SemidirectProduct.ext (funext fun x => ?_) (by simp [β, W])
-    simp [β, W, hs, hb, h.a_one]
+    simp [β, W, hs, hb]
   obtain ⟨-, s2, s3, -, -⟩ := sChain A
   rw [e h, e h', ← map_sub, e2, s3]
   refine hW.tr_Bd ⟨prism A β (m + 1) (cm A (ρ h) (m + 1) z), ?_⟩

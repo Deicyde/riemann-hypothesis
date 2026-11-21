@@ -1,7 +1,7 @@
-import Mathlib
-import Formalism.GL3MeanSquares.PrimeCountAsymptoticInProgressions
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.HookFormulaTorsion.GlobalBoundRefinements
 import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.IsExcRat
+import Mathlib.NumberTheory.DirichletCharacter.Orthogonality
 
 open Finset Formalism.HermitianLattices.GL2PrimeSums
 

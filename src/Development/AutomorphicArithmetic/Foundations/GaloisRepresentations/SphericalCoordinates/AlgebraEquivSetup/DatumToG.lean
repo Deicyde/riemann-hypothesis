@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsGDatumOneOneOne
 import Development.AbelianVarietyTheory.Definitions.Divisors.HasDivPlace
-import Development.AbelianVarietyTheory.Definitions.Divisors.CompactBIffCompact
 
 noncomputable section
 

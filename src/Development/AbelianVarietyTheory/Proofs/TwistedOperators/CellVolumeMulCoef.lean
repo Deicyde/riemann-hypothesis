@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RowGrpEq
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RepresentationAtEveryPlace
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RowPeriodGroupsSplitRealFiniteLargeDepth
@@ -7,6 +9,7 @@ import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ExistsMemProj
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.FourierJacobiMeasureUnitriangularCoordinates
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InverseUnipotentVolumeConjDiagonalUnitsGLMul
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IwasawaMeasureExistence.MeasureEqRelIndexMul
+import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CoefProd
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.DIV
 open IsDedekindDomain NumberField MeasureTheory Matrix GlobalTheory.ChiGrid GlobalTheory.FunObj GlobalTheory.RowTest GlobalTheory.StdFrames GlobalTheory.RowClaim
 open GlobalTheory.MixModel GlobalTheory.MixPer GlobalTheory.Grow GlobalTheory.RowUnf GlobalTheory.RowChain GlobalTheory.SeeSaw GlobalTheory.RowVal GlobalTheory.RowReal
@@ -233,7 +236,7 @@ theorem tri_of_uni {S S₀ : HSp D} {ρ : ℕ} (d : HypDec S S₀ ρ) {Y : Type}
   · rw [k2']; rfl
   · rw [k3']; rfl
   · exact key (.inr (.inl i)) (.inr (.inl j)) (by simp only [wlev, Sum.elim_inl, Sum.elim_inr]; omega)
-  · exact key (.inr (.inr i)) (.inr (.inr j)) (by simp only [wlev, Sum.elim_inl, Sum.elim_inr]; omega)
+  · exact key (.inr (.inr i)) (.inr (.inr j)) (by simp only [wlev, Sum.elim_inr]; omega)
 
 theorem uni_of_flag {S S₀ : HSp D} {ρ : ℕ} (d : HypDec S S₀ ρ) {Y : Type} [Fintype Y] [DecidableEq Y]
     {F : Matrix (Fin S.rank) Y K} {Γ : Matrix Y (Fin S.rank) K} {l : Y → ℕ} (hF : Adapted π d F l) (h1 : Γ * F = 1)

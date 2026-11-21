@@ -1,4 +1,6 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.AdmissibleOfPlaces
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.StatementKB
 
 open Finset NumberField
 open scoped ComplexConjugate ComplexOrder

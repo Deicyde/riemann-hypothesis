@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.EqZeroOfForallPowDvd
-import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.FormalExpMulFormalExpNeg
 open MvPowerSeries GlobalTheory GlobalTheory.Katz GlobalTheory.QLog GlobalTheory.PDivGroup GlobalTheory.Sandwich GlobalTheory.IndefiniteRowSideFullHecke.EpsilonPairingZeta GlobalTheory.PDivLat GlobalTheory.FormalCalc
 
 set_option autoImplicit false
@@ -22,7 +23,7 @@ theorem exists_eq_add_single {α : Fin d →₀ ℕ} (h : α ≠ 0) :
     intro j
     by_cases hj : j = i
     · subst hj; simp only [Finsupp.single_eq_same]; omega
-    · simp [Finsupp.single_apply, Ne.symm hj]
+    · simp [Ne.symm hj]
   refine ⟨i, α - Finsupp.single i 1, (tsub_add_cancel_of_le hle).symm, ?_⟩
   conv_lhs => rw [← tsub_add_cancel_of_le hle]
   rw [map_add, Finsupp.degree_single]

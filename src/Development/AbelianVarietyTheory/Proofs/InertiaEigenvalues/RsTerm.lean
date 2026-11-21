@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.UnrOutside
+import Mathlib.Data.Multiset.Functor
 
 noncomputable section
 

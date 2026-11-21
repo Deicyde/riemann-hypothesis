@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.FaithfulSMulAlgClosure
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemRingOver
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PiMapMemLocalSpan
 
 set_option autoImplicit false
 

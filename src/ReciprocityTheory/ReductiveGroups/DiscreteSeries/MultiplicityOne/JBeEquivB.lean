@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.JBeEquivA
+import Mathlib.Analysis.CStarAlgebra.ContinuousLinearMap
 
 noncomputable section
 
@@ -24,15 +27,15 @@ private theorem Hpk_mul_self_eq_one : Hpk k r * Hpk k r = 1 := by
   rw [Finset.sum_eq_single (if i.val < r ∨ r + k < i.val then i.rev else i)]
   · by_cases h : i.val < r ∨ r + k < i.val
     · rw [if_pos h]
-      simp only [Hpk, Fin.val_rev, Fin.ext_iff, and_true]
+      simp only [Hpk, Fin.val_rev, Fin.ext_iff]
       split_ifs <;> first | (exfalso; omega) | norm_num
     · rw [if_neg h]
       simp only [Hpk, Fin.ext_iff, and_true]
       split_ifs <;> first | (exfalso; omega) | norm_num
   · intro l _ hl
     have hl' := l.isLt
-    simp only [Hpk, Fin.ext_iff, Fin.val_rev, and_true, ne_eq] at hl ⊢
-    split_ifs at hl ⊢ <;> (try simp only [ne_eq, Fin.ext_iff, Fin.val_rev] at hl) <;>
+    simp only [Hpk, Fin.ext_iff, ne_eq] at hl ⊢
+    split_ifs at hl ⊢ <;> (try simp only [Fin.val_rev] at hl) <;>
       first | (exfalso; omega) | norm_num
   · simp
 

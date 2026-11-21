@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.LocalLanglands.RecTTransport
-import Development.DiscreteGroups.GlobalIrreducibility.DzLcIso
+import GroundTheory.AutomorphicForms.GLnLocal
 
 open ValuativeRel Filter
 

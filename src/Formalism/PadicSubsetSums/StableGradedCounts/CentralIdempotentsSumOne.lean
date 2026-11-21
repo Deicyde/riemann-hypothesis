@@ -1,5 +1,11 @@
+import BuildAid.Leniency.Open
 import Formalism.PadicSubsetSums.CentralIdempotents.EigenbasisOfDistinctRoots
 import Formalism.PadicSubsetSums.StableGradedCounts.IRRCentralIdempotent
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.RepresentationTheory.Maschke
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Finset
 

@@ -1,7 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutEX2
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.FnValLift
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.OperatorPreservesFusionForms
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.LevelsOfBuiltSetting
 
 noncomputable section
 

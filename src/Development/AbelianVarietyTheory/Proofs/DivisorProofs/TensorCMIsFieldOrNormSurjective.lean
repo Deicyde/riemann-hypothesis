@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.NotIsCompactUnivFv
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsUnitNormOne
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.HermitianFormFiniteZerosOnLineCmExt
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.Published GlobalTheory.PlaneNorm
 open scoped TensorProduct
 
@@ -67,7 +66,7 @@ theorem unit_or_norm : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [Num
     have h0 : bK 0 = 1 := by
       simp only [bK, Algebra.TensorProduct.basis_apply, hb, Matrix.cons_val_zero]; rfl
     have h1 : bK 1 = D := by
-      simp only [bK, Algebra.TensorProduct.basis_apply, hb, Matrix.cons_val_one, Matrix.head_cons]; rfl
+      simp only [bK, Algebra.TensorProduct.basis_apply, hb, Matrix.cons_val_one]; rfl
     rw [h0, h1, Algebra.smul_def, Algebra.smul_def, mul_one]
   by_cases hsq : ∃ r : K, r * r = c
   · right

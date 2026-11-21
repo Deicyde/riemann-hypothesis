@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.ThClassPins
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.ProjectiveLattices.FamilyUniformisationBasePointOrthogonalBis
 
 noncomputable section
 

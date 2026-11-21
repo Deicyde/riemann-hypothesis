@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsTypeIsRealConst
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ClosedFormsMulClosed
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ChernFormOfGramMatrixAtHolomorphicFrameChange
 open Set Matrix Filter Topology
@@ -216,7 +216,7 @@ theorem delAt_chernAt : ∀ {n : ℕ} {r : Type} [Fintype r] [DecidableEq r] (H 
     rw [mdel_apply, del_eq_fderiv (hAa v i k).differentiableAt]
     have : HasFDerivAt (fun w => A w i k) (-L i k) v := (L i k).hasFDerivAt.const_sub _
     rw [this.fderiv]
-    simp [L, Pi.single_apply]
+    simp [L]
   have hK : MContDiffAt 3 (fun x => (A x)ᵀ * H x * (A x)ᴴᵀ) v :=
     (hA3.transpose.mul h3).mul hA3.conjTranspose.transpose
   have hKu : IsUnit ((A v)ᵀ * H v * (A v)ᴴᵀ).det := by simpa [hAv] using hu v hv

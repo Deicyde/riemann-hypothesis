@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.GeometricLemmaFiltration
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HasFiniteLengthOfIsIrreducible
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.BernsteinUnitaryProductIrreducible
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.ExistsCellOfIsSubquotient
 open GlobalTheory.PRep GlobalTheory.SmGL Matrix
 
 open scoped TensorProduct
@@ -52,11 +51,11 @@ theorem GlobalTheory.SmGL.cellFunctor_scalar_first : ∀ {k : Type} [Field k] [V
 
   have hrow : B.1 false false + B.1 false true = u := by
     have h := B.2.1 false
-    simp [Fintype.sum_bool] at h
+    simp at h
     omega
   have hcol : B.1 false false + B.1 true false = 1 := by
     have h := B.2.2 false
-    simp [Fintype.sum_bool] at h
+    simp at h
     omega
   have h10 : B.1 true false = 0 := by omega
   have hz : leviTwo k (Fin 1) (Fin (u + v)) (GeneralLinearGroup.scalar (Fin 1) ϖ, 1) ∈ relParab k g := by
@@ -140,7 +139,7 @@ theorem GlobalTheory.SmGL.cellFunctor_scalar_first : ∀ {k : Type} [Field k] [V
         (relEmb k f (swapBlocks k (fun i j => Fin (B.1 i j)) p) true) y').trans ?_
       rw [relEmb_apply, relEmb_apply, det_leviEmb, det_leviEmb, Fintype.prod_bool, Fintype.prod_bool,
         hq00, hq01, hq10, hq11]
-      simp [det_scalar, h10, hB]
+      simp [h10, hB]
     rw [hδ', Units.val_one, one_smul, MonoidHom.comp_apply]
     obtain ⟨v', rfl⟩ := Submodule.Quotient.mk_surjective _ y
     rw [relJac_mk, hρ, hδ, Submodule.Quotient.mk_smul, smul_smul]

@@ -1,8 +1,5 @@
-import Mathlib
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.LieLatticeData
-import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.BundleObjects
-import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.PTwistedDualGensExist
+import BuildAid.Leniency.Open
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.Bundle
 
 open ReciprocityTheory.ChartRestriction.G.Geo (ChartBundle chartRing)
 open GlobalTheory.CompanionTheory.Ar.Num (dotDual)
@@ -18,8 +15,8 @@ theorem PositivityTheory.Xgn.chart_lattice_finitely_generated : ∀ (O : Type) [
     refine (hiff l (b l q)).2 ⟨Pi.single q 1, fun q' => ⟨0, ?_⟩, ?_⟩
     · by_cases h : q' = q
       · subst h
-        simp [Subalgebra.one_mem]
-      · simp [Pi.single_apply, h, Subalgebra.zero_mem]
+        simp
+      · simp [h]
     · simp [Pi.single_apply, ite_smul]
   choose nn hnn using hgen
   obtain ⟨g, hg⟩ : ∃ g : Fin k × Fin r → Fin r → Ω, g = fun p => f p.1 ^ nn p.1 p.2 • b p.1 p.2 :=

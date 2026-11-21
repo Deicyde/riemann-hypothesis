@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipLeviProj
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsColReduced
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsOpenSetOfLeRank
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.SecondCountableAndT2LocalField
+import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.LeviEmbMemNormalizerLower
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 noncomputable section
 

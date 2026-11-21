@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.EeProd
-import Development.AbelianVarietyTheory.Definitions.Foundations.AdmissibleTwistIffAdmissibleUntwisted
-import Development.AbelianVarietyTheory.Definitions.Foundations.KumValUnique
+import Development.AbelianVarietyTheory.Definitions.Foundations.FinalTheorems
 
 noncomputable section
 

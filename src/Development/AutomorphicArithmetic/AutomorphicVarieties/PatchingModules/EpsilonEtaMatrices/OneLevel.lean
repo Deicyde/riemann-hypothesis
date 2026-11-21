@@ -1,11 +1,11 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.EpsilonEtaMatrices.EpsilonEtaTensorDual
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.EpsilonEtaMatrices.BdCard
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.EpsilonEtaMatrices.PairEx
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.EpsilonEtaMatrices.GaloisLiftMemFirstOrderDeformations
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.EpsilonEtaMatrices.UpConj
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.EpsilonEtaMatrices.CardCnd
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.DegreeCountCohomology.SumCount
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.DegreeCountCohomology.LcOfOpen
+import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.SeparableMatrixStability.MapEta
+import Mathlib.Tactic.Monotonicity.Lemmas
 open Matrix Filter NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal UpperTheory.V.Alg UpperTheory.V.W UpperTheory.V.Pa
 
 private theorem bl_le_zl_of_lc {R D M : Type} [CommRing R] [Group D] [AddCommGroup M] [Module R M]
@@ -55,11 +55,11 @@ private theorem card_pow_nu_le_card_skew_w1 (A X : Type) [CommRing A] [CommRing 
     intro s i j hij
     by_cases hi : (i : ℕ) < a
     · by_cases hj : (j : ℕ) < a
-      · simp [V, hi, hj, DD.C_ep, DD.C_ep', DD.C_eta]
+      · simp [V, hi, hj, DD.C_eta]
         exact ⟨funext (DD.C_ep' _), funext (DD.C_ep _)⟩
       · simp [V, hi, hj]
     · have hj : ¬ (j : ℕ) < a := by omega
-      simp [V, hi, hj, DD.C_ep, DD.C_ep', DD.C_eta]
+      simp [V, hi, hj, DD.C_eta]
       exact ⟨funext (DD.C_ep' _), funext (DD.C_ep _)⟩
   have memW : ∀ Z : Matrix (Fin n) (Fin n) (DD X g), (∀ i j, (Z i j).ep' = 0 ∧ (Z i j).eta = 0 ∧
       (((i : ℕ) < a ↔ (j : ℕ) < a) → (Z i j).ep = 0) ∧ (¬((i : ℕ) < a ↔ (j : ℕ) < a) → (Z i j).a = 0)) →

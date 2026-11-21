@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.AdelicCompletionLatticeSeparatedComplete
-import Development.AbelianVarietyTheory.Definitions.ExistenceOfLattices.Hat1
 open NumberField IsDedekindDomain GlobalTheory.AdLat
 open scoped TensorProduct Matrix nonZeroDivisors
 set_option maxHeartbeats 1000000 in

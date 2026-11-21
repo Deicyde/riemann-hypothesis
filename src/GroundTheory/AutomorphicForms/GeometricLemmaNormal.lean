@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.GeometricLemmaUnnormalized
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.GeometricLemmaCharacters
 import GroundTheory.AutomorphicForms.GeometricLemmaModular
 import GroundTheory.AutomorphicForms.GeometricLemmaCellChar

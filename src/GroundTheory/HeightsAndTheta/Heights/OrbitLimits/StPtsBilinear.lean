@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StokesObjects
-import GroundTheory.HeightsAndTheta.Heights.Intersections.NoCommonComponentCoordinatesPlane
 set_option maxSynthPendingDepth 1
 
 noncomputable section

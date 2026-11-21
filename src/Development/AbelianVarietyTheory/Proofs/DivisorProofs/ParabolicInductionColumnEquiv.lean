@@ -1,9 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GlCastRfl
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ParIndJacPlacing
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.NormalisedParabolicInductionReindexEquiv
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CellFunctorTorusCharacter
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.NonemptyEquivMultiProdOne
 
 noncomputable section
 
@@ -93,13 +93,13 @@ theorem parInd_transport (e : (Σ a, m a) ≃ n) (e' : (Σ a, m' a) ≃ n') (τ 
     (Units.map (Matrix.reindexAlgEquiv k k ψ.symm).toMonoidHom) (continuous_reindex ψ)
     (continuous_reindex ψ.symm) (fun x => ?_) (fun x => ?_) (fun q => ?_) (fun p => ?_)
   · ext i j
-    simp [Matrix.coe_reindexAlgEquiv]
+    simp
   · ext i j
-    simp [Matrix.coe_reindexAlgEquiv]
+    simp
   · obtain ⟨p, hp, hl⟩ := exists_parab_reindex_symm τ ψ h q
     refine ⟨p, hp, ?_⟩
     ext v
-    simp only [MonoidHom.comp_apply, twist_apply, deltaHalf_leviMap, hl]
+    simp only [MonoidHom.comp_apply, twist_apply, hl]
     rw [← deltaHalf_leviMap τ, hl]
   · obtain ⟨q, hq, hl⟩ := exists_parab_reindex τ ψ h p
     refine ⟨q, hq, ?_⟩

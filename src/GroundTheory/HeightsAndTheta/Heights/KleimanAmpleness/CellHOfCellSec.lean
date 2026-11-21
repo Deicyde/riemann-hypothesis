@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.CellMeets
-import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.MemChartSecOverOfMem
+import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.Objects
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.Kleiman.SectionsOverLocalization

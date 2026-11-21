@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.ArchimedeanGelfandKernels.LeftEquivariantFunctions.GLMatrixDerivatives.FrameDer
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CongruenceActionDeterminant
 
@@ -74,7 +75,7 @@ theorem coords_hOf (v : Fin n × Fin n → ℝ) : coords (hOf v) = v := by
   funext q
   have : (hOf v * hb q).trace = (v q : ℂ) := by
     classical
-    simp [hOf, Finset.sum_mul, Matrix.trace_sum, Matrix.smul_mul, Matrix.trace_smul,
+    simp [hOf, Finset.sum_mul, Matrix.trace_sum, Matrix.trace_smul,
       GlobalTheory.CompanionTheory.TopClass.trace_hb_mul_hb]
   simp [coords, this]
 

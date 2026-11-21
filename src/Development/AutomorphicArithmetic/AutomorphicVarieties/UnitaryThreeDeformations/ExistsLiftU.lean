@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeDeformations.IsCharZeroPt
+import Mathlib.GroupTheory.SchurZassenhaus
+import Mathlib.RingTheory.Ideal.Quotient.HasFiniteQuotients
 
 open Matrix IsLocalRing ReciprocityTheory.Gal UpperTheory.V.U3 UpperTheory.V.Alg UpperTheory.V.UnitaryThreeInertia
 

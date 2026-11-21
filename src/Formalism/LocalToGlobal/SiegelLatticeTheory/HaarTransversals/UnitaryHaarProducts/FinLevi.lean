@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.HermitianETransportInvariant
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.RightInvOfLattice
 
 noncomputable section
@@ -260,7 +260,7 @@ theorem unit_of_formA (M : Matrix (Fin X.B.I.n) (Fin X.B.I.n) (X.B.I.E ⊗[X.B.I
     funext i
     by_cases hi : i = k
     · subst hi; simp
-    · simp [Pi.single_apply, hi]
+    · simp [hi]
   rw [hs] at h1
   simpa [Matrix.mulVec, dotProduct, Pi.single_apply] using h1
 

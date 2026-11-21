@@ -1,8 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsHodgeLine
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.EigenspaceDecompositionInternalStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.GenPtSpecializes
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.AbProj
+import Mathlib.AlgebraicGeometry.QuasiAffine
+import Mathlib.SetTheory.ZFC.PSet
 
 noncomputable section
 

@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeightDegreeOfPrintsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GeometricDegreeAsIntegralStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArithmeticSelfIntersectionFormulaStatement

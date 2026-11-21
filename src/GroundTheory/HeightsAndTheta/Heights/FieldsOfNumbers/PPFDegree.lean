@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.FieldsOfNumbers.Statements
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.FieldsOfNumbers.StatementsDivPushForward
 import GroundTheory.HeightsAndTheta.Heights.FieldsOfNumbers.PExistsForm
 import GroundTheory.HeightsAndTheta.Heights.FieldsOfNumbers.PCutRational

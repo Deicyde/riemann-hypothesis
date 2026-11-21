@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StatementsArea
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.PZeroLocusDimH
 set_option maxSynthPendingDepth 1

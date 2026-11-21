@@ -1,28 +1,17 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.QuadraticLogDerivCongr
 import Formalism.LocalRingCardinality.Lemmas
 import Formalism.SizeWindowBrackets.ChainSlopeWindows.OneLeThresholdMulPowers
 import Formalism.SizeWindowBrackets.ChainSlopeWindows.WeightedSlopeExcessDecomposition
-import Formalism.SharpRestriction.GlobalSchurBounds.CMFieldLemmas
-import Formalism.SharpRestriction.GlobalSchurBounds.ShortIntervalPrimes
-import Formalism.SharpRestriction.GlobalSchurBounds.StandardLattice
 import Formalism.SharpRestriction.GrowthBounds.SmallOrderPrimes
-import Formalism.SizeWindowBrackets.ChainSlopeWindows.GaloisMapComplexConjugation
-import Formalism.SharpRestriction.GlobalSchurBounds.ZetaZeroFreeRegion
 import Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.ZetaZeroFreeRegion
-import Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.CMFieldLemmas
-import Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.RamificationTwoAndConjugationAtQAndD
 import Formalism.SharpRestriction.GlobalSchurBounds.Joints
-import Formalism.SizeWindowBrackets.ChainSlopeWindows.LipschitzWeightAndMinimum
-import Development.AutomorphicArithmetic.ConductorsKronecker.dataField
-import Development.AutomorphicArithmetic.ConductorsKronecker.Imports
-import Development.AutomorphicArithmetic.ConductorsKronecker.kronecker
 import Development.AutomorphicArithmetic.ConductorsKronecker.RecSurj
-import Development.AutomorphicArithmetic.ConductorsKronecker.InertiaD
-import Development.AutomorphicArithmetic.ConductorsKronecker.ChCond
-import Development.AutomorphicArithmetic.ConductorsKronecker.IsInertIff
-import Development.AutomorphicArithmetic.PrimitiveCosets.hostFactsS
-import Development.AutomorphicArithmetic.DedekindLFunctions.LandauTheorems.ChBalance
 import Lemmata.GeneralBFactLeftBisAlt.Imports
+import Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.PointsPropertyOfD7
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.PrimePairSizeCondition
+import Mathlib.NumberTheory.LSeries.PrimesInAP
 
 noncomputable section
 
@@ -1905,7 +1894,7 @@ theorem estimates_at_scale_of_points (hCov : Fm.CoverAll) (hx : Fm.x1 < x) (P : 
     · by_cases h : o' = o
       · simp only [dif_pos h]; rw [h]; exact hi
       · simp only [dif_neg h]; exact (exists_carrier hCov hx o').choose_spec
-    · simp only [dif_pos rfl]
+    · simp only
       exact ⟨a8, a9, a10⟩
 
 end Points

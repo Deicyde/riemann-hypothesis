@@ -1,6 +1,13 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LinearIndependentOfDistinctValuationLikeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinrankLeCardValuesStatement
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.RingTheory.MvPowerSeries.LexOrder
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Filter Topology
 

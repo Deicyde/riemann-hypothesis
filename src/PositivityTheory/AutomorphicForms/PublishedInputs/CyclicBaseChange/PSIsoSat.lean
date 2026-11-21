@@ -1,6 +1,5 @@
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.CyclicBaseChange.SConjSpaceC
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.RTwist
 
 noncomputable section
 

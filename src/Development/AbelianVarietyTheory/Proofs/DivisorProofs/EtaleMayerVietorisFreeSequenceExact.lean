@@ -1,11 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.DivisorSupportCondition
-import Development.AbelianVarietyTheory.Definitions.Divisors.SecClass
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EtaleSheafShortComplexExactIffLocallyStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FreeEtaleSheafSectionLocallyFiniteCombinationStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FreeHomSectionsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FreeEtaleModuleSheafMapMonoEpiIso
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EtaleLocalPropertyCalculusRules
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EtaleTensorDiagonalComplementOverBasicOpenStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapDomainRelationLiftCommutingSquareStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocallyEqualOrUnit
@@ -151,7 +147,7 @@ theorem mv_exact : ∀ (R : Type) [CommRing R] (A A' : Type) [CommRing A] [CommR
     rw [← Spec.map_comp, ← Spec.map_comp]
     congr 1
     ext a
-    simp [Localization.awayMap, IsLocalization.Away.map, IsLocalization.map_eq]
+    simp [Localization.awayMap, IsLocalization.Away.map]
   have w : biprod.lift ((free R).map (yoneda.map (Spec.map (CommRingCat.ofHom (Localization.awayMap (algebraMap A A') f))))) (-(free R).map (yoneda.map (Spec.map (CommRingCat.ofHom (algebraMap A' (Localization.Away (algebraMap A A' f))))))) ≫ biprod.desc ((free R).map (yoneda.map (Spec.map (CommRingCat.ofHom (algebraMap A (Localization.Away f)))))) ((free R).map (yoneda.map (Spec.map (CommRingCat.ofHom (algebraMap A A'))))) = 0 := by
     rw [biprod.lift_desc, Preadditive.neg_comp, ← Functor.map_comp, ← Functor.map_comp, ← Functor.map_comp,
       ← Functor.map_comp, hsq, add_neg_cancel]

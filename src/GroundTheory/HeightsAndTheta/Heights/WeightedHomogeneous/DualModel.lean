@@ -1,5 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.WeightedHomogeneous.Objects
+import Mathlib.Data.Rat.Star
+import Mathlib.Tactic.ENatToNat
+import Std.Tactic.BVDecide.Normalize.Prop
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

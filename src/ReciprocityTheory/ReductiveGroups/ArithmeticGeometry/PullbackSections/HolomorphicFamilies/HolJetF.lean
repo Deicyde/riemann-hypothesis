@@ -1,4 +1,7 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.HolomorphicFamilies.HolJetE
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.RingTheory.DualNumber
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.HolomorphicFamilies.HolJetB
 
 set_option autoImplicit false
 
@@ -62,7 +65,7 @@ theorem aeval_tan (ℓ : ι) (q : MvPolynomial ι K) :
     · have h' : ℓ ≠ i := Ne.symm h
       have hc : MvPolynomial.coeff (Finsupp.single ℓ 1) (p * MvPolynomial.X i) = 0 := by
         rw [MvPolynomial.coeff_mul_X']
-        simp [Finsupp.single_apply, h', h]
+        simp [h]
       rw [hc]
       ext <;> simp [h]
 

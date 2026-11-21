@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.AdmissibleInduction
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.CuspidalAdmissible
 set_option maxSynthPendingDepth 1
 

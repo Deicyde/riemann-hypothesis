@@ -1,5 +1,7 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.ThetaCoefficientMapEq
-import ReciprocityTheory.Hypotheses.GalCoh
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.PairedDualFirstOrderDualMatrixSpace
+import ReciprocityTheory.Hypotheses.GalCohDefs
 
 noncomputable section
 

@@ -1,9 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedPlaneSecondVariableStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaActionExistsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqOfTensEqOfNeZero
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFactorPureTensorComponentAtPlace
 
 noncomputable section
 

@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.DiagMod
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.ExpUpper
 
 open scoped MatrixGroups TensorProduct
 open Matrix GlobalTheory.KZ GlobalTheory.KZ.ES

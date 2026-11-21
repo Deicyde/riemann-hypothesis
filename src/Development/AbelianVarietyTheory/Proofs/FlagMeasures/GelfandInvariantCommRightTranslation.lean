@@ -1,9 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.CuspFrameWeights.ConvolutionSmoothL2
-import Development.AbelianVarietyTheory.Statements.CuspFrameWeights.DiscreteSpectrumKFiniteDecomposition
-import Formalism.HarderNarasimhan.ShiftInvariance
-import Development.AbelianVarietyTheory.Statements.CuspFrameWeights.EigenfunctionFiniteCoefficients
-import Formalism.RealPlaceAnalysis.FinalF
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.TraceTransposePow
 
 open MeasureTheory NumberField Matrix Finset Formalism.MainNotions.S Formalism.REAL Formalism.QuantumDeterminants GlobalTheory.Count GlobalTheory.Dec GlobalTheory.DSId
@@ -59,7 +55,7 @@ private lemma pow_apply_mul_eq_mul_pow_apply {A : Type} [Ring A] (M N : Matrix (
   induction m with
   | zero =>
     intro a b
-    by_cases hab : a = b <;> simp [Matrix.one_apply, hab]
+    by_cases hab : a = b <;> simp [hab]
   | succ m ih =>
     intro a b
     rw [pow_succ, pow_succ, Matrix.mul_apply, Matrix.mul_apply, Finset.sum_mul, Finset.mul_sum]

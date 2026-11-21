@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VacGlueIndicator
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSchwartzNe
 open scoped TensorProduct Matrix
@@ -62,10 +61,10 @@ theorem sum_sI_mul_pairI (σ : E →ₐ[F] E) {n d n₁ d₁ : ℕ} (X : Spc F E
   simp only [pairI, sI, tI, hGX, hGW, Fintype.sum_sum_type, Fin.sum_univ_two, posS, posT, incM, Matrix.map_apply,
     Matrix.fromBlocks_apply₁₁, Matrix.fromBlocks_apply₁₂, Matrix.fromBlocks_apply₂₁, Matrix.fromBlocks_apply₂₂,
     Matrix.zero_apply, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.empty_val',
-    Matrix.cons_val_fin_one, Matrix.head_cons, Matrix.head_fin_const]
-  simp only [map_mul, map_zero, map_one, map_neg, zero_mul, mul_zero, one_mul, mul_one, neg_mul, Finset.sum_const_zero,
-    add_zero, zero_add, Finset.mul_sum, Finset.sum_neg_distrib, mul_neg, Finset.sum_add_distrib]
-  simp only [neg_zero, zero_add, add_zero, mul_neg, neg_neg, Finset.mul_sum, Finset.sum_neg_distrib, mul_assoc, neg_add]
+    Matrix.cons_val_fin_one]
+  simp only [map_zero, map_one, map_neg, zero_mul, mul_zero, one_mul, mul_one, neg_mul, Finset.sum_const_zero,
+    add_zero, zero_add, Finset.mul_sum, Finset.sum_neg_distrib, mul_neg]
+  simp only [neg_zero, zero_add, add_zero, mul_neg, neg_neg, Finset.mul_sum, Finset.sum_neg_distrib, mul_assoc]
   ring
 
 theorem gram_conj (σ : E →ₐ[F] E) (hσ : ∀ x : E, σ (σ x) = x) {m : ℕ} {κ : Type} [Fintype κ] {J : Matrix (Fin m) (Fin m) E}
@@ -166,7 +165,7 @@ theorem form_eq : ∀ {F E : Type} [Field F] [NumberField F] [Field E] [NumberFi
     ((coefLin H H' w').submatrix Sum.inl Sum.inl)
   have hs : ∀ z : Matrix (Fin n₁ ⊕ Fin 2) (Fin d₁ ⊕ Fin 2) (AE F E),
       (z.submatrix Sum.inl id).submatrix id Sum.inl = z.submatrix Sum.inl Sum.inl := fun z => rfl
-  simp only [hs, sI, Matrix.submatrix_apply, id_eq]
+  simp only [hs, Matrix.submatrix_apply, id_eq]
   ring
 
 end GlobalTheory.ThK.PlaneForm

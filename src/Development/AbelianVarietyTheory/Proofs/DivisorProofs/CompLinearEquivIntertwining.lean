@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsHolPeriods
+import Mathlib.RingTheory.PicardGroup
 
 namespace GlobalTheory.PELU
 

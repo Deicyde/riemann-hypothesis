@@ -1,7 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsUniqueIsTanFrameOfIsEmpty
-import Development.AbelianVarietyTheory.Definitions.Divisors.P22
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WedgeOrdVpBaseChangeOfNeBot
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsChernExistsUniqueAndIso
+import Development.AbelianVarietyTheory.Proofs.ModuliProofs.IsAbelianSchemeOfIsGrpPullback
+import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ObjIsAbelianSchemeDimRigidifiedSym
+import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ObjIsAbelianSchemeDimRigidifiedSym
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 set_option autoImplicit false
 
@@ -229,7 +233,7 @@ theorem adjoint_of_lbIso (P : GlobalTheory.Published.AbelianDeRham.Free) {R : Ty
     Subtype.ext (IsMor.pullCohomologyOne_id _ _)
   simp only [map_sum, map_add, hΛ, LinearMap.comp_apply, LinearEquiv.coe_coe, pullOver_pullOver,
     lift_fst_assoc, lift_snd_assoc, lift_fst, lift_snd, Category.id_comp, MonObj.one_comp, pullOver_one,
-    map_zero, v, v₁, mul_zero, zero_mul, sub_zero, zero_sub] at e
+    map_zero, v, v₁, mul_zero, sub_zero, zero_sub] at e
   simp only [wedgeForm_apply, push_apply, sub_eq_add_neg]
   exact e
 

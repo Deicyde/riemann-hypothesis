@@ -1,4 +1,6 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.LayerLe
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.DirichletPrimeToLPartMulLPowerPart
 
 noncomputable section
 

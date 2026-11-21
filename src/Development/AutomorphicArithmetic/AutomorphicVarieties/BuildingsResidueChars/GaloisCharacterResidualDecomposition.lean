@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.IdeleGenerators.QuadraticSplitting.QuadSplit
 import Development.AutomorphicArithmetic.AutomorphicVarieties.BuildingsResidueChars.TeichmullerCharacterSpec
 import Development.AutomorphicArithmetic.AutomorphicVarieties.FrobeniusSmoothVectors.ScNorm
+import Development.AutomorphicArithmetic.AutomorphicVarieties.CurveDVRSpecialization.RatTorsionFree
 
 open NumberField Formalism.ConjugateSelfDual ReciprocityTheory.Gal IsLocalRing
 open GlobalTheory.GalOfCusp UpperTheory.V.Base UpperTheory.V.HV UpperTheory.V.GradeZeroInterpolatingElement UpperTheory.V.Ws UpperTheory.V.Sd UpperTheory.V.Sd.S2
@@ -209,7 +212,7 @@ theorem UpperTheory.galois_character_residual_decomposition :
     have : D.th g = chiO ℚ Ω l c.O g * (D.om g)⁻¹ * D.ξ g * (chiO ℚ Ω l c.O g ^ (D.e : ℤ) * D.ψ g) := rfl
     show _ = up D.th g / (cycBar ℚ Ω l g ^ k * up D.ξ g * φ g)
     rw [hup D.th, this]
-    simp only [map_mul, map_inv, map_zpow, ← cyc_eq, ← hup]
+    simp only [map_mul, map_inv, map_zpow, ← hup]
     rfl
   · rw [rb_al T hD, hup, ← map_pow, h1, cong_iff, map_pow, map_one, ← Units.val_pow_eq_pow_val, Units.val_eq_one]
   · obtain ⟨m, hm, hx⟩ := hD.xi_ord

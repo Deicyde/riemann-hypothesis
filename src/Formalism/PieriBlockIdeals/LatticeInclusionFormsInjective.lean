@@ -1,7 +1,11 @@
-import Mathlib
-import Formalism.SatakeDualWeyl.Statement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.RankGapBounds.TheoremALocOfLemmaA
 import Formalism.PieriBlockIdeals.Statement
+import Mathlib.NumberTheory.NumberField.Discriminant.Defs
+import Mathlib.NumberTheory.Padics.PadicIntegers
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RepresentationTheory.Invariants
 
 noncomputable section
 

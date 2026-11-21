@@ -1,5 +1,14 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.FilteredPoleLength.ReducedBasisBounds.ReductionQuotient
 import Formalism.LogFactorialIndices.SignedSubspaceIndex.IdxDet
+import Mathlib.Data.Int.Star
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 

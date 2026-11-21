@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsBasisOfBot
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SandwichDatumEigenMultiplicityStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DvrDeterminantProductOrdersStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntertwinerMapsEigenspacesStatement
@@ -95,7 +95,7 @@ theorem span_eigPart_top (D : Datum ε h Λ) (τ : Λ →+* O)
       by_cases hk : k = j
       · subst hk
         simp [incl_apply']
-      · simp [incl_apply', Pi.single_apply, hk]
+      · simp [incl_apply', hk]
     exact Submodule.mem_sup.2 ⟨y, hS y hy', r, hr, hyr⟩
   refine le_antisymm hSle fun z hz => ?_
   have hz' : z ∈ (S ⊔ R) ⊓ eig C (actT D) τ := ⟨hall trivial, hz⟩

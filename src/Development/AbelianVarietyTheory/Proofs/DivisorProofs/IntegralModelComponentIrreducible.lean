@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
-import Development.AbelianVarietyTheory.Proofs.GenericRegularity.MemRangeOfIsAlgebraicRatFun
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LocalSystemBasesNonempty
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry
 open NumberField IsDedekindDomain
@@ -83,7 +82,7 @@ theorem exists_geomIrr_open : ∀ (E : Type) [Field E] [NumberField E] [IsCMFiel
       apply pullback.hom_ext
       · simp only [φ, ψ, pullback.map, Category.assoc, pullback.lift_fst, pullback.lift_fst_assoc, Iso.inv_hom_id,
           Category.comp_id, Category.id_comp]
-      · simp only [φ, ψ, pullback.map, Category.assoc, pullback.lift_snd, pullback.lift_snd_assoc,
+      · simp only [φ, ψ, pullback.map, Category.assoc, pullback.lift_snd,
           Category.comp_id, Category.id_comp]
     have hsurj : Function.Surjective φ := fun x => ⟨ψ x, by rw [← Scheme.Hom.comp_apply, hφψ]; rfl⟩
     exact hsurj.irreducibleSpace φ.continuous

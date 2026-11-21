@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.LevelA
 import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.MeasFr
+import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.MeasUpq
+import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedVolumeStatements.LevelSubgroupProperties
 
 noncomputable section
 
@@ -23,7 +27,7 @@ theorem finHom_eq_one_iff (h : GA D V) : finHom V h = 1 ↔ Lev.finE V h = 1 := 
   apply Units.ext
   ext i j
   have h2 := congrArg (fun g => (Units.val g) i j) h1
-  simp only [Formalism.UG.bc, Units.coe_map, MonoidHom.coe_coe, RingHom.mapMatrix_apply, Matrix.map_apply,
+  simp only [Formalism.UG.bc, Units.coe_map,
     Units.val_one] at h2
   apply hinj
   refine Eq.trans h2 ?_

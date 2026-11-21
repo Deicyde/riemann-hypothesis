@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.BesselShellMomentBounds
 import Formalism.SharpRestriction.CuspSpanNormBounds.BigCellDensity
-import Formalism.SharpRestriction.CuspSpanNormBounds.FrameBlockSums
+import Formalism.SharpRestriction.CuspSpanNormBounds.FrameFactorGe
+import Formalism.SharpRestriction.CuspSpanNormBounds.IsPtRepTrDat
 
 noncomputable section
 

@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.PolarisationModuleIndex
 open NumberField GlobalTheory.CMVal GlobalTheory.LatJet GlobalTheory.RealMult
 open GlobalTheory.IndefiniteRowSideFullHecke.PolarisationModuleIndex (latMod polMod dualLat TrInt bar)
 

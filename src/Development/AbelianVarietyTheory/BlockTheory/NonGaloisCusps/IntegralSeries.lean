@@ -1,7 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IntFormsSubset
-import Development.AbelianVarietyTheory.Statements.HeckeThetaIntegrals.HkSupSizedOfHkSup
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.FixedCoefficientFieldInComplex
+import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.RealPoints
+import Formalism.LocalToGlobal.IndefiniteReal.FWExist
 
 set_option autoImplicit false
 

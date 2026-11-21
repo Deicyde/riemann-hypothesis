@@ -1,9 +1,8 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.ResidueSquareIntegrableLevelZero
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.DerivativeRulesA1
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.DiagScalarCommuteTransposedRMatrix
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.FsvMulFsvNeg
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.HasFDerivAtFsvOther
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.LevelTransport
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.ReflectionTransposeEntriesMem
+import Mathlib.Order.CompletePartialOrder
 
 open MeasureTheory
 open scoped Matrix

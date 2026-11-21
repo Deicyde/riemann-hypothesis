@@ -1,10 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.ResChPrime
 import Formalism.LocalToGlobal.ProjectiveLattices.CuspidalL2Subspace
 import Formalism.LocalToGlobal.ProjectiveLattices.ValSetAlgSubset
 import Formalism.LocalToGlobal.ProjectiveLattices.AllTest
 import Formalism.LocalToGlobal.ProjectiveLattices.DatIndep
 import Formalism.LocalToGlobal.ProjectiveLattices.ThShort
-import Formalism.LocalToGlobal.ProjectiveLattices.ThGerm
 
 noncomputable section
 

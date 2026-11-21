@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.MapEqOfProdEq
-import Formalism.SharpRestriction.LevelLetterCocycles.SecondPropositionEveryLocalisation
-import Formalism.SharpRestriction.LevelLetterCocycles.IdempotentChoiceDepthZero
+import Formalism.SharpRestriction.LevelLetterCocycles.QuotientHomNonvanishingBound
+import Formalism.WachLatticeTwists.RamifiedBlockRings.RightIdealImageOfSurjective
 
 noncomputable section
 
@@ -83,7 +85,7 @@ theorem blockPoly_eq {A : Type} [CommRing A] {d : Type} [Fintype d] [DecidableEq
   rw [blockPoly]
   congr 1
   ext i j
-  by_cases h : i = j <;> simp [Matrix.one_apply, h] <;> ring
+  by_cases h : i = j <;> simp [h] <;> ring
 
 theorem e_of_diag (β : Fin R.nV → N.O i) (u : Fin R.nV → KK N i) :
     eG R.r R.t (KK N i) (((Matrix.diagonal fun a => if blk R a = 0 then 0 else β a : MatN N i).map

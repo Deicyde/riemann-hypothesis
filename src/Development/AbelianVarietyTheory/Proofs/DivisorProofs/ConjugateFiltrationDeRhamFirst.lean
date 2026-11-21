@@ -1,12 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PoincareDeRhamDuality
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ZeroSectionBase
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsDeRhamSheafIffAlt
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ConjugateFiltration
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsFrameOfForallExists
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsQuasicoherentEigenQuot
-import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.RestrictPullbackIsoHomAppPullbackSections
 open CategoryTheory AlgebraicGeometry Limits ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.DeRham GlobalTheory.DeRhamSheaf
 
 namespace GlobalTheory.ConjSeq
@@ -50,7 +43,7 @@ theorem frobLin_comp_cokernel_π_eq_zero : ∀ (p : ℕ) [Fact p.Prime] {T : Sch
   refine Scheme.Modules.hom_ext _ _ fun U => ?_
   ext s
   simp only [Adjunction.homEquiv_unit, Scheme.Modules.Hom.comp_app, Scheme.Modules.pushforward_map_app,
-    Scheme.Modules.Hom.zero_app, Limits.comp_zero]
+    Scheme.Modules.Hom.zero_app]
   show (cokernel.π C.incl).app U (Ψ.app U (((Scheme.Modules.pullbackPushforwardAdjunction f).unit.app H).app U s)) = 0
   rw [hu]
   exact C.cokernel_π_app_eq_zero_iff.2 (key U s)

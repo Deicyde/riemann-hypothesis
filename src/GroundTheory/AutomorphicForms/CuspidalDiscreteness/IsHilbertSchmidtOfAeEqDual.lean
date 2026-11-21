@@ -1,6 +1,7 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.QuotientKernel
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.TraceFormulaConvolution
+import Mathlib.MeasureTheory.Function.AEEqOfIntegral
 
 open MeasureTheory Set Filter Topology Function
 open scoped ENNReal Pointwise InnerProductSpace ComplexConjugate

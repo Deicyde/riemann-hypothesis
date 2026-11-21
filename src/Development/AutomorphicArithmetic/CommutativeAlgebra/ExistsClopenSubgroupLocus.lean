@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.SpecialMaps.QuotObjDefs
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.QuotGlobalHolds
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsPullbackKernelOfKernelPair
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsClopenTorsionKernelLocusStatement
 import Development.AutomorphicArithmetic.Foundations.EtaleClopenDescent.ExistsMemUIdealIdempotentModPrimePow

@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.KernelLattices.DeterminantCokernelCount.CokernelIndexFactors.StatementB
 import Development.AbelianVarietyTheory.Definitions.Jets.CmLatticeCommutatorPairingPowEqOneOfGoodLift
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.Topology.Sheaves.Presheaf
 
 open GlobalTheory.MomOne Formalism.L2.Ker.JMB
 open scoped ComplexConjugate BigOperators

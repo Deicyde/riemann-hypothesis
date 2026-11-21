@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.FormalDegree.FormalDegreeHilbert.NormIndOfSteps
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.NormInductionOfEstimates
 import Development.WeilBound.RepresentationTheoryGL.FormalDegree.FormalDegreeHilbert.FormalDegreeFormula.CoefPow

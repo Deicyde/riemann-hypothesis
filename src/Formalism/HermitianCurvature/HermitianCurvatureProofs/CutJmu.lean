@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.NormSqUnitNormalizationLe
-import Formalism.HermitianCurvature.BesselNonvanishingReduction
 
 namespace Formalism.FourierDecayAlt.P.CutBP.Jmu
 

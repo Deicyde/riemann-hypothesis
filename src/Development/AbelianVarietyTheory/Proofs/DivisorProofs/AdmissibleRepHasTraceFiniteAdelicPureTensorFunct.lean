@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasTypeVec
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ConvolutionFiniteAdelicPureTensorEqLocalConvolut
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiniteDimensionalFixed
 open MeasureTheory Set Filter NumberField IsDedekindDomain

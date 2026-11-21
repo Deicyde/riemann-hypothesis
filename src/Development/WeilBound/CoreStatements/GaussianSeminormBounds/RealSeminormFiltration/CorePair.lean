@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.GaussianSeminormBounds.RealSeminormFiltration.CoreLie
+import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.FockJointMult
 
 noncomputable section
 

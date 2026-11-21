@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsTestRep
 
 open GlobalTheory.JR Matrix MeasureTheory Filter Topology

@@ -1,10 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinRelG
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinRel
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenIntertwinerSkewPlane
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenIntertwinerSkewPlaneUniqueDual
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicSchwartzSpaceMemSpanPureTensorsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoubleAdaptedModelCompatibleStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoubleAdaptedLagrangianDimStatement
@@ -199,7 +194,7 @@ theorem eq_smul_of_loc {B : Base F E} {n d n₁ d₁ : ℕ} {X : Spc F E n} {W :
     rw [hfe]
     funext x
     simp only [GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.pure, Pi.smul_apply, smul_eq_mul, ContinuousLinearMap.smul_apply,
-      SchwartzMap.smul_apply, mul_assoc]
+      mul_assoc]
   | zero => simp
   | add x y _ _ hx hy => rw [map_add, map_add, hx, hy, smul_add]
   | smul a x _ hx => rw [map_smul, map_smul, hx, smul_comm]

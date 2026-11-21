@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLocGrLat
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RegFlagged
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSplitting
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArithmeticModelFlagHeightFifth
 open NumberField MvPolynomial Filter Topology Formalism.BasicNotions Formalism.MainNotions Formalism.DegreeFormula GlobalTheory.FlagPoly GlobalTheory.Mean4 GlobalTheory.Mean4O GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.CovTest GlobalTheory.Published
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory GlobalTheory.ArInt
@@ -54,7 +52,7 @@ theorem isoHom_of_lieMet : ∀ {E : Type} [Field E] [NumberField E] [IsCMField E
     (by simpa only [yc, Category.assoc] using hb')
   have hM := hLM σ y zg yc hzg rfl ch hx gF (fun i => by simp [hgF])
   have hM' := hLM' σ y zg yc hzg rfl ch' hx gF' (fun i => by simp [hgF'])
-  simp only [cond, Fin.cast_eq_self, Matrix.submatrix_id_id] at hM hM'
+  simp only [cond] at hM hM'
   have hco : gF'.co gF τ = Matrix.of fun a b => ch'.crd q _ (g.app ch.U (ch.e b)) y a := EigFrame.co_eq fun i => by
     have := hMt (c₁.U ⊓ c₂.U) ch.e ch'.e ch.isFrame ch'.isFrame ℂ zg hx i
     rw [hgF, hgF']

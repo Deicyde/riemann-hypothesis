@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SumLieCoord
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCuspidalLieActionOfIsCuspForm
 
 noncomputable section
 open NumberField MeasureTheory Matrix GlobalTheory.CuspRep GlobalTheory.JSW

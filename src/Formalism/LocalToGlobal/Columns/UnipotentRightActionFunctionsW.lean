@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.RowForms
 import Formalism.LocalToGlobal.Columns.HeckeSp
 import Formalism.LocalToGlobal.Columns.MemWmPerp

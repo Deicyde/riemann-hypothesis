@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.PlaneCoefficients.RestPlOf
 import Formalism.SharpRestriction.GrowthBounds.PlaneCoefficients.ProdRangeZmod
 import Formalism.SharpRestriction.GrowthBounds.AevalValuation.ValGen
+import Formalism.SharpRestriction.GrowthBounds.DiagonalSupport.PosULeIff
 
 noncomputable section
 

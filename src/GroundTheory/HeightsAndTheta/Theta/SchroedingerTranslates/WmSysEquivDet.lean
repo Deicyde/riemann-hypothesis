@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Theta.EisensteinZeta.WeilPolarization.WmSysObjects
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Theta.SchroedingerTranslates.ExistsInverseFontaineElementMemFilNegOne
 import GroundTheory.HeightsAndTheta.Theta.LocallyCompactField.Countability
 

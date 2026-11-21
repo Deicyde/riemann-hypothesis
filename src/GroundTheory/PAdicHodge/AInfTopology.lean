@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.PAdicHodge.KerFontaineThetaCompFrobeniusEquivSymmPow
+import GroundTheory.PAdicHodge.TiltValuation
+import Mathlib.Topology.Algebra.Nonarchimedean.AdicTopology
+import Std.Tactic.BVDecide.Normalize.Prop
 set_option maxSynthPendingDepth 1
 
 noncomputable section

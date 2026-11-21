@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.FiniteSumNonzeroLargeDepth
+import Mathlib.Analysis.Fourier.FiniteAbelian.PontryaginDuality
 
 open NumberField IsDedekindDomain
 

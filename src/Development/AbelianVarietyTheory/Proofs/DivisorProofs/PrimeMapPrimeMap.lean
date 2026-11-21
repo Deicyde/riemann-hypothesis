@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.CountSpanSingletonRingEquiv
 open NumberField IsDedekindDomain
 open scoped nonZeroDivisors

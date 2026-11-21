@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.LinksDefs
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.ChainMatrices
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.HermitianTraceForms.PosIndexMapEqCardOfCongrDiagonal
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.AdelicDataRowMeasureScaleTrivialTuple
 
@@ -62,10 +61,10 @@ private theorem card_eq_add_and_exists_conj_eq_Jpq_of_hasSignature {n : Type} [F
 private theorem Jpq_eq_diagonal_elim_one_neg_one (p q : ℕ) :
     Formalism.UG.Jpq p q = Matrix.diagonal (Sum.elim (fun _ => (1 : ℂ)) (fun _ => -1)) := by
   ext (i|i) (j|j)
-  · by_cases h : i = j <;> simp [Formalism.UG.Jpq, Matrix.diagonal_apply, Matrix.one_apply, h]
+  · by_cases h : i = j <;> simp [Formalism.UG.Jpq, h]
   · simp [Formalism.UG.Jpq]
   · simp [Formalism.UG.Jpq]
-  · by_cases h : i = j <;> simp [Formalism.UG.Jpq, Matrix.diagonal_apply, Matrix.one_apply, h]
+  · by_cases h : i = j <;> simp [Formalism.UG.Jpq, h]
 
 theorem hasSignature_fromBlocks {n m : Type} [Fintype n] [DecidableEq n] [Fintype m] [DecidableEq m]
     {G : Matrix n n ℂ} {H : Matrix m m ℂ} {p q p' q' : ℕ}

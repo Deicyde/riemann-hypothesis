@@ -1,4 +1,5 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.BaseRepGL3NormalisedOfPsiEqOne
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.UnitaryThreeReflectionRight
 
 open Matrix UpperTheory.V.U3
 
@@ -18,5 +19,5 @@ theorem UpperTheory.V.U3.mat_gstar :
     SemidirectProduct.inv_right, inv_one, map_one, mul_one, one_mul, MulAut.one_apply, map_inv,
     sgnAct_neg_one, theta_inv_val]
   refine ⟨?_, ?_⟩
-  · simp [map_one, theta_inv_val]
+  · simp
   · norm_num

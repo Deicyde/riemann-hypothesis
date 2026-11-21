@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.FIwasawaD
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
 
 open Formalism.UG Matrix
 
@@ -91,7 +95,7 @@ theorem fIwasawa_tri_succ_of_max_pivot (hσ : ∀ x, σ (σ x) = x) (hσv : ∀ 
       σ (M ρ ρ) * M ρ ρ * S = 0 := by
     have hiso := fIwasawa_iso (σ := σ) M hM ρ hρ
     rw [Fintype.sum_congr _ _ key] at hiso
-    simp only [Finset.sum_add_distrib, Finset.sum_ite_eq', Finset.sum_ite_eq, Finset.mem_univ,
+    simp only [Finset.sum_add_distrib, Finset.sum_ite_eq', Finset.mem_univ,
       ↓reduceIte, ← Finset.mul_sum] at hiso
     rw [hSeq]
     simpa only [fIwasawaH] using hiso

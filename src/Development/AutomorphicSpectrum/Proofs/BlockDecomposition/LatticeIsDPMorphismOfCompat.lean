@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.LevelChainValuations.LatDefs
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.SplittingFieldLattices.GrSplit
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
+import Mathlib.RingTheory.DividedPowers.DPMorphism
+import Mathlib.Tactic.ENatToNat
 
 open DividedPowers CrystallineSemistableComparison.Pb
 

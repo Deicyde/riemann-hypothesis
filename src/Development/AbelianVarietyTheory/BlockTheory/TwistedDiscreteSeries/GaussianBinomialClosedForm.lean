@@ -1,5 +1,6 @@
-import Mathlib
-import Formalism.SatakeDualWeyl.KpqSubgroupCompact
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.MemSiegelOfIffRightAct
 import Development.AbelianVarietyTheory.Definitions.Foundations.IsSatVecUOfIsSphericalU
 

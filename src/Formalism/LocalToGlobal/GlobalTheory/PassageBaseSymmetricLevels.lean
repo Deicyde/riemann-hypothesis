@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.PassageAtBaseSymmetricLevels
 import Formalism.LocalToGlobal.GlobalTheory.DivPassageP
 import Formalism.BranchSandwichDivisors.DivFromPassageAndNorm

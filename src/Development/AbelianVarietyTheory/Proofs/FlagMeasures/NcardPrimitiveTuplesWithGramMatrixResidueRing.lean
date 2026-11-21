@@ -1,6 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.PrimOfIsUnitDet
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.CardPrimitiveTupleExtensionsLeStatement
+import Mathlib.Data.Int.Star
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
 
 open GlobalTheory.GramCount
 open scoped Classical

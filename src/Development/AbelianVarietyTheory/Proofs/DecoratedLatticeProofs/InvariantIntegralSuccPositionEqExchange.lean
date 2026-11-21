@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.ToOneSucc
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.QuotientIntegralParabolicUnfolding
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.OrbitLocallyConstant
+import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsMemSBEqOneOnCompact
+import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SecondCountableLocal
 open MeasureTheory ValuativeRel Matrix GlobalTheory.SplitWeil GlobalTheory.RootEx GlobalTheory.StepData GlobalTheory.PosOne
 open GlobalTheory.IndefiniteRowSideFullHecke.FourierJacobiAverage (app HasTensorVal fl opEFJ IsQuotIntFJ IsFJ Represents)
 open GlobalTheory.IndefiniteRowSideFullHecke.FramePositiveSum (IsCO rescale)
@@ -39,7 +41,7 @@ theorem rr_step : ∀ (k : Type) [Field k] [ValuativeRel k] [TopologicalSpace k]
     | single g₀ a =>
       simp only [π', MonoidHom.coe_mk, OneHom.coe_mk, Finsupp.lmapDomain_apply, Finsupp.mapDomain_single, θ, Finsupp.lsum_single,
         LinearMap.toSpanSingleton_apply, LinearMap.smul_apply, map_smul, π, MonoidHom.coe_comp,
-        Function.comp_apply, MonoidHom.inr_apply, omR_mul, smul_eq_mul]
+        Function.comp_apply, MonoidHom.inr_apply, omR_mul]
       rw [show ((g * g₀)⁻¹ * g, 1 * h) = (1 * g₀⁻¹, h * 1) from Prod.ext (by group) (by group)]
   have hθ1 : ∀ Ψ, θ (Finsupp.single 1 1) Ψ = Ψ := fun Ψ => by
     simp only [θ, Finsupp.lsum_single, LinearMap.toSpanSingleton_apply, one_smul, inv_one]

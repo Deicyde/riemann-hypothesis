@@ -1,6 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.JointConditionsZpowers.RhoFam
 import Formalism.SharpRestriction.LevelLetterCocycles.JointConditionsZpowers.LocalErrorBoundPlaces
 import Formalism.SharpRestriction.LevelLetterCocycles.TwGood
+import Formalism.SharpRestriction.LevelLetterCocycles.EmbeddingTypes
+import Formalism.SharpRestriction.LevelLetterCocycles.JointConditionsZpowers.TwentyWordsLeB
 
 noncomputable section
 

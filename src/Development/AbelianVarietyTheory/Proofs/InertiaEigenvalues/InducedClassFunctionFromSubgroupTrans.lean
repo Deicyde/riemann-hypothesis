@@ -1,5 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IndApplyOne
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.CommutativeAlgebra.AbByPOfComm
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open GlobalTheory.BI GlobalTheory.BrauerZero
 
 namespace GlobalTheory.BrauerZero

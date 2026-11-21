@@ -1,6 +1,8 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.GtPtsTor
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ValCalc
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ChartPullbacks.TangentLinearity.FnOfComp
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ChartPullbacks.TangentLinearity.ConstPullback
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ChartPullbacks.WeightedChartPullback.CancelSecAct
 
 set_option autoImplicit false
 
@@ -37,8 +39,7 @@ theorem gm_comp_top (r : W ⟶ Z) (τ : Z ⟶ Y) (w : W) (c : Γ(Y, ⊤)ˣ) (c' 
   have m1 : (r ≫ τ) w ∈ (⊤ : Y.Opens) := trivial
   have m2 : r w ∈ (⊤ : Z.Opens) := trivial
   rw [dif_pos m1, dif_pos m2]
-  simp only [MonoidHom.comp_apply, Units.coe_map, MonoidHom.coe_coe, Scheme.Hom.comp_app,
-    CommRingCat.comp_apply]
+  simp only [MonoidHom.comp_apply, Units.coe_map, MonoidHom.coe_coe, Scheme.Hom.comp_app]
   rw [← h]
   rfl
 
@@ -88,7 +89,7 @@ theorem exists_ratio {X : Scheme.{0}} {L : LB X} (hL : L.IsLB) {K : Type} [Finty
   apply Units.ext
   simp only [MonoidHom.coe_comp, Function.comp_apply, Units.coe_map, MonoidHom.coe_coe]
   try erw [Function.comp_apply]
-  simp only [Units.coe_map, MonoidHom.coe_coe]
+  simp only [Units.coe_map]
   erw [← Scheme.Hom.germ_stalkMap_apply, ← Scheme.Hom.germ_stalkMap_apply]
   erw [TopCat.Presheaf.germ_res_apply]
 
@@ -103,9 +104,9 @@ theorem val_charGen {S : Scheme.{0}} (X : Type) [AddCommGroup X] (G : Over S) {L
     (⊤ : (splitTorus S X).left.Opens) from trivial)]
   apply Units.ext
   simp only [MonoidHom.coe_comp, Function.comp_apply, Units.coe_map, MonoidHom.coe_coe,
-    Scheme.Hom.comp_app, CommRingCat.comp_apply]
+    Scheme.Hom.comp_app]
   erw [Function.comp_apply]
-  simp only [Units.coe_map, MonoidHom.coe_coe]
+  simp only [Units.coe_map]
   erw [← Scheme.Hom.germ_stalkMap_apply, ← Scheme.Hom.germ_stalkMap_apply]
   erw [TopCat.Presheaf.germ_res_apply]
   simp only [Units.coe_map, MonoidHom.coe_coe]

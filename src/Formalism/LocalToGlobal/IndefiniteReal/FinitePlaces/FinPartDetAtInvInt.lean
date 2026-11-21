@@ -1,10 +1,11 @@
-import Formalism.LocalToGlobal.IndefiniteReal.DatumVec
-import Formalism.LocalToGlobal.IndefiniteReal.SubgroupCharExtensionOneApply
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.TameAtOne
-import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.PlaceS
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.IdemUniq
 import Formalism.LocalToGlobal.Divisibility.DefGroupLemmas
 import Mathlib.NumberTheory.NumberField.ClassNumber
+import Formalism.LocalToGlobal.BesselHermitianTheta.LemmasWeil
+import Mathlib.Data.Finsupp.Pointwise
 
 noncomputable section
 
@@ -74,7 +75,7 @@ theorem resM_mul {s : R} (hs : s * s = s) (A B : Matrix n n R) : resM s A * resM
 theorem resM_orth {s t : R} (hst : s * t = 0) (A B : Matrix n n R) :
     resM s A * resM t B = 1 + s • (A - 1) + t • (B - 1) := by
   have hts : t * s = 0 := by rw [mul_comm, hst]
-  simp only [resM, hts, add_mul, mul_add, one_mul, mul_one, smul_mul_assoc, mul_smul_comm, smul_add, smul_smul, hst,
+  simp only [resM, hts, add_mul, mul_add, one_mul, mul_one, smul_mul_assoc, mul_smul_comm, smul_add, smul_smul,
     zero_smul, add_zero]
   try abel
 
@@ -94,7 +95,7 @@ theorem resM_one_right (s : R) : resM s (1 : Matrix n n R) = 1 := by
 theorem resM_map {R' : Type*} [CommRing R'] (f : R →+* R') (s : R) (A : Matrix n n R) :
     (resM s A).map f = resM (f s) (A.map f) := by
   ext i j
-  by_cases h : i = j <;> simp [resM, Matrix.one_apply, h]
+  by_cases h : i = j <;> simp [resM, h]
 
 theorem resM_transpose (s : R) (A : Matrix n n R) : (resM s A)ᵀ = resM s Aᵀ := by
   simp [resM, Matrix.transpose_sub]

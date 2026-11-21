@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsCompactLieAction
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsCliff
 
 open Matrix Finset
 open scoped InnerProductSpace

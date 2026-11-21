@@ -1,10 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.IsFormsOfToH
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.CoefActionReprMemSubfield
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.CardStabilizerForgetFr
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.SpanMapNabKDelK
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.TensorMapDescent
-import Formalism.LocalToGlobal.Columns.PolyFnLemmas
 
 noncomputable section
 

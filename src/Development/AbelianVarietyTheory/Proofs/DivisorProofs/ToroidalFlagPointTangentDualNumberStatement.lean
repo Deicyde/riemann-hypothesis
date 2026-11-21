@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StepLatZero
-import Formalism.LocalToGlobal.ProjectiveLattices.SatLeaves
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.DegFrame
 
 set_option autoImplicit false
 

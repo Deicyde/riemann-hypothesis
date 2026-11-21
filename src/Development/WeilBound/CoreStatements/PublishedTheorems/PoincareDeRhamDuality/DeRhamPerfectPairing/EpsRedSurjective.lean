@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsKSValueOneOfRetraction
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AbelianDeRhamPoincareDualityOfCubeDual
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsAdditiveLiftIff
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.GlobalFnsHolds
 
 set_option autoImplicit false
 
@@ -94,7 +92,7 @@ theorem additive_eps (hC : CubeTheorem) {R : Type} [CommRing R] {A B : Over (Sp 
       rfl
     simp only [Λ, h₁ _ _ _ hz, sub_zero, add_zero])
   have x₂ : lift 1 (𝟙 (epsR R)) ≫ x = 1 := one _ (by
-    simp only [Λ, Category.assoc, lift_fst, lift_snd, MonObj.comp_one, _root_.mul_one, sub_self, h₀, sub_zero,
+    simp only [Λ, Category.assoc, lift_fst, lift_snd, MonObj.comp_one, _root_.mul_one, sub_self, h₀,
       add_zero])
   have x0 : x = 1 := by
     obtain ⟨A', _, φ, hφ⟩ : ∃ (A' : Over (epsR R).left) (_ : GrpObj A') (φ : A'.left ⟶ A.left),

@@ -1,16 +1,11 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.AdelicGroupAlgebraActionInjective
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsHTFormOver
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.PushInvertible
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.GlueApplyOfNotInFibre
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsHodgeLine
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ExistsOfPolAV
 import Development.WeilBound.CoreStatements.HomogeneousNonvanishing.NatCastSmulMemHtLatK
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsTorsionQuasiFiniteGroupStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.WeilPairingPullbackIffStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsGenericWeilPairingStatement
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ObjIsAbelianSchemeDimRigidifiedSym
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.SabComp
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.CompanionTheory.Ar
@@ -97,7 +92,7 @@ theorem fullTorsion_of_equiv {X : Scheme.{0}} {Ω Ω' : Type} [Field Ω] [Field 
     rw [← Spec.map_comp, ← CommRingCat.ofHom_comp]
   refine ⟨Over.homMk (spMap κ.symm.toRingHom ≫ x.left) ?_, ?_⟩
   · have := Over.w x
-    simp only [Over.mk_left, Over.mk_hom, Functor.id_obj, Functor.const_obj_obj, Functor.id_map] at this ⊢
+    simp only [Over.mk_left, Over.mk_hom] at this ⊢
     simp only [Category.assoc, this]
     rw [← Category.assoc, h1, Category.id_comp]
   · simp only [Over.homMk_left]

@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsEqAddOfRedVEq
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.NonnegSumSmulIntBilinFormToRealMemPsdConeStatement
-import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.NonemptyFiniteRootsOfBimul
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SysExOfPol
 open NumberField ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.Toroidal GlobalTheory.LocM GlobalTheory.TorRef GlobalTheory.PolFan
 
 noncomputable section
@@ -358,7 +358,7 @@ theorem finrank_le_of_isDomT {X : Type} [AddCommGroup X] [Module (𝓞 E) X] {be
     · intro h0
       by_contra hne
       have e := he' a a
-      simp only [h0, map_zero, LinearMap.zero_apply] at e
+      simp only [h0, map_zero] at e
       exact (hpos _ hne).ne' (by exact_mod_cast e)
     · intro h0
       refine eq_zero_of_posDef hd ?_

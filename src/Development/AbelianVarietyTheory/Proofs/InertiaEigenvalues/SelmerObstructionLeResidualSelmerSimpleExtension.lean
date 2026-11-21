@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.H1MapSubgroup
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.PoitouTateNineTermTransgressionZeroApply
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.CohDimTwoLocalOfLocalFiniteness
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.ContinuousCycMod
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LocalConditionAboveLCoeffMapFunctorial
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LocalConditionAboveLSaturatedOfSelmerSetup
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SelmerFunctorLeftExactTorsionCoefficients
@@ -13,6 +10,7 @@ import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.H0TwDualEqZero
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SelAllLeInf
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.EqZeroOfComm
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LocalDegreeSum
+import Mathlib.Topology.Connected.Separation
 
 noncomputable section
 

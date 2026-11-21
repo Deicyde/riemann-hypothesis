@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.UnipMinSubsetMinParOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.ThetaLifts.Reductions.SiegelAbs
 
 set_option linter.unusedSectionVars false
 

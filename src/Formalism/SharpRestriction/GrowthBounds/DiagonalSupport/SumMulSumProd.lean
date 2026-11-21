@@ -1,4 +1,7 @@
-import Formalism.SharpRestriction.GrowthBounds.DiagonalSupport.RestValBdG
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.DiagonalSupport.ExistsMapOfCoefGe
+import Formalism.SharpRestriction.GrowthBounds.DiagonalSupport.LowestWeightCNonpos
 
 noncomputable section
 
@@ -84,7 +87,7 @@ theorem XG_supported (j : G) (x : MvPolynomial (ι × Fin n) O) (hx : x ∈ XG �
   rw [Finsupp.mem_support_iff] at hvd
   show π v.1 = j
   by_contra hne
-  exact hvd (by simp [partOf, Finsupp.filter_apply, hne])
+  exact hvd (by simp [partOf, hne])
 
 theorem XG_part (j : G) (x : MvPolynomial (ι × Fin n) O) (hx : x ∈ XG π LL Cv Cl F j) (mo : ι × Fin n →₀ ℕ)
     (hmo : mo ∈ x.support) : ∃ mo' ∈ F.support, partOf π j mo' = mo :=
@@ -133,9 +136,9 @@ theorem prod_range_zmod {M : Type} [CommMonoid M] {J : ℕ} [NeZero J] (g : ℤ 
   · intro t _
     simp
   · intro j _
-    simp [ZMod.natCast_zmod_val]
+    simp
   · intro t ht
-    simp only [Finset.mem_coe, Finset.mem_range] at ht
+    simp only [Finset.mem_range] at ht
     simp [ZMod.val_natCast, Nat.mod_eq_of_lt ht]
   · intro j _
     rfl

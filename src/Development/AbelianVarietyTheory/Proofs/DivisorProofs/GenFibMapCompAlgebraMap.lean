@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsorsTrivial
+import Mathlib.RingTheory.WittVector.IsPoly
 
 open IsLocalRing Polynomial
 

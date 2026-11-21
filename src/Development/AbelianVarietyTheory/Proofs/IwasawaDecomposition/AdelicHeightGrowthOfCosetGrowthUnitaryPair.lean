@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ContinuousOneP
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.ExistsSigmaList
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.AdelicDataRowMeasureScaleTrivialTuple
 
 noncomputable section
 

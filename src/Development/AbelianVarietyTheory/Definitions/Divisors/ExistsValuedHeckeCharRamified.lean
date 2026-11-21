@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsFinSetSplitPlacesCoprimeConductor
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousOfVal
 import Formalism.LocalToGlobal.ProjectiveLattices.UnramBridgeHolds
+import Mathlib.NumberTheory.NumberField.Cyclotomic.Ideal
 
 noncomputable section
 

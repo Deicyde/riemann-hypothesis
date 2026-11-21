@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.HeckeVecMemFixed
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ExistsAntiJFrame
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Cartan
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.FSatakeA
 
 noncomputable section
 

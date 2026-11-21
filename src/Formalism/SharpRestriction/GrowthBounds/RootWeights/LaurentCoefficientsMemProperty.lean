@@ -1,4 +1,7 @@
-import Formalism.SharpRestriction.GrowthBounds.RootWeights.BinomialStableContainsComponents
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.RootWeights.TwistSubEqMatrixSubst
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 noncomputable section
 

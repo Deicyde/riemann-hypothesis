@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.SemilocalAlgebras.Finite
+import Mathlib.NumberTheory.RamificationInertia.Galois
 
 namespace GroundTheory.Global
 

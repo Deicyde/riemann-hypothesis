@@ -1,5 +1,4 @@
-import Mathlib
-import CompanionTheory.AutomorphicTheory.TemperedLocalSpectra.ObstructionLifting.H1StructureDimLe
+import BuildAid.Leniency.Open
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.RigDescent
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.AppTopCompApply
 

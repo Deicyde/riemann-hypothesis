@@ -1,10 +1,12 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.TypeConditions.OpenUnr
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.TypeConditions.InePolCoeffZero
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.StringRepresentations.TemperedOfTrueCuspidal
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FullDegreeLabelForcesTrivialWildInertiaStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.GaloisHodgeOfCuspidalStatement
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.GaloisHodgeOfCuspidal
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.GaloisRepsOfCgTrue
+import Development.AbelianVarietyTheory.Proofs.SatakeParameters.MatrixCharpolySmul
+import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.StringRepresentations.RankOneOfLong
+import Development.WeilBound.CoreStatements.PublishedTheorems.JacquetShalikaBound.JacquetShalikaBound
 
 noncomputable section
 
@@ -158,7 +160,7 @@ theorem exists_crystalline_galois_character (hL : GlobalTheory.Published.LocalLa
     have f := frobEig_wdOf hl ι hcr (e1 ▸ y1) hB hg
     rw [e1, y2] at f
     have h1 : (r g : Matrix (Fin 1) (Fin 1) (Qbar l)).charpoly = X - C ((r g : Matrix (Fin 1) (Fin 1) (Qbar l)) 0 0) := by
-      simp [Matrix.charpoly, Matrix.det_fin_one, Matrix.charmatrix_apply]
+      simp [Matrix.charpoly]
     rw [h1] at f
     have f2 := congrArg (fun p => p.coeff 0) f
     simp at f2

@@ -1,12 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.GhostFrobenius
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsRegularOfMulEqSmul
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SmulMemRange
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PDivGroupOmegaFiniteFreeAndPSqMemDlogSpan
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HodgeTateSandwichStarRep
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPowEqOfIntegers
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FontaineAinfLocalDomainXiAdicOrder
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConvEqOneOfForallPairing
+import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.Kernel
 
 open CategoryTheory Opposite Matrix GlobalTheory GlobalTheory.PDivGroup GlobalTheory.Sandwich GlobalTheory.IndefiniteRowSideFullHecke.EpsilonPairingZeta GlobalTheory.PDivLat
 
@@ -120,7 +118,7 @@ theorem hasDatum_dual : ∀ (p : ℕ) [Fact p.Prime] (C : Type) [Field C] [IsAlg
     conv_lhs => rw [hexp t]
     rw [map_sum, map_sum]
     simp only [map_smul, ← hs, hj, Pi.single_apply, smul_eq_mul, mul_ite, mul_one, mul_zero,
-      Finset.sum_ite_eq', Finset.sum_ite_eq, Finset.mem_univ, if_true]
+      Finset.sum_ite_eq', Finset.mem_univ, if_true]
 
   let Φ : G.omega →ₗ[O] (Fin G.height → O) :=
     LinearMap.pi fun i => lie (D.Fil.mkQ (Pi.single i 1))

@@ -1,6 +1,7 @@
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.FramedFamilyStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.ExistsRosatiGen
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.BOfNsmulLeft
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 set_option autoImplicit false
 

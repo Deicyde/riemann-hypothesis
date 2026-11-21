@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.HodgeWedgeFields.H1CommutesBaseChange
+import Mathlib.LinearAlgebra.ExteriorPower.Pairing
 
 set_option autoImplicit false
 
@@ -178,7 +180,7 @@ theorem wedge_functional_constant_on_image (hP : Par F) {n : ℕ} (l : Fin n →
   | add x y _ _ hx hy =>
     simp only [map_add, Pi.add_apply, hx, hy]
   | smul c x _ hx =>
-    simp only [map_smul, Pi.smul_apply, hx, smul_eq_mul, map_mul]
+    simp only [map_smul, Pi.smul_apply, smul_eq_mul, map_mul]
     rw [← algebraMap_smul (F.obj T) c, map_smul, hx, smul_eq_mul]
 
 end Forms

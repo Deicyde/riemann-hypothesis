@@ -1,8 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.BdryChart
-import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.IsPshLocallyIntegrableStatement
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.FlatDegree
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.NineGeoU
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsPeriodAtRestrict
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.InteriorPointPolarisedStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.PairSumFrameAtPointStatement

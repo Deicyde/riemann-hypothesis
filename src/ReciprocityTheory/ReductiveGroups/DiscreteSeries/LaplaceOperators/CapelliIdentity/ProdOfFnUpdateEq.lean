@@ -1,4 +1,12 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.LaplaceOperators.CapelliIdentity.CapelliCentralStatement
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -19,7 +27,7 @@ theorem prod_ofFn_update_eq {p : ℕ} (f : Fin p → 𝒰) (j : Fin p) :
   | succ p ih =>
     refine Fin.cases ?_ (fun j' => ?_) j
     · refine ⟨1, (List.ofFn fun i : Fin p => f i.succ).prod, fun v => ?_⟩
-      simp [List.ofFn_succ, Function.update_apply, Fin.succ_ne_zero]
+      simp [List.ofFn_succ, Fin.succ_ne_zero]
     · obtain ⟨A, B, h⟩ := ih (fun i => f i.succ) j'
       refine ⟨f 0 * A, B, fun v => ?_⟩
       have e1 : (fun i : Fin p => Function.update f j'.succ v i.succ) =
@@ -39,7 +47,7 @@ theorem comm_prod_ofFn (y : 𝒰) {p : ℕ} (f : Fin p → 𝒰) :
   | succ p ih =>
     have h0 : (List.ofFn (Function.update f 0 (y * f 0 - f 0 * y))).prod =
         (y * f 0 - f 0 * y) * (List.ofFn fun i : Fin p => f i.succ).prod := by
-      simp [List.ofFn_succ, Function.update_apply, Fin.succ_ne_zero]
+      simp [List.ofFn_succ, Fin.succ_ne_zero]
     have hs : ∀ j' : Fin p,
         (List.ofFn (Function.update f j'.succ (y * f j'.succ - f j'.succ * y))).prod =
           f 0 * (List.ofFn (Function.update (fun i : Fin p => f i.succ) j'
@@ -132,7 +140,7 @@ theorem cminor_comm (hE : GlRelR E) (a b : Fin n) {p : ℕ} (R C : Fin p → Fin
       by_cases hk : k = j
       · subst hk
         simp
-      · simp [Function.update_apply, hk, σ.injective.ne hk]
+      · simp [hk, σ.injective.ne hk]
     · rw [if_neg (Ne.symm h), if_neg h, smul_zero]
   · rw [sum_ite_sum_comm]
     refine Finset.sum_congr rfl fun σ _ => ?_
@@ -146,7 +154,7 @@ theorem cminor_comm (hE : GlRelR E) (a b : Fin n) {p : ℕ} (R C : Fin p → Fin
       by_cases hk : k = j
       · subst hk
         simp
-      · simp [Function.update_apply, hk]
+      · simp [hk]
     · rw [if_neg h, if_neg h, smul_zero]
 
 end ReciprocityTheory.ChartRestriction.DS.Lap.Capelli

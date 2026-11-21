@@ -1,5 +1,5 @@
-import Mathlib
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.GaugeTopology.GTorus
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.NewformTorusVanishing
 
 noncomputable section
@@ -30,7 +30,7 @@ theorem diag_unit_mem_integral_gl_two {e f : Fˣ} (he : ord (e : F) = 0) (hf : o
   have h3' : (e : F)⁻¹ ∈ 𝒪[F] := by simpa using h3
   have h4' : (f : F)⁻¹ ∈ 𝒪[F] := by simpa using h4
   constructor <;> intro i j <;> fin_cases i <;> fin_cases j <;>
-    simp [Ad3.dg2, h1, h2, h3', h4', zero_mem, one_mem]
+    simp [Ad3.dg2, h1, h2, h3', h4', zero_mem]
 
 theorem iwasawa_decomposition_gl_two :
     ∀ (F : Type) [Field F] [ValuativeRel F] [TopologicalSpace F] [IsNonarchimedeanLocalField F]

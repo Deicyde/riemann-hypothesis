@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ProjectorGridScalarOfProjectorScalar
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NablaSchur
 open GlobalTheory.LeviCut
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.projectorGridScalar_of_projectorScalar : GlobalTheory.LeviCut.StepScalar → GlobalTheory.LeviCut.GridScalar := by

@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.TateTwists.PrimitiveRootsOfUnityBasicIdentities
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.Polynomial.Basic
 
 open Polynomial Finset GlobalTheory.EtC
 

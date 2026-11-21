@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.Divisibility.DivisionHeightBoundStatement
-import Formalism.LocalToGlobal.Divisibility.Numbers
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.TopPlaceLogTheta
 
 noncomputable section

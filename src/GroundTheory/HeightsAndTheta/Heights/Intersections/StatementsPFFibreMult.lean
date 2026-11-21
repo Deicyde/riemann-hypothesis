@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsPFFibreSum
+import BuildAid.Leniency.Open
+import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsPFHoriz
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.Inter

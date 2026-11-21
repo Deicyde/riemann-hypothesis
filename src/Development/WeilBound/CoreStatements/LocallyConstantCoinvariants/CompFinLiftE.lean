@@ -1,8 +1,9 @@
-import Development.WeilBound.CoreStatements.LocallyConstantCoinvariants.IndicatorMem
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StandardTraceAdelicAddCharLocalComponentNeOne
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianSelfDualLatticeSpaceFormHermitianNondeg
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsStdCharNegOneOfStandardTraceAdelicAddChar
 import Development.AutomorphicSpectrum.Proofs.MembershipProofs.ThetaDistributionNonzeroAdmissible
+import Development.AutomorphicSpectrum.Proofs.DivisibilityProofs.ExistsNhdsInvariant
 
 noncomputable section
 

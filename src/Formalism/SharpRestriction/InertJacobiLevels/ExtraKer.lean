@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataKerP
-import Formalism.LocalRingCardinality.DataLatDefs
 import Formalism.LocalRingCardinality.SpanPowerMembership.ClassRecordRowDimensionZero
 
 noncomputable section

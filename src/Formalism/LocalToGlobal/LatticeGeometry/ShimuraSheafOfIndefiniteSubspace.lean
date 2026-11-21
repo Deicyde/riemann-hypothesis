@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.LatticeGeometry.CompNe
-import Formalism.DegreeFormula.PointDegree.PowSum
 import Formalism.LocalToGlobal.LatticeGeometry.CmTypeMeetsConjugatePair
 import Formalism.SharpRestriction.Divisibility.PlaceRankTwoOne
 

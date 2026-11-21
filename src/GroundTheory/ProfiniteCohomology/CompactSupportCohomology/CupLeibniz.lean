@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.CompactSupportCohomology.Pairing
 import GroundTheory.ProfiniteCohomology.CompactSupportCohomology.HomologyMapPiLiftPiHomologyIsoHom
 import GroundTheory.ProfiniteCohomology.CupProducts.Pairing
-import GroundTheory.ProfiniteCohomology.CupProducts.Functoriality
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

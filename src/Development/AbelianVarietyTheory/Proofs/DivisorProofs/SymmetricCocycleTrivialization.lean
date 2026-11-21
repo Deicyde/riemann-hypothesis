@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Variable
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SymmetricTwoCocycleFreeAbelianIsCoboundary
 
 namespace GlobalTheory.CubeCoc

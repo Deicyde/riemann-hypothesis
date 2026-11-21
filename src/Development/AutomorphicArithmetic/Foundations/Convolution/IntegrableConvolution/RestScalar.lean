@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.TensFactor
-import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.EigBasic
 
 noncomputable section
 

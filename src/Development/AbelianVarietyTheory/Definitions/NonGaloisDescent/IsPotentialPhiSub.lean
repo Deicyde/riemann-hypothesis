@@ -1,4 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsPotential
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsCrysLatOfTrivial
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.OneNotMemFilOne
@@ -26,7 +28,7 @@ theorem xi_unit (d : (unitMod l a e O K ι).D) : (unitMod l a e O K ι).xi d = c
     rw [PhiMod.phi_apply, mx_unitMod, Matrix.one_mulVec]
     ext1 i
     rw [cst_apply, PhiMod.phiD_apply, PhiMod.mx0, mx_unitMod, Matrix.map_one _ (map_zero _) (map_one _), Matrix.one_mulVec]
-    simp [PhiMod.phiD_apply, PhiMod.mx0, mx_unitMod, frob_C]) d).symm
+    simp [frob_C]) d).symm
 
 omit [NeZero a] [NeZero e] [Algebra ℤ_[l] O] [Module.Free ℤ_[l] O] [Module.Finite ℤ_[l] O]
   [NormedAlgebra ℚ_[l] K] in

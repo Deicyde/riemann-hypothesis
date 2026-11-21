@@ -1,10 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.FWExist
-import Formalism.LocalToGlobal.IndefiniteReal.RhoGeo
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.IntegralFramedPointOfLevelMove
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.LevelActionMemCuspForms
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.LevActMemMlat
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DetReducedBlockEqResidueDet
+import Formalism.LocalToGlobal.IndefiniteReal.OneMapEq
 
 noncomputable section
 

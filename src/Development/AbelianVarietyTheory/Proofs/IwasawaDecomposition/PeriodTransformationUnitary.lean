@@ -1,5 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ToroidalCompactificationData
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsHolPeriods
 open AlgebraicGeometry CategoryTheory NumberField Matrix
 open ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.BasicNotions Formalism.L2.Pj GlobalTheory GlobalTheory.CxPts GlobalTheory.Toroidal GlobalTheory.LieMet GlobalTheory.ShFam
 open Formalism.DegreeFormula Formalism.MJ GlobalTheory.HodgeDomain GlobalTheory.TrueCx
@@ -64,7 +70,7 @@ theorem apply_eq_sum {p : ℕ} {τ : E →+* ℂ} {ρ : Fin p → Fin g} (hρ : 
     h v (ρ a) = ∑ b, h (Pi.single (ρ b) 1) (ρ a) * v (ρ b) := by
   have ev : h v = ∑ k, v k • h (Pi.single k 1) := by
     conv_lhs => rw [pi_eq_sum_univ' v]
-    simp [map_sum, Finset.sum_apply]
+    simp [map_sum]
   have hk : ∀ k, k ∉ Set.range ρ → v k * h (Pi.single k 1) (ρ a) = 0 := fun k hk => by
     have h₁ : ty (ρ a) = τ := (hτ _).2 ⟨a, rfl⟩
     have h₂ : ty k ≠ τ := fun h₃ => hk ((hτ k).1 h₃)

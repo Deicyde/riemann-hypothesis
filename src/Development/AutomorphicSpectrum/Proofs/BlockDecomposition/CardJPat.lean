@@ -1,6 +1,7 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.FiniteTypeHarishChandra.SupportExistsAll
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PatternGroupStatementStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.CoreStatements.FiniteTypeHarishChandra.FiniteDimensionalHcSpace
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open ReciprocityTheory.Ty.Fin
 

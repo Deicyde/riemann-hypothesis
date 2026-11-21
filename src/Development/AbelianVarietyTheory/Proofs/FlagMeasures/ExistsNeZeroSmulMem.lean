@@ -1,6 +1,5 @@
-import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.NGData
-import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.TermLoc
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.LocClosed
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.DataSpaces
 
 open NumberField
 

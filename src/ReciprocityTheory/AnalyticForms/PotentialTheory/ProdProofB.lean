@@ -1,7 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PotentialTheory.ProdProofA
-import ReciprocityTheory.AnalyticForms.PotentialTheory.IntegrableOnTargetOfTsupport
-import ReciprocityTheory.AnalyticForms.PotentialTheory.Partition
 import ReciprocityTheory.AnalyticForms.PotentialTheory.ContDiffAtOfIsPotential
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 namespace ReciprocityTheory.AnForm.M
 

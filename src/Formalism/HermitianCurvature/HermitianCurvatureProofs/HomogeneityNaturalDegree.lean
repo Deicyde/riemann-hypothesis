@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.BigCellVanishingOfCommute
+import Mathlib.Tactic.ENatToNat
 
 open Formalism.FourierDecayAlt Formalism.QuantumDeterminants MvPolynomial
 

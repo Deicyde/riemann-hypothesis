@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsChartSup
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PPolydiscSubmean
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PChartTaylorCover
+import Mathlib.Algebra.Order.Ring.Star
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.HilbertSamuel

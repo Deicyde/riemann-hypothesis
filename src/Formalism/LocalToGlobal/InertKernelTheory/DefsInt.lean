@@ -1,4 +1,5 @@
-import Formalism.LocalToGlobal.InertKernelTheory.StatementInt
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.KernelLattices.LateralTheory
 
 noncomputable section
 

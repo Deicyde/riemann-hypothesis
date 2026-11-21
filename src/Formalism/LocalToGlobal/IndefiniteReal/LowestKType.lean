@@ -1,6 +1,8 @@
-import Formalism.LocalToGlobal.IndefiniteReal.PublishedAut
-import Formalism.LocalToGlobal.IndefiniteReal.SmExpSmulContDiff
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.ExceptionalGroupG2.HarishChandraMultiplicityBound
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.IndefiniteReal.ScalarOnPartsFull
+import Formalism.PeriodIntegrals.UpqRep
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.SmoothDefs
 
 noncomputable section
 

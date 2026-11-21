@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.AxesVanishingStructureSheafDegOne
-import Development.AbelianVarietyTheory.Definitions.AbelianSchemeLaws.IsScalarTowerOfAlgebraMapEq
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.AbelianHodgeDeRham
 open CategoryTheory CategoryTheory.Limits AlgebraicGeometry KaehlerDifferential MonoidalCategory CartesianMonoidalCategory MonObj TensorProduct
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory.CatCoh GlobalTheory.Cris GlobalTheory.CechDR GlobalTheory.AbCoh
 attribute [local instance] Over.cartesianMonoidalCategory
@@ -56,7 +54,7 @@ theorem derivClass_eq : ∀ (R : Type) [CommRing R] (C : Type) [Category.{0} C] 
   rw [hf φ, hf' φ] at key
   have e := congrArg (δ T') key
   simp only [map_sub, map_add, map_sum, LinearMap.map_smul, hnat, hδ, smul_eq_mul] at e
-  simp only [amitsur_d0_apply, map_sub, Submodule.coe_sub, Submodule.coe_sum, Submodule.coe_smul, Finset.sum_apply,
+  simp only [amitsur_d0_apply, map_sub, Submodule.coe_sum, Submodule.coe_smul, Finset.sum_apply,
     Pi.sub_apply, Pi.smul_apply]
   simp only [Algebra.smul_def]
   simp only [mul_comm (algebraMap R _ _)] at e ⊢

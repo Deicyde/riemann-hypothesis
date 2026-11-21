@@ -1,5 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.EqZeroOfForallPowDvd
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
+import Mathlib.Data.Int.Star
 
 set_option autoImplicit false
 

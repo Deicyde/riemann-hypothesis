@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.IsIntOv
 
 namespace GlobalTheory.SplitHecke
@@ -19,7 +20,7 @@ theorem isInt_of_mem_span_basisFun {w : Fin r → K}
     by_cases hij : i = j
     · subst hij
       exact ⟨1, by simp⟩
-    · exact ⟨0, by simp [Pi.basisFun_apply, Pi.single_apply, hij]⟩
+    · exact ⟨0, by simp [Pi.basisFun_apply, hij]⟩
   | zero => exact ⟨0, by simp⟩
   | add x y _ _ hx hy =>
     obtain ⟨a, ha⟩ := hx

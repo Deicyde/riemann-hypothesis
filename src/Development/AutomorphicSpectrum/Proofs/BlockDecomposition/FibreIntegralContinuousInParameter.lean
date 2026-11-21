@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HermitianMeasureData
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LinearlyIndependentFramesOpenStatement
+import BuildAid.Leniency.Open
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.DisintegrationDensityContinuous
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open HeckeCharacterZeroLocus.SiegelWeilU GlobalTheory.CompanionTheory.SW GlobalTheory.CompanionTheory.SW.PiLocalization₂ GlobalTheory.CompanionTheory.SW.StageF GlobalTheory.CompanionTheory.WeilSiegel.Frame GlobalTheory.CompanionTheory.WeilSiegel.Free NumberField IsDedekindDomain MeasureTheory Topology
 open scoped TensorProduct ENNReal NNReal Matrix
 
@@ -41,7 +40,7 @@ theorem continuousOn_fibre_integral_of_subset : ∀ (V X Y : Type) [TopologicalS
       _ ≤ ENNReal.ofReal M := ENNReal.ofReal_le_ofReal ((le_abs_self _).trans (hM b hb))
       _ = (M.toNNReal : ℝ≥0∞) := rfl
   rintro ⟨p₀, b₀⟩ ⟨hp₀, hb₀⟩
-  simp only [Set.mem_prod] at hp₀ hb₀ ⊢
+  simp only at hp₀ hb₀ ⊢
   refine ContinuousAt.continuousWithinAt ?_
   obtain ⟨D, hDn, hDB, hDc⟩ := local_compact_nhds (hB.mem_nhds hb₀)
   obtain ⟨c, hc⟩ := hbd D hDc hDB

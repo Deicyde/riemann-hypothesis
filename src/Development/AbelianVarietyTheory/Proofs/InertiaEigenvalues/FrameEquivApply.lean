@@ -1,9 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.StableIffCarrierEq
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.RelIndexNeZeroOfReps
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.DatumLevelHyperspecialOffFinitePlaces
 import Formalism.LocalToGlobal.IndefiniteReal.TopMult
-import Formalism.LocalToGlobal.GaloisLevelStructure.TiedHecke
+import Formalism.LocalToGlobal.ProjectiveLattices.HalfOneAddSqrtNegIsIntegral
 open Formalism.BasicNotions Formalism.MainNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2 Formalism.L2.Theta Formalism.L2.DIV Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.Lev
   Formalism.AUTREP NumberField IsDedekindDomain GlobalTheory.CoefDuty
 open scoped TensorProduct
@@ -35,7 +36,7 @@ theorem ratF_injective (V : HSp D) : Function.Injective (Bridge.ratF V) := by
       exact Algebra.TensorProduct.includeRight_injective (RingHom.injective _)
     apply hi
     rw [← h3, h1]
-    by_cases hij : i = j <;> simp [Matrix.one_apply, hij]
+    by_cases hij : i = j <;> simp [hij]
   subst h2
   exact Subtype.ext (Subtype.ext (e.symm.trans (map_one _)))
 

@@ -1,5 +1,9 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KFacDifferentiable
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
 open NumberField Complex MeasureTheory
 
 namespace GlobalTheory.HeckeTwo.PhiLine

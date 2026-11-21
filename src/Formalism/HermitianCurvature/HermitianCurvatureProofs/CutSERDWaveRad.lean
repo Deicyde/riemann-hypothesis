@@ -1,8 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.RadialIdentityOfQuadratic
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.LevelCoordinatesCommute
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.InterpolationInverseMatrixSumIdentity
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.HasFDerivAtFsvOther
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.TopTwistDensOfWaveQQ
 
 noncomputable section
 

@@ -1,4 +1,5 @@
-import Development.WeilBound.CoreStatements.SesquilinearFractions.EqZeroOfCoef
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.SesquilinearFractions.PureTypeLatticesOrthogonal
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.ExistsEqSmulOfFinrankOne
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField

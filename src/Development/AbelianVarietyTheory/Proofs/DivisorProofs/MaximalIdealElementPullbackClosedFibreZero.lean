@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.DenseInterior
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CechGluingOfKodairaSpencerRelation
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TranslateUnique
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open AlgebraicGeometry CategoryTheory Limits NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.LogKS Formalism.L2.Pj
 
@@ -50,7 +49,7 @@ theorem fibre_scalar_zero : ∀ (E : Type) [Field E] [NumberField E] [IsCMField 
     exact U.2.fromSpec_preimage_self.ge (Set.mem_univ _)
   have hz : (g.appLE U.1 ⊤ e5).hom r = 0 := by
     have h := congrArg (fun φ => φ.hom r) (spMap_chart_appLE_top U m e5)
-    simp only [CommRingCat.comp_apply, CommRingCat.hom_ofHom, Ideal.Quotient.eq_zero_iff_mem.mpr hr] at h
+    simp only [CommRingCat.hom_ofHom, Ideal.Quotient.eq_zero_iff_mem.mpr hr] at h
     have hinj : Function.Injective (Scheme.ΓSpecIso (CommRingCat.of (Γ(X, U.1) ⧸ m))).hom.hom :=
       (ConcreteCategory.bijective_of_isIso (Scheme.ΓSpecIso (CommRingCat.of (Γ(X, U.1) ⧸ m))).hom).1
     exact hinj (h.trans (map_zero _).symm)

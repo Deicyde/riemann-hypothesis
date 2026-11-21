@@ -1,5 +1,8 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.ProIsoAt
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
 open NumberField TensorProduct GlobalTheory.CompanionTheory.Ar
 
 namespace PositivityTheory.UnitarySelfGeneration

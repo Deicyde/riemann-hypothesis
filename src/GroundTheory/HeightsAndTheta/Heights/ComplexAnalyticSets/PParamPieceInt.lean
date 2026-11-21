@@ -1,8 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StParamPieceInt
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PSheetSumMeasurable
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.OsgoodSeparate
 import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.LintegralImageEqLintegralNormSqDetMul
+import Mathlib.Analysis.Calculus.FDeriv.Pi
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

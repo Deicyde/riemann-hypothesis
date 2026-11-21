@@ -1,7 +1,7 @@
-import Mathlib
-import Formalism.PeriodIntegrals.QmDefs
 import Formalism.PeriodIntegrals.QmColExp
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ExponentialFirstColumn.FirstColumnSplitBijective
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 private theorem bijective_cycleRange_symm_mul_decomposeFin_symm (t : ℕ) :
     Function.Bijective (fun p : Fin (t + 1) × Equiv.Perm (Fin t) =>
@@ -40,7 +40,7 @@ private theorem sign_cycleRange_symm_mul_decomposeFin_mul_finRotate (t : ℕ) (l
       = (-1) ^ (t + (l : ℕ)) * (Equiv.Perm.sign τ : ℤ) := by
   rw [Equiv.Perm.sign_mul, Units.val_mul, sign_cycleRange_symm_mul_decomposeFin_symm, sign_finRotate]
   simp only [Units.val_pow_eq_pow_val, Units.val_neg, Units.val_one,
-    add_tsub_cancel_right, add_tsub_cancel_left]
+    add_tsub_cancel_right]
   ring
 
 private theorem qminor_eq_sum_expand_first_column {A : Type} [Ring A] [Algebra ℂ A] (n t : ℕ) (E : Fin n → Fin n → A)

@@ -1,4 +1,7 @@
-import Formalism.LocalToGlobal.ProjectiveLattices.CurveOpen
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.ProjectiveLattices.CurveComp
+import Formalism.LocalToGlobal.ProjectiveLattices.RecPJThAllNeBot
 
 noncomputable section
 

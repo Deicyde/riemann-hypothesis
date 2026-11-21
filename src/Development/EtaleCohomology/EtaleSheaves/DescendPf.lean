@@ -1,4 +1,5 @@
-import Development.EtaleCohomology.EtaleSheaves.StrictHenselColimits.ColimOf
+import BuildAid.Leniency.Open
+import Development.EtaleCohomology.EtaleSheaves.StrictHenselColimits
 
 noncomputable section
 open CategoryTheory Limits LateralTheory.E.t_E3Cut

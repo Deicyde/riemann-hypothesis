@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.HodgeWedgeFields.H1CommutesBaseChange
+import Mathlib.AlgebraicTopology.SimplexCategory.Basic
+import Std.Tactic.BVDecide.Normalize.BitVec
 
 set_option autoImplicit false
 
@@ -43,7 +46,7 @@ theorem sum_pairs {M : Type} [AddCommGroup M] (n : ℕ) (T : Fin (n + 3) → Fin
         else (p.1.succ, p.2.castSucc)) ?_ ?_ ?_ ?_
     · rintro ⟨i, j⟩ -
       simp only [Finset.mem_filter, Finset.mem_univ, true_and]
-      split_ifs with h <;> simp [Fin.ext_iff, Fin.le_def, Fin.lt_def] at h ⊢ <;> omega
+      split_ifs with h <;> simp [Fin.ext_iff, Fin.le_def] at h ⊢ <;> omega
     · rintro ⟨i, j⟩ - ⟨i', j'⟩ - h
       simp only at h
       split_ifs at h with h₁ h₂ h₂ <;>
@@ -157,7 +160,7 @@ theorem homotopy (n : ℕ) (f : Cn (Cyl G) (n + 1)) :
       refine lab_comp _ _ _ fun x ↦ ?_
       have h' : j.val < i.val := h
       rw [val_succAbove]
-      simp only [Fin.val_castSucc, Fin.val_succ]
+      simp only [Fin.val_succ]
       split_ifs <;> omega
     have s : ((-1 : R) ^ ((i : ℕ) + 1 + (j : ℕ))) = -(-1) ^ ((i : ℕ) + (j : ℕ)) := by
       rw [show (i : ℕ) + 1 + (j : ℕ) = (i : ℕ) + (j : ℕ) + 1 by omega, pow_succ]; simp

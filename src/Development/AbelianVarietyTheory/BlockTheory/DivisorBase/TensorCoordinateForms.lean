@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.ThetaSupremumBounds.StatementE
+import Mathlib.Analysis.InnerProductSpace.Adjoint
 
 open Finset
 open scoped ComplexConjugate Real

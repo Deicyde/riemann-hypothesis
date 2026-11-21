@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.Statements
+import Mathlib.Geometry.Manifold.PartitionOfUnity
+import Mathlib.Topology.Algebra.MvPolynomial
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

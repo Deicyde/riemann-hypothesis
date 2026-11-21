@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.BruhatCellsKronecker.FamilyExponentOfFormalDegree
 import Formalism.SharpRestriction.CuspSpanNormBounds.BruhatCellsKronecker.CriticalLevelLowOfRefined
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BetaFactorisation
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CmRingIdempotentUnitRatioIdentity
 import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
 

@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.WeightedHomogeneous.StatementsIntDim
 import GroundTheory.HeightsAndTheta.Heights.WeightedHomogeneous.IntDimBounds
 

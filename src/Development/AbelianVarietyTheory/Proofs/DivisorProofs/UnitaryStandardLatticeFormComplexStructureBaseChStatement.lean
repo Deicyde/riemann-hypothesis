@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryStandardLatticeFormComplexStructureBaseCh
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BasisApply
 open NumberField
 open scoped TensorProduct
 set_option maxHeartbeats 1000000 in

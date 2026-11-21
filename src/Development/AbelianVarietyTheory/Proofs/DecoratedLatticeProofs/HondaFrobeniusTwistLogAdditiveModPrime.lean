@@ -1,8 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.EndOmega
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.SubstCongrModPrimeOfIntegralDerivativeStatement
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.PowPrimePowSubFrobeniusTwistNormLeStatement
 import Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.BinomialSeriesCoefficients.Points
+import Mathlib.RingTheory.PowerSeries.Expand
 
 open PowerSeries GlobalTheory.Honda
 

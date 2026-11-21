@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.IsAdmissibleFlagPairOfUnitriangularLeftAutomorph
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.KernelLattices.LateralTheory
 
 noncomputable section
 open NumberField Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Ker Formalism.L2.Th1.H

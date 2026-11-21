@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.IsCplAtSelf
-import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.IsRegularOfSupportDimQuotientAddLengthLe
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.CaCplReg
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.CaCplMap
+import Mathlib.Tactic.ENatToNat
 
 open IsLocalRing UpperTheory.V.AlgebraTools
 

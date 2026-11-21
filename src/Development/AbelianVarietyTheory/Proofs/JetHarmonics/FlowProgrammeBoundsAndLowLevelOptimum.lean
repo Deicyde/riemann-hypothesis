@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.CharacterGerms.ValuationChoiceHypothesis
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.MulFlowValLe
 import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.DropLevelsBasic
 import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.LevelsUsedBalancedValueOrbitSums

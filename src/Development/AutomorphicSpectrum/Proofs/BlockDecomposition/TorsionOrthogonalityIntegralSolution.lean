@@ -1,16 +1,10 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsLatIntVec
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.TsumCompBoundedFibresLeStatement
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DeltaEqLatticeIndexStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LamIsLatticeStatement
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LatticeQuotientTorsionNonzeroStatement
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.TorsionCardLeAbsNormPowStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MemLatticeOfDualPairingStatement
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DenominatorIndexBoundStatement
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DenominatorNormQuadraticExtensionStatement
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IdealPrincipalElementNormBoundStatement
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RelativeNormCmAbsNormStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CmConjugationPropertiesStatement
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HermOf
+import Mathlib.RingTheory.PiTensorProduct
 open NumberField Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.CompanionTheory.SiegelND.Integ.Hua GlobalTheory.CompanionTheory.SiegelND.Integ.Hua.HS
 open scoped Matrix
 
@@ -72,7 +66,7 @@ theorem sO_mem_tor (σ : E →ₐ[F] E) (hinv : ∀ x, σ (σ x) = x)
       by_cases h : i = j
       · subst h
         exact ⟨1, by simp⟩
-      · exact ⟨0, by simp [Pi.single_apply, h]⟩
+      · exact ⟨0, by simp [h]⟩
     have hent : ∀ j, ∃ o : 𝓞 E, algebraMap (𝓞 E) E o = a' j := by
       intro j
       have h1 := hL _ (Submodule.mem_sup_left (hstd j) : _ ∈ lam c)
@@ -89,7 +83,7 @@ theorem sO_mem_tor (σ : E →ₐ[F] E) (hinv : ∀ x, σ (σ x) = x)
       obtain ⟨p, hp⟩ := h1
       refine ⟨p, ?_⟩
       rw [hp]
-      simp [dotProduct, Matrix.mulVec_single_one, Matrix.col_apply]
+      simp [dotProduct, Matrix.col_apply]
     have hy : (fun j => sO σ (o j)) ∈ Kc c := by
       intro i
       obtain ⟨p, hp⟩ := hcol i

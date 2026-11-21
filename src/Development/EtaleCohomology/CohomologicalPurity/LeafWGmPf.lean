@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.CohomologicalPurity.LeafWEqvLPf
+import Mathlib.AlgebraicGeometry.Morphisms.SchemeTheoreticallyDominant
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import Mathlib.RingTheory.TotallySplit
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry Opposite GlobalTheory.EtC

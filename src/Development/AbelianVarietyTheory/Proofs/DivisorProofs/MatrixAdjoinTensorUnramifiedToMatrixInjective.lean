@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolySubComm
 open Matrix GlobalTheory.LKRes GlobalTheory.LKMid
 open scoped TensorProduct

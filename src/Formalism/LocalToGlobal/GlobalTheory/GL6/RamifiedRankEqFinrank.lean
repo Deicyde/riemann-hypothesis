@@ -1,5 +1,7 @@
-import Formalism.LocalToGlobal.GlobalTheory.GL6.Statement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LogVandermondeBounds.LogVandermondeProofs.MulSingleMulApplySelf
+import Formalism.SharpRestriction.GlobalSchurBounds.ProductFirstZerothParts
 
 noncomputable section
 

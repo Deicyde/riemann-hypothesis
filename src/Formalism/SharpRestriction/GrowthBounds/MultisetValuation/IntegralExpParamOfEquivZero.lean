@@ -1,6 +1,7 @@
-import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.DworkExponentialRestrictions
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.PositivityConditionHolds
-import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.FinalS
+import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.SubstitutionOfVariables
 
 noncomputable section
 

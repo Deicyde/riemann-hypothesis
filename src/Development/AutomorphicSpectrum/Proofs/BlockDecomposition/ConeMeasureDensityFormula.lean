@@ -1,5 +1,4 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.ArchimedeanGelfandKernels.LeftEquivariantFunctions.SymZeroCommFrame
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ConeMeas
 open MeasureTheory Matrix Topology Filter
 open scoped ContDiff ENNReal ComplexOrder Pointwise

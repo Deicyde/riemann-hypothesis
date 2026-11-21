@@ -1,9 +1,9 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeDeformations.IsCharZeroPt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeDeformations.CanonMap
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeDeformations.CanonEx
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeDeformations.TriCanon
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeDeformations.MapDiagonalRepMatrixEq
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.CoQuot
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.UnivEx
 
 open Matrix IsLocalRing ReciprocityTheory.Gal UpperTheory.V.U3 UpperTheory.V.Alg UpperTheory.V.UnitaryThreeInertia
@@ -111,8 +111,8 @@ private theorem conj_push {D : Type} [Group D] (r : D →* GG 3 R) (h : GL (Fin 
     (conjBy (GeneralLinearGroup.map (f : R →+* R') h)⁻¹ (UnitaryThreeInertia.push f r) g).mat a b = f ((conjBy h⁻¹ r g).mat a b) := by
   have e : conjBy (GeneralLinearGroup.map (f : R →+* R') h)⁻¹ (UnitaryThreeInertia.push f r) g =
       GG.map (f : R →+* R') (conjBy h⁻¹ r g) := by
-    simp only [conjBy, UnitaryThreeInertia.push, MonoidHom.comp_apply, MulEquiv.coe_toMonoidHom, MulAut.conj_apply, map_mul,
-      map_inv, inv_inv]
+    simp only [conjBy, UnitaryThreeInertia.push, MonoidHom.comp_apply, MulEquiv.coe_toMonoidHom,
+      map_inv]
     simp [GG.map, SemidirectProduct.map_inl]
   rw [e, GG.map_mat]
   rfl
@@ -279,7 +279,7 @@ private theorem cut_N {D : Type} [Group D] (c g : D) (r : D →* GG 3 R) :
   have hm : ∀ x, (UnitaryThreeInertia.push f r x).mat = (r x).mat.map f := fun x => GG.map_mat _ _
   have hz : ∀ a b, zmat c g (UnitaryThreeInertia.push f r) a b = f (zmat c g r a b) := by
     intro a b
-    simp [zmat, hm, Matrix.sub_apply, map_sub]
+    simp [zmat, Matrix.sub_apply, map_sub]
   have hone : ∀ a b, f ((1 : Matrix (Fin 3) (Fin 3) R) a b) = (1 : Matrix (Fin 3) (Fin 3) R') a b := by
     intro a b
     rw [Matrix.one_apply, Matrix.one_apply]

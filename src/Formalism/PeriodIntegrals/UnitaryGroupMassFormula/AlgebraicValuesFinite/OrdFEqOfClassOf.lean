@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AlgebraicValuesFinite.ClassSame
+import Mathlib.NumberTheory.NumberField.ClassNumber
+import ReciprocityTheory.NeutralLocalFields.LocalFieldComparison.HCFFromRecipA
 
 noncomputable section
 

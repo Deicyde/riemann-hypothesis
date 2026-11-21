@@ -1,10 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsPerturb
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsGenericFibreVar
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsGeneratedOne
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsGeneratedMixedNonneg
 import GroundTheory.HeightsAndTheta.Heights.FieldsOfNumbers.Assembly
-import GroundTheory.HeightsAndTheta.Heights.FieldsOfNumbers.PDivPrincipalDegree
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.HilbertSamuel

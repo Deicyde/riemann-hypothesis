@@ -1,7 +1,7 @@
-import Mathlib
-import ReciprocityTheory.CommutativeAlgebra.ChainConnInDim
-import ReciprocityTheory.CommutativeAlgebra.SaturatedChains.IsSaturatedChain
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.ConnectedPrimeFields.IsWeaklyRegularPairModOneLeft
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Tactic.Polynomial.Basic
 
 open IsLocalRing UpperTheory.V.AlgebraTools.Conn
 

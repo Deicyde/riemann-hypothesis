@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.LocalAtPlaces
-import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.StatementsFlagIndependence
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.PEventualValueFacts
+import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.BundleObjects
+import Mathlib.Topology.Sheaves.Presheaf
 
 open MvPolynomial GroundTheory.Heights₂.Heights.NumbersDVR GlobalTheory.CompanionTheory.Ar.Num GlobalTheory.CompanionTheory.Ar.Top GroundTheory.Heights₂.Heights.ModelLeaves
 open ReciprocityTheory.ChartRestriction.G.Geo (HermLine IsSmoothHerm IsArithVar IsHorizontal mcPts mCoordIdeal IsIntersectionFamily IsIntersectionSystem IntersectionSystem ptsIntegral geoNum charOf recR arInt ChartBundle chartRing)
@@ -85,7 +86,7 @@ theorem weight_eq_sum (d : (Σ k, ι k) →₀ ℕ) (k : K) :
     Fintype.sum_sigma, Finset.sum_eq_single k]
   · simp [blockWeight]
   · intro k' _ hk
-    simp [blockWeight, Pi.single_apply, hk, hk.symm]
+    simp [blockWeight, hk.symm]
   · intro h1
     exact absurd (Finset.mem_univ k) h1
 

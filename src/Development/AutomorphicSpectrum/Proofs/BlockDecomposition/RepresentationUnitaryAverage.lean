@@ -1,10 +1,16 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.InfinitesimalCharacterLimits.InfinitesimalCharacterGlue
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.T2SpaceAdelicGeneralLinearGroupNumberField
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ContinuousOfIsOpenStab
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SelfMemSpanK
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SquareIntegrableSmoothSubmoduleGL
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.AdmissibleDiscreteSpaces
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.Analysis.CStarAlgebra.Module.Constructions
+import Mathlib.RepresentationTheory.Basic
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.ReduceModChar
 
 open scoped Classical InnerProductSpace ComplexConjugate
 open NumberField IsDedekindDomain Matrix MeasureTheory Filter Topology
@@ -132,7 +138,7 @@ lemma end_coeff_continuous {M : Type} [AddCommGroup M] [Module ℂ M]
           rw [← h1]
       _ = _ := by
           rw [h2, map_sum]
-          simp [LinearMap.single_apply]
+          simp
   simp only [key]
   refine continuous_finset_sum _ fun i _ => ?_
   obtain ⟨ℓ', hℓ'⟩ := LinearMap.exists_extend (c ∘ₗ LinearMap.single ℂ (fun _ : Fin (Module.finrank ℂ A) => (A : Type)) i)

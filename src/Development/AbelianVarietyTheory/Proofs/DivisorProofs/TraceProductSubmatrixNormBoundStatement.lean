@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TraceProductSubmatrixNormBound
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WirtConst
 open Matrix GlobalTheory.MatDeriv
 open scoped Topology
 

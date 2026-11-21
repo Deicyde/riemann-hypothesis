@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.SphericalCommutative
 import GroundTheory.AutomorphicForms.InductionParabolic
+import GroundTheory.AutomorphicForms.HeckeIrreducible
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
 
 noncomputable section
 

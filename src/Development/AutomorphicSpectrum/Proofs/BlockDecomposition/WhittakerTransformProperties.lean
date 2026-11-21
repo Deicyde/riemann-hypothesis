@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CstD
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.TransposeInverseLocal
 
@@ -23,7 +23,7 @@ theorem ti_ti {R : Type*} [CommRing R] {n : Type*} [Fintype n] [DecidableEq n] (
 theorem rational_sign_diag_adelic : dia dl3 = (dg 1 (-1) 1 : GL (Fin 3) 𝔸[ℚ]) := by
   apply Units.ext
   ext i j
-  fin_cases i <;> fin_cases j <;> simp [dl3, dg, AdelicGLn.diagonal]
+  fin_cases i <;> fin_cases j <;> simp [dl3, dg]
 
 theorem conj_uni {R : Type*} [CommRing R] (x y z : R) :
     w3 * ti (dg 1 (-1) 1 : GL (Fin 3) R) * ti (uni x y z) =

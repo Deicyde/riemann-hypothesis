@@ -1,8 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsSubquotientDetRepParInd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.IsHilbertSchmidtOfFiniteDimensional
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsInvariantForm
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.InductionContragredient
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
 
 noncomputable section
 

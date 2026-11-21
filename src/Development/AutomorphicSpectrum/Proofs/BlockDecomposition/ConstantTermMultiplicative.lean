@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.SatakeExponents.UniformizerValuations.MatchT
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.UnitaryLevelSubgroupProperties
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HintConstMulSum
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ConstantTermConvolutionHeckeStatement
 
 open NumberField IsDedekindDomain Matrix Polynomial Filter
@@ -85,7 +84,7 @@ theorem ordL_neg_one (w : Pl E) : ordL ((-1 : (w.adicCompletion E)ˣ) : w.adicCo
     simp
   unfold ordL
   rw [dif_neg (by rw [h1]; exact one_ne_zero)]
-  simp [h1]
+  simp
   rfl
 
 theorem twist_mul (a b : ℕ) (w : Pl E) (μ : (w.adicCompletion E)ˣ →* ℂˣ)

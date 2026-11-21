@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGermTop
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.TopCore
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.IsCompactRoots
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.OneSubPowLe
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.StandardPairingDecay
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.WeightProductGermIndep
 
 namespace Formalism.FourierDecayAlt.P.CutBP.GT
 
@@ -112,7 +116,7 @@ theorem const_match1 (k r : ℕ) (TT : ℝ) (b s : ℕ) (hb : 1 ≤ b) (hs : 2 �
     have hD' : ‖d0‖ ≠ 0 := norm_ne_zero_iff.2 hD
     rw [hn, Real.sqrt_mul (mul_nonneg hN0 (by positivity)), Real.sqrt_mul hN0, pow_mul,
       Real.sqrt_sq (by positivity), norm_inv, norm_mul, norm_pow, mul_pow]
-    simp only [inv_pow, inv_inv]
+    simp only [inv_pow]
     field_simp
     ring
   · have hsz3 : FourierDecayAlt.D.ptSize h = c := hsz

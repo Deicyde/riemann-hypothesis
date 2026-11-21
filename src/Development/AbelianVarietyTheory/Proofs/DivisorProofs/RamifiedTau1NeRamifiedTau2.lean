@@ -1,13 +1,8 @@
-import Mathlib
-import Formalism.SharpRestriction.Divisibility.LocalQuadraticParts
-import Formalism.SharpRestriction.GrowthBounds.WeilJacquetShalikaLaw
-import Formalism.SharpRestriction.GlobalSchurBounds.MainIn
-import Formalism.QuotientMetricDivisors.FinalW
-import Formalism.QuotientMetricDivisors.SixthReductionExplicit
-import Formalism.LocalRingCardinality.CoeNeZeroOfNotMem
-import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockDegreeGapBound
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemHeightOneIdealIffAdditiveValuationPos
+import Formalism.SharpRestriction.ParamsHeightRankConstant
 
 open Formalism.BasicNotions Formalism.BasicNotions.DV Formalism.MainNotions NumberField Classical
 

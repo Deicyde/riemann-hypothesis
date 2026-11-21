@@ -1,4 +1,12 @@
+import BuildAid.Leniency.Open
 import Formalism.PadicSubsetSums.CentralIdempotents.PrimitiveRootFifteenSubOneUnit
+import Mathlib.LinearAlgebra.Charpoly.ToMatrix
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open Polynomial
 
@@ -25,7 +33,7 @@ theorem charpolyFactorAnnihilator : CharpolyFactorAnnihilator := by
         Matrix.diagonal (fun _ => c) := by
       simp only [gB, map_smul, LinearMap.toMatrix_id]
       ext i j
-      by_cases h : i = j <;> simp [h, Matrix.one_apply]
+      by_cases h : i = j <;> simp [h]
     rw [hm, Matrix.charpoly_diagonal, Finset.prod_const, Finset.card_univ, Fintype.card_fin, ht]
   have hPA : P = gA.charpoly := by
     have h1 : γ₀.charpoly = gA.charpoly * gB.charpoly := by

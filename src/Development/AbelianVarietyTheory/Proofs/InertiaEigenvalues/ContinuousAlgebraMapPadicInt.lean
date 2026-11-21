@@ -1,7 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.GaloisSideTwistedSelmerAuxiliaryPrimes
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsTameGenAtOfValuationSubring
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ContinuousCohomologyVanishesOfPrimeToLNormalNoInStatement
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsTameInertiaElementAtTwistPrime
+import Mathlib.LinearAlgebra.Matrix.CharP
+import Mathlib.Topology.Connected.Separation
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.BasicNotions Formalism.MainNotions.BlochKatoReduction.Gen GlobalTheory.TwSys
 open scoped TensorProduct Pointwise
 
@@ -405,7 +408,7 @@ theorem exists_inertia (bkP : BKPh X) (i : X.Tw) (s : X.Sig i) (h : GalHyp bkP i
     rw [← IsLocalRing.residue_ne_zero_iff_isUnit, RingHom.map_det]
     convert hd using 2
     ext a b
-    by_cases hab : a = b <;> simp [rbar, Matrix.one_apply, hab]
+    by_cases hab : a = b <;> simp [rbar, hab]
   · have hg' : ∀ k, v ∉ placesOver D.host.E (D.host.g k) := fun k hk => hg ⟨k, hk⟩
     have hp : v ∈ X.pD i := by
       rcases hv1 with h1 | h1

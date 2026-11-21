@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AutomorphicArithmetic.LocalEmbeddings.ValCount
-import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.ExistsValuationSubringDominatingSubring
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.JGenSpecializes
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.DivisorFrames.ValuationRingOfFiniteDominating
 import Development.AutomorphicArithmetic.DivisorFrames.OrderEqValuationCodimOne
 import Development.AutomorphicArithmetic.DivisorFrames.ResidueDegreeEqValuationDegree

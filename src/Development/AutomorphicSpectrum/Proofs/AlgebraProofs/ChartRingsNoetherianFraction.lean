@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.IsLatticeFamily
-import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.BundleChernComparison
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.HodgeTatePoints.HcptgenRing
+import Mathlib.RingTheory.PicardGroup
 
 noncomputable section
 

@@ -1,8 +1,9 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.ThShort
-import Development.AbelianVarietyTheory.Counterexamples.LevelGroupExamples.ZeroNotAdmissibleOfRankPos
-import Development.AbelianVarietyTheory.Definitions.SpanningFamilies.IsStabForm
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.ExistsQuotEquiv
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.RingTheory.PicardGroup
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.FundamentalDomainPointBound
 
 noncomputable section
 

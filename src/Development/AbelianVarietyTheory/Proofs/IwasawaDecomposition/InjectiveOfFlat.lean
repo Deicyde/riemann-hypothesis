@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HomExtNormalSt
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.IsIsoNearNormalPointOfFiniteBirational
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MorphismExtensionFromGenericPointStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SpecMorphismEqOfLocalInjectiveStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsDominantGenericStalkOpenStatement
@@ -99,7 +98,7 @@ theorem extAtSt : ExtAtSt := by
     · simp only [eO, Category.assoc, hh₀S, Scheme.homOfLE_ι_assoc, hg, reassoc_of% huO]
     · have h3 : ι ≫ eO ≫ X'.homOfLE inf_le_right = jK A ≫ V₀.fromSpecStalkOfMem x' hxV₀ := by
         rw [← cancel_mono V₀.ι]
-        simp only [eO, η₀, Category.assoc, Scheme.homOfLE_ι, Scheme.homOfLE_ι_assoc, reassoc_of% hι, hι, Scheme.Opens.fromSpecStalkOfMem_ι]
+        simp only [eO, η₀, Category.assoc, Scheme.homOfLE_ι, hι, Scheme.Opens.fromSpecStalkOfMem_ι]
       have h4 : ι ≫ uO = u₀ := by
         rw [← cancel_mono j, Category.assoc, huO, reassoc_of% hι, hu₀]
       rw [reassoc_of% h3, ← hh₀, hψ₁, reassoc_of% h4]

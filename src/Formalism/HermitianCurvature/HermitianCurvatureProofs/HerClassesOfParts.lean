@@ -1,7 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.TopDensNonnegOfKappa
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.ThmPActualFromInputs
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.HasFDerivAtFsvOther
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.HsInnerAddSmulRight
 
 open MeasureTheory
 

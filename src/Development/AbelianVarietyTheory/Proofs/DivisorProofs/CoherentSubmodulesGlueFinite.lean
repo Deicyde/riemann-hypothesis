@@ -1,9 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.FaithfulSMulAlgClosure
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemRingOver
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PiMapMemLocalSpan
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoherentSubmoduleSectionsAffineStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ProjectiveLatticeLocalBasisStatement
+import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.ExistsUniqueLbIsoPullEqOfCoheightLeOne
 
 set_option autoImplicit false
 

@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.EisensteinCokernelLengths.CokernelLengthBoundOfLifts
 import Formalism.FrobeniusContraction.FrobeniusContractionProofs.LenBound
+import Mathlib.Topology.Sheaves.Presheaf
 
 namespace Formalism.ZetaNonvanishing.EisensteinCokernelLengthsFacts.FactorialValuationBoundsFacts
 open Formalism.WachCohomologyFacts

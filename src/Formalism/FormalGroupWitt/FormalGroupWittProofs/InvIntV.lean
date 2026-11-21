@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.FormalGroupWitt.SubstInjectiveV
 import Formalism.FormalGroupLog.FormalGroupLogProofs.ChainRule
+import Mathlib.Tactic.ENatToNat
 
 noncomputable section
 
@@ -105,7 +108,7 @@ theorem eq_single_of_degree_eq_one {ι : Type*} [Fintype ι] (e : ι →₀ ℕ)
       rw [hi, Finset.mem_singleton] at hmem
       exact hj hmem
     rw [hz]
-    simp [Finsupp.single_apply, Ne.symm hj]
+    simp [Ne.symm hj]
 
 theorem decomp {σ : Type*} [Fintype σ] [LinearOrder σ] (m : ℕ) (x : MvPowerSeries σ K)
     (hx : Low (m + 1) x) :

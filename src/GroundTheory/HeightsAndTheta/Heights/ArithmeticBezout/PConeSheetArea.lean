@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.StatementsConeSheetAreaLintegral
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.PConeChartArea
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterFib
+import Mathlib.Analysis.Matrix.PosDef
 set_option maxSynthPendingDepth 1
 
 noncomputable section

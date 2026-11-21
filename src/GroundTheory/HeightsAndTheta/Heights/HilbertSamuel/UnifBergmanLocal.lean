@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsBergman
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.BergmanNorms
+import Mathlib.Tactic.Monotonicity.Lemmas
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.HilbertSamuel

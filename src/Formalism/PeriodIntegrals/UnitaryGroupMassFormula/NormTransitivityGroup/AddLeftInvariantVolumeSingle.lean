@@ -1,6 +1,7 @@
-import Mathlib
-import Formalism.PeriodIntegrals.NormTransG
-import Formalism.PeriodIntegrals.HeisNorm
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.PeriodIntegrals.HeisDefs
+import Mathlib.Analysis.CStarAlgebra.Classes
 
 open MeasureTheory
 

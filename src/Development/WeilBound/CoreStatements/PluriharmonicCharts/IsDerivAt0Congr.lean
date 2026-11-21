@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.OmHeightslockG
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PluriharmonicCharts.ChartPeriods
 import Development.WeilBound.CoreStatements.PluriharmonicCharts.ExistsIsDerivAt0Loc
+import Development.AutomorphicSpectrum.Proofs.GeometryProofs.GlobalPairSumGramBound
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Flat

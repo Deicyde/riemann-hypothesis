@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIntMatrixTransposeMulEqSmulOne
+import Mathlib.Analysis.Matrix.Order
+import Mathlib.RingTheory.TotallySplit
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Matrix Kronecker
 

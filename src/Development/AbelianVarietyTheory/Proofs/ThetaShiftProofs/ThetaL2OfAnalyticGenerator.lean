@@ -1,10 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.ArchimedeanThetaValues.IsThetaL2NormSquared
-import Development.AbelianVarietyTheory.Definitions.RegularCharts.ModelAt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.UnifUniqSt
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExpMulThetaCharAutomorphy
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsFundamentalDomainMeanNormSqThetaChar
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ThetaCharHalfDifferentiableNeZeroFamilies
+import Mathlib.Analysis.Convex.Contractible
 
 open AlgebraicGeometry CategoryTheory CategoryTheory.Limits NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.FD Formalism.L2.Pj Formalism.L2.PjFree Formalism.L2.Pj.QAt GlobalTheory.ArcQ GlobalTheory.Frames
@@ -61,7 +60,7 @@ theorem mulVec_period {g : ℕ} {La : Type} [AddCommGroup La] (P : La →+ (Fin 
       funext i; by_cases hi : i = k <;> simp [Pi.single_apply, hi]
     · have := (per k).2
       have e : (fun i => ((Pi.single (Sum.inr k) 1 : Fin g ⊕ Fin g → ℤ) (.inr i) : ℂ)) = Pi.single k 1 := by
-        funext i; by_cases hi : i = k <;> simp [Pi.single_apply, hi]
+        funext i; by_cases hi : i = k <;> simp [hi]
       change h *ᵥ (P (bas (Pi.single (.inr k) 1))) = (fun i => ((Pi.single (Sum.inr k) 1 : Fin g ⊕ Fin g → ℤ) (.inl i) : ℂ)) + τ *ᵥ (fun i => ((Pi.single (Sum.inr k) 1 : Fin g ⊕ Fin g → ℤ) (.inr i) : ℂ))
       rw [this, e]
       funext i; simp

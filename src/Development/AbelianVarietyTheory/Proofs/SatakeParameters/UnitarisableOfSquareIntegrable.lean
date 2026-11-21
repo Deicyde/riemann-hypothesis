@@ -1,9 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.IsTemperedCoeff
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.IsComplementaryProductOfIsCuspidal
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.SmoothContragredientIrreducibleAndReflexive
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsOpenNormalisedSubgroupSubset
-import Development.AbelianVarietyTheory.Definitions.Divisors.T2SpaceGeneralLinearGroup
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.AlgebraMapIntertwiningMapBijectiveOfIsSmooth
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.GlHomNnrealTrivialOfScalarTrivialStatement
 open GlobalTheory.PRep GlobalTheory.SmGL GlobalTheory.LocGL
@@ -119,7 +118,7 @@ theorem main : ∀ (k : Type) [Field k] [ValuativeRel k] [TopologicalSpace k] [I
     intro v w x
     obtain ⟨g, rfl⟩ := QuotientGroup.mk_surjective x
     rw [hΦ, hF1, hF1]
-    simp [f, norm_mul]
+    simp [f]
   have hint : ∀ v w, Integrable (Φ v w) μ := by
     intro v w
     refine Integrable.mono' ((hF2 v).integrable_mul (hF2 w)) (hΦc v w).aestronglyMeasurable

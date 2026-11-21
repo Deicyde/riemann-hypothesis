@@ -1,10 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsRealFam
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsCombAt
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.CuspAlongSmoothRows
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlatIntegrableAaVacOfConductor
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsMemValuationEq
+import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RealLineOfPeriodsOnLine
 
 noncomputable section
 
@@ -54,7 +53,7 @@ theorem exists_mul_of_cellVan (hV : CellVan) {ι : Type} [DecidableEq ι] {H : �
       intro a ha ha1
       obtain ⟨e, he⟩ := h6 a ha ha1
       simp only [Fin.sum_univ_two, he]
-      simp only [Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons]
+      simp only [Matrix.cons_val_zero, Matrix.cons_val_one]
       linear_combination e * hrel)
   simpa [Fin.sum_univ_two] using key
 

@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.RigidForFan
-import Development.AbelianVarietyTheory.Definitions.ArchimedeanThetaValues.PsiWeightZeroLinearCombination
 
 set_option autoImplicit false
 
@@ -224,7 +224,7 @@ def tang : A →+* DualNumber ℚ := RingHom.comp
           | (simp [PowerSeries.coeff_zero_eq_constantCoeff]; done)
           | (simp [PowerSeries.coeff_zero_eq_constantCoeff]; ring)
     map_zero' := by ext <;> simp
-    map_add' := fun f g => by ext <;> simp [add_add_add_comm] } PowerSeries.constantCoeff
+    map_add' := fun f g => by ext <;> simp } PowerSeries.constantCoeff
 
 theorem tang_tt : tang tt = 0 := by ext <;> simp [tang]
 

@@ -1,14 +1,13 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.LocWSOf
 import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.QuotMeasExists
 import Formalism.SharpRestriction.CuspSpanNormBounds.BridgeLemma3
 import Formalism.SharpRestriction.CuspSpanNormBounds.BridgeCSB
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ConjugationInvarianceEverySetting
 import Formalism.SharpRestriction.CuspSpanNormBounds.NonemptyParameterModels.TopsChoicePartA
-import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.QuotSetU
 import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.BesselFrame
 import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.InHHDef
-import Formalism.SharpRestriction.CuspSpanNormBounds.NonemptyParameterModels.NumericSettingWithGapSatisfiable
 
 noncomputable section
 
@@ -699,7 +698,7 @@ theorem torS_single (μ : ℂ) (i : Fin (2 * r + k + 1)) :
   rw [Matrix.mulVec_diagonal]
   by_cases h : j = i
   · subst h; simp
-  · simp [Pi.single_apply, h]
+  · simp [h]
 
 end Tor
 
@@ -925,7 +924,7 @@ theorem star_single_dot {N : ℕ} (i : Fin N) (w : Fin N → ℂ) : star (Pi.sin
     ext j
     by_cases hj : j = i
     · subst hj; simp
-    · simp [Pi.single_apply, hj]
+    · simp [hj]
   rw [h]
   simp
 

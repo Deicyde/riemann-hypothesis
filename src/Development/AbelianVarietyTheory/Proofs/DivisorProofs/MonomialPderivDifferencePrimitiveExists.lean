@@ -1,4 +1,40 @@
-import Mathlib
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
+import Std.Tactic.BVDecide.Normalize.Prop
 open MvPolynomial
 
 namespace GlobalTheory
@@ -22,7 +58,7 @@ theorem monomial_pderiv_difference_primitive (n : ℕ) (i i' : Fin (n + 1)) (hii
         = monomial (α + Finsupp.single i 1 - Finsupp.single i' 1) (c * (α i' : ℝ)) := by
     intro α c
     rw [pderiv_monomial]
-    simp [Finsupp.single_apply, hii]
+    simp [hii]
   have hsplit : ∀ x y : MvPolynomial (Fin (n + 1)) ℝ,
       pderiv i' (x + y) - pderiv i (x + y) = (pderiv i' x - pderiv i x) + (pderiv i' y - pderiv i y) := by
     intro x y
@@ -43,10 +79,10 @@ theorem monomial_pderiv_difference_primitive (n : ℕ) (i i' : Fin (n + 1)) (hii
     have ha : ((α i : ℝ) + 1) ≠ 0 := by positivity
     set α' := α + Finsupp.single i 1 - Finsupp.single i' 1 with hα'
     have hα'i' : α' i' = b := by
-      simp [hα', Finsupp.single_apply, hii, hb]
+      simp [hα', hii, hb]
     have hα'j : ∀ j, j ≠ i → j ≠ i' → α' j = α j := by
       intro j h1 h2
-      simp [hα', Finsupp.single_apply, Ne.symm h1, Ne.symm h2]
+      simp [hα', Ne.symm h1, Ne.symm h2]
     obtain ⟨J', R', hD', hJ', hR'⟩ := ih α' (c * ((b : ℝ) + 1) / ((α i : ℝ) + 1)) hα'i'
     refine ⟨(-(1 / ((α i : ℝ) + 1))) • (X i * monomial α c) + J', J', ?_, rfl, ?_⟩
     · rw [hsplit, hD', hXm, Derivation.map_smul, Derivation.map_smul, hpi, hpi', hb, smul_monomial, smul_monomial,
@@ -62,8 +98,8 @@ theorem monomial_pderiv_difference_primitive (n : ℕ) (i i' : Fin (n + 1)) (hii
         rw [Finset.mem_singleton] at hb'
         subst hb'
         refine ⟨?_, fun j hj hj' => ?_⟩
-        · simp [Finsupp.single_apply, hii, hα'i', hb]
-        · simp [Finsupp.single_apply, Ne.symm hj, hα'j j hj hj']
+        · simp [hii, hα'i', hb]
+        · simp [Ne.symm hj, hα'j j hj hj']
       · obtain ⟨h1, h2⟩ := hR' β h
         rw [hα'i'] at h1
         exact ⟨by omega, fun j hj hj' => (h2 j hj hj').trans (hα'j j hj hj')⟩

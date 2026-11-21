@@ -1,5 +1,7 @@
-import Formalism.MahlerMeasure.StatementTM
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.MahlerMeasure.TieVars
+import Formalism.MahlerMeasure.GoodCount
 
 namespace Formalism.GM.M
 

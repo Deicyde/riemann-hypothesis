@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.DiscreteGroups.GlobalIrreducibility.LConvBigD
-import GroundTheory.AutomorphicForms.SmoothRepSchur
+import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.AlgebraMapIntertwiningMapBijectiveOfIsSmooth
+import Development.DiscreteGroups.GlobalIrreducibility.LConvCut
 
 noncomputable section
 

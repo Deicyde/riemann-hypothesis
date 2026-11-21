@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TamagawaSpecialUnitary
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.PosOfTorusNoLe
 import Development.AbelianVarietyTheory.Definitions.Divisors.TorusNoLeClassNoRankOne
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.EmbGLMemRealSU
 
 noncomputable section
 

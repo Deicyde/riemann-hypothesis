@@ -1,9 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.SelfDualStabiliserIndex
-import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.SplittingProjection
-import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ValuedAlgebraMapLtOneIff
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Afsplit
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Tjcosets
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ExistsFrameCm
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.RelIndexConjLevelVL
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.MemStabGLAdeleIff

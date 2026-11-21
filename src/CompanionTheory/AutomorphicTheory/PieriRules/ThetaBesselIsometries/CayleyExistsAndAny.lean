@@ -1,6 +1,5 @@
-import Mathlib
-import CompanionTheory.AutomorphicTheory.PieriRules.PieriDegreeBounds.Imports
-import Development.AbelianVarietyTheory.Definitions.Jets.SumIoPr
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Counterexamples.JetSurvey.ExistsIsCayleyUIff
 import CompanionTheory.AutomorphicTheory.PieriRules.ThetaBesselIsometries.IsDSOfIsDG
 

@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsRootSelectionUnitaryRankOne
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.T2SpaceTensorRatFiniteAlgebraModuleTopology
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open GlobalTheory.LKTrip GlobalTheory.LKMid
 open scoped TensorProduct Classical
 
@@ -15,7 +16,7 @@ theorem conj_one_tmul_charpoly : ∀ (R : Type) [CommRing R] [Algebra ℚ R] (A 
   have hM : LevelExists.mulMatAlg R A (1 ⊗ₜ[ℚ] y) =
       (LinearMap.toMatrix b b (LinearMap.mulLeft ℚ y)).map (algebraMap ℚ R) := by
     ext i j
-    simp [LevelExists.mulMatAlg, LinearMap.toMatrixAlgEquiv_apply, LinearMap.toMatrix_apply,
+    simp [LevelExists.mulMatAlg, LinearMap.toMatrixAlgEquiv_apply,
       Algebra.TensorProduct.basis_apply, Algebra.TensorProduct.basis_repr_tmul, b, Algebra.leftMulMatrix_eq_repr_mul]
   rw [map_mul, map_mul, h1, h2, Matrix.coe_units_inv, Matrix.charpoly_units_conj, hM, Matrix.charpoly_map,
     LinearMap.charpoly_toMatrix]

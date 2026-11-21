@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsMulVal
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsTorsionPrechartStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsionPrechartGroupStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsionKernelFinitePresentationStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ChartIsLocalizationAway
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqOfEvalEq

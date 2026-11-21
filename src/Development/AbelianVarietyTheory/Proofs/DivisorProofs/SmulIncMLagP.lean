@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
 open scoped TensorProduct NNReal Matrix
@@ -72,7 +71,7 @@ theorem smul_incM_lagP {F E : Type} [Field F] [NumberField F] [Field E] [NumberF
   ext i j
   simp only [lagP, LinearMap.coe_mk, AddHom.coe_mk, incM, Matrix.smul_apply, Matrix.map_apply, Matrix.add_apply,
     Matrix.mul_apply, Matrix.vecMulVec_apply, incV, map_add, map_sum, map_mul, Matrix.transpose_apply, smul_add,
-    Finset.smul_sum, hΔ, smul_eq_mul]
+    Finset.smul_sum, hΔ]
   congr 1
   · refine Finset.sum_congr rfl fun k _ => ?_
     rw [← mul_smul_comm, Finset.smul_sum]

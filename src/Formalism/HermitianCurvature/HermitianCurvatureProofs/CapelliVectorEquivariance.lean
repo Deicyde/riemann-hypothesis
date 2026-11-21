@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CapelliVectorFrame
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.QuantumMinorExpansion
 
 open Matrix Finset
 

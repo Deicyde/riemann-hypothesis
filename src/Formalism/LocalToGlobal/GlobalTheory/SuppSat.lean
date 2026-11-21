@@ -1,4 +1,7 @@
-import Formalism.SharpRestriction.GlobalSchurBounds.FrameCodeOfAdditive
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.Divisibility.LocalQuadraticParts
+import Formalism.SharpRestriction.GlobalSchurBounds.TopDensityNGeSixteen
 
 noncomputable section
 

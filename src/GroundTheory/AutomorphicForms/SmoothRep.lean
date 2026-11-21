@@ -1,6 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.LocallyProfinite
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.StabilizerOf
+import Mathlib.RepresentationTheory.Coinvariants
+import Mathlib.RepresentationTheory.Invariants
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 

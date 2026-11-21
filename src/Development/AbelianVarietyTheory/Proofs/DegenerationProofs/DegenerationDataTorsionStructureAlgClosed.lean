@@ -1,6 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Degenerations.SepticCharacterInjective
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.DegenerationWeilPairingPropertiesStatement
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
 open ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.Ex
 open scoped BigOperators
 
@@ -67,7 +69,7 @@ theorem chr_basis (u : ι → U) (i : ι) : chr v u (Multiplicative.ofAdd (v i))
   rw [chr_apply, Finset.prod_eq_single i]
   · simp
   · intro j _ hj
-    simp [Finsupp.single_apply, hj.symm]
+    simp [hj.symm]
   · simp
 
 theorem chr_eq (t : Multiplicative X →* U) : chr v (fun i => t (Multiplicative.ofAdd (v i))) = t := by

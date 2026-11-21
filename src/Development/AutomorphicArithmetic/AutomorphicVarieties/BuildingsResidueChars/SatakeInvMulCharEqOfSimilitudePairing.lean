@@ -1,6 +1,5 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.Hypotheses2
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.LocIsotypic
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.RTwist
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdelicLocalCompactness.AdeleLC
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsAveragingProjection
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SatakeParametersOfTwist

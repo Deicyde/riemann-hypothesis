@@ -1,8 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsUniqueIsTanFrameOfIsEmpty
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.P22
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WedgeOrdVpBaseChangeOfNeBot
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.LieBridgeG
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.LieBridgeE
 
 set_option autoImplicit false
 set_option synthInstance.maxHeartbeats 400000
@@ -76,7 +76,7 @@ theorem constMor_surjective (P : AbelianDeRham) {A : Over (Sp R)} [GrpObj A] {g 
   obtain ⟨C, _, φ, hφ⟩ := GlobalTheory.FlagTan.exists_isGrpPullback A (spMap (algebraMap R (DualNumber R)))
   have eid : epsRed R ≫ spMap (algebraMap R (DualNumber R)) = 𝟙 _ := by
     have e0 : (TrivSqZeroExt.fstHom R R R).toRingHom.comp (algebraMap R (DualNumber R)) = RingHom.id R := by
-      ext r; simp [TrivSqZeroExt.algebraMap_eq_inl]
+      ext r; simp
     rw [epsRed, spMap_comp_spMap, e0]
     exact Spec.map_id _
   have w : 𝟙 A.left ≫ A.hom = (A.hom ≫ epsRed R) ≫ spMap (algebraMap R (DualNumber R)) := by

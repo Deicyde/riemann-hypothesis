@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.AutomorphicTheory.SchurLimitBounds.ZuckermanDuality.ZuckDualTOfZuckDual
 import CompanionTheory.AutomorphicTheory.SchurLimitBounds.SchurOrthogonality.SchurH
+import Mathlib.RingTheory.PicardGroup
 
 noncomputable section
 

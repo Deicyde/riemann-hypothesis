@@ -1,7 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementKB
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BlockOfCauchySchwarz
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.TheoremPIntegralOfPlaces
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BlockEstimatesSumForm
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.JointInstanceTheoremA
 
 open Finset Filter Topology
 open scoped ComplexConjugate

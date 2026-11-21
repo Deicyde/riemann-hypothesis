@@ -1,10 +1,9 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.LaplaceOperators.KTypeLemma.TensorActionApplyDual
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.LaplaceOperators.KTypeLemma.IndicatorRholMem
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.LaplaceOperators.KTypeLemma.SASingle
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.LaplaceOperators.KTypeLemma.Transfer
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.PropsEquivB
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.HighestWeights.OpEqExp
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.ToMKMulInv
 
 noncomputable section
 
@@ -20,8 +19,8 @@ variable {n : ℕ}
 def submoduleEvaluationFunctional {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℂ H] {D : Submodule ℂ H} (V : Submodule ℂ D)
     (w0 : V) : V →ₗ[ℂ] ℂ where
   toFun v := ⟪((w0 : D) : H), ((v : D) : H)⟫_ℂ
-  map_add' x y := by simp [inner_add_right]
-  map_smul' c x := by simp [inner_smul_right]
+  map_add' x y := by simp
+  map_smul' c x := by simp
 
 theorem lowestKType_vector_exists (ε : Fin n → Bool) (lam : Fin n → ℝ)
     {H : Type} [NormedAddCommGroup H] [InnerProductSpace ℂ H] [CompleteSpace H]

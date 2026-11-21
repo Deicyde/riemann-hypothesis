@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SandwichMaps
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RingHomFromPadicUniqueOfSepStatement
+import Development.AbelianVarietyTheory.Definitions.Divisors.XiMulNu
 open GlobalTheory.Sandwich GlobalTheory.IndefiniteRowSideFullHecke.SandwichMaps
 
 namespace GlobalTheory

@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MulTransposeInjective
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes

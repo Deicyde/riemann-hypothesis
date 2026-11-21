@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.AdmissibleDesigns.FiniteClassesContinuousLattice
-import Formalism.WeaklyAdmissibleFiltrations.PhtGalois
+import Formalism.SharpRestriction.LevelLetterCocycles.LargeLevelLemmas
+import Formalism.WachLatticeTwists.RamifiedBlockRings.DistinctEigenvalueCornerPerturbation
 
 variable [hT2Core : Fact ReciprocityTheory.ChartRestriction.T2.Core]
 

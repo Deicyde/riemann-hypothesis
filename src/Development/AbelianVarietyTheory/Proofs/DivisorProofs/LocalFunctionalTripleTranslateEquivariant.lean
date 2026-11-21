@@ -1,9 +1,4 @@
-import Mathlib
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LogAbsEEqZero
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRk
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiagFirstApply
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptQ
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LinearBarFunctionalGoodPlace
 import Development.AutomorphicArithmetic.LocalEmbeddings.SplitLin
 open scoped TensorProduct NNReal Matrix

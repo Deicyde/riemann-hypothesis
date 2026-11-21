@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CharacterBoxes.PairGood
 
 noncomputable section

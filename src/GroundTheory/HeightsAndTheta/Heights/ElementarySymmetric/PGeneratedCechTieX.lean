@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ElementarySymmetric.GeneratedCechTieSt
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.DegreeOneCellEqChartUpdate
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PGenTwistGenerated

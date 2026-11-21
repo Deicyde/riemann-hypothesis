@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.BihomogeneousPairs.LetterChainEmbeddings.ChainEmbInj
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
 
 namespace Formalism.InvariantFactorPaths.KP.LL
 

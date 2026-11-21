@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IsMulCommutativeCentRealUJ
-import Formalism.RealPlaceAnalysis.SmoothOnGVIff
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCompactPseudoUnitaryOffDiagNormSublevelStatement
+import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsAuxiliaryPlaceNotMemFinset
 open MeasureTheory Matrix GlobalTheory.Orb
 open Formalism.REAL (UJ KG toM toMK muK expG inG Jm Kset)
 open scoped ContDiff

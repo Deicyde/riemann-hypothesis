@@ -1,11 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterDerived
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterDivSupp
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.MultihomogeneousIdeals.MultiIsProjVarFOfRatDiv
-import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.ExistsUnique
-import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.ImageArithClosed
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.ChangeOfModel
-import GroundTheory.HeightsAndTheta.Heights.Intersections.PConsequences
 
 namespace GlobalTheory.CompanionTheory.Ar.PB.Known
 

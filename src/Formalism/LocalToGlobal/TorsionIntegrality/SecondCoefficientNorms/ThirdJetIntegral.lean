@@ -1,4 +1,5 @@
-import Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.SigmaConstantAgrees
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.JetExpShape
 
 noncomputable section
 open scoped BigOperators

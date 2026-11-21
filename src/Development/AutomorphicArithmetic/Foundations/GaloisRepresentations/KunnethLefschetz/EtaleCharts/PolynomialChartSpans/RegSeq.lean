@@ -1,5 +1,5 @@
-import Mathlib
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.KunnethLefschetz.EtaleCharts.PBData
+import Mathlib.RingTheory.MvPolynomial.Ideal
 
 noncomputable section
 
@@ -14,7 +14,7 @@ private lemma mem_span_X_of_sum_eq_zero {A : Type} [CommRing A] {d : ℕ} (p : F
     · simpa [MvPolynomial.coeff_X_mul'] using h1
     · intro m _ hm
       rw [MvPolynomial.coeff_X_mul']
-      simp [Finsupp.single_apply, hm.symm, hm]
+      simp [hm]
     · simp
   have hs : (Set.range fun m : Fin d => (MvPolynomial.X m : MvPolynomial (Fin d) A)) =
       MvPolynomial.X '' (Set.univ : Set (Fin d)) := by

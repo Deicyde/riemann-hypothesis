@@ -1,4 +1,12 @@
-import Formalism.LocalRingCardinality.SpanPowerMembership.NZTypeA
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.CyclotomicNorms.StatementT
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 

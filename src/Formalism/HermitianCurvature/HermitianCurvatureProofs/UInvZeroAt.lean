@@ -1,6 +1,6 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.VectorIsomorphismLevels
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.PBFCstmt
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.LiftClosedUnderOperations
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.RealInputsClosedAdmissibleSettings
 
 noncomputable section
 

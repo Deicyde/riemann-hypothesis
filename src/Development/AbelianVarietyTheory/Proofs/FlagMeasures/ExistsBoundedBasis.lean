@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.TransferenceMinima
 import Formalism.HermitianLattices.HermitianLatticesProofs.MassTelescope
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianMassUpperBound

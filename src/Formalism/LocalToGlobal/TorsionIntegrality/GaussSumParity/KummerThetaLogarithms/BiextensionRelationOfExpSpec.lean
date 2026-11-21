@@ -1,7 +1,7 @@
-import Formalism.LocalToGlobal.TorsionIntegrality.GaussSumParity.KurComplete
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.GaussSumParity.RelativeThetaFactorization
-import Formalism.LocalToGlobal.TorsionIntegrality.GaussSumParity.KummerThetaLogarithms.BiextensionOfExpSpec
-import Formalism.LocalToGlobal.TorsionIntegrality.GaussSumParity.KummerThetaLogarithms.BiextensionPointsOfExpSpec
+import Formalism.LocalToGlobal.TorsionIntegrality.GaussSumParity.BiextensionHypothesesOfLevelOne
 
 noncomputable section
 open scoped BigOperators

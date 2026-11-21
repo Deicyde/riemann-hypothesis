@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.SelfDualAt
-import Formalism.LocalToGlobal.HermitianForms.TiedStep
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.SplitPlaceLatticeComponentsStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.IntegralExtensionFiniteAdelesBasicPropertiesStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.FirstComponentsBasisLocalLatticeSplitStatement
@@ -212,7 +211,7 @@ theorem local_frame_first_factor : ∀ (F E : Type) [Field F] [NumberField F] [F
       intro i hi
       rw [hfirst]
       simp only [hdual1, mul_add, Finset.sum_add_distrib, mul_ite, mul_one, mul_zero, Finset.sum_ite_eq,
-        Finset.sum_ite_eq', Finset.mem_univ, if_true, Finset.mul_sum]
+        Finset.mem_univ, if_true, Finset.mul_sum]
       congr 1
       exact Finset.sum_congr rfl fun l _ => by ring
     set R0 : v.adicCompletion F := ∑ i : Fin n, if hi : i.1 + 1 < n then M i ⟨i.1 + 1, hi⟩ else 0 with hR0

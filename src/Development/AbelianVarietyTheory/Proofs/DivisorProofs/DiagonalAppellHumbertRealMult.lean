@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AppellHumbertDiagonalRealStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AppellHumbertDiagonalRealDualStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeRealMultiplicationIntegralStatement

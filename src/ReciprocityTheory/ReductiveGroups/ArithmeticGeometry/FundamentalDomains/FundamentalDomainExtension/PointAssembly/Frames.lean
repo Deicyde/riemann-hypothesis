@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.FundamentalDomainExtension.PointAssembly.ZnNonneg
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.RingTheory.PicardGroup
 
 namespace PIW.FdPA
 
@@ -71,7 +74,7 @@ theorem unitary_domain {E : Type} [Field E] [NumberField E] [IsCMField E] : Unit
   have hcol : ∀ a, col (mat (X.lmulC n x) τ) a = Matrix.mulVec (n τ) (col (mat x τ) a) := by
     intro a
     funext k
-    simp [col, mat, Data.lmulC, Matrix.mul_apply, Matrix.mulVec, dotProduct]
+    simp [col, mat, Data.lmulC, Matrix.mulVec, dotProduct]
     rfl
   have hg : gram τ.1 X.Gm (mat (X.lmulC n x) τ) = gram τ.1 X.Gm (mat x τ) := by
     ext a b
@@ -160,7 +163,7 @@ theorem borel_flag_translate {E : Type} [Field E] [NumberField E] [IsCMField E] 
   have hcol : ∀ a, col (mat (rmul x b) τ) a = ∑ c, b τ c a • col (mat x τ) c := by
     intro a
     funext k
-    simp [col, mat, rmul, Matrix.mul_apply, Finset.sum_apply, mul_comm]
+    simp [col, mat, rmul, Finset.sum_apply, mul_comm]
     rfl
   have hli : ∀ y : Matrix (Fin r) (Fin r) ℂ, y.det ≠ 0 →
       LinearIndependent ℂ (fun a : Fin X.p0 => col y (Fin.castLE X.p0_le a)) := by

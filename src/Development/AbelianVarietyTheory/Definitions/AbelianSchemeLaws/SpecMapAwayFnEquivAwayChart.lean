@@ -1,4 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.ProjDehomA
 import Development.AbelianVarietyTheory.Definitions.ShimuraVarieties.OpensRangeChartYSupOpensRangeChartZ
 import Development.AbelianVarietyTheory.Definitions.ThetaMetrics.AwayToSectionFromZero

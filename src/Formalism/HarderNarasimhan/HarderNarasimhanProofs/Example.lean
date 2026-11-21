@@ -1,7 +1,5 @@
-import Formalism.HarderNarasimhan.DegSupermodZ
-import Formalism.HarderNarasimhan.HarderNarasimhanProofs.SatBasic
+import BuildAid.Leniency.Open
 import Formalism.HarderNarasimhan.HarderNarasimhanProofs.HNSlopes
-import Formalism.LatticeSlopes.ExistsSaturatedSlopeEqMuMax
 
 open Module Submodule
 
@@ -82,7 +80,7 @@ theorem Lx_eq : Lx = Submodule.span ℤ (Set.range vx) := by
   rw [Lx]
   congr 1
   ext x
-  simp [vx, Fin.exists_fin_two, eq_comm]
+  simp [vx]
   tauto
 
 theorem rk_Lx : Formalism.F.rk Lx = 2 := by
@@ -98,7 +96,7 @@ theorem covol_Lx : Formalism.F.covol Lx = 2 := by
     ext i j
     fin_cases i <;> fin_cases j <;>
       simp [Matrix.gram_apply, hb, vx, e₀, e₁, inner_smul_left, inner_smul_right,
-        EuclideanSpace.inner_single_left, norm_smul, EuclideanSpace.norm_single] <;> norm_num
+        EuclideanSpace.inner_single_left, norm_smul] <;> norm_num
   rw [hg, Matrix.det_fin_two_of, show (1 : ℝ) * 4 - 0 * 0 = 2 ^ 2 by norm_num,
     Real.sqrt_sq (by norm_num)]
 

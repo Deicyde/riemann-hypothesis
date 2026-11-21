@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.JetGauges.RigidNormaliserGenerators
-import Development.AbelianVarietyTheory.BlockTheory.JetGauges.DiagonalActionLiftPull
 import Development.AbelianVarietyTheory.Proofs.RingsOfIntegers.ProdSumReindex
 
 set_option autoImplicit false

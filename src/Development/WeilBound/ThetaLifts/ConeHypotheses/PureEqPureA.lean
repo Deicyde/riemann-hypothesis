@@ -1,6 +1,8 @@
-import Development.WeilBound.ThetaLifts.ConeHypotheses.PolDense
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsNatMulIntegralOfIsCompact
 import Development.WeilBound.ThetaLifts.ConeHypotheses.IsLocallyConstantFinprodEvalV
+import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
 noncomputable section
 

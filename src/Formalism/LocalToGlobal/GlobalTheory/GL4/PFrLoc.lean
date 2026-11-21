@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.GL4.PFrCore
 import Formalism.LocalToGlobal.HermitianColumns.InLocalDiscriminantKernel
+import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Afsplit
 
 noncomputable section
 

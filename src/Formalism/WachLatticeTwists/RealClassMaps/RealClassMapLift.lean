@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.RealClassMaps.RealClassMapSecondPlace
-import Formalism.WachLatticeTwists.SplitClassesAll.WachTwistSplitTheoremLiftHypothesis
+import Formalism.WachLatticeTwists.SplitClassesAll.HZeroFromWInputsStatement
+import Formalism.WachLatticeTwists.SplitClassesAll.SourceTwoCasesOrSubfield
 
 open Finset Classical
 

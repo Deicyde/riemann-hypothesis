@@ -1,10 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SupMeas
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SemidirectQuotientMeasureConjugationInvariantStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConjugationMeasurePreservingSemidirectStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SemidirectMeasureRestrictionNormalPartStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CountableTransversalMeasureExtensionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormalizingElementFundamentalDomainScalingStatement
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Dynamics.Ergodic.Action.Regular
 
 open MeasureTheory Pointwise
 
@@ -91,7 +92,7 @@ namespace GlobalTheory.SupMeas
 theorem exists_supMeas : ∀ {G : Type} [Group G] [TopologicalSpace G] [IsTopologicalGroup G] [LocallyCompactSpace G] [SecondCountableTopology G] [T2Space G] [MeasurableSpace G] [BorelSpace G] (N Q : Subgroup G) [Countable Q] (m : G), IsClosed (N : Set G) → (∀ q ∈ Q, ∀ n ∈ N, q * n * q⁻¹ ∈ N) → (∀ n ∈ N, m * n * m⁻¹ ∈ N ∧ m⁻¹ * n * m ∈ N) → (∀ q ∈ Q, m⁻¹ * q * m * q⁻¹ ∈ N) → ∀ νN : Measure N, νN.IsHaarMeasure → ∀ E : Set N, IsFundamentalDomain (Q.subgroupOf N) E νN → νN E ≠ 0 → νN E ≠ ⊤ → ∀ c : ENNReal, c ≠ 0 → c ≠ ⊤ → (∀ S : Set N, c * νN (Subtype.val ⁻¹' ((fun g => m⁻¹ * g * m) '' (Subtype.val '' S))) = νN S) → Q.map (MulAut.conj m⁻¹).toMonoidHom ≤ Q ⊔ N ∧ ∃ ν : Measure ↥(Q ⊔ N), SFinite ν ∧ MeasurePreserving (fun p : ↥(Q ⊔ N) => p⁻¹) ν ν ∧ (∀ γ ∈ Q.subgroupOf (Q ⊔ N), MeasurePreserving (fun p : ↥(Q ⊔ N) => γ * p) ν ν) ∧ (∀ γ ∈ (Q.map (MulAut.conj m⁻¹).toMonoidHom).subgroupOf (Q ⊔ N), MeasurePreserving (fun p : ↥(Q ⊔ N) => γ * p) ν ν) ∧ ∃ E₁ E₂ : Set ↥(Q ⊔ N), IsFundamentalDomain (Q.subgroupOf (Q ⊔ N)) E₁ ν ∧ IsFundamentalDomain ((Q.map (MulAut.conj m⁻¹).toMonoidHom).subgroupOf (Q ⊔ N)) E₂ ν ∧ c * ν E₂ = ν E₁ ∧ ν E₁ ≠ 0 ∧ ν E₁ ≠ ⊤ := by
   intro G _ _ _ _ _ _ _ _ N Q _ m hN hQ hm hmQ νN hνN E hE hE0 hEtop c hc0 hctop hmod
   have memQ₂ : ∀ x, x ∈ Q.map (MulAut.conj m⁻¹).toMonoidHom ↔ ∃ q ∈ Q, m⁻¹ * q * m = x := by
-    intro x; simp [Subgroup.mem_map, MulAut.conj_apply]
+    intro x; simp [Subgroup.mem_map]
   have hle : Q.map (MulAut.conj m⁻¹).toMonoidHom ≤ Q ⊔ N := by
     intro x hx
     obtain ⟨q, hq, rfl⟩ := (memQ₂ x).1 hx

@@ -1,5 +1,9 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.ArchimedeanLocalHeightTerm
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.HHINDA
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.HPlaces
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.HintLogFinprod
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.ValuationGenericRatioEqRestriction
 
 namespace ReciprocityTheory.ChartRestriction.G.T0
 

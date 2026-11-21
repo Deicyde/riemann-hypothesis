@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockMap
 open scoped TensorProduct Matrix Classical
 open NumberField Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.BasicNotions.TH GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.FockAlg GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.RealLift
@@ -13,11 +14,11 @@ theorem heisOp_single (l : Ln P Q R S) (a : ℂ) :
   unfold heisOp
   congr 1
   rw [Finset.sum_eq_single l]
-  · simp [Matrix.single_apply]
+  · simp
   · intro l' _ hne
     have h : ¬ (l.1 = l'.1 ∧ l.2 = l'.2) := by
       rintro ⟨h1, h2⟩; exact hne (Prod.ext h1.symm h2.symm)
-    simp [Matrix.single_apply, h]
+    simp [h]
   · intro h; exact absurd (Finset.mem_univ l) h
 
 theorem sq_ne (l : Ln P Q R S) : ((Real.sqrt (2 * Real.pi) : ℝ) : ℂ) ≠ 0 := by

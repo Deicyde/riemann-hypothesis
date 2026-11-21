@@ -1,6 +1,8 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.SectionCountTopSt
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.SectionCountDropSt
+import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.GenericPointSectionHypotheses
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.Kleiman

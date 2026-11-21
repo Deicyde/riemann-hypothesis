@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.CrystallinePeriodRings.ExistsMapEqOfPowMul
-import Development.WeilBound.CoreStatements.CrystallinePeriodRings.PhiGalCris
 import GroundTheory.PAdicHodge.GalSmulAlgebraMapPadicPlus
 
 noncomputable section

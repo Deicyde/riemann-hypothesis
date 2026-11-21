@@ -1,14 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.ModuliSpaces.KerScheme
 import Development.AbelianVarietyTheory.Counterexamples.ModuliSurvey.HeckeKerZero
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ObjMapIdCompCancel
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsIsHeckeIsog
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ClsLinCombSingle
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.AbelianSchemeLawsUnconditional
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsModuliNonemptyPositiveDim
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ObjIsAbelianSchemeDimRigidifiedSym
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.IsReducedIsNormalSchemeIsLocallyNoetherianOfSmoo
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsSabCancel
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsSplitPrimeOutsideLevel
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -191,7 +187,7 @@ theorem isHecke_mul [IsLocallyNoetherian S] (o : Ob D l s) (P : Ideal (𝓞 E)) 
   · have hN := o.t.PP.isLB
     have h₂ := (CechPic.cls_eq_zero_iff (LB.isLB_linComb hN _ _)).2 (hL.mulPull S Q p)
     rw [CechPic.cls_linComb hN] at h₂
-    simp only [Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, CechPic.pull_id, one_zsmul,
+    simp only [Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, one_zsmul,
       neg_zsmul] at h₂
     refine (CechPic.cls_eq_iff (LB.isLB_linComb hN _ _) (LB.isLB_linComb hN _ _)).1 ?_
     rw [CechPic.cls_lbPow hN, CechPic.cls_pull hN, e, ← add_neg_eq_zero.1 h₂, ← natCast_zsmul, Nat.cast_pow]

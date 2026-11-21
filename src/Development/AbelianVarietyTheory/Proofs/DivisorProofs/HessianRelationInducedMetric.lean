@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HessRelFnB
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeModelInducesRootMetric
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DescentMapContinuousSurjective

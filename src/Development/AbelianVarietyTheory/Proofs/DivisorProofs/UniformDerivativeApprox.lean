@@ -1,4 +1,34 @@
-import Mathlib
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Topology.Sheaves.Init
 open Set Metric
 
 namespace GlobalTheory
@@ -39,7 +69,7 @@ theorem fibre_fderiv_uniformly_near_id :
   have hη0 : ‖η‖ ≤ δ₀ := hη.trans (min_le_left _ _)
   have hη1 : ‖η‖ < δ₁ := lt_of_le_of_lt (hη.trans (min_le_right _ _)) (half_lt_self hδ₁)
   have hdist : dist (z, η) (z, (0:E)) = ‖η‖ := by
-    simp [Prod.dist_eq, dist_eq_norm]
+    simp [dist_eq_norm]
   have hmemC : (z, η) ∈ cthickening δ₀ (K ×ˢ ({0} : Set E)) :=
     mem_cthickening_of_dist_le _ (z, 0) _ _ ⟨hz, rfl⟩ (hdist ▸ hη0)
   have h0C : (z, (0:E)) ∈ cthickening δ₀ (K ×ˢ ({0} : Set E)) :=

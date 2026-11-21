@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.SecondCountableTopologyOfIsProjOver
 import ReciprocityTheory.L2DbarEstimates.ChartDerivatives.InhHasFDerivAtNormSq
-import ReciprocityTheory.L2DbarEstimates.SkodaWeights.LeviVA
 import ReciprocityTheory.L2DbarEstimates.PlurisubharmonicCharts.AApproxC
 
 set_option autoImplicit false

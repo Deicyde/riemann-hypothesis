@@ -1,6 +1,8 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.FramedTwoCoboundaries
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.HhGroup
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.HhSmall
+import Mathlib.RingTheory.SimpleRing.Principal
 
 open IsLocalRing MvPowerSeries UpperTheory.V.Alg
 

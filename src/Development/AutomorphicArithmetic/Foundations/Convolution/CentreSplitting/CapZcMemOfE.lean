@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.DefsObj
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.JGenLinLie
 import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.CapHCMem
 

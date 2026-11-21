@@ -1,8 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.Divisibility.LiftLatLemmas
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.PolarisedDualSystem
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.BaseSetLabels
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CompletelySplitPrimeHostPlaceProperties
 
 noncomputable section
 

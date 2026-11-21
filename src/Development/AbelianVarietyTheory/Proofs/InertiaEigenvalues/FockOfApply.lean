@@ -1,10 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.CenUsedOfCenReal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ChoiceSideWithE
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.OfFirstStepLoc
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.ToUnitsCompToCircle
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.TupPrimeEmpty
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAlgebraicOfRoot
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.UnivChar
 
 noncomputable section
 

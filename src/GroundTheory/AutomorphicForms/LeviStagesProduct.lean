@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.LeviCartan
-import GroundTheory.AutomorphicForms.LeviStagesInduction
+import GroundTheory.AutomorphicForms.SmoothRep
+import Mathlib.RepresentationTheory.Irreducible
 set_option maxSynthPendingDepth 1
 
 noncomputable section

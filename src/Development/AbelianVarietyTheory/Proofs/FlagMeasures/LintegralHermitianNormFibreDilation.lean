@@ -1,12 +1,8 @@
-import Mathlib
-import Formalism.LocalRingCardinality.DataCD
-import Formalism.SharpRestriction.GlobalSchurBounds.GeneralLinearActions.GenusMassVolumes
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.PerpendicularEmbedding
-import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ContinuousMatrixEntryAbsSum
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.CdScaleIsTrueScale
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.GaugeUnfold
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ContinuousGaussSp
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.IsFibreFamilyEqAtContinuityPoint
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 noncomputable section
 

@@ -1,11 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.GenReads
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ThExprUniqOfChartIndep2
-import Formalism.LocalToGlobal.ProjectiveLattices.ThProps
 import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.RdUEqConstMulClsSum
 import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.ReadingEqThP
 import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.ExistsLetterRowWeightDictionary
-import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.FockHxDifferentiable
 import Development.AbelianVarietyTheory.Proofs.FormalGroupCharts.ExistsIsNabUncond
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AnalyticFibreDescriptionUniqueStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLevelOneThetaNeZeroOnIdealHalfLatticeStatement
@@ -109,7 +107,7 @@ theorem exists_anFib_trans (π : Fin g ≃ Fin g) (A : AnFib X bas idx e x L y) 
     rw [map_zero, ContinuousLinearMap.comp_apply]
     congr 1
     funext j
-    simp [hT, Pi.single_apply, Equiv.symm_apply_eq]
+    simp [hT, Pi.single_apply]
   · exact (hmk a ha).trans (congrArg A.ex (hp _).symm)
 
 end Renumber

@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.RemainderTerms.Statements
+import Mathlib.Tactic.ENatToNat
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights
@@ -45,7 +46,7 @@ theorem inh_J_eq : fibreDegree 1 1 1 .last = -1 := by
   rw [fibreDegree, hH, flagIntegral, inh_van_eq]
   have hne : ((0:Fin 1), (0 : Fin (1+1))) ≠ ((0:Fin 1), (1 : Fin (1+1))) := by decide
   rw [Finset.sum_eq_single (Finsupp.single ((0:Fin 1), (1 : Fin (1+1))) 1)]
-  · simp [flagTwoFirstRoot, flagTwoSecondRoot, coeff_X', Finsupp.single_left_inj, hne, hne.symm, Finsupp.single_eq_single_iff]
+  · simp [flagTwoFirstRoot, flagTwoSecondRoot, coeff_X', Finsupp.single_left_inj, hne]
   · intro b _ hb
     have : coeff b flagTwoSecondRoot = 0 := by
       rw [coeff_X']; exact if_neg (fun h => hb h.symm)
@@ -53,7 +54,7 @@ theorem inh_J_eq : fibreDegree 1 1 1 .last = -1 := by
   · intro h
     have : coeff (Finsupp.single ((0:Fin 1), (1 : Fin (1+1))) 1) (flagTwoFirstRoot - flagTwoSecondRoot) = 0 := by
       simpa using h
-    simp [flagTwoFirstRoot, flagTwoSecondRoot, coeff_X', Finsupp.single_eq_single_iff, hne, hne.symm] at this
+    simp [flagTwoFirstRoot, flagTwoSecondRoot, coeff_X', Finsupp.single_eq_single_iff, hne] at this
 
 end
 

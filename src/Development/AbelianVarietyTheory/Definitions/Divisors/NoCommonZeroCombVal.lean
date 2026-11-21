@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.DetJacMatCoordsEqTransitionJacobianDet
 
 set_option autoImplicit false
@@ -554,7 +555,7 @@ theorem nsq_fs_le {hB : B.IsLB} {he : ∀ a, e a ∈ fibSec p σ B} {h : NoCommo
   simp only [Finset.sum_apply, Pi.smul_apply, smul_eq_mul]
   calc ‖∑ a, c a * e a (pick hB y) y‖ ^ 2 ≤ (∑ a, ‖c a‖ * ‖e a (pick hB y) y‖) ^ 2 := by
         gcongr
-        exact (norm_sum_le _ _).trans_eq (by simp [norm_mul])
+        exact (norm_sum_le _ _).trans_eq (by simp)
     _ ≤ _ := Finset.sum_mul_sq_le_sq_mul_sq _ _ _
 
 theorem sum_nsq_fs {hB : B.IsLB} {he : ∀ a, e a ∈ fibSec p σ B} {h : NoCommonZero e}

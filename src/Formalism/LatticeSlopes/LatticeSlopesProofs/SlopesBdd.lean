@@ -1,7 +1,7 @@
-import Formalism.LatticeSlopes.Statement
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.LatticeSlopes.CovolAntiSameRank
-import Formalism.LatticeSlopes.LatticeSlopesProofs.DiscreteTopologyOfLe
-import Formalism.LatticeSlopes.LatticeSlopesProofs.CovolEqGram
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
 
 open Module Submodule
 

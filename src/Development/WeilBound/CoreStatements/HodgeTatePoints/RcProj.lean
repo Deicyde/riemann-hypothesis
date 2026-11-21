@@ -1,7 +1,5 @@
-import Mathlib
-import ReciprocityTheory.DualLattices.CotangentSurjective
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.IsTight
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.StepOrderRes
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.HodgeTatePoints.RangeSubtypeEq
 
 noncomputable section

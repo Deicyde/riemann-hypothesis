@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.ZeroPartEigenvalueConvention
-import Formalism.LocalToGlobal.IndefiniteReal.EvTieP
-import Formalism.LocalToGlobal.IndefiniteReal.LiftGoodPartComplexEqRangeFamily
 
 noncomputable section
 

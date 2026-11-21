@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.AutomorphicTheory.HeckeStandardModules.IntegralOfModule
+import CompanionTheory.AutomorphicTheory.HeckeStandardModules.HeckeStdStatement
 
 open NumberField IsDedekindDomain ReciprocityTheory.Aut Formalism.UG Formalism.L2 CompanionTheory.Split CompanionTheory.HeckeA
 

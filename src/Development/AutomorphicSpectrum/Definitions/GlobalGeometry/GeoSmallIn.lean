@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.TowerPin
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ShortIn
 import Formalism.LocalToGlobal.IndefiniteReal.LeafObjects.LiftDataTimeEqWeightTime

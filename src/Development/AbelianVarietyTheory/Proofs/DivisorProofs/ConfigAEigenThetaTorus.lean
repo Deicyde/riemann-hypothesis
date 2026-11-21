@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedPlaneSecondVariableStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqOfComponentTensorAdelicFunctionEq
 
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -45,7 +43,7 @@ theorem I_smul_shift {n d : ℕ} {X : Spc F E n} {W : Spc F E d} (M : Model σ X
   funext g
   unfold theta thetaSum
   rw [map_smul, ← Module.End.mul_apply, ← map_mul, Prod.mk_mul_mk, mul_one, one_mul]
-  simp only [LinearMap.smul_apply, Pi.smul_apply, smul_eq_mul]
+  simp only [Pi.smul_apply, smul_eq_mul]
   exact tsum_mul_left
 
 end GlobalTheory.ThK.LeviSmall

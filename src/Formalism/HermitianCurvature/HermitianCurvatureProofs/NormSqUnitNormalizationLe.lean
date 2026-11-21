@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.BigCellExpansionOfSubadditive
 
 namespace Formalism.FourierDecayAlt.P.CutBP
@@ -44,7 +46,7 @@ lemma n1_eI_eq_card {n : ℕ} (I : Finset (Fin n)) : N1 (eI I) = I.card := by
     split_ifs <;> rfl
   simp only [h]
   rw [Finset.sum_boole]
-  simp [Finset.filter_mem_eq_inter]
+  simp
 
 lemma Ninf_eI {n : ℕ} (I : Finset (Fin n)) : Ninf (eI I) ≤ 1 := by
   unfold Ninf

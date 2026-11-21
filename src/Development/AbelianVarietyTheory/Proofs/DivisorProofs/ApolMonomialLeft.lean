@@ -1,7 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.DegreeFormula.PointDegree.PowSum
 import Formalism.DegreeFormula.PointDegree.PermExpInj
 import Development.AbelianVarietyTheory.Definitions.Foundations.CurveCl
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
+import Mathlib.RingTheory.TotallySplit
 
 open MvPolynomial Formalism.DegreeFormula GlobalTheory.FlagPoly
 
@@ -28,7 +32,7 @@ theorem facM_sub (m : S →₀ ℕ) (s : S) (h : m s ≠ 0) :
     simp [hk, Nat.factorial_succ]
   · refine Finset.prod_congr rfl fun t ht => ?_
     have := Finset.ne_of_mem_erase ht
-    simp [Finsupp.single_apply, this.symm]
+    simp [this.symm]
 
 def apol (P : MvPolynomial S ℝ) : MvPolynomial S ℝ →ₗ[ℝ] ℝ :=
   (basisMonomials S ℝ).constr ℝ fun m => facM m * P.coeff m
@@ -95,7 +99,7 @@ theorem iter_mul (l F : A) (c : ℝ) (hl : D l = algebraMap ℝ A c) (n : ℕ) :
   | succ n ih =>
     rw [Function.iterate_succ_apply', ih, map_add, Derivation.map_smul, Derivation.leibniz, hl,
       ← Function.iterate_succ_apply' D (n + 1), ← Function.iterate_succ_apply' D n]
-    simp only [Algebra.smul_def, smul_eq_mul, map_mul, map_add, map_one, Nat.cast_add, Nat.cast_one, Algebra.algebraMap_self, RingHom.id_apply]
+    simp only [Algebra.smul_def, map_mul, map_add, map_one, Nat.cast_add, Nat.cast_one, Algebra.algebraMap_self, RingHom.id_apply]
     ring
 
 theorem iter_prod {κ : Type} (T : Finset κ) (l : κ → A) (W : A) (c : ℝ) (hW : D W = 0)
@@ -259,7 +263,7 @@ theorem sum_sameP (j : ℕ) (hj : j ≤ N) :
         ⟨fun b => (τ, a, b), fun b b' h => by simpa using h⟩ := by
     ext ⟨t, x, y⟩
     simp only [sameP, Finset.mem_filter, Finset.mem_univ, true_and, Prod.mk.injEq, Finset.mem_map,
-      Function.Embedding.coeFn_mk, Fin.lt_def]
+      Fin.lt_def]
     constructor
     · rintro ⟨h, rfl, rfl⟩; exact ⟨y, h, rfl⟩
     · rintro ⟨b, h, he⟩

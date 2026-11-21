@@ -1,7 +1,4 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceExhaustion
-import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceIdeal
-import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceComponents
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceMassFinite
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceLelongError
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PCutOffDominated

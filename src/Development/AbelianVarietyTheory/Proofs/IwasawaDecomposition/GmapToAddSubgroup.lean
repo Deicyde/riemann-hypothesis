@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.ThDistC
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FinAlgOfFinite
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ThetaMovedCosetIndicatorVacuumShape

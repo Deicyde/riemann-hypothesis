@@ -1,5 +1,10 @@
-import Mathlib
-import Formalism.LocalToGlobal.AdelicCompactOpens.UniROfUniRT
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
+import ReciprocityTheory.Automorphisms.SplitCoeAlgebraMap
 
 noncomputable section
 

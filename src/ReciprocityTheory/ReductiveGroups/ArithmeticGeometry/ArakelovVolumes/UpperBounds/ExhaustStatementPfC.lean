@@ -1,6 +1,7 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.ExhaustStatementPfB
-import ReciprocityTheory.L2DbarEstimates.PlurisubharmonicCharts.DerivDerivNonposOfIsLocalMax
-import ReciprocityTheory.L2DbarEstimates.SkodaWeights.LeviVA
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Topology.Sheaves.Presheaf
+import ReciprocityTheory.L2DbarEstimates.SkodaWeights.Matrix
 
 namespace ReciprocityTheory.ChartRestriction.G.AR.Up.ExhE
 

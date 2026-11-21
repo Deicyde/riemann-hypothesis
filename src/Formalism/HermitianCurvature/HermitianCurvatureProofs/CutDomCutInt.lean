@@ -1,11 +1,8 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.cut_PtwCut
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.L2BoundAtBuiltPlaceHolds
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutEnTrSmooth
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.InvariantOperatorUnderJacquet
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BigCellOpenDomain
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BigCellHermitian
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.OrbitalIntegralAeConvergenceContinuity
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BetaCutoffLimit
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutLimEvT
 
 namespace Formalism.FourierDecayAlt.P.CutBP
 
@@ -77,7 +74,7 @@ theorem aesm_weight_smul (D : B.RealPlaceData k r Wp Wq) {E : Type*} [NormedAddC
   filter_upwards [hA, hB] with q hqa hqb
   classical
   by_cases hq : q ∈ s
-  · simp [Set.indicator_apply, hq]
+  · simp [hq]
   · simp only [Set.indicator_apply, hq, if_false]
     have hlt : Complex.normSq q.2 < Tz k r D.z * Tz k r D.z' := by
       have hn : ¬ (Tz k r D.z * Tz k r D.z' < Complex.normSq q.2) := fun h => hq ⟨hqa, h⟩

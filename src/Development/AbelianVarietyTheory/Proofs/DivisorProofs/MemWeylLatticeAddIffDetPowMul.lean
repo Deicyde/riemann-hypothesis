@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LamGApply
-import Formalism.LocalToGlobal.HermitianForms.IsLocBasis
-import Formalism.GradedWeylDivisibility.FockSpaceTableaux.WeylRowDivStable
 
 set_option autoImplicit false
 
@@ -35,7 +34,7 @@ theorem rowGen_detPol (n : ℕ) (a b : Fin n) :
     by_cases hp : p = b
     · subst hp
       simp [rowGen, hA]
-    · simp [rowGen, hA, hp, Matrix.updateRow_ne hp]
+    · simp [rowGen, hA, hp]
   rw [h1]
   by_cases hab : a = b
   · subst hab

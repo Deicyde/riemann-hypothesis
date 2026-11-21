@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ChowForms.ImportsBis
 import GroundTheory.HeightsAndTheta.Heights.ChowForms.Imports
 import GroundTheory.HeightsAndTheta.Heights.ChowForms.PChowFormSection

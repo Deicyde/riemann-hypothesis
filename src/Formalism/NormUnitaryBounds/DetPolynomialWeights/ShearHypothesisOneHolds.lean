@@ -1,5 +1,8 @@
-import Formalism.NormUnitaryBounds.Statement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.NormUnitaryBounds.DetPolynomialWeights.NatDegreeAevalLe
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Topology.Sheaves.Presheaf
 
 open MvPolynomial
 

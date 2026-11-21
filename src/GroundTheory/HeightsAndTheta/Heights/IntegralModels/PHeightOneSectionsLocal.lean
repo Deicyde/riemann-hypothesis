@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.IntegralModels.Statements
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.IntegralModels.PBundlesAgree
 set_option maxSynthPendingDepth 1
 

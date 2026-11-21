@@ -1,16 +1,11 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsBlockNFZeroOne
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntegrableOfMulUnimodular
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsWeilFormulas
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CongrOfSignatureOfAdelicNorm
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HasSignatureFromBlocks
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsAuxiliaryHyperbolicVectors
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SignCompatibleNumberingOfWittTowerLower
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MemMultTOfEquivariant
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DenseRangeRealEmbeddings
-import Development.AbelianVarietyTheory.PublishedTheorems.AdelicLattices₂.AlgebraMapNormOfBasisOneSqrt
-import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.InfFam
-import Formalism.LocalToGlobal.NumberFieldFamilies.ThetaCS
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.SignatureExists
+import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.WeilSiegelTheta.BigCellDefs
 open scoped Matrix NNReal ENNReal ComplexConjugate TensorProduct
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.L2.Theta Formalism.L2.Pj Formalism.IndefR.Datum MeasureTheory
 open GlobalTheory.AutomorphicL2Unitary GlobalTheory.AdelicU GlobalTheory.Doubling GlobalTheory.Cont GlobalTheory.MixModel GlobalTheory.StdUnn PositivityTheory.GramSchwartzFunctions PositivityTheory.GramSchwartzFunctions.BC
@@ -185,7 +180,7 @@ theorem frame_of_congr {E : Type} [Field E] [StarRing E] {m t k n : ℕ} (G P : 
       have hc : Function.Injective c := e.symm.injective.comp hg
       by_cases hij : i = j
       · subst hij; simp
-      · simp [Matrix.one_apply, hij, hc.ne hij]
+      · simp [hij, hc.ne hij]
     have h2 := Matrix.rank_mul_le_right ((P⁻¹).submatrix c id) (P.submatrix id c)
     rw [h1, Matrix.rank_one] at h2
     simpa using h2

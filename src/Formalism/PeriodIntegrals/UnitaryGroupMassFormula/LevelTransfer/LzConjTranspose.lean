@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementQ
-import Formalism.FormalDegreeBessel.FinalG
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LevelTransfer.ExpLz
+import Formalism.FormalDegreeBessel.FormalDegreeRatio.GBasic
 
 open Matrix
 

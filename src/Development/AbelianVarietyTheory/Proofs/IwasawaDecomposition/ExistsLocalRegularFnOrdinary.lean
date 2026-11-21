@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TraitOrdOfTraitOrdPt
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ConeLinearFormPositivityStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LocalFormsRegularInConeStatement

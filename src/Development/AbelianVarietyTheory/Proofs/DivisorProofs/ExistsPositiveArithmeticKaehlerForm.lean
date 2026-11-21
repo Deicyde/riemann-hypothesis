@@ -1,11 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsL2OnDiagonalOfIsL2Metric
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FirstChernRealClosedStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FirstChernFormPullback
-import Development.AbelianVarietyTheory.Definitions.Divisors.SecondCountableTopologyOfIsProjOver
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FubiniStudyHessianPosDefOfChartStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ClosedImmersionChartInjectiveDerivativeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ChernFormConjSwapStatement
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CharChPartZero
 open CategoryTheory AlgebraicGeometry Set Matrix MeasureTheory MonObj
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open GlobalTheory.CxPts GlobalTheory.ArInt
@@ -40,7 +38,7 @@ theorem hermMat_matForm {n : ℕ} (H : Matrix (Fin n) (Fin n) ℂ) :
   simp only [hermMat, of_apply, Matrix.smul_apply, smul_eq_mul, ← bas_pair, map_smul, map_sum,
     Module.Basis.repr_self, Finsupp.smul_apply, Finsupp.coe_finset_sum, Finset.sum_apply, Finsupp.single_apply,
     pair_eq_iff, smul_eq_mul]
-  simp only [mul_one, Finset.sum_ite_irrel, Finset.sum_const_zero, Finset.sum_ite_eq', Finset.mem_univ, if_true,
+  simp only [
     HermFrame.kappa]
   have : (Real.pi : ℂ) ≠ 0 := by exact_mod_cast Real.pi_pos.ne'
   push_cast

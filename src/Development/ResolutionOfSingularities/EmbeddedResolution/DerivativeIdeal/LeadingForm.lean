@@ -1,7 +1,7 @@
-import Mathlib
-import Development.ResolutionOfSingularities.EmbeddedResolution.DerivativeIdeal.IdealOrder
+import BuildAid.Leniency.Open
 import Development.ResolutionOfSingularities.EmbeddedResolution.DerivativeIdeal.MultiIndexDerivation
 import Development.ResolutionOfSingularities.EmbeddedResolution.DerivativeIdeal.DerivativeIdealOrderDecrease
+import Mathlib.RingTheory.PiTensorProduct
 namespace FunctorialResolution.EmbeddedResolution
 
 open IsLocalRing

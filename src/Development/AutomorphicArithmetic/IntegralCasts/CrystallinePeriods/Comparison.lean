@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.DeRham
 import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.DeRhamLog
-import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.CrisTheta
 import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.Action
 
 noncomputable section

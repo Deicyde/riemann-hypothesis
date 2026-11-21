@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterBridgeA
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.AnResBridgeSheet
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.AnResBridgeIntegrable

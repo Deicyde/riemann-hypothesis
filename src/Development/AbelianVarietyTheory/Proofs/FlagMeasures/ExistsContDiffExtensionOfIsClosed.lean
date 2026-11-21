@@ -1,5 +1,6 @@
-import Mathlib
-import Formalism.RealPlaceAnalysis.FinalF
+import BuildAid.Leniency.Open
+import Formalism.RealPlaceAnalysis.SmoothOnG
+import Mathlib.Geometry.Manifold.PartitionOfUnity
 
 open Formalism.REAL
 open scoped ContDiff Manifold Topology

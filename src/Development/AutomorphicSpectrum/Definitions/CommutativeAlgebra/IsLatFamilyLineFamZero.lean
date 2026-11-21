@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.TrivFlagMod
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.RingTheory.Henselian
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace GlobalTheory.CompanionTheory.Ar.Num.QuotModel
 
@@ -213,7 +217,7 @@ theorem trivFlagMod_euler (ϖ : o) {t : Ω} (ht : t ≠ 0) :
       · fin_cases i <;> simp [chartMon_pt, mseg_pt, ht]
       · fin_cases i <;> fin_cases j <;> simp [mseg_pt, h1, ht]
       · ext i j
-        fin_cases i <;> fin_cases j <;> simp [mseg_pt, ht, Matrix.mul_apply, Fin.sum_univ_two]
+        fin_cases i <;> fin_cases j <;> simp [mseg_pt, ht]
     · refine ⟨1, !![1, -t; 0, t * t], 0, fun i j => ?_, fun i j => ?_, fun i j h => ?_,
         fun i => ?_, fun i j => ?_, ?_⟩
       · fin_cases i <;> fin_cases j <;> simp [h0, mul_mem]
@@ -222,7 +226,7 @@ theorem trivFlagMod_euler (ϖ : o) {t : Ω} (ht : t ≠ 0) :
       · fin_cases i <;> simp [chartMon_pt, mseg_pt, ht]
       · fin_cases i <;> fin_cases j <;> simp [mseg_pt, h0, ht]
       · ext i j
-        fin_cases i <;> fin_cases j <;> simp [mseg_pt, ht, Matrix.mul_apply, Fin.sum_univ_two]
+        fin_cases i <;> fin_cases j <;> simp [mseg_pt, ht]
     · refine ⟨0, 1, 0, fun i j => ?_, fun i j => ?_, fun i j h => ?_, fun i => ?_, fun i j => ?_, by simp⟩
       · fin_cases i <;> fin_cases j <;> simp
       · simp

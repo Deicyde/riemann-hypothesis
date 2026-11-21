@@ -1,5 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.HighestWeights.ContinuousRepresentations.DerivExistsAllPosStatement
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.HighestWeights.HasDerivAtRealOfComplex
+import Mathlib.Analysis.Normed.Algebra.MatrixExponential
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -358,7 +364,7 @@ private theorem inK_single_sub_single_and_I_smul_add_of_sign_eq {ε : Fin n → 
         Matrix.single_apply, smul_eq_mul,
         show (a = j ∧ b = i) ↔ (b = i ∧ a = j) from and_comm, show (b = j ∧ a = i) ↔ (a = i ∧ b = j) from and_comm]
       by_cases e1 : a = i ∧ b = j <;> by_cases e2 : b = i ∧ a = j <;>
-        simp [e1, e2, Complex.conj_I, map_ofNat] <;> ring
+        simp [e1, e2, Complex.conj_I] <;> ring
 
 private theorem KRep.rel_dτ_bracket_single {ε : Fin n → Bool} (R : KRep ε)
     {a b c d : Fin n} (hab : ε a = ε b) (hcd : ε c = ε d) :
@@ -436,10 +442,10 @@ theorem KRep.kRel_units {ε : Fin n → Bool} (R : KRep ε) : Formalism.REAL.KRe
       (if b = c then Matrix.single a d 1 else 0) - (if d = a then Matrix.single c b 1 else 0) := by
     by_cases hbc : b = c <;> by_cases hda : d = a <;> simp only [hbc, hda, if_true, if_false] <;>
       first
-      | simp [Matrix.single_mul_single_same, Matrix.single_mul_single_of_ne, hbc, hda, Ne.symm hda]
+      | simp [Matrix.single_mul_single_same, Matrix.single_mul_single_of_ne, hbc, hda]
       | (subst hbc; subst hda; simp [Matrix.single_mul_single_same])
       | (subst hbc; simp [Matrix.single_mul_single_same, Matrix.single_mul_single_of_ne, hda, Ne.symm hda])
-      | (subst hda; simp [Matrix.single_mul_single_same, Matrix.single_mul_single_of_ne, hbc, Ne.symm hbc])
+      | (subst hda; simp [Matrix.single_mul_single_same, Matrix.single_mul_single_of_ne, hbc])
   have e : ∀ P Q : R.V →L[ℂ] R.V, ((P * Q - Q * P : R.V →L[ℂ] R.V) : Module.End ℂ R.V) =
       (P : Module.End ℂ R.V) * Q - (Q : Module.End ℂ R.V) * P := by
     intro P Q; ext x; simp

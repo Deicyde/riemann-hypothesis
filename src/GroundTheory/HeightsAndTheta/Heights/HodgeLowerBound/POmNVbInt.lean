@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.StatementsOmNVbInt
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.StatementsTpCuspIntegrable
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.StNbarSmooth
-import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.RegWeightLevi
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.LowerBoundFree

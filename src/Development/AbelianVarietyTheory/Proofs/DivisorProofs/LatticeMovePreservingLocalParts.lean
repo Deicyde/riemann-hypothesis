@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsClassFam
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.Columns.StdLatUnimodular
 open NumberField IsDedekindDomain
 open Formalism.BasicNotions Formalism.MainNotions Formalism.L2.DIV Formalism.L2.Col Formalism.L2.Ker
 open GlobalTheory.IndefiniteRowSideFullHecke GlobalTheory.ColumnNormCompare
@@ -113,7 +113,7 @@ theorem exists_basis {R : Type} [CommRing R] [IsDedekindDomain R] (K : Type) [Fi
     b.isUnitSMul (w := fun i => algebraMap R A (s i)) (fun i => IsLocalization.map_units A ⟨s i, hs i⟩)
   have hb' : ∀ i, (b' i : Fin n → K) = s i • (b i : Fin n → K) := by
     intro i
-    simp only [b', Module.Basis.isUnitSMul_apply, Submodule.coe_smul, algebraMap_smul]
+    simp only [b', Module.Basis.isUnitSMul_apply, algebraMap_smul]
     try rfl
   refine ⟨b'.extendOfIsLattice K, fun i => ?_, fun x hx => ?_⟩
   · rw [Module.Basis.extendOfIsLattice_apply, hb']

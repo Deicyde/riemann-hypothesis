@@ -1,7 +1,9 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.SmoothRep
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.TensorProductTheorem.Restricted
 import GroundTheory.AutomorphicForms.TensorProductTheorem.TotallyDisconnectedSpaceRestrictedProduct
+import Mathlib.LinearAlgebra.PiTensorProduct.Finite
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 noncomputable section
 

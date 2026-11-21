@@ -1,13 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.HtDefs
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.UniformizerOfResidueIndep
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.NormFactorizationClause
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.ComponentFormProperties
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.ValuationResidueLemmas
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.IntNsg
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.NormByPlaces
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.HNormPts
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.HPlaces
-import ReciprocityTheory.SemistableReduction.TorusL2CauchyInequality
+import Mathlib.Data.Int.Star
+import Mathlib.Tactic.ENatToNat
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.HeightIntegralEstimates
 
 namespace ReciprocityTheory.ChartRestriction.G.T0
 

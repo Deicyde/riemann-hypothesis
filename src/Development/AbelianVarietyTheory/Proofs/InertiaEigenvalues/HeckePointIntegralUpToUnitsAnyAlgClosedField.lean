@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.HeckeValueIntegrality
-import Formalism.LocalToGlobal.ProjectiveLattices.NonnegIffOfLiesTotal
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.HeckeFrameIntAnyField
 
 set_option autoImplicit false

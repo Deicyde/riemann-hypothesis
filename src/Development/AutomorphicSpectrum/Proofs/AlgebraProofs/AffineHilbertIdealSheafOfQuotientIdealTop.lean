@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.FlagMinor
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.ExistsUniformDenominator
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
 
 namespace GlobalTheory.CompanionTheory.Ar.Num.DualLattice
 

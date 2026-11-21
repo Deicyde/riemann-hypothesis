@@ -1,10 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.PAdicHodge.WACommon
-import GroundTheory.PAdicHodge.ExtRobbaPointDiv
 import GroundTheory.PAdicHodge.ExtRobbaRoot
 import GroundTheory.PAdicHodge.BStPeriod
 import GroundTheory.PAdicHodge.ACrisBdR
-import GroundTheory.PAdicHodge.BdRGalois
 set_option maxSynthPendingDepth 1
 
 noncomputable section

@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.SmulMemRatForms
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ValCCuspOfSmul
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralCuspFormsFullLattice
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SupLatticeLocalisationOfUnitBall
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.NormLeOneOfMemLocalUnitBallSideStatement
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions Formalism.L2.DIV Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.FWT Formalism.L2.Pj GlobalTheory.GeoTie
 open scoped TensorProduct

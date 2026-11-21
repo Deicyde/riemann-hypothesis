@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IotaScalarOne
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ColsComplete
+import Std.Tactic.BVDecide.Normalize.Prop
 open GlobalTheory.Sandwich GlobalTheory.IndefiniteRowSideFullHecke.SandwichMaps GlobalTheory.DetInv Matrix TensorProduct
 
 namespace GlobalTheory.LeadDet
@@ -14,7 +15,7 @@ theorem lead_det : ∀ (R C : Type) [CommRing R] [Field C] (f : R →+* C) (ξ �
   let Y : Fin N → Fin N → R := fun i => if (i : ℕ) < a then Pi.single (k i) 1 else F *ᵥ Pi.single (k' i) 1
   let c : Fin N → R := fun i => if (i : ℕ) < a then ξ * ν else 1
   have hFGv : ∀ v, F *ᵥ (G *ᵥ v) = (ξ * ν) • v := by
-    intro v; rw [mulVec_mulVec, hFG]; ext j; simp [mulVec, dotProduct, Matrix.one_apply, Finset.mul_sum]
+    intro v; rw [mulVec_mulVec, hFG]; ext j; simp [mulVec, dotProduct, Matrix.one_apply]
   have hrow : Matrix.of X * Fᵀ = diagonal c * Matrix.of Y := by
     ext i j
     rw [diagonal_mul, mul_apply]
@@ -41,13 +42,13 @@ theorem lead_det : ∀ (R C : Type) [CommRing R] [Field C] (f : R →+* C) (ξ �
   have hxmap : (Matrix.of X).map f = Matrix.of (fun i : Fin N => if (i : ℕ) < a then G.map f *ᵥ Pi.single (k i) 1 else Pi.single (k' i) 1) := by
     ext i j
     by_cases hi : (i : ℕ) < a
-    · simp [X, hi, RingHom.map_mulVec]
+    · simp [X, hi]
     · simp [X, hi, Pi.single_apply, apply_ite f]
   have hymap : ∀ i, (Matrix.of Y).map f i = if (i : ℕ) < a then Pi.single (k i) 1 else F.map f *ᵥ Pi.single (k' i) 1 := by
     intro i; ext j
     by_cases hi : (i : ℕ) < a
     · simp [Y, hi, Pi.single_apply, apply_ite f]
-    · simp [Y, hi, RingHom.map_mulVec]
+    · simp [Y, hi]
   have hY := hI (fun i => if (i : ℕ) < a then G.map f *ᵥ Pi.single (k i) 1 else Pi.single (k' i) 1) (fun i => (Matrix.of Y).map f i)
     (by intro i hi; rw [hymap]; simp [hi]) (by intro i hi; rw [hymap]; simp [Nat.not_lt.mpr hi])
   refine ⟨(Matrix.of X).det, ν ^ a * (Matrix.of Y).det, ?_, ?_, ?_⟩

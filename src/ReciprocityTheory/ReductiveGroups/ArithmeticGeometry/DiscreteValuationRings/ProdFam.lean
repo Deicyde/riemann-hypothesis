@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.ProdBox
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.ProdExpPf
 
 set_option autoImplicit false
 
@@ -29,8 +30,8 @@ theorem famφB_pr (pD : IsPowDeg D' D j) (α' : D'.X) (i : Fin j) (a : Fin 4) :
     | (rw [← Over.comp_left]; congr 1;
         simp [CartesianMonoidalCategory.comp_lift_assoc, CartesianMonoidalCategory.comp_lift, hc,
           IsMonHom.mul_hom, CartesianMonoidalCategory.comp_toUnit_assoc])
-    | (congr 1; simp [CartesianMonoidalCategory.comp_lift_assoc, CartesianMonoidalCategory.comp_lift, hc,
-          IsMonHom.mul_hom, CartesianMonoidalCategory.comp_toUnit_assoc])
+    | (congr 1; simp [CartesianMonoidalCategory.comp_lift_assoc,
+          CartesianMonoidalCategory.comp_toUnit_assoc])
 
 def boxFamB (pD : IsPowDeg D' D j) (k : ℕ) (f : Fin j → ∀ α : D.X, D.SecB k α) (α' : D'.X) : D'.SecB k α' :=
   secOfIso (u := LB.linCombIso pD.w (D'.famφB α') (DegPre.famε k))

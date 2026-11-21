@@ -1,7 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.Divisibility.DefGroup
-import Formalism.LocalToGlobal.Divisibility.GoodPartHermitianSpec
-import Development.AbelianVarietyTheory.Definitions.Divisors.SplitDoublingNBlock
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.GenericMultiplicityOne
 
 noncomputable section

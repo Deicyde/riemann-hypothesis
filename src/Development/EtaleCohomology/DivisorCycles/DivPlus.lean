@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.DivisorCycles.CycleCount
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 open Matrix PositivityTheory.AutomorphicGaloisHodgeTate.Div
 namespace LateralTheory.DivDb

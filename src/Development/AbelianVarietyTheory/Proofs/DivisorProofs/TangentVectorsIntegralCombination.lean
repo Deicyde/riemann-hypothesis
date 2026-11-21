@@ -1,9 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DrAtNonneg
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.GrNormPosOfBasis
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.DualGramInterpGram
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EigenframeGenericAffineOpen
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IntOIsLocalRing
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeftInverseOfIntegralSolutionsStatement
 open NumberField IsDedekindDomain Filter Topology
 open Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Pj ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -30,12 +28,12 @@ theorem grNorm_eq_one_of_comb {C : Type} [NontriviallyNormedField C] {x : Sp C �
     (hΛ : ∀ (cf : Fin m → C) (w : Sp (DualNumber C) ⟶ t.G.left), IsCombAtG t x v cf w → (w ∈ Λ ↔ ∀ i, ‖cf i‖ ≤ 1))
     (k : Fin m) : grNorm t x Λ v k = 1 := by
   classical
-  refine IsLeast.csInf_eq ⟨⟨Pi.single k 1, by simp, fun j hj => by simp [Pi.single_apply, hj.ne'], ?_, by simp⟩, ?_⟩
+  refine IsLeast.csInf_eq ⟨⟨Pi.single k 1, by simp, fun j hj => by simp [hj.ne'], ?_, by simp⟩, ?_⟩
   · obtain ⟨w, -, hw⟩ := Guard.exists_comb hv (Pi.single k 1)
     refine ⟨w, (hΛ _ w hw).2 fun i => ?_, hw⟩
     by_cases hi : i = k
     · subst hi; simp
-    · simp [Pi.single_apply, hi]
+    · simp [hi]
   · rintro r ⟨cf, h0, -, ⟨w, hw, hc⟩, rfl⟩
     exact one_le_inv₀ (norm_pos_iff.2 h0) |>.2 ((hΛ cf w hc).1 hw k)
 

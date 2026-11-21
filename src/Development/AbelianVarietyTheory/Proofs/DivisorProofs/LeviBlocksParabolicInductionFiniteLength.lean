@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IrreducibleAdmissibleGL
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.StandardFunctorsFiniteLength
+import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HasFiniteLengthOfIsIrreducible
 
 noncomputable section
 
@@ -106,7 +107,7 @@ theorem leviMap_surjective (e : (Σ a, m a) ≃ n) : Function.Surjective (leviMa
   refine ⟨fun i => Units.map (reindexAlgEquiv R R (blockNum i).symm).toRingEquiv.toMonoidHom (h (neOrder m i).1),
     levi_ext fun i u v => ?_⟩
   rw [leviMap_apply_num]
-  simp [reindexAlgEquiv_apply]
+  simp
 
 theorem continuous_glIso [TopologicalSpace R] (e : (Σ a, m a) ≃ n) : Continuous (glIso R e) := by
   refine Units.continuous_iff.2 ⟨continuous_matrix fun x y => ?_, continuous_matrix fun x y => ?_⟩

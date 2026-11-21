@@ -1,9 +1,12 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.MinimalPrimeDimensions.SpecializesIff
 import Development.WeilBound.CoreStatements.MinimalPrimeDimensions.IsProjPrimeOfRelComps
 import Development.WeilBound.CoreStatements.MinimalPrimeDimensions.ResGAppLE
 import Development.WeilBound.CoreStatements.MinimalPrimeDimensions.LeDimQuotientHorizontal
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ResidueDegreeOfIsClosedImmersion
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.PCharacterised
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.SerreHolomorphicSections
 
 set_option autoImplicit false
 
@@ -67,7 +70,7 @@ theorem isComb_single (k : Fin m) : IsComb p s (Pi.single k 1) (s k) := by
   rw [Finset.sum_eq_single k]
   · simp
   · intro j _ hj
-    simp [Pi.single_apply, hj]
+    simp [hj]
   · simp
 
 theorem secVal_comb (hB : B.IsLB) {u : Fin m → R} {su : B.Sec} (hu : IsComb p s u su) (y : CxPts p σ) :

@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolMatchIff
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepresentationPreservesSpaceStatement
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK
@@ -31,7 +28,7 @@ theorem re_pos_of_hasSig {n r : ℕ} {M : Matrix (Fin n) (Fin n) ℂ} (h : HasSi
   have hz0 : z ≠ 0 := by
     intro h0; apply hx; rw [hxz, h0, Matrix.mulVec_zero]
   have hstar : star (A *ᵥ z) = A.map star *ᵥ star z := by
-    ext i; simp [Matrix.mulVec, dotProduct, star_sum, mul_comm]
+    ext i; simp [Matrix.mulVec, dotProduct, star_sum]
   have key : x ⬝ᵥ M *ᵥ star x = z ⬝ᵥ star z := by
     rw [hxz, hstar, Matrix.mulVec_mulVec, ← Matrix.vecMul_transpose A z, Matrix.dotProduct_mulVec,
       Matrix.vecMul_vecMul, ← Matrix.mul_assoc, h1, Matrix.vecMul_one]

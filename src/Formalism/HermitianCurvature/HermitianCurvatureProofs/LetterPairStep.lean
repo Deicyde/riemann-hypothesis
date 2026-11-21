@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.SmoothnessOnGoodSet
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.ChartIntegralLocal
 
 open Matrix MeasureTheory Filter Topology
 

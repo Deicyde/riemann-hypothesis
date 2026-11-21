@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.VolumeEquality.BallVolDefs
 import Development.WeilBound.CoreStatements.VolumeEquality.LocInj
 import Development.WeilBound.CoreStatements.EqualVolumeCompactOpens.RmulScalOne

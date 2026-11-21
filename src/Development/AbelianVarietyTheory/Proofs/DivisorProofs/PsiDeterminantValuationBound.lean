@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsDetEltOne
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaTensorExists
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RingHomsDvrCardEqFinrank
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PsiDeterminantEigenPropertyStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DeterminantElementProductStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdditiveFunctionOnMonoidLinearStatement

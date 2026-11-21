@@ -1,5 +1,6 @@
-import Mathlib
-import Development.DiscreteGroups.GlobalIrreducibility.ContinuousKinv2
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.DiscreteGroups.GlobalIrreducibility.InHCorner
 
 noncomputable section
 set_option linter.unusedSimpArgs false

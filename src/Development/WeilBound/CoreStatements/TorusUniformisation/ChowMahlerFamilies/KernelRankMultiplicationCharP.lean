@@ -1,19 +1,24 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.GermSys
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsFlatAnIffIsConstMul
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.AbelianSchemeGerms
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.FBIdAd
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GermBGen
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GermBSer
 import Development.AbelianVarietyTheory.Definitions.Divisors.FibreRankCompOfSurjective
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.CubeDescendsAlongEtaleIsogeny
 import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.GlobalFnsHolds
 import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.FlatAndSurjectiveOfIsFiniteAbelianEnd
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.IsIntegralOfSmoothFieldOfConnectedSpace
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.LocallyQuasiFiniteOfFiniteGeometricPoints
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.FormalGermDimensionUnique
 import Development.WeilBound.CoreStatements.HodgeTatePoints.GermCompOneAssocOfConstantCoeffZero
+import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GermBFr
+import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ThetaSwapFirstTwo
+import Mathlib.AlgebraicGeometry.ZariskisMainTheorem
+import Mathlib.LinearAlgebra.Matrix.Rank
+import Mathlib.RingTheory.Bialgebra.SymmetricAlgebra
+import Mathlib.RingTheory.DualNumber
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.AmplePt
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.VtUniq
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.PullFEPf
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SemiabelianSchemes.PrecompleteBases.PsbLb
 
 namespace PositivityTheory.Xgn.JetKernelRank
 
@@ -98,7 +103,7 @@ theorem loc (p : ℕ) [CharP k p] (χ : C →ₐ[k] k) (s : ℕ) : ∀ (V : Type
     let N := LinearMap.range X
     have a1 := finrank_eq_mul_ker p (X.restrictScalars k) (w • T 0) (fun v => by
       simp only [X, LinearMap.smul_apply, LinearMap.restrictScalars_apply, LinearMap.lsmul_apply, hT, smul_add,
-        ← mul_smul, hw, mul_comm w]
+        ← mul_smul, mul_comm w]
       rw [mul_comm (δ 0 (x 0)), hw]) (by
       have : ∀ n (v : V), ((X.restrictScalars k) ^ n) v = x 0 ^ n • v := fun n => by
         induction n with
@@ -351,7 +356,7 @@ theorem hopf_dvd [IsAlgClosed k] [Module.Finite k H] [IsCocomm k H] (p : ℕ) [F
       | add x y hx hy => simp only [map_add, LinearMap.add_apply, ← hx, ← hy]; rfl
       | tmul a b => simp [mul_comm]
     refine dvd_quot p (fun i => CartierDual.evalAt k H (f i)) (fun i φ ψ => ?_) ?_ _ fun i φ hφ => ?_
-    · simp [CartierDual.mul_apply, hf, add_comm]
+    · simp [hf, add_comm]
     · refine hfi.map' _ (LinearMap.ker_eq_bot'.2 fun a ha => ?_)
       exact CartierDual.eq_of_forall_apply (R := k) fun φ => (DFunLike.congr_fun ha φ).trans (map_zero _).symm
     · refine CartierDual.ext_apply fun x => ?_
@@ -724,7 +729,7 @@ theorem ker_dvd [IsCommMonObj G] [IsMonHom f] [IsAlgClosed k] [Module.Finite k A
         (includeRight : A ⊗[k] A →ₐ[k] A ⊗[k] (A ⊗[k] A)).comp Δ := by ext x; simp
       rw [← AlgHom.comp_assoc, mul, mul, e₁, e₂, mul, mul, _root_.mul_assoc]
       exact congrArg₂ (· * ·) (cg (by ext x; simp [a, Algebra.TensorProduct.one_def])) (congrArg₂ (· * ·)
-        (cg (by ext x; simp [a, Algebra.TensorProduct.one_def])) (cg (by ext x; simp [a, Algebra.TensorProduct.one_def])))))
+        (cg (by ext x; simp [a])) (cg (by ext x; simp [Algebra.TensorProduct.one_def])))))
     (pt_inj h₁ h₂ (by
       have e₁ : (Algebra.TensorProduct.map ε (.id k A)).comp includeLeft =
         (includeLeft : k →ₐ[k] k ⊗[k] A).comp ε := by ext x; simp
@@ -770,7 +775,7 @@ theorem aeval_one {I : Type} [Fintype I] [DecidableEq I] (c : I → R) (hc : ∀
     simp only [smul_mul_assoc, hc, smul_zero, Finset.sum_const_zero, add_zero, coeff_mul_X']
     rw [Finset.sum_eq_single n]
     · simp [Algebra.smul_def]
-    · intro b _ hb; simp [Finsupp.single_apply, hb, hb.symm]
+    · intro b _ hb; simp [hb.symm]
     · simp
 
 theorem aeval_two {d : ℕ} (a b : Fin d → R) (ha : ∀ i j, a i * a j = 0) (hb : ∀ i j, b i * b j = 0)
@@ -793,19 +798,19 @@ theorem aeval_two {d : ℕ} (a b : Fin d → R) (ha : ∀ i j, a i * a j = 0) (h
     · simp only [add_mul, Finset.sum_mul, smul_mul_assoc, ha, h3, smul_zero, Finset.sum_const_zero, add_zero,
         coeff_mul_X', Fin.zero_eta, Matrix.cons_val_zero]
       rw [Finset.sum_eq_single n (f := fun i => _ • a i), Finset.sum_eq_single n (f := fun i => ∑ j, _ • (a i * b j))]
-      · simp [Algebra.smul_def, Finsupp.single_apply, mul_comm]
-      · intro b _ hb; simp [Finsupp.single_apply, hb, hb.symm]
+      · simp [Algebra.smul_def, mul_comm]
+      · intro b _ hb; simp [hb.symm]
       · simp
-      · intro b _ hb; simp [Finsupp.single_apply, hb, hb.symm]
+      · intro b _ hb; simp [hb.symm]
       · simp
     · simp only [add_mul, Finset.sum_mul, smul_mul_assoc, hb, h4, smul_zero, Finset.sum_const_zero, add_zero,
         coeff_mul_X', Fin.mk_one, Matrix.cons_val_one, Matrix.cons_val_zero]
       rw [Finset.sum_comm, Finset.sum_eq_single n (f := fun i => _ • b i),
         Finset.sum_eq_single n (f := fun j => ∑ i, _ • (a i * b j))]
-      · simp [Algebra.smul_def, Finsupp.single_apply, mul_comm]
-      · intro b _ hb; simp [Finsupp.single_apply, hb, hb.symm]
+      · simp [Algebra.smul_def, mul_comm]
+      · intro b _ hb; simp [hb.symm]
       · simp
-      · intro b _ hb; simp [Finsupp.single_apply, hb, hb.symm]
+      · intro b _ hb; simp [hb.symm]
       · simp
 
 theorem span_sq {I : Type} (c : I → R) (hc : ∀ i j, c i * c j = 0) : Ideal.span (Set.range c) ^ 2 = ⊥ := by

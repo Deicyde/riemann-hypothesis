@@ -1,7 +1,7 @@
-import Mathlib
-import GroundTheory.GlobalFields.SUnits
-import GroundTheory.GlobalFields.SemilocalAlgebras.Galois
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.HerbrandQuotients.SUnitsPerm
+import GroundTheory.GlobalFields.SUnitsKernel
 
 namespace GroundTheory.Global
 

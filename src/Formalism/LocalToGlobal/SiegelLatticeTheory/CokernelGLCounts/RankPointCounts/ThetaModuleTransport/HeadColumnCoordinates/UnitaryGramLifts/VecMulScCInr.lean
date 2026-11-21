@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.ThetaModuleTransport.HeadColumnCoordinates.UnitaryGramLifts.FGInvariant
+import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.ThetaModuleTransport.HeadColumnCoordinates.UnitaryGramLifts.ScCMulInv
 
 noncomputable section
 
@@ -88,9 +91,9 @@ theorem vecMul_scC_inr (α β : E) (Y : Ix r → E) (b : Fin (r + 1)) :
     scC_apply_inr_inr]
   by_cases hb : b = Fin.last r
   · subst hb
-    simp [apply_ite cj, mul_ite, Finset.sum_ite_eq', Finset.sum_ite_eq]
+    simp [apply_ite cj, mul_ite, Finset.sum_ite_eq']
     ring
-  · simp [hb, apply_ite cj, mul_ite, Finset.sum_ite_eq', Finset.sum_ite_eq]
+  · simp [hb, apply_ite cj, mul_ite, Finset.sum_ite_eq']
 
 end ScaleA4
 

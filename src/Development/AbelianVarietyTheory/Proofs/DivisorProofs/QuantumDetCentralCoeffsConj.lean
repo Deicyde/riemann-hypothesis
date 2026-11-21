@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.RealPlaceAnalysis.ThirdArithmeticHolds
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemNilRad
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.QdetPolyMapMonic
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CapCommuteRtInfGL
@@ -31,7 +31,7 @@ theorem frame_glRel (ρ : Matrix (Fin n) (Fin n) ℂ →ₗ[ℂ] A) (hρ : IsLie
         = P * Matrix.single a b 1 * (P' * P) * Matrix.single c d 1 * P' := by simp only [Matrix.mul_assoc]
       _ = _ := by rw [h', Matrix.mul_one]; simp only [Matrix.mul_assoc]
   rw [e, e, single_mul_single_one, single_mul_single_one]
-  split_ifs <;> simp [eq_comm]
+  split_ifs <;> simp
 
 theorem conj_single (P0 Q0 : Matrix (Fin n) (Fin n) ℂ) (a b : Fin n) :
     P0 * Matrix.single a b 1 * Q0 = ∑ c, ∑ d, (P0 c a * Q0 b d) • Matrix.single c d (1 : ℂ) := by

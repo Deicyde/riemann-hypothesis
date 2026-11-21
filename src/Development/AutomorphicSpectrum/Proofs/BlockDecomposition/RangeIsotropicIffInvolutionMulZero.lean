@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MulEqOfRangeLe
-import GroundTheory.AutomorphicForms.AnisotropicHeight
 open NumberField IsDedekindDomain Matrix Polynomial GlobalTheory.CuspRep GlobalTheory.UnitaryBC PositivityTheory.Rg.Tf.Loc PositivityTheory.Rg.BcB PositivityTheory.Rg.BcB.D4 GlobalTheory.CompanionTheory.TorusCh
 open scoped Pointwise
 
@@ -48,7 +47,7 @@ theorem iso_range_iff_sg_mul (E : Type) [Field E] [NumberField E] [IsCMField E] 
       funext k
       by_cases hk : k = i
       · subst hk; simp
-      · simp [Pi.single_apply, hk]
+      · simp [hk]
     rw [hc, single_one_dotProduct, Matrix.mulVec_single_one] at h3
     simpa using h3
   · rintro h _ ⟨b, rfl⟩

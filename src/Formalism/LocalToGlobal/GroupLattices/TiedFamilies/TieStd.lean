@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.TiedRec
-import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.RecAct
 
 noncomputable section
 

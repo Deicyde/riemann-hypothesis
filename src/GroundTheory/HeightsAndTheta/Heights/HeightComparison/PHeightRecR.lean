@@ -1,9 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.HeightRecR
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.HeightOrbitDivVertical
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.HeightOrbitFiniteSum
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.HeightOrbitArchSum
 import GroundTheory.HeightsAndTheta.Heights.HeightsOfSets.Comparison
+import GroundTheory.HeightsAndTheta.Heights.HeightsOfSets.FiniteSupportHeight
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

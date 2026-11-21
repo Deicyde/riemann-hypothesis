@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.QALetterNe
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.Imports
+import Formalism.SharpRestriction.LevelLetterCocycles.FrobeniusPowUniformizerFactorisation
 
 noncomputable section
 

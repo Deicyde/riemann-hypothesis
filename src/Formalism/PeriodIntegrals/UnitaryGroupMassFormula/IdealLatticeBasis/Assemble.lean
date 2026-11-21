@@ -1,8 +1,9 @@
-import Mathlib
-import Formalism.PeriodIntegrals.IdealLattice
-import Formalism.PeriodIntegrals.AreaLat
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IdealLatticeBasis.IdealBasisAlt
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.AreaLat
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.RingTheory.SimpleRing.Principal
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open NumberField
 

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.ArchimedeanH0Cards.PushforwardPreservesSelmerCocycles
 
 open ReciprocityTheory.Gal UpperTheory.V.Pa UpperTheory.V.Pa.B2
@@ -19,7 +21,7 @@ private theorem defect_sub {k : D0.Hom D} {r : D.Hom D'} {p p' : D'.C2} {c c' : 
     by rw [map_sub, hq3, hq3'], fun w g h => ?_⟩
   have e1 := hq4 w g h
   have e2 := hq4' w g h
-  simp only [Pi.sub_apply, Submodule.coe_sub, AddSubgroupClass.coe_sub, Prod.fst_sub,
+  simp only [Pi.sub_apply, AddSubgroupClass.coe_sub, Prod.fst_sub,
     Prod.snd_sub, map_sub] at e1 e2 ⊢
   rw [e1, e2]
   abel

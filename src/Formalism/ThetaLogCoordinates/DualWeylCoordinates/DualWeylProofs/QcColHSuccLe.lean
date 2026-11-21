@@ -1,4 +1,11 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.DualWeylCoordinates.DualWeylProofs.QcEvGLGenPtInt
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.TotallySplit
 
 noncomputable section
 
@@ -106,6 +113,6 @@ theorem qc_colFam_triv {n : ℕ} [NeZero n] (M : GLMod n) (h1 : Fintype.card M.�
     simpa using congrFun h0 i0
   · have : Unique {I : TIdx (0 : Fin n → ℤ) // StdT I} :=
       ⟨⟨⟨canT 0, qc_canT_std 0⟩⟩, fun I => Subtype.ext (Subsingleton.elim _ _)⟩
-    simp [h1, dMu]
+    simp [dMu]
 
 end Formalism.InvariantFactorPaths.ColumnFamilies

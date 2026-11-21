@@ -1,8 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.EntryAgree
-import Formalism.LocalToGlobal.Columns.ChainTw
-import Formalism.LocalToGlobal.Columns.ChainTwAn
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsGLExistsUnique
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ParahoricTestFunctionsAgreeRationalPointsStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.TwistSupportPeriodicLevels
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.UnfoldingIntegralPositionOneEqFiniteSumStatement

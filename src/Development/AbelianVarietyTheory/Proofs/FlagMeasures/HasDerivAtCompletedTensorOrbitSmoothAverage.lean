@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.CuspFrameWeights.ConvolutionSmoothL2
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.SiegelWeilLocal.OrthonormalPlaceBasis
-import Formalism.RealPlaceAnalysis.FinalF
+import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.HermitianFormUnitaryOneOne
 
 open MeasureTheory NumberField Matrix Finset Formalism.MainNotions.S Formalism.REAL Formalism.QuantumDeterminants GlobalTheory.Count GlobalTheory.Dec GlobalTheory.IndefiniteRowSideFullHecke.OrthonormalPlaceBasis
 open scoped InnerProductSpace ContDiff
@@ -155,7 +154,7 @@ theorem hasDerivAt_orbit_average : ∀ (B : RowsAut) (F : (InfinitePlace B.I.F �
       map_smul' := by
         intro r M
         funext v i j
-        simp only [Pi.smul_apply, smul_eq_mul, RingHom.id_apply, Complex.real_smul, Finset.mul_sum]
+        simp only [Pi.smul_apply, RingHom.id_apply, Complex.real_smul, Finset.mul_sum]
         exact Finset.sum_congr rfl fun k _ => mul_left_comm _ _ _ }
   let L := LinearMap.toContinuousLinearMap Lm
   let F' : (InfinitePlace B.I.F → Fin B.I.n → Fin B.I.n → ℂ) → ℂ := fun M => fderiv ℝ F M (L M)

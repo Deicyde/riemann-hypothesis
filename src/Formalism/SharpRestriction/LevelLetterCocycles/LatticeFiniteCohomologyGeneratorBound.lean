@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.ExistsPosConstLagrangeCondition
 import Formalism.SharpRestriction.LevelLetterCocycles.LocalTheoryWindows
+import Mathlib.RingTheory.TotallySplit
 
 noncomputable section
 

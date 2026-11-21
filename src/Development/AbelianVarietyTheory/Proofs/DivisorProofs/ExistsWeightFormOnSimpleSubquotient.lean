@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlockSub
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUniqueDualWeylWeightProjector
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.LiftFrameEmbeddingBase
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions Formalism.L2.DIV Formalism.L2.Pj GlobalTheory.BigTop GlobalTheory.BigOn GlobalTheory.ExpTie GlobalTheory.ExpFrame Formalism.CohomologicalDescent.DepthNonnegative Formalism.CohomologicalDescent.LogSmallConstantBounds Formalism.CohomologicalDescent.ShortWeightBounds Formalism.CohomologicalDescent.LD Formalism.RankGapBounds.FormsTensorLocalization
 open MvPolynomial Formalism.GradedWeylDivisibility GlobalTheory.HighWtEmb
 
@@ -30,7 +29,7 @@ theorem exists_prodProj (O : Type) [CommRing O] (N : ℕ) (ι : Type) [Fintype �
     funext σ
     by_cases h : σ = τ
     · subst h; simp
-    · simp [Function.update_of_ne h, h]
+    · simp [h]
 
 theorem prodProj_mul_eq_zero (O : Type) [CommRing O] (N : ℕ) (ι : Type) [Fintype ι] [DecidableEq ι] (lam : ι → ℕ → ℕ)
     (w : ι → Fin N → ℕ) (e : Module.End O (NablaT O N lam))

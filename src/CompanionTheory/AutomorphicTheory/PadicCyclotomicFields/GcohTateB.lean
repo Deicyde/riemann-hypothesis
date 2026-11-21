@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.AutomorphicTheory.PadicCyclotomicFields.GcohTateA
+import CompanionTheory.AutomorphicTheory.PadicCyclotomicFields.GcohDefs
+import GroundTheory.ProfiniteCohomology.CyclicCupProf
 
 open CategoryTheory MonoidalCategory GroundTheory.ProfCoh ReciprocityTheory.Gal ValuativeRel
 

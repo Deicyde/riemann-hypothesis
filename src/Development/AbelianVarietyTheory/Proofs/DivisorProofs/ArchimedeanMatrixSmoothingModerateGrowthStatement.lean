@@ -1,8 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchimedeanMatrixSmoothingModerateGrowth
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OnMatInfOfIsUnit
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SandCLMInfApply
 open NumberField GlobalTheory.CuspRep GlobalTheory.JSW GlobalTheory.JSW.MirCinf MeasureTheory
 open scoped FourierTransform ContDiff
 set_option maxHeartbeats 1000000 in

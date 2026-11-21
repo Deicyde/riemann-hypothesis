@@ -1,4 +1,5 @@
-import Development.EtaleCohomology.EtaleTrace.LCoprodInjPf
+import BuildAid.Leniency.Open
+import Development.EtaleCohomology.EtaleTrace.LadicH0LocallyConstant
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry GlobalTheory.EtC

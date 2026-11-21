@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.ContinuousOfMemCcSmooth
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.MeasurePreservingRmulQuotMeas
 
 open MeasureTheory GlobalTheory.AutomorphicL2Unitary Topology Set Filter
 open scoped Pointwise

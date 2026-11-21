@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.IsPrimitiveSub
 
 noncomputable section
@@ -100,8 +101,8 @@ theorem hT_span_left {ι : Type*} (v : ι → S.V) (y : S.V) (hv : ∀ a, S.hT (
     obtain ⟨a, rfl⟩ := h
     exact hv a
   | zero => simp
-  | add x z _ _ h1 h2 => simp [LinearMap.map_add₂, h1, h2]
-  | smul c x _ h => simp [LinearMap.map_smulₛₗ₂, h]
+  | add x z _ _ h1 h2 => simp [h1, h2]
+  | smul c x _ h => simp [h]
 
 theorem xsp_le_orth {T : E} (F : LFlag S r T) : Xsp F ≤ orth S (Xsp F) := by
   intro y hy

@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ImportsAlt
 open Matrix
 
@@ -51,11 +51,11 @@ theorem charDot_kill : ∀ {K : Type} [CommRing K] [TopologicalSpace K] [IsTopol
     refine hC.eventually_forall_of_forall_eventually fun z _ => ?_
     have hO' : IsOpen {p : (κ → K) × (κ → K) | p.2 ⬝ᵥ p.1 ∈ (K₀ : Set K)} :=
       K₀.isOpen.preimage (continuous_snd.dotProduct continuous_fst)
-    filter_upwards [hO'.mem_nhds (x := ((0 : κ → K), z)) (by simp [K₀.zero_mem])] with p hp
+    filter_upwards [hO'.mem_nhds (x := ((0 : κ → K), z)) (by simp)] with p hp
     exact hp
 
   have hP : {p : (κ → K) × (κ → K) | p.1 ⬝ᵥ p.2 ∈ (K₀ : Set K)} ∈ nhds ((0 : κ → K), (0 : κ → K)) :=
-    hO.mem_nhds (by simp [K₀.zero_mem])
+    hO.mem_nhds (by simp)
   rw [nhds_prod_eq, Filter.mem_prod_iff] at hP
   obtain ⟨U, hU, V, hV, hUV⟩ := hP
   haveI : NonarchimedeanAddGroup (κ → K) := nonarchimedean_pi

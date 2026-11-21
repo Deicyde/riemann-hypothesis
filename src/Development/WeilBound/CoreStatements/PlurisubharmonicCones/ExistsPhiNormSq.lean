@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.PeriodDecompositionNearBoundary
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.IsotropicSublatticeCovolumePositiveStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.FirstMinimumAndCuspWeightBoundsStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.ExistsExtendLinearIndependentOfSpanStatement
+import Mathlib.LinearAlgebra.LinearIndependent.BaseChange
 
 noncomputable section
 namespace LevelTowerAlt
@@ -110,7 +110,7 @@ theorem limit_strong : ∀ (E : Type) [Field E] [NumberField E] [IsCMField E] (n
         funext j
         by_cases hj : j = i
         · subst hj; simp [uCo]
-        · simp [uCo, hj, Finsupp.single_apply, Ne.symm hj]
+        · simp [uCo, hj]
       have h1 := hx.2 (bas (.inl i)) (by simp [chartW, hv0])
       rw [form_coords bas _ h.form L.alt, hv0, hu0] at h1
       simpa using h1

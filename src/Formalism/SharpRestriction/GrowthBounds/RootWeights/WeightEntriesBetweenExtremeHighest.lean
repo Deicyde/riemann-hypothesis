@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.RootWeights.TraceProjectionIsInvProj
 
 noncomputable section
@@ -9,10 +11,10 @@ namespace Formalism.MainNotions.G.GLWeightTheory
 open Formalism.MainNotions.G Formalism.MainNotions.CovariantDegrees
 
 theorem rootWeight_apply_first {n : ℕ} {a c : Fin n} (h : a ≠ c) : rootW a c a = 1 := by
-  simp [rootW, Pi.single_apply, h]
+  simp [rootW, h]
 
 theorem rootWeight_apply_second {n : ℕ} {a c : Fin n} (h : a ≠ c) : rootW a c c = -1 := by
-  simp [rootW, Pi.single_apply, h.symm]
+  simp [rootW, h.symm]
 
 section hw
 

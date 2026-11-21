@@ -1,6 +1,4 @@
-import Formalism.SharpRestriction.CuspSpanNormBounds.FrobeniusCoefficientMemLp.MomFinal
-import Formalism.SharpRestriction.CuspSpanNormBounds.FamilyDoubleCosetBesselBoundOfGap
-import Formalism.SharpRestriction.CuspSpanNormBounds.ExpansionFromLemmaB
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.TraceIntegralEstimates.MomSchur
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CasimirReductionTheory.BesselSplit
 

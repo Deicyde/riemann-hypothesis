@@ -1,9 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.RingsOfIntegers.SmallPointsSubstitutionAlgHomSinglePoint
-import Development.AbelianVarietyTheory.Proofs.RingsOfIntegers.FormalGroupPointsOfIntegralChartSpec
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.RingsOfIntegers.IntegralChartFormalBiextensionGaugeBound
 import Development.AbelianVarietyTheory.Proofs.FormalGroupCharts.SurjectiveAppTopIntegralModelSquare
-import Development.AbelianVarietyTheory.Proofs.FormalGroupCharts.JetFramesDifferByUnitEachOrder
 import Development.AbelianVarietyTheory.Proofs.RingsOfIntegers.ExistsPowerSeriesLimitOfCompatibleJetPointsStatement
 import Development.AbelianVarietyTheory.Proofs.RingsOfIntegers.SpecPowerSeriesHomExtOfJetsStatement
 import Development.AbelianVarietyTheory.Proofs.RingsOfIntegers.ConstantSectionEqLimitChartPointStatement
@@ -12,6 +10,8 @@ import Development.AbelianVarietyTheory.Proofs.RingsOfIntegers.SymmetricLiftOrde
 import Development.AbelianVarietyTheory.Proofs.RingsOfIntegers.GermSymmetricTranslateFibreEqModelStatement
 import Development.AbelianVarietyTheory.Proofs.RingsOfIntegers.EvalThetaSeriesMulQuadraticPartialsStatement
 import Development.AbelianVarietyTheory.Proofs.RingsOfIntegers.EvalIotaSeriesEqQuadraticInversionPartialsStatement
+import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ExistsPref
+import Development.AbelianVarietyTheory.Proofs.JetHarmonics.TruncationFramesLocalSeries
 
 set_option autoImplicit false
 noncomputable section
@@ -65,7 +65,7 @@ theorem trU_laws {θ p₁ p₂ : Γ → Γ → Γ → U} {ρ φ : Γ → U} {e :
   · have := congrArg Additive.ofMul (m x y)
     rw [quadQ_of_diff w h₁ h₂] at this
     apply Additive.ofMul.injective
-    simp only [trU, c3, _root_.mul_one, _root_.one_mul, e₁, mul_comm a, ofMul_mul, ofMul_div, ofMul_pow, ofMul_inv, ofMul_one] at this ⊢
+    simp only [trU, c3, _root_.mul_one, _root_.one_mul, e₁, mul_comm a, ofMul_mul, ofMul_div, ofMul_pow, ofMul_inv] at this ⊢
     linear_combination (norm := module) this
   · simp only [trU]
     rw [Finset.prod_mul_distrib, o, _root_.one_mul, Finset.prod_pow]

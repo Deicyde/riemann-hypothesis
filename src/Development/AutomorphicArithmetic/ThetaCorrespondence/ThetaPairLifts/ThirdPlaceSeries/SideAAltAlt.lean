@@ -1,5 +1,5 @@
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.GoodLEq
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.CohomologicalCsdTempered
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.HeckeOpen
 
 set_option synthInstance.maxHeartbeats 200000

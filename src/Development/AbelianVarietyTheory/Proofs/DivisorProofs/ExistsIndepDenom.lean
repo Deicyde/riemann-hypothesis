@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.SubsetSpanBy
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj IsLocalRing
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -25,8 +26,8 @@ theorem descent {R₁ E : Type} [CommRing R₁] [CommRing E] [IsLocalRing E] (a 
     simp only [Finset.sum_smul]
     rw [Finset.sum_comm]
     refine Finset.sum_eq_zero fun i _ => ?_
-    simp only [Fin.sum_univ_succ, A, xv, Fin.cons_zero, Fin.cons_succ, smul_eq_mul, Algebra.smul_def,
-      RingHom.algebraMap_toAlgebra, map_mul, Pi.single_apply]
+    simp only [Fin.sum_univ_succ, A, xv, Fin.cons_zero, Fin.cons_succ, Algebra.smul_def,
+      RingHom.algebraMap_toAlgebra, map_mul]
     rw [h i, Finset.sum_mul, Finset.sum_mul]
     simp only [_root_.mul_one, ← Finset.sum_add_distrib]
     exact Finset.sum_eq_zero fun j _ => by ring
@@ -36,7 +37,7 @@ theorem descent {R₁ E : Type} [CommRing R₁] [CommRing E] [IsLocalRing E] (a 
     have := LinearMap.congr_fun hxy (ev 0)
     simp only [LinearMap.comp_apply] at this
     rw [← this]
-    simp [x, xv, ev, Fintype.linearCombination_apply, Fin.sum_univ_succ]
+    simp [x, xv, ev, Fintype.linearCombination_apply]
   have hy : ∀ c' : Fin k →₀ R₁, y c' = ∑ l ∈ c'.support, a (c' l) * y (Finsupp.single l 1) := by
     intro c'
     conv_lhs => rw [← Finsupp.sum_single c']
@@ -56,7 +57,7 @@ theorem descent {R₁ E : Type} [CommRing R₁] [CommRing E] [IsLocalRing E] (a 
   have h2 := congrArg (fun z : Fin k →₀ R₁ => z l) (LinearMap.congr_fun hαf (ev i))
   simp only [LinearMap.comp_apply, LinearMap.zero_apply, Finsupp.coe_zero, Pi.zero_apply] at h2
   rw [LinearMap.pi_apply_eq_sum_univ α] at h2
-  simp only [Finsupp.coe_finset_sum, Finset.sum_apply, Finsupp.coe_smul, Pi.smul_apply, smul_eq_mul,
+  simp only [
     Fin.sum_univ_succ] at h2
   have hA : ∀ c, (A.mulVecLin (ev i)) c = A c i := by
     intro c

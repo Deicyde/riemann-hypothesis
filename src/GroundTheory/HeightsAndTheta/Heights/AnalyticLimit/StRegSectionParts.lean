@@ -1,6 +1,6 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.StRegSection
-import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.ConvergenceStatements
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.StLemmaETailLog
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.AnalyticLimit

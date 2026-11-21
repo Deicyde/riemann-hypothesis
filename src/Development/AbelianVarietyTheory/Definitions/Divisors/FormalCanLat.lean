@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.CanExtOfCharts
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsProperToroidalModelStructureMap
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ToroidalCompactification
 
 set_option autoImplicit false
 

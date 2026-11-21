@@ -1,6 +1,5 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.ClassFieldRamification.IsClassFieldHilbert
-import Mathlib.NumberTheory.GaussSum
-import Mathlib.NumberTheory.LegendreSymbol.Basic
 
 open NumberField IsDedekindDomain IntermediateField UpperTheory.V.Kum UpperTheory.V.CF
 open scoped Pointwise

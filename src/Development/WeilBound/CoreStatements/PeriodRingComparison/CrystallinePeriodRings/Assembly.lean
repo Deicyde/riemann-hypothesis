@@ -1,9 +1,8 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.PeriodRingComparison.CrystallinePeriodRings.BcrisPlusHomAlgebraMap
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PeriodRingComparison.CrystallinePeriodRings.BcFrob
 import Development.WeilBound.CoreStatements.PeriodRingComparison.AinfInverseMaps.AinfInvMapGOC
 import Development.WeilBound.CoreStatements.PeriodRingComparison.RationalRingEquivalences.IsLogCore
-import Development.WeilBound.CoreStatements.PeriodRingComparison.TeichmullerLogarithm.LogEps
 import Development.WeilBound.CoreStatements.PeriodRingComparison.CrystallinePeriodRings.BcrisLogTeichmullerEqT
 import Development.WeilBound.CoreStatements.PeriodRingComparison.CrystallinePeriodRings.CAFrobAinf
 

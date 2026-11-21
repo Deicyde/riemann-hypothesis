@@ -1,6 +1,9 @@
-import Development.AutomorphicArithmetic.ShortNorms.ShortNorm
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ShortNorms.normPrimesN
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.DivLeRpowThreeQuarters
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.Tactic.ENatToNat
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open GlobalTheory.Mem.An
 

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.IdeleGroups.SIdeleGroups
 import GroundTheory.GlobalFields.IdeleGroups.GaloisOnAdeles.Places
 

@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.MultiplicityOne.ContinuousWhittakerOneRconvIntertwiner
-import GroundTheory.AutomorphicForms.UnitaryRepresentations.ExistsEqAlgebraMapOfIsSelfAdjoint
 
 open MeasureTheory Set Filter Topology Function
 open NumberField IsDedekindDomain

@@ -1,8 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.NormSumPairRankZeroOfCurveCoordNorm
-import Formalism.PairingDivisors.StatementH
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Levelaf
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.IntegralFiniteAdeleCompleteSeparated
+import Formalism.SharpRestriction.GlobalSchurBounds.StandardLatticesGL3
 
 open NumberField IsDedekindDomain
 open scoped TensorProduct
@@ -42,7 +42,7 @@ theorem coord_comb (r : Fin (Module.finrank ℤ (𝓞 E)) → 𝔸) (i : Fin (Mo
     simp [coord]
   · intro j _ hj
     rw [← ratBasis_apply]
-    simp [coord, Finsupp.single_apply, hj]
+    simp [coord, hj]
   · simp
 
 theorem comb_mem (r : Fin (Module.finrank ℤ (𝓞 E)) → 𝔸) (hr : ∀ j, r j ∈ intAd ℚ) :

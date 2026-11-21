@@ -1,8 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GaloisOfRegularForms
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RankWeightComponentEq
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ExistsComplexConjIsometryInertCompletion
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.IsIdemOfAlgebraMap
+import Formalism.LocalToGlobal.Columns.DecoFin
 
 open IsDedekindDomain NumberField
 

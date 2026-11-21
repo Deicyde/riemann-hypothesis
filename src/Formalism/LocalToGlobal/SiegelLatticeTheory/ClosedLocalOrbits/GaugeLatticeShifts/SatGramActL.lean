@@ -1,10 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.SatGramActLStmt
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.Vanish
-import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.InHHAlg
 import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.HermitianETransportInvariant
-import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.LevelSubgroupCharacterUnitary
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.InclusionInjective
+import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.SatGramActRRep
 
 noncomputable section
 
@@ -202,13 +201,13 @@ theorem nlam_mapL {β m : S.V ≃ₗ[E] S.V} (hβ : β ∈ Formalism.HermitianLa
     rw [Formalism.L2.SG.Pf.xa_mapFlag] at hx ⊢
     obtain ⟨y, hy, rfl⟩ := hx
     refine ⟨m y - y, hm.2.1 j y hy, ?_⟩
-    simp [Formalism.L2.SG.Pf.le_mul_app, Formalism.L2.SG.Pf.le_inv_app, map_sub]
+    simp [Formalism.L2.SG.Pf.le_inv_app, map_sub]
   · change x ∈ orth S (Formalism.L2.SG.TermOp.mapFlag β hβ F₁.fl).X at hx
     change _ ∈ (Formalism.L2.SG.TermOp.mapFlag β hβ F₁.fl).X
     rw [Formalism.L2.SG.Pf.x_mapFlag] at hx ⊢
     have hy := Formalism.L2.SG.Pf.orth_map β hβ _ x hx
     refine ⟨m (β.symm x) - β.symm x, hm.2.2 _ hy, ?_⟩
-    simp [Formalism.L2.SG.Pf.le_mul_app, Formalism.L2.SG.Pf.le_inv_app, map_sub]
+    simp [Formalism.L2.SG.Pf.le_inv_app, map_sub]
 
 theorem isometry_fix_flagAnisotropicVector_of_fix_frame {β : S.V ≃ₗ[E] S.V} (hβ : β ∈ Saturated.AutF Λ F) : β F.fl.z = F.fl.z := by
   have hl := (Saturated.mem_AutF.1 hβ).2.1 (Fin.last r)

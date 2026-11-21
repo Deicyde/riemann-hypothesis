@@ -1,7 +1,7 @@
-import Mathlib
-import CompanionTheory.RealGroups.UnitaryAdmissibility.ArchimedeanUnitaryDual.StDefinite
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.HarishChandraModules.KFiniteAnalyticVectors.AdmissibleSmoothVectors.FinOfPI
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HilbertSchurOfAdjointClosed
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open CompanionTheory.D.gk.admitted (stdPoly)
 open GlobalTheory.AutomorphicL2Unitary
 open scoped InnerProductSpace

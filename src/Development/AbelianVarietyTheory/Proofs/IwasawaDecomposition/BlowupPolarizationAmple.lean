@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ChartMem
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.BlowupDivisorAmpleCriterionStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.BlowupDivisorPolarizationPosStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.BlowupDivisorLineBundleTrivialStatement

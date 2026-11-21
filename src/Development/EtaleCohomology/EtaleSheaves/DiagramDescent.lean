@@ -1,10 +1,9 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.LeafReducedSmooth
 import Development.EtaleCohomology.EtaleSheaves.LeafDescendMapPf
-import Development.EtaleCohomology.EtaleSheaves.LeafObjGluePf
 import Development.EtaleCohomology.EtaleSheaves.LeafInclDescendPf
 import Development.EtaleCohomology.EtaleSheaves.DgMapIsPullback
 import Development.EtaleCohomology.EtaleSheaves.LeafPairRelPf
-import Development.EtaleCohomology.EtaleSheaves.LeafTripleFPPf
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry Opposite LateralTheory.E.E4 LateralTheory.E.LeafDescendVCut LateralTheory.E.LeafDescendChainPf
@@ -69,11 +68,11 @@ theorem LeafDescendPreMap_of (hA : LateralTheory.E.LeafObjFPPf.LeafObjAff) (hG :
   · rw [E2]; exact sq h p2
   · apply pullback.hom_ext
     · simp only [e1, pullback.map, Category.assoc, pullback.lift_fst, pullback.lift_fst_assoc]; exact m1
-    · simp only [e1, pullback.map, Category.assoc, pullback.lift_snd, pullback.lift_snd_assoc,
+    · simp only [e1, pullback.map, Category.assoc, pullback.lift_snd,
         Category.comp_id]
   · apply pullback.hom_ext
     · simp only [e2, pullback.map, Category.assoc, pullback.lift_fst, pullback.lift_fst_assoc]; exact m2
-    · simp only [e2, pullback.map, Category.assoc, pullback.lift_snd, pullback.lift_snd_assoc,
+    · simp only [e2, pullback.map, Category.assoc, pullback.lift_snd,
         Category.comp_id]
   · rw [← Category.assoc, hg2, pullback.lift_fst]
 

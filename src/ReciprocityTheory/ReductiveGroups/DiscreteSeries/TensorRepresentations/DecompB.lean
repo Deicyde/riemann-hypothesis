@@ -1,7 +1,9 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.Unitarize
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.BochnerInequality.CasimirGapAtNoncompactWeight
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.AnalyticVectors.Unitary
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.DecompA
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.BochnerInequality.IsKUnitaryOfIsInfUnitary
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.HidaSetting
 
 noncomputable section
 

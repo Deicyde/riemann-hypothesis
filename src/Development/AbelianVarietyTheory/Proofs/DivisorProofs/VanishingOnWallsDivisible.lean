@@ -1,8 +1,11 @@
-import Mathlib
-import Formalism.DegreeFormula.PointDegree.PowSum
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.DegreeFormula.PointDegree.PermExpInj
 import Development.AbelianVarietyTheory.Definitions.Foundations.CurveCl
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.XSubXDvdOfVanishOnOpenHyperplane
+import Mathlib.Algebra.AffineMonoid.UniqueSums
+import Mathlib.RingTheory.SimpleRing.Principal
+import Std.Tactic.BVDecide.Normalize.Prop
 open MvPolynomial Formalism.DegreeFormula GlobalTheory.FlagPoly
 
 noncomputable section
@@ -94,7 +97,7 @@ theorem update_comp_swapAt (τ : ι) (a b : Fin N) :
     simp only [swapAt, Function.comp, if_true, Function.update_apply, Prod.mk.injEq, true_and, id]
     simp only [Equiv.swap_apply_def]
     grind
-  · simp [swapAt, h, Function.update_apply]
+  · simp [swapAt, h]
 
 theorem root_dvd {j : ℕ} {P : Pol ι N} (hP : AntiL j P)
     (hU : ∀ (τ : ι) (a b : Fin N), (a : ℕ) < j → j ≤ (b : ℕ) → ∃ U : Set (ι → Fin N → ℝ), IsOpen U ∧
@@ -201,7 +204,7 @@ theorem coef_step {j : ℕ} {c : ι × Fin N → ℝ} (h : AntiL j (delPol ι N 
     simp only [swapAt, Function.comp, if_true, Pi.single_apply, Prod.mk.injEq, true_and]
     simp only [Equiv.swap_apply_def]
     grind
-  · simp [swapAt, h, Pi.single_apply]
+  · simp [swapAt, h]
 
 theorem coef_block {j : ℕ} {c : ι × Fin N → ℝ} (h : AntiL j (delPol ι N * ∑ x, c x • X x))
     (τ : ι) (a : Fin N) : ∀ (k : ℕ) (b : Fin N), (b : ℕ) = a + k → ¬ ((a : ℕ) < j ∧ j ≤ (b : ℕ)) →

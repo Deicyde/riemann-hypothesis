@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RankOfMulEqOne
 import Development.AbelianVarietyTheory.Definitions.Divisors.HeightTrivialParameterEqZero
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FiniteDimensionalFilDR
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FiniteDimensionalAdjoinRange
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ExistsNormSubEqOne
 import ReciprocityTheory.ClassFieldTheory.LocalClassField.ExistsDvdQKPowSubOne
 

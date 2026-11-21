@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.Bridge
-import Formalism.LocalToGlobal.Columns.HeckeSp
 
 namespace GlobalTheory.HkB
 

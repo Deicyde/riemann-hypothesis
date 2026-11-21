@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.EightDvdNCol
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Jets.ExistsSecTieFOfTies
+import Development.AbelianVarietyTheory.Definitions.Divisors.NonemptyValExtOfOverLa
 
 set_option autoImplicit false
 

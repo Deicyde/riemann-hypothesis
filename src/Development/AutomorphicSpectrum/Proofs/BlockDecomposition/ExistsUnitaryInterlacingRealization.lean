@@ -1,7 +1,6 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.HolomorphicDiscreteSeries.EmbeddedFrames.PfD
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.RealPlaceAnalysis.Complexify
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PartialFractionDiagonalIdentityStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PartialFractionOffDiagonalIdentityStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PartialFractionSquareIdentityStatement
 

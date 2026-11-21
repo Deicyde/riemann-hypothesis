@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SRelOneOneIff
-import Development.AbelianVarietyTheory.Definitions.ModuliSpaces.IsGaloisCover
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.SiegelToroidalIntegral
 
 open GlobalTheory.SiegelTor Polynomial

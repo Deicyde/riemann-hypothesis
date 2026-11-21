@@ -1,11 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.E8LB
-import ReciprocityTheory.AnalyticForms.RegularLocalRings.FinalTheorems
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Uniformization.PointEqOfSubsingleton
-import Development.AbelianVarietyTheory.Definitions.Degenerations.ToATotal
-import Development.AbelianVarietyTheory.Definitions.Degenerations.AdmissiblePadicIntMaximalIdeal
-import Development.AbelianVarietyTheory.Definitions.Degenerations.MorAlgSt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsMonHomOfMul
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SemiabelianSchemes.PrecompleteBases.PsbLb
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open scoped CategoryTheory.Obj
@@ -225,7 +222,7 @@ theorem exists_cp_linComb (P : UU.CP G₀) {K : Type} [Fintype K] (f : K → (H 
     have s1 : val P.sym (eSec G₀) y JL = 1 := by
       have := (val_pull hJL P.sym (eSec G₀) (𝟙 _)).symm.trans ((val_corr hJL P.sym_rig (𝟙 _)).trans (val_one _))
       rwa [Category.id_comp] at this
-    simp only [Category.id_comp, Category.assoc, e₂, he, s1, one_zpow, Finset.prod_const_one, mul_inv_cancel,
+    simp only [Category.id_comp, e₂, he, s1, one_zpow, Finset.prod_const_one, mul_inv_cancel,
       _root_.mul_one]
   · intro T x y u z J hJ
     obtain ⟨JL, hJL⟩ := UU.exists_good_pt P.L.isLB z

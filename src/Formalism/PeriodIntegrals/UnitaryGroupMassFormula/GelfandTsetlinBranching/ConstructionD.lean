@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.GelfandTsetlinBranching.ExtremalFacts
 import Formalism.GradedWeylDivisibility.DualWeylDominanceOf
+import Formalism.PeriodIntegrals.HwIrred
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 

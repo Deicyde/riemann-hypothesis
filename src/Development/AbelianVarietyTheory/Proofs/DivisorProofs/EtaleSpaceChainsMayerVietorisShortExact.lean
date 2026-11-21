@@ -1,6 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.DivisorSupportCondition
-import Development.AbelianVarietyTheory.Definitions.Divisors.SecClass
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.GalMapMul
+import Mathlib.Algebra.Category.ModuleCat.Biproducts
+import Mathlib.CategoryTheory.ExtremalEpi
+import Mathlib.CategoryTheory.Limits.FunctorCategory.BinaryBiproducts
+import Mathlib.CategoryTheory.Limits.Types.Pushouts
+import Mathlib.Data.Finsupp.Pointwise
 
 open CategoryTheory Limits AlgebraicGeometry Opposite CochainComplex CochainComplex.HomComplex GlobalTheory.EtC
 

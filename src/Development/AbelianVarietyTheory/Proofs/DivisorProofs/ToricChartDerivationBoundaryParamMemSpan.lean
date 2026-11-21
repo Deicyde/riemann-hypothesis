@@ -1,6 +1,5 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasDefect
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasRigidChart
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ToroidalCompactificationBis
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsProperToroidalModelStructureMap
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry NumberField IsLocalRing
 open scoped CategoryTheory.Obj Matrix TensorProduct
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj
@@ -18,7 +17,7 @@ theorem X_dvd_of_X_mul {σ K : Type} [Field K] {s t : σ} (hst : t ≠ s) {g : M
   classical
   rw [MvPowerSeries.X_dvd_iff] at h ⊢
   intro n hn
-  have h1 := h (n + Finsupp.single t 1) (by simp [Finsupp.single_apply, hst, hn])
+  have h1 := h (n + Finsupp.single t 1) (by simp [hst, hn])
   rw [MvPowerSeries.X, MvPowerSeries.coeff_monomial_mul] at h1
   simpa using h1
 

@@ -1,9 +1,7 @@
-import Mathlib
-import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.HostFacts
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.ThetaLiftGeometry.BadPrimesPeriodBound
 import Development.AbelianVarietyTheory.BlockTheory.ThetaLiftGeometry.ColumnAvoidanceConditions
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.BaseFieldsDefiniteLaws
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ChainCompatibleTwistTransport
 
 noncomputable section
 

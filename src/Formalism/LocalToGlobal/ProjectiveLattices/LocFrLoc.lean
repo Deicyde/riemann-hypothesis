@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.GenSpecV
 import Formalism.LocalToGlobal.ProjectiveLattices.GenFrPfB
 import Formalism.LocalToGlobal.ProjectiveLattices.GenSpecLocFrM
@@ -87,7 +89,7 @@ theorem gsvVec_tmap (hx : IsUnivChart _ n xc) (a : 𝓞 E) (cc : Fin n → L) :
     | rfl
     | (simp; done)
     | (simp [Over.pullback]; done)
-    | (simp [Over.pullback, pullback.map]; done)
+    | (simp [Over.pullback]; done)
     | (erw [pullback.lift_fst]; done)
     | (erw [pullback.lift_fst]; rfl)
 

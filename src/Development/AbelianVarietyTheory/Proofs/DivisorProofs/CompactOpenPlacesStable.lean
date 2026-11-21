@@ -1,11 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaActionExists
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecondConfigurationTripleCompatible
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFactorPureTensorComponentAtPlace
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TruncMatTranspose
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.UnramifiedPlacesInvariantStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.UnramifiedPlacesSphericalStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TruncatedIdempotentTendstoStatement
@@ -78,7 +73,7 @@ theorem truncMat_mulVec {d : ℕ} (W : Spc F E d) (v : Pl F) (A : Matrix (Fin d)
     truncMat (idem {v}) A *ᵥ z = A *ᵥ z := by
   have hs : ((GlobalTheory.LatVac.liftV v 1) • (A - 1)) *ᵥ z = (GlobalTheory.LatVac.liftV v 1) • ((A - 1) *ᵥ z) := by
     funext i
-    simp [Matrix.mulVec, dotProduct, Finset.smul_sum, smul_mul_assoc]
+    simp [Matrix.mulVec, dotProduct, Finset.smul_sum]
   rw [truncMat, idem_singleton, Matrix.add_mulVec, Matrix.one_mulVec, hs, Matrix.sub_mulVec,
     Matrix.one_mulVec, smul_sub, eAt_smul_of_mem W v hz, eAt_smul_of_mem W v hA]
   abel

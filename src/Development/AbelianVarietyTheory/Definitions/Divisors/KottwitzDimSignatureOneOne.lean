@@ -1,8 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.InfUniv
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsObjMap
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ObjMapCompAlt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LbIsoPullCompOfEq
+import Mathlib.RingTheory.DualNumber
 
 noncomputable section
 
@@ -147,7 +149,7 @@ theorem mem_L₁ (x : k × k) : x ∈ L₁ k ↔ x.2 = 0 := Iff.rfl
 
 theorem ksDim_plane : KSDim (Int.castRingHom (Module.End k (k × k))) (ω₂ k) (L₁ k) ⊥ 1 := by
   refine ⟨fun _ => LinearMap.inr k k k ∘ₗ LinearMap.fst k k k, fun _ => ⟨?_, ?_, ?_⟩, fun g _ => ?_⟩
-  · intro a x _; simp [mem_L₁]
+  · intro a x _; simp
   · intro x hx; simp [(Submodule.mem_bot k).1 hx, mem_L₁]
   · rintro ⟨a, b⟩ hx ⟨c, d⟩ hy
     rw [mem_L₁] at hx hy; simp at hx hy; simp [ω₂, hx, hy, mul_comm]
@@ -200,7 +202,7 @@ theorem kottwitzDim_signatureOneOne : KSDim (act₄ k) (ω₄ k) (F₄ k) ⊥ 1 
     LinearMap.pi ![0, LinearMap.proj 0, -LinearMap.proj 3, 0]
   have hf : ∀ x, f x = ![0, x 0, -x 3, 0] := fun x => by funext i; fin_cases i <;> rfl
   refine ⟨fun _ => f, fun _ => ⟨?_, ?_, ?_⟩, fun g hg => ?_⟩
-  · intro a x _; simp [mem_F₄, hf, act₄_apply]
+  · intro a x _; simp [hf, act₄_apply]
   · intro x hx; simp [(Submodule.mem_bot k).1 hx]
   · intro x hx y hy
     rw [mem_F₄] at hx hy; simp [ω₄, hf, hx, hy, mul_comm]
@@ -219,7 +221,7 @@ theorem kottwitzDim_signatureOneOne : KSDim (act₄ k) (ω₄ k) (F₄ k) ⊥ 1 
     have h3' : g e 1 + g e' 2 = 0 := by simpa [ω₄, e, e'] using h3
     refine ⟨fun _ => g e 1, fun x hx => ?_, fun c hc => ?_⟩
     · have : x = x 0 • e + x 3 • e' := by
-        funext i; fin_cases i <;> simp [e, e', hx.1, hx.2, ((mem_F₄ k x).1 hx).1, ((mem_F₄ k x).1 hx).2]
+        funext i; fin_cases i <;> simp [e, e', ((mem_F₄ k x).1 hx).1, ((mem_F₄ k x).1 hx).2]
       have hgx : g x = x 0 • g e + x 3 • g e' := by conv_lhs => rw [this, map_add, map_smul, map_smul]
       rw [mem_F₄, hgx]
       simp [hf, h1, h2]

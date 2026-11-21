@@ -1,6 +1,6 @@
-import Mathlib
-import Formalism.UnipotentAdelicQuotients.SiegelWeilUnitaryConvergent
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.ExistsSelfDualForm
+import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.ExistsUnitScalingSelfdualAdelicMeasures
 
 open HeckeCharacterZeroLocus.SiegelWeilU NumberField MeasureTheory
 open scoped TensorProduct

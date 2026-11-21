@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.LocalEmbeddings.ComplEquivEvW
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsMixedLagrangianChartIntegralRowChange
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsReading
+import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.UnitCharTriangle
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.DIV
 open IsDedekindDomain NumberField MeasureTheory Matrix ValuativeRel
@@ -33,7 +35,7 @@ theorem coord_fst (e : k ≃ d) (x : Matrix d a K) {G G' : Matrix a a K} (hG : G
   rw [h3, h4, transpose_mul]
   calc _ = βᵀ * (Gᵀ * (b * b') * G'ᵀ) * xᵀ.submatrix id e * (c'ᵀ * cᵀ) * (γ.submatrix e e)ᵀ := by
         simp only [Matrix.mul_assoc]
-    _ = _ := by rw [hb, Matrix.mul_one, h2, h1]; simp only [Matrix.mul_assoc, Matrix.mul_one, Matrix.one_mul]
+    _ = _ := by rw [hb, Matrix.mul_one, h2, h1]; simp only [Matrix.mul_assoc, Matrix.mul_one]
 
 theorem coord_snd (e : k ≃ d) (y : Matrix a d K) {G G' : Matrix a a K} (hG : G * G' = 1) (β : Matrix a a K) {b b' : Matrix a a K}
     (hb : b * b' = 1) {c c' : Matrix k k K} (hc : c * c' = 1) (H γ : Matrix d d K) (ξ : K) :

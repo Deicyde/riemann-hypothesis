@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.EndValuedForm11Coeffs
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolarisedTopChernCoeffUpdateAddStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolarisedTopChernCoeffUpdateSmulStatement
 open MeasureTheory Filter Topology GlobalTheory GlobalTheory.Cartier GlobalTheory.ProjVar GlobalTheory.CxPts GlobalTheory.ChartGlue GlobalTheory.FlagBundle GlobalTheory.HermFrame GlobalTheory.GoodMetric GlobalTheory.GoodTop
@@ -13,7 +12,7 @@ theorem position_eq_update {n : ℕ} {α : Type} [Zero α] (K₁ L K₀ : α) (j
   funext i
   by_cases h : i = j
   · subst h; simp [intersection_update_fsHerm_neg_one]
-  · simp [intersection_update_fsHerm_neg_one, Function.update_of_ne h, h]
+  · simp [intersection_update_fsHerm_neg_one, h]
 
 theorem mixTop_position_linear {n : ℕ} {r : Type} [Fintype r] [DecidableEq r] (K₁ K₀ L L' : EndValuedForm11Coeffs n r)
     (s t : ℂ) (j : Fin n) :

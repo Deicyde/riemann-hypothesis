@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RatVInjective
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ZeroMemBoxF
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.ReductionFinite
+import Formalism.SharpRestriction.GlobalSchurBounds.GeneralLinearActions.GenusMassVolumes
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 open NumberField MeasureTheory Matrix Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SiegelSet PositivityTheory.ThKR GlobalTheory.CompanionTheory.RedCov GlobalTheory.CompanionTheory.RedCov.Simple
 open Formalism.UG (cT)

@@ -1,8 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.ConjSubConjSub
-import Formalism.SharpRestriction.GlobalSchurBounds.StandardLattice
-import ReciprocityTheory.Automorphisms.Unitary
-import Formalism.LocalToGlobal.BesselHermitianTheta.IsAutFunDef
-import Formalism.LocalToGlobal.GaloisLevelStructure.TiedRowLoc
 import Formalism.LocalToGlobal.Columns.MtRowFrame
 
 noncomputable section

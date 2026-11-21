@@ -1,6 +1,8 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.TwistedLocalOrbits.Match
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.HermitianDescent.SeparableOfMap
 import Development.AutomorphicArithmetic.Foundations.Convolution.HermitianDescent.GalField
+import Development.WeilBound.RepresentationTheoryGL.TwistedFactors.IntegralUnitBaseChange.InvTransposeGLInvTransposeGL
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 open MeasureTheory ValuativeRel GlobalTheory.PRep GlobalTheory.SplitWeil GlobalTheory.IndefiniteRowSideFullHecke.IwahoriDoubleCosets PositivityTheory.Rg.Tf.Loc UpperTheory.ConvolutionTheory.Loc
 

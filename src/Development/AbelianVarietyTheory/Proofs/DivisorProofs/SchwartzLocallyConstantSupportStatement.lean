@@ -1,10 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzLocallyConstantSupport
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndicatorIntMMemSB
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ScaledIntegerPeriodic
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MulRightMemSB
 open MeasureTheory ValuativeRel Matrix GlobalTheory.SplitWeil GlobalTheory.SplitFlip GlobalTheory.KSplit GlobalTheory.GJReg
 open Classical
 set_option maxHeartbeats 1000000 in

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.TermEDefs
 import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.SummandFactorAlt
 import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.UiwPow
@@ -5,8 +7,6 @@ import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.
 import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.OlocEx
 import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.SideTrace
 import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.ZBasic
-import Development.AutomorphicArithmetic.Foundations.Convolution.ConvolutionKernels.KernelTransforms.CommPrj
-import Development.AutomorphicArithmetic.Foundations.Convolution.ConvolutionKernels.KernelTransforms.LocEmb
 import Development.AutomorphicArithmetic.TwistedTraces.IwahoriCompactOpenAndIwCosetIndicatorTest
 
 open MeasureTheory NumberField IsDedekindDomain Filter GroundTheory.Automorphic GroundTheory.Automorphic.Reduction GroundTheory.Automorphic.RightCosetSpace GroundTheory.Automorphic.AutomorphicForm

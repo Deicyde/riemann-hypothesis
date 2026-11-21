@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.SHExistsPf
+import Mathlib.RingTheory.Etale.StandardEtale
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.TotallySplit
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry GlobalTheory.EtC LateralTheory.E.t_E3Cut Polynomial

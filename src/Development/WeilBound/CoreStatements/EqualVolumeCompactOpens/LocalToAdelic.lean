@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.StrongApproximation.Assembly
 import Development.WeilBound.CoreStatements.EqualVolumeCompactOpens.ExistsDualBasis
-import Development.WeilBound.CoreStatements.EqualVolumeCompactOpens.CptLact
+import Development.WeilBound.CoreStatements.EqualVolumeCompactOpens.EqVolSDOf
 
 noncomputable section
 

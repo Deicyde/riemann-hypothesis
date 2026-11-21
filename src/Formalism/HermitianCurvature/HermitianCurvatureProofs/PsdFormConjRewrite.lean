@@ -1,4 +1,10 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementJ
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Finset NumberField Formalism.FourierDecayAlt Formalism.FourierDecayAlt.J
 open scoped ComplexOrder ComplexConjugate nonZeroDivisors
@@ -109,7 +115,7 @@ private theorem tb_psdOn_of_ta_psdOn {α : Type} (F : Finset α) (k : α → α 
       refine Finset.sum_congr rfl fun i _ => ?_
       rw [← Finset.sum_coe_sort F]
       refine Finset.sum_congr rfl fun j _ => ?_
-      simp [ha, Complex.star_def, mul_assoc]
+      simp [ha, mul_assoc]
     rw [hQ, Complex.le_def]
     simp only [Complex.zero_re, Complex.zero_im]
     exact ⟨h.2 a, (im_quadratic_form_eq_zero_of_hermitian F k h.1 a).symm⟩

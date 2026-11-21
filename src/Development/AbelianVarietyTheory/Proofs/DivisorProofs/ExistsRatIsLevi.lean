@@ -1,16 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
-import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.LanglandsSquareIntegrable
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicPlaneOrthogonalGramRestrictionStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsConstAlong
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousToGAd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConstantTermUnipotentIntegralBis
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsotropicPlaneRestrictedSkew
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviEmbeddingExistsDoublingConfiguration
-import Development.AbelianVarietyTheory.Definitions.Foundations.T2SpaceTensorProductFiniteExtension
 open scoped TensorProduct NNReal Matrix ComplexConjugate
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.ThK.DescB GlobalTheory.ThK.FlagCT GlobalTheory.ThK.FlagPar
@@ -150,7 +142,7 @@ theorem exists_rat_isLevi (hσ : ∀ a, σ (σ a) = a) {n₁ : ℕ} (W : Spc F E
     simp [incV, hf]
   · rw [hmv, hMv, leviVec_y σ W.J H.x H.y hσ hsk hyy hxy]
     ext i
-    simp only [incV, Pi.smul_apply, smul_eq_mul, Units.coe_map_inv, MonoidHom.coe_coe, Units.val_inv_eq_inv_val]
+    simp only [incV, Pi.smul_apply, smul_eq_mul, Units.coe_map_inv, Units.val_inv_eq_inv_val]
     erw [hcf]
     rw [map_inv₀, ← map_mul]
   · rw [hmat, show mat (1 : UA σ W₁.J) = 1 from rfl, Matrix.mul_one, show incM F H.ι = H.ι.map f from rfl,

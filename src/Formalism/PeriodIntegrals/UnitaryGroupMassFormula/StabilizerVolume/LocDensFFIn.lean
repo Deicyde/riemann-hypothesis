@@ -1,5 +1,13 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerVolume.LocDensFFCnt
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerVolume.LocDensFF
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.PicardGroup
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -19,7 +27,7 @@ private theorem ffH_single_right {M : ℕ} (J : Matrix (Fin M) (Fin M) K) (x : F
   rw [Fintype.sum_eq_single j]
   · simp
   · intro b hb
-    simp [Pi.single_apply, hb]
+    simp [hb]
 
 theorem ffH_isHS (hσ : ∀ x, σ (σ x) = x) {M : ℕ} (J : Matrix (Fin M) (Fin M) K)
     (hJ : ∀ i j, σ (J j i) = J i j) (hdet : IsUnit J.det) : IsHS σ (ffH σ J) where
@@ -49,7 +57,7 @@ theorem ffH_single {n : ℕ} (T : Matrix (Fin n) (Fin n) K) (i j : Fin n) :
   rw [ffH_single_right, Fintype.sum_eq_single i]
   · simp
   · intro b hb
-    simp [Pi.single_apply, hb]
+    simp [hb]
 
 end matrix
 

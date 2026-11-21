@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ExistsDvrExtensionEmbedding
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.NumberTheory.RamificationInertia.Galois
 
 noncomputable section
 

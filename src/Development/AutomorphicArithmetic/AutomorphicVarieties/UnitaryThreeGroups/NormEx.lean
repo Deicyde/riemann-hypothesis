@@ -1,5 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.BaseRepGL3NormalisedOfPsiEqOne
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.MatGstar
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
 
 open Matrix UpperTheory.V.U3
 
@@ -130,7 +136,7 @@ private theorem conj_conj {G : Type} [Group G] {m : ℕ} (h h' : GL (Fin m) R) (
     conjBy (h * h') r = conjBy h (conjBy h' r) := by
   ext1 g
   simp only [conjBy, MonoidHom.comp_apply, MulEquiv.coe_toMonoidHom, MulAut.conj_apply, map_mul,
-    _root_.mul_inv_rev, mul_assoc, MulAut.mul_apply]
+    mul_assoc, MulAut.mul_apply]
 
 private theorem sym_of_sq {m : ℕ} (x : GG m R) (hx : x * x = 1) (hr : x.right = -1) :
     (x.mat * Jmat R m)ᵀ = x.mat * Jmat R m := by

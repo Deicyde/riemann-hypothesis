@@ -1,11 +1,10 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.GroupDict
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsSheetCover
-import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.StatementsProved
-import GroundTheory.HeightsAndTheta.Heights.CountingLowerBound.Assembly
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.IntEmbInjective
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.BallAutomorphismInverseExists
 import GroundTheory.HeightsAndTheta.Heights.Regularisation.PosSemidefOfIntQuadNonneg
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
+import Mathlib.Analysis.Matrix.PosDef
 open NumberField Matrix MeasureTheory Filter Topology GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Cusp ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor GroundTheory.Heights₂.Heights.FiniteCovolume GroundTheory.Automorphic GlobalTheory.CompanionTheory.Ar.Cusp.Dict
 open scoped ENNReal InnerProductSpace
 open scoped ComplexOrder
@@ -73,7 +72,7 @@ theorem den_gram {u : Matrix (Sg j j') (Sg j j') ℂ} (hu : IsSgU u) (W : Matrix
   simp only [IsSgU, sgI, fromBlocks_conjTranspose, fromBlocks_multiply] at hu
   have h := Matrix.fromBlocks_inj.1 hu
   obtain ⟨h11, h12, h21, h22⟩ := h
-  simp only [Matrix.mul_zero, Matrix.zero_mul, add_zero, zero_add, Matrix.mul_one, Matrix.mul_neg, Matrix.neg_mul] at h11 h12 h21 h22
+  simp only [Matrix.mul_zero, add_zero, zero_add, Matrix.mul_one, Matrix.mul_neg, Matrix.neg_mul] at h11 h12 h21 h22
   simp only [den, num, toBlocks_fromBlocks₁₁, toBlocks_fromBlocks₁₂, toBlocks_fromBlocks₂₁, toBlocks_fromBlocks₂₂]
   have e : (A + B * W)ᴴ * (A + B * W) - (C + D * W)ᴴ * (C + D * W) =
       (Aᴴ * A - Cᴴ * C) + (Aᴴ * B - Cᴴ * D) * W + Wᴴ * (Bᴴ * A - Dᴴ * C) + Wᴴ * (Bᴴ * B - Dᴴ * D) * W := by

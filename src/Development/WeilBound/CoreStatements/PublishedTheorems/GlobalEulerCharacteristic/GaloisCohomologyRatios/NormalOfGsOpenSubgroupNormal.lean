@@ -1,10 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.GlobalEulerCharacteristic.MemShaSubmoduleCohomologyAddEquivOfEquivIff
-import GroundTheory.ProfiniteCohomology.GlobalEulerCharacteristic.Kummer
-import GroundTheory.ProfiniteCohomology.GlobalEulerCharacteristic.GlobalEulerFormulaInf
-import GroundTheory.ProfiniteCohomology.LocalEulerCharacteristic.CoprimeTwist
-import GroundTheory.ProfiniteCohomology.RestrictedRamification.Finite
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.BaseFixed
-import GroundTheory.GlobalFields.IdeleClassGroup.InvariantsGalois
 
 open NumberField IsDedekindDomain CategoryTheory GroundTheory.ProfCoh GroundTheory.Global
 

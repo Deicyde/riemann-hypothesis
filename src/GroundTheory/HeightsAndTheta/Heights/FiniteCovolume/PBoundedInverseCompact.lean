@@ -1,6 +1,10 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.SecondCountableTopologyArchUnitary
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.StBoundedInverseCompact
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Analysis.Matrix.PosDef
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 namespace GroundTheory.Heights₂.Heights.FiniteCovolume
 

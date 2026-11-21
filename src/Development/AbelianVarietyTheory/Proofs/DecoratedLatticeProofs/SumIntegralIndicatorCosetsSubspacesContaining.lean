@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsCoType
-import Formalism.LocalToGlobal.Columns.HeckeSp
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.LinearAlgebra.Matrix.Rank
+import Mathlib.RingTheory.PicardGroup
 
 noncomputable section
 

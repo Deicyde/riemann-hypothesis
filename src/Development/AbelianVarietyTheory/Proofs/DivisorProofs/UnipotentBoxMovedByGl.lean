@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ScaledBoxRadiiAtEntry
 
 open ValuativeRel Matrix GlobalTheory.SplitFlip GlobalTheory.FullRankCoinv GlobalTheory.RankCoinv GlobalTheory.NormalCore
@@ -83,7 +84,7 @@ theorem exists_unipotent_move : ∀ (k : Type) [Field k] [ValuativeRel k] [Topol
     by_cases hj : j = j₀
     · simp [a, hj]
     · have h1 := hx₁ i₀ j
-      simp only [scaledBoxRadiiAtEntry, ne_eq, hj, not_false_eq_true, and_self, if_true, hp₁ j, if_neg hj, if_false, sub_zero] at h1
+      simp only [scaledBoxRadiiAtEntry, ne_eq, hj, not_false_eq_true, and_self, if_true, hp₁ j, if_false, sub_zero] at h1
       simp only [a, if_neg hj]
       refine h1.trans ?_
       first

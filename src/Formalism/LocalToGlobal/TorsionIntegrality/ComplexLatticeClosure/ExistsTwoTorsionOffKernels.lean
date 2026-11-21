@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.LinkTiesTh
 import Formalism.LocalToGlobal.TorsionIntegrality.EisensteinTranslationProducts.CMQuasiPeriodConst
-import Formalism.LocalToGlobal.TorsionIntegrality.EisensteinTranslationProducts.ThetaZeroTranslateProduct
 
 noncomputable section
 

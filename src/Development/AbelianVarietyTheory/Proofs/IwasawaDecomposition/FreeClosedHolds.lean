@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SvalUpSec
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.UniformizationSectionExpansionStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsFineSectionFamiliesStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExpansionIndependentSectionsStatement

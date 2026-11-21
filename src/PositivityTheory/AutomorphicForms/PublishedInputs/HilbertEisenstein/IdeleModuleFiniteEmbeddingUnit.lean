@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.HilbertEisenstein.SExpDefs
+import GroundTheory.GlobalFields.TateThesis.TateTheta
 
 noncomputable section
 

@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.FlagUnipotentLattices.OmSumLong
 import Formalism.FlagUnipotentLattices.MinkowskiFactorialBounds.ColonCountWeighted
-import Formalism.HyperbolicPlaceProducts.SecondLevelArithmeticNorm
 
 open Formalism.HermitianLatticeCounting.S6
 open scoped BigOperators

@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsTamagawa
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TamagawaSpecialUnitary
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MulVecMemGenLatSmul
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GoodRing
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsIsLatticeFrameIsMajorantFrame
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeCompletionUniformizerPowerStatement
@@ -92,7 +90,7 @@ theorem uj_iff (σ : A →+* A) (J : Matrix n n A) (P g : GL n A) :
   have key : Formalism.UG.cT σ ((P⁻¹ * g * P : GL n A) : Matrix n n A) * (Formalism.UG.cT σ Pm * J * Pm) *
       ((P⁻¹ * g * P : GL n A) : Matrix n n A) = Formalism.UG.cT σ Pm * (Formalism.UG.cT σ gm * J * gm) * Pm := by
     rw [hm]
-    simp only [Formalism.UG.cT_mul, Matrix.mul_assoc, a1, a2, a3, a4]
+    simp only [Formalism.UG.cT_mul, Matrix.mul_assoc, a1, a3]
   change Formalism.UG.cT σ gm * J * gm = J ↔ Formalism.UG.cT σ ((P⁻¹ * g * P : GL n A) : Matrix n n A) *
       (Formalism.UG.cT σ Pm * J * Pm) * ((P⁻¹ * g * P : GL n A) : Matrix n n A) = Formalism.UG.cT σ Pm * J * Pm
   rw [key]

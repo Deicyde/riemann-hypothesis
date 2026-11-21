@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.CarrierTTypes
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.NotCdomRaiseOfLt
 
@@ -60,7 +61,7 @@ theorem capacity_from_hermitian_char : CapFromHC := by
       omega
   rw [hI, Finset.prod_map, Finset.prod_range]
   refine Finset.prod_congr rfl (fun j _ => ?_)
-  simp [Nat.succ_sub_one, j.isLt]
+  simp [j.isLt]
   push_cast
   ring
 

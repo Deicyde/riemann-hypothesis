@@ -1,13 +1,6 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsSncModel
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.BlowupProjections.BlowupProjStatement
-import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.Proportional
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterBridge
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterRed
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.AdjoinCoordsArithVar
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.RegularValuesInAdjoinedField
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.StandardSmoothChartOfNonzero
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HomogeneousFormNonvanishingPoint
 
 noncomputable section
 
@@ -124,7 +117,7 @@ theorem exists_homog_poly {σ : Type} (c₀ : σ) (P : MvPolynomial σ ℚ) :
   | C q =>
     refine ⟨q.den, 0, C q.num, by exact_mod_cast q.den_nz, isHomogeneous_C _ _, fun R _ _ v _ => ?_⟩
     have hd : (q.den : R) ≠ 0 := by exact_mod_cast q.den_nz
-    simp only [algHom_C, algebraMap_eq, eq_intCast, eq_ratCast, Int.cast_natCast, map_intCast]
+    simp only [algHom_C, eq_intCast, eq_ratCast, Int.cast_natCast, map_intCast]
     rw [Rat.cast_def]
     field_simp
   | add P Q ihP ihQ =>

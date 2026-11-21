@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.EqLagIff
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.SepChars
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.OrdExt
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.LagTriangular
@@ -27,10 +27,10 @@ theorem UpperTheory.V.AlgebraTools.lemma_L :
     (MonoidAlgebra.lift R (Matrix (Fin n) (Fin n) R) Γ ((Units.coeHom _).comp r) z) with he
   have hρ : MonoidAlgebra.lift R (Matrix (Fin n) (Fin n) R) Γ ((Units.coeHom _).comp r)
       (MonoidAlgebra.of R Γ s) = ((r s : GL (Fin n) R) : Matrix (Fin n) (Fin n) R) := by
-    simp [MonoidAlgebra.lift_of]
+    simp
   have hχ : ∀ i, MonoidAlgebra.lift R R Γ ((Units.coeHom R).comp (ψ i)) (MonoidAlgebra.of R Γ s)
       = ((ψ i s : Rˣ) : R) := fun i => by
-    simp [MonoidAlgebra.lift_of]
+    simp
   have hinv : ((g⁻¹ : GL (Fin n) R) : Matrix (Fin n) (Fin n) R) * (g : Matrix (Fin n) (Fin n) R) = 1 :=
     Units.inv_mul g
   have key : ∀ i j, ((g * r s * g⁻¹ : GL (Fin n) R) : Matrix (Fin n) (Fin n) R) i j =

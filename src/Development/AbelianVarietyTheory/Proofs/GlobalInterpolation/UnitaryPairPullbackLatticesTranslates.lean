@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.LatIntZero
-import Formalism.LocalToGlobal.KernelLattices.LateralTheory
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.InertKernelTheory.InertCoprimeLemmas.IntEasy
 import Formalism.LocalToGlobal.InertKernelTheory.InertCoprimeLemmas.IntPull
 

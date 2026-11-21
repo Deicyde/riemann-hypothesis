@@ -1,10 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.EigLatBasis
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.SabPull
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.RankLin
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ChartPullbacks.CubePullbacks.CubePull
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsMulEquivOfIsGrpPullback
 import Development.AbelianVarietyTheory.BlockTheory.JetGauges.EigenLatticeRankLie
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.TotallySplit
 
 set_option autoImplicit false
 
@@ -133,7 +135,7 @@ theorem tvecOver_add (hx : IsUnivChart G n x) (c c' : Fin n → S) :
     congr 2
     exact jet_ext fun j => by
       rw [AlgHom.comp_apply, modLift_zR, dualLiftOver_zR]
-      simp [g, TrivSqZeroExt.liftEquivOfComm]
+      simp [g]
   rw [h, h, h, modPt_add hx, MonObj.comp_mul]
 
 theorem tvecOver_smul (s : S) (c : Fin n → S) :

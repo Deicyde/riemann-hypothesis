@@ -1,9 +1,7 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.PeriodRingComparison.CrystallinePeriodRings.GammaEqDpow
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PeriodRingComparison.CrystallinePeriodRings.AcrisNAlgebraMapAinf
-import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.EqZeroOfPMulEqZero
 import Development.WeilBound.CoreStatements.CrystallinePeriodRings.ExistsMapEqOfPowMul
-import GroundTheory.PAdicHodge.ACrisLog
 
 noncomputable section
 

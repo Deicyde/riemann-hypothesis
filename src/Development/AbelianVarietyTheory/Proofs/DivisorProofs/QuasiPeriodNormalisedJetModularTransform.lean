@@ -1,9 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasLevelStd
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasQIff
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HilbertEisensteinLatticeJetSl2IntSmul
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HilbertEisensteinJetSmulDirectionStatement
 
 open NumberField UpperHalfPlane GlobalTheory.HilbFam GlobalTheory.QFam
 open GlobalTheory.IndefiniteRowSideFullHecke.OmegaFactorization (Emb Frac latM qPow upperHalf cK omegaFactor IsPartialZeta HasExpansion)
@@ -19,7 +16,7 @@ open scoped Classical MatrixGroups nonZeroDivisors in
 private lemma length_word_eq_sum {I : Type} [Fintype I] (κ : I → ℕ) :
     (_root_.GlobalTheory.HilbFam.word κ).length = ∑ i, κ i := by
   unfold _root_.GlobalTheory.HilbFam.word
-  simp [List.length_flatMap, Finset.sum_toList]
+  simp [List.length_flatMap]
 
 open NumberField UpperHalfPlane in
 open scoped Classical MatrixGroups nonZeroDivisors in

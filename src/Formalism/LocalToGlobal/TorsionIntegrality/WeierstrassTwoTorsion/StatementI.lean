@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.WeierstrassTwoTorsion.StatementG
-import Formalism.LocalToGlobal.TorsionIntegrality.WeierstrassTwoTorsion.StatementP
 
 open PowerSeries
 

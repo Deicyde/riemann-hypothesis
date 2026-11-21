@@ -1,6 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.Cint
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.IndexMeasureIntegralEqOfFineSubgroupStatement
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 open GlobalTheory.IdxInt
 open scoped Pointwise Classical

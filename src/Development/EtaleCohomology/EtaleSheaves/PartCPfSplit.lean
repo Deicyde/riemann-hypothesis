@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.PartCPf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 open Polynomial LateralTheory.E.PartDiagCut GlobalTheory.EtC

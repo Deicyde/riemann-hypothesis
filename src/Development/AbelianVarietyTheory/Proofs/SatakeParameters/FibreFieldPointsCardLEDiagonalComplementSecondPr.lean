@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.FibrePointsLEId
+import Mathlib.AlgebraicGeometry.Morphisms.Etale
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
 open CategoryTheory Limits AlgebraicGeometry
 
 namespace GlobalTheory.EtC.Tr

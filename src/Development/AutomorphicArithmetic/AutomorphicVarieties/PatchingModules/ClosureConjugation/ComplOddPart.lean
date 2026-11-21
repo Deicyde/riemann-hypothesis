@@ -1,8 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.ClosureConjugation.GrAlg
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.ThetaDiag
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.VrRange
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.VrReduction
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.UnitsBasic
+import Std.Tactic.BVDecide.Normalize.Prop
 open IsLocalRing Matrix UpperTheory.V.Alg UpperTheory.V.W UpperTheory.V.AlgebraTools UpperTheory.V.CA UpperTheory.V.Pa Polynomial
 open scoped TensorProduct
 

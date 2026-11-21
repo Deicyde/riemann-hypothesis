@@ -1,9 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.FoundBridge
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.RTwist
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PublishedTheorems.GelfandKazhdanReal
 import GroundTheory.AutomorphicForms.FourierWhittaker
-import GroundTheory.GlobalFields.TateThesis.AdelicCharLocal
 
 noncomputable section
 

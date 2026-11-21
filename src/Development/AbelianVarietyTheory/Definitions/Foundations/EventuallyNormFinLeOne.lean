@@ -1,7 +1,7 @@
-import Mathlib
-import Formalism.SharpRestriction.GlobalSchurBounds.StandardLattice
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.EqOrConjOfPlaceOf
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.MemAdelicLatticeIffLocalSelfDualCompletion
+import Mathlib.Analysis.CStarAlgebra.ContinuousLinearMap
 
 noncomputable section
 

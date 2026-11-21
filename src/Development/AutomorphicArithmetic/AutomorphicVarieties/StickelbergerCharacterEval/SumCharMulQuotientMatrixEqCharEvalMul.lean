@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.StickelbergerCharacterEval.MemZpowersIff
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 open Finset UpperTheory.V.Bern UpperTheory.V.B4 UpperTheory.V.B5
 
@@ -13,7 +17,7 @@ private theorem ev_eq_sum {A : Type} [CommRing A] {Ω : Type} [Field Ω] [Algebr
     rw [ev_single, Finset.sum_eq_single g]
     · simp
     · intro b _ hb
-      simp [Finsupp.single_apply, hb, hb.symm]
+      simp [hb]
     · simp
 
 theorem UpperTheory.V.B5.sum_char_mul_quotientMatrix_eq_charEval_mul :

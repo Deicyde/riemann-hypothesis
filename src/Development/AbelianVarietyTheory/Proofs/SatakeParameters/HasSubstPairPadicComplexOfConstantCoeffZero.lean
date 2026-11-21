@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.DualOm
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LogSubstExpSubOne
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExpMvNegLogMvMul
 
 noncomputable section
 

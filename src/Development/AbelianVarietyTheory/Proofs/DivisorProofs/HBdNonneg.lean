@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.InfClassAt
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
 
 noncomputable section
 

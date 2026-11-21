@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.NeutralLocalFields.LocalFieldComparison.LocalFieldAutomorphisms.MemRangeOfAevalRatEqZero
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.NumberTheory.LocalField.Basic
+import Mathlib.NumberTheory.Padics.ProperSpace
 
 noncomputable section
 

@@ -1,8 +1,7 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StatementsLiftGraphFactor
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.PLiftGraphMetric
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PPowerBlockMetric
-import ReciprocityTheory.AnalyticForms.PotentialTheory.PshShiftA
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.Targets

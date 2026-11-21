@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.AfIsoEqZeroIff
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.TrueColumnChoicesHeckeCharReferenceEqOne
 open NumberField IsDedekindDomain Formalism.L2.DIV
 open scoped TensorProduct
 set_option maxHeartbeats 1000000 in

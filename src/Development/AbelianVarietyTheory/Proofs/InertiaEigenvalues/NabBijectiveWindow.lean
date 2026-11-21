@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.PowerSeriesOneAddConstMulXMulInv
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 namespace GlobalTheory.PhiGam.Window
@@ -95,7 +97,7 @@ theorem gam_zpow {l : ℕ} (R : RingPG k l) (b : ℤ) :
       obtain ⟨c, hc⟩ := ih
       refine ⟨w' * (c + ((n : k⟦X⟧) + 1) + c0 + ((n : k⟦X⟧) + 1) * c0 * PowerSeries.X), ?_⟩
       rw [zpow_sub_one₀ hw0, hc, hinv]
-      simp only [map_add, map_sub, map_mul, map_one, map_pow, map_natCast, ← hv]
+      simp only [map_add, map_mul, map_one, map_natCast, ← hv]
       push_cast
       rw [hw1] at hww
       linear_combination (1 + ((n : k⸨X⸩) + 1) * vv k) * hww

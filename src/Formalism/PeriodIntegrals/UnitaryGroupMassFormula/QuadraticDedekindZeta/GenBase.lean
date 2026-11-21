@@ -1,7 +1,8 @@
-import Mathlib
-import Formalism.PeriodIntegrals.ClassNumImQ
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.QuadraticDedekindZeta.Development
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.QuadraticDedekindZeta.SpanNatCastSupEqTop
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.RingTheory.WittVector.IsPoly
 
 open NumberField
 

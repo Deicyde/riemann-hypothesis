@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.WickVanishing.ConnectionSecondOfCommute
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.WickVanishing.GaugeBilinearTermEqNegDoubleSum
 
@@ -49,7 +51,7 @@ theorem sg_const (h : PS k 2 d) (hax : ev (n := 1) ![0, pt k d 0] h = 0) (i : Fi
     constantCoeff (sgOf k h i) = 0 := by
   unfold sgOf
   rw [map_neg, ← coeff_zero_eq_constantCoeff_apply, coeff_ev_zero_right, Finsupp.embDomain_zero, coeff_pderiv]
-  rw [coeff_eq_zero_of_vanish_first_axis h hax _ (fun i' => by simp [Finsupp.single_apply])]
+  rw [coeff_eq_zero_of_vanish_first_axis h hax _ (fun i' => by simp)]
   simp
 
 theorem bE_const (h : PS k 2 d) (hax : ev (n := 1) ![0, pt k d 0] h = 0) : ∀ t, constantCoeff (bE k h t) = 0 := by

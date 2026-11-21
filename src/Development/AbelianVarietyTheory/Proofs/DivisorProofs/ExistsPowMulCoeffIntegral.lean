@@ -1,17 +1,12 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.KerDatTuple
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.NormalFam
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMapOfOfExtends
-import Development.AbelianVarietyTheory.Definitions.Divisors.GenReads
-import Formalism.LocalToGlobal.IndefiniteReal.RhoGeo
-import Formalism.LocalToGlobal.IndefiniteReal.FWExist
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsDeltaDelAtOwnAt
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ExistsMulAddEqOneOfNotMem
 import Formalism.LocalToGlobal.Columns.CoefficientsModP.BaseCh
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.SplitOffBadOfSuppSplitOff
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.EqZeroOfFischSelf
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.FFVMap
-import Formalism.LocalToGlobal.Columns.StdLatUnimodular
+import Development.AbelianVarietyTheory.Definitions.Foundations.ThetaSeriesTies
 
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.DIV.Cons Formalism.L2.Pj Formalism.L2.Indef Formalism.L2.Indef.Tree
 open Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.L2.Theta Formalism.L2.DIV Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.FWT Formalism.IndefR.Datum Formalism.IndefR.Lev
@@ -98,8 +93,8 @@ theorem coeff_aeval_scale {σ K : Type} [Field K] (t : K) (P : MvPolynomial σ K
   | monomial d a =>
     have e : aeval (fun i => C t * X i) (monomial d a) = monomial d (t ^ (d.sum fun _ e => e) * a) := by
       rw [aeval_monomial, monomial_eq]
-      simp only [Algebra.algebraMap_self, RingHom.id_apply, mul_pow, Finsupp.prod_mul, Finsupp.prod, Finsupp.sum,
-        Finset.prod_pow_eq_pow_sum, C_mul, C_pow, algebraMap_eq]
+      simp only [mul_pow, Finsupp.prod, Finsupp.sum,
+        C_mul, C_pow, algebraMap_eq]
       rw [Finset.prod_mul_distrib, Finset.prod_pow_eq_pow_sum]
       ring
     rw [e, coeff_monomial, coeff_monomial]

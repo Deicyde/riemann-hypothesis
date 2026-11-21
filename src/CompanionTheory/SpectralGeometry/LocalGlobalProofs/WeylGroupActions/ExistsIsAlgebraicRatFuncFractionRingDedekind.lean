@@ -1,7 +1,6 @@
-import Mathlib
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.WeylGroupActions.HasDerivAtExpReal
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.OperatorRepresentations
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.DifferentialOperatorBracket
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.LemmaDDeterminantIdentity
 
 open Formalism.REAL Formalism.FourierDecayAlt Formalism.QuantumDeterminants
 

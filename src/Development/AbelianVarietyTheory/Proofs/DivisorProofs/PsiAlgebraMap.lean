@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.SubsetSpanBy
 
 noncomputable section
@@ -68,7 +69,7 @@ theorem hel_mem (hN : GradedFam c₀ N) (k : ℕ) (b : F) (hb : b ∈ N k) : hel
 theorem hel_ne_zero (hN : GradedFam c₀ N) {k : ℕ} {b : F} (hb : b ∈ N k) (h : b ≠ 0) : hel hN k b hb ≠ 0 := by
   intro e
   have := congrArg (fun p : ring hN => (p : F[X]).coeff k) e
-  simp [coeff_monomial] at this
+  simp at this
   exact h this
 
 def comp (hN : GradedFam c₀ N) (k : ℕ) : ring hN →+ piece hN k where

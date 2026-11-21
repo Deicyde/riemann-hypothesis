@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.KoszulExactness.ContractPowSuccMem
+import Mathlib.Tactic.ENatToNat
 
 noncomputable section
 

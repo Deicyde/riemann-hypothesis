@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AutomorphicArithmetic.LocalEmbeddings.ReBaseUniq
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.HoweDuality.HoweDualityUnramifiedAllPlaces
 
 open scoped TensorProduct

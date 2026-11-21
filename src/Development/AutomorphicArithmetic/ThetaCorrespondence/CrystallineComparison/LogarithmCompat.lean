@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.CrystallineComparison.CFDefs
 import Development.AutomorphicArithmetic.ThetaCorrespondence.CrystallineComparison.MemKerPowIff
+import Development.WeilBound.CoreStatements.PeriodRingComparison.CrystallinePeriodRings.Assembly
 
 noncomputable section
 

@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IsPosHermFormV
-import Development.AbelianVarietyTheory.Definitions.SpanningFamilies.IntMIffInt
+import Mathlib.Analysis.InnerProductSpace.JointEigenspace
 
 open Module.End
 

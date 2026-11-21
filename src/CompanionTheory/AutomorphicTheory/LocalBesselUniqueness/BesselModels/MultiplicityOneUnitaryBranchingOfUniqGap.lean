@@ -1,7 +1,8 @@
+import BuildAid.Leniency.Open
 import CompanionTheory.AutomorphicTheory.LocalBesselUniqueness.BesselModels.AtFormAdmOneOfSteps
 import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.LocUniqGen
 import Formalism.SharpRestriction.CuspSpanNormBounds.SchurRelationsDiscreteSeries
-import Formalism.SharpRestriction.CuspSpanNormBounds.FrobeniusCoefficientMemLp.AIsL
+import Formalism.SharpRestriction.CuspSpanNormBounds.FamilyDoubleCosetBesselBoundOfGap
 
 namespace CompanionTheory.Lime.BM
 

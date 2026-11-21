@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsTorsionFreeOfForallExists
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsFrameOfForallExists
 
 set_option autoImplicit false
 

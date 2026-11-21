@@ -1,6 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LeviRep
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ExistsRepresent
+import Development.AbelianVarietyTheory.Definitions.Divisors.T2SpaceGeneralLinearGroup
+import Development.AbelianVarietyTheory.Definitions.Foundations.SmoothPartStable
+import Mathlib.Topology.Sheaves.Presheaf
 
 open GlobalTheory.PRep GlobalTheory.SmGL GlobalTheory.SplitWeil GlobalTheory.GodementJacquet MeasureTheory
 open scoped Pointwise

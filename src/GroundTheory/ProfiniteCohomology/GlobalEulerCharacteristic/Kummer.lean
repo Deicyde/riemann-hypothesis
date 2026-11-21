@@ -1,9 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.GlobalEulerCharacteristic.KummerSeq
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.BaseChangeModules
-import GroundTheory.ProfiniteCohomology.RestrictedRamification.SInvariantToInvariantsEqZeroIff
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.SPicFinite
-import GroundTheory.GlobalFields.HerbrandQuotients.SUnitsRep
 import GroundTheory.ProfiniteCohomology.GlobalEulerCharacteristic.StabilizersFinite
 import GroundTheory.ProfiniteCohomology.GlobalEulerCharacteristic.UnitsDefs
 import GroundTheory.ProfiniteCohomology.LocalEulerCharacteristic.Additive
@@ -75,7 +74,7 @@ theorem sUnitsToGsInvariants_injective : Function.Injective (sUnitsToGsInvariant
   have h := congrArg (fun z : (Rep.res (gsSubtype S hL) (galSUnitsMax F Ω S)).ρ.invariants =>
     (((Additive.toMul (z : Additive (sUnitsMax F Ω S)) : sUnitsMax F Ω S) :
       (maxUnramifiedOutside F Ω S)ˣ) : maxUnramifiedOutside F Ω S)) hxy
-  simp only [coe_sUnitsToGsInvariants_apply] at h
+  simp only at h
   exact Additive.toMul.injective (Subtype.ext (Units.ext ((gsEmbedding hL).injective h)))
 
 theorem exists_gsEmbedding_eq_of_forall {y : maxUnramifiedOutside F Ω S}

@@ -1,6 +1,7 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.CechPairings.MapHComp
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousCochainCoordinateExtension
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.CechPairings.CechAugRow
+import Mathlib.NumberTheory.Padics.PadicIntegers
 set_option backward.isDefEq.respectTransparency false
 open CategoryTheory Opposite CrystallineSemistableComparison CrystallineSemistableComparison.CH
 universe w w' w'' t t' v u v' u' v'' u''

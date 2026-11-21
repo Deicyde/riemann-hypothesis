@@ -1,4 +1,5 @@
-import Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.MeanDefs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.TopChoiceBounds
 
 noncomputable section

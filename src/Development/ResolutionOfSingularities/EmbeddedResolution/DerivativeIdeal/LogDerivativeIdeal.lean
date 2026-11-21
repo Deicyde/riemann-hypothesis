@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Variable
 import Development.ResolutionOfSingularities.EmbeddedResolution.DerivativeIdeal.DerivativeIdeal
 
 namespace FunctorialResolution.EmbeddedResolution

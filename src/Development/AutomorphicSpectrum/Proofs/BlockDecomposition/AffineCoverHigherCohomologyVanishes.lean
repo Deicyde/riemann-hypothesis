@@ -1,9 +1,8 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.Coords
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.CechPairings.Imports
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ArithmeticGeometry.SchemeCohomology.CechSeparated
-import GroundTheory.ArithmeticGeometry.SchemeCohomology.AffineVanishing
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsIsoToBidualOfLocalFrames
+import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.CapOComp
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

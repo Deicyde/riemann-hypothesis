@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StSemilocChartRatio
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StFibreOverFinite
 import GroundTheory.HeightsAndTheta.Heights.Intersections.AvoidRing

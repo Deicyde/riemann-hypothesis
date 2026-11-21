@@ -1,6 +1,6 @@
-import Mathlib
-import GroundTheory.GlobalFields.TateThesis.DedekindZetaContinuation
-import GroundTheory.GlobalFields.LocalFieldAtPlace
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.GlobalFields.TateThesis.HeckeTheoremScaling
 
 open NumberField IsDedekindDomain IsDedekindDomain.HeightOneSpectrum Complex Topology Filter
 

@@ -1,15 +1,12 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WordAppend
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousMixedSymm
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchimedeanDecayOperatorApplyMemAdelicSchwartzStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicSchwartzContinuousHasDerivAtArchimedeanLinStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LintegralUnitCubeTranslatesSlabPeriodicLeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchimedeanSlabOpenUnitCubeHaarPosFiniteStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchimedeanSlabCoveredByTranslatesOfSmallerSlabStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LintegralCompactLe
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.SqIntervalIntegralLeMulIntervalIntegralSq
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK
 open scoped TensorProduct NNReal Matrix ENNReal
@@ -80,7 +77,7 @@ theorem archIn_single (j : Fin (dimA F κ)) (s : ℝ) :
   funext i
   rw [archIn_apply]
   congr 1
-  rw [Module.Basis.equivFun_symm_apply, Fintype.sum_eq_single j (fun c hc => by simp [Pi.single_apply, hc])]
+  rw [Module.Basis.equivFun_symm_apply, Fintype.sum_eq_single j (fun c hc => by simp [hc])]
   simp
 
 theorem sobolev_schA {f : (κ → AF F) → ℂ} (hf : f ∈ schA F κ) (x : κ → AF F) (B : ℝ)

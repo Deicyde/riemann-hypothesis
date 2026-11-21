@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSmoothColRep
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LowerEquivUpperSwap
 open GlobalTheory.PRep GlobalTheory.SmGL GlobalTheory.SmGL.RowOneCell Matrix

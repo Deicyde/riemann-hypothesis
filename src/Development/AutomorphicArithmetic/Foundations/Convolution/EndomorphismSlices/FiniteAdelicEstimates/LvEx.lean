@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.EndomorphismSlices.SphComm2
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.HasSatakeGLOfIsSatVecGL
 
 noncomputable section
 

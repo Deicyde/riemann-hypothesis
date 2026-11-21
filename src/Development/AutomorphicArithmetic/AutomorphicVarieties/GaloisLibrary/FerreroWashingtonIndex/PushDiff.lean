@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.FerreroWashingtonIndex.TwSingle
+import Mathlib.RingTheory.WittVector.IsPoly
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open UpperTheory.V.FW
 

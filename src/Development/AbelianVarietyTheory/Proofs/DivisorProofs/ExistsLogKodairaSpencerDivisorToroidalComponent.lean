@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TopPairDForm
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLogKodairaSpencerGenericEigenFrameStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LogKodairaSpencerWedgeFrameChangeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLogKodairaSpencerLocalEigenFrameStatement
@@ -50,7 +49,7 @@ theorem exists_logKS_div : ∀ (E : Type) [Field E] [NumberField E] [IsCMField E
         (X₀ TF.Y Z).functionField) * ((∏ τ, d τ ^ (-(if τ (H.rt : E) = H.rt0 then (Dw.q : ℤ) else Dw.p)) :
           (X₀ TF.Y Z).functionFieldˣ) : (X₀ TF.Y Z).functionField) = 1 := by
       rw [← Units.val_mul, ← Finset.prod_mul_distrib]
-      simp [← zpow_add]
+      simp
     have h2 := (r i).ne_zero
     have h3 : ∀ (ri P Q a b : (X₀ TF.Y Z).functionField), ri ≠ 0 → P * Q = 1 →
         ri * (a * P * b) * Q / ri = a * b := fun ri P Q a b hri hPQ => by

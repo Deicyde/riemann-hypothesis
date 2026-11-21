@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsClopenBasicOpenSpecProdSelfFirstIdempotent
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIdempotentOfClopen
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IdempotentEqOfBasicOpenEq
 open CategoryTheory Limits AlgebraicGeometry GlobalTheory.AlgConn
 

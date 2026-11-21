@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.LiftApplyOfMemAdmissibleSubalgebra
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsRootOne
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.KummerPotentialRelationLinearHeckeStableStatement
 open scoped MatrixGroups TensorProduct
 open Matrix GlobalTheory.KZ
@@ -15,7 +13,7 @@ theorem polySlash_map {R S : Type} [CommRing R] [CommRing S] (φ : R →+* S) (m
   | C a => simp [slP]
   | add p q hp hq => simp [hp, hq]
   | mul_X p i hp =>
-    simp only [map_mul, hp, MvPolynomial.map_X, Betti.slP_X, map_add, map_smul]
+    simp only [map_mul, hp, MvPolynomial.map_X, Betti.slP_X, map_add]
     simp [MvPolynomial.smul_eq_C_mul]
 
 theorem opP_map {R S : Type} [CommRing R] [CommRing S] (φ : R →+* S) (m : Matrix (Fin 2) (Fin 2) ℤ)

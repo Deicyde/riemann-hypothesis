@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.LatDefs
+import Mathlib.NumberTheory.ModularForms.JacobiTheta.TwoVariable
 
 noncomputable section
 

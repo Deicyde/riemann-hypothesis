@@ -1,6 +1,7 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.HeightKernels.StatementsDualTopBasisChange
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.StatementsIntCoordChange
+import GroundTheory.HeightsAndTheta.Heights.HeightKernels.Assembly
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

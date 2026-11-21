@@ -1,7 +1,6 @@
-import Formalism.PeriodIntegrals.OrbAddUp
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.OrbitPowerSeriesCoefficients.OrbEmb
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.OrbitPowerSeriesCoefficients.SolvableEquivalenceOfBaseChange
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.OrbitPowerSeriesCoefficients.ExpSum
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.OrbitPowerSeriesCoefficients.JetRen
 
 noncomputable section
@@ -114,7 +113,7 @@ theorem rename_jet (D : D7) (p : ℕ) [Fact p.Prime] {β : Type} (r : Pl D) (w :
       first
       | rw [Finsupp.mapDomain_add, Finsupp.mapDomain_single, Finsupp.degree_add, Finsupp.degree_add,
           degree_single', degree_single', ih]
-      | simp [Finsupp.mapDomain_add, Finsupp.mapDomain_single, degree_single', ih]
+      | simp [Finsupp.mapDomain_add, Finsupp.mapDomain_single, ih]
   have hidx : ∀ e : ℕ, Finsupp.single (backPl D p ((pE D p r β) w).1 (2 * e), ((pE D p r β) w).2) ((p ^ 2) ^ e)
       = Finsupp.mapDomain (pE D p r β) (Finsupp.single (w.1 - 2 * (e : ZMod (nP D p)), w.2) ((p ^ 2) ^ e)) := by
     intro e

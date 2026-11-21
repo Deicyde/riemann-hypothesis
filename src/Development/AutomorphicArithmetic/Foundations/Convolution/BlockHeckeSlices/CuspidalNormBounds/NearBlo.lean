@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.BlockHeckeSlices.CuspidalNormBounds.HkApply
 import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.NearFinite
-import GroundTheory.AutomorphicForms.LocallyProfinite
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.IndependenceEigenvectors
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.NonSplitSequence
 
@@ -71,7 +72,7 @@ private theorem typeMap (ρ : Typ E r) : ∃ (X : Submodule ℂ (Matrix (Fin ρ.
   refine ⟨LinearMap.range A,
     { toFun := fun k => (LinearMap.mulLeft ℂ (ρ.ρ (ι k))).restrict (hst (ι k))
       map_one' := LinearMap.ext fun y => Subtype.ext (by simp)
-      map_mul' := fun k l => LinearMap.ext fun y => Subtype.ext (by simp [mul_assoc]) }, fun φ hφ => ?_⟩
+      map_mul' := fun k l => LinearMap.ext fun y => Subtype.ext (by simp) }, fun φ hφ => ?_⟩
   have hmem : ∀ k : KA E r, rightTranslate (k : GA E r) φ.1 ∈ cuspForms E r :=
     fun k => ⟨φ.2.1.rightTranslate_of_mem_maxCompact k.2, φ.2.2.translate _⟩
   let B : (KA E r →₀ ℂ) →ₗ[ℂ] cuspForms E r := Finsupp.linearCombination ℂ fun k => ⟨_, hmem k⟩

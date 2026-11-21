@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.NotRedOfMem
 import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.WeierstrassPAddOfNeOfDerivNeZero
+import Mathlib.Analysis.Normed.Field.Instances
 
 open Formalism.L2.Th1.F GlobalTheory.Klein
 open scoped ComplexConjugate BigOperators

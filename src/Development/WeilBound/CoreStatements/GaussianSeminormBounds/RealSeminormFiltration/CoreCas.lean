@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.GaussianSeminormBounds.RealSeminormFiltration.CoreCasA
 import Development.WeilBound.CoreStatements.GaussianSeminormBounds.RealSeminormFiltration.CoreCasB
 import Development.WeilBound.CoreStatements.GaussianSeminormBounds.RealSeminormFiltration.CoreCasC
+import Mathlib.Algebra.Module.StablyFree.Basic
 
 noncomputable section
 

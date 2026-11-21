@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.CohomologicalPurity.LeafAugInjPf
+import Mathlib.Order.CompletePartialOrder
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry Opposite GlobalTheory.EtC LateralTheory.CohomologicalPurity.TubeCut

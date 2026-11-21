@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.BlockDeterminants.ExponentialEntries.RightSub
+import Development.AbelianVarietyTheory.PublishedTheorems.PublishedFoundations.FiniteIntertwining
+import Mathlib.Order.Interval.Finset.Box
 
 open Formalism.BasicNotions UpperTheory.TP.RP MvPolynomial
 
@@ -109,7 +112,7 @@ private theorem hw_eq {d : ℕ} (ν μ : Fin d → ℕ) (t : ℕ) (hν : ∀ k, 
     have hμl : μ (Fin.last m) = t := by
       have := hν (Fin.last m)
       omega
-    simp only [e_cs, e_last, n_last, hμl, Nat.zero_sub, Nat.sub_zero, pow_zero, mul_one]
+    simp only [e_cs, e_last, n_last, hμl, Nat.sub_zero, pow_zero, mul_one]
     rfl
 
 end UpperTheory.TP.RP

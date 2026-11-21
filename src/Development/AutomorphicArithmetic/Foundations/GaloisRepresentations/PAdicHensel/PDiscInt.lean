@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.PAdicHensel.DatExOf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.Coordinates
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.PDiscInt
 

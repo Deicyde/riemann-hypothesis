@@ -1,7 +1,12 @@
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.HodgeBundleWeights.TamagawaNumberSpecialUnitary
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ImageDegreePositive
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.HodgeBundleWeights.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ImageDegreePositiveStatement
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFlatProjectiveModelOverRingOfIntegersStatement
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIntegralProjectiveClosureOfLinearSystemPoi
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsNormalArithmeticVarietyModelProjectiveSpacStatement
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrameConjugateEmbeddingEqConjMulUnitaryStatement
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FubiniStudyCoordinateCombinationsNoCommonZeroStatement
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsModelOf
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PulledBackCoordinateCombinationRatioAndVanishStatement
 
 section
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Pj Formalism.BasicNotions.TH Formalism.L2.Theta ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.FD GlobalTheory.AllWt GlobalTheory.CompHt GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.Mean4 GlobalTheory.Mean4O
@@ -63,7 +68,7 @@ theorem exists_model_of_image : _root_.GlobalTheory.CovTop.PublishedHodgeBundleT
       rw [Finset.sum_eq_single k (fun l _ hl => by rw [Pi.single_eq_of_ne hl, map_zero, zero_smul]) (by simp)]
       rw [Pi.single_eq_same, map_one, one_smul]
     have h0 := hrelV (coef (gw k) - Pi.single k 1) (by
-      simp only [Pi.sub_apply, sub_smul, Finset.sum_sub_distrib, hcoef, e1]
+      simp only [Pi.sub_apply, sub_smul, Finset.sum_sub_distrib, e1]
       exact sub_eq_zero.2 (hcoef (gw k)))
     simp only [Pi.sub_apply, map_sub, sub_smul, Finset.sum_sub_distrib, e3, sub_eq_zero] at h0
     exact h0
@@ -108,7 +113,7 @@ theorem exists_model_of_image : _root_.GlobalTheory.CovTop.PublishedHodgeBundleT
     congr 2
     refine Finset.sum_congr rfl fun k _ => ?_
     rw [sg k]
-    simp only [A', he, Matrix.mul_apply, Matrix.map_apply, c, Matrix.of_apply]
+    simp only [he, Matrix.mul_apply, Matrix.map_apply, c, Matrix.of_apply]
     rfl
 end GlobalTheory.ImageModel
 end

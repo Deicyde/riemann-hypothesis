@@ -1,4 +1,6 @@
-import Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.PartFiveExplicitOfPropositions
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GlobalSchurBounds.TheoremThreeOfExplicitAndCompact
+import Formalism.SharpRestriction.GlobalSchurBounds.ThickPlacesCorollaryOfAnyTranslate
 
 noncomputable section
 namespace Formalism.MainNotions.StandardLattice

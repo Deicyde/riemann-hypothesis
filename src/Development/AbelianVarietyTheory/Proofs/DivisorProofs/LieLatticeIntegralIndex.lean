@@ -1,7 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsTamagawa
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TamagawaSpecialUnitary
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralMultipleInLieLattice
+import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.DefiniteBound
+import Mathlib.GroupTheory.FiniteAbelian.Basic
+import Mathlib.RingTheory.TotallySplit
 open Formalism.BasicNotions Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix Filter Topology
 open scoped TensorProduct ENNReal
 open GlobalTheory.TamSU GlobalTheory.SUVol GlobalTheory.UCls GlobalTheory.AdLat GlobalTheory.Published
@@ -155,7 +158,7 @@ theorem finrank_slSp_le (G : Matrix (Fin r) (Fin r) E) (hG : G.det ≠ 0) :
   have hmem : δ • (1 : Matrix (Fin r) (Fin r) E) ∈ skewSp G := by
     change (δ • (1 : Matrix (Fin r) (Fin r) E))ᵀ * G + G * (δ • (1 : Matrix (Fin r) (Fin r) E)).map cc = 0
     have e : (δ • (1 : Matrix (Fin r) (Fin r) E)).map cc = (-δ) • 1 := by
-      ext a b; by_cases h : a = b <;> simp [h, cc, hδ, Matrix.one_apply]
+      ext a b; by_cases h : a = b <;> simp [h, cc, hδ]
     rw [e, transpose_smul, transpose_one, Matrix.smul_mul, Matrix.one_mul, Matrix.mul_smul, Matrix.mul_one,
       neg_smul, add_neg_cancel]
   have hnot : δ • (1 : Matrix (Fin r) (Fin r) E) ∉ slSp G := by

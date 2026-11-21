@@ -1,4 +1,9 @@
-import Development.WeilBound.RepresentationTheoryGL.CasimirAlgebra.KugaCoordinates.CasimirBounds.ReSwapSumLe
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.RepresentationTheoryGL.CasimirAlgebra.TensorRelationsGL.KTypeData
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.ReduceModChar
 
 open Finset
 
@@ -48,8 +53,8 @@ theorem pair_apply (p q : Q) (f : TV n ℂ Q) (I : Q → Fin n) :
         simp [Equiv.swap_apply_right]
       · by_cases hx' : x = p
         · subst hx'
-          simp [Function.update_apply, hx, Equiv.swap_apply_left]
-        · simp [Function.update_apply, hx, hx', Equiv.swap_apply_of_ne_of_ne hx' hx]
+          simp [hx, Equiv.swap_apply_left]
+        · simp [hx, hx', Equiv.swap_apply_of_ne_of_ne hx' hx]
   · intro b _ hb
     simp [Ne.symm hb]
   · simp

@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GoodConstOfAniso
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GoodFunctionLineDerivativeStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SiegelSetUniformSmoothBoundStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CuspidalConstantTermSmallStatement

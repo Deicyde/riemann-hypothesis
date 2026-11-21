@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.FrameEstimates.SquareIntegrableWeilRange
 import Development.WeilBound.ThetaLifts.FrameEstimates.FourierInjA
 import Development.AutomorphicSpectrum.Proofs.MembershipProofs.ThetaDistributionHeisenbergInvariant
+import Mathlib.Algebra.Module.Torsion.Prod
 
 noncomputable section
 

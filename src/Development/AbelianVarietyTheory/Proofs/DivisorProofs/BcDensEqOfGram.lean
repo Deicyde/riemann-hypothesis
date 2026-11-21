@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsFlagModelHermSum
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AppInjectiveOfFrames
+import Development.AbelianVarietyTheory.Definitions.Divisors.DiagValExtTraceNonneg
 
 set_option autoImplicit false
 

@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.WPhDefs
+import Formalism.PeriodIntegrals.ThGDefs
 
 namespace PI
 

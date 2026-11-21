@@ -1,9 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ZetaOn
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndicatorIntMMemSB
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LinearWittModelUnitaryActionStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaActionExistsStatement
-import Development.AbelianVarietyTheory.Definitions.Divisors.RankEqCardIffExistsFrameMatrixFirstColumnBlock
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.DetCoverMatrixValuationOne
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DeltaHalfMulUnrTorus
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SplitPlaceCharacterComponentSmoothUnitaryConduct
@@ -73,7 +69,7 @@ theorem GlobalTheory.KSplit.vac_act_torus : GlobalTheory.FunPr.Hypotheses₂ →
     rw [GlobalTheory.LGrp.BorelCompletion.nabs_completion, hvD, WithZero.log_exp]
   have hq : (0 : ℝ) ≤ (qV F v : ℝ) := Nat.cast_nonneg _
   funext Y
-  simp only [GlobalTheory.SplitFlip.omA, MonoidHom.inv_apply, inv_inv, map_one, Units.val_one, one_mul, Matrix.mul_one,
+  simp only [GlobalTheory.SplitFlip.omA, MonoidHom.inv_apply, inv_inv, map_one, Units.val_one, Matrix.mul_one,
     Fintype.card_fin, Pi.smul_apply, smul_eq_mul]
   rw [hdet, map_mul, hchr, one_mul, map_zpow, Units.val_zpow_eq_zpow_val]
   rw [← hdet]
@@ -86,5 +82,5 @@ theorem GlobalTheory.KSplit.vac_act_torus : GlobalTheory.FunPr.Hypotheses₂ →
     congr 2
     push_cast; ring
   rw [ha1, haD, mul_one]
-  simp only [Pi.smul_apply, smul_eq_mul, mul_one]
+  simp only [mul_one]
   rfl

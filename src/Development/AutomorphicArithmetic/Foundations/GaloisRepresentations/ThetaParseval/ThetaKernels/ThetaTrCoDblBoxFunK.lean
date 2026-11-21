@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaTransformDoubledTargetBoxProduct
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.HalfIndexLattices.SplitStab
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.HalfIndexLattices.IsLatRepL
 
 set_option synthInstance.maxHeartbeats 200000
 
@@ -67,7 +67,7 @@ theorem thetaTr_coDbl_boxFun_k : ∀ (F E : Type) [Field F] [NumberField F] [Fie
     funext i; simp [hAdef]
   simp only [GlobalTheory.WeilM.schr, h3, map_mul, Complex.conj_conj, hc,
     Prod.fst_neg, Prod.snd_neg]
-  simp only [neg_dotProduct, dotProduct_neg, neg_neg, neg_add, sub_eq_add_neg, mul_neg]
+  simp only [neg_dotProduct, dotProduct_neg, neg_neg, neg_add, sub_eq_add_neg]
 end GlobalTheory.DblThetaProd
 end
 end

@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.AdmissibleOfUnitWords
-import Mathlib.Geometry.Manifold.PartitionOfUnity
+import Mathlib.Topology.UniformSpace.Uniformizable
 
 open Matrix Set
 open scoped ComplexConjugate ContDiff Manifold Topology
@@ -124,7 +125,7 @@ theorem c6_fib_cost_of_pieces : C6.FibCostOfParts := by
     · simp only [wL, List.mem_map] at hx
       obtain ⟨X, hX, rfl⟩ := hx
       exact (hu X hX).1
-    · simp only [wR, List.mem_map, List.mem_reverse] at hx
+    · simp only [wR, List.mem_map] at hx
       obtain ⟨X, hX, rfl⟩ := hx
       exact (hv X hX).1
   have hlen : ∀ u v : List (Mat k r), (wL u ++ wR v).length = u.length + v.length := by

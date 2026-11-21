@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.StatementsVertRIndexSteps
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.PCurveCharts
-import GroundTheory.HeightsAndTheta.Heights.HeightKernels.PVertRIndex
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.PSectionIndexNorm
 set_option maxSynthPendingDepth 1
 

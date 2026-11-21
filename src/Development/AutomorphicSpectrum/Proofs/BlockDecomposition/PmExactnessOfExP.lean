@@ -1,5 +1,5 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.HodgeSurjectivity.NLeA
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.AlgebraMapConeRing
 
 set_option autoImplicit false
@@ -23,7 +23,7 @@ theorem cech_d_aug (P : PM.{0} R ι) (x : P.M ∅) : P.cech.d 0 (P.aug x) = 0 :=
   funext i
   have key : ∀ (k : Fin 2), P.res (ent_comp i k.succAbove) (P.aug x (i ∘ k.succAbove)) =
       P.res (Finset.empty_subset (ent i)) x := fun k => P.res_comp _ _ x
-  simp only [dZ, Fin.sum_univ_two, key]
+  simp only [dZ, key]
   simp
   rfl
 

@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.SphericalIdeles.SphConj
-import Development.AutomorphicArithmetic.Foundations.Convolution.TraceSplitting.PowTwist
 
 noncomputable section
 

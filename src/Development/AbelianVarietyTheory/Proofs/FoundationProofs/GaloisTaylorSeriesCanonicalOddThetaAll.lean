@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.NormSumPairRankZeroOfCurveCoordNorm
-import Formalism.PairingDivisors.StatementH
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.ExistsMulEqPolynomialWeierstrassP
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.InducedTypeThetaGenusOnePermutes
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IdealPeriodLatticeOfCurveDatum
@@ -261,7 +260,7 @@ lemma tay_cE (c : ℂ) : tay (cE c) = C c := by
   ext n
   cases n with
   | zero => simp [coeff_tay, coef1, cE]
-  | succ n => simp [coeff_tay, coef1, cE, iteratedDeriv_const, coeff_C]
+  | succ n => simp [coeff_tay, coef1, cE, iteratedDeriv_const]
 
 lemma tay_sE (α : ℂ) (f : Ent) : tay (sE α f) = rescale α (tay f) := by
   ext n

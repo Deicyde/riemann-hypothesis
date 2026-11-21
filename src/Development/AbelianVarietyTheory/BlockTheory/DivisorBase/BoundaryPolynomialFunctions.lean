@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PotentialTheory.IsPotentialOfFun
+import Mathlib.Order.CompletePartialOrder
 
 namespace GlobalTheory.IndefiniteRowSideFullHecke.BoundaryPolynomialFunctions
 

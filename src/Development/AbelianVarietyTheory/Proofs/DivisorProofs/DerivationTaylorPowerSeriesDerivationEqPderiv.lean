@@ -1,5 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntDerApply
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Rat.Star
+import Mathlib.RingTheory.MvPowerSeries.Derivative
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
 open IsLocalRing GlobalTheory.FormalOrigin
 
 namespace GlobalTheory.FormalOrigin.TaylorDeriv
@@ -31,7 +36,7 @@ theorem foldr_iterate_add_single {A ι : Type} (ds : ι → A → A) (h : ∀ a 
         apply List.foldr_ext
         intro j hj b
         have : j ≠ i := fun e => hl.1 (e ▸ hj)
-        simp [Finsupp.single_apply, this.symm]
+        simp [this.symm]
       rw [this]
       simp [Function.iterate_succ_apply']
     · have ha' : a ∈ l := by
@@ -40,7 +45,7 @@ theorem foldr_iterate_add_single {A ι : Type} (ds : ι → A → A) (h : ∀ a 
         · exact e
       rw [ih hl.2 ha']
       have e : (α + Finsupp.single a 1 : ι →₀ ℕ) i = α i := by
-        simp [Finsupp.single_apply, Ne.symm hi]
+        simp [Ne.symm hi]
       rw [e]
       have : Function.Commute (ds i) (ds a) := fun x => h i a x
       exact (this.iterate_left (α i)) _
@@ -59,7 +64,7 @@ theorem prod_factorial_add_single {n : ℕ} (α : Fin n →₀ ℕ) (a : Fin n) 
       = ∏ i ∈ Finset.univ.erase a, ((α i).factorial : ℚ) := by
     refine Finset.prod_congr rfl fun i hi => ?_
     have := Finset.ne_of_mem_erase hi
-    simp [Finsupp.single_apply, this.symm]
+    simp [this.symm]
   rw [this]
   simp [Nat.factorial_succ]
   ring

@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.ChartedClasses.ExistsIsCGBases
-import Formalism.SharpRestriction.GrowthBounds.ChartComparison.LocTiesOf
 
 noncomputable section
 

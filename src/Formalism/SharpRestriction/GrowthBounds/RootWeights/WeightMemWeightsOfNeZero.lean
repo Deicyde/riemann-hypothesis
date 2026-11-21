@@ -1,6 +1,8 @@
-import Formalism.SharpRestriction.GrowthBounds.RootWeights.LatticeTheoremOfAdmitted
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.RootWeights.WeightEntriesBetweenExtremeHighest
 import Formalism.SharpRestriction.GrowthBounds.RootWeights.InvariantDenominatorLinftyBound
+import Formalism.SharpRestriction.GrowthBounds.RootWeights.EquivariantKillsCyclicOfZero
 
 noncomputable section
 
@@ -70,7 +72,7 @@ theorem weight_difference_le_ell [CharZero (KK O)] [FiniteDimensional (KK O) V] 
       congr 1
       have hω : (nu + (j : ℤ) • rootW a c + (r : ℤ) • rootW c a) a -
           (nu + (j : ℤ) • rootW a c + (r : ℤ) • rootW c a) c = (N : ℤ) - 2 * (r : ℤ) := by
-        simp [rootW, Pi.single_apply, hac, Ne.symm hac]
+        simp [rootW, hac, Ne.symm hac]
         omega
       rw [← hω]
       push_cast

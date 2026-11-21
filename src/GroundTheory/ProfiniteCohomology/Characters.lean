@@ -1,9 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.CharactersDefs
 import GroundTheory.ProfiniteCohomology.Colimit
 import GroundTheory.ProfiniteCohomology.ContinuousCochains.LongExactSequence
-import GroundTheory.ProfiniteCohomology.CupProducts
 import GroundTheory.TateCohomology.Characters
+import Mathlib.Algebra.Order.Ring.Star
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

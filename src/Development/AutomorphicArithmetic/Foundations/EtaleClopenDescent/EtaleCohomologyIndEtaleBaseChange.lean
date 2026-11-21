@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.DivisorSupportCondition
-import Development.AbelianVarietyTheory.Definitions.Divisors.IndEtOfForallFinset
-import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.IsDomainAndIsIntegrallyClosedAtPrimeOfSmoothOfCo
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.FlatMapMaximalIdealIsSeparable
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HZeroPullbackTwistBijectiveStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EtaleCohomologyLocalToGlobalAffineIndEtaleStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SubsingletonEtaleCohomologyGenericFibreHenselianStatement
@@ -124,7 +121,7 @@ theorem indEt_isDomain [IsDomain T] [IsIntegrallyClosed T] [Algebra.Smooth T B] 
   have hnat : ∀ {i k : J} (f : i ⟶ k) (x : D.obj i), (s.app k).hom ((D.map f).hom x) = (s.app i).hom x := by
     intro i k f x
     have := s.naturality f
-    simp only [Functor.const_obj_map, Category.comp_id] at this
+    simp only [Functor.const_obj_map] at this
     exact congrArg (fun g => g.hom x) this
   haveI : NoZeroDivisors A := ⟨by
     intro a b hab

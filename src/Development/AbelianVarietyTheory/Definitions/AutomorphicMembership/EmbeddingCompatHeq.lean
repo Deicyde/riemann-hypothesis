@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.FormsOver
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.NotRedDouble
-import Formalism.LocalToGlobal.LatticeGeometry.CmTypeMeetsConjugatePair
 import Formalism.LocalToGlobal.LatticeGeometry.Inhabited
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsKeySectionUnifStatement
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.ExistsSmulOfPreservesFrameOrbits

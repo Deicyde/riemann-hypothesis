@@ -1,11 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsModelOf
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.NefFibOfIsGenerated
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsHomogeneousCompIdeal
-import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.IsProjOverMorphismRestrictOfRelAmple
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.JGenSpecializes
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Pj Formalism.BasicNotions.TH Formalism.L2.Theta ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.FD GlobalTheory.AllWt GlobalTheory.CompHt GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.Mean4 GlobalTheory.Mean4O
 open scoped ENNReal Classical
 
@@ -50,7 +44,7 @@ theorem exists_ne_zero_of_rel {K V : Type} [Field K] [AddCommGroup V] [Module K 
       congr 1
       · rw [Finset.sum_eq_single l]
         · simp
-        · intro k _ hk; simp [Pi.single_apply, hk]
+        · intro k _ hk; simp [hk]
         · simp
       · rw [Finset.sum_comm]
         exact Finset.sum_congr rfl fun _ _ => Finset.sum_congr rfl fun _ _ => by ring

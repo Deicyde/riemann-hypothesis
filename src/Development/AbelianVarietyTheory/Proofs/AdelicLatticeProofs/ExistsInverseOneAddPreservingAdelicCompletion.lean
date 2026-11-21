@@ -1,6 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AdelicHermitianForms.IsHermForm
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.AdelicCompletionRationalPointsAndApproximation
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.ExistenceOfLattices.Hat1
+import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.ExistsUniqueIdeleOfLinearEquivQuotientLocal
+import Mathlib.Algebra.AffineMonoid.Basic
 
 open NumberField IsDedekindDomain GlobalTheory.AdLat GlobalTheory.UnRep
 open scoped TensorProduct Matrix
@@ -132,7 +134,7 @@ theorem _root_.GlobalTheory.UnRep.exists_inverse_one_add_preserving_hat : ∀ (F
     have h := integral_tmul_smul_mem_hat (F := F) c.2 hz
     convert h using 1
     funext i
-    simp [Subring.smul_def, Algebra.smul_def] <;> rfl
+    simp [Algebra.smul_def] <;> rfl
   let ΛA : Submodule A (Fin n → _root_.GlobalTheory.AdLat.RA F E) :=
     { Λ with smul_mem' := fun c z hz ↦ hsmulA c hz }
   have hmemA : ∀ z, z ∈ ΛA ↔ z ∈ Λ := fun z ↦ Iff.rfl
@@ -165,7 +167,7 @@ theorem _root_.GlobalTheory.UnRep.exists_inverse_one_add_preserving_hat : ∀ (F
         | mem y hy =>
           have h1 : (fun i ↦ b ⊗ₜ[F] y i) = (⟨b, hb⟩ : A) • g y := by
             funext i
-            simp [hg, Subring.smul_def, Algebra.smul_def, Algebra.TensorProduct.tmul_mul_tmul]
+            simp [hg, Algebra.smul_def, Algebra.TensorProduct.tmul_mul_tmul]
             rfl
           rw [h1]
           exact Submodule.smul_mem _ _ (Submodule.subset_span (by simp; exact ⟨y, hy, rfl⟩))
@@ -291,7 +293,7 @@ theorem _root_.GlobalTheory.UnRep.exists_inverse_one_add_preserving_hat : ∀ (F
       by_cases hj : j = i
       · subst hj
         simp [Algebra.TensorProduct.one_def]
-      · simp [Pi.single_apply, hj]
+      · simp [hj]
     rw [← h1]
     exact hi
   choose w hw using hsingle

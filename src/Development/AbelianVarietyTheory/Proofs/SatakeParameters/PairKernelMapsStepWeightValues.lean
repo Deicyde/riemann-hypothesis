@@ -1,8 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.KernelLattices.FirstKernelLawReading
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.FormsAre
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.TrueWeightConsecutiveStepsPartitionStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ThetaDistributionUnfolded
+import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.JetLL
 
 noncomputable section
 

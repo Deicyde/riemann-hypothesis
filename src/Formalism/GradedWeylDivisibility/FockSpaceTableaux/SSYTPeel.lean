@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.GradedWeylDivisibility.StatementC
-import Formalism.GradedWeylDivisibility.FockSpaceTableaux.LCssytLemmas
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
 
 open MvPolynomial Finset
 

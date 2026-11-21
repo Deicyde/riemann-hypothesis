@@ -1,8 +1,7 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.Reduction
-import GroundTheory.AutomorphicForms.AutomorphicFormSpaces.Height
-import GroundTheory.AutomorphicForms.GL2Classical.Cuspidal
-import GroundTheory.AutomorphicForms.GL2Classical.KFinite
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.AutomorphicForms.GL2Classical.ConstantTerm
+import GroundTheory.AutomorphicForms.ReductionMahler
 
 open NumberField IsDedekindDomain Matrix Set Filter Topology CongruenceSubgroup
 open UpperHalfPlane hiding I I_re I_im

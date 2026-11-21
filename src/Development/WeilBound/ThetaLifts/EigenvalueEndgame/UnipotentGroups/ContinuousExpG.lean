@@ -1,8 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.EigenvalueEndgame.UnipotentGroups.UnipUGood
 import Development.WeilBound.ThetaLifts.EigenvalueEndgame.UnipotentGroups.KerCocompact
 import Development.WeilBound.ThetaLifts.CartanFactorisation.Unimod
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryAdelicGroupTopology
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.ExistsCompactAdeleRingModNumberField
 
 noncomputable section
 

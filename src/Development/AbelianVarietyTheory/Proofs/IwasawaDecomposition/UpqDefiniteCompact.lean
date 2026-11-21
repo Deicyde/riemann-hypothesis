@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataCD
-import Formalism.SatakeDualWeyl.KpqSubgroupCompact
+import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Upqcpt
 
 open Formalism.BasicNotions MeasureTheory Filter Topology Matrix
 

@@ -1,12 +1,11 @@
-import Formalism.LocalToGlobal.KernelLattices.KerStd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.BaseEx
 import Formalism.LocalToGlobal.GlobalTheory.GL3.PStdOK
 import Formalism.LocalToGlobal.GlobalTheory.GL3.NormNatCoprime
 import Formalism.LocalToGlobal.GlobalTheory.GL3.CubicFields.PeriodRelations.ConjCls
 import Formalism.LocalToGlobal.GlobalTheory.GL3.CubicFields.WeierstrassUniqueness.ExistsPeriodPairOfIsLat
 import Formalism.LocalToGlobal.TorsionIntegrality.UniformGaussModels.OrthogonalGaussModels.NormTwelveCubedEqOneOfFiveLePrime
-import Formalism.LocalToGlobal.TorsionIntegrality.WeierstrassTwoTorsion.CubeThreeR
-import Formalism.LocalToGlobal.TorsionIntegrality.EisensteinTranslationProducts.MulStableIntegral
 
 noncomputable section
 open scoped BigOperators

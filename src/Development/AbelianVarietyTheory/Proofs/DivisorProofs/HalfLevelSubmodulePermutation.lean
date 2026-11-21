@@ -1,27 +1,13 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GrothendieckDeformation
-import Development.AbelianVarietyTheory.Definitions.Divisors.CovolXOfCovol
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.Definitions.Divisors.CuspIso
-import Development.AbelianVarietyTheory.Definitions.Divisors.WellChosen
-import Development.AbelianVarietyTheory.Definitions.Divisors.MeanLogLeOfBounds
-import Development.AbelianVarietyTheory.Definitions.Divisors.WedgeNrmLeOfWedgeNormLe
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsHomWeightHomWeight
-import Development.AbelianVarietyTheory.Definitions.Divisors.MemLevEigenIffTransl
-import Formalism.LocalToGlobal.IndefiniteForms.IndefiniteTree.RealCubicMeans.LogMeanShares.LogMeanStatements.HSClaim
-import Development.AbelianVarietyTheory.Definitions.Divisors.GenRatios
-import Development.AbelianVarietyTheory.Definitions.Divisors.BadElt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsWhittakerDatumAndHalfLevels
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ComplexificationBaseChangeLinearOneTmul
-import Development.AbelianVarietyTheory.Definitions.Divisors.EigLatLe
-import Development.AbelianVarietyTheory.Definitions.Divisors.QuoIff
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ActCCoe
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.GeometricLiftsOfFrames
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IsOpenImmersionOfSection
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsUniqueFramedPointMoveUniversalTriple
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsInjectiveDualWeylTensorCuspFormsRationalPo
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeightBoundHolds
-import Formalism.LocalToGlobal.ProjectiveLattices.CompFin
 
 noncomputable section
 
@@ -79,7 +65,7 @@ theorem iSup_part [IsSepClosed L] [Algebra.Etale K B] (m : B →ₐ[K] Module.En
     funext j
     by_cases hj : j = i
     · subst hj; simp
-    · simp [Pi.single_apply, hj]
+    · simp [hj]
   rw [← hM, ← Module.End.mul_apply, ← map_mul, h2, map_smul, LinearMap.smul_apply]
 
 theorem split_of_free [IsSepClosed L] [Algebra.Etale K B] (m : B →ₐ[K] Module.End K W) {G : Type} [Group G]

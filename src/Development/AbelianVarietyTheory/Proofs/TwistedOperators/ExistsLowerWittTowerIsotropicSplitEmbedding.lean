@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.AdjointIsotropicDecomposition
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.LoweredSignatureVanishing
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FinrankOrth
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SignCompatibleNumberingOfWittTowerLower
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsFrameOfHasSignature

@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsBaseFrame
-import Development.AbelianVarietyTheory.Definitions.Divisors.P22
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLieCombIffIsCombAt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EvalRingPointDualNumberSndLinearDerivation
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DetFrameChangeBalancedTensorsCmType
 open CategoryTheory AlgebraicGeometry TopologicalSpace Limits NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj
@@ -56,7 +53,7 @@ theorem symPair_entry {R : Type} [CommRing R] {n : ℕ} (e : (Σ τ : E →+* �
         rfl
       · intro h4
         have h5 := (Sigma.mk.inj_iff.1 h4).2
-        simp only [heq_iff_eq, Prod.mk.injEq] at h5
+        simp only [heq_iff_eq] at h5
         obtain ⟨rfl, rfl⟩ := h5
         exact ⟨rfl, rfl⟩
     exact if_congr key rfl rfl

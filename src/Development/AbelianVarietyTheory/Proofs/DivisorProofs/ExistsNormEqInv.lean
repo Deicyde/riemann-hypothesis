@@ -1,12 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoreConcl
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InvApply
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsGoodPlace
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ShellInt
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.LocalAtPlace
+import Formalism.SharpRestriction.GlobalSchurBounds.GeneralLinearActions.GenusMassVolumes
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
 open scoped TensorProduct NNReal Matrix
 open NumberField MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SiegelSet GlobalTheory.EisRes
 open GlobalTheory.Doubling (absE)

@@ -1,12 +1,8 @@
-import Mathlib
-import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.ExistsIdealDenominator
-import Formalism.SharpRestriction.LevelLetterCocycles.TwGood
-import Formalism.SharpRestriction.LevelLetterCocycles.LocsCoverTw
-import Formalism.LocalRingCardinality.DataForced
 import Formalism.SharpRestriction.Divisibility.CartierLocalBounds
 import Formalism.SharpRestriction.Divisibility.LiftErrorLocal
-import Formalism.LocalRingCardinality.DataParamsT
 
 noncomputable section
 
@@ -29,7 +25,7 @@ def SOk (i : D.ntw.Tw) (lam : D.ntw.abelian₂ i) (s : ℤ) : Prop :=
 theorem paramsT_s_eq {L : SizeData₂ D} {P : ParameterChoice' D L} (PT : ParamsT D L P) : PT.s = Formalism.MainNotions.BlochKatoReduction.Gen.sFun D.R := by
   cases PT
   simp only [Formalism.MainNotions.BlochKatoReduction.Gen.sFun]
-  split_ifs <;> simp only [Nat.odd_iff, Nat.even_iff] at * <;> omega
+  split_ifs <;> simp only [Nat.odd_iff] at * <;> omega
 
 def kMap (i : D.ntw.Tw) (k : ℕ) : FractionRing (D.ntw.O i) →+* FractionRing (D.ntw.Ok i k) :=
   Formalism.MainNotions.BlochKatoReduction.Gen.kMap D.ntw i k
@@ -198,7 +194,7 @@ theorem ordRule_idx {σ : Type} [DecidableEq σ] (o : List σ) (h : o.Nodup) :
     rw [List.pairwise_cons]
     refine ⟨fun u' hu' _ => ?_, ?_⟩
     · have hua : ¬ (a = u') := fun e => h.1 (e ▸ hu')
-      simp [List.idxOf_cons, hua]
+      simp [hua]
     · refine (ih h.2).imp_of_mem fun {u u'} hu hu' hr hne => ?_
       have hua : ¬ (a = u) := fun e => h.1 (e ▸ hu)
       have hua' : ¬ (a = u') := fun e => h.1 (e ▸ hu')

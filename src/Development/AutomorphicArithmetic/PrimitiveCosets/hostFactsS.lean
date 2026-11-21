@@ -1,5 +1,8 @@
-import Development.AutomorphicArithmetic.PrimitiveCosets.CoreAtH
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.PrimitiveCosets.ToEBij
+import Development.AutomorphicArithmetic.DedekindLFunctions.SplitInertia
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.HostFacts
+import Formalism.SizeWindowBrackets.ChainSlopeWindows.GaloisMapComplexConjugation
 
 open UpperTheory.Comparison₂ Deduction.CH Formalism Formalism.HC Formalism.D5 Formalism.RankGapBounds.WeightedMeanData Formalism.LFunctionChainParameters.WeightedSlopeBounds Formalism.LFunctionChainParameters.characterSumData Formalism.LFunctionChainParameters.ThickSetMeanBounds Formalism.LFunctionChainParameters.LErr
   Formalism.LFunctionChainParameters.LChain Formalism.LFunctionChainParameters.LHost
@@ -131,6 +134,6 @@ theorem UpperTheory.Comparison₂.hostFactsS :
     rw [Nat.primeFactors_mul H.QS_ne_zero H.q_prime.ne_zero, H.q_prime.primeFactors]
     show insert H.q H.QS.primeFactors = _
     ext a
-    simp [or_comm]
+    simp
   rw [hset]
   exact hostFactsS_pf φ H

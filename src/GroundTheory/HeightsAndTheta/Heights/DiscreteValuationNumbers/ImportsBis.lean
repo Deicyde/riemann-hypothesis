@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.CutIdentityRightSideCongrOfSubMem
 import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.OfSteps
 set_option maxSynthPendingDepth 1

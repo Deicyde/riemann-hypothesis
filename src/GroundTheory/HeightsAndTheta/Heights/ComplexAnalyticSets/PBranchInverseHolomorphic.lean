@@ -1,7 +1,4 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StBranchInverseHolomorphic
-import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StNormalLocallyIrreducible
-import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StNormalRiemannExtension
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StBranchFillDimension
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StNormalOpenMapping
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StBranchInverseOffHypersurface

@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CellOpenLe
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCellOfLeadingMinorsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPermutationLeadingMinorsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagComponentEigenframeOnAffineOpenStatement

@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.SubgroupCharExtensionOneApply
-import Formalism.SharpRestriction.Divisibility.SchurIrreducible
+import Mathlib.Analysis.InnerProductSpace.SingularValues
+import Mathlib.Analysis.SpecialFunctions.ContinuousFunctionalCalculus.ExpLog.Basic
 
 noncomputable section
 

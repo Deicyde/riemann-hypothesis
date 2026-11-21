@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.GlobalClassFormation.ClassFormationGlobal
 import GroundTheory.ProfiniteCohomology.GlobalClassFormation.IdeleInvariants
 import GroundTheory.ProfiniteCohomology.GlobalClassFormation.IdeleLimits.SubsingletonCohomologyThreeInfiniteDecomposition

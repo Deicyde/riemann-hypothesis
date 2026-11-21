@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.SemistableReduction.TorsionNonvanishStatement
+import Mathlib.NumberTheory.NumberField.CMField
+import Mathlib.NumberTheory.NumberField.Discriminant.Defs
 
 namespace ReciprocityTheory.ChartRestriction.G.FD
 

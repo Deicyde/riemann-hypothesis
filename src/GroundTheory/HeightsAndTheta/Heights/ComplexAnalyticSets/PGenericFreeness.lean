@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StGenericFreeness
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StGenericNoetherNormalisation
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PGenericFreenessLoc
+import Mathlib.RingTheory.Ideal.AssociatedPrime.Finiteness
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

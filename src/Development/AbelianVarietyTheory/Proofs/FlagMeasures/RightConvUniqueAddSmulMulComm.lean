@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.GlobAut
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ExistsReduction
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.RightRegularRepresentationUnitaryMulContinuous
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.SecondCountableFiniteAdelicUnitaryPoints
 

@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.CosInj
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.EntryAgree
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.UnitRatio
 
 set_option genSizeOfSpec false

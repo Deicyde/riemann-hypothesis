@@ -1,10 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.MultiplicationLatticeSecond
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsKSValueOneOfRetraction
-import Development.AbelianVarietyTheory.Definitions.ThetaMetrics.IsWeightedHomogeneousOfMemOrbitSpan
-import Development.AbelianVarietyTheory.Definitions.Divisors.LogAbsVpOfNormalised
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAdicColimitOfIsNilpotent
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsLinearHomPull
+import Formalism.LocalToGlobal.ProjectiveLattices.ThGerm
 
 set_option autoImplicit false
 

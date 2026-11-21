@@ -1,8 +1,9 @@
-import Mathlib
-import ReciprocityTheory.NeutralLocalFields.Duality
-import ReciprocityTheory.GroupCohomology.ImportsAlt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ClassFieldTheory.LocalClassField.QZDefs
 import ReciprocityTheory.ClassFieldTheory.LocalClassField.MemZmultiplesOfAddOrderOf
+import ReciprocityTheory.GroupCohomology.LengthKerEqCoker
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace ReciprocityTheory.DiscreteGroups.LocalClassField
 

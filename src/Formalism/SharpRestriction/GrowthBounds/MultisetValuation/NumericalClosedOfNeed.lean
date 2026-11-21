@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.NcModsub
+import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.GrowthExclusionSumEq
+import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.NcCGNonneg
 
 noncomputable section
 

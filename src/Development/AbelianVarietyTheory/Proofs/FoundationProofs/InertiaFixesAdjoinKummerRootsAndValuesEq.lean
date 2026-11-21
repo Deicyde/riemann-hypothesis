@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsFirstChernClassOfLineBundle
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.InertFixesRootOfUnitRatio
+import Mathlib.Tactic.ENatToNat
 open GlobalTheory.NeedB Polynomial
 
 namespace GlobalTheory.InertKummer

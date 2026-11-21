@@ -1,14 +1,10 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteForms.IndefSide
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteForms.IndefUse
 import Formalism.MirabolicMackeyTheory.MirabolicMackeyProofs.LocalConditionsWeightedConditional
-import Formalism.MirabolicMackeyTheory.MirabolicMackeyProofs.RamBasic
-import Formalism.MirabolicMackeyTheory.MirabolicMackeyProofs.LocalConditionsGlobalForm
-import Formalism.MirabolicMackeyTheory.MirabolicMackeyProofs.AbsorbLocalConditions
-import Formalism.MirabolicMackeyTheory.MirabolicMackeyProofs.ErrSum
-import Formalism.MirabolicMackeyTheory.MirabolicMackeyProofs.UnipotentNumeric
 import Formalism.MirabolicMackeyTheory.MirabolicMackeyProofs.AbsorbLocalConditionsOfExact
 import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.SecondComplementParameterBounds
+import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.BoundsChain
 
 open Module NumberField IsDedekindDomain
 
@@ -1569,7 +1565,7 @@ theorem example_negative_content_fails (w0 : HeightOneSpectrum (𝓞 K)) (h3w : 
         (idx (conjPl w0) (stdLat K 1) (matLat (1 : Matrix (Fin 1) (Fin 1) K) (stdLat K 1)) : ℝ)) ≤
       (∑ j : Unit, (2 * ((ramw w0 : ℝ) * (exampleConstants K v0 (-10) E).F0 w0 j) + (ramw w0 : ℝ) * (exampleObject K v0 {w0}).errOn w0 j) +
         (ramw w0 : ℝ) * (2 / (plc w0 : ℝ) ^ 2)) * ((1 : ℕ) : ℝ) at h1
-    simp only [Fintype.univ_unit, Finset.sum_singleton, hI, hF, he, h3w] at h1
+    simp only [Fintype.univ_unit, Finset.sum_singleton, hI, he, h3w] at h1
     have hr := ramw_pos w0
     push_cast at h1
     nlinarith

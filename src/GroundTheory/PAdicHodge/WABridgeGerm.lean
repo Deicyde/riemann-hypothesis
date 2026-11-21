@@ -1,5 +1,7 @@
-import Mathlib
-import GroundTheory.PAdicHodge.WABridgeCris
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.PAdicHodge.BCrisNewtonNorm
+import GroundTheory.PAdicHodge.WAEval
 set_option maxSynthPendingDepth 1
 
 noncomputable section

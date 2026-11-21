@@ -1,5 +1,7 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.StDefs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.BridgeCSchur
+import Formalism.HermitianCurvature.StatementB
 
 noncomputable section
 
@@ -99,72 +101,72 @@ theorem PG_J_PG (k r : ℕ) : PG k r * Formalism.REAL.Jm (epsG k r) * PG k r = F
   simp only [Formalism.QuantumDeterminants.Hpk, Fin.ext_iff, hr]
   rcases lt_or_ge i.val r with h1 | h1
   · have : dG k r i = sq2 := by
-      simp only [dG, cG, eG]
+      simp only [dG]
       split_ifs <;> first | rfl | omega
     rw [this]
     have : cG k r i = sq2 := by
-      simp only [dG, cG, eG]
+      simp only [cG]
       split_ifs <;> first | rfl | omega
     rw [this]
     have : eG k r i = 1 := by
-      simp only [dG, cG, eG]
+      simp only [eG]
       split_ifs <;> first | rfl | omega
     rw [this]
     have : dG k r (Fin.rev i) = -sq2 := by
-      simp only [dG, cG, eG, hr]
+      simp only [dG, hr]
       split_ifs <;> first | rfl | omega
     rw [this]
     have : eG k r (Fin.rev i) = -1 := by
-      simp only [dG, cG, eG, hr]
+      simp only [eG, hr]
       split_ifs <;> first | rfl | omega
     rw [this]
     split_ifs <;> first | omega | ring1 | linear_combination (2:ℂ) * h2 | linear_combination (-2:ℂ) * h2 | linear_combination h2 | linear_combination (-1:ℂ) * h2
   rcases lt_or_ge i.val (r + k) with h3 | h3
   · have : dG k r i = 1 := by
-      simp only [dG, cG, eG]
+      simp only [dG]
       split_ifs <;> first | rfl | omega
     rw [this]
     have : cG k r i = 0 := by
-      simp only [dG, cG, eG]
+      simp only [cG]
       split_ifs <;> first | rfl | omega
     rw [this]
     have : eG k r i = 1 := by
-      simp only [dG, cG, eG]
+      simp only [eG]
       split_ifs <;> first | rfl | omega
     rw [this]
     split_ifs <;> first | omega | ring1 | linear_combination (2:ℂ) * h2 | linear_combination (-2:ℂ) * h2 | linear_combination h2 | linear_combination (-1:ℂ) * h2
   rcases eq_or_lt_of_le h3 with h4 | h4
   · have : dG k r i = 1 := by
-      simp only [dG, cG, eG]
+      simp only [dG]
       split_ifs <;> first | rfl | omega
     rw [this]
     have : cG k r i = 0 := by
-      simp only [dG, cG, eG]
+      simp only [cG]
       split_ifs <;> first | rfl | omega
     rw [this]
     have : eG k r i = -1 := by
-      simp only [dG, cG, eG]
+      simp only [eG]
       split_ifs <;> first | rfl | omega
     rw [this]
     split_ifs <;> first | omega | ring1 | linear_combination (2:ℂ) * h2 | linear_combination (-2:ℂ) * h2 | linear_combination h2 | linear_combination (-1:ℂ) * h2
   · have : dG k r i = -sq2 := by
-      simp only [dG, cG, eG]
+      simp only [dG]
       split_ifs <;> first | rfl | omega
     rw [this]
     have : cG k r i = sq2 := by
-      simp only [dG, cG, eG]
+      simp only [cG]
       split_ifs <;> first | rfl | omega
     rw [this]
     have : eG k r i = -1 := by
-      simp only [dG, cG, eG]
+      simp only [eG]
       split_ifs <;> first | rfl | omega
     rw [this]
     have : dG k r (Fin.rev i) = sq2 := by
-      simp only [dG, cG, eG, hr]
+      simp only [dG, hr]
       split_ifs <;> first | rfl | omega
     rw [this]
     have : eG k r (Fin.rev i) = 1 := by
-      simp only [dG, cG, eG, hr]
+      simp only [eG, hr]
       split_ifs <;> first | rfl | omega
     rw [this]
     split_ifs <;> first | omega | ring1 | linear_combination (2:ℂ) * h2 | linear_combination (-2:ℂ) * h2 | linear_combination h2 | linear_combination (-1:ℂ) * h2

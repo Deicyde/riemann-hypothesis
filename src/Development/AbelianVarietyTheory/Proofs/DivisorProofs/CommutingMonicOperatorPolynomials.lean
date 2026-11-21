@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicPlaneFormSkew
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiniteModuleGradedQuantumDet
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MonicFactorFiniteMod
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MonicFactorFinite

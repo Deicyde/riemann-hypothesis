@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.StringRepresentations.AdmissibleTemperedUnramified
-import Formalism.SharpRestriction.LevelLetterCocycles.QuotientHomNonvanishingBound
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.TypeConditions.Transported
 
 noncomputable section

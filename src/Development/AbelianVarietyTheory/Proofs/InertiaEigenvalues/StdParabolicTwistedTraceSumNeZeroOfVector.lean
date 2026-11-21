@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsIsLiftOfMemKO
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.GoodIdempotentFixesOfOnlySeriesOfLabelActs
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.DepthZeroInertia
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsContinuousPadic
+import Formalism.PadicSubsetSums.StableGradedCounts.ZBrauerNesbittAlg
+import Mathlib.RepresentationTheory.Character
 open GlobalTheory.PRep GlobalTheory.SmGL GlobalTheory.SplitWeil GlobalTheory.SplitRead GlobalTheory.PendOf GlobalTheory.LevelType
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
 
@@ -31,7 +33,7 @@ theorem stdTrace_ne_zero : ∀ (p : ℕ) [Fact p.Prime] (r a : ℕ) (θ : (ZMod 
   set S : Finset (GL (Fin r) (ZMod p)) := Finset.univ.filter (StdBlock a) with hS
   set c : GL (Fin r) (ZMod p) → ℂ := fun x => (((θ (Matrix.GeneralLinearGroup.det x))⁻¹ : ℂˣ) : ℂ) with hc
   have hcm : ∀ x y, c (x * y) = c x * c y := fun x y => by
-    simp [hc, map_mul, mul_inv, Units.val_mul, mul_comm]
+    simp [hc, map_mul, Units.val_mul, mul_comm]
   set E : Module.End ℂ ρ := ∑ x ∈ S, c x • ρ.ρ x with hE
   have htr : stdTrace a θ ρ.character = LinearMap.trace ℂ ρ E := by
     rw [hE, map_sum, stdTrace, hS, Finset.sum_filter]

@@ -1,8 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrameAtApply
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DbarAddVectorScalar
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DBaseApply
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SmoothVanishingHyperplaneFactor
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsTorsionFormPoint
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.SimpleRing.Principal
 open Matrix MeasureTheory Set Filter Topology GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe GlobalTheory.TorsionForm GlobalTheory.TorsionForm.Gauge GlobalTheory.TorsionForm.Fibrewise
 open scoped ContDiff
 

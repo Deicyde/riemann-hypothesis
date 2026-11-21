@@ -1,5 +1,6 @@
-import Mathlib
-import CompanionTheory.SpectralGeometry.CountingDefinitions.AdelicEulerProducts.IsEulerProd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.UnipotentAdelicQuotients.SWXSDefs
 
 noncomputable section
 

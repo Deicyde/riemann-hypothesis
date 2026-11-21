@@ -1,7 +1,5 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.ZelevinskyJacquet.FineJacquetModules.SegDefs
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IrreducibleAdmissibleGL
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.SegmentRepresentation
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.NonemptyEquivOfRangeEq
 open GlobalTheory.PRep GlobalTheory.SplitWeil GlobalTheory.SmGL GlobalTheory.LocGL GlobalTheory.JHMult Zc Zc.Seg
 
 namespace GlobalTheory.CompanionTheory.Segments
@@ -45,7 +43,7 @@ theorem cosocle_quotient_of_quotient : ∀ {G V W X : Type} [Group G] [AddCommGr
     have h1 : e.symm (f v) = Submodule.Quotient.mk v := by
       rw [LinearEquiv.symm_apply_eq]
       rfl
-    simp only [gl, LinearMap.comp_apply, LinearEquiv.coe_coe, h1, Submodule.liftQ_apply]
+    simp only [gl, LinearMap.comp_apply, LinearEquiv.coe_coe, h1]
     rfl
   refine ⟨⟨gl, fun h => ?_⟩, ?_⟩
   · refine LinearMap.ext fun x => ?_

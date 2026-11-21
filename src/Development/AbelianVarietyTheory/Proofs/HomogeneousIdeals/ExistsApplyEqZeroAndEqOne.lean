@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.ContinuousAevalMvPolynomial
 import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.PowCardLeNormProd
+import Mathlib.Analysis.Polynomial.CauchyBound
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
 
 namespace GlobalTheory.AffinePoints
 

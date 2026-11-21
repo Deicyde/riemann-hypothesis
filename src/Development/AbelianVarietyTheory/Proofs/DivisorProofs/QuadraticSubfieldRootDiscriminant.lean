@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.EigenvectorLieDegree
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.AdelicDegreeTameRamification
 import Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.EqOfLeOfAbsNormEq
+import Mathlib.Data.Int.Star
 
 open NumberField IsDedekindDomain ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.IndefiniteRowSideFullHecke Polynomial
 

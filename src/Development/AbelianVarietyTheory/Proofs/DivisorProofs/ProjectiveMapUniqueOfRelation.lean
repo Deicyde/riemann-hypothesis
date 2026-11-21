@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CmpNaturality
 open CategoryTheory Limits AlgebraicGeometry
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory GlobalTheory.VB GlobalTheory.LineQuot
@@ -19,7 +19,7 @@ theorem isUnit_pullRatio_of_frame {k : Type} [CommRing k] {N : ℕ} {T : Scheme.
   set c := b.repr ((s i).app V t) 0
   have hc : (s i).app V t = c • b 0 := by
     conv_lhs => rw [← b.sum_repr ((s i).app V t)]
-    simp [Fin.sum_univ_one, c]
+    simp [c]
   have h1 := hχ i j V hi t
   rw [ht, hc, smul_smul] at h1
   have h2 := congrArg (fun x => b.repr x 0) h1

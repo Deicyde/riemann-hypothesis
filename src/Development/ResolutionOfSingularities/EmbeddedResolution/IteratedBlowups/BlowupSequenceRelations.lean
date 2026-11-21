@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.ResolutionOfSingularities.Foundations.Blowup.StrictTransform
-import Development.ResolutionOfSingularities.Foundations.BlowupUniversalProperty
 import Development.ResolutionOfSingularities.EmbeddedResolution.ResolutionOfSingularities
+import Std.Tactic.BVDecide.Normalize.Prop
 universe u
 
 open CategoryTheory AlgebraicGeometry

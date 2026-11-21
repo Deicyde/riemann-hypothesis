@@ -1,4 +1,16 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.FlagUnipotentLattices.CardSubmodulesAndLinearEquivBounds
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.Analysis.Complex.ExponentialBounds
+import Mathlib.Analysis.SpecialFunctions.Stirling
+import Mathlib.NumberTheory.ZetaValues
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.ReduceModChar
 
 open Module Matrix Formalism.HermitianLatticeCounting.LatticeSumBounds
 open scoped BigOperators ComplexConjugate
@@ -88,7 +100,7 @@ theorem eichlerTransformIsometry : EichlerIsometry := by
   have e2 : h σ y = star (h y σ) := hh y σ
   simp only [map_sub, map_add, map_smul, map_smulₛₗ, LinearMap.sub_apply, LinearMap.add_apply,
     LinearMap.smul_apply, smul_eq_mul, starRingEnd_apply, huu, huσ, hσu, e1, e2, star_mul',
-    star_sub, star_add, mul_zero, zero_mul, sub_zero, add_zero]
+    mul_zero, sub_zero, add_zero]
   linear_combination (-(h x u) * star (h y u)) * hτ
 
 theorem powLeMaxMulMax : BlockScalarBound := by
@@ -185,8 +197,8 @@ theorem hermitianDefectAdd : PhiDiff := by
 theorem hermitianDefectComposition : PhiProduct := by
   intro n R _ _ _ _ S Y Y' hS
   unfold Formalism.HermitianLatticeCounting.LatticeSumBounds.Phi
-  simp only [Matrix.conjTranspose_add, Matrix.conjTranspose_mul, Matrix.conjTranspose_one,
-    Matrix.conjTranspose_conjTranspose, hS]
+  simp only [Matrix.conjTranspose_add, Matrix.conjTranspose_mul,
+    hS]
   noncomm_ring
 
 theorem absMulLeWeightedMean : WeightedAMGM := by
@@ -1415,7 +1427,7 @@ theorem eichlerTransformProperties : EichlerFacts := by
     have hyσ : h (Formalism.HermitianLatticeCounting.LatticeSumBounds.eichler h u σ τ x) σ = h x σ + h x u * h σ σ := by
       rw [hE]
       simp only [map_sub, map_add, map_smul, LinearMap.sub_apply, LinearMap.add_apply,
-        LinearMap.smul_apply, smul_eq_mul, huσ, mul_zero, sub_zero, add_zero]
+        LinearMap.smul_apply, smul_eq_mul, huσ, mul_zero, sub_zero]
     rw [hE (-σ) (star τ) (Formalism.HermitianLatticeCounting.LatticeSumBounds.eichler h u σ τ x), map_neg, hyσ, hyu, hE σ τ x, ← hτ]
     module
 

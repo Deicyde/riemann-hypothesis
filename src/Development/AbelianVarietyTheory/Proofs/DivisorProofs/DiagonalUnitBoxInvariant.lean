@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ScaledBoxRadiiAtEntry
 
 open ValuativeRel Matrix GlobalTheory.SplitFlip GlobalTheory.FullRankCoinv GlobalTheory.RankCoinv GlobalTheory.NormalCore
@@ -19,7 +19,7 @@ theorem val_update {k : Type} [Field k] [ValuativeRel k] {m : ℕ} (i₀ : Fin m
     (i : Fin m) : valuation k (Function.update (1 : Fin m → k) i₀ t i) = 1 := by
   by_cases h : i = i₀
   · subst h; simp [ht]
-  · simp [Function.update_apply, h]
+  · simp [h]
 
 theorem box_unit_scale : ∀ (k : Type) [Field k] [ValuativeRel k] [TopologicalSpace k] [IsNonarchimedeanLocalField k]
     (n d : ℕ) (i₀ : Fin n) (j₀ : Fin d) (ϖ u : kˣ) (p₁ p₂ : Matrix (Fin n) (Fin d) k) (N : ℕ),
@@ -44,7 +44,7 @@ theorem box_unit_scale : ∀ (k : Type) [Field k] [ValuativeRel k] [TopologicalS
       · subst hi hj; simp [hf, hg]
       · subst hi; simp [h1 j, hj]
       · subst hj; simp [h1' i hi]
-      · simp [hf, hg, Function.update_apply, hi, hj]
+      · simp [hf, hg, hi, hj]
     · rw [dgl_val, dgl_val, diagonal_transpose, mul_diagonal, diagonal_mul]
       ring
   · ext Y
@@ -52,7 +52,7 @@ theorem box_unit_scale : ∀ (k : Type) [Field k] [ValuativeRel k] [TopologicalS
     refine scale_mem_box_iff ϖ p₂ N (fun _ j => g j) (fun i j => hgv j) (fun i j => ?_) Y _ (fun i j => ?_)
     · by_cases hj : j = j₀
       · subst hj; simp [h2 i]
-      · simp [hg, Function.update_apply, hj]
+      · simp [hg, hj]
     · rw [dgl_val, mul_diagonal]
       ring
 

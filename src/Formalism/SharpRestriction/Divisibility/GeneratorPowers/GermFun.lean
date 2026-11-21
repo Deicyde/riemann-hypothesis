@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.ThGerm
 
 set_option autoImplicit false

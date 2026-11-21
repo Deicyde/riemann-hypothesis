@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ImageProdLoc
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.IntegrableInvCube
 
 namespace Formalism.FourierDecayAlt.P.PBC
 

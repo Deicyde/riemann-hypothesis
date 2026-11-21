@@ -1,11 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecValAt
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsLocalRingTrivSqZeroExt
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IntegralPointPullbackComparison
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LocalSystemBasesNonempty
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TangentFrameBaseChange
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.IsCombAtGMulVec
 
 set_option autoImplicit false
 
@@ -82,7 +76,7 @@ theorem coord_unit : ∀ (E : Type) [Field E] [NumberField E] [IsCMField E] (H :
     congr 1
     ext k k'
     simp only [RingHom.mapMatrix_apply, Matrix.map_apply, Matrix.of_apply, map_sum, map_mul, hcoef,
-      Matrix.mul_apply, M, Finset.mul_sum, Finset.sum_mul]
+      Matrix.mul_apply, M, Finset.mul_sum]
     rw [Finset.sum_comm]
     refine Finset.sum_congr rfl fun j _ => Finset.sum_congr rfl fun b _ => by ring
   have hu := hU.map io

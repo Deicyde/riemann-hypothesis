@@ -1,8 +1,9 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.FractionFieldToGenericStalkAlgebraMapEq
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsHermND
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.IsIntegralIff
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ComplementReferenceCompactSubgroup
+import Mathlib.Tactic.PNatToNat
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 open ValuativeRel Formalism.MainNotions.S.Loc
@@ -391,9 +392,9 @@ def toyExample (L : LocE F E) (ϖ : 𝒪[F]) (hϖ : Irreducible ϖ) (m : ℕ) : 
   es := ![extZ (e4 m) ![0,1,-1,1]]
   es' := ![extZ (e4 m) ![1,-1,0,1]]
   gram := by
-    intro a b; fin_cases a <;> fin_cases b <;> simp [hf_extZ] <;> simp [H4, hf, Fin.sum_univ_succ, Fin.last]
+    intro a b; fin_cases a <;> fin_cases b <;> simp [hf_extZ] <;> simp [H4, hf, Fin.sum_univ_succ]
   gram' := by
-    intro a b; fin_cases a <;> fin_cases b <;> simp [hf_extZ] <;> simp [H4, hf, Fin.sum_univ_succ, Fin.last]
+    intro a b; fin_cases a <;> fin_cases b <;> simp [hf_extZ] <;> simp [H4, hf, Fin.sum_univ_succ]
   dual := by
     intro a b; fin_cases a <;> fin_cases b <;> simp [hf_extZ] <;> simp [H4, hf, Fin.sum_univ_succ]
   dual' := by

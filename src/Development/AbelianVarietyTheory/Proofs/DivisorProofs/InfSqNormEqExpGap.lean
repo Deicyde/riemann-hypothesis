@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ApxGap
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MbarSectionsCuspidal
 open NumberField IsDedekindDomain Filter Topology
@@ -35,7 +36,7 @@ theorem exOf_nsmul (u : AllWt.Weight S.Dw) (t : ℕ) :
     rw [add_zero] at h
     funext z
     have := congrFun ih z
-    simp only [Pi.smul_apply, smul_eq_mul] at this ⊢
+    simp only [Pi.smul_apply] at this ⊢
     rw [succ_nsmul, h]
     simp only [Pi.add_apply]
     rw [neg_add, this]

@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.CxCutE
-import Formalism.LocalToGlobal.Divisibility.LiftLatLemmas
-import Formalism.LocalToGlobal.Divisibility.RowLatLemmas
 
 open Module NumberField IsDedekindDomain Polynomial
 open scoped Matrix ComplexOrder InnerProductSpace

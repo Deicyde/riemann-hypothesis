@@ -1,9 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.LocalTateDuality.KummerCup
 import GroundTheory.ProfiniteCohomology.LocalTateDuality.NormCharacters
-import GroundTheory.LocalFields.SeparableClosure
-import GroundTheory.LocalFields.IntermediateField
-import GroundTheory.LocalFields.ExistsUnitFiltrationUnitsLeAndRangePowLe
 set_option maxSynthPendingDepth 1
 
 noncomputable section

@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ModelGramPosSemidef
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsBoundaryPotentialSnc
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DivisorPotentialIsSNCBoundary
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ModelDdcForms
 
 set_option autoImplicit false
 
@@ -174,7 +174,7 @@ theorem isSNC_compSec (B : FinHolAtlas Y.dim (Pts Y σ)) (hB : IsAlgAtlas B) (hs
   · by_cases hi : LiesIn x (C i)
     · refine ⟨fun _ => 1, fun j => by exact analyticOnNhd_const, fun _ _ => one_ne_zero, fun z hz => ?_⟩
       show compSec hn i x z = 1 * _
-      rw [one_mul, Finset.prod_eq_single i (fun k _ hk => by simp only [τ]; split_ifs <;> simp [Pi.single_apply, hk]) (by simp)]
+      rw [one_mul, Finset.prod_eq_single i (fun k _ hk => by simp only [τ]; split_ifs <;> simp [hk]) (by simp)]
       simp only [τ, hi, dite_true, Pi.single_eq_same, pow_one]
       exact (hτ i hi z hz).symm
     · refine ⟨fun z => ev Y.str σ _ (eqT hn i x) z, ?_, fun z hz h => ?_, fun z hz => ?_⟩
@@ -185,7 +185,7 @@ theorem isSNC_compSec (B : FinHolAtlas Y.dim (Pts Y σ)) (hB : IsAlgAtlas B) (hs
         · rfl
         · by_cases hk : k = i
           · subst hk; simp only [τ, hi, dite_false]
-          · simp only [τ]; split_ifs <;> simp [Pi.single_apply, hk]
+          · simp only [τ]; split_ifs <;> simp [hk]
 
 end GlobalTheory.DivSec
 

@@ -1,6 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.BasicForm
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DefsRep
+import Mathlib.LinearAlgebra.ExteriorAlgebra.OfAlternating
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 

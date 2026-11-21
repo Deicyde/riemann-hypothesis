@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.StatementsAdjoinTrdegAdd
+import Mathlib.LinearAlgebra.SymmetricAlgebra.Basis
+import Mathlib.LinearAlgebra.TensorAlgebra.Basis
+import Mathlib.Order.CompletePartialOrder
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.NumbersDVR

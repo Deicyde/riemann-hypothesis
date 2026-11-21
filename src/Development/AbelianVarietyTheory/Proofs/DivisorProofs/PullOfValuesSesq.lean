@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsPosFrameQuotIn
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsTypeIsRealConst
 open Set Matrix Filter Topology
 open ReciprocityTheory.L2DbarEstimates (V)
 open GlobalTheory.HermFrame GlobalTheory.CxForm GlobalTheory.SecForm
@@ -12,7 +12,7 @@ namespace GlobalTheory.SecForm
 
 theorem coordVec_expand {n : ℕ} (w : V n) : w = ∑ a, w a • coordVec a := by
   ext i
-  simp [coordVec, EuclideanSpace.single_apply, Pi.single_apply]
+  simp [coordVec, Pi.single_apply]
 
 theorem sesq_sum_left {n : ℕ} {α : V n → V n → ℂ} (hα : IsSesq α) {ι : Type} (s : Finset ι) (c : ι → ℂ)
     (x : ι → V n) (y : V n) : α (∑ i ∈ s, c i • x i) y = ∑ i ∈ s, c i * α (x i) y := by

@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.TateCohomology.PGroupCohTrivial
 import GroundTheory.TateCohomology.TateAddEquivAbelianizationTateClass
+import GroundTheory.TateCohomology.PGroupFree
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.GroupCoh

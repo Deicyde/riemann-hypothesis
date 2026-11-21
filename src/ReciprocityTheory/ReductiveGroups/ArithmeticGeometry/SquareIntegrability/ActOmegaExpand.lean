@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.ExistsMinNorm
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.NormProjectionSq
 
 namespace ReciprocityTheory.ChartRestriction.G.I2
 open NumberField Complex

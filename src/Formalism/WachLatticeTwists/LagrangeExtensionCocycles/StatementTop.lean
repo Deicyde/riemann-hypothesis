@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.LagrangeExtensionCocycles.Statement
+import Formalism.CoboundaryTransfers.Statement
 
 noncomputable section
 

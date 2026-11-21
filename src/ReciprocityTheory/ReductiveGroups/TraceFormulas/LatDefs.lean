@@ -1,10 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.LatticeDualFibres.FibreDualStable
 import Formalism.WachLatticeTwists.CharacterSplitJumps.Statement
-import Formalism.WachLatticeTwists.CoprimeLiftBounds.Statement
-import Formalism.GaloisCohomology.LocalTateDualityK
 import ReciprocityTheory.Hypotheses.GalCohDefs
 import Formalism.SharpRestriction.LevelLetterCocycles.DataNLoc
+import Formalism.GaloisCohomology.StatementLoc
+import Mathlib.NumberTheory.NumberField.ClassNumber
+import Mathlib.Topology.Algebra.Nonarchimedean.AdicTopology
 
 noncomputable section
 

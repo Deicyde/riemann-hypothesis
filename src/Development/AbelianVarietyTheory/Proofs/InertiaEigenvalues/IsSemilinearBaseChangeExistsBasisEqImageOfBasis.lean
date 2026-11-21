@@ -1,5 +1,7 @@
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.AdIPowLe
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.BhattScholzeIntegral
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.InvertibleSpanSingleton
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
 open Formalism Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.WeaklyAdmissibleFiltrations TensorProduct PowerSeries GlobalTheory.Prism GlobalTheory.BKReal GlobalTheory.Per GlobalTheory.BSP
 open scoped Formalism.Per NNReal
 
@@ -35,6 +37,6 @@ theorem semiBC_basis (A B : Type) [CommRing A] [CommRing B] (f : A →+* B) (M :
     rw [a1, a2]
   let E : N ≃ₗ[B] (ι →₀ B) := LinearEquiv.ofLinear w g h1 h2
   refine ⟨Module.Basis.ofRepr E, fun i => ?_⟩
-  simp [Module.Basis.ofRepr, E, g]
+  simp [E, g]
 
 end GlobalTheory.Prism

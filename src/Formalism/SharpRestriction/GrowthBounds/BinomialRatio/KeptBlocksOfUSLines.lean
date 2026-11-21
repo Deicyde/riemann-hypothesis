@@ -1,4 +1,4 @@
-import Formalism.SharpRestriction.GrowthBounds.BinomialRatio.CoarseDegreeRatioConsecutive
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.BinomialRatio.PairFacts
 
 noncomputable section

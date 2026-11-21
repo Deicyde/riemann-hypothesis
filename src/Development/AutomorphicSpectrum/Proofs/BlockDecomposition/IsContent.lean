@@ -1,5 +1,8 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsCovolOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import CompanionTheory.SpectralGeometry.CountingDefinitions.AdelicEulerProducts.IsEulerProd
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Algebra.AffineMonoid.Basic
 
 noncomputable section
 

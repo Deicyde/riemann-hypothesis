@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsProperToroidalModelStructureMap
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HomExtNormalSt
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CompletionUnramifiedNormal
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LocalizationTensorNormalOfCharZero
 
 open IsLocalRing GlobalTheory.Toroidal GlobalTheory.TorRef TensorProduct

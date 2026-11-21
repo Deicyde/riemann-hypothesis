@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.HarishChandraModules.KFiniteAnalyticVectors.FundamentalDomainCusps.HeightBoundSetup
-import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.TransferenceCoveringDivisor
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CoveringRadius.CoverRad
+import Mathlib.Algebra.Module.StablyFree.Basic
 
 open Matrix NumberField Topology
 open scoped ComplexConjugate InnerProductSpace

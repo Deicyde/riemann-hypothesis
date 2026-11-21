@@ -1,9 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Jets.SideFam
-import Formalism.HermitianCurvature.WeylElementCommutesLevelOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ContinuousMulMt
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.DifferentialOperatorBracket
-import Formalism.RealPlaceAnalysis.ThirdArithmeticHolds
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.SupExistsOfInterlaced
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.CapelliDetFrameIndep
 

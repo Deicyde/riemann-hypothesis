@@ -1,5 +1,10 @@
-import Formalism.RealPlaceAnalysis.SmoothOnGVIff
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.RealPlaceAnalysis.RealPlaceTaylor.ComplexificationHolds
+import Formalism.RealPlaceAnalysis.RealPlaceTaylor.MemUnitaryGroupIffMulConjTranspose
+import Formalism.RealPlaceAnalysis.SmoothVectorGrowthBound
+import Std.Tactic.BVDecide.Normalize.Bool
+import Std.Tactic.BVDecide.Normalize.Prop
 open MeasureTheory Matrix
 open Formalism.REAL (UJ KG toM toMK muK expG inG Jm Kset)
 

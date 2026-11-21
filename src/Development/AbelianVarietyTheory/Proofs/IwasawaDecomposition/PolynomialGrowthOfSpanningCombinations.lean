@@ -1,6 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsLatBasisZero
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SpanPeriodLatticeComplexSemiAbelianEqTopStatement
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.CategoryTheory.Monoidal.Cartesian.Over
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj GlobalTheory GlobalTheory.Toroidal GlobalTheory.ShFam GlobalTheory.ShFam.Pad GlobalTheory.ShFam.Hor GlobalTheory.ShFam.Hor.LogCh
 open scoped Matrix CategoryTheory.Obj Topology
@@ -39,7 +43,7 @@ theorem growth_bound_of_spanning_combinations : ∀ (n g r : ℕ) (J : Type) [Fi
       rw [Finset.sum_congr rfl (fun m' _ => hc m')]
       rw [Finset.sum_eq_single m]
       · simp
-      · intro b _ hb; simp [Pi.single_apply, hb]
+      · intro b _ hb; simp [hb]
       · intro h; exact absurd (Finset.mem_univ m) h
     rw [hid]
     calc ‖∑ i, (a m i : ℂ) • ∑ m', (u i m' : ℂ) • x s m'‖

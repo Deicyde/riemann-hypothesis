@@ -1,5 +1,4 @@
-import Mathlib
-import ReciprocityTheory.L2DbarEstimates.IsLocalHomeomorph
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormSqMulIntegralBallLeOfCircleInvariantStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousOnComplexHessianOfContDiffOnTwoStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ComplexHessianPosSemidefOfLeviFormNonnegStatement
@@ -184,7 +183,7 @@ theorem morse_local : ∀ (n : ℕ) (U K : Set (V n)) (φ g : V n → ℝ) (ε :
       simp [hH, leviV, cHess]
     have hgzw := hgw z hz w (by linarith [min_le_right δ₁ δ₃])
     have hFn : ‖F w‖ ^ 2 = ‖f (z + w)‖ ^ 2 * Real.exp (-(m * (h w).re)) ^ 2 := by
-      simp [hF, norm_mul, Complex.norm_exp, mul_pow]
+      simp [hF, Complex.norm_exp, mul_pow]
     have hE : Real.exp (-(m * φ z)) * (Real.exp (-(m * (h w).re)) ^ 2 * Wf w) ≤
         Real.exp (-(m * φ (z + w))) := by
       simp only [hWf]

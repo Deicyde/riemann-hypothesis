@@ -1,7 +1,43 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.FiniteMinimalPrimes
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.ChPrime
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.ExistsAlgHomAdjoinInv
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.DualNumber
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
 open MvPolynomial ReciprocityTheory.AnForm.R GlobalTheory.CompanionTheory.Ar.Cmp
 
 noncomputable section
@@ -24,8 +60,8 @@ theorem aeval_dualPt {σ : Type} [Fintype σ] (t v : σ → ℂ) (G : MvPolynomi
   | mul_X p q hp =>
     refine ⟨by simp [hp.1, dualPt], ?_⟩
     simp only [map_mul, aeval_X, snd_mul, hp.1, hp.2, dualPt, fst_add, fst_inl, fst_inr, snd_add, snd_inl, snd_inr,
-      Derivation.leibniz, pderiv_X, eval_mul, eval_X, smul_eq_mul, op_smul_eq_mul, add_zero, zero_add, map_add]
-    simp [Pi.single_apply, mul_add, Finset.sum_add_distrib, Finset.mul_sum, Finset.sum_mul, mul_comm, mul_left_comm, mul_assoc]
+      Derivation.leibniz, pderiv_X, eval_X, smul_eq_mul, op_smul_eq_mul, add_zero, zero_add, map_add]
+    simp [Pi.single_apply, mul_add, Finset.sum_add_distrib, Finset.mul_sum, mul_comm, mul_left_comm]
 
 theorem snd_eq_zero_of_span {S : Type} [CommRing S] [Algebra ℚ S]
     (φ : S →ₐ[ℚ] TrivSqZeroExt ℂ ℂ) {e : ℕ} (z : Fin e → S)

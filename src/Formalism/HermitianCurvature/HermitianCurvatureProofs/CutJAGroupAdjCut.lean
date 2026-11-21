@@ -1,8 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJA
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.BetaCutoffLimit
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BXiAsm
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BetaSesquilinearity
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.SettingExistence
 
 open Formalism.FourierDecayAlt
 

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GenusPolyhedralBounds.RelativeIndexClassSets.AlgebraMapOlInjective
 
 noncomputable section
@@ -244,7 +246,7 @@ theorem pol_iterAt (p : σ) (x : MvPolynomial σ R) : IterAt (pol σ R) p x := b
         by_cases hpn : p = n
         · subst hpn; exact hb (add_right_cancel (h.trans (zero_add _).symm))
         · have := DFunLike.congr_fun h p
-          simp [Finsupp.single_apply, hpn, Ne.symm hpn] at this
+          simp [hpn] at this
       rw [key, key, if_neg hne0, if_neg hne, if_neg hb, add_zero, smul_zero, zero_add]
       split_ifs
       · exact h1.symm
@@ -261,7 +263,7 @@ theorem pol_der (p : σ) : der R (pol σ R) (pol_isTay σ R) (pol_isCst σ R) p 
   rw [der_apply, pol_dv_X, MvPolynomial.pderiv_X]
   by_cases h : p = i
   · subst h; simp
-  · simp [h, Pi.single_apply, Ne.symm h]
+  · simp [h, Ne.symm h]
 
 end Poly
 
@@ -341,7 +343,7 @@ theorem dv_comm (hi : ∀ p x, IterAt τ p x) (p q : σ) (x : A) : dv τ p (dv �
   have hsym : (Finsupp.single q 1) p = (Finsupp.single p 1) q := by
     by_cases h : p = q
     · subst h; rfl
-    · simp [Finsupp.single_apply, h, Ne.symm h]
+    · simp [h, Ne.symm h]
   change dv τ p (co τ (Finsupp.single q 1) x) = dv τ q (co τ (Finsupp.single p 1) x)
   rw [dv_co hi p (Finsupp.single q 1) x, dv_co hi q (Finsupp.single p 1) x, add_comm (Finsupp.single q 1), hsym]
 
@@ -418,7 +420,7 @@ theorem itD_apply (h : IsTay τ) (hi : ∀ p x, IterAt τ p x) (hR : ∀ r : R, 
   have hsum : ∑ p ∈ s, Finsupp.single p (β p) = β := by
     ext q
     rw [Finsupp.finset_sum_apply]
-    simp only [Finsupp.single_apply, Finset.sum_ite_eq', Finset.sum_ite_eq]
+    simp only [Finsupp.single_apply, Finset.sum_ite_eq']
     split_ifs with hq
     · rfl
     · by_contra hne
@@ -868,7 +870,7 @@ theorem pdLc_mk' (p : Idx D j N) (x : Rp X la N) (s : Submonoid.powers (sec X la
       algebraMap (Rp X la N) (Lc X la w) x := IsLocalization.mk'_spec' _ _ _
   have h2 := congrArg (fun z => pdLc X la w p z) h1
   simp only [Derivation.leibniz, pdLc_algebraMap, smul_eq_mul] at h2
-  simp only [map_mul, map_sub, Submonoid.coe_mul]
+  simp only [map_mul, map_sub]
   linear_combination (algebraMap (Rp X la N) (Lc X la w) s) * h2 -
     (algebraMap (Rp X la N) (Lc X la w) (pdRp X la N p s)) * h1
 

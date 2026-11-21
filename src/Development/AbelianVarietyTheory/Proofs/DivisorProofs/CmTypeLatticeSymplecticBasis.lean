@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsNonarchimedeanW
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IdempotentTraceSeparatingElement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocalizationAwayFromPrimeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IdempotentTriangularDecompositionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenvectorIntegralCompletionStatement

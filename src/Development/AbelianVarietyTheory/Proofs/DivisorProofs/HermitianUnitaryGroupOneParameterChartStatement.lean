@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianUnitaryGroupOneParameterChart
-import Mathlib
 open Matrix
 open scoped Topology
 set_option maxHeartbeats 1000000 in

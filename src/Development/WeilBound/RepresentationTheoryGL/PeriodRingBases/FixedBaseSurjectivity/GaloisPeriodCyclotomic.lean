@@ -1,7 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.PeriodRingBases.PeriodRingUnits.DieudonneManinBasisModification
-import Development.WeilBound.CoreStatements.CrystallinePeriodRings.PhiGalCris
 import Development.WeilBound.CoreStatements.CrystallinePeriodRings.FundIotaTANeZero
-import Development.WeilBound.CoreStatements.CrystallinePeriodRings.AinfMapSurjective
 import Development.WeilBound.CoreStatements.CrystallinePeriodRings.AwayExistsSelf
 
 set_option backward.isDefEq.respectTransparency false

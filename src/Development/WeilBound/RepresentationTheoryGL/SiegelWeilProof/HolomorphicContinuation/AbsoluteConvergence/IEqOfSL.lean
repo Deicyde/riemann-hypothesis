@@ -1,7 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.AbsoluteConvergence.FarRightAlt
-import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.AbsoluteConvergence.ImportsAlt
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.AbsoluteConvergence.ContinuousSecondCayleyBlockMap
+import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.AbsoluteConvergence.FlatEq
+import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.AbsoluteConvergence.ProjOp
+import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.AbsoluteConvergence.VacOut
+import Mathlib.AlgebraicTopology.FundamentalGroupoid.SimplyConnected
 
 noncomputable section
 
@@ -22,7 +26,7 @@ theorem I_eq_of_sL (hS : SecZero) (hLC : LC) (hL : LocData ε c t p q e sL ρ) (
   have hnull : NullSec ε c (Q - Q') :=
     (hS m n ε c t p q e sL ρ hL (Q - Q')).2 (fun y => by simp [map_sub, h y])
   have key := hLC m n ε c hL.cpos ((LinearMap.proj g).comp I) (fun a b P => hD.Iinv g a b P) (Q - Q') hnull
-  simp only [LinearMap.comp_apply, LinearMap.proj_apply, map_sub, Pi.sub_apply] at key
+  simp only [LinearMap.comp_apply, LinearMap.proj_apply, map_sub] at key
   exact sub_eq_zero.mp key
 
 theorem hz_comb (hD : GlobData ε c sL ρ G Pp Γ ι s₀ Ht sec I Λ) {N : ℕ} {P : PX m n} {QQ : Fin N → PX m n} {cc : Fin N → ℂ}

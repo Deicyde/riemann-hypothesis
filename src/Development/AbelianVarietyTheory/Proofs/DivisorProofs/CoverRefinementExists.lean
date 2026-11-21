@@ -1,9 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SplitKOfIsAlgClosed
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsFiniteExtensionSplittingTorsionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCoverFunctionFieldEmbeddingStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CommonRefinementCoversStatement
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.JGenSpecializes
 
 set_option autoImplicit false
 

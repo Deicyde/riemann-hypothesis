@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.PrimOfIsUnitDet
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open GlobalTheory.GramCount
 open scoped Classical
@@ -42,7 +46,7 @@ theorem exists_dot_eq_of_indep {B : Type} [CommRing B] [Fintype B] (χ : AddChar
       intro z
       rw [← AddChar.map_add_eq_mul]
       congr 1
-      simp only [mul_sub, Finset.sum_sub_distrib, Finset.sum_apply, Pi.smul_apply, smul_eq_mul,
+      simp only [Finset.sum_apply, Pi.smul_apply, smul_eq_mul,
         Finset.mul_sum, sub_eq_add_neg, mul_add, Finset.sum_add_distrib, mul_neg,
         Finset.sum_neg_distrib]
       congr 1

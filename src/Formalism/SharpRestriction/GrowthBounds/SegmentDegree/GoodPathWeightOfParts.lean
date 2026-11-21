@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.AtypicalPathSmallWeight
+import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.GoodPathWeight
 
 noncomputable section
 

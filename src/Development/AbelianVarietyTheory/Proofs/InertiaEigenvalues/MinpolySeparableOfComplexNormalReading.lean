@@ -1,5 +1,13 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.OffRange
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Analysis.CStarAlgebra.Module.Constructions
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.IntegralHeckeForms Formalism.ConjugateSelfDual ReciprocityTheory.Gal NumberField IsDedekindDomain Polynomial GlobalTheory.LiftLeaf GlobalTheory.SupLaw
 open scoped TensorProduct
@@ -26,7 +34,7 @@ theorem aeval_adj (U : Submodule ℂ H) (S S' : Module.End ℂ H) (hS : ∀ u �
       = inner ℂ u (Polynomial.aeval S' (q.map (starRingEnd ℂ)) v) := by
   refine Polynomial.induction_on q ?_ ?_ ?_
   · intro a u hu v hv
-    simp [Module.algebraMap_end_apply, inner_smul_left, inner_smul_right, mul_comm]
+    simp [Module.algebraMap_end_apply, mul_comm]
   · intro p r hp hr u hu v hv
     simp only [map_add, Polynomial.map_add, LinearMap.add_apply, inner_add_left, inner_add_right,
       hp u hu v hv, hr u hu v hv]

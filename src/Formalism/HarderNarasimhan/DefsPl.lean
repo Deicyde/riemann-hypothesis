@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.HarderNarasimhan.StatementPl
-import Formalism.HarderNarasimhan.DegSupermodZ
 
 open Module NumberField
 

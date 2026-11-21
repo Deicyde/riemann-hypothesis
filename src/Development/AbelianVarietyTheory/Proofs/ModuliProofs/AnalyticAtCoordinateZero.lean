@@ -1,6 +1,5 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsHolPeriods
-import Development.AbelianVarietyTheory.Proofs.ToricGeometry.TangentBijectionOfValues
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.EventuallyEqOfAdditiveOfHasFDerivAt
 
 noncomputable section

@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.SizeWindowBrackets.FrameTraceRatioFinEquiv
+import Formalism.HarderNarasimhan.StatementFrameF
 
 open Module NumberField Matrix
 open Formalism.CorankShareLayerCake.FR Formalism.HN

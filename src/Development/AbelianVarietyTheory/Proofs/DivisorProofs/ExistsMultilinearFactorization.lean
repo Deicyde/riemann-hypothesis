@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsMaxThOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 
 noncomputable section
 
@@ -59,7 +58,7 @@ theorem GlobalTheory.PureML.pure_multilinear : open Classical in ∀ (F E : Type
   refine ⟨{ toFun := fun f => MultilinearMap.pi (fun x => (f (fun i => evI F (x i)) * c x) • P x),
             map_add' := ?_, map_smul' := ?_ }, ?_⟩
   · intro f g; ext φ x; simp [add_mul, add_smul]
-  · intro a f; ext φ x; simp [mul_assoc, smul_smul]
+  · intro a f; ext φ x; simp [mul_assoc]
   · intro f φ; funext x
     rw [GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.pure, hc x φ _ (fun v h => by simp [h]) (fun v h => by simp [h])]
     simp [P, MultilinearMap.mkPiAlgebra_apply]

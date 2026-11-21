@@ -1,7 +1,12 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.EigenvalueEndgame.CuspidalAverages.ExistsCond
 import Development.WeilBound.ThetaLifts.EigenvalueEndgame.TowerCodimensionTwo
 import Development.WeilBound.ThetaLifts.CartanFactorisation.ExistsBeta
 import Development.WeilBound.CoreStatements.LocallyConstantCoinvariants.PfDict
+import Development.AbelianVarietyTheory.Definitions.Divisors.MatchingOfParts
+import Development.WeilBound.ThetaLifts.CartanFactorisation.Unimod
+import Development.WeilBound.ThetaLifts.ConeHypotheses.PureEqPureA
 
 noncomputable section
 

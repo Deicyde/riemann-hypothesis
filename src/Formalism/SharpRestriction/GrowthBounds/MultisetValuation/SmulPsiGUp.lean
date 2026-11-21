@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.SmulMemLatOf
 import Formalism.SubspaceCounting.SubspaceCountingProofs.TypeIIDown
+import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.CountLoc
 
 noncomputable section
 

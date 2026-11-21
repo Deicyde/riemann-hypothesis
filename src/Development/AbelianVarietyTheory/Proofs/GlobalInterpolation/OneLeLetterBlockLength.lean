@@ -1,6 +1,6 @@
-import Mathlib
-import Formalism.SharpRestriction.Divisibility.LocalQuadraticParts
-import Formalism.LocalRingCardinality.CoeNeZeroOfNotMem
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.ParConsts
 open Formalism.BasicNotions Formalism.BasicNotions.DV Formalism.MainNotions NumberField IsDedekindDomain
 
 namespace GlobalTheory.HCEntries

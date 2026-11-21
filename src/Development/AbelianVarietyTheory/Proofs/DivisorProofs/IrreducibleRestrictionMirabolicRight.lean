@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.GeometricLemmaFiltration
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HasFiniteLengthOfIsIrreducible
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.BernsteinUnitaryProductIrreducible
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.JacquetModuleMapInjectiveOfInjective
+import Mathlib.Algebra.Module.StablyFree.Basic
 open GlobalTheory.PRep GlobalTheory.SmGL Matrix
 
 noncomputable section
@@ -410,7 +410,7 @@ theorem scalars_comm {β : Type} {X : β → Type} [∀ j, Fintype (X j)] [∀ j
   funext j
   rw [Pi.mul_apply, Pi.mul_apply]
   ext1
-  simp only [scalars, Units.val_mul, Matrix.GeneralLinearGroup.scalar, Units.coe_map, MonoidHom.coe_coe]
+  simp only [scalars, Units.val_mul, Matrix.GeneralLinearGroup.scalar, Units.coe_map]
   exact (Matrix.scalar_commute _ (fun r => Commute.all _ r) _).symm.eq
 
 theorem other_cell (f : ∀ i, (Σ j, c i j) ≃ M i) (g : ∀ j, (Σ i, c i j) ≃ M j)

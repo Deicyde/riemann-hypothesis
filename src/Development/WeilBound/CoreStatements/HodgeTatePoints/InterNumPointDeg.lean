@@ -1,12 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.AssemblyBase
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PCycleSplitFilt
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PCycleSplitFiltStep
-import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PSurjectiveClosed
-import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PExtension
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PIdealTwistFamily
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PTildeVanish
-import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PFiniteSections
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PTildeTail
 import GroundTheory.HeightsAndTheta.Heights.ElementarySymmetric.PCutRestrLenExact
 import GroundTheory.HeightsAndTheta.Heights.ElementarySymmetric.PInterNumCut

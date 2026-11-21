@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.CechLevels
+import Development.EtaleCohomology.EtaleSheaves.EtaleDegreeZeroCohomologyEquivLocallyConstantFun
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry Opposite GlobalTheory.EtC
@@ -27,7 +29,7 @@ theorem psi_aug {A A' : Type} [CommRing A] [CommRing A'] (φ : A →+* A') (I : 
     psi φ I ≫ cechAug _ = cechAug _ ≫ spMap (Ideal.Quotient.mk I) := by
   ext n : 1
   change (psi φ I).app n ≫ (cechAug _).app n = (cechAug _).app n ≫ (spMap (Ideal.Quotient.mk I)).app n
-  simp only [psi, cechAug, Arrow.augmentedCechNerve_hom_app, Arrow.mapCechNerve_app, WidePullback.lift_base, sqA,
+  simp only [psi, cechAug, Arrow.augmentedCechNerve_hom_app, Arrow.mapCechNerve_app, sqA,
     Arrow.homMk_right]
   erw [WidePullback.lift_base]
   rfl

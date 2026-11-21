@@ -1,8 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.TopOrthEmb
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.WeilRepRankZeroWittEmbeddingValueAtZero
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.MeasureToRealEqMass
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LevelHyperspecialTrivialCharacterSplitsOffPlaces
+import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RowBesZeroE
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR.Datum MeasureTheory IsDedekindDomain NumberField Matrix
 open Formalism.IndefR Formalism.IndefR.Links GlobalTheory.MixModel GlobalTheory.MixPer GlobalTheory.Grow GlobalTheory.ChiGrid GlobalTheory.Unf GlobalTheory.FunObj GlobalTheory.RowUnf GlobalTheory.RowChain
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
@@ -50,7 +50,7 @@ theorem map_eq_of_one {G H : Type} [Group G] [TopologicalSpace G] [IsTopological
     rw [show (μ.map e) = μ.map e.toHomeomorph.toMeasurableEquiv from rfl, MeasurableEquiv.map_apply]
     exact hS'
   have h2 := congrArg (fun m : Measure G => m S) hc
-  simp only [Measure.smul_apply, h1, hS, smul_eq_mul, mul_one] at h2
+  simp only [Measure.smul_apply, h1, hS] at h2
   have h3 : Measure.haarScalarFactor ν (μ.map e) = 1 := by
     have : ((Measure.haarScalarFactor ν (μ.map e) : NNReal) : ENNReal) = 1 := by
       rw [ENNReal.smul_def] at h2; simpa using h2.symm

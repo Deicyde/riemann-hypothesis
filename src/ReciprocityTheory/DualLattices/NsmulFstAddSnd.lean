@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Variable
 import ReciprocityTheory.DualLattices.InstAddCommMonoidFibreFst
 
 noncomputable section

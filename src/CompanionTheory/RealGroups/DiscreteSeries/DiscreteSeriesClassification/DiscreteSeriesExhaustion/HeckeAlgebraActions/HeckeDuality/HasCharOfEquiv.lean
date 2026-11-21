@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.RealGroups.DiscreteSeries.DiscreteSeriesClassification.DiscreteSeriesExhaustion.HeckeAlgebraActions.HeckeDuality.GlRelTau
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.ImportsExtraMore
+import CompanionTheory.RealGroups.DiscreteSeries.DiscreteSeriesClassification.DiscreteSeriesExhaustion.HeckeAlgebraActions.BackStable
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MapQdetEtr
 
 noncomputable section
 

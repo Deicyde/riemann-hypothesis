@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.BlockSplitAll
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.IsobaricDiscreteSelfDualStrongMultiplicityOne
-import Formalism.SharpRestriction.LevelLetterCocycles.SumRepresentations
 import Formalism.SharpRestriction.LevelLetterCocycles.JointConditionsZpowers.ResidualIrreducibleOfTheorem
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.SSAscent
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.PointParOfTwist

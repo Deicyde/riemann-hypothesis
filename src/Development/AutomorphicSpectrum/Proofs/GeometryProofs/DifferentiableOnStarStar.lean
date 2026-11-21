@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.BdryChart
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.ClopenCondOnto
+import GroundTheory.HeightsAndTheta.Heights.Regularisation.Statements
+import Mathlib.Analysis.Calculus.FDeriv.Star
 
 noncomputable section
 
@@ -17,7 +19,7 @@ theorem norm_star_vec (z : Fin n → ℂ) : ‖star z‖ = ‖z‖ := by
   simp only [Pi.norm_def, Pi.star_apply]
   congr 1
   refine Finset.sup_congr rfl fun i _ => ?_
-  simp [nnnorm_star]
+  simp
 
 theorem star_mem_ball {ρ : ℝ} {z : Fin n → ℂ} :
     star z ∈ Metric.ball (0 : Fin n → ℂ) ρ ↔ z ∈ Metric.ball (0 : Fin n → ℂ) ρ := by
@@ -28,7 +30,7 @@ theorem star_mem_punct {ρ : ℝ} {z : Fin n → ℂ} : star z ∈ punct n a ρ 
 
 theorem star_mem_logCover (h : a ≤ n) {w : Fin n → ℂ} : star w ∈ logCover h ↔ w ∈ logCover h := by
   simp only [logCover, Set.mem_setOf_eq, Pi.star_apply, Complex.star_def, Complex.conj_re,
-    RCLike.norm_conj, Complex.norm_conj]
+    RCLike.norm_conj]
 
 theorem star_expCover (w : Fin n → ℂ) : star (expCover a w) = expCover a (star w) := by
   funext k

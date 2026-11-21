@@ -1,6 +1,5 @@
-import Mathlib
-import GroundTheory.LocalFields.LowerIndex
-import GroundTheory.LocalFields.IntermediateField
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.RamificationLowerIndex
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.CapelliComplements.GeneralBFactAlt
 

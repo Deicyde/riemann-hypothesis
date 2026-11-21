@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.ZariskiEtaleLifting.SubThickRees
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.SplittingFieldLattices.GrSplit
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SheafFiltrationProperty
+import Mathlib.RingTheory.DividedPowers.SubDPIdeal
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

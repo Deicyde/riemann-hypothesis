@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.WhittakerCriterion
-import GroundTheory.AutomorphicForms.ContragredientTranspose.GelfandKazhdan
 import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.MirabolicDerivatives.UnipApplyCastSuccLast
+import Development.AbelianVarietyTheory.Definitions.Divisors.T2SpaceGeneralLinearGroup
+import GroundTheory.AutomorphicForms.GLnLocal
 
 noncomputable section
 

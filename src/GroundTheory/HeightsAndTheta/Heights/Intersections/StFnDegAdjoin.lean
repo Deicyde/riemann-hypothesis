@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.MultihomogeneousIdeals.IsFieldIntersection
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StRankAdjoinFrac
-import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsChartRankAdjoin
 set_option maxSynthPendingDepth 1
 
 noncomputable section

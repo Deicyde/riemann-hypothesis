@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.ResidualSpectrum.SliceTensors.PPrIrr
-import GroundTheory.PAdicHodge.NormalizedTrace
+import Development.WeilBound.RepresentationTheoryGL.ResidualSpectrum.SliceTensors.IsStableSquareIntegrableForms
 
 noncomputable section
 

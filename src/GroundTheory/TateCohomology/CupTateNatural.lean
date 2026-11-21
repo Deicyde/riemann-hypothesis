@@ -1,5 +1,6 @@
-import Mathlib
-import GroundTheory.TateCohomology.CupTate
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.TateCohomology.AugmentationSES
 set_option maxSynthPendingDepth 1
 
 open CategoryTheory MonoidalCategory groupCohomology

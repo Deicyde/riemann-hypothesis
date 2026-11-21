@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.ImageStableDegreeBounds
 import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.RepresentationBounds
 import Formalism.PadicSubsetSums.StableGradedCounts.ARCReuse

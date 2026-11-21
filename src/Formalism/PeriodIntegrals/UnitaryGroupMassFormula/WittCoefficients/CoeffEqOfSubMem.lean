@@ -1,5 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.ArtSch
+import Mathlib.RingTheory.WittVector.Teichmuller
+import Mathlib.RingTheory.WittVector.Truncated
+import Mathlib.RingTheory.WittVector.Verschiebung
+import Mathlib.Tactic.ReduceModChar
 
 namespace PI.ArtSch.WittLiftWork
 

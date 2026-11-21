@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PluriharmonicCharts.ExistsHoloOnOfGerm
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.FrameLUMinorValue
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.BlockLUFactorizationStatement
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.FrameMinorValueFormulaStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.BaseChartHolomorphicCompositionStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.ExistsFlagPointInOrbitStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.FlagPointTriangularChangeOrbitStatement

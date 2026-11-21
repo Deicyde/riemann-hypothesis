@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsDiagonalLagrangianInvariantForm
-import GroundTheory.AutomorphicForms.GL2.GJMatrixAdelic
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.TateThesis.AdelicCharDual
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsStdCharNegOneOfStandardTraceAdelicAddChar
 

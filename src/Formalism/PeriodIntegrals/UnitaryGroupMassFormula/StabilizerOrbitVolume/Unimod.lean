@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerOrbitVolume.FibInfEx
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdelicLocalCompactness.T2SpaceTensorProductFiniteExtension
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdelicLocalCompactness.AdeleLC
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Order.CompletePartialOrder
 
 noncomputable section
 
@@ -67,7 +71,7 @@ theorem um_D_smul (Γ H : Subgroup G) (x : G) (γ : Γ) : γ • umD Γ H x = um
     rw [e2, e]
     simp only [mul_assoc]
   · rintro ⟨δ, hδ, h, hh, rfl⟩
-    exact ⟨(γ : G)⁻¹ * δ, Γ.mul_mem (Γ.inv_mem γ.2) hδ, h, hh, by simp only [mul_assoc, inv_mul_cancel_left]⟩
+    exact ⟨(γ : G)⁻¹ * δ, Γ.mul_mem (Γ.inv_mem γ.2) hδ, h, hh, by simp only [mul_assoc]⟩
 
 theorem um_smulInv (Γ : Subgroup G) (μ : Measure G) [IsMulLeftInvariant μ] :
     SMulInvariantMeasure Γ G μ := inferInstance
@@ -158,7 +162,7 @@ theorem um_rightInv (Γ : Subgroup G) [Countable Γ] (μ : Measure G) [IsHaarMea
   simp only [MeasurableEquiv.coe_mulRight] at h1
   have hne : μ 𝓕 ≠ 0 := h𝓕.measure_ne_zero (NeZero.ne μ)
   have e := congrArg (fun ν : Measure G => ν 𝓕) hc
-  simp only [h1, heq, Measure.nnreal_smul_coe_apply] at e
+  simp only [h1, heq] at e
   have hc1 : haarScalarFactor (map (· * g) μ) μ = 1 := by
     have e2 := (ENNReal.mul_left_inj hne hfin.ne).1 (e.symm.trans (one_mul _).symm)
     exact ENNReal.coe_eq_one.1 e2

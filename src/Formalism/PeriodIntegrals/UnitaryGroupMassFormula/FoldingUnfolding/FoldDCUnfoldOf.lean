@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.FoldDCUnfold
-import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.FoldUnfold
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.FoldingUnfolding.TransExists
+import Formalism.PeriodIntegrals.FoldUnfold
+import Mathlib.Tactic.Polynomial.Basic
 
 open MeasureTheory
 open scoped ENNReal NNReal

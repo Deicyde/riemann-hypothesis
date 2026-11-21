@@ -1,7 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SemiabelianSchemes.PrecompleteBases.Torus2GammaBijective
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SemiabelianSchemes.AbelianSchemeQuotients.QSurjective
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsGrpPullback
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.Spectrum.Prime.Homeomorph
+import Std.Tactic.BVDecide.Normalize.Prop
 
 set_option autoImplicit false
 
@@ -181,7 +186,7 @@ theorem charUnit_val (a : X) : (charUnit S X a).val = chi X a := by
     rw [chi, coord, Over.id_left, Category.id_comp]; rfl
   have h2 : (charUnit S X a).val = ((torusFst S X).appLE ⊤ ⊤ (fun _ _ => trivial)).hom
       ((Scheme.ΓSpecIso (torusRing ZU X)).inv.hom (single a 1)) := by
-    simp [charUnit, res, pullU, Scheme.Hom.appLE, AddMonoidAlgebra.of_apply]
+    simp [charUnit, res, pullU, Scheme.Hom.appLE]
     rfl
   rw [h1, h2, Scheme.Hom.appTop, Scheme.Hom.app_eq_appLE]; rfl
 
@@ -298,7 +303,7 @@ theorem eq_single_of_coeff_eq_zero {u : AddMonoidAlgebra A X} (hu : IsGroupLikeE
   ext y
   by_cases hy : y = x
   · subst hy; simp [h1]
-  · simp [h y hy, Finsupp.single_apply, Ne.symm hy]
+  · simp [h y hy, Ne.symm hy]
 
 theorem isGroupLikeElem_iff [Nontrivial A] (hA : ∀ e : A, IsIdempotentElem e → e = 0 ∨ e = 1)
     (u : AddMonoidAlgebra A X) : IsGroupLikeElem A u ↔ ∃ x, u = single x 1 := by
@@ -319,7 +324,7 @@ theorem single_one_injective [Nontrivial A] :
   intro x y h
   by_contra hxy
   have := congrArg (fun v : AddMonoidAlgebra A X => v.coeff x) h
-  simp [Finsupp.single_apply, Ne.symm hxy] at this
+  simp [Ne.symm hxy] at this
 
 end Ring
 

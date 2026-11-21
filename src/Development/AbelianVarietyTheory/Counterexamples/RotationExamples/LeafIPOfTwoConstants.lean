@@ -1,7 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteForms.IndefiniteTree.FunctionalLowerBoundOfConditionsNumeric
-import Formalism.LocalToGlobal.IndefiniteForms.IndefExample
-import Development.AbelianVarietyTheory.Counterexamples.RotationExamples.FreeLiftMetric
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DualMatrixMetricMeans
 
 open Module NumberField IsDedekindDomain

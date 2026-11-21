@@ -1,5 +1,6 @@
-import Formalism.SharpRestriction.GrowthBounds.BinomialPolynomialIdentities.LowerSetTypesSpan
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.FrobeniusPaths.IntegralJointTypeSum
+import Formalism.SharpRestriction.GrowthBounds.ProjectionOfIsotypicDecomposition
 
 noncomputable section
 

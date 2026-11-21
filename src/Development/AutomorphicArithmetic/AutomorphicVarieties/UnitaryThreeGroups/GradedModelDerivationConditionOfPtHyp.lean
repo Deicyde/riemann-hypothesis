@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.Rigid0
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.ModelSigns
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.TanDet
@@ -41,11 +43,11 @@ private theorem twist_der (t : Kˣ) (ξ : A →ₐ[O] K) (D E : A →ₗ[O] K) (
       simp only [smul_eq_mul]
       ring
     · intro g g' h h'
-      simp only [mul_add, map_add, smul_add, add_smul, smul_eq_mul] at h h' ⊢
+      simp only [mul_add, map_add, smul_eq_mul] at h h' ⊢
       rw [h, h']
       ring
   · intro f f' h h'
-    simp only [add_mul, map_add, smul_add, add_smul, smul_eq_mul] at h h' ⊢
+    simp only [add_mul, map_add, smul_eq_mul] at h h' ⊢
     rw [h, h']
     ring
 

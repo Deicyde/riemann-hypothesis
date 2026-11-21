@@ -1,5 +1,7 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.TopFirstOfParts
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.Imports
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.IntegrableUnipotentNormRpowNeg
 
 open Matrix MeasureTheory Filter Topology
 open scoped ContDiff ComplexConjugate ENNReal

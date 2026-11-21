@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.FoldingUnfolding.TransExists
+import Mathlib.Tactic.Polynomial.Basic
 
 open Formalism.L2.SG.FoldBound Formalism.L2.SG.PoincareSeriesSquareIntegrable
 

@@ -1,8 +1,11 @@
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.SchurOrthogonality.InstMeasurableSpaceMat
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.SchurOrthogonality.CzDiagUnitary
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.SchurOrthogonality.CiEvalMSmul
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.SchurOrthogonality.CfEqSumOfSubset
 import Formalism.GradedWeylDivisibility.FinalD
+import Formalism.PeriodIntegrals.HwIrred
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.SchurOrthogonality.CrRowActRowAct
+import Mathlib.LinearAlgebra.Eigenspace.Triangularizable
 
 noncomputable section
 

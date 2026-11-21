@@ -1,15 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsThetaMeanSquareNorm
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.ZhangDimensionPushDownGrassmannianHeightBounds
-import GroundTheory.HeightsAndTheta.Heights.KernelsLattice
-import GroundTheory.HeightsAndTheta.Heights.LatticeLemmas.StatementsBundles
-import GroundTheory.HeightsAndTheta.Heights.KernelsMatrix
-import GroundTheory.HeightsAndTheta.Heights.HeightKernels.AssemblyAnalytic
-import GroundTheory.HeightsAndTheta.Heights.FactorialBounds.Assembly
-import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.HasSumPolyDerivMulProdAddMatrix
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsFundamentalDomainMeanNormSqThetaChar
-import Development.AbelianVarietyTheory.Proofs.ToricGeometry.IsUnitOfLagrangian
-import GroundTheory.HeightsAndTheta.Heights.HeightKernels.CoordSiegel
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsThetaHolomorphic
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField MeasureTheory
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi
@@ -47,14 +36,14 @@ theorem exists_half_canMult : ∀ (g : ℕ) (Λ : Submodule ℤ (Fin g → ℂ))
     intro i
     refine ⟨funext fun k => ?_, funext fun k => ?_, funext fun k => ?_, funext fun k => ?_⟩ <;>
       by_cases hk : k = i
-    · subst hk; simp [hsame]
-    · simp [hsame, Pi.single_apply, hk, Ne.symm hk]
-    · simp [hsame]
-    · simp [hsame]
-    · simp [hsame]
-    · simp [hsame]
-    · subst hk; simp [hsame]
-    · simp [hsame, Pi.single_apply, hk, Ne.symm hk]
+    · subst hk; simp
+    · simp [hk]
+    · simp
+    · simp
+    · simp
+    · simp
+    · subst hk; simp
+    · simp [hk]
   have hdot : ∀ (a : Fin g → ℝ) (i : Fin g),
       (a ⬝ᵥ fun k => (((Pi.single i 1 : Fin g → ℤ) k : ℤ) : ℝ)) = a i := by
     intro a i

@@ -1,6 +1,4 @@
-import Mathlib
-import Formalism.SharpRestriction.InertJacobiLevels.AsmIface
-import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.PairRowIffQdRows
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.SzRowAndImp
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.SzRowPrimesConductorStatement
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ExplicitChoiceRankKLowerUpperBounds
@@ -18,7 +16,6 @@ import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.SzRowThinSize
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.SzRowCloudUnitLowerStatement
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.SzRowNodeGapStatement
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.SzRowGapFunFNStatement
-import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.SzRowSigGaps
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.RbSNumeric
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.SzRowLStarStatement
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.SzRowCardWordsLe

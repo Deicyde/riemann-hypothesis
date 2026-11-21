@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaActionExistsStatement
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalWeilActionCompatibleStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalWeilTranslationActionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBLeviTorusEvaluationStatement

@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.FramePfL
+import Formalism.SharpRestriction.LevelLetterCocycles.DownSlotProposition
 
 noncomputable section
 

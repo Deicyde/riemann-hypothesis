@@ -1,6 +1,8 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.CuspidalDiscreteness.DiffBound
-import GroundTheory.AutomorphicForms.CuspidalDiscreteness.TorusReduction
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.AutomorphicForms.CuspidalDiscreteness.AltSum
+import GroundTheory.AutomorphicForms.CuspidalDiscreteness.IsHilbertSchmidtOfAeEqDual
+import GroundTheory.AutomorphicForms.CuspidalDiscreteness.Smoothing
 
 open MeasureTheory Set Filter Topology Function
 open NumberField IsDedekindDomain

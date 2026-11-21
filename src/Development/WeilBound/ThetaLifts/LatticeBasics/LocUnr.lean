@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LatticeBasics.HodgeTateFromSandwich
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PlaceSplitOrInert
 

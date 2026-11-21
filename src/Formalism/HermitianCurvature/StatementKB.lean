@@ -1,5 +1,6 @@
-import Formalism.HermitianCurvature.StatementTop
-import Formalism.HermitianCurvature.LevelRecursionCondNeeded
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.StatementJC
 
 namespace Formalism.FourierDecayAlt.KB
 

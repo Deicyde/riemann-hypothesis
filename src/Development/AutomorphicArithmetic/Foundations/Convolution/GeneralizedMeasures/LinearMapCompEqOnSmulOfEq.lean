@@ -1,10 +1,9 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.GeneralizedMeasures.HeckeFinAlt
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.GeneralizedMeasures.TermEx
 import Development.AutomorphicArithmetic.Foundations.Convolution.GeneralizedMeasures.SideE
 import Development.AutomorphicArithmetic.Foundations.Convolution.GeneralizedMeasures.SmoothStar
 import Development.AutomorphicArithmetic.Foundations.Convolution.GeneralizedMeasures.LocHeightDiagPowLe
 import Development.AutomorphicArithmetic.Foundations.Convolution.GeneralizedMeasures.SumSmulApply
-import Development.AutomorphicArithmetic.Foundations.Convolution.LocalGroupAnalysis.G1St
 
 open MeasureTheory NumberField IsDedekindDomain MvPolynomial Filter
 open GroundTheory.Automorphic GroundTheory.Automorphic.Reduction GroundTheory.Automorphic.RightCosetSpace
@@ -88,10 +87,10 @@ private theorem linearMap_comp_eq_on_smul_of_eq {V : Type*} [NormedAddCommGroup 
     (A B G : V →L[ℂ] V) (P : ι → V →L[ℂ] V) :
     A ∘L ((∑ i ∈ s, c i • P i) ∘L B) ∘L G = ∑ i ∈ s, c i • (A ∘L (P i ∘L B) ∘L G) := by
   ext v
-  simp [ContinuousLinearMap.sum_apply, map_sum]
+  simp [map_sum]
 
 private theorem self_over (F : Type) [Field F] [NumberField F] (q : Pl F) : q.asIdeal.LiesOver q.asIdeal :=
-  ⟨by ext x; simp [Ideal.under_def, Ideal.mem_comap]⟩
+  ⟨by ext x; simp [Ideal.under_def]⟩
 
 private theorem split_self (F : Type) [Field F] [NumberField F] (q : Pl F) : Split F q := by
   rintro ⟨w, hw⟩

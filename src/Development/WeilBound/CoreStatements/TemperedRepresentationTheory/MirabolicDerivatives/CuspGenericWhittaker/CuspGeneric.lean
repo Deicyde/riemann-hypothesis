@@ -1,8 +1,6 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.MirabolicDerivatives.CuspGenericWhittaker.CoinvZeroOn
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.NontrivialTwJacquetOfSurjective
-import GroundTheory.AutomorphicForms.SmoothRepContragredient
-import GroundTheory.AutomorphicForms.SupercuspidalCoefficients
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.NonemptyEquivMultiProdOne
 
 noncomputable section
 

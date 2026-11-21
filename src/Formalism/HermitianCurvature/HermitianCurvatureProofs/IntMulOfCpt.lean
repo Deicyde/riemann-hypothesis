@@ -1,4 +1,7 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.ExistsFderivChiBound
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.StatementNF
+import Mathlib.Analysis.Calculus.LineDeriv.IntegrationByParts
+import Mathlib.Order.CompletePartialOrder
 
 open MeasureTheory Filter Topology
 open scoped ComplexConjugate ContDiff
@@ -18,7 +21,7 @@ theorem dZ_conj {φ : ℂ → ℂ} {c : ℂ} (h : DifferentiableAt ℝ φ c) :
   unfold NF.dZ NF.dZb
   rw [hd.fderiv]
   simp only [ContinuousLinearMap.comp_apply, ContinuousLinearEquiv.coe_coe, Complex.conjCLE_apply, map_mul,
-    map_add, map_sub, Complex.conj_I, map_div₀, map_one, map_ofNat]
+    map_add, Complex.conj_I, map_div₀, map_one, map_ofNat]
   ring
 
 theorem dZb_div {g : ℂ → ℂ} {c : ℂ} (hc : c ≠ 0) (h : DifferentiableAt ℝ g c) :

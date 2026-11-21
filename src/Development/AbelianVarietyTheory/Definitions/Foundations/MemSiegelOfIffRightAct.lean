@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.Statement
 import Development.AbelianVarietyTheory.Definitions.Foundations.IsIwasawaOfIsCompact
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 

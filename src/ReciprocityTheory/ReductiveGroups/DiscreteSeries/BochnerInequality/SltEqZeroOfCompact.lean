@@ -1,4 +1,7 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.BochnerInequality.NcVOneDecomp
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Tactic.ENatToNat
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.BochnerInequality.Permute
 
 noncomputable section
 

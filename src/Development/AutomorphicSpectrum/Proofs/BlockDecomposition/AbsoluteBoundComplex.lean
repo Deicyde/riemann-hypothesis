@@ -1,6 +1,4 @@
-import Mathlib
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.LocallyConstantMajorants.GammaSplitting.ComplexMatrixMajorantIntegrable
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntegrableMulCIff
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PartialFourierBoundSeminormStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SeminormCompUnitaryLeStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.NormWhittakerGL2LeIntegralStatement
@@ -125,7 +123,7 @@ theorem main : Ad3.K.LC.C.AbsoluteZetaIntegralBound := by
       conv_lhs => rw [hgκ]
       rw [← Matrix.mul_assoc]
       congr 1
-      simp [d2, Matrix.mul_fin_two]
+      simp [d2]
     have hA : (a : ℂ) * (g.det / (R : ℂ)) ≠ 0 := mul_ne_zero ha (div_ne_zero hg hRc)
     have hr : ‖(a : ℂ) * (g.det / (R : ℂ))‖ / ‖(R : ℂ)‖ = s := by
       have e : y * (a : ℂ) = (a : ℂ) * (g.det / (R : ℂ)) / (R : ℂ) := by

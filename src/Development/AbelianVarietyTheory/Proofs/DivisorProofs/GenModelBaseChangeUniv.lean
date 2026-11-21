@@ -1,10 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsGHeckeMapForget
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsGPull
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsHeckeMap
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GenModelHomUnique
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsHarrisTaylorObjectPullbackBis
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HarrisTaylorObjectMapsComposeCancel
+import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsGDatumOneOneOne
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 noncomputable section
 

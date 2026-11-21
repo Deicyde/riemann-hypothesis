@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.SphericalCoordinates.AlgebraEquivSetup.OrientEv
+import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.SphericalCoordinates.AlgebraEquivSetup.CodiffUnit
 open NumberField Matrix GlobalTheory.UPel.HT GlobalTheory.UPel.HT.Gen GlobalTheory.LKTrip GlobalTheory.LKGeo UpperTheory.Gal.W2.Seed UpperTheory.Gal.W2.Seed.Ori
 open scoped TensorProduct
 
@@ -15,7 +16,7 @@ private theorem func_repr {ι : Type} [Fintype ι] [DecidableEq ι] (f : (ι →
       · subst h
         simp only [Pi.add_apply, Pi.smul_apply, Pi.single_eq_same, if_true]
         apply Complex.ext <;> simp
-      · simp [Pi.single_apply, h]
+      · simp [h]
     rw [Finset.sum_apply]
     simp only [hk]
     simp

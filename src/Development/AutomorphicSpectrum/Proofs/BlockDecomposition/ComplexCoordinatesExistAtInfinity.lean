@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ThetaPartD
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsBoundUnitary
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HermInf
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SecondCountableHermC
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MatC
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.OneVectorCcOfSiegelWeil
 open scoped Matrix NNReal ENNReal ComplexConjugate TensorProduct

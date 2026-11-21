@@ -1,10 +1,9 @@
-import Formalism.LatticeSlopes.Statement
-import Formalism.LatticeSlopes.CovolAntiSameRank
-import Formalism.LatticeSlopes.LatticeSlopesProofs.DiscreteTopologyOfLe
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LatticeSlopes.LatticeSlopesProofs.CovolPos
 import Formalism.LatticeSlopes.LatticeSlopesProofs.DegQuot
 import Formalism.LatticeSlopes.LatticeSlopesProofs.SaturationProperties
-import Formalism.LatticeSlopes.LatticeSlopesProofs.MuMaxAttained
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 open Module Submodule
 

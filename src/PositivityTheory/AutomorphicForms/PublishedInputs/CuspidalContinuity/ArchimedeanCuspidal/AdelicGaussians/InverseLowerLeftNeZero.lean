@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.AdelicGaussians.HeisenbergLowerCommuteMiddle
 
 noncomputable section
@@ -367,7 +369,7 @@ theorem survU_out :
   have a1 := hu 1
   rw [val_gU] at a0 a1
   simp only [Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_zero, Matrix.cons_val_one,
-    Matrix.head_cons, Matrix.empty_val', Matrix.cons_val_fin_one, Fin.isValue] at a0 a1
+    Matrix.empty_val', Matrix.cons_val_fin_one, Fin.isValue] at a0 a1
   have h11 := a1.2.symm
   refine ⟨h11, a0.2.symm, ?_⟩
   have := a1.1
@@ -383,7 +385,7 @@ theorem gV_out :
   have a1 := hu 1
   rw [val_gV] at a0 a1
   simp only [Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_zero, Matrix.cons_val_one,
-    Matrix.head_cons, Matrix.empty_val', Matrix.cons_val_fin_one, Fin.isValue] at a0 a1
+    Matrix.empty_val', Matrix.cons_val_fin_one, Fin.isValue] at a0 a1
   have h10 := a0.2.symm
   refine ⟨h10, ?_, a1.2.symm⟩
   have := a0.1
@@ -421,7 +423,7 @@ theorem survV_eq (q : NQ)
   rcases hj with rfl | rfl
   · simp [h10, hM00]
   · simp only [Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_zero, Matrix.cons_val_one,
-      Matrix.head_cons, Matrix.empty_val', Matrix.cons_val_fin_one, Fin.isValue]
+      Matrix.empty_val', Matrix.cons_val_fin_one, Fin.isValue]
     refine ⟨?_, hM11'⟩
     rw [zero_add, mul_assoc, mul_inv_cancel₀ (mul_ne_zero hξ0 hξ1), mul_one]
 

@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.OrdGeOfForall
 
 noncomputable section
@@ -153,11 +153,11 @@ theorem dominant_tate : Dominant (O := ℤ) id (InvFun.minVal ℤ) 1 3 !![1] (X 
       show (β (y 0) (y 0) : ℝ) = (β ((LinearMap.proj 0 : (Fin 1 → ℤ) →ₗ[ℤ] ℤ) 0) ((LinearMap.proj 0 : (Fin 1 → ℤ) →ₗ[ℤ] ℤ) 0) : ℝ)
       rw [hsq (y 0), h00]; simp
     · refine csInf_le ⟨0, ?_⟩ ⟨⟨fun _ => 1, rfl⟩, by
-        simp only [LinearMap.proj_apply, map_zero, LinearMap.zero_apply, Int.cast_zero]; exact h0⟩
+        simp only [map_zero, Int.cast_zero]; exact h0⟩
       rintro x ⟨⟨y, rfl⟩, -⟩
       show (0 : ℝ) ≤ (β (y 0) (y 0) : ℝ); exact_mod_cast hβ _
   min e _ j := by
-    simp only [lin, TateSys.qW_mul, Finset.univ_unique, Finset.sum_singleton, LinearMap.mul_apply']
+    simp only [lin, TateSys.qW_mul, Finset.univ_unique, Finset.sum_singleton]
     rcases TateSys.unit_eq_one (e := e) with h | h <;> simp [h]
   strict e he := by
     rintro ⟨x, hx⟩

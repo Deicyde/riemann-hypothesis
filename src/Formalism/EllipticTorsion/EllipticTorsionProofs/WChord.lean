@@ -1,4 +1,13 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.EllipticTorsion.WChordSeries
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.RingTheory.MvPowerSeries.Inverse
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open PowerSeries
 
@@ -283,13 +292,13 @@ lemma eq_single_iff (e : Fin 2 →₀ ℕ) :
     (e = Finsupp.single 1 (e 1) ↔ e 0 = 0) ∧ (e = Finsupp.single 0 (e 0) ↔ e 1 = 0) := by
   refine ⟨⟨fun h => ?_, fun h => ?_⟩, ⟨fun h => ?_, fun h => ?_⟩⟩
   · rw [h]
-    simp [Finsupp.single_apply]
+    simp
   · ext j
-    fin_cases j <;> simp [h, Finsupp.single_apply]
+    fin_cases j <;> simp [h]
   · rw [h]
-    simp [Finsupp.single_apply]
+    simp
   · ext j
-    fin_cases j <;> simp [h, Finsupp.single_apply]
+    fin_cases j <;> simp [h]
 
 def lam (w : PowerSeries K) : MvPowerSeries (Fin 2) K := fun e => coeff (e 0 + e 1 + 1) w
 
@@ -460,14 +469,14 @@ variable {W w}
 
 lemma Wi_cc (hw : WFixed W w) (i : Fin 2) : cc (Wi w i) = 0 := by
   rw [← MvPowerSeries.coeff_zero_eq_constantCoeff_apply, coeff_Wi]
-  simp [(w_low hw).1, hw.1]
+  simp [(w_low hw).1]
 
 lemma Wi_L (hw : WFixed W w) (i j : Fin 2) : (L j) (Wi w i) = 0 := by
   rw [coeff_Wi]
   by_cases h : j = i
   · subst h
     simp [(w_low hw).2.1]
-  · simp [Finsupp.single_apply, h, (w_low hw).1, hw.1]
+  · simp [h]
 
 lemma lam_cc (hw : WFixed W w) : cc (lam w) = 0 := by
   rw [← MvPowerSeries.coeff_zero_eq_constantCoeff_apply, coeff_lam]

@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.GlobalHeightBoundIffAtGoodPrimes
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 open CategoryTheory Limits AlgebraicGeometry IsLocalRing MvPolynomial
 open ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.BasicNotions Formalism.MainNotions Formalism.BasicNotions.DV Formalism.DegreeFormula Formalism.MainNotions.LatticeTransfer Formalism.MainNotions.WeightThresholdDefs
 open GlobalTheory GlobalTheory.QCoh GlobalTheory.CechPic GlobalTheory.Vert GlobalTheory.ShFam GlobalTheory.ShFam.Pad GlobalTheory.Mean4O GlobalTheory.MixedLocalChains
@@ -35,7 +35,7 @@ theorem phiPow_eq_iterate (D : D7) (p : ℕ) [Fact p.Prime] (n : ℕ) (τ : Emb 
     rfl
   | succ n ih =>
     rw [Function.iterate_succ_apply', ← ih]
-    simp only [phiPow, pow_succ', pow_one]
+    simp only [phiPow, pow_succ']
     rfl
 
 theorem phiPow_one_injective (D : D7) (p : ℕ) [Fact p.Prime] : Function.Injective (phiPow D (p := p) 1) := by

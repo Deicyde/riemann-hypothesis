@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.RamifiedCurveKernels.StatementS
-import Formalism.GaussJetBounds.StatementY
+import Formalism.GaussJetBounds.StatementP
 
 noncomputable section
 open scoped BigOperators

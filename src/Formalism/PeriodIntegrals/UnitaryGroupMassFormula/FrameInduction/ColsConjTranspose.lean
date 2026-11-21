@@ -1,4 +1,10 @@
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.FrameInduction.NegBound
+import Formalism.FormalDegreeBessel.FormalDegreeRatio.ReverseCauchySchwarzHolds
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.TotallySplit
 
 open Matrix Formalism.QuantumDeterminants Formalism.FourierDecayAlt Formalism.FourierDecayAlt.C2
 
@@ -138,6 +144,6 @@ theorem uPos_of (hN : NegBound) : UPos := by
     exact Prod.ext ha ((smul_eq_zero.1 ht).resolve_right hv0)
   have hdim := hN k r (LinearMap.range M) hnp
   rw [LinearMap.finrank_range_of_inj hinj] at hdim
-  simp [Module.finrank_prod, Module.finrank_fin_fun] at hdim
+  simp [Module.finrank_prod] at hdim
 
 end PI.FrameInd.UPosW

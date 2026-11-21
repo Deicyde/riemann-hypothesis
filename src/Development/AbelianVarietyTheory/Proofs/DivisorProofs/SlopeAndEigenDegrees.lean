@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.FrobeniusTwistEigen
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqZeroOfScaledAlongPerm
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsVBAndClsDetOfShortExact
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsFrameOfBijectiveStalk
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsPrincipalIdealRingStalk
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AppInjectiveOfFrames
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RankOneSubbundleSplitAtPoints

@@ -1,8 +1,7 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.JumpsInLetterOfEvenIndex
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.At0HomApply
 import Formalism.SharpRestriction.LevelLetterCocycles.DlOfQp
-import Formalism.SharpRestriction.LevelLetterCocycles.EvaluationAtUniformizerPower
 
 noncomputable section
 

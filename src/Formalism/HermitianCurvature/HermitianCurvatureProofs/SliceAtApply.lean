@@ -1,10 +1,9 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.PtSizePtG
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.IntegrableBlockIntegrand
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.SliceIntCut
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.YGSlice
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.OpApplySub
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.FormLevLimit
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.BetaCongrRight
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.OpApplyZeroNear
+import Mathlib.MeasureTheory.SpecificCodomains.Pi
 
 namespace Formalism.FourierDecayAlt.P.FormNormSumIdentities
 

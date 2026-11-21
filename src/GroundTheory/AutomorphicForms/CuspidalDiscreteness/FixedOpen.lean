@@ -1,7 +1,8 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.CuspidalDiscreteness.SummandsBase
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.CuspidalDiscreteness.SmoothingFinite
-import GroundTheory.AutomorphicForms.AutomorphicFormSpaces.Uniform
+import GroundTheory.AutomorphicForms.CuspidalDiscreteness.CuspCompact
+import Mathlib.Analysis.Convex.Integral
 
 open MeasureTheory Set Filter Topology Function Module
 

@@ -1,8 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsTateZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NontrivialIsomClassInt
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ResidueDegreeOfIsClosedImmersion
 import Development.AbelianVarietyTheory.Definitions.Divisors.GenericPointAsIdeal
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open CategoryTheory AlgebraicGeometry Set Matrix ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open GlobalTheory GlobalTheory.CxPts GlobalTheory.ArInt GlobalTheory.TorsionForm GlobalTheory.ThetaRR
 open GlobalTheory.LB (toMod)
@@ -52,10 +53,10 @@ theorem lin_quartExp_zero : lin (fun i => ((quartExp 0 i : ℤ) : ℝ)) = MvPoly
   simp [lin, quartExp, Fin.sum_univ_three]
 
 theorem lin_quartExp_one : lin (fun i => ((quartExp 1 i : ℤ) : ℝ)) = MvPolynomial.X 1 := by
-  simp [lin, quartExp, Fin.sum_univ_three]
+  simp [lin, quartExp]
 
 theorem lin_quartExp_two : lin (fun i => ((quartExp 2 i : ℤ) : ℝ)) = MvPolynomial.X 2 := by
-  simp [lin, quartExp, Fin.sum_univ_three]
+  simp [lin, quartExp]
 
 theorem arFun_vanish_of_quartic : GlobalTheory.Published.ArCalc → ∀ (k : Type) [CommRing k] (X B : Scheme.{0}) [IsIntegral X] (p : X ⟶ Sp k) (q : B ⟶ Sp k) (π : X ⟶ B) (hπ : π ≫ q = p) (g : ℕ), IsArithVar p (g + 1) → ∀ (f : X ⟶ X) (hf : f ≫ p = p), f ≫ π = π → f (genericPoint X) = genericPoint X → f.residueDegree (genericPoint X) = 4 ^ g → ∀ (L : HermLB p) (N N' : HermLB q), (L.pull f hf).Isometric (L.pow 4) → ∀ Φ : MvPolynomial (Fin 3) ℝ →ₗ[ℝ] ℝ, IsArFun ![L, N.pull π hπ, N'.pull π hπ] (g + 1) Φ → Φ (MvPolynomial.X 0 ^ (g + 1) * MvPolynomial.X 2) = 0 ∧ Φ (MvPolynomial.X 0 ^ (g + 2)) = 0 ∧ Φ (MvPolynomial.X 0 ^ (g + 1) * MvPolynomial.X 1) = 0 := by
   intro hC k _ X B _ p q π hπ g hX f hf hfπ hgen hdeg L N N' hL Φ hΦ

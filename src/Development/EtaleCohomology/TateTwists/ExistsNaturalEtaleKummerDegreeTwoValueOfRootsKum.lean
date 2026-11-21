@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.TateTwists.ExistsEtaleKummerChernClassCochainOfDegreeValues
+import Mathlib.Tactic.Polynomial.Basic
 
 open CategoryTheory Limits AlgebraicGeometry Opposite CochainComplex CochainComplex.HomComplex GlobalTheory.EtC
 

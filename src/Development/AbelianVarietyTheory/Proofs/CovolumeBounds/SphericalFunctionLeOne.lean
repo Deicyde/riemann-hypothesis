@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.ThetaMetrics.IsKMeas
-import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.FrameIsotropicOrthonormal
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.GramPositiveVolumeContinuous
-import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.MaximalCompactSubgroupProperties
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.BlockEmbConjTranspose
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.ExistsCompactHaarMeasure
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.KsetTransitiveOfGram

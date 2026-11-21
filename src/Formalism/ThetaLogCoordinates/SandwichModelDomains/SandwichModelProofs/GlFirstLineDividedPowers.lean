@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.SandwichModelDomains.SpreadSquare
 import Formalism.ThetaLogCoordinates.TraceIsometryWeights.SchurTraceProofs.FischerAdjointnessHolds
 import Formalism.GradedWeylDivisibility.FockSpaceTableaux.LRowdivLemmas

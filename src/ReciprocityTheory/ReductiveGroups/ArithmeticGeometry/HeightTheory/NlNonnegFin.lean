@@ -1,9 +1,5 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.GenericSectionOfAxioms
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.HFour
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.IntNsg
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.ValuationResidueLemmas
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.HPlaces
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.HDiscA
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.HDiscB
 
 namespace ReciprocityTheory.ChartRestriction.G.T0

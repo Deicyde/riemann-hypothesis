@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.GL6.SlopeRamifiedInducedPrimeField
 
 noncomputable section
@@ -16,7 +18,7 @@ theorem rational_span_map_surjective {n : ℕ} (lam : D.what₂.Tau → DomWeigh
   | mem p hp =>
     obtain ⟨r, f, -, rfl⟩ := hp
     refine ⟨MvPolynomial.C r * ten (fun τ => MvPolynomial.map (Int.castRingHom D.what₂.LL) (f τ)), ?_⟩
-    simp [ten, MvPolynomial.map_map, MvPolynomial.smul_eq_C_mul]
+    simp [ten, MvPolynomial.smul_eq_C_mul]
     left
     refine Finset.prod_congr rfl fun x _ => ?_
     rw [MvPolynomial.map_rename, MvPolynomial.map_map,

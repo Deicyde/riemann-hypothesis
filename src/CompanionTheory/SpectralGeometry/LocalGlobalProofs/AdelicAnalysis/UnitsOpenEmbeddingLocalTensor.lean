@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import CompanionTheory.SpectralGeometry.CountingDefinitions.AdelicEulerProducts.IsEulerProd
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.TensorInvolutionAlgebraPropertiesStatement
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.TensorLocallyCompactRingStatement
@@ -55,7 +55,7 @@ theorem units_val_isOpenEmbedding : ∀ (F E : Type) [Field F] [NumberField F] [
       have h1 : (r ⊗ₜ[F] (1 : E) : R ⊗[F] E) = algebraMap R (R ⊗[F] E) r := by
         simp [Algebra.TensorProduct.algebraMap_apply]
       rw [h1, Algebra.trace_algebraMap_of_basis (Algebra.TensorProduct.basis R b) r]
-      simp [two_mul, two_nsmul]
+      simp [two_mul]
     have hNr : N y = r := by
       show algebraMap F R (1 / 2) * Algebra.trace R (R ⊗[F] E) (y * sigR R σ y) = r
       rw [hr, htrace, ← mul_assoc, hhalf, one_mul]

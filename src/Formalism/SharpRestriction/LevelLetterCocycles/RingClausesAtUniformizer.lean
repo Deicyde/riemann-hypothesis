@@ -1,8 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.UniversalGeneralOfRestriction
 import Formalism.SharpRestriction.LevelLetterCocycles.EvaluationAtUniformizerPower
 import Formalism.SharpRestriction.LevelLetterCocycles.DualLemmaOfDeterminant
 import Formalism.SharpRestriction.LevelLetterCocycles.DvOZeroHigh
-import Formalism.SharpRestriction.LevelLetterCocycles.QuotientImageDivisibility.RkMultVNonneg
 import Formalism.SharpRestriction.LevelLetterCocycles.QuotientImageDivisibility.FilDimOf
 
 noncomputable section

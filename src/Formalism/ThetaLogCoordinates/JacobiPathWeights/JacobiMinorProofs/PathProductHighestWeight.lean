@@ -1,6 +1,4 @@
-import Mathlib
-import Formalism.ThetaLogCoordinates.JacobiPathWeights.StatementA
-import Formalism.ThetaLogCoordinates.JacobiPathWeights.StatementC
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.JacobiPathWeights.JacobiMinorProofs.LeIffLtColHeight
 import Formalism.ThetaLogCoordinates.JacobiPathWeights.JacobiMinorProofs.ActFormContract
 

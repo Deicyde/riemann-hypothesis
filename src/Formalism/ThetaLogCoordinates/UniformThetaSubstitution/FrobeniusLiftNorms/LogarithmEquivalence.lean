@@ -1,8 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.CyclicPowerClassOfExpEquiv
-import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.FrobeniusLiftNorms.TopsChoicePartA
 import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.FrobeniusLiftNorms.TopsChoicePartB
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.BallRing
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 noncomputable section
 

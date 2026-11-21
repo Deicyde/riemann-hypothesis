@@ -1,8 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSplitting
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TangentBasisOfSplitTorsion
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.GrNormPosOfBasis
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsStalkFactor
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TangentBasisIntegerActionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsProjectorEigenDecompositionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TangentBasisActionOnModelStatement
@@ -97,7 +95,7 @@ theorem exists_isEigProj : ∀ (E : Type) [Field E] [NumberField E] [IsCMField E
     constructor
     · intro h
       refine ⟨(D : K)⁻¹ • cf, ?_⟩
-      simp [Matrix.mulVec_smul, h, smul_smul, hDK]
+      simp [h, smul_smul, hDK]
     · rintro ⟨y, rfl⟩
       show (P.map ψ).mulVec ((P.map ψ).mulVec y) = (D : K) • (P.map ψ).mulVec y
       rw [Matrix.mulVec_mulVec, hPK]

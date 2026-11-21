@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.Statements
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
+import Std.Tactic.BVDecide.Normalize.Prop
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights
@@ -107,7 +110,7 @@ lemma aeval_substZeroOneOne {A : Type*} [CommRing A] [Algebra F A] (w : Fin 2 ×
     intro i
     by_cases hi : i = (1,1)
     · subst hi; simp [substZeroOneOne]
-    · simp [substZeroOneOne, hi, Function.update_of_ne hi]
+    · simp [substZeroOneOne, hi]
   exact DFunLike.congr_fun this r
 
 theorem det_two_ne_zero : (D2 : MvPolynomial (Fin 2 × Fin 2) F) ≠ 0 := by
@@ -199,7 +202,7 @@ theorem linForm_line : linForm (fun j : Fin 2 => if j = 0 then (1 : F) else 0) �
   rw [Ideal.mem_bot]
   intro h
   have := congrArg (eval (fun _ : Fin 2 => (1 : F))) h
-  simp [linForm, Fin.sum_univ_two] at this
+  simp [linForm] at this
 
 end LineChowForm
 

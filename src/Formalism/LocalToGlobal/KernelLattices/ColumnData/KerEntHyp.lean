@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.GlobalSchurBounds.GL3Columns
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.KernelLattices.FirstKernelLawReading
 import Formalism.LocalRingCardinality.SpanPowerMembership.EntPlNonempty
 

@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.CmpCMemFunMod
-import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.RecThm
-import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.SpanImageOfSurj
+import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.FramesTr
+import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.LatticeComparisonCompatible
 
 noncomputable section
 

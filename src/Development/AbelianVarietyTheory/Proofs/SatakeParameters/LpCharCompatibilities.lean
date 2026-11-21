@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.MonodromyZeroOfWeilDeligneRepClassIff
+import Mathlib.LinearAlgebra.Eigenspace.Charpoly
 
 noncomputable section
 
@@ -56,7 +58,7 @@ theorem iso_tensor_assoc (a : WDRep h V) (b : WDRep h V') (c : WDRep h V'') :
     | tmul x z =>
       induction x using TensorProduct.induction_on with
       | zero => simp
-      | tmul x y => simp [tmul_add, add_tmul, add_assoc]
+      | tmul x y => simp [add_assoc]
       | add x y hx hy => simp only [map_add, add_tmul, hx, hy]
 
 theorem iso_zero_tensor (a : WDRep h V) (c : WDRep h V') [Subsingleton V] (b : WDRep h V'') [Subsingleton V''] :

@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CharacterGerms.UnitSeriesFrobenius
-import Formalism.LocalToGlobal.CharacterGerms.RowTiePGerm
-import Formalism.DropLevelBounds.ConstantCoeffVanishing.UbintConstantCoeffEqZero
 
 noncomputable section
 

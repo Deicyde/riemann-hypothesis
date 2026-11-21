@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.PhiCharacterResidues.ContinuousResLe
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual Formalism.HC ReciprocityTheory.Gal IsLocalRing Polynomial UpperTheory.V UpperTheory.V.Base UpperTheory.V.Alg UpperTheory.V.HV UpperTheory.V.GradeZeroInterpolatingElement UpperTheory.V.Ws GlobalTheory.GalOfCusp
@@ -56,7 +57,7 @@ theorem UpperTheory.V.Ws.phiPsiEx :
     have hr := X.ψ_red w i s hs
     have hu := ((((T.fr ∅).χ i s).isUnit.map (inc h)).map (IsLocalRing.residue c'.O))
     rw [← hr] at hu
-    simp only [res, h0] at hu
+    simp only [res] at hu
     simp at hu
     exact hne hu
   have hsc : ∀ g g' : G T.L Ω, K.sc n (g * g') = K.sc n g * K.sc n g' := by

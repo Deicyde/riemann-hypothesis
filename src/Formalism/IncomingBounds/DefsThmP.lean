@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.IncomingBounds.StatementThmP
 import Formalism.IncomingBounds.LevelTail
-import Formalism.IncomingBounds.LemmaMNumerics
 
 noncomputable section
 open scoped BigOperators

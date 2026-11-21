@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.LocalRingCardinality.DataTheta
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockQuadraticActionMapLieBracketStatement
 open Formalism.BasicNotions.TH
 open scoped Kronecker

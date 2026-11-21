@@ -1,8 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.FormalGroupWitt.FormalGroupWittProofs.FunctionalEquationHomVector
 import Formalism.FormalGroupWitt.FormalGroupWittProofs.EqSingleOfDegreeEqOne
 import Formalism.FormalGroupWitt.FormalGroupWittProofs.ShiftFE
 import Formalism.FormalGroupWitt.FormalGroupWittProofs.FrobSqV
-import Formalism.FormalGroupWitt.FormalGroupWittProofs.CongrV
+import Mathlib.RingTheory.MvPowerSeries.Rename
 
 noncomputable section
 

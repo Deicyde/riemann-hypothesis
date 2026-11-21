@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.PolynomialDegreeExpansion
 
 namespace Formalism.FourierDecayAlt.P.WordNormLpLemmas
@@ -14,7 +15,7 @@ theorem normW_Lp {S : Type} {K : ℕ} (nn : ℝ → ℝ) (sl : Fin K → S) (y :
     normW nn (Lp sl y) = ∏ a, nn (y a) := by
   unfold normW Lp
   rw [List.map_ofFn, List.prod_ofFn]
-  simp [Function.comp_def]
+  simp
 
 theorem normW_Lp_dl {S : Type} {K : ℕ} (nn : ℝ → ℝ) (sl : Fin K → S) (y : Fin K → ℝ) :
     normW nn ((Lp sl y).map dl) = ∏ a, nn (y a + 1) := by

@@ -1,8 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.ExistenceTheorem.ExistsIsAbelianGaloisRangeIdeleClassNormEqOfFini
-import GroundTheory.GlobalFields.NormResidueSymbol.RestrictNormalInfiniteLocalSymbol
-import GroundTheory.GlobalFields.NormResidueSymbol.FunctorialLocal
-import GroundTheory.LocalFields.MaximalAbelianExtension
 
 namespace GroundTheory.Global
 

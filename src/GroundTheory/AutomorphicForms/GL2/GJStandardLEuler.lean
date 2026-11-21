@@ -1,7 +1,9 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.GL2.GJStandardLDefs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.GL2.GJStandardLTensor
 import GroundTheory.AutomorphicForms.GL2.GJStandardLBump
+import GroundTheory.AutomorphicForms.GL2.GJGlobalDefs
+import GroundTheory.AutomorphicForms.RestrictedHaarProduct
 
 open MeasureTheory Filter Set Topology IsDedekindDomain NumberField NumberField.mixedEmbedding
 open scoped NumberField.AdeleRing RestrictedProduct SchwartzMap Classical ENNReal NNReal

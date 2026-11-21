@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.CmQuadraticFormEqAlternatingForm
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.HermitianColumns.SymAll
 import Formalism.LocalToGlobal.Columns.DecoFin
 import Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.EqOfLeOfAbsNormEq

@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.DualFockLinear.RhoAtGOfPair
+import Formalism.SharpRestriction.GrowthBounds.DualFockLinear.RestCloudBOfTop
 
 noncomputable section
 
@@ -35,7 +37,7 @@ theorem ordMax_top {n' m : ℕ} (hm : 2 ≤ m) {TT : Finset (Fin n')} {aT bT : F
     by_cases hs : s ∈ TT
     · have e1 : restW TT lam0 s (Fin.last m) = lam0 s (Fin.last m) := by
         unfold restW flW
-        simp [Pi.single_apply, hl0]
+        simp [hl0]
       have e0 : restW TT lam0 s 0 = lam0 s 0 - (dT TT lam0 s : ℤ) := by
         unfold restW flW
         simp

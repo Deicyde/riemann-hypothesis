@@ -1,9 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.OfFactorE
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsProjOverWeierstrass
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.MumfordConstruction
-import Development.AbelianVarietyTheory.Definitions.Degenerations.AdmissibleBaseOfCompleteDvr
-import Development.AbelianVarietyTheory.Proofs.CharacterTheory.W8AddTransposeEqE8
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AlgIdemBinv
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LamPtsPull
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLinCombPullbackTransportIsoWithValues
@@ -413,7 +409,7 @@ theorem pairing_factor : ∀ (R : Type) [CommRing R] [IsDomain R] [IsLocalRing R
         refine Finset.prod_eq_one fun j _ => ?_
         rw [Fin.prod_univ_four, if_neg hi]
         simp only [GlobalTheory.PolDeg.lamPts, Oε, _root_.one_mul]
-        simp [zpow_mul, zpow_neg]
+        simp
         apply Additive.ofMul.injective
         simp only [ofMul_mul, ofMul_zpow, ofMul_one]
         module)

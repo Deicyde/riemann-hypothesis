@@ -1,9 +1,7 @@
-import Mathlib
-import ReciprocityTheory.ClassFieldTheory.LocalClassField.ExistsIntEKMulVbar
-import ReciprocityTheory.ClassFieldTheory.LocalClassField.GalBasic
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ClassFieldTheory.LocalClassField.CyclicBr
 import ReciprocityTheory.ClassFieldTheory.LocalClassField.EqZeroOfMemBrKerOfCoprime
-import ReciprocityTheory.ClassFieldTheory.LocalClassField.EqZeroOfResEqZeroOfCoprime
 
 namespace ReciprocityTheory.DiscreteGroups.LocalClassField
 

@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.ProductFirstZerothParts
-import Formalism.LocalRingCardinality.DataKerP
 import Formalism.SharpRestriction.GlobalSchurBounds.GL3Theta
 
 noncomputable section

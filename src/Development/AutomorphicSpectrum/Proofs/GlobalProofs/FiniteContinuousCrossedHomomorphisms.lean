@@ -1,7 +1,9 @@
-import Mathlib
-import ReciprocityTheory.Hypotheses.GalCoh
-import GroundTheory.ProfiniteCohomology.RestrictedRamification.IsUnramifiedOutsideIffLeMaxUnramifiedOutside
-import GroundTheory.ProfiniteCohomology.ContinuousCochains
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.ProfiniteCohomology.DiscreteModules
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open NumberField IsDedekindDomain CategoryTheory GroundTheory.ProfCoh ReciprocityTheory.Gal Formalism.ConjugateSelfDual
 

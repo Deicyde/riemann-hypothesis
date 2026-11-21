@@ -1,10 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.ApplyEqOfMemAdjoin
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsTopWTopWOfExists
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.SiegelUnitInTowerSlActionRowVector
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.SmoothedSiegelUnitIndexAddIntVector
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ModularTowerMemAdjoinJOfSlTwoIntInvariantStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.SiegelInvarianceImpliesCongruenceStatement
+import Development.AbelianVarietyTheory.Definitions.Foundations.EeProd
+import Mathlib.Order.CompletePartialOrder
 open scoped MatrixGroups
 open GlobalTheory.KZ GlobalTheory.Glue GlobalTheory.K5 GlobalTheory.KummerEisensteinGalois
 
@@ -157,7 +156,7 @@ theorem admissible_of_integral_conj_le (M c : ℕ) (hc : 1 < c) (hc6 : Nat.Copri
     exact hcop.dvd_of_dvd_mul_left ⟨m, h2⟩
   rintro ⟨h0, h1⟩
   apply hab
-  simp only [Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons] at h0 h1
+  simp only [Matrix.cons_val_zero, Matrix.cons_val_one] at h0 h1
   exact ⟨key a h0, key b h1⟩
 
 theorem siegel_inv {Ω : Type} [Field Ω] [Algebra ℚ Ω] [IsAlgClosure ℚ Ω] {ε : Ω →+* ℂ} (X : Tower Ω ε)

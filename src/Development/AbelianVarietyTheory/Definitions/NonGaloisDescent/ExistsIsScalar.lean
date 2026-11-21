@@ -1,8 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.AdmQAdmissibleConjugatePairPlaces
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SurjConj
 import Formalism.LocalToGlobal.IndefiniteReal.DoubleCosetOperators.RatDatOfReal
-import Formalism.LocalToGlobal.IndefiniteReal.ThPinsR
 
 noncomputable section
 

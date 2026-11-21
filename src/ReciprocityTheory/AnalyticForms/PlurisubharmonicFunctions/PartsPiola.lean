@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.PartsCalc
+import Mathlib.Analysis.Calculus.FDeriv.Symmetric
 
 namespace ReciprocityTheory.AnForm.A
 
@@ -226,7 +229,7 @@ private lemma sum_superset_neg_one_pow_fin_eq_ite_univ (N : ℕ) (T : Finset (Fi
   rw [h1, h0]
   by_cases hT : T = Finset.univ
   · have h2 : Tᶜ = ∅ := by rw [hT]; simp
-    simp [h2, hT]
+    simp [hT]
   · have h2 : Tᶜ ≠ ∅ := by
       intro h
       apply hT

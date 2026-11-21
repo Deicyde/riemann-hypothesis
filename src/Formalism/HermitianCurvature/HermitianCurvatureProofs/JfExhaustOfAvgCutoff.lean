@@ -1,10 +1,6 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.JfBetaAdjCOfLemmaBNorm
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BigCellDiagonalMap
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BigCellInversePair
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.WordIntegralScaling
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.SmoothWordsAll
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.SandwichRhoAction
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CapelliUnderIntegral
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.StatementJF
 
 open Matrix MeasureTheory Filter Topology
 open scoped ContDiff

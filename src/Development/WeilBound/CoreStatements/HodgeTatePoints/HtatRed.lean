@@ -1,11 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.HodgeTatePoints.HtatHtBc
 import Development.WeilBound.CoreStatements.HodgeTatePoints.HtatLieBc
 import Development.WeilBound.CoreStatements.HodgeTatePoints.HtatLieIso
 import Development.AutomorphicSpectrum.Statements.GeometryStatements.IsPolLatticePlane
 import Development.AutomorphicSpectrum.Statements.GeometryStatements.HTChartExists
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.TwoWeightEqOneAddRoot
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.ImportsLast
+import Mathlib.GroupTheory.FiniteAbelian.Basic
 open CategoryTheory AlgebraicGeometry MonoidalCategory CartesianMonoidalCategory MonObj TensorProduct NumberField GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.BT GlobalTheory.CompanionTheory.Ar.HT ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 
 noncomputable section
@@ -79,7 +80,7 @@ theorem isBaseChange_dual [Module.Finite A M] [Module.Projective A M] (hg : IsBa
     show Φ (∑ i, y (g (e i)) • ((1 : B) ⊗ₜ[A] f i)) (g m) = _
     have h3 : y (g m) = ∑ i, algebraMap A B (f i m) * y (g (e i)) := by
       conv_lhs => rw [← hef m]
-      simp [map_sum, Algebra.smul_def, ← IsScalarTower.algebraMap_smul B]
+      simp [map_sum, ← IsScalarTower.algebraMap_smul B]
     rw [h3, map_sum, LinearMap.sum_apply]
     refine Finset.sum_congr rfl fun i _ => ?_
     simp [Φ, _root_.mul_comm]

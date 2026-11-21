@@ -1,9 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.DivPowerCompatTwoFormDerivativeCompOneForm
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLiftAndAugmentationMap
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPdPoly
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsDPMorphismOfIsStd
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FilProperties
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FilIsSubDPIdeal
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.QuotientSubDPIdeal
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsStdStatement

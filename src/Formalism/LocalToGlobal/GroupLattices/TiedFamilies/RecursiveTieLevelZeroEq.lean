@@ -1,5 +1,7 @@
-import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.TieTrJ
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.FullTiedCBase
+import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.TieTrF
 
 noncomputable section
 

@@ -1,8 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeFinIntEq
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedPlaneSecondVariableStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedPlaneFirstVariableStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaEvaluationZeroConeStatement
@@ -10,7 +6,6 @@ import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsGoodSchroding
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeckeCharactersRestrictionEtaStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairDoubleDescentStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairDoubleDescentModelsStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianAdaptedPlaneRestriction
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicPlaneComplementForm
 
 open scoped TensorProduct NNReal Matrix
@@ -129,7 +124,7 @@ theorem exists_levi_one {F E : Type} [Field F] [NumberField F] [Field E] [Number
       funext r; simp [Q, mulVec, dotProduct, Pi.single_apply]
     have e2 : fromBlocks (mat h₁) 0 0 (1 : Matrix (Fin 2) (Fin 2) (AE F E)) *ᵥ Pi.single (Sum.inr t) 1 =
         Pi.single (Sum.inr t) 1 := by
-      ext i; rcases i with i | i <;> simp [mulVec, dotProduct, Pi.single_apply, one_apply, Fintype.sum_sum_type]
+      ext i; rcases i with i | i <;> simp [mulVec, dotProduct, Pi.single_apply, one_apply]
     rw [e1, mulVec_mulVec, hMQ, ← mulVec_mulVec, e2]
   refine ⟨?_, ?_, ?_⟩
   · rw [Units.val_one, one_smul]; exact hcol 0

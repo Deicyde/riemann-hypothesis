@@ -1,5 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RigExtMapRelFrobCompRigOfOmega
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.ToSpanSingletonConstGenInjective
+import Mathlib.RingTheory.MvPowerSeries.Substitution
+import Mathlib.RingTheory.WittVector.Teichmuller
 
 set_option autoImplicit false
 

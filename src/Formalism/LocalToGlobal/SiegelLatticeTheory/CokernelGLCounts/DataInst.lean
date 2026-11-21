@@ -1,12 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementC
-import Formalism.SharpRestriction.CuspSpanNormBounds.LocalGroupInFamilyNontrivial
 import Formalism.SharpRestriction.CuspSpanNormBounds.LocalModelPeriodLattices
 import Formalism.LocalToGlobal.SiegelLatticeTheory.PtEquivApply
-import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.CntLocal
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.PairVal
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.Corank
-import Formalism.LocalRingCardinality.SpanPowerMembership.ExampleLayerExistsGenerators
 
 noncomputable section
 

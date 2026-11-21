@@ -1,8 +1,12 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.HodgeIPIffHodgeFormConj
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.ToricGeometry.TopLePreimageOfValAtNeZero
 import Development.AbelianVarietyTheory.Proofs.ToricGeometry.TangentBijectionOfValues
 import Development.AbelianVarietyTheory.Proofs.ToricGeometry.SectionsPowThetaFunctions
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import Mathlib.RingTheory.TotallySplit
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory.CompanionTheory.Ar
@@ -18,7 +22,7 @@ variable {X Y : Scheme.{0}}
 theorem top_le_wchart_iff (L : LB X) {K : Type} [Fintype K] (φ : K → (Y ⟶ X)) (y : Sp ℂ ⟶ Y)
     (j : K → L.ι) : ⊤ ≤ y ⁻¹ᵁ LB.wchart L φ j ↔ ∀ k, ⊤ ≤ (y ≫ φ k) ⁻¹ᵁ L.U (j k) := by
   rw [GlobalTheory.top_le_preimage_iff_mem]
-  simp only [GlobalTheory.top_le_preimage_comp, GlobalTheory.top_le_preimage_iff_mem]
+  simp only [GlobalTheory.top_le_preimage_iff_mem]
   exact Set.mem_iInter
 
 theorem val_linComb_g (L : LB X) {K : Type} [Fintype K] (φ : K → (Y ⟶ X)) (y : Sp ℂ ⟶ Y)

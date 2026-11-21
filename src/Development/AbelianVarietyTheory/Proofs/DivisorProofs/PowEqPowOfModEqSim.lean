@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompPowPts
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HarrisTaylorObjectMapsComposeCancel
 import Development.AbelianVarietyTheory.Definitions.Divisors.NonemptyIso
+import Batteries.Data.Nat.Gcd
 
 noncomputable section
 

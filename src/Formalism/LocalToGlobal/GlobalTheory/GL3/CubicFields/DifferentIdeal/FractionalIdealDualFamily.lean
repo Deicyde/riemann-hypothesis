@@ -1,5 +1,11 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.GL3.CubicFields.DifferentIdeal.LineR
 import Formalism.LocalToGlobal.GlobalTheory.GL3.CubicFields.DifferentIdeal.SumEmbDualBasisComplex
+import Mathlib.RingTheory.DedekindDomain.Different
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 

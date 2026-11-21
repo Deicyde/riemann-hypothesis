@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.KTheoryStability.ReductionBoundsTorsion.CompactLocalSets.OverlapG
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 

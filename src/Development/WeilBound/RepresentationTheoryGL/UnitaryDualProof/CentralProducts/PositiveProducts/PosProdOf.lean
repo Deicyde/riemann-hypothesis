@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.CentralProducts.PositiveProducts.NontrivialOfNeBot
-import CompanionTheory.AutomorphicTheory.HeckeStandardModules.EqZeroOfCompAt
+import Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.BernsteinExponentBounds.IsInvForm
 
 noncomputable section
 

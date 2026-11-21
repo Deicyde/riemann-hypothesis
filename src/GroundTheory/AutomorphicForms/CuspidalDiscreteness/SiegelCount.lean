@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.CuspidalDiscreteness.Counting
-import GroundTheory.AutomorphicForms.Reduction
+import GroundTheory.AutomorphicForms.NormDetDiagUnitsPosRealToUnits
+import GroundTheory.AutomorphicForms.ReductionMahler
 
 open NumberField IsDedekindDomain Set Matrix
 open scoped NumberField.AdeleRing Pointwise

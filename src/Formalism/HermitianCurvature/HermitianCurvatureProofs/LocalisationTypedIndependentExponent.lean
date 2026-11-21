@@ -1,4 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.PrimeToDifferent
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Topology.Sheaves.Presheaf
 
 namespace Formalism.FourierDecayAlt.P.S6x6
 open NumberField NumberField.IsCMField Module Formalism.FourierDecayAlt.S6

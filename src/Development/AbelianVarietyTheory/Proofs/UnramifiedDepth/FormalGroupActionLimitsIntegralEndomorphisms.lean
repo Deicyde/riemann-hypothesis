@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CharacterGerms.RowTieFB
+import Mathlib.Algebra.Order.Ring.Star
 
 noncomputable section
 

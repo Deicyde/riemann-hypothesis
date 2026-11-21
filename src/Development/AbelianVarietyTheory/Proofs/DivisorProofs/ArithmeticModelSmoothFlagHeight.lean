@@ -1,8 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSplitting
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsAffineStableLieEigenspaceFrame
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EigenMetricOnSet
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsConjFsBasisOfUnitary
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLieFrames
 
 set_option autoImplicit false
 

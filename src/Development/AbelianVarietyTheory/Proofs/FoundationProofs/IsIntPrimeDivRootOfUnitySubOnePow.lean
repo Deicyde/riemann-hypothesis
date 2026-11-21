@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.NotCoboundaryConstantOne
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.KummerTowerQqPowLevelEqQ
 open GlobalTheory.K5 GlobalTheory.KumDlog
 
 namespace GlobalTheory.K5.PDiv

@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.CompactGapsGE
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open MvPolynomial Filter Topology GlobalTheory.CompanionTheory.Ar.Top
 
 noncomputable section

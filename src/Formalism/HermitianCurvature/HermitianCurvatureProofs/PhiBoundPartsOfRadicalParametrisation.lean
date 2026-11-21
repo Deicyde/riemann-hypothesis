@@ -1,12 +1,13 @@
-import Formalism.HermitianCurvature.StatementU
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.DilationUnipotentWeylMeasure
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BetaSesquilinearity
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.SymmetricScalarBlockMatrixTranspose
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.SymmetricScalarBlockMatrixMul
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.DirectionsInParabolic
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.Block3MulBlocks
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CoordinateSizesOfHypotheses
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.CayleyTransformPreservesForm
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
 
 noncomputable section
 
@@ -1045,7 +1046,7 @@ lemma cont_lowW {p : ℕ} (σ : Equiv.Perm (Fin p)) {f : X → LW σ → ℂ} (h
       Matrix (Fin p) (Fin p) ℂ) := by
     refine continuous_pi fun a => continuous_pi fun b => ?_
     by_cases h : b < a ∧ σ.symm b < σ.symm a
-    · simp only [Matrix.of_apply, h, dite_true]
+    · simp only [Matrix.of_apply, h]
       exact (continuous_apply _).comp hf
     · simp only [Matrix.of_apply, h, dite_false]
       exact continuous_const
@@ -1116,14 +1117,14 @@ lemma cont_supS {p : ℕ} {f : X → Matrix (Fin p) (Fin p) ℂ} (hf : Continuou
 lemma cont_cornerA {p s : ℕ} {f : X → Fin s → Fin p → ℂ} (hf : Continuous f) : Continuous fun x => cornerA (f x) := by
   unfold cornerA
   by_cases h : 0 < s ∧ 0 < p
-  · simp only [h, dite_true]; exact (continuous_apply_apply _ _).comp hf
+  · simp only [h]; exact (continuous_apply_apply _ _).comp hf
   · simp only [h, dite_false]; exact continuous_const
 
 @[fun_prop]
 lemma cont_cornerB {p s : ℕ} {f : X → Fin p → Fin s → ℂ} (hf : Continuous f) : Continuous fun x => cornerB (f x) := by
   unfold cornerB
   by_cases h : 0 < s ∧ 0 < p
-  · simp only [h, dite_true]; exact (continuous_apply_apply _ _).comp hf
+  · simp only [h]; exact (continuous_apply_apply _ _).comp hf
   · simp only [h, dite_false]; exact continuous_const
 
 @[fun_prop]

@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.TcoMem
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.CardAlgHomReducedTraceSum
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.FibFiniteAndSep
 open GlobalTheory GlobalTheory.PD GlobalTheory.CechDR KaehlerDifferential

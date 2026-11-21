@@ -1,19 +1,12 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsHtFunGenericIff
-import Development.AbelianVarietyTheory.Definitions.Divisors.HypothesesX
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsX
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InterNumRedCloPull
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InterPolyHomog
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DegFlLamAPowVdmCl
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FlagDeterminantIso
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FlagRootDivisorRelation
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LbIsoDetAffDetOm
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsBaseOfFlagCpt
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FlagSpaceComponentBaseDimEqCmTypeCardMulPq
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.GoodChernWeilOfGoodTopChernForm
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ToroidalFlagProportionalityOfGoodChernWeil
 
 set_option autoImplicit false
 
@@ -122,7 +115,7 @@ theorem interPoly_sum_pow_fibrePoint (hG : GlobalTheory.Published.GoodChernNumbe
       obtain ⟨⟨⟩, i⟩ := x
       rw [hev]
       rw [Subsingleton.elim i 0]
-      simp [Matrix.mul_apply, Matrix.inv_def, mul_comm]
+      simp [Matrix.mul_apply, mul_comm]
   have h₁ := hG F σ B B Unit _ L (lineFlag (ι := Unit) L) _ _ _ (refines_lineFlag _) hgr ⊤ H' hH'
     (fun y hy => absurd mem_ptsIn_top hy) (X ((), 1) ^ B.dim)
   have e₁ : chernRoots (fun _ : Unit => 1) (X ((), 1) ^ B.dim) * fibrePoint _ = ∏ _i : Fin B.dim, X ⟨(), 0⟩ := by

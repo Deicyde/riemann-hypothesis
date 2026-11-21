@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ConjugateRepresentations.LocalLimitConjugates.CasimirResolventProjection
 
 open NumberField Matrix MeasureTheory Filter Topology Formalism.L2.Host GlobalTheory.CuspRep GlobalTheory.GKCoh GlobalTheory.UnitaryBC UpperTheory.V.Af UpperTheory.V.AlgRepEndIrreducible
@@ -23,7 +24,7 @@ theorem UpperTheory.V.Cj.H.absDense :
         rw [inner_add_left, ha v, hb v, add_zero]
       zero_mem' := by
         intro v
-        simp only [Set.mem_setOf_eq, inner_zero_left]
+        simp only [inner_zero_left]
       smul_mem' := by
         intro c a ha v
         simp only [Set.mem_setOf_eq] at ha ⊢

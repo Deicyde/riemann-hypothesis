@@ -1,6 +1,4 @@
-import Mathlib
-import Formalism.SharpRestriction.GlobalSchurBounds.ThickPlacesCorollaryOfAnyTranslate
-import Formalism.LocalToGlobal.HermitianForms.BothSym
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.UnitTraceSumBounds.RankConditionsOfLayerTwo
 open Formalism.BasicNotions Formalism.MainNotions
 

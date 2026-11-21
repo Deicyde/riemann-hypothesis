@@ -1,6 +1,5 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.Signature
-import Development.AbelianVarietyTheory.Definitions.SpanningFamilies.IMemSiegel
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.SpanningFamilies.FirstCoordinateAdmissible
 
 open Matrix Complex NumberField
@@ -43,7 +42,7 @@ theorem mem_stdL {m : ℕ} (x : Fin m → E) : x ∈ stdL E m ↔ ∀ a, IsInteg
         simp
       · intro a _ h
         change x a * (Pi.single a (1 : E) : Fin m → E) b = 0
-        simp [Pi.single_apply, Ne.symm h]
+        simp [Ne.symm h]
       · simp
     rw [this]
     exact Submodule.sum_mem _ fun a _ => Submodule.smul_mem _ _ (Submodule.subset_span ⟨a, rfl⟩)
@@ -51,7 +50,7 @@ theorem mem_stdL {m : ℕ} (x : Fin m → E) : x ∈ stdL E m ↔ ∀ a, IsInteg
 theorem herm_one {m : ℕ} (x y : Fin m → E) : herm 1 x y = ∑ a, x a * cc (y a) := by
   unfold herm
   refine Finset.sum_congr rfl fun a _ => ?_
-  rw [Finset.sum_eq_single a] <;> simp +contextual [Matrix.one_apply, eq_comm]
+  rw [Finset.sum_eq_single a] <;> simp +contextual [eq_comm]
 
 theorem stdL_mem_Vset (n M : ℕ) : stdL E n ∈ Vset E n M := by
   refine ⟨Submodule.fg_span (Set.finite_range _), fun x => ⟨fun hx y hy => ?_, fun h => ?_⟩,
@@ -64,7 +63,7 @@ theorem stdL_mem_Vset (n M : ℕ) : stdL E n ∈ Vset E n M := by
     have := h (Pi.single a 1) (Submodule.subset_span ⟨a, rfl⟩)
     rw [herm_one, Finset.sum_eq_single a] at this
     · simpa [cc] using this
-    · intro b _ hb; simp [Pi.single_apply, hb, cc]
+    · intro b _ hb; simp [hb, cc]
     · simp
 
 theorem one_mem_DH (n M : ℕ) : (1 : Matrix (Fin n) (Fin n) E) ∈ DH E n M := by
@@ -136,7 +135,7 @@ theorem I_mem_Hn (Ψ : Finset (E →+* ℂ)) (N : ℕ) :
 
 theorem ccT_J (N : ℕ) : ccT (Matrix.J (Fin N) E) = -Matrix.J (Fin N) E := by
   have : (Matrix.J (Fin N) E).map cc = Matrix.J (Fin N) E := by
-    ext (i | i) (j | j) <;> by_cases h : i = j <;> simp [Matrix.J, cc, Matrix.one_apply, h]
+    ext (i | i) (j | j) <;> by_cases h : i = j <;> simp [Matrix.J, cc, h]
   rw [ccT, this, Matrix.J_transpose]
 
 theorem J_mem_UU (N : ℕ) : Matrix.J (Fin N) E ∈ UU E N := by
@@ -307,7 +306,7 @@ theorem lag_nontrivial (N : ℕ) : Nontrivial (Lag E (N + 1)) := by
   have h3 : botSpan (1 : M2 E (N + 1)) ≤ LinearMap.ker (LinearMap.proj (Sum.inl 0)) := by
     refine Submodule.span_le.2 ?_
     rintro _ ⟨a, rfl⟩
-    simp [Matrix.one_apply]
+    simp
   simpa [Matrix.J] using h3 h2
 
 open Classical in
@@ -381,10 +380,10 @@ theorem wt_rank_zero (M : ℕ) (Λ : Lt E 0) : wt M Λ = 1 := by
 theorem neg_one_mem_DH (n : ℕ) : (-1 : Matrix (Fin n) (Fin n) E) ∈ DH E n 2 := by
   refine ⟨?_, 1, one_pos, by norm_num, -1, fun i j => ?_, ?_⟩
   · have : ccT (-1 : Matrix (Fin n) (Fin n) E) = -1 := by
-      ext i j; by_cases h : i = j <;> simp [ccT, cc, Matrix.one_apply, h, eq_comm]
+      ext i j; by_cases h : i = j <;> simp [ccT, cc, h, eq_comm]
     rw [this]; simp
-  · by_cases h : i = j <;> simp [Matrix.one_apply, h, isIntegral_zero, isIntegral_one.neg]
-  · ext i j; by_cases h : i = j <;> simp [Matrix.one_apply, h]; norm_num
+  · by_cases h : i = j <;> simp [h, isIntegral_zero, isIntegral_one.neg]
+  · ext i j; by_cases h : i = j <;> simp [h]; norm_num
 
 omit [IsCMField E] in
 

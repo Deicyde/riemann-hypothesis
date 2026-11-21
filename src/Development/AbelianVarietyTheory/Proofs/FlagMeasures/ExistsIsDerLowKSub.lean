@@ -1,9 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ActSingleNeZero
-import Development.AbelianVarietyTheory.Statements.CuspFrameWeights.EigenfunctionFiniteCoefficients
-import Formalism.RealPlaceAnalysis.RealPlaceTaylor.FirstSlotSliceSlotMixedCasimirZero
-import Formalism.RealPlaceAnalysis.RealPlaceTaylor.IsCompactInvariantOrthogonalInf
-import Formalism.RealPlaceAnalysis.FinalF
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsSmoothCompactSupportFixLowestKType
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsIsDer
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ContDiffFderivMul

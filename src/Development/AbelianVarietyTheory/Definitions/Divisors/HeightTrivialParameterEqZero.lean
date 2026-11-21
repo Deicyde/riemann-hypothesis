@@ -1,9 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.TwoClassFrameHasLevelSetting
 import Development.AbelianVarietyTheory.Definitions.Divisors.BlockPairCycPow
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlockDataOfCongruentHeckeSystem
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsLocalPrimeAinf
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DenseRangeOfIsAlgClosed
+import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.ChebotarevDegreeOneIffCheb
 
 set_option autoImplicit false
 
@@ -84,7 +85,7 @@ theorem grp_rank_one {R : Type} [CommRing R] (mu : Unit → ℕ → ℕ) (g : Un
         have := congrFun hr 0
         simpa [Finsupp.weight_apply, Finsupp.sum_fintype, Formalism.GradedWeylDivisibility.colW, res, Fintype.sum_prod_type] using this
       rw [← hd]
-      simp [Formalism.UG.dwAct, Formalism.GradedWeylDivisibility.rowAct, MvPolynomial.aeval_monomial, Finsupp.prod_fintype, Fintype.prod_prod_type,
+      simp [Formalism.UG.dwAct, Formalism.GradedWeylDivisibility.rowAct, Finsupp.prod_fintype, Fintype.prod_prod_type,
         MvPolynomial.monomial_eq, mul_pow, MvPolynomial.smul_eq_C_mul]
       ring
 

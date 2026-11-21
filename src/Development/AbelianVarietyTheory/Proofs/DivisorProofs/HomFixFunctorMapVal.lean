@@ -1,9 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToRingActOpOfRingAct
-import Development.AbelianVarietyTheory.Definitions.Divisors.NonemptyHomFixRepTrivial
-import Development.AbelianVarietyTheory.Definitions.ModuliSpaces.IsGaloisCover
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.IsRepresentableOfCover
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.SabPull
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsGrpPullback
 
 noncomputable section
 
@@ -67,7 +64,7 @@ abbrev basePair {T T' : Scheme.{0}} (c : T' ⟶ T) (p : Pair A B T) : Pair A B T
 theorem basePair_id {T : Scheme.{0}} (p : Pair A B T) : basePair A B (𝟙 T) p = p := by
   obtain ⟨t, Φ⟩ := p
   refine pair_ext A B (Category.id_comp t) _ _ ?_
-  simp only [basePair, baseHom_fst]
+  simp only [baseHom_fst]
   congr 1
 
 theorem basePair_comp {T T' T'' : Scheme.{0}} (c : T' ⟶ T) (c' : T'' ⟶ T') (p : Pair A B T) :
@@ -81,7 +78,7 @@ theorem basePair_comp {T T' T'' : Scheme.{0}} (c : T' ⟶ T) (c' : T'' ⟶ T') (
       exact pullback.lift_fst _ _ _
     · simp [pullback.map]
       exact pullback.lift_snd_assoc _ _ _ _
-  simp only [basePair, baseHom_fst, baseHom_fst_assoc]
+  simp only [basePair, baseHom_fst]
   rw [← e]
   simp only [Category.assoc]
 

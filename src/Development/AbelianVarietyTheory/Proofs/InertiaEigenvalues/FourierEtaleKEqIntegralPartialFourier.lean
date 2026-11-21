@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsTestRep
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.UnifConst
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
 open GlobalTheory.JR Matrix MeasureTheory Filter Topology
 
 noncomputable section

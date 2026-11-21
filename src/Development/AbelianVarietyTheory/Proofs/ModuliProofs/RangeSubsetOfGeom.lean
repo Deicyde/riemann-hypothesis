@@ -1,9 +1,13 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.HeckeKer
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsHolPeriods
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.UnifUniqSt
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.IsIsoIffBijectiveOverAlgClosed
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.AlgebraicGeometry.AlgClosed.Basic
+import Mathlib.AlgebraicGeometry.QuasiAffine
+import Mathlib.CategoryTheory.Monoidal.Cartesian.Grp
+import Mathlib.Data.Int.Star
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsCompletedStrictHens
 
 noncomputable section
 
@@ -55,7 +59,7 @@ theorem exists_finite_mod (M : Type) [AddCommGroup M] [Module.Free ℤ M] [Modul
   choose c hc using h1
   refine ⟨b.equivFun.symm c, b.equivFun.injective (funext fun i => ?_)⟩
   rw [map_add, map_nsmul, LinearEquiv.apply_symm_apply]
-  simp only [Module.Basis.equivFun_apply, Pi.add_apply, Pi.smul_apply, nsmul_eq_mul, Pi.mul_apply, Pi.natCast_apply]
+  simp only [Module.Basis.equivFun_apply, Pi.add_apply, nsmul_eq_mul, Pi.mul_apply, Pi.natCast_apply]
   linarith [hc i]
 
 theorem clopenCond_eq {T Z : Over S} [IsFinite Z.hom] [Etale Z.hom] (u u' : T ⟶ Z) :

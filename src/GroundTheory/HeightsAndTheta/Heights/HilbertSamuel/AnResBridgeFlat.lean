@@ -1,7 +1,6 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterBridgeE
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterBridgeK
-import ReciprocityTheory.AnalyticForms.AnalyticCharts.NullZero
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.AnResBridgeAnalytic
 set_option maxSynthPendingDepth 1
 

@@ -1,9 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.ThShort
-import Formalism.LocalToGlobal.ProjectiveLattices.ThClassPins
 import Formalism.LocalToGlobal.ProjectiveLattices.NonnegIffOfLiesTotal
-import Development.AbelianVarietyTheory.Definitions.ThetaValues.LeCovCoeff
-import Development.AbelianVarietyTheory.Definitions.Divisors.UnifOfSpaceEq
 
 noncomputable section
 

@@ -1,4 +1,6 @@
-import Formalism.SharpRestriction.CuspSpanNormBounds.CayleyDegreeNondegeneracy.GenericDetOfFlagProductBound
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.CuspSpanNormBounds.FlagEEqHyperbolic
 
 noncomputable section
 

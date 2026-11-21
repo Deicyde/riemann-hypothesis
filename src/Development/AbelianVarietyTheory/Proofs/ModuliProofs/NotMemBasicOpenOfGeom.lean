@@ -1,12 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.ModuliSpaces.GoodClass
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.CMModuli.ThetaCosetLabels
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.GlobalFnsHolds
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsThetaLevelAbelianSchemePullback
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ThetaLevelPullbackIdCompCancel
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.HasThetaConstantsIffOfThetaLevelPullback
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsThetaConstantsLocallyOnBase
-import Development.AbelianVarietyTheory.Proofs.ThetaFamilyOrigin.IsThetaPtOverOfSubsingleton
+import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.ExistsCommVOfLe
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open scoped CategoryTheory.Obj
@@ -40,7 +37,7 @@ theorem sum_stdSymp {g k : ℕ} (a c : Lab g k) :
     split_ifs <;> first | rfl | omega
   rw [← (idx g).sum_comp]
   simp_rw [← (idx g).sum_comp]
-  simp [Fintype.sum_sum_type, e₁, e₂, e₃, e₄, labEquiv, omegaLab, Finset.sum_sub_distrib, sub_eq_add_neg,
+  simp [Fintype.sum_sum_type, e₁, e₂, e₃, e₄, labEquiv, omegaLab, sub_eq_add_neg,
     Finset.sum_add_distrib, add_comm]
 
 theorem zpow_eq_pow_val {U : Type} [CommGroup U] {u : U} {k : ℕ} [NeZero k] (hu : u ^ k = 1) {z : ℤ} {w : ZMod k}

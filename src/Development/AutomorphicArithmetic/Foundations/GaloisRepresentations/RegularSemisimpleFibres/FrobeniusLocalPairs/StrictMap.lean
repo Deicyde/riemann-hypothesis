@@ -1,9 +1,7 @@
-import Mathlib
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.RegularSemisimpleFibres.FrobeniusLocalPairs.MatchSmulAlt
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.RegularSemisimpleFibres.FrobeniusLocalPairs.NormDiag
 import Development.AutomorphicArithmetic.Foundations.Convolution.TwistedLocalOrbits.ConjDesc
 import Development.AutomorphicArithmetic.Foundations.Convolution.TwistedLocalOrbits.StrictNormal
-import Development.AutomorphicArithmetic.Foundations.Convolution.TwistedLocalOrbits.Bridge
 
 open MeasureTheory ValuativeRel GlobalTheory.PRep GlobalTheory.SplitWeil GlobalTheory.IndefiniteRowSideFullHecke.IwahoriDoubleCosets PositivityTheory.Rg.Tf.Loc UpperTheory.ConvolutionTheory.Loc
 open GlobalTheory.SmGL hiding iwahori
@@ -14,7 +12,7 @@ private theorem map_diag {E F : Type} [Field E] [Field F] {n : ℕ} (f : E →+*
   by_cases hij : i = j
   · subst hij
     simp [val_diagT]
-  · simp [val_diagT, Matrix.diagonal_apply, hij]
+  · simp [val_diagT, hij]
 
 private theorem diag_comm {E : Type} [Field E] {n : ℕ} (u v : Fin n → Eˣ) :
     diagT E (Fin n) u * diagT E (Fin n) v = diagT E (Fin n) v * diagT E (Fin n) u := by

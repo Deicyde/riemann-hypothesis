@@ -1,7 +1,13 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.QuotientMetricDivisors.Complement2Normaliser
 import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.ValBasic
 import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.ProdFormula
+import Mathlib.Data.Int.Star
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Module NumberField IsDedekindDomain Finset
 
@@ -113,10 +119,10 @@ theorem sum_conj {g : ℕ} (hS : {w : HeightOneSpectrum (𝓞 K) | PlOver g w}.F
     ∑ w ∈ hS.toFinset, f (conjPl w) = ∑ w ∈ hS.toFinset, f w := by
   apply Finset.sum_nbij' conjPl conjPl
   · intro w hw
-    simp only [Set.Finite.coe_toFinset, Set.Finite.mem_toFinset, Set.mem_setOf_eq] at hw ⊢
+    simp only [Set.Finite.mem_toFinset, Set.mem_setOf_eq] at hw ⊢
     exact (plOver_conj g w).2 hw
   · intro w hw
-    simp only [Set.Finite.coe_toFinset, Set.Finite.mem_toFinset, Set.mem_setOf_eq] at hw ⊢
+    simp only [Set.Finite.mem_toFinset, Set.mem_setOf_eq] at hw ⊢
     exact (plOver_conj g w).2 hw
   · intro w _; exact conjPl_conjPl_lemma w
   · intro w _; exact conjPl_conjPl_lemma w

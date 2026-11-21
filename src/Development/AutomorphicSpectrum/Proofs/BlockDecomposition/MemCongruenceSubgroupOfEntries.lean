@@ -1,14 +1,9 @@
-import Mathlib
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.KFiniteThetaLifts.RationalPrimesBelowPlaces
-import GroundTheory.LocalFields.QuadraticAbelian.WeilRepQuadratic
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DetThreePointsEqExpansion
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WhittakerAdditiveCharacterEquivariance
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WhittakerSmoothness
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WhittakerWellDefined
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SecSet
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsStdInvAndTrivialAndNontrivial
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.TestVectorNonvanishingLocal
 import GroundTheory.AutomorphicForms.GL2.GJZetaDefs
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SphericalFirst
 open NumberField IsDedekindDomain MeasureTheory Topology GroundTheory.Global GroundTheory.LocalField GroundTheory.Automorphic GroundTheory.Automorphic.AutomorphicForm Ad3 Ad3.K Ad3.K.QuadraticBaseChangeGL3
 open GroundTheory.Automorphic.GodementSection (localChar)
 open GroundTheory.Global.AdicLiesOver
@@ -215,7 +210,7 @@ theorem support_and_value : ∀ (F : Type) [Field F] [ValuativeRel F] [Topologic
   · have e := fun i j => GodementSectionLocal.sub_one_mem_valBall_of_mem_congruenceSubgroup hu i j
     have h00 := e 0 0
     have h01 := e 0 1
-    simp only [Matrix.one_apply_eq, ne_eq, zero_ne_one, one_ne_zero, not_false_eq_true,
+    simp only [Matrix.one_apply_eq, ne_eq, zero_ne_one, not_false_eq_true,
       Matrix.one_apply_ne, sub_zero] at h00 h01
     obtain ⟨hd, a, k, ha, hk, hkm, ed⟩ := exists_decomp_congruence hm u u10 u11
     have hv1 := valuation_eq_one_of_sub_one (mem_one_of_nat hm u11)

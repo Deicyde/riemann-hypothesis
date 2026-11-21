@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.NumberFieldFamilies.ThetaCP
 import Formalism.LocalToGlobal.BesselHermitianTheta.TiedWeilEq
 import Formalism.LocalToGlobal.BesselHermitianTheta.AllTied
@@ -282,7 +284,7 @@ theorem besselUnipotentSubgroup_zero_subsingleton {A B : HSp D} {ι : A.V →ₗ
 
 theorem dirac_haar {G : Type} [Group G] [TopologicalSpace G] [MeasurableSpace G] (_ : Subsingleton G) :
     (Measure.dirac (1 : G)).IsHaarMeasure :=
-  { toIsMulLeftInvariant := ⟨fun g => by rw [@Subsingleton.elim _ ‹Subsingleton G› g 1]; simp [Measure.map_id']⟩
+  { toIsMulLeftInvariant := ⟨fun g => by rw [@Subsingleton.elim _ ‹Subsingleton G› g 1]; simp⟩
     toIsFiniteMeasureOnCompacts := inferInstance
     toIsOpenPosMeasure := ⟨fun U _ hne => by
       obtain ⟨x, hx⟩ := hne

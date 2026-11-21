@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PadicSubsetSums.StableGradedCounts.CoeffZeroNeZeroOfIrreducible
+import Formalism.PadicSubsetSums.StableGradedCounts.IRRPrimeToPartEqIff
 
 open Finset Polynomial
 

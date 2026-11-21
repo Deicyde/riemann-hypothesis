@@ -1,4 +1,6 @@
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsSmoothModerateOfIsAutFunSm
 open NumberField MeasureTheory Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.AdelicU GlobalTheory.SiegelSet GlobalTheory.UAut GlobalTheory.ThK.SquareIntegrability
 
 namespace GlobalTheory.WittBound
@@ -8,7 +10,7 @@ open Matrix
 theorem quad_mulVec {n k : Type} [Fintype n] [Fintype k] (M : Matrix n n ℂ) (P : Matrix n k ℂ) (x : k → ℂ) :
     (P *ᵥ x) ⬝ᵥ (M *ᵥ star (P *ᵥ x)) = x ⬝ᵥ ((P.transpose * M * P.map star) *ᵥ star x) := by
   have hs : star (P *ᵥ x) = P.map star *ᵥ star x := by
-    funext i; simp [Matrix.mulVec, dotProduct, star_sum, mul_comm]
+    funext i; simp [Matrix.mulVec, dotProduct, star_sum]
   rw [hs, ← Matrix.vecMul_transpose P x, Matrix.mulVec_mulVec, Matrix.dotProduct_mulVec, Matrix.dotProduct_mulVec,
     Matrix.vecMul_vecMul, Matrix.mul_assoc]
 

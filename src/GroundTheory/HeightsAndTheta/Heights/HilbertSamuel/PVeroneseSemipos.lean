@@ -1,6 +1,4 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsSecondVeroneseParts
-import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.ArithModel
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PSecondVeronese
 set_option maxSynthPendingDepth 1
 

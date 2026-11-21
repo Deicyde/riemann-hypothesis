@@ -1,8 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinRel
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TrPApply
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TranslationInvariantFunctionalRestrictStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TranslationInvariantSchwartzUniqueStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzExtensionFromSubspaceStatement

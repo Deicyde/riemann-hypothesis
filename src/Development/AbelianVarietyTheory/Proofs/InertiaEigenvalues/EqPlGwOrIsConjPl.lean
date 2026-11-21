@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.CharAbove
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.InjPrimeTo
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
 open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formalism.ConjugateSelfDual ReciprocityTheory.Gal NumberField IsDedekindDomain Polynomial
 
 noncomputable section

@@ -1,15 +1,6 @@
-import Mathlib
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsPairOfIsTriple
-import Development.AutomorphicArithmetic.LocalEmbeddings.ConeBumpB
-import Development.AutomorphicArithmetic.DivisorFrames.FourierSchwartzBruhatPreserved
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.DivisorFrames.FourierInjectiveSchwartzBruhat
-import Development.AutomorphicArithmetic.DivisorFrames.HaarIntegralUnitsScaling
-import Development.AutomorphicArithmetic.DivisorFrames.LocalThetaPartitionTriple
-import Development.AutomorphicArithmetic.DivisorFrames.LocalThetaPartitionTripleAlt
 import Development.AutomorphicArithmetic.DivisorFrames.ExistsCompactSubgroupCharacter
 import Development.AutomorphicArithmetic.DivisorFrames.ThetaLocalOpenSubgroup
 import Development.AutomorphicArithmetic.DivisorFrames.ExistsSchwartzCharacterAverage
@@ -17,10 +8,7 @@ import Development.AutomorphicArithmetic.DivisorFrames.ExistsSchwartzBruhatNonva
 import Development.AutomorphicArithmetic.DivisorFrames.LocalPartEvaluationConfigOne
 import Development.AutomorphicArithmetic.DivisorFrames.LocalPartEvaluationConfigTwo
 import Development.AutomorphicArithmetic.DivisorFrames.SchwartzBruhatIntegralIdentity
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaActionExistsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StabilizerCompactStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StandardAdelicCharacterNontrivialAtPlaces
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalStabilizerLocallyConstant
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBStabilizerThetaEval
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StabilizerLocalPartCaseB
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompactStabilizerLineNormOneStatement
@@ -111,7 +99,7 @@ private theorem det_ne_zero_of_hasSig {n r s : ℕ} {M : Matrix (Fin n) (Fin n) 
   have h3 : LinearMap.range M.mulVecLin = ⊤ := by
     apply Submodule.eq_top_of_finrank_eq
     have := M.rank_le_width
-    simp only [Matrix.rank, Fintype.card_fin] at h2 this
+    simp only [Matrix.rank] at h2 this
     rw [Module.finrank_fin_fun]; omega
   have hu : IsUnit M := (Matrix.mulVec_surjective_iff_isUnit).mp (LinearMap.range_eq_top.mp h3)
   exact ((Matrix.isUnit_iff_isUnit_det M).mp hu).ne_zero

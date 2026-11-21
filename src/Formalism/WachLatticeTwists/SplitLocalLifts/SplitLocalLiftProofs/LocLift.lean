@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.SplitLocalLifts.Cocycles1MapOfEquivariant
-import Formalism.WachLatticeTwists.CoprimeLiftBounds.CoprimeLiftProofs.SelmerInjColumnPlace
 import Formalism.WachLatticeTwists.TorsionLengthCounts.RowCol
 
 open Finset Classical

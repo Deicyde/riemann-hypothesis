@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.LeafGlueTwoPf
+import Mathlib.AlgebraicGeometry.QuasiAffine
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry LateralTheory.E.LeafDescendFPPf LateralTheory.E.LeafGlueTwoPf GlobalTheory.GlueModels

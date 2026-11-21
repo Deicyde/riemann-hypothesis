@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.HermitianMeasures.IntegrandA
+import Formalism.HermitianCurvature.WeylElementCommutesLevelOne
 
 noncomputable section
 

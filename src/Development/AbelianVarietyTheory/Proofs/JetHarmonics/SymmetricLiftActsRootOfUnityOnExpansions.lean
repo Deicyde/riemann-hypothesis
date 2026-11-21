@@ -1,20 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Jets.ExistsSecTieFOfTies
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.UnifUniqSt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.TwistBCPf
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PlaceDivisors.StChartF
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ThExprUniqOfChartIndep2
-import Formalism.LocalToGlobal.ProjectiveLattices.ConjNeSelfOfCM
-import Formalism.LocalToGlobal.ProjectiveLattices.BetaAtSymm
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.BCTools
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.SabComp
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ThetaCore
 import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.ExistsIsUUOver
 import Development.AbelianVarietyTheory.Proofs.RingsOfIntegers.ThetaGrpActIterateEqOfPowEqOne
 import Development.AbelianVarietyTheory.Proofs.RingsOfIntegers.ProdSumReindex
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ExistsPowMulEqOne
 import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.ExpansionBijectiveOverFields
-import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.LinearIndependentOfIsExtension
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.LineBundleIsoValuesConstantOfSameCubeTheta
 import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.AbelianSchemeLawsUnconditional
 
@@ -52,7 +42,7 @@ theorem exists_isos {X₀ X' XG XK XA : Scheme.{0}} {L₀ : LB X₀} {L' : LB X'
   refine ⟨W, ω, hW, (isGen_iff _).2 (T.pgen_comp h' g₁ hω'), fun Z r z j₀ j' jG jA k₀ k' kG kA => ?_⟩
   have e : BoxExpansion.pw W r z jA jG = Geo.Tor.gw ω₂ (r ≫ a) z jG jA := vW Z r z jG jA kG kA
   rw [e, T Z (r ≫ a) z j₀ j' jA k₀ k' kA, T' Z (r ≫ a) z jG j' jA kG k' kA]
-  simp only [mul_comm, mul_left_comm, _root_.mul_assoc]
+  simp only [mul_comm, _root_.mul_assoc]
 
 theorem isoCast_isGen {X Y : Scheme.{0}} {L L' : LB X} (h : L = L') {M : LB Y} (f : Y ⟶ X) {w : LB.Iso M (L.pull f)}
     (hw : w.IsGen) : (isoCast h f w).IsGen := by

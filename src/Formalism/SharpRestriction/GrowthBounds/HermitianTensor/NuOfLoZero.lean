@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.HermitianTensor.CoeffSumMonomialLinear
-import Formalism.SharpRestriction.GrowthBounds.HermitianTensor.MemInvariantSectionsIffIntegral
 
 noncomputable section
 
@@ -66,7 +67,7 @@ theorem wtPQ_mid (mm a b : ℕ) (j : Fin mm) : wtPQ (mm + 1) a b (midI mm j) = 0
 
 theorem nuOf_wt_zero (mm a b : ℕ) : nuOf (wtPQ (mm + 1) a b) 0 = a + b := by
   have hne : (Fin.last (mm + 1)) ≠ 0 := by simp [Fin.ext_iff]
-  simp only [nuOf, wtPQ, if_pos rfl, if_neg hne, if_true]
+  simp only [nuOf, wtPQ, if_neg hne, if_true]
   omega
 
 theorem nuOf_wt_mid (mm a b : ℕ) (j : Fin mm) : nuOf (wtPQ (mm + 1) a b) (midI mm j) = b := by
@@ -80,7 +81,7 @@ theorem nuOf_wt_add (mm a b a' b' : ℕ) :
     nuOf (wtPQ (mm + 1) (a + a') (b + b')) = nuOf (wtPQ (mm + 1) a b) + nuOf (wtPQ (mm + 1) a' b') := by
   funext t
   have hne : (Fin.last (mm + 1)) ≠ 0 := by simp [Fin.ext_iff]
-  simp only [Pi.add_apply, nuOf, wtPQ, if_neg hne, if_pos rfl]
+  simp only [Pi.add_apply, nuOf, wtPQ, if_neg hne]
   split_ifs <;> push_cast <;> omega
 
 section Data
@@ -222,7 +223,7 @@ private theorem rowA_X_lemma_3 {K : Type} [CommRing K] {k n : ℕ} (a : Fin k) (
     by_cases hb : b = a
     · subst hb
       simp [rowDeg, Finsupp.single_apply, Prod.mk.injEq]
-    · simp [rowDeg, Finsupp.single_apply, Prod.mk.injEq, hb]
+    · simp [rowDeg, Prod.mk.injEq, hb]
   · exact absurd rfl hu
 
 private theorem rowA_add_lemma_4 {K : Type} [CommRing K] {k n : ℕ} (a : Fin k)
@@ -280,7 +281,7 @@ private theorem cnt_lemma_9 {k : ℕ} (a : Fin k) (s : ℕ) (hr : s ≤ k) :
     (∑ p : Fin s, if Fin.castLE hr p = a then 1 else 0) = if a.val < s then 1 else 0 := by
   split_ifs with h
   · rw [Finset.sum_eq_single ⟨a.val, h⟩]
-    · simp [Fin.ext_iff]
+    · simp
     · intro b _ hb
       rw [if_neg]
       intro hc

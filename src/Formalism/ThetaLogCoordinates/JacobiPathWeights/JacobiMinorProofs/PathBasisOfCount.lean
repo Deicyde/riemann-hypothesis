@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.JacobiPathWeights.IndexWeightsDominance
-import Formalism.ThetaLogCoordinates.JacobiPathWeights.JacobiMinorProofs.LeIffLtColHeight
 import Formalism.ThetaLogCoordinates.JacobiPathWeights.JacobiMinorProofs.PathProductHighestWeight
 
 noncomputable section
@@ -165,7 +165,7 @@ private theorem weight_indicator_fst_eq_sum {n : ℕ} (i : ℕ) (d : ℕ × Fin 
     by_cases hj : j = i
     · subst hj
       simp [Finsupp.single_apply, Prod.ext_iff]
-    · simp [Finsupp.single_apply, Prod.ext_iff, hj]
+    · simp [Prod.ext_iff, hj]
 
 theorem psi_support (hr : PolBRank) {n N : ℕ} {isVec : ℕ → Bool} {B : ℕ → ℕ} {μ : ℕ → Fin n → ℤ}
     {I : ℤ → Finset (Fin n)} (hμ : IsPath n isVec B μ N) (hI : IsIndex (μ N) I) :

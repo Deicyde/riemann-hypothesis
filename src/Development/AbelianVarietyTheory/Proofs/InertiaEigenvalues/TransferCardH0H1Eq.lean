@@ -1,6 +1,4 @@
-import Mathlib
-import Formalism.CharacterColumnKernels.StatementRho
-import Formalism.GaloisCohomology.LocalTateDualityK
+import BuildAid.Leniency.Open
 import ReciprocityTheory.Hypotheses.GalCohDefs
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LevRepZApply
 open ReciprocityTheory.Gal

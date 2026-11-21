@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.UnipotentIdempotents.TCont
-import Mathlib.NumberTheory.Multiplicity
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual Formalism.HC ReciprocityTheory.Gal IsLocalRing Polynomial UpperTheory.V UpperTheory.V.Base UpperTheory.V.Alg UpperTheory.V.HV UpperTheory.V.GradeZeroInterpolatingElement UpperTheory.V.Ws GlobalTheory.GalOfCusp UpperTheory.V.Ws.Lk
 
@@ -83,5 +83,5 @@ theorem UpperTheory.V.Ws.Lk.kapMu :
     have := pow_gcd_eq_one.2 ⟨hp, hq⟩
     rwa [hcop, pow_one] at this
   have hγ' : P.γ (AlgEquiv.restrictScalars ℚ g) = 1 := hγ
-  simp only [Pre.κ, MonoidHom.mul_apply, MonoidHom.comp_apply, hβ, hγ, hκ]
+  simp only [Pre.κ, MonoidHom.mul_apply, MonoidHom.comp_apply, hκ]
   simp [hγ', hβ]

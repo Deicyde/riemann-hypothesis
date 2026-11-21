@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Open
 import Formalism.HyperbolicPlaceProducts.Statement
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.ReduceModChar
 
 open Module
 

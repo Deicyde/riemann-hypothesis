@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ReferenceMetricMulDualEqOne
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsAffineEigenframeFlag
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ToroidalBoundaryMetricData
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsIsBasisNear
 
 set_option autoImplicit false
 

@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.FrameEstimates.WeilConv
 import Development.WeilBound.ThetaLifts.FrameEstimates.OneMemLines
-import Development.WeilBound.ThetaLifts.FrameEstimates.DomContinuous
 import Development.WeilBound.ThetaLifts.FrameEstimates.IInvOfParts
 import Development.WeilBound.ThetaLifts.FrameEstimates.SchrAddPt
 import Development.WeilBound.ThetaLifts.FrameEstimates.UMGLin

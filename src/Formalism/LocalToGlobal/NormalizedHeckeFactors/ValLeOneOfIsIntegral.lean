@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.NormalizedHeckeFactors.RhoDefs
-import Formalism.SharpRestriction.LevelLetterCocycles.ExistsInertiaCharpolyFactorOfTameType
+import Formalism.LocalToGlobal.PlaceMapInjectivity.MapPlInjective
 
 noncomputable section
 

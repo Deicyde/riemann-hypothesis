@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.PeriodIntegrals.WwMain
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LFunctionMinors.FintypeColChoice
 
 open MvPolynomial Finset Matrix
@@ -43,8 +42,7 @@ theorem block (hCB : CBSorted) {Lt : Type} (l : ℕ) [Fact l.Prime] (N0 N1 : ℕ
           try (refine Matrix.ext fun i j => ?_; simp [Matrix.submatrix_apply, RingHom.mapMatrix_apply, Matrix.map_apply])
         · rw [RingHom.map_det]
           congr 1
-          try (refine Matrix.ext fun i k => ?_; simp [Matrix.submatrix_apply, RingHom.mapMatrix_apply, Matrix.map_apply,
-            map_sum, MvPolynomial.eval₂Hom_X'])
+          try (refine Matrix.ext fun i k => ?_; simp [Matrix.submatrix_apply, RingHom.mapMatrix_apply, Matrix.map_apply])
 
 theorem deXCB_of (hCB : CBSorted) : DeXCB := by
   unfold DeXCB

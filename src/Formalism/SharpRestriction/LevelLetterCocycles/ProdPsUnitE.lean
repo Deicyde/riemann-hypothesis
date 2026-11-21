@@ -1,4 +1,6 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.MemOfSecEq
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.LevelLetterCocycles.InNOfPiLam
 
 noncomputable section
 

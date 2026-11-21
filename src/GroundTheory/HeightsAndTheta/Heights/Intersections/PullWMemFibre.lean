@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterBridge
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterRedE
 import GroundTheory.HeightsAndTheta.Heights.Intersections.PtsIntegralLogNormRat
 import GroundTheory.HeightsAndTheta.Heights.Intersections.ImportsFurtherFurther
 import GroundTheory.HeightsAndTheta.Heights.Intersections.ImportsFurtherExtra

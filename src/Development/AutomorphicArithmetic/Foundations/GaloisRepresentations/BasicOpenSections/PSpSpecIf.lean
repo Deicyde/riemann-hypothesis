@@ -1,4 +1,4 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.DivisorSupportCondition
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.SpecGood
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.BasicOpenSections.PSpValsub
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.BasicOpenSections.GenericFibreEqvOfSmoothOfNormalLocalDomain

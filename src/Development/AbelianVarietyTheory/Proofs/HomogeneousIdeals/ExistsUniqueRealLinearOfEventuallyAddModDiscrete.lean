@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.TendstoUniformlyOnDoublingLogOfContraction
+import Mathlib.LinearAlgebra.FreeModule.ModN
+import Mathlib.RingTheory.SimpleRing.Principal
 
 open Filter Topology Set
 

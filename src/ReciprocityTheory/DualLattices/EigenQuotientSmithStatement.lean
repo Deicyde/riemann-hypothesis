@@ -1,4 +1,5 @@
-import ReciprocityTheory.DualLattices.RestrictedHopfOrderApproximationStatement
+import BuildAid.Leniency.Open
+import ReciprocityTheory.DualLattices.CokernelLengthComparisonOf
 
 noncomputable section
 

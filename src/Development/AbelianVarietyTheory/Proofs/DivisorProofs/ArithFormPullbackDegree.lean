@@ -1,10 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.EqOfIsometricTrivShift
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NontrivialIsomClassInt
-import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemConeOfMem
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormsOfInduces
 
 set_option autoImplicit false
 
@@ -24,7 +21,7 @@ theorem eq_sum_fam {S : Finset (HermLB p)} (x : Cl p) (hx : x.support ⊆ S) :
   calc x = ∑ L ∈ S, x L • cl L := by
         conv_lhs => rw [← Finsupp.sum_single x]
         rw [Finsupp.sum_of_support_subset x hx (fun L c => Finsupp.single L c) (by simp)]
-        simp [cl, Finsupp.smul_single_one]
+        simp [cl]
     _ = ∑ L : S, x L • cl (L : HermLB p) := (Finset.sum_coe_sort S (fun L => x L • cl L)).symm
     _ = _ := (Equiv.sum_comp S.equivFin.symm (fun L : S => x L • cl (L : HermLB p))).symm
 

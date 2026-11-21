@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MemRadicalOfHolomorphicRatioTendsto
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.DivisorFrames.ExistsComplexPointPrime
 import Development.AutomorphicArithmetic.DivisorFrames.ExistsPrimeNonDivisible
 

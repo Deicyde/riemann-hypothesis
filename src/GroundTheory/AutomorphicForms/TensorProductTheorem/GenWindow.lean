@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.TensorProductTheorem.Operators
+import Mathlib.RepresentationTheory.Irreducible
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 
@@ -241,10 +245,10 @@ variable (e : End ℂ V) (N : Submodule ℂ V)
 def mGenKernel : Submodule ℂ (mGenSubrep ρ N).toSubmodule where
   carrier := {u | ∀ g, e (ρ g u) = 0}
   add_mem' {a b} ha hb g := by
-    simp only [mem_setOf_eq, Submodule.coe_add, map_add, ha g, hb g, add_zero]
+    simp only [Submodule.coe_add, map_add, ha g, hb g, add_zero]
   zero_mem' g := by simp
   smul_mem' c a ha g := by
-    simp only [mem_setOf_eq, Submodule.coe_smul, map_smul, ha g, smul_zero]
+    simp only [Submodule.coe_smul, map_smul, ha g, smul_zero]
 
 theorem mGenKernel_le_comap (g : M) :
     mGenKernel ρ e N ≤ (mGenKernel ρ e N).comap ((mGenSubrep ρ N).toRepresentation g) := by

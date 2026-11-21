@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.PullbackPullback
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.IsFibreChartIff
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.TwoPointFibreChartSecondStatement
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.TwoPointFibreChartThirdStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.TwoPointFibreChartFourthStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.TwoPointFibreChartSixthStatement

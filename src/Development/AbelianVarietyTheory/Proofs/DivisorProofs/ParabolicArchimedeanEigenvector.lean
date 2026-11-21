@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.EventuallyAlgebraMapMemIntegers
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.EisensteinIsotropicLine
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsSmoothModerateOfIsAutFunSm
 open NumberField MeasureTheory Matrix Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SiegelSet GlobalTheory.UAut GlobalTheory.EisLine
 open GlobalTheory.Doubling (absE)
 open scoped TensorProduct NNReal
@@ -63,4 +61,4 @@ theorem GlobalTheory.LineGlue.exists_idele_smul_of_local_lines : ∀ (F E : Type
   rw [hMX]
   ext i j
   fin_cases j
-  simp [Matrix.mul_apply, Fin.sum_univ_one, mul_comm]
+  simp [Matrix.mul_apply, mul_comm]

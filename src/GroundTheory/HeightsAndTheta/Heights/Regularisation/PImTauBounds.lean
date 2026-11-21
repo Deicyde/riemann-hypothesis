@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Regularisation.Statements
+import Mathlib.Analysis.Matrix.Order
+import Mathlib.Analysis.Real.Pi.Bounds
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.Regular

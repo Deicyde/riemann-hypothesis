@@ -1,10 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.DualFamilyCounting.NcRealXECPf
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.TwoByOneBlock
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.DilationScalesHeisenbergMeasure
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.DilationUnipotentWeylMeasure
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnitaryQuotientCompactness.UnipotentRadicalContracting
 import Formalism.SharpRestriction.CuspSpanNormBounds.BridgeLemma3
-import Formalism.SharpRestriction.CuspSpanNormBounds.BridgeCSB
 
 open MeasureTheory Matrix Formalism.QuantumDeterminants Formalism.MainNotions.S Formalism.FourierDecayAlt Formalism.FourierDecayAlt.P WlocSk.NB
 open scoped ENNReal Kronecker

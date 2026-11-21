@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
-import GroundTheory.GlobalFields.IdeleGroups.SIdeleGroups.Galois
-import GroundTheory.GlobalFields.GlobalReciprocity.General
+import GroundTheory.GlobalFields.IdeleGroups.ClassGroup
+import GroundTheory.GlobalFields.IdeleGroups.IdeleNorms.BaseChange
+import GroundTheory.GlobalFields.SemilocalAlgebras.Galois
 
 noncomputable section
 

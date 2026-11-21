@@ -1,6 +1,6 @@
-import Formalism.LocalToGlobal.InertKernelTheory.OneCopyTh1
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.InertKernelTheory.InertCoprimeLemmas.IntBasis
-import Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.BinomialSeriesCoefficients.CoeffPowEqZeroOfCc
 
 noncomputable section
 

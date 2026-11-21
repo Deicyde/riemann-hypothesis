@@ -1,8 +1,7 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.MirabolicDerivatives.LeibnizDerivatives.GenericProdIff
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.OpenFns
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompactUnipotentInCompactSubgroup
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.JacquetModuleMapInjectiveOfInjective
+import Development.AbelianVarietyTheory.Definitions.Divisors.LineOppositeParabolicUnitaryLeviSectionEq
 open GlobalTheory.PRep GlobalTheory.SmGL GlobalTheory.LocGL GlobalTheory.BZMir.Leib GlobalTheory.CompanionTheory.Rodier
 open scoped TensorProduct
 
@@ -59,14 +58,14 @@ theorem parab_inf_lower {k : Type} [Field k] {h N : ℕ} {d : Fin h → ℕ} {hd
       rintro rfl
       exact lt_irrefl _ hlt
     rw [(lower_entries hx i j).1 hlt]
-    simp [Matrix.one_apply, hij]
+    simp [hij]
   · rw [(lower_entries hx i j).2 heq]
     simp
   · have hij : i ≠ j := by
       rintro rfl
       exact lt_irrefl _ hgt
     rw [GlobalTheory.SmGL.mem_parab.mp hp i j hgt]
-    simp [Matrix.one_apply, hij]
+    simp [hij]
 
 variable (k : Type) [Field k] [ValuativeRel k] [TopologicalSpace k] [IsNonarchimedeanLocalField k]
   {h N : ℕ} (d : Fin h → ℕ) (hd : ∑ a, d a = N)

@@ -1,6 +1,8 @@
-import Mathlib
-import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.SgnConjIntUp
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IntegralityUnderRingMap.MemIntegerOfIsIntegralMap
+import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.TermLoc
+import Mathlib.RingTheory.Valuation.Extension
 
 noncomputable section
 
@@ -61,7 +63,7 @@ theorem emap_mul (l Y ρ : Matrix (Fin (D.R.rS + 1)) (Fin (D.R.rS + 1)) (D.s.atP
     simp only [Finset.sum_mul, Finset.sum_div]
     refine Finset.sum_congr rfl (fun d _ => ?_)
     ring
-  · simp only [Prod.snd_sum, Prod.snd_mul, Finset.sum_mul, Finset.mul_sum, Finset.sum_div, neg_div,
+  · simp only [Prod.snd_sum, Prod.snd_mul, Finset.sum_mul, Finset.sum_div,
       ← Finset.sum_neg_distrib, mul_neg, neg_mul]
     refine Finset.sum_comm.trans (Finset.sum_congr rfl fun c _ => Finset.sum_congr rfl fun d _ => ?_)
     ring

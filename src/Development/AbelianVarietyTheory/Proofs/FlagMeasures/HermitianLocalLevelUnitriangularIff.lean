@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.SplitPlaceLatticeComponents
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.SelfDualAt
-import Formalism.LocalToGlobal.HermitianForms.TiedStep
+import Formalism.LocalToGlobal.HermitianForms.PsiZeroNontrivialCharacter
 
 open Formalism.BasicNotions Formalism.UG Formalism.L2.Forms NumberField IsDedekindDomain Matrix GlobalTheory.St.G
 open scoped TensorProduct
@@ -75,7 +75,7 @@ theorem columns_iff (sp : A ≃+* K × K) (I : Subring A) (Λ : Submodule I (Fin
           intro h'
           subst h'
           exact absurd hba (not_le.2 hj)
-        simp [Pi.single_apply, this]
+        simp [this]
       | zero =>
         have : (φ ∘ (0 : Fin n → A)) = 0 := by funext; simp
         rw [this]

@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.FockResolutionOnto.StatementG
-import Formalism.ThetaLogCoordinates.FockResolutionOnto.FockMonomialProofs.RaisingKeepsEarlyLetters
+import Formalism.MahlerMeasure.MahlerMeasureProofs.RemoveS
+import Formalism.ThetaLogCoordinates.FockResolutionOnto.FockMonomialProofs.InitPartZeroXMul
+import Mathlib.RingTheory.Binomial
 
 namespace Formalism.InvariantFactorPaths.L4
 
@@ -191,11 +195,11 @@ theorem eulL_X (i : Fin (K + 1)) (d : Fin r) :
     rw [Finset.sum_eq_single d]
     · simp [pderiv_X]
     · intro b _ hb
-      simp [pderiv_X, Pi.single_apply, Ne.symm hb]
+      simp [pderiv_X, Ne.symm hb]
     · simp
   · apply Finset.sum_eq_zero
     intro c _
-    simp [pderiv_X, Pi.single_apply, h]
+    simp [pderiv_X, h]
 
 private theorem glAct_X_eq_ite (b : Fin r) (i : Fin (K + 1)) (d : Fin r) :
     glAct p LL K a b (X (i, d)) =
@@ -204,9 +208,9 @@ private theorem glAct_X_eq_ite (b : Fin r) (i : Fin (K + 1)) (d : Fin r) :
       else 0 := by
   unfold glAct
   rw [LinearMap.sum_apply, Finset.sum_eq_single i]
-  · split_ifs <;> simp_all [pderiv_X, Pi.single_apply]
+  · split_ifs <;> simp_all [pderiv_X]
   · intro j _ hj
-    split_ifs <;> simp [pderiv_X, Pi.single_apply, Ne.symm hj]
+    split_ifs <;> simp [pderiv_X, Ne.symm hj]
   · simp
 
 theorem DDop_last (d : Fin r) :
@@ -222,15 +226,15 @@ theorem DDop_vec (i : Fin (K + 1)) (hi : i ≠ Fin.last K) (hv : LL.vec i = true
     DDop p LL Cs a (X (i, d)) = if d ∈ Cs then X (Fin.last K, d) * X (i, a) else 0 := by
   rw [DDop_apply, eulL_X, if_neg hi, mul_zero, zero_add]
   simp only [glAct_X_eq_ite, if_pos (Fin.val_lt_last hi), hv, if_true]
-  simp [mul_ite, Finset.sum_ite_eq, Finset.sum_ite_eq']
+  simp [mul_ite, Finset.sum_ite_eq']
 
 theorem DDop_cov (i : Fin (K + 1)) (hi : i ≠ Fin.last K) (hv : LL.vec i = false) (d : Fin r) :
     DDop p LL Cs a (X (i, d)) = if a = d then -∑ b ∈ Cs, X (Fin.last K, b) * X (i, b) else 0 := by
   rw [DDop_apply, eulL_X, if_neg hi, mul_zero, zero_add]
   simp only [glAct_X_eq_ite, if_pos (Fin.val_lt_last hi), hv, Bool.false_eq_true, if_false]
   split_ifs with h
-  · simp [h, Finset.sum_neg_distrib]
-  · simp [h]
+  · simp [Finset.sum_neg_distrib]
+  · simp
 
 theorem DDop_pair (ha : a ∈ Cs) (i : Fin (K + 1)) (hi : i ≠ Fin.last K) (hv : LL.vec i = false) :
     DDop p LL Cs a (∑ b ∈ Cs, X (Fin.last K, b) * X (i, b)) = 0 := by

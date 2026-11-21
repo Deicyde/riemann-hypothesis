@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.EventuallyAlgebraMapMemIntegers
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.EisensteinIsotropicLine
 open NumberField MeasureTheory Matrix Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SiegelSet GlobalTheory.UAut GlobalTheory.EisLine
 open GlobalTheory.Doubling (absE)
@@ -65,7 +64,7 @@ theorem smoothLines_lineDer {f : GAd σ J → ℂ} (hf : SmoothLines σ J f) {γ
     funext p
     simp only [Ψ, Function.comp_apply]
     rw [List.ofFn_succ']
-    simp [γ', List.prod_concat, mul_assoc]
+    simp [γ', mul_assoc]
   have hΨ : ContDiff ℝ ∞ Ψ := hΨe ▸ hΦ.comp hsn
   have key : ∀ t : Fin k → ℝ, lineDer γ₀ f (g * (List.ofFn fun i => γ i (t i)).prod) =
       fderiv ℝ Ψ (t, 0) ((0 : Fin k → ℝ), (1 : ℝ)) := fun t => by
@@ -139,7 +138,7 @@ theorem pairCLM_apply {y : ℕ → ℂ} {M : ℝ} (hy : ∀ n, ‖y n‖ ≤ M) 
 
 theorem pairCLM_single {y : ℕ → ℂ} {M : ℝ} (hy : ∀ n, ‖y n‖ ≤ M) (n : ℕ) :
     pairCLM hy (lp.single 1 n 1) = y n := by
-  rw [pairCLM_apply, lp.coeFn_single, tsum_eq_single n (fun m hm => by simp [Pi.single_apply, hm])]
+  rw [pairCLM_apply, lp.coeFn_single, tsum_eq_single n (fun m hm => by simp [hm])]
   simp
 
 theorem bdd_of_pair {ι : Type} (x : ι → ℕ → ℂ) (hx : ∀ i, ∃ M, ∀ n, ‖x i n‖ ≤ M)

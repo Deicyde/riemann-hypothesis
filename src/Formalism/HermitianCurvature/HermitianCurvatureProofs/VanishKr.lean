@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.RdVZeroOfVanish
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.PbWords
 
 open Matrix MeasureTheory Filter Topology
 

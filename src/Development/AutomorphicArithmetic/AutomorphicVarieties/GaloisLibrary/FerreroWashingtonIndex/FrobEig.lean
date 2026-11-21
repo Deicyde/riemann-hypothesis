@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.FerreroWashingtonIndex.TwSingle
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open UpperTheory.V.FW
 
@@ -15,7 +20,7 @@ theorem UpperTheory.V.FW.frobEig :
   have hs : ∀ (x : G) (b : k), r (MonoidAlgebra.single x b) ^ q = b ^ q • r (MonoidAlgebra.of k G (x ^ q)) := by
     intro x b
     have e1 : MonoidAlgebra.single x b = b • MonoidAlgebra.of k G x := by
-      simp [MonoidAlgebra.of_apply, MonoidAlgebra.smul_single']
+      simp [MonoidAlgebra.of_apply]
     rw [e1, map_smul, smul_pow, map_pow (MonoidAlgebra.of k G), map_pow r]
   induction θ using MonoidAlgebra.induction_linear with
   | zero => simp

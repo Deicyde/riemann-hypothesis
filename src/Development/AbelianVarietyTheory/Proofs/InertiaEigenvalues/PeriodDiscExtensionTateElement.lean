@@ -1,6 +1,7 @@
-import Mathlib
-import Formalism.LocalRingCardinality.AdicCompletionLocal.LocTied
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.ConvZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.ExistsOfLayers
+import Mathlib.RingTheory.PiTensorProduct
 
 noncomputable section
 
@@ -16,7 +17,7 @@ variable {Qp LL : Type} [Field Qp] [Field LL] [Algebra Qp LL] (V : Type) [AddCom
 def mulR : B →ₐ[Qp] Module.End LL (V ⊗[Qp] B) where
   toFun b := AlgebraTensorModule.map LinearMap.id (LinearMap.mulLeft Qp b)
   map_one' := by ext x y; simp
-  map_mul' a b := by ext x y; simp [mul_assoc]
+  map_mul' a b := by ext x y; simp
   map_zero' := by ext x y; simp
   map_add' a b := by ext x y; simp [add_mul, tmul_add]
   commutes' c := by

@@ -1,6 +1,4 @@
-import Mathlib
-import Formalism.SharpRestriction.ParamsHeightRankConstant
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.RecHeightSWith
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ScaleLargeThree
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.TwoLeOfLogPos
 import Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.SevenLogLeLOfPowerBound

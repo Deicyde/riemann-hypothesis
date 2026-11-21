@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.LocalSystemQuotients.ResVq
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MemBiInf
 set_option backward.isDefEq.respectTransparency false

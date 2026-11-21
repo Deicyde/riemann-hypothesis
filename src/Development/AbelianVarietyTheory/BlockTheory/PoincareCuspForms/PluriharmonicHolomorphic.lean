@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ThetaQuasiPeriods.PeriodLattice
+import Mathlib.Data.Matrix.ColumnRowPartitioned
+import Mathlib.LinearAlgebra.SymplecticGroup
+import Mathlib.Tactic.Polynomial.Basic
 
 noncomputable section
 

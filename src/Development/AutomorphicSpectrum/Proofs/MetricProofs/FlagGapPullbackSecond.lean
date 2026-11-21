@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.HasStepCharts
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.SelM
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.IsValueAtOfTorus
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.FlagGapTorusInvariantStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.FlagGapSameBaseOrbitStatement
 

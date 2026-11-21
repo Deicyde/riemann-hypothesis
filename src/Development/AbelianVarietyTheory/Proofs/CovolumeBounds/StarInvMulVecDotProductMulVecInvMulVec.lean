@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.OneLeDetOneAdd
+import Mathlib.Analysis.Matrix.Order
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
 
 open Matrix
 open scoped ComplexOrder MatrixOrder

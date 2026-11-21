@@ -1,4 +1,5 @@
-import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.GoodLat
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.LatRepBI
 
 noncomputable section

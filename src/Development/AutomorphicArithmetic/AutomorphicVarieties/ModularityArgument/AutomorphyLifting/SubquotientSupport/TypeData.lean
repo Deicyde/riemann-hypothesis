@@ -1,5 +1,5 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.AutomorphyLifting.ExistsRec
-import PositivityTheory.AutomorphicForms.PublishedInputs.NonzeroTypes.NzOfSteps
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.NonzeroTypes.CuspidalSupport2
 import PositivityTheory.AutomorphicForms.PublishedInputs.NonzeroTypes.DeterminantVector
 import PositivityTheory.AutomorphicForms.PublishedInputs.NonzeroTypes.Isotypic₂
@@ -12,8 +12,10 @@ import PositivityTheory.AutomorphicForms.PublishedInputs.NonzeroTypes.Unramified
 import PositivityTheory.AutomorphicForms.PublishedInputs.NonzeroTypes.PUntwistRc
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.UnramifiedWeilDeligneEqDiagonalInv
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BernsteinZelevinskyFinitenessHolds
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsIrreducibleFixed
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ToralAndGoodOfIsSpherical
+import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.AutomorphyLifting.AbsCentral
+import PositivityTheory.AutomorphicForms.PublishedInputs.NonzeroTypes.FiniteDimensionalTranslationCoordinates
+import PositivityTheory.AutomorphicForms.PublishedInputs.NonzeroTypes.TensorProductVectors
 
 noncomputable section
 
@@ -163,7 +165,7 @@ private theorem gMainV (hLit : GlobalTheory.Mem.LiteralAutomorphy.LitLoc) (gi : 
     rw [← hx] at hP
     rw [hP]
     refine ⟨hl.1.2 fun y hy => ?_, fun t => ?_⟩
-    · simp only [List.mem_ofFn, Set.mem_range] at hy
+    · simp only [List.mem_ofFn] at hy
       obtain ⟨b, rfl⟩ := hy
       rw [hur b]
       exact (step_unrTwist E Ω A w h (u b) _ (hψ b) (hu b)).1

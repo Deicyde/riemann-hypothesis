@@ -1,8 +1,8 @@
-import Mathlib
-import GroundTheory.ProfiniteCohomology.RealPlaces.ConeMap
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.RealPlaces.NormHomotopy
 import GroundTheory.ProfiniteCohomology.RealPlaces.ConeHomotopy
-import GroundTheory.ProfiniteCohomology.CompactSupportCohomology.CompactCupEqCompactCupRight
+import GroundTheory.ProfiniteCohomology.RealPlaces.LocalCohomologyIsoHomologyMapNormCochains
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

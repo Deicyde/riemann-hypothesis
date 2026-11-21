@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.StatementE
-import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.EntryDegree
-import Formalism.GaussJetBounds.GaussJetProofs.ConstantCoeffAevalLinP
 
 noncomputable section
 

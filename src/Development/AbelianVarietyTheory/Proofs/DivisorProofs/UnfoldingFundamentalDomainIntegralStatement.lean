@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnfoldingFundamentalDomainIntegral
-import Mathlib
 open scoped NNReal ENNReal
 open MeasureTheory
 

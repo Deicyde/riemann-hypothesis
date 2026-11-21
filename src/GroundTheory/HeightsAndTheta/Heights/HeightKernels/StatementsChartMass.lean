@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.IsSemipositiveOn
+import Mathlib.LinearAlgebra.Matrix.PosDef
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

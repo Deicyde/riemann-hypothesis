@@ -1,10 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.GroupDict
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsSheetCover
-import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.StatementsProved
-import GroundTheory.HeightsAndTheta.Heights.CountingLowerBound.Assembly
-import Development.WeilBound.CoreStatements.VolumeEquality.BaseUnifRiem
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.BigZe
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.SiegelTransformSymplecticImaginaryStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.SiegelNormalFormOfHermitianStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.BallDomainIffPosDefStatement
@@ -97,7 +92,7 @@ theorem tz_support [DecidableEq I] (Z : Matrix I I ℂ) (d : I → ℂ) (M : (I 
       simp
     · simp [Pi.single_eq_of_ne hak]
   rw [s1, s2] at this
-  simp only [Pi.mul_apply, mulVec_single, MulOpposite.op_mul] at this
+  simp only [Pi.mul_apply, mulVec_single] at this
   simpa [mul_comm] using this.symm
 
 theorem tz_unique [DecidableEq I] (S : Set (I → ℂ)) (hS : Submodule.span ℝ S = ⊤) (A A' : (I → ℂ) ≃ₗ[ℂ] (I → ℂ))

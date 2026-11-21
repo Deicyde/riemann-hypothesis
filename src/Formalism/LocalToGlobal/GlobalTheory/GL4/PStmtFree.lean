@@ -1,6 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.GL4.ClassMapArchimedean
-import Formalism.LocalToGlobal.GlobalTheory.GL4.LowerSlopeInequalityFamily
-import Formalism.SharpRestriction.GlobalSchurBounds.TotallyPositiveTraceGeOfNormDiscr
 
 noncomputable section
 

@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.LayerProd
-import Formalism.HarderNarasimhan.ShiftInvariance
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.LamXEquivariant
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.NearTrivialPointwise
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.FgOfHtNeZero
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.PackingGeometricMeanSeparated

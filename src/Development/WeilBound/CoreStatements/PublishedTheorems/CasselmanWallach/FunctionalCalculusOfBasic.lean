@@ -1,4 +1,12 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PublishedTheorems.CasselmanWallach.FunctionalCalculusLaws
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 
@@ -23,7 +31,7 @@ theorem repr_fc (b : Module.Basis ι ℂ V) (μ : ι → ℝ) (φ : ℝ → ℝ)
       LinearMap.smul_apply, Module.Basis.repr_self]
     by_cases hji : j = i
     · subst hji; simp
-    · simp [Finsupp.single_apply, hji]
+    · simp [hji]
   exact LinearMap.congr_fun key v
 
 theorem inner_basis_left (b : Module.Basis ι ℂ V) (hb : Orthonormal ℂ b) (i : ι) (y : V) :
@@ -35,7 +43,7 @@ theorem inner_basis_left (b : Module.Basis ι ℂ V) (hb : Orthonormal ℂ b) (i
     rw [Module.Basis.repr_self, orthonormal_iff_ite.mp hb i j]
     by_cases hij : i = j
     · subst hij; simp
-    · simp [hij, Ne.symm hij]
+    · simp [hij]
   exact LinearMap.congr_fun key y
 
 theorem inner_eq_sum (b : Module.Basis ι ℂ V) (hb : Orthonormal ℂ b) (x y : V) (s : Finset ι)

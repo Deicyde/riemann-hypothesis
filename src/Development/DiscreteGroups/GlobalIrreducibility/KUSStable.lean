@@ -1,4 +1,6 @@
-import Development.DiscreteGroups.GlobalIrreducibility.TopLeftElemInv
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.DiscreteGroups.GlobalIrreducibility.EntriesOfMemUnipRad
 
 noncomputable section
 

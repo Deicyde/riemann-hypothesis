@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PlurisubharmonicCones.NormBound
 import Development.WeilBound.CoreStatements.PlurisubharmonicCones.AevalCyclotomic
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LieLatticeEvalFractionFieldStatement

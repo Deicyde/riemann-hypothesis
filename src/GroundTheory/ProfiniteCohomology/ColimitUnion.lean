@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.ContinuousCochains.Functoriality
 import GroundTheory.ProfiniteCohomology.FilteredHomology
-import GroundTheory.ProfiniteCohomology.DiscreteModules.IsDiscreteRepIffForallExistsOpenNormalSubgroup
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

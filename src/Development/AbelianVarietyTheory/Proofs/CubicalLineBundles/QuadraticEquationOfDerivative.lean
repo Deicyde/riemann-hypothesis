@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.PrincipalLattices.LogHermFormOfUnitDiscriminant
-import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.IsLieCombOneIffComp
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.CurveHomExtOfDerivativeLieBasisStatement
 
 noncomputable section

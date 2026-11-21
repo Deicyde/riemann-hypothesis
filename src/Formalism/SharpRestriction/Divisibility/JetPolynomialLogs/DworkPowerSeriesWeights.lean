@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.ProductZerothFirstParts
-import Formalism.GaussJetBounds.ThmAGauss
 import Formalism.GaussJetBounds.OneLetterGauss
-import Formalism.GaussJetBounds.GaussJetProofs.WeightsAddOverOrbitFamily
 
 noncomputable section
 

@@ -1,8 +1,5 @@
-import Mathlib
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AbsLgOfLnSymUpdateSubLe
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCoverInducedMetricsArith
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalHeightBoundedByPrimeWeights
 import Development.AutomorphicArithmetic.LocalEmbeddings.PairMain
 import Development.AutomorphicArithmetic.LocalEmbeddings.CovCmpMain
 import Development.AutomorphicArithmetic.DivisorFrames.NormsGiveRationalSections

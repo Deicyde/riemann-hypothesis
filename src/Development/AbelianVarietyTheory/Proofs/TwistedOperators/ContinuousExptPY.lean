@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.SchurIrreducible
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
 
 noncomputable section
 namespace GlobalTheory.PolarU
@@ -178,7 +180,7 @@ def Ksub (T : GrpData p q) : Subgroup T.G where
     show IsKC (matG T 1)
     rw [matG_one]; intro a b h
     have : a ≠ b := by rintro rfl; cases a <;> simp [sameBlock] at h
-    simp [Matrix.one_apply, this]
+    simp [this]
   mul_mem' := by
     intro x y hx hy
     obtain ⟨U, -, V, -, h⟩ := exists_blocks T hx

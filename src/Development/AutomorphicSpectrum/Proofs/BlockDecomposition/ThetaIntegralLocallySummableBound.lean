@@ -1,6 +1,19 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.WeilSiegelTheta.BigCellDefs
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.SummableCell
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsWeilDatumOOneOfRankZero
+import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.DoubledFlatSectionEqTranslateStandardSection
+import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ExistsWeilDatumTransportSchwartzBruhatStandard
+import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ImportsBis
+import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.TransportedSchrodingerSiegelUnipotentAction
+import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.TransportedSchrodingerStandardLeviAction
+import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.WeylFormulaStandardUnitaryGroupWeilDatum
+import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HasDerivAtAndIsTheta
+import Development.AbelianVarietyTheory.PublishedTheorems.SiegelWeil₂.LeftInvOfIsSection
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousSymmUnitaryChart
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ThetaSectionContinuous
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WeilSchwartzParabolicEquivariant
 
 noncomputable section
 
@@ -184,7 +197,7 @@ theorem exists_weil_value (A B : HSp D) (ψ : AddChar (AF D.host.F) ℂ) (hψ : 
   have hr1 : ResEta D 1 (dblSp A).rank := by
     have := GlobalTheory.Eis.SimplePoleModel.resEta_one_two_mul D A.rank
     convert this using 2
-    simp [GlobalTheory.Doubling.dblSp]
+    simp
     omega
   obtain ⟨ω, hW⟩ := GlobalTheory.weilRepresentationUnitaryPair D ψ (dblSp A) B 1 χ hψ
     ⟨continuous_const, fun _ => rfl⟩ hχ₁ hr1 hχ₂

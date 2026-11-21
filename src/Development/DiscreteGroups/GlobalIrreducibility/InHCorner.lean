@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.DiscreteGroups.GlobalIrreducibility.LConvKirA
+import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.HasExponentZeroIff
 
 noncomputable section
 open Matrix GlobalTheory.SmGL GlobalTheory.Whittaker GlobalTheory.LocLanglands

@@ -1,13 +1,12 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NabBaseChange
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUniformizerSectionAtPrimeSetStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsHalfDilatedReductionResidueMatricesStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemLatticeIffUniformiserReductionVanishesStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemCompletedPairLatticeIffAdjointFrameMatrixInteStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemCompletedPairLatticeIffFrameMatrixIntegralOnHStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompletedPairLatticeDilationMemOfIntegerStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ResidueMatrixDatumFourierExpansionGaussSumStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsUnitAwayFromLevelProdNormalisedMatrixGaussSumStatement
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.GoodIdempotentBadPlaces
 open Formalism.BasicNotions Formalism.MainNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice IsDedekindDomain NumberField Formalism.L2.Theta Formalism.L2.DIV Formalism.IndefR
 open Formalism.IndefR.Links Formalism.IndefR.Datum Formalism.IndefR.FWT Formalism.L2.Pj
 open GlobalTheory.ConjTwist GlobalTheory.ExportSeries GlobalTheory.SeriesTie GlobalTheory.OnTies GlobalTheory.OnCmp GlobalTheory.BaseCmp
@@ -51,7 +50,7 @@ theorem redM_frMapO_add {D : D7} {S T : HSp D} (βS : GL (Fin S.rank) (EAf D)) (
     have := GlobalTheory.PlaceDatum.frMapO_add βS βT a b 1 p q
     simpa using this
   ext p q
-  simp only [redM, e, Matrix.add_apply, Matrix.of_apply]
+  simp only [redM, e, Matrix.add_apply]
   rw [dif_pos (add_mem (ha p q) (hb p q)), dif_pos (ha p q), dif_pos (hb p q), ← map_add]
   rfl
 

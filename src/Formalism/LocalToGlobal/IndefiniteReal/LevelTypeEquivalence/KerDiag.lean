@@ -1,5 +1,7 @@
-import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.EquivIoYOf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.ThetaFinsetSum
+import Formalism.LocalToGlobal.IndefiniteReal.LinksDefs
 
 noncomputable section
 

@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.GL3Columns
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.PadicNormDetLatticeBasisEqDetIdealNormStatement
 open Formalism.BasicNotions Formalism.MainNotions

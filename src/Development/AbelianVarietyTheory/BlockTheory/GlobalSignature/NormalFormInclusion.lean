@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.FiniteSumNonzeroLargeDepth
 
 open NumberField IsDedekindDomain
@@ -86,7 +87,7 @@ theorem nf_one (Pr : Primes X) (j : ℕ) (P : HeightOneSpectrum (𝓞 X.E)) (hP 
     simp [LocE.scE]
   have hg : gmap (1 : AutY X R j) (lamYat (Pr := Pr) (R := R) j P) = lamYat (Pr := Pr) (R := R) j P := by
     ext y
-    simp [gmap, Submodule.mem_map]
+    simp [gmap]
   have h0 : IntAt P (0 : X.E) := by simpa using IntAt.coe P 0
   have hc : ∀ (s : Fin (cOf R j) → X.E) (l : Fin (R.N j + cOf R j)),
       (Fintype.linearCombination X.E (nfVec (qOf P) (R.N j) (cOf R j) (fun _ => 0) (0 : Sp X.E (R.N j))) s) l =

@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.RightDerivativeToL2
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.HighestWeights.Exists
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.HighestWeights.SingleMulJmComm
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.HighestWeights.Weight
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.DatumA
 
@@ -93,7 +93,7 @@ theorem datumEmbedding_add (hP : IsPsiFor ε lam T Ψ) (v₀ v v' : T.V) :
   have h3 := dt_memLp hP v₀ (v + v')
   simp only [uniformisationL2, toL2, dif_pos h1, dif_pos h2, dif_pos h3]
   rw [← MemLp.toLp_add]
-  exact MemLp.toLp_congr _ _ (Filter.Eventually.of_forall fun g => by simp [jfun, inner_add_right])
+  exact MemLp.toLp_congr _ _ (Filter.Eventually.of_forall fun g => by simp [jfun])
 
 theorem datumEmbedding_smul (hP : IsPsiFor ε lam T Ψ) (v₀ : T.V) (c : ℂ) (v : T.V) :
     uniformisationL2 ε Ψ v₀ (c • v) = c • uniformisationL2 ε Ψ v₀ v := by
@@ -101,7 +101,7 @@ theorem datumEmbedding_smul (hP : IsPsiFor ε lam T Ψ) (v₀ : T.V) (c : ℂ) (
   have h3 := dt_memLp hP v₀ (c • v)
   simp only [uniformisationL2, toL2, dif_pos h1, dif_pos h3]
   rw [← MemLp.toLp_const_smul]
-  exact MemLp.toLp_congr _ _ (Filter.Eventually.of_forall fun g => by simp [jfun, inner_smul_right])
+  exact MemLp.toLp_congr _ _ (Filter.Eventually.of_forall fun g => by simp [jfun])
 
 def datumEmbeddingToL2 (hP : IsPsiFor ε lam T Ψ) (v₀ : T.V) : T.V →ₗ[ℂ] L2 ε where
   toFun := uniformisationL2 ε Ψ v₀
@@ -247,7 +247,7 @@ theorem datumEmbedding_self_ne_zero (hP : IsPsiFor ε lam T Ψ) {v₀ : T.V} (hv
     infer_instance
   have hall := (Continuous.ae_eq_iff_eq (Formalism.REAL.muG ε) hcont continuous_zero).1 hae
   have h1 := congrFun hall 1
-  simp [jfun, hP.2.1] at h1
+  simp [jfun] at h1
   have hu1 : Formalism.MainNotions.S.umat (1 : Formalism.REAL.UJ ε) = 1 := rfl
   rw [hu1, hP.2.1] at h1
   simp at h1

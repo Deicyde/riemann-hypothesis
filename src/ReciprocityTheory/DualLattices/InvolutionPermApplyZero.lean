@@ -1,6 +1,12 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.DualLattices.MatEquivApply
 import ReciprocityTheory.DualLattices.CokernelLengthComparisonOf
 import ReciprocityTheory.DualLattices.StdJForm
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.RingTheory.PicardGroup
+import ReciprocityTheory.DualLattices.IsLocalOfIntegers
+import ReciprocityTheory.DualLattices.UnramifiedCokernelLowerBoundOf
 
 noncomputable section
 

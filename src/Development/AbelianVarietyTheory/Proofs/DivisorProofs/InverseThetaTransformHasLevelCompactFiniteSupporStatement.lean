@@ -1,8 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InverseThetaTransformHasLevelCompactFiniteSuppor
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TwoMulInvOf
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegrandPeriodic
 
 open NumberField IsDedekindDomain MeasureTheory Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.SWQ GlobalTheory.ThetaTransform
 open scoped Matrix Classical

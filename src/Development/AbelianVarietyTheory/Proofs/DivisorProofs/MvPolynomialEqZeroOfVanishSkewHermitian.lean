@@ -1,5 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.Statement
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Rat.Star
+import Mathlib.NumberTheory.NumberField.CanonicalEmbedding.Basic
+import Mathlib.RingTheory.SimpleRing.Principal
+import Std.Tactic.BVDecide.Normalize.Prop
 set_option autoImplicit false
 noncomputable section
 open NumberField

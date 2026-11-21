@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LeviEmbMulSingle
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IwahoriProjSurjective
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.MatrixMeasurableSpace
 
 noncomputable section
 

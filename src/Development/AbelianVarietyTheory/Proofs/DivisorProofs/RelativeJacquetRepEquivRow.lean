@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSmoothColRep
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FirstCellFunctorEquiv
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.GeometricLemmaCellOneBlockSwapEquiv
 
 open GlobalTheory.PRep GlobalTheory.SmGL GlobalTheory.SmGL.RowOneCell Matrix
 open scoped TensorProduct
@@ -82,7 +82,7 @@ theorem rowJac_apply (χ₁ χ₂ : kˣ →* ℂˣ) (u v : ℕ) (x : ∀ j, Levi
   simp only [MonoidHom.mul_apply, map_mul, mul_one, one_mul, map_one, Int.cast_neg, Int.cast_natCast,
     Int.cast_one, neg_div, absPow_neg, MonoidHom.inv_apply]
   apply Units.ext
-  simp only [Units.val_mul, Units.val_inv_eq_inv_val, _root_.mul_inv_rev, inv_inv, Units.val_one]
+  simp only [Units.val_mul, Units.val_inv_eq_inv_val, _root_.mul_inv_rev, inv_inv]
   ring
 
 def cellLineEquiv (χ₁ χ₂ : kˣ →* ℂˣ) (u v : ℕ) :

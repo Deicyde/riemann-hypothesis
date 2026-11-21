@@ -1,8 +1,7 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.SquareIntegrableTempered.CasselmanCriterion.Zj
-import GroundTheory.AutomorphicForms.SupercuspidalCoefficients
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.AdmissibleFiniteLength
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.EigenvectorLiftOfSurjection
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 open GlobalTheory.PRep GlobalTheory.SplitWeil GlobalTheory.SmGL GlobalTheory.LocGL GlobalTheory.JHMult
 

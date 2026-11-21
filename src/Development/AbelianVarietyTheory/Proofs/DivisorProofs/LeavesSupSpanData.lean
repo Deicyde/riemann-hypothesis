@@ -1,13 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsDeltaDelAtOwnAt
-import Formalism.LocalToGlobal.Divisibility.NumbersLemmas
-import Formalism.LocalToGlobal.IndefiniteForms.IndefiniteTree.DepthCond
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.TraceLatticeLeThetaLatticeAtPlace
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.GoodLiftOnto
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.LeavesSupSpanLemmaSOfFormTieK
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.LeafDataOfOnTieOfIntegral
 import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.LatAtAndSpanAtOfHypC
-import Development.AbelianVarietyTheory.Proofs.FormalGroupCharts.ChartIndependenceUnconditional
 
 set_option autoImplicit false
 

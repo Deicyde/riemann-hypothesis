@@ -1,4 +1,5 @@
-import Formalism.PeriodIntegrals.FglGram
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.DualGramSubstitution.BeMulByZero
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CubeFormalIdentities.CoeffPowMulPowEqZero
 
@@ -109,7 +110,7 @@ theorem gr_split {κ ι ι' : Type} [Fintype κ] [Fintype ι] [Fintype ι'] {n n
         sdRF l ex ph a a' := by
   unfold GR sdRF
   simp only [Fintype.sum_sum_type, Sum.elim_inl, Sum.elim_inr, hll, hrr, hlr, hrl, ↓reduceIte,
-    Finset.sum_const_zero, add_zero, zero_add, Finset.sum_add_distrib]
+    Finset.sum_const_zero, add_zero, Finset.sum_add_distrib]
   abel
 
 theorem hP_mem {S : Set (ℂ_[p] × ℂ_[p])} (h0 : (0 : ℂ_[p] × ℂ_[p]) ∈ S) (hsw : ∀ α ∈ S, α.swap ∈ S)

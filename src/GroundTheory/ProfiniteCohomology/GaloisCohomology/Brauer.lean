@@ -1,6 +1,5 @@
-import Mathlib
-import GroundTheory.ProfiniteCohomology.Colimit
-import GroundTheory.ProfiniteCohomology.GaloisCohomology.UnitsInflationCochainsFHomApply
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.GaloisCohomology.IsZeroGroupCohomologyQuotientToInvariantsGalAdd
 set_option maxSynthPendingDepth 1
 

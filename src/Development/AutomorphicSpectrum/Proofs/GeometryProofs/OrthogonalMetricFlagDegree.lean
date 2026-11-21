@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.IsSubFibreSubFib
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.IsUnitNatCastStalk
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.IsExcisionNbhdAway
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsFlagBasisAtStalkStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LieModelFrameSpansGenericStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsLieModelBaseChangeStatement

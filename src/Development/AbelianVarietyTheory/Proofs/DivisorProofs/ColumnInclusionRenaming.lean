@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.TraceSubstitution
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ExtensionSingularValues
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.Divisibility.CoefMod
 
 open MvPolynomial Formalism.GradedWeylDivisibility Formalism.L2.DIV
 

@@ -1,11 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasTypeVec
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.LabesseWaldspurger
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.ConstantTermVanishing
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.AdjointRadical
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.CuspidalNoRadicalFixed
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.StandardMaximalParabolic
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.CentralizerTensorForms
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.AbsAUnit
 open MeasureTheory Set Filter NumberField IsDedekindDomain
 open GlobalTheory.AdelicU GlobalTheory.OpTrace GlobalTheory.Orb GlobalTheory.AutomorphicL2Unitary GlobalTheory.AutMult Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -34,7 +28,7 @@ theorem hLin_coordR (x y : V.V) :
   change hR R hc.sig V.gram _ _ = inclR R (V.hT _ _)
   rw [IndefiniteRowSideFullHecke.AdelicUnitaryGroups.hT_coord]
   simp [hR, Formalism.UG.hform, GlobalTheory.IndefiniteRowSideFullHecke.AdelicUnitaryGroups.coordR, JR, inclR, Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes.sigR, CMData.sig,
-    TensorProduct.tmul_sum, starRingEnd_apply]
+    starRingEnd_apply]
 
 theorem hD_bas_dbas (u : SV (wittIndex V)) (i k : Supp u) :
     V.hD (bas Φ u i.1) (dbas Φ u k.1) = if i = k then 1 else 0 := by

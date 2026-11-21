@@ -1,4 +1,7 @@
-import Development.EtaleCohomology.EtaleSheaves.SheafIsomorphism.LeafShIsoOf
+import BuildAid.Leniency.Open
+import Development.EtaleCohomology.EtaleSheaves.SheafIsomorphism
+import Mathlib.CategoryTheory.ExtremalEpi
+import Mathlib.CategoryTheory.Sites.EpiMono
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry Opposite

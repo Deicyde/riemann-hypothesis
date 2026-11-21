@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.PhiCMinSt
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.TransferenceMinima
 
@@ -29,7 +30,7 @@ theorem shortDual_holds : ShortDualStatement := by
     by_cases hij : i = j
     · subst hij
       simp
-    · simp [Pi.single_apply, hij]
+    · simp [hij]
 
   obtain ⟨g, hg⟩ : ∃ g : (Fin d → ℤ) →ₗ[ℤ] EuclideanSpace ℝ (Fin d),
       ∀ t, g t = e (R *ᵥ fun i => (t i : ℝ)) :=

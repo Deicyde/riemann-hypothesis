@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.PinColL
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.FrameTopAlt
 
 set_option genSizeOfSpec false
 set_option genInjectivity false

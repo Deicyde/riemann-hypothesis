@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.LocalRingCardinality.DataLevelD
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.StandardLattice
 
 noncomputable section

@@ -1,9 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.DualFamilyCounting.NcRealXPS
-import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.DualFamilyCounting.MMatEntryMeasurable
-import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.LocalWeightCharts.NChartP
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.DualFamilyCounting.KapEqParts
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.DualFamilyCounting.NcRealXHU
+import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.LocalWeightCharts.NShear
 
 noncomputable section
 
@@ -294,7 +294,7 @@ theorem kapL_eq {z : Fin (2 * r + k + 1) → ℂ} {T : ℝ} (hF : IsFrameJ ε e 
   · rw [hX] <;> rfl
   · congr 1
     rw [← hcol, cZ]
-    simp only [z0v, Matrix.mulVec_smul, hJ, dotProduct_smul, smul_eq_mul, Complex.real_smul,
+    simp only [z0v, Matrix.mulVec_smul, hJ, dotProduct_smul, smul_eq_mul,
       Complex.ofReal_inv]
     rw [← mul_assoc, mul_inv_cancel₀ hs, one_mul]
   · congr 1
@@ -450,7 +450,7 @@ theorem map_uncurry_volume {ι κ : Type*} [Fintype ι] [Fintype κ] :
   have hpre : (fun F : ι → κ → ℝ => fun p : ι × κ => F p.1 p.2) ⁻¹' Set.univ.pi s =
       Set.univ.pi fun i => Set.univ.pi fun j => s (i, j) := by
     ext F
-    simp [Set.mem_univ_pi, Prod.forall]
+    simp [Prod.forall]
   rw [Measure.map_apply hm (MeasurableSet.univ_pi hs), hpre, Measure.pi_pi, Fintype.prod_prod_type]
   simp only [volume_pi_pi]
 

@@ -1,5 +1,13 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.DistinguishedUnitIdeals.UnivPart
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.PowerSeries.Ideal
+import Mathlib.RingTheory.PowerSeries.WeierstrassPreparation
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 
@@ -55,7 +63,7 @@ theorem coe_sum_fin {d : ℕ} (a : Fin d → O) :
 
 theorem coeff_sum_fin {d : ℕ} (a : Fin d → O) (j : Fin d) :
     (∑ i : Fin d, Polynomial.C (a i) * Polynomial.X ^ (i : ℕ) : Polynomial O).coeff j = a j := by
-  simp [Polynomial.finset_sum_coeff, Polynomial.coeff_C_mul_X_pow, Fin.val_inj]
+  simp [Fin.val_inj]
 
 theorem coe_eq_sum_fin {d : ℕ} {r : Polynomial O} (hr : r.degree < d) :
     (r : PowerSeries O) = ∑ i : Fin d, C (r.coeff i) * X ^ (i : ℕ) := by
@@ -236,7 +244,7 @@ theorem mem_span_of_frobenius_mem_span : Descent := by
     ext n
     rw [map_zero]
     exact hz n h hs i0
-  simp only [h, if_pos rfl, if_true] at h0
+  simp only [h, if_true] at h0
   exact Ideal.mem_span_pair.mpr ⟨a i0, b i0, by linear_combination h0⟩
 
 end Formalism.ExponentWindows

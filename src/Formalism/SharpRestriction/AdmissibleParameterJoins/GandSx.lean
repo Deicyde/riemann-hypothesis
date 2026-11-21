@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.LiftErrorLocal
 import Formalism.SharpRestriction.AdmissibleParameterJoins.GandSm
+import Formalism.SharpRestriction.GrowthBounds.WeilJacquetShalikaLaw
 
 noncomputable section
 

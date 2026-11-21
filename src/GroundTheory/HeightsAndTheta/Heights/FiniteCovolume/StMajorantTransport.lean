@@ -1,5 +1,7 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.SecondCountableTopologyArchUnitary
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.Objects
+import Mathlib.Algebra.Module.ZLattice.Covolume
 
 namespace GroundTheory.Heights₂.Heights.FiniteCovolume
 

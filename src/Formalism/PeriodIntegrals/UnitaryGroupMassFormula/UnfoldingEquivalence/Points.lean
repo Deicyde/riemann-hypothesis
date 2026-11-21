@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnfoldingEquivalence.ExtractFreeFillMatrix
 
 open PI.UnfoldEquiv PI.UnfoldEquiv.Loc

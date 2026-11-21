@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.OnePointBasisFundamentalDomainVolume
 import CompanionTheory.AutomorphicTheory.BesselWaveGrids.InterlacingGrids.FreeFamily
 import CompanionTheory.AutomorphicTheory.BesselWaveGrids.InterlacingGrids.LagSum

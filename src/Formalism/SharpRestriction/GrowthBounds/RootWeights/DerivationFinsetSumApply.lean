@@ -1,4 +1,14 @@
-import Formalism.SharpRestriction.GrowthBounds.RootWeights.ContravariantIsotypicOrthogonal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.ObjPol
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.Derivation.Lie
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -42,9 +52,9 @@ theorem gl_derivation_variable (LL : Letters ι) (S : Set ι) (a b : Fin n) (l :
       else 0 := by
   unfold glDerivation
   rw [derivation_finset_sum_apply, Finset.sum_eq_single l]
-  · split_ifs <;> simp_all [pderiv_X, Pi.single_apply]
+  · split_ifs <;> simp_all [pderiv_X]
   · intro l' _ hl'
-    split_ifs <;> simp [pderiv_X, Pi.single_apply, Ne.symm hl']
+    split_ifs <;> simp [pderiv_X, Ne.symm hl']
   · simp
 
 theorem gl_derivation_lie_bracket (LL : Letters ι) (S : Set ι) (a b c d : Fin n) :

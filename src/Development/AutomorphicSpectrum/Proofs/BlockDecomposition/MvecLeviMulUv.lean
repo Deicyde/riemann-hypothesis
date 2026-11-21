@@ -1,9 +1,6 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.GenericUnitaryGL.LeibnizOrders.LeibnizOrd
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLocallyConstantAddChar
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PolyBall
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsRepsSumEqZero
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousMirProj
 
 noncomputable section
 open Matrix GlobalTheory.PRep GlobalTheory.BZMir GlobalTheory.SplitWeil GlobalTheory.CompanionTheory.MirFourier
@@ -75,7 +72,7 @@ theorem decomp {n : ℕ} (g : Mir k n) : g = levi k n (mirabolicProjection k n g
   · rw [congrFun hlast j]
     refine Fin.lastCases ?_ (fun j => ?_) j
     · simp [GlobalTheory.BZMir.glEmbMat, GlobalTheory.BZMir.colMat, GlobalTheory.BZMir.eLast]
-    · simp [GlobalTheory.BZMir.glEmbMat, GlobalTheory.BZMir.colMat, GlobalTheory.BZMir.eLast, Pi.single_apply,
+    · simp [GlobalTheory.BZMir.glEmbMat, GlobalTheory.BZMir.colMat, GlobalTheory.BZMir.eLast,
         Fin.castSucc_ne_last]
   · refine Fin.lastCases ?_ (fun j => ?_) j
     · simp [GlobalTheory.BZMir.glEmbMat, GlobalTheory.BZMir.colMat, GlobalTheory.CompanionTheory.MirLevi.colv]

@@ -1,7 +1,7 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.EisensteinSeries.SiegelEisensteinContinuation.StripEntire
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GaussTubeOfTubeGood
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExponentialFourierIntegralBound
+import Mathlib.Analysis.Calculus.ParametricIntegral
+import Mathlib.Tactic.ENatToNat
 
 open MeasureTheory Filter Topology PositivityTheory.RgEis GlobalTheory.CompanionTheory.TubeFourier
 
@@ -25,7 +25,7 @@ theorem norm_dot_le (v : ℂ × ℂ) (t : ℝ × ℝ) :
     ‖dot v t‖ ≤ (‖v.1‖ + ‖v.2‖) * (|t.1| + |t.2|) := by
   have h1 : ‖dot v t‖ ≤ ‖v.1‖ * |t.1| + ‖v.2‖ * |t.2| := by
     refine (norm_add_le _ _).trans ?_
-    simp [norm_mul]
+    simp
   have := norm_nonneg v.1
   have := norm_nonneg v.2
   have := abs_nonneg t.1

@@ -1,9 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.CuspidalL2Subspace
 import Formalism.LocalToGlobal.ProjectiveLattices.BaseEmbeddingInclusion
-import Formalism.LocalToGlobal.IndefiniteReal.GramCEqTranspose
-import Formalism.LocalToGlobal.IndefiniteReal.SubgroupCharExtensionOneApply
 import Formalism.SharpRestriction.Divisibility.AbelianOpenPart.KaSmallNonpos
+import Formalism.LocalToGlobal.Divisibility.DefGroup
 
 noncomputable section
 
@@ -132,7 +133,7 @@ theorem isKappa_kaWt (hK : DV.KapDef D) (hn : Even D.R.nV) {j : ℕ} (hj : InR D
 example {LL G : Type} [Field LL] [Group G] [Fintype G] [DecidableEq G] :
     IsCentralIdem (fun g : G => if g = 1 then (1 : LL) else 0) := by
   refine ⟨fun g h => ?_, fun g => ?_⟩
-  · simp [mul_inv_eq_one, mul_inv_eq_iff_eq_mul]
+  · simp [mul_inv_eq_iff_eq_mul]
   · rw [Finset.sum_eq_single (1 : G)] <;> simp +contextual
 
 theorem carriesCusp_formsLOf (T : Core D) (j : ℕ) (w : WeightFamilies.Wt D j)

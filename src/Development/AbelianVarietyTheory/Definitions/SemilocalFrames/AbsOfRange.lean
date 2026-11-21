@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.CongruenceAtSplitFrobeniusHolds
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.DegVand
 

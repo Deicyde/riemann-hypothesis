@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.UnderTie
-import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.FirstCoupledKernelEquivariantCosets
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.AdelicPointsSameBadComponentsSameLocalizationStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ChartFunctionalEqOfAgreeBadPlacesAllStepsStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ChartPointsFramesCongrAwayFromBadPrimesStatement
@@ -77,7 +75,7 @@ theorem ptAway_cpl : UnderTie (fun {D L hT Gi Gl Kc Y cX ex t u μ St} A dtU a =
   have hL := t.idx_ok μ
   funext z
   unfold xiPt
-  simp only [dif_neg (lt_irrefl _), if_pos rfl]
+  simp only [dif_neg (lt_irrefl _)]
   unfold XiCpl1
   refine congrArg₂ (· * ·) ?_ (Finset.prod_congr rfl fun P _ => ?_)
 

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.StabIntPfL
 
 noncomputable section
@@ -183,7 +184,7 @@ include hA in
 theorem e_cc_mul (k : ℕ) (w : (D.s.atP p).Ep) :
     g.e (cc δ p ^ k * w) = (γp δ p ^ k * (g.e w).1, γp δ p ^ k * (g.e w).2) := by
   rw [map_mul, map_pow, cc_eq, e_alg]
-  ext <;> simp [Prod.pow_fst, Prod.pow_snd]
+  ext <;> simp
 
 include hA in
 theorem mem_qO (w : (D.s.atP p).Ep) :

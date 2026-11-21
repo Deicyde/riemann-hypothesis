@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ArithmeticGeometry.AbelianVarieties.FunctionFieldPoint
+import GroundTheory.ArithmeticGeometry.AbelianVarieties.KernelCard
+import Mathlib.FieldTheory.RatFunc.IntermediateField
+import Mathlib.FieldTheory.Relrank
 
 namespace GroundTheory.Arith.Abelian
 

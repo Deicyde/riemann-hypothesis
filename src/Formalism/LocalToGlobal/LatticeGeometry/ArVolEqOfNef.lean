@@ -1,4 +1,6 @@
-import Formalism.LocalToGlobal.LatticeGeometry.DegFlLApply
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.DataDIV
 
 noncomputable section
 

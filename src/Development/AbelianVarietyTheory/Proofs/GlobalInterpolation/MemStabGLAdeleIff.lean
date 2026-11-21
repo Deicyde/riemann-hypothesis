@@ -1,9 +1,8 @@
-import Mathlib
-import Formalism.LocalRingCardinality.DataLevel
-import Formalism.LocalRingCardinality.DataLevelD
-import Formalism.SharpRestriction.GlobalSchurBounds.GeneralLinearActions.GapAtLeast
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Afsplit
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Levelaf
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Algebra.AffineMonoid.Basic
 open NumberField IsDedekindDomain Matrix Formalism.UG Formalism.BasicNotions Formalism.MainNotions.StandardLattice
 open scoped TensorProduct
 

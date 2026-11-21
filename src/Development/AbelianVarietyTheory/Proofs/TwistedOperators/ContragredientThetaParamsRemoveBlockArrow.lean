@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CartFrSgn
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsRealThetaParameterPairThetaPartnerSignedParameStatement
+import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.CuspAlongSmoothRows
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.Mult Formalism.IndefR.Datum
 open MeasureTheory Matrix GlobalTheory.Chain GlobalTheory.ChainFr GlobalTheory.Grid
 open scoped TensorProduct InnerProductSpace
@@ -45,8 +46,7 @@ theorem odd_rkV (D : D7) (i j : ℕ) : Odd (rkV D i j) ↔ ¬ Odd (i + j) := by
     exact ⟨a + b - 1, by unfold Ranks.r; omega⟩
   have hs : Odd (sLen D) := by unfold sLen; exact hr.add_even (by decide)
   unfold rkV
-  simp only [Nat.odd_add, Nat.odd_mul, Nat.even_mul, ← Nat.not_odd_iff_even, hr, ht, hs, not_true, or_false, true_iff,
-    iff_true]
+  simp only [Nat.odd_add, Nat.odd_mul, ← Nat.not_odd_iff_even, hr, ht, hs, true_iff]
   tauto
 
 section Facts
@@ -54,15 +54,15 @@ variable (D : D7) (τ : D.what₂.Tau)
 
 theorem grid_b {l : ℕ} (h1 : 1 ≤ l) (h2 : l ≤ D.R.m) : ((grid D τ).b l : ℚ) = (D.hc τ).b ⟨l - 1, by omega⟩ := by
   have := (GridData.ofHCParam_spec (D.hc τ) (sLen D) (gap D) (cen D τ)).2.1 ⟨l - 1, by omega⟩
-  rw [this]; congr 2; simp only [Fin.val_mk]; omega
+  rw [this]; congr 2; simp only; omega
 
 theorem grid_e {l : ℕ} (h1 : 1 ≤ l) (h2 : l ≤ D.R.m) : ((grid D τ).e l : ℚ) = (D.hc τ).e ⟨l - 1, by omega⟩ := by
   have := (GridData.ofHCParam_spec (D.hc τ) (sLen D) (gap D) (cen D τ)).2.2 ⟨l - 1, by omega⟩
-  rw [this]; congr 2; simp only [Fin.val_mk]; omega
+  rw [this]; congr 2; simp only; omega
 
 theorem grid_v {i : ℕ} (h1 : 2 ≤ i) (h2 : i ≤ D.R.k) : ((grid D τ).v i : ℚ) = (D.hc τ).v ⟨i - 2, by omega⟩ := by
   have := (GridData.ofHCParam_spec (D.hc τ) (sLen D) (gap D) (cen D τ)).1 ⟨i - 2, by omega⟩
-  rw [this]; congr 2; simp only [Fin.val_mk]; omega
+  rw [this]; congr 2; simp only; omega
 
 theorem grid_be {l : ℕ} (h1 : 1 ≤ l) (h2 : l ≤ D.R.m) :
     ((D.R.t : ℚ) + 3) / 2 ≤ (grid D τ).e l - (grid D τ).b l := by
@@ -300,7 +300,7 @@ theorem parD_succ (D : D7) (τ : D.what₂.Tau) (i j : ℕ) (hi : i ≤ D.R.m) (
         by_cases hl : l ≤ j + 1 + 1
         · have e2 : l - (j + 1) - 1 = 0 := by omega
           simp [hl, e2, show ¬ l ≤ j + 1 by omega]
-        · simp [hl, show ¬ l ≤ j + 1 by omega, ← Nat.not_even_iff_odd]
+        · simp [hl, show ¬ l ≤ j + 1 by omega]
     · rcases (Nat.lt_or_eq_of_le hlj) with h' | h'
       · exact Or.inl ⟨by linarith [blockM_above D τ hj hl1 (by omega) h], Or.inr (Or.inr (Or.inl ⟨l, hl1, by omega, h, rfl⟩))⟩
       · subst h'; exact Or.inr (Or.inr ⟨h, rfl⟩)
@@ -338,7 +338,7 @@ theorem parD_succ (D : D7) (τ : D.what₂.Tau) (i j : ℕ) (hi : i ≤ D.R.m) (
         by_cases hl : l ≤ j + 1 + 1
         · have e2 : l - (j + 1) - 1 = 0 := by omega
           simp [hl, e2, h]
-        · simp [hl, h, ← Nat.not_even_iff_odd]
+        · simp [hl, h]
       · linarith [blockM_above D τ hj hl1 hlj h]
       · linarith [blockC_above D τ hj (by omega) hlm h]
     · exact Or.inr (Or.inr (Or.inl ⟨j + 1, by omega, le_rfl, h, rfl⟩))

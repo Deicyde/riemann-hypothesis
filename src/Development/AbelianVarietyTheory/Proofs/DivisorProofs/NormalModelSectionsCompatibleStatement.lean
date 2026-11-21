@@ -1,8 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormalModelSectionsCompatible
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.FaithfulSMulAlgClosure
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemRingOver
 open CategoryTheory Limits AlgebraicGeometry IsLocalRing TensorProduct
 open GlobalTheory GlobalTheory.QCoh GlobalTheory.Vert GlobalTheory.MixedLocalChains GlobalTheory.PerfdLat GlobalTheory.Published GlobalTheory.GroupBplus GlobalTheory.BplusDescent
 set_option maxHeartbeats 1000000 in

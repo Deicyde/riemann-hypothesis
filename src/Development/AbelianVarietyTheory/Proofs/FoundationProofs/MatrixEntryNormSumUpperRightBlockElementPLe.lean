@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.StarMulOfMemKc
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IsInvInvariantOfRight
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.SumNormEntriesLeSumSingularValuesStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.MeasurableCoshPowStatement

@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.FormalDegreeBessel.StatementIO
-import Formalism.RealPlaceAnalysis.ThirdArithmeticHolds
 import Formalism.RealPlaceAnalysis.QuotientSettingHolds
 
 open Matrix

@@ -1,9 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsLeSup
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LevSplitOf
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousToGAd
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviIsoPlaneUnique
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.UnitaryAdelicHeightWittEmbeddingLeConstMul
@@ -31,8 +27,8 @@ theorem exp_block {n n₁ : ℕ} (ι : Matrix (Fin n) (Fin n₁) ℂ) (π : Matr
       map_one' := by simp
       map_mul' := fun p q => by
         simp only [Prod.fst_mul, Prod.snd_mul, Matrix.add_mul, Matrix.mul_add, Matrix.smul_mul, Matrix.mul_smul,
-          Matrix.sub_mul, Matrix.mul_sub, Matrix.mul_assoc, h', Matrix.one_mul, Matrix.mul_one, sub_self, smul_zero,
-          add_zero, zero_add, sub_zero, smul_smul, smul_sub]
+          Matrix.sub_mul, Matrix.mul_sub, Matrix.mul_assoc, h', Matrix.one_mul, Matrix.mul_one, sub_self,
+          zero_add, smul_sub]
         module
       map_zero' := by simp
       map_add' := fun p q => by

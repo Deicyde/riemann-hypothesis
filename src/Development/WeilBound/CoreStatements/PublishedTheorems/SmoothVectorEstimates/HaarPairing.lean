@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PublishedTheorems.SmoothVectorEstimates.MirabolicColumnBlock
+import Mathlib.Analysis.Distribution.SchwartzSpace.Fourier
 
 noncomputable section
 

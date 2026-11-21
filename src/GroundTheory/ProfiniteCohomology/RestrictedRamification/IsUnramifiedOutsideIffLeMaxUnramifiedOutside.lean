@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.GaloisModules.Discrete
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.Unramified
+import Mathlib.Algebra.Lie.OfAssociative
+import Mathlib.RingTheory.Henselian
+import Std.Tactic.BVDecide.Normalize.Prop
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

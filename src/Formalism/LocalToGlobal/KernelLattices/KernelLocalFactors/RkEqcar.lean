@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.ThetaLocalEquivalence.ThEquivPAmbOfTiesD
 import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.RkConj
 import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.RkThindEq
-import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.ColInst
 import Formalism.LocalToGlobal.Columns.ChainOneOkF
 
 open NumberField IsDedekindDomain

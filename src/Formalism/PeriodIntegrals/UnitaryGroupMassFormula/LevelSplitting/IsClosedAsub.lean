@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LevelSplitting.LeviInfUnipotentEqOne
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LevelSplitting.NCIface
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LevelSplitting.UnitaryGroupSecondCountableT2
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.SemidirectVolume.ModTop
 
 noncomputable section

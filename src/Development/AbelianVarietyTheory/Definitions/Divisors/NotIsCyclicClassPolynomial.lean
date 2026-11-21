@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.HomLieEquivScalarTmul
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RigExtMapRelFrobCompRigOfOmega
-import Development.AbelianVarietyTheory.Definitions.Divisors.WittOnFalse
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.EqZeroOfCobOneEqZero
+import Mathlib.Algebra.Quaternion
+import Mathlib.RingTheory.WittVector.Frobenius
 
 set_option autoImplicit false
 

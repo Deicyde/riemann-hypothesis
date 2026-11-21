@@ -1,8 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GCorCut
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.FrRatio
-import Formalism.LocalToGlobal.ProjectiveLattices.ThProps
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ChartJetTrC
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.HolomorphicFamilies.CmHostUnitAddConjEqOne
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.HolomorphicFamilies.BiextCoeffSecondLinear
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.IntegralChartFormalBiext
@@ -28,7 +25,7 @@ theorem mk_eq_zero_iff (p : MvPolynomial ι R) :
     (Ideal.Quotient.mk _ p : Jet R ι m) = 0 ↔ ∀ e : ι →₀ ℕ, e.degree ≤ m → p.coeff e = 0 := by
   rw [Ideal.Quotient.eq_zero_iff_mem, show orig R ι = MvPolynomial.idealOfVars ι R from rfl,
     MvPolynomial.mem_pow_idealOfVars_iff']
-  simp [Nat.lt_succ_iff]
+  simp
 
 theorem mem_degLE [Fintype ι] [DecidableEq ι] (e : ι →₀ ℕ) : e ∈ degLE m ↔ e.degree ≤ m := by
   unfold degLE

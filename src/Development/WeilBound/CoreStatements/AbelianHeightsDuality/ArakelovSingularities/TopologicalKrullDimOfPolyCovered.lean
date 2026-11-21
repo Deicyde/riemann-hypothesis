@@ -1,8 +1,7 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.AbelianHeightsDuality.ArakelovSingularities.PolyDef
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.AbelianHeightsDuality.ArakelovSingularities.PolyCons
 import Development.WeilBound.CoreStatements.AbelianHeightsDuality.ArakelovSingularities.PolyPb
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsClosedImmersionGenericPoint
 
 set_option autoImplicit false
 

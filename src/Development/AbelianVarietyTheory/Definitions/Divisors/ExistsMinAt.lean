@@ -1,6 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.MinSt4
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsMumfordFamOfSubsingleton
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsThetaCompact
+import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.IsE8ThetaStructure
 
 noncomputable section
 

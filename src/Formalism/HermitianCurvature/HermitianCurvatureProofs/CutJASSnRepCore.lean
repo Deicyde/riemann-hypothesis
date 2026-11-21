@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJASSnRepCut
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGCoreGTSSCut
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.cut_GCore_GTConnCut
 
 open Formalism.REAL Formalism.QuantumDeterminants Formalism.FourierDecayAlt NumberField
 open scoped ComplexConjugate Matrix

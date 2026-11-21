@@ -1,5 +1,7 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.PatchedSupportCompletions
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.ProfDefs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.ThetaCoefficientMapEq
+import Mathlib.Topology.Separation.Connected
 
 noncomputable section
 

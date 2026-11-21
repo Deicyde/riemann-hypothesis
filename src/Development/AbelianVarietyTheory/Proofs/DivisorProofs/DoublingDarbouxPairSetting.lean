@@ -1,12 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAut
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RegFamOfContinuousAt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeckeCharactersRestrictionEta
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsGoodSchrodingerModel
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EventuallySelfDualLatticeIndicatorIsVacuum
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFinitePlaceVacuumAnyDarbouxCoordinatesStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCompactOfIsStabSkew
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -52,7 +47,7 @@ theorem hasSig_dbl {d r s : ℕ} (M : Matrix (Fin d) (Fin d) ℂ) (h : HasSig M 
     rcases i with i | i <;> rcases j with j | j <;> simp [f, Matrix.one_apply] <;> simp [Fin.ext_iff] <;> omega
 
 theorem form_zero_right {n : ℕ} (J : Matrix (Fin n) (Fin n) E) (y : Fin n → E) : form σ J y 0 = 0 := by
-  simp [form, Pi.zero_apply, map_zero, ← Pi.zero_def]
+  simp [form, map_zero, ← Pi.zero_def]
 
 theorem exists_isSkew_dbl (B : Base F E) (hcm : IsCMExt F E σ) {n r s : ℕ} (W : Spc F E n) (hW : W.IsSkew σ B r s)
     (J₂ : Matrix (Fin (n + n)) (Fin (n + n)) E) (hJ : J₂ = dblGram finSumFinEquiv W.J) :

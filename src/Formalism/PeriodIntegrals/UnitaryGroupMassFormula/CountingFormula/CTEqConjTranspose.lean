@@ -1,6 +1,9 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.Statement
 import Lemmata.MiscLemmasI.Imports
+import Mathlib.LinearAlgebra.Matrix.DotProduct
+import Mathlib.RingTheory.PicardGroup
 
 open Matrix
 open scoped ComplexOrder

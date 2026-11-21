@@ -1,4 +1,7 @@
-import Formalism.SharpRestriction.GrowthBounds.RootWeights.GlOperatorMemIntegralEnveloping
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.RootWeights.IntegralEnvelopingPreservesSubmodule
+import Mathlib.RingTheory.PiTensorProduct
 
 noncomputable section
 

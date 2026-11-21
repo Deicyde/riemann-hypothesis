@@ -1,5 +1,5 @@
-import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.ChainFibFinite
-import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.ChainOfKernelsUnique
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.CompEqOneIffPush
 
 set_option autoImplicit false
 noncomputable section

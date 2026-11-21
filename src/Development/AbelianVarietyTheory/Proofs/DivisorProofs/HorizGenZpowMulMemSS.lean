@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.HtValOnSubset
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GenericRegularity.BddSecMulAndConstTermMul
+import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsFlatSecRankZero
 
 set_option autoImplicit false
 

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.CyclotomicDvdExpandOfCoprime
 
 noncomputable section
@@ -462,7 +463,7 @@ theorem lev_nontrivial {R : Type} [CommRing R] (p : ℕ) [hp : Fact p.Prime] (hu
     rw [Polynomial.hom_eval₂]
     have : (constantCoeff : PowerSeries R →+* R).comp C = RingHom.id R := by ext; simp
     rw [this]
-    simp [Polynomial.eval₂_id, Polynomial.eval_one_cyclotomic_prime_pow]
+    simp [Polynomial.eval_one_cyclotomic_prime_pow]
   rw [this]; exact hu
 
 theorem dd_test {R : Type} [CommRing R] (p : ℕ) (hp : 0 < p) :

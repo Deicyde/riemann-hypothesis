@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleTrace.EtaleTateTwistSectionConstantOnPointsOfConnected
 import Mathlib.AlgebraicGeometry.AlgClosed.Basic
 import Mathlib.AlgebraicGeometry.Sites.EtalePoint
+import Mathlib.Order.CompletePartialOrder
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry Opposite

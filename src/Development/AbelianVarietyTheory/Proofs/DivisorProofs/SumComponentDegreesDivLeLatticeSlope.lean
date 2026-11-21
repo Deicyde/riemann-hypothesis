@@ -1,10 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CyclotomicBounds.RamifiedDiscriminants.LogQdLeRd
-import Development.AbelianVarietyTheory.Definitions.Divisors.NormNegCmConstantEqAtAllEmbeddings
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ComponentDegreesSumLeTotalDegreeStatement
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.VolPairExAndFinVol
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.FieldSizeMonotone
-import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
 
 noncomputable section
 

@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsLv
+import Development.AbelianVarietyTheory.Definitions.Divisors.LocallyCompactUnipFlag
+import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.GodementSectionInvariantConvergent
 
 noncomputable section
 

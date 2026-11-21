@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.KleimanNefness.AlgCechSt
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PGenTwistGenerated
 set_option maxSynthPendingDepth 1

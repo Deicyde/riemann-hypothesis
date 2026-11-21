@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.GeometricLemmaFiltration
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HasFiniteLengthOfIsIrreducible
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.BernsteinUnitaryProductIrreducible
+import Std.Tactic.BVDecide.Normalize.BitVec
 open GlobalTheory.PRep GlobalTheory.SmGL Matrix
 
 noncomputable section
@@ -15,7 +15,7 @@ variable {k : Type} [Field k] [ValuativeRel k] [TopologicalSpace k] [IsNonarchim
 theorem det_scalar_gl {n : Type} [Fintype n] [DecidableEq n] (x : kˣ) :
     GeneralLinearGroup.det (GeneralLinearGroup.scalar n x) = x ^ Fintype.card n := by
   ext
-  simp [Matrix.scalar_apply, Matrix.det_diagonal, Finset.prod_const]
+  simp
 
 theorem scalar_mem_parab {α n : Type} {m : α → Type} [Fintype α] [LinearOrder α]
     [∀ a, Fintype (m a)] [∀ a, DecidableEq (m a)] [Fintype n] [DecidableEq n]
@@ -73,15 +73,15 @@ theorem extTensor_detRep_eq {k : Type} [Field k] {u v : ℕ} (χ₁ χ₂ : kˣ 
     TensorProduct.smul_tmul', smul_smul, mul_comm]
 
 theorem modExp_bool_true (n : Bool → ℕ) : modExp (fun j : Bool => Fin (n j)) true = -(n false : ℤ) := by
-  simp [modExp, Finset.sum_filter, Fintype.sum_bool]
+  simp [modExp, Finset.sum_filter]
 
 theorem modExp_bool_false (n : Bool → ℕ) : modExp (fun j : Bool => Fin (n j)) false = (n true : ℤ) := by
-  simp [modExp, Finset.sum_filter, Fintype.sum_bool]
+  simp [modExp, Finset.sum_filter]
 
 theorem absPow_zero_apply {k : Type} [Field k] [ValuativeRel k] [TopologicalSpace k] [IsNonarchimedeanLocalField k]
     (x : kˣ) : absPow k 0 x = 1 := by
   ext
-  simp [val_absPow]
+  simp
 
 theorem cell_scalar : ∀ {k : Type} [Field k] [ValuativeRel k] [TopologicalSpace k] [IsNonarchimedeanLocalField k] (χ₁ χ₂ : kˣ →* ℂˣ) (u v : ℕ) (m : Type) [Fintype m] [DecidableEq m] (ϖ : kˣ) (B : SizeMatrix (Two (Fin u) (Fin v)) (Two m (Fin 1))) (f : ∀ i, (Σ j, Fin (B.1 i j)) ≃ Two (Fin u) (Fin v) i) (g : ∀ j, (Σ i, Fin (B.1 i j)) ≃ Two m (Fin 1) j), cellFunctor f g ((extTensor (detRep (Fin u) χ₁) (detRep (Fin v) χ₂)).comp (leviTwo k (Fin u) (Fin v)).symm.toMonoidHom) (leviTwo k m (Fin 1) (1, GeneralLinearGroup.scalar (Fin 1) ϖ)) = (if B.1 false true = 1 then (((χ₁ * absPow k (((u : ℂ) - 1) / 2)) ϖ : ℂˣ) : ℂ) else (((χ₂ * absPow k (((v : ℂ) - 1) / 2)) ϖ : ℂˣ) : ℂ)) • LinearMap.id := by
   intro k _ _ _ _ χ₁ χ₂ u v m _ _ ϖ B f g
@@ -127,7 +127,7 @@ theorem cell_scalar : ∀ {k : Type} [Field k] [ValuativeRel k] [TopologicalSpac
   congr 1
   clear hJ hP hc hmem hZ hdet
   simp only [relDeltaHalf_apply, deltaHalf_apply, det_scalar_gl, Fintype.card_fin, Fintype.prod_bool]
-  simp only [s, cond_true, cond_false, one_pow, map_one, modExp_bool_true, modExp_bool_false, one_mul, mul_one]
+  simp only [s, cond_true, cond_false, one_pow, map_one, modExp_bool_true, modExp_bool_false, mul_one]
   have hcol : B.1 false true + B.1 true true = 1 := by
     have := B.2.2 true
     simpa [Fintype.sum_bool, add_comm] using this
@@ -144,11 +144,11 @@ theorem cell_scalar : ∀ {k : Type} [Field k] [ValuativeRel k] [TopologicalSpac
     have hu' : ((u : ℂ) - 1) = (B.1 false false : ℂ) := by
       have e : (u : ℂ) = (B.1 false false : ℂ) + 1 := by exact_mod_cast (by omega : u = B.1 false false + 1)
       rw [e]; ring
-    simp only [pow_zero, pow_one, map_one, one_mul, mul_one, Nat.cast_zero, Int.cast_zero, neg_zero, zero_div,
-      absPow_zero_apply, Units.val_one, inv_one]
+    simp only [pow_zero, pow_one, map_one, one_mul, mul_one, Nat.cast_zero, Int.cast_zero, zero_div,
+      absPow_zero_apply, Units.val_one]
     rw [hu']
     push_cast
-    simp only [Units.val_mul, MonoidHom.mul_apply, Units.val_inv_eq_inv_val, val_absPow, neg_div, Complex.cpow_neg, inv_inv]
+    simp only [Units.val_mul, MonoidHom.mul_apply, val_absPow, neg_div, Complex.cpow_neg, inv_inv]
     ring
   · rw [if_neg (by omega)]
     rw [h1, h2]
@@ -156,10 +156,10 @@ theorem cell_scalar : ∀ {k : Type} [Field k] [ValuativeRel k] [TopologicalSpac
       have e : (v : ℂ) = (B.1 true false : ℂ) + 1 := by exact_mod_cast (by omega : v = B.1 true false + 1)
       rw [e]; ring
     simp only [pow_zero, pow_one, map_one, one_mul, mul_one, Nat.cast_zero, Int.cast_zero, neg_zero, zero_div,
-      absPow_zero_apply, Units.val_one, inv_one]
+      absPow_zero_apply, Units.val_one]
     rw [hv']
     push_cast
-    simp only [Units.val_mul, MonoidHom.mul_apply, Units.val_inv_eq_inv_val, val_absPow, neg_div, Complex.cpow_neg, inv_inv]
+    simp only [Units.val_mul, MonoidHom.mul_apply, val_absPow, neg_div, Complex.cpow_neg, inv_inv]
     ring
 
 theorem aeval_prod_eq_zero_of_filtration {G V : Type} [Group G] [AddCommGroup V] [Module ℂ V]

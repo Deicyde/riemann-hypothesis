@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.SecondDegreeKilling
 import Development.EtaleCohomology.EtaleSheaves.SecondDegreeKilling.HkpullComp
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry Opposite GlobalTheory.EtC
@@ -16,7 +18,7 @@ theorem resY_comp {Y B : Scheme.{0}} (p : Y ⟶ B) {U U' U'' : B.Etale} (c : U''
     resY p (c ≫ a) = resY p c ≫ resY p a := by
   apply pullback.hom_ext
   · erw [pullback.lift_fst, Category.assoc, pullback.lift_fst, pullback.lift_fst_assoc]
-    first | simp [resY_comp] | (rw [Category.assoc]; rfl)
+    first | simp | (rw [Category.assoc]; rfl)
   · erw [pullback.lift_snd, Category.assoc, pullback.lift_snd, pullback.lift_snd_assoc]
     simp only [Category.assoc]; rfl
 
@@ -26,7 +28,7 @@ theorem resYW_comp {Y B W : Scheme.{0}} (p : Y ⟶ B) (ι : W ⟶ B) {U U' U'' :
   · erw [pullback.lift_fst, Category.assoc, pullback.lift_fst, pullback.lift_fst_assoc]
     first | simp [resY_comp] | (rw [resY_comp, Category.assoc])
   · erw [pullback.lift_snd, Category.assoc, pullback.lift_snd, pullback.lift_snd_assoc]
-    first | simp [resY_comp] | (rw [Category.assoc]; rfl)
+    first | simp | (rw [Category.assoc]; rfl)
 
 theorem rY_comp (q : ℕ) (i : ℤ) {B W Y : Scheme.{0}} (p : Y ⟶ B) (ι : W ⟶ B) {U U' U'' : B.Etale} (c : U'' ⟶ U')
     (a : U' ⟶ U) (m : ℤ) (z : Hrel (ZMod q) (sch.map (prU p ι U)) (tw q i) m) :

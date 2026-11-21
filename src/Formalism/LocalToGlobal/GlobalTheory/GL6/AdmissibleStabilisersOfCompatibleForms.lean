@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.HermitianForms.FormsTied
 import Formalism.SharpRestriction.GlobalSchurBounds.ProductFirstZerothParts
 import Formalism.LocalToGlobal.GroupLattices.TrivialTransfer.GramTotallyDefinite

@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StRegCurvBound
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StTorusInvLevi
 import GroundTheory.HeightsAndTheta.Heights.Intersections.RegularizedCurvature

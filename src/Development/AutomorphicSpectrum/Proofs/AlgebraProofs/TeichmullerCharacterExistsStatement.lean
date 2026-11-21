@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.TeichmullerCharacterExists
 open scoped Matrix TensorProduct
 open Matrix

@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.LocalGroupAnalysis.SplitEquiv
 open UpperTheory.ConvolutionTheory.G UpperTheory.ConvolutionTheory.T4
 open MeasureTheory Topology Filter

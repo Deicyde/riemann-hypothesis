@@ -1,6 +1,4 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.FormalAlgebraisation.GEClosedProj
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.FormalAlgebraisation
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FormalMorphismUniquenessStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsoOfThickeningsStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FormalMorphismExistenceStatement

@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsUniqueLiesUnder
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ReferenceMetricMulDualEqOne
 
 set_option autoImplicit false
@@ -106,7 +106,7 @@ theorem lnN_neg_sum {D : D7} (O : Setup D) (h : O.Core) (c : O.s.Comp) (σ : D.w
     conv_lhs => rw [hg]
     exact (cxSt _).pn_mul _ σ _ _ _ _ z hu.regAt hAN.regularAt
   have hq : g / ∏ i, genAt (divOf (O.Φ.C c) (n i)) (under z) ^ (-1 : ℤ) = g * (A : (O.var c).Fn)⁻¹ := by
-    simp [genAt, hAdef, Units.coe_prod, div_eq_mul_inv, Finset.prod_inv_distrib]
+    simp [genAt, hAdef, Units.coe_prod, div_eq_mul_inv]
   have hpos : ∀ i, 0 < (cxSt _).pn _ σ _ (O.met.h0 c σ (n i))
       ((cxSt _).cx _ σ (genAt (divOf (O.Φ.C c) (n i)) (under z))) z := fun i => h.referenceMetric_posAt c σ (n i) z
   have hr : ratVal (g * (A : (O.var c).Fn)⁻¹) z ≠ 0 := ratVal_ne_zero hu

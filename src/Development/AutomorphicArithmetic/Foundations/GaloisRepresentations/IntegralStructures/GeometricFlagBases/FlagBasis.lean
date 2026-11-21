@@ -1,9 +1,8 @@
-import Mathlib
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.IntegralStructures.GeometricFlagBases.HodgeTrAt
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.PAdicWittLattices.SplitsBasic
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.KunnethLefschetz.ProjectiveBaseChange.AdicTopOf
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.WeilConjectures.StabPf
-import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.SplitsSelfOfIso
+import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.IntegralStructures.GeometricFlagBases.IsGrRefl
+import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.BocksteinBaseChange.EtSide
+import Formalism.SharpRestriction.LevelLetterCocycles.DataN
 
 noncomputable section
 

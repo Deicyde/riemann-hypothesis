@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.SphericalCoordinates.AlgebraEquivSetup.LevRefine
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ProjectiveAutomorphicHecke.PIntConj
-import GroundTheory.GlobalFields.Adele.BaseChange.FiniteMap
 open NumberField IsDedekindDomain Matrix GlobalTheory.UPel.HT GlobalTheory.LKTrip GlobalTheory.LKGeo GlobalTheory.LKMid GlobalTheory.LKDef GlobalTheory.CuspRep GlobalTheory.UnitaryBC Formalism.UG UpperTheory.Gal.W2.Seed
 open UpperTheory.Gal.CertificateRingHomMap (GUf Gam0 AfQ Plc sim mat comp rat lev ZU)
 open scoped TensorProduct Classical
@@ -15,7 +14,7 @@ private theorem rel_at {E : Type} [Field E] [NumberField E] [IsCMField E] {n : �
   refine Eq.trans ?_ (h.trans ?_)
   · rfl
   · ext i j
-    by_cases hij : i = j <;> simp [hij, Matrix.one_apply, sim]
+    by_cases hij : i = j <;> simp [hij, sim]
 
 private theorem val_le_one {E : Type} [Field E] [NumberField E] [IsCMField E] {n : ℕ} (hn : 0 < n) (k : GUf E n)
     (hk : ∀ u : Plc E, comp u k ∈ GlobalTheory.LFun.KGL u n) (u : Plc E) :

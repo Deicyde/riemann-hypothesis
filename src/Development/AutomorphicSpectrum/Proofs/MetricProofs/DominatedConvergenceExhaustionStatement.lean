@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.DominatedConvergenceExhaustion
 open MeasureTheory Filter Topology
 set_option maxHeartbeats 1000000 in

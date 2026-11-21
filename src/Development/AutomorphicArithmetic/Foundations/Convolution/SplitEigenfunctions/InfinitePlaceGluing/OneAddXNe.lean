@@ -1,8 +1,9 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.SplitEigenfunctions.Entire
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.WhittakerHecke.SatakeParamMulEqCentralCharPowInertiaDeg
 import Development.AutomorphicArithmetic.WhittakerHecke.GoodPrimeSplitOrInertOfQuadratic
 import Development.AutomorphicArithmetic.WhittakerHecke.ExistsRatHeightOneSpectrumNormVEqPrimeBadIffDvd
 import Development.AutomorphicArithmetic.WhittakerHecke.FalseOfLandauNonnegEulerFactorsEntire
+import Mathlib.RingTheory.PowerSeries.Expand
 
 open NumberField IsDedekindDomain MeasureTheory Matrix Topology Filter
 open Neutral.B1 Formalism.L2.Host Formalism.ConjugateSelfDual GlobalTheory.CuspRep GlobalTheory.GalOfCusp UpperTheory.V UpperTheory.V.Af UpperTheory.V.Published GroundTheory.Global GroundTheory.Automorphic.GJMatrix
@@ -50,7 +51,7 @@ private theorem Gs_mul (τ : ℝ) : Gs τ * (1 - X ^ 2) = Qs τ := by
   rw [e]
   ext n
   rcases n with _ | _ | n
-  · simp [Gs, Qs, coeff_mul_X_pow', gg, hh]
+  · simp [Gs, Qs, gg, hh]
   · simp [Gs, Qs, coeff_mul_X_pow', gg, hh]
   · have : gg τ (n + 2) = gg τ n + hh τ (n + 2) ^ 2 := rfl
     simp [Gs, Qs, coeff_mul_X_pow', this]
@@ -62,7 +63,7 @@ private theorem Qs_mul (τ : ℝ) (a : ℂ) (ha : a = (τ : ℂ) ^ 2 - 1) :
   rw [e]
   ext n
   rcases n with _ | _ | _ | n
-  · simp [Qs, coeff_mul_X_pow', hh, coeff_X, coeff_one]
+  · simp [Qs, hh]
   · simp [Qs, coeff_mul_X_pow', hh, coeff_X, coeff_one]
     subst ha
     ring

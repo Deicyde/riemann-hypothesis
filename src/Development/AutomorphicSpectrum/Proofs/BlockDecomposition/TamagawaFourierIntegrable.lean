@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsBlockNFZeroOne
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntegrableOfMulUnimodular
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsWeilFormulas
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FourierInversionSchwartzAdelic
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaSeriesFactorizableRestrictionFinite
 open scoped Matrix NNReal ENNReal ComplexConjugate TensorProduct

@@ -1,5 +1,5 @@
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ToFirst
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.ExistsPowEqFractionRingOfPderivEqZero
 import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.IsLocalRingOfAug
 import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.TjEqZeroIff

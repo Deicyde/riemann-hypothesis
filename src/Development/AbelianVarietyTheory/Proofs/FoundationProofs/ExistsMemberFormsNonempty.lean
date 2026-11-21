@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.SpanPowerMembership.FmZeroHLatEmpty
-import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsColumnChainNonempty
+import Mathlib.Analysis.SpecialFunctions.Complex.CircleAddChar
 open Formalism.BasicNotions NumberField
 
 noncomputable section

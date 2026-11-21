@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.KummerSequence.LeafKumSeqPf
+import Mathlib.Algebra.Homology.Embedding.ExtendHomotopy
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry Opposite GlobalTheory.EtC LateralTheory.E.E4 LateralTheory.E.H2CurveOrder.LeafKumSeqPf

@@ -1,6 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCyclotomicExtensionQI
 import Development.AbelianVarietyTheory.Definitions.Divisors.NotCompactOfMEqOne
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Data.Int.Star
+import Mathlib.Data.Rat.Star
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 noncomputable section
 
@@ -139,7 +145,7 @@ theorem Datum.quadQ_monic : D.quadQ.Monic := by
   unfold Datum.quadQ; monicity!
 
 theorem Datum.aeval_quadQ : aeval (D.ω : D.F) D.quadQ = 0 := by
-  simp only [Datum.quadQ, map_add, map_sub, map_mul, map_pow, aeval_X, aeval_C, map_intCast, D.ω_sq]
+  simp only [Datum.quadQ, map_add, map_sub, map_mul, map_pow, aeval_X, map_intCast, D.ω_sq]
   ring
 
 theorem Datum.ω_ne_rat (q : ℚ) : (D.ω : D.F) ≠ algebraMap ℚ D.F q := by
@@ -173,8 +179,8 @@ theorem Datum.hKq : Module.finrank ℚ D.Kq = 2 ∧ ∀ τ : D.F →+* ℂ, ∃ 
   · intro τ
     refine ⟨D.ω, IntermediateField.mem_adjoin_simple_self ℚ _, fun him => ?_⟩
     have h := congrArg (fun z => (τ z).re) D.ω_sq
-    simp only [map_pow, map_sub, map_mul, map_intCast, pow_two, Complex.mul_re, him, mul_zero, sub_zero,
-      Complex.sub_re, Complex.intCast_re, Complex.intCast_im, zero_mul] at h
+    simp only [map_sub, map_mul, map_intCast, pow_two, Complex.mul_re, him, mul_zero, sub_zero,
+      Complex.sub_re, Complex.intCast_re, Complex.intCast_im] at h
     have h3 : ((D.tr : ℝ)) ^ 2 - 4 * D.nm < 0 := by exact_mod_cast D.disc_neg
     nlinarith [sq_nonneg (2 * (τ D.ω).re - D.tr)]
 
@@ -188,7 +194,7 @@ def Datum.kqEquiv : D.Kq →+* IntermediateField.adjoin ℚ {(D.ω : D.F)} where
 def Datum.uOf (r : ℚ_[p]) (hr : r ^ 2 - D.tr * r + D.nm = 0) : D.Kq →+* ℚ_[p] :=
   ((IntermediateField.adjoin.powerBasis D.isIntegral_ω).lift r (by
       rw [IntermediateField.adjoin.powerBasis_gen, IntermediateField.minpoly_gen, D.minpoly_ω]
-      simp only [Datum.quadQ, map_add, map_sub, map_mul, map_pow, aeval_X, aeval_C, map_intCast]
+      simp only [Datum.quadQ, map_add, map_sub, map_mul, map_pow, aeval_X, map_intCast]
       linear_combination hr)).toRingHom.comp D.kqEquiv
 
 theorem Datum.uOf_ω (r : ℚ_[p]) (hr : r ^ 2 - D.tr * r + D.nm = 0) :

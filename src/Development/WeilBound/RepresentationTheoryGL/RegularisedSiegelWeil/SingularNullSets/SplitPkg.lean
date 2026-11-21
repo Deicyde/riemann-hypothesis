@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.RegularisedSiegelWeil.SingularNullSets.LJPosA
+import Development.WeilBound.RepresentationTheoryGL.RegularisedSiegelWeil.SingularNullSets.WeakApproximationFinitePlace
 
 noncomputable section
 

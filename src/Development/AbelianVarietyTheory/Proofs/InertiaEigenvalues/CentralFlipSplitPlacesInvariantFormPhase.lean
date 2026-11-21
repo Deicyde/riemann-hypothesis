@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsFlipDet
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FlipIdxNeZero
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IdemSumMulOfSubset
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsCentralConjugateFlipScalarFiniteAdelicStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.WeilOperatorInvCentralFlipInvariantFormEqStatement
 open NumberField Matrix Complex IsDedekindDomain

@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.FockModels.MkP
+import Formalism.SharpRestriction.GrowthBounds.LatticeSystems
+import Formalism.SharpRestriction.GrowthBounds.ObjBridge
 
 noncomputable section
 
@@ -20,7 +24,7 @@ theorem lo_blockAct_one (K : Type) [CommRing K] {S : Type} {k n : ℕ} :
     blockAct K (S := S) (k := k) (n := n) (fun _ => 1) = AlgHom.id K _ := by
   apply MvPolynomial.algHom_ext
   intro v
-  simp [blockAct, aeval_X, Matrix.one_apply]
+  simp [blockAct, Matrix.one_apply]
 
 variable {p : ℕ}
 
@@ -186,7 +190,7 @@ theorem lo_Ntgt (G : GAtP p) (v : Fin G.P.nV) (tv : ℕ) (A : GL (Fin (G.P.m + 1
     refine ⟨(je_locV G v A).dualMap ψ, ?_, ?_⟩
     · intro x hx
       refine hψ (je_locV G v A x) ?_
-      simp only [HL, toV, SetLike.mem_coe, Submodule.mem_comap, LinearMap.restrictScalars_apply,
+      simp only [HL, toV, Submodule.mem_comap, LinearMap.restrictScalars_apply,
         Submodule.subtype_apply]
       rw [je_locV_coe]
       exact je_H_ext G v A Lv hLv _ hx
@@ -205,7 +209,7 @@ theorem lo_Ntgt (G : GAtP p) (v : Fin G.P.nV) (tv : ℕ) (A : GL (Fin (G.P.m + 1
     refine ⟨(je_locV G v A).dualMap ψ, ?_, ?_⟩
     · intro x hx
       refine hψ (je_locV G v A x) ?_
-      simp only [HLe, toV, SetLike.mem_coe, Submodule.mem_comap, LinearMap.restrictScalars_apply,
+      simp only [HLe, toV, Submodule.mem_comap, LinearMap.restrictScalars_apply,
         Submodule.subtype_apply]
       rw [je_locV_coe]
       cases e with
@@ -291,8 +295,7 @@ theorem lo_trans {W Qq : Type} [CommRing W] [Field Qq] [Algebra W Qq] {k : ℕ}
     congr 2
     funext c
     funext i
-    simp only [Function.comp_apply, nt_phi, LinearMap.restrictScalars_apply, Matrix.mulVecLin_apply,
-      Units.val_mk]
+    simp only [Function.comp_apply, nt_phi, LinearMap.restrictScalars_apply, Matrix.mulVecLin_apply]
     rw [Matrix.mulVec, dotProduct, ← Matrix.mul_apply, Matrix.mul_assoc, Matrix.nonsing_inv_mul _ hg,
       Matrix.mul_one]
 

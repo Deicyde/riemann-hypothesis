@@ -1,5 +1,4 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.StDiagExists
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.UnitaryGroupStructuralFacts
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.UuInv
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.JSymBetaA
 

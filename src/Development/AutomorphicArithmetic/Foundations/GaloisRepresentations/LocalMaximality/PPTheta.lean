@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.LocalMaximality.DualForm
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.LocalMaximality.PWdUni
 open KaehlerDifferential GlobalTheory.CechDR GlobalTheory.PD GlobalTheory.WH GlobalTheory.W1 UpperTheory.Gal.productCup_of_system
@@ -76,7 +77,7 @@ theorem UpperTheory.Gal.productCup_of_system.pTheta_of :
     have h2 := congrArg (TensorProduct.mk ℂ F (DR ℂ K) 1) h1
     rw [map_sum, map_zero] at h2
     rw [← h2]
-    exact Finset.sum_congr rfl fun i _ => by simp only [hbdef, Units.smul_def, map_zsmul, TensorProduct.mk_apply]
+    exact Finset.sum_congr rfl fun i _ => by simp only [hbdef, map_zsmul, TensorProduct.mk_apply]
   have hb2 : ∀ J, J.card ≠ p + 1 → b J = 0 := fun J hJ => hb0 J fun h => hJ h.2
   have hθ0 : ∀ (I : Finset (Fin (d + 1))) (L : Finset (Mi d)), I.card + L.card ≠ d + 1 →
       detC (sysP K x a).rowMu (uni I L) = 0 := by

@@ -1,10 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.LiftCoordinatesInGoodPartOfDefinite
 import Formalism.LocalToGlobal.IndefiniteReal.CxPass
-import Formalism.LocalToGlobal.IndefiniteReal.MemRangeAdjointOfKerStable
 import Formalism.LocalToGlobal.IndefiniteReal.EqZeroOfMemRangeAdjoint
 import Formalism.LocalToGlobal.IndefiniteReal.EqZeroOfRangeAdjoint
-import Formalism.LocalToGlobal.Divisibility.ProjLemmas
 
 open Module NumberField IsDedekindDomain
 open scoped Matrix ComplexOrder InnerProductSpace
@@ -65,7 +64,7 @@ private theorem opV_single_lemma_2 (σ : K →+* ℂ) {M : Type} [AddCommGroup M
     | (simp [MonoidAlgebra.single_apply]; done)
   · intro b _ hb
     first
-    | (simp [hb, Ne.symm hb]; done)
+    | (simp [hb]; done)
     | (simp [MonoidAlgebra.coeff_single, Finsupp.single_apply, hb, Ne.symm hb]; done)
     | (simp [MonoidAlgebra.single_apply, hb, Ne.symm hb]; done)
   · intro h

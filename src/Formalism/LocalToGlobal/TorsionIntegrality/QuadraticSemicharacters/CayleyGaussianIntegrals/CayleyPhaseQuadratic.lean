@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.QuadraticSemicharacters.UnitaryConstant
 import Formalism.LocalToGlobal.TorsionIntegrality.QuadraticSemicharacters.CayleyGaussianIntegrals.MatrixFormFourfoldBlock
-import Formalism.LocalToGlobal.TorsionIntegrality.QuadraticSemicharacters.CayleyGaussianIntegrals.LocalComponentGL
 
 noncomputable section
 open scoped BigOperators ComplexConjugate
@@ -27,7 +28,7 @@ theorem ud_skew (h : UnitaryData H Λ α δ Ae) (x y : V) : H (cayC Ae x) y = -H
   have h1 := ud_adj h x y
   have hc : (starRingEnd ℂ) (1 / 2 : ℂ) = 1 / 2 :=
     Complex.conj_eq_iff_real.mpr ⟨1 / 2, by first | norm_num | simp | (push_cast; ring)⟩
-  simp only [cayC, map_sub, map_smul, map_smulₛₗ, RingHom.id_apply, LinearMap.sub_apply,
+  simp only [cayC, map_sub, map_smul, map_smulₛₗ, LinearMap.sub_apply,
     LinearMap.smul_apply, smul_eq_mul, hc]
   linear_combination h1
 
@@ -71,7 +72,7 @@ theorem altE_cayC (x y : V) :
     have e : (1 / 2 : ℂ) = ((1 / 2 : ℝ) : ℂ) := by first | norm_num | simp | (push_cast; ring)
     rw [e, Complex.im_ofReal_mul]
     ring
-  simp only [altE, cayC, map_sub, map_smul, map_smulₛₗ, RingHom.id_apply, LinearMap.sub_apply,
+  simp only [altE, cayC, map_sub, map_smul, LinearMap.sub_apply,
     LinearMap.smul_apply, smul_eq_mul, Complex.sub_im, key]
 
 theorem cayC_add (x y : V) : cayC Ae (x + y) = cayC Ae x + cayC Ae y := by

@@ -1,7 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutNFTopDom
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutDomCutInt
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutLemB
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutFpmDecay
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJDCCLower
 
 namespace Formalism.FourierDecayAlt.P.CutBP

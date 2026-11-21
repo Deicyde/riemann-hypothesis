@@ -1,5 +1,15 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.MollifiedIntegrability.GBaseA
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.Analysis.Matrix.Spectrum
+import Mathlib.RingTheory.Complex
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Separation.CompletelyRegular
 
 noncomputable section
 
@@ -100,7 +110,7 @@ theorem gauss_row (c τ : ℝ) (hc : 0 < c) (H : Matrix (Fin n) (Fin n) ℂ) (hH
       rw [hspec]
       have hd : Matrix.diagonal (fun k => (c : ℂ) - Complex.I * τ * lam k) =
           (c : ℂ) • (1 : Matrix (Fin n) (Fin n) ℂ) - (Complex.I * τ) • Matrix.diagonal lam := by
-        ext i j; by_cases hij : i = j <;> simp [Matrix.diagonal_apply, Matrix.one_apply, hij]
+        ext i j; by_cases hij : i = j <;> simp [hij]
       rw [hd, Matrix.mul_sub, Matrix.sub_mul, Matrix.mul_smul, Matrix.smul_mul, Matrix.mul_one, h1,
         Matrix.mul_smul, Matrix.smul_mul]
     rw [this, Matrix.det_mul, Matrix.det_mul, Matrix.det_diagonal]

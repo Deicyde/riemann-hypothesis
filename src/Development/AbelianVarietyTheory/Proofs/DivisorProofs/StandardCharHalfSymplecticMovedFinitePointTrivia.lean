@@ -1,10 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormPeriodSq
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.CharLem
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StandardLatticeDoubleCosetClassesStabilisers
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.DefiniteThetaPairTestVectorExpansion
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsNsmulSymplecticPairingCharacterTrivialStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPosNatMulInvIdealLatticeMemIntegralStatement
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCongLevelIntG
 
 open NumberField MeasureTheory
 open scoped Classical

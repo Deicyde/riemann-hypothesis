@@ -1,4 +1,6 @@
-import Formalism.SharpRestriction.GrowthBounds.DataG
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.UnramifiedQuadraticSetting
 
 noncomputable section
 

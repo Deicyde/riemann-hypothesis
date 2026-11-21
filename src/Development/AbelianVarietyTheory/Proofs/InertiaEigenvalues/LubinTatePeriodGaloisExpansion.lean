@@ -1,11 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.WeilDeligneCrystalline.ColmezLT
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.EqZeroOfInAMul
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsKerPowDvd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.NormLtOneOfNotIsUnit
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.LubinTateSeriesEqOfCoeffOneEq
-import Development.AbelianVarietyTheory.CrystallinePeriods.RingIface
-import Development.AbelianVarietyTheory.CrystallinePeriods.RingBasics
 
 noncomputable section
 

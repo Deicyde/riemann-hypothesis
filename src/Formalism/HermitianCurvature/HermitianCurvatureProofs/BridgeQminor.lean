@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.RepIntCastMul
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.DetRowsZero
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.RingTheory.SimpleRing.Principal
 
 open Matrix Finset
 open scoped ContDiff

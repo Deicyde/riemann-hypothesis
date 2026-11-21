@@ -1,5 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SpanningFamilies.IsHeatZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.SpanningFamilies.FirstCoordinateAdmissible
+import Mathlib.Algebra.AffineMonoid.Basic
 open Matrix Complex NumberField GlobalTheory.SW Filter Topology
 open ReciprocityTheory.ChartRestriction.G.FD (cc herm)
 open scoped ComplexConjugate ComplexOrder Real
@@ -174,7 +176,7 @@ theorem _root_.GlobalTheory.SW.Dict.sum_type {Ψ : Finset (E →+* ℂ)}
     ∑ σ, f σ = ∑ τ : Ψ, (f τ + f (ComplexEmbedding.conjugate τ.1)) := by
   classical
   have hc : ∀ φ : E →+* ℂ, ComplexEmbedding.conjugate (ComplexEmbedding.conjugate φ) = φ :=
-    fun φ => by ext x; simp [ComplexEmbedding.conjugate_coe_eq]
+    fun φ => by ext x; simp
   rw [Finset.sum_add_distrib, Finset.sum_coe_sort Ψ f]
   have hconj : ∑ τ : Ψ, f (ComplexEmbedding.conjugate τ.1) = ∑ σ ∈ Ψᶜ, f σ := by
     rw [Finset.sum_coe_sort Ψ (fun σ => f (ComplexEmbedding.conjugate σ))]
@@ -323,7 +325,7 @@ theorem _root_.GlobalTheory.SW.Dict.tauOf_mem (hΨ : _root_.GlobalTheory.SW.IsTy
     (Z : _root_.GlobalTheory.SW.CM Ψ N N) (hZ : Z ∈ _root_.GlobalTheory.SW.Hn Ψ N) :
     _root_.GlobalTheory.SW.tauOf Ψ Z ∈ _root_.GlobalTheory.SW.Siegel (_root_.GlobalTheory.SW.QI E N) := by
   have hinv : ∀ φ : E →+* ℂ, ComplexEmbedding.conjugate (ComplexEmbedding.conjugate φ) = φ :=
-    fun φ => by ext y; simp [ComplexEmbedding.conjugate_coe_eq]
+    fun φ => by ext y; simp
   refine ⟨Matrix.IsSymm.ext fun p q => ?_, ?_⟩
   · simp only [_root_.GlobalTheory.SW.tauOf, Matrix.of_apply]
     exact Finset.sum_congr rfl fun _ _ => add_comm _ _

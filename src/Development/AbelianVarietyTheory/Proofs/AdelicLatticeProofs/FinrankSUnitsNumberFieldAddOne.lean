@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AdelicHermitianForms.SqSubLeNormSub
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.SUnitsNumberFieldFg
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.NumberTheory.NumberField.ClassNumber
 open NumberField IsDedekindDomain GlobalTheory.QNorm
 open scoped WithZero
 

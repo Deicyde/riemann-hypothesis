@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.SiegelThetaMulConjEqBlockTheta
-import Development.AbelianVarietyTheory.Definitions.SpanningFamilies.IMemSiegel
 open Matrix Complex GlobalTheory.SW
 open scoped ComplexConjugate Real
 set_option maxHeartbeats 1000000 in

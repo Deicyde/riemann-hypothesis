@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoeffTopMonEqZero
+import Mathlib.RingTheory.PiTensorProduct
 
 noncomputable section
 

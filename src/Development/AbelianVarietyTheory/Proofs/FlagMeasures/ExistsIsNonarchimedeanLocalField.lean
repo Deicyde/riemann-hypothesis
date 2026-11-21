@@ -1,5 +1,17 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.MemRiemannRochSpaceIffRegularAtEverywhere
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Data.Int.Star
+import Mathlib.NumberTheory.LocalField.Basic
+import Mathlib.RingTheory.AdicCompletion.Topology
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.Valuation.Discrete.IsDiscreteValuationRing
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Std.Tactic.BVDecide.Normalize.Prop
 open ValuativeRel Formalism.MainNotions.S Formalism.MainNotions.S.Loc GlobalTheory.HL GlobalTheory.IndefiniteRowSideFullHecke.FrameCoefficientData GlobalTheory.NonGenericCompare
 open scoped Pointwise ENNReal Classical
 
@@ -48,7 +60,7 @@ theorem mem_pow_iff {ϖ : o} (hϖ : Irreducible ϖ) (n : ℕ) (x : (val o F).int
       val o F (x : F) ≤ val o F (algebraMap o F ϖ) ^ n := by
   rw [← Ideal.map_pow, hϖ.maximalIdeal_eq, Ideal.span_singleton_pow, Ideal.map_span,
     Set.image_singleton, Ideal.mem_span_singleton, (Valuation.integer.integers _).dvd_iff_le]
-  simp only [map_pow, equivInt_val]
+  simp only [map_pow]
   exact Iff.rfl
 
 end GlobalTheory.LocFieldOfDVR

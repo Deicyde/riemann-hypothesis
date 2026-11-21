@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.LeafCloseBCut
 import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.RingKrullDimQuotientEqOfMemMinimalPrimes
+import Mathlib.RingTheory.TotallySplit
 
 open AlgebraicGeometry CategoryTheory LateralTheory.E.E4 Topology
 

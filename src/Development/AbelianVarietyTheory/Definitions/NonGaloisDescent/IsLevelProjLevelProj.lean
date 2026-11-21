@@ -1,4 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.NonemptyEquivMultiProdOne
 
 noncomputable section
@@ -179,6 +181,6 @@ end Lift
 
 example {k k' : Type} [Field k] [Field k'] [Algebra k k'] {n : ℕ} (g : GL (Fin n) k') :
     norm k (1 : k' ≃ₐ[k] k') g = g ^ Module.finrank k k' := by
-  simp [norm, one_pow, galAct_one, List.prod_ofFn, Finset.prod_const]
+  simp [norm, one_pow, galAct_one]
 
 end GlobalTheory.LBC

@@ -1,12 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
-import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsCrystalPairing
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUniqueDetGen
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsUnimodularSolCoords
 import Development.AbelianVarietyTheory.Proofs.ToricGeometry.TopLePreimageOfValAtNeZero
 import Development.AbelianVarietyTheory.Proofs.ToricGeometry.TangentBijectionOfValues
+import Mathlib.Analysis.Normed.Algebra.Spectrum
+import Mathlib.Analysis.Normed.Algebra.TrivSqZeroExt
 open CategoryTheory CategoryTheory.Limits AlgebraicGeometry MonoidalCategory CartesianMonoidalCategory MonObj NumberField IsDedekindDomain
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory.Cris GlobalTheory.DeRham GlobalTheory.RealMult GlobalTheory.CMVal GlobalTheory.LatVal GlobalTheory.LatJet
 open GlobalTheory.IndefiniteRowSideFullHecke.LatticeNormTransport (upIdele IsLatOf)
@@ -63,7 +61,7 @@ theorem pt_eq_ptHom (Λ : PeriodPair) {Ω : ℂ} (hΩ : Ω ≠ 0) :
     · have hl : t ∉ Λ.lattice := fun h => hlat ⟨h, ht⟩
       have hP := Λ.weierstrassPExcept_def 0 t
       have hP' := Λ.derivWeierstrassPExcept_def 0 t
-      simp only [ZeroMemClass.coe_zero, sub_zero, div_zero, zero_sub] at hP hP'
+      simp only [ZeroMemClass.coe_zero, sub_zero] at hP hP'
       have hd : Λ.derivWeierstrassP t ≠ 0 := by
         intro h0
         apply hden

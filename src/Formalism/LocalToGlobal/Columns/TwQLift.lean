@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.TwQSurj
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Afsplit
 
 open NumberField IsDedekindDomain Matrix
 open scoped TensorProduct

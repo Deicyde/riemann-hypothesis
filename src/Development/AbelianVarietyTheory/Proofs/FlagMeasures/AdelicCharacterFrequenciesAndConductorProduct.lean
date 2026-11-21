@@ -1,9 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.GaugeUnfold
-import Formalism.LocalToGlobal.GlobalTheory.GL5.Statement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.SumPlacesEqTrace
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.EventuallyFinEqOne
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.ExistsUniqueIdeleOfLinearEquivQuotientLocal
+import Formalism.SharpRestriction.CuspSpanNormBounds.GlobAut
+import Mathlib.Analysis.Complex.CoveringMap
+import Mathlib.Topology.Homotopy.Lifting
 
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open scoped TensorProduct nonZeroDivisors

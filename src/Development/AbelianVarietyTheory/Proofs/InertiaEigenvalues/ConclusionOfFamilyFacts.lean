@@ -1,12 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.BoundAtTwoAndThreeForFamily
-import Formalism.SharpRestriction.GlobalTheoremInputs
-import Formalism.SharpRestriction.LevelLetterCocycles.JointConditionsZpowers.JointConditionTameBound
-import Formalism.SharpRestriction.LevelLetterCocycles.JointConditionsZpowers.CrysOnCond
-import Formalism.SharpRestriction.LevelLetterCocycles.WachCoordinates
-import Formalism.SharpRestriction.LevelLetterCocycles.RamifiedCoefficientChains
-import Formalism.SharpRestriction.LevelLetterCocycles.ArcLiftingSetup
-import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.BaseSizes
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.PolynomialBoundSetupStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CongruenceBoundLargeStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LocalBoundZeroAtLargePrimesOfCongruenceBoundStatement
@@ -16,19 +8,13 @@ import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ParametersCond
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.GoodPointMultiplicityLeRankProofStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LocalBoundTableFromDataBandConditionStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LocalBoundTableRowsCDAdmissibleStatement
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.AdmissibleParametersFamilyConstStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsHubDataFamilyStatement
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SpecialPrimesSmallAlongFamilyStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.StarBoundOfMultiplicityStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.TheoremECorollaryAClosingAllDataStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.TwoEALe
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LocalBoundTableFromDataRowBRowEntries
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ImportsTerMore
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.PolyValLeSumMulPow
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ConclusionJaIffPxn0Condition
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.StatementJAll
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FontainePropertiesAllPlacesAlt
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FontaineBoundsCrystallineDeRhamAll
 import Development.AutomorphicArithmetic.ResidueCharacters.StarS
 open NumberField IsDedekindDomain Formalism Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.MainNotions Formalism.MainNotions.N Formalism.WeaklyAdmissibleFiltrations GlobalTheory.NLink
 
@@ -48,13 +34,13 @@ theorem main : Hypotheses₂ → ∀ {eps : ℝ} (Fm : FamP eps), ∀ (C : ℝ) 
   set C₂ : ℝ := max C₀ 1 with hC₂def
   set Cs : ℝ := max (3 * C₂ + 1) (max 22365 (max (FamilyRepresentationConstants.CG constantFirstHub Q) (max (2000 * (C + 1) + 5 * C1)
     (max C1 (max ComplexParameterFamilyContinuity (CT : ℝ)))))) with hCsdef
-  have hA : 3 * C₂ + 1 ≤ Cs := by simp only [hCsdef, le_max_iff, le_refl, true_or, or_true]
+  have hA : 3 * C₂ + 1 ≤ Cs := by simp only [hCsdef, le_max_iff, le_refl, true_or]
   have hK : (22365 : ℝ) ≤ Cs := by simp only [hCsdef, le_max_iff, le_refl, true_or, or_true]
   have hG : FamilyRepresentationConstants.CG constantFirstHub Q ≤ Cs := by simp only [hCsdef, le_max_iff, le_refl, true_or, or_true]
   have hT : 2000 * (C + 1) + 5 * C1 ≤ Cs := by simp only [hCsdef, le_max_iff, le_refl, true_or, or_true]
   have hP1 : C1 ≤ Cs := by simp only [hCsdef, le_max_iff, le_refl, true_or, or_true]
   have h23C : ComplexParameterFamilyContinuity ≤ Cs := by simp only [hCsdef, le_max_iff, le_refl, true_or, or_true]
-  have hCT : (CT : ℝ) ≤ Cs := by simp only [hCsdef, le_max_iff, le_refl, true_or, or_true]
+  have hCT : (CT : ℝ) ≤ Cs := by simp only [hCsdef, le_max_iff, le_refl, or_true]
   have hCs1 : (1 : ℝ) ≤ Cs := by linarith
   have hCs0 : (0 : ℝ) ≤ Cs := by linarith
   have hC₂1 : (1 : ℝ) ≤ C₂ := le_max_right _ _

@@ -1,5 +1,7 @@
-import Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.ResidueClassCountOfTensorBasisInclusion
-import Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.FinrankLetter
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.FactorsLEOfIndex
+import Formalism.SharpRestriction.GrowthBounds.LatticeSystems
 
 noncomputable section
 

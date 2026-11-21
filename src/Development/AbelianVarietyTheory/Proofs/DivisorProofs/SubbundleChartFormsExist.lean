@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TotalEqCurve
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdjacentPullPull
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GeometricallyConnectedOfIsIsoRestrict
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsC1DensityForLinePair
 open CategoryTheory AlgebraicGeometry TopologicalSpace Filter Topology MeasureTheory Matrix
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -90,7 +89,7 @@ theorem angleForm_frames (H : h.IsCInf) (hl : IsSubbundle l) (hl' : IsSubbundle 
 theorem eq_sum_single {D : ℕ} (w : EuclideanSpace ℂ (Fin D)) :
     w = ∑ a, w a • EuclideanSpace.single a (1 : ℂ) := by
   ext i
-  simp [Finset.sum_apply, EuclideanSpace.single_apply, Pi.single_apply]
+  simp [Finset.sum_apply, Pi.single_apply]
 
 end GlobalTheory.AngleGlueDim
 

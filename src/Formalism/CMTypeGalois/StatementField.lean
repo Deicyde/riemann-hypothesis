@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.CMTypeGalois.StatementGroup
+import Mathlib.NumberTheory.NumberField.CMField
+import Mathlib.RingTheory.Frobenius
+import Mathlib.RingTheory.SimpleRing.Principal
 
 open NumberField Ideal Finset
 open scoped Pointwise

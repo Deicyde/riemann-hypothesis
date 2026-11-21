@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.OrthSubrepresentation
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CuspidalCharacterGLFiniteFieldFrobeniusPowStatement
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HarishChandraProductCuspidalGLFrobeniusPowStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HarishChandraProductCuspidalGLListPropertiesStatement
 open Polynomial GlobalTheory.CuspGL GlobalTheory.BI GlobalTheory.Shin SemidirectProduct
@@ -102,7 +100,7 @@ theorem J_liftL_galAct_frob (F F' : Type) [Field F] [Field F'] [Algebra F F'] [F
       refine ⟨rfl, ?_⟩
       simp only [Function.comp_apply, pow_succ, mul_assoc]
     · refine List.Forall₂.cons ⟨rfl, ?_⟩ List.Forall₂.nil
-      simp only [Function.comp_apply]
+      simp only
       rw [mul_assoc, ← pow_succ, ← hl']
       exact cusp_mul_card_pow F F' θ _ _
   have hP : R.Perm (liftL q l L) := by

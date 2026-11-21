@@ -1,6 +1,6 @@
-import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.FuncSt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.DatumLemmas
-import Formalism.LocalToGlobal.BesselHermitianTheta.LemmasWeil
 import Formalism.LocalToGlobal.IndefiniteReal.PHeisFC
 
 noncomputable section
@@ -88,7 +88,7 @@ theorem pull_heisO (ψ : AddChar (AF D.host.F) ℂ) (S T : HSp D) (g : GA D S) (
 
 theorem mt_GQ (V : HSp D) {γ : GA D V} (hγ : γ ∈ GQ V) :
     ∃ M : Matrix (Fin V.rank) (Fin V.rank) D.host.E, Formalism.L2.Theta.mt V γ = M.map (incA D) := by
-  simp only [GQ, HFinIn, HFin, Subgroup.mem_subgroupOf] at hγ
+  simp only [GQ, HFinIn, HFin] at hγ
   obtain ⟨u, -, hu⟩ := hγ
   exact ⟨u.1, (congrArg Units.val hu).symm⟩
 

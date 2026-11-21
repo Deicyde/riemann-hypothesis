@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
 import Development.AbelianVarietyTheory.Definitions.Divisors.ProdFam
+import Development.AbelianVarietyTheory.Definitions.Divisors.CupPair
 
 set_option autoImplicit false
 

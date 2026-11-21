@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.HasBaseDegreeSetting
+import BuildAid.Leniency.Open
+import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.HeckeSectionsIsotropicCommutatorPairingPower
+import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.FlagIndices
 
 namespace GlobalTheory.CompanionTheory.Ar.Top
 

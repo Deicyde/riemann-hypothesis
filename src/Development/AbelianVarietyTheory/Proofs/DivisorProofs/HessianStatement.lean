@@ -1,13 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.KernelSt
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.DemaillyRegularisation
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.MatrixLemma
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.AbsoluteSiegel
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ScholzeWeinsteinB
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.QuasiPlurisubharmonic
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.LieAlgebraMaps
-import ReciprocityTheory.L2DbarEstimates.PlurisubharmonicCharts.AApproxA
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SubharmonicLogConvexityQuotientStatement
 
 set_option autoImplicit false
@@ -177,7 +170,7 @@ theorem core {R : GlobalTheory.AnRead p σ d} {a θ : ChartForm p σ d} {Ψ : Gl
       linarith
     have H := h.hess c y hy (t : ℂ) (by rw [hnt]; exact ht) (by rw [hnt]; exact htδ) (WithLp.toLp 2 ξ) 0
     rw [hnt] at H
-    simp only [WithLp.ofLp_toLp, norm_zero, mul_zero, add_zero, ne_eq, OfNat.ofNat_ne_zero, not_false_eq_true,
+    simp only [norm_zero, mul_zero, add_zero, ne_eq, OfNat.ofNat_ne_zero, not_false_eq_true,
       zero_pow] at H
     have hξa := kae_nonneg ha hy ξ
     have hddc : ddcForm (fun z => Ψ z t + K * t ^ 2) c y ξ =

@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.EndomorphismSlices.SphComm2
 
 noncomputable section

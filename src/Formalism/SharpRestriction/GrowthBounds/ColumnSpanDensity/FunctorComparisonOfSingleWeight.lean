@@ -1,7 +1,10 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.ProdSmulPowT
 import Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.SingleWeightLatticeComparison
 import Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.OneMemDualWeyl
 import Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.FactorizationBoundMonoLattices
+import Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.LatticeMapsOfFunctorComparison
+import Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.Tensor
 
 noncomputable section
 

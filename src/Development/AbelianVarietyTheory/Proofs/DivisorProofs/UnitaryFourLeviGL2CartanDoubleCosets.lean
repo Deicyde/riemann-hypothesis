@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.SatakeDualWeyl.KpqSubgroupCompact
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AntiJMulApply
 
 noncomputable section

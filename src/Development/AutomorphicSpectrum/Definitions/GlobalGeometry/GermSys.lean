@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.LinearIndependentEigProj
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ToFirst
+import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.GermComp1ZeroPointLeft
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.EigLat
 
 noncomputable section
 

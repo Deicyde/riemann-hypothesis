@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.VerticalStrips.UnramifiedEulerProductIntegral
+import GroundTheory.AutomorphicForms.GL2Classical.Cuspidal
+import GroundTheory.GlobalFields.CompletionAtPlace.Integers
 set_option maxSynthPendingDepth 1
 
 noncomputable section

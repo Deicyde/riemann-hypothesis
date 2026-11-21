@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.CMGoodModels.Statement
-import Formalism.LocalToGlobal.TorsionIntegrality.FrobeniusFibreCurves.StatementK
+import Formalism.LocalToGlobal.TorsionIntegrality.FrobeniusFibreCurves.StatementW
+import Formalism.LocalToGlobal.TorsionIntegrality.TorsionTranslationPowers.StatementW
 
 noncomputable section
 open scoped BigOperators ComplexConjugate

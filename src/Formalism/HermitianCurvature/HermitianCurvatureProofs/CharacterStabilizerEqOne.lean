@@ -1,8 +1,6 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CornerMatrixRightTranslate
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.VecVSplit
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.SigmaFiniteOfHaar
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.IntegrableCsmul
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.RaisingCompactSupport
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.OpApplyZeroNear
 
 open Matrix MeasureTheory

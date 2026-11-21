@@ -1,7 +1,17 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.HermitianLattices.GenusCovolBound
 import Formalism.HermitianLattices.HermitianLatticesProofs.IsomAct
-import Formalism.HermitianLattices.HermitianLatticesProofs.GenusBasic
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Data.Int.Star
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
 
 open Module Matrix
 

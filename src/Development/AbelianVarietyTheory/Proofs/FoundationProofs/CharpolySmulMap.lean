@@ -1,5 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.FinalTheorems
+import BuildAid.Leniency.Open
+import Formalism.ConjugateSelfDual.Statement
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.MainNotions.N GlobalTheory.GalOfCusp UpperTheory.V UpperTheory.V.Af UpperTheory.V.HV GlobalTheory.Ord2 CongruenceSubgroup
 open scoped Matrix MatrixGroups ModularForm
 

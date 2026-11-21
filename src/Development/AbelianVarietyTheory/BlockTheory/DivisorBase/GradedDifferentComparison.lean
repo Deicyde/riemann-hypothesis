@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.HodgeTateLatticePointFinrankTateModule
+import Mathlib.NumberTheory.NumberField.Discriminant.Basic
+import Mathlib.RingTheory.DedekindDomain.Different
 
 set_option autoImplicit false
 

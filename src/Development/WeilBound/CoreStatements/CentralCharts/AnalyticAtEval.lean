@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsSegreChartFrames
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ValAtIffValueAtStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ConstantsInCoordRatioFieldStatement
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsHodgeLine
 
 noncomputable section
 

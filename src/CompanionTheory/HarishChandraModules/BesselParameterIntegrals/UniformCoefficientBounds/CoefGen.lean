@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import CompanionTheory.HarishChandraModules.BesselParameterIntegrals.UniformCoefficientBounds.CoefCC
+import CompanionTheory.HarishChandraModules.BesselParameterIntegrals.SmoothCyclicVectors.SmoothCyc
+import CompanionTheory.HarishChandraModules.BesselParameterIntegrals.UniformCoefficientBounds.CoefBoundUniform
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJmu
 
 open Matrix MeasureTheory Set
 open scoped ContDiff InnerProductSpace ENNReal

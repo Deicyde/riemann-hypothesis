@@ -1,12 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
-import Development.AbelianVarietyTheory.Definitions.Degenerations.OfDerivationFnOn
-import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.IsProjOverMorphismRestrictOfRelAmple
-import Development.AbelianVarietyTheory.Definitions.ThetaMetrics.TwistingSheafOneChartEqPreimageStandardChart
-import Development.AbelianVarietyTheory.Definitions.ThetaMetrics.IsRegularFnIffOfIsAffineOpen
-import Development.AbelianVarietyTheory.Definitions.QuasicoherentCohomology.BijectiveSmulChartSec
-import Development.AbelianVarietyTheory.Definitions.AbelianSchemeLaws.FirstCohomologyVanishesSpecOfIsLocalRing
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralAtSection
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.GoodReduction.TwistIso
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DvrFractionFieldRingEquivEqUnitMulStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SemilinearSymmFixesUnitSectionGenericFibreStatement
@@ -41,7 +33,7 @@ theorem twisted_sections_extend : ∀ (K W K' : Type) [Field K] [CommRing W] [Is
     simp only [Over.comp_left, Over.id_left] at h
     simp only [Category.assoc]
     rw [reassoc_of% h]
-    simp only [pullback.map, Category.id_comp, pullback.lift_fst, Category.comp_id]
+    simp only [pullback.map, pullback.lift_fst, Category.comp_id]
   have hq : ρ ≫ pullback.snd G.hom (spMap (algebraMap W K')) =
       pullback.snd G.hom (spMap (algebraMap W K')) ≫ spMap (σ : K' →+* K') := by
     subst hρ

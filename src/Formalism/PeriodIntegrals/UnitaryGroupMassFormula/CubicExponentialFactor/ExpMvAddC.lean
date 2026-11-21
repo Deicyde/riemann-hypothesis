@@ -1,6 +1,9 @@
-import Formalism.PeriodIntegrals.CubicExponentialFactor
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.FormalGroupCommon.CoeffSingleLg
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CubicExponentialFactor.NormAddLeOne
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 

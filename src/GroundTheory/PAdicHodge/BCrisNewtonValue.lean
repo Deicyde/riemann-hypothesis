@@ -1,7 +1,7 @@
-import Mathlib
-import GroundTheory.PAdicHodge.BCrisNewtonSlope
-import GroundTheory.PAdicHodge.BCrisNewtonDom
-import GroundTheory.PAdicHodge.BCrisPlusInvariants
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.PAdicHodge.BCrisNewtonNorm
+import GroundTheory.PAdicHodge.BdRAlg
 set_option maxSynthPendingDepth 1
 
 noncomputable section

@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.PetIPSmulRight
-import CompanionTheory.EightfoldTheory.VariationTheory.AutomorphicForms.Newform
+import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.Newform
 
 noncomputable section
 

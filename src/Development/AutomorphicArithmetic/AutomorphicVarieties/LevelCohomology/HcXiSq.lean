@@ -1,5 +1,12 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.LevelCohomology.HcDefs
-import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.EtaKer
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
+import Mathlib.NumberTheory.DirichletCharacter.Basic
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal IsLocalRing UpperTheory.V UpperTheory.V.Base UpperTheory.V.HV UpperTheory.V.X
 
@@ -19,7 +26,7 @@ private theorem UpperTheory.V.X.xiSq_ft {R : Type} [CommRing R] {n d : ℕ} [NeZ
     rw [MonoidHom.mem_ker] at hx ⊢
     set a : ℤ := ((x : ZMod n).val : ℤ) with ha_def
     have hax : ((a : ℤ) : ZMod n) = (x : ZMod n) := by
-      simp [ha_def, ZMod.natCast_zmod_val]
+      simp [ha_def]
     have hcop : IsCoprime a n := by
       have hu : IsUnit ((a : ℤ) : ZMod n) := by rw [hax]; exact x.isUnit
       rw [ZMod.coe_int_isUnit_iff_isCoprime] at hu

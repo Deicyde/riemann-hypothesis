@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.ExistsCongrIffTraceFormsIsometricCm
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.HasseNormTheoremQuadraticExtension
 import Formalism.HermitianLattices.HermitianLatticesProofs.UnimodUnramUnique
+import Mathlib.NumberTheory.LocalField.Basic
 
 open NumberField IsDedekindDomain
 open scoped Matrix TensorProduct ComplexConjugate WithZero

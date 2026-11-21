@@ -1,4 +1,11 @@
-import ReciprocityTheory.SemistableReduction.SemiDegSt
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Mathlib.Analysis.Matrix.Order
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import ReciprocityTheory.SemistableReduction.LatSemiSt
 
 noncomputable section
 
@@ -30,7 +37,7 @@ theorem sdd_star_self_eig {n : ℕ} {D : Matrix (Fin n) (Fin n) ℂ} (hD : D.IsH
   rw [← h]
   simp only [dotProduct, Pi.star_apply, RCLike.inner_apply]
   refine Finset.sum_congr rfl fun x _ => ?_
-  simp [Complex.star_def, mul_comm]
+  simp [mul_comm]
 
 theorem sdd_quad_eig {n : ℕ} {D : Matrix (Fin n) (Fin n) ℂ} (hD : D.IsHermitian) (i : Fin n) :
     star (⇑(hD.eigenvectorBasis i)) ⬝ᵥ (D *ᵥ ⇑(hD.eigenvectorBasis i)) = (hD.eigenvalues i : ℂ) := by

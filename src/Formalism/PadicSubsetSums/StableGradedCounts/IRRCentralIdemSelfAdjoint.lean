@@ -1,4 +1,11 @@
+import BuildAid.Leniency.Open
 import Formalism.PadicSubsetSums.CentralIdempotents.GaloisIrreducibility
+import Mathlib.Data.Finsupp.Pointwise
+import Mathlib.LinearAlgebra.Eigenspace.Semisimple
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open Module
 

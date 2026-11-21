@@ -1,4 +1,5 @@
-import Development.EtaleCohomology.EtaleSheaves.LeafExcRingOf
+import BuildAid.Leniency.Open
+import Development.EtaleCohomology.EtaleSheaves.LeafExcRingPf
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry Opposite

@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.ActsLinOfSplitLin
 import Formalism.LocalToGlobal.IndefiniteReal.WeilFull
-import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.FinPartPhiE
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.PlaceSum
 
 noncomputable section
@@ -36,7 +37,7 @@ theorem sbHalf_halfInd {S T : HSp D} (e : AE D) (Λ : AddSubgroup (WO S T)) : Is
         exact ⟨fun h => by simpa using Λ.sub_mem h hu, fun h => Λ.add_mem h hu⟩
       have hH : IsHalf e (t + 1 • u) ↔ IsHalf e t := by
         unfold IsHalf at hh ⊢
-        simp only [one_smul, Matrix.add_apply, Pi.add_apply, mul_add, hh, add_left_inj]
+        simp only [one_smul, Matrix.add_apply, mul_add, hh, add_left_inj]
       simp only [hΛ, hH]
     · intro t ht
       rw [one_smul]

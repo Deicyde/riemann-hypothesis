@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.TheoremA
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.NumberTheory.Harmonic.Defs
+import Mathlib.RingTheory.FractionalIdeal.Norm
 
 noncomputable section
 

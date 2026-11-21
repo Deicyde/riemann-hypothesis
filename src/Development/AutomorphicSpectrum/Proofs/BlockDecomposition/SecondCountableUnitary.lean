@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.ArchimedeanGelfandKernels.LeftEquivariantFunctions.ComplexMatrixCalculus.SwapLaws
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HeightBoundFacts
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousCoeffRowAct
@@ -83,7 +84,7 @@ theorem gram_invariant (hF : Continuous F) (k : K) : adj (F k) * gram μ F * F k
   have h := integrable_gram μ hF
   have e : ∀ h : K, adj (F k) * (adj (F h) * F h) * F k = adj (F (h * k)) * F (h * k) := by
     intro h
-    simp only [map_mul, ContinuousLinearMap.adjoint_comp, ← ContinuousLinearMap.star_eq_adjoint, star_mul, mul_assoc]
+    simp only [map_mul, ← ContinuousLinearMap.star_eq_adjoint, star_mul, mul_assoc]
   calc adj (F k) * gram μ F * F k = ∫ h, adj (F k) * (adj (F h) * F h) * F k ∂μ := by
         rw [gram, ← integral_const_mul_of_integrable h, ← integral_mul_const_of_integrable (h.const_mul _)]
     _ = ∫ h, adj (F (h * k)) * F (h * k) ∂μ := by simp only [e]

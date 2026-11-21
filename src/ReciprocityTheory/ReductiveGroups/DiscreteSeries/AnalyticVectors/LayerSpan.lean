@@ -1,4 +1,12 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.BochnerInequality.LayerBasic
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Analysis.InnerProductSpace.JointEigenspace
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.BochnerInequality.CasValK
 
 noncomputable section
 

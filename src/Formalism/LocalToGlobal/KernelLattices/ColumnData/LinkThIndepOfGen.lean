@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.KernelLattices.ColumnData
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.KernelLattices.ColumnData.IopNorm
 
 noncomputable section

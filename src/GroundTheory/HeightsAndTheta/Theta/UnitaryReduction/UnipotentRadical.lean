@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.UnitaryGroupScheme
-import GroundTheory.HeightsAndTheta.Theta.CMDatum
 import GroundTheory.HeightsAndTheta.Theta.EisensteinZeta.MirabolicInduction.MemRangeIffIsIntegral
 set_option maxSynthPendingDepth 1
 

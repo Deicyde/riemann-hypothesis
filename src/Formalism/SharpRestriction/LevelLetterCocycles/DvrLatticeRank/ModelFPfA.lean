@@ -1,4 +1,6 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.ExpansionFormAll
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.LevelLetterCocycles.DownSlotProposition
 
 noncomputable section
 

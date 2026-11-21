@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.GenusMeanAsymptotics.JacobiCharacterSums.DHFinish2Of
-import Formalism.GL3MeanSquares.GenusMeanAsymptotics.JacobiCharacterSums.PNTDHPos
+import Mathlib.RingTheory.PiTensorProduct
 
 open Finset Complex Classical
 

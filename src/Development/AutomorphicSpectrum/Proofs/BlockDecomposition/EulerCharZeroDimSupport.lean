@@ -1,10 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ChernDegreeComplex
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsPresents
-import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.EventuallyExistsFiniteSubsetNonzeroLocus
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GenericResidueLinearIndependence
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.DivisibilityProofs.InterNumEqSumLengthMulInterNumRed
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GoodStalks
 
 set_option autoImplicit false
 

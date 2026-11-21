@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.KernelLattices.ThDistC
-import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.IndexExponentDegree
 
 open NumberField IsDedekindDomain
 

@@ -1,14 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaEqB
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsThetaSubSelf
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HoweDualityUnitary
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HoweDualityReal
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.HypothesesAbsDet
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.PolMatchLinear
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SumPureMemAlgD
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolynomialDatumActionOfPairStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenIntertwinerSkewPlaneUniqueDual
 
@@ -49,7 +40,7 @@ private theorem indMap_apply {U V : Type} [AddCommGroup U] [Module ℂ U] [AddCo
     indMap π hπ D hD (π u) = π (D u) := by
   have e : (π.quotKerEquivOfSurjective hπ).symm (π u) = Submodule.Quotient.mk u := by
     rw [LinearEquiv.symm_apply_eq]; rfl
-  simp only [indMap, LinearMap.coe_comp, LinearEquiv.coe_coe, Function.comp_apply, e, Submodule.mapQ_apply]
+  simp only [indMap, LinearMap.coe_comp, LinearEquiv.coe_coe, Function.comp_apply, e]
   rfl
 
 private theorem acts_zero' {F : Type} [Field F] [NumberField F] {κ : Type} [Fintype κ]

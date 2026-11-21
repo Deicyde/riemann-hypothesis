@@ -1,5 +1,7 @@
-import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.TwoSumsCondition
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.FrobeniusLiftNorms.WModel
+import Formalism.SharpRestriction.GrowthBounds.FormalGroupSystem
 
 noncomputable section
 

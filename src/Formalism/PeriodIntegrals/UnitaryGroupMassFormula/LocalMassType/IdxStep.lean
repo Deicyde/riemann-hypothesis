@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalMassType.IdxGrp
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalMassType.IdxAbs
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalMassOrder.IsTopRingTens

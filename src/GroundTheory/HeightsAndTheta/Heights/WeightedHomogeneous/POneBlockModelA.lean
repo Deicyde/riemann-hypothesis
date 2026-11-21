@@ -1,5 +1,7 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.WeightedHomogeneous.Statements
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.HeightsAndTheta.Heights.HeightComparison.HeightObjects
+import GroundTheory.HeightsAndTheta.Heights.WeightedHomogeneous.DualModel
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

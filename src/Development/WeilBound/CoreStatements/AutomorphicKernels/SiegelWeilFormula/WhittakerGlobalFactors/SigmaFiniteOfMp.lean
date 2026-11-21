@@ -1,5 +1,10 @@
-import Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.WhittakerGlobalFactors.MeasurableSetUH
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.ExistsStandardLocalMeasuresStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.ExistsUnitScalingSelfdualHermMeasures
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SiegelEisensteinUnfoldingIdentity
+import Development.AutomorphicSpectrum.Proofs.GlobalProofs.ExistsLocalApproximateIdentity
+import Development.AutomorphicSpectrum.Proofs.GlobalProofs.SelfDualTransport
+import GroundTheory.HeightsAndTheta.Theta.AdelicFourier
 
 noncomputable section
 

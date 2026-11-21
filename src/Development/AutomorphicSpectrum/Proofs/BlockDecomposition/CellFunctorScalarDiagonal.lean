@@ -1,6 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsSubquotientDetRepParInd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.ExistsCellOfIsSubquotient
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.TotallySplit
 
 open GlobalTheory.PRep GlobalTheory.SmGL
 open scoped TensorProduct

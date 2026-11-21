@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.PlaceBelow
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
 
 set_option autoImplicit false
 

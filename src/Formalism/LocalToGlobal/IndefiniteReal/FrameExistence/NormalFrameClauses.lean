@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.RealSeparation.FramesOKg2
 import Formalism.LocalToGlobal.IndefiniteReal.FrameExistence.FramesExistGOfFramesExist
 

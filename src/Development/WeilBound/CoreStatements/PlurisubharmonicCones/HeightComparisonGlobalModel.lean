@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PlurisubharmonicCones.FlatSat
 import Development.WeilBound.CoreStatements.PlurisubharmonicCones.ExistsSmulMemOfEig
 import Development.WeilBound.CoreStatements.PlurisubharmonicCones.ExistsAction
@@ -11,6 +12,8 @@ import Development.AutomorphicSpectrum.Proofs.MetricProofs.LogIndexOfOrthogonalF
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.CompactDatumIntersectionStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.CuspCorrespondenceBoundStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.AbelianPartLieSignatureStatement
+import Development.AutomorphicSpectrum.Statements.GeometryStatements.FlatDegree
+import Development.AutomorphicSpectrum.Statements.GeometryStatements.NineGeoU
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField Matrix Filter Topology
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi

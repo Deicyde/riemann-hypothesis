@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.StListTailLog
 import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.StBoundingKaehler
 import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.TailDimZero

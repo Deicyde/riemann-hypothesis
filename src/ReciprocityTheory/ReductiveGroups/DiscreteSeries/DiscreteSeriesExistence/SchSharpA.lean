@@ -1,6 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.CFPrimeB
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.LowFock
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.CARUnit
+import Mathlib.Algebra.Ring.IsFormallyReal
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.DSymmHypsInhabited
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.LowFockA
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.LowFockD
 
 noncomputable section
 

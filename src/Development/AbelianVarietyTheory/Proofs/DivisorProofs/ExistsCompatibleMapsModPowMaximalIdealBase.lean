@@ -1,4 +1,6 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.QuasiCompact
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.CategoryTheory.Monoidal.Cartesian.Over
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj IsLocalRing NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open scoped CategoryTheory.Obj
@@ -103,7 +105,7 @@ theorem exists_compatible_maps_mod_pow_maximalIdeal_base : ∀ (R : Type) [CommR
     · intro z
       obtain ⟨c, rfl⟩ := Ideal.Quotient.mk_surjective z
       obtain ⟨t, ht⟩ := hsur (Ideal.Quotient.mk _ c)
-      exact ⟨t, by simp [ht, Ideal.Quotient.factorₐ_apply_mk]⟩
+      exact ⟨t, by simp [ht]⟩
     apply le_antisymm
     · intro t ht
       rw [RingHom.mem_ker, AlgHom.comp_apply] at ht

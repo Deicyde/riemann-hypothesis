@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ElementarySymmetric.ResidueChartModel
 set_option maxSynthPendingDepth 1
 

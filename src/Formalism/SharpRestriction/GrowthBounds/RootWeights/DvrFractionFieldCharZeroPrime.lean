@@ -1,4 +1,10 @@
-import Formalism.SharpRestriction.GrowthBounds.RootWeights.NontrivialIsotypicWeightZeroKilled
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.ObjPol
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.Tactic.Polynomial.Basic
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -112,7 +118,7 @@ theorem pairwise_list_index_lt {α : Type*} [BEq α] [LawfulBEq α] (r : α → 
           · exact absurd h.symm hay
           · exact h
         have := ih hl.2 hxt hyt
-        simp [List.idxOf_cons, hax, hay]
+        simp [hax, hay]
         omega
 
 theorem exists_normalOrder (n : ℕ) : ∃ ord, NormalOrder n ord := by

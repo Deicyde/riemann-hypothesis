@@ -1,10 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SizeWindowBrackets.GrowthBoundGivesRiemannHypothesis
 import Formalism.SizeWindowBrackets.ChainSlopeWindows.RiemannHypothesisOfPowerBound
 import Formalism.SizeWindowBrackets.ChainSlopeWindows.StronglyIrreducible
 import Formalism.ThickAverageLoss.ThickAverageProofs.Balance
 import Formalism.ThickAverageLoss.ThickAverageProofs.ThickAverage
 import Formalism.ZetaNonvanishing.GzLipschitz
-import Mathlib.NumberTheory.Chebyshev
 
 open Finset ArithmeticFunction
 

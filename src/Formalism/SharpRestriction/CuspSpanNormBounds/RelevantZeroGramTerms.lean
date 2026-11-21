@@ -1,10 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
-import Formalism.RealPlaceAnalysis.InstMeasurableSpaceUJ
 import Formalism.FormalDegreeBessel.StatementDS
 import Formalism.FormalDegreeBessel.StatementRP
-import Formalism.SharpRestriction.CuspSpanNormBounds.DataS
-import Formalism.SharpRestriction.CuspSpanNormBounds.Point
 
 open MeasureTheory Matrix Finset
 open scoped InnerProductSpace ContDiff

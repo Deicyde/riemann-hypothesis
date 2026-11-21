@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPlaceRep
+import Development.AbelianVarietyTheory.Proofs.HeightProofs.ExistsSigmaList
 
 noncomputable section
 
@@ -59,7 +60,7 @@ theorem lieDer_polyFun (D : D7) (θ : D.what₂.Tau → (Ainf D.host.F ⊗[D.hos
     by_cases e : τ' = τ
     · subst e
       simp [atPlace, Matrix.mul_apply, realEntries]
-    · simp [atPlace, e, Pi.single_eq_of_ne e]) P
+    · simp [atPlace, e]) P
   rw [h0] at h
   exact h.deriv
 

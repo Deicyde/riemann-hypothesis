@@ -1,5 +1,5 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.GelfandSpectralNormalisation.NormalisedInvariants.PTConclAt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.NineTermExactIff
 import ReciprocityTheory.NeutralLocalFields.LocalFieldComparison.TransportA
 

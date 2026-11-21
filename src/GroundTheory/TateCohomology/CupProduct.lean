@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.TateCohomology.CupCochains
+import Mathlib.RepresentationTheory.Homological.GroupCohomology.Functoriality
+import Mathlib.Tactic.ENatToNat
 set_option maxSynthPendingDepth 1
 
 noncomputable section

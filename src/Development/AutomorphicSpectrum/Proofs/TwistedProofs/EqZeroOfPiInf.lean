@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 
 open NumberField Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes

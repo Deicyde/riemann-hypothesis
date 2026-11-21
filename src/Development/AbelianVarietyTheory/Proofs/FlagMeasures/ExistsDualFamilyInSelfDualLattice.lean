@@ -1,6 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.AtBase
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.IsPrincipalIdealRingOfHenselian
+import Formalism.SharpRestriction.CuspSpanNormBounds.IsTermOver
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open ValuativeRel Formalism.MainNotions.S Formalism.MainNotions.S.Loc Formalism.MainNotions.S.LocNG GlobalTheory.LocOver
 open scoped Classical
 
@@ -41,7 +43,7 @@ theorem eq_top_of_dual
         have h1 : ∑ i, (Pi.single 0 d : Fin (n + 1) → E) i * (x i : E) = d * (x 0 : E) := by
           rw [Finset.sum_eq_single 0]
           · simp
-          · intro b _ hb; simp [Pi.single_apply, hb]
+          · intro b _ hb; simp [hb]
           · simp
         rw [h1]
         exact hd (x 0) ⟨x, hx, rfl⟩)

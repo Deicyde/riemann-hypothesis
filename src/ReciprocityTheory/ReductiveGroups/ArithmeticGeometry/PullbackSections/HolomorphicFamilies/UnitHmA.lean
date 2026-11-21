@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ThetaUnifAV
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
 
 set_option autoImplicit false
 
@@ -63,7 +67,7 @@ theorem herm_eq_of_im {L : Type} [AddCommGroup L] (P : L →+ (Fin g → ℂ))
     ext k
     by_cases hk : k = j
     · subst hk; simp
-    · simp [Pi.single_apply, hk]
+    · simp [hk]
   refine sub_eq_zero.1 ?_
   ext i j
   have := hall (Pi.single i 1) (Pi.single j 1)

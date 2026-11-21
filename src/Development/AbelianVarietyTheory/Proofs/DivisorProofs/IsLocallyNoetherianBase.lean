@@ -1,11 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ActMatApply
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsChartOfMaximal
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TangentSheafLocalModelBundle
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TangentSectionsFormFrame
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OmegaMapStatement
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LocalSystemModelMap
-import Development.AbelianVarietyTheory.Counterexamples.ModuliSurvey.RangeJSubsetAbLocus
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalModelLettersPresentation
 
 set_option autoImplicit false
 set_option synthInstance.maxHeartbeats 400000
@@ -48,7 +46,7 @@ theorem semi_ext {Q T : Type} [AddCommGroup Q] [Module A Q] [AddCommGroup T] [Mo
     (h : ∀ s, c' (m (1 ⊗ₜ s)) = v (u (c (1 ⊗ₜ s)))) (w : A ⊗[R] M) : c' (m w) = v (u (c w)) := by
   induction w using tmul_ind with
   | h1 s => exact h s
-  | hs a w hw => simp only [map_smul, map_smulₛₗ, hw, RingHom.id_apply]
+  | hs a w hw => simp only [map_smul, map_smulₛₗ, hw]
   | ha w w' hw hw' => simp only [map_add, hw, hw']
 
 theorem pair_ext (pr : A ⊗[R] M →ₗ[A] Module.Dual A (A ⊗[R] N)) (pr' : L →ₗ[A'] Module.Dual A' P)
@@ -112,7 +110,7 @@ def ev : Om →ₛₗ[(intO K).subtype.comp ψ] K where
 
 theorem ev_basis (l : Fin r) : ev ψ f a (f l) = a l := by
   change ∑ m, (ψ (f.repr (f l) m) : K) * a m = a l
-  rw [Finset.sum_eq_single l (fun m _ h => by simp [Finsupp.single_apply, h.symm]) (by simp)]
+  rw [Finset.sum_eq_single l (fun m _ h => by simp [h.symm]) (by simp)]
   simp
 
 def evInt : Submodule A Om where

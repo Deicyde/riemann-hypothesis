@@ -1,26 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.KernelSt
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.DemaillyRegularisation
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.MatrixLemma
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.AbsoluteSiegel
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ScholzeWeinsteinB
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.QuasiPlurisubharmonic
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.LieAlgebraMaps
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsClosedBasePt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinsumLifts
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RootHeightLeAbelianHeight
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeModelInducesRootMetric
 import Development.AbelianVarietyTheory.Definitions.Divisors.DualRef
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PointHeightDualAndLinearCombStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeightBoundedBelowOffZeroLocusStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormsComb
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormsUnitRescaling
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FlatSectionIsFlat
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CartierLogHeightFormula
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AbsLgOfDetSymSubLe
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormsTensorProduct
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConjugateWeightSmoothNormalization
 open NumberField Formalism.BasicNotions Formalism.MainNotions ReciprocityTheory.GeometryOfNumbersTheory GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.Mean4 GlobalTheory.Mean4O GlobalTheory.LieHt GlobalTheory.HeightParts GlobalTheory.ShFam.Pad
 open CategoryTheory AlgebraicGeometry GlobalTheory.TrueGeo GlobalTheory.ArInt GlobalTheory.ProjVar GlobalTheory.ShFam GlobalTheory.Cartier
 open scoped Classical
@@ -78,7 +61,7 @@ theorem GlobalTheory.FlatRat.exists_unit_ratSec_comb_root : ∀ (D : D7) (O : Se
     ring
   · intro i x hx
     have H := hu i x hx
-    simp only [pow_one, one_pow] at H
+    simp only [pow_one] at H
     have hp0 : (∏ k, genAt (Dv k) (W.V.π x)) ≠ 0 := (hgen (W.V.π x)).ne_zero
     have e : ((Units.mk0 (W.V.φ fl) hφ0 * r i : W.V.G.functionFieldˣ) : W.V.G.functionField) =
         W.V.φ (fl * (∏ k, genAt (Dv k) (W.V.π x))⁻¹) * (W.V.φ (∏ k, genAt (Dv k) (W.V.π x)) * r i) := by

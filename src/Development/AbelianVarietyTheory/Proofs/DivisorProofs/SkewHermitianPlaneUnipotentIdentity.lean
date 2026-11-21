@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicPlaneComplementDet
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -63,7 +63,7 @@ theorem decomp_h (σ : E →ₐ[F] E) {n n₁ : ℕ} (J : Matrix (Fin n) (Fin n)
   simp only [b, Sum.elim_inl, Sum.elim_inr, Matrix.cons_val_zero, Matrix.cons_val_one]
   congr 1
   ext i
-  simp [Matrix.mulVec, dotProduct, Finset.sum_apply, Matrix.mulVec_single_one, mul_comm]
+  simp [Matrix.mulVec, dotProduct, Finset.sum_apply, mul_comm]
 
 theorem key_h (σ : E →ₐ[F] E) (hσ : ∀ x, σ (σ x) = x) {n n₁ : ℕ} (J : Matrix (Fin n) (Fin n) E)
     (J₁ : Matrix (Fin n₁) (Fin n₁) E) (x y : Fin n → E) (ι : Matrix (Fin n) (Fin n₁) E)
@@ -136,7 +136,7 @@ theorem key_h (σ : E →ₐ[F] E) (hσ : ∀ x, σ (σ x) = x) {n n₁ : ℕ} (
         ext i
         have := RingHom.map_mulVec (cA σ).toRingHom M X i
         rw [hx] at this
-        simp only [Function.comp_def, hXdef, incV, cA_inclR, AlgHom.coe_toRingHom] at this ⊢
+        simp only [Function.comp_def, hXdef, incV] at this ⊢
         exact this.symm
       have hW : incM F J *ᵥ incV F (fun i => σ (x i)) = incV F w := by rw [hwdef, incV_mulVec]
       have hMW : Mᵀ *ᵥ incV F w = incV F w := by

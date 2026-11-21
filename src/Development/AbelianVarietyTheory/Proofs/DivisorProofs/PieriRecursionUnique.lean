@@ -1,4 +1,10 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsAddHaarMeasureVolumeLie
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 open scoped Classical
 
 namespace GlobalTheory
@@ -31,7 +37,7 @@ theorem pieri_recursion_zero (n : ℕ) (c : ℕ → ℂ) (D : (Fin n → ℕ) �
     have hsum : ∀ J : Finset (Fin n),
         ∑ i, ((l + (fun i => if i ∈ J then 1 else 0) : Fin n → ℕ)) i = ∑ i, l i + J.card := by
       intro J
-      simp [Finset.sum_add_distrib, Finset.sum_boole]
+      simp [Finset.sum_add_distrib]
     have hDl : D l = 0 := by
       have hlt : ∑ i, l i < s := by
         rw [← hs]

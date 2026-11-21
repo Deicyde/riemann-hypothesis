@@ -1,6 +1,8 @@
-import Mathlib
-import GroundTheory.PAdicHodge.AInfXi
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.PAdicHodge.ThetaPlus
+import GroundTheory.PAdicHodge.KerFontaineThetaCompFrobeniusEquivSymmPow
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
 set_option maxSynthPendingDepth 1
 
 noncomputable section

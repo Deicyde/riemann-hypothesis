@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TwistedConjOfTwistedNormEqGLOneUnramified
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolySubComm
 open Matrix GlobalTheory.LKRes GlobalTheory.LKMid
 open scoped TensorProduct
 set_option maxHeartbeats 1000000 in

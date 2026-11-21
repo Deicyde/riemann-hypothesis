@@ -1,6 +1,11 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import ReciprocityTheory.L2DbarEstimates.Localization.UnweightBackStatement
-import ReciprocityTheory.L2DbarEstimates.ChartDerivatives.Imports
-import ReciprocityTheory.L2DbarEstimates.MinimalSolutions.HilbertLemmas
+import Mathlib.MeasureTheory.Function.L2Space
+import Mathlib.RingTheory.PiTensorProduct
+import ReciprocityTheory.L2DbarEstimates.ChartDerivatives.MeasurableSetImageOfIsLocalHomeomorph
+import ReciprocityTheory.L2DbarEstimates.ChartDerivatives.TsupportDbSubset
 
 namespace ReciprocityTheory.L2DbarEstimates.F
 
@@ -464,7 +469,7 @@ theorem gm_tstar_single (n : ℕ) (z : M → V n) (ph : M → ℝ) (φ : M → �
     · subst hk
       have hE : (Real.exp (-ph y) : ℂ) * (Real.exp (ph y) : ℂ) = 1 := by
         rw [← Complex.ofReal_mul, ← Real.exp_add, neg_add_cancel, Real.exp_zero, Complex.ofReal_one]
-      simp only [gmSingle, EuclideanSpace.single_apply, eq_self_iff_true, if_true, ← mul_assoc, hE,
+      simp only [gmSingle, EuclideanSpace.single_apply, if_true, ← mul_assoc, hE,
         one_mul]
     · simp [gmSingle, hk]
   have hd : ∀ k, d n z k (fun y => (Real.exp (-ph y) : ℂ) * gmSingle ph φ j y k) x =
@@ -473,14 +478,14 @@ theorem gm_tstar_single (n : ℕ) (z : M → V n) (ph : M → ℝ) (φ : M → �
     rw [hfun k]
     by_cases hk : k = j
     · subst hk
-      simp only [eq_self_iff_true, if_true]
+      simp only [if_true]
       exact d_conj_eq_conj_db φ k x
     · simp only [hk, if_false]
       apply d_eq_zero_of_not_mem_tsupport
       first
         | simp
         | (rw [show (fun _ : M => (0 : ℂ)) = 0 from rfl, tsupport_zero]; simp)
-  simp only [tstar, hd, Finset.sum_ite_eq, Finset.sum_ite_eq', Finset.mem_univ, if_true]
+  simp only [tstar, hd, Finset.sum_ite_eq', Finset.mem_univ, if_true]
 
 theorem gm_ipV_single (n : ℕ) (z : M → V n) (ph : M → ℝ) (F0 φ : M → ℂ) (j : Fin n) :
     ipV n z (dbarF n z F0) (gmSingle ph φ j) ph = conj (∫ x, db n z j F0 x * φ x ∂vol n z) := by
@@ -491,7 +496,7 @@ theorem gm_ipV_single (n : ℕ) (z : M → V n) (ph : M → ℝ) (F0 φ : M → 
   have hE : (Real.exp (ph x) : ℂ) * (Real.exp (-ph x) : ℂ) = 1 := by
     rw [← Complex.ofReal_mul, ← Real.exp_add, add_neg_cancel, Real.exp_zero, Complex.ofReal_one]
   first
-    | (simp only [PiLp.toLp_apply, map_mul]
+    | (simp only [map_mul]
        linear_combination (conj (db n z j F0 x) * conj (φ x)) * hE)
     | (simp only [map_mul]
        linear_combination (conj (db n z j F0 x) * conj (φ x)) * hE)

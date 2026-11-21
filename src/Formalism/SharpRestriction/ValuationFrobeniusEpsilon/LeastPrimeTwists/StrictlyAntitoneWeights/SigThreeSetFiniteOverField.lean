@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.ValuationFrobeniusEpsilon.UnitaryThreeHeightBounds
-import Formalism.SharpRestriction.ValuationFrobeniusEpsilon.LeastPrimeTwists.StrictlyAntitoneWeights.AntitoneWeightsLemma.LiteratureFamilyBoundOfMembers
 
 noncomputable section
 

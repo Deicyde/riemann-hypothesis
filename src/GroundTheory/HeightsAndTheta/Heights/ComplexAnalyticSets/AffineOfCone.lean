@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StatementsArea
-import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.RingKrullDimQuotBotOne
-import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.FrameProjEq
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Algebra.MvPolynomial
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.IndefiniteRowSideFullHecke.ComplexSets

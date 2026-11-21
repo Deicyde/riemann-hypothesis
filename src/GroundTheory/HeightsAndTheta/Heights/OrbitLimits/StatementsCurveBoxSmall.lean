@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StatementsCurveBoxCount
+import BuildAid.Leniency.Open
+import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.CurveCountObjects
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.Targets

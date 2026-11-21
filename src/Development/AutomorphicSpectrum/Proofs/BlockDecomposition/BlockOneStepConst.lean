@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LocalDensitiesHermitianRepresentation
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HypOneZeroZero
+import BuildAid.Leniency.Open
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.SiegelWeilMeasureAddRankOneBlock
 
 open HeckeCharacterZeroLocus.SiegelWeilU GlobalTheory.CompanionTheory.SW NumberField IsDedekindDomain MeasureTheory Topology

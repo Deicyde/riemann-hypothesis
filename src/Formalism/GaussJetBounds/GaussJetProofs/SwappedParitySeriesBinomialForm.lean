@@ -1,5 +1,22 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.GaussJetBounds.GenLogInverse
-import Formalism.FormalGroupWitt.WeightInvariance
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Analysis.Normed.Ring.Ultra
+import Mathlib.Data.Int.Star
+import Mathlib.Data.Nat.Choose.Lucas
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 open scoped BigOperators
@@ -36,7 +53,7 @@ theorem bnx_single_add_single_eq {σ : Type*} {x y : σ} (hxy : x ≠ y) (r s i 
   · intro h
     have h1 := DFunLike.congr_fun h x
     have h2 := DFunLike.congr_fun h y
-    simp [Finsupp.single_apply, hxy, hxy.symm] at h1 h2
+    simp [hxy, hxy.symm] at h1 h2
     exact ⟨h1, h2⟩
   · rintro ⟨rfl, rfl⟩
     rfl
@@ -75,7 +92,7 @@ theorem bnx_lin_pow_supp {K : Type u} [Field K] {σ : Type*} [DecidableEq σ] (x
     by_contra hne
     push_neg at hne
     apply hz
-    simp [Finsupp.single_apply, Ne.symm hne.1, Ne.symm hne.2]
+    simp [Ne.symm hne.1, Ne.symm hne.2]
   · exact absurd rfl hr
 
 section Blocks
@@ -93,8 +110,8 @@ theorem bnxRes_apply (m : V2 d →₀ ℕ) (s : ZMod d) (z : V2 d) :
   obtain ⟨b, t⟩ := z
   by_cases h : t = s
   · subst h
-    cases b <;> simp [bnxRes, Finsupp.single_apply]
-  · cases b <;> simp [bnxRes, Finsupp.single_apply, h, Ne.symm h]
+    cases b <;> simp [bnxRes]
+  · cases b <;> simp [bnxRes, h]
 
 private theorem coeff_prod_bnxA_pow_eq_ite {K : Type u} [Field K] {d : ℕ} [NeZero d]
     (a b : ZMod d → K) (k : ZMod d → ℕ) (S : Finset (ZMod d)) (m : V2 d →₀ ℕ) :
@@ -320,7 +337,7 @@ theorem bnx_prod_choose (n : ZMod d →₀ ℕ) (s : ZMod d) (j : ℕ) (hj : j <
         Nat.add_sub_cancel' hj.le])
     | simp [Function.update_apply, he, Nat.add_sub_cancel' hj.le]
   · intro t _ hts
-    simp [Function.update_apply, hts]
+    simp [hts]
   · intro h
     exact absurd (Finset.mem_univ s) h
 
@@ -595,7 +612,7 @@ private theorem finsupp_prod_torus_pow_eq_C_mul_monomial {K : Type u} [Field K] 
   rw [hmono]
   rw [show ∑ t, Finsupp.single t (dd t) = dd from by
     ext u
-    simp [Finsupp.finset_sum_apply, Finsupp.single_apply]]
+    simp]
 
 theorem bnx_torus_cong {K : Type u} [Field K] (l d : ℕ) [NeZero d] (hl : l.Prime) (hl3 : 3 ≤ l)
     (hd2 : 2 ≤ d) (hde : Even d) (ζ : K) (hζ : IsPrimitiveRoot ζ (l ^ d - 1))
@@ -619,12 +636,12 @@ theorem bnx_torus_cong {K : Type u} [Field K] (l d : ℕ) [NeZero d] (hl : l.Pri
   rw [finsupp_prod_torus_pow_eq_C_mul_monomial, coeff_C_mul, coeff_monomial, if_pos rfl, mul_one, smul_eq_mul] at hcoef
   have hprod := mul_left_cancel₀ hc (hcoef.trans (mul_one _).symm)
   rw [Finset.prod_eq_mul s s' hss
-    (fun t _ ht => by simp [Finsupp.single_apply, Ne.symm ht.1, Ne.symm ht.2])
+    (fun t _ ht => by simp [Ne.symm ht.1, Ne.symm ht.2])
     (fun h => absurd (Finset.mem_univ s) h) (fun h => absurd (Finset.mem_univ s') h)] at hprod
   have hv1 : (Finsupp.single s (l ^ α) + Finsupp.single s' (l ^ β)) s = l ^ α := by
-    simp [Finsupp.single_apply, Ne.symm hss]
+    simp [Ne.symm hss]
   have hv2 : (Finsupp.single s (l ^ α) + Finsupp.single s' (l ^ β)) s' = l ^ β := by
-    simp [Finsupp.single_apply, hss]
+    simp [hss]
   rw [hv1, hv2] at hprod
   have hζ0 : ζ ≠ 0 := hζ.ne_zero hk0.ne'
   rw [← zpow_natCast, ← zpow_natCast, ← zpow_mul, ← zpow_mul, ← zpow_add₀ hζ0,
@@ -792,7 +809,7 @@ private theorem monoWtGe_or_biPower_of_wtGe_de1_de2 {K : Type u} [NormedField K]
     by_cases ht : t.val % 2 = 0
     · by_cases hts : t = s
       · subst hts
-        simp [hss, Ne.symm hss, hα]
+        simp [Ne.symm hss, hα]
       · have h0 := hu t ht hts
         have hts' : t ≠ s' := by
           rintro rfl
@@ -800,7 +817,7 @@ private theorem monoWtGe_or_biPower_of_wtGe_de1_de2 {K : Type u} [NormedField K]
         simp [Ne.symm hts, Ne.symm hts', h0]
     · by_cases hts : t = s'
       · subst hts
-        simp [hss, Ne.symm hss, hβ]
+        simp [hss, hβ]
       · have h0 := hu' t ht hts
         have hts2 : t ≠ s := by
           rintro rfl

@@ -1,12 +1,10 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.ModerateCoefficientPositivity
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.FundamentalDomainPointBound
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.IsIntegralCc
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsHolPeriods
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.GCauchyStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.PolyDerivMonomialOne
 import Development.AbelianVarietyTheory.Definitions.ThetaMetrics.IsWeightedHomogeneousOfMemOrbitSpan
 import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.HyperbolicFlagDataBasePoint
+import Mathlib.NumberTheory.ModularForms.JacobiTheta.TwoVariable
 
 open NumberField Matrix Complex
 open scoped ComplexConjugate
@@ -426,7 +424,7 @@ theorem one_mem : one ∈ flagData.dom := fun τ => by
   fin_cases i
   · simp [lminor, psgn]
   · simp [lminor, psgn, sgn]
-  · simp [lminor, psgn, sgn, Finset.prod_range_succ, Matrix.det_fin_two]
+  · simp [lminor, psgn, sgn, Finset.prod_range_succ]
 
 theorem per_one (v : Fin 2 → E4) (τ : flagData.Ψ) :
     per flagData one v (τ, 0) = conj (τ.1 (v 0)) ∧ per flagData one v (τ, 1) = τ.1 (v 1) := by

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.LocallyConstantCoinvariants.ExistsFull
 import Development.WeilBound.CoreStatements.LocallyConstantCoinvariants.ExistsExtZ
 import Development.WeilBound.CoreStatements.LocallyConstantCoinvariants.SoStatement

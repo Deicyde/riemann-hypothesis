@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockMap
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockHarmonicHomogeneousOfKType
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MinFirst
 open scoped TensorProduct GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels
 open Formalism.BasicNotions.TH GlobalTheory.FockAlg MvPolynomial
@@ -189,7 +187,7 @@ theorem sum_fin_ite_lt (P R : ℕ) (hPR : P ≤ R) (a b : ℚ) :
   rw [Fin.sum_univ_eq_sum_range (fun k => if k < P then a else b) R]
   obtain ⟨t, rfl⟩ := Nat.exists_eq_add_of_le hPR
   rw [Finset.sum_range_add]
-  simp [Finset.sum_ite_of_true, Finset.sum_range]
+  simp [Finset.sum_ite_of_true]
 
 theorem monomial_cols (P Q R S : ℕ) (x : ℚ) (μ : Ix R S → ℚ) (f : Pol P Q R S)
     (hf : GlobalTheory.RealLift.IsHarmVec x μ f) (α : (Ix P Q × Ix R S) →₀ ℕ) (hα : coeff α f ≠ 0) :
@@ -358,7 +356,7 @@ theorem casK_addRoot_lr {R S : ℕ} (μ : Ix R S → ℚ) (i : Fin R) (j : Fin S
     casK (addRoot μ (.inl i) (.inr j)) = casK μ + 2 * (μ (.inl i) - μ (.inr j)) + 2 +
       ((R : ℚ) - 1 - 2 * (i : ℕ)) - ((S : ℚ) - 1 - 2 * (j : ℕ)) := by
   simp only [casK, addRoot, Fintype.sum_sum_type]
-  simp only [Sum.inl.injEq, Sum.inr.injEq, reduceCtorEq, if_false, sub_zero, add_zero, zero_sub]
+  simp only [Sum.inl.injEq, Sum.inr.injEq, reduceCtorEq, if_false, sub_zero, add_zero]
   have h1 : ∀ k : Fin R, (μ (.inl k) + if k = i then 1 else 0) ^ 2 = μ (.inl k) ^ 2 + (if k = i then 2 * μ (.inl i) + 1 else 0) := by
     intro k; split_ifs with h <;> [subst h; skip] <;> ring
   have h2 : ∀ k : Fin S, (μ (.inr k) - if k = j then 1 else 0) ^ 2 = μ (.inr k) ^ 2 + (if k = j then -2 * μ (.inr j) + 1 else 0) := by
@@ -373,7 +371,7 @@ theorem casK_addRoot_rl {R S : ℕ} (μ : Ix R S → ℚ) (i : Fin R) (j : Fin S
     casK (addRoot μ (.inr j) (.inl i)) = casK μ + 2 * (μ (.inr j) - μ (.inl i)) + 2 +
       ((S : ℚ) - 1 - 2 * (j : ℕ)) - ((R : ℚ) - 1 - 2 * (i : ℕ)) := by
   simp only [casK, addRoot, Fintype.sum_sum_type]
-  simp only [Sum.inl.injEq, Sum.inr.injEq, reduceCtorEq, if_false, sub_zero, add_zero, zero_sub, zero_add]
+  simp only [Sum.inl.injEq, Sum.inr.injEq, reduceCtorEq, if_false, sub_zero, add_zero]
   have h1 : ∀ k : Fin R, (μ (.inl k) - if k = i then 1 else 0) ^ 2 = μ (.inl k) ^ 2 + (if k = i then -2 * μ (.inl i) + 1 else 0) := by
     intro k; split_ifs with h <;> [subst h; skip] <;> ring
   have h2 : ∀ k : Fin S, (μ (.inr k) + if k = j then 1 else 0) ^ 2 = μ (.inr k) ^ 2 + (if k = j then 2 * μ (.inr j) + 1 else 0) := by

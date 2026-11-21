@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.ExistenceTori.LevelIndexFourierCharacter
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsHolPeriods
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.NsmulMemSmulTop
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.HeckeKer
 
 set_option autoImplicit false
 
@@ -362,7 +363,7 @@ def DeltaChar.triv (l : Level H) (F : Type) [Field F] : DeltaChar (IsAuxiliarySp
       map_zero' := if_pos rfl
       map_one' := if_neg one_ne_zero
       map_mul' := fun 𝔞 𝔟 => by by_cases h : 𝔞 = 0 <;> by_cases h' : 𝔟 = 0 <;>
-        simp only [mul_eq_zero, h, h', or_true, true_or, or_self, if_true, if_false, mul_zero, zero_mul, _root_.mul_one] }
+        simp only [mul_eq_zero, h, h', or_self, if_true, if_false, mul_zero, zero_mul, _root_.mul_one] }
   ideal_zero := fun 𝔞 h => absurd (by rw [IsAuxiliarySplitSquarefreeLevel.triv_pId, sup_top_eq]) h
   principal := fun α hα _ => by
     rw [MulChar.one_apply (isUnit_of_subsingleton _), MulChar.one_apply (isUnit_of_subsingleton _), _root_.mul_one]

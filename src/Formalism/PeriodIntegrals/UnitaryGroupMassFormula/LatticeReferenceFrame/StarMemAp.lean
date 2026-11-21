@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LatticeReferenceFrame.PPAssemble
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LatticeReferenceFrame.ThetaA
+import Mathlib.RingTheory.PiTensorProduct
 
 noncomputable section
 
@@ -73,7 +74,7 @@ theorem hG_single (i : Fin I.n) (v : Fin I.n → I.E) :
   rw [hG_def, Finset.sum_eq_single i]
   · simp [Matrix.mulVec, dotProduct]
   · intro b _ hb
-    simp [Pi.single_apply, hb]
+    simp [hb]
   · simp
 
 theorem hG_nondeg (v : Fin I.n → I.E) (h : ∀ x, hG I x v = 0) : v = 0 := by

@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.PublishedTheorems.Algebra₂.RegularHypothesesAndConclusion
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.HasAffineChartId
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.HasAffineChartIff
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.ChartRestrictPreimageOpenStatement
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.InvariantOpenChartPreimageStatement
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.GlueQuotientChartsCoverStatement

@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.MembershipCriteria.GoodChar
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MembershipProofs.GoodCharIsLocallyConstant
 
 noncomputable section

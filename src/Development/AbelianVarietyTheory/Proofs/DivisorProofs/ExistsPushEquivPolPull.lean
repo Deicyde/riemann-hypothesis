@@ -1,6 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilEqOneComplex
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsPushEquiv
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.IsCubeLBPairingIsoBaseChange
+import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.WeilPairingEqOfIsomorphicCubePairings
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairTAdjTLeft
+import Mathlib.NumberTheory.Padics.MahlerBasis
 
 set_option autoImplicit false
 

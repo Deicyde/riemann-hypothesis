@@ -1,4 +1,5 @@
-import Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.RhoUpperBoundSmallDepth
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.RhoUpperBoundOfEdgeCount
 
 noncomputable section
 

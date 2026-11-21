@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PtFJQOver
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FlatSectionIsFlat
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.H0NeBotOfHorizontalFunction
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsEquivComp
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CoordinateSectionsOfWeightStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsLocalEquationFlagPointsStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HolomorphicOnProjectiveConstStatement
@@ -123,8 +121,8 @@ theorem neg_exOf_flatWt (τ : GlobalTheory.AllWt.Psi H) (z : Letter Dw) :
     have h1 : ρ ≠ conjEmb τ.1 := fun e => GlobalTheory.AllWt.conj_not_mem τ (e ▸ h)
     rw [GlobalTheory.AllWt.wtOf_big (GlobalTheory.FlatLine.flatWt Dw τ) 0 ⟨ρ, h⟩ i (hm ▸ i.2)]
     by_cases e : ρ = τ.1
-    · simp [GlobalTheory.FlatLine.flatWt, GlobalTheory.FlatLine.parWt, Subtype.ext_iff, e, Ne.symm (e ▸ h1)]
-    · simp [GlobalTheory.FlatLine.flatWt, GlobalTheory.FlatLine.parWt, Subtype.ext_iff, e, h1, Ne.symm e, Ne.symm h1]
+    · simp [GlobalTheory.FlatLine.flatWt, GlobalTheory.FlatLine.parWt, e, Ne.symm (e ▸ h1)]
+    · simp [GlobalTheory.FlatLine.flatWt, GlobalTheory.FlatLine.parWt, Subtype.ext_iff, e, Ne.symm e, Ne.symm h1]
   · have hm : Dw.mult ρ = Dw.q := if_neg h
     have h1 : ρ ≠ τ.1 := fun e => h (e ▸ τ.2)
     have := GlobalTheory.AllWt.wtOf_small (GlobalTheory.FlatLine.flatWt Dw τ) 0 ⟨_, GlobalTheory.AllWt.conj_mem h⟩ i (hm ▸ i.2)

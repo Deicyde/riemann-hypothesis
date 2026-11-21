@@ -1,9 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.OmegaFactorization
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KFacDifferentiable
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AbsNormEqProd
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeckeEisensteinConstantTermPartDifferentiableOn
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiscreteTopologyFractionalIdealRealLatticeImage
+import Mathlib.Algebra.Module.ZLattice.Summable
+import Mathlib.Algebra.Order.Star.Real
 
 open NumberField Complex
 open scoped nonZeroDivisors
@@ -55,7 +56,7 @@ theorem norm_qPow (ξ : F) (z : Emb F → ℂ) :
     ‖qPow ξ z‖ = Real.exp (-(2 * Real.pi * ∑ τ, τ ξ * (z τ).im)) := by
   rw [qPow, Complex.norm_exp]
   congr 1
-  simp [Complex.mul_re, Complex.mul_im, Complex.re_sum, Complex.im_sum, Finset.mul_sum]
+  simp [Complex.mul_re, Complex.mul_im, Complex.re_sum, Finset.mul_sum]
 
 end GlobalTheory.HeckeTwoSum
 

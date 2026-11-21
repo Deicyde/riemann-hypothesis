@@ -1,11 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecondChernDensity
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.JacobianDensityHermitianMetrics
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.JacobiDensityWeightedThetaIntegralZero
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagDegreeEqFormDegree
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VandermondeWeightedRootProductSum
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VandermondeBoundaryTermSumIdentity
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VandermondeSecondDerivativeStatement
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsHtFunGenericIff
 open Filter Topology MeasureTheory Matrix
 open GlobalTheory GlobalTheory.HermFrame GlobalTheory.ArInt GlobalTheory.VdmRec GlobalTheory.ArchLim
 open GlobalTheory.MixDens (emb jacDens)
@@ -62,7 +60,7 @@ theorem pderiv_iterate_mul_X_pow (x : U) (P : MvPolynomial U ℝ) (hP : pderiv x
   | succ n ih =>
     rw [Function.iterate_succ_apply', ih]
     simp only [Derivation.leibniz, Derivation.leibniz_pow, hP, pderiv_C, pderiv_X_self, smul_eq_mul,
-      nsmul_eq_mul, mul_zero, add_zero, zero_add, mul_one, Nat.descFactorial_succ]
+      nsmul_eq_mul, mul_zero, add_zero, mul_one, Nat.descFactorial_succ]
     rw [show e - (n + 1) = e - n - 1 by omega, Nat.cast_mul]
     simp only [map_mul, map_natCast]
     ring
@@ -166,7 +164,7 @@ theorem apolar_vdmPol_prod (r e : ℕ) (f : Fin (e + 2) → Option (Fin r)) :
   have hv : vdmPol r e = (C ((r.factorial : ℝ)⁻¹) * (pTwo r * vdmW r)) * X none ^ e := by
     simp only [vdmPol, pTwo, vdmW, mul_assoc]
   have hP : pderiv none (C ((r.factorial : ℝ)⁻¹) * (pTwo r * vdmW r)) = 0 := by
-    simp [Derivation.leibniz, pderiv_none_vdmW, pderiv_none_pTwo]
+    simp [Derivation.leibniz, pderiv_none_vdmW]
   have hQ : pderiv none ((∏ k ∈ Finset.univ.filter (fun k => ¬ f k = none), X (f k)) * vdmW r) = 0 := by
     rw [Derivation.leibniz, pderiv_none_vdmW, smul_zero, zero_add]
     have : pderiv none (∏ k ∈ Finset.univ.filter (fun k => ¬ f k = none), (X (f k) : MvPolynomial (Option (Fin r)) ℝ)) = 0 := by
@@ -349,7 +347,7 @@ theorem rhs_one (r e : ℕ) (w : Fin (e + 2) → Option (Fin r) → ℂ) :
   have hp : ∏ p : Fin e, w p.succ.succ none =
       ∑ h : Fin e → Option (Fin r), ∏ p, (w p.succ.succ (h p) * if h p = none then 1 else 0) := by
     have : ∀ p : Fin e, w p.succ.succ none = ∑ o, w p.succ.succ o * (if o = none then 1 else 0) := by
-      intro p; simp [Fintype.sum_option]
+      intro p; simp
     rw [Finset.prod_congr rfl fun p _ => this p, Finset.prod_univ_sum, Fintype.piFinset_univ]
   rw [hq, hp, ← Equiv.sum_comp (Fin.consEquiv fun _ : Fin (e + 2) => Option (Fin r)), Fintype.sum_prod_type,
     Finset.sum_mul]

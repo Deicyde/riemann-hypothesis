@@ -1,9 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.FramedTwoCoboundaries
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.CoEvLow
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.CoMvps
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.CoQuot
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.CoSurj
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.CoRes
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.UnivLift
 
 open IsLocalRing MvPowerSeries UpperTheory.V.Alg

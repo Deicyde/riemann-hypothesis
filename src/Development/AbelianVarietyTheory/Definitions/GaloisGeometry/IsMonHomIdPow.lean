@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.IsHeckeMapLevRefl
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ForgetIsHeckeOne
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LevelPosOfCoprime
 
 set_option autoImplicit false
 

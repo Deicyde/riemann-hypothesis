@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.StDefs
+import Mathlib.Geometry.Manifold.Sheaf.Basic
+import Mathlib.Topology.UniformSpace.Uniformizable
 
 noncomputable section
 

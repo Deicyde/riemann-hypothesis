@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.AnalyticDeterminants.ScalarSectionCompactBlockInvariant
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 
@@ -176,7 +178,7 @@ theorem mulLc_apply (M v : M2 n) : mulLc M v = M * v := rfl
 def mulLcL : M2 n →ₗ[ℂ] (M2 n →L[ℂ] M2 n) where
   toFun := mulLc
   map_add' a b := by ext1 v; simp [mulLc_apply, Matrix.add_mul]
-  map_smul' c a := by ext1 v; simp [mulLc_apply, Matrix.smul_mul]
+  map_smul' c a := by ext1 v; simp [mulLc_apply]
 
 theorem continuous_mulLc : Continuous (fun M : M2 n => mulLc M) :=
   (mulLcL (n := n)).continuous_of_finiteDimensional
@@ -220,7 +222,7 @@ theorem cont_translate' (F : M2 n → ℂ) (U : Set (M2 n)) (hU : IsOpen U) (hF 
   have e : (fun x => F (ι y.1 * x) * c y.1) = c y.1 • (fun x => F (ι y.1 * x)) := by
     funext x; simp [smul_eq_mul, mul_comm]
   ext v
-  simp only [Function.comp_apply]
+  simp only
   rw [e, iteratedFDeriv_const_smul_apply hcd, _root_.smul_apply, smul_eq_mul,
     left_mul' F U hU hF (ι y.1) y.2 hyU N v]
   rfl

@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterBridgeA
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterBridgeB
 import GroundTheory.HeightsAndTheta.Heights.Intersections.PtsOverPt
+import GroundTheory.HeightsAndTheta.Heights.Intersections.PtsOver
 set_option maxSynthPendingDepth 1
 
 noncomputable section

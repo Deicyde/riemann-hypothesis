@@ -1,8 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PlaneZeroInsertionLinearApply
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsRationalDarbouxHermitianTensorAdeles
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.HilbertNinetyQuotientHomEqIff
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.PiTensorProduct
 open scoped TensorProduct Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.ThK.PlaneEv
@@ -26,7 +25,7 @@ theorem symp_plane_block : ∀ {R S : Type} [CommRing R] [CommRing S] [Algebra R
   unfold hTens
   simp only [Fin.sum_univ_add, Fin.sum_univ_two, h11, h12, h21, h00, h11', h01, h10, Matrix.of_apply,
     mul_zero, zero_mul, add_zero, zero_add, mul_one, mul_neg, neg_mul, Finset.sum_add_distrib, Finset.sum_neg_distrib,
-    map_neg, Finset.sum_const_zero]
+    Finset.sum_const_zero]
   ring
 
 end GlobalTheory

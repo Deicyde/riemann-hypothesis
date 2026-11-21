@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Statements.TowerExistence.GoodTowerExists
+import BuildAid.Leniency.Open
+import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.GoodOrigin
+import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.HasBaseDegreeSetting
 
 noncomputable section
 

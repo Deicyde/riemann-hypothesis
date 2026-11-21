@@ -1,7 +1,5 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.GermRateSplit
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.OmLongContinuousOn
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.SecondDefectNonneg
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.KloostermanDensityOfParts
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.AeNeZeroComplex
 
 namespace Formalism.FourierDecayAlt.P.GermRateSplit

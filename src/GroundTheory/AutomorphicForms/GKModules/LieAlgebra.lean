@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.RealGroupsLie
+import Mathlib.Algebra.Lie.OfAssociative
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
+import Mathlib.RingTheory.PiTensorProduct
 
 namespace GroundTheory.Automorphic
 

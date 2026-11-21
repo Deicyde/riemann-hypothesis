@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.LinkMin
-import Formalism.LocalToGlobal.GlobalTheory.GL6.DiamondCommDistinctPlaces
 import Formalism.LocalToGlobal.HermitianForms.TiedSym
 
 noncomputable section

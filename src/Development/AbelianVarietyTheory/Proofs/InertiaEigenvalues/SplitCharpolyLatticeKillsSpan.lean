@@ -1,4 +1,7 @@
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.OffRange
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.LinearAlgebra.Charpoly.Basic
+import Mathlib.Tactic.Polynomial.Basic
 open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.IntegralHeckeForms Formalism.ConjugateSelfDual ReciprocityTheory.Gal NumberField IsDedekindDomain Polynomial GlobalTheory.LiftLeaf GlobalTheory.SupLaw
 open scoped TensorProduct
 

@@ -1,4 +1,5 @@
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnimodularLocalStandard.HNsmulNsmul
+import BuildAid.Leniency.Open
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnimodularLocalStandard.RepArith
 
 noncomputable section
 open scoped ComplexConjugate

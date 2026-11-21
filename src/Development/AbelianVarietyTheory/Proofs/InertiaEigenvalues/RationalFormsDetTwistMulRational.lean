@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.RationalRayLevels
-import Development.AbelianVarietyTheory.PublishedTheorems.PublishedFoundations.NonemptyAlgHomOfIsRayOfDvd
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LevelCoverFormsMulComponentFunction
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CurveOverOfRayIn
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsGlobalApprox

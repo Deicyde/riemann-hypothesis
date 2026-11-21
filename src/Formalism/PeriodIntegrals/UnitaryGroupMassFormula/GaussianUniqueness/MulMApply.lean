@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.LongWeylElementSquare
+import Mathlib.Tactic.Polynomial.Basic
 
 noncomputable section
 

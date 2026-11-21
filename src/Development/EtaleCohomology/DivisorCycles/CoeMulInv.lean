@@ -1,4 +1,7 @@
-import Development.EtaleCohomology.DivisorCycles.CycleCount
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.EtaleCohomology.DivisorCycles.OpenCoset
+import Mathlib.Tactic.Polynomial.Basic
 
 open Matrix
 

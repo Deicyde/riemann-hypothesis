@@ -1,7 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ProjectiveAutomorphicHecke.CentralEig2
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsInvariantPositivePeterssonForm
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocEqOneOfMemGam
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.HasSatakeGLOfIsSatVecGL
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsAdmissibleLocalComponentDefiniteUnitary
+import GroundTheory.GlobalFields.LocalFieldAtPlace
 open NumberField IsDedekindDomain Matrix GlobalTheory.CuspRep GlobalTheory.UnitaryBC GlobalTheory.DefU GlobalTheory.PRep Formalism.L2.Host GlobalTheory.HeckeGal UpperTheory.Gal.CertificateRingHomMap
 open scoped Classical
 
@@ -30,7 +33,7 @@ private theorem exists_open_avoid (w : Plc E) (x : GLw n w) (hx : x ≠ 1) :
     (isOpen_compl_singleton.mem_nhds (by simpa using (sub_ne_zero.2 hij).symm))
   have hW : IsClopen (f ⁻¹' (A : Set (w.adicCompletion E))) := A.isClopen.preimage hf
   have h1 : (1 : ↥(GlobalTheory.LFun.KGL w n)) ∈ f ⁻¹' (A : Set (w.adicCompletion E)) := by
-    simp [f, A.zero_mem]
+    simp [f]
   obtain ⟨H, hH⟩ := IsTopologicalGroup.exist_openSubgroup_sub_clopen_nhds_of_one hW h1
   refine ⟨(H : Subgroup _).map (GlobalTheory.LFun.KGL w n).subtype, ?_, Subgroup.map_subtype_le _, ?_⟩
   · exact hKo.isOpenEmbedding_subtypeVal.isOpenMap _ H.isOpen

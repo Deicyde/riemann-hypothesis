@@ -1,13 +1,10 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.KatoQuadraticCharacters.EulerFactorBounds.KatoTwistedClassNormCompatibleCyclotomic
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.KatoQuadraticCharacters.EulerFactorBounds.KmapComp
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.KatoQuadraticCharacters.EulerFactorBounds.CohApi
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.KatoQuadraticCharacters.EulerFactorBounds.TopRel
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.KatoQuadraticCharacters.EulerFactorBounds.Bridge
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.KatoQuadraticCharacters.EulerFactorBounds.RepSlD
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.KatoQuadraticCharacters.EulerFactorBounds.SXiCoh
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.KatoQuadraticCharacters.EulerFactorBounds.XiDist
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.KatoQuadraticCharacters.EulerFactorBounds.CoeffSlD
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.KatoQuadraticCharacters.EulerFactorBounds.SCycZ
 
 open scoped MatrixGroups Matrix Classical
 open Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.MainNotions.N GlobalTheory.KZ GlobalTheory.K4 UpperTheory.V.Z.Kato.Sym UpperTheory.Kd.K4 UpperTheory.V.Z.Kato.Nb
@@ -73,7 +70,7 @@ private theorem castHom_rx_zero_eq_natCast (l L N M : ℕ) (x : ZMod N) (hd : l 
     ZMod.castHom hd (ZMod l) (rx l L N M x 0) = (N : ZMod l) := by
   simp only [rx, Matrix.cons_val_zero, map_natCast]
   push_cast
-  simp [ZMod.natCast_self, zero_pow hL]
+  simp [zero_pow hL]
 
 private theorem castHom_ry_one_eq_natCast (l L N M : ℕ) (hd : l ∣ M) :
     ZMod.castHom hd (ZMod l) (ry l L N M 1) = (N : ZMod l) := by
@@ -84,11 +81,11 @@ private theorem ok (l L N M : ℕ) [Fact l.Prime] (x : ZMod N) (hl : l ≠ 2) (h
   refine ⟨?_, ?_⟩
   · intro h0
     apply two_ne l N M hl h hd _ 0 (castHom_rx_zero_eq_natCast l L N M x hd hL)
-    simp only [two_nsmul, two_smul] at h0 ⊢
+    simp only [two_smul] at h0 ⊢
     exact h0
   · intro h0
     apply two_ne l N M hl h hd _ 1 (castHom_ry_one_eq_natCast l L N M hd)
-    simp only [two_nsmul, two_smul] at h0 ⊢
+    simp only [two_smul] at h0 ⊢
     exact h0
 
 private theorem bas (l L N M : ℕ) [Fact l.Prime] [NeZero M] (x : ZMod N) (h : Nat.Coprime l N) (hd : l ∣ M) (hL : L ≠ 0) :
@@ -130,7 +127,7 @@ private theorem ix (l L N M : ℕ) [NeZero M] (x : ZMod N) (h : N * l ^ L = M) :
     refine ⟨j, ?_⟩
     simp only [toQ]
     rw [← hj]
-    simp only [ixV, Matrix.cons_val_one, Matrix.head_cons]
+    simp only [ixV, Matrix.cons_val_one]
     push_cast
     ring
 

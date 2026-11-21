@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.CmpCMemMIff
 import Formalism.LocalToGlobal.GroupLattices.PerfectRings.ExtWRec
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.ExistsDenominatorThird

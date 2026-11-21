@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.PtFree
 import Formalism.LocalToGlobal.ProjectiveLattices.CuspFree
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.RegLaw

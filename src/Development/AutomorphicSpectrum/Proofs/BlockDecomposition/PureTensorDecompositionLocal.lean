@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.LocalWhittakerDuality.WhittakerFunctionalEquationAdditive
 
 open MeasureTheory Matrix GroundTheory.LocalField GroundTheory.Automorphic Ad3 Ad3.K.GL2LocalData
@@ -96,7 +97,7 @@ theorem mem_pureSpan {X Y : Type*} [TopologicalSpace X] [T2Space X] [LocallyComp
         have hmem : p ∈ ⋃ r ∈ insert q t, U r ×ˢ V r := by
           simp only [Set.mem_iUnion]
           exact ⟨q, Finset.mem_insert_self _ _, h1⟩
-        simp [Set.indicator_of_mem hmem, h1a, h1b, hconst q p h1]
+        simp [h1a, h1b, hconst q p h1]
       · have h0 : (U q).indicator (fun _ => (1 : ℂ)) p.1 * (V q).indicator (fun _ => (1 : ℂ)) p.2 = 0 := by
           by_cases h1a : p.1 ∈ U q
           · have h1b : p.2 ∉ V q := fun hb' => h1 ⟨h1a, hb'⟩

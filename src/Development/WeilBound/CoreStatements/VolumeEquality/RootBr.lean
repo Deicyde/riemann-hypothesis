@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.VolumeEquality.RootBranches
+import Mathlib.Analysis.Calculus.ImplicitContDiff
 
 noncomputable section
 

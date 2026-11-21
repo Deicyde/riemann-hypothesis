@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExtTraceChartIndep
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsPosFrameQuotIn
 open Set Matrix Filter Topology
 open ReciprocityTheory.L2DbarEstimates (V)
 open GlobalTheory.HermFrame GlobalTheory.CxForm GlobalTheory.SecForm

@@ -1,5 +1,6 @@
-import Mathlib
-import Formalism.ThetaLogCoordinates.JacobiPathWeights.ValuationProductsComponents
+import BuildAid.Leniency.Open
+import Formalism.ThetaLogCoordinates.JacobiPathWeights.DetLetters
+import Formalism.ThetaLogCoordinates.JacobiPathWeights.StatementA
 
 noncomputable section
 

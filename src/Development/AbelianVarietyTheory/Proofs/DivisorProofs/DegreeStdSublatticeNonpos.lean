@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SecJets4
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.MatrixLemma
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.AbsoluteSiegel
-import ReciprocityTheory.GeometryOfNumbers.LatticeCovolumes.PosSemidefOfForallCombination
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.GeometryOfNumbers.LatticeCovolumes.InhabSt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DegreeLeKernelAddImageStatement
 

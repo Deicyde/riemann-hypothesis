@@ -1,11 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.PetIPSmulRight
-import Development.AbelianVarietyTheory.Definitions.Foundations.RepL
-import CompanionTheory.EightfoldTheory.VariationTheory.AutomorphicForms.Newform
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.QExpansionFunctionInjectiveOfPolynomialGrowthStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IntegrablePeterssonIntegrandModerateGrowthStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.QExpansionPolyGrowthSummableContinuousStatement
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.HasModerateGrowthQExpansionOfCoeffPolynomialGrowStatement
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.NumberTheory.DirichletCharacter.Bounds
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open UpperHalfPlane Complex MeasureTheory CongruenceSubgroup GlobalTheory.EisM UpperTheory.V.Af Filter Topology
 open scoped MatrixGroups Real ComplexConjugate Manifold ModularForm
@@ -29,7 +28,7 @@ theorem volume_isOpenPosMeasure : (volume : Measure ℍ).IsOpenPosMeasure := by
   have hsupp : Function.support (fun z : ℍ =>
       (((1 / NNReal.mk z.im z.im_pos.le : NNReal) ^ 2 : NNReal) : ENNReal)) = Set.univ := by
     ext z
-    simp [z.im_ne_zero]
+    simp
     intro h
     have h' := congrArg Subtype.val h
     simp [z.im_ne_zero] at h'

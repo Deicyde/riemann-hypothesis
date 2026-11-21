@@ -1,5 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.QuasiCompact
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.AlgebraicGeometry.Morphisms.Basic
+import Mathlib.Combinatorics.Quiver.ReflQuiver
+import Mathlib.Order.CompletePartialOrder
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj IsLocalRing NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open scoped CategoryTheory.Obj
@@ -24,7 +27,7 @@ theorem isPullback_iSup_of_forall : ∀ (P' X T S : Scheme.{0}) (a : X ⟶ P') (
   have hr1 : ∀ i, Set.range ((Wo i).ι ≫ U.ι) = Set.range (V i).ι := by
     intro i
     ext x
-    simp only [Scheme.Opens.range_ι, Scheme.Hom.comp_apply]
+    simp only [Scheme.Opens.range_ι]
     constructor
     · rintro ⟨y, rfl⟩
       exact y.2
@@ -62,7 +65,7 @@ theorem isPullback_iSup_of_forall : ∀ (P' X T S : Scheme.{0}) (a : X ⟶ P') (
     have R := (isPullback_morphismRestrict (pullback.fst (U.ι ≫ q) π) (Wo i)).flip
     have hr2 : Set.range ((L ⁻¹ᵁ O i).ι ≫ (a ⁻¹ᵁ U).ι) = Set.range (a ⁻¹ᵁ V i).ι := by
       ext x
-      simp only [Scheme.Opens.range_ι, Scheme.Hom.comp_apply]
+      simp only [Scheme.Opens.range_ι]
       constructor
       · rintro ⟨y, rfl⟩
         have hy := y.2

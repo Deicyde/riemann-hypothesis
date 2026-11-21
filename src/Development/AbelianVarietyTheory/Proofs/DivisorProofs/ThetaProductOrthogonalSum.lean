@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsProd
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.FirstChernIntegralEqDegree
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory NumberField
 open Limits MonoidalCategory CartesianMonoidalCategory GlobalTheory.VB
 open scoped ComplexOrder

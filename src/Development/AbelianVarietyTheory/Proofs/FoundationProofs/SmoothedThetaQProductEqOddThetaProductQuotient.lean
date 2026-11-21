@@ -1,6 +1,11 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.Imports
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasQIff
+import Mathlib.Analysis.SpecialFunctions.Log.Summable
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 

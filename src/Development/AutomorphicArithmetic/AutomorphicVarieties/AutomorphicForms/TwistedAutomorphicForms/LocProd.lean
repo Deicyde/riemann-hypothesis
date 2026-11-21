@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.TwistedAutomorphicForms.EqOneOfMemLev
 
 open NumberField IsDedekindDomain Neutral.B1 Formalism.L2.Host
@@ -18,13 +19,13 @@ private noncomputable def UpperTheory.V.Af.Tw.infPart (K : Type) [Field K] [Numb
 private theorem UpperTheory.V.Af.Tw.loc_same {K : Type} [Field K] [NumberField K] (v : HeightOneSpectrum (𝓞 K))
     (x : (v.adicCompletion K)ˣ) : (localIdele K v x).val.2 v = x := by
   classical
-  simp only [localIdele, finiteSingle, Units.coe_map, MonoidHom.coe_mk, OneHom.coe_mk]
+  simp only [localIdele, finiteSingle, Units.coe_map, MonoidHom.coe_mk]
   exact RestrictedProduct.mulSingle_eq_same _ _ _
 
 private theorem UpperTheory.V.Af.Tw.loc_ne {K : Type} [Field K] [NumberField K] {v w : HeightOneSpectrum (𝓞 K)}
     (h : w ≠ v) (x : (v.adicCompletion K)ˣ) : (localIdele K v x).val.2 w = 1 := by
   classical
-  simp only [localIdele, finiteSingle, Units.coe_map, MonoidHom.coe_mk, OneHom.coe_mk]
+  simp only [localIdele, finiteSingle, Units.coe_map, MonoidHom.coe_mk]
   exact RestrictedProduct.mulSingle_eq_of_ne _ _ h
 
 theorem UpperTheory.V.Af.Tw.locProd :

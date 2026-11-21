@@ -1,6 +1,7 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.RegularisedSiegelWeil.ThetaIdempotents.HeckeEta
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FourierZeroHolds
+import Development.WeilBound.RepresentationTheoryGL.RegularisedSiegelWeil.ThetaIdempotents.MapsExist
 noncomputable section
 open scoped Matrix NNReal ENNReal ComplexConjugate TensorProduct Topology
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.L2.Theta Formalism.L2.Pj Formalism.IndefR.Datum MeasureTheory Filter
@@ -84,7 +85,7 @@ theorem lowerUnipotent_mul (hn : ρ + p = n) (c c' : Matrix (Fin p) (Fin ρ) R) 
   congr 1
   · simp
   · simp
-  · simp [add_comm]
+  · simp
   · simp
 
 theorem blockMatrix_twist (hn : ρ + p = n) (z z' : Matrix (Fin ρ) (Fin ρ) R) (x η : Matrix (Fin ρ) (Fin p) R)

@@ -1,13 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatrixExtendByZeroAdd
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzBruhatRestrictionAndProduct
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EventuallyIntegralPointsIndicatorIsVacuum
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicSchrodingerTensorEqLocalOfSupportedAt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AddCharHalfTraceTensorLatticeHeisenbergCocycle
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIntAddConjEqOneOfBaseGood
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatAtVAtStable
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PosHomApply
 open scoped TensorProduct Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -68,7 +60,7 @@ theorem two_terms_eq {n d d₁ : ℕ} (a : AF F) (x x₀ : Fin n → E) (w : Fin
   ext i j
   simp only [Matrix.add_apply, Matrix.smul_apply, incM, incV, Matrix.map_apply, Matrix.vecMulVec_apply, Matrix.mulVec,
     dotProduct, Pi.smul_apply, smul_eq_mul, map_mul, map_sum]
-  simp only [Algebra.smul_def, Finset.mul_sum, map_mul]
+  simp only [Algebra.smul_def, Finset.mul_sum]
   congr 1
   · ring
   · exact Finset.sum_congr rfl fun m _ => by ring

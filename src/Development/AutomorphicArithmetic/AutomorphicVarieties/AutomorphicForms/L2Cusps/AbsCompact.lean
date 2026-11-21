@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.L2Cusps.AbsCompactAlt
 
 open GlobalTheory.AutomorphicL2Unitary GlobalTheory.DiscreteSum GlobalTheory.AutMult GroundTheory.Automorphic

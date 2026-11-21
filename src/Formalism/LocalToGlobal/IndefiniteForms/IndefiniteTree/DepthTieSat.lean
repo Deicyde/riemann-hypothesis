@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteForms.IndefiniteTree.DepthTie
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.SaturationChartsHolds
 

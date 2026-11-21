@@ -1,7 +1,11 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.LatNormGrLatNeZeroOfSpan
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.ExistsDiffGenerator
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.EigSubEqDifferentSmulEigQuot
+import Mathlib.Analysis.Normed.Field.Instances
+import Mathlib.NumberTheory.NumberField.Cyclotomic.Basic
+import Mathlib.NumberTheory.Padics.Complex
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -39,7 +43,7 @@ theorem grLat_diag {n : ℕ} (b : Basis (Fin n) C V) (c : Fin n → C) (i : Fin 
       obtain ⟨j, rfl⟩ := h
       by_cases hj : j = i
       · subst hj; simp
-      · simp [Finsupp.single_apply, hj]
+      · simp [hj]
     | zero => simp
     | add x y _ _ hx hy => rw [map_add]; exact Submodule.add_mem _ hx hy
     | smul a x _ hx =>
@@ -126,7 +130,7 @@ theorem repr_eq_trace (a : 𝓞 E) (k) :
     (((RingOfIntegers.basis E).repr a k : ℤ) : ℚ) = Algebra.trace ℚ E (dualInt E k * (a : E)) := by
   classical
   conv_rhs => rw [← (RingOfIntegers.basis E).sum_repr a]
-  simp only [map_sum, RingOfIntegers.coe_eq_algebraMap, Finset.mul_sum, map_zsmul, mul_smul_comm,
+  simp only [map_sum, Finset.mul_sum, map_zsmul, mul_smul_comm,
     ← integralBasis_apply, trace_dualInt]
   simp
 

@@ -1,6 +1,9 @@
-import Mathlib
-import Formalism.RealPlaceAnalysis.SmoothOnGVIff
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.FormalDegreeBessel.StatementG
+import Mathlib.Data.Matrix.ColumnRowPartitioned
+import Mathlib.LinearAlgebra.Matrix.DotProduct
+import Mathlib.RingTheory.SimpleRing.Principal
 open Matrix
 
 namespace GlobalTheory.CompanionTheory.EichlerTransf

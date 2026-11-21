@@ -1,6 +1,7 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.HDiscBDefs
-import ReciprocityTheory.SemistableReduction.LogNormCoeffSubLeBlockSphereLogMean
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.SemistableReduction.TorusL2CauchyInequality
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.HNormDefs
 
 namespace ReciprocityTheory.ChartRestriction.G.T0
 

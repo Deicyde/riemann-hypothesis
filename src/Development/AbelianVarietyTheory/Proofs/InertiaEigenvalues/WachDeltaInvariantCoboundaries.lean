@@ -1,14 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.MapCSmulMulVec
-import Formalism.SharpRestriction.LevelLetterCocycles.DataNLoc
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.OneAddXMulDerivativeBin
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CoordApply
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.AssociatedRootSubOnePow
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.EqZeroOfAlgHomEqMul
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsUniqueAlgHomOfPadicLocalization
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CompletedLocalisationInvariants
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.AssociatedTraceAndLvlDvd
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.DvrComplete
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsPrimitiveRootCoeffRingOfGood
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.AlgebraMapPadicIntFinExtInjective
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CardTorsionMulFinrank
@@ -254,7 +250,7 @@ theorem exists_frTie [IsDiscreteValuationRing O] [IsAdicComplete (IsLocalRing.ma
   have hΔ : (Δ : Set ℤ_[l]ˣ) = ↑(W.DelF.image χ) := by
     ext x
     simp only [Δ, Subgroup.coe_map, Set.mem_image, SetLike.mem_coe, CommGroup.mem_torsion,
-      Finset.coe_image, Finset.mem_coe, mem_DelF_iff]
+      Finset.coe_image, mem_DelF_iff]
   have hfa : ∀ p : ℤ_[l]ˣ → Prop, (∀ δ ∈ Δ, p δ) ↔ ∀ δ ∈ W.DelF, p (χ δ) := by
     intro p
     simp only [← SetLike.mem_coe, hΔ, Finset.coe_image, Set.forall_mem_image]

@@ -1,6 +1,8 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.PlaneSupports.PlaneSupp
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HermitianPlaneStrongApprox
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SatakeDualWeyl.Statement
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.PiTensorProduct
 
 noncomputable section
 

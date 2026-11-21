@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.UnitaryNorms.RamificationIdxEqOneOfNotDvd
 import Formalism.LocalToGlobal.UnitaryNorms.MemFIffReal
 import Formalism.LocalToGlobal.GlobalTheory.GL6.ValuationDetBasisChange

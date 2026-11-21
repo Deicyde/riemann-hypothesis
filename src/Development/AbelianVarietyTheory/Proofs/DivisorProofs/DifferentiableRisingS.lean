@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DTermOrigin
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.OmegaFactorization
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.DefiningCoordinates
 
 noncomputable section
 

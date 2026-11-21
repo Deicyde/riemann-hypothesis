@@ -1,13 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.GoodXgTie
-import Formalism.PadicSubsetSums.StableGradedCounts.IRRFrobOrbitIrred
-import Formalism.PadicSubsetSums.StableGradedCounts.IRRPrimeRecipSum
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IrreducibleCharacterSeries.CharacterEqOfRepIso
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IrreducibleCharacterSeries.ConjugateCharacterFormula
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IrreducibleCharacterSeries.FrobeniusSumFormula
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IrreducibleCharacterSeries.BlockSum
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.GreenLabelSurjective.Simple
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.GreenLabelSurjective.ExistsNeZeroTensor
 
 open Polynomial CategoryTheory NumberField
 

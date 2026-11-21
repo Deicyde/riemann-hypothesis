@@ -1,8 +1,8 @@
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.ValLastX
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsNormLeHeightPow
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.AdmissibleDiscreteSeriesOfHasParam
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HarishChandraModulesOn
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsHaarMapProdEq
+import Development.AbelianVarietyTheory.Definitions.Foundations.MeasurePreservingRmulQuotMeas
+import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.ExistsHeightLeTwoMulQuotHeight
 
 open MeasureTheory
 open scoped ENNReal
@@ -175,7 +175,7 @@ theorem GlobalTheory.CommProd.quot_vanish_of_prod : ∀ (G : Type) [Group G] [To
     obtain ⟨-, h0⟩ := (hz a a.2).cutoff hβB
     have e1 : ∀ b : B, ((fun g => ((βB (e.symm g).2 * βA (e.symm g).1 : NNReal) : ℝ) • f g) ∘ φ) (b, a) =
         (βA a : ℝ) • ((βB b : ℝ) • f (a * b)) := fun b => by
-      simp only [Function.comp_apply, hφs, mulEquiv_apply, NNReal.coe_mul, smul_smul]
+      simp only [Function.comp_apply, hφs, NNReal.coe_mul, smul_smul]
       rw [show φ (b, a) = (b : G) * a from rfl, hc _ a.2 _ b.2, mul_comm (βB b : ℝ)]
     simp only [e1, integral_smul, ← h0, smul_zero]
   exact (integral_congr_ae (Filter.Eventually.of_forall hin)).trans (integral_zero _ _)

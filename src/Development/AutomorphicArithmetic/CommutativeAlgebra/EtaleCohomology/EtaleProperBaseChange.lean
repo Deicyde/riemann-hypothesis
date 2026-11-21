@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.LocallyExactCech
 import Development.AbelianVarietyTheory.Definitions.Divisors.PullHlComp
+import Mathlib.CategoryTheory.Abelian.Injective.Ext
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.Topology.Instances.ZMod
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry Opposite CochainComplex CochainComplex.HomComplex

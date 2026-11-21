@@ -1,7 +1,4 @@
-import Mathlib
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdelicClassFiniteness.HformSelfStar
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdelicClassFiniteness.PartSplitOfOne
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdelicClassFiniteness.HformSingleLeft
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdelicClassFiniteness.SpComp
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdelicClassFiniteness.SpDen
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdelicClassFiniteness.SplHformZero
@@ -65,14 +62,14 @@ theorem single_inl {E : Type} [Field E] {m k n : ℕ} (e : Fin k ⊕ Fin n ≃ F
   obtain ⟨t, rfl⟩ := e.surjective r
   cases t with
   | inl a => simp [cat, Pi.single_apply, e.injective.eq_iff]
-  | inr b => simp [cat, Pi.single_apply, e.injective.eq_iff]
+  | inr b => simp [cat, e.injective.eq_iff]
 
 theorem single_inr {E : Type} [Field E] {m k n : ℕ} (e : Fin k ⊕ Fin n ≃ Fin m) (j : Fin n) :
     (Pi.single (e (Sum.inr j)) (1 : E) : Fin m → E) = cat e 0 (Pi.single j 1) := by
   funext r
   obtain ⟨t, rfl⟩ := e.surjective r
   cases t with
-  | inl a => simp [cat, Pi.single_apply, e.injective.eq_iff]
+  | inl a => simp [cat, e.injective.eq_iff]
   | inr b => simp [cat, Pi.single_apply, e.injective.eq_iff]
 
 theorem cat_eq_sum {E : Type} [Field E] {m k n : ℕ} (e : Fin k ⊕ Fin n ≃ Fin m) (c : Fin k → E) :
@@ -81,7 +78,7 @@ theorem cat_eq_sum {E : Type} [Field E] {m k n : ℕ} (e : Fin k ⊕ Fin n ≃ F
   obtain ⟨t, rfl⟩ := e.surjective r
   cases t with
   | inl a => simp [cat, Finset.sum_apply, Pi.single_apply, e.injective.eq_iff]
-  | inr b => simp [cat, Finset.sum_apply, Pi.single_apply, e.injective.eq_iff]
+  | inr b => simp [cat, Finset.sum_apply, e.injective.eq_iff]
 
 theorem entry_eq {E : Type} [Field E] [StarRing E] {m : ℕ} (J A : Matrix (Fin m) (Fin m) E) (r s : Fin m) :
     (cT (starRingEnd E) A * J * A) r s =

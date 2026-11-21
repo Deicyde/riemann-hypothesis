@@ -1,11 +1,7 @@
-import Mathlib
-import GroundTheory.ProfiniteCohomology.GaloisCohomology.Kummer
-import GroundTheory.ProfiniteCohomology.GaloisCohomology.Brauer
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.DimensionSylow
-import GroundTheory.ProfiniteCohomology.LocalClassFormationAlt
-import GroundTheory.ProfiniteCohomology.LocalClassFormation.FiniteVanishing.KummerOpen
 import GroundTheory.ProfiniteCohomology.LocalClassFormation.FiniteVanishing.Vanishing
-import GroundTheory.ProfiniteCohomology.LocalClassFormation.OrderScalars
 import GroundTheory.ProfiniteCohomology.LocalEulerCharacteristic.Scalars
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.COneH2UnitsSubsingleton
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TsenAlgebraicExtensionRatFunc

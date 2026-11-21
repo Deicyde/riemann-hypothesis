@@ -1,10 +1,11 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.WeilGroupCharacters.Inertia
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.WeilGroupCharacters.LamZl
 import Development.AutomorphicArithmetic.AutomorphicVarieties.WeilGroupCharacters.LamFactor
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.CoEvLow
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.CoMvps
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.CoRes
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.LocallyConstantOfOpenSet
+import Mathlib.RingTheory.Teichmuller
 
 open IsLocalRing UpperTheory.V.Alg UpperTheory.V.W
 

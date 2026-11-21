@@ -1,9 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsFlagModelHermSum
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.EqOfIsometricTrivShift
-import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.IsGloballyGeneratedIffGeneratingSections
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsFrameOfBijectiveStalk
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NontrivialIsomClassInt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.DiagValExtTraceNonneg
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 set_option autoImplicit false
 
@@ -318,7 +316,7 @@ theorem tautological_inner_product_lift (j : Fin 2) {y : CxPts (PSpace.str ℤ 1
     simp [ev_eq hy, ipVT]
   · rw [t_one, v, form_comb _ _ _ _ hy]
     have r₁ : ratio ℤ 1 1 1 = 1 := ratioOn_self
-    simp [ev_eq hy, ipVT, r₁]
+    simp [ev_eq hy, ipVT]
 
 theorem gram_adapt₁ (j : Fin 2) {y : CxPts (PSpace.str ℤ 1) σ} (hy : y ∈ ptsIn (PSpace.str ℤ 1) σ (chart ℤ 1 j)) :
     ((stdH.h.stepMet flag 1).met σ).gram (adapt₁ j).frame y =

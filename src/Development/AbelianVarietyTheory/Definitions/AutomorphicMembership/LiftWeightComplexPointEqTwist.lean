@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.ConcretePkgSpec
 import Formalism.LocalToGlobal.IndefiniteForms.IndefiniteTree.ONLeaves
-import Formalism.LocalToGlobal.Divisibility.LiftLatLemmas
-import Formalism.LocalRingCardinality.DataParams
 
 set_option autoImplicit false
 
@@ -52,7 +52,7 @@ theorem eOp_eq (a : MonoidAlgebra LL G) : A.eOp (fun g => a.coeff g) = (twRep A)
   classical
   have ha : a = ∑ g : G, MonoidAlgebra.single g (a.coeff g) := by
     ext g
-    simp [MonoidAlgebra.coeff_sum, Finsupp.finset_sum_apply, Finsupp.single_apply]
+    simp [MonoidAlgebra.coeff_sum]
   conv_rhs => rw [ha]
   rw [map_sum]
   unfold Arith.FormsL.eOp

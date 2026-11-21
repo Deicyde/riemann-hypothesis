@@ -1,11 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormPeriodSq
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockVacuumRealRestrictionGaussianEntire
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CompAtMtOfMemGfC
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.VacuumUnderAdelicPairUnitModulusFactor
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeisenbergFinitePointReadsClassicalTranslation
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockVacuumOfReadsGaussianEntireStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilPairMovesPhasedHeisenbergTranslateStatement
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.InducedTypeThetaGenusOnePermutesStatement
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ThetaTranslationIntertwinerUnitaryStatement
 
 noncomputable section
 
@@ -271,7 +271,7 @@ theorem exists_reads {a d : ℕ} (hS : S.rank = a) (hT : T.rank = d) (hset : Set
     ext i j
     by_cases hij : i = j
     · subst hij; simp [Formalism.UG.cT]
-    · simp [Formalism.UG.cT, hij, Ne.symm hij, Matrix.one_apply]
+    · simp [Formalism.UG.cT, hij, Ne.symm hij]
   obtain ⟨Φ, hΦ, hw⟩ := fock_real_entire ψ θ S T 1 1 (hon S hset.gS) (hon T hset.gT) hset.std hset.inf f hf hv
   refine ⟨fun Y => Φ fun τ i j => (δ * embT D τ r)⁻¹ * Y τ i j, hΦ.comp (by fun_prop), ?_⟩
   rw [reads_iff hset.crv hset.scale]

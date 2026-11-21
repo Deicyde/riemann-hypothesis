@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.HighestWeights.ModelFun
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.KFacts
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.InhabA
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 

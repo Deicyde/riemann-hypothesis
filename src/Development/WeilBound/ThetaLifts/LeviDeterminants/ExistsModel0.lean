@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LeviDeterminants.EvFrame
+import Development.WeilBound.ThetaLifts.LeviDeterminants.EvModel
 
 noncomputable section
 

@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.LeafTensQIsoPf
+import Mathlib.RingTheory.PiTensorProduct
 
 open TensorProduct
 

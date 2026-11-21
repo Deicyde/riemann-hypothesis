@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.JInvCharA
 
 noncomputable section
@@ -46,7 +48,7 @@ private theorem sum_eq_sum_wI_of_zero_off_block {f : Fin (2 * r + k + 1) → ℂ
   symm
   refine Fintype.sum_of_injective (wI k r) hinj (fun j => f (wI k r j)) f (fun i hi => hf i ?_) (fun j => rfl)
   rintro ⟨h1, h2⟩
-  exact hi ⟨⟨i.val - r, by omega⟩, Fin.ext (by simp only [wI_val_eq_add, Fin.val_mk]; omega)⟩
+  exact hi ⟨⟨i.val - r, by omega⟩, Fin.ext (by simp only [wI_val_eq_add]; omega)⟩
 
 private theorem embWb_apply_of_mem_block (X : Matrix (Fin (k + 1)) (Fin (k + 1)) ℂ) {i j : Fin (2 * r + k + 1)}
     (hi : r ≤ i.val ∧ i.val ≤ r + k) (hj : r ≤ j.val ∧ j.val ≤ r + k) :
@@ -100,7 +102,7 @@ private theorem embWb_one' : embWb k r (1 : Matrix (Fin (k + 1)) (Fin (k + 1)) �
   by_cases hi : r ≤ i.val ∧ i.val ≤ r + k
   · by_cases hj : r ≤ j.val ∧ j.val ≤ r + k
     · rw [embWb_apply_of_mem_block _ hi hj, Matrix.one_apply]
-      simp only [Fin.ext_iff, Fin.val_mk]
+      simp only [Fin.ext_iff]
       split_ifs <;> first | rfl | omega
     · rw [embWb_apply_of_right_not_mem_block _ hj]
   · rw [embWb_apply_of_left_not_mem_block _ hi]

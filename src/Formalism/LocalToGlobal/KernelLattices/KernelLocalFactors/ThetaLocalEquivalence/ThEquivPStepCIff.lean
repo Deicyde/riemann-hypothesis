@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.ThetaLocalEquivalence.ThEquivPOf
+import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.ColInst
 
 open NumberField IsDedekindDomain MvPolynomial
 

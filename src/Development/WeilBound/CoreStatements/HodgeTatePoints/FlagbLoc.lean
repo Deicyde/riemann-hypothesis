@@ -1,5 +1,12 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.HodgeTatePoints.FlagbAlg
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsGenericFlag
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.RingTheory.DedekindDomain.Different
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 
@@ -103,7 +110,7 @@ theorem exists_nat_diff {E : Type} [Field E] [NumberField E] (x : E) :
   have : ((y.natAbs ^ 2 : ℕ) : E) = (y : E) * y := by
     rw [← Int.cast_natCast, Nat.cast_pow, Int.natAbs_sq, Int.cast_pow, sq]
   rw [Nat.cast_mul, this]
-  simp only [RingOfIntegers.coe_eq_algebraMap, map_mul, map_natCast, map_intCast]
+  simp only [map_mul, map_natCast, map_intCast]
   rw [hz]; ring
 
 end PositivityTheory.HtPt.Flagb

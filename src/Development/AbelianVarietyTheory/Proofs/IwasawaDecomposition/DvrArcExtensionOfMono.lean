@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LevelReps
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.NontrivialDegenerationOutsideAbelianStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.DvrArcExtensionMonoBaseStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.DvrArcExtensionGenericFibreStatement

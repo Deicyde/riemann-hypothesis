@@ -1,4 +1,6 @@
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RestrActApply
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GlBlockFiniteDimModuleStructure
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockMap
 open Formalism.BasicNotions.TH Formalism.MainNotions.SchurIrreducible GlobalTheory.FockAlg GlobalTheory.SteepMult
 
 namespace GlobalTheory.CasimirCoord
@@ -9,7 +11,7 @@ theorem sum_lt_sub : ∀ (n : ℕ) (f : Fin n → ℚ),
   | n+1, f => by
     have h := sum_lt_sub n (fun i => f i.succ)
     simp only [Fin.sum_univ_succ, Fin.succ_lt_succ_iff, Fin.not_lt_zero, Fin.succ_pos, if_true, if_false,
-      lt_irrefl, zero_add] at h ⊢
+      zero_add] at h ⊢
     rw [h, Finset.sum_sub_distrib, Finset.sum_const, Finset.card_univ, Fintype.card_fin, nsmul_eq_mul]
     have e : ∑ i : Fin n, f i.succ * (((n+1:ℕ):ℚ) - 1 - 2 * ((i.succ:ℕ):ℚ))
         = ∑ i : Fin n, f i.succ * ((n:ℚ) - 1 - 2 * ((i:ℕ):ℚ)) - ∑ i : Fin n, f i.succ := by

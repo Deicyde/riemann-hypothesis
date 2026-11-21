@@ -1,9 +1,5 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.HeckeKer
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsHolPeriods
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.UnifUniqSt
-import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.DualRestrictSurjectiveOfIsTorsionFreeQuotient
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.ToricGeometry.IsUnitOfLagrangian
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.DifferentiableOnLeftInverse
 import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.HasSumPolyDerivMulProdAddMatrix
@@ -250,7 +246,7 @@ private theorem exists_characteristics_eq_canMult_of_semicharacter {La : Type} [
     simp only [dotProduct, Finset.sum_sub_distrib]
   · rcases i with j | j
     · have hm : (fun k => bs.repr (bs (Sum.inl j)) (Sum.inr k)) = 0 := by
-        ext k; simp [Finsupp.single_apply]
+        ext k; simp
       have hn : (fun k => bs.repr (bs (Sum.inl j)) (Sum.inl k)) = Pi.single j 1 := by
         ext k; simp [Finsupp.single_apply, Pi.single_apply, eq_comm]
       rw [hm, hn]
@@ -267,7 +263,7 @@ private theorem exists_characteristics_eq_canMult_of_semicharacter {La : Type} [
     · have hm : (fun k => bs.repr (bs (Sum.inr j)) (Sum.inr k)) = Pi.single j 1 := by
         ext k; simp [Finsupp.single_apply, Pi.single_apply, eq_comm]
       have hn : (fun k => bs.repr (bs (Sum.inr j)) (Sum.inl k)) = 0 := by
-        ext k; simp [Finsupp.single_apply]
+        ext k; simp
       rw [hm, hn]
       have key : _root_.GlobalTheory.CanTh.canMult a c (Pi.single j 1) 0 =
           Complex.exp (2 * Real.pi * Complex.I * ((a j : ℝ) : ℂ)) := by

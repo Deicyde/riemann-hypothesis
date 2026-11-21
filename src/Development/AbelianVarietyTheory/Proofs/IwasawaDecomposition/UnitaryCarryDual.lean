@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataLevel
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Afsplit
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.UG Matrix
 open scoped TensorProduct
@@ -352,8 +355,8 @@ theorem _root_.GlobalTheory.Mem.LevDual.unitary_carry_dual : ∀ (F E : Type) [F
       · intro b _ hb
         by_cases hbl : b = Fin.last m
         · subst hbl
-          simp [c, d, he0_def, Pi.single_apply, Ne.symm hb, Subring.smul_def]
-        · simp [c, d, hbl, Pi.single_apply, Ne.symm hb, Subring.smul_def]
+          simp [c, d, he0_def, Pi.single_apply, Ne.symm hb]
+        · simp [c, d, hbl, Pi.single_apply, Ne.symm hb]
       · intro h
         exact absurd (Finset.mem_univ k) h
     rw [hsum]

@@ -1,7 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.DefiniteBound
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.FiniteAdeleStrongApproximationModNat
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.AdelicCompletionFractionalIdealProperties
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsKMOne
+import Mathlib.RingTheory.PicardGroup
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.FundamentalDomainPointBound
 
 open NumberField Matrix GlobalTheory.AdLat GlobalTheory.UCls ReciprocityTheory.ChartRestriction.G.FD IsDedekindDomain
 open scoped TensorProduct

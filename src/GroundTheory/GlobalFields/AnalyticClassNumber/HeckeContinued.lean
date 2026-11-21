@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.TateThesis.HeckeTheorem
-import GroundTheory.GlobalFields.TateThesis.Nonvanishing
 set_option maxSynthPendingDepth 1
 
 open NumberField InfinitePlace IsDedekindDomain MeasureTheory Complex Topology Filter Set

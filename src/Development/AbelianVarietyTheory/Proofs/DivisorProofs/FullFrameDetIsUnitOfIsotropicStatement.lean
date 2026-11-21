@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullFrameDetIsUnitOfIsotropic
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullFrameRight
 open GlobalTheory.WholeFlag GlobalTheory.WholeFlag.Glue
 open scoped Matrix
 set_option maxHeartbeats 1000000 in

@@ -1,6 +1,6 @@
-import Formalism.HermitianCurvature.RealInputsClosedAdmissibleSettings
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LevelFormSesquilinearFiniteClass
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.PBGCongr
 
 open Matrix Finset MeasureTheory
 open scoped ComplexConjugate

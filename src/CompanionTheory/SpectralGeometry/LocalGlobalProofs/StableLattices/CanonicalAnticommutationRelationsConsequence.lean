@@ -1,6 +1,11 @@
-import Mathlib
-import CompanionTheory.RealGroups.DiscreteSeries.DiscreteSeriesClassification.DiscreteSeriesExhaustion.FarRegularity.LKTExists
-import CompanionTheory.HarishChandraModules.LowKTypeMultiplicity.EigenspaceCyclicDensity.CreationOperators.DifferentialBoundedSupport
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Finset CompanionTheory.RgExh CompanionTheory.RgExh.U
 open CompanionTheory.D.LK (Pos Cn ann cre lift bd om cpt allT LocFin)
@@ -123,7 +128,7 @@ theorem ad_triple (A : R)
         - d a e * c b e * (if p = a then c q b else 0) := by
     intro a b e
     rw [ad_mul, ad_mul, hAd, hAc, hAc]
-    simp only [sub_mul, mul_sub, add_mul, mul_add, mul_assoc]
+    simp only [sub_mul, mul_sub, add_mul, mul_assoc]
     abel
   have s1 : ∑ a, ∑ b, ∑ e, (if q = a then d p e else 0) * c b e * c a b
       = ∑ b, ∑ e, d p e * c b e * c q b := by

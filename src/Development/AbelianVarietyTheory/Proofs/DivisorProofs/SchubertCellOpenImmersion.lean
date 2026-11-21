@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.NormSqColGrLineOfOrthogonal
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.EqOfIsometricTrivShift
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlockLuDecompositionExists
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchubertCellPointImmersionStatement
 

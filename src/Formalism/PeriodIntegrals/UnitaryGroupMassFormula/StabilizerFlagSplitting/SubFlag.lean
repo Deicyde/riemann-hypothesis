@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.FiniteOrderIntersectionInSmooth
-import Formalism.FormalDegreeBessel.FinalG
 
 open Matrix Formalism.QuantumDeterminants Formalism.FourierDecayAlt Formalism.FourierDecayAlt.C2
 

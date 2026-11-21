@@ -1,12 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.DivPowerCompatTwoFormDerivativeCompOneForm
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FilProperties
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLiftAndAugmentationMap
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DerLinEMulE
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsDPMorphismOfIsStd
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DividedPowerPolyAlgebraHomotopyIdentityStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DerivationHomotopyOperatorFiltrationPropertiesStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DeRhamAlgebraQuotientRingSurjectiveAndKernelStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.QuotientDividedPowerFiltrationCompatibleFormsStatement
 
 set_option autoImplicit false
@@ -58,7 +54,7 @@ theorem GlobalTheory.PDForm.rq_truncPoly : ∀ (R B : Type) [CommRing R] [CommRi
         obtain ⟨y, hy, rfl⟩ := hx
         simpa [hb] using hy
       · intro k a _
-        simp [hb]
+        simp
       · intro k
         cases k with
         | zero => change ε0 (Q.e 0) = _; rw [Q.e_zero, map_one, δ.dpow_zero J.zero_mem]

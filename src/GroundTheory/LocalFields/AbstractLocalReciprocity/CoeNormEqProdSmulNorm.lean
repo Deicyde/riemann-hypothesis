@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.LocalFields.AbstractLocalReciprocity.NormFormula
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.LocalFields.AbstractLocalReciprocity.Reciprocity
 
 namespace GroundTheory.LocalField.Abstract

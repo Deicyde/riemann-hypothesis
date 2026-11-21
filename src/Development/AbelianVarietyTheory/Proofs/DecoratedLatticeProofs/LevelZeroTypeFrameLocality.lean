@@ -1,14 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.IsPatOne
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.BesselCompatibility
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.CombAtSingleZero
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsCombAt
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsRatDatum
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.RestrictedBlockUnipotentSymmetric
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LevelHyperspecialTrivialCharacterSplitsOffPlaces
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ExistsFiniteAdeleProjectionIntegralReductionStatement
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.MemLevelIffSymmetricPositionEntryPattern
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.SplitPlaceLocalGroupElementsJacobiBessel
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.IdempotentSubMulComplementEqComplement
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.S Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes MeasureTheory IsDedekindDomain NumberField Matrix Formalism.L2.Theta Formalism.L2.DIV Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.Lev Formalism.IndefR.Mult Formalism.IndefR.Datum Formalism.IndefR.AutomorphicEvaluation Formalism.L2.SG.HidaSetting Formalism.L2.SG.PoincareInHH.PoincareSetting Formalism.L2.SG.RowDict Formalism.L2.SG.RowsJoinPinned GlobalTheory.MixModel GlobalTheory.MixPer GlobalTheory.Unf GlobalTheory.Core.Rk GlobalTheory.Core.Mi
 open scoped TensorProduct InnerProductSpace Classical
@@ -124,7 +115,7 @@ theorem GlobalTheory.ReadAtBase.red_of_isLoc : ∀ (D : D7) (u : D.what₂.Word)
     rw [map_sub, resS_oToS, hz]
     exact sub_self _
   have hv := (hred.ker _).1 hz0
-  simp only [RingHom.comp_apply, Subring.coe_subtype, AddSubgroupClass.coe_sub, map_sub, h] at hv
+  simp only [RingHom.comp_apply, Subring.coe_subtype, map_sub, h] at hv
   have e8 : π' ((oToS _ _ z : Formalism.L2.Herm.intAf D.host.F D.host.E) : Datum.EAf D) =
       (GlobalTheory.LocMod.ofSplit G.q).pr (z : D.host.E) := hπ' (incA D (z : D.host.E))
   rw [e8] at hv

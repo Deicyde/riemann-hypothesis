@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalStabilizerLocallyConstantStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalOperatorIdeleConstantStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBLocalPartPlaceStatement

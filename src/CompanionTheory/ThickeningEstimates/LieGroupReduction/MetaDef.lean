@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import CompanionTheory.ThickeningEstimates.InnerProductFactorization.EqOfInner
 
 noncomputable section

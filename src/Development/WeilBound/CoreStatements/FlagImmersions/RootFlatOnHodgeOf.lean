@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.FlagImmersions.TauInInjective
 import Development.WeilBound.CoreStatements.VolumeEquality.ChartMeetsPoint
 import Development.AutomorphicSpectrum.Statements.GeometryStatements.NearRecordOfValue

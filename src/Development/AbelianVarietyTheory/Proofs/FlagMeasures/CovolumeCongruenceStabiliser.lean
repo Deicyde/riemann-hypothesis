@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.OfRoots
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExponentialUnipotentStabilizerStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.GramUnipotentStabilizerBruhatCellConjRootStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.GramUnipotentLieLatticeDomainVolumeBoundStatement
@@ -187,7 +186,7 @@ theorem roots_trans {K : Type} [Field K] {N : ℕ} {w : Matrix (Fin N) (Fin N) K
   have hxy := lieU_mul hw hx hy
   rw [Matrix.single_mul_single_same, one_mul] at hxy
   have h0 := (h _).1 hxy a c hac
-  simp [Matrix.single_apply] at h0
+  simp at h0
 
 theorem exists_lattice {K : Type} [Field K] [NumberField K] {ι : Type} (τ : ι → (K →+* ℂ)) {N : ℕ}
     (Z U : Matrix (Fin N) (Fin N) K) (R : Finset (Fin N × Fin N)) (J : Ideal (𝓞 K)) :

@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.ProIsoAt
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.HomogeneousNonvanishing.CrtGood
 
 open NumberField TensorProduct GlobalTheory.CompanionTheory.Ar

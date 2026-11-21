@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.GL3.IntegralityIffAwayAtD
 import Formalism.LocalToGlobal.GlobalTheory.GL3.DeterminantNormOneOfUnitDisc
 import Formalism.SharpRestriction.GlobalSchurBounds.StandardIntegralLatticeExists

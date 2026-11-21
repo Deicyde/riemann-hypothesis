@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFlagBundleIff
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FieldFlagsConjugateByAutomorphism
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagsOverFieldIrreducibleJoinStatement
@@ -20,7 +20,7 @@ theorem coh {X T B : Scheme.{0}} (t : X ⟶ T) (c : T ⟶ X) (s : X ⟶ B) (h : 
       (pullbackComp t (c ≫ s)).hom.app E ≫ (pullbackCongr v).hom.app E := by
   have assoc := congr_arg (fun φ => φ.app E) (pseudofunctor_associativity t c s)
   simp only [NatTrans.comp_app, Functor.whiskerRight_app, Functor.whiskerLeft_app, Functor.associator_hom_app,
-    Functor.rightUnitor_hom_app, Category.id_comp, Category.comp_id, eqToHom_app] at assoc
+    Category.id_comp, eqToHom_app] at assoc
   have key : ∀ (u : X ⟶ X) (hu : u = 𝟙 X) (w : X ⟶ B) (hw : w = u ≫ s) (v' : w = s)
       (P : (pullback w).obj E = (pullback (u ≫ s)).obj E),
       eqToHom P ≫ (pullbackComp u s).inv.app E ≫ (pullbackCongr hu).hom.app _ ≫ (pullbackId X).hom.app _ =
@@ -28,8 +28,8 @@ theorem coh {X T B : Scheme.{0}} (t : X ⟶ T) (c : T ⟶ X) (s : X ⟶ B) (h : 
     intro u hu w hw v' P
     subst hu hw
     have unit := congr_arg (fun φ => φ.app E) (pseudofunctor_right_unitality s)
-    simp only [NatTrans.comp_app, Functor.whiskerRight_app, Functor.whiskerLeft_app,
-      Functor.rightUnitor_hom_app, Category.comp_id, eqToHom_app] at unit
+    simp only [NatTrans.comp_app, Functor.whiskerLeft_app,
+      Functor.rightUnitor_hom_app, eqToHom_app] at unit
     simp only [eqToHom_refl, Category.id_comp, pullbackCongr, eqToIso_refl, Iso.refl_hom, NatTrans.id_app]
     erw [Category.comp_id ((pullbackId X).hom.app ((pullback s).obj E))] at unit
     erw [Category.id_comp ((pullbackId X).hom.app ((pullback s).obj E))]
@@ -42,7 +42,7 @@ theorem coh {X T B : Scheme.{0}} (t : X ⟶ T) (c : T ⟶ X) (s : X ⟶ B) (h : 
       ← cancel_mono ((pullbackComp (t ≫ c) s).hom.app E)]
     simp only [Category.assoc, Iso.inv_hom_id_app, Category.comp_id]
     rw [assoc]
-    simp only [← Functor.map_comp_assoc, Iso.inv_hom_id_app, Functor.map_id, Category.id_comp, Iso.inv_hom_id_app_assoc]
+    simp only [← Functor.map_comp_assoc, Iso.inv_hom_id_app]
     simp
   rw [e1]
   simp only [Category.assoc]
@@ -64,7 +64,7 @@ theorem carries_of {X T B : Scheme.{0}} (s : X ⟶ B) (c : T ⟶ X) (t : X ⟶ T
   intro a i
   obtain ⟨e, he⟩ := hψ a i
   refine ⟨(pullbackComp t c).app _ ≪≫ (pullbackCongr h).app _ ≪≫ (pullbackId X).app _ ≪≫ e, ?_⟩
-  simp only [Iso.trans_hom, Iso.app_hom, Category.assoc, he]
+  simp only
   simp only [Vert.Flag.ofIso, Vert.Flag.pull, Functor.map_comp, Category.assoc, Iso.trans_hom, Iso.app_hom]
   rw [← coh t c s h v (E a)]
   simp only [Category.assoc] at hΦ

@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Jets.SideFam
-import Development.AbelianVarietyTheory.Definitions.Jets.SumIoPr
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.BesselGapVanishingStatement
 open BranchingSupport Formalism.FourierDecayAlt Formalism.FourierDecayAlt.ThreeDimData Matrix MeasureTheory Finset
 open scoped InnerProductSpace ENNReal
@@ -15,21 +13,21 @@ theorem besselIntegral_sesquilinear : Hyps → ∀ (k r : ℕ) (ε : Fin (2 * r 
     rw [← integral_add ((hc v hv).1 w hw) ((hc v hv).1 w' hw')]
     congr 1
     funext p
-    simp only [beInt, map_add, inner_add_right, add_smul, mul_add, add_mul, smul_add]
+    simp only [beInt, map_add, inner_add_right, add_smul, add_mul]
   · unfold be
     rw [← integral_smul]
     congr 1
     funext p
-    simp only [beInt, map_smul, inner_smul_right, smul_smul, mul_assoc, mul_left_comm]
+    simp only [beInt, map_smul, inner_smul_right, smul_smul, mul_assoc]
   · unfold be
     rw [← integral_add ((hc v hv).1 w hw) ((hc v' hv').1 w hw)]
     congr 1
     funext p
-    simp only [beInt, inner_add_left, add_smul, mul_add, add_mul, smul_add]
+    simp only [beInt, inner_add_left, add_smul, add_mul]
   · unfold be
     rw [← integral_smul]
     congr 1
     funext p
-    simp only [beInt, inner_smul_left, smul_smul, mul_assoc, mul_left_comm, RCLike.star_def]
+    simp only [beInt, inner_smul_left, smul_smul, mul_assoc, RCLike.star_def]
 
 end GlobalTheory

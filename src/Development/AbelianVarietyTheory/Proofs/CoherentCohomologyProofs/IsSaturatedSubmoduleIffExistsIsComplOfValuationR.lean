@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.QuasicoherentCohomology.MemSaturatedOrderIsoSubspaceSpanSymmApply
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 open Module
 

@@ -1,11 +1,12 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ImportsRestFurther
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SpecialUnitaryLiftInThetaGroup
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiniteUnitaryPartIsInvertibleUnitaryAdelic
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.IntegralAtOfAdelicIntegralAt
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.FinCongMemLevEnv
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrameStabiliserMapsToCompletedLatticeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SpecialUnitaryKottwitzEquivalenceStatement
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.OneMeasureSizes
+import Formalism.LocalRingCardinality.SpanPowerMembership.ExampleLayerExistsGenerators
 open NumberField Formalism.BasicNotions Formalism.MainNotions Formalism.L2 Formalism.L2.DIV Formalism.IndefR.Links Formalism.IndefR.FWT GlobalTheory.CovTop
 open scoped TensorProduct
 
@@ -52,8 +53,8 @@ theorem mulVec_mem_hat (D : D7) {n : ℕ} (β : GL (Fin n) (Formalism.IndefR.Lev
   have h3 := GlobalTheory.PrincInLevel.swap_symm_mem_hat Λ _ h2
   convert h3 using 1
   funext a
-  simp only [Matrix.mulVec, dotProduct, Formalism.UG.bc, Formalism.IndefR.Lev.swapAE, Units.coe_map, MonoidHom.coe_coe,
-    RingHom.mapMatrix_apply, Matrix.map_apply, map_sum, map_mul]
+  simp only [Matrix.mulVec, dotProduct, Formalism.UG.bc, Formalism.IndefR.Lev.swapAE, Units.coe_map,
+    map_sum, map_mul]
   simp
 
 end GlobalTheory.MassLinkConj

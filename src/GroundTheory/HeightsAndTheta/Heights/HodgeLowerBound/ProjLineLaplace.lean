@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.ProjLineChart
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.StatementsLaplacianLogGrowth
+import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.StatementsProjLineAmple
 set_option maxSynthPendingDepth 1
 
 noncomputable section

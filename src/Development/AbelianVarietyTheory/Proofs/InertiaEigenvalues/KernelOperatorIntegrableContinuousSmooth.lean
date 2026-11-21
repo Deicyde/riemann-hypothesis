@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SumLieCoord
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsRapidInf
+import Formalism.DoubleCosetMeasures.StatementZ
 
 noncomputable section
 

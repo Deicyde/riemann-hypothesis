@@ -1,6 +1,4 @@
-import Mathlib
-import Formalism.HermitianCurvature.StatementTBB
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.OrbitalIntegralAeConvergenceContinuity
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.TheoremPIntegralOfPlaces
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ExistsContinuousFrameSectionStatement
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.BesselBigCellPointVectorEqBesselStatement

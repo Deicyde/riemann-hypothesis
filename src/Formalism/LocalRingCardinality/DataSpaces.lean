@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.Params
-import Formalism.HermitianLattices.StatementLat
 import Formalism.HermitianLattices.StatementMass
-import Formalism.SatakeDualWeyl.Statement
 
 noncomputable section
 

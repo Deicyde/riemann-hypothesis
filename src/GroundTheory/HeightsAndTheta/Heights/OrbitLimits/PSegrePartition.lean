@@ -1,5 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StSegrePartition
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.Analysis.InnerProductSpace.Calculus
+import Mathlib.Tactic.Monotonicity.Lemmas
 set_option maxSynthPendingDepth 1
 
 noncomputable section

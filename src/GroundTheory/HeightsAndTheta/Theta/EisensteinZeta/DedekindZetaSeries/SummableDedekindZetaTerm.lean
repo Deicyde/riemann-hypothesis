@@ -1,6 +1,13 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.TateThesis.PrimeZetaPole
 import GroundTheory.HeightsAndTheta.Theta.EisensteinZeta.DedekindZetaSeries.ZetaSevenHalves
+import Mathlib.Data.Finsupp.Pointwise
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.Ideal.Int
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Theta
@@ -109,7 +116,7 @@ theorem prod_tuple {I : Ideal (𝓞 K)} (hI : I ≠ ⊥) : ∏ j, tuple K I j = 
   classical
   unfold tuple
   rw [Finset.prod_comm]
-  simp only [Finset.prod_ite_eq, Finset.prod_ite_eq', Finset.mem_univ, if_true]
+  simp only [Finset.prod_ite_eq, Finset.mem_univ, if_true]
   rw [← Finset.prod_multiset_map_count, ← map_multiset_prod,
     associated_iff_eq.mp (prod_normalizedFactors hI)]
 
@@ -136,7 +143,7 @@ theorem factorization_tuple (I : Ideal (𝓞 K)) {P : Ideal (𝓞 K)} (hP : P.Is
     · have hne : ratPrime K Q ≠ ratPrime K P := fun e => hQP (label_inj hQp hQ0 hP hP0 e hl)
       rw [Nat.factorization_pow, (absNorm_eq_ratPrime_pow hQp hQ0).1,
         (ratPrime_prime hQp hQ0).factorization_pow]
-      simp [Finsupp.single_apply, hne]
+      simp [hne]
     · simp
   rw [Finset.sum_eq_single P key]
   · rw [if_pos rfl, Nat.factorization_pow]

@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.DecompositionData
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsUniqueHcharOfFiniteOrder
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.UnramifiedGaloisHomsBoundedClassNumberOfArtinRecStatement
+import Mathlib.RingTheory.OrderOfVanishing.Basic
 
 open Formalism Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.WeaklyAdmissibleFiltrations
 

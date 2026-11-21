@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.LieModel
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LieModelFiniteProjectiveBis
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.SmoothGroupTangentLiftStatement
 import Development.WeilBound.CoreStatements.HodgeTatePoints.HtatLieA

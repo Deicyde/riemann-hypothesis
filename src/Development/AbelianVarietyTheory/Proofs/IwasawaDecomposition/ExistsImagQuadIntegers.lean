@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.RingOfIntegersSqrtNegThreeModFour
+import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.DedekindZetaEqSumRealEisenstein
+import Mathlib.Algebra.Polynomial.SpecificDegree
+import Mathlib.Data.Finsupp.Pointwise
 
 open NumberField Module
 

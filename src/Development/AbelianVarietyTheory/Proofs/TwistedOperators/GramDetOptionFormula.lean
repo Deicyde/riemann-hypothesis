@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.InverseChamberMap
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
 open GlobalTheory.Chamber
 open scoped InnerProductSpace ContDiff Classical
 
@@ -19,7 +21,7 @@ theorem gram_det_option_orth {k : ℕ} {ι : Type} [Fintype ι] [DecidableEq ι]
     rw [hA, hG, Matrix.fromBlocks_transpose, Matrix.fromBlocks_multiply, Matrix.fromBlocks_multiply]
     ext (i | i) (j | j) <;>
     simp [e, Matrix.gram_apply, inner_add_left, inner_add_right, real_inner_smul_left,
-        real_inner_smul_right, h, h', Matrix.mul_apply, Matrix.diagonal, real_inner_self_eq_norm_sq] <;>
+        real_inner_smul_right, h, h', Matrix.mul_apply, Matrix.diagonal] <;>
     ring
   have hdA : A.det = ∏ i, κ i := by
     rw [hA, Matrix.det_fromBlocks_zero₂₁, Matrix.det_diagonal, Matrix.det_one, mul_one]

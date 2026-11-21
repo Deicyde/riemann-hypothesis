@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsGenericFlag
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open GlobalTheory.CompanionTheory.Ar
 

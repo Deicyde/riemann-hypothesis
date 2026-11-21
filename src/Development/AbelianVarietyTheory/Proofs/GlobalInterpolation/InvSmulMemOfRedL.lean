@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.MemUnitOff
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ValOUnramifiedDegreeOne
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.PredMemGamRanks
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsMatrixBasisLatticeUpToDenominatorNotMem
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsMulMemSpan
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ExistsUnimodularLatticeLocalMatch

@@ -1,9 +1,5 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.ArakelovCycleHeights.QpSndStr
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ResidueDegreeOfIsClosedImmersion
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ArFormExists
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsPullHermPullLine
-import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.IsClosedImmersionIffPullRatio
 
 set_option autoImplicit false
 

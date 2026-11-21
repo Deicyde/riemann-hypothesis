@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.WignerVanishingGL
-import Formalism.RealPlaceAnalysis.StatementB
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ContinuousConjFin
 
 noncomputable section
 

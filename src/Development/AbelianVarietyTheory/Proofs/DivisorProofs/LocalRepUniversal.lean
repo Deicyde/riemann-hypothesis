@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OfGroupPullbackDataBase
+import Development.AbelianVarietyTheory.Definitions.Divisors.NonemptyHomFixRepTrivial
+import Mathlib.AlgebraicGeometry.Sites.Fpqc
+import Mathlib.CategoryTheory.ExtremalEpi
 
 set_option autoImplicit false
 noncomputable section

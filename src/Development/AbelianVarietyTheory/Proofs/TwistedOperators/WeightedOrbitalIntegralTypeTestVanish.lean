@@ -1,15 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasTypeVec
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.LabesseWaldspurger
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.ConstantTermVanishing
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.AdjointRadical
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.CuspidalNoRadicalFixed
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.StandardMaximalParabolic
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.CentralizerTensorForms
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.WeightedOrbitalIntegralGLZeroOfRadicalIntegralsStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.TypeFunctionConstantTermVanishSplitPlaceStatement
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsCyclicOfFiniteQuotient
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.FiniteDimensionalMram
+import Development.AbelianVarietyTheory.Definitions.Foundations.T2SpaceAdeleRing
+import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.LinearIndependentE
+import Formalism.DoubleCosetMeasures.Statement
 open MeasureTheory Set Filter NumberField IsDedekindDomain
 open GlobalTheory.AdelicU GlobalTheory.OpTrace GlobalTheory.Orb GlobalTheory.AutomorphicL2Unitary GlobalTheory.AutMult Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.L2.Theta Formalism.IndefR.Mult
@@ -97,7 +92,7 @@ theorem diag_cond_iff (k : Type) [Field k] (r a : ℕ) (S : Matrix (Fin r) (Fin 
       ∀ i j : Fin r, S i j ≠ (1 : Matrix (Fin r) (Fin r) k) i j → i.val < a ∧ a ≤ j.val := by
   have h1P : (1 : Matrix (Fin r) (Fin r) k) - Matrix.diagonal (fun i : Fin r => if i.val < a then (1 : k) else 0) =
       Matrix.diagonal (fun j : Fin r => 1 - if j.val < a then (1 : k) else 0) := by
-    ext i j; by_cases h : i = j <;> simp [Matrix.one_apply, Matrix.diagonal, h]
+    ext i j; by_cases h : i = j <;> simp [Matrix.diagonal, h]
   have hent : ∀ i j, (Matrix.diagonal (fun i : Fin r => if i.val < a then (1 : k) else 0) * (S - 1) * (1 - Matrix.diagonal (fun i : Fin r => if i.val < a then (1 : k) else 0))) i j =
       (if i.val < a then (1 : k) else 0) * (S - 1) i j * (1 - if j.val < a then (1 : k) else 0) := by
     intro i j; rw [h1P, Matrix.mul_diagonal, Matrix.diagonal_mul]

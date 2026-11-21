@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StHypersurfacePresentation
-import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StGenericPrimitive
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PGenericPrimitive
+import Mathlib.Algebra.MvPolynomial.Division
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

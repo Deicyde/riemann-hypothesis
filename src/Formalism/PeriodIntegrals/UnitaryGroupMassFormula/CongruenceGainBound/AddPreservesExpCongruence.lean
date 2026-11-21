@@ -1,4 +1,7 @@
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CongruenceGainBound.SubstitutionBound
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.MvPowerSeries.Basic
 
 noncomputable section
 

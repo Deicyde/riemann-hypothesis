@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.Brauer.SkolemNoether
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsRootSelectionUnitaryRankOne
 
 noncomputable section
@@ -71,9 +71,9 @@ def conjBy (Q : Pair G) (y : G.Cˣ) (γ' : G.Cˣ) (hγ : (γ' : G.C) = y * Q.γ 
   γ := γ'
   c := Q.c
   sym := by
-    simp only [Units.val_mul, Units.val_mk, sh_mul, sh_sh, Q.sym, mul_assoc]
+    simp only [Units.val_mul, sh_mul, sh_sh, Q.sym, mul_assoc]
   sim := by
-    simp only [Units.val_mul, Units.val_mk]
+    simp only [Units.val_mul]
     rw [hγ, sh_mul, sh_mul]
     have h1 : ((y⁻¹ : G.Cˣ) : G.C) * y = 1 := Units.inv_mul y
     have h2 : sh G (y : G.C) * sh G ((y⁻¹ : G.Cˣ) : G.C) = 1 := sh_units_mul_inv y

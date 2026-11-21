@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AdelicHermitianForms.AdelicPair
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.TensorActionHermitianExpFixedOfMinNorm
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.MatrixKroneckerPowerTensorActionAlgebraStatement
+import Mathlib.Analysis.Matrix.Order
+import Mathlib.RingTheory.PiTensorProduct
 open Matrix GlobalTheory.ClassFin
 open scoped Kronecker ComplexOrder TensorProduct
 
@@ -27,7 +27,7 @@ private lemma posDef_det_one_exists_unitary_exp_diagonal_sum_zero {ι : Type} [F
     rw [Unitary.conjStarAlgAut_apply, Matrix.star_eq_conjTranspose]
     congr 3
     funext i
-    simp only [Function.comp_apply, RCLike.ofReal_real_eq_id, id]
+    simp only [Function.comp_apply]
     rw [mul_div_cancel₀ _ two_ne_zero, Real.exp_log (hP.eigenvalues_pos i)]
     rfl
 

@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.HaarFundamentalDomain.HypothesesHold
-import Development.AbelianVarietyTheory.BlockTheory.ClassSums.ReadingWithSpecialisation
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.ValuesAlgIffValuesUnitOfNe
 
 open AlgebraicGeometry CategoryTheory NumberField Matrix Complex

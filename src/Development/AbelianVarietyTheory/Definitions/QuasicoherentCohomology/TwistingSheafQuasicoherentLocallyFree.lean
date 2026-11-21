@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.QuasicoherentCohomology.BijectiveSmulChartSec
 import Development.AbelianVarietyTheory.Definitions.ThetaMetrics.TwistingSheafOneChartEqPreimageStandardChart
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.CocycleIdentityIso
+import Mathlib.Algebra.AffineMonoid.UniqueSums
 
 set_option autoImplicit false
 
@@ -136,8 +138,7 @@ theorem coord_independent (a b : R)
     (h : algebraMap R Γ(PSpace R 1, ⊤) a • ofSec (ProjSpace.coord R 1 0) ⊤ +
       algebraMap R Γ(PSpace R 1, ⊤) b • ofSec (ProjSpace.coord R 1 1) ⊤ = 0) : a = 0 ∧ b = 0 := by
   have e := congrArg (fun s => (globalEquiv (O1 R 1) s).f (0 : Fin 2)) h
-  simp only [map_add, map_smul, map_zero, ← globalEquiv_symm_apply, LinearEquiv.apply_symm_apply,
-    add_f, smul_f, zero_f] at e
+  simp only [map_add, map_smul, map_zero, ← globalEquiv_symm_apply, LinearEquiv.apply_symm_apply] at e
   have e' : algebraMap R Γ(PSpace R 1, chart R 1 0) a * ratio R 1 0 0 +
       algebraMap R Γ(PSpace R 1, chart R 1 0) b * ratio R 1 0 1 = 0 := by
     rw [← resG_algebraMap (le_top : chart R 1 0 ≤ ⊤), ← resG_algebraMap (le_top : chart R 1 0 ≤ ⊤)]

@@ -1,6 +1,11 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GaugeUniqD
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GaugeExpPow
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.WickVanishing.GaugeRatio
+import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GaugeBeta
+import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GaugeUniq
+import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GaugeUniqB
+import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GaugeUniqC
 
 set_option autoImplicit false
 

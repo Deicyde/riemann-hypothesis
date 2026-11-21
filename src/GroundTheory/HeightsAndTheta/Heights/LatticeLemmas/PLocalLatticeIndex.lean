@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.LocalFieldAtPlace
 import GroundTheory.HeightsAndTheta.Heights.LatticeLemmas.StatementsLocalLatticeIndex
 set_option maxSynthPendingDepth 1

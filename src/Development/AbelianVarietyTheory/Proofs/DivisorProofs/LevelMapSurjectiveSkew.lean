@@ -1,8 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GoodRing
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryCongruenceLiftLieElementStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianFormHasUnitVectorStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryCongruencePrescribedDetStatement
+import Std.Tactic.BVDecide.Normalize.Prop
 open Matrix GlobalTheory.SUCong
 
 namespace GlobalTheory.SUCong

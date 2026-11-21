@@ -1,6 +1,6 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.ArcCoordinatesOfLevelZeroParts
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.LevLetEMul
-import Formalism.SharpRestriction.LevelLetterCocycles.StageStep
 
 noncomputable section
 

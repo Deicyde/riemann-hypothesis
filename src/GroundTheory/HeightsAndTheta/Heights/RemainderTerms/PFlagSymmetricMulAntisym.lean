@@ -1,5 +1,4 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.RemainderTerms.Statements
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.RemainderTerms.StatementsFlag
 set_option maxSynthPendingDepth 1
 

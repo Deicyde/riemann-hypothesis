@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.UnivOfNotLinearIndependent
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.CardInversePrimeRepsIntegralRightMulHecke
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SumCardSubspaces
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.CardCosetsEqSubspacesKernelResidue
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CardSubspacesFinrankCongr
 
 noncomputable section

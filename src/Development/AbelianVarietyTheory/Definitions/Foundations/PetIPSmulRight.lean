@@ -1,5 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.Integral
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.Analysis.Complex.UpperHalfPlane.Measure
+import Mathlib.NumberTheory.Modular
+import Mathlib.NumberTheory.ModularForms.CongruenceSubgroups
 
 noncomputable section
 

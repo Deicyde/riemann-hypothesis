@@ -1,7 +1,9 @@
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.FockRaisingLowering.KroneckerMapOneRightNeZero
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.FockRaisingLowering.BlockDiagonalPreservesDegree
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.FockRaisingLowering.RaisingLoweringSplit
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.FockDegreeOne.OneDegOfHalves
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -35,7 +37,7 @@ theorem omE_same {p q r s : ℕ} (a b : Ix p q) (c : Ix r s) (hab : sameBlock a 
       simp [Derivation.leibniz, pderiv_X]
       module
     · have hne : ((a, c) : Ln p q r s) ≠ (b, c) := fun h' => hab2 (hab'.1 h')
-      simp [hab2, hne, Derivation.leibniz, pderiv_X, Pi.single_apply, Ne.symm hne]
+      simp [hab2, hne, Derivation.leibniz, pderiv_X, Ne.symm hne]
   · simp [hab']
 
 theorem fockAct1_Eab_apply {p q r s : ℕ} (a b : Ix p q) (P : Pol p q r s) :
@@ -77,7 +79,7 @@ theorem fock_operators_kernel : OpsK := by
   congr 1
   split_ifs with h
   · subst h
-    simp only [↓reduceIte, LinearMap.smul_apply, Module.End.one_apply]
+    simp only [LinearMap.smul_apply, Module.End.one_apply]
     rw [← Finset.sum_smul, sum_half]
   · simp
 

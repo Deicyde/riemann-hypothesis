@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.SemistableReduction.ExistsIntSmulMemSpan
 import ReciprocityTheory.SemistableReduction.EmbMatMulVecInjective
 

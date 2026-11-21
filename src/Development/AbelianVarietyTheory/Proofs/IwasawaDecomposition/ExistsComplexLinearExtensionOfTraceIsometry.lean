@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.KernelLattices.LateralTheory
 open NumberField IsDedekindDomain Formalism.L2.Ker Matrix
 open scoped BigOperators
@@ -38,7 +38,7 @@ theorem exists_complexLinear_extension_of_traceIsometry : ∀ (K E : Type) [Fiel
       = B *ᵥ (fun w => φ (algebraMap K E (γ.g x w))) := by
     ext v
     have := congrArg (fun y => emb v.2 (y v.1)) hx
-    simp only [Finset.sum_apply, Pi.smul_apply, Algebra.smul_def, map_sum, map_mul, hK] at this
+    simp only [Finset.sum_apply, Algebra.smul_def, map_sum] at this
     rw [this]
     simp [Matrix.mulVec, dotProduct, B, mul_comm, hK]
   rw [hv]

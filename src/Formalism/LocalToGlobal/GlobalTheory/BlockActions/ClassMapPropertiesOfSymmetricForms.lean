@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.BlockActions.PrVTensInt
 import Formalism.LocalToGlobal.GlobalTheory.BlockActions.FiniteAdeleRingNontrivial
 import Formalism.LocalToGlobal.GlobalTheory.BlockActions.AdelicLocalLattice

@@ -1,5 +1,11 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.MonomialOrderSegments.MemPolKIff
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.MapCastMono
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 

@@ -1,4 +1,10 @@
-import Formalism.SharpRestriction.GrowthBounds.RootWeights.DividedPowersPreserveZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.ObjPol
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
 
 noncomputable section
 
@@ -28,19 +34,19 @@ theorem polarization_pow_monomial (v w : σ) (hvw : v ≠ w) (k : ℕ) (m : σ �
   | succ k ih =>
     rw [pow_succ', Module.End.mul_apply, ih, polarization_monomial]
     have hw : (m - Finsupp.single w k + Finsupp.single v k : σ →₀ ℕ) w = m w - k := by
-      simp [Finsupp.single_apply, hvw]
+      simp [hvw]
     have hexp : (m - Finsupp.single w k + Finsupp.single v k - Finsupp.single w 1
         + Finsupp.single v 1 : σ →₀ ℕ) = m - Finsupp.single w (k + 1) + Finsupp.single v (k + 1) := by
       ext x
       by_cases hx : x = w
       · rw [hx]
-        simp [Finsupp.single_apply, hvw]
+        simp [hvw]
         omega
       · by_cases hy : x = v
         · rw [hy]
-          simp [Finsupp.single_apply, hvw, Ne.symm hvw]
+          simp [hvw]
           omega
-        · simp [Finsupp.single_apply, Ne.symm hx, Ne.symm hy]
+        · simp [Ne.symm hx, Ne.symm hy]
     rw [hexp, hw, Nat.descFactorial_succ, Nat.cast_mul]
     congr 1
     ring
@@ -64,14 +70,14 @@ theorem polarization_commute (v w v' w' : σ) (h1 : w ≠ v') (h2 : w ≠ w') (h
     rw [Module.End.mul_apply, Module.End.mul_apply, polarization_monomial, polarization_monomial,
       polarization_monomial, polarization_monomial]
     have e1 : (m - Finsupp.single w' 1 + Finsupp.single v' 1 : σ →₀ ℕ) w = m w := by
-      simp [Finsupp.single_apply, h1, h2, Ne.symm h1, Ne.symm h2]
+      simp [h1, h2]
     have e2 : (m - Finsupp.single w 1 + Finsupp.single v 1 : σ →₀ ℕ) w' = m w' := by
-      simp [Finsupp.single_apply, h3, Ne.symm h2, Ne.symm h3, h2]
+      simp [h3, Ne.symm h2]
     have hexp : (m - Finsupp.single w' 1 + Finsupp.single v' 1 - Finsupp.single w 1
         + Finsupp.single v 1 : σ →₀ ℕ) =
         m - Finsupp.single w 1 + Finsupp.single v 1 - Finsupp.single w' 1 + Finsupp.single v' 1 := by
       ext x
-      simp only [Finsupp.add_apply, Finsupp.tsub_apply, Finsupp.single_apply]
+      simp only [Finsupp.add_apply, Finsupp.tsub_apply]
       by_cases a1 : w = x <;> by_cases a2 : w' = x <;> by_cases a3 : v = x <;>
         by_cases a4 : v' = x <;> (try subst_vars) <;> (try simp_all) <;> omega
     rw [e1, e2, hexp]
@@ -101,7 +107,7 @@ theorem exponent_factorial_add_single (m : σ →₀ ℕ) (v : σ) (k : ℕ) :
     by_cases hx : x = v
     · subst hx
       simp
-    · simp [Finsupp.erase_ne hx, Finsupp.single_apply, Ne.symm hx]
+    · simp [Finsupp.erase_ne hx, Ne.symm hx]
   have h2 : expFact m = expFact (m.erase v) * (m v).factorial := by
     conv_lhs => rw [← Finsupp.erase_add_single v m]
     exact exponent_factorial_erase_single m v (m v)
@@ -118,14 +124,14 @@ theorem padic_exponent_factorial_bound (p : ℕ) [Fact p.Prime] (m : σ →₀ �
   have hC : (m w).choose k ≠ 0 := (Nat.choose_pos hk).ne'
   set a := m - Finsupp.single w k with ha
   have haw : a w = m w - k := by simp [ha]
-  have hav : a v = m v := by simp [ha, Finsupp.single_apply, Ne.symm hvw]
+  have hav : a v = m v := by simp [ha, Ne.symm hvw]
   have hm : a + Finsupp.single w k = m := by
     ext x
     by_cases hx : x = w
     · subst hx
       simp [ha]
       omega
-    · simp [ha, Finsupp.single_apply, Ne.symm hx]
+    · simp [ha, Ne.symm hx]
   have e1 := exponent_factorial_add_single a w k
   rw [hm, haw, Nat.sub_add_cancel hk] at e1
   have e2 := exponent_factorial_add_single a v k

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.CoboundaryTransfers.StatementAPI
 import Formalism.WachModuleLifts.StatementW
 import Formalism.LagrangeIdealLifts.Statement

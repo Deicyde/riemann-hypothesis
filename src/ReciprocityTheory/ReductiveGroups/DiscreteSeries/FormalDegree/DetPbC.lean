@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.DetPbA
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.DetPbB
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.PmatIsHermitian
 
 noncomputable section
 

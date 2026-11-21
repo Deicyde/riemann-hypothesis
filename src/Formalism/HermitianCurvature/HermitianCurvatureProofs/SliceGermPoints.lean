@@ -1,7 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.YGSlice
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.IntegrableBlockIntegrand
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.SliceOrbitalBlock
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.LevelsOfBuiltSetting
 
 namespace Formalism.FourierDecayAlt.P.FormNormSumIdentities
 

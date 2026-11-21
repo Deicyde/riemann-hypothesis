@@ -1,14 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.DivisorSupportCondition
-import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.LocallyExactCech
-import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.EtaleProperBaseChange
-import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.A6supp
-import Development.AutomorphicArithmetic.Foundations.EtaleClopenDescent.TateTwistSectionsLocallyGenerated
-import Development.AutomorphicArithmetic.CommutativeAlgebra.LocallyHoldsOfForallAndMonoAndInterAndPullback
-import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleLocallyHoldsOfPointwiseCoverOrAffineLocal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CommutativeAlgebra.TateTwistGeneratorOfPrimitiveRootAndRootsEtaleLo
-import Development.AutomorphicArithmetic.CommutativeAlgebra.ContinuousSectionsBijectiveAdditiveNatural
 import Development.AutomorphicArithmetic.CommutativeAlgebra.ConstantSheafCyclicGeneratorOfOrder
+import Mathlib.Topology.ContinuousMap.LocallyConstant
 
 open CategoryTheory Limits AlgebraicGeometry Opposite GlobalTheory.EtC
 
@@ -207,7 +201,7 @@ private theorem sec_res_twGen (q : ℕ) (i : ℤ) (V' V : Scheme) (g : V' ⟶ V)
   have h := (toSheafify Scheme.etaleTopology (Scheme.Γ ⋙ twF q i)).naturality g.op
   have h2 := congrArg (fun f => ModuleCat.Hom.hom f
     (Submodule.Quotient.mk (Finsupp.single ζ 1) : (Scheme.Γ ⋙ twF q i).obj (op V))) h
-  simp only [ModuleCat.hom_comp, LinearMap.comp_apply] at h2
+  simp only [ModuleCat.hom_comp] at h2
   erw [← h2]
   refine congrArg (ModuleCat.Hom.hom
     ((toSheafify Scheme.etaleTopology (Scheme.Γ ⋙ twF q i)).app (op V'))) ?_

@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.InstBorelGL
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.CartanDecompositionGeneralLinearStatement
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.MemIntegralGLIffIntegralUnitDetStatement
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.MatrixAdditiveHaarNormalizedStatement
@@ -224,8 +224,8 @@ theorem vol_colLat (hLF : LF O ϖ nrm q) {n m : ℕ} {dx : Measure (Matrix (Fin 
     rw [← hs (r i), ← hs (r' i)]
     exact residue_eq_of_neg_inv_mul_add_mem hLF (x i j) _ _ h1' h2'
   rw [hcol, measure_iUnion hdisj hTm]
-  simp only [hT, tsum_fintype, Finset.sum_const, Finset.card_univ, Fintype.card_fun, Fintype.card_fin,
-    nsmul_eq_mul, mul_one, Nat.cast_pow, ← Nat.card_eq_fintype_card, ← hLF.card]
+  simp only [hT, tsum_fintype, Finset.sum_const, Finset.card_univ,
+    nsmul_eq_mul, mul_one, ← Nat.card_eq_fintype_card]
   rw [Nat.card_fun, Nat.card_eq_fintype_card (α := Fin n), Fintype.card_fin, ← hLF.card, Nat.cast_pow]
 
 def scale (nrm : AbsoluteValue F ℝ) (n : ℕ) {m : ℕ} (g : GL (Fin m) F) : ℝ≥0∞ :=

@@ -1,13 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsPrimitiveValueOfRingElementPsiRelation
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsActIffIsDiagEnd
-import Development.AbelianVarietyTheory.Definitions.Divisors.TorMatch
-import ReciprocityTheory.AnalyticForms.RegularLocalRings.FinalTheorems
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SamePolarisedDataOfIdempotentFactorUniformisatio
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsEqAddNsmul
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsAbelianPartHomUniformisedGroups
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UniformisedGroupHomCharacterMapConstant
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UniformisedGroupHomInducedMapsUnique
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UniformisedGroupProdZpowOverAbelianPartsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UniformisedGroupProdZpowCharacterMapStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToricTorsionMatchOfCharacterMapOnTorusStatement
@@ -19,6 +12,7 @@ import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsBiextensionCompar
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PowerDataTensorBundleIsoWithPsiValuesStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SharpRefOfRefinesTensorStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UniformisedEighthPowerBundleClassEqSumStatement
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RosatiAdjMumfordTensorPowerOfPosDef
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj IsLocalRing
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -173,7 +167,7 @@ theorem exists_tens (R : Type) [CommRing R] [IsDomain R] [IsLocalRing R] (hR : B
   have xk : ∀ y a, xe y a = k a y := fun y a => by
     obtain ⟨mu, rfl⟩ := xe.symm.surjective y
     rw [AddEquiv.apply_symm_apply, hxe]
-    simp only [map_sum, kh, Finset.smul_sum, smul_smul]
+    simp only [map_sum, kh, smul_smul]
     rw [Finset.sum_comm]
     simp only [← Finset.sum_smul, hNs _ a, NS]
     simp

@@ -1,7 +1,7 @@
-import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.AutDef
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.SumFourEqTrace
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RationalSubstitutionThetaHeisenbergUnitary
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFdPosFin
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTopologicalRingAE
 
 noncomputable section

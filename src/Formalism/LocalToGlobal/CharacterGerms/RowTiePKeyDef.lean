@@ -1,5 +1,7 @@
-import Formalism.LocalToGlobal.CharacterGerms.RowTiePProjLie
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Lemmata.PowMulVecEigen.PowMulVecEig
+import Formalism.LocalToGlobal.CharacterGerms.Interface
 
 noncomputable section
 

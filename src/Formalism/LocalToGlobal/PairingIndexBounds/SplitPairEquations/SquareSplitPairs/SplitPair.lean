@@ -1,6 +1,5 @@
-import Formalism.LocalToGlobal.PairingIndexBounds.SplitPairEquations.SplitTripleEquations.EqPOfSplit
-import Formalism.LocalToGlobal.PairingIndexBounds.SplitPairEquations.PullIopOf
-import Formalism.LocalToGlobal.GlobalTheory.GL3.LinkThetaStatementFamily
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.PairingIndexBounds.SplitPairEquations.Reduction
 
 noncomputable section
 open NumberField Formalism.BasicNotions Classical Matrix

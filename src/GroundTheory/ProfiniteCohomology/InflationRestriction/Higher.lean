@@ -1,8 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.InflationRestriction.Coinduced
 import GroundTheory.ProfiniteCohomology.InflationRestriction.DegreeOne
 import GroundTheory.ProfiniteCohomology.CohomologyFunctoriality.QuotientToInvariantsFunctorPreservesZeroMorphism
 import GroundTheory.ProfiniteCohomology.CoinducedModules.CohomologyCoindCokernelIsoHom
+import Mathlib.Tactic.ENatToNat
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

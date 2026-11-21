@@ -1,5 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.EigLat
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsCptGen
+import Mathlib.AlgebraicGeometry.Modules.Sheaf
 
 noncomputable section
 
@@ -20,8 +22,8 @@ theorem genMap_germ (p : Cpt ξ) (U : X.Opens) (hp : p.1 ∈ U) (hg : genPt ξ �
   obtain ⟨q, hq⟩ := p
   have e := congrArg (fun f => (f ≫ Scheme.stalkClosedPointTo ξ).hom s)
     (X.presheaf.germ_stalkSpecializes hp hq)
-  simp only [Category.assoc, CommRingCat.hom_comp, RingHom.comp_apply] at e
-  simp only [genMap, CommRingCat.hom_comp, RingHom.comp_apply]
+  simp only at e
+  simp only [genMap]
   exact e
 
 theorem exists_div (h : IsCptGen ξ) (p : Cpt ξ) (z : Ω) :

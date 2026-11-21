@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsBasisOfBot
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.QuotientEigenDifference
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.TotallySplit
 
 noncomputable section
 

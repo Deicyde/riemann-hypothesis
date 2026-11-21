@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.AdmissibleDesigns.BlockTwistedCyclotomic
 import Formalism.AdmissibleDesigns.SmulEval
+import Formalism.AdmissibleDesigns.HigherColumnInvariantsBound
 
 variable [hT2Core : Fact ReciprocityTheory.ChartRestriction.T2.Core]
 
@@ -151,7 +154,7 @@ theorem chi_ratio (c' : Fin D.R.t) (g : GE D.nd) :
     simp [Fin.val_succ]
   rw [hc, hn]
   simp only [MonoidHom.mul_apply, Units.val_mul, Units.inv_mul_cancel_left]
-  simp [cycE, map_zpow]
+  simp [cycE]
 
 theorem uRep_blk (hE : EvS r π Dd) (hN : RepresentationBoundsCohomology.NormAt D.nd r ρ π) (c' : Fin D.R.t) (g : GE D.nd)
     (m : blockRestrictedRepresentationType (RepresentationBoundsCohomology.blk D.R) Dd.ρk c'.succ) :

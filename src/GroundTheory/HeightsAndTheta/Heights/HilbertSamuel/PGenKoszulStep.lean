@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsGenKoszulStep
-import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsKoszulCech
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsKoszulCechExact
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsDoubleComplexVanish
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.KleimanNefness.AlgCechSt

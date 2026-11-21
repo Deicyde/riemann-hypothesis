@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.EqZeroOfForallMemFilV
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 
@@ -164,7 +168,7 @@ theorem spans_dual_base {V : Type} [AddCommGroup V] [Module Qp V] [FiniteDimensi
   have hπd' : ∀ x i, π x (d' i) = E.coord i (x ⊗ₜ[Qp] (1 : F)) := by
     intro x i
     rw [hdec (x ⊗ₜ[Qp] (1 : F)), map_sum]
-    simp only [d', map_sum, hπ, hw, hκ, map_smul, smul_eq_mul, smul_one_mul]
+    simp only [map_sum, hπ, hw, hκ, map_smul, smul_eq_mul, smul_one_mul]
   have hd'inv : ∀ i g, actVdR PD ρ' g (d' i) = d' i := by
     intro i g
     apply hπext

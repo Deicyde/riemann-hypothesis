@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.InjectiveOfSmulMemRange
+import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.ValuationCoeEqNorm
 
 noncomputable section
 

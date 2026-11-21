@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeightBoundConst
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ChernCurvatureHermitianFormulaStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InterpolatedConnectionDifferenceStatement

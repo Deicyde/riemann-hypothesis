@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.GermSys
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsFlatAnIffIsConstMul
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HodgeAt
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Crv GlobalTheory.CompanionTheory.Ar.Conj GlobalTheory.CompanionTheory.Ar.Flat GlobalTheory.CompanionTheory.Ar.Fl
@@ -103,8 +101,8 @@ theorem exists_transport {E : Type} [Field E] [NumberField E] {Ω W J C X : Type
     · subst hij
       rw [hco _ i 1 (by simp), F.repr_self]
       simp
-    · rw [hco _ i 0 (by simp [Finsupp.single_apply, Ne.symm hij]), F.repr_self]
-      simp [Finsupp.single_apply, Ne.symm hij]
+    · rw [hco _ i 0 (by simp [Ne.symm hij]), F.repr_self]
+      simp [Ne.symm hij]
   · intro a h h'
     have key : ∀ i, cd ⟨_, h'⟩ i = ∑ j, m a i j * cd h j := by
       intro i

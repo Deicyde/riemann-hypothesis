@@ -1,10 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.IntegralHeckeForms
 import Formalism.PadicSubsetSums.StableGradedCounts.TWCutOperator
-import Formalism.PadicSubsetSums.StableGradedCounts.TWCentralIdempotentIntegral
 import Formalism.PadicSubsetSums.StableGradedCounts.TWExportTransfer
 import Formalism.PadicSubsetSums.StableGradedCounts.TWLengthBaseChange
 import Formalism.SharpRestriction.LevelLetterCocycles.GaloisEquivariantKeyFunction
+import Mathlib.Algebra.Module.StablyFree.Basic
 
 noncomputable section
 

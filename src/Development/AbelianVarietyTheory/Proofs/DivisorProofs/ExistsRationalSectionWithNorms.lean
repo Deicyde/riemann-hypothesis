@@ -1,10 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TriModOfBlockTriangular
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemConeOfMem
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormsOfInduces
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsometricOfSameNorms
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RegularOfIntegralValuationBound
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.LinearIndependentOfCutSec
 
 set_option autoImplicit false
 

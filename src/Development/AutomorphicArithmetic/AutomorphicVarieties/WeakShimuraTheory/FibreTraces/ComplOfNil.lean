@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebraHeight.IsLocalHom
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.CoQuot
+import Mathlib.Tactic.ENatToNat
 
 open IsLocalRing UpperTheory.V.Alg
 

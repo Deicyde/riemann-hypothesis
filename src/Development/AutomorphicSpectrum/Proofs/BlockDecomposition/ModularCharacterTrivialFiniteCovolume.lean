@@ -1,6 +1,7 @@
-import Mathlib
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.FiniteCovolumeUnimodular
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.QuotientMeasureTower
+import Mathlib.Algebra.Order.Star.Real
 open MeasureTheory Topology
 open scoped ENNReal NNReal Matrix Pointwise
 

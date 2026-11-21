@@ -1,6 +1,6 @@
-import Mathlib
-import Development.DiscreteGroups.GlobalIrreducibility.LConvCut
+import BuildAid.Leniency.Open
 import Development.DiscreteGroups.GlobalIrreducibility.LConvSepT
+import Development.DiscreteGroups.GlobalIrreducibility.LConvSepI
 
 noncomputable section
 

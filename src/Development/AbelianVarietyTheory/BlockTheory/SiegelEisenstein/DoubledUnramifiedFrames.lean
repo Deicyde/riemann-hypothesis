@@ -1,7 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsQuasiFam
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.ContrFactor
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.PlacesToAdeles
+import Development.AbelianVarietyTheory.Definitions.LatticeFrames.OnesRepresent
+import Formalism.LocalToGlobal.IndefiniteReal.DatumVec
 
 noncomputable section
 

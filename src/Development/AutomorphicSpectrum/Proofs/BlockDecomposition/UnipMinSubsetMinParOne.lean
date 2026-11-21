@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RatVInjective
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.ThetaLifts.Reductions.SiegelPar
 
 set_option linter.unusedSectionVars false
 

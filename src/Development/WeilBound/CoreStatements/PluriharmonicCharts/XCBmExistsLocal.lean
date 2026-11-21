@@ -1,19 +1,8 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.GlobalPairSumGramBoundStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.PeriodGramSmoothPuncturedStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.PeriodGramComparisonBoundStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.GramMatrixChangeFrameStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.InteriorPointPolarisedStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LocalRingPointsExistsUniqueStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ComplexPointsIffCentresStatement
-import Development.WeilBound.CoreStatements.PluriharmonicCharts.XCBmExistsSumframe
-import Development.WeilBound.CoreStatements.PluriharmonicCharts.AnalyticRecentre
-import Development.WeilBound.CoreStatements.PluriharmonicCharts.InBlockChartOfInChart
-import Development.AutomorphicSpectrum.Statements.TowerExistence.GoodTowerExistsX
-import Development.AutomorphicSpectrum.Statements.MetricStatements.ExistsFlagModelBaseMetric
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.RootOnFund
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ContDiffUncentre
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.OmHeightslockG
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import ReciprocityTheory.AnalyticForms.LeviForms.IsRegFamilyInhabitStatement
 
 open AlgebraicGeometry CategoryTheory NumberField Matrix ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Top GlobalTheory.CompanionTheory.Ar.PB GlobalTheory.CompanionTheory.Ar.PB.BMx ReciprocityTheory.AnForm.M ReciprocityTheory.AnForm.P
 open ReciprocityTheory.ChartRestriction.G.Semi
@@ -41,7 +30,7 @@ theorem logR_le {n a : ℕ} {w₀ w : Fin n → ℂ} {ρ : ℝ} (hρ : 0 < ρ) (
     obtain ⟨hS', h0'⟩ := ha i hi
     have hpos : 0 < ‖w (π.symm i)‖ := norm_pos_iff.2 (hS _ hS')
     have hu : ‖uncentre w₀ ρ π w i‖ = ρ⁻¹ * ‖w (π.symm i)‖ := by
-      simp [uncentre, h0', norm_mul, abs_of_pos hρ]
+      simp [uncentre, h0', abs_of_pos hρ]
     have hx : ‖w (π.symm i)‖ ≤ ρ⁻¹ * ‖w (π.symm i)‖ := by nlinarith
     apply Real.log_le_log
     · rw [hu]

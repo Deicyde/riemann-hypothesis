@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.ScalarOnPartsFull
 import Development.AbelianVarietyTheory.Definitions.Foundations.HermitianSpaceBaseLatticeEqFrameLattice
 
@@ -49,7 +50,7 @@ def tor {v : HeightOneSpectrum (𝓞 F)} (a : (Fv F v)ˣ) : GLoc σ (hyp E) v :=
     have h2 := inv_mul_tmul (E := E) a
     ext i j
     fin_cases i <;> fin_cases j <;>
-      simp [-Units.val_inv_eq_inv_val, torMat, cT, JR, hyp, Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes.sigR, Matrix.mul_apply, Fin.sum_univ_two, h1, h2,
+      simp [-Units.val_inv_eq_inv_val, torMat, cT, JR, hyp, Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes.sigR, Matrix.mul_apply, Fin.sum_univ_two, h1,
         Algebra.TensorProduct.one_def]⟩
 
 theorem normFin_torMat {v : HeightOneSpectrum (𝓞 F)} (a : (Fv F v)ˣ) :
@@ -289,7 +290,7 @@ theorem entry_le_opNorm {n : ℕ} (y : Matrix (Fin n) (Fin n) ℂ) (i j : Fin n)
   have h2 := PiLp.nnnorm_apply_le (Matrix.toEuclideanCLM (n := Fin n) (𝕜 := ℂ) y (EuclideanSpace.single j 1)) i
   have h3 : Matrix.toEuclideanCLM (n := Fin n) (𝕜 := ℂ) y (EuclideanSpace.single j 1) i = y i j := by
     change ∑ k, y i k * (EuclideanSpace.single j (1 : ℂ)) k = _
-    simp [Pi.single_apply]
+    simp
   rw [h3] at h2
   refine h2.trans (h1.trans ?_)
   simp [opNorm]
@@ -306,7 +307,7 @@ def torArch {w : InfinitePlace F} (a : w.Completionˣ) : GArch σ (hyp E) w :=
     change cT _ _ * JR _ (hyp E) * _ = JR _ (hyp E)
     ext i j
     fin_cases i <;> fin_cases j <;>
-      simp [-Units.val_inv_eq_inv_val, cT, JR, hyp, Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes.sigR, Matrix.mul_apply, Fin.sum_univ_two, h1, h2,
+      simp [-Units.val_inv_eq_inv_val, cT, JR, hyp, Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes.sigR, Matrix.mul_apply, Fin.sum_univ_two, h1,
         Algebra.TensorProduct.one_def]⟩
 
 theorem le_height_torArch {w : InfinitePlace F} (a : w.Completionˣ) :

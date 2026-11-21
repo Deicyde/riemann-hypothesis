@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.IsLatMeasurableConst
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.DefClassNum
 
 open MeasureTheory NumberField Matrix Finset
 

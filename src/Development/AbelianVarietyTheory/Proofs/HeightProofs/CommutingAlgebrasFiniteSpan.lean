@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.IsLieDataCircle
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.MulApply
 open GlobalTheory.SmoothForms NumberField Matrix
 open scoped ContDiff Topology

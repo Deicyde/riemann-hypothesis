@@ -1,9 +1,11 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsLieBasis
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ThetaUnifAV
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.IsIntersectionFamily
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.EigLat
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsGenericFlag
+import Mathlib.Analysis.Matrix.PosDef
 
 noncomputable section
 
@@ -132,7 +134,7 @@ example (a d : ℝ) (ha : a ≠ 0) (b : ℂ) :
 
 example {g : ℕ} (Hm : Matrix (Fin g) (Fin g) ℂ) (p q : Fin g) :
     hermForm Hm (Pi.single p 1) (Pi.single q 1) = Hm p q := by
-  simp [hermForm, ← Pi.single_star]
+  simp [hermForm]
 
 end Minor
 

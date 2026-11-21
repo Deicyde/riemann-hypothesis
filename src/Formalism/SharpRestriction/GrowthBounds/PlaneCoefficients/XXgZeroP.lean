@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.PlaneCoefficients.TouchCOfMem
+import Formalism.SharpRestriction.GrowthBounds.PlaneCoefficients.NoOpStep
+import Formalism.SharpRestriction.GrowthBounds.PlaneCoefficients.ValuationGeOfLeAddOne
 
 noncomputable section
 

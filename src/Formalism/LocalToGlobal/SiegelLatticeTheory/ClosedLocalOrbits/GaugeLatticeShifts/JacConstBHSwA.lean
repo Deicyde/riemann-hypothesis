@@ -1,5 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.JacConstBHSwB
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.JacConstBHB
+import Formalism.SharpRestriction.CuspSpanNormBounds.BridgeCSB
 
 noncomputable section
 
@@ -26,8 +28,7 @@ theorem norm_RL (X : Mat k r) : ‖RL X‖ = ‖X‖ := by
   rw [Fintype.sum_prod_type]; refine Finset.sum_congr rfl fun i _ => ?_
   rw [Fintype.sum_prod_type]; refine Finset.sum_congr rfl fun j _ => ?_
   rw [Fintype.sum_bool]
-  simp only [RL, Formalism.MainNotions.S.realifyFun, LinearMap.coe_mk, AddHom.coe_mk, Real.norm_eq_abs, sq_abs, if_true, Bool.false_eq_true,
-    if_false]
+  simp only [RL, LinearMap.coe_mk, AddHom.coe_mk, Real.norm_eq_abs, sq_abs]
   rw [Real.rpow_two, Complex.sq_norm, Complex.normSq_apply]
   simp [WithLp.equiv]
   unfold Formalism.MainNotions.S.realifyFun

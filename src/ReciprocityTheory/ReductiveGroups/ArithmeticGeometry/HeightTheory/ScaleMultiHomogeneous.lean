@@ -1,4 +1,7 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.HtDefs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.LaTIsPrime
+import ReciprocityTheory.SemistableReduction.SphereLogIntegrableStatement
 
 namespace ReciprocityTheory.ChartRestriction.G.T0
 

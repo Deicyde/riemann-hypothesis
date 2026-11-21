@@ -1,9 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LinePlace
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CellFunctorOfCharCentral
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SizeMatrixCharacterLeviBlockExists
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.GeometricLemmaFiltration
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CentralExponentBoundOver
+import Mathlib.LinearAlgebra.Lagrange
 
 open GlobalTheory.SmGL GlobalTheory.PRep GlobalTheory.LeviBlockExponent GlobalTheory.CuspBlock GlobalTheory.JacLineSplit
 
@@ -162,7 +161,7 @@ theorem comm_of_scalar {β : Type} {m' : β → Type} [∀ j, Fintype (m' j)] [�
   funext j
   rw [Pi.mul_apply, Pi.mul_apply, hx j]
   ext1
-  simp only [Units.val_mul, Matrix.GeneralLinearGroup.scalar, Units.coe_map, MonoidHom.coe_coe]
+  simp only [Units.val_mul, Matrix.GeneralLinearGroup.scalar, Units.coe_map]
   exact (Matrix.scalar_commute _ (fun r => Commute.all _ r) _).symm.eq
 
 theorem mem_relParab_of_scalar {β γ : Type} [Fintype β] [Fintype γ] [LinearOrder γ]

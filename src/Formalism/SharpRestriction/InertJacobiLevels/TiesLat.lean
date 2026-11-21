@@ -1,4 +1,6 @@
-import Formalism.SharpRestriction.InertJacobiLevels.TieTTwValsOfMem
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.InertJacobiLevels.VVEqEmptyOfNotIsResidueClassZero
 
 noncomputable section
 

@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MulEqOfRangeLe
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.NormCVPosIdele
-import GroundTheory.AutomorphicForms.AnisotropicHeight
 
 noncomputable section
 

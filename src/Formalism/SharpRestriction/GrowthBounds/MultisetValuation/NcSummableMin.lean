@@ -1,4 +1,6 @@
-import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.RelativePresentationOfD7
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.FormalGroupSystem
 
 noncomputable section
 
@@ -68,7 +70,7 @@ theorem nc_min (p : ℕ) (hp : 2 ≤ p) (y yu : ℝ) (z zu : ℕ → ℝ) (hy : 
     positivity
   have ha : y / ((p : ℝ)) ^ (2 * e + 1) ≤ yu / ((p : ℝ)) ^ (2 * e + 1) := div_le_div_of_nonneg_right hy hq.le
   have hze := hz e
-  simp only [Pi.sub_apply, min_def]
+  simp only [min_def]
   split_ifs <;> linarith
 
 theorem nc_pos (p : ℕ) (hp : 2 ≤ p) (y yu : ℝ) (z zu : ℕ → ℝ) (ex exu : ℕ → Prop) [DecidablePred ex]

@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.MixedCoefficientClosed
 import Formalism.LocalToGlobal.CharacterGerms.FirstPartialLawAtPoints
+import Formalism.LocalToGlobal.CharacterGerms.RankMaximalOfNondegenerate
+import Formalism.LocalToGlobal.CharacterGerms.RowTiePCartSelfSt
 
 noncomputable section
 

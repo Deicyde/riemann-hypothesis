@@ -1,9 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.EqConjOfInFrame
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.GridFiniteDatumVectorThetaFockVacuum
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsColIntertwiner
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HighestWeightBelow
-import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.SplitLastBlockActX
+import Development.AbelianVarietyTheory.Statements.HeckeThetaIntegrals.StepUnfold
 
 noncomputable section
 

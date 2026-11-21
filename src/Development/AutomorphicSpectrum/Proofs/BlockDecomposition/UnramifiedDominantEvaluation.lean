@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FintypeResidue
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LocalFunctionalSectionNonvanishing
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LatticeVolumeGlTwoTranslateStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LatticeCharacterIntegralZeroStatement
@@ -93,7 +93,7 @@ theorem row_A (l : Fin 3 → ℤ) (i j : ℕ) (c : Fin j → 𝓀[F]) (b : Fin 2
     ext t; fin_cases t <;> simp <;> ring
   rw [e, Units.val_mul, coe_torusPow]
   simp only [uni2]
-  fin_cases b <;> simp [Matrix.mul_apply, Fin.sum_univ_two, Matrix.diagonal]
+  fin_cases b <;> simp [Matrix.mul_apply, Matrix.diagonal]
 
 theorem inn_rep {ψ : AddChar F Circle} (hψ : IsStd ψ) (l : Fin 3 → ℤ) (i j : ℕ) (c : Fin j → 𝓀[F]) :
     inn ψ (Φ0 F) (rowRep i j c * (torusPow F 2 ![l 0, l 1])⁻¹) (torusPow F 3 l) =

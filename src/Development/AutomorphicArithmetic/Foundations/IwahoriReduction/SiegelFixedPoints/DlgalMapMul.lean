@@ -1,5 +1,7 @@
-import Development.AutomorphicArithmetic.Foundations.IwahoriReduction.SiegelFixedPoints.IsThBIff
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsLamOfLSmulIff
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.EeProd
+import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.ResMapBijective
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 open scoped MatrixGroups Matrix
 open GlobalTheory.KZ GlobalTheory.K4 GlobalTheory.Glue GlobalTheory.KummerEisensteinGalois UpperTheory.Kd.L
@@ -52,7 +54,7 @@ theorem UpperTheory.Kd.L.dlgal :
       (algebraMap Ω (HahnSeries ℚ Ω) c * y).coeff r = c * y.coeff r := by
     intro c y r
     rw [HahnSeries.algebraMap_apply']
-    simp [HahnSeries.C_mul_eq_smul]
+    simp
   have hsκ : s κ ≠ 0 := (map_ne_zero _).2 hκ
   have hc0 : algebraMap Ω X.K (s κ) ≠ 0 := (map_ne_zero _).2 hsκ
   have hexpa : X.exp ((algebraMap Ω X.K (s κ))⁻¹ * X.gal s (algebraMap Ω X.K κ * a)) =

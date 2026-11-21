@@ -1,6 +1,5 @@
-import Formalism.SharpRestriction.AdmissibleParameterJoins.DIVfromGLe
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.AdmissibleParameterJoins.SfromGLu
-import Formalism.SharpRestriction.GlobalSchurBounds.JointsL
 import Formalism.LocalRingCardinality.SpanPowerMembership.PlacesOverNcardOfSplitInj
 import Formalism.LocalRingCardinality.IntCastDvdOfDvdIntegers
 

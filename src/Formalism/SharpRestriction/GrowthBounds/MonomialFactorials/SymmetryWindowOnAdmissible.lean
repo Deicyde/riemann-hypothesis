@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.MonomialFactorials.SymmetryWindowLevelDimOnAdmissible
 import Formalism.SharpRestriction.GrowthBounds.MonomialFactorials.LvlDimCondition
 

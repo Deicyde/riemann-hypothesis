@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrobeniusPowRootOfUnity
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.TwOrbMEqTwOrbUOfNormal
+import ReciprocityTheory.ClassFieldTheory.LocalClassField.CycFieldA
 open ReciprocityTheory.DiscreteGroups.LocalClassField GlobalTheory.LKRes GlobalTheory.LKRes.ResSplit
 
 noncomputable section
@@ -49,7 +50,7 @@ theorem Qr_span_pow (p : ℕ) [Fact p.Prime] {r : ℕ} (hr : 0 < r) (ζ : Qr p r
   refine ⟨fun j => f.coeff j, ?_⟩
   apply Subtype.ext
   rw [h1, Polynomial.aeval_eq_sum_range' hf, Finset.sum_range]
-  simp [IntermediateField.coe_sum]
+  simp
 
 theorem KQ_eq_sum_pow : ∀ (p : ℕ) [Fact p.Prime] (K : IntermediateField ℚ_[p] (PadicAlgCl p)) (r : ℕ), 0 < r →
     ∀ (ζ : Qr p r), IsPrimitiveRoot (ζ : PadicAlgCl p) (p ^ r - 1) →

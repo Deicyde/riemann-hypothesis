@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.TwoChartAtlas.AdditionLawSecondIdentity
+import Mathlib.RingTheory.MvPolynomial.Ideal
 
 set_option autoImplicit false
 noncomputable section
@@ -67,7 +69,7 @@ theorem jet_mk_eq_zero_iff (p : MvPolynomial σ R) :
     (Ideal.Quotient.mk _ p : Jet R σ m) = 0 ↔ ∀ e : σ →₀ ℕ, e.degree ≤ m → p.coeff e = 0 := by
   have h : orig R σ = MvPolynomial.idealOfVars σ R := rfl
   rw [Ideal.Quotient.eq_zero_iff_mem, h, MvPolynomial.mem_pow_idealOfVars_iff']
-  simp [Nat.lt_succ_iff]
+  simp
 
 theorem mem_degLE_iff [Fintype σ] [DecidableEq σ] (e : σ →₀ ℕ) : e ∈ degLE m ↔ e.degree ≤ m := by
   unfold degLE

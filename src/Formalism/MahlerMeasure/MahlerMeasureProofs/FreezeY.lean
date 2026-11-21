@@ -1,4 +1,12 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.MahlerMeasure.IsFrozenInv
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace Formalism.GM.FrozenVariableComponents
 
@@ -76,7 +84,7 @@ private theorem llPart_single_castSucc (i : Fin N) (c : Fin r) (k : ℕ) :
 private theorem etaPart_single_castSucc (i : Fin N) (c : Fin r) (k : ℕ) :
     etaPart (Finsupp.single (Fin.castSucc i, c) k) = 0 := by
   ext c'
-  simp [Finsupp.single_apply, fin_castSucc_ne_last i]
+  simp [fin_castSucc_ne_last i]
 
 private theorem llPart_single_last (c : Fin r) (k : ℕ) :
     llPart (Finsupp.single (Fin.last N, c) k) = 0 := by
@@ -654,7 +662,7 @@ theorem diff_gen (LL : Letters N) (ρ c : Fin r) (hc : c ≠ ρ) (x : Fin N × F
     (try (have hcd : c ≠ d := Ne.symm ‹¬d = c›)) <;>
     (try (have hρd : ρ ≠ d := Ne.symm ‹¬d = ρ›)) <;>
     simp only [map_sub, map_sum, map_neg, map_zero, mvPolynomial_pderiv_X_mul_X_eq_ite] <;>
-    simp [*, n1, Ne.symm hc, freezeSub_apply, Finset.sum_ite_eq, Finset.sum_ite_eq'] <;> ring
+    simp [*, freezeSub_apply, Finset.sum_ite_eq] <;> ring
 
 theorem diff_id (LL : Letters N) (ρ c : Fin r) (hc : c ≠ ρ) (f : MvPolynomial (Fin N × Fin r) ℚ_[p]) :
     X (Fin.last N, ρ) * pderiv (Fin.last N, c) (aeval (freezeSub p LL ρ) f) =
@@ -740,7 +748,7 @@ theorem kill_freezeSub (LL : Letters N) (ρ : Fin r) :
   rw [AlgHom.comp_apply, aeval_X, aeval_X, freezeSub_apply]
   have n2 : ∀ i : Fin N, Fin.castSucc i ≠ Fin.last N := fun i => fin_castSucc_ne_last i
   cases hv : LL.vec i <;> by_cases hc : c = ρ <;>
-    simp [kill, emb, hc, n2, mul_ite, ite_mul, Finset.sum_ite_eq, Finset.sum_ite_eq'] <;> ring
+    simp [kill, emb, hc, n2, mul_ite, Finset.sum_ite_eq'] <;> ring
 
 theorem aeval_scaled_monomial (ρ : Fin r) (m : Fin N × Fin r →₀ ℕ) (a : ℚ_[p]) :
     aeval (fun x : Fin N × Fin r => (X (Fin.last N, ρ) * X (emb x) : MvPolynomial (Fin (N + 1) × Fin r) ℚ_[p]))
@@ -1001,7 +1009,7 @@ theorem freeze_pol (LL : Letters N) (ρ : Fin r) (n : ℕ) (hn : LL.total ≤ n)
             (if Fin.castSucc x.1 = Fin.last N then 1 else 0) + (if Fin.last N = Fin.last N then 1 else 0)) =
             fun _ => 1 := by
           funext x
-          simp [fin_castSucc_ne_last]
+          simp
         rw [e, weight_one']
         unfold Formalism.GM.M.Letters.total
         exact Finset.sum_congr rfl (fun i _ => hf' m (mem_support_iff.2 hm) i)

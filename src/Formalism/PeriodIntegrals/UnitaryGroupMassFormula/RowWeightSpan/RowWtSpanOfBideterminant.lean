@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.RowWtSpan
+import Mathlib.RingTheory.MvPolynomial.EulerIdentity
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open MvPolynomial
 

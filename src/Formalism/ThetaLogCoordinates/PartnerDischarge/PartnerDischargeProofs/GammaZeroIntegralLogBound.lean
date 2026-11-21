@@ -1,7 +1,6 @@
-import Formalism.ThetaLogCoordinates.PartnerDischarge.StatementPW
-import Formalism.PolynomialDimension.FinalM
-import Formalism.ThetaLogCoordinates.TraceIsometryWeights.DischargeHeightBound
-import Formalism.ThetaLogCoordinates.TraceIsometryWeights.SchurTraceProofs.LatticeTheoremOfDischarge
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.MahlerMeasure.StatementTM
 
 namespace Formalism.InvariantFactorPaths.OddLevelGainBounds.TB
 

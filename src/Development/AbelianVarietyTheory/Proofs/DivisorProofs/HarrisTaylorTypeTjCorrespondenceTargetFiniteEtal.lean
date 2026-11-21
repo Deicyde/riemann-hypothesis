@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsInvExp
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsGenOfValEq
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HarrisTaylorTypeTjIsogeniesRepresentableStatement
@@ -200,7 +201,7 @@ theorem exists_pairing {s : S ⟶ Sp R} {c : ℕ} {o o' : Obj b N s} {ψ : o.A �
       rw [← Over.comp_left, ← Over.comp_left, comp_lift, comp_lift, whiskerRight_snd_assoc, whiskerRight_snd_assoc,
         whiskerRight_fst_assoc, whiskerRight_fst_assoc, hl]
     simp only [Fintype.prod_sum_type, Fin.prod_univ_two, Sum.elim_inl, Sum.elim_inr, Fintype.prod_unique,
-      Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val, e₁, e₂, zpow_one, zpow_neg]
+      Matrix.cons_val_zero, Matrix.cons_val_one, e₁, e₂, zpow_one, zpow_neg]
     rw [inv_mul_cancel_right]
     rfl
 

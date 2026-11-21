@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.LongWeylElementSquare
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
 
 noncomputable section
 
@@ -89,7 +91,7 @@ theorem conjTranspose_mul_mul_monomial {n : Type*} [Fintype n] [DecidableEq n]
     (hg : ∀ b j, g b j = if b = ρ j then v j else 0) (i j : n) :
     (gᴴ * H * g) i j = star (v i) * H (ρ i) (ρ j) * v j := by
   simp only [Matrix.mul_apply, Matrix.conjTranspose_apply, hg]
-  simp [apply_ite star, Finset.sum_ite_eq', ite_mul, mul_ite, Finset.sum_mul]
+  simp [apply_ite star, Finset.sum_ite_eq', ite_mul, mul_ite]
 
 theorem bigCellG : BigCellG := by
   intro k r c hc

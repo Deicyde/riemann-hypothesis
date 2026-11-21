@@ -1,8 +1,7 @@
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.LocalTypeDictionary.DiscreteSpectrumResidualClassification
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MatchedMapsOrbitSum
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.LocalTypeDictionary.BernsteinUnitaryProductIrreducible
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.LocalTypeDictionary.MemPolarizationStabilizerOfDualPair
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MatchedMapsOrbitSumStatement
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenIntertwinerSkewPlaneUniqueDual
+import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SumPureMemAlgD
 
 section
 open NumberField IsDedekindDomain
@@ -35,7 +34,7 @@ private theorem induced_map_apply {U V : Type} [AddCommGroup U] [Module ℂ U] [
     polarizationInductionMap π hπ D hD (π u) = π (D u) := by
   have e : (π.quotKerEquivOfSurjective hπ).symm (π u) = Submodule.Quotient.mk u := by
     rw [LinearEquiv.symm_apply_eq]; rfl
-  simp only [polarizationInductionMap, LinearMap.coe_comp, LinearEquiv.coe_coe, Function.comp_apply, e, Submodule.mapQ_apply]
+  simp only [polarizationInductionMap, LinearMap.coe_comp, LinearEquiv.coe_coe, Function.comp_apply, e]
   rfl
 private theorem acts_zero_at_infinity {F : Type} [Field F] [NumberField F] {κ : Type} [Fintype κ]
     (T : Module.End ℂ ((κ → AF F) → ℂ)) :

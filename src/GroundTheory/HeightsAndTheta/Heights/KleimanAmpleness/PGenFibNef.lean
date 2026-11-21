@@ -1,5 +1,6 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.ImportsMoreExtra
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.Objects
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.Kleiman.SectionsOverLocalization

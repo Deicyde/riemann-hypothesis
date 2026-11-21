@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LinHomIffLinEnd
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CFxi
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RingInvolutionActionGivesPolarisedAdjointPairStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsDegenerationFactorPairingIsoPullbackStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OfTwistedAdjointCompStatement

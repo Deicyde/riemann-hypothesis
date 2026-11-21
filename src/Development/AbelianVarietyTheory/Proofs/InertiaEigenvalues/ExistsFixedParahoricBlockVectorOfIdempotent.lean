@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsIsLiftOfMemKO
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.GoodIdempotentFixesOfOnlySeriesOfLabelActs
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.DepthZeroInertia
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsTypeGroupBlockLift
 
 open GlobalTheory.PRep GlobalTheory.SmGL GlobalTheory.SplitWeil GlobalTheory.SplitRead GlobalTheory.PendOf GlobalTheory.LevelType
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
@@ -174,7 +174,7 @@ theorem exists_of_isLiftN {p : ℕ} {g : GL (Fin r) (ZMod p)} {h : GL (Fin (r + 
         have := congrArg Fin.val e; simp at this; omega
       simp [bl_apply, ee_inl, ee_inr, this, hne]
     · have := H (Fin.natAdd r a) (Fin.natAdd r b)
-      rw [dif_neg (by simp only [Fin.coe_castAdd, Fin.coe_natAdd]; omega)] at this
+      rw [dif_neg (by simp only [Fin.coe_natAdd]; omega)] at this
       simp [bl_apply, ee_inr, this, Matrix.one_apply]
   have hdet : IsUnit M.det := by
     have h1 : IsUnit (bl F r t h).val.det := (Matrix.isUnit_iff_isUnit_det _).1 (bl F r t h).isUnit

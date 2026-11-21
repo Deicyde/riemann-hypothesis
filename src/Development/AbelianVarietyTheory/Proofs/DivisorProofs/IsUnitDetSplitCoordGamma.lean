@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitHomVal
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -50,8 +50,8 @@ theorem gamS_mul_neg_gamS_neg {R : Type} [Field R] {m : ℕ} (K L : Matrix (Fin 
     simp only [Matrix.mul_apply, Fintype.sum_sigma, Fin.sum_univ_three, Matrix.neg_apply] <;>
     simp only [gamS_00, gamS_01, gamS_02, gamS_10, gamS_11, gamS_12, gamS_20, gamS_21, gamS_22] <;>
     simp only [Fintype.sum_unique, Matrix.one_apply, Sigma.mk.inj_iff, heq_eq_eq, mul_zero, zero_mul, neg_zero,
-      Finset.sum_const_zero, add_zero, zero_add, mul_one, one_mul, neg_neg, mul_neg, Finset.sum_neg_distrib, hab,
-      true_and, and_true, if_true]
+      Finset.sum_const_zero, add_zero, zero_add, mul_one, neg_neg, mul_neg, Finset.sum_neg_distrib,
+      true_and]
   case «1».«1» =>
     show -∑ x : Fin (GlobalTheory.IndLineGL.blk3 m 1), K a x * -(L x b) = _
     simp only [mul_neg, Finset.sum_neg_distrib, neg_neg, hab]

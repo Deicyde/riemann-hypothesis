@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.VtUniq
 
 set_option autoImplicit false
@@ -48,7 +50,7 @@ theorem val_of_pull {φ : K → (Y ⟶ X)} {ε : K → ℤ} {φ' : K → (Y' ⟶
     val t' r z J = val t (r ≫ h) z J := by
   obtain rfl : φ' = fun k => h ≫ φ k := funext e
   unfold val
-  simp only [Category.assoc]
+  simp only
   rw [H]
   all_goals first
     | rfl
@@ -199,7 +201,7 @@ theorem eθ {T T' : Over S} (σ : T' ⟶ T) (x : T ⟶ A) :
       (σ ▷ A).left ≫ (![(snd T A).left, (translPt A x).left] : Fin 2 → _) kk := by
   intro kk
   fin_cases kk
-  · simp [← Over.comp_left]
+  · simp
   · simp [← Over.comp_left, translPt_whisk]
 
 theorem exists_phi_pull {T T' : Over S} (σ : T' ⟶ T) (θ : ThetaGrp A L k T) :

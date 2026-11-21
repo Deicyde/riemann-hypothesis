@@ -1,7 +1,5 @@
-import Mathlib
-import Formalism.SatakeDualWeyl.Statement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemMatLat
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IsDiscreteValuationRingIntegralClosure
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.EqMulIntegralClosureOfSeparableInvolutionAlgebra
 
 noncomputable section

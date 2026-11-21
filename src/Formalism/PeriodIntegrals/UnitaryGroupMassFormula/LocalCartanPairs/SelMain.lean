@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalCartanPairs.SelCore
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.Tactic.ENatToNat
 
 noncomputable section
 open Matrix
@@ -47,7 +50,7 @@ theorem sel_main (σ : R ≃+* R) (ϖ : R) (hϖ0 : ϖ ≠ 0) (hϖ : ¬ IsUnit ϖ
         by_cases hl : l = j
         · subst hl
           simp
-        · simp [Pi.single_apply, hl]
+        · simp [hl]
       rw [hs]
       simp [Matrix.mulVec_single, dotProduct, Pi.single_apply]
     · rw [Matrix.mulVec_mulVec, hg2, Matrix.smul_mulVec, Matrix.one_mulVec]

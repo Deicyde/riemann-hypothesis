@@ -1,7 +1,17 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PlaceDivisors.AlWellDefSt
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.RosatiAdj
 import ReciprocityTheory.DualLattices.CotangentSurjective
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Analysis.Normed.Field.Instances
+import Mathlib.NumberTheory.NumberField.CMField
+import Mathlib.NumberTheory.Padics.Complex
+import Mathlib.RingTheory.DedekindDomain.Different
+import Mathlib.Topology.Algebra.Nonarchimedean.Completion
 
 set_option autoImplicit false
 

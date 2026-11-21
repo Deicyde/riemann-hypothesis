@@ -1,9 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerVolume.LocExOf
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerVolume.PosNear
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerVolume.FibFour
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerVolume.DensFibInf
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerVolume.DensFibV
 
 noncomputable section
 

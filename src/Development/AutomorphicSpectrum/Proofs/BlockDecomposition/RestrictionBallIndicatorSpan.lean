@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MvecLeviMulUv
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsMemTwKerPolyBall
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SmoothIntegralLinear
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLocallyConstantAddChar
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsRepsSumEqZero
 
 noncomputable section
 

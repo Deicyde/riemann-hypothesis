@@ -1,5 +1,5 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.FourthExpansionIdentity
-import Formalism.RealPlaceAnalysis.RealPlaceTaylor.QuantumDetHighestWeightHolds
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.FirstExpansionIdentity
 
 open Matrix Finset
 

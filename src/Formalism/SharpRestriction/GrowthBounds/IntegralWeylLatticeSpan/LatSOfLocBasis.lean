@@ -1,7 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.GL6.PRLocV
-import Formalism.LocalToGlobal.GroupLattices.LevelCharts.SelfDualPI
 import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.IntSplitOf
-import Formalism.SharpRestriction.GenusPolyhedralBounds.RelativeIndexClassSets.LocIdFr
 
 noncomputable section
 

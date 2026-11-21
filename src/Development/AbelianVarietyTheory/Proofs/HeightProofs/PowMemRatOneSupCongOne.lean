@@ -1,9 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.HeightFunctions.FiniteDimensionalOfSz
-import Development.AbelianVarietyTheory.Definitions.HeightFunctions.NormComparisonConstants
-import Formalism.LocalToGlobal.ProjectiveLattices.DepthTie
-import Development.AbelianVarietyTheory.Definitions.Jets.EmbShortThLeThetaPlain
-import Development.AbelianVarietyTheory.Definitions.ExistenceOfLattices.CoeSelfDualLatticeInFrameCoordinatesEq
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.PowClassNumberIntegral
 
 noncomputable section

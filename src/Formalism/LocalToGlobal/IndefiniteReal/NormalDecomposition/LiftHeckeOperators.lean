@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.NormalDecomposition.DecompOfNormalStatement
-import Formalism.LocalToGlobal.IndefiniteReal.PrimitiveStatementsWithPassage
-import Formalism.LocalToGlobal.IndefiniteReal.LiftCoordinatesInGoodPartFamily
 import Formalism.LocalToGlobal.IndefiniteReal.LiftGoodPartComplexEqRangeFamily
 
 open Module NumberField IsDedekindDomain

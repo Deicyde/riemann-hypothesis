@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.EqUniformizerSmulOfLevelOne
 
 noncomputable section

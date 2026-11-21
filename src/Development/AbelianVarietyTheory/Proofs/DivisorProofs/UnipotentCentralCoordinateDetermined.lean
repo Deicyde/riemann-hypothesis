@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoC
 open scoped TensorProduct Matrix
 open NumberField IsDedekindDomain MeasureTheory Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.ThK.UnipDom
@@ -79,7 +79,7 @@ theorem vecMul_incM (w : Fin n → AE F E) (i : Fin n) :
   have h : (fun k => cA σ (incV F (Pi.single i (1 : E)) k)) = Pi.single i 1 := by
     funext k
     by_cases h : k = i
-    · subst h; simp [incV, cA_inclR]
+    · subst h; simp [incV]
     · simp [incV, h]
   unfold fA
   rw [h, Matrix.mulVec_single_one]

@@ -1,14 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SameIdIff
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsCrystalPairing
-import Development.AbelianVarietyTheory.PublishedTheorems.RelativeAmpleness.RelAmpleAndKTrivIff
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.ExistsPointPrimitiveBundleEqTranslatePpav
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.FlatKernelPolarisationCosetsOverDVR
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsGenThetaOfIsProjBy
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.VeryAmpleByOfRelAmple
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.KernelFiniteFlatHolds
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.LineBundleProductAcyclicOfAffineBaseAcyclic
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.CubeTotalComplexAcyclicOfSlicesInductionOnCard
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open CategoryTheory CategoryTheory.Limits AlgebraicGeometry MonoidalCategory CartesianMonoidalCategory MonObj
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.AbLaw GlobalTheory.CechPic GlobalTheory.AbDual GlobalTheory.DualCon
 open scoped CategoryTheory.Obj
@@ -107,7 +100,7 @@ theorem cech_sliceFst_singleton_acyclic {𝔦 𝔧 : Type} [LinearOrder 𝔦] [L
     intro n
     rw [IsZero.iff_id_eq_zero]
     have := congrArg (fun φ => homologyMap ((cubeFunctor _ R).map φ) n) hr
-    simp only [Functor.map_comp, Functor.map_id, homologyMap_comp, homologyMap_id] at this
+    simp only [Functor.map_comp, homologyMap_comp] at this
     have h0 : homologyMap ((cubeFunctor _ R).map ρ₁) n = 0 := (h₃ n).eq_of_src _ _
     rw [h0, comp_zero, CategoryTheory.Functor.map_id, homologyMap_id] at this
     exact this.symm

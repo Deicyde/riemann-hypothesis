@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.ConcretePkgSpec
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsCompactParahoricLevelAndContainsLifts
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GoodFiniteOfHcFinite
 

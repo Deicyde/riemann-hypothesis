@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.SphericalIntegral
 
 noncomputable section
@@ -76,7 +77,7 @@ theorem exists_subquotient_principalSeries {V : Type*} [AddCommGroup V] [Module 
       heckeAct μ (principalSeries F n χ) (h : HeckeAlgebra μ) φ = 0 := by
     intro h
     rw [heckeAct_sphericalVector hχ, smul_eq_zero, ← hw, RingHom.mem_ker, sphericalCharacter_apply]
-    simp [φ, sphericalVector_ne_zero hχ]
+    simp [sphericalVector_ne_zero hχ]
   obtain ⟨A⟩ := nonempty_equiv_quotRep hKc hKo I hρ hv₀ h0 hIv
   let Φ : HeckeAlgebra μ →ₗ[ℂ] principalSeriesSpace F n χ := orbitMap φ (hs φ)
   have hΦ : ∀ f, Φ f = heckeAct μ (principalSeries F n χ) f φ := fun _ => rfl

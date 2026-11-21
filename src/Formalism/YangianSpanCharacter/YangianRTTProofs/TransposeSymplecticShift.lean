@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Open
 import Formalism.YangianSpanCharacter.StatementT
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 namespace Formalism.YangianSpanCharacter.P
 
@@ -39,7 +43,7 @@ theorem planeWaveIntertwining : Formalism.YangianSpanCharacter.T.PlaneWave := by
     ext i j
     fin_cases i <;> fin_cases j <;>
       simp [Formalism.YangianSpanCharacter.T.Tm, Formalism.YangianSpanCharacter.T.Uinv, Matrix.mul_apply, Fin.sum_univ_two, hfc, hfci] <;>
-      simp only [mul_add, add_mul, mul_neg, neg_mul, hpf, key, Algebra.commutes] <;>
+      simp only [mul_add, hpf, key, Algebra.commutes] <;>
       first | noncomm_ring | abel
 
 theorem unipotentSymplectic : Formalism.YangianSpanCharacter.T.UJU := by

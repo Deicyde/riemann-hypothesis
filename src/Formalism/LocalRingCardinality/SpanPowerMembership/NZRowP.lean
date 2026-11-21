@@ -1,4 +1,6 @@
-import Formalism.LocalRingCardinality.SpanPowerMembership.NZRowG
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.PrincipalHermitianLattice
 
 noncomputable section
 

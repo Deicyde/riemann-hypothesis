@@ -1,5 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.DiscreteGroups.GlobalIrreducibility.ExistsColChar
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.UnipRadStdBlocksTwoNeBotStatement
+import Development.DiscreteGroups.GlobalIrreducibility.LConvCut
+import Development.DiscreteGroups.GlobalIrreducibility.NeTopOfConj
+import Development.DiscreteGroups.GlobalIrreducibility.TopLeftElemInv
+import Development.DiscreteGroups.GlobalIrreducibility.TopLeftXAInv
 
 noncomputable section
 

@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousOfVal
 import Formalism.LocalToGlobal.ProjectiveLattices.UnramBridgeHolds
+import Mathlib.NumberTheory.NumberField.Cyclotomic.Ideal
 
 noncomputable section
 

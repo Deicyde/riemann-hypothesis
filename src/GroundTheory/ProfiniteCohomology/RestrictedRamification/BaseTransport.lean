@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.BaseChangeModules
 import GroundTheory.ProfiniteCohomology.PoincarePairs.ConeProduct
-import GroundTheory.ProfiniteCohomology.PoincarePairs.MackeyCup
+import GroundTheory.ProfiniteCohomology.PoincarePairs.IsDiscreteRepResHomCoindRes
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

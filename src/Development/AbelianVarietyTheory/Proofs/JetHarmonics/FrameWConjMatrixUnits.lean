@@ -1,8 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Jets.SideFam
-import Development.AbelianVarietyTheory.Definitions.Jets.SumIoPr
-import Formalism.RealPlaceAnalysis.StatementE
-import Formalism.RealPlaceAnalysis.StatementKT
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Jets.SumIoPrAlt
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open BranchingSupport Formalism.FourierDecayAlt Formalism.FourierDecayAlt.ThreeDimData Matrix MeasureTheory Finset
 open scoped InnerProductSpace ENNReal
 
@@ -145,7 +144,7 @@ lemma herm_U'' (hU : gᴴ * Hpk k r * g = Hpk k r) (x y : Fin (2 * r + k + 1) �
 
 lemma conj_single_apply (g h : Matrix (Fin (2 * r + k + 1)) (Fin (2 * r + k + 1)) ℂ) (a b i j) :
     (g * Matrix.single a b (1 : ℂ) * h) i j = g i a * h b j := by
-  simp [Matrix.mul_apply, Matrix.single_apply, ite_and, Finset.sum_mul]
+  simp [Matrix.mul_apply, Matrix.single_apply, ite_and]
 
 lemma H_single_H (a b : Fin (2 * r + k + 1)) :
     Hpk k r * Matrix.single b a (1 : ℂ) * Hpk k r =

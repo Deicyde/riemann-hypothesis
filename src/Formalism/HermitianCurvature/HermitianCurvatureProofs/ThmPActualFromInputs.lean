@@ -1,10 +1,9 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.EqOfContinuousOffZero
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.TopIdentFromParts
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LiftMemMatrixAlgebra
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.HermMulVecMulVec
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.FsvMulFsvNeg
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.FrameOfAdmissibleWord
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.DiagScalarCommuteTransposedRMatrix
 
 open MeasureTheory
 

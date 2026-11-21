@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.HbApply
 import Formalism.SharpRestriction.CuspSpanNormBounds.KappaEndpoints
 open scoped Classical ENNReal Pointwise

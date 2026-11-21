@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.KernelLattices.ColumnData.GlobTied
-import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.ColInst
 import Formalism.LocalToGlobal.Columns.ChainOneP
-import Formalism.LocalToGlobal.Columns.ExistsYOfOfMemYbSet
 
 open NumberField IsDedekindDomain
 

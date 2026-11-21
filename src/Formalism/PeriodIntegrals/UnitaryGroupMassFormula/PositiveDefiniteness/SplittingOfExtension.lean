@@ -1,5 +1,11 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.PositiveDefiniteness.Development
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
 
 noncomputable section
 
@@ -66,7 +72,7 @@ theorem hform_single {E : Type} [CommRing E] (σ : E →+* E) {k : ℕ} (J : Mat
     (i0 : Fin k) (s : E) :
     hform σ J (Pi.single i0 s) (Pi.single i0 s) = σ s * J i0 i0 * s := by
   unfold PI.hform
-  simp [Pi.single_apply, Finset.sum_ite_eq, Finset.sum_ite_eq', mul_assoc, mul_comm, mul_left_comm]
+  simp [Pi.single_apply, Finset.sum_ite_eq', mul_comm, mul_left_comm]
   rw [Finset.sum_eq_single i0]
   · simp
   · intro b _ hb

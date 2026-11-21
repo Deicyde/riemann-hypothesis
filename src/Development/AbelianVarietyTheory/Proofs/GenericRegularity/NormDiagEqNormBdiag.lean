@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.FrameEx
 import Development.AbelianVarietyTheory.Proofs.GenericRegularity.NormWcharEqNormBchar
 

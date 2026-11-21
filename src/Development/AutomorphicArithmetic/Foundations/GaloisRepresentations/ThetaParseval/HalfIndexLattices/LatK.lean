@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.HalfIndexLattices.InertOfKept
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.HalfIndexLattices.IsLatRepL
+import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.LatRep
 
 noncomputable section
 

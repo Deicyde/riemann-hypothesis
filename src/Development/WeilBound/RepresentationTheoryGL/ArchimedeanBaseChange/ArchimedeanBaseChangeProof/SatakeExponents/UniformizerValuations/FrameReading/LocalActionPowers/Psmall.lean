@@ -1,9 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.SatakeExponents.UniformizerValuations.FrameReading.FmTools
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.HasSatakeGLOfIsSatVecGL
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FinsumOutOfLe
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LevelFamInf
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RelIndexNeZeroOfIsOpen
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RelIndexNeZeroOfIsOpenLeIsCompact
+import GroundTheory.GlobalFields.LocalFieldAtPlace
 
 noncomputable section
 

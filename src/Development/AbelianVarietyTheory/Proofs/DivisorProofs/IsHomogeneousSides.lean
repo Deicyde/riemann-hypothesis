@@ -1,16 +1,16 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PrismaticDieudonnePerfd
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ScholzeWeinsteinB
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.Definitions.Divisors.ReferenceMetricMulDualEqOne
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ArTopTrue
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ScaleZeroComp
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolynomialNumeratorLinearExtension
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CurveClIsHomogeneous
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AwayAgree
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DualMapCompEpsMul
+import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
 
 set_option autoImplicit false
 
@@ -79,7 +79,7 @@ theorem mixEv_sieg (T : Finset ℕ) (hT : 1 ∉ T) (R : ℝ) (c : O.s.Comp) :
   simp only [AlgHom.comp_apply] at e2
   rw [map_mul, e2, map_mul, map_mul, rename_rename]
   congr 1
-  simp only [ArIn.mixEv, aeval_X, update_ind_one T hT, map_sum, map_pow, rename_X, map_mul, algHom_C]
+  simp only [ArIn.mixEv, aeval_X, update_ind_one T hT, map_sum, map_pow, rename_X, algHom_C]
   norm_num
   rfl
 

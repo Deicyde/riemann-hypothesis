@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.Chebotarev.AbsLogSubLogLeOfHalf
+import ReciprocityTheory.Chebotarev.Support
 
 open NumberField NumberField.mixedEmbedding NumberField.Units
 

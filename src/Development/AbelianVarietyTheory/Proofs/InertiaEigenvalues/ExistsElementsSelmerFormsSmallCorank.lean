@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsDualDualRep
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.PoitouTateNineTermTransgressionZeroApply
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.CohDimTwoLocalOfLocalFiniteness
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.ContinuousCycMod
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsPlaceOverMoveValCc
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsAlternatingFormLeftCorankLeOneStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SemilinearCoefficientMapCocycles
@@ -371,7 +368,7 @@ theorem map_transpose_mul_dual (g : GE N) :
       algebraMap (X.O0 i) K ((eps0 X i g : (X.O0 i)ˣ) : X.O0 i) • (1 : Matrix _ _ K) := by
   rw [← Matrix.transpose_map, ← Matrix.map_mul, transpose_mul_dual]
   ext a b
-  by_cases h : a = b <;> simp [Matrix.one_apply, h]
+  by_cases h : a = b <;> simp [h]
 
 omit [TopologicalSpace K] [DiscreteTopology K] in
 theorem pairing {ρ : GE N →* GL (Fin D.R.r) (X.O0 i)} (hρ : IsDual i s ρ) (g : GE N) (v w : Fin D.R.r → K) :

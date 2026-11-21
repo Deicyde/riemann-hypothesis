@@ -1,5 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.UnitMulMemIff
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.PerpEqPerpNb
+import Mathlib.Tactic.ENatToNat
 
 open scoped BigOperators
 

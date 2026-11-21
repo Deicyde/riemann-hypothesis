@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ReQuad
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PeriodMapFlatDerivative
 open Matrix GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe GlobalTheory.ThetaMet
@@ -119,8 +119,8 @@ theorem dc_identity : ∀ {g : ℕ} {E : Type} [NormedAddCommGroup E] [NormedSpa
   simp only [ContinuousLinearMap.sum_apply, ContinuousLinearMap.add_apply,
     ContinuousLinearMap.smul_apply, ContinuousLinearMap.comp_apply, ContinuousLinearMap.proj_apply,
     smul_eq_mul, hSz, Complex.imCLM_apply, Complex.reCLM_apply, ContinuousLinearMap.coe_snd',
-    ContinuousLinearMap.coe_fst', ContinuousLinearMap.coe_restrictScalars', Prod.smul_fst,
-    Prod.smul_snd, Pi.smul_apply, map_smul]
+    ContinuousLinearMap.coe_fst', ContinuousLinearMap.coe_restrictScalars',
+    Prod.smul_snd, Pi.smul_apply]
 
   have hsym : ∀ i j, τ b i j = τ b j i := fun i j => ((hτ.2.2 b hb).1.apply i j).symm
   have heq : ∀ k, (fun Q : Pt E g => ∑ j, flat τ Q (Sum.inl j) * (τ Q.1 j k).im) =ᶠ[nhds (b, z)]

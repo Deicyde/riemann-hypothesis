@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.PhiTopAgree
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.Columns.LevGSym
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 open Formalism.L2.Col
 

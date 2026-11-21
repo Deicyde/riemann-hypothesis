@@ -1,8 +1,4 @@
-import Mathlib
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.LocalWhittakerDuality.WSteps
-import GroundTheory.LocalFields.QuadraticAbelian.WeilRepQuadratic
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GTil
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WeilModulusHypothesis
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsHaarMeasureComapSubtype
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.QuadraticExtensionTestVectorBound
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsSchwartzZetaSeparatingCharacterStatement
@@ -174,7 +170,7 @@ theorem wGaussLam : Ad3.K.GL2LocalData.WGaussLam := by
   rw [hinv] at e2 e4
   have z1 := hZ 1
   have z2 := hZ η
-  simp only [inv_one, mul_one, mul_inv_cancel, map_one, MonoidHom.one_apply, Units.val_one, one_mul] at z1 z2
+  simp only [inv_one, mul_one, mul_inv_cancel, MonoidHom.one_apply, Units.val_one, one_mul] at z1 z2
   rw [e1, e2, e3, e4, z1, z2, hA] at hE
   have hκ' : ((κ : ℂ) / 2) ≠ 0 := by
     have : (κ : ℂ) ≠ 0 := by exact_mod_cast hκ.ne'

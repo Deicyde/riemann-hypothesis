@@ -1,7 +1,6 @@
-import Mathlib
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.BetaModuloX.Skeleton
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.BetaUniqueness.Lemmas
-import Formalism.HermitianLattices.HermitianLatticesProofs.AutFinite
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.CuspSpanNormBounds.IsPrimitiveSub
 
 noncomputable section
 

@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CountIsInvInvariant
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.NormaliserUnconj
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsLocallyConstantOfRightInv

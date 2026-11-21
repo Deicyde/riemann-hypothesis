@@ -1,5 +1,7 @@
-import ReciprocityTheory.L2DbarEstimates.PlurisubharmonicCharts.APrimeW
-import ReciprocityTheory.L2DbarEstimates.ChartDerivatives.HoloSmooth
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import ReciprocityTheory.L2DbarEstimates.PlurisubharmonicCharts.FamilyLeCoords
 
 namespace ReciprocityTheory.L2DbarEstimates.Y
 

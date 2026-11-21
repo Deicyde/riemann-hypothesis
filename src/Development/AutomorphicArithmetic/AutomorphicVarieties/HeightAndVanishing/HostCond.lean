@@ -1,6 +1,5 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.LayerLe
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.HostLevel
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CharacterLevelBounds.LevChange
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CharacterLevelBounds.LevGal
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CharacterLevelBounds.ClsOnto
 
@@ -8,7 +7,7 @@ open NumberField IsDedekindDomain Formalism.ConjugateSelfDual Formalism.HC Recip
 
 private theorem unitsMap_unitOfCoprime_coe_eq {n m : ℕ} (hd : m ∣ n) (c : ℕ) (hc : c.Coprime n) :
     ((ZMod.unitsMap hd (ZMod.unitOfCoprime c hc) : (ZMod m)ˣ) : ZMod m) = c := by
-  simp [ZMod.unitsMap, ZMod.coe_unitOfCoprime, ZMod.castHom_apply, ZMod.cast_natCast hd]
+  simp [ZMod.unitsMap, ZMod.coe_unitOfCoprime]
 
 private theorem exists_coprime_modEq_of_modEq_one_div {N p R w : ℕ} (hp : p.Prime) (hN : N ≠ 0) (hpN : p ∣ N)
     (hR : R ∣ N) (hPR : ordProj[p] N ∣ R) (hw : w ≡ 1 [MOD R / p]) (hwp : w.Coprime p) :
@@ -80,7 +79,7 @@ private theorem exists_coprime_modEq_one_chi_ne_one_of_primitive {Q p : ℕ} [Ne
     have h1 := hcon _ (ZMod.val_coe_unit_coprime u) hmod
     rw [ZMod.natCast_zmod_val] at h1
     ext
-    simp [MulChar.coe_toUnitHom, h1]
+    simp [h1]
   have hle : χ.conductor ≤ Q / p :=
     Nat.sInf_le ((DirichletCharacter.mem_conductorSet_iff χ).mpr hft)
   rw [(DirichletCharacter.isPrimitive_def χ).1 hχ] at hle

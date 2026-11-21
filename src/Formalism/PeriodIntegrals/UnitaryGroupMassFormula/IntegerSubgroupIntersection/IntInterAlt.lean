@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.PeriodIntegrals.GaugeGap
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IntegerSubgroupIntersection.IntInter
 
 namespace PI.GaugeCharW

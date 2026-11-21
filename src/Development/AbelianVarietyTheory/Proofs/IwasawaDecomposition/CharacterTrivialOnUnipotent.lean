@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MonoSpMapRingOfIntegersAlt
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.OneAddSmulVecMulVecMulVec
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SkewEqSumRankOneIsotropicStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SumRankOneIntegralRescalingStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CharacterTrivialOnIntegralTransvectionsStatement
@@ -22,7 +20,7 @@ theorem char_eq_one_of_sq_eq_zero : ∀ (E : Type) [Field E] [NumberField E] [Is
     rintro u ⟨x, rfl⟩ v ⟨y, rfl⟩
     exact herm_mulVec_mulVec_eq_zero X.Gm hsk h2 x y
   have hκ : cc X.κ0 = -X.κ0 := by
-    rcases X.κ0_xi with h | h <;> rw [h] <;> simp [cc_mul, cc_neg, X.ξ0_im, cc_two]
+    rcases X.κ0_xi with h | h <;> rw [h] <;> simp [X.ξ0_im, cc_two]
   have hκ0 : X.κ0 ≠ 0 := by
     rcases X.κ0_xi with h | h <;> rw [h] <;> simp [X.ξ0_ne]
   obtain ⟨d, ξ, t, hξW, ht, hnd⟩ := GlobalTheory.T.skew_eq_sum_rank_one_isotropic E N X.Gm X.κ0 X.Gm_herm X.Gm_det hκ hκ0 W hWiso n hsk

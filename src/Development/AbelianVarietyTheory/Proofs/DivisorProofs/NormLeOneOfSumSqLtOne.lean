@@ -1,4 +1,5 @@
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SelfMemSpanK
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.DifferentiableAtChart
 
 namespace GlobalTheory.NormBoundSumSquares
 

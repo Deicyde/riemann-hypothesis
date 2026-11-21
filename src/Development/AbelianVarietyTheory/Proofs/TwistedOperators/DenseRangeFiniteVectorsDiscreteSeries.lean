@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.SharpRestriction.Divisibility.SchurIrreducible
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SameBlockOfPosC
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.EqZeroOfFactorialBound
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoverUpqClosureExpTopAndCartanStatement

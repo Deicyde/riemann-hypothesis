@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.FrobeniusPaths.WedgeSplitTan
 import Formalism.SharpRestriction.GrowthBounds.FrobeniusPaths.LiftedColumnMultidegree
 import Formalism.SharpRestriction.GrowthBounds.FrobeniusPaths.LatticeCountingFormula
+import Formalism.SharpRestriction.GrowthBounds.FrobeniusPaths.LiftedColumnCongruence
 
 noncomputable section
 

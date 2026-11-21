@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ConjugateRepresentations.LocalLimitConjugates.CasimirResolventProjection
 
 open NumberField Matrix MeasureTheory Filter Topology Formalism.L2.Host GlobalTheory.CuspRep GlobalTheory.GKCoh GlobalTheory.UnitaryBC UpperTheory.V.Af UpperTheory.V.AlgRepEndIrreducible
@@ -16,7 +17,7 @@ private theorem UpperTheory.V.Cj.H.absInv_low {H : Type} [NormedAddCommGroup H] 
     have hn : ‖Complex.I * (s : ℂ)‖ = |s| := by
       rw [norm_mul, Complex.norm_I, one_mul, Complex.norm_real, Real.norm_eq_abs]
     rw [hn]
-    simp [Complex.mul_re, hre]
+    simp [hre]
   have h0 : 0 ≤ |s| * ‖v‖ := mul_nonneg (abs_nonneg s) (norm_nonneg v)
   nlinarith [norm_nonneg (x + (Complex.I * s) • v), sq_nonneg ‖x‖]
 

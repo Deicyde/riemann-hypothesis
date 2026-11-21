@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.CutTuples2
 import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.ValBasic
 
@@ -188,7 +189,7 @@ theorem refInputs : RefInputs (cx K v0) (crd K v0) where
     change (2 : Matrix (Fin 1) (Fin 1) K).det ≠ 0
     rw [Matrix.det_unique]
     change ((2 : ℕ) : Matrix (Fin 1) (Fin 1) K) default default ≠ 0
-    simp [Matrix.natCast_apply, Matrix.ofNat_apply]
+    simp [Matrix.natCast_apply]
   w_inj j := lin_one_inj
   theta_inj j := (tC_eq K v0 j).symm ▸ lin_one_inj
   theta_range j := congrArg LinearMap.range (tC_eq K v0 j)

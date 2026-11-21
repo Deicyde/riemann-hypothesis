@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.AnalyticDeterminants.IntegrableIteratedFDerivTranslate
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 noncomputable section
 

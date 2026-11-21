@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.TruncatedChains.RestPair
+import Formalism.SharpRestriction.GrowthBounds.RootWeights.InvariantProjectionExtremalFormula
 
 noncomputable section
 

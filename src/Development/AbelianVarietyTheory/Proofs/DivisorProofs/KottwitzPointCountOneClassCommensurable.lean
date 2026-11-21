@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsRootSelectionUnitaryRankOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RelIndexNeZeroOpenCompact
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VolEqIdxRatio
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VolConjEqOneOfMassCNeZero
 
 open Matrix NumberField GlobalTheory.LKTrip GlobalTheory.LKRes GlobalTheory.LKMid GlobalTheory.LKCount
 open scoped TensorProduct Classical
@@ -273,7 +274,7 @@ theorem pointSum_eq_pointSide_of_commensurable : ∀ {Γ G₁ G₂ : Type} [Grou
     rw [hPS]
     unfold pointSide orbK orbC
     rcases hor with h | h
-    · simp [hF0, h]
-    · simp [hF0, h]
+    · simp [h]
+    · simp [h]
 
 end GlobalTheory.LKCountComm

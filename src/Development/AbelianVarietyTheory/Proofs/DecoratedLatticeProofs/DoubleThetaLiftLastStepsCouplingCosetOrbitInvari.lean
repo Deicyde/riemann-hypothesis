@@ -1,17 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.CosInj
-import Development.AbelianVarietyTheory.Definitions.Divisors.EqOfHasValueAtInfinite
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.SeeSawLastTwoStepsValueFixedLevelPlaces
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.LastSeeSawDoubleLiftAdditive
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.LastTwoStepsDoubleLiftPeriodEqIntegral
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.SeeSawWeilBiActionCommutes
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsMulRightInvariantHaarAdelicUnitaryGroupHermiti
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.AdelicUnitaryTopology
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.HeisenbergCombinationTwoVariableModelAndLineExte
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.IsBiThetaIffJoin
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.HeisOFinsetSum
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.TwistPlaceLastTwoStepEntriesSchwartzBruhat
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.InfPartOneSubEInfSmul
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum MeasureTheory IsDedekindDomain NumberField Matrix
 open GlobalTheory.MixModel GlobalTheory.MixPer GlobalTheory.Grow GlobalTheory.Unf GlobalTheory.SplitWeil GlobalTheory.RootEx GlobalTheory.StepData GlobalTheory.SeeSaw GlobalTheory.LocMod GlobalTheory.QPl ValuativeRel
 open GlobalTheory.PosOne (toOne Covers TriPos)
@@ -271,7 +264,7 @@ theorem om_xiTop [MeasurableSpace k] [BorelSpace k] {ψ : AddChar k Circle} (hψ
   have e4 : (x * (blk g.1).val) (Sum.inr ()) = x (Sum.inr ()) ᵥ* (blk g.1).val := rfl
   rw [e3] at h2
   simp only [om, GlobalTheory.IndefiniteRowSideFullHecke.OmegaColumnSlices.omRow, Pi.smul_apply, smul_eq_mul, Chain.xiTop, det_blk, hn, hn1, map_one, Real.one_rpow, inv_one,
-    Units.val_one, Matrix.mul_one, Matrix.one_mul, Complex.ofReal_one, mul_one, one_mul, MonoidHom.one_apply, e, e4] at h1 h2 ⊢
+    Units.val_one, Matrix.one_mul, Complex.ofReal_one, mul_one, one_mul, MonoidHom.one_apply, e, e4] at h1 h2 ⊢
   rw [h2]
   linear_combination (hat ψ ν (-1) (cosetInd (box _ c) (Submodule.Quotient.mk y)) (x (Sum.inr ()) ᵥ* (blk g.1).val)) * h1
 

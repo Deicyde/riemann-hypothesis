@@ -1,8 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.StatementsArchUnimodular
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.PGramAtData
 import GroundTheory.HeightsAndTheta.Theta.RealSignature
 import GroundTheory.HeightsAndTheta.Theta.Unimodular.IndefiniteUnitary
+import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.SecondCountableTopologyArchUnitary
+import Mathlib.Topology.Compactness.Paracompact
 
 namespace GroundTheory.Heights₂.Heights.FiniteCovolume
 

@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.JacquetAdmissible
 import GroundTheory.AutomorphicForms.IwahoriFactorization
 import GroundTheory.AutomorphicForms.SmoothRepContragredient
+import Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Basic
 
 noncomputable section
 

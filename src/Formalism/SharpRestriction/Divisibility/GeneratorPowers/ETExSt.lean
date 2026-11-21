@@ -1,4 +1,6 @@
-import Formalism.LocalToGlobal.ProjectiveLattices.RecPJThAllNeBot
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.Divisibility.WeightAlgebra
 
 set_option autoImplicit false
 

@@ -1,8 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCuspW
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsRegFamConst
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK
@@ -164,7 +163,7 @@ theorem formA_iota (hA : H'.IsAdapted σ B W W₁ i₀ i₁) (w : Fin d₁ → A
   have h0 : q ᵥ* incM F H'.ι = 0 := by
     funext k
     have := hk k
-    simp only [formA, Matrix.mulVec_single_one, incV_mulVec] at this
+    simp only [formA, Matrix.mulVec_single_one] at this
     rw [← hq] at this
     simpa [Matrix.vecMul, dotProduct, incM, incV, Matrix.mulVec, Pi.single_apply, mul_comm] using this
   show (incM F H'.ι *ᵥ w) ⬝ᵥ q = 0
@@ -215,7 +214,7 @@ theorem unip_eq (hs : W.IsSkew σ B r s) (hA : H'.IsAdapted σ B W W₁ i₀ i�
       obtain ⟨c, hc⟩ := hι w
       refine ⟨fun _ => c, ?_⟩
       rw [Matrix.mulVec_add, Matrix.mulVec_add, Matrix.mulVec_smul, Matrix.mulVec_smul, hx, hc]
-      simp only [zero_smul, add_zero, Matrix.mulVec_zero]
+      simp only [zero_smul, add_zero]
       abel
     · intro z k
       change formA σ W.J (mat u *ᵥ z - z) (incV F H'.x) = 0

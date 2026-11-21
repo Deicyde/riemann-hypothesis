@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CmTypePeriodIntegralThird
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ConjugateOrderData
 open NumberField IsDedekindDomain TensorProduct GlobalTheory.CMVal GlobalTheory.IndefiniteRowSideFullHecke.DifferentConductorValuations
 open Classical
 set_option maxHeartbeats 1000000 in

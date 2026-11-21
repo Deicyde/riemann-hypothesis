@@ -1,7 +1,4 @@
-import Mathlib
-import Formalism.LocalToGlobal.PairingIndexBounds.OrthogonalChartLevels.FdOfCharts
-import Formalism.LocalToGlobal.GroupLattices.PendingLemmas.InvarianceRepresentativesLaw
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.NatCastMemOfPlace
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.PairingIndexBounds.HalvesRecursion.BoundedHalfModels.SplitElementExistsHolds
 
 noncomputable section

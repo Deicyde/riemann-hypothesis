@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.GlobalHeightBoundIffAtGoodPrimes
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsNormalizationRelativeDimZeroStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ModelProductClosedImmersionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RelativeDimClosedImmersionProductStatement

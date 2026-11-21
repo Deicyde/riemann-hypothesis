@@ -1,4 +1,5 @@
-import Development.EtaleCohomology.CohomologicalPurity.LeafHsRelPfSplit
+import BuildAid.Leniency.Open
+import Development.EtaleCohomology.CohomologicalPurity.LeafExcSpPf
 
 noncomputable section
 open CategoryTheory Limits GlobalTheory.EtC CochainComplex

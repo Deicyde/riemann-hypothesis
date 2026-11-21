@@ -1,5 +1,4 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.HeightKernels.DualStdModelField
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.StandardModelDualRank
 set_option maxSynthPendingDepth 1
 

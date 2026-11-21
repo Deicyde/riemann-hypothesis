@@ -1,6 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.CxLemmas
-import Formalism.LocalToGlobal.Divisibility.TrivialExtensionSideWellFormed
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.Divisibility.HeckeRI
+import Formalism.LocalToGlobal.IndefiniteReal.PartsOrth
 
 open Module NumberField IsDedekindDomain
 open scoped Matrix ComplexOrder InnerProductSpace

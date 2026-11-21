@@ -1,4 +1,7 @@
-import Formalism.SharpRestriction.AdmissibleParameterJoins.GandSp
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.AdmissibleParameterJoins.GandSo
+import Formalism.SharpRestriction.GlobalSchurBounds.GL3Theta
 
 noncomputable section
 

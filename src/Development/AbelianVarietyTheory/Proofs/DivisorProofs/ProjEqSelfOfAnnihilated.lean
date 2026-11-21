@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousFourierGau
+import Mathlib.Analysis.Complex.Conformal
+import Mathlib.Analysis.Complex.MeanValue
+import Mathlib.Tactic.Polynomial.Basic
 
 noncomputable section
 
@@ -321,7 +325,7 @@ theorem _root_.GlobalTheory.RealWeil.proj_eq_self_of_annihilated (V : Type) [Nor
         ring_nf
     _ = f := by
         rw [integral_smul_const, GaussianFourier.integral_cexp_neg_mul_sq_norm (by simp [Real.pi_pos])]
-        simp [div_self (ofReal_ne_zero.2 Real.pi_ne_zero)]
+        simp
 
 end GlobalTheory.RealWeil
 

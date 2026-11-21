@@ -1,8 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.MirabolicDerivatives.TwistedKernels.ExPhiPlusOnto
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PolyBall
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MemTwKerIffAverage
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.FourierTransformInversionLocalFieldPi
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsMemTwKerPolyBall
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.TwKerPolyBallLeOfValuationLe
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.AnnSubsetOfMemNhds

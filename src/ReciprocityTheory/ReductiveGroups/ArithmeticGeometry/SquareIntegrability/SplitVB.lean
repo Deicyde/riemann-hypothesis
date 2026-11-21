@@ -1,6 +1,15 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.SplitSt
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.SplitVM
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.SplitVA
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Topology.Sheaves.Presheaf
 
 namespace ReciprocityTheory.ChartRestriction.G.I2
 
@@ -58,15 +67,15 @@ theorem im_Hf_act (x ξ : Vsp dim) (β : 𝓞 E) :
   have hZ : Hf x (act β ξ) = ∑ σ, (starRingEnd ℂ) (σ (β : E)) * hA x ξ σ := by
     simp only [Hf, act, hA, Fintype.sum_sigma, Finset.mul_sum]
     refine Finset.sum_congr rfl fun σ _ => Finset.sum_congr rfl fun a _ => ?_
-    simp only [PiLp.toLp_apply, map_mul]
+    simp only [map_mul]
     ring
   have hre : ∑ σ, σ (β : E) * hA x ξ (ComplexEmbedding.conjugate σ) =
       ∑ σ, (starRingEnd ℂ) (σ (β : E)) * hA x ξ σ := by
     refine Fintype.sum_equiv (ComplexEmbedding.involutive_conjugate (K := E)).toPerm _ _ (fun σ => ?_)
-    simp only [Function.Involutive.coe_toPerm, ComplexEmbedding.involutive_conjugate (K := E) σ,
+    simp only [Function.Involutive.coe_toPerm,
       ComplexEmbedding.conjugate_coe_eq, Complex.conj_conj]
   rw [hZ, Complex.im_eq_sub_conj, map_sum]
-  simp only [map_mul, Complex.conj_conj, mul_sub, mul_div_assoc', Finset.sum_div, Finset.sum_sub_distrib]
+  simp only [map_mul, Complex.conj_conj, mul_sub, mul_div_assoc']
   rw [← hre]
   simp only [← Finset.sum_sub_distrib, ← Finset.sum_div]
 
@@ -115,7 +124,7 @@ theorem norm_actT_sq (t : (E →+* ℂ) → ℂ) (v : Vsp dim) :
   refine Finset.sum_congr rfl fun σ _ => ?_
   simp only [pN, Finset.mul_sum]
   refine Finset.sum_congr rfl fun a _ => ?_
-  simp [actT, norm_mul, mul_pow]
+  simp [actT, mul_pow]
 
 end Coord
 

@@ -1,9 +1,8 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.LieLatticeData
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.LocFreeMapMkQIff
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.LatticeGoodBaseChangeStatement
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.LocallyFreeSummandCriterionStatement
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.SumMemLoc
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.Imports
 
 noncomputable section

@@ -1,9 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.KernelLattices.LateralTheory
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.KernelLattices.DeterminantCokernelCount.CokernelIndexFactors.StatementB
-import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.IsAdmissibleFlagPairOfUnitriangularLeftAutomorph
 import Formalism.LocalToGlobal.GlobalTheory.GL3.LinkThetaStatementFamily
-import Formalism.LocalToGlobal.GlobalTheory.GL3.PStdOK
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.RCauchy
 
 open NumberField Formalism.BasicNotions Classical Formalism.MainNotions Formalism.MainNotions.TaylorLogMetric Formalism.L2.Ker

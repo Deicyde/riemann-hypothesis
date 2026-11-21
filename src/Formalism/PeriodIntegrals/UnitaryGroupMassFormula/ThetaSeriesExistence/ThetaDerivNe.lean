@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.LatDefs
-import Formalism.PeriodIntegrals.SigmaStarEx
+import Mathlib.NumberTheory.ModularForms.JacobiTheta.TwoVariable
 
 noncomputable section
 

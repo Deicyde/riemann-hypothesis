@@ -1,9 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.CosInj
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.ExistsDoubleDescentRanksOneThreeFive
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ToOneSpherical
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.IntIndFromCols
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.UnipotentRadicalBasic
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ExistsNatEqMul
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.LatticeLocalEqIntegralAlmostAllStatement
 

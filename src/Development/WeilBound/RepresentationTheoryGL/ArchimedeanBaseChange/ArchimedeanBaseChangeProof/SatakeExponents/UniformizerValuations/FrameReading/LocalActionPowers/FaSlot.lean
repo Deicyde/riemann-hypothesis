@@ -1,10 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.SatakeExponents.UniformizerValuations.FrameReading.FmTools
 import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.SatakeExponents.UniformizerValuations.FrameReading.LocalActionPowers.ProdF
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FiniteLevelFacts
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntegralOfTwistConjugatePlace
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousMapGLSpl
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.DifferentiableAtChart
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsNormalisedThetaSub
 
 noncomputable section
 
@@ -143,7 +143,7 @@ theorem finFn_eq (hS : IsSection S) (φ₁ φ₂ : ∀ w : Pl E, LF a b w) (h₁
     dsimp only
     have e1 : φ₁ w (G8.atW w y) = 1 := hg.1
     have e2 : φ₂ w (G8.atW w (thP E a b y)) = 1 := hg.2
-    simp [finprod_eq_if, e1, e2]
+    simp [e1, e2]
 
 end PositivityTheory.Rg.BcB.F.FA.Sl
 

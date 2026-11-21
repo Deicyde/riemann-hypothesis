@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.FiniteLengthLeviBlock
+import GroundTheory.AutomorphicForms.CuspidalSplittingIsotypic
+import GroundTheory.AutomorphicForms.GeometricLemmaNormal
 set_option maxSynthPendingDepth 1
 
 noncomputable section

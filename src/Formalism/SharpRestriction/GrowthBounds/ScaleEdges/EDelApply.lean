@@ -1,4 +1,7 @@
-import Formalism.SharpRestriction.GrowthBounds.ScaleEdges.SPbound
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.ScaleEdges.EvensBeforePairwise
+import Formalism.SharpRestriction.GrowthBounds.ScaleEdges.SPtrueHom
 
 noncomputable section
 

@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HeightsOfSets.DenseChart
-import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.Objects
 import GroundTheory.HeightsAndTheta.Heights.KernelsLattice
 set_option maxSynthPendingDepth 1
 

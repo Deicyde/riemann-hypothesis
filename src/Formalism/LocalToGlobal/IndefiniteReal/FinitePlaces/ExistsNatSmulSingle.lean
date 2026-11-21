@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.PairingRankOneMemInverseDifferent
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.ExistsNatSmulMem
 

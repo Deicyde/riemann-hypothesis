@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.GL5.DiscreteSeriesOfFormalDegree
-import Formalism.LocalRingCardinality.SpanPowerMembership.Spaces
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.CardinalityOfBand
 
 noncomputable section

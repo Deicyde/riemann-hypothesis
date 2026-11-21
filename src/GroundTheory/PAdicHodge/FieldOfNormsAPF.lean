@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.PAdicHodge.FieldOfNormsRam
-import GroundTheory.PAdicHodge.FieldOfNormsLocal
 import GroundTheory.LocalFields.ExamplesCharZero
+import GroundTheory.LocalFields.RamificationStructure
+import GroundTheory.PAdicHodge.FieldOfNormsUpper
 set_option maxSynthPendingDepth 1
 
 noncomputable section

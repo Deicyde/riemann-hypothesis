@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.EigenOfTwoStep
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.SlMulToRingEquiv
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.GalBMemKummerInvariantSetStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.HahnSeriesCoeffRingHomMapCoeff
@@ -8,6 +8,7 @@ import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExpUpperInt
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.TowerPadicCompletionMapEvalDependsOnLevelStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.BettiFunctionSubMemOfColumnsCongrStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsIntExponentCongrCyclotomicCharacterStatement
+import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.ResMapBijective
 open scoped MatrixGroups TensorProduct
 open Matrix GlobalTheory.KZ
 
@@ -131,10 +132,10 @@ theorem galB_act_upper : ∀ {Ω : Type} [Field Ω] [Algebra ℚ Ω] [IsAlgClosu
   fin_cases i
   · have h := Ideal.mul_mem_left _ (-((j : ℤ_[l]) * u 1)) hdχ
     convert h using 1
-    simp [hv, hv', mZl, Matrix.mulVec, dotProduct, Fin.sum_univ_two]
+    simp [hv, hv', mZl]
     ring
   · convert Ideal.zero_mem _
-    simp [hv, hv', mZl, Matrix.mulVec, dotProduct, Fin.sum_univ_two]
+    simp [hv, hv', mZl]
     ring
 
 end GlobalTheory.KZ.GalUpper

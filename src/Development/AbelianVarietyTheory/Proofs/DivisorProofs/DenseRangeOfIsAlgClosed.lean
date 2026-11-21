@@ -1,5 +1,8 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.TwoClassFrameHasLevelSetting
-import Development.AbelianVarietyTheory.Definitions.Divisors.BlockPairCycPow
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.FiniteDimensionalWdSpace
+import Mathlib.Topology.Connected.Separation
+import Mathlib.Topology.MetricSpace.Ultra.TotallySeparated
 
 set_option autoImplicit false
 

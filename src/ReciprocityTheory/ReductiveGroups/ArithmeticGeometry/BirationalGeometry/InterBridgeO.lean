@@ -1,5 +1,9 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterBridgeJ
-import ReciprocityTheory.AnalyticForms.AnalyticCharts.NullZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Topology.Algebra.MvPolynomial
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.IsIntersectionFamily
 
 noncomputable section
 
@@ -111,7 +115,7 @@ private theorem volume_eval_eq_zero_lemma :
     intro y hy
     simp only [Set.mem_preimage, Set.mem_setOf_eq] at hy
     have hcons : E.symm (y, s) = Fin.cons y s := by
-      (simp [E, Fin.insertNth_zero']) <;> rfl
+      (simp [E]) <;> rfl
     rw [hcons, eval_eq_eval_mv_eval'] at hy
     simpa [Polynomial.mem_roots hmap] using hy
 

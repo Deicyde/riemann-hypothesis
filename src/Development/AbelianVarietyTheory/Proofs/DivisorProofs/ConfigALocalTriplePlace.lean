@@ -1,11 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
-import Development.AbelianVarietyTheory.Definitions.Divisors.PairsOfSquareTriple
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqOfTensEqOfNeZero
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFactorPureTensorComponentAtPlace
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SkewAdaptedPairEigenUnique
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EvalInvarianceFirstOfHyp
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentMovesYByIotaAndX
+import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
+import GroundTheory.AutomorphicForms.GLnLocal
+import GroundTheory.GlobalFields.LocalFieldAtPlace
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK
@@ -33,7 +33,7 @@ theorem symp_vecMulVec_eq_zero {n d : ℕ} (J : Matrix (Fin n) (Fin n) E) (JB : 
     have : ∀ i, ∑ j, ∑ k, ∑ l, Matrix.vecMulVec (incV F x) p i j * incM F J i k * JB j l *
         cA σ (Matrix.vecMulVec (incV F x) q k l) =
         ∑ k, (incV F x i * incM F J i k * cA σ (incV F x k)) * ∑ j, ∑ l, p j * JB j l * cA σ (q l) := fun i => by
-      simp only [Matrix.vecMulVec_apply, map_mul, Finset.mul_sum, Finset.sum_mul]
+      simp only [Matrix.vecMulVec_apply, map_mul, Finset.mul_sum]
       rw [Finset.sum_comm]
       refine Finset.sum_congr rfl fun k _ => Finset.sum_congr rfl fun j _ => Finset.sum_congr rfl fun l _ => by ring
     simp only [this, ← Finset.sum_mul, h0, zero_mul]
@@ -43,7 +43,7 @@ theorem symp_vecMulVec_eq_zero {n d : ℕ} (J : Matrix (Fin n) (Fin n) E) (JB : 
 theorem partFin_vecMulVec {n d : ℕ} (v : Pl F) (x : Fin n → AE F E) (p : Fin d → AE F E) :
     partFin v (Matrix.vecMulVec x p) = Matrix.vecMulVec x (partFin v p) := by
   ext i j
-  simp [partFin, Matrix.vecMulVec_apply, Matrix.smul_apply, Pi.smul_apply, mul_smul_comm]
+  simp [partFin, Matrix.vecMulVec_apply, Matrix.smul_apply, Pi.smul_apply]
 
 theorem vecMulVec_mul_transpose' {R : Type} [CommRing R] {n d : ℕ} (y : Fin n → R) (x : Fin d → R)
     (N : Matrix (Fin d) (Fin d) R) : Matrix.vecMulVec y x * Nᵀ = Matrix.vecMulVec y (N *ᵥ x) := by

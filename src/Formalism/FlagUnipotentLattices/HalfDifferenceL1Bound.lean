@@ -1,10 +1,7 @@
-import Mathlib
-import Formalism.LogSumExpBounds.NuclearBound
-import Formalism.LatticeRigidity.StatementD
-import Formalism.LatticeRigidity.HeightMin
-import Formalism.LatticeRigidity.PackCount
+import BuildAid.Leniency.Open
 import Formalism.HarderNarasimhan.StatementPl
-import Formalism.HarderNarasimhan.StatementCor
+import Formalism.LogSumExpBounds.StatementD
+import Mathlib.Analysis.CStarAlgebra.Module.Constructions
 
 open Finset MeasureTheory NumberField
 open scoped ComplexOrder

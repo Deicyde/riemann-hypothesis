@@ -1,9 +1,13 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecondChernDensity
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.JacobianDensityHermitianMetrics
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.JacobiDensityWeightedThetaIntegralZero
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagDegreeEqFormDegree
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VandermondeWeightedRootProductSum
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 open Filter Topology MeasureTheory Matrix
 open GlobalTheory GlobalTheory.HermFrame GlobalTheory.ArInt GlobalTheory.VdmRec GlobalTheory.ArchLim
 open GlobalTheory.MixDens (emb jacDens)
@@ -19,7 +23,7 @@ open Matrix
 theorem conj_single {r : ℕ} (A : Matrix (Fin r) (Fin r) ℂ) (p q : Fin r) :
     Aᴴ * single p q 1 * A = of fun i j => star (A p i) * A q j := by
   ext i j
-  simp [Matrix.mul_apply, Matrix.single_apply, Finset.sum_mul, ite_and]
+  simp [Matrix.mul_apply, Matrix.single_apply, ite_and]
 
 def phase {r : ℕ} (k : Fin r) : Matrix (Fin r) (Fin r) ℂ :=
   diagonal fun i => if i = k then Complex.I else 1
@@ -64,9 +68,9 @@ theorem rot_conj_aa {r : ℕ} (a c : Fin r) (hac : a ≠ c) (x y : ℝ) :
     fun p q u v => single_mul_single_of_ne _ _ _ _ hac _
   simp only [rot, conjTranspose_add, conjTranspose_one, conjTranspose_single, add_mul, mul_add,
     one_mul, mul_one, single_mul_single_same, e1, e2, star_sub, star_one, star_neg, Complex.star_def,
-    Complex.conj_ofReal, zero_add, add_zero]
+    Complex.conj_ofReal, add_zero]
   ext i j
-  simp only [Matrix.add_apply, Matrix.one_apply, single_apply, Matrix.zero_apply, Matrix.smul_apply,
+  simp only [Matrix.add_apply, single_apply, Matrix.smul_apply,
     smul_eq_mul]
   by_cases hia : a = i <;> by_cases hic : c = i <;> by_cases hja : a = j <;> by_cases hjc : c = j <;>
     subst_vars <;> simp_all <;> ring
@@ -81,9 +85,9 @@ theorem rot_conj_cc {r : ℕ} (a c : Fin r) (hac : a ≠ c) (x y : ℝ) :
     fun p q u v => single_mul_single_of_ne _ _ _ _ hac _
   simp only [rot, conjTranspose_add, conjTranspose_one, conjTranspose_single, add_mul, mul_add,
     one_mul, mul_one, single_mul_single_same, e1, e2, star_sub, star_one, star_neg, Complex.star_def,
-    Complex.conj_ofReal, zero_add, add_zero]
+    Complex.conj_ofReal, add_zero]
   ext i j
-  simp only [Matrix.add_apply, Matrix.one_apply, single_apply, Matrix.zero_apply, Matrix.smul_apply,
+  simp only [Matrix.add_apply, single_apply, Matrix.smul_apply,
     smul_eq_mul]
   by_cases hia : a = i <;> by_cases hic : c = i <;> by_cases hja : a = j <;> by_cases hjc : c = j <;>
     subst_vars <;> simp_all <;> ring
@@ -115,15 +119,15 @@ theorem vanish
   · subst hpq
     have hst : s ≠ t := fun h => hP (Or.inl ⟨rfl, h⟩)
     have h := hk s
-    by_cases hps : p = s <;> simp [hps, hst, hst.symm, Complex.ext_iff] at h
+    by_cases hps : p = s <;> simp [hps, hst.symm, Complex.ext_iff] at h
   · by_cases hpt : p = t
     · subst hpt
       have hqs : q ≠ s := fun h => hP (Or.inr ⟨rfl, h⟩)
       have h := hk s
-      by_cases hps : p = s <;> simp [hps, hqs, hqs.symm, Complex.ext_iff] at h
+      by_cases hps : p = s <;> simp [hps, hqs, Complex.ext_iff] at h
     · have h := hk p
       by_cases hsp : s = p <;>
-        simp [hpq, hpt, Ne.symm hpq, Ne.symm hpt, hsp, Complex.ext_iff] at h <;> norm_num at h
+        simp [Ne.symm hpq, Ne.symm hpt, hsp, Complex.ext_iff] at h <;> norm_num at h
 
 theorem rot_rel
     (hU : ∀ U : Matrix (Fin r) (Fin r) ℂ, Uᴴ * U = 1 → ∀ F F', B (Uᴴ * F * U) (Uᴴ * F' * U) = B F F')
@@ -201,7 +205,7 @@ theorem eq_trace_form : ∀ (r : ℕ) (B : Matrix (Fin r) (Fin r) ℂ →ₗ[ℂ
         · rw [← hS q q p p, (hdc q p (Ne.symm hpq)).2, hβ]; simp [hpq] <;> ring
     · rw [hv p q s t hP]
       have h2 : ¬(q = s ∧ p = t) := fun h => hP (Or.inr ⟨h.2, h.1⟩)
-      simp [hP, h2]
+      simp [h2]
       tauto
   intro F F'
   induction F using Matrix.induction_on' with

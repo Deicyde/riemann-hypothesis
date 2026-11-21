@@ -1,16 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocUnifSum
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemCtIntSub
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DisjointLineMid
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NeOfReNe
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsShear
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepresentationPreservesSchwartz
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousLeftInvariantDual
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBLeviEvaluationCompatibleStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBEigenStabilizerIntegralStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ReducedTripleIsotropicPlaneStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBStabilizerIdelesHaarThirdStatement
 open scoped TensorProduct NNReal Matrix
@@ -61,7 +52,7 @@ theorem coneI_levi_pt (hKP : GlobalTheory.ThK.KP) {B : Base F E} {a b : ℕ} {G 
     simp only [actAB, shiftB, OneMemClass.coe_one, Units.val_one, Matrix.one_mul, Matrix.smul_mul, Matrix.smul_apply]
     congr 1
     conv_rhs => rw [← hx]
-    simp [mat, Matrix.mul_apply, Matrix.vecMulVec_apply, Matrix.mulVec, dotProduct, Finset.mul_sum, mul_comm, mul_left_comm]
+    simp [mat, Matrix.mul_apply, Matrix.vecMulVec_apply, Matrix.mulVec, dotProduct, Finset.mul_sum, mul_comm]
     exact Finset.sum_congr rfl fun _ _ => by ring
   have e2 : G.M'.co.rho B.ψ (shiftB σ H H' l) (om' (1, m) (om' (k.1, h) Φ')) =
       om' (1, m) (G.M'.co.rho B.ψ (shiftB σ H H' l) (om' (k.1, h) Φ')) := by

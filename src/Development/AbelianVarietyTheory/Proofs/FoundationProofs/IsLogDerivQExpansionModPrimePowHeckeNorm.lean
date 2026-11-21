@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsRootOfIsAlgClosed
-import Development.AbelianVarietyTheory.Definitions.Foundations.EeProd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.SubstUpperTriangularHahnMulAndOne
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ThetaBasisLinearCombination
 

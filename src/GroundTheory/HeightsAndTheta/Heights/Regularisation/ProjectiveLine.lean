@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Regularisation.Statements
 import GroundTheory.HeightsAndTheta.Heights.FubiniStudyCharts
 set_option maxSynthPendingDepth 1
@@ -318,7 +318,7 @@ theorem cp_mem_Yo (j : Fin 2) (x : CP 1) (hx : x ∈ (sChart j).source) :
     x ∈ CP.chartDomain 1 ↔ sChart j x ∉ coordDiv (cpS j) := by
   fin_cases j
   · have hx0 : x ∈ CP.chartDomain 0 := hx.1
-    simp only [cpS, coordDiv, Fin.zero_eta, Fin.isValue, Fin.val_zero, if_true,
+    simp only [cpS, coordDiv, Fin.zero_eta, Fin.isValue, if_true,
       Finset.mem_singleton, exists_eq_left, Set.mem_ofPred_eq, sChart_apply, Pi.smul_apply, smul_eq_mul,
       mul_eq_zero, inv_eq_zero, OfNat.ofNat_ne_zero, false_or]
     induction x using Projectivization.ind with
@@ -327,7 +327,7 @@ theorem cp_mem_Yo (j : Fin 2) (x : CP 1) (hx : x ∈ (sChart j).source) :
       rw [CP.chartCoord_mk]
       have : (Fin.succAbove (0 : Fin 2) 0) = 1 := rfl
       simp only [this, div_eq_zero_iff, hx0, or_false]
-  · simp only [cpS, coordDiv, Fin.mk_one, Fin.isValue, Fin.val_one, one_ne_zero, if_false,
+  · simp only [cpS, coordDiv, Fin.mk_one, Fin.isValue, one_ne_zero, if_false,
       Finset.notMem_empty, false_and, exists_false, Set.ofPred_false, mem_empty_iff_false,
       not_false_eq_true, iff_true]
     exact hx.1
@@ -361,7 +361,7 @@ theorem cpR_chart (j : Fin 2) (y : Fin 1 → ℂ) (hy : y ∈ ball (0 : Fin 1 �
   · have hy0 : y 0 ≠ 0 := by
       intro h
       exact hy.2 ⟨0, by simp [cpS], h⟩
-    simp only [cpR, cpF, cpS, sChart_symm_apply, Fin.zero_eta, Fin.isValue, Fin.val_zero, if_true,
+    simp only [cpR, cpF, cpS, sChart_symm_apply, Fin.zero_eta, Fin.isValue, if_true,
       Finset.sum_singleton]
     rw [CP.chartCoord_chartInv_eq]
     have h10 : (Fin.succAbove (1 : Fin 2) 0) = 0 := rfl
@@ -377,7 +377,7 @@ theorem cpR_chart (j : Fin 2) (y : Fin 1 → ℂ) (hy : y ∈ ball (0 : Fin 1 �
     rw [key, Real.log_div (by positivity) (by positivity), Real.log_mul (by norm_num) (by positivity),
       Real.log_inv]
     ring
-  · simp only [cpR, cpF, cpS, sChart_symm_apply, Fin.mk_one, Fin.isValue, Fin.val_one, one_ne_zero,
+  · simp only [cpR, cpF, cpS, sChart_symm_apply, Fin.mk_one, Fin.isValue, one_ne_zero,
       if_false, Finset.sum_empty, add_zero, CP.chartCoord_chartInv]
     simp
 

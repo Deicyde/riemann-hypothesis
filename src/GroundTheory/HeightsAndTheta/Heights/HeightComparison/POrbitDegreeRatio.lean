@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.POrbitDegreeRatioLemmas
+import GroundTheory.HeightsAndTheta.Heights.HeightComparison.HeightOrbitDegreeRatio
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

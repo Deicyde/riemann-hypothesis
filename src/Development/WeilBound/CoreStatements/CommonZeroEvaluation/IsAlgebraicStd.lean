@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.CommonZeroEvaluation.EventuallyRoot
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.Unramified.LocalStructure
 
 open Polynomial Filter Topology
 

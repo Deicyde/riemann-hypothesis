@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.DataN
-import Formalism.LocalToGlobal.UnitaryNorms.CharHost
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.AbsPowOneNotIsAlgRat
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.UnderEqIffConjPl
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.GaloisSideTwistedSelmerAuxiliaryPrimes

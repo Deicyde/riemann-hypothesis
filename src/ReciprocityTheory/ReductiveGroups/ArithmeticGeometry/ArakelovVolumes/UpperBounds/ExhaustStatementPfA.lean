@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.LiftFactorization
 import ReciprocityTheory.L2DbarEstimates.LeviForms.DetMonoDetOneAdd
 import Lemmata.PosDefOfRealQuadratic.QuadFormRealSmul

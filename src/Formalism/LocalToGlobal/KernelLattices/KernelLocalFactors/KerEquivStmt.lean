@@ -1,7 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.KernelLattices.ColInst
-import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.ColInst
-import Formalism.LocalToGlobal.Columns.ChainInstY
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.Columns.FiniteSumNonzeroLargeDepth
 
 open NumberField IsDedekindDomain
 

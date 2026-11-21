@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.Interface
 import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.RedModel
 import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.NormWeierstrassCoeffSmallJ

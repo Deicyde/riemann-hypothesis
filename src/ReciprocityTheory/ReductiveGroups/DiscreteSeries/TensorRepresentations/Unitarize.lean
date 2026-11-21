@@ -1,8 +1,10 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.PtrScalar
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.PsiExistsStatement
-import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.UnitarizeD
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.AnalyticVectors.Closure
+import Formalism.RealPlaceAnalysis.RealPlaceTaylor.ModularCharacterEqOneOnExpHermitian
+import Mathlib.Algebra.Ring.IsFormallyReal
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.UnitarizeA
 
 noncomputable section
 

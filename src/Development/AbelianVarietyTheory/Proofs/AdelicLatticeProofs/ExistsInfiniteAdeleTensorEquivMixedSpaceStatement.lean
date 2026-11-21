@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.ExistsInfiniteAdeleTensorEquivMixedSpace
 open NumberField IsDedekindDomain NumberField.mixedEmbedding Complex Classical
 open scoped TensorProduct ContDiff nonZeroDivisors

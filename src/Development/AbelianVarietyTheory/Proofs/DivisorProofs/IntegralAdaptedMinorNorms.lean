@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlockUniOne
 open NumberField CategoryTheory AlgebraicGeometry
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -19,7 +20,7 @@ theorem det_eq_one_of_blockUni {ι : Type} [Fintype ι] [DecidableEq ι] (bl : �
     intro i j hij
     have hne : i ≠ j := by rintro rfl; exact lt_irrefl _ hij
     rw [hN i j (lt_asymm hij)]
-    simp [Matrix.one_apply, hne]
+    simp [hne]
   rw [hT.det]
   refine Finset.prod_eq_one fun a _ => ?_
   have h1 : N.toSquareBlock bl a = 1 := by
@@ -45,7 +46,7 @@ theorem minor_mul_blockUni {κ : Type} [Fintype κ] (bl : κ → ℕ) {g : ℕ} 
       have hzb : ¬ bl z < bl b := by have := z.2; omega
       have hne : (z : κ) ≠ b := fun h => z.2 (h ▸ hb)
       rw [hN _ _ hzb]
-      simp [Matrix.one_apply, hne]
+      simp [hne]
     rw [h0, add_zero]
   have hdet : (N.toSquareBlockProp (fun z => bl z < k)).det = 1 := by
     have hbu : BlockUni (fun z : {z // bl z < k} => bl z) (N.toSquareBlockProp (fun z => bl z < k)) := by

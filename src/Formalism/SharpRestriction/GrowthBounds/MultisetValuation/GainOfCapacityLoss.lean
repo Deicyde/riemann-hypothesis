@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.EaGeCOfNorm
+import Mathlib.Order.Interval.Finset.Box
 
 noncomputable section
 

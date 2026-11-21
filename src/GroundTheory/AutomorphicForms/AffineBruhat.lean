@@ -1,7 +1,8 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.GLnLocal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.GLnLattice
 import GroundTheory.AutomorphicForms.FiniteBruhat
+import Mathlib.GroupTheory.SemidirectProduct
 
 noncomputable section
 

@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.ScalarOnPartsFull
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LatticeElementaryDivisors
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IrreducibleOfValued
+import Mathlib.Algebra.Module.StablyFree.Basic
 
 noncomputable section
 

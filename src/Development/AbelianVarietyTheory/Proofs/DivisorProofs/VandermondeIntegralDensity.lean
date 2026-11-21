@@ -1,15 +1,12 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecondChernDensity
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.JacobianDensityHermitianMetrics
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.JacobiDensityWeightedThetaIntegralZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentTriangularFactorUnique
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeadingMinorsUnipotentMul
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DetTriangularConjugateEqDiagonalRatio
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MinorsNonzeroAeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IwasawaDecompositionDifferentiableStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IwasawaJacobianDeterminantStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InvariantBilinearTraceFormulaStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaDiagonalEntryConjugateStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.JacobianDensityOfTriangularStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VandermondeDensitySymmetricStatement
 
@@ -223,17 +220,17 @@ theorem integral_sq {G : Matrix (Fin m) (Fin m) ℂ} (hG : G.PosDef) (F F' : Mat
     LinearMap.mk₂ ℂ (fun F F' => ∫ x, jacDens 1 x • sq 1 F F' x)
       (fun F₁ F₂ F' => by
         rw [← integral_add (integrable_sq h1 _ _) (integrable_sq h1 _ _)]
-        simp only [sq, h, Matrix.mul_add, Matrix.add_mul, Matrix.add_apply, add_mul, Finset.sum_add_distrib, smul_add])
+        simp only [sq, h, Matrix.mul_add, Matrix.add_apply, add_mul, Finset.sum_add_distrib, smul_add])
       (fun c F F' => by
         rw [← integral_smul]
-        simp only [sq, h, Matrix.mul_smul, Matrix.smul_mul, Matrix.smul_apply, smul_eq_mul, mul_assoc,
+        simp only [sq, h, Matrix.smul_mul, Matrix.smul_apply, smul_eq_mul, mul_assoc,
           ← Finset.mul_sum, mul_smul_comm])
       (fun F F₁ F₂ => by
         rw [← integral_add (integrable_sq h1 _ _) (integrable_sq h1 _ _)]
-        simp only [sq, h, Matrix.mul_add, Matrix.add_mul, Matrix.add_apply, mul_add, Finset.sum_add_distrib, smul_add])
+        simp only [sq, h, Matrix.add_mul, Matrix.add_apply, mul_add, Finset.sum_add_distrib, smul_add])
       (fun c F F' => by
         rw [← integral_smul]
-        simp only [sq, h, Matrix.mul_smul, Matrix.smul_mul, Matrix.smul_apply, smul_eq_mul, mul_left_comm _ c,
+        simp only [sq, h, Matrix.smul_mul, Matrix.smul_apply, smul_eq_mul, mul_left_comm _ c,
           ← Finset.mul_sum, mul_smul_comm])
   have key := GlobalTheory.T.invariant_bilinear_trace_formula m B ((1 / TrueCx.flagConst m : ℝ) : ℂ) (fun U hU F F' => by
       have e : chg U 1 = 1 := by
@@ -335,7 +332,7 @@ theorem det_sum_chg {n D r : ℕ} (ε : Fin D ≃ Fin n ⊕ Low r) (J : Matrix (
     · simp [Matrix.sum_apply]
     · simp
     · simp
-    · by_cases h : x = y <;> simp [diagonal_apply, h, mul_sub]
+    · by_cases h : x = y <;> simp [h, mul_sub]
   rw [e, det_chg, det_submatrix_equiv_self, det_fromBlocks_zero₂₁, det_diagonal, det_apply' (∑ o, a o • M o),
     Finset.sum_mul]
   simp only [Matrix.sum_apply, Matrix.smul_apply, smul_eq_mul, mul_assoc]

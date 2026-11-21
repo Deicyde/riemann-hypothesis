@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.PairRelationOfScaledRatio
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Antisymmetric.Statements
 
 noncomputable section

@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CurveDVRSpecialization.FlipTwoThree
+import Mathlib.Topology.Sheaves.Presheaf
 
 open IsLocalRing in
 theorem UpperTheory.V.Pr.globOfCharts :

@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.CSandwichStA
+import Mathlib.Analysis.Matrix.Hermitian
+import ReciprocityTheory.GeometryOfNumbers.SphericalMonomials.SupStMonoNormSqPos
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.IsBergDensity
 
 noncomputable section
 
@@ -181,7 +186,7 @@ open Matrix in
 theorem quad_monoDiag (D N δ : ℕ) (v : Fin (δ * (Finset.Nat.antidiagonalTuple (D + 1) N).card) → ℂ) :
     (star v ⬝ᵥ monoDiag D N δ *ᵥ v).re =
       ∑ l : Fin δ, ∑ i, monoNormSq (adtEnum D N i) * ‖v (finProdFinEquiv (l, i))‖ ^ 2 := by
-  simp only [monoDiag, Matrix.mulVec_diagonal]
+  simp only [monoDiag]
   first
   | simp only [dotProduct, Pi.star_apply, Matrix.mulVec_diagonal]
   | simp only [Matrix.dotProduct, Pi.star_apply, Matrix.mulVec_diagonal]

@@ -1,21 +1,14 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ModelSmall
-import Development.AutomorphicSpectrum.Statements.TowerExistence.GoodTowerExistsX
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.VolumeInputs
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.OverLaUnique
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterNamed
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterSt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.IsMultiHomogXpow
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.StrictWeightGrowthBoundStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.WeightThresholdLimitCoefficientsStatement
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.DegreeGenericOfDegree
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.NefPolarization
-import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PNefOnGenericOfSemipos
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PSectionSupBound
-import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PNefAmpleGeneric
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PLiftBirationalAmple
-import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.AssemblyBridgeFull
 import GroundTheory.HeightsAndTheta.Heights.ElementarySymmetric.PFibreNormDehomRoots
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.IsMultiHomogX
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterDerived
 
 namespace GlobalTheory.CompanionTheory.Ar.Plug
 
@@ -172,7 +165,7 @@ theorem exists_form_basis {L : Type} [Field L] (y : (Σ k, ι k) → Ω) (φ : L
       rw [aeval_X, Finset.prod_eq_single p.1]
       · simp [hr, hc]
       · intro b _ hbp
-        simp [Pi.single_apply, hbp]
+        simp [hbp]
       · simp
     | one =>
       exact ⟨0, 1, ReciprocityTheory.ChartRestriction.G.Geo.isMultiHomog_one, by simp⟩

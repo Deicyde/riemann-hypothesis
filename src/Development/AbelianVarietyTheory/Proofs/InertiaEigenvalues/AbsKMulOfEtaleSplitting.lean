@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsTestRep
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.NonemptyMeasAndReps
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.DistribHaarCharTransport
 open GlobalTheory.JR MeasureTheory
 open scoped Pointwise
 

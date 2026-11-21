@@ -1,5 +1,7 @@
-import Development.WeilBound.RepresentationTheoryGL.RegularisedSiegelWeil.SingularNullSets.WeakApproximationFinitePlace
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.RegularisedSiegelWeil.SingularNullSets.LCutLowB
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousHermPart
 
 noncomputable section
 

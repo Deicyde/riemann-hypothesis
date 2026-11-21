@@ -1,9 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Jets.ImportsAlt
-import Formalism.HermitianCurvature.HerGenC
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.ThetaCompactSupport
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.OpApplyContinuousOn
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.AdjointLeibnizExpansion
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.TopFirstOfParts
 
 open Formalism.FourierDecayAlt Formalism.REAL Formalism.QuantumDeterminants GlobalTheory.TopVec Filter Topology MeasureTheory

@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.DsExistsOfDiscreteSeriesExists
 import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.LowestRankThree
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HasModelOfAntitone
@@ -92,7 +92,7 @@ theorem not_isDS_singular {H : Type} [NormedAddCommGroup H] [InnerProductSpace �
     have h2 := hw ![θ 1, θ 0] (DSExistsModel.diag_mem _ _)
     have e : Matrix.diagonal (fun a => Complex.exp ((θ a : ℂ) * Complex.I)) * w =
         w * Matrix.diagonal (fun a => Complex.exp (((![θ 1, θ 0] : Fin 2 → ℝ) a : ℂ) * Complex.I)) := by
-      ext i j; fin_cases i <;> fin_cases j <;> simp [w, Matrix.mul_apply, Fin.sum_univ_two, Matrix.diagonal_apply]
+      ext i j; fin_cases i <;> fin_cases j <;> simp [w, Matrix.mul_apply, Matrix.diagonal_apply]
     have a1 := congrArg (fun T : H →L[ℂ] H => T v) (hm _ (hKU _ hθ) w (hKU w hwK))
     have a2 := congrArg (fun T : H →L[ℂ] H => T v) (hm w (hKU w hwK) _ (hKU _ (DSExistsModel.diag_mem _ ![θ 1, θ 0])))
     simp only [ContinuousLinearMap.comp_apply] at a1 a2

@@ -1,5 +1,7 @@
-import Formalism.SharpRestriction.GrowthBounds.DiagonalSupport.MembDefs
-import Formalism.SharpRestriction.GrowthBounds.ValuationLowestDegreeRename
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.ObjPol
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 noncomputable section
 

@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ArithmeticGeometry.AbelianVarieties.DualWeil
+import Mathlib.LinearAlgebra.QuadraticForm.Basic
 
 namespace GroundTheory.Arith.Abelian
 

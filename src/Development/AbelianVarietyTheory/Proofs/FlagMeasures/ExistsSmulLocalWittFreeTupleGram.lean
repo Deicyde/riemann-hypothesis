@@ -1,7 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.Measures
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExtendFreeTupleGramHermitianFrameStatement
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.StandardFrameGramDetNeZero
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsSmulRatTupEq
 
 open NumberField IsDedekindDomain MeasureTheory Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.L2.SG.Sub Formalism.L2.SG.Measures

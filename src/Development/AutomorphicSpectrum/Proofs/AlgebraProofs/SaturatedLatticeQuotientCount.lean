@@ -1,5 +1,8 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsEqNsmulOfForallDvdOfBijective
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
+import Mathlib.Tactic.ENatToNat
 
 namespace GlobalTheory.CompanionTheory.Ar.Flat
 

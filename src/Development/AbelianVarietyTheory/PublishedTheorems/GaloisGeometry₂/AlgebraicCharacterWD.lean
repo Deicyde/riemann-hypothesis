@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.HeckeLAdicCharacterAboveIff
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ThetaMod
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.CharAbove
 
 noncomputable section
 

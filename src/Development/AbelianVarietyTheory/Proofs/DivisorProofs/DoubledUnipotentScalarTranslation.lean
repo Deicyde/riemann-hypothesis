@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipMat
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorusMulVecX
 
@@ -29,7 +28,7 @@ theorem unip_mul_neg (β : R) : unipMat c J X Y β * unipMat c J X Y (-β) = 1 :
   have e2 : (J *ᵥ fun i => c (X i)) ⬝ᵥ X = 0 := by rw [dotProduct_comm]; exact hXX
   simp only [unipMat, fromBlocks_multiply, map_neg, neg_neg, Matrix.one_mul, Matrix.mul_one, Matrix.smul_mul,
     Matrix.mul_smul, vecMulVec_mul_vecMulVec, e1, e2, zero_smul, vecMulVec_zero, smul_zero, neg_smul, Matrix.neg_mul,
-    Matrix.mul_neg, neg_zero, add_zero, neg_add_cancel, add_neg_cancel, zero_add, fromBlocks_one]
+    Matrix.mul_neg, neg_zero, add_zero, neg_add_cancel, zero_add, fromBlocks_one]
 
 include hc hJ hXX hYY in
 theorem unip_unitary (β : R) :
@@ -51,9 +50,9 @@ theorem unip_unitary (β : R) :
       (β • vecMulVec (J *ᵥ fun i => c (Y i)) X) 1 := by
     simp [unipMat, fromBlocks_transpose, transpose_smul, transpose_vecMulVec]
   rw [hmap, htr]
-  simp only [fromBlocks_multiply, Matrix.one_mul, Matrix.mul_one, Matrix.mul_zero, Matrix.zero_mul, add_zero, zero_add,
+  simp only [fromBlocks_multiply, Matrix.one_mul, Matrix.mul_one, Matrix.mul_zero, add_zero, zero_add,
     Matrix.smul_mul, Matrix.mul_smul, Matrix.neg_mul, Matrix.mul_neg, vecMulVec_mul, mul_vecMulVec,
-    vecMulVec_mul_vecMulVec, vecMulVec_neg, dotProduct_neg, neg_dotProduct, d1, d4, neg_zero, zero_smul, vecMulVec_zero,
+    vecMulVec_neg, d1, d4, neg_zero, zero_smul,
     smul_zero, smul_neg, neg_smul, neg_neg, smul_mulVec, vmv_mulVec, Matrix.neg_mulVec, neg_vecMulVec, zero_vecMulVec, neg_add_cancel, add_neg_cancel]
 
 end Props

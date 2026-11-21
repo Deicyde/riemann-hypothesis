@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterBridgeH
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StatementsProjRegular
 set_option maxSynthPendingDepth 1

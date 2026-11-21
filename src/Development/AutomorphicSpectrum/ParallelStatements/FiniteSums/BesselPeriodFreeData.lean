@@ -1,8 +1,9 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.RealSeparation.UnfDefs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.RealSeparation.BesPerSt
 import Formalism.LocalToGlobal.IndefiniteReal.OrthogonalComplementCharacterisation
-import Formalism.LocalToGlobal.IndefiniteReal.DatumVec
+import Formalism.LocalToGlobal.IndefiniteReal.RealSeparation.IterSt
 
 noncomputable section
 

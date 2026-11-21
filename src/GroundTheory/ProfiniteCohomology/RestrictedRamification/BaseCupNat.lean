@@ -1,7 +1,6 @@
-import Mathlib
-import GroundTheory.ProfiniteCohomology.PoincarePairs.Natural
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.PoincarePairs
-import GroundTheory.ProfiniteCohomology.CompactSupportCohomology.CompactCupEqCompactCupRight
 set_option maxSynthPendingDepth 1
 
 noncomputable section

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.InRealConeSelf
 open AlgebraicGeometry CategoryTheory Limits NumberField IsLocalRing TopologicalSpace
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.AnForm.R Formalism.L2.Pj
@@ -84,7 +86,7 @@ theorem exists_intPiece : ∀ (E : Type) [Field E] [NumberField E] [IsCMField E]
         rw [Fintype.sum_sum_type]
         simp [hc])
     rw [Fintype.sum_sum_type] at e2
-    simp only [Sum.elim_inl, Sum.elim_inr, Finset.univ_unique, Finset.sum_singleton, LinearMap.id_apply] at e2
+    simp only [Sum.elim_inl, Sum.elim_inr, Finset.univ_unique, Finset.sum_singleton] at e2
     rw [e1, Finset.mul_sum]
     have e3 : (ℓ be : ℝ) = ∑ i, c i * (ℓ (δ i) : ℝ) := by linarith
     rw [e3]

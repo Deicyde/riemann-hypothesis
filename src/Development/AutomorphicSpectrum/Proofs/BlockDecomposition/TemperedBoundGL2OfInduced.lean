@@ -1,6 +1,4 @@
-import Mathlib
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.KFiniteThetaLifts.RationalPrimesBelowPlaces
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.SquareIntegrable.SSmooth
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.TemperedBoundGL2
 open NumberField IsDedekindDomain MeasureTheory GroundTheory.Global GroundTheory.LocalField GroundTheory.Automorphic GroundTheory.Automorphic.AutomorphicForm Ad3 Ad3.K Ad3.K.QuadraticBaseChangeGL3
 open GroundTheory.Automorphic.GodementSection (localChar)
@@ -25,7 +23,7 @@ theorem temperedBoundGL2_of_whittaker : ∀ (F : Type) [Field F] [ValuativeRel F
     refine IsLocallyConstant.continuous ?_
     rw [IsLocallyConstant.iff_exists_open]
     intro g
-    refine ⟨{x | g⁻¹ * x ∈ U}, U.isOpen.preimage (continuous_const.mul continuous_id), by simp [U.one_mem],
+    refine ⟨{x | g⁻¹ * x ∈ U}, U.isOpen.preimage (continuous_const.mul continuous_id), by simp,
       fun x hx => ?_⟩
     have := hU g _ hx
     simpa using this

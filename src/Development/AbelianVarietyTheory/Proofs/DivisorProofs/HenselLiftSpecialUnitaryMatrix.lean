@@ -1,5 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntLocConjIntLocConj
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice IsDedekindDomain NumberField Matrix
 open scoped TensorProduct
@@ -25,7 +31,7 @@ theorem step_identity (w v : R) (hw : w + v = 1) (H : Matrix n n R) :
     (1 - v • H) * (H + 1) * (1 - w • H) - 1 = (v * w - 1) • (H * H) + (v * w) • (H * H * H) := by
   obtain rfl : v = 1 - w := by rw [← hw]; ring
   simp only [sub_mul, mul_sub, add_mul, mul_add, one_mul, mul_one, smul_mul_assoc, mul_smul_comm,
-    smul_smul, Matrix.mul_assoc]
+    Matrix.mul_assoc]
   module
 
 theorem map_smul_ring (c : R →+* R) (w : R) (H : Matrix n n R) : (w • H).map c = c w • H.map c := by

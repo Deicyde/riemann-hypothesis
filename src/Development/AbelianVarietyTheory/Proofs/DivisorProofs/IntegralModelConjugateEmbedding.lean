@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecValAt
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsTangentLiftCoefficientsStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralModelEmbeddingFirstStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralModelEmbeddingSecondStatement
 
 set_option autoImplicit false

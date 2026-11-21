@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.DataN
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsPsCharOne
-import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.SSAscent
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.SemisimpleTraceForm.SemisimpleOfTraceFormNondegenerate
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.SemisimpleTraceForm.TraceNilpotentAscent
 open Formalism.MainNotions.N GlobalTheory.PsChar
 
 namespace GlobalTheory.SSCont

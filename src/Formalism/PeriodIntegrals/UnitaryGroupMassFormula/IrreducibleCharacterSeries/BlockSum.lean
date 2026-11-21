@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IrreducibleCharacterSeries.ClassFnOfIsIrrChar
+import Formalism.LocalToGlobal.NormalizedHeckeFactors.TypesDefs
+import Formalism.PadicSubsetSums.CentralIdempotents.IsConstituent
 
 noncomputable section
 open Polynomial CategoryTheory Formalism.IrreducibleCountingLemmas.TYPES Formalism.L2.NT

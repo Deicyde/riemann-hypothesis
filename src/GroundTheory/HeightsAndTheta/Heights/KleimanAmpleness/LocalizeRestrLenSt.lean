@@ -1,5 +1,7 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.LocalizeNefAboveSt
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
+import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.AlgebraMapMemChartRingLine
+import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.BaseChangeObj
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.Kleiman.SectionsOverLocalization

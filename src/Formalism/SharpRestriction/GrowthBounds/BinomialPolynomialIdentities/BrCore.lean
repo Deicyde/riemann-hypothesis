@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.StatementOfDegreeAndBound
 import Formalism.ThetaLogCoordinates.DualWeylCoordinates.FinalA
 import Formalism.ThetaLogCoordinates.DualWeylCoordinates.DualWeylProofs.RationalBitableauLatticeStatement
+import Formalism.ThetaLogCoordinates.DualWeylCoordinates.DualWeylProofs.InducedSectionsSpanStatement
 
 noncomputable section
 

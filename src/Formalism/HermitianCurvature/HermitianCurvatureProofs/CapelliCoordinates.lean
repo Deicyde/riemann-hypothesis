@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.FrameMinor
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.OperatorRepresentations
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.RestrictionIrrelevantDoubleLevelOperator
 
 open Matrix Finset
 open scoped ContDiff
@@ -121,7 +122,7 @@ private theorem sup_single_of_inV (p q : Fin (2 * r + k + 1)) (hp : Qx2.inV k r 
   refine ⟨?_, ?_⟩
   · ext y
     rw [hcol]
-    simp [Matrix.single_apply, hne]
+    simp [hne]
   · ext y
     rw [hcol, Matrix.mul_apply]
     apply Finset.sum_eq_zero
@@ -131,7 +132,7 @@ private theorem sup_single_of_inV (p q : Fin (2 * r + k + 1)) (hp : Qx2.inV k r 
       rw [hz _ _ hp hx, mul_zero]
     · rw [Matrix.mul_apply, Finset.sum_eq_zero, zero_mul]
       intro w _
-      simp [Matrix.conjTranspose_apply, Matrix.single_apply, Ne.symm hz']
+      simp [Matrix.conjTranspose_apply, Ne.symm hz']
 
 theorem sup_single (a b : Fin (mdim k r i)) : Sup k r i (Matrix.single (posL k r i a) (posL k r i b) 1) := by
   have hj := a.isLt

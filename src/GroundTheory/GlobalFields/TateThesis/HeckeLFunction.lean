@@ -1,6 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.TateThesis.HeckeChar
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.SummableAbsNormRpowInv
+import Mathlib.Analysis.Normed.Group.Tannery
+import Mathlib.Analysis.SpecialFunctions.Log.Summable
+import Mathlib.NumberTheory.LSeries.Deriv
+import Mathlib.NumberTheory.NumberField.DedekindZeta
+import Mathlib.Topology.UniformSpace.Uniformizable
 
 open Topology Filter NumberField IsDedekindDomain WithZero FractionalIdeal Function Ideal
 open scoped NumberField.AdeleRing nonZeroDivisors

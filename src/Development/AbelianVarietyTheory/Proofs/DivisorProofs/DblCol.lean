@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockMap
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.DataTheta
 
 noncomputable section
 

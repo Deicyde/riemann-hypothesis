@@ -1,5 +1,6 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.RamifiedLineCharacters.MemRamLine
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.LMemMax
+import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.NearSplit
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal IsLocalRing UpperTheory.V.HV UpperTheory.V.GradeZeroInterpolatingElement UpperTheory.V.Ws
 
@@ -11,7 +12,7 @@ theorem UpperTheory.V.Ws.Gys.unrS :
   have hps : ∀ i, D.ps i (resQ T.F g) = 1 := fun i => hine i A hA hq
   have hd : diagRep D.ps (resQ T.F g) = 1 := by
     unfold UpperTheory.V.GradeZeroInterpolatingElement.diagRep
-    simp [hps]
+    simp
     funext i
     have h : D.ps i (AlgEquiv.restrictScalars ℚ g) = 1 := hps i
     rw [h]

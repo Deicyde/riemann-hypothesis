@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.PlaceRankTwoOne
 import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.SplitK
-import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.DiscrB
 import Formalism.DirichletDensity.HostDensityArith
 
 open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.placeRankTwoOne NumberField Formalism.FrobeniusOrbits

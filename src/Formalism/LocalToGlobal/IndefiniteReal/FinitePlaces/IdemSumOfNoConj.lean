@@ -1,5 +1,7 @@
-import Formalism.LocalToGlobal.IndefiniteReal.LinksExist
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.IdemOrth
+import Formalism.LocalToGlobal.IndefiniteReal.LinksDefs
 
 noncomputable section
 

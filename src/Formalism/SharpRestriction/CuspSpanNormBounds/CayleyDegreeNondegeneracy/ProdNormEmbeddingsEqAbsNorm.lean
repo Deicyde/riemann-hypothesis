@@ -1,7 +1,8 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.CayleyDegreeNondegeneracy.ShortVectorEveryPlace
-import Formalism.ThetaLiftIndependence.Statement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.FlagUnipotentLattices.CardSubgroupsOfIndexLe
+import Formalism.HermitianLattices.StatementMass
+import Mathlib.Algebra.Module.StablyFree.Basic
 
 noncomputable section
 

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.LevelGatherings.IdemMulCompl
 
 noncomputable section
@@ -218,7 +220,7 @@ private theorem triple_lemma_2 (Y X Jw : Matrix n n (E ⊗[F] w.adicCompletion F
   have h3 : mapE F E w Y * J' = mapE F E w (Y * Jw) := by
     rw [← eps_smul_mapE F E w Y, Matrix.smul_mul, ← Matrix.mul_smul, hJ, mapE_mul]
   simp only [Matrix.add_mul, Matrix.mul_add, h3, Matrix.smul_mul, Matrix.mul_smul, Matrix.one_mul, Matrix.mul_one,
-    smul_add, smul_smul, compl_idem _ (epsW_idem F E w), h2, compl_smul_mapE, ← mapE_mul, add_zero, zero_add, smul_zero]
+    smul_add, smul_smul, compl_idem _ (epsW_idem F E w), h2, compl_smul_mapE, ← mapE_mul, add_zero, zero_add]
 
 private theorem split_lemma_3 (Jw : Matrix n n (E ⊗[F] w.adicCompletion F))
     (J' : Matrix n n (E ⊗[F] FiniteAdeleRing (𝓞 F) F)) (hJ : epsW F E w • J' = mapE F E w Jw) :
@@ -241,7 +243,7 @@ theorem sec_mem_UPts (σE : E →ₐ[F] E) (J : Matrix n n E) {X : GL n (E ⊗[F
     ext a b
     by_cases hab : a = b
     · subst hab; simp [cT, mapE, hσ, sig_iE]
-    · simp [cT, mapE, hσ, sig_iE, Matrix.one_apply_ne hab, Matrix.one_apply_ne (Ne.symm hab)]
+    · simp [cT, mapE, sig_iE, Matrix.one_apply_ne hab, Matrix.one_apply_ne (Ne.symm hab)]
   have hJ : epsW F E w • J.map (inclE (F := F) (FiniteAdeleRing (𝓞 F) F)) =
       mapE F E w (J.map (inclE (F := F) (w.adicCompletion F))) := by
     ext a b

@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.LieLatticeData
 open GlobalTheory.CompanionTheory.Ar.Num
 

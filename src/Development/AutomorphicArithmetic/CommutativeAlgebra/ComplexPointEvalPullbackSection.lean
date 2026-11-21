@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.EtaleClopenDescent.EFam
-import Development.AutomorphicArithmetic.Foundations.EtaleClopenDescent.IsSeparatedOfProj
-import Development.AutomorphicArithmetic.Foundations.EtaleClopenDescent.IsIntegralRBIff
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory GlobalTheory.HodgeCoh GlobalTheory.CechDR GlobalTheory.PD KaehlerDifferential GlobalTheory.W1 GlobalTheory.WH
 
 theorem UpperTheory.complexPoint_eval_pullback_section :

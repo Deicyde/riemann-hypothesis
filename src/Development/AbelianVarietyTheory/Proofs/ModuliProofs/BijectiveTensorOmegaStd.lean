@@ -1,9 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.ToricGeometry.MulVecOfRealVecAddMemSpanPeriodLattice
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.HeckeKer
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsHolPeriods
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.UnifUniqSt
+import Mathlib.Analysis.Matrix.Order
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Tactic.Monotonicity.Lemmas
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.Clauses
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ThetaUnifAV
 
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.PTheta Matrix
 open scoped Kronecker
@@ -20,8 +23,7 @@ theorem re_realForm (M : Matrix ι ι ℝ) (z w : ι → ℂ) :
     (z ⬝ᵥ (M.map Complex.ofReal) *ᵥ star w).re =
       (fun i => (z i).re) ⬝ᵥ M *ᵥ (fun i => (w i).re) +
         (fun i => (z i).im) ⬝ᵥ M *ᵥ (fun i => (w i).im) := by
-  simp [dotProduct, mulVec, Complex.re_sum, Complex.im_sum, Finset.sum_add_distrib,
-    Finset.sum_sub_distrib]
+  simp [dotProduct, mulVec, Complex.re_sum, Complex.im_sum, Finset.sum_add_distrib]
 
 theorem im_realForm (M : Matrix ι ι ℝ) (z w : ι → ℂ) :
     (z ⬝ᵥ (M.map Complex.ofReal) *ᵥ star w).im =
@@ -275,7 +277,7 @@ theorem eq_of_period_equiv [Nonempty (Fin r)] {τ τ' : Matrix (Fin h) (Fin h) �
     by_cases hv : v = u
     · subst hv
       simp [Pi.single_apply, mulVec, dotProduct]
-    · simp [Pi.single_apply, mulVec, dotProduct, hv]
+    · simp [mulVec, dotProduct, hv]
   have h1 : (e : (Fin g → ℂ) →ₗ[ℂ] (Fin g → ℂ)) = LinearMap.id := by
     refine (Pi.basisFun ℂ (Fin g)).ext fun k => ?_
     obtain ⟨⟨u, i⟩, rfl⟩ := σ.surjective k

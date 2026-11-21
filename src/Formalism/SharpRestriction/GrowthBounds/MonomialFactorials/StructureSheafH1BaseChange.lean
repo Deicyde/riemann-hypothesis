@@ -1,4 +1,12 @@
-import Formalism.SharpRestriction.GrowthBounds.MonomialFactorials.BlockBoundUniformiser
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.ObjSeg
+import Formalism.SharpRestriction.GrowthBounds.RootWeights.ValuationNonnegIffIntegral
+import Mathlib.LinearAlgebra.SymmetricAlgebra.Basis
+import Mathlib.LinearAlgebra.TensorAlgebra.Basis
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 noncomputable section
 

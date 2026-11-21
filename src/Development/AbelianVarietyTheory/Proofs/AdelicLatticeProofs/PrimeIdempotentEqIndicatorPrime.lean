@@ -1,6 +1,7 @@
-import Mathlib
-import Formalism.UnipotentAdelicQuotients.ThmBInHecke
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.AdeleIdemPrimeCriterion
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Tactic.Polynomial.Basic
 
 open NumberField IsDedekindDomain NumberField.mixedEmbedding Complex Classical HeckeCharacterZeroLocus.ThmBIn
 open scoped TensorProduct ContDiff nonZeroDivisors

@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.UnitaryAtAllRows
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.NormGoodRowsFiniteGroupActionStatement
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.NormLiftFormsFiniteGroupActionStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.TranslateUnitaryLifts
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ReprMemOfBasisRational
 

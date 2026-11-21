@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.GermSys
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsFlatAnIffIsConstMul
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.GenericPartDenseProOpen
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.AmplePointsLocalizedModel
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HodgeLatticeDvrDegreeStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsHodgeLatticeGermSystemStatement
@@ -210,7 +207,7 @@ theorem hodgeLat_model : ∀ (E : Type) [Field E] [NumberField E] [IsCMField E] 
   obtain ⟨e, he, -⟩ := GlobalTheory.T.lie_model_existsUnique_equiv Y.X Y.t.G Z.Ω (Z.ξ₀ ≫ Y.j) (Fin d → Z.Ω) Z.V M Z.M
   let ρ' : 𝓞 E →+* Module.End Z.Ω (Fin d → Z.Ω) := (e.symm.conjRingEquiv : _ ≃+* _).toRingHom.comp Z.ρ
   have hρ' : ∀ a v, e (ρ' a v) = Z.ρ a (e v) := fun a v => by
-    simp [ρ', LinearEquiv.conjRingEquiv, LinearEquiv.conj_apply]
+    simp [ρ', LinearEquiv.conjRingEquiv]
   have hact : M.IsActOf Y.t.act.act ρ' := fun a v => by
     rw [← he, hρ', Z.act a (e v), he]
   have hrho : ∀ a v, ρ' a v = (rho S.g₀.B a).mulVec v := fun a v => M.inj (by rw [S.act₀, hact a v])
@@ -228,7 +225,7 @@ theorem hodgeLat_model : ∀ (E : Type) [Field E] [NumberField E] [IsCMField E] 
     · obtain ⟨-, -, -, -, -, e1, e2⟩ := facts _ h
       have hcc : ComplexEmbedding.conjugate (ComplexEmbedding.conjugate τ') = τ' := by
         ext x
-        simp [ComplexEmbedding.conjugate_coe_eq]
+        simp
       rw [hcc] at e2
       rw [e1, e2, add_comm]
   have hC : HChar S.g₀.B (D.p + D.q) := GlobalTheory.T.hermitian_signature_character E Z.Ω d (D.p + D.q) S.g₀.B ρ' hrho hcard hsum

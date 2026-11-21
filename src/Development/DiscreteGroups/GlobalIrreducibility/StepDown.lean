@@ -1,5 +1,9 @@
-import Mathlib
-import Development.DiscreteGroups.GlobalIrreducibility.StepUp
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.DiscreteGroups.GlobalIrreducibility.DzLcFin
+import Development.DiscreteGroups.GlobalIrreducibility.DzLcIso
+import Development.DiscreteGroups.GlobalIrreducibility.DzRedSupp
+import Development.DiscreteGroups.GlobalIrreducibility.ValUniformizerPowLt
 
 noncomputable section
 

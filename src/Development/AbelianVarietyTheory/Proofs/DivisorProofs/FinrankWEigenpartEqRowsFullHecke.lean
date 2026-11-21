@@ -1,18 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.NormalFam
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.HoweUnram
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsStepWeil
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsNormLeHeightPow
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinRepApply
-import Formalism.LocalToGlobal.IndefiniteReal.CutTuples2
-import Formalism.LocalToGlobal.Divisibility.ProjLemmas
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SignAtBasePlaceEqEmbedding
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConjMapMemMult
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GoodPartFullEqKilled
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsometryMatchingLatticesMatchesSphericalOpsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLabelThetaLiftSpaceIffDualStatement
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ThetaLiftLevelsGoodPrimesPropertiesStatement
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LevelOperatorsAtPrimeOffLevelDatumStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ExistsSphericalOperatorsRowsNormalEigenspacesStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.SphericalOperatorsFormsOnRankSpaceNormalStatement
 
@@ -30,7 +22,7 @@ namespace GlobalTheory.DimFull
 open GlobalTheory.CuspMult GlobalTheory.PartDims
 
 theorem dualLab_twice (d : List ℤ) : dualLab (dualLab d) = d := by
-  simp [dualLab, List.map_reverse, Function.comp_def]
+  simp [dualLab, List.map_reverse]
 
 variable {D : D7}
 
@@ -186,7 +178,7 @@ theorem killed_union_comp {H H' X ι κ : Type} [Group H] [Group H'] [AddCommGro
   · rintro hk x ⟨Q, d, B', hB', rfl⟩
     have hm : (B'.map Φ.symm.toEquiv.toEmbedding).map Φ.toEquiv.toEmbedding = B' := by
       ext y
-      simp [Finset.mem_map]
+      simp
     have := hk _ ⟨Q, d, B'.map Φ.symm.toEquiv.toEmbedding, (hI _ _ _).2 (by rw [hm]; exact hB'), rfl⟩
     rw [alg_comp, hm] at this
     exact this

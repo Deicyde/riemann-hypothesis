@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SpecializesGenericImage
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsMonoFamNontrivial
-import Development.AbelianVarietyTheory.Definitions.Divisors.NonemptyUWit
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsAffineChartThetaSystemUnitaryModel
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsThetaSysUOver
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ImportsLastBis

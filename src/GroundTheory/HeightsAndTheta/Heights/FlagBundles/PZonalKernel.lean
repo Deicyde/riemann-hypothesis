@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.FlagBundles.Statements
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.Analysis.SpecialFunctions.Integrals.PosLogEqCircleAverage
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.FlagBundles

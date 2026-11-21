@@ -1,9 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsTateZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPeriodChartDualRiemannStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HolomorphicLogOnConvex
 import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.NormFderivLeOfClosedBallSubset
-import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.DifferentiableOnOfTendstoLocallyUniformlyOn
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsThetaOfPolAV
 
 set_option autoImplicit false
 

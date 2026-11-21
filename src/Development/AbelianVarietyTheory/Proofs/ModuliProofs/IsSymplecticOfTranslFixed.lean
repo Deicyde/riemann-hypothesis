@@ -1,6 +1,5 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.Clauses
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ThetaCore
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.CMModuli.SiegelFamilyZetaUnit
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.SiegelObjectPullbackExistsAndPrincipal
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.SiegelPullbackIdCompCancel
@@ -8,11 +7,6 @@ import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsIsSharpAndPrim
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.GeneratorExtendsFromGenericFibreValuationRing
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ImportsBis
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.CardTorsionAbelianVariety
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.GlobalFnsHolds
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.ForallGeometricallyIntegralOfSmoothOfGeometrical
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.ExistsUniqueWeilIs
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.ExistsCommVOfLe
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.WeilIsAlternatingSkewNatural
 
 set_option autoImplicit false
 
@@ -95,7 +89,7 @@ theorem pow_form {U : Type} [CommGroup U] (hM : M ≠ 0) {z : U} (hz : z ^ M = 1
 
 theorem card_std (hM : M ≠ 0) : Nat.card (Std h M) = M ^ (2 * h) := by
   have : NeZero M := ⟨hM⟩
-  simp [Nat.card_prod, two_mul, pow_add]
+  simp [two_mul, pow_add]
 
 end Labels
 

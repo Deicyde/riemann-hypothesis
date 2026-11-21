@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CardLeOfSpan
+import Mathlib.RingTheory.Etale.Weakly
 
 noncomputable section
 

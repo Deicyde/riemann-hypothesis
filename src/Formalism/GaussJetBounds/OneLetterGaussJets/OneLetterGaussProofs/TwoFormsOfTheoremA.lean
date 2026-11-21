@@ -1,8 +1,9 @@
+import BuildAid.Leniency.Open
 import Formalism.GaussJetBounds.OneLetterGaussJets.StatementG
 import Formalism.GaussJetBounds.OneLetterGaussJets.StatementF
-import Formalism.GaussJetBounds.OneLetterGaussJets.StatementA
 import Formalism.GaussJetBounds.OneLetterGaussJets.OneLetterGaussProofs.CapLeOddShiftBound
-import Formalism.GaussJetBounds.ThmAEntryFull
+import Formalism.GaussJetBounds.GaussJetProofs.SlopeBoundSaturation
+import Formalism.GaussJetBounds.GaussJetProofs.TheoremAMatrixEntries
 
 noncomputable section
 open scoped BigOperators

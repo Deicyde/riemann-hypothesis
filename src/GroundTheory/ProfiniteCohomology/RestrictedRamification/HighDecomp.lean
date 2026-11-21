@@ -1,5 +1,7 @@
-import Mathlib
-import GroundTheory.ProfiniteCohomology.RestrictedRamification.SurjectiveOfInjectiveOfInjective
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.ProfiniteCohomology.RestrictedRamification.BrauerDivisor
+import GroundTheory.ProfiniteCohomology.RestrictedRamification.BrauerFrob
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

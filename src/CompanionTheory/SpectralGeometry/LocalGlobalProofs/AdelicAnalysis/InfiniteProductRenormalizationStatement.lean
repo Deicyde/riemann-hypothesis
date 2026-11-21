@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.InfiniteProductRenormalization
 open MeasureTheory Topology
 open scoped ENNReal NNReal Matrix

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.Statement
 
 noncomputable section
@@ -38,13 +40,13 @@ theorem ind_biInv (k : Type) [CommRing k] (K : Subgroup G) (T : Set G)
   unfold IsBiInv
   intro a b x
   by_cases hx : x ∈ T
-  · simp [Set.indicator_apply, hx, hT a b x hx]
+  · simp [hx, hT a b x hx]
   · have h' : (a : G) * x * b ∉ T := by
       intro h
       apply hx
       have := hT a⁻¹ b⁻¹ _ h
       simpa [mul_assoc] using this
-    simp [Set.indicator_apply, hx, h']
+    simp [hx, h']
 
 theorem dc_stable (K : Subgroup G) (g : G) (a b : K) (x : G)
     (hx : x ∈ DoubleCoset.doubleCoset g (K : Set G) (K : Set G)) :
@@ -242,7 +244,7 @@ theorem Tj_double_coset_mem : Formalism.UG.TjMem := by
       refine ⟨⟨a * a0⁻¹, (GLint (Fin n) O).mul_mem ha ((GLint (Fin n) O).inv_mem ha0)⟩,
         ⟨b0⁻¹ * b, (GLint (Fin n) O).mul_mem ((GLint (Fin n) O).inv_mem hb0) hb⟩, ?_⟩
       apply Units.ext
-      simp only [Subgroup.coe_mk, Units.val_mul, e, e0]
+      simp only [Units.val_mul, e, e0]
       simp only [mul_assoc, Units.inv_mul_cancel_left, Units.mul_inv_cancel_left]
     · push_neg at hne
       exact ⟨∅, fun x hx => absurd (hne x) hx⟩

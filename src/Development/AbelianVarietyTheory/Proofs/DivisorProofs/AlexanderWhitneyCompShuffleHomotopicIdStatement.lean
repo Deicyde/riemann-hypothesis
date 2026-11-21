@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AlexanderWhitneyCompShuffleHomotopicId
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HasTotalBiChains
 open CategoryTheory Limits Opposite AlgebraicTopology GlobalTheory.EZ
 universe u v
 set_option maxHeartbeats 1000000 in

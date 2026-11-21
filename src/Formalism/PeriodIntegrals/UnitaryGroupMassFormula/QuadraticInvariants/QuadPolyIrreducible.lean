@@ -1,5 +1,13 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.ClassNumImQ
+import Mathlib.Algebra.Polynomial.SpecificDegree
+import Mathlib.Data.Rat.Star
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
 
 open NumberField Polynomial
 

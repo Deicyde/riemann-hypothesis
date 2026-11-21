@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.AdmissibleDesigns.GlobalIndexTheoremPlacesOfRNAdm
 import Formalism.AdmissibleDesigns.DesignOfAdmittedObjects
+import Formalism.SharpRestriction.LevelLetterCocycles.DistinctEigenvalueCornerPerturbationOfBlocks
+import Formalism.WachLatticeTwists.RamifiedBlockRings.RamifiedBlockProofs.FinrankRangeEq
 
 noncomputable section
 

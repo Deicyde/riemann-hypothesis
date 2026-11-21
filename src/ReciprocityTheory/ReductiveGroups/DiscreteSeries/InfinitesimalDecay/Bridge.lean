@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.InfinitesimalDecay.DecBoundJ
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.SigZeroTopA
+import Formalism.HermitianCurvature.StatementB
+import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
 
 set_option autoImplicit false
 

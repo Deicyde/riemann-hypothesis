@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Open
 import CompanionTheory.HarishChandraModules.BesselParameterIntegrals.BesselOrbitConvolutions.BesselNonvanishingReduction
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.AeSS
-import CompanionTheory.HarishChandraModules.BesselParameterIntegrals.BesselOrbitConvolutions.PhiReg
 
 noncomputable section
 open MeasureTheory Matrix

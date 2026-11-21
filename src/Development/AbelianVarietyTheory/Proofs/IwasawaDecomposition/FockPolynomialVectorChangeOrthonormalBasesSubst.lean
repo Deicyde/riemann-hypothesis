@@ -1,7 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.ConcretePkgSpec
-import Formalism.LocalRingCardinality.DataExtra
-import Formalism.LocalRingCardinality.DataTies
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsHolRepOfIsTau
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FockPolynomialVectorsInjectiveNonzeroVacuum
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.APlusComm
@@ -145,7 +143,7 @@ theorem pure_subst {g : X → ℂ} (c : ι → κ → μ → ℂ) (e : ι → κ
   | mul_X p v hp =>
     rw [mul_comm, hX', hp, map_mul, MvPolynomial.aeval_X, hA _ _ (hm _)]
     simp only [Finset.sum_mul, map_sum, mul_assoc]
-    simp only [MvPolynomial.C_mul', map_smul, smul_mul_assoc, hX]
+    simp only [MvPolynomial.C_mul', map_smul, hX]
 
 end Generic
 

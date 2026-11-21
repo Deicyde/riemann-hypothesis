@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsCuspSpaceBot
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HasCompactSupportDescend
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InvariantIntegralUnipotentCompactStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSmallOpenCompactNormalStatement

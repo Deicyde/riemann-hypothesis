@@ -1,5 +1,10 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.LatticeTheta.LatticeThetaProofs.InnerDualVecBasis
 import Formalism.LatticeTheta.LatticeThetaProofs.FundamentalDomainEqPreimage
+import Mathlib.Analysis.Fourier.AddCircleMulti
+import Mathlib.Topology.Separation.CompletelyRegular
 
 open MeasureTheory Set Complex
 open scoped RealInnerProductSpace
@@ -100,7 +105,7 @@ theorem boxIoc_ae_eq :
   have h1 : ({x : ι → ℝ | ∀ i, x i ∈ Ioc ((0 : ι → ℝ) i) ((0 : ι → ℝ) i + 1)} : Set (ι → ℝ)) =
       Set.univ.pi fun i => Ioc ((0 : ι → ℝ) i) ((1 : ι → ℝ) i) := by
     ext x
-    simp [Set.mem_univ_pi]
+    simp
   rw [h1]
   show _ =ᵐ[Measure.pi fun _ => volume] _
   exact Measure.univ_pi_Ioc_ae_eq_Icc.trans Measure.univ_pi_Ico_ae_eq_Icc.symm
@@ -113,7 +118,7 @@ theorem mFourierCoeff_torusFunC (e : Module.Basis ι ℝ V) (G : V → ℂ) (hG 
   have hS : (Set.univ.pi fun _ : ι => Ioc (0 : ℝ) (0 + 1)) =
       {x : ι → ℝ | ∀ i, x i ∈ Ioc ((0 : ι → ℝ) i) ((0 : ι → ℝ) i + 1)} := by
     ext x
-    simp [Set.mem_univ_pi]
+    simp
   have hmp : MeasurePreserving (torusProj ι)
       (volume.restrict {x : ι → ℝ | ∀ i, x i ∈ Ioc ((0 : ι → ℝ) i) ((0 : ι → ℝ) i + 1)})
       (@volume (UnitAddTorus ι)

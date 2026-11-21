@@ -1,12 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsCrystalPairing
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.PolarisationModuleIndex
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ConjugateOrderData
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsPlaceRing
 open CategoryTheory CategoryTheory.Limits AlgebraicGeometry MonoidalCategory CartesianMonoidalCategory MonObj NumberField IsDedekindDomain
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory.Cris GlobalTheory.DeRham GlobalTheory.RealMult GlobalTheory.CMVal GlobalTheory.LatVal GlobalTheory.LatJet GlobalTheory.LatModel
 open GlobalTheory.IndefiniteRowSideFullHecke.ClassZetaValuationBounds (IsClassZetaVals c_vp cE_vp a0)
@@ -46,7 +40,7 @@ theorem exists_basis_push_eq_sum : GlobalTheory.Published.AbelianDeRham → ∀ 
   have hsum : ∀ v : Fin n → R, (GlobalTheory.Published.AbelianDeRham.bcMor h).Corr (∑ k, v k • b k)
       (∑ k, ((v k : R) : ℂ) • B k) := by
     intro v x
-    simp only [LinearMap.sum_apply, LinearMap.smul_apply, hB _, map_sum, smul_eq_mul, map_mul]
+    simp only [LinearMap.sum_apply, LinearMap.smul_apply, map_sum, smul_eq_mul, map_mul]
     refine Finset.sum_congr rfl fun k _ ↦ ?_
     rw [hB k x]
     rfl

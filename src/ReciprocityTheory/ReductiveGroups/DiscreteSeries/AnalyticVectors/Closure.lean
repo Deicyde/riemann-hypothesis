@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.AnalyticVectors.Analytic
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.AnalyticVectors.ClosureK
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.AnalyticVectors.PolarJmConjTranspose

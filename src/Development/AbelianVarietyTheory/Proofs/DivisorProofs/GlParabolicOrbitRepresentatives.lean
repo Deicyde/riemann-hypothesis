@@ -1,5 +1,13 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsMidJacAt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Matrix
 
@@ -88,8 +96,7 @@ theorem exists_decomp (X : Matrix (Fin n) (Fin m) k) :
   let B := Module.Basis.sumExtend hli
   have hB : ∀ j, B (Sum.inl j) = cols X j.1 := by
     intro j
-    simp only [B, Module.Basis.sumExtend, Module.Basis.reindex_apply, Module.Basis.coe_extend,
-      Equiv.symm_symm, Equiv.trans_apply, Equiv.sumCongr_apply]
+    simp only [B, Module.Basis.sumExtend, Module.Basis.reindex_apply, Module.Basis.coe_extend]
     rfl
   let e := B.indexEquiv (Pi.basisFun k (Fin n))
   let b := B.reindex e
@@ -117,11 +124,11 @@ theorem exists_decomp (X : Matrix (Fin n) (Fin m) k) :
     · simp
     · rw [Finset.sum_eq_single (e (Sum.inl ⟨j, hj⟩))]
       · have := congrFun (hb ⟨j, hj⟩) r
-        simp only [G, of_apply, if_pos rfl, mul_one, dif_neg hj]
+        simp only [G, of_apply]
         rw [this]
         simp [cols]
       · intro l _ hl
-        simp [hl, dif_neg hj]
+        simp [hl]
       · simp
 
 end GlobalTheory.OrbitsGLParab

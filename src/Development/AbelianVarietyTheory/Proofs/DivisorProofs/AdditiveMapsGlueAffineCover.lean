@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CrdInjective
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFrob
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFrobLinSig
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsHomOfBasis
 

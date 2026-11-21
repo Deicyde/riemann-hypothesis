@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.SingleIndexPlacesAreTwisted
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsRec
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SubOrthProjPerpMem
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GoodLiftOntoOfBase

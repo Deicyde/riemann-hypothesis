@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.LeviForms.ProjectiveLineSecondChartSymmOfNe
+import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.PshRegMax
+import ReciprocityTheory.AnalyticForms.PotentialTheory.PshShiftA
 
 namespace ReciprocityTheory.AnForm.P
 
@@ -182,10 +185,10 @@ theorem llT_psh_chart (t : ℝ) (ht : 0 < t) (ht0 : t ≤ T0) (x : OnePoint ℂ)
       rcases finset_fin_two_eq_cases i with rfl | rfl
       · exact levi_combo_nonneg (a := 1 + epsT 2 t) (b := 0) ha k j hyk hyj
           (Eventually.of_forall fun w => by
-            simp only [Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons]; ring) v
+            simp only [Matrix.cons_val_zero]; ring) v
       · exact levi_simple_nonneg (a := 1 + epsT 2 t) (b := -Real.log (Real.log (1 / t)))
           (by linarith) k hyk (Eventually.of_forall fun w => by
-            simp only [Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons]; ring) v
+            simp only [Matrix.cons_val_zero, Matrix.cons_val_one]; ring) v
   · push Not at hyj
     obtain ⟨rfl, hy0⟩ := hyj
     obtain ⟨δ, hδ, hpole⟩ := llT_near_pole t ht ht0

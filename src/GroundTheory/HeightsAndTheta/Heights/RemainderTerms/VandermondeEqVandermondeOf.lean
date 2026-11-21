@@ -1,8 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.RemainderTerms.Statements
-import GroundTheory.HeightsAndTheta.Heights.RemainderTerms.IsFlagIntegralOne
-import GroundTheory.HeightsAndTheta.Heights.RemainderTerms.AltCoeff
-import GroundTheory.HeightsAndTheta.Heights.RemainderTerms.Expand
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.RestTerms

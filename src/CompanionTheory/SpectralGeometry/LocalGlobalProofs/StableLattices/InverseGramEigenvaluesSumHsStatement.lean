@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.InverseGramEigenvaluesSumHs
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.HsConjTranspose
 open Matrix
 open CompanionTheory.RgExh.Dec CompanionTheory.RgExh.Dec.L ReciprocityTheory.ChartRestriction.DS GlobalTheory.CompanionTheory.PSubFlag GlobalTheory.CompanionTheory.UGeo
 set_option maxHeartbeats 1000000 in

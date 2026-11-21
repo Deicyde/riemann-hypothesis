@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.LocalQuadraticParts
 import Formalism.SharpRestriction.GlobalSchurBounds.Joints
-import Formalism.SharpRestriction.ElevenLe
 
 noncomputable section
 

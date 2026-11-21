@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryLocalTorusFactorization
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocOpInfMul
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.ThK.LemF
@@ -64,7 +65,7 @@ lemma frame_mulVec_eq_zero_herm (σ : E →ₐ[F] E) (hσ : ∀ z, σ (σ z) = z
   have h1 : v (Sum.inr 0) = 0 ∧ v (Sum.inr 1) = 0 := by
     have a := congrFun h0 (Sum.inr 0)
     have b := congrFun h0 (Sum.inr 1)
-    simp [Matrix.vecMul_fromBlocks, hypH, Matrix.vecMul, dotProduct, Fin.sum_univ_two] at a b
+    simp [hypH, Matrix.vecMul, dotProduct, Fin.sum_univ_two] at a b
     exact ⟨b, a⟩
   have h2 : (fun k : Fin 2 => v (Sum.inr k)) = 0 := by
     ext k; fin_cases k
@@ -101,7 +102,7 @@ lemma dg_unitary_herm (σ : E →ₐ[F] E) (hσ : ∀ z, σ (σ z) = z) (t : (AE
   have e1 : t.1 * (t⁻¹).1 = 1 := t.mul_inv
   have e2 : cA σ (t⁻¹).1 * cA σ t.1 = 1 := by rw [← map_mul, t.inv_mul, map_one]
   ext i j; fin_cases i <;> fin_cases j <;>
-    simp [dg, hypH, incM, Matrix.mul_apply, Fin.sum_univ_two, Matrix.diagonal_apply, hc, e1, e2]
+    simp [dg, hypH, incM, Matrix.mul_apply, Matrix.diagonal_apply, hc, e1, e2]
 
 end GlobalTheory.LineStabLevi
 
@@ -215,7 +216,7 @@ lemma row_of_col (σ : E →ₐ[F] E) (hσ : ∀ z, σ (σ z) = z) (J₁ : Matri
   congr 1
   by_cases hj : j = Sum.inr 1
   · subst hj; simp
-  · simp [Pi.single_apply, hj]
+  · simp [hj]
 
 end GlobalTheory.LineStabLevi
 
@@ -252,9 +253,9 @@ lemma blk_unitary (σ : E →ₐ[F] E) (J₁ : Matrix (Fin d₁) (Fin d₁) E)
   have := congrFun (congrFun hQ (Sum.inl i)) (Sum.inl j)
   simp only [Matrix.mul_apply, Matrix.transpose_apply, Matrix.map_apply, Fintype.sum_sum_type, Fin.sum_univ_two,
     incM, Matrix.fromBlocks_apply₁₁, Matrix.fromBlocks_apply₁₂, Matrix.fromBlocks_apply₂₁, Matrix.fromBlocks_apply₂₂,
-    Matrix.zero_apply, map_zero, h1, mul_zero, zero_mul, add_zero, zero_add] at this
-  simp only [hypH, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_zero, Matrix.cons_val_one,
-    Matrix.empty_val', Matrix.cons_val_fin_one, Matrix.head_cons, map_zero, mul_zero, zero_mul, add_zero, zero_add] at this
+    Matrix.zero_apply, map_zero, h1, mul_zero, zero_mul, add_zero] at this
+  simp only [hypH, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_zero,
+    Matrix.empty_val', Matrix.cons_val_fin_one, map_zero, mul_zero, add_zero] at this
   simpa [Matrix.toBlocks₁₁, Matrix.mul_apply, incM] using this
 
 end GlobalTheory.LineStabLevi

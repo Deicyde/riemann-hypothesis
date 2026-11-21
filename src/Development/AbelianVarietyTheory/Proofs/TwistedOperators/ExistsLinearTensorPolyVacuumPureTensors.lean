@@ -1,10 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaEqB
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsThetaSubSelf
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HoweDualityUnitary
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HoweDualityReal
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.HypothesesAbsDet
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.AlgAtLeAlgD
 
 open NumberField IsDedekindDomain
@@ -60,11 +55,11 @@ def multiL (M : Model σ Y W) (T : Finset (Pl F)) :
   toFun := multi M T
   map_add' f g := by
     ext φ x
-    simp only [multi_apply, MultilinearMap.add_apply, Pi.add_apply, SchwartzMap.add_apply]
+    simp only [multi_apply, MultilinearMap.add_apply, Pi.add_apply]
     ring
   map_smul' c f := by
     ext φ x
-    simp only [multi_apply, MultilinearMap.smul_apply, Pi.smul_apply, SchwartzMap.smul_apply, smul_eq_mul,
+    simp only [multi_apply, MultilinearMap.smul_apply, Pi.smul_apply, smul_eq_mul,
       RingHom.id_apply]
     ring
 

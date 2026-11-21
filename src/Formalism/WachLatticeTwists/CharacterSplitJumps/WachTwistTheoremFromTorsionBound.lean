@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.CharacterSplitJumps.Statement
-import Formalism.WachLatticeTwists.CoprimeLiftBounds.WachTwistTheorem
+import Formalism.CharacterColumnKernels.CharacterColumnKernelEqualityForm
 
 open Finset Classical
 

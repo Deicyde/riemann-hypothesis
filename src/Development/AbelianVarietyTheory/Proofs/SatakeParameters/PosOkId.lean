@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.GlobSpecOfExists
-import Formalism.GradedWeylDivisibility.FinalD
-import Formalism.LocalToGlobal.Divisibility.CoefModLemmas
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.Divisibility.CoefMod
+import Formalism.SharpRestriction.GrowthBounds.DataG
 
 noncomputable section
 

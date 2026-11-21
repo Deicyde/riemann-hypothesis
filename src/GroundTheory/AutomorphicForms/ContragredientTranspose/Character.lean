@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.HeckeIrreducible
 import GroundTheory.AutomorphicForms.WhittakerCriterion
-import GroundTheory.AutomorphicForms.SmoothRepContragredient
-import GroundTheory.AutomorphicForms.SmoothRepSchur
 
 noncomputable section
 

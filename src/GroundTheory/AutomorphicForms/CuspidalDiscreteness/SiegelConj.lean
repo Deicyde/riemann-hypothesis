@@ -1,5 +1,7 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.AutomorphicFormSpaces
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.AutomorphicForms.AutomorphicFormSpaces.ConstantTerm
+import GroundTheory.AutomorphicForms.Reduction
 
 open NumberField IsDedekindDomain Set Filter Topology Matrix
 open scoped NumberField.AdeleRing Classical

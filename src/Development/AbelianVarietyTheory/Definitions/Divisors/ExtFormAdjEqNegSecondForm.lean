@@ -1,4 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.MaIntEmpty
 import Development.AbelianVarietyTheory.Definitions.ThetaMetrics.EventuallyDifferentiableAtOfContDiffAtTwo
 import Development.AbelianVarietyTheory.Definitions.Divisors.LeTwoMulOfForallScale
@@ -622,7 +624,7 @@ theorem leviForm_eq_form_hessC {D : ℕ} {u : (Fin D → ℂ) → ℝ} {z : Fin 
     ext j; simp [Pi.single_apply]
   conv_lhs => rw [e ξ, e η]
   simp only [form_eq_sum, h, map_sum, map_smul, map_smulₛₗ, ContinuousLinearMap.sum_apply,
-    ContinuousLinearMap.smul_apply, smul_eq_mul, RingHom.id_apply, Finset.mul_sum]
+    ContinuousLinearMap.smul_apply, smul_eq_mul, Finset.mul_sum]
   rw [Finset.sum_comm]
   exact Finset.sum_congr rfl fun i _ => Finset.sum_congr rfl fun j _ => by ring
 

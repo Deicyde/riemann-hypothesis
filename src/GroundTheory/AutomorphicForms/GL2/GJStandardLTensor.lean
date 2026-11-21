@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.GL2.GJStandardLDefs
+import GroundTheory.AutomorphicForms.GL2.GJMatrixSchwartz
+import GroundTheory.AutomorphicForms.GL2.GJUnramified
+import GroundTheory.AutomorphicForms.GL2.GodementSectionFactor
 
 open MeasureTheory Filter Set Topology IsDedekindDomain NumberField NumberField.mixedEmbedding
 open scoped NumberField.AdeleRing RestrictedProduct SchwartzMap Classical nonZeroDivisors

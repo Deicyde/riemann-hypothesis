@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.MemAdelicLatticeIffLocalSelfDualCompletion
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.HeightDefect.AdelicUnitaryGroups
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.BasicNotions
 open scoped TensorProduct
 set_option maxHeartbeats 1000000 in

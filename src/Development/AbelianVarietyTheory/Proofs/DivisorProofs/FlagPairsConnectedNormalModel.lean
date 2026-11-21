@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.GlobalHeightBoundIffAtGoodPrimes
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.Adj
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormalModelTrivializingBlowup
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CapDegreeFinitePullbackStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagPairConnectedNormalStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ChernRootFlagPullbackStatement

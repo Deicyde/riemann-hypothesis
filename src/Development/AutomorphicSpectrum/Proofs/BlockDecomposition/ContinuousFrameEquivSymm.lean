@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.EisensteinSeries.SiegelEisensteinContinuation.DictInf
+import Development.WeilBound.CoreStatements.AutomorphicKernels.EisensteinSeriesG2.AdelicHomeomorphisms.IsTopologicalGroupG2
 
 noncomputable section
 
@@ -76,7 +79,7 @@ theorem gram_frame (χ : Chr F E) (ε : ℤˣ) (b : GL (Fin n ⊕ Fin n) E)
   have e4 : Ad.J (AE F E) ε (Fin n) = (Matrix.fromBlocks 0 1 (((ε : ℤ) : E) • 1) 0 :
       Matrix (Fin n ⊕ Fin n) (Fin n ⊕ Fin n) E).map (inclR (F := F) (E := E) (AF F)) := by
     ext i j
-    rcases i with i | i <;> rcases j with j | j <;> by_cases h : i = j <;> simp [Ad.J, h, Matrix.one_apply]
+    rcases i with i | i <;> rcases j with j | j <;> by_cases h : i = j <;> simp [Ad.J, h]
   rw [e1, e2, e3, e4, ← this]
   simp only [Matrix.map_mul]
 

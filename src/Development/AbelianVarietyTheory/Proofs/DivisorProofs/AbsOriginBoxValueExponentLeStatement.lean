@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AbsOriginBoxValueExponentLe
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MeasurableSetSetOfLe
 open MeasureTheory ValuativeRel Matrix
 open GlobalTheory.OriginBox GlobalTheory.FunObj GlobalTheory.SplitFlip GlobalTheory.SplitWeil GlobalTheory.RootEx
 set_option maxHeartbeats 1000000 in

@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.PetEqRelIndexMulPetProd
 import Development.AbelianVarietyTheory.Definitions.Foundations.IsDCReps
 open UpperHalfPlane ModularForm CongruenceSubgroup

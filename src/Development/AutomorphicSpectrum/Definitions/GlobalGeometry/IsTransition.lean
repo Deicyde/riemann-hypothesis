@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsConstMul
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Statements.PrincipalLattices.FiniteDimensionalBase
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsHodgeGram
 
 noncomputable section
 

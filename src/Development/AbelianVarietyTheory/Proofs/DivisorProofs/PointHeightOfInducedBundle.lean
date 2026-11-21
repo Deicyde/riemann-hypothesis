@@ -1,14 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsCompModel
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TopologicalKrullDimEqSucc
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsCommonRefinementModels
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.InducedMetricPullback
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ArTopOfInduced
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.NefFibPullback
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.EqOfIsometricTrivShift
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinsumLifts
+import Formalism.LocalToGlobal.Divisibility.ConjugationAtDistinguishedPlace
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Pj Formalism.BasicNotions.TH Formalism.L2.Theta ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.FD GlobalTheory.AllWt GlobalTheory.CompHt GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.Mean4 GlobalTheory.Mean4O
 open scoped ENNReal Classical
 open MvPolynomial Formalism.DegreeFormula Formalism.BasicNotions.DV Formalism.MainNotions.WeightThresholdDefs Filter Topology ReciprocityTheory.AnForm ReciprocityTheory.AnForm.M GlobalTheory.FlagPoly GlobalTheory.FlagAr
@@ -338,7 +331,7 @@ theorem ht_twist_neg {C : CxSt F} (A : Adl C Y) {cf : HeightOneSpectrum (𝓞 F)
       ∑ᶠ v, SA v + N * (A.n : ℕ) * ∑ᶠ v, cf v := by
     rw [finsum_congr hT, finsum_add_distrib hSA hc, mul_assoc, mul_finsum, mul_finsum]
   rw [Adl.ht, hsplit, Adl.ht]
-  simp only [Adl.twist, Pi.add_apply, Pi.zero_apply, add_zero]
+  simp only [Adl.twist, add_zero]
   field_simp
   ring
 

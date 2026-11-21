@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ArithmeticGeometry.SchemeCohomology.CurveBase
-import GroundTheory.ArithmeticGeometry.SchemeCohomology.SheafHFlasque
+import GroundTheory.ArithmeticGeometry.SchemeCohomology.WeilDivisorSheaf
+import Mathlib.Topology.Sheaves.Flasque
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open CategoryTheory AlgebraicGeometry TopologicalSpace Opposite Limits Topology
 

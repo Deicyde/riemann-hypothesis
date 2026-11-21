@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.EqOfIsometricTrivShift
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsTorsionFreeOfForallExists
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolEqMultiDiff
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HessianOfCombinationMetricLinear
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolynomialDetHermitianSumZeroStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PullbackChartMetricBlockFormStatement

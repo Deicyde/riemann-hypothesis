@@ -1,5 +1,5 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.PlaneSupports.PlaneSupp
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousSingleV
 
 noncomputable section
@@ -24,12 +24,12 @@ theorem exists_good {K : Type} [Field K] [CharZero K] (a p q : K) (ha : a ≠ 0)
   have h2 : P2 ≠ 0 := by
     intro h
     have := congrArg (fun f => Polynomial.coeff f 1) h
-    simp [hP2, Polynomial.coeff_X, Polynomial.coeff_C] at this
+    simp [hP2, Polynomial.coeff_C] at this
     exact ha this
   have h3 : P3 ≠ 0 := by
     intro h
     have := congrArg (fun f => Polynomial.coeff f 1) h
-    simp [hP3, Polynomial.coeff_X, Polynomial.coeff_C, Polynomial.coeff_X_pow] at this
+    simp [hP3, Polynomial.coeff_C, Polynomial.coeff_X_pow] at this
     exact ha this
   have hP : (X * P1 * P2 * P3 : K[X]) ≠ 0 :=
     mul_ne_zero (mul_ne_zero (mul_ne_zero X_ne_zero h1) h2) h3

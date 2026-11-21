@@ -1,7 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsSupercuspidalOfIsCuspidal
-import Development.AbelianVarietyTheory.Definitions.Divisors.MaxWeightGL1EqOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.PadicIsNonarchimedeanLocalField
+import Development.AbelianVarietyTheory.Definitions.Foundations.SmoothPartStable
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Topology.Sheaves.Presheaf
 open MeasureTheory Matrix GlobalTheory.PRep GlobalTheory.SmGL ValuativeRel GlobalTheory.SplitWeil GlobalTheory.StepData
 open scoped Topology
 
@@ -16,7 +18,7 @@ def box (a b : ℕ) (s : kˣ) : Set (Fin a → Fin b → k) :=
 
 theorem mem_box {a b : ℕ} {s : kˣ} {X : Fin a → Fin b → k} :
     X ∈ box a b s ↔ ∀ p q, X p q ∈ cball s := by
-  simp [box, Set.mem_univ_pi]
+  simp [box]
 
 theorem isOpen_box (a b : ℕ) (s : kˣ) : IsOpen (box a b s) :=
   isOpen_set_pi Set.finite_univ fun _ _ => isOpen_set_pi Set.finite_univ fun _ _ => isOpen_cball s

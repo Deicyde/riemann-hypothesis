@@ -1,6 +1,9 @@
-import Formalism.LocalRingCardinality.SpanPowerMembership.TwCore
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.SpanPowerMembership.UrPkgNonempty
-import Formalism.LocalRingCardinality.SpanPowerMembership.NDLocH
+import Formalism.LocalRingCardinality.SpanPowerMembership.NDLocF
+import Formalism.LocalRingCardinality.SpanPowerMembership.NDLocG
+import Formalism.SharpRestriction.LevelLetterCocycles.DataN
 
 noncomputable section
 

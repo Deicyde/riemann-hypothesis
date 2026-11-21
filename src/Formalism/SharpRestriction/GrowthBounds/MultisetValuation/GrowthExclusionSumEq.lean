@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.NcIotaInj
+import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.StmtNumEOf
 
 noncomputable section
 

@@ -1,18 +1,21 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PadicSubsetSums.CentralIdempotents.EigenbasisOfDistinctRoots
 import Formalism.PadicSubsetSums.StableGradedCounts.PropositionOneCentralCount
 import Formalism.PadicSubsetSums.StableGradedCounts.IRRDivisorDegreeSubSum
 import Formalism.PadicSubsetSums.StableGradedCounts.IRRCycleProbSum
 import Formalism.PadicSubsetSums.StableGradedCounts.IRRPrimeRecipSum
-import Formalism.PadicSubsetSums.StableGradedCounts.IRRLemmaLWeight
-import Formalism.PadicSubsetSums.StableGradedCounts.IRRPrimeToPartEqIff
-import Formalism.PadicSubsetSums.StableGradedCounts.IRRPrimeToPartSpec
 import Formalism.PadicSubsetSums.StableGradedCounts.IRRLemmaP
-import Formalism.GaloisIrreducibility.NoSolvableTransitive
-import Formalism.PadicSubsetSums.StableGradedCounts.IRRCentralIdemSelfAdjoint
-import Formalism.PadicSubsetSums.StableGradedCounts.IRRIrredCountUpper
 import Formalism.PadicSubsetSums.StableGradedCounts.IRRSquarefreeCount
 import Formalism.PadicSubsetSums.StableGradedCounts.IRRTypeCountExact
 import Formalism.PadicSubsetSums.StableGradedCounts.IRRCycleTypeProb
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
+import Mathlib.FieldTheory.Finite.Extension
+import Mathlib.LinearAlgebra.Eigenspace.Charpoly
+import Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Card
+import Mathlib.RingTheory.PicardGroup
 
 section
 namespace Formalism.IrreducibleCountingLemmas.GaloisIrreducibility
@@ -957,7 +960,7 @@ theorem asAlgebraHom_twistedIdem {G V : Type} [Group G] [Fintype G] [AddCommGrou
     (J : Subgroup G) (χ : J →* ℂˣ) (ρ : Representation ℂ G V) (x : V) :
     ρ.asAlgebraHom (twistedIdem J χ) x =
       ∑ u : J, ((Nat.card J : ℂ)⁻¹ * (((χ u)⁻¹ : ℂˣ) : ℂ)) • ρ (u : G) x := by
-  simp [twistedIdem, map_sum, Representation.asAlgebraHom_of]
+  simp [twistedIdem, map_sum]
 
 open Classical in
 theorem twisted_idempotent_holds : TwistedIdempotent := by
@@ -1036,17 +1039,17 @@ theorem trace_asAlgebraHom {G V : Type} [Group G] [Fintype G] [AddCommGroup V] [
     rw [Finset.sum_eq_single g]
     · simp [Representation.character, MonoidAlgebra.coeff_single]
     · intro b _ hb
-      simp [MonoidAlgebra.coeff_single, Finsupp.single_apply, hb, Ne.symm hb]
+      simp [MonoidAlgebra.coeff_single, hb]
     · simp
 
 private theorem cip_lemma {G : Type} [Group G] [Fintype G] (c : G → ℂ) (x : G) :
     (∑ y, c y • MonoidAlgebra.of ℂ G y).coeff x = c x := by
   classical
   rw [MonoidAlgebra.coeff_sum, Finsupp.finset_sum_apply, Finset.sum_eq_single x]
-  · simp [MonoidAlgebra.coeff_smul, MonoidAlgebra.of_apply, MonoidAlgebra.coeff_single]
+  · simp [MonoidAlgebra.of_apply, MonoidAlgebra.coeff_single]
   · intro b _ hb
-    simp [MonoidAlgebra.coeff_smul, MonoidAlgebra.of_apply, MonoidAlgebra.coeff_single,
-      Finsupp.single_apply, hb]
+    simp [MonoidAlgebra.of_apply, MonoidAlgebra.coeff_single,
+      hb]
   · simp
 
 theorem weight_formula : WeightFormula := by
@@ -2348,7 +2351,7 @@ theorem propW_of (h1 : SqMassLower) (h3 : LocalEstimateII) (h4 : LocalEstimateII
     intro x hx
     by_contra hcon
     simp only [Set.mem_union, Set.mem_iUnion, not_or, not_exists, Set.mem_setOf_eq,
-      Finset.mem_univ, true_implies, forall_true_left] at hcon
+      Finset.mem_univ, true_implies] at hcon
     obtain ⟨⟨⟨⟨c1, c3⟩, c4⟩, c5⟩, c6⟩ := hcon
     have hsq : ∀ v, x v ∈ sqSet K N := by
       intro v

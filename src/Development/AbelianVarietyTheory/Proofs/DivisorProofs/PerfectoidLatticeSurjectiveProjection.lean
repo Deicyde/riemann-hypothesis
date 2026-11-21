@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.PrismaticDieudonnePerfdIff
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ProjectiveRangeOfCompEqSmul
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InjectiveOfCompEqSmul
 open CategoryTheory WittVector GlobalTheory GlobalTheory.PDivGroup GlobalTheory.Sandwich GlobalTheory.IndefiniteRowSideFullHecke.EpsilonPairingZeta GlobalTheory.Published GlobalTheory.PerfdLat
@@ -244,7 +244,7 @@ theorem GlobalTheory.PerfdLat.OmegaProj.exists_projection (p : ℕ) [Fact p.Prim
       intro m'
       have h1 : Finsupp.linearCombination (Ainf p S.R) id (s m') = m' := LinearMap.congr_fun hs m'
       conv_rhs => rw [← h1]
-      simp only [l, LinearMap.comp_apply, Finsupp.linearCombination_apply, Finsupp.sum, map_sum, map_smul,
+      simp only [l, LinearMap.comp_apply, Finsupp.linearCombination_apply, Finsupp.sum, map_sum,
         map_smulₛₗ, smul_eq_mul, map_mul, ha, id]
     obtain ⟨f, hf⟩ := exists_du_eq D l
     have hdivf : ∀ y, ∃ r, frobenius (xi S.ε) * r = (D.du S G.dual).toLinearMap.flip (D.φ S G.dual f) y := by

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.HodgeTateLatticePointFinrankTateModule
 open NumberField GlobalTheory.HTLat GlobalTheory.EigenSplit Classical
 open scoped TensorProduct NNReal

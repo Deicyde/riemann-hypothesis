@@ -1,5 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.ArakelovInstances.IsStrictDom
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Analysis.Matrix.PosDef
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.Tactic.ENatToNat
 
 namespace GlobalTheory.IndefiniteRowSideFullHecke.ExhaustionFrames
 

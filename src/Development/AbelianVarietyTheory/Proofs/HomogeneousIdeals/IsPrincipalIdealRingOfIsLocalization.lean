@@ -1,5 +1,13 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.IrreducibleSpacePrimeSpectrumAway
+import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.IsAdicCompleteComapConstantCoeff
+import Mathlib.NumberTheory.Padics.PadicIntegers
+import Mathlib.RingTheory.AdicCompletion.Completeness
+import Mathlib.RingTheory.KrullDimension.NonZeroDivisors
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.Tactic.ENatToNat
 
 open PowerSeries IsLocalRing
 

@@ -1,4 +1,10 @@
-import Formalism.LocalToGlobal.Divisibility.ClassSumLemmas
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.Divisibility.ClassSum
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open Module NumberField IsDedekindDomain
 open scoped Matrix ComplexOrder

@@ -1,10 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.VanishingGramTermsBoundParams
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.SiegelEisenstein.WordData
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ResidEvFree
-import Formalism.SharpRestriction.GlobalSchurBounds.ThickPlacesCorollaryOfAnyTranslate
-import Formalism.SharpRestriction.CuspSpanNormBounds.KappaEndpoints
-import Formalism.SharpRestriction.CuspSpanNormBounds.BruhatCellsKronecker.FirstPacketUnfoldedOfNongenericUnit
 
 noncomputable section
 

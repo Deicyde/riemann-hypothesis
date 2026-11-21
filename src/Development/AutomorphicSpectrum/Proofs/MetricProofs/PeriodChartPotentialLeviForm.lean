@@ -1,16 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.MetricPeriods.IsTwiceDifferentiableAt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.CompRightEqZero
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.KappaSt
-import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsFibreLocal
-import GroundTheory.HeightsAndTheta.Heights.Antisymmetric.Statements
-import ReciprocityTheory.AnalyticForms.LeviForms.HomDens
-import ReciprocityTheory.AnalyticForms.PotentialTheory.PshShiftA
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.IsOpenFlagDomainNondegenerateMinorsStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.LogDetComparableGramBoundStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.GramLogUnitaryTriangularInvarianceStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.LocalBruhatCellAnalyticCoordinatesStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.FlagPotentialLeviFormCellStatement
+import Mathlib.Analysis.SpecialFunctions.Complex.Analytic
 
 open MvPolynomial MeasureTheory Filter Topology Matrix ReciprocityTheory.AnForm ReciprocityTheory.AnForm.M ReciprocityTheory.AnForm.P GlobalTheory.CompanionTheory.Ar.PB GroundTheory.Heights₂.Heights
 open scoped ComplexOrder
@@ -114,7 +109,7 @@ theorem inFlagDomain_base {j : ℕ} : InFlagDomain N j 1 := by
     · subst hab
       simp [gramHead, gramOf, sigForm, ha]
     · have : (⟨a, ha⟩ : {a : Fin N // (a : ℕ) < N - j}) ≠ ⟨b, hb⟩ := fun h => hab (congrArg Subtype.val h)
-      simp [gramHead, gramOf, Matrix.one_apply, hab, this]
+      simp [gramHead, gramOf, hab, this]
   rw [h]
   exact Matrix.PosDef.one
 

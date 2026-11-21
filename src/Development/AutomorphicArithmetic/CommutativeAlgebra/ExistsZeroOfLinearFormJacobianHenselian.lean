@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.GoodRoot
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CommutativeAlgebra.ExistsCommonZeroOfJacobianIsUnitHenselian
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 open IsLocalRing UpperTheory.Et
@@ -27,7 +28,7 @@ private lemma UpperTheory.eval_zero_pderiv {R : Type} [CommRing R] {n : ℕ} (j 
           · subst hkj
             simp at hk ⊢
             omega
-          · simp [Finsupp.single_apply, hkj, Ne.symm hkj] at hk ⊢
+          · simp [hkj] at hk ⊢
             exact hk
       · rfl
   | add p q hp hq =>

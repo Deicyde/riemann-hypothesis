@@ -1,5 +1,12 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.AltCoeffRho
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 open MvPolynomial Finset GlobalTheory.FlagHook Formalism.DegreeFormula
@@ -71,8 +78,8 @@ theorem altCoeff_pw_mul {ι : Type} [Fintype ι] [DecidableEq ι] {N : ℕ} (n :
       by_cases hj : j = i
       · subst hj; simp
       · have : σ t j ≠ σ t i := fun h => hj ((σ t).injective h)
-        simp [Function.update_of_ne this, Finsupp.single_apply, Ne.symm hj]
-    · simp [Function.update_of_ne ht, Finsupp.single_apply, Ne.symm ht]
+        simp [Function.update_of_ne this, Ne.symm hj]
+    · simp [Function.update_of_ne ht, Ne.symm ht]
   unfold altCoeff
   simp_rw [key, Finset.mul_sum]
   rw [Finset.sum_comm]
@@ -112,7 +119,7 @@ theorem altCoeff_hook_pw {ι : Type} [Fintype ι] [DecidableEq ι] {N : ℕ}
         · have h3 : r < (c : ℕ) := h1
           simp only [Fin.ext_iff, hookRho, rho, Fin.cycleRange_of_gt h1]
           split_ifs <;> omega
-      · simp [Function.update_of_ne ht, ht]
+      · simp [ht]
     rw [e, altCoeff_rho] at h
     rw [h, ← mul_assoc]
     simp [← mul_pow]

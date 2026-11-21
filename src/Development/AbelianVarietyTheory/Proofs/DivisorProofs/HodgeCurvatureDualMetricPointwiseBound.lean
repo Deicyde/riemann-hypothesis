@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.HodgePeriodGram
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.LeTwoMulOfForallScale
 open Matrix Complex Filter Topology
 open scoped ComplexOrder ContDiff
 open GlobalTheory.IndefiniteRowSideFullHecke.HodgePeriodGram GlobalTheory.HermFrame

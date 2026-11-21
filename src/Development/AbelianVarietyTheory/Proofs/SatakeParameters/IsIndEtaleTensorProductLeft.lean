@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.CMModuli.ProjectiveSpaceOverSpec
+import Mathlib.CategoryTheory.Limits.Shapes.Countable
 
 open CategoryTheory
 

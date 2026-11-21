@@ -1,4 +1,6 @@
-import Formalism.LocalToGlobal.ProjectiveLattices.UnifGam
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.ProjectiveLattices.PetersonNormSubspace
 
 noncomputable section
 
@@ -45,7 +47,7 @@ theorem hermC_single (τ : E →+* ℂ) (G : Matrix (Fin r) (Fin r) E) (u : Fin 
   rw [Finset.sum_eq_single b]
   · simp only [Pi.smul_apply, Pi.single_eq_same, smul_eq_mul, mul_one]
   · intro b' _ hb'
-    simp [Pi.single_apply, hb']
+    simp [hb']
   · intro h
     exact absurd (Finset.mem_univ b) h
 

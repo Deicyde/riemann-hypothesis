@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.KernelsRest
+import Mathlib.Tactic.Polynomial.Basic
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

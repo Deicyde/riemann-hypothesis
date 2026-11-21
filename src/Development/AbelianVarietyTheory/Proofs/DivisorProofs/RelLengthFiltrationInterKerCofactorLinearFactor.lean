@@ -1,7 +1,12 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.MultiplicationKernelIdentity
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PreEig
 import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.IsSaturatedSubmoduleIffExistsIsComplOfValuationR
+import Mathlib.Algebra.GroupWithZero.Submonoid.CancelMulZero
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.TotallySplit
+import Std.Tactic.BVDecide.Normalize.Prop
 open GlobalTheory.IndefiniteRowSideFullHecke.MultiplicationKernelIdentity GlobalTheory.HermitianPreEigenvalues Polynomial Module
 
 noncomputable section
@@ -22,7 +27,7 @@ def compMap (τ : S) : filKer a Fil τ →ₗ[Int0 v] CompProd v a Fil τ where
     funext s; apply Subtype.ext; funext i; simp
   map_smul' c x := by
     funext s; apply Subtype.ext; funext i
-    simp [Algebra.smul_def, ← AdjoinRoot.algebraMap_eq, AlgHom.commutes]
+    simp [Algebra.smul_def, AlgHom.commutes]
     exact Or.inl rfl
 
 def diagMul (τ : S) : CompProd v a Fil τ →ₗ[C] CompProd v a Fil τ :=

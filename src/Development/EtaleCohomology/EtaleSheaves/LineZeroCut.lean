@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.LineHigh
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry LateralTheory.E.t_E2Cut

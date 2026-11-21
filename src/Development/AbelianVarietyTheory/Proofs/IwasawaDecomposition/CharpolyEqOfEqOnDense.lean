@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.SplitRep
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.SimpleRing.Principal
 open Formalism.ConjugateSelfDual Formalism.MainNotions.N Polynomial
 
 namespace GlobalTheory

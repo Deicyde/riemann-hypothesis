@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormsAtOfNorms
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.DegFrame
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeModelInducesRootMetric
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsAlgAtlasAtlasOf
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.JGenSpecializes
 
 set_option autoImplicit false
 

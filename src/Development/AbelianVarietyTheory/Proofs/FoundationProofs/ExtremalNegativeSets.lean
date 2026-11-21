@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.ExistsChosenExtremalVector
-import Development.AbelianVarietyTheory.BlockTheory.TorsionBlocks.WeightFlagWeyl
 
 noncomputable section
 

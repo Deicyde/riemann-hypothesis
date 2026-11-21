@@ -1,6 +1,11 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.GradedWeylDivisibility.StatementB
 import Formalism.GradedWeylDivisibility.DualWeylDominanceOf
-import Formalism.GradedWeylDivisibility.FockSpaceTableaux.LClosedeqLemmas
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Finsupp.Interval
+import Mathlib.Data.Rat.Star
+import Mathlib.Topology.Sheaves.Presheaf
 
 open MvPolynomial
 

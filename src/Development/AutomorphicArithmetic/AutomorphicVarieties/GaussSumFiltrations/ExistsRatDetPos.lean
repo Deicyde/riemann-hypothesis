@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PublishedTheorems.GelfandKazhdanReal
-import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.BasicForm
-import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ExistsEquivariantProjOfLeSumIrreducible
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.RealCusp
 open NumberField GlobalTheory.BorelCoh UpperTheory.V.TR
 open scoped TensorProduct Matrix
 

@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsPushoutAppLEOfIsPullbackOfIsAffine
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchlessingerFlatFibreProductStatement
+import Mathlib.AlgebraicGeometry.Morphisms.Finite
+import Mathlib.AlgebraicGeometry.Morphisms.Flat
+import Mathlib.Tactic.ENatToNat
 open AlgebraicGeometry CategoryTheory CategoryTheory.Limits
 
 namespace GlobalTheory.SchlessingerAffine

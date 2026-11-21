@@ -1,5 +1,7 @@
-import Formalism.LocalToGlobal.GroupLattices.LevelCharts.LevelWithoutExtraPlaces
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.KpqSubgroupCompact
+import Formalism.LocalToGlobal.HermitianColumns.StepLevelQ
 
 noncomputable section
 
@@ -61,7 +63,7 @@ private theorem star_dotProduct_Jpq_mulVec_eq_sub (p q : ℕ) (Z : Fin p ⊕ Fin
     ∑ a, star (Z (Sum.inl a)) * Z (Sum.inl a) - ∑ b, star (Z (Sum.inr b)) * Z (Sum.inr b) := by
   rw [Jpq, Matrix.fromBlocks_mulVec]
   simp only [dotProduct, Fintype.sum_sum_type, Sum.elim_inl, Sum.elim_inr, Matrix.one_mulVec,
-    Matrix.zero_mulVec, add_zero, zero_add, Matrix.neg_mulVec, Pi.neg_apply, Pi.add_apply,
+    Matrix.zero_mulVec, add_zero, zero_add, Matrix.neg_mulVec, Pi.neg_apply,
     Pi.star_apply, Function.comp_apply, mul_neg, Finset.sum_neg_distrib, sub_eq_add_neg]
 
 theorem gram_totDef (hc : CMData F E) (S : HSpace E) (hs : S.SigOK) (hd : S.IsDefinite) : IsTotDef hc.sig S.gram := by

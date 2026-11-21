@@ -1,7 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExponentAndTwistData
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Divisibility.CoefMod
 import Formalism.LocalToGlobal.GlobalTheory.BlockActions.FiniteAdeleRingNontrivial
+import Mathlib.RingTheory.PicardGroup
+import ReciprocityTheory.Automorphisms.Unitary
 
 noncomputable section
 

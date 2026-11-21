@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.StatementsFlagGrassSteps
 import GroundTheory.HeightsAndTheta.Heights.Intersections.PRFormula
 import GroundTheory.HeightsAndTheta.Heights.Intersections.PThmAExpand

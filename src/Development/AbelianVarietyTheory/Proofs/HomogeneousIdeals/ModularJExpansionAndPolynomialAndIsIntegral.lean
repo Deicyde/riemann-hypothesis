@@ -1,5 +1,8 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.ExistsPolynomialModularJOfHasQExpansion
+import Mathlib.Data.Int.Star
+import Mathlib.RingTheory.Polynomial.IsIntegral
 
 open UpperHalfPlane ModularForm Complex Function Filter PowerSeries
 open scoped Topology MatrixGroups Manifold Real

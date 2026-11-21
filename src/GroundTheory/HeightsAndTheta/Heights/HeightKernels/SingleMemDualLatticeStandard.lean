@@ -1,7 +1,9 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.HeightKernels.StatementsDualStdBaseChange
-import GroundTheory.HeightsAndTheta.Heights.HeightKernels.DualProjApply
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.MixedFieldContraction.ContractMixedFieldStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
+import GroundTheory.HeightsAndTheta.Heights.HeightKernels.StatementsGrassHeight
+import GroundTheory.HeightsAndTheta.Heights.HeightKernels.StatementsLineDegreeDual
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.MixedFieldContraction.GenericFibreKerTarget
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

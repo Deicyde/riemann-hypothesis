@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.AlgebraMapNormCoeff
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsCharpolyBaseChangeIntegrallyClosedStatement
+import Mathlib.RingTheory.PicardGroup
 open CategoryTheory Polynomial GlobalTheory.NormalDescent
 
 namespace GlobalTheory.NormalDescent

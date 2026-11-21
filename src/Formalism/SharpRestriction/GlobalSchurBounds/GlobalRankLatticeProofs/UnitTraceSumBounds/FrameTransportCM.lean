@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.GeneralLinearActions.FrameTransport
 
 open Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes

@@ -1,9 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.Lbc
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.IsTemperedCoeff
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsSmoothCharCompNorm
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.DistribHaarCharTransport
 import GroundTheory.AutomorphicForms.MeasuresModulus
+import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsSubquotientDetRepParInd
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsContinuousPadic
+import GroundTheory.LocalFields.LocalFourierHaar
 
 open NumberField IsDedekindDomain ValuativeRel GlobalTheory.FunExt GlobalTheory.LocGL
 
@@ -33,7 +33,7 @@ theorem distribHaarChar_norm {k k' : Type} [Field k] [ValuativeRel k] [Topologic
   rw [← h1, GroundTheory.Automorphic.Measures.distribHaarChar_pi_eq]
   congr 1
   ext
-  simp only [Units.coe_map, MonoidHom.coe_coe, LinearEquiv.coe_det, Lz, Algebra.norm_apply]
+  simp only [Units.coe_map, LinearEquiv.coe_det, Lz, Algebra.norm_apply]
   symm
   show LinearMap.det (e.toLinearMap ∘ₗ M.toLinearMap ∘ₗ e.symm.toLinearMap) = _
   rw [LinearMap.det_conj]

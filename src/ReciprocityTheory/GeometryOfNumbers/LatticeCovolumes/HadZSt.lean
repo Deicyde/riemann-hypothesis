@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.GeometryOfNumbers.LatticeCovolumes.GramSt
 import ReciprocityTheory.GeometryOfNumbers.LatticeCovolumes.HadZStA
+import Mathlib.Data.Int.Star
 
 namespace ReciprocityTheory.GeometryOfNumbersTheory
 

@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.XiMulNu
 import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.ValuationCoeEqNorm
+import ReciprocityTheory.DualLattices.AinfFacts
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 

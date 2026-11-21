@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.ArithmeticGeometry.AbelianVarieties.JacobianSmoothness.RingKrullDimLeRingKrullDimQuotientAddOne
 import GroundTheory.HeightsAndTheta.Heights.ElementarySymmetric.StJacobianRankGeneric
+import Mathlib.FieldTheory.SeparablyGenerated
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

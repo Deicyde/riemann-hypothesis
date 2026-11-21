@@ -1,9 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.OpenClosedSequences
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsClosedEmbeddingTopEmb
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SmIndCoinvariants
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RankFiltrationExists
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HasFiniteLengthOfIsIrreducible
 
 noncomputable section
 

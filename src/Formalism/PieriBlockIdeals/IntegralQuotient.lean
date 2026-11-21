@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PieriBlockIdeals.StatementLD
+import Mathlib.Order.CompletePartialOrder
 
 open Polynomial
 

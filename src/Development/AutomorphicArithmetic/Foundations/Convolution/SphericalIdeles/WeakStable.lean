@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AutomorphicArithmetic.Foundations.Convolution.SphericalIdeles.RamDefs
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.JacobianTraceQuotients.ElemPairJ
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsSatakeParameterOfIsSubquotientOfInjective
 
 noncomputable section
 

@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.IsVolData
 open NumberField IsDedekindDomain MeasureTheory Matrix Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.QuantumDeterminants Formalism.MainNotions.S GlobalTheory.SgAlg GlobalTheory.SgGlob GlobalTheory.SnMass GlobalTheory.SnMass.VolN
 open scoped TensorProduct ENNReal nonZeroDivisors
@@ -41,7 +41,7 @@ theorem gM_mem_Nset (F E : Type) [Field F] [NumberField F] [Field E] [NumberFiel
 
   have hGU : Gᴴ * J.map τ * G = J.map τ := by
     have h1 := congrArg (fun M => M.map τ) hU
-    simp only [IsUn, Matrix.map_mul, map_cT_of_conj _ τ hτ] at h1
+    simp only [Matrix.map_mul, map_cT_of_conj _ τ hτ] at h1
     exact h1
 
   set S : Matrix (Fin (2 * r + k + 1)) (Fin r) ℂ := Matrix.of fun i a => (s a : ℂ) * bvec (eI k r a) i with hSdef

@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.BelowFiniteNonempty
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.TrueColumnChoicesHeckeCharReferenceEqOne
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.JetsInIffStepField
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsPreHasLetters
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsCommonField
@@ -9,6 +8,7 @@ import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsIntMul
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.OrdSubConjEqNeg
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ValPowClassNumber
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.NormOneDetIdealTransportedLattice
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.PredMemGamRanks
 
 noncomputable section
 

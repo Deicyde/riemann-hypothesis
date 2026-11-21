@@ -1,4 +1,5 @@
-import Formalism.SharpRestriction.GrowthBounds.DualFockLinear.Lemma4ElementZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.DualFockLinear.FockRLinDual
 
 noncomputable section
@@ -126,7 +127,7 @@ theorem word_length {τ : Type} (TT : Finset (Fin n')) (c : ℕ) :
       have e : ∀ s, ((z :: l).filter fun w => w.1 = s).length =
           (l.filter fun w => w.1 = s).length + if z.1 = s then 1 else 0 := by
         intro s
-        by_cases hs : z.1 = s <;> simp [List.filter_cons, hs]
+        by_cases hs : z.1 = s <;> simp [hs]
       rw [List.length_cons, ih (fun w hw => hl w (List.mem_cons_of_mem _ hw)),
         Finset.sum_congr rfl (fun s _ => e s), Finset.sum_add_distrib, Finset.sum_ite_eq]
       simp [hl z (by simp)]

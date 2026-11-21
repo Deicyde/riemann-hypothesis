@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Jets.SupWOfSup
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.LeadMinorK
+import Development.AbelianVarietyTheory.Definitions.Jets.SideFam
 open BpJoin Formalism.FourierDecayAlt Formalism.MainNotions.S.ThB
 
 namespace GlobalTheory

@@ -1,5 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ArithmeticGeometry.SchemeCohomology.ConsCompSuccAboveZero
+import Mathlib.Data.Finsupp.Pointwise
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Arith.SchemeCoh

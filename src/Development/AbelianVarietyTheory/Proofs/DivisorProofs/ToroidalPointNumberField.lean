@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StepLatZero
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.InputExistsOfMemberExists
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsProperToroidalModelStructureMap
 open NumberField GlobalTheory.ShFam.Pad AlgebraicGeometry CategoryTheory Limits
 
 namespace GlobalTheory.ModelPointExt

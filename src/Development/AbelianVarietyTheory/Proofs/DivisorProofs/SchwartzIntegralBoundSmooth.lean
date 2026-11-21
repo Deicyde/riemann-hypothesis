@@ -1,8 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OnMatInfOfIsUnit
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SandCLMInfApply
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsArchimedeanRapidKernelOperatorFinsetSum
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SumNormEntriesMulLe
+import Mathlib.LinearAlgebra.Matrix.AbsoluteValue
 open NumberField GlobalTheory.CuspRep GlobalTheory.JSW GlobalTheory.JSW.MirCinf MeasureTheory
 open scoped FourierTransform ContDiff
 

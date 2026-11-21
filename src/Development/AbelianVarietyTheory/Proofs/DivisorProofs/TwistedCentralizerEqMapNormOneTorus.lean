@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsUnifAt
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.UnitLemmaGroup
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MulHomInjective
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SesqAsym
 open NumberField IsDedekindDomain Matrix Polynomial Filter GlobalTheory.CuspRep GlobalTheory.PRep Formalism.UG Formalism.BasicNotions GlobalTheory.UnitaryBC Formalism.L2.Host GlobalTheory.BCT
@@ -44,7 +43,7 @@ theorem ext_sf (c : R →+* R) (G G' : Matrix (Fin a) (Fin a) R) (h : ∀ u v, s
     funext k
     by_cases hk : k = j
     · subst hk; simp
-    · simp [Pi.single_apply, hk]
+    · simp [hk]
   have := h (Pi.single i 1) (Pi.single j 1)
   simpa [sf, hs, Matrix.mulVec_single_one] using this
 
@@ -154,7 +153,7 @@ theorem isometry_eq_mul (hP : B.P.Separable) (β : B.Aˣ) (ε : B.A) (hε : ε =
   have h1 := hφ 1 z
   rw [hmul z] at h1
   rw [herm_sub_left]
-  simp only [InvAlg.herm, map_mul, map_one, mul_one] at h1 ⊢
+  simp only [InvAlg.herm, map_mul, mul_one] at h1 ⊢
   rw [← h1, sub_eq_zero]
   congr 1
   ring

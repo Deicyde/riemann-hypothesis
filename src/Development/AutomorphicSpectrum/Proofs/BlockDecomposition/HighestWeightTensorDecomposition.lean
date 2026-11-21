@@ -1,10 +1,6 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsCliff
-import Development.AutomorphicSpectrum.Definitions.JetCones.SymCapRev
-import Formalism.RealPlaceAnalysis.ThirdArithmeticHolds
-import Formalism.RealPlaceAnalysis.FinalF
-import Development.AutomorphicSpectrum.Proofs.JetProofs.EvFirst
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.JetProofs.GraphExtend
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 open Matrix Finset
 open scoped InnerProductSpace

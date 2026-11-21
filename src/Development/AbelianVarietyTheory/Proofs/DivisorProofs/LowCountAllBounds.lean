@@ -1,10 +1,9 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.WeightedSumBounds.PeriodValuationTheory
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.WeightedSumBounds.WtSubOneLe
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsSatFrame
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.LegendreBoundsFactorialMultiIndexCapelli
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DigitsSumLeLogbStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AddValuationNatCastEqPadicValNatStatement
+import Mathlib.Algebra.Order.Star.Real
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.WeightedSumBounds.FactorialWeightedSumBound
 open MvPowerSeries ReciprocityTheory.PGsh ReciprocityTheory.ChartRestriction.G.Sh GlobalTheory.FGDepth
 
 namespace GlobalTheory.LowCount
@@ -130,7 +129,7 @@ theorem rows_eq {i ex : ℕ} (α : Fin i × Fin i →₀ ℕ) (hdeg : Finsupp.de
   have hs : ∑ e : Fin i, ∑ c : Fin i, α (e, c) = ∑ e : Fin i, ex := by
     rw [← Fintype.sum_prod_type' (fun e c => α (e, c))]
     rw [Finsupp.degree_eq_sum] at hdeg
-    simp [hdeg, mul_comm]
+    simp [hdeg]
   intro e
   exact (Finset.sum_eq_sum_iff_of_le (fun e _ => hrow e)).1 hs e (Finset.mem_univ e)
 

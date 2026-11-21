@@ -1,6 +1,12 @@
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsNontrivialLiftModule
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.GaussianSeminormBounds.RealSeminormFiltration.CoreLM
 import Development.WeilBound.CoreStatements.GaussianSeminormBounds.RealSeminormFiltration.Tensor
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockOperatorsLieRepresentationCommute
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockPolynomialsLocallyFiniteRationalWeights
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockMap
+import Mathlib.LinearAlgebra.SymmetricAlgebra.Basis
+import Mathlib.LinearAlgebra.TensorAlgebra.Basis
 
 noncomputable section
 

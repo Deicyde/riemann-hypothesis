@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.StNbarSmooth
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.StAPrimeChartMargin
+import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.StNbarLeviChart
 set_option maxSynthPendingDepth 1
 
 noncomputable section

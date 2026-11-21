@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.L2DbarEstimates.SymmetricSections.HoloSectionStatement
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 namespace ReciprocityTheory.L2DbarEstimates.Norm
 

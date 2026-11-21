@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.GeneralizedMeasures.LocHeckeInert
 import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.SummandFactor
 import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.TensSmooth
-import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.TrDefs
 
 noncomputable section
 

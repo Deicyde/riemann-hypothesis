@@ -1,7 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PieriBlockIdeals.LocalFaithfullyFlat
 import Formalism.PieriBlockIdeals.PieriColumnMinors.SL2BinomialLattices
-import Formalism.PieriBlockIdeals.PieriColumnMinors.ExactExponentLatticeIncl
-import Formalism.GradedWeylDivisibility.DualWeylDominanceOf
+import Formalism.RankGapBounds.RankGapProofs.FormsTensorLocalization
+import Mathlib.LinearAlgebra.PiTensorProduct.Basis
 
 open MvPolynomial TensorProduct
 
@@ -399,8 +401,8 @@ theorem maxVal_three_three : Formalism.RankGapBounds.JumpSetsAlt.maxVal 3 3 = 1 
     interval_cases i
     · simp [show Nat.choose 3 0 = 1 by decide]
     · simp [show Nat.choose 3 1 = 3 by decide, Nat.Prime.factorization_self Nat.prime_three]
-    · simp [show Nat.choose 3 2 = 3 by decide, Nat.Prime.factorization_self Nat.prime_three]
-    · simp [show Nat.choose 3 3 = 1 by decide]
+    · simp [Nat.Prime.factorization_self Nat.prime_three]
+    · simp
   · have h1 : (Nat.choose 3 1).factorization 3 = 1 := by
       rw [Nat.choose_one_right]; exact Nat.Prime.factorization_self Nat.prime_three
     calc 1 = (Nat.choose 3 1).factorization 3 := h1.symm

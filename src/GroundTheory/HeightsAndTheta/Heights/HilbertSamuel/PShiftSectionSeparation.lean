@@ -1,9 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsShiftSectionSeparation
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsSmallSectionPointHeight
 import GroundTheory.HeightsAndTheta.Heights.HeightsOfSets.ImportsAlt
-import GroundTheory.HeightsAndTheta.Heights.HeightsOfSets.PCurveDivVertical
-import GroundTheory.HeightsAndTheta.Heights.HeightsOfSets.IsSmoothHermConstLine
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.Counterexample
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.PZhangLowerX
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.PFsLineSmooth

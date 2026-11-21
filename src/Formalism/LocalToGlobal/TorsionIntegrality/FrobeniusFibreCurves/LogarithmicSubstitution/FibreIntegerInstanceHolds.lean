@@ -1,7 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.TorsionIntegrality.EisensteinTranslationProducts.GoodModelLattice
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.EisensteinTranslationProducts.AnalyticIdentityTheorems.IntegerEndomorphismInstance
-import Formalism.LocalToGlobal.TorsionIntegrality.FrobeniusFibreCurves.FinalI
 import Formalism.LocalToGlobal.TorsionIntegrality.FrobeniusFibreCurves.LogarithmicSubstitution.AtVariableWeierstrassDerivative
 import Formalism.LocalToGlobal.TorsionIntegrality.FrobeniusFibreCurves.StatementJ
 

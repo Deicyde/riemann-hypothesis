@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.FramePfAsm
 import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.FramePfLocC
 import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.FramePfHH

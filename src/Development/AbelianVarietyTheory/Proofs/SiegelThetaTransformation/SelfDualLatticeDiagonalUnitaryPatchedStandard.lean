@@ -1,5 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SpanningFamilies.IsStabForm
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.SpanningFamilies.FirstCoordinateAdmissible
+import Development.AbelianVarietyTheory.Proofs.HermitianTraceForms.TraceFormDualOneTraceFormDual
+import Mathlib.CategoryTheory.Monoidal.Cartesian.Over
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField Matrix Complex
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.FD GlobalTheory GlobalTheory.ThFr
 open ReciprocityTheory.ChartRestriction.G.Geo.Tor hiding Level
@@ -153,7 +156,7 @@ theorem main : ∀ (E : Type) [Field E] [NumberField E] [IsCMField E] (n r M : �
     rw [Matrix.mul_diagonal]
     by_cases hij : i = j
     · subst hij; simp [ccT, hd]
-    · simp [ccT, Matrix.one_apply, hij, Matrix.diagonal_apply, Ne.symm hij, cc]
+    · simp [ccT, hij, Ne.symm hij, cc]
   rintro Λ ⟨hfg, hsd, s, hs, hsM, hΛS, hSΛ⟩
   obtain ⟨A, hA, hAsd, mA⟩ := moved d hd Λ hfg hsd
   have h𝔞 : 𝔞 ≠ ⊥ := by

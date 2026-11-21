@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import ReciprocityTheory.CommutativeAlgebra.CohenMacaulay.ModDepthGE
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PurityFree
 import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.MemRangeOfForallHeightEqOneOfIsReflexive
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.RegularLocalRingNormalDomain
+import Mathlib.RingTheory.IntegralClosure.GoingDown
 open IsLocalRing
 
 namespace GlobalTheory

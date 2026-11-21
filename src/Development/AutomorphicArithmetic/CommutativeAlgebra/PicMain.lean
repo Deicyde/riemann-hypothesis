@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CommutativeAlgebra.TorsorRelSelfIffExistsCoboundary
 import Development.AutomorphicArithmetic.CommutativeAlgebra.ExistsInvertibleModuleOfLocallyTrivialCocycle
 import Development.AutomorphicArithmetic.CommutativeAlgebra.InvertibleModuleEquivOfSameCocycle

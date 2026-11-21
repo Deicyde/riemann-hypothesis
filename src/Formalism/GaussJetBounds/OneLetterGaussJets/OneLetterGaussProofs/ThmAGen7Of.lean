@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.GaussJetBounds.OneLetterGaussJets.StatementJ
-import Formalism.GaussJetBounds.GaussJetProofs.ThmAOp
 import Formalism.GaussJetBounds.GaussJetProofs.ConstantCoeffAevalLinP
 
 noncomputable section

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.LevelKernelDetection.LevBMemFil
 import Formalism.SharpRestriction.LevelLetterCocycles.LevelKernelDetection.KerEqOfSpan
 

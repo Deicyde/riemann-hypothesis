@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.BesselDecayBounds.BesselUnitNorm.BesselNormSteps.BesselLine.PartAIff
+import Mathlib.Analysis.CStarAlgebra.ContinuousLinearMap
 
 open MeasureTheory Matrix Finset
 open scoped InnerProductSpace

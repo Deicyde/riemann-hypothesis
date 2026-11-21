@@ -1,9 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.IdeleGroups.SIdeleGroups.Places
 import GroundTheory.GlobalFields.IdeleGroups.LocalHerbrand
 import GroundTheory.ProfiniteCohomology.GlobalClassFormation.IdeleCohomology.IsDiscreteRepCoindStabRep
 import GroundTheory.ProfiniteCohomology.GlobalClassFormation.IdeleCohomology.ExistsSIdelesCohomologyEqZero
-import GroundTheory.ProfiniteCohomology.InflationRestriction.Coinduced
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

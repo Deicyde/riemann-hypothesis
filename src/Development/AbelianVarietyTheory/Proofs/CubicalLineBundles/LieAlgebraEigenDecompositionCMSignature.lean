@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.CMLattices.ExistsIsThetaDegOfIsLocalModel
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.ExistsUniqueDifferentialMonHomLieBasisStatement
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.ExistsLieRepresentationEigenLatticesStatement
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsIsLieBasisEigen
@@ -200,8 +200,7 @@ private theorem isSplitting_of_splits {E₁ K₁ : Type} [Field E₁] [NumberFie
     apply Finset.sum_congr rfl
     intro i _
     rw [map_zsmul, zsmul_eq_mul]
-  simp only [Finset.sum_apply, Pi.smul_apply, Function.comp_apply, smul_eq_mul, Pi.zero_apply,
-    MonoidHom.coe_coe]
+  simp only [Finset.sum_apply, Pi.smul_apply, Function.comp_apply, smul_eq_mul, Pi.zero_apply]
   show ∑ τ : 𝓞 E₁ →+* 𝓞 K₁, g τ * ((algebraMap (𝓞 K₁) K₁).comp τ) x = 0
   simp only [hx, Finset.mul_sum]
   rw [Finset.sum_comm]

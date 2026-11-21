@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StPrimeBranchPlace
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StPrimeBranchDimOne
-import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StNormalModelPlace
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StNormalCurveBranchOrder
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StBranchLift
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PNormalModelExists

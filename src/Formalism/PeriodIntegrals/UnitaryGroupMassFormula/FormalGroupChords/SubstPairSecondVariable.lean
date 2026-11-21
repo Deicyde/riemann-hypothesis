@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.PeriodIntegrals.FglChordFactor
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdditiveIntegralGroups.SubstMem
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdditiveIntegralGroups.FormalGroupLawExists
 
 noncomputable section

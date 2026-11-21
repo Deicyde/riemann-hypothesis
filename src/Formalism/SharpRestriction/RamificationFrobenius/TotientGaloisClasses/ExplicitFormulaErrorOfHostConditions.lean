@@ -1,5 +1,10 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.Analytic
 import Formalism.StatementOC
+import Mathlib.NumberTheory.DirichletCharacter.Orthogonality
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 noncomputable section
 

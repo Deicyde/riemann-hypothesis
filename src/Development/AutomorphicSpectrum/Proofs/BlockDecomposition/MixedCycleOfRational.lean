@@ -1,14 +1,11 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsSmoothHermCombLine
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PointIdealMultiprojectivePrime
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MemPointIdealIffEvalCoordsZero
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SpecializesIffPointIdealLe
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MultiprojectivePrimeEqPointIdeal
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HermRepMetricSmooth
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ComplexPointLiftsToMulticone
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RestrictedFormNonzeroOnGenericPoint
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HolomorphicLiftGivesHolomorphicSection
-import ReciprocityTheory.AnalyticForms.RegularLocalRings.ProjHypC
 import GroundTheory.HeightsAndTheta.Heights.Intersections.PDiagOrd
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FinsumLengthMulLogCardEqNegLogAdicAbvNorm
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.POrbitChartMult
@@ -194,7 +191,7 @@ theorem cone_of_isMultiHomog {F : Pol n} {d : Fin (m + 1) → ℕ} (hF : IsMulti
     show ∏ i, (MvPolynomial.X k : MvPolynomial (Fin (m + 1)) D) ^ μ ⟨k, i⟩ = _
     rw [← hF μ hμ k, Finset.prod_pow_eq_pow_sum]
   rw [monomial_eq, Finsupp.prod_fintype _ _ (fun _ => pow_zero _)]
-  simp only [map_mul, map_prod, map_pow, cone, coe_eval₂Hom, eval₂_mul, eval₂_C, eval₂_pow, eval₂_X, mul_pow,
+  simp only [map_mul, map_prod, map_pow, cone, coe_eval₂Hom, eval₂_X, mul_pow,
     Finset.prod_mul_distrib, hX, eq_intCast, map_intCast]
   ring
 

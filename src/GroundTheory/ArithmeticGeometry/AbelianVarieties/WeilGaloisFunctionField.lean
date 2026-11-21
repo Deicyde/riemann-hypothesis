@@ -1,6 +1,7 @@
-import Mathlib
-import GroundTheory.ArithmeticGeometry.AbelianVarieties.DivisorsPullback
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ArithmeticGeometry.AbelianVarieties.TorsionGalois
+import GroundTheory.ArithmeticGeometry.AbelianVarieties.DivisorsTranslate
 
 namespace GroundTheory.Arith.Abelian
 

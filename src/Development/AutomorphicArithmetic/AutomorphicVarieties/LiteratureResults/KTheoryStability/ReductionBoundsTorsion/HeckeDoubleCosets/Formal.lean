@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.KTheoryStability.ReductionBoundsTorsion.HeckeDoubleCosets.PHeckeFormal
 
 noncomputable section
@@ -14,7 +16,7 @@ variable {G K : Type} [Group G] [Group K]
 
 theorem mem_Gq {ρ : G →* K} {q : K} {δ : G} : δ ∈ Gq ρ q ↔ ∃ γ, q⁻¹ * ρ γ * q = ρ δ := by
   unfold Gq
-  simp [MulAut.conj_apply]
+  simp
 
 theorem F_rep {m : ℕ} (ρ : G →* K) (q : K) (F : (Fin (m + 1) → K) → ℝ) (hF : Inv ρ F) (a b : G)
     (h : b * a⁻¹ ∈ Gq ρ q) (y : Fin (m + 1) → K) :
@@ -100,7 +102,7 @@ theorem bd_cmap {G H : Type} [Group G] [Group H] (f : G →* H) (m : ℕ) (z : C
   have key : (bd H m).comp (cmap f (m + 1)) = (cmap f m).comp (bd G m) := by
     apply Finsupp.lhom_ext
     intro g r
-    simp [bd, cmap, Finsupp.mapDomain_single, map_sum, Finsupp.mapDomain_add, Finsupp.mapDomain_smul, hc]
+    simp [bd, cmap, Finsupp.mapDomain_single, Finsupp.mapDomain_add, Finsupp.mapDomain_smul]
     rw [Finsupp.mapDomain_finset_sum]
     simp only [Finsupp.mapDomain_single, hc]
   exact LinearMap.congr_fun key z

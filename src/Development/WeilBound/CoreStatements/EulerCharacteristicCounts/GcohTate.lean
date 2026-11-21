@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.EulerCharacteristicCounts.GcohTateB
+import GroundTheory.ProfiniteCohomology.LocalTateDuality.MainDefs
 
 open CategoryTheory MonoidalCategory GroundTheory.ProfCoh ReciprocityTheory.Gal ValuativeRel Formalism.GaloisCohomology
 

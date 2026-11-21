@@ -1,11 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFundamentalDomainMulRight
-import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedVolumeStatements.AdelicIsomorphismStatement
-import Formalism.SharpRestriction.CuspSpanNormBounds.NonemptyParameterModels.UnitaryPointsRankZeroSubsingleton
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BridgeSIsBridge
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CmDataFromUnramifiedInvolutionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SkewHermitianFormIntegralLatticeExistsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SkewHermitianRealPlaceSignatureNormalStatement
@@ -93,11 +86,11 @@ theorem automorphicForms_finite_skew : GlobalTheory.ThK.KP → ∀ (F E : Type) 
       exact congrArg _ h3.symm
     · obtain ⟨L₀, hL₀, w, hw⟩ := hL φ (hA hφA)
       refine ⟨(LinearMap.funLeft ℂ ℂ (fun y => u.symm (e y))).comp L₀, fun k w' x => ?_, w, ?_⟩
-      · simp only [LinearMap.comp_apply, LinearMap.funLeft_apply, Function.comp_apply]
+      · simp only [LinearMap.comp_apply, LinearMap.funLeft_apply]
         rw [hL₀, map_mul, map_mul]
         rfl
       · funext x
-        simp only [LinearMap.comp_apply, LinearMap.funLeft_apply, Function.comp_apply, hw, f]
+        simp only [LinearMap.comp_apply, LinearMap.funLeft_apply, hw, f]
   let Φ : (I.GA → ℂ) →ₗ[ℂ] (UA σ W.J → ℂ) := LinearMap.funLeft ℂ ℂ (fun y => e.symm (u y))
   have hspanA : Submodule.span ℂ A ≤ (Submodule.span ℂ S).map Φ := by
     rw [Submodule.span_le]

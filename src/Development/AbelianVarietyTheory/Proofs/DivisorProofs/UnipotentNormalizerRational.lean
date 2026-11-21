@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryAdelicGroupTopology
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFundamentalDomainClosure
 
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -86,7 +84,7 @@ theorem incV_dot {n : ℕ} (v w : Fin n → E) :
 theorem incV_single {n : ℕ} (i : Fin n) : (Pi.single i 1 : Fin n → AE F E) = incV F (Pi.single i (1 : E)) := by
   funext r; by_cases h : r = i
   · subst h; simp [incV]
-  · simp [incV, Pi.single_apply, h]
+  · simp [incV, h]
 
 theorem dot_invariant {n : ℕ} {J : Matrix (Fin n) (Fin n) E} (g : UA σ J) (x : Fin n → AE F E) (hx : mat g *ᵥ x = x)
     (v : Fin n → AE F E) :
@@ -179,7 +177,7 @@ theorem stab_normalises_unip : ∀ (F E : Type) [Field F] [NumberField F] [Field
       have hσinj : Function.Injective σ := σ.toRingHom.injective
       apply hσinj
       rw [Pi.zero_apply, map_zero, ← hc0 i]
-      simp only [vecMul, mulVec, dotProduct, map_sum, map_mul, hc₀, Pi.zero_apply]
+      simp only [vecMul, mulVec, dotProduct, map_sum, map_mul, hc₀]
       refine Finset.sum_congr rfl fun j _ => ?_
       rw [hY.herm, mul_comm]
     have h1 := hH.xy

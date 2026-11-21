@@ -1,5 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.TorsionIntegrality.EisensteinTranslationProducts.TranslateProduct
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.TorsionIntegrality.EisensteinTranslationProducts.SemiChar
+import Mathlib.NumberTheory.Padics.Complex
 
 noncomputable section
 

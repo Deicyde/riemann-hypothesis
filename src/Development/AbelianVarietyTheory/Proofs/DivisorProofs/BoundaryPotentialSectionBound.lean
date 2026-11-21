@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AnalyticLogResolution
-import ReciprocityTheory.AnalyticForms.PotentialTheory.ContDiffAtOfIsPotential
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BoundaryPshExhaustionWeightsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ChartSumIntegralLeMongeAmpereStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PshPullbackHolomorphicStatement

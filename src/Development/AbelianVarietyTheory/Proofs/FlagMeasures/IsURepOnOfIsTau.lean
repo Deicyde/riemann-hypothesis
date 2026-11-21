@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.CuspFrameWeights.DiscreteSpectrumKFiniteDecomposition
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ProdLeadMinorDecay
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.InnerRepK
 
@@ -197,7 +197,7 @@ lemma ps_entry (h : IsTau ε abelian₂ τ w) (lam : Fin n → ℝ) {x : Matrix 
     ← integral_inner (h4.apply_continuousLinearMap u)]
   congr 2
   funext k
-  simp [inner_smul_right, mul_comm]
+  simp [mul_comm]
 
 end Tau
 

@@ -1,9 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsSemilocMaxIdeals
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StFibreOverFinite
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsSemilocIntegral
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsLocRingDimOne
 import GroundTheory.HeightsAndTheta.Heights.Intersections.AvoidRing
+import GroundTheory.HeightsAndTheta.Heights.Intersections.OneNotMemOfIsPrime
+import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsFibreIncomp
 set_option maxSynthPendingDepth 1
 
 noncomputable section

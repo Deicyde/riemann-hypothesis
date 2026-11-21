@@ -1,4 +1,4 @@
-import Formalism.WachLatticeTwists.CharacterSplitJumps.Statement
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.TraceFormulas.LatDefs
 
 open Formalism.NG Formalism.RepresentationBoundsCohomology.BR Formalism.RepresentationBoundsCohomology.JT

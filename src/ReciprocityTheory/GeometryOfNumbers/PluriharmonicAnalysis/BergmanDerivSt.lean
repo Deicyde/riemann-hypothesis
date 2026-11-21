@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.GeometryOfNumbers.PluriharmonicAnalysis.BergmanSt
-import ReciprocityTheory.GeometryOfNumbers.PluriharmonicAnalysis.LogDetSt
 
 namespace ReciprocityTheory.GeometryOfNumbersTheory
 

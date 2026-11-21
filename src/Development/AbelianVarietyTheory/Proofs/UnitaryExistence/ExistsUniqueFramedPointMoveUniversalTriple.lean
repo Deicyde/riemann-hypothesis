@@ -1,17 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.NormsFree
-import Formalism.LocalToGlobal.ProjectiveLattices.RegPFree
-import Formalism.LocalToGlobal.ProjectiveLattices.RegQFree
-import Formalism.LocalToGlobal.ProjectiveLattices.ThShort
-import Formalism.LocalToGlobal.ProjectiveLattices.LiftLaSpec
-import Formalism.LocalToGlobal.ProjectiveLattices.IsGenFrGenFr
-import Formalism.LocalToGlobal.ProjectiveLattices.ChartDirectionsIntegral
-import Formalism.LocalToGlobal.ProjectiveLattices.AllTest
-import Formalism.LocalToGlobal.ProjectiveLattices.IsLevMove
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsHolPeriods
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.DivCalc
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.SecBaseChangeAnySt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.AllUniformizationLawsHold
 import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.IsoEqOfMapsAlongSection
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ObjIsAbelianSchemeDimRigidifiedSym
@@ -202,7 +190,7 @@ theorem eps_alg {S : Type} [CommRing S] (a : S) :
 theorem fst_alg {S : Type} [CommRing S] :
     spMap (TrivSqZeroExt.fstHom S S S).toRingHom ≫ spMap (algebraMap S (DualNumber S)) = 𝟙 (Sp S) := by
   rw [← Geo.Tor.spMap_comp, ← LevelFibre.spMap_id']
-  exact congrArg spMap (RingHom.ext fun x => by simp [TrivSqZeroExt.algebraMap_eq_inl])
+  exact congrArg spMap (RingHom.ext fun x => by simp)
 
 variable {E : Type} [Field E] [NumberField E] [IsCMField E] {H : Host E} {Dw : Datum H} {l : Level H}
   {Xo : Moduli Dw l} {c : Coeff l} {ρ : Xo.X ⟶ Xo.X} (ν : SABMap Xo.univ.t Xo.univ.t ρ)

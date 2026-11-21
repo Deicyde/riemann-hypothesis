@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ChernDegreeComplex
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsPresents
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ChernIntegralRandomSectionsStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.AeZeroCountEqIntersectionStatement
 open CategoryTheory AlgebraicGeometry TopologicalSpace MeasureTheory

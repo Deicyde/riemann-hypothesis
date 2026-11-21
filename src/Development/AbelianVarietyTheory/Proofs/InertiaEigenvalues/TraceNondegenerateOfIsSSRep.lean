@@ -1,8 +1,6 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.DataN
-import ReciprocityTheory.L2DbarEstimates.PlurisubharmonicCharts.UniNilp
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IsSSRepOfTraceNondegenerate
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.TraceFormNondegenerate
+import Mathlib.Algebra.Module.StablyFree.Basic
 open Formalism.MainNotions.N
 
 namespace GlobalTheory.TraceSemisimple

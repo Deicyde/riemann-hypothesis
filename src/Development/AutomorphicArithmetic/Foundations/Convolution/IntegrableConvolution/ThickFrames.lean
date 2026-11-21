@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.GeneralizedMeasures.LocHeckeInert
 import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.TensSmooth
 

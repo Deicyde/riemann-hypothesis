@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepresentationPreservesSchwartz
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUnipotentFundamentalDomain
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EvaluationMapAdaptedPlaneContinuous
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawPairPlaneDescentFirstStatement
@@ -98,7 +96,7 @@ theorem exists_split_plane (σ : E →ₐ[F] E) {n n₁ : ℕ} (J : Matrix (Fin 
     have hu : p.1 = 0 := hinj (by rw [hp, Matrix.mulVec_zero])
     exact Prod.ext hu (Prod.ext hs ht)
   have hdim : Module.finrank E ((Fin n₁ → E) × E × E) = Module.finrank E (Fin n → E) := by
-    simp [Module.finrank_prod, Module.finrank_fin_fun, ← hn]
+    simp [Module.finrank_prod, ← hn]
   obtain ⟨p, hp⟩ := (LinearMap.injective_iff_surjective_of_finrank_eq_finrank hdim).1 hinjf r
   refine ⟨p.2.1, p.2.2, p.1, ?_⟩
   rw [← hp, hf]; abel

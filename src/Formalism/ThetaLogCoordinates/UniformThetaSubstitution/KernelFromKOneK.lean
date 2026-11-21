@@ -1,9 +1,6 @@
-import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.KernelFromKOne
-import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.FrobeniusLiftNorms.WModel
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.FrobeniusLiftNorms.WChain
 import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.FrobeniusLiftNorms.EGaussK
-import Mathlib
-import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.EdgeExponent
 
 namespace Formalism.InvariantFactorPaths.G7.Top
 

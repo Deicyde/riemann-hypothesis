@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.NonemptyPullbackGeneric
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExpandsGOfGenericRel
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsGenericRel

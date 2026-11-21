@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.BocksteinBaseChange.EtProps
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.BocksteinBaseChange.SmoothGaloisGeometry.IsOpenConnectedComponent
+import Mathlib.AlgebraicGeometry.ProjectiveSpectrum.Proper
+import Mathlib.AlgebraicGeometry.QuasiAffine
+import Mathlib.RingTheory.TotallySplit
 
 set_option backward.isDefEq.respectTransparency false
 

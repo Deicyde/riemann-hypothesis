@@ -1,8 +1,5 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.CuspidalExponentialDecay
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.WeightFunctionOnFrames
-import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.DetNeZeroOfIsOrth
-import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.GramDetInequalitiesClosedFormsStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.ExistsDriftFunctionOrthonormalHermitianFrames
 import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.FrameStepOfRightMulRealUnitaryGroup
 
@@ -42,7 +39,7 @@ private theorem single_one_mulVec_eq_pi_single (r : ℕ) (j k : Fin r) (w : Fin 
   ext i
   by_cases hi : i = j
   · subst hi; simp [Matrix.mulVec, dotProduct, Matrix.single_apply]
-  · simp [Matrix.mulVec, dotProduct, Matrix.single_apply, hi, Ne.symm hi]
+  · simp [Matrix.mulVec, dotProduct, hi, Ne.symm hi]
 
 open NumberField MeasureTheory Topology in
 open scoped ComplexOrder ENNReal Matrix in

@@ -1,8 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.InertKernelTheory.DefsSigma
-import Formalism.LocalToGlobal.TorsionIntegrality.EisensteinTranslationProducts.EisensteinRecursion
 import Formalism.LocalToGlobal.InertKernelTheory.InertCoprimeLemmas.FourthTensorThetaEqKernel
-import Formalism.LocalToGlobal.GlobalTheory.GL3.CubicFields.PeriodRelations.ConjCls
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ExistsRingEquivTranscendental
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.AlgebraicIsogenyConstantOfIsogenyFormula
 

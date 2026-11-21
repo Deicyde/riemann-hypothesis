@@ -1,12 +1,12 @@
-import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.LocVol
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.FinJacAsm
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.LocMassTyp
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.LocJacOrd
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.LocJacTyp
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LatticeIndices.PhiBijective
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LatticeIndices.LatBasisAllHolds
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LatticeIndices.TwoPrimes
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.MassDataXLocJacHypLemmas
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LatticeIndices.CharZeroAdicCompletion
 
 noncomputable section
 

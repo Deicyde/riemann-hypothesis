@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.CapelliDeterminantAndBranching
+import Mathlib.Algebra.Lie.Sl2
+import Mathlib.LinearAlgebra.Eigenspace.Minpoly
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 open Matrix Finset
 
@@ -50,7 +55,7 @@ theorem common [FiniteDimensional ℂ V] {ι : Type} [DecidableEq ι] (D : ι �
       rcases Finset.mem_insert.1 hb with rfl | hb
       · simp [hy2']
       · have hba : b ≠ a := fun h => ha (h ▸ hb)
-        simp [Function.update_apply, hba, h4 b hb y hy1]
+        simp [hba, h4 b hb y hy1]
 
 def hop {n : ℕ} (E : Fin n → Fin n → Module.End ℂ V) : Module.End ℂ V :=
   ∑ c : Fin n, ((n : ℂ) - ((c : ℕ) : ℂ)) • E c c

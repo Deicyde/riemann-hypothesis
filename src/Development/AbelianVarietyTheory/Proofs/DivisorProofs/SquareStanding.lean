@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsNotRelZero
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SquareTriple
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsGivenStageEqOne
 
 noncomputable section
 

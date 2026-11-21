@@ -1,9 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsAdelicOne
-import Formalism.LocalToGlobal.CMDeterminantIdeals.StatementG
-import Formalism.PolynomialDimension.WeylDim
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DegreeDeterminantLineTwoHermitianLattices
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLatticeLatticeOfLocalMatrixFamily
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrameCoord
 
 open NumberField IsDedekindDomain Module Formalism.BasicNotions Formalism.L2.Pj GlobalTheory.DualWeyl GlobalTheory.AllWt GlobalTheory.FlatLine GlobalTheory.DefPt MvPolynomial
 open scoped Matrix
@@ -72,7 +70,7 @@ theorem exists_locBasis_inv : ∀ (K : Type) [Field K] [NumberField K] (n : ℕ)
   obtain ⟨hdet, hfin⟩ := hA
   have hu : IsUnit (A P).det := isUnit_iff_ne_zero.2 (hdet P)
   have hone : ∀ (w : HeightOneSpectrum (𝓞 K)) (j k : Fin n), w.valuation K ((Pi.single j 1 : Fin n → K) k) ≤ 1 :=
-    fun w j k => by by_cases hk : k = j <;> simp [Pi.single_apply, hk]
+    fun w j k => by by_cases hk : k = j <;> simp [hk]
   obtain ⟨s, hs, hint⟩ := exists_denom_notMem (fun w => A w * (A P)⁻¹)
     ((hfin.union (finite_not_intAt (A P)⁻¹)).subset fun w hw => by
       by_contra hn

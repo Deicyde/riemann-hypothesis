@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
 noncomputable section
 
@@ -36,7 +37,7 @@ theorem rho_lin (w : Matrix (Fin n) (Fin d) (AE F E)) (a b : ℂ) (Φ Ψ : Fn F 
 theorem coneInt_lin (a b : ℂ) (Φ Ψ : Fn F n d) (k : UA σ X.J) (l : (AE F E)ˣ) (y : Fin n₁ × Fin d₁ → AF F) :
     coneInt B M om e u ν z (a • Φ + b • Ψ) k l y =
       a * coneInt B M om e u ν z Φ k l y + b * coneInt B M om e u ν z Ψ k l y := by
-  simp only [coneInt, map_add, map_smul, rho_lin, LinearMap.map_add, LinearMap.map_smul, Pi.add_apply, Pi.smul_apply,
+  simp only [coneInt, map_add, map_smul, rho_lin, Pi.add_apply, Pi.smul_apply,
     smul_eq_mul]
   ring
 

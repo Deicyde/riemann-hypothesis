@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.GlobalGaussLaws.WittLtA
 
 open Matrix NumberField GlobalTheory.Inertia
@@ -26,7 +28,7 @@ theorem hf_congr {n m : Type} [Fintype n] [Fintype m] (G : Matrix n n E) (P : Ma
 
 theorem hf_submatrix {n m : Type} [Fintype n] [Fintype m] (G : Matrix n n E) (e : m ≃ n) (x y : m → E) :
     hf (G.submatrix e e) x y = hf G (x ∘ e.symm) (y ∘ e.symm) := by
-  simp only [hf, submatrix_mulVec_equiv, Function.comp_def, Equiv.symm_symm]
+  simp only [hf, submatrix_mulVec_equiv, Function.comp_def]
   rw [dotProduct, dotProduct, ← Equiv.sum_comp e (fun i => x (e.symm i) * _)]
   simp
 

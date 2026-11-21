@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.RealPlaceAnalysis.SmoothVectorGrowthBound
 import Formalism.RealPlaceAnalysis.RealPlaceTaylor.MemUnitaryGroupIffMulConjTranspose
-import Formalism.RealPlaceAnalysis.RealPlaceTaylor.KoszulLowersPower
 import Formalism.RealPlaceAnalysis.StatementD
 
 open Matrix MeasureTheory

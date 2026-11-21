@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Degenerations.BaseFacts
-import Development.AbelianVarietyTheory.Definitions.Degenerations.IsAffineSplitTorusLeft
-import Development.AbelianVarietyTheory.Definitions.Degenerations.CompanionTheory
-import Development.AbelianVarietyTheory.Statements.SemistableTorsion.UTorsSt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsProjectiveClosureIsProjOver
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsMulPowMemOOfIsAffineOpen
 
@@ -98,11 +95,11 @@ private theorem mem_span_range_iff_vecMul_inv_mem {o Ω : Type} [CommRing o] [Fi
         rw [h1, Matrix.one_apply]
         by_cases hrj : r = j
         · subst hrj; simp
-        · simp [hrj, Pi.single_apply, Ne.symm hrj]
+        · simp [hrj, Ne.symm hrj]
       rw [hrow]
       by_cases hkr : k = r
       · subst hkr; simp [R.one_mem]
-      · simp [Pi.single_apply, hkr, R.zero_mem]
+      · simp [hkr, R.zero_mem]
     | zero => intro k; simp [R.zero_mem]
     | add x y _ _ hx hy =>
       intro k

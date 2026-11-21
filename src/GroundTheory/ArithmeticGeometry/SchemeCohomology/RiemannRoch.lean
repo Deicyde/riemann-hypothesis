@@ -1,9 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ArithmeticGeometry.SchemeCohomology.CurveAdelic
 import GroundTheory.ArithmeticGeometry.SchemeCohomology.CurveCanonical
 import GroundTheory.ArithmeticGeometry.SchemeCohomology.CurveFunctionField
 import GroundTheory.ArithmeticGeometry.SchemeCohomology.CurveProper
-import GroundTheory.FunctionField.WeilDifferential
 
 open CategoryTheory AlgebraicGeometry TopologicalSpace Topology Module MonoidalCategory
 

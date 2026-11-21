@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PowSubSuccLe
 
 set_option autoImplicit false

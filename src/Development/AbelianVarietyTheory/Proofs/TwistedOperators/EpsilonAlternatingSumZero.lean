@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.InverseChamberMap
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.EpsOfCZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.GammaIntegralAlternatingSumStatement
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.GammaFunctionBoundedSupportStatement
 open MeasureTheory Finset GlobalTheory.Chamber
 open scoped InnerProductSpace
 

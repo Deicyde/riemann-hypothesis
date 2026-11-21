@@ -1,9 +1,5 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutEX2
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.OpNormPiLe
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.LeftFubiniNormalizedTower
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.ChartCoefficientHasCompactSupport
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutEXMkCpt
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutMK2
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutEXMkTopKr
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutMKTop
 

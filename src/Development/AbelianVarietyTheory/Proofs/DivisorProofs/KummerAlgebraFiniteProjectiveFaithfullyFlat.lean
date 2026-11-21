@@ -1,5 +1,13 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AlgebraMapEqMk
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.LocalProperties.FinitePresentation
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
 open scoped TensorProduct
 
 set_option autoImplicit false
@@ -79,13 +87,13 @@ def liftRoot [Module.Invertible B L] (φ : MultilinearMap B (fun _ : Fin (q + 1)
     · exact hle ha
     refine Ideal.span_le.2 ?_
     rintro r ((⟨⟨a, b⟩, rfl⟩ | ⟨⟨c, a⟩, rfl⟩) | ⟨ℓ, rfl⟩)
-    · simp only [SetLike.mem_coe, RingHom.mem_ker, AlgHom.toRingHom_eq_coe, RingHom.coe_coe,
+    · simp only [SetLike.mem_coe, RingHom.mem_ker,
         map_sub, aeval_X, map_add]
       ring
-    · simp only [SetLike.mem_coe, RingHom.mem_ker, AlgHom.toRingHom_eq_coe, RingHom.coe_coe,
+    · simp only [SetLike.mem_coe, RingHom.mem_ker,
         map_sub, map_mul, aeval_X, aeval_C, map_smul, smul_eq_mul]
       ring
-    · simp only [SetLike.mem_coe, RingHom.mem_ker, AlgHom.toRingHom_eq_coe, RingHom.coe_coe,
+    · simp only [SetLike.mem_coe, RingHom.mem_ker,
         map_sub, map_prod, aeval_X, aeval_C]
       rw [sub_eq_zero, Finset.prod_mul_distrib, Finset.prod_mul_distrib, Finset.prod_const,
         Finset.prod_const, Finset.card_univ, Fintype.card_fin, hx]

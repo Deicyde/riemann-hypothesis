@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlockMatrixMulVecBasis
+import Mathlib.RingTheory.Polynomial.IsIntegral
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.ThK.DescB GlobalTheory.ThK.FlagCT GlobalTheory.ThK.FlagPar
@@ -66,7 +67,7 @@ theorem monicFactorFinite : MonicFactorFinite := by
     refine Finset.sum_congr rfl fun i _ => ?_
     rw [Algebra.smul_def, Algebra.commutes, map_pow]
   have hPc : ∀ i, i < d + 1 → P.coeff i = c' i := fun i hi => by
-    simp [P, Polynomial.finset_sum_coeff, Polynomial.coeff_monomial, hi]
+    simp [P, Polynomial.coeff_monomial, hi]
   have hPm : P.Monic := by
     refine Polynomial.monic_of_degree_le d ?_ ?_
     · refine (Polynomial.degree_sum_le _ _).trans (Finset.sup_le fun i hi => ?_)

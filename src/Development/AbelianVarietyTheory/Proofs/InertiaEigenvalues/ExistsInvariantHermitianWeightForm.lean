@@ -1,8 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsWildInertiaCyclotomicElement
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.GaloisSideTwistedSelmerAuxiliaryPrimes
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SemisimpleOfInjective
-import Formalism.LocalToGlobal.NormalizedHeckeFactors.CoverStd
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.NormEvalLeSumNormCoeff
 open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formalism.ConjugateSelfDual ReciprocityTheory.Gal ReciprocityTheory.Aut Formalism.AUTREP Formalism.L2 NumberField IsDedekindDomain Polynomial GlobalTheory.EtaJoin GlobalTheory.CoefDuty
 
@@ -78,9 +75,9 @@ theorem exists_form_of_bounded {ι : Type} [Fintype ι] [DecidableEq ι]
     refine Continuous.integral_pos_of_hasCompactSupport_nonneg_nonzero (x := 1)
       (Complex.continuous_re.comp (hφc x x)) (HasCompactSupport.of_compactSpace _) ?_ ?_
     · intro k
-      simp only [Pi.zero_apply, Function.comp_apply, hre]
+      simp only [Pi.zero_apply, hre]
       exact Finset.sum_nonneg fun i _ => sq_nonneg _
-    · simp only [Function.comp_apply, hre]
+    · simp only [hre]
       have hN1 : N 1 = 1 := by simp [N]
       rw [hN1, Matrix.one_mulVec]
       obtain ⟨i, hi⟩ := Function.ne_iff.mp hx

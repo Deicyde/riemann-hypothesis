@@ -1,6 +1,7 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.SecBaseChangeAnySt
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ValCalc
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.LBPull
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.GlobalSectionsRankAlgClosed
 
 noncomputable section
 
@@ -124,7 +125,7 @@ theorem weilNondeg_of_descent :
         · exact hβ _ _
         · clear hG hC hcorr h1
           simp only [σ, translT, translPt, Hom.mul_def, Category.assoc, lift_snd, Category.comp_id,
-            comp_lift_assoc, lift_fst_assoc, comp_toUnit_assoc]
+            comp_lift_assoc, comp_toUnit_assoc]
       rw [val_pull hJ, val_mul hJ, one_zpow] at h1
       rw [val_pull hJ, val_pull hJ, Category.id_comp, ← Over.comp_left, h2]
       refine h1.trans ?_

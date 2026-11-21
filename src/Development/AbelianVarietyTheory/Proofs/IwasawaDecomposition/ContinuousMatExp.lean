@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataCD
-import Formalism.SatakeDualWeyl.KpqSubgroupCompact
+import Mathlib.Analysis.Normed.Algebra.MatrixExponential
+import Mathlib.RingTheory.SimpleRing.Principal
 open Formalism.BasicNotions MeasureTheory Filter Topology Matrix
 
 noncomputable section

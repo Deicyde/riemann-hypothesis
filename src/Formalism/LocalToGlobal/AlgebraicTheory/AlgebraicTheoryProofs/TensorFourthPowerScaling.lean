@@ -1,13 +1,9 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.AlgebraicTheory.StatementC
-import Formalism.LocalToGlobal.TorsionIntegrality.GaussianEigenFrames.GramFrameComposition.HasSubstBlock
-import Formalism.LocalToGlobal.TorsionIntegrality.GaussianEigenFrames.GramFrameComposition.GramFrameCompositionMvExpFact
 import Formalism.LocalToGlobal.TorsionIntegrality.GaussianEigenFrames.GramFrameComposition.IntOpTwoFreeOf
-import Formalism.LocalToGlobal.TorsionIntegrality.GaussianEigenFrames.GramFrameComposition.Inertia
-import Formalism.LocalToGlobal.TorsionIntegrality.GaussianEigenFrames.GramFrameComposition.AgreeOnAdjoin
-import Formalism.LocalToGlobal.TorsionIntegrality.GaussianEigenFrames.GramFrameComposition.EigenCompatOf
-import Formalism.LocalToGlobal.TorsionIntegrality.GaussianEigenFrames.GramFrameComposition.EigenFrameEOf
-import Formalism.LocalToGlobal.TorsionIntegrality.GaussianEigenFrames.GramFrameComposition.Tensor
-import Formalism.LocalToGlobal.TorsionIntegrality.GaussianEigenFrames.GramFrameComposition.EigenFinal
+import Formalism.LocalToGlobal.TorsionIntegrality.EisensteinTranslationProducts.HasCMByStable
+import Formalism.LocalToGlobal.TorsionIntegrality.QuadraticSemicharacters.CayleyGaussianIntegrals.QuadraticSemicharactersOfProductThetaMem
+import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.NormNatCastClOfNotDvd
 
 noncomputable section
 open scoped BigOperators
@@ -232,7 +228,7 @@ private theorem sum_inverse_mul_sum_eq_ite_frameM {n ν J : Type} [Fintype n] [D
   split_ifs with hab
   · subst hab
     simp [mul_comm]
-  · simp [hab]
+  · simp
 
 private theorem jetsIntegral_sum_C_mul {p : ℕ} [Fact p.Prime] {X κ : Type} [Fintype κ] (r : κ → ℂ_[p])
     (f : κ → MvPowerSeries X ℂ_[p]) (hr : ∀ k, ‖r k‖ ≤ 1) (hf : ∀ k, JetsIntegral (f k)) :

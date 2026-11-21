@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.DiscreteGroups.PiInvariants.CompactSupportTwists.UncutHalf
 import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.ThetaCellCovers.AdmissibleLeHolds
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsFundamentalDomainRangeProdMap

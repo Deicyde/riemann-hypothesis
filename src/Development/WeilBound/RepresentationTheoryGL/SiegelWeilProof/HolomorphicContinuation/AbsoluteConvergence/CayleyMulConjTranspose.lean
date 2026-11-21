@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.IsSingTest
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open scoped Matrix
 open Matrix
@@ -23,11 +27,11 @@ theorem cayley_conjTranspose_eq : (C0 n)ᴴ = fromBlocks 1 (-(Complex.I • 1)) 
 
 theorem cayley_conjTranspose_mul : (C0 n)ᴴ * C0 n = (2 : ℂ) • 1 := by
   rw [cayley_conjTranspose_eq, C0, fromBlocks_multiply, ← fromBlocks_one, fromBlocks_smul]
-  congr 1 <;> simp [Matrix.smul_mul, Matrix.mul_smul, smul_smul, two_smul] <;> module
+  congr 1 <;> simp [smul_smul, two_smul] <;> module
 
 theorem cayley_mul_conjTranspose : C0 n * (C0 n)ᴴ = (2 : ℂ) • 1 := by
   rw [cayley_conjTranspose_eq, C0, fromBlocks_multiply, ← fromBlocks_one, fromBlocks_smul]
-  congr 1 <;> simp [Matrix.smul_mul, Matrix.mul_smul, smul_smul, two_smul] <;> module
+  congr 1 <;> simp [smul_smul, two_smul] <;> module
 
 theorem cayley_inverse_mul : C1 n * C0 n = 1 := by
   rw [C1, Matrix.smul_mul, cayley_conjTranspose_mul, smul_smul]; norm_num
@@ -37,7 +41,7 @@ theorem cayley_mul_inverse : C0 n * C1 n = 1 := by
 
 theorem complex_structure_cayley : JJ n * C0 n = C0 n * (Complex.I • S0 n) := by
   simp only [JJ, C0, S0, fromBlocks_multiply, fromBlocks_smul]
-  congr 1 <;> simp [Matrix.smul_mul, Matrix.mul_smul, smul_smul] <;> module
+  congr 1 <;> simp [smul_smul] <;> module
 
 end PositivityTheory.Rg.Sw.KAKB
 

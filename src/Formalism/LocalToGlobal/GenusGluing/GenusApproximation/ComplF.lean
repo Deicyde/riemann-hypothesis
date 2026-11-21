@@ -1,4 +1,6 @@
-import Formalism.LocalToGlobal.Columns.AdelicLemmas
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.Divisibility.DefGroupLemmas
 
 noncomputable section
 

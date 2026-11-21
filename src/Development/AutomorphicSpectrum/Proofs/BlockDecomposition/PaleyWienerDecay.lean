@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.ArchimedeanGelfandKernels.FriedrichsKernels.CalcSteps
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FunctionalCalculusCurve
+import Mathlib.Topology.UniformSpace.Uniformizable
 
 noncomputable section
 

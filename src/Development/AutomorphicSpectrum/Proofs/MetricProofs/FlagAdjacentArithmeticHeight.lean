@@ -1,14 +1,9 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.IsBaseChart
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.ExistsBaseChartAtGoodPointStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.ExistsContinuousOrbitSectionStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.LogPeriodStatementStatement
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.FlagAdjacentSwapVarietiesArithmeticStatement
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.FlagModelBaseProjectionPoints
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.FlagCoverArithmeticSecond
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.IsBlockDiagMapGenBlock
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.BlockDiagonalMinorVanishing
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterBridgeB
 open MvPolynomial MeasureTheory Filter Topology Matrix ReciprocityTheory.AnForm ReciprocityTheory.AnForm.M ReciprocityTheory.AnForm.P ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.AI.I1 ReciprocityTheory.ChartRestriction.G.AI.I2 ReciprocityTheory.ChartRestriction.G.AI.I4 GlobalTheory.CompanionTheory.Ar.PB GroundTheory.Heights₂.Heights GroundTheory.Heights₂.Heights.LowerBoundFree
 open scoped ComplexOrder Classical
 open GlobalTheory.CompanionTheory.Ar.PB.WSq GlobalTheory.CompanionTheory.Ar.PB.WMan
@@ -67,7 +62,7 @@ theorem minorIJ_shear {C : Finset (Fin N)} {ca cb : Fin N} (t : ℂ) (h : cb ∉
       (1 : Matrix (Fin N) (Fin N) ℂ).submatrix (C.orderEmbOfFin rfl) (C.orderEmbOfFin rfl) := by
     ext x y
     have hx : cb ≠ C.orderEmbOfFin rfl x := fun e => h (e ▸ Finset.orderEmbOfFin_mem _ _ _)
-    simp [Matrix.add_apply, Matrix.single_apply, hx]
+    simp [Matrix.add_apply, hx]
   have h1 := CPts.minorIJ_one (R := ℂ) C
   unfold minorIJ at h1 ⊢
   rw [dif_pos rfl] at h1 ⊢

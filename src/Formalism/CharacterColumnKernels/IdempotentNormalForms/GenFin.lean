@@ -1,9 +1,10 @@
-import Formalism.CharacterColumnKernels.Statement
-import Formalism.CharacterColumnKernels.StatementG
-import Formalism.CharacterColumnKernels.StatementX
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.CharacterColumnKernels.IdempotentNormalForms.GenRelMapApply
 import Formalism.CharacterColumnKernels.IdempotentNormalForms.LenCokerOfDetNeZero
-import Formalism.CharacterColumnKernels.IdempotentNormalForms.SingleEqSmul
+import Mathlib.Combinatorics.Nullstellensatz
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
 
 open Finset
 

@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviBlockSizesSum
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsBlockCentre
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.GLintEqKOAndPrincEqKOne
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LocalFieldNormValuation
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SmGL GlobalTheory.PRep GlobalTheory.SplitWeil GlobalTheory.LeviBlockExponent GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.UAut GlobalTheory.SiegelSet GlobalTheory.ThK.SquareIntegrability
 open scoped TensorProduct
 open Matrix
@@ -44,7 +41,7 @@ theorem mulVec_sub_mem_span : ∀ (F E : Type) [Field F] [NumberField F] [Field 
     apply splitVec_ext hcm t
     · rw [hsub, hsum, splitVec_mulVec, h1, hYt]
       have hu : (fun a => B.1 a j') = B.1 *ᵥ Pi.single j' 1 := by
-        funext a; simp [Matrix.mulVec_single_one]
+        funext a; simp
       have hyB : y.1 * B.1 = B.1 * g.1 := by
         rw [hy, ← Units.val_mul, ← Units.val_mul]; congr 1; group
       have hcs : ∀ l, splitProj t (c l) = (g.1 - 1) (Fin.castLE hrn l) j' := fun l => by
@@ -55,7 +52,7 @@ theorem mulVec_sub_mem_span : ∀ (F E : Type) [Field F] [NumberField F] [Field 
           rw [Matrix.sub_mulVec, Matrix.one_mulVec], Matrix.mulVec_single_one]
       funext a
       rw [Finset.sum_apply]
-      simp only [Pi.smul_apply, smul_eq_mul, Matrix.mulVec, dotProduct, Matrix.transpose_apply]
+      simp only [Pi.smul_apply, smul_eq_mul, Matrix.mulVec, dotProduct]
       symm
       refine Fintype.sum_of_injective (Fin.castLE hrn) (Fin.castLE_injective hrn) _ _ ?_ ?_
       · intro k hk

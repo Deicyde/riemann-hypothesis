@@ -1,9 +1,8 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.TranslateMemIndOrder
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ExistsUnitFormLocalizationEtaleNbhd
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.Models
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.DualOrder
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.BaseChangePointsCompatStatement
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 noncomputable section
 

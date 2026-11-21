@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LinePlace
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipAugLeJacKer
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalCharacterSmoothUnitary
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InducedLineKernelDecomposition
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GoodPlaceInducedIntertwinerExistsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TripleAdaptedLocalPlaceExtensionStatement

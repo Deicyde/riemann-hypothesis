@@ -1,5 +1,4 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.IwahoriFactorisation.StrictDominance.SatakeSocle.SocleOne
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsSocleProdIrrCongr
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LOneSatakeBoundStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.EmbeddingOfExponent

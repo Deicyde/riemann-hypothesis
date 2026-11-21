@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsPairingSingleNe
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.FSatakeC
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.FIwasawaB
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.InvMemDoubleCosetAndComm
 
 noncomputable section
@@ -72,7 +71,7 @@ theorem tMat_add (ϖ : L) (h0 : ϖ ≠ 0) (m : ℕ) (a c : Fin m → ℤ) :
   unfold tMat
   rw [diagonal_mul_diagonal]
   congr 1; funext i
-  split_ifs <;> simp [zpow_add₀ h0, neg_add] <;> ring
+  split_ifs <;> simp [zpow_add₀ h0] <;> ring
 
 theorem tMat_zero (ϖ : L) (m : ℕ) : tMat ϖ n m 0 = 1 := by
   unfold tMat

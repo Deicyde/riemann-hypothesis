@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorusMulVecX
 
 open scoped TensorProduct NNReal Matrix
@@ -111,7 +110,7 @@ theorem Pm_gram (hc : ∀ r, c (c r) = r) (hJ : ∀ i j, c (J j i) = J i j)
   have hyx : y ⬝ᵥ J *ᵥ (fun i => c (x i)) = 1 := by rw [herm_swap c hc J hJ x y, hXY, map_one]
   ext i j
   rw [gram_entry]
-  fin_cases i <;> fin_cases j <;> simp [Pm, gram0, dbl_form, form_zero, form_zero', hXX, hYY, hXY, hyx]
+  fin_cases i <;> fin_cases j <;> simp [Pm, gram0, dbl_form, form_zero', hXX, hYY, hXY, hyx]
 
 theorem Cm_unitary (h : R) (h2 : 2 * h = 1) (hch : c h = h) :
     (Cm h).map c + (Cm h)ᵀ + (Cm h)ᵀ * gram0 * (Cm h).map c = 0 := by
@@ -129,14 +128,14 @@ theorem gram_matrix_transpose : (gram0 : Matrix (Fin 4) (Fin 4) R)ᵀ = gram0 :=
 theorem Cm_mul (h : R) (h2 : 2 * h = 1) : Cm h + Cm' h + Cm h * (gram0 : Matrix (Fin 4) (Fin 4) R)ᵀ * Cm' h = 0 := by
   rw [gram_matrix_transpose]
   ext i j
-  fin_cases i <;> fin_cases j <;> simp [Cm, Cm', gram0, Matrix.mul_apply, Fin.sum_univ_four] <;>
+  fin_cases i <;> fin_cases j <;> simp [Cm, Cm', gram0] <;>
     first | ring1 | linear_combination h2 | linear_combination -h2 | linear_combination h * h2 |
       linear_combination -h * h2
 
 theorem Cm_mul' (h : R) (h2 : 2 * h = 1) : Cm' h + Cm h + Cm' h * (gram0 : Matrix (Fin 4) (Fin 4) R)ᵀ * Cm h = 0 := by
   rw [gram_matrix_transpose]
   ext i j
-  fin_cases i <;> fin_cases j <;> simp [Cm, Cm', gram0, Matrix.mul_apply, Fin.sum_univ_four] <;>
+  fin_cases i <;> fin_cases j <;> simp [Cm, Cm', gram0] <;>
     first | ring1 | linear_combination h2 | linear_combination -h2 | linear_combination h * h2 |
       linear_combination -h * h2
 
@@ -168,7 +167,7 @@ theorem Pm_form (c : R →+* R) (J : Matrix (Fin n) (Fin n) R) (x y v₁ v₂ : 
     (fun j => Sum.elim v₁ v₂ ⬝ᵥ dbl J *ᵥ fun r => c (Pm x y r j)) =
       ![v₁ ⬝ᵥ J *ᵥ (fun i => c (x i)), v₁ ⬝ᵥ J *ᵥ (fun i => c (y i)), -(v₂ ⬝ᵥ J *ᵥ (fun i => c (x i))),
         -(v₂ ⬝ᵥ J *ᵥ (fun i => c (y i)))] := by
-  funext j; fin_cases j <;> simp [Pm, dbl_form, form_zero, form_zero']
+  funext j; fin_cases j <;> simp [Pm, dbl_form, form_zero']
 
 def colF (x : Fin n → R) (ι : Matrix (Fin n) (Fin m) R) : Fin m ⊕ Fin 2 → Fin n ⊕ Fin n → R :=
   Sum.elim (fun j => Sum.elim (fun r => ι r j) (fun r => ι r j)) ![Sum.elim x 0, Sum.elim 0 x]

@@ -1,9 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.FrobeniusOrbits.HostThickExists
 import Formalism.FrobeniusOrbits.RealSubfieldLeCompositum
 import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.Inertia
 import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.Decomp
-import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.CoprimeTwoPow
+import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.FrobMulInertia
 
 open NumberField IntermediateField Ideal
 open scoped Pointwise

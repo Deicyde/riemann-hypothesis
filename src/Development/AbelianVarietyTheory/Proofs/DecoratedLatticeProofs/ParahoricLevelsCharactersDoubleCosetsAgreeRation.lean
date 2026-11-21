@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.EntryAgree
-import Formalism.LocalToGlobal.Columns.ChainTw
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ConjSymmEntry
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.MemStabLIff
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ResiduesOfCompletionAtPrimeWithUniformizer

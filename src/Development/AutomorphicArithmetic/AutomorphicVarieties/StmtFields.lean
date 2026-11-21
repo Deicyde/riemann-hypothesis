@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CharacterBoxes.ExistsPageN
+import Mathlib.NumberTheory.NumberField.ClassNumber
 
 noncomputable section
 

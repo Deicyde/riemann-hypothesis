@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ToFirst
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.FBIdAd
 import Development.WeilBound.CoreStatements.HodgeTatePoints.Comp1IdentityLeft
 

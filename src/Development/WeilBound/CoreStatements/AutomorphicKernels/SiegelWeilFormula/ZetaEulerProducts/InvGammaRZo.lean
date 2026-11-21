@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.ZetaEulerProducts.MeromorphicAtProd
+import Mathlib.Analysis.SpecialFunctions.Gamma.Deligne
+import Mathlib.Tactic.ENatToNat
 
 open Filter Topology Complex
 open scoped Real

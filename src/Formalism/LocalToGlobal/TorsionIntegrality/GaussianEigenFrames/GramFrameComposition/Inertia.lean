@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.GaussianEigenFrames.StatementE
 import Formalism.LocalToGlobal.TorsionIntegrality.GaussSumParity.KurComplete
+import Mathlib.RingTheory.Valuation.Integral
 
 noncomputable section
 open NumberField

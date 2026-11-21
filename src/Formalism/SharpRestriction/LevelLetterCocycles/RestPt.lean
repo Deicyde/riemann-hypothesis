@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.EmbeddingTypes
 import Formalism.SharpRestriction.LevelLetterCocycles.JointConditionsZpowers.SemisimpleDecompositionOf
+import Formalism.SharpRestriction.LevelLetterCocycles.JointConditionsZpowers.CoefficientCompatibilityOf
 
 noncomputable section
 

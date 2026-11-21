@@ -1,7 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.FractionFieldToGenericStalkAlgebraMapEq
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsHermND
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ComplementReferenceCompactSubgroup
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.HermLat
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.CardQuotPow
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.CardQuotPow

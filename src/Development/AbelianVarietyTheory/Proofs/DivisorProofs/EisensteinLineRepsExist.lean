@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoreConcl
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTransv
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLineReps
@@ -255,7 +253,7 @@ theorem GlobalTheory.EisMidParam.midSet_param : ∀ (F E : Type) [Field F] [Numb
       inclR (F := F) (AF F) (μ t₁ / μ t₂) • ((matHom _ σ J t₂.1.1⁻¹).1 *ᵥ GlobalTheory.EisMidHt.adVec F x) := by
     rw [e1, e2]
     funext i
-    simp only [GlobalTheory.EisMidHt.adVec, Pi.smul_apply, smul_eq_mul, ← map_mul, smul_smul]
+    simp only [GlobalTheory.EisMidHt.adVec, Pi.smul_apply, smul_eq_mul, ← map_mul]
     rw [← mul_assoc, div_mul_cancel₀ _ (hμ0 t₂)]
   have hst : GlobalTheory.EisCT.StabL σ J (col0 X) (t₂.1 * t₁.1⁻¹ : ratPts σ J).1 := by
     refine stabL_of_vec (l := Units.map (inclR (F := F) (AF F)).toMonoidHom

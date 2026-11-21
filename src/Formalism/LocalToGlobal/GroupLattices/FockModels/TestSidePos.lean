@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.FockModels.TestSideLat
+import Formalism.LocalToGlobal.GroupLattices.FockModels.TestSideDef
 
 open MvPolynomial
 
@@ -280,7 +283,7 @@ theorem dE_sq_D (r : ℕ) (c : Kf) (hc : c ≠ 0) : dE k r (c ^ 2) * lb_D k r c 
   rw [Matrix.diagonal_mul_diagonal]
   congr 1
   funext a
-  split_ifs <;> simp [pow_two, mul_assoc, hc]
+  split_ifs <;> simp [pow_two, hc]
 
 end
 

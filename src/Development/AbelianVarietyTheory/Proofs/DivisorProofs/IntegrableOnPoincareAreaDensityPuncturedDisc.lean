@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.EndValuedForm11Coeffs
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegrableOnInvMulLogSqNearZeroStatement
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.MeasureTheory.Constructions.HaarToSphere
 open MeasureTheory Filter Topology
 
 namespace GlobalTheory.GoodTop

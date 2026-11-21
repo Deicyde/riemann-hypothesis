@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsIdTorusEltOne
 import GroundTheory.GlobalFields.IdeleGroups.NormOneCompact
 import GroundTheory.GlobalFields.IdeleGroups.IdeleNorms.BaseChange
-import GroundTheory.GlobalFields.Adele.IntegersLattice
 open NumberField Matrix Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SiegelSet GlobalTheory.UAut GlobalTheory.StdPar GlobalTheory.IdTorus
 open GlobalTheory.Doubling (absE conjUnit)
 open scoped TensorProduct

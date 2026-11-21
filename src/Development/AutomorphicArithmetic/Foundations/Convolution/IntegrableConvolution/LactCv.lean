@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.TensSmooth
-import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.LactLaws
 import Development.AutomorphicArithmetic.Foundations.Convolution.ConvolutionKernels.KernelTransforms.LactConv
 
 open MeasureTheory NumberField IsDedekindDomain

@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.Adele.BaseChange.AdeleEquiv
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.RingTheory.PiTensorProduct
 
 namespace GroundTheory.Global
 

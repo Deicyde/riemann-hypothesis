@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousOnIteratedDerivFamily
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.AesmIteratedDerivReal
+import Mathlib.Analysis.SpecialFunctions.Gaussian.FourierTransform
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 open MeasureTheory
 open scoped Matrix

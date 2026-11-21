@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SubspaceCounting.StatementD
 import Formalism.SubspaceCounting.SubspaceCountingProofs.LengthLayers
+import Mathlib.Tactic.Polynomial.Basic
 
 noncomputable section
 

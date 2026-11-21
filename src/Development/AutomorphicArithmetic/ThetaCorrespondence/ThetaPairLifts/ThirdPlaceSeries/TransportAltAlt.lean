@@ -1,8 +1,7 @@
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.EigenOccurrenceWithLocalData
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.CohomologicalCsdTempered
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.HeckeOpen
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.ParLaws
-import Development.AutomorphicArithmetic.Foundations.LocalLanglands.IsRecTOfIsRec
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsComp
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.NoFormsOff
 
 set_option synthInstance.maxHeartbeats 200000
 

@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.HeightFunctions.XiValIffXiAt
-import Formalism.LocalToGlobal.ProjectiveLattices.DepthTie
-import Development.AbelianVarietyTheory.Definitions.Jets.EmbShortThLeThetaPlain
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsLatticeEmbeddingLiftDatumHermitianSpace
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsDatumRankOne
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.CoeffFieldAlgClosedFunctionFieldOfTorsionDefinedStatement

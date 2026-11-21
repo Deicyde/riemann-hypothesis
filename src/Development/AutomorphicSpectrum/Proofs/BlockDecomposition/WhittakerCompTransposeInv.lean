@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CstD
 
 noncomputable section
@@ -185,7 +185,7 @@ theorem dia_cq : dia cq = w3 * ti (dia dl3) := by
   rw [coe_dia_cq]
   ext i j
   fin_cases i <;> fin_cases j <;>
-    simp [dl3, dg, w3, AdelicGLn.diagonal, Matrix.mul_apply, Fin.sum_univ_three]
+    simp [dl3, dg, w3, Matrix.mul_apply, Fin.sum_univ_three]
 
 theorem conj_uni (x y z : 𝔸[ℚ]) :
     w3 * ti (dia dl3) * ti (uni x y z) = uni z (z * x - y) x * (w3 * ti (dia dl3)) := by
@@ -201,7 +201,7 @@ theorem dia_uni_mul (r : ℚ) (x y z : 𝔸[ℚ]) :
   apply Units.ext
   ext i j
   fin_cases i <;> fin_cases j <;>
-    simp [uni, AdelicGLn.diagonal, Matrix.mul_apply, Fin.sum_univ_three] <;> ring
+    simp [uni, Matrix.mul_apply, Fin.sum_univ_three] <;> ring
 
 theorem whittaker_ti : ∀ φ : G3 → ℂ, IsLeftInvariant φ → Continuous φ → ∀ g : G3,
     FourierWhittaker.whittaker (fun g : G3 => φ (ti g)) g = tr (FourierWhittaker.whittaker φ) g := by

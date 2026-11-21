@@ -1,12 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.HtValOnSubset
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlatDegreeStatementOfDegreeTheorem
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrameCoord
-import Development.AbelianVarietyTheory.Definitions.Divisors.VolMeasureOfAdd
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.NonemptyUnitAt
-import Development.AbelianVarietyTheory.Definitions.Divisors.TorusExt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StepIdeal
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.IsValLineLogNormAtIffEmbedding
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.EigenvectorLieDegree
+import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.CmCurveBaseChangeComp
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open AlgebraicGeometry CategoryTheory ReciprocityTheory.ChartRestriction.G.Semi NumberField IsDedekindDomain Module Formalism.BasicNotions Formalism.L2.Pj ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.FD GlobalTheory.AllWt GlobalTheory.FlatLine GlobalTheory.CompHt GlobalTheory.FlatCore GlobalTheory.IndefiniteRowSideFullHecke GlobalTheory.FlatDegreeCompare
 
 theorem UpperTheory.archimedean_square_conj_invariant :
@@ -23,4 +19,4 @@ theorem UpperTheory.archimedean_square_conj_invariant :
   rw [← Complex.conj_ofReal N, hN, RingHom.map_det]
   congr 1
   ext i k
-  simp [dotProduct, Matrix.mulVec, map_sum, Complex.star_def]
+  simp [dotProduct, Matrix.mulVec, map_sum]

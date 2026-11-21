@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeIntZero
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocallyConstantMaxCompactActionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBSchwartzBruhatLatticeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBEigenTripleRelationStatement

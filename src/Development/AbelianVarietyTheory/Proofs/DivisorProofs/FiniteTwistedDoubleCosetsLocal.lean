@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsRootSelectionUnitaryRankOne
-import Development.AbelianVarietyTheory.Definitions.Divisors.MapInclKMemTwCentResOne
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SigResIterateEqSelf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SigIterateApply
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiniteLeftCosetRepresentativesStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CentralizerFiniteDecompositionStatement

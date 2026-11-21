@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.HolomorphicDiscreteSeries.WordSpans.ExistsDs
-import Development.WeilBound.RepresentationTheoryGL.HolomorphicDiscreteSeries.WordSpans.QminorInt
+import Development.WeilBound.CoreStatements.BranchingTraces.BranchingComatrices.OneLeDiff
+import Development.WeilBound.RepresentationTheoryGL.HolomorphicDiscreteSeries.WordSpans.WordSpan
 
 noncomputable section
 

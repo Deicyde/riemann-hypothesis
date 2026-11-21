@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsCoType
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.CardValLt
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
 open MeasureTheory ValuativeRel Matrix GlobalTheory.PRep GlobalTheory.SplitWeil GlobalTheory.SmGL GlobalTheory.Doubling GlobalTheory.GLDoubling GlobalTheory.IndefiniteRowSideFullHecke.VolumeFlatSection GlobalTheory.ZonalCellDecomposition GlobalTheory.SatakeBound GlobalTheory.ParHecke
 
 noncomputable section
@@ -31,7 +35,7 @@ theorem sum_le_sum_of_threshold {α : Type*} [DecidableEq α] (e : α → ℤ) (
     Finset.sum_le_sum_of_subset_of_nonneg Finset.inter_subset_right (fun i hi hni => by
       have : i ∉ U := fun h => hni (Finset.mem_inter.2 ⟨h, hi⟩)
       linarith [hU' i hi this])
-  simp only [Finset.sum_sub_distrib, Finset.sum_const, smul_eq_mul] at h1 h2
+  simp only [Finset.sum_sub_distrib, Finset.sum_const] at h1 h2
   rw [hc] at h2
   linarith
 

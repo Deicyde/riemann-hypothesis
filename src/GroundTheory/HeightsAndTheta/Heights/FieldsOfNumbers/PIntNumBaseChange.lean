@@ -1,6 +1,9 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.FieldsOfNumbers.Statements
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.FieldsOfNumbers.PGradedFinite
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PiTensorProduct
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.FieldNumbers

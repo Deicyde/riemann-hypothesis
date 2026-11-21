@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.TranscendenceTraces.IsolateSpec
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.NormalSchemeSpectra.IsNormalSch
 import Development.EtaleCohomology.EtaleTrace.LTransferCut
+import Mathlib.AlgebraicGeometry.Morphisms.SchemeTheoreticallyDominant
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry Opposite CochainComplex CochainComplex.HomComplex GlobalTheory.EtC PositivityTheory.AutomorphicGaloisHodgeTate

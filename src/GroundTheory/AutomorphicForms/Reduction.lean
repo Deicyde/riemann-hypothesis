@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.NormDetDiagUnitsPosRealToUnits
 import GroundTheory.AutomorphicForms.ReductionSplitting
 import GroundTheory.AutomorphicForms.ReductionMeasure

@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GaloisOfPolarized
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.FSatakeA
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.FiniteCosetsInDoset
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 open IsDedekindDomain NumberField Formalism.UG GlobalTheory.SphPar GlobalTheory.CuspRep
 

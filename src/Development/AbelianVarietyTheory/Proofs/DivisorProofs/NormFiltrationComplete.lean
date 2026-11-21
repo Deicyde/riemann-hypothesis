@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.SatakeDualWeyl.StatementF
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.AevalRootEqZeroIff
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsUnitOneAddPiOMul
 import GroundTheory.LocalFields.FilteredSurj
 open Polynomial Matrix Formalism.UG

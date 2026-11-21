@@ -1,5 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.DiscreteGroups.GlobalIrreducibility.DzStickValOne
 import Development.DiscreteGroups.GlobalIrreducibility.DzStickDigits
+import Mathlib.NumberTheory.JacobiSum.Basic
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 

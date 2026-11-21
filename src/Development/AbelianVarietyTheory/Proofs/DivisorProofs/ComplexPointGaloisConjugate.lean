@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsCrystalPairing
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUniqueDetGen
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LieImageCorrespondence
@@ -169,7 +169,7 @@ theorem low_corr {φ φ' : I → E →+* ℂ} {L L' : Set E} (T : CxPt 𝔠 φ L
     (hψ : ∀ x x' y y', m.Corr x x' → m.Corr y y' → T'.ψ x' y' = τ (T.ψ x y))
     (hy : ∀ i, m.Corr (T.y i) (T'.y i)) (hs : ∀ i, T'.s i = τ (T.s i)) (i : I) {x : HdR T.X.A}
     {x' : HdR T'.X.A} (hx : m.Corr x x') : m.Corr (T.low i x) (T'.low i x') := fun c => by
-  simp only [CxPt.low, LinearMap.smul_apply, LinearMap.smulRight_apply, LinearMap.flip_apply, smul_eq_mul,
+  simp only [CxPt.low, LinearMap.smul_apply, LinearMap.smulRight_apply, smul_eq_mul,
     hy i c, hs i, map_mul]
   erw [LinearMap.flip_apply, hψ _ _ _ _ hx (hy i)]
   rfl
@@ -246,7 +246,7 @@ theorem isCMVec_transport (hD : GlobalTheory.Published.AbelianDeRham) {φ : I �
     · subst hj
       simp [he]
     · have hj' : j ≠ T.U.e.symm i := by rwa [← he]
-      simp [Pi.single_apply, hj, hj']
+      simp [hj, hj']
 
 end GlobalTheory.ConjTransport
 

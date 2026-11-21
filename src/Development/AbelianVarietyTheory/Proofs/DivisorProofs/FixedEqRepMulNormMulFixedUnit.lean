@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PrimeMapPrimeMap
+import Mathlib.NumberTheory.NumberField.ClassNumber
 open NumberField IsDedekindDomain GlobalTheory.FixNormCls
 open scoped Classical nonZeroDivisors
 

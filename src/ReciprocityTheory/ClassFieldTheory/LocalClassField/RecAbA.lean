@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ClassFieldTheory.LocalClassField.QZDefs
+import Mathlib.GroupTheory.FiniteAbelian.Duality
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
 
 namespace ReciprocityTheory.DiscreteGroups.LocalClassField
 

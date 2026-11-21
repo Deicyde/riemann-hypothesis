@@ -1,5 +1,8 @@
-import Formalism.LocalToGlobal.PairingIndexBounds.RowActionCoefficients.CoefProd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.FockModels.SwRowGenMonomial
+import Formalism.LocalToGlobal.GroupLattices.FockModels.TransposeWords.FormCoreSK
+import Formalism.LocalToGlobal.PairingIndexBounds.RowActionCoefficients.WeylComplementInDetCoeffSpan
 
 open MvPolynomial
 

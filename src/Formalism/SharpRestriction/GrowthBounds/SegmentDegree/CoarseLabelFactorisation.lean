@@ -1,4 +1,8 @@
-import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.TopDegreeComparison
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.DiscriminantNeZeroOfResidueNeZero
+import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.StrictMonoIntExists
+import Mathlib.Data.Finsupp.Pointwise
 
 noncomputable section
 
@@ -101,9 +105,9 @@ theorem img_ellExp (l : Fin n' × Fin (r + K) →₀ ℕ) (j : ℤ) (t : Fin n')
   · by_cases h : posOf n' x = t
     · subst h
       simp [hx]
-    · simp [hx, h, Finsupp.single_apply, Prod.ext_iff]
+    · simp [hx, h, Prod.ext_iff]
   · intro b _ hb
-    simp [Finsupp.single_apply, Prod.ext_iff, hb]
+    simp [Prod.ext_iff, hb]
   · simp
 
 end Lab

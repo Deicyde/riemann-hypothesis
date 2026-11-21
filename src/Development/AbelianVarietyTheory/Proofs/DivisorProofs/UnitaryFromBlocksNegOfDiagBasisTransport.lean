@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFinMapsOfForall
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AntiCols
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.KFinLoc
 open scoped TensorProduct Matrix
 
@@ -20,7 +20,7 @@ theorem GlobalTheory.fromBlocks_unitary_transfer : ∀ (A O : Type) [CommRing A]
       = (Matrix.fromBlocks JL 0 0 (-JL)).map ι := by
     rw [Matrix.fromBlocks_transpose, Matrix.fromBlocks_multiply, Matrix.fromBlocks_map,
       Matrix.fromBlocks_multiply, Matrix.fromBlocks_map, hneg, ← hP]
-    simp [Matrix.mul_neg, Matrix.neg_mul]
+    simp
   have hc : (G.map c).map ι = (G.map ι).map γ := by
     ext i j; simp [hγ]
   apply Matrix.map_injective hinj

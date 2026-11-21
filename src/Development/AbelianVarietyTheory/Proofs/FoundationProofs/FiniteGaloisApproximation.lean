@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.NotCoboundaryConstantOne
+import Mathlib.Order.CompletePartialOrder
 open GlobalTheory.K5
 
 namespace GlobalTheory.K5

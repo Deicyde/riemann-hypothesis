@@ -1,8 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.ArcGamLiftCore
-import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.Pi0MemADelta
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.ConstantsTypeT
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.CTypeT
-import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.CmpDSmulLetter
 
 noncomputable section
 

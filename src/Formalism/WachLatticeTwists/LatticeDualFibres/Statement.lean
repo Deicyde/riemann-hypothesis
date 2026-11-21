@@ -1,5 +1,5 @@
-import Formalism.WachLatticeTwists.Statement
-import Formalism.WachLatticeTwists.StatementDual
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.CharacterColumnKernels.StatementRho
 
 universe u

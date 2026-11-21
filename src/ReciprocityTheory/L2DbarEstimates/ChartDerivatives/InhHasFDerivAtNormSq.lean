@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.L2DbarEstimates.JacobianInterpolationStatement
-import ReciprocityTheory.L2DbarEstimates.ChartDerivatives.TsupportDbSubset
+import Mathlib.Analysis.CStarAlgebra.Module.Constructions
+import ReciprocityTheory.L2DbarEstimates.ChartDerivatives.ChartSymmEventuallyEq
 
 namespace ReciprocityTheory.L2DbarEstimates
 

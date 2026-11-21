@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.MemSupportBDIff
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsExphOnEmpty
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsOpenClosureSubset
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IteratedDerivChartTrans
@@ -130,12 +130,12 @@ theorem glue_jets : ∀ (k : Type) [CommRing k] (Y : Scheme.{0}) (p : Y ⟶ Sp k
       have j1 := hE.jets c y hyc hyW (WithLp.toLp 2 η) m
       have j2 := hE'.jets c y hyc hyW' (WithLp.toLp 2 η) m
       rw [hfd, hgd]
-      simp only [WithLp.ofLp_toLp] at j1 j2
+      simp only at j1 j2
       rw [j1, j2, ← add_smul, sub_add_cancel, one_smul]
     have key := GlobalTheory.ChernReg.ExphOn.iteratedDeriv_chart_trans k Y p σ d R a ha c c₀ u (WithLp.toLp 2 η) (hu0 ▸ hyc) (hu0 ▸ hy) hucont
       (hcomb.congr_of_eventuallyEq hcu) hjc n
     rw [hu0] at key
-    simp only [WithLp.ofLp_toLp] at key
+    simp only at key
     rw [hη, dtrans_dtrans c₀ c c₀ hy hyc hy, dtrans_self c₀ hy, WithLp.toLp_ofLp] at key
     exact key
 

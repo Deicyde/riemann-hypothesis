@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.PoincareConstantEq
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.TermDefPf
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.TermOpInhab
@@ -166,10 +167,10 @@ private theorem norm_exp_sum_conj_lemma {ι : Type*} (s : Finset ι) (w : ι →
   rw [Complex.norm_exp]
   have hS : (∑ a ∈ s, (w a + star (w a))).im = 0 := by
     rw [Complex.im_sum]
-    exact Finset.sum_eq_zero fun a _ => by simp [Complex.star_def]
+    exact Finset.sum_eq_zero fun a _ => by simp
   have hT : ((∑ a ∈ s, (w a + star (w a))) / (gg : ℂ)).im = 0 := by
     rw [Complex.div_natCast_im, hS, zero_div]
-  simp [Complex.mul_re, hT]
+  simp [Complex.mul_re]
 
 theorem psiR_norm1 {n r : ℕ} (ε : Fin n → Bool) (gg : ℕ) (e f : Fin r → Fin n → ℂ) (z : Fin n → ℂ)
     (g : Matrix (Fin n) (Fin n) ℂ) : ‖psiR ε gg e f z g‖ = 1 := by

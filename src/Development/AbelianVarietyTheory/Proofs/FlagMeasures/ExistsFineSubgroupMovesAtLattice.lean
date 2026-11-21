@@ -1,14 +1,10 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.FractionFieldToGenericStalkAlgebraMapEq
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsHermND
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ComplementReferenceCompactSubgroup
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.Cint
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.NoLeak
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.IsPrincipalIdealRingOfHenselian
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.BasisOfIsCompl
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.HermitianDoubleCosetTermBasicFactsStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.TermExponentsNonnegAndDefectGroupBoundStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.EichlerLatticeLocallyConstantDataStatement
+import Mathlib.RingTheory.Ideal.Quotient.Index
 
 open ValuativeRel Formalism.MainNotions.S.Loc GlobalTheory.HL GlobalTheory.IdxInt MeasureTheory
 open scoped Pointwise ENNReal Classical
@@ -280,7 +276,7 @@ theorem one_add_unit {z : E} (hz : z ∈ L.O) : ∃ e ∈ L.O, e * (1 + algebraM
   obtain ⟨v, hv⟩ := hu.exists_left_inv
   have hv' := congrArg (fun c : 𝒪[F] => algebraMap F E (c : F)) hv
   push_cast at hv'
-  simp only [map_mul, map_add, map_one, ← ht, ← hn] at hv'
+  simp only [← ht, ← hn] at hv'
   refine ⟨algebraMap F E v * (1 + algebraMap F E S.ϖ * L.cj z),
     L.O.mul_mem (algO S v) (L.O.add_mem L.O.one_mem (L.O.mul_mem (algO S _) hc)), ?_⟩
   linear_combination hv'

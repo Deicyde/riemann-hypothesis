@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.AugBij
+import Mathlib.AlgebraicGeometry.Sites.ConstantSheaf
+import Mathlib.Topology.Instances.ZMod
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry GlobalTheory.EtC

@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TautologicalInnerProductLift
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.MemSmallSecTrivShift
+import Development.AbelianVarietyTheory.Definitions.Divisors.DiagValExtTraceNonneg
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 set_option autoImplicit false
 

@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.BaseRepGL3NormalisedOfPsiEqOne
+import Mathlib.RingTheory.PiTensorProduct
 
 open Matrix UpperTheory.V.U3
 
@@ -104,7 +107,7 @@ theorem UpperTheory.V.U3.exists_isDeform :
       have e2 : γ g * Mg * (Z * N) = 0 := by
         rw [mul_assoc (γ g), ← mul_assoc Mg, ← mul_assoc (γ g), hz, zero_mul]
       rw [add_mul, add_mul, e1]
-      simp only [one_mul, add_mul, mul_add, mul_one, mul_assoc] at e2 ⊢
+      simp only [one_mul, add_mul, mul_add, mul_assoc] at e2 ⊢
       rw [e2, add_zero]
       abel
     · rw [hPr, SemidirectProduct.mul_right, hPr, hPr, map_mul, SemidirectProduct.mul_right]

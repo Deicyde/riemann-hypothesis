@@ -1,8 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.EqZeroOfOrthogonalSchrodingerGaussian
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsSchwartzTranslate
-import GroundTheory.GlobalFields.TateThesis.GaussianSchwartz
 open GlobalTheory.RealWeil MeasureTheory
 open scoped SchwartzMap
 set_option maxHeartbeats 1000000 in

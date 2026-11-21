@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.FiniteSupport
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchurAndTensorSubmodule
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ScalarOfComm
 open scoped TensorProduct Classical

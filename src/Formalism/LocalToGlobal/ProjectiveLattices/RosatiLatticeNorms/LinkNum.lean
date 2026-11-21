@@ -1,5 +1,7 @@
-import Formalism.SharpRestriction.GenusPolyhedralBounds.RelativeIndexClassSets.WeightedPrimeSumBound
-import Formalism.LocalToGlobal.CMDeterminantIdeals.CmNumbersLink
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.CMDeterminantIdeals.CoeffMemOfLoc
+import Formalism.SharpRestriction.Divisibility.WeightFamilies
 
 noncomputable section
 

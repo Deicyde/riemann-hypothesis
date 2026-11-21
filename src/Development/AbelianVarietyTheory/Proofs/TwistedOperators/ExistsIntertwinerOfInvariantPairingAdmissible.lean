@@ -1,7 +1,9 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsSmoothVector
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsNormLeHeightPow
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasTypeVec
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.ExponentSeparation
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.SmoothPartStable
+import Formalism.LocalRingCardinality.DataHost
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.RingTheory.TotallySplit
 open MeasureTheory Set Filter NumberField IsDedekindDomain
 open GlobalTheory.AdelicU GlobalTheory.OpTrace GlobalTheory.Orb GlobalTheory.AutomorphicL2Unitary GlobalTheory.AutMult Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.L2.Theta Formalism.IndefR.Mult
@@ -109,8 +111,7 @@ theorem exists_rep (U : Submodule ℂ W) [FiniteDimensional ℂ U]
       map_smul' := by
         intro r z
         ext x
-        simp only [RingHom.id_apply, LinearMap.smul_apply, LinearMap.comp_apply, LinearMap.flip_apply,
-          Submodule.coe_smul]
+        simp only [RingHom.id_apply, LinearMap.smul_apply, LinearMap.comp_apply, LinearMap.flip_apply]
         rw [RCLike.real_smul_eq_coe_smul (K := ℂ) r z, Submodule.coe_smul, LinearMap.map_smulₛₗ, Complex.real_smul,
           RCLike.conj_ofReal, smul_eq_mul]
         rfl }

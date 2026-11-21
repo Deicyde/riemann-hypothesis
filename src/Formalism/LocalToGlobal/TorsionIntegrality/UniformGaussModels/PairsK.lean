@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.UniformGaussModels.GoodModelAll
-import Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.IsotropicVanish
 
 noncomputable section
 open scoped BigOperators

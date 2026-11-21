@@ -1,7 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.L2DbarEstimates.WeakHolomorphy.ExtCut
 import ReciprocityTheory.L2DbarEstimates.WeakHolomorphy.HoloWeak
 import ReciprocityTheory.L2DbarEstimates.WeakHolomorphy.MollifyEqConvolution
 import ReciprocityTheory.L2DbarEstimates.WeakHolomorphy.ExtWeakA
+import Mathlib.Algebra.Order.Ring.Star
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace ReciprocityTheory.L2DbarEstimates.C
 

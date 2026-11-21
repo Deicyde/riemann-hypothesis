@@ -1,9 +1,7 @@
-import Formalism.LocalToGlobal.Divisibility.RecBridge
-import Formalism.LocalToGlobal.GroupLattices.JointServices.ValIntNonneg
-import Formalism.LocalToGlobal.GroupLattices.JointServices.PerTuple
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.ClosedSizeLink.DivisionAdmissibleFamilyOfData
 import Formalism.SharpRestriction.Divisibility.WeightDegreeSizes
-import Formalism.SharpRestriction.Divisibility.HookProducts.Compl3Record
 
 noncomputable section
 

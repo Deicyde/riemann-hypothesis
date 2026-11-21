@@ -1,7 +1,10 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
-import ReciprocityTheory.DualLattices.FischerSelfNeZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TotalDegreeSubstFLe
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.LinearAlgebra.PiTensorProduct.Basic
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
 
 noncomputable section
 

@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAut
+import Mathlib.RingTheory.PicardGroup
 open MeasureTheory Filter Topology
 
 namespace GlobalTheory.ThK.Dbl.Contin

@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.LeafVanBStalkPf
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry Opposite CochainComplex CochainComplex.HomComplex GlobalTheory.EtC
@@ -140,7 +140,7 @@ theorem UpperTheory.exists_closedFiber_colimit_presentation :
   have hl : ∀ {j j' : S.J} (g : j ⟶ j'), zl j' ≫ resBW ι (S.tr g) = zl j := fun {j j'} g => by
     apply pullback.hom_ext
     · rw [Category.assoc, rfst, reassoc_of% (h1 j'), h1, htr]
-      simp only [Category.assoc, Iso.inv_hom_id_assoc]
+      simp only [Iso.inv_hom_id_assoc]
       rw [← Spec.map_comp_assoc, S.c.w]
     · rw [Category.assoc, rsnd, h2, h2]
   have hlφ : ∀ j, zl j ≫ φ j = pullback.fst _ _ ≫ Spec.map (S.c.ι.app j) := fun j => by

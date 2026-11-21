@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.NotBaseCondFalse
-import Formalism.SharpRestriction.SmoothDesignExistence.DGamSmooth
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CharacterBoxes.ClassSel
-import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.WorkingClassesFrozen
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.WorkingFamClassCopiesEqFrozenStatement
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.GenusMassEntryStatement
 import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.AllRows

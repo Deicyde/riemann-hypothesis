@@ -1,8 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.HermitianLocalSplit
-import GroundTheory.GlobalFields.Adele.WeakApprox
-import GroundTheory.GlobalFields.Adele.BaseChange.FiniteMap
-import GroundTheory.GlobalFields.LocalFieldAtPlace
 
 noncomputable section
 

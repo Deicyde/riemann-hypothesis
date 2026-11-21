@@ -1,7 +1,8 @@
-import Mathlib
-import GroundTheory.ProfiniteCohomology.RealPlaces.LocalDuality
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.GlobalClassFormation.LocalInvariants
 import GroundTheory.ProfiniteCohomology.LocalTateDuality.InjectiveCohomologyMapKummerSeqOpenFTwo
+import GroundTheory.ProfiniteCohomology.RealPlaces.LocalDualityDefs
 set_option maxSynthPendingDepth 1
 
 noncomputable section

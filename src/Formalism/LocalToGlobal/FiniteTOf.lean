@@ -1,7 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteRealisationChoice
 import Formalism.LocalToGlobal.PtKOfReal
-import Formalism.LocalToGlobal.Divisibility.ArithClauseRec
-import Formalism.LocalToGlobal.Divisibility.DivisibilityConstruction.GammaSizeOfParameters
 
 noncomputable section
 

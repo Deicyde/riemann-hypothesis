@@ -1,4 +1,11 @@
-import Development.WeilBound.RepresentationTheoryGL.CasimirAlgebra.TensorRelationsGL.LiftCommEAt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.RepresentationTheoryGL.CasimirAlgebra.TensorRelationsGL.StepFormula
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -130,7 +137,7 @@ theorem T_apply (E : Fin n → Fin n → Module.End ℂ M) (u : ℂ) (k : Fin n)
   simp [T, Om, lift, eAt, Tm, Finset.sum_add_distrib, LinearMap.add_apply]
   congr 1
   · rw [Finset.sum_eq_single (I k)]
-    · simp [sub_smul]
+    · simp
     · intro b _ hb
       simp [hb]
     · simp

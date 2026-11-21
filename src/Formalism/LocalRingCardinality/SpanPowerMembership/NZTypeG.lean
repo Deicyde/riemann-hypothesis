@@ -1,4 +1,6 @@
-import Formalism.LocalRingCardinality.SpanPowerMembership.ExampleNewtypesIdempotentZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.SpanPowerMembership.PlacesOverNcardOfSplitInj
 
 noncomputable section
 

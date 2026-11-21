@@ -1,7 +1,8 @@
-import Formalism.SharpRestriction.GrowthBounds.TwistedSubstitution.Proposition5Gram
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.RootWeights.ValuationBoundDetPowerFactor
-import Formalism.SharpRestriction.GrowthBounds.RootWeights.MulLaurentSup
 import Formalism.SharpRestriction.GrowthBounds.RootWeights.DerivativeValuationBounds
+import Formalism.SharpRestriction.GrowthBounds.TwistedSubstitution.PlaneCoeff
 
 noncomputable section
 

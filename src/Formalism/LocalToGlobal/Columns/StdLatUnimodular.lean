@@ -1,8 +1,6 @@
-import Mathlib
-import Formalism.HermitianLattices.StatementLat
-import Formalism.HermitianLattices.DualOrthSum
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianLattices.NeighbourConstruct
-import Formalism.SatakeDualWeyl.StatementB
 import Formalism.LocalToGlobal.Columns.AbelianHostFieldConditions
 
 open NumberField IsDedekindDomain Module
@@ -410,7 +408,7 @@ theorem reduction_spec (P : HeightOneSpectrum (𝓞 E)) {a : E} {r s : 𝓞 E} (
   have e : s * r' = s' * r := by
     apply RingOfIntegers.ext
     change algebraMap (𝓞 E) E (s * r') = algebraMap (𝓞 E) E (s' * r)
-    simp only [map_mul, map_add]
+    simp only [map_mul]
     rw [← h', ← h]
     ring
   apply mul_left_cancel₀ (mk_ne_zero hs')
@@ -449,7 +447,7 @@ theorem IntAt.mul {P : HeightOneSpectrum (𝓞 E)} {a b : E} (ha : IntAt P a) (h
   obtain ⟨r, s, hs, h⟩ := ha
   obtain ⟨r', s', hs', h'⟩ := hb
   refine ⟨r * r', s * s', fun hm => (P.isPrime.mem_or_mem hm).elim hs hs', ?_⟩
-  simp only [map_mul, map_add]
+  simp only [map_mul]
   rw [← h, ← h']
   ring
 
@@ -471,7 +469,7 @@ theorem reduction_mul {P : HeightOneSpectrum (𝓞 E)} {a b : E} (ha : IntAt P a
   obtain ⟨r', s', hs', h'⟩ := hb
   refine redP_eq P (r := r * r') (s := s * s')
     (fun hm => (P.isPrime.mem_or_mem hm).elim hs hs') ?_ ?_
-  · simp only [map_mul, map_add]
+  · simp only [map_mul]
     rw [← h, ← h']
     ring
   · rw [map_mul, map_mul, ← reduction_spec P hs h, ← reduction_spec P hs' h']

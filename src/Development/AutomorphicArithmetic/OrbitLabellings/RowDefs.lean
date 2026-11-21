@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CharacterGerms.RestNonneg
 import Formalism.LocalToGlobal.CharacterGerms.BlockMembershipSelfConjugate
 

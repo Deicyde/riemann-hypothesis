@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.PlaceBelow
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ConstantCoeffDmonNCongr
 
 set_option autoImplicit false

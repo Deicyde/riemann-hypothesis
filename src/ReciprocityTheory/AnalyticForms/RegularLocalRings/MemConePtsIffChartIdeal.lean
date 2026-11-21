@@ -1,3 +1,6 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.IsOpenAlt
 
 namespace ReciprocityTheory.AnForm.R

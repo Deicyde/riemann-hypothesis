@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataKerI
-import Formalism.SharpRestriction.GlobalSchurBounds.GL3Theta
 import Formalism.LocalToGlobal.KernelLattices.LateralTheory
 
 noncomputable section

@@ -1,5 +1,6 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.HolomorphicFamilies.ModelLatB
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.ModelLat
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.ConjSqrtMinusD
 
 noncomputable section
 

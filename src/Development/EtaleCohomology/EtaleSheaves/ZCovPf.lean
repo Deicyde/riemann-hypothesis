@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.LineHighPf
+import Mathlib.AlgebraicGeometry.ProjectiveSpectrum.Basic
+import Mathlib.RingTheory.MvPolynomial.Ideal
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry GlobalTheory.EtC LateralTheory.E.t_E2Cut LateralTheory.E.LineHighPf

@@ -1,13 +1,11 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.WeilGroupCharacters.ContinuousResP
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.IotaSpec
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.HeckeLAdicCharacterDeRham
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.HeckeLAdicParameterAbove
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.DeRhamPotSemistable
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.LaGlob
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.FiniteEmb
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.RankOneCharacterIsdRAndJumpsZero
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.EqZeroOfIsNilpotentOfFinrankEqOne
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.RepERankOne
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.MkMemAdmissibleAtIffCocycle
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.BasicNotions Formalism.BasicNotions.Loc GlobalTheory.WeilDeligne GlobalTheory.GalOfCusp GlobalTheory.HeckeGal GlobalTheory.LocLanglands GlobalTheory.Published UpperTheory.V.W
 
 section
@@ -53,7 +51,7 @@ private theorem bridge_transfer {F E Ω : Type} [Field F] [NumberField F] [Field
     rw [← ecomm', MulEquiv.apply_symm_apply, Bw.e_comm]
   have hrep : Bw.repE L r₁ = Bw'.repE L r₀ := by
     refine MonoidHom.ext fun g => ?_
-    simp [LocBridge.repE, r₁, hB]
+    simp [LocBridge.repE, r₁]
     rfl
   have hV₁ : Bw.IsdRE P L r₁ := by
     unfold LocBridge.IsdRE at hV ⊢

@@ -1,4 +1,12 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.GenusMeanAsymptotics.UnimodularClassRepresentatives.IsLocUnif
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open Matrix
 
@@ -40,9 +48,9 @@ theorem step_identity (P H X Y Y' Z V V' : Matrix n n K) (a b : K)
   have hV2 : V = Z - V' := eq_sub_of_add_eq hV
   rw [e1, e2, e3, hG]
   simp only [add_mul, mul_add, sub_mul, mul_sub, one_mul, mul_one, smul_mul_assoc, mul_smul_comm]
-  simp only [← Matrix.mul_assoc, hYHY]
-  simp only [← Matrix.mul_assoc, hHY, hYH, hV2]
-  simp only [Matrix.mul_assoc, smul_mul_assoc, mul_smul_comm, smul_smul]
+  simp only [hYHY]
+  simp only [hHY, hYH, hV2]
+  simp only [Matrix.mul_assoc, smul_smul]
   module
 
 theorem step (hS : IsLocUnif S ϖ) {H E : Matrix n n K} (hH : Hᴴ = H) (hES : Ent S E) {e k : ℕ}

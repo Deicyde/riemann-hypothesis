@@ -1,9 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementJCT
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.InvariantOperatorUnderJacquet
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.QNFAsm
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LevelTransfer.SecondCapelliMinorLevel
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LevelLiftBasics.LevelGroupUnitaryHermitian
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LevelImageArithmetic.GlevImageOf
 
 open Matrix MeasureTheory
 
@@ -24,7 +22,7 @@ theorem liftVec_inj {v w : Fin (2 * r' + k + 1) → ℂ} (h : liftVec k i r' v =
   have hjl := j.isLt
   have hj := congrFun h ⟨j.val + i, by omega⟩
   have hc : i ≤ j.val + i ∧ j.val + i < 2 * r' + k + 1 + i := ⟨Nat.le_add_left _ _, by omega⟩
-  simp only [liftVec, Fin.val_mk, dif_pos hc] at hj
+  simp only [liftVec, dif_pos hc] at hj
   first
     | simpa using hj
     | (simp at hj; rwa [if_pos (by omega)] at hj)
@@ -130,7 +128,7 @@ private theorem liftVec_apply_of_mid (x : Fin (2 * r' + k + 1) → ℂ) (p : Fin
 private theorem bvec_eq_liftVec_bvec_of_mid (q : Fin (2 * (i + r') + k + 1)) (hq : i ≤ q.val ∧ q.val < 2 * r' + k + 1 + i) :
     bvec q = liftVec k i r' (bvec (⟨q.val - i, by omega⟩ : Fin (2 * r' + k + 1))) := by
   funext p
-  simp only [bvec, liftVec, Pi.single_apply, Fin.ext_iff, Fin.val_mk]
+  simp only [bvec, liftVec, Pi.single_apply, Fin.ext_iff]
   split_ifs <;> (try split_ifs) <;> (try split_ifs) <;> first | rfl | (exfalso; omega)
 
 theorem unitB_lift {m : ℕ} (Bs : Fin m → Fin (2 * r' + k + 1) → ℂ) (a b : Fin m) :

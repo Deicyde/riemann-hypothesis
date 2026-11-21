@@ -1,8 +1,7 @@
-import Mathlib
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GCorCut
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.FrRatio
-import Formalism.LocalToGlobal.ProjectiveLattices.ThProps
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.PsJetTwistedSeriesOfLeOne
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 set_option autoImplicit false
 

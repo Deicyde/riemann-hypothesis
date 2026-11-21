@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.T2SpaceFiniteAdeleRing
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CommuteOfCommuteSeparableCharpoly
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsNormalisedThetaSub
 open NumberField IsDedekindDomain Matrix Polynomial Filter GlobalTheory.CuspRep GlobalTheory.PRep Formalism.UG Formalism.BasicNotions GlobalTheory.UnitaryBC Formalism.L2.Host GlobalTheory.BCT
 open scoped Classical TensorProduct
@@ -49,7 +49,7 @@ theorem thF_prjG (u : Pl E) (g : GL (Fin n) (FiniteAdeleRing (𝓞 E) E)) :
   have h1 : (idem E (orb E u) • (g⁻¹).val + (1 - idem E (orb E u)) • (1 : Matrix (Fin n) (Fin n) (FiniteAdeleRing (𝓞 E) E))).map
       (GlobalTheory.ThetaPull.cFin E) = idem E (orb E u) • (g⁻¹).val.map (GlobalTheory.ThetaPull.cFin E) + (1 - idem E (orb E u)) • 1 := by
     ext i j
-    by_cases hij : i = j <;> simp [hij, Matrix.one_apply, he]
+    by_cases hij : i = j <;> simp [hij, he]
   have h2 : (PhiU n (FiniteAdeleRing (𝓞 E) E)).val * ((PhiU n (FiniteAdeleRing (𝓞 E) E))⁻¹).val = 1 := Units.mul_inv _
   rw [h1, Matrix.transpose_add, Matrix.transpose_smul, Matrix.transpose_smul, Matrix.transpose_one, Matrix.mul_add,
     Matrix.add_mul, Matrix.mul_smul, Matrix.mul_smul, Matrix.smul_mul, Matrix.smul_mul, Matrix.mul_one, h2]

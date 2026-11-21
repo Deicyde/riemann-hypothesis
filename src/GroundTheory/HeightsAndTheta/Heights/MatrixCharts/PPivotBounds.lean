@@ -1,5 +1,4 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.MatrixCharts.Statements
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.MatrixCharts.StatementsCusp
 import GroundTheory.HeightsAndTheta.Heights.MatrixCharts.TransposeEqOfPosSemidef
 set_option maxSynthPendingDepth 1

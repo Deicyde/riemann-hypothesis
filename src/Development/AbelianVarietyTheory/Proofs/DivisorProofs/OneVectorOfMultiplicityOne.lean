@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.ConcretePkgSpec
-import Formalism.SharpRestriction.Divisibility.PrimeDegreeVariant
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.CuspidalInducedCharacter
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CuspidalIdempotentCharacters
 
 noncomputable section
@@ -345,7 +345,7 @@ theorem imageLe_iff (R : RealDat D A Ks) (F : Face D A) (P : Subgroup G) (ψ : P
           R.Th A.μ0 (R.jX A.μ0 y₀) = R.Th t (R.jX t y) := by
   have e : ∀ t, (R.toCx F).Z t = rowSub R t := fun t => rfl
   unfold ImageLe
-  simp only [e]
+  simp only
   exact Iff.rfl
 
 theorem imageLe_face (R : RealDat D A Ks) (F F' : Face D A) (P : Subgroup G) (ψ : P →* D.what₂.LLˣ)

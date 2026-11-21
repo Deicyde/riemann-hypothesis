@@ -1,10 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EqTopOfTranslates
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsNormLeHeightPow
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HasDerivAtWeilRepRealOneParamAdelicPointStatement
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsCcrOperatorsThetaFunctions
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsQuadOfNormal
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FderivEqQuadComm
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ContinuousOneP
 
 noncomputable section
 

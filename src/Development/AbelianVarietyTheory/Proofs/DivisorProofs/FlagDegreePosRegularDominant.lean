@@ -1,7 +1,9 @@
-import Mathlib
-import Formalism.DegreeFormula.PointDegree.PowSum
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.DegreeFormula.PointDegree.PermExpInj
 import Development.AbelianVarietyTheory.Definitions.Foundations.CurveCl
+import Mathlib.Algebra.MvPolynomial.Coeff
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
 
 open MvPolynomial Formalism.DegreeFormula GlobalTheory.FlagPoly
 

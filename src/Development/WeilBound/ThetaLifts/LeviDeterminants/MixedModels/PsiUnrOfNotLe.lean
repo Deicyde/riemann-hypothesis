@@ -1,5 +1,7 @@
-import Development.WeilBound.CoreStatements.LocallyConstantCoinvariants.CompFinLiftE
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SplitPrimeAdditiveCharacterUnramified
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StandardAddCharSymplecticLocalLatticeEqOne
 
 noncomputable section
 

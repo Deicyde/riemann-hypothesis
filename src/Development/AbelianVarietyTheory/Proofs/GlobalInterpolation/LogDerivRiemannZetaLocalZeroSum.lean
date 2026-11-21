@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.TsumOneDivRpowLe
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.NormOneSubConjMul
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.DifferentiableAtFractInt

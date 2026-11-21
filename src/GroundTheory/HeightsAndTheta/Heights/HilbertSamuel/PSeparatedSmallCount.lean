@@ -1,8 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsSeparatedSmallCount
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsSectionLatticeFinite
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PLocalRep
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PPacking
+import Mathlib.Analysis.Normed.Lp.lpSpace
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.HilbertSamuel

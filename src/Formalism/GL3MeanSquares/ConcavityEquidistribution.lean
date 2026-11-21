@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.LogVandermondeBounds.MultinomialPowerBound
+import Mathlib.Analysis.CStarAlgebra.Classes
 
 namespace Formalism.HermitianLattices.TraceIntegrality
 

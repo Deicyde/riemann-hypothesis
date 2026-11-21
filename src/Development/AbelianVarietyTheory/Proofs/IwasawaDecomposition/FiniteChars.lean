@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.UnitaryNorms.IsUnitaryNormOf
+import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
 
 open IsDedekindDomain NumberField
 

@@ -1,5 +1,7 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.AdelicLattices.FactPrimes
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.LatNormGrLatNeZeroOfSpan
+import Mathlib.Analysis.CStarAlgebra.Classes
 open NumberField GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Fl
 
 namespace PositivityTheory.Xgf
@@ -57,7 +59,7 @@ theorem good_prime (q : ℕ) (hq : q.Prime) : Good q := by
   refine ⟨(Set.finite_singleton (⟨q, hq⟩ : Nat.Primes)).subset ?_, ?_⟩
   · intro (p : Nat.Primes) hp
     have hp' := hp
-    simp only [Set.mem_setOf_eq, e] at hp'
+    simp only [e] at hp'
     have h2 : (if (p : ℕ) = q then -Real.log q else 0) ≠ 0 := hp'
     by_cases h : (p : ℕ) = q
     · exact Set.mem_singleton_iff.2 (Subtype.ext h)

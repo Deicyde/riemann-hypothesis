@@ -1,17 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToRepFam
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsGaloisCoverQuotientFreeFiniteAction
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsQProjOverTargetGaloisCoverNoetherian
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsQProjOverOfRelAmpleOverQprojNoetherian
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AbelianSchemeDescendsGaloisCoverNoetherianBase
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PullClsDiag
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSquareBundleDescentGaloisCover
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.GaloisCoverDescentAndCartesianSquares
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTanScalIffOfLeftEq
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsPushEquiv
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenProjectionsOfComaximalStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GrpObjTangentVectorAddAtPointStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsAffineGaloisCoverDualNumberEpiStatement
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.UPel.HT
 open scoped TensorProduct
@@ -30,7 +23,7 @@ theorem spMap_id' (A : Type) [CommRing A] : spMap (RingHom.id A) = 𝟙 _ := by
   simp only [spMap, CommRingCat.ofHom_id, Spec.map_id]
 
 theorem fst_comp_alg : (TrivSqZeroExt.fstHom R₁ R₁ R₁).toRingHom.comp (algebraMap R₁ (DualNumber R₁)) = RingHom.id R₁ :=
-  RingHom.ext fun a => by simp [TrivSqZeroExt.algebraMap_eq_inl]
+  RingHom.ext fun a => by simp
 
 theorem es_comp_alg (r : R₁) : (epsScaleR r).comp (algebraMap R₁ (DualNumber R₁)) = algebraMap R₁ (DualNumber R₁) :=
   RingHom.ext fun a => by ext <;> simp [epsScaleR, TrivSqZeroExt.algebraMap_eq_inl]

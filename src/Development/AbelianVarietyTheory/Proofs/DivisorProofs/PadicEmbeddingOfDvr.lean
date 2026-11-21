@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.OneLtAbsNormReal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsEmbeddingPadicComplexInt
 
 set_option autoImplicit false

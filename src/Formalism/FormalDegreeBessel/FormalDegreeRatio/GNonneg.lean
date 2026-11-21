@@ -1,4 +1,13 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.FormalDegreeBessel.StatementG
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Analysis.Matrix.Spectrum
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Matrix
 
@@ -72,13 +81,13 @@ lemma gn_Hpk_mulVec (k r : ℕ) (y : Fin (2 * r + k + 1) → ℂ) (i : Fin (2 * 
   by_cases h : i.val < r ∨ r + k < i.val
   · rw [dif_pos h, Finset.sum_eq_single (⟨2 * r + k - i.val, by omega⟩ : Fin (2 * r + k + 1))]
     · have e : Hpk k r i ⟨2 * r + k - i.val, by omega⟩ = 1 := by
-        simp only [Hpk, and_true]
+        simp only [Hpk]
         split_ifs <;> first | (simp; done) | omega | (simp only [Fin.ext_iff, Fin.val_mk, and_true, true_and, and_self] at *; omega)
       rw [e, one_mul]
     · intro b _ hb
       have hb' : b.val ≠ 2 * r + k - i.val := fun e => hb (Fin.ext e)
       have e : Hpk k r i b = 0 := by
-        simp only [Hpk, and_true]
+        simp only [Hpk]
         split_ifs <;> first | (simp; done) | omega | (simp only [Fin.ext_iff, Fin.val_mk, and_true, true_and, and_self] at *; omega)
       rw [e, zero_mul]
     · intro hb
@@ -92,7 +101,7 @@ lemma gn_Hpk_mulVec (k r : ℕ) (y : Fin (2 * r + k + 1) → ℂ) (i : Fin (2 * 
     · intro b _ hb
       have hb' : b.val ≠ i.val := fun e => hb (Fin.ext e)
       have e : Hpk k r i b = 0 := by
-        simp only [Hpk, and_true]
+        simp only [Hpk]
         split_ifs <;> first | (simp; done) | omega | (simp only [Fin.ext_iff, Fin.val_mk, and_true, true_and, and_self] at *; omega)
       rw [e, zero_mul]
     · intro hb
@@ -152,7 +161,7 @@ lemma gn_gramM_eq (k r : ℕ) (z z' : Fin (2 * r + k + 1) → ℂ)
 
 lemma gn_Hpk_herm (k r : ℕ) : (Hpk k r).IsHermitian := by
   refine Matrix.IsHermitian.ext fun i j => ?_
-  simp only [Hpk, and_true]
+  simp only [Hpk]
   split_ifs <;> first | (simp; done) | omega | (simp only [Fin.ext_iff, Fin.val_mk, and_true, true_and, and_self] at *; omega)
 
 lemma gn_gramM_herm (k r : ℕ) (z z' : Fin (2 * r + k + 1) → ℂ)
@@ -177,7 +186,7 @@ lemma gn_herm_bvec_right {m : ℕ} (H : Matrix (Fin m) (Fin m) ℂ) (v : Fin m �
   rw [Finset.sum_eq_single j]
   · simp
   · intro b _ hb
-    simp [Pi.single_apply, hb]
+    simp [hb]
   · intro h
     exact absurd (Finset.mem_univ _) h
 

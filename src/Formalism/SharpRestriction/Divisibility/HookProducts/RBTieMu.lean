@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.HarderNarasimhan.ShiftInvariance
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataArith
 import Formalism.SharpRestriction.Divisibility.HookProducts.RBTieOp
 import Formalism.SharpRestriction.Divisibility.HookProducts.RBTieSlope

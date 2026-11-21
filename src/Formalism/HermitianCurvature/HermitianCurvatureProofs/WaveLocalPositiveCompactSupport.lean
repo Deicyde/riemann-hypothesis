@@ -1,7 +1,9 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.BlockKWaveC
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ModuleFormPosCompactSupport
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.SizeStandardCompact
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.VectorIsomorphismCompactSupport
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.PBGWaveMain
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.WaveLocalBuiltPlaces
 
 namespace Formalism.FourierDecayAlt.P.PBL
 

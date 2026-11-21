@@ -1,6 +1,5 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StBranchNormalisation
-import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StCurveResidueDegree
+import BuildAid.Leniency.Open
+import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StCurveNormalisationLength
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

@@ -1,15 +1,9 @@
-import Mathlib
-import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.DualFamilyCounting.JordanExists
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.GenusMeanAsymptotics.UnimodularClassRepresentatives.ExistsLatticeOfFibLocNeZeroGood
-import Formalism.GL3MeanSquares.GenusMeanAsymptotics.UnimodularClassRepresentatives.AlgebraMapIntCastSmul
-import Formalism.GL3MeanSquares.GenusMeanAsymptotics.UnimodularClassRepresentatives.ExistsSqAbsNormOfInert
-import Formalism.GL3MeanSquares.GenusMeanAsymptotics.UnimodularClassRepresentatives.IsHermSemilocalLocRing
-import Formalism.GL3MeanSquares.GenusMeanAsymptotics.UnimodularClassRepresentatives.ExistsLocalData
 import Formalism.GL3MeanSquares.GenusMeanAsymptotics.UnimodularClassRepresentatives.ExistsOfNormRepCountNeZero
 import Formalism.GL3MeanSquares.GenusMeanAsymptotics.UnimodularClassRepresentatives.NormRepCountExtP
-import Formalism.GL3MeanSquares.GenusMeanAsymptotics.UnimodularClassRepresentatives.ExistsLatticeVdLeOne
-import Formalism.GL3MeanSquares.GenusMeanAsymptotics.UnimodularClassRepresentatives.ExtPPowLeSpanSup
-import Formalism.GL3MeanSquares.GenusMeanAsymptotics.UnimodularClassRepresentatives.MemSmulOfMemSmulLocF
+import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.DualFamilyCounting.SameGenusFix
 
 open NumberField Module
 
@@ -124,7 +118,7 @@ theorem mem_locF_span_iff {P : Ideal (𝓞 K)} (hP : P.IsMaximal) (x z : V) :
 omit hK hF in
 theorem h_smul_smul (h : V →ₗ⋆[K] V →ₗ[K] K) (μ ν : K) (x y : V) :
     h (μ • x) (ν • y) = star μ * ν * h x y := by
-  simp only [LinearMap.map_smulₛₗ, LinearMap.smul_apply, LinearMap.map_smul, smul_eq_mul,
+  simp only [LinearMap.map_smulₛₗ, LinearMap.smul_apply, smul_eq_mul,
     starRingEnd_apply, RingHom.id_apply]
   ring
 
@@ -138,14 +132,14 @@ theorem exists_isom_line {h : V →ₗ⋆[K] V →ₗ[K] K} (hV : finrank K V = 
   rw [← κι_eq] at hx hx'
   have hx0 : x ≠ 0 := by
     rintro rfl
-    simp only [map_zero, LinearMap.zero_apply] at hx
+    simp only [map_zero] at hx
     exact κι_ne_zero ha hx.symm
   obtain ⟨μ, hμ⟩ := (finrank_eq_one_iff_of_nonzero' x hx0).1 hV x'
   have hμ0 : μ ≠ 0 := by
     rintro rfl
     rw [zero_smul] at hμ
     rw [← hμ] at hx'
-    simp only [map_zero, LinearMap.zero_apply] at hx'
+    simp only [map_zero] at hx'
     exact κι_ne_zero ha' hx'.symm
   have hN : star μ * μ = κ (ι a') / κ (ι a) := by
     have e := h_smul_smul h μ μ x x

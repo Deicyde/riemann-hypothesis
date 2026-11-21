@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.ExistsUnitOfComm
+import Development.AutomorphicSpectrum.Proofs.GlobalProofs.FiniteDimensionalOfSlices
 
 namespace GlobalTheory.CompanionTheory.LeviGen
 open GlobalTheory.CompanionTheory.Hypotheses₂.LeviPart
@@ -89,7 +91,7 @@ theorem prX_ind_le {A : Type} [CommRing A] (s : A →+* A) {n r : ℕ} (J : Matr
   ext a b
   rw [Matrix.mul_apply, Matrix.mul_apply]
   simp only [Matrix.mul_diagonal, Matrix.submatrix_apply, id, Formalism.UG.cT, Matrix.transpose_apply,
-    Matrix.map_apply, Matrix.of_apply]
+    Matrix.map_apply]
   have e : (Finset.univ : Finset (Fin (k.val + 1))).image (Fin.castLE k.2) = Finset.univ.filter (· ≤ k) := by
     ext c
     simp only [Finset.mem_image, Finset.mem_univ, true_and, Finset.mem_filter]

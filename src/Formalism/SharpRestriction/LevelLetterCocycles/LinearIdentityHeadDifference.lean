@@ -1,6 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.FilCrisTriv
-import Formalism.SharpRestriction.LevelLetterCocycles.MembershipCriterionOfLevelZero
 import Formalism.SharpRestriction.LevelLetterCocycles.QuotientImageDivisibility.FrobeniusUniformizerPowDvd
+import Formalism.SharpRestriction.LevelLetterCocycles.ExistsSmulPowEqSumOfInFNc
+import Formalism.SharpRestriction.LevelLetterCocycles.HorTrExists
+import Formalism.SharpRestriction.LevelLetterCocycles.HorTrUnique
 
 noncomputable section
 
@@ -60,7 +64,7 @@ theorem horTr_split (hinj : Function.Injective (algebraMap O LL)) (T : LocLat G 
     rw [hy 0 hM m, hsol0 k]
     by_cases hm : m = k
     · subst hm; simp
-    · simp [hm, Pi.single_apply]
+    · simp [hm]
   obtain ⟨M', rfl⟩ : ∃ M', M = M' + 1 := ⟨M - 1, by omega⟩
   refine ⟨∑ r ∈ Finset.range M', W.π₀ ^ r • Formalism.MainNotions.LiftingTheory.vecB W T b (y (r + 1)),
     Formalism.MainNotions.UnusedSlot80.Relay2.InNΔi_sum W T c _ _ fun r _ =>

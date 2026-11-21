@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CornerBZero
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.ContDiffBumpG
 
 open Matrix MeasureTheory Filter Topology
 open scoped ComplexConjugate

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataTheta
 
 noncomputable section
@@ -51,7 +52,7 @@ theorem supp_single {P : Ix R S → Ix R S → Prop} {a b : Ix R S} (h : P a b) 
   have : ¬ (a = c ∧ b = d) := by
     rintro ⟨rfl, rfl⟩
     exact hcd h
-  simp [Eab, Matrix.single_apply, this]
+  simp [Eab, this]
 
 variable (r₀ : Fin R) (s₀ : Fin S)
 
@@ -297,7 +298,7 @@ theorem top_irreducible : ∀ {ι V : Type} [Fintype ι] [AddCommGroup V] [Modul
     · refine hk1 w (Eab a b) (supp_kc (P := fun x y => x = a ∧ y = b)
           (by rintro x y ⟨rfl, rfl⟩; exact hsb) (supp_single ⟨rfl, rfl⟩)) (fun d => ?_) v hv
       simp only [Eab, Matrix.single_apply]
-      refine ⟨?_, ?_, ?_, ?_⟩ <;> simp [h1, h2, h3, h4, Ne.symm h1, Ne.symm h2, Ne.symm h3, Ne.symm h4]
+      refine ⟨?_, ?_, ?_, ?_⟩ <;> simp [h1, h2, h3, h4]
 
   have hMlevi : ∀ w Y, Levi Y → ∀ v ∈ M, act w Y v ∈ M := by
     have hle : M ≤ subQ act Levi M := by

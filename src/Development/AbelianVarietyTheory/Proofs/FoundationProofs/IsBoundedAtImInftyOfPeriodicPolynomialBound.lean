@@ -1,7 +1,14 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.PetIPSmulRight
-import Development.AbelianVarietyTheory.Definitions.Foundations.RepL
-import CompanionTheory.EightfoldTheory.VariationTheory.AutomorphicForms.Newform
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.Geometry.Manifold.MFDeriv.NormedSpace
+import Mathlib.NumberTheory.ModularForms.QExpansion
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open UpperHalfPlane Complex MeasureTheory CongruenceSubgroup GlobalTheory.EisM UpperTheory.V.Af Filter Topology
 open scoped MatrixGroups Real ComplexConjugate Manifold ModularForm
 
@@ -65,7 +72,7 @@ theorem isBoundedAtImInfty_of_periodic_of_polyBound :
   set g : ℍ → ℂ := fun τ ↦ f τ * Function.Periodic.qParam M τ with hg
   have hnormg : ∀ τ : ℍ, ‖g τ‖ = ‖f τ‖ * Real.exp (-2 * π * τ.im / M) := by
     intro τ
-    simp [hg, norm_mul, Function.Periodic.norm_qParam]
+    simp [hg, Function.Periodic.norm_qParam]
   have hgdiff : MDifferentiable 𝓘(ℂ) 𝓘(ℂ) g :=
     hf.mul ((Function.Periodic.differentiable_qParam (h := M)).comp_mdifferentiable
       UpperHalfPlane.mdifferentiable_coe)

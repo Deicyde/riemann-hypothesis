@@ -1,14 +1,9 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ToXQFst
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LocRatio
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsCocharLie
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.CharValMultiplicativeStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LieModelPullbackEquivalence
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.IsSemiAbelianOfProperGenericTorusExtensionSpecialFiber
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.SplitTorusHomProperTrivialField
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.BCTools
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.SabComp
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.SabPull
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField TensorProduct Filter Topology Matrix
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory.CompanionTheory.Ar
 open GlobalTheory.CompanionTheory.Ar.TorusUnif
@@ -58,7 +53,7 @@ theorem half [Module.Free ℤ X] [Module.Finite ℤ X]
     rw [ofAdd_add, map_mul, hφ, hφ, AddMonoidAlgebra.single_mul_single, _root_.mul_one] at h5
     by_contra hne
     have := congrArg (fun f => AddMonoidAlgebra.coeff f (φ (a + b))) h5
-    simp [AddMonoidAlgebra.coeff_single, Finsupp.single_apply, Ne.symm hne] at this
+    simp [AddMonoidAlgebra.coeff_single, Ne.symm hne] at this
   refine ⟨AddMonoidHom.mk' φ hadd, fun A _ g θ => ?_⟩
   letI : Algebra k A := g.toAlgebra
   have h := key A θ
@@ -77,7 +72,7 @@ theorem of_inj {a b : X} (h : AddMonoidAlgebra.of k X (Multiplicative.ofAdd a) =
   classical
   by_contra hne
   have := congrArg (fun f => AddMonoidAlgebra.coeff f a) h
-  simp [AddMonoidAlgebra.coeff_single, Finsupp.single_apply, Ne.symm hne] at this
+  simp [AddMonoidAlgebra.coeff_single, Ne.symm hne] at this
 
 theorem full [Module.Free ℤ X] [Module.Finite ℤ X] [Module.Free ℤ Y] [Module.Finite ℤ Y]
     (P : ∀ (A : Type) [CommRing A], (k →+* A) → (Multiplicative X →* A) → (Multiplicative Y →* A) → Prop)

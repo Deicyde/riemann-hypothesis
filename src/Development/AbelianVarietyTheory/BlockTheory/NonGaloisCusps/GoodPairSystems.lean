@@ -1,9 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.IntegralHeckeForms
-import Formalism.SharpRestriction.LevelLetterCocycles.BlochKatoPhases
-import Formalism.LocalRingCardinality.DataNChoice
-import Formalism.LocalRingCardinality.DataNChTie
-import Formalism.SharpRestriction.ParConsts
 import Formalism.SharpRestriction.ParamsHeightRankConstant
 
 noncomputable section

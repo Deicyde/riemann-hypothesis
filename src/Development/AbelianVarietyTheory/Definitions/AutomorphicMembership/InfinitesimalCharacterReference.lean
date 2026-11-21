@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.CenLocOfCenReal
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.DirectSumCancelRight
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ContinuousNormFin
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.CenUsedOfCenReal
 
 noncomputable section
 

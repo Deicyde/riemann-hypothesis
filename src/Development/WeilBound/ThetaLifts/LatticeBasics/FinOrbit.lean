@@ -1,4 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LatticeBasics.HermAbs
+import Mathlib.LinearAlgebra.Quotient.Bilinear
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Topology.Baire.LocallyCompactRegular
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 

@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.DualLattices.EmbeddingSeparatingGroupStatement
-import ReciprocityTheory.DualLattices.EigPowEqOne
 import ReciprocityTheory.DualLattices.SgAlgebraMap
 
 noncomputable section

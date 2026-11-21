@@ -1,5 +1,7 @@
-import Formalism.SharpRestriction.GrowthBounds.MonomialFactorials.PhisBSelfAdj
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.MahlerMeasure.MahlerMeasureProofs.PhiInt
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 noncomputable section
 

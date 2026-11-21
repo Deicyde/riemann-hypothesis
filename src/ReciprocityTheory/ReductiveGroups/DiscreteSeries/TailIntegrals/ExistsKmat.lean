@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TailIntegrals.FixOfPerp
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.SimpleRing.Principal
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TailIntegrals.InductiveHeisenbergInputs
 
 noncomputable section
 
@@ -84,7 +89,7 @@ theorem exists_Kmat (hk : 1 ≤ k) (c u : Fin (r + 1) → EE k r) (hc : Orthonor
     have h2 : inner ℂ (WithLp.toLp 2 (κ *ᵥ Pi.single i 1) : EE k r) (WithLp.toLp 2 (κ *ᵥ Pi.single j 1)) =
         inner ℂ (WithLp.toLp 2 (Pi.single i 1) : EE k r) (WithLp.toLp 2 (Pi.single j 1)) := by
       rw [hκ, hκ, LinearIsometryEquiv.inner_map_map]
-    simp only [EuclideanSpace.inner_eq_star_dotProduct, WithLp.ofLp_toLp, dotProduct] at h2
+    simp only [EuclideanSpace.inner_eq_star_dotProduct, dotProduct] at h2
     simp only [mul_apply, conjTranspose_apply, one_apply]
     convert h2 using 1
     · refine Finset.sum_congr rfl fun m _ => ?_
@@ -108,7 +113,7 @@ theorem exists_Kmat (hk : 1 ≤ k) (c u : Fin (r + 1) → EE k r) (hc : Orthonor
 theorem inner_bvec (i : Fin (2 * r + k + 1)) (v : Fin (2 * r + k + 1) → ℂ) :
     inner ℂ (WithLp.toLp 2 (bvec i) : EE k r) (WithLp.toLp 2 v) = v i := by
   first
-    | (simp [bvec, PiLp.inner_apply, Pi.single_apply])
+    | (simp [bvec, PiLp.inner_apply])
     | (show inner ℂ (EuclideanSpace.single i (1 : ℂ)) (WithLp.toLp 2 v : EE k r) = v i
        rw [EuclideanSpace.inner_single_left]; simp)
 
@@ -134,8 +139,8 @@ theorem toLp_phiV (a : Fin (r + 1)) : (WithLp.toLp 2 (phiV k r a) : EE k r) =
       ((Real.sqrt 2)⁻¹ : ℂ) • (WithLp.toLp 2 (bvec ⟨r, by omega⟩) + WithLp.toLp 2 (bvec ⟨r + k, by omega⟩)) := by
   ext i
   by_cases ha : a.val < r
-  · simp [ha, phiV_apply, bvec, Pi.single_apply, Fin.ext_iff]
-  · simp [ha, phiV_apply, bvec, Pi.single_apply, Fin.ext_iff, mul_add, mul_ite]
+  · simp [ha, phiV_apply, bvec, Fin.ext_iff]
+  · simp [ha, phiV_apply, bvec, Fin.ext_iff, mul_add, mul_ite]
 
 theorem hcc : star ((Real.sqrt 2)⁻¹ : ℂ) * ((Real.sqrt 2)⁻¹ : ℂ) = 1 / 2 := by
   have h2 : (Real.sqrt 2 : ℂ) * (Real.sqrt 2 : ℂ) = 2 := by
@@ -157,11 +162,11 @@ theorem qe_orth (hk : 1 ≤ k) : Orthonormal ℂ (fun a => (WithLp.toLp 2 (phiV 
   · rw [if_pos ha, inner_bvec, phiV_apply]
     split_ifs <;> first
       | rfl
-      | (exfalso; (try simp only [Fin.val_mk, Fin.ext_iff] at *) <;> omega)
+      | (exfalso; (try simp only [Fin.ext_iff] at *) <;> omega)
       | simp
   · rw [if_neg ha, inner_smul_left, inner_add_left, inner_bvec, inner_bvec, phiV_apply, phiV_apply]
     split_ifs <;> first
-      | (exfalso; (try simp only [Fin.val_mk, Fin.ext_iff] at *) <;> omega)
+      | (exfalso; (try simp only [Fin.ext_iff] at *) <;> omega)
       | (exfalso; exact ‹¬a = b› (Fin.ext (by omega)))
       | (exfalso; simp_all; done)
       | (exfalso; simp_all <;> omega)

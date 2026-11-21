@@ -1,4 +1,4 @@
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SmulMemOfIsIntegral
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GaloisAutMemAdelicCompletionIntegral
 
 open NumberField Matrix GlobalTheory.UCls GlobalTheory.SUVol ReciprocityTheory.ChartRestriction.G.FD GlobalTheory.LieDisc

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SizeWindowBrackets.Chain2aCoreNoAnalytic
 import Formalism.LogFactorialIndices.StatementSize
 import Formalism.HarderNarasimhan.QuotRealize

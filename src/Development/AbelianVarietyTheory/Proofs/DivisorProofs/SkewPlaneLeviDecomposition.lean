@@ -1,12 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
-import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.LanglandsSquareIntegrable
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicPlaneOrthogonalGramRestrictionStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsConstAlong
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousToGAd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SkewPlaneUnipotentDecompositionStatement
 open scoped TensorProduct NNReal Matrix ComplexConjugate
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -41,7 +34,7 @@ theorem leftInv_mulVec {n n₁ : ℕ} (hσ : ∀ x, σ (σ x) = x) {J : Matrix (
     have h := hv (Pi.single j 1)
     rw [GlobalTheory.LeviPlaneSection.form_skew hσ hJ, neg_eq_zero, map_eq_zero] at h
     refine Eq.trans ?_ h
-    simp only [form, Matrix.mulVec, dotProduct, Matrix.transpose_apply, Matrix.map_apply, Pi.zero_apply,
+    simp only [form, Matrix.mulVec, dotProduct, Matrix.transpose_apply, Matrix.map_apply,
       Pi.single_apply, mul_ite, mul_one, mul_zero, Finset.sum_ite_eq', Finset.mem_univ, if_true, Finset.mul_sum]
     rw [Finset.sum_comm]
     exact Finset.sum_congr rfl fun _ _ => Finset.sum_congr rfl fun _ _ => by ring

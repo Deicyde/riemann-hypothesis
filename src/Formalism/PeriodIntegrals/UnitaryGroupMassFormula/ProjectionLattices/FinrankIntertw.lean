@@ -1,5 +1,17 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.SameFormAllLevels
+import Mathlib.Algebra.Azumaya.Basic
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.RepresentationTheory.Character
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 
@@ -14,7 +26,7 @@ theorem intertw_alg {V W : Type} [AddCommGroup V] [Module K V] [AddCommGroup W] 
     (hf : ∀ g x, f (ρ g x) = σ g (f x)) (a : MonoidAlgebra K G) (x : V) :
     f (ρ.asAlgebraHom a x) = σ.asAlgebraHom a (f x) := by
   induction a using MonoidAlgebra.induction_on with
-  | of g => simp [Representation.asAlgebraHom_of, hf]
+  | of g => simp [hf]
   | add a b ha hb => simp [map_add, ha, hb]
   | smul r a ha => simp [map_smul, ha]
 
@@ -128,7 +140,7 @@ theorem asAlg_eS {V : Type} [AddCommGroup V] [Module K V] (ρ : Representation K
     (T : GoodSet K G) (s : T.S) :
     ρ.asAlgebraHom (eS T s) = ∑ x : G, cS T s x • ρ x := by
   rw [eS_eq, map_sum]
-  simp [map_smul, Representation.asAlgebraHom_of]
+  simp
 
 theorem cS_conj (T : GoodSet K G) (s : T.S) (h x : G) : cS T s (h * x * h⁻¹) = cS T s x := by
   have := Representation.char_conj (T.tau s) x⁻¹ h

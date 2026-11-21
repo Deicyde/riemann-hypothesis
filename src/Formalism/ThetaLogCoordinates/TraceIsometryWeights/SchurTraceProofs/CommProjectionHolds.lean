@@ -1,5 +1,7 @@
-import Formalism.ThetaLogCoordinates.TraceIsometryWeights.SchurTraceProofs.WeightCompApply
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.TraceIsometryWeights.StatementC
+import Formalism.MahlerMeasure.MahlerMeasureProofs.WeightSpaceDimensionMonotone
 
 namespace Formalism.InvariantFactorPaths.PW
 

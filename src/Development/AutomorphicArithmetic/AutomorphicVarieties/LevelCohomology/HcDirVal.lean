@@ -1,6 +1,7 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.LevelCohomology.HcDefs
-import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.EtaKer
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CharacterLevelBounds.ClsFacts
+import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.ResMapBijective
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal IsLocalRing UpperTheory.V UpperTheory.V.Base UpperTheory.V.HV UpperTheory.V.X
 
 theorem UpperTheory.V.X.dirVal :

@@ -1,17 +1,8 @@
-import Mathlib
-import Formalism.SharpRestriction.Divisibility.SchurIrreducible
-import Formalism.LocalToGlobal.BesselHermitianTheta.DefsReal
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.FunJetApply
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.RhoCompactTwiceEqOfSignBlockOrdered
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.PsiHolomorphicNearPositiveMatricesAtOne
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.KTypeExtendsHolomorphicComplexifiedK
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.DerivedAdjoint
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsGrpDataMapHaar
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.TorusWeightVectorIffCartanWeightVector
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.FiniteDimKStableSubspaceKFiniteLie
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.IsKStableOnOfLieStableFiniteDim
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.HighestWeightGeneratedWeightsBelow
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.DiscreteSeriesCoverIrreducibleUnitary
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.GlWordJetRelationsEqZeroOfNilStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CompressedWordsGlWordJetRelationsOfNoTypesStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.UnitaryFlowCoeffEqOfTaylorSeriesStatement
@@ -414,7 +405,7 @@ theorem of_trivial (R : DSRep T) (hker : ∀ x, T.cov x = 1 → R.U.π x = 1) {l
       by_cases hcd : b = c ∧ a = d
       · obtain ⟨rfl, rfl⟩ := hcd
         cases a <;> cases b <;> simp [Formalism.REAL.sgn, hb.1, hb.2.1, Eab]
-      · simp [Eab, Matrix.single_apply, hcd]
+      · simp [Eab, hcd]
     rw [h3, map_smul, LinearMap.smul_apply, map_smul, inner_smul_right] at h2
     simp only [hE, unitOp, Equiv.symm_apply_apply]
     exact h2

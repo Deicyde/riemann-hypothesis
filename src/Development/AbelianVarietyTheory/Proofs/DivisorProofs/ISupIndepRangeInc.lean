@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsAdelicOne
-import Formalism.LocalToGlobal.CMDeterminantIdeals.StatementG
-import Formalism.PolynomialDimension.WeylDim
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InnerRealizeEqZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HasGramComp
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlockDiagonalMulVecApply

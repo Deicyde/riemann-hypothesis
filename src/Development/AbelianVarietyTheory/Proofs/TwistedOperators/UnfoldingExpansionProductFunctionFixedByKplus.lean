@@ -1,21 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ColAtFirstPt
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ProductFunctionTotalTensorInvariantLastArrows
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.FlippedTensorEigenvalueLaws
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LatHatStabOfHatL
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.GridStandardVacuumScalarEqProdLocalPlaces
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.WeilLatticeVacuumEqProdSplitPlaceFactors
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.FlatTensorMoveArgumentsLastRowVertex
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.StepPointMulPeriodUnipotentGLMeasurePreserving
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.GoodRowsPrincipalLevelAreRows
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemGLintOfEntries
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BottomTriangleLevelFixesVector
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.UnitaryIdeleCharEqProdLocOfTameAt
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.DeterminantIdeleAtSplitPlaceMovedGridNode
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.StabOfMemCongLev
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrameReductionEqOneOfCongruentModIdeal
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiagonalBlockDetBlockTriangular
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LevRowSuccInfUA
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.DIV
 open IsDedekindDomain NumberField MeasureTheory Matrix ValuativeRel GlobalTheory.ChiGrid GlobalTheory.FunObj GlobalTheory.ExpansionInvariance GlobalTheory.SplitFlip GlobalTheory.SplitWeil GlobalTheory.RootEx GlobalTheory.TopZeroInv GlobalTheory.TopLevelInv GlobalTheory.StdFrames
 attribute [local instance] Formalism.BasicNotions.Host.cmStar GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField borelKw borelSpaceKw
@@ -480,7 +471,7 @@ theorem product_invariant : ∀ {D : D7} {T : Type} {L : LevCh D T} {sc : Consts
     refine Eq.trans (Finset.sum_congr rfl fun d _ => ?_) (h1.trans (Finset.sum_congr rfl fun d _ => ?_))
     · have e1 : ∀ j, F' d (.inl j) (x (.inl j)) = (d.1 j).fn (firstPt t g (fun j => x (.inl j)) j) := fun j => by
         rcases eq_or_ne j ⟨0, zero_lt_m D⟩ with rfl | hj
-        · simp only [firstPt, Function.update_self]
+        · simp only [firstPt]
           exact congrFun (Function.update_self first _ (datFn d)) _
         · have a1 : firstPt t g (fun j => x (.inl j)) j = x (.inl j) := Function.update_of_ne hj _ _
           rw [a1]

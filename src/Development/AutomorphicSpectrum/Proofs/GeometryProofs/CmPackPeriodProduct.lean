@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsCMFrame
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LieNormSquareOfFamilyStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HodgeGramLinearCombinationStatement
@@ -125,7 +126,7 @@ theorem tan_iff {S S' : Scheme.{0}} {t : SAB H S} {t' : SAB H S'} {f : S' ⟶ S}
       erw [← Category.assoc, spMap_comp_spMap]
       have : ((TrivSqZeroExt.fstHom R R R).toRingHom).comp (algebraMap R (DualNumber R)) = RingHom.id R := by
         refine RingHom.ext fun a => ?_
-        simp [TrivSqZeroExt.algebraMap_eq_inl]
+        simp
       rw [this]
       show Spec.map (𝟙 _) ≫ x' = x'
       rw [Spec.map_id, Category.id_comp]

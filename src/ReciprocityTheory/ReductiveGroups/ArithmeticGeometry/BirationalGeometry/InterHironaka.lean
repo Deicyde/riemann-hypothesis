@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Variable
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterResExists
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterBridge
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterRedZ

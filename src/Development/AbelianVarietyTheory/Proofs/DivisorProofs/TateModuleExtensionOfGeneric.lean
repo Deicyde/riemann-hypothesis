@@ -1,5 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsMulVal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.PrismaticDieudonnePerfdIff
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 set_option autoImplicit false
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry MonoidalCategory CartesianMonoidalCategory MonObj NumberField WithConv
@@ -61,7 +63,7 @@ theorem mu_descend {p : ℕ} [Fact p.Prime] {R K : Type} [CommRing R] [IsDomain 
   obtain ⟨ε, hε⟩ := ((PDivGroup.mu p R).tatePush_bijective K).2 z
   refine ⟨ε, fun n => ?_⟩
   have h := congrArg (fun w : (PDivGroup.mu p R).TateOver K => w.pt n (muT R (p ^ n))) hε
-  simp only [tatePush_pt, z, muPoint_muT] at h
+  simp only [z, muPoint_muT] at h
   exact h.symm
 
 theorem descend_tate_and_mu : ∀ (p : ℕ) [Fact p.Prime] (R K : Type) [CommRing R] [IsDomain R] [IsIntegrallyClosed R] [Field K] [Algebra R K] [IsFractionRing R K] (GG : PDivGroup p R) (GG₀ : PDivGroup p K) (e : GG₀ ≅ GG.baseChange K) (L : Type) [AddCommGroup L] (ε₀ : (PDivGroup.mu p K).Tate) (τ₀ : L →+ GG₀.Tate), ∃ (ε : (PDivGroup.mu p R).Tate) (τ : L →+ GG.Tate), (∀ n, muRoot ε₀ n = algebraMap R K (muRoot ε n)) ∧ ∀ x, tateMap _ _ K e.hom (τ₀ x) = bcTate K (τ x) := by

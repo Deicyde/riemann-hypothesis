@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.DiscreteGroups.GlobalIrreducibility.KUSStable
+import Development.DiscreteGroups.GlobalIrreducibility.RankOneTopLeftZero
 
 noncomputable section
 

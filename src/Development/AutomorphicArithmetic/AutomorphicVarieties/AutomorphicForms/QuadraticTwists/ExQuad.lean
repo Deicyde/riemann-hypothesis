@@ -1,10 +1,9 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.Hypotheses2
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.LocIsotypic
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.SplittingFieldIsoQuadratic
 import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.KstarRam
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PrimitiveFrobeniusFixed.PlaceBasic
-import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.SelmerTransport.GalEmbTop
 import Mathlib.NumberTheory.Padics.Hensel
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsContinuousPadic
+import Mathlib.NumberTheory.LSeries.PrimesInAP
 
 open NumberField IsDedekindDomain Neutral.B1 Formalism.L2.Host Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.MainNotions.N Polynomial
 open GlobalTheory.CuspRep GlobalTheory.WeilDeligne GlobalTheory.Pst GlobalTheory.LocLanglands GlobalTheory.HeckeGal GlobalTheory.LocGL GlobalTheory.GalOfCusp UpperTheory.V UpperTheory.V.Af UpperTheory.V.Published
@@ -94,7 +93,7 @@ private theorem nonempty_ringHom_Kstar_of_sq_eq_neg (l : ℕ) [Fact l.Prime] (p 
   have hf : (map (algebraMap ℚ ℚ_[l]) (X ^ 2 + C (p : ℚ))) = (X - C s) * (X - C (-s)) := by
     have h' : C s ^ 2 = -C (p : ℚ_[l]) := by rw [← C_pow, hs, C_neg]
     rw [map_natCast] at h'
-    simp only [Polynomial.map_add, Polynomial.map_pow, map_X, map_C, map_natCast, Polynomial.map_natCast, C_neg]
+    simp only [Polynomial.map_add, Polynomial.map_pow, map_X, map_natCast, Polynomial.map_natCast, C_neg]
     linear_combination h'
   have hsp : (map (algebraMap ℚ ℚ_[l]) (X ^ 2 + C (p : ℚ))).Splits := by
     rw [hf]

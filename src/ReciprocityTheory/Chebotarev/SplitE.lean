@@ -1,5 +1,4 @@
-import ReciprocityTheory.Chebotarev.SplitA
-import ReciprocityTheory.Chebotarev.SplitD
+import BuildAid.Leniency.Open
 import ReciprocityTheory.Chebotarev.SplitEA
 
 open NumberField Filter Topology

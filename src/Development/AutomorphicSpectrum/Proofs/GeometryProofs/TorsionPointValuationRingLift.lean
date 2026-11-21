@@ -1,9 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.TopLeOfClosedPoint
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsIntegralNthRootTestModelPoint
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.SemiAbelianTorsionFiniteAndClosedPointFiniteOrde
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.JacobsonClosedPointsToolsInt
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.AbelianTorsionFiniteAndMulNSurjective
+import Mathlib.RingTheory.Ideal.Quotient.HasFiniteQuotients
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField MeasureTheory
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi
 open GroundTheory.Heights₂.Heights TensorProduct
@@ -167,7 +165,7 @@ theorem exists_factor_of_finite {R k K : Type} [CommRing R] [Field k] [Finite k]
   let φ : k →ₐ[R ⧸ RingHom.ker a] K := IsAlgClosed.lift
   refine ⟨φ.toRingHom, RingHom.ext fun x => ?_⟩
   have h1 : φ (a' (Ideal.Quotient.mk _ x)) = b' (Ideal.Quotient.mk _ x) := φ.commutes _
-  simp only [a', b', Ideal.Quotient.lift_mk] at h1
+  simp only [a', b'] at h1
   exact h1
 
 theorem exists_geometric_closedPoint {R O : Type} [CommRing R] [CommRing O] [IsLocalRing O] (ρ : R →+* O) :

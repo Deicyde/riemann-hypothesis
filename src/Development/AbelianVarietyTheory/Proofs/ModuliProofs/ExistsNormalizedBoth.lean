@@ -1,5 +1,5 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.TwoWeightEqOneAddRoot
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.LBCorr
 import Development.AbelianVarietyTheory.BlockTheory.CMModuli.PrimitiveExponentPullback
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.SplitOfFactorisation

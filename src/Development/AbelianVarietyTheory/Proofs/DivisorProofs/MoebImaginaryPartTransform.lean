@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrameAtApply
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DbarAddVectorScalar
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SiegelReframe
+import Mathlib.RingTheory.SimpleRing.Principal
 open Matrix MeasureTheory Set Filter Topology GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe GlobalTheory.TorsionForm GlobalTheory.TorsionForm.Gauge
 open scoped ContDiff
 
@@ -16,8 +16,7 @@ theorem sp_block_rel {g : ℕ} (γ : Sp g) :
   rw [hm, ← fromBlocks_toBlocks γ.mat] at h
   rw [fromBlocks_transpose, J, fromBlocks_multiply, fromBlocks_multiply, fromBlocks_inj] at h
   obtain ⟨h1, h2, h3, h4⟩ := h
-  simp only [Matrix.mul_zero, Matrix.mul_neg, Matrix.mul_one, zero_add, add_zero, Matrix.neg_mul,
-    Matrix.zero_mul] at h1 h2 h3 h4
+  simp only [Matrix.mul_zero, Matrix.mul_neg, Matrix.mul_one, zero_add, add_zero, Matrix.neg_mul] at h1 h2 h3 h4
   refine ⟨?_, ?_, ?_, ?_⟩
   · rw [← sub_eq_zero]; rw [← h1]; abel
   · rw [← sub_eq_zero]; rw [← h4]; abel

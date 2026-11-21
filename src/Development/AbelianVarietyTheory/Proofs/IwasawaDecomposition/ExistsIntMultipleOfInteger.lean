@@ -1,5 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.OneAddSmulVecMulVecMulVec
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.RingTheory.IntegralClosure.IntegralRestrict
 open ReciprocityTheory.ChartRestriction.G.FD NumberField GlobalTheory.UnipKill
 
 namespace GlobalTheory

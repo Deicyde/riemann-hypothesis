@@ -1,5 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.ResidualSpectrum.ExponentialNegativity.GapAbsOf
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.TjcosetsFF
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.Tactic.Polynomial.Basic
 
 noncomputable section
 
@@ -72,7 +78,7 @@ theorem gmap_le_Mj_iff (g : GL (Fin N) k) (j : ℕ) :
         intro he
         rw [he] at ha'
         omega
-      simp [Pi.single_apply, hne]
+      simp [hne]
     have h2 := hle (mem_gmap.mpr ⟨_, hmem, rfl⟩) a ha
     simpa [Matrix.mulVec, dotProduct, Pi.single_apply] using h2
   · intro hz y hy
@@ -145,7 +151,7 @@ theorem Mj_eq_span (N j m : ℕ) (h : m + j = N) :
       intro he
       rw [he] at ha
       simp at ha
-    simp [ej, Pi.single_apply, hne]
+    simp [ej, hne]
 
 theorem finrank_Mj (N j : ℕ) (h : j ≤ N) : finrank k (Mj k N j) = N - j := by
   rw [Mj_eq_span N j (N - j) (by omega), finrank_span_eq_card (linInd_ej N j (N - j) (by omega))]

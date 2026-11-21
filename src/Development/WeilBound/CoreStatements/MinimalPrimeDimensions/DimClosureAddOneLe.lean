@@ -1,9 +1,12 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.MinimalPrimeDimensions.RangeOfMemSupportPush
 import Development.WeilBound.CoreStatements.MinimalPrimeDimensions.FinrankEqOfDimZero
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TopologicalKrullDimLeZeroOfSubset
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.StatementsChowDegreeSection
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.StatementsChowDegreeClosedPoint
 import GroundTheory.HeightsAndTheta.Heights.ChowForms.PConeDimComponent
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.RingKrullDimQuotientAddOneOfMemMinimalPrimesSup
 
 set_option autoImplicit false
 set_option linter.style.haveILetI false

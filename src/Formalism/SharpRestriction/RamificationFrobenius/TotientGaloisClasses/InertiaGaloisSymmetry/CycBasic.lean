@@ -1,5 +1,7 @@
-import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.InertiaGaloisSymmetry.DecompTypeI
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.ArtinMapSecondEqJacobiSymOfModEq
+import Mathlib.NumberTheory.NumberField.Cyclotomic.Galois
 
 open NumberField IntermediateField Ideal
 open scoped Pointwise

@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.SelmerTransport.RestrictionMemInvariantH1
+import Mathlib.LinearAlgebra.Eigenspace.Basic
 
 open ReciprocityTheory.Gal UpperTheory.V.Base
 
@@ -169,7 +172,7 @@ private theorem UpperTheory.V.Base.coords_restrict_to_submodules {R O ι : Type}
     simp [h.smul]
   · intro y
     ext
-    simp [Submodule.coe_sum, h.sum]
+    simp [h.sum]
   · intro i o x
     ext
     simp [h.coord]

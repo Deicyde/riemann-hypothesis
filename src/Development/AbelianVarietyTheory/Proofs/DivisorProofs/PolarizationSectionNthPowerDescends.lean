@@ -1,13 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExtAlong
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.AbsoluteSiegel
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoeffTopMonEqZero
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.ExistsUniqueThetaConst
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.AllUniformizationLawsHold
-import Development.AbelianVarietyTheory.Statements.TorsionEndomorphisms.ExistsGeneratorOfIsField
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.AmplePt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.GenAmple
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ValCalc
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ThetaUnifAV
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.BaseOver
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ThetaPt
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField MeasureTheory
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.GeometryOfNumbersTheory
 open GlobalTheory GlobalTheory.LieHt GlobalTheory.Cartier GlobalTheory.ThetaOnto GlobalTheory.MBModel GlobalTheory.KeyCl GlobalTheory.Ex GlobalTheory.MBLow GlobalTheory.SecJet
@@ -56,8 +52,8 @@ theorem g_eq {n : ℕ} (i j : PUnit → P.L.ι)
       (LPow P.A P.L (n : ℤ) (baseOver S)).U (fun _ => j ()))) :
     ((toProd P).appLE _ _ e).hom ((LPow P.A P.L (n : ℤ) (baseOver S)).g (fun _ => i ()) (fun _ => j ())).val =
       ((lbPow P.L n).g i j).val := by
-  simp only [LPow, LB.LinComb, Units.coe_prod, Fin.prod_univ_one, Fintype.prod_unique, zpow_natCast, Units.val_pow_eq_pow_val]
-  simp only [lbPow, LB.LinComb, Units.coe_prod, Fintype.prod_unique, zpow_natCast, Units.val_pow_eq_pow_val]
+  simp only [LPow, LB.LinComb, Fintype.prod_unique, zpow_natCast, Units.val_pow_eq_pow_val]
+  simp only [lbPow, LB.LinComb, Fintype.prod_unique, zpow_natCast, Units.val_pow_eq_pow_val]
   refine (appLE_res_pullU_pow (toProd P) (snd (baseOver S) P.A).left (P.L.U (i ()) ⊓ P.L.U (j ()))
     ((P.L.wchart (fun _ : Fin 1 => (snd (baseOver S) P.A).left) fun _ => i ()) ⊓
       P.L.wchart (fun _ : Fin 1 => (snd (baseOver S) P.A).left) fun _ => j ())

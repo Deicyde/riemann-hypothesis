@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SuperFact
-import Development.AbelianVarietyTheory.Definitions.Divisors.NormSqColGrLineOfOrthogonal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RenameSwapAtMonomial
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OddHarmZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagDegreeEqFormDegree

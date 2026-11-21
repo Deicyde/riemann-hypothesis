@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.GaloisSideTwistedSelmerAuxiliaryPrimes
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ToNatAddValMul
+import Mathlib.Combinatorics.Nullstellensatz
+import Mathlib.Order.Interval.Finset.Box
+import Mathlib.RingTheory.LocalProperties.Reduced
 
 noncomputable section
 
@@ -289,7 +293,7 @@ theorem exists_char {i : X.Tw} {M : ℕ} {ι : Type} [Fintype ι] {P : ι → Pl
       rfl
     · exact ⟨1, fun g => by simp [hT q hq]⟩
   choose f hf using key
-  exact ⟨∏ q, f q, fun g => by simp [MonoidHom.finset_prod_apply, hf]⟩
+  exact ⟨∏ q, f q, fun g => by simp [hf]⟩
 
 theorem kMap_algebraMap (i : X.Tw) (k : ℕ) (y : X.O i) :
     kMap X i k (algebraMap (X.O i) (FractionRing (X.O i)) y) =

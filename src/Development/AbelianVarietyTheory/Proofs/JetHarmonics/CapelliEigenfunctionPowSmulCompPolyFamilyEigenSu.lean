@@ -1,10 +1,7 @@
-import Mathlib
-import Formalism.HermitianCurvature.StatementTBB
-import Formalism.HermitianCurvature.StatementU
-import Formalism.HermitianCurvature.LetterProductDoubleDegreeCount
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutBPEqDecay
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.CapelliEigenSumLinearCombinationStatement
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.PolynomialSmulCapelliEigenfunctionSum
+import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ConjEntrySmulCapelliEigenSum
 
 open Formalism.FourierDecayAlt Formalism.REAL Formalism.QuantumDeterminants Finset
 
@@ -247,6 +244,6 @@ theorem _root_.GlobalTheory.gfPow_smul_comp_polyOp_eigenSum :
     (fun i g => (((_root_.Formalism.QuantumDeterminants.Gf k r z z' g ^ p₀ : ℝ) : ℂ) * c i g) • (f g).comp (L i)) _
     (fun i _ => ⟨e, A₀ - e, le_rfl, le_rfl, hpiece i⟩)
     (fun g _ => by
-      simp [hAop, ContinuousLinearMap.comp_finset_sum, ContinuousLinearMap.comp_smul, Finset.smul_sum, smul_smul])
+      simp [hAop, ContinuousLinearMap.comp_finset_sum, Finset.smul_sum, smul_smul])
 
 end GlobalTheory

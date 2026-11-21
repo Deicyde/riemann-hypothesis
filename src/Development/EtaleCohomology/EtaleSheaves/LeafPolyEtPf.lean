@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.LeafRoofEtPPf
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
 
 noncomputable section
 open TensorProduct

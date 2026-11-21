@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.PolarBasic
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.KinstSecondCountable
+import Mathlib.CategoryTheory.Countable
 
 noncomputable section
 
@@ -98,7 +101,7 @@ lemma fdph_preimage (ε : Fin n → Bool) (S : Set (UJ ε)) :
     Set.preimage (β := Fin n → Fin n → ℂ) polarM (Set.image (β := Fin n → Fin n → ℂ) (fun g : UJ ε => toM g) S) =
       fdphPhi ε ⁻¹' S := by
   ext kz
-  simp only [Set.mem_preimage, Set.mem_image]
+  simp only [Set.mem_preimage]
   constructor
   · rintro ⟨g, hg, hgeq⟩
     have hge : g = fdphPhi ε kz :=

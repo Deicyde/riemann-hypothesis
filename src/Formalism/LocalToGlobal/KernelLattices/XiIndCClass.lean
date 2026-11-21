@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.QuadraticSemicharacters.ProductThetaMem
 import Formalism.LocalToGlobal.PairingIndexBounds.ModelLatticeMoves.GoodLat
 import Formalism.LocalToGlobal.Columns.FiniteSumNonzeroLargeDepth
+import Formalism.LocalToGlobal.PairingIndexBounds.ModelLatticeMoves.IsBichar
 
 open NumberField IsDedekindDomain
 

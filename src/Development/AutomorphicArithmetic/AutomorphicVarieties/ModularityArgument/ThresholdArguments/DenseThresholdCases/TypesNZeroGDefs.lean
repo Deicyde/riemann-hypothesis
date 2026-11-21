@@ -1,6 +1,6 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.DiscreteSeriesCoefficientsCuspidal
-import PositivityTheory.AutomorphicForms.PublishedInputs.NonzeroTypes.ScalarOnInertiaProp
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.LitAut
+import PositivityTheory.AutomorphicForms.PublishedInputs.NonzeroTypes.GIface
 
 set_option maxHeartbeats 800000
 set_option synthInstance.maxHeartbeats 200000

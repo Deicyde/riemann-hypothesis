@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TranslationInv
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PullFullL
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CurvFinsetSumOfDiff
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SuperconnectionDifferentiableStatement
 

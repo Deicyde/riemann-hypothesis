@@ -1,12 +1,8 @@
-import Mathlib
-import Formalism.LocalRingCardinality.AdicCompletionLocal.LocTied
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.ConvZero
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.PadicClosed
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.GoodOfComplete
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.TiltWittEqZeroOfPrimeMulEqZero
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IntegersCompleteDVR
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CocycleTwistCoboundaryOnBall
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.NearPiSepComplete
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.WachInclusionInjectiveSaturatedInter
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.GaloisFixedSubringTensorWittSaturatedComplete
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.GaloisFixedTensorWittCompletePiAdicModEll
@@ -48,7 +44,7 @@ theorem const_dvd (ι : B →+* R) (io : LetA O n →ₐ[O] B) (τ : B) (hp : (p
     funext k
     by_cases hk : k = i
     · subst hk
-      simp [letE, PowerSeries.algebraMap_apply]
+      simp [letE]
     · simp [letE, hk]
   have h2 := h.mul_ι (io (letE i))
   rw [← map_mul, ← map_mul, hE', map_mul io, io.commutes] at h2

@@ -1,11 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.SelfDualBridge
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.HaarFibreUniqueness.Development
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.HaarFibreUniqueness.SdExAbs
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.HaarFibreUniqueness.AdditiveCharacterNontrivial
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerOrbitVolume.SdDual
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerOrbitVolume.TensTop
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdelicLocalCompactness.T2SpaceTensorProductFiniteExtension
 
 noncomputable section
 
@@ -103,7 +101,7 @@ theorem localTracePairing_eq_realBilinearForm (ι : Type) [Fintype ι] (x y : ι
   unfold BR trP
   have h1 : ∀ u w : Fin 1 → Fv F v ⊗[F] E, hR (Fv F v) (AlgHom.id F E) 1 u w = u 0 * w 0 := by
     intro u w
-    simp [hR, Formalism.UG.hform, sigR_id, JR_one, Fin.sum_univ_one]
+    simp [hR, Formalism.UG.hform, sigR_id, JR_one]
   simp only [h1, reTup_apply]
   exact (Equiv.sum_comp (Fintype.equivFin ι).symm
     (fun i => Algebra.trace (Fv F v) (Fv F v ⊗[F] E) (x i * y i))).symm
@@ -114,7 +112,7 @@ theorem localTracePairing_add_left (ι : Type) [Fintype ι] (x x' y : ι → Fv 
 
 theorem localTracePairing_smul_left (ι : Type) [Fintype ι] (c : Fv F v) (x y : ι → Fv F v ⊗[F] E) :
     trP v ι (c • x) y = c * trP v ι x y := by
-  simp [trP, smul_mul_assoc, map_smul, Finset.mul_sum]
+  simp [trP, map_smul, Finset.mul_sum]
 
 theorem localTracePairing_comm (ι : Type) [Fintype ι] (x y : ι → Fv F v ⊗[F] E) :
     trP v ι x y = trP v ι y x := by

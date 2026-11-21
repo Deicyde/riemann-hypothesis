@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsTamagawa
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TamagawaSpecialUnitary
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MulVecMemGenLatSmul
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocHomVal
 
@@ -68,7 +67,7 @@ theorem ev_mem_compLat (v : HeightOneSpectrum (𝓞 F)) (L : Set (Fin M → E)) 
   | mem z hz =>
     obtain ⟨a, ha, x, hx, rfl⟩ := hz
     exact AddSubgroup.subset_closure ⟨evalV F v a, ha v, x, hx, rfl⟩
-  | zero => simp only [Pi.zero_apply, map_zero, mul_zero]; exact zero_mem _
+  | zero => simp only [Pi.zero_apply, map_zero]; exact zero_mem _
   | add x y _ _ hx hy => simp only [Pi.add_apply, map_add]; exact add_mem hx hy
   | neg x _ hx => simp only [Pi.neg_apply, map_neg]; exact neg_mem hx
 
@@ -79,7 +78,7 @@ theorem single_mem_latHat (v : HeightOneSpectrum (𝓞 F)) (L : Set (Fin M → E
   | mem z hz =>
     obtain ⟨a, ha, x, hx, rfl⟩ := hz
     exact AddSubgroup.subset_closure ⟨singleV F v a, single_int ha, x, hx, rfl⟩
-  | zero => simp only [Pi.zero_apply, map_zero, mul_zero]; exact zero_mem _
+  | zero => simp only [Pi.zero_apply, map_zero]; exact zero_mem _
   | add x y _ _ hx hy => simp only [Pi.add_apply, map_add]; exact add_mem hx hy
   | neg x _ hx => simp only [Pi.neg_apply, map_neg]; exact neg_mem hx
 
@@ -149,7 +148,7 @@ theorem away_mem (Λ : Submodule (𝓞 E) (Fin M → E)) (v : HeightOneSpectrum 
   | mem z hz =>
     obtain ⟨a, ha, x, hx, rfl⟩ := hz
     simpa only [Algebra.TensorProduct.tmul_mul_tmul, one_mul] using away_gen Λ v k ha hx
-  | zero => simp only [Pi.zero_apply, map_zero, mul_zero]; exact zero_mem _
+  | zero => simp only [Pi.zero_apply, mul_zero]; exact zero_mem _
   | add x y _ _ hx hy => simp only [Pi.add_apply, mul_add]; exact add_mem hx hy
   | neg x _ hx => simp only [Pi.neg_apply, mul_neg]; exact neg_mem hx
 

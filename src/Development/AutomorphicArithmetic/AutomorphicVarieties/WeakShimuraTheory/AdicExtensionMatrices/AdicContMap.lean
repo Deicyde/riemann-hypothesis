@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.RedIdeal
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.Graded
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.FramedTwoCoboundaries
+import Mathlib.RingTheory.LaurentSeries
 
 noncomputable section
 

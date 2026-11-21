@@ -1,8 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.PrimeDvdAbsNormHalfDifferent
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsHalfOfBasePins
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.HalfOfPrimesIffLevelPb
-import Formalism.LocalToGlobal.IndefiniteReal.FWTie
+import Development.AbelianVarietyTheory.BlockTheory.TorsionBlocks.TwistCoverDesign
 
 noncomputable section
 

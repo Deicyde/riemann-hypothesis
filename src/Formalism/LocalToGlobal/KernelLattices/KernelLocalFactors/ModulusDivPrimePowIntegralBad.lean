@@ -1,7 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.KernelLattices.ColInst
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.ColInst
-import Formalism.LocalToGlobal.Columns.ChainInstY
 import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.KerEquivFr
 import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.KerEquivGen
 import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.KerEquivStmt

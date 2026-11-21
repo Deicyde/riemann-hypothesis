@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.KernelLattices.KerStd
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ThetaZJetsThree
 import Formalism.LocalToGlobal.InertKernelTheory.StatementIota
 import Formalism.LocalToGlobal.AlgebraicTheory.AlgebraicTheoryProofs.KerJet
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.FieldIsoLatticesFormTaylorCorrespond

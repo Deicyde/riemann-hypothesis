@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.SplitLineSubtraction.TwoUpOKOf
 
 open scoped TensorProduct
@@ -32,7 +32,7 @@ theorem UpperTheory.Gal.TP.Sub.embSplit_holds :
     · right
       rw [← h]
       ext x
-      simp [ComplexEmbedding.conjugate_coe_eq]
+      simp
   · intro w w' h
     apply hinj
     rw [← (emb w).2, ← (emb w').2, h]

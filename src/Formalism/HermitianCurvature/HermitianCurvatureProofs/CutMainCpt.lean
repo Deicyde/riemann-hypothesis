@@ -1,5 +1,20 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutCptManual
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutCptCopy
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGermLowAsm
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGermLowGerm
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGermMean
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGermTopA
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGermTopB
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGermTopD
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGermTopFields
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutNFIdPairPtw
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutNFIdPolPair
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutNFIdPolTop
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutNFTopFormDone
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.GermContinuityAllLevels
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.VectorIsomorphismCompactSupport
 
 namespace Formalism.FourierDecayAlt.P.TBBx3
 open Formalism.FourierDecayAlt Formalism.REAL Formalism.QuantumDeterminants Filter Topology MeasureTheory
@@ -832,7 +847,7 @@ theorem _root_.Formalism.FourierDecayAlt.P.CutBP.GT.germDataTopAll_of_partsCpt (
         · unfold PBK.mainD
           rw [← Finset.sum_neg_distrib]
           refine Finset.sum_congr rfl fun z hzm => ?_
-          simp only [hbt, btT, if_neg (hroot z hzm), coT, ptT, smul_smul, neg_smul, neg_mul]
+          simp only [hbt, btT, if_neg (hroot z hzm), coT, ptT, smul_smul, neg_smul]
       rw [hsum]
       have hk : ∀ j ∈ Finset.insertNone (G.rootSet s (epsT s * D)), ∀ l ∈ Finset.insertNone (G.rootSet s (epsT s * D)),
           ⟪vecT p w.length c Fi L (ptT s h x D j), vecT p w.length c Fi L (ptT s h x D l)⟫_ℂ =

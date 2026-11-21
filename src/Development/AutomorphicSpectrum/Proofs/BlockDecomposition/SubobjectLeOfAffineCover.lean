@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PowIdeal
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.IsQuasicoherentOfForallExistsAffine
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PowSubSuccLe
 
 set_option autoImplicit false
 

@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.ChartedClasses.ClsChartedLabAt
 import Formalism.LocalToGlobal.InertKernelTheory.InertCoprimeLemmas.SecondKernelStabilizers
-import Formalism.LocalToGlobal.InertKernelTheory.SecondKernelCoupledLastLift
 
 noncomputable section
 

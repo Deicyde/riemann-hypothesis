@@ -1,5 +1,4 @@
-import Mathlib
-import ReciprocityTheory.ClassFieldTheory.LocalClassField.ExistsDvdQKPowSubOne
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.TwOrbMEqTwOrbUOfNormal
 open ReciprocityTheory.DiscreteGroups.LocalClassField Matrix GlobalTheory.LKRes
 
@@ -34,7 +33,7 @@ theorem sigKQ_fixed_eq_inclK : ∀ (p : ℕ) [Fact p.Prime] (K : IntermediateFie
   have hg : g.lTensor K =
       (Algebra.TensorProduct.map (AlgHom.id ℚ_[p] K) (frobQ p r)).toLinearMap - LinearMap.id := by
     refine TensorProduct.ext' fun a b => ?_
-    simp [g, TensorProduct.tmul_sub]
+    simp [g]
   have hx0 : g.lTensor K x = 0 := by
     rw [hg, LinearMap.sub_apply, LinearMap.id_apply, AlgHom.toLinearMap_apply]
     exact sub_eq_zero.2 hx

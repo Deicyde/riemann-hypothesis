@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.GqPtOfNeZeroIff
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.SameRedEquivalence
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.DetFromBlocksSingle
+import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.SymmetricFlagBasisVectorsApplyCentre
 
 noncomputable section
 
@@ -82,7 +82,7 @@ def flagOf (h : IsFrame (starRingEnd E) S.gram T A) (hT : T ≠ 0) : FlagD (ofHS
       refine Matrix.mulVec_injective_iff.1 fun c d e => ?_
       simpa [Matrix.mulVec_mulVec, hL] using congrArg (L *ᵥ ·) e
     iso := fun a b => by simp only [k]; simp [TF, Matrix.diagonal_apply, Fin.castSucc_ne_last]
-    zperp := fun a => by simp only [k]; simp [TF, Matrix.diagonal_apply, (Fin.castSucc_ne_last a).symm]
+    zperp := fun a => by simp only [k]; simp [TF, (Fin.castSucc_ne_last a).symm]
     zz := by simp only [k]; simp [TF]
     hT := hT }
 

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ExplicitFormula.NormSubCtrSq
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ExplicitFormula.ExplicitFormulaFromGluing
 
@@ -64,7 +66,7 @@ lemma sum_DZ_eq {χ : DirichletCharacter ℂ N} (t : ℝ)
         have key : DirichletCharacter.LFunctionTrivChar₁ N ρ =
             (ρ - 1) * DirichletCharacter.LFunctionTrivChar N ρ := by
           first
-          | simp [DirichletCharacter.LFunctionTrivChar₁, Function.update_apply, hne]
+          | simp [DirichletCharacter.LFunctionTrivChar₁, hne]
           | (unfold DirichletCharacter.LFunctionTrivChar₁; rw [Function.update_of_ne hne])
           | exact DirichletCharacter.LFunctionTrivChar₁_apply_ne_one N hne
         rw [key]

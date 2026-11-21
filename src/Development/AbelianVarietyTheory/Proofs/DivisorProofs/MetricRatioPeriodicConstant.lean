@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SiegelReframe
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorusFundamentalDomainCovers
 open GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe
 

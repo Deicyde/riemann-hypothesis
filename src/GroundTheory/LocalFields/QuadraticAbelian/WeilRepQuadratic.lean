@@ -1,9 +1,7 @@
-import Mathlib
-import GroundTheory.LocalFields.LocalFourier
-import GroundTheory.LocalFields.LocalFourierTrace
-import GroundTheory.LocalFields.ExistsUnitFiltrationUnitsLeRangeNormUnits
-import GroundTheory.LocalFields.MaximalUnramified
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.LocalFields.NormCorrespondence
+import GroundTheory.LocalFields.LocalFourierChar
 
 noncomputable section
 

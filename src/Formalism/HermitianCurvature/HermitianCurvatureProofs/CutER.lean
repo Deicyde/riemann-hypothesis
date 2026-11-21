@@ -1,8 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutMP2
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LiftCapelliOperators
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CapelliWordSumExpansion
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BXiAsm
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.SlicesFiniteRegularityBuilt
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.OpApplyContinuousOn
 
 namespace Formalism.FourierDecayAlt.P.CutMP.ER

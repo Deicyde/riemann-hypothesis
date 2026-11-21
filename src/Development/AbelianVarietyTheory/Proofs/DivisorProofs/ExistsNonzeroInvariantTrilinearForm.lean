@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsMidJacAt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndicatorIntMMemSB
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntertwiningMapIntoInducedRight
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InducedRepresentationIrreducible
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InducedCharIntertwiningUnif

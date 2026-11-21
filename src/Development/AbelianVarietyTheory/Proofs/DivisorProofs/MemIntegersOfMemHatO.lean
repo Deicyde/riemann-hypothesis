@@ -1,8 +1,9 @@
-import Mathlib
-import Formalism.PairingDivisors.StatementA
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsFinSetSplitPlacesCoprimeConductor
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.CountableIdealSummableAbsNormRpow
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdicCompactDensity.ExistsNatLocal
+import Development.AbelianVarietyTheory.Definitions.Divisors.EntireEqOfHalfPlane
+import Mathlib.NumberTheory.NumberField.CMField
 
 noncomputable section
 

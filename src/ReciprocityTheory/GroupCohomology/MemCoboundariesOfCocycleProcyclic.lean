@@ -1,4 +1,8 @@
-import ReciprocityTheory.GroupCohomology.ModelComparisonDegreeZeroBijective
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Topology.Sheaves.Presheaf
+import ReciprocityTheory.GroupCohomology.FiniteLevel
+import ReciprocityTheory.GroupCohomology.MemZpowersQuot
 
 namespace ReciprocityTheory.Coh
 

@@ -1,7 +1,9 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.PlaneCoefficients.NoOpStep
 import Formalism.SharpRestriction.GrowthBounds.DiagonalSupport.PosTLSurj
 import Formalism.SharpRestriction.GrowthBounds.DiagonalSupport.FrMemLetters
 import Formalism.SharpRestriction.GrowthBounds.DiagonalSupport.MembDd
+import Formalism.SharpRestriction.GrowthBounds.DiagonalSupport.SlackBoundJoint
 
 noncomputable section
 

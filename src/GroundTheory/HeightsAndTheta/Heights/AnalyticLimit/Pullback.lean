@@ -1,8 +1,8 @@
-import Mathlib
-import ReciprocityTheory.AnalyticForms.PotentialTheory.DegreeInt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PotentialTheory.Pullback
-import ReciprocityTheory.AnalyticForms.PotentialTheory.PshShiftA
 import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.StatementsPullback
+import GroundTheory.HeightsAndTheta.Heights.Regularisation.PChartLeviThGe
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.AnalyticLimit

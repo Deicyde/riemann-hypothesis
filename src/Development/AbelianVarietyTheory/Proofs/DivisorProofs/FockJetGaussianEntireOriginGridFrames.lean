@@ -1,11 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.KernelNormConstantSpec
-import Formalism.SharpRestriction.GlobalSchurBounds.StandardLatticesGL3
-import Formalism.LocalToGlobal.ProjectiveLattices.CuspidalL2Subspace
-import Formalism.LocalToGlobal.BesselHermitianTheta.LemmasSign
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.StdCharacterHalfSymplecticFormRealPoint
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.EqZeroOfLintegralEqZero
-import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.FoldrHolDEqIteratedFDeriv
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockPureTensorAtOriginEqThetaSeries
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FockVectorsOfThetaDatumInjective
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR.Datum Formalism.IndefR.Links
@@ -97,7 +92,7 @@ theorem trace_smul_single {m n : ℕ} (c : ℂ) (a : Fin m) (b : Fin n) (X : Mat
     rw [Finset.sum_eq_single b]
     · simp [Matrix.diag, Matrix.single_mul_apply_same]
     · intro x _ h
-      simp [Matrix.diag, Matrix.mul_apply, Matrix.single_apply, Ne.symm h]
+      simp [Matrix.diag, Matrix.mul_apply, Ne.symm h]
     · simp
   rw [this]; rfl
 

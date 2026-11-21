@@ -1,10 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CharacterGerms.CharacteristicFromRanks
 import ReciprocityTheory.DualLattices.LengthDegreeAbelianVariety
-import ReciprocityTheory.DualLattices.U10
-import ReciprocityTheory.DualLattices.KilledGen
-import ReciprocityTheory.DualLattices.IdemGen
-import ReciprocityTheory.DualLattices.LenEx
 import Formalism.SharpRestriction.GrowthBounds.FittingIdeal.DetMulMemFitt0
+import ReciprocityTheory.DualLattices.FrobeniusOfGroupDivisorsRank
 
 noncomputable section
 

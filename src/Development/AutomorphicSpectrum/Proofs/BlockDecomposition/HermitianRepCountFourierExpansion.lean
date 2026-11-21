@@ -1,7 +1,6 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.AutomorphicKernels.UnitarySchrodingerModel.LocalDefs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ResAlgSplitTwo
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FixedNondeg
 open PositivityTheory.PfSWUS.Loc GlobalTheory.CompanionTheory.UnrDens GlobalTheory.CompanionTheory.SiegLoc Filter Topology
 
 namespace GlobalTheory.CompanionTheory.SiegLoc.LevelId

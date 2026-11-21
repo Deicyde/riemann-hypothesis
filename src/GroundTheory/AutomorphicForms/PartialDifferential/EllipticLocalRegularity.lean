@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.PartialDifferential.EllipticLocal
+import Mathlib.Data.Int.Star
 
 namespace GroundTheory.Automorphic.Sobolev
 

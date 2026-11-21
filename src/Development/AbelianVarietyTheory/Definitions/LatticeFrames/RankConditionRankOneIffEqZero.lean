@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.RealisedChainTorusEq
-import Formalism.SharpRestriction.FamCore
-import Formalism.LocalRingCardinality.SpanPowerMembership
 import Formalism.LocalRingCardinality.SpanPowerMembership.NZRowGat
 import Formalism.LocalRingCardinality.SpanPowerMembership.NZRowW
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.NonemptyRecordOfLocStage

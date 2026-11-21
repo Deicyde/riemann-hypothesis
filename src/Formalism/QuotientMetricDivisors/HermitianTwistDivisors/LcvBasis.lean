@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.QuotientMetricDivisors.ProdFormula
 import Formalism.HarderNarasimhan.HarderNarasimhanProofs.HtGram
-import Formalism.HarderNarasimhan.HarderNarasimhanProofs.DiscreteSpanOfLinIndep
 import Formalism.HermitianLattices.HermitianLatticesProofs.IndexBasic
 
 open Module NumberField IsDedekindDomain Formalism.HermitianLatticesTheory

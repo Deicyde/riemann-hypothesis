@@ -1,7 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.CoordAtConstMulIff
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.FormsOver
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PreimageConnectedComponentMem
+import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsFlatSecRankZero
 
 set_option autoImplicit false
 

@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJAPolyRadialCut
 
 open scoped ComplexConjugate

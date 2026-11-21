@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.LocalSituation
-import Formalism.SharpRestriction.LevelLetterCocycles.LocCoh
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.CrystallinePeriodRings.NonemptyThetaLOfTied
 import Development.WeilBound.CoreStatements.CrystallinePeriodRings.FilQuot
 import Development.WeilBound.CoreStatements.CrystallinePeriodRings.InvRestrictScalarsMem

@@ -1,9 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RowShiftTheta
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ColMapVUpdateLast
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RowMapVUpdateLast
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsMultilinearColumnRowKernelPairing
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MultilinearSumEqOfFunctionProductSumsEq
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ProductFunctionTotalTensorInvariantLastArrowsStatement
 import Development.AbelianVarietyTheory.Definitions.Divisors.FrameSignSimple
 

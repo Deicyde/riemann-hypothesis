@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.OrbitJetDegreeBound.UnivEqBiUnion
+import Formalism.PeriodIntegrals.OrbAddUp
 
 noncomputable section
 

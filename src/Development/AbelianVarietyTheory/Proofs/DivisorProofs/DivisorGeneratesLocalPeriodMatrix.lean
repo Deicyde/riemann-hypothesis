@@ -1,9 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.HodgeFrameGram
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsFramedChartExponentialToroidalModel
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ModelHodgeGram
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AnalyticEquationLocusStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GenericUnitEquationChartStatement
 

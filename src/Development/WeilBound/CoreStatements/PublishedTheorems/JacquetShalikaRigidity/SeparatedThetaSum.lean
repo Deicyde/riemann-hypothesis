@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PublishedTheorems.JacquetShalikaRigidity.ColumnConjugationMeasure
-import GroundTheory.AutomorphicForms.ReductionMahler
 import Development.WeilBound.CoreStatements.PublishedTheorems.JacquetShalikaRigidity.SepSum
+import GroundTheory.AutomorphicForms.ReductionFinite
 
 noncomputable section
 

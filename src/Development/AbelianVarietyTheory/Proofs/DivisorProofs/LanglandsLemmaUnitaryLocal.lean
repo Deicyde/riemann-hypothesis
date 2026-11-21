@@ -1,11 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviBlockSizesSum
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsBlockCentre
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CuspidalComponentConstantTermStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CuspidalComponentConstantTerm
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AutomorphicSubScalarMul
-import Development.AbelianVarietyTheory.Definitions.Foundations.GLintEqKOAndPrincEqKOne
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.InSupportOfIsSubquotient
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.LanglandsSquareIntegrable
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SmGL GlobalTheory.PRep GlobalTheory.SplitWeil GlobalTheory.LeviBlockExponent GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.UAut GlobalTheory.SiegelSet GlobalTheory.ThK.SquareIntegrability
 open scoped TensorProduct
 
@@ -97,7 +96,7 @@ theorem eq_zero_of_mem_twKer {s : ℕ} {d : Fin s → ℕ} (e : (Σ a, Fin (d a)
       ext v i
       by_cases h : i = j
       · subst h; simp [τ]
-      · simp [τ, Pi.single_apply, h]⟩
+      · simp [τ, h]⟩
     exact GlobalTheory.JacquetExact.map_mem_twKer f (hw' j)
   have h1 : (Submodule.Quotient.mk (⟨w, hw⟩ : A) : Jacquet σ' (unipRad k e)) = 0 := by
     apply hinj

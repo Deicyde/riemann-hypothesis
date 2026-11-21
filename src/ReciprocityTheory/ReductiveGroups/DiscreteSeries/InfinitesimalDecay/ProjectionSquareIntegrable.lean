@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.InfinitesimalDecay.FormBSelfLe
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.FormCc
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.ConsumerB
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.PoleMatch
 
 set_option autoImplicit false
 

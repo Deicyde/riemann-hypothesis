@@ -1,7 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.VolumeEquality.DegPushDim
-import GroundTheory.HeightsAndTheta.Heights.FieldsOfNumbers.Assembly
-import GroundTheory.HeightsAndTheta.Heights.FieldsOfNumbers.PDivPushForward
-import GroundTheory.HeightsAndTheta.Heights.FieldsOfNumbers.PContractRelDimLe
 import GroundTheory.HeightsAndTheta.Heights.SemipositiveHeights.NumericalSegre
 
 noncomputable section
@@ -30,7 +29,7 @@ theorem aeval_scale [Fintype K] [DecidableEq K] {L : Type} [CommRing L] [Algebra
     rw [Finset.prod_eq_single p.1]
     · simp
     · intro x _ hx
-      simp [Pi.single_apply, hx]
+      simp [hx]
     · intro h
       exact absurd (Finset.mem_univ _) h
   conv_lhs => rw [f.as_sum]

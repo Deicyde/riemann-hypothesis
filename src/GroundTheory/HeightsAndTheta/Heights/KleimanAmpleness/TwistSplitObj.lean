@@ -1,5 +1,9 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.StatementsTwistSplit
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.Objects
+import Mathlib.Algebra.MonoidAlgebra.Grading
+import Mathlib.Order.Interval.Finset.Box
+import Mathlib.RingTheory.PiTensorProduct
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.Kleiman

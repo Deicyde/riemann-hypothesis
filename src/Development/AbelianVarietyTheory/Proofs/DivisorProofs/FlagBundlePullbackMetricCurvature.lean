@@ -1,10 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OfSwap2
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OddHarmZero
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SwapSumSwap
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsometricLineExp
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HomogeneousFormPowersLinear
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArithmeticFunctionSwapLineFamilyStatement
@@ -59,7 +55,7 @@ theorem geoFun_rel (hC : ArCalc) (hq : IsArithVar q d) (hp : IsArithVar p (d + 1
     simp only [e₃] at e'
     rw [e, e', left_eq_add] at e₂
     convert e₂ using 2
-    simp [Derivation.leibniz, pderiv_X, Pi.single_apply]
+    simp [Derivation.leibniz, pderiv_X]
   induction K using MvPolynomial.induction_on' with
   | add K₁ K₂ e₁ e₂ => rw [mul_add, mul_add, map_add, e₁, e₂, add_zero]
   | monomial m a =>

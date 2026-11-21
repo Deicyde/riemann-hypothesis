@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SecJets4
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.MatrixLemma
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.AbsoluteSiegel
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.TorusExt
 open NumberField MeasureTheory ReciprocityTheory.GeometryOfNumbersTheory ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.LieHt
 open scoped ComplexOrder
 
@@ -37,7 +36,7 @@ theorem exists_coords : ∃ (n : ℕ) (τ : Fin n → K' →ₗ[K] K) (b : Fin n
     conv_lhs => rw [← h1, ← Finset.univ_sum_single (h a), map_sum]
     refine Finset.sum_congr rfl fun j _ => ?_
     rw [show (Pi.single j (h a j) : Fin n → 𝓞 K) = h a j • (Pi.single j 1 : Fin n → 𝓞 K) by
-      ext k; by_cases hk : k = j <;> simp [Pi.single_apply, hk], map_smul]
+      ext k; by_cases hk : k = j <;> simp [hk], map_smul]
     rfl
   refine ⟨n, τ, b, fun j c => ⟨t j c, hτ1 j c⟩, fun z => ?_⟩
   obtain ⟨⟨a, d⟩, hd⟩ := IsLocalizedModule.surj (nonZeroDivisors (𝓞 K)) ι z

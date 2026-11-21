@@ -1,11 +1,11 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CurveDVRSpecialization.SecondThirdPrimeConditionTransferAlt
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CurveDVRSpecialization.NiceSep
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CurveDVRSpecialization.NiceIrr
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CurveDVRSpecialization.NiceIrrE
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CurveDVRSpecialization.LinClosedOfAdic
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CurveDVRSpecialization.StrongIrrOfOpen
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CurveDVRSpecialization.RegCoset
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CurveDVRSpecialization.RegCosetE
+import Mathlib.Topology.Algebra.ClopenNhdofOne
 
 open Matrix Polynomial IsLocalRing UpperTheory.V.U3 UpperTheory.V.Alg
 
@@ -95,7 +95,7 @@ private lemma charpoly_block {κ : Type} [Field κ] (M : Matrix (Fin 3) (Fin 3) 
   obtain ⟨a1, a2, a3, a4⟩ := hb
   rw [sub_eq]
   simp only [Matrix.charpoly, det_fin_three, det_fin_two]
-  simp [charmatrix_apply, *]
+  simp [*]
   ring
 
 private lemma cosetE {G κ : Type} [Group G] [TopologicalSpace G] [IsTopologicalGroup G] [CompactSpace G]

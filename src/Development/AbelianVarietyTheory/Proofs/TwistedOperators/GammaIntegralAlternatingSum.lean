@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.InverseChamberMap
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.EpsOfCZero
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExponentialGammaIntegralFormulaStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.GammaFunctionBoundedSupportStatement
 

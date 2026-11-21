@@ -1,6 +1,9 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.StatementsAdelicLattices
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.IsIntegralVecCoordsOfMemAdelicLatticeOne
+import GroundTheory.AutomorphicForms.HermitianOrthogonal
+import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.StatementsAdelicSplit
+import Mathlib.GroupTheory.IndexNSmul
 
 set_option linter.unusedSectionVars false
 
@@ -103,7 +106,7 @@ theorem adeleSplit_snd_hermitianDiagonal (γ : h.unitaryGroup) :
       finDiag (gram h.toSesq v) ((unitaryPointsRationalEquivHermitian F E h v).symm γ) := by
   apply unitaryCoords_injective _ _ (Module.finBasis F E)
   funext p
-  simp [adeleSplit, unitaryCongr_apply, hermitianDiagonal, unitaryDiagonal, finDiag,
+  simp [adeleSplit, hermitianDiagonal, unitaryDiagonal, finDiag,
     unitaryCoords_unitaryMap, adeleRingEquivProd]
   erw [unitaryCongr_apply, unitaryCoords_unitaryMap, unitaryCoords_unitaryMap]
   rfl

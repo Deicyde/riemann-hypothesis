@@ -1,9 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTransportF
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TwoMulInvOf
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicRapidDecayOfMemAdelicSchwartzSpace
-import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.CtxExists
-import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.RapidDecayAdelicIntegrablePeriodisationContinuou
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.EqOfThetaHeisenbergTranslates
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsThetaFunctionThetaTransformRationalCoordsCMStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsThetaTransformEqOrientedThetaFunctionCMStatement
@@ -37,7 +34,7 @@ theorem exists_transport {V W G : Type} [AddCommGroup V] [Module ℂ V] [AddComm
     rw [hr, map_mul, Module.End.mul_apply, Module.End.mul_apply, hr, hr])
   refine ⟨⟨⟨fun g => A.conj ((r g).prodMap LinearMap.id), ?_⟩, fun g h => ?_⟩, fun g x => ?_⟩
   · ext v
-    simp [r1, LinearEquiv.conj_apply_apply, Module.End.one_eq_id]
+    simp [r1, Module.End.one_eq_id]
   · ext v
     simp [rm, LinearEquiv.conj_apply_apply]
   · have h : A.conj ((r g).prodMap LinearMap.id) (x : V) = r g x := by

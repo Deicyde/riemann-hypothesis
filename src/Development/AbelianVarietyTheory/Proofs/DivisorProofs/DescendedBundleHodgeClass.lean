@@ -1,16 +1,14 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GapGeSubKapBase
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompactificationComponentIntegralSmoothProjectiv
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsNefLineBundleOfPullbackSurjectiveProjective
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagSpaceComponentSmoothProjectiveConnected
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StrongerPublishedHypothesesImply
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorusFlagUnitWeightBundlesNef
-import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.IsProjOverIffIsProperAndExistsIsAmpleLB
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NefIsPsEffAndBigTensNef
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CommonRestrIsoTens
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsWeightSectionsNonvanishingOpen
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.SiegelToroidalIntegral
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ToroidalCompactificationBis
+import Development.AbelianVarietyTheory.Definitions.Divisors.WellChosen
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GrothendieckDeformation
 open CategoryTheory AlgebraicGeometry TopologicalSpace Limits NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj Formalism.BasicNotions
 open ReciprocityTheory.ChartRestriction.G.Out (nonzeroLocus)
@@ -45,7 +43,7 @@ theorem isBig_hodgeLine : Hypotheses2 → GlobalTheory.Published.GrothendieckDef
   have ew : 2 • hodgeWt Dw - χ = w := by
     funext τ i
     simp only [w, Finset.sum_apply, NefWt.unitWt_apply, Finset.sum_ite_eq, Finset.mem_univ, if_true, Pi.sub_apply,
-      Pi.smul_apply, hodgeWt, CompHt.barWt, χ, smul_eq_mul]
+      Pi.smul_apply, hodgeWt, CompHt.barWt, χ]
     split_ifs <;> norm_num
   have hwnef : (letI := algebraΓOfHom (str₀ TF.X Z); IsNef c.F (L₀ TF.X Z w)) := by
     letI := algebraΓOfHom (str₀ TF.X Z)

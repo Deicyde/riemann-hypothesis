@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.AlgebraicTheory.DefsKer
 import Formalism.LocalToGlobal.TorsionIntegrality.QuadraticSemicharacters.CayleyGaussianIntegrals.IteratedDerivLine
+import Mathlib.Analysis.Analytic.IteratedFDeriv
+import Mathlib.GroupTheory.Perm.DomMulAct
 
 noncomputable section
 open scoped BigOperators

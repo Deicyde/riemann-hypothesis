@@ -1,6 +1,5 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.HolomorphicDiscreteSeries.EmbeddedFrames.PfD
-import Formalism.RealPlaceAnalysis.Complexify
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PartialFractionDiagonalIdentityStatement
 open Finset Matrix PositivityTheory.RgHe.Frame
 

@@ -1,11 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BrPairFApply
-import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.InfClassAt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUniqueIsFunForm
-import Formalism.SharpRestriction.Divisibility.PrimeDegreeVariant
-import Formalism.PieriBlockIdeals.StatementLA
-import Formalism.MirabolicMackeyTheory.MirabolicMackeyProofs.RamBasic
-import Development.AbelianVarietyTheory.Statements.HeckeThetaIntegrals.FormulaAt
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeightOfSizeBound
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DefiniteKernelNodeRankLeTotalRank
 

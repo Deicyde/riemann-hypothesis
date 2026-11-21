@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.HighestWeights.Weight
 import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
 
@@ -122,7 +124,7 @@ lemma torep_exp_eigen {V : Type*} [NormedAddCommGroup V] [NormedSpace ℂ V] [Co
   refine h1.unique ?_
   convert h2 using 1
   funext m
-  simp only [Function.comp_apply, ContinuousLinearMap.apply_apply, ContinuousLinearMap.smul_apply, hpow,
+  simp only [ContinuousLinearMap.apply_apply, ContinuousLinearMap.smul_apply, hpow,
     smul_smul, smul_eq_mul]
 
 lemma torep_diag_sum (d : Fin n → ℂ) :
@@ -131,7 +133,7 @@ lemma torep_diag_sum (d : Fin n → ℂ) :
   rw [Matrix.sum_apply]
   by_cases h : i = j
   · subst h
-    simp [Matrix.single_apply, Matrix.diagonal_apply]
+    simp [Matrix.single_apply]
   · rw [Matrix.diagonal_apply_ne _ h]
     refine (Finset.sum_eq_zero fun a _ => ?_).symm
     rw [Matrix.smul_apply, Matrix.single_apply, if_neg (fun h' => h (h'.1.symm.trans h'.2)), smul_zero]
@@ -353,8 +355,8 @@ lemma torep_dτ_of_wt {ε : Fin n → Bool} {Λ : Fin n → ℝ} (T : KType ε �
     by_cases hij : i = j
     · subst hij
       by_cases hia : i = a
-      · simp [hd, hia, Matrix.single_apply]
-      · simp [hd, hia, Matrix.single_apply, Ne.symm hia]
+      · simp [hd, hia]
+      · simp [hd, hia, Ne.symm hia]
     · rw [Matrix.diagonal_apply_ne _ hij, Matrix.smul_apply, Matrix.single_apply,
         if_neg (fun h' => hij (h'.1.symm.trans h'.2)), smul_zero]
   let γ : ℝ → KG ε := fun t => torepK ε (hmem t)

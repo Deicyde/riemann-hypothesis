@@ -1,5 +1,10 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.WindowSums.Statement
-import Formalism.WindowSums.AnnihilatorPolynomials.DistinctTerms
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
+import Mathlib.RingTheory.WittVector.IsPoly
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 

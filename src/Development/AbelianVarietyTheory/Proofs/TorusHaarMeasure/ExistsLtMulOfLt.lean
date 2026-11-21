@@ -1,8 +1,6 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.WeightFunctionOnFrames
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.NormBcharMulNfacRmul
-import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.MajLactRmul
-import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.EventuallyComparable
 import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.IsomOfGramEq
 import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.OneAddInvFirstMinimumLeOfMajorants
 import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.FjNormMulExpLeSupFlow

@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.ThetaModuleTransport.HeadColumnCoordinates.FormInverseCounting.GramUnitG
+import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.ThetaModuleTransport.HeadColumnCoordinates.DeterminantUnitTheta.DetAddCor
 
 noncomputable section
 
@@ -13,7 +16,7 @@ theorem corner_mul {K : Type} [Field K] {r : ℕ} (a d : K) (X : Matrix (Fin (r 
   ext i j
   simp only [Matrix.mul_apply, Matrix.of_apply, cor]
   by_cases hi : i = Fin.last r <;> by_cases hj : j = Fin.last r <;>
-    simp [hi, hj, Finset.sum_ite_eq', Finset.sum_ite_eq, mul_assoc]
+    simp [hi, hj, Finset.sum_ite_eq', mul_assoc]
 
 theorem det_corner_blocks_ne {K : Type} [Field K] {r : ℕ} (a d : K) (B C : Matrix (Fin (r + 1)) (Fin (r + 1)) K)
     (hB : B.det ≠ 0)

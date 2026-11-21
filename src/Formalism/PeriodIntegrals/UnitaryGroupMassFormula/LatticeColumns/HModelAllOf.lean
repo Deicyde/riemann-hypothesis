@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LatticeColumns.HAdapt
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LatticeColumns.MemK2HpIffBeta
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LatticeColumns.IdxAsm
 
 noncomputable section

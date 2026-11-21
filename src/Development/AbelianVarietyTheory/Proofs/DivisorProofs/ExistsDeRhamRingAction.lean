@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrobPullHomExtAffine
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAbelianSchemeOnAff
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.QuasicoherentHomFromAffine

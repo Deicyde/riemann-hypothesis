@@ -1,5 +1,6 @@
-import Formalism.SharpRestriction.CuspSpanNormBounds.CayleyDegreeNondegeneracy.DeterminantNaturalAnisotropic
-import Formalism.SharpRestriction.CuspSpanNormBounds.CayleyDegreeNondegeneracy.PartnerThetaInclusion
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.CuspSpanNormBounds.CayleyDegreeNondegeneracy.GenericAdmissibleAllConstants
 
 noncomputable section
 

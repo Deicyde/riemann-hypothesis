@@ -1,6 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.CuspFrameWeights.SameKindIsometric
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.SqSumEqSumSqAddTwoMulSumLt
+import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.DefClassNum
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
+import Mathlib.RingTheory.TotallySplit
 
 open MeasureTheory NumberField Matrix Finset Formalism.MainNotions.S GlobalTheory.Count GlobalTheory.FlagMeas
 

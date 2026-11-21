@@ -1,8 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.BesselHermitianTheta.DefsReal
-import Formalism.LocalToGlobal.BesselHermitianTheta.TiedSmooth
-import Formalism.RealPlaceAnalysis.RealPlaceTaylor.CompactExponentialSurjective
-import Development.AbelianVarietyTheory.BlockTheory.HeightDefect.IsotypicSignedParameters
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.DataTheta
+import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
 
 noncomputable section
 

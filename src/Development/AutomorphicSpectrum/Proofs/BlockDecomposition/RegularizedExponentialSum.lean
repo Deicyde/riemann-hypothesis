@@ -1,6 +1,10 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.SatakeExponents.FibreFactorHolds
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.VandermondeSeparation
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
 
 open Filter Topology
 open scoped Classical

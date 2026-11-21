@@ -1,8 +1,8 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.PlaceBelow
-import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.NabValNMap
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.ExistsIntegralCombinationOfMemHaO
 import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.VVAlgebraMapNonnegDvr
+import Development.AbelianVarietyTheory.Proofs.FormalGroupCharts.CanonGaugeNabValBaseChange
+import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.MapDofNIterate
 
 set_option autoImplicit false
 

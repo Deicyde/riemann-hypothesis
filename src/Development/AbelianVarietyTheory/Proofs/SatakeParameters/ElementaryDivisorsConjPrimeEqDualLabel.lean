@@ -1,16 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.NormalFam
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.HoweUnram
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsStepWeil
-import Formalism.SatakeDualWeyl.KpqSubgroupCompact
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.SphericalLabelOperatorsOnHyperspecialFixedVector
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.SupportedSubgroupSplitCommutePrimeIdempotents
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.InertPlaceHeckeDoubleCosetsInverseRepsLabel
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.DivisorsAtInvDualLabelAndStabilizerMul
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.MemHyperspecialOfSplitPlaceStabilizer
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ConjMemCompletedLatticeIffDualSplitPlace
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.CompletedLatticeIntegralityFacts
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.CompletedLatticeEqAdelicCompletionAndGram
+import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ExistsCompletedLatticeBasisAtPrime
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix
 open Formalism.L2.Theta Formalism.L2.DIV Formalism.L2.Indef Formalism.DivisionValues Polynomial
 open Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.Lev Formalism.IndefR.Mult Formalism.IndefR.Datum Formalism.IndefR.Cx
@@ -160,7 +154,7 @@ theorem dv_conj (σ : A →+* A) (hσ : ∀ x, σ (σ x) = x) {J Ji : Matrix (Fi
     rw [Matrix.smul_mulVec, Matrix.smul_mulVec, ← Matrix.mulVec_mulVec, ← Matrix.mulVec_mulVec,
       ← Matrix.mulVec_mulVec]
     have e1 : (Matrix.of fun i j => zc j i) *ᵥ Pi.single j 1 = zc j := by
-      funext i; simp [Matrix.mulVec_single_one]
+      funext i; simp
     have e2 := ezc j
     rw [Matrix.mulVec_smul, smul_smul, hε] at e2
     rw [e2, e1]
@@ -182,7 +176,7 @@ theorem dv_conj (σ : A →+* A) (hσ : ∀ x, σ (σ x) = x) {J Ji : Matrix (Fi
     rw [Matrix.smul_mulVec, Matrix.smul_mulVec, ← Matrix.mulVec_mulVec, ← Matrix.mulVec_mulVec,
       ← Matrix.mulVec_mulVec]
     have e1 : (Matrix.of fun i j => wc j i) *ᵥ Pi.single j 1 = wc j := by
-      funext i; simp [Matrix.mulVec_single_one]
+      funext i; simp
     rw [e1, ewc j]
     congr 2
     funext i; simp [Matrix.mulVec_diagonal]

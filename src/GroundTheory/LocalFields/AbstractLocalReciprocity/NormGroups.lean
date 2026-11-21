@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Variable
 import GroundTheory.LocalFields.AbstractLocalReciprocity.Isomorphism
 
 namespace GroundTheory.LocalField.Abstract

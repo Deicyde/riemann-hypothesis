@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.WickVanishing.LogClosed
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.WickVanishing.LogPoinc
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.ChartChg
@@ -41,7 +43,7 @@ theorem d_evY (h : PS k 1 d) (b : Fin d) :
     intro v w
     first
     | (simp [MvPowerSeries.pderiv_X, Pi.single_apply]; done)
-    | (by_cases hvw : v = w <;> simp [hvw, MvPowerSeries.pderiv_X_self, MvPowerSeries.pderiv_X_of_ne]; done)
+    | (by_cases hvw : v = w <;> simp [hvw, MvPowerSeries.pderiv_X_self]; done)
     | (by_cases hvw : v = w <;> simp [hvw, MvPowerSeries.pderiv_X]; done)
     | (by_cases hvw : v = w
        · subst hvw
@@ -73,7 +75,7 @@ theorem d_evX (h : PS k 1 d) (a : Fin d) :
     intro v w
     first
     | (simp [MvPowerSeries.pderiv_X, Pi.single_apply]; done)
-    | (by_cases hvw : v = w <;> simp [hvw, MvPowerSeries.pderiv_X_self, MvPowerSeries.pderiv_X_of_ne]; done)
+    | (by_cases hvw : v = w <;> simp [hvw, MvPowerSeries.pderiv_X_self]; done)
     | (by_cases hvw : v = w <;> simp [hvw, MvPowerSeries.pderiv_X]; done)
     | (by_cases hvw : v = w
        · subst hvw
@@ -104,7 +106,7 @@ theorem pderiv_first_ev_second_point_eq_zero (h : PS k 1 d) (a : Fin d) : pderiv
     intro v w
     first
     | (simp [MvPowerSeries.pderiv_X, Pi.single_apply]; done)
-    | (by_cases hvw : v = w <;> simp [hvw, MvPowerSeries.pderiv_X_self, MvPowerSeries.pderiv_X_of_ne]; done)
+    | (by_cases hvw : v = w <;> simp [hvw, MvPowerSeries.pderiv_X_self]; done)
     | (by_cases hvw : v = w <;> simp [hvw, MvPowerSeries.pderiv_X]; done)
     | (by_cases hvw : v = w
        · subst hvw
@@ -133,7 +135,7 @@ theorem pderiv_second_ev_first_point_eq_zero (h : PS k 1 d) (b : Fin d) : pderiv
     intro v w
     first
     | (simp [MvPowerSeries.pderiv_X, Pi.single_apply]; done)
-    | (by_cases hvw : v = w <;> simp [hvw, MvPowerSeries.pderiv_X_self, MvPowerSeries.pderiv_X_of_ne]; done)
+    | (by_cases hvw : v = w <;> simp [hvw, MvPowerSeries.pderiv_X_self]; done)
     | (by_cases hvw : v = w <;> simp [hvw, MvPowerSeries.pderiv_X]; done)
     | (by_cases hvw : v = w
        · subst hvw

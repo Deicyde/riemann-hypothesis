@@ -1,7 +1,8 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.HighestWeights.ModelCext
-import Formalism.RealPlaceAnalysis.StatementKT
-import Formalism.RealPlaceAnalysis.QuotientSettingHolds
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.HighestWeights.ModelGenA
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.HighestWeights.SingleMulJmComm
 
 noncomputable section
 

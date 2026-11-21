@@ -1,6 +1,4 @@
-import Mathlib
-import Formalism.LocalToGlobal.GlobalTheory.GL5.PClassDecomp
-import Formalism.LocalToGlobal.BesselHermitianTheta.Lemmas
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.RetieVolTieGAndCdScaleTie
 open NumberField MeasureTheory Formalism.BasicNotions Formalism.MainNotions.StandardLattice Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.L2.GlobalTheoryTheory.GenusMassVolumes
 attribute [local instance] Formalism.BasicNotions.Host.cmStar

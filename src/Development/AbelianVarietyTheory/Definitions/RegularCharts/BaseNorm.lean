@@ -1,6 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.NormsFree
-import Formalism.LocalToGlobal.ProjectiveLattices.CompOrd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.ProjectiveLattices.UnFree
 
 noncomputable section
 

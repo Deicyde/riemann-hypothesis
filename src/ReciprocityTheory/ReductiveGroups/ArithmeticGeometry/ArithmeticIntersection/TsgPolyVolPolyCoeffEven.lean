@@ -1,4 +1,11 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.APrime
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.CompRightEqZero
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace ReciprocityTheory.ChartRestriction.G.AI
 
@@ -28,7 +35,7 @@ theorem volPoly_coeff (D : ℕ) (J : ℕ → ℝ) (n : ℕ) :
 theorem tsgPoly_coeff_zero (D : ℕ) (κ : ℕ → ℝ) (P : ℝ[X]) : (tsgPoly D κ P).coeff 0 = 0 := by
   rw [tsgPoly, Polynomial.finset_sum_coeff]
   refine Finset.sum_eq_zero fun n _ => ?_
-  split_ifs <;> simp [Polynomial.coeff_C_mul_X_pow]
+  split_ifs <;> simp
 
 theorem tsgPoly_coeff_succ (D : ℕ) (κ : ℕ → ℝ) (P : ℝ[X]) (m : ℕ) :
     (tsgPoly D κ P).coeff (m + 1) =

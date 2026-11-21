@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.GL2.GJStandardLEngine
 import GroundTheory.AutomorphicForms.GL2.GJStandardLDual
 import GroundTheory.AutomorphicForms.GL2.GJStandardLFourier

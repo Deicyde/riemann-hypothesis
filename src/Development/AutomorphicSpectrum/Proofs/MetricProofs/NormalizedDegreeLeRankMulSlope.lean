@@ -1,5 +1,8 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.IsOrthFull
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import GroundTheory.HeightsAndTheta.Heights.HeightsOfSets.Slopes
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 open GroundTheory.Heights₂.Heights NumberField TensorProduct ComplexAt GlobalTheory.CompanionTheory.Ar Matrix
 open scoped BigOperators ComplexOrder
@@ -16,7 +19,7 @@ private lemma degreeWith_bot {K : Type} [Field K] [NumberField K] (E : Hermitian
   have hdet : ∀ σ : K →+* ℂ, Real.log ‖E.gramDet σ (fun i => ((f i : E.carrier)))‖ = 0 := by
     intro σ
     unfold HermitianBundle.gramDet
-    simp only [h0, TensorProduct.tmul_zero, inner_zero_left]
+    simp only [h0, TensorProduct.tmul_zero]
     rcases Nat.eq_zero_or_pos r with rfl | hr
     · simp
     · haveI : Nonempty (Fin r) := ⟨⟨0, hr⟩⟩

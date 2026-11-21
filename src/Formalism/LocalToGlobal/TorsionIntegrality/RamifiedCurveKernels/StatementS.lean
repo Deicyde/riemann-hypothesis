@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.RamifiedCurveKernels.StatementR
-import Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.GramFormula
 
 noncomputable section
 open scoped BigOperators

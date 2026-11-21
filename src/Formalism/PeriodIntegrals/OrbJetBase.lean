@@ -1,10 +1,9 @@
-import Mathlib
-import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
-import Formalism.LocalRingCardinality.DataParams₂
-import Formalism.LocalRingCardinality.DataJet
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataForced
 import Formalism.LocalRingCardinality.DataDIVDefs
-import Formalism.SharpRestriction.GrowthBounds.IsResidueClassZero
+import Mathlib.Combinatorics.Young.YoungDiagram
+import Mathlib.RingTheory.PowerSeries.Exp
 
 noncomputable section
 

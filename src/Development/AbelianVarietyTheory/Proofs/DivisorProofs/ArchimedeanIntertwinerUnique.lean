@@ -1,12 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsUSplittingTrRep
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MulRealAdEqZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzHadamardLemma
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SchwartzEqZeroOfWrongSignGaussianRelation
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TranslationCharacterInvariantFormStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TranslationInvariantFormConstL2Statement
+import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.WeilTr MeasureTheory
 open scoped Matrix ENNReal
 
@@ -126,7 +124,7 @@ theorem const_of_intertwines : GlobalTheory.FunPr.Hypotheses₂ → ∀ (F : Typ
     fun h => GlobalTheory.WrongSignGauss.ip_self μ₀ h
   have hint : Integrable (fun x => ‖Φ x‖ ^ 2) μ₀ := by
     refine (GlobalTheory.WrongSignGauss.integrable_ip μ₀ Φ Φ).norm.congr (Filter.Eventually.of_forall fun x => ?_)
-    simp [norm_mul, sq]
+    simp [sq]
   have hn : 0 < ∫ x, ‖Φ x‖ ^ 2 ∂μ₀ := by
     rw [integral_pos_iff_support_of_nonneg (fun x => sq_nonneg _) hint]
     have ho : IsOpen (Function.support fun x => ‖Φ x‖ ^ 2) := (Φ.continuous.norm.pow 2).isOpen_support
@@ -146,7 +144,7 @@ theorem const_of_intertwines : GlobalTheory.FunPr.Hypotheses₂ → ∀ (F : Typ
   change ∫ x, T f x * starRingEnd ℂ (T f' x) ∂μ₀ = c * ∫ x, f x * starRingEnd ℂ (f' x) ∂μ₀ at hcf
   change ∫ x, T f x * starRingEnd ℂ (T f' x) ∂μ = _ * ∫ x, f x * starRingEnd ℂ (f' x) ∂μ
   rw [hs, integral_smul_nnreal_measure, integral_smul_nnreal_measure, hcf, ← hcc]
-  simp only [NNReal.smul_def, smul_eq_mul, Complex.real_smul]
+  simp only [NNReal.smul_def, Complex.real_smul]
   ring
 
 end GlobalTheory.ArchInvForm

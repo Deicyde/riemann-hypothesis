@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.PartialDifferential.AnalyticHypoBasic
+import Mathlib.Analysis.Calculus.FDeriv.Symmetric
 
 namespace GroundTheory.Automorphic.Sobolev
 

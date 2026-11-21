@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsUniqueLiesUnder
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HtTrivAndNefIff
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FinsumSubConst
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SumLogEmbeddingAddFinsumLogAdicAbvEqZero
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ValAtEqOfResidueFieldHom
 
 set_option autoImplicit false
 

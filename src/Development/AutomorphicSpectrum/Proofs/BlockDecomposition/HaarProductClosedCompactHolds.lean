@@ -1,5 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.UnipotentAdelicQuotients.HaarProductClosedCompact
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -244,7 +249,7 @@ theorem haarProductClosedCompact_holds : Formalism.D.haarProductClosedCompact :=
     intro h
     have := l4 (fun _ => 1) measurable_const (fun _ _ _ => rfl)
     rw [h] at this
-    simp only [lintegral_zero_measure, lintegral_const, one_mul] at this
+    simp only [lintegral_const, one_mul] at this
     exact hμ (Measure.measure_univ_eq_zero.1 this.symm)
   obtain ⟨c, c0, ct, hc⟩ := exists_eq_smul_subgroup P hP l μP l1 l2 l3 l0 p1 p2 p3 p4
   refine ⟨c, c0, ct, fun Φ hΦ => ?_⟩

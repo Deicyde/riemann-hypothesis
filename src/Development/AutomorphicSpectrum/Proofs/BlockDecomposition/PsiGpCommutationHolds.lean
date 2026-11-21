@@ -1,12 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.GenericUnitaryGL.LeibnizOrders.LeibnizOrd
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CoFunSmooth
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MirProjEqOneOfMem
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SmoothPsiMinus
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.InvariantPairingMirabolicVanishing
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LeviIntegralFacts
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ParabolicProductTwoRepsEquivTwoBlockInduction
-import Development.AbelianVarietyTheory.Definitions.Divisors.T2SpaceGeneralLinearGroup
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GpProjContinuousStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HGPClosedStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MemHGPIffParabolicStatement
@@ -126,7 +124,7 @@ theorem det_unip (n : ℕ) (v : Multiplicative (Fin n → k)) : GeneralLinearGro
     have hne : a ≠ b := fun h => by
       subst h
       exact lt_irrefl _ hab
-    simp [colMat, hb, Matrix.one_apply, hne]
+    simp [colMat, hb, hne]
 
 theorem dpowM_levi (n : ℕ) (s : ℝ) (g : GL (Fin n) k) :
     dpowM n s (levi k n g) = dpow n s g := by
@@ -158,7 +156,7 @@ theorem scalar_id (m j : ℕ) (a b : kˣ) :
     push_cast
     ring
   rw [e1, e2, e3]
-  simp only [MonoidHom.mul_apply, MonoidHom.inv_apply, map_mul, mul_inv]
+  simp only [MonoidHom.mul_apply, MonoidHom.inv_apply, map_mul]
   generalize absPow k (1 / 2) a = A
   generalize absPow k (1 / 2) b = B
   generalize absPow k ((j : ℂ) / 2) a = P

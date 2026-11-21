@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.VeryAmpleZRowsSt
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.CechPartitionSt
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.ZChartSmulSt

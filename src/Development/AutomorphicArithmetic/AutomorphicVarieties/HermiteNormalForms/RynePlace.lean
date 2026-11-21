@@ -1,4 +1,8 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.HermiteNormalForms.SmulNeZeroLat
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.AutomorphicVarieties.HermiteNormalForms.SmulStrictMono
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Algebra.Order.Star.Real
 
 open NumberField Matrix UpperTheory.V UpperTheory.V.KT
 open scoped ComplexOrder

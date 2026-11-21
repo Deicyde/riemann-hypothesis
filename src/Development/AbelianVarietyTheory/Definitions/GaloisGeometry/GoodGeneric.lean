@@ -1,6 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.BaseLiftsPackageOfPrimitiveLinks
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.NormalFam
+import Formalism.LocalToGlobal.IndefiniteReal.ZeroPartEigenvalueConvention
 
 noncomputable section
 

@@ -1,4 +1,5 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DefsRep
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.PsiExistsStatement
 import Formalism.RealPlaceAnalysis.StatementKT
 

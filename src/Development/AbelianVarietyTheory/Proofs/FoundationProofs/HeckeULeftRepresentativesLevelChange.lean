@@ -1,6 +1,13 @@
-import Development.AbelianVarietyTheory.Definitions.Foundations.PetIPSmulRight
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.RepL
-import CompanionTheory.EightfoldTheory.VariationTheory.AutomorphicForms.Newform
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open UpperHalfPlane Complex MeasureTheory CongruenceSubgroup GlobalTheory.EisM UpperTheory.V.Af Filter Topology
 open scoped MatrixGroups Real ComplexConjugate Manifold ModularForm
 
@@ -109,7 +116,7 @@ theorem lrep_repU_of_dvd (M l : ℕ) (hl : l.Prime) (hlM : l ∣ M) :
     · simp only [Fin.zero_eta, Fin.isValue, Fin.mk_one] at e3 ⊢
       rw [e3]; simp [γ]; linarith
     · simpa [γ] using e2
-    · simp only [Fin.zero_eta, Fin.isValue, Fin.mk_one] at e4 ⊢
+    · simp only [Fin.isValue, Fin.mk_one] at e4 ⊢
       rw [e4]; simp [γ]; linarith
 
 theorem lrep_repU (L l : ℕ) (hl : l.Prime) :

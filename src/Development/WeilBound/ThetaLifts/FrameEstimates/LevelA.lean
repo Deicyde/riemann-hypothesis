@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.FrameEstimates.LatMeas
 import Development.WeilBound.ThetaLifts.LeviDeterminants.GrowFin
 

@@ -1,6 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsRootOfIsAlgClosed
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.EeProd
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 open scoped MatrixGroups
@@ -87,8 +90,8 @@ theorem prim_mul {A : ValuationSubring Ω} {x y : HahnSeries ℚ Ω} (hx : Prim 
   obtain ⟨hx1, hx2⟩ := hx
   obtain ⟨hy1, hy2⟩ := hy
   set v := A.valuation
-  have sx : {r | v (x.coeff r) = 1} ⊆ x.support := fun r hr h => by simp [Set.mem_setOf_eq, h] at hr
-  have sy : {r | v (y.coeff r) = 1} ⊆ y.support := fun r hr h => by simp [Set.mem_setOf_eq, h] at hr
+  have sx : {r | v (x.coeff r) = 1} ⊆ x.support := fun r hr h => by simp [h] at hr
+  have sy : {r | v (y.coeff r) = 1} ⊆ y.support := fun r hr h => by simp [h] at hr
   have wx := x.isPWO_support.isWF.mono sx
   have wy := y.isPWO_support.isWF.mono sy
   have nx : {r | v (x.coeff r) = 1}.Nonempty := hx2

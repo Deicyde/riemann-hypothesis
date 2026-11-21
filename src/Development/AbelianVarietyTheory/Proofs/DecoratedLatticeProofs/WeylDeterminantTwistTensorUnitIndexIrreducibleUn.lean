@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.EvalAtOneExtremalMul
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IsIrreducibleSmallRepUnitary
-import Formalism.LocalToGlobal.Columns.PolyFnLemmas
 open MvPolynomial Formalism.BasicNotions Formalism.L2.Forms Formalism.L2.Ker GlobalTheory.KJInf MeasureTheory
 open scoped TensorProduct
 
@@ -13,7 +12,7 @@ theorem lft_rename_unit {a : ℕ} (u : Matrix (Fin a) (Fin a) ℂ) (f : MvPolyno
   have : (lft (fun _ : Unit => u)).comp (rename (Prod.mk ())) = (rename (Prod.mk ())).comp (Formalism.GradedWeylDivisibility.rowAct ℂ (n := a) u) := by
     apply MvPolynomial.algHom_ext
     intro v
-    simp [lft, Formalism.GradedWeylDivisibility.rowAct, rename_X, aeval_X, map_sum]
+    simp [lft, Formalism.GradedWeylDivisibility.rowAct, rename_X, map_sum]
   exact congrArg (fun φ => φ f) this
 
 theorem lft_frDet_unit {a : ℕ} (u : Matrix (Fin a) (Fin a) ℂ) :
@@ -23,7 +22,7 @@ theorem lft_frDet_unit {a : ℕ} (u : Matrix (Fin a) (Fin a) ℂ) :
   have : (lft (fun _ : Unit => u)).mapMatrix (Matrix.of fun α s : Fin a => (X ((), α, s) : PY Unit a)) =
       u.map C * Matrix.of fun α s : Fin a => (X ((), α, s) : PY Unit a) := by
     ext i j
-    simp [lft, aeval_X, Matrix.mul_apply]
+    simp [lft, Matrix.mul_apply]
   rw [this, Matrix.det_mul, RingHom.map_det]
   rfl
 

@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.CharacterColumnKernels.StatementN
+import Mathlib.RepresentationTheory.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open Finset Classical
 

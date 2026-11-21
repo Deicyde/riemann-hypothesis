@@ -1,6 +1,5 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.NotOrdGeOfNotMem
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsUnimodMod
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsSiegPull
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory IsLocalRing
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.AnForm.R
 open GlobalTheory.Toroidal GlobalTheory.LocM GlobalTheory.PolFan GlobalTheory.ZM GlobalTheory.SiegelTor GlobalTheory.ZH
@@ -27,7 +26,7 @@ theorem qW_add_smul_single {r : ℕ} (W : Matrix (Fin 8) (Fin 8) ℤ) (b : Linea
     rw [Fintype.sum_eq_single 0]
     · rw [Fintype.sum_eq_single 0]
       · simp [he]
-      · intro v hv; simp [he, Pi.single_apply, hv]
+      · intro v hv; simp [he, hv]
     · intro u hu; simp [he, Pi.single_apply, hu]
   have hpt : ∀ u v, W u v * b ((μ + s • e) u) ((μ + s • e) v) = W u v * b (μ u) (μ v)
       + s * (W u v * (b (e u) (μ v) + b (μ u) (e v))) + s ^ 2 * (W u v * b (e u) (e v)) := by

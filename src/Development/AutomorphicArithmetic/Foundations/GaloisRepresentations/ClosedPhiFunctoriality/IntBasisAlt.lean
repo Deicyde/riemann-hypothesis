@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ClosedPhiFunctoriality.JointApproxOfMem
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.TrivIsCr
 
 noncomputable section
 

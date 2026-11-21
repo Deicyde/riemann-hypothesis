@@ -1,7 +1,8 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.ConeSectionRestriction.RaTpowSinglePow
+import BuildAid.Leniency.Variable
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DerivationCommutesWithTraceStatement
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.ConeSectionRestriction.ResidFinPf
+import Mathlib.Algebra.DualNumber
+import Mathlib.RingTheory.PicardGroup
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

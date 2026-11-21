@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.BlockSplitAll
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.IsobaricDiscreteSelfDualStrongMultiplicityOne
-import Formalism.LocalToGlobal.UnitaryNorms.CharTied
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IntValuationEqOfMem
 import Development.AbelianVarietyTheory.Counterexamples.PlaceInjectivity.PlaceInjective
 
@@ -28,13 +26,13 @@ theorem muInt_of_charTied : ∀ (D : D7) (C : Formalism.L2.Host.CharFrame D) (nc
   · have ht : τ = Formalism.L2.Host.embPsi D.host (D.eTau ρ) := h.symm
     rw [ht, (key (D.eTau ρ)).1] at hz
     refine ⟨-m, ?_⟩
-    simp only [Multiset.mem_singleton, Set.mem_singleton_iff] at hz
+    simp only [Multiset.mem_singleton] at hz
     rw [hz, hm']; push_cast; ring
   · have ht : τ = (starRingEnd ℂ).comp (Formalism.L2.Host.embPsi D.host (D.eTau ρ)) := by
       rw [← h]; ext x; rfl
     rw [ht, (key (D.eTau ρ)).2] at hz
     refine ⟨m, ?_⟩
-    simp only [Multiset.mem_singleton, Set.mem_singleton_iff] at hz
+    simp only [Multiset.mem_singleton] at hz
     rw [hz, hm']; push_cast; ring
 
 end GlobalTheory.MuIntegral

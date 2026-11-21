@@ -1,4 +1,12 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.Chebotarev.SplitDef
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.NumberTheory.NumberField.Cyclotomic.Basic
+import Mathlib.RingTheory.Frobenius
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
 
 open NumberField Filter Topology
 

@@ -1,5 +1,7 @@
-import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.SumTotalLoss
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.TopDegreeComparison
+import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.RestCountOf
 
 noncomputable section
 

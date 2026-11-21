@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.FlagUnipotentLattices.MemOfOrthogonalAnisotropic
-import Formalism.HermitianLattices.StatementMass
 import Formalism.HermitianLattices.HermitianLatticesProofs.MassBasic
-import Formalism.HermitianLattices.HermitianLatticesProofs.AutFinite
 
 noncomputable section
 
@@ -337,7 +337,7 @@ example {H : HermSpace K V} {M : Submodule R V} (h : IsUnimod H M) : del H M = 1
 
 example : idx (⊤ : Submodule ℤ ℤ) (Ideal.span {2}) = 2 := by
   have : (Ideal.span {(2 : ℤ)}).toAddSubgroup = AddSubgroup.zmultiples 2 := by
-    ext x; simp [Ideal.mem_span_singleton', AddSubgroup.mem_zmultiples_iff]
+    ext x; simp [AddSubgroup.mem_zmultiples_iff]
   rw [idx, this]
   simp [Int.index_zmultiples]
 

@@ -1,8 +1,4 @@
-import ReciprocityTheory.AnalyticForms.PotentialTheory.IsPotentialPullbackStatement
-import ReciprocityTheory.AnalyticForms.PotentialTheory.Stokes
-import ReciprocityTheory.AnalyticForms.PotentialTheory.LogInt
-import ReciprocityTheory.AnalyticForms.PotentialTheory.SNCAtlas
-import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.GreenOfPoincareLelongHyperplane
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PotentialTheory.IsCompatChartRestrOpen
 
 namespace ReciprocityTheory.AnForm.M

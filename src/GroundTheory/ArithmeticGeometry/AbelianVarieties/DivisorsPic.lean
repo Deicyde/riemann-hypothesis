@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ArithmeticGeometry.AbelianVarieties.DivisorsOrd
+import Mathlib.Order.CompletePartialOrder
 
 namespace GroundTheory.Arith.Abelian
 

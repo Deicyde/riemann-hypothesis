@@ -1,8 +1,10 @@
-import Development.WeilBound.CoreStatements.VolumeEquality.BaseUnifDefs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.CuspCorrespondenceBound
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsEmbLabel
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LabelEmbCompInjective
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.Rt0NeZero
+import Development.AutomorphicSpectrum.Definitions.MetricPeriods.IsFundSet
 
 noncomputable section
 

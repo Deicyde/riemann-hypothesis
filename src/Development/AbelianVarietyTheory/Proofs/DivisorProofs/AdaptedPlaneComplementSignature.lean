@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HasHermitianSignatureComplementHyperbolicPlane
 
 open scoped TensorProduct Matrix
@@ -33,7 +32,7 @@ theorem hasSig_skew_complement : ∀ (F E : Type) [Field F] [NumberField F] [Fie
   have hsm : ∀ u v : Fin n → ℂ, u ⬝ᵥ (Complex.I • J') *ᵥ v = Complex.I * (u ⬝ᵥ J' *ᵥ v) := by
     intro u v; rw [Matrix.smul_mulVec, dotProduct_smul, smul_eq_mul]
   have hst : star (Complex.I • Y0) = (-Complex.I) • star Y0 := by
-    rw [star_smul]; congr 1; simp [Complex.star_def]
+    rw [star_smul]; congr 1; simp
   have hXX : X ⬝ᵥ (Complex.I • J') *ᵥ star X = 0 := by
     rw [hsm, ← hform, hH.xx, map_zero, mul_zero]
   have hYY : (Complex.I • Y0) ⬝ᵥ (Complex.I • J') *ᵥ star (Complex.I • Y0) = 0 := by
@@ -44,7 +43,7 @@ theorem hasSig_skew_complement : ∀ (F E : Type) [Field F] [NumberField F] [Fie
     ext i j
     have h := hW.skew i j
     have h2 : star (τ (W.J j i)) = - τ (W.J i j) := by rw [← hcm, h, map_neg]
-    simp [conjTranspose_apply, hJ', h2, Complex.star_def]
+    simp [conjTranspose_apply, hJ', h2]
   have hιv : ∀ b : Fin n → E, (∀ u, form σ W.J (H.ι *ᵥ u) b = 0) →
       ι'ᵀ *ᵥ ((Complex.I • J') *ᵥ star (fun i => τ (b i))) = 0 := by
     intro b hb

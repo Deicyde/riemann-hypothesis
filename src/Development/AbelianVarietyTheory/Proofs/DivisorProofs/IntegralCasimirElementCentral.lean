@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdjugateGramSymm
+import Mathlib.Tactic.ENatToNat
 open GlobalTheory.CasimirOrder
 
 namespace GlobalTheory.CasimirOrder

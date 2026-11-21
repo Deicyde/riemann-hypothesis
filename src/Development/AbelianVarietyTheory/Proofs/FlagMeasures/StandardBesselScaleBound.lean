@@ -1,13 +1,8 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.LeadMinorK
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.Admissible
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ThresholdProductsBounded
-import Formalism.HermitianCurvature.StatementTBB
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.BesselNormSqEqBigCellNormSq
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.BesselEnergyNormalisedFrameChangeStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.OrbitalSquareEqHilbertSchmidtNormalisedVectorStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsUnipotentHaarMeasureRatioStatement
-import Formalism.FormalDegreeBessel.FinalG
 open Formalism.FourierDecayAlt Formalism.MainNotions.S GlobalTheory.ThA Formalism.QuantumDeterminants MeasureTheory Matrix
 open Formalism.BasicNotions
 

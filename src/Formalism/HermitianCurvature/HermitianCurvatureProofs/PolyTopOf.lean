@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.SmoothOnHOfLoc
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CoeffOfValues
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.RaisingCompactSupport
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.VecVSplit
 
 open Matrix MeasureTheory
 

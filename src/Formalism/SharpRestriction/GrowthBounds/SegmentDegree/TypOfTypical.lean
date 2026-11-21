@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.ProdIccOneEqProdRange
+import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.TypicalPathOrdersSmall
+import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.WindowSmall
+import Formalism.ThetaLogCoordinates.ResidueClassEstimates.FinalT
 
 noncomputable section
 

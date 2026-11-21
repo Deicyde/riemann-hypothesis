@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LieAlgebraOfTangentCurve
-import Formalism.UnipotentAdelicQuotients.SmComplete
 open SmoothVectors Filter Topology
 open scoped ContDiff Matrix.Norms.Elementwise
 set_option maxHeartbeats 1000000 in

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.FrobeniusPaths.ColumnKernelComponentsIntegral
 
 noncomputable section
@@ -270,7 +272,7 @@ lemma XC_HomD (i : Fin N) (a : Fin k) (t : KK O) :
   by_cases h : i' = i
   · subst h
     simp [multideg, eI, Finsupp.single_apply]
-  · simp [multideg, eI, Finsupp.single_apply, h, Ne.symm h]
+  · simp [multideg, eI, h]
 
 lemma letG_HomD (LL : LiftLetters (Fin N)) (g : Matrix (Fin k) (Fin k) (WF p f)) (i : Fin N) (b : Fin k) :
     HomD (eI i) (letG p f (O := O) LL g i b) := by

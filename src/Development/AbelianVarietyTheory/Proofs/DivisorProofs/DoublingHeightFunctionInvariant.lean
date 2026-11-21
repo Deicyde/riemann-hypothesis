@@ -1,8 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ZetaOn
-import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsFinsetOfEventually
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.LintegralFintypeProdEqProd
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IdemSmulUnitary
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompMemOfIsStab
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IdeleCharacterNormEulerFactorization
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoublingEmbeddingSkewHermitian

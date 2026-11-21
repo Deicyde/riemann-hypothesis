@@ -1,5 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.LiftLaSpec
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.TwoWeightEqOneAddRoot
 
 noncomputable section
 

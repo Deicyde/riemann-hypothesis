@@ -1,4 +1,5 @@
-import Formalism.ThetaLogCoordinates.TraceIsometryWeights.StatementG
+import BuildAid.Leniency.Open
+import Formalism.MahlerMeasure.StatementTM
 
 namespace Formalism.InvariantFactorPaths.OddLevelGainBounds
 

@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.GlobAut
-import Formalism.SharpRestriction.GlobalSchurBounds.GeneralLinearActions.GenusMassVolumes
 import Formalism.LocalToGlobal.SiegelLatticeTheory.FundamentalEquivalence.LevelIntersectParabolic
 
 noncomputable section
@@ -56,7 +56,7 @@ def tauF : Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes.AF I.F ⊗[
 theorem tauF_tmul (a : Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes.AF I.F) (x : I.E) :
     tauF I (a ⊗ₜ[I.F] x) = x ⊗ₜ[I.F] a.2 := by
   first
-    | (simp [tauF, Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes.sndA, Algebra.TensorProduct.tmul_mul_tmul]; done)
+    | (simp [tauF, Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes.sndA]; done)
     | (show (1 : I.E) ⊗ₜ[I.F] a.2 * x ⊗ₜ[I.F] (1 : Formalism.MainNotions.S.Af I.F) = _
        rw [Algebra.TensorProduct.tmul_mul_tmul, one_mul, mul_one])
 

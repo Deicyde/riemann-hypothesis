@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.FromBaseAlt
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsUnifOfIsMumfordOf
 
 noncomputable section
 
@@ -119,7 +119,7 @@ open InhTate in
 theorem not_fromBase_tate : ¬ FromBase tatePre (tGens fun _ _ => onePlus) (algebraMap ℚ InhTate.R) := fun h => by
   obtain ⟨x, hx⟩ := mem_range_of_fromBase _ _ h 0 0
   have := congrArg (PowerSeries.coeff 1) hx
-  simp [onePlus, PowerSeries.coeff_C, PowerSeries.coeff_one] at this
+  simp [onePlus, PowerSeries.coeff_one] at this
 
 theorem lbIso_two {X Y Z : Scheme.{0}} {L : LB X} (hL : L.IsLB) (φ : Y ⟶ X) (r : Z ⟶ Y) :
     LBIso (L.pull (r ≫ φ)) ((L.pull φ).pull r) := by

@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.MultiplicationKernelIdentity
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PreEig
-import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.IsSaturatedSubmoduleIffExistsIsComplOfValuationR
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinrankAddValuationIntegerSubmoduleEqFinrankSpanStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdjoinRootProdLinearFactorsLatticeFactsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiniteEigenFiltrationPiecesAddValIntStatement
@@ -202,7 +200,7 @@ theorem exists_basis_eigSub (d : Int0 v) (hd : d ≠ 0)
     rw [map_sum]
     simp only [map_smul, hze]
     funext j
-    simp [Finset.sum_apply, Pi.single_apply, mul_comm, mul_left_comm]
+    simp [Finset.sum_apply, Pi.single_apply, mul_comm]
   have hli : LinearIndependent (Int0 v) (fun i => (⟨z i, hz i⟩ : eigSub a τ (Fin N → RS a))) := by
     rw [Fintype.linearIndependent_iff]
     intro w hw

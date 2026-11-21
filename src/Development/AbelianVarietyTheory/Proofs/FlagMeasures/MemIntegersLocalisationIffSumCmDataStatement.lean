@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.MemIntegersLocalisationIffSumCmData
-import Formalism.SharpRestriction.CuspSpanNormBounds.PsiEDef
-import Formalism.LocalRingCardinality.DataSpaces
 open NumberField IsDedekindDomain Formalism.MainNotions.S.Loc ValuativeRel
 open scoped nonZeroDivisors
 set_option maxHeartbeats 1000000 in

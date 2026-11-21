@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.WeightedSupDriftOnOrthonormalFrames
+import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.MahlerCompactness
 
 namespace GlobalTheory.MixedSignature
 

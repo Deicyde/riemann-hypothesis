@@ -1,7 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UpqRep
 import Formalism.FormalDegreeBessel.StatementG
-import Formalism.FormalDegreeBessel.FinalG
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Matrix
 open Formalism.QuantumDeterminants (inWb Tz UWset eI esI wI bvec)

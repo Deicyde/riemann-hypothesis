@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsDefiniteDatumGoodObj
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Counterexamples.ModuliSurvey.IsQProjOverOfIsProjOver
 
 namespace GlobalTheory.UPel

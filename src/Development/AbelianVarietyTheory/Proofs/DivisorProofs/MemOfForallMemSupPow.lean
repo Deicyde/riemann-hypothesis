@@ -1,7 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.OrdGeOfForall
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.SiegelToroidalIntegral
-import ReciprocityTheory.AnalyticForms.RegularLocalRings.FinalTheorems
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open IsLocalRing
 
 namespace GlobalTheory.Poinc

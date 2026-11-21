@@ -1,15 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.ExistenceOfLattices.UnivFrame
-import Development.AbelianVarietyTheory.Definitions.ExistenceOfLattices.NormConst
-import Formalism.LocalToGlobal.ProjectiveLattices.CuspFree
-import Formalism.LocalToGlobal.ProjectiveLattices.RdOrbIntOfLatZ
-import Formalism.LocalToGlobal.ProjectiveLattices.AllTest
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.FundamentalDomainPointBound
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.SecBaseChangeAnySt
-import Development.AbelianVarietyTheory.PublishedTheorems.Landherr₂.ExistsNormTensor
-import Development.AbelianVarietyTheory.Statements.HyperbolicHypotheses.HypothesesInhabitedHyperbolic
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.CmTypeLetterFrameColumnDictionary
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExponentialDerivativeAtZeroIsTangent
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.IsCombAtIffIsDerivAt0
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.IsDerivAt0CompLinear
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.UniformizationPeriodLatticeChange
@@ -117,7 +107,7 @@ theorem fibTri : ∀ (E : Type) [Field E] [NumberField E] [IsCMField E] (H : Rec
     rfl
   have hC : C.BlockTriangular (fun j => ((e j).2 : ℕ)) := by
     intro j j' hj
-    simp only [C, Matrix.of_apply, Finset.sum_apply, Pi.smul_apply, smul_eq_mul]
+    simp only [C, Matrix.of_apply, Finset.sum_apply]
     refine Finset.sum_eq_zero fun i _ => ?_
     by_cases hi : j = e.symm ⟨(e j').1, i⟩
     · have h3 : (((e j).2 : ℕ)) = i := by rw [hi, Equiv.apply_symm_apply]

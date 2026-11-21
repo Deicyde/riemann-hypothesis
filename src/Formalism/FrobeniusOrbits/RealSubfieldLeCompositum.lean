@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.Galois
 import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.ConjReal
-import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.RealCyclotomicSubfield
-import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.FrobMulInertia
 
 open NumberField IntermediateField
 

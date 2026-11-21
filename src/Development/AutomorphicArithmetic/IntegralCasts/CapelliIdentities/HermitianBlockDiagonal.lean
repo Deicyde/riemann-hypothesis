@@ -1,4 +1,35 @@
-import Mathlib
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
 
 private lemma ad_mul {S : Type} [CommRing S] (τ : S →+* S) {a b c : ℕ}
     (A : Matrix (Fin a) (Fin b) S) (B : Matrix (Fin b) (Fin c) S) :
@@ -69,7 +100,7 @@ theorem UpperTheory.hermitian_block_diagonal :
   have PX : P * X = 0 := by
     rw [hP]
     simp only [Matrix.sub_mul, Matrix.one_mul, Matrix.mul_assoc, hYX, hXX, Matrix.mul_one,
-      Matrix.mul_zero, sub_self, sub_zero]
+      Matrix.mul_zero, sub_self]
   have PY : P * Y = 0 := by
     rw [hP]
     simp only [Matrix.sub_mul, Matrix.one_mul, Matrix.mul_assoc, hYY, hXY, Matrix.mul_one,
@@ -79,7 +110,7 @@ theorem UpperTheory.hermitian_block_diagonal :
     simp only [Matrix.mul_sub, Matrix.mul_one, XX, XY, sub_zero, sub_self]
   have YdP : Yd * P = 0 := by
     rw [hP]
-    simp only [Matrix.mul_sub, Matrix.mul_one, YX, YY, sub_zero, sub_self]
+    simp only [Matrix.mul_sub, Matrix.mul_one, YX, YY, sub_self]
   have PP : P * P = P := by
     calc P * P = (1 - X * Yd - Y * Xd) * P := by rw [← hP]
       _ = P := by
@@ -160,7 +191,7 @@ theorem UpperTheory.hermitian_block_diagonal :
     rw [hmJ]
     conv_lhs => rw [hm]
     simp only [Matrix.add_mul, Matrix.mul_add, Matrix.mul_assoc, XX, XY, YX, YY, XdP', YdP',
-      PX', PY', PP', XdP, YdP, hed', hde', Matrix.mul_zero, add_zero, zero_add, hmid,
+      PX', PY', PP', hed', hde', Matrix.mul_zero, add_zero, zero_add, hmid,
       Matrix.mul_sub, hPJ', PP]
     conv_rhs => rw [show J = J * (1 : Matrix (Fin n) (Fin n) S) from (Matrix.mul_one J).symm]
     rw [show (1 : Matrix (Fin n) (Fin n) S) = P + X * Yd + Y * Xd by rw [hP]; abel]

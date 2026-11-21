@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.WdDefs
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EqZeroOfWdMkPhiDPow
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FinrankLetterHomComp

@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.OfE
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ThetaTestFunctionRayAsymptoticStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RayNormAndModuleFormulaStatement
+import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.BinaryMassMeans.MeanVal
 
 noncomputable section
 

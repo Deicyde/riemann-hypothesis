@@ -1,8 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OfSwap2
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SwapSumSwap
 open NumberField MvPolynomial Filter Topology Formalism.BasicNotions Formalism.MainNotions Formalism.DegreeFormula GlobalTheory.FlagPoly GlobalTheory.Mean4 GlobalTheory.Mean4O GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.CovTest GlobalTheory.Published
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory GlobalTheory.ArInt
@@ -54,12 +50,12 @@ theorem onLine_sub_onBase_factor (d : ℕ) (a b : ℤ) : ∃ K : MvPolynomial (F
     ((((isHomogeneous_C (Fin 5) (a : ℝ)).sub (isHomogeneous_C (Fin 5) (b : ℝ))).pow 2).mul hR) (by omega), ?_⟩
   have hL : onLine d a b = (C (a : ℝ) * X 0 + C (b : ℝ) * (X 3 + X 4 - X 0) + X 2) ^ (d + 2) +
       (C (b : ℝ) * X 0 + C (a : ℝ) * (X 3 + X 4 - X 0) + X 2) ^ (d + 2) := by
-    simp only [onLine, swapSum, lin, map_add, map_pow, map_sum, map_mul, aeval_C, aeval_X, algebraMap_eq,
+    simp only [onLine, swapSum, lin, map_add, map_pow, map_mul, aeval_C, aeval_X, algebraMap_eq,
       Fin.sum_univ_three, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_two, Matrix.head_cons,
       Matrix.tail_cons, map_one, one_mul]
   have hB : onBase d a b = (C (a : ℝ) * X 4 + C (b : ℝ) * X 3 + X 2) ^ (d + 2) +
       (C (b : ℝ) * X 4 + C (a : ℝ) * X 3 + X 2) ^ (d + 2) := by
-    simp only [onBase, swapSum, lin, map_add, map_pow, map_sum, map_mul, aeval_C, aeval_X, algebraMap_eq,
+    simp only [onBase, swapSum, lin, map_add, map_pow, map_mul, aeval_C, aeval_X, algebraMap_eq,
       Fin.sum_univ_three, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_two, Matrix.head_cons,
       Matrix.tail_cons, map_one, one_mul]
   have hs : (C (b : ℝ) * X 0 + C (a : ℝ) * (X 3 + X 4 - X 0) + X 2 : MvPolynomial (Fin 5) ℝ) =

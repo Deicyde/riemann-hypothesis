@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.PointsNonemptyUnitaryRankOne
-import GroundTheory.Brauer.Splitting
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdjoinRootEquivMk
 
 open Matrix NumberField GlobalTheory.LKTrip GlobalTheory.LKRes GlobalTheory.LKMid GlobalTheory.LKCount GlobalTheory.LKCx
 open scoped TensorProduct Classical
@@ -46,7 +45,7 @@ theorem ubc_val_eq (G : HTGroup p) (β : G.Cˣ) (x : (AfP p ⊗[ℚ] G.C)ˣ) (t 
   rw [map_mul, map_mul, map_inv]
   simp only [Subgroup.coe_mul, Subgroup.coe_inv, Prod.fst_mul, Prod.fst_inv, Units.val_mul, _root_.mul_inv_rev, inv_inv]
   rw [hm]
-  simp only [Units.coe_map, MonoidHom.coe_coe, mul_assoc]
+  simp only [Units.coe_map, mul_assoc]
   rw [Units.coe_map_inv]
   rfl
 

@@ -1,5 +1,5 @@
-import Development.AutomorphicArithmetic.LocalEmbeddings.RootFrame
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.HodgeTateKernel
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PAdicPointPairingCompatible
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.GrNormPosOfBasis
 open CategoryTheory AlgebraicGeometry NumberField IsDedekindDomain ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor

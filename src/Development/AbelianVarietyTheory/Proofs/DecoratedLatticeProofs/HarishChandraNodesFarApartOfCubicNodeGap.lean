@@ -1,8 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.ChainParSucc
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.HeightBoundGeFourthPowerRank
-import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.ConcreteSettingExists
 import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
+import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.ThetaSourceAction
 open Formalism.BasicNotions
 
 namespace GlobalTheory.Core.Rk.GapOfNodes

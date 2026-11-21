@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.InertJacobiLevels.AsmIface
-import Formalism.SharpRestriction.InertJacobiLevels.HostFam
 
 noncomputable section
 

@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.TiedRec
-import Formalism.LocalToGlobal.HermitianForms.FormsTied
+import Formalism.LocalToGlobal.HermitianForms.PrkSmul
 
 noncomputable section
 

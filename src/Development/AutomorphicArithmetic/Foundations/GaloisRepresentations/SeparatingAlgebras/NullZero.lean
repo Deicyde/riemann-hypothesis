@@ -1,4 +1,6 @@
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.SeparatingAlgebras.StLocB
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.SeparatingAlgebras.GammaConjAt
+import Mathlib.Topology.Algebra.MvPolynomial
 open MeasureTheory GroundTheory.Automorphic GroundTheory.Automorphic.Spherical UpperTheory.Gal.Gen
 
 private lemma pt_coe {n : ℕ} (θ : Fin n → UnitAddCircle) (i : Fin n) :
@@ -67,7 +69,7 @@ theorem UpperTheory.Gal.Gen.nullZero_pf :
     have hsymm : ∀ (s : UnitAddCircle) (θ : Fin n → UnitAddCircle),
         e.symm (s, θ) = (Fin.cons s θ : Fin (n + 1) → UnitAddCircle) := by
       intro s θ
-      simp [he, MeasurableEquiv.piFinSuccAbove, Fin.insertNth_zero']
+      simp [he, MeasurableEquiv.piFinSuccAbove]
       rfl
     have hprod : ∀ᵐ z ∂(volume.prod volume : Measure (UnitAddCircle × (Fin n → UnitAddCircle))),
         MvPolynomial.eval (fun i => (pt (e.symm z) i : ℂ)) p ≠ 0 := by

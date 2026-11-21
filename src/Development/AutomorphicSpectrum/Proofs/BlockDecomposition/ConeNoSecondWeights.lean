@@ -1,4 +1,6 @@
-import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.RealDescent.RealLeviDescent.MuQMemHarmSet
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.RealDescent.RealLeviDescent.ConeWeightsNotSecondType
 
 open PositivityTheory.RgBcC PositivityTheory.RgBcC.Real PositivityTheory.RgBcC.RealD
 open Finset
@@ -67,7 +69,7 @@ theorem tri_sgn (a b c : Fin n) : tri sgn0 a b c = triT a b c := by
     rcases lt_trichotomy a c with h3 | h3 | h3 <;>
     first
     | (exfalso; order)
-    | (subst_vars; simp [*, ne_of_lt, ne_of_gt, not_lt_of_gt, lt_asymm]; done)
+    | (subst_vars; simp [*, ne_of_lt, ne_of_gt, lt_asymm]; done)
     | (subst_vars; simp [*, ne_of_lt, ne_of_gt, not_lt_of_gt, lt_asymm]; norm_num; done)
 
 theorem sum_sgn (a : Fin n) : ∑ b, sgn0 a b = 2 * rhoV n a := by

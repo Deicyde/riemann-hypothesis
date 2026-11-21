@@ -1,4 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.JetsPhW
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.PowerSeries.Derivative
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 

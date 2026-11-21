@@ -1,4 +1,9 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.IsBergDensity
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.IsSemipositiveOn
 
 namespace ReciprocityTheory.ChartRestriction.G.ArakelovGeometry
 
@@ -59,8 +64,8 @@ theorem leviForm_eq_complexHessian (φ : (Fin D → ℂ) → ℝ) (y w : Fin D �
   refine Finset.sum_congr rfl fun b _ => ?_
   simp only [cxHessian]
   simp [Complex.mul_re, Complex.mul_im, Complex.add_re, Complex.add_im, Complex.ofReal_re,
-    Complex.ofReal_im, Complex.I_re, Complex.I_im, Complex.div_re, Complex.div_im, Complex.conj_re,
-    Complex.conj_im, Complex.normSq]
+    Complex.ofReal_im, Complex.I_re, Complex.I_im, Complex.conj_re,
+    Complex.conj_im]
   ring
 
 end

@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.PlaneCoefficients.PlaneCoeffOneTTens
-import Formalism.SharpRestriction.GrowthBounds.DiagonalSupport.ThresholdGeOddPosition
+import Formalism.SharpRestriction.GrowthBounds.DiagonalSupport.LeCubeMul
 
 noncomputable section
 

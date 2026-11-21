@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.TwistedPieces.FiniteDimensionalDescent.PieceGood
+import Mathlib.LinearAlgebra.Matrix.Rank
+import Mathlib.RingTheory.PicardGroup
 
 noncomputable section
 

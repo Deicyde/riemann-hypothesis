@@ -1,10 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Degenerations.BaseFacts
-import Development.AbelianVarietyTheory.Definitions.Degenerations.IsAffineSplitTorusLeft
-import Development.AbelianVarietyTheory.Definitions.Degenerations.CompanionTheory
-import Development.AbelianVarietyTheory.Statements.SemistableTorsion.UTorsSt
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.KbIsAlgClosedAndConj
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsUnitCharts
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.EqOfValHomEq
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.FinrankSpanReductionLe
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.HomGenericPoint

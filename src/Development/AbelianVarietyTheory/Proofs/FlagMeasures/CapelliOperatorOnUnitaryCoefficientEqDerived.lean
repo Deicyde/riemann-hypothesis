@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CapelliEigenvalues.Smooth
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.SmoothVecUnitaryModule
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
 
 open Matrix Formalism.REAL Formalism.QuantumDeterminants GlobalTheory.SmoothVecMod
 

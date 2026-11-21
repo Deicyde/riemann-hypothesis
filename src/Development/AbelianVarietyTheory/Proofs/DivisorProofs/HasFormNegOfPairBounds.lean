@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockMap
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CasimirFockAct1SubCasimirFockAct2
 
 open scoped TensorProduct GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels
@@ -76,7 +76,7 @@ theorem rename_omAct (Z : Matrix (Ln p q r s) (Ln p q r s) ℂ) (f : Pol p q r s
     rw [← (swapLn p q r s).sum_comp]
   rw [e]
   simp only [swapM, Matrix.of_apply, Equiv.symm_apply_apply, ← Finset.sum_neg_distrib, smul_smul, neg_smul,
-    smul_neg, mul_neg]
+    smul_neg]
   refine Finset.sum_congr rfl fun l _ => Finset.sum_congr rfl fun l' _ => ?_
   ring_nf
 

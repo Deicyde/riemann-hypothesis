@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SpecialFibreUnits
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsEqnIffGeneratesAtInv
+import Mathlib.AlgebraicGeometry.Morphisms.UniversallyOpen
 
 open CategoryTheory Limits AlgebraicGeometry TopologicalSpace Opposite
 open ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory.IndefiniteRowSideFullHecke.SpecialFibreUnits GlobalTheory.Cartier

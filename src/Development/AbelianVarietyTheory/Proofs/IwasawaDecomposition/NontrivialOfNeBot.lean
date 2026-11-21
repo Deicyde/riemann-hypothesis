@@ -1,12 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ContinuousMapPFin
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.DefiniteUnitaryAdmissibleFiniteMultiplicity
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.WeightRepresentationIrreducible
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.WeightEqOfFinitePartNeBot
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FinitePartAtOwnWeightNeBot
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ArchimedeanUnitaryPointsEquivUnitaryGroupStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EqBotOrTopOfTensor
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.SpanRangeEqTopOfIsIrreducible
 
 noncomputable section
 
@@ -68,7 +64,7 @@ theorem coeff_mem {ρ : Representation ℂ H S} (hsp : Submodule.span ℂ (Set.r
     | add x y _ _ hx hy => simpa [Finset.sum_add_distrib] using add_mem hx hy
     | smul r x _ hx => simpa [Finset.smul_sum] using U.smul_mem r hx
   have h1 := key ((b.coord a).smulRight w)
-  rw [Finset.sum_eq_single a (fun a' _ h' => by simp [Module.Basis.coord_apply, Finsupp.single_apply, h'])
+  rw [Finset.sum_eq_single a (fun a' _ h' => by simp [Module.Basis.coord_apply, h'])
     (fun h' => absurd (Finset.mem_univ a) h')] at h1
   simpa [Module.Basis.coord_apply] using h1
 

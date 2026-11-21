@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.AnalyticDeterminants.IILeft
 
 noncomputable section
@@ -59,6 +60,6 @@ theorem hasDerivAt_curve (x Z : M2 n) :
   have h0 := LVs.II.cE_hasDerivAt0 Z
   have h1 := (LVs.II.mulL x).hasFDerivAt.comp_hasDerivAt (0 : ℝ) h0
   refine h1.congr_of_eventuallyEq (Eventually.of_forall fun t => ?_)
-  simp [Function.comp_def, LVs.II.mulL_apply, LVs.II.cE, Complex.coe_smul]
+  simp [LVs.II.mulL_apply, LVs.II.cE, Complex.coe_smul]
 
 end PositivityTheory.Rg.Sw.HSt.MI

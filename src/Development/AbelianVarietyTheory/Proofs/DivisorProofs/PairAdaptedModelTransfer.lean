@@ -1,10 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AveragedIntegralFunctional
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianAdaptedPlaneSeesaw
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawPairTransferAlongPlane
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLeviElementSkewCm
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DarbouxDoubledCoordinatesStatement
 
 open scoped TensorProduct NNReal Matrix
@@ -127,9 +124,9 @@ theorem zsSum : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [NumberFiel
   rcases j with a | a <;>
   · simp only [GlobalTheory.DblSiegelX.zs, Matrix.sum_apply, Matrix.smul_apply, Matrix.vecMulVec_apply, incM, incV, Matrix.map_apply,
       diagCols, Matrix.fromRows_mulVec, Sum.elim_inl, Sum.elim_inr, Matrix.one_mulVec, Fintype.sum_prod_type, Pi.single_apply,
-      mul_ite, mul_zero, map_mul]
+      mul_ite, mul_zero]
     rw [Finset.sum_eq_single a (fun x _ hx => by simp [Ne.symm hx]) (by simp)]
-    simp only [if_pos rfl, map_mul, mul_smul_comm]
+    simp only
     conv_lhs => rw [hu a, Finset.mul_sum]
     simp only [if_true, map_mul, mul_smul_comm]
 theorem nondeg : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [NumberField E] [Algebra F E] (σ : E →ₐ[F] E) (B : Base F E) (n n₁ d r' s' : ℕ) (X : Spc F E n) (X₁ : Spc F E n₁) (W : Spc F E d)

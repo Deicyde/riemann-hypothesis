@@ -1,9 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.SpMapAlgHomId
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.ThetaTranslateRangeGap
 import Development.AbelianVarietyTheory.Definitions.Divisors.MarkAd
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdjointIntertwines
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MultValueLeftContLevel
+import Formalism.LocalToGlobal.IndefiniteReal.FWExist
 
 set_option autoImplicit false
 

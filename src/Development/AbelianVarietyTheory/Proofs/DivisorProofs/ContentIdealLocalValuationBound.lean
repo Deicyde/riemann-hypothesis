@@ -1,16 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisensteinHeightSmulInvariant
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AbsEvEqProdNormZpow
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.AdelicCharacterFrequenciesAndConductorProduct
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoreConcl
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTransv
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLineReps
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalIdealMemIffOrder
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ValAtOfUnder
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalIdealCountLeOrder
 open scoped TensorProduct NNReal Matrix
 open NumberField MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SiegelSet GlobalTheory.EisRes
 open GlobalTheory.Doubling (absE)
@@ -49,7 +38,7 @@ theorem smul_one_tmul_mem_latLoc : ∀ (F E : Type) [Field F] [NumberField F] [F
       have hs := (latLoc F L v).smul_mem (⟨_, hint⟩ : GlobalTheory.AdelicU.intLoc F E v) hmem
       convert hs using 1
       funext k
-      simp only [hU, Pi.smul_apply, smul_eq_mul, Submodule.coe_smul]
+      simp only [hU, Pi.smul_apply, smul_eq_mul]
       change c * (1 : Fv F v) ⊗ₜ[F] (i * j) * (1 : Fv F v) ⊗ₜ[F] u k
         = c * (1 : Fv F v) ⊗ₜ[F] j * (1 : Fv F v) ⊗ₜ[F] (i * u k)
       rw [mul_assoc, mul_assoc, Algebra.TensorProduct.tmul_mul_tmul, Algebra.TensorProduct.tmul_mul_tmul,

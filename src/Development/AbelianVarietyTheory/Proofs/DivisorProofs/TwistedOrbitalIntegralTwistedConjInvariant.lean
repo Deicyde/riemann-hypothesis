@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.GaloisRepOfPolarizedCuspidal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.SimpleTwistedTraceFormulaStable
 open NumberField IsDedekindDomain Matrix Polynomial Filter GlobalTheory.CuspRep GlobalTheory.PRep Formalism.UG Formalism.BasicNotions GlobalTheory.UnitaryBC GlobalTheory.BCT
 open scoped Classical TensorProduct
 
@@ -67,7 +68,7 @@ theorem twCent_conj (θ : G →* G) (δ g : G) :
     GlobalTheory.BCT.twCent θ (g⁻¹ * δ * θ g) = (GlobalTheory.BCT.twCent θ δ).map (MulAut.conj g⁻¹).toMonoidHom := by
   ext x
   rw [Subgroup.mem_map_equiv]
-  have e : (MulAut.conj g⁻¹).symm x = g * x * g⁻¹ := by simp [MulAut.conj_symm_apply]
+  have e : (MulAut.conj g⁻¹).symm x = g * x * g⁻¹ := by simp
   rw [e, mem_twCent, mem_twCent, map_mul, map_mul, map_inv]
   constructor
   · intro h
@@ -165,7 +166,7 @@ def dcEquiv (θ : G →* G) (K : Subgroup G) (δ g : G) :
     rw [DoubleCoset.eq]
     refine ⟨g⁻¹ * t⁻¹ * g, ?_, k⁻¹, K.inv_mem hk, by group⟩
     rw [twCent_conj]
-    exact ⟨t⁻¹, (GlobalTheory.BCT.twCent θ δ).inv_mem ht, by simp [MulAut.conj_apply]⟩
+    exact ⟨t⁻¹, (GlobalTheory.BCT.twCent θ δ).inv_mem ht, by simp⟩
   right_inv q := by
     obtain ⟨t, ht, k, hk, he⟩ := (DoubleCoset.eq _ _ _ _).1
       (DoubleCoset.out_eq' (GlobalTheory.BCT.twCent θ (g⁻¹ * δ * θ g)) K (DoubleCoset.mk _ K (g⁻¹ * Quotient.out q))).symm

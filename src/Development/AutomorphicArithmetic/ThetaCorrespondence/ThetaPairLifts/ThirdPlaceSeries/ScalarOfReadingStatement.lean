@@ -1,6 +1,4 @@
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ReadingScalarsIntegralStatement
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.CohomologicalCsdTempered
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.RowAtOfRatStep
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.ScalarOfReading
 
 set_option synthInstance.maxHeartbeats 200000

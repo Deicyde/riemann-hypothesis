@@ -1,6 +1,6 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.ModelKStep
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.FramePfLoc
-import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.FramePfPt
 
 noncomputable section
 
@@ -81,7 +81,7 @@ theorem levN_smul_alg (i : ZMod n) (ζ : LL) (o : O) (x : ↥(W.N T)) (k : ℤ) 
   · intro j hj
     rw [AlgHom.commutes]
     first
-    | (simp [hj]; done)
+    | (simp; done)
     | (simp [PowerSeries.algebraMap_apply, PowerSeries.coeff_C, hj]; done)
     | (simp [PowerSeries.algebraMap_apply', PowerSeries.coeff_C, hj]; done)
 

@@ -1,5 +1,4 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.MixedFieldContraction.ContractMixedFieldStatement
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Intersections.IsMultiHomogRenameCoordPow
 import GroundTheory.HeightsAndTheta.Heights.Intersections.ArithVarZero
 set_option maxSynthPendingDepth 1

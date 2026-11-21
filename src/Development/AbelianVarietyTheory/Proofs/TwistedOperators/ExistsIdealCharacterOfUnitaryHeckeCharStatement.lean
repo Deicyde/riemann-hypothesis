@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsIdealCharacterOfUnitaryHeckeChar
-import Mathlib
-import Formalism.LocalToGlobal.UnitaryNorms.IsUnitaryNormOf
 
 open NumberField IsDedekindDomain NumberField.mixedEmbedding Classical
 open scoped ContDiff

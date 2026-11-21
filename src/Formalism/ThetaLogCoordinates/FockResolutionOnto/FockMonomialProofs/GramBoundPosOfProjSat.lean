@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.FockResolutionOnto.StatementH
 import Formalism.ThetaLogCoordinates.FockResolutionOnto.FockMonomialProofs.GramBoundUnconditionalOfSat
 import Formalism.ThetaLogCoordinates.FockResolutionOnto.FockMonomialProofs.Vanish

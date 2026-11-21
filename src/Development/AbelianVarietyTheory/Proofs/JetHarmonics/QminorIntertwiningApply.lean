@@ -1,5 +1,7 @@
-import Mathlib
-import Formalism.RealPlaceAnalysis.ThirdArithmeticHolds
+import BuildAid.Leniency.Open
+import Formalism.RealPlaceAnalysis.StatementE
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
 open Formalism.REAL Finset
 namespace GlobalTheory
 

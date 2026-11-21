@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContDiffOnDbarCoefficients
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsTypeIsRealConst
 open Set Filter Topology
 open ReciprocityTheory.L2DbarEstimates (V)
 open GlobalTheory.GoodMetric (coordVec)

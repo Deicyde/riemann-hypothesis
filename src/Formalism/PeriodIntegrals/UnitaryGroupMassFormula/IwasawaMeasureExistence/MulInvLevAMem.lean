@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IwasawaMeasureExistence.EqOneOfUniLevi
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IwasawaMeasureExistence.ContinuousProjFInv
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IwasawaMeasureExistence.ParabolicDecomposition
 
 noncomputable section
 
@@ -38,7 +41,7 @@ theorem gramV (v : InfinitePlace I.F) : (Formalism.UG.cT (starRingEnd ℂ) (Fr.f
             (Bm Fr).map (I.φ v) := by
           rw [hJm]; simp only [WittFrame.frV, conjTranspose_mul, Matrix.mul_assoc]
       _ = (Gm Fr).map (I.φ v) := by
-          rw [e1, rrg_P_mul_inv, hc]; simp only [Gm, Matrix.map_mul, Matrix.mul_one, Matrix.one_mul, Matrix.mul_assoc]
+          rw [e1, rrg_P_mul_inv, hc]; simp only [Gm, Matrix.map_mul, Matrix.mul_one, Matrix.mul_assoc]
   rw [cT_star, key, submatrix_map]
   congr 1
   exact Gm_sub Fr

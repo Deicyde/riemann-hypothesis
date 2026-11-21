@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.PrimesEffectiveChebotarev
-import Formalism.SharpRestriction.LevelLetterCocycles.StatementFamilies.ArithmeticCylinders
-import Formalism.PadicSubsetSums.StableGradedCounts.FixedByAutomorphismInField
-import Formalism.PadicSubsetSums.StableGradedCounts.IRRGoodDualStable
+import Formalism.CyclotomicNorms.NonsquarefreeBounds.NonsquarefreeMonicBoundHolds
+import Formalism.SharpRestriction.LevelLetterCocycles.ResidualIrreducibleOfTheoremThreePrime
 
 noncomputable section
 
@@ -207,7 +207,7 @@ theorem tens_mul_plc (a : ∀ i, MonoidAlgebra ℂ (G i)) (i : ι) (b : MonoidAl
   by_cases hj : j = i
   · subst hj
     simp
-  · simp [Function.update_apply, hj]
+  · simp [hj]
 
 theorem plc_central (i : ι) (a : MonoidAlgebra ℂ (G i)) (h : ∀ x, a * x = x * a)
     (x : MonoidAlgebra ℂ (∀ i, G i)) : plc i a * x = x * plc i a := by
@@ -216,7 +216,7 @@ theorem plc_central (i : ι) (a : MonoidAlgebra ℂ (G i)) (h : ∀ x, a * x = x
   by_cases hj : j = i
   · subst hj
     simpa using h y
-  · simp [Function.update_apply, hj]
+  · simp [hj]
 
 theorem mapDomain_mulSingle (i : ι) (a : MonoidAlgebra ℂ (G i)) :
     MonoidAlgebra.ofCoeff (Finsupp.mapDomain (fun h => Pi.mulSingle (M := G) i h) a.coeff) = plc i a := by
@@ -340,7 +340,7 @@ theorem onC_eGood (hid : ∀ i p, E i p * E i p = E i p) (hcen : ∀ i p a, E i 
       simp only [hid]
       congr 1
       funext j
-      by_cases hj : j = i <;> simp [Function.update_apply, hj]
+      by_cases hj : j = i <;> simp [hj]
     have hcp : plc i (E i (p i)) ∈ Subalgebra.center ℂ (MonoidAlgebra ℂ (∀ i, G i)) := by
       rw [Subalgebra.mem_center_iff]
       intro y

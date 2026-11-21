@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.FiniteMinimalPrimes
+import BuildAid.Leniency.Open
+import ReciprocityTheory.AnalyticForms.RegularLocalRings.JacChart
 
 noncomputable section
 

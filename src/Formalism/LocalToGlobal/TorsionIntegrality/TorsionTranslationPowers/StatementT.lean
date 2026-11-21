@@ -1,4 +1,5 @@
-import Formalism.LocalToGlobal.TorsionIntegrality.TorsionTranslationPowers.StatementU
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.TorsionIntegrality.TorsionTranslationPowers.IsTransSys
 
 open PowerSeries
 

@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Divisibility.DefGroup
 import Formalism.LocalToGlobal.GaloisLevelStructure.DefsLevel
-import ReciprocityTheory.Automorphisms.SplitCoeAlgebraMap
 open NumberField IsDedekindDomain Formalism.L2 Formalism.L2.DIV
 
 namespace GlobalTheory
@@ -47,7 +46,7 @@ theorem reduction_blockTri_detDD : ∀ (L : Type) [Field L] [NumberField L] [IsC
     rw [← Matrix.det_submatrix_equiv_self e]
     congr 1
     ext a b
-    simp only [Matrix.submatrix_apply, Matrix.map_apply, M]
+    simp only [Matrix.submatrix_apply, M]
     exact (hg (e a).1 (e b).1).2
 
 end GlobalTheory

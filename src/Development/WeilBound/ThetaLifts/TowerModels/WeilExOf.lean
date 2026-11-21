@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.TowerModels.DetHerm
 import Development.WeilBound.ThetaLifts.TowerModels.TwistedSums.StandardTraceAdelicAddCharLocalComponentNeOne
 import Development.WeilBound.ThetaLifts.TowerModels.Hypotheses2
+import Development.WeilBound.ThetaLifts.TowerModels.PlaneHerm
 
 noncomputable section
 

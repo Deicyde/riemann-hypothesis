@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CharacterIdempotents.Scalar
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.MemRootsBarXSubC
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.GreenCuspidalIff
 
 noncomputable section
 namespace GlobalTheory.Published.GreenModel

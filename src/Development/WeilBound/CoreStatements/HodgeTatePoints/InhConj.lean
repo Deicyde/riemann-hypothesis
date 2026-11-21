@@ -1,6 +1,6 @@
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.CurveSemiAbelianConjecture
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.SeparableFormGroupElementFixesUniquePositiveLine
-import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.Proportional
+import BuildAid.Leniency.Open
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsFFCurve
+import GroundTheory.FunctionField.DivisorDegree
 
 noncomputable section
 

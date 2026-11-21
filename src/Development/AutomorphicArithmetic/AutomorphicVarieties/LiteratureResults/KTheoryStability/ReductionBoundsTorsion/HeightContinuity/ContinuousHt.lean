@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.KTheoryStability.ReductionBoundsTorsion.HeightContinuity.MatrixTupleDistortionPos
+import Development.AutomorphicArithmetic.AutomorphicVarieties.HermiteNormalForms.Detlow
 
 open NumberField Matrix UpperTheory.V.KT
 open scoped ComplexOrder

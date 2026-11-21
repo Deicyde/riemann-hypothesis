@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ArithmeticGeometry.AbelianVarieties.DivisionPoints
+import Mathlib.AlgebraicGeometry.EllipticCurve.DivisionPolynomial.Degree
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
 
 namespace GroundTheory.Arith.Abelian
 
@@ -185,7 +189,7 @@ theorem card_zsmul_eq_zero {n : ℤ} (hn : (n : F) ≠ 0) :
   rcases (by omega : n.natAbs = 1 ∨ 2 ≤ n.natAbs) with h1 | h2
   · have key : ∀ P : W.toAffine.Point, n • P = 0 ↔ P = 0 := by
       intro P
-      rcases Int.natAbs_eq_iff.mp h1 with h | h <;> rw [h] <;> simp [neg_zsmul]
+      rcases Int.natAbs_eq_iff.mp h1 with h | h <;> rw [h] <;> simp
     rw [h1, one_pow, Nat.card_eq_one_iff_exists]
     exact ⟨⟨0, zsmul_zero n⟩, fun P => Subtype.ext ((key P.1).mp P.2)⟩
   have hinf := infinite_of_isSepClosed F
@@ -249,7 +253,7 @@ theorem card_zsmul_eq_zero {n : ℤ} (hn : (n : F) ≠ 0) :
     by_contra hcon
     rw [not_or, not_not, not_not] at hcon
     obtain ⟨g1, g2⟩ := hcon
-    simp only [G, derivative_sub, derivative_C_mul, map_sub, map_mul, aeval_C] at g1 g2
+    simp only [G, derivative_C_mul, map_sub, map_mul, aeval_C] at g1 g2
     have hΨa : aeval a (W.ΨSq n) ≠ 0 := by
       intro h0
       rw [h0, mul_zero, sub_zero] at g1

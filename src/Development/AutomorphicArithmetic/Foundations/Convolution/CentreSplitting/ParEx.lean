@@ -1,7 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.SInfEx
 import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.SSatEx
 import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.SSatUnit
-import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.DefsObj
 import Development.AutomorphicArithmetic.Foundations.Convolution.ASmooth
 
 open MeasureTheory NumberField IsDedekindDomain

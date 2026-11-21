@@ -1,11 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.DualGramInterpGram
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsFrPtOfEigFrame
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PtEqOfPtOfFrameEq
 import Development.AbelianVarietyTheory.Proofs.GenericRegularity.CabsDiagEqOne
 import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.NonemptyUnifWitnessDataOfIsUnf
 import Formalism.LocalToGlobal.ProjectiveLattices.RecConj
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.OrthoStatementPf
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.KaUnfoldPfB
 
 set_option autoImplicit false
 
@@ -90,7 +91,7 @@ theorem hermForm_eq_of_orth {i : Fin W.F.n} {P : (W.F.Di i).La →+ (Fin W.g →
   ext b b'
   rw [of_apply, ← key, ← UnitDet.hermForm_mulVec, hcol, hcol]
   have hi : ∀ j j' : Fin (Dw.mult τ), W.e.symm ⟨τ, j⟩ = W.e.symm ⟨τ, j'⟩ ↔ j = j' := fun j j' => by simp
-  simp [hermForm, smul_mulVec, sum_dotProduct, dotProduct_sum, star_sum, Pi.single_apply, hi, mul_apply, mul_comm]
+  simp [hermForm, smul_mulVec, dotProduct_sum, star_sum, Pi.single_apply, hi, mul_apply, mul_comm]
 
 end Riemann
 
@@ -235,7 +236,7 @@ theorem IsHodgeFrame.unitary (hf : IsHodgeFrame U y f) (hg : IsHodgeFrame U y g)
   rw [h6.co τ hg' hx] at key
   have k2 : ((f.co g τ).map ψ)ᴴ * (f.co g τ).map ψ = 1 := smul_right_injective _ h7 (key.symm.trans (by
     ext b b'
-    simp [hermForm, smul_mulVec, Pi.single_apply, one_apply, eq_comm]))
+    simp [hermForm, one_apply, eq_comm]))
   rcases h1 with rfl | rfl
   · exact k2
   · have := congrArg (fun M => M.map (starRingEnd ℂ)) k2

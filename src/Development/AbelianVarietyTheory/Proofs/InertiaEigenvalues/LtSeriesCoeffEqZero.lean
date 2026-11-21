@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.WeilDeligneCrystalline.ColmezLT
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.EqZeroOfInAMul
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsKerPowDvd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LubinTateEndomorphismUniqueStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LubinTatePeriodGaloisExpansionStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LubinTatePeriodThetaKernelStatement

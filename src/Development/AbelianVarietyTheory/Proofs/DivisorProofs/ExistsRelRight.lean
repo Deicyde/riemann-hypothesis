@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.GrNormCompCast
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UltrametricCoefficientBound
 open CategoryTheory Limits AlgebraicGeometry IsLocalRing NumberField
 open ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.BasicNotions Formalism.MainNotions Formalism.BasicNotions.DV Formalism.L2.Pj Formalism.L2.Geo
@@ -33,7 +33,7 @@ theorem repr_proj {R M N ι κ : Type} [CommRing R] [AddCommGroup M] [Module R M
     · obtain ⟨k', rfl⟩ := hj
       simp [h, Finsupp.single_apply, hσ.eq_iff]
     · have : j ≠ σ k := fun e => hj ⟨k, e.symm⟩
-      simp [h0 j hj, Finsupp.single_apply, this]
+      simp [h0 j hj, this]
   exact LinearMap.congr_fun this u
 
 theorem sum_extend {C ι κ : Type} [Field C] [Fintype ι] [Fintype κ] (σ : κ → ι) (hσ : Function.Injective σ)

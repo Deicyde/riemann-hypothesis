@@ -1,7 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.DilationUnipotentWeylMeasure
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.BetaSesquilinearity
 import Formalism.HermitianCurvature.StatementU
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.CayleyForm
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
+import Mathlib.Analysis.Normed.Lp.lpSpace
 
 open Matrix Filter Topology
 

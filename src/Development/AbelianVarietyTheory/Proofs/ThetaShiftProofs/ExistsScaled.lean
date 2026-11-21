@@ -1,15 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.ArchimedeanThetaValues.ModelsAt
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.IsLocalRingDual
 import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.IsIntegralDiscrMulOfTraceInt
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.ExistsLamLettersIsGood
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.ExistsLamObjGoodOfCmObj
-import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.IsFibreOfIffIsPolFibre
-import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.LieAlgebraEigenDecompositionCMSignatureStatement
 import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.ExistsIsSplit
 import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.ArcPointTangentPart
 import Development.AbelianVarietyTheory.Proofs.GenericRegularity.LieBasisCoordinatesBijectiveTangent
-import Development.AbelianVarietyTheory.Statements.PrincipalLattices.DimPosOfHasType
 
 open AlgebraicGeometry CategoryTheory CategoryTheory.Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField IsDedekindDomain
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.FD ReciprocityTheory.ChartRestriction.G.FreeQuotientRank
@@ -32,7 +28,7 @@ theorem exists_scaled {R : Type} [CommRing R] [IsDomain R] {D₀ : Out.DegPre R}
     show spMap (TrivSqZeroExt.fstHom R R R).toRingHom ≫ spMap (algebraMap R (DualNumber R)) = 𝟙 _
     rw [spMap_comp_spMap]
     have : (TrivSqZeroExt.fstHom R R R).toRingHom.comp (algebraMap R (DualNumber R)) = RingHom.id R := by
-      ext a; simp [TrivSqZeroExt.algebraMap_eq_inl]
+      ext a; simp
     rw [this]
     exact Spec.map_id (CommRingCat.of R))
   have hz : z ≫ sc ≫ w = 1 := by

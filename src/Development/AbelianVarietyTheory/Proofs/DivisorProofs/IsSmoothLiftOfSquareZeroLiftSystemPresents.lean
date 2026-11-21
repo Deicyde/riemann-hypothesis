@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.SurjectiveOfIsPullbackSqZero
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsNoetherianRingDualNumber
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.AbelianHodgeDeRham
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.BijectiveCechDeRhamComparisonDegreeOne
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open CategoryTheory AlgebraicGeometry KaehlerDifferential DividedPowers ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory.CatCoh GlobalTheory.Cris GlobalTheory.CechDR GlobalTheory.DeRham GlobalTheory.SqLift GlobalTheory.LiftSys GlobalTheory.Published
 attribute [local instance] Over.cartesianMonoidalCategory
 
@@ -93,7 +92,7 @@ theorem Presents.preimage_eq (hI : I ^ 2 = 0) {S : Sys I π s₀} {X : Scheme.{0
     (hc : IsClosedImmersion i) (P : S.Presents s i) [∀ U, IsOpenImmersion (P.y U)] (U : AffOp X₀) :
     i ⁻¹ᵁ (P.y U).opensRange = (affPt s₀ U.unop).opensRange := by
   ext x
-  simp only [Scheme.Hom.mem_preimage, Scheme.Hom.coe_opensRange, Set.mem_range]
+  simp only [Scheme.Hom.coe_opensRange, Set.mem_range]
   constructor
   · rintro ⟨w, hw⟩
     obtain ⟨z, rfl⟩ := spMap_p_surjective hI S U w

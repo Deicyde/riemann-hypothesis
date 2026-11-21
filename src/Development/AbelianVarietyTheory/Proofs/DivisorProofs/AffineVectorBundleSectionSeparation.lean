@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.RestrictPullbackIsoHomAppPullbackSections
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToBidualNaturalityDualSheafTranspose
+import Mathlib.AlgebraicGeometry.QuasiAffine
 open CategoryTheory AlgebraicGeometry
 
 namespace GlobalTheory.VB

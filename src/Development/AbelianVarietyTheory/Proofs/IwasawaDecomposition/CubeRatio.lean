@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsRigFr
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsFrRatio
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GaugeUniqPf
 
 set_option autoImplicit false
 

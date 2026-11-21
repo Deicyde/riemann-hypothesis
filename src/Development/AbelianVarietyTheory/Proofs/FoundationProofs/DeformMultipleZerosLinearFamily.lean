@@ -1,6 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.NewtonPowerSeriesSurjectiveLinearizationSolutionStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.PowerSeriesTaylorSubstFirstOrderStatement
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.PowerSeries.Derivative
+import Mathlib.RingTheory.SimpleRing.Principal
 
 open Polynomial
 
@@ -159,7 +164,7 @@ theorem deform : ∀ (k J I : Type) [Field k] [CharZero k] [Fintype J] [Fintype 
 
     intro x h m hm hx0 e
     rcases e with _ | ⟨i, l⟩
-    · simp only [sys, lin, linFun, LinearMap.coe_mk, AddHom.coe_mk, Sum.elim_inl]
+    · simp only [sys, lin, linFun, LinearMap.coe_mk, AddHom.coe_mk]
       have heq : ∑ j, (x (Sum.inl j) + PowerSeries.X ^ m * h (Sum.inl j)) * ξ j - ∑ j, x (Sum.inl j) * ξ j
           - PowerSeries.X ^ m * PowerSeries.C (∑ j, PowerSeries.constantCoeff (h (Sum.inl j)) * PowerSeries.constantCoeff (ξ j))
           = PowerSeries.X ^ m * (∑ j, h (Sum.inl j) * ξ j - PowerSeries.C (∑ j, PowerSeries.constantCoeff (h (Sum.inl j)) * PowerSeries.constantCoeff (ξ j))) := by

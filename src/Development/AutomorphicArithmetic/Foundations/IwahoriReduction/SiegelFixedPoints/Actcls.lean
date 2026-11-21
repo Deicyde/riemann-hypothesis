@@ -1,9 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.IwahoriReduction.SiegelFixedPoints.IsThBIff
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsLamOfLSmulIff
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsLamFROfIsLamF
 import Development.AbelianVarietyTheory.Definitions.Foundations.ActWBOfInvariant
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ThetaLatticeDiamondAction
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IsCuspFunctionalValueModPrimePowDiamondIndepende
+import Development.AbelianVarietyTheory.Definitions.Foundations.LiftSLMapMulInvMem
 
 open scoped MatrixGroups Matrix
 open GlobalTheory.KZ GlobalTheory.K4 GlobalTheory.Glue GlobalTheory.KummerEisensteinGalois UpperTheory.Kd.L
@@ -114,7 +115,7 @@ private theorem sum_congr_conj (X : Tower Ω ε) (l : ℕ) [Fact l.Prime] {n N M
     (MulAut.conj (Matrix.SpecialLinearGroup.map (Int.castRingHom (ZMod M)) g₀)⁻¹).toEquiv
   have he : ∀ γ, e γ = (Matrix.SpecialLinearGroup.map (Int.castRingHom (ZMod M)) g₀)⁻¹ * γ *
       Matrix.SpecialLinearGroup.map (Int.castRingHom (ZMod M)) g₀ := fun γ => by
-    simp [e, MulAut.conj_apply]
+    simp [e]
   have hmem : ∀ γ, γ ∈ S ↔ e γ ∈ S := by
     intro γ
     rw [hS, hS, he]

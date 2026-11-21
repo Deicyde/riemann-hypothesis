@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SmoothReal
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.AdelicUnitaryRealPointsStructureRealPlaces
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HolomorphicFormFrameExpansionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BoundedSectionInSpanOfGapStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AutomorphicExpansionInDictionaryStatement

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Uniformization.PointEqOfSubsingleton
 
 set_option autoImplicit false
@@ -150,7 +151,7 @@ theorem not_exists_even_twistSym_one :
     apply e.injective
     rw [map_inv, MulEquiv.apply_symm_apply]
     ext
-    simp [t]
+    simp
   have hc : (chV t 1).val = -1 := by simp [chV, t, e]
   obtain ⟨z⟩ : Nonempty (𝟙_ (Over (Spec (CommRingCat.of ℚ)))).left := ⟨IsLocalRing.closedPoint ℚ⟩
   obtain ⟨J, hJ⟩ := exists_good_pt (((CP.triv (splitTorus (Spec (CommRingCat.of ℚ)) ℤ)).twistSym 1).L.isLB) z
@@ -235,7 +236,7 @@ theorem TQ.Desc.nonempty_biTriv {Q : TQ G X} {P : CP G} (D : Q.Desc P) : Nonempt
     have o2 : Oε 2 = -1 := rfl
     have o3 : Oε 3 = 1 := rfl
     rw [k0, k1, k2, k3, o0, o1, o2, o3] at e1
-    simp only [zpow_one, zpow_neg_one, Category.comp_id] at e1
+    simp only [zpow_one, zpow_neg_one] at e1
     exact eq_inv_of_mul_eq_one_right e1.symm
   refine ⟨⟨a, ha, ?_, ?_⟩⟩
   · intro T t t' x z J' hJ'
@@ -263,7 +264,7 @@ theorem TQ.Desc.nonempty_biTriv {Q : TQ G X} {P : CP G} (D : Q.Desc P) : Nonempt
 private theorem gs_id_appLE_eq_gs {Y Z : Scheme.{0}} (f : Z ⟶ Y) (U : Y.Opens) (h : ⊤ ≤ f ⁻¹ᵁ U) (a : Γ(Y, U))
     (z : Z) : gs (𝟙 Z) z ⊤ ((f.appLE U ⊤ h).hom a) = gs f z U a := by
   rw [gs_eq (𝟙 Z) z ⊤ (by simp), gs_eq f z U (h (by simp))]
-  simp only [Scheme.Hom.appLE, CommRingCat.hom_id, RingHom.id_apply, CommRingCat.comp_apply]
+  simp only [Scheme.Hom.appLE, CommRingCat.comp_apply]
   exact Z.presheaf.germ_res_apply (homOfLE h) z _ _
 
 private theorem gs_id_appTop_eq_gs {Y Z : Scheme.{0}} (f : Z ⟶ Y) (a : Γ(Y, ⊤)) (z : Z) :
@@ -362,7 +363,7 @@ private theorem exists_tq_i_eq_of_isAbelianScheme {R : Type} [CommRing R] [IsDom
       LB.wchart D.P.L (D.Oφ ((Over.map (thick R I e)).map g.q ≫ DegPre.prBe I D e) χ) j := hle (h₂ (mz z))
   erw [gen_trans ht _ z m1 (hJ.mem _ ((t' ≫ g.i) * g').left), gen_trans ht _ z m2 (hJ.mem _ g'.left)]
   have hv := hc
-  simp only [val, e12] at hv
+  simp only [val] at hv
   simp only [e12]
   have etr : trF (D.Oφ ((Over.map (thick R I e)).map g.q ≫ DegPre.prBe I D e) χ) Oinvε ((t' ≫ g.i) * g').left z j
       (fun k => J (g'.left ≫ D.Oφ ((Over.map (thick R I e)).map g.q ≫ DegPre.prBe I D e) χ k)) =

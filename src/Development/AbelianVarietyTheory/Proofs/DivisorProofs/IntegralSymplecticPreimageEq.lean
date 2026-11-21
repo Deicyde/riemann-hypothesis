@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExtMapApply
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SiegelReframe
 open Matrix MeasureTheory Set GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe GlobalTheory.TorsionForm
 open scoped ContDiff
 
@@ -11,7 +11,7 @@ theorem det_sq_eq_one {g : ℕ} (γ : Sp g) : γ.mat.det ^ 2 = 1 := by
 
 theorem vecMulLinear_eq_toLin' {g : ℕ} (A : Matrix (Fin g ⊕ Fin g) (Fin g ⊕ Fin g) ℝ) :
     Matrix.vecMulLinear A = Matrix.toLin' Aᵀ := by
-  ext x i; simp [Matrix.vecMul_transpose, Matrix.mulVec_transpose]
+  ext x i; simp
 
 theorem measurePreserving_vecMul {g : ℕ} (γ : Sp g) :
     MeasurePreserving (fun x : Fl g => x ᵥ* γ.mat) volume volume := by

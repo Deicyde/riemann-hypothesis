@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CharacterGerms.BlockMembershipNormOne
+import Formalism.LocalToGlobal.CharacterGerms.RowTieAdm
 
 noncomputable section
 

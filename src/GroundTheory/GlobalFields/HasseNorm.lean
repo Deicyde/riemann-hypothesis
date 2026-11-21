@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.SecondInequality.Cyclic
-import GroundTheory.GlobalFields.IdeleGroups.LocalNormsEverywhere
-import GroundTheory.GlobalFields.IdeleGroups.GaloisOnAdeles.Action
 
 namespace GroundTheory.Global
 

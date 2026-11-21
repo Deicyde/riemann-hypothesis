@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.TopDensNonnegOfKappa
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LiftMemMatrixAlgebra
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.AdmissibleRecOfAdmissibleWord
@@ -24,7 +26,7 @@ theorem ofWord_x_congr (L : R.LevelData A r) (st st' : Fr.Start A) (hx : st'.x =
   | nil => simp [Fr.ofWord, Fr.Start.frame, hx]
   | cons l w ih =>
     simp only [Fr.ofWord]
-    split_ifs <;> simp [Fr.FrameData.plus, Fr.FrameData.minus, ih, hx]
+    split_ifs <;> simp [Fr.FrameData.plus, Fr.FrameData.minus, ih]
 
 theorem ofWord_q_congr (L : R.LevelData A r) (st st' : Fr.Start A) (hq : st'.q = st.q) (w : List (Letter ℂ S)) :
     (Fr.ofWord L st' w).q = (Fr.ofWord L st w).q := by
@@ -32,7 +34,7 @@ theorem ofWord_q_congr (L : R.LevelData A r) (st st' : Fr.Start A) (hq : st'.q =
   | nil => simp [Fr.ofWord, Fr.Start.frame, hq]
   | cons l w ih =>
     simp only [Fr.ofWord]
-    split_ifs <;> simp [Fr.FrameData.plus, Fr.FrameData.minus, ih, hq]
+    split_ifs <;> simp [Fr.FrameData.plus, Fr.FrameData.minus, ih]
 
 theorem ofWord_xi_congr (L : R.LevelData A r) (st st' : Fr.Start A) (w : List (Letter ℂ S)) (Y : ℂ)
     (hY : st'.xi Y = st.xi Y) : (Fr.ofWord L st' w).xi Y = (Fr.ofWord L st w).xi Y := by
@@ -40,7 +42,7 @@ theorem ofWord_xi_congr (L : R.LevelData A r) (st st' : Fr.Start A) (w : List (L
   | nil => simp [Fr.ofWord, Fr.Start.frame, hY]
   | cons l w ih =>
     simp only [Fr.ofWord]
-    split_ifs <;> simp [Fr.FrameData.plus, Fr.FrameData.minus, ih, hY]
+    split_ifs <;> simp [Fr.FrameData.plus, Fr.FrameData.minus, ih]
 
 theorem ofWord_N (L : R.LevelData A r) (st : Fr.Start A) (w : List (Letter ℂ S)) :
     (Fr.ofWord L st w).N = w.length := by

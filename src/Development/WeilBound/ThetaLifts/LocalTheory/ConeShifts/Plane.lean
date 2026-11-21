@@ -1,4 +1,6 @@
-import Development.WeilBound.ThetaLifts.LocalTheory.ConeShifts.PureCancel
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.ThetaLifts.LocalTheory.ConeShifts.ArchCone
 
 noncomputable section
 

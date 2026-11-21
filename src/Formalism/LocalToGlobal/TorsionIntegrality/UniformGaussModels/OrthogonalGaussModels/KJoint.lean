@@ -1,8 +1,8 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.UniformGaussModels.GoodModelAll
 import Formalism.LocalToGlobal.TorsionIntegrality.TorsionTranslationPowers.AnalyticTransOfAdd
 import Formalism.LocalToGlobal.TorsionIntegrality.RamifiedCurveKernels.PairedSquareJets.Several
 import Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.BinomialSeriesCoefficients.CurveIntegerMultiplicationSeries
-import Formalism.LocalToGlobal.TorsionIntegrality.FrobeniusFibreCurves.LogarithmicSubstitution.InVarAddInVarNeZero
 
 noncomputable section
 open scoped BigOperators

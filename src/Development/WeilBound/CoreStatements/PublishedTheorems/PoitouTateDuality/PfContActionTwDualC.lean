@@ -1,5 +1,5 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.PublishedTheorems.PoitouTateDuality.PtfsDefs
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.PoitouTateNineTermTransgressionZeroApply
 
 noncomputable section
 

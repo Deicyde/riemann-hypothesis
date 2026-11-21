@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ExponentGrids.IntegerShiftClosedExponent
 import Formalism.LocalToGlobal.ExponentGrids.ExponentGridsProofs.ArithmeticBoundCyclicTwo
-import Formalism.LocalToGlobal.Divisibility.NumbersLemmas
 
 open Module NumberField IsDedekindDomain Finset
 open Formalism.DivisionValues (vw conjPl PlOver)

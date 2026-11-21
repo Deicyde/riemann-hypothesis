@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.FinitePrimesUnder
+import BuildAid.Leniency.Open
 import Formalism.PairingDivisors.StatementH
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Algebra.Ring.IsFormallyReal
 open NumberField Polynomial IsDedekindDomain
 open Formalism.DivisionValues (vw lw)
 

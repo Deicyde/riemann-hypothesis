@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AutomorphicArithmetic.LocalEmbeddings.ConsAgree
-import Development.AutomorphicArithmetic.LocalEmbeddings.ConsMatch
-import Development.AbelianVarietyTheory.PublishedTheorems.SemiabelianTori.GeometricallyConnectedSplitTorusAff
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LocalSystemModelMap
 open AlgebraicGeometry CategoryTheory Limits NumberField IsLocalRing
 open ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj GlobalTheory.LocM GlobalTheory.Toroidal GlobalTheory.ShFam GlobalTheory.ShFam.Pad
@@ -46,7 +44,7 @@ private theorem pL_bijective : Function.Bijective (pL m x' hx) := by
     (isTan_tv w).1.trans (Category.assoc _ _ _).symm
   have e : spMap (TrivSqZeroExt.fstHom S S S).toRingHom ≫ spMap (algebraMap S (DualNumber S)) = 𝟙 (Sp S) := by
     rw [← Spec.map_comp, ← Spec.map_id]
-    exact congrArg Spec.map (CommRingCat.hom_ext (RingHom.ext fun x => by simp [TrivSqZeroExt.algebraMap_eq_inl]))
+    exact congrArg Spec.map (CommRingCat.hom_ext (RingHom.ext fun x => by simp))
   refine ⟨tanOf (v := m.1.lift _ _ hw) ⟨m.1.lift_snd _ _ _, m.1.hom_ext ?_ ?_⟩,
     tan_ext (m.1.lift_fst _ _ _)⟩
   · rw [Category.assoc, m.1.lift_fst, (isTan_tv w).2]

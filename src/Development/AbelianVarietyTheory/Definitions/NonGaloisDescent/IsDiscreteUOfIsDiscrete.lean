@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.IsNormalisedOfIsDiscrete
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.DualIsConjByOne
+import Mathlib.Data.Multiset.Functor
 
 noncomputable section
 

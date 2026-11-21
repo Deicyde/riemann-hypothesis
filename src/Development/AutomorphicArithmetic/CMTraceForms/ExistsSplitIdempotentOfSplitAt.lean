@@ -1,5 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CMTraceForms.Places
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.NumberTheory.Padics.Hensel
 
 open NumberField TensorProduct
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Pdiv.AvDefs Formalism.L2.Pj UpperTheory.Depth

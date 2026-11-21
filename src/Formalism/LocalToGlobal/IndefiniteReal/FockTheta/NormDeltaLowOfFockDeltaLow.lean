@@ -1,10 +1,9 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.FockTheta.ConjInvOfReal
 import Formalism.LocalToGlobal.IndefiniteReal.FockTheta.TraceSingleMulSingle
 import Formalism.LocalToGlobal.IndefiniteReal.FockTheta.IntegralTranslate
-import Formalism.LocalToGlobal.IndefiniteReal.FockTheta.SquareNormIntegralNonneg
 import Formalism.LocalToGlobal.IndefiniteReal.FockTheta.ConjPurelyImaginaryGenerator
 import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.ContinuousSplitInv
-import Formalism.LocalToGlobal.IndefiniteReal.FockTheta.DeltaPf
 
 noncomputable section
 

@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiniteDimProductTranslates
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemNilRad
 open Matrix GlobalTheory.TorFin
 open scoped ContDiff
 

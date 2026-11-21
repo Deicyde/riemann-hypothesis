@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.PrimitiveCosets.CoreAtH
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.PrimitiveCosets.PrimRead
 import Development.AutomorphicArithmetic.PrimitiveCosets.CardPsiA
 import Development.AutomorphicArithmetic.PrimitiveCosets.TopsSum

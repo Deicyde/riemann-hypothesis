@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SandwichMaps
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenProjectionQuotientLatticeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSpanningImageLatticeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExteriorPowerSpanOfLatticeStatement

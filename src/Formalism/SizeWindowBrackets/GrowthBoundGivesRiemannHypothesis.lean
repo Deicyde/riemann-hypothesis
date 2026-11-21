@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SizeWindowBrackets.FirstPrimeNeSecondPrime
-import Formalism.SizeWindowBrackets.QuotientSlopeBoundsWith
-import Formalism.SizeWindowBrackets.PowerBoundGivesRiemannHypothesis
+import Formalism.RankGapBounds.MeanBoundSecondForm
 
 open Finset ArithmeticFunction
 

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.PoinStatementPfB
 
 namespace ReciprocityTheory.ChartRestriction.G.AR.Up.PoinPf
@@ -153,7 +155,7 @@ private theorem transpose_mul_mul_map_cc_eq_of_isUStab' {γ : GL (Fin r) E} {G :
     by_cases hb : b = q
     · subst hb
       simp [cc]
-    · simp [cc, hb, Pi.single_apply]
+    · simp [cc, hb]
   have hv : ∀ (j a : Fin r), ((γ : Matrix (Fin r) (Fin r) E) *ᵥ (Pi.single j (1 : E) : Fin r → E)) a =
       (γ : Matrix (Fin r) (Fin r) E) a j := by
     intro j a

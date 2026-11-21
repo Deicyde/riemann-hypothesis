@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.StalkLoc
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HodgeTateWeilUnique
 

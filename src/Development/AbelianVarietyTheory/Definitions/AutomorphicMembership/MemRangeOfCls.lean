@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.PsiCoordExistsUniqueUpToUnitLocal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.BetaAtAddLeftAndDiagEqTwoOrder
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsGoodIntegral
 
@@ -143,7 +143,7 @@ theorem coord_rel (Dg : DegData R (maximalIdeal R)) (r : Dg.toPre.X → R) (hr :
       · fin_cases k
         · exact over_sec _ _
         · exact over_sec (D.c a) (𝟙 _)
-      · simp [ptK]
+      · simp
     rw [map_mul, vs, _root_.mul_one] at e
     exact fin (hur (-a)) (hur a) ((hP _).trans (e.trans (hP _).symm))
 

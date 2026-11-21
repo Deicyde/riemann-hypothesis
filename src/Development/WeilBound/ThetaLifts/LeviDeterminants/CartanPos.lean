@@ -1,9 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LeviDeterminants.MixedModels.AdaptC
 import Development.AutomorphicSpectrum.Proofs.DivisibilityProofs.MMPreservesHM
 import Development.AutomorphicSpectrum.Proofs.TwistedProofs.EqZeroOfPiInf
 import Development.AutomorphicSpectrum.Proofs.TwistedProofs.ExistsAdelePiInf
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.DisjointSpanPerpLat
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ProductFormulaHaar.TrSumOf
 
 noncomputable section
 
@@ -136,7 +137,7 @@ theorem omega_rel (hB : B.IsGood σ) (hX : X.IsHerm σ B r s) (hW : W.IsSkew σ 
 theorem cartan_pos {M θ : Matrix (Fin n) (Fin n) ℂ} (h : IsCartan M θ) (hM : ∀ i j, star (M j i) = M i j) (a : Fin n → ℂ) :
     ∃ p : ℝ, a ⬝ᵥ M *ᵥ star (θ *ᵥ a) = p ∧ (a = 0 → p = 0) ∧ (a ≠ 0 → 0 < p) := by
   have hs : ∀ x, star (θ *ᵥ x) = θ.map star *ᵥ star x := fun x => funext fun i => by
-    simp [Matrix.mulVec, dotProduct, mul_comm]
+    simp [Matrix.mulVec, dotProduct]
   have h1 : a ⬝ᵥ M *ᵥ star (θ *ᵥ a) = (θ *ᵥ a) ⬝ᵥ M *ᵥ star a := by
     conv_lhs => rw [← h.2.1, ← Matrix.mulVec_mulVec, ← hs, Matrix.mulVec_mulVec a, h.1, Matrix.one_mulVec, ← Matrix.mulVec_mulVec,
       Matrix.dotProduct_mulVec, Matrix.vecMul_transpose]

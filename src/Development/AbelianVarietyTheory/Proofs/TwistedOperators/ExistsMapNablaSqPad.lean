@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.IrreducibleDistinctUnitary
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.GenericDetPowMulHw
+import Mathlib.Order.Interval.Finset.Box
 open MvPolynomial Formalism.BasicNotions Formalism.GradedWeylDivisibility GlobalTheory.Branching GlobalTheory.GLDuality
 open scoped Matrix
 

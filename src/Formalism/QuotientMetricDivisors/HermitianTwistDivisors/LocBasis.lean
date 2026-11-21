@@ -1,5 +1,16 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.QuotientMetricDivisors.ProdFormula
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.RingTheory.DedekindDomain.PID
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.Ideal.Quotient.HasFiniteQuotients
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open Module NumberField IsDedekindDomain
 

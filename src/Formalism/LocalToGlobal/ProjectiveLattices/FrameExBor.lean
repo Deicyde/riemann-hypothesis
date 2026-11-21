@@ -1,4 +1,6 @@
-import Formalism.LocalToGlobal.ProjectiveLattices.FrameEx
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.ProjectiveLattices.FamilyUniformisationBasePointOrthogonal
 
 noncomputable section
 

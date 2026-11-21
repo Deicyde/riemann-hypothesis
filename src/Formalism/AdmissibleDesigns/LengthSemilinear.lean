@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.AdmissibleDesigns.HigherColumnInvariantsBound
 import Formalism.AdmissibleDesigns.InertiaActsTrivially
 import Formalism.AdmissibleDesigns.SelfGood

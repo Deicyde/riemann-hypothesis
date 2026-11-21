@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.RootWeights.IsotypicProjectorTraceFormula
+import Formalism.SharpRestriction.GrowthBounds.RootWeights.InvariantProjectionExtremalFormula
 
 namespace Formalism.MainNotions.G.GLWeightTheory
 

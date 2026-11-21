@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.CharacterColumnKernels.StatementMF
 import Formalism.CharacterColumnKernels.IdempotentNormalForms.LengthKerOfDetEqZero
+import Mathlib.Algebra.Module.PID
+import Mathlib.LinearAlgebra.FreeProduct.Basic
 
 open Module IsDiscreteValuationRing
 

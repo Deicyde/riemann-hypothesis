@@ -1,7 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.ExistsInertiaCharpolyFactorOfTameType
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.IsobaricDiscreteSelfDualStrongMultiplicityOne
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.RankOneUnitary
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.LevelLetterCocycles.SumRepresentations
 
 noncomputable section
 

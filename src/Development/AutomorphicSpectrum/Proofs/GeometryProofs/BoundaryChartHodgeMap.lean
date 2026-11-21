@@ -1,23 +1,12 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.BdryChart
-import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.IsPshLocallyIntegrableStatement
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.FlatDegree
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.NineGeoU
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ExistsUniqueLeftBasisCoordsAdicCompletion
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.InteriorPointLatticeDataStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HodgeGramPullbackIff
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsLinearLiftOfAdditiveFamily
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExponentialSurjectiveSemiabelian
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.PeriodLatticeDiscreteFree
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.IsDerivAt0CompLinMap
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HodgeFormOfIsHodgeGram
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HodgeHermitianFormExists
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.InteriorPointPolarised
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsLieModel
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.VerticalDerivativeInCoordinates
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.TorsionEqAndWeilIsOfIsHolTo
-import Development.AbelianVarietyTheory.Proofs.ThetaLawProofs.ExistsHolUnifReparam
-import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.SmulPeriodMapMkZeroFstEqNegForm
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField Matrix Filter Topology
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi
 open GroundTheory.Heights₂.Heights.LowerBoundFree GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Cusp
@@ -369,14 +358,14 @@ theorem exists_unif_of_interior : Top.Given → ∀ (E : Type) [Field E] [Number
       ext k
       by_cases h : k = c
       · subst h; simp
-      · simp [Pi.single_apply, h]
+      · simp [h]
   have hs : ∀ (Q : Matrix (Fin C.g) (Fin C.g) ℂ) c d,
       hermForm Q (Pi.single c 1) (Pi.single d 1) = Q c d := fun Q c d => by
     have : star (Pi.single d 1 : Fin C.g → ℂ) = Pi.single d 1 := by
       ext k
       by_cases h : k = d
       · subst h; simp
-      · simp [Pi.single_apply, h]
+      · simp [h]
     simp [hermForm, this]
   have hG1 := (hR C.g _ w (Matrix.of fun c d => (Real.pi : ℂ) * hermForm Hm
     (fun k => C.ψ b ((Pi.single c 1 : Fin C.g → C.R) k)) (fun k => C.ψ b ((Pi.single d 1 : Fin C.g → C.R) k))) hvv).2

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.CurveLocInst
 import Development.AbelianVarietyTheory.Proofs.GenericRegularity.FinrankHostDivTwo
 

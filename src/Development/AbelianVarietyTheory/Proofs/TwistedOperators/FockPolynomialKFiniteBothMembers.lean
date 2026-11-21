@@ -1,7 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.Divisibility.SchurIrreducible
-import Formalism.LocalToGlobal.BesselHermitianTheta.DefsReal
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsFockIPOfFockData
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.DataTheta
 
 open Formalism.BasicNotions.TH Formalism.MainNotions.SchurIrreducible GlobalTheory.FockAlg
 

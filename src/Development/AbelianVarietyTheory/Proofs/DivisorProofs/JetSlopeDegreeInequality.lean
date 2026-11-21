@@ -1,8 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SecJets4
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.MatrixLemma
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.AbsoluteSiegel
-import ReciprocityTheory.GeometryOfNumbers.LatticeCovolumes.ArakelovDegreeEqDegreeOfFamily
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeSpanIntersectionSubspaceStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinrankInfKerAddOneOfNeZeroStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SiegelLemmaSmallVectorStatement
@@ -19,7 +15,7 @@ theorem nrm_pos {K : Type} [Field K] {m : ℕ} (h : HermFam K (Fin m → K)) (σ
     (hx : x ≠ 0) : 0 < h.nrm σ x := by
   have hpd := h.posDef σ 1 ![x] (linearIndependent_unique_iff.2 (by simpa using hx))
   have h0 := hpd.diag_pos (i := 0)
-  simp only [Matrix.diag_apply, Matrix.of_apply, Matrix.cons_val_fin_one] at h0
+  simp only [Matrix.of_apply, Matrix.cons_val_fin_one] at h0
   unfold HermFam.nrm
   exact Real.sqrt_pos.2 (by simpa using (Complex.lt_def.1 h0).1)
 

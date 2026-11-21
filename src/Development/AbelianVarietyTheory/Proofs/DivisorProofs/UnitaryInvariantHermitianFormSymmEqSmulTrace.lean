@@ -1,4 +1,43 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Matrix
 
@@ -75,7 +114,7 @@ lemma Good.diag_factor (hf : Good f) (d : Fin n → ℂ) (hd : ∀ a, star (d a)
     f (Q (e i) (e j)) (Q (e k) (e l)) =
       (d i * d j) * star (d k * d l) * f (Q (e i) (e j)) (Q (e k) (e l)) := by
   have := hf.inv_Q ⟨diagonal d, diag_mem d hd⟩ (e i) (e j) (e k) (e l)
-  simp only [diag_e, Q_smul_left, Q_smul_right, hf.smul_left, hf.smul_right, star_mul] at this
+  simp only [diag_e, Q_smul_left, Q_smul_right, hf.smul_left, hf.smul_right] at this
   rw [star_mul]
   exact this.symm.trans (by ring)
 
@@ -86,14 +125,14 @@ lemma Good.vanish_off (hf : Good f) (i j k l : Fin n)
       (if k = m then 1 else 0) + (if l = m then (1 : ℕ) else 0) := by
     intro m
     have h0 := hf.diag_factor (fun a => if a = m then Complex.I else 1)
-      (by intro a; split_ifs <;> simp [Complex.star_def]) i j k l
+      (by intro a; split_ifs <;> simp) i j k l
     have h1 : (fun a => if a = m then Complex.I else 1) i * (fun a => if a = m then Complex.I else 1) j *
         star ((fun a => if a = m then Complex.I else 1) k * (fun a => if a = m then Complex.I else 1) l)
         = 1 := by
       have := h0.symm.trans (one_mul _).symm
       exact mul_right_cancel₀ hF this
     dsimp only at h1
-    split_ifs at h1 ⊢ <;> simp [Complex.ext_iff, Complex.star_def] at h1 ⊢ <;> norm_num at h1
+    split_ifs at h1 ⊢ <;> simp [Complex.ext_iff] at h1 ⊢ <;> norm_num at h1
   have hi := cnt i
   have hj := cnt j
   simp only [if_true] at hi hj
@@ -128,7 +167,7 @@ lemma Good.diag_eq (hf : Good f) (a b : Fin n) :
   have hk := refl_mem u 1 hu (by simp) (by rw [huu]; ring)
   have hka : (1 - (1:ℂ) • vecMulVec u u) *ᵥ e a = e b := by
     rw [refl_apply]
-    have : u ⬝ᵥ e a = 1 := by simp [u, e, hab, Ne.symm hab]
+    have : u ⬝ᵥ e a = 1 := by simp [u, e, hab]
     rw [this, hu_def]; simp
   have := hf.inv_Q ⟨_, hk⟩ (e a) (e a) (e a) (e a)
   simp only [hka] at this
@@ -145,7 +184,7 @@ lemma Good.off_diag (hf : Good f) (h0 : ∀ a, f (Q (e a) (e a)) (Q (e a) (e a))
   have hk := refl_mem u (2/5) hu (by simp) (by rw [huu]; ring)
   have hki : (1 - (2/5:ℂ) • vecMulVec u u) *ᵥ e i = (3/5 : ℂ) • e i + (-4/5 : ℂ) • e j := by
     rw [refl_apply]
-    have : u ⬝ᵥ e i = 1 := by simp [u, e, hij, Ne.symm hij]
+    have : u ⬝ᵥ e i = 1 := by simp [u, e, hij]
     rw [this, hu_def]; module
   have hQ : Q ((3/5:ℂ) • e i + (-4/5:ℂ) • e j) ((3/5:ℂ) • e i + (-4/5:ℂ) • e j) =
       (9/25:ℂ) • Q (e i) (e i) + (-24/25:ℂ) • Q (e i) (e j) + (16/25:ℂ) • Q (e j) (e j) := by
@@ -154,9 +193,9 @@ lemma Good.off_diag (hf : Good f) (h0 : ∀ a, f (Q (e a) (e a)) (Q (e a) (e a))
     module
   have := hf.inv_Q ⟨_, hk⟩ (e i) (e i) (e i) (e i)
   simp only [hki, hQ, hf.add_left, hf.add_right, hf.smul_left, hf.smul_right, h0,
-    hf.vanish_off i i i j (by simp [hij, Ne.symm hij]), hf.vanish_off i i j j (by simp [hij, Ne.symm hij]),
-    hf.vanish_off i j i i (by simp [hij, Ne.symm hij]), hf.vanish_off i j j j (by simp [hij, Ne.symm hij]),
-    hf.vanish_off j j i i (by simp [hij, Ne.symm hij]), hf.vanish_off j j i j (by simp [hij, Ne.symm hij])]
+    hf.vanish_off i i i j (by simp [hij]), hf.vanish_off i i j j (by simp [hij]),
+    hf.vanish_off i j i i (by simp [Ne.symm hij]), hf.vanish_off i j j j (by simp [hij]),
+    hf.vanish_off j j i i (by simp [Ne.symm hij]), hf.vanish_off j j i j (by simp [Ne.symm hij])]
     at this
   norm_num at this
   exact this
@@ -178,7 +217,7 @@ lemma sym_expand (Z : Matrix (Fin n) (Fin n) ℂ) (hZ : Z.IsSymm) :
   ext a b
   have hs : Z b a = Z a b := by simpa using congrFun (congrFun hZ a) b
   simp [Matrix.sum_apply, Q, vecMulVec_apply, e, Pi.single_apply, Finset.sum_add_distrib,
-    Finset.sum_ite_eq, Finset.sum_ite_eq', Finset.sum_ite_irrel, hs]
+    Finset.sum_ite_eq, Finset.sum_ite_irrel, hs]
 
 lemma Good.sum_left {ι : Type} (hf : Good f) (s : Finset ι) (A : ι → Matrix (Fin n) (Fin n) ℂ) (W) :
     f (∑ x ∈ s, A x) W = ∑ x ∈ s, f (A x) W := by
@@ -199,7 +238,7 @@ lemma Good.vanish (hf : Good f) (h0 : ∀ a, f (Q (e a) (e a)) (Q (e a) (e a)) =
 lemma good_trace : Good (n := n) (fun Z W => (Z * Wᴴ).trace) := by
   refine ⟨?_, ?_, ?_⟩
   · intro a Z Z' W
-    simp [add_mul, Matrix.smul_mul, trace_add, trace_smul]
+    simp [add_mul, trace_add, trace_smul]
   · intro Z W
     rw [← trace_conjTranspose, conjTranspose_mul, conjTranspose_conjTranspose]
   · intro k Z W _ _

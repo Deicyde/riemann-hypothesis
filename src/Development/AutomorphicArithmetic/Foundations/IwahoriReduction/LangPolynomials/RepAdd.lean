@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.Foundations.IwahoriReduction.LangPolynomials.FixedIntegersIsUnitOfNotMemPrimeSpan
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.IwahoriReduction.LangPolynomials.KumAlg
 import Development.AutomorphicArithmetic.Foundations.IwahoriReduction.LangPolynomials.PresMono
 import Development.AutomorphicArithmetic.Foundations.IwahoriReduction.LangPolynomials.WdVal

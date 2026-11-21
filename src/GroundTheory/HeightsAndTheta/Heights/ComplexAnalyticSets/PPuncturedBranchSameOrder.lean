@@ -1,6 +1,10 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StPuncturedBranchSameOrder
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StPuncturedCurveDiscInverse
+import Mathlib.Analysis.Complex.OpenMapping
+import Mathlib.Analysis.Complex.RemovableSingularity
+import Mathlib.Analysis.InnerProductSpace.OfNorm
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

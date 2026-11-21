@@ -1,9 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.EpsVEqOne
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LastBiExpand
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.FlatMapBesselToFourierJacobiLocalModel
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ExistsIsModelChg
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.TopOrthAtEmb
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.DIV
 open IsDedekindDomain NumberField MeasureTheory Matrix GlobalTheory.ChiGrid GlobalTheory.FunObj GlobalTheory.RowTest GlobalTheory.StdFrames GlobalTheory.RowClaim
 open GlobalTheory.MixModel GlobalTheory.MixPer GlobalTheory.Grow GlobalTheory.RowUnf GlobalTheory.RowChain GlobalTheory.SeeSaw GlobalTheory.RowVal GlobalTheory.RowReal
@@ -58,7 +55,7 @@ theorem topVertexFrame_renumbered_cast (ch : Choice R) (t : T) (w : Pl D.host.E)
     · have := congrFun (congrFun hL r) (Sum.inr 0)
       refine Eq.trans ?_ (this.trans ?_)
       · rfl
-      · simp only [fromCols_apply_inr, of_apply, Matrix.mul_diagonal, Matrix.map_apply, mul_one]
+      · simp only [fromCols_apply_inr, of_apply, Matrix.mul_diagonal, Matrix.map_apply]
         rw [Pi.one_apply, mul_one]
         symm
         show ∑ k : Fin 1, (_ : Kw w) = _

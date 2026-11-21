@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.EntryMem
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.Graded
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.PartSpan
@@ -246,11 +248,11 @@ private lemma split_mono {σ : Type} (wt : σ → ℤ × ℤ) (hw : ∀ i, (wt i
     have ht' := Finsupp.mem_support_iff.mp ht
     by_cases his : i = s
     · subst his
-      simp [Finsupp.single_apply, hst, Ne.symm hst] <;> omega
+      simp [hst] <;> omega
     · by_cases hit : i = t
       · subst hit
-        simp [Finsupp.single_apply, hst, Ne.symm hst] <;> omega
-      · simp [Finsupp.single_apply, Ne.symm his, Ne.symm hit]
+        simp [Ne.symm hst] <;> omega
+      · simp [Ne.symm his, Ne.symm hit]
 
 private lemma ker_le (W : WPres O (ℤ × ℤ) R) (h : W.HasOrigin)
     (hw : ∀ i, (W.wt i).1 = -1 ∨ (W.wt i).1 = 0 ∨ (W.wt i).1 = 1) {A : Subalgebra O R}
@@ -693,10 +695,10 @@ private theorem iota {τ : Type} [Fintype τ] [DecidableEq τ] (wt : τ → ℤ 
       by_cases ht : t = b
       · rw [dif_pos ht, Finset.sum_eq_single i]
         · by_cases h1 : (wt i.1).1 = 1
-          · simp [v, h1, Finsupp.single_apply, hib, ht]
-          · simp [v, h1, Finsupp.single_apply, hib, ht]
+          · simp [v, h1, hib, ht]
+          · simp [v, h1, hib, ht]
         · intro j _ hj
-          simp [Finsupp.single_apply, Ne.symm hj]
+          simp [Ne.symm hj]
         · simp
       · rw [dif_neg ht]
         by_cases h1 : (wt i.1).1 = 1
@@ -726,7 +728,7 @@ private theorem iota {τ : Type} [Fintype τ] [DecidableEq τ] (wt : τ → ℤ 
     split_ifs with h
     · subst h
       rw [Finsupp.weight_eq_sum, Fintype.sum_eq_add_sum_subtype_ne _ t] at hm
-      simp only [Prod.fst_add, Prod.smul_fst, Prod.fst_sum, smul_eq_mul, hb] at hm
+      simp only [Prod.fst_add, Prod.smul_fst, Prod.fst_sum, hb] at hm
       simp only [Finsupp.coe_equivFunOnFinite_symm]
       have key : ∑ x : {i // i ≠ t}, m x.1 • (wt x.1).1 =
           ((∑ x : {i // i ≠ t}, if (wt x.1).1 = 1 then m x.1 else 0 : ℕ) : ℤ) := by

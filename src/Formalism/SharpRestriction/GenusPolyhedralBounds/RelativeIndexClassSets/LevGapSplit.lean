@@ -1,4 +1,5 @@
-import Formalism.LocalRingCardinality.SpanPowerMembership.PlacesOverNcardOfSplitInj
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.SpanPowerMembership.RankRecordRowDimensionZero
 import Formalism.SharpRestriction.GenusPolyhedralBounds.RelativeIndexClassSets.LevGapFacts
 

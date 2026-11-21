@@ -1,4 +1,10 @@
+import BuildAid.Leniency.Open
 import Formalism.ZeroFreeRegion.SmallHeightLogDeriv
+import Mathlib.NumberTheory.Harmonic.ZetaAsymp
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open Complex Set Filter Topology
 

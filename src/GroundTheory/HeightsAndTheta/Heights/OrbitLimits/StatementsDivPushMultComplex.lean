@@ -1,6 +1,6 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.IsIntersectionFamily
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterSt
+import Mathlib.RingTheory.SimpleRing.Principal
 set_option maxSynthPendingDepth 1
 
 noncomputable section

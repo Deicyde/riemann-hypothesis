@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.TwistedFactors.SelmerRankBounds.IsNormAlong
+import GroundTheory.AutomorphicForms.AffineBruhat
+import GroundTheory.AutomorphicForms.Cartan
 
 noncomputable section
 

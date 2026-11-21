@@ -1,5 +1,8 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.HermitianEuclidean
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
+import GroundTheory.HeightsAndTheta.Heights.HermitianLattice
+import Mathlib.Analysis.InnerProductSpace.TensorProduct
 
 namespace GroundTheory.Heights₂.Heights
 

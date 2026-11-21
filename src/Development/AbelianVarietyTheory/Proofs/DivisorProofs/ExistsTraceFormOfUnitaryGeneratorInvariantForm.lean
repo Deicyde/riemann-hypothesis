@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.LinearDescent
-import Development.AbelianVarietyTheory.Definitions.Divisors.GaloisRepOfPolarizedCuspidal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MulMat
 open NumberField GlobalTheory.UnitaryBC IsDedekindDomain Matrix Polynomial GlobalTheory.CuspRep Formalism.UG GlobalTheory.BCT
 open scoped Classical
@@ -36,7 +35,7 @@ theorem sf_smul_right (l : K.E) (a z : B.A) : sf b G a (l • z) = K.c l * sf b 
   simp only [sf, sv, this, mulVec_smul, dotProduct_smul, smul_eq_mul]
 
 theorem sf_basis (i j : Fin m) : sf b G (b i) (b j) = G i j := by
-  simp [sf, sv, dotProduct, mulVec, Finsupp.single_apply, Pi.single_apply]
+  simp [sf, sv, dotProduct, mulVec, Finsupp.single_apply]
 
 end GlobalTheory.TwLat.BetaEx
 

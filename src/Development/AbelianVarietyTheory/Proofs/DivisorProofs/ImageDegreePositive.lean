@@ -1,11 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsModelOf
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.NefFibOfIsGenerated
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsHomogeneousCompIdeal
-import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.IsProjOverMorphismRestrictOfRelAmple
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.JGenSpecializes
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIntegralProjectiveClosureOfLinearSystemPoi
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFlatProjectiveModelOverRingOfIntegersStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsNormalArithmeticVarietyModelProjectiveSpacStatement
@@ -74,7 +69,7 @@ theorem exists_isModelOf : Hypotheses2 → ∀ (K V Ω : Type) [Field K] [Number
       rw [Finset.sum_eq_single k (fun l _ hl => by rw [Pi.single_eq_of_ne hl, map_zero, zero_smul]) (by simp)]
       rw [Pi.single_eq_same, map_one, one_smul]
     have h0 := hrelV (coef (gw k) - Pi.single k 1) (by
-      simp only [Pi.sub_apply, sub_smul, Finset.sum_sub_distrib, hcoef, e1]
+      simp only [Pi.sub_apply, sub_smul, Finset.sum_sub_distrib, e1]
       exact sub_eq_zero.2 (hcoef (gw k)))
     simp only [Pi.sub_apply, map_sub, sub_smul, Finset.sum_sub_distrib, e3, sub_eq_zero] at h0
     exact h0
@@ -119,7 +114,7 @@ theorem exists_isModelOf : Hypotheses2 → ∀ (K V Ω : Type) [Field K] [Number
     congr 2
     refine Finset.sum_congr rfl fun k _ => ?_
     rw [sg k]
-    simp only [A', he, Matrix.mul_apply, Matrix.map_apply, c, Matrix.of_apply]
+    simp only [he, Matrix.mul_apply, Matrix.map_apply, c, Matrix.of_apply]
     rfl
 
 end GlobalTheory.ImageModel

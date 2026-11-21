@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.DifferentiableAtFractInt
+import Mathlib.RingTheory.PiTensorProduct
 open Complex DirichletCharacter ArithmeticFunction MeasureTheory Filter Topology
 open Set
 

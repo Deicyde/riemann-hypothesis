@@ -1,6 +1,8 @@
-import Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.RealGaussianTraces.SecondCountableTens
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalUnitaryOrbits.TraceEqAdd
 import Formalism.LocalToGlobal.NumberFieldFamilies.ThetaCJ
+import Formalism.UnipotentAdelicQuotients.SWXSDefs
 
 noncomputable section
 

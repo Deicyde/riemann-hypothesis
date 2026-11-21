@@ -1,9 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AbelianSchemeLaws.FirstCohomologyVanishesSpecOfIsLocalRing
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.SecBaseChangeAnySt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.TwistBCPf
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.LBLocalC
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.LBPull
 import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.SecBaseChangeOfPerf
 
 open CategoryTheory CategoryTheory.Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry
@@ -103,7 +100,7 @@ theorem exists_tr' (hL : L.IsLB) (hu : u.IsGen) (h₁ : σ ≫ τ = 𝟙 Y) (h�
     (s' : LB.Sec (LB.LinComb L ψ ε')) : ∃ s, Tr u s' s := by
   have hv := DVR.pullGen_isGen _ _ _ _ (DVR.invGen_isGen _ _ _ _ hu) σ
   obtain ⟨s, hs⟩ := exists_sec (φ' := φ) (ε' := ε) hL (fun U _ h => by
-    simp only [Fintype.prod_sum_type, Sum.elim_inl, Sum.elim_inr, zpow_neg, Finset.prod_inv_distrib, inv_inv,
+    simp only [Fintype.prod_sum_type, Sum.elim_inl, Sum.elim_inr, zpow_neg, Finset.prod_inv_distrib,
       reassoc_of% h₁]
     rw [mul_inv, inv_inv, mul_inv_cancel_left]) (pullMulSec s' σ _ hv)
   refine ⟨s, fun Z r z J hJ => ?_⟩

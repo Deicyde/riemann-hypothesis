@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.CoprimeLiftBounds.CoprimeLiftProofs.ImportsAlt
 
 open Finset

@@ -1,5 +1,6 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.ConeSectionRestriction.Precomp
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.ConeSectionRestriction.IsTautologicalLineAt
 set_option backward.isDefEq.respectTransparency false
 open CategoryTheory Limits AlgebraicGeometry GlobalTheory.LogCris DividedPowers CrystallineSemistableComparison CrystallineSemistableComparison.Pb
 
@@ -97,7 +98,7 @@ theorem eval_logPoly_mul (c : ℕ → B) (hc : ∀ k : ℕ, c k * ((k : B) + 1) 
         have := hu (n + 1) (by omega)
         simpa using this
       have : G.coeff (n + 1) = 0 := hn.mul_left_eq_zero.1 h
-      simp [this, coeff_C]
+      simp [this]
   have hG1 : G.eval 1 = 0 := by
     rw [hGC, hG0]; simp
   have : (logPoly c s).eval ((1 + x) * (1 + y) - 1) - (logPoly c s).eval x - (logPoly c s).eval y = 0 := by

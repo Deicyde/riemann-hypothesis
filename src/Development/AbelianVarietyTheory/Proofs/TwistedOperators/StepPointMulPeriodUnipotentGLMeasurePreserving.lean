@@ -1,8 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ValuationGdetKapAt
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SecondCountableLocal
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IntegralCompBlocks
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.PadicIsNonarchimedeanLocalField
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLocallyConstantAddChar
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.DIV
 open IsDedekindDomain NumberField MeasureTheory Matrix ValuativeRel GlobalTheory.ChiGrid GlobalTheory.FunObj GlobalTheory.ExpansionInvariance GlobalTheory.SplitFlip GlobalTheory.SplitWeil GlobalTheory.RootEx
 attribute [local instance] Formalism.BasicNotions.Host.cmStar GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField borelKw borelSpaceKw
@@ -93,7 +94,7 @@ theorem mul_gen_nonvar {q : ℕ} (hq : q = c / 2 + 1 ∨ (c % 2 = 1 ∧ q = c / 
   split_ifs with h'
   · have : ¬ (Free (c / 2 + 1) (r, s') ∨ Kept (r, s')) ∧ basePt c x₀ r s' = 0 := by
       rcases r with r | r <;> rcases s with s | s <;> rcases s' with s' | s' <;>
-        simp [Free, Kept, GlobalTheory.RootEx.lev, basePt, Nat.even_iff, Nat.odd_iff, Fin.ext_iff] at hv h' ⊢ <;> omega
+        simp [Free, Kept, GlobalTheory.RootEx.lev, basePt, Nat.even_iff, Nat.odd_iff] at hv h' ⊢ <;> omega
     rw [Matrix.add_apply, varPart_nonvar _ this.1, this.2, add_zero, zero_mul]
   · rfl
 

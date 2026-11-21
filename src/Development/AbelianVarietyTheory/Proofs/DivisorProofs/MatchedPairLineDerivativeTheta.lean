@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaKernelDecay
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzInfinitePlaceApproxStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaLineDerivativeSchwartzStatement

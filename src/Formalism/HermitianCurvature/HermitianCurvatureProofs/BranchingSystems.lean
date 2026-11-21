@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.CapelliDeterminantAndBranching
 import Formalism.RealPlaceAnalysis.RealPlaceTaylor.QuantumDetHighestWeightHolds
+import Mathlib.LinearAlgebra.Eigenspace.Minpoly
 
 open Matrix Finset
 
@@ -65,7 +68,7 @@ theorem Sys.box (h : Sys L P) (M : Fin n → ℤ) (hM : Box L M) : P M := by
       by_cases hj : j = a
       · subst hj
         simp
-      · simp [hj, Function.update_of_ne hj]
+      · simp [hj]
     rw [e]
     have h0 : P (Function.update (fun j => if j ∈ s then M j else L j.castSucc) a (L a.castSucc)) := by
       have e2 : Function.update (fun j => if j ∈ s then M j else L j.castSucc) a (L a.castSucc) =

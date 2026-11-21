@@ -1,5 +1,7 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.ModelFPfA
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.MapCompZero
+import Formalism.SharpRestriction.LevelLetterCocycles.DownSlotProposition
 
 noncomputable section
 

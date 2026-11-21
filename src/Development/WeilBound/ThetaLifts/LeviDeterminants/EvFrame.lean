@@ -1,4 +1,6 @@
-import Development.WeilBound.ThetaLifts.LeviDeterminants.EvModel
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.ThetaLifts.LeviDeterminants.MixedModels.AdaptC
 
 noncomputable section
 

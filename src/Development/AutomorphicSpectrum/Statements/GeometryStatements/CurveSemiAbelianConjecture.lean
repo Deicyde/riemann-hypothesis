@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsFFCurve
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.GapCondExample
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.LocalComponentsSurjective
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ToFirst
 
 noncomputable section
 

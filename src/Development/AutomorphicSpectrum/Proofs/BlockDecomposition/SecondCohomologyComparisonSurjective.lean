@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.HodgeWedgeFields.H1CommutesBaseChange
 import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.ExactAndKerBaseChangeOfForallResidueField
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsKSValueOneOfRetraction
+import Mathlib.LinearAlgebra.ExteriorPower.Basis
 
 set_option autoImplicit false
 

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.MemCompanion
 import Formalism.LocalToGlobal.GlobalTheory.BaseLatticeConventionOfFlags
 import Formalism.LocalToGlobal.HermitianColumns.ColsHerm

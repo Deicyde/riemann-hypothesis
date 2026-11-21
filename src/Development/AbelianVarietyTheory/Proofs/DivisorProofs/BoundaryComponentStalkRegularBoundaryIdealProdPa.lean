@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AlgebraMapCompStalkAlg
-import ReciprocityTheory.AnalyticForms.RegularLocalRings.DivSheaf
 open CategoryTheory AlgebraicGeometry TopologicalSpace Limits NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj Formalism.BasicNotions
 open ReciprocityTheory.ChartRestriction.G.Out (nonzeroLocus)
@@ -45,7 +45,7 @@ theorem GlobalTheory.LogKSDiv.boundary_germ_snc : ∀ (E : Type) [Field E] [Numb
       rw [hz]; first | exact x.2 | simp | exact (barComp TF.Y Z).range_ι.le ⟨x, rfl⟩
     refine ⟨⟨z, hzB⟩, (barComp TF.Y Z).ι.isOpenEmbedding.injective ?_⟩
     have h2 := congrArg (fun f => f.base ⟨z, hzB⟩) (j₀_ι TF.Y Z)
-    simp only [Scheme.Hom.comp_base, TopCat.comp_app] at h2
+    simp only [Scheme.Hom.comp_base] at h2
     first | exact h2.trans hz | (refine Eq.trans ?_ hz; exact h2) | (rw [Scheme.Hom.comp_apply] at h2; exact h2.trans hz)
   · have e1 : Ideal.map (GlobalTheory.LogKSDiv.stalkHom TF Z x U hx)
         ((Scheme.IdealSheafData.vanishingIdeal (LogKS.interior TF.Y).compl).ideal U) =
@@ -54,7 +54,7 @@ theorem GlobalTheory.LogKSDiv.boundary_germ_snc : ∀ (E : Type) [Field E] [Numb
       rw [Ideal.map_map]
       congr 1
       ext r
-      simp only [GlobalTheory.LogKSDiv.stalkHom, RingHom.comp_apply, RingEquiv.toRingHom_eq_coe, RingHom.coe_coe, hφ]
+      simp only [GlobalTheory.LogKSDiv.stalkHom, RingHom.comp_apply, RingHom.coe_coe, hφ]
       rw [Scheme.Hom.germ_stalkMap_apply]
     have hVb : (Scheme.IdealSheafData.vanishingIdeal (LogKS.interior TF.Y).compl).ideal V =
         Ideal.span {∏ i ∈ J, f' i} := hV

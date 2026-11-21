@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.MassComputations.ProdFirstProjectionSmul
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.MassComputations.StrongApproxN
 
 noncomputable section
 

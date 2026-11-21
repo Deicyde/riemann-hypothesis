@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.SpanSingletonEqTopIffIsUnitOfIsBaseChange
 import Development.AbelianVarietyTheory.Definitions.QuasicoherentCohomology.MemHomogIffIsHomogeneous
 
@@ -304,7 +305,7 @@ theorem IsGluing.isDescentDatum {φ : N ⊗[A] B →ₗ[B] B ⊗[A] N} (h : IsGl
     induction x using TensorProduct.induction_on with
     | zero => simp
     | add x y hx hy => simp only [map_add, hx, hy]
-    | tmul b m => simp [← smul_tmul']
+    | tmul b m => simp
   have h2 : ∀ x : B ⊗[A] N, act A B _ ((TensorProduct.mk A B N 1).lTensor B x) = x := by
     intro x
     induction x using TensorProduct.induction_on with

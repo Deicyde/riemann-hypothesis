@@ -1,5 +1,6 @@
-import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.KillOfEmpty
-import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.NegDminusLeMu
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.MemColRangeOfLeEntry
 
 noncomputable section
 

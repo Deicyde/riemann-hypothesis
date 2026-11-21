@@ -1,4 +1,5 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.ResidueFlagPoints.ResLeCont
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.ResidueFlagPoints.ResLeMemDec
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual Formalism.HC ReciprocityTheory.Gal IsLocalRing Polynomial UpperTheory.V UpperTheory.V.Base UpperTheory.V.Alg UpperTheory.V.HV UpperTheory.V.GradeZeroInterpolatingElement UpperTheory.V.Ws GlobalTheory.CuspRep GlobalTheory.GalOfCusp
 
@@ -77,6 +78,6 @@ theorem UpperTheory.V.Ws.Pt.ptPair :
   have hz : (1 - ((4 : ℕ) : ℤ)) = -3 := by norm_num
   rw [hz]
   first
-    | simp [zpow_neg, Units.val_zpow_eq_zpow_val]
+    | simp [zpow_neg]
     | (rw [MonoidHom.zpow_apply]; simp [zpow_neg, Units.val_zpow_eq_zpow_val])
     | done

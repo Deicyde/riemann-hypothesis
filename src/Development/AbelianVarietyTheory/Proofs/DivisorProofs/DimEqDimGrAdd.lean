@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 
 set_option autoImplicit false
 
@@ -21,7 +20,7 @@ theorem dimGr_add_sum (ι : Type) [Fintype ι] (N j : ℕ) (hj : j ≤ N) :
   have hs : ∑ a : ι × Bool, rkB ι N j a * (rkB ι N j a - 1) / 2 =
       Fintype.card ι * (j * (j - 1) / 2 + (N - j) * (N - j - 1) / 2) := by
     rw [Fintype.sum_prod_type]
-    simp [rkB, Finset.sum_const, Finset.card_univ, add_comm]
+    simp [rkB, Finset.sum_const, Finset.card_univ]
   rw [hs, dimGr, Formalism.DegreeFormula.dimFl, ← mul_add]
   congr 1
   obtain ⟨m, rfl⟩ := Nat.exists_eq_add_of_le hj

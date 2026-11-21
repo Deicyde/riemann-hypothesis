@@ -1,10 +1,9 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.AdmBoundsBOfAdm
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.LogbHBNonneg
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.LenQuotSpanNeTopDvr
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.ExistsLiftFLeSgOfThick
 import Formalism.SharpRestriction.LevelLetterCocycles.StatementFamilies.ArcLiftingSetup
-import Formalism.LocalRingCardinality.SpanPowerMembership.NDLocE
 
 noncomputable section
 

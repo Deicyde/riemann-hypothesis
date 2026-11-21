@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.LtChar
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.EqZeroOfInAMul
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsKerPowDvd
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LubinTatePeriodFiltrationExactStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PeriodRingEmbeddingPropertiesStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLubinTatePeriodElementStatement

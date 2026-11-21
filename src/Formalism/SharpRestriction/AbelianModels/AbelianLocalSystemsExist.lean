@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.ModelDef
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion
 
 noncomputable section
 

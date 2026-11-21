@@ -1,8 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Intersections.ImportsMoreTer
 import GroundTheory.HeightsAndTheta.Heights.Intersections.ImportsMoreAlt
-import GroundTheory.HeightsAndTheta.Heights.Intersections.IntCastMemRegMaxAt
 import GroundTheory.HeightsAndTheta.Heights.Intersections.ImportsBisAlt
+import GroundTheory.HeightsAndTheta.Heights.Intersections.LeOfHeightMapEqZero
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.Inter

@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.SphericalLattices.LocModSt
 import Development.WeilBound.CoreStatements.LocalThetaKernels.IwasMain
+import Development.WeilBound.ThetaLifts.SphericalLattices.FunDefs
 
 noncomputable section
 

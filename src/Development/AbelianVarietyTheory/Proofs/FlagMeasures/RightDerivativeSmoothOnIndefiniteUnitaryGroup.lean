@@ -1,5 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.MatrixOfBesselTwoSidedAction
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
 open Matrix Formalism.QuantumDeterminants Formalism.MainNotions.S
 open scoped ContDiff
 

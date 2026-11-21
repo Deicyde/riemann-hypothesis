@@ -1,4 +1,6 @@
-import Formalism.SharpRestriction.GrowthBounds.PlaneCoefficients.ValSCongrSupp
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.PlaneCoefficients.PlaneCoeffOneTTens
 
 noncomputable section
 

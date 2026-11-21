@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.FSatakeB
+import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.FSatakeA
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 open Formalism.UG
 

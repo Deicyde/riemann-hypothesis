@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.GL4.CoeffMemOfIntSpanAt
+import Formalism.LocalToGlobal.GlobalTheory.GL4.ThirdPropositionOfClass
 
 open Module NumberField IsDedekindDomain MvPolynomial
 open scoped Matrix

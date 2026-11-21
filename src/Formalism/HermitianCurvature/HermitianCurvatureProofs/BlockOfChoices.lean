@@ -1,5 +1,5 @@
-import Formalism.HermitianCurvature.StatementKB
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BlockOfCauchySchwarz
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.PBGWave
 
 namespace Formalism.FourierDecayAlt.P.PBL

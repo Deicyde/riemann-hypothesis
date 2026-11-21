@@ -1,8 +1,7 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.AxesVanishingStructureSheafDegOne
-import Development.AbelianVarietyTheory.Definitions.AbelianSchemeLaws.IsScalarTowerOfAlgebraMapEq
-import Development.AbelianVarietyTheory.Definitions.Uniformization.PointEqOfSubsingleton
-import Development.AbelianVarietyTheory.Definitions.Uniformization.ExistsInKNeOne
-import Development.AbelianVarietyTheory.PublishedTheorems.RelativeAmpleness.RelAmpleAndKTrivIff
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.CommAlgFunctorCoboundaryZeroMemCocyclesOne
+import Mathlib.CategoryTheory.Monoidal.Cartesian.Over
 open CategoryTheory CategoryTheory.Limits AlgebraicGeometry MonoidalCategory CartesianMonoidalCategory MonObj
 open scoped TensorProduct CategoryTheory.Obj
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory.AbLaw GlobalTheory.CatCoh GlobalTheory.CechDR GlobalTheory.AbCoh
@@ -24,7 +23,7 @@ theorem tensor_eq_zero_of_forall {K : Type} [Field K] {V W : Type} [AddCommGroup
     intro j s
     induction s using TensorProduct.induction_on with
     | zero => simp
-    | tmul m n => simp [TensorProduct.equivFinsuppOfBasisRight_apply_tmul_apply]
+    | tmul m n => simp
     | add u v hu hv => simp only [map_add, Finsupp.add_apply, hu, hv]
   apply (TensorProduct.equivFinsuppOfBasisRight b).injective
   ext j

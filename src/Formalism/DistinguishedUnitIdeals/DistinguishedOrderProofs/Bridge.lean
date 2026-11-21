@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.DistinguishedUnitIdeals.BridgeLevelOf
-import Formalism.DistinguishedUnitIdeals.DistinguishedOrderProofs.Graded
 import Formalism.DistinguishedUnitIdeals.DistinguishedOrderProofs.Partners
 import Formalism.DistinguishedUnitIdeals.DistinguishedOrderProofs.UnivPart
 

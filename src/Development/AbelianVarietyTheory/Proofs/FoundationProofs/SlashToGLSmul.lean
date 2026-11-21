@@ -1,5 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.IsDCReps
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.Analysis.Complex.UpperHalfPlane.Manifold
+import Mathlib.Geometry.Manifold.MFDeriv.SpecificFunctions
+import Mathlib.NumberTheory.DirichletCharacter.Basic
+import Mathlib.NumberTheory.ModularForms.BoundedAtCusp
 
 noncomputable section
 

@@ -1,5 +1,10 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.CechPairings.MapHComp
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.CechPairings.InstAddCommGroup
+import Mathlib.CategoryTheory.Monoidal.Mon
+import Mathlib.CategoryTheory.SingleObj
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 set_option backward.isDefEq.respectTransparency false
 open CategoryTheory Polynomial CrystallineSemistableComparison CrystallineSemistableComparison.CH
 universe w w' v u v' u' v'' u''
@@ -165,7 +170,7 @@ theorem face_EE {p : ℕ} (a b : ℕ) (m : Ch p) :
   induction x using Fin.lastCases with
   | last =>
     have : (Fin.last (p + 1)).castSucc.succAbove (Fin.last (p + 1)) = Fin.last (p + 2) := by
-      ext; simp [Fin.succAbove, Fin.lt_def]
+      ext; simp [Fin.succAbove]
     simp [this, add_assoc]
   | cast x =>
     have : (Fin.last (p + 1)).castSucc.succAbove x.castSucc = x.castSucc.castSucc := by

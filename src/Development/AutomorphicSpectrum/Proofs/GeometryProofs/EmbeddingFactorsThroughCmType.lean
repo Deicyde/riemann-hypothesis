@@ -1,6 +1,7 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsHodgeLine
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ImaginaryRootConj
+import Mathlib.Algebra.Order.Star.Real
 
 noncomputable section
 

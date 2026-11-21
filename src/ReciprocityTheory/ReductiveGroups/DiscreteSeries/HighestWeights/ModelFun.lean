@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.HighestWeights.ModelDer
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.InhabA
 
@@ -146,22 +148,21 @@ private theorem inK_cp1_lemma (ε : Fin n → Bool) (Z : Matrix (Fin n) (Fin n) 
     inK ε (cpart1 ε (bdPart ε Z)) := by
   unfold inK inG cpart1 Jm bdPart
   constructor <;> ext a b <;>
-    simp [Matrix.mul_diagonal, Matrix.diagonal_mul, Matrix.conjTranspose_apply, Matrix.sub_mul, Matrix.mul_sub,
-      Matrix.smul_mul, Matrix.mul_smul, Complex.star_def, map_div₀] <;>
+    simp [Matrix.mul_diagonal, Matrix.diagonal_mul, Matrix.conjTranspose_apply, Matrix.sub_mul, Matrix.mul_sub] <;>
     rcases Bool.eq_false_or_eq_true (ε a) with ha | ha <;>
     rcases Bool.eq_false_or_eq_true (ε b) with hb | hb <;>
-    simp [ha, hb, Complex.conj_ofNat, map_ofNat] <;> ring
+    simp [ha, hb] <;> ring
 
 private theorem inK_cp2_lemma_2 (ε : Fin n → Bool) (Z : Matrix (Fin n) (Fin n) ℂ) :
     inK ε (cpart2 ε (bdPart ε Z)) := by
   unfold inK inG cpart2 Jm bdPart
   constructor <;> ext a b <;>
-    simp [Matrix.mul_diagonal, Matrix.diagonal_mul, Matrix.conjTranspose_apply, Matrix.sub_mul, Matrix.mul_sub,
-      Matrix.add_mul, Matrix.mul_add, Matrix.smul_mul, Matrix.mul_smul, Complex.star_def, map_div₀,
+    simp [Matrix.mul_diagonal, Matrix.diagonal_mul, Matrix.conjTranspose_apply,
+      Matrix.add_mul, Matrix.mul_add,
       Complex.conj_I] <;>
     rcases Bool.eq_false_or_eq_true (ε a) with ha | ha <;>
     rcases Bool.eq_false_or_eq_true (ε b) with hb | hb <;>
-    simp [ha, hb, Complex.conj_ofNat, map_ofNat] <;> ring
+    simp [ha, hb, map_ofNat] <;> ring
 
 lemma hwmf_rdc (ε : Fin n → Bool) (m : Fin n → ℤ) (Z : Matrix (Fin n) (Fin n) ℂ) (x : KG ε) :
     rdc ε Z (f0K ε m) x = fderiv ℂ (f0 ε m) (toMK x) (toMK x * bdPart ε Z) := by
@@ -199,7 +200,7 @@ lemma hwmf_mul_tv (x : Matrix (Fin n) (Fin n) ℂ) (a b : Fin n) (s : ℂ) (r q 
     rw [if_pos rfl, Matrix.mul_apply]
     simp [Matrix.single_apply]
   · rw [if_neg hq, Matrix.mul_apply]
-    simp [Matrix.single_apply, Ne.symm hq]
+    simp [Ne.symm hq]
 
 lemma hwmf_blk_tv (ε : Fin n → Bool) {a b : Fin n} (hab : a < b) (he : ε a = ε b) (c : Fin n)
     (x : Matrix (Fin n) (Fin n) ℂ) (s : ℂ) :

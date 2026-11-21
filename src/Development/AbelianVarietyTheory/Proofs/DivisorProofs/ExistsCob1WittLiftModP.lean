@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.WittOnFalse
-import Development.AbelianVarietyTheory.Definitions.Divisors.FormalCoboundarySmul
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FormalGroupLawLinearCoeffAdditiveStatement
-import Development.AbelianVarietyTheory.Proofs.RingsOfIntegers.CoeffSingleLawAdd
 open CategoryTheory TensorProduct MvPowerSeries GlobalTheory GlobalTheory.PDiv GlobalTheory.PDivGroup GlobalTheory.Katz
 
 set_option autoImplicit false
@@ -76,7 +74,7 @@ theorem coeff_single_op {τ : Type} {μ : Fin d → MvPowerSeries (Fin d ⊕ Fin
   unfold op
   rw [coeff_single_linear_substitution_pair _ _ _ hu hv]
   simp only [hμ, addLaw, map_add, GlobalTheory.FormalCalc.coeff_single_X]
-  simp [add_mul, Finset.sum_add_distrib]
+  simp
 
 theorem coeff_single_coc {μ : Fin d → MvPowerSeries (Fin d ⊕ Fin d) R}
     (hμ0 : ∀ i, constantCoeff (μ i) = 0)
@@ -106,8 +104,8 @@ theorem coeff_single_coc {μ : Fin d → MvPowerSeries (Fin d ⊕ Fin d) R}
     unfold swap at h
     rw [coeff_single_linear_substitution_pair _ _ _ (fun _ => constantCoeff_X _) (fun _ => constantCoeff_X _)] at h
     simp only [GlobalTheory.FormalCalc.coeff_single_X] at h
-    simp only [Sum.inr.injEq, reduceCtorEq, if_false, mul_zero, Finset.sum_const_zero, zero_add,
-      mul_ite, mul_one, Finset.sum_ite_eq', Finset.mem_univ, if_true] at h
+    simp only [Sum.inr.injEq, reduceCtorEq, if_false, mul_zero, Finset.sum_const_zero,
+      mul_ite, mul_one] at h
     rw [← h]
     simp [hinl]
 

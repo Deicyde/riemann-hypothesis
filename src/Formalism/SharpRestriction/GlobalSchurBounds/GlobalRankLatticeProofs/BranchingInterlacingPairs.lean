@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.CMFieldLemmas
 
 noncomputable section
@@ -39,7 +40,7 @@ theorem sum_bern_var (δ : ℝ) :
   rw [sum_bern_card δ (fun ν => (((Fintype.card α : ℕ) : ℝ) * δ - ν) ^ 2)]
   have h := congrArg (Polynomial.eval δ) (bernsteinPolynomial.variance ℝ (Fintype.card α))
   simp only [Polynomial.eval_finset_sum, Polynomial.eval_mul, Polynomial.eval_pow,
-    Polynomial.eval_sub, Polynomial.eval_smul, Polynomial.eval_X, Polynomial.eval_natCast,
+    Polynomial.eval_sub, Polynomial.eval_X, Polynomial.eval_natCast,
     nsmul_eq_mul, Polynomial.eval_one] at h
   rw [← h]
   refine Finset.sum_congr rfl fun ν _ => ?_

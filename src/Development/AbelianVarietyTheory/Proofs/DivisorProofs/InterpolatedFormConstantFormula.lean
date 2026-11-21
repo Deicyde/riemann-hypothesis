@@ -1,4 +1,5 @@
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeightBoundConst
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.LeTwoMulOfForallScale
 open Matrix Filter Topology Set GlobalTheory.HermFrame GlobalTheory.IndefiniteRowSideFullHecke.HermitianInterpolation GlobalTheory.InterpCurv
 open scoped ComplexOrder ContDiff
 
@@ -22,7 +23,7 @@ theorem curvature_term_algebra : ∀ {n : Type} [Fintype n] {P₀ P : Matrix n n
     rw [Complex.add_conj]; push_cast; ring
   rw [h2, h1, h3]
   simp only [form_add, form_smul, map_add, map_sub, map_mul, Complex.conj_ofReal, conj_form hP₀,
-    conj_form hP, Complex.conj_conj, form_sub_right]
+    conj_form hP]
   ring
 
 end GlobalTheory

@@ -1,9 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.CoP
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.LocalBasisRepLatticeIntegralCoordsSpecStatement
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.MemLocWDelAtrIffStatement
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.InvTrKEmbGLApply
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.SpanMapNabKDelK
 
 noncomputable section
 

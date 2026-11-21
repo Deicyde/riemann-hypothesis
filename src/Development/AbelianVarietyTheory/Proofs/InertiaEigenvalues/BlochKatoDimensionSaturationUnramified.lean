@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
-import Formalism.LocalRingCardinality.AdicCompletionLocal.LocTied
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.TableLineDegreeTwo
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.BlochKatoDimensionFormulaConcretePeriodRings
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.DeRhamComponentsCrystallineLettersFinrank
@@ -89,7 +88,7 @@ theorem finsum_multV_neg (ρ : Representation LL G V) (τ : K →ₐ[Qp] LL)
       ∑ a ∈ (Finset.range N).map e, multV PD ρ τ a := by
     apply finsum_mem_eq_sum_of_inter_support_eq (s := Set.Iio (0 : ℤ))
     ext a
-    simp only [Set.mem_inter_iff, Set.mem_setOf_eq, Finset.coe_map, Finset.coe_range,
+    simp only [Set.mem_inter_iff, Finset.coe_map, Finset.coe_range,
       Set.mem_image, Set.mem_Iio, Function.mem_support, he]
     constructor
     · rintro ⟨ha, hs⟩

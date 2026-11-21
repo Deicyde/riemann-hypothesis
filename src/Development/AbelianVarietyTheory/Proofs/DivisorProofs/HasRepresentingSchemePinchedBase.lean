@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SameIdIff
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsCrystalPairing
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RepresentingSchemeOfFiniteSurjectiveLiftStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitsPatch
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RepresentsAdditiveLineBundleFamiliesCompareStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsAdditiveFamilyOfPullbackFiniteSurjectiveStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConductorSquareFlatBaseChangeSchemesStatement
@@ -301,7 +298,7 @@ theorem hasRep_pinched : ∀ (R : Type) [CommRing R] [IsNoetherianRing R] (A : O
   · refine (same_iff hM.isLB hP'.fam.isLB _ _).2 ?_
     have := congrArg (GlobalTheory.CechPic.pull (A ◁ r).left) ((same_iff hM.isLB hN.isLB _ _).1 hMS)
     simp only [pull_evc, whiskerLeft_fst, whiskerLeft_snd_assoc, r1, evc_ev hP'.fam.isLB, lift_fst, lift_snd_assoc,
-      Category.comp_id, whiskerLeft_snd] at this
+      Category.comp_id] at this
     simpa only [Category.assoc] using this
 
 end GlobalTheory.Pinch

@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.HkLatTupUpdate
+import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.TminusLinApply
 
 noncomputable section
 

@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.EllipticTorsion.WSeriesUnique
 
 open PowerSeries

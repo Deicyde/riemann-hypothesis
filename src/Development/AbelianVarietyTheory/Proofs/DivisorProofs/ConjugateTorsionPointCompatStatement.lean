@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConjugateTorsionPointCompat
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocCharEqValZpow
 open NumberField IsDedekindDomain GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.UnrEuler Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open scoped nonZeroDivisors
 open Formalism.L2.Host (aboveF)

@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormIdeal
+import Mathlib.Algebra.AffineMonoid.UniqueSums
+import Mathlib.Tactic.Polynomial.Basic
 
 open MvPolynomial
 

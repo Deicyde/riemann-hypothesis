@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJDHatJDCapRAsm
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJDHatJDRvStepB
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJDHatJDGaugeQQHatQQ
@@ -5,7 +6,6 @@ import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJDHatJDCapAAll
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJDHatNodes
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJDHatLagrange
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.MirrorResidueSplittingHolds
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJDHatPolyOK
 
 open Formalism.FourierDecayAlt
 

@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleTrace.LCoverCut
+import Mathlib.Algebra.Module.StablyFree.Basic
 
 noncomputable section
 open MvPolynomial

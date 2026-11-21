@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.CupProducts.GroupCohomology
 import GroundTheory.ProfiniteCohomology.Colimit
 import GroundTheory.TateCohomology.CupGraded

@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DbarEqZeroOfHolomorphic
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WedgeContrSelfApply
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DbarSquaredEqZeroStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.D10ProductRuleSymmetricStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MixedDbarPartialCommutationStatement
@@ -45,7 +43,7 @@ theorem harmonic_weitzenboeck {g : ℕ} (G K : Matrix (Fin g) (Fin g) ℂ) (hKG 
     intro d c
     have := congrFun (congrFun hKG d) c
     simp only [Matrix.mul_apply, Matrix.transpose_apply] at this
-    rw [this]; simp [Matrix.ofNat_apply, Matrix.one_apply]
+    rw [this]; simp [Matrix.ofNat_apply]
   have hB : (∑ a, ∑ c, ∑ d, (G a c * d01 (fun z' => d10 ψ z' (ev a)) z (ev d)) •
       wedge (dzb 0 d) (contr (dzb 0 c) (f z))) S = -(2 * π * S.card * f z S) := by
     simp only [hK, Finset.sum_apply, Pi.smul_apply, smul_eq_mul]

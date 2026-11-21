@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemSimR
 
 noncomputable section
@@ -25,7 +26,7 @@ variable {G : HTGroup p} {P : Pair G}
 
 theorem rhoL_tmul (w : Fin G.m) (a : ℚ_[p]) (x : algF P) :
     rhoL G P w (a ⊗ₜ x) = algebraMap ℚ_[p] _ a * G.rho w (x : G.C) := by
-  simp [rhoL, HTGroup.locW, Algebra.TensorProduct.lift_tmul]
+  simp [rhoL, HTGroup.locW]
   rfl
 
 theorem rhoL_one_tmul (w : Fin G.m) (x : algF P) :

@@ -1,9 +1,7 @@
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.SchurStep
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.FrameEstimates.CuspRapid
 import Development.WeilBound.ThetaLifts.EigenvalueEndgame.UnipotentGroups.TendstoIndMul
-import Development.WeilBound.ThetaLifts.LatticeBasics.PolFin
-import Development.WeilBound.ThetaLifts.CartanFactorisation.ArchimedeanEvaluationVector
-import Development.WeilBound.ThetaLifts.LatticeBasics.PairsL
 import Development.AutomorphicArithmetic.AdelicQuotients.WeilRepresentationSmoothVectors
 import Development.AutomorphicArithmetic.AdelicQuotients.PolynomialDataStableFinitePlace
 import Development.AutomorphicArithmetic.AdelicQuotients.PolynomialDataStableInfinitePlace

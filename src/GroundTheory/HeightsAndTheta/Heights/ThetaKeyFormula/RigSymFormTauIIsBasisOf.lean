@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ThetaKeyFormula.ZeroSetFinite
 import GroundTheory.HeightsAndTheta.Heights.ThetaKeyFormula.ThetaThreeFamLinearIndependent
 set_option maxSynthPendingDepth 1

@@ -1,6 +1,10 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.FiniteTypeHarishChandra.SupportExistsAll
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SimpleIffIrreducible
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RepresentationTheory.Maschke
+import Mathlib.Tactic.ENatToNat
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open ReciprocityTheory.Ty.Fin CategoryTheory
 
@@ -107,7 +111,7 @@ def psi (ρ : Representation ℂ (∀ c, L c) W) (v : W) :
 
 theorem psi_apply (ρ : Representation ℂ (∀ c, L c) W) (v : W) (x : ∀ c, MonoidAlgebra ℂ (L c)) :
     psi ρ v x = ∑ g : ∀ c, L c, (∏ c, (x c).coeff (g c)) • ρ g v := by
-  simp [psi, MultilinearMap.sum_apply, cf_apply]
+  simp [psi, cf_apply]
 
 theorem psi_one (ρ : Representation ℂ (∀ c, L c) W) (v : W) :
     psi ρ v (fun _ => 1) = v := by
@@ -120,7 +124,7 @@ theorem psi_one (ρ : Representation ℂ (∀ c, L c) W) (v : W) :
       push Not at hall
       exact hg (funext hall)
     rw [Finset.prod_eq_zero (Finset.mem_univ c), zero_smul]
-    simp [MonoidAlgebra.one_def, Finsupp.single_apply, hc.symm]
+    simp [MonoidAlgebra.one_def, hc.symm]
   · simp
 
 theorem psi_single_mul (ρ : Representation ℂ (∀ c, L c) W) (v : W) (g : ∀ c, L c)

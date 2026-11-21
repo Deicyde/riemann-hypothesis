@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsHaarOfIsCompact
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatHomOfGAdSymm
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK
@@ -45,7 +43,7 @@ theorem levi_continuous : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [
       (continuous_const (y := b)).smul ((hcA.comp hui).smul (continuous_const (y := incV F y)))
     exact (c1.add c2).add c3
   refine continuous_pi fun r => continuous_pi fun i => ?_
-  have : ∀ p, f p r i = (f p *ᵥ Pi.single i 1) r := fun p => by simp [Matrix.mulVec_single_one]
+  have : ∀ p, f p r i = (f p *ᵥ Pi.single i 1) r := fun p => by simp
   simp_rw [this]
   exact (continuous_apply r).comp (hcol i)
 

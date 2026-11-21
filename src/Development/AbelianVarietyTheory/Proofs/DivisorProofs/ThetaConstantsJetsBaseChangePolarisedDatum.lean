@@ -1,11 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.KeyPBIff
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.AbsoluteSiegel
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoeffTopMonEqZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsKeyDatumBaseChangeThetaJets
-import Development.AbelianVarietyTheory.Proofs.ThetaFamilyOrigin.IsThetaPtOverMove
 import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.AbelianSchemeLawsUnconditional
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.LocGenOfTrivial
+import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsTwistSections
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField MeasureTheory
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.GeometryOfNumbersTheory
@@ -165,7 +162,7 @@ theorem dual_solve {K : Type} [Field K] (M : ℕ) (u₁ T' : DualNumber K) (u₀
   have hv : u₁ = inl u₀ * (1 + inr (u₁.snd / u₀)) := by
     ext
     · simp [hu]
-    · simp [hu]; field_simp
+    · simp; field_simp
   rw [hv, mul_pow, one_add_inr_pow, mul_pow, inl_mul, inl_pow, _root_.mul_assoc, _root_.mul_assoc] at h
   have hu0 : IsUnit (inl (u₀ ^ M) : DualNumber K) := by
     refine ⟨⟨inl (u₀ ^ M), inl ((u₀ ^ M)⁻¹), ?_, ?_⟩, rfl⟩ <;>

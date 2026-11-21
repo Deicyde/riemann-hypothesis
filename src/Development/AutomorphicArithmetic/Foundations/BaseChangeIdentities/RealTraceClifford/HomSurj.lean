@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.BaseChangeIdentities.RealTraceClifford.ClifMod
 import Development.AutomorphicSpectrum.Proofs.SemilocalMultiplicity.DsInfCharCap
+import Formalism.RealPlaceAnalysis.QuotientSettingHolds
 
 noncomputable section
 

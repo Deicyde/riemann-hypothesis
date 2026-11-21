@@ -1,5 +1,9 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.GeoSmallIn
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.CInfGood
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.OverLaUnique
+import Development.AutomorphicSpectrum.Definitions.MetricPeriods.AdelicGLLastRowAndDetModuleUnderLeftMultiplicati
+import Formalism.LocalToGlobal.IndefiniteReal.LeafObjects.LiftDataTimeEqWeightTime
 
 noncomputable section
 

@@ -1,10 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.ExistsHeightLeTwoMulQuotHeight
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.ChainParSucc
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaGrowthOfThetaSquareIntegrable
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IntegrableOnOfRapidDec
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsNormLeHeightPow
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FiniteVolumeAdelicUnitaryQuotient
 import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.GinfCSecondCountable
 
 noncomputable section
@@ -84,7 +82,7 @@ theorem integrable_prod {D : D7} {ψ : AddChar (AF D.host.F) ℂ} {θ : InfFam D
   have hq' := (pow_pos (quotHeight_pos T h) A).le
   have hB0 : 0 ≤ B := (mul_nonneg (norm_nonneg _) hq).trans (hB g)
   calc ‖Function.uncurry (fun (h : GA D T) (g : GA D S) => thetaKO om g h f * F h * conj (G g)) (h, g)‖
-        = ‖thetaKO om g h f‖ * ‖F h‖ * ‖G g‖ := by simp [Function.uncurry, norm_mul]
+        = ‖thetaKO om g h f‖ * ‖F h‖ * ‖G g‖ := by simp [Function.uncurry]
     _ ≤ K * (quotHeight S g * quotHeight T h) ^ A * ‖F h‖ * ‖G g‖ := by gcongr; exact hb g h
     _ = K * (‖G g‖ * quotHeight S g ^ A) * (‖F h‖ * quotHeight T h ^ A) := by ring
     _ ≤ K * B * B' := by

@@ -1,8 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.ConcretePkgSpec
-import Formalism.LocalRingCardinality.DataExtra
-import Formalism.LocalRingCardinality.DataTies
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ColLieApply
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsColumnHighestWeightPolynomialMapStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ColumnHighestRowIntertwinersProportionalStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsColStableDisjointStatement
@@ -16,13 +13,8 @@ import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.DefiniteUnit
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MemMultTOfEquivariantStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MultiplicitySpaceDefiniteContinuousInvariantEquiStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ChainStepsLevelCharacterConditionsHold
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.FiniteDimensionalModel
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LastStepVectorLiftPairFlagLevelCharactersStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsFockVacAtOfIsThetaAt
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaKOContinuousAndRatInvariant
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.OmPureTensorOOfFinite
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GoodFiniteOfHcFinite
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ContinuousOnAtTau
 
 noncomputable section
 
@@ -56,7 +48,7 @@ theorem subst_subst (a a' : ι → Matrix (Fin n) (Fin n) ℂ) (b b' : ι → Ma
 theorem subst_one (P : Pol ι m n) : subst (fun _ => 1) (fun _ => 1) P = P := by
   refine DFunLike.congr_fun (?_ : subst (fun _ => 1) (fun _ => 1) = AlgHom.id ℂ _) P
   refine MvPolynomial.algHom_ext fun v => ?_
-  simp [subst, Matrix.one_apply, ite_and, Finset.sum_ite_eq, Finset.sum_ite_eq', ite_smul]
+  simp [subst, Matrix.one_apply, Finset.sum_ite_eq, Finset.sum_ite_eq', ite_smul]
 
 theorem colSub_rowSub (τ ρ : ι) (g : Matrix.unitaryGroup (Fin n) ℂ) (u : Matrix.unitaryGroup (Fin m) ℂ) (P : Pol ι m n) :
     colSub m τ g (rowSub n ρ u P) = rowSub n ρ u (colSub m τ g P) := by

@@ -1,5 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockMap
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.DataTheta
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import Mathlib.RingTheory.TotallySplit
 open scoped TensorProduct Matrix
 
 noncomputable section
@@ -22,7 +26,7 @@ theorem chain {σ : Type} [Fintype σ] [DecidableEq σ] (p : σ → Polynomial �
     congr 1
     · rw [Finset.sum_eq_single n]
       · simp
-      · intro l _ hl; simp [Pi.single_apply, Ne.symm hl]
+      · intro l _ hl; simp [Ne.symm hl]
       · simp
     · rw [Finset.sum_mul]; apply Finset.sum_congr rfl; intro l _; ring
 
@@ -84,7 +88,7 @@ theorem ext_kc {P Q R S : ℕ} (c : ℂ) (f : Pol P Q R S)
   have hB2 : Bᴴ = -B := by
     rw [hBdef, Matrix.conjTranspose_smul, Matrix.conjTranspose_add, Matrix.conjTranspose_conjTranspose]
     have : star (1 / (2 * Complex.I)) = -(1 / (2 * Complex.I)) := by
-      simp [Complex.ext_iff, div_eq_mul_inv]
+      simp [div_eq_mul_inv]
     rw [this]; ext a b; simp; ring
   have hA := h A hA1 (upq_of A hA1 hA2)
   have hB := h B hB1 (upq_of B hB1 hB2)
@@ -135,7 +139,7 @@ theorem omE_mm (a b : Fin Q) (x : Fin R) (g : Pol P Q R S) :
   by_cases h : a = b
   · subst h; simp; module
   · have hl : ((Sum.inr b : Ix P Q), (Sum.inl x : Ix R S)) ≠ (Sum.inr a, Sum.inl x) := by simp [Ne.symm h]
-    simp [h, Pi.single_apply, hl]
+    simp [h, hl]
 
 theorem act_Eab (a b : Fin Q) (g : Pol P Q R S) :
     fockAct1 P Q R S (Eab (Sum.inr a : Ix P Q) (Sum.inr b)) g =

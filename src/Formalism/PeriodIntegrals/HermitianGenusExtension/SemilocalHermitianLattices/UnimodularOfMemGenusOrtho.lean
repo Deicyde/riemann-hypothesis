@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.HermitianGenusExtension.SemilocalHermitianLattices.FiniteDimensionalOfOrtho
-import Formalism.HermitianLattices.HermitianLatticesProofs.GenusCovolBound
 
 open NumberField Module
 

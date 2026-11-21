@@ -1,5 +1,12 @@
-import Mathlib
-import ReciprocityTheory.DualLattices.HtLinStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
+import Mathlib.RingTheory.MvPowerSeries.Substitution
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.ReduceModChar
+import ReciprocityTheory.DualLattices.SqZeroOfSpan
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 

@@ -1,5 +1,6 @@
-import Mathlib
-import GroundTheory.PAdicHodge.BCrisNewtonApprox
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.PAdicHodge.BCrisNewtonNorm
 set_option maxSynthPendingDepth 1
 
 noncomputable section

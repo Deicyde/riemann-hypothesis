@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GeometricallyConnectedOfIsIsoRestrict
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.EffCartierIffForallCartAt
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.LocPrincipalSpan
 

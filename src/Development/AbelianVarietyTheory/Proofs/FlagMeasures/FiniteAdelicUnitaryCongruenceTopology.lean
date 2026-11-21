@@ -1,9 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.GlobAut
-import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.AdelstabL
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.IntegralFiniteAdeleCompleteSeparated
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.ExistsCompactAdeleRingModNumberField
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.PicardGroup
 
 open MeasureTheory Formalism.MainNotions.S NumberField
 open scoped InnerProductSpace
@@ -48,7 +50,7 @@ theorem conj_mem_cong {Λ : Submodule S (n → A)} {a : A} {k x : GL n A}
   refine ⟨(k : Matrix n n A) *ᵥ z, (hk z).1 hz, ?_⟩
   rw [← Matrix.mulVec_smul, ← e]
   simp only [Matrix.sub_mulVec, Matrix.one_mulVec, Matrix.mulVec_mulVec, Matrix.mulVec_sub,
-    Units.val_mul, Units.mul_inv, mul_assoc, sub_mul, one_mul, mul_sub]
+    Units.val_mul, Units.mul_inv, mul_assoc, sub_mul, one_mul]
 
 variable [TopologicalSpace A] [IsTopologicalRing A]
 

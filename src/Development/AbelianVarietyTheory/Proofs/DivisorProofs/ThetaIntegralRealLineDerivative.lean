@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CombRSingleNil
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsLieDerivativePolynomialFockSeesawStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenIntertwinerSkewPlaneUniqueDual
+import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 
 open NumberField MeasureTheory Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.AdelicU GlobalTheory.SiegelSet GlobalTheory.UAut GlobalTheory.ThK.SquareIntegrability GlobalTheory.ThK.FiniteLevelDerivatives
 
@@ -57,7 +59,7 @@ theorem at_embArch {m : ℕ} (J : Matrix (Fin m) (Fin m) E) {w : InfinitePlace F
     (fun _ _ => Prod.ext rfl (mul_zero _).symm) from rfl, e]
   by_cases h : r = s
   · subst h
-    simp only [Matrix.one_apply_eq, mul_one, sub_add_cancel_left, add_sub_cancel_left]
+    simp only [Matrix.one_apply_eq, mul_one]
     have hab : ∀ a b : AF F ⊗[F] E, 1 - a + b - 1 = b - a := fun a b => by ring
     rw [hab, smul_sub, smul_tensNU_inl u hu, smul_tensNU_inl u hu, sub_zero]
   · simp only [Matrix.one_apply_ne h, mul_zero, zero_add, sub_zero]

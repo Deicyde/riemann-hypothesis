@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.AdelicLattices.FactPrimes
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.ExistsPowPrincipal
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.ProdNormEmbeddingsEqAbsNorm
 import Development.AutomorphicSpectrum.Proofs.AdelicProofs.ProductFormulaLogNormsStatement

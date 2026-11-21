@@ -1,12 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ChartWiden
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ValLtOfRedM
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LiftsInvOne
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.NearPair
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TrueColumnKernelDataCompatibleStepCharts
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsRationalFramesNearAdelicAtBadPrimes
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CouplingCosetInFramesShapeAtBadPrime
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.StepGroupCharacterInverseTypeAtLifts
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CongAtOfNearSame
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ChartPointsFramesCongrAwayFromBadPrimes
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Col Formalism.L2.DIV Formalism.L2.Ker Formalism.UG Formalism.L2.Forms GlobalTheory.Mem GlobalTheory.Mem.Chr GlobalTheory.Mem.Col2 GlobalTheory.Mem.Col2.TC GlobalTheory.Mem.Col2.AdT Matrix
@@ -104,7 +97,7 @@ theorem chi_embU_mul_valV : ∀ {B : Base} {X : PreX B.toPre} (I : TC B X), I.Ok
           unfold GlobalTheory.TwU.InFrame at hin'
           rw [hfb1 P hP] at hin'
           first
-            | (simp only [GlobalTheory.TwU.ratA, map_one, inv_one, one_mul, mul_one] at hin'; exact hin')
+            | (simp only [GlobalTheory.TwU.ratA] at hin'; exact hin')
             | (erw [map_one, inv_one, one_mul, mul_one] at hin'; exact hin')
             | (convert hin' using 2; simp)
       have hh : IsOver v (GlobalTheory.TwU.seamP (sm I l Z) P.1) ∧ ∃ g z, NearPair I l Z a v P x.1 g z := ⟨hP, g, z, hnp⟩

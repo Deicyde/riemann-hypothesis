@@ -1,7 +1,9 @@
-import Formalism.SharpRestriction.CuspSpanNormBounds.BruhatCellsKronecker.OwnEvIntro
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.BruhatCellsKronecker.NcardPrimesOverOfSplitsCompl
 import Formalism.SharpRestriction.CuspSpanNormBounds.FrobeniusProjectedBounds
 import Formalism.SharpRestriction.CuspSpanNormBounds.LatticeGluingRadicals
+import Mathlib.Analysis.CStarAlgebra.ContinuousLinearMap
 
 noncomputable section
 

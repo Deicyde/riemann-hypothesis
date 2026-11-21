@@ -1,5 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MonoSpMapRingOfIntegersAlt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.HermitianTraceFormVanishing
 
 namespace GlobalTheory.UnipKill
 
@@ -55,7 +57,7 @@ theorem herm_sub_left (x x' y : Fin N → E) : herm G (x - x') y = herm G x y - 
 theorem herm_sub_right (x y y' : Fin N → E) : herm G x (y - y') = herm G x y - herm G x y' := by
   rw [sub_eq_add_neg, herm_add_right, herm_neg_right, sub_eq_add_neg]
 
-theorem herm_zero_right (x : Fin N → E) : herm G x 0 = 0 := by simp [herm, cc_zero]
+theorem herm_zero_right (x : Fin N → E) : herm G x 0 = 0 := by simp [herm]
 
 theorem cc_herm (hG : ∀ a b, cc (G a b) = G b a) (x y : Fin N → E) :
     cc (herm G x y) = herm G y x := by
@@ -65,7 +67,7 @@ theorem cc_herm (hG : ∀ a b, cc (G a b) = G b a) (x y : Fin N → E) :
 
 theorem herm_single (x : Fin N → E) (b : Fin N) :
     herm G x (Pi.single b 1) = ∑ a, x a * G a b := by
-  simp [herm, Pi.single_apply, apply_ite cc, cc_one, cc_zero, mul_ite, Finset.sum_ite_eq']
+  simp [herm, Pi.single_apply, apply_ite cc, mul_ite, Finset.sum_ite_eq']
 
 theorem eq_zero_of_herm (hG : G.det ≠ 0) (x : Fin N → E) (h : ∀ y, herm G x y = 0) : x = 0 := by
   have h1 : Matrix.vecMul x G = 0 := by
@@ -101,7 +103,7 @@ theorem rk1_smul_left (G : Matrix (Fin N) (Fin N) E) (c : E) (u v : Fin N → E)
 
 theorem rk1_smul_right (G : Matrix (Fin N) (Fin N) E) (c : E) (u v : Fin N → E) :
     rk1 G u (c • v) = cc c • rk1 G u v := by
-  ext a b; simp [rk1, cc_mul, Finset.mul_sum]
+  ext a b; simp [rk1, Finset.mul_sum]
   refine Finset.sum_congr rfl fun k _ => by ring
 
 theorem transvMat_eq (G : Matrix (Fin N) (Fin N) E) (ξ : Fin N → E) (α : E) :

@@ -1,7 +1,8 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.LinkedUnramifiedChains.TeichmullerParts.UnramifiedTrivialInertialType
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.Lbc
 import GroundTheory.AutomorphicForms.SmoothRepSchur
+import GroundTheory.GlobalFields.LocalFieldAtPlace
+import GroundTheory.LocalFields.PadicLogSeries
 open UpperTheory.V.Z.J.D
 
 theorem UpperTheory.V.Z.J.D.schurGL :

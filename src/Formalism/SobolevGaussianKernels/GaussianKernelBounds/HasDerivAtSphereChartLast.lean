@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SobolevGaussianKernels.StatementSB
-import Formalism.SobolevGaussianKernels.StatementLF
+import Mathlib.Tactic.ENatToNat
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace Formalism.SL.P
 

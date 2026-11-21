@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.SerFixOne
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.FiniteCosetsHeckeSetAtSplitPlaceOutsideLevel
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ExistsIntegerUnitSplitPlaceConjugatePrime
+import Formalism.LocalRingCardinality.SpanPowerMembership.LocAtA
 open NumberField IsDedekindDomain ReciprocityTheory.Aut
 open scoped TensorProduct
 

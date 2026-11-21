@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsProjOverWeierstrass
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.MumfordConstruction
-import Development.AbelianVarietyTheory.Definitions.Degenerations.AdmissibleBaseOfCompleteDvr
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TensFacts
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj IsLocalRing NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -43,7 +40,7 @@ theorem gtRelV_prod_tor_mul {F : Type} [Field F] {N : NumD F} {r : ℕ} (W : Mat
   refine Finset.prod_congr rfl fun j _ => ?_
   rw [← mul_zpow]
   congr 1
-  simp only [NumD.tor_mul_s_apply, NumD.Gt.mul_b, NumD.tor_b, one_mul, div_eq_mul_inv]
+  simp only [NumD.tor_mul_s_apply, NumD.Gt.mul_b, NumD.tor_b, div_eq_mul_inv]
   ac_rfl
 
 theorem gtRelV_prod_single {G : Type} [CommGroup G] {A : Type} [AddCommGroup A] {r : ℕ} (W : Matrix (Fin r) (Fin r) ℤ)
@@ -57,7 +54,7 @@ theorem gtRelV_prod_single {G : Type} [CommGroup G] {A : Type} [AddCommGroup A] 
     rw [Finset.prod_eq_single i]
     · simp
     · intro a _ ha
-      simp [Pi.single_apply, ha]
+      simp [ha]
     · simp
   have h2 : (∏ a, ∏ b, T a (Multiplicative.ofAdd ((Pi.single i χ : Fin r → A) b)) ^ W a b) =
       ∏ j, T j (Multiplicative.ofAdd χ) ^ W j i := by
@@ -65,7 +62,7 @@ theorem gtRelV_prod_single {G : Type} [CommGroup G] {A : Type} [AddCommGroup A] 
     rw [Finset.prod_eq_single i]
     · simp
     · intro b _ hb
-      simp [Pi.single_apply, hb]
+      simp [hb]
     · simp
   rw [h1, h2, ← Finset.prod_mul_distrib]
   refine Finset.prod_congr rfl fun j _ => ?_

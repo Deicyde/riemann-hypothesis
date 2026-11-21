@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJABddSSn
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BigCellHermitian
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.TheoremPIntegralOfPlaces
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJAFFStableAdjCont
 
 open Formalism.FourierDecayAlt

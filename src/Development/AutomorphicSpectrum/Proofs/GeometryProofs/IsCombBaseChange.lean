@@ -1,34 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.CInfGood
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.BcMapBcVec
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.FlatChernWeightEqOfIndependence
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.OnbMat
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.RegularFormsIsBundleProjectiveCover
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.TwistedDualRegularFormsFiniteCover
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.CuspOnto
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.AdelicGLLastRowAndDetModuleUnderLeftMultiplicati
-import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.GoodOrigin
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.LamLevel
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.ThmFlatA
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.FlatDegree
-import Development.AutomorphicSpectrum.Statements.MetricStatements.SmallOnTower
-import Development.AutomorphicSpectrum.Statements.MetricStatements.RankBound
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsProbabilityMeasureMuPart
-import Formalism.LocalToGlobal.ProjectiveLattices.CompHt
-import Formalism.LocalToGlobal.IndefiniteForms.IndefiniteTree.RealCubicMeans.LogMeanShares.LogMeanStatements.HSClaim
-import Formalism.LocalToGlobal.IndefiniteForms.IndefiniteTree.RealCubicMeans.LogMeanShares.LogMeanStatements.ShareLow
-import Formalism.LocalToGlobal.IndefiniteForms.IndefiniteTree.RealCubicMeans.LogMeanShares.LogMeanStatements.LineDegreeClosedFormula
-import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.SpecFirstDetFormNeZero
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.RootOriginGenericFrameStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LieModelPullbackEquivalence
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.StalkSpecializesBijective
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.NonemptyCptOverOfFlatPreimmersion
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HodgeCompComparisonMiddle
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.FlagEqualChangeLowerTriangular
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsFramedPointBaseChangeAlgebraMap
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.AbelianSchemeLawsUnconditional
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.FrameLawsOfModuli
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.ExpBCChart
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.DataHost
+import Formalism.LocalToGlobal.ProjectiveLattices.IsCombAt
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.OneArc
 open NumberField IsDedekindDomain MeasureTheory Filter Topology
 open Formalism.L2.Pj ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.FD ReciprocityTheory.ChartRestriction.G.AR.Up ReciprocityTheory.ChartRestriction.G.AR.Inst Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.L2.Theta
 open GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Rec
@@ -60,7 +33,7 @@ theorem isCombAt_spMap : ∀ (E : Type) [Field E] [NumberField E] [IsCMField E] 
     rw [← Category.assoc, ← Category.assoc, ← ReciprocityTheory.ChartRestriction.G.Geo.Tor.spMap_comp,
       ← ReciprocityTheory.ChartRestriction.G.Geo.Tor.spMap_comp]
     congr 2
-    ext y <;> simp [Formalism.L2.Pj.dualMap, ReciprocityTheory.ChartRestriction.G.Geo.Tor.epsMul, smul_eq_mul, map_mul,
+    ext y <;> simp [Formalism.L2.Pj.dualMap, ReciprocityTheory.ChartRestriction.G.Geo.Tor.epsMul, smul_eq_mul,
       TrivSqZeroExt.algebraMap_eq_inl]
   · have h1 : (List.ofFn fun i => f ≫ u i) = (List.ofFn u).map P := by
       rw [List.map_ofFn]

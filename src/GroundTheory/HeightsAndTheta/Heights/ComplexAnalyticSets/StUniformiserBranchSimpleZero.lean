@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StNormalCurvePointDVR
+import BuildAid.Leniency.Open
+import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StNormalModelPlace
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

@@ -1,8 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SurjectiveOfIsPullbackSqZero
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsNoetherianRingDualNumber
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.AbelianHodgeDeRham
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.BijectiveCechDeRhamComparisonDegreeOne
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.CategoryTheory.Monoidal.Cartesian.Over
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open CategoryTheory AlgebraicGeometry KaehlerDifferential DividedPowers ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory.CatCoh GlobalTheory.Cris GlobalTheory.CechDR GlobalTheory.DeRham GlobalTheory.SqLift GlobalTheory.LiftSys GlobalTheory.Published
 attribute [local instance] Over.cartesianMonoidalCategory
 
@@ -122,7 +124,7 @@ theorem isLocalization_away_of_flat_lift (R B B' B₀ B₀' : Type) [CommRing R]
       rw [map_sub, map_mul, map_pow, map_sum]
       simp_rw [hφs, ← hM]
       rw [show φ (c q) = ∑ j, A q j • y j from hy q, Finset.sum_mul]
-      simp [smul_mul_assoc]
+      simp
     choose n' hn' using fun q => kerI _ (he q)
     obtain ⟨N, hNdef⟩ : ∃ N, N = ∑ q, n' q := ⟨_, rfl⟩
     have hNle : ∀ q, n' q ≤ N := fun q => hNdef ▸

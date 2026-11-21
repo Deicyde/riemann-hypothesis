@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.JetOpIntegral
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.CharacterValueAtT
 open GlobalTheory.ColPeriod

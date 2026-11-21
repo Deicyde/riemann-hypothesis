@@ -1,5 +1,6 @@
-import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
-import Formalism.LocalToGlobal.GaloisLevelStructure.TiedHecke
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GaloisLevelStructure.TiedLevel
 import Formalism.LocalToGlobal.NormalizedHeckeFactors.ExpDefs
 import Formalism.SharpRestriction.LevelLetterCocycles.TWSet

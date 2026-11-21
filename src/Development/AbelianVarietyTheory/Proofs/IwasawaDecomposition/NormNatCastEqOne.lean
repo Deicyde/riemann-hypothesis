@@ -1,14 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.FixedVectorEqOfStandardData
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsTwIffCanonEq
-import Formalism.LocalToGlobal.KernelLattices.TopPin
-import Formalism.LocalRingCardinality.HostCls
-import Formalism.LocalToGlobal.KernelLattices.InterlaceAll
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.JetsInIffStepField
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.UnramifiedOfIsCMUnram
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.FiniteNotIsUnitOneAddSmul
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.NormPadicEmbeddingLeOneOfMemInverseHalfDifferent
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.IsRBasisOfLocBasis
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.LatAtLattice
+import Formalism.LocalRingCardinality.SpanPowerMembership.ExampleLayerExistsGenerators
+import Formalism.LocalToGlobal.KernelLattices.AdaptedEnt
 
 noncomputable section
 
@@ -51,7 +48,7 @@ theorem exists_unitary_at (p : ℕ) (hp : p.Prime) {N : ℕ} (L : Submodule (�
       rw [Finset.sum_eq_single b]
       · by_cases hab : a = b
         · subst hab; simp
-        · simp [Pi.single_apply, Ne.symm hab, hab]
+        · simp [Ne.symm hab, hab]
       · intro j _ hj
         simp [Pi.single_apply, hj]
       · simp

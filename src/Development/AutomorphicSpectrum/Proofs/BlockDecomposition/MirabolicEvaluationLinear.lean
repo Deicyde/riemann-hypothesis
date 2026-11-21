@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ShearGL
+import Development.AbelianVarietyTheory.Definitions.Foundations.SecondCountableAndT2LocalField
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MirabolicFourierExpansion
 
 noncomputable section
 

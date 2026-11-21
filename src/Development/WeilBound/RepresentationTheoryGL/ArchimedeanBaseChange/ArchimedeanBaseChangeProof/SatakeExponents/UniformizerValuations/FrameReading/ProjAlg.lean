@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Variable
 import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.SatakeExponents.UniformizerValuations.SetupExOf
 
 noncomputable section

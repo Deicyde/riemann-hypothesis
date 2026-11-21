@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GaussianPairingUnitaryGroupTwoThree
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousFourierGau
 open MeasureTheory Complex Matrix GlobalTheory.RealWeil
 open scoped RealInnerProductSpace ContDiff Real ComplexOrder
 set_option maxHeartbeats 1000000 in

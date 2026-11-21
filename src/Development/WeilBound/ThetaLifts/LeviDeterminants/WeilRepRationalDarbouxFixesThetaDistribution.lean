@@ -1,4 +1,5 @@
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MembershipProofs.ThetaSumTensorProductStatement
 import Development.WeilBound.ThetaLifts.LeviDeterminants.EqZeroOfTheta
 

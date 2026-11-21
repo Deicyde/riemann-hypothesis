@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.ComplexMultiplication.IsogenyDegreeOne
-import GroundTheory.GlobalFields.ComplexMultiplication.ReductionNumberField
 import GroundTheory.GlobalFields.ComplexMultiplication.GoodReductionAlmostAll
+import GroundTheory.GlobalFields.ComplexMultiplication.ReductionDifferential
 
 namespace GroundTheory.Global
 

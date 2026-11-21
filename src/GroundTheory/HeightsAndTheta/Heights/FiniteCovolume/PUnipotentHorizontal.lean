@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.StUnipotentHorizontal
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.StRationalUnipotent
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.StUnipRadicalOfRational

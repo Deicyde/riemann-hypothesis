@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.DirichletDensity.Statement
 import Formalism.CMTypeGalois.HalfTypesFromGeneral
+import Mathlib.NumberTheory.NumberField.Discriminant.Different
+import Mathlib.RingTheory.Prime
 
 open NumberField IntermediateField NumberField.InfinitePlace Formalism.Q3
 

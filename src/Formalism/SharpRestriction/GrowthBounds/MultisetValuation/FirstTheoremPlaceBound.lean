@@ -1,7 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.EaApplyDScale
 import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.NmRestNormOfPlace
 import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.ThRestGcVOf
 import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.BiadditiveSecondVariable
+import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.EaDegreeMapDomain
 
 noncomputable section
 

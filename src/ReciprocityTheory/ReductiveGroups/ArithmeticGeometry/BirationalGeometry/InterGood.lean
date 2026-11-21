@@ -1,5 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterSt
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterGoodG
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Rat.Star
+import Mathlib.RingTheory.PiTensorProduct
 
 namespace ReciprocityTheory.ChartRestriction.G.Geo
 

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsLattice
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StandardLatticeVecIndep
 set_option maxSynthPendingDepth 1

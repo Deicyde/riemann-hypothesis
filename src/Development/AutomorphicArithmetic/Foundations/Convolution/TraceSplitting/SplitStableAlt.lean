@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.TraceSplitting.SplitStable
 import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.FinSplit
 import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.SplitLoc

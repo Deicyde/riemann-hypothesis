@@ -1,7 +1,7 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PotentialTheory.IsPotentialPullbackStatement
 import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.LintegralImageEqLintegralNormSqDetMul
-import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.MdiscSt
-import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.MdiscPos
+import Mathlib.Geometry.Manifold.IsManifold.Basic
 
 namespace ReciprocityTheory.AnForm.M
 
@@ -142,12 +142,12 @@ theorem re_star_dot_hessC {D : ℕ} (φ : (Fin D → ℂ) → ℝ) (z x : Fin D 
   have hw : star x = ∑ i, ((x i).re • E i + (-(x i).im) • (Complex.I • E i)) := by
     ext k
     rw [Finset.sum_apply, Finset.sum_eq_single k
-      (fun i _ hik => by simp [E, Pi.single_apply, hik.symm]) (by simp)]
+      (fun i _ hik => by simp [E, hik.symm]) (by simp)]
     simp [E, Complex.ext_iff]
   have hIw : Complex.I • star x = ∑ i, ((x i).im • E i + (x i).re • (Complex.I • E i)) := by
     ext k
     rw [Finset.sum_apply, Finset.sum_eq_single k
-      (fun i _ hik => by simp [E, Pi.single_apply, hik.symm]) (by simp)]
+      (fun i _ hik => by simp [E, hik.symm]) (by simp)]
     simp [E, Complex.ext_iff]
   have hL : (star x ⬝ᵥ (hessC φ z *ᵥ x)).re = ∑ i, ∑ j,
       (((x i).re * (x j).re + (x i).im * (x j).im) *
@@ -167,8 +167,8 @@ theorem re_star_dot_hessC {D : ℕ} (φ : (Fin D → ℂ) → ℝ) (z x : Fin D 
     unfold levi
     rw [← hH, hIw, hw]
     simp only [map_sum, map_add, map_smul, ContinuousLinearMap.sum_apply,
-      ContinuousLinearMap.add_apply, ContinuousLinearMap.smul_apply, ContinuousLinearMap.coe_smul',
-      Pi.smul_apply, smul_eq_mul]
+      ContinuousLinearMap.add_apply, ContinuousLinearMap.smul_apply,
+      smul_eq_mul]
     simp only [Finset.mul_sum, ← Finset.sum_add_distrib, Finset.sum_div]
     rw [Finset.sum_comm]
     refine Finset.sum_congr rfl fun i _ => Finset.sum_congr rfl fun j _ => ?_

@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SiegelReframe
+import Mathlib.Algebra.Group.MinimalAxioms
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.Data.Int.Star
 open Matrix MeasureTheory GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe
 open scoped Real ContDiff
 

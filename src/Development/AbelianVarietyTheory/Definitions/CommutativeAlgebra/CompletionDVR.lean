@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.RangeAlgebraMapEqIInfDiscreteValuationSubring
+import Mathlib.NumberTheory.Padics.PadicIntegers
 
 namespace ReciprocityTheory.CA.Pt
 

@@ -1,6 +1,12 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.MahlerMeasure.HasOrder
-import Formalism.MahlerMeasure.FinalM
-import Formalism.MahlerMeasure.MahlerMeasureProofs.FreezeInto
+import Formalism.MahlerMeasure.MahlerMeasureProofs.LevelAct
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace Formalism.GM.GammaExpansion
 
@@ -18,7 +24,7 @@ theorem pderiv_comm' (i j : σ) (p : MvPolynomial σ R) :
   · rename_i p n hp
     have h0 : ∀ a b : σ, pderiv a (Pi.single (M := fun _ => MvPolynomial σ R) b 1 n) = 0 := by
       intro a b; rw [Pi.single_apply]; split_ifs <;> simp
-    simp only [Derivation.leibniz, map_add, smul_eq_mul, pderiv_X, h0, hp, mul_zero, zero_add, add_zero]
+    simp only [Derivation.leibniz, map_add, smul_eq_mul, pderiv_X, h0, hp, mul_zero, zero_add]
     ring
 
 noncomputable abbrev Dp (v : σ) : Module.End R (MvPolynomial σ R) := (pderiv v).toLinearMap
@@ -106,7 +112,7 @@ theorem fw_add_single (m : σ →₀ ℕ) (v : σ) :
     · subst h
       simp only [Finsupp.add_apply, Finsupp.single_eq_same, if_true, Nat.factorial_succ, Nat.cast_mul]
       ring
-    · simp [Finsupp.single_apply, Ne.symm h, h]
+    · simp [h]
   simp_rw [key, Finset.prod_mul_distrib, Finset.prod_ite_eq']
   simp
 
@@ -887,10 +893,10 @@ theorem quot_mem_pol (LL : M.Letters (N + 1)) (ρ : Fin r) (e : ℕ) (f h : MvPo
     · subst hi
       rw [Finset.sum_eq_single ρ]
       · simp
-      · intro c _ hc; simp [Finsupp.single_apply, Ne.symm hc]
+      · intro c _ hc; simp [Ne.symm hc]
       · simp
     · rw [if_neg hi]
-      exact Finset.sum_eq_zero fun c _ => by simp [Finsupp.single_apply, Ne.symm hi]
+      exact Finset.sum_eq_zero fun c _ => by simp [Ne.symm hi]
   rw [hs] at h2
   show ∑ c, m (i, c) = Function.update LL.deg (Fin.last N) (LL.deg (Fin.last N) - e) i
   by_cases hi : i = Fin.last N
@@ -970,7 +976,7 @@ theorem degH_eq (LL : M.Letters (N + 1)) (e : ℕ) (he : e ≤ LL.deg (Fin.last 
       (fun b' : Fin (N + 1 + 1) => if b' = Fin.last (N + 1) then 1 else 0) (Fin.last (N + 1))) *
         (lowerLast LL e).deg b = LL.total - e := by
   first
-  | (simp only [Fin.castSucc_ne_last, eq_self_iff_true, ↓reduceIte, zero_add, one_mul]
+  | (simp only [Fin.castSucc_ne_last, ↓reduceIte, zero_add, one_mul]
      rw [← lowerLast_total LL e he]; rfl)
   | (simp [Fin.castSucc_ne_last]; rw [← lowerLast_total LL e he]; rfl)
 
@@ -998,7 +1004,7 @@ theorem Z_biHom (LL : M.Letters (N + 1)) (ρ : Fin r) (e : ℕ) (he : e ≤ LL.d
     rw [weight_ind] at hW hH
     refine ⟨?_, ?_⟩
     · simp only [Finsupp.add_apply, Finset.sum_add_distrib, hW]
-      simp [Finsupp.single_apply, (Fin.castSucc_lt_last (Fin.last N)).ne']
+      simp
     · simp only [Finsupp.add_apply, Finset.sum_add_distrib, hH]
       simp [Finsupp.single_apply, add_comm]
   · exact absurd rfl hm

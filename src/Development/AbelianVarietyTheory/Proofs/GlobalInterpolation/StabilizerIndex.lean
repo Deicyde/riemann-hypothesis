@@ -1,7 +1,4 @@
-import Mathlib
-import Formalism.LocalRingCardinality.DataLevel
-import Formalism.LocalRingCardinality.DataLevelD
-import Formalism.SharpRestriction.GlobalSchurBounds.GeneralLinearActions.GapAtLeast
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.OverPlaceIntegralForm
 import Formalism.LogVandermondeBounds.LogVandermondeProofs.CardStabilizerVector
 open NumberField IsDedekindDomain Matrix Formalism.UG Formalism.BasicNotions Formalism.MainNotions.StandardLattice

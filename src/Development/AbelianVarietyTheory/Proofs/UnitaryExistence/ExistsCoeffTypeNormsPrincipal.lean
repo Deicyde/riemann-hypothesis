@@ -1,15 +1,4 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.NormsFree
-import Formalism.LocalToGlobal.ProjectiveLattices.RegPFree
-import Formalism.LocalToGlobal.ProjectiveLattices.RegQFree
-import Formalism.LocalToGlobal.ProjectiveLattices.ThShort
-import Formalism.LocalToGlobal.ProjectiveLattices.LiftLaSpec
-import Formalism.LocalToGlobal.ProjectiveLattices.IsGenFrGenFr
-import Formalism.LocalToGlobal.ProjectiveLattices.ChartDirectionsIntegral
-import Formalism.LocalToGlobal.ProjectiveLattices.AllTest
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsHolPeriods
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.SecBaseChangeAnySt
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.IsIntegralRatZetaOfCoeff
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.MultAddMultConjugate
 open AlgebraicGeometry CategoryTheory Limits NumberField IsDedekindDomain
@@ -51,7 +40,7 @@ theorem exists_coeff_typeNorms_principal :
   · intro z hz
     have e : z = ∑ i, b.repr ⟨z, hz⟩ i • (b i : ℂ) := by
       have := congrArg c.F.val (b.sum_repr ⟨z, hz⟩)
-      simp only [map_sum, map_smul] at this
+      simp only [map_sum] at this
       exact this.symm
     rw [e]
     exact sum_mem fun i _ => IntermediateField.smul_mem _ (hc' _ (by simp))

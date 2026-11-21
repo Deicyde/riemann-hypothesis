@@ -1,7 +1,5 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterDivPushA
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StatementsDivPushSheetSum
-import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StatementsDivPushBranchCount
 set_option maxSynthPendingDepth 1
 
 noncomputable section

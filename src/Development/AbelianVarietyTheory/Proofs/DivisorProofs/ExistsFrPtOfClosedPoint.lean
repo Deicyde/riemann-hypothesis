@@ -1,15 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsPreimmersionFst
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralModelDomainOverInclusion
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralPointModelOverDvr
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TangentBasisMapCompatible
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EmbeddingSectionCompatibility
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsDvrOverHeightOne
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PropertyOfCodimOneLocalUnits
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocalUnitOfDvrUnit
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FormalGroupDeterminantPowDepthBasisChangeInvariaStatement
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.TanLinOfCombLinear
-import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.IntegralOfFrChg
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DetMulExpandAlt
 
 set_option autoImplicit false
@@ -258,7 +252,7 @@ theorem exists_change {E : Type} [Field E] [NumberField E] [IsCMField E] {H : Re
   have e2 : M.map ι * C.map ι = ((discr E : ℤ) : k) • 1 := by
     rw [← Matrix.map_mul (f := ι), h.2.2]
     ext i j
-    by_cases hij : i = j <;> simp [Matrix.one_apply, hij]
+    by_cases hij : i = j <;> simp [hij]
   have e3 : C' * Matrix.of a * M.map ι = C.map ι * M.map ι := by rw [Matrix.mul_assoc, ← hM, h'.2.1, e1]
   have e4 := congrArg (· * C.map ι) e3
   simp only [Matrix.mul_assoc (C' * Matrix.of a), Matrix.mul_assoc (C.map ι), e2, Matrix.mul_smul, Matrix.mul_one] at e4

@@ -1,7 +1,18 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.PrimeEqBotOrMaximalIdealOfIsFieldAway
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.FiniteAlgebraLocalCompletion
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.IntToRatA
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.AlgebraicGeometry.FunctionField
+import Mathlib.AlgebraicGeometry.Modules.Sheaf
+import Mathlib.AlgebraicGeometry.Morphisms.FiniteType
+import Mathlib.AlgebraicGeometry.Morphisms.Flat
+import Mathlib.Combinatorics.Quiver.ReflQuiver
+import Mathlib.NumberTheory.Padics.Complex
+import Mathlib.NumberTheory.Padics.MahlerBasis
+import Mathlib.RingTheory.Ideal.Quotient.Index
 
 namespace GlobalTheory
 

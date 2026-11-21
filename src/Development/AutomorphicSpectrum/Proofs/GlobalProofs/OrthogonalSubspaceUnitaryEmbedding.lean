@@ -1,8 +1,6 @@
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.IsAdaptedEmpty
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.LeviNormalizesUnipotentVariant
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsContinuousAdelicUnitaryEmbedding
-import Formalism.LocalRingCardinality.DataSpaces
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FinrankOrth
+import Development.AutomorphicSpectrum.Proofs.GlobalProofs.FiniteDimensionalOfSlices
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Matrix
 open scoped TensorProduct ContDiff
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
@@ -17,7 +15,7 @@ theorem hT_coords {D : D7} (V : HSp D) (a b : Fin V.rank → D.host.E) :
     V.hT (V.frame.equivFun.symm a) (V.frame.equivFun.symm b) =
       ∑ k, ∑ l, star (a k) * V.gram k l * b l := by
   simp only [Module.Basis.equivFun_symm_apply]
-  simp only [map_sum, LinearMap.sum_apply, map_smulₛₗ, LinearMap.smul_apply, map_smul, smul_eq_mul, HSpace.gram,
+  simp only [map_sum, LinearMap.sum_apply, map_smulₛₗ, LinearMap.smul_apply, smul_eq_mul, HSpace.gram,
     starRingEnd_apply, Finset.mul_sum, RingHom.id_apply]
   rw [Finset.sum_comm]
   refine Finset.sum_congr rfl fun k _ => Finset.sum_congr rfl fun l _ => ?_

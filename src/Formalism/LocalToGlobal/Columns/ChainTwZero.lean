@@ -1,4 +1,6 @@
-import Formalism.LocalToGlobal.Columns.ChainTwMain
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.Columns.ChainTwOk
 
 open NumberField IsDedekindDomain Module
 

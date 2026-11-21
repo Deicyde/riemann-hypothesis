@@ -1,5 +1,8 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.FiniteIndexOfGammaLe
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Tactic.ENatToNat
 open UpperHalfPlane Filter GlobalTheory.OddFrame
 open ModularForm (E₄ E₆)
 open scoped MatrixGroups ModularForm Manifold Topology

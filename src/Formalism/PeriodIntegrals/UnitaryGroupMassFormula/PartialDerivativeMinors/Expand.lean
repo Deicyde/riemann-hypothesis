@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.PartialDerivativeMinors.PMinorAff
 
 noncomputable section
@@ -44,11 +44,11 @@ theorem fcoeff_mul {H : Type} [DecidableEq H] {N0 N1 p : ℕ} [Fact p.Prime] (E 
   refine Finset.sum_nbij' (fun x => x.2) (fun κ2 => (κ - κ2, κ2)) ?_ ?_ ?_ ?_ ?_
   · intro x hx
     simp at hx
-    simp only [Finset.mem_coe, Finset.mem_Iic]
+    simp only [Finset.mem_Iic]
     rw [← hx]
     exact le_add_self
   · intro κ2 hκ2
-    simp only [Finset.mem_coe, Finset.mem_Iic] at hκ2
+    simp only [Finset.mem_Iic] at hκ2
     simpa using tsub_add_cancel_of_le hκ2
   · intro x hx
     simp at hx

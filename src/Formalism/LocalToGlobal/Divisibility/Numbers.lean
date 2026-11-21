@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataParams₂
 import Formalism.LogFactorialIndices.StatementSize
-import Formalism.QuotientMetricDivisors.TheoremDivIneqRowsShift
 import Formalism.MirabolicMackeyTheory.StatementT
 
 noncomputable section

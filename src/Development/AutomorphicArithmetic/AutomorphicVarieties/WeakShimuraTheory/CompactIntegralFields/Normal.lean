@@ -1,5 +1,9 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.RedIdeal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.MonomialRepresentations.HenselDiag
+import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.MapRepApply
+import Mathlib.LinearAlgebra.Matrix.IsDiag
+import Mathlib.RingTheory.PiTensorProduct
 
 open IsLocalRing Polynomial UpperTheory.V.Alg UpperTheory.V.GradeZeroInterpolatingElement UpperTheory.V.Ws
 
@@ -85,7 +89,7 @@ theorem UpperTheory.V.Ws.normal :
       rw [← adj_mul', ← adj_mul', hgu]
     calc ν • (adj u * u) = adj u * (adj g * g) * u := by
           rw [hg']
-          simp [Matrix.mul_smul, Matrix.smul_mul]
+          simp
       _ = (adj u * adj g) * (g * u) := by simp only [Matrix.mul_assoc]
       _ = adj (Matrix.diagonal d) * adj u * (u * Matrix.diagonal d) := by rw [e1, hgu]
       _ = _ := by simp only [Matrix.mul_assoc]

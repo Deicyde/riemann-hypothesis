@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.VerticalDivisors.StatementsChowNorm
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.GroupTheory.MonoidLocalization.UniqueFactorization
+import Mathlib.RingTheory.LocalProperties.Reduced
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.Vertical

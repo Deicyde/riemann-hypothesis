@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorusThreeBlockApply
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.GeometricLemmaFiltration
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SizeMatrixCharacterLeviBlockExists
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.LeviEmbMemNormalizerLower
 
 noncomputable section
 
@@ -19,7 +19,7 @@ theorem tor3_comm (d : ℕ) (p : kˣ × kˣ) (y : Levi k (fun j : Fin 3 => Fin (
   funext j
   rw [Pi.mul_apply, Pi.mul_apply, torus_three_block_apply]
   ext1
-  simp only [Units.val_mul, Matrix.GeneralLinearGroup.scalar, Units.coe_map, MonoidHom.coe_coe]
+  simp only [Units.val_mul, Matrix.GeneralLinearGroup.scalar, Units.coe_map]
   exact (Matrix.scalar_commute _ (fun r => Commute.all _ r) _).symm.eq
 
 theorem tor3_mem_relParab (d : ℕ) (p : kˣ × kˣ) {β : Type} {c : Fin 3 → β → Type} [LinearOrder β] [Fintype β]

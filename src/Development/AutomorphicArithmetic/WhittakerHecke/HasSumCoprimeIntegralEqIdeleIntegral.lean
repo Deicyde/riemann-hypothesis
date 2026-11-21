@@ -1,6 +1,8 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.SplitEigenfunctions.CharacterNorms.FacDefs
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.WhittakerHecke.RatIdeleAbsRealIdeleNatIdeleUnitIdeles
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.EulerProducts.EulReal
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LatticeIndices.CharZeroAdicCompletion
+import Mathlib.MeasureTheory.Order.Group.Lattice
 open NumberField IsDedekindDomain MeasureTheory Matrix Topology Filter
 open Neutral.B1 Formalism.L2.Host Formalism.ConjugateSelfDual GlobalTheory.CuspRep GlobalTheory.GalOfCusp UpperTheory.V UpperTheory.V.Af UpperTheory.V.Published GroundTheory.Global GroundTheory.Automorphic.GJMatrix
 open UpperTheory.ConvolutionTheory.R2 UpperTheory.ConvolutionTheory.RankTwoDescent
@@ -180,7 +182,7 @@ private theorem core {L : ℕ} (hL : 0 < L) (p : IdeleGroup ℚ) (f : IdeleGroup
     rw [integral_prod_mul (fun a => f (iy (rv a) * p)) ind, integral_rv (fun r => f (iy r * p)), mul_comm]
     congr 1
     rw [hind, integral_indicator hTm, setIntegral_const, Measure.real, cT]
-    simp [TF, Measure.real]
+    simp [TF]
 
 private theorem iy_mul_mem_WW {L : ℕ} {r : ℝ} (hr : r ≠ 0) {τ : (A ℚ)ˣ} (hτ : τ ∈ TT L) : iy r * τ ∈ WW L := by
   obtain ⟨a, rfl⟩ := exists_rv r hr

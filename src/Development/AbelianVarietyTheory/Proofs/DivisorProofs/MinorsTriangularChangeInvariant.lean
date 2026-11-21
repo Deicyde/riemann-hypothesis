@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsNonarchimedeanW
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullFrameRight
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FnEquivApply
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MinorAtMulUpperTriangular
 open CategoryTheory AlgebraicGeometry NumberField IsDedekindDomain ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor

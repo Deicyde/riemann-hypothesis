@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.GrNormCompCast
 
 set_option autoImplicit false
@@ -25,7 +26,7 @@ theorem repr_map_of_basis {R M M₁ : Type} [CommRing R] [AddCommGroup M] [Modul
     · obtain ⟨m, rfl⟩ := hj
       simp [hq, Finsupp.single_apply, hσ.eq_iff]
     · have hne : j ≠ σ k := fun h => hj ⟨k, h.symm⟩
-      simp [hz j hj, Finsupp.single_apply, hne]
+      simp [hz j hj, hne]
   exact LinearMap.congr_fun this u
 
 theorem repr_map_eq_zero {R M M₁ : Type} [CommRing R] [AddCommGroup M] [Module R M] [AddCommGroup M₁]
@@ -36,7 +37,7 @@ theorem repr_map_eq_zero {R M M₁ : Type} [CommRing R] [AddCommGroup M] [Module
   have : (B.coord j) ∘ₗ i = 0 := by
     refine B₁.ext fun k => ?_
     have hne : σ k ≠ j := fun h => hj ⟨k, h⟩
-    simp [hi, Finsupp.single_apply, hne]
+    simp [hi, hne]
   exact LinearMap.congr_fun this t
 
 variable {X : Scheme.{0}} {F F₁ : X.Modules} {r r' : ℕ} {σ : Fin r' → Fin r} {U W : X.Opens}

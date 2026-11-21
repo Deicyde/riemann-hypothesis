@@ -1,6 +1,12 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SpanningFamilies.IsHeatZero
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.GCauchyStatement
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.SpanningFamilies.FirstCoordinateAdmissible
+import Mathlib.Analysis.Matrix.PosDef
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.Tactic.Monotonicity.Lemmas
 open Matrix Complex NumberField GlobalTheory.SW Filter Topology
 open ReciprocityTheory.ChartRestriction.G.FD (cc herm)
 open scoped ComplexConjugate ComplexOrder Real Classical
@@ -40,16 +46,16 @@ private lemma one_le_prod_re_of_isType_of_isIntegral_pos {E : Type} [Field E] [N
       ComplexEmbedding.conjugate (ComplexEmbedding.conjugate τ) = τ := by
     intro τ
     ext x
-    simp [ComplexEmbedding.conjugate_coe_eq]
+    simp
   have hcompl : ∏ τ ∈ Ψᶜ, τ d = ∏ σ ∈ Ψ, ComplexEmbedding.conjugate σ d := by
     refine Finset.prod_nbij' ComplexEmbedding.conjugate ComplexEmbedding.conjugate ?_ ?_
       (fun τ _ => hconj τ) (fun τ _ => hconj τ) ?_
     · intro τ hτ
-      simp only [Finset.mem_coe, Finset.mem_compl] at hτ ⊢
+      simp only [Finset.mem_compl] at hτ ⊢
       by_contra h
       exact hτ ((hΨ τ).2 h)
     · intro τ hτ
-      simp only [Finset.mem_coe, Finset.mem_compl] at hτ ⊢
+      simp only [Finset.mem_compl] at hτ ⊢
       exact (hΨ τ).1 hτ
     · intro τ _
       rw [hconj]

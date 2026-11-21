@@ -1,6 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.SelfDualAt
-import Formalism.LocalToGlobal.HermitianForms.TiedStep
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.HermitianForms.PsiZeroNontrivialCharacter
+import Mathlib.Analysis.Fourier.FiniteAbelian.PontryaginDuality
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 open Formalism.BasicNotions Formalism.UG Formalism.L2.Forms NumberField IsDedekindDomain Matrix GlobalTheory.St.G
 open scoped TensorProduct
@@ -39,7 +41,7 @@ private lemma inJ_diagonal_conj_iff {k : Type} [Field k] {n t : ℕ} (d : Fin n 
     split_ifs with hxy
     · subst hxy
       rw [h1, one_mul]
-    · simp [hc]
+    · simp
 
 private lemma inv_pow_mul_pow_succ_eq {k : Type} [Field k] (u : kˣ) (x y : ℕ) (h : x + 1 = y) :
     (((u ^ x)⁻¹ * u ^ y : kˣ) : k) = u := by

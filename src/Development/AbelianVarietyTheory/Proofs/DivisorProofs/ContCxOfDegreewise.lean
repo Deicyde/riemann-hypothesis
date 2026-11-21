@@ -1,6 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IndEtOfForallFinset
-import Development.AbelianVarietyTheory.Definitions.Divisors.DivisorSupportCondition
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.GalMapMul
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
 open CategoryTheory Limits AlgebraicGeometry Opposite CochainComplex CochainComplex.HomComplex TensorProduct GlobalTheory.EtC
 
 noncomputable section
@@ -153,7 +156,7 @@ theorem Q_of_Q_sub_one
         sub_self]
   obtain ⟨k', f', b'', y'', hb'', hby''⟩ := ih l w'' z'' hw'' hz'' hw''0 hz''0
   refine ⟨k', f' ≫ h ≫ f, b'' + pb (K.map f') v + pb (K.map (f' ≫ h)) σ, y'' + ρ, ?_, ?_⟩
-  · simp only [δ_add, δ_pb, hb'', hw''def, hw'def, pb_sub, pb_pb, Functor.map_comp, Category.assoc]
+  · simp only [δ_add, δ_pb, hb'', hw''def, hw'def, pb_sub, pb_pb, Functor.map_comp]
     abel
   · simp only [pb_add, pb_pb, c.w, hby'', hz''def, hz'def, δ_add]
     abel

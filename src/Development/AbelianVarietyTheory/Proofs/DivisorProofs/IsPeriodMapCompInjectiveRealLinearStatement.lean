@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsPeriodMapCompInjectiveRealLinear
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsHolPeriods
 open Matrix GlobalTheory.PELU
 open ReciprocityTheory.ChartRestriction.G.Geo.Tor (hermForm)
 set_option maxHeartbeats 1000000 in

@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MvIsIntMapMap
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIntegralInvariantDerivationLog
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.WickVanishing.LogChain
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.WickVanishing.MonoVal
 
 set_option autoImplicit false
@@ -41,13 +41,13 @@ theorem pderiv_inr_twoVars (k : Fin d) (f : PS K 2 d) :
     pderiv K (Sum.inr k) (subst (twoVars K d) f) = subst (twoVars K d) (pderiv K ((1 : Fin 2), k) f) := by
   classical
   rw [ReciprocityTheory.ChartRestriction.G.TB.LogPf.pderiv_subst cc_twoVars, Finset.sum_eq_single ((1 : Fin 2), k)]
-  · simp [twoVars, pderiv_X, Pi.single_apply]
+  · simp [twoVars]
   · intro q _ hq
     obtain ⟨a, i⟩ := q
     fin_cases a
-    · simp [twoVars, pderiv_X, Pi.single_apply]
+    · simp [twoVars]
     · have : i ≠ k := fun h => hq (by simp [h])
-      simp [twoVars, pderiv_X, Pi.single_apply, this]
+      simp [twoVars, this]
   · simp
 
 end Two

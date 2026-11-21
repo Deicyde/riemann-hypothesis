@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocFrames
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SplitKOfIsAlgClosed
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InducesPl
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsAlgAtlasAtlasOf
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 
 set_option autoImplicit false
 

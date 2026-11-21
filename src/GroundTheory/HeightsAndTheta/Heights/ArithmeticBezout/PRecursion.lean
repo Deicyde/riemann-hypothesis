@@ -1,5 +1,4 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.LogGaussNormSupportFinite
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.LowerBoundConditional
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.ConeBall
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.Characterised

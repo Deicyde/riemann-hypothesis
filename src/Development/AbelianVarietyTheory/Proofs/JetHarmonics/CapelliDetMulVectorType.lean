@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.RealPlaceAnalysis.ThirdArithmeticHolds
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.CapelliLeftComatrixStatement
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.QminorCommOfCommColumnsStatement
 

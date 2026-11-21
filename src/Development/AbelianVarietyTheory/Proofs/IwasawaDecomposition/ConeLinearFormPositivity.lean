@@ -1,9 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TraitOrdOfTraitOrdPt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsLevelFormAlongDvr
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.PsiCoordExistsUniqueUpToUnitLocal
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsCdvrMkLeContinuum
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.RegKrull
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LocalizationAtPrimeIsDiscreteValuationRingOfHeig
 
 noncomputable section
@@ -24,7 +22,7 @@ theorem linForm_eq_sum {ι : Type} [Fintype ι] [DecidableEq ι] (b : Module.Bas
     ℓ be = ∑ i, ∑ j, ℓ (elemForm b i j) * be (b i) (b j) := by
   have hbe : be = ∑ i, ∑ j, be (b i) (b j) • elemForm b i j := by
     refine LinearMap.ext_basis b b fun k l => ?_
-    simp [elemForm, Finsupp.single_apply, Finset.sum_apply, LinearMap.sum_apply]
+    simp [elemForm, Finsupp.single_apply, LinearMap.sum_apply]
   conv_lhs => rw [hbe]
   simp only [map_sum, map_zsmul, smul_eq_mul]
   refine Finset.sum_congr rfl fun i _ => Finset.sum_congr rfl fun j _ => mul_comm _ _

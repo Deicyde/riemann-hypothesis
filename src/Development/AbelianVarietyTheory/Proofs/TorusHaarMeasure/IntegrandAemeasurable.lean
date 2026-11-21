@@ -1,9 +1,8 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.WeightFunctionOnFrames
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.CuspidalExponentialDecay
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.InterpStatementPfC
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.InterpStatementPfD
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.InterpStatementPfJ
+import Mathlib.Algebra.Order.Sub.Prod
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.InterpStatementPfG
 
 open ReciprocityTheory.ChartRestriction.G.AR.Up ReciprocityTheory.L2DbarEstimates MeasureTheory Topology Metric
 open scoped ContDiff ENNReal
@@ -250,12 +249,12 @@ private theorem sum_antidiagonal_tuple_add_single_eq_filter {n : ℕ} (m : ℕ) 
       (fun h => absurd (Finset.mem_univ i) h), Pi.single_eq_same]
   refine Finset.sum_nbij' (fun β => β + Pi.single i 1) (fun α => α - Pi.single i 1) ?_ ?_ ?_ ?_ ?_
   · intro β hβ
-    simp only [Finset.mem_coe, Finset.mem_filter, Finset.Nat.mem_antidiagonalTuple] at hβ ⊢
+    simp only [Finset.mem_filter, Finset.Nat.mem_antidiagonalTuple] at hβ ⊢
     refine ⟨?_, ?_⟩
     · simp only [Pi.add_apply, Finset.sum_add_distrib, hsum, hβ]
     · simp only [Pi.add_apply, Pi.single_eq_same]; omega
   · intro α hα
-    simp only [Finset.mem_coe, Finset.mem_filter, Finset.Nat.mem_antidiagonalTuple] at hα ⊢
+    simp only [Finset.mem_filter, Finset.Nat.mem_antidiagonalTuple] at hα ⊢
     have key : ∑ j, (α - (Pi.single i 1 : Fin n → ℕ)) j + ∑ j, (Pi.single i 1 : Fin n → ℕ) j = ∑ j, α j := by
       rw [← Finset.sum_add_distrib]
       exact Finset.sum_congr rfl (fun j _ => by rw [← Pi.add_apply, tsub_add_cancel_of_le (hle α hα.2)])
@@ -263,7 +262,7 @@ private theorem sum_antidiagonal_tuple_add_single_eq_filter {n : ℕ} (m : ℕ) 
   · intro β _
     exact add_tsub_cancel_right β _
   · intro α hα
-    simp only [Finset.mem_coe, Finset.mem_filter] at hα
+    simp only [Finset.mem_filter] at hα
     exact tsub_add_cancel_of_le (hle α hα.2)
   · intro β _
     rfl

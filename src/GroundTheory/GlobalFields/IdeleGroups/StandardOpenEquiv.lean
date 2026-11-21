@@ -1,5 +1,6 @@
-import Mathlib
-import GroundTheory.GlobalFields.IdeleGroups.ClassGroup
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.GlobalFields.IdeleGroups.InfiniteProjInfiniteEmbeddingOfNe
 
 namespace GroundTheory.Global
 

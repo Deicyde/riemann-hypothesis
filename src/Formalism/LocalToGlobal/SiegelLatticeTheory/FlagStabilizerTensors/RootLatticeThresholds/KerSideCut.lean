@@ -1,6 +1,8 @@
-import Mathlib
-import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.KerJoinS
-import Formalism.LocalToGlobal.IndefiniteReal.IsometricPeriodsOfHypotheses
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.IndefiniteReal.PartsOrth
+import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.ColDict
+import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RowDict
 
 noncomputable section
 

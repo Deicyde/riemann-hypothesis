@@ -1,6 +1,6 @@
-import Formalism.LocalToGlobal.CharacterGerms.BlockMembershipSelfConjCharts
-import Formalism.LocalToGlobal.CharacterGerms.RowTieMemCDeg
-import Formalism.LocalToGlobal.CharacterGerms.FinTwoNeOneSub
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.CharacterGerms.GramMatrixMulRight
 
 noncomputable section
 
@@ -20,7 +20,7 @@ theorem chain_aeval {σ τ : Type} [Fintype σ] (S : MvPolynomial σ C →ₐ[C]
     pderiv ℓ (S p) = ∑ y, S (pderiv y p) * pderiv ℓ (S (X y)) := by
   induction p using MvPolynomial.induction_on with
   | C a =>
-    simp [MvPolynomial.algHom_C, MvPolynomial.pderiv_C]
+    simp [MvPolynomial.algHom_C]
   | add p q hp hq =>
     simp only [map_add, hp, hq, add_mul, Finset.sum_add_distrib]
   | mul_X p i hp =>
@@ -30,7 +30,7 @@ theorem chain_aeval {σ τ : Type} [Fintype σ] (S : MvPolynomial σ C →ₐ[C]
       by_cases h : i = y
       · subst h
         simp
-      · simp [Pi.single_apply, h]
+      · simp [h]
     conv_lhs => rw [map_mul S p (X i), Derivation.leibniz, hp]
     simp only [key, smul_eq_mul, add_mul, Finset.sum_add_distrib, ite_mul, zero_mul, Finset.sum_ite_eq,
       Finset.mem_univ, if_true, Finset.mul_sum, mul_assoc]
@@ -50,7 +50,7 @@ theorem pderiv_subG_off {p : MvPolynomial (Fin N × WVO fun o (_ : Fin 2) => IIs
       apply h (((eW r tau N) y).1, col)
       rw [← heq]
       rfl
-    simp [Pi.single_apply, hne]
+    simp [hne]
   rw [hX, mul_zero]
 
 private theorem lam_injective_of_tau_injective (inj : Function.Injective fun x : Orb × ZMod 2 => tau x.1 x.2)

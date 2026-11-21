@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.NormalFam
 
 noncomputable section
@@ -259,7 +260,7 @@ theorem exists_locPair [CharZero L] {ϖ : L} {σ : L →+* L} {q : ℕ} (h : For
     obtain ⟨f1, f2⟩ := unitary_gl1_unit_valuation hv p.1⁻¹
     refine fun _ => ⟨(p.2 : GL (Fin 1) L) 0 0 * ((p.1⁻¹ : U) : GL (Fin 1) L) 0 0, ?_, by rw [map_mul, e2, f2, one_mul], fun x => ?_⟩
     · rw [map_mul]; linear_combination e1 * (σ (((p.1⁻¹ : U) : GL (Fin 1) L) 0 0) * ((p.1⁻¹ : U) : GL (Fin 1) L) 0 0) + f1
-    · simp only [a, Matrix.mul_apply, Fin.sum_univ_one, Fin.default_eq_zero, Finset.univ_unique, Finset.sum_singleton, Subgroup.coe_inv]; ring
+    · simp only [a, Matrix.mul_apply, Fin.default_eq_zero, Finset.univ_unique, Finset.sum_singleton, Subgroup.coe_inv]; ring
   obtain ⟨M, i1, i2, ρ, ω, s, s0', r0, rm, rv, rs, rn, rf, rx⟩ := exists_model (G := U × U) A c
     (by intro x y z; rw [hc, hc, hc, ← AddChar.map_add_eq_mul]; congr 1; simp only [Matrix.add_apply, map_add]; ring)
     (by intro x y z; rw [hc, hc, hc, ← AddChar.map_add_eq_mul]; congr 1; simp only [Matrix.add_apply, map_add]; ring)

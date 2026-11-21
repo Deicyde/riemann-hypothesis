@@ -1,9 +1,10 @@
-import Mathlib
-import ReciprocityTheory.DualLattices.DetPolyMulCayleyOmegaPow
-import ReciprocityTheory.DualLattices.VEqZeroOfPowEqOne
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.WeightedSumBounds.PeriodValuation
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.PsWeightCalculus
 import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.WeightedOrderGePrimePowOfSumPurePowersAdd
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Data.Int.Star
+import Mathlib.Order.CompletePartialOrder
 
 open ReciprocityTheory.PGsh MvPowerSeries
 
@@ -53,7 +54,7 @@ theorem ord_pure {r w : ℝ} {N : ℕ} {a : Fin M → C}
   rw [coeff_C_mul, coeff_X_pow]
   split_ifs with hα
   · subst hα
-    rw [mul_one, Finset.sum_eq_single j (fun b _ hb => by simp [Finsupp.single_apply, Ne.symm hb])
+    rw [mul_one, Finset.sum_eq_single j (fun b _ hb => by simp [Ne.symm hb])
       (by simp)]
     simpa using h j
   · simp

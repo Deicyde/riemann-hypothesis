@@ -1,5 +1,10 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.ResChiSandwichUpper
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PProjectionBounds
+import ReciprocityTheory.GeometryOfNumbers.LatticeCovolumes.HadZSt
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.ABridgeSt
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.CSandwichStC
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.CSandwichStF
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.HilbertSamuel

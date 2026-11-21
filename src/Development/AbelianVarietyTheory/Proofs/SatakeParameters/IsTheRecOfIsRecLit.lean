@@ -1,9 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsTheRecOfIsRec
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ReciprocityUniqueOf
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.TransportKeepsCuspidalTwistsCharacters
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.PlaceOverTransportRingIsoSymm
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.PlaceOverTransportRingIsoStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LocalLanglandsTransport
+import GroundTheory.LocalFields.PadicLogSeries
 
 noncomputable section
 
@@ -97,7 +95,7 @@ theorem central_transport (i : k ≃+* k') {x : IrrGL k} {x' : IrrGL k'} (H : Re
   have hz : GeneralLinearGroup.scalar (Fin x.1) z = GeneralLinearGroup.map i.toRingHom
       (GeneralLinearGroup.scalar (Fin x.1) (Units.map i.symm.toRingHom.toMonoidHom z)) := by
     ext a b
-    by_cases hab : a = b <;> simp [GeneralLinearGroup.scalar, Matrix.diagonal_apply, hab]
+    by_cases hab : a = b <;> simp [GeneralLinearGroup.scalar, hab]
   show π'.cl.rep.ρ (GeneralLinearGroup.scalar (Fin x.1) z) (φ.toLinearEquiv (e v)) = _
   rw [← h2, hz, ← he, hω, map_smul, map_smul]
   rfl

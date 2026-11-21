@@ -1,6 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsOneCocycleOnSubgroup
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.IsTopWTopWOfExists
+import Mathlib.FieldTheory.Galois.Profinite
+import Std.Tactic.BVDecide.Normalize.Prop
 open GlobalTheory.KCoh Polynomial
 
 noncomputable section

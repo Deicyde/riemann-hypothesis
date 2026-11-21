@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.TermsFiniteAtPoint.CarrierRow
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.RelativeEquivalence.DCRelEquivAllHolds
 
 noncomputable section
 
@@ -114,9 +114,9 @@ theorem form_nil (x y : S.V) :
   have E3 : S.hT (nilF e a s x) (nilF e a s y) =
       ∑ c, ∑ d, star (S.hT (e c) x) * S.hT (e d) y * S.hT (a c) (a d) := by
     rw [nilF_apply e a s x, nilF_apply e a s y]
-    simp only [map_sum, map_add, map_smulₛₗ, map_smul, LinearMap.sum_apply, LinearMap.add_apply,
+    simp only [map_sum, map_add, map_smulₛₗ, LinearMap.sum_apply, LinearMap.add_apply,
       LinearMap.smul_apply, smul_eq_mul, starRingEnd_apply, hiso, hea, hae e a hea, mul_zero, add_zero,
-      zero_add, Finset.sum_const_zero, Finset.mul_sum, RingHom.id_apply]
+      Finset.sum_const_zero, Finset.mul_sum, RingHom.id_apply]
     rw [Finset.sum_comm]
     refine Finset.sum_congr rfl fun c _ => Finset.sum_congr rfl fun d _ => ?_
     ring
@@ -187,7 +187,7 @@ theorem heisOp_holds : HeisOp := by
       (LinearMap.id + nilF F.fl.e a s) = LinearMap.id := by
     refine LinearMap.ext fun v => ?_
     simp only [LinearMap.comp_apply, LinearMap.add_apply, LinearMap.sub_apply, LinearMap.id_apply,
-      map_add, map_sub, h3]
+      map_add, h3]
     abel
   refine ⟨LinearEquiv.ofLinear _ _ hfg hgf, ?_, fun v => ?_⟩
   swap

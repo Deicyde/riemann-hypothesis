@@ -1,7 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementTL
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.FrameOfAdmissibleWord
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.L0ConstantPartCommute
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.FreeOf2RmatrixTranspose
 
 namespace Formalism.FourierDecayAlt.P.TLA.L1
 

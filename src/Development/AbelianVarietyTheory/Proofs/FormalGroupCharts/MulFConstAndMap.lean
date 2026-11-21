@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PlaceDivisors.StChartFH
-import Development.AbelianVarietyTheory.Definitions.TwoChartAtlas.TwoChartSt
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.WickVanishing.GaugeTrans
 
 noncomputable section
 open MvPowerSeries

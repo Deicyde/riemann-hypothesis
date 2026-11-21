@@ -1,6 +1,7 @@
-import Mathlib
-import GroundTheory.ArithmeticGeometry.SchemeCohomology.CechNaturality.NaturalLeray
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ArithmeticGeometry.SchemeCohomology.ProjectiveCohomology.ImmersionPush
+import GroundTheory.ArithmeticGeometry.SchemeCohomology.CechNaturality.CechFunctor
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Arith.SchemeCoh

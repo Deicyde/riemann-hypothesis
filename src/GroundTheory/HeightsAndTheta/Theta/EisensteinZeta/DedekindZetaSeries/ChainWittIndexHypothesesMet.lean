@@ -1,9 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Theta.EisensteinZeta.DedekindZetaSeries.HeightGeSecondCubicBound
 import GroundTheory.HeightsAndTheta.Theta.Signature
 import GroundTheory.HeightsAndTheta.Theta.Parabolic
 import GroundTheory.AutomorphicForms.HermitianDisc
 import GroundTheory.HeightsAndTheta.Theta.GaussianExample
+import Mathlib.Algebra.Order.Star.Real
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Theta

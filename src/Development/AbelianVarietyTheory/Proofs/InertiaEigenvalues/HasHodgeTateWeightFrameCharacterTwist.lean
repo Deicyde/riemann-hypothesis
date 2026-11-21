@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.TwistStep
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.PotentiallySemistableCyclotomicSum
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ImportsBisExtra
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.DeRhamPeriodRingFieldTPowFiltrationUnitsStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ScalGLCommute
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.FiltrationZeroMembership

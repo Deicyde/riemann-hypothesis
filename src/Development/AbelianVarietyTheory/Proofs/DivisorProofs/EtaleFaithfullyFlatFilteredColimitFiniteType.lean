@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IndEtOfForallFinset
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFilteredColimitFiniteTypeIntRings
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EtaleFaithfullyFlatRingHomBasicProperties
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EtaleFaithfullyFlatDescendsOfIsColimitStatement
 open CategoryTheory Limits AlgebraicGeometry Opposite CochainComplex CochainComplex.HomComplex TensorProduct GlobalTheory.EtC
 
@@ -51,10 +50,10 @@ def coc : arrF D0 j g' ⟶ (Functor.const (Under j)).obj (Arrow.mk g) where
     (pushout.inr_desc _ _ (hnat k)).symm
   naturality k k' φ := by
     ext : 1
-    · simp only [Arrow.comp_left, Functor.const_obj_map, Arrow.id_left, Category.comp_id, Arrow.homMk_left, arrF_map_left]
+    · simp only [Arrow.comp_left, Functor.const_obj_map, Arrow.id_left, Arrow.homMk_left, arrF_map_left]
       rw [ι0.naturality φ.right]
       simp
-    · simp only [Arrow.comp_right, Functor.const_obj_map, Arrow.id_right, Category.comp_id, Arrow.homMk_right, arrF_map_right]
+    · simp only [Arrow.comp_right, Functor.const_obj_map, Arrow.id_right, Arrow.homMk_right, arrF_map_right]
       apply pushout.hom_ext
       · simp [pdesc]
       · simp only [pdesc, inr_pmap_assoc, pushout.inr_desc]

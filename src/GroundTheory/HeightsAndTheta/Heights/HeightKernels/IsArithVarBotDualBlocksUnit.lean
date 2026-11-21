@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.StatementsLineDegreeDual
-import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsArith
-import GroundTheory.HeightsAndTheta.Heights.HeightsOfSets.IsSaturatedFirstCoordinateLine
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

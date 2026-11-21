@@ -1,7 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.ColMatchAll
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsClassFam
-import Formalism.LocalRingCardinality.KernelPlaceMeanBound
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.JetsInIffStepField
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.LatAtLattice
+import Development.AbelianVarietyTheory.Definitions.LatticeFrames.HtPsiLeIffExists
+import Development.AbelianVarietyTheory.Definitions.LatticeFrames.SlopeStepG
+import Formalism.SharpRestriction.Divisibility.PlaceRankTwoOne
 
 noncomputable section
 

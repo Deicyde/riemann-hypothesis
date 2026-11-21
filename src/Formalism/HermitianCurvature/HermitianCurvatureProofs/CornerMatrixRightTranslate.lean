@@ -1,4 +1,6 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CornerMatrixFirstLineZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.BaseIndexConstantInjective
 
 open Matrix Finset
 open scoped ComplexConjugate

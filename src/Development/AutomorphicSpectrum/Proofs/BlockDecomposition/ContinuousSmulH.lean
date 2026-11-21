@@ -1,5 +1,5 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.RegularisedSiegelWeil.HermitianCellMeasures.EmDefs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HermitianMeasureConjugation
 noncomputable section
 open scoped Matrix NNReal ENNReal ComplexConjugate TensorProduct

@@ -1,4 +1,5 @@
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.MonomialFrameSpan.NablaSpanC
+import BuildAid.Leniency.Open
+import Formalism.PeriodIntegrals.NablaSpans.MinorProdSpanHasCompl
 
 noncomputable section
 

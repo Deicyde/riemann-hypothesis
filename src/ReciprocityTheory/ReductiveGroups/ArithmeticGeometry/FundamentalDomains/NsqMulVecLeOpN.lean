@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.IsotropicCoefficientSplitting
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Tactic.ENatToNat
 
 namespace ReciprocityTheory.ChartRestriction.G.FD.OrthonormalChartBounds
 

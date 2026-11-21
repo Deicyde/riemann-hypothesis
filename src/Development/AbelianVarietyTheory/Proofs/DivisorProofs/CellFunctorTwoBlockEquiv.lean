@@ -1,11 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.GeometricLemmaFiltration
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HasFiniteLengthOfIsIrreducible
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.BernsteinUnitaryProductIrreducible
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.NonemptyEquivOfRangeEq
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.GeometricLemmaCellOneBlockSwapEquiv
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CellFunctorTorusCharacter
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemRelParabColEq
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InducedRepSigmaApplyQuotientStatement
 open GlobalTheory.PRep GlobalTheory.SmGL Matrix
 
@@ -161,7 +155,7 @@ theorem restr_law (χ₁ χ₂ : kˣ →* ℂˣ) (u v : ℕ) (Φ : CellSp (k := 
   unfold restr
   rw [Submodule.quotEquivOfEqBot_apply_mk]
   congr 1
-  simp only [Subtype.coe_mk, incl_true, incl_false, Subtype.coe_eta, map_one, one_mul, Units.val_mul]
+  simp only [incl_true, incl_false, Subtype.coe_eta, map_one, one_mul, Units.val_mul]
 
 theorem restr_smooth (χ₁ χ₂ : kˣ →* ℂˣ) (u v : ℕ) (Φ : CellSp (k := k) χ₁ χ₂ u v) :
     (⟨restr χ₁ χ₂ u v Φ, fun q x₁ => restr_law χ₁ χ₂ u v Φ q x₁⟩ :
@@ -208,7 +202,7 @@ theorem toCell_surjective {χ₁ χ₂ : kˣ →* ℂˣ} (hχ₂ : IsSmoothChar 
   conv_rhs => rw [hx, h1, ← mk_restr χ₁ χ₂ u v Φ (x false), inducing_mk]
   unfold toFun
   rw [hl]
-  simp only [map_one, Pi.one_apply, Units.val_one, mul_one]
+  simp only [map_one, Pi.one_apply, mul_one]
   rfl
 
 def mapF {χ₁ χ₂ : kˣ →* ℂˣ} (hχ₂ : IsSmoothChar χ₂) (u v : ℕ) :

@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.AcrisTorsionFreeComplete
-import Development.AbelianVarietyTheory.CrystallinePeriods.RingIface
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.AdicCompletionLocal.InstIsAdicCompleteOCSpanSingletonSetCast
+import Formalism.SharpRestriction.LevelLetterCocycles.DataNLoc
 
 noncomputable section
 

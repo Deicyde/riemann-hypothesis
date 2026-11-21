@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.ChartComparison.StepIn
-import Formalism.LocalRingCardinality.DataGatTies
+import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.CompFintype
 
 noncomputable section
 

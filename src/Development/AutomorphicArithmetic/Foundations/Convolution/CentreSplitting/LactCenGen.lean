@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.CentralIntegrated
 import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.LactSpec
 

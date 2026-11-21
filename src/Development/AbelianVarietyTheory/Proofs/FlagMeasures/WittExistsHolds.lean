@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.LevelMatchIff
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.FrLink
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.WittExtensionTheorem
-import Formalism.SharpRestriction.CuspSpanNormBounds.NonemptyParameterModels.TermTiesEmptyOfLargeIndex
 
 noncomputable section
 

@@ -1,12 +1,6 @@
-import Mathlib
-import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.UniformContinuousConstSMulOfIsIsometricSMul
-import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.ExistsFactorialMulEqPow
-import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.DeRham
-import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.DeRhamMap
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.Embedding
-import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.PadicField
-import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.Action
-import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.TruncLogEqOfPowEqZero
 import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.MapEqPadicPowCyclotomicCharacter
 import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.Comparison
 import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.Envelope
@@ -818,7 +812,7 @@ theorem Bridge.AdicMaps.levMap_compat : ∀ {R S : Type} [CommRing R] [CommRing 
   intro R S _ _ I J f hf m n hle
   ext x
   obtain ⟨a, rfl⟩ := AdicCompletion.mk_surjective I R x
-  simp only [RingHom.comp_apply, RingHom.coe_coe, AdicCompletion.evalₐ_mk, Ideal.Quotient.mkₐ_eq_mk, Ideal.quotientMap_mk, Ideal.Quotient.factor_mk]
+  simp only [RingHom.comp_apply, RingHom.coe_coe, AdicCompletion.evalₐ_mk, Ideal.quotientMap_mk, Ideal.Quotient.factor_mk]
   rw [Ideal.Quotient.eq, ← map_sub]
   apply Reformulated.AutPerF.pow_le_comap_pow hf m
   have h := a.2 hle

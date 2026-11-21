@@ -1,8 +1,9 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.ImportsAlt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.DivAddLogbLeEightMulErrorScale
-import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.TsumThree
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.ArcLenTwoThickLetters
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.LiftsAtThickLetterType
+import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.HmaxLe
 
 noncomputable section
 

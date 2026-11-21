@@ -1,15 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.OnePlaceKF
-import Development.AbelianVarietyTheory.Definitions.Jets.SumIoPr
-import Formalism.SharpRestriction.CuspSpanNormBounds.LeadMinorK
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.DegVand
-import Formalism.LocalRingCardinality.DataTies
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.BesselQuotientMassEqConstMulNormSqTranslatesStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsKFinNeZeroOfCwCont
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.BesselGapDimensionFormula
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.SumNonneg
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.FrechetContinuousContinuousOnOrbitHasDerivAt
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.GrowthUnitaryGroupRpowNegIntegrable
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.DecayThresholdsOfSpectralGapCondition
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.DecSmoothAtGapOfDecSmooth
 open BranchingSupport GlobalTheory.CellAmp GlobalTheory.Amp Formalism.BasicNotions Formalism.MainNotions.S Formalism.QuantumDeterminants Matrix MeasureTheory Finset
@@ -146,8 +138,8 @@ theorem _root_.GlobalTheory.BesselPeriodNonzero.unfold_zero {k r : ℕ} {ε : Fi
     simp only [F, e1, e2]
     unfold _root_.Formalism.FourierDecayAlt.ThreeDimData.beInt
     rw [inner_smul_right, _root_.Formalism.FourierDecayAlt.P.MatrixMultiplicationContinuity.piW_inner hzpos hπ hp.1]
-    simp only [ContinuousLinearMap.smul_apply, inner_smul_right, inner_smul_left, map_mul, Complex.star_def,
-      inner_conj_symm, RCLike.conj_to_real, Complex.conj_conj]
+    simp only [ContinuousLinearMap.smul_apply, inner_smul_right, map_mul, Complex.star_def,
+      inner_conj_symm, Complex.conj_conj]
     ring
   have hL := ((innerSL ℂ (B (R.σ (Matrix.of x) w))).comp
     (ContinuousLinearMap.apply ℂ Wp ξ)).integral_comp_comm hint

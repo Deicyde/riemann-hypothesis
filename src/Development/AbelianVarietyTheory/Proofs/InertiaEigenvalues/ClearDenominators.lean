@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.UnitLemmaGroup
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.LinearDescent
 
 namespace GlobalTheory.ClearDenominatorsIntegral
 

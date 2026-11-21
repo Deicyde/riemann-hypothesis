@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.MinorFormulas.MinorCoreA
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Tactic.Polynomial.Basic
 
 noncomputable section
 
@@ -47,7 +50,7 @@ theorem core : Core := by
   induction ρ with
   | zero =>
     rw [detE_eq_sum]
-    simp [Xm]
+    simp
   | succ ρ ih =>
     letI : CommRing (Algebra.adjoin R (gens α (ρ + 1))) := Algebra.adjoinCommRingOfComm R (gens_comm α (ρ + 1))
     have hfull := coe_det_sub α (ρ + 1) (ρ + 1) id id

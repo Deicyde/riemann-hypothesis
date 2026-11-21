@@ -1,9 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsLeSup
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LevSplitOf
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousToGAd
 open scoped TensorProduct NNReal Matrix ContDiff
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -47,7 +43,7 @@ private theorem levi_fin (hσ : ∀ x, σ (σ x) = x) {n n₁ : ℕ} {H : Plane 
     funext i
     by_cases hij : i = j
     · subst hij; simp
-    · simp [Pi.single_apply, hij]
+    · simp [hij]
   have hz : (phiInf (F := F) (E := E)) ∘ ((mat b - 1) *ᵥ z) = 0 := by
     funext i
     rw [Function.comp_apply, RingHom.map_mulVec, Matrix.map_sub _ (map_sub _), hb,

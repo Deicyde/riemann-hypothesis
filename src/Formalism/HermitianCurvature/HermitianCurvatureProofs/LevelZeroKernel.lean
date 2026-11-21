@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.HeadJ
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BaseIndexConstantInjective
 
 open Matrix MeasureTheory
 open scoped ContDiff ComplexConjugate

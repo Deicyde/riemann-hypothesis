@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.Lemmas
-import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.FormsStable
-import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.ExistsBranchingCoordinatesIff
 
 noncomputable section
 

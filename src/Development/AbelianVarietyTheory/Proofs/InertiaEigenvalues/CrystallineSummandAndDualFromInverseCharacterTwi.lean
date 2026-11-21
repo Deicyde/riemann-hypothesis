@@ -1,15 +1,8 @@
-import Mathlib
-import Formalism.LocalRingCardinality.AdicCompletionLocal.LocTied
-import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
-import Formalism.SharpRestriction.LevelLetterCocycles.QuotientHomNonvanishingBound
-import Formalism.SharpRestriction.LevelLetterCocycles.LocCoh
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.ResidualConstruction
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.EmbeddingMapsIntoGoodExtension
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.SplitsOfConjugatesMem
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsCrysIffOfTwist
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FontaineBcrisBasicTheoremsProofStatement
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.DirectSumDeRhamCrystallineJumpsAddStatement
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CycZpowCrysDRJumpStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.NegCycPowerBlockCrysDeRhamJumpsStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LocChiEpsU
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.GaloisRepresentationHomFiniteDimensionalStatement
@@ -152,7 +145,7 @@ theorem exists_decomp_twist {O L Γ : Type} [CommRing O] [IsDomain O] [IsLocalRi
       erw [h0]
       refine Prod.ext rfl (funext fun c => ?_)
       have hk := congrArg (fun χ : Γ →* Oˣ => χ g) (key c c.2)
-      simp only [MonoidHom.mul_apply, MonoidHom.zpow_apply, zpow_neg, zpow_natCast] at hk
+      simp only [MonoidHom.mul_apply, zpow_neg, zpow_natCast] at hk
       simp only [Prod.smul_snd, Pi.smul_apply, smul_eq_mul]
       rw [← mul_assoc, ← map_mul, ← Units.val_mul, mul_comm (_ : Oˣ), hk]
       simp)

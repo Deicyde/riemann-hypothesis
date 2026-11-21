@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import ReciprocityTheory.DualLattices.SmallLevelClassSet
 import ReciprocityTheory.DualLattices.RidConvolutionDerivation
 import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.AevalSurjectiveOfIsNilpotentKer
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
 
 noncomputable section
 

@@ -1,4 +1,13 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CurveDVRSpecialization.IsUnitOrIsUnitOfAddOne
+import Mathlib.Algebra.Module.Submodule.Union
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Rat.Star
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace UpperTheory.V.Pr
 
@@ -270,7 +279,7 @@ private lemma charpoly3 (M : Matrix (Fin 3) (Fin 3) κ) :
       C ((M 0 0 * M 1 1 - M 0 1 * M 1 0) + (M 0 0 * M 2 2 - M 0 2 * M 2 0) + (M 1 1 * M 2 2 - M 1 2 * M 2 1)) * X
       - C M.det := by
   rw [Matrix.charpoly, det_fin_three, det_fin_three]
-  simp [charmatrix_apply]
+  simp
   ring
 
 private lemma minor_ne {n k : ℕ} (y : Matrix (Fin n) (Fin n) κ)

@@ -1,12 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocUnifSum
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemCtIntSub
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DisjointLineMid
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NeOfReNe
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsShear
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SplitExistenceStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ReconfiguredTriplePlaneIntegralStatement
 open scoped TensorProduct NNReal Matrix

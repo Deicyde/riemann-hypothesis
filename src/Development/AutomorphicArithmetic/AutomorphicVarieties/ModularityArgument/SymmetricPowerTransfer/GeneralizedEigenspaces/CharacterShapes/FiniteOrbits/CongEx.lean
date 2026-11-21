@@ -1,7 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.GeneralizedEigenspaces.CharacterShapes.HodgeTateFromSandwich
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.GeneralizedEigenspaces.GlobalRationalGL.IntegralConjugation.UaFacts
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.KLevTop
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AutomorphicFormGLContinuous
+import Development.AbelianVarietyTheory.Definitions.Foundations.GLintEqKOAndPrincEqKOne
 
 noncomputable section
 
@@ -119,7 +122,7 @@ private theorem last {m : ℕ} (hn : 2 ≤ n) (w : Plc L) (hw : IsSplitAt w)
   obtain ⟨a, ha, e⟩ := ((isCong hm _).1 (hle ⟨hx, hK⟩)).2 w ⟨0, by omega⟩ ⟨1, by omega⟩
   have e1 : (mL w (secW n w g) - 1) ⟨0, by omega⟩ ⟨1, by omega⟩ = 1 := by
     rw [mL, hc]
-    simp [g, el, Matrix.transvection, Matrix.single_apply]
+    simp [g, el, Matrix.transvection]
   rw [e1] at e
   have hv : Valued.v ((m : Kw w)) < 1 := by
     have h0 := (HeightOneSpectrum.valuation_lt_one_iff_mem (K := L) w (m : 𝓞 L)).2 hmw

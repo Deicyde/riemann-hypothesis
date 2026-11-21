@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.QuotientHomNonvanishingBound
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.SpanRestrictEqTopOfAbsIrrSubStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.SemisimpleMatrixRepIsInternalIrreducibleStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.IsoSubSpanExtensionOfScalarsStatement

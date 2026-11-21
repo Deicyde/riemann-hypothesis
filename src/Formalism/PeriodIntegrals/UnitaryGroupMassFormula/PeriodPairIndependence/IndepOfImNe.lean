@@ -1,5 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.KerLat
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 open NumberField ComplexConjugate

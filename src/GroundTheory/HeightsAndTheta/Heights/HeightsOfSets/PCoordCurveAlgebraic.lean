@@ -1,7 +1,9 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.HeightsOfSets.CoordCurveDegree
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ArithmeticGeometry.AbelianVarieties.JacobianSmoothness.RingKrullDimLeRingKrullDimQuotientAddOne
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.IntToRat
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.MixedFieldContraction.GenericFibreKerTarget
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ArithmeticHilbertSamuelLowerBound
 set_option maxSynthPendingDepth 1
 
 noncomputable section

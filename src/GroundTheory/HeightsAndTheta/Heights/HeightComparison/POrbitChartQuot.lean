@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.HeightOrbitChartQuot
 import GroundTheory.HeightsAndTheta.Heights.HeightsOfSets.MemMCoordIdealIffOfIsWeightedHomogeneous
-import GroundTheory.HeightsAndTheta.Heights.HeightsOfSets.DenseChart
+import Mathlib.Algebra.Order.Sub.Prod
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

@@ -1,5 +1,11 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ArchBetween
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.CompactGapsGE
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 

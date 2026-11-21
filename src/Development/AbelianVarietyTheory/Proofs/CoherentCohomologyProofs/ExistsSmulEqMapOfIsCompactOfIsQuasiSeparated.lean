@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.IsQuasicoherentOfForallExistsAffine
+import Mathlib.AlgebraicGeometry.Morphisms.QuasiCompact
+import Mathlib.Order.CompletePartialOrder
 
 open CategoryTheory AlgebraicGeometry TopologicalSpace Opposite
 

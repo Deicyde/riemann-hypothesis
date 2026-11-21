@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.CoordinateIdeals
-import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.CoordinateIdeals.LineField
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsArith
 set_option maxSynthPendingDepth 1
 

@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeightBoundConst
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LogisticFactorMem
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.HermitianInterpolation
+import Mathlib.Topology.Sheaves.Presheaf
 open GlobalTheory Matrix Filter Topology Set GlobalTheory.HermFrame GlobalTheory.IndefiniteRowSideFullHecke.HermitianInterpolation GlobalTheory.InterpCurv
 open scoped ComplexOrder ContDiff
 

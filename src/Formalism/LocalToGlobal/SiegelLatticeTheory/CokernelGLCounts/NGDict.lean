@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.KappaEndpoints
-import Formalism.FlagUnipotentLattices.GlobalAssemblyDoubled
 
 noncomputable section
 

@@ -1,12 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.NormSumPairRankZeroOfCurveCoordNorm
-import Formalism.PairingDivisors.StatementH
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IdealPeriodLatticeOfCurveDatum
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.LatticeInvariantsPeriodPairDictionary
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.InducedTypeThetaGenusOnePermutes
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IntegralJAndAlgebraicData
-import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.ExistsFieldCmCurvesUnitDiscriminant
-import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.AddMonoidHomEqZeroOfEventually
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsMemWpNormSubLtOne
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsRelationGradient
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.FirstOrderRigid
@@ -283,7 +278,7 @@ theorem rigid (W : Subring K) (hW : IsClosed (W : Set K)) (hW1 : ∀ w ∈ W, �
   obtain ⟨r1, r2, r3, r4⟩ := rigid_dual m (φ A₀) (φ B₀) (φ a₀) (n₀.map φ) (h₀.map φ) k2 k3 ha₀ (hu a₀ ha) hsq₀
     (by
       have : -16 * (4 * A₀ ^ 3 + 27 * B₀ ^ 2) = 1 := S.subtype_injective (by
-      simp only [map_pow, map_neg, map_add, map_mul, map_ofNat, map_one, map_natCast]; exact hΔ)
+      simp only [map_pow, map_neg, map_add, map_mul, map_ofNat, map_one]; exact hΔ)
       simpa [map_ofNat] using congrArg φ this)
     (mn₀.map _) (mh₀.map _) (by rw [mn₀.natDegree_map, dn₀, dn]) (by rw [mh₀.natDegree_map, dh₀]) hco
     (by simpa only [Polynomial.map_add, Polynomial.map_mul, Polynomial.map_pow, Polynomial.map_sub, map_C, map_X,

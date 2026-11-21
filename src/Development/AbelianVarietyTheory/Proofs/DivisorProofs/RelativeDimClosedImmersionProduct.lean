@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.GlobalHeightBoundIffAtGoodPrimes
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ResidueFieldMapCompCongr
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ModelFunctionFieldTrdegEqRelDimStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TrdegCompositumLeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PullbackResidueFieldsGenerateStatement
@@ -42,7 +39,7 @@ theorem residueFieldMap_comp_apply_eq {X Y W : Scheme.{0}} (a : W ⟶ Y) (b : Y 
     (a.residueFieldMap z) ((b.residueFieldMap (a z)) x) =
       ((X.residueFieldCongr m).inv ≫ c.residueFieldMap z) ((X.residueFieldCongr hp).hom x) := by
   subst e m
-  simp only [Scheme.residueFieldCongr_inv, Scheme.residueFieldMap_comp, CommRingCat.comp_apply]
+  simp only [Scheme.residueFieldCongr_inv, Scheme.residueFieldMap_comp]
   rfl
 
 theorem fnFld_closure_eq_top : ∀ (O : Type) [CommRing O] [IsDomain O] [IsDiscreteValuationRing O]

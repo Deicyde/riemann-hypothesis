@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoC
 open scoped TensorProduct Matrix
 open NumberField IsDedekindDomain MeasureTheory Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.ThK.UnipDom
@@ -65,7 +65,7 @@ theorem gam_unitary {σ : E →ₐ[F] E} (hσ : ∀ x, σ (σ x) = x) {n : ℕ} 
   have e3 : x ᵥ* J ⬝ᵥ (fun i => σ (x i)) = 0 := by rw [← Matrix.dotProduct_mulVec]; exact hxx
   rw [hm]
   simp only [gam, Matrix.transpose_sub, Matrix.transpose_one, Matrix.transpose_smul, Matrix.transpose_vecMulVec,
-    sub_mul, mul_sub, one_mul, mul_one, Matrix.smul_mul, Matrix.mul_smul, e1, e2, Matrix.mul_assoc]
+    sub_mul, mul_sub, one_mul, mul_one, Matrix.smul_mul, Matrix.mul_smul, e1, e2]
   have e4 : Matrix.vecMulVec (vc σ J x) (fun j => σ (vc σ J x j)) * Matrix.vecMulVec (fun i => σ (x i)) (fun j => σ (vc σ J x j)) = 0 := by
     have : (fun j => σ (vc σ J x j)) = -(x ᵥ* J) := by rw [vecMul_vc hσ hJ, neg_neg]
     rw [Matrix.vecMulVec_mul_vecMulVec, this, neg_dotProduct, e3, neg_zero, zero_smul, Matrix.vecMulVec_zero]
@@ -177,7 +177,7 @@ theorem exists_rat_translate_coC : ∀ (F E : Type) [Field F] [NumberField F] [F
     (Subgroup.closure_le (K := stab σ W.J (incV F H'.x))).mpr (fun g hg => hg.1) hu
   refine ⟨funext fun j => ?_, ?_⟩
   · have he : incM F H'.ι *ᵥ Pi.single j 1 = incV F (H'.ι *ᵥ Pi.single j 1) := by
-      rw [← incM_mulVec_incV]; congr 1; funext k; by_cases h : k = j <;> simp [incV, Pi.single_apply, h]
+      rw [← incM_mulVec_incV]; congr 1; funext k; by_cases h : k = j <;> simp [incV, h]
     have k0 : fA σ W.J (mat u *ᵥ (incM F H'.ι *ᵥ Pi.single j 1)) (incV F H'.x) = 0 := by
       conv_lhs => rw [← hux]
       rw [fA_unitary, he, fA_incV, (hH.orth _).1, map_zero]

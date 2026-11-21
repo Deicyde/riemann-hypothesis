@@ -1,4 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.PolynomialDerivatives.PolyExpBound
+import Mathlib.Analysis.Calculus.LineDeriv.IntegrationByParts
+import Mathlib.RingTheory.PiTensorProduct
+import Std.Tactic.BVDecide.Normalize.Bool
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -43,7 +49,7 @@ theorem pderiv_Sg (c : ℝ) (k : Fin m × Fin n × Bool) :
     pderiv k (Sg c : PX m n) = C (-(c : ℂ)) * X (k.1, k.2.1, !k.2.2) := by
   obtain ⟨a, i, b⟩ := k
   cases b <;> simp [Sg, pderiv_X, Pi.single_apply, Finset.mul_sum, mul_comm, ite_and,
-    Finset.sum_ite_eq', Finset.sum_ite_eq]
+    Finset.sum_ite_eq']
 
 def Qv (c : ℝ) (P : PX m n) (v : Fin m → Fin n → ℂ) : PX m n :=
   ∑ k, C (crd k v) * (pderiv k P + P * pderiv k (Sg c))

@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.CompLeft
+import Mathlib.Algebra.Homology.DerivedCategory.KInjective
+import Mathlib.Algebra.Homology.HomotopyCategory.HomComplexSingle
+import Mathlib.CategoryTheory.ExtremalEpi
 open CategoryTheory Limits AlgebraicGeometry Opposite GlobalTheory.EtC CochainComplex CochainComplex.HomComplex
 open LateralTheory.E.EtaleTopologySheaves LateralTheory.E.LeafGhostCut UpperTheory.Et.Loc
 

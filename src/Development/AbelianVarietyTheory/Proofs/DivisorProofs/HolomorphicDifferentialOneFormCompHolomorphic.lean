@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsTypeIsRealConst
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ClosedFormsMulClosed
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DelAtEqSumDOne
 open Set Matrix MeasureTheory Filter Topology
 open GlobalTheory.HermFrame
@@ -17,7 +15,7 @@ open GlobalTheory.GoodMetric (coordVec)
 
 theorem sum_coord_smul_coordVec {n : ℕ} (w : V n) : ∑ b, w b • coordVec b = w := by
   ext i
-  simp [coordVec, EuclideanSpace.single_apply, Pi.single_apply]
+  simp [coordVec, Pi.single_apply]
 
 theorem dOne_comp_holo {n : ℕ} {φ : V n → V n} {c : V n → ℂ} {v : V n}
     (hc : DifferentiableAt ℝ c (φ v)) (hφ : DifferentiableAt ℂ φ v) :

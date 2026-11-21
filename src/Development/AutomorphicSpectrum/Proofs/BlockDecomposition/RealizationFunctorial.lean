@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.LevelChainValuations.OneSTr
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
 
 open CrystallineSemistableComparison.Pb.Kap
 
@@ -14,7 +18,7 @@ private theorem dual_expand {K B : Type} {V : Type*} [Field K] [CommRing B] [Add
     f φ = ∑ s, f (bs.coord s) * o (φ (bs s)) := by
   have hφ : φ = ∑ s, φ (bs s) • bs.coord s := by
     refine bs.ext fun t => ?_
-    simp [LinearMap.sum_apply, Finsupp.single_apply]
+    simp
   conv_lhs => rw [hφ]
   rw [map_sum]
   refine Finset.sum_congr rfl fun s _ => ?_

@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsRootOfIsAlgClosed
 open GlobalTheory.KZ GlobalTheory.CyclotomicQExpansion
 

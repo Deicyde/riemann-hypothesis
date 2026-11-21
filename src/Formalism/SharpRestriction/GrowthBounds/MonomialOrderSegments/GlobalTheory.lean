@@ -1,4 +1,9 @@
-import Formalism.SharpRestriction.GrowthBounds.MonomialOrderSegments.TestBoundOfRhoAndNormSets
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.MonomialOrderSegments.CgeZeroIffIntegral
+import Formalism.SharpRestriction.GrowthBounds.MonomialOrderSegments.Monomial
+import Mathlib.Data.Int.Star
+import Mathlib.RingTheory.SimpleRing.Principal
 
 noncomputable section
 
@@ -50,9 +55,9 @@ theorem output_exponent_same_block {ζ ζ' : D.EM} (hb : D.SameBlockAlt ζ ζ') 
 theorem ldeg_eIn (ζ : D.EM) (i : D.ML) : ldeg (eIn D.outP ζ) i = if D.outP i then 0 else ldeg ζ i := by
   unfold ldeg eIn
   split_ifs with h
-  · simp [Finsupp.filter_apply, h]
+  · simp [h]
   · have h' : D.outB i = false := by simpa [outP] using h
-    simp [Finsupp.filter_apply, h']
+    simp [h']
 
 theorem tangent_exponent_same_block {ζ ζ' : D.EM} (hb : D.SameBlockAlt ζ ζ') : D.tpE ζ' = D.tpE ζ := by
   unfold SameBlockAlt at hb

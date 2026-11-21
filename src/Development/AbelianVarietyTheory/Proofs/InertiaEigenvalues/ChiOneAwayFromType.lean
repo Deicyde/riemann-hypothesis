@@ -1,12 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.DecompositionInvariantsCondition
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.OneSubPhiOntoOfFilZero
-import Formalism.SharpRestriction.LevelLetterCocycles.SumRepresentations
-import Development.AbelianVarietyTheory.BlockTheory.TorsionBlocks.JumpDictionary
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.JumpDictCrysAtOfWeights
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsConstituentOfIsBlockSum
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.BlockCharactersCrystallineOfRules
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsCrysInclusion
 
 noncomputable section
 
@@ -20,7 +15,7 @@ abbrev sOne (D : D7) : ℝ := ((D.R.t : ℝ) - 1) / 2 + (1 - (D.R.nV : ℝ)) / 2
 
 theorem charpoly_fin_one {R : Type} [CommRing R] (M : Matrix (Fin 1) (Fin 1) R) :
     M.charpoly = Polynomial.X - Polynomial.C (M 0 0) := by
-  simp [Matrix.charpoly, Matrix.det_fin_one, Matrix.charmatrix_apply]
+  simp [Matrix.charpoly]
 
 theorem integral (D : D7) (hB : BlockCharParam D) (i : D.nd.Loc) :
     ∀ τ : D.host.E →+* ℂ, ∀ z ∈ D.naut.infG (D.naut.tw (D.naut.muC i) D.naut.etaTinv) τ,

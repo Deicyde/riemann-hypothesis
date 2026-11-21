@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.DualLattices.NsmulTensorEqZero
 import ReciprocityTheory.DualLattices.SmKerSurj
 import ReciprocityTheory.DualLattices.TangentPairingStatement

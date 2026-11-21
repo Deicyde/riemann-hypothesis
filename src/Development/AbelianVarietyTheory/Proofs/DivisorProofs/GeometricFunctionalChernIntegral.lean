@@ -1,9 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.LineSCShortExact
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FirstChernFormPropertiesStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SmoothFormsCalculusHolomorphicAtlasStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HolAtlasTopFormIntegralFiniteAdditiveHomogeneousStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NontrivialIsomClassInt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HomogeneousMemSpanLinearRoots
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TopPowerHermitianFormDensityStatement
 open CategoryTheory AlgebraicGeometry MvPolynomial MeasureTheory
@@ -151,7 +150,7 @@ theorem evalF_add (G₁ G₂ : MvPolynomial ι ℝ) : evalF A w (G₁ + G₂) = 
 
 theorem evalF_smul (t : ℝ) (G : MvPolynomial ι ℝ) : evalF A w (t • G) = (t : ℂ) • evalF A w G := by
   funext x
-  simp [evalF, fld, MvPolynomial.smul_eq_C_mul, Algebra.smul_def]
+  simp [evalF, fld, Algebra.smul_def]
 
 end Linear
 

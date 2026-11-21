@@ -1,6 +1,5 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.L2BoundedOnSmooth
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.StSchurW
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.UnitaryGroupStructuralFacts
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.MeasurableBetGm
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.JBeConv
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.JPairs

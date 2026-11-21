@@ -1,5 +1,6 @@
-import Development.WeilBound.ThetaLifts.SmallCones.ThetaUniq
-import Development.WeilBound.ThetaLifts.SmallCones.ConeLawAB
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.ThetaLifts.SmallCones.ConeLaw
 
 set_option linter.unusedSectionVars false
 

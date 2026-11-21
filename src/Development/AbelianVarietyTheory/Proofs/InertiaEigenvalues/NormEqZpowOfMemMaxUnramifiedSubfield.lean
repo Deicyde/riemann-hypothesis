@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.DataNLoc
-import Development.AbelianVarietyTheory.Definitions.Foundations.HTBasis
+import Mathlib.NumberTheory.Padics.ProperSpace
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Topology.Connected.Separation
+import Mathlib.Topology.MetricSpace.Ultra.TotallySeparated
 
 open Formalism.BasicNotions Formalism.BasicNotions.Loc GlobalTheory.Cyc
 

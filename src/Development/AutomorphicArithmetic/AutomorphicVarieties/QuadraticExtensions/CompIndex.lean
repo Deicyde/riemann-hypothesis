@@ -1,8 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.QuadraticExtensions.ModulusAdjoinISqrtNegPrimes
-import Development.AutomorphicArithmetic.AutomorphicVarieties.QuadraticExtensions.AbBasic
-import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.TotallyRealRoots.GalAut
-import Development.AutomorphicArithmetic.AutomorphicVarieties.QuadraticExtensions.GalCharBasic
-import Development.AutomorphicArithmetic.AutomorphicVarieties.QuadraticExtensions.LevChar
+import Mathlib.Algebra.Order.Ring.Star
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.GaloisCohomology UpperTheory.V UpperTheory.V.LDataCardLeFinrank UpperTheory.V.Base UpperTheory.V.Kum UpperTheory.V.Two
 open scoped Pointwise
@@ -37,7 +35,7 @@ private theorem apply_eq_pow_val_galChar_of_isPrimitiveRoot (Ω : Type) [Field �
     haveI : IsAlgClosed Ω := IsAlgClosure.isAlgClosed ℚ
     haveI : CharZero Ω := algebraRat.charZero Ω
     exact HasEnoughRootsOfUnity.natCard_rootsOfUnity Ω n) σ.toRingEquiv (t := (hω.toRootsOfUnity : Ωˣ)) (SetLike.coe_mem _)
-  simp only [IsPrimitiveRoot.val_toRootsOfUnity_coe, Units.val_pow_eq_pow_val] at this
+  simp only [IsPrimitiveRoot.val_toRootsOfUnity_coe] at this
   exact this
 
 private theorem coe_galChar_eq_val_galChar_of_dvd (Ω : Type) [Field Ω] [Algebra ℚ Ω] [IsAlgClosure ℚ Ω] (k m : ℕ) [NeZero k] [NeZero m]

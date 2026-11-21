@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.SphericalCoordinates.LineBasis
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
@@ -65,8 +66,8 @@ private lemma core {n : ℕ} (M J : Matrix (Fin n) (Fin n) ℂ) (t : ℂ) (ht : 
     ext k
     by_cases h : k = i
     · subst h
-      simp [Pi.single_apply, Matrix.one_apply]
-    · simp [Pi.single_apply, Matrix.one_apply, h]
+      simp
+    · simp [h]
   refine ⟨hpos, ?_, ?_, ?_⟩
   · intro hneg
     apply hall

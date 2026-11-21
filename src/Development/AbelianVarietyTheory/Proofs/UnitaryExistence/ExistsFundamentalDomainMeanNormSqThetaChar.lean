@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.ThetaLawProofs.LintegralLintegralNormSqRiemannTheta
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
+import Mathlib.RingTheory.SimpleRing.Principal
 
 open MeasureTheory Matrix ReciprocityTheory.ChartRestriction.G.Geo.Tor
 
@@ -34,7 +36,7 @@ def periodMap {g : ℕ} (τ : Matrix (Fin g) (Fin g) ℂ) : (Fin g ⊕ Fin g →
     ring
   map_smul' r p := by
     funext i
-    simp [mulVec, dotProduct, mul_add, Finset.mul_sum]
+    simp [mulVec, dotProduct, Finset.mul_sum]
     exact Finset.sum_congr rfl fun j _ => by ring
 
 theorem periodMap_apply {g : ℕ} (τ : Matrix (Fin g) (Fin g) ℂ) (p : Fin g ⊕ Fin g → ℝ) :

@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.GNPsdC
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.BlockKWave
 
 namespace Formalism.FourierDecayAlt.P.PBL
 

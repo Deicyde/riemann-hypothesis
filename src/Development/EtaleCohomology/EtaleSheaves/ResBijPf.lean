@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.HZeroPf
 import Development.AbelianVarietyTheory.Definitions.Divisors.SecClass
+import Mathlib.Order.CompletePartialOrder
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry Opposite GlobalTheory.EtC

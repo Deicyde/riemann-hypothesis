@@ -1,4 +1,9 @@
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.EvalAtOneExtremalMul
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.LinearAlgebra.PiTensorProduct.Basis
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
+import Std.Tactic.BVDecide.Normalize.Prop
 open MvPolynomial Formalism.BasicNotions Formalism.L2.Forms Formalism.L2.Ker GlobalTheory.KJInf MeasureTheory
 open scoped TensorProduct
 

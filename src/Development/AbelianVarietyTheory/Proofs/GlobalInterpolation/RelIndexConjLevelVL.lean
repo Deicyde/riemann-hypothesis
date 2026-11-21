@@ -1,7 +1,5 @@
-import Mathlib
-import Formalism.LocalRingCardinality.DataLevel
-import Formalism.LocalRingCardinality.DataLevelD
-import Formalism.SharpRestriction.GlobalSchurBounds.GeneralLinearActions.GapAtLeast
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsHeckeOpFullDualLab
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IsOpenIsCompactLevelOffFinEmpty
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.RelIndexMulMeasure

@@ -1,5 +1,8 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ThetaVV
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.LinCombTrivG
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ThetaPt
 
 set_option autoImplicit false
 
@@ -75,7 +78,7 @@ example (N m : ℕ) : (oneSec S (N : ℤ) T).f ∈ VVsub (zeroPolAV S) N m T := 
         simp only [oneSec, Units.val_one]
         (repeat erw [map_one]); (try erw [_root_.one_mul])
       · intro j
-        simp only [oneSec, Units.val_one]
+        simp only [oneSec]
         (repeat erw [map_one]); (try erw [_root_.one_mul])
     · intro j
       dsimp only [oneSec]

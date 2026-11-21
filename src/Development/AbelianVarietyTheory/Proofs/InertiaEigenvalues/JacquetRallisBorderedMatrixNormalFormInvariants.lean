@@ -1,4 +1,13 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.FourierMatch
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 open GlobalTheory.JR Matrix MeasureTheory Filter Topology
 
 namespace GlobalTheory.JR.NormalFormL
@@ -34,7 +43,7 @@ theorem companion_mulVec_ev (p : Fin r → k) (i : ℕ) (hi : i + 1 < r) :
     companion p *ᵥ ev r k i = ev r k (i + 1) := by
   rw [ev_eq_single i (by omega)]
   funext j
-  simp only [mulVec_single, companion, of_apply, mul_one, ev]
+  simp only [mulVec_single, companion, ev]
   have : ¬ (i + 1 = r) := by omega
   simp [this]
 

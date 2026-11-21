@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.AutomorphicKernels.EisensteinSeriesG2.HeisenbergTheta.HeisenbergThetaConstant.ThetaC
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.NormLeNormInfCModuleSectionMul
-import GroundTheory.GlobalFields.TateThesis.TateThetaDecay
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.ImportsTailFurther
 set_option maxSynthPendingDepth 1
 

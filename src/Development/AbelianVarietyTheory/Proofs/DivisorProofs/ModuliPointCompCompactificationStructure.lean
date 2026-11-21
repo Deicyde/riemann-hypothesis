@@ -1,11 +1,12 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.NonemptyUWit
-import Development.AbelianVarietyTheory.Statements.SemistableTorsion.ImmersedBy
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LabRange
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUdeep
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsThetaSysUOver
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsProperSemiAbelianFamily
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsProjOverModel
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsThetaLabelCommonGenericFibrePullbackStatement
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LineBundleSymmetryHypothesisOfPolAVPullback
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory IsLocalRing NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.AnForm.R
 open GlobalTheory.Toroidal GlobalTheory.Models GlobalTheory.LN GlobalTheory.ShFam GlobalTheory.LocM GlobalTheory.PolFan GlobalTheory.ZH GlobalTheory.Poinc
@@ -54,7 +55,7 @@ theorem isUnit_n (X₁ : USetup C) : IsUnit ((X₁.ρ.n : ℕ) : C.o) := by
     intro a ha
     have e : X₁.M.pt ≫ g = (spMap (ratHull X₁.S.R).val.toRingHom ≫ X₁.u ≫ C.iF ≫ pullback.snd _ _) ≫ spMap C.b := by
       simp only [g, ← Category.assoc, X₁.comp]
-      simp only [Category.assoc, UCompact.i, pullback.condition]
+      simp only [Category.assoc, pullback.condition]
     have e2 : g (X₁.M.pt w) = (spMap C.b) ((spMap (ratHull X₁.S.R).val.toRingHom ≫ X₁.u ≫ C.iF ≫ pullback.snd _ _) w) := by
       rw [show g (X₁.M.pt w) = (X₁.M.pt ≫ g) w from rfl, e]; rfl
     rw [e2] at ha

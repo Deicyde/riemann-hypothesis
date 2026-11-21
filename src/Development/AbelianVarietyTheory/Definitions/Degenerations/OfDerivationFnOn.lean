@@ -1,5 +1,15 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.DualNumber
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsCompletedStrictHens
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SemiabelianSchemes.AbelianSchemeQuotients.QSurjective
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry
 open scoped CategoryTheory.Obj
@@ -82,7 +92,7 @@ def transl (a : 𝟙_ (Over (Sp K)) ⟶ A) : A ≅ A where
   hom := (toUnit A ≫ a) * 𝟙 A
   inv := (toUnit A ≫ a)⁻¹ * 𝟙 A
   hom_inv_id := by simp [MonObj.comp_mul, GrpObj.comp_inv, toUnit_unique (_ ≫ toUnit A) (toUnit A), ← Category.assoc]
-  inv_hom_id := by simp [MonObj.comp_mul, GrpObj.comp_inv, toUnit_unique (_ ≫ toUnit A) (toUnit A), ← Category.assoc]
+  inv_hom_id := by simp [MonObj.comp_mul, toUnit_unique (_ ≫ toUnit A) (toUnit A), ← Category.assoc]
 
 def shear (A : Over (Sp K)) [GrpObj A] : Bool → (A ⊗ A ⟶ A ⊗ A)
   | true => lift (fst A A) (fst A A * snd A A)

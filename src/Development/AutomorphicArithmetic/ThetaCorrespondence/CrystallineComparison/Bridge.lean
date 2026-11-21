@@ -1,4 +1,5 @@
-import Development.AutomorphicArithmetic.ThetaCorrespondence.CrystallineComparison.ContinuousToBdRPlus
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.CrystallineComparison.IsCrisDRAToBdRPlusIff
 
 noncomputable section

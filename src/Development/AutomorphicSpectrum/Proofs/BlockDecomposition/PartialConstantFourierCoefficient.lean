@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MeanTransport
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HermitianIntegralBlockFubini
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousPartialFourierMeanStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PeriodicPartialFourierMeanStatement

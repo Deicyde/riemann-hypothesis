@@ -1,15 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsWildInertiaCyclotomicElement
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.GaloisSideTwistedSelmerAuxiliaryPrimes
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SemisimpleOfInjective
-import Formalism.LocalToGlobal.NormalizedHeckeFactors.CoverStd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.RelIndexNeZeroOfCover
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.LocalisationCoefficientExtensionIsWildInertiaCyc
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FiniteRationalConjMemBoundedCompact
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FiniteIndexConj
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ClassSumSmallerLevel
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.MaxCompactUnitaryConjRelIndexEqStatement
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FiniteDoubleCosetsDefiniteUnitaryMaximalLevel
 open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formalism.ConjugateSelfDual ReciprocityTheory.Gal ReciprocityTheory.Aut Formalism.AUTREP Formalism.L2 NumberField IsDedekindDomain Polynomial GlobalTheory.EtaJoin GlobalTheory.CoefDuty
 
 noncomputable section
@@ -272,7 +267,7 @@ theorem mem_conj_iff (K : Subgroup (GAf L n)) (h x : GAf L n) :
   · rintro ⟨y, hy, rfl⟩
     simpa [MulAut.conj_apply, mul_assoc] using hy
   · intro hx
-    exact ⟨h * x * h⁻¹, hx, by simp [MulAut.conj_apply, mul_assoc]⟩
+    exact ⟨h * x * h⁻¹, hx, by simp [mul_assoc]⟩
 
 open Classical in
 theorem isClassReps_conj {K : Subgroup (GAf L n)} {T : Finset (GAf L n)} (hT : IsClassReps K T) (h : GAf L n) :

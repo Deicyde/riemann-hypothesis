@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.MemL2OfAutomorphicEmbedding
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsDualFamilyOfIsLattice
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsCompactAdele
+import Development.AbelianVarietyTheory.Definitions.Foundations.ForallEventuallyFinLocIff
 
 noncomputable section
 

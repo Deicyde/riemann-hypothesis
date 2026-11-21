@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.HzUnit
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.ExistsDblClosed
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.HeisOFinsetSum
 
 noncomputable section
@@ -67,7 +67,7 @@ theorem exists_foldr (ψ : AddChar (AF D.host.F) ℂ) (S T : HSp D) {ι : Type} 
   | nil =>
     refine ⟨Finsupp.single 0 1, fun f => ?_⟩
     funext w
-    simp [comb, Finsupp.support_single_ne_zero, heisO, symplOH, symplO, hO]
+    simp [comb, heisO, symplOH, symplO, hO]
   | cons i l ih =>
     obtain ⟨d, hd⟩ := ih
     obtain ⟨d', -, h'⟩ := (GlobalTheory.HeisComb.main D ψ S T).1 (e i) d

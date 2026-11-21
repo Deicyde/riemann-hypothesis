@@ -1,7 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsTorsionFreeOfForallExists
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.NefFibOfIsNef
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExtFormAdjEqNegSecondForm
+import Development.AbelianVarietyTheory.Definitions.Divisors.ToBidualNaturalityDualSheafTranspose
 
 set_option autoImplicit false
 
@@ -873,6 +875,6 @@ example {E : X.Modules} {r : ℕ} (h : VMetric p E r) (t : ℝ) (c : Chart E r) 
 example {E : X.Modules} (h : Met p σ E 1) (c : Chart E 1) {y : CxPts p σ} (hy : y ∈ ptsIn p σ c.U)
     (e : h.G c y = (Real.pi : ℂ) • 1) : h.dual.G c.dual y 0 0 = 1 / Real.pi := by
   rw [h.dual_G c hy, e]
-  simp [dualGram, Matrix.inv_def, Ring.inverse_eq_inv]
+  simp [dualGram, Ring.inverse_eq_inv]
 
 end GlobalTheory

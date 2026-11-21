@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.StandardFiveNontrivial
-import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.CharIdem
 import Formalism.SharpRestriction.LevelLetterCocycles.ArithmeticCylinders
 
 noncomputable section

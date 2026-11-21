@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.DualLattices.DualHopfOrderStatement
 import ReciprocityTheory.DualLattices.MemDualLatMapFourier
+import ReciprocityTheory.DualLattices.TransposeMulSelf
 
 noncomputable section
 

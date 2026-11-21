@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsHermRingRat
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsSmoothModerateOfIsAutFunSm
 open NumberField IsDedekindDomain Matrix Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SiegelSet PositivityTheory.ThKR GlobalTheory.CompanionTheory.KFin
 open Formalism.UG (cT)
 open scoped TensorProduct
@@ -42,7 +44,7 @@ theorem hR_single (i : Fin n) (z : Fin n → Fv F v ⊗[F] E) :
   rw [hR_apply, Finset.sum_eq_single i]
   · simp [Matrix.mulVec, dotProduct]
   · intro j _ hj
-    simp [Pi.single_apply, hj]
+    simp [hj]
   · simp
 
 theorem mem_of_hR_single (hdet : J.det ≠ 0) (hJi : ∀ i j, inclR (Fv F v) (J⁻¹ i j) ∈ intLoc F E v)

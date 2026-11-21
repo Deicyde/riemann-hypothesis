@@ -1,7 +1,5 @@
-import Mathlib
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.NormDiagonalEntryDilationGeneratorLeOne
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.DilationScalesHeisenbergMeasure
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.HermitianFormFactor
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.SettingExistence
 
 open Matrix MeasureTheory Filter Topology

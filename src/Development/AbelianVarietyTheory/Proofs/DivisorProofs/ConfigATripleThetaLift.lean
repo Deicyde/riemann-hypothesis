@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLocPart
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsLocIsoRefl
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InsP
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSplitPlaceAdelicMatrixGivenComponents
@@ -129,7 +129,7 @@ theorem row_form (σ : E →ₐ[F] E) (t : E →ₐ[F] K) {n m : ℕ} (J : Matri
 
 theorem col_form (σ : E →ₐ[F] E) (t : E →ₐ[F] K) {n : ℕ} (J : Matrix (Fin n) (Fin n) E) (x z : Fin n → E) :
     ∑ r, (J.map t *ᵥ fun s => t (σ (x s))) r * t (z r) = t (form σ J z x) := by
-  simp [form, dotProduct, Matrix.mulVec, map_sum, map_mul, Finset.mul_sum, Finset.sum_mul, mul_comm, mul_left_comm]
+  simp [form, dotProduct, Matrix.mulVec, map_sum, map_mul, Finset.mul_sum, mul_comm, mul_left_comm]
 
 end Field
 

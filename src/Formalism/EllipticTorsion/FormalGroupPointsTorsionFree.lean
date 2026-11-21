@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.EllipticTorsion.Statement
+import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point
 
 universe u
 

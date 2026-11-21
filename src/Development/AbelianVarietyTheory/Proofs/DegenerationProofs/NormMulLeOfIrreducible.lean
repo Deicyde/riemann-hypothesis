@@ -1,11 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsBasisLatticeNear
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.AddHomExtSingle
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsAdaptedBasisTestLattice
-import Development.AbelianVarietyTheory.Definitions.Degenerations.BaseFacts
-import Development.AbelianVarietyTheory.Definitions.Degenerations.IsAffineSplitTorusLeft
-import Development.AbelianVarietyTheory.Definitions.Degenerations.CompanionTheory
-import Development.AbelianVarietyTheory.Statements.SemistableTorsion.UTorsSt
+import Development.AbelianVarietyTheory.Definitions.Degenerations.Ser
+import Mathlib.Algebra.Order.Star.Real
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry
 open scoped CategoryTheory.Obj
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -208,7 +205,7 @@ theorem proj_stable (φ : o →+* OO p) (T : AddSubgroup S.Gam) (c : T →+ ZMod
     funext j
     rw [ThetaSys.proj, finsum_eq_sum_of_fintype, Finset.sum_apply]
     simp only [Matrix.mulVec, dotProduct, Matrix.map_apply, Matrix.smul_apply, Matrix.sum_apply, smul_eq_mul,
-      Finset.mul_sum, map_sum, Finset.sum_mul, Pi.smul_apply, Finset.smul_sum]
+      map_sum, Finset.sum_mul, Pi.smul_apply, Finset.smul_sum]
     rw [Finset.sum_comm]
     refine Finset.sum_congr rfl fun t _ => Finset.sum_congr rfl fun i _ => ?_
     change _ = (OO p).subtype _ * _

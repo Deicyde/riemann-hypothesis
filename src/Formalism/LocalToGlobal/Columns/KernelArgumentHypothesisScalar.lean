@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.AtTLemmas
-import Formalism.LocalRingCardinality.DataArith
-import Formalism.GL3MeanSquares.RationalMatrixPrimeOrderBound
 
 open NumberField IsDedekindDomain Module
 

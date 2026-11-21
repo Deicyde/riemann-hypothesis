@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.EisensteinSeries.SiegelEisensteinContinuation.ConvGrOf
+import Mathlib.Tactic.ENatToNat
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Matrix
 open scoped ComplexConjugate
@@ -254,7 +257,7 @@ theorem J_off (ε : ℤˣ) {m : ι ⊕ ι} (h : m ∉ Set.range (emb s))
     (y : ↥sᶜ ⊕ ↥sᶜ) : Ad.J R ε ι m (emb s y) = 0 := by
   rcases not_range_cases h with ⟨i, hi, rfl⟩ | ⟨i, hi, rfl⟩ <;> rcases y with y | y <;>
     have hne : i ≠ y.1 := fun h => y.2 (h ▸ hi)
-  all_goals simp [Ad.J, emb, Matrix.one_apply, hne]
+  all_goals simp [Ad.J, emb, hne]
 
 section Comp
 

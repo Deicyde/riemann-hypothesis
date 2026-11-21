@@ -1,7 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.OneMapT
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.PlaceExtensionValues
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IntValuationEqOfMem
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsCoeffExtRationalFormsValuesField
 
 noncomputable section

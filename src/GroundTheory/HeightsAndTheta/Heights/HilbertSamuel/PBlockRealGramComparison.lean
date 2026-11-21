@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsBlockRealGramComparison
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsBlockResolutionSup
-import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsSupBoundBlock
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsSupBoundCount
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.SupBoundCountLattice
 import GroundTheory.HeightsAndTheta.Heights.MatrixCharts.DetIneq

@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.L2DbarEstimates.WeakHolomorphy.Circle
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
 
 namespace ReciprocityTheory.L2DbarEstimates.C
 

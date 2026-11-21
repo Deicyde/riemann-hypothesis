@@ -1,9 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.QuasiPlurisubharmonic
-import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.PshExt
-import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.PshMoll
-import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.PshBasic
-import ReciprocityTheory.AnalyticForms.PotentialTheory.PshShiftA
 
 open Filter Topology
 

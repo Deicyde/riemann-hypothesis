@@ -1,8 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.LocalFields.ConductorMatch
 import GroundTheory.PAdicHodge.FieldOfNormsCyclBase
-import GroundTheory.PAdicHodge.FieldOfNormsRam
 import GroundTheory.PAdicHodge.SenTateCharUnits
+import GroundTheory.PAdicHodge.GaloisOnCp
 set_option maxSynthPendingDepth 1
 
 noncomputable section

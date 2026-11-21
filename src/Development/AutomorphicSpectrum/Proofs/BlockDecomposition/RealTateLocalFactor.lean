@@ -1,5 +1,4 @@
-import Mathlib
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.RealLocalIntegrals.RealGammaLimits.FunctionalEquationGL2GL1Complex
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ArchimedeanTateIntegralStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ValMeasurableEmbedding
 import GroundTheory.GlobalFields.TateThesis.Gaussian
@@ -26,10 +25,10 @@ theorem chR_mul (e : Bool) (s : ℂ) (t b : ℝˣ) :
     · have hb0 := b.ne_zero
       have ht0 := t.ne_zero
       rcases lt_or_gt_of_ne hb0 with h1 | h1 <;> rcases lt_or_gt_of_ne ht0 with h2 | h2
-      · simp [h1, h2, mul_pos_of_neg_of_neg h2 h1, not_lt.mpr (mul_pos_of_neg_of_neg h2 h1).le]
-      · simp [h2, h1, mul_neg_of_pos_of_neg h2 h1, not_lt.mpr h2.le]
-      · simp [h1, h2, mul_neg_of_neg_of_pos h2 h1, not_lt.mpr h1.le]
-      · simp [h1, h2, not_lt.mpr h1.le, not_lt.mpr h2.le, not_lt.mpr (mul_pos h2 h1).le]
+      · simp [h1, h2, not_lt.mpr (mul_pos_of_neg_of_neg h2 h1).le]
+      · simp [h1, mul_neg_of_pos_of_neg h2 h1, not_lt.mpr h2.le]
+      · simp [h2, mul_neg_of_neg_of_pos h2 h1, not_lt.mpr h1.le]
+      · simp [not_lt.mpr h1.le, not_lt.mpr h2.le, not_lt.mpr (mul_pos h2 h1).le]
   simp only [chR]
   calc _ = ((if e = true ∧ ((t * b : ℝˣ) : ℝ) < 0 then (-1 : ℂ) else 1)
       * (if e = true ∧ (b : ℝ) < 0 then (-1 : ℂ) else 1))

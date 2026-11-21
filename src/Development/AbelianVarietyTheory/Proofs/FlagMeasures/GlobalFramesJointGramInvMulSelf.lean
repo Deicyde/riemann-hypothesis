@@ -1,14 +1,6 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.FractionFieldToGenericStalkAlgebraMapEq
-import Formalism.SharpRestriction.CuspSpanNormBounds.PsiEDef
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsHermND
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ComplementReferenceCompactSubgroup
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.GFrames
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.BasisOfIsCompl
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.SpanToLePerp
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.FramesCommonStabiliserEqPairingMatrixStabiliser
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.RationalExtend
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.IsIntegralOfQuad
 open ValuativeRel Formalism.MainNotions.S.Loc GlobalTheory.HL NumberField IsDedekindDomain
 open scoped Pointwise ENNReal Classical
 
@@ -77,7 +69,7 @@ theorem main : ∀ {F E : Type} [Field F] [NumberField F] [Field E] [NumberField
       have h : Matrix.vecMul v Γ l = 0 := congrFun hv l
       rw [← h]
       simp only [Matrix.vecMul, dotProduct, hΓ, Matrix.of_apply, hx, Finset.sum_apply, Pi.smul_apply,
-        smul_eq_mul, Finset.sum_mul, Finset.mul_sum, Pi.zero_apply]
+        smul_eq_mul, Finset.sum_mul, Finset.mul_sum]
       symm
       rw [Finset.sum_comm]
       refine Finset.sum_congr rfl fun i _ => ?_

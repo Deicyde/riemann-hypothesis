@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.HermitianCurvatureForms
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CovariantSecondFundamentalForm
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiagValExtTraceNonneg
+import Mathlib.Topology.Sheaves.Presheaf
 open Matrix Complex ComplexConjugate Filter Topology
 open scoped ComplexOrder ContDiff
 open GlobalTheory.HermFrame GlobalTheory.IndefiniteRowSideFullHecke.HermitianCurvatureForms

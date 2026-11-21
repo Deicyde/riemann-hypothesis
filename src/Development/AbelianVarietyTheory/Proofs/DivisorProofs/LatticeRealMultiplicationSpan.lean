@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsHolFormConst
 open NumberField GlobalTheory.RealMult
 open scoped nonZeroDivisors
@@ -19,7 +19,7 @@ theorem exists_im_ne_zero {n : ℕ} (hn : 0 < n) (Λ : Submodule ℤ (Fin n → 
           rw [Finset.mul_sum]; refine Finset.sum_congr rfl fun j _ ↦ ?_
           simp only [Pi.smul_apply, Complex.real_smul]; ring
         rw [this, Complex.im_ofReal_mul, smul_eq_mul])
-      (fun z w w' ↦ by simp [add_mul, mul_add, Finset.sum_add_distrib])
+      (fun z w w' ↦ by simp [mul_add, Finset.sum_add_distrib])
       (fun r z w ↦ by
         have : (∑ j, (h j : ℂ) * (z j * starRingEnd ℂ ((r • w) j))) =
             (r : ℂ) * ∑ j, (h j : ℂ) * (z j * starRingEnd ℂ (w j)) := by
@@ -32,7 +32,7 @@ theorem exists_im_ne_zero {n : ℕ} (hn : 0 < n) (Λ : Submodule ℤ (Fin n → 
   have h3 := congrArg (fun B : (Fin n → ℂ) →ₗ[ℝ] (Fin n → ℂ) →ₗ[ℝ] ℝ ↦
     B (Pi.single ⟨0, hn⟩ 1) (Pi.single ⟨0, hn⟩ Complex.I)) h2
   simp only [B, LinearMap.mk₂_apply] at h3
-  rw [Finset.sum_eq_single ⟨0, hn⟩ (fun b _ hb ↦ by simp [Pi.single_apply, hb]) (by simp)] at h3
+  rw [Finset.sum_eq_single ⟨0, hn⟩ (fun b _ hb ↦ by simp [hb]) (by simp)] at h3
   simp at h3
   exact (hpos ⟨0, hn⟩).ne' h3
 

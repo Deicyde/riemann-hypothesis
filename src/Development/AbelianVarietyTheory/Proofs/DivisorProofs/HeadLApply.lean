@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsTypeIsRealConst
 
 set_option autoImplicit false
@@ -23,7 +24,7 @@ def fibL (n : ℕ) : V 1 →L[ℂ] V (n + 1) :=
 theorem headL_apply {n : ℕ} (v : V (n + 1)) (a : Fin n) : headL n v a = v (Fin.castSucc a) := rfl
 
 theorem fibL_apply {n : ℕ} (v : V 1) : fibL n v = EuclideanSpace.single (Fin.last n) (v 0) := by
-  ext a; simp [fibL, EuclideanSpace.single_apply]
+  ext a; simp [fibL]
 
 variable {M : Type} [TopologicalSpace M]
 

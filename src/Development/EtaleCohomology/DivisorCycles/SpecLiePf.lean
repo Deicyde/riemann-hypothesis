@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.DivisorCycles.OpenCoset
+import Mathlib.Tactic.ENatToNat
 
 open Matrix PositivityTheory.AutomorphicGaloisHodgeTate.Div
 namespace LateralTheory.DivDb.SpecLiePf

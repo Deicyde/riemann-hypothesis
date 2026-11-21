@@ -1,15 +1,6 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.TwistedFlags.ReachOrth
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CartFrSgn
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ConstMemBddAut
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.HoweUnram
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.HarishChandraFinite
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsNormLeHeightPow
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.UnramifiedCharacter
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.AdmissibleDiscreteSeriesOfHasParam
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HarishChandraModulesOn
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.HasDRepIffHasDerivAt
-import GroundTheory.PAdicHodge.AInfGalois
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.IsSatVecUOfIsSphericalU
+import Formalism.LocalToGlobal.Columns.HeckeSp
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix
 open Formalism.L2.Theta Formalism.L2.DIV Formalism.L2.Indef Formalism.DivisionValues
 open Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.Lev Formalism.IndefR.Mult Formalism.IndefR.Datum Formalism.IndefR.Cx
@@ -224,7 +215,7 @@ theorem satEig_twist_add_seg : ∀ {E : Type} [Field E] [NumberField E] (w : Hei
     ring
   have htw : (B.map (x * y⁻¹ * ·)).map (fun b : ℂˣ => (b : ℂ)) =
       (B.map fun b : ℂˣ => (b : ℂ)).map (((x : ℂ) * (y : ℂ)⁻¹) * ·) := by
-    simp [Multiset.map_map, Function.comp_def]
+    simp [Multiset.map_map]
   have key := GaussEsym.conv_identity hs hq2 a t k (B.map fun b : ℂˣ => (b : ℂ)) (by simpa using hB) (x : ℂ) (y : ℂ)
   simp only [GlobalTheory.LFun.satEig, hc, Multiset.map_add, hseg, htw]
   exact key

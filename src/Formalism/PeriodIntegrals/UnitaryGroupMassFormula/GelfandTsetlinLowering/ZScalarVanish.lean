@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.GTDefs
-import Formalism.GradedWeylDivisibility.DualWeylDominanceOf
 
 noncomputable section
 

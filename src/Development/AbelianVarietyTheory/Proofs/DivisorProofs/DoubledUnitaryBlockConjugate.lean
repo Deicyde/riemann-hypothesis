@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LagColsZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUniqueLeviElement
 
@@ -44,7 +43,7 @@ theorem two_by_two :
   refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩ <;>
   · ext i j
     fin_cases i <;> fin_cases j <;>
-      simp [q₁, q₂, q₃, q₄, hyp, Matrix.mul_apply, Fin.sum_univ_two, Matrix.one_apply, Matrix.vecMul, dotProduct, Matrix.transpose_apply] <;> ring
+      simp [q₁, q₂, q₃, q₄, hyp, Matrix.mul_apply, Fin.sum_univ_two, Matrix.vecMul, dotProduct, Matrix.transpose_apply] <;> ring
 
 end GlobalTheory.DblWitt
 
@@ -63,7 +62,7 @@ theorem rot_mul_transpose (d₁ : ℕ) :
     rot d₁ * (rot d₁)ᵀ = (1 : Matrix ((Fin d₁ ⊕ Fin 2) ⊕ (Fin d₁ ⊕ Fin 2)) ((Fin d₁ ⊕ Fin 2) ⊕ (Fin d₁ ⊕ Fin 2)) E) := by
   obtain ⟨-, -, -, -, h5, h6, h7, h8, -⟩ := two_by_two (E := E)
   simp only [rot, fromBlocks_transpose, fromBlocks_multiply, transpose_one, transpose_zero, fromBlocks_add,
-    Matrix.mul_zero, Matrix.zero_mul, Matrix.mul_one, Matrix.one_mul, add_zero, zero_add, h5, h6, h7, h8,
+    Matrix.mul_zero, Matrix.zero_mul, Matrix.mul_one, add_zero, zero_add, h5, h6, h7, h8,
     fromBlocks_one, fromBlocks_zero]
 
 theorem rot_diag (d₁ : ℕ) :
@@ -73,7 +72,7 @@ theorem rot_diag (d₁ : ℕ) :
         (sd d₁ : Matrix (Fin 2 ⊕ Fin d₁) (Fin d₁ ⊕ Fin 2) E) := by
   obtain ⟨-, -, -, -, -, -, -, -, h9, h10, -⟩ := two_by_two (E := E)
   simp only [rot, diagCols, lagCoord, sd, fromBlocks_mul_fromRows, fromRows_mul, fromBlocks_multiply, fromBlocks_add,
-    Matrix.mul_zero, Matrix.zero_mul, Matrix.mul_one, Matrix.one_mul, add_zero, zero_add, h9, h10]
+    Matrix.mul_zero, Matrix.zero_mul, Matrix.mul_one, add_zero, zero_add, h9, h10]
   have e1 : (!![1, 0; 0, 0] : Matrix (Fin 2) (Fin 2) E) * !![1, 1; 1, -1] = !![1, 1; 0, 0] := by
     ext i j; fin_cases i <;> fin_cases j <;> simp [Matrix.mul_apply, Fin.sum_univ_two]
   have e2 : (!![0, 1; 0, 0] : Matrix (Fin 2) (Fin 2) E) * !![1, 1; 1, -1] = !![1, -1; 0, 0] := by
@@ -85,7 +84,7 @@ theorem sd_sdInv (d₁ : ℕ) : (sd d₁ : Matrix (Fin 2 ⊕ Fin d₁) (Fin d₁
     (sdInv d₁ : Matrix (Fin d₁ ⊕ Fin 2) (Fin 2 ⊕ Fin d₁) E) * (sd d₁ : Matrix (Fin 2 ⊕ Fin d₁) (Fin d₁ ⊕ Fin 2) E) = 1 := by
   obtain ⟨-, -, -, -, -, -, -, -, -, -, h11, h12⟩ := two_by_two (E := E)
   constructor <;> simp only [sd, sdInv, fromBlocks_multiply, Matrix.mul_zero, Matrix.zero_mul, Matrix.mul_one,
-    Matrix.one_mul, add_zero, zero_add, h11, h12, fromBlocks_one]
+    add_zero, zero_add, h11, h12, fromBlocks_one]
 
 end GlobalTheory.DblWitt
 
@@ -99,9 +98,9 @@ theorem frame_lagCoord {E : Type} [Field E] [NumberField E] {d d₁ : ℕ} (H' :
   ext (r | r) (k | k)
   all_goals first
     | (fin_cases k <;> simp [lagCoord, frame, twoCols, GlobalTheory.DblSiegel.lagCols, Matrix.mul_apply, Fintype.sum_sum_type,
-        Fin.sum_univ_two, Matrix.one_apply])
+        Fin.sum_univ_two])
     | simp [lagCoord, frame, twoCols, GlobalTheory.DblSiegel.lagCols, Matrix.mul_apply, Fintype.sum_sum_type,
-        Fin.sum_univ_two, Matrix.one_apply]
+        Matrix.one_apply]
 
 end GlobalTheory.DblWitt
 
@@ -175,8 +174,8 @@ theorem exists_unitary_diag_lag : ∀ (F E : Type) [Field F] [NumberField F] [Fi
       _ = dbl W.J := by rw [hPd, hRσ, show Rᵀ * dbl (fromBlocks W₁.J 0 0 hyp) * R = dbl (fromBlocks W₁.J 0 0 hyp) from rot_gram W₁.J, hQd]
   have h1 : Qd * (diagCols (Fin d) : Matrix (Fin d ⊕ Fin d) (Fin d) E) =
       (diagCols (Fin d₁ ⊕ Fin 2) : Matrix ((Fin d₁ ⊕ Fin 2) ⊕ (Fin d₁ ⊕ Fin 2)) (Fin d₁ ⊕ Fin 2) E) * Q := by
-    simp only [Qd, diagCols, fromBlocks_mul_fromRows, fromRows_mul, Matrix.mul_one, Matrix.one_mul, Matrix.zero_mul,
-      Matrix.mul_zero, add_zero, zero_add]
+    simp only [Qd, diagCols, fromBlocks_mul_fromRows, fromRows_mul, Matrix.mul_one, Matrix.one_mul,
+      add_zero, zero_add]
   have hdiag : g₀ * (diagCols (Fin d) : Matrix (Fin d ⊕ Fin d) (Fin d) E) = GlobalTheory.DblSiegel.lagCols H'.x H'.ι * (T * Q) := by
     calc g₀ * (diagCols (Fin d) : Matrix (Fin d ⊕ Fin d) (Fin d) E) =
           Pd * (R * (diagCols (Fin d₁ ⊕ Fin 2) : Matrix ((Fin d₁ ⊕ Fin 2) ⊕ (Fin d₁ ⊕ Fin 2)) (Fin d₁ ⊕ Fin 2) E)) * Q := by
@@ -201,7 +200,7 @@ theorem exists_unitary_diag_lag : ∀ (F E : Type) [Field F] [NumberField F] [Fi
       _ = 1 := by rw [hT', Matrix.mul_one, hPQ]
   refine ⟨γ, incM F S₀, incM F S₀', ?_, ?_, ?_⟩
   · have hdc : (diagCols (Fin d) : Matrix (Fin d ⊕ Fin d) (Fin d) (AE F E)) = incM F (diagCols (Fin d)) := by
-      ext (i | i) j <;> by_cases h : i = j <;> simp [diagCols, incM, Matrix.one_apply, h]
+      ext (i | i) j <;> by_cases h : i = j <;> simp [diagCols, incM, h]
     have hlc : GlobalTheory.DblSiegel.lagCols (incV F H'.x) (incM F H'.ι) = incM F (GlobalTheory.DblSiegel.lagCols H'.x H'.ι) := by
       ext (i | i) (k | k) <;> (try fin_cases k) <;> simp [GlobalTheory.DblSiegel.lagCols, incM, incV]
     rw [show ((γ : GL (Fin d ⊕ Fin d) (AE F E)) : Matrix (Fin d ⊕ Fin d) (Fin d ⊕ Fin d) (AE F E)) = incM F g₀ from rfl,

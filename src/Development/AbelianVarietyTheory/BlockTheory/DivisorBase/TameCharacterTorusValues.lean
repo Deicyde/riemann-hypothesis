@@ -1,6 +1,6 @@
-import Mathlib
-import Formalism.CyclotomicNorms.StatementT
-import Formalism.LocalToGlobal.Divisibility.DefGroup
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Divisibility.GoodPartHermitianSpec
 import Formalism.SharpRestriction.Divisibility.PrimeDegreeVariant
 import Development.AbelianVarietyTheory.Definitions.Divisors.SplitDoublingNBlock

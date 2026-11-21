@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.DefClassNum
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.Topology.Separation.CompletelyRegular
 
 open MeasureTheory NumberField Matrix Finset
 
@@ -155,7 +159,7 @@ theorem flagVariety_unitary_one_one : flagN e2 W2 = Set.range nU := by
       intro a
       change nM t *ᵥ (a • ![1, 1]) - a • ![1, 1] = 0
       ext i
-      fin_cases i <;> simp [nM, Matrix.mulVec, dotProduct, Fin.sum_univ_two] <;> ring
+      fin_cases i <;> simp [nM] <;> ring
     refine ⟨fun i y hy => ?_, fun y hy => ?_⟩
     · fin_cases i
       change y ∈ Submodule.span ℂ {![1, 1]} at hy
@@ -232,7 +236,7 @@ theorem mU_act (a : ℂ) : uMat mU *ᵥ (a • ![1, 1]) = (2 * a) • ![1, 1] :=
 theorem mU_herm : (uMat mU)ᴴ = uMat mU := by
   change (!![5 / 4, 3 / 4; 3 / 4, 5 / 4] : Matrix (Fin 2) (Fin 2) ℂ)ᴴ = !![5 / 4, 3 / 4; 3 / 4, 5 / 4]
   ext i j
-  fin_cases i <;> fin_cases j <;> simp [Matrix.conjTranspose_apply, map_ofNat]
+  fin_cases i <;> fin_cases j <;> simp [Matrix.conjTranspose_apply]
 
 theorem mU_mem : mU ∈ flagM e2 W2 := by
   intro i y hy

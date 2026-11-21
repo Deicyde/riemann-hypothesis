@@ -1,7 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.CMDeterminantIdeals.LambdaLowerBound
+import BuildAid.Leniency.Open
 import ReciprocityTheory.SemistableReduction.LemmaH
-import Development.AbelianVarietyTheory.Statements.FundamentalDomains.KeyFormulaPowOfKeyFormula
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.CmPointLowerBoundOfCoefficientBoundStatement
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.ThetaLineDegreeAndHeightLowerBoundStatement
 open NumberField IsDedekindDomain MeasureTheory IsLocalRing Matrix

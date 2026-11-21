@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlockUniOne
 open NumberField CategoryTheory AlgebraicGeometry
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -22,11 +22,11 @@ theorem intAdapted_of_grCond {K : Type} [NormedField K] [IsUltrametricDist K] {�
     refine (hG (bl z) (Pi.single z 1) ?_).1 ?_
     · intro z' hz'
       have : z' ≠ z := fun h => hz' (h ▸ rfl)
-      simp [Pi.single_apply, this]
+      simp [this]
     · intro z'
       by_cases h : z' = z
       · subst h; simp
-      · simp [Pi.single_apply, h]
+      · simp [h]
   choose a' ha'0 ha'1 using hcol
   set N : Matrix κ κ K := Matrix.of fun z' z => ((Pi.single z (1 : K) : κ → K) + a' z) z' with hN
   have hBU : BlockUni bl N := by

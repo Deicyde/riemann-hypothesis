@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.RealInputsClosedAdmissibleSettings
+import Mathlib.Data.Int.Star
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 namespace Formalism.FourierDecayAlt.P.PBD
 
@@ -127,7 +132,7 @@ theorem ptEntry_app_last (c : ℂ) : ∀ (H : C.LPt), D.ptEntry (H ++ [(1, c)]) 
     have h0 : 0 ≤ (rest.map Prod.fst).sum := Nat.zero_le _
     by_cases hs : s = 0
     · subst hs
-      simp only [lt_self_iff_false, false_and, if_false, zero_le, and_self, if_true, zero_add, Nat.sub_zero]
+      simp only [zero_le, and_self, if_true, zero_add, Nat.sub_zero]
       have := ptEntry_app_last c rest
       simpa [D.ptSize] using this
     · rw [if_neg (by omega), if_pos (by omega)]
@@ -427,7 +432,7 @@ theorem frameInt : FrameInt := by
       congr 2
       rw [hx, hρ]
       unfold KB.levW
-      rw [if_neg (by simp only [D.parOf]; omega)]
+      rw [if_neg (by simp only; omega)]
       have hnorm : ‖(lam : ℂ) * c‖ = lam * ‖c‖ := by
         rw [norm_mul, Complex.norm_real, Real.norm_of_nonneg hlam_pos.le]
       rw [hnorm, ← mul_zpow]

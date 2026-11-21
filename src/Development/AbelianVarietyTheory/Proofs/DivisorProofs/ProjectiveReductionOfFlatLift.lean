@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FreeOfPrincipalMaximalIdealOfKerSmulLeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalizationMaximalIdealEqSpanNilpotentArtinianStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalizedModuleMemAnnSpanSmulTopStatement
@@ -8,6 +8,8 @@ import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsReducedFieldTenso
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsReducedQuotTensorOfReducedModPStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AnnihilatorLiftOfMulEqPStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiniteOfSurjectiveTensorSemilinearStatement
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.RingTheory.Etale.Weakly
 open NumberField
 open scoped TensorProduct
 
@@ -48,7 +50,7 @@ theorem projective_reduction_of_flat_lift : ∀ (p : ℕ) [Fact p.Prime] (F : Ty
       TensorProduct.zero_tmul]
   have hfinQ : Finite (𝓞 F ⧸ Ideal.span {(p : 𝓞 F), ϖ}) := by
     have hne : Ideal.span {(p : 𝓞 F)} ≠ ⊥ := by
-      simp [Ideal.span_singleton_eq_bot, (Fact.out : p.Prime).ne_zero]
+      simp [(Fact.out : p.Prime).ne_zero]
     haveI : Finite (𝓞 F ⧸ Ideal.span {(p : 𝓞 F)}) := Ideal.finiteQuotientOfFreeOfNeBot _ hne
     exact Finite.of_surjective _ (Ideal.Quotient.factor_surjective
       (Ideal.span_mono (by simp : ({(p : 𝓞 F)} : Set (𝓞 F)) ⊆ {(p : 𝓞 F), ϖ})))

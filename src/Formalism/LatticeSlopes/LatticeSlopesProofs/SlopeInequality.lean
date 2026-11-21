@@ -1,5 +1,4 @@
-import Formalism.LatticeSlopes.Statement
-import Formalism.LatticeSlopes.LatticeSlopesProofs.DiscreteTopologyOfLe
+import BuildAid.Leniency.Open
 import Formalism.LatticeSlopes.LatticeSlopesProofs.CovolEqGram
 import Formalism.LatticeSlopes.LatticeSlopesProofs.GramDetLe
 

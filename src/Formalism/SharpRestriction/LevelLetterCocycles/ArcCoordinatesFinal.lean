@@ -1,10 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.ArcCoordinatesOfFrobeniusLevels
 import Formalism.SharpRestriction.LevelLetterCocycles.LevelSeriesFirstFactorOrderOne
 import Formalism.SharpRestriction.LevelLetterCocycles.QuotientImageDivisibility.JumpsLetExists
-import Formalism.SharpRestriction.LevelLetterCocycles.GammaSemisimpleLocalOfConsequences
 import Formalism.SharpRestriction.LevelLetterCocycles.IsFracOL
-import Formalism.SharpRestriction.LevelLetterCocycles.LocalizationQuotientSeparatedDvd
-import Formalism.SharpRestriction.LevelLetterCocycles.WachFrobeniusLatticeUnramifiedFunctor
 
 noncomputable section
 

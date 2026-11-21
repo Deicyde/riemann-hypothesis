@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.LocalSituation
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.BlochKatoPhases
 
 namespace GlobalTheory.BlochKato₂

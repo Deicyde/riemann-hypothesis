@@ -1,14 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.IsOverVUnder
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ExistsMoveRight
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LevQFiniteIndexAndRoot
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.RowTypeOneAddPrimeSmulEqOne
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsLevelGroupModTypePrime
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.FirstCoupledKernelEquivariantCosets
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.MemZmuOfPowPred
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.IntAtNatCast
-import Formalism.LocalToGlobal.Columns.QthExistsBound
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.TwistedK1BlockDecomposition
+import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ExistsMidLevIff
 open NumberField IsDedekindDomain Matrix Formalism.BasicNotions Formalism.UG Formalism.L2.Col Formalism.L2.PairingIndexBounds.F Formalism.MainNotions.G.KAat Formalism.L2.Forms Formalism.L2.Ker Formalism.MainNotions Formalism.L2.DIV Formalism.MainNotions.G GlobalTheory.TwU
 open scoped TensorProduct
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
@@ -203,7 +200,7 @@ theorem muAt_det_cong {X : Fields} {Pr : Primes X} {R : Ranks} (Ch : Chars X Pr 
     congr 1
     ext a b
     rw [LinearMap.toMatrix'_apply, Matrix.of_apply, mul_inv_cancel_left₀ hq]
-    simp [Pi.single_apply, eq_comm]
+    simp [Pi.single_apply]
   have hred : redP P.1 ((LinearEquiv.det κ : X.Eˣ) : X.E) = 1 := by
     rw [hdet, GlobalTheory.LastSteps.redP_det_add_q (fun a b => ?_) hZ]
     · have e2 : (Matrix.of fun a b : Fin N => if a = b then (1 : X.E) else 0) = 1 := by

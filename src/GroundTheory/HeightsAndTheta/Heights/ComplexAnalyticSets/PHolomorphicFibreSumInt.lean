@@ -1,5 +1,4 @@
-import Mathlib
-import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.LintegralImageEqLintegralNormSqDetMul
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StHolomorphicFibreSumInt
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StWeightedAreaFormula
 set_option maxSynthPendingDepth 1

@@ -1,6 +1,6 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.CrystallineLiftingInputs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.RelayGeneralCaseOfAdmissible
-import Formalism.SharpRestriction.LevelLetterCocycles.BaseChangePreservesUnitaryOf
 import Formalism.SharpRestriction.LevelLetterCocycles.LevelClauseOfOpenTool
 import Formalism.SharpRestriction.LevelLetterCocycles.CompleteOfPow
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.IntegerSpanGenerators

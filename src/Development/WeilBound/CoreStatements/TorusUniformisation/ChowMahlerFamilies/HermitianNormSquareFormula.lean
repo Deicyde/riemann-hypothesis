@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ToXQFst
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LocRatio
+import BuildAid.Leniency.Open
+import Development.AutomorphicSpectrum.Definitions.MetricPeriods.IsOrthFull
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField TensorProduct Filter Topology Matrix
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory.CompanionTheory.Ar
@@ -36,7 +35,7 @@ theorem core_sum {V : Type*} [AddCommGroup V] [Module ℂ V] (c : InnerProductSp
   rw [InnerProductSpace.Core.inner_smul_left (𝕜 := ℂ), hr, Finset.mul_sum]
   refine Finset.sum_congr rfl fun b _ => ?_
   rw [InnerProductSpace.Core.inner_smul_right (𝕜 := ℂ)]
-  simp only [RCLike.star_def, Complex.star_def]
+  simp only [RCLike.star_def]
   ring
 
 end PositivityTheory.Xgn.HermitianNormSquare

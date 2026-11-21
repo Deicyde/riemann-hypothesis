@@ -1,6 +1,8 @@
-import Mathlib
-import ReciprocityTheory.L2DbarEstimates.PlurisubharmonicCharts.GROWCountStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.IntStable
+import Mathlib.RingTheory.MvPowerSeries.Basic
+import ReciprocityTheory.L2DbarEstimates.PlurisubharmonicCharts.FamilyLeCoords
 
 namespace GlobalTheory.CompanionTheory.Ar.HS
 

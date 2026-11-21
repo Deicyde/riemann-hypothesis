@@ -1,5 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.HarishChandraCentre.Triangular
+import GroundTheory.AutomorphicForms.HarishChandraCentre.ConstantCoeffRhoOneCanonMonomial
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
 
 namespace GroundTheory.Automorphic.HarishChandra
 

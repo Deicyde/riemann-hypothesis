@@ -1,6 +1,4 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceCutOffLimit
-import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceFormMass
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.SliceCut
 set_option maxSynthPendingDepth 1
 

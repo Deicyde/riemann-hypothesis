@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.BaseLevels.LevelsGEmpty
-import Formalism.SharpRestriction.GrowthBounds.ChartedClasses.ClsCharted1AtInTw
-import Formalism.SharpRestriction.GrowthBounds.ChartComparison.MemAll
+import Formalism.LocalToGlobal.GroupLattices.LevelCharts.LevelWithoutExtraPlaces
+import Formalism.SharpRestriction.GrowthBounds.ChartedClasses.ValIntN
+import Formalism.SharpRestriction.GrowthBounds.TwistedLevelAgreement.StepInTwK
 
 noncomputable section
 

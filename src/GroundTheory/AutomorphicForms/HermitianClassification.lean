@@ -1,10 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.HermitianDisc
-import GroundTheory.AutomorphicForms.HermitianWittExtension
-import GroundTheory.AutomorphicForms.HermitianSplit
 import GroundTheory.LocalFields.HerbrandLocal
-import GroundTheory.LocalFields.FiniteExtension
 import GroundTheory.LocalFields.UnramifiedHensel
+import GroundTheory.AutomorphicForms.HermitianWitt
 
 noncomputable section
 
@@ -249,7 +248,7 @@ theorem isometric_iff [FiniteDimensional E V] [FiniteDimensional E V'] (h : Herm
     have : Subsingleton U := Module.finrank_zero_iff.1 hU
     refine ⟨LinearEquiv.ofFinrankEq U U' (hU.trans hU'.symm), fun x y => ?_⟩
     rw [Subsingleton.elim x 0, Subsingleton.elim y 0]
-    simp only [LinearEquiv.map_zero, LinearMap.map_zero, LinearMap.zero_apply]
+    simp only [LinearEquiv.map_zero, LinearMap.map_zero]
   | succ n ih =>
     intro U U' _ _ _ _ _ _ hU hU' k k' hkk
 

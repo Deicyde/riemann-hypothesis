@@ -1,4 +1,12 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.PolynomialDerivatives.IntegrableMonomial
+import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.PolynomialDerivatives.FockMono
+import Mathlib.RingTheory.Derivation.Lie
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -108,7 +116,7 @@ theorem pderiv_cr (c : ℝ) (k j : Fin m × Fin n × Bool) (Q : PX m n) :
   classical
   rw [cr_apply, cr_apply, map_add, map_neg, Derivation.map_smul, pderiv_mul, pderiv_X, pderiv_comm k j]
   by_cases h : k = flip j
-  · subst h; simp [Pi.single_apply]; ring
-  · simp [Pi.single_apply, h, Ne.symm h]
+  · subst h; simp; ring
+  · simp [h, Ne.symm h]
 
 end PositivityTheory.Rg.Sw.LC

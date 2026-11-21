@@ -1,4 +1,5 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
 open scoped TensorProduct NNReal Matrix
@@ -61,7 +62,7 @@ theorem sesq_torusMat (hcc : ∀ z, c (c z) = z) (hj : ∀ i k, c (j k i) = -j i
   have hyw : sesq c j y w = -c (sesq c j w y) := sesq_skew hcc hj _ _
   rw [torusMat_mulVec, torusMat_mulVec]
   simp only [sesq_add_left, sesq_add_right, sesq_smul_left, sesq_smul_right, hxx, hyy, hxy, hyx, hxw, hyw, map_mul,
-    map_sub, map_one, hcc]
+    map_sub, map_one]
   linear_combination (-(sesq c j v y * c (sesq c j w x))) * h1 + (sesq c j v x * c (sesq c j w y)) * h2
 
 theorem sesq_mulVec (A : Matrix (Fin d) (Fin d) R) (v w : Fin d → R) :
@@ -81,8 +82,8 @@ theorem torusMat_unitary (hcc : ∀ z, c (c z) = z) (hj : ∀ i k, c (j k i) = -
     have : (fun l => c ((Pi.single k (1 : R) : Fin d → R) l)) = Pi.single k 1 := by
       ext l; by_cases hl : l = k
       · subst hl; simp
-      · simp [Pi.single_apply, hl]
-    rw [this]; simp [mulVec_single_one]
+      · simp [hl]
+    rw [this]; simp
   rw [sesq_mulVec, hs, sesq] at h
   rw [h, hs j]
 
@@ -163,7 +164,7 @@ theorem levi_torus_exists : ∀ (F E : Type) [Field F] [NumberField F] [Field E]
     refine Matrix.ext_of_mulVec_single fun k => ?_
     rw [← mulVec_mulVec]
     have hcol : incM F H'.ι *ᵥ Pi.single k 1 = incV F (H'.ι *ᵥ Pi.single k 1) := by
-      ext i; simp [mulVec_single_one, incV, incM]
+      ext i; simp [incV, incM]
     rw [hcol, torusMat_mulVec, sesq_incV, sesq_incV, (hH.orth _).1, (hH.orth _).2]
     simp
 

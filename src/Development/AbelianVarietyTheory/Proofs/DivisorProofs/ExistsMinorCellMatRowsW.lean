@@ -1,13 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
-import Development.AbelianVarietyTheory.Definitions.Divisors.NormSqColGrLineOfOrthogonal
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ArBirational
-import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.RestrictPullbackIsoHomAppPullbackSections
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ColSec
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DetMetricShortExactIsometric
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NontrivialIsomClassInt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsOpenImmersionCellFlAlt
 open NumberField MvPolynomial Filter Topology Formalism.BasicNotions Formalism.MainNotions Formalism.DegreeFormula GlobalTheory.FlagPoly GlobalTheory.Mean4 GlobalTheory.Mean4O GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.CovTest GlobalTheory.Published
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory GlobalTheory.ArInt
@@ -102,7 +95,7 @@ theorem eq_flagPt_of_le {A : Type} [CommRing A] (w : ι → Equiv.Perm (Fin N)) 
       erw [Scheme.Hom.appIso_inv_appLE_assoc]
       have e₂ : (Spec.map ψ).appLE ⊤ ⊤ le_rfl = (Spec.map ψ).appTop := (Scheme.Hom.app_eq_appLE _).symm
       rw [e₂]
-      simp [← Scheme.ΓSpecIso_inv_naturality_assoc]
+      simp
     exact congrArg CommRingCat.Hom.hom e₁
   refine (spMap_flagPt _ _ ψ.hom _).trans ?_
   congr 1

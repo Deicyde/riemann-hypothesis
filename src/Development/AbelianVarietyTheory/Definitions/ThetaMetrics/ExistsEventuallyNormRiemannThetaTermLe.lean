@@ -1,5 +1,17 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ThetaQuasiPeriods.PeriodLattice
+import Mathlib.NumberTheory.ModularForms.JacobiTheta.TwoVariable
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Topology.Algebra.InfiniteSum.UniformOn
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Complex Matrix Filter Topology MeasureTheory
 open scoped Real
@@ -621,7 +633,7 @@ theorem riemannTheta_half_neg (α β : ι → ℤ) (Ω : Matrix ι ι ℂ) (v : 
     simp
   rw [this]
   congr 1
-  simp only [dotProduct, Finset.mul_sum, Finset.sum_mul, Pi.neg_apply]
+  simp only [dotProduct, Finset.mul_sum, Pi.neg_apply]
   push_cast
   rw [Finset.sum_mul]
   exact Finset.sum_congr rfl fun i _ => by ring
@@ -869,7 +881,7 @@ example (z τ : ℂ) : jacobiTheta₂ (z + τ) τ = cexp (-π * I * (τ + 2 * z)
   have := riemannTheta_add_mulVec_intCast hs 0 0 ![z] (fun _ => 1)
   rw [riemannTheta_unique_zero_zero, riemannTheta_fin_one] at this
   convert this using 3
-  · simp [mulVec, dotProduct]
+  · simp [dotProduct]
   · simp
   · simp [mulVec, dotProduct]
     ring

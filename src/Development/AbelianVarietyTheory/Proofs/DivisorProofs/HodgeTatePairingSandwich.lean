@@ -1,13 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.LieInj
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ScholzeWeinsteinB
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.EpsilonPairingZeta
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.HodgeTateKernel
-import Development.AbelianVarietyTheory.Definitions.Divisors.TorsionTowersOfDivisibleGroup
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsLatBasisHtLatIffSpanEq
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SandwichKernelRangeExact
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConvEqOneOfForallPairing
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PadicRingHomEqCanonical
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.LinearAlgebra.Dimension.Torsion.Finite
 open GlobalTheory GlobalTheory.Sandwich GlobalTheory.IndefiniteRowSideFullHecke.SandwichMaps GlobalTheory.DetInv GlobalTheory.HTLat GlobalTheory.CompHt GlobalTheory.PDivGroup Matrix TensorProduct NumberField CategoryTheory
 
 namespace GlobalTheory.DetInv.HTKer
@@ -135,7 +132,7 @@ theorem pairingO_inj {G : PDivGroup p O} (hG : Function.Surjective (G.pairing O)
   have h2 : ∀ w : Fin h → O, IndefiniteRowSideFullHecke.EpsilonPairingZeta.pairingO hε e w χ = w i := by
     intro w
     simp only [IndefiniteRowSideFullHecke.EpsilonPairingZeta.pairingO, h1, LinearEquiv.apply_symm_apply]
-    rw [Finset.sum_eq_single i] <;> simp +contextual [Pi.single_apply, eq_comm]
+    rw [Finset.sum_eq_single i] <;> simp +contextual [eq_comm]
   rw [← h2 y, ← h2 z, H]
 
 variable {u₁ u₂ : Oˣ} {G : PDivGroup p O} {h : ℕ} {D : Datum ε h ℤ_[p]} {e : G.Tate ≃ₗ[ℤ_[p]] (Fin h → ℤ_[p])}

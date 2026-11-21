@@ -1,11 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.SetUnipotentTranslate
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsRationalUnitaryDeterminantMapRationalUnitaryTo
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.SpreadLe
 import Development.AbelianVarietyTheory.Definitions.Foundations.CdScaleTieIff
 import Formalism.LocalToGlobal.UnitaryNorms.CharTied
-import Formalism.SharpRestriction.LevelLetterCocycles.TwGood
-import Formalism.LocalToGlobal.UnitaryNorms.CharUniq
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.FixedCoefficientFieldInComplex
 import Development.AbelianVarietyTheory.Definitions.HeightFunctions.JointQ
 

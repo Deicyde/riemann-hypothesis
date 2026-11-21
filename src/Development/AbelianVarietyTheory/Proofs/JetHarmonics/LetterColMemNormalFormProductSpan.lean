@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Jets.SameFns
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.LetterLiftOfParts
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.HatLettersPassDiGIBoundedFactorsStatement
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.WordLDecompositionNfSpanStatement
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.WordMDecompositionSelfAdjointStatement

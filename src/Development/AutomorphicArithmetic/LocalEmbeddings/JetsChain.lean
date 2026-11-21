@@ -1,9 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.InfOfMulFinOf
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IntegralEqVolMulSum
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IntegralEqFinClSumAvg
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsOpenLevelFixingThetaFunction
-import Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.UnitTraceSumBounds.StmtTransInvHolds
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiniteFinClAndGamOrd
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsOpenSubgroupFiniteSubset
 
 noncomputable section
 

@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.IsFrameVec
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.SpecializesOfUnits
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.ExistsAlgPtOff
+import Development.AutomorphicSpectrum.Definitions.MetricPeriods.HasMultiplier
+import Formalism.LocalRingCardinality.DataHost
 open NumberField IsDedekindDomain MeasureTheory Filter Topology
 open Formalism.L2.Pj ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.FD ReciprocityTheory.ChartRestriction.G.AR.Up ReciprocityTheory.ChartRestriction.G.AR.Inst Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.L2.Theta
 open GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Rec
@@ -81,10 +82,10 @@ private theorem hasVal_eq_of_hasVal_of_le {y : (Σ k, ι k) → Ω} {𝕜 : Type
   rw [zero_add] at hneg
   have hF := TiePrimes.homog_add hm1 hneg
   have hFy : aeval y (g * h' + MvPolynomial.C (-1) * (g' * h)) = 0 := by
-    simp only [map_add, map_mul, hy, hy', MvPolynomial.aeval_C, map_neg, map_one]
+    simp only [map_add, map_mul, hy, hy', map_neg, map_one]
     ring
   have hFz := hz'.2 _ ((TiePrimes.mem_coord_iff y hF).2 hFy)
-  simp only [map_add, map_mul, hzw, hzw', MvPolynomial.aeval_C, map_neg, map_one] at hFz
+  simp only [map_add, map_mul, hzw, hzw', map_neg, map_one] at hFz
   have hprod : (w - w') * (aeval z h * aeval z h') = 0 := by linear_combination hFz
   rcases mul_eq_zero.1 hprod with h0 | h0
   · exact sub_eq_zero.1 h0

@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.StatementsPushDown
 import GroundTheory.HeightsAndTheta.Heights.Intersections.PfAtZero
 set_option maxSynthPendingDepth 1

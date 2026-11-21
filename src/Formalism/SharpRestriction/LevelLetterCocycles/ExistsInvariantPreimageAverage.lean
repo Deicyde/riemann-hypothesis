@@ -1,8 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.LemmaGsOfLemGAB
-import Formalism.SharpRestriction.LevelLetterCocycles.ExistsMemMapEqSmul
-import Formalism.SharpRestriction.LevelLetterCocycles.SumSubEqSumIocOfSub
-import Formalism.SharpRestriction.LevelLetterCocycles.LetterConditionGlobal
-import Formalism.SharpRestriction.LevelLetterCocycles.LevelClauseOfOpenTool
 
 noncomputable section
 
@@ -63,7 +61,7 @@ theorem letGamma_idempotent (g₀ : PowerSeries O →ₐ[O] PowerSeries O) (i : 
   rw [e]
   by_cases h : j = i
   · subst h; simp [letE]
-  · simp [letE, Pi.single_apply, h]
+  · simp [letE, h]
 
 theorem idempotent_mul_self' (i : ZMod n) : (letE i : LetA O n) * letE i = letE i := by
   first

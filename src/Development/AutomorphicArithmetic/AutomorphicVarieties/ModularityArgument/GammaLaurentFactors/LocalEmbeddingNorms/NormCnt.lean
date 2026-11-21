@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.GammaLaurentFactors.MatchIndOf
-import GroundTheory.GlobalFields.GlobalReciprocity.General
-import GroundTheory.GlobalFields.ClassFieldConsequences.RayClassFieldLocal
 
 noncomputable section
 

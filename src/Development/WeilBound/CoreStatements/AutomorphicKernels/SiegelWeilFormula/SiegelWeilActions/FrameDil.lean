@@ -1,9 +1,9 @@
-import Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.SiegelWeilActions.CtSplitOfParts
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.UnfoldingCompactness.IncMTranspose
-import Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.LocalWeilOperators.StepMVal
 import Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.LocalWeilOperators.LocOpMMLaw
 import Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.ThetaSplitting.SplitP
-import GroundTheory.GlobalFields.TateThesis.AdeleScaling
+import GroundTheory.GlobalFields.IdeleGroups.IdeleNorms
 
 noncomputable section
 
@@ -97,7 +97,7 @@ theorem frame_dil (d : SD σ) (R : RD d) (w : InfinitePlace F) (r : ℝ → Grou
     rcases u with u | u <;> rcases v with v | v <;>
       simp only [Matrix.fromBlocks_apply₁₁, Matrix.fromBlocks_apply₁₂, Matrix.fromBlocks_apply₂₁, Matrix.fromBlocks_apply₂₂,
         Matrix.diagonal_apply, Sum.inl.injEq, Sum.inr.injEq, reduceCtorEq, if_false, Matrix.zero_apply] <;>
-      by_cases h : u = v <;> by_cases h' : u = i₀ <;> subst_vars <;> simp_all [Pi.single_apply]
+      by_cases h : u = v <;> by_cases h' : u = i₀ <;> subst_vars <;> simp_all
   refine Place.cw_ext d (fun w' => ?_) ?_
   · by_cases hw' : w' = w
     · subst hw'

@@ -1,6 +1,8 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.FiniteTypeHarishChandra.SupportExistsAll
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SimpleIffIrreducibleStatement
+import Mathlib.RepresentationTheory.Maschke
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open CategoryTheory ReciprocityTheory.Ty.Fin
 
@@ -30,7 +32,7 @@ theorem leftRep_apply (N : Submodule (MonoidAlgebra ℂ Γ) (MonoidAlgebra ℂ �
 theorem asAlgebraHom_leftRep (N : Submodule (MonoidAlgebra ℂ Γ) (MonoidAlgebra ℂ Γ))
     (x : MonoidAlgebra ℂ Γ) (n : N) : Representation.asAlgebraHom (leftRep N) x n = x • n := by
   induction x using MonoidAlgebra.induction_on with
-  | of g => simp [Representation.asAlgebraHom_of, leftRep_apply]
+  | of g => simp [leftRep_apply]
   | add a b ha hb => simp [map_add, add_smul, ha, hb]
   | smul c a ha => simp [map_smul, ha]
 

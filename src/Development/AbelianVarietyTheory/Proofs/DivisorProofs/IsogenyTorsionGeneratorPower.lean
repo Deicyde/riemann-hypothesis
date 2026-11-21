@@ -1,9 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HilbertKodairaSpencer
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAHOfIsFactorAH
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.IsIsoOfSurjectivePrincipalPairing
-import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.ExistsGenThetaOfIsAbelianScheme
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsHeckeQuotientTriple
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsRapoportOfBasis
 
 set_option autoImplicit false
 
@@ -94,7 +91,7 @@ theorem pow_sq_eq_one_of_lam_trivial : ∀ (A : Over (Sp ℂ)) [GrpObj A], IsAbe
   have hz : (x ≫ ψ) ^ N = 1 := by
     refine GlobalTheory.KillSquare.eq_one_of_lam_eq_zero P _ ?_
     have e4 := congrArg (pull (lift (snd T P.A) (fst T P.A)).left) e2
-    simp only [pull_lam, map_zero, lift_fst_assoc, lift_snd_assoc, lift_fst, lift_snd] at e4
+    simp only [pull_lam, map_zero, lift_snd_assoc, lift_fst] at e4
     rw [lam_comm] at e4
     simpa only [Category.assoc] using e4
   rw [pow_mul]

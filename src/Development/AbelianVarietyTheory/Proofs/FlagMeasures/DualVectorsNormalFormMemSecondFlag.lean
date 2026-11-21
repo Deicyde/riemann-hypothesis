@@ -1,8 +1,8 @@
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.IsFundOne
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.BlockAnti
+import BuildAid.Leniency.Open
 import Formalism.FlagUnipotentLattices.MemOfOrthogonalAnisotropic
-import Formalism.FormalDegreeBessel.StatementG
-import Formalism.SharpRestriction.CuspSpanNormBounds.FractionFieldToGenericStalkAlgebraMapEq
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
 open Matrix
 
 namespace GlobalTheory

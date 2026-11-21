@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.PAdicHodge.NormalizedTraceTower
 import GroundTheory.PAdicHodge.NormalizedTraceClosure
 import GroundTheory.PAdicHodge.CyclotomicTower
+import Mathlib.Algebra.Order.Star.Real
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.PAdicHodge

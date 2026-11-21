@@ -1,7 +1,12 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.ChartDirectionsIntegral
-import Formalism.LocalToGlobal.ProjectiveLattices.IntAllProof
 import Formalism.LocalToGlobal.ProjectiveLattices.UnifGen
 import Formalism.LocalToGlobal.ProjectiveLattices.AllTest
+import Mathlib.AlgebraicGeometry.Morphisms.SchemeTheoreticallyDominant
+import Mathlib.AlgebraicGeometry.Morphisms.WeaklyEtale
+import Mathlib.AlgebraicGeometry.Sites.Fpqc
+import Mathlib.CategoryTheory.ExtremalEpi
 
 set_option autoImplicit false
 

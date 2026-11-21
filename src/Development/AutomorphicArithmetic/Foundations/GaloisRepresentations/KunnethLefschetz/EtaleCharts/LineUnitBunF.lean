@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.KunnethLefschetz.EtaleCharts.PBData
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CompOfCechPt
 
 set_option backward.isDefEq.respectTransparency false
 
@@ -416,7 +417,7 @@ theorem lineUnit_bunF {V : Scheme.{0}} (x : V ⟶ T) (a : Fin 2 → (V ⟶ P.T')
   rw [P.w_congr (congrFun (pts_cechPt P.e x a h) 0) (congrFun (pts_cechPt P.e x a h) 1) _
     ((h 0).trans (h 1).symm)]
   ext
-  simp [Matrix.det_fin_one]
+  simp
 
 end PBData
 end UpperTheory.Gal.KunnethLefschetz.G

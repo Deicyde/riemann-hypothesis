@@ -1,20 +1,12 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.InductionEstimates.IwahoriHeckeInjectivity.HeckeInj
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.InductionEstimates.IwahoriHeckeInjectivity.IdempotentTraces.NormOfSplit
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.InductionEstimates.IwahoriHeckeInjectivity.IdempotentTraces.SwapAt
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.InductionEstimates.IwahoriHeckeInjectivity.IdempotentTraces.GalLoc
 import Development.AutomorphicArithmetic.Foundations.Convolution.TraceSplitting.CarryLift
-import Development.AutomorphicArithmetic.Foundations.Convolution.TraceSplitting.Places
-import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.ExCusp
-import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.ExSummand
 import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.NormIff
-import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.ConjIff
 import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.TwSummand
 import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.CuspidalMultiplicityOneTotallyComplex
-import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.SSatIff
-import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.SInfIff
 import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.ParEx
-import Development.AutomorphicArithmetic.Foundations.Convolution.ConvolutionKernels.GalTwistExAlt
-import Development.AutomorphicArithmetic.Foundations.Convolution.ConvolutionKernels.QmapPres
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.EmbTwo
 
 open MeasureTheory NumberField IsDedekindDomain Filter Topology
@@ -183,7 +175,7 @@ theorem UpperTheory.V.Z.InvariantSubmoduleMonicPolynomial.E.indNorm :
         rw [Fin.sum_univ_two]
         simp only [Matrix.cons_val_zero, Matrix.cons_val_one]
         rw [Multiset.map_add, ← e₁, ← e₂, hw₁, bcSat, e₃, hfr]
-        simp [Multiset.map_map, Function.comp_def]
+        simp [Multiset.map_map]
   · intro τ τ' m m' hne' hk hm hm'
     have e1 : m₁ τ = m := ((Dp.parEx M 2 two_pos _ τ₁ hs₁).1 τ).unique (hA₁.1 τ) ((Dp.sInfIff M 2 _ π τ₁ hτ₁ τ m).2 hm)
     have e2 : m₂ τ = m' := by

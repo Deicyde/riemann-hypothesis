@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.CmpLApply
+import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.ColSpanMap
 
 noncomputable section
 

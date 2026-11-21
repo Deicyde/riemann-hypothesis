@@ -1,4 +1,5 @@
-import Formalism.HermitianCurvature.StatementH
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.Herglotz
 
 namespace Formalism.FourierDecayAlt.P.Fejer

@@ -1,5 +1,12 @@
-import Mathlib
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.SeparatingAlgebras.GroupDetAlt
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 
@@ -22,7 +29,7 @@ private theorem exists_close_vector_ultrametric (k : Type) [NormedField k] [IsUl
     · intro j
       by_cases hj : j = i
       · subst hj; simp
-      · simp [Pi.single_apply, hj]
+      · simp [hj]
     · intro c hc
       have hc0 : c = 0 := by simpa using hc
       simp [hc0]

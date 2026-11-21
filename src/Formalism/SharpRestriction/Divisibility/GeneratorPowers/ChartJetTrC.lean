@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ChartJetTrB
+import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ChartJetTrA
 
 set_option autoImplicit false
 

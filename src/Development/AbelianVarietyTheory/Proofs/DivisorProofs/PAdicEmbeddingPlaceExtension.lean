@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IoOfLeOneIff
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.RingKrullDimIntegers
 
 open NumberField IsDedekindDomain GlobalTheory.TrueGeo
 

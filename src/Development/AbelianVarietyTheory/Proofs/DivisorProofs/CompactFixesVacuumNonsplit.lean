@@ -1,11 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAtAlt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InertPlaceLatticeStabiliserFixesVacuumStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PlaceSplitOrInert
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatAtVAtStable
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaActionExists
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.IndLine
@@ -63,7 +60,7 @@ theorem eAt_smul_of_mem {d : ℕ} (W : Spc F E d) (v : Pl F) {z : Fin d → AE F
 theorem smul_mulVec' {d : ℕ} (u : AF F) (M : Matrix (Fin d) (Fin d) (AE F E)) (z : Fin d → AE F E) :
     (u • M) *ᵥ z = u • (M *ᵥ z) := by
   funext i
-  simp [Matrix.mulVec, dotProduct, Finset.smul_sum, smul_mul_assoc]
+  simp [Matrix.mulVec, dotProduct, Finset.smul_sum]
 
 theorem mulVec_mem_latAt {d : ℕ} (W : Spc F E d) (v : Pl F) (M : Matrix (Fin d) (Fin d) (AE F E))
     (hM : At (evFin F v) (M - 1)) (hL : ∀ z ∈ latHat W, M *ᵥ z ∈ latHat W) {z : Fin d → AE F E}

@@ -1,10 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StepIdeal
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NumberFieldLatticeClearsDenominatorStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RelIndexMapMulRelIndexKerStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GramDetScaleVectorsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GramDetSnocTriangularStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LieLatticeStepCoordinateVectorsStatement
+import ReciprocityTheory.GeometryOfNumbers.LatticeCovolumes.ArakelovDegreeEqDegreeOfFamily
 
 set_option autoImplicit false
 
@@ -34,7 +34,7 @@ theorem deg_stepLat_succ (D : D7) (O : Setup D) (K : Type) [Field K] [NumberFiel
     by_cases hjk : j = k
     · subst hjk; simp [e]
     · have : p k ≠ p j := fun h' => hjk (hp h').symm
-      simp [e, Pi.single_apply, this, hjk]
+      simp [e, this, hjk]
   have hrep : ∀ v ∈ S', v = ∑ k, v (p k) • e k := by
     intro v hv
     let Φ : (Fin F.P₀.g → K) →ₗ[K] (Fin F.P₀.g → K) := ∑ k, (LinearMap.proj (p k)).smulRight (e k)

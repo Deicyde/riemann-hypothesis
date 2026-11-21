@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.InBlock
 import Formalism.LocalToGlobal.IndefiniteReal.CxPassGood
 

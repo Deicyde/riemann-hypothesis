@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.TranscendenceTraces.TrTransferQ
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.PullHlComp
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry Opposite GlobalTheory.EtC PositivityTheory.AutomorphicGaloisHodgeTate

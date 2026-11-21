@@ -1,11 +1,8 @@
-import Mathlib
-import CompanionTheory.SpectralGeometry.CountingDefinitions.AdelicEulerProducts.HypJ
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.AdelicPrimitiveVectorCompactRescaleStatement
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.GramOrbitCompactRepresentativeStatement
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.HyperbolicAndBlockOneNondegenerateStatement
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.AdelicUnitaryGroupLocallyCompactStatement
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.TensorLocallyCompactRingStatement
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.AdelesLocallyCompactSecondCountable
 open HeckeCharacterZeroLocus.SiegelWeilU GlobalTheory.CompanionTheory.SW NumberField IsDedekindDomain MeasureTheory Topology
 open scoped TensorProduct ENNReal NNReal Matrix
 
@@ -83,7 +80,7 @@ theorem partner_spec (s : K →+* K) (L Li : Matrix (Fin N) (Fin N) K) (half : K
 
 theorem hform_single (s : K →+* K) (L : Matrix (Fin N) (Fin N) K) (i j : Fin N) :
     hform s L (Pi.single i 1) (Pi.single j 1) = L i j := by
-  simp [hform_eq, Matrix.mulVec_single_one, dotProduct, Pi.single_apply, apply_ite s]
+  simp [hform_eq, dotProduct, Pi.single_apply, apply_ite s]
 
 variable [TopologicalSpace K] [IsTopologicalRing K]
 

@@ -1,6 +1,5 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StRegFixedBallMass
-import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StRegDensNonneg
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StStokesOnChart
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StChartMassCompact
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.CutOffNear

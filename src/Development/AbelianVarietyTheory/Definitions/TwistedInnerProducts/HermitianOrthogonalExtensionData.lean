@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.LinksChar
 import Formalism.LocalToGlobal.BesselHermitianTheta.LemmasWeil
-import Development.AbelianVarietyTheory.Definitions.Foundations.StrictInterlaceIffDescEnum
 
 noncomputable section
 
@@ -477,7 +478,7 @@ example : (Matrix.of (antiDiagonalSignGramMatrix ℤ 3)) = !![0, 0, 1; 0, -1, 0;
 example : staircaseExtensionIdeal (D := D) ⊤ 1 0 = D.host.AA * D.host.AAbar⁻¹ := by
   simp [staircaseExtensionIdeal, Ideal.pointwise_smul_def, Ideal.map_top]
 
-example (V : HSp D) (x y : V.V) : (neg (neg V)).hT x y = V.hT x y := by simp [neg_hT]
+example (V : HSp D) (x y : V.V) : (neg (neg V)).hT x y = V.hT x y := by simp
 
 end GlobalTheory.Grid
 

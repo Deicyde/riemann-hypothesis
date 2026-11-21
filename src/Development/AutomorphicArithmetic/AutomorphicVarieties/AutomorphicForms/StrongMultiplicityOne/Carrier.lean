@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.StrongMultiplicityOne.StrongMultOneC
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.CmBridge
 

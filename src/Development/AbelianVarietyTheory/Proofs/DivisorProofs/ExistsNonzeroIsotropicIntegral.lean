@@ -1,17 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Definitions.Divisors.PairsOfSquareTriple
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqOfComponentTensorAdelicFunctionEq
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaEvaluationZeroConeStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedPlaneSecondVariableStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedPlaneEvaluationConstantStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilConvergenceOfKernelStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsGoodSchrodingerModelStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeckeCharactersRestrictionEta
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaBasicPropertiesStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentBoundedHeightReductionStatement
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.LcscAdelicUnitaryGroup
 
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -187,7 +180,7 @@ theorem GlobalTheory.ThK.ctBig_integrate : GlobalTheory.ThK.KP → ∀ (F E : Ty
       have := hmix 1 t 1 m hL 1 (one_mem _) (om (g, h) Φ) (hpres _)
       rw [one_mul, ← Module.End.mul_apply, ← map_mul, Prod.mk_mul_mk, one_mul] at this
       rw [this, Prod.mk_one_one, map_one, Module.End.one_apply]
-      simp only [thetaSum, LinearMap.smul_apply, Pi.smul_apply, smul_eq_mul]
+      simp only [thetaSum, Pi.smul_apply, smul_eq_mul]
       exact tsum_mul_left
     simp only [key, MeasureTheory.integral_const_mul]
     ring

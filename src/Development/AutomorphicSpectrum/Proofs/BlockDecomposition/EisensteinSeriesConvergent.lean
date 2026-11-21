@@ -1,7 +1,6 @@
-import Mathlib
-import Development.WeilBound.ThetaLifts.LatticeBasics.HypothesesE
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LatticeBasics.UnfoldC
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.EmbBar
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntegersBoundedEmbeddingsCountStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DenominatorBoundByHeightStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.QuadraticIntegralCoefficientsBoundStatement

@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsStratHom
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.BhattScholzeIntegral
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.DcrisSpanTensorBcrisRatStatement
+import Formalism.WeaklyAdmissibleFiltrations.StatementTor
 open Formalism Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.WeaklyAdmissibleFiltrations TensorProduct PowerSeries GlobalTheory.Prism GlobalTheory.BKReal GlobalTheory.Per GlobalTheory.BSP GlobalTheory.MemLoc
 open scoped Formalism.Per NNReal
 
@@ -24,7 +24,7 @@ theorem crd_mulLeft (bV : Module.Basis (Fin d) F V) (r : Fin d) (β : B) (z : V 
       β * crd bV r z := by
   induction z using TensorProduct.induction_on with
   | zero => simp
-  | tmul v x => simp [crd_tmul, mul_smul_comm]
+  | tmul v x => simp [crd_tmul]
   | add x y hx hy => simp only [map_add, hx, hy, mul_add]
 
 theorem crd_map (bV : Module.Basis (Fin d) F V) (r : Fin d) (f : V →ₗ[F] V) (σ : B →ₗ[F] B)
@@ -120,8 +120,7 @@ theorem lattice_basis_span_invariants : ∀ (l : ℕ) [Fact l.Prime] (K : FinExt
     refine Finset.sum_congr rfl fun s _ => ?_
     rw [toMatrix_lat, Algebra.smul_def, map_mul, PadicInt.algebraMap_apply, T.zB]
     congr 1
-    simp only [LinearMap.restrictScalars_apply, AlgHom.toLinearMap_apply, AlgEquiv.toAlgHom_eq_coe,
-      AlgHom.coe_coe]
+    simp only [LinearMap.restrictScalars_apply, AlgHom.toLinearMap_apply]
     rw [← T.actB]
     congr 1
     exact (P.PD_actB K g _).symm

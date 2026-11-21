@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.ColumnWordMemPolynomialsOfDegree
+import Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.TopOddNeEndAny
 
 noncomputable section
 

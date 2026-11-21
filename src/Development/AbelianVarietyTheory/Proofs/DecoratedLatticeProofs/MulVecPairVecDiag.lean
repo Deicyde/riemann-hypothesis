@@ -1,4 +1,7 @@
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IntegrandSZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.MemSiegelOfIffRightAct
+import Formalism.LocalToGlobal.BesselHermitianTheta.IsAutFunDef
 open scoped ComplexConjugate Matrix NNReal
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.L2.Theta Formalism.L2.Pj Formalism.IndefR.Datum MeasureTheory IsDedekindDomain NumberField
 open GlobalTheory.AutomorphicL2Unitary GlobalTheory.Cusp GlobalTheory.AdelicU GlobalTheory.Doubling GlobalTheory.Cont
@@ -51,7 +54,7 @@ theorem isotropic_diag {σ : A →+* A} {J : Matrix (Fin n) (Fin n) A} {M : Matr
   set d := (M.submatrix finSumFinEquiv finSumFinEquiv).toBlocks₂₂
   rw [← sub_eq_zero]
   have := congrArg₂ (fun a b => a + b) (congrArg₂ (fun a b => a + b) h11 h12) (congrArg₂ (fun a b => a + b) h21 h22)
-  simp only [add_zero, add_neg_cancel] at this
+  simp only [add_zero] at this
   rw [← sub_eq_zero] at this
   rw [← this]
   abel

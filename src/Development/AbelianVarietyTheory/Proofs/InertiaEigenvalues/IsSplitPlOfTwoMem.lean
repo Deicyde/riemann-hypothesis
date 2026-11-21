@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
 import Formalism.LocalRingCardinality.ConjSqrtMinusD
 import Formalism.HermitianLattices.HermitianLatticesProofs.LocDual
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Stdform
 import Formalism.LocalToGlobal.ProjectiveLattices.UnramBridgeHolds
 import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.BaseChangeInertUnramified
 import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.DefiniteFormInstances
@@ -189,7 +189,7 @@ theorem isSplitPl_of_two_mem {R : Ranks} (H : Host R) (w : PlE H) (h2 : (2 : �
   have hprod : ω * (1 - ω) = 2 * (k : 𝓞 H.E) := by
     apply RingOfIntegers.ext
     push_cast at hc ⊢
-    simp only [map_mul, map_sub, map_one, map_ofNat, map_natCast]
+    simp only [map_ofNat]
     change c * (1 - c) = _
     linear_combination -hc
   have hone : ∀ a : 𝓞 H.E, a ∈ w.asIdeal → 1 - a ∉ w.asIdeal := fun a ha hb =>

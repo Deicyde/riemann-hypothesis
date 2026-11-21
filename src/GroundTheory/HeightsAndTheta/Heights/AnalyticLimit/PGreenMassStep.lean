@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.GreenMassStep
 import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.PGreenMassStepA
 import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.PGreenMassStepB
+import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.PGreenMassZero
+import ReciprocityTheory.AnalyticForms.PotentialTheory.PLLocalStatement
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.AnalyticLimit

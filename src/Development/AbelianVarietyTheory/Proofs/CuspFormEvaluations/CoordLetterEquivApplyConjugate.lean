@@ -1,8 +1,10 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.FlagBasis
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.GCauchyStatement
 import Development.AbelianVarietyTheory.Definitions.ThetaValues.ExistsMemRowHighestTotalDegreeEqTwo
 import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.ConjEmbRt
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 open MvPolynomial NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo

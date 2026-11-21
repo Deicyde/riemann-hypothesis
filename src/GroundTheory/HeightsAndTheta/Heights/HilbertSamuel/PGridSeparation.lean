@@ -1,8 +1,12 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsGridSeparation
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsRootGridLower
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsNormalLocusRep
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsFibreNormBound
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.Monotonicity.Lemmas
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.HilbertSamuel

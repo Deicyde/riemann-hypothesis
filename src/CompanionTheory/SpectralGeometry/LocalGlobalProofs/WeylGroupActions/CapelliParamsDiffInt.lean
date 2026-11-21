@@ -1,7 +1,4 @@
-import Mathlib
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.ShiftAtRExistsEq
-import Formalism.HermitianCurvature.FrameExists2
-import Development.AbelianVarietyTheory.Definitions.Jets.WigMap
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CommonEigenvectors
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.HighestWeightPolynomials
 

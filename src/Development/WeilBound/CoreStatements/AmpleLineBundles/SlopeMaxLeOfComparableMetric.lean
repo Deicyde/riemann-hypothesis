@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.AmpleLineBundles.NormDegreeLeOfMetricBoundedMap
 import Development.WeilBound.CoreStatements.AmpleLineBundles.StandardHermitianBundleSemistable
 

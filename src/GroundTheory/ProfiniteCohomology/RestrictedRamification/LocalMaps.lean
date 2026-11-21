@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.LocalEulerCharacteristic.InnerConj
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.IsUnramifiedOutsideIffLeMaxUnramifiedOutside
+import Mathlib.NumberTheory.NumberField.Completion.InfinitePlace
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.HodgeComparisonCompatibility
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.HomogeneousNonvanishing.TwistedGramMatricesMatch
 open AlgebraicGeometry CategoryTheory Limits NumberField ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.CompanionTheory.Ar
 set_option maxHeartbeats 1000000 in

@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.KernelLattices.LateralTheory
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.JetGauges.ParabolicPointMembership
 
 noncomputable section

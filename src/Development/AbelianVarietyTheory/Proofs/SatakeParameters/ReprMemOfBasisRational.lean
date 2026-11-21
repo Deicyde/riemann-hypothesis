@@ -1,8 +1,8 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.ConcretePkgSpec
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.MemCmComplexOfPow
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.HasRatBasisOfAct
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.CoefActionReprMemSubfield
+import Formalism.LocalToGlobal.IndefiniteReal.LinksChar
 
 open Formalism.BasicNotions Formalism.L2.DIV Formalism.IndefR.Links NumberField
 attribute [local instance] Formalism.BasicNotions.Host.cmStar

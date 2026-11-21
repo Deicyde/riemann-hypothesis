@@ -1,27 +1,12 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.NormSmall
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.BottomExistsIntegrable
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RatInOfUnit
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IntegrandSZero
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeckeFormAniso
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsBottomTriIs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemBottomPairFinitePlacesBelowOfMemExceptional
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsBottomInfinityExponentsGapLargeGridsStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsHaarFundamentalDomainUnitaryQuotientVolume
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.ExistsIsParamFunOne
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.LevelPlacesIntegralNonzeroConstant
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.HeisenbergCombinationCommFockPolynomialVectors
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.HeisenbergFixAndKillThetaOffSupportMoveStatement
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.WeilMatrixCoefficientEqZeroOfHeisenbergRelationsStatement
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.FinitePartMemLevelOfThetaDatumNeZero
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SchrodingerIntertwinerInjectiveSchwartzBruhat
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CompAtMtOfMemGfC
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MemCompletedHomLatticeIffFrameStabiliserAction
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.WeilActionSchrodingerModelFiniteIdempotent
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.FirstStandardPairMemberHasThetaFunction
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SignedUnitaryGroupCompat
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.FockPolynomialVectorInjectiveNonzeroVacuum
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HasInfExpDiv
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.WeilActionNegPairPureTensorFock
@@ -33,6 +18,8 @@ import Development.AutomorphicArithmetic.DivisorFrames.FiniteComponentMemStabili
 import Development.AutomorphicArithmetic.DivisorFrames.StdFstActOOfMemStabilizer
 import Development.AutomorphicArithmetic.DivisorFrames.IsUnitDetProdDetIdlOfMemSt
 import Development.AutomorphicArithmetic.DivisorFrames.ExistsStdFstNeZeroOfRankLe
+import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.DoubledLatticeHeightFunProperties
+import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsCartanInvOneOfOnb
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.Theta IsDedekindDomain NumberField Finset MeasureTheory
 open GlobalTheory.ChiGrid GlobalTheory.FunObj GlobalTheory.FunObj.SqNum GlobalTheory.RowTest GlobalTheory.SqTop
 open GlobalTheory.IndefiniteRowSideFullHecke.UnitCharTriangle (Tri)
@@ -319,7 +306,7 @@ private theorem pt_ne_zero (hX : IsBottomTri W i j X) (t : T) {P : PolF D WW.ran
       simp [Matrix.one_apply, Matrix.diagonal_apply, apply_ite]
     · rw [(hX.std.2.2 τ).1, (hX.std.2.2 τ).2]
       ext a b
-      simp [Matrix.one_apply, Matrix.diagonal_apply, apply_ite]
+      simp [Matrix.one_apply, apply_ite]
   have hinj := GlobalTheory.FockPolyInj.pureTensorO_injective_of_on W.ψ W.θ (GlobalTheory.Grid.neg A) WW h.isVac.1 h.isVac.2.inf
     (fun τ => -X.rA.s τ) X.rA.B X.rW.s X.rW.B (fun _ => 0) pW hA hpW (X.f t) (f_theta hX t) (f_fock hX t) (f_ne_zero hX t)
   exact fun h0 => hP (hinj (h0.trans (map_zero _).symm))

@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsAdmissibleIntegralBasisChangeOne
-import Formalism.LocalToGlobal.Columns.LevGCount
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LevQFiniteIndexAndRoot
+import Development.AbelianVarietyTheory.Proofs.SatakeParameters.MemZmuOfPowPred
 
 noncomputable section
 

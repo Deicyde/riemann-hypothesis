@@ -1,9 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.ProductFirstZerothParts
-import Formalism.SharpRestriction.Divisibility.PrimeDegreeVariant
 import Formalism.GradedWeylDivisibility.FockSpaceTableaux.LClosedeqLemmas
 import Formalism.GradedWeylDivisibility.FockSpaceTableaux.LDlatLemmas
 import Formalism.GradedWeylDivisibility.FinalC
+import Formalism.GradedWeylDivisibility.FinalB
 
 noncomputable section
 

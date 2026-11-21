@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.IdeleGenerators.ShapeFacts
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.Clifford
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.MkMemAdmissibleAtIffCocycle
 
 open Matrix Formalism.MainNotions.N UpperTheory.V.Af UpperTheory.V.U3
 

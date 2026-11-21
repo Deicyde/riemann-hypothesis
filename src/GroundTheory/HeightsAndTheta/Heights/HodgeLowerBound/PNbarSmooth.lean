@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.StNbarSmooth
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.PMuRegSmooth
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.PVertFactorPos

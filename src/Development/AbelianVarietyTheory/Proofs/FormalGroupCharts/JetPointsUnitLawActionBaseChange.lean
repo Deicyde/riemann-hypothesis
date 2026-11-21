@@ -1,11 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GermCut
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GermBGen
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ChartPrimTrPfA
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.IntChartPf
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ExistsTruncatedIntegralChart
-import Formalism.LocalToGlobal.ProjectiveLattices.PlaceBelow
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.SecBaseChangeAnySt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ChartJetTrD
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField

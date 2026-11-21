@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MulVecCEApply
-import Development.AbelianVarietyTheory.Definitions.Foundations.T2SpaceTensorProductFiniteExtension
 open MeasureTheory Topology Matrix NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.GaugeEx GlobalTheory.ModuLR
 open scoped NNReal ENNReal TensorProduct
 
@@ -60,11 +60,11 @@ def jSPHomeo : SPart F S × OPart F S ≃ₜ
   invFun := jSPinv F S
   left_inv p := by
     ext v
-    · simp [jSP, jSPinv, v.2]
+    · simp [jSP, jSPinv]
     · simp [jSP, jSPinv, v.2]
   right_inv x := by
     ext v
-    by_cases h : v ∈ S <;> simp [jSP, jSPinv, h]
+    by_cases h : v ∈ S <;> simp [jSP, jSPinv]
   continuous_toFun := continuous_jSP F S
   continuous_invFun := continuous_jSPinv F S
 

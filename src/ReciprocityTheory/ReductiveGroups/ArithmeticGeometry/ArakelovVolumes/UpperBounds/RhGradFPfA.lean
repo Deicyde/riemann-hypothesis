@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.L2DbarEstimates.PlurisubharmonicCharts.FlatCalcA
+import ReciprocityTheory.L2DbarEstimates.ChartDerivatives.DifferentiableAtChart
 
 namespace ReciprocityTheory.ChartRestriction.G.AR.Up.RGF
 
@@ -20,7 +22,7 @@ theorem gc_wdb_comp (n d : ℕ) (g : V d → ℂ) (F : V n → V d) (J : V n →
   rw [fc_clm_decomp d D c, fc_clm_decomp d D (Complex.I • c), Finset.mul_sum,
     ← Finset.sum_add_distrib, Finset.sum_div]
   refine Finset.sum_congr rfl fun a _ => ?_
-  simp only [PiLp.smul_apply, smul_eq_mul, map_mul, Complex.conj_I, wdb, wd]
+  simp only [PiLp.smul_apply, smul_eq_mul, map_mul, Complex.conj_I, wdb]
   linear_combination ((D (bas d a) - Complex.I * D (Complex.I • bas d a)) / 2 * c a / 2 -
     (D (bas d a) + Complex.I * D (Complex.I • bas d a)) / 2 * (starRingEnd ℂ) (c a) / 2) *
       Complex.I_sq
@@ -38,7 +40,7 @@ theorem gc_wd_comp (n d : ℕ) (g : V d → ℂ) (F : V n → V d) (J : V n →L
   rw [fc_clm_decomp d D c, fc_clm_decomp d D (Complex.I • c), Finset.mul_sum,
     ← Finset.sum_sub_distrib, Finset.sum_div]
   refine Finset.sum_congr rfl fun a _ => ?_
-  simp only [PiLp.smul_apply, smul_eq_mul, map_mul, Complex.conj_I, wdb, wd]
+  simp only [PiLp.smul_apply, smul_eq_mul, map_mul, Complex.conj_I, wd]
   linear_combination (-(D (bas d a) - Complex.I * D (Complex.I • bas d a)) / 2 * c a / 2 +
     (D (bas d a) + Complex.I * D (Complex.I • bas d a)) / 2 * (starRingEnd ℂ) (c a) / 2) *
       Complex.I_sq

@@ -1,9 +1,5 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.ZetaActRefl
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsTrSelf
-import Formalism.LocalToGlobal.TorsionIntegrality.EisensteinTranslationProducts.TranslateProduct
-import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.ModDefs
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsIntegralModularFamilyValueDivPeriodPowStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSLTwoPermutedModularFamilyAlgebraClosure
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HasQExpansionOfLevelLinearOperations
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ModularGroupRowVecAndConjRightActionsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsIntegralWeierstrassTorsionQCoefficientsStatement
@@ -38,9 +34,9 @@ theorem isIntegral_sq_mul_wp_sub_div : ∀ (N : ℕ) [NeZero N] (τ : ℍ) (ω :
     simpa using this
   let R : Subring ℂ := (integralClosure ℤ ℂ).toSubring
   have hmem : ∀ z : ℂ, z ∈ R ↔ IsIntegral ℤ z := fun z => by
-    simp [R, Subalgebra.mem_toSubring, mem_integralClosure_iff]
+    simp [R, mem_integralClosure_iff]
   have hNx : ∀ v : Fin 2 → ZMod N, N • v = 0 := fun v => by
-    funext i; simp [nsmul_eq_mul, ZMod.natCast_self]
+    funext i; simp [nsmul_eq_mul]
   have hQ : ∀ p : ι, QAll (· ∈ R) N (fun τ => (N : ℂ) ^ 2 * (wp N p.1.1 τ - wp N p.1.2 τ)) := by
     intro p
     refine ⟨fun n => (N : ℂ) ^ 2 * (cP N p.1.1 n - cP N p.1.2 n), ?_, fun n => ?_⟩

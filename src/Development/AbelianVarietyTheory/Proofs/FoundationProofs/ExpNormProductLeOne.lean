@@ -1,6 +1,12 @@
-import Development.AbelianVarietyTheory.Definitions.Foundations.PetIPSmulRight
-import Development.AbelianVarietyTheory.Definitions.Foundations.RepL
-import CompanionTheory.EightfoldTheory.VariationTheory.AutomorphicForms.Newform
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.Analysis.SpecialFunctions.Complex.LogBounds
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open UpperHalfPlane Complex MeasureTheory CongruenceSubgroup GlobalTheory.EisM UpperTheory.V.Af Filter Topology
 open scoped MatrixGroups Real ComplexConjugate Manifold ModularForm
 namespace GlobalTheory.EisM
@@ -73,7 +79,7 @@ theorem locineq : ∀ (x y : ℂ) (T : ℝ), 0 ≤ T → T < 1 → ‖x‖ ^ 2 *
   have h : ∀ i j, ‖z i * conj (z j) * T‖ < 1 := by
     intro i j
     fin_cases i <;> fin_cases j <;>
-      simp [z, hnT, Complex.norm_conj, abs_of_nonneg hT0] <;> nlinarith
+      simp [z, abs_of_nonneg hT0] <;> nlinarith
   have key := locineq_exp_prod z T hT0 h
   have c1 : ‖1 - conj x * T‖ = ‖1 - x * T‖ := by
     rw [← Complex.norm_conj (1 - x * T)]; simp

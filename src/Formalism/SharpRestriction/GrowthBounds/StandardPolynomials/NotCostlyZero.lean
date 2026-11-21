@@ -1,5 +1,6 @@
-import Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.KGShift
-import Formalism.SharpRestriction.GrowthBounds.FrobeniusPaths.AntitoneOfAppend
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.FrobeniusPaths.ColOKOfPath
 
 noncomputable section
 

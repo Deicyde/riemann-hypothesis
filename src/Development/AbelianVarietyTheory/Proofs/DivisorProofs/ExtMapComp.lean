@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExtMapApply
 open Matrix MeasureTheory Set GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe GlobalTheory.TorsionForm
 open scoped ContDiff
@@ -140,15 +141,15 @@ theorem wedge_single (i : Fin m) (S : Finset (Fin m)) :
     · by_cases e : T = insert i S
       · subst e; simp [Finset.erase_insert hS, sgn_insert]
       · have e' : T.erase i ≠ S := fun h => e (by rw [← h, Finset.insert_erase hT])
-        simp [Pi.single_apply, e, e']
+        simp [e, e']
     · have e : T ≠ insert i S := fun h => hT (h ▸ Finset.mem_insert_self i S)
-      simp [Pi.single_apply, e]
+      simp [e]
 
 theorem extMap_single (φ : Matrix (Fin m) (Fin m) ℂ) (S : Finset (Fin m)) :
     extMap φ (Pi.single S 1) = genProd φ S := by
   rw [extMap_apply, Finset.sum_eq_single S]
   · simp
-  · intro T _ hT; simp [Pi.single_apply, hT]
+  · intro T _ hT; simp [hT]
   · simp
 
 theorem extMap_wedge (φ : Matrix (Fin m) (Fin m) ℂ) (i : Fin m) (w : Ext m) :

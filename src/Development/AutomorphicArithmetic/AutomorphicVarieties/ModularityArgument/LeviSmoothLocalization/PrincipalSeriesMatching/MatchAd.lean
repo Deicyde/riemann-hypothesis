@@ -1,11 +1,9 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.LeviSmoothLocalization.AdjointEta.EtaOK
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.BuildingsResidueChars.ExistsEtaCharacterImaginaryQuadratic
 import Development.AutomorphicArithmetic.AutomorphicVarieties.BuildingsResidueChars.EulerProductInductionSupported
 import Development.AutomorphicArithmetic.AutomorphicVarieties.BuildingsResidueChars.ExistsFiniteOrderHeckeCharacter
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.LeviSmoothLocalization.PrincipalSeriesMatching.NormVal
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.LeviSmoothLocalization.PrincipalSeriesMatching.PolFacts
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.GammaLaurentFactors.LocalEmbeddingNorms.GlobTw
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.GammaLaurentFactors.LocalEmbeddingNorms.SuppFacts
 
 noncomputable section
 
@@ -60,7 +58,7 @@ private theorem pol_shift (h1 : PolFacts) (h2 : NormVal) (K : Type) [Field K] [N
   have e2 := ((h1 (w.1.adicCompletion K)).2.2.2 s (θ.comp (nm w))).2.2.2 (μ.comp (nm w)) hu
   rw [e1, e2, comp_assoc, comp_assoc]
   congr 1
-  simp only [MonoidHom.comp_apply, he, Units.val_pow_eq_pow_val, X_pow_comp, mul_comp, C_comp, X_comp, mul_pow, C_pow,
+  simp only [MonoidHom.comp_apply, he, Units.val_pow_eq_pow_val, mul_comp, C_comp, X_comp, mul_pow, C_pow,
     Polynomial.pow_comp]
 
 private theorem unr_comp (K : Type) [Field K] [NumberField K] (v : HeightOneSpectrum (𝓞 ℚ)) (w : PlacesOver K v)

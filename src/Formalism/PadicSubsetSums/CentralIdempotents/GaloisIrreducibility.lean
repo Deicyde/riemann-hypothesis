@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.GaloisIrreducibility.Statement
+import Mathlib.LinearAlgebra.Matrix.PosDef
+import Mathlib.NumberTheory.Padics.RingHoms
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RepresentationTheory.Character
 
 open Finset Polynomial
 open scoped ComplexOrder

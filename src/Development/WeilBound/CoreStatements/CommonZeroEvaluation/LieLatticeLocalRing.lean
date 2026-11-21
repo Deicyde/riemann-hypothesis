@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.EigLat
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LieLatticeEvalFractionField
 import Development.WeilBound.CoreStatements.CommonZeroEvaluation.GenMapEqOfFactor
 

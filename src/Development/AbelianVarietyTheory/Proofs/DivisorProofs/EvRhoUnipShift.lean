@@ -1,10 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocUnifSum
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RatStab
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepresentationPreservesSchwartz
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentNormalizerRational
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairRestrictToSubspaceRight
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianSkewLocalPlaceData
@@ -68,7 +62,7 @@ theorem ev_rho_unip_shift : ∀ (F E : Type) [Field F] [NumberField F] [Field E]
       have hσinj : Function.Injective σ := σ.toRingHom.injective
       apply hσinj
       rw [Pi.zero_apply, map_zero, ← hc0 i]
-      simp only [vecMul, mulVec, dotProduct, map_sum, map_mul, hc₀, Pi.zero_apply]
+      simp only [vecMul, mulVec, dotProduct, map_sum, map_mul, hc₀]
       refine Finset.sum_congr rfl fun j _ => ?_
       rw [hY.herm, mul_comm]
     have h1 := hH.xy

@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.BlockActions.StabFunGen
+import Formalism.LocalToGlobal.GlobalTheory.BlockActions.InJSymRestrict
 
 noncomputable section
 

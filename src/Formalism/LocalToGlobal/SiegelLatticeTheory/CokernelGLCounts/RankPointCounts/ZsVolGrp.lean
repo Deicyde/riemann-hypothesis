@@ -1,4 +1,5 @@
-import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.ZsVolCut
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IntLowMul
 
 noncomputable section
@@ -42,13 +43,13 @@ variable {F E : Type} [Field F] [ValuativeRel F] [TopologicalSpace F] [CommRing 
   [MeasurableSpace E] (Mp : Loc.Model F E) {n : ℕ}
 
 theorem intLow_one : Formalism.MainNotions.S.TieN.IntLow Mp (1 : Matrix (Fin n) (Fin n) E) :=
-  ⟨fun a => by simp, fun a b h => by simp [Matrix.one_apply, h.ne], fun a b => by
+  ⟨fun a => by simp, fun a b h => by simp [h.ne], fun a b => by
     rw [Matrix.one_apply]; split_ifs
     · exact one_mem _
     · exact zero_mem _⟩
 
 theorem intUp_one : Formalism.MainNotions.S.TieN.IntUp Mp (1 : Matrix (Fin n) (Fin n) E) :=
-  ⟨fun a => by simp, fun a b h => by simp [Matrix.one_apply, h.ne'], fun a b => by
+  ⟨fun a => by simp, fun a b h => by simp [h.ne'], fun a b => by
     rw [Matrix.one_apply]; split_ifs
     · exact one_mem _
     · exact zero_mem _⟩

@@ -1,4 +1,46 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gaussian.FourierTransform
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.MeasureTheory.Constructions.HaarToSphere
+import Mathlib.MeasureTheory.Integral.Gamma
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Separation.CompletelyRegular
+import Mathlib.Topology.Sheaves.Init
 
 namespace ReciprocityTheory.ChartRestriction.G.I2
 
@@ -150,16 +192,16 @@ lemma rsm_ball_mass (N : ℕ) :
       · have h' : ¬ (Real.sqrt (2 * N) < ‖z‖) := not_lt.mpr h
         have hz1 : z ∉ (closedBall (0 : EuclideanSpace ℂ (Fin N)) (Real.sqrt (2 * N)))ᶜ := fun hc =>
           (Set.mem_compl_iff _ _).mp hc (mem_closedBall.mpr (by rwa [dist_zero_right]))
-        simp only [Set.indicator_apply, Set.mem_compl_iff, mem_closedBall, dist_zero_right, Set.mem_Ioi,
-          h, h', not_true_eq_false, not_false_eq_true, if_true, if_false]
+        simp only [Set.indicator_apply, Set.mem_Ioi,
+          h', if_false]
         first
           | exact Set.indicator_of_not_mem hz1 _
           | exact Set.indicator_of_notMem hz1 _
       · have h' : Real.sqrt (2 * N) < ‖z‖ := not_le.mp h
         have hz1 : z ∈ (closedBall (0 : EuclideanSpace ℂ (Fin N)) (Real.sqrt (2 * N)))ᶜ :=
           (Set.mem_compl_iff _ _).mpr (fun hb => h (by rwa [mem_closedBall, dist_zero_right] at hb))
-        simp only [Set.indicator_apply, Set.mem_compl_iff, mem_closedBall, dist_zero_right, Set.mem_Ioi,
-          h, h', not_true_eq_false, not_false_eq_true, if_true, if_false]
+        simp only [Set.indicator_apply, Set.mem_Ioi,
+          h', if_true]
         exact Set.indicator_of_mem hz1 _
     rw [← rsm_gauss_total N]
     exact half_le_of_tail_le_half _ _ _ _ _ _ _ (by positivity)
@@ -228,7 +270,7 @@ lemma rsm_rot_int (N : ℕ) (F : EuclideanSpace ℂ (Fin N) → ℂ) (u : ℂ) (
       | exact (rsmRot N u hu).toContinuousLinearEquiv.toHomeomorph.measurableEmbedding
   have hpre : (rsmRot N u hu) ⁻¹' closedBall 0 r = closedBall 0 r := by
     ext z
-    simp [hcoe, norm_smul, hu]
+    simp
   calc ∫ z in closedBall (0 : EuclideanSpace ℂ (Fin N)) r, Real.exp (-‖z‖ ^ 2) * ‖F (u • z)‖ ^ 2
       = ∫ z in closedBall (0 : EuclideanSpace ℂ (Fin N)) r,
           (fun w => Real.exp (-‖w‖ ^ 2) * ‖F w‖ ^ 2) (rsmRot N u hu z) := by

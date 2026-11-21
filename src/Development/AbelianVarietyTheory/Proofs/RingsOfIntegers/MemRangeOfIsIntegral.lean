@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.PlaceAdaptation.AdaptStd
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.PushMemHarmK
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ColumnMapShift

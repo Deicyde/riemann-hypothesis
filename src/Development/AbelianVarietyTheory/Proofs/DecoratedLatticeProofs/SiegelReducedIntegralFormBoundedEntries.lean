@@ -1,6 +1,12 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AdelicHermitianForms.AdelicPair
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.UnipotentUpperInvUpperTriangularBoundedStatement
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open Matrix GlobalTheory.ClassFin
 
@@ -16,7 +22,7 @@ lemma entry_bound {N : ℕ} (P Z Q : Matrix (Fin N) (Fin N) ℝ) (i j : Fin N) (
     _ ≤ ∑ _q : Fin N, ∑ _p : Fin N, c := by
         refine Finset.sum_le_sum fun q _ => ?_
         exact (Finset.abs_sum_le_sum_abs _ _).trans (Finset.sum_le_sum fun p _ => h p q)
-    _ = N * N * c := by simp [Finset.sum_const, Finset.card_fin]; ring
+    _ = N * N * c := by simp [Finset.sum_const]; ring
 
 lemma orth_entry_le {N : ℕ} (k : Matrix (Fin N) (Fin N) ℝ) (h : kᵀ * k = 1) (p q : Fin N) :
     |k p q| ≤ 1 := by

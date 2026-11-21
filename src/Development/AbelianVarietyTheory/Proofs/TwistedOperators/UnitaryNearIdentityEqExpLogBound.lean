@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.OneMemNbh
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.DiscreteBranchingUpq
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.L2OpNormConjTransposeExpMulSignMulExpSubLe
 
 noncomputable section
@@ -168,7 +168,7 @@ theorem map_logS {A B : Type*} [NormedRing A] [NormedAlgebra ℂ A] [CompleteSpa
   simp [map_smul, map_pow]
 
 theorem star_lc (k : ℕ) : star (lc k) = lc k := by
-  simp [lc, map_div₀, map_pow, map_neg, map_one]
+  simp [lc]
 
 end GlobalTheory.MatLog
 

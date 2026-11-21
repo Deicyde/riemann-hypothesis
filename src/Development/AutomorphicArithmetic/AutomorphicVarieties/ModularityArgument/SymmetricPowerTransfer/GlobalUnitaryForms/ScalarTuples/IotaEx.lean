@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.GlobalUnitaryForms.HodgeTateFromSandwich
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.TraceFormulaEigenvalues.FormsFin
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.RingTheory.DedekindDomain.FiniteAdeleRing
 
 noncomputable section
 
@@ -106,7 +109,7 @@ private def mapD : DX Δ →* DX (f Δ) :=
     change GeneralLinearGroup.map (starRingEnd (Lsq K' (f Δ))) (GeneralLinearGroup.map (lmap f Δ) g.1) =
       (MulAut.conj (wJ (f Δ))⁻¹).toMonoidHom (GeneralLinearGroup.map (lmap f Δ) g.1)
     rw [c, h]
-    simp [MulAut.conj_apply, map_wJ]
+    simp [map_wJ]
 
 end Maps
 

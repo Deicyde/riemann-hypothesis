@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.CMLattices.ExistsIsThetaDegOfIsLocalModel
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.ArchimedeanThetaValues.IsCoprimeTwoSubRtTwoAddRt
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField IsDedekindDomain
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.GeometryOfNumbersTheory
 open scoped CategoryTheory.Obj
@@ -39,7 +40,7 @@ theorem finite {H : Host E} (D : Datum H) : Module.Finite (𝓞 E) (ConjLat D) :
       map_smul' := fun s a => by
         apply (toLat D).injective
         rw [toLat_smul]
-        simp [bar_bar] }
+        simp }
   exact Module.Finite.of_surjective f (toLat D).symm.surjective
 
 theorem projective {H : Host E} (D : Datum H) : Module.Projective (𝓞 E) (ConjLat D) := by
@@ -51,7 +52,7 @@ theorem projective {H : Host E} (D : Datum H) : Module.Projective (𝓞 E) (Conj
       map_smul' := fun s a => by
         apply (toLat D).injective
         rw [toLat_smul]
-        simp [bar_bar] }
+        simp }
   exact Module.Projective.of_equiv f
 
 theorem finrank_eq {H : Host E} (D : Datum H) :

@@ -1,10 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.ArakelovCycleHeights.QpSndStr
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ResidueDegreeOfIsClosedImmersion
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ArFormExists
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NontrivialIsomClassInt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.BlowupProjections.BlowupProjStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsPullHermPullLine
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.RationalSections.ThmISt
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterNamed
 
 set_option autoImplicit false
 

@@ -1,9 +1,6 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.BorelHarmonicForms.DerivativeRightTranslateL2
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.BorelHarmonicForms.LevelCo
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.BorelHarmonicForms.PiHarm
-import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.BorelHarmonicForms.OneEig
-import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.BorelHarmonicForms.CuspSq
-import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.BorelHarmonicForms.InclFacts
 open NumberField Matrix GlobalTheory.CuspRep GlobalTheory.GKCoh UpperTheory.V.Af UpperTheory.V.AlgRepEndIrreducible UpperTheory.V.Lit UpperTheory.V.Lit.Bor
 open scoped TensorProduct
 
@@ -35,7 +32,7 @@ theorem UpperTheory.V.Lit.Bor.harmEx :
     rw [dCo_apply, AlternatingMap.zero_apply, ← h1]
     refine Finset.sum_congr rfl fun i _ => ?_
     rw [inclCo_apply, ← hIL]
-    simp only [map_zsmul, LinearMap.map_smul_of_tower]
+    simp only [map_zsmul]
   · cases q with
     | zero => trivial
     | succ q =>

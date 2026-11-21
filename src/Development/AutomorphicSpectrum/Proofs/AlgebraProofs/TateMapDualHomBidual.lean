@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Statements.GeometryStatements.IsPolLatticePlane
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.DvdMulOfGroupLikeVal
+import Development.AutomorphicSpectrum.PublishedTheorems.Algebra₂.FarguesHodgeTate
 
 noncomputable section
 

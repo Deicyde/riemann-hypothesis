@@ -1,10 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ContActionTorsionLevelZModOfIsLocallyConstant
-import Mathlib
-import Formalism.CharacterColumnKernels.StatementRho
-import Formalism.GaloisCohomology.LocalTateDualityK
-import ReciprocityTheory.Hypotheses.GalCohDefs
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LevRepZApply
 open ReciprocityTheory.Gal
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.contAction_torsionLevelZMod_of_isLocallyConstant : ∀ {G : Type} [Group G] [TopologicalSpace G] {O : Type} [CommRing O] {M : Type} [AddCommGroup M] [Module O M]

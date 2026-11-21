@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.Divisibility.SchurIrreducible
-import Formalism.LocalToGlobal.BesselHermitianTheta.DefsReal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SymbolCongr
 
 open Formalism.BasicNotions.TH Formalism.MainNotions.SchurIrreducible GlobalTheory.InducedPBW
@@ -22,7 +21,7 @@ theorem pLin_unitP (ab : PIx p q) : pLin (unitP ab) = MvPolynomial.X ab := by
   · intro c _ hc
     have hne : ¬ (ab.1.1 = c.1.1 ∧ ab.1.2 = c.1.2) := fun hh =>
       hc (Subtype.ext (Prod.ext hh.1.symm hh.2.symm))
-    simp [unitP, Eab, Matrix.single_apply, hne]
+    simp [unitP, Eab, hne]
   · intro hab
     exact absurd (Finset.mem_univ ab) hab
 

@@ -1,6 +1,6 @@
-import Formalism.SharpRestriction.GrowthBounds.BinomialRatio.CountDefs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.BinomialRatio.FirstCoefficientFacts
-import Formalism.SharpRestriction.GrowthBounds.BinomialRatio.LeAndHalfLeProdOneSubExpNegOfBounds
 import Formalism.SharpRestriction.GrowthBounds.BinomialRatio.CountUp
 
 noncomputable section

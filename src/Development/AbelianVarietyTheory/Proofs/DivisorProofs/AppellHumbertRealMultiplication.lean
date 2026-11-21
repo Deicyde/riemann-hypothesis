@@ -1,13 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.StepsNonvacuous
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsCrystalPairing
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAHOfIsFactorAH
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.HermFormPullEqOfLbIsoPow
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.AbelianSchemeGerms
-import Development.AbelianVarietyTheory.Definitions.ThetaMetrics.MemNonzeroLocusIffPowFn
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsChernExistsUniqueAndIso
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ProductAbelianUniformizationStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsAppellHumbertLineBundleStatement
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsHolFormConst
 
 set_option autoImplicit false
 
@@ -357,9 +353,9 @@ theorem GlobalTheory.RosatiAH.rosati_diag : ∀ (F : Type) [Field F] [NumberFiel
     (hM a hexd hFd) (hS U2 H2 χ2 hex2 hF2) (fun x y x' y' => by rw [hM 2 hex2 hF2, h2]; rfl)
     (Pi.single i 1) (Pi.single j 1)
   have e1 : (dmul fun j => e j (a : F)) (Pi.single i 1) = Pi.single i (e i (a : F)) := by
-    funext k; by_cases hk : k = i <;> simp [dmul_apply, Pi.single_apply, hk]
+    funext k; by_cases hk : k = i <;> simp [dmul_apply, hk]
   have e2 : (dmul fun j => e j (a : F)) (Pi.single j 1) = Pi.single j (e j (a : F)) := by
-    funext k; by_cases hk : k = j <;> simp [dmul_apply, Pi.single_apply, hk]
+    funext k; by_cases hk : k = j <;> simp [dmul_apply, hk]
   rw [e1, e2] at key
   simp only [hermForm] at key
   have s1 : star (Pi.single j (1:ℂ) : Fin (Module.finrank ℚ F) → ℂ) = Pi.single j 1 := by simp

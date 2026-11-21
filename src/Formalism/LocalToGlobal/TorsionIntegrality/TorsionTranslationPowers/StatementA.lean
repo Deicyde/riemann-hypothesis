@@ -1,7 +1,8 @@
-import Formalism.LocalToGlobal.TorsionIntegrality.TorsionTranslationPowers.StatementT
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.EisensteinTranslationProducts.EndoZInstance
 import Formalism.LocalToGlobal.TorsionIntegrality.WeierstrassTwoTorsion.StatementK
-import Formalism.LocalToGlobal.TorsionIntegrality.CMGoodModels.Statement
+import Formalism.LocalToGlobal.TorsionIntegrality.TorsionTranslationPowers.IsTransSys
 
 open PowerSeries
 

@@ -1,7 +1,7 @@
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.RealLowestKTypeCoeffSquareIntegrable
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FockCoefficientExtremalEqDiscreteSeries
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ThetaPairingInvariant
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsArchimedeanLiftUnitaryGroupProduct
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InnerProductFormula
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix
 open Formalism.L2.Theta Formalism.L2.DIV Formalism.L2.Indef Formalism.DivisionValues
 open Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.Lev Formalism.IndefR.Mult Formalism.IndefR.Datum Formalism.IndefR.Cx
@@ -38,7 +38,7 @@ theorem schur_sesq {G : Type*} [Group G] {E : Type*} [NormedAddCommGroup E] [Inn
   have hA : ∀ x y, B x y = ⟪y, A x⟫_ℂ := by
     intro x y
     conv_lhs => rw [← b.sum_repr' y]
-    simp [A, map_sum, inner_sum, inner_smul_right, inner_conj_symm, mul_comm]
+    simp [A, map_sum, inner_conj_symm, mul_comm]
   have hcomm : ∀ h x, A (ρ h x) = ρ h (A x) := by
     intro h x
     apply ext_inner_left ℂ

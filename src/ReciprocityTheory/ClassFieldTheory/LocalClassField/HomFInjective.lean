@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ClassFieldTheory.LocalClassField.CurriedCoboundaryEq
 
 namespace ReciprocityTheory.DiscreteGroups.LocalClassField.Deg2

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.AbelianHeightsDuality.GelfandKazhdanDuality.PairingL2
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.HasDerivAtLpOfDominated
 

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.IntegrableCsmul
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.DegLiftOfParts
 

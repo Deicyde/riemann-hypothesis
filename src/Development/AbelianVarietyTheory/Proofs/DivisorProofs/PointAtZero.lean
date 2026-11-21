@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsorsTrivial
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OriginIdeal
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ClosureFiniteEtale
 

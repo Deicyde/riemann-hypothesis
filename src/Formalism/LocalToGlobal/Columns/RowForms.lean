@@ -1,13 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.Columns.RhoEqOfSmulEq
-import Formalism.LocalToGlobal.Columns.GenericUnipotentCharacter
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.LevGCount
-import Formalism.LocalToGlobal.Columns.AbelianHostFieldConditions
-import Formalism.LocalToGlobal.Columns.StdLatUnimodular
-import Formalism.LocalToGlobal.Columns.DecoFin
-import Formalism.LocalToGlobal.Columns.CoefCol
 import Formalism.LocalToGlobal.Columns.ColForms
-import Formalism.LocalToGlobal.Divisibility.Tuples
 import Formalism.LocalToGlobal.Divisibility.GoodPartHermitianSpec
 
 open NumberField IsDedekindDomain Module

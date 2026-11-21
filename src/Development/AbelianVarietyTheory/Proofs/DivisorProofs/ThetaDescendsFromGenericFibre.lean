@@ -1,8 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneCompOfIsGrpPullback
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.EndoLbIsoSymmetryHypothesisExtendNormalModel
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.ExistsRigidifiedExtensionOfGenericFibre
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.PullInvClsOfFibres
+import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsFlagModelHermSum
 
 set_option autoImplicit false
 

@@ -1,8 +1,6 @@
-import Mathlib
-import ReciprocityTheory.ClassFieldTheory.LocalClassField.ValUnitsG
-import ReciprocityTheory.ClassFieldTheory.LocalClassField.ExistsDvdQKPowSubOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ClassFieldTheory.LocalClassField.GalBasic
-import ReciprocityTheory.ClassFieldTheory.LocalClassField.FinCoh
 
 namespace ReciprocityTheory.DiscreteGroups.LocalClassField.Euler
 

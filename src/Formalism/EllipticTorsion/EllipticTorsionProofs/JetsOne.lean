@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.EllipticTorsion.JetsCube
 import Formalism.FormalGroupLog.FormalGroupLogProofs.ConstantCoeffSubstOfZero
 

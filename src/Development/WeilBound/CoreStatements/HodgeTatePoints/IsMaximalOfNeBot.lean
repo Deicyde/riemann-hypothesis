@@ -1,5 +1,10 @@
-import GroundTheory.FunctionField.PlaceBridge
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.FieldsOfNumbers.PNoetherIntegralClosure
+import GroundTheory.FunctionField.PlaceDefs
+import Mathlib.RingTheory.OrderOfVanishing.Noetherian
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.Valuation.LocalSubring
 
 namespace PositivityTheory.HtPt.Plen
 

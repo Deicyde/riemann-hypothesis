@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.DiagMod
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsLevelMulPowOfInvariantModPow
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open scoped MatrixGroups TensorProduct
 open Matrix GlobalTheory.KZ GlobalTheory.KZ.ES IntermediateField
@@ -143,7 +144,7 @@ theorem exists_orbit_poly (X : Tower Ω ε) (M₀ M : ℕ) (hM : 0 < M) :
   have hpmon : p.Monic := Polynomial.monic_prod_of_monic _ _ fun c _ => Polynomial.monic_X_pow_sub_C c hm.ne'
   have hpdeg : p.natDegree = S.card * m := by
     rw [Polynomial.natDegree_prod_of_monic _ _ fun c _ => Polynomial.monic_X_pow_sub_C c hm.ne']
-    simp [Polynomial.natDegree_X_pow_sub_C]
+    simp
   have hpinv : ∀ δ ∈ CongruenceSubgroup.Gamma M₀, p.map (X.sl (ofSL δ) : X.K →+* X.K) = p := by
     intro δ hδ
     simp only [p, Polynomial.map_prod, Polynomial.map_sub, Polynomial.map_pow, Polynomial.map_X, Polynomial.map_C]

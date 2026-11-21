@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.LocalRingCardinality.AdicCompletionLocal.LocTied
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.ExistsOfLayers
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FrobeniusSubOneWittTensorLatticeSurjectiveFixedStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsUniqueCocycleStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsGammaLayerPadicCoordinatesStatement
@@ -129,7 +128,7 @@ theorem exists_class (L : Formalism.WeaklyAdmissibleFiltrations.Lattice (O := O)
           simp only [Prod.smul_snd, Prod.smul_fst, map_smul, smul_sub, smul_neg]
         · intro h
           rw [(hu' g).2 h]
-          simp only [Prod.smul_snd, Prod.smul_fst, map_smul, smul_sub, smul_neg] }
+          simp only [Prod.smul_snd, Prod.smul_fst, map_smul, smul_sub] }
   let π : ↥W →ₗ[O] Z := (LinearMap.fst O _ _).comp W.subtype
   let κ : ↥W →ₗ[O] LatticeCohomology L := (Submodule.mkQ _).comp
     ((LinearMap.snd O _ _).comp ((LinearMap.snd O _ _).comp W.subtype))

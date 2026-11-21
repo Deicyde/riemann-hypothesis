@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.DoubleCosetMeasures.Statement
-import Formalism.HermitianCurvature.StatementK
+import Mathlib.LinearAlgebra.Matrix.Rank
 
 namespace Formalism.FourierDecayAlt.S3
 

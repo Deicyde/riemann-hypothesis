@@ -1,6 +1,7 @@
-import Mathlib
-import ReciprocityTheory.SemistableReduction.ComapInclusionIsLocalHom
+import BuildAid.Leniency.Open
 import ReciprocityTheory.SemistableReduction.ExistsDualDerivations
+import Mathlib.LinearAlgebra.SymmetricAlgebra.Basis
+import Mathlib.LinearAlgebra.TensorAlgebra.Basis
 
 namespace ReciprocityTheory.MultiplicativeHeights
 

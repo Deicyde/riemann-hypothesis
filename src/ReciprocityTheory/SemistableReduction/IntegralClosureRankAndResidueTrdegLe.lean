@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import ReciprocityTheory.SemistableReduction.ComapInclusionIsLocalHom
+import Mathlib.NumberTheory.RamificationInertia.Basic
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
 
 namespace ReciprocityTheory.MultiplicativeHeights
 

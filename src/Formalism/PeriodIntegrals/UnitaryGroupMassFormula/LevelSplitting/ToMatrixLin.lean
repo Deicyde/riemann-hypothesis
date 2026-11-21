@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LevelSplitting.SemiAlg
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
 
 noncomputable section
 
@@ -196,7 +198,7 @@ theorem Pi_lin_one : (datR R σ J P T).Pi (lin R σ J 1) = LinearMap.id := by
   have hsym : ∀ x y : Fin M → E, hE σ J y x = σ (hE σ J x y) := by
     intro x y
     unfold hE Formalism.UG.hform
-    simp only [map_sum, map_mul, AlgHom.coe_toRingHom, RingHom.coe_coe, hσσ, hJ.1]
+    simp only [map_sum, map_mul, RingHom.coe_coe, hσσ, hJ.1]
     rw [Finset.sum_comm]
     refine Finset.sum_congr rfl fun i _ => Finset.sum_congr rfl fun j _ => ?_
     ring

@@ -1,7 +1,9 @@
-import Mathlib
-import GroundTheory.GlobalFields.ComplexMultiplication.EllipticFunctions
-import GroundTheory.GlobalFields.ComplexMultiplication.EllipticRational
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.ComplexMultiplication.EllipticDegree
+import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Basic
+import Mathlib.AlgebraicGeometry.EllipticCurve.NormalForms
+import Mathlib.Order.Interval.Finset.Box
 
 open Complex Filter Topology Set
 open scoped PeriodPair

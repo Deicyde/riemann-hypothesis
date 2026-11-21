@@ -1,9 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.MacdonaldAlternant
-import GroundTheory.AutomorphicForms.SatakeNormalized
 import GroundTheory.AutomorphicForms.WhittakerGroups
 import GroundTheory.AutomorphicForms.AffineBruhat
-import GroundTheory.AutomorphicForms.MeasuresGL
 
 noncomputable section
 

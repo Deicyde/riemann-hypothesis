@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Theta.EisensteinZeta.MirabolicInduction.DiscrNegAndAbsNormMul
 import GroundTheory.HeightsAndTheta.Theta.EisensteinZeta.DedekindZetaSeries.SummableDedekindZetaTerm
+import GroundTheory.HeightsAndTheta.Theta.EisensteinZeta.MirabolicInduction.RealEisensteinNonneg
 set_option maxSynthPendingDepth 1
 
 noncomputable section

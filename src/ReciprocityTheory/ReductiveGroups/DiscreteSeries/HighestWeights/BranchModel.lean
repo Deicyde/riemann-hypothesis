@@ -1,6 +1,12 @@
-import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.ModelIso
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.PolyCoef
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.UnitaryDense
+import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.HwIrred
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.PolynomialModelIsometry.Assembly
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.PolynomialModelIsometry.DetSplit
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.PolynomialModelIsometry.ModelMap
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.PolynomialModelIsometry.PolyExt
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.PolynomialModelIsometry.TorusEigenvalueFormula
 
 noncomputable section
 

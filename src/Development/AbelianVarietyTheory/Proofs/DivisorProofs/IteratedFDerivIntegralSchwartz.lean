@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousIteratedFDerivApply
 open MeasureTheory
 
@@ -47,7 +47,7 @@ theorem iteratedFDeriv_integral_eq {V : Type} [NormedAddCommGroup V] [NormedSpac
       · refine integrable_of_zero_outside μ
           (((schwartz_withSeminorms ℂ V ℂ).continuous_seminorm (0, n + 1)).comp hG) hC ?_
         intro p hp
-        simp only [Function.comp_apply, h0 p hp, map_zero]
+        simp only [h0 p hp, map_zero]
       · refine Filter.Eventually.of_forall fun p y _ => ?_
         exact (((G p).smooth ⊤).differentiable_iteratedFDeriv
           (by exact_mod_cast ENat.coe_lt_top n) y).hasFDerivAt

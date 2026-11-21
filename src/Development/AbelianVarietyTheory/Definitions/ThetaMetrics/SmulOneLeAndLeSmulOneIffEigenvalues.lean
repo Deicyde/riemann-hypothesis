@@ -1,6 +1,13 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.StarInvMulVecDotProductMulVecInvMulVec
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.MulConjTransposeEqOneOfOrthonormal
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Matrix Set Filter
 open scoped ComplexOrder MatrixOrder Kronecker Topology
@@ -919,7 +926,7 @@ example : lwP₂ (Finset.univ : Finset (Fin 2)) ![(Real.exp (-1) : ℝ), (Real.e
 example : schurComplement₁₁ (fromBlocks !![2] !![Complex.I] !![-Complex.I] !![1]) = !![1 / 2] := by
   ext i j
   fin_cases i; fin_cases j
-  simp [schurComplement₁₁, Matrix.mul_apply, Matrix.inv_def]
+  simp [schurComplement₁₁]
   ring_nf
   simp
   norm_num

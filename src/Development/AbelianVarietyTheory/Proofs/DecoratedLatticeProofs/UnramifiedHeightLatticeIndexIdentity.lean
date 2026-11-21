@@ -1,7 +1,11 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsCoType
-import Formalism.LocalToGlobal.Columns.HeckeSp
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ValuationDivZpowOrd
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.RelIndexScaledMaxIdealStatement
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
 open MeasureTheory ValuativeRel Matrix GlobalTheory.PRep GlobalTheory.SplitWeil GlobalTheory.SmGL GlobalTheory.Doubling GlobalTheory.GLDoubling GlobalTheory.IndefiniteRowSideFullHecke.VolumeFlatSection GlobalTheory.ZonalCellDecomposition GlobalTheory.SatakeBound GlobalTheory.ParHecke
 
 noncomputable section
@@ -52,7 +56,7 @@ theorem diag_index : ∀ (k : Type) [Field k] [ValuativeRel k] [TopologicalSpace
   rw [← Nat.cast_mul, ← Finset.prod_mul_distrib, Finset.prod_congr rfl (fun i _ => h1 i),
     Finset.prod_pow_eq_pow_sum]
   have hs : sumAbs e = ((∑ i, (e i).natAbs : ℕ) : ℤ) := by
-    unfold sumAbs; push_cast; simp [Int.natCast_natAbs]
+    unfold sumAbs; push_cast; simp
   rw [hs, zpow_natCast]
   push_cast
   rfl

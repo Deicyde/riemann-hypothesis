@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BaseLApply
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdjacentPullPull
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GeometricallyConnectedOfIsIsoRestrict
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.JacobianDensityHermitianMetrics
 open CategoryTheory AlgebraicGeometry TopologicalSpace Filter Topology MeasureTheory Matrix
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -93,7 +92,7 @@ variable {ι : Type} [Fintype ι] {r : ι → ℕ} {n D : ℕ}
 theorem baseL_eq_sum (ε : Fin D ≃ Fin n ⊕ (Σ a, Low (r a))) (ξ : V D) :
     BigCell.baseL ε ξ = ∑ b, ξ (ε.symm (.inl b)) • (EuclideanSpace.single b (1 : ℂ) : V n) := by
   ext k
-  simp [BigCell.baseL_apply, BigCell.base, EuclideanSpace.single_apply, Pi.single_apply]
+  simp [BigCell.baseL_apply, BigCell.base, Pi.single_apply]
 
 theorem chg_blk (ε : Fin D ≃ Fin n ⊕ (Σ a, Low (r a))) (L : (Fin n ⊕ (Σ a, Low (r a))) → Fin D → ℂ)
     (N : Matrix (Fin n) (Fin n) ℂ) (δ : (Σ a, Low (r a)) → ℝ) (j l : Fin D) :
@@ -109,7 +108,7 @@ theorem chg_blk (ε : Fin D ≃ Fin n ⊕ (Σ a, Low (r a))) (L : (Fin n ⊕ (Σ
   simp_rw [h]
   simp only [Fintype.sum_sum_type, fromBlocks_apply₁₁, fromBlocks_apply₁₂, fromBlocks_apply₂₁,
     fromBlocks_apply₂₂, Matrix.zero_apply, mul_zero, Finset.sum_const_zero, add_zero, zero_add,
-    diagonal_apply, mul_ite, Finset.sum_ite_eq', Finset.sum_ite_eq, Finset.mem_univ, if_true, Finset.sum_mul]
+    diagonal_apply, mul_ite, Finset.sum_ite_eq', Finset.mem_univ, if_true, Finset.sum_mul]
   exact congrArg₂ (· + ·) Finset.sum_comm (Finset.sum_congr rfl fun s _ => by ring)
 
 set_option maxHeartbeats 2000000 in
@@ -132,7 +131,7 @@ theorem normal_coords_base : ∀ (ι : Type) [Fintype ι] (r : ι → ℕ) (n D 
   have hbLs : ∀ ξ, bL ξ = ∑ b, ξ (ε.symm (.inl b)) • e b := fun ξ => baseL_eq_sum ε ξ
   have hbL0 : ∀ y : Σ a, Low (r a), bL (EuclideanSpace.single (ε.symm (.inr y)) (1 : ℂ)) = 0 := fun y => by
     ext b
-    simp [bL, BigCell.baseL_apply, BigCell.base, EuclideanSpace.single_apply]
+    simp [bL, BigCell.baseL_apply, BigCell.base]
   let X : ∀ a, V D → Matrix (Fin (r a)) (Fin (r a)) ℂ := fun a v => uni (BigCell.fib ε v a)
   have hX : ∀ a b c, ContDiff ℂ 2 (fun v => X a v b c) := by
     intro a b c
@@ -229,7 +228,7 @@ theorem normal_coords_base : ∀ (ι : Type) [Fintype ι] (r : ι → ℕ) (n D 
           rintro ⟨rfl, rfl⟩
           exact h t.2
       rw [hconn, hbL0, conn_zero_vec, Matrix.zero_mul, zero_add, hD, Matrix.mul_inv_rev]
-      simp [mul_apply, ite_and, Finset.sum_ite_eq', Finset.sum_ite_eq]
+      simp [mul_apply, ite_and, Finset.sum_ite_eq']
     have hdiff : ∀ a (a' : ι) (t : Low (r a')), a' ≠ a →
         conn (H' a) p (EuclideanSpace.single (ε.symm (.inr ⟨a', t⟩)) 1) = 0 := by
       intro a a' t hne
@@ -248,8 +247,8 @@ theorem normal_coords_base : ∀ (ι : Type) [Fintype ι] (r : ι → ℕ) (n D 
           (blockDiagonal' fun a => Matrix.of fun s t : Low (r a) =>
             ((T a)⁻¹ * (uni (u a))⁻¹) s.1.1 t.1.1 * T a t.1.2 s.1.2) := by
       ext (b | ⟨a, s⟩) (b' | ⟨a', t⟩)
-      · simp [J, Lc, EuclideanSpace.single_apply, one_apply, eq_comm]
-      · simp [J, Lc, EuclideanSpace.single_apply]
+      · simp [J, Lc, one_apply, eq_comm]
+      · simp [J, Lc]
       · simp [J]
       · simp only [J, submatrix_apply, of_apply, Equiv.apply_symm_apply, fromBlocks_apply₂₂]
         by_cases h : a' = a
@@ -354,7 +353,7 @@ theorem normal_coords_base : ∀ (ι : Type) [Fintype ι] (r : ι → ℕ) (n D 
         simp only [Complex.star_def]
       · intro b _ hb
         refine Finset.sum_eq_zero fun s _ => ?_
-        simp [rootDiag, Sigma.mk.inj_iff, Ne.symm hb]
+        simp [rootDiag, Ne.symm hb]
       · simp
     rw [hY]
     ring
@@ -380,7 +379,7 @@ theorem normal_coords_base : ∀ (ι : Type) [Fintype ι] (r : ι → ℕ) (n D 
       starRingEnd ℂ (conn (H' a) p (EuclideanSpace.single l 1) b c))]
     simp only [bcDiag, Option.elim]
     rw [Finset.sum_eq_single a]
-    · simp [Complex.star_def]
+    · simp
     · intro b _ hb; simp [hb]
     · simp
   ·
@@ -391,6 +390,6 @@ theorem normal_coords_base : ∀ (ι : Type) [Fintype ι] (r : ι → ℕ) (n D 
     obtain ⟨c, rfl⟩ := ε.symm.surjective j
     obtain ⟨c', rfl⟩ := ε.symm.surjective l
     rcases c with b | s <;> rcases c' with b' | s' <;>
-      simp [BigCell.blk, EuclideanSpace.single_apply, Finset.sum_ite_eq', Finset.sum_ite_eq]
+      simp [BigCell.blk, Finset.sum_ite_eq']
 
 end GlobalTheory.BigCell.NormalCoord

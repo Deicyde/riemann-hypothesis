@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.WeaklyAdmissibleFiltrations.CocyclesFunctorial
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 
@@ -68,7 +71,7 @@ theorem wachModule_coboundaries_le_cocycles (W : WachMod Bw M D) : W.B1 ≤ W.Z1
     | (cases W; simp_all)
     | (cases W; simp_all [LinearMap.ext_iff])
     | (cases W; simp_all [LinearMap.ext_iff, eq_comm])
-  simp [key, Function.prod, map_add, map_sub, map_neg, neg_smul, LinearMap.add_apply] <;> abel
+  simp [key, Function.prod, map_sub] <;> abel
 
 theorem wachModule_finiteCocycles_le_cocycles (W : WachMod Bw M D) : W.Zf ≤ W.Z1 := by
   unfold WachMod.Zf

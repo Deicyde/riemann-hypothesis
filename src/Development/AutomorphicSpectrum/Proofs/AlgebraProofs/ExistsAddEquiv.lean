@@ -1,15 +1,8 @@
-import Mathlib
-import ReciprocityTheory.DualLattices.CotangentSurjective
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.IsTight
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.StepOrderRes
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.NonzeroLocus
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.IsFinFlatSub
-import Development.AutomorphicSpectrum.PublishedTheorems.Algebra₂.QuotientByFiniteFlatStatement
-import Development.AutomorphicSpectrum.PublishedTheorems.Algebra₂.ZarhinStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Statements.AlgebraStatements.HodgeTateDatumStatement
-import Development.AutomorphicSpectrum.Statements.AlgebraStatements.OrdinaryCurveStatement
-import Development.AutomorphicSpectrum.Statements.AlgebraStatements.PolarisedFlagStatement
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.PolarisedAugmentationTheoremStatement
+import Mathlib.RingTheory.AdicCompletion.RingHom
 
 noncomputable section
 
@@ -139,7 +132,7 @@ theorem sqIdeal_iff {I : Submodule R (X → C)} {I' : Submodule R (N → C)}
     refine ⟨(a ∘ e.symm) * (b ∘ e.symm), ⟨_, (h _).2 (by rwa [comp_symm]), _,
       (h _).2 (by rwa [comp_symm]), rfl⟩, ?_⟩
     ext x
-    simp [trL_apply]
+    simp
 
 def quotTr {A A₁ : Submodule R (X → C)} {B B₁ : Submodule R (N → C)}
     (hA : ∀ f, f ∈ A ↔ f ∘ e ∈ B) (hA₁ : ∀ f, f ∈ A₁ ↔ f ∘ e ∈ B₁) :
@@ -168,9 +161,9 @@ theorem hasColen_tr [Fintype X] [DecidableEq X] [Fintype N] [DecidableEq N]
     ext g
     constructor
     · rintro ⟨_, ⟨j, rfl⟩, rfl⟩
-      exact ⟨e.symm j, by ext x; simp [trL_apply]⟩
+      exact ⟨e.symm j, by ext x; simp⟩
     · rintro ⟨j, rfl⟩
-      exact ⟨_, ⟨e j, rfl⟩, by ext x; simp [trL_apply]⟩
+      exact ⟨_, ⟨e j, rfl⟩, by ext x; simp⟩
   · rw [show B.submatrix e e = B.submatrix e.toEquiv e.toEquiv from rfl,
       Matrix.det_submatrix_equiv_self, hv]
 

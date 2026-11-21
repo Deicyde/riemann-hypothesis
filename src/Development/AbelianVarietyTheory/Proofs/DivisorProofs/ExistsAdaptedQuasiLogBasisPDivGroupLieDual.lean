@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.EqZeroOfForallPowDvd
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFormalGroupLawLogWithLinearPartStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PDivGroupDualTangentOfQuasiLogarithmStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PDivGroupDualTangentLinearKillsIntegralStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPowEqOfIntegers
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsQuasiLogarithmLieAddPSmulStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PDivGroupChartIntegralAdditiveSeriesEqZeroStatement
@@ -212,7 +209,7 @@ theorem adapted_basis : ∀ (p : ℕ) [Fact p.Prime] (C : Type) [Field C] [IsAlg
       exact Fintype.linearIndependent_iff.1 lb.linearIndependent _ this
     have hc : cob1 (up E c.μ) (map (algebraMap O E) s) = 0 := by
       rw [← hs, ← cobL_apply c.μ h0]
-      simp [comb, map_sum, map_smul, Fintype.sum_sum_type, cobL_apply, hcob, hr]
+      simp [comb, map_sum, Fintype.sum_sum_type, cobL_apply, hcob, hr]
     have hs0 := GlobalTheory.T.pDivGroupChart_integral_additive_series_eq_zero p C v O hv G d c E hE s hc
     have hc0 : comb b e = 0 := by rw [hs, hs0, map_zero]
     have hl : ∀ i, b (Sum.inl i) = 0 := fun i => by

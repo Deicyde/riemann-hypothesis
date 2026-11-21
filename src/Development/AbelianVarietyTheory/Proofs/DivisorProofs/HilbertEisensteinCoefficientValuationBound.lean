@@ -1,15 +1,14 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasLevelStd
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasQIff
-import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AlgebraicValuationAtLeastAtEmbeddingRingOps
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsHilbertEisensteinFourierCoeffFamilyStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OmegaFactorPowTwoMul
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HasQExpansionOfLevelHilbertEisensteinQuasiPeriodStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSplitOfHilbertLatticeHasLevelStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AlgebraicValuationAtLeastInverseDifferentElement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AlgebraicValuationAtLeastRatCastAndExpRat
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PartialZetaConstTermEqRationalValueStatement
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsHilbertEisensteinFourierCoeffFamily
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSplitOfHilbertLatticeHasLevel
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HasQExpansionOfLevelHilbertEisensteinQuasiPeriod
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PartialZetaConstTermEqRationalValue
+import Mathlib.Algebra.Ring.IsFormallyReal
 open NumberField UpperHalfPlane GlobalTheory.HilbFam GlobalTheory.QFam
 open GlobalTheory.IndefiniteRowSideFullHecke.OmegaFactorization (Emb Frac latM qPow upperHalf cK omegaFactor IsPartialZeta HasExpansion)
 open GlobalTheory.IndefiniteRowSideFullHecke.DefiningCoordinates (iterD partialD)
@@ -336,7 +335,7 @@ theorem _root_.GlobalTheory.HilbFam.sz_hfun_coef : _root_.GlobalTheory.LatJet.Ei
 
   unfold _root_.GlobalTheory.HilbFam.hser
   rw [PowerSeries.coeff_smul, map_sum]
-  simp only [PowerSeries.coeff_smul, smul_eq_mul, zsmul_eq_mul]
+  simp only [PowerSeries.coeff_smul, smul_eq_mul]
   have hsum : _root_.GlobalTheory.LatVal.Sz l lam (e + (∑ i, κ i : ℕ) * ρ)
       (∑ μ ∈ Finset.Iic κ, ((∏ i, _root_.GlobalTheory.HilbFam.rco (2 * s) (κ i) (μ i) *
         (-1) ^ μ i : ℤ) : ℂ) * PowerSeries.coeff n ((PowerSeries.mk c ^ ∑ i, (κ i - μ i)) *

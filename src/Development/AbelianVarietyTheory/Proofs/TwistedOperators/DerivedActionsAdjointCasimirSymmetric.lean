@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.SharpRestriction.Divisibility.SchurIrreducible
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SameBlockOfPosC
 
 open Formalism.BasicNotions.TH Formalism.MainNotions.SchurIrreducible

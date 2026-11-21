@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsPowerBlockPointNorm
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsSectionPointValue
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsLocalRep

@@ -1,6 +1,6 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.GeometricLemma
-import GroundTheory.AutomorphicForms.CuspidalSplitting
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.AutomorphicForms.LeviStagesProduct
 set_option maxSynthPendingDepth 1
 
 noncomputable section

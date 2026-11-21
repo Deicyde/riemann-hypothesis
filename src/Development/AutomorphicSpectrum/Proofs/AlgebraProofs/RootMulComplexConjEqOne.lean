@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.ZarhinBundleKernelSecondCoordEquations
+import Mathlib.NumberTheory.NumberField.CMField
 open NumberField
 
 namespace GlobalTheory.CompanionTheory.Ar.Flat

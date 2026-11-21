@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsWeilChar
 import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.LocallyOfFiniteTypeKer
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsSpecialisationWithThetaPoint
 
 set_option autoImplicit false
 
@@ -24,12 +23,12 @@ theorem specSt : SpecSt := by
   have hK : spMap u ≫ x₀ = ξ₀ := by
     have h1 := Over.w a₁
     have h2 := Over.w a
-    simp only [Over.mk_hom, Functor.id_obj, Functor.const_obj_obj] at h1 h2
+    simp only [Over.mk_hom] at h1 h2
     rw [← h1, ha₁, Category.assoc, h2]
   have hC : spMap ψ ≫ x₀ = y₀ := by
     have h1 := Over.w a₂
     have h2 := Over.w a
-    simp only [Over.mk_hom, Functor.id_obj, Functor.const_obj_obj] at h1 h2
+    simp only [Over.mk_hom] at h1 h2
     rw [← h1, ha₂, Category.assoc, h2]
   obtain ⟨cc, hcc, -⟩ := GlobalTheory.LevelCompare.weil_existsUnique P q a b ha hb
   obtain ⟨r', rfl⟩ := GlobalTheory.Ex.Specialise.unitOn_bijective.2 cc

@@ -1,6 +1,7 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.WeilGroupCharacters.RepAlg
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.DeterminantRepresentations.GenEval
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.DeterminantRepresentations.GenHomog
+import Mathlib.Tactic.ENatToNat
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Polynomial UpperTheory.V.W
 
@@ -57,7 +58,7 @@ theorem UpperTheory.V.AlgebraTools.Det.expand :
     rw [← hc B s t, ← UpperTheory.V.AlgebraTools.Det.genEval D B 2 y2 ![s, t]]
     congr 1
     rw [Fin.sum_univ_two]
-    simp [y2, MonoidAlgebra.one_def, MonoidAlgebra.smul_single']
+    simp [y2, MonoidAlgebra.one_def]
   have hlam : ∀ i ∈ Finset.range (n + 1), D.lam i y = c i := by
     intro i hi
     have hchi : D.chi y = ∑ j ∈ Finset.range (n + 1), Polynomial.C (c j * (-1) ^ j) * X ^ (n - j) := by

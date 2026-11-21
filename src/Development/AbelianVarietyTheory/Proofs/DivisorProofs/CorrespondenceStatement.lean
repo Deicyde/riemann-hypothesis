@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SpecializationMapCompUniversalSection
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.Side
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsIsoOfBijectiveGeomPointsSmoothProjCharZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SideGenericPointLiftStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SideGenericPointRelationStatement

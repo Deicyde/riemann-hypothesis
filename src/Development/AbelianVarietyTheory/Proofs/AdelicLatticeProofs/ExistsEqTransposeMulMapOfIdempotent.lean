@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.ExistsIsUnitFormSelfOfNotMem
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.BinaryFormUniversal
+import Mathlib.NumberTheory.Padics.PadicIntegers
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Matrix IsLocalRing
 
@@ -18,7 +22,7 @@ theorem exists_shear (G : Matrix ι ι R) (p : ι) (τ : ι → R) (hτ : τ p =
     rw [mul_sub, mul_one, add_mul, one_mul, vecMulVec_mul_vecMulVec]
     simp [hτ]
   · simp only [Matrix.mul_apply, transpose_apply, map_apply, Matrix.add_apply, vecMulVec_apply,
-      Matrix.one_apply, Pi.single_apply, map_add, map_mul, apply_ite c, map_one, map_zero,
+      Matrix.one_apply, Pi.single_apply, map_add, apply_ite c, map_one, map_zero,
       add_mul, mul_add, ite_mul, mul_ite, one_mul, zero_mul, mul_one, mul_zero,
       Finset.sum_add_distrib, Finset.sum_ite_eq', Finset.mem_univ, if_true]
     ring

@@ -1,4 +1,13 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.BochnerInequality.CasValK
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -174,7 +183,7 @@ theorem two_dot_rhoC_rhoN_le (ε : Fin n → Bool) :
 
 theorem nsq_root {a b : Fin n} (hab : a ≠ b) : nsq (root a b) = 2 := by
   rw [nsq, numRho_dot_root_left]
-  simp [root, Pi.single_apply, hab, Ne.symm hab] <;> norm_num
+  simp [root, hab, Ne.symm hab] <;> norm_num
 
 private theorem nsq_add_bochner_inequality (u v : Fin n → ℝ) : nsq (u + v) = nsq u + 2 * dot u v + nsq v := by
   simp only [nsq, dot, Pi.add_apply, Finset.mul_sum, ← Finset.sum_add_distrib]

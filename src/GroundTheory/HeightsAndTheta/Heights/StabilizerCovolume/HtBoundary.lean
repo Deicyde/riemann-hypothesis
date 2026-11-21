@@ -1,6 +1,8 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.StabilizerCovolume.Objects
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.FlagIndices
+import GroundTheory.HeightsAndTheta.Heights.StabilizerCovolume.GaussCM
+import Mathlib.NumberTheory.NumberField.DedekindZeta
 set_option maxSynthPendingDepth 1
 
 noncomputable section

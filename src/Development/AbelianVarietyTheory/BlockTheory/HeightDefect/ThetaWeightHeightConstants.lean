@@ -1,7 +1,6 @@
-import Mathlib
-import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
-import Formalism.LocalRingCardinality.DataParams₂
-import Formalism.LocalRingCardinality.DataDIV
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataParamsT
 
 noncomputable section

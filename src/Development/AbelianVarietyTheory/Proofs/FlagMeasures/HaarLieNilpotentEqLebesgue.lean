@@ -1,11 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.BlockAnti
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.UnipotentLeviRadicalCoordsHomeomorph
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.HaarLieIsHaarOnUnipotentRadicalStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ClosedSubgroupBesselUnitaryHaarUniqueStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.DensityInChartStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.FlagUnipotentLebesgueMeasureIsHaarOnStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.PowApplyEqZeroOfStrictUpper
+import Mathlib.Analysis.Calculus.Deriv.Star
 
 noncomputable section
 
@@ -369,7 +369,7 @@ theorem Dm_es (v : EE k r) (a b : Fin r) : Dm k r v (eI k r a) (esI k r b) = ske
     refine Finset.sum_congr rfl fun c _ => ?_
     congr 1
     · by_cases h : a < c
-      · simp [upper, h, Matrix.one_apply, h.ne]
+      · simp [upper, h, h.ne]
       · simp [upper, h, Matrix.one_apply]
     · congr 1
       · unfold skewM

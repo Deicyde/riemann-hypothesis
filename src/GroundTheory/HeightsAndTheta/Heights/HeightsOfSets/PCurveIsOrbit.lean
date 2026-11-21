@@ -1,7 +1,6 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.HeightsOfSets.CurveIsOrbit
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HeightsOfSets.MemMCoordIdealIffOfIsWeightedHomogeneous
-import GroundTheory.HeightsAndTheta.Heights.HeightsOfSets.DenseChart
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.POrbitCurve
 set_option maxSynthPendingDepth 1
 

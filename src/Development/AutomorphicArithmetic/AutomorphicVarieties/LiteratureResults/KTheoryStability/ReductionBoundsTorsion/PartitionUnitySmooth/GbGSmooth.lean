@@ -1,4 +1,9 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.KTheoryStability.ReductionBoundsTorsion.PartitionUnitySmooth.Smoothing
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension
+import Mathlib.Topology.UniformSpace.Uniformizable
 
 noncomputable section
 
@@ -16,7 +21,7 @@ private theorem actL_mul_apply_eq_actL_actL {L : Type} [Field L] [NumberField L]
   unfold mkHS
   apply Subtype.ext
   funext w i j
-  simp only [mat, Pi.mul_apply, _root_.mul_inv_rev, Units.val_mul, Matrix.conjTranspose_mul, Matrix.of_apply]
+  simp only [mat, Pi.mul_apply, _root_.mul_inv_rev, Units.val_mul, Matrix.conjTranspose_mul]
   rw [show ∀ X : Matrix (Fin N) (Fin N) ℂ, (of fun i j => X i j) = X from fun _ => rfl]
   simp only [Matrix.mul_assoc]
 

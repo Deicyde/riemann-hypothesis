@@ -1,6 +1,6 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.IsLocPres
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.Graded
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsUniqueFixedPointOfAdicContraction
+import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.GRepresents
 
 open Matrix IsLocalRing UpperTheory.V.Alg
 

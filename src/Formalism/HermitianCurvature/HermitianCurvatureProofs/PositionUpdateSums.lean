@@ -1,6 +1,7 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.RealWeightedForms
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.TransferMatrixFactorization
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.LiftMatrixTransferConjTransposeCommute
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.PositionInsertionDiagonalCompat
+import Formalism.HermitianCurvature.PositionExpansionTopCoefficients
 
 namespace Formalism.FourierDecayAlt.P.CoordinateFlipUpdateSums
 

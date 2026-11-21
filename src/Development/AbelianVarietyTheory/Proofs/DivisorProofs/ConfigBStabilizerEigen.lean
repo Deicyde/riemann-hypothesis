@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeIntZero
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaStabilizerExists
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBStabilizerLocalEvalStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBStabilizerGlobalEvalStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBStabilizerThetaEvalStatement

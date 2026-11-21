@@ -1,5 +1,15 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.IsTermOver
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.PNatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 open ValuativeRel Formalism.MainNotions.S.Loc Formalism.MainNotions.S.LocNG
@@ -192,27 +202,27 @@ theorem stdH_single (x : Fin (m + 2) → E) (i) : (stdH M m).h x (Pi.single i 1)
   rw [Finset.sum_eq_single i]
   · simp
   · intro j _ hj
-    simp [Pi.single_apply, hj]
+    simp [hj]
   · intro h
     exact absurd (Finset.mem_univ i) h
 
 def vec (c : F) : Fin (m + 2) → E := Pi.single 0 1 + Pi.single 1 (algebraMap F E c)
 
 theorem vec_zero (c : F) : vec (E := E) m c 0 = 1 := by
-  have h : (0 : Fin (m + 2)) ≠ 1 := by simp [Fin.ext_iff]
-  simp [vec, Pi.single_apply, h]
+  have h : (0 : Fin (m + 2)) ≠ 1 := by simp
+  simp [vec, h]
 theorem vec_one (c : F) : vec (E := E) m c 1 = algebraMap F E c := by
-  have h : (1 : Fin (m + 2)) ≠ 0 := by simp [Fin.ext_iff]
-  simp [vec, Pi.single_apply, h]
+  have h : (1 : Fin (m + 2)) ≠ 0 := by simp
+  simp [vec, h]
 
 theorem h_vec (c c' : F) : (stdH M m).h (vec m c) (vec m c') = algebraMap F E (1 + c * c') := by
-  have h01 : (0 : Fin (m + 2)) ≠ 1 := by simp [Fin.ext_iff]
+  have h01 : (0 : Fin (m + 2)) ≠ 1 := by simp
   change ∑ i, vec m c i * M.L.cj (vec m c' i) = _
   rw [Finset.sum_eq_add (0 : Fin (m + 2)) 1 h01]
   · rw [vec_zero, vec_zero, vec_one, vec_one]
     simp [map_add, map_mul]
   · intro i _ hi
-    simp [vec, Pi.single_apply, hi.1, hi.2]
+    simp [vec, hi.1, hi.2]
   · intro h
     exact absurd (Finset.mem_univ _) h
   · intro h
@@ -269,7 +279,7 @@ theorem unit_some (g : SplitG M.L) : ∃ v : 𝒪[F], (v : F) * -(1 + (g.q : F) 
 theorem D0 : (pair M m).Dm 0 = 1 := by
   simp [FPair.Dm, HermSp.Dl]
 theorem D1 : (pair M m).Dm 1 = 1 := by
-  simp [FPair.Dm, HermSp.Dl, HermSp.Zhat, pair, frame, h_vec, Matrix.det_fin_one]
+  simp [FPair.Dm, HermSp.Dl, HermSp.Zhat, pair, frame, h_vec]
 
 theorem relG [CharZero F] : (pair M m).RelG (theta M) := by
   haveI : Nontrivial E := by
@@ -476,10 +486,10 @@ theorem isTermOver : IsTermOver (pair M m) (datum M m) (term M m) := by
     change vec m (theta M) - vec m (0 : F) ∈ (stdH M m).smulLat (algebraMap F E (g.q : F))
       (Submodule.span M.L.O {v | ∀ i, v i ∈ M.L.O})
     have hv : vec (E := E) m (theta M) - vec m (0 : F) = algebraMap F E (g.q : F) • Pi.single 1 1 := by
-      have h01 : (0 : Fin (m + 2)) ≠ 1 := by simp [Fin.ext_iff]
+      have h01 : (0 : Fin (m + 2)) ≠ 1 := by simp
       rw [theta_some M hg]
       funext j
-      by_cases h0 : j = 0 <;> by_cases h1 : j = 1 <;> simp [vec, Pi.single_apply, h0, h1, h01, h01.symm]
+      by_cases h0 : j = 0 <;> by_cases h1 : j = 1 <;> simp [vec, h0, h1, h01, h01.symm]
     rw [hv]
     apply Submodule.subset_span
     refine ⟨Pi.single 1 1, Submodule.subset_span fun j => ?_, rfl⟩

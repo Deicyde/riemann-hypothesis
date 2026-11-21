@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HilbertKodairaSpencer
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitObj
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AgreeOn
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUniqueDetGen
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ModularRuleExtOfLevelTwelveStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalAffineDeterminantGeneratorStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AffineOpenLocalFactorizationStatement

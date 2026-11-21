@@ -1,6 +1,5 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceSectionMass
-import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.SliceCut
+import BuildAid.Leniency.Open
+import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StatementsCurrent
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

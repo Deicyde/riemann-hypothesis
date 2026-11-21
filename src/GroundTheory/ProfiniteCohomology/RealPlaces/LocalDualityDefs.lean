@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.LocalClassFormation.CupSymbolReal
-import GroundTheory.ProfiniteCohomology.LocalClassFormation.CupSymbolBridge
 import GroundTheory.ProfiniteCohomology.CartierDual
 import GroundTheory.ProfiniteCohomology.PoincareDuality.NsmulEqZeroOfNonemptyAddEquiv
 set_option maxSynthPendingDepth 1

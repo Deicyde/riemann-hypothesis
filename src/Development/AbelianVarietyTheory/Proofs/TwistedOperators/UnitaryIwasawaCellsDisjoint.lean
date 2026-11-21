@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HasLenOfLatLen
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryLeviNormalizesUnipotentRadical
 
@@ -14,7 +15,7 @@ theorem blk_eq_zero_iff {l : Fin (N + 2)} : blk N l = 0 ↔ l = 0 := by
   rcases idx_cases l with rfl | ⟨j, rfl⟩ | rfl
   · simp
   · simp [mid_ne_zero]
-  · simp [last_ne_zero]
+  · simp
 
 theorem blk_eq_two_iff {l : Fin (N + 2)} : blk N l = 2 ↔ l = Fin.last (N + 1) := by
   rcases idx_cases l with rfl | ⟨j, rfl⟩ | rfl

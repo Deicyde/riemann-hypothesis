@@ -1,9 +1,8 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.ThShort
-import Formalism.LocalToGlobal.ProjectiveLattices.ThGerm
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.SecBaseChangeAnySt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.VtUniq
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.ExistsNatSmulCoeffIsIntegral
+import Formalism.LocalToGlobal.ProjectiveLattices.IsThRule
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.TotallySplit
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj
 attribute [local instance] Over.cartesianMonoidalCategory
@@ -36,6 +35,6 @@ theorem exists_natCast_smul_mem_harmA :
   refine ⟨N, hN, ⟨smul_mem_HHa _ hP, fun m => h m⟩, ?_⟩
   have hN' : (N : c.F) ≠ 0 := Nat.cast_ne_zero.2 hN.ne'
   ext m
-  simp [MvPolynomial.mem_support_iff, MvPolynomial.coeff_smul, hN']
+  simp [MvPolynomial.mem_support_iff, hN']
 
 end GlobalTheory

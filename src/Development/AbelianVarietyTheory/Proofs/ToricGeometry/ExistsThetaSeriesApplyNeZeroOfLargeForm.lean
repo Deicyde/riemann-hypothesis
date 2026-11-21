@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.SummableLatticeExpNegPiMulNormSqDiv
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.DifferentiableOnOfTendstoLocallyUniformlyOn
+import Mathlib.Analysis.Normed.Group.Tannery
+import Mathlib.RingTheory.PicardGroup
 
 open Complex Matrix Filter Topology
 open scoped BigOperators Real

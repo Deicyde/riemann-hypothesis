@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsPotentialPullback
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SmoothRatioOfLocalGeneratorsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DivisorPotentialIsSNCBoundaryStatement
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsAlgAtlasAtlasOf
 
 set_option autoImplicit false
 

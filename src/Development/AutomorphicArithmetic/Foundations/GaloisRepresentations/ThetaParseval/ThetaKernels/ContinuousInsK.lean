@@ -1,8 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.SiegelWeilActions.InclRSmul
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.HalfIndexLattices.SplitStab
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.HalfIndexLattices.IsLatRepL
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.ThetaKernels.SiegelWeilDatumProperties
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.ThetaKernels.LiftedSchrodingerDatum
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.ThetaKernels.UnipotentNilpotentMulEqZero
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.ThetaKernels.PadMatrixLowerBlockZero
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.ThetaKernels.ExistsNeSigmaK
@@ -44,16 +42,16 @@ theorem inFrame_j_nb_k {x : G2 σ L.Y} {β : Matrix (Fin L.n) (Fin L.n) (AE F E)
   · rcases eq_or_ne r L.i₀ with rfl | hr
     · rw [(kl _).1]; simp [Matrix.one_apply]
     rcases eq_or_ne c L.i₀ with rfl | hc
-    · rw [(kl _).2]; simp [Matrix.one_apply, hr]
+    · rw [(kl _).2]; simp [hr]
     obtain ⟨k, rfl⟩ := (L.rng r).1 hr
     obtain ⟨l, rfl⟩ := (L.rng c).1 hc
     have := emb (Sum.inl k) (Sum.inl l)
     simp only [Sum.map_inl, Matrix.fromBlocks_apply₁₁] at this ⊢
     rw [this, _root_.PositivityTheory.SiegelWeilFormula.Act.C5.Meas.one_em_k]
   · rcases eq_or_ne r L.i₀ with rfl | hr
-    · rw [(kl _).1]; simp [Matrix.one_apply, _root_.PositivityTheory.SiegelWeilFormula.Act.C5.Meas.padZ_k]
+    · rw [(kl _).1]; simp [_root_.PositivityTheory.SiegelWeilFormula.Act.C5.Meas.padZ_k]
     rcases eq_or_ne c L.i₀ with rfl | hc
-    · rw [(kr _).2]; simp [Matrix.one_apply, _root_.PositivityTheory.SiegelWeilFormula.Act.C5.Meas.padZ_k]
+    · rw [(kr _).2]; simp [_root_.PositivityTheory.SiegelWeilFormula.Act.C5.Meas.padZ_k]
     obtain ⟨k, rfl⟩ := (L.rng r).1 hr
     obtain ⟨l, rfl⟩ := (L.rng c).1 hc
     have := emb (Sum.inl k) (Sum.inr l)
@@ -61,9 +59,9 @@ theorem inFrame_j_nb_k {x : G2 σ L.Y} {β : Matrix (Fin L.n) (Fin L.n) (AE F E)
     rw [this]
     simp [_root_.PositivityTheory.SiegelWeilFormula.Act.C5.Meas.padZ_k, _root_.PositivityTheory.SiegelWeilFormula.Act.ComplexParameterFamilyContinuity.em_ne_k, _root_.PositivityTheory.SiegelWeilFormula.Act.C5.Meas.pre_em_k]
   · rcases eq_or_ne r L.i₀ with rfl | hr
-    · rw [(kr _).1]; simp [Matrix.one_apply]
+    · rw [(kr _).1]; simp
     rcases eq_or_ne c L.i₀ with rfl | hc
-    · rw [(kl _).2]; simp [Matrix.one_apply]
+    · rw [(kl _).2]; simp
     obtain ⟨k, rfl⟩ := (L.rng r).1 hr
     obtain ⟨l, rfl⟩ := (L.rng c).1 hc
     have := emb (Sum.inr k) (Sum.inl l)
@@ -73,7 +71,7 @@ theorem inFrame_j_nb_k {x : G2 σ L.Y} {β : Matrix (Fin L.n) (Fin L.n) (AE F E)
   · rcases eq_or_ne r L.i₀ with rfl | hr
     · rw [(kr _).1]; simp [Matrix.one_apply]
     rcases eq_or_ne c L.i₀ with rfl | hc
-    · rw [(kr _).2]; simp [Matrix.one_apply, hr]
+    · rw [(kr _).2]; simp [hr]
     obtain ⟨k, rfl⟩ := (L.rng r).1 hr
     obtain ⟨l, rfl⟩ := (L.rng c).1 hc
     have := emb (Sum.inr k) (Sum.inr l)

@@ -1,5 +1,5 @@
-import Mathlib
-import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.IsPshLocallyIntegrableStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.PshBasic
 import ReciprocityTheory.AnalyticForms.PotentialTheory.IsPotentialOfFun
 import GroundTheory.HeightsAndTheta.Heights.MatrixCharts.Statements
@@ -401,7 +401,7 @@ def pointBounded : BoundedPshData pointAtlas where
 
 theorem levi_fin_zero (φ : (Fin 0 → ℂ) → ℝ) (z w : Fin 0 → ℂ) : levi φ z w = 0 := by
   rw [Subsingleton.elim w 0]
-  simp only [levi, smul_zero, map_zero, _root_.zero_apply]
+  simp only [levi, smul_zero, map_zero]
   norm_num
 
 theorem pointCutoff : pointCharts.IsCutoffFamily (fun _ _ => 0) 1 where
@@ -463,7 +463,7 @@ def periodOne : PeriodPolydisc 1 1 1 where
     fin_cases i
     ext p q
     fin_cases p; fin_cases q
-    simp [diagonal_apply_eq, add_div, div_self two_pi_I_ne_zero]
+    simp [diagonal_apply_eq, add_div]
     ring
 
 def periodTwo : PeriodPolydisc 1 1 2 where
@@ -480,7 +480,7 @@ def periodTwo : PeriodPolydisc 1 1 2 where
     have h0 := hw.1 0
     simp only [Fin.castLE_refl] at h0
     fin_cases i
-    · simp only [Function.comp_apply, Fin.zero_eta, Fin.isValue, Matrix.cons_val_zero]
+    · simp only [Fin.zero_eta, Fin.isValue, Matrix.cons_val_zero]
       rw [Complex.add_im, im_div_two_pi_I, Complex.I_im]
       have : 0 < -(w 0).re / (2 * Real.pi) := div_pos (by linarith) (by positivity)
       linarith
@@ -490,7 +490,7 @@ def periodTwo : PeriodPolydisc 1 1 2 where
   periodic i w _ := by
     fin_cases i
     ext p q
-    fin_cases p <;> fin_cases q <;> simp [diagonal_apply, add_div, div_self two_pi_I_ne_zero] <;> ring
+    fin_cases p <;> fin_cases q <;> simp [add_div] <;> ring
 
 theorem periodTwo_kernel_hyp :
     periodTwo.IsTau0Ext (fun _ => diagonal ![Complex.I, Complex.I]) ∧ (![0, 1] : Fin 2 → ℝ) ≠ 0 ∧
@@ -498,12 +498,12 @@ theorem periodTwo_kernel_hyp :
   refine ⟨⟨fun p q => analyticOnNhd_const, fun w _ => ?_⟩, ?_, fun i => ?_⟩
   · ext p q
     fin_cases p <;> fin_cases q <;>
-      simp [PeriodPolydisc.tau0, periodTwo, diagonal_apply, div_self two_pi_I_ne_zero]
+      simp [PeriodPolydisc.tau0, periodTwo]
   · intro h
     have := congrFun h 1
     simp at this
   · ext k
-    fin_cases k <;> simp [periodTwo, diagonal_map, mulVec, dotProduct, Fin.sum_univ_two]
+    fin_cases k <;> simp [periodTwo, mulVec, dotProduct, Fin.sum_univ_two]
 
 theorem identity_frame_hyp (n g : ℕ) :
     (∀ p q, AnalyticOnNhd ℂ (fun _ : Fin n → ℂ => (1 : Matrix (Fin g) (Fin g) ℂ) p q) (ball 0 1)) ∧

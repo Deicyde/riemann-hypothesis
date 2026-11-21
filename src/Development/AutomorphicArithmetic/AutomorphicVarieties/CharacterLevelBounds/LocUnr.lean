@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CharacterLevelBounds.ShaFamMono
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PartsSign
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CharacterLevelBounds.DecCyc
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CharacterLevelBounds.RootVal
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.SelmerTransport.KerResCyc

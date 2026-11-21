@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.DualLattices.TensorSpan
-import ReciprocityTheory.DualLattices.VIntCastLtOneOfDvd
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
 
 noncomputable section
 

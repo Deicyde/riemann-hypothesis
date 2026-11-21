@@ -1,4 +1,6 @@
-import Formalism.LocalToGlobal.GlobalTheory.GL4.PCoord
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.GlobalTheory.GL4.PMsGram
 
 noncomputable section
 

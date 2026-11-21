@@ -1,22 +1,16 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ZetaOn
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLinearWittModelLocal
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LinearWittModelUnitaryAction
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaActionExists
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LinearBarModelUnitaryAction
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LinearWeilFunctionalUnramifiedVector
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SplitUnitaryLiftTendstoOne
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LinearWeilFunctionalSphericalValue
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFactorPureTensorComponentAtPlace
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqOfComponentTensorAdelicFunctionEq
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicSchwartzMemL2
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocalizingWeightEqualOffPlaceMasses
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsStdCharNegOneOfStandardTraceAdelicAddChar
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RealScalarArchimedeanAdeleSmulMatrixRealPlace
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFinsetLatStabMemNhds
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ComplementaryAdelicSchwartzOfNonzeroLocal
-import Development.AbelianVarietyTheory.Definitions.Divisors.T2SpaceGeneralLinearGroup
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CharacterTrivialMatrixLatticeOpenCompactBasis
+import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
+import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsFinsetIntegralAdeleMulVecMemLatticeClosure
+import Development.AutomorphicArithmetic.LocalEmbeddings.OppLagr
 
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -37,7 +31,7 @@ def frame (K : Type) [Field K] {n d : ℕ} (h : n ≤ d) : Matrix (Fin n) (Fin d
 
 theorem mul_frame (h : n ≤ d) (M : Matrix (Fin n) (Fin n) K) (i j : Fin n) :
     (M * frame K h) i (Fin.castLE h j) = M i j := by
-  simp [frame, Matrix.mul_apply, eq_comm]
+  simp [frame, Matrix.mul_apply]
 
 theorem val_frame (h : n ≤ d) (i : Fin n) (j : Fin d) : w (frame K h i j) ≤ 1 := by
   unfold frame

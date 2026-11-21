@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRankSB
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.BernsteinUnitaryProductIrreducible
 
@@ -19,7 +20,7 @@ theorem indScal_lift_law (ν β : kˣ →* ℂˣ) (a b : ℕ) {f : GL (Fin (a + 
   intro p x
   have h := hf.2 p x
   apply (TensorProduct.lid ℂ ℂ).injective
-  simp only [MonoidHom.coe_comp, Function.comp_apply, twist_apply, MonoidHom.coe_coe] at h ⊢
+  simp only [MonoidHom.coe_comp, Function.comp_apply, twist_apply] at h ⊢
   rw [h]
   simp [parChar, detRep, ofChar_apply]
   ring

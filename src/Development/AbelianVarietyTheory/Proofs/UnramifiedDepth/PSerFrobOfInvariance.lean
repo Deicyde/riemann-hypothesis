@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import ReciprocityTheory.DualLattices.PSerFrobStatement
+import Mathlib.Tactic.ENatToNat
+import Std.Tactic.BVDecide.Normalize.Prop
 open TensorProduct IsLocalRing Matrix ReciprocityTheory.PGsh ReciprocityTheory.PGsh.Up ReciprocityTheory.PGsh.L2 ReciprocityTheory.PGsh.Be2
 
 namespace GlobalTheory

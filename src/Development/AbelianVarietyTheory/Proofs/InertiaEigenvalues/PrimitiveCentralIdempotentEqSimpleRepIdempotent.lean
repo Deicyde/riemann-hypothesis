@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.CoeffRingsHaveRootsOfUnity
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CentralIdempotentsSimpleFDRepFiniteFinsumEqOne
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SimpleRepCentralIdempotentIsCentralIdempotent
+import Formalism.SharpRestriction.LevelLetterCocycles.PairedCharacterCondition
 open Formalism Formalism.MainNotions Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.MainNotions.N Formalism.WeaklyAdmissibleFiltrations Formalism.L2 NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Module Polynomial GlobalTheory.Pass GlobalTheory.PendOf
 
 noncomputable section
@@ -15,7 +16,7 @@ variable {Γ : Type} [Group Γ] [Fintype Γ]
 theorem eq_sum_single (e : MonoidAlgebra ℂ Γ) : e = ∑ q : Γ, MonoidAlgebra.single q (e.coeff q) := by
   classical
   ext x
-  simp [MonoidAlgebra.coeff_sum, Finset.sum_apply', Finsupp.single_apply]
+  simp [MonoidAlgebra.coeff_sum]
 
 theorem coeff_mul_fin (a b : MonoidAlgebra ℂ Γ) (x : Γ) :
     (a * b).coeff x = ∑ q, a.coeff q * b.coeff (q⁻¹ * x) := by

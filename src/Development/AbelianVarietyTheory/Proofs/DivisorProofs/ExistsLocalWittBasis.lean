@@ -1,8 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviBlockSizesSum
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsBlockCentre
-import Development.AbelianVarietyTheory.Definitions.Foundations.GLintEqKOAndPrincEqKOne
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LocalFieldNormValuation
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeftInverseExtendsToGLStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentRadicalEntriesUpperStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviEmbSlotDiagonalStatement
@@ -45,7 +41,7 @@ theorem exists_frame_basis : ∀ (F E : Type) [Field F] [NumberField F] [Field E
     ext a b
     by_cases hab : a = b
     · subst hab; simp [Formalism.UG.cT]
-    · simp [Formalism.UG.cT, Matrix.one_apply, hab, Ne.symm hab]
+    · simp [Formalism.UG.cT, hab, Ne.symm hab]
   obtain ⟨hrn, C, hC⟩ := GlobalTheory.T.left_inverse_extends_to_GL E n r Xf (Formalism.UG.cT (σ : E →+* E) Yf * J) hLX
   let B : GL (Fin n) (Fv F v) := Matrix.GeneralLinearGroup.map (t : E →+* Fv F v) C
   have hB : ∀ (j : Fin r) (k : Fin n), (k : ℕ) = j →

@@ -1,8 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.FlagLevelCharacterEqPsiDivN
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsTransportAdelicCorrection
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LatSelfDualOfUnimod
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.AbsNormCoprimeOfSup
+import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.InstExists
 
 noncomputable section
 

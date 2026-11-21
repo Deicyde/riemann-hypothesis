@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.SqMap
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.FBIdSy
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ThetaSwapFirstTwo
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.FrRatio
 
 noncomputable section

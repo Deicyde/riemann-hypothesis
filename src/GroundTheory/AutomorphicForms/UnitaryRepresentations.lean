@@ -1,8 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.UnitaryRepresentations.IsInvariantIffCommuteStarProjection
 import GroundTheory.AutomorphicForms.UnitaryRepresentations.ExistsEqAlgebraMapOfIsSelfAdjoint
 import GroundTheory.AutomorphicForms.UnitaryRepresentations.DirectSum
 import GroundTheory.AutomorphicForms.UnitaryRepresentations.Integrated
+import Mathlib.Order.CompletePartialOrder
 
 namespace GroundTheory.Automorphic
 

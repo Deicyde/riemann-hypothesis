@@ -1,4 +1,4 @@
-import Formalism.LocalToGlobal.ProjectiveLattices.SpanRatSmulMem
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.XcLat
 
 set_option autoImplicit false

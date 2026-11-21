@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.SliceOmBlock
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.FubiniHeadLastPart
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.SymmetricScalarBlockMatrixOneZero
 
 open Matrix MeasureTheory Formalism.QuantumDeterminants Formalism.FourierDecayAlt

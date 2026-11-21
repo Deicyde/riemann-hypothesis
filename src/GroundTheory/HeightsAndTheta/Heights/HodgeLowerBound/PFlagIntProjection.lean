@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.StatementsFlagIntProjection
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.StatementsBlockAltUnique
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.StatementsFlagIntMuDegree

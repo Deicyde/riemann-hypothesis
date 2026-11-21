@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.TiePtRec
 import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.TiePtOne
 import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.IntSplitOf
+import Formalism.LocalRingCardinality.DataKerI
 
 noncomputable section
 

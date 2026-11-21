@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsRatConstMul
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.RationalRayLevels
 
 set_option autoImplicit false
 noncomputable section

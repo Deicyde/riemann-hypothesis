@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntDerApply
+import Std.Tactic.BVDecide.Normalize.Prop
 open IsLocalRing GlobalTheory.FormalOrigin
 
 namespace GlobalTheory.FormalOrigin

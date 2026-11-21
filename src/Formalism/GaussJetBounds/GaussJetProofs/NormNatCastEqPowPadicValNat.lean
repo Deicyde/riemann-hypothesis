@@ -1,7 +1,9 @@
-import Formalism.GaussJetBounds.GenLogInverse
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.GaussJetBounds.GaussJetProofs.SubstitutionWeightBound
 import Formalism.IncomingBounds.FlowDegreeBounds.ProdRangeEqFactorialMulProdIco
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.NormNatCastEqOneOfNotDvd
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
 
 noncomputable section
 open scoped BigOperators

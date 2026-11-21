@@ -1,5 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.EigenOfTwoStep
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.Letter
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
+import Mathlib.Tactic.ReduceModChar
 open scoped MatrixGroups TensorProduct
 open Matrix GlobalTheory.KZ
 
@@ -30,8 +34,8 @@ theorem diam_exists : ∀ (N l d : ℕ), 0 < N → Nat.Coprime N l → Nat.Copri
   · rw [hγ]; simp [M]
   · rw [hγ]; simp [M]
   · simp only [en, hγ, M]
-    simp only [Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_one, Matrix.head_cons, Matrix.empty_val',
-      Matrix.cons_val_fin_one, Matrix.cons_val_zero]
+    simp only [Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_one, Matrix.empty_val',
+      Matrix.cons_val_fin_one]
     push_cast
     exact (ZMod.natCast_eq_natCast_iff _ _ _).2 hd'N
 

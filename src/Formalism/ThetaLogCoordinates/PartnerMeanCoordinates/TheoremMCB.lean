@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.PartnerDischarge.PartnerDischargeProofs.GammaZeroIntegralLogBound
 
 namespace Formalism.InvariantFactorPaths.MC

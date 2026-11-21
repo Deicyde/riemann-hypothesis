@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.GlobalEulerCharacteristic.ShaDescent
 import GroundTheory.ProfiniteCohomology.LocalEulerCharacteristic.CoprimeTwist
 import GroundTheory.ProfiniteCohomology.LocalEulerCharacteristic.AdditiveInvariants

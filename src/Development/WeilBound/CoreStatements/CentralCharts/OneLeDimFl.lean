@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.CentralCharts.PshAt0LogNorm
 import Development.WeilBound.CoreStatements.CentralCharts.CommonMembers
 import Development.WeilBound.CoreStatements.CentralCharts.IsPosPotBlock
@@ -5,6 +6,7 @@ import Development.AutomorphicSpectrum.Proofs.MetricProofs.IsArithVarOfSncModelS
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.LowerBoundHeightOnBoundaryStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.BoundaryPointsClosedStatement
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsFinsetOfMemNhds
+import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HolomorphicAtlasCoordCompatStatement
 
 noncomputable section
 

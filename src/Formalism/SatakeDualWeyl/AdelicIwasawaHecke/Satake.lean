@@ -1,8 +1,10 @@
-import Formalism.SatakeDualWeyl.StatementE
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.SatakeComb
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.SatakeMat
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.SatakeRes
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.HeckeActMem
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
 
 noncomputable section
 

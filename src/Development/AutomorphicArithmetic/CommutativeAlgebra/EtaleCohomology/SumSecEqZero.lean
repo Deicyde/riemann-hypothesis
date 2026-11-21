@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.AddIff
 import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.EvalExact
 

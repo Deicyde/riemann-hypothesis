@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ConvergenceShift
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RankPosOfLeaves
 open GlobalTheory.CompanionTheory.EGlue
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.convergence_shift : GlobalTheory.CompanionTheory.EGlue.ConvShift := by

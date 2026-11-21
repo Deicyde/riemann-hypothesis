@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.TopRatio
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutIntervalLong
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.FrameThresholdBoundHolds
 
 namespace Formalism.FourierDecayAlt.P.PBL
 

@@ -1,7 +1,8 @@
-import Mathlib
-import CompanionTheory.SpectralGeometry.CountingDefinitions.AdelicEulerProducts.HypJ
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.TensorLocallyCompactRing
 import Formalism.LocalRingCardinality.SpanPowerMembership.LocAtA
+import Mathlib.Order.CompletePartialOrder
 
 noncomputable section
 

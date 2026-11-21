@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Theta.EisensteinZeta.WeilPolarization.IsSelfDualAtLatticeAtStd
 import GroundTheory.GlobalFields.Adele.Approximation
 set_option maxSynthPendingDepth 1

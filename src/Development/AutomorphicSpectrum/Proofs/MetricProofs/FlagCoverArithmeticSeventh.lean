@@ -1,11 +1,11 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.Pull1
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.MetricPeriods.IsPeriodOn
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.IsImg
-import GroundTheory.HeightsAndTheta.Heights.Intersections.PtsOverPt
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.IsValueAtOfTorus
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.AevalNeZeroOfNotMem
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.FrameDefinitions.Values
+import Mathlib.Analysis.Analytic.Polynomial
+import Mathlib.Topology.Algebra.MvPolynomial
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterBridgeB
 open MvPolynomial MeasureTheory Filter Topology Matrix ReciprocityTheory.AnForm ReciprocityTheory.AnForm.M ReciprocityTheory.AnForm.P ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.AI.I1 ReciprocityTheory.ChartRestriction.G.AI.I2 ReciprocityTheory.ChartRestriction.G.AI.I4 GlobalTheory.CompanionTheory.Ar.PB GroundTheory.Heights₂.Heights GroundTheory.Heights₂.Heights.LowerBoundFree
 open scoped ComplexOrder Classical
 
@@ -360,7 +360,7 @@ theorem polyVal_of_rep (hv : IsBlockMap κ v) (x' : (Σ k, ι' k) → Ω) {P : P
     {g h : ℕ → MRing ι} (hr : IsRep (x' ∘ v) P n d g h) {z : (Σ k, ι' k) → ℂ}
     (hz : ∀ e < n, ev (h e) (z ∘ v) ≠ 0) : PolyVal x' z P (valPoly n g h (z ∘ v)) := fun e => by
   have hc : (valPoly n g h (z ∘ v)).coeff e = if e < n then fr (g e) (h e) (z ∘ v) else 0 := by
-    simp [valPoly, Polynomial.finset_sum_coeff, Polynomial.coeff_C_mul, Polynomial.coeff_X_pow]
+    simp [valPoly, Polynomial.coeff_C_mul, Polynomial.coeff_X_pow]
   by_cases he : e < n
   · rw [hc, if_pos he]
     obtain ⟨a, b, c, f⟩ := hr.2 e

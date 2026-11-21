@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.OmegaFactorization
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.DefiningCoordinates
+import Mathlib.Data.Pi.Interval
 
 set_option autoImplicit false
 

@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAtAlt
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.IwasawaIsotropicStabilizerInertPlace
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUniqueLeviElement
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -161,9 +158,9 @@ theorem levi_unit_at : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [Num
       ext (i|i) (j|j)
       · have := congrFun (congrFun hg i) j
         simpa [dg, Matrix.one_apply] using this
-      · simp [dg, Matrix.one_apply]
-      · simp [dg, Matrix.one_apply]
-      · fin_cases i <;> fin_cases j <;> simp [dg, Matrix.one_apply, h0, h0']
+      · simp [dg]
+      · simp [dg]
+      · fin_cases i <;> fin_cases j <;> simp [dg, h0, h0']
     have hD : mM hA.rank H' (t : AE F E) (cA σ ((t⁻¹ : (AE F E)ˣ) : AE F E)) (mat h₁) - 1 =
         incM F (frame H') * (dg (t : AE F E) (cA σ ((t⁻¹ : (AE F E)ˣ) : AE F E)) (mat h₁) - 1) *
           incM F (coframe hA.rank H') := by

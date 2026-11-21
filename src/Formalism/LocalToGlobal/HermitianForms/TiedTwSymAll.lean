@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.HermitianForms.TiedTwSymP
 import Formalism.LocalToGlobal.HermitianColumns.TiedQCHost
+import Formalism.LocalToGlobal.HermitianForms.BothSym
+import Formalism.LocalToGlobal.HermitianForms.TiedTwJSym
 
 noncomputable section
 

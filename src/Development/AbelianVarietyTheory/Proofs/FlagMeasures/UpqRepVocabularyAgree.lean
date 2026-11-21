@@ -1,5 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.Admissible
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.StatementB
+import Formalism.PeriodIntegrals.UpqRep
+import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
 open Formalism.FourierDecayAlt GlobalTheory.ThA MeasureTheory Formalism.QuantumDeterminants Matrix
 open scoped InnerProductSpace
 

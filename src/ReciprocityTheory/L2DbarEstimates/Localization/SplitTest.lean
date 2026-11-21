@@ -1,6 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.L2DbarEstimates.Localization.UnweightBackStatement
-import ReciprocityTheory.L2DbarEstimates.ChartDerivatives.Imports
-import ReciprocityTheory.L2DbarEstimates.MinimalSolutions.HilbertLemmas
+import Mathlib.MeasureTheory.Function.L2Space
+import ReciprocityTheory.L2DbarEstimates.ChartDerivatives.ChartSymmEventuallyEq
+import ReciprocityTheory.L2DbarEstimates.ChartDerivatives.MeasurableSetImageOfIsLocalHomeomorph
+import ReciprocityTheory.L2DbarEstimates.ChartDerivatives.TsupportDbSubset
 
 namespace ReciprocityTheory.L2DbarEstimates.F
 

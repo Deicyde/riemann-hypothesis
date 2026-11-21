@@ -1,10 +1,13 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.KatoQuadraticCharacters.Imports
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CharacterLevelBounds.ClsFacts
-import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.AdmissibleOfTypeII
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.ExistsUnitPowNe
-import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.DatLoc
-import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.ClsEqOne
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.ClassFieldRamification.KwAbs
+import Development.AbelianVarietyTheory.Definitions.Foundations.FinalTheorems
+import Development.AutomorphicArithmetic.AutomorphicVarieties.CharacterLevelBounds.DecCyc
+import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.DiagonalOnSubgroupOfConjugate
+import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.ExistsIsDiagOnOfIsDiagOnInfKerSign
+import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.ExistsIsFlagOnOfEigenvectorNormalSubgroup
+import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.MemGalOfQuadraticOfFixesDiscrRootsOfUnity
 section
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.MainNotions.N GlobalTheory.GalOfCusp UpperTheory.V UpperTheory.V.Af UpperTheory.V.HV GlobalTheory.Ord2
@@ -69,7 +72,7 @@ theorem GlobalTheory.killsMu_comp_of_sq_eq_one : ∀ {Ω : Type} [Field Ω] [Cha
     have h2 := DFunLike.congr_fun ((Chr.clsFacts ℚ Ω N).2.1 l hlN) s
     rw [MonoidHom.comp_apply, h1] at h2
     have h3 := congrArg (fun x : (ZMod l)ˣ => (x : ZMod l)) h2
-    simp only [ZMod.unitsMap_val, Units.val_one, ZMod.castHom_apply, ZMod.cast_eq_val] at h3
+    simp only [ZMod.unitsMap_val, Units.val_one, ZMod.cast_eq_val] at h3
     have h4 : (((((c : ZMod N)).val : ℤ) - 1 : ℤ) : ZMod l) = 0 := by push_cast; rw [h3]; ring
     exact (ZMod.intCast_zmod_eq_zero_iff_dvd _ l).1 h4
   have hm := proj_pow_eq_one l N c hu
@@ -441,7 +444,7 @@ theorem tw_tw (W : R2 Ω l) (a b : G ℚ Ω →* (Qbar l)ˣ) : tw (tw W a) b = t
   ext s i j
   change mat (tw (tw W a) b) s i j = mat (tw W (b * a)) s i j
   rw [tw_coe, tw_coe, tw_coe]
-  simp [smul_smul, mul_assoc]
+  simp [mul_assoc]
 
 theorem conj_tw (W : R2 Ω l) (χ : G ℚ Ω →* (Qbar l)ˣ) (g : GL (Fin 2) (Qbar l)) (s : G ℚ Ω) :
     ((g * tw W χ s * g⁻¹ : GL (Fin 2) (Qbar l)) : Matrix (Fin 2) (Fin 2) (Qbar l)) =
@@ -464,8 +467,8 @@ theorem diag_tw {W : R2 Ω l} {H : Subgroup (G ℚ Ω)} {χ : Fin 2 → G ℚ Ω
   rw [conj_tw, hg s hs, hd]
   ext i j
   by_cases hij : i = j
-  · subst hij; simp [Matrix.diagonal_apply]; ring
-  · simp [Matrix.diagonal_apply, hij]
+  · subst hij; simp; ring
+  · simp [hij]
 
 theorem flag_tw {W : R2 Ω l} {H : Subgroup (G ℚ Ω)} {κ : Fin 2 → ↥H →* (Qbar l)ˣ} (h : IsFlagOn W H κ) :
     IsFlagOn (tw W (dt W)) H (fun i => κ i * (dt W).comp H.subtype) := by

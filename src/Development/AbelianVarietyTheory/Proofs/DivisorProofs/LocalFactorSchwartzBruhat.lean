@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatAtVAtStable
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzSpanLocalTensors
 open scoped TensorProduct NNReal Matrix
@@ -35,7 +34,7 @@ theorem mem_SB_of_rest : ∀ (F : Type) [Field F] [NumberField F] (κ : Type) [F
     have hinv := (hr' 0 (zero_mem _)).1
     have e : P (tens (evFin F v) φ' r') = r' x₀ • φ' := by
       funext y
-      simp only [P, LinearMap.funLeft_apply, Function.comp_apply, tens, Pi.smul_apply, smul_eq_mul]
+      simp only [P, LinearMap.funLeft_apply, tens, Pi.smul_apply, smul_eq_mul]
       rw [hs_ev y, show s y = x₀ + _ from rfl, hinv x₀ _ (hs_at y)]
       ring
     show P (tens (evFin F v) φ' r') ∈ SB (κ → Fv F v)
@@ -44,7 +43,7 @@ theorem mem_SB_of_rest : ∀ (F : Type) [Field F] [NumberField F] (κ : Type) [F
   have h1 : P (tens (evFin F v) φ r) ∈ SB (κ → Fv F v) := hP hR.2
   have e : P (tens (evFin F v) φ r) = r x₀ • φ := by
     funext y
-    simp only [P, LinearMap.funLeft_apply, Function.comp_apply, tens, Pi.smul_apply, smul_eq_mul]
+    simp only [P, LinearMap.funLeft_apply, tens, Pi.smul_apply, smul_eq_mul]
     rw [hs_ev y, show s y = x₀ + _ from rfl, hR.1 x₀ _ (hs_at y)]
     ring
   rw [e] at h1

@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.JumpsLetOfWin
 import Formalism.SharpRestriction.LevelLetterCocycles.WachFrobeniusLatticeUnramifiedFunctor
-import Formalism.SharpRestriction.LevelLetterCocycles.FiltrationSaturationKiller
 
 noncomputable section
 

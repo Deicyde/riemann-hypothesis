@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsMulVal
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RationalPointSection
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PointsGroup
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiniteHopfPointsSeparateStatement
 set_option autoImplicit false
 noncomputable section

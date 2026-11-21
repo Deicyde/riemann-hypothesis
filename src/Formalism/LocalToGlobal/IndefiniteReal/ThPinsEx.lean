@@ -1,7 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.ThPinsR
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.CsGlob
-import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.IdemSumOfNoConj
-import Formalism.LocalToGlobal.ProjectiveLattices.ThClassPinsRec
 
 noncomputable section
 

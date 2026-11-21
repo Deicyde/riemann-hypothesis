@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LamGApply
-import Formalism.LocalToGlobal.HermitianForms.IsLocBasis
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VariableMatrixDetPolyPowMulMemDualWeylStatement
-import Formalism.GradedWeylDivisibility.DualWeylDominanceOf
 
 set_option autoImplicit false
 
@@ -89,7 +86,7 @@ theorem semiConstr_basis {K C V M I : Type} [Field K] [Field C] [AddCommGroup V]
   rw [Finset.sum_eq_single i]
   · simp
   · intro j _ hj
-    simp [Finsupp.single_apply, hj.symm]
+    simp [hj.symm]
   · simp
 
 def mulMap (C : Type) [Field C] {ι : Type} [Fintype ι] [DecidableEq ι] (n : ℕ) (lamW : ι → ℕ → ℕ) :

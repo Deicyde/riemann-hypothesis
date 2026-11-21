@@ -1,7 +1,9 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.HmaxLe
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.DenBound
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.ExistsPhiBridge
-import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.ImportsAlt
+import Formalism.SharpRestriction.LevelLetterCocycles.AdmBoundsBOfAdm
+import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.ArcGamLiftCore
 
 noncomputable section
 
@@ -101,7 +103,7 @@ theorem den_step [IsDomain O] [IsDiscreteValuationRing O] [IsAdicComplete (IsLoc
     funext i
     by_cases hi : i = c
     · subst hi; simp [letE, hF₁, Formalism.MainNotions.N.FrobeniusPowerSeries.PhiBridge.cst]
-    · simp [letE, Pi.single_apply, hi]
+    · simp [letE, hi]
   have e1 : (letE c : LetA O n) * Br.cst G =
       lA W ^ de * (letE c * Br.cst 1 * u₁) - Br.cst (P.p 1 ^ y) * (letE c * algebraMap O (LetA O n) x') := by
     rw [Br.cst_one, mul_one, hletu, hG, Br.lA_eq, ← Br.cst_pow, ← Br.cst_C]

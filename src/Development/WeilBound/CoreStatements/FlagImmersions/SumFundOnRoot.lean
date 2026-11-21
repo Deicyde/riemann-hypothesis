@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.RootOnFund
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.SplitComps
 
@@ -60,7 +62,7 @@ theorem sum_root_fund {Ψ : Type} [Fintype Ψ] [DecidableEq Ψ] {N : ℕ} (r : �
       ext j
       simp only [Finset.mem_Iic, Finset.mem_singleton, Fin.le_def, Fin.ext_iff]
       omega
-    simp only [Fin.val_mk] at *
+    simp only at *
     rw [hsum, sub_zero, hI, Finset.sum_singleton]
   | succ k' =>
     have hk' : k' < N := by omega
@@ -73,7 +75,7 @@ theorem sum_root_fund {Ψ : Type} [Fintype Ψ] [DecidableEq Ψ] {N : ℕ} (r : �
         intro hj'
         apply hj
         ext
-        simp only [Fin.val_mk]
+        simp only
         omega
       · intro h
         exact absurd (Finset.mem_univ _) h
@@ -83,7 +85,7 @@ theorem sum_root_fund {Ψ : Type} [Fintype Ψ] [DecidableEq Ψ] {N : ℕ} (r : �
       omega
     have hnot : (⟨k' + 1, hk⟩ : Fin N) ∉ Finset.Iic (⟨k', hk'⟩ : Fin N) := by
       simp [Fin.le_def]
-    simp only [Fin.val_mk] at *
+    simp only at *
     rw [hsum, hI, Finset.sum_insert hnot]
     ring
 

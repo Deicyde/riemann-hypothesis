@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.FourierMatch
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.JacquetRallisOrbitInvariantMapProperStatement
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.UnitaryActionHermitianInvariantsTransitiveStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.InvariantImageOpenClosedLocalSectionsStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.JacquetRallisTransferFactorKrylovDetStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.UnitaryGroupPositiveCharacterTrivialAndUnimodulaStatement
@@ -78,7 +76,7 @@ theorem companion_pow_mulVec {r : ℕ} {k : Type} [CommRing k] (p : Fin r → k)
     rw [pow_succ', ← Matrix.mulVec_mulVec, ih (by omega)]
     funext i
     rw [Matrix.mulVec_single]
-    simp only [companion, Matrix.of_apply, mul_one, Pi.single_apply, Fin.ext_iff]
+    simp only [companion, Pi.single_apply, Fin.ext_iff]
     have : j + 1 ≠ r := by omega
     simp [this]
 

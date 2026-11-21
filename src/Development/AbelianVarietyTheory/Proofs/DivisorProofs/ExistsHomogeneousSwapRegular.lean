@@ -1,15 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OfSwap2
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SwapSumSwap
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsTwoEmbeddingsOfTranscendental
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArithIntersectionFormExists
-import Development.AbelianVarietyTheory.Definitions.Divisors.GenericPointAsIdeal
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NontrivialIsomClassInt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GradedMetricPullbackIsometric
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RankTwoGradedDeterminantIsometricStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RegularBaseRankTwoMetricFamilyStatement
 
 set_option autoImplicit false
@@ -66,7 +58,7 @@ theorem swapReg_exists : ArCalc → ∃ G, Homog G ∧ SwapReg G := by
     congr 2
     congr 1
     funext i
-    fin_cases i <;> simp [T, lin, Fin.sum_univ_five, Pi.single_apply] <;> ring
+    fin_cases i <;> simp [T, lin, Fin.sum_univ_five] <;> ring
 
   have hdim : topologicalKrullDim (closure ({π (genericPoint Y)} : Set B)) < ((d + 1 + 1 : ℕ) : WithBot ℕ∞) := by
     refine (topologicalKrullDim_subspace_le B _).trans_lt ?_

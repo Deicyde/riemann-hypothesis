@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.AcrisTorsionFreeComplete
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.CrystallinePeriods.RingBasics
+import Formalism.SharpRestriction.LevelLetterCocycles.DataNLoc
 open Formalism Formalism.BasicNotions Formalism.BasicNotions.Loc GlobalTheory.MemLoc
 open scoped Formalism.Per
 

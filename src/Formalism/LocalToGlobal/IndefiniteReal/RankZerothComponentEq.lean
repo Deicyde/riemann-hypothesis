@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.ModelConjugation
 import Formalism.LocalToGlobal.IndefiniteReal.DiscreteSeriesParameterPos
 import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.InfFam

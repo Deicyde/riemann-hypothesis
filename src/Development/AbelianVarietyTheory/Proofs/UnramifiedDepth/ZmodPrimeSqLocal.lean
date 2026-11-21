@@ -1,6 +1,8 @@
-import Mathlib
-import ReciprocityTheory.DualLattices.WFrobStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.DualLattices.ATowerInh
+import Mathlib.Algebra.DualNumber
+import ReciprocityTheory.DualLattices.FormalChartAtZero
 
 noncomputable section
 open IsLocalRing ReciprocityTheory.PGsh ReciprocityTheory.PGsh.Be2 TrivSqZeroExt

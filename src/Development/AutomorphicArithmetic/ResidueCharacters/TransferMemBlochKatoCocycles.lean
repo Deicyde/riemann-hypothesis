@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.RestrictionCorestrictionH1f
 import Formalism.SharpRestriction.LevelLetterCocycles.LocCoh
 
@@ -47,7 +48,7 @@ theorem transfer_mem_blochKato_cocycles [IsTopologicalGroup G'] (PD : PeriodData
       rw [continuousOn_iff_continuous_restrict]
       refine (hzcont.comp (he.toHomeomorph).symm.continuous).congr ?_
       rintro ⟨h, a, rfl⟩
-      simp only [Function.comp_apply, hf, hinv]
+      simp only [Function.comp_apply, hf]
       congr 1
     have hc := GlobalTheory.transfer_continuous_of_continuousOn LL G' T.V T.ρ ι.range ho hρc f hfc
     have hfun : (trCochain ι T z : G' → T.V) = fun g => ∑ q : G' ⧸ ι.range,

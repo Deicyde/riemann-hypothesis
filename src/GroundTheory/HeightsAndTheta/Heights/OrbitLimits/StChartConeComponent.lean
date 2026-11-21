@@ -1,6 +1,6 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterSt
-import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.Statements
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StChartSection
 set_option maxSynthPendingDepth 1
 

@@ -1,4 +1,6 @@
-import Formalism.SharpRestriction.CuspSpanNormBounds.OnePlaceExpansion
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.CuspSpanNormBounds.IsPtRepTrDat
 
 open MeasureTheory Matrix Finset
 

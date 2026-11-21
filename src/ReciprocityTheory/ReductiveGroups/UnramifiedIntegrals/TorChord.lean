@@ -1,6 +1,6 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.TorDefs
-import Formalism.EllipticTorsion.FormalGroupPointsNoTorsion
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.TorsionIntegrality.TorsionTranslationPowers.IsTransSys
 
 noncomputable section
 open scoped Classical

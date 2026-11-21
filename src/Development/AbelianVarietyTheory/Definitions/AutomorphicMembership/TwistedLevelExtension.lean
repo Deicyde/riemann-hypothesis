@@ -1,12 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.LatAtLattice
-import Formalism.LocalToGlobal.Columns.KOneCharacterTrivialNearOne
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ProdAbsNormDivsDvd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsTwIffCanonEq
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ExistsOkPins
 import Formalism.LocalToGlobal.Columns.ChainTwKer
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.InertAtLeCongN
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FinAfMemIntUIff
 
 noncomputable section
 namespace GlobalTheory.Mem.Col2.TC.TwModel
@@ -146,7 +143,7 @@ theorem trv_prX {n c k rS r t : ℕ} (hc : c = 0) {a b : Fin n} (h : a ≠ b) (h
       simp
   · have : ∀ y : Sp E n, Loc.inX E n 0 y = y := fun y => by
       funext l
-      simp [Loc.inX, show l.1 < n from l.2]
+      simp [Loc.inX]
     rw [this, this]
 
 theorem trv_red {n : ℕ} {a b : Fin n} (h : a ≠ b) {x : Sp E n} (hx : x ∈ stdAt E n P) :

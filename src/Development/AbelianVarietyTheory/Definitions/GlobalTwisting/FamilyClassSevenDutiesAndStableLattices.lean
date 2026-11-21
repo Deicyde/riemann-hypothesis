@@ -1,12 +1,4 @@
-import Mathlib
-import Formalism.SharpRestriction.InertJacobiLevels.AsmIface
-import Formalism.LocalToGlobal.GlobalTheory.IsResidueClassZero
-import Formalism.SharpRestriction.GrowthBounds.SmallOrderPrimes
-import Formalism.SharpRestriction.Divisibility.LocalQuadraticParts
-import Formalism.SharpRestriction.LevelLetterCocycles.TwGood
-import Formalism.LocalRingCardinality.DataAmbForm
-import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.DisjointExceptional
-import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.AuxiliaryPrimeMemAvoidedPrimes
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.SetUnipotentTranslate
 
 noncomputable section

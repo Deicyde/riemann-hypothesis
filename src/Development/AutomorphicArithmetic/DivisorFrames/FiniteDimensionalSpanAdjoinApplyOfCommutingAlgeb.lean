@@ -1,5 +1,8 @@
-import Mathlib
-import Development.AutomorphicArithmetic.LocalEmbeddings.ULieDefs
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open NumberField Matrix Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SiegelSet GlobalTheory.UAut GlobalTheory.ULie
 open scoped TensorProduct

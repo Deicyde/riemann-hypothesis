@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.GeneralLinearActions.IsDiscriminantTwelfthRootOfIdealLattice
+import Mathlib.Analysis.SpecialFunctions.Elliptic.Weierstrass
+import Mathlib.NumberTheory.ModularForms.DedekindEta
 
 noncomputable section
 

@@ -1,21 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockFirstActionMatrixUnitEq
-import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.Sl2NonnegWeightOfHighestWeightVector
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ZRYRCover
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.LengthPosOfPosDef
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.AdjFormula
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.ParamsEx
-import Formalism.LocalToGlobal.IndefiniteReal.LinksStage
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsNormLeHeightPow
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.HoweUnram
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.GaussianBinomialClosedForm
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.SqNormIntegralFundamentalDomainEqL2NormSq
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ActOfMemGfC
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.RaisingLoweringOperators
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.TranslateMemCoefLatFn
-import Development.AbelianVarietyTheory.Definitions.Foundations.ForallEventuallyFinLocIff
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.RealLowestKTypeCoeffSquareIntegrable
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsKHwMap
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUniqueJointTop
+import Formalism.LocalRingCardinality.DataHost
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix
 open Formalism.L2.Theta Formalism.L2.DIV Formalism.L2.Indef
 open Formalism.IndefR.Lev Formalism.IndefR.Mult Formalism.IndefR.Datum Formalism.IndefR.Cx Formalism.IndefR.Links
@@ -49,7 +35,7 @@ theorem slice_X_outer {v : σ} (hv : v ∉ Set.range ι) : slice ι (X v) = X �
   simp only [slice, aeval_X, sliceVar, dif_neg hv]
 
 theorem slice_C (a : ℂ) : slice ι (C a) = C (C a) := by
-  simp [slice, aeval_C, MvPolynomial.algebraMap_apply]
+  simp [slice, MvPolynomial.algebraMap_apply]
 
 variable (ι)
 
@@ -83,9 +69,9 @@ theorem coefAt_pderiv (hι : Function.Injective ι) (u : σ₀) (Q : MvPolynomia
       · have h1 : ι u ≠ ι w := fun h => huw (hι h).symm
         have h2 : u ≠ w := fun h => huw h.symm
         simp [Derivation.leibniz, map_mul, slice_X_inner hι, hp, pderiv_X,
-          Pi.single_apply, h1, h2, coeff_C_mul, mul_comm (slice ι p) (C (X w))]
+          h1, h2, coeff_C_mul, mul_comm (slice ι p) (C (X w))]
     · have h1 : ι u ≠ v := fun h => hv ⟨u, h⟩
-      simp only [Derivation.leibniz, map_add, map_mul, smul_eq_mul, pderiv_X, Pi.single_apply,
+      simp only [Derivation.leibniz, map_mul, smul_eq_mul, pderiv_X, Pi.single_apply,
         if_neg h1.symm, mul_zero, zero_add, slice_X_outer hv]
       rw [coeff_X_mul', coeff_mul_X']
       split_ifs

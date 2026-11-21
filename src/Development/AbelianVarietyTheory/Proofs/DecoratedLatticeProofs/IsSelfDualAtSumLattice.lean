@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.SphericalEisensteinSeriesOnGroup
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.ContinuesConst
 
@@ -75,7 +76,7 @@ theorem cols_gram (φ : A →+* B) {s : A} (h : σ s = s) (hs : φ (2 * (s * s))
       fromRows_mul_fromCols, fromRows_mul, mul_fromCols, cT_smul_add σ h, cT_smul_sub σ h]
     simp only [Matrix.smul_mul, Matrix.mul_smul, Matrix.add_mul, Matrix.mul_add, Matrix.sub_mul, Matrix.mul_sub,
       xx, xy, yx, yy, xz, yz, zx, zy, add_zero, zero_add, sub_zero, zero_sub, smul_zero, sub_self,
-      add_neg_cancel, neg_add_cancel, fromRows_zero, fromCols_zero, smul_neg, sub_neg_eq_add]
+      neg_add_cancel, fromRows_zero, fromCols_zero, smul_neg]
     congr 1
     · congr 1
       module

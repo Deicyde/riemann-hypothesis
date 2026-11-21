@@ -1,4 +1,5 @@
-import Development.EtaleCohomology.EtaleTrace.TorsionH0PointOfTwistCoverCocycle
+import BuildAid.Leniency.Open
+import Development.EtaleCohomology.EtaleTrace.TorsionH0PointOfLocalTwist
 
 open CategoryTheory AlgebraicGeometry
 

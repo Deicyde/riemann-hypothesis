@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.CuspLatticeAnyLevel
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SupremumLattice
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LMLatOfLIntegral

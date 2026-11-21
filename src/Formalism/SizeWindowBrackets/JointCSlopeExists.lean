@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SizeWindowBrackets.CutFailsForRSubmodule
-import Formalism.SizeWindowBrackets.SlopesHypothesisFinitePlaces
 import Formalism.SizeWindowBrackets.Chain2aCoreNoAnalytic
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 open Module NumberField
 open scoped Pointwise

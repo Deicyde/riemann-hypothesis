@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsTorsionFreeOfForallExists
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsIsoGenResMapSmulHom
 
 open CategoryTheory AlgebraicGeometry

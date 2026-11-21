@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.ChernClassEvaluation
+import Development.EtaleCohomology.EtaleSheaves.ChernClassRootLocalization
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry Opposite CochainComplex CochainComplex.HomComplex GlobalTheory.EtC

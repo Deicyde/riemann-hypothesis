@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.DatumEquiv
+import Mathlib.Topology.Algebra.MvPolynomial
 
 noncomputable section
 

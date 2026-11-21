@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.CoprimeFrobeniusUniformizerPowers
+import Formalism.SharpRestriction.LevelLetterCocycles.RelayGeneralCaseOfAdmissible
 
 noncomputable section
 

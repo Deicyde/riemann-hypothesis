@@ -1,10 +1,7 @@
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.PieriBlockIdeals.StatementE
 import Formalism.PieriBlockIdeals.PieriColumnMinors.WeightBounds
-import Formalism.PieriBlockIdeals.PieriColumnMinors.LargeParameterEstimates
-import Formalism.PieriBlockIdeals.PieriColumnMinors.CorollaryOfParamsSevenLinkageAlt
-import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.AuxStatement14
-import Formalism.MirabolicMackeyTheory.MirabolicMackeyProofs.RamBasic
-import Formalism.PieriBlockIdeals.PieriColumnMinors.ProdInitialMinorsMemDetSpan
 
 noncomputable section
 

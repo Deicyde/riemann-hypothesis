@@ -1,4 +1,5 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.ImportsAlt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.ArcBasic
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.LiftsAtThickLetterType
 import Formalism.SharpRestriction.LevelLetterCocycles.ArcCoordinatesOfMembership

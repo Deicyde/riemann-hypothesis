@@ -1,5 +1,11 @@
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsIsCan
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.AlgHomEqEval
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.TotallySplit
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj
 open GlobalTheory.ThetaTrace GlobalTheory.HkFam GlobalTheory.Frames GlobalTheory.HeckeEx
@@ -26,7 +32,7 @@ theorem trace_pi_self {K : Type} [Field K] {P : Type} [Fintype P] [DecidableEq P
   let b := Pi.basisFun K P
   rw [Algebra.trace_eq_matrix_trace b, Matrix.trace]
   refine Finset.sum_congr rfl fun p _ => ?_
-  simp [Algebra.leftMulMatrix_eq_repr_mul, b, Pi.single_apply]
+  simp [Algebra.leftMulMatrix_eq_repr_mul, b]
 
 theorem exists_trace_eq_finsum : ∀ (R B : Type) [CommRing R] [CommRing B] [Algebra R B], Module.Finite R B →
     Algebra.Etale R B → ∀ b : B, ∃ v : R, ∀ (Ω : Type) [Field Ω] [IsAlgClosed Ω] (φ : R →+* Ω),

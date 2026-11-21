@@ -1,7 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataIdx
 import Formalism.LocalRingCardinality.SpanPowerMembership.DivXExample
 import Formalism.LocalRingCardinality.SpanPowerMembership.NZRowB
-import Formalism.LocalRingCardinality.SpanPowerMembership.NZRowC
+import Formalism.LocalRingCardinality.DataKap
 
 noncomputable section
 

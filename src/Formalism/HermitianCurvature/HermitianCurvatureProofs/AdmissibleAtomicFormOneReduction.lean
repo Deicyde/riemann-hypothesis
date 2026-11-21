@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.VanishingOfL2Equivariant
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.DiscreteSeriesFormOneReduction
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.L2NormScaling
 
 open MeasureTheory Matrix
 open scoped InnerProductSpace ENNReal

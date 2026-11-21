@@ -1,10 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LiftsInvOne
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TrueColumnSpacesStandardInFrameCoords
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.BcPrVEqOneOfAdAt
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ValuedLtOfMem
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.NarrowJetMoments
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.AfsplitA
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.BaseFieldsPrimesOk
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Col Formalism.L2.DIV Formalism.L2.Ker Formalism.UG Formalism.L2.Forms GlobalTheory.Mem GlobalTheory.Mem.Chr GlobalTheory.Mem.Col2 GlobalTheory.Mem.Col2.TC GlobalTheory.Mem.Col2.AdT Matrix
 attribute [local instance] GlobalTheory.Mem.Col2.starE Formalism.BasicNotions.Host.cmStar
 
@@ -20,12 +20,12 @@ def sng (P : HeightOneSpectrum (𝓞 E)) (x : P.adicCompletion E) : AfE F E := (
 
 theorem adAt_sng_self (P : HeightOneSpectrum (𝓞 E)) (x : P.adicCompletion E) : adAt F P (sng F P x) = x := by
   rw [adAt_apply, sng]
-  simp only [RingEquiv.apply_symm_apply, AlgEquiv.apply_symm_apply]
+  simp only [RingEquiv.apply_symm_apply]
   exact Formalism.UG.P.afsplitF_self P x
 
 theorem adAt_sng_ne {P w : HeightOneSpectrum (𝓞 E)} (h : w ≠ P) (x : P.adicCompletion E) : adAt F w (sng F P x) = 0 := by
   rw [adAt_apply, sng]
-  simp only [RingEquiv.apply_symm_apply, AlgEquiv.apply_symm_apply]
+  simp only [RingEquiv.apply_symm_apply]
   exact Formalism.UG.P.afsplitF_ne P w h x
 
 def dev {n : ℕ} (P : HeightOneSpectrum (𝓞 E)) (A : Matrix (Fin n) (Fin n) (P.adicCompletion E)) :

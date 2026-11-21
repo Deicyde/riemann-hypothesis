@@ -1,7 +1,7 @@
-import Formalism.SharpRestriction.GrowthBounds.MonomialFactorials.BejjSmulLeft
-import Formalism.MahlerMeasure.MahlerMeasureProofs.MeanGam
-import Formalism.MahlerMeasure.CoarseLevelSlackInequalities
-import Formalism.MahlerMeasure.FinalD
+import BuildAid.Leniency.Open
+import Formalism.MahlerMeasure.GoodCount
+import Formalism.MahlerMeasure.StatementD
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 noncomputable section
 

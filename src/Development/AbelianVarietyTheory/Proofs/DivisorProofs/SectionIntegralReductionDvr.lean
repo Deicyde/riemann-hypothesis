@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DrAtNonneg
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PadicEmbeddingOfDvrStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArithmeticSectionPadicBoundStatement
 open NumberField IsDedekindDomain Filter Topology

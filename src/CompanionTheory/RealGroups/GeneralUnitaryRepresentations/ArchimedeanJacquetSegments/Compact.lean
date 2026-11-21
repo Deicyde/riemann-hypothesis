@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.RealGroups.GeneralUnitaryRepresentations.ArchimedeanJacquetSegments.Complementary
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsLocallyConstantModulus
 import Development.AbelianVarietyTheory.Definitions.Divisors.EqOfHasValueAtInfinite

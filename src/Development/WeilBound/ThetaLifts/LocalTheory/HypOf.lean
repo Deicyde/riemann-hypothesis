@@ -1,10 +1,10 @@
-import Development.WeilBound.ThetaLifts.LocalTheory.StepFacEq
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.CartanFactorisation.CuspidalClassOfWeilConvergence
 import Development.WeilBound.ThetaLifts.CartanFactorisation.Kills0Of
-import Development.WeilBound.ThetaLifts.CartanFactorisation.Unimod
 import Development.WeilBound.ThetaLifts.LatticeBasics.PolDense
 import Development.WeilBound.ThetaLifts.TowerModels.LeviEx
 import Development.WeilBound.ThetaLifts.LeviDeterminants.ActsEx
+import Development.WeilBound.ThetaLifts.LocalTheory.AdmissiblePureTensorSchwartz
 
 namespace PositivityTheory.ThKG.Loc
 

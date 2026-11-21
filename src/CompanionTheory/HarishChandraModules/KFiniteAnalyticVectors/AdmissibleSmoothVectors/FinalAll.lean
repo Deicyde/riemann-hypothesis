@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import CompanionTheory.HarishChandraModules.KFiniteAnalyticVectors.AdmissibleSmoothVectors.AdmissibleOfIwasawa
-import CompanionTheory.HarishChandraModules.KFiniteAnalyticVectors.AdmissibleSmoothVectors.IwaAll
 import Formalism.PeriodIntegrals.PhMeasCore
 import Formalism.RealPlaceAnalysis.Complexify
 

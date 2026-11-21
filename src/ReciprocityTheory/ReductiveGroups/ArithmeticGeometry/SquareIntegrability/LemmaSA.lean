@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.GCauchyStatement
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Tactic.Polynomial.Basic
 
 namespace ReciprocityTheory.ChartRestriction.G.I2
 
@@ -17,8 +22,7 @@ lemma lemS_Hf_im (x y : EuclideanSpace ℂ ι) :
     | rw [Complex.inner]
     | rw [real_inner_eq_re_inner ℂ]
   simp only [Complex.mul_re, Complex.mul_im, Complex.neg_re, Complex.neg_im, Complex.I_re,
-    Complex.I_im, Complex.conj_re, Complex.conj_im, RCLike.re_to_complex,
-    RCLike.inner_apply]
+    Complex.I_im, Complex.conj_re, Complex.conj_im]
   ring
 
 def lemSJ : EuclideanSpace ℂ ι →ₗ[ℝ] EuclideanSpace ℂ ι :=

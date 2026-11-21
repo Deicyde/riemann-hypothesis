@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.DiscreteSeries.DiscreteSeriesCovers.EquivariantSections.EquivSection
 
 noncomputable section
@@ -99,7 +101,7 @@ lemma lop_lw (H : HolFacts) (μ : Fin n → ℤ) (c : Fin n) (w : List (Fin n ×
       · subst h1; subst h2; simp
       · subst h1; simp [h2]
       · subst h2; simp [h1, Ne.symm h1]
-      · simp [h1, h2, Ne.symm h1, Ne.symm h2]
+      · simp [h1, h2, Ne.symm h1]
     rw [hlw, rel', hwt, ← add_smul]
     congr 1
     push_cast

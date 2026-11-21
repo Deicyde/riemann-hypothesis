@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.RatioInvLeFrameFactor
+import Formalism.SharpRestriction.CuspSpanNormBounds.StarVecMulDM
 
 open MeasureTheory Matrix Finset
 

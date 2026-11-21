@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeIntZero
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HaarOIsAddHaar
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GoodModelEigenContinuous
 open MeasureTheory Filter NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.ConeSoB GlobalTheory.StdPairLoc
 open scoped Matrix GlobalTheory.VacAny
 attribute [local instance] GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.measFv GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.borelFv
@@ -35,7 +33,7 @@ theorem insS_rank_le {R : Type} [Field R] {a b : ℕ} (Y : Matrix (Fin b) (Fin (
     by_cases i1 : i.1 = b + 1
     · refine Submodule.mem_sup_right (Submodule.mem_span_singleton.2 ⟨1, ?_⟩)
       funext j
-      simp [insS, i0, i1]
+      simp [insS, i1]
     · have hk : i.1 - 1 < b := by have := i.2; omega
       have hrow : insS Y r c x i = g (Y ⟨i.1 - 1, hk⟩) + c ⟨i.1 - 1, hk⟩ • e := by
         funext j

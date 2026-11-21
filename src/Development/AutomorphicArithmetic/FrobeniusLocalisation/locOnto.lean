@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.FrobeniusLocalisation.DiffDefs
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.FrobeniusLocalisation.LocStab
 
 open UpperTheory.HF

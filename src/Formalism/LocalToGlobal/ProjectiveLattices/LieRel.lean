@@ -1,5 +1,7 @@
-import Formalism.LocalToGlobal.ProjectiveLattices.VAtVNeBot
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.RankPf
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.FlagBasis
 
 set_option synthInstance.maxHeartbeats 400000
 
@@ -126,7 +128,7 @@ theorem fst_alg : spMap (TrivSqZeroExt.fstHom K K K).toRingHom ≫ spMap (algebr
   show Spec.map _ ≫ Spec.map _ = _
   rw [← Spec.map_comp, ← CommRingCat.ofHom_comp]
   have hid : (TrivSqZeroExt.fstHom K K K).toRingHom.comp (algebraMap K (DualNumber K)) = RingHom.id K :=
-    RingHom.ext fun a => by simp [TrivSqZeroExt.algebraMap_eq_inl]
+    RingHom.ext fun a => by simp
   rw [hid, CommRingCat.ofHom_id, Spec.map_id]
 
 def iotaX : epsAt x ⟶ Over.mk ((viaT (𝟙 (Sp K)) (sp (R₀ := K) (DualNumber K))).hom ≫ x) :=

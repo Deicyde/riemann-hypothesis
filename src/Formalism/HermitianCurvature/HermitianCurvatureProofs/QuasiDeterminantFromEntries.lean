@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementFr
-import Formalism.YangianSpanCharacter.YangianRelationFirst
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Matrix Formalism.YangianSpanCharacter.T Formalism.YangianSpanCharacter.Y Formalism.FourierDecayAlt.R Formalism.FourierDecayAlt.Wd Formalism.FourierDecayAlt.Fr
 
@@ -71,12 +75,12 @@ theorem gauss_decomp_minus_letter : GaussMinus := by
 private theorem e1_mul_e2_apply {B : Type*} [Ring B] (X Y : Matrix (Fin 2) (Fin 2) B) (a b j l : Fin 2) :
     (Formalism.YangianSpanCharacter.T.E1 X * Formalism.YangianSpanCharacter.T.E2 Y) (a, b) (j, l) = X a j * Y b l := by
   fin_cases a <;> fin_cases b <;> fin_cases j <;> fin_cases l <;>
-    simp [Matrix.mul_apply, Fintype.sum_prod_type, Fin.sum_univ_two, Formalism.YangianSpanCharacter.T.E1, Formalism.YangianSpanCharacter.T.E2]
+    simp [Matrix.mul_apply, Fintype.sum_prod_type, Formalism.YangianSpanCharacter.T.E1, Formalism.YangianSpanCharacter.T.E2]
 
 private theorem e2_mul_e1_apply {B : Type*} [Ring B] (X Y : Matrix (Fin 2) (Fin 2) B) (a b j l : Fin 2) :
     (Formalism.YangianSpanCharacter.T.E2 Y * Formalism.YangianSpanCharacter.T.E1 X) (a, b) (j, l) = Y b l * X a j := by
   fin_cases a <;> fin_cases b <;> fin_cases j <;> fin_cases l <;>
-    simp [Matrix.mul_apply, Fintype.sum_prod_type, Fin.sum_univ_two, Formalism.YangianSpanCharacter.T.E1, Formalism.YangianSpanCharacter.T.E2]
+    simp [Matrix.mul_apply, Fintype.sum_prod_type, Formalism.YangianSpanCharacter.T.E1, Formalism.YangianSpanCharacter.T.E2]
 
 private theorem pf_mul_apply {B : Type*} [Ring B] (N : Matrix (Fin 2 × Fin 2) (Fin 2 × Fin 2) B)
     (i k j l : Fin 2) : (Formalism.YangianSpanCharacter.T.Pf B * N) (i, k) (j, l) = N (k, i) (j, l) := by
@@ -318,7 +322,7 @@ theorem start_is_frame : StartFrame := by
     by_cases h : i = j
     · subst h
       simp [io, Matrix.star_apply, Matrix.scalar_apply]
-    · simp [io, Matrix.star_apply, Matrix.scalar_apply, Matrix.diagonal_apply, h, Ne.symm h]
+    · simp [io, Matrix.star_apply, Matrix.scalar_apply, h, Ne.symm h]
   refine
     { module := ?_, lowerLeftEntry_commute := ?_, inv_reg := ?_, F_Fi := ?_, Fi_F := ?_, x_xi := ?_, c_ci := ?_,
       x_commute := ?_, x_c := ?_, x_fn := ?_, x_nab := ?_, c_fn := ?_, x_star := ?_, c_star := ?_,
@@ -349,7 +353,7 @@ theorem start_is_frame : StartFrame := by
   · exact star_one _
   · intro Y g hg
     exact hio_comm _ _ (hst.ee_fn Y g hg)
-  · simp [Formalism.FourierDecayAlt.Fr.FrameData.d, Start.frame]
+  · simp [Formalism.FourierDecayAlt.Fr.FrameData.d]
   · intro Y _
     simp only [lift0, Matrix.map_apply, one_mul, mul_one]
     rw [hst.tau Y]

@@ -1,7 +1,8 @@
-import Mathlib
-import GroundTheory.ArithmeticGeometry.SchemeCohomology.ProperCohomology.FormalIdealMul
-import GroundTheory.ArithmeticGeometry.SchemeCohomology.ProperCohomology.FormalLimit
-import GroundTheory.ArithmeticGeometry.SchemeCohomology.ProperCohomology.CohFinite
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.ArithmeticGeometry.SchemeCohomology.ProjectiveCohomology.SerrePAux
+import GroundTheory.ArithmeticGeometry.SchemeCohomology.ProperCohomology.FormalIdeal
+import Mathlib.CategoryTheory.Abelian.GrothendieckCategory.HasExt
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Arith.SchemeCoh
@@ -110,7 +111,7 @@ def quotPowSCMap (n : ℕ) : quotPowSC I F (n + 1) ⟶ quotPowSC I F n where
 lemma formalδ_naturality (n : ℕ) (x : Sheaf.H.{u} (modulesAb (quotPow I F (n + 1))) q) :
     formalδ I F q n (formalτE I F q n x) =
       H.linearMap A (idealPowSucc I F (n + 1)) (q + 1) (formalδ I F q (n + 1) x) := by
-  simp only [formalδ, formalτE, H.δLinear_apply, H.linearMap_apply]
+  simp only [formalδ, formalτE, H.linearMap_apply]
   exact H.δ_naturality (shortExact_abSC_quotPow I F (n + 1)) (shortExact_abSC_quotPow I F n)
     (abSCHom (quotPowSCMap I F n)) q (q + 1) rfl x
 

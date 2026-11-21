@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.HilbertNinetyQuotientHomEqIff
+import Mathlib.Topology.Sheaves.Presheaf
 
 open GlobalTheory.WeilM Filter Topology
 open scoped Classical

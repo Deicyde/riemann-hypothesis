@@ -1,7 +1,9 @@
-import Formalism.HermitianCurvature.BigCellVanishingOfCommute
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.RegularisedPairingViaPhase
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.HomogeneityNaturalDegree
 import Mathlib.Topology.Algebra.MvPolynomial
+import Mathlib.Data.Int.Star
 
 open Formalism.REAL Formalism.QuantumDeterminants Formalism.FourierDecayAlt Filter Topology
 

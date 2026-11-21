@@ -1,15 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HomFactorsThroughMulN
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSectionLiftSmoothNilpotentThickening
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RigExtMapRelFrobCompRigOfOmega
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqOfPullbackQuotientEq
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PelPDivisiblePropertiesExtend
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsPerfectOfIsDual
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TopIsoInvRestrictAppTop
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PullUInjectiveOfFlatSurjective
 import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.AbelianSchemeCubicalBundleExistsAndMaps
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsBirigidifiedKthRootPullbackBundle
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ValCalc
+import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.ExistsTorusAndQuotientHom
 
 noncomputable section
 
@@ -30,7 +24,7 @@ def tr (y : T ⟶ A) : A ⊗ T ⟶ A ⊗ T := lift (fst A T * (snd A T ≫ y)) (
 
 theorem tr_mul (y y' : T ⟶ A) : tr (y * y') = tr y ≫ tr y' := by
   apply CartesianMonoidalCategory.hom_ext
-  · simp only [tr, Category.assoc, lift_fst, MonObj.comp_mul, lift_fst_assoc, lift_snd_assoc, _root_.mul_assoc]
+  · simp only [tr, Category.assoc, lift_fst, MonObj.comp_mul, lift_snd_assoc, _root_.mul_assoc]
   · simp [tr]
 
 theorem tr_whisker {B : Over S} [GrpObj B] (f : A ⟶ B) [IsMonHom f] (y : T ⟶ A) :
@@ -155,7 +149,7 @@ theorem gm_id_eq_one {V Z : Scheme.{0}} (i : V ⟶ Z) [IsOpenImmersion i] (w : V
     (asIso (i.stalkMap w)).commRingCatIsoToRingEquiv.injective
   apply hinj
   rw [map_one, ← h1]
-  simp only [Scheme.Hom.id_app, CommRingCat.hom_id, RingHom.id_apply]
+  simp only [Scheme.Hom.id_app]
   exact Scheme.Hom.germ_stalkMap_apply i ⊤ w trivial _
 
 theorem exists_gen_of_val_eq (hL : L.IsLB) {E F : Scheme.{0}} (π : E ⟶ F) (hF : Flat π) (hS : Surjective π)

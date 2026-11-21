@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.GL2Classical.ExistsIntOfMemIntegralFiniteAdeles
 import GroundTheory.AutomorphicForms.AutomorphicFormSpaces.Archimedean
+import Mathlib.Data.Rat.Star
+import Mathlib.NumberTheory.ModularForms.CongruenceSubgroups
 
 open NumberField IsDedekindDomain Matrix CongruenceSubgroup
 open GroundTheory.Global

@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.PeriodIntegrals.UpqRep
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.KFinSmooth
 import Formalism.PeriodIntegrals.HCMult
 

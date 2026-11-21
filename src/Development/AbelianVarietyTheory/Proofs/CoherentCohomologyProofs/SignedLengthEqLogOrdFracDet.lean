@@ -1,4 +1,11 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.QuasicoherentCohomology.LengthCommensurableMapIffOfInjective
+import Mathlib.RingTheory.OrderOfVanishing.Basic
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 universe u_1 u_2 u_3 u_4
 
@@ -43,7 +50,7 @@ theorem length_coker {R : Type*} [CommRing R] [IsDomain R] [IsPrincipalIdealRing
     rw [LinearMap.toMatrix_apply, this, Matrix.diagonal_apply]
     split_ifs with h
     · subst h; simp
-    · simp [Finsupp.single_apply, Ne.symm h]
+    · simp [Ne.symm h]
   rw [Ring.ord_eq_of_associated h1, h2, ord_finprod _ _ hc,
     (Submodule.quotientEquivPiSpan N b hrk).length_eq, Module.length_pi_of_fintype]
   rfl

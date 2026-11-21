@@ -1,6 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.FibreIff
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.PushRProdPtsResP
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.EigenvectorLieDegree
+import Development.AbelianVarietyTheory.Proofs.GenericRegularity.LieCombBaseChange
+import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.HomLieEquivScalarTmul
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ExistsAwayNotMem
 
 set_option autoImplicit false
 

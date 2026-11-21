@@ -1,12 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.LevelChainValuations.LatDefs
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.LevelChainValuations.ToBSurj
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.BocksteinBaseChange.BcrisRegularPeriodRing
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.AcrisKummerUnits.MapUgAlgebraMap
-import GroundTheory.PAdicHodge.UntiltFrobeniusEquivSymmEpsilonNeOne
-import GroundTheory.PAdicHodge.BdRAlgCl
-import GroundTheory.PAdicHodge.BdRGalois
-import GroundTheory.PAdicHodge.BdRField
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

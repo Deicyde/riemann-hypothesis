@@ -1,24 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.SlopeBoundSt
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ArchBetween
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.BdryChart
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.ClopenCondOnto
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.HeckeKer
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.BlowupProjections.BlowupProjStatement
-import Development.AbelianVarietyTheory.PublishedTheorems.SemiabelianTori.GeometricallyConnectedSplitTorusAff
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.GrIsGenAt
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.FlagLabelBasesExist
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LatticeRegularAtLocalPoint
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LieLatticeEvalAtLocalRingStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.PrimeChartExistsUniquePointStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.RegAtIffChartLocalization
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsUniqueCentreLocalHomStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LieModelPullbackCorrespondence
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsLieModel
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.IsExcisionNbhdAway
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.FunctionFieldRatioGenerators
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.RootOriginRootIndexBound
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Counterexamples.ModuliSurvey.IsQProjOverOfIsProjOver
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LocalSubringCoordRatioValueStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ValueScalingByMonomialStatement
@@ -436,7 +417,7 @@ theorem genUnit_join : ∀ (E : Type) [Field E] [NumberField E] [IsCMField E] (H
     have hsgn : HodgeCpt.rootSgn D r = 1 ∨ HodgeCpt.rootSgn D r = -1 := by
       unfold HodgeCpt.rootSgn
       split_ifs <;> simp
-    rcases hsgn with h' | h' <;> rw [h'] <;> simp only [zpow_one, _root_.zpow_neg, inv_inv, inv_div] <;> constructor <;>
+    rcases hsgn with h' | h' <;> rw [h'] <;> simp only [zpow_one, _root_.zpow_neg, inv_div] <;> constructor <;>
       first | exact ut | exact ut₀
   obtain ⟨s, hsdef⟩ : ∃ s : M.Ω, s = i (m₂ * e₀ r * t₀ ^ (-HodgeCpt.rootSgn D r)) *
       (m₁ * e r * t ^ (-HodgeCpt.rootSgn D r))⁻¹ * (i t₀ / t) ^ HodgeCpt.rootSgn D r := ⟨_, rfl⟩

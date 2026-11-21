@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.AutomorphicFormSpaces.SmoothKZ
+import GroundTheory.AutomorphicForms.GKModules.GKModule
 
 open NumberField IsDedekindDomain Topology Filter Set
 open scoped NumberField.AdeleRing

@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AutomorphicArithmetic.AutomorphicVarieties.NumberFieldTowers.XTwApplyApply
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AdditiveValuationNorms.QzInj
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.GaloisCohomology UpperTheory.V UpperTheory.V.LDataCardLeFinrank UpperTheory.V.Base UpperTheory.V.Kum UpperTheory.V.Tower
@@ -16,7 +15,7 @@ theorem UpperTheory.V.Tower.dualKer :
     constructor
     · rintro ⟨g, rfl⟩
       ext ⟨x, hx⟩
-      simp only [LinearMap.lcomp_apply, LinearMap.comp_apply, Submodule.subtype_apply,
+      simp only [LinearMap.lcomp_apply, Submodule.subtype_apply,
         LinearMap.zero_apply]
       rw [LinearMap.mem_ker.mp hx, map_zero]
     · intro hf
@@ -29,7 +28,7 @@ theorem UpperTheory.V.Tower.dualKer :
       obtain ⟨h, hh⟩ := hI.out (LinearMap.range T).subtype Subtype.val_injective g0
       refine ⟨h, ?_⟩
       ext x
-      simp only [LinearMap.lcomp_apply, LinearMap.comp_apply]
+      simp only [LinearMap.lcomp_apply]
       have := hh ⟨T x, LinearMap.mem_range_self T x⟩
       simp only [Submodule.subtype_apply] at this
       rw [this]

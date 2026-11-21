@@ -1,9 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.AxesVanishingStructureSheafDegOne
-import Development.AbelianVarietyTheory.Definitions.AbelianSchemeLaws.IsScalarTowerOfAlgebraMapEq
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.AbelianHodgeDeRham
-import Development.AbelianVarietyTheory.Definitions.Divisors.HopfLaurent
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.QuasiCompactZeroSec
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUniqueRingHomOfSqZeroExtPointAffineStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsTranslationSqZeroPointsUnitToPointStatement
 open CategoryTheory CategoryTheory.Limits AlgebraicGeometry KaehlerDifferential MonoidalCategory CartesianMonoidalCategory MonObj TensorProduct
@@ -56,7 +52,7 @@ def derOf (c : B →+* TrivSqZeroExt B M) (h1 : ∀ b, (c b).fst = b)
     rw [map_add]; rfl
   map_smul' r b := by
     simp only [RingHom.id_apply, Algebra.smul_def, map_mul, h2, TrivSqZeroExt.snd_mul, TrivSqZeroExt.fst_inl,
-      TrivSqZeroExt.snd_inl, op_smul_eq_smul, smul_zero, add_zero]
+      TrivSqZeroExt.snd_inl, smul_zero, add_zero]
     rw [algebraMap_smul]
   map_one_eq_zero' := by simp
   leibniz' a b := by

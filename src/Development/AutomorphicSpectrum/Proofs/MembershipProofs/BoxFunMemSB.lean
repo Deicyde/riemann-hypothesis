@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.MembershipCriteria.GoodChar
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.HilbertNinetyQuotientHomEqIff
 
 noncomputable section
 

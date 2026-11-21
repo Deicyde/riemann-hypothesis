@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MembershipProofs.BoundMulTranslate
+import Mathlib.Analysis.Distribution.SchwartzSpace.Deriv
 
 noncomputable section
 

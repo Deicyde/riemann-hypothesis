@@ -1,9 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.FamDefs
-import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.NGVanish
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Statements.CuspFrameWeights.StepAnalyticConstantsP
-import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.NGData
-import Formalism.HermitianCurvature.HeisenbergConjugationMeasurePreserving
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.NormChainLemmas
 
 noncomputable section

@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.StableIffCarrierEq
-import Development.AbelianVarietyTheory.Definitions.ExistenceOfLattices.CoeSelfDualLatticeInFrameCoordinatesEq
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.DataTheta
 
 namespace GlobalTheory.NatSmulMemLattice
 

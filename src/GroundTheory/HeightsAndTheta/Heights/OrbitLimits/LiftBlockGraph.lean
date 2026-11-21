@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StatementsLiftBlockDatum
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PCoordArithOfFnField
 import GroundTheory.HeightsAndTheta.Heights.Intersections.AvoidRing

@@ -1,8 +1,9 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.ChowlaSelberg.Statements
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ChowlaSelberg.PWIdealField
 import GroundTheory.HeightsAndTheta.Heights.ChowlaSelberg.PWIdealPrimes
 import GroundTheory.HeightsAndTheta.Heights.ChowlaSelberg.PWIdealPrincipal
+import GroundTheory.GlobalFields.ComplexMultiplication.ClassGroupAction
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.ChowlaSelberg

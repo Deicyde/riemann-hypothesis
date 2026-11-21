@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Degenerations.NotAllMatchRankZero
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.MulqLawsStatement
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.DegenerationDataTorsionStructureAlgClosed

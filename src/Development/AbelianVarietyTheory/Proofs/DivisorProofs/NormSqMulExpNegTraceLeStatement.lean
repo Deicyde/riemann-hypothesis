@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormSqMulExpNegTraceLe
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.OmegaFactorization
 open NumberField Complex
 open scoped nonZeroDivisors
 open GlobalTheory.IndefiniteRowSideFullHecke.OmegaFactorization

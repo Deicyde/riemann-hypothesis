@@ -1,4 +1,8 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.ArakelovInstances.PnormInvStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Tactic.Polynomial.Basic
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.ArakelovInstances.IsStrictDom
+import Std.Tactic.BVDecide.Normalize.Prop
 
 set_option autoImplicit false
 

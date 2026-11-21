@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.ZetaEulerProducts.InvGammaRZo
 import Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.ZetaEulerProducts.SummablePrimesRpow
+import Mathlib.Analysis.SpecialFunctions.Complex.Analytic
 
 open Filter Topology Complex NumberField InfinitePlace
 open scoped Real

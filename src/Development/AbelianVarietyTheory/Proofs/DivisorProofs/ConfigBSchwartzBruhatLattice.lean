@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeIntZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TripleLatticeInvariantSchwartzGlobal
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeCoordinateInjectionAdapted
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
 open MeasureTheory Filter NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.ConeSoB
 open scoped TensorProduct
 

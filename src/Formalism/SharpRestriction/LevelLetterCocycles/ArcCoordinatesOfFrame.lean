@@ -1,9 +1,9 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.JumpsLetOfWin
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.SaturationPullbackOfRingCondition
 import Formalism.SharpRestriction.LevelLetterCocycles.AnnihilatorGeneralOfRingCondition
 import Formalism.SharpRestriction.LevelLetterCocycles.WachFrobeniusLatticeUnramifiedFunctor
 import Formalism.SharpRestriction.LevelLetterCocycles.BaseChangePreservesUnitaryOf
-import Formalism.SharpRestriction.LevelLetterCocycles.RingConditionOfDeltaInvariants
 
 noncomputable section
 

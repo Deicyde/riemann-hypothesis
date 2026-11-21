@@ -1,4 +1,41 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
 
 open Matrix Complex ComplexConjugate
 
@@ -40,7 +77,7 @@ theorem star_dotProduct_self (g : Fin p → ℂ) : star g ⬝ᵥ g = ((sqNorm g 
 
 theorem projPerp_apply (g : Fin p → ℂ) (i l : Fin p) :
     projPerp g i l = (if i = l then 1 else 0) - ((sqNorm g : ℝ) : ℂ)⁻¹ * (g i * conj (g l)) := by
-  simp [projPerp, Matrix.sub_apply, Matrix.one_apply, vecMulVec_apply, Complex.star_def]
+  simp [projPerp, Matrix.sub_apply, Matrix.one_apply, vecMulVec_apply]
 
 theorem projPerp_mulVec (g w : Fin p → ℂ) :
     projPerp g *ᵥ w = w - (((sqNorm g : ℝ) : ℂ)⁻¹ * (star g ⬝ᵥ w)) • g := by
@@ -74,7 +111,7 @@ theorem conj_projPerp (g : Fin p → ℂ) (i l : Fin p) :
     apply_ite (starRingEnd ℂ), map_one, map_zero]
   by_cases h : i = l
   · subst h
-    simp only [if_pos rfl]
+    simp only
     ring
   · rw [if_neg h, if_neg (Ne.symm h)]
     ring
@@ -100,7 +137,7 @@ theorem sum_normSq_projPerp {g : Fin p → ℂ} (hg : g ≠ 0) :
     intro l
     have h1 : sqNorm (Pi.single l (1 : ℂ)) = 1 := by
       unfold sqNorm
-      rw [Finset.sum_eq_single l (fun b _ hb => by simp [Pi.single_apply, hb]) (by simp)]
+      rw [Finset.sum_eq_single l (fun b _ hb => by simp [hb]) (by simp)]
       simp
     have := sqNorm_projPerp_mulVec hg (Pi.single l (1 : ℂ))
     have h2 : star g ⬝ᵥ Pi.single l (1 : ℂ) = star (g l) := by

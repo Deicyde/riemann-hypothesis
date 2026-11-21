@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsBlockRatioAlg
 import GroundTheory.HeightsAndTheta.Heights.Intersections.AvoidRing
 import GroundTheory.HeightsAndTheta.Heights.Intersections.IsHorizontalImageZ
-import GroundTheory.HeightsAndTheta.Heights.WeightedHomogeneous.PConeTrdeg
 import GroundTheory.HeightsAndTheta.Heights.WeightedHomogeneous.PIntDomainDim
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PBirationalModelExists
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.PCoordConeArithVar

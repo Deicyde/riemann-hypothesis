@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MulEqOfRangeLe
-import GroundTheory.AutomorphicForms.AnisotropicHeight
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MeasurableSdot
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.OnlyStableSubspaces
 

@@ -1,11 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.ConcreteSettingExists
-import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.WuDecayPf
-import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.SettingBlocks
-import Formalism.LocalToGlobal.SiegelLatticeTheory.CasimirReductionTheory.GgExistsAddCharNeOne
-import Formalism.SharpRestriction.CuspSpanNormBounds.ThresholdCubicInequalitySignPattern
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.StandingHypothesesHoldFamily
-import Formalism.SharpRestriction.CuspSpanNormBounds.NonemptyParameterModels.NumericSettingWithGapSatisfiable
 import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.TensInt
 import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.InHHDef
 import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.LocWSOf
@@ -149,7 +144,7 @@ theorem mem_spanLt {a : ℕ} (c : Fin r) (hc : c.1 < a) : e c ∈ spanLt e a :=
 
 theorem mulVec_mul_sub (g h : Matrix (Fin n) (Fin n) ℂ) (x : Fin n → ℂ) :
     (g * h - 1) *ᵥ x = g *ᵥ ((h - 1) *ᵥ x) + (g - 1) *ᵥ x := by
-  simp only [Matrix.sub_mulVec, Matrix.mulVec_sub, Matrix.mulVec_mulVec, Matrix.one_mulVec, Matrix.mul_one]
+  simp only [Matrix.sub_mulVec, Matrix.mulVec_sub, Matrix.mulVec_mulVec, Matrix.one_mulVec]
   abel
 
 variable {e z}
@@ -197,7 +192,7 @@ theorem inS_inv {g B : Matrix (Fin n) (Fin n) ℂ} (hg : InS e z g) (hBg : B * g
     InS e z B := by
   have key : ∀ x, (B - 1) *ᵥ x = -(B *ᵥ ((g - 1) *ᵥ x)) := by
     intro x
-    simp only [Matrix.sub_mulVec, Matrix.mulVec_sub, Matrix.mulVec_mulVec, hBg, Matrix.one_mulVec, Matrix.mul_one]
+    simp only [Matrix.sub_mulVec, Matrix.mulVec_sub, Matrix.mulVec_mulVec, hBg, Matrix.one_mulVec]
     abel
   refine ⟨fun a => ?_, ?_⟩
   · rw [key]; exact Submodule.neg_mem _ (inS_inv_maps hg hBg hgB a.1 _ (hg.1 a))

@@ -1,6 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.GoodTopBot
-import Development.AbelianVarietyTheory.PublishedTheorems.GlobalTheta.WeylDualWeylLatticesAgreeOfLowestAlcove
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open MvPolynomial Formalism.GradedWeylDivisibility Formalism.BasicNotions GlobalTheory.Alc
 
@@ -76,7 +81,7 @@ theorem rowE_eq_rowDiv (R : Type) [CommRing R] (r n : ℕ) (a b : Fin r) (P : Mv
       simp only [rowGen, aeval_X]
       by_cases h : e = b
       · simp [h, Polynomial.coeff_C]
-      · simp [h, Ne.symm h, Polynomial.coeff_C]
+      · simp [h, Ne.symm h]
     refine ⟨?_, by rw [Polynomial.mul_coeff_zero, hp.2, h0]⟩
     rw [rowE_mul, rowE_X, Polynomial.coeff_mul, Finset.Nat.antidiagonal_succ]
     simp [hp.1, hp.2, h0, h1, add_comm]

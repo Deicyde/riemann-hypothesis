@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AutomorphicArithmetic.ThetaCorrespondence.HoweDuality.FactorApply
-import Development.AutomorphicArithmetic.ThetaCorrespondence.HoweDuality.PartStable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.HoweDuality.NakAll
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.TensorEqTopOrLeKerFiniteLengthModulesStatement
 open scoped TensorProduct

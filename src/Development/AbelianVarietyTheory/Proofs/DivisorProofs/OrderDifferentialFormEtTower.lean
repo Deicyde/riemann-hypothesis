@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GeometricallyConnectedOfIsIsoRestrict
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsLocModelIsPrimeOf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.NotDominatesTopPlace
-import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.ExistsBasisKaehlerOfAlgebraicIndependent
 open CategoryTheory AlgebraicGeometry TopologicalSpace
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open GlobalTheory GlobalTheory.Cartier GlobalTheory.TopForm GlobalTheory.Discrepancy GlobalTheory.FieldPair
@@ -75,8 +73,7 @@ def polyDer (δ : Derivation k R S) (v : Fin r → S) : Derivation k (MvPolynomi
   leibniz' p q := by
     show snd (polyHom δ v (p * q)) = p • snd (polyHom δ v q) + q • snd (polyHom δ v p)
     rw [map_mul, TrivSqZeroExt.snd_mul, polyHom_fst, polyHom_fst]
-    simp only [MulOpposite.smul_eq_mul_unop, MulOpposite.unop_op, smul_eq_mul, Algebra.smul_def,
-      Algebra.algebraMap_self, RingHom.id_apply]
+    simp only [MulOpposite.smul_eq_mul_unop, MulOpposite.unop_op, smul_eq_mul, Algebra.smul_def]
     ring
 
 theorem polyDer_C (δ : Derivation k R S) (v : Fin r → S) (a : R) : polyDer δ v (C a) = δ a := by

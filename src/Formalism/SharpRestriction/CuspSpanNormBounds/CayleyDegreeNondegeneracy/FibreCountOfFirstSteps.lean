@@ -1,7 +1,7 @@
-import Formalism.SharpRestriction.CuspSpanNormBounds.CayleyDegreeNondegeneracy.FibreCountOfIdentification
-import Formalism.SharpRestriction.CuspSpanNormBounds.BruhatCellsKronecker.LretrCancel
-import Formalism.SharpRestriction.CuspSpanNormBounds.BruhatCellsKronecker.LadjFrame
-import Formalism.SharpRestriction.CuspSpanNormBounds.BruhatCellsKronecker.LFrame
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.DataHost
+import Formalism.LocalRingCardinality.DataSpaces
 
 noncomputable section
 

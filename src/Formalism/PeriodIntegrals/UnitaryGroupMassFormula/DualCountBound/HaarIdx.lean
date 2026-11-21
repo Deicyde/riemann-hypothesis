@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.DualCountBound.IsOpenLocO
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.DualCountBound.LatticeStabilizerFixed
 
 noncomputable section
 

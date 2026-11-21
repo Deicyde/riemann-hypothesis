@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SemiabelianSchemes.AbelianSchemeQuotients.QSurjective
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.ReduceModChar
 
 set_option autoImplicit false
 
@@ -121,7 +126,7 @@ lemma charUnit_val (χ : X) :
     (charUnit S X χ).val = ((tFst (S := S) X).appLE ⊤ ⊤
       (tle _)).hom
       ((Scheme.ΓSpecIso (torusRing ZU X)).inv.hom (AddMonoidAlgebra.single χ 1)) := by
-  simp [charUnit, res, pullU, Scheme.Hom.appLE, AddMonoidAlgebra.of_apply]
+  simp [charUnit, res, pullU, Scheme.Hom.appLE]
   rfl
 
 lemma ev_chi (χ : X) :
@@ -155,7 +160,7 @@ lemma coeff_sum_single {A : Type} [CommRing A] (s : Finset X) (g : X → A) (χ�
     (∑ c ∈ s, AddMonoidAlgebra.single c (g c)).coeff χ₀ = g χ₀ := by
   classical
   first
-  | simp [AddMonoidAlgebra.coeff, Finsupp.finset_sum_apply, Finsupp.single_apply, h]
+  | simp [Finsupp.finset_sum_apply, Finsupp.single_apply, h]
   | simp [Finsupp.finset_sum_apply, Finsupp.single_apply, h]
   | simp [AddMonoidAlgebra.coeff_sum, AddMonoidAlgebra.coeff_single, h]
 

@@ -1,8 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.UnitaryNorms.IsUnitaryNormOf
 import Formalism.PairingDivisors.StatementH
 import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.ExistsVariableChangeEqLatticeCurve
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EntireEqOfEqOnHalfPlane
+import Mathlib.RingTheory.PiTensorProduct
 
 noncomputable section
 

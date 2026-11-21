@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.IntegralLocallyConstCochainModPow
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsQDerivationCompletionZpStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsDerivationExtendPadicLaurentToClosureStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.DerivationEqZeroOfIsAlgebraicOverPadicIntegersStatement
@@ -91,7 +90,7 @@ theorem q_not_pow : ∀ (p : ℕ) [Fact p.Prime] (Ω : Type) [Field Ω] [Algebra
   set φ := algebraMap (O0 p) Ω with hφ
   have hEsum := congrArg E hrep
   rw [Derivation.leibniz, map_sum] at hEsum
-  simp only [Derivation.leibniz, hEa _ (ha _), smul_zero, zero_add, smul_eq_mul, hE, mul_zero] at hEsum
+  simp only [Derivation.leibniz, hEa _ (ha _), zero_add, smul_eq_mul, hE, mul_zero] at hEsum
   let c : Fin n → O0 p := fun i => g * f i + (p : O0 p) * D g * f i - (p : O0 p) * g * D (f i)
 
   have hc : ∑ i, c i • a i = 0 := by

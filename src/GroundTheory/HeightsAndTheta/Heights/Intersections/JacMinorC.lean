@@ -1,5 +1,5 @@
-import Mathlib
-import ReciprocityTheory.CommutativeAlgebra.PolynomialHeights.HeightAddRingKrullDimQuotientMvPolynomialField
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.GenSmooth
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterMinorA
 set_option maxSynthPendingDepth 1

@@ -1,11 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NontrivialIsomClassInt
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ArFormExists
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CodimOneIntegralSubschemeDim
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleProductOfEach
-import Development.AbelianVarietyTheory.Definitions.Divisors.GenericPointAsIdeal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.SheetUnsheet
-import Development.AutomorphicSpectrum.PublishedTheorems.Divisibility₂.PairingExists
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open CategoryTheory CategoryTheory.Limits AlgebraicGeometry TopologicalSpace Filter Topology MeasureTheory
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open ReciprocityTheory.ChartRestriction.G.Out (nonzeroLocus)
@@ -37,7 +33,7 @@ theorem finite_ringHom (k : Type) [CommRing k] [Module.Finite ℤ k] : Finite (k
     | mem x h => exact hs' x h
     | zero => simp
     | add x y _ _ hx hy => simp [map_add, hx, hy]
-    | smul a x _ hx => simp [map_zsmul, hx]
+    | smul a x _ hx => simp [hx]
   exact RingHom.ext fun x => hspan x (hs ▸ Submodule.mem_top)
 
 variable {k : Type} [CommRing k] {X : Scheme.{0}}

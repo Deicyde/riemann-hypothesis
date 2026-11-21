@@ -1,9 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.CrystallineCocycles
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.TwistStep
-import Formalism.LocalRingCardinality.AdicCompletionLocal.LocTied
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.LocCoh
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CyclotomicCharacterPadicBasicProperties
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
 open Formalism Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.WeaklyAdmissibleFiltrations Formalism.MainNotions.N GlobalTheory.HyodoDef GlobalTheory.Pst TensorProduct Module
 
 noncomputable section
@@ -17,7 +17,7 @@ def dualEquiv : (Fin (finrank ℚ_[l] V) → ℚ_[l]) ≃ₗ[ℚ_[l]] Module.Dua
 
 theorem dualEquiv_basis (z : Fin (finrank ℚ_[l] V) → ℚ_[l]) (i : Fin (finrank ℚ_[l] V)) :
     dualEquiv z (Module.finBasis ℚ_[l] V i) = z i := by
-  simp [dualEquiv, Basis.equivFun_symm_apply, Finset.sum_apply, Basis.dualBasis_apply_self, Finsupp.single_apply]
+  simp [dualEquiv, Basis.equivFun_symm_apply, Finset.sum_apply, Finsupp.single_apply]
 
 theorem dualEquiv_symm_apply (f : Module.Dual ℚ_[l] V) (i : Fin (finrank ℚ_[l] V)) :
     (dualEquiv (V := V)).symm f i = f (Module.finBasis ℚ_[l] V i) := by

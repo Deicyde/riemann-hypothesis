@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.UnitLemmaGroup
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open GlobalTheory.UnitLemma Polynomial
 
@@ -170,7 +172,7 @@ theorem finite_mod_T_of (K : UQ) (B : InvAlg K)
         simp only [Units.val_mul]
         calc (D : B.A) * D = D * D * (((Nu a₀)⁻¹ : B.Aˣ) * (Nu a₀ : B.A)) := by rw [Units.inv_mul, mul_one]
           _ = _ := by ring
-      · rw [← hNuc]; simp only [Units.val_mul, Mf]; ring
+      · rw [← hNuc]; simp only [Units.val_mul]; ring
     · have := mulLat_le_mul ((((Nu a₀)⁻¹ : B.Aˣ)) : B.A) _ _ Λ k1
       rw [← hNuc, ← hNuc, hcancel] at this
       convert this using 2

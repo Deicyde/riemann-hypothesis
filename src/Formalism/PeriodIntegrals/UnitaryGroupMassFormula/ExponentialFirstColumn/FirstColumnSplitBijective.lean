@@ -1,5 +1,9 @@
-import Formalism.PeriodIntegrals.QmColExp
-import Formalism.RealPlaceAnalysis.RealPlaceTaylor.GeneratorCommutatorQuantumDet
+import BuildAid.Leniency.Open
+import Formalism.PeriodIntegrals.QmDefs
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open Finset
 
@@ -87,7 +91,7 @@ theorem expFirst {A : Type*} [Ring A] [Algebra ℂ A] {n m : ℕ} (E : Fin n →
     ring
   simp only [hs, List.ofFn_succ, List.prod_cons, h0, hk, hu, Function.comp_apply,
     Fin.val_zero, Nat.cast_zero, sub_zero]
-  simp only [← zsmul_eq_mul, smul_mul_assoc, mul_smul_comm, smul_smul]
+  simp only [← zsmul_eq_mul, mul_smul_comm, smul_smul]
   congr 1
   first
   | (push_cast; ring)

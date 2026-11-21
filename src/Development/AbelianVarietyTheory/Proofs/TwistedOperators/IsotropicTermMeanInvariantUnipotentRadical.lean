@@ -1,16 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.AdjointIsotropicDecomposition
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.WeilCompatibleOfSameSplittingCharacterStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.WittTowerRestrictionUnipotentRadicalInvariantStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.UnipotentRadicalTargetPreservesIsotropicMeanStatement
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaRestrictIsotropicQuotientWittTowerPropertieStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsWeilDatumOfSplittingCharactersStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsEtaTildeUnramified
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.RealIdemMulOfReal
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.InfPartOneSubEInfSmul
-import Formalism.LocalToGlobal.BesselHermitianTheta.LemmasChr
-import Development.AbelianVarietyTheory.Counterexamples.HeightSurvey.StarPurelyImaginaryEqNeg
-import Development.AbelianVarietyTheory.Counterexamples.HeightSurvey.EmbRelExistsUnique
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.UnipotentRadicalMeanEqVolumeMulRationalMeanStatement
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.Mult Formalism.IndefR.Datum MeasureTheory NumberField Matrix
@@ -64,7 +58,7 @@ theorem frame_decomp (V V' : HSp D) {r : ℕ} (C C' : Matrix (Fin V.rank) (Fin r
   have hPQ : P * Q = C * (adj D C' * V.gram) + B * (V'.gram⁻¹ * adj D B * V.gram) + C' * (adj D C * V.gram) := by
     simp only [P, Q, Matrix.fromCols_mul_fromRows, add_assoc]
   have hQP : Q * P = 1 := by
-    simp only [P, Q, Matrix.fromRows_mul_fromCols, Matrix.fromRows_mul, Matrix.mul_fromCols]
+    simp only [P, Q, Matrix.fromRows_mul, Matrix.mul_fromCols]
     have e1 : V'.gram⁻¹ * adj D B * V.gram * B = 1 := by
       rw [Matrix.mul_assoc, Matrix.mul_assoc, ← Matrix.mul_assoc (adj D B), hBB, Matrix.nonsing_inv_mul _ hdet]
     have e2 : V'.gram⁻¹ * adj D B * V.gram * C = 0 := by

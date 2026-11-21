@@ -1,13 +1,13 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrameAtApply
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DbarAddVectorScalar
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExtMapComp
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PeriodMapMoebiusDenomUnit
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrameMapContraction
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrameMapWedgeCompat
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ReframeVerticalDerivative
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FderivReframeHorizontalStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MoebImaginaryPartTransformStatement
+import Mathlib.Analysis.Calculus.FDeriv.Star
 
 set_option autoImplicit false
 
@@ -50,7 +50,7 @@ theorem der_empty (M : Matrix (Fin m) (Fin m) ℂ) : der M (Pi.single ∅ 1) = 0
   simp [der_apply, contr_single_empty]
 
 theorem wedge_eq_wedgeVec (a : Fin m) (x : Ext m) : wedge a x = wedgeVec (Pi.single a 1) x := by
-  rw [wedgeVec_apply, Finset.sum_eq_single a] <;> simp +contextual [Pi.single_apply]
+  rw [wedgeVec_apply, Finset.sum_eq_single a] <;> simp +contextual
 
 theorem extMap_der (ψ M N : Matrix (Fin m) (Fin m) ℂ) (h : N * ψ = ψ * M) (w : Ext m) :
     extMap ψ (der N w) = der M (extMap ψ w) := by
@@ -95,7 +95,7 @@ theorem wedgeVec_fderiv (u : V → Fin m → ℂ) (x : V → Ext m) (b : V)
   rw [e]
   refine ⟨h.differentiableAt, fun v => ?_⟩
   erw [h.fderiv]
-  simp [wedgeVec_apply, ContinuousLinearMap.sum_apply, hL, Finset.sum_add_distrib, add_comm]
+  simp [wedgeVec_apply, hL, Finset.sum_add_distrib, add_comm]
 
 theorem genProd_fderiv (ψ : V → Matrix (Fin m) (Fin m) ℂ) (b : V)
     (hψ : ∀ i k, DifferentiableAt ℝ (fun b' => ψ b' i k) b) (v : V) (M : Matrix (Fin m) (Fin m) ℂ)
@@ -126,7 +126,7 @@ theorem extMap_fderiv (ψ : V → Matrix (Fin m) (Fin m) ℂ) (x : V → Ext m) 
     (hxS S).smul (genProd_fderiv ψ b hψ v M hM S).1.hasFDerivAt
   simp only [extMap_apply]
   erw [h.fderiv]
-  simp [ContinuousLinearMap.sum_apply, Finset.sum_add_distrib, map_sum,
+  simp [Finset.sum_add_distrib, map_sum,
     fun S => (genProd_fderiv ψ b hψ v M hM S).2]
 
 theorem mder_mul {ι κ μ : Type} [Fintype κ] (f : V → Matrix ι κ ℂ) (f' : V → Matrix κ μ ℂ) (b v : V)
@@ -138,7 +138,7 @@ theorem mder_mul {ι κ μ : Type} [Fintype κ] (f : V → Matrix ι κ ℂ) (f'
     (hf i k).hasFDerivAt.mul (hf' k j).hasFDerivAt
   simp only [mder, Matrix.mul_apply, Matrix.of_apply, Matrix.add_apply]
   erw [h.fderiv]
-  simp [ContinuousLinearMap.sum_apply, Finset.sum_add_distrib, add_comm, mul_comm]
+  simp [Finset.sum_add_distrib, add_comm, mul_comm]
 
 theorem diff_mul {ι κ μ : Type} [Fintype κ] (f : V → Matrix ι κ ℂ) (f' : V → Matrix κ μ ℂ) (b : V)
     (hf : ∀ i k, DifferentiableAt ℝ (fun b' => f b' i k) b)
@@ -273,8 +273,8 @@ theorem alg1 {k : ℕ} (φ' Y Di φ mY mY2 Gr : Matrix (Fin k) (Fin k) ℂ) :
     (1 / 2 : ℂ) • (((φ' * Y + φ * mY) * Di + φ * Y * Gr) +
       Complex.I • ((((-Complex.I) • φ') * Y + φ * mY2) * Di + φ * Y * (Complex.I • Gr))) =
       φ' * Y * Di + φ * ((1 / 2 : ℂ) • (mY + Complex.I • mY2)) * Di := by
-  simp only [Matrix.smul_mul, Matrix.mul_smul, add_mul, mul_add, smul_add, smul_smul, mul_neg,
-    neg_mul, Complex.I_mul_I, neg_neg, neg_smul, Matrix.mul_assoc]
+  simp only [Matrix.smul_mul, Matrix.mul_smul, add_mul, mul_add, smul_add, smul_smul,
+    neg_mul, Complex.I_mul_I, neg_smul, Matrix.mul_assoc]
   match_scalars <;> ring_nf <;> simp only [Complex.I_sq] <;> ring
 
 theorem alg2 {k : ℕ} (P Y Di D Yi Pi Q X : Matrix (Fin k) (Fin k) ℂ) (h1 : Di * D = 1)
@@ -341,7 +341,7 @@ theorem nablaE_gauge : ∀ {E : Type} [NormedAddCommGroup E] [NormedSpace ℂ E]
     simp only [hφdef]
     rw [mder_conjTranspose _ _ _ hDiR, mder_conjTranspose _ _ _ hDiR, mder_I _ _ _ hDi,
       Matrix.conjTranspose_smul]
-    simp [Complex.star_def]
+    simp
   have hKI : ∀ v, K (Complex.I • v) = (-Complex.I) • K v := by
     intro v; simp only [hK, hφI, Matrix.mul_smul]
   have hG : ∀ w : Pt E g, fderiv ℝ (gauge n τ γ s) P w =
@@ -361,7 +361,7 @@ theorem nablaE_gauge : ∀ {E : Type} [NormedAddCommGroup E] [NormedSpace ℂ E]
     have ex : (Complex.I • x).1 = Complex.I • x.1 := rfl
     simp only [d10]
     rw [hG, hG, ex, hKI, der_fibZero_smul]
-    simp only [map_add, map_sub, map_smul]
+    simp only [map_sub, map_smul]
     match_scalars <;> ring_nf <;> simp only [Complex.I_sq] <;> ring
   have hd01 : ∀ x : Pt E g, d01 (gauge n τ γ s) P x =
       der (fibZero n (K x.1)) (Φ (s (reframe τ γ P))) + Φ (d01 (fun Q => s (reframe τ γ Q)) P x) := by

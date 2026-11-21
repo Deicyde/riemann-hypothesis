@@ -1,4 +1,10 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.CongruenceNumberRankThree
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.LinearAlgebra.Matrix.Charpoly.Eigs
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.MainNotions.N Polynomial GlobalTheory.GalOfCusp UpperTheory.V.Af
 
@@ -24,7 +30,7 @@ theorem UpperTheory.map_trace_eq_sum_roots_of_charpoly_map :
     have hCH : N * N = (b1 + b2) • N - (b1 * b2) • (1 : Matrix (Fin 2) (Fin 2) ℂ) := by
       have e : N * N - ((b1 + b2) • N - (b1 * b2) • (1 : Matrix (Fin 2) (Fin 2) ℂ)) = 0 := by
         rw [← h0]
-        simp only [sub_mul, mul_sub, smul_mul_assoc, mul_smul_comm, one_mul, mul_one, smul_smul]
+        simp only [sub_mul, mul_sub, smul_mul_assoc, mul_smul_comm, one_mul, mul_one]
         module
       exact sub_eq_zero.mp e
     have key : ∀ h : ℕ, (N ^ h).trace = b1 ^ h + b2 ^ h ∧
@@ -46,4 +52,4 @@ theorem UpperTheory.map_trace_eq_sum_roots_of_charpoly_map :
         ring
     intro h
     rw [AddMonoidHom.map_trace, Matrix.map_pow, (key h).1]
-    simp [add_comm]
+    simp

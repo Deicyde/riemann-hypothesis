@@ -1,9 +1,8 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.WeightedSumBounds.PeriodValuationTheory
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.WeightedSumBounds.WtSubOneLe
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsSatFrame
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FormalGroupExpTwoSidedInverseUniqueStatement
 import Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.BinomialSeriesCoefficients.CoeffPowEqZeroOfCc
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
 open MvPowerSeries ReciprocityTheory.PGsh ReciprocityTheory.ChartRestriction.G.Sh GlobalTheory.FGDepth
 
 namespace GlobalTheory.FGDepth.CharBound
@@ -100,7 +99,7 @@ theorem coeff_mvExp_lin {σ : Type} [Fintype σ] (c : σ → C) (α : σ →₀ 
         ∏ s ∈ ({i}ᶜ : Finset σ), c s ^ β s / ((β s).factorial : C) := by
       refine Finset.prod_congr rfl fun s hs => ?_
       have hs' : s ≠ i := by simpa using hs
-      simp [Finsupp.single_apply, Ne.symm hs']
+      simp [Ne.symm hs']
     rw [hrest]
     simp only [Finsupp.add_apply, Finsupp.single_eq_same]
     rw [Nat.factorial_succ]

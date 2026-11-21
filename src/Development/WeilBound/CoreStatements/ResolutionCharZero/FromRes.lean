@@ -1,5 +1,4 @@
-import Mathlib
-import Development.ResolutionOfSingularities.Statements
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.ResolutionCharZero.WeakPair
 import Development.WeilBound.CoreStatements.ResolutionCharZero.FromResIso
 import Development.WeilBound.CoreStatements.ResolutionCharZero.FromResSnc

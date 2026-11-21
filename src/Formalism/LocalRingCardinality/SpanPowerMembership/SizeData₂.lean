@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataParams₂
 import Formalism.LocalRingCardinality.SpanPowerMembership.ExampleRanksRankComplement
 

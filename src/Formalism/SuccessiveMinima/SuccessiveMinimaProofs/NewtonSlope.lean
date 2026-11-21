@@ -1,4 +1,10 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.SuccessiveMinima.StatementNP
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace Formalism.FN
 open Filter Topology

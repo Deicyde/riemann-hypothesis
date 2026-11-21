@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleTrace.LCoverCut
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry MvPolynomial

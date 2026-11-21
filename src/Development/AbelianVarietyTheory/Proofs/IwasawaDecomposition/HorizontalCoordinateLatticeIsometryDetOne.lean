@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PerValNeZero
 import Development.AbelianVarietyTheory.Counterexamples.LevelGroupExamples.RelabBijective
 
@@ -193,7 +194,7 @@ theorem exists_matrix (Di : Datum H) {J : Type} [Fintype J] [DecidableEq J] (x :
         rw [← hg, map_smul, smul_comm a n, map_nsmul, map_nsmul]
         simp [mul_assoc]
       rw [e1, hA, hA, Finset.smul_sum, LinearMap.map_sum₂]
-      simp only [map_sum, LinearMap.sum_apply, hb, mul_smul]
+      simp only [map_sum, hb, mul_smul]
     have h2 := congrArg (Int.cast : ℤ → ℚ) h1
     push_cast at h2
     simp only [htr, ← map_sum] at h2

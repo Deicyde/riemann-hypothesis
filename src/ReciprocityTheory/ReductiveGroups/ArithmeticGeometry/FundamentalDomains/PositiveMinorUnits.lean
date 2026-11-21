@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.GramDeterminantReal
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
 
 namespace ReciprocityTheory.ChartRestriction.G.FD.PositiveMinorUnits
 open Complex Matrix ReciprocityTheory.ChartRestriction.G.FD.GramDeterminantReal

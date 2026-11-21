@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.LocalDoubleCosets.TracePow
 import GroundTheory.AutomorphicForms.GeometricLemmaFiltration
 import GroundTheory.AutomorphicForms.WhittakerCells

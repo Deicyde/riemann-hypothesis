@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutHL2
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.RdVOfEq
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.UpperMinorOfLevelPoint
 
 open Matrix
 open scoped ComplexConjugate

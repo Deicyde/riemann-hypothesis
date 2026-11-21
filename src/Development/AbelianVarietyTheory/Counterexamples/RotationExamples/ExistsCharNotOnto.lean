@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.ConcretePkgSpec
-import Formalism.LocalToGlobal.UnitaryNorms.CharUniq
-import Formalism.MirabolicMackeyTheory.MirabolicMackeyProofs.RamBasic
 
 noncomputable section
 

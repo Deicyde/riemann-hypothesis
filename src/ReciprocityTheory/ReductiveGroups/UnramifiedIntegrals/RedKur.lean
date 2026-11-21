@@ -1,7 +1,6 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.RedDefs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.ExistsTeichmullerRepModPrime
-import Formalism.LocalToGlobal.TorsionIntegrality.GaussSumParity.KurComplete
 
 noncomputable section
 open scoped BigOperators Classical

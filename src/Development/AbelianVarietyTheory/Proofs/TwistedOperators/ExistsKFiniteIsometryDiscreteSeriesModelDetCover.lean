@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.L2UnitaryRepresentationData
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ModelsAreCoverSeries
 

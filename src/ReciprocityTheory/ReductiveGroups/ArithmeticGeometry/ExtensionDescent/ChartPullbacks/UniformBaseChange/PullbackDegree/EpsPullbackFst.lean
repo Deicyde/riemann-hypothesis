@@ -1,5 +1,8 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ChartPullbacks.UniformBaseChange.UnifBaseChangeInjOfSeamsCS
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ChartPullbacks.TangentLinearity.ConstPullback
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.UnifBaseChangeSt
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SemiabelianSchemes.PrecompleteBases.PsbLb
 
 set_option autoImplicit false
 
@@ -136,7 +139,7 @@ lemma kapS_comm : kapS φ hφ ≫ jK R = jK R' ≫ specOf φ := by
   simp only [kapS, jK, specOf, ← Spec.map_comp]
   congr 1
   ext x
-  simp [kap, IsLocalization.map_eq]
+  simp [kap]
 
 end Kappa
 

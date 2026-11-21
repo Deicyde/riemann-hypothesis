@@ -1,10 +1,9 @@
-import Mathlib
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GaugeIntCut
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.CIndFrFix
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.ConnectionKillsSeries
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.FBMapPf
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ConstantCoeffAddFirstSecond
 import Development.AbelianVarietyTheory.Counterexamples.JetSurvey.BilLActRight
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 set_option autoImplicit false
 
@@ -65,7 +64,7 @@ theorem bilL_add_right (G : FGLaw S d) (c : Fin d → Fin d → S) :
       ev (n := 3) ![pt S d 0, pt S d 1] (bilL G c) + ev (n := 3) ![pt S d 0, pt S d 2] (bilL G c) := by
   rw [ev_bilL G c (cz2 (FBMap.cz_pt _) (CIndFrFix2b.constantCoeff_add_second_third G)), ev_bilL G c (cz2 (FBMap.cz_pt _) (FBMap.cz_pt _)),
     ev_bilL G c (cz2 (FBMap.cz_pt _) (FBMap.cz_pt _))]
-  simp only [Matrix.cons_val_zero, Matrix.cons_val_one, CIndFrFix2b.formal_log_add_last_two, add_mul, mul_add,
+  simp only [Matrix.cons_val_zero, Matrix.cons_val_one, CIndFrFix2b.formal_log_add_last_two, mul_add,
     Finset.sum_add_distrib]
 
 theorem bilL_swap (G : FGLaw S d) (c : Fin d → Fin d → S) (hs : ∀ i l, c i l = c l i) :

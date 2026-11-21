@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.SphericalLattices.HoweInert
 import Development.WeilBound.ThetaLifts.SphericalLattices.UnrAtDiv
 import Development.WeilBound.ThetaLifts.SphericalLattices.LocDataV

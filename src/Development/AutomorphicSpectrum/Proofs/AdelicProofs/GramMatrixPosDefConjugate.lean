@@ -1,5 +1,4 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.KernelsLattice
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.LatticeLemmas.StatementsBundles
 import Development.AutomorphicSpectrum.Proofs.AdelicProofs.GramMat
 open NumberField TensorProduct GroundTheory.Heights₂.Heights GlobalTheory.CompanionTheory.Ar.Lines Matrix
@@ -58,7 +57,7 @@ private theorem linear_independent_one_tmul {L : Type} [Field L] [NumberField L]
     (LinearMap.lTensor (ComplexAt σ) (Finsupp.lapply a) t)) hT1
   simp only [hT, map_sum, LinearMap.lTensor_tmul, Finsupp.lapply_apply, TensorProduct.rid_tmul,
     Finsupp.single_apply, map_zero, ite_smul, one_smul, zero_smul, Finset.sum_ite_eq',
-    Finset.sum_ite_eq, Finset.mem_univ, if_true] at h3
+    Finset.mem_univ, if_true] at h3
   exact (ComplexAt.ofComplex σ).injective (h3.trans (map_zero _).symm)
 
 theorem gramMat_posDef_and_conj : ∀ (L : Type) [Field L] [NumberField L] (B : HermitianBundle.{0} L)

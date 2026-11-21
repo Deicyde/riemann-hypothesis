@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.GlobalFields.ClassFieldConsequences.RayClassField
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.ComplexMultiplication.IdeleActionQuotient
 import GroundTheory.GlobalFields.ComplexMultiplication.HilbertClassFieldArtin
 import GroundTheory.GlobalFields.WeilGroups.SignSymbol

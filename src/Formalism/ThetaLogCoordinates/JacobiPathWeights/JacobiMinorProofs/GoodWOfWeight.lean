@@ -1,9 +1,6 @@
-import Mathlib
-import Formalism.ThetaLogCoordinates.JacobiPathWeights.CorA3primeB
-import Formalism.ThetaLogCoordinates.JacobiPathWeights.JacobiMinorProofs.LemmaA2indepOf
-import Formalism.ThetaLogCoordinates.JacobiPathWeights.JacobiMinorProofs.JacobiMinorProof
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.JacobiPathWeights.JacobiMinorProofs.GenSpace
-import Formalism.ThetaLogCoordinates.JacobiPathWeights.JacobiMinorProofs.LeIffLtColHeight
+import Formalism.ThetaLogCoordinates.JacobiPathWeights.IndexWeightsDominance
 
 noncomputable section
 

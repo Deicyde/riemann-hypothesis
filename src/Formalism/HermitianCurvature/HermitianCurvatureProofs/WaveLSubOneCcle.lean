@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.NormExpMulISubOne
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.NormLetterScal
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.WaveDiffForm

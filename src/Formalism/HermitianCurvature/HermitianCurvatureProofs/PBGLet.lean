@@ -1,7 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementD
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LieDecompositionLocal
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LeadingTermIdentity
-import Formalism.FormalDegreeBessel.FormalDegreeRatio.GBasic
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.RightDerivativeRulePsi
 
 open Matrix Finset
 open scoped ComplexConjugate

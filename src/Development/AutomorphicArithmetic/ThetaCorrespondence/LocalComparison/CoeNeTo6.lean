@@ -1,4 +1,6 @@
-import Development.AutomorphicArithmetic.ThetaCorrespondence.LocalComparison.CoeTo1
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.ThetaCorrespondence.LocalComparison.LocTied6
+import Development.AutomorphicArithmetic.ThetaCorrespondence.LocalComparison.LocTiedOf6
 
 open Formalism.BasicNotions
 

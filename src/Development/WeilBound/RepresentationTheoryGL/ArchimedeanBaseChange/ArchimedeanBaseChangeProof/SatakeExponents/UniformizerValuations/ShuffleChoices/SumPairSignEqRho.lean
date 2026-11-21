@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.SatakeExponents.UniformizerValuations.ShuffleChoices.ShufStd
 import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.SatakeExponents.UniformizerValuations.ShuffleChoices.UnitPowerEqResiduePower
 
@@ -81,7 +82,7 @@ theorem sum_split {n : ℕ} (f : Fin n → ℤ) :
     rw [Fintype.bijective_iff_injective_and_card]
     refine ⟨?_, by simp only [Fintype.card_sum, Fintype.card_fin]; omega⟩
     rintro (i | i | t) (j | j | u) h <;>
-      simp only [φ, Sum.elim_inl, Sum.elim_inr, lo, hi, md, Fin.ext_iff, Fin.val_mk, Sum.inl.injEq, Sum.inr.injEq,
+      simp only [φ, Sum.elim_inl, Sum.elim_inr, lo, hi, md, Fin.ext_iff, Sum.inl.injEq, Sum.inr.injEq,
         reduceCtorEq] at h ⊢ <;>
       first
       | omega

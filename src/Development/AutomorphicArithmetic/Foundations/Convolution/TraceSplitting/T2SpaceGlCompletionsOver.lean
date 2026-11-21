@@ -1,9 +1,8 @@
-import Mathlib
-import Development.AutomorphicArithmetic.Foundations.Convolution.TraceSplitting.NormCharSplit
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.TraceSplitting.Places
 import Development.AutomorphicArithmetic.Foundations.Convolution.TraceSplitting.MatchOne
 import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.MatchProd
-import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.SplitLoc
 import Development.AutomorphicArithmetic.Foundations.Convolution.TwistedLocalOrbits.PlaceUp
 
 noncomputable section
@@ -439,7 +438,7 @@ theorem locUp : UpperTheory.ConvolutionTheory.T.LocUp := by
   have hunit : ∀ v, (unitG v : Set (GL (Fin n) (CompletionsOver E v))) = unitSet E n v := by
     intro v
     ext g
-    simp [unitG, unitSet, Subgroup.mem_iInf, GM.cmp]
+    simp [unitG, unitSet, GM.cmp]
   let iwG : Subgroup (GL (Fin n) (CompletionsOver E q)) :=
     ⨅ u : PlacesOver E q, (GLnLocal.iwahori (u.1.adicCompletion E) n).comap (GM.cmp u)
   refine ⟨{

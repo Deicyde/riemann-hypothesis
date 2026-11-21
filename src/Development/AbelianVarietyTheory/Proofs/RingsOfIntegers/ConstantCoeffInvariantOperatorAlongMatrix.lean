@@ -1,9 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.PlaceAdaptation.AdaptStd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.RingsOfIntegers.GermPointsNoConstantTermFirstZero
 import Development.AbelianVarietyTheory.Proofs.RingsOfIntegers.MvPowerSeriesSubstConstTermsLocalAlgHomSpec
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.FoldPermutation
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.WickVanishing.FormalGroupLawPointMaps
+import Formalism.SharpRestriction.Divisibility.GeneratorPowers.FormalGroupCopies
 
 set_option autoImplicit false
 
@@ -23,7 +24,7 @@ theorem dofN_chain {m : ℕ} (F : Fin d → PS k 2 d) (b : Fin n) (u : Fin d →
     DofN F b u (ev a g) = ∑ c : Fin m, ∑ l : Fin d, ev a (pderiv k (c, l) g) * DofN F b u (a c l) := by
   unfold DofN
   simp only [pderiv_ev ha]
-  simp only [Finset.mul_sum (s := (Finset.univ : Finset (Fin m))), Finset.mul_sum (f := fun l => ev a _ * _)]
+  simp only [Finset.mul_sum (s := (Finset.univ : Finset (Fin m)))]
   rw [Finset.sum_comm]
   refine Finset.sum_congr rfl fun c _ => ?_
   simp only [Finset.mul_sum]

@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.HeckeSplitOne
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.InjPrimeTo
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.AdmissibleIndexBoundAllPowers
 
 noncomputable section
 

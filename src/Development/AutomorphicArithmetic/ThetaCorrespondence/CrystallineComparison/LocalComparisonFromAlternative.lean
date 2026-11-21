@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.CrystallineComparison.CFPlain
 import Development.AutomorphicArithmetic.ThetaCorrespondence.CrystallineComparison.LogarithmCompat
 import Development.AutomorphicArithmetic.ThetaCorrespondence.CrystallineComparison.CFIncl

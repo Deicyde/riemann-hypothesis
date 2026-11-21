@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SubsetSpanBy
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GrpLawAndUnitAgreeOfOpenInDescentModelStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFieldPt
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.IsSemiAbelianOfCharts

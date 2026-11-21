@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ExponentGrids.SecondComplementColumnExponents
 import Formalism.SizeWindowBrackets.SlopesFromSizeAndCount
-import Formalism.LocalRingCardinality.DataErr
 import Formalism.LocalToGlobal.GlobalTheory.IsResidueClassZero
 
 open Module NumberField IsDedekindDomain Finset

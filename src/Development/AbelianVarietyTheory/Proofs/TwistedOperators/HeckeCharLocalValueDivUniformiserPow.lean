@@ -1,7 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.UnitaryNorms.IsUnitaryNormOf
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AlgebraicValuesFinite.AlgValsFinMain
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AlgebraicValuesFinite.EvFLocalIdeleSelf
 open NumberField IsDedekindDomain Formalism.L2.Host
 
 noncomputable section

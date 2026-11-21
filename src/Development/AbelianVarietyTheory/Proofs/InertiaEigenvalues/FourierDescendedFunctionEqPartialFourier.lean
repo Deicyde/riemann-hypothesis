@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.MulMatMemUnitaryGroup
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.MapIsIsomSelfDualMeasureKerLEqPiHaarStatement
+import Mathlib.Topology.UniformSpace.Matrix
+import Mathlib.Topology.UniformSpace.Uniformizable
 
 open GlobalTheory.JR Matrix MeasureTheory Filter Topology
 

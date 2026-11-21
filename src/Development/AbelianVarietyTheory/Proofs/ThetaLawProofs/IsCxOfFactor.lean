@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.KeyFormula.DegProd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.ThetaLawProofs.ExistsIsUnitField
+import Mathlib.Tactic.ENatToNat
 open GlobalTheory.KeyKa
 
 namespace GlobalTheory.KeyKa.KoszulTors

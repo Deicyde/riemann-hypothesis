@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.HarderNarasimhan.ShiftInvariance
-import Formalism.HarderNarasimhan.HarderNarasimhanProofs.PolygonSlopeSum
 import Formalism.HarderNarasimhan.StatementCor
 
 open Module Submodule

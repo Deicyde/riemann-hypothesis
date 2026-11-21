@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.TensFun
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.ConvolutionKernels.KernelTransforms.TensMeas
 import Development.AutomorphicArithmetic.Foundations.Convolution.ConvolutionKernels.KernelTransforms.TensApply
 

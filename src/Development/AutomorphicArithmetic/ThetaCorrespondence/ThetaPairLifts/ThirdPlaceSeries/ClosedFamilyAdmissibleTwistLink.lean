@@ -1,7 +1,8 @@
-import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ClosedFamilyAdmissibleTwistLink
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.CohomologicalCsdTempered
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.TSelF
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.GServT
+import Formalism.LocalToGlobal.ClassOfRecordOfChoice
+import Formalism.LocalToGlobal.GroupLattices.AdmissibleAtGeneratorPlaces
+import Formalism.SharpRestriction.GlobalSchurBounds.PlugDgt
 
 set_option synthInstance.maxHeartbeats 200000
 

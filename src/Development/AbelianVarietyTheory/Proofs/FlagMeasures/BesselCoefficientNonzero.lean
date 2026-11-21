@@ -1,17 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.IsPtRepTrDat
-import Formalism.SharpRestriction.CuspSpanNormBounds.AbsoluteAmplitudeSecondOfSource
-import Formalism.SharpRestriction.CuspSpanNormBounds.PExtra
-import Formalism.SharpRestriction.CuspSpanNormBounds.AmplitudeAndVolumeBounds
-import Formalism.SharpRestriction.CuspSpanNormBounds.BranchingAndRankConstants
-import Formalism.SharpRestriction.CuspSpanNormBounds.MassAndBranchingHypotheses
-import Formalism.SharpRestriction.CuspSpanNormBounds.SBridge
-import Formalism.LocalRingCardinality.DataTies
-import Development.AbelianVarietyTheory.Statements.DiscreteSeriesShifts.ThmBpDS
-import Development.AbelianVarietyTheory.Definitions.Jets.SideFam
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.FormalDegreeCompactDualIff
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.OnePlaceKF
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.SumPlacesEqTrace
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.JEqOrbInt
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.AmplifierOfHypotheses
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.BesselGapDimensionFormula
@@ -39,7 +27,7 @@ theorem besselIntg_sum (L : LocBessel k r) {ι : Type} (s : Finset ι)
     (g : Matrix (Fin (2 * r + k + 1)) (Fin (2 * r + k + 1)) ℂ) (p : PairSp k r) :
     besselIntg L (fun q => ∑ a ∈ s, F a q) g p = ∑ a ∈ s, besselIntg L (F a) g p := by
   ext η
-  simp [besselIntg, ContinuousLinearMap.sum_apply, map_sum, Finset.smul_sum]
+  simp [besselIntg, map_sum, Finset.smul_sum]
 
 theorem ampTK_pt (H : BranchingSupport.Hyps) (L : LocBessel k r) (h : ℝ) (μG : Measure (Mt k r)) (l : L.Hs → L.Wp)
     (l' : L.Hs → L.Wq) (hgap : GapAtLeast L.ε L.lam h) (hok : Formalism.FourierDecayAlt.ThreeDimData.GapOK k r h)
@@ -178,7 +166,7 @@ theorem oneAt : BranchingSupport.Hyps → ∀ (k r : ℕ) (L : Formalism.MainNot
     intro T
     ext η
     conv_lhs => rw [← e.sum_repr' η]
-    simp [ContinuousLinearMap.sum_apply, map_sum]
+    simp [map_sum]
   have hFe : ∀ g ∈ UH (Hpk k r), F g = ∑ i, ∑ j, coefF L (x i) (y i) (X i (e j)) (e j) g := by
     intro g hg
     rw [hF g hg]

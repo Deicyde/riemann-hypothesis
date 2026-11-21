@@ -1,6 +1,14 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.LegendreCoefficient
-import Formalism.FormalGroupWitt.FormalGroupWittProofs.IntegralSubstVector
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
+import Mathlib.Data.Rat.Star
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 

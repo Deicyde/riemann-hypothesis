@@ -1,9 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.AevalEqZeroOfMemConeIdeal
-import Development.AbelianVarietyTheory.Definitions.ThetaMetrics.ExistsAlgebraicIndependentGenericPoint
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ProjPointIdealMemProjComponentsOfIsProjPureDim
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsFormDegreeLeHilbertDegreeEvalNeZero
-import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.MvPolynomialIsHomogeneousComapWeighted
+import Mathlib.RingTheory.PiTensorProduct
 
 open MvPolynomial GlobalTheory.ChowHt GlobalTheory.CompHt Filter
 open scoped ENNReal
@@ -158,7 +155,7 @@ private theorem finrank_span_map_algebraMap_eq {σ K L : Type} [Field K] [Field 
         | smul c y _ hy =>
           have : MvPolynomial.map (algebraMap K L) ((c • y : W) : MvPolynomial σ K) =
               c • MvPolynomial.map (algebraMap K L) (y : MvPolynomial σ K) := by
-            simp [MvPolynomial.smul_eq_C_mul, Algebra.smul_def]
+            simp [Algebra.smul_def]
           rw [this]
           exact Submodule.smul_mem _ c hy
       exact key _ hw'

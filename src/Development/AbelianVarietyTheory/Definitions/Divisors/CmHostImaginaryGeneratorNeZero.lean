@@ -1,7 +1,10 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.LinksChar
-import Formalism.LocalToGlobal.BesselHermitianTheta.AllTied
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.ConjSqrtMinusD
+import Formalism.LocalToGlobal.BesselHermitianTheta.TiedBessel
+import Formalism.LocalToGlobal.Divisibility.DefGroup
+import Formalism.LocalToGlobal.IndefiniteReal.LocalNewformFunction
 
 noncomputable section
 

@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.ComplexUniformizationSigOne
-import Development.AutomorphicArithmetic.RealSpanData.RealData
-import Development.AutomorphicArithmetic.RealSpanData.JSpan
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.HasDivPlace
+import Development.AbelianVarietyTheory.Definitions.Divisors.Uniformised
 
 set_option autoImplicit false
 

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.HarishChandraRegularity.ContDiffCompCoordEquiv
 import GroundTheory.AutomorphicForms.HarishChandraRegularity.ExpChart
 import GroundTheory.AutomorphicForms.HarishChandraRegularity.ExpHaar
@@ -7,6 +8,7 @@ import GroundTheory.AutomorphicForms.GKModules.Casimir
 import GroundTheory.AutomorphicForms.PartialDifferential.AnalyticHypoelliptic
 import GroundTheory.AutomorphicForms.PartialDifferential.EllipticParametrix
 import GroundTheory.AutomorphicForms.HarishChandraRegularity.CartanBasis
+import Mathlib.Algebra.Ring.IsFormallyReal
 
 namespace GroundTheory.Automorphic
 

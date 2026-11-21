@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.JointConditionsZpowers.CrysOnCond
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsCrysOnOfIsCrys
 open Formalism Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N

@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.IdeleGenerators.ShapeFacts
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.TraceZero
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.MkMemAdmissibleAtIffCocycle
+import Formalism.PadicSubsetSums.StableGradedCounts.ZBrauerNesbittAlg
 
 open Polynomial Formalism.ConjugateSelfDual Formalism.MainNotions.N UpperTheory.V.Af UpperTheory.V.Sd
 open scoped Matrix

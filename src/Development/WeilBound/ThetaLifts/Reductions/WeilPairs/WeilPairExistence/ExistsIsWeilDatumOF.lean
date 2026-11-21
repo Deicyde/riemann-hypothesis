@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.LatH
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Formalism.LocalToGlobal.IndefiniteReal.DatumF
 import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.FixedOfMem
 import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.LatRep
 import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.IsScalarOneOfComm

@@ -1,6 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ImportsBis
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ImportsBisFurther
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 open scoped BigOperators
 
 namespace GlobalTheory.CommTriang

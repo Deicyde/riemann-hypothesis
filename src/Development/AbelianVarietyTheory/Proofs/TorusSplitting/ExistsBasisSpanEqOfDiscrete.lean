@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.Transference
+import Mathlib.Analysis.InnerProductSpace.Dual
 
 open Module Submodule
 

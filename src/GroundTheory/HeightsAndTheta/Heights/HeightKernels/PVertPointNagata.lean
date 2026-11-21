@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.HeightKernels.StatementsVertPointNagata
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.PVertPointMultChart
 import GroundTheory.HeightsAndTheta.Heights.Intersections.PLocRingPow
 set_option maxSynthPendingDepth 1

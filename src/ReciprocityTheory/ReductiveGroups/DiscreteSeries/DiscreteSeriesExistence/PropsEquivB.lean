@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.BridgeExpK
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.HighestWeights.UniqueA
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.AnalyticVectors.Taylor
+import Mathlib.RingTheory.PicardGroup
 
 noncomputable section
 

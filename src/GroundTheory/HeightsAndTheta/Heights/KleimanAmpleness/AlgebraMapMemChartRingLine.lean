@@ -1,6 +1,10 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.Statements
-import GroundTheory.HeightsAndTheta.Heights.FieldsOfNumbers.Statements
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.Objects
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Rat.Star
+import Mathlib.Topology.Connected.Separation
+import Mathlib.Topology.Separation.Lemmas
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.Kleiman

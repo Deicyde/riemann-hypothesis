@@ -1,8 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.LocalFields.ConductorLubinTate
 import GroundTheory.LocalFields.ConductorTransport
 import GroundTheory.LocalFields.LocalArtinMap
 import GroundTheory.LocalFields.KroneckerWeber
+import Mathlib.Order.Interval.Finset.Box
 
 noncomputable section
 

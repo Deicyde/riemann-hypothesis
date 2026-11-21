@@ -1,6 +1,8 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.IsHorizontalTwist
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.FiniteIntegralClosureOfEssFiniteTypeField
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.Data.Rat.Star
 
 namespace GlobalTheory.CompanionTheory.QuadFin
 

@@ -1,13 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.DataNLoc
-import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.UnitDualParts
-import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.GammaStableInverse
-import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.WachLettersFree
-import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.CrystallineSubrepresentation
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.AcrisTorsionFreeComplete
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.EqTopOfSpanImage
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IoEquivariant
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsBasisDD
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsBasisMul
 
 noncomputable section

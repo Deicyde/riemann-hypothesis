@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.EllipticTorsion.WChordSeries
+import Mathlib.RingTheory.MvPowerSeries.Inverse
 
 open PowerSeries
 

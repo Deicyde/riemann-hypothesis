@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ChartGen
-import Development.AbelianVarietyTheory.PublishedTheorems.DiscreteSeriesUnitary₂.MaxMass
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsMaxVector
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.MaximalHermitianLatticeLocalStructureDiscriminan
 open NumberField Matrix GlobalTheory.Mass Formalism.HermitianLatticesTheory
@@ -122,7 +121,7 @@ theorem main : ∀ (K V : Type) [Field K] [NumberField K] [StarRing K] [AddCommG
     rw [hform, Finset.sum_eq_single i]
     · simp
     · intro l _ hl
-      simp [Finsupp.single_apply, hl.symm]
+      simp [hl.symm]
     · intro hi
       exact absurd (Finset.mem_univ i) hi
   have hd0 : ∀ i, h (e i) (e i) ≠ 0 := fun i h0 =>

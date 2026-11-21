@@ -1,14 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RowGrpEq
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RepresentationAtEveryPlace
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LevRowSuccInfUA
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AuxiliaryVectorDecompositionEqZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsInverseUnipotentVolumeConjDiagonalEq
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.FourierJacobiUnipotentEqProdRootExchange
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.OffPlacesPartMovedLevelKeepsStandardHomLattice
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.MemFlagUnipotentRadicalOfBesselNormalFrameLocal
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.BesselColumnFormCentralTranslation
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsWeilDatumPowersUnramifiedEtaTilde
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.DIV
 open IsDedekindDomain NumberField MeasureTheory Matrix GlobalTheory.ChiGrid GlobalTheory.FunObj GlobalTheory.RowTest GlobalTheory.StdFrames GlobalTheory.RowClaim
@@ -135,7 +131,7 @@ theorem entry_zero {e : AE D} {Q : Finset (Pl D.host.E)} (he : IsIdemSum e Q) {V
     conv_rhs => rw [← e1, Matrix.mul_smul, Matrix.smul_mul]
     rfl
   have e3 : (adj J ⬝ gA V) ⬝ (mt V g⁻¹ - 1) ⬝ (giA V ⬝ adj P) = adj (P ⬝ (mt V g - 1) ⬝ J) := by
-    simp only [GlobalTheory.MixModel.mt_inv, adj_mul, adj_sub, adj_one, Matrix.mul_sub, Matrix.sub_mul, Matrix.mul_assoc, gA_giA_cancel,
+    simp only [GlobalTheory.MixModel.mt_inv, adj_mul, adj_sub, Matrix.mul_sub, Matrix.sub_mul, Matrix.mul_assoc, gA_giA_cancel,
       Matrix.one_mul]
   rw [e3] at h2
   exact ae_zero he e2 h1 h2
@@ -189,7 +185,7 @@ theorem Adapted.blocks (h : Adapted π d F l) (h1 : Γ * F = 1) (h2 : F * Γ = 1
   · rw [Matrix.map_mul, Matrix.map_mul]
     exact col (Matrix.ext fun i j => W (.inr (.inr i)) (.inl j) (by simp only [wlev, Sum.elim_inr, Sum.elim_inl]; omega))
   · rw [← Matrix.map_apply (f := π), Matrix.map_mul, Matrix.map_mul]
-    exact W (.inr (.inr i)) (.inr (.inr j)) (by simp only [wlev, Sum.elim_inr, Sum.elim_inl]; omega)
+    exact W (.inr (.inr i)) (.inr (.inr j)) (by simp only [wlev, Sum.elim_inr]; omega)
 
 end Witt
 

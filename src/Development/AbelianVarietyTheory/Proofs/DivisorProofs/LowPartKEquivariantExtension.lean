@@ -1,13 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KStab
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolEqISupFockDeg
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KEqOnId
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FixPartEqBotOfLt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TprodMemDegLE
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaKernelReal
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TensorIrreducibleModules
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchimedeanPolynomialTensorWeight
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchimedeanThetaPolynomialLiftExistsStatement

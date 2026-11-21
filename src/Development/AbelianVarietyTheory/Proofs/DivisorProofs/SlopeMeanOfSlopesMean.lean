@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.DegreeFormula.PointDegree.PermExpInj
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.EqualVolumeMeanCorrection
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ComponentMean
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Algebra.MvPolynomial.Coeff
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
 
 open MvPolynomial Formalism.DegreeFormula Formalism.BasicNotions Formalism.BasicNotions.DV Formalism.MainNotions Formalism.MainNotions.WeightThresholdDefs Formalism.MainNotions.DIV.Align Filter Topology
 

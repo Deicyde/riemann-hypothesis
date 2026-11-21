@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.DualStdModelField
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.QuotientLiftInjective
 set_option maxSynthPendingDepth 1

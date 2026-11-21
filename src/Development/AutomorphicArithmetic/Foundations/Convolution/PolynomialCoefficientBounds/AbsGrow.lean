@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.BlockHeckeSlices.SliceShift
 import Development.AutomorphicArithmetic.Foundations.Convolution.PolynomialCoefficientBounds.Reduce
-import Development.AutomorphicArithmetic.Foundations.Convolution.PolynomialCoefficientBounds.Taylor
 
 open PositivityTheory.Rg.Fx UpperTheory.ConvolutionTheory.BW
 

@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.PAdicHodge.UntiltField
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.PAdicHodge.UntiltApproxLemmas
 import GroundTheory.PAdicHodge.UntiltPerfectoid
 import GroundTheory.PAdicHodge.TiltAlgClosed

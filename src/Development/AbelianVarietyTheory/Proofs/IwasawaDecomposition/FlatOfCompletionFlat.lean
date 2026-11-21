@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsNoetherianRingAdicCompletionOfNoetherian
+import Mathlib.RingTheory.RingHom.Flat
 
 open IsLocalRing TensorProduct
 
@@ -31,7 +32,7 @@ theorem flat_of_finite_of_flat_comp : ∀ {A R : Type} [CommRing A] [IsLocalRing
   let F : mA →+ R →+ (mB ⊗[B] R) :=
     { toFun := fun a => (TensorProduct.mk B mB R (j a)).toAddMonoidHom
       map_zero' := by ext; simp
-      map_add' := by intros; ext; simp [add_tmul] }
+      map_add' := by intros; ext; simp }
   have hF : ∀ (r : A) (a : mA) (n : R), F (r • a) n = F a (r • n) := by
     intro r a n
     have h1 : j (r • a) = algebraMap A B r • j a := Subtype.ext (by simp [j, Algebra.smul_def])

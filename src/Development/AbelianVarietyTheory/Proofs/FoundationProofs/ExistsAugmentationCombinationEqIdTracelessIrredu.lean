@@ -1,11 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.FinalTheorems
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.CoordConjOfCoord
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsNatCoeffsDetSumSmulNeZeroStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.OneMemOfMulClosedOfDetNeZeroStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.Sl2AdjointNoInvariantOfIrreducibleStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.TraceFormNeZeroOfStableLineIrreducibleStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.AugSpanOneMemOfOrthogonalThreeStatement
+import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.DirichletPrimeToLPartMulLPowerPart
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.MainNotions.N GlobalTheory.GalOfCusp UpperTheory.V UpperTheory.V.Af UpperTheory.V.HV GlobalTheory.Ord2
 open scoped Matrix
 
@@ -15,7 +14,7 @@ namespace GlobalTheory.Sl2Ad
 
 theorem form_isSymm {K : Type} [Field K] : (form (K := K)).IsSymm := by
   first
-  | exact ⟨fun v w => by simp only [RingHom.id_apply, form_apply]; ring⟩
+  | exact ⟨fun v w => by simp only [form_apply]; ring⟩
   | exact fun v w => by simp only [RingHom.id_apply, form_apply]; ring
   | (intro v w; simp only [RingHom.id_apply, form_apply]; ring)
 

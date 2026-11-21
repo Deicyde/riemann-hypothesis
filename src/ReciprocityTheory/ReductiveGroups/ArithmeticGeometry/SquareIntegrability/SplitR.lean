@@ -1,4 +1,16 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.SplitC
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.LinearAlgebra.LinearIndependent.BaseChange
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.ActEMemSpanOmega
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.SplitA
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace ReciprocityTheory.ChartRestriction.G.I2
 
@@ -79,7 +91,7 @@ theorem rkQP_apply (τ : E →+* ℂ) (v : Vsp dim) (i : Idx dim) :
   obtain ⟨σ, b⟩ := i
   by_cases h : σ = τ
   · subst h
-    simp [rkQ, rkP, EuclideanSpace.single_apply, Sigma.mk.inj_iff]
+    simp [rkQ, rkP]
     rw [Finset.sum_eq_single b]
     · simp
     · intro x _ hx
@@ -90,7 +102,7 @@ theorem rkQP_apply (τ : E →+* ℂ) (v : Vsp dim) (i : Idx dim) :
         exact (eq_of_heq (Sigma.mk.inj_iff.mp h).2).symm
     · intro h
       exact absurd (Finset.mem_univ b) h
-  · simp [rkQ, rkP, EuclideanSpace.single_apply, Sigma.mk.inj_iff, h]
+  · simp [rkQ, rkP, h]
 
 end rk
 

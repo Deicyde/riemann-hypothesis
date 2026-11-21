@@ -1,8 +1,12 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.EigenvalueEndgame.OrthogonalDecomposition.RapidBound
 import Development.WeilBound.ThetaLifts.TowerModels.PlaneHerm
 import Development.WeilBound.ThetaLifts.EigenvalueEndgame.OrthogonalDecomposition.ActsOfReads
 import Development.WeilBound.CoreStatements.LocallyConstantCoinvariants.ExistsFull
 import Development.WeilBound.CoreStatements.LocallyConstantCoinvariants.PfSurj
+import Development.WeilBound.CoreStatements.LocallyConstantCoinvariants.IndicatorMem
+import Development.WeilBound.ThetaLifts.FrameEstimates.ThickFrames
 
 noncomputable section
 

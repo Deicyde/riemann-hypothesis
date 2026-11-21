@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.ScalarOnPartsFull
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.EvalVAlgebraMapMem
 import Development.AbelianVarietyTheory.Definitions.Foundations.NonemptyAlgHomOfNotIsField

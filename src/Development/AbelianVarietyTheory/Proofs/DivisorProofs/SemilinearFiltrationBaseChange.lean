@@ -1,12 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
-import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsCrystalPairing
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.PolarisationModuleIndex
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ConjugateOrderData
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsPlaceRing
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsKSValueOneOfRetraction
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open CategoryTheory CategoryTheory.Limits AlgebraicGeometry MonoidalCategory CartesianMonoidalCategory MonObj NumberField IsDedekindDomain
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory.Cris GlobalTheory.DeRham GlobalTheory.RealMult GlobalTheory.CMVal GlobalTheory.LatVal GlobalTheory.LatJet GlobalTheory.LatModel
 open GlobalTheory.IndefiniteRowSideFullHecke.ClassZetaValuationBounds (IsClassZetaVals c_vp cE_vp a0)
@@ -69,7 +63,7 @@ theorem annihilator_baseChange : ∀ {R R' : Type} [CommRing R] [CommRing R'] [A
           have := hφ _ (Submodule.subset_span ⟨_, hqd c, rfl⟩)
           rw [map_sub, map_sub, sub_eq_zero] at this; exact this
         rw [h1, hexp (q c)]
-        simp [map_sum, LinearMap.map_smulₛₗ, LinearMap.sum_apply, hg, k, Algebra.smul_def, mul_comm]
+        simp [map_sum, LinearMap.map_smulₛₗ, LinearMap.sum_apply, hg, k, mul_comm]
     rw [key]
     exact Submodule.sum_mem _ fun i _ => Submodule.smul_mem _ _ (Submodule.subset_span ⟨k i, hk i, rfl⟩)
 

@@ -1,11 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HasLatticesComplete
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AbelianSchemePullbackFstComm
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HodgeCorrespondenceSurjective
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ClsDivPullEqVPull
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.SmoothOfRelativeDimensionOfGenerization
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.IsAbelianSchemeOfIsGrpPullback
-import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.ExistsFgForallOverLbIso
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrobPullHomExtAffine
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrobTwistBaseChangeHomApp
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false
@@ -489,7 +489,7 @@ theorem frobDR_pull (q : ℕ) [Fact q.Prime] {R K : Type} [CommRing R] [CommRing
     (hφ : IsGrpPullback A' B (spMap (algebraMap R K)) φ) (c : primDR B) :
     frobDR q K hK A' ((bcMor hφ).pull c) = (bcMor hφ).pull (frobDR q R hR B c) := by
   have k := (frobMor q R hR B (cast_left q R hR B)).comp (bcMor hφ)
-  exact (GrpMor.pull_pull _ _ k (fun r => by simp [frobR_apply]) (frob_naturality _ _ _ _) c).trans
+  exact (GrpMor.pull_pull _ _ k (fun r => by simp) (frob_naturality _ _ _ _) c).trans
     (GrpMor.pull_pull _ _ k (fun _ => rfl) rfl c).symm
 
 theorem primPull_pull {R K : Type} [CommRing R] [CommRing K] [Algebra R K] {B : Over (Sp R)} [GrpObj B]

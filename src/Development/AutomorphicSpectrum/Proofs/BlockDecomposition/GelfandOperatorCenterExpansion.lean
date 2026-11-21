@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.ArchimedeanGelfandKernels.WaveSt
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsMultOfFintype
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.EventuallyEqOfAgreeGLs
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.TrETransposeEqPhiSeq
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GelfandValueNegationStatement
@@ -149,7 +149,7 @@ theorem Du_bracket (hR : RCalc) {u : ℂ} (hu : u * u = -1) (X Y : Mat n) {f : M
   have e3 : (Complex.I • X) * Y - Y * (Complex.I • X) = Complex.I • (X * Y - Y * X) := by
     simp [smul_sub]
   have e4 : (Complex.I • X) * (Complex.I • Y) - (Complex.I • Y) * (Complex.I • X) = -(X * Y - Y * X) := by
-    simp [smul_smul, smul_sub]
+    simp [smul_smul]
     abel
   rw [e2] at a2
   rw [e3] at a3

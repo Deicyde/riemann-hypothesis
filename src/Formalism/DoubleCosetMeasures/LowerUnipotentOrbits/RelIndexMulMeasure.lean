@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.DoubleCosetMeasures.StatementV
+import Mathlib.Order.CompletePartialOrder
 
 open MeasureTheory Matrix Set Pointwise
 

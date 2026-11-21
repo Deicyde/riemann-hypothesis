@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.SeparatingAlgebras.StGlob
 open NumberField IsDedekindDomain Neutral.B1 Formalism.L2.Host Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.MainNotions.N
 open GlobalTheory.CuspRep GlobalTheory.WeilDeligne GlobalTheory.Pst GlobalTheory.LocLanglands GlobalTheory.HeckeGal GlobalTheory.LocGL GlobalTheory.GalOfCusp
@@ -47,7 +48,7 @@ theorem UpperTheory.Gal.Gen.count_pf :
     intro f hf v
     obtain ⟨I, F, hF, rfl⟩ := (hPart E a W (lev K w₀ (J n)) B).2.2.2.2 f hf
     have e : (∑ π ∈ I, F π : algForms W).1 v = ∑ π ∈ I, (F π).1 v := by
-      simp [Submodule.coe_sum, LinearMap.sum_apply]
+      simp [LinearMap.sum_apply]
     rw [e, opOf_finset_sum]
     refine Finset.sum_congr rfl fun π hπ => ?_
     obtain ⟨hP, hfin, hfx, -⟩ := hF π hπ

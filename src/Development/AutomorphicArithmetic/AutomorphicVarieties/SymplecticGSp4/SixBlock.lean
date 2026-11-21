@@ -1,4 +1,10 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.LocDefs
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.MapRepApply
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal IsLocalRing UpperTheory.V UpperTheory.V.Base UpperTheory.V.Alg UpperTheory.V.HV UpperTheory.V.GradeZeroInterpolatingElement
 
@@ -25,8 +31,7 @@ theorem UpperTheory.V.GradeZeroInterpolatingElement.sixBlock :
   have E10 := E 1 0
   have E13 := E 1 3
   have E20 := E 2 0
-  simp [Matrix.mul_apply, Fin.sum_univ_four, adj_apply, sgn, h01, h03, h21, h10, h30, h12,
-    Matrix.one_apply] at errorNonneg bivariateExponentMonomial E11 E10 E13 E20
+  simp [Matrix.mul_apply, Fin.sum_univ_four, adj_apply, sgn, h01, h03, h21, h10, h30, h12] at errorNonneg bivariateExponentMonomial E11 E10 E13 E20
   have u00 : IsUnit (g 0 0) :=
     UpperTheory.V.GradeZeroInterpolatingElement.sixBlock_unit (w := g 3 3) (h := g 2 0) hν (hoff 1 3 (by decide)) (by rw [← errorNonneg]; ring)
   have u11 : IsUnit (g 1 1) :=
@@ -44,4 +49,4 @@ theorem UpperTheory.V.GradeZeroInterpolatingElement.sixBlock :
     have h31 : g 3 1 = 0 := by simpa [h11, h20, h00] using E20
     ext i j
     fin_cases i <;> fin_cases j <;>
-      simp [Matrix.one_apply, h00, h01, h02, h03, h10, h11, h12, h13, h20, h21, h22, h23, h30, h31, h32, h33]
+      simp [h00, h01, h02, h03, h10, h11, h12, h13, h20, h21, h22, h23, h30, h31, h32, h33]

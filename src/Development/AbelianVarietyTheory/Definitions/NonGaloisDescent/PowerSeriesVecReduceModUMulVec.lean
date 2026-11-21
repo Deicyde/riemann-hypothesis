@@ -1,5 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.SndDualLiftAlgebraMap
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
 
 noncomputable section
 
@@ -594,7 +600,7 @@ theorem mx_rankOne {j : ZMod a → ℤ} {τ : ZMod a} {n : ℕ} (h : j τ = n) :
 
 theorem mxInv_rankOne {j : ZMod a → ℤ} {τ : ZMod a} {n : ℕ} (h : j τ = -n) :
     (rankOne O K l e j).mxInv τ () () = E K l e ^ n := by
-  simp [PhiMod.mxInv, rankOne, h, ← map_inv, Matrix.diagonal_pow]
+  simp [PhiMod.mxInv, rankOne, h, Matrix.diagonal_pow]
 
 theorem mem_Lcomp_rankOne {j : ZMod a → ℤ} {τ : ZMod a} {n : ℕ} (h : j τ = n)
     {v : Unit → K⟦X⟧} :

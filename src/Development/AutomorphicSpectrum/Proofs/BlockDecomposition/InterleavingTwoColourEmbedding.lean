@@ -1,5 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ClOfSelf
+import BuildAid.Leniency.Open
+import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.ZelevinskyJacquet.ZelevinskyInterleaving.Interleave
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Std.Tactic.BVDecide.Normalize.Prop
 open GlobalTheory.PRep GlobalTheory.SplitWeil GlobalTheory.SmGL GlobalTheory.LocGL GlobalTheory.JHMult Zc Zc.M GlobalTheory.CompanionTheory.WordProd
 
 namespace GlobalTheory.CompanionTheory.WordProd.Intl

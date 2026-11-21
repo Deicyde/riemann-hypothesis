@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.FrobeniusSmoothVectors.EpresGr
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.TotallySplit
 
 open IsLocalRing Matrix UpperTheory.V.Alg UpperTheory.V.U3 UpperTheory.V.Fr
 
@@ -95,7 +98,7 @@ theorem UpperTheory.V.Fr.ep_cw :
   · let f : LinearMap.ker (h.ad 0 c - 1) →ₗ[K] K :=
       { toFun := fun v => (((v : adp K 0) : Matrix (Fin 3) (Fin 3) K) * (B.r c).mat) 0 0
         map_add' := by intro v w; simp [Matrix.add_mul]
-        map_smul' := by intro a v; simp [Matrix.smul_mul] }
+        map_smul' := by intro a v; simp }
     have hf : Function.Injective f := by
       rw [← LinearMap.ker_eq_bot, LinearMap.ker_eq_bot']
       intro v hv
@@ -115,7 +118,7 @@ theorem UpperTheory.V.Fr.ep_cw :
       { toFun := fun v => ((((v : adp K 1) : Matrix (Fin 3) (Fin 3) K) * (B.r c).mat) 0 1,
           (((v : adp K 1) : Matrix (Fin 3) (Fin 3) K) * (B.r c).mat) 1 0)
         map_add' := by intro v w; simp [Matrix.add_mul]
-        map_smul' := by intro a v; simp [Matrix.smul_mul] }
+        map_smul' := by intro a v; simp }
     have hf : Function.Injective f := by
       rw [← LinearMap.ker_eq_bot, LinearMap.ker_eq_bot']
       intro v hv

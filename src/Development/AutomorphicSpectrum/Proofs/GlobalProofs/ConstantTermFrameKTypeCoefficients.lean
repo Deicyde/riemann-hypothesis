@@ -1,8 +1,4 @@
-import Mathlib
-import ReciprocityTheory.Hypotheses.GalCoh
-import GroundTheory.ProfiniteCohomology.RestrictedRamification.IsUnramifiedOutsideIffLeMaxUnramifiedOutside
-import GroundTheory.ProfiniteCohomology.ContinuousCochains
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.IsDiscreteRepResMuROrep
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.CohomologicalDimension.SubsingletonCohomologyOfPrimaryOfFinite
 import GroundTheory.ProfiniteCohomology.ClassFormations.IsIsoCohomologyMapAlongResSubgroupOfHom
 

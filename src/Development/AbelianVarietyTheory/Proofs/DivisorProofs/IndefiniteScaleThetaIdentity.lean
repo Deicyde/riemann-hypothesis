@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.RealTB
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.RealRec
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaLiftRowFiresOfWeakCharacterisation
 open Formalism.BasicNotions Formalism.MainNotions NumberField IsDedekindDomain Formalism.L2 Formalism.L2.DIV Formalism.L2.Indef Formalism.L2.Rows Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.Cx Formalism.L2.Pj Formalism.IndefR.FWT

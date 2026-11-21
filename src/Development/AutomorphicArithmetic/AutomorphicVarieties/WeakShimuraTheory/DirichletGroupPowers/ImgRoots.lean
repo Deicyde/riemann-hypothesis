@@ -1,11 +1,7 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.NearSplit
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CharacterLevelBounds.ClsFacts
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CharacterLevelBounds.ClsOnto
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CharacterLevelBounds.RootVal
-import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.BchiFacts
-import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.HostOdd
-import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.CompIne
-import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.ExistsStrictHenselianAbsolutelyClosedLocalRing
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.NumberTheory.DirichletCharacter.Basic
+import Mathlib.NumberTheory.MulChar.Duality
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual Formalism.HC ReciprocityTheory.Gal IsLocalRing Polynomial UpperTheory.V.Base UpperTheory.V.Alg UpperTheory.V.HV UpperTheory.V.GradeZeroInterpolatingElement UpperTheory.V.Ws
 
@@ -29,7 +25,7 @@ theorem UpperTheory.V.Ws.large₂.imgRoots :
     rw [MulChar.pow_apply' χ hpos.ne', MulChar.one_apply_coe]
     have h1 := pow_card_eq_one' (G := χ.toUnitHom.range) (x := ⟨χ.toUnitHom a, a, rfl⟩)
     have h2 := congrArg (fun u : χ.toUnitHom.range => ((u : Oˣ) : O)) h1
-    simp only [SubmonoidClass.coe_pow, Subgroup.coe_pow, Units.val_pow_eq_pow_val, OneMemClass.coe_one,
+    simp only [SubmonoidClass.coe_pow, Units.val_pow_eq_pow_val, OneMemClass.coe_one,
       Units.val_one] at h2
     rw [← MulChar.coe_toUnitHom]
     exact h2

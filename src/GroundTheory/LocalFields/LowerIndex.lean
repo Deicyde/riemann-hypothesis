@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.LocalFields.Ramification
-import GroundTheory.LocalFields.Monogenic
 import GroundTheory.LocalFields.Unramified
+import GroundTheory.LocalFields.Eisenstein
 
 noncomputable section
 

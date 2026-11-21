@@ -1,5 +1,7 @@
-import Development.AutomorphicArithmetic.ThetaCorrespondence.CrystallineComparison.CFDefs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PeriodRingComparison.RationalRingEquivalences.IsLogCore
+import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.DeRham
 
 noncomputable section
 

@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HaarMeasureIwasawaQuotient
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPositiveAveragingFunctionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IwasawaAveragingIntegralFormulaStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IwasawaQuotientIntegralFormulaStatement

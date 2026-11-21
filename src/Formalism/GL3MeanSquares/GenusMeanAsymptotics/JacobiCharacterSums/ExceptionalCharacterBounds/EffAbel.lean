@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.GenusMeanAsymptotics.JacobiCharacterSums.ExceptionalCharacterBounds.EffBase
 import Formalism.LandauZeroFreeBounds.ExceptionalZeroBounds.LGrowth
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.TotallySplit
 
 noncomputable section
 

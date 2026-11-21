@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.RamifiedBlockRings.RamifiedBlockProofs.KerEqOfFactor
 import Formalism.WachLatticeTwists.RamifiedBlockRings.RamifiedBlockProofs.ExistsSigma
 

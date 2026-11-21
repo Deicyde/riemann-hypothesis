@@ -1,7 +1,7 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.TorDefs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.TchOfIntegral
-import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.NormEqOfNormSubLt
+import Mathlib.NumberTheory.Padics.RingHoms
 
 noncomputable section
 open scoped Classical

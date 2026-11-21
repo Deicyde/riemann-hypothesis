@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.OrbAddUp
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.OrbAddOne
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.OrbRestr
@@ -5,7 +6,6 @@ import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.OrbRestrOne
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.EntAtD
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.SumOrbC
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.OrbBoundF
-import Formalism.SharpRestriction.Divisibility.OrbitPlaces
 import Development.AutomorphicArithmetic.OrbitLabellings.KvalGeThetaOfShape
 import Development.AutomorphicArithmetic.OrbitLabellings.FInertSubEatILeOrbitAverageSubErrors
 

@@ -1,10 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJASAPairL
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.JfExhaustOfAvgCutoff
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BigCellOpenDomain
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.PositiveOrbitOpen
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutEnFibMem
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJAFFStableLoc
-import Formalism.FormalDegreeBessel.FormalDegreeRatio.BesselUnipotentEquivHolds
 
 open MeasureTheory Topology
 open Formalism.FourierDecayAlt

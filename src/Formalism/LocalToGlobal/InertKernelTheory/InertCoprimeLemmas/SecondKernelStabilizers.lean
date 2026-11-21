@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.InertKernelTheory.InertCoprimeLemmas.KernelStabilizer
-import Formalism.LocalToGlobal.InertKernelTheory.DefsStabEq
+import Formalism.SharpRestriction.GrowthBounds.ChartComparison
 
 noncomputable section
 

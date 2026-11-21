@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.L2DbarEstimates.PlurisubharmonicCharts.ZLocLower
 
 namespace ReciprocityTheory.L2DbarEstimates.Y

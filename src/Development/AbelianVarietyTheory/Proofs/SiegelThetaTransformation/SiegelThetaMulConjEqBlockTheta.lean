@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SpanningFamilies.IMemSiegel
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.SummableNormSiegelThetaSeriesTerms
+import Mathlib.Data.Matrix.ColumnRowPartitioned
 
 open Matrix Complex GlobalTheory.SW
 open scoped ComplexConjugate Real

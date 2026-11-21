@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.GrowthSums.StatementA
 import Formalism.GaussJetBounds.StatementI
-import Formalism.GaussJetBounds.StatementH
+import Mathlib.Combinatorics.Young.YoungDiagram
 
 noncomputable section
 

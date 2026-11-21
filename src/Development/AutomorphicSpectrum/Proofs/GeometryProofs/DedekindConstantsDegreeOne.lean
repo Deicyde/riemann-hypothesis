@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsLatFlagPair
-import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.HeckeSectionsIsotropicCommutatorPairingPower
-import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.StatementsFlagIndependence
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsChartBundle
 import Development.AutomorphicSpectrum.Proofs.DivisibilityProofs.ChartRingLocalizationMembershipStatement
 open AlgebraicGeometry CategoryTheory NumberField MvPolynomial ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Num GlobalTheory.CompanionTheory.Ar.Top
@@ -247,7 +246,7 @@ theorem repr_eq_zero_of_mem (w : Module.Basis (Fin r) Ω E) {i : ℕ} {v : E} (h
     have hkj : k ≠ j := fun h => by
       subst h
       exact absurd hk (not_lt.2 hj)
-    simp [Module.Basis.coord_apply, Finsupp.single_apply, hkj]
+    simp [Module.Basis.coord_apply, hkj]
   simpa [Module.Basis.coord_apply] using h hv
 
 theorem sub_repr_mem (w : Module.Basis (Fin r) Ω E) (i : Fin r) {v : E}

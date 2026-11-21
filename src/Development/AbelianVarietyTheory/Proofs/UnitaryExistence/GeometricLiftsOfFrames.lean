@@ -1,16 +1,9 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.ThShort
-import Formalism.LocalToGlobal.ProjectiveLattices.AllTest
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ThetaCore
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.DivCalc
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.SabPull
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.ExistenceTori.DeltaDatumCombinedCoefficient
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.AdmissibleFalseIffFirstInvariant
-import Development.AbelianVarietyTheory.Counterexamples.LevelGroupExamples.AdmissibleSmulIffOfCoprime
 import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.IsoEqOfMapsAlongSection
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.GlobalFnsHolds
 import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.AbelianSchemeLawsUnconditional
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsFramedPointBaseChangeAlgebraMap
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.FramedPointReducedFromTestRing
 
 set_option autoImplicit false
@@ -257,7 +250,7 @@ theorem liesOver_iff {S : Type} [CommRing S] [Algebra c.F S] [Algebra C.c₂.F S
         FrOver (coverDat C n nab₂ f φ) (k := S) y₂ y := by
   unfold Cover.LiesOver Cover.IsGroupMap
   rw [spMap_id, spMap_dual_id]
-  simp only [Category.id_comp, Category.comp_id]
+  simp only [Category.id_comp]
   refine and_congr ⟨fun h x => (RingHom.congr_fun h x).symm, fun h => RingHom.ext fun x => (h x).symm⟩
     (and_congr Iff.rfl (and_congr Iff.rfl ?_))
   constructor

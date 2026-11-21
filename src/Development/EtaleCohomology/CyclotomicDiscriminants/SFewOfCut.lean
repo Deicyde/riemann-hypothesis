@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ClassCounting.LemmaKOfSteps
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Algebra.Ring.IsFormallyReal
 
 noncomputable section
 

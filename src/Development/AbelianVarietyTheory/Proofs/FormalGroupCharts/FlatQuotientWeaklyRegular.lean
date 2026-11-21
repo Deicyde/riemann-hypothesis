@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.FlatCokerOfInjectiveModMaximalIdeal
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.Regular.RegularSequence
 open IsLocalRing TensorProduct
 
 namespace GlobalTheory

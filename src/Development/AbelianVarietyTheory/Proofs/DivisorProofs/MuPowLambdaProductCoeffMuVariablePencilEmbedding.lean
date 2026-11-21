@@ -1,4 +1,5 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.TCoefMInMMul
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PscoTCore
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TDualProd
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BarMSingle
@@ -9,7 +10,7 @@ import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LambdaMonomialCoeff
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DMuEqExtDerivation
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MuCoeffPartialDerivMuEqSuccMul
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoefMPencil
-import Mathlib
+import Mathlib.RingTheory.PiTensorProduct
 
 section
 
@@ -94,7 +95,7 @@ private lemma pderiv_mu_lambdaPoly_lemma_5 (f : _root_.GlobalTheory.PsCo.Pc1.A.P
   | C a => simp [_root_.GlobalTheory.PsCo.Pc1.A.inM]
   | add p q hp hq => simp [map_add, hp, hq]
   | mul_X p v hp =>
-    simp only [map_mul, Derivation.leibniz, hp, smul_eq_mul, map_add]
+    simp only [map_mul, Derivation.leibniz, hp, smul_eq_mul]
     simp [_root_.GlobalTheory.PsCo.Pc1.A.inM, pderiv_X]
 
 open MvPolynomial in
@@ -323,7 +324,7 @@ private lemma coeff_pderiv_mu_lemma_13 (F : _root_.GlobalTheory.PsCo.Pc1.A.PolyM
       (k + 1 : _root_.GlobalTheory.PsCo.Pc1.Poly n) *
         _root_.GlobalTheory.PsCo.Pc1.A.exL n L (_root_.GlobalTheory.PsCo.Pc1.A.coefM n L (k + 1) F) := by
   rw [_root_.GlobalTheory.PsCo.Cw2a.t_coefM_pderiv]
-  simp only [Algebra.smul_def, map_add, map_natCast, map_one, nsmul_eq_mul, Nat.cast_add, Nat.cast_one]
+  simp only [Algebra.smul_def, map_add, map_natCast, map_one]
   rw [show ((k : _root_.GlobalTheory.PsCo.Pc1.A.PolyL n L) + 1) =
       _root_.GlobalTheory.PsCo.Pc1.A.inL n L ((k : _root_.GlobalTheory.PsCo.Pc1.Poly n) + 1) by simp, extractCoeff_inl_mul]
 
@@ -401,10 +402,10 @@ private lemma koszulRecursion_solvable_of_product_lemma (M : ℕ) (m : Fin L →
     intro h i j
     simp only [hZ, _root_.GlobalTheory.PsCo.Pc1.A.Zm, Derivation.leibniz, pencilModeDerivation_muVariable_lemma_9,
       pencilModeDerivation_lambdaPoly_lemma_7, _root_.GlobalTheory.PsCo.Pc1.A.pencilDerivativePartMatrix, lambdaModeDerivation_entryPoly_lemma_8,
-      _root_.GlobalTheory.PsCo.Pc1.A.pencilConstantPartMatrix, map_add, map_sum, lambdaModeDerivation_variable_lemma_10, smul_zero, add_zero, smul_eq_mul,
+      _root_.GlobalTheory.PsCo.Pc1.A.pencilConstantPartMatrix, map_add, map_sum, lambdaModeDerivation_variable_lemma_10, add_zero, smul_eq_mul,
       mul_zero]
-    simp only [MvPolynomial.derivation_C, mul_zero, smul_zero, zero_add, add_zero, Finset.sum_const_zero, map_zero,
-      smul_eq_mul, _root_.GlobalTheory.PsCo.Pc1.OmP]
+    simp only [MvPolynomial.derivation_C, mul_zero, add_zero, Finset.sum_const_zero, map_zero,
+      _root_.GlobalTheory.PsCo.Pc1.OmP]
     rw [_root_.GlobalTheory.PsCo.DMComm.dM_comm ε h i]
   have h3 : pderiv none w = 0 := pderiv_mu_lambdaPoly_lemma_5 _
   have h5 : _root_.GlobalTheory.PsCo.Pc1.A.i2 L (_root_.GlobalTheory.PsCo.Pc1.rP ε) = ∑ j, b j * a j := by
@@ -427,7 +428,7 @@ private lemma koszulRecursion_solvable_of_product_lemma (M : ℕ) (m : Fin L →
   · have hk := coeff_eq_zero_of_mem_lambdaSquares_lemma_12 hmem k
     simp only [map_sub, map_add, map_sum, coeff_pderiv_mu_lemma_13, coeff_embedding_mul_lemma_14, coeff_modeDerivation_lemma_15, mul_assoc,
       pencilModeDerivation_embedding_lemma_16, coeff_mu_mul_lemma_17, shift_const_mul_lemma_4] at hk
-    simp only [← mul_assoc] at hk ⊢
+    simp only at hk ⊢
     linear_combination hk
   · rw [hN] at hk
     simp only [hw, muCoeff_lambdaPoly_mul_lemma_18]
@@ -512,8 +513,8 @@ theorem _root_.GlobalTheory.PsCo.Pc1.A.stAlg : _root_.GlobalTheory.PsCo.Pc1.StAl
     refine ⟨fun k => C r * p₁ k, fun x k => C r * q₁ x k,
       ⟨fun k => ?_, fun k hk => ?_, fun x k hk => ?_⟩, ?_⟩
     · have h₁ := r₁ k
-      simp only [Derivation.leibniz, MvPolynomial.derivation_C, smul_zero, add_zero, smul_eq_mul, shift_const_mul_lemma_4]
-      simp only [mul_add, Finset.sum_add_distrib] at h₁ ⊢
+      simp only [Derivation.leibniz, MvPolynomial.derivation_C, smul_eq_mul, shift_const_mul_lemma_4]
+      simp only [Finset.sum_add_distrib] at h₁ ⊢
       have hc : ∀ x : _root_.GlobalTheory.PsCo.Pc1.Mode ε,
           _root_.GlobalTheory.PsCo.Pc1.dM ε x (_root_.GlobalTheory.PsCo.Pc1.rP ε) *
               (C r * _root_.GlobalTheory.PsCo.Pc1.prev (q₁ x) k) =

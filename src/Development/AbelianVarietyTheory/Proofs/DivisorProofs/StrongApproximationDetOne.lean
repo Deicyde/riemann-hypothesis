@@ -1,10 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThLiftDef
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StrongApproximationSplitPlaceSkewHermitianUnitar
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsPlaceSplitsCompletelyNotMemEmbedding
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemNormOneIdeles
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.ThK.LiftConst
@@ -24,7 +19,7 @@ theorem strongApprox_split_herm : GlobalTheory.Published.StrongApproxSU → ∀ 
   have hδ : (1 : E) ≠ 0 := one_ne_zero
   have hJ' : IsHermND σ ((1 : E) • V.Jᵀ) := by
     refine ⟨fun i j => ?_, ?_⟩
-    · simp only [Matrix.smul_apply, Matrix.transpose_apply, smul_eq_mul, map_mul, map_one, one_mul, hV.herm]
+    · simp only [Matrix.smul_apply, Matrix.transpose_apply, smul_eq_mul, one_mul, hV.herm]
     · rw [Matrix.det_smul, Matrix.det_transpose]
       exact mul_ne_zero (pow_ne_zero _ hδ) hVd
   have hidem := isPlacesIdem_placeIdem (F := F) v

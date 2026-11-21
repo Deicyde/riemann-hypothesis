@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.FrobeniusOrbits.Statement
 import Formalism.TameInertiaTowers.TowerFieldFoundations
-import Formalism.TameInertiaTowers.CentralOrderTwo.ConjEqInvOfPowEqOne
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.JumpSets
 
 open NumberField IntermediateField

@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.FibreStA
+import Mathlib.Analysis.Calculus.ImplicitContDiff
+import Mathlib.RingTheory.PiTensorProduct
 
 noncomputable section
 
@@ -22,7 +26,7 @@ theorem deh_eval₂_rename {S : Type*} [Field S] (v : ι → S) (e : Fin (D + 1)
   congr 1
   apply MvPolynomial.ringHom_ext
   · intro r
-    simp [deh_apply]
+    simp
   · intro i
     simp [deh_apply]
 
@@ -118,7 +122,7 @@ theorem Gen.zOf_mem (hx0 : x (e 0) ≠ 0) (hw : G.Good w) {ρ : ℂ}
     congr 1
     · exact RingHom.ext_int _ _
     · funext i
-      simp only [Function.comp_apply, Polynomial.coe_compRingHom_apply, Polynomial.mul_comp,
+      simp only [Function.comp_apply, Polynomial.coe_compRingHom_apply,
         Polynomial.C_comp, Polynomial.X_comp, ← G.hQ i, deh_X, div_eq_mul_inv, map_mul]
       ring
   have h2 := map_eval₂_X_mul_C_eq G (deh (x ∘ e) 0) (deh x (e 0) G.Θ) f
@@ -210,8 +214,8 @@ private theorem deh_eq_zero_of_mem_pts_of_deh_eq_zero (hx0 : x (e 0) ≠ 0) (F :
       have hs : ∑ i ∈ m.support, m i ≤ F.totalDegree := MvPolynomial.le_totalDegree hm
       obtain ⟨k, hk⟩ := Nat.exists_eq_add_of_le hs
       rw [hk, Nat.add_sub_cancel_left]
-      simp only [map_mul, map_pow, map_prod, MvPolynomial.aeval_C, MvPolynomial.aeval_X, mul_pow,
-        Finset.prod_mul_distrib, Finset.prod_pow_eq_pow_sum, algebraMap_int_eq, eq_intCast, map_intCast]
+      simp only [map_mul, map_pow, map_prod, MvPolynomial.aeval_X, mul_pow,
+        Finset.prod_mul_distrib, Finset.prod_pow_eq_pow_sum, eq_intCast, map_intCast]
       ring
     rw [Finset.sum_congr rfl h1, ← Finset.sum_mul, ← map_sum Polynomial.C,
       sum_coeff_homogenize_eq_pow_mul_eval₂ F (fun i => x i / x (e 0)) x (x (e 0)) (fun i => rfl) hx0 _ le_rfl, ← deh_apply, hF,

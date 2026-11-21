@@ -1,7 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.ShapeRowIsomorphisms.Statement
 import Formalism.WachLatticeTwists.ShapeRowIsomorphisms.StatClause5Row
-import Formalism.WachLatticeTwists.CupProductVanishing.StatVhEInChi
-import Formalism.WachLatticeTwists.CupProductVanishing.H2MapInjective
 
 open Formalism.NG Formalism.RepresentationBoundsCohomology.BR Formalism.RepresentationBoundsCohomology.JT Formalism.RepresentationBoundsCohomology.LocallyConstantCohomology
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.RepresentationBoundsCohomology.LOC

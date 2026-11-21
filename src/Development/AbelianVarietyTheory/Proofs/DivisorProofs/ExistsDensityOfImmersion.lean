@@ -1,8 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsCompactDualHaar
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.NonemptyCompactDualHaar
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ContinuousMatExp
 import ReciprocityTheory.GeometryOfNumbers.PluriharmonicAnalysis.LogDetSt
+import Mathlib.Analysis.Real.Pi.Bounds
 
 noncomputable section
 

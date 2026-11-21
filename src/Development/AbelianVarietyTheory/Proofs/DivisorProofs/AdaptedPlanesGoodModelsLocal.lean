@@ -1,11 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinRel
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TrPApply
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AtVecMulVecRight
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemLagrangianSetArchimedean
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LagrangianSetAdditiveSubgroup
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviMapPreservesRationalPoints
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLeviElementSkewCm
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoubleAdaptedLagrangianEq
@@ -78,7 +73,7 @@ theorem eq_zero_of_trace_gram (σ : E →ₐ[F] E) {n : ℕ} (J : Matrix (Fin n)
       funext j
       by_cases hj : j = k
       · subst hj; simp [GlobalTheory.ArchTraceNondeg.cA_cAinv]
-      · simp [Pi.single_apply, hj]
+      · simp [hj]
     rw [hw, dotProduct_single] at h
     exact h
   calc b = b ᵥ* (incM F J * (incM F J)⁻¹) := by rw [Matrix.mul_nonsing_inv _ hdet, Matrix.vecMul_one]

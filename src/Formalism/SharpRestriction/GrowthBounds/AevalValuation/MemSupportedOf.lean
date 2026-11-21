@@ -1,12 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.AevalValuation.PlDefs
 import Formalism.SharpRestriction.GrowthBounds.PlaneCoefficients.RestPlOf
 import Formalism.SharpRestriction.GrowthBounds.PlaneCoefficients.ProdRangeZmod
 import Formalism.SharpRestriction.GrowthBounds.PlaneCoefficients.RenameMemSupported
-import Formalism.SharpRestriction.GrowthBounds.PolynomialLevels.FrRevInj
-import Formalism.SharpRestriction.GrowthBounds.DiagonalSupport.PosULeIff
-import Formalism.SharpRestriction.GrowthBounds.DiagonalSupport.ValuationOneEqZero
-import Formalism.SharpRestriction.GrowthBounds.TwistedSubstitution.MemLin
-import Formalism.SharpRestriction.GrowthBounds.ValuationLowestDegreeMapFractionField
 
 noncomputable section
 

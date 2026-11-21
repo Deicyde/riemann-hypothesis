@@ -1,10 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemConeOfMem
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormsOfInduces
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormsComb
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InducesPl
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagComponentsBijectModuliComponentsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFiniteSetResidueLogBound
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RegularLocalStatementStatement
@@ -110,7 +105,7 @@ theorem nefOver_det_of (hG : GeoSt) (hA : AnyLevSt) (hT : TestPtSt) (hX : ExFram
     letI := (GlobalTheory.ShFam.constF O.κ.e (O.Φ.C c).Y).toAlgebra
     refine ⟨genericPoint _, fun h => h ⟨GlobalTheory.AllWt.ptF (O.Φ.C c).y0 (IsLocalRing.closedPoint _), ?_⟩⟩
     have := congrArg (fun g : Sp (O.var c).Fn ⟶ _ => g (IsLocalRing.closedPoint (O.var c).Fn)) (O.Φ.C c).y0_x
-    simp only [Scheme.Hom.comp_apply] at this
+    simp only at this
     refine this.trans (congrArg (O.Φ.C c).π ?_)
     exact Scheme.fromSpecStalk_closedPoint
   have hv : ∀ v : HeightOneSpectrum (𝓞 D.what₂.LL), (l : 𝓞 D.what₂.LL) ∈ v.asIdeal →

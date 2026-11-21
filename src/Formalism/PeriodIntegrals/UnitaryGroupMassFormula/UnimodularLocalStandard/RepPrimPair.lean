@@ -1,4 +1,9 @@
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnimodularLocalStandard.RepSingleSat
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnimodularLocalStandard.RepArith
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
+import Mathlib.RingTheory.SimpleRing.Principal
 
 noncomputable section
 open scoped ComplexConjugate
@@ -102,7 +107,7 @@ theorem rep_prim_pair (a : ℕ) (b c : ℤ) (d : ℕ) (ha : 0 < a) (hd : 0 < d) 
   have hxtT : ∀ j ∈ T, xt j = 0 := by
     intro j hj
     have hne : j ≠ i₀ := by rintro rfl; exact hi₀ hj
-    simp [hxt, hfdef, fvec, Pi.single_apply, hne]
+    simp [hxt, hfdef, fvec, hne]
   have hdiv : ((l : ℂ)⁻¹) • xt ∉ Λ := by
     rw [hxt, smul_smul, ← mul_inv, ← pow_succ', show j₁ - 1 + 1 = j₁ by omega]
     exact hPj

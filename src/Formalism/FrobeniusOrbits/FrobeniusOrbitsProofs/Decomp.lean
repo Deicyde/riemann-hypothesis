@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.FrobeniusOrbits.Statement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.Galois
 import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.CoprimeTwoPow
 import Formalism.TameInertiaTowers.TowerFieldFoundations

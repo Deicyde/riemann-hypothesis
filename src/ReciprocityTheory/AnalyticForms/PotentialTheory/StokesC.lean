@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PotentialTheory.StokesB
+import Mathlib.Topology.Sheaves.Presheaf
+import ReciprocityTheory.AnalyticForms.PotentialTheory.Partition
+import ReciprocityTheory.AnalyticForms.PotentialTheory.StokesA
 
 namespace ReciprocityTheory.AnForm.M
 

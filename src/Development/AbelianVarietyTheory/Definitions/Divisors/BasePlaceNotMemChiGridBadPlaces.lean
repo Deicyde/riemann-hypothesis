@@ -1,9 +1,9 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.LinksChar
-import Formalism.LocalToGlobal.BesselHermitianTheta.AllTied
-import Formalism.SharpRestriction.LevelLetterCocycles.TwGood
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.CmHostImaginaryGeneratorNeZero
 import Development.AbelianVarietyTheory.Definitions.Divisors.LeastSplitAuxiliaryPrimeThetaChainSpec
+import Formalism.LocalToGlobal.IndefiniteReal.DatumVec
 
 noncomputable section
 

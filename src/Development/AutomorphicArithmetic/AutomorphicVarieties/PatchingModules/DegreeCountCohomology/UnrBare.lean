@@ -1,8 +1,8 @@
+import BuildAid.Leniency.Variable
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.DegreeCountCohomology.IsDualPair
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.ZhatFin
-import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisCochains.DecZhat
-import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.CoboundaryCriterion
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.RootEquality
+import ReciprocityTheory.GaloisValuations.Global
 
 noncomputable section
 

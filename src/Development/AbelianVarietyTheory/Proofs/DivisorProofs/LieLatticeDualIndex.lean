@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SmulMemOfIsIntegral
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianAdjointPropertiesStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianAdjointMemEndLatticeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EndLatticeTraceIntegralStatement

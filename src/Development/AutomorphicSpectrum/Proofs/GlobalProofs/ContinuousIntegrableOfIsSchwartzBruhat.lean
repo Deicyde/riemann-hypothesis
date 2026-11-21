@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.IsCovolOne
-import CompanionTheory.SpectralGeometry.CountingDefinitions.AdelicEulerProducts.CountData
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.IntegralSelfDualEqAdelicFourier
 open NumberField IsDedekindDomain MeasureTheory Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.Published.SiegelOneVector GlobalTheory.CompanionTheory.Hypotheses₂.OneV
 open scoped TensorProduct ENNReal Matrix

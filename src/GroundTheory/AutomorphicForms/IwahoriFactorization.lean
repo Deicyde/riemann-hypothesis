@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.InductionParabolic
 import GroundTheory.AutomorphicForms.AffineBruhat
+import Mathlib.RingTheory.PiTensorProduct
 
 noncomputable section
 

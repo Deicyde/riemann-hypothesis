@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.AwayActions.SigmaSigma
 import Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.AwayActions.DecAlg
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsOrthogonalIdempotentsAdeleUnitCombination
 
 noncomputable section
 
@@ -179,7 +180,7 @@ def QS (σ : E →ₐ[F] E) {n : ℕ} (ε : ℤ) (M : Matrix (Fin n) (Fin n) (AE
   Mᵀ + ((ε : ℤ) : AE F E) • M.map (cA σ) = 0
 
 theorem qs_zero {n : ℕ} (ε : ℤ) : QS σ ε (0 : Matrix (Fin n) (Fin n) (AE F E)) := by
-  ext a b; simp [QS]
+  ext a b; simp
 
 theorem qs_add {n : ℕ} (ε : ℤ) {M N : Matrix (Fin n) (Fin n) (AE F E)} (hM : QS σ ε M) (hN : QS σ ε N) :
     QS σ ε (M + N) := by

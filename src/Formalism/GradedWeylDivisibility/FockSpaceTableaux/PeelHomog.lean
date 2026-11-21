@@ -1,4 +1,10 @@
-import Formalism.GradedWeylDivisibility.FockSpaceTableaux.LCpeelLemmas
+import BuildAid.Leniency.Open
+import Formalism.GradedWeylDivisibility.StatementC
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open MvPolynomial
 
@@ -39,7 +45,7 @@ private theorem eq_erase_erase_add_single_add_single {r n : ℕ} (l j : Fin n) (
       simp [hlj, Ne.symm hlj]
     · by_cases hj : t = j
       · subst hj
-        simp [hl, Ne.symm hl]
+        simp [Ne.symm hl]
       · simp [hl, hj, Ne.symm hl, Ne.symm hj]
   · simp [hb, Ne.symm hb]
 
@@ -100,11 +106,11 @@ theorem sliceHomogeneous : PeelHomog := by
   · intro d hd
     obtain ⟨m, hm, -, rfl⟩ := lcpeel_support l j a0 k g d hd
     exact weight_pairW_eq_erase_of_split l j hlj a0 m _ ω
-      (by simp [Finsupp.erase_apply, hlj]) (by simp [Finsupp.erase_apply])
+      (by simp [hlj]) (by simp)
       (eq_erase_erase_add_single_add_single l j hlj a0 m) (hg (mem_support_iff.mp hm))
   · intro d hd
     obtain ⟨m, -, -, rfl⟩ :=
       lcpeel_support l j a0 k g d (mem_support_iff.mp hd)
-    exact ⟨by simp [Finsupp.erase_apply, hlj], by simp [Finsupp.erase_apply]⟩
+    exact ⟨by simp [hlj], by simp⟩
 
 end Formalism.GradedWeylDivisibility

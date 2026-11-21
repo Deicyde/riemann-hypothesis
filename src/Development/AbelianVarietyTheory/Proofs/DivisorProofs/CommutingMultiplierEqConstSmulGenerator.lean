@@ -1,5 +1,7 @@
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CommutingMapEqSmulMultiplier
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
 
 namespace GlobalTheory
 
@@ -71,7 +73,7 @@ theorem commuting_multiplier_eq_const_smul_generator
     rw [e1, map_sum]
     simp only [map_smul, Tc, Module.Basis.constr_basis]
     apply Subtype.ext; apply Subtype.ext
-    simp only [Submodule.coe_sum, Submodule.coe_smul, AddSubmonoidClass.coe_finset_sum,
+    simp only [AddSubmonoidClass.coe_finset_sum,
       SetLike.val_smul, img]
     conv_rhs => rw [← bV.sum_repr f]
     simp only [map_sum, map_smul, Submodule.coe_sum, Submodule.coe_smul, hsemi]

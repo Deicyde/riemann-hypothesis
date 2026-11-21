@@ -1,22 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KStab
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolEqISupFockDeg
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KEqOnId
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OffPartLe
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsArchOperatorCompactUnitaryWStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAdaptedFrame
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TensInclInjective
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FixPartEqBotOfLt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TprodMemDegLE
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaKernelReal
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StabilizerUpperFixedPart
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LowPartLeFixedPartImage
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchimedeanPolynomialTensorCharacter
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FixedPartIrreducibleStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LowDegreeLeFixedDegreeStatement
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedHarmonicPolynomialIntegral
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -34,7 +16,7 @@ theorem harmTy_le_ker {P Q R S : ℕ} (x : ℚ) (X : Mat P Q) (hX : IsKC X) :
     harmTy P Q R S x ≤ LinearMap.ker (fockAct1 P Q R S X - ((x : ℂ) * X.trace) • 1) := by
   refine Submodule.span_le.2 ?_
   rintro f ⟨_, hf⟩
-  simp [sub_eq_zero, hf X hX]
+  simp [hf X hX]
 
 theorem tensHarm_le_chiPart {F : Type} [Field F] [NumberField F] {P Q R S : ℕ} (x : InfinitePlace F → ℚ) :
     tensHarm F P Q R S x ≤ GlobalTheory.KFixIrr.chiPart (InfinitePlace F) P Q R S x := by

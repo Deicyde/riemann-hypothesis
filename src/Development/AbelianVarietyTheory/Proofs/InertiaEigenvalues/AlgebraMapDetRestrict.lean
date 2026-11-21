@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.AdEApply
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.CardCokernelUnramifiedOrderMatrixOfDetBase
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.UnitLemmaGroup
 
 open GlobalTheory.UnitLemma GlobalTheory.StableLatCount Polynomial
 

@@ -1,4 +1,11 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.UnipotentAdelicQuotients.EllRegStep
+import Mathlib.Analysis.InnerProductSpace.Calculus
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 namespace ZetaZeros.D.EllReg
 
@@ -223,7 +230,7 @@ theorem frozenDecompositionOfParts : DecomposeOf := by
     simp only [trOp]
     rw [Finset.sum_range_succ, Finset.sum_eq_zero, zero_add, Finset.sum_mul]
     · refine Finset.sum_congr rfl fun w _ => ?_
-      simp only [b2, eq_self_iff_true, if_true]
+      simp only [b2, if_true]
       rw [Dec.dw_const_mul hφ, hDw d ξ (List.ofFn w), Dec.prod_neg_eq]
       beta_reduce
       have hsq : ((-1 : ℂ) ^ m) * (-1) ^ m = 1 := by
@@ -266,7 +273,7 @@ theorem frozenDecompositionOfParts : DecomposeOf := by
       lo m w = fun x => ((ψ0 (r⁻¹ • (x - x0)) : ℝ) : ℂ) * (P.a i m w x - P.a i m w x0) := by
     intro w
     funext x
-    simp only [lo, eq_self_iff_true, if_true]
+    simp only [lo, if_true]
   rw [← hR, key, Finset.sum_range_succ]
   simp only [hlom]
   ring

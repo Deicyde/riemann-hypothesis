@@ -1,13 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.TwistPlacesOffPrimeQZero
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HoldsUIff
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsBare
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CopyLIntegral
-import Development.AbelianVarietyTheory.Definitions.Divisors.Hypotheses2
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.NonzeroPlacesOverPrimesLifts
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.SetAtOfSizeAt
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.SzRowNumAt
-import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.SetUnipotentTranslate
+import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ExistsExplicitParameters
 
 noncomputable section
 

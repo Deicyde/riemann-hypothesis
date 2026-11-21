@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ExtXCastAdd
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RootExchangeUnipotentHaarAndModulus
 open NumberField IsDedekindDomain MeasureTheory ValuativeRel Matrix Formalism.L2.Col GlobalTheory.SplitWeil GlobalTheory.RootEx GlobalTheory.StepData GlobalTheory.VolBridge
@@ -90,7 +91,7 @@ theorem locHom_autOf {k : Type} [Field k] (ι : E →+* k) (e : A ⊕ Fin c ≃ 
     (locHom ι e (autOf e g)).val = g.val.map ι := by
   rw [locHom_val]
   ext i j
-  simp [GlobalTheory.SymBridge.toLoc, autOf_apply, Matrix.mulVec_single_one]
+  simp [GlobalTheory.SymBridge.toLoc, autOf_apply]
 
 end GlobalTheory.VolBridge.NormOneIdeleAutomorphisms
 

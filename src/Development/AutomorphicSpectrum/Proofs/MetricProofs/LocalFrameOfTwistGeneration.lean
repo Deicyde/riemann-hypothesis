@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.DetMemSubring
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.FrameCoeffsRegularInChart
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.SpecializesOfUnits
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
 open AlgebraicGeometry CategoryTheory NumberField Matrix
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.PB GlobalTheory.CompanionTheory.Ar.PB.FMX GlobalTheory.CompanionTheory.Ar.FlagBun GlobalTheory.CompanionTheory.Ar.PB.FMX.Frm
@@ -55,7 +55,7 @@ theorem frames_at_point : ∀ {X : Scheme.{0}} {Ω : Type} [Field Ω] (ξ : Spec
     by_cases hx : x c₁ ^ m = 0
     · exfalso
       have h2 := congrFun (congrFun hBC a) a
-      simp [Matrix.mul_apply, hx, Matrix.one_apply] at h2
+      simp [Matrix.mul_apply, hx] at h2
     · field_simp
   · intro j a
     exact hCreg j a

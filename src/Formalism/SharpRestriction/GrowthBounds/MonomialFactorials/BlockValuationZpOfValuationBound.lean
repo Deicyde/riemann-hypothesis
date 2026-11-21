@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.MonomialFactorials.DegSubSingle
+import Formalism.SharpRestriction.GrowthBounds.MonomialFactorials.BlockValuationZpOfLatticeInclusion
 
 noncomputable section
 
@@ -55,7 +58,7 @@ theorem hypU_proved (hB : G.BlockOK) : Formalism.InvariantFactorPaths.KP.LL.HypU
   intro j jp c y hy
   simp only [M.Y, Submodule.mem_inf, Submodule.mem_iInf] at hy ⊢
   refine ⟨hpol _ _ G.uPos c ?_ ?_ y hy.1, fun k => ?_⟩
-  · simp only [M.BlockData.lettersAt, eq_self_iff_true, if_true]
+  · simp only [M.BlockData.lettersAt, if_true]
     omega
   · intro i hi
     simp only [M.BlockData.lettersAt, if_neg hi]

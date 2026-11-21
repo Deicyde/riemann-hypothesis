@@ -1,5 +1,6 @@
-import Mathlib
-import Development.DiscreteGroups.GlobalIrreducibility.DzKOrb
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.LabelDatum
 
 open Polynomial GlobalTheory.GLq GlobalTheory.Published
 open scoped IntermediateField

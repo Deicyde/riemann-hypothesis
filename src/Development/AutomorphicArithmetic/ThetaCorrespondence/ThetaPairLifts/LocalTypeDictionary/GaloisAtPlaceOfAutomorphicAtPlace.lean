@@ -1,7 +1,7 @@
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.LocalTypeDictionary.DiscreteSpectrumResidualClassification
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GaloisStatementOfSmall
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.LocalTypeDictionary.ExistsGaloisRepOfDefiniteUnitary
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GaloisStatementOfSmallStatement
 
 section
 set_option autoImplicit false

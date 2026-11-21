@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.StandardPairingDecay
+import Formalism.HermitianCurvature.HerGenC
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.SliceCompactSupportCoefficient
 
 open Matrix MeasureTheory Topology
 

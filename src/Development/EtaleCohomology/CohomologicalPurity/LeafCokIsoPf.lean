@@ -1,4 +1,6 @@
-import Development.EtaleCohomology.CohomologicalPurity.LeafExcSpPfMono
+import BuildAid.Leniency.Open
+import Development.EtaleCohomology.CohomologicalPurity.LeafExcSpPf
+import Mathlib.CategoryTheory.ExtremalEpi
 
 noncomputable section
 open CategoryTheory Limits Opposite GlobalTheory.EtC

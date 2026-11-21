@@ -1,24 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.HarishChandraFinite
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.HasDRepIffHasDerivAt
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HarishChandraModulesOn
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.AdmissibleDiscreteSeriesOfHasParam
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsNormLeHeightPow
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.StableIffCarrierEq
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoreClausesOfWeakCharacterisation
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchurConstantsExistOnChainOfCuspRapidDecay
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RowTypePartLeEigensystemPartStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TypePartLeEigensystemPartPrincipalLevelStatement
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ClosureImageSpan
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LiftMatrixComputesLiftRational
-import Development.AbelianVarietyTheory.Definitions.Divisors.InstCMHostS
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.NormalFam
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLabelThetaLiftSpaceIffDual
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LevelOperatorsAtPrimeOffLevelDatum
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ThetaLiftLevelsGoodPrimesProperties
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SphericalHeckeScalarOnSphericalVectorsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RowTypeHasSphericalHeckeEigensystem
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.NonzeroLiftPartTypeGivesNonzeroTypeVectorStatement
+import Development.AbelianVarietyTheory.BlockTheory.HeightDefect.LevelCuspCharacters
 open Formalism.BasicNotions Formalism.MainNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix Formalism.L2.Theta Formalism.L2.DIV Formalism.L2.Indef Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.Mult Formalism.IndefR.Datum Formalism.IndefR.Cx
 open scoped TensorProduct InnerProductSpace
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
@@ -134,7 +121,7 @@ theorem eec_le_of_agree : ∀ (D : D7) (G : Type) [Group G] [Fintype G] (Pl0 I0 
       (by rw [one_pow, Nat.cast_one]; exact fun h1 => P.isPrime.ne_top ((Ideal.eq_top_iff_one _).2 h1))
       (fun PP hPP => hG PP (hPP.imp id fun h => absurd h (Finset.notMem_empty _)))
   have hYlab : GlobalTheory.Hk3.IsLab (Yc D 0) P d := ⟨B, ((levY.2.1 R.SF d B).1 hB).2⟩
-  have hdd : dualLab (dualLab d) = d := by simp [dualLab, List.map_reverse, List.map_map, Function.comp_def]
+  have hdd : dualLab (dualLab d) = d := by simp [dualLab, List.map_reverse, List.map_map]
   have hWlab : GlobalTheory.Hk3.IsLab (Wc D i) P (dualLab d) := by
     have h := ((GlobalTheory.LabEq.isLab_W_iff (s := 1) R.toRealDat F.lv2 hCore i P (dualLab d) hG).1).2
     rw [hdd] at h

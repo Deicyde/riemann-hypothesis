@@ -1,7 +1,5 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.InvariantOperatorUnderJacquet
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.QNFAsm
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.OppositeWeylSubgroupClosed
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.SettingConstruction
 import Formalism.HermitianCurvature.CompositeFormulaLevelZero
 
 open MeasureTheory Matrix

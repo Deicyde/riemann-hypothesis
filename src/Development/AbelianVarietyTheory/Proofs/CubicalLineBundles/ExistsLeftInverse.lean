@@ -1,11 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.ShimuraVarieties.PowObjGeometricallyConnected
-import Development.AbelianVarietyTheory.Statements.PrincipalLattices.LogHermFormOfUnitDiscriminant
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.SecBaseChangeAnySt
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.ExistsLbHermitian
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.TensorMapFiniteOfSplitStatement
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.RelAmpleExternalTensorPowerGroupPower
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsSecImageNonzeroLocus
+import Mathlib.Algebra.Module.StablyFree.Basic
 
 set_option autoImplicit false
 
@@ -50,7 +47,7 @@ theorem lam_self (laws : Out.Laws) {S : Scheme.{0}} [IsLocallyNoetherian S] (P :
     exact (congrArg _ h₀).trans (map_zero _)
   have h₃ := congrArg (pull x.left) h₂
   simp only [Matrix.cons_val_zero, Matrix.cons_val_one, map_add, map_zsmul, ← pull_comp, Category.comp_id,
-    ← Over.comp_left, Out.mulA, MonObj.comp_pow, map_zero, pow_two, MonObj.comp_mul] at h₃
+    ← Over.comp_left, Out.mulA, map_zero, pow_two, MonObj.comp_mul] at h₃
   rw [lam, h₁, add_zero, ← sub_eq_zero, ← neg_eq_zero, ← h₃]
   push_cast
   abel

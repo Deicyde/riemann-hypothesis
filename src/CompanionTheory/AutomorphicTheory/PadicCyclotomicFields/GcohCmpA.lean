@@ -1,4 +1,9 @@
-import CompanionTheory.AutomorphicTheory.PadicCyclotomicFields.GcohDefs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.ProfiniteCohomology.CupProducts
+import GroundTheory.ProfiniteCohomology.FilteredHomology
+import Mathlib.Tactic.ENatToNat
+import ReciprocityTheory.GaloisValuations.SeparatedDvrSecondCohomologyMem
 
 open CategoryTheory GroundTheory.ProfCoh ReciprocityTheory.Gal ValuativeRel
 

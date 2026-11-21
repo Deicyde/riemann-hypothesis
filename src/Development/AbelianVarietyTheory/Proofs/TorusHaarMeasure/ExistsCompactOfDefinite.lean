@@ -1,6 +1,5 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.InterpolationModelInequalities
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.WeightFunctionOnFrames
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.ProdCastLESucc
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.FundamentalDomainExtension.PointAssembly.Frames
 open NumberField ReciprocityTheory.ChartRestriction.G.FD ReciprocityTheory.ChartRestriction.G.AR.Inst ReciprocityTheory.ChartRestriction.G.AR.Up ReciprocityTheory.L2DbarEstimates
@@ -17,14 +16,14 @@ private lemma exists_diagonal_sgn_eq_smul_one (X : _root_.ReciprocityTheory.Char
   rcases hp with h | h
   · refine ⟨-1, by norm_num, ?_⟩
     ext a b
-    by_cases hab : a = b <;> simp [Matrix.diagonal_apply, Matrix.one_apply, _root_.ReciprocityTheory.ChartRestriction.G.FD.sgn, h, hab]
+    by_cases hab : a = b <;> simp [_root_.ReciprocityTheory.ChartRestriction.G.FD.sgn, h, hab]
   · refine ⟨1, one_ne_zero, ?_⟩
     ext a b
     have ha : (a : ℕ) < X.p0 := lt_of_lt_of_le a.isLt h
     by_cases hab : a = b
     · subst hab
-      simp [Matrix.diagonal_apply, Matrix.one_apply, _root_.ReciprocityTheory.ChartRestriction.G.FD.sgn, ha]
-    · simp [Matrix.diagonal_apply, Matrix.one_apply, hab]
+      simp [_root_.ReciprocityTheory.ChartRestriction.G.FD.sgn, ha]
+    · simp [hab]
 
 open NumberField in
 variable {E : Type} [Field E] [NumberField E] [IsCMField E] {r : ℕ} in

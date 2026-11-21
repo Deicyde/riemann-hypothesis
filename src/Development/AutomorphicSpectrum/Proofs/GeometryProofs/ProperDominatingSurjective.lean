@@ -1,5 +1,8 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.CoordTieCompEquiv
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.EtaleLocalizationAtPrimeTensorOfLowHeight
+import Mathlib.AlgebraicGeometry.Modules.Sheaf
+import Mathlib.AlgebraicGeometry.ValuativeCriterion
 
 noncomputable section
 

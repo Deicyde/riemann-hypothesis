@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TailIntegrals.DelFormula
 
 noncomputable section
@@ -39,7 +40,7 @@ theorem shear_mp {n : ℕ} (i j : Fin (n + 1)) (hij : i ≠ j) (c : ℂ) :
       simp
     · funext m
       show Function.update y i (y i + c * y j) (i.succAbove m) = y (i.succAbove m)
-      simp [Function.update_apply, Fin.succAbove_ne]
+      simp [Fin.succAbove_ne]
   rw [key]
   exact (MeasurePreserving.symm e he).comp (hS.comp he)
 
@@ -77,10 +78,10 @@ private lemma measurePreserving_update_update_cc_rotation_of_ne {N : ℕ} (a b :
       (fun y : Fin (N + 1) → ℂ => Function.update y a (y a + -(q - 1) * y b))) := by
     funext y m
     by_cases hma : m = a
-    · simp [Function.update_apply, hma, hne, hne.symm, hcc]
+    · simp [hma, hne, hne.symm, hcc]
       linear_combination (y a - (q - 2) * y b) / 2 * hq
     · by_cases hmb : m = b
-      · simp [Function.update_apply, hmb, hne, hne.symm, hcc]
+      · simp [hmb, hne, hne.symm, hcc]
         linear_combination y b / 2 * hq
       · simp [Function.update_apply, hma, hmb]
   rw [key]

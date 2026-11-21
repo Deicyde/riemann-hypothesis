@@ -1,7 +1,6 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.RealDescent.RealLeviDescent.HighestVectorsRegularLine
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WtRInjective
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SumMemOfStable
 
 noncomputable section
 
@@ -22,9 +21,9 @@ theorem sum_single_smul {W : Type*} [AddCommGroup W] [Module ℂ W] (Δ : Fin n 
     · by_cases h2 : y = b
       · subst h1
         subst h2
-        simp [Matrix.single_apply]
-      · simp [Matrix.single_apply, h1, h2, Ne.symm h2]
-    · simp [Matrix.single_apply, h1, Ne.symm h1]
+        simp
+      · simp [h1, h2, Ne.symm h2]
+    · simp [h1, Ne.symm h1]
   simp only [hx, Finset.sum_ite_eq', Finset.mem_univ, if_true]
 
 theorem eq_zero_of_skew {W : Type*} [AddCommGroup W] [Module ℂ W] (Δ : Fin n → Fin n → W)

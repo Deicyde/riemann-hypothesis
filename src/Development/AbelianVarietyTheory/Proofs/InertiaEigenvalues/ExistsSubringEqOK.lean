@@ -1,5 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsTestRep
+import Mathlib.LinearAlgebra.Charpoly.ToMatrix
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.Polynomial.IsIntegral
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.Valuation.Integral
 open GlobalTheory.JR Matrix MeasureTheory Filter Topology
 
 open Polynomial

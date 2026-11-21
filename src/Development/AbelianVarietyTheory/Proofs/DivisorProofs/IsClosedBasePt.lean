@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.EqOfIsometricTrivShift
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsUniqueLiesUnder
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicMetricFinitelyManyPlacesStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RootMetricFinitelyManyPlacesStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeightDecompositionClosedPointStatement

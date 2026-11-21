@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ArchimedeanSchwartz.HodgeTateFromSandwich
+import GroundTheory.AutomorphicForms.GL2.GJStandardLPartial
 
 attribute [-instance] Formalism.DoubleCosetMeasures.instMeasGL
 

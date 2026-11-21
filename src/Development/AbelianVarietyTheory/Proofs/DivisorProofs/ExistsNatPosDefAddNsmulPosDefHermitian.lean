@@ -1,6 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HilbertKodairaSpencer
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAHOfIsFactorAH
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.CategoryTheory.Monoidal.Cartesian.Over
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 set_option autoImplicit false
 
@@ -27,7 +31,7 @@ theorem posn_quad_add {g : ℕ} (H₀ Hm : Matrix (Fin g) (Fin g) ℂ) (n : ℕ)
     (z ⬝ᵥ (Hm + n • H₀).mulVec (star z)).re
       = (z ⬝ᵥ Hm.mulVec (star z)).re + n * (z ⬝ᵥ H₀.mulVec (star z)).re := by
   have h1 : (n • H₀).mulVec (star z) = n • H₀.mulVec (star z) := by
-    ext i; simp [Matrix.mulVec, dotProduct, Finset.mul_sum, Finset.smul_sum, smul_mul_assoc, _root_.mul_assoc]
+    ext i; simp [Matrix.mulVec, dotProduct, Finset.smul_sum, _root_.mul_assoc]
   rw [Matrix.add_mulVec, dotProduct_add, h1, dotProduct_smul, Complex.add_re, nsmul_eq_mul,
     ← Complex.ofReal_natCast, Complex.re_ofReal_mul]
 

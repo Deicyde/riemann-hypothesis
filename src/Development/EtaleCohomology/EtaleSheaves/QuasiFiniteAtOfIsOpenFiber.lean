@@ -1,4 +1,5 @@
-import Development.EtaleCohomology.EtaleSheaves.LeafSpreadLQFMapVtuPfG
+import BuildAid.Leniency.Open
+import Development.EtaleCohomology.EtaleSheaves.SpreadingOutLocallyQuasiFinite
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry

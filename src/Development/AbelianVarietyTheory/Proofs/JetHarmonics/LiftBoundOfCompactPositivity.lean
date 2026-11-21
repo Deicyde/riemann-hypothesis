@@ -1,11 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ExistsNormBoundThreeFamilies
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.MemLevelZeroOfMemGroup
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.OnePointBasisFundamentalDomainVolume
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.PBGDegLift
-import Development.AbelianVarietyTheory.PublishedTheorems.BesselIntegrals.BesselXiIntegrable
-import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.XiExistsOfBesselXiIntegrable
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.IntegrableWeightNormSq
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.PBFCstmt
 
 namespace GlobalTheory.LiftBoundCpt
 

@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.GramTransformOfCoordinateChangeImports
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExpFourClauses
-import Formalism.LocalToGlobal.ProjectiveLattices.OpenRowsFree
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ToroidalBoundaryMetricData
 
 set_option autoImplicit false
 

@@ -1,10 +1,10 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.CuspidalExponentialDecay
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.IsIntegralCc
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.TiledBoundaries.NstatementHypsConsistent
 import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.ExistsInvariantNatLengthLattice
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.SmulMemOfIsIntegral
 import Development.AbelianVarietyTheory.Proofs.HermitianTraceForms.TraceFormDualOneTraceFormDual
+import Mathlib.Data.Rat.Star
+import Mathlib.NumberTheory.NumberField.Cyclotomic.Basic
 
 open NumberField ReciprocityTheory.ChartRestriction.G.FD
 open ReciprocityTheory.ChartRestriction.G.I2.TiledBoundaries (E4)
@@ -281,7 +281,7 @@ theorem dom_nonempty : flagData.dom.Nonempty := by
   fin_cases i
   · simp [lminor, psgn]
   · simp [lminor, psgn, sgn]
-  · simp [lminor, psgn, sgn, Finset.prod_range_succ, Matrix.det_fin_two]
+  · simp [lminor, psgn, sgn, Finset.prod_range_succ]
 
 theorem isIso_one : flagData.IsIso ![1, 1] := by
   refine ⟨?_, ?_, fun h => by simpa using congrFun h 0⟩

@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsGlIntertwinerOfResidualSpanEqTop
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.TotallySplit
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace GlobalTheory.TraceConj
 
@@ -145,7 +149,7 @@ theorem exists_gl_conj_of_trace_eq :
       ext a b
       by_cases hb : j = b
       · subst hb; simp [Matrix.sum_apply, Matrix.single_apply]
-      · simp [Matrix.sum_apply, Matrix.single_apply, Matrix.mul_apply, hb]
+      · simp [Matrix.sum_apply, Matrix.mul_apply, hb]
     have := congrFun (congrFun (hφ g (Matrix.single q j 1)) p) k
     rw [e, map_sum] at this
     simp only [map_smul, Matrix.sum_apply, Matrix.smul_apply, smul_eq_mul, Matrix.mul_apply] at this

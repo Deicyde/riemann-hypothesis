@@ -1,4 +1,7 @@
-import Development.WeilBound.ThetaLifts.LatticeBasics.HypothesesS
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.ThetaLifts.LatticeBasics.HypothesesE
+import Formalism.DoubleCosetMeasures.StatementZ
 
 noncomputable section
 

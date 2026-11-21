@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AutomorphicArithmetic.LocalEmbeddings.VertCmp
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.DivisorFrames.PdegEqOfIsDeg
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsRegularCoverOfAlteration
 import Development.AutomorphicArithmetic.DivisorFrames.IntersectionNumberGenericRank

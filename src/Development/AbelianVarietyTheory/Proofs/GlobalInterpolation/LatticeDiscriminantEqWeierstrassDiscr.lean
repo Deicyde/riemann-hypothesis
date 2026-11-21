@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.SharpRestriction.GlobalSchurBounds.GeneralLinearActions.IsDiscriminantTwelfthRootOfIdealLattice
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.GL3.CubicFields.EpsteinZeta.Jacobi
 import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.PeriodLatticeAgreement
 

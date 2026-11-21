@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import CompanionTheory.HarishChandraModules.BesselParameterIntegrals.BesselOrbitConvolutions.BesselNonvanishingReduction
 
 open MeasureTheory Matrix Finset

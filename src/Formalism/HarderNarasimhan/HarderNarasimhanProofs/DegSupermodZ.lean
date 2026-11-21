@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HarderNarasimhan.DegSupermodZ
 import Formalism.LatticeSlopes.ExistsSaturatedSlopeEqMuMax
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 open Module Submodule
 

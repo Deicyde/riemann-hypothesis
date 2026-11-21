@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.FiniteEtaleModels.GalOfKer
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsIntIntCast
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DualLatticeDegreeNeg
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeEndomorphismIntegralApproximation
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeVectorBundlePullback
 
 set_option autoImplicit false
 

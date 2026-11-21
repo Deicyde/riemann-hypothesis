@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.SatakeExponents.UniformizerValuations.AdelRep
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntegralPointsOpenCompactStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CharpolyNrmLTwConj
+import GroundTheory.GlobalFields.LocalFieldAtPlace
 
 noncomputable section
 

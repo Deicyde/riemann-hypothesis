@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.GeometricLemmaFiltration
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HasFiniteLengthOfIsIrreducible
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.BernsteinUnitaryProductIrreducible
+import Std.Tactic.BVDecide.Normalize.BitVec
 open GlobalTheory.PRep GlobalTheory.SmGL Matrix
 open scoped TensorProduct
 
@@ -176,7 +176,7 @@ theorem modExp_bool_true (n : Bool → Type) [∀ a, Fintype (n a)] :
   simp [modExp, Finset.sum_filter]
 
 theorem absPow_zero' (x : kˣ) : absPow k 0 x = 1 := by
-  ext; simp [val_absPow]
+  ext; simp
 
 end Spec
 
@@ -216,16 +216,16 @@ theorem cell_scalar_fst (χ₁ χ₂ : kˣ →* ℂˣ) (u v : ℕ) (m : Type) [F
   have h1 : relDeltaHalf k (fun j i => Fin (b.1 i j))
       (fun j i => GeneralLinearGroup.scalar (Fin (b.1 i j)) (cond j 1 ϖ)) = 1 := by
     rw [relDeltaHalf_apply]
-    simp [Fintype.prod_bool, deltaHalf_apply, det_scalar, modExp_bool_false, modExp_bool_true, hb0, absPow_zero']
+    simp [deltaHalf_apply, modExp_bool_false, modExp_bool_true, hb0]
   have h2 : relDeltaHalf k (fun i j => Fin (b.1 i j))
       (swapBlocks k (fun i j => Fin (b.1 i j)) (fun j i => GeneralLinearGroup.scalar (Fin (b.1 i j)) (cond j 1 ϖ))) =
       absPow k ((b.1 false true : ℂ) / 2) ϖ := by
     rw [relDeltaHalf_apply]
-    simp [swapBlocks, Fintype.prod_bool, deltaHalf_apply, det_scalar, modExp_bool_false, modExp_bool_true, hb0, hb, absPow_zero']
+    simp [swapBlocks, deltaHalf_apply, modExp_bool_false, modExp_bool_true, hb0, hb]
   have h3 : GeneralLinearGroup.det (relEmb k f (swapBlocks k (fun i j => Fin (b.1 i j)) (fun j i => GeneralLinearGroup.scalar (Fin (b.1 i j)) (cond j 1 ϖ))) false) = ϖ := by
-    simp [relEmb_apply, swapBlocks, det_leviEmb, Fintype.prod_bool, det_scalar, hb]
+    simp [relEmb_apply, swapBlocks, det_leviEmb, hb]
   have h4 : GeneralLinearGroup.det (relEmb k f (swapBlocks k (fun i j => Fin (b.1 i j)) (fun j i => GeneralLinearGroup.scalar (Fin (b.1 i j)) (cond j 1 ϖ))) true) = 1 := by
-    simp [relEmb_apply, swapBlocks, det_leviEmb, Fintype.prod_bool, det_scalar, hb0]
+    simp [relEmb_apply, swapBlocks, det_leviEmb, hb0]
   rw [h1, h2, h3, h4]
   have hs : (1 - (u : ℂ)) / 2 = -((b.1 false true : ℂ) / 2) := by
     have hu' : (u : ℂ) = (b.1 false true : ℂ) + 1 := by
@@ -258,16 +258,16 @@ theorem cell_scalar_snd (χ₁ χ₂ : kˣ →* ℂˣ) (u v : ℕ) (m : Type) [F
   have h1 : relDeltaHalf k (fun j i => Fin (b.1 i j))
       (fun j i => GeneralLinearGroup.scalar (Fin (b.1 i j)) (cond j 1 ϖ)) = 1 := by
     rw [relDeltaHalf_apply]
-    simp [Fintype.prod_bool, deltaHalf_apply, det_scalar, modExp_bool_false, modExp_bool_true, hb0, absPow_zero']
+    simp [deltaHalf_apply, modExp_bool_false, modExp_bool_true, hb0]
   have h2 : relDeltaHalf k (fun i j => Fin (b.1 i j))
       (swapBlocks k (fun i j => Fin (b.1 i j)) (fun j i => GeneralLinearGroup.scalar (Fin (b.1 i j)) (cond j 1 ϖ))) =
       absPow k ((b.1 true true : ℂ) / 2) ϖ := by
     rw [relDeltaHalf_apply]
-    simp [swapBlocks, Fintype.prod_bool, deltaHalf_apply, det_scalar, modExp_bool_false, modExp_bool_true, hb0, hb, absPow_zero']
+    simp [swapBlocks, deltaHalf_apply, modExp_bool_false, modExp_bool_true, hb0, hb]
   have h3 : GeneralLinearGroup.det (relEmb k f (swapBlocks k (fun i j => Fin (b.1 i j)) (fun j i => GeneralLinearGroup.scalar (Fin (b.1 i j)) (cond j 1 ϖ))) false) = 1 := by
-    simp [relEmb_apply, swapBlocks, det_leviEmb, Fintype.prod_bool, det_scalar, hb0]
+    simp [relEmb_apply, swapBlocks, det_leviEmb, hb0]
   have h4 : GeneralLinearGroup.det (relEmb k f (swapBlocks k (fun i j => Fin (b.1 i j)) (fun j i => GeneralLinearGroup.scalar (Fin (b.1 i j)) (cond j 1 ϖ))) true) = ϖ := by
-    simp [relEmb_apply, swapBlocks, det_leviEmb, Fintype.prod_bool, det_scalar, hb]
+    simp [relEmb_apply, swapBlocks, det_leviEmb, hb]
   rw [h1, h2, h3, h4]
   have hs : (1 - (v : ℂ)) / 2 = -((b.1 true true : ℂ) / 2) := by
     have hv' : (v : ℂ) = (b.1 true true : ℂ) + 1 := by

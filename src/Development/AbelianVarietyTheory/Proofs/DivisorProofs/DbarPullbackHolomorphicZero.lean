@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsTypeIsRealConst
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ClosedFormsMulClosed
 import ReciprocityTheory.SemistableReduction.ShareDetA
 open Set Filter Topology
@@ -53,11 +53,11 @@ theorem _root_.GlobalTheory.CxForm.PullClosed.dbarAt_sum_smul {ι : Type} [Finty
       _root_.GlobalTheory.CxForm.PullClosed.repr_sum_smul]
     simp only [map_sum, map_smul, Finsupp.finset_sum_apply, Finsupp.smul_apply, smul_eq_mul]
     rw [_root_.GlobalTheory.dbar_sum fun i _ => (hf i).mul_const _]
-    simp [ContinuousLinearMap.sum_apply,
+    simp [
       _root_.GlobalTheory.dbar_mul (hf _) (differentiableAt_const _),
       _root_.GlobalTheory.dbar_const]
   rw [key, Finset.mul_sum]
-  simp [mul_smul_comm]
+  simp
 
 open Set Filter Topology in
 open scoped ComplexConjugate ContDiff in

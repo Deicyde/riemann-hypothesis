@@ -1,8 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.GlobalHeightBoundIffAtGoodPrimes
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.Adj
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagPairPullback
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdjacentRefl
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false
@@ -70,7 +69,7 @@ theorem π_π_quotTwoGr₁ : cokernel.π (fl.step₂ m hm) ≫ (fl.quotTwo m hm)
     (fl.quotTwoGr₁ m hm).hom = fl.π ⟨m + 1, by omega⟩ := by
   change cokernel.π _ ≫ cokernel.π _ ≫ (fl.quot₂GrIso m hm).hom = _
   rw [π_quot₂GrIso]
-  simp [quot₂Seq, Flag.π, step₂]
+  simp [quot₂Seq, Flag.π]
 
 theorem π_quot₂Seq_f : fl.π ⟨m, by omega⟩ ≫ (fl.quot₂Seq m hm).f =
     fl.step ⟨m + 1, by omega⟩ ≫ cokernel.π (fl.step₂ m hm) := by

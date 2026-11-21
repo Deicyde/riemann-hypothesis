@@ -1,7 +1,7 @@
-import Mathlib
-import ReciprocityTheory.GaloisValuations.Global
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CyclotomicPrimePowAutomorphismInertialAtPrimeStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FiniteGaloisInertiaLiftsAbsoluteInertiaRatStatement
+import Mathlib.NumberTheory.Cyclotomic.Gal
 
 open Formalism.ConjugateSelfDual ReciprocityTheory.Gal NumberField Polynomial
 

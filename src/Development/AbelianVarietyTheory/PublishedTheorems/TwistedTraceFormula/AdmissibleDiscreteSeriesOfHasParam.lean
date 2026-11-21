@@ -1,9 +1,9 @@
-import Mathlib
-import Formalism.LocalRingCardinality.DataTheta
-import Formalism.LocalToGlobal.BesselHermitianTheta.DefsReal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.SchurIrreducible
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.NotTrivialAndTwist
 import Development.AbelianVarietyTheory.Counterexamples.HeightSurvey.BlattnerShiftsSignedParameters
+import Mathlib.Algebra.Ring.IsFormallyReal
 
 open Formalism.BasicNotions.TH Formalism.L2.Theta Matrix
 

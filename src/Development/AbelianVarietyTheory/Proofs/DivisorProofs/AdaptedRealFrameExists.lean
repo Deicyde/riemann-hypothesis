@@ -1,10 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAdaptedFrame
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TprodMemTensSpan
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InfiniteCompactLeviLift
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CartanEigenOrthonormalFrameExists
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianVectorEigenDecompositionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianFrameOrthogonalExtensionStatement
 open scoped TensorProduct NNReal Matrix
@@ -44,7 +41,7 @@ theorem form_map (τ : E →+* ℂ) (hcm : ∀ z, τ (σ z) = star (τ z)) {n : 
     (a b : Fin n → E) :
     (fun i => τ (a i)) ⬝ᵥ (Complex.I • J.map τ) *ᵥ star (fun i => τ (b i)) = Complex.I * τ (form σ J a b) := by
   simp only [form, dotProduct, mulVec, Matrix.smul_apply, Matrix.map_apply, smul_eq_mul, map_sum, map_mul, hcm, Pi.star_apply,
-    star_star, Finset.mul_sum]
+    Finset.mul_sum]
   refine Finset.sum_congr rfl fun i _ => ?_
   refine Finset.sum_congr rfl fun j _ => ?_
   ring

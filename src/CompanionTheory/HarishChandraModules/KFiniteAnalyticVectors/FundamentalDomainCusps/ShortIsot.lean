@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.HarishChandraModules.KFiniteAnalyticVectors.FundamentalDomainCusps.CompactIntegralBoundedByQuotientNorm
 import CompanionTheory.HarishChandraModules.KFiniteAnalyticVectors.FundamentalDomainCusps.NilpAlg
-import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.RowsDef
+import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.ProjRows
 
 open Matrix MeasureTheory NumberField Topology
 open scoped ENNReal

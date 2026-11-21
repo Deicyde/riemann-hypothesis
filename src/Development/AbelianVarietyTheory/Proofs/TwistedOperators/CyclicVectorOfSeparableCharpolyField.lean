@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.CentralizerTensorForms
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.NotCompactOfIdempotent
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LeftMulMatrixTransfer
 
 open Matrix
 

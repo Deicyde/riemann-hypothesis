@@ -1,5 +1,15 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import ReciprocityTheory.GeometryOfNumbers.LatticeCovolumes.EllipsoidStA
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.Analysis.Matrix.Order
+import Mathlib.Analysis.Real.Pi.Bounds
+import Mathlib.MeasureTheory.Measure.Lebesgue.VolumeOfBalls
+import Mathlib.RingTheory.Complex
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Topology.Separation.CompletelyRegular
+import Mathlib.Topology.Sheaves.Presheaf
 
 namespace ReciprocityTheory.GeometryOfNumbersTheory
 
@@ -58,7 +68,7 @@ private lemma qR_eq {r : ℕ} (B : Matrix (Fin r) (Fin r) ℝ) (y : Fin r → �
   have h1 : qR (Bᵀ * B) y = dotProduct y ((Bᵀ * B) *ᵥ y) := by
     simp only [qR, dotProduct, Matrix.mulVec, Finset.mul_sum, mul_assoc]
   rw [h1, ← mulVec_mulVec, dotProduct_mulVec, vecMul_transpose]
-  simp only [dotProduct, Real.norm_eq_abs, sq_abs, sq, abs_mul_abs_self]
+  simp only [dotProduct, Real.norm_eq_abs, sq, abs_mul_abs_self]
 
 private lemma setC_eq {r : ℕ} (B : Matrix (Fin r) (Fin r) ℂ) (R : ℝ) :
     {y | qC (Bᴴ * B) y ≤ R ^ 2} = ((Matrix.toLin' B).restrictScalars ℝ) ⁻¹' sqBall r ℂ R := by

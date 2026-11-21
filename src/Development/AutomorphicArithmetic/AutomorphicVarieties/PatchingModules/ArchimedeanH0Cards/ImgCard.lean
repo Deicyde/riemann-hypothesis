@@ -1,11 +1,9 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.ArchimedeanH0Cards.ObstructionBoundFromDuality
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.SelmerModuleFiniteness.CardSelmerMulCardBoundaryLeCardSelmerMatrix
 import Development.AutomorphicArithmetic.AutomorphicVarieties.SelmerModuleFiniteness.FiniteSelmerModuleOfFiniteCohomology
 import Development.AutomorphicArithmetic.AutomorphicVarieties.SelmerModuleFiniteness.FiniteTruncatedLocallyConstantMatrixSolutions
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.SeparableMatrixStability.SelLin
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.SeparableMatrixStability.SelMap
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.SeparableMatrixStability.AmFin
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.DegreeCountCohomology.AdicLC
 
 open Matrix Filter ReciprocityTheory.Gal UpperTheory.V.W UpperTheory.V.Pa UpperTheory.V.Pa.B2
 
@@ -172,7 +170,7 @@ private theorem img_card {l : ℕ} [Fact l.Prime] {F : GFrame l} {n : ℕ} (x : 
       rw [← RingHom.mapMatrix_apply, ← RingHom.mapMatrix_apply, ← RingHom.mapMatrix_apply,
         ← RingHom.mapMatrix_apply, ← RingHom.mapMatrix_apply]
       rw [map_sub, map_mul, map_mul]
-      simp [RingHom.mapMatrix_apply, Matrix.map_map, hπ, Ideal.Quotient.algebraMap_eq]
+      simp [RingHom.mapMatrix_apply, hπ, Ideal.Quotient.algebraMap_eq]
   have hsub : T ⊆ Φ '' (Set.univ ×ˢ Bm) := by
     intro z hz
     obtain ⟨c, b, hb, rfl⟩ := hT z hz
@@ -218,15 +216,15 @@ private theorem sel_cnt {l : ℕ} [Fact l.Prime] {F : GFrame l} {n : ℕ} (x : N
   have hρ : ∀ m, (fun g => (x.ρX x.A g).map (Ideal.Quotient.mk (Ideal.span {x.t ^ m}))) = x.ρX (x.Am m) := by
     intro m
     funext g
-    simp [NP.ρX, Matrix.map_map, Ideal.Quotient.algebraMap_eq]
+    simp [NP.ρX, Ideal.Quotient.algebraMap_eq]
   have hw : ∀ m, (fun v => (x.wX x.A v).map (Ideal.Quotient.mk (Ideal.span {x.t ^ m}))) = x.wX (x.Am m) := by
     intro m
     funext v
-    simp [NP.wX, Matrix.map_map, Ideal.Quotient.algebraMap_eq]
+    simp [NP.wX, Ideal.Quotient.algebraMap_eq]
   have hwi : ∀ m, (fun v => (x.wiX x.A v).map (Ideal.Quotient.mk (Ideal.span {x.t ^ m}))) = x.wiX (x.Am m) := by
     intro m
     funext v
-    simp [NP.wiX, Matrix.map_map, Ideal.Quotient.algebraMap_eq]
+    simp [NP.wiX, Ideal.Quotient.algebraMap_eq]
   have hmap : ∀ m (f : F.G₀ ⊕ F.Vl → Matrix (Fin n) (Fin n) x.A) j,
       eqn F x.a (x.ρX (x.Am m)) (x.wX (x.Am m)) (x.wiX (x.Am m))
         (fun y => (f y).map (Ideal.Quotient.mk (Ideal.span {x.t ^ m}))) j =

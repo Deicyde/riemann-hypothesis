@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Variable
 import Formalism.SharpRestriction.GenusPolyhedralBounds.RelativeIndexClassSets.ExistsPowSmulMemBall
+import Mathlib.RingTheory.PicardGroup
 
 set_option linter.style.haveILetI false
 

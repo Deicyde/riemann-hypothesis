@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.DualGramInterpGram
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ComparableHermitianFormsDetBounds
 open scoped ComplexOrder Matrix
@@ -13,7 +13,7 @@ theorem lminor_eq_det {n : ℕ} (M : Matrix (Fin n) (Fin n) ℂ) (k : Fin (n + 1
   rw [lminor]
   congr 1
   ext a b
-  simp [Matrix.mul_apply, Matrix.one_apply, Matrix.conjTranspose_apply]
+  simp [Matrix.mul_apply, Matrix.one_apply]
 
 theorem lminor_re {n : ℕ} {M : Matrix (Fin n) (Fin n) ℂ} (h : M.PosDef) (k : Fin (n + 1)) :
     0 < (lminor M k).re ∧ ((lminor M k).re : ℂ) = lminor M k := by

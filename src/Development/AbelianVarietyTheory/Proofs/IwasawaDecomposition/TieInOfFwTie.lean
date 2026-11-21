@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MovedFiniteDatumFourierExpansionChainless
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PureTensorOSmul
-import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.EmbeddingsDifferOnInteger
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.OneMapTypingsEquiv
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.IndefiniteReal.FWExist
 
 noncomputable section
 

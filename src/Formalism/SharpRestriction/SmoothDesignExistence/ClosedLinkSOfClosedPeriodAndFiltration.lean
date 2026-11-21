@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.StandingHypothesesHoldFamily
-import Formalism.SharpRestriction.SmoothDesignExistence.PlaceDegreeData
 
 noncomputable section
 

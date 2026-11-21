@@ -1,5 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.PolarisationModuleIndex
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsFinSetSplitPlacesCoprimeConductor
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.NumberTheory.NumberField.CMField
 
 open NumberField IsDedekindDomain GlobalTheory.CMVal GlobalTheory.IndefiniteRowSideFullHecke.PolarisationModuleIndex ComplexConjugate
 
@@ -340,7 +342,7 @@ theorem exists_signed_generator : ∀ (E : Type) [Field E] [NumberField E] [IsCM
       rw [hξdef]; simp [map_mul, map_add, map_one, map_natCast]
     rw [hφξ, Complex.mul_im]
     simp only [Complex.add_re, Complex.one_re, Complex.mul_re, Complex.natCast_re, Complex.natCast_im,
-      Complex.add_im, Complex.one_im, Complex.mul_im, hx, mul_zero, sub_zero, zero_mul, add_zero, zero_add]
+      Complex.add_im, Complex.one_im, Complex.mul_im, hx, mul_zero, sub_zero, zero_mul, add_zero]
     have hl2 : (2 : ℝ) ≤ l := by exact_mod_cast hl.two_le
     have hc0 : 0 < |((e₀ : ℤ) : ℝ) * (φ i ξ₀).im| := by
       rcases he with h | h <;> rw [h] <;> simpa using him i

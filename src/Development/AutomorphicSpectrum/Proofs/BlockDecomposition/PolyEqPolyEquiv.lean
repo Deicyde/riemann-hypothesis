@@ -1,6 +1,7 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.HodgeSurjectivity.NLeA
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.AlgebraMapConeRing
+import Mathlib.Order.Interval.Finset.Box
 
 set_option autoImplicit false
 noncomputable section
@@ -46,7 +47,7 @@ theorem expEquiv_single (e : E n d) :
   by_cases h : e' = e
   · subst h
     simp
-  · simp [Finsupp.single_apply, Pi.single_apply, h, Ne.symm h]
+  · simp [h]
 
 theorem poly_eq_polyEquiv (K : Type) [Field K] :
     poly n K (∅ : Finset (Fin d)) = (polyEquiv K).toAlgHom := by

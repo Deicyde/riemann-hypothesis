@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.TiedCls
-import Formalism.LocalToGlobal.Columns.TiedCH
 import Formalism.LocalToGlobal.HermitianForms.BothLemmas
 
 open NumberField IsDedekindDomain Module Matrix

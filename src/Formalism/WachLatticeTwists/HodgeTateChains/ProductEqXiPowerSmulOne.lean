@@ -1,4 +1,6 @@
-import Formalism.WachLatticeTwists.HodgeTateChains.UnitCongruenceGivesPerturbation
+import BuildAid.Leniency.Open
+import Formalism.WachLatticeTwists.HodgeTateChains.GammaIterateMatrixCongruence
+import Formalism.WachLatticeTwists.HodgeTateChains.H2KilledByTateDuality
 
 noncomputable section
 

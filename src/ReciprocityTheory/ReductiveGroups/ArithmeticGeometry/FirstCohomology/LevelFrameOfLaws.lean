@@ -1,7 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FirstCohomology.OneCHyp
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.PullGenPf
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.QuadraticAlgebraValuation
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.GenCalc
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.DivCalc
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.OneArc
 
@@ -34,7 +35,7 @@ theorem sval_scal {X Y Y' Z : Scheme.{0}} {L : LB X} {K K' : Type} [Fintype K] [
     intro k₁ k₂ he
     rw [hψ, hψ, he]
   have key := H (fun k => J (r ≫ φ₁ k)) (fun k => J ((r ≫ h) ≫ φ₂ k)) hcoh
-  simp only [resTop, map_one, one_mul] at key
+  simp only [resTop, map_one] at key
   have hz1 : r z ∈ LB.wchart L φ₁ (fun k => J (r ≫ φ₁ k)) := by
     show r z ∈ (⋂ k, _ : Set _)
     simp only [Set.mem_iInter, Set.mem_preimage]

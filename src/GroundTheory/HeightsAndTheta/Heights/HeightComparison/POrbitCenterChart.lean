@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.HeightOrbitCenterChart
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.POrbitChartMax
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.POrbitCenterMemIff

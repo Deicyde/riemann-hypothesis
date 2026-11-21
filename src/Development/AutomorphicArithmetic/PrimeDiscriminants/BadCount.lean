@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.LocalRingCardinality.DataHost
-import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.HostFacts
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.PrimeDiscriminants.BadPrimes
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SumLogDivSubOneLeThreeMulLogAddOne
 

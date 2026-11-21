@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutSERDIdentSpec
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJDHatJDCapRGrpM
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJDHatJDCapR
 
 open MeasureTheory
 open scoped Matrix

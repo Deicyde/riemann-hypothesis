@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.RhoDetPrimeEqMuTildeMulChiPow
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsMemberFormsNonempty
-import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.MuCardLeTwo
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsIntegralDetOfPreservesLattice
 
 noncomputable section

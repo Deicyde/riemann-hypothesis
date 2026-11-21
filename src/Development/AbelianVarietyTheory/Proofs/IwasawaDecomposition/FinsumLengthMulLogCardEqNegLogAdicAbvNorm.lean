@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.IsDiscreteValuationRingLocalizationOfIsDedekindD
-import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.OrdFracEqValuationInvOfIsLocalization
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.RingTheory.DedekindDomain.Instances
 
 open NumberField IsDedekindDomain IsLocalRing IsDiscreteValuationRing
 
@@ -280,7 +281,7 @@ theorem finsum_length_mul_log_card_eq_neg_log_adicAbv_norm (F : Type) [Field F] 
       refine ⟨⟨b * d, ⟨algebraMap (Localization.AtPrime v.asIdeal) (Localization (Algebra.algebraMapSubmonoid R v.asIdeal.primeCompl)) a, a, mem_nonZeroDivisors_of_ne_zero ha0, rfl⟩⟩, ?_⟩
       have hc' : algebraMap (Localization (Algebra.algebraMapSubmonoid R v.asIdeal.primeCompl)) K c ≠ 0 :=
         (map_ne_zero_iff _ (IsFractionRing.injective (Localization (Algebra.algebraMapSubmonoid R v.asIdeal.primeCompl)) K)).mpr hc0
-      simp only [Subtype.coe_mk]
+      simp only
       rw [← hd, map_mul, map_mul]
       field_simp
     · intro x y h

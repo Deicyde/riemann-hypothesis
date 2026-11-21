@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.LevelGatherings.FiniteClassSetOfLe
-import Formalism.LocalRingCardinality.DataGatTies
-import Formalism.LocalRingCardinality.DataLevelD
 
 noncomputable section
 

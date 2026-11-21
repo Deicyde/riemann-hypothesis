@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.RealMetaplecticRepresentation
+import Mathlib.Analysis.Normed.Module.HahnBanach
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
 open MeasureTheory GlobalTheory.RealWeil
 open scoped SchwartzMap BoundedContinuousFunction
 
@@ -36,12 +40,12 @@ def weightedDerivCLM (k m : ℕ) :
   SchwartzMap.mkCLMtoNormedSpace (σ := RingHom.id ℂ) (weightedDeriv k m)
     (fun f g => by
       ext x : 1
-      simp only [weightedDeriv_apply, BoundedContinuousFunction.coe_add, Pi.add_apply, SchwartzMap.add_apply]
+      simp only [weightedDeriv_apply, BoundedContinuousFunction.coe_add, Pi.add_apply]
       rw [show ⇑(f + g) = ⇑f + ⇑g from rfl, iteratedFDeriv_add_apply ((f.smooth ⊤).of_le (by exact_mod_cast le_top)).contDiffAt
         ((g.smooth ⊤).of_le (by exact_mod_cast le_top)).contDiffAt, smul_add])
     (fun a f => by
       ext x : 1
-      simp only [weightedDeriv_apply, BoundedContinuousFunction.coe_smul, Pi.smul_apply,
+      simp only [weightedDeriv_apply, BoundedContinuousFunction.coe_smul,
         RingHom.id_apply]
       rw [show ⇑(a • f) = a • ⇑f from rfl,
         iteratedFDeriv_const_smul_apply ((f.smooth ⊤).of_le (by exact_mod_cast le_top)).contDiffAt, smul_comm])

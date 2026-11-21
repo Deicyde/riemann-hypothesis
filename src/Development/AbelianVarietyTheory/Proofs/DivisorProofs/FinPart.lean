@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import ReciprocityTheory.GeometryOfNumbers.LatticeCovolumes.ConjSymm
-import Development.AbelianVarietyTheory.Definitions.Divisors.TorusExt
+import Mathlib.Analysis.Normed.Field.Instances
+import Mathlib.NumberTheory.Padics.Complex
 
 set_option autoImplicit false
 

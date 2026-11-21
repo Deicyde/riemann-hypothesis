@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.PadicSubsetSums.CentralIdempotents.GaloisIrreducibility
+import Mathlib.RepresentationTheory.Induced
 
 open Finset Polynomial
 open scoped ComplexOrder

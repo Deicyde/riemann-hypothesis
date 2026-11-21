@@ -1,8 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.GaloisLevelStructure.DefsAut
-import Formalism.LocalToGlobal.Divisibility.CoefMod
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeightDualExistence.IncludeInjective
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeightDualExistence.AlgDualCore
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.GelfandTsetlinBranching.ExtremalFactsProofA
 import Formalism.LocalToGlobal.Columns.CoefModB
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.AlgWtDualUniq

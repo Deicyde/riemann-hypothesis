@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AppendVMemFamAtlasTarget
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DdcEqOfLocalEq
 
@@ -51,9 +51,9 @@ theorem loc_ddc_snd : ∀ (M : Type) [TopologicalSpace M] (A : HolAtlas M 1) (φ
     have h : (1 : Fin (1 + 1)) ≠ a := ha.symm
     simp [coordVec, h]
   rw [Finset.sum_eq_single (Fin.last 1) (fun a _ ha => by
-    simp only [hc a ha, zero_mul, mul_zero, map_zero, zero_smul, Finset.sum_const_zero]) (by simp),
+    simp only [hc a ha, zero_mul, mul_zero, zero_smul, Finset.sum_const_zero]) (by simp),
     Finset.sum_eq_single (Fin.last 1) (fun a _ ha => by
-    simp only [hc a ha, zero_mul, mul_zero, map_zero, zero_smul, Finset.sum_const_zero]) (by simp)]
+    simp only [hc a ha, zero_mul, mul_zero, map_zero, zero_smul]) (by simp)]
   congr 1
   have : (π : ℂ) ≠ 0 := by exact_mod_cast Real.pi_ne_zero
   simp only [coordVec, kappa, EuclideanSpace.single_apply, if_true, map_one]

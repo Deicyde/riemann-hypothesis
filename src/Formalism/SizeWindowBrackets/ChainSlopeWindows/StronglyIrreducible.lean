@@ -1,5 +1,12 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.SizeWindowBrackets.FirstPrimeNeSecondPrime
-import Formalism.ThickAverageLoss.ThickAverageProofs.Balance
+import Mathlib.Analysis.Fourier.FiniteAbelian.PontryaginDuality
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Finset ArithmeticFunction
 
@@ -293,7 +300,7 @@ lemma ortho_coset (I : AddSubgroup (E0 × H)) (h g : E0 × H) :
   have e3 : ∀ x : E0 × H, (h + x = g) ↔ (x = g - h) := fun x => by
     rw [eq_sub_iff_add_eq, add_comm]
   simp_rw [ortho, e3]
-  simp only [Finset.sum_ite_eq', Finset.sum_ite_eq, Finset.mem_filter, Finset.mem_univ, true_and]
+  simp only [Finset.sum_ite_eq', Finset.mem_filter, Finset.mem_univ, true_and]
   rw [hS]
   have hΦ := phi_card_ne_zero (H := H)
   split_ifs
@@ -461,7 +468,7 @@ lemma local_unram (D : ArithData H) (hD : HostFacts D) (N : ℕ) (a : ℝ) (t : 
           2 * Real.log p * max (a / (p : ℝ) ^ i - w (partner t (i • D.frob p))) 0 else 0) : ℝ) : ℂ) := by
     intro i hi
     simp_rw [hK i (Finset.mem_Icc.1 hi).1, ite_mul, zero_mul]
-    simp only [Finset.sum_ite_eq, Finset.sum_ite_eq', Finset.mem_filter, Finset.mem_univ, true_and]
+    simp only [Finset.sum_ite_eq, Finset.mem_filter, Finset.mem_univ, true_and]
     split_ifs <;> first
       | (simp; done)
       | (simp only [Fc]; push_cast; ring)
@@ -593,7 +600,7 @@ theorem characterSum_expansion : AskExpansion (H := H) := by
     ext p
     simp only [Finset.mem_filter]
     exact ⟨fun h => ⟨h.1, h.2.1, h.2⟩, fun h => ⟨h.1, h.2.2⟩⟩
-  · simp only [Finset.sum_ite_eq', Finset.sum_ite_eq]
+  · simp only [Finset.sum_ite_eq']
     by_cases hdm : D.d ∈ (range (N + 1)).filter Nat.Prime
     · rw [if_pos hdm]
     · rw [if_neg hdm]
@@ -748,7 +755,7 @@ theorem colour_balance : AskMainBalance (H := H) := by
               - (1 + Real.eulerMascheroniConstant) * a : ℝ) : ℂ)
         + (a : ℂ) * ell chC * ((PhiSet (H := H)).card : ℂ) := by
     rw [Finset.sum_comm, Finset.sum_congr rfl (fun ψ _ => hcorr ψ), Finset.sum_add_distrib]
-    simp only [Finset.sum_ite_eq', Finset.sum_ite_eq, Finset.mem_univ, if_true]
+    simp only [Finset.sum_ite_eq', Finset.mem_univ, if_true]
   have hC : ∑ g ∈ univ.filter (fun g : E0 × H => ¬ InPhi g),
         (a * Real.log a - a * Real.log (w (partner t g)) - (1 + Real.eulerMascheroniConstant) * a)
       = ((PhiSet (H := H)).card : ℝ) * (a * Real.log a - (1 + Real.eulerMascheroniConstant) * a)

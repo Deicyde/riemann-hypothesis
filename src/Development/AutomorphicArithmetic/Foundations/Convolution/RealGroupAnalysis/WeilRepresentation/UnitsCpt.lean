@@ -1,7 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.Smooth
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.FoundBridge
-import GroundTheory.AutomorphicForms.CuspidalDiscreteness.CuspFormsSiegel
-import GroundTheory.AutomorphicForms.ReductionIdele
 
 open NumberField IsDedekindDomain MeasureTheory Matrix Topology Filter
 open Neutral.B1 Formalism.L2.Host Formalism.ConjugateSelfDual GlobalTheory.CuspRep GlobalTheory.GalOfCusp UpperTheory.V UpperTheory.V.Af UpperTheory.V.Published GroundTheory.Global GroundTheory.Automorphic.GJMatrix
@@ -32,7 +32,7 @@ private theorem tri (Y : GL (Fin 2) (A F)) (t₀ t₁ : (A F)ˣ) (h0 : Y.val 0 0
     Y = gl (nU (Y.val 0 1 * ((t₁⁻¹ : (A F)ˣ) : A F))) * diagUnits 2 ![t₀, t₁] := by
   refine Units.ext ?_
   ext i j
-  fin_cases i <;> fin_cases j <;> simp [vn, Matrix.mul_apply, Fin.sum_univ_two, Matrix.diagonal, h0, h1, h]
+  fin_cases i <;> fin_cases j <;> simp [vn, Matrix.mul_apply, Matrix.diagonal, h0, h1, h]
 
 private theorem n_add (x y : A F) : gl (nU (x + y)) = gl (nU x) * gl (nU y) := by
   refine Units.ext ?_

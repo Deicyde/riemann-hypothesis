@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.WeightFunctionOnFrames
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.ExhaustFStatementPfE
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.SiegelSpaceAlgebraHolds
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.ExhaustFStatementPfD
 
 namespace ReciprocityTheory.ChartRestriction.G.AR.Up
 
@@ -47,7 +49,7 @@ theorem norm_dmin_orth {r : ℕ} (X : Data E r) {x : Frame X.Ψ r} (hx : IsOrth 
 
 theorem pnorm_orth {r : ℕ} (X : Data E r) (la : Wt X.Ψ r) (P : Frame X.Ψ r → ℂ) {x : Frame X.Ψ r}
     (hx : IsOrth X x) : X.pnorm la P x = ‖P x‖ := by
-  simp [Data.pnorm, norm_div, norm_dmin_orth X hx]
+  simp [Data.pnorm, norm_dmin_orth X hx]
 
 theorem cfwM_smul {r : ℕ} (X : Data E r) {ps : Frame X.Ψ r → ℝ} {a : ℝ} (h : cfwM X ps a) {t : ℝ}
     (ht : 0 < t) : cfwM X (fun x => t * ps x) (t * a) := by

@@ -1,13 +1,8 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.TrivFlagMod
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.FlagMinor
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.PluckerCoord
-import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.StatementsBundles
-import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.SameGenericSymm
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.LocallyFreeFiniteProjectiveBaseChange
 import Development.WeilBound.CoreStatements.TorusUniformisation.ChowMahlerFamilies.XMinorGraded
 import Development.WeilBound.CoreStatements.TorusUniformisation.ChowMahlerFamilies.XBundleOfFamily
-import Development.WeilBound.CoreStatements.TorusUniformisation.ChowMahlerFamilies.XPullLine
+import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.BundleObjects
 
 open MvPolynomial GlobalTheory.CompanionTheory.Ar.Num GroundTheory.Heights₂.Heights.NumbersDVR
 open ReciprocityTheory.ChartRestriction.G.Geo (ChartBundle chartRing)
@@ -78,7 +73,7 @@ private theorem exists_pow_mul_basis_repr_mem {o Ω : Type} [CommRing o] [Field 
     · by_cases h : q = q'
       · subst h
         simpa using R.one_mem
-      · simp [Pi.single_apply, h]
+      · simp [h]
     · simp [Pi.single_apply]
   choose n₁ hn₁ using hgen
   have h2 : ∀ l l' q' q, ∃ n, f l ^ n * (B l).repr (f l' ^ n₁ l' q' • b l' q') q ∈ R :=
@@ -154,7 +149,7 @@ theorem genDual_span {o Ω : Type} [CommRing o] [Field Ω] [Algebra o Ω] (R₀ 
         · by_cases h : q' = q
           · subst h
             simpa using R₀.one_mem
-          · simp [Pi.single_apply, h]
+          · simp [h]
         · simp [Pi.single_apply]
       choose n₁ hn₁ using hgen
       have hψb : ∀ q, f l ^ Finset.univ.sup n₁ * ψ (b l q) ∈ R := by

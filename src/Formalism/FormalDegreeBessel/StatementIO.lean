@@ -1,5 +1,6 @@
-import Formalism.RealPlaceAnalysis.QuotientSettingHolds
-import Formalism.RealPlaceAnalysis.StatementE
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.RealPlaceAnalysis.SmoothOnGVIff
 
 open Matrix
 open scoped ContDiff

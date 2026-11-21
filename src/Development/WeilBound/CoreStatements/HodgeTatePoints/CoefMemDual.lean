@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.LeadMinor
-import Development.WeilBound.CoreStatements.HodgeTatePoints.GeFrame
-import Development.WeilBound.CoreStatements.HodgeTatePoints.GaGram
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.FinitelyGeneratedHomology
 open Module NumberField GlobalTheory.CompanionTheory.Ar.HT TensorProduct Filter
 

@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.KeyFormula.IsSquareDeterminantComparison
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.BCTools
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.ThetaLawProofs.PwIsoIsGen
 import Development.AbelianVarietyTheory.Proofs.ThetaLawProofs.DualNumberRingHomExt
 import Development.AbelianVarietyTheory.Proofs.GenericRegularity.LieCombBaseChange

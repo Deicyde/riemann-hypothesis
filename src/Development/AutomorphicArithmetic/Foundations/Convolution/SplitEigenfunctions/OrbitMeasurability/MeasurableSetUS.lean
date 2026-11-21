@@ -1,5 +1,6 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.SplitEigenfunctions.OrbitMeasurability.PerCont
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.WhittakerHecke.IsCompactIntegralIdeleUnitsAndAbsEqOne
+import GroundTheory.AutomorphicForms.ReductionMahler
 
 noncomputable section
 

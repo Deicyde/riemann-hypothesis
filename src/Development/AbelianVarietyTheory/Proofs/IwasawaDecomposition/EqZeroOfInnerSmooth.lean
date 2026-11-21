@@ -1,8 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.ScalarOnPartsFull
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSmoothVecLowKSub
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ContDiffDerivSnoc
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ContinuousOnAtTau
 
 noncomputable section
 
@@ -252,7 +250,7 @@ theorem parts_mem (hG : IsUnit G) (hh : Gᴴ = G) (Z : Matrix (Fin n) (Fin n) �
     rw [this, ← smul_add]; simp
   · show _ + _ = 0
     rw [conjTranspose_smul, conjTranspose_sub, Matrix.smul_mul, Matrix.mul_smul, Matrix.sub_mul, Matrix.mul_sub, h1, h2]
-    have : star (1 / (2 * Complex.I) : ℂ) = -(1 / (2 * Complex.I)) := by simp [div_neg]
+    have : star (1 / (2 * Complex.I) : ℂ) = -(1 / (2 * Complex.I)) := by simp
     rw [this]; module
 
 theorem dRepC_mem (hG : IsUnit G) (hh : Gᴴ = G) (hπ : IsURepOn (UH G) π) (Z : Matrix (Fin n) (Fin n) ℂ) {w : H}

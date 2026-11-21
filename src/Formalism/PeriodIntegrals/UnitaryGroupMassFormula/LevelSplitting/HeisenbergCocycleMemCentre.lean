@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LevelSplitting.UnipotentRadicalActionFormula
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LevelSplitting.NCDefs
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LevelSplitting.ToMatrixLin
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.SemidirectVolume.ProjHA
 
 noncomputable section
 
@@ -94,7 +96,7 @@ theorem nd_datR (hJ : IsHermND σ J) : ND (datR R σ J P T) := by
       · rw [Pi.single_eq_of_ne hk, map_zero]
     change ∑ k, ∑ j, sigR R σ ((Pi.single i (1 : R ⊗[F] E) : Fin M → R ⊗[F] E) k) * JR R J k j *
       x j = 0 at h1
-    simp only [Pi.single_apply, zero_mul] at h1
+    simp only [Pi.single_apply] at h1
     simpa [Matrix.mulVec, dotProduct] using h1
   rw [← Matrix.one_mulVec x, ← hJi (R := R) hJ, ← Matrix.mulVec_mulVec, hJx, Matrix.mulVec_zero]
 

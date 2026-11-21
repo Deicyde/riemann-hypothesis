@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.TopNilDefs
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.SpStep
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
 
 open Filter UpperTheory.V.AlgebraTools
 open scoped TensorProduct

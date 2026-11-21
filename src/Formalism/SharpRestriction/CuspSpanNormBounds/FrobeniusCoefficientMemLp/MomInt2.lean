@@ -1,6 +1,8 @@
-import Formalism.SharpRestriction.CuspSpanNormBounds.FrobeniusCoefficientMemLp.MomBf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.FrobeniusCoefficientMemLp.MomTwMeas
 import Formalism.SharpRestriction.CuspSpanNormBounds.FrobeniusCoefficientMemLp.QuotUniq
+import Formalism.SharpRestriction.CuspSpanNormBounds.LowestKTypeMultiplicity
 
 open Matrix MeasureTheory
 open scoped ENNReal

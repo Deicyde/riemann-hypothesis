@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
+import Mathlib.RingTheory.DividedPowers.Padic
 
 set_option autoImplicit false
 
@@ -264,7 +267,7 @@ theorem coord_eq (y : B R I n) : algebraMap R (K R) ((b R I n).repr y (i0 I n)) 
     · have : i0 I n = ν := Subtype.ext h.symm
       simp [this, h]
     · have : i0 I n ≠ ν := fun e => h (congrArg Subtype.val e).symm
-      simp [this, Ne.symm this, h]
+      simp [Ne.symm this, h]
   exact LinearMap.congr_fun this y
 
 def π : B R I n →+* R where

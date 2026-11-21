@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.OrderedCechToCatCochainsOneApplyValueAtSubset
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RightDerivativeRealLieHomStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RightDerivativePreservesEquivariantStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RightDerivativeLowerBlockAtOneStatement
@@ -23,6 +23,7 @@ import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GelfandInvarian
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GelfandValuePermInvariantStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsPermShiftedWeightEqInfCharStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HighestWeightMemConeStatement
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LieGeneratorsGlRelations
 
 noncomputable section
 

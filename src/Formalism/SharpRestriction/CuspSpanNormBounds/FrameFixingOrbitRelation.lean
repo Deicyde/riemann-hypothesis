@@ -1,7 +1,6 @@
-import Formalism.SharpRestriction.CuspSpanNormBounds.FlagEEqHyperbolic
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.LocalGroupInFamilyNontrivial
-import Formalism.SharpRestriction.CuspSpanNormBounds.IsPrimitiveSub
-import Formalism.SharpRestriction.CuspSpanNormBounds.CntPartners
 
 noncomputable section
 

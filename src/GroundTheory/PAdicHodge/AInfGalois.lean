@@ -1,7 +1,4 @@
-import Mathlib
-import GroundTheory.PAdicHodge.KerFontaineThetaCompFrobeniusEquivSymmPow
-import GroundTheory.PAdicHodge.AInfTopology
-import GroundTheory.PAdicHodge.TiltMap
+import BuildAid.Leniency.Variable
 import GroundTheory.PAdicHodge.TiltAlgebra
 import GroundTheory.PAdicHodge.GaloisOnCp
 set_option maxSynthPendingDepth 1

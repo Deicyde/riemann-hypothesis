@@ -1,4 +1,5 @@
-import Formalism.LocalToGlobal.TorsionIntegrality.GaussSumParity.StatementK
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.TorsionIntegrality.CMGoodModels.Statement
 
 noncomputable section
 open NumberField

@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LogResolutionPotentialPullback
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LogResolutionReindexed
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ArithVarietyReindexed
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.LogResolutionFunctorialHolomorphicStatement
+import Development.AutomorphicSpectrum.Proofs.MetricProofs.LogResolutionFunctorialHolomorphic
 
 noncomputable section
 

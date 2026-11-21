@@ -1,14 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviBlockSizesSum
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WittRankLeSkewSignature
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IsSplitChartSplitChart
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MeasureFundDomLtTop
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TripSizesSum
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsBlockEmb
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsMajorantFrameCompactSubgroupLeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WittFrameArchimedeanNormalStatement
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SmGL GlobalTheory.PRep GlobalTheory.SplitWeil GlobalTheory.LeviBlockExponent GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels
@@ -50,9 +40,9 @@ theorem goodPos : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [NumberFi
     exact hnorm g⁻¹ x (hmc.1 hx)
   have hK2c : IsCompact (K2 : Set (GAd σ J)) := by
     have : (K2 : Set (GAd σ J)) = (fun x => g⁻¹ * x * g⁻¹⁻¹) '' (majCpt σ J c : Set (GAd σ J)) := by
-      ext x; simp [hK2, MulAut.conj_apply]
+      ext x; simp [hK2]
     rw [this]; exact hmc.2.image (hconj g⁻¹)
-  have hKK2 : K ≤ K2 := fun x hx => ⟨g * x * g⁻¹, hle ⟨x, hx, rfl⟩, by simp [MulAut.conj_apply, mul_assoc]⟩
+  have hKK2 : K ≤ K2 := fun x hx => ⟨g * x * g⁻¹, hle ⟨x, hx, rfl⟩, by simp [mul_assoc]⟩
   have hK2K : K2 ≤ K := hK.2 ⟨hK2le, hK2c⟩ hKK2
   obtain ⟨u, hu, hui, y, hy⟩ := GlobalTheory.T.witt_frame_archimedean_normal F E σ hCM n J hJ r Xf Yf hW c hc S l d h ι hι hd h1 h2 h3
   refine ⟨u, hu, hui, y, (u * ι (GlobalTheory.CuspRep.infGL E d y))⁻¹ * g, by group, fun k => hK2K ?_⟩

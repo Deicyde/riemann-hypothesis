@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AutomorphicArithmetic.CyclotomicBounds.RamifiedDiscriminants.OffSmall
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.Placed
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.PlacedP
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.PlacedBesselPairLattice
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.IncAMulMemIntAt
 import Formalism.LocalRingCardinality.IntCastDvdOfDvdIntegers

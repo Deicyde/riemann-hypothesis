@@ -1,6 +1,5 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.MixedUnlinkedExponents.ValsExtOf
-import GroundTheory.GlobalFields.KummerTheory.Splitting
-import Mathlib.NumberTheory.RamificationInertia.Galois
 
 noncomputable section
 

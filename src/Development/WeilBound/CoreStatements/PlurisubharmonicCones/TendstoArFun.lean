@@ -1,10 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.VolumeEquality.DegPushTest
-import Development.WeilBound.CoreStatements.VolumeEquality.DegPushPF
-import Development.WeilBound.CoreStatements.PlurisubharmonicCones.GenericFibreIntersectionPullback
 import Development.AutomorphicSpectrum.Proofs.DivisibilityProofs.ArithIntersectionMultilinearAllStatement
 import Development.AutomorphicSpectrum.Proofs.DivisibilityProofs.MonomialLinesPermutationStatement
 import Development.AutomorphicSpectrum.Proofs.DivisibilityProofs.HermitianCombinationSmoothConjStatement
-import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.RefLinked
 
 open MvPolynomial Filter Topology ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Top SheetDecomposition
 

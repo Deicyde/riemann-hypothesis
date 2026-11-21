@@ -1,12 +1,13 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.CommutativeAlgebra.AbByPOfComm
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.CommutativeAlgebra.InvariantSubspaceMobiusInverseRecEqOfFinrankLt
 import Development.AbelianVarietyTheory.Proofs.CharacterTheory.OneMemClosureInducedCentralByPrimePower
-import Development.AbelianVarietyTheory.Proofs.CharacterTheory.MatrixTraceIffIsCharacterOverSubfieldComplexStatement
-import Development.AbelianVarietyTheory.Proofs.CharacterTheory.RootsCharpolyPowEqMapPowStatement
 import Development.AbelianVarietyTheory.Proofs.CharacterTheory.IsCharacterEsymmRootsCharpoly
 import Development.AbelianVarietyTheory.Proofs.CharacterTheory.MultisetPowerSumNewtonIdentity
 import Development.AbelianVarietyTheory.Proofs.CharacterTheory.IsCharacterBrauerLiftAbelianByPrimePower
+import Development.AbelianVarietyTheory.Proofs.CharacterTheory.MatrixTraceIffIsCharacterOverSubfieldComplex
+import Development.AbelianVarietyTheory.Proofs.CharacterTheory.RootsCharpolyPowEqMapPow
+import Mathlib.GroupTheory.Commutator.Finite
+import Mathlib.GroupTheory.SchurZassenhaus
 open Polynomial GlobalTheory.CuspGL GlobalTheory.BI
 namespace GlobalTheory.CuspGL
 
@@ -152,7 +153,7 @@ private theorem powerSum_roots_charpoly_mem_virt_of_abByP (k : Type) [Field k] [
   have h1 : Multiset.map (fun α => θ α ^ r) ((ρ g : Matrix (Fin n) (Fin n) k).charpoly.roots)
       = Multiset.map θ ((ρ (g ^ r) : Matrix (Fin n) (Fin n) k).charpoly.roots) := by
     rw [map_pow, Units.val_pow_eq_pow_val, _root_.GlobalTheory.CharpolyPow.roots_charpoly_pow, Multiset.map_map]
-    simp [Function.comp_def, map_pow]
+    simp [map_pow]
   have h2 := hC (g ^ r)
   rw [h1, h2, map_pow, Units.val_pow_eq_pow_val, Matrix.trace_eq_sum_roots_charpoly,
     _root_.GlobalTheory.CharpolyPow.roots_charpoly_pow]

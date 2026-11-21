@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ModelDdcForms
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FormBoundedByPositivePotentialStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PotentialSmoothInChartStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormSectionSqSmoothStatement

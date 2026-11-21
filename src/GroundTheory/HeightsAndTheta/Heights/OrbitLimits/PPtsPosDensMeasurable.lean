@@ -1,5 +1,4 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterSheet
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StPtsPosDensMeasurable
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.PtsPosDensMeasurable
 set_option maxSynthPendingDepth 1

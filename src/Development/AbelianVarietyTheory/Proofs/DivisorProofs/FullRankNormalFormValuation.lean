@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRk
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SubMemTwistSpan
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsContinuousPadic
+import Mathlib.LinearAlgebra.Matrix.Rank
+import Mathlib.RingTheory.PicardGroup
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.ThK.DescB
@@ -22,7 +23,7 @@ theorem exists_right_inv {n d : ℕ} (M : Matrix (Fin n) (Fin d) k) (hM : M.rank
   have := congrFun (Function.surjInv_eq hs (Pi.single i 1)) a
   simp only [Matrix.mulVecLin_apply, Matrix.mulVec, dotProduct] at this
   simp only [Matrix.mul_apply, Matrix.of_apply, Matrix.one_apply]
-  rw [this]; simp [Pi.single_apply, eq_comm]
+  rw [this]; simp [Pi.single_apply]
 
 theorem exists_bound {ι : Type} [Fintype ι] (f : ι → k) [ValuativeRel k] :
     ∃ c : k, c ≠ 0 ∧ ∀ i, ValuativeRel.valuation k (c * f i) ≤ 1 := by
@@ -68,7 +69,7 @@ theorem pivotMat_row {m : ℕ} (x ψ : Fin m → k) (i : Fin m) (hx : x i ≠ 0)
     pivotMat x ψ i i j = ψ j := by
   by_cases hij : j = i
   · subst hij; simp [pivotMat, Matrix.vecMulVec_apply, hx]
-  · simp [pivotMat, Matrix.vecMulVec_apply, Matrix.one_apply, Pi.single_apply, hij, Ne.symm hij]
+  · simp [pivotMat, Matrix.vecMulVec_apply, hij, Ne.symm hij]
 
 theorem pivotMat_mulVec {m : ℕ} (x ψ : Fin m → k) (i : Fin m) (hx : x i ≠ 0) (h1 : ψ ⬝ᵥ x = 1) :
     pivotMat x ψ i *ᵥ x = Pi.single i 1 := by
@@ -139,7 +140,7 @@ theorem GlobalTheory.FullRankPair.pair_normal_form : ∀ (k : Type) [Field k] [V
   obtain ⟨T, hTdef⟩ : ∃ T : Matrix (Fin d) (Fin n) k, T = T₀ - Matrix.vecMulVec u (φ ᵥ* T₀) := ⟨_, rfl⟩
   have hT : Y₂ * T = 1 := by
     rw [hTdef, Matrix.mul_sub, Matrix.mul_vecMulVec, hu2, hT₀]
-    ext a b; simp [Matrix.vecMulVec_apply]
+    ext a b; simp
   have hφT : φ ᵥ* T = 0 := by
     rw [hTdef, Matrix.vecMul_sub, Matrix.vecMul_vecMulVec, hφu, one_smul, sub_self]
 

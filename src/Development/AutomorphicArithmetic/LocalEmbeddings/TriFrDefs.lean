@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TriFrames
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsFlagFrame
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsUniqueLiesUnder
 
 set_option autoImplicit false
 

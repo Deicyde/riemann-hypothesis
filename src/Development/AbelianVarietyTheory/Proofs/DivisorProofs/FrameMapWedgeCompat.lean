@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrameAtApply
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DbarAddVectorScalar
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExtMapComp
 open Matrix MeasureTheory Set Filter Topology GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe GlobalTheory.TorsionForm GlobalTheory.TorsionForm.Gauge
 open scoped ContDiff
@@ -18,7 +16,7 @@ theorem fibMat_row_castAdd (n : ℕ) {g : ℕ} (a : Matrix (Fin g) (Fin g) ℂ) 
   · simp [fibMat, Pi.single_apply, Matrix.one_apply, eq_comm]
   · have h : Fin.natAdd (n + n) j' ≠ Fin.castAdd g k := by
       intro h; have := congrArg Fin.val h; simp at this; omega
-    simp [fibMat, Pi.single_apply, h]
+    simp [fibMat, h]
 
 theorem fibMat_row_natAdd (n : ℕ) {g : ℕ} (a : Matrix (Fin g) (Fin g) ℂ) (c : Fin g) (j : Fin g) :
     fibMat n a (Fin.natAdd (n + n) c) (Fin.natAdd (n + n) j) = a c j := by
@@ -35,7 +33,7 @@ theorem frameMap_wedge_castAdd {g : ℕ} (n : ℕ) (D : Matrix (Fin g) (Fin g) �
   rw [GlobalTheory.ExtFunctor.extMap_wedge, GlobalTheory.ExtFunctor.wedgeVec_apply, fibMat_row_castAdd,
     Finset.sum_eq_single (Fin.castAdd g k)]
   · simp
-  · intro b _ hb; simp [Pi.single_apply, hb]
+  · intro b _ hb; simp [hb]
   · simp
 
 theorem frameMap_wedge : ∀ {g : ℕ} (n : ℕ) (D : Matrix (Fin g) (Fin g) ℂ) (w : Ext (n + n + g)),

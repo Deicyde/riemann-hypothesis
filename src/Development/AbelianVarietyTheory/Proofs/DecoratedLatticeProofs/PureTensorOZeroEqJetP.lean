@@ -1,9 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.SplitPart
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.GaussianTwistedRealReadingEntireAndInjectiveStatement
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.ComplexEmbeddingHermitianQuadrupleSum
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.EqZeroOfLintegralEqZero
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.ExistsInverseChart
 import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.FoldrHolDEqIteratedFDeriv
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.Forms Formalism.L2.Ker Formalism.UG
 open NumberField IsDedekindDomain Matrix MeasureTheory GlobalTheory.Mem GlobalTheory.Mem.Col2 GlobalTheory.MixPer GlobalTheory.Core.Rk GlobalTheory.AdForm
@@ -54,7 +51,7 @@ theorem pr_line (z v : VCx ι a b) (t : ℝ) :
 def gs (sc : ℝ) (z : VCx ι a b) : ℂ := cexp (-((Real.pi : ℂ) / 2 * HV sc z z))
 
 theorem gs_zero (sc : ℝ) : gs sc (0 : VCx ι a b) = 1 := by
-  simp [gs, HV_eq]
+  simp [gs]
 
 theorem hasDerivAt_line (sc : ℝ) (K : ℂ) (Φ : VCx ι a b → ℂ) (hΦ : Differentiable ℝ Φ) (z v : VCx ι a b) :
     HasDerivAt (fun t : ℝ => cexp ((t : ℂ) * K) * (gs sc (z + t • v) * Φ (z + t • v)))

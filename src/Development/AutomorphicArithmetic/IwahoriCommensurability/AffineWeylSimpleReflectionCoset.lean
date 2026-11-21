@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ScalarCommutation.AuxiliaryPrimeFunction
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.AffineBruhat
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.IwahoriSubgroupDefinitionsAgree
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.PiTensorProduct
 open Formalism.UG GroundTheory.Automorphic GroundTheory.Automorphic.GLnLocal Matrix
 
 namespace UpperTheory.affineWeylIwahoriData
@@ -200,11 +201,11 @@ private theorem unit_decomp (p r : Fin n) (h : p ≠ r) (h' : r ≠ p) (c : F)
     · subst hip
       by_cases hjp : j = i
       · subst hjp
-        simp [h, h', hc0]
+        simp [h, h']
       · by_cases hjr : j = r
         · subst hjr
-          simp [h, h', hc0]
-        · simp [h, h', hc0, Equiv.swap_apply_of_ne_of_ne hjp hjr, hjp, hjr, Ne.symm hjp, Ne.symm hjr]
+          simp [h, hc0]
+        · simp [h, Equiv.swap_apply_of_ne_of_ne hjp hjr, hjp, hjr, Ne.symm hjp]
     · by_cases hir : i = r
       · subst hir
         by_cases hjp : j = p
@@ -213,14 +214,14 @@ private theorem unit_decomp (p r : Fin n) (h : p ≠ r) (h' : r ≠ p) (c : F)
         · by_cases hjr : j = i
           · subst hjr
             simp [h, h', hc0]
-          · simp [h, h', hc0, Equiv.swap_apply_of_ne_of_ne hjp hjr, hjp, hjr, Ne.symm hjp, Ne.symm hjr]
+          · simp [h', Equiv.swap_apply_of_ne_of_ne hjp hjr, hjp, hjr, Ne.symm hjp, Ne.symm hjr]
       · by_cases hjp : j = p
         · subst hjp
-          simp [h, h', hc0, hip, hir, Ne.symm hip, Ne.symm hir]
+          simp [h', hip, hir]
         · by_cases hjr : j = r
           · subst hjr
-            simp [h, h', hc0, hip, hir, Ne.symm hip, Ne.symm hir]
-          · simp [h, h', hc0, hip, hir, Equiv.swap_apply_of_ne_of_ne hjp hjr]
+            simp [h, hip, hir]
+          · simp [hip, hir, Equiv.swap_apply_of_ne_of_ne hjp hjr]
   refine ⟨tv r p h' (-c⁻¹) * tv p r h c * tv r p h' (-c⁻¹) * permGL F (Equiv.swap p r), ?_, ?_⟩
   · refine (mem_iwahori_iff F n).2 ⟨fun i j => ?_, fun i j hij => ?_, fun i => ?_⟩
     · rw [hentry]

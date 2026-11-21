@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.KummerTheory.SecSHPf
+import Mathlib.RingTheory.Unramified.LocalStructure
 
 open Polynomial IsLocalRing CategoryTheory AlgebraicGeometry GlobalTheory.EtC
 

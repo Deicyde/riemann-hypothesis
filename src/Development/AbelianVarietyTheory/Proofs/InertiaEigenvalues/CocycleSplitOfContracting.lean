@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.PowerSeriesOneAddConstMulXMulInv
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SubIdBijOfContracting
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.NabBijectiveWindow
+import Mathlib.Data.Int.Star
 
 noncomputable section
 namespace GlobalTheory.PhiGam

@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.QuotientHomNonvanishingBound
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CompletionDegrees.DenseSurj
 
 namespace PI.CompDegEF

@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.KatoQuadraticCharacters.SymmetricPowerSymbols.LocallyConstantFinite.LcFin
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.KatoQuadraticCharacters.SymmetricPowerSymbols.CycSpec
+import Mathlib.FieldTheory.Galois.Profinite
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open GlobalTheory.KZ GlobalTheory.K4 Polynomial UpperTheory.V.Z.Kato.Sym UpperTheory.V.Z.Kato.Sym.PE
 
@@ -38,7 +40,7 @@ theorem UpperTheory.V.Z.Kato.Sym.PE.lcFin :
       haveI := hLfd g
       exact (IntermediateField.fixingSubgroup_isOpen (L g)).preimage
         (continuous_const.mul continuous_id))
-    (fun x hx => Set.mem_iUnion.2 ⟨⟨x, hx⟩, by simp [one_mem]⟩)
+    (fun x hx => Set.mem_iUnion.2 ⟨⟨x, hx⟩, by simp⟩)
   refine ⟨t.biUnion s, ?_⟩
   intro h hh h' hh' hag
   obtain ⟨g, hgt, hg⟩ := Set.mem_iUnion₂.1 (ht hh)

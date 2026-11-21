@@ -1,8 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiltrationGradedProjectionExists
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsFrameCokernelP
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GlueMorphismOfCompatibleFrames
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFlagOfTriangularFrames
 open CategoryTheory CategoryTheory.Limits AlgebraicGeometry
 open GlobalTheory GlobalTheory.VB GlobalTheory.LieFilt GlobalTheory.GrFilt
 open GlobalTheory.Twist (resM)

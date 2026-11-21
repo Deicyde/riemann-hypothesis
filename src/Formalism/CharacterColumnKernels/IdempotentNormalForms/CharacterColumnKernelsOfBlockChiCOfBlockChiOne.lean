@@ -1,6 +1,5 @@
-import Formalism.CharacterColumnKernels.CharacterColumnKernelEqualityForm
+import BuildAid.Leniency.Open
 import Formalism.CharacterColumnKernels.IdempotentNormalForms.GlobalColumn
-import Formalism.CharacterColumnKernels.IdempotentNormalForms.BlockRhoFull
 import Formalism.CharacterColumnKernels.IdempotentNormalForms.BlockChiOneFullOf
 
 open Finset Classical

@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.IdeleGenerators.AdjointLowWeight.SymmetricCubeSymplecticSimilitude
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal IsLocalRing Polynomial UpperTheory.V.Base UpperTheory.V.Alg UpperTheory.V.HV UpperTheory.V.GradeZeroInterpolatingElement
@@ -73,7 +74,7 @@ theorem UpperTheory.theta_unramified_of_kills_roots_of_unity :
     exact DFunLike.congr_fun hθ g
   have hker : (e.toMonoidHom.comp (θ.codRestrict _ hm)).ker = θ.ker := by
     ext g
-    simp [MonoidHom.mem_ker, Subtype.ext_iff]
+    simp [MonoidHom.mem_ker]
   have := hF (e.toMonoidHom.comp (θ.codRestrict _ hm))
   rw [hker] at this
   exact this (open_kernel_killing_roots_of_unity hw.ne_zero θ hk) h1

@@ -1,11 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.AnalyticClassNumber.DirichletHeckeCorrespondence
 import GroundTheory.GlobalFields.Artin.OneDimL
-import GroundTheory.GlobalFields.Artin.OneDimExistence
 import GroundTheory.GlobalFields.Artin.AbelianHecke
 import GroundTheory.GlobalFields.Artin.Regular
-import GroundTheory.GlobalFields.AnalyticClassNumber.ClassNumberFormula
 import GroundTheory.LocalFields.ArtinConductor
+import GroundTheory.GlobalFields.AnalyticClassNumber.DirichletHecke
+import GroundTheory.GlobalFields.TateThesis.DedekindZetaContinuation
 set_option maxSynthPendingDepth 1
 
 noncomputable section

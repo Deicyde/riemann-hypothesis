@@ -1,5 +1,7 @@
-import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.ValUniqOf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.DataGChain
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 noncomputable section
 

@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsUnifAt
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.UnitLemmaGroup
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MulHomInjective
 open NumberField IsDedekindDomain Matrix Polynomial Filter GlobalTheory.CuspRep GlobalTheory.PRep Formalism.UG Formalism.BasicNotions GlobalTheory.UnitaryBC Formalism.L2.Host GlobalTheory.BCT
 open scoped Classical TensorProduct
@@ -122,7 +121,7 @@ theorem herm_sum_left (f : Fin a → B.A) (z : B.A) : B.herm β (∑ i, f i) z =
   simp [GlobalTheory.UnitLemma.InvAlg.herm, Finset.mul_sum, Finset.sum_mul, map_sum]
 
 theorem herm_sum_right (y : B.A) (f : Fin a → B.A) : B.herm β y (∑ i, f i) = ∑ i, B.herm β y (f i) := by
-  simp [GlobalTheory.UnitLemma.InvAlg.herm, Finset.mul_sum, Finset.sum_mul, map_sum]
+  simp [GlobalTheory.UnitLemma.InvAlg.herm, Finset.mul_sum, map_sum]
 
 end Herm
 

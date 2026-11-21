@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRk
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SubMemTwistSpan
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ScaledBoxRadiiAtEntry
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRankBilinearInvariantScalingStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PrincipalValueFirstClopenPartitionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PrincipalValueSecondClopenPartitionStatement

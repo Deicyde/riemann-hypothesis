@@ -1,4 +1,7 @@
-import Development.WeilBound.CoreStatements.HodgeTatePoints.CbBase
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.GermComp1ZeroPointLeft
+import Mathlib.RingTheory.MvPowerSeries.Expand
 
 noncomputable section
 

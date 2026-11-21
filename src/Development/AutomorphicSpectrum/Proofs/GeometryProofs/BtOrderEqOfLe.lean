@@ -1,8 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.TranslateMemIndOrder
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ExistsUnitFormLocalizationEtaleNbhd
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.Models
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.DualOrder
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.RegularAtTranslateStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.TranslateIntoSmallerOpenStatement
 

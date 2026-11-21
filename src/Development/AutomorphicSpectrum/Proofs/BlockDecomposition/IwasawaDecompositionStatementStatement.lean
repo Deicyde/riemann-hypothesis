@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IwasawaDecompositionStatement
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.JpUnif
 open GlobalTheory.CompanionTheory.Jp
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.iwasawa_decomposition_statement : GlobalTheory.CompanionTheory.Jp.JpIw := by

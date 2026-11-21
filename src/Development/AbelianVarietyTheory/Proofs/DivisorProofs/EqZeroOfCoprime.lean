@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FractionalIdealGeneratedPrimeToL
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsMonHomIdPow
 
@@ -85,7 +85,7 @@ theorem exists_form (F : Type) [Field F] [NumberField F] (l : ℕ) [Fact l.Prime
       ((RingOfIntegers.basis F).repr x i : ℚ) := fun i x ↦ by
     conv_lhs => rw [← (RingOfIntegers.basis F).sum_repr x]
     simp only [map_sum, map_zsmul, Finset.mul_sum, mul_smul_comm, ← integralBasis_apply,
-      RingOfIntegers.coe_eq_algebraMap, Module.Basis.trace_traceDual_mul]
+      Module.Basis.trace_traceDual_mul]
     simp
   obtain ⟨δ, hδ, hgen⟩ := GlobalTheory.FracGen.exists_gen F 𝔡 l
   obtain ⟨n, -, hn, hu⟩ := GlobalTheory.PolPrimeTo.exists_uniform 𝔡 l δ hgen

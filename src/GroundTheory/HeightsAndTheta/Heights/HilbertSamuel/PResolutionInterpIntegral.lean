@@ -1,7 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsResolutionInterpIntegral
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.ResolutionPotentials
 import ReciprocityTheory.GeometryOfNumbers.PluriharmonicAnalysis.LogDetSt
+import ReciprocityTheory.AnalyticForms.PotentialTheory.IntegrableOnTargetOfTsupport
+import ReciprocityTheory.AnalyticForms.PotentialTheory.PotentialContDiffAt
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.HilbertSamuel

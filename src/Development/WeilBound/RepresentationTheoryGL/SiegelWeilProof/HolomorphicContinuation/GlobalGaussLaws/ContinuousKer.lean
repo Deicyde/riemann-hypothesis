@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.GlobalGaussLaws.SchDecay
+import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.GlobalGaussLaws.FtLocEqKer
 
 noncomputable section
 
@@ -61,7 +64,7 @@ theorem weyl_tens {θ : InfFam D} (hθ : IsInfFam θ) {ψ : AddChar (AF D.host.F
     ((hfc.mul (continuous_ker ε (tLoc l τ) (piF θ τ fr x))).measurable)
     ⟨C, fun u => by rw [norm_mul, norm_ker, mul_one]; exact hC u⟩
   rw [hk]
-  simp only [tens, Aw, ftLoc_eq_ker, one_mul]
+  simp only [tens, Aw, one_mul]
   rw [mul_comm]
   rfl
 

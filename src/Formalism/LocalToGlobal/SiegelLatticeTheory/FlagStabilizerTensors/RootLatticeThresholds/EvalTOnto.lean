@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.EvalTRph
-import Formalism.LocalToGlobal.IndefiniteReal.SquareIntegrableTransfer
+import Formalism.LocalToGlobal.IndefiniteReal.AutomorphicEvaluation
 
 noncomputable section
 

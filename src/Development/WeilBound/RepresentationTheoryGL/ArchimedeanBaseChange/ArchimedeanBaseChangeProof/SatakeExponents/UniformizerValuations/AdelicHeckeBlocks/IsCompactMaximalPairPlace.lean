@@ -1,8 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.SatakeExponents.UniformizerValuations.FrameL
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FinsumOutOfLe
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SphericalOneOfLocalAlgebra
-import Formalism.SatakeDualWeyl.KpqSubgroupCompact
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Heckecomm
+import GroundTheory.LocalFields.PadicLogSeries
 
 noncomputable section
 

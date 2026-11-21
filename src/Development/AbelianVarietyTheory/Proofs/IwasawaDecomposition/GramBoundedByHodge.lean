@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ExistsIsHodgeFrameIff
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsExponentialChartAtPointStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.NegLogCoordLeRadiusStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExpCoordBoundLocalStatement
@@ -21,7 +20,7 @@ theorem quad_hermForm {g m : ℕ} (Hm : Matrix (Fin g) (Fin g) ℂ) (W : Fin m �
       ReciprocityTheory.ChartRestriction.G.Geo.Tor.hermForm Hm (∑ b, v b • W b) (∑ b, v b • W b) := by
   simp only [ReciprocityTheory.ChartRestriction.G.Geo.Tor.hermForm, star_sum, star_smul, mulVec_sum, mulVec_smul, dotProduct_sum,
     dotProduct_smul, sum_dotProduct, smul_dotProduct, smul_eq_mul]
-  simp only [dotProduct, mulVec, of_apply, Pi.star_apply, Finset.mul_sum, Finset.sum_mul, smul_eq_mul, RCLike.star_def]
+  simp only [dotProduct, mulVec, of_apply, Pi.star_apply, Finset.mul_sum, Finset.sum_mul, RCLike.star_def]
   refine Finset.sum_congr rfl fun b _ => Finset.sum_congr rfl fun b' _ => ?_
   refine Finset.sum_congr rfl fun i _ => Finset.sum_congr rfl fun i' _ => ?_
   ring

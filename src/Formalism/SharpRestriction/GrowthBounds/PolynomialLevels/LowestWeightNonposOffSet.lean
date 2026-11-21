@@ -1,7 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.PolynomialLevels.TlNonempty
-import Formalism.SharpRestriction.GrowthBounds.DiagonalSupport.PreChainLe
 import Formalism.SharpRestriction.GrowthBounds.DiagonalSupport.MembDd
-import Formalism.SharpRestriction.GrowthBounds.DiagonalSupport.MemSupportSumMonomial
+import Formalism.SharpRestriction.GrowthBounds.DiagonalSupport.FrMemLetters
+import Formalism.SharpRestriction.GrowthBounds.DiagonalSupport.SlackBoundReal
+import Formalism.SharpRestriction.GrowthBounds.RootWeights.DerivativeValuationBounds
+import Formalism.SharpRestriction.GrowthBounds.ValuationLowestDegreeMapFractionField
 
 noncomputable section
 

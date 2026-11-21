@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.ExtDataOneMapSmulO
-import Formalism.SharpRestriction.LevelLetterCocycles.ExistsPosConstLagrangeCondition
+import Formalism.SharpRestriction.LevelLetterCocycles.ExpRules
+import Formalism.SharpRestriction.LevelLetterCocycles.LatticeBoundsOfThreeParts
 
 noncomputable section
 

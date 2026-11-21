@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.FrameEstimates.LintegralLeOfCover
 import Development.WeilBound.ThetaLifts.FrameEstimates.LeHeightOfIsTorusElt
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ModerateGrowthOfHasCompactSupport
 
 noncomputable section
 

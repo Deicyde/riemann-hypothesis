@@ -1,6 +1,7 @@
-import Mathlib
-import Formalism.SharpRestriction.Divisibility.WeightThresholdDefs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.CurveCl
+import Formalism.LocalRingCardinality.DataDIV
 
 open MvPolynomial Formalism.DegreeFormula Formalism.BasicNotions Formalism.BasicNotions.DV Filter Topology
 

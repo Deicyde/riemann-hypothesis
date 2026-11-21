@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MulTransposeInjective
 
 open scoped TensorProduct NNReal Matrix

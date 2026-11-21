@@ -1,13 +1,7 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterSt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterFib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterDivSupp
-import GroundTheory.HeightsAndTheta.Heights.Intersections.PPtsAddFirst
-import GroundTheory.HeightsAndTheta.Heights.Intersections.PDeLeSemiPos
-import GroundTheory.HeightsAndTheta.Heights.Intersections.PRFormula
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.PSegrePartition
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.LogRegLineTensor
-import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.LelongSectionLimit
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.LelongChartLimit
 set_option maxSynthPendingDepth 1
 

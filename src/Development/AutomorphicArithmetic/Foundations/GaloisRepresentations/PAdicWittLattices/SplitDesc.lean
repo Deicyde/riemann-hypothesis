@@ -1,6 +1,6 @@
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.PAdicWittLattices.SplitsBasic
-import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.SplitsSelfOfIso
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.WeilConjectures.StabPf
+import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.PAdicWittLattices.BcMapFst
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry GlobalTheory.EtC GlobalTheory.Et GlobalTheory.GalV

@@ -1,14 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsCoType
-import Formalism.LocalToGlobal.Columns.HeckeSp
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsCompactParahoric
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HasSumBilateral
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.LowerBlockCoefficientIsSphericalHeckeEigenStatement
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.BiInvariantEigenfunctionEqMulZonalSphericalStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.TwistedPlaceDoubleCosetVolumeAndDisjointStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IntegralBiInvariantHasSumDoubleCoset
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.WeilRepChainStepMatrixCoefficientTwistedStatement
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SupportParahoricBiTransformingDoubleCosets
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SupportParahoricBiTransformingDoubleCosetsStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.UnramifiedDoublingSumGLConvergentLValueStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ChainStepIdentities
@@ -99,7 +96,7 @@ theorem zonalInt_one {N : ℕ} [MeasurableSpace (GL (Fin N) k)] [BorelSpace (GL 
     zonalInt μK ψ 1 = 1 := by
   have h1 : ψ 1 = 1 := by
     have hb : (1 : GL (Fin N) k) ∈ borel k (Fin N) := (mem_borel _).2 fun i j hij => by
-      simp [Matrix.one_apply, (ne_of_lt hij).symm]
+      simp [(ne_of_lt hij).symm]
     rw [hψ.2 1 hb (fun _ => 1) (fun i => by simp)]
     have : ord k 1 = 0 := by
       have := ord_mul k 1 1

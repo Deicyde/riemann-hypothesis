@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.FinLev
 import Formalism.SharpRestriction.LevelLetterCocycles.EvaluationAtUniformizerPower
-import Formalism.SharpRestriction.LevelLetterCocycles.EqZeroOfPowDvd
 
 noncomputable section
 

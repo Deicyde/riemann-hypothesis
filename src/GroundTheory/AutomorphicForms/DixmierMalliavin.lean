@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.DixmierMalliavinSeries
 import GroundTheory.AutomorphicForms.DixmierMalliavinProducts
 import GroundTheory.AutomorphicForms.DixmierMalliavinLine

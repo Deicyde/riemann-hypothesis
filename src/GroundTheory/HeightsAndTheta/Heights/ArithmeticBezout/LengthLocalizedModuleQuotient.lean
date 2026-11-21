@@ -1,5 +1,7 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.ImportsAlt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.IsMultiHomogOfIsChowForm
+import Mathlib.Order.CompletePartialOrder
 set_option maxSynthPendingDepth 1
 
 noncomputable section
@@ -120,7 +122,7 @@ theorem ι_apply (a : ℤ) : ι a = (a : 𝓞 ℚ) := map_intCast ι a
 
 theorem Ψ_linForm (u : Fin n → ℤ) :
     Ψ n (IndefiniteRowSideFullHecke.ArithBezout.linForm u) = linForm (fun j => ((u j : ℤ) : 𝓞 ℚ)) := by
-  simp [IndefiniteRowSideFullHecke.ArithBezout.linForm, linForm, map_sum, Ψ_C, Ψ_X, ι_apply, Xc]
+  simp [IndefiniteRowSideFullHecke.ArithBezout.linForm, linForm, map_sum, Ψ_X, Xc]
 
 theorem finIdeal_eq_map (W : Ideal (MRing (PBlk n))) :
     IndefiniteRowSideFullHecke.ArithBezout.finIdeal W =
@@ -157,7 +159,7 @@ theorem isRelevant_map_iff (W : Ideal (MRing (PBlk n))) :
     IsRelevant (W.map (Ψ n : MRing (PBlk n) →+* MvPolynomial (Fin n) (𝓞 ℚ))) ↔
       ReciprocityTheory.ChartRestriction.G.Geo.IsRelevant W := by
   simp only [IsRelevant, ReciprocityTheory.ChartRestriction.G.Geo.IsRelevant, Ideal.map_comap_of_equiv, Ideal.mem_comap,
-    RingEquiv.coe_toRingHom, Ψ_symm_X]
+    Ψ_symm_X]
   exact ⟨fun ⟨j, hj⟩ k => ⟨j, by cases k; exact hj⟩, fun h => h ()⟩
 
 theorem localMult_map_eq_multAt (K W : Ideal (MRing (PBlk n))) :
@@ -176,7 +178,7 @@ theorem finIdeal_comap_C (P : Ideal (MRing (PBlk n))) :
     (IndefiniteRowSideFullHecke.ArithBezout.finIdeal P).comap (C : ℤ →+* MvPolynomial (Fin n) ℤ) =
       P.comap (C : ℤ →+* MRing (PBlk n)) := by
   ext a
-  simp [IndefiniteRowSideFullHecke.ArithBezout.finIdeal, Ideal.mem_comap, rename_C]
+  simp [IndefiniteRowSideFullHecke.ArithBezout.finIdeal, Ideal.mem_comap]
 
 theorem integralModel_genericIdeal (P : Ideal (MRing (PBlk n))) [hP : P.IsPrime]
     (hh : ReciprocityTheory.ChartRestriction.G.Geo.IsHorizontal P) :
@@ -222,7 +224,7 @@ theorem reduceMod_map (v : IsDedekindDomain.HeightOneSpectrum (𝓞 ℚ)) (W : I
   rw [reduceMod, finIdeal_eq_map, Ideal.map_map, Ideal.map_map]
   congr 1
   refine MvPolynomial.ringHom_ext (fun a => ?_) (fun p => ?_)
-  · simp [Ψ_C, ι_apply]
+  · simp
   · obtain ⟨⟨⟩, i⟩ := p
     simp only [RingHom.coe_comp, Function.comp_apply, RingEquiv.coe_toRingHom]
     rw [Ψ_X]

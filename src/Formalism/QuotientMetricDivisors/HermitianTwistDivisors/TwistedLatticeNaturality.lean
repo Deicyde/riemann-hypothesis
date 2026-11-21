@@ -1,14 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.QuotientMetricDivisors.DivIntoDualShift
-import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.IdxChange
-import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.ImageLcv
-import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.LcvBasis
-import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.LocBasis
-import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.ValBasic
-import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.ProdFormula
 import Formalism.HarderNarasimhan.HarderNarasimhanProofs.SizeMu
-import Formalism.HarderNarasimhan.HarderNarasimhanProofs.DiscreteSpanOfLinIndep
 import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.DivIntoDual
+import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.ReductionSecondStep
 
 open Module NumberField IsDedekindDomain
 open scoped Matrix nonZeroDivisors
@@ -579,7 +574,7 @@ theorem shift_smulLat_lattice (a : K) (ha : a ≠ 0) (N : Submodule (𝓞 K) (Fi
     simp [smulLat]
   rw [hset, ← Submodule.map_span, hN.span_eq_top, Submodule.map_top, LinearMap.range_eq_top]
   intro v
-  exact ⟨a⁻¹ • v, by simp [smul_smul, mul_inv_cancel₀ ha, inv_mul_cancel₀ ha]⟩
+  exact ⟨a⁻¹ • v, by simp [smul_smul, inv_mul_cancel₀ ha]⟩
 
 theorem shift_idealSmul_lattice (I : FractionalIdeal (𝓞 K)⁰ K) (hI : I ≠ 0)
     (N : Submodule (𝓞 K) (Fin d → K)) (hN : Submodule.IsLattice K N) :

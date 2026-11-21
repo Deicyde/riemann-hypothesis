@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.MonomialOrderSegments.SecondEmbeddingInjective
+import Formalism.SharpRestriction.GrowthBounds.MonomialOrderSegments.IntegralMonomial
 
 noncomputable section
 

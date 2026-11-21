@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.WittOnFalse
-import Development.AbelianVarietyTheory.Definitions.Divisors.FormalCoboundarySmul
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrobKerIdealLeAugIdeal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PowerSeriesEvalAtNilpotentXEqCoordinateStatement
 open CategoryTheory TensorProduct MvPowerSeries GlobalTheory GlobalTheory.PDiv GlobalTheory.PDivGroup GlobalTheory.Katz
 
@@ -96,7 +94,7 @@ theorem GlobalTheory.coeff_eq_zero_of_evA_eq_zero_of_le_finrank :
   have hPcoeff : ∀ a : Fin d → Fin q, coeff (boxPt a) P = coeff (boxPt a) f := by
     intro a
     rw [hP, map_sum, Finset.sum_eq_single a]
-    · simp [coeff_monomial]
+    · simp
     · intro b _ hb
       simp [coeff_monomial, boxPt_injective.ne (Ne.symm hb)]
     · simp

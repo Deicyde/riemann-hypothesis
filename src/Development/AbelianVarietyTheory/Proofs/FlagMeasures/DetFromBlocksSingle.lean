@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.SymmetricFlagBasisVectorsApplyCentre
 
 open Formalism.HermitianLatticeCounting.S6 GlobalTheory.HermLat GlobalTheory.SA Matrix
@@ -47,7 +48,7 @@ theorem det_fromBlocks_single {n : Type} [Fintype n] [DecidableEq n] (l : n) (X 
       (fromBlocks (X.updateRow l (Pi.single l 1)) 0 0 (Y.updateRow l (Pi.single l 1))).submatrix
         (Equiv.swap (Sum.inl l) (Sum.inr l)) id := by
     ext (a | a) (b | b) <;> by_cases ha : a = l <;> by_cases hb : b = l <;>
-      simp [updateRow_apply, diagonal_apply, Pi.single_apply, Equiv.swap_apply_def, ha, hb, @eq_comm _ l b]
+      simp [updateRow_apply, diagonal_apply, Equiv.swap_apply_def, ha, hb, @eq_comm _ l b]
   have e4 : (X.updateRow l 0).det = 0 := det_eq_zero_of_row_eq_zero l fun j => by simp
   rw [e1, det_updateRow_add, det_updateRow_smul, updateRow_eq_self, det_fromBlocks_zero₁₂, e2,
     det_updateRow_add, det_updateRow_smul, updateRow_eq_self, det_fromBlocks_zero₂₁, e3, det_permute,
@@ -79,9 +80,9 @@ theorem B_e_e (F : FlagD H r) (a b : Fin (r + 1)) :
   induction a using Fin.lastCases <;> induction b using Fin.lastCases
   · simp [F.zz]
   · rename_i b
-    simp [B_eq_zero_comm.1 (F.zperp b), diagonal_apply, (Fin.castSucc_ne_last b).symm]
+    simp [B_eq_zero_comm.1 (F.zperp b), (Fin.castSucc_ne_last b).symm]
   · rename_i a
-    simp [F.zperp a, diagonal_apply, Fin.castSucc_ne_last]
+    simp [F.zperp a, Fin.castSucc_ne_last]
   · rename_i a b
     simp [F.iso a b, diagonal_apply, Fin.castSucc_ne_last]
 

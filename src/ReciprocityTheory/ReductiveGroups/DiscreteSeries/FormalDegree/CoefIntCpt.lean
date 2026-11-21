@@ -1,4 +1,5 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.IntegrableOfDecayVG
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.IntegrVGA
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.CoefOp
 
@@ -24,14 +25,14 @@ theorem coefIntCpt_unitary (hq : S7.q0 ε = 0) (g : S7.UJ ε) :
       simpa using Finset.filter_eq_empty_iff.mp (Finset.card_eq_zero.mp h0) (Finset.mem_univ a)
     have hJ : Jm ε = -1 := by
       ext i j
-      by_cases h : i = j <;> simp [Jm, Matrix.diagonal_apply, Matrix.one_apply, h, hf]
+      by_cases h : i = j <;> simp [Jm, h, hf]
     rw [hJ] at h1
     simpa using h1
   · have hf : ∀ a, ε a = true := fun a => by
       simpa using Finset.filter_eq_empty_iff.mp (Finset.card_eq_zero.mp h0) (Finset.mem_univ a)
     have hJ : Jm ε = 1 := by
       ext i j
-      by_cases h : i = j <;> simp [Jm, Matrix.diagonal_apply, Matrix.one_apply, h, hf]
+      by_cases h : i = j <;> simp [Jm, Matrix.one_apply, h, hf]
     rw [hJ] at h1
     simpa using h1
 

@@ -1,4 +1,6 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.MixedPositionHypothesis
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.LevelLetterCocycles.LamPS
 
 noncomputable section
 

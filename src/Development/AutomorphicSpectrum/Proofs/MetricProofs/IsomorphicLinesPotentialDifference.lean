@@ -1,9 +1,6 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsSncModel
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.BlowupProjections.BlowupProjStatement
-import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.Proportional
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PotentialTheory.DegreeInt
-import ReciprocityTheory.AnalyticForms.PotentialTheory.ContDiffAtOfIsPotential
 import ReciprocityTheory.AnalyticForms.LeviForms.UnifInt
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.MongeAmpereIntegralCongrPotentials
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.GoodProjExistsStatementHolds
@@ -13,6 +10,8 @@ import Development.AutomorphicSpectrum.Proofs.GeometryProofs.IntersectionFamilyS
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.TelescopingCoordinateDifferenceStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.MongeAmpereDifferenceTendstoZeroStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ResolutionStatementHoldsStatement
+import Development.AutomorphicSpectrum.Definitions.MetricPeriods.MetricsProjectionFormulaNef
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterNamed
 
 noncomputable section
 

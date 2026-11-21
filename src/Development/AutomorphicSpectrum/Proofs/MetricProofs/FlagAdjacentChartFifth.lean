@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.IsBaseChart
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.LogPeriodStatement
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.FrameMinorValueFormulaStatement
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.BlockLUFactorizationStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.LUTwistRefactorizationStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.FlagAdjacentChartTenthStatement

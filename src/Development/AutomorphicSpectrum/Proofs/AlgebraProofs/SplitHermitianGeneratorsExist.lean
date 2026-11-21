@@ -1,13 +1,14 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.IsSplitGaussChars
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.TwistApply
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.ShortExactFirstTermBundle
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.LinearIndependentMapVec
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.EigenProjectorsSplitAction
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.FilteredExactSequenceProjectorBundlesStatement
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.ModuleBasisLatticeBundleFreeStatement
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.AlgebraActionBundleFiltrationStepStatement
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.IdealDescendingOneDimQuotientStatement
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Data.Int.Star
+import Mathlib.LinearAlgebra.Charpoly.Basic
 
 noncomputable section
 open scoped TensorProduct
@@ -298,7 +299,7 @@ variable {K : Type} [Field K] (C : ACurve K) {V : Type} [AddCommGroup V] [Module
 theorem subDeg_bot (L : C.I → AddSubgroup V) : subDeg C L ⊥ = 0 := by
   haveI : IsEmpty (Fin (Module.finrank K (⊥ : Submodule K V))) := by
     rw [finrank_bot]; infer_instance
-  simp [subDeg, deg, Module.Basis.det_apply, Matrix.det_isEmpty]
+  simp [subDeg, deg]
 
 theorem idealV_bot {A : Type} [CommRing A] (τ : A →+* Module.End K V) : idealV τ ⊥ = ⊥ := by
   refine iSup_eq_bot.2 fun a => ?_

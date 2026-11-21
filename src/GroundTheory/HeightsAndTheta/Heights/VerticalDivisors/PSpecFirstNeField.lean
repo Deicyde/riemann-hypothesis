@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.VerticalDivisors.StatementsSpecFirst
-import GroundTheory.HeightsAndTheta.Heights.ChowForms.Statements
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.StatementsIncidenceZeroLocus
 set_option maxSynthPendingDepth 1
 

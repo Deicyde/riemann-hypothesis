@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CharacterGerms.RowTieCharS
-import Formalism.LocalToGlobal.CharacterGerms.SelfConjugateRowData
 
 set_option autoImplicit false
 

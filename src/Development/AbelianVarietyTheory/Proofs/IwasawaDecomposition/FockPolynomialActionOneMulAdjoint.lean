@@ -1,8 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.ConcretePkgSpec
-import Formalism.LocalRingCardinality.DataExtra
-import Formalism.LocalRingCardinality.DataTies
-import Formalism.LocalToGlobal.Divisibility.CoefModLemmas
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsHolRepOfIsTau
 
 noncomputable section
@@ -146,8 +143,8 @@ theorem blk_conj {J k : Matrix (Fin m) (Fin m) ℂ} (hJ : Jᴴ = J) (hk : k * J 
     exact this.symm
   have h2 : star (1 / 2 : ℂ) = 1 / 2 := by simp
   simp only [blk, Matrix.conjTranspose_add, Matrix.conjTranspose_mul, Matrix.conjTranspose_smul,
-    Matrix.conjTranspose_sub, Matrix.conjTranspose_one, hJ, h2, Matrix.smul_mul, Matrix.mul_smul, add_mul, mul_add,
-    one_mul, mul_one, h1]
+    Matrix.conjTranspose_sub, Matrix.conjTranspose_one, hJ, h2, Matrix.smul_mul, add_mul,
+    one_mul, h1]
 
 theorem detPlus_def₂ (ε : Fin m → Bool) (k : Matrix (Fin m) (Fin m) ℂ) :
     detP ε k = (blk (Formalism.REAL.Jm ε) k).det := rfl

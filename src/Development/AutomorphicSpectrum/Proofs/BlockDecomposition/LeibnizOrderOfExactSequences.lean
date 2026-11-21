@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SubsingletonOfGiso
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MirabolicExtensionExactStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PhiPreservesIsomorphismStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PsiPreservesIsomorphismStatement
@@ -11,6 +11,8 @@ import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DerivativeTwist
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.TwistProductDistributesStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.TwistTwistAddStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsFiltrationStatement
+import Development.WeilBound.RepresentationTheoryGL.GenericUnitaryGL.LeibnizOrders.LeibnizOrd
+import Development.WeilBound.RepresentationTheoryGL.GenericUnitaryGL.LeibnizOrders.PhiPG0
 
 noncomputable section
 

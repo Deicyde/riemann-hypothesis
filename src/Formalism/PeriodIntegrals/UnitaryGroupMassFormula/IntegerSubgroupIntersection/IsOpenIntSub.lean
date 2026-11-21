@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.PeriodIntegrals.GaugeGap
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IntegerSubgroupIntersection.IntInter
 
 noncomputable section

@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsPeriodGens
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasRigidCoords
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.QkExtExistsG
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj IsLocalRing NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.AnForm.R
 open GlobalTheory GlobalTheory.Toroidal GlobalTheory.LocM GlobalTheory.PolFan GlobalTheory.UChart GlobalTheory.UCanon
@@ -48,7 +48,7 @@ theorem cubN_pow (a x : A) (n k : ℕ) :
     apply Additive.ofMul.injective
     have e' := congrArg Additive.ofMul e
     have ih' := congrArg Additive.ofMul ih
-    simp only [ofMul_mul, ofMul_inv, ofMul_pow] at e' ih' ⊢
+    simp only [ofMul_mul, ofMul_pow] at e' ih' ⊢
     simp only [add_nsmul, one_nsmul, nsmul_add]
     linear_combination (norm := abel) e' + ih'
 
@@ -99,7 +99,7 @@ theorem exists_mult_pow_eq_one {c : X → A} (hc : ∀ χ χ', c (χ + χ') = c 
     rw [e₁]
     apply Additive.ofMul.injective
     have e₂' := congrArg Additive.ofMul e₂
-    simp only [ofMul_mul, ofMul_inv, ofMul_pow, nsmul_add, nsmul_neg] at e₂' ⊢
+    simp only [ofMul_mul, ofMul_inv, ofMul_pow, nsmul_add] at e₂' ⊢
     rw [smul_neg, smul_neg, e₂']
     abel
   choose r hr using wroot

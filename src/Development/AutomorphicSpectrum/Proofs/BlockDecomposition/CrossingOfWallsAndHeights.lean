@@ -1,5 +1,4 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.EisensteinSeries.SiegelEisensteinContinuation.StripEntire
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HolomorphicSeriesUniformTubeStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SectionInvarianceCosetSumStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CosetSeriesSummableShiftedStatement

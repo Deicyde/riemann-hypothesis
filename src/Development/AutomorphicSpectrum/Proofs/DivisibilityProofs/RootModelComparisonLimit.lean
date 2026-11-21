@@ -1,9 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.CmpSt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.BlowupProjections.BlowupProjStatement
-import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.Proportional
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.DivisibilityProofs.HermitianCombinationSmoothConjStatement
 import Development.AutomorphicSpectrum.Proofs.DivisibilityProofs.ArithIntersectionMultilinearAllStatement
+import Development.AutomorphicSpectrum.Definitions.MetricPeriods.MetricsProjectionFormulaNef
 
 noncomputable section
 

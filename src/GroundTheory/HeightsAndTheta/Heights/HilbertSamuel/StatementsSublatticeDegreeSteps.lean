@@ -1,5 +1,6 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsSublatticeDegree
+import BuildAid.Leniency.Example
+import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsEuclideanSections
+import Mathlib.Analysis.InnerProductSpace.GramMatrix
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.HilbertSamuel

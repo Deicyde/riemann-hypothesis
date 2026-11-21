@@ -1,8 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.TypeConditions.TrivialLocalCondition
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsGaloisRepBaseChange
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsGaloisRepTwist
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.GaloisRepWeilJumps
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.GaloisRepMultisetJumps
 open NumberField IsDedekindDomain Formalism Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.MainNotions Formalism.MainNotions.N Formalism.WeaklyAdmissibleFiltrations Formalism.ConjugateSelfDual ReciprocityTheory.Gal
 open GlobalTheory.GalIsoBC GlobalTheory.HalfTwist
 
@@ -252,7 +250,7 @@ theorem goodR_part (D : D7) (h0 : SumRepresentations.tie0 D) (h2 : AutomorphicGa
     simp only [Function.comp_apply, Multiset.map_map]
     congr 1
     funext z
-    simp only [Function.comp_apply, he]
+    simp only [he]
     push_cast; ring
 
 theorem goodR_iso : ∀ D : D7, SumRepresentations.tie0 D → AutomorphicGaloisAdmissible D.nd D.naut → ∀ (i : D.nd.Loc) (P : D.naut.AV i)

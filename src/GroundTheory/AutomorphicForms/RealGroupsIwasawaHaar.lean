@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.RealGroupsIwasawa
 import GroundTheory.AutomorphicForms.RealGroupsHaar
+import Mathlib.CategoryTheory.Countable
 
 namespace GroundTheory.Automorphic
 

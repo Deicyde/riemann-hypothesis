@@ -1,10 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsIntVZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EventuallyIntegralTensorPointsSharpStableRing
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FormalGroupActionRingHom
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CentreCompat
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdjoinLocalOrderTensorPadicMatrixAlmostAllStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsNsmulMemSpan
+import Mathlib.NumberTheory.Padics.HeightOneSpectrum
 open Matrix NumberField IsDedekindDomain GlobalTheory.LKTrip GlobalTheory.LKMid GlobalTheory.OrbFinAf
 open scoped TensorProduct Classical
 
@@ -129,9 +128,9 @@ theorem matrixUnits_eventually : ∀ (p : ℕ) [Fact p.Prime] (G : HTGroup p),
       ext a b
       rw [Matrix.sum_apply, Matrix.one_apply, Finset.sum_eq_single a]
       · by_cases h : a = b
-        · subst h; simp [Matrix.single_apply]
-        · simp [Matrix.single_apply, h]
-      · intro c _ hc; simp [Matrix.single_apply, hc]
+        · subst h; simp
+        · simp [h]
+      · intro c _ hc; simp [hc]
       · simp
     simp only [E]
     rw [← map_sum (theta p G v), ← AddSubmonoidClass.coe_finset_sum, ← map_sum ψ.symm, hs, map_one,

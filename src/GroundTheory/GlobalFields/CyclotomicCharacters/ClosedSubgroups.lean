@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.CyclotomicCharacters.ProfinitePadic
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.RingTheory.PiTensorProduct
 
 open Filter Topology
 open scoped GroundTheory.LocalField.Abstract

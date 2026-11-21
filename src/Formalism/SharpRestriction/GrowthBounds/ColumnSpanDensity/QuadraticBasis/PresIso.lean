@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
 import Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.QuadraticBasis.StatementO
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
 
 namespace Formalism.MainNotions.flipOneThree.Pf.QuadraticBasis
 

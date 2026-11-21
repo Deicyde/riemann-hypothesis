@@ -1,9 +1,10 @@
-import Mathlib
-import GroundTheory.ProfiniteCohomology.InflationRestriction
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.GaloisCohomology.Kummer
-import GroundTheory.ProfiniteCohomology.CohomologyFunctoriality.Naturality
-import GroundTheory.ProfiniteCohomology.CupProducts
 import GroundTheory.ProfiniteCohomology.CupProducts.Projection
+import GroundTheory.ProfiniteCohomology.InflationRestriction.Higher
+import Mathlib.CategoryTheory.EffectiveEpi.Comp
+import Mathlib.CategoryTheory.ExtremalEpi
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

@@ -1,4 +1,6 @@
-import Lean
+import BuildAid.Leniency.Open
+import Lean.Elab.SyntheticMVars
+import Std.Do.Triple.SpecLemmas
 
 open Lean Elab Tactic Meta
 

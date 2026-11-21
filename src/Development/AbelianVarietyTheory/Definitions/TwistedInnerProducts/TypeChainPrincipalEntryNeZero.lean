@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.StandardOrderExtendedBasisApplyLowBlock
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
 
 open MeasureTheory ValuativeRel Matrix
 
@@ -162,7 +165,7 @@ theorem typeChain_entry_ne_zero (ψ : AddChar k Circle) (ν : Measure k) [ν.IsA
       · exact i.1.elim0
     · by_cases hri : r.val = i.val
       · simp [x, basePt, a1, a2, wt, hri]
-      · simp [x, basePt, a1, a2, Matrix.one_apply, wt, hri, Fin.ext_iff])
+      · simp [x, basePt, a1, a2, wt, hri, Fin.ext_iff])
   have hflat : flat ψ ν (T.mu (0 + 1)) (T.Phi 0 (c + 1) (by omega)) 1 1 ≠ 0 := by
     rw [flat, om_one]
     refine fun h0 => opE_ne_zero' ψ ν 1 (hT.1 0 (c + 1) (by omega)) (fun y hy => ?_) (e₀ := e) ?_

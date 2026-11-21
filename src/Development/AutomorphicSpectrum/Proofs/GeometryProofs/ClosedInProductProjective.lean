@@ -1,8 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.IsSncPatchRat
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.EmbedsGeneric
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.BlowupProjections.BlowupProjStatement
-import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.IsProjOverOfIsPullback
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.IsProjOverCompOfIsClosedImmersion
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField

@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.WindowSums.Statement
-import Formalism.GaussValuationBounds.Statement
 
 noncomputable section
 

@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.ThetaLiftGeometry.VandermondeConjugatePrimes
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.Cobdry
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.WickVanishing.CalcExp
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExpMvNegLogMvMul
 open NumberField Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.TaylorLogMetric Formalism.MainNotions.GL3Theta GlobalTheory.IndefiniteRowSideFullHecke.VandermondeConjugatePrimes

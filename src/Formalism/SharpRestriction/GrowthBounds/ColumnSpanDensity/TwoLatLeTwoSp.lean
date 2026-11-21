@@ -1,5 +1,6 @@
-import Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.DeltaPsiH
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.LatticeSystems
+import Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.SingleWeightLatticeComparison
 
 noncomputable section
 

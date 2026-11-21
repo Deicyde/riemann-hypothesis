@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
-import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.FinrankMulDiscrRpowLeSumSqOfMemTraceDual
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsRealEmbeddingOrderingStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RealEmbeddingsLinearlyIndependentStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiagonalAppellHumbertRealMultStatement
@@ -142,14 +140,14 @@ theorem torusForm : TorusForm := by
       have : (U.h (U.e j) : ℂ) * ((((e j 0 : ℝ) : ℂ) * A j + ((e j ((x : FR E) * β₀) : ℝ) : ℂ) * B j) *
           starRingEnd ℂ (((e j m₀ : ℝ) : ℂ) * A j + ((e j 0 : ℝ) : ℂ) * B j)) =
           ((U.h (U.e j) * e j (x : FR E) * e j β₀ * e j m₀ : ℝ) : ℂ) * (B j * starRingEnd ℂ (A j)) := by
-        simp only [map_zero, map_mul, map_add, Complex.ofReal_zero, Complex.conj_ofReal, zero_mul, zero_add, add_zero]
+        simp only [map_zero, map_mul, Complex.ofReal_zero, Complex.conj_ofReal, zero_mul, zero_add, add_zero]
         push_cast; ring
       rw [this, Complex.im_ofReal_mul]; ring
     simp only [hl] at htr
     rw [← sub_eq_zero, Finset.mul_sum, ← Finset.sum_sub_distrib] at htr
     rw [← htr]
     refine Finset.sum_congr rfl fun j _ ↦ ?_
-    simp only [map_mul, map_sub, map_zero, mul_zero, sub_zero]
+    simp only [map_mul, mul_zero, sub_zero]
     ring
   have hk : ∀ j, U.h (U.e j) * (B j * starRingEnd ℂ (A j)).im = 2 * e j (U.c : FR E) := by
     have hz := realEmb_indep (FR E) (fun σ ↦ (e (e.symm σ) β₀ * e (e.symm σ) m₀) *
@@ -224,7 +222,7 @@ theorem torusForm : TorusForm := by
         have hn : ‖lam j‖ ^ 2 = Complex.normSq (A j) / (4 * Real.pi ^ 2) := by
           rw [hlamdef, norm_div, div_pow, Complex.sq_norm]
           congr 1
-          simp [Complex.norm_mul, abs_of_pos Real.pi_pos]; ring
+          simp [abs_of_pos Real.pi_pos]; ring
         rw [hn, hτim, ← hk j]
         have := hIm j
         have := Complex.normSq_pos.2 (hA0 j)

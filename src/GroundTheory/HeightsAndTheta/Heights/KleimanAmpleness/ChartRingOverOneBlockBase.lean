@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.ImportsTerAlt
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.IsGraphGenTwistBundleZero
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PTwinEqBundle
@@ -128,7 +129,7 @@ theorem genInv_add_baseDeg (β : K → ℤ) (c : ℤ) {d : ∀ k, ι k} (hd : �
   rw [Finset.prod_eq_single k₀]
   · simp [IndefiniteRowSideFullHecke.Kleiman2.baseDeg]
   · intro k _ hk
-    simp [IndefiniteRowSideFullHecke.Kleiman2.baseDeg, Pi.single_apply, hk]
+    simp [IndefiniteRowSideFullHecke.Kleiman2.baseDeg, hk]
   · simp
 
 theorem div_mem_chartRingOver (d : ∀ k, ι k) (k : K) (a : ι k) :

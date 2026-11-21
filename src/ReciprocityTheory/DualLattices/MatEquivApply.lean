@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.DualLattices.DualLenStatement
 import ReciprocityTheory.DualLattices.BlockOneMulMulBlockOne
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
+import ReciprocityTheory.DualLattices.ProdDvdOfIso
 
 noncomputable section
 

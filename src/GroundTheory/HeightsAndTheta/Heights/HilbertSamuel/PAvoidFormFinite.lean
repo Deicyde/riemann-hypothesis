@@ -1,6 +1,9 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsAvoidFormFinite
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PFibreRepresentatives
+import Mathlib.Data.Finsupp.Interval
+import Mathlib.Data.Int.Star
+import Mathlib.RingTheory.Nullstellensatz
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.HilbertSamuel

@@ -1,5 +1,6 @@
-import Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.HermitianForms.TransversalSums.SumTranslateTransversal
-import Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.HermitianForms.StepForm
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.HermitianForms.GlCongr
 
 noncomputable section
 

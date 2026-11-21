@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.HookProducts.LwPNonneg
-import Formalism.SharpRestriction.Divisibility.LocalQuadraticParts
 
 noncomputable section
 

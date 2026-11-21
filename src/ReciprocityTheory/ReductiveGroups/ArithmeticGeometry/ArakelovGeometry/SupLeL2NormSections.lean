@@ -1,6 +1,5 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.ABridgeSt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.AParamSt
-import ReciprocityTheory.GeometryOfNumbers.PluriharmonicAnalysis.MorseGenSt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.SectionBasisLocalUniformBound
 
 namespace ReciprocityTheory.ChartRestriction.G.ArakelovGeometry

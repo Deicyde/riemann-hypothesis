@@ -1,12 +1,9 @@
-import Mathlib
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AdditiveValuationNorms.CokLenLeOfRangeLe
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AdditiveValuationNorms.ImportsAlt
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AdditiveValuationNorms.DetBound
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AdditiveValuationNorms.Growth
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AdditiveValuationNorms.ImportsFurther
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AdditiveValuationNorms.ImportsBis
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AdditiveValuationNorms.LteNorm
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AdditiveValuationNorms.NormVal
 
 open UpperTheory.V UpperTheory.V.PropA
 

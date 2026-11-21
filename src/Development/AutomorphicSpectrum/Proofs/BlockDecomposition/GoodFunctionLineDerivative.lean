@@ -1,11 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GoodConstOfAniso
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AutomorphicConstantTermParabolic
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DifferentiableOfIsSm
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RealLineMemInfPoints
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.ExistsQuotHeightMulExpInfLe
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.RderMemAutFormsCuspForms
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ModerateGrowthOfHasCompactSupport
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsCompactIwasawa
 
 noncomputable section

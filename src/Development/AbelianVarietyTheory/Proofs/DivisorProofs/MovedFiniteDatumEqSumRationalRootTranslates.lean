@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.NormalFam
-import Development.AbelianVarietyTheory.Definitions.Divisors.GenReads
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ThExprUniqOfChartIndep2
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeIsometrySignSecond
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VPEqSumHeisCore
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsPairRecordCore

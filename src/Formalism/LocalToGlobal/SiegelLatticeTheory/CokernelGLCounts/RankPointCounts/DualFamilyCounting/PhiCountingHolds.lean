@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.DualFamilyCounting.CardPhiSucc
-import Formalism.FlagUnipotentLattices.MinkowskiFactorialBounds.DetMulEqSumProdMulDetSubmatrix
 import Formalism.GL3MeanSquares.GenusMeanAsymptotics.UnimodularClassRepresentatives.IsoCountOneInert
+import Formalism.GL3MeanSquares.GenusMeanAsymptotics.UnimodularClassRepresentatives.AlgebraMapConjO
 
 open NumberField Module Matrix
 
@@ -98,7 +99,7 @@ private theorem fromBlocks_cayley_eq_zero_iff {A : Type*} [CommRing A] [StarRing
       P + Pᴴ + Pᴴ * Du * P = 0 ∧ R = -(Q + Pᴴ * Du * Q)ᴴ ∧ S + Sᴴ + Qᴴ * Du * Q = 0 := by
   rw [Matrix.fromBlocks_conjTranspose, Matrix.fromBlocks_multiply, Matrix.fromBlocks_multiply,
     Matrix.fromBlocks_add, Matrix.fromBlocks_add, ← Matrix.fromBlocks_zero, Matrix.fromBlocks_inj]
-  simp only [Matrix.mul_zero, Matrix.zero_mul, add_zero, zero_add]
+  simp only [Matrix.mul_zero, Matrix.zero_mul, add_zero]
   constructor
   · rintro ⟨h1, h2, -, h4⟩
     refine ⟨h1, ?_, h4⟩
@@ -263,11 +264,11 @@ theorem phi_mod_p_holds : PhiModP := by
     ext (i | i) (j | j)
     · simp [e', diagQ, Matrix.diagonal_apply, Subtype.ext_iff]
     · have hij : i.1 ≠ j.1 := fun h => j.2 (h ▸ i.2)
-      simp [e', diagQ, Matrix.diagonal_apply, hij]
+      simp [e', diagQ, hij]
     · have hij : i.1 ≠ j.1 := fun h => i.2 (h ▸ j.2)
-      simp [e', diagQ, Matrix.diagonal_apply, hij]
+      simp [e', diagQ, hij]
     · have hi : a i.1 ∈ 𝔭 := not_not.mp i.2
-      simp [e', diagQ, Matrix.diagonal_apply, hzero _ hi]
+      simp [e', diagQ, Matrix.diagonal_apply]
       first
       | exact fun _ => (hzero _ hi).symm
       | (intro _; rw [IsScalarTower.algebraMap_apply (𝓞 F) (𝓞 K) (𝓞 K ⧸ extP K 𝔭 ^ 1)]; exact (hzero _ hi).symm)

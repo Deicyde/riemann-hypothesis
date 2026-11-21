@@ -1,5 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.HeightPlacesRingQuot
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.ReduceModChar
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights
@@ -123,6 +128,6 @@ theorem PlacesRingQuot.proof : PlacesRingQuot.Statement := by
   have h0 : WithZero.exp (-(n w : ℤ)) ≠ 0 := WithZero.exp_ne_zero
   rw [Real.log_pow, hw, hn w ((hsS w).1 hws), WithZeroMulInt.toNNReal_neg_apply _ h0,
     WithZero.toAdd_unzero_eq_log, WithZero.log_exp]
-  simp [Real.log_zpow]
+  simp
 
 end GroundTheory.Heights₂.Heights

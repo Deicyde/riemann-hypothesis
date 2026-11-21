@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.JacquetLanglands.TorusKernels.IsHolVOf
+import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.RChar2
 
 noncomputable section
 

@@ -1,9 +1,8 @@
-import Formalism.PeriodIntegrals.QmBorderFull
-import Formalism.PeriodIntegrals.QmBorderES
-import Formalism.PeriodIntegrals.QmColExp
-import Formalism.PeriodIntegrals.QmRowExp
-import Formalism.PeriodIntegrals.QmSkip
-import Formalism.RealPlaceAnalysis.RealPlaceTaylor.QuantumDetHighestWeightHolds
+import BuildAid.Leniency.Open
+import Formalism.PeriodIntegrals.QmDefs
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
 
 open Finset Formalism.REAL
 
@@ -59,7 +58,7 @@ theorem bL_last {n m : ℕ} (e es : Fin n) (v : Fin m → Fin n) :
   | zero => simp [PI.bE]
   | succ j =>
     first
-    | simp [PI.bE, PI.bS, ← Fin.succ_castSucc]
+    | simp [PI.bE, PI.bS]
     | simp [PI.bE, PI.bS, Fin.cons_snoc_eq_snoc_cons]
 
 private theorem mul_intCast_mul_eq_intCast_mul_mul {A : Type*} [Ring A] (s x : A) (z : ℤ) :

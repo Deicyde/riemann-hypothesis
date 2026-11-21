@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.LatticeMembershipAevalUniformizer
-import Formalism.SharpRestriction.LevelLetterCocycles.FinLev
 
 noncomputable section
 

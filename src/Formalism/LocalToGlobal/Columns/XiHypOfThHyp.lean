@@ -1,4 +1,6 @@
-import Formalism.LocalToGlobal.Columns.KernelEquivTrivialTuple
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.Columns.RefXi1Above
 
 open NumberField IsDedekindDomain Module Matrix
 

@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.JacobiPathWeights.LiftWord
 import Formalism.ThetaLogCoordinates.JacobiPathWeights.StatementB
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
 
 noncomputable section
 

@@ -1,4 +1,6 @@
-import ReciprocityTheory.DualLattices.IsHeightUnique
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import ReciprocityTheory.DualLattices.NsetExpInjectiveSurjective
 
 noncomputable section
 

@@ -1,7 +1,6 @@
-import Mathlib
-import Formalism.LocalRingCardinality.DataLevel
-import Formalism.LocalRingCardinality.DataLevelD
-import Formalism.SatakeDualWeyl.StatementC
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.StandardLattice
 
 noncomputable section

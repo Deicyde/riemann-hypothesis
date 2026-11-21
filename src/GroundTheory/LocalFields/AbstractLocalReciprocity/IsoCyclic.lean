@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.LocalFields.AbstractLocalReciprocity.ReciprocityMap
-import GroundTheory.LocalFields.AbstractLocalReciprocity.CoeNormEqProdSmulNorm
-import GroundTheory.LocalFields.AbstractLocalReciprocity.NormFormula
 
 namespace GroundTheory.LocalField.Abstract
 

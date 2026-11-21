@@ -1,4 +1,5 @@
-import Formalism.LocalToGlobal.GaloisLevelStructure.NGalTied
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.SumRepresentations
 
 noncomputable section

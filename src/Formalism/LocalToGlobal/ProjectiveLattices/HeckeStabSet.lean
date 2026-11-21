@@ -1,4 +1,7 @@
-import Formalism.LocalToGlobal.ProjectiveLattices.RhoWApply
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.ProjectiveLattices.AlgebraMapCAt
+import Mathlib.RingTheory.SimpleRing.Principal
 
 noncomputable section
 

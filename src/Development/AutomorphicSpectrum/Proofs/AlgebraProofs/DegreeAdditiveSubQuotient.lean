@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.IsSplitGaussChars
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.GapCondExample
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.BundleDegreeEqSumValuationsStatement
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.LatticeBasisAdaptedToSubspaceStatement
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.SubAndQuotientBundlesStatement
 
 open GlobalTheory.CompanionTheory.Ar.Crv
@@ -35,8 +32,7 @@ theorem det_adapted {K V : Type} [Field K] [AddCommGroup V] [Module K V] (W : Su
           simp at this
           omega
         simp only [LinearMap.comp_apply, Module.Basis.coord_apply, h0, map_zero,
-          Module.Basis.repr_self, Finsupp.single_apply, hne, if_false, Finsupp.coe_zero,
-          Pi.zero_apply]
+          Module.Basis.repr_self, Finsupp.single_apply, hne, if_false]
       · simp only [LinearMap.comp_apply, Module.Basis.coord_apply, hb2,
           Module.Basis.repr_self, Finsupp.single_apply, Fin.natAdd_inj]
     exact LinearMap.congr_fun this x

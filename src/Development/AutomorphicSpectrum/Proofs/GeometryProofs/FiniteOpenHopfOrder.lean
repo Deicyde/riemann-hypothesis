@@ -1,11 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.TranslateMemIndOrder
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ExistsUnitFormLocalizationEtaleNbhd
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.Models
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.DualOrder
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsDenominatorRegularStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.RegularFunctionIffSectionStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.SectionEqZeroOfValuesStatement
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import Std.Tactic.BVDecide.Normalize.Prop
 open CategoryTheory Limits AlgebraicGeometry MonoidalCategory CartesianMonoidalCategory MonObj TensorProduct
 open GlobalTheory.CompanionTheory.Ar.BT GroundTheory.PAdicHodge
 
@@ -169,7 +169,7 @@ theorem exists_tensor (hF : Γ.IsFinOpenSub U) (s : Γ(Γ.G.left, U)) :
     rw [hρ, ← Spec.map_comp, ← CommRingCat.ofHom_comp]
     congr 2
     ext r
-    simp [iR, Algebra.TensorProduct.algebraMap_apply'])
+    simp [iR])
   have hx : ∀ z, x.left z ∈ U := fun z => by
     simpa [x] using fromSpec_mem hU _
   have hy : ∀ z, y.left z ∈ U := fun z => by

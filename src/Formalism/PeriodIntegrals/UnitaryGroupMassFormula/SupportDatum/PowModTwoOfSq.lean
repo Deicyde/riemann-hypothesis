@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.PeriodIntegrals.SupportParts
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.CuspSpanNormBounds.LocalGroupInFamilyNontrivial
 
 noncomputable section
 

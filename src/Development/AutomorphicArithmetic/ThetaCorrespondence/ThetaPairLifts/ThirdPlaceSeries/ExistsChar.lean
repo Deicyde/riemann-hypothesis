@@ -1,11 +1,8 @@
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.TypeConditions.IsPotCrysAtOfMono0
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.CohomologicalCsdTempered
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.WeightsConj
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.LocParOfCharUnr
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.UnrRecOfHasSat
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.EventuallyUnr
-import Development.AutomorphicArithmetic.Foundations.LocalLanglands.IsRecTOfIsRec
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsRecTLocRecT
+import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.GaloisHodgeOfCuspidal
 
 set_option synthInstance.maxHeartbeats 200000
 
@@ -68,7 +65,7 @@ theorem exists_galois_character_crystalline_at_places (hL : _root_.UpperTheory.Z
     have f := frobEig_wdOf hl ι hcr (e1 ▸ y1) hB hg
     rw [e1, y2] at f
     have h1 : (r g : Matrix (Fin 1) (Fin 1) (Qbar l)).charpoly = X - C ((r g : Matrix (Fin 1) (Fin 1) (Qbar l)) 0 0) := by
-      simp [Matrix.charpoly, Matrix.det_fin_one, Matrix.charmatrix_apply]
+      simp [Matrix.charpoly]
     rw [h1] at f
     have f2 := congrArg (fun p => p.coeff 0) f
     simp at f2

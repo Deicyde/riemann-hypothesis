@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSNCAtlasOfIsEmpty
-import ReciprocityTheory.AnalyticForms.PotentialTheory.ContDiffAtOfIsPotential
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AnalyticLogResolution
+import Mathlib.RingTheory.PicardGroup
 
 open MeasureTheory ReciprocityTheory.AnForm ReciprocityTheory.AnForm.M GlobalTheory.IndefiniteRowSideFullHecke.BoundaryPolynomialFunctions GlobalTheory.LogResInt GlobalTheory.SNCComp
 open scoped ENNReal
@@ -225,7 +227,7 @@ theorem exists_isSNCAtlas : ∀ (n : ℕ) (Y : Type) [TopologicalSpace Y] [Compa
           ((analyticAt_trans B (hχB _) (hχB _) hzt hz's).comp ((insZero (a j)).analyticAt z))
         refine han.congr ?_
         filter_upwards [hc_nhds j z hz] with z' hz'
-        simp only [Function.comp_apply, coe_dropC, coe_insZero]
+        simp only [Function.comp_apply, coe_dropC]
         show _ = fun b => χ (y j') ((c j).symm z').1 ((a j').succAbove b)
         rw [hz'] }
   refine ⟨C, ⟨continuous_subtype_val, ?_⟩, ?_⟩
@@ -237,7 +239,7 @@ theorem exists_isSNCAtlas : ∀ (n : ℕ) (Y : Type) [TopologicalSpace Y] [Compa
     have han := ((hχB (y j) j').2 _ ⟨hzt, hz's⟩).comp ((insZero (a j)).analyticAt z)
     refine han.congr ?_
     filter_upwards [hc_nhds j z hz] with z' hz'
-    simp only [Function.comp_apply, coe_insZero]
+    simp only [Function.comp_apply]
     show _ = B.chart j' ((c j).symm z').1
     rw [hz']
   · intro j

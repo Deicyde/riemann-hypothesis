@@ -1,10 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.SquareIntegrableTempered.CentredSegments.IrreducibleUnif
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IrreducibleAdmissibleGL
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.StandardFunctorsFiniteLength
 import GroundTheory.AutomorphicForms.SmoothRep
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.PadicIsNonarchimedeanLocalField
-import Development.AbelianVarietyTheory.Definitions.Divisors.T2SpaceGeneralLinearGroup
+import Mathlib.Topology.Algebra.Nonarchimedean.TotallyDisconnected
 
 open Filter Topology MeasureTheory GlobalTheory.PRep GlobalTheory.SplitWeil GlobalTheory.SmGL GlobalTheory.LocGL GlobalTheory.JHMult ValuativeRel
 
@@ -46,9 +44,9 @@ theorem mem_Km_iff {N m : ℕ} (g : GL (Fin N) k) :
     intro u i j
     by_cases h : i = j
     · subst h
-      simp [Matrix.GeneralLinearGroup.map_apply]
+      simp
       rfl
-    · simp [Matrix.GeneralLinearGroup.map_apply, Matrix.one_apply_ne h]
+    · simp [Matrix.one_apply_ne h]
       rfl
   constructor
   · rintro ⟨u, hu, rfl⟩

@@ -1,4 +1,6 @@
-import Development.WeilBound.ThetaLifts.Reductions.MetaplecticDerivatives.MpFOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.ThetaLifts.Reductions.MetaplecticDerivatives.ContinuousPair
 
 noncomputable section
 

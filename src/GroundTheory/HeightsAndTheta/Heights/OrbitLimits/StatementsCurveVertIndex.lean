@@ -1,6 +1,5 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.RationalSections.IsRatSectionOn
-import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.CurveCountObjects
+import BuildAid.Leniency.Open
+import GroundTheory.HeightsAndTheta.Heights.HeightKernels.StatementsPointVertRSteps
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.Targets

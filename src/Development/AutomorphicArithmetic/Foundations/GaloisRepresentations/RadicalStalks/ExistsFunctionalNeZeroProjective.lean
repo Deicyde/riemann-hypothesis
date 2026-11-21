@@ -1,6 +1,10 @@
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.RadicalStalks.IsConst
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrystallinePull2SumCup
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.NonvanishingPoint
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Algebra.DualNumber
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open CategoryTheory AlgebraicGeometry Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.Cris GlobalTheory.DeRham GlobalTheory.ConjSeq GlobalTheory.UPel.HT GlobalTheory.UPel.HT.ES UpperTheory.Gal.Ord
@@ -46,7 +50,7 @@ theorem UpperTheory.Gal.Ord.dz1 :
       intro a b
       apply TrivSqZeroExt.ext
       · simp [hfst]
-      · simp [hfst, hsnd, hd, Derivation.leibniz, mul_comm, add_comm])
+      · simp [hfst, hsnd, hd, Derivation.leibniz, mul_comm])
   apply hx
   have := hv v
   simpa [v, hsnd, hd] using this

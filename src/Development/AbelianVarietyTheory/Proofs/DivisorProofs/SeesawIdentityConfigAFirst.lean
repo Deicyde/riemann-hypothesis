@@ -1,19 +1,12 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsSubquotientDetRepParInd
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocFieldFv
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedLocalInducedSpaceIsoStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaActionExistsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalUnitaryMatrixSurjectiveStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SplitPlaceCharacterComponentSmoothUnitaryConductStatement
-import Development.AbelianVarietyTheory.Definitions.Divisors.PairsOfSquareTriple
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitHomVal
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsUnitDetSplitCoordGammaStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentRadicalOfGammaStabilizerStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviEmbeddingGammaStabilizerUniqueStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SplitBasisGramLocalFormStatement
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalUnitaryDeterminedBySplitImage
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.IndLine
@@ -210,13 +203,13 @@ theorem unip_mid {N : GL (Fin n) R} (hN : N ∈ unipRad R e) :
   have h := mem_unipRad.1 hN
   simp only [Matrix.of_apply, Matrix.add_apply, Matrix.vecMulVec_apply, sMid]
   rcases cases3 a with rfl | ⟨k, rfl⟩ | rfl
-  · simp [Pi.single_apply, e.injective.eq_iff, middle_index_ne_first]
+  · simp [e.injective.eq_iff, middle_index_ne_first]
   · have h1 : (N : Matrix (Fin n) (Fin n) R) (e (i1 k)) (e (i1 j)) = (1 : Matrix (Fin m) (Fin m) R) k j := h.2 1 k j
     rw [h1]
-    simp [Pi.single_apply, e.injective.eq_iff, middle_index_ne_first, (middle_index_ne_first k).symm, middle_index_inj, Matrix.one_apply, eq_comm]
+    simp [Pi.single_apply, e.injective.eq_iff, (middle_index_ne_first k).symm, middle_index_inj, Matrix.one_apply, eq_comm]
   · have h2 : (N : Matrix (Fin n) (Fin n) R) (e i2) (e (i1 j)) = 0 := mem_parab_iff.1 h.1 2 1 _ j (by decide)
     rw [h2]
-    simp [Pi.single_apply, e.injective.eq_iff, last_index_ne_first, (middle_index_ne_last j).symm]
+    simp [e.injective.eq_iff, last_index_ne_first, (middle_index_ne_last j).symm]
 
 theorem det_one_one (g : GL (Fin 1) R) : (Matrix.GeneralLinearGroup.det g : R) = (g : Matrix (Fin 1) (Fin 1) R) 0 0 := by
   rw [Matrix.GeneralLinearGroup.val_det_apply, Matrix.det_fin_one]
@@ -318,7 +311,7 @@ theorem mul_vecMulVec' {R : Type} [CommRing R] {k l p : ℕ} (A : Matrix (Fin k)
 
 theorem vecMulVec_mulVec' {R : Type} [CommRing R] {k l : ℕ} (w : Fin k → R) (r z : Fin l → R) :
     Matrix.vecMulVec w r *ᵥ z = (r ⬝ᵥ z) • w := by
-  ext i; simp [Matrix.vecMulVec_apply, Matrix.mulVec, dotProduct, Finset.mul_sum, mul_comm, mul_left_comm, mul_assoc]
+  ext i; simp [Matrix.vecMulVec_apply, Matrix.mulVec, dotProduct, Finset.mul_sum, mul_comm, mul_left_comm]
 
 theorem at_vecMulVec {k l : ℕ} (w : Fin k → AE F E) {r : Fin l → AE F E} (hr : ∀ j, At (evFin F v) (r j)) :
     At (evFin F v) (Matrix.vecMulVec w r) := fun u hu => by

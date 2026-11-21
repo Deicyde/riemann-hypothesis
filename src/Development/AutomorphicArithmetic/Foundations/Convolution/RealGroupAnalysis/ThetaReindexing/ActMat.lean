@@ -1,4 +1,6 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.Smooth
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.ThetaLiftTrivialOrbitTermsVanish
 
 open NumberField IsDedekindDomain MeasureTheory Matrix Topology Filter
 open Neutral.B1 Formalism.L2.Host Formalism.ConjugateSelfDual GlobalTheory.CuspRep GlobalTheory.GalOfCusp UpperTheory.V UpperTheory.V.Af UpperTheory.V.Published GroundTheory.Global GroundTheory.Automorphic.GJMatrix
@@ -168,7 +170,7 @@ private theorem herm_add (v w : V4 F) : D.herm (v + w) = D.herm v + D.herm w := 
   have h1 := mkE_add D (v 2) (v 3) (w 2) (w 3)
   have h2 := mkE_add D (v 2) (-v 3) (w 2) (-w 3)
   ext i j
-  fin_cases i <;> fin_cases j <;> simp [Dat.herm, h0, h1, ← h2, neg_add, add_comm]
+  fin_cases i <;> fin_cases j <;> simp [Dat.herm, h0, h1, ← h2, add_comm]
 
 private theorem herm_smul (a : A F) (v : V4 F) : D.herm (a • v) = ι a • D.herm v := by
   have h0 : ∀ b : A F, D.mkE (a * b) 0 = ι a * D.mkE b 0 := fun b => by

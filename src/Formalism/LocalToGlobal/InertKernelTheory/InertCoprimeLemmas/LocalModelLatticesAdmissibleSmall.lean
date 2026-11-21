@@ -1,8 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.InertKernelTheory.InertCoprimeLemmas.RepAdmRec
-import Formalism.LocalToGlobal.InertKernelTheory.ScalG
 import Formalism.LocalToGlobal.InertKernelTheory.DefsRepLt
 import Formalism.LocalToGlobal.PairingIndexBounds.OrthogonalChartLevels.FrecAt
-import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
 
 noncomputable section
 
@@ -44,7 +44,7 @@ theorem map_reE_refl {N : ℕ} (Lb : Submodule (𝓞 E) (Fin N → E)) :
 theorem reGL_refl {A : Type} [CommRing A] {N : ℕ} (y : GL (Fin N) A) :
     Formalism.L2.PairingIndexBounds.F.reGL (R := A) (finCongr (rfl : N = N)) y = y := by
   ext i j
-  simp [Formalism.L2.PairingIndexBounds.F.reGL, Matrix.coe_reindexAlgEquiv]
+  simp [Formalism.L2.PairingIndexBounds.F.reGL]
 
 theorem OK_re (sp : Spaces R F E) {N n : ℕ} (h : N = n) {J : Matrix (Fin N) (Fin N) E} {a : 𝓞 E}
     {Lb : Submodule (𝓞 E) (Fin N → E)} {y : GL (Fin N) (E ⊗[F] FiniteAdeleRing (𝓞 F) F)} (hok : OK sp J a Lb y) :

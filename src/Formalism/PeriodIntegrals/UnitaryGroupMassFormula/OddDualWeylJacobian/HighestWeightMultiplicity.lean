@@ -1,5 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.OddDualWeylJacobian.JacRev
+import Mathlib.Order.Interval.Finset.Box
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open MvPolynomial Matrix
 
@@ -114,7 +120,7 @@ theorem good_rowGen (a b : Fin k) (hδ : ∀ s, wt (a, s) = wt (b, s) + δ) {d :
       (fun i _ => by rw [map_pow]; exact good_pow (good_rowGen_X a b hδ i) (m i))
     refine good_congr ?_ (good_mul h1 h2)
     rw [← hw, Finsupp.weight_apply, Finsupp.sum]
-    simp [nsmul_eq_mul]
+    simp
   rw [f.as_sum, map_sum]
   intro i
   rw [Polynomial.finset_sum_coeff, ← mem_weightedHomogeneousSubmodule]
@@ -124,7 +130,7 @@ theorem good_rowGen (a b : Fin k) (hδ : ∀ s, wt (a, s) = wt (b, s) + δ) {d :
 
 theorem weight_cast (w : Fin k × Fin k → ℕ) (α : Fin k × Fin k →₀ ℕ) :
     Finsupp.weight (fun v => (w v : ℤ)) α = (Finsupp.weight w α : ℤ) := by
-  simp [Finsupp.weight_apply, Finsupp.sum, nsmul_eq_mul]
+  simp [Finsupp.weight_apply, Finsupp.sum]
 
 theorem toZ {w : Fin k × Fin k → ℕ} {f : MvPolynomial (Fin k × Fin k) R} {d : ℕ}
     (h : IsWeightedHomogeneous w f d) : IsWeightedHomogeneous (fun v => (w v : ℤ)) f (d : ℤ) := by

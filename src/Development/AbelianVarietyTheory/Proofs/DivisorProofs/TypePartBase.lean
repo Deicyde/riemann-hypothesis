@@ -1,8 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.ConcretePkgSpec
-import Formalism.LocalToGlobal.Divisibility.RowLatLemmas
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.TwistedLevelValues
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilGramSignature
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.PolarisedDualSystem
 
 noncomputable section

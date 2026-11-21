@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.CompIntField
-import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.RationalRayLevels
-import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.TwistSeries
 
 set_option autoImplicit false
 

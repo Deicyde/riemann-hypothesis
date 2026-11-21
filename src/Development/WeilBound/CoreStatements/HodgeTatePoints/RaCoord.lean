@@ -1,9 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.HodgeTatePoints.RaCpaf
-import ReciprocityTheory.DualLattices.CotangentSurjective
 import ReciprocityTheory.DualLattices.SumValCoord
 import ReciprocityTheory.DualLattices.ProdDvdOfIso
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.IsTight
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.StepOrderRes
 
 noncomputable section
 

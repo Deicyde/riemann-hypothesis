@@ -1,8 +1,6 @@
-import Formalism.LocalToGlobal.Columns.GFamEv
-import Formalism.LocalToGlobal.Columns.StabMapRLInjective
-import Formalism.LocalToGlobal.Columns.RefLevChFstSurjective
-import Formalism.LocalToGlobal.Columns.RecChainYUnfPol
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.Columns.RefXi1Above
 
 open NumberField IsDedekindDomain Module Matrix
 

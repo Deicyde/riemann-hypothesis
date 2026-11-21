@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.FiniteDimensionalOfSlices
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsBlockEmb
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsSmoothAutomorphicFunctionTranslateAtRealPlace
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.CapelliLowestGelfandConj
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MapQdetEtr
@@ -27,9 +25,9 @@ theorem linOf_single {A : Type} [Ring A] [Algebra ℂ A] {n : ℕ} (E : Fin n �
   change ∑ i, ∑ j, (Matrix.single a b (1 : ℂ)) i j • E i j = E a b
   rw [Finset.sum_eq_single a, Finset.sum_eq_single b]
   · simp
-  · intro j _ hj; simp [Matrix.single_apply, Ne.symm hj]
+  · intro j _ hj; simp [Ne.symm hj]
   · simp
-  · intro i _ hi; exact Finset.sum_eq_zero fun j _ => by simp [Matrix.single_apply, Ne.symm hi]
+  · intro i _ hi; exact Finset.sum_eq_zero fun j _ => by simp [Ne.symm hi]
   · simp
 
 theorem glRel_linOf {A : Type} [Ring A] [Algebra ℂ A] {n : ℕ} {E : Fin n → Fin n → A} (hE : Formalism.REAL.GlRel E)

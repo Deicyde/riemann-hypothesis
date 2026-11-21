@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.HasDivPlace
+import Mathlib.NumberTheory.Padics.HeightOneSpectrum
 
 set_option autoImplicit false
 

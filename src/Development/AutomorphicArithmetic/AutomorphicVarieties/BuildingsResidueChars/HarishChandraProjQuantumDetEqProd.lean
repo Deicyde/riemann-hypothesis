@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.CuspidalFiniteness.HasUnivOfStep
+import Formalism.RealPlaceAnalysis.ThirdArithmeticHolds
+import GroundTheory.AutomorphicForms.HarishChandraCentre.VermaCoordEqZeroOfMemNPlusU
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
 
 open GroundTheory.Automorphic.HarishChandra in
 private noncomputable def UpperTheory.V.Af.CuspFin.vermaRep {n : ℕ} (lam : Fin n → ℂ) :

@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.RationalRootsDef
-import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.FamilyClassSevenDutiesAndStableLattices
 import Formalism.SharpRestriction.SmoothDesignExistence.DGamSmooth
-import Development.AutomorphicArithmetic.PrimeDiscriminants.Scales
 
 noncomputable section
 

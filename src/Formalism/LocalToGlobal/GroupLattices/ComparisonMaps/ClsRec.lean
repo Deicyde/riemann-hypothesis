@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.ClsStab
+import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.ClsGat
 
 noncomputable section
 

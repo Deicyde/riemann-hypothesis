@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.ComplexMultiplication.JInvariant
 import GroundTheory.GlobalFields.ComplexMultiplication.UniformizationEisenstein
+import Mathlib.AlgebraicGeometry.EllipticCurve.IsomOfJ
 
 open Complex Filter Topology Set
 open scoped PeriodPair

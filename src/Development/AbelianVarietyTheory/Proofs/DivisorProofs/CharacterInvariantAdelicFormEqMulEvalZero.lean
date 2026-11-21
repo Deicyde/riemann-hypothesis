@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormIteratedFDerivRemCompLe
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzVanishingDecomposition
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TraceFormMapSurjective
@@ -50,22 +51,22 @@ theorem pairA_zero_add (a b : Af F) : pairA F 0 (a + b) = pairA F 0 a + pairA F 
 theorem dot_pairA_fin {κ : Type} [Fintype κ] (x : κ → AF F) (y : κ → Af F) :
     (x ⬝ᵥ fun i => pairA F 0 (y i)) = pairA F 0 ((fun i => (x i).2) ⬝ᵥ y) := by
   have h1 : (RingHom.fst (Ainf F) (Af F)) (x ⬝ᵥ fun i => pairA F 0 (y i)) = 0 := by
-    simp only [dotProduct, map_sum, map_mul]
+    simp only [dotProduct, map_sum]
     exact Finset.sum_eq_zero fun i _ => by
       show (RingHom.fst (Ainf F) (Af F)) (x i) * 0 = 0
       exact mul_zero _
   have h2 : (RingHom.snd (Ainf F) (Af F)) (x ⬝ᵥ fun i => pairA F 0 (y i)) = (fun i => (x i).2) ⬝ᵥ y := by
-    simp only [dotProduct, map_sum, map_mul]
+    simp only [dotProduct, map_sum]
     rfl
   exact Prod.ext h1 h2
 
 theorem dot_pairA_inf {κ : Type} [Fintype κ] (x : κ → AF F) (y : κ → Ainf F) :
     (x ⬝ᵥ fun i => pairA F (y i) 0) = pairA F (∑ i, (x i).1 * y i) 0 := by
   have h1 : (RingHom.fst (Ainf F) (Af F)) (x ⬝ᵥ fun i => pairA F (y i) 0) = ∑ i, (x i).1 * y i := by
-    simp only [dotProduct, map_sum, map_mul]
+    simp only [dotProduct, map_sum]
     rfl
   have h2 : (RingHom.snd (Ainf F) (Af F)) (x ⬝ᵥ fun i => pairA F (y i) 0) = 0 := by
-    simp only [dotProduct, map_sum, map_mul]
+    simp only [dotProduct, map_sum]
     exact Finset.sum_eq_zero fun i _ => by
       show (RingHom.snd (Ainf F) (Af F)) (x i) * 0 = 0
       exact mul_zero _

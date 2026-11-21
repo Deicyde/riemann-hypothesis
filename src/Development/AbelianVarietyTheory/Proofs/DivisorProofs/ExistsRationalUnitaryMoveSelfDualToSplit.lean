@@ -1,10 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsRepsOfFiniteIndex
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.ExistsAdelicUnitaryTranslateStandardLattice
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.ExistsRationalUnitarySplitDenominator
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.ExistsUnitaryAdelicDecompositionSplitSupport
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.ExistsUnitaryCongruentLattice
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsMatrixDetNotMem
+import Development.AbelianVarietyTheory.BlockTheory.JetGauges.ThetaSpanAdjoint
 
 set_option autoImplicit false
 
@@ -136,7 +134,7 @@ theorem exists_move_matrix (H : ReciprocityTheory.ChartRestriction.G.Geo.Tor.Hos
     congr 2
     by_cases hij : i = j
     · subst hij; simp
-    · simp [Matrix.one_apply_ne hij, Pi.single_apply, Ne.symm hij]
+    · simp [Matrix.one_apply_ne hij, Ne.symm hij]
   · have hc : (fun j => IsCMField.complexConj E ((γ.1 *ᵥ fun j => IsCMField.complexConj E (v j)) j)) =
         adjM γ.1ᵀ *ᵥ v := by
       funext j

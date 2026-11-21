@@ -1,23 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Jets.TauZero
-import Formalism.PeriodIntegrals.BesselPeriodGGP
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.PieriTensorDecomposition
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.TensorMomentEstimate
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.CapelliKFiniteCoefficient
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.FixesWedgeAndForm
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.BesselGapExistsFunctionalStatement
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.BesselDatumBothSidesAreSidesStatement
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.FamilyThroughDiscreteSeries
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.AbsCoordLeOfLOneNormLe
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ExistsFrameConjUnitaryBlockEqUnitaryComplement
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ExistsDerivedActionFiniteDimUnitaryRep
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ExistsHighestWeightIrreducibleUnitaryRepU
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.BesselDatumBothSidesAreSides
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.DiscreteSeriesUnitarySmoothBasic
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.CayleyExistsAndAny
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.IsBesselMapSmBesselCharIff
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.DifferentialOperatorBracket
 import Formalism.FormalDegreeBessel.FinalDS
+import Formalism.HermitianCurvature.BesselNonvanishingReduction
 
 open BranchingSupport Formalism.FourierDecayAlt Formalism.FourierDecayAlt.ThreeDimData Matrix MeasureTheory Finset
 open scoped InnerProductSpace ENNReal
@@ -291,7 +278,7 @@ theorem prod_eq {u : ℕ → ℝ} {u₀ : Fin k → ℝ} (hπ : Q.IsType k r z �
       simp [Matrix.single, ite_and, ite_smul]
     · rw [Matrix.conjTranspose_smul, Matrix.conjTranspose_add, Matrix.conjTranspose_conjTranspose, ← neg_smul, add_comm]
       congr 1
-      simp [Complex.conj_ofNat]
+      simp
     · rw [Matrix.conjTranspose_smul, Matrix.conjTranspose_sub, Matrix.conjTranspose_conjTranspose, ← smul_neg, neg_sub]
       congr 1
       simp

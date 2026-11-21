@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HypOneZeroZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.SiegelWeilMeasureOfCongruentForm
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.TrMMemFramesEIff
 
 open HeckeCharacterZeroLocus.SiegelWeilU GlobalTheory.CompanionTheory.SW NumberField IsDedekindDomain MeasureTheory Topology
 open scoped TensorProduct ENNReal NNReal Matrix

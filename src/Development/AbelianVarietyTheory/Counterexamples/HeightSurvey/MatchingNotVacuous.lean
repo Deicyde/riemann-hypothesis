@@ -1,6 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.ThetaFramePf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ChartPullbacks.CubePullbacks.CubePull
+import Formalism.LocalToGlobal.ProjectiveLattices.IntFrames
 
 noncomputable section
 

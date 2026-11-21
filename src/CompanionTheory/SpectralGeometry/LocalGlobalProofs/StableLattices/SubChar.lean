@@ -1,5 +1,4 @@
-import Mathlib
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.Bdy
+import BuildAid.Leniency.Open
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.FiniteTypeAlgebraCommonEigencharacterStatement
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.QuantumDeterminantCoefficientsExpansionStatement
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.CapelliPolynomialPermutationMatchStatement
@@ -277,14 +276,14 @@ theorem coBlock : InjU → GenCOU → COBlock := by
     intro A hA i hi
     have : A = omU ε lev := by
       by_contra hne
-      exact hA (by simp [ht, Pi.single_apply, hne])
+      exact hA (by simp [ht, hne])
     subst this
     exact (mem_filter.1 hi).2.2
   have tdeg : Deg dg t := by
     intro A hA
     have : A = omU ε lev := by
       by_contra hne
-      exact hA (by simp [ht, Pi.single_apply, hne])
+      exact hA (by simp [ht, hne])
     rw [this]
   let tZ : Z := ⟨t, tsup, tdeg, tc⟩
   let tb : Z ⧸ B.comap Z.subtype := Submodule.Quotient.mk tZ

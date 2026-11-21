@@ -1,9 +1,18 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.EllipticTorsion.FormalGroupPointsParametrisation
 import Formalism.EllipticTorsion.EllipticTorsionProofs.ExistsUnitFactor
 import Formalism.EllipticTorsion.EllipticTorsionProofs.WPoint
 import Formalism.EllipticTorsion.EllipticTorsionProofs.WSubst
 import Formalism.EllipticTorsion.EllipticTorsionProofs.WChord
 import Formalism.EllipticTorsion.EllipticTorsionProofs.NDeriv
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.Topology.Algebra.InfiniteSum.Nonarchimedean
+import Mathlib.Topology.Connected.Separation
+import Mathlib.Topology.MetricSpace.Ultra.TotallySeparated
+import Mathlib.Topology.Separation.CompletelyRegular
 
 open PowerSeries
 
@@ -496,7 +505,7 @@ theorem map_chordPX (a1 a2 z1 z2 w1 w2 c v : R) :
 
 theorem map_chordPY (a1 a3 z1 z2 w1 w2 c v : R) :
     f (chordPY a1 a3 z1 z2 w1 w2 c v) = chordPY (f a1) (f a3) (f z1) (f z2) (f w1) (f w2) (f c) (f v) := by
-  simp only [chordPY, map_sub, map_add, map_mul, map_pow]
+  simp only [chordPY, map_sub, map_add, map_mul]
 
 theorem map_tanPX (a1 a2 a3 a4 z w c v : R) :
     f (tanPX a1 a2 a3 a4 z w c v) = tanPX (f a1) (f a2) (f a3) (f a4) (f z) (f w) (f c) (f v) := by

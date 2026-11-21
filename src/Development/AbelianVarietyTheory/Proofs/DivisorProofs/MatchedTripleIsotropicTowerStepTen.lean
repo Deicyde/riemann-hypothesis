@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsLeSup
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConstantTermUnipotentIntegral
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedPlaneIntegralSkewHermitianTwist
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolMatchIntegralScalar
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqZeroOfTwoLaws
@@ -8,6 +7,9 @@ import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentHaarFundam
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicPlaneComplementFormStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicPlaneComplementDetStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConstantTermUnipotentIntegralBisStatement
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousLeftInvariantDualStatement
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousLeftInvariantThetaStatement
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentQuotientUnitVolumeStatement
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.ThK.DescB
@@ -31,7 +33,7 @@ theorem det_ne_zero_of_cartan (B : Base F E) {n : ℕ} (Y : Spc F E n)
     ext i
     have := congrArg τ (congrFun hJv i)
     simp only [Matrix.mulVec, dotProduct, map_sum, map_mul, Pi.zero_apply, map_zero] at this
-    simp only [M, v', Matrix.smul_mulVec, Matrix.mulVec, dotProduct, Matrix.map_apply, Pi.smul_apply, smul_eq_mul,
+    simp only [M, v', Matrix.mulVec, dotProduct, Matrix.map_apply, smul_eq_mul,
       Pi.zero_apply, Matrix.smul_apply, mul_assoc, ← Finset.mul_sum, this, mul_zero]
   have hx : star v' ≠ 0 := fun h => hv' (by simpa using congrArg star h)
   have := (h w).2.2 (star v') hx

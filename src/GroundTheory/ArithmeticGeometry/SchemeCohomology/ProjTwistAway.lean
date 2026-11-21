@@ -1,5 +1,14 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.ArithmeticGeometry.SchemeCohomology.ProjTwist
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.AlgebraicGeometry.ProjectiveSpectrum.Basic
+import Mathlib.Combinatorics.Quiver.ReflQuiver
+import Mathlib.Data.Int.Star
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Arith.SchemeCoh

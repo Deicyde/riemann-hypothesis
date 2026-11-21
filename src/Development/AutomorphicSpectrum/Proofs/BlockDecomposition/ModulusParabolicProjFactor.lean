@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsCIndValue
+import Development.WeilBound.RepresentationTheoryGL.GenericUnitaryGL.LeibnizOrders.ProdGPn
 open Matrix GlobalTheory.PRep GlobalTheory.SmGL GlobalTheory.BZMir GlobalTheory.BZMir.Leib GlobalTheory.RgGu.Leib GlobalTheory.CompanionTheory.LeibPhi Topology
 open scoped TensorProduct
 
@@ -18,7 +19,7 @@ theorem det_hgp (k : Type) [Field k] [ValuativeRel k] [TopologicalSpace k] [IsNo
   have hinj : Function.Injective f := by
     rintro (a | a) (b | b) hab <;>
       have hs := (GlobalTheory.BZMir.Leib.eGP m j).injective hab <;>
-      simp_all [Sigma.mk.inj_iff]
+      simp_all
   have hf : Function.Bijective f :=
     (Fintype.bijective_iff_injective_and_card f).mpr ⟨hinj, by simp only [Fintype.card_sum, Fintype.card_fin]; omega⟩
   have hA : ∀ a b : Fin m,

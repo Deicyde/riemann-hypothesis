@@ -1,9 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.UsedLocalConclusion
-import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
-import Formalism.SharpRestriction.LevelLetterCocycles.DataNLoc
-import Formalism.WeaklyAdmissibleFiltrations.StatementPC
-import Formalism.SharpRestriction.LevelLetterCocycles.DeltaInvariantLattices
 import Formalism.SharpRestriction.LevelLetterCocycles.LiftingTheory
 import Formalism.SharpRestriction.LevelLetterCocycles.LocalSituation
 

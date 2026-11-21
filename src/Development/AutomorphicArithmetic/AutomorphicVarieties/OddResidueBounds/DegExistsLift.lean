@@ -1,5 +1,7 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.OddResidueBounds.ZeroMemUnrHom
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CMFieldExponentialBounds.compsup
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.AutomorphicVarieties.PrimeSetBoundDataOfPrimitiveChar
+import Mathlib.NumberTheory.Cyclotomic.Gal
+import Mathlib.RingTheory.PicardGroup
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.GaloisCohomology UpperTheory.V UpperTheory.V.LDataCardLeFinrank UpperTheory.V.Base UpperTheory.V.Kum UpperTheory.V.Bern UpperTheory.V.B4 UpperTheory.V.B5 UpperTheory.V.Odd
 
@@ -26,7 +28,7 @@ private theorem deg_two {a e : ℕ} (n : ℕ) (h : a.Coprime (2 ^ (e + 2))) :
     a ^ (2 ^ (e + 1) * n) ≡ 1 [MOD 2 ^ (e + 2)] := by
   have ht := Nat.ModEq.pow_totient h
   rw [Nat.totient_prime_pow Nat.prime_two (by omega)] at ht
-  simp only [Nat.add_sub_cancel, show (2 : ℕ) - 1 = 1 from rfl, mul_one] at ht
+  simp only [show (2 : ℕ) - 1 = 1 from rfl, mul_one] at ht
   rw [pow_mul]
   simpa using ht.pow n
 

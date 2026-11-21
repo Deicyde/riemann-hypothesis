@@ -1,6 +1,11 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.CyclotomicNorms.StatementT
-import Formalism.CyclotomicNorms.NonsquarefreeBounds.IrreducibilityOfRestriction
+import Mathlib.Data.Int.Star
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 

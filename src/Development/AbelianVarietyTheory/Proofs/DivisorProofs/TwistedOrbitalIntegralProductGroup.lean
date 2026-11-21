@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.GaloisRepOfPolarizedCuspidal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SubgroupAverageLinearTranslateConstStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SubgroupAverageProdMulEqMulStatement
 open NumberField IsDedekindDomain Matrix Polynomial Filter GlobalTheory.CuspRep GlobalTheory.PRep Formalism.UG Formalism.BasicNotions GlobalTheory.UnitaryBC GlobalTheory.BCT
@@ -40,7 +40,7 @@ theorem map_conj_prod {G G' : Type} [Group G] [Group G'] (K : Subgroup G) (K' : 
     simp only [Prod.ext_iff, Prod.fst_mul, Prod.snd_mul, Prod.fst_inv, Prod.snd_inv] at h
     exact ⟨⟨k, hk, h.1⟩, ⟨k', hk', h.2⟩⟩
   · rintro ⟨⟨k, hk, h⟩, ⟨k', hk', h'⟩⟩
-    exact ⟨k, k', ⟨hk, hk'⟩, by simp [Prod.ext_iff, h, h']⟩
+    exact ⟨k, k', ⟨hk, hk'⟩, by simp [h, h']⟩
 
 theorem map_conj_self {G : Type} [Group G] (H : Subgroup G) {h : G} (hh : h ∈ H) :
     H.map (MulAut.conj h).toMonoidHom = H := by

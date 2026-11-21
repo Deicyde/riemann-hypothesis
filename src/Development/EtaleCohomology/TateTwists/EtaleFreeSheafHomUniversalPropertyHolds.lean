@@ -1,5 +1,5 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.DivisorSupportCondition
-import Development.AbelianVarietyTheory.Definitions.Divisors.SecClass
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.TateTwists.EtaleFreeSheafUniversalProperty
 
 open CategoryTheory Limits AlgebraicGeometry Opposite CochainComplex CochainComplex.HomComplex GlobalTheory.EtC
@@ -18,7 +18,7 @@ noncomputable def desc (P : PSh) (F : Shv R) (a : ∀ U : Scheme.{0}, P.obj (op 
     have := ha W.unop U.unop g.unop x.down
     simp only [Sec.res] at this
     simp only [freeP] at *
-    simp only [Functor.comp_obj, Functor.whiskeringRight_obj_obj, Functor.comp_map, Functor.whiskeringRight_obj_map,
+    simp only [Functor.comp_obj, Functor.whiskeringRight_obj_obj, Functor.comp_map,
       ModuleCat.hom_comp, LinearMap.coe_comp, Function.comp_apply]
     erw [ModuleCat.free_map_apply, ModuleCat.freeDesc_apply, ModuleCat.freeDesc_apply]
     exact this.symm

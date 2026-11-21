@@ -1,8 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.HerbrandQuotients.SUnitsExact
-import GroundTheory.GlobalFields.HerbrandQuotients.SUnitsPerm
 import GroundTheory.GlobalFields.HerbrandQuotients.SUnitsRep
-import GroundTheory.GlobalFields.HerbrandQuotients.LatticeBridge
+import Mathlib.NumberTheory.NumberField.Units.DirichletTheorem
+import Mathlib.RingTheory.PiTensorProduct
 
 namespace GroundTheory.Global
 

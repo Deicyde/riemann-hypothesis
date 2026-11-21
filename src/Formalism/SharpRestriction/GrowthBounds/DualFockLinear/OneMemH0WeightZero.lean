@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.DualFockLinear.FilterOfSupported
 import Formalism.SharpRestriction.GrowthBounds.DualFockLinear.OneSidedLemma4
+import Formalism.SharpRestriction.GrowthBounds.LatticeSystems
 
 noncomputable section
 

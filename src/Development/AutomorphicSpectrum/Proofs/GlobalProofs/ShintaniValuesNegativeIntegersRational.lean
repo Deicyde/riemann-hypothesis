@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.SiegelKlingenDeligneRibet
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.AbelContinuation
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.PartialSum
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.ConeSeriesDerivativeGrowthBoundStatement
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.ConeSeriesRealDerivativeFormulaStatement
 open NumberField Formalism.MainNotions.ShortIntervalPrimes GlobalTheory.RayZeta GlobalTheory.CompanionTheory.Hypotheses₂.Shintani GlobalTheory.CompanionTheory.Hypotheses₂.Shintani.Abel
@@ -42,7 +39,7 @@ theorem nonneg_add_smul {r : ℕ} {x : Fin r → ℝ} (hx : ∀ i, 0 ≤ x i) (c
     refine mul_nonneg hτ ?_
     by_cases h : k = c
     · subst h; simp
-    · simp [Pi.single_apply, h]
+    · simp [h]
   simpa using add_nonneg (hx k) this
 
 theorem sum_add_single {ι : Type} [Fintype ι] [DecidableEq ι] (β : ι → ℕ) (j : ι) :

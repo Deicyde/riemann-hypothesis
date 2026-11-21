@@ -1,9 +1,14 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.FubiniStudyChowHeight
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.WeilBound.CoreStatements.MinimalPrimeDimensions.ChowFormHeightOfArch
 import Development.WeilBound.CoreStatements.MinimalPrimeDimensions.IntegralOfLintegral
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.MahlerSectionStatementHolds
+import Development.WeilBound.CoreStatements.MinimalPrimeDimensions.ChowDegreeSection
+import Development.WeilBound.CoreStatements.MinimalPrimeDimensions.FormHeightOneEq
+import Development.WeilBound.CoreStatements.MinimalPrimeDimensions.IsClosedOfCoheight
+import Development.WeilBound.CoreStatements.MinimalPrimeDimensions.StCharts
+import Development.WeilBound.CoreStatements.MinimalPrimeDimensions.SumNormSqUnitary
 
 set_option autoImplicit false
 
@@ -137,7 +142,7 @@ theorem FubiniStudyChowHeightFormula₂.fubiniStudyChowHeight_of_arExists (hE : 
     have h : ∀ b, ∑ j : Fin (N + 1), d (b, j) = δ := hf.homog d (MvPolynomial.mem_support_iff.2 hd)
     funext b
     rw [← h b, Finsupp.weight_apply, Finsupp.sum_fintype _ _ (by intro; simp)]
-    simp only [Finset.sum_apply, groupWeight, Pi.single_apply, Fintype.sum_prod_type, smul_eq_mul]
+    simp only [Finset.sum_apply, groupWeight, Fintype.sum_prod_type]
     rw [Finset.sum_eq_single b (fun a _ hab => by simp [Ne.symm hab]) (by simp)]
     simp
   have key := FubiniStudyChowHeightFormula₂.Fs.stMain K (N + 1) H e Y (i ≫ PSpace.str (𝓞 K) N) L

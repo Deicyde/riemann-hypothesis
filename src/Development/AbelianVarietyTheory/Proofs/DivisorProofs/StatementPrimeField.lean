@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.GenericFiniteMaps
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocalSection
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ShortExactVectorBundlesRankAddStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PullbackPreservesLineBundleFlagStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntersectionNumberScalesPicMultipleStatement

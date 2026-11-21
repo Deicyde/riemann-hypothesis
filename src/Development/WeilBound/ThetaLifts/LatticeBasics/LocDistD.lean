@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LatticeBasics.LocDistC
+import Mathlib.LinearAlgebra.Matrix.Swap
+import Mathlib.RingTheory.PiTensorProduct
 
 open Filter Topology GlobalTheory.WeilM Matrix
 

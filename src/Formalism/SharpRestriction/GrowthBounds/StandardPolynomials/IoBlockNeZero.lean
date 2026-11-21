@@ -1,7 +1,9 @@
-import Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.RestRoom
-import Formalism.SharpRestriction.GrowthBounds.CoarseMultiplicity.SymbolFormOfOrthogonality
-import Formalism.SharpRestriction.GrowthBounds.CoarseMultiplicity.IoBlockMonomial
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.CoarseMultiplicity.BFTrueDeg
+import Formalism.SharpRestriction.GrowthBounds.CoarseMultiplicity.LogLeOfLeSq
+import Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.NormalWeightCovectorZero
+import Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.TCoreDef
 
 noncomputable section
 
@@ -65,7 +67,7 @@ theorem TD_wLetBL {Cde E : ℝ} (x : X.TT × Bool) (b : SegBlock (segS X.TT j) X
         omega
       · have w1 : ∀ c, wLet X (topOdd X j i, true) ((topOdd X j i, true), c) = 1 := fun c => if_pos rfl
         have w2 : ∀ c, wLet X (topOdd X j i, true) ((topOdd X j i, false), c) = 0 := fun c => if_neg (by simp)
-        simp only [w1, w2, mul_zero, mul_one, zero_add, add_zero]
+        simp only [w1, w2, mul_zero, mul_one, add_zero]
         have hd := hk.1.2.1 i
         have hPA : (X.seg C0 CE1 CE2 j).P X.p i * coarseA X.p (X.seg C0 CE1 CE2 j) b i =
             (X.seg C0 CE1 CE2 j).bTop i - ∑ c, b.rz i c := Nat.mul_div_cancel' hd.2

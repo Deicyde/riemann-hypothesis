@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.FullExists
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.PlaceIntegralUnramified
+import Formalism.LocalToGlobal.ProjectiveLattices.RecPJThAllNeBot
 
 noncomputable section
 

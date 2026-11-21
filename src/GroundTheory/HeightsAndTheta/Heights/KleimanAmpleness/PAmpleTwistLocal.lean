@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.StatementsAmple
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.StatementsAmpleAffine
+import Mathlib.RingTheory.PiTensorProduct
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.Kleiman

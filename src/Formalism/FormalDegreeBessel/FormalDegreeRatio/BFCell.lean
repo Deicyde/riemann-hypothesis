@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.FormalDegreeBessel.StatementBF
 import Formalism.FormalDegreeBessel.FormalDegreeRatio.GBasic
 import Formalism.FormalDegreeBessel.FormalDegreeRatio.GroupFactorizationHolds

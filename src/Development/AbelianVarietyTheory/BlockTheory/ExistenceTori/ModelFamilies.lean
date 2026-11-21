@@ -1,6 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.CuspFree
-import Formalism.LocalToGlobal.ProjectiveLattices.IntegrableOnIntegrand
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.ProjectiveLattices.UnFree
 
 noncomputable section
 

@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.HarderNarasimhan.ShiftInvariance
+import BuildAid.Leniency.Open
 import Formalism.RealPlaceAnalysis.Complexify
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.LatticePairVolumeBoundsStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.QuotientLatticeRealizedIsometricallyStatement

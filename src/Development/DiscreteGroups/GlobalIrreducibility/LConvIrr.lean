@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.DiscreteGroups.GlobalIrreducibility.LConvIrrAvg
+import Development.DiscreteGroups.GlobalIrreducibility.LConvIrrComm
 
 noncomputable section
 

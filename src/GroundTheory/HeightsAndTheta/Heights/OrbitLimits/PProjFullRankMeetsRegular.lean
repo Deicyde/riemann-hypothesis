@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StatementsProjFullRankMeetsRegular
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StatementsProjRankTransfer
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.ImportsBis

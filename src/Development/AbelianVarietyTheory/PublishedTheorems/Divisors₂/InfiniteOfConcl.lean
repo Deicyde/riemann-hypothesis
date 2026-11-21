@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.EisensteinResidueLine
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsModerateFormAdd
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsArchGlue

@@ -1,6 +1,5 @@
-import Formalism.HermitianCurvature.LevelRecursionCondNeeded
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ChebyshevExtremalPolynomials
-import Mathlib
 
 namespace Formalism.FourierDecayAlt.P.LagrangeExtraction
 

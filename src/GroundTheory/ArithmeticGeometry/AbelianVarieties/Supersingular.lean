@@ -1,5 +1,7 @@
-import Mathlib
-import GroundTheory.ArithmeticGeometry.AbelianVarieties.DualIsogenyExists
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.ArithmeticGeometry.AbelianVarieties.IsogenyFrobenius
+import GroundTheory.ArithmeticGeometry.AbelianVarieties.IsogenySeparable
 
 namespace GroundTheory.Arith.Abelian
 

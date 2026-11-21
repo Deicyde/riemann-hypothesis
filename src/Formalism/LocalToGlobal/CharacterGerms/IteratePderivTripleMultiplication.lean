@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CharacterGerms.PderivTripleMultiplicationMaximal
+import Formalism.LocalToGlobal.CharacterGerms.FirstVanishingAt
 
 set_option autoImplicit false
 

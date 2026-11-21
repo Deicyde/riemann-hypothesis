@@ -1,5 +1,13 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.HyperbolicPlaceProducts.DetIndexProductHyperbolicInequality
-import Formalism.HyperbolicPlaceProducts.SubgroupIndexCounts.ArithmeticLatticeHypothesis
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 namespace Formalism.SLP.GlobalBoundRefinements.P
 open Formalism.SLP.GlobalBoundRefinements
@@ -160,7 +168,7 @@ theorem s_matrix_entry_formula : SEntry := by
     exact inv_mul_cancel₀ (hv _)
   rw [hinv]
   simp only [Matrix.diagonal_mul, Matrix.mul_diagonal]
-  simp [norm_mul, norm_inv, Complex.norm_real, Real.norm_eq_abs,
+  simp [norm_inv, Complex.norm_real, Real.norm_eq_abs,
     abs_of_nonneg (Real.sqrt_nonneg _), mul_pow, inv_pow, Real.sq_sqrt hT.le, Real.sq_sqrt hT'.le]
   field_simp
 

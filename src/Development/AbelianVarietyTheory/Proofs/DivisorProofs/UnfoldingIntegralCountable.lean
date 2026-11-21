@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FundamentalDomainIndicatorTsumOneStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FundamentalDomainUnfoldSubgroupStatement
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.ReduceModChar
 
 open MeasureTheory
 open scoped Pointwise
@@ -142,8 +145,8 @@ theorem lintegral_fundamentalDomain_eq : ∀ {G G₁ L Kt : Type} [Group G] [Mea
         rw [mul_assoc n.1 (ι γ), hφN n.1 n.2, hφQ (ι γ) (hιQ γ γ.2)]
       rw [hx]
       by_cases hd : n.1 * ι γ * (m l g₀ * kk k) ∈ 𝓓₀
-      · simp [Set.indicator_apply, hd, hφx]
-      · simp [Set.indicator_apply, hd]
+      · simp [hd, hφx]
+      · simp [hd]
     rw [tsum_congr e1, ENNReal.tsum_mul_right]
     congr 1
     exact GlobalTheory.T.fundamental_domain_unfold_subgroup N Q Γ μN ι 𝓕 𝓓₀ (m l g₀ * kk k) hQc hΓc hLG hmeas h₀ hιQ huniq
@@ -194,7 +197,7 @@ theorem lintegral_fundamentalDomain_eq : ∀ {G G₁ L Kt : Type} [Group G] [Mea
     rw [mul_assoc, hφN n.1 n.2]
   rw [← mul_assoc n.1]
   by_cases hb : n.1 * m l g₀ * kk k ∈ B
-  · simp [Set.indicator_apply, hb, hφx]
-  · simp [Set.indicator_apply, hb]
+  · simp [hb, hφx]
+  · simp [hb]
 
 end GlobalTheory.UnfoldSemidirect

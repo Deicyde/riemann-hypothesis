@@ -1,9 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.StandardFiveNontrivial
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.RankLevelDatumIdempotentEqOfSameShapeStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.SubgroupCharacterIdempotentPropertiesStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.LevelDatumSubgroupCharacterPropertiesStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.RepresentationRootSubgroupExchangeStatement
+import Mathlib.Data.Matrix.PEquiv
 
 open Polynomial Classical GlobalTheory.BadShare
 

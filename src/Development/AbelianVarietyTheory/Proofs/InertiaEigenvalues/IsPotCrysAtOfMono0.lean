@@ -1,29 +1,18 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsAttachedHodge
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.PadicHodgePropertiesConjInvariant
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CrystallineSumsTwistsCharactersExpectedJumps
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.RestrictCrystallineDeRhamFiniteExt
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EventuallyNatCastNotMem
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCompNormEq
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsConjugateDualTwistByTwistOfConjSelfDualStatement
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HostEtaTildeCharacterExists
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsPlaceOverMoveValConjPl
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HeckeCharExponentOfInfinityTypeStatement
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsCsdOfCharOfRes
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.Mono0OfLpDimEqOne
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsEquivOfMapEq
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.NotNonemptyZero
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsIntSubMem
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ChebotarevDegreeOne
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.UnitSumTensorDualOfWachMonoidal
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.JumpDictCrysAtOfWeights
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LpCharCompatibilities
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.AbsPowOneNotIsAlgRat
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.CharpolySmulOfProd
-import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ResiduallyFiniteUnitOff
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsUnitaryRationalInfTypeSubgroupAndInfTypeUnique
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LocalGlobalAboveL
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ColRepSemisimple
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.WeilDeligneParamMonodromyEqZeroIff
+import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.GaloisRepOfPolarizedCuspidal
 
 noncomputable section
 
@@ -41,7 +30,7 @@ variable {Γ k : Type} [Group Γ] [Field k] {a : ℕ}
 theorem coe_scalar (u : kˣ) : ((GeneralLinearGroup.scalar (Fin a) u : GL (Fin a) k) : Matrix (Fin a) (Fin a) k) =
     (u : k) • (1 : Matrix (Fin a) (Fin a) k) := by
   ext i j
-  by_cases h : i = j <;> simp [GeneralLinearGroup.scalar, Matrix.diagonal, Matrix.one_apply, h]
+  by_cases h : i = j <;> simp [GeneralLinearGroup.scalar, Matrix.diagonal, h]
 
 def twistBy (c : Γ →* kˣ) (r : Γ →* GL (Fin a) k) : Γ →* GL (Fin a) k where
   toFun g := GeneralLinearGroup.scalar (Fin a) (c g) * r g
@@ -214,7 +203,7 @@ theorem exists_char (hL : GlobalTheory.Published.LocalLanglandsGL) (hF : GlobalT
     have f := frobEig_wdOf hl ι hcr (e1 ▸ y1) hB hg
     rw [e1, y2] at f
     have h1 : (r g : Matrix (Fin 1) (Fin 1) (Qbar l)).charpoly = X - C ((r g : Matrix (Fin 1) (Fin 1) (Qbar l)) 0 0) := by
-      simp [Matrix.charpoly, Matrix.det_fin_one, Matrix.charmatrix_apply]
+      simp [Matrix.charpoly]
     rw [h1] at f
     have f2 := congrArg (fun p => p.coeff 0) f
     simp at f2

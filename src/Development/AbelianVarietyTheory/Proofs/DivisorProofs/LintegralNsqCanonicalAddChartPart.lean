@@ -1,8 +1,7 @@
-import Mathlib
-import ReciprocityTheory.L2DbarEstimates.Imports
-import ReciprocityTheory.L2DbarEstimates.PlurisubharmonicCharts.FourSignHolds
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.L2ExtensionLogCanonical
-import Development.AbelianVarietyTheory.Definitions.Divisors.EtaleEmpty
+import BuildAid.Leniency.Open
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import ReciprocityTheory.L2DbarEstimates.PlurisubharmonicCharts.APrimeI
 open MeasureTheory Filter Topology Metric ReciprocityTheory.L2DbarEstimates ReciprocityTheory.L2DbarEstimates.Y GlobalTheory.OTY GlobalTheory.Published.L2Extension
 open scoped ENNReal ContDiff
 

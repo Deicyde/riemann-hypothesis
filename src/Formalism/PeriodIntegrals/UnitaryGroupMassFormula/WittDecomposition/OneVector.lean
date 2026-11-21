@@ -1,5 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WittDecomposition.Anisotropic
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 namespace PI.Witt
 
@@ -32,7 +37,7 @@ lemma qrefl_isometry (hB : ∀ x y, star (B x y) = B y x) (v : V) (a : K) (ha : 
     ring
   rw [qrefl_apply, qrefl_apply]
   simp only [map_sub, map_smulₛₗ, LinearMap.sub_apply, LinearMap.smul_apply, smul_eq_mul,
-    map_smul, starRingEnd_apply, RingHom.id_apply, star_mul', star_inv₀, hB, hv]
+    starRingEnd_apply, RingHom.id_apply, star_mul', star_inv₀, hB, hv]
   linear_combination key (B z w) (B v w) (B z v)
 
 def qreflEquiv (v : V) (a : K) (ha : a ≠ 0) (hv : B v v = a + star a) : V ≃ₗ[K] V :=

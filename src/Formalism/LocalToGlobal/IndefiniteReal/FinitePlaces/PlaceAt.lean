@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.PlaceSum
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.FourUniq
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.HeisSt

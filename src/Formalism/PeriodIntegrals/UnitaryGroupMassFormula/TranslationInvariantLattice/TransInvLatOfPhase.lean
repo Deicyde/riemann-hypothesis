@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.TransInvLat
-import Formalism.PeriodIntegrals.AreaLat
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open Classical Complex
 

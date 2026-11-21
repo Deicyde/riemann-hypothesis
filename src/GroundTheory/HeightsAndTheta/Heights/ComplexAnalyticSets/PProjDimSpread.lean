@@ -1,5 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StProjDimSpread
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.RingTheory.LocalProperties.ProjectiveDimension
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

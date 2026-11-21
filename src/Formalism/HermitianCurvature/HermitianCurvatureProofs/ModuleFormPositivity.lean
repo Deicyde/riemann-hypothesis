@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.PrStarFst
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.TransferWordEntriesMem
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.DualKernelLemmas

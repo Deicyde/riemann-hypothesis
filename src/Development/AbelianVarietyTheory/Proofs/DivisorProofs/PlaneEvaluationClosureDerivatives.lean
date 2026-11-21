@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DarbouxCoordinatesInsertZero
+import Mathlib.Analysis.Calculus.FDeriv.Symmetric
 open scoped TensorProduct Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.ThK.PlaneEv
@@ -73,7 +75,7 @@ def Dop (hD : HasDH F κ) (a b : κ → mixedEmbedding.mixedSpace F) : SInf F κ
     have h := (f.differentiableAt (x := x)).hasFDerivAt.add (g.differentiableAt (x := x)).hasFDerivAt
     have h' : HasFDerivAt (⇑(f + g)) (fderiv ℝ f x + fderiv ℝ g x) x := h
     rw [h'.fderiv]
-    simp only [ContinuousLinearMap.add_apply, SchwartzMap.add_apply]
+    simp only [ContinuousLinearMap.add_apply]
     ring
   map_smul' c f := by
     ext x
@@ -82,7 +84,7 @@ def Dop (hD : HasDH F κ) (a b : κ → mixedEmbedding.mixedSpace F) : SInf F κ
     have h := (f.differentiableAt (x := x)).hasFDerivAt.const_smul c
     have h' : HasFDerivAt (⇑(c • f)) (c • fderiv ℝ f x) x := h
     rw [h'.fderiv]
-    simp only [ContinuousLinearMap.smul_apply, SchwartzMap.smul_apply, smul_eq_mul, RingHom.id_apply]
+    simp only [ContinuousLinearMap.smul_apply, smul_eq_mul, RingHom.id_apply]
     ring
 
 theorem coe_Dop (hD : HasDH F κ) (a b : κ → mixedEmbedding.mixedSpace F) (f : SInf F κ) :
@@ -164,7 +166,7 @@ theorem mem_centralizer_E (T : Module.End ℂ (SInf F (Fin n × Fin d)))
 theorem B_comm_E (β : Fin n × Fin d → mixedEmbedding.mixedSpace F) (hβ : IsPl hd β) :
     ∀ S ∈ Ealg hd hD, Dop hD 0 β * S = S * Dop hD 0 β :=
   mem_centralizer_E hd hD _ fun a₁ b₁ => comm_of_zero (by
-    rw [Dop_comm]; simp [trL_ins0_of_isPl hd β hβ, trL_zero])
+    rw [Dop_comm]; simp [trL_ins0_of_isPl hd β hβ])
 
 theorem C_comm_E (γ : Fin n × Fin d → mixedEmbedding.mixedSpace F) (hγ : IsPl hd γ) :
     ∀ S ∈ Ealg hd hD, Dop hD γ 0 * S = S * Dop hD γ 0 :=

@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.SubstitutionAdjoint
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.RenameMemDualWeyl
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.SubDSharpInDeg
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ExistsDenOfValLeOne

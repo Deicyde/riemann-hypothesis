@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.VolumeInputs
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.TowerOrigin
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.SumFundCoMulSumIic
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ComplexPointsIffCentres
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.RootOriginCoordField

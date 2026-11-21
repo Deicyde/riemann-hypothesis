@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.HeckeThetaIntegrals.StepUnfold
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.PairPtsClasses
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RowMapVUpdateZero
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.EdgeFactorNeZero
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ActOChiRight
@@ -23,7 +21,7 @@ theorem actO_chi_small (i : ℕ) (M : GA D (G.V (.grid i D.R.m)))
     (x : WO (G.pS (.chi i D.R.m : Pair T)) (G.pT (.chi i D.R.m : Pair T))) :
     actO _ _ (G.toPair (.chi i D.R.m) M 1).1⁻¹ (G.toPair (.chi i D.R.m) M 1).2⁻¹ x =
       mt (G.V (.grid i D.R.m)) M⁻¹ * (x : Matrix _ _ (AE D)) := by
-  simp only [actO, GridData.toPair, inv_inv, map_one, inv_one]
+  simp only [actO, GridData.toPair, map_one, inv_one]
   rw [show mt (G.pS (.chi i D.R.m : Pair T)) 1 = 1 from rfl, Matrix.mul_one]
 
 theorem rowAt_first_move : ∀ {D : D7} {T : Type} {L : LevCh D T} {sc : Consts} {G : GridData L sc} {W : G.Weil} {U : Set T} (S : GridChoice W U) {t : T},

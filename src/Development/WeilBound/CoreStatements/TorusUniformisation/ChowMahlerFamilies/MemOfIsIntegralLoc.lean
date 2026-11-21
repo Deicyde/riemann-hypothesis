@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.IsLatFamilyCongr
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ArithVarietyCoordIdeal
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.RegAtIffChartLocalization

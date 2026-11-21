@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CvecSurjective
+import CompanionTheory.AutomorphicTheory.SiegelWeilFiniteness.Bridge
 
 set_option linter.unusedSectionVars false
 set_option maxSynthPendingDepth 1

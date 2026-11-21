@@ -1,4 +1,38 @@
-import Mathlib
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace GlobalTheory
 
@@ -57,7 +91,7 @@ theorem expand_pi_of_expand_each {ι : Type} [Fintype ι] [DecidableEq ι] {X : 
           by_cases hia : i = a
           · subst hia
             simp [H]
-          · simp [H, Function.update_of_ne hia, Finset.mem_insert, hia]
+          · simp [H, Finset.mem_insert, hia]
         have e2 : H s J g a = g a := by simp [H, ha]
         rw [e1, e2, Finset.prod_insert ha, Function.update_self]
         have e3 : ∏ i ∈ s, c i (Function.update J a j i) (g i) = ∏ i ∈ s, c i (J i) (g i) := by
@@ -70,15 +104,15 @@ theorem expand_pi_of_expand_each {ι : Type} [Fintype ι] [DecidableEq ι] {X : 
       refine Finset.sum_nbij' (fun p => Function.update p.1 a p.2)
         (fun J' => (Function.update J' a (j0 a), J' a)) ?_ ?_ ?_ ?_ ?_
       · rintro ⟨J, j⟩ hp
-        simp only [Finset.coe_product, Set.mem_prod, Finset.mem_coe, Finset.mem_product, hmem] at hp
-        simp only [Finset.mem_coe, hmem]
+        simp only [Finset.mem_product, hmem] at hp
+        simp only [hmem]
         intro i hi
         rw [Finset.mem_insert, not_or] at hi
         rw [Function.update_of_ne hi.1]
         exact hp.1 i hi.2
       · intro J' hJ'
-        simp only [Finset.mem_coe, hmem] at hJ'
-        simp only [Finset.coe_product, Set.mem_prod, Finset.mem_coe, Finset.mem_product,
+        simp only [hmem] at hJ'
+        simp only [Finset.mem_product,
           Finset.mem_univ, and_true, hmem]
         intro i hi
         by_cases hia : i = a
@@ -87,7 +121,7 @@ theorem expand_pi_of_expand_each {ι : Type} [Fintype ι] [DecidableEq ι] {X : 
         · rw [Function.update_of_ne hia]
           exact hJ' i (by simp [hia, hi])
       · rintro ⟨J, j⟩ hp
-        simp only [Finset.coe_product, Set.mem_prod, Finset.mem_coe, Finset.mem_product, hmem] at hp
+        simp only [Finset.mem_product, hmem] at hp
         simp only [Function.update_idem, Function.update_self, Prod.mk.injEq, and_true]
         funext i
         by_cases hia : i = a

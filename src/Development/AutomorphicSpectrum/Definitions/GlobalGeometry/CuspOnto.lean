@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.MulCMemSec
 
 namespace GlobalTheory.CompanionTheory.Ar.ThA

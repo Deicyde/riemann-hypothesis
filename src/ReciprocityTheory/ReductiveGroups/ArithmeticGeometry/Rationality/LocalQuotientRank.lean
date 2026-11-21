@@ -1,5 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.Rationality.QCoreH
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.Rationality.FreeQuotPf
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
 
 namespace ReciprocityTheory.ChartRestriction.G.FreeQuotientRank.LocalQuotientRank
 

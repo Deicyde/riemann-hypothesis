@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.FrobeniusSmoothVectors.AlgVring
 import Development.AutomorphicArithmetic.AutomorphicVarieties.FrobeniusSmoothVectors.AddMulSelfEqOfOrthogonalIdempotents
 import Development.AutomorphicArithmetic.AutomorphicVarieties.FrobeniusSmoothVectors.Imports
@@ -91,7 +93,7 @@ theorem res_of_integral (hF : F.Ok C₀) (hn : n = 2 ∨ n = 3) (C : Type) [Comm
       rcases hwf.1 j with h | h | h <;> rw [h] <;> simp <;> ring)
     (by
       intro i j h
-      simp only [halg, map_mul, map_intCast, hζ, ← hu] at h
+      simp only [halg, map_mul, map_intCast, hζ] at h
       have h' := mul_right_cancel₀ hd h
       have hz : ((w n i - w n j : ℤ) : ResidueField O) = 0 := by
         push_cast

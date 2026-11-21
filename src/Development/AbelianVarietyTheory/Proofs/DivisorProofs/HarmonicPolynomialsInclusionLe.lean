@@ -1,16 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KStab
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolEqISupFockDeg
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KEqOnId
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OffPartLe
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsArchOperatorCompactUnitaryWStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAdaptedFrame
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TensInclInjective
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LineKroneckerRightMatrixConjTranspose
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NonzeroEquivariantPairingHasForm
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.IndLine
@@ -77,12 +70,12 @@ theorem omE_free (a b : Ix P Q) (c : Ix R S) (hab : sameBlock a b) (g : Pol P Q 
     rw [if_pos rfl, lineSign_eq]
     simp only [omE, LinearMap.add_apply, Module.End.mul_apply, raiB, lowB, if_true]
     cases hl : linePos ((a, c) : Ln P Q R S)
-    · simp [Derivation.leibniz, ha, pderiv_X_self]
+    · simp [Derivation.leibniz, ha]
       module
     · simp [ha]
   · rw [if_neg e]
     have hne : ((a, c) : Ln P Q R S) ≠ (b, c) := fun h => e (Prod.mk.inj h).1
-    simp only [omE, LinearMap.add_apply, Module.End.mul_apply, raiB, lowB, if_neg hne, LinearMap.zero_apply,
+    simp only [omE, Module.End.mul_apply, raiB, lowB, if_neg hne,
       add_zero, ← hpos]
     cases hl : linePos ((a, c) : Ln P Q R S)
     · simp [Derivation.leibniz, ha, pderiv_X_of_ne (Ne.symm hne)]

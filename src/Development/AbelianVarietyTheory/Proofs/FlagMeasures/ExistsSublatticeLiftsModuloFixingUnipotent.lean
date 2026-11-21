@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.RowMinor
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.EncardBiUnionLe
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.IntegralOfUnimodular
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.LinearFormsBoundedRepresentativesStatement
@@ -76,7 +76,7 @@ theorem ideal_reps [CharZero R] (I : FractionalIdeal R⁰ K) (hI : I ≠ 0) (B :
       have e := LinearMap.congr_fun hψ p
       simp only [LinearMap.comp_apply, Algebra.linearMap_apply, LinearMap.smul_apply, smul_eq_mul] at e
       simp only [LinearMap.sub_apply, LinearMap.comp_apply, Algebra.linearMap_apply, LinearMap.smul_apply,
-        smul_eq_mul, Algebra.smul_def, map_mul, e, map_natCast, nsmul_eq_mul, eq_natCast]
+        smul_eq_mul, Algebra.smul_def, map_mul, e, map_natCast, eq_natCast]
       ring
     · rintro x y ⟨ψ₁, h₁⟩ ⟨ψ₂, h₂⟩
       refine ⟨ψ₁ + ψ₂, ?_⟩

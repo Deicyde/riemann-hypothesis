@@ -1,4 +1,6 @@
-import Formalism.SharpRestriction.GrowthBounds.RootWeights.IsotypicProjectorSelfAdjoint
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.CovariantDegrees
+import Formalism.SharpRestriction.GrowthBounds.RootWeights.ContravariantIsotypicOrthogonal
 
 noncomputable section
 

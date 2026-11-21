@@ -1,7 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.CurveLocInst
-import Formalism.LocalToGlobal.ProjectiveLattices.LocRingPf
-import Formalism.LocalToGlobal.ProjectiveLattices.RealPtPf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.PtOfSPf
 import Formalism.LocalToGlobal.ProjectiveLattices.SecPtRed
 

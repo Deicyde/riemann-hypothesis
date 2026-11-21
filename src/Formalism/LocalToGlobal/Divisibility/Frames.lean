@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.QuotientMetricDivisors.Statement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.QuotientMetricDivisors.RatHermLcvTwist
 import Formalism.QuotientMetricDivisors.ClassSumDualLe
 import Formalism.LocalRingCardinality.DataArith

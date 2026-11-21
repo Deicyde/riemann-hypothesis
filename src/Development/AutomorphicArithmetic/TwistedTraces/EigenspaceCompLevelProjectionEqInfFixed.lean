@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.OfinProd
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.FixLev
 import Development.AutomorphicArithmetic.Foundations.Convolution.ConvolutionKernels.KernelTransforms.CommPrj
 import Development.AutomorphicArithmetic.Foundations.Convolution.ConvolutionKernels.KernelTransforms.NormIntLe
@@ -27,7 +27,7 @@ theorem UpperTheory.eigenspace_comp_levelProjection_eq_inf_fixed :
   have hx' : (x : ℂ) ≠ 0 := by exact_mod_cast hx
   ext w
   have hE : ∀ (A : LL μ →L[ℂ] LL μ), w ∈ eigIn V A x ↔ w ∈ V ∧ A w = (x : ℂ) • w := fun A => by
-    simp [eigIn, Module.End.mem_eigenspace_iff]
+    simp [eigIn]
   have hF : w ∈ fixF μ (levOn P Uv) ↔ w ∈ sphOff μ P ∧ w ∈ ⨅ v ∈ P, fixL μ v (Uv v) := by
     rw [hfix, Submodule.mem_inf]
   rw [Submodule.mem_inf, Submodule.mem_inf, hE, hE]

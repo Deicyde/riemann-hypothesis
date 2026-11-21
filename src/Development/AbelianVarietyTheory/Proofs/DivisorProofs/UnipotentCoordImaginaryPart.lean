@@ -1,8 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoC
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentCoordinateAdditive
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.LcscAdelicUnitaryGroup
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicComplementDetNonzeroStatement
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -21,7 +19,7 @@ theorem GlobalTheory.ThK.UnipDom.coC_sub_conj_plane : ∀ (F E : Type) [Field F]
     rw [hCM.2.2.2, hCM.2.2.2, star_star]
   have hsk : ∀ v v' : Fin n → E, form σ Y.J v' v = -σ (form σ Y.J v v') := by
     intro v v'
-    simp only [form, dotProduct, Matrix.mulVec, map_sum, map_mul, map_neg, hinv]
+    simp only [form, dotProduct, Matrix.mulVec, map_sum, map_mul, hinv]
     simp only [Finset.mul_sum, hskew, mul_neg, neg_mul, Finset.sum_neg_distrib, neg_neg]
     rw [Finset.sum_comm]
     refine Finset.sum_congr rfl fun i _ => Finset.sum_congr rfl fun j _ => ?_
@@ -109,11 +107,11 @@ theorem GlobalTheory.ThK.UnipDom.coC_sub_conj_plane : ∀ (F E : Type) [Field F]
     rw [← hwx, dotProduct_comm]; simp only [fA]; rw [hcV, incM_mulVec_incV]
   have hrec : w = c • incV F H.x + incV F H.y + incM F H.ι *ᵥ (incM F (Y₁.Jᵀ)⁻¹ *ᵥ s) := by
     have h := congrArg (fun A => (inclR (F := F) (AF F)).mapMatrix A *ᵥ w) hM
-    simp only [map_add, map_sub, map_mul, map_one, Matrix.one_mulVec, Matrix.add_mulVec, Matrix.sub_mulVec,
-      ← Matrix.mulVec_mulVec, hvm, hdy, hdx] at h
+    simp only [map_add, map_sub, map_one, Matrix.one_mulVec, Matrix.add_mulVec, Matrix.sub_mulVec,
+      hvm, hdy, hdx] at h
     rw [← hQ]
     conv_lhs => rw [← h]
-    simp only [RingHom.mapMatrix_apply, incM, Matrix.transpose_map, neg_smul, one_smul, sub_neg_eq_add]
+    simp only [RingHom.mapMatrix_apply, incM, neg_smul, one_smul, sub_neg_eq_add]
     rw [Matrix.map_mul, Matrix.map_mul, ← Matrix.mulVec_mulVec, ← Matrix.mulVec_mulVec, Matrix.transpose_map]
   have hι : fA σ Y.J w (incM F H.ι *ᵥ (incM F (Y₁.Jᵀ)⁻¹ *ᵥ s)) = s ⬝ᵥ fun k => cA σ ((incM F (Y₁.Jᵀ)⁻¹ *ᵥ s) k) := by
     simp only [fA]

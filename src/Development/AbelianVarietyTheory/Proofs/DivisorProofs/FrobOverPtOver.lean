@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsDimEqOne
 import Development.AbelianVarietyTheory.Definitions.Degenerations.NotFrobGUnitRat
 open CategoryTheory GlobalTheory.AV GlobalTheory.AV.AbVar

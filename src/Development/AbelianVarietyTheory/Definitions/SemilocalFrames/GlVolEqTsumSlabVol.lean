@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.IsLatMeasurableConst
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.GaussDensDefinite
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.CovolEqOfAedisjoint
@@ -50,19 +51,19 @@ theorem isAdapted_rank_three (cm : Formalism.BasicNotions.CMData F E) :
   refine ⟨fun _ => rfl, rfl, fun _ => (⟨intLat_fg 1, intLat_span 1⟩ : Submodule.IsLattice E (intLat E 1)), fun i k => ⟨?_, ?_, fun h => absurd (Subsingleton.elim _ _) h⟩,
     fun _ => ⟨?_, ?_, ?_⟩, ?_, ?_, ?_⟩
   · have h : (colM (E := E) ![1, 1, 0])ᴴ * signMat E ![true, false, true] * colM (E := E) ![1, 1, 0] = 0 := by
-      rw [colM_gram]; ext a b; obtain rfl := Subsingleton.elim a b; simp [signMat]
+      rw [colM_gram]; ext a b; obtain rfl := Subsingleton.elim a b; simp
     exact h
   · have h : (colM (E := E) ![0, -1, 1])ᴴ * signMat E ![true, false, true] * colM (E := E) ![0, -1, 1] = 0 := by
-      rw [colM_gram]; ext a b; obtain rfl := Subsingleton.elim a b; simp [signMat]
+      rw [colM_gram]; ext a b; obtain rfl := Subsingleton.elim a b; simp
     exact h
   · have h : (colM (E := E) ![1, 1, 0])ᴴ * signMat E ![true, false, true] * colM (E := E) ![0, -1, 1] = 1 := by
-      rw [colM_gram]; ext a b; obtain rfl := Subsingleton.elim a b; simp [signMat]
+      rw [colM_gram]; ext a b; obtain rfl := Subsingleton.elim a b; simp
     exact h
   · have h : (colM (E := E) ![1, 1, 0])ᴴ * signMat E ![true, false, true] * colM (E := E) ![1, 1, -1] = 0 := by
-      rw [colM_gram]; ext a b; obtain rfl := Subsingleton.elim a b; simp [signMat]
+      rw [colM_gram]; ext a b; obtain rfl := Subsingleton.elim a b; simp
     exact h
   · have h : (colM (E := E) ![0, -1, 1])ᴴ * signMat E ![true, false, true] * colM (E := E) ![1, 1, -1] = 0 := by
-      rw [colM_gram]; ext a b; obtain rfl := Subsingleton.elim a b; simp [signMat]
+      rw [colM_gram]; ext a b; obtain rfl := Subsingleton.elim a b; simp
     exact h
   · have h : (colM (E := E) ![1, 1, -1])ᴴ * signMat E ![true, false, true] * colM (E := E) ![1, 1, -1] = (signMat E ![true]).map (RingEquiv.refl E) := by
       rw [colM_gram]; ext a b; obtain rfl := Subsingleton.elim a b; simp [signMat]

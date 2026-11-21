@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.GammaLaurentFactors.LaurentBlockInduction.LdDefs
+import Development.AbelianVarietyTheory.Definitions.Divisors.LineOppositeParabolicUnitaryLeviSectionEq
+import GroundTheory.AutomorphicForms.GL2.GJFEBlock
+import GroundTheory.AutomorphicForms.GL2.GJLocalFEGamma
 
 noncomputable section
 

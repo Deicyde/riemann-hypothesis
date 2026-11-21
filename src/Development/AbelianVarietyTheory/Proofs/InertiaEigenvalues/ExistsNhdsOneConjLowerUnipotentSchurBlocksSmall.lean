@@ -1,6 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsIdempotentElemIdemSf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ConjLowUni
+import GroundTheory.GlobalFields.Adele.Compact
+import GroundTheory.GlobalFields.LocalFieldAtPlace
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 

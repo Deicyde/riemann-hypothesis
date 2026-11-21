@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.AdmissibleParameterJ
 import Formalism.SharpRestriction.LevelLetterCocycles.EmbeddingTypeJumps
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.JumpWindow

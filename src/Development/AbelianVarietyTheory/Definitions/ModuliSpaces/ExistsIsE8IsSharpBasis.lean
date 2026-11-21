@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.ModuliSpaces.ExistsArBaseAway
-import Development.AbelianVarietyTheory.Proofs.CharacterTheory.W8AddTransposeEqE8
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.IntToRatA
 import Development.AbelianVarietyTheory.Definitions.ModuliSpaces.NotGoodClassZeroSucc
 import Development.AbelianVarietyTheory.Definitions.ModuliSpaces.SystemPrimesDistinctLevelsGeThree
@@ -191,7 +191,7 @@ theorem act_one_of_isSharp {h : ℕ} {W : Matrix (Fin 8) (Fin 8) ℤ} {a : J →
     (ht : IsSharp W a bas t c) {j : J} (hj : a j = 1) : t.act j = 𝟙 t.A := by
   obtain ⟨pr, -, hu, -, h, -⟩ := ht
   refine (hu t.A pr).unique (fun u => ?_) (fun u => by simp)
-  rw [h, hj, List.prod_ofFn, Finset.prod_eq_single u] <;> simp +contextual [Matrix.one_apply, eq_comm]
+  rw [h, hj, List.prod_ofFn, Finset.prod_eq_single u] <;> simp +contextual [eq_comm]
 end Use
 
 section Zero

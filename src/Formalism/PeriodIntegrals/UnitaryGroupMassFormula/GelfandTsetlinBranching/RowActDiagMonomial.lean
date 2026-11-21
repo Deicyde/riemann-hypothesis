@@ -1,4 +1,7 @@
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.GelfandTsetlinBranching.FockFEqSumOfSubsetB
+import BuildAid.Leniency.Open
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.GelfandTsetlinBranching.ExtremalFacts
+import Mathlib.RingTheory.PiTensorProduct
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -58,7 +61,7 @@ theorem chiB_wnB {n N : ℕ} (t : Fin n → ℂ) (v : Fin N × Fin N) : chiB t (
   · unfold chiB
     rw [Finset.prod_eq_single (⟨v.1.1, hv⟩ : Fin n)]
     · simp
-    · intro j _ hj; simp [Pi.single_apply, hj]
+    · intro j _ hj; simp [hj]
     · simp
   · simp [chiB]
 

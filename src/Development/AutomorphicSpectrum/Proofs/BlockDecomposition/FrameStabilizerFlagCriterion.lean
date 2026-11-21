@@ -1,6 +1,6 @@
-import Mathlib
-import Development.WeilBound.ThetaLifts.Reductions.SiegelCore
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.StabUpTo
+import Formalism.SatakeDualWeyl.Statement
 open NumberField MeasureTheory Matrix Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SiegelSet GlobalTheory.CompanionTheory.CFin
 open Formalism.UG (cT)
 open GlobalTheory.Orb (archMat)
@@ -175,7 +175,7 @@ theorem block_tri (L : Type) [Field L] (s : L →+* L) (n r m : ℕ)
         have := cnt_le S l'
         simp only [lx, ly] at hw hlv
         omega
-      · simp [hrow, Matrix.one_apply, hc]
+      · simp [hrow, hc]
   · rw [lz] at hw
     omega
   · have := cnt_le S l'

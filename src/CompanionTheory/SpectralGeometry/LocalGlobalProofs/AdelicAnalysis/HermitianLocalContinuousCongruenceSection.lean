@@ -1,5 +1,4 @@
-import Mathlib
-import CompanionTheory.SpectralGeometry.CountingDefinitions.AdelicEulerProducts.IsEulerProd
+import BuildAid.Leniency.Open
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.HermitianOrbitLocalSectionSubgroupStatement
 open HeckeCharacterZeroLocus.SiegelWeilU GlobalTheory.CompanionTheory.SW NumberField IsDedekindDomain MeasureTheory Topology
 open scoped TensorProduct ENNReal NNReal Matrix
@@ -14,7 +13,7 @@ theorem exists_local_section : ∀ (F E : Type) [Field F] [NumberField F] [Field
     ext i j
     by_cases h : i = j
     · subst h; simp [cT]
-    · simp [cT, Matrix.one_apply, h, Ne.symm h]
+    · simp [cT, h, Ne.symm h]
   have ho1 : o 1 = S := by
     apply Subtype.ext
     rw [hform]

@@ -1,8 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.PairingIndexBounds.HalvesRecursion.Statement
 import Formalism.LocalToGlobal.TorsionIntegrality.EisensteinTranslationProducts.EllipticOnePole
 import Formalism.LocalRingCardinality.SpanPowerMembership.ExampleLayerExistsGenerators
-import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.Principal
-import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.SplitK
 
 noncomputable section
 

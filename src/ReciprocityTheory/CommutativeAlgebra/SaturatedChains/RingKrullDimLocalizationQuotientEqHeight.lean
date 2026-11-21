@@ -1,4 +1,4 @@
-import ReciprocityTheory.CommutativeAlgebra.SaturatedChains.IsSaturatedChain
+import BuildAid.Leniency.Open
 import ReciprocityTheory.CommutativeAlgebra.CohenMacaulay.LocDim
 
 namespace ReciprocityTheory.CA

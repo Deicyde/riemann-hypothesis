@@ -1,11 +1,12 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.TwistedFactors.IntegralUnitBaseChange.Development
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsUnitOneAddJacobsonTensorStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LocalFiniteAlgebraJacobsonRadicalStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FiniteModuleAdicCompleteStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.TensorIdealMapInjectiveStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.NormMapCongruenceStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CyclicAlgebraHilbertNinetyStatement
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 open scoped TensorProduct
 open IsLocalRing
@@ -38,8 +39,8 @@ theorem map_tw (τ : O' ≃ₐ[O] O') (j : ℕ) (s : O' ⊗[O] R) :
   induction s using TensorProduct.induction_on with
   | zero => simp only [map_zero]
   | tmul x y =>
-    simp only [GlobalTheory.CompanionTheory.UnitNorm.tw, Algebra.TensorProduct.map_tmul, AlgEquiv.toAlgHom_eq_coe, AlgHom.coe_coe,
-      AlgHom.id_apply, pow_succ', AlgEquiv.mul_apply]
+    simp only [GlobalTheory.CompanionTheory.UnitNorm.tw, Algebra.TensorProduct.map_tmul,
+      AlgHom.id_apply, pow_succ']
     rfl
   | add x y hx hy => simp only [map_add, hx, hy]
 

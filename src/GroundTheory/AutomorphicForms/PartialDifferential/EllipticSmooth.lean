@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.PartialDifferential.EllipticLocalRegularity
+import GroundTheory.AutomorphicForms.PartialDifferential.SobolevEmbedding
 
 namespace GroundTheory.Automorphic.Sobolev
 

@@ -1,5 +1,8 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.ContDiffBumpG
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.RightCosetActionMeasurePreserving
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.Imports
+import Formalism.HermitianCurvature.StatementJF
 
 open Matrix MeasureTheory Filter Topology
 open scoped ComplexConjugate

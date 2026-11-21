@@ -1,8 +1,6 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.KloostermanDensityOfParts
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.SymmetricScalarBlockMatrixOneZero
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.PBTAsm
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.ThetaCompactSupport
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.OpApplyContinuousOn
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.SlicesFiniteRegularityBuilt
 
 open MeasureTheory Filter Topology Formalism.FourierDecayAlt
 

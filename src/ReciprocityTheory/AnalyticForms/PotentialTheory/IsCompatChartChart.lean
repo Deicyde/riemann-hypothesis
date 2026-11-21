@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PotentialTheory.ContDiffMulOfTsupport
 import ReciprocityTheory.AnalyticForms.PotentialTheory.Stokes
 import ReciprocityTheory.AnalyticForms.PotentialTheory.LogInt

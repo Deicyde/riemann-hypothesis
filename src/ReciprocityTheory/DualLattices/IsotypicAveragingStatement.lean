@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.DualLattices.CotangentSurjective
+import Mathlib.Data.Matrix.ColumnRowPartitioned
 
 noncomputable section
 

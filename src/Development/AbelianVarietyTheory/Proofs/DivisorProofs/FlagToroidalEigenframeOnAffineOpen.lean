@@ -1,10 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KerGeoHom
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagTorusFrameSectionStatement
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagTorusFrameUniqueStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GeometricPointExtendsCharacterStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagTorusEigenFrameCompatStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagTorusFrameTransitionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagTorusFrameComponentStatement
 
 set_option autoImplicit false

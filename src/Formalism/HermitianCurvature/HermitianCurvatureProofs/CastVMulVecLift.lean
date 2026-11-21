@@ -1,8 +1,8 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.DwPt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.GenCapRepIntertwine
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.HeadCorrespondenceOfParts
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LevelsOfBuiltSetting
-import Formalism.HermitianCurvature.RealInputsClosedAdmissibleSettings
 
 open Matrix Finset
 open scoped ComplexConjugate

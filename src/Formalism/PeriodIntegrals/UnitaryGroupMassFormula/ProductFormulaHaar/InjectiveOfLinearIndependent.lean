@@ -1,5 +1,11 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ProductFormulaHaar.TrBase
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ProductFormulaHaar.ExistsEqEllMul
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Tactic.Polynomial.Basic
 
 noncomputable section
 

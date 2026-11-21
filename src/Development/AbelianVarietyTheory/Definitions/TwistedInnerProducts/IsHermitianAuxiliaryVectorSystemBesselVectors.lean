@@ -1,15 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.WittSmallGroupEmbeddingMemPointwiseStabilizerIso
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.StandardOrderExtendedBasisApplyLowBlock
-import Development.AbelianVarietyTheory.Definitions.Foundations.GLintEqKOAndPrincEqKOne
-import Development.AbelianVarietyTheory.Definitions.Foundations.SmoothPartStable
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.FourierJacobiAverage
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.FinPartIdemMulMemIff
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.UnipotentRadicalBasic
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IntegrableOfMemSB
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExDownExUpAndExUpExDown
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.SymplecticValTauCompat
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.StandardAdelicCharacterLocalComponentNeOne
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.MemLevelFunOfIsAutFun
 
 noncomputable section
@@ -483,8 +474,7 @@ theorem embA_locGL (hζ : IsLineVec L ζ) {γ : LatFrame (Fv D.host.F v) n (Fin 
   change _ = 1 + d.j0 ⬝ o.jA ⬝ (mt A (locGL A τ γ g) - 1) ⬝ (o.pA ⬝ d.p0)
   have e2 : o.jB ⬝ o.pB = 1 - o.jA ⬝ o.pA := eq_sub_of_add_eq' o.sum_eq_one
   rw [embA_apply, d.unitaryMatrix_wittCoreEmbedding, o.mt_emb, mt_one, Matrix.mul_one, e2, ← d.sum_eq_one]
-  simp only [Matrix.mul_add, Matrix.add_mul, Matrix.mul_sub, Matrix.sub_mul, Matrix.mul_one, Matrix.mul_assoc,
-    Matrix.one_mul]
+  simp only [Matrix.mul_add, Matrix.add_mul, Matrix.mul_sub, Matrix.sub_mul, Matrix.mul_one, Matrix.mul_assoc]
   abel
 
 end Global

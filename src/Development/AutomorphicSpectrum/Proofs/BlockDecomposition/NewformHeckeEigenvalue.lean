@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.VerticalStrips.UnramifiedEulerProductIntegral
 
 noncomputable section
@@ -62,11 +63,11 @@ theorem one_add_ord {x : F} (h : Dp 1 x) : 1 + x ≠ 0 ∧ ord (1 + x) = 0 := by
 
 theorem low_int {z : F} (hz : z ∈ 𝒪[F]) : low z ∈ integralGL F 2 := by
   rw [mem_integralGL_iff, low_inv]
-  constructor <;> intro i j <;> fin_cases i <;> fin_cases j <;> simp [low, zero_mem, one_mem, hz, neg_mem]
+  constructor <;> intro i j <;> fin_cases i <;> fin_cases j <;> simp [low, zero_mem, one_mem, hz]
 
 theorem uni_int {z : F} (hz : z ∈ 𝒪[F]) : uni2 z ∈ integralGL F 2 := by
   rw [mem_integralGL_iff, uni_inv]
-  constructor <;> intro i j <;> fin_cases i <;> fin_cases j <;> simp [uni2, zero_mem, one_mem, hz, neg_mem]
+  constructor <;> intro i j <;> fin_cases i <;> fin_cases j <;> simp [uni2, zero_mem, one_mem, hz]
 
 theorem dg_int {a : Fˣ} (ha : ord (a : F) = 0) : dg2 a 1 ∈ integralGL F 2 := by
   have h1 : (a : F) ∈ 𝒪[F] := (mem_int a.ne_zero).2 ha.ge

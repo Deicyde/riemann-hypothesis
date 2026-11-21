@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.OrbitDecayEstimates.CurveDerivativeDecay.HIntegrability
+import Development.WeilBound.CoreStatements.OrbitDecayEstimates.CurveDerivativeDecay.OrbitDeriv
 
 noncomputable section
 

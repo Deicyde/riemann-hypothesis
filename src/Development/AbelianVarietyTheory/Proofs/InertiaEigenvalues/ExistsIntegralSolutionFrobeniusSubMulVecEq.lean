@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.MooreNorm
 import GroundTheory.PAdicHodge.SemilinearResidue
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 noncomputable section
 

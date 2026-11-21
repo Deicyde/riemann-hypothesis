@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.CmQuadraticFormEqAlternatingForm
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ExistsSStageUnconditional
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.EFSymmCont
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsSStageLoc
 

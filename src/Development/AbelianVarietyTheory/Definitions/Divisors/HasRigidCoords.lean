@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.FromBaseAlt
 import Development.AbelianVarietyTheory.Definitions.Divisors.GalRigidOfSurjective
 import Development.AbelianVarietyTheory.Definitions.Divisors.EvenDefect

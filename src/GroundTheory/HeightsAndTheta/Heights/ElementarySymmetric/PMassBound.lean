@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StLocalGraphMass
 import GroundTheory.HeightsAndTheta.Heights.ElementarySymmetric.StFramePlaneGraph
 set_option maxSynthPendingDepth 1

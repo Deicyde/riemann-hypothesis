@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.AtBase
 import Development.AbelianVarietyTheory.Counterexamples.TransversalityLocal.FramePairFixatorUnitaryAndFixesFrame
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.FamDefs
@@ -141,7 +142,7 @@ theorem NU_nontrivial {H : HermSp M V} (Fr : FrameD H (r + 1)) : ∃ n ∈ NU H 
   have hT : ∀ c v, T c v = v + (c * H.h v e) • e := fun _ _ => rfl
   have hTT : ∀ c, (T c).comp (T (-c)) = LinearMap.id := fun c => by
     ext v
-    simp only [LinearMap.comp_apply, hT, H.h_add_left, H.h_smul_left, hee, LinearMap.id_apply, mul_zero, add_zero,
+    simp only [LinearMap.comp_apply, hT, H.h_add_left, LinearMap.id_apply,
       neg_mul, neg_smul]
     rw [← neg_smul, H.h_smul_left, hee]; simp
   have hTT' : (T (-c)).comp (T c) = LinearMap.id := by simpa using hTT (-c)

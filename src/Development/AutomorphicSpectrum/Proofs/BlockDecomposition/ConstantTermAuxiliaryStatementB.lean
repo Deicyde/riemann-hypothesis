@@ -1,8 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.OneMemGoodCT
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FiniteDimCoefficientsFiniteDetermining
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CapCommuteRtInfGL
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CommuteCapOfCommuteEop
+import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.AffineGLForms.GenSpace
 
 noncomputable section
 
@@ -104,7 +106,7 @@ def blkL (x : Lie E s) : Lie E (r + s) :=
 
 theorem contDiff_blkL : ContDiff ℝ ∞ (blkL (E := E) (r := r) (s := s)) := by
   refine contDiff_pi.2 fun i => contDiff_pi.2 fun j => ?_
-  simp only [blkL, Matrix.reindex_apply, Matrix.submatrix_apply]
+  simp only [blkL, Matrix.reindex_apply]
   change ContDiff ℝ ∞ fun x : Lie E s => Matrix.fromBlocks 1 0 0 (Matrix.of x)
     ((GlobalTheory.SmGL.stdSum (rfl : r + s = r + s)).symm i) ((GlobalTheory.SmGL.stdSum (rfl : r + s = r + s)).symm j)
   rcases (GlobalTheory.SmGL.stdSum (rfl : r + s = r + s)).symm i with a | a <;>

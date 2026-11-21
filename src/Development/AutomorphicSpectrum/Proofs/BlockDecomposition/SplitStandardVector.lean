@@ -1,9 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.KFiniteThetaLifts.CasselmanShalikaStandardVector
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntInd
-import GroundTheory.LocalFields.QuadraticAbelian.WeilRepQuadratic
-import GroundTheory.AutomorphicForms.MacdonaldWhittaker
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ModulusEntryLeMRow
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntegrableIntIndMul
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SphericalSplitOfPointwise
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsQuadCharUnramified
@@ -11,10 +8,6 @@ import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsStdChEOfOrdUn
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LocalLFactorHalfNeZero
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.UnramifiedQuadraticUniformizerOrder
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntegralSubst
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.OrdEqZeroOfModulusEqOne
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SplitOrInertOfUnramified
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.AddCharConductorInv
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DifferentIdealRat
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsStdInvAndTrivialAndNontrivial
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.UnramifiedWhittakerSphericalSpan
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.NormCpowLtOne
@@ -131,8 +124,8 @@ theorem sphN_WcS_phiS (χ : AddChar F Circle) (c₁ c₂ : Fˣ →* ℂˣ) (hχ 
         unfold sphJ
         rw [e1, char_eq_one hc₁ hu1, intInd_of_mem, intInd_of_mem]
         · simp
-        · rw [← modulus_le_one_iff]; simp [modulus_mul, hu1]
-        · rw [← modulus_le_one_iff]; simp [modulus_mul, modulus_inv, hu1]
+        · rw [← modulus_le_one_iff]; simp [hu1]
+        · rw [← modulus_le_one_iff]; simp [modulus_inv, hu1]
       · rw [Set.indicator_of_notMem hu]
         have hu1 : modulus (u : F) ≠ 1 := fun h => hu (mem_units_iff_modulus.2 h)
         unfold sphJ

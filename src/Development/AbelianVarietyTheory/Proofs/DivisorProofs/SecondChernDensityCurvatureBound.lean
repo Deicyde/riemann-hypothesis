@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecondChernDensity
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DeterminantExpansionBoundStatement
 open CategoryTheory AlgebraicGeometry TopologicalSpace Filter Topology MeasureTheory Matrix NumberField
@@ -90,7 +91,7 @@ theorem wedge_le : ∀ (n : ℕ) (T : Type) [Fintype T] (μ : T → ℕ) (Hm : �
       (F τ ξ₁ η₂ * F τ ξ₂ η₁).trace) (F τ ξ₂ η₁ * F τ ξ₁ η₂).trace
     linarith
   rw [norm_mul, hw]
-  have hk : ‖kappa ^ 2 / 2‖ = ‖kappa‖ ^ 2 / 2 := by simp [norm_div, norm_pow]
+  have hk : ‖kappa ^ 2 / 2‖ = ‖kappa‖ ^ 2 / 2 := by simp [norm_pow]
   rw [hk]
   calc ‖kappa‖ ^ 2 / 2 * ‖(F τ ξ₁ η₁ * F τ ξ₂ η₂).trace + (F τ ξ₂ η₂ * F τ ξ₁ η₁).trace -
         (F τ ξ₁ η₂ * F τ ξ₂ η₁).trace - (F τ ξ₂ η₁ * F τ ξ₁ η₂).trace‖
@@ -197,7 +198,7 @@ theorem dens22_le : ∀ (e : ℕ) (T : Type) [Fintype T] (μ : T → ℕ) (C : �
       refine (norm_sum_le _ _).trans (Finset.sum_le_sum fun τ _ => ?_)
       refine (trace_le _ (H τ u) _ (hP τ)).trans ?_
       have := hCb τ (WithLp.toLp 2 v) (WithLp.toLp 2 w)
-      simp only [WithLp.ofLp_toLp] at this
+      simp only at this
       calc (μ τ : ℝ) * opNorm (H τ u) (H τ u) (curv (H τ) u (WithLp.toLp 2 v) (WithLp.toLp 2 w))
           ≤ (μ τ : ℝ) * (C₀ * gnorm G v * gnorm G w) := by gcongr
         _ = (μ τ : ℝ) * C₀ * (gnorm G v * gnorm G w) := by ring
@@ -209,7 +210,7 @@ theorem dens22_le : ∀ (e : ℕ) (T : Type) [Fintype T] (μ : T → ℕ) (C : �
         _ = K2 ^ e * ∏ i : Fin e, (gnorm G (x i.succ.succ) * gnorm G (y i.succ.succ)) := by
             rw [Finset.prod_mul_distrib, Finset.prod_const, Finset.card_univ, Fintype.card_fin]
     simp only [ψ, Θ, norm_mul, norm_prod]
-    simp only [chTwo, WithLp.ofLp_toLp] at hΘ ⊢
+    simp only [chTwo] at hΘ ⊢
     rw [Fin.prod_univ_succ, Fin.prod_univ_succ, Fin.succ_zero_eq_one]
     have n1 : 0 ≤ ∏ i : Fin e, (gnorm G (x i.succ.succ) * gnorm G (y i.succ.succ)) :=
       Finset.prod_nonneg fun i _ => mul_nonneg (gnorm_nonneg _ _) (gnorm_nonneg _ _)

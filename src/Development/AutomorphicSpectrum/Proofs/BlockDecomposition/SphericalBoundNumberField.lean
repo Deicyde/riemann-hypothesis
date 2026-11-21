@@ -1,8 +1,9 @@
-import Mathlib
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.KFiniteThetaLifts.CasselmanShalikaStandardVector
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GluePlaces
-import GroundTheory.GlobalFields.SemilocalAlgebras.NormTrace
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.SemilocalAlgebras.Finite
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import GroundTheory.GlobalFields.CompletionAtPlace
+import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.ComplexMatrix3
 open NumberField IsDedekindDomain MeasureTheory GroundTheory.Global GroundTheory.LocalField GroundTheory.Automorphic GroundTheory.Automorphic.AutomorphicForm Ad3 Ad3.K Ad3.K.QuadraticBaseChangeGL3
 open GroundTheory.Automorphic.GodementSection (localChar)
 open GroundTheory.Global.AdicLiesOver

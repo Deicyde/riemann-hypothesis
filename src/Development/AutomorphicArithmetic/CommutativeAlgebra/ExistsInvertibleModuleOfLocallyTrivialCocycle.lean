@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CommutativeAlgebra.PicData
+import Mathlib.RingTheory.Etale.Weakly
 open CategoryTheory TensorProduct UpperTheory.PicD
 
 namespace UpperTheory.PicD

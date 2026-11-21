@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.GlobalEulerCharacteristic.KummerSha
 import GroundTheory.ProfiniteCohomology.GlobalEulerCharacteristic.KummerSeq
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.BaseTransportGS

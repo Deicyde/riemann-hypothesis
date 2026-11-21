@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.DecompositionData
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
 
 noncomputable section
 
@@ -263,7 +266,7 @@ theorem first_inclusion_zero (v : Fin k → LL) : inc0 LL k m v 0 = v := by
   first | rfl | simp [inc0]
 
 theorem first_inclusion_succ (v : Fin k → LL) (b : Fin m) : inc0 LL k m v b.succ = 0 := by
-  simp [inc0, Pi.single_apply, Fin.succ_ne_zero]
+  simp [inc0, Fin.succ_ne_zero]
 
 theorem first_inclusion_equivariant (g : G) (v : Fin k → LL) :
     inc0 LL k m (matRep (Ms (xs 0)) g v) = sumRho Ms xs g (inc0 LL k m v) := by

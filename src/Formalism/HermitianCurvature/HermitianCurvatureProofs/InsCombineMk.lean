@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.BlockTwist
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.FrameOfAdmissibleWord
 
 open Matrix
 open scoped ComplexConjugate
@@ -110,7 +113,7 @@ theorem tw_ins_mk (a : S) (t : ℂ) (x y z w : SlopeTestRemainingChoices S A) (h
   rw [key, hx', hw', hy, hz]
   conv_rhs => rw [← eU_zero_zero_add_eU_one_one (A := A) a]
   unfold ins
-  simp [Fin.sum_univ_two, mul_sub, smul_add, mul_smul_comm] <;> abel
+  simp [Fin.sum_univ_two, mul_sub, smul_add] <;> abel
 
 section Older
 

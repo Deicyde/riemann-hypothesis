@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.TorusExt
-import ReciprocityTheory.GeometryOfNumbers.LatticeCovolumes.ConjSymm
+import Mathlib.RingTheory.Etale.Weakly
 open NumberField ReciprocityTheory.GeometryOfNumbersTheory GlobalTheory.LieHt
 
 namespace GlobalTheory

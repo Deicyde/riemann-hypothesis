@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StDiscriminantSheetCover
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PNullSmaller
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PMassFinite

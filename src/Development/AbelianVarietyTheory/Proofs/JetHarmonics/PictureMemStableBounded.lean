@@ -1,8 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.FormZeroEqSlotPairingOfLe
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.MemLevelZeroOfMemGroup
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ExistsNormBoundThreeFamilies
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.RadialModuleFormOfXiExists
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.PBFCstmt
 
 namespace GlobalTheory.ListDuality
 

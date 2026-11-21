@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataKerI
 import Development.AbelianVarietyTheory.BlockTheory.ThetaLiftGeometry.LatticeFramesPrimeToLevel
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.InfDiagMulFinPartI
 
 noncomputable section
 

@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.AdjFormula
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ExistsDeltaPsi
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IndexTransferAlongProjection
@@ -42,7 +43,7 @@ theorem mem_span_basisFun {K : Type} [Field K] (O : ValuationSubring K) {n : Typ
       rw [Pi.basisFun_apply]
       by_cases hij : j = i
       · subst hij; simp
-      · simp [Pi.single_apply, Ne.symm hij]
+      · simp [Ne.symm hij]
     | zero => intro i; simp
     | add x y _ _ hx hy => intro i; exact add_mem (hx i) (hy i)
     | smul a x _ hx => intro i; exact mul_mem a.2 (hx i)

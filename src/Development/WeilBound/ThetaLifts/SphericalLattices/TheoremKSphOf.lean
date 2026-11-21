@@ -1,7 +1,13 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.SphericalLattices.SphericalClosure.CloseSph
 import Development.WeilBound.ThetaLifts.Reductions.FiniteClosure.RamifiedMultiplicityOne
 import Development.WeilBound.ThetaLifts.SphericalLattices.ExistsFixedSum
 import Development.WeilBound.ThetaLifts.SphericalLattices.FinInert
+import Development.WeilBound.ThetaLifts.Reductions.ArchLie
+import Development.WeilBound.ThetaLifts.Reductions.KReal
+import Development.WeilBound.ThetaLifts.Reductions.LocalLift
+import Development.WeilBound.ThetaLifts.Reductions.SiegelOfCore
+import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.WeilEx
 
 namespace PositivityTheory.Sph
 

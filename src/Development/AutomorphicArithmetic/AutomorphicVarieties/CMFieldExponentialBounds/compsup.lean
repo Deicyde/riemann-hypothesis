@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PrimeSetBoundDataOfPrimitiveChar
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.QuadraticCharacters.GaussRoot
+import Development.AutomorphicArithmetic.AutomorphicVarieties.StmtFields
 
 open NumberField Formalism.HC UpperTheory.Top UpperTheory.V
 

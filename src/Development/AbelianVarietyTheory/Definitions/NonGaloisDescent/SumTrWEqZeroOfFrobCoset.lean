@@ -1,10 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.LocalLanglandsGL
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.Mono0OfLpDimEqOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MonodromyFreeSumIrreducibles
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.WeilGroupIsSemisimpleOfSemisimpleFrob
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LinearIndependentTrace
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.WeilDeligneSemisimple
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import Mathlib.RingTheory.SimpleModule.Rank
 
 noncomputable section
 
@@ -53,7 +54,7 @@ theorem isSemisimple_apply (ρ : Representation ℂ (Weil h) V) (hρ : IsSmooth 
   refine End.isSemisimple_of_squarefree_aeval_eq_zero (p := p)
     (Separable.squarefree (separable_prod_X_sub_C_iff'.2 fun _ _ _ _ e => e)) ?_
   have hcp : ∀ g, Commute (ρ g) (aeval T p) := fun g => by
-    simp only [p, map_prod]
+    simp only [p]
     rw [aeval_eq_sum_range]
     exact Commute.sum_right _ _ _ fun i _ => ((hc g).pow_right i).smul_right _
   let K : Subrepresentation ρ := ⟨LinearMap.ker (aeval T p), fun g v hv => by

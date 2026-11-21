@@ -1,9 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.GroupDict
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsSheetCover
-import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.StatementsProved
-import GroundTheory.HeightsAndTheta.Heights.CountingLowerBound.Assembly
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.IntEmbInjective
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.PPartRealSmul
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.AdaptedFrameInversePropertiesStatement
 open NumberField Matrix MeasureTheory Filter Topology GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Cusp ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor GroundTheory.Heights₂.Heights.FiniteCovolume GroundTheory.Automorphic GlobalTheory.CompanionTheory.Ar.Cusp.Dict
@@ -37,7 +33,7 @@ theorem sgUInv_mulVec (u : Matrix (Sg j j') (Sg j j') ℂ) (x : Fin j' → ℂ) 
       Sum.elim (-(u.toBlocks₂₁ᴴ *ᵥ x)) (u.toBlocks₂₂ᴴ *ᵥ x) := by
   conv_lhs => rw [← fromBlocks_toBlocks u]
   simp only [sgI, fromBlocks_conjTranspose, fromBlocks_multiply, fromBlocks_mulVec]
-  ext (i | i) <;> simp [Matrix.neg_mulVec, Matrix.mulVec_neg]
+  ext (i | i) <;> simp [Matrix.neg_mulVec]
 
 theorem mulVec_elim_zero (u : Matrix (Sg j j') (Sg j j') ℂ) (w : Fin j → ℂ) :
     u *ᵥ Sum.elim w 0 = Sum.elim (u.toBlocks₁₁ *ᵥ w) (u.toBlocks₂₁ *ᵥ w) := by
@@ -51,7 +47,7 @@ theorem moebW_zero (u : Matrix (Sg j j') (Sg j j') ℂ) :
 
 theorem star_conj_single (d : Matrix (Fin j') (Fin j') ℂ) (a b : Fin j') :
     star (dᴴ *ᵥ Pi.single a 1) ⬝ᵥ (dᴴ *ᵥ Pi.single b 1) = (d * dᴴ) a b := by
-  simp [Matrix.mul_apply, dotProduct, Matrix.mulVec_single_one, Matrix.conjTranspose_apply]
+  simp [Matrix.mul_apply, dotProduct, Matrix.conjTranspose_apply]
 
 end Pure
 

@@ -1,13 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OfSwap2
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SwapSumSwap
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NontrivialIsomClassInt
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ResidueDegreeOfIsClosedImmersion
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFlagCh2EqOfAdjacent
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GradedMetricPullbackIsometric
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RankTwoGradedDeterminantIsometricStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArithmeticVarietyDivisorDimensionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArithmeticHeightPolynomialInDegreesStatement
@@ -41,7 +34,7 @@ def moveExp (n : Fin 5 → ℤ) : Fin 5 → ℤ := ![0, 0, n 2, n 3 + n 0, n 4 +
 theorem aeval_lin_moveExp (n : Fin 5 → ℤ) :
     aeval (![X 3, X 4, X 2, X 3, X 4] : Fin 5 → MvPolynomial (Fin 5) ℝ) (lin fun j => (n j : ℝ)) =
       lin fun j => (moveExp n j : ℝ) := by
-  simp [lin, Fin.sum_univ_five, moveExp, MvPolynomial.algebraMap_eq]
+  simp [lin, Fin.sum_univ_five, moveExp]
   ring
 
 theorem sum_moveExp {G : Type*} [AddCommGroup G] (x : Fin 5 → G) (h₀ : x 0 = x 3) (h₁ : x 1 = x 4) (n : Fin 5 → ℤ) :

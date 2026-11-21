@@ -1,7 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.GelfandTsetlinBranching.ExtremalFacts
 import Formalism.GradedWeylDivisibility.DualWeylDominanceOf
-import Formalism.GradedWeylDivisibility.FockSpaceTableaux.LFocksLemmas
-import Formalism.GradedWeylDivisibility.FockSpaceTableaux.ClosedEqNabla
 
 noncomputable section
 

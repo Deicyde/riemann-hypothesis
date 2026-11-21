@@ -1,5 +1,8 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.AbelianHeightsDuality.ZarhinTrick.FibLamB
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Proofs.ModuliProofs.SmoothOfRelativeDimensionOfCharZero
+import Development.WeilBound.CoreStatements.AbelianHeightsDuality.ZarhinTrick.FibLamA
+import Development.WeilBound.CoreStatements.AbelianHeightsDuality.ZarhinTrick.IsLBZb
 
 set_option autoImplicit false
 

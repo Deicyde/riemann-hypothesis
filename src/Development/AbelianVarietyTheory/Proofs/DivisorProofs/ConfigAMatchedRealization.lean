@@ -1,21 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolEqISupFockDeg
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OffPartLe
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsArchOperatorCompactUnitaryWStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KEqOnId
-import Development.AbelianVarietyTheory.Definitions.Divisors.GenSubHwOfSurjective
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAThetaLiftCompatible
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchActionReadingsCompatible
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAThetaLocalFactorStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LowPartInvariantSubmoduleEquivStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviLiftMaximalCompact
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CartanEigenOrthonormalFrameExists
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolynomialFockSpaceStableArchimedeanMaximalCompaStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntertwinerOfCoef
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedThetaQZeroRealMatrixStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigATripleRepPairIdentityStatement
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -131,7 +117,7 @@ theorem exists_lowType_map : GlobalTheory.ThK.KP → ∀ (F E : Type) [Field F] 
           have e₁ : mat (k₁ * k₁') = mat k₁ * mat k₁' := rfl
           simp only [inv_one, Units.val_one, map_one, one_smul] at hx1 hy1 hx1' hy1'
           refine ⟨GlobalTheory.HwCoef.kInf_mul_mem h1 h1', GlobalTheory.HwCoef.kInf_mul_mem h2 h2', ?_, ?_, ?_⟩
-          · simp only [inv_one, Units.val_one, one_smul]
+          · simp only [Units.val_one, one_smul]
             change mat (k * k') *ᵥ _ = _
             rw [e, ← Matrix.mulVec_mulVec, hx1', hx1]
           · simp only [inv_one, Units.val_one, map_one, one_smul]

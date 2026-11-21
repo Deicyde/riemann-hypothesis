@@ -1,9 +1,8 @@
-import Mathlib
-import Development.AutomorphicArithmetic.AutomorphicVarieties.GaussSumFiltrations.EvenPos
-import Development.AutomorphicArithmetic.AutomorphicVarieties.GaussSumFiltrations.QuadraticGaussSumPowEightEqCardMulRadicalPowFour
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaussSumFiltrations.EvenPosGramFormIntegralLatticeProperties
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaussSumFiltrations.DualLatticeIndexEqDiscrPowMulDetPow
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaussSumFiltrations.ExistsFiniteRepsScaledLatticeCardNorm
+import Mathlib.NumberTheory.SumFourSquares
 
 open NumberField IsDedekindDomain Neutral.B1 Formalism.L2.Host Formalism.ConjugateSelfDual GlobalTheory.CuspRep UpperTheory.V UpperTheory.V.Af UpperTheory.V.Sd GlobalTheory.HilbertThetaSeries
 open scoped Matrix
@@ -237,7 +236,7 @@ theorem gauss_reps {V : Type} [AddCommGroup V] {A B C : AddSubgroup V} {T : Fins
   have hrow : ∀ x : Fin 4 → B ⧸ A.addSubgroupOf B, ∑ i, φ (Φ x i) = ∑ i, -φ (x i) := by
     intro x
     rw [Fin.sum_univ_four, Fin.sum_univ_four, hΦ0, hΦ1, hΦ2, hΦ3]
-    simp only [hφadd, hφsmul, hβadd1, hβadd2, hβz1, hβz2]
+    simp only [hφadd, hφsmul, hβadd1, hβz1, hβz2]
     linear_combination (norm := module) hsφ (x 0) + hsφ (x 1) + hsφ (x 2) + hsφ (x 3)
   have hpow4 : ∀ H : (B ⧸ A.addSubgroupOf B) → ℂ,
       (∑ q, H q) ^ 4 = ∑ x : Fin 4 → B ⧸ A.addSubgroupOf B, ∏ i, H (x i) := by

@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.TensorHomCubes.StabDirectedSystem
+import Mathlib.AlgebraicTopology.SingularHomology.Basic
+import Mathlib.Topology.CWComplex.Classical.Basic
+import Mathlib.Topology.Homotopy.HomotopyGroup
 
 noncomputable section
 

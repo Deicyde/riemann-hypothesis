@@ -1,7 +1,6 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.ChartChg
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ConstantCoeffDmonOfSubMem
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.NabValColumnsCongr
+import Development.AbelianVarietyTheory.Proofs.JetHarmonics.NabValPullbackMonomial
 
 set_option autoImplicit false
 

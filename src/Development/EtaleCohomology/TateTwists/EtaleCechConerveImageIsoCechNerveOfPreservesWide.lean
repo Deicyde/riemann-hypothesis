@@ -1,4 +1,5 @@
-import Development.EtaleCohomology.TateTwists.HypercoverCechComparison
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.IndEtOfForallFinset
 
 open CategoryTheory Limits AlgebraicGeometry Opposite CochainComplex CochainComplex.HomComplex Simplicial TensorProduct GlobalTheory.EtC
 

@@ -1,9 +1,9 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.PotentialsBoundedRegSettingEqReference
-import GroundTheory.HeightsAndTheta.Heights.Regularisation.BoundedStatements
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterSt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.ChartLocalAnalyticTrivializationStatement
 import Development.WeilBound.CoreStatements.PlurisubharmonicCones.ContinuousAtOfHolo
+import Mathlib.Logic.Equiv.Bool
+import Std.Tactic.BVDecide.Normalize.Bool
 
 namespace LevelTowerAlt.Charts
 

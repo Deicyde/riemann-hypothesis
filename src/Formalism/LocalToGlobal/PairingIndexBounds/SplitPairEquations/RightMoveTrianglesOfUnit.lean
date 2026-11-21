@@ -1,5 +1,7 @@
-import Formalism.LocalToGlobal.PairingIndexBounds.SplitPairEquations.EqPOf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.QuadraticSemicharacters.SelfDualCovolume
+import Formalism.LocalToGlobal.PairingIndexBounds.SplitPairEquations.NormOneUnitIdealAlt
 
 noncomputable section
 open NumberField Formalism.BasicNotions Classical

@@ -1,9 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutSH2
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LowVLift
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.AsmCastVCastV
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.ExistsNormBoundThreeFamilies
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.OpApplyZeroNear
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.LevelFormSesquilinearFiniteClass
 
 open MeasureTheory
 open scoped ComplexConjugate
@@ -83,6 +81,6 @@ theorem slice_family_orbital : SliceFamJF := by
     rw [castM_castM_eq_castM_trans _ _ (by omega : 1 + (P.r - (j + 1)) = P.r - j),
       lift_lift_M j (P.r - (j + 1)) (P.r - j) P.r (by omega) (by omega) (by omega)]
   · intro g hg
-    simp [f0, Set.indicator, hg]
+    simp [f0, hg]
 
 end Formalism.FourierDecayAlt.P.CutSH

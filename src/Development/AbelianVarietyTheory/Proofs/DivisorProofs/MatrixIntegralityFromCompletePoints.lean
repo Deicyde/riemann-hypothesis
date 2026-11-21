@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTriSelf
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ExistsChartOfMaximal
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.DividesOfNormBoundedPoints
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ValuationBoundMatrixEntriesStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSphericallyCompleteEmbeddingStatement
 

@@ -1,4 +1,6 @@
-import Formalism.SatakeDualWeyl.StatementC
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SatakeDualWeyl.Statement
 
 noncomputable section
 open Matrix TensorProduct NumberField IsDedekindDomain

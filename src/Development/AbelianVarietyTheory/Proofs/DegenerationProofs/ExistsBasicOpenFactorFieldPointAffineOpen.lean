@@ -1,10 +1,4 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.LawsChart
-import Development.AbelianVarietyTheory.Definitions.AbelianSchemeLaws.FirstCohomologyVanishesSpecOfIsLocalRing
-import Development.AbelianVarietyTheory.Definitions.Degenerations.OfDerivationFnOn
-import Development.AbelianVarietyTheory.Definitions.Degenerations.PlOrdSomeOfAssociated
-import Development.AbelianVarietyTheory.Statements.SemistableTorsion.SemistableFin
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.AlgOverHomSurjective
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry
 open scoped CategoryTheory.Obj
@@ -25,7 +19,7 @@ theorem exists_basicOpen_factor : ∀ (k : Type) [CommRing k] (G : Over (Sp k)) 
   have hp : p ∈ (U : Set (Spec (CommRingCat.of B))) := by
     refine ⟨(algOverHom χ₀).left p₀, ?_⟩
     have := congrArg (fun x => x p₀) hl
-    simp only [Scheme.Hom.comp_apply] at this
+    simp only at this
     exact this.symm
   obtain ⟨_, ⟨e, rfl⟩, he, heU⟩ :=
     PrimeSpectrum.isTopologicalBasis_basic_opens.exists_subset_of_mem_open hp U.isOpen

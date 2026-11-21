@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.OneMapT
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.FWExist
 import Development.AbelianVarietyTheory.Definitions.Divisors.MarkAd
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsWeilDatumOfSplittingCharactersStatement

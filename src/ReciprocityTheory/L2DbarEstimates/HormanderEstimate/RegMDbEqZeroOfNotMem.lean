@@ -1,7 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.L2DbarEstimates.Localization.UnweightBackStatement
-import ReciprocityTheory.L2DbarEstimates.ChartDerivatives.Imports
-import ReciprocityTheory.L2DbarEstimates.WeakHolomorphy.HoloWeakStatement
 import ReciprocityTheory.L2DbarEstimates.WeakHolomorphy.RegGlue
+import ReciprocityTheory.L2DbarEstimates.ChartDerivatives.ChartSymmEventuallyEq
+import ReciprocityTheory.L2DbarEstimates.ChartDerivatives.MeasurableSetImageOfIsLocalHomeomorph
 
 namespace ReciprocityTheory.L2DbarEstimates.F
 
@@ -38,7 +40,7 @@ theorem regM_dbarDir_eq {n : ℕ} (g : V n → ℂ) (y v : V n) :
     apply Complex.ext <;> simp
   rw [hcj]
   simp only [Complex.real_smul, Complex.mul_re, Complex.mul_im, Complex.I_re, Complex.I_im,
-    zero_mul, one_mul, zero_sub, sub_zero, zero_add, Complex.ofReal_neg]
+    zero_mul, one_mul, zero_sub, zero_add, Complex.ofReal_neg]
   linear_combination (((v j).re : ℂ) * L (Complex.I • bas n j) - ((v j).im : ℂ) * L (bas n j) -
     Complex.I * ((v j).im : ℂ) * L (Complex.I • bas n j)) * Complex.I_sq
 

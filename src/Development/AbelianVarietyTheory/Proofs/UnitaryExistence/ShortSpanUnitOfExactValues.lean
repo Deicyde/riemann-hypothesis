@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.ThShort
-import Formalism.LocalToGlobal.ProjectiveLattices.FrameCharts
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.ExistenceTori.StandardFourierShortSpan
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.MultAddMultConjugate
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsPowLeHalfPart

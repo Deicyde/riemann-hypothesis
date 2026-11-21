@@ -1,44 +1,14 @@
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.HeckeActMem
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Actions
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.HeckeActionLevelMemHolds
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Adelstab
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.AdelstabL
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Afsplit
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.AutomorphicFormsDecompositionHolds
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.HeckeAssoc
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.RationalPointsLeHolds
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Bridge
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Cartan
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.ClassSet
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.HeckeConvolutionMemHolds
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.LevelSubgroupFiniteAdelicStandard
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Ecompose
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.FIwasawa
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Fcompose
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.LocalAlgebraInertPrime
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.GlintPrincRelIndexNeZero
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Heckebasic
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.InclusionInjective
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Ipindep
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Levelaf
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Levelv
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Levelvsplit
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.LinSubstIsHomogeneous
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Nabladual
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.SignatureConjugationInvariant
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.SignatureExists
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Spherical
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.SplitUnitaryGroupIso
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Stabfin
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Stabstd
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Stdform
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Tjcosets
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Transport
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Upqcpt
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.DualWeylModuleStable
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Wlocal
-import Formalism.SatakeDualWeyl.NablaRepApply
-import Formalism.SatakeDualWeyl.DualWeylRepApply
 
 namespace Formalism.UG.Final
 
@@ -169,7 +139,7 @@ theorem DosetIndMem : Formalism.UG.DosetIndMem := by
         obtain ⟨h, hh, c, hc, rfl⟩ := DoubleCoset.mem_doubleCoset.mp hx
         exact DoubleCoset.mem_doubleCoset.mpr
           ⟨(a : G) * h, K.mul_mem a.2 hh, c * b, K.mul_mem hc b.2, by simp only [mul_assoc]⟩
-      simp [dosetInd, Set.indicator_apply, hx, hm]
+      simp [dosetInd, hx, hm]
     · have hm : (a : G) * x * b ∉ DoubleCoset.doubleCoset g (K : Set G) (K : Set G) := by
         intro hm
         apply hx
@@ -179,11 +149,11 @@ theorem DosetIndMem : Formalism.UG.DosetIndMem := by
         have hx' : x = (a : G)⁻¹ * ((a : G) * x * b) * (b : G)⁻¹ := by group
         rw [hx', he]
         simp only [mul_assoc]
-      simp [dosetInd, Set.indicator_apply, hx, hm]
+      simp [dosetInd, hx, hm]
   · have hm : x ∈ DoubleCoset.doubleCoset g (K : Set G) (K : Set G) := by
       by_contra h
       apply hx
-      simp [dosetInd, Set.indicator_apply, h]
+      simp [dosetInd, h]
     obtain ⟨h, hh, c, hc, rfl⟩ := DoubleCoset.mem_doubleCoset.mp hm
     exact ⟨g, Finset.mem_singleton_self g, ⟨h, hh⟩, ⟨c, hc⟩, rfl⟩
 theorem HeckeUnit : Formalism.UG.HeckeUnit := by
@@ -195,14 +165,14 @@ theorem HeckeUnit : Formalism.UG.HeckeUnit := by
     rw [finsum_eq_single _ (QuotientGroup.mk 1 : G ⧸ K)]
     · have hmem : (QuotientGroup.mk 1 : G ⧸ K).out ∈ K := (quotient_out_mem_iff_eq_one K _).mpr rfl
       have h1 : dosetInd k K 1 (QuotientGroup.mk 1 : G ⧸ K).out = 1 := by
-        simp [dosetInd, Set.indicator_apply, (mem_doubleCoset_one_iff_mem K _).mpr hmem]
+        simp [dosetInd, (mem_doubleCoset_one_iff_mem K _).mpr hmem]
       simp only [h1, one_mul]
       have h2 := hbi ⟨_, K.inv_mem hmem⟩ 1 g
       simpa using h2
     · intro x hx
       have hn : x.out ∉ K := fun h => hx ((quotient_out_mem_iff_eq_one K x).mp h)
       have h0 : dosetInd k K 1 x.out = 0 := by
-        simp [dosetInd, Set.indicator_apply, (mem_doubleCoset_one_iff_mem K _).not.mpr hn]
+        simp [dosetInd, (mem_doubleCoset_one_iff_mem K _).not.mpr hn]
       simp only [h0, zero_mul]
   · funext g
     unfold conv
@@ -213,7 +183,7 @@ theorem HeckeUnit : Formalism.UG.HeckeUnit := by
           | exact Quotient.out_eq _
       have hk : ((QuotientGroup.mk g : G ⧸ K).out)⁻¹ * g ∈ K := QuotientGroup.eq.mp hq
       have h1 : dosetInd k K 1 (((QuotientGroup.mk g : G ⧸ K).out)⁻¹ * g) = 1 := by
-        simp [dosetInd, Set.indicator_apply, (mem_doubleCoset_one_iff_mem K _).mpr hk]
+        simp [dosetInd, (mem_doubleCoset_one_iff_mem K _).mpr hk]
       simp only [h1, mul_one]
       have h2 := hbi 1 ⟨_, K.inv_mem hk⟩ g
       simpa using h2
@@ -227,7 +197,7 @@ theorem HeckeUnit : Formalism.UG.HeckeUnit := by
           | exact (QuotientGroup.out_eq' x).symm
           | exact (Quotient.out_eq x).symm
       have h0 : dosetInd k K 1 (x.out⁻¹ * g) = 0 := by
-        simp [dosetInd, Set.indicator_apply, (mem_doubleCoset_one_iff_mem K _).not.mpr hn]
+        simp [dosetInd, (mem_doubleCoset_one_iff_mem K _).not.mpr hn]
       simp only [h0, mul_zero]
 theorem HeckeActOne : Formalism.UG.HeckeActOne := by
   intro G _ Γ K k _ W _ _ ρ φ hφ
@@ -240,13 +210,13 @@ theorem HeckeActOne : Formalism.UG.HeckeActOne := by
   rw [finsum_eq_single _ (QuotientGroup.mk 1 : G ⧸ K)]
   · have hmem : (QuotientGroup.mk 1 : G ⧸ K).out ∈ K := (quotient_out_mem_iff_eq_one K _).mpr rfl
     have h1 : dosetInd k K 1 (QuotientGroup.mk 1 : G ⧸ K).out = 1 := by
-      simp [dosetInd, Set.indicator_apply, (mem_doubleCoset_one_iff_mem K _).mpr hmem]
+      simp [dosetInd, (mem_doubleCoset_one_iff_mem K _).mpr hmem]
     simp only [h1, one_smul]
     exact hright ⟨_, hmem⟩
   · intro x hx
     have hn : x.out ∉ K := fun h => hx ((quotient_out_mem_iff_eq_one K x).mp h)
     have h0 : dosetInd k K 1 x.out = 0 := by
-      simp [dosetInd, Set.indicator_apply, (mem_doubleCoset_one_iff_mem K _).not.mpr hn]
+      simp [dosetInd, (mem_doubleCoset_one_iff_mem K _).not.mpr hn]
     simp only [h0, zero_smul]
 theorem HeckeBasis : Formalism.UG.HeckeBasis := by
   intro G _ K k _

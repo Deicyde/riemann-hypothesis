@@ -1,9 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecondChernDensity
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundlePullbackBaseChange
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagPullbackPieceIsoFactor
-import Development.AbelianVarietyTheory.Definitions.QuasicoherentCohomology.InterNumConsEqCokernel
-import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.IsReducedAlgebraOfSmoothOfIsNoetherianRing
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsHtFunGenericIff
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GradedMetricPullbackIsometric
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsFlagModelOfIsIsometry
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ResidueDegreeOfIsClosedImmersion
 open CategoryTheory AlgebraicGeometry TopologicalSpace Filter Topology MeasureTheory Matrix NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open GlobalTheory GlobalTheory.Points GlobalTheory.CxPts GlobalTheory.VB GlobalTheory.HermFrame GlobalTheory.ArInt GlobalTheory.CovTest GlobalTheory.VdmRec GlobalTheory.ArchLim
@@ -59,7 +59,7 @@ theorem isFlagBundle_of_isPullback {P Y B' B : Scheme.{0}} {a : P ⟶ Y} {b : P 
     have hee' : e.hom ≫ (fl'' x).ι i ≫ (Scheme.Modules.pullbackComp t g).hom.app (E x) = _ := hee
     rw [← hee'] at k
     rw [← cancel_mono ((Scheme.Modules.pullbackComp t g).hom.app (E x))]
-    simp only [Iso.trans_hom, Iso.app_hom, Category.assoc]
+    simp only [Category.assoc]
     exact k.symm
   · rintro y ⟨w'', he''⟩
     have w₁ : (y ≫ a) ≫ π = t ≫ g := by rw [Category.assoc, sq.w, ← Category.assoc, w'']

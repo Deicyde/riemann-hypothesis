@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.HasCharSub
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.QuantumDeterminantAntiHomomorphismStatement
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.CommutingLocallyNilpotentCommonKernelStatement
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalFiniteIdem
+import Formalism.RealPlaceAnalysis.ThirdArithmeticHolds
 
 noncomputable section
 

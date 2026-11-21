@@ -1,5 +1,7 @@
-import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.LatIntZero
-import Formalism.LocalToGlobal.KernelLattices.LateralTheory
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GlobalSchurBounds.GeneralLinearActions.IsDiscriminantTwelfthRootOfIdealLattice
+import Mathlib.Analysis.Analytic.IteratedFDeriv
 open NumberField Formalism.BasicNotions Classical Formalism.MainNotions Formalism.MainNotions.TaylorLogMetric Formalism.L2.Ker GlobalTheory.MomN
 
 noncomputable section
@@ -25,7 +27,7 @@ theorem multiIndexFactorial_add_single (n : σ →₀ ℕ) (k : σ) :
       rw [Finsupp.add_apply, Finsupp.single_eq_same, Nat.factorial_succ, if_pos rfl]
       push_cast; ring
     · rw [Finsupp.add_apply, if_neg hi]
-      simp [Finsupp.single_apply, Ne.symm hi]
+      simp [Ne.symm hi]
   rw [Finset.prod_congr rfl fun i _ => h i, Finset.prod_mul_distrib, Finset.prod_ite_eq' Finset.univ k]
   simp
 

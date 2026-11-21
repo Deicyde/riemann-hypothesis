@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.MemParahoricTimesPrincipalCongruenceIff
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.Topology.Sheaves.Presheaf
 
 namespace Formalism.FourierDecayAlt.P.S3x2
 

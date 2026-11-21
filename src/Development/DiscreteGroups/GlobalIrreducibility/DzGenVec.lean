@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.DiscreteGroups.GlobalIrreducibility.DzGenDefs
 import Development.DiscreteGroups.GlobalIrreducibility.DzGenMat
-import Development.DiscreteGroups.GlobalIrreducibility.ValuationUnitriLt
 
 noncomputable section
 

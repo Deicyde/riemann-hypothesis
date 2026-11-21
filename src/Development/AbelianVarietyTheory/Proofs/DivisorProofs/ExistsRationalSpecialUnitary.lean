@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsHaarProd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SignatureUnitaryLatticeFamily
+import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.NotIsCompactUnivFv
 open Formalism.BasicNotions Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix Filter Topology
 open scoped TensorProduct ENNReal
 open GlobalTheory.TamSU GlobalTheory.SUVol GlobalTheory.UCls GlobalTheory.AdLat GlobalTheory.Published GlobalTheory.TamUnf
@@ -16,12 +17,11 @@ theorem cT_transpose_of_herm {E : Type} [Field E] [NumberField E] [IsCMField E] 
     Formalism.UG.cT ((IsCMField.complexConj E).toAlgHom : E →+* E) δ * Gᵀ * δ = Gᵀ := by
   ext i j
   have hij := h (Pi.single j 1) (Pi.single i 1)
-  simp only [herm, mulVec_single_one, transpose_apply, Pi.single_apply] at hij
+  simp only [herm, mulVec_single_one, Pi.single_apply] at hij
   simp only [Formalism.UG.cT, Matrix.mul_apply, transpose_apply, map_apply, Finset.sum_mul] at hij ⊢
   have e : ∀ x, ((IsCMField.complexConj E).toAlgHom : E →+* E) x = cc x := fun x => rfl
-  simp only [Matrix.col_apply, ite_mul, zero_mul, one_mul, Finset.sum_ite_eq', Finset.mem_univ, if_true] at hij
-  simp only [cc, apply_ite (IsCMField.complexConj E), map_one, map_zero, mul_ite, mul_one, mul_zero,
-    Finset.sum_ite_eq', Finset.mem_univ, if_true] at hij
+  simp only [Matrix.col_apply, ite_mul, zero_mul, one_mul] at hij
+  simp only [cc, apply_ite (IsCMField.complexConj E), map_one, map_zero, mul_ite, mul_one, mul_zero] at hij
   have hij' := hij.trans (by simp : _ = G j i)
   rw [← hij']
   refine Finset.sum_congr rfl fun a _ => Finset.sum_congr rfl fun b _ => ?_

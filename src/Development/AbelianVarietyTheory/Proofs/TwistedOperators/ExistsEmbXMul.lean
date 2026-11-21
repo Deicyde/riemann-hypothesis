@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.SimpleSum
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.ValuationDetOfMemKO
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IwasawaBlockTriangular
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.DiagPartMulDiagPart

@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.SecondChernDegreeVanishesTrueSurfaces
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsDualRiemann
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsRiemannDataPull
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsIsometryPullIdComp
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBcFiniteOfIso

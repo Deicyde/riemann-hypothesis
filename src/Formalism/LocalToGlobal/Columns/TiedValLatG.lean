@@ -1,7 +1,7 @@
-import Formalism.LocalToGlobal.Columns.PolyFnLemmas
-import Formalism.LocalToGlobal.Columns.LocWLemmas
-import Formalism.LocalToGlobal.Columns.CoefficientsModP
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.GL6.PBwLocGen
+import Formalism.LocalToGlobal.Columns.CoefficientsModP.PairBDual
 
 open NumberField IsDedekindDomain Module Matrix
 open scoped TensorProduct

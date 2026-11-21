@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsReps
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RealWeilActionCentralCharacter
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HasTemperateGrowthConjPow
 open NumberField IsDedekindDomain MeasureTheory GroundTheory.Global GroundTheory.LocalField GroundTheory.Automorphic Ad3 Ad3.K Ad3.K.QuadraticBaseChangeGL3 Ad3.K.QuadraticBaseChangeGL3.Th
 open GroundTheory.Automorphic.GodementSection (localChar)
 open GroundTheory.Automorphic.Reduction (finAt infAt maxCompact)
@@ -38,7 +36,7 @@ theorem integral_mul_left_volC {z : ℂ} (hz : z ≠ 0) (F : ℂ → ℂ) :
   have hN' : ((Complex.normSq z : ℝ) : ℂ) ≠ 0 := by exact_mod_cast hN.ne'
   unfold volC
   rw [integral_smul_measure, integral_smul_measure, h1]
-  simp only [Complex.real_smul, ENNReal.toReal_ofNat, smul_eq_mul]
+  simp only [Complex.real_smul, ENNReal.toReal_ofNat]
   field_simp
 
 theorem rWR_sim (n : ℤ) {z : ℂ} (hz : z ≠ 0) {r a : ℝ} (hr : r = ‖z‖) (ha : a = r ^ 2)

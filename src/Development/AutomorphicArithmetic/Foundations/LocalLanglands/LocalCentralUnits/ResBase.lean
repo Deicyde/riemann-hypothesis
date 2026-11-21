@@ -1,8 +1,10 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.LocalLanglands.RecTTransport
-import Development.DiscreteGroups.GlobalIrreducibility.DzGalTR
-import Development.DiscreteGroups.GlobalIrreducibility.GalUnitCompat
-import Development.AutomorphicArithmetic.Foundations.LocalLanglands.LocalCentralUnits.FinrankK
 import Development.AutomorphicArithmetic.Foundations.LocalLanglands.LocalCentralUnits.TameRecAll
+import Development.DiscreteGroups.GlobalIrreducibility.DzGalRes
+import Development.DiscreteGroups.GlobalIrreducibility.DzGalW
+import Development.DiscreteGroups.GlobalIrreducibility.DzIneEq
+import Development.DiscreteGroups.GlobalIrreducibility.DzTame
 
 noncomputable section
 

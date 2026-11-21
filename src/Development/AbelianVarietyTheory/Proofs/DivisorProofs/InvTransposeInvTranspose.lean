@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.OneSubOfIsIrreducible
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.WeilTensorLiftConclusion
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ParIndJacPlacing
 
 noncomputable section
 

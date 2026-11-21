@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CountingFormula.UnimodOneGenus
 
 open NumberField Module Formalism.MainNotions.S Formalism.MainNotions.S.Lat Formalism.BasicNotions Formalism.L2.SG.CntLocal
@@ -59,7 +60,7 @@ theorem coord_surj {r : ℕ} {T : E} (F0 : FlagG S r T) :
   intro i x
   have hs : (Pi.single i x : Fin r → E) = x • (Pi.single i 1 : Fin r → E) := by
     ext j
-    by_cases h : j = i <;> simp [Pi.single_apply, h]
+    by_cases h : j = i <;> simp [h]
   rw [hs, map_smul, hc i]
   simp
 
@@ -109,7 +110,7 @@ theorem partner_exists {r : ℕ} {T : E} (F0 : FlagG S r T) (hT0 : T ≠ 0) :
     rw [hT_sub_sum_left]
     simp only [hf1]
     rw [hT_sub_sum_right]
-    simp only [hgeE, mul_ite, mul_one, mul_zero, Finset.sum_ite_eq', Finset.sum_ite_eq, Finset.mem_univ, if_true]
+    simp only [hgeE, mul_ite, mul_one, mul_zero, Finset.sum_ite_eq', Finset.mem_univ, if_true]
     have hs : star (c a b) = S.hT (g a) (g b) / 2 := by
       simp only [c]
       rw [← star_hT_eq_hT_swap (S := S) (g a) (g b)]

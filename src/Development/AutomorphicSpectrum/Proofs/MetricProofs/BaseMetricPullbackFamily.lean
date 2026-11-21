@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.BasePartFlagPt
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.IsNullOfLocallyInZeros
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.BaseVectorProperties
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.PluckerNonvanishingOrbitInvariant
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.BaseChartHolomorphicCompositionStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.SncAdaptedAtlasProjection

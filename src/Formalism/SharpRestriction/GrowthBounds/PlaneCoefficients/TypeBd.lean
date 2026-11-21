@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.TwistedSubstitution.TypeBound
 import Formalism.SharpRestriction.GrowthBounds.GLWeightTheory
 

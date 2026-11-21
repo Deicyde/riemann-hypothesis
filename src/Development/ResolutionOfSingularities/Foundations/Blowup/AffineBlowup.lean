@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.ResolutionOfSingularities.Foundations.Blowup.ReesGrading
+import Mathlib.AlgebraicGeometry.ProjectiveSpectrum.Basic
+import Mathlib.CategoryTheory.Monoidal.Mon
+import Mathlib.Combinatorics.Quiver.ReflQuiver
 open CategoryTheory AlgebraicGeometry
 
 namespace FunctorialResolution.Blowup

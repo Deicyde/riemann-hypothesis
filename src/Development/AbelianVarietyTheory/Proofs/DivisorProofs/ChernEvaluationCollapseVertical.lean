@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.GlobalHeightBoundIffAtGoodPrimes
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsHomogeneousCollapseQ
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.RootLetterInjective
 open CategoryTheory Limits AlgebraicGeometry IsLocalRing MvPolynomial

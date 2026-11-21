@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsUniqueHcharOfFiniteOrder
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ThetaChr
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.HasPartAnd
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LinkRStdTie
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.BuiltCHasPart
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.BundleBothPartsOfStandardKernelOfGlobalArtinReciStatement

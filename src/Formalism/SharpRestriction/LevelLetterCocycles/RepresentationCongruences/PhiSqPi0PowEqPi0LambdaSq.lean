@@ -1,10 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.Pi0MemADelta
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.LemGBInImgIff
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.GammaPi0EqPi0MulUnit
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.ConstantLeRpowOfThreeLe
-import Formalism.SharpRestriction.LevelLetterCocycles.CoordHomMapTrace
-import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.AcoordSumVecMul
 import Formalism.SharpRestriction.LevelLetterCocycles.LocalizationQuotientSeparatedDvd
+import Formalism.SharpRestriction.LevelLetterCocycles.SaturationUnramifiedOfRingCondition
 
 noncomputable section
 
@@ -84,7 +85,7 @@ theorem dvO_single (W : LocWach PD LL O v n) (T : LocLat G Qp LL O) (e : ℕ) {d
   funext m
   by_cases h : m = k
   · subst h; simp
-  · simp [Pi.single_apply, h]
+  · simp [h]
 
 theorem dv_sum (W : LocWach PD LL O v n) (T : LocLat G Qp LL O) (e : ℕ) {d : ℕ} (b : Fin d → W.DD T)
     {I : Type*} (s : Finset I) (a : I → LL) (c₀ : I → Fin d → LL) :
@@ -159,7 +160,7 @@ theorem dv_eq_sum_single (W : LocWach PD LL O v n) (T : LocLat G Qp LL O) (e : �
     (c₀ : Fin d → LL) : dv W T e b c₀ = ∑ m, c₀ m • dv W T e b (Pi.single m 1) := by
   unfold dv
   refine Finset.sum_congr rfl fun m _ => ?_
-  rw [Finset.sum_eq_single m (fun j _ hj => by simp [Pi.single_apply, hj]) (by simp), Pi.single_eq_same,
+  rw [Finset.sum_eq_single m (fun j _ hj => by simp [hj]) (by simp), Pi.single_eq_same,
     one_smul]
 
 theorem filS_anti (W : LocWach PD LL O v n) (T : LocLat G Qp LL O) (a : ZMod n) (s : ℕ) {u u' : ℤ}
@@ -197,7 +198,7 @@ theorem crisMap_dvO (W : LocWach PD LL O v n) {T₁ T₂ : LocLat G Qp LL O} (F 
   simp only [← map_mul, ← map_sum, hSig k]
   by_cases hk : k = k₀
   · subst hk; simp
-  · simp [hk, Pi.single_apply]
+  · simp [hk]
 
 end ArcLengthTwoLifting
 

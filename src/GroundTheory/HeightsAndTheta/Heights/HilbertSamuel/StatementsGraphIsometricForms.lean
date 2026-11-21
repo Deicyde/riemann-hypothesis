@@ -1,7 +1,6 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.MixedFieldContraction.ContractMixedFieldStatement
-import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsArith
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsGraphChangeOfModel
+import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsChangeOfModel
 set_option maxSynthPendingDepth 1
 
 noncomputable section

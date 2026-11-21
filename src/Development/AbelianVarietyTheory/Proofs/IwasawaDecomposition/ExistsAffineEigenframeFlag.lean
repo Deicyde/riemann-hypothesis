@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MonoSpMapRingOfIntegersAlt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ToroidalBoundaryMetricData
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsIsBasisNear
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsBaseChange

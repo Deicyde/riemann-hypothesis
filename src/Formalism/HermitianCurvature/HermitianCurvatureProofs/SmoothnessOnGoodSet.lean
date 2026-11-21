@@ -1,8 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.SandwichRhoAction
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.ChartIntegralLocal
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.SeminormCompletion
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.OrbitalIntegralAeConvergenceContinuity
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.RegularisedPairingViaPhase
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.DilationUnipotentWeylMeasure
 
 open Matrix MeasureTheory Filter Topology
 

@@ -1,14 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Statements.GeometryStatements.FlatDegree
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsCMFrame
 import Development.AutomorphicSpectrum.Proofs.AdelicProofs.HermitianMetricLogNormFormulaStatement
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.GramDetNeZeroLocalBasisCofiniteStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ChowlaSelbergPeriodStatement
-import Development.AutomorphicSpectrum.Proofs.AdelicProofs.LogNormsExtDegreeAdelicStatement
-import Development.AutomorphicSpectrum.Proofs.AdelicProofs.SumEmbeddingsBaseChangeStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.FrameFunctionCmValueStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.FrameFunctionCmHeightStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.FrameFunctionCmNumberFieldStatement
+import Development.AutomorphicSpectrum.Proofs.AdelicProofs.LogNormsExtDegreeAdelic
 
 noncomputable section
 
@@ -64,7 +61,7 @@ theorem flatDegree : FlatDegree := by
   obtain ⟨hNinf, hNfin⟩ := hN
   have hsq : ∀ b : Bool, sgnRt H b ^ 2 = -(H.d : ℂ) := by
     intro b
-    cases b <;> simp [sgnRt, neg_sq, H.sqrt_neg_disc_sq]
+    cases b <;> simp [sgnRt, H.sqrt_neg_disc_sq]
   choose Z x hz hper hxv using fun b => GlobalTheory.T.chowla_selberg_period E H χ hχ (sgnRt H b) (hsq b)
   have hx : x false = x true := Complex.ofReal_injective ((hxv false).trans (hxv true).symm)
   haveI := (Z true).nf

@@ -1,9 +1,4 @@
-import Mathlib
-import Formalism.SharpRestriction.GrowthBounds.WeilJacquetShalikaLaw
-import Formalism.SharpRestriction.ParConsts
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.IsPlaceCofactorValuationLowerBound
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ModelsOK
-import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.SpanPowerMembership.GatTies
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.PrimeDvdAbsNormHalfDifferent
 

@@ -1,5 +1,6 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
 import Development.AbelianVarietyTheory.Definitions.Foundations.RayPrimes
+import Mathlib.Data.Int.Star
 
 namespace GlobalTheory.Mem.An
 

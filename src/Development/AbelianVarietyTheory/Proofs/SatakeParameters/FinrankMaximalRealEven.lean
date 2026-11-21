@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.Imports
+import BuildAid.Leniency.Open
+import PositivityTheory.AutomorphicForms.PublishedInputs.RealGaloisRepresentations.IwahoriSphericalTransfer.FinrankAdjoinSqrtNegOne
 open NumberField
 
 namespace GlobalTheory.RealGal

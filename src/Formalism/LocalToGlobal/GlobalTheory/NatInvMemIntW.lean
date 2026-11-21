@@ -1,5 +1,8 @@
-import Formalism.LocalToGlobal.GlobalTheory.ColValOfTiedSOfFin
-import Formalism.LocalToGlobal.GlobalTheory.ColMemOfIsLocBasis
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.GlobalTheory.GL6.BwAValIntegralNonneg
+import Formalism.LocalToGlobal.GlobalTheory.GL6.PBwLocGlob
+import Formalism.LocalToGlobal.GlobalTheory.GramNDetNe
 
 noncomputable section
 
@@ -176,7 +179,7 @@ theorem locBasis_gamma (hB : B.rho = rhoC D) (w : D.what₂.places.Pl) (c : (D.m
         by_cases hb : b = a
         · subst hb
           exact ⟨1, by simp⟩
-        · exact ⟨0, by simp [Pi.single_apply, hb]⟩⟩
+        · exact ⟨0, by simp [hb]⟩⟩
       rw [SetLike.mem_coe, mem_clsCrd_iff, LinearEquiv.map_smul] at hsm
       have hQ : B.bc c τ ((s : D.host.E) • vcol (Y : Matrix (Fin (D.R.N 0)) (Fin (D.R.N 0)) D.host.E) a) ∈
           (B.Q c τ).L := by

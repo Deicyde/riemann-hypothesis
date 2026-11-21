@@ -1,6 +1,18 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.QuasicoherentCohomology.MemSaturatedOrderIsoSubspaceSpanSymmApply
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.FinrankMulDiscrRpowLeSumSqOfMemTraceDual
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.Analysis.Matrix.PosDef
+import Mathlib.GroupTheory.FiniteAbelian.Basic
+import Mathlib.LinearAlgebra.LinearIndependent.BaseChange
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.TotallySplit
 
 open NumberField Module Matrix
 open scoped ComplexOrder ComplexConjugate

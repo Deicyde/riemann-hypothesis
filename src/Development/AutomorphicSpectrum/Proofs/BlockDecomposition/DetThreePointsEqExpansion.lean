@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.LocalWhittakerDuality.WhittakerFunctionalEquationAdditive
 import GroundTheory.HeightsAndTheta.Theta.WeilNonarchProps
 open MeasureTheory Matrix GroundTheory.LocalField GroundTheory.Automorphic Ad3 Ad3.K.GL2LocalData
@@ -14,7 +15,7 @@ variable {F : Type} [Field F] [ValuativeRel F] [TopologicalSpace F] [IsNonarchim
 theorem det_three_points_eq_expansion (h : GL (Fin 2) F) :
     (!![h.val 0 0, h.val 0 1, 0; h.val 1 0, h.val 1 1, 0; 0, 0, 1] : Matrix (Fin 3) (Fin 3) F).det
       = (h.val).det := by
-  simp [Matrix.det_succ_row_zero, Fin.sum_univ_succ, Matrix.det_fin_two, Fin.succAbove]
+  simp [Matrix.det_succ_row_zero, Fin.sum_univ_succ, Fin.succAbove]
 
 theorem det_ne (h : GL (Fin 2) F) : (h.val).det ≠ 0 :=
   ((Matrix.isUnit_iff_isUnit_det _).1 h.isUnit).ne_zero

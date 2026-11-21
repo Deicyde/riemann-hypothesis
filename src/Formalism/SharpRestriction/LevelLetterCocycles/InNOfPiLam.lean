@@ -1,4 +1,7 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.SecOfP
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.LevelLetterCocycles.HorTrExists
+import Formalism.SharpRestriction.LevelLetterCocycles.HorTrUnique
 
 noncomputable section
 

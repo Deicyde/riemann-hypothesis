@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.KummerSequence.LeafKumMuSurjPf
+import Mathlib.RingTheory.Etale.StandardEtale
 
 open Polynomial CategoryTheory Limits AlgebraicGeometry Opposite GlobalTheory.EtC
 noncomputable section

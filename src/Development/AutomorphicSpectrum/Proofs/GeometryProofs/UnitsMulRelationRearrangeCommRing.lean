@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.JetLeftMem
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.FrobeniusGeneratorCorrespondenceStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.GermTorsionLiftCompatStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.GermFrobeniusTorsionSectionStatement

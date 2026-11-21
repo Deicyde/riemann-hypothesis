@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.SpanPowerMembership
 import Formalism.LocalRingCardinality.SpanPowerMembership.RankRecordRowDimensionZero
 import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension

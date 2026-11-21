@@ -1,9 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.PbRadHeadOf
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ModuleFormEqRadialFormOne
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.AsmCastVCastV
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.MemLevelZeroOfMemGroup
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.WCellMemOmPlus
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.DirectionsInParabolic
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.RadicalUnipotentFirstBasisEqOne
 
 open Matrix MeasureTheory

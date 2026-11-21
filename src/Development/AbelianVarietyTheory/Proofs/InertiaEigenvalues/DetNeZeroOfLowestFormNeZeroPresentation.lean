@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.VecPairApply
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.DetMemSpanAdjugate
+import Mathlib.Data.Matrix.ColumnRowPartitioned
 
 open Matrix GlobalTheory.NewPrime
 

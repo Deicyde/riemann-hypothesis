@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LatticeBasics.ExistsIsGauss
+import Development.WeilBound.ThetaLifts.ConeHypotheses.PolDense
 
 noncomputable section
 

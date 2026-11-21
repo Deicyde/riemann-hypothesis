@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.ExistenceOfLattices.UnivFrame
+import Mathlib.RingTheory.Polynomial.IsIntegral
 open GlobalTheory.Frames
 
 namespace GlobalTheory

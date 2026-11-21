@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.CyclicCup
-import GroundTheory.TateCohomology.InfRes
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

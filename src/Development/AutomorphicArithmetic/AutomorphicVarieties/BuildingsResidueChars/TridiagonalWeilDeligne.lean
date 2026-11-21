@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.WdDefs
 
 noncomputable section
@@ -80,6 +80,6 @@ theorem tridiagonal_weil_deligne : UpperTheory.V.Af.Wd.TriDiag := by
   rw [LinearMap.toMatrix_apply, h3, map_smul, Basis.repr_self, Matrix.diagonal_apply]
   by_cases h : i = j
   · subst h; simp
-  · simp [h, Finsupp.single_apply, Ne.symm h]
+  · simp [h]
 
 end UpperTheory

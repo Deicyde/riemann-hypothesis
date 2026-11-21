@@ -1,5 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.DivisibilityProofs.PureEqPureA
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
+import Mathlib.Topology.Algebra.Module.FiniteDimensionBilinear
 open NumberField IsDedekindDomain MeasureTheory Filter Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun
 open scoped TensorProduct SchwartzMap LineDeriv
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField

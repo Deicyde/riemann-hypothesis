@@ -1,7 +1,6 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsNefSectionsAsymptotic
-import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsNefSectionGrowth
-import GroundTheory.HeightsAndTheta.Heights.HeightKernels.PCoordConeArithVar
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsKodairaGeneric
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.HilbertSamuel

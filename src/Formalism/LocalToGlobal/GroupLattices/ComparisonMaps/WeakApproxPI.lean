@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.WeakApproxDVR
 import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.MRatSpanOfWeak
-import Formalism.PeriodIntegrals.WeakApproxDVR
 
 open Formalism.MainNotions.G
 

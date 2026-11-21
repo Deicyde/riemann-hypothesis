@@ -1,9 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolEqISupFockDeg
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ParaSpan
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAMatchedDescentStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeckeLineDerivativeExistsStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsLieDerivativePolynomialFockSeesawStatement
@@ -32,7 +28,7 @@ theorem frobInf_eq_of_lowPart : GlobalTheory.ThK.KP → ∀ (F E : Type) [Field 
     have hx : x ∈ LinearMap.ker (φ' - c • φ) := h (htop ▸ Submodule.mem_top)
     simpa [sub_eq_zero] using hx
   refine sInf_le ⟨fun x hx => ?_, ?_⟩
-  · simp [sub_eq_zero, hc x hx]
+  · simp [hc x hx]
   rintro γ hγ hP f hf f₁ hd hpf
   simp only [LinearMap.mem_ker, LinearMap.sub_apply, LinearMap.smul_apply, sub_eq_zero] at hpf ⊢
   rcases hP with hu | ⟨γ₁, hγ₁, t, ht⟩

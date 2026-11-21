@@ -1,4 +1,40 @@
-import Mathlib
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
 open IsLocalRing
 
 namespace GlobalTheory.CoordsAlg
@@ -35,7 +71,7 @@ theorem coords_of_derivation_basis : ∀ (R A : Type) [CommRing R] [IsLocalRing 
     { toFun := fun x => dv a x
       map_add' := fun x y => hadd a x y
       map_smul' := fun r x => by
-        simp only [Submodule.coe_smul_of_tower, Algebra.smul_def, RingHom.id_apply, smul_eq_mul]
+        simp only [Submodule.coe_smul_of_tower, Algebra.smul_def, RingHom.id_apply]
         exact hsmul a r x }
   let ℓ : Fin n → Module.Dual R I.Cotangent := fun a => cotFun I (fa a) (fun x hx => hI2 a x hx)
   have hℓ : ∀ a (x : I), ℓ a (I.toCotangent x) = dv a x := fun _ _ => rfl
@@ -88,7 +124,7 @@ theorem coords_of_derivation_basis : ∀ (R A : Type) [CommRing R] [IsLocalRing 
       simp only [D]
       rw [key]
       simp only [map_add, LinearMap.map_smul_of_tower, hw0,
-        map_zero, add_zero, map_smul, smul_eq_mul]
+        add_zero, map_smul, smul_eq_mul]
     obtain ⟨c, hc, -⟩ := huniq D Dadd Dmul Dalg
     refine ⟨c, ?_⟩
     ext w
@@ -118,7 +154,7 @@ theorem coords_of_derivation_basis : ∀ (R A : Type) [CommRing R] [IsLocalRing 
     rw [this]
     by_cases h : a = i
     · subst h; simp
-    · simp [h, Pi.single_apply, Ne.symm h]
+    · simp [h, Ne.symm h]
   choose y hy using fun i => I.toCotangent_surjective (w i)
   have hzI : ∀ i, (y i : A) ∈ I := fun i => (y i).2
   have hdz : ∀ a i, dv a (y i : A) = if a = i then 1 else 0 := by

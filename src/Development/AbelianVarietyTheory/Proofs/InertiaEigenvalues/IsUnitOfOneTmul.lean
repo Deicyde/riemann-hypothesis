@@ -1,17 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.BhattScholzeCrystallineLattices
-import Formalism.LocalRingCardinality.AdicCompletionLocal.LocTied
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.ConvZero
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.WachInclusionInjectiveSaturatedInterStatement
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsWittTiltLatticeTensorCancelStatement
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.WittTwistInvariantBasisChangeStatement
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsWachPrismOverIntegersStatement
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsCrysLatOfTrivial
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.PrismaticFCrystalValueLocalPrismAinfWittTensorStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsAdicCoordinatesOfBasisModPStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsBaseChangeLatticeOfBasisAfterExtensionStatement
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsIsUnitMatrixOfPowSmulSpanInvertStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ProjectiveOfFreeLatticeOverFiniteFreeRingStatement
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.ExistsOfLayers
+import Mathlib.RingTheory.LocalProperties.Reduced
 
 noncomputable section
 
@@ -449,7 +443,7 @@ theorem perfect_tilt {l : ℕ} [Fact l.Prime] : PerfectRing (Cb l) l := by
   obtain ⟨a', rfl⟩ := surjective_frobenius (OCb l) l a
   obtain ⟨b', rfl⟩ := surjective_frobenius (OCb l) l b
   refine ⟨algebraMap _ _ a' / algebraMap _ _ b', ?_⟩
-  simp [frobenius_def, div_pow]
+  simp [frobenius_def]
 
 theorem exists_basis_OL {l : ℕ} [Fact l.Prime] (LL : FinExt l) :
     ∃ d, Nonempty (Module.Basis (Fin d) ℤ_[l] ↥(OL LL)) := by

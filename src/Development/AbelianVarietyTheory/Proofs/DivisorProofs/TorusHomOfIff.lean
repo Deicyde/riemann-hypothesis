@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsGenOfIso
-import Development.AbelianVarietyTheory.Definitions.Uniformization.AllDV
+import Development.AbelianVarietyTheory.Definitions.Uniformization.TXFrame
 
 noncomputable section
 

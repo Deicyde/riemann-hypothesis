@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.AlgebraicTheory.StatementA
-import Formalism.LocalToGlobal.TorsionIntegrality.TorsionTranslationPowers.StatementA
-import Formalism.LocalToGlobal.TorsionIntegrality.EisensteinTranslationProducts.EisensteinS2LimitFormula
+import Formalism.LocalToGlobal.TorsionIntegrality.UniformGaussModels.GoodModelAll
 
 noncomputable section
 open scoped BigOperators

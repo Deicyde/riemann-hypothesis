@@ -1,4 +1,5 @@
-import Development.EtaleCohomology.WeilConjectures.PurityCut
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.GalMapMul
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry Opposite GlobalTheory.EtC CochainComplex.HomComplex

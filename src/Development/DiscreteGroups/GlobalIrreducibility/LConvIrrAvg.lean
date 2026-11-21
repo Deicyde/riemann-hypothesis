@@ -1,4 +1,8 @@
-import Development.DiscreteGroups.GlobalIrreducibility.LConvIrrComm
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.SmoothPartStable
+import Development.DiscreteGroups.GlobalIrreducibility.LConvIrrPre
+import Mathlib.Order.CompletePartialOrder
 
 noncomputable section
 

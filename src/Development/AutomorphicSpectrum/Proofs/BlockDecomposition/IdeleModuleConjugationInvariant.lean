@@ -1,5 +1,10 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.OfE
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.TensorLocallyCompactRingStatement
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdelicLocalCompactness.AdeleLC
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerVolume.TopoAF
+import GroundTheory.GlobalFields.TateThesis.AdeleScaling
+import GroundTheory.IdeleRoots.TorusPowers.HeckeTensor
 
 open HeckeCharacterZeroLocus.SiegelWeilU GlobalTheory.CompanionTheory.SW NumberField IsDedekindDomain MeasureTheory Topology Filter PositivityTheory.Rg.Base1 GroundTheory.Global GlobalTheory.CompanionTheory.SW.RankOneSiegelWeil
 open GroundTheory.Global.AdeleBaseChange

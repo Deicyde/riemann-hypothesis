@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.HermitianTraceFormVanishing
-import ReciprocityTheory.SemistableReduction.TorsionNonvanishStatement
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Algebra.Module.Lattice
+import Mathlib.RingTheory.DedekindDomain.Different
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.FundamentalDomainPointBound
 
 namespace GlobalTheory
 

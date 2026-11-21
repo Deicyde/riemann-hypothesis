@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.LocalRepresentationL2
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.FormsClosure
 import GroundTheory.AutomorphicForms.L2LocalComponents
 

@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CanonicalOfAbelianDeRham
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WedgeOrdVpBaseChangeOfNeBot
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.SabComp
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.BCTools
 
 set_option autoImplicit false
 
@@ -124,7 +122,7 @@ def extDP (κ : DividedPowers I) : DividedPowers (I.comap (pr R M)) where
     ext
     · simp [κ.dpow_comp hn hx']
     · simp only [snd_add, snd_inl, snd_inr, zero_add, snd_mul, fst_add, fst_inl, fst_inr, add_zero,
-        op_smul_eq_smul, smul_smul, dpPred_dpow κ hx' m hn, fst_natCast, snd_natCast, smul_zero]
+        smul_smul, dpPred_dpow κ hx' m hn, fst_natCast, snd_natCast, smul_zero]
 
 variable {M}
 

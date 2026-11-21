@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.GaussianSeminormBounds.RealSeminormFiltration.RLLieB
 import Development.WeilBound.CoreStatements.GaussianSeminormBounds.RealSeminormFiltration.RLLieC
 
@@ -34,7 +35,7 @@ variable {l : Type} [Fintype l] [DecidableEq l]
 
 theorem sympl_eq (w w' : l ⊕ l → ℝ) : sympl w w' = -(w ⬝ᵥ Matrix.J l ℝ *ᵥ w') := by
   simp [sympl, pPart, qPart, dotProduct, Fintype.sum_sum_type, Matrix.J, Matrix.fromBlocks_mulVec,
-    PiLp.inner_apply, Finset.sum_sub_distrib, Matrix.neg_mulVec, Matrix.one_mulVec, Finset.sum_neg_distrib]
+    PiLp.inner_apply, Matrix.neg_mulVec, Matrix.one_mulVec, Finset.sum_neg_distrib]
   simp only [mul_comm]
   ring
 

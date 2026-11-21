@@ -1,10 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenIntertwinerGoodModelsStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUniqueLeviElementStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousLeviStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenIntertwinerRestrictionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SkewAdaptedPairTransferStatement
 
 open scoped TensorProduct NNReal Matrix

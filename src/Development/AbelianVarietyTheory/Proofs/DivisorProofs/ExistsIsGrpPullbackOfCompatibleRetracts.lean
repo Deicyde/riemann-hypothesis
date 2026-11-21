@@ -1,9 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.NotSymEOfNe
-import Development.AbelianVarietyTheory.Definitions.Divisors.UnifAlong
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SemiAbelianDirectFactorOfIdempotentStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HodgeLineBundleEighthPowerIsoPowStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SemiAbelianHomExtensionHolds
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.SabPull
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open GlobalTheory GlobalTheory.Toroidal GlobalTheory.LocM GlobalTheory.PolFan GlobalTheory.ZM GlobalTheory.SiegelTor GlobalTheory.ZH GlobalTheory.UMin GlobalTheory.SiegTh Classical
@@ -48,7 +45,7 @@ theorem exists_isGrpPullback_of_retracts : ∀ {S S' B : Scheme.{0}} (j : S' ⟶
         · simp only [Category.assoc, mψ, h₂, pullback.lift_fst_assoc, pk]
         · simp only [Category.assoc, mh, we', pullback.lift_snd, hφ.1.lift_snd]
       rw [reassoc_of% hm, reassoc_of% h₁, hφ.1.lift_fst_assoc, ← ri]
-      simp only [Category.assoc, reassoc_of% ir, ir, Category.comp_id]
+      simp only [Category.assoc, ir, Category.comp_id]
     · intro s
       exact pullback.lift_snd _ _ _
     · intro s n hn1 hn2

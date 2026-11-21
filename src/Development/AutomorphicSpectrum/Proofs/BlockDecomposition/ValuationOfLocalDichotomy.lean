@@ -1,5 +1,4 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.AcrisKummerUnits.Splits
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IdempotentLocalInduction
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MemIdempotentComplementIff
 

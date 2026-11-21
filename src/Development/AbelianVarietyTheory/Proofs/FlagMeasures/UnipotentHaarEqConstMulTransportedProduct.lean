@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ConstC
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.AmpWinGlob
+import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.GoodLoc
 
 noncomputable section
 open scoped Classical ENNReal

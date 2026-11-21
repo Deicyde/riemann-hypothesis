@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SimpleOver
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.Topology.Sheaves.Presheaf
 
 open scoped TensorProduct
 

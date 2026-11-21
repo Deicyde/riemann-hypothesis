@@ -1,5 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.IsWeaklyRegularMapCAppendMapLinForm
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.Polynomial.Basic
 
 open MvPolynomial
 
@@ -278,7 +283,7 @@ theorem weight_blockWeight [Fintype σ] (d : β × σ →₀ ℕ) (i : β) :
     by_cases h : k = i
     · subst h
       simp [Finsupp.weight_single, blockWeight, Finsupp.single_apply]
-    · simp [Finsupp.weight_single, blockWeight, Finsupp.single_apply, h, Ne.symm h]
+    · simp [Finsupp.weight_single, blockWeight, Ne.symm h]
 
 theorem isBlockHomogeneous_iff [Fintype σ] {f : MvPolynomial (β × σ) K} {a : β → ℕ} :
     IsBlockHomogeneous f a ↔ ∀ d ∈ f.support, ∀ i, ∑ j, d (i, j) = a i := by

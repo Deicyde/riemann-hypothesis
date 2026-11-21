@@ -1,9 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecondChernDensity
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.JacobianDensityHermitianMetrics
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.JacobiDensityWeightedThetaIntegralZero
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagDegreeEqFormDegree
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VandermondeWeightedRootProductSum
 open Filter Topology MeasureTheory Matrix
 open GlobalTheory GlobalTheory.HermFrame GlobalTheory.ArInt GlobalTheory.VdmRec GlobalTheory.ArchLim
 open GlobalTheory.MixDens (emb jacDens)
@@ -113,7 +110,7 @@ theorem normal_coords_base : ∀ (n r D : ℕ) (ε : Fin D ≃ Fin n ⊕ Low r) 
   have hbL : ∀ v, base ε v = bL v := fun v => rfl
   have hbLv : ∀ ξ : V D, bL ξ = ∑ a, ξ (ε.symm (.inl a)) • bas n a := fun ξ => by
     ext b
-    simp [← hbL, base, bas, EuclideanSpace.single_apply, Pi.single_apply]
+    simp [← hbL, base, bas, Pi.single_apply]
   let X : V D → Matrix (Fin r) (Fin r) ℂ := fun v => uni (fib ε v)
   have hX : ∀ b c, ContDiff ℂ 2 (fun v => X v b c) := by
     intro b c
@@ -218,13 +215,13 @@ theorem normal_coords_base : ∀ (n r D : ℕ) (ε : Fin D ≃ Fin n ⊕ Low r) 
           rintro ⟨rfl, rfl⟩
           exact h t.2
       rw [hconn, hbL0, conn_zero_vec, Matrix.zero_mul, zero_add, hD, Matrix.mul_inv_rev]
-      simp [mul_apply, ite_and, Finset.sum_ite_eq', Finset.sum_ite_eq]
+      simp [mul_apply, ite_and, Finset.sum_ite_eq']
     have hM : (Matrix.of fun k j => Lc (ε k) (EuclideanSpace.single j 1)).submatrix ε.symm ε.symm =
         fromBlocks 1 0 (Matrix.of fun (s : Low r) (b : Fin n) => Lc (.inr s) (EuclideanSpace.single (ε.symm (.inl b)) 1))
           (Matrix.of fun s t : Low r => (T⁻¹ * (uni x)⁻¹) s.1.1 t.1.1 * T t.1.2 s.1.2) := by
       ext (a | s) (b | t)
-      · simp [Lc, EuclideanSpace.single_apply, one_apply]
-      · simp [Lc, EuclideanSpace.single_apply]
+      · simp [Lc, one_apply]
+      · simp [Lc]
       · simp [Lc]
       · simp only [submatrix_apply, of_apply, Equiv.apply_symm_apply, fromBlocks_apply₂₂, Lc, Sum.elim_inr]
         exact hsame s t
@@ -317,7 +314,7 @@ theorem normal_coords_base : ∀ (n r D : ℕ) (ε : Fin D ≃ Fin n ⊕ Low r) 
     conv_lhs => rw [Finset.sum_comm]
     refine Finset.sum_congr rfl fun a _ => Finset.sum_congr rfl fun b _ => ?_
     rw [GlobalTheory.CurveDens.cHess_apply_eq_ddbar hψc0 a b]
-    simp only [bas, Complex.star_def, RingHom.id_apply]
+    simp only [bas, Complex.star_def]
     ring
 
 end GlobalTheory.ArchLim.NormalBase

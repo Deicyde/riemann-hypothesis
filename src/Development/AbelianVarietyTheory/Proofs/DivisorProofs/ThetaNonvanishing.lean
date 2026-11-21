@@ -1,18 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsPairOfIsTriple
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConstantTermsVanishStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BigConstantTermConeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SmallConstantTermConeStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaEvaluationZeroConeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AnalyticNonvanishingStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SplitExistenceStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaStabilizerExistsStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaTowerPropertiesStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsNonzeroThetaRelevantStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NonzeroDualThetaRelevantSoStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLeviElementSkewCmStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigATripleEigenFactorStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBTripleEigenFactorStatement
 
@@ -59,7 +51,7 @@ theorem claimV (hK : GlobalTheory.ThK.KP) (n : ℕ) : ∀ (F E : Type) [Field F]
     have hx0 : (0, 0) = x := hu (0, 0) (by rw [h0]; exact split2_zero _ _ _)
     have := hCT X om om' om₁ om₁' hT' hT₁ Φ hΦ x.1 x.2 hx h₁ m hm 1
     rw [← hx0] at this
-    simp only [LinearMap.map_zero, Prod.snd_zero] at this
+    simp only at this
     erw [om_one] at this
     rw [mul_one] at this
     simpa [hC0] using this.symm

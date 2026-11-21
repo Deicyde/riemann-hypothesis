@@ -1,7 +1,9 @@
-import Formalism.SharpRestriction.CuspSpanNormBounds.PairOfInputs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.ExpansionFromLemmaB
 import Formalism.SharpRestriction.CuspSpanNormBounds.LowestKTypeMultiplicity
 import Formalism.SharpRestriction.CuspSpanNormBounds.UnimodularSchurMeasures.SmoothVectorsTranslateUnitary
+import Formalism.SharpRestriction.CuspSpanNormBounds.DoubleBoundAndExtensionOfSmooth
 
 open MeasureTheory Matrix Finset
 open scoped InnerProductSpace ContDiff

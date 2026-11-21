@@ -1,4 +1,5 @@
-import ReciprocityTheory.AnalyticForms.RegularLocalRings.StalkLoc
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.IsOpenAlt
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.ExistsMulMemOfAlgebraMapLocRingEqZero
 

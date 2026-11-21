@@ -1,8 +1,13 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatrixExistsCommonEigenvectorMemStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiniteJointEigensystemsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsMatricesIntertwiningOfSemilinearStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormEigenvalueLeOneOfEntries
+import Mathlib.LinearAlgebra.Matrix.Charpoly.Eigs
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import Mathlib.RingTheory.Henselian
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Matrix
 

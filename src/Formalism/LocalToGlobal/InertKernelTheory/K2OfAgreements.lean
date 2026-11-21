@@ -1,5 +1,5 @@
-import Formalism.SharpRestriction.GrowthBounds.FormalGroupSystem
-import Formalism.LocalToGlobal.GroupLattices.PerfectRings.IntermediateMapWittQuadratic
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.KernelLattices.FirstKernelLawReading
 import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.IsComplRatCompl
 

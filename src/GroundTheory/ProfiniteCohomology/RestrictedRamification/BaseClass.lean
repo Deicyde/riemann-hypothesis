@@ -1,11 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.BaseKummerDefs
-import GroundTheory.ProfiniteCohomology.RestrictedRamification.SInvariantToInvariantsEqZeroIff
-import GroundTheory.ProfiniteCohomology.RestrictedRamification.SPicFinite
-import GroundTheory.ProfiniteCohomology.RestrictedRamification.ClassFieldGSPresentation
-import GroundTheory.ProfiniteCohomology.CyclicCupProf
-import GroundTheory.ProfiniteCohomology.LocalTateDuality.Bockstein
-import GroundTheory.ProfiniteCohomology.InflationRestriction.DegreeOne
 import GroundTheory.ProfiniteCohomology.CompactSupportCohomology.ConePairing
 set_option maxSynthPendingDepth 1
 

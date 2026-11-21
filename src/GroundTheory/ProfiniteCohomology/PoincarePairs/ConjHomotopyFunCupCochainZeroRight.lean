@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.MackeyFormula.ConjHomotopy
 import GroundTheory.TateCohomology.CupCochains
 set_option maxSynthPendingDepth 1

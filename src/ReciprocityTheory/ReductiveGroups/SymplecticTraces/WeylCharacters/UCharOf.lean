@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.SymplecticTraces.WeylCharacters.Statement
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.HighestWeights.BranchModel
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.HighestWeights.ContinuousTorepK

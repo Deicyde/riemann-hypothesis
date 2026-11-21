@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsPairingStdP
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairRApply
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzFunctionalIntegralComm
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzIntegralOfIntegrableBounds
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchrodingerActionContinuousStatement

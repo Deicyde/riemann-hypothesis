@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.AutomorphicTheory.LocalBesselUniqueness.OpLocal
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.BigCellHermitian
 

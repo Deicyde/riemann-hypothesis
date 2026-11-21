@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsGluedLineBundleSectionCover
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsHeatOperatorGluedPullbackBundlePower
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G.Semi
 open GlobalTheory.KS (rsT)
 set_option maxHeartbeats 1000000 in

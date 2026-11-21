@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ContDiffUncentre
-import ReciprocityTheory.AnalyticForms.PotentialTheory.PshShiftA
+import BuildAid.Leniency.Open
+import ReciprocityTheory.AnalyticForms.MaIntEmpty
 
 noncomputable section
 

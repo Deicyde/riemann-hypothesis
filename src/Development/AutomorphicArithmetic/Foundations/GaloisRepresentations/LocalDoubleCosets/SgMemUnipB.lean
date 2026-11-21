@@ -1,6 +1,9 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.WhittakerOrbit
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.TwistedLocalOrbits.HoweSpace
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.NonemptyEquivMultiProdOne
+import GroundTheory.AutomorphicForms.LocallyConstantCompact
 
 noncomputable section
 

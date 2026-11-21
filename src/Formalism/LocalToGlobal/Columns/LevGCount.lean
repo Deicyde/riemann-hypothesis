@@ -1,6 +1,14 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.GenericUnipotentCharacter
-import Formalism.GL3MeanSquares.HookFormulaTorsion.DimensionMassJointBound
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Analysis.SpecialFunctions.Complex.CircleAddChar
+import Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Card
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
 
 noncomputable section
 
@@ -974,7 +982,7 @@ theorem diagEmb_mulVec_snoc {n : ℕ} (h : GL (Fin n) κ) (v : Fin n → κ) (c 
   show (diagMat n (n + 1) (h : Matrix (Fin n) (Fin n) κ)).mulVec (Fin.snoc (α := fun _ => κ) v c) = Fin.snoc (α := fun _ => κ) ((h : Matrix (Fin n) (Fin n) κ).mulVec v) c
   ext i
   refine Fin.lastCases ?_ (fun i => ?_) i
-  · simp [Matrix.mulVec, dotProduct, Fin.sum_univ_castSucc, diagMat, Matrix.one_apply]
+  · simp [Matrix.mulVec, dotProduct, diagMat, Matrix.one_apply]
   · simp [Matrix.mulVec, dotProduct, Fin.sum_univ_castSucc, diagMat, Matrix.one_apply, (Fin.castSucc_lt_last i).ne]
 
 end More

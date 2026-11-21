@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.BlockHeckeSlices.SliceShift
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.BlockHeckeSlices.CommuteCenterRtInfGL
 import Development.AutomorphicArithmetic.Foundations.Convolution.BlockHeckeSlices.CuspidalNormBounds.AbsFar
 

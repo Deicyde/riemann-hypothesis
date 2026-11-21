@@ -1,9 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.ShortVectorBound.ScaledLatticesInSupLattices
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.RingsOfIntegers.ThetaGeneratorPlaceValuationBoundStatement
 import Development.AbelianVarietyTheory.Proofs.RingsOfIntegers.RamifiedPrimeLossLeValuationPrimePowerStatement
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.HolomorphicFamilies.WeightAssemblyClause
-import Formalism.LocalToGlobal.ProjectiveLattices.CrudeVal
 
 set_option autoImplicit false
 

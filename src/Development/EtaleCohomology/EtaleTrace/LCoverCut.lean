@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleTrace.LadicH0LocallyConstant
+import Mathlib.Order.CompletePartialOrder
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry MvPolynomial

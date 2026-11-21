@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.LocalPrimeGaloisActionPeriodT
 import Development.WeilBound.CoreStatements.CrystallinePeriodRings.MaximalIdealEqSpanT
 import GroundTheory.PAdicHodge.WAKummerEps

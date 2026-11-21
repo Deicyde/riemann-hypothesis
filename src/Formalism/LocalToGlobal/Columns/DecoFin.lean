@@ -1,8 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.StdLatUnimodular
 import Formalism.LocalToGlobal.Columns.BaseLemmas
 import Formalism.HermitianLattices.FinalNeighbourConstruct
 import Formalism.SatakeDualWeyl.KpqSubgroupCompact
+import Formalism.HermitianLattices.HermitianLatticesProofs.NeighbourConstruct
 
 open NumberField IsDedekindDomain Module
 
@@ -880,7 +882,7 @@ variable {E : Type} [Field E] [NumberField E] [StarRing E] {n : ℕ}
   simp [eLast]
 
 @[simp] theorem eLast_castSucc (i : Fin n) : eLast E n i.castSucc = 0 := by
-  simp [eLast, Pi.single_apply, Fin.castSucc_ne_last]
+  simp [eLast, Fin.castSucc_ne_last]
 
 @[simp] theorem initL_eLast : initL E n (eLast E n) = 0 := by
   funext i

@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.LocalEmbeddings.ConeBDefs
+import Mathlib.RingTheory.Complex
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Topology.Separation.CompletelyRegular
 open MeasureTheory FreeSingleHomotopyEquivDiscreteChains.UpperTheory.Dv.ConeB
 
 namespace FreeSingleHomotopyEquivDiscreteChains.UpperTheory.Dv.ConeB.Tate

@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.UnitsLiftSpec
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsUniqueHcharOfFiniteOrder
+import Formalism.LocalToGlobal.NormalizedHeckeFactors.CoverStd
 open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formalism.ConjugateSelfDual ReciprocityTheory.Gal ReciprocityTheory.Aut Formalism.AUTREP Formalism.L2 Formalism.L2.Host Formalism.L2.NT Formalism.IndefR.NX GlobalTheory.HeightCounting NumberField IsDedekindDomain Polynomial
 open Formalism.L2.Fam.NPC Formalism.L2.Fam.NPC.BaseC GlobalTheory.HeckeLocN
 
@@ -18,7 +19,7 @@ theorem coeff_prod_isIntegral (m : Multiset ℂ) (hm : ∀ a ∈ m, IsIntegral �
     rw [Multiset.map_cons, Multiset.prod_cons, coeff_mul]
     refine IsIntegral.sum _ fun x _ => IsIntegral.mul ?_ (ih hm' _)
     rw [coeff_sub, coeff_X, coeff_C]
-    split_ifs <;> simp [isIntegral_one, isIntegral_zero, ha.neg, isIntegral_one.sub ha, ha]
+    split_ifs <;> simp [isIntegral_one, isIntegral_zero, ha.neg, isIntegral_one.sub ha]
 
 theorem coeff_isIntegral_of_roots (Q : ℂ[X]) (hQ : Q.Monic) (c : ℕ) (h : ∀ a ∈ Q.roots, IsIntegral ℤ ((c : ℂ) * a)) (n : ℕ) :
     IsIntegral ℤ ((Q.scaleRoots (c : ℂ)).coeff n) := by

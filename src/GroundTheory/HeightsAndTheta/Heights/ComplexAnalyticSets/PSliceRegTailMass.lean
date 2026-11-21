@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceRegTailMass
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceRegMassMono
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceRegMassContinuous
@@ -6,6 +6,7 @@ import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceRegMassLi
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceSectionTailMass
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceRegCutTail
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceCutTailMass
+import Mathlib.Topology.UniformSpace.Dini
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

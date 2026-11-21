@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.StableIffCarrierEq
 import Development.AbelianVarietyTheory.Definitions.ExistenceOfLattices.CoeSelfDualLatticeInFrameCoordinatesEq
+import Mathlib.LinearAlgebra.Matrix.Permutation
 open Formalism.BasicNotions Formalism.MainNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix Formalism.L2.Theta Formalism.L2.DIV Formalism.L2.Indef Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.Mult Formalism.IndefR.Datum Formalism.IndefR.Cx
 open scoped TensorProduct InnerProductSpace
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
@@ -82,7 +85,7 @@ theorem signAt_mem_Umax (j : Fin n) : ofUnitary (signAt (A := AL E) j) (signAt_u
   by_cases hab : a = b
   · subst hab
     by_cases haj : a = j
-    · simp [signAt, haj, neg_mem, one_mem]
+    · simp [signAt, haj, one_mem]
     · simp [signAt, haj, one_mem]
   · simp [signAt, hab, zero_mem]
 
@@ -103,7 +106,7 @@ theorem one_sub_signAt {A : Type} [Ring A] (j : Fin n) : (1 : Matrix (Fin n) (Fi
     · subst haj; simp [signAt]; norm_num
     · simp [signAt, haj, Matrix.single_apply]
       intro h; exact absurd h.symm haj
-  · simp [signAt, hab, Matrix.single_apply, Matrix.one_apply]
+  · simp [signAt, hab, Matrix.single_apply]
     intros; simp_all
 
 theorem swap_mul_single {A : Type} [Ring A] (i j : Fin n) (c : A) :
@@ -118,7 +121,7 @@ theorem swap_mul_single {A : Type} [Ring A] (i j : Fin n) (c : A) :
         Equiv.swap_apply_eq_iff]
       intro h; exact absurd h.symm ha
   · have hb' : ¬ j = b := fun h => hb h.symm
-    simp [Matrix.mul_apply, Matrix.single_apply, hb']
+    simp [Matrix.mul_apply, hb']
 
 end GlobalTheory.StdFrameCong
 

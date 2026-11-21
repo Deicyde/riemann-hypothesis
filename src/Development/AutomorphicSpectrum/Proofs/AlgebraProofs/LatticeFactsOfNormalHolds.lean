@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.LieLatticeData
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.HodgeAnnihilatorLatticeHoldsStatement
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.HodgeImageLatticeStatement
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.HodgeDivisorIdealLatticeStatement
 

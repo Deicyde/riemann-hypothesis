@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.EqZeroOfForallPowDvdGerm
+import Mathlib.AlgebraicGeometry.Morphisms.Flat
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 universe u v
 

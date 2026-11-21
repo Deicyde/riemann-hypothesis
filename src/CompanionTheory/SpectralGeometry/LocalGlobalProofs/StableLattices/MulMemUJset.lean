@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import CompanionTheory.HarishChandraModules.LowKTypeMultiplicity.DiscreteSeriesCharacters.CapelliDeterminantBlockProduct
-import Formalism.RealPlaceAnalysis.ThirdArithmeticHolds
 import CompanionTheory.HarishChandraModules.BesselParameterIntegrals.SmoothCyclicVectors.SmoothVec
 
 open Matrix PI.UpqRep CompanionTheory.D.Upq.Sm

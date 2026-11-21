@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndicatorIntMMemSB
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsJacMapZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaActionExistsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalUnitaryMatrixSurjective
@@ -9,6 +8,7 @@ import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SplitPlaceCharacter
 import Development.AutomorphicArithmetic.LocalEmbeddings.OppLagr
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LocalFieldNormValuation
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalMomentMatrixTransform
 
 noncomputable section
 
@@ -61,7 +61,7 @@ theorem gram_levi {J₁ g g' : Matrix M M K} (h : gᵀ * J₁ * g' = J₁) (x y 
       fromBlocks (of fun _ _ => ((y⁻¹ : Kˣ) : K)) 0 0 (fromBlocks g' 0 0 (of fun _ _ => ((x⁻¹ : Kˣ) : K))) = gram J₁ := by
   have e : ∀ i j, ∑ k, (∑ l, g l i * J₁ l k) * g' k j = J₁ i j := fun i j => by
     simpa [Matrix.mul_apply] using congrFun (congrFun h i) j
-  ext (i | i | i) (j | j | j) <;> simp [gram, Matrix.mul_apply, Fintype.sum_sum_type, e, Matrix.one_apply,
+  ext (i | i | i) (j | j | j) <;> simp [gram, Matrix.mul_apply, Fintype.sum_sum_type, e,
     Fin.fin_one_eq_zero]
 
 theorem gram_unip {J₁ J₁' : Matrix M M K} (h : J₁ * J₁' = 1) (X : Matrix (Fin 1) (M ⊕ Fin 1) K) (Y : Matrix M (Fin 1) K) :
@@ -69,7 +69,7 @@ theorem gram_unip {J₁ J₁' : Matrix M M K} (h : J₁ * J₁' = 1) (X : Matrix
       (fromBlocks 1 X 0 (fromBlocks 1 Y 0 1))ᵀ * gram J₁ * fromBlocks 1 X' 0 (fromBlocks 1 Y' 0 1) = gram J₁ := by
   obtain ⟨X₁, X₂, rfl⟩ : ∃ X₁ X₂, X = fromCols X₁ X₂ := ⟨_, _, (fromCols_toCols X).symm⟩
   refine ⟨fromCols (Yᵀ * J₁) (X₂ᵀ - Yᵀ * X₁ᵀ), -(J₁' * X₁ᵀ), ?_⟩
-  simp [gram, fromBlocks_multiply, fromBlocks_transpose, transpose_fromCols, fromCols_mul_fromRows, fromCols_mul_fromBlocks,
+  simp [gram, fromBlocks_multiply, fromBlocks_transpose, transpose_fromCols, fromCols_mul_fromBlocks,
     fromBlocks_mul_fromRows, fromCols_zero_fromRows, fromBlocks_add, Matrix.mul_assoc, ← Matrix.mul_assoc J₁, h]
 
 def frame (x : D → K) (ι : Matrix D M K) (y : D → K) : Matrix D (Fin 1 ⊕ M ⊕ Fin 1) K :=
@@ -232,7 +232,7 @@ theorem gram_frame_map (hB : B.IsGood σ) (hW : W.IsSkew σ B r s) (hA : H.IsAda
   have := congrArg (fun Z => Z.map (t : E →+* Fv F v)) (gram_frame hB hW hA)
   simp only [Matrix.map_mul, Matrix.transpose_map] at this
   refine this.trans ?_
-  ext (i | i | i) (j | j | j) <;> simp [gram, Matrix.one_apply, Fin.fin_one_eq_zero]
+  ext (i | i | i) (j | j | j) <;> simp [gram, Fin.fin_one_eq_zero]
 
 theorem exists_basis (hB : B.IsGood σ) (hW : W.IsSkew σ B r s) (hW₁ : W₁.IsSkew σ B r₁ s₁)
     (hA : H.IsAdapted σ B W W₁ i₀ i₁) (e : Fin 1 ⊕ Fin m ⊕ Fin 1 ≃ Fin d) (t : E →ₐ[F] Fv F v) :

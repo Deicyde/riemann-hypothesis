@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
 
 noncomputable section
@@ -21,7 +22,7 @@ theorem dop_smul_comb (c : ℂ) (z : List (ℝ → GAd σ J) →₀ ℂ) (f : GA
   funext g
   simp only [dop, Pi.smul_apply, smul_eq_mul]
   rw [Finsupp.sum_smul_index (fun _ => zero_mul _), Finsupp.mul_sum]
-  simp only [smul_eq_mul, mul_assoc]
+  simp only [mul_assoc]
 
 theorem dop_zero_comb (f : GAd σ J → ℂ) : dop (0 : List (ℝ → GAd σ J) →₀ ℂ) f = 0 := by
   funext g

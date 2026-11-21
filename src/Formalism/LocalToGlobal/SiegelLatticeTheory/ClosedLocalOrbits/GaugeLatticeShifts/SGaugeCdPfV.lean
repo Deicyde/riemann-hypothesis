@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.SGaugeCdPfB
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.TraceMulConjTransposeReal
+import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.SGaugeDensL
 
 open MeasureTheory Filter Topology Set Matrix
 open scoped ENNReal NNReal
@@ -23,11 +26,11 @@ theorem jpq_eq (h1 : ∀ i, ε (e (Sum.inl i)) = true) (h2 : ∀ j, ε (e (Sum.i
   ext i j
   rcases i with i | i <;> rcases j with j | j
   · by_cases h : i = j <;>
-      simp [Formalism.UG.Jpq, Formalism.REAL.Jm, Matrix.diagonal_apply, Matrix.one_apply, h, h1, h2, e.injective.eq_iff]
-  · simp [Formalism.UG.Jpq, Formalism.REAL.Jm, Matrix.diagonal_apply, e.injective.eq_iff]
-  · simp [Formalism.UG.Jpq, Formalism.REAL.Jm, Matrix.diagonal_apply, e.injective.eq_iff]
+      simp [Formalism.UG.Jpq, Formalism.REAL.Jm, h, h1, e.injective.eq_iff]
+  · simp [Formalism.UG.Jpq, Formalism.REAL.Jm, e.injective.eq_iff]
+  · simp [Formalism.UG.Jpq, Formalism.REAL.Jm, e.injective.eq_iff]
   · by_cases h : i = j <;>
-      simp [Formalism.UG.Jpq, Formalism.REAL.Jm, Matrix.diagonal_apply, Matrix.one_apply, h, h1, h2, e.injective.eq_iff]
+      simp [Formalism.UG.Jpq, Formalism.REAL.Jm, h, h2, e.injective.eq_iff]
 
 theorem mem_lieU_iff (h1 : ∀ i, ε (e (Sum.inl i)) = true) (h2 : ∀ j, ε (e (Sum.inr j)) = false)
     (X : Matrix (Fin n) (Fin n) ℂ) : X.submatrix e e ∈ Formalism.BasicNotions.lieU P Q ↔ Formalism.REAL.inG ε X := by
@@ -166,10 +169,10 @@ private theorem cross_lemma {A B : Matrix ι ι ℂ} (hA : A ∈ Formalism.Basic
   have hJ : Formalism.UG.Jpq P Q = Matrix.diagonal s := by
     ext i j
     rcases i with i | i <;> rcases j with j | j
-    · by_cases h : i = j <;> simp [Formalism.UG.Jpq, Matrix.diagonal_apply, Matrix.one_apply, h, s]
-    · simp [Formalism.UG.Jpq, Matrix.diagonal_apply, s]
-    · simp [Formalism.UG.Jpq, Matrix.diagonal_apply, s]
-    · by_cases h : i = j <;> simp [Formalism.UG.Jpq, Matrix.diagonal_apply, Matrix.one_apply, h, s]
+    · by_cases h : i = j <;> simp [Formalism.UG.Jpq, h, s]
+    · simp [Formalism.UG.Jpq, s]
+    · simp [Formalism.UG.Jpq, s]
+    · by_cases h : i = j <;> simp [Formalism.UG.Jpq, h, s]
   have hss : ∀ j, s j * s j = 1 := by
     intro j
     rcases j with j | j <;> simp [s]
@@ -298,7 +301,7 @@ theorem mp_aF (hC : MpCF (ι × ι)) :
   convert this using 1
   funext p
   funext k
-  simp only [Function.comp_apply, gI_apply, gL_apply, WithLp.ofLp_toLp, aF, Formalism.BasicNotions.entries, rL_apply]
+  simp only [Function.comp_apply, gI_apply, gL_apply, aF, Formalism.BasicNotions.entries, rL_apply]
   simp [Complex.re_add_im]
 
 theorem lamVol_of (hC : MpCF (ι × ι)) : LamVol ε e := by

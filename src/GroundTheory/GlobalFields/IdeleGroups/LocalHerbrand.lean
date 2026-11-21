@@ -1,9 +1,8 @@
-import Mathlib
-import GroundTheory.GlobalFields.HerbrandQuotients.CycTate
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.CompletionAtPlace.Galois
 import GroundTheory.LocalFields.HerbrandLocal
 import GroundTheory.LocalFields.UnramifiedNorms
-import GroundTheory.LocalFields.HerbrandCyclic
 
 noncomputable section
 

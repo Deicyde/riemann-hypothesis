@@ -1,8 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.BesselHermitianTheta.TiedSmooth
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.FamilyUniformisationBasePointOrthogonalBis
 import Development.AbelianVarietyTheory.BlockTheory.HeightDefect.WordDerivatives
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.IsLieDataCircle
 
 noncomputable section
 

@@ -1,9 +1,8 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.TorusAtExB
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.GCauchyStatement
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.MajorantNormalForms
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.RealPlaceEmbeddings
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.QuadraticLatticeForms
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.ColAbelB
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.ConjugateConjugate
 
 namespace ReciprocityTheory.ChartRestriction.G.I2
 
@@ -85,11 +84,11 @@ def Lc : (X.Ψ → Fin r → ℂ) →ₗ[ℝ] Vsp (dimT X) where
   toFun u := WithLp.toLp 2 (coordF X e u)
   map_add' u u' := by
     ext i
-    simp only [coordF, Pi.add_apply, WithLp.toLp_add, PiLp.add_apply]
+    simp only [coordF, Pi.add_apply, PiLp.add_apply]
     split_ifs <;> simp [hermC_add_left, mul_add] <;> ring
   map_smul' c u := by
     ext i
-    simp only [coordF, Pi.smul_apply, RingHom.id_apply, PiLp.smul_apply, WithLp.toLp_smul]
+    simp only [coordF, Pi.smul_apply, RingHom.id_apply, PiLp.smul_apply]
     have hc : ∀ w : Fin r → ℂ, c • w = (c : ℂ) • w := fun w => rfl
     split_ifs
     · rw [hc, hermC_smul_left]; simp [Complex.real_smul]; ring

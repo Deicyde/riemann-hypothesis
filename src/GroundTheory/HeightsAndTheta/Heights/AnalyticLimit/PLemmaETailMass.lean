@@ -1,8 +1,8 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.StLemmaETailMass
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.StLemmaETrunc
 import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.StLemmaETruncMass
 import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.StLemmaETruncTail
+import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.PLemmaETailLog
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.AnalyticLimit

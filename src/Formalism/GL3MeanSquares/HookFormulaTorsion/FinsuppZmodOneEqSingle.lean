@@ -1,7 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.InvariantSeriesBidegreeOneOne
-import Formalism.LogVandermondeBounds.LogVandermondeProofs.TaylorLogMetric
-import Formalism.GL3MeanSquares.HookFormulaTorsion.CocycleIsCoboundary
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace Formalism.HermitianLattices.IntegralLatticeDensity
 

@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoC
 open scoped TensorProduct Matrix
 open NumberField IsDedekindDomain MeasureTheory Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.ThK.UnipDom
@@ -114,7 +114,7 @@ theorem coA_coC_inv : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [Numb
   · obtain ⟨a, ha⟩ := hz (Pi.single j 1)
     have h0 : fA σ W.J (incM F H'.ι *ᵥ Pi.single j 1) (incV F H'.y) = 0 := by
       have : incM F H'.ι *ᵥ (Pi.single j 1 : Fin d₁ → AE F E) = incV F (H'.ι *ᵥ Pi.single j 1) := by
-        funext i; simp [incM, incV, Matrix.mulVec_single_one, Matrix.transpose_apply]
+        funext i; simp [incM, incV]
       rw [this, fA_incV, (hH.orth _).2, map_zero]
     have hinv : mat u⁻¹ *ᵥ (incM F H'.ι *ᵥ Pi.single j 1) = incM F H'.ι *ᵥ Pi.single j 1 - a • incV F H'.x := by
       have h := congrArg (mat u⁻¹ *ᵥ ·) ha

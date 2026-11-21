@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.DiscreteGroups.GlobalIrreducibility.DzMatchCut
 import Development.DiscreteGroups.GlobalIrreducibility.DzGenA
 import Development.DiscreteGroups.GlobalIrreducibility.ExistsCellFunctional

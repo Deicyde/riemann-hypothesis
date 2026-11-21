@@ -1,6 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.QminorZero
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.LiftClosedUnderOperations
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.LevelFormSesquilinearFiniteClass
 
 open Matrix
 

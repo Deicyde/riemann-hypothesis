@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsKitWithKitWith
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.SSupCompSecId
 import Development.AbelianVarietyTheory.Definitions.Divisors.ReferenceMetricMulDualEqOne
@@ -6,10 +7,8 @@ import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FlagNonempty
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.NonemptyToroidalBoundaryDataOfSncStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsBoundaryOfTorusDataStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsAt
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.NatCastMemNonunitsOfInduces
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsBettiOfFlatStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FlatSectionIsFlatStatement
-import Formalism.SharpRestriction.Divisibility.PlaceRankTwoOne
 
 set_option autoImplicit false
 

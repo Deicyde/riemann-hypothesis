@@ -1,11 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRk
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRankCoinvariantInducedIso
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRankNormalFormOrbit
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRankZetaSurjective
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzBruhatBoxDecomposition
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegrableFullRankZeta
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.ThK.DescB
@@ -28,7 +24,7 @@ theorem exists_smallF_Y0_ne_zero : ∀ (k : Type) [Field k] [ValuativeRel k] [To
     have ho : IsOpen ((fun g : GL (Fin n) k => gdet g) ⁻¹' (ν.ker : Set kˣ)) :=
       hν.preimage (GlobalTheory.FullRankCoinv.continuous_gdet n)
     have h1 : (1 : GL (Fin n) k) ∈ (fun g : GL (Fin n) k => gdet g) ⁻¹' (ν.ker : Set kˣ) := by
-      simp [MonoidHom.mem_ker]
+      simp
     filter_upwards [ho.mem_nhds h1] with g hg
     exact hg
   rw [isEmbedding_val_GL.isInducing.nhds_eq_comap, Filter.mem_comap] at hU₁
@@ -120,9 +116,9 @@ theorem mem_gen_of_const (ν : kˣ →* ℂˣ) {Ψ χ : Matrix (Fin n) (Fin d) k
 
 theorem indicator_mem_fullRk {χ : Matrix (Fin n) (Fin d) k → ℂ} (hχ : χ ∈ GlobalTheory.FullRankCoinv.fullRk k n d)
     {B : Set (Matrix (Fin n) (Fin d) k)} (hB : IsClopen B) : B.indicator χ ∈ GlobalTheory.FullRankCoinv.fullRk k n d := by
-  refine ⟨⟨?_, ?_⟩, fun Y hY => by simp [Set.indicator_apply, hχ.2 Y hY]⟩
+  refine ⟨⟨?_, ?_⟩, fun Y hY => by simp [hχ.2 Y hY]⟩
   · exact (LocallyConstant.indicator ⟨χ, hχ.1.1⟩ hB).isLocallyConstant
-  · exact hχ.1.2.mono' fun x hx => subset_tsupport _ fun h => hx (by simp [Set.indicator_apply, h])
+  · exact hχ.1.2.mono' fun x hx => subset_tsupport _ fun h => hx (by simp [h])
 
 theorem eventually_smallF_eq (ν : kˣ →* ℂˣ) (hnd : n ≤ d) {Ψ : Matrix (Fin n) (Fin d) k → ℂ}
     (hΨ : Ψ ∈ GlobalTheory.WeilM.SB (Matrix (Fin n) (Fin d) k)) {Y : Matrix (Fin n) (Fin d) k} (hY : Y.rank = n) :

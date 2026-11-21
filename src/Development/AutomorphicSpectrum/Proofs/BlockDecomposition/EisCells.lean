@@ -1,5 +1,4 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.WeilSiegelTheta.Unfold2
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.EisensteinCellsDecompositionStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.EisensteinBruhatDecompositionStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.EisensteinRationalPointsStatement

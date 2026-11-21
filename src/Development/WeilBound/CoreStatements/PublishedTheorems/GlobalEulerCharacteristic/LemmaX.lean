@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.GlobalEulerCharacteristic.GlobalEulerFormulaInf
-import GroundTheory.ProfiniteCohomology.RestrictedRamification.BaseChangeDefs
 
 open NumberField IsDedekindDomain CategoryTheory GroundTheory.ProfCoh GroundTheory.Global
 

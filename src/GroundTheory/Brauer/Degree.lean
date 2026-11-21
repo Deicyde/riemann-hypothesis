@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.Brauer.BaseChangeCSA
 import GroundTheory.Brauer.IsBrauerEquivalentIffNonemptyAlgEquiv
+import Mathlib.RingTheory.SimpleModule.IsAlgClosed
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Brauer

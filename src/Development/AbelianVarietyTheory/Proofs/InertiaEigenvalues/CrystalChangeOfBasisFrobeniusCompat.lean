@@ -1,13 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsPotential
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.OneSubPhiOntoOfFilZero
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.BhattScholzeCrystallineLattices
-import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.ConductorExponents
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsBreuilKisinModuleBasisOfFCrystal
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.BreuilKisinPrismCrystalCoordinates
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CrystalFrobeniusBreuilKisinCoordinates
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsCrystalCoordinatesOverBreuilKisin
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CrystallinePhiModuleMapExists
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.ConnPhiExtensionGeneratorEqZeta
 open Formalism Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.WeaklyAdmissibleFiltrations TensorProduct PowerSeries GlobalTheory.Prism GlobalTheory.BK GlobalTheory.BKReal GlobalTheory.BKGal GlobalTheory.Per Matrix
 open scoped Formalism.Per
 
@@ -112,7 +109,7 @@ theorem eps_frob_compat : ∀ (l : ℕ) [Fact l.Prime] (a e : ℕ) [NeZero a] [N
       rw [(oE o).u_tr, ht₀, hU, hcb]
       rcases eq_or_ne i i' with rfl | h
       · simp [bas]
-      · simp [bas, Pi.single_eq_of_ne h, h]
+      · simp [bas, h]
     rw [hy j, map_sum, Finset.sum_apply, Finset.sum_apply, Finset.sum_eq_single i]
     · rw [map_sum, Finset.sum_apply, Finset.sum_apply]
       refine Finset.sum_congr rfl fun q _ => ?_
@@ -154,7 +151,7 @@ theorem eps_frob_compat : ∀ (l : ℕ) [Fact l.Prime] (a e : ℕ) [NeZero a] [N
   refine mul_left_cancel₀ hlk ?_
   have hC := congrFun (hε' n τ) i
   rw [hA] at hC
-  simp only [Matrix.mulVec, dotProduct, hB, hε'col, hEps, Matrix.map_apply, Matrix.of_apply] at hC
+  simp only [Matrix.mulVec, dotProduct, hB, hε'col, hEps, Matrix.map_apply] at hC
   simp only [Matrix.mul_apply, Matrix.map_apply, Matrix.of_apply]
   rw [hC, Finset.mul_sum]
   exact Finset.sum_congr rfl fun _ _ => by ring

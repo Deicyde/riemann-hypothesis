@@ -1,6 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.PowerSeriesOneAddConstMulXMulInv
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.MkMemAdmissibleAtIffCocycle
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
 
 noncomputable section
 namespace GlobalTheory.Models
@@ -27,7 +29,7 @@ def IsHom (A B : Ob k G) (f : (Fin A.m → k) →ₗ[k] (Fin B.m → k)) : Prop 
   ρ :=
     { toFun := fun g => (χ g : k) • LinearMap.id
       map_one' := by ext; simp
-      map_mul' := fun g h => by ext; simp [mul_smul, Module.End.mul_eq_comp, mul_assoc, mul_comm, mul_left_comm] }
+      map_mul' := fun g h => by ext; simp [mul_smul, Module.End.mul_eq_comp, mul_left_comm] }
 
 open scoped LaurentSeries PowerSeries in
 variable {k G : Type} [Field k] [Group G] in

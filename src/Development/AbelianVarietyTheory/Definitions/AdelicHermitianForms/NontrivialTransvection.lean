@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AdelicHermitianForms.IsHermHyperbolic
+import Mathlib.RingTheory.PiTensorProduct
 
 noncomputable section
 namespace GlobalTheory.UTrans.Model

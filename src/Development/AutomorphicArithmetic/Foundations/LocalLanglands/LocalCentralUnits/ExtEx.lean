@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.Foundations.LocalLanglands.RecTTransport
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExtensionUnramifiedAtOnePlaceStatement
 import Development.AutomorphicArithmetic.Foundations.LocalLanglands.LocalCentralUnits.ArtEx
 

@@ -1,8 +1,6 @@
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.LocalTypeDictionary.DiscreteSpectrumResidualClassification
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.WeilLineGoodModel
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.LocalTypeDictionary.BernsteinUnitaryProductIrreducible
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.LocalTypeDictionary.TendstoSlopeOfArchimedeanPairing
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.WeilLineGoodModelStatement
+import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsFinOfRest
 
 section
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix
@@ -78,7 +76,7 @@ theorem hasDerivAt_thetaSum_along_line_y_direction : _root_.GlobalTheory.FunPr.T
     rw [← hg]; exact (hΛ g).tsum_eq
   rw [hcurve, hend, hasDerivAt_iff_tendsto_slope]
   refine (Λ.continuous.tendsto g |>.comp hlim).congr' (Filter.Eventually.of_forall fun t => ?_)
-  simp [slope_def_module, map_sub, map_smul]
+  simp [slope_def_module, map_sub]
 end GlobalTheory.ThetaLineDerY
 end
 end

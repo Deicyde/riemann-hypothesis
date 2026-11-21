@@ -1,5 +1,7 @@
-import ReciprocityTheory.GroupCohomology.CupConnRightStatement
-import ReciprocityTheory.GroupCohomology.DEqZeroOfMemB
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.LinearAlgebra.Quotient.Bilinear
+import ReciprocityTheory.GroupCohomology.ContinuousContractNth
 
 namespace ReciprocityTheory.Coh
 

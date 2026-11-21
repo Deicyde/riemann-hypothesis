@@ -1,10 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.NormSmall
-import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.AuxiliaryPrimeNeTypePrime
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.SumCompLeSumOfInjOn
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsRatios
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.StepRatioAbsVwProd
-import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.LocalArcIntegralityOfCmNormalisedTrivialisation
+import Development.AbelianVarietyTheory.Definitions.Divisors.FinitePrimesUnder
 
 open NumberField IsDedekindDomain Finset
 open Formalism.DivisionValues (vw)

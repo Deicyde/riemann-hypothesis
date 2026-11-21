@@ -1,5 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.SmoothRep
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.LinearAlgebra.SymmetricAlgebra.Basis
+import Mathlib.LinearAlgebra.TensorAlgebra.Basis
+import Mathlib.RepresentationTheory.Irreducible
+import Mathlib.Tactic.ENatToNat
 
 noncomputable section
 

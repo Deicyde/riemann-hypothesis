@@ -1,6 +1,8 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.AdmissibleInduction
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.Cartan
+import GroundTheory.AutomorphicForms.InductionParabolicGroups
+import Mathlib.Algebra.Group.Pi.Units
 
 noncomputable section
 

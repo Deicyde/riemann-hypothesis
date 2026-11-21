@@ -1,11 +1,8 @@
-import Mathlib
-import Formalism.LocalRingCardinality.AdicCompletionLocal.LocTied
-import Formalism.SharpRestriction.LevelLetterCocycles.LocalSituation
-import Formalism.SharpRestriction.LevelLetterCocycles.LocCoh
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CLTateInvariantsFiniteExtensionMem
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EqZeroOfTateTwistInvariantFiniteExtension
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.NonemptyThetaDeRhamFilZeroConcretePeriod
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsFinExt
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.DeRhamDieudonneSpansTensorDeRhamPeriodsStatement
 
 open Formalism Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.WeaklyAdmissibleFiltrations Formalism.MainNotions.N TensorProduct
@@ -334,7 +331,7 @@ theorem deRham_filtered : ∀ (l : ℕ) [Fact l.Prime] (P : LocPrime l) (AI : Lo
   let φ : P.R.BdR →+* Module.End ↥LL.1 (V ⊗[ℚ_[l]] P.R.BdR) :=
     { toFun := fun b => AlgebraTensorModule.map (LinearMap.id : V →ₗ[↥LL.1] V) (LinearMap.mulLeft ℚ_[l] b)
       map_one' := by ext; simp
-      map_mul' := fun x y => by ext; simp [mul_assoc]
+      map_mul' := fun x y => by ext; simp
       map_zero' := by ext; simp
       map_add' := fun x y => by ext; simp [add_mul, tmul_add] }
   letI : Module P.R.BdR (V ⊗[ℚ_[l]] P.R.BdR) := Module.compHom _ φ

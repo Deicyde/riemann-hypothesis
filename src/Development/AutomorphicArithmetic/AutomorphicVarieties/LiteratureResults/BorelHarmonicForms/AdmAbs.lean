@@ -1,5 +1,7 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.BorelHarmonicForms.DerivativeRightTranslateL2
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.BorelHarmonicForms.AvgPos
+import Mathlib.Analysis.Calculus.Deriv.Star
+import Mathlib.Topology.Algebra.Star.Unitary
 
 open NumberField Matrix GlobalTheory.CuspRep GlobalTheory.GKCoh UpperTheory.V.Af UpperTheory.V.AlgRepEndIrreducible UpperTheory.V.Lit UpperTheory.V.Lit.Bor
 open scoped TensorProduct
@@ -151,4 +153,4 @@ theorem UpperTheory.V.Lit.Bor.admissible_abs_bound :
     rw [map_add, map_smul]
   rw [hDZ, hsZ, map_add, map_neg, map_smul, Matrix.conjTranspose_add, Matrix.conjTranspose_smul,
     Matrix.add_mul, Matrix.smul_mul, eX, eV, Matrix.mul_add, Matrix.mul_neg, Matrix.mul_smul]
-  simp [Complex.star_def]
+  simp

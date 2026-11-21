@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.GeneratorChange
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.RowLatOfMove
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.FStarLocInB
+import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.LastCoordMem
 
 noncomputable section
 
@@ -51,7 +53,7 @@ theorem Cm_one : Cm Zd p 1 = 1 := by
   ext c b
   rw [Cm_apply]
   by_cases h : c = b
-  · subst h; simp [uFi_mul, mul_uFi]
+  · subst h; simp [uFi_mul]
   · simp [Matrix.one_apply_ne h]
 
 theorem comb_Cm {T' : D.host.E} (F' : LFlag (VS D) D.R.rS T')

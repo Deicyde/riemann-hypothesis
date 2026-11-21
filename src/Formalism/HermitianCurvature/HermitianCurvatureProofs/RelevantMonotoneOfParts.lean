@@ -1,5 +1,7 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.StabilizerAntidiagonalExact
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.StabilizerFourthCondition
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.LowerParabolicCoordinates
 
 open Matrix Formalism.FourierDecayAlt Formalism.QuantumDeterminants
 open scoped ComplexConjugate

@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.PrismaticDieudonnePerfdIff
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InjectiveOfCompEqSmul
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PerfectoidLatticeSurjectiveProjectionStatement
 open CategoryTheory WittVector GlobalTheory GlobalTheory.PDivGroup GlobalTheory.Sandwich GlobalTheory.IndefiniteRowSideFullHecke.EpsilonPairingZeta GlobalTheory.Published GlobalTheory.PerfdLat
 open scoped ChangeOfRings Pointwise

@@ -1,5 +1,4 @@
-import Mathlib
-import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.CovLog
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.LintegralImageEqLintegralNormSqDetMul
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StLogLogCutHess
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StHessCCompPluri

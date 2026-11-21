@@ -1,9 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.SchurStep
 import Development.WeilBound.ThetaLifts.LatticeBasics.CommuteTheta
-import Development.WeilBound.ThetaLifts.LatticeBasics.EulerProd
 import Development.WeilBound.ThetaLifts.TowerModels.StabEx
 import Development.WeilBound.ThetaLifts.LocalTheory.ArchimedeanBumps.TracePiReal
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdeleEqZeroOfComp
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdelicLocalCompactness.T2SpaceTensorProductFiniteExtension
 
 noncomputable section
 
@@ -26,7 +28,7 @@ private theorem cut_add {a b : S} (ha : a * a = a) (hb : b * b = b) (hab : a * b
   have h1 : (1 - b) * (1 - a) = 1 - (a + b) := by linear_combination hab
   have h2 : b * (1 - a) = b := by linear_combination -hab
   have h3 : (1 - b) * a = a := by linear_combination -hab
-  simp only [cut, add_mul, mul_add, Matrix.smul_mul, Matrix.mul_smul, smul_add, smul_smul, h0, h1, h2, h3, zero_smul, add_zero,
+  simp only [cut, add_mul, mul_add, Matrix.smul_mul, Matrix.mul_smul, smul_smul, h0, h1, h2, h3, zero_smul, add_zero,
     Matrix.one_mul, Matrix.mul_one, add_smul]
   abel
 

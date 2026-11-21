@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.ProductZerothFirstParts
 import Formalism.GaussJetBounds.Statement
 

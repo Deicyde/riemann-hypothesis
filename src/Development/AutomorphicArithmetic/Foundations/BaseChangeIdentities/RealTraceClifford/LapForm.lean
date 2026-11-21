@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AutomorphicArithmetic.Foundations.BaseChangeIdentities.RealTraceClifford.ClifMod
-import Development.AutomorphicArithmetic.Foundations.BaseChangeIdentities.RealTraceClifford.CfBasic
-import Development.AutomorphicArithmetic.Foundations.BaseChangeIdentities.RealTraceClifford.SgSmul
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.BaseChangeIdentities.RealTraceClifford.SymOfMul
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.PartialDerivMonomialLaplace
 
@@ -67,7 +65,7 @@ private theorem lapD_single (a : Fin n) (m : Wt n) (r : ℂ) :
   rw [cf_lapD]
   by_cases h : m = x
   · subst h; simp [cf]
-  · simp [cf, Finsupp.single_apply, h]
+  · simp [cf, h]
 
 private theorem lapD_ex (a : Fin n) (m : Wt n) : lapD a (ex m) = (m a : ℂ) • ex m := by
   simp [ex, lapD_single]

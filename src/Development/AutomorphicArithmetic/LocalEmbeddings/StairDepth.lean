@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SumOKEx
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlatTensorDependsBelowAndSmallTranslationInvaria
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlatTensorVanishesUnlessLastRowBounded
 
 noncomputable section
 
@@ -50,7 +49,7 @@ theorem elt_eq [MeasurableSpace k] [BorelSpace k] (hs : 1 ≤ G.s) (J : G.Level)
     intro X hX
     apply Units.ext
     ext a b
-    simp [dg, diagGL, wt, hX, Matrix.one_apply, Matrix.diagonal_apply]
+    simp [dg, diagGL, wt, hX, Matrix.one_apply]
   funext X
   obtain ⟨i, j⟩ := X
   by_cases hc : i = G.m ∧ j + 2 ≤ G.m

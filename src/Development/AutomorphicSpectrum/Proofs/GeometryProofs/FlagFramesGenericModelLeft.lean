@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.CoordTieCompEquiv
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.GenMapStalkMap
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.GenMapGermEqGenMapGerm
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LatticeEigenVectorBundle
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.StalkSpecializesBijective
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.FlagBasisChangeIntegralStatement

@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StChartDehomogPrime
 import GroundTheory.HeightsAndTheta.Heights.ChowForms.PChartLocDomain
 import GroundTheory.HeightsAndTheta.Heights.ChowForms.PChartHomogenise

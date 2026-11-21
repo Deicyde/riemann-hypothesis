@@ -1,5 +1,7 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.FrobeniusCoefficientMemLp.FramesTurn
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.FormalDegreeBessel.StatementG
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 noncomputable section
 

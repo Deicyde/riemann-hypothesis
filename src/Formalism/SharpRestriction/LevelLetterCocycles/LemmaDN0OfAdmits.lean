@@ -1,10 +1,12 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.LatticeBoundsOfThreeParts
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.XDvdLevCQ
 import Formalism.SharpRestriction.LevelLetterCocycles.ConvEqSum
 import Formalism.SharpRestriction.LevelLetterCocycles.EqZeroOfMemSum
 import Formalism.SharpRestriction.LevelLetterCocycles.CardBasisEq
 import Formalism.SharpRestriction.LevelLetterCocycles.UniformizerMemDeltaInvariants
+import Formalism.SharpRestriction.LevelLetterCocycles.QuotientImageDivisibility.LemmaDN0
+import Formalism.SharpRestriction.LevelLetterCocycles.QuotientImageDivisibility.RkMultVNonneg
 
 noncomputable section
 
@@ -216,7 +218,7 @@ variable {G : Type} [Group G] [TopologicalSpace G] {Qp K₀ K : Type} [Field Qp]
     (W : LocWach PD LL O v n)
 
 theorem Q_eq_q (hs : W.s = 1) : W.Q = W.q := by
-  simp [LocWach.Q, LocWach.q, hs]
+  simp [LocWach.Q, hs]
 
 theorem coeff_Xpow_mul_lt (k j : ℕ) (hj : j < k) (f : PowerSeries LL) :
     PowerSeries.coeff j (PowerSeries.X ^ k * f) = 0 := by
@@ -671,7 +673,7 @@ theorem lemmaDN0_of_admits [IsLocalRing O] [IsAdicComplete (IsLocalRing.maximalI
     · rw [map_neg, γD_smulA W T₂, htΔ δ hδ, hxΔ δ hδ]
   have heq : ((PD.p : O) ^ S) • x = W.π₀ • (-(t • x)) + Formalism.MainNotions.LiftingTheory.qp W ^ (b i + S) • y := by
     rw [← algebraMap_smul (LetA O n) ((PD.p : O) ^ S) x, map_pow, map_natCast, hgeom, ← hyx]
-    simp only [smul_neg, smul_smul, ← neg_smul, ← add_smul]
+    simp only [smul_smul, ← neg_smul, ← add_smul]
     congr 1
     ring
   rw [heq]

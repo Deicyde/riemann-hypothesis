@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DwCons
+import Mathlib.Analysis.Calculus.Deriv.Pi
 
 noncomputable section
 

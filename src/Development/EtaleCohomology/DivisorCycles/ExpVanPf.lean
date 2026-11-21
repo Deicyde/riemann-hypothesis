@@ -1,4 +1,9 @@
-import Development.EtaleCohomology.DivisorCycles.CycleCount
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.EtaleCohomology.DivisorCycles.OpenCoset
+import Mathlib.RingTheory.PowerSeries.Derivative
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
 
 open Matrix PositivityTheory.AutomorphicGaloisHodgeTate.Div
 namespace LateralTheory.DivDb.ExpVanPf

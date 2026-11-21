@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HolSprayApply
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ContinuousAndSmul
 
 set_option autoImplicit false
 
@@ -62,7 +63,7 @@ theorem contDiffOn_chris (hU : IsOpen U) (hb : ∀ k l, ContDiffOn ℝ ∞ (fun 
     ((EuclideanSpace.proj k : V d →L[ℂ] ℂ).restrictScalars ℝ).contDiff.comp_contDiffOn contDiffOn_snd
   rw [← (PiLp.continuousLinearEquiv 2 ℝ (fun _ : Fin d => ℂ)).comp_contDiffOn_iff]
   refine contDiffOn_pi.2 fun i => ?_
-  simp only [Function.comp_def, PiLp.continuousLinearEquiv_apply, christoffel, WithLp.ofLp_toLp, Matrix.vecMul, dotProduct, Matrix.of_apply]
+  simp only [Function.comp_def, PiLp.continuousLinearEquiv_apply, christoffel, Matrix.vecMul, dotProduct, Matrix.of_apply]
   exact ContDiffOn.sum fun j _ => (ContDiffOn.sum fun k _ => (hξ k).mul (hdel k j)).mul (hinv j i)
 
 theorem contDiffOn_jet (d : ℕ) (U : Set (ReciprocityTheory.L2DbarEstimates.V d)) (b : ReciprocityTheory.L2DbarEstimates.V d → Matrix (Fin d) (Fin d) ℂ)

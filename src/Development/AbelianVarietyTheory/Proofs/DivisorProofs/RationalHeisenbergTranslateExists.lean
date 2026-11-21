@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeisZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedBasisGramEqStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsUnitDetAdaptedBasisStatement
 open scoped TensorProduct NNReal Matrix

@@ -1,5 +1,5 @@
-import Formalism.HermitianCurvature.StatementM
-import Formalism.HermitianCurvature.StatementLE
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.LetterProductDoubleDegreeCount
 
 namespace Formalism.FourierDecayAlt.MA

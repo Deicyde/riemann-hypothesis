@@ -1,5 +1,5 @@
-import Mathlib
-import CompanionTheory.SpectralGeometry.CountingDefinitions.AdelicEulerProducts.CountData
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.FiniteAdeleTopologyStatement
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.GaussianSumOfCounting
 open NumberField IsDedekindDomain MeasureTheory Matrix Topology GlobalTheory.CompanionTheory.SW.Core
@@ -19,7 +19,7 @@ theorem card_places (h : IsTotallyReal F) :
   rw [← InfinitePlace.sum_mult_eq]
   have : ∀ w : InfinitePlace F, w.mult = 1 := fun w => by
     simp [InfinitePlace.mult, h.isReal w]
-  simp [this]
+  simp
 
 theorem posDef_lower {P : Matrix ι ι ℝ} (hP : P.PosDef) :
     ∃ c : ℝ, 0 < c ∧ ∀ y : ι → ℝ, c * ‖y‖ ^ 2 ≤ y ⬝ᵥ (P *ᵥ y) := by

@@ -1,8 +1,12 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.NormSub
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IsEquivalenceFiniteEtaleBaseChangeResidueField
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NatDegreeMinpolyLeBaseChange
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdjoinRootEquivMk
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 
@@ -21,8 +25,7 @@ theorem baseChange_centralizer (K k B A : Type) [Field K] [Field k] [Algebra K k
   let ad : B →ₗ[K] B := LinearMap.mulRight K γ - LinearMap.mulLeft K γ
   have hex : Function.Exact f.toLinearMap ad := by
     intro x
-    simp only [ad, LinearMap.sub_apply, LinearMap.mulRight_apply, LinearMap.mulLeft_apply, sub_eq_zero,
-      AlgHom.toLinearMap_apply]
+    simp only [ad, LinearMap.sub_apply, LinearMap.mulRight_apply, LinearMap.mulLeft_apply, sub_eq_zero]
     exact hcent x
   have hmap : ∀ y, Algebra.TensorProduct.map (AlgHom.id k k) f y = LinearMap.lTensor k f.toLinearMap y := by
     intro y
@@ -35,7 +38,7 @@ theorem baseChange_centralizer (K k B A : Type) [Field K] [Field k] [Algebra K k
     induction y using TensorProduct.induction_on with
     | zero => simp
     | tmul t b =>
-      simp [ad, Algebra.TensorProduct.tmul_mul_tmul, TensorProduct.tmul_sub]
+      simp [ad, Algebra.TensorProduct.tmul_mul_tmul]
     | add x y hx hy => rw [map_add, ← hx, ← hy]; noncomm_ring
   have hex' := Module.Flat.lTensor_exact k hex
   refine ⟨?_, fun y => ?_⟩

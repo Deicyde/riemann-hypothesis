@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsSubquotientDetRepParInd
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IwahoriProjSurjective
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.HolCuspLevDeltaNeBot
 
 noncomputable section
@@ -92,7 +92,7 @@ example (ϖ : kˣ) : (wS k ϖ ({0} : Finset (Fin 1)) : Matrix (Fin 1) (Fin 1) k)
 example (ϖ : kˣ) : (wS k ϖ ({0, 1} : Finset (Fin 2)) : Matrix (Fin 2) (Fin 2) k) = !![0, 1; (ϖ : k), 0] := by
   ext i j
   fin_cases i <;> fin_cases j <;>
-    simp [val_wS, cyc, sList, dEnt, Equiv.Perm.permMatrix, List.finRange, PEquiv.toMatrix, List.formPerm_pair]
+    simp [val_wS, cyc, sList, dEnt, Equiv.Perm.permMatrix, List.finRange, PEquiv.toMatrix]
 
 example (ϖ : kˣ) : (phiS k ϖ ({1} : Finset (Fin 2))).toFun (wS k ϖ {1}) = 1 := phiS_self k ϖ _
 

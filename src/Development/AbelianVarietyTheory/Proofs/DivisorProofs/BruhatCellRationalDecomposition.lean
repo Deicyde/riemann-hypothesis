@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoreConcl
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTransv
 open scoped TensorProduct NNReal Matrix
@@ -85,7 +83,7 @@ theorem exists_eichler (hs : ∀ e, s (s e) = e) {n : ℕ} (J : Matrix (Fin n) (
     rw [hL]
     simp only [Matrix.add_mul, Matrix.mul_add, Matrix.sub_mul, Matrix.mul_sub, Matrix.smul_mul, Matrix.mul_smul,
       Matrix.mul_assoc, Matrix.mul_one, Jx', Jd', ax', ad', bx', bd', Matrix.mul_zero, smul_zero, sub_zero,
-      zero_sub, add_zero, zero_add]
+      add_zero]
     module
   · rw [Matrix.add_mul, Matrix.one_mul, Matrix.add_mul, Matrix.sub_mul, Matrix.smul_mul, Matrix.mul_assoc,
       Matrix.mul_assoc, Matrix.mul_assoc, av, bv, Matrix.mul_one, Matrix.mul_smul, Matrix.mul_one, ← hd]
@@ -181,7 +179,7 @@ theorem GlobalTheory.EisCT.exists_unipRad_stabL_big : ∀ (F E : Type) [Field F]
     rw [e, Matrix.mul_smul, hNv]
   have hsm : adMat F (β • col0 Y) = inclR (F := F) (AF F) β • adMat F (col0 Y) := by
     ext i j; simp [adMat, map_mul]
-  simp only [map_mul, Units.val_mul, hγinv, hνm, Units.coe_map, Units.val_mk0, MonoidHom.coe_coe]
+  simp only [map_mul, Units.val_mul, hγinv, hνm, Units.coe_map, Units.val_mk0]
   rw [Matrix.mul_assoc, Matrix.mul_assoc, adMat, adMat, adMat, ← Matrix.map_mul, ← Matrix.map_mul, hy, ← adMat, hsm,
     Matrix.mul_smul, hwy]
   rfl

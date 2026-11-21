@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.HodgeFrameGram
+import Mathlib.RingTheory.SimpleRing.Principal
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Matrix Complex ComplexConjugate Filter Topology GlobalTheory.HermFrame GlobalTheory.IndefiniteRowSideFullHecke.HodgeFrameGram
 open scoped ComplexOrder ContDiff
@@ -31,7 +34,7 @@ theorem conn_chol {P : E → Matrix n n ℂ} {y : E} (h : MContDiffAt 1 P y)
   rw [mdel_mul h.conjTranspose h, mdel_conjTranspose, cholC, cholB, Matrix.mul_inv_rev,
     conjTranspose_mul, conjTranspose_nonsing_inv]
   simp only [Matrix.mul_add, Matrix.add_mul, Matrix.mul_assoc,
-    nonsing_inv_mul_cancel_left _ _ hu', nonsing_inv_mul_cancel_left _ _ hu,
+    nonsing_inv_mul_cancel_left _ _ hu',
     nonsing_inv_mul _ hu, Matrix.mul_one]
   abel
 
@@ -63,8 +66,8 @@ theorem curv_chol {P : E → Matrix n n ℂ} {y : E} (h : MContDiffAt 2 P y)
   rw [curv, mdbar_congr he, mdbar_mul hi ((hC.add hD).mul h1), mdbar_inv h1 hu,
     mdbar_mul (hC.add hD) h1, mdbar_add hC hD, hD', cholX, cholB,
     show mdel (fun x => cholB P x η) y ξ = _ from hB]
-  simp only [cholB, Matrix.mul_add, Matrix.add_mul, Matrix.mul_sub, Matrix.sub_mul,
-    Matrix.mul_neg, Matrix.neg_mul, Matrix.mul_assoc, nonsing_inv_mul_cancel_left _ _ hu,
+  simp only [Matrix.mul_add, Matrix.add_mul, Matrix.mul_sub, Matrix.sub_mul,
+    Matrix.mul_neg, Matrix.neg_mul, Matrix.mul_assoc,
     nonsing_inv_mul _ hu, Matrix.mul_one]
   abel
 

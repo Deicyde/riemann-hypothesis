@@ -1,10 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.ExistsIsScalar
-import Formalism.LocalToGlobal.IndefiniteReal.ConcretePkgSpec
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.CsGlob
-import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FockHarmonicLatticeFgAndSpansValueSpaceStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.TwistingCharacterAdmissibleGaloisTwistGoodStatement
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.FiniteDimensionalSpan
 
 noncomputable section
 

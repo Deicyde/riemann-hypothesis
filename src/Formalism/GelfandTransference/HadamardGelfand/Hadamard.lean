@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.GelfandTransference.Statement
+import BuildAid.Leniency.Open
 import Lemmata.DetNormLeProdRows.DetNormLeProdRows
 
 open Matrix Finset

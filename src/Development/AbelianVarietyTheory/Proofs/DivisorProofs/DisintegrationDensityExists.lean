@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsSupercuspidalOfIsCuspidal
-import Development.AbelianVarietyTheory.Definitions.Divisors.MaxWeightGL1EqOne
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CentralTranslateDetOneCompact
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CuspidalUnipotentVanishing
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlockUnipotentMapContinuousMulDetOneCompactSuppoStatement

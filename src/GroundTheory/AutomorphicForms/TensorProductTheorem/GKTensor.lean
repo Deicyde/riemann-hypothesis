@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.TensorProductTheorem.CoeToRepresentationApply
 import GroundTheory.AutomorphicForms.TensorProductTheorem.KProjApplyEqSelfIff
-import GroundTheory.AutomorphicForms.TensorProductTheorem.TwoFactorUnique
-import GroundTheory.AutomorphicForms.TensorProductTheorem.Window
+import GroundTheory.AutomorphicForms.TensorProductTheorem.TwoFactor
 
 noncomputable section
 

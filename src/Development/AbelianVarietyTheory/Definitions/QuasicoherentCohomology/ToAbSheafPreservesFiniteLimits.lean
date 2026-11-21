@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.QuasicoherentCohomology.SubsingletonOfSubsingletonFreeSheaf
+import Mathlib.AlgebraicGeometry.Modules.Sheaf
+import Mathlib.Tactic.ENatToNat
 
 open CategoryTheory AlgebraicGeometry TopologicalSpace Opposite Limits
 

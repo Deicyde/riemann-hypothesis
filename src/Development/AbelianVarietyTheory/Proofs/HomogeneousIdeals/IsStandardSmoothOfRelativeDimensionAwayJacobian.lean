@@ -1,5 +1,14 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.ShimuraVarieties.OpensRangeChartYSupOpensRangeChartZ
+import Mathlib.AlgebraicGeometry.Geometrically.Connected
+import Mathlib.AlgebraicGeometry.Geometrically.Integral
+import Mathlib.AlgebraicGeometry.Morphisms.Etale
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
 
 open AlgebraicGeometry CategoryTheory Limits
 

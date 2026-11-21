@@ -1,8 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.ResolutionOfSingularities.EmbeddedResolution.StrongResolution.LocalResolutionData
-import Development.ResolutionOfSingularities.EmbeddedResolution.StrongResolution.StrongResolution
-import Development.ResolutionOfSingularities.Foundations.BlowupUniversalProperty
-import Development.ResolutionOfSingularities.EmbeddedResolution.ResolutionOfSingularities
 universe u
 
 open CategoryTheory CategoryTheory.Limits AlgebraicGeometry

@@ -1,11 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
-import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsCrystalPairing
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CmTypeSeparatingIntegerStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CmDeRhamEigenspaceCorankLeTwoStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AlgebraicEndomorphismCorankDeRhamStatement
+import Mathlib.LinearAlgebra.SymmetricAlgebra.Basis
+import Mathlib.LinearAlgebra.TensorAlgebra.Basis
 open GlobalTheory.LatVal GlobalTheory.LatJet
 open CategoryTheory AlgebraicGeometry MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory.Cris GlobalTheory.DeRham GlobalTheory.RealMult GlobalTheory.CMVal
@@ -51,7 +49,7 @@ theorem mul_comm_of_rank_coker {K V : Type*} [Field K] [AddCommGroup V] [Module 
       exact hyW ((W.smul_mem_iff ha).1 hg)
     intro j; fin_cases j <;> assumption
   have := hli.cardinal_lift_le_rank
-  simp only [Cardinal.mk_fintype, Fintype.card_fin, Nat.cast_ofNat, Cardinal.lift_ofNat] at this
+  simp only [Cardinal.mk_fintype, Fintype.card_fin] at this
   have h3 : (3 : Cardinal) ≤ 2 := by
     have := this.trans (Cardinal.lift_le.2 hrk)
     simpa using this

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataCD
 import Formalism.SharpRestriction.GlobalSchurBounds.GeneralLinearActions.GenusMassVolumes
 
@@ -22,7 +23,7 @@ open MeasureTheory Matrix in
 open scoped ENNReal in
 theorem _root_.GlobalTheory.IndefiniteRowSideFullHecke.PerpendicularEmbedding.herm_self {P Q : ℕ} (x : _root_.GlobalTheory.IndefiniteRowSideFullHecke.PerpendicularEmbedding.Sp P Q) :
     _root_.GlobalTheory.IndefiniteRowSideFullHecke.PerpendicularEmbedding.herm x x = (_root_.GlobalTheory.IndefiniteRowSideFullHecke.PerpendicularEmbedding.qf x : ℂ) := by
-  simp [_root_.GlobalTheory.IndefiniteRowSideFullHecke.PerpendicularEmbedding.herm, _root_.GlobalTheory.IndefiniteRowSideFullHecke.PerpendicularEmbedding.qf, Complex.star_def,
+  simp [_root_.GlobalTheory.IndefiniteRowSideFullHecke.PerpendicularEmbedding.herm, _root_.GlobalTheory.IndefiniteRowSideFullHecke.PerpendicularEmbedding.qf,
     Complex.mul_conj]
 
 open MeasureTheory Matrix in
@@ -91,6 +92,6 @@ example : cM 1 = 2 * Real.pi := by simp [cM]
 
 example (P Q : ℕ) : qf (Pi.single (Sum.inl 0) 1 : Sp (P + 1) Q) = 1 ∧
     qf (Pi.single (Sum.inr 0) 1 : Sp P (Q + 1)) = -1 := by
-  constructor <;> simp [qf, Fin.sum_univ_succ, Pi.single_apply]
+  constructor <;> simp [qf, Pi.single_apply]
 
 end GlobalTheory.IndefiniteRowSideFullHecke.PerpendicularEmbedding

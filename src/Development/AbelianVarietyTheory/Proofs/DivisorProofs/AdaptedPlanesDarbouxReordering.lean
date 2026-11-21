@@ -1,14 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatrixExtendByZeroAdd
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzBruhatRestrictionAndProduct
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EventuallyIntegralPointsIndicatorIsVacuum
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicSchrodingerTensorEqLocalOfSupportedAt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AddCharHalfTraceTensorLatticeHeisenbergCocycle
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIntAddConjEqOneOfBaseGood
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatAtVAtStable
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PosHomApply
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatAtVAdaptedDecomp
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HTensAddRight
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HTensAdapted
@@ -219,8 +210,8 @@ theorem local_vac {σ : E →ₐ[F] E} (B : Base F E) {n d n₁ d₁ : ℕ} (r s
   have hw : ((fun i => evFin F v ((co.e (p + q + incM F H.ι * g * (incM F H'.ι)ᵀ)).1 i)),
       (fun i => evFin F v ((co.e (p + q + incM F H.ι * g * (incM F H'.ι)ᵀ)).2 i))) = (α + ext0 eq a, β + ext0 eq b) := by
     refine Prod.ext (funext fun k => ?_) (funext fun k => ?_)
-    · simp only [map_add, hι, Prod.fst_add, Pi.add_apply, hp.1, Pi.zero_apply, zero_add, finite_evaluation_extend_by_zero, hα, ha]
-    · simp only [map_add, hι, Prod.snd_add, Pi.add_apply, hq.1, Pi.zero_apply, add_zero, finite_evaluation_extend_by_zero, hβ, hb]
+    · simp only [map_add, hι, Prod.fst_add, Pi.add_apply, hp.1, zero_add, finite_evaluation_extend_by_zero, hα, ha]
+    · simp only [map_add, hι, Prod.snd_add, Pi.add_apply, hq.1, add_zero, finite_evaluation_extend_by_zero, hβ, hb]
 
   have hαP : (fun i => α (eq.symm (Sum.inl i))) ∈ P := mem_latPos.2 ⟨q, hqΓ, fun i => rfl⟩
   have hβP : ∀ y ∈ P, GlobalTheory.VacAny.psiV B.ψ v (y ⬝ᵥ fun i => β (eq.symm (Sum.inl i))) = 1 := by

@@ -1,6 +1,12 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.LocalHermitianForms.NormOneIsCoboundaryUnramifiedQuadratic
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.LocalHermitianForms.LocalOrbitCounts.Descent
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.LocalHermitianForms.LocalOrbitCounts.SqrtO
+import Mathlib.Algebra.Module.Torsion.Prod
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open QuadraticAlgebra UpperTheory.V.Z.Sym UpperTheory.V.Z.Sym.Loc Matrix
 
@@ -469,7 +475,7 @@ private theorem vanish_sigL_mul {K : Type} [Field K] {Δ τ : K} (x y : EL Δ τ
   have hτ : star ((algebraMap K (Lsq K Δ)) τ) = (algebraMap K (Lsq K Δ)) τ := by
     ext <;> simp [QuadraticAlgebra.algebraMap_eq]
   apply QuadraticAlgebra.ext
-  · simp [sigL, star_mul', star_add, star_neg, star_one]
+  · simp [sigL, star_mul', star_add, star_neg]
   · simp [sigL, star_mul', star_add, hτ]
 
 private theorem vanish_sigL_sigL {K : Type} [Field K] {Δ τ : K} (x : EL Δ τ) : sigL (sigL x) = x := by

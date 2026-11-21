@@ -1,15 +1,12 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.LinksDefs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.FWTie
-import Formalism.LocalToGlobal.ProjectiveLattices.ThClassPins
-import Formalism.LocalToGlobal.ProjectiveLattices.CompHt
-import Formalism.SharpRestriction.Divisibility.PlaceRankTwoOne
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsProbabilityMeasureMuPart
 import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsFlatSecRankZero
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsHomogeneousCompIdeal
 import Development.AbelianVarietyTheory.Definitions.Divisors.DividedWeightUnique
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsCoversOfGuard
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.NonemptyFrPtComplex
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsCoversOfHalves
 
 noncomputable section
 
@@ -149,7 +146,7 @@ theorem log_rd_le_fieldSz (K : Type) [Field K] [NumberField K] :
   unfold fieldSz
   linarith [Real.log_natCast_nonneg (Module.finrank ℚ K)]
 
-example : fieldSz ℚ = 0 := by simp [fieldSz, NumberField.discr_rat]
+example : fieldSz ℚ = 0 := by simp [fieldSz]
 
 def expL (L : ℝ) : ℕ := ⌊3 * L / Real.log 3⌋₊
 
@@ -343,7 +340,7 @@ theorem exists_half (s : ℤ) (hs : (15 : ℤ) ∣ s ^ 2 + H.d) (e : ℕ) :
   let J : Ideal (𝓞 E) := Ideal.span {15, (s : 𝓞 E) + H.rt}
   have hJ : J.map (H.bar : 𝓞 E →+* 𝓞 E) = Ideal.span {15, (s : 𝓞 E) - H.rt} := by
     rw [Ideal.map_span, Set.image_pair]
-    simp [bar_root, sub_eq_add_neg, map_ofNat]
+    simp [sub_eq_add_neg, map_ofNat]
   have m1 : (15 : 𝓞 E) ∈ J := Ideal.subset_span (by simp)
   have m2 : (s : 𝓞 E) + H.rt ∈ J := Ideal.subset_span (by simp)
   have m3 : (15 : 𝓞 E) ∈ J.map (H.bar : 𝓞 E →+* 𝓞 E) := hJ ▸ Ideal.subset_span (by simp)

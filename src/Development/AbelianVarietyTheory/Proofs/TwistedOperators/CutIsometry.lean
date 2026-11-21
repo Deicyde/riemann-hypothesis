@@ -1,4 +1,6 @@
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ConstMemBddAut
+import BuildAid.Leniency.Open
+import Formalism.SatakeDualWeyl.Statement
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 namespace GlobalTheory.TruncationIsometry
 

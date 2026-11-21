@@ -1,10 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.InfiniteCoordinateUnfold
-import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.AdelicUnitaryHaarMeasure
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.StabilizerLattices
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsCompactAdele
-import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.FundamentalDomainNeZero
-import Formalism.SharpRestriction.GlobalSchurBounds.GeneralLinearActions.FrameTransport
 open NumberField MeasureTheory Matrix Topology Formalism.BasicNotions Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice GlobalTheory.IndefiniteRowSideFullHecke.InfiniteCoordinateUnfold GlobalTheory.IndefiniteRowSideFullHecke.AdelicUnitaryHaarMeasure GlobalTheory.IndefiniteRowSideFullHecke.SelfDualLatticeStabilizers GlobalTheory.Mem.Vol GlobalTheory.Mem.VolExists
 open scoped ENNReal TensorProduct
 
@@ -16,7 +12,7 @@ theorem form_coords {F E : Type} [Field F] [NumberField F] [Field E] [NumberFiel
   have hs : ∀ a : E, (cm.sig : E →+* E) a = star a := fun _ => rfl
   simp only [hE, Formalism.UG.hform, map_sum, LinearMap.sum_apply, LinearMap.map_smulₛₗ, map_smul,
     LinearMap.smul_apply, smul_eq_mul, Formalism.BasicNotions.HSpace.gram, hs,
-    Finset.mul_sum, starRingEnd_apply, RingHom.id_apply]
+    Finset.mul_sum, starRingEnd_apply]
   rw [Finset.sum_comm]
   refine Finset.sum_congr rfl fun i _ => Finset.sum_congr rfl fun j _ => ?_
   ring

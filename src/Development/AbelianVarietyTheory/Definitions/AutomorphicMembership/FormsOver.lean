@@ -1,9 +1,11 @@
-import Mathlib
-import Formalism.LocalToGlobal.LatticeGeometry.ViewsC
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.RecPJThAllNeBot
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.FlagComponentFramedPointFrame
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.RingKrullDimIntegers
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.FirstIndexEqOfUnfolded
+import Formalism.LocalToGlobal.LatticeGeometry.LevPrPrime
 
 noncomputable section
 

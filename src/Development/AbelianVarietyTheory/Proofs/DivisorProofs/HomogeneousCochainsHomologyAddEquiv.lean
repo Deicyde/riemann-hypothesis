@@ -1,5 +1,8 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.IndEtOfForallFinset
-import Development.AbelianVarietyTheory.Definitions.Divisors.DivisorSupportCondition
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.ProfiniteCohomology.Bridge
+import Mathlib.Algebra.Category.Grp.Ulift
+import Mathlib.CategoryTheory.Abelian.GrothendieckAxioms.Basic
 open CategoryTheory Limits AlgebraicGeometry Opposite CochainComplex CochainComplex.HomComplex Simplicial TensorProduct GlobalTheory.EtC
 
 namespace GlobalTheory.HomogCochains

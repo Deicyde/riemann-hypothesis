@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.DataN
+import Mathlib.NumberTheory.DirichletCharacter.Basic
+import Mathlib.NumberTheory.ModularForms.QExpansion
 
 noncomputable section
 

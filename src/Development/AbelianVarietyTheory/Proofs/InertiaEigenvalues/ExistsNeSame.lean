@@ -1,7 +1,6 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.TwGood
-import Formalism.SharpRestriction.ParamsHeightRankConstant
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.TwistDataAgreeAcrossCoefficients
+import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsReadsAtOfCover
 
 noncomputable section
 

@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsOpenFixedOfSubgroup
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsFiniteSupport
 
 open GlobalTheory.PRep Topology
 

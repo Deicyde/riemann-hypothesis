@@ -1,4 +1,5 @@
-import Development.WeilBound.RepresentationTheoryGL.ResidualSpectrum.SliceTensors.PSatDefs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.AdelicGLIwasawaDecompositionStandardParabolic
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsFixedOfMemISup
 
@@ -70,7 +71,7 @@ theorem iwasawa_inf {c N : ℕ} (n : Fin c → ℕ) (h : ∑ i, n i = N) (x : GA
     fun i => leviProj (Cinf E) (stdBlocks n h) ⟨b, hbP⟩ i, k, ?_⟩
   rw [← GlobalTheory.IwasawaAdelic.infGL_leviEmb, ← hL]
   conv_lhs => rw [← infGL_mul_finGL x, hy]
-  simp only [Subtype.coe_mk] at hbu
+  simp only at hbu
   rw [hbu]
   simp only [map_mul, map_inv]
   group

@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.UQEqZero
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.PropAC
+import Mathlib.Analysis.Calculus.ContDiff.WithLp
+import Mathlib.Analysis.Real.Pi.Bounds
 
 namespace ReciprocityTheory.ChartRestriction.G.I2
 

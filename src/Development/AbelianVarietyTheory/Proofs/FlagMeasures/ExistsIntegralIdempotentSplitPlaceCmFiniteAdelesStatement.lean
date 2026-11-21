@@ -1,8 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsIntegralIdempotentSplitPlaceCmFiniteAdeles
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.SerFixOne
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.FiniteCosetsHeckeSetAtSplitPlaceOutsideLevel
 open NumberField IsDedekindDomain ReciprocityTheory.Aut
 open scoped TensorProduct
 set_option maxHeartbeats 1000000 in

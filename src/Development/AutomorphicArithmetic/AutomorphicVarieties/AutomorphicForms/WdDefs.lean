@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.LocIsotypic
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.CommuteIsNilpotentOfUnipotent
+import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.BlochKatoSelmerVanishes
 
 noncomputable section
 
@@ -26,7 +27,7 @@ def FrobPow {l : ℕ} [Fact l.Prime] (g : GQ l) (k : ℕ) : Prop :=
   ∀ c : ↥(MaximalUnramifiedExtension l), g (c : Om l) = (((frobUr l ^ k) c : ↥(MaximalUnramifiedExtension l)) : Om l)
 
 example : IsTri (fun _ : Unit => (1 : End ℚ (Fin 2 → ℚ))) (fun _ (_ : Fin 2) => 1) :=
-  ⟨Pi.basisFun ℚ _, fun _ => ⟨fun i j h => by simp [Matrix.one_apply, h.ne'], fun i => by simp⟩⟩
+  ⟨Pi.basisFun ℚ _, fun _ => ⟨fun i j h => by simp [h.ne'], fun i => by simp⟩⟩
 
 example {l : ℕ} [Fact l.Prime] : FrobPow (1 : GQ l) 0 := fun _ => rfl
 

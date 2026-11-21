@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.MinpolyIrreducibleNatDegreeOfRankOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiniteOfBoundedImageInFinitelyGeneratedSubgroupStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EmbeddingsRealIndependent
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FixedVectorSquaredBound

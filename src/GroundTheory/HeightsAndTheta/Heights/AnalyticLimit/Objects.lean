@@ -1,7 +1,6 @@
-import Mathlib
-import ReciprocityTheory.AnalyticForms.PotentialTheory.IsPotentialOfFun
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PotentialTheory.ContDiffAtOfIsPotential
-import ReciprocityTheory.AnalyticForms.PotentialTheory.ContDiffFubiniStudyRatioCompChart0
 import GroundTheory.HeightsAndTheta.Heights.Regularisation.IsOpenKappaOpenNeighbourhood
 set_option maxSynthPendingDepth 1
 

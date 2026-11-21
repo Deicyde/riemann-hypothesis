@@ -1,5 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.FmatMulInv
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.FullExists
+import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.LatDictK
 
 noncomputable section
 
@@ -77,7 +79,7 @@ theorem form_ext {m : Type} [Fintype m] [DecidableEq m] {P Q : Matrix m m D.host
   have := h (Pi.single i 1) (Pi.single j 1)
   have hs : star (Pi.single i (1 : D.host.E) : m → D.host.E) = Pi.single i 1 := by
     ext k
-    by_cases hk : k = i <;> simp [Pi.single_apply, hk]
+    by_cases hk : k = i <;> simp [hk]
   rw [hs] at this
   simpa [Matrix.mulVec, dotProduct, Pi.single_apply] using this
 

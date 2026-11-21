@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.AdmissibleParameterJoins.SfromGLp
 import Formalism.SharpRestriction.AdmissibleParameterJoins.SfromGLe
+import Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Card
 
 noncomputable section
 

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GaussManinPeriods
 
@@ -156,7 +157,7 @@ theorem jet_linear (J : JetRing ℂ I n) (l : (I → ℂ) →L[ℂ] ℂ) : jet J
   unfold jet taylor
   rw [Finset.sum_range_succ', Finset.sum_range_succ', Finset.sum_eq_zero]
   · rw [← (Equiv.funUnique (Fin 1) I).symm.sum_comp]
-    simp [h1]
+    simp
   · intro k _
     refine Finset.sum_eq_zero fun s _ ↦ ?_
     rw [iteratedFDeriv_succ_apply_right, h1, iteratedFDeriv_const_of_ne (Nat.succ_ne_zero k)]

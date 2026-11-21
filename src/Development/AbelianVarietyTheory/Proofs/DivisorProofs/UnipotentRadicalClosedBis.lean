@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviEmbeddingExistsDoublingConfiguration
 
 open scoped TensorProduct NNReal Matrix ENNReal
@@ -129,14 +128,14 @@ theorem gam_mul_leviM (hQP : Q * frame x y ι = 1) {N : Matrix (Fin (b + 2)) (Fi
   ext i j
   obtain ⟨a, ha⟩ := hN.2 (G *ᵥ Pi.single j 1)
   rw [gam_apply, ← mulVec_mulVec, leviM_ι hQP, ha, Q_line hQP, Q_ι hQP]
-  simp [mulVec_single_one]
+  simp
 
 theorem gam_leviM_mul (hQP : Q * frame x y ι = 1) {N : Matrix (Fin (b + 2)) (Fin (b + 2)) A} (hN : IsUnipMat x ι N)
     (G : Matrix (Fin b) (Fin b) A) (t s : A) : gam Q ι (leviM x y ι Q G t s * N) = G := by
   ext i j
   obtain ⟨a, ha⟩ := hN.2 (Pi.single j 1)
   rw [gam_apply, ← mulVec_mulVec, ha, mulVec_add, mulVec_smul, leviM_ι hQP, leviM_mulVec_x hQP, smul_smul, Q_line hQP, Q_ι hQP]
-  simp [mulVec_single_one]
+  simp
 
 theorem leviM_mul_leviM (hQP : Q * frame x y ι = 1) {G G' : Matrix (Fin b) (Fin b) A} {t t' s s' : A}
     (hG : G * G' = 1) (ht : t * t' = 1) (hs : s * s' = 1) : leviM x y ι Q G t s * leviM x y ι Q G' t' s' = 1 := by
@@ -159,11 +158,11 @@ theorem eq_leviM (hQP : Q * frame x y ι = 1) {M : Matrix (Fin (b + 2)) (Fin (b 
     fin_cases k
     · have := congrFun hx i
       simp only [mulVec, dotProduct, Pi.smul_apply, smul_eq_mul] at this
-      simp [cols2, Matrix.mul_apply, diagonal, Fin.sum_univ_two]
+      simp [cols2, Matrix.mul_apply, diagonal]
       rw [this, mul_comm]
     · have := congrFun hy i
       simp only [mulVec, dotProduct, Pi.smul_apply, smul_eq_mul] at this
-      simp [cols2, Matrix.mul_apply, diagonal, Fin.sum_univ_two]
+      simp [cols2, Matrix.mul_apply, diagonal]
       rw [this, mul_comm]
   calc M = M * (frame x y ι * Q) := by rw [frame_mul_Q hQP, Matrix.mul_one]
     _ = leviM x y ι Q G t s := by rw [← Matrix.mul_assoc, h]; rfl

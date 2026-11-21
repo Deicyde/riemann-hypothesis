@@ -1,4 +1,5 @@
-import Formalism.LocalToGlobal.Columns.TargetChF
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.DGamAut
 
 open NumberField IsDedekindDomain Module Matrix

@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.SpanPowerMembership.HaarDensityNeZero
-import Formalism.RealPlaceAnalysis.RealPlaceTaylor.FrobeniusBoundOfMulNearOne
+import Formalism.RealPlaceAnalysis.InstMeasurableSpaceUJ
 
 noncomputable section
 
@@ -16,7 +18,7 @@ variable {n P Q : ℕ} (ε : Fin n → Bool) (e : Fin P ⊕ Fin Q ≃ Fin n)
 abbrev re : MM P Q ≃ₐ[ℂ] Matrix (Fin n) (Fin n) ℂ := Matrix.reindexAlgEquiv ℂ ℂ e
 
 theorem re_star (X : MM P Q) : re e Xᴴ = (re e X)ᴴ := by
-  simp [re, Matrix.reindexAlgEquiv_apply, Matrix.conjTranspose_reindex]
+  simp [re, Matrix.reindexAlgEquiv_apply]
 
 include h1 h2 in
 theorem re_J : re e (Formalism.UG.Jpq P Q) = Jm ε := by
@@ -195,7 +197,7 @@ def e0 {n : ℕ} (ε : Fin n → Bool) : Fin (nT ε) ⊕ Fin (nF ε) ≃ Fin n :
     (Fintype.equivFin {i // ¬ ε i = true}).symm).trans (Equiv.sumCompl fun i => ε i = true)
 
 theorem sign_split_equiv_inl {n : ℕ} (ε : Fin n → Bool) (i) : ε (e0 ε (Sum.inl i)) = true := by
-  simp only [e0, Equiv.trans_apply, Equiv.sumCongr_apply, Sum.map_inl, Equiv.sumCompl_apply_inl]
+  simp only [e0]
   exact ((Fintype.equivFin {i // ε i = true}).symm i).2
 
 theorem sign_split_equiv_inr {n : ℕ} (ε : Fin n → Bool) (j) : ε (e0 ε (Sum.inr j)) = false := by

@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.GTScale
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Wlocal
+import Mathlib.RingTheory.Henselian
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 noncomputable section
 

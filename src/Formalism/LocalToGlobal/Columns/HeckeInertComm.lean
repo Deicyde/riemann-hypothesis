@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.HeckeInertSq
 import Formalism.LocalToGlobal.Columns.PathCountSymmetricHolds
+import Formalism.LocalToGlobal.Columns.HeckeInertLemmas
 
 noncomputable section
 

@@ -1,6 +1,4 @@
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsWeightDataIntegralStatement
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.CohomologicalCsdTempered
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.HeckeOpen
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.WtWeights
 
 set_option synthInstance.maxHeartbeats 200000

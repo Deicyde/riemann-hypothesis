@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.LocalMaximality.LiftFactorization
 
 open KaehlerDifferential GlobalTheory.CechDR GlobalTheory.PD GlobalTheory.WH GlobalTheory.W1 UpperTheory.Gal.productCup_of_system
@@ -143,9 +143,9 @@ theorem UpperTheory.Gal.productCup_of_system.thMuLat_of :
         (by
           intro a m
           rcases hx : ofLex (e a) with i | l
-          · simp only [hx, Sum.elim_inl]
+          · simp only [Sum.elim_inl]
             exact zero_mem _
-          · simp only [hx, Sum.elim_inr, sub_mul, ite_mul, zero_mul]
+          · simp only [Sum.elim_inr, sub_mul, ite_mul, zero_mul]
             rw [← Units.val_mul, ← Units.val_mul]
             refine sub_mem ?_ ?_
             · split_ifs

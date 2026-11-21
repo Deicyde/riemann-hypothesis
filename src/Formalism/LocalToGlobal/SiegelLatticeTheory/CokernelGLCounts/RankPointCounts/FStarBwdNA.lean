@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.BetaUniqueness.Lemmas
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ScalarPairOrthogonal.XLeOrthXplus
 import Formalism.HermitianLattices.HermitianLatticesProofs.DualLattice
-import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.WittExtensionTheorem
 
 noncomputable section
 

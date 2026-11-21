@@ -1,8 +1,9 @@
-import Formalism.LocalToGlobal.GlobalTheory.GL4.ThirdLinkOfArchimedean
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.GL4.BcBasisApply
-import Mathlib
-import Formalism.LocalToGlobal.Columns.FockNormSubstitutionBound
-import Formalism.LocalToGlobal.Columns.TwistedLocalisationComparable
+import Formalism.LocalToGlobal.Columns.StandardDeltaIntegralCoeffs
+import Formalism.LocalToGlobal.GlobalTheory.GL4.PColLoc
+import Formalism.SharpRestriction.GlobalSchurBounds.SlopeMaxOpenOfHookTwoLeV
 
 open Module NumberField IsDedekindDomain MvPolynomial
 open scoped Matrix

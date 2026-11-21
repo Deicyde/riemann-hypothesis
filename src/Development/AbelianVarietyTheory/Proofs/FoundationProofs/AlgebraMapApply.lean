@@ -1,8 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.ClassMassEqSumOfBijective
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsUnitaryClassRepTrivialAtCm
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.ClassSet
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianLattices.HermitianLatticesProofs.LocBasic
+import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.AfsplitB
+import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.CsApprox
+import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.CsGlob
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 open NumberField IsDedekindDomain Formalism.UG Formalism.UG.P
 open scoped TensorProduct Matrix
@@ -126,8 +128,8 @@ theorem exists_den {n : ℕ} (Λ : Submodule (𝓞 E) (Fin n → E))
     funext i
     rw [Finset.sum_apply, Pi.smul_apply]
     simp only [Pi.smul_apply, Pi.single_apply, smul_ite, smul_zero, Finset.sum_ite_eq,
-      Finset.sum_ite_eq', Finset.mem_univ, if_true]
-    simp only [Algebra.smul_def, map_intCast, hmk]
+      Finset.mem_univ, if_true]
+    simp only [Algebra.smul_def, map_intCast]
     push_cast
     show (m : E) * (m' : E) * x i = ((m' : E) * x i) * (m : E)
     ring

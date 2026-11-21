@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.UniformVanishing
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GradedNoetherianStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.UniformVanishingOfGradedNoetherianStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.UniformGenerationOfVanishingStatement

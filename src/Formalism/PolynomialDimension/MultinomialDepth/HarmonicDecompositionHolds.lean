@@ -1,4 +1,18 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PolynomialDimension.StatementHar
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 open scoped BigOperators
@@ -40,9 +54,9 @@ theorem yDeg_add (m m' : XY k →₀ ℕ) : yDeg (m + m') = yDeg m + yDeg m' := 
 theorem xDeg_inl (i : Fin k) : xDeg (Finsupp.single (Sum.inl i : XY k) 1) = 1 := by
   simp [xDeg, Finsupp.single_apply]
 theorem yDeg_inl (i : Fin k) : yDeg (Finsupp.single (Sum.inl i : XY k) 1) = 0 := by
-  simp [yDeg, Finsupp.single_apply]
+  simp [yDeg]
 theorem xDeg_inr (i : Fin k) : xDeg (Finsupp.single (Sum.inr i : XY k) 1) = 0 := by
-  simp [xDeg, Finsupp.single_apply]
+  simp [xDeg]
 theorem yDeg_inr (i : Fin k) : yDeg (Finsupp.single (Sum.inr i : XY k) 1) = 1 := by
   simp [yDeg, Finsupp.single_apply]
 
@@ -629,8 +643,7 @@ theorem card_bideg (k' A B : ℕ) :
   have e := (Equiv.subtypeEquiv (p := fun m : XY (k' + 1) →₀ ℕ => xDeg m = A ∧ yDeg m = B)
       (q := fun c : (Fin (k' + 1) →₀ ℕ) × (Fin (k' + 1) →₀ ℕ) => (∑ i, c.1 i = A) ∧ (∑ i, c.2 i = B))
       Finsupp.sumFinsuppEquivProdFinsupp fun m => by
-        simp [xDeg, yDeg, Finsupp.fst_sumFinsuppEquivProdFinsupp,
-          Finsupp.snd_sumFinsuppEquivProdFinsupp]).trans
+        simp [xDeg, yDeg]).trans
     (Equiv.subtypeProdEquivProd (p := fun x : Fin (k' + 1) →₀ ℕ => ∑ i, x i = A)
       (q := fun y : Fin (k' + 1) →₀ ℕ => ∑ i, y i = B))
   rw [show Nat.card ↥{m : XY (k' + 1) →₀ ℕ | xDeg m = A ∧ yDeg m = B} = _ from Nat.card_congr e,

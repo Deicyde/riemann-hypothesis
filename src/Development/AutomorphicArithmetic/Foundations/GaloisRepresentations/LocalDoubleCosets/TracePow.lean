@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.LocalDoubleCosets.SgMemUnipB
+import GroundTheory.AutomorphicForms.WhittakerOrbit
 
 noncomputable section
 

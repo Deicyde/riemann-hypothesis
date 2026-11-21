@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.LocalRingCardinality.SpanPowerMembership.Spaces
-import Formalism.LocalToGlobal.BesselHermitianTheta.LemmasChr
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.EisRegularAtOfEisPoleLE
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.IntegrableOfIsAniso
 import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsHaarZetaValueAt
@@ -131,7 +130,7 @@ theorem conclusion_zero (V : HSp D) (a : GL (Fin V.rank) (AE D)) (μ : (AE D)ˣ 
   · have : eisSer V (fun _ _ => (0 : ℂ)) g = fun _ => 0 := funext fun s => congrFun h2 g
     rw [eisCont, this, (holValueAt_const 0 s).valueAt.cont_eq, mul_zero]
   · simp only [BasicIdentity, h2, DblConv, dblInt, h3, zetaConvH_iff, zetaH_eq, zero_mul, integral_zero,
-      integrable_zero, and_true]
+      and_true]
     exact ⟨⟨fun _ _ _ => by simp [dblIntegrand], integrable_zero _ _ _⟩, integrable_zero _ _ _⟩
 
 end GlobalTheory.Eis.DblModel

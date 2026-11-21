@@ -1,4 +1,14 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.FockJointMultiplicity.JointMultOfSteps
+import Mathlib.RingTheory.Derivation.Lie
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -29,7 +39,7 @@ theorem fockAct1_eq (p q r s : ℕ) (Z : Mat p q) :
   rw [Fintype.sum_eq_single c]
   · simp
   · intro d hd
-    simp [Matrix.one_apply, Ne.symm hd]
+    simp [Ne.symm hd]
 
 private theorem fockAct2_eq_omAct_one_kronecker (p q r s : ℕ) (Y : FockH1Action.Mat r s) :
     FockH1Action.fockAct2 p q r s Y =
@@ -44,7 +54,7 @@ theorem fockAct2_eq (p q r s : ℕ) (Y : Mat r s) :
   rw [Fintype.sum_eq_single a]
   · simp
   · intro b hb
-    simp [Matrix.one_apply, Ne.symm hb]
+    simp [Ne.symm hb]
 
 end PI.WFJM
 
@@ -134,22 +144,22 @@ open PI.FJM
 theorem fockAct1_Eab (p q r s : ℕ) (a b : Ix p q) :
     fockAct1 p q r s (Eab a b) = ∑ c : Ix r s, omE (p := p) (q := q) (r := r) (s := s) (a, c) (b, c) := by
   rw [fockAct1_eq, Fintype.sum_eq_single a, Fintype.sum_eq_single b]
-  · simp [FockH1Action.Eab, Matrix.single_apply]
+  · simp [FockH1Action.Eab]
   · intro x hx
-    simp [FockH1Action.Eab, Matrix.single_apply, Ne.symm hx]
+    simp [FockH1Action.Eab, Ne.symm hx]
   · intro x hx
-    simp [FockH1Action.Eab, Matrix.single_apply, Ne.symm hx]
+    simp [FockH1Action.Eab, Ne.symm hx]
 
 theorem fockAct2_Eab (p q r s : ℕ) (c d : Ix r s) :
     fockAct2 p q r s (Eab c d) = ∑ a : Ix p q, omE (p := p) (q := q) (r := r) (s := s) (a, c) (a, d) := by
   rw [fockAct2_eq]
   refine Finset.sum_congr rfl fun a _ => ?_
   rw [Fintype.sum_eq_single c, Fintype.sum_eq_single d]
-  · simp [FockH1Action.Eab, Matrix.single_apply]
+  · simp [FockH1Action.Eab]
   · intro x hx
-    simp [FockH1Action.Eab, Matrix.single_apply, Ne.symm hx]
+    simp [FockH1Action.Eab, Ne.symm hx]
   · intro x hx
-    simp [FockH1Action.Eab, Matrix.single_apply, Ne.symm hx]
+    simp [FockH1Action.Eab, Ne.symm hx]
 
 theorem leftOffDiagonalActionFormula : FormRaise1 := by
   intro p q r s a b hab

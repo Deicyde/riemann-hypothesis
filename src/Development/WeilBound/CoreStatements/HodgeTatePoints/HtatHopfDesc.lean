@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.TranslateMemIndOrder
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.HodgeTatePoints.HtatDesc
+import Mathlib.RingTheory.PiTensorProduct
 open GlobalTheory.CompanionTheory.Ar.BT TensorProduct
 
 namespace PositivityTheory.HtPt.Htat.HopfOrderFlatLocal

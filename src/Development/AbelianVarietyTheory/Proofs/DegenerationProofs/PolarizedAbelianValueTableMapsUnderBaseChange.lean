@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.IsFrameIff
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsFramesOnUniformisedModelFibre
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.SectionPowerCalculusGeometricFibre
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.TorsionPointsFieldExtension
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.NormalisedThetaTranslateConstantRigidifiedPullba

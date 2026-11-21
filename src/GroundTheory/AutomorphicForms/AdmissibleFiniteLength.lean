@@ -1,8 +1,6 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.AdmissibleInduction
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.CuspidalAdmissible
-import GroundTheory.AutomorphicForms.JacquetAdmissible
-import GroundTheory.AutomorphicForms.SupercuspidalCoefficients
 import GroundTheory.AutomorphicForms.IwahoriFactorization
 
 noncomputable section

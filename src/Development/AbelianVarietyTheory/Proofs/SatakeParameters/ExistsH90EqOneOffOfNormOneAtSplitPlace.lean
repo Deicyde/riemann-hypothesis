@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.IsUnifAt
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsFiniteAdeleBaseChangeEquiv
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ExistsNormOneIdeleOrderOneTrivialElsewhere
 open Formalism.BasicNotions NumberField IsDedekindDomain Formalism.MainNotions Formalism.MainNotions.G Formalism.L2.G Formalism.L2.G.Cmp Formalism.L2.Forms Formalism.L2.DIV Formalism.UG GlobalTheory.TwV GlobalTheory.TwV.Xc TensorProduct
 
@@ -33,7 +31,7 @@ theorem exists_h90_eq_oneOff_of_normOne_at_split_place : ∀ {F E : Type} [Field
   have hval : ((h90 σ (oneAtU w c) : (AfE F E)ˣ) : AfE F E) =
       oneAt w (c : E ⊗[F] w.adicCompletion F) *
         sigR σ (FiniteAdeleRing (𝓞 F) F) (oneAt w ((c⁻¹ : (E ⊗[F] w.adicCompletion F)ˣ) : E ⊗[F] w.adicCompletion F)) := by
-    simp only [h90, MonoidHom.div_apply, MonoidHom.id_apply, div_eq_mul_inv, Units.val_mul, conjId, map_inv]
+    simp only [h90, div_eq_mul_inv, conjId]
     rfl
   rw [hval, sigR_oneAt, oneAt_mul, hπe]
   congr 1

@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.ConeHypotheses.PureEqPureA
+import Development.WeilBound.ThetaLifts.ConeHypotheses.PolDense
 
 noncomputable section
 

@@ -1,10 +1,8 @@
-import Mathlib
-import GroundTheory.GlobalFields.TateThesis.EulerFactorsFourierFinite
-import GroundTheory.GlobalFields.TateThesis.AdelicCharLocal
-import GroundTheory.GlobalFields.KummerTheory.LocalIndexAtPlace
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.Artin.ConductorOneDim
-import GroundTheory.AutomorphicForms.GL2.FiniteAdeleDecomp
 import GroundTheory.LocalFields.LocalZeta
+import GroundTheory.AutomorphicForms.GL2.GodementSectionFactor
 
 namespace GroundTheory.Global
 

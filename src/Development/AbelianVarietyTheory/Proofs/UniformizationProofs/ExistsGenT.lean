@@ -1,12 +1,6 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.CubeVal
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.UnifUniqSt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.IsNsmul
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.QkToAkU
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.PhiGenPf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.LBLocalC
-import Development.AbelianVarietyTheory.Definitions.Uniformization.WCompat
-import Development.AbelianVarietyTheory.Definitions.Uniformization.ExistsUniqueSamePt
 import Development.AbelianVarietyTheory.Definitions.Uniformization.SvalTwistOne
 open CategoryTheory CategoryTheory.Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -136,7 +130,7 @@ theorem multK_frac (k : ℕ) (α mu : D.X)
       simp only [Fintype.prod_sum_type, Sum.elim_inl, Sum.elim_inr, Fintype.prod_unique, a₁, a₂]
       rw [add_comm mu α, cPoint_add]
       apply Additive.ofMul.injective
-      simp only [ofMul_mul, ofMul_inv, ofMul_zpow, ofMul_pow]
+      simp only [ofMul_mul, ofMul_inv, ofMul_zpow]
       module)
     (mulGen_isGen _ _ _ _ _ _ _ (mulGen_isGen _ _ _ _ _ _ _
       (powGen_isGen _ _ _ _ (D.psi_gen mu) k) (tau_isGen D mu α))

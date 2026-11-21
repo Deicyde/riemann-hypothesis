@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntEmbCoe
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.FiniteDegreeMorphisms
 open CategoryTheory AlgebraicGeometry Limits NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory GlobalTheory.VB GlobalTheory.LieVB GlobalTheory.CurveRootGeometry
 attribute [local instance] Over.cartesianMonoidalCategory

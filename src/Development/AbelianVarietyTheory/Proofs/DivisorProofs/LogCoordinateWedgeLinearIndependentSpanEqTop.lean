@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsEulerContraction
 open GlobalTheory GlobalTheory.LogDR
 

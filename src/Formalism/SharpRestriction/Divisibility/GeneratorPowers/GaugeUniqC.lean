@@ -1,6 +1,8 @@
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GaugeUniqB
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.GaugeRatio
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.WickVanishing.CalcExp
+import Formalism.LocalToGlobal.ProjectiveLattices.IsExpChart
+import Mathlib.RingTheory.MvPowerSeries.Rename
 
 set_option autoImplicit false
 

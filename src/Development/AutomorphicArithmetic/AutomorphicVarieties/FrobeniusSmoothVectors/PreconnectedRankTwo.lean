@@ -1,11 +1,11 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.FrobeniusSmoothVectors.Integral
-import Development.AutomorphicArithmetic.AutomorphicVarieties.FrobeniusSmoothVectors.StrSMul
-import Development.AutomorphicArithmetic.AutomorphicVarieties.FrobeniusSmoothVectors.Imports
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.FrobeniusSmoothVectors.FramePointFiberNonempty
 import Development.AutomorphicArithmetic.AutomorphicVarieties.FrobeniusSmoothVectors.ExistsMemStrSNeZeroOfFrameOk
 import Development.AutomorphicArithmetic.AutomorphicVarieties.FrobeniusSmoothVectors.SmoothHomWeightSumNeg
 import Development.AutomorphicArithmetic.AutomorphicVarieties.FrobeniusSmoothVectors.SmoothCharacterExtendsToOpenSubgroup
 import Development.AutomorphicArithmetic.AutomorphicVarieties.FrobeniusSmoothVectors.SmoothDualExact
+import Mathlib.RingTheory.Ideal.Quotient.HasFiniteQuotients
 
 open IsLocalRing Matrix UpperTheory.V.Alg UpperTheory.V.U3 UpperTheory.V.Fr
 
@@ -74,7 +74,7 @@ private theorem rep_ex {l : ℕ} [Fact l.Prime] {k : Type} [Field k] [CharP k l]
     rw [mul_comm, ← mul_assoc, inv_mul_cancel, one_mul]
   have a0 : a 1 = 0 := by
     have h1 := hmul 1 1
-    simp only [mul_one, map_one, Units.val_one, one_smul, inv_one] at h1
+    simp only [mul_one] at h1
     simpa using h1
   have hmul' : ∀ g g', a (g * g') = a g * p g' + q g * a g' := by
     intro g g'
@@ -197,7 +197,7 @@ private theorem line {K : Type} [Field K] [Algebra (ResidueField O) K] {A : F.G0
       rw [RingHom.mem_ker, RingHom.comp_apply, RingHom.mem_ker.mp (tA hx), map_zero]
     have heq : (φ : Polynomial K →+* K).comp ξA = ξ := pt_uniq hF S hξ hφ tξ tφ (fun g => by
       rw [RingHom.comp_apply, vA g, ← vξ g]
-      simp [φ, Polynomial.coe_aeval_eq_eval])
+      simp [φ])
     intro x hx
     rw [RingHom.mem_ker, ← heq, RingHom.comp_apply, RingHom.mem_ker.mp hx, map_zero]
 

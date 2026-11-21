@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HomogeneousLocalization.Statements
+import Mathlib.Analysis.Complex.Isometry
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

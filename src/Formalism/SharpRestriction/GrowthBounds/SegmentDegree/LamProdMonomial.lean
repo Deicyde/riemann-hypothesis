@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.StrictMonoIntExists
+import Formalism.SharpRestriction.GrowthBounds.ValuationLowestDegreeMapFractionField
 
 noncomputable section
 

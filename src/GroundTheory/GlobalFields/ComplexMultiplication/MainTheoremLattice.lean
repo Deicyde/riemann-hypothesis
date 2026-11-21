@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.ComplexMultiplication.FrobeniusAtPrimes
 import GroundTheory.GlobalFields.ComplexMultiplication.DegreeOneAutomorphismPoints
 import GroundTheory.ArithmeticGeometry.AbelianVarieties.TateCharpoly

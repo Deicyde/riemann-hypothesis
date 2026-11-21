@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LeviDeterminants.CharacterAdmissibility.LawWLevi
 import Development.WeilBound.ThetaLifts.LeviDeterminants.CharacterAdmissibility.LevScalar2
 import Development.WeilBound.ThetaLifts.CTKernel

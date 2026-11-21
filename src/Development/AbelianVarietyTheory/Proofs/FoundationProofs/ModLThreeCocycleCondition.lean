@@ -1,5 +1,13 @@
-import Mathlib
-import Formalism.GaloisCohomology.LocalTateDualityK
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.NumberTheory.Padics.RingHoms
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Topology.Connected.Separation
+import Mathlib.Topology.Instances.ZMod
+import Mathlib.Topology.MetricSpace.Ultra.TotallySeparated
+import ReciprocityTheory.GaloisValuations.SeparatedDvrSecondCohomologyMem
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.GaloisCohomology
 
 namespace GlobalTheory.PadicCocycleLift

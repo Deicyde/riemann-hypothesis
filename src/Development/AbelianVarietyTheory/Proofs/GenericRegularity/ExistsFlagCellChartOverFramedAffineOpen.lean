@@ -1,15 +1,12 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.RegularCharts.Reframe
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.RegularCharts.ModelAt
 import Formalism.LocalToGlobal.ProjectiveLattices.FrameCharts
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.SecBaseChangeAnySt
 import Development.AbelianVarietyTheory.Proofs.GenericRegularity.IsTriangularReframeExistsAndUniqueStatement
 import Development.AbelianVarietyTheory.Proofs.GenericRegularity.TriangularReframeCompBaseChangeBorelStatement
 import Development.AbelianVarietyTheory.Proofs.GenericRegularity.FrameBorelGroupoidPropertiesStatement
 import Development.AbelianVarietyTheory.Proofs.GenericRegularity.ExistsFlagCoordinatesCellChangeBirationalStatement
 import Development.AbelianVarietyTheory.Proofs.GenericRegularity.PolyChartSmoothFractionLift
-import Development.AbelianVarietyTheory.Proofs.GenericRegularity.ExistsLowerMulUpperOfLeadingMinors
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField IsDedekindDomain
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj GlobalTheory.Reg
 
@@ -42,7 +39,7 @@ theorem exists_away_fac {K A S L : Type} [CommRing K] [CommRing A] [Algebra K A]
   let p : PrimeSpectrum S := PrimeSpectrum.comap χ ⟨⊥, Ideal.isPrime_bot⟩
   have hp : p ∈ (W ⁻¹ᵁ j.opensRange : (Sp S).Opens) := by
     have e := congrArg (fun m : Sp L ⟶ X => m (⟨⊥, Ideal.isPrime_bot⟩ : PrimeSpectrum L)) h
-    simp only [Scheme.Hom.comp_apply] at e
+    simp only at e
     exact ⟨_, e.symm⟩
   obtain ⟨_, ⟨g, rfl⟩, hg, hle⟩ := PrimeSpectrum.isTopologicalBasis_basic_opens.exists_subset_of_mem_open
     hp (W ⁻¹ᵁ j.opensRange).isOpen

@@ -1,6 +1,6 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.Step1KillXList
-import Formalism.SharpRestriction.LevelLetterCocycles.SaturationUnramifiedOfRingCondition
-import Formalism.SharpRestriction.LevelLetterCocycles.LetterConditionGlobal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.LevelLetterCocycles.InvariantLetterPolynomialDerivation
 
 noncomputable section
 

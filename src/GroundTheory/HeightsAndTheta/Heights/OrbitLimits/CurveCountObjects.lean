@@ -1,7 +1,7 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ArithmeticHilbertSamuelLowerBound
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.NatCardEqPowLength
-import GroundTheory.HeightsAndTheta.Heights.KernelsLattice
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.StatementsPointVertRSteps
 set_option maxSynthPendingDepth 1
 

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.TwistedEisensteinCoset.WeightedSumToGaussSum
 
 open NumberField IsDedekindDomain Module
@@ -49,7 +51,7 @@ theorem qt_diag (D : ι → E) (hD : ∀ i, D i ≠ 0) :
         by_cases hk : k = a
         · subst hk
           simp [em, ha]
-        · simp [em, hk, Function.update_apply]
+        · simp [em, hk]
       · rw [Finset.sum_insert ha, zpow_add₀ hK, mul_comm]
   refine qt_congr (key Finset.univ) (fun v => by funext k; simp [Matrix.mulVec_diagonal]) ?_
   rw [Matrix.det_diagonal, vq_prod (s := Finset.univ) (f := D) (hf := fun i _ => hD i)]
@@ -96,7 +98,7 @@ theorem qt_transl (τ : ι → E) : QT P (fun v : ι → E => v + τ) (1 : K) :=
         by_cases hk : k = a
         · subst hk
           simp [em, ha]
-        · simp [em, hk, Function.update_apply]
+        · simp [em, hk]
       · rw [vq_one, zpow_zero, one_mul]
         all_goals assumption
   exact qt_congr (key Finset.univ) (fun v => by funext k; simp) rfl

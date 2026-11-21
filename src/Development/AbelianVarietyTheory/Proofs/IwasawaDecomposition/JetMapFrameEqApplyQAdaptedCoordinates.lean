@@ -1,13 +1,9 @@
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.FixedVectorEqOfStandardData
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsTwIffCanonEq
-import Formalism.LocalToGlobal.KernelLattices.TopPin
-import Formalism.LocalToGlobal.KernelLattices.InterlaceAll
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.JetsInIffStepField
-import Formalism.LocalToGlobal.KernelLattices.ColumnData.DiagramFitsSourceRank
-import Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.UnitTraceSumBounds.ThetaIsometryFactsHold
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.FactDelDualNabla
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.DominantWeightPolynomialFunctionalMinorsStatement
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ExpTieAlg
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.LatAtLattice
+import Formalism.SharpRestriction.GlobalSchurBounds.GL3Columns
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Col Formalism.L2.DIV Formalism.L2.Ker Formalism.UG Formalism.L2.Forms GlobalTheory.Mem GlobalTheory.Mem.Chr GlobalTheory.Mem.Col2 GlobalTheory.Mem.Col2.TC Matrix Formalism.MainNotions.G Formalism.MainNotions.TaylorLogMetric
 attribute [local instance] GlobalTheory.Mem.Col2.starE Formalism.BasicNotions.Host.cmStar
 open Classical
@@ -93,7 +89,7 @@ theorem prod_factorial_add_single [Fintype σ] [DecidableEq σ] (α : σ →₀ 
     · subst hi
       simp [Nat.factorial_succ]
       ring
-    · simp [Finsupp.single_apply, Ne.symm hi, hi]
+    · simp [hi]
   simp_rw [h]
   rw [Finset.prod_mul_distrib, Finset.prod_ite_eq']
   simp

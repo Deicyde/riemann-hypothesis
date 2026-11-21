@@ -1,5 +1,15 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.IsotropicMahlerBounds.LogAbsoluteWedges.WedgeSub
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -114,7 +124,7 @@ theorem nF_fromCols_sel_le [IsUltrametricDist K] [Fintype ι] [DecidableEq ι] [
   have hb : ((fromCols Eᵀ C).submatrix u id).submatrix e id =
       fromBlocks 1 0 (Eᵀ.submatrix (u ∘ e ∘ Sum.inr) id) (C.submatrix (u ∘ e ∘ Sum.inr) id) := by
     ext (a | a) (b | b)
-    · simp [he, hσ, hE, one_apply, hs.eq_iff, eq_comm]
+    · simp [he, hσ, hE, one_apply, hs.eq_iff]
     · simpa [he, hσ] using congrFun (congrFun hC a) b
     · simp
     · simp
@@ -150,7 +160,7 @@ theorem nF_fromCols_of_id (hM : MulF) [IsUltrametricDist K] [Fintype ι] [Decida
   have hEE : E * Eᵀ = 1 := by
     rw [hE, sel_mul]
     ext a b
-    simp [one_apply, hs.eq_iff, eq_comm]
+    simp [one_apply, hs.eq_iff]
   have hEC : E * C = 0 := by rw [hE, sel_mul, hC]
   have hEint : ∀ i j, ‖E i j‖ ≤ 1 := fun i j => int_one _ _
   have hEtint : ∀ i j, ‖Eᵀ i j‖ ≤ 1 := fun i j => int_one _ _

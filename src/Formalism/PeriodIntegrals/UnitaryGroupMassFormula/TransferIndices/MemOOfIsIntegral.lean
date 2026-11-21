@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.TransferIndices.TauCentralScalar
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.TransferIndices.GrpNorm
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.TransferIndices.DvTransferIdxOf
@@ -16,8 +17,8 @@ variable {K : Type} [Field K] [CharZero K] {G : Type} [Group G] [Fintype G] (T :
 theorem coeff_sum_of (a : G → K) (g : G) :
     (∑ y : G, a y • MonoidAlgebra.of K G y).coeff g = a g := by
   classical
-  simp [MonoidAlgebra.coeff_sum, MonoidAlgebra.coeff_smul_apply, MonoidAlgebra.of_apply,
-    MonoidAlgebra.coeff_single_apply, Finsupp.single_apply]
+  simp [MonoidAlgebra.coeff_sum, MonoidAlgebra.of_apply,
+    Finsupp.single_apply]
 
 theorem eS_ne_zero (s : T.S) : eS T s ≠ 0 := by
   intro h

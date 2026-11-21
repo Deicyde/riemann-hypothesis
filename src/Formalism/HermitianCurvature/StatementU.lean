@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementB
 import Formalism.HermitianCurvature.StatementG
+import Mathlib.Data.Matrix.ColumnRowPartitioned
 
 open Matrix MeasureTheory
 open scoped ComplexConjugate

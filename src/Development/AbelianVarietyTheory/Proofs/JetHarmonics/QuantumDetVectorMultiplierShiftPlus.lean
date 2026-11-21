@@ -1,6 +1,4 @@
-import Mathlib
-import Formalism.RealPlaceAnalysis.ThirdArithmeticHolds
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.CapelliLeftComatrixStatement
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.CapelliDetMulVectorTypeStatement
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.QminorPolyMapStatement
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.QminorIntertwiningApplyStatement
@@ -51,7 +49,7 @@ theorem qdet_vector_multiplier_shift_plus : ∀ (V W : Type) [AddCommGroup V] [M
         Finset.sum_add_distrib]
       congr 1
       rw [Finset.sum_eq_single l]
-      · simp [Finset.smul_sum]
+      · simp
       · intro b _ hb; simp [hb]
       · simp
     have h2 : ∀ k : Fin (m + 1), ∑ a : Fin (m + 1), Tm E' u a l ((((-1 : ℂ) ^ ((a : ℕ) + (k : ℕ))) • qminor E' (Fin.succAbove a) (Fin.succAbove k) (u - 1)) (y k)) = if l = k then qdet E' u (y k) else 0 := by

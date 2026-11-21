@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsCMFrame
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.SesqSesquilinearSkewHermitianStatement
+import Development.AbelianVarietyTheory.Definitions.CMLattices.IsDiffOf
 
 noncomputable section
 

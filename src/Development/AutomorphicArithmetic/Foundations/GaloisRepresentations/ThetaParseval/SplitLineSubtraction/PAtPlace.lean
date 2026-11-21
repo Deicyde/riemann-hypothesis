@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.SplitLineSubtraction.SubtractOf
 open NumberField IsDedekindDomain Neutral.B1 Formalism.L2.Host Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.MainNotions.N Polynomial
 open GlobalTheory.CuspRep GlobalTheory.WeilDeligne GlobalTheory.Pst GlobalTheory.HeckeGal GlobalTheory.UnitaryBC
@@ -66,7 +66,7 @@ theorem UpperTheory.Gal.TP.Sub.atPlace_holds :
     have eS : ((algSat n (normV w) B).map (· * ((κ.val w : ℂˣ) : ℂ)⁻¹)).map (· * ((κ.val w : ℂˣ) : ℂ))
         = algSat n (normV w) B := by
       rw [Multiset.map_map]
-      simp [Function.comp_def]
+      simp
     have eJ : (fun τ => ((GlobalTheory.GalDef.jumpsOf ι lam τ).map (· + m (ι.toRingHom.comp τ))).map
         (· + -m (ι.toRingHom.comp τ))) = GlobalTheory.GalDef.jumpsOf ι lam := by
       funext τ

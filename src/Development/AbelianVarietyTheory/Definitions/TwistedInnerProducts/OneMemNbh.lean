@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Counterexamples.JetSurvey.MatrixExponentialEntries
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.ProjExists
 
@@ -210,7 +210,7 @@ theorem tensOne_is (ε : Fin 1 → Bool) (m : ℤ) : (tensOne ε m).Is ε (fun _
     have := GlobalTheory.Survey.MatrixExponentialEntries.norm_entry (ε := ε) hg
     simp [h0] at this
   have hinv : ∀ g : Mat 1, g⁻¹ 0 0 = (g 0 0)⁻¹ := fun g => by
-    simp [Matrix.inv_def, Matrix.det_unique, Matrix.adjugate_fin_one]
+    simp
   refine ⟨fun s => ?_, fun s => ?_, fun _ _ _ _ => smV_chi _ _ _, fun _ _ _ => smV_chi _ _ _, fun _ _ _ _ _ _ => rfl,
     fun _ _ _ _ _ _ => rfl, fun s g hg y _ c => ?_, fun s g hg x _ => ?_, fun s X _ y _ c => ?_, fun x _ => ?_, fun s y x _ _ => ?_⟩
   · have : ((fun _ => (m : ℝ)) - Pi.single s 1 : Fin 1 → ℝ) = fun _ => (((m - 1 : ℤ)) : ℝ) := by
@@ -221,10 +221,10 @@ theorem tensOne_is (ε : Fin 1 → Bool) (m : ℤ) : (tensOne ε m).Is ε (fun _
   · obtain rfl : c = 0 := Subsingleton.elim _ _
     show (g 0 0) ^ (m - 1) * (show ℂ from y) = ∑ d, g⁻¹ d 0 • chi m g (show ℂ from y)
     generalize (show ℂ from y) = z
-    simp [tensOne, chi, hinv, zpow_sub₀ (hne g hg)]
+    simp [chi, zpow_sub₀ (hne g hg)]
     ring
   · show _ = (g 0 0) ^ (m - 1) * x 0
-    simp [tensOne, chi, hinv, zpow_sub₀ (hne g hg)]
+    simp [tensOne, chi, zpow_sub₀ (hne g hg)]
     ring
   · obtain rfl : c = 0 := Subsingleton.elim _ _
     show dR (chi (m - 1)) X (show ℂ from y) = dR (chi m) X (show ℂ from y) - ∑ d, X d 0 • (show ℂ from y)

@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HeisenbergConjugationMeasurePreserving
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.ExistsAuxiliaryXi
 
 namespace Formalism.FourierDecayAlt.P.BXiAsm
 open Formalism.FourierDecayAlt.B Formalism.FourierDecayAlt.B2

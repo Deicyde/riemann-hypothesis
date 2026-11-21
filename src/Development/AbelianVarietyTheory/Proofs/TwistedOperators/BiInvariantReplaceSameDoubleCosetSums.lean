@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HasLenOfLatLen
+import Mathlib.Topology.UniformSpace.Uniformizable
 open GlobalTheory.InertZeta
 
 noncomputable section
@@ -96,7 +98,7 @@ theorem dosetSwap : DosetSwap := by
           ‖∑' y : {x : G ⧸ K // dosetOf K x = S}, f₂ y.1‖ := by
         rw [tsum_congr (fun y => congrArg norm (c y)), tsum_congr c, tsum_const, tsum_const, nsmul_eq_mul,
           nsmul_eq_mul]
-        simp [norm_mul]
+        simp
       rw [key, hs]
       exact norm_tsum_le_tsum_norm Summable.of_finite
     · haveI : IsEmpty {x : G ⧸ K // dosetOf K x = S} := ⟨fun y => h ⟨y.1, y.2⟩⟩

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdjointInverseTranslate.SmoothLinear
 
 open Matrix Filter Topology
@@ -107,8 +109,7 @@ theorem conjugated_generator_gl_relation : EabHGl := by
     · rw [if_neg hjk]
       first
       | exact Matrix.single_mul_single_of_ne hjk _ _
-      | (ext p q; simp [Matrix.mul_apply, Matrix.single_apply, ite_and, hjk, Finset.sum_ite_eq,
-          Finset.sum_ite_eq'])
+      | (ext p q; simp [Matrix.mul_apply, Matrix.single_apply, ite_and, hjk, Finset.sum_ite_eq])
   simp only [hE]
   rw [ana_EcComm hH f _ _ g hf hg, ana_Ec_sub hH hf hg, hm, hm]
   split_ifs <;> simp [ana_Ec_zero]

@@ -1,7 +1,5 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.IntegralModels.Statements
-import GroundTheory.HeightsAndTheta.Heights.IntegralModels.StatementsSpreadHom
-import GroundTheory.HeightsAndTheta.Heights.IntegralModels.StatementsSpreadNbhd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.IntegralModels.StatementsSpreadHomNbhd
 import GroundTheory.HeightsAndTheta.Heights.IntegralModels.StatementsInvOpenInsideRat
 set_option maxSynthPendingDepth 1

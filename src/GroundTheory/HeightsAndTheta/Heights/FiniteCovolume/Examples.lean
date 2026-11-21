@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.HermitianDisc
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.Objects
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.NumberTheory.NumberField.Cyclotomic.Embeddings
 
 namespace GroundTheory.Heights₂.Heights.FiniteCovolume.GaussianPlane
 

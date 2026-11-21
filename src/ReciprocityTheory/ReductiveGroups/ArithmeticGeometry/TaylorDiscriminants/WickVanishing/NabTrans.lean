@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.WickVanishing.GaugeTrans
 
 set_option autoImplicit false
@@ -30,7 +32,7 @@ theorem nt_expS_zero [Algebra ℚ k] {n : ℕ} : FB.expS k (0 : PS k n d) = 1 :=
     have hj0 : j = 0 := by omega
     subst hj0
     first
-    | (simp [PowerSeries.coeff_exp]; done)
+    | (simp; done)
     | (simp only [map_sub, PowerSeries.coeff_exp, PowerSeries.coeff_one, if_true, Nat.factorial_zero,
         Nat.cast_one, div_one, map_one, sub_self]; done)
   obtain ⟨R, hR⟩ := hdvd

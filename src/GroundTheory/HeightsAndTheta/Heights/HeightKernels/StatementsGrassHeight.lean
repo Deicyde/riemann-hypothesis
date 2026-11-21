@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ArithmeticHilbertSamuelLowerBound
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.StatementsGrass
 set_option maxSynthPendingDepth 1

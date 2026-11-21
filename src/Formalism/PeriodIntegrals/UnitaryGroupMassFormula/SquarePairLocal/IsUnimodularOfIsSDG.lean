@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.PeriodIntegrals.SqPair
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.SquarePairLocal.SqPairLocalOfSteps
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.UnimodGenus
 

@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CharacterGerms.BiadditiveInSingleVariables
 import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.WtAddSingle
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
+import Mathlib.RingTheory.SimpleRing.Principal
 
 open Formalism.L2.FormalSeriesBounds
 

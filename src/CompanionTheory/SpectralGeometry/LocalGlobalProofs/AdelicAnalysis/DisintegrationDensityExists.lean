@@ -1,7 +1,9 @@
-import Mathlib
-import Formalism.UnipotentAdelicQuotients.SWXSDefs
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.GeneralLinearActions.GenusMassVolumes
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.ContinuousDensitiesEqOfIntegralsOnCompactsStatement
+import Mathlib.MeasureTheory.Measure.HasOuterApproxClosed
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 open MeasureTheory Topology Matrix Set
 open scoped ENNReal NNReal

@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.HodgeFrameGram
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Matrix Complex ComplexConjugate GlobalTheory.HermFrame GlobalTheory.IndefiniteRowSideFullHecke.HodgeFrameGram Filter Topology
 open scoped ComplexOrder ContDiff
@@ -57,7 +59,7 @@ theorem e_isUnit (hE : IsUnitaryFlagFrame Y H π A e) {x : E} (hx : x ∈ Y) :
     rw [form_eq_sum] at this
     rw [one_apply, ← this]
     simp only [mul_apply, transpose_apply, conjTranspose_apply, star_def, Finset.mul_sum,
-      Finset.sum_mul, mul_assoc]
+      mul_assoc]
   have h2 := congrArg det h1
   rw [det_mul, det_one, det_transpose] at h2
   exact isUnit_iff_exists_inv.2 ⟨_, h2⟩
@@ -76,7 +78,7 @@ theorem T_up (hF : IsFlagFamily Y U π A) (hE : IsUnitaryFlagFrame Y H π A e) {
         ext b; simp [mulVec, dotProduct, Pi.single_apply]
       rw [hc, mulVec_mulVec, nonsing_inv_mul _ (hF.isUnit x hx), one_mulVec]
       have : a ≠ j := fun h => by subst h; exact absurd (lt_of_le_of_lt hj hia) (lt_irrefl _)
-      simp [Pi.single_apply, this]
+      simp [this]
     | zero => simp
     | add v w _ _ hv hw => simp [mulVec_add, hv, hw]
     | smul c v _ hv => simp [mulVec_smul, hv]
@@ -167,11 +169,11 @@ theorem vert_chart_iff : ∀ (E : Type) [NormedAddCommGroup E] [NormedSpace ℂ 
         normSq (thetaOneZero H π e y ξ l i)) = lam b - lam a := by
       rw [Finset.sum_eq_single b, Finset.sum_eq_single a]
       · rw [hθ a b hba]; simp
-      · intro l hl hla; rw [hθ l b (Finset.mem_Ioi.1 hl)]; simp [Matrix.single_apply, Ne.symm hla]
+      · intro l hl hla; rw [hθ l b (Finset.mem_Ioi.1 hl)]; simp [Ne.symm hla]
       · intro h; exact absurd (Finset.mem_Ioi.2 hba) h
       · intro i _ hib
         refine Finset.sum_eq_zero fun l hl => ?_
-        rw [hθ l i (Finset.mem_Ioi.1 hl)]; simp [Matrix.single_apply, Ne.symm hib]
+        rw [hθ l i (Finset.mem_Ioi.1 hl)]; simp [Ne.symm hib]
       · intro h; exact absurd (Finset.mem_univ b) h
     rw [hS] at h
     have hpi : 0 < 2 * Real.pi := by positivity

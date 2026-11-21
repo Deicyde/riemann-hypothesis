@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.OrbitPointsDistinct
-import Formalism.FrobeniusOrbits.HostCorollaries
-import Formalism.DirichletDensity.HostDensityArith
+import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.DiscrB
+import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.Principal
+import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.SplitK
 
 namespace Formalism.HermitianLattices.FiltrationBoundaryCriterion
 

@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.FiniteDimensionalOfSlices
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsBlockEmb
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsSmoothAutomorphicFunctionTranslateAtRealPlace
+import Development.AbelianVarietyTheory.Proofs.HeightProofs.IsTopologicalRingAE
 
 open NumberField Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Matrix
 open scoped TensorProduct
@@ -208,14 +209,14 @@ private theorem valuation_single_one_le_one {u : ℕ} (A B : Matrix (Fin u) (Fin
     (A * Matrix.single q p (1 : ℂ) * B : Matrix (Fin u) (Fin u) ℂ) a b = A a q * B p b := by
   rw [Matrix.mul_apply, Finset.sum_eq_single p]
   · rw [Matrix.mul_apply, Finset.sum_eq_single q]
-    · simp [Matrix.single_apply]
+    · simp
     · intro y _ hy
-      simp [Matrix.single_apply, Ne.symm hy]
+      simp [Ne.symm hy]
     · intro h
       exact absurd (Finset.mem_univ q) h
   · intro x _ hx
     rw [Matrix.mul_apply]
-    simp [Matrix.single_apply, Ne.symm hx]
+    simp [Ne.symm hx]
   · intro h
     exact absurd (Finset.mem_univ p) h
 

@@ -1,8 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DualRef
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.JGenSpecializes
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FromModelNeg
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IoOfLeOneIff
+import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsUniqueLiesUnder
 
 namespace GradedLogInvariants
 section

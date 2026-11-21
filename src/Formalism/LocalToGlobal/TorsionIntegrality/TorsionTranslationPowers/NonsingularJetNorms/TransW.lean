@@ -1,6 +1,8 @@
-import Formalism.LocalToGlobal.TorsionIntegrality.TorsionTranslationPowers.StatementW
-import Formalism.LocalToGlobal.TorsionIntegrality.TorsionTranslationPowers.NonsingularJetNorms.VIntegral
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.TorsionTranslationPowers.NonsingularJetNorms.AnaSysW
+import Formalism.LocalToGlobal.TorsionIntegrality.TorsionTranslationPowers.AnalyticTransOfAdd
+import Formalism.LocalToGlobal.TorsionIntegrality.TorsionTranslationPowers.ShiftPtsInt
 
 open PowerSeries
 
@@ -94,7 +96,7 @@ theorem inW_const_mul (a : ℂ) (f : ℂ → ℂ) :
     inW l ι W (fun z => a * f z) = C (ι a) * inW l ι W f := by
   have ht : Formalism.L2.Th1.F.taylor0 (fun z => a * f z) = C a * Formalism.L2.Th1.F.taylor0 f := by
     ext n
-    simp [Formalism.L2.Th1.F.taylor0, iteratedDeriv_const_mul_fun, mul_div_assoc]
+    simp [Formalism.L2.Th1.F.taylor0, mul_div_assoc]
   have hs : PowerSeries.HasSubst (Formalism.L2.Th1.A.logSer W) :=
     PowerSeries.HasSubst.of_constantCoeff_zero (by
       have h0 : PowerSeries.coeff 0 (Formalism.L2.Th1.A.logSer W) = 0 := by

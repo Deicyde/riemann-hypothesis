@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsSmoothVector
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ComplexifiedDerivedActionIsLieActionStatement
 
 open NumberField IsDedekindDomain MeasureTheory Matrix Formalism.BasicNotions Formalism.MainNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S Formalism.L2.Theta Formalism.L2.DIV Formalism.IndefR.Links Formalism.IndefR.Mult Formalism.IndefR.Lev Formalism.IndefR.Datum Formalism.L2.Pj Formalism.IndefR.FWT Formalism.IndefR GlobalTheory.HolDict
@@ -278,8 +278,8 @@ theorem dRepC_diag (hσ : IsURepOn (UJset ε) σ) {μ : Fin n → ℝ} {v : H} (
   rw [hd.deriv, smul_smul]
   congr 1
   first
-    | (simp only [mul_zero, neg_zero, Complex.ofReal_zero, zero_mul, Complex.exp_zero, one_mul, mul_one,
-        Complex.ofReal_neg, Complex.ofReal_mul, Complex.ofReal_one]
+    | (simp only [mul_one,
+        Complex.ofReal_neg]
        linear_combination (-(μ a : ℂ)) * Complex.I_mul_I)
     | simp [Complex.ext_iff]
 

@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.StarDepthToFunNonneg
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EllEqOfInRCone
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MinkowskiWeylOrthantConeIntegralConstraints
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.RealConeCoveredByStarAtPoint
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EvalRStarDepthLeOfCentreBound
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CentreDepthLeStarDepthOfCellStatement
@@ -84,9 +82,9 @@ theorem exists_nat_of_inRCone {n : ℕ} (u : Fin n → LinearMap.BilinForm ℤ X
     push_neg at hne
     simp [hne] at h0
   have hv := (hiff fun i => (v k i : ℝ)).2 ⟨Pi.single k 1, fun j => by
-    by_cases h : j = k <;> simp [Pi.single_apply, h], by
+    by_cases h : j = k <;> simp [h], by
     ext i
-    rw [Finset.sum_apply, Finset.sum_eq_single k (fun j _ hj => by simp [Pi.single_apply, hj]) (by simp)]
+    rw [Finset.sum_apply, Finset.sum_eq_single k (fun j _ hj => by simp [hj]) (by simp)]
     simp⟩
   obtain ⟨-, -, hV⟩ := hv
   refine ⟨v k 0, fun i => v k i.succ, Nat.pos_of_ne_zero hk, ?_⟩

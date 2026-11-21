@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsUnitaryOnTheta
-import Formalism.LocalToGlobal.IndefiniteReal.LocalNewformFunction
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.DataTheta
 
 noncomputable section
 

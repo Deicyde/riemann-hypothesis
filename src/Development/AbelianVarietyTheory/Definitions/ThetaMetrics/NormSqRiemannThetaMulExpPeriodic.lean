@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.ThetaMetrics.ExistsEventuallyNormRiemannThetaTermLe
-import ReciprocityTheory.ThetaQuasiPeriods.Change
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsLieBasis
+import ReciprocityTheory.ThetaQuasiPeriods.ThetaQuasiPeriodStatement
 
 open Complex Matrix
 open scoped Real
@@ -137,7 +138,7 @@ theorem riemannTheta_half_add_tau (α β : ℤ) (z τ : ℂ) :
   have e : (![z] + !![τ] *ᵥ fun _ => ((1 : ℤ) : ℂ)) = ![z + τ] := by
     funext i
     fin_cases i
-    simp [mulVec, dotProduct]
+    simp [dotProduct]
   rw [← e, this]
   congr 1
   have : ((-1 : ℂ)) ^ β = cexp ((β : ℂ) * -(π * I)) := by

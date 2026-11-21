@@ -1,8 +1,11 @@
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.UnivChar
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.ThetaTranslateRangeGap
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.FiniteGroupLevelActionEqInvSmulTranslate
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaProjectionIntertwinesLevelLifts
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.BaseOfOfPin
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCentralIdempotentOfGoodSeriesIdempotent
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PlacesApart
+import Development.AbelianVarietyTheory.Proofs.TwistedOperators.TranslateUnitaryLifts
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.L2.DIV Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links IsDedekindDomain NumberField Formalism.ConjugateSelfDual ReciprocityTheory.Gal GlobalTheory.ExportSeries GlobalTheory.SeriesTie GlobalTheory.TwInputs GlobalTheory.TwSys GlobalTheory.TwAll GlobalTheory.SupLaw GlobalTheory.LiftLeaf
 open Formalism.MainNotions.IntegralHeckeForms (TwOK ClsQ HkIdx V0 Fm0 FullRk SgJ BasisOf)
 open scoped TensorProduct
@@ -18,7 +21,7 @@ namespace GlobalTheory.ProjLiftLaw
 theorem reductionGroupAction_mul {G W : Type} [Group G] [NormedAddCommGroup W] [InnerProductSpace ℂ W] {Q : Subgroup G} (ch : Q →* ℂˣ)
     (q q' : Q) (f : G → W) : Bridge.g0Act ch q (Bridge.g0Act ch q' f) = Bridge.g0Act ch (q * q') f := by
   funext h
-  simp only [Bridge.g0Act, smul_smul, Subgroup.coe_mul, mul_assoc, map_mul, mul_inv, Units.val_mul, mul_comm]
+  simp only [Bridge.g0Act, smul_smul, Subgroup.coe_mul, mul_assoc, map_mul, mul_inv, Units.val_mul]
 
 variable {D : D7} {G : Type} [Group G] [Fintype G] {Pl0 T : Type} {A : FamIn D.what₂.LL G Pl0 T D.R.m}
   {Ks : Type} [Field Ks] [NumberField Ks] [Algebra Ks D.what₂.LL] {R : RealDat D A Ks} {F : Face D A}

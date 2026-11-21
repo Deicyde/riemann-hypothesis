@@ -1,8 +1,20 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.DetNeZeroOfIsWittBasis
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsField
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ExistsOrthogonalSumAndHyperbolicSumSpaces
-import Formalism.LocalToGlobal.BesselHermitianTheta.LemmasChr
+import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.HypsSatisfiable
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DarbouxBasisAdaptedCoordinatesStatement
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCompactFundamentalSetStatement
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsHermNDNegGram
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RestrictsToQuadraticSignPowOfRestrictsToQuadrati
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SiegelParabolicChartLeviBlockStatement
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StandardCompactUnderWittChartStatement
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TamagawaMeasureMatrixAdelesStatement
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryGroupConjHermitianAutomorphismsStatement
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepresentationSeesawSchwartzStatement
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WittChangeBasisUnitaryIsoStatement
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsPreHasLetters
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ConclusionZero
+import Formalism.SharpRestriction.CuspSpanNormBounds.BesselShellMomentBounds
 
 noncomputable section
 
@@ -49,7 +61,7 @@ theorem exists_frame_hyp (D : D7) (t : ℕ) : ∃ b : Module.Basis (Fin (t + t))
   let P : Matrix (Fin (t + t)) (Fin (t + t)) D.host.E := blk 1 (-((2 : D.host.E)⁻¹ • 1)) 1 ((2 : D.host.E)⁻¹ • 1)
   have hP : P * blk ((2 : D.host.E)⁻¹ • 1) ((2 : D.host.E)⁻¹ • 1) (-1) 1 = 1 := by
     rw [WittModel.blk_mul, ← WittModel.blk_one]
-    congr 1 <;> simp only [Matrix.one_mul, Matrix.mul_one, Matrix.smul_mul, Matrix.mul_smul, Matrix.neg_mul, Matrix.mul_neg] <;>
+    congr 1 <;> simp only [Matrix.mul_one, Matrix.mul_smul, Matrix.mul_neg] <;>
       match_scalars <;> norm_num
   let f := (GlobalTheory.OrthSumSp.hypSp D t).frame
   let b := f.map (Matrix.toLinearEquiv f P (Matrix.isUnit_det_of_right_inverse hP))
@@ -73,7 +85,7 @@ theorem exists_frame_hyp (D : D7) (t : ℕ) : ∃ b : Module.Basis (Fin (t + t))
     change (-Matrix.fromBlocks (0 : Matrix (Fin t) (Fin t) D.host.E) 1 1 0).submatrix _ _ = _
     rw [Matrix.fromBlocks_neg, neg_zero, blk]
   rw [e, ← Matrix.neg_apply, e3, e1, e2, WittModel.blk_mul, WittModel.blk_mul]
-  congr 1 <;> simp only [Matrix.one_mul, Matrix.mul_one, Matrix.smul_mul, Matrix.mul_smul, Matrix.neg_mul, Matrix.mul_neg,
+  congr 1 <;> simp only [Matrix.mul_one, Matrix.mul_smul, Matrix.mul_neg,
       Matrix.mul_zero, add_zero, zero_add] <;>
     match_scalars <;> norm_num
 

@@ -1,10 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.AutomorphicTheory.BesselWaveGrids.SpanBall
 import CompanionTheory.AutomorphicTheory.BesselWaveGrids.EigStrOfMem
 import CompanionTheory.AutomorphicTheory.BesselWaveGrids.ProductMoment
-import CompanionTheory.AutomorphicTheory.BesselWaveGrids.BigCellDerivativeExpansionOfIsDSOfCoefOf
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutNFIdPolTop
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutNormDegGCut
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BigCellZetaMinors
+import CompanionTheory.AutomorphicTheory.SchurLimitBounds.ZuckermanDuality.GeneratingFunctionPolynomial
 
 noncomputable section
 

@@ -1,12 +1,8 @@
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.ClassSet
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Bridge
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.InclusionInjective
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.RationalPointsLeHolds
-import Formalism.HermitianLattices.HermitianLatticesProofs.AutFinite
 import Formalism.SharpRestriction.GenusPolyhedralBounds.RelativeIndexClassSets.MassIntegralClass
-import Formalism.SharpRestriction.GenusPolyhedralBounds.RelativeIndexClassSets.ClassCountStmt
 import Formalism.SharpRestriction.GenusPolyhedralBounds.RelativeIndexClassSets.ClassCountGenIn
-import Formalism.SharpRestriction.GenusPolyhedralBounds.RelativeIndexClassSets.ClassCountSurj
 
 noncomputable section
 

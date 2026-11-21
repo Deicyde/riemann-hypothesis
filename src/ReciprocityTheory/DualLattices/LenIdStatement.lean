@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.DualLattices.UnramifiedCokernelLengthStatement
+import Mathlib.Data.Matrix.ColumnRowPartitioned
 
 noncomputable section
 

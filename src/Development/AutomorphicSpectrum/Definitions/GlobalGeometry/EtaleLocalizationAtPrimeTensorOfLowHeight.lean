@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.CoordsAt
+import Mathlib.LinearAlgebra.ExteriorPower.Basic
 
 noncomputable section
 

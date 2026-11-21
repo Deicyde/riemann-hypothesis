@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutSE2
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.PositionInsertionDiagonalCompat
 
 open MeasureTheory Filter Topology
 open scoped Matrix ComplexConjugate

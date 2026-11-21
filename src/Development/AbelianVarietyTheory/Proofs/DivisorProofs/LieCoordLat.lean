@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.KernelSt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.LinearIndependentFlagVec
+import Development.AbelianVarietyTheory.Definitions.Divisors.ReferenceMetricMulDualEqOne
 
 set_option autoImplicit false
 

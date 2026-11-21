@@ -1,5 +1,17 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.FlagUnipotentLattices.DetIndexProductHyperbolicInequality
-import Formalism.HyperbolicPlaceProducts.ArithmeticCountRevised
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open Module NumberField Formalism.HermitianLatticeCounting.LocalIntegralStructure
 
@@ -352,7 +364,7 @@ theorem theorem_B_statement : Formalism.HermitianLatticeCounting.LocalIntegralSt
       intro w
       have h := hiso w.embedding 1 0
       rw [hb0, hc0] at h
-      simp only [map_zero, mul_one, mul_zero, zero_mul, add_zero, zero_add, norm_zero, norm_one] at h
+      simp only [map_zero, mul_one, mul_zero, add_zero, norm_zero, norm_one] at h
       have h2 : (T : ℝ) * (‖w.embedding a‖ ^ 2 - 1) = 0 := by linear_combination h
       have h3 := (mul_eq_zero.mp h2).resolve_left hTr.ne'
       nlinarith [norm_nonneg (w.embedding a)]
@@ -360,7 +372,7 @@ theorem theorem_B_statement : Formalism.HermitianLatticeCounting.LocalIntegralSt
       intro w
       have h := hiso w.embedding 0 1
       rw [hb0, hc0] at h
-      simp only [map_zero, mul_one, mul_zero, zero_mul, add_zero, zero_add, norm_zero, norm_one] at h
+      simp only [map_zero, mul_one, mul_zero, add_zero, zero_add, norm_zero, norm_one] at h
       have h2 : (T' : ℝ) * (‖w.embedding d‖ ^ 2 - 1) = 0 := by linear_combination -h
       have h3 := (mul_eq_zero.mp h2).resolve_left hT'r.ne'
       nlinarith [norm_nonneg (w.embedding d)]
@@ -410,7 +422,7 @@ theorem theorem_B_statement : Formalism.HermitianLatticeCounting.LocalIntegralSt
         simpa [map_mul, map_pow, map_natCast, norm_mul, norm_pow] using h
       have B : ‖w.embedding s‖ = (T' : ℝ) * ‖w.embedding c‖ ^ 2 / T := by
         rw [hs1]
-        simp [hσ, norm_div] <;> ring
+        simp [hσ] <;> ring
       have C := hxw w
       rw [hnw w c] at C
       have hs_le : ‖w.embedding s‖ ≤ x w ^ 2 := by rw [B]; exact C

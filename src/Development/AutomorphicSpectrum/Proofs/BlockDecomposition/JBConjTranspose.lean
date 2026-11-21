@@ -1,10 +1,6 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.RealDescent.RealLeviDescent.IsCoreMod
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsAdmOnOfFiniteDimensional
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.FiniteDimensionalOfTrivialIsAdmOn
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.AdmissibleOfIwasawaDecomposition
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsDensityOfImmersion
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MapMemKfin
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.RealDescent.RealLoc
 
 noncomputable section
 

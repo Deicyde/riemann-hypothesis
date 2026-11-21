@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.QLev
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.ProdDat
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.IdempotentSubMulComplementEqComplement
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.RdAt
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.IndexEquivalenceReduction

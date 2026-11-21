@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.FlagGramRestriction
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.FixedFrameProperty
+import Mathlib.Analysis.Matrix.PosDef
+import Mathlib.Data.Matrix.ColumnRowPartitioned
 
 open Matrix Formalism.FourierDecayAlt Formalism.QuantumDeterminants
 open scoped ComplexConjugate

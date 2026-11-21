@@ -1,12 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Divisibility.RowLat
 import Formalism.LocalToGlobal.Divisibility.ProjLemmas
 import Formalism.LocalToGlobal.Divisibility.FramesLemmas
 import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.SecondStepGluing
-import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.PlaceSumSquares
-import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.LocBasis
-import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.ConjTransposeEqOfPosDef
-import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.ReductionLemmaFirst
 
 open Module NumberField IsDedekindDomain Polynomial
 open scoped Matrix ComplexOrder
@@ -564,7 +561,7 @@ theorem gaMat_single (g : G) : B.S.gaMat B.r (MonoidAlgebra.single g 1) = B.S.ac
   rw [Finset.sum_eq_single g]
   · simp
   · intro b _ hb
-    simp [hb, Ne.symm hb]
+    simp [hb]
   · intro h
     exact absurd (Finset.mem_univ g) h
 

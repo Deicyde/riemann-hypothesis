@@ -1,6 +1,6 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.ReductionDomains.ContinuousEntry
-import GroundTheory.GlobalFields.TateThesis.AdeleScaling
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.RealIwasawaIntegration
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 open NumberField IsDedekindDomain MeasureTheory Matrix Topology Filter
 open GroundTheory.Global GroundTheory.Automorphic GroundTheory.Automorphic.GJMatrix

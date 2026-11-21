@@ -1,13 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFiniteDimensional
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemThInt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThLiftMemLiftSpace
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocFieldLP
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSBZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SplitUnitaryLiftTendstoOne
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLinearFunctionalGoodPlace
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaActionExistsStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepRationalDarbouxFixesThetaDistributionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DarbouxSymplecticHermitianSkewStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AutomorphicIntegrableOnDomainStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzSpanLocalTensorsStatement
@@ -241,7 +237,7 @@ theorem exists_form (hK : KP) {B : Base F E} {Mo : Model σ X W} {χX χW : Chr 
         rw [omg, mul_inv_cancel_right]
       rw [e] at h2
       exact h2
-    | zero => intro Φ _; simp [integrableOn_zero]
+    | zero => intro Φ _; simp
     | add u w _ _ hu hw =>
       intro Φ hΦ
       refine ((hu Φ hΦ).add (hw Φ hΦ)).congr (Eventually.of_forall fun h => ?_)

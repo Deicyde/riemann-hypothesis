@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.LocalPublishedTheorems
 
 noncomputable section
@@ -73,7 +74,7 @@ theorem card_quot_lSub (l : ℕ) [Fact l.Prime] (n m : ℕ) :
     ((QuotientAddGroup.quotientAddEquivOfEq hk.symm).trans
       (QuotientAddGroup.quotientKerEquivOfSurjective f hf)).toEquiv
   rw [Nat.card_congr e]
-  simp [Nat.card_fun, pow_mul]
+  simp [pow_mul]
 
 instance finite_quot_lSub (l : ℕ) [Fact l.Prime] (n m : ℕ) :
     Finite ((Fin n → ℤ_[l]) ⧸ lSub l (Fin n → ℤ_[l]) m) :=

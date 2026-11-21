@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatrixExtendByZeroAdd
 open scoped TensorProduct Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -68,7 +66,7 @@ theorem GlobalTheory.ThK.AdaptEv.restrL_mem_schA : ∀ (F : Type) [Field F] [Num
       simp only [restrL_apply, pureA, SchwartzMap.compCLM_apply, Function.comp_apply, ext0CLM_apply]
       congr 2
       · funext k; simp only [ext0]; cases eq k <;> simp only [Sum.elim_inl, Sum.elim_inr, h1, map_zero]
-      · funext k; simp only [ext0]; cases eq k <;> simp [h1, h2]
+      · funext k; simp only [ext0]; cases eq k <;> simp [h2]
   | zero => simp
   | add x y _ _ hx hy => rw [map_add]; exact add_mem hx hy
   | smul a x _ hx => rw [map_smul]; exact Submodule.smul_mem _ a hx

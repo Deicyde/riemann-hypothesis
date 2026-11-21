@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.IsOpenBigCellSet
+import Mathlib.Data.Int.Star
 
 open Matrix MvPolynomial Set
 open scoped ComplexConjugate ContDiff Topology

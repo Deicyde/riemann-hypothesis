@@ -1,6 +1,4 @@
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.InertiaUnipotentDepthZero
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.DepthZeroOfLabels
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.DepthZeroOfHyp
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.ExistsSplitPlace
 import Development.AutomorphicArithmetic.Foundations.UnitarySphericalFixing.SatakeParameters.GoodLem
 

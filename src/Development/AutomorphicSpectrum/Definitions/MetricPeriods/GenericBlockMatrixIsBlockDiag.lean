@@ -1,5 +1,10 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Statements.MetricStatements.AgreementIffGuarded
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
+import Development.AutomorphicSpectrum.Definitions.MetricPeriods.InFlagDomainOne
+import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.FrameDefinitions.Metric
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterRes
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -663,7 +668,7 @@ def MH (x : Fin 3 → Ω) (hx2 : x 2 = 0) (hx : x 0 ≠ 0 ∨ x 1 ≠ 0) : FlagM
     · obtain ⟨rfl, rfl⟩ := blkH_some hp
       rw [detFac0, one_mul, hprod, cols0, sum_minor, sum_minor]
       simp only [FH, coefH, diagonal_mul, zpow_one]
-      fin_cases m <;> simp [hc2]
+      fin_cases m <;> simp
       all_goals (rw [← mul_assoc, mul_comm (x c), div_mul_cancel₀ _ hxc])
     · obtain ⟨rfl, rfl⟩ := blkH_some hp
       have a := hI.1

@@ -1,6 +1,5 @@
-import ReciprocityTheory.L2DbarEstimates.JacobianInterpolationStatement
-import ReciprocityTheory.L2DbarEstimates.WeakHolomorphy.HoloWeakStatement
-import ReciprocityTheory.L2DbarEstimates.MinimalSolutions.MinimalSolutionStatement
+import BuildAid.Leniency.Open
+import ReciprocityTheory.L2DbarEstimates.IsLocalHomeomorph
 
 namespace ReciprocityTheory.L2DbarEstimates.I
 

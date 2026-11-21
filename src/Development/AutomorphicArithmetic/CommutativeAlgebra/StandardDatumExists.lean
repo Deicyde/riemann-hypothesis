@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.IntegralStructures.GeometricFlagBases.FinModel
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.IntegralStructures.GeometricFlagBases.IntegOfMem
 open UpperTheory.Gal.Int.Geo
 
 open NumberField GlobalTheory.UPel.HT GlobalTheory.UPel.HT.Gen in

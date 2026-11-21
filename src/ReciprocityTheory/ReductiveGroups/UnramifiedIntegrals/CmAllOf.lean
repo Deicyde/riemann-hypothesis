@@ -1,9 +1,7 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.RedStatus
-import Mathlib
 import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.ModJInt
 import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.ModJUnram
-import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.FgClose
-import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.TorStatus
 
 namespace ReciprocityTheory.ChartRestriction.L1
 

@@ -1,8 +1,5 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.WeilGroupCharacters.ContinuousResP
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.IotaSpec
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.HeckeLAdicCharacterDeRham
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.HeckeLAdicParameterAbove
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.DeRhamPotSemistable
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.BasicNotions Formalism.BasicNotions.Loc GlobalTheory.WeilDeligne GlobalTheory.GalOfCusp GlobalTheory.HeckeGal GlobalTheory.LocLanglands GlobalTheory.Published UpperTheory.V.W
 
@@ -37,7 +34,7 @@ private theorem lin_term {ι L : Type} [Fintype ι] [Field L] [CharZero L] (c : 
       · rw [pow_succ, mul_coeff_zero, ih.1]
         simp
       · rw [pow_succ, hmul, ih.1, ih.2]
-        simp [coeff_one, coeff_C_mul_X]
+        simp [coeff_one]
         push_cast
         ring
   have hprod : ∀ (m : ι → ℕ) (s : Finset ι), (∏ i ∈ s, (1 + C (c i) * X) ^ m i).coeff 0 = 1 ∧

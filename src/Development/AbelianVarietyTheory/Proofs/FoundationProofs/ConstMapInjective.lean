@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.DataG
+import Mathlib.NumberTheory.Padics.PadicIntegers
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 open Formalism.MainNotions.G MvPolynomial
 

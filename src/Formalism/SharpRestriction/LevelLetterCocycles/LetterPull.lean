@@ -1,4 +1,8 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.SecOfPInt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.LevelLetterCocycles.ArcCoordinatesOfMembership
+import Formalism.SharpRestriction.LevelLetterCocycles.FilCrisTriv
+import Formalism.SharpRestriction.LevelLetterCocycles.StrictSesLetter
 
 noncomputable section
 

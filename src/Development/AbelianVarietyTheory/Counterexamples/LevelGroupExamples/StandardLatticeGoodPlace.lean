@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.ExistenceTori.ThetaIntegralityAtPlaces
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.ProjectiveLattices.ThShort
 
 set_option autoImplicit false
 
@@ -35,7 +36,7 @@ theorem unimod_std (H : Host E) (n : ℕ) : GenLat.Unimod (⟨stdLat E n⟩ : Ge
       split_ifs
       exacts [Subring.one_mem _, Subring.zero_mem _]
     have h1 := h (Pi.single j 1) hs
-    simp only [Pi.single_apply, mul_ite, mul_one, mul_zero, Finset.sum_ite_eq', Finset.sum_ite_eq,
+    simp only [Pi.single_apply, mul_ite, mul_one, mul_zero, Finset.sum_ite_eq',
       Finset.mem_univ, if_true] at h1
     have h2 := ((algebraMap_range_mem_iff_isIntegral _).1 h1).map
       ((IsCMField.complexConj E).toRingEquiv : E →+* E).toIntAlgHom

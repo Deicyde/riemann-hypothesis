@@ -1,8 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ImportsRestFurther
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.FinCongMemLevEnv
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SurjectiveReductionOntoFiniteLevelGroup
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SpecialUnitaryLiftInThetaGroupStatement
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.OneMeasureSizes
 open NumberField Formalism.BasicNotions Formalism.MainNotions Formalism.L2 Formalism.L2.DIV Formalism.IndefR.Links Formalism.IndefR.FWT GlobalTheory.CovTop
 open scoped TensorProduct
 
@@ -106,7 +108,7 @@ theorem herm_transpose {n : ℕ} (J : Matrix (Fin n) (Fin n) E) (x y : Fin n →
   simp only [ReciprocityTheory.ChartRestriction.G.FD.herm, ReciprocityTheory.ChartRestriction.G.FD.cc, dotProduct, mulVec, transpose_apply, Finset.mul_sum]
   rw [Finset.sum_comm]
   refine Finset.sum_congr rfl fun b _ => Finset.sum_congr rfl fun a _ => ?_
-  simp only [AlgEquiv.toRingEquiv_eq_coe, RingEquiv.toRingHom_eq_coe, RingHom.coe_coe, AlgEquiv.coe_ringEquiv]
+  simp only [RingHom.coe_coe]
   ring
 
 theorem herm_unitary {n r : ℕ} (h : n = r) (J γ : Matrix (Fin n) (Fin n) E)

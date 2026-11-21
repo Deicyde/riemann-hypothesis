@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.TieTest
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.SizeAt
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaEV0EqICPqRowsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EV0MemGoodFRowsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InjectiveICRowsStatement

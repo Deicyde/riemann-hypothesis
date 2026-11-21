@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.FockGramWindow.FirstCoefficientLeDiv
+import Formalism.SharpRestriction.GrowthBounds.FockGramWindow.RestWinOfLvl
 
 noncomputable section
 

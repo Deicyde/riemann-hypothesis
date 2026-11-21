@@ -1,5 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.BesselHermitianTheta.DefsReal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.NotIsSplitOfIsInertAt
 
 noncomputable section

@@ -1,7 +1,5 @@
-import Mathlib
-import GroundTheory.FunctionField.PlaceDefs
-import GroundTheory.FunctionField.PlaceBasic
-import GroundTheory.FunctionField.Divisor
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.FunctionField.DivisorDegree
 import GroundTheory.FunctionField.Repartition
 set_option maxSynthPendingDepth 1

@@ -1,7 +1,6 @@
-import Formalism.GaussJetBounds.GenLogInverse
+import BuildAid.Leniency.Open
 import Formalism.GaussJetBounds.StatementM
 import Formalism.GaussJetBounds.GaussJetProofs.FrameA
-import Formalism.GaussJetBounds.GaussJetProofs.Special
 
 noncomputable section
 open scoped BigOperators

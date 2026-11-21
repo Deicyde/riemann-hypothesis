@@ -1,8 +1,10 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.ParahoricIdxZ
 import Formalism.DoubleCosetMeasures.LowerUnipotentOrbits.LemmaU
 import Formalism.DoubleCosetMeasures.LowerUnipotentOrbits.MeasureUniformizerMatrixSetMulCard
 import Formalism.DoubleCosetMeasures.LowerUnipotentOrbits.RelIndexMulMeasure
+import Mathlib.Algebra.Ring.IsFormallyReal
 
 noncomputable section
 

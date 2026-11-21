@@ -1,7 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.FiniteEtaleModels.SecInjG
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.AnnihilatorModels.IdealSplit
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagPotentialBlockDecomposition
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ZarhinOrderIsRingActionOnProduct
+import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.IntegralStructures.GeometricFlagBases.FinModel
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField IsDedekindDomain
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.UPel.HT GlobalTheory.UPel.HT.Gen GlobalTheory.UPel.HT.EtLev GlobalTheory.LKTrip GlobalTheory.LKGeo
@@ -26,7 +28,7 @@ private theorem exists_iso_of_cart {A B : Over X} [GrpObj A] [GrpObj B] {φ : A.
     intro T x y
     let i : Over.mk (T.hom ≫ 𝟙 X) ⟶ T := Over.homMk (𝟙 T.left) (by simp)
     have key := h.2 T x y (i ≫ x ≫ (Over.isoMk (asIso φ) hw).hom)
-      (i ≫ y ≫ (Over.isoMk (asIso φ) hw).hom) (by simp [i, hel]) (by simp [i, hel])
+      (i ≫ y ≫ (Over.isoMk (asIso φ) hw).hom) (by simp [i]) (by simp [i])
     rw [← MonObj.comp_mul] at key
     apply Over.OverMorphism.ext
     have hi : i.left = 𝟙 T.left := rfl

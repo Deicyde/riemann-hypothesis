@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RegularLocalImpliesGeometric
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InducesPl
 open GlobalTheory.DetHT
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.regular_local_implies_geometric : RegLocSt → GeoSt := by

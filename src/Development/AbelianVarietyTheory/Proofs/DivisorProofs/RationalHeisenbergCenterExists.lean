@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeisZero
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -74,7 +75,7 @@ theorem trv_unitary (hσ : ∀ e, σ (σ e) = e) (hJ : ∀ i j, σ (J j i) = -J 
     change form σ J x x • _ = _
     rw [hxx, zero_smul]
   rw [hT, hM, sub_mul, one_mul, smul_mul_assoc, h1]
-  simp only [sub_mul, mul_sub, one_mul, mul_one, smul_mul_assoc, mul_smul_comm, h2, h3, smul_zero, smul_neg]
+  simp only [sub_mul, mul_sub, mul_one, smul_mul_assoc, mul_smul_comm, h2, h3, smul_zero]
   module
 
 end GlobalTheory.LiftCentral

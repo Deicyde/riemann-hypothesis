@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.OrbitalIntegralDiagonalSlice
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ChangeOfVariablesXy
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.DensityLemmaOfReductions
@@ -5,8 +6,6 @@ import Formalism.HermitianCurvature.HermitianCurvatureProofs.ThresholdOfLargeCon
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.UnitriangularEqOneOfMinorsNonzero
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.InnerDensityOfAveraging
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.AveragingVanishes
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.StabilizerSplit
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.StabilizerPairs
 
 open Matrix
 

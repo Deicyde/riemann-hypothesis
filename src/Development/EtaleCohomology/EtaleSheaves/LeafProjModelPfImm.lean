@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.LeafProjModelPf
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.IsProjOverCompOfIsClosedImmersion
+import Mathlib.AlgebraicGeometry.QuasiAffine
 
 noncomputable section
 open CategoryTheory AlgebraicGeometry TopologicalSpace MvPolynomial

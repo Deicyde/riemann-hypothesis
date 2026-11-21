@@ -1,9 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.StepsNonvacuous
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GrothendieckDeformation
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsCrystalPairing
 
 set_option autoImplicit false
 
@@ -133,7 +130,7 @@ theorem jetChain_of_jetCalc : JetCalc → JetChain := by
     funext b; ext i; rw [hΛ]
     by_cases h : i = u.get b
     · subst h; simp
-    · simp only [List.get_eq_getElem] at h; simp [Pi.single_apply, h]
+    · simp only [List.get_eq_getElem] at h; simp [h]
   rw [hv, ContinuousMultilinearMap.map_smul_univ, smul_eq_mul, prod_get, mul_comm]
   simp only [hu]
 

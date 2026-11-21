@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsTateZero
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCubicalMetricStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SquareIsoIsometryCubicalStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HolomorphicLogOnConvex

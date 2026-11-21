@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SiegelReframe
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HolomorphicLogOnConvexStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeCocycleCoboundaryStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaFactorHolomorphicSolutionStatement

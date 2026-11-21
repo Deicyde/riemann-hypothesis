@@ -1,11 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SpanningFamilies.IsHeatZero
-import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.UnitaryActHalfSpace
-import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.HermitianThetaSummableAndDeterminesTestFnStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.HermitianWeilActionSiegelParabolicExplicitStatement
 import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.WeilActionLevelSupNormUniformInLatticeStatement
 import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.LinearIndependentMul
-import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.PosSemidefSubMulConjTranspose
 import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.SummableEisMajorantStatement
 open Matrix Complex NumberField GlobalTheory.SW Filter Topology
 open ReciprocityTheory.ChartRestriction.G.FD (cc herm)
@@ -127,7 +124,7 @@ theorem theta_bdd (hΨ : IsType Ψ) {R : ℕ} {δ : ℝ} (hR : 0 < R) (hδ : 0 <
     refine ⟨R, hR, fun x hx => by_contra fun h => hx (if_neg h), fun x y hy => ?_⟩
     refine if_congr (forall_congr' fun k => forall_congr' fun a => ?_) rfl rfl
     have hz : IsIntegral ℤ ((R : E) * ((R : E) * y k a)) := (c R).mul ((c R).mul (hy k a))
-    simp only [smul_add, Matrix.add_apply, Matrix.smul_apply, smul_eq_mul, mul_add]
+    simp only [Matrix.add_apply, Matrix.smul_apply, smul_eq_mul, mul_add]
     exact ⟨fun h => by simpa using h.sub hz, fun h => h.add hz⟩
   let Z₀ : CM Ψ N N := fun _ => (I * δ) • (1 : Matrix (Fin N) (Fin N) ℂ)
   have hZ₀ : Z₀ ∈ Hn Ψ N := fun τ => by
@@ -165,7 +162,7 @@ theorem transl_mem {β : Matrix (Fin N) (Fin N) E} (h : ccT β = β) :
   have e : ccT (fromBlocks 1 β 0 1 : M2 E N) = fromBlocks 1 0 β 1 := by
     conv_rhs => rw [← h]
     ext (i | i) (j | j) <;> by_cases hij : i = j <;>
-      simp [ccT, cc, Matrix.one_apply, hij, eq_comm]
+      simp [ccT, cc, hij, eq_comm]
   change ccT _ * _ * _ = _
   rw [e, Matrix.J, fromBlocks_multiply, fromBlocks_multiply]
   simp

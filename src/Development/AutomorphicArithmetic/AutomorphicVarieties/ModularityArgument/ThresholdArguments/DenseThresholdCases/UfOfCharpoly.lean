@@ -1,11 +1,13 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.DiscreteSeriesCoefficientsCuspidal
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.WeilDeligneUnramified.WeilCharpolySupport.UfOfCharpoly
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.WStmtxx
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.TGalExW
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.TPlainOf
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.AutomorphicFormHyp
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.CharPolOfChar
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.TRegElt
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AbsPowOfRealInjective
+import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.GeneralizedEigenspaces.WeightKernels.TwistRatios.BadClosed
+import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.GeneralizedEigenspaces.WeightKernels.TwistRatios.ExistsNonzeroLowerEntryOfIrreducible
+import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.GeneralizedEigenspaces.WeightKernels.TwistRatios.NoKappa
+import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.GeneralizedEigenspaces.WeightKernels.TwistRatios.Spread
 
 set_option maxHeartbeats 800000
 set_option synthInstance.maxHeartbeats 200000
@@ -43,7 +45,7 @@ private theorem uf_of_pol {l : ℕ} [Fact l.Prime] (ι : Qbar l ≃+* ℂ) {k : 
 private theorem two_roots {K : Type} [Field K] (x : Kˣ) :
     (((x ^ 2 : Kˣ) : K) + (((x ^ 2)⁻¹ : Kˣ) : K)) = ((x : K) + ((x⁻¹ : Kˣ) : K)) ^ 2 - 2 := by
   have h0 : (x : K) ≠ 0 := x.ne_zero
-  simp only [Units.val_pow_eq_pow_val, Units.val_inv_eq_inv_val, inv_pow]
+  simp only [Units.val_pow_eq_pow_val, Units.val_inv_eq_inv_val]
   field_simp
   ring
 private theorem two_ne {H : Type*} [CommGroup H] {p : H} (ψ : Fin 2 → H) (hp : p ≠ 1) (h0 : ψ 0 / ψ 1 ≠ p)

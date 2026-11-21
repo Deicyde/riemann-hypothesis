@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.UnipotentAdelicQuotients.SWXSDefs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.GeneralLinearActions.GenusMassVolumes
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.MeasureEqHaarProdOfLeftInvariant
 open MeasureTheory Topology Matrix

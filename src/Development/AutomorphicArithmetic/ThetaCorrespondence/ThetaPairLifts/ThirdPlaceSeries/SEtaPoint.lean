@@ -1,7 +1,7 @@
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.TypeConditions.EtaPoint
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.CohomologicalCsdTempered
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.CuspidalGaloisUnramified
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.TypeConditions.AutomorphicGaloisAdmissible
+import Development.AbelianVarietyTheory.Proofs.SatakeParameters.NotMemPlacesOverOfNe
 
 set_option synthInstance.maxHeartbeats 200000
 

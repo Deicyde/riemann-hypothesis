@@ -1,4 +1,6 @@
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DgMatOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsUnifAt
 open NumberField IsDedekindDomain Matrix Polynomial Filter GlobalTheory.CuspRep GlobalTheory.PRep Formalism.UG Formalism.BasicNotions GlobalTheory.UnitaryBC Formalism.L2.Host GlobalTheory.BCT GlobalTheory.BCT.CtLevel
 open scoped Classical TensorProduct
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
@@ -8,7 +10,7 @@ namespace GlobalTheory.BCT.HintInv
 theorem rStab_comp_equiv {H : Type} [Group H] (φ : H ≃* H) (u : H → ℂ) :
     rStab (u ∘ φ) = (rStab u).comap (φ : H →* H) := by
   ext k
-  simp only [Subgroup.mem_comap, MulEquiv.coe_toMonoidHom]
+  simp only [Subgroup.mem_comap]
   show (∀ x, u (φ (x * k)) = u (φ x)) ↔ ∀ x, u (x * φ k) = u x
   constructor
   · intro h x
@@ -32,7 +34,7 @@ theorem hint_comp_equiv {H : Type} [Group H] (K : Subgroup H) (φ : H ≃* H) (h
   congr 1
   let e : H ⧸ S.comap (φ : H →* H) ≃ H ⧸ S :=
     Quotient.congr φ.toEquiv (fun a b => by
-      simp only [QuotientGroup.leftRel_apply, Subgroup.mem_comap, MulEquiv.coe_toMonoidHom, map_mul, map_inv]
+      simp only [QuotientGroup.leftRel_apply, Subgroup.mem_comap, map_mul, map_inv]
       rfl)
   rw [← finsum_comp_equiv e]
   refine finsum_congr fun q => ?_

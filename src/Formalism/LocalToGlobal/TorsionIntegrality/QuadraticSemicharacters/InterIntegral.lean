@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.QuadraticSemicharacters.QuadraticSemicharactersFactVersion
+import Mathlib.LinearAlgebra.Matrix.Hermitian
 
 noncomputable section
 open scoped BigOperators ComplexConjugate

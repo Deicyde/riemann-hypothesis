@@ -1,5 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.AdmissibleOfInclusion
-import Formalism.SharpRestriction.AdmissibleParameterJoins.GandSaj
+import Formalism.SharpRestriction.AdmissibleParameterJoins.DIVfromGLs
+import Formalism.SharpRestriction.AdmissibleParameterJoins.GandSy
+import Formalism.SharpRestriction.Divisibility.ChainOperators.PerCol
 
 noncomputable section
 

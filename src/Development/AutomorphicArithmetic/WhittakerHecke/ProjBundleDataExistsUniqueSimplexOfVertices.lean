@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.KunnethLefschetz.EtaleCharts.LineUnitBunF
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.WhittakerHecke.ProjBundleDataSimplexExtOfVertices
 import Development.AutomorphicArithmetic.WhittakerHecke.ProjBundleDataExistsSimplexOfRel
 

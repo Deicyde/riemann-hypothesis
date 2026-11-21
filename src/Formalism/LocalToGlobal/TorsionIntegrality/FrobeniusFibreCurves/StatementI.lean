@@ -1,7 +1,8 @@
-import Mathlib
-import Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.FirstLevelFromUniversal
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.RamifiedCurveKernels.StatementT
 import Formalism.LocalToGlobal.TorsionIntegrality.FrobeniusFibreCurves.IsFibreCurve
+import Formalism.LocalToGlobal.TorsionIntegrality.FrobeniusFibreCurves.LawDifferenceThree
+import Formalism.LocalToGlobal.TorsionIntegrality.FrobeniusFibreCurves.StatementW
 
 noncomputable section
 open scoped BigOperators

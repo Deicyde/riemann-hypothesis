@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AutomorphicArithmetic.LocalEmbeddings.VertCmp
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsDiscreteValuationRingIntO
 open CategoryTheory Limits AlgebraicGeometry IsLocalRing NumberField IsDedekindDomain
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Pj

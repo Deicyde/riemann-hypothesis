@@ -1,6 +1,8 @@
-import Development.WeilBound.CoreStatements.VolumeEquality.BaseUnifEx2
-import GroundTheory.HeightsAndTheta.Heights.FieldsOfNumbers.Statements
-import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.BundleObjects
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.GoodOrigin
+import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.HeckeSectionsIsotropicCommutatorPairingPower
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsPeriodAtRestrict
 
 noncomputable section
 

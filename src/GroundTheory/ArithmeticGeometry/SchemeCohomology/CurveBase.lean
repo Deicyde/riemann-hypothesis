@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ArithmeticGeometry.SchemeCohomology.CechNaturality.Linear
-import GroundTheory.ArithmeticGeometry.SchemeCohomology.WeilDivisorSheaf
+import GroundTheory.ArithmeticGeometry.SchemeCohomology.WeilDivisor
 set_option maxSynthPendingDepth 1
 
 open CategoryTheory AlgebraicGeometry Order Topology

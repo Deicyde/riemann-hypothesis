@@ -1,7 +1,6 @@
-import Formalism.SharpRestriction.GlobalSchurBounds.LinkMin
-import Formalism.LocalToGlobal.GlobalTheory.GL4.Statement
-import Formalism.LocalToGlobal.GlobalTheory.GL4.PColStd
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.HermitianForms.BothSym
+import Formalism.SharpRestriction.GlobalSchurBounds.FlipTwoThree
 
 noncomputable section
 

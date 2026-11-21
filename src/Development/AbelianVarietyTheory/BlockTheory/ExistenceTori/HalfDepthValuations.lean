@@ -1,9 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.PrimeDiscriminants.SlopeTestRemainingChoices
 import Formalism.LocalToGlobal.ProjectiveLattices.CuspidalL2Subspace
 import Formalism.LocalToGlobal.ProjectiveLattices.HalfOneAddSqrtNegIsIntegral
 import Formalism.LocalToGlobal.ProjectiveLattices.DepthPins
-import Formalism.LocalRingCardinality.DataErr
 import Formalism.SharpRestriction.Divisibility.AbelianOpenPart.OEOsInjective
 
 noncomputable section

@@ -1,5 +1,12 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.InterpStatementPfG
-import ReciprocityTheory.L2DbarEstimates.WeakHolomorphy.ImportsAlt
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import ReciprocityTheory.L2DbarEstimates.IsLocalHomeomorph
 
 namespace ReciprocityTheory.ChartRestriction.G.AR.Up.HE
 

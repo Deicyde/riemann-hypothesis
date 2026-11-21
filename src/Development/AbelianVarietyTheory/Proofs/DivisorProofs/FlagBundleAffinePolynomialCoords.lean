@@ -1,15 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TotalEqCurve
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdjacentPullPull
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GeometricallyConnectedOfIsIsoRestrict
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UniREqUni
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFlagBundleIff
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPullbackFrameSpanningFlagStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PullbackUnipotentFrameIsFrameStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFlagSpannedFrameStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleCarriesBaseChangeStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CarriedFlagTriangularFrameStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PullbackUnipotentFrameUniqueStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPolynomialChartOfFlagBundleStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagsSameFrameIsoStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolynomialPointFactorsThroughChartStatement
@@ -33,7 +26,7 @@ theorem cell_affine : ∀ (B Y : Scheme.{0}) (π : Y ⟶ B) (ι : Type) [Fintype
   let A := CommRingCat.of (MvPolynomial (Σ a, Low (r a)) Γ(B, U))
   let g : Spec A ⟶ B := Spec.map (CommRingCat.ofHom (MvPolynomial.C : Γ(B, U) →+* MvPolynomial (Σ a, Low (r a)) Γ(B, U))) ≫ hU.fromSpec
   have hgU : (⊤ : (Spec A).Opens) ≤ g ⁻¹ᵁ U := by
-    simp [g, Scheme.Hom.comp_preimage, hU.fromSpec_preimage_self]
+    simp [g, hU.fromSpec_preimage_self]
   let n' : (Σ a, Low (r a)) → Γ(Spec A, ⊤) := fun s => (Scheme.ΓSpecIso A).inv.hom (MvPolynomial.X s)
   have hfr : ∀ a, IsFrame (pullCol g (eU a) hgU (uniR fun s => n' ⟨a, s⟩)) := fun a =>
     GlobalTheory.T.pullback_unipotent_frame_isFrame _ _ g (E a) (r a) (hE a) U (eU a) (heU a) ⊤ hgU _

@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
 import Formalism.HermitianLattices.StatementLat
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 
@@ -21,7 +25,7 @@ theorem quasiRefl_comp (h : V →ₗ⋆[K] V →ₗ[K] K) (u : V) {a b : K}
   ext v
   simp only [LinearMap.comp_apply, LinearMap.id_apply]
   rw [quasiRefl_apply, quasiRefl_apply]
-  simp only [map_sub, map_smul, map_smulₛₗ, RingHom.id_apply, smul_eq_mul]
+  simp only [map_sub, map_smul, smul_eq_mul]
   rw [sub_sub, ← add_smul, sub_eq_self, smul_eq_zero]
   left
   linear_combination (h u v) * hab
@@ -33,7 +37,7 @@ theorem quasiRefl_isom {h : V →ₗ⋆[K] V →ₗ[K] K} (hs : h.IsSymm) (u : V
     have := hs.eq u v
     simpa [starRingEnd_apply] using this
   rw [quasiRefl_apply, quasiRefl_apply]
-  simp only [map_sub, map_smulₛₗ, map_smul, LinearMap.sub_apply, LinearMap.smul_apply, smul_eq_mul,
+  simp only [map_sub, map_smulₛₗ, LinearMap.sub_apply, LinearMap.smul_apply, smul_eq_mul,
     starRingEnd_apply, star_mul, hsym, RingHom.id_apply]
   linear_combination (-(h v u * h u w)) * ha
 

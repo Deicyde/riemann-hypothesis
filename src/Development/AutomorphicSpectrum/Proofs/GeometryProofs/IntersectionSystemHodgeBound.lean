@@ -1,14 +1,9 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.BdryChart
-import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.IsPshLocallyIntegrableStatement
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.FlatDegree
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.NineGeoU
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ComponentDataHodgeThirdStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ComponentDataHodgeFourthStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.BlockMatrixGramNormalStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.GramMatrixTwoFramesStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.GramMatrixChangeFrameStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.InteriorPointPolarisedStatement
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField Matrix Filter Topology
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi
 open GroundTheory.Heights₂.Heights.LowerBoundFree GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Cusp
@@ -63,7 +58,7 @@ theorem blk_tt (k k' : Fin (N - j)) : blk hj C (tailIdx hj k) (tailIdx hj k') = 
   simp [blk, ← blockEquiv_inr, Matrix.one_apply]
 
 theorem det_blk : (blk hj C).det = 1 := by
-  simp [blk, Matrix.det_reindex_self, Matrix.det_fromBlocks_zero₂₁]
+  simp [blk]
 
 end GlobalTheory
 

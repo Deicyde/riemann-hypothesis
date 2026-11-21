@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.AdelicUnitriangularMulMemUnipotentTimesIntegral
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IwasawaCellDecomposition
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HeckeDEqSumOfAgree
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsFixedIff
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EventuallyDefiniteUnitaryLocalPointMemMaxCompact
 open NumberField IsDedekindDomain Matrix Formalism.UG GlobalTheory.CuspRep MeasureTheory
 open scoped ENNReal
@@ -130,7 +130,7 @@ theorem tl_single (ϖ : ∀ v : HeightOneSpectrum (𝓞 E), (v.adicCompletion E)
     · subst hij
       simp only [Matrix.diagonal_apply_eq]
       change ((ϖ w ^ (Finsupp.mapRange (fun x : Fin n → ℤ => x i) rfl (Finsupp.single v a)) w : (w.adicCompletion E)ˣ) : w.adicCompletion E) = _
-      simp [Finsupp.single_apply, Ne.symm hw]
+      simp [Ne.symm hw]
     · simp [Matrix.diagonal_apply_ne _ hij, Matrix.one_apply_ne hij]
 
 section

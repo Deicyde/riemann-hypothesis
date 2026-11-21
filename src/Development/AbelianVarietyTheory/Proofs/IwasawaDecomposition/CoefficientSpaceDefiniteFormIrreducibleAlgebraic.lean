@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.DatVtEq
 import Formalism.LocalToGlobal.Columns.MtAdWtIrr
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.HwFixEx
@@ -7,6 +7,7 @@ import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsPolyno
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsotypicFactorOfIsIrreduciblePiFiniteGroups
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.StdCharFinitePartRationalEqExpTrace
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsCoefDualPair
+import Formalism.LocalToGlobal.GaloisLevelStructure.TiedLevel
 open Formalism.BasicNotions Formalism.MainNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice IsDedekindDomain NumberField Formalism.L2 Formalism.L2.Host Formalism.L2.Theta Formalism.L2.DIV Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.Lev GlobalTheory.Mem GlobalTheory.Mem.R3 GlobalTheory.MtIn
 open scoped TensorProduct
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
@@ -55,7 +56,7 @@ theorem exists_weight_of_coefMap {L : Type} [Field L] [NumberField L] [IsCMField
       funext τ
       apply Units.ext
       ext a b
-      simp [mtwInvTr, mtwEmb, inside₂, invTrK_coe, bc_coe, embGL_coe, ← map_inv, hlab, map_inv_mat]
+      simp [mtwInvTr, mtwEmb, inside₂, invTrK_coe, bc_coe, embGL_coe, hlab, map_inv_mat]
     have hL : T.toLinearMap ∘ₗ mtRep emb lam γ = ρ γ ∘ₗ T.toLinearMap := by
       refine LinearMap.ext_on_range (GlobalTheory.CoefModel.span_mapVV φ lam) fun i => ?_
       show T (rhoK lam (mtwInvTr (mtwEmb emb (mtwRat γ))) (GlobalTheory.CoefModel.mapVV φ lam _)) = ρ γ (T _)

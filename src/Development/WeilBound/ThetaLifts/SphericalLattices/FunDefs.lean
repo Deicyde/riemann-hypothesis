@@ -1,6 +1,7 @@
-import Development.WeilBound.ThetaLifts.SphericalLattices.HoweInert
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.CompactAveragingSplitting.EigenvectorLifting.ExistsEigenLift
-import Development.WeilBound.CoreStatements.LocalThetaKernels.IwasMain
+import Development.WeilBound.CoreStatements.CompactAveragingSplitting.EigenvectorLifting.LocalDef
 
 noncomputable section
 

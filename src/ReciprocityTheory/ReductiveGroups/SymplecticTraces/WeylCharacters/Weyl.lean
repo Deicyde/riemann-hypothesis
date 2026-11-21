@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.SymplecticTraces.WeylCharacters.SqChar
 import ReciprocityTheory.ReductiveGroups.SymplecticTraces.WeylCharacters.UCharOf
 import ReciprocityTheory.ReductiveGroups.SymplecticTraces.WeylCharacters.SpBlkSurj

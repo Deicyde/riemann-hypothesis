@@ -1,5 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.LatIntZero
+import Mathlib.Analysis.Calculus.FDeriv.Symmetric
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 
@@ -168,14 +173,14 @@ theorem split_single_inl (e : κ ⊕ κ →₀ ℕ) (i : κ) :
     Finsupp.sumFinsuppAddEquivProdFinsupp (e + Finsupp.single (Sum.inl i) 1) =
       ((Finsupp.sumFinsuppAddEquivProdFinsupp e).1 + Finsupp.single i 1, (Finsupp.sumFinsuppAddEquivProdFinsupp e).2) := by
   classical
-  ext j <;> simp [Finsupp.fst_sumFinsuppAddEquivProdFinsupp, Finsupp.snd_sumFinsuppAddEquivProdFinsupp,
+  ext j <;> simp [
     Finsupp.single_apply]
 
 theorem split_single_inr (e : κ ⊕ κ →₀ ℕ) (i : κ) :
     Finsupp.sumFinsuppAddEquivProdFinsupp (e + Finsupp.single (Sum.inr i) 1) =
       ((Finsupp.sumFinsuppAddEquivProdFinsupp e).1, (Finsupp.sumFinsuppAddEquivProdFinsupp e).2 + Finsupp.single i 1) := by
   classical
-  ext j <;> simp [Finsupp.fst_sumFinsuppAddEquivProdFinsupp, Finsupp.snd_sumFinsuppAddEquivProdFinsupp,
+  ext j <;> simp [
     Finsupp.single_apply]
 
 theorem BJ_mul_X_inl (v : κ → V) {F : V → ℂ} (G : V → ℂ) (hF : ContDiff ℂ ∞ F) (Q : MvPolynomial (κ ⊕ κ) ℂ) (i : κ) :
@@ -259,9 +264,9 @@ theorem cop_Pn (n : κ → ℕ) :
 theorem split_rename (a b : κ →₀ ℕ) :
     Finsupp.sumFinsuppAddEquivProdFinsupp (Finsupp.mapDomain Sum.inl a + Finsupp.mapDomain Sum.inr b) = (a, b) := by
   ext j
-  · simp [Finsupp.fst_sumFinsuppAddEquivProdFinsupp, Finsupp.mapDomain_apply Sum.inl_injective,
+  · simp [Finsupp.mapDomain_apply Sum.inl_injective,
       Finsupp.mapDomain_notin_range]
-  · simp [Finsupp.snd_sumFinsuppAddEquivProdFinsupp, Finsupp.mapDomain_apply Sum.inr_injective,
+  · simp [Finsupp.mapDomain_apply Sum.inr_injective,
       Finsupp.mapDomain_notin_range]
 
 theorem BJ_rename (v : κ → V) (F G : V → ℂ) (p q : MvPolynomial κ ℂ) :

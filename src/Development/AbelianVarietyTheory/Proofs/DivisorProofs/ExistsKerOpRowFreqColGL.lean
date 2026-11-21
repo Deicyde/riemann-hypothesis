@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MeasurableToGLEntry
-import GroundTheory.GlobalFields.TateThesis.ArchCharsUnitary
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentLowerRowsLeviSetClosedSubgroup
 open MeasureTheory GlobalTheory.JSW
 open scoped FourierTransform ContDiff
 

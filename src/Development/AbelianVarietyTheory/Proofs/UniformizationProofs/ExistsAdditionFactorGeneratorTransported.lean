@@ -1,10 +1,4 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.CubeVal
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.UnifUniqSt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.IsNsmul
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.QkToAkU
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.FamMod
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.PhiGenPf
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Uniformization.PsiScal
 import Development.AbelianVarietyTheory.Definitions.Uniformization.ExistsUniqueSamePt
 import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.NonemptyCubicalPull
@@ -34,7 +28,7 @@ theorem exists_additionFactor_generator_value {S : Scheme.{0}} {G : Over S} [Grp
         (DVR.prod_sum₂ (U := U) (K := PUnit) (K' := PUnit) _ o o)).trans ?_
       rw [mul_inv_cancel_right, mul_inv_cancel]
       apply Additive.ofMul.injective
-      simp [Fin.prod_univ_succ, ofMul_mul, ofMul_inv, ofMul_zpow, ofMul_pow]
+      simp [Fin.prod_univ_succ, ofMul_mul, ofMul_inv, ofMul_pow]
       module)
     (LB.mulGen P.L.L _ _ _ _
       (LB.mulGen P.L.L _ _ _ _ (LB.pullGen P.L.L (thφ G (x3 G)) thε P.c.t (lift x (lift y y⁻¹)).left)

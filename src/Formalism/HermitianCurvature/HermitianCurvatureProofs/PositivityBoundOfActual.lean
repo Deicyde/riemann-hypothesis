@@ -1,8 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.BuiltBoundsCompactOfParts
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ExistsNormBoundThreeFamilies
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.SliceCompactSupportCoefficient
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ModuleFormPosCompactSupport
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.StepFormCptAllOfStepFormAll
 
 namespace Formalism.FourierDecayAlt.P.PBASM
 

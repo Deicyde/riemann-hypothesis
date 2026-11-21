@@ -1,6 +1,8 @@
-import Mathlib
-import ReciprocityTheory.AnalyticForms.RegularLocalRings.JacChart
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.AnChartA
+import Mathlib.Topology.Algebra.MvPolynomial
+import ReciprocityTheory.AnalyticForms.AnalyticCharts.ExistsAnalyticGraphChartMvPolynomial
 
 namespace ReciprocityTheory.AnForm.R
 

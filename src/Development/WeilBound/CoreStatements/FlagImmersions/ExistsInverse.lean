@@ -1,5 +1,8 @@
-import Development.WeilBound.CoreStatements.FlagImmersions.Transport
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.LiftToLogResolutionAnalyticStatement
+import ReciprocityTheory.AnalyticForms.PotentialTheory.IsPotentialPullbackStatement
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 

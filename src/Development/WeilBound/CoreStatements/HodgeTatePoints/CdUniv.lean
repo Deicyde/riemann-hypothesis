@@ -1,7 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ToFirst
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.DifBijectiveOfParam
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.FBIdJet
+import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.GermComp1ZeroPointLeft
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.LieModel
 
 noncomputable section
 namespace PositivityTheory.HtPt.Cd

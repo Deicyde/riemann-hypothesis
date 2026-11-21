@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.LocallyCompactSpaceAxis
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.EisensteinResidueLine
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeightFunctionScalingParabolicStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviNormalizesUnipotentRadicalBisStatement
 

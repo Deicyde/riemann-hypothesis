@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IsometryDeterminant.SpanSingletonAlgebraMap
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IsometryDeterminant.LocalPi
+import Mathlib.Data.ENat.BigOperators
 
 noncomputable section
 

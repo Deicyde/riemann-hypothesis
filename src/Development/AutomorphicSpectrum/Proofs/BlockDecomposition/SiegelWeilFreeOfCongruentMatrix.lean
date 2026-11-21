@@ -1,9 +1,10 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HypOneZeroZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.SiegelWeilMeasureOfCongruentTarget
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.FibreFamilySmul
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ArchimedeanOrbitMeasures.EqZeroOfSetIntegral
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerOrbitVolume.TensAll
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.TrMMemFramesEIff
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.MassComputations.ProdFirstProjectionSmul
 
 noncomputable section
 
@@ -61,7 +62,7 @@ theorem transport_univ {V X Y : Type} [TopologicalSpace V] [MeasurableSpace V] [
       rwa [hU] at this
     rw [hr, hemb.lintegral_map, h2 (fun v => φ (e v)) (hφ.comp e.measurable), hτ.lintegral_map]
     refine lintegral_congr fun b => ?_
-    simp only [τ.symm_apply_apply, hemb.lintegral_map, Function.comp]
+    simp only [τ.symm_apply_apply, hemb.lintegral_map]
   · intro φ hφ hcs hts
     have hts' : tsupport (φ ∘ e) ⊆ U := by
       rw [tsupport_comp_eq_preimage]

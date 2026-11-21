@@ -1,4 +1,6 @@
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeightBoundConst
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.LeTwoMulOfForallScale
 open Matrix Filter Topology Set GlobalTheory.HermFrame GlobalTheory.IndefiniteRowSideFullHecke.HermitianInterpolation GlobalTheory.InterpCurv
 open scoped ComplexOrder ContDiff
 

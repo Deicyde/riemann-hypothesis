@@ -1,4 +1,5 @@
-import Formalism.LocalToGlobal.LatticeGeometry.ShimuraSheafOfIndefiniteSubspace
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.LatticeGeometry.InhabLoc
 import Formalism.LocalToGlobal.LatticeGeometry.LevPrPrime
 import Formalism.LocalToGlobal.LatticeGeometry.ViewsB

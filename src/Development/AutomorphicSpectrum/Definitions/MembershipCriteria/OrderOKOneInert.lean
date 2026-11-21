@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.MembershipCriteria.GoodChar
-import Development.AbelianVarietyTheory.Definitions.Foundations.MatrixMeasurableSpace
+import Mathlib.Algebra.QuadraticAlgebra.Basic
 
 noncomputable section
 

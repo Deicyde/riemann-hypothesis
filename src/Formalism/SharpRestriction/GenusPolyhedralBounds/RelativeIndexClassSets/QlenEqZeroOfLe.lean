@@ -1,7 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GenusPolyhedralBounds.RelativeIndexClassSets.SUnitsEulerDifference
 import Formalism.FilteredPoleLength.LocalDescentLevels.LocalStepClosed
 import Formalism.FilteredPoleLength.LocalDescentLevels.LocalStepDescent
-import Formalism.LogFactorialIndices.LogProductFormula
 
 noncomputable section
 

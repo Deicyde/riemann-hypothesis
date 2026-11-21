@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.PeriodIntegrals.UpqRep
-import Formalism.PeriodIntegrals.IsLowUnitH
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.ZuckTensor
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ZuckermanTensor.DualDefs
 

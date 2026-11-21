@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.StatementDual
-import Formalism.CharacterColumnKernels.IdempotentNormalForms.LengthKerOfDetEqZero
-import Formalism.CharacterColumnKernels.IdempotentNormalForms.SingleEqSmul
 
 open Module IsDiscreteValuationRing Formalism.NG
 

@@ -1,7 +1,6 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.ZetaActRefl
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.MemRingOfInR
-import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.ModQPrin
-import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.ModJTau
+import Std.Tactic.BVDecide.Normalize.Prop
 open scoped UpperHalfPlane MatrixGroups ModularForm Manifold BigOperators
 open GlobalTheory.QFam GlobalTheory.WpFam GlobalTheory.KZ GlobalTheory.FN
 open ReciprocityTheory.ChartRestriction.L1 (DD jT IsMF)
@@ -20,11 +19,11 @@ theorem qAll_affine : ∀ (E : Subring ℂ) (N a d : ℕ) (b : ℤ) (f : ℍ →
   · intro τ
     have hz : 0 < (((a : ℂ) * τ + b) / d).im := by
       have : (((a : ℂ) * τ + b) / d).im = a * τ.im / d := by
-        simp [Complex.div_ofReal_im]
+        simp
       rw [this]; have := τ.im_pos; positivity
     have hτ := hc (UpperHalfPlane.ofComplex (((a : ℂ) * τ + b) / d))
     rw [UpperHalfPlane.ofComplex_apply_of_im_pos hz] at hτ
-    simp only [UpperHalfPlane.coe_mk_subtype] at hτ
+    simp only at hτ
     have hinj : Function.Injective (fun k : ℕ => a * k) := fun x y h => by
       simpa [ha.ne'] using h
     rw [← hinj.hasSum_iff]

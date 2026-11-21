@@ -1,5 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AdelicHermitianForms.AdelicPair
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.RingTheory.Nullstellensatz
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Algebra.MvPolynomial
 
 open Matrix GlobalTheory.ClassFin
 open scoped Kronecker ComplexOrder TensorProduct
@@ -61,7 +67,7 @@ theorem exists_evC_eq_of_relations [Fintype ι] [DecidableEq ι] (Γ : Set (Matr
   refine ⟨Matrix.of fun i j => x (i, j), funext fun k => ?_⟩
   have hk : Φ k - C (z k) ∈ M := hIM (Ideal.subset_span ⟨k, rfl⟩)
   rw [hx, mem_vanishingIdeal_singleton_iff] at hk
-  simp only [map_sub, aeval_C, Algebra.algebraMap_self, RingHom.id_apply, coe_aeval_eq_eval] at hk
+  simp only [map_sub, aeval_C, Algebra.algebraMap_self, RingHom.id_apply] at hk
   have : evC (Φ k) (Matrix.of fun i j => x (i, j)) = aeval x (Φ k) := rfl
   rw [this]
   exact (sub_eq_zero.1 hk).symm

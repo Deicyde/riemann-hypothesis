@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.KTheoryStability.ReductionBoundsTorsion.AffineSplittingSpan.CoreSteps
+import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.KTheoryStability.ReductionBoundsTorsion.AffineSplittingSpan.SuccAboveEqFc
 
 noncomputable section
 
@@ -13,7 +15,7 @@ theorem cat_fc_lo {Q : Type} [Group Q] {a c m : ℕ} (h : a + c = m) (x : Fin (a
   have hl := l.isLt
   simp only [cat]
   split_ifs with h1 h2 h3 h4 h5 h6 <;> first
-    | (congr 1; ext; simp only [fc_val, Fin.val_mk]; split_ifs <;> omega)
+    | (congr 1; ext; simp only [fc_val]; split_ifs <;> omega)
     | (exfalso; split_ifs at hv <;> omega)
     | rfl
 
@@ -24,7 +26,7 @@ theorem cat_fc_hi {Q : Type} [Group Q] {a c m : ℕ} (h : a + c = m) (x : Fin (a
   have hl := l.isLt
   simp only [cat]
   split_ifs with h1 h2 h3 h4 h5 h6 <;> first
-    | (congr 1; ext; simp only [fc_val, Fin.val_mk]; split_ifs <;> omega)
+    | (congr 1; ext; simp only [fc_val]; split_ifs <;> omega)
     | (exfalso; split_ifs at hv <;> omega)
     | rfl
 

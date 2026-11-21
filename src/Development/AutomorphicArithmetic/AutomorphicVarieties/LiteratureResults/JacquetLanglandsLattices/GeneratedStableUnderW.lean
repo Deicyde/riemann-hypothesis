@@ -1,6 +1,8 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.LocF
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.CapCentral
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.CompositionMem
+import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.DiscreteGL2
 open NumberField IsDedekindDomain Neutral.B1 Formalism.L2.Host Formalism.BasicNotions MeasureTheory GlobalTheory.CuspRep UpperTheory.V UpperTheory.V.Af UpperTheory.V.Lit UpperTheory.V.Lit.JL
 
 namespace UpperTheory.V.Lit.JL.DiscreteSeriesWeights
@@ -175,7 +177,7 @@ private theorem rel_of (E : Fin 2 → Fin 2 → Module.End ℂ M) (h : Formalism
   have e : ∀ x, E 0 1 (E 1 0 x) = E 1 0 (E 0 1 x) + (E 0 0 x - E 1 1 x) := fun x => by simpa using g 0 1 1 0 x
   have f : ∀ x, E 1 1 (E 0 0 x) = E 0 0 (E 1 1 x) := fun x => by simpa using g 1 1 0 0 x
   refine ⟨fun s x => ?_, fun s x => ?_⟩
-  · simp only [wOp_apply, xOp_apply, map_add, map_sub, map_smul, a, b, c, d, e, f]
+  · simp only [wOp_apply, xOp_apply, map_add, map_sub, map_smul, a, b, c, d, e]
     rcases Int.units_eq_one_or s with rfl | rfl <;> match_scalars <;> push_cast <;> ring_nf <;> simp
   · simp only [wOp_apply, xOp_apply, map_add, map_sub, map_smul, a, b, c, d, e, f]
     rcases Int.units_eq_one_or s with rfl | rfl <;> match_scalars <;> push_cast <;> ring_nf <;> simp

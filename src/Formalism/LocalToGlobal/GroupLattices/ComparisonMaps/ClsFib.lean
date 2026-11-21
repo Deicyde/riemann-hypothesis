@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.Statement
 
 namespace Formalism.L2.G.Cmp
@@ -94,7 +96,7 @@ theorem stab_iff (i : ClassSet H K') (g : Gp) (γ : G) :
     · intro h
       exact K'.mul_mem (K'.mul_mem (K'.inv_mem hjg) h) hjg
   rw [h1]
-  simp only [map_mul, map_inv, X.pr_j, hp, inv_one, one_mul, mul_one, mul_assoc]
+  simp only [map_mul, map_inv, X.pr_j, hp, inv_one, one_mul, mul_assoc]
 
 end Fib
 

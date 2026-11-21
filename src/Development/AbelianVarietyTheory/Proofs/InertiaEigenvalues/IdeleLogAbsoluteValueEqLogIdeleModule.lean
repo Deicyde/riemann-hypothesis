@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.AbsCharNotUnitary
-import GroundTheory.GlobalFields.IdeleGroups.IdeleNorms
 import GroundTheory.GlobalFields.TateThesis.GlobalZetaFinite
 open NumberField IsDedekindDomain
 open scoped nonZeroDivisors

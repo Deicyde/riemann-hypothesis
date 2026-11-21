@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsIsUnitIntegral
+import Mathlib.Analysis.Matrix.Normed
 open scoped Matrix
 open Filter Topology
 

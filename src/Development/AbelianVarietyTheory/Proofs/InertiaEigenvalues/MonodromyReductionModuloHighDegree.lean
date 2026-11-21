@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.ImageStableDegreeBounds
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.BreuilRingModHighDegreePropertyStatement
+import Mathlib.Algebra.GroupWithZero.Submonoid.CancelMulZero
 
 noncomputable section
 
@@ -41,7 +42,7 @@ theorem smul_mem_MMHigh (P : PhiMod O K l e a ι) {f : ZMod a → K⟦X⟧}
     rw [Finset.sum_apply, Finset.sum_apply, Finset.sum_eq_single τ']
     · simp [Subalgebra.smul_def]
     · intro b _ hb
-      simp [Subalgebra.smul_def, Pi.single_apply, Ne.symm hb]
+      simp [Ne.symm hb]
     · simp
   rw [h1]
   change _ ∈ SHigh O K l e • P.MM

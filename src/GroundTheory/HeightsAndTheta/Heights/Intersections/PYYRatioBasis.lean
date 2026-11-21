@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StYYRatioBasis
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StMobiusAlgIndep
+import Mathlib.RingTheory.Henselian
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.Inter

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.FockResolutionOnto.StatementA
 import Formalism.PolynomialDimension.MultinomialDepth.PartnerM
 import Formalism.MahlerMeasure.MahlerMeasureProofs.SmithZp

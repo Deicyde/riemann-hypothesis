@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.OfinProd
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.EigAdm
 
 open MeasureTheory NumberField IsDedekindDomain Filter GroundTheory.Automorphic GroundTheory.Automorphic.Reduction GroundTheory.Automorphic.RightCosetSpace GroundTheory.Automorphic.AutomorphicForm
@@ -37,7 +37,7 @@ theorem UpperTheory.finiteDimensional_eigenspace_inf_fixed_compactOpen :
     refine ⟨⟨?_, hs⟩, ?_⟩
     · have hmem : ∀ (W : Submodule ℂ (LL μ)) (y : LL μ), y ∈ eigIn W (Oinf μ ν a) x ↔ y ∈ W ∧ Oinf μ ν a y = (x : ℂ) • y := by
         intro W y
-        simp [eigIn, Module.End.mem_eigenspace_iff]
+        simp [eigIn]
       have he' := (hmem V u).1 he
       exact (hmem _ u).2 ⟨hVc he'.1, he'.2⟩
     · have hf' : u ∈ ⨅ i, fixL μ (w i) (U i) := hf

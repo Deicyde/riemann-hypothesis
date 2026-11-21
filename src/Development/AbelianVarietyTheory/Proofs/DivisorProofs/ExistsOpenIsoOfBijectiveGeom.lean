@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IsIntegrallyClosedInFractionFieldPowerSeries
+import Mathlib.AlgebraicGeometry.FunctionField
+import Mathlib.AlgebraicGeometry.SpreadingOut
 
 open CategoryTheory AlgebraicGeometry
 

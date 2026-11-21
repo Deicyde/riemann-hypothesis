@@ -1,6 +1,4 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.DataN
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsPsCharOne
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsLinearExtension
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CayleyHamilton
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.PseudoCharacterApplyIdempotentNatLeStatement
@@ -9,6 +7,7 @@ import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FiniteAndIsSem
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsSemisimpleRepOfIsSemisimpleRingRangeStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CentralLinearFormPiMatrixEqSumTraceStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsAlgHomTraceEqSumMultTraceStatement
+import Mathlib.RingTheory.SimpleModule.IsAlgClosed
 open Formalism.MainNotions.N GlobalTheory.PsChar
 
 namespace GlobalTheory.PsChar

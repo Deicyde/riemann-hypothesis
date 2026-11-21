@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.CayleySignature
-import Formalism.FlagUnipotentLattices.ThirdHeightFromSecond
 
 noncomputable section
 

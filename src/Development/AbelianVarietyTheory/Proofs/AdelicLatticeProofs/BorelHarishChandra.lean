@@ -1,6 +1,15 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AdelicHermitianForms.AdelicPair
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.MatrixKroneckerPowerTensorActionAlgebra
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Analysis.CStarAlgebra.Matrix
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Matrix GlobalTheory.ClassFin
 open scoped Kronecker ComplexOrder TensorProduct
@@ -149,7 +158,7 @@ theorem borel_harishChandra : ∀ (ι : Type) [Fintype ι] [DecidableEq ι] [Lin
   have hφh : ∀ y : Matrix ι ι ℝ, (φ y)ᴴ = φ yᵀ := fun y => by
     ext i j; simp [hφa]
   have hφdiag : ∀ a : ι → ℝ, φ (diagonal a) = diagonal fun i => (a i : ℂ) := fun a => by
-    ext i j; by_cases hij : i = j <;> simp [hφa, diagonal_apply, hij]
+    ext i j; by_cases hij : i = j <;> simp [hφa, hij]
   simp only [hφ, map_mul]
   let S := {p : Matrix ι ι ℝ × (ι → ℝ) × Matrix ι ι ℝ // IsSiegel C p.1 p.2.1 p.2.2 ∧
     ∀ j, act d v (φ p.1 * φ (diagonal p.2.1) * φ p.2.2) j = 0 ∨

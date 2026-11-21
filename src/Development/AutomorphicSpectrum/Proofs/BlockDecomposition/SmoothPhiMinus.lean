@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.MirabolicDerivatives.TwistedKernels.ExPhiPlusOnto
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.IsSmoothTwAct
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.VectorStabilizer

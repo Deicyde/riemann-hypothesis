@@ -1,11 +1,10 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsGenericFlag
-import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.FrameDefinitions.Metric
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsGrpPullback
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.IsUnitIffUnitAt
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.RegAtIffChartLocalizationStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsUniqueCentreLocalHomStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.PrimeChartExistsUniquePointStatement
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ArithmeticHilbertSamuelLowerBound
 
 noncomputable section
 
@@ -141,7 +140,7 @@ theorem aeval_eq_zero_of_ratio {K : Type} [Fintype K] {J : K → Type} (y : (Σ 
       congr 2
       funext p
       simp only [inc, σ, map_mul, map_C, map_X, eval₂Hom_C, eval₂Hom_X']
-      simp only [Subring.subtype_apply, hb, RingHom.id_apply]
+      simp only [Subring.subtype_apply, hb]
       rw [← mul_assoc, ← C_mul]
       congr 2
       have := hy p.1

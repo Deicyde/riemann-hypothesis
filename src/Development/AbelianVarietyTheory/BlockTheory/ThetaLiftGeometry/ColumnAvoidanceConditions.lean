@@ -1,10 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.LiftErrorLocal
-import Formalism.LocalRingCardinality.DataDIV
-import Formalism.SharpRestriction.GlobalSchurBounds.GL3Theta
-import Formalism.LocalToGlobal.Columns.FiniteSumNonzeroLargeDepth
 import Formalism.LocalToGlobal.KernelLattices.ThDistC
-import Formalism.LocalToGlobal.KernelLattices.LateralTheory
 
 noncomputable section
 

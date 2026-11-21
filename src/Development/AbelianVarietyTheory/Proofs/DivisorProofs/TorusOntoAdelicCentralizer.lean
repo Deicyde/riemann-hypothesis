@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemSimR
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NatDegreeMinpolyLeBaseChange
 open Matrix NumberField GlobalTheory.LKTrip GlobalTheory.LKRes GlobalTheory.LKMid GlobalTheory.CentTorus
@@ -17,8 +18,7 @@ theorem flat_centralizer (R B L : Type) [CommRing R] [Algebra ℚ R] [Ring B] [A
   let ad : B →ₗ[ℚ] B := LinearMap.mulRight ℚ γ - LinearMap.mulLeft ℚ γ
   have hex : Function.Exact f.toLinearMap ad := by
     intro x
-    simp only [ad, LinearMap.sub_apply, LinearMap.mulRight_apply, LinearMap.mulLeft_apply, sub_eq_zero,
-      AlgHom.toLinearMap_apply]
+    simp only [ad, LinearMap.sub_apply, LinearMap.mulRight_apply, LinearMap.mulLeft_apply, sub_eq_zero]
     exact hcent x
   have hmap : ∀ y, Algebra.TensorProduct.map (AlgHom.id R R) f y = LinearMap.lTensor R f.toLinearMap y := by
     intro y
@@ -31,7 +31,7 @@ theorem flat_centralizer (R B L : Type) [CommRing R] [Algebra ℚ R] [Ring B] [A
     induction y using TensorProduct.induction_on with
     | zero => simp
     | tmul t b =>
-      simp [ad, Algebra.TensorProduct.tmul_mul_tmul, TensorProduct.tmul_sub]
+      simp [ad, Algebra.TensorProduct.tmul_mul_tmul]
     | add x y hx hy => rw [map_add, ← hx, ← hy]; noncomm_ring
   have hex' := Module.Flat.lTensor_exact R hex
   refine ⟨?_, fun y => ?_⟩

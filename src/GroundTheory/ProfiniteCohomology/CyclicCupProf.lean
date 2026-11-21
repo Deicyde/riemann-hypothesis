@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.CyclicCupGaloisDefs
 import GroundTheory.ProfiniteCohomology.CyclicCupInflation
 import GroundTheory.ProfiniteCohomology.CupProducts.ExistsCocycleMapFEqD

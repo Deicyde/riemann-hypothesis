@@ -1,7 +1,9 @@
-import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.AbsInvOf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.CrystallinePeriodRings.PhiGalCris
 import Development.WeilBound.RepresentationTheoryGL.PeriodRingBases.PeriodRingUnits.DieudonneManinBasisModification
-import GroundTheory.PAdicHodge.ACrisBdRInj
+import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.VecZero
+import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.BocksteinBaseChange.BcrisRegularPeriodRing
 
 open CrystallineSemistableComparison UpperTheory.Ru.crystallineComparison
 

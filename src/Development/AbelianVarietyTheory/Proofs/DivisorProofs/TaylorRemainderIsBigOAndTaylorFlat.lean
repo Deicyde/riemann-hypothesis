@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GaussManinPeriods
-import Development.AbelianVarietyTheory.Definitions.ThetaValues.MemAnalyticAtZeroOfEventuallyDifferentiableAt
-import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.ConstantCoeffDpolyOfAdditiveTaylorPts
+import Mathlib.Analysis.Analytic.IteratedFDeriv
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
 
 open Filter Topology
 

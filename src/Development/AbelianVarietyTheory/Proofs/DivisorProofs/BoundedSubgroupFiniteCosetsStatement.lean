@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BoundedSubgroupFiniteCosets
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.MaxWeightGL1EqOne
 open Matrix
 open scoped Classical
 set_option maxHeartbeats 1000000 in

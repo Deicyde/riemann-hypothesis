@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.GoodTopBot
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.GlobalTheta.WeylDualWeylLatticesAgreeOfLowestAlcove
-import Formalism.GradedWeylDivisibility.FinalD
+import Formalism.GradedWeylDivisibility.FockSpaceTableaux.LDrowLemmas
 
 open MvPolynomial Formalism.GradedWeylDivisibility Formalism.BasicNotions GlobalTheory.Alc
 
@@ -47,7 +46,7 @@ theorem exists_coeff_of_mem_span {k : Type} [Field k] {N : ℕ} {σ : Type}
       subst hν
       simp [coeff_map, AddMonoidAlgebra.coe_algebraMap, AddMonoidAlgebra.coeff_single]
     · refine ⟨0, zero_mem _, fun m => ?_⟩
-      simp [coeff_map, AddMonoidAlgebra.coe_algebraMap, AddMonoidAlgebra.coeff_single, Finsupp.single_apply, Ne.symm hν]
+      simp [coeff_map, AddMonoidAlgebra.coe_algebraMap, AddMonoidAlgebra.coeff_single, Ne.symm hν]
   | zero =>
     intro ν
     exact ⟨0, zero_mem _, fun m => by simp⟩

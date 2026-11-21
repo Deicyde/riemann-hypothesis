@@ -1,12 +1,8 @@
-import ReciprocityTheory.AnalyticForms.PotentialTheory.IsPotentialPullbackStatement
-import ReciprocityTheory.AnalyticForms.PotentialTheory.Stokes
-import ReciprocityTheory.AnalyticForms.PotentialTheory.LogInt
-import ReciprocityTheory.AnalyticForms.PotentialTheory.AtlasIndep
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PotentialTheory.Partition
-import ReciprocityTheory.AnalyticForms.PotentialTheory.PotentialContDiffAt
-import ReciprocityTheory.AnalyticForms.PotentialTheory.ContDiffAtOfIsPotential
-import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.LintegralImageEqLintegralNormSqDetMul
-import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.LeviOneEqLaplacianThm
+import Mathlib.Topology.Sheaves.Presheaf
+import ReciprocityTheory.AnalyticForms.PotentialTheory.StokesA
 
 namespace ReciprocityTheory.AnForm.M
 
@@ -133,7 +129,7 @@ theorem maDens_one (φ : Fin 1 → (Fin 1 → ℂ) → ℝ) (z : Fin 1 → ℂ) 
   have hU : (Finset.univ : Finset (Finset (Fin 1))) = {∅, {0}} := by decide
   unfold ReciprocityTheory.AnForm.maDens ReciprocityTheory.AnForm.mdisc
   rw [hU, Finset.sum_pair (by decide)]
-  simp [Matrix.det_fin_one]
+  simp
 
 theorem maDens_congr {D : ℕ} (φ ψ : Fin D → (Fin D → ℂ) → ℝ) (z : Fin D → ℂ)
     (h : ∀ k, φ k =ᶠ[𝓝 z] ψ k) : ReciprocityTheory.AnForm.maDens φ z = ReciprocityTheory.AnForm.maDens ψ z := by

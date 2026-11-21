@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.GL4.ApplyWordMemDualGen
-import Formalism.GradedWeylDivisibility.FockSpaceTableaux.FockQRowAct
-import Formalism.GradedWeylDivisibility.FockSpaceTableaux.ClosedEqNabla
+import Formalism.LocalToGlobal.GlobalTheory.GL4.BranchingNormalisedOfAdjoint
 
 noncomputable section
 

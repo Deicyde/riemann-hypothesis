@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.PeriodIntegrals.CharIdem
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CharacterIdempotents.Development
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CharacterIdempotents.Central
 
 open CategoryTheory

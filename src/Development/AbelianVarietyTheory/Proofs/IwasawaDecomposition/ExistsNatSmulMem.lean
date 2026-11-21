@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.StepLevelContainsDeepCongruenceAtBadPrime
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsNatMulIntegral
+import Formalism.LocalToGlobal.HermitianColumns.InLocalDiscriminantKernel
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.UG Formalism.L2.Forms Matrix
 open scoped TensorProduct
 
@@ -113,7 +114,7 @@ theorem princ_lat : ∀ {F E : Type} [Field F] [NumberField F] [Field E] [Number
     simp only [y, Pi.smul_apply, smul_eq_mul, map_mul, map_natCast]
     by_cases h : i = b
     · subst h; simp
-    · simp [Pi.single_apply, h]
+    · simp [h]
   have hcol : x *ᵥ y - y = (d₁ : E ⊗[F] v.adicCompletion F) • ((x - 1) *ᵥ Pi.single b 1) := by
     rw [hy', Matrix.mulVec_smul, Matrix.sub_mulVec, Matrix.one_mulVec, smul_sub]
   have h1 := congrFun hxz a

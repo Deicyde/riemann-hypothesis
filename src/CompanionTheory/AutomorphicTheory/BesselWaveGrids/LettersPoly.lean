@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.AutomorphicTheory.SchurLimitBounds.ZuckermanDuality.ZuckDualTOfZuckDual
 import Formalism.HermitianCurvature.StatementU
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.ConjugationInvarianceEverySetting
+import Formalism.FormalDegreeBessel.FinalG
 
 noncomputable section
 

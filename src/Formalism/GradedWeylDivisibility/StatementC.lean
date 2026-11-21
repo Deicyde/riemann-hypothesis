@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.GradedWeylDivisibility.StatementA
 
 open MvPolynomial

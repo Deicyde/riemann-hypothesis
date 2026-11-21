@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.PtRows
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.BrgStdR
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsScaleWithBoundedGamma
+import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.IsLinked
 
 noncomputable section
 

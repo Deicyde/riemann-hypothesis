@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.StableIffCarrierEq
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.BlockFrameConjugationIdentity
+import Development.AbelianVarietyTheory.BlockTheory.HeightDefect.LevelCuspCharacters
 
 noncomputable section
 

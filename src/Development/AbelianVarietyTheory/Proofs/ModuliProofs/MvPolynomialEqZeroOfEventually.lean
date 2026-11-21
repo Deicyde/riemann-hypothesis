@@ -1,9 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.AnalyticCharts.Osgood
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.HeckeKer
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsHolPeriods
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.UnifUniqSt
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.Analysis.Calculus.ImplicitContDiff
+import Mathlib.Combinatorics.Nullstellensatz
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Topology.Algebra.Module.Cardinality
 
 open Filter Topology
 
@@ -85,7 +87,7 @@ theorem _root_.GlobalTheory.CountableFibres.exists_injective_fderiv {E F : Type}
     intro x y hxy
     have : x - y ∈ K := by
       simp only [K, LinearMap.mem_ker, ContinuousLinearMap.coe_coe, ContinuousLinearMap.comp_apply,
-        map_sub, hxy, sub_self, map_zero]
+        map_sub, hxy, sub_self]
     rw [hK, Submodule.mem_bot, sub_eq_zero] at this
     exact this
   set Ψ := hg.implicitToOpenPartialHomeomorph _ _ hsurj

@@ -1,12 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.RealGroups.GeneralUnitaryRepresentations.ArchimedeanJacquetSegments.SegmentSubquotients.HasFiniteLengthJacSub
-import CompanionTheory.AutomorphicTheory.TemperedLocalSpectra.ZelevinskyClassification.ZelevinskyCosets.Imports
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.ContragredientProductIrreducibleImports
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CuspidalPairSubGeneric
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.DualClassInvolutiveImports
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsSmoothIterPhi
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WordOccursProductInterleave
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.AlgebraMapIntertwiningMapBijectiveOfIsSmooth
 
 noncomputable section
 
@@ -61,14 +57,14 @@ theorem jhMult_rev_jac_sub (hG : GeometricLemma) (hR : RhoNuRhoReducible) {d : �
     refine Fin.ext ?_
     refine (Eq.trans ?_ (consecBlocks_val 2 d a j).symm)
     rw [stdBlocks_val]
-    fin_cases a <;> simp [hu1, Fin.sum_univ_two, mul_comm, add_comm]
+    fin_cases a <;> simp [hu1, mul_comm, add_comm]
   have he' : stdBlocks (fun a => (u (Fin.rev a)).1) hu' = consecBlocks 2 d := by
     refine Equiv.ext ?_
     rintro ⟨a, j⟩
     refine Fin.ext ?_
     refine (Eq.trans ?_ (consecBlocks_val 2 d a j).symm)
     rw [stdBlocks_val]
-    fin_cases a <;> simp [hu1, Fin.sum_univ_two, mul_comm, add_comm]
+    fin_cases a <;> simp [hu1, mul_comm, add_comm]
   let φ : ∀ a, (segTerm σ.ρ 2 a).Equiv (u a).rep := fun a =>
     (twistEquiv (IrrGL.equivOf σ.ρ σ.smooth σ.irr) _).trans (x.twEquiv _ (isSmoothChar_absPow _))
   have Φ : (multiProd (consecBlocks 2 d) (segTerm σ.ρ 2)).Equiv (prodIrr u hu) := by

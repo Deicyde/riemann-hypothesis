@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.Imports
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.CoerciveOfPositiveDefinite
+import Mathlib.Topology.Sheaves.Presheaf
 
 namespace GroundTheory.Heights₂.Heights.FiniteCovolume
 

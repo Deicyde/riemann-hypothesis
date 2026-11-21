@@ -1,5 +1,14 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LatticeRigidity.HeightMinimum.PackingCountGeometricMean
+import Mathlib.Analysis.Distribution.SchwartzSpace.Basic
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Topology.Sheaves.Presheaf
 
 open Matrix
 open scoped ENNReal
@@ -98,7 +107,7 @@ theorem one_le_mul_norm_rowMap (R : Subring E) [Nonempty ι] (ε : ι → E →+
     · subst h; simpa [hB, updateRow_self] using hvint c
     · simpa [hB, updateRow_ne h] using hint (s r) c
   have hz' : z = (n₀ : E) ^ a * B.det := by
-    simp [hz, det_smul]
+    simp [hz]
   have hz0 : z ≠ 0 := by
     rw [hz']; exact mul_ne_zero (pow_ne_zero _ hn0E) hdet
   have hbound : ∀ i, ‖ε i z‖ ≤ L := by

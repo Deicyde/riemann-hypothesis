@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsUnitNatCastRes
 
 set_option autoImplicit false
@@ -118,7 +118,7 @@ theorem evalPt_norm : ∀ (F : Type) [Field F] [NumberField F] (V : ValuationSub
   have hF1 : (Scheme.ΓSpecIso (.of ℂ_[p])).hom.hom
       ((res (U := ⊤) (V := ⊤) le_top (constUnit (𝟙 (Spec (.of ℂ_[p]))) cc) : Γ(Spec (.of ℂ_[p]), ⊤))) = cc := by
     have hid : (homOfLE (le_top : (⊤ : (Spec (.of ℂ_[p])).Opens) ≤ ⊤)).op = 𝟙 _ := Subsingleton.elim _ _
-    simp [res, constUnit, hid]
+    simp [res, constUnit]
   have htop : (⊤ : (Sp 𝓞_ℂ_[p]).Opens) ≤ ((glueLB h).pull (spMap φ ≫ cξ h x)).U j := by
     change ⊤ ≤ LB.wchart (glueLB h) (fun _ : PUnit => spMap φ ≫ cξ h x) j
     rw [hW, hYb]
@@ -146,7 +146,7 @@ theorem evalPt_norm : ∀ (F : Type) [Field F] [NumberField F] (V : ValuationSub
       (Sp (cR h x)).presheaf.map (eqToHom (Scheme.Hom.preimage_image_eq (cξ h x) ⊤)).op := by
     show ((cξ h x).appIso ⊤).inv ≫ (cξ h x).app (cξ h x ''ᵁ ⊤) = _
     rw [Iso.inv_comp_eq, Scheme.Hom.appIso_hom, Category.assoc, ← Functor.map_comp]
-    simp [Uc]
+    simp
   have hinvapp' : ∀ {Z : CommRingCat.{0}} (k : Γ(Sp (cR h x), cξ h x ⁻¹ᵁ Uc h x) ⟶ Z),
       ((cξ h x).appIso ⊤).inv ≫ (cξ h x).app (Uc h x) ≫ k =
         (Sp (cR h x)).presheaf.map (eqToHom (Scheme.Hom.preimage_image_eq (cξ h x) ⊤)).op ≫ k := by

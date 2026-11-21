@@ -1,4 +1,6 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.JacBase
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.JacBaseA
 
 noncomputable section
 

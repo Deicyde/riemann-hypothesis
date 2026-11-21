@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ExistsIsHaarMeasureSUJ
 open MeasureTheory Matrix Finset Formalism.MainNotions.S Formalism.REAL Formalism.QuantumDeterminants GlobalTheory.Dec GlobalTheory.DSId GlobalTheory.DSSU
 open scoped InnerProductSpace ENNReal
@@ -34,7 +36,7 @@ def unitScalar (z : Circle) : UJ ε :=
     by rw [smul_mul_smul_comm, circle_star_mul, Matrix.one_mul, one_smul]⟩, by
     show ((z : ℂ) • (1 : Matrix (Fin n) (Fin n) ℂ))ᴴ * Jm ε * ((z : ℂ) • (1 : Matrix (Fin n) (Fin n) ℂ)) = Jm ε
     simp only [Matrix.conjTranspose_smul, Matrix.conjTranspose_one, Matrix.smul_mul, Matrix.mul_smul,
-      Matrix.one_mul, Matrix.mul_one, smul_smul, circle_star_mul, circle_mul_star, one_smul]⟩
+      Matrix.one_mul, Matrix.mul_one, smul_smul, circle_mul_star, one_smul]⟩
 
 theorem umat_unitScalar (z : Circle) : umat (unitScalar ε z) = (z : ℂ) • (1 : Matrix (Fin n) (Fin n) ℂ) := rfl
 
@@ -235,7 +237,7 @@ theorem sqInt_iff : ∀ (n : ℕ), 1 ≤ n → ∀ (ε : Fin n → Bool) (H : Ty
     congr 1
     rw [← ofReal_norm_eq_enorm, ← ofReal_norm_eq_enorm]
     congr 1
-    simp [inner_smul_right, norm_zpow, Circle.norm_coe]
+    simp [norm_zpow, Circle.norm_coe]
   have hmeas : ∀ v w : H, Measurable (fun g : UJ ε => ‖⟪w, π (umat g) v⟫_ℂ‖ₑ ^ (2 : ℝ)) :=
     fun v w => ((hcont v w).measurable.enorm).pow_const _
   have key : ∀ (μ : Measure (SUJ ε)), μ.IsHaarMeasure → ∀ v w : H,

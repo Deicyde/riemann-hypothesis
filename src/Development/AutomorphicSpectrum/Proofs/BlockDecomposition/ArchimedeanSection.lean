@@ -1,11 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.AutomorphicKernels.UnitarySchrodingerModel.UnitarySchrodingerLemmas.UnramifiedSchwartzDensity.SchCut
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsRealCoords
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousBiadditiveBounded
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousOnRingInverseOfIsOpenEmbeddingUnits
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.UnitsOpenEmbeddingLocalTensorStatement
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.TensorLocallyCompactRingStatement
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.InfiniteAdelesLocalRingTotallyReal
+import Mathlib.Tactic.Monotonicity.Lemmas
 noncomputable section
 open HeckeCharacterZeroLocus.SiegelWeilU NumberField IsDedekindDomain MeasureTheory Topology
 open scoped TensorProduct ENNReal NNReal Matrix
@@ -43,7 +43,7 @@ theorem exists_quadratic_section {N : ℕ} (q : (Fin N → ℝ) → (Fin N → �
     have hval : Φ p.1 - Φ p.2 - ((ContinuousLinearEquiv.refl ℝ (Fin N → ℝ) : (Fin N → ℝ) ≃L[ℝ] (Fin N → ℝ)) :
         (Fin N → ℝ) →L[ℝ] (Fin N → ℝ)) (p.1 - p.2) = q (p.1 - p.2) p.1 + q p.2 (p.1 - p.2) := by
       rw [← hexp]
-      simp only [hΦ, ContinuousLinearEquiv.coe_refl', id]
+      simp only [hΦ]
       simp
       abel
     rw [hval]
@@ -78,7 +78,7 @@ theorem exists_ring_section {A : Type} [Ring A] [TopologicalSpace A] [IsTopologi
       simp only [map_add, add_mul, mul_add])
     (by
       intro u v v'
-      simp only [map_add, add_mul, mul_add])
+      simp only [map_add, mul_add])
     (by
       have h1 : Continuous (fun p : (Fin N → ℝ) × (Fin N → ℝ) => e.symm p.1) :=
         he'.comp continuous_fst

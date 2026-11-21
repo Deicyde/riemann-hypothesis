@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
-import Formalism.LocalToGlobal.GaloisLevelStructure.TiedHecke
+import Formalism.LocalToGlobal.GaloisLevelStructure.DefsAut
 
 noncomputable section
 

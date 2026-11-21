@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LocalTheory.UnramifiedCohomology.SpanSoLoc
 import Development.WeilBound.ThetaLifts.LocalTheory.UnramifiedCohomology.KAtCompact
-import Development.WeilBound.ThetaLifts.FrameEstimates.SquareIntegrableWeilRange
+import Development.WeilBound.ThetaLifts.LocalTheory.AdmissiblePureTensorSchwartz
 
 noncomputable section
 

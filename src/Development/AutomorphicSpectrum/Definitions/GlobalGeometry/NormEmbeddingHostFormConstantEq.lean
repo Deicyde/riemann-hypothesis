@@ -1,9 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.AbsAZero
 import Development.AbelianVarietyTheory.Definitions.ExistenceOfLattices.ExistsCtxOkOfPins
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsLevelSubgroup
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsUniformisationDictionaryCharacterLaws
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsMemberDictionaryContextGoodEmbedding
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.NonemptyFrPtComplex
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.VolPairExAndFinVol
 

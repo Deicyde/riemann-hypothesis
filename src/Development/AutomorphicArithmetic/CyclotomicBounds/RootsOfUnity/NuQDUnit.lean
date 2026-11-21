@@ -1,9 +1,7 @@
-import Mathlib
-import Development.AutomorphicArithmetic.PrimeDiscriminants.ExistsPrimitiveRootTorsionOrder
-import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.CyclotomicTotient.NuBasic
-import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.CyclotomicTotient.TotientLeOfCycPowEqOne
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.CyclotomicTotient.NuSumApprox
 import Development.AutomorphicArithmetic.CyclotomicBounds.RootsOfUnity.HostApprox
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.HostFacts
 
 open NumberField Formalism.HC KStar.Tree
 

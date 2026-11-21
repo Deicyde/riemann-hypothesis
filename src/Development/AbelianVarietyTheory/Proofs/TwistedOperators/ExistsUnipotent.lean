@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ScaledBasisMemChainLattice
+import Development.AbelianVarietyTheory.Proofs.TwistedOperators.UnipotentRadicalBasic
 
 open MeasureTheory ValuativeRel Matrix
 open scoped Pointwise

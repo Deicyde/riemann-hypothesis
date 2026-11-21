@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataNChTie
 import Formalism.LocalToGlobal.UnitaryNorms.CharTied
+import Formalism.LocalToGlobal.UnitaryNorms.MemFIffReal
 
 noncomputable section
 

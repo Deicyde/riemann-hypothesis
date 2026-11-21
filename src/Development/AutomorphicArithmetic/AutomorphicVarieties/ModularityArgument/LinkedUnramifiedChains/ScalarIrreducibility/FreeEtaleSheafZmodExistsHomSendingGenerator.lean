@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.LinkedUnramifiedChains.RedDefs
 import Development.AutomorphicArithmetic.AutomorphicVarieties.FrobeniusSmoothVectors.Imports
 
@@ -50,8 +52,8 @@ private theorem scalar_of_irr {G : Type} [Group G] {m : ℕ} (a : G → Matrix (
     ext p
     by_cases hp : p = i
     · subst hp
-      simp [Matrix.sub_mulVec, Matrix.smul_mulVec, Matrix.mulVec_diagonal]
-    · simp [Matrix.sub_mulVec, Matrix.smul_mulVec, Matrix.mulVec_diagonal, hp]
+      simp
+    · simp [hp]
   rcases hW with hW | hW
   · rw [hW, Submodule.mem_bot] at hmem
     have := congrFun hmem i
@@ -61,7 +63,7 @@ private theorem scalar_of_irr {G : Type} [Group G] {m : ℕ} (a : G → Matrix (
       rw [hW]; trivial
     rw [LinearMap.mem_ker, Matrix.mulVecLin_apply] at h2
     have := congrFun h2 j
-    simp [Matrix.sub_mulVec, Matrix.smul_mulVec, Matrix.mulVec_diagonal] at this
+    simp at this
     have h3 : y j = y i := by linear_combination this
     exact h3.symm
 
@@ -185,7 +187,7 @@ private theorem ordDer3 {A : Type} [CommRing A] {n : ℕ} (ξ : A →+* K) (D : 
       (X * M₀ - M₀ * X - D p₀ • (1 : Matrix (Fin n) (Fin n) K)) * (M₁ * M₂) =
       X * (M₀ * (M₁ * M₂)) - (M₀ * (M₁ * M₂)) * X -
         (D p₀ • (M₁ * M₂) + D p₁ • (M₀ * M₂) + D p₂ • (M₀ * M₁)) := by
-    simp only [mul_sub, sub_mul, mul_add, add_mul, Matrix.mul_smul, Matrix.smul_mul, Matrix.mul_one, Matrix.one_mul, ← mul_assoc]
+    simp only [mul_sub, sub_mul, mul_add, Matrix.mul_smul, Matrix.smul_mul, Matrix.mul_one, Matrix.one_mul, ← mul_assoc]
     abel
   rw [e, hm'] at hz
   rw [mul_zero, zero_mul, sub_zero, zero_sub] at hz

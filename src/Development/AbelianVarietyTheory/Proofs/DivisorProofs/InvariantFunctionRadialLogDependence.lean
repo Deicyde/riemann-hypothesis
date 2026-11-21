@@ -1,13 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiniteTypeFunctionCharacterExpansionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TranslateFiniteDimMatrixCoefficientStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentMatrixCoefficientsMemStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NilpotentTwistCharacterContinuousStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentPolynomialInLogStatement
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLeviLeviElt
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
+import Development.AbelianVarietyTheory.Definitions.Foundations.T2SpaceTensorProductFiniteExtension
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK
@@ -46,7 +44,7 @@ theorem coeff_mem_of_isNilpotent (G : Type) [CommGroup G] [TopologicalSpace G] (
     funext s
     have h1 : ρ s = ((lam s : ℂˣ) : ℂ) • u s := by rw [hu, smul_smul, Units.mul_inv, one_smul]
     rw [h1, hM s]
-    simp [Matrix.sum_apply, Finset.mul_sum, Finset.sum_apply, mul_comm, mul_left_comm]
+    simp [Matrix.sum_apply, Finset.mul_sum, Finset.sum_apply, mul_comm]
     try exact Finset.sum_congr rfl fun _ _ => by ring
   rw [hρ]
   exact Submodule.sum_mem _ fun k _ => Submodule.smul_mem _ _ (Submodule.subset_span ⟨(lam, k), rfl⟩)

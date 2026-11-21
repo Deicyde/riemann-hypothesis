@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CastVMulVecLift
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.DetCornerMatrixLevelZero
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.DwPt
 
 open Matrix MeasureTheory Finset
 open scoped ComplexConjugate ComplexOrder
@@ -27,7 +30,7 @@ theorem frame_dframe (S : B.RealPlaceData k r Wp Wq) (hr : r = 0) {ν' : Fin (2 
   subst hr
   obtain ⟨hB1, hB2, hB3⟩ := hB
   refine ⟨hB1, hB2, fun a v hv => ?_⟩
-  simp only [List.mem_cons, List.mem_singleton] at hv
+  simp only [List.mem_cons] at hv
   rcases hv with rfl | rfl | hv
   · obtain ⟨-, ⟨α, -, hα⟩, -⟩ := hD
     have hcof : Formalism.FourierDecayAlt.D.cofL S γ = S.z := by

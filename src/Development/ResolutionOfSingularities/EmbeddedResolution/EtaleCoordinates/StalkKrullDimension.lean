@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.ResolutionOfSingularities.EmbeddedResolution.EtaleCoordinates.SmoothRegular
 import Development.ResolutionOfSingularities.EmbeddedResolution.AlgebraicPreliminaries.AffineSpaceJacobson
+import Mathlib.RingTheory.TotallySplit
 universe u
 
 open CategoryTheory AlgebraicGeometry

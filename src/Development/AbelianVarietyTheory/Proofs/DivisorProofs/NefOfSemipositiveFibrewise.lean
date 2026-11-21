@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeVolSlopeOfTendsto
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsMemChart
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.NefFibPullback
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompleteCurveArithModelClosureStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CurveModelRationalDegreeStatement
@@ -8,6 +6,8 @@ import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EulerCharLineBundle
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArithmeticSurfaceFibreIsProjOverZmodDimLeOneStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DegreeNonnegOfCurveDegreeNonnegOverZmodStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CurveDegreeNonnegZmodFibreOfNefOnFiniteFieldFibrStatement
+import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
+import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 
 set_option autoImplicit false
 

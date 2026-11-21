@@ -1,14 +1,12 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.NormSumPairRankZeroOfCurveCoordNorm
-import Formalism.PairingDivisors.StatementH
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
-import Formalism.LocalRingCardinality.ConjSqrtMinusD
 import Formalism.LocalToGlobal.ProjectiveLattices.HostRank
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsUnitNormOfSelfDualHermitianLatticeStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.SelfDualHermitianLatticeExistsNormOneModStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.HermitianLatticeNormOneOfNormOneModPrimeStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsOrthonormalHermitianOfDiagPosIsSquareStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.HeckeCharacterTrivialNearOneStatement
+import Formalism.SharpRestriction.GlobalSchurBounds.StandardLatticesGL3
 open NumberField Classical Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.TaylorLogMetric Formalism.MainNotions.StandardLatticesGL3 GlobalTheory.NormSum
 open scoped BigOperators
 
@@ -329,9 +327,9 @@ theorem hYY_single (D : D7) {N N' : ℕ} (x : Matrix (Fin N') (Fin N) D.host.E) 
   congr 1
   rw [Finset.sum_eq_single i, Finset.sum_eq_single j]
   · simp
-  · intro b _ hb; simp [Matrix.single_apply, hb.symm]
+  · intro b _ hb; simp [hb.symm]
   · simp
-  · intro b _ hb; simp [Matrix.single_apply, hb.symm]
+  · intro b _ hb; simp [hb.symm]
   · simp
 
 theorem exists_orthonormal (D : D7) (N N' : ℕ) (hev : Even (N * N')) :

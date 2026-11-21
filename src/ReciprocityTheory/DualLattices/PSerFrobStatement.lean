@@ -1,4 +1,6 @@
-import ReciprocityTheory.DualLattices.TowerZeroSurjective
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import ReciprocityTheory.DualLattices.FormalChartAtZero
 
 noncomputable section
 

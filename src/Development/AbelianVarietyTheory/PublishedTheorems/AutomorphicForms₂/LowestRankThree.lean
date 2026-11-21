@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.DiscreteSeriesUpqExistsIffDsExists
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.RhoCompactTwiceEqOfSignBlockOrdered
 
@@ -152,7 +152,7 @@ theorem lowest_rank_two :
     (![1 / 2, -1 / 2] : Fin 2 → ℝ) + rhoN ![true, false] - rhoC ![true, false] = ![1, -1] := by
   funext a
   simp only [rhoN, rhoC, Finset.card_filter, Pi.add_apply, Pi.sub_apply, Fin.sum_univ_succ, Fin.sum_univ_zero]
-  fin_cases a <;> simp [Fin.lt_def] <;> norm_num
+  fin_cases a <;> simp <;> norm_num
 
 theorem lowest_rank_three :
     (![1, 0, -1] : Fin 3 → ℝ) + rhoN ![true, false, true] - rhoC ![true, false, true] = ![1, 0, -1] := by

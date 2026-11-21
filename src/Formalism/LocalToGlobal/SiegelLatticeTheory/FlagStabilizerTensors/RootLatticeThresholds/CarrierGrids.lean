@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.CarrierSizes
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ChebyshevExtremalPolynomials
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.GramProductIdentities
 
 noncomputable section
 

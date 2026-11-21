@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.HookProducts.AbsPhFSubLeOfLe
-import Formalism.SharpRestriction.ParConsts
-import Formalism.SharpRestriction.ElevenLe
+import Formalism.LocalToGlobal.Divisibility.RecBridge
 
 noncomputable section
 

@@ -1,9 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ConstMemBddAut
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.PairwiseDisjointCell
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.NoExcludedParameterOfLiftParameters
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.TendstoOneOfSummable
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsSatakeParamTrivialBoundUnitaryGLStatement
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.UnramifiedZetaSumGLCosetsStatement
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice MeasureTheory IsDedekindDomain NumberField Matrix
@@ -41,7 +36,7 @@ theorem kerGL_norm {E : Type} [Field E] [NumberField E] {w : HeightOneSpectrum (
   have hpos : 0 ≤ (qV E w : ℝ) ^ (-((N : ℝ) / 2) * ((∑ i, |d i| : ℤ) : ℝ)) := by positivity
   beta_reduce
   rw [hφ ϖ hϖ d t ht k₁ hk₁ k₂ hk₂, hq]
-  simp [norm_zpow, hz, Complex.norm_real, Real.norm_of_nonneg hpos]
+  simp [norm_zpow, hz, Complex.norm_real]
   positivity
 
 end GlobalTheory.FinZeta.AbsZeta

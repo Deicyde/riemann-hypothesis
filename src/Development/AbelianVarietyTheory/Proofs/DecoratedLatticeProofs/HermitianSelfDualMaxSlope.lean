@@ -1,10 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.GlobalTheory.HLatOpsP
-import Formalism.HarderNarasimhan.FinalCor
-import Formalism.QuotientMetricDivisors.ReductionLemmaZero
-import Formalism.QuotientMetricDivisors.FinalW
-import Formalism.LocalToGlobal.Divisibility.FramesLemmas
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.RatHermHermUnitAniso
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.HermitianLatticeCovolumeNonnegStatement
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.MuMaxNonposOfLcvNonneg
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.DualFormInvMemSubfield

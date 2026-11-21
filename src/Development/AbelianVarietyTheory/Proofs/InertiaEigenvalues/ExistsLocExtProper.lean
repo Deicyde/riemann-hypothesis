@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.ExistsLocExtFinrankEq
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.RecTransportFieldIso
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LocalArtinExistsHolds
 
 noncomputable section
 open NumberField IsDedekindDomain ValuativeRel

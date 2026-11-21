@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ArithmeticGeometry.AbelianVarieties.KodairaNeronLine
+import GroundTheory.ArithmeticGeometry.AbelianVarieties.KodairaNeron
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Arith.Abelian

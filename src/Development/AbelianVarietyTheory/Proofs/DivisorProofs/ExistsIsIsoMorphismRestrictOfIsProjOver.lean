@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.SemistableTorsion.ImmersedBy
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.IsIsoMorphismRestrictOfLocalDominantSections
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsProjectiveLatticeTwistGenerated
 

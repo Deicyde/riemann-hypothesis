@@ -1,9 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.UnitaryAdmissible.CuspCentral
 import GroundTheory.AutomorphicForms.CuspidalDiscreteness
-import GroundTheory.AutomorphicForms.CuspidalDiscreteness.SummandsMeasure
-import GroundTheory.AutomorphicForms.AutomorphicFormSpaces.GKStableConv
-import GroundTheory.AutomorphicForms.AutomorphicFormSpaces.GKStableLaplacian
+import GroundTheory.AutomorphicForms.CuspidalDiscreteness.SummandsContRep
 
 noncomputable section
 

@@ -1,9 +1,6 @@
-import Mathlib
-import ReciprocityTheory.AnalyticForms.PotentialTheory.IsPotentialPullbackStatement
-import ReciprocityTheory.AnalyticForms.PotentialTheory.PotentialContDiffAt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PotentialTheory.Stokes
-import ReciprocityTheory.AnalyticForms.PotentialTheory.IntegrableOnTargetOfTsupport
-import ReciprocityTheory.AnalyticForms.PotentialTheory.ContDiffAtOfIsPotential
 
 open ReciprocityTheory.AnForm ReciprocityTheory.AnForm.M
 
@@ -170,7 +167,7 @@ theorem bound_succ {n : ℕ} [CompactSpace X] [T2Space X] (A : FinHolAtlas (n + 
       funext i
       by_cases h : i = k
       · subst h; simp [mixedFactors]
-      · simp [mixedFactors, h, Function.update_of_ne h]
+      · simp [mixedFactors, h]
     set τ := Fin.tail (mixedFactors Om v S ∘ Equiv.swap 0 k) with hτdef
     have hτ : ∀ j, IsPotential A (τ j) ∧ IsPsh A (τ j) := fun j => hP S _
     have eS : ∀ g, mInt A (mixedFactors Om v S) g = mInt A (Fin.cons Om τ) g := by

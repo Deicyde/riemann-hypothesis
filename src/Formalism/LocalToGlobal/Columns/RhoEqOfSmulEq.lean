@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Divisibility.ClassSumBridge
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Module NumberField IsDedekindDomain
 open scoped Matrix ComplexOrder

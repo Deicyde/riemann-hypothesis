@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.ThetaMetrics.IsKMeas
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LevelLiftBasics.LevelGroupUnitaryHermitian
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.ParabolicLineStabilizerLeviStatement
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.KsetTransitiveStatement
@@ -41,7 +41,7 @@ theorem det_gram_cons {n m : ℕ} (e : Fin n → ℂ) (he : star e ⬝ᵥ e = 1)
   have hG : (Matrix.of fun i j => star (v i) ⬝ᵥ v j) = uᴴ * D * u := by
     ext i j
     refine Fin.cases ?_ (fun i => ?_) i <;> refine Fin.cases ?_ (fun j => ?_) j <;>
-      simp [u, D, h0, hs, Matrix.mul_apply, Fin.sum_univ_succ, he, hw, hw', Matrix.conjTranspose_apply, mul_add, add_mul, Finset.sum_add_distrib,
+      simp [u, D, h0, hs, Matrix.mul_apply, Fin.sum_univ_succ, he, hw, hw', Matrix.conjTranspose_apply, add_mul, Finset.sum_add_distrib,
         apply_ite (starRingEnd ℂ)] <;> ring
   rw [hG, det_mul, det_mul, det_conjTranspose, hu, hD, Complex.normSq_eq_conj_mul_self]
   simp only [Complex.star_def]; ring

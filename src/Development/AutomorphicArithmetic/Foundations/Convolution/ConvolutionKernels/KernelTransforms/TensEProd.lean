@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.TensFun
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.GeneralizedMeasures.LocHeckeInert
 
 open MeasureTheory NumberField IsDedekindDomain MvPolynomial

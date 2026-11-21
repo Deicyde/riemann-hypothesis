@@ -1,13 +1,6 @@
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsTheta
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.TorsionFramePowEqIntegralGenerator
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.ExistsGenMulPullPowUnif
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsDominantToUnitLeft
-import Development.AbelianVarietyTheory.Proofs.RingsOfIntegers.ProdSumReindex
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.ValueAtOrigin
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.AbelianSchemeLawsUnconditional
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.AdmissibleBaseOfCompleteNormalLocalCharZero
-import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.ThickenedPointToTorusExtensionGenerator
-import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.UniversalNormalisedMulByNatPullbackIso
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormalisedMulIsoUniformisationGenericFibreOneConStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UniformisedFrameRatioIntegralFrameChartIndependeStatement
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj IsLocalRing
@@ -52,7 +45,7 @@ theorem unit_origin (G : Over (Sp V)) [GrpObj G] (M : RigLB G) (N : ℕ)
   obtain ⟨u, hu⟩ := unit_ratio (V := V) M.isLB (t := LB.pullGen M.L _ _ β (eSec G))
     (t' := rigPow G M.L M.rig ((N : ℤ) ^ 2 - 1)) (fun U _ h => by
       rw [Fin.prod_univ_two, Fintype.prod_unique]
-      simp only [Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons, Category.comp_id, e₀]
+      simp only [Matrix.cons_val_zero, Matrix.cons_val_one, Category.comp_id, e₀]
       rw [← zpow_add]; congr 1)
     (pullGen_isGen _ _ _ _ hβ _) (GlobalTheory.NormMulUniv.rigPow_isGen M.rigGen _)
   refine ⟨u, fun z J hJ => ?_⟩
@@ -73,7 +66,7 @@ theorem unit_at (G : Over (Sp V)) [GrpObj G] (M : RigLB G) (N : ℕ)
     (t := LB.mulGen M.L _ _ _ _ (LB.pullGen M.L _ _ β h.left) M.rig)
     (t' := GeneratorPullback.powGen M.L _ _ f₀ (N ^ 2)) (fun U _ H => by
       rw [Fintype.prod_sum_type, Fin.prod_univ_two, Fintype.prod_unique, Fintype.prod_unique]
-      simp only [Sum.elim_inl, Sum.elim_inr, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons,
+      simp only [Sum.elim_inl, Sum.elim_inr, Matrix.cons_val_zero, Matrix.cons_val_one,
         Category.comp_id, e₀]
       rw [zpow_neg_one, zpow_one, inv_mul_cancel_right]
       push_cast; ring_nf)

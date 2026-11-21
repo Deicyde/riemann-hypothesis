@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianFormInvariantQuotientDefinite
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeSocleOverOfSimple
 open scoped Topology
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.hermitian_form_invariant_quotient_definite : ∀ {V G : Type} [AddCommGroup V] [Module ℂ V] [Group G] (ρ : G →* Module.End ℂ V)

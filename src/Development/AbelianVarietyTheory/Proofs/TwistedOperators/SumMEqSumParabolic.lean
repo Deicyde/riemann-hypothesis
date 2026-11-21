@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.InverseChamberMap
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.EpsOfCZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.EpsilonSumLeviZeroStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.EpsilonAlternatingSumZeroStatement
 

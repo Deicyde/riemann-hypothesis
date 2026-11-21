@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AutomorphicArithmetic.LocalEmbeddings.ConeBumpB
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK
@@ -143,7 +144,7 @@ private theorem core (hc : ∀ z, c (c z) = z) {n m : ℕ} (J : Matrix (Fin n) (
   · simpa using hM 0 0 1
   · ext i j
     have h := congrFun (hM (Pi.single j 1) 0 0) i
-    simp only [zero_smul, add_zero, mul_zero, Matrix.mulVec_mulVec, Matrix.mulVec_single_one] at h
+    simp only [zero_smul, add_zero, mul_zero, Matrix.mulVec_single_one] at h
     exact h
   · have h := hM' 0 1 0
     simp only [Matrix.mulVec_zero, zero_add, one_smul, zero_smul, add_zero, mul_one, mul_zero] at h

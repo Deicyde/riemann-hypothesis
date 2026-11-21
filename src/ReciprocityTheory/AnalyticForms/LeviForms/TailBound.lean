@@ -1,10 +1,7 @@
-import ReciprocityTheory.AnalyticForms.LeviForms.TailCut
-import ReciprocityTheory.AnalyticForms.PotentialTheory.PLLocalStatement
-import ReciprocityTheory.AnalyticForms.PotentialTheory.Stokes
-import ReciprocityTheory.AnalyticForms.PotentialTheory.PotentialContDiffAt
-import ReciprocityTheory.AnalyticForms.PotentialTheory.SNCAtlas
-import ReciprocityTheory.AnalyticForms.PotentialTheory.PshShift
-import ReciprocityTheory.AnalyticForms.LeviForms.TailBoundB
+import BuildAid.Leniency.Open
+import Mathlib.RingTheory.PiTensorProduct
+import ReciprocityTheory.AnalyticForms.LeviForms.IsRegFamilyInhabitStatement
+import ReciprocityTheory.AnalyticForms.LeviForms.TailBoundA
 
 namespace ReciprocityTheory.AnForm.P
 

@@ -1,16 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.RowDictPf
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalVolumeIndices.IdxProd
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalVolumeIndices.LocIdx
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalVolumeIndices.GlobMeasureEqRelIndexMul
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalVolumeIndices.HelpSng
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LatticeIndices.MeasBAll
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LatticeIndices.GOfPrime
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LatticeIndices.HaarIdx
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LatticeIndices.StKHolds
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LatticeIndices.CardNuGZmod
-import Formalism.SharpRestriction.AdmissibleParameterJoins.SfromGLq
-import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.MassDataPos
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedVolumeStatements.AdelicIsomorphismStatement
 import Formalism.SharpRestriction.AdmissibleParameterJoins.SfromGLu
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.MassDataXRed
@@ -129,7 +122,7 @@ theorem ggC_eq (R : Formalism.BasicNotions.Ranks) (g : ℕ) :
   have hc0 : Nat.card (Formalism.FourierDecayAlt.S3.Idx R.rS R.k) = Nat.card (Fin (R.k + R.m - 1)) := by
     obtain ⟨t, ht⟩ := R.m_even
     have h2 := R.two_le_m
-    simp only [Formalism.FourierDecayAlt.S3.Idx, Formalism.FourierDecayAlt.S3.Mid, Nat.card_sum, Nat.card_eq_fintype_card, Fintype.card_sum, Fintype.card_fin,
+    simp only [Formalism.FourierDecayAlt.S3.Idx, Formalism.FourierDecayAlt.S3.Mid, Nat.card_eq_fintype_card, Fintype.card_sum, Fintype.card_fin,
       Fintype.card_unit, Formalism.BasicNotions.Ranks.rS]
     omega
   have hc : Fintype.card (Formalism.FourierDecayAlt.S3.Idx R.rS R.k) = Fintype.card (Fin (R.k + R.m - 1)) := by

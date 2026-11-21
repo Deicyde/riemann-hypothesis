@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsRealCoord
-import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.UnimodInst
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.UnifModGrowthOfIsUnifModerate
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.RderMemAutFormsCuspForms
 
 noncomputable section

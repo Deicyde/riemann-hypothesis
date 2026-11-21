@@ -1,9 +1,8 @@
-import Mathlib
-import ReciprocityTheory.ClassFieldTheory.LocalClassField.TransportDefs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ClassFieldTheory.LocalClassField.TransportA
 import ReciprocityTheory.ClassFieldTheory.LocalClassField.TransportB
 import ReciprocityTheory.ClassFieldTheory.LocalClassField.RecArtin
-import ReciprocityTheory.ClassFieldTheory.LocalClassField.Existence
 
 namespace ReciprocityTheory.DiscreteGroups.LocalClassField
 

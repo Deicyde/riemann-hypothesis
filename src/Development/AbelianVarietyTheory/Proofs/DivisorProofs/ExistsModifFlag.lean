@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsFlagModelHermSum
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AppInjectiveOfFrames
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ResidueDegreeOfIsOpenImmersion
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArithmeticCurveSubbundleCoverStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagExtensionOfSubbundleStatement
 open CategoryTheory AlgebraicGeometry TopologicalSpace

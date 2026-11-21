@@ -1,4 +1,5 @@
-import Development.AutomorphicArithmetic.PrimeDiscriminants.SlopeTestRemainingChoices
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.HostFacts
 
 noncomputable section

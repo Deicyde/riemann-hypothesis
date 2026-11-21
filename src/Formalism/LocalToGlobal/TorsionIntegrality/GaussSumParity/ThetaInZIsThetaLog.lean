@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.GaussSumParity.StatementB
+import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.StatementJ
 
 noncomputable section
 open scoped BigOperators

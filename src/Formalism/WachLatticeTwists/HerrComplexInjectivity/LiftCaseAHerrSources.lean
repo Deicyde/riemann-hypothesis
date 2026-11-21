@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.HerrComplexInjectivity.GammaSubOneStatedForm
-import Formalism.WachLatticeTwists.HerrComplexInjectivity.StatementH
+import Formalism.WachLatticeTwists.HerrComplexInjectivity.ExtInputNA
 
 noncomputable section
 

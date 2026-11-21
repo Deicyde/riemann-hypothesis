@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.AnnihilatorModels.CommonModel
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.PadicHodgePropertiesConjInvariant
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FinrankLetterHomComp
@@ -74,7 +75,7 @@ private theorem core (hCo : CoFacts) (hCore : DetCore) (a : ℕ)
       rw [RingHom.mapMatrix_apply] at e1
       rw [← e1, ← hB, Matrix.det_fin_one]
     rw [e]
-    simp [Matrix.mulVec, dotProduct, Fin.sum_univ_one]
+    simp [Matrix.mulVec, dotProduct]
 end
 
 set_option maxHeartbeats 1600000 in

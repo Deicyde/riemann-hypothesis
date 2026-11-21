@@ -1,5 +1,5 @@
-import Formalism.HermitianCurvature.StatementWd
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.EntryCommuteTransposedRMatrix
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ScalarCommuteTransposedRMatrixEntry
 
 namespace Formalism.FourierDecayAlt.P.Wd8
@@ -435,9 +435,9 @@ theorem eU_apply (a : S) (i j : Fin 2) (x y : Ix S) :
     by_cases hb : b = a
     · rw [hb]
       simp [h2]
-    · simp [Function.update_apply, hb, h3 b hb]
+    · simp [hb, h3 b hb]
   · rintro ⟨h1, rfl⟩
-    exact ⟨h1, by simp, fun b hb => by simp [Function.update_apply, hb]⟩
+    exact ⟨h1, by simp, fun b hb => by simp [hb]⟩
 
 theorem eU_mul_apply (a : S) (i j : Fin 2) (B : SlopeTestRemainingChoices S A) (x y : Ix S) :
     ((eU a i j : SlopeTestRemainingChoices S A) * B) x y = if x a = i then B (Function.update x a j) y else 0 := by
@@ -451,7 +451,7 @@ theorem eU_comm_of_ne {a c : S} (hc : c ≠ a) (i j k l : Fin 2) :
   refine Matrix.ext fun x y => ?_
   rw [eU_mul_apply, eU_mul_apply, eU_apply, eU_apply, Function.update_comm hc]
   by_cases h1 : x c = i <;> by_cases h2 : x a = k <;>
-    simp [Function.update_apply, hc, Ne.symm hc, h1, h2]
+    simp [hc, Ne.symm hc, h1, h2]
 
 theorem ins_lift0_mul_apply (a : S) (M : M2 A) (B : SlopeTestRemainingChoices S A) (x y : Ix S) :
     ((ins a (lift0 M) : SlopeTestRemainingChoices S A) * B) x y = ∑ j, M (x a) j * B (Function.update x a j) y := by
@@ -553,7 +553,7 @@ theorem word_product_formula_general (sites : List (Site A)) (w : List (Letter K
       subst hz'
       simp [e1]
     · have hz' : z ≠ e1 := fun h => hz fun c => by simp [h, e1]
-      simp [Matrix.one_apply, hz', hz]
+      simp [hz', hz]
   | cons l w' ih =>
     have hnd : l.intersection_update_fsHerm_neg_one ∉ w'.map Letter.intersection_update_fsHerm_neg_one ∧ (w'.map Letter.intersection_update_fsHerm_neg_one).Nodup := by
       simpa using hw

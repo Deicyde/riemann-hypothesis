@@ -1,11 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.GaXiSplit
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.SymmetricScalarBlockMatrixMul
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.Block3MulBlocks
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.SymmetricScalarBlockMatrixTranspose
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.StabilizerBlockPoint
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.RadicalUnipotentFirstBasisEqOne
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.BigCellDiagonalMap
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.UnipotentCoordinatesMeasurePreserving
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.StrictUpperNeg
 
 open Matrix
 
@@ -49,7 +48,7 @@ theorem embedded_group_right_action : EmbGRn := by
     intro M
     rw [← Matrix.mul_assoc (Hpk k ρ), ← Matrix.mul_assoc, h3]
   simp only [U.Rn, U.embG, Ux5.block3_mul_blocks, h1, h2, Matrix.conjTranspose_mul, Matrix.mul_zero, Matrix.zero_mul, add_zero, zero_add, Matrix.mul_one, Matrix.one_mul, Matrix.neg_mul,
-    Matrix.mul_neg, Matrix.smul_mul, Matrix.mul_smul, Matrix.mul_add, Matrix.add_mul, Matrix.mul_assoc, h3, h4,
+    Matrix.mul_neg, Matrix.mul_smul, Matrix.mul_add, Matrix.mul_assoc, h3, h4,
     neg_zero, smul_zero]
 
 private theorem wP_inv_mul_wP_eq_one {p : ℕ} (σ : Equiv.Perm (Fin p)) : U.wP σ⁻¹ * U.wP σ = 1 := by
@@ -74,7 +73,7 @@ theorem lh_lower {p : ℕ} (σ : Equiv.Perm (Fin p)) (v : U.LW σ → ℂ) : G.I
   · simp only [Matrix.transpose_apply, hentry]
     have h1 : σ j ≠ σ i := fun h => (ne_of_lt hij) (σ.injective h)
     have h2 : ¬ (i < j) := not_lt.mpr hij.le
-    simp [U.lowW, Matrix.one_apply, h1, h2]
+    simp [U.lowW, h1, h2]
 
 theorem head_hermitian_eq : HeadHEq := by
   intro p σ d v u
@@ -104,7 +103,7 @@ theorem lh_unit {p : ℕ} (σ : Equiv.Perm (Fin p)) (v : U.LW σ → ℂ) : IsUn
     · intro i j hij
       have h1 : i < j := OrderDual.toDual_lt_toDual.mp hij
       have h2 : ¬ j < i := not_lt.mpr h1.le
-      simp [U.lowW, Matrix.one_apply, ne_of_lt h1, h2]
+      simp [U.lowW, ne_of_lt h1, h2]
   simp only [lhOf, Matrix.det_mul, hL, mul_one]
   exact (isUnit_det_wP σ).mul (Matrix.isUnit_nonsing_inv_det _ (isUnit_det_wP σ))
 
@@ -116,7 +115,7 @@ theorem gamma_xi_split : GaXiSplit := by
   have hγ : h⁻¹ * ν⁻¹ * g * ν' * h' = (h⁻¹ * ν⁻¹) * g * (ν' * h') := by
     simp only [Matrix.mul_assoc]
   have hE : U.embG k p ρ (ν' * h') = U.embG k p ρ ν' * U.embG k p ρ h' := by
-    simp only [U.embG, Ux5.block3_mul_blocks, Matrix.mul_zero, Matrix.zero_mul, add_zero, zero_add, Matrix.mul_one, Matrix.one_mul]
+    simp only [U.embG, Ux5.block3_mul_blocks, Matrix.mul_zero, Matrix.zero_mul, add_zero, zero_add, Matrix.mul_one]
   simp only [U.gaXi]
   rw [PBM.rn_inv, hZ]
   show U.Rn k p ρ (-ξ.1.1) * U.mMap k p ρ (lhOf σ ξ.2.2.1 * U.hMat σ d * G.upper ξ.2.2.2) (h⁻¹ * ν⁻¹ * g * ν' * h') *

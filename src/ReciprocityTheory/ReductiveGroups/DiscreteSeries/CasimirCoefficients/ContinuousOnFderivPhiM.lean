@@ -1,10 +1,7 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.IsClosedKset
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.KFacts
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.PhiFacts
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.DerivG
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.ByParts
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.DTauFacts
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.DerivGA
 
 noncomputable section
 
@@ -138,11 +135,11 @@ def DkL (T : KType ε Λ) (μ : Fin n → ℤ) (x : Matrix (Fin n) (Fin n) ℂ) 
         (toMK k⁻¹ * x * toMK k * Y - Y * (toMK k⁻¹ * x * toMK k)) • (T.op k * projW T * T.op k⁻¹) +
       PhiM μ (toMK k⁻¹ * x * toMK k) • (T.op k * (T.dτ Y * projW T - projW T * T.dτ Y) * T.op k⁻¹)
   map_add' Y Y' := by
-    simp only [Matrix.mul_add, Matrix.add_mul, map_add, map_sub, add_mul, mul_add, sub_mul, mul_sub,
+    simp only [map_add, map_sub, add_mul, mul_add, sub_mul, mul_sub,
       add_smul, sub_smul, smul_add, smul_sub]
     abel
   map_smul' c Y := by
-    simp only [Matrix.mul_smul, Matrix.smul_mul, map_smul, map_sub, smul_mul_assoc, mul_smul_comm,
+    simp only [map_smul, map_sub, smul_mul_assoc, mul_smul_comm,
       mul_sub, sub_mul, smul_sub, smul_eq_mul, RingHom.id_apply, smul_add]
     module
 
@@ -229,7 +226,7 @@ lemma integral_Ek_inK [CompactSpace (KG ε)] (T : KType ε Λ) (μ : Fin n → �
     rw [_root_.mul_inv_rev, hmk, hmk, hinv_t, hγ, hBk]
     simp only [Matrix.mul_assoc]
   · simp only [Ek, DkL_apply, hγ0, mul_one, Complex.ofReal_zero, zero_smul, neg_zero, NormedSpace.exp_zero,
-      Matrix.one_mul, Matrix.mul_one, hBk]
+      Matrix.one_mul, hBk]
 
 lemma Ek_decomp (T : KType ε Λ) (μ : Fin n → ℤ) (x : Matrix (Fin n) (Fin n) ℂ)
     (φ : Matrix (Fin n) (Fin n) ℂ →L[ℂ] ℂ) (A P Q : Matrix (Fin n) (Fin n) ℂ) (k : KG ε) :
@@ -281,7 +278,7 @@ lemma integral_Ek_block [CompactSpace (KG ε)] (T : KType ε Λ) (μ : Fin n →
       | simp [hM a b h, hMh a b h]
     · ext a b
       first
-      | (simp [Matrix.conjTranspose_apply, Complex.star_def]; ring)
+      | (simp [Matrix.conjTranspose_apply]; ring)
       | (simp [Matrix.conjTranspose_apply]; ring)
       | simp [Matrix.conjTranspose_apply, Complex.star_def]
       | simp [Matrix.conjTranspose_apply]

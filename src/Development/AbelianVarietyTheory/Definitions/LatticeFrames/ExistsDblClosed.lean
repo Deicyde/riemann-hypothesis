@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsCombAt
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.CmHostImaginaryGeneratorNeZero
 
@@ -67,7 +68,7 @@ theorem isCombAt_one (p : Place D k) (ψ : AddChar (AF D.host.F) ℂ) {S T : HSp
     subst hu; intro i j; simp
   · obtain rfl : Φ = Φ₀ := Subtype.ext (h.trans h₀.symm)
     funext w
-    simp [comb, Finsupp.support_single_ne_zero, heisO, symplOH, symplO, hO]
+    simp [comb, heisO, symplOH, symplO, hO]
 
 theorem toEAf_surj (D : D7) : Function.Surjective (toEAf D) := by
   refine (Algebra.TensorProduct.comm D.host.F (Af D.host.F) D.host.E).surjective.comp ?_

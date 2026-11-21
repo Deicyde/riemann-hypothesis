@@ -1,9 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FlagTorusAlgebraicallyClosed
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ComplexPointsNonemptyDenseVariety
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ToroidalBoundaryMetricData
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.NotIsBettiZero
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.NotRedDouble
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PtFJQOver
 
 set_option autoImplicit false
 

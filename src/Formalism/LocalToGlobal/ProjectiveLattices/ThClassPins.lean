@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.ThClassPinsRec
 import Formalism.LocalToGlobal.ProjectiveLattices.IsLevMove
 import Formalism.LocalToGlobal.ProjectiveLattices.FamilyUniformisationBasePointOrthogonalBis
+import Formalism.LocalToGlobal.ProjectiveLattices.RhoWApply
 
 set_option autoImplicit false
 

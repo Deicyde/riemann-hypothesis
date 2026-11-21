@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.RamifiedCurveKernels.StatementK
-import Formalism.LocalToGlobal.TorsionIntegrality.RamifiedCurveKernels.StatementV
 import Formalism.LocalToGlobal.TorsionIntegrality.TorsionTranslationPowers.StatementN
 
 noncomputable section

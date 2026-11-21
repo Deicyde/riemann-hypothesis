@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.HolomorphicFamilies.ModelLatA
 import Formalism.LocalToGlobal.ProjectiveLattices.HasDataCondition
 
@@ -69,7 +71,7 @@ theorem herm_single (D : D7) (G : Matrix (Fin r) (Fin r) D.host.E) (w : Fin r �
   rw [Finset.sum_eq_single i]
   · simp [cc]
   · intro b _ hb
-    simp [Pi.single_apply, hb, cc]
+    simp [hb, cc]
   · simp
 
 theorem eq_zero_of_herm (D : D7) (X : Data D.host.E r) {w : Fin r → D.host.E}

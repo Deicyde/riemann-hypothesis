@@ -1,4 +1,41 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.GroupTheory.SemidirectProduct
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RepresentationTheory.Basic
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
 
 namespace UpperTheory.V.U3
 
@@ -47,7 +84,7 @@ theorem Jmat_mul_Jmat (m : ℕ) : Jmat R m * Jmat R m = 1 := by
   ext i j
   simp only [Jmat, Matrix.mul_apply, Matrix.one_apply, mul_ite, mul_one, mul_zero]
   rw [Finset.sum_eq_single i.rev]
-  · simp [eq_comm, Fin.rev_eq_iff]
+  · simp [eq_comm]
   · intro k _ hk
     simp [hk]
   · simp
@@ -173,7 +210,7 @@ private theorem theta_conj_thetaLie_eq_thetaLie_conj (b : GL (Fin m) R) (X : Mat
     (theta b : Matrix (Fin m) (Fin m) R) * (thetaLie X *
         (((theta b)⁻¹ : GL (Fin m) R) : Matrix (Fin m) (Fin m) R)) =
       thetaLie ((b : Matrix (Fin m) (Fin m) R) * (X * ((b⁻¹ : GL (Fin m) R) : Matrix (Fin m) (Fin m) R))) := by
-  simp only [theta_val, theta_inv_val, thetaLie, Matrix.transpose_mul, Jmat_transpose,
+  simp only [theta_val, theta_inv_val, thetaLie, Matrix.transpose_mul,
     Matrix.mul_neg, Matrix.neg_mul, Matrix.mul_assoc, jmat_mul_jmat_mul]
 
 theorem GG.adFun_mul (x y : GG m R) (X : Matrix (Fin m) (Fin m) R) :

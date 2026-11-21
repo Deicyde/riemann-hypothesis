@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.BqOriginSt
 
 set_option autoImplicit false
@@ -118,7 +119,7 @@ theorem bqOrigin : BqOriginSt := by
             (LB.pullGen Xo.univ.t.PP.L _ _ wLb (lift (Xo.univ.t.act.act a) (Xo.univ.t.act.act H.w0)).left)))))
     (r ≫ (1 : overAt y.x S ⟶ Xo.univ.t.G).left) z J *
       val Xo.univ.t.PP.rig (r ≫ (toUnit (overAt y.x S)).left) z J ^ (3 : ℤ) = 1
-  simp only [val_mul hJ, val_inv, val_pull hJ, hP, hR, hC, hLa0, hLb0, hJ]
+  simp only [val_mul hJ, val_inv, val_pull hJ, hP, hR, hLa0, hLb0]
   rw [hCB]
   clear hA hF hR hP hC hLa0 hLb0 hstar hLa hLb hCB
   generalize val Xo.univ.t.PP.rig (r ≫ (toUnit (overAt y.x S)).left) z J = R

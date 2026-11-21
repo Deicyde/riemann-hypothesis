@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Lemmata.FirstBlockLemmaJ.Imports
 
 namespace ReciprocityTheory.ChartRestriction.G.PullbackSections.Pf

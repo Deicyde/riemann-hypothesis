@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsActIffIsDiagEnd
-import Development.AbelianVarietyTheory.Definitions.Divisors.TorMatch
-import ReciprocityTheory.AnalyticForms.RegularLocalRings.FinalTheorems
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLiftValuationSubring
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PowCompMonHom
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsEqAddNsmul

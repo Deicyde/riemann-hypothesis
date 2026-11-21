@@ -1,6 +1,7 @@
-import Mathlib
-import GroundTheory.GlobalFields.LocalAtPlace
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Theta.EisensteinZeta.AdicFrames.IsHermitianForExH
+import Mathlib.MeasureTheory.Measure.Haar.DistribChar
 
 set_option linter.unusedSectionVars false
 

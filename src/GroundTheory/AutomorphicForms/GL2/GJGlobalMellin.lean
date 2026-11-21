@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.GL2.GJGlobalHaar
+import GroundTheory.AutomorphicForms.AutomorphicFormSpaces.HasModerateGrowthZero
+import GroundTheory.AutomorphicForms.GL2.GJGlobalDefs
 
 open MeasureTheory NumberField Set ComplexConjugate
 open scoped NumberField.AdeleRing ENNReal NNReal

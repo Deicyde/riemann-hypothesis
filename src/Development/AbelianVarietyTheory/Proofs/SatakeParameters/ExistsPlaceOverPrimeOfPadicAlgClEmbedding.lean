@@ -1,7 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.QuotientHomNonvanishingBound
-import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
-import Formalism.FrobeniusOrbits.HostCorollaries
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.LevelLetterCocycles.DataN
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.FrobeniusOrbits Formalism.MainNotions.N
 open scoped Pointwise
 

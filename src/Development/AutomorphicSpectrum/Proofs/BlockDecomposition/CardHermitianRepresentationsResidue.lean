@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ResAlgSplitTwo
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CardOrthonormalFramesHermitianSpaceStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsHermitianCongrToOneStatement
 
 open PositivityTheory.PfSWUS.Loc GlobalTheory.CompanionTheory.UnrDens

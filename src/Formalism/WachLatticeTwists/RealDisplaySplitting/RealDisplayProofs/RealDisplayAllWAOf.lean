@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.RealDisplaySplitting.Statement
 import Formalism.WachLatticeTwists.RealDisplaySplitting.RealDisplayProofs.TopAllF
+import Formalism.WachLatticeTwists.RealDisplaySplitting.RealDisplayProofs.TopWAF
 
 variable [hT2Core : Fact ReciprocityTheory.ChartRestriction.T2.Core]
 

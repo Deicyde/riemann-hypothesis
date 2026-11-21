@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IntegralClosureHeightEqOneOfLiesOver
 import Development.WeilBound.CoreStatements.HodgeTatePoints.HcptgenRing
 import Development.WeilBound.CoreStatements.HodgeTatePoints.HcptgenChart

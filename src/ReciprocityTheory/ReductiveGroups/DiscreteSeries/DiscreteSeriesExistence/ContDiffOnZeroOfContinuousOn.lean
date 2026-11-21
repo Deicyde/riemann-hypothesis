@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.CayleyChartDomainIsOpen
+import Mathlib.Analysis.Calculus.Deriv.Star
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 
@@ -93,7 +98,7 @@ def slmG (C : ι → Y →L[ℝ] ℝ) (fd : X →L[ℝ] Y) (w : ι → E) : X �
 
 theorem slmG_apply (C : ι → Y →L[ℝ] ℝ) (fd : X →L[ℝ] Y) (w : ι → E) (W : X) :
     slmG C fd w W = ∑ i, (C i (fd W)) • w i := by
-  simp [slmG, ContinuousLinearMap.sum_apply]
+  simp [slmG]
 
 theorem slmG_apply' (C : ι → Y →L[ℝ] ℝ) (fd : X →L[ℝ] Y) (w : ι → E) (W : X) (κ : ι → ℝ)
     (hκ : ∀ i, C i (fd W) = κ i) : slmG C fd w W = ∑ i, κ i • w i := by
@@ -227,8 +232,7 @@ theorem slmG_mat_apply (γ : Matrix (Fin n) (Fin n) ℂ → Matrix (Fin n) (Fin 
       ∑ a, ∑ b, ((m q * fderiv ℝ γ q W) a b) • v a b := by
   refine (slmG_apply (Y := Matrix (Fin n) (Fin n) ℂ) slmC (fderiv ℝ γ q) _ W).trans ?_
   simp only [Fintype.sum_prod_type, Fintype.sum_bool, slmC, slmc, ↓reduceIte, Bool.false_eq_true,
-    ContinuousLinearMap.coe_comp', Function.comp_apply, slmEnt_apply, Complex.reCLM_apply,
-    Complex.imCLM_apply, Matrix.mul_apply, Finset.sum_smul]
+    Matrix.mul_apply, Finset.sum_smul]
   refine Finset.sum_congr rfl fun a _ => Finset.sum_congr rfl fun b _ =>
     Finset.sum_congr rfl fun k _ => ?_
   rw [← re_mul_add_im_mul_I (fderiv ℝ γ q W k b) (m q a k)]

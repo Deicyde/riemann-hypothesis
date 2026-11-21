@@ -1,10 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ElementarySymmetric.StRestrLenEuler
-import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PSurjectiveClosed
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PSnapperHyperplane
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PSnapperQuotAdd
-import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PCechExact
-import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PIdealTwistFamily
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PTildeVanish
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.AssemblyBase
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.LengthQuotientEqLengthH0

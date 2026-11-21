@@ -1,8 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralModuleRankOneRight
-import Mathlib
-import Formalism.RealPlaceAnalysis.ThirdArithmeticHolds
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemNilRad
 open Matrix GlobalTheory.TorFin
 
 set_option maxHeartbeats 1000000 in

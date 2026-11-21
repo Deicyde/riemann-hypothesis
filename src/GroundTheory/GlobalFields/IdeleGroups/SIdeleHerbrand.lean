@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.IdeleGroups.SIdeleHerbrand.Places
-import GroundTheory.GlobalFields.SemilocalAlgebras.Finite
+import GroundTheory.GlobalFields.IdeleGroups.SIdeleGroups.Decomposition
 
 namespace GroundTheory.Global
 

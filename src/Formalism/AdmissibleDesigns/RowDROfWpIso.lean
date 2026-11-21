@@ -1,6 +1,7 @@
-import Formalism.AdmissibleDesigns.BKaClause
-import Formalism.AdmissibleDesigns.IsDROfWpIso
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.AdmissibleDesigns.FiniteClassesRowEqGeneric
+import Formalism.AdmissibleDesigns.SelmerInequalityOfInputs
 
 variable [hT2Core : Fact ReciprocityTheory.ChartRestriction.T2.Core] [hH0Fin : Fact Formalism.MainNotions.N.K.H0.FinCore]
 

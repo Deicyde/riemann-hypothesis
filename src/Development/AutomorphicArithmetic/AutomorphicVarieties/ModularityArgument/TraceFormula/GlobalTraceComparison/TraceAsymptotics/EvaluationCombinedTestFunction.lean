@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.TraceFormula.GlobalTraceComparison.TraceAsymptotics.SplitLineAlt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StableTwistedOrbitalProduct
+import Mathlib.GroupTheory.IsPerfect
+import Mathlib.GroupTheory.SpecificGroups.ZGroup
 
 noncomputable section
 

@@ -1,4 +1,5 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
 open scoped TensorProduct NNReal Matrix
@@ -101,7 +102,7 @@ lemma frame_mulVec_eq_zero (σ : E →ₐ[F] E) (hσ : ∀ z, σ (σ z) = z) (B 
   have h1 : v (Sum.inr 0) = 0 ∧ v (Sum.inr 1) = 0 := by
     have a := congrFun h0 (Sum.inr 0)
     have b := congrFun h0 (Sum.inr 1)
-    simp [Matrix.vecMul_fromBlocks, hyp, Matrix.vecMul, dotProduct, Fin.sum_univ_two] at a b
+    simp [hyp, Matrix.vecMul, dotProduct, Fin.sum_univ_two] at a b
     exact ⟨b, a⟩
   have h2 : (fun k : Fin 2 => v (Sum.inr k)) = 0 := by
     ext k; fin_cases k

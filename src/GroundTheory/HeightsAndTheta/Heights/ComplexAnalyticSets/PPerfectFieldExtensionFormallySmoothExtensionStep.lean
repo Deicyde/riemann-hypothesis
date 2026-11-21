@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PPerfectFieldExtensionFormallySmoothPartialLifts
+import Mathlib.Algebra.Lie.OfAssociative
 set_option maxSynthPendingDepth 1
 
 open Polynomial IntermediateField

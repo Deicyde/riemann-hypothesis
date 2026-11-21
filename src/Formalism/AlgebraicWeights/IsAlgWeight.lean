@@ -1,8 +1,8 @@
-import Mathlib
-import Formalism.ConjugateSelfDual.Imports
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.Statement
-import ReciprocityTheory.Automorphisms.Unitary
 import ReciprocityTheory.Automorphisms.SplitCoeAlgebraMap
+import Formalism.ConjugateSelfDual.StatementRest
 
 noncomputable section
 

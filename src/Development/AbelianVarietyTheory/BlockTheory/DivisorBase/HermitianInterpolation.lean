@@ -1,6 +1,12 @@
-import Mathlib
-import ReciprocityTheory.AnalyticForms.MaIntEmpty
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExtFormAdjEqNegSecondForm
+import Mathlib.Analysis.Real.Pi.Bounds
+import Mathlib.Analysis.SpecialFunctions.SmoothTransition
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.TotallySplit
 
 open Matrix Filter Topology Set GlobalTheory.HermFrame
 open scoped ComplexOrder ContDiff
@@ -173,7 +179,7 @@ theorem isData_halfPlane :
       generalize Real.exp (1 + (z ()).re) = x at h3
       push_cast
       rw [← Complex.mul_conj']
-      simp only [smul_eq_mul, map_mul, Complex.conj_ofReal, map_div₀, map_ofNat]
+      simp only [map_mul, Complex.conj_ofReal, map_div₀, map_ofNat]
       field_simp
       rw [Complex.I_sq]; ring
     have h5 := diagVal_formOf_eq_gnorm_sq h1.posSemidef ξ

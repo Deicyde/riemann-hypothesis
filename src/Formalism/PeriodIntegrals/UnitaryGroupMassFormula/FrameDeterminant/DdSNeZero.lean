@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.FrameDeterminant.FrameB
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.FrameDeterminant.DetOfFrame
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.CuspSpanNormBounds.BlockEnds
 
 noncomputable section
 

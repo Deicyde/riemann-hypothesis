@@ -1,17 +1,10 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.GlobalSectionsRankAlgClosed
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.LawsProved
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.SabComp
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.SabPull
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.PullCub
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.PushInvertibleIffOfIsReduced
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IntegralClosureHeightEqOneOfLiesOver
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.GlueApplyOfNotInFibre
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.GenWeil
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.NotInFibreOfIsUnit
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HodgeTateEigenLatticeEqStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LabelEmbeddingInjectiveStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LieOmegaLatticeVectorBundleStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.PredualVectorBundleStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.EigenLatticeConstantRankStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.IdealSaturatedVectorBundleStatement
@@ -64,7 +57,7 @@ theorem unitAt_discr {F : Type} [Field F] [NumberField F] {q : Cpt ξ} [CharZero
   rcases Int.natAbs_eq (discr F) with e | e
   · rw [e]; simpa using hu
   · rw [e]
-    simp only [Int.cast_neg, Int.cast_natCast, Int.natAbs_neg, Int.natAbs_natCast]
+    simp only [Int.cast_neg, Int.cast_natCast]
     exact ⟨neg_ne_zero.2 hu.1, neg_mem hu.2.1, by rw [inv_neg]; exact neg_mem hu.2.2⟩
 
 theorem natAbs_discr_mem_different (F : Type) [Field F] [NumberField F] :

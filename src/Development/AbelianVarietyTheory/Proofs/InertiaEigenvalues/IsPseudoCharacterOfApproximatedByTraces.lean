@@ -1,8 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.PolyApproxZeroPadic
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsPsCharOne
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FiniteSemisimple
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.DetSuccEqSubSumUpdateRow
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.NumberTheory.Padics.Complex
 open Formalism.MainNotions.N GlobalTheory.Cong GlobalTheory.PsChar
 
 noncomputable section

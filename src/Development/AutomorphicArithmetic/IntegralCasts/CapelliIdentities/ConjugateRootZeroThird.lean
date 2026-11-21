@@ -1,5 +1,6 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.TwoWeightEqOneAddRoot
+import Mathlib.Algebra.Order.Star.Real
 
 theorem UpperTheory.Reformulated.B.StarRingEndRootEqNeg.rt0_conj_neg_ne_zero :
     ∀ {E : Type} [inst : Field E] [inst_1 : NumberField E] [inst_2 : NumberField.IsCMField E]

@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.DifferentiableOnOfTendstoLocallyUniformlyOn
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsMergeFibrePrimitivesConvexBoxes
+import Mathlib.Analysis.Calculus.ParametricIntervalIntegral
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.Topology.Sheaves.Presheaf
 open Set
 
 namespace GlobalTheory

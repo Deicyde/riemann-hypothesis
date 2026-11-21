@@ -1,7 +1,8 @@
-import Mathlib
-import Formalism.WachLatticeTwists.LatticeDualFibres.FibreDualStable
-import Formalism.GaloisCohomology.LocalTateDualityK
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FactorMemCocyclesPowQuot
+import BuildAid.Leniency.Open
+import Formalism.WachLatticeTwists.LatticeDualFibres.StatDualFibreLattice
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Topology.Algebra.Nonarchimedean.AdicTopology
 open Formalism.RepresentationBoundsCohomology.LOC ReciprocityTheory.Gal GlobalTheory.LocDualInt
 open Formalism.NG (KO)
 

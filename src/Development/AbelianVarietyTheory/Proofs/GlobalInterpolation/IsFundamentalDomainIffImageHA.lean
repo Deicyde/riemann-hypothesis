@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.SharpRestriction.GlobalSchurBounds.StandardLattice
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.SignatureLatticeIndependence
 import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.IsometryTransportFrames
 

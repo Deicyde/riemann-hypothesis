@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StabilizerCompactLocalSchwartz
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TriplePairLocalPartCaseAStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IdeleAbsPowerIntegrable
@@ -125,7 +124,7 @@ theorem coneFin_finite_comb : GlobalTheory.FunPr.Hypotheses₂ → ∀ (F E : Ty
       simp only [hw]
       ring
     rw [integral_congr_ae (ae_of_all _ hpt), integral_finset_sum S (fun ψ _ => (integrable_const _).indicator (hBm ψ))]
-    simp only [integral_indicator_const _ (hBm _), smul_eq_mul]
+    simp only [integral_indicator_const _ (hBm _)]
     rw [show (∑ i : Fin T.card, μK.real (Bk (T.equivFin.symm i).1.1) * c (T.equivFin.symm i).1.1 (T.equivFin.symm i).1.2 *
         L (T.equivFin.symm i).1.2 y) = ∑ x ∈ T, μK.real (Bk x.1) * c x.1 x.2 * L x.2 y from by
       rw [← Finset.sum_coe_sort T]

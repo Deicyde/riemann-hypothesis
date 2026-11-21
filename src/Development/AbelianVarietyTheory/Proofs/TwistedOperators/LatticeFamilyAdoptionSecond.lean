@@ -1,15 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.RealTB
 import Formalism.LocalToGlobal.IndefiniteReal.RealPins
 import Formalism.LocalToGlobal.IndefiniteReal.RealRec
-import Formalism.LocalToGlobal.IndefiniteReal.DoubleCosetOperators.NMjT
-import Formalism.LocalRingCardinality.DataNChTie
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.SemilinearExtensionBases
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.FractionalBaseInclusion
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsBasisTensor
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.FractionFieldEmbeddingCompat
-import Formalism.LocalRingCardinality.DataIdx
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ImportsFurther
+import Formalism.PadicSubsetSums.StableGradedCounts.ZBrauerNesbittAlg
 
 namespace GroupAverageFixedPoints
 section
@@ -120,7 +117,7 @@ theorem ext_smul (c : K) (A : Module.End K Fm) :
     ext O K'' (c • A) = algebraMap K K'' c • ext O K'' A := by
   apply TensorProduct.AlgebraTensorModule.ext
   intro x m
-  simp [tmul_smul_frac, TensorProduct.smul_tmul', smul_eq_mul]
+  simp [tmul_smul_frac, TensorProduct.smul_tmul']
   rw [Algebra.smul_def]
 
 theorem ext_sum {ι : Type} (s : Finset ι) (A : ι → Module.End K Fm) :

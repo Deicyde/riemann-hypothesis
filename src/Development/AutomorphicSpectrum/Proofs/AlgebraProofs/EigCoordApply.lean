@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.LinearIndependentEigProj
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.QuotientEigenDifference
 

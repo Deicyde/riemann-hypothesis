@@ -1,5 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.UnitaryNorms.IsUnitaryNormOf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.SchurIrreducible
 import Development.AbelianVarietyTheory.Definitions.Divisors.EntireEqOfHalfPlane
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.CountableIdealSummableAbsNormRpow
@@ -282,7 +283,7 @@ theorem IsCont.unique {σ : ℝ} {Λ Λ' : ℂ → ℂ} (h : IsCont T c σ Λ) (
     (convex_halfSpace_re_gt σ).isPreconnected (z₀ := ((max σ (max a a') + 1 : ℝ) : ℂ))
     (show σ < max σ (max a a') + 1 from (le_max_left _ _).trans_lt (lt_add_one _)) ?_
   filter_upwards [(ho (max σ (max a a'))).mem_nhds (lt_add_one (max σ (max a a')))] with s hs
-  simp only [Set.mem_setOf_eq, max_lt_iff] at hs
+  simp only [max_lt_iff] at hs
   rw [(h2 s hs.2.1).2, (h2' s hs.2.2).2]
 
 end Product

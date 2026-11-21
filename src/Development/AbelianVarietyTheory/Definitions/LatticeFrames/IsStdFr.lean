@@ -1,10 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.FrameTopAlt
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.FamAllQ
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsOpenKerUnramMulTame
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.TwTrans
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.PinColL
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsRatDatum
+import Development.AbelianVarietyTheory.Definitions.LatticeFrames.VacOfShape
 
 set_option genSizeOfSpec false
 set_option genInjectivity false

@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.UnipMinSubsetMinParOne
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ModulusOfNormEqAbs
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RatVInjective
 
 set_option linter.unusedSectionVars false
 
@@ -41,7 +43,7 @@ theorem cT_diagonal (s : R →+* R) (d : Fin r → R) : cT s (diagonal d) = diag
   ext i j
   by_cases e : i = j
   · subst e; simp [cT]
-  · simp [cT, Matrix.diagonal_apply, e, Ne.symm e]
+  · simp [cT, e, Ne.symm e]
 
 theorem coef_row (hU : cT s M * Jm * M = Jm) (hMN : M * N = 1) {P : Matrix (Fin n) (Fin r) R} {d : Fin r → R}
     (hP : M * P = P * diagonal d) : cT s P * Jm * N = cT s (diagonal d) * (cT s P * Jm) := by

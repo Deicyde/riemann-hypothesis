@@ -1,11 +1,9 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.DvrData
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.GlueApplyOfNotInFibre
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.MemEigSpOfMemHtDual
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsFullLevelAt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.WeilIsAlternatingSkewNatural
 import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.SecLinOfSecScal
 import Development.WeilBound.CoreStatements.HodgeTatePoints.MgLevel
+import Mathlib.AlgebraicGeometry.AlgClosed.Basic
 
 noncomputable section
 
@@ -107,7 +105,7 @@ theorem weilIs_pull_of_proper (hA : IsSemiAbelian A) (hL : L.IsLB) {T T' : Over 
     have hl := congrArg Over.Hom.left key
     simp only [Over.comp_left, overResι, Over.homMk_left] at hl
     ext
-    simp only [unitRes, Units.coe_map, MonoidHom.coe_coe]
+    simp only [unitRes, Units.coe_map]
     have hv := congrArg (fun f => f.appTop.hom (c : Γ(T.left, ⊤))) hl
     simp only [Scheme.Hom.comp_appTop, CommRingCat.hom_comp, RingHom.comp_apply] at hv
     exact hv.symm

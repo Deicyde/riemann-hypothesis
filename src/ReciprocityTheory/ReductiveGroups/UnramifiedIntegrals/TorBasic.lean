@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.TorDefs
-import Formalism.EllipticTorsion.FormalGroupPointsNoTorsion
 import Formalism.LocalToGlobal.TorsionIntegrality.TorsionTranslationPowers.NonsingularJetNorms.NonsingularNorm
-import Formalism.LocalToGlobal.TorsionIntegrality.WeierstrassTwoTorsion.CubeThreeR
 import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.NormNatCastClOfNotDvd
 
 noncomputable section
@@ -42,7 +41,7 @@ theorem good_model (h : GoodPair l g2 g3) : IntegralModel (shortW g2 g3) ∧ ‖
   have h4 := good_norm_four h
   refine ⟨?_, ?_⟩
   · unfold IntegralModel shortW
-    simp only [norm_zero, zero_le_one, norm_neg, norm_div, h4, div_one, true_and, h.norm2, h.norm3,
+    simp only [norm_zero, zero_le_one, norm_neg, norm_div, h4, div_one, h.norm2, h.norm3,
       and_self]
   · have hΔ : (shortW g2 g3).Δ = g2 ^ 3 - 27 * g3 ^ 2 := by
       simp only [shortW, WeierstrassCurve.Δ, WeierstrassCurve.b₂, WeierstrassCurve.b₄,
@@ -55,7 +54,7 @@ theorem good_int (h : GoodPair l g2 g3) : IntCurve (shortW g2 g3) := by
   have hΔ := (good_model h).2
   unfold IntCurve
   simp only [shortW] at hΔ ⊢
-  simp only [norm_zero, zero_le_one, norm_neg, norm_div, h4, div_one, true_and, h.norm2,
+  simp only [norm_zero, zero_le_one, norm_neg, norm_div, h4, div_one, h.norm2,
     h.norm3, and_self, hΔ]
 
 theorem good_coeff (h : GoodPair l g2 g3) : CoeffSub (MaximalUnramifiedExtension l) (shortW g2 g3) := by
@@ -77,7 +76,7 @@ theorem integral_of_not_mem_formalGroup (h : GoodPair l g2 g3) (P : (shortW g2 g
     have hx : ‖x‖ ≤ 1 := not_lt.mp hP
     have h4 := good_norm_four h
     have heq := (WeierstrassCurve.Affine.equation_iff x y).mp hxy.1
-    simp only [shortW, zero_mul, mul_zero, add_zero] at heq
+    simp only [shortW, zero_mul, add_zero] at heq
     have hb1 : ‖x ^ 3‖ ≤ 1 := by
       rw [norm_pow]
       exact pow_le_one₀ (norm_nonneg _) hx

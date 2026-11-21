@@ -1,11 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.CapelliDeterminantAndBranching
-import Formalism.RealPlaceAnalysis.ThirdArithmeticHolds
 import Development.AbelianVarietyTheory.Definitions.Jets.Imports
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.LastComatrixRowInvertsDual
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.SumStarProjectionEigenspaceEqSelfOfEigenvaluesLi
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.SplitCasimirEigenvalueDual
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.TensorDualStandardRel
 
 open Formalism.REAL Formalism.FourierDecayAlt.Q Formalism.FourierDecayAlt.Qr
 

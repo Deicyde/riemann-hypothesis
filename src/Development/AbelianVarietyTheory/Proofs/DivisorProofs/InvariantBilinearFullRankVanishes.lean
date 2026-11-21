@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRk
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ShearGLTransposeMul
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsAddHaarMatrixSpace
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRankCoinvariantFormZeroStatement
@@ -70,7 +69,7 @@ theorem dilN_transpose_mul {ρ e d : ℕ} (t : kˣ) (Y₁ : Matrix (Fin ρ) (Fin
     (dilN ρ e t).valᵀ * jn Y₁ Y₂ = jn Y₁ ((t : k) • Y₂) := by
   have h1 : (dilN ρ e t).valᵀ = ((GlobalTheory.RankChart.dilGL t : GL (Fin ρ ⊕ Fin e) k).valᵀ).submatrix finSumFinEquiv.symm
       finSumFinEquiv.symm := by
-    simp [dilN, Matrix.reindexAlgEquiv_apply, Matrix.reindex_apply, Matrix.transpose_submatrix]
+    simp [dilN, Matrix.reindex_apply, Matrix.transpose_submatrix]
   rw [h1, jn, ← Matrix.submatrix_mul _ _ _ _ _ finSumFinEquiv.symm.bijective, GlobalTheory.RankChart.dilGL_transpose_mul]
   simp [GlobalTheory.RankChart.dil, jn]
 
@@ -79,7 +78,7 @@ theorem gdet_dilN (ρ e : ℕ) (t : kˣ) : gdet (dilN ρ e t) = t ^ e := by
   ext
   simp only [gdet, Matrix.GeneralLinearGroup.val_det_apply] at this ⊢
   rw [dilN]
-  simp [Matrix.reindexAlgEquiv_apply, Matrix.det_reindex_self]
+  simp
   simpa using congrArg Units.val this
 
 theorem fibre_bilinear_form_vanishes_rank (hKP : GlobalTheory.ThK.KP) (ρ e d : ℕ) (ν : kˣ →* ℂˣ) (ϖ : kˣ) (hd : ρ + e < d) (he : 0 < e)

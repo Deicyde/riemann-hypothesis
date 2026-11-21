@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.SatakeDualWeyl.Statement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemMatLat
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralAevalEqAevalMapOfCoprimeCharpolyStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsIntegralMatrixOfMapsToFullRankLatticeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUnitaryMulIntegralOfNormMaximalOrderUnitStatement

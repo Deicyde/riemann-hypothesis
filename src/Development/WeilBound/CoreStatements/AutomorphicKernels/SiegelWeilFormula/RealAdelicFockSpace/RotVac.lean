@@ -1,7 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.RealAdelicFockSpace.FinOneMulEqZeroIff
-import Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.FockSpaces.LocAddOf
 import Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.FockSpaces.LiftExOf
-import Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.FockSpaces.ProdGenMem
 
 noncomputable section
 
@@ -122,7 +122,7 @@ theorem om_place (hT : TAll) (hLO : LocOpEx) (hLI : LocInst) (R : RD d) (w : Inf
   have hvt : d.T Ω = R.tens w (fP (1 : PX d.m d.n)) Ψ := by
     rw [hTΩ]
     funext X
-    simp only [vac, gau, RD.tens, fin, Ψ]
+    simp only [vac, gau, RD.tens, Ψ]
     rw [← Finset.mul_prod_erase Finset.univ (fun w' => fP (1 : PX d.m d.n) (R.loc w' X)) (Finset.mem_univ w), mul_assoc]
     rfl
   have h1 := (hL y (fP (1 : PX d.m d.n)) (KFock.isSw_fP 1)).2 Ψ (KFock.away_inv R w Ψ hΨ) Ω hΩ hvt

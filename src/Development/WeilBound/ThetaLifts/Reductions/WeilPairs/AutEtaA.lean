@@ -1,8 +1,7 @@
-import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.AutDef
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EtaTildeHeckeCharSplitMulSignOfNormFormula
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.RamificationIdxEqOneOfIsSquare
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CmQuadraticCharacterEqProdRealSigns
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsRealSpanEqConjFixedPrimeMulRelNorm
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsHalfAbstract
 
 noncomputable section
 

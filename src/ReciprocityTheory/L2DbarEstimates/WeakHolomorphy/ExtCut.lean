@@ -1,4 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.L2DbarEstimates.WeakHolomorphy.ExtCutB
+import Mathlib.Analysis.InnerProductSpace.Dual
+import Mathlib.Geometry.Manifold.PartitionOfUnity
+import Mathlib.Geometry.Manifold.Sheaf.Basic
+import Mathlib.RingTheory.PiTensorProduct
 
 namespace ReciprocityTheory.L2DbarEstimates.C
 

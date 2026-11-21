@@ -1,11 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.OverExtOfPoints
 import Development.AbelianVarietyTheory.Definitions.ShimuraVarieties.FlatImageOfOverFractionFieldOfValuationRing
-import Development.AbelianVarietyTheory.Definitions.ExistenceOfLattices.UnivFrame
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsPointGaussian
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsHomogeneousCompIdeal
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsLimDeg
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAdicCompleteDualNumber
+import Development.AbelianVarietyTheory.Definitions.Divisors.HodgeTateLatticePointFinrankTateModule
 
 set_option autoImplicit false
 

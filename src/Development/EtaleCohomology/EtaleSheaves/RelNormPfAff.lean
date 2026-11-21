@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.RelNormPfGlue
+import Mathlib.Order.CompletePartialOrder
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry

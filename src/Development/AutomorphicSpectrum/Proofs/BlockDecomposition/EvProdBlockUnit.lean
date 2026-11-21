@@ -1,8 +1,5 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.ArakelovCycleHeights.QpSndStr
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ResidueDegreeOfIsClosedImmersion
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ArFormExists
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsPullHermPullLine
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsIsUnder
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PullRatioTopEq
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ProdZpowSingle

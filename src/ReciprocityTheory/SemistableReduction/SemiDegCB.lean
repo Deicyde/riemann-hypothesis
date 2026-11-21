@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.SemistableReduction.SemiDegCA
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 noncomputable section
 
@@ -42,7 +44,7 @@ theorem single_mem_intVec (K : Type) [Field K] [NumberField K] {k : ℕ} (i : Fi
   by_cases h : j = i
   · subst h
     simpa using ha
-  · simp [Pi.single_apply, h, Submodule.zero_mem]
+  · simp [h]
 
 theorem consZero_mem_intVec (K : Type) [Field K] [NumberField K] {k : ℕ} {y : Fin k → K} :
     consZero K k y ∈ intVec K (k + 1) ↔ y ∈ intVec K k := by
@@ -52,7 +54,7 @@ theorem consZero_mem_intVec (K : Type) [Field K] [NumberField K] {k : ℕ} {y : 
     simpa using h i.succ
   · intro h i
     refine Fin.cases ?_ (fun j => ?_) i
-    · simp [Submodule.zero_mem]
+    · simp
     · simpa using h j
 
 theorem lattice_split (K : Type) [Field K] [NumberField K] : ∀ (k : ℕ)

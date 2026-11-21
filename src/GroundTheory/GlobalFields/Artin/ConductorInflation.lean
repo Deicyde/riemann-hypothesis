@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.Artin.Conductor
 import GroundTheory.GlobalFields.Artin.InflationTower
-import GroundTheory.LocalFields.LowerIndexQuotient
-import GroundTheory.LocalFields.IntermediateField
+import Mathlib.Data.ENat.BigOperators
 
 noncomputable section
 

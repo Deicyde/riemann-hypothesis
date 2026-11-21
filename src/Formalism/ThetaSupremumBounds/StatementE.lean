@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.ThetaSupremumBounds.StatementA
-import Formalism.ThetaSupremumBounds.StatementB
 
 open Finset MeasureTheory
 open scoped ComplexConjugate Real

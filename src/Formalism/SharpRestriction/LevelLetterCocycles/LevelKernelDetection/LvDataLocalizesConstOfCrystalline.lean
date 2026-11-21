@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.LevelKernelDetection.FrobeniusCoeffSupportBddBelow
 import Formalism.SharpRestriction.LevelLetterCocycles.LevelKernelDetection.RhoFfEqUnitMul
 import Formalism.SharpRestriction.LevelLetterCocycles.LevelKernelDetection.ConstantCoeffPi0EqZeroOfP9ring

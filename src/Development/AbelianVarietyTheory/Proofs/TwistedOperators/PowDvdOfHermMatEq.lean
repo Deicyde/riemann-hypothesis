@@ -1,13 +1,13 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.SatakeTrivialRangeBound
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HasBoundedSumsOne
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IwasawaBlockTriangular
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.RelativeLatticeVolumeOfDetValuation
-import Development.AbelianVarietyTheory.Definitions.Divisors.EqOfHasValueAtInfinite
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.NormLeCard
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsIsBorelSphRevInv
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.NormLeOfCompleteHomogeneousLe
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HermiteReductionUnipotent
+import Mathlib.Algebra.GroupWithZero.Submonoid.CancelMulZero
+import Mathlib.RingTheory.PicardGroup
 
 noncomputable section
 

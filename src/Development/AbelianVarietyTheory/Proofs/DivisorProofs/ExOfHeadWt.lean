@@ -1,8 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqLastAddGaps
-import Development.AbelianVarietyTheory.Definitions.Divisors.CuspIso
-import Development.AbelianVarietyTheory.Definitions.Divisors.WellChosen
-import Development.AbelianVarietyTheory.Definitions.Divisors.P22
 open CategoryTheory AlgebraicGeometry TopologicalSpace Limits NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.GeometryOfNumbersTheory Formalism.L2.Pj Formalism.BasicNotions
 open GlobalTheory GlobalTheory.CechPic GlobalTheory.CompHS GlobalTheory.CovTop
@@ -52,8 +50,8 @@ theorem exOf_headWt (τ : Psi H) (k : ℕ) (hk : k < Dw.p) :
   · by_cases e : τ' = τ
     · subst e
       by_cases h : (i : ℕ) ≤ k
-      · simp [GlobalTheory.NefWt.headWt, stepEx, h, Nat.lt_succ_of_le h]
-      · simp [GlobalTheory.NefWt.headWt, stepEx, h, show ¬ (i : ℕ) < k + 1 by omega]
+      · simp [GlobalTheory.NefWt.headWt, stepEx, h]
+      · simp [GlobalTheory.NefWt.headWt, stepEx, h]
     · have hc : τ'.1 ≠ τ.1 := fun h => e (Subtype.ext h)
       simp [GlobalTheory.NefWt.headWt, stepEx, e, hc]
   · have hq := FlagMod.mult_conj (Dw := Dw) τ'

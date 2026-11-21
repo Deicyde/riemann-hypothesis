@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.FinalLevelsOf
+import Formalism.SharpRestriction.LevelLetterCocycles.ExponentWindowSubsetShort
 
 noncomputable section
 

@@ -1,16 +1,10 @@
-import Mathlib
-import Formalism.SharpRestriction.GlobalSchurBounds.ThickPlacesCorollaryOfAnyTranslate
-import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.DualExponentDensity
-import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.ActionCoordinates
-import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.LocalDensityEuler
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.IsometryTransportFrames
 import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.SelfDualLatticeComplements
-import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.LatticeTensorUnfolding
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.MeasurePreservingGlue
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.IsSelfDualLatticeIff
-import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.FundamentalDomainNeZero
 import Development.AbelianVarietyTheory.Counterexamples.PlaceInjectivity.PlaceInjective
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsDualFamilyOfIsLattice
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsCompactAdele
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.TopFacts
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.IsSchwartzBruhatIndicatorLocalLatticeCompletionStatement
@@ -18,8 +12,6 @@ import Development.AbelianVarietyTheory.Proofs.FlagMeasures.EventuallyLocalLatti
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.IndicatorCompletedLatticeEqFinprodLocalStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsSelfDualLatticeCompletionMaxOrderStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsSplitPlOfTwoMem
-import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ExistsBorelSectionUnitaryOrbitQuadric
-import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.DisjointSpanPerpLat
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ExistsLocalComponentAdelicAddCharStatement
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.AdicIntegersCharacterDualIndexEqResidueCardZpowStatement
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ExistsRealAdeleCoordinatesCmTypeStatement
@@ -45,8 +37,7 @@ variable {F E : Type} [Field F] [NumberField F] [Field E] [NumberField E] [Algeb
 
 theorem hR_ratTup (R : Type) [CommRing R] [Algebra F R] {M : ℕ} (J : Matrix (Fin M) (Fin M) E) (x y : Fin M → E) :
     hR R σ J (fun i => inclR R (x i)) (fun i => inclR R (y i)) = inclR R (hE σ J x y) := by
-  simp [hR, hE, Formalism.UG.hform, JR, sigR, inclR, map_sum, Algebra.TensorProduct.tmul_mul_tmul,
-    TensorProduct.tmul_sum]
+  simp [hR, hE, Formalism.UG.hform, JR, sigR, inclR, map_sum, Algebra.TensorProduct.tmul_mul_tmul]
 
 theorem exists_bump {V : Type} [NormedAddCommGroup V] [NormedSpace ℝ V] [FiniteDimensional ℝ V] {x : V}
     (hx : x ≠ 0) : ∃ φ : V → ℝ, (Continuous φ ∧ HasCompactSupport φ ∧ tsupport φ ⊆ {y | y ≠ 0} ∧ ∀ y, 0 ≤ φ y) ∧
@@ -105,7 +96,7 @@ theorem arch (hR3 : ActionCoordinates.RealPlaceMeasures) (c : CDHaar) (hσ : IsC
       rw [← map_ofNat (algebraMap F (Ainf F)) 2, ← map_mul]; norm_num
     have h3 := congrFun (congrArg r h2) ρ
     rw [map_mul, map_one, map_ofNat] at h3
-    simp only [Pi.mul_apply, Pi.ofNat_apply, Pi.one_apply] at h3
+    simp only [Pi.mul_apply, Pi.ofNat_apply] at h3
     linarith
   have hq : ∀ X ρ, ActionCoordinates.qf (e X ρ) = r (qR (Ainf F) σ J (X 0)) ρ := by
     intro X ρ

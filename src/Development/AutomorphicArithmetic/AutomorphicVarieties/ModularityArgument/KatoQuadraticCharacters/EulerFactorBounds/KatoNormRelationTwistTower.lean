@@ -1,13 +1,11 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.KatoQuadraticCharacters.EulerFactorBounds.KatoTwistedClassNormCompatibleCyclotomic
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.KatoQuadraticCharacters.EulerFactorBounds.KmapComp
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.KatoQuadraticCharacters.EulerFactorBounds.CohApi
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.KatoQuadraticCharacters.EulerFactorBounds.TopRel
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.KatoQuadraticCharacters.EulerFactorBounds.Bridge
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.KatoQuadraticCharacters.EulerFactorBounds.SXiCoh
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.KatoQuadraticCharacters.EulerFactorBounds.XiDist
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.KatoQuadraticCharacters.EulerFactorBounds.XiScal
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.KatoQuadraticCharacters.EulerFactorBounds.CoeffSlD
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.KatoQuadraticCharacters.EulerFactorBounds.SCycZ
 
 open scoped MatrixGroups Matrix Classical
 open GlobalTheory.KZ GlobalTheory.K4 UpperTheory.V.Z.Kato.Sym UpperTheory.Kd.K4 UpperTheory.V.Z.Kato.Nb
@@ -146,7 +144,7 @@ private theorem rows_succ {l L N p k : ℕ} [Fact l.Prime] [NeZero N] (x : ZMod 
         push_cast
         linear_combination ((bar l (L + 1) N p : ZMod p) * (N + x.val * topT l (L + 1) N * l ^ (L + 1))
           - k * bar l L N p * (N + x.val * topT l L N * l ^ L)) * f0 - ((N : ZMod p) * l ^ L) * k2
-    · simp only [rw0, Pi.smul_apply, smul_eq_mul, rU, Matrix.cons_val_one, Matrix.head_cons, Fin.mk_one]
+    · simp only [rw0, Pi.smul_apply, smul_eq_mul, rU, Matrix.cons_val_one, Fin.mk_one]
       simp
   · funext i
     fin_cases i
@@ -162,11 +160,11 @@ private theorem rows_succ {l L N p k : ℕ} [Fact l.Prime] [NeZero N] (x : ZMod 
           - k * bar l L N p * topT l L N * l ^ L) * f0
     · simp only [rw0, Pi.smul_apply, smul_eq_mul]
       apply lift
-      · simp only [rV, Matrix.cons_val_one, Matrix.head_cons, Fin.mk_one]
+      · simp only [rV, Matrix.cons_val_one, Fin.mk_one]
         push_cast
         linear_combination (N : ZMod (N * l ^ L)) * e1 - ((k : ZMod (N * l ^ L)) * N) * e2
           + ((l : ZMod (N * l ^ L)) - k) * e4 - (N : ZMod (N * l ^ L)) * k1
-      · simp only [rV, Matrix.cons_val_one, Matrix.head_cons, Fin.mk_one]
+      · simp only [rV, Matrix.cons_val_one, Fin.mk_one]
         push_cast
         linear_combination ((bar l (L + 1) N p : ZMod p) * N - k * bar l L N p * N) * f0 - ((N : ZMod p) * l ^ L) * k2
 

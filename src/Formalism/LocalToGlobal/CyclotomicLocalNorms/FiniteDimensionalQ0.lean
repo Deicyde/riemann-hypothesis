@@ -1,6 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.CyclotomicLocalNorms.NormLeOneIffIsIntegral
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ClassFieldTheory.LocalClassField.ExistsDvdQKPowSubOne
+import Formalism.SharpRestriction.LevelLetterCocycles.DataNLoc
 
 noncomputable section
 

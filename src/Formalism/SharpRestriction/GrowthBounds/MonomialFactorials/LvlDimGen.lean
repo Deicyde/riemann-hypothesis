@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.MonomialFactorials.LiRenameMon
 import Formalism.SharpRestriction.GrowthBounds.MonomialFactorials.BePhiSmulRight
-import Formalism.SharpRestriction.GrowthBounds.MonomialFactorials.SumFinrankLeOfIndep
 
 noncomputable section
 

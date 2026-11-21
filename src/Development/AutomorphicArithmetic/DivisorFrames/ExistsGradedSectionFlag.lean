@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.LocalEmbeddings.ExistsIsMapToFn
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFlagBundleIff
 import Development.AutomorphicArithmetic.DivisorFrames.ExistsAdaptedFlagCharts
 import Development.AutomorphicArithmetic.DivisorFrames.FlagChartTransitionTriangular
 open CategoryTheory AlgebraicGeometry NumberField IsDedekindDomain Matrix

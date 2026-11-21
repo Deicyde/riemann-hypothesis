@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.DualLattices.LenIdStatement
 import ReciprocityTheory.DualLattices.MemOfSumSingleEqZero
 

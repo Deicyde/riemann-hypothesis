@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.GKModules.SmoothVectors
 import GroundTheory.AutomorphicForms.GKModules.ParametricIntegral
 import GroundTheory.AutomorphicForms.DixmierMalliavinBasic
+import Mathlib.Geometry.Manifold.BumpFunction
 
 namespace GroundTheory.Automorphic
 
@@ -106,7 +108,7 @@ theorem isSmoothVector_integrated {f : G → ℂ} (hf : h.IsTestFunction f) (v :
     rw [← integral_mul_left_eq_self (F Y) (h.expG Y)]
     congr 1
     funext g
-    simp only [hFdef, ContinuousLinearMap.coe_restrictScalars', map_smul,
+    simp only [hFdef, map_smul,
       ← BanachRep.map_mul_apply, expG_neg, inv_mul_cancel_left]
   rw [hexp]
 

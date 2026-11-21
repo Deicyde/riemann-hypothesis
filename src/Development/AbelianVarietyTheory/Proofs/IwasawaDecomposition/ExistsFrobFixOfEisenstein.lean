@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsUniqueHcharOfFiniteOrder
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MinpolyAndNormOfPowEqUniformizer
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ArtinRestrictEqArtinNormSinglePlaceStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TameEisensteinExtensionUniqueTotallyRamifiedPlacStatement
@@ -54,7 +53,7 @@ theorem exists_frob_fix_of_eisenstein : GlobalTheory.Published.GlobalArtinRecipr
     congr 2
     ext
     rw [hc]
-    simp only [Units.coe_map, MonoidHom.coe_coe, hyK, Units.val_mk0]
+    simp only [Units.coe_map, hyK, Units.val_mk0]
     rw [hnorm]
     simp
 

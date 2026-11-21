@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.IsCanFam
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
+import Mathlib.Topology.Sheaves.Presheaf
 
 set_option autoImplicit false
 

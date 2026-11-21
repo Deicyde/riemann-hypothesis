@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Statements.HeckeThetaIntegrals.StepUnfold
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.RealDataStabilizer
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.FinitePartMemLevelOfThetaDatumNeZero
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsPolynomialModelCoefficientSpaceRealPoints
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AuxiliaryVectorDecompositionEqZero
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HcParameterEAddHalfShiftLeBSucc
 
@@ -63,7 +63,7 @@ theorem colFn_eq (ch : Choice R) (a : Fin ch.n) (g : GA D (ch.G.V (.top 0))) :
     congr_fun (pairVec_colOf ch.W.θ ch.ξ (ch.Psi a)) g
   rw [h1]
   unfold scal colFun
-  simp only [LinearMap.comp_apply, LinearEquiv.coe_coe]
+  simp only [LinearMap.comp_apply]
   rw [arg_eq]
   rfl
 

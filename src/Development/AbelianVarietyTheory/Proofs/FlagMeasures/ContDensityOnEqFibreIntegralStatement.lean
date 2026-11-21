@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ContDensityOnEqFibreIntegral
-import Formalism.SharpRestriction.GlobalSchurBounds.StandardLattice
 open NumberField IsDedekindDomain MeasureTheory Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice
 open scoped TensorProduct ENNReal
 set_option maxHeartbeats 1000000 in

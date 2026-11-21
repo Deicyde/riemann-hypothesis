@@ -1,4 +1,6 @@
-import Formalism.LocalToGlobal.Columns.XtLamGvSCongr
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.Columns.ChainInst
 
 open NumberField IsDedekindDomain Module Matrix
 

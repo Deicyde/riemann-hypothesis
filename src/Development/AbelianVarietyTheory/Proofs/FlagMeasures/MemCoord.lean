@@ -1,12 +1,6 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.FractionFieldToGenericStalkAlgebraMapEq
-import Formalism.SharpRestriction.CuspSpanNormBounds.PsiEDef
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsHermND
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ComplementReferenceCompactSubgroup
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.GFrames
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.EichlerIsometry
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.RationalExtend
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.IsIntegralOfQuad
+import Development.AbelianVarietyTheory.Proofs.FlagMeasures.IsPrincipalIdealRingOfHenselian
 open ValuativeRel Formalism.MainNotions.S.Loc GlobalTheory.HL NumberField IsDedekindDomain
 open scoped Pointwise ENNReal Classical
 
@@ -51,7 +45,7 @@ theorem _root_.GlobalTheory.HL.SAN.mem_coord {F : Type} [Field F] [ValuativeRel 
       intro j
       by_cases h : j = i
       · subst h; simp [L.O.one_mem]
-      · simp [Pi.single_apply, h, L.O.zero_mem]
+      · simp [h, L.O.zero_mem]
     | zero => intro j; exact L.O.zero_mem
     | add y z _ _ hy hz => intro j; exact add_mem (hy j) (hz j)
     | smul c y _ hy =>

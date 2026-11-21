@@ -1,8 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.RationalFormsDetTwistMulRational
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.RationalRayLevels
-import Development.AbelianVarietyTheory.PublishedTheorems.PublishedFoundations.NonemptyAlgHomOfIsRayOfDvd
 
 set_option autoImplicit false
 noncomputable section

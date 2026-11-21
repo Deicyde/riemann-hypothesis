@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.Lemmas
 import Formalism.LocalRingCardinality.SpanPowerMembership.NZColB
 

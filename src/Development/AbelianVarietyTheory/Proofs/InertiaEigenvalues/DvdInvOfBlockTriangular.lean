@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.UdlApply
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IwahoriFactorisation
 

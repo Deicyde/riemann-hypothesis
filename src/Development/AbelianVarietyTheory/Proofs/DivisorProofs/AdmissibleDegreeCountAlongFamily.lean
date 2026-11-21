@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.WeightDegreeSizes
-import Formalism.SharpRestriction.SmoothDesignExistence.DGamSmooth
-import Formalism.SharpRestriction.GlobalSchurBounds.ProductFirstZerothParts
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NuAbsPlaceFine
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LossBoundNonneg
 open Formalism.BasicNotions Formalism.BasicNotions.DV Formalism.MainNotions NumberField Classical

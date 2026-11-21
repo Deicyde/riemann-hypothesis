@@ -1,6 +1,13 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.GenericCentreSpecializes
 import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.LatNormGrLatNeZeroOfSpan
+import Mathlib.Algebra.Module.Torsion.Prod
+import Mathlib.NumberTheory.NumberField.CMField
+import Mathlib.NumberTheory.NumberField.Cyclotomic.Basic
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.TotallySplit
 
 noncomputable section
 

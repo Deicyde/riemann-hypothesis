@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.DigammaTendstoLogSubHarmonic
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.NumberTheory.Harmonic.Bounds
 
 namespace GlobalTheory.CompanionTheory.DigammaBound
 

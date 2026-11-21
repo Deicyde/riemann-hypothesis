@@ -1,4 +1,5 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
 open scoped TensorProduct NNReal Matrix
@@ -97,7 +98,7 @@ theorem plane_spans (σ : E →ₐ[F] E) (hσ : ∀ x, σ (σ x) = x) {n n₁ : 
       exact hJ₁ ((Matrix.exists_vecMul_eq_zero_iff).1 ⟨u, hne, hu'⟩)
     simp [this]
   have hdim : Module.finrank E ((Fin n₁ → E) × E × E) = Module.finrank E (Fin n → E) := by
-    simp [Module.finrank_prod, Module.finrank_fin_fun, hn]
+    simp [Module.finrank_prod, hn]
   have hsurj := (LinearMap.injective_iff_surjective_of_finrank_eq_finrank hdim).1 hinj
   obtain ⟨⟨u, s, t⟩, hp⟩ := hsurj z
   refine ⟨s, t, u, ?_⟩
@@ -141,7 +142,7 @@ theorem levi_unique : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [Numb
     have hs : incV F (Pi.single j (1 : E)) = Pi.single j 1 := by
       ext k; by_cases hk : k = j
       · subst hk; simp [incV]
-      · simp [incV, Pi.single_apply, hk]
+      · simp [incV, hk]
     rw [hs] at this
     simpa [Matrix.mulVec_single_one] using this
   exact Subtype.ext (Units.ext hmat)

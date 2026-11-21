@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeilStabilizerVolume.DensVCos
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeilStabilizerVolume.HenselCount
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeilStabilizerVolume.CosDens
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 

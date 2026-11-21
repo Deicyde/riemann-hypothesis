@@ -1,11 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasBlockOfOccurs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.MkMemAdmissibleAtIffCocycle
 import Formalism.PieriBlockIdeals.LemmaWFromLattice
-import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
-import Formalism.LocalRingCardinality.AdicCompletionLocal.LocTied
-import Formalism.LocalRingCardinality.SpanPowerMembership.NDLocE
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.DvrComplete
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.CharAbove
+import Mathlib.RingTheory.PowerSeries.Exp
 
 set_option autoImplicit false
 
@@ -428,7 +426,7 @@ def latOf (r : ↥(GK K) →* GL (Fin n) ↥(OL LL)) (hr : Cont r) : LocLat ↥(
         rintro _ ⟨j, rfl⟩
         refine ⟨Pi.single j 1, ?_⟩
         funext j'
-        by_cases h : j' = j <;> simp [stdMap_apply, Pi.single_apply, h] }
+        by_cases h : j' = j <;> simp [stdMap_apply, h] }
 
 set_option synthInstance.maxHeartbeats 400000 in
 

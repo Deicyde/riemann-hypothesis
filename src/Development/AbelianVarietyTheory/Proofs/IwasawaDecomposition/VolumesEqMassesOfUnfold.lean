@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.CmQuadraticFormEqAlternatingForm
-import Formalism.LocalToGlobal.GlobalTheory.GL5.FamilyMassVolumeIdentityOfClassDecomp
-import Formalism.LocalToGlobal.BesselHermitianTheta.MinfDensity
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.DoubleCosetsMassLevel
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.GenusMassStdAll
 

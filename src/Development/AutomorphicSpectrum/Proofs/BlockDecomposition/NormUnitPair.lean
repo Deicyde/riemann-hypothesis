@@ -1,6 +1,6 @@
-import Mathlib
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.KFiniteThetaLifts.RationalPrimesBelowPlaces
-import GroundTheory.LocalFields.QuadraticAbelian.WeilRepQuadratic
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.LocalWhittakerDuality.LocalFunctionalEquationFinite
 open NumberField IsDedekindDomain MeasureTheory Topology GroundTheory.Global GroundTheory.LocalField GroundTheory.Automorphic GroundTheory.Automorphic.AutomorphicForm Ad3 Ad3.K Ad3.K.QuadraticBaseChangeGL3
 open GroundTheory.Automorphic.GodementSection (localChar)
 open GroundTheory.Global.AdicLiesOver
@@ -27,7 +27,7 @@ theorem norm_pair (x : F × F) : Algebra.norm F x = x.1 * x.2 := by
   have : Algebra.lmul F (F × F) x = LinearMap.prodMap (Algebra.lmul F F x.1) (Algebra.lmul F F x.2) := by
     ext <;> simp
   rw [Algebra.norm_apply, this, LinearMap.det_prodMap]
-  simp [← Algebra.norm_apply]
+  simp
 
 theorem norm_unit_pair (u : Fˣ) : Algebra.norm F (((u : F), ((u⁻¹ : Fˣ) : F)) : F × F) = 1 := by
   rw [norm_pair]; simp

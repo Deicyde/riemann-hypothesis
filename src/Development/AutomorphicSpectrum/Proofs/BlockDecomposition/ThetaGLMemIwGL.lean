@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.IwahoriFactorisation.TwistedConjugationNorms.LocalMatchingOfAssemblyHypotheses
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.TwistedIwahoriContractionHolds
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IwahoriContraction
@@ -6,6 +7,7 @@ import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IwahoriAndMaxim
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsDiagUnit
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsNormalisedThetaSub
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PlaceConjugationPropertiesCmFieldStatement
+import GroundTheory.LocalFields.LocalFourierHaar
 
 open Matrix ValuativeRel
 open GlobalTheory.CompanionTheory.TwContraction

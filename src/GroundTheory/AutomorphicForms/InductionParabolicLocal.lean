@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.InductionParabolicGroups
 import GroundTheory.AutomorphicForms.MeasuresParabolic
+import Mathlib.Data.Int.Star
 
 noncomputable section
 

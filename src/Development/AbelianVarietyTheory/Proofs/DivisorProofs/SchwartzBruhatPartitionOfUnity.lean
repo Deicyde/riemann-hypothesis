@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.RankEqCardIffExistsFrameMatrixFirstColumnBlock
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.HilbertNinetyQuotientHomEqIff
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SubMemNsp
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.IsBicharPairing
 
 open GlobalTheory.WeilM Matrix

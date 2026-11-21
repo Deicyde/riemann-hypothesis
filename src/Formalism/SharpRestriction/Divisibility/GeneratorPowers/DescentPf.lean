@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.PlaceBelow
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GermFunPf
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.WickVanishing.LogClosed
 
 set_option autoImplicit false
 

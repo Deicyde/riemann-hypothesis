@@ -1,6 +1,4 @@
-import Mathlib
-import Formalism.QuotientMetricDivisors.StatementK
-import Formalism.ThetaSupremumBounds.StatementC
+import BuildAid.Leniency.Open
 import Formalism.ThetaSupremumBounds.StatementE
 
 open Finset

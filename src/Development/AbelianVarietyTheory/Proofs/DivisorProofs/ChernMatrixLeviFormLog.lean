@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TotalEqCurve
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdjacentPullPull
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GeometricallyConnectedOfIsIsoRestrict
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ChernDensDetWeightEqNegLeviLog
 open CategoryTheory AlgebraicGeometry TopologicalSpace Filter Topology MeasureTheory Matrix
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -20,7 +18,7 @@ theorem sum_mul_apply_single_mul_conj {D : ℕ} (B : V D →L[ℂ] V D →L⋆[�
     ∑ j, ∑ l, ξ j * B (EuclideanSpace.single j 1) (EuclideanSpace.single l 1) * starRingEnd ℂ (ξ l) = B ξ ξ := by
   have hξ : ξ = ∑ j, ξ j • EuclideanSpace.single j (1 : ℂ) := by
     ext i
-    simp [Pi.single_apply, mul_ite, mul_one, mul_zero, Finset.sum_ite_eq']
+    simp [Pi.single_apply, mul_ite, mul_one, mul_zero]
   conv_rhs => rw [hξ]
   simp only [map_sum, ContinuousLinearMap.sum_apply, map_smul, map_smulₛₗ, ContinuousLinearMap.smul_apply, smul_eq_mul,
     Finset.mul_sum]

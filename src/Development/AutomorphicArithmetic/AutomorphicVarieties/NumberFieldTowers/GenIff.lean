@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AutomorphicArithmetic.AutomorphicVarieties.NumberFieldTowers.XTwApplyApply
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.NumberFieldTowers.GenDual
 import Development.AutomorphicArithmetic.AutomorphicVarieties.NumberFieldTowers.DinfTors
 

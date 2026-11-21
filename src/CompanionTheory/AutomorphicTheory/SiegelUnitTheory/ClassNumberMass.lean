@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.LocalToGlobal.GlobalTheory.GL5.PacketStatementOfIndependence
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.AdelicQuotientVolumeEqOfSignatureRankIndep
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.VolumeRatio
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.UnitaryVolumeEqRankMassAllSignatures

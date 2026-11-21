@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Jets.IsSelfOf
-import Development.AbelianVarietyTheory.Definitions.Jets.TwoPlaces
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.IntegralGermEqGaugedFormalGroupLawExpIntegral
 import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.EqMvExpOfAdditive
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.MfactMulCoeffMvExpLinear

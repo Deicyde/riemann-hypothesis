@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.AfsplitA
+import Formalism.SatakeDualWeyl.StatementC
+import Mathlib.RingTheory.PiTensorProduct
 
 noncomputable section
 open Matrix TensorProduct NumberField IsDedekindDomain
@@ -137,7 +141,7 @@ theorem afsplit_inj (y : E ⊗[F] 𝔸) (hy : ∀ w : HeightOneSpectrum (𝓞 F)
     intro z i
     induction z using TensorProduct.induction_on with
     | zero => simp
-    | tmul m n => simp [TensorProduct.equivFinsuppOfBasisLeft_apply_tmul_apply]
+    | tmul m n => simp
     | add x y hx hy => simp [hx, hy]
   apply (TensorProduct.equivFinsuppOfBasisLeft (N := 𝔸) b).injective
   rw [map_zero]

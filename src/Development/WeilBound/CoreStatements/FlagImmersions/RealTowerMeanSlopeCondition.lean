@@ -1,8 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.RefLinked
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterSt
 import Development.WeilBound.CoreStatements.FlagImmersions.RealTowerPlurisubharmonicPotential
 import Development.WeilBound.CoreStatements.FlagImmersions.PshSumPotentialsSmallParameter
+import Development.WeilBound.CoreStatements.FlagImmersions.DifferentiableAtAffCoord
 
 noncomputable section
 

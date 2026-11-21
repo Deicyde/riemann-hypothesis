@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.FrameDefinitions.HasCoverByOne
+import Mathlib.Algebra.AffineMonoid.UniqueSums
+import Mathlib.RingTheory.PicardGroup
 set_option maxSynthPendingDepth 1
 
 noncomputable section
@@ -184,7 +187,7 @@ theorem thetaY_coneY_X (n : SY II hII) : thetaY II hII (coneY II hII (X n)) = rh
     rcases n with ⟨(u | q), t⟩
     · cases u
       erw [rhoY_X_inl]
-      simp only [coneY, eval₂Hom_X', thetaY, map_mul, eval₂Hom_C, eval₂_C, eval₂_X]
+      simp only [coneY, eval₂Hom_X', thetaY, map_mul, eval₂Hom_C]
       simp only [thetaC, eval₂Hom_C, RingHom.comp_apply]
       rw [← map_mul]
       congr 1

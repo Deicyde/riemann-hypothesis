@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.ComplexMultiplication.AutCFixed
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CharpolyScaledInverse
+import Mathlib.LinearAlgebra.Matrix.Charpoly.Eigs
+import Mathlib.NumberTheory.Cyclotomic.CyclotomicCharacter
+import Mathlib.NumberTheory.Padics.Complex
+import Mathlib.RingTheory.Valuation.Integral
 
 open Polynomial
 

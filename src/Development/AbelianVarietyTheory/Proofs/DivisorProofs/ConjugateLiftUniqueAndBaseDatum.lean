@@ -1,12 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.OfCore
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ReadingsExistRow
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoefMapNormEquivariantBasisOfFive
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LiftEquivarianceWeilModel
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OscillatorModelsEvaluateFirst
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OscillatorModelsEvaluateSecond
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EtaValuesCoefficientExists
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaLiftUniqueUpToUnit
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConjFormsRescale
 
 noncomputable section
 

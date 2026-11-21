@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.TateTwists.TtTensExPfLoc
+import Development.EtaleCohomology.TateTwists.TtTensExPf
 
 open CategoryTheory Limits AlgebraicGeometry Opposite GlobalTheory.EtC
 open scoped DirectSum TensorProduct
@@ -30,7 +33,7 @@ theorem tS_d {I J : Cx R} (T : TensPre I J) (U : Scheme.{0}) (w : ℤ) (x : Tens
     Sec.map ((shK T).d w (w + 1)) (tS T U w x) =
       ((toSheafify Scheme.etaleTopology.{0} (T.P.X (w + 1))).app (op U)).hom
         (((T.P.d w (w + 1)).app (op U)).hom (T.e U w x)) := by
-  simp only [tS, LinearMap.comp_apply, LinearEquiv.coe_coe]
+  simp only [tS]
   exact (ConcreteCategory.congr_hom (congrArg (fun f => NatTrans.app f (op U))
     (toSheafify_naturality Scheme.etaleTopology.{0} (T.P.d w (w + 1)))) _).symm
 

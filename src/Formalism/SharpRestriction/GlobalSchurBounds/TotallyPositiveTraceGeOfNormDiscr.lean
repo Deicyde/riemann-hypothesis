@@ -1,5 +1,5 @@
-import Formalism.SharpRestriction.GlobalSchurBounds.SlopeMaxOpenOfHookTwoLeV
-import Formalism.LocalRingCardinality.PosOfIsomEmb
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.TransferenceMinima
 import Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.UnitTraceSumBounds.UpperSlopeOfMaximalConstant
 import Formalism.LocalToGlobal.GlobalTheory.GL4.PShortFrame

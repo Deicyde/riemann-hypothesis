@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.PhiAZero
-import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.TorsionOfVec
 import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.NatCastQb
 import Development.AutomorphicArithmetic.EtaleIdempotents.GaloisEquivariantTensorDescentOfPrimePowerUnits
 import Development.AutomorphicArithmetic.EtaleIdempotents.IntegersResidueEqZeroOfNotIsUnit
@@ -7,6 +8,8 @@ import Development.AutomorphicArithmetic.EtaleIdempotents.CrisFrobeniusIterateEv
 import Development.AutomorphicArithmetic.EtaleIdempotents.GaloisActionEvalEtaleFamilyExistsDenominator
 import Development.AutomorphicArithmetic.EtaleIdempotents.EvalEtaleFamilyMemLimitOfReduced
 import Development.AutomorphicArithmetic.EtaleIdempotents.IntegersResidueEqThetaCoeffPowOfTeichmuller
+import GroundTheory.PAdicHodge.BCrisGalois
+import GroundTheory.PAdicHodge.BCrisPlusInvariants
 
 set_option synthInstance.maxHeartbeats 200000
 set_option maxHeartbeats 1000000
@@ -108,7 +111,7 @@ private theorem chain2 {R Q H : Type*} {Mn : ℕ → Type*} [CommRing R] [AddCom
   have h1 := congrArg (fun x => b n (β x)) hy
   simp only [map_smul, fac, smul_smul, hP, hh, hit, hE] at h1
   have ip : ∀ (x : R) (k : ℕ), φ^[N] (x ^ k) = (φ^[N] x) ^ k := fun x k => iterate_map_pow φ N x k
-  simp only [ip, ht, smul_smul] at h1
+  simp only [ip, ht] at h1
   have e1 : t ^ (b' + u + r) = t ^ (b' + (u + r)) := by rw [add_assoc]
   rw [e1, ← h1]
   congr 1

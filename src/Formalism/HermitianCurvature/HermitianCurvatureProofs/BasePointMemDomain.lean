@@ -1,5 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.DifferentiableAtOfPuncturedSmooth
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.BlockRelationTwistedHeight
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.DiagScalarCommuteTransposedRMatrix
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.LevelsOfBuiltSetting
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.UnipotentCoordinatesMeasurePreserving
 
 open Matrix MeasureTheory Filter Topology
 open scoped ComplexConjugate ContDiff

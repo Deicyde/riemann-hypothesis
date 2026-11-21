@@ -1,9 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.FWTie
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FibExtMarked
 import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.ThetaKernelOrthonormalFrameInDomainPeriodLinear
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.SmulMemOfIsIntegral
-import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.ExistsInvariantNatLengthLattice
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PolyDerivRenameOfConvex
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ConvexAndDifferentiableOnTsumCexp
 

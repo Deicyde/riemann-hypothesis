@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.MonomialFactorials.DegFactNeZero
+import Formalism.ThetaLogCoordinates.BihomogeneousPairs.FinalLL
 
 noncomputable section
 

@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HInv
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.RingKrullDimLtTopOfEssFiniteType
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.GalMapMul
 open CategoryTheory Limits AlgebraicGeometry Opposite GlobalTheory.EtC
 open scoped TensorProduct
@@ -80,7 +78,7 @@ theorem exists_retraction_of_AIC : ∀ (D T E : Type) [CommRing D] [IsDomain D] 
   let eqv : T ≃ₐ[D] E ⧸ Q := AlgEquiv.ofBijective f ⟨hinj, hsurj⟩
   refine ⟨(eqv.symm : E ⧸ Q →ₐ[D] T).comp π, ?_, ?_⟩
   · ext t
-    simp only [AlgHom.comp_apply, AlgHom.id_apply, AlgHom.coe_coe]
+    simp only [AlgHom.comp_apply, AlgHom.id_apply]
     apply eqv.injective
     change eqv (eqv.symm (π (ι t))) = eqv t
     rw [AlgEquiv.apply_symm_apply]

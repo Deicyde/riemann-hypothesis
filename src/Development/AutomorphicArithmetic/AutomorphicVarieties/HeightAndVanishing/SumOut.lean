@@ -1,11 +1,11 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.LayerLe
 import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.RedPrime
 import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.Cases
 import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.CardLeLevel
 import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.HostLevel
-import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.HostIndex
-import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.BchiFacts
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CharacterLevelBounds.SumBack
+import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.Counts
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual Formalism.HC ReciprocityTheory.Gal Formalism.GaloisCohomology UpperTheory.V UpperTheory.V.Base UpperTheory.Top UpperTheory.V.HV
 
@@ -22,7 +22,7 @@ private theorem card_small (S : Finset Nat.Primes) (n : ℕ) (h : ∀ l ∈ S, (
     · intro l hl
       have h1 := h l hl
       have h2 := l.2.one_lt
-      simp only [Finset.coe_Icc, Set.mem_Icc, Finset.mem_Icc, Finset.mem_coe]
+      simp only [Finset.coe_Icc, Set.mem_Icc]
       omega
     · intro x _ y _ hxy
       exact Subtype.ext hxy

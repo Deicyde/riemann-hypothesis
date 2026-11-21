@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFundamentalDomainMulRight
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryFiniteAdeleLocalApproximation
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.TendstoUnitaryAdelicPointsAgreeOnGrowingFinset
@@ -20,7 +18,7 @@ theorem cut_add {S ι : Type} [CommRing S] [Fintype ι] [DecidableEq ι] {ε δ 
   have h2 : (1 - ε) * δ = δ := by linear_combination -h
   have h3 : (1 - ε) * (1 - δ) = 1 - (ε + δ) := by linear_combination h
   simp only [cut, add_mul, mul_add, Matrix.smul_mul, Matrix.mul_smul, smul_smul, Matrix.one_mul, Matrix.mul_one,
-    smul_add, mul_comm δ, mul_comm (1 - δ), h, h1, h2, h3, zero_smul, zero_add, add_smul]
+    mul_comm δ, mul_comm (1 - δ), h, h1, h2, h3, zero_smul, zero_add, add_smul]
   abel
 
 variable {F E : Type} [Field F] [NumberField F] [Field E] [NumberField E] [Algebra F E]

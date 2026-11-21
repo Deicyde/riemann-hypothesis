@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.LemmaBStatement
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GermCut
 
 set_option autoImplicit false
 

@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LagrangianEvaluationGauss
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsArchimedeanPairNegativeSymplecticPairing
 open scoped TensorProduct NNReal Matrix
@@ -22,6 +21,6 @@ theorem trace_symp_neg_one : ∀ (F E : Type) [Field F] [NumberField F] [Field E
   rw [trace_rho]
   refine Finset.sum_congr rfl fun w _ => ?_
   rw [symp, rho_trace hCM (τ w)]
-  simp only [map_mul, map_neg, map_one, hTens, map_sum, incM, Matrix.map_apply, piInf_inclR,
+  simp only [map_mul, map_neg, hTens, map_sum, incM, Matrix.map_apply, piInf_inclR,
     GlobalTheory.WrongSignPair.piInf_cA hCM, neg_one_mul, Complex.neg_re]
   ring

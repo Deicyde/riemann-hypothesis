@@ -1,4 +1,7 @@
-import ReciprocityTheory.AnalyticForms.RegularLocalRings.ProjHypA
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.AffineMonoid.UniqueSums
+import ReciprocityTheory.AnalyticForms.RegularLocalRings.ProjDehom
 
 namespace ReciprocityTheory.AnForm.R
 

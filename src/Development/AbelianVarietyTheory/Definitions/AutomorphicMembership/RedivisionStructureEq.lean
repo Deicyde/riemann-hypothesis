@@ -1,7 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.RefilledStagesRecord
-import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.ColDict
 import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.SetUnipotentTranslate
+import Formalism.LocalToGlobal.GroupLattices.DownNaturalLevelZero
+import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.HidaSetting
 
 noncomputable section
 

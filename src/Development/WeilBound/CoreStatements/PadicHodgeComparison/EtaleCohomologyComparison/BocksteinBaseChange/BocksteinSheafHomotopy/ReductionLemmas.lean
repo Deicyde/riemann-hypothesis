@@ -1,6 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ImageCochainExists
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.BocksteinBaseChange.BocksteinSheafHomotopy.BocksteinLemmas
+import Development.AbelianVarietyTheory.Definitions.Divisors.PullHlComp
+import Mathlib.RingTheory.SimpleRing.Principal
 
 set_option backward.isDefEq.respectTransparency false
 

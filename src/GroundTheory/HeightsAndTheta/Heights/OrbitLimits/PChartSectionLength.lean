@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StChartSectionLength
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StChartConeLength
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.PFundCycleBaseChange
-import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.LocalMultRadical
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.LengthLocalizedModuleQuotient
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PComplexMinimalPrimesContract
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PPrimeComplexRadical

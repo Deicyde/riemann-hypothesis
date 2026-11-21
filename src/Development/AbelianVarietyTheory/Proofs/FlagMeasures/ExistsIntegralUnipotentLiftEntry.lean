@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.IsVolData
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.FrameDualTupleIdealsCastAdd
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.RowEmbeddingMemIntegralOrthogonalGroupStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.RowIsometryEntriesInModelCoordinatesStatement
 open NumberField IsDedekindDomain MeasureTheory Matrix Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.QuantumDeterminants Formalism.MainNotions.S GlobalTheory.SgAlg GlobalTheory.SgGlob GlobalTheory.SnMass GlobalTheory.SnMass.VolN
@@ -26,7 +24,7 @@ theorem herm_single {k r : ℕ} (b : Fin r) (c : ℂ) (j : Fin (2 * r + k + 1)) 
     herm (Hpk k r) (bvec j) (c • bvec (esI k r b)) = if j = eI k r b then star c else 0 := by
   simp only [herm, bvec, dotProduct, mulVec, Pi.star_apply, Pi.smul_apply, smul_eq_mul, Pi.single_apply]
   rw [Finset.sum_eq_single (esI k r b)]
-  · simp only [if_true, mul_one, star_mul', star_one]
+  · simp only [if_true, mul_one]
     rw [Finset.sum_eq_single j]
     · simp [Hpk_esI]
     · intro m _ hm; simp [hm]
@@ -106,13 +104,13 @@ theorem lift_entry : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [Numbe
             (s a : ℂ) * star (-(star (w.embedding u)) * ((s b)⁻¹ : ℂ)) else 0) := by
       intro w a' j
       rw [GlobalTheory.T.rowIsometry_entries_in_modelCoordinates F E σ k r J Λ P f T A s hV a y 0 w, hv w, herm_single]
-      simp [bvec, Pi.single_apply, eI_ne_esI, eI_inj, ite_and]
+      simp [bvec, eI_ne_esI, eI_inj, ite_and]
     refine ⟨fun w => ?_, fun β hβ _ w => ?_⟩
     · change gM A _ w (eI k r a) (eI k r b) = l w
       rw [key, hlu]
       simp only [eI_inj, hab.ne, if_false, true_and, if_true, zero_sub]
       push_cast
-      simp only [star_mul', star_neg, star_star, Complex.star_def, Complex.conj_ofReal, map_inv₀, Complex.conj_conj]
+      simp only [star_mul', star_neg, Complex.star_def, Complex.conj_ofReal, map_inv₀, Complex.conj_conj]
       ring
     · rcases β with ⟨⟨a', b'⟩, hab'⟩ | a' | ⟨⟨a', b'⟩, hab'⟩ | a'
       · change gM A _ w (eI k r a') (eI k r b') = 0

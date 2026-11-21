@@ -1,4 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.UnipotentAdelicQuotients.EllRegCut
+import Mathlib.Analysis.InnerProductSpace.Calculus
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Topology.UniformSpace.Uniformizable
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace ZetaZeros.D.EllReg
 
@@ -214,7 +220,7 @@ theorem cf_good {k : ℕ} {K : Set (E d)} {L : List (List (Fin d) × (E d → �
       show (if p.1 = List.ofFn w then p.2 y else 0) + cf L n w y = 0
       rw [ih2 y hy]
       by_cases hc : p.1 = List.ofFn w
-      · simp [if_pos hc, hp.2.2 y hy]
+      · simp [hp.2.2 y hy]
       · simp [if_neg hc]
 
 theorem single_term {m : ℕ} (p : List (Fin d) × (E d → ℂ)) (hp : p.1.length < m) (g : E d → ℂ) (y : E d) :

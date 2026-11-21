@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.FlagModelStatementHolds
-import Mathlib
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.FlagModelStatement
 open GlobalTheory.CompanionTheory.Ar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.FlagModelStatement_holds : FlagModelStatement := by

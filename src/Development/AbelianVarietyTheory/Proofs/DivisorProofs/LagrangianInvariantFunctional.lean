@@ -1,12 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AvgFormApply
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SmulIncMLagP
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicStoneVonNeumannLagrangianUniqueness
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSymplecticBlockGeneratorsLagrangianNormalFStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CharacterInvariantAdelicFormEqMulEvalZeroStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsStdCharNegOneOfStandardTraceAdelicAddChar
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SiegelThetaSliceIntegrableStatement
 
 open scoped TensorProduct NNReal Matrix
@@ -24,7 +18,7 @@ theorem isUnit_det_of_mem_closure {F : Type} [Field F] {κ : Type} [Fintype κ] 
     rcases hg with (⟨A, hA, rfl⟩ | ⟨C, hC, rfl⟩) | rfl
     · refine Matrix.isUnit_det_of_right_inverse (B := Matrix.fromBlocks A⁻¹ 0 0 Aᵀ) ?_
       rw [Matrix.fromBlocks_multiply]
-      simp [Matrix.mul_nonsing_inv _ hA, ← Matrix.transpose_mul, Matrix.nonsing_inv_mul _ hA]
+      simp [Matrix.mul_nonsing_inv _ hA, ← Matrix.transpose_mul]
     · refine Matrix.isUnit_det_of_right_inverse (B := Matrix.fromBlocks 1 0 C 1) ?_
       rw [Matrix.fromBlocks_multiply]
       simp

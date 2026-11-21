@@ -1,9 +1,4 @@
-import Mathlib
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.IsCplAtSelf
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.CaCplFin
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.CaCplFree
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.CaCplQuot
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.CaCplFlat
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.FinQuotAnn
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.FlatnessPrecompleteProducts
 

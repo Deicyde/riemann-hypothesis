@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.FinalTheorems
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.MemIneSmulIff
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.NormSmulLeSelf
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.HermitianCodeWordWeilElementMemQuadraticField
 
 noncomputable section
 

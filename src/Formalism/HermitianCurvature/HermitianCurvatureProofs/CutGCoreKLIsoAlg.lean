@@ -1,3 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGCoreGTKLineCut
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.IrreducibleCapelliModules
 

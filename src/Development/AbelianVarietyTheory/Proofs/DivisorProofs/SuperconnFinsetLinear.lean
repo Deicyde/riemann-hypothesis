@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TranslationInv
-import Development.AbelianVarietyTheory.Definitions.ThetaMetrics.IsAddFundamentalDomainLatticeDomain
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsTorsionFormPoint
 open Matrix MeasureTheory Set Filter Topology
 open GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe GlobalTheory.TorsionForm
 open scoped Real ContDiff
@@ -74,7 +74,7 @@ theorem connection_smul (hF : DifferentiableAt ℝ F P) (c : ℂ) (v : Pt E g) :
 theorem superconn_smul (u : ℝ) (hF : DifferentiableAt ℝ F P) (c : ℂ) :
     superconn τ h β u (fun Q => c • F Q) P = c • superconn τ h β u F P := by
   simp only [superconn, nablaE, dbarV, dbarAdj, connection_smul h hF, d01_smul hF, connForm_smul,
-    wedge_add, contr_add, wedge_smul, contr_smul, smul_add, Finset.smul_sum, smul_neg, smul_comm c]
+    wedge_add, wedge_smul, contr_smul, smul_add, Finset.smul_sum, smul_neg, smul_comm c]
 
 theorem superconn_zero (u : ℝ) (P : Pt E g) :
     superconn τ h β u (fun _ => (0 : Ext (n + n + g))) P = 0 := by

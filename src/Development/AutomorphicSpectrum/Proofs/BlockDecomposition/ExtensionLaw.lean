@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.EisensteinSeries.SiegelEisensteinContinuation.ConvGrOf
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SectionLawHolds
 
 noncomputable section
 

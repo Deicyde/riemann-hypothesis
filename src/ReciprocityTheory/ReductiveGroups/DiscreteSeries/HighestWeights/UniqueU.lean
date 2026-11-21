@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.HighestWeights.FromHC
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.HighestWeights.Unique
 

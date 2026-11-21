@@ -1,5 +1,9 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceLength
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceObjects
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.MvPolynomial.Ideal
+import Mathlib.RingTheory.Regular.RegularSequence
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

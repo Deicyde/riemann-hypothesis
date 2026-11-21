@@ -1,9 +1,7 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasDefect
-import Development.AbelianVarietyTheory.Definitions.Divisors.RigidForFan
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ToroidalCompactificationBis
-import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.ExistsUniqueIsPointOfDualNumber
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StalkDerivationMemSpanInvariantSemiAbelianStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsDerivationExtendingCotangentFormStatement
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.GeometricallyIntegralIffGeometricallyConnectedOf
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry NumberField IsLocalRing
 open scoped CategoryTheory.Obj Matrix TensorProduct
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj
@@ -175,7 +173,7 @@ theorem euler_of_span (B : Type) [CommRing B] [IsLocalRing B] [IsNoetherianRing 
   intro z hz
   set c : _ → B := fun i => ∑ a, b i a * D a z with hc
   have hre : ∑ a, (∑ i, (y i : B) * b i a) * D a z = ∑ i, c i * (y i : B) := by
-    simp only [hc, Finset.sum_mul, Finset.mul_sum]
+    simp only [hc, Finset.sum_mul]
     rw [Finset.sum_comm]; apply Finset.sum_congr rfl; intro i _; apply Finset.sum_congr rfl; intro a _; ring
   have hmem : z - ∑ a, (∑ i, (y i : B) * b i a) * D a z ∈ maximalIdeal B :=
     Ideal.sub_mem _ hz (Ideal.sum_mem _ fun a _ =>

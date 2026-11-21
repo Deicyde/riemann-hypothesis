@@ -1,13 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.EigLatLe
-import Formalism.LocalToGlobal.ProjectiveLattices.LiftLaSpec
 import Formalism.LocalToGlobal.ProjectiveLattices.FnDefE
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IdemAtEqOneIff
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.MemSuppOnIffIdemMulOfNatural
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EvalAtMulTriangularIntVec
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqZeroOfTvalInvertible
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsTensorValueOfTriangularLawStatement
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsFrameRingOverTestRing
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.FramePolynomialEquivariantAndNeZero
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.ExistsEqProdBlockDetPolyPowMul
 import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.ExistsCompactOfDefinite
@@ -195,7 +194,7 @@ theorem exists_coord {f : Rul Xo c} (hf : f ∈ sec Xo c a n) (hs : f ∈ suppOn
   rw [hG _ _ z z₁ Y hY hz h₁, hx, evR_of_frMap_test hf.1
     (frMap_unique_refl_iff E H Dw l Xo c _ _ (AlgHom.id c.F _) z₂).2.1] at e
   refine e.trans ?_
-  simp only [wchar, Fintype.prod_option, Fintype.prod_sigma, ex, t, Units.val_one, one_pow, Finset.prod_const_one,
+  simp only [wchar, Fintype.prod_option, ex, t, Units.val_one, one_pow, Finset.prod_const_one,
     mul_one]
   rfl
 

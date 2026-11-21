@@ -1,7 +1,7 @@
-import Mathlib
-import Formalism.HyperbolicPlaceProducts.Statement
-import Formalism.HyperbolicPlaceProducts.DetIndexProductHyperbolicInequality
+import BuildAid.Leniency.Open
 import Formalism.FlagUnipotentLattices.DetIndexProductHyperbolicInequality
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.RingTheory.FractionalIdeal.Norm
 
 open Module NumberField nonZeroDivisors
 

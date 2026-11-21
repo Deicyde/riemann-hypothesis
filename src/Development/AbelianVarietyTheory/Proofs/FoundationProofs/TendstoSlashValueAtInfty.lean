@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsDCReps
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.HeckeOperatorsOnHalfPlaneFunctionsAgreeExplicit
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.HeckeTOperatorExplicitModularFormStatement
+import Std.Tactic.BVDecide.Normalize.Prop
 open GlobalTheory.HeckeFamilyMatrices Polynomial UpperHalfPlane Filter Topology
 open scoped MatrixGroups ModularForm
 open scoped Manifold
@@ -198,12 +197,12 @@ theorem toGL_mul (A B : Matrix (Fin 2) (Fin 2) ℤ) (hA : A.det ≠ 0) (hB : B.d
     toGL (A * B) = toGL A * toGL B := by
   have hAB : (A * B).det ≠ 0 := by rw [Matrix.det_mul]; exact mul_ne_zero hA hB
   ext i j
-  simp [toGL, hA, hB, hAB, Matrix.mul_apply, Fin.sum_univ_two]
+  simp [toGL, hA, hB, Matrix.mul_apply, Fin.sum_univ_two]
 
 theorem toGL_mat (γ : SL(2, ℤ)) : toGL (mat γ) = (γ : GL (Fin 2) ℝ) := by
   have h : (mat γ).det ≠ 0 := by simp [mat]
   ext i j
-  simp [toGL, h]
+  simp [toGL]
 
 theorem gamma_le_lev (N l : ℕ) : Gamma (N * l) ≤ Lev N l := by
   intro g hg

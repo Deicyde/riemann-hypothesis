@@ -1,4 +1,39 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.WickVanishing.LogChain
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.MvPowerSeries.Derivative
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
 
 set_option autoImplicit false
 
@@ -42,7 +77,7 @@ theorem pderiv_prim (ω : τ → MvPowerSeries τ k)
       rw [if_neg (by omega), h2, h1]
       push_cast
       ring
-    · have h1 : n w = m w := by simp [hn, Finsupp.single_apply, hw, Ne.symm hw]
+    · have h1 : n w = m w := by simp [hn, hw]
       by_cases hm : m w = 0
       · rw [if_pos (by rw [h1, hm]), h1, hm]
         simp
@@ -54,7 +89,7 @@ theorem pderiv_prim (ω : τ → MvPowerSeries τ k)
           rw [hn]; exact tsub_add_eq_add_tsub hle
         have e2 : m - Finsupp.single w 1 + Finsupp.single w 1 = m := tsub_add_cancel_of_le hle
         have e3 : (m - Finsupp.single w 1 : τ →₀ ℕ) v = m v := by
-          simp [Finsupp.single_apply, hw, Ne.symm hw]
+          simp [Ne.symm hw]
         have e4' : (m - Finsupp.single w 1 : τ →₀ ℕ) w + 1 = m w := by
           rw [Finsupp.tsub_apply, Finsupp.single_eq_same]; omega
         have e4 : ((m - Finsupp.single w 1 : τ →₀ ℕ) w : k) + 1 = (m w : k) := by

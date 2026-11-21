@@ -1,8 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.QuotientEigenDifference
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.MultiplicationKernelIdentity
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemAddValuationIntegerRingNormalizedIff
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SingleMemOfMem
+import Mathlib.Algebra.GroupWithZero.Submonoid.CancelMulZero
+import Mathlib.RingTheory.PicardGroup
 open scoped NNReal
 open GlobalTheory.IndefiniteRowSideFullHecke.MultiplicationKernelIdentity GlobalTheory.HerbrandBridge
 
@@ -29,7 +28,7 @@ theorem mem_of_components : ∀ (C : Type) [Field C] (w : Valuation C ℝ≥0) (
     · simp only [smul_pi_apply, Pi.single_eq_same, smul_vec_apply]
       rw [← mul_assoc, ← Subring.coe_mul, Finset.prod_erase_mul _ _ (Finset.mem_univ s')]
     · intro s _ e
-      simp [smul_pi_apply, Pi.single_apply, Ne.symm e]
+      simp [smul_pi_apply, Ne.symm e]
     · simp
   rw [key]
   exact sum_mem fun s _ => F.smul_mem _ (hbx s)

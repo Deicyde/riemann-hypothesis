@@ -1,5 +1,7 @@
-import Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.TCoreDef
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.PolBridge
+import Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.MultidegAdd
 
 noncomputable section
 

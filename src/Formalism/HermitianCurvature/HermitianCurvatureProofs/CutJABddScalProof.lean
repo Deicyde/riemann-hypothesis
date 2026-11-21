@@ -1,7 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJABddScalBound
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJABddGen
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.SlicesFiniteRegularityBuilt
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.TriangleInequalityAtPlace
 
 open Formalism.FourierDecayAlt
 

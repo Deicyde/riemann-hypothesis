@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DetSNeZero
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsBilinearFischerPairingMatrixEntryPolynomia
 open MvPolynomial Formalism.BasicNotions.TH GlobalTheory.CharPair
 
 namespace GlobalTheory.CharPair.SDown
@@ -73,20 +75,20 @@ theorem pderiv_u_mS (a : Fin P) (c : Fin S) (a0 : Fin P) (b0 : Fin Q) :
     pderiv ((Sum.inl a, Sum.inr c) : Ln P Q 0 S) (mS P Q S a0 b0) =
       if a0 = a then X (Sum.inr b0, Sum.inr c) else 0 := by
   classical
-  simp [mS, map_sum, Derivation.leibniz, pderiv_X, Pi.single_apply, ite_and, Finset.sum_ite_eq, Finset.sum_ite_eq']
+  simp [mS, map_sum, Derivation.leibniz, pderiv_X, Pi.single_apply, ite_and, Finset.sum_ite_eq']
 
 theorem pderiv_t_mS (b : Fin Q) (c : Fin S) (a0 : Fin P) (b0 : Fin Q) :
     pderiv ((Sum.inr b, Sum.inr c) : Ln P Q 0 S) (mS P Q S a0 b0) =
       if b0 = b then X (Sum.inl a0, Sum.inr c) else 0 := by
   classical
-  simp [mS, map_sum, Derivation.leibniz, pderiv_X, Pi.single_apply, ite_and, Finset.sum_ite_eq, Finset.sum_ite_eq']
+  simp [mS, map_sum, Derivation.leibniz, pderiv_X, Pi.single_apply, ite_and, Finset.sum_ite_eq']
 
 theorem pderiv_u_detS (h : Q ≤ S) (a : Fin P) (c : Fin S) :
     pderiv ((Sum.inl a, Sum.inr c) : Ln P Q 0 S) (detS P Q S h) = 0 := by
   classical
   rw [detS, derivation_det]
   refine Finset.sum_eq_zero fun i _ => Matrix.det_eq_zero_of_row_eq_zero i fun j => ?_
-  simp [pderiv_X, Pi.single_apply]
+  simp [pderiv_X]
 
 theorem sum_X_pderiv_detS (h : Q ≤ S) (b b' : Fin Q) :
     ∑ c : Fin S, X ((Sum.inr b', Sum.inr c) : Ln P Q 0 S) * pderiv (Sum.inr b, Sum.inr c) (detS P Q S h) =
@@ -102,8 +104,8 @@ theorem sum_X_pderiv_detS (h : Q ≤ S) (b b' : Fin Q) :
     intro i j
     rw [hD]
     by_cases hi : i = b
-    · subst hi; simp [pderiv_X, Pi.single_apply, Finset.sum_ite_eq, Finset.sum_ite_eq']
-    · simp [pderiv_X, Pi.single_apply, hi]
+    · subst hi; simp [pderiv_X, Pi.single_apply, Finset.sum_ite_eq]
+    · simp [pderiv_X, hi]
   simp_rw [hrow]
   rw [Finset.sum_eq_single b]
   · simp only [if_true]
@@ -114,7 +116,7 @@ theorem sum_X_pderiv_detS (h : Q ≤ S) (b b' : Fin Q) :
       by_cases hi : i = b' <;> simp [Matrix.updateRow_apply, hi]
     · refine Matrix.det_zero_of_row_eq hb ?_
       ext j
-      simp [Matrix.updateRow_apply, Ne.symm hb]
+      simp [Matrix.updateRow_apply]
   · intro i _ hi
     refine Matrix.det_eq_zero_of_row_eq_zero i fun j => ?_
     simp [hi]

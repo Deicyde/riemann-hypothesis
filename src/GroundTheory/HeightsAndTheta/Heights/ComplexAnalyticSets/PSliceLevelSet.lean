@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceLevelSet
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceLevelSetSmooth
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PCutOffDominated
-import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.LogIntegrableOnOfLogIntegrable
+import Mathlib.Analysis.Calculus.BumpFunction.Convolution
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

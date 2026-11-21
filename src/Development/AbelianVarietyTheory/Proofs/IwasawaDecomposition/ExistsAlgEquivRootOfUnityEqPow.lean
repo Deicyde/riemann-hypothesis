@@ -1,6 +1,10 @@
-import Mathlib
-import Formalism.LocalRingCardinality.AdicCompletionLocal.LocTied
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsCrisP
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.LevelLetterCocycles.DataNLoc
+import Mathlib.FieldTheory.Galois.Profinite
+import Mathlib.RingTheory.Frobenius
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.Invariant.Profinite
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 open Formalism Formalism.BasicNotions Formalism.BasicNotions.Loc GlobalTheory.MemLoc
 open scoped Formalism.Per

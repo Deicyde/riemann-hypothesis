@@ -1,6 +1,7 @@
-import Mathlib
-import Formalism.PadicSubsetSums.CentralIdempotents.IsConstituent
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PadicSubsetSums.CentralIdempotents.GaloisConjCentralIdempotent
+import Mathlib.RepresentationTheory.FinGroupCharZero
 
 open Polynomial CategoryTheory Formalism.IrreducibleCountingLemmas.TYPES
 

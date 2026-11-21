@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PotentialTheory.HessCEqZeroOfEventuallyEqZero
 import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.ConvergenceStatements
+import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.Telescoping
+import ReciprocityTheory.AnalyticForms.PotentialTheory.IntegrableOnTargetOfTsupport
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.AnalyticLimit

@@ -1,5 +1,6 @@
-import Formalism.SharpRestriction.CuspSpanNormBounds.UnimodularSchurMeasures.ProjectionCountCuspOfTrivialIdempotent
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.UnimodularSchurMeasures.ArchimedeanRestrictionStronglyContinuous
+import Formalism.SharpRestriction.CuspSpanNormBounds.UnimodularSchurMeasures.KernelConditionsIffWithoutRegularRep
 
 noncomputable section
 

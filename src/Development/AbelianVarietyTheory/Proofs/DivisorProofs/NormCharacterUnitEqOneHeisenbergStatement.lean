@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormCharacterUnitEqOneHeisenberg
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntIndMemSB
 
 open MeasureTheory Matrix ValuativeRel
 

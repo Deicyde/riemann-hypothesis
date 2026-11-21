@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.Brauer.IsBrauerEquivalentIffNonemptyAlgEquiv
 import GroundTheory.Brauer.BaseChangeCSA
 set_option maxSynthPendingDepth 1

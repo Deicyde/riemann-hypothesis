@@ -1,9 +1,10 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.SeparableMatrixStability.MapEta
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.SeparableMatrixStability.PlSub
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.ProLUnits
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebraHeight.DGmap
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebraHeight.ChEltOne
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebraHeight.DToDetCH
+import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.PatchedSupportCompletions
 open IsLocalRing Matrix Filter UpperTheory.V.Alg UpperTheory.V.W UpperTheory.V.AlgebraTools UpperTheory.V.Pa
 
 private theorem exists_prime_power_pow_eq_one (l n N : ℕ) {B E : Type} [CommRing B] [Ring E] [Algebra B E] (m : Ideal B)
@@ -78,7 +79,7 @@ private theorem chi_diag {n : ℕ} {k G : Type} [CommRing k] [Group G] (χ : Fin
       show diagonal (fun i => (χ i g : k)) = 1
       simp [h]
     ext1 a b
-    by_cases hab : a = b <;> simp [GDet.repAlg, e, hab, Matrix.one_apply]
+    by_cases hab : a = b <;> simp [GDet.repAlg, e, hab]
   rw [this, det_diagonal]
   simp
 

@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.Brauer
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.FiniteSetOfNsmulEqZeroQZ
-import GroundTheory.ProfiniteCohomology.GlobalClassFormation.RealPlaces
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

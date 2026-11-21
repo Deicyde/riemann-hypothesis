@@ -1,9 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.ThClassPinsRec
 import Development.AbelianVarietyTheory.BlockTheory.ExistenceTori.CoefficientSpaceWeights
 import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.ThetaLetterEquivConjugate
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.GeneralLinearGroupCharEqOneOfDetEqOne
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.FiniteNotIsUnitOneAddSmul
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.EqZeroOfMul
 
 set_option autoImplicit false

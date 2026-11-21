@@ -1,7 +1,11 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.StatementsBlocksLeadSandwich
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsEventualPolyLine
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsPolySandwich
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
+import Mathlib.Data.Int.Star
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.IndefiniteRowSideFullHecke.LowerBoundFree

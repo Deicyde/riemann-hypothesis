@@ -1,8 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ActsInf
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigALocalPartThetaStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigALocalPartIntegralStatement
@@ -51,7 +47,7 @@ theorem coneInfInt_sigma : ∀ (hKP : GlobalTheory.ThK.KP) (F E : Type) [Field F
     intro x hx
     have h : mat x * Matrix.vecMulVec (incV F H.x) (incV F H'.y) = Matrix.vecMulVec (incV F H.x) (incV F H'.y) :=
       (Matrix.mul_vecMulVec _ _ _).trans (by rw [hx])
-    simp only [actAB, shiftA, Units.val_one, one_smul, Prod.snd_one, Prod.fst]
+    simp only [actAB, shiftA, Units.val_one, one_smul]
     simpa [mat] using h
   have hunipfix : ∀ n ∈ unip σ G.V H, mat n *ᵥ incV F H.x = incV F H.x := by
     intro n hn

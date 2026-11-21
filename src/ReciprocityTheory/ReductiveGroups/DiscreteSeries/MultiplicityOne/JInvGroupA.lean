@@ -1,5 +1,6 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.StDiagExists
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.UnitaryGroupStructuralFacts
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.StDefs
 
 noncomputable section
 
@@ -185,12 +186,12 @@ section mem
 theorem bvec_offW (j : Fin (2 * r + k + 1)) (hj : ¬ isW k r j) : ∀ l, isW k r l → bvec j l = 0 := by
   intro l hl
   have h : l ≠ j := fun h => hj (h ▸ hl)
-  simp [bvec, Pi.single_apply, h]
+  simp [bvec, h]
 
 theorem bvec_supW (j : Fin (2 * r + k + 1)) (hj : isW k r j) : ∀ l, ¬ isW k r l → bvec j l = 0 := by
   intro l hl
   have h : l ≠ j := fun h => hl (h ▸ hj)
-  simp [bvec, Pi.single_apply, h]
+  simp [bvec, h]
 
 theorem not_isW_eI (a : Fin r) : ¬ isW k r (eI k r a) := by
   show ¬ (r ≤ a.val ∧ a.val ≤ r + k)

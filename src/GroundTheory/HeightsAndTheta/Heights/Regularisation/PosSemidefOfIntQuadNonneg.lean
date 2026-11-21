@@ -1,5 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Regularisation.Statements
+import Mathlib.Analysis.Complex.CoveringMap
+import Mathlib.Analysis.Convex.Contractible
+import Mathlib.Analysis.SpecialFunctions.Complex.Analytic
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.Topology.Homotopy.Lifting
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.Regular

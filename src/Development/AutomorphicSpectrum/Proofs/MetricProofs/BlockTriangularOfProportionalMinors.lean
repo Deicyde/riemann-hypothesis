@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.IsLocSec
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.MinorIJMap
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.BlockDiagonalMinorVanishing
+import Mathlib.Data.Fin.Tuple.Sort
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
 open MvPolynomial MeasureTheory Filter Topology Matrix ReciprocityTheory.AnForm ReciprocityTheory.AnForm.M ReciprocityTheory.AnForm.P ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.AI.I1 ReciprocityTheory.ChartRestriction.G.AI.I2 ReciprocityTheory.ChartRestriction.G.AI.I4 GlobalTheory.CompanionTheory.Ar.PB GroundTheory.Heights₂.Heights GroundTheory.Heights₂.Heights.LowerBoundFree
 open scoped ComplexOrder Classical
 open GlobalTheory.CompanionTheory.Ar.PB.WSq GlobalTheory.CompanionTheory.Ar.PB.WSq.Sec GlobalTheory.CompanionTheory.Ar.PB.CovMap.LocImg
@@ -69,8 +70,8 @@ theorem eq_zero_of_minors (B : Matrix (Fin N) (Fin N) ℂ) (hB : B.det ≠ 0) (S
     have h1 : Mᵀ.updateCol x v = (B.submatrix (Function.update e x r) e)ᵀ := by
       ext a b
       by_cases hb : b = x
-      · subst hb; simp [Matrix.updateCol_apply, v]
-      · simp [Matrix.updateCol_apply, hb, M, Function.update_of_ne hb]
+      · subst hb; simp [v]
+      · simp [hb, M]
     rw [Matrix.cramer_apply, h1, Matrix.det_transpose]
     exact det_submatrix_eq_zero B S hA _ x (by simpa using hr)
   have hv : Mᵀ.det • v = 0 := by rw [← Matrix.mulVec_cramer, hcr, Matrix.mulVec_zero]

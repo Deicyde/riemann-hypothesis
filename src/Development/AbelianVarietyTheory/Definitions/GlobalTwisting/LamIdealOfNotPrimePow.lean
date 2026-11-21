@@ -1,6 +1,15 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.RayPrimes
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.NonemptyRayDataOfNeZero
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.Analysis.Complex.ExponentialBounds
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -155,7 +164,7 @@ theorem count_odd (N : ℕ) : |∑ n ∈ Icc 1 N, ao n - N / 2| ≤ 1 / 2 := by
         simp [h, this]; ring
       · have : Odd (k+1) := by rw [Nat.odd_add_one]; simpa using h
         simp [h, this]; ring
-  rw [this]; unfold ao; split_ifs <;> simp [abs_le] <;> norm_num
+  rw [this]; unfold ao; split_ifs <;> simp <;> norm_num
 
 theorem tsum_odd (t : ℝ) (ht : 0 < t) :
     ∑' n : ℕ, ao n * Real.exp (-(t * n)) = Real.exp (-t) / (1 - Real.exp (-t) ^ 2) := by

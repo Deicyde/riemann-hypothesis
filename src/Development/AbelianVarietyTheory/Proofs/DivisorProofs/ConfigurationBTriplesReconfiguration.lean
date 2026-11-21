@@ -1,10 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeIntZero
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IdemSmulUnitary
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocCharEqValZpow
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBStabilizerGlobalEval
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigALocalPartProduct
 

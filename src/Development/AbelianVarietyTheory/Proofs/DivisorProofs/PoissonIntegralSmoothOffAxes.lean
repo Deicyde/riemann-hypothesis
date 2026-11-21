@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.PshPoisson
-import ReciprocityTheory.AnalyticForms.PotentialTheory.PshShiftA
+import Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension
 open Filter Topology Set Metric MeasureTheory ReciprocityTheory.AnForm
 open scoped ContDiff Convolution
 
@@ -114,7 +114,7 @@ theorem poissonInt_update_contDiffOn (e : ℕ) (S : Finset (Fin e)) (i : Fin e) 
     · rw [indicator_of_notMem ht, indicator_of_notMem ht]; simp
   refine (hcomp.const_smul (2 * π)⁻¹).congr ?_
   intro z hz
-  simp only [Function.comp_apply, Pi.smul_apply]
+  simp only [Function.comp_apply]
   rw [key z hz]
   rfl
 

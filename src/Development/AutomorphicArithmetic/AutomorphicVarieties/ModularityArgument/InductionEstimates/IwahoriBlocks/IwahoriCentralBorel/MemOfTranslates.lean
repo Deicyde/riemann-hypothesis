@@ -1,11 +1,10 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.InductionEstimates.IwahoriBlocks.SimpleIn
-import Development.AutomorphicArithmetic.Foundations.Convolution.GeneralizedMeasures.HeckeFinAlt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.RestScalar
 import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.SphRank
-import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.CutIrr
 import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.EigBasic
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.InductionEstimates.IwahoriBlocks.IwahoriCentralBorel.PiHomExt
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.InductionEstimates.IwahoriBlocks.IwahoriCentralBorel.LevLaws
+import Development.AbelianVarietyTheory.Definitions.Foundations.MeasurePreservingRmulQuotMeas
 
 open MeasureTheory NumberField IsDedekindDomain Filter Topology
 open GroundTheory.Automorphic GroundTheory.Automorphic.Reduction GroundTheory.Automorphic.RightCosetSpace
@@ -55,7 +54,7 @@ private theorem mem_of_translates (π : UnitaryRep G H) {τ Q : Submodule ℂ H}
     induction hv using Submodule.span_induction with
     | mem x hx =>
       obtain ⟨γ, rfl⟩ := hx
-      exact Submodule.subset_span ⟨g * γ, by simp [UnitaryRep.map_mul_apply]⟩
+      exact Submodule.subset_span ⟨g * γ, by simp⟩
     | zero => simp
     | add x y _ _ hx hy =>
       rw [map_add]

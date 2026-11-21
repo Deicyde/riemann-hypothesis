@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Variable
 import Formalism.LocalRingCardinality.DataHost
-import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.HostFacts
 
 namespace Formalism.BasicNotions.Host
 

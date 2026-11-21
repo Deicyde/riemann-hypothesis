@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.BridgeDeepQ
-import Formalism.SharpRestriction.CuspSpanNormBounds.SGauge
 
 noncomputable section
 

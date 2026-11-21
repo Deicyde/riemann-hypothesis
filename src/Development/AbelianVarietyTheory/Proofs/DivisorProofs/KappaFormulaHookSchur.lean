@@ -1,9 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.AltCoeffRho
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AlternatingCoefficientFormulaStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagDegreeVandermondeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HookFunctionalPowerSumStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HookFunctionalPowerSumOtherStatement
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
 
 noncomputable section
 open MvPolynomial Finset GlobalTheory.FlagHook Formalism.DegreeFormula

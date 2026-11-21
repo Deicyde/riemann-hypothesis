@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LatticeCountingBound.IndexDefs
 
 noncomputable section
@@ -68,7 +69,7 @@ theorem dualL_oLat (k : ℕ) : dualL (oLat E k) = oLat E k := by
       intro c
       have hs : (Pi.single c 1 : Fin k → E) ∈ oLat E k := by
         rw [mem_oLat]
-        exact ⟨Pi.single c 1, by funext d; by_cases h : d = c <;> simp [Pi.single_apply, h]⟩
+        exact ⟨Pi.single c 1, by funext d; by_cases h : d = c <;> simp [h]⟩
       have := ht' _ hs
       simpa [dotProduct, Pi.single_apply] using this
     choose x hx using fun c => RingHom.mem_range.mp (h1 c)

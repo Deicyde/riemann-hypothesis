@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.StatementsSympl
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
+import Mathlib.Analysis.Matrix.PosDef
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

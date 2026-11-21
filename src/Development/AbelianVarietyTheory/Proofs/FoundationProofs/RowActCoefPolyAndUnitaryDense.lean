@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.PublishedFoundations.FiniteIntertwining
-import Formalism.BranchSandwichDivisors.DivFromPassageAndNorm
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.PolyFn
 
 open MvPolynomial Formalism.BasicNotions Formalism.GradedWeylDivisibility GlobalTheory.Branching

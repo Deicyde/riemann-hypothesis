@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.OuterProductMatrix
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.LinearFormRadicalRankOne
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.PointStep
 
 open Matrix MeasureTheory Formalism.QuantumDeterminants Formalism.FourierDecayAlt
 open scoped ComplexConjugate

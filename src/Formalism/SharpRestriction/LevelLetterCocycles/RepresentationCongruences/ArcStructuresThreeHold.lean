@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.ExistsGaloisExtendingAlgHom
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.FinrankEqOneOfBijectiveBis
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.SmulPowDifferenceIdentity

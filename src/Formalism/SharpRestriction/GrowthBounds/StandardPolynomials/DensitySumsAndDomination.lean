@@ -1,7 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.RestSegCore
 import Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.RecursionWithDensities
-import Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.LatticeLeSpanPsiImage
-import Formalism.SharpRestriction.GrowthBounds.CoarseMultiplicity.DivDerZero
 
 noncomputable section
 
@@ -45,7 +45,7 @@ theorem multideg_single' [DecidableEq ι] (a : ι) (c : Fin n) (k : ℕ) (i : ι
   by_cases h : i = a
   · subst h
     simp [Finsupp.single_apply]
-  · simp [Finsupp.single_apply, Ne.symm h, h]
+  · simp [h]
 
 theorem pol_X' [DecidableEq ι] [Nontrivial K] (a : ι) (c : Fin n) :
     (X (a, c) : MvPolynomial (ι × Fin n) K) ∈ Pol K n (fun i => if i = a then 1 else 0) := by

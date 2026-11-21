@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.BlochKatoPhases
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.IntegralHeckeForms
 
 noncomputable section

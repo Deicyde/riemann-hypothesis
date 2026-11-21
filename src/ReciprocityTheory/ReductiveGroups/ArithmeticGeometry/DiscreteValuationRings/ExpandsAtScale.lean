@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.PullGen
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.RValue
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.PullExp
 
 set_option autoImplicit false
@@ -37,7 +38,7 @@ lemma const_pull' {Y Z : Scheme.{0}} (φ : Y ⟶ Z) (pY : Y ⟶ Spec (CommRingCa
     (hφ : φ ≫ pZ = pY) (r : R) {U : Z.Opens} {W : Y.Opens} (h : W ≤ φ ⁻¹ᵁ U) :
     (Y.presheaf.map (homOfLE h).op).hom ((φ.app U).hom (resTop U (scal pZ r))) = resTop W (scal pY r) := by
   subst hφ
-  simp only [rs, resTop, scal, Scheme.Hom.comp_appTop, CommRingCat.comp_apply]
+  simp only [resTop, scal, Scheme.Hom.comp_appTop, CommRingCat.comp_apply]
   have key := congrArg (fun f => (CommRingCat.Hom.hom f) ((pZ.appTop).hom ((Scheme.ΓSpecIso (CommRingCat.of R)).inv.hom r)))
     (φ.naturality (homOfLE (le_top : U ≤ ⊤)).op)
   simp only [CommRingCat.comp_apply] at key
@@ -175,7 +176,7 @@ theorem exists_uR (D : DegData V (maximalIdeal V)) {O : Type} [CommRing O] [Star
     · show (lift η[D.toPre.P.A] η[D.toPre.P.A]).left ≫ (snd _ _ ≫ oa.onB.act a).left = _
       rw [← Over.comp_left, lift_snd_assoc, IsMonHom.one_hom]
   rw [fsum_empty, e]
-  simp [fsum, Fin.sum_univ_six, rosatiε, ← Finsupp.single_add]
+  simp [fsum, Fin.sum_univ_six, rosatiε]
 
 lemma scal_pull {Y Z : Scheme.{0}} (φ : Y ⟶ Z) (pY : Y ⟶ Spec (CommRingCat.of V)) (pZ : Z ⟶ Spec (CommRingCat.of V))
     (hφ : φ ≫ pZ = pY) (r : V) : φ.appTop.hom (scal pZ r) = scal pY r := by
@@ -238,7 +239,7 @@ lemma scal_unit_K (lam : V) (hlam : lam ≠ 0) {W : (pullback G.hom (jK V)).Open
     congr 1
     have := congrArg (fun f => (CommRingCat.Hom.hom f) lam)
       (Scheme.ΓSpecIso_inv_naturality (CommRingCat.ofHom (algebraMap V (FractionRing V))))
-    simp only [CommRingCat.comp_apply, CommRingCat.hom_ofHom] at this
+    simp only at this
     exact this.symm
   rw [e]
   exact (hK.map _).map _ |>.map _

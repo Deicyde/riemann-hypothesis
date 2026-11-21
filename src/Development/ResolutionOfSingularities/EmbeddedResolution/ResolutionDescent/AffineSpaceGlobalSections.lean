@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.ResolutionOfSingularities.EmbeddedResolution.EtaleCoordinates.AffineSpaceCoordinates
+import Mathlib.RingTheory.WittVector.IsPoly
 universe u
 
 open CategoryTheory AlgebraicGeometry TopologicalSpace

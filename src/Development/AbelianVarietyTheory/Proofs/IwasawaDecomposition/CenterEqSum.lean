@@ -1,15 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.CenLocOfCenReal
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.CoreEq
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.NoFormsOff
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsRhoPtOfSplitting
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsComp
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.DepthZeroWild
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.DepthZeroSupport
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LocalGlobalAboveL
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ExistsXdAllIff
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.JumpsCardOfBuilt
-import Formalism.LocalToGlobal.Divisibility.ProjLemmas
 
 open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formalism.L2 Formalism.L2.Host Formalism.L2.NT Formalism.IndefR.NX NumberField IsDedekindDomain GlobalTheory.Mem GlobalTheory.Mem.Col2 GlobalTheory.Mem.Top GlobalTheory.Mem.Top.GroupRetwisting GlobalTheory.Mem.Top.Bl GlobalTheory.Mem.R3 GlobalTheory.Mem.R3.Rw GlobalTheory.HeightCounting GlobalTheory.HeightCounting.Up
 attribute [local instance] Formalism.BasicNotions.Host.cmStar GlobalTheory.TypeRec.factG
@@ -31,7 +24,7 @@ theorem center_eq_sum {G : Type} [Group G] [Fintype G] (z : MonoidAlgebra ℂ G)
     conv_lhs => rw [← MonoidAlgebra.sum_coeff_single z]
     rw [Finsupp.sum_fintype _ _ (by simp)]
     refine Finset.sum_congr rfl fun g _ => ?_
-    simp [MonoidAlgebra.of_apply, MonoidAlgebra.smul_single']
+    simp [MonoidAlgebra.of_apply]
   have hc : (Fintype.card G : ℂ) ≠ 0 := Nat.cast_ne_zero.2 Fintype.card_ne_zero
   calc z = (Fintype.card G : ℂ)⁻¹ • ∑ h : G, MonoidAlgebra.of ℂ G h * z * MonoidAlgebra.of ℂ G h⁻¹ := by
         simp only [h1, Finset.sum_const, Finset.card_univ]
@@ -61,8 +54,8 @@ theorem avgK_coeff {K : Type} [Field K] {G H : Type} [Group G] [Fintype G] [Grou
     (g y : G) : σ ((avgK K g).coeff y) = (avgC (e g)).coeff (e y) := by
   simp only [avgK, avgC, MonoidAlgebra.of_apply]
   simp only [MonoidAlgebra.coeff_smul, MonoidAlgebra.coeff_sum, MonoidAlgebra.coeff_single,
-    Finsupp.smul_apply, Finsupp.coe_finset_sum, Finset.sum_apply, Finsupp.single_apply, smul_eq_mul, map_mul, map_inv₀,
-    map_natCast, map_sum, apply_ite, map_one, map_zero]
+    Finsupp.smul_apply, Finsupp.coe_finset_sum, Finset.sum_apply, smul_eq_mul, map_mul, map_inv₀,
+    map_natCast, map_sum]
   rw [Fintype.card_congr e.toEquiv]
   congr 1
   refine Fintype.sum_equiv e.toEquiv _ _ fun h => ?_
@@ -92,7 +85,7 @@ theorem lin_center {G W : Type} [Group G] [Fintype G] [AddCommGroup W] [Module �
   rw [← Finset.sum_smul]
   congr 1
   conv_rhs => rw [center_eq_sum _ z.2]
-  simp [MonoidAlgebra.coeff_sum, MonoidAlgebra.coeff_smul, Finsupp.coe_finset_sum, Finset.sum_apply]
+  simp [MonoidAlgebra.coeff_sum, MonoidAlgebra.coeff_smul, Finset.sum_apply]
 
 theorem avgK_comm (K : Type) [Field K] {G : Type} [Group G] [Fintype G] (g : G) (b : MonoidAlgebra K G) :
     b * avgK K g = avgK K g * b := by

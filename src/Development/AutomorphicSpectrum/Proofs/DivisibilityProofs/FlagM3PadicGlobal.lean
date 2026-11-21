@@ -1,8 +1,8 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.LocalAtPlaces
-import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.StatementsFlagIndependence
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.DivisibilityProofs.CycNumIntAndComb
 import Development.AutomorphicSpectrum.Proofs.DivisibilityProofs.FinitePlacesModelFamilyStatement
+import Mathlib.GroupTheory.FiniteAbelian.Basic
 open MvPolynomial GroundTheory.Heights₂.Heights.NumbersDVR GlobalTheory.CompanionTheory.Ar.Num GlobalTheory.CompanionTheory.Ar.Top GroundTheory.Heights₂.Heights.ModelLeaves
 open ReciprocityTheory.ChartRestriction.G.Geo (HermLine IsSmoothHerm IsArithVar IsHorizontal mcPts mCoordIdeal IsIntersectionFamily IsIntersectionSystem IntersectionSystem ptsIntegral geoNum charOf recR arInt ChartBundle chartRing)
 
@@ -202,7 +202,7 @@ theorem prime_ne_zero_field (hh : IsHorizontal (mCoordIdeal y)) (p : Nat.Primes)
   apply C_prime_notMem hh p
   change _ ∈ RingHom.ker _
   rw [RingHom.mem_ker]
-  simp [ReciprocityTheory.ChartRestriction.G.Geo.mConeMap, h]
+  simp [ReciprocityTheory.ChartRestriction.G.Geo.mConeMap]
   exact (map_natCast (C : Ω →+* MvPolynomial K Ω) (p : ℕ)).symm.trans (by rw [h, map_zero])
 
 variable {Ψ : Type} [Fintype Ψ] [DecidableEq Ψ] {N : ℕ}

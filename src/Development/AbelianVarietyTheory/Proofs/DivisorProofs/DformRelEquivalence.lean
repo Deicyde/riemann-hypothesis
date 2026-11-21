@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.TraceDefinitePairsEqAutomorphicTrace
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RelatedPairsOrbitalTermEq
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinsumOrbitFibreSwap
@@ -25,7 +26,7 @@ theorem dform_rel_equivalence : Equivalence (DForm.Rel (G := G)) := by
       rw [← sh_mul', Units.inv_mul, sh_one_eq]
     rw [hβ]
     simp only [← Algebra.smul_def, mul_smul_comm, smul_mul_assoc, smul_smul, mul_assoc, e, mul_one,
-      inv_mul_cancel₀ hs.ne', mul_inv_cancel₀ hs.ne', one_smul, Units.inv_mul_cancel_left]
+      mul_inv_cancel₀ hs.ne', one_smul, Units.inv_mul_cancel_left]
   · obtain ⟨y, s, hs, hβ⟩ := h
     obtain ⟨y', s', hs', hβ'⟩ := h'
     refine ⟨y' * y, s' * s, mul_pos hs' hs, ?_⟩

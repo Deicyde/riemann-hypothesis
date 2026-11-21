@@ -1,11 +1,12 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ComapBcComp
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsPullbackPbMap
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ChartPullbacks.BaseChangeKernels.Affine
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FreeModuleComplementSupportCompact
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BijectiveLinearCombinationOfRankAtStalkStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemSupportQuotientSpanIffOfIsPushoutStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SectionsFiniteFlatRankOfFiniteFlatStatement
+import Mathlib.RingTheory.Spectrum.Prime.Module
 
 noncomputable section
 
@@ -47,7 +48,7 @@ theorem basic_iff (e : Module.Basis (Fin N) A B) (σ : Fin r ↪ Fin N) {T : Sch
   have hf : (fun c : Fin r → Γ(T, U) => ∑ k, ((proj y).app U).hom (c k) * gens e σ y U k) =
       Fintype.linearCombination Γ(T, U) (gens e σ y U) := by
     ext c
-    simp [Fintype.linearCombination_apply, Algebra.smul_def]
+    simp
     rfl
   change Function.Bijective (fun c : Fin r → Γ(T, U) =>
     ∑ k, ((proj y).app U).hom (c k) * gens e σ y U k) ↔ _

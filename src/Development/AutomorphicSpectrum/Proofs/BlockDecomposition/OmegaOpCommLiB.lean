@@ -1,10 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.CuspRapidDecaySiegelGL
-import GroundTheory.AutomorphicForms.CuspidalDiscreteness.CuspFormsHeight
-import GroundTheory.AutomorphicForms.CuspidalDiscreteness.DecayUniform
-import GroundTheory.AutomorphicForms.AutomorphicFormSpaces.GKStable
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SmMemArchSmooth
-import Development.AutomorphicSpectrum.Proofs.HermitianForms.CasOfCapelliVec
+import GroundTheory.AutomorphicForms.AutomorphicFormSpaces.GKStableCartan
+import GroundTheory.AutomorphicForms.GKModules.Casimir
 
 set_option maxSynthPendingDepth 1
 

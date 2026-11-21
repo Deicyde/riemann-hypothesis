@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.ThickFrames.MarkedLow
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThickFrames.expectationSpec
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ChoiceOfTops
 

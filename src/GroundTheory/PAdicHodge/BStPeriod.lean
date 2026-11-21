@@ -1,7 +1,8 @@
-import Mathlib
-import GroundTheory.PAdicHodge.ThetaBDeRhamPlusFieldCycloUnitBdRZpow
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.PAdicHodge.LogMul
-import GroundTheory.PAdicHodge.TiltValuation
+import GroundTheory.PAdicHodge.BdRAlgCl
+import GroundTheory.PAdicHodge.UntiltFrobeniusEquivSymmEpsilonNeOne
 set_option maxSynthPendingDepth 1
 
 noncomputable section

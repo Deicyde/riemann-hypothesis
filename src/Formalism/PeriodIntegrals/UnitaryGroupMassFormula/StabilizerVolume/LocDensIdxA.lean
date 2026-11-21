@@ -1,5 +1,11 @@
-import Mathlib
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerVolume.LocDensIdxH
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GlobalSchurBounds.GeneralLinearActions.GenusMassVolumes
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.Topology.Compactification.OnePoint.ProjectiveLine
 
 noncomputable section
 
@@ -74,7 +80,7 @@ theorem fix2 {F : Type} [Field F] (C : Matrix (Fin 2) (Fin 2) F) (hC : C ≠ 1) 
     intro K _ _ x hx
     have := congrFun hx i
     simp only [Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.map_apply] at this
-    fin_cases i <;> simp [Matrix.sub_apply, Matrix.one_apply] at this ⊢ <;> linear_combination this
+    fin_cases i <;> simp [Matrix.sub_apply] at this ⊢ <;> linear_combination this
   have key : ∀ (K : Type) [Field K] [Algebra F K] (x : Fin 2 → K),
       Matrix.mulVec (C.map (algebraMap F K)) x = x →
       x 0 * algebraMap F K (u 1) = x 1 * algebraMap F K (u 0) := by

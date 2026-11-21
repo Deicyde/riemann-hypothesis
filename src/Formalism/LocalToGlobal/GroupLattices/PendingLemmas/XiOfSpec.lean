@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.PendingLemmas.DetOfColSpanEq
 import Formalism.LocalToGlobal.GroupLattices.PendingLemmas.WeightUpdateAtPlace
 

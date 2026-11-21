@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementC
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.JointInstanceTheoremA
 
 namespace Formalism.FourierDecayAlt.P
 

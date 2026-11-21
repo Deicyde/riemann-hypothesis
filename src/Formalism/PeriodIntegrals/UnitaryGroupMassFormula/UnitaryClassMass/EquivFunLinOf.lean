@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnitaryClassMass.Development
 
 open NumberField PI.UJClassFin PI.UJClassMass Formalism.HermitianLatticesTheory Formalism.ThetaLiftIndependence
@@ -41,7 +43,7 @@ theorem Lam_mul_sfin (σ : E →ₐ[F] E) {M : ℕ} (J : Matrix (Fin M) (Fin M) 
   simp only [UJClassFin.abelian₂, Set.mem_setOf_eq, mul_inv_rev]
   unfold finMat at hk ⊢
   unfold HA.mat at hk ⊢
-  simp only [Subgroup.coe_mul, Units.val_mul, ← AlgHom.mapMatrix_apply, map_mul] at hk ⊢
+  simp only [← AlgHom.mapMatrix_apply] at hk ⊢
   have e : ∀ a c : HA (AF F) σ J, (a * c).1 = a.1 * c.1 := fun a c => rfl
   rw [e, Units.val_mul, map_mul]
   simp only [AlgHom.mapMatrix_apply, ← Matrix.mulVec_mulVec] at hk ⊢
@@ -86,7 +88,7 @@ theorem isomStep : IsomStep := by
     simp only [LinearMap.compl₂_apply, LinearMap.comp_apply, LinearEquiv.coe_coe, linOf_basis]
     rw [show h (b i) (b j) = gramOf h b i j from (hG i j).symm, ← hU]
     simp only [Matrix.mul_apply, Formalism.UG.cT, Matrix.transpose_apply, Matrix.map_apply, hG,
-      AlgHom.coe_toRingHom, RingHom.coe_coe, hσ, Finset.sum_mul, Finset.mul_sum, map_sum,
+      RingHom.coe_coe, hσ, Finset.sum_mul, Finset.mul_sum, map_sum,
       map_smulₛₗ, LinearMap.sum_apply, LinearMap.smul_apply, smul_eq_mul, starRingEnd_apply,
       RingHom.id_apply]
     first

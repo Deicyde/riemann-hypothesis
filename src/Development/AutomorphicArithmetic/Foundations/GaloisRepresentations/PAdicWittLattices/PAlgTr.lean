@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.PAdicWittLattices.SplitsBasic
 
 open CategoryTheory Limits AlgebraicGeometry GlobalTheory.EtC GlobalTheory.GalV GlobalTheory.HodgeCoh TensorProduct UpperTheory.Gal.G3
@@ -10,7 +11,7 @@ private theorem trace_pi_eq_sum {C J : Type} [CommRing C] [Fintype J] (a : J →
   rw [Algebra.trace_apply, LinearMap.trace_eq_matrix_trace C (Pi.basisFun C J), Matrix.trace]
   apply Finset.sum_congr rfl
   intro j _
-  simp [LinearMap.toMatrix_apply, Pi.single_apply]
+  simp
 
 theorem UpperTheory.Gal.G3.pAlgTr :
     AlgTr := by

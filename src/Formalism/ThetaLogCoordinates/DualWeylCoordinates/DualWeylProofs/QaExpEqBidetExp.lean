@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.DualWeylCoordinates.DualWeylProofs.QaNuAntitone
-import Formalism.GradedWeylDivisibility.FinalD
+import Formalism.GradedWeylDivisibility.FinalC
+import Formalism.GradedWeylDivisibility.FockSpaceTableaux.LDbasisLemmas
 
 noncomputable section
 
@@ -66,7 +68,7 @@ lemma qa_shape {n : ℕ} [NeZero n] {mu : Fin n → ℤ} (hmu : Dominant mu) :
     exact Finset.sum_coe_sort (TCols mu) (fun c => if (t : ℕ) < colH mu c then 1 else 0)
   have h3 : ((TCols mu).filter fun c => (t : ℕ) < colH mu c) = Finset.Ioc (mu (lastIdx n)) (mu t) := by
     ext c
-    have h0 : mu t ≤ mu 0 := hmu' (by simp [Fin.le_iff_val_le_val])
+    have h0 : mu t ≤ mu 0 := hmu' (by simp)
     simp only [TCols, Finset.mem_filter, Finset.mem_Ioc, lt_colH_iff_le hmu']
     constructor <;> intro h <;> omega
   exact h1.trans (h2.trans (by rw [h3, Int.card_Ioc]))

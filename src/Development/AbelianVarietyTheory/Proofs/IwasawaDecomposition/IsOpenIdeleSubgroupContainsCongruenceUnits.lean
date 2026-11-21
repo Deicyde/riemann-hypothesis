@@ -1,6 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsUniqueHcharOfFiniteOrder
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LocUnitApply
+import Formalism.LocalToGlobal.UnitaryNorms.IsUnitaryNormOf
+import Mathlib.Tactic.ENatToNat
 
 noncomputable section
 

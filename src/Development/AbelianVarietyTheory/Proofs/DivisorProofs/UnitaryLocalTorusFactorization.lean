@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAtAlt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUniqueLeviElement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLeviElementTorusPart
 
@@ -79,7 +77,7 @@ lemma dg_unitary (σ : E →ₐ[F] E) (hσ : ∀ z, σ (σ z) = z) (t : (AE F E)
   have e1 : t.1 * (t⁻¹).1 = 1 := t.mul_inv
   have e2 : cA σ (t⁻¹).1 * cA σ t.1 = 1 := by rw [← map_mul, t.inv_mul, map_one]
   ext i j; fin_cases i <;> fin_cases j <;>
-    simp [dg, hyp, incM, Matrix.mul_apply, Fin.sum_univ_two, Matrix.diagonal_apply, hc, e1, e2]
+    simp [dg, hyp, incM, Matrix.mul_apply, Matrix.diagonal_apply, hc, e1, e2]
 
 variable {d d₁ : ℕ} {hd : d = d₁ + 2} {H' : Plane E d d₁}
 
@@ -163,12 +161,12 @@ lemma at_blkT {R : Type} [Zero R] (ev : AF F → R) (σ : E →ₐ[F] E) {d₁ :
     simpa using this
   ext (k | k) (l | l)
   · simpa [blkT, Matrix.one_apply] using h3 k l
-  · simp [blkT, Matrix.one_apply]
-  · simp [blkT, Matrix.one_apply]
+  · simp [blkT]
+  · simp [blkT]
   · fin_cases k <;> fin_cases l
     · simpa [blkT, dg, Matrix.one_apply] using h1
-    · simp [blkT, dg, Matrix.one_apply]
-    · simp [blkT, dg, Matrix.one_apply]
+    · simp [blkT, dg]
+    · simp [blkT, dg]
     · simpa [blkT, dg, Matrix.one_apply] using h2
 
 theorem exists_isLevi_at : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [NumberField E] [Algebra F E] (σ : E →ₐ[F] E)

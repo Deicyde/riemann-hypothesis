@@ -1,8 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaKeySectionValuationBoundsDifferent
-import Formalism.LocalToGlobal.ProjectiveLattices.IntAllProofFree
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsLevelGoodAtAllPrimesAndIdx
 import Development.AbelianVarietyTheory.Counterexamples.ModuliSurvey.ExistsGoodLevel
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 noncomputable section
 

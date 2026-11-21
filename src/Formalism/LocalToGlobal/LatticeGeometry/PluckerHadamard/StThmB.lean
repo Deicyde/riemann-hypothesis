@@ -1,7 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.LatticeGeometry.ShimuraSheafOfIndefiniteSubspace
 import Formalism.LocalToGlobal.LatticeGeometry.ExtPtHt
-import Formalism.LocalToGlobal.LatticeGeometry.ViewsC
-import Formalism.SharpRestriction.Divisibility.HeightShare
 import Formalism.SharpRestriction.Divisibility.ProductFirstParts
 
 noncomputable section

@@ -1,6 +1,12 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.HodgeTateChains.Statement
 import Formalism.WindowSums.AnnihilatorPolynomials.ValProd
 import Formalism.WindowSums.AnnihilatorPolynomials.ZpowVal
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
+import Mathlib.Data.Rat.Star
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 

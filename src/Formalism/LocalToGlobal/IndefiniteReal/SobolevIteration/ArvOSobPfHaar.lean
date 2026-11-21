@@ -1,4 +1,5 @@
-import Formalism.LocalToGlobal.IndefiniteReal.SobolevIteration.ArvOSobPfK
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.SobolevIteration.ArvOSobPfBdd
 
 noncomputable section

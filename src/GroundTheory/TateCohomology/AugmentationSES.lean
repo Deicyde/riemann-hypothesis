@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.TateCohomology.InducedNorm
 import GroundTheory.TateCohomology.DimensionShift
 import GroundTheory.TateCohomology.TateConnecting
+import Mathlib.RingTheory.TotallySplit
 set_option maxSynthPendingDepth 1
 
 open CategoryTheory MonoidalCategory

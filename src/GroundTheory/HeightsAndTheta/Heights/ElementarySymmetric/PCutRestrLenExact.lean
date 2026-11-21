@@ -1,9 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ElementarySymmetric.StCutRestrLenExact
-import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.GenericPointSectionHypotheses
-import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.TwistAlg
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PSectionMulInj
-import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PStepThreeAway
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PSurjectiveClosed
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PSectionCountDropFiltStep
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PZeroIdealChart

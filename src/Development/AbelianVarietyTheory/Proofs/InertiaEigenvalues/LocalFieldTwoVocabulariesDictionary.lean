@@ -1,5 +1,7 @@
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.ExistsRealisesNeOne
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.Langlands
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.HasExponentZeroIff
+import GroundTheory.LocalFields.LocalZetaChar
 open NumberField IsDedekindDomain ValuativeRel Formalism.ConjugateSelfDual ReciprocityTheory.Gal GlobalTheory.PRep GlobalTheory.SmGL GlobalTheory.SplitWeil GlobalTheory.LocGL GlobalTheory.WeilDeligne GlobalTheory.LocLanglands GlobalTheory.DelEps GlobalTheory.DelGlob
 open GroundTheory.Global (HeckeCharacter localAdelicChar)
 open GroundTheory.Automorphic.GodementSection (localChar)

@@ -1,9 +1,13 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.SplitEigenfunctions.ThetaLiftEqAnisotropicPart
-import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.GaussianProducts.ExistsRowSec
 import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.GaussianProducts.MomChar
 import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.GaussianProducts.CharZero
 import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.GaussianProducts.ProdExt
 import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.GaussianProducts.GaussSchwartz
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerOrbitVolume.DetAdmA
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeilStabilizerVolume.TopoAF
+import Mathlib.MeasureTheory.Order.Group.Lattice
 
 open NumberField IsDedekindDomain MeasureTheory Matrix Topology Filter
 open Neutral.B1 Formalism.L2.Host Formalism.ConjugateSelfDual GlobalTheory.CuspRep GlobalTheory.GalOfCusp UpperTheory.V UpperTheory.V.Af UpperTheory.V.Published GroundTheory.Global GroundTheory.Automorphic.GJMatrix
@@ -302,7 +306,7 @@ theorem UpperTheory.ConvolutionTheory.RankTwoDescent.momKill :
           rw [le_mul_inv_iff₀ hpos]
           exact h1
         simp only [norm_mul, Complex.norm_real, wt, hy, if_true, Set.indicator_of_mem, Pi.one_apply,
-          norm_one, one_mul, Real.norm_eq_abs, abs_of_pos (Real.exp_pos _)]
+          one_mul, Real.norm_eq_abs, abs_of_pos (Real.exp_pos _)]
         rw [abs_of_pos (inv_pos.2 hpos), ← mul_assoc, ← mul_assoc]
         exact mul_le_mul_of_nonneg_right h2 (norm_nonneg _)
       · simp only [Set.indicator_of_notMem hy]

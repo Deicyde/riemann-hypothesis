@@ -1,4 +1,4 @@
-import Formalism.PeriodIntegrals.UpqRep
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.IsLowUnitH
 
 open MeasureTheory Matrix Finset

@@ -1,8 +1,9 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.HeightKernels.LatticeBundleObjects
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.ImportsMore
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.ImportsTer
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.ImportsBis
+import GroundTheory.HeightsAndTheta.Heights.HeightKernels.ImportsRest
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.IndefiniteRowSideFullHecke.Kernels
@@ -40,7 +41,7 @@ theorem single_mem_idealLattice {n : ℕ} {a : Fin n → FractionalIdeal (𝓞 K
   intro y _
   by_cases hy : y = x
   · subst hy; simpa using hv y (Set.mem_univ _)
-  · simp [Pi.single_apply, hy]
+  · simp [hy]
 
 theorem coordLine_isInternal {n : ℕ} (a : Fin n → FractionalIdeal (𝓞 K)⁰ K) :
     DirectSum.IsInternal (coordLine a) := by
@@ -63,11 +64,11 @@ theorem coordLine_isInternal {n : ℕ} (a : Fin n → FractionalIdeal (𝓞 K)�
   · refine eq_top_iff.mpr fun w _ => ?_
     have hw : w = ∑ x, (⟨_, single_mem_idealLattice w x⟩ : idealLattice a) := by
       ext y
-      simp [Submodule.coe_sum, Finset.sum_apply, Pi.single_apply]
+      simp [Finset.sum_apply, Pi.single_apply]
     rw [hw]
     refine Submodule.sum_mem _ fun x _ => Submodule.mem_iSup_of_mem x (mem_coordLine.mpr ?_)
     intro y hy
-    simp [Pi.single_apply, hy]
+    simp [hy]
 
 theorem coordLine_orthogonal {n : ℕ} (a : Fin n → FractionalIdeal (𝓞 K)⁰ K)
     (d : (K →+* ℂ) → Fin n → ℝ) (hd : ∀ σ x, 0 < d σ x) (hc : ∀ σ x, d (conjugate σ) x = d σ x) :

@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.LocalToGlobal.BesselHermitianTheta.LemmasChr
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IntegrandSZero
 import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.WeilRepresentationUnitaryPair
 open scoped ComplexConjugate Matrix NNReal

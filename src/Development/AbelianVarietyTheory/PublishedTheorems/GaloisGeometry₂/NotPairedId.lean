@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.GelfandKazhdanDual
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.PolarizedPairLineIff
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FinGLMemOfPow
 
 noncomputable section
 

@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CosetVecEq
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ActAApply
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemPrincipalCongruenceLevelSubgroupIffIntegralCoStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemBlockCongruenceLevelSubgroupIffStabilizerEntrStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitBlockCosetThetaVectorMemThetaFunctionsStatement
@@ -77,7 +76,7 @@ theorem congOne_conj {𝔪 : Ideal (𝓞 D.host.E)} {N : ℕ} {g κ : GA D N} (h
         ((g : GL (Fin N) (AE D)) : Matrix (Fin N) (Fin N) (AE D)) = 1 := by
       rw [← Units.val_mul, inv_mul_cancel, Units.val_one]
     rw [Matrix.mul_sub, Matrix.sub_mul, Matrix.mul_one, h1]
-    simp [Subgroup.coe_mul, Subgroup.coe_inv, Units.val_mul]
+    simp [Subgroup.coe_mul, Units.val_mul]
   have hgi := (mem_intG g).1 hg
   rw [e, Matrix.mul_apply]
   refine sum_mem fun l _ => ?_

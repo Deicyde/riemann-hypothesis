@@ -1,27 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaEqB
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsThetaSubSelf
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HoweDualityUnitary
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HoweDualityReal
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.HypothesesAbsDet
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsSubAug
 
-import Development.AbelianVarietyTheory.Definitions.Divisors.MatchingOfParts
-import Development.AbelianVarietyTheory.Definitions.Divisors.RankEqCardIffExistsFrameMatrixFirstColumnBlock
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsPairOfIsTriple
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaActionExistsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LinearWeilFunctionalTranslationEquivariant
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalUnitaryGroupSurjectsGeneralLinearRight
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalUnitaryDeterminedBySplitImage
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsUnitDetOfCartan
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LiftVOneMul
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalCharacterSmoothUnitary
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsOpenKerOfContinuous
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsSubquotientDetRepParInd
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLinearFunctionalGoodPlace
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StandardAdelicCharacterNontrivialAtPlaces
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchrodingerPreservesSchwartzBruhat
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LagrangianDecompositionWeilStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LocalWeilLinearModelActionStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LocalWeilLinearModelUnitaryStatement
@@ -193,7 +176,7 @@ theorem omA_left (ν : kˣ →* ℂˣ) (g : GL (Fin n) k) (Φ : Matrix (Fin n) (
       GlobalTheory.SplitWeil.om 1 (1 : GL (Fin m) k) g Φ := by
   funext X
   simp only [GlobalTheory.SplitFlip.omA, GlobalTheory.SplitWeil.om, GlobalTheory.SplitFlip.apow, Pi.smul_apply, smul_eq_mul, map_one,
-    Units.val_one, one_mul, mul_one, inv_one, GlobalTheory.SplitFlip.invT_val, Matrix.transpose_one, Fintype.card_fin,
+    Units.val_one, one_mul, mul_one, inv_one, Fintype.card_fin,
     MonoidHom.one_apply, GlobalTheory.SplitFlip.gdet]
   simp [GlobalTheory.SplitWeil.nabs]
   rw [Complex.ofReal_cpow (NNReal.coe_nonneg _)]

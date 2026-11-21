@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.MaxWeightGL1EqOne
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StabilizerEquivLocPart
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MassFormulaConjugationActionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OrbitSumLocalParts
 

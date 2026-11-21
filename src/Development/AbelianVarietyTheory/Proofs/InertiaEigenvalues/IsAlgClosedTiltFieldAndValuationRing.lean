@@ -1,6 +1,9 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.LocalSituation
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.AdicCompletionLocal.InstIsAdicCompleteOCSpanSingletonSetCast
+import Formalism.SharpRestriction.LevelLetterCocycles.DataNLoc
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Order.KonigLemma
 
 open Polynomial Ideal
 

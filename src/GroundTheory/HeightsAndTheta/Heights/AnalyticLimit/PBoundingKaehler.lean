@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.PKaehlerBound
 import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.StBoundingKaehler
 set_option maxSynthPendingDepth 1

@@ -1,10 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InducesPl
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsGrpPullbackTangentCombination
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ToOverSurjective
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsTateWeil
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsUnitOfPowEqOne
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MemLatHTIffNormTanEvLe
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsEquivOfIsGrpPullback
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.UniqueIntegralLiftNormPInverse
 
 set_option autoImplicit false
 
@@ -121,7 +123,7 @@ end General
 theorem epsMul_comp {S : Type} [CommRing S] (a b : S) : spMap (epsMul a) ≫ spMap (epsMul b) = spMap (epsMul (a * b)) := by
   rw [spMap_spMap]
   congr 1
-  ext s <;> simp [epsMul, mul_assoc]
+  ext s <;> simp [epsMul]
 
 theorem isCombAtG_scale {E : Type} [Field E] [NumberField E] [IsCMField E] {H : ReciprocityTheory.ChartRestriction.G.Geo.Tor.Host E}
     {X : Scheme.{0}} {t : SAB H X} {S : Type} [CommRing S] {x : Sp S ⟶ X} {m : ℕ}

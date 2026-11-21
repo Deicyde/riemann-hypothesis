@@ -1,5 +1,7 @@
-import PositivityTheory.AutomorphicForms.PublishedInputs.HilbertEisenstein.SSmooth
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.HilbertEisenstein.LibOpenLevel
+import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.RTwist
 
 noncomputable section
 

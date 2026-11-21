@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsPotential
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.OneSubPhiOntoOfFilZero
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.BhattScholzeCrystallineLattices
-import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.ConductorExponents
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.TameInertiaCharactersPowersOfOmegaStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CrystallineOfInertiaTrivialOnCrystallinePeriodsStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.PotentiallyCrystallineModuleEqCrystallineRestric
@@ -424,7 +421,7 @@ theorem GlobalTheory.GoodLatt.main : GlobalTheory.Published.FontaineBcris → �
   refine ⟨hI1 ?_, ?_⟩
   · intro g hg hgF x hx
     have hA := dpcris_ann _ _ _ hthr ⟨g, hIK hg⟩ (Polynomial.X - Polynomial.C 1) ?_ x (hD x hx)
-    · simp only [map_sub, Polynomial.aeval_X, Polynomial.aeval_C, map_one] at hA
+    · simp only [map_sub, Polynomial.aeval_X, map_one] at hA
       have h2 : actVB (pc Pl h hN hF hS).PD T.ρ g (@id (T.V ⊗[ℚ_[l]] Pl.R.B) x) -
           @id (T.V ⊗[ℚ_[l]] Pl.R.B) x = 0 := hA
       exact sub_eq_zero.1 h2

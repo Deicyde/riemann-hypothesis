@@ -1,5 +1,6 @@
-import Development.WeilBound.CoreStatements.PublishedTheorems.GlobalEulerCharacteristic.GaloisCohomologyRatios.Places
-import GroundTheory.ProfiniteCohomology.PoitouTate.PoitouTateNineTermGs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.ProfiniteCohomology.LocalEulerCharacteristic.Scalars
 
 open CategoryTheory GroundTheory.ProfCoh
 

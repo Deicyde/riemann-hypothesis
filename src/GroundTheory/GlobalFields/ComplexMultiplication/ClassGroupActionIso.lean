@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.ComplexMultiplication.AnalyticAlgebraic
 import GroundTheory.ArithmeticGeometry.AbelianVarieties.KodairaNeron
 import GroundTheory.GlobalFields.ComplexMultiplication.JInvariantSurjective

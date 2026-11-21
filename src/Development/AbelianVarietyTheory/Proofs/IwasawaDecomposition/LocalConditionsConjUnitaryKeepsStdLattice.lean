@@ -1,9 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LocalCondMoveDecoratedLattice
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PointDeterminantEqNormOneClassOfLevel
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HermitianFormLastCoordinateUniformizerVectorSelf
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ValuedInvMulLe
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.DiamondElementIntegralSupportLastRow
+import Formalism.LocalRingCardinality.SpanPowerMembership.LocAtA
 
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Col Formalism.L2.DIV Formalism.L2.Ker Formalism.UG Formalism.L2.Forms GlobalTheory.Mem GlobalTheory.Mem.Chr GlobalTheory.Mem.Col2 GlobalTheory.Mem.Col2.TC GlobalTheory.Mem.Col2.TC.ChTw GlobalTheory.Mem.Col2.TC.ChTw.Match Matrix
 attribute [local instance] GlobalTheory.Mem.Col2.starE Formalism.BasicNotions.Host.cmStar
@@ -216,7 +216,7 @@ theorem conj_unitary_preserves_stdLat_of_ptOf : ∀ {B : Base} {X : PreX B.toPre
     have hTc : ((B.T u : ℕ) : 𝓞 B.host.E) =
         X.piT u * ⟨B.host.conj (X.piT u : B.host.E), hcI⟩ := by
       apply RingOfIntegers.ext
-      simp only [RingOfIntegers.coe_eq_algebraMap, map_mul, map_natCast]
+      simp only [RingOfIntegers.coe_eq_algebraMap, map_natCast]
       exact (X.piT_norm u).symm
     have hbc : bc (prV (E := B.host.E) (P.1.under (𝓞 B.host.F))) t = 1 := by
       apply hT

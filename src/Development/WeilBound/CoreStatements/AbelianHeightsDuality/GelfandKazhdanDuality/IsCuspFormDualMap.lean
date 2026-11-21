@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.DualIsConjByOne
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ConjOpInvolutive
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.IsNormalisedOfIsDiscrete
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.DifferentiableAtChart
+import Development.AutomorphicArithmetic.IntegralCasts.IsOpenStabOfMemNhds
 
 noncomputable section
 

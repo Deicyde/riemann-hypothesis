@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.ParConsts
-import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
-import Formalism.LocalRingCardinality.DataTheta
+import Mathlib.Analysis.InnerProductSpace.Positive
 
 open MeasureTheory Matrix Finset
 open scoped InnerProductSpace ContDiff ENNReal

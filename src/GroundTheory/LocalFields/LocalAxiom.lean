@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.LocalFields.LocalAxiomDictionary
 import GroundTheory.LocalFields.HerbrandLocal
 import GroundTheory.LocalFields.MaximalUnramified
-import GroundTheory.LocalFields.SeparableClosure
 import GroundTheory.LocalFields.SeparableClosureValuation
 
 namespace GroundTheory.LocalField

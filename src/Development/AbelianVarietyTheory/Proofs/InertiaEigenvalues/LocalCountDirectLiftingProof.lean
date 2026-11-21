@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LocMulVec
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LenModSpanSUnionLeOfDirectedStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LenModMonoLeftStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsMergedModulePushoutsContainBothStatement
@@ -8,6 +7,7 @@ import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.DualLatticeRan
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsTateDualLocalGaloisRepAtPlaceStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LiftAllOfBlochKatoLiftingFamilyAtPlaceStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.PushoutsMemSpanLocalSelmerPushoutsStatement
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.StepJumpDirect
 
 noncomputable section
 

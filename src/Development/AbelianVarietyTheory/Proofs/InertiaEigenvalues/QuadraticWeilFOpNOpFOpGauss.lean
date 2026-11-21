@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsStableGauss
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.NonemptyMeasAndReps
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.QuadraticStarStructure
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SelfDualMeasureExistsUniqueFourierInversion
+import Mathlib.Algebra.Order.Ring.Star
 
 open GlobalTheory.JR GlobalTheory.JR.WeilQuad Matrix MeasureTheory Filter Topology
 open scoped Pointwise
@@ -80,9 +80,9 @@ theorem setIntegral_add_left_mem {V : Type} [AddCommGroup V] [TopologicalSpace V
     funext y
     by_cases hy : y ∈ Λ
     · have h2 : w + y ∈ Λ := Λ.add_mem hw hy
-      simp [Set.indicator_apply, hy, h2]
+      simp [hy, h2]
     · have h2 : w + y ∉ Λ := fun h => hy (by simpa using Λ.sub_mem h hw)
-      simp [Set.indicator_apply, hy, h2]
+      simp [hy, h2]
   rw [this, integral_add_left_eq_self (fun y => Set.indicator (Λ : Set V) g y) w]
 
 variable {F E : Type} [NontriviallyNormedField F] [NontriviallyNormedField E] [NormedAlgebra F E] [StarRing E]

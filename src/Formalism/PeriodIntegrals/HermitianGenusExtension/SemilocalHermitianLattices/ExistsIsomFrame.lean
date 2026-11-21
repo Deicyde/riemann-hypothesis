@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
 import Formalism.PeriodIntegrals.HermitianGenusExtension.SemilocalHermitianLattices.ExistsNormOneOfPair
 import Formalism.PeriodIntegrals.HermitianGenusExtension.SemilocalHermitianLattices.ExistsIsomFix
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 

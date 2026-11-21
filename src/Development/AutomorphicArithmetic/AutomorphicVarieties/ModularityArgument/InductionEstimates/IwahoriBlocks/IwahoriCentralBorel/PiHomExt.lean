@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.InductionEstimates.IwahoriBlocks.SimpleIn
 import Development.AutomorphicArithmetic.Foundations.Convolution.GeneralizedMeasures.HeckeFinAlt
 import Development.AutomorphicArithmetic.Foundations.Convolution.ConvolutionKernels.KernelTransforms.LocEmb
@@ -101,7 +102,7 @@ theorem UpperTheory.V.Z.InvariantSubmoduleMonicPolynomial.IwahoriBlocks.embEx :
           by_cases h : i = a
           · subst h
             simp [tr, ha]
-          · simp [tr, h, Pi.mulSingle_eq_of_ne h]
+          · simp [tr, h]
         rw [e]
         exact ih.mul ((L (w a)).1.comp (continuous_apply a))
     have e : (fun g => ι (tr Finset.univ g)) = ι := by

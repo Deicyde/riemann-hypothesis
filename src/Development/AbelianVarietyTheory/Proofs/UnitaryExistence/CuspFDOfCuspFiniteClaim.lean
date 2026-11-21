@@ -1,7 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.CuspFree
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.SiegelSpaceAlgebraHolds
-import Development.AbelianVarietyTheory.BlockTheory.ExistenceTori.CuspMultiplicationClosed
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.ProjectiveLattices.JFDFree
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.BoundedSectionAlgebra
 
 noncomputable section
 

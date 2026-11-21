@@ -1,11 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VacTheta
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsBoundUnitary
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsRepsOfOpenCompact
 import Formalism.LocalToGlobal.GroupLattices.LevelCharts.FiniteClassSetOfFiniteIndex
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FrameEquivApply
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsAdelicPointFinitePartEqRealOne
-import Development.AbelianVarietyTheory.Counterexamples.HeightSurvey.EmbRelExistsUnique
+import Development.AbelianVarietyTheory.Definitions.Foundations.AestronglyMeasurableQuotMeasureIffLift
+import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ClassSumIntegral
 
 open NumberField MeasureTheory
 open scoped Classical

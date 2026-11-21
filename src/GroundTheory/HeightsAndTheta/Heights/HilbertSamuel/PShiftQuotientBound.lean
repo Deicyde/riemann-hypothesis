@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsShiftQuotientBound
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsHyperplaneRegularSection
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PShiftSectionBound
 set_option maxSynthPendingDepth 1

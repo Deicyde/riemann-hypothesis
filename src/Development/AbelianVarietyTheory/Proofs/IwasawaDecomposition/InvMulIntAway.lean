@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.OneSubMemIdS
 open NumberField IsDedekindDomain Matrix Formalism.L2.Col GlobalTheory.InertNbr
 open Formalism.L2.DIV (Pl kP St resS oToS idS cmpS)

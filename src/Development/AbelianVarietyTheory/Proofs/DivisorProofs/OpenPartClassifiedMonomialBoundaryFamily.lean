@@ -1,9 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasRigidCoords
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ShimuraObjectPullbackCompCancel
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsProperRelAmpleKTrivOfTrivialisationsGenerateStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUnitaryModuliObjectSpreadNormalDomainStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UniversalAbelianSchemeTorsionRationalFieldPointStatement
+import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsMonoFamNontrivial
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj IsLocalRing NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.AnForm.R
@@ -128,7 +129,7 @@ theorem openCls : ∀ {E : Type} [Field E] [NumberField E] [IsCMField E] {H : Ho
   have hs' : s' = spMap gA ≫ spMap (b'.comp incl) := by
     show (C.y ≫ pullback.fst _ _) ≫ Xo.s = _
     rw [Category.assoc, pullback.condition, ← Category.assoc, C.y_over, ← eR]
-    simp only [Category.assoc, spMap_comp']
+    simp only [spMap_comp']
   obtain ⟨o, ho, ⟨mo⟩⟩ := GlobalTheory.T.exists_unitaryModuliObject_spread_normal_domain Dw l c _ b' tO hprop hamp hkt htors (FractionRing R) gA s' oK hs' k₃
   obtain ⟨fX, ⟨hfs, ⟨mf⟩⟩, -⟩ := Xo.rep (Sp (Localization.Away (∏ i, C.s i))) (spMap (b'.comp incl)) inferInstance o
   have hfs' : fX ≫ Xo.s = spMap b' ≫ spMap incl := hfs.trans (spMap_comp' _ _).symm

@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.AutomorphicKernels.AbelianDeRham.AbelianHodgeDeRham.H1DimGeAbelianDim
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WedgeOfBijective
+import Mathlib.AlgebraicGeometry.QuasiAffine
 
 set_option autoImplicit false
 

@@ -1,6 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.ColMeas
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LangXRoot
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.WittVector.Complete
+import Mathlib.RingTheory.WittVector.DiscreteValuationRing
 
 open GlobalTheory.Col PowerSeries
 
@@ -130,7 +133,7 @@ theorem exists_step {d : ℕ} (N V E : Matrix (Fin d) (Fin d) (𝕎 k)) (hN : Is
   have hexp : (V + (p : 𝕎 k) ^ (n + 1) • Y).map φ - N * (V + (p : 𝕎 k) ^ (n + 1) • Y)
       = (V.map φ - N * V) + (p : 𝕎 k) ^ (n + 1) • (Y.map φ - N * Y) := by
     refine Matrix.ext fun i j => ?_
-    simp [Matrix.mul_add, Matrix.mul_smul, map_pow, map_natCast, φ]
+    simp [Matrix.mul_add, map_pow, map_natCast, φ]
     ring
   rw [hexp, hE]
   refine Matrix.ext fun i j => ?_
@@ -241,7 +244,7 @@ theorem lang_witt : ∀ (p : ℕ) [hp : Fact p.Prime] (k : Type) [Field k] [Char
     have e : Lm.map φ - Nm * Lm = (sq n).map φ - Nm * sq n + ((p : WittVector p k) ^ n) • (D.map φ - Nm * D) := by
       rw [hDn]
       refine Matrix.ext fun i j => ?_
-      simp [Matrix.mul_add, Matrix.mul_smul, map_pow, map_natCast, φ]
+      simp [Matrix.mul_add, map_pow, map_natCast, φ]
       ring
     have e2 := congrFun (congrFun e i) j
     rw [hE] at e2

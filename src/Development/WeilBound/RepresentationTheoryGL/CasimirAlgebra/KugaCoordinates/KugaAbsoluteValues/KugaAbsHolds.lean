@@ -1,10 +1,13 @@
-import Development.WeilBound.RepresentationTheoryGL.CasimirAlgebra.KugaCoordinates.KugaAbsoluteValues.KSumApply
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.CasimirAlgebra.KugaCoordinates.KugaSt
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CompInsertNthEq
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RemoveNthSuccVecCons
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.KDKDelApply
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.InvarianceContraction
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.AlternatingMapEqZeroOfSpan
+import Mathlib.RingTheory.PiTensorProduct
 
 noncomputable section
 

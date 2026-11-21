@@ -1,6 +1,7 @@
-import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.HostFacts
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.FrobeniusLocalisation.inertQ
 import Development.AutomorphicArithmetic.FrobeniusLocalisation.InertD
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.InertiaGaloisSymmetry.CycBasic
 
 open UpperTheory.HF
 open Formalism.HC

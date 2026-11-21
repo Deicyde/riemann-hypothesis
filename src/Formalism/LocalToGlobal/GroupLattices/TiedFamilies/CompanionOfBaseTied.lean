@@ -1,7 +1,9 @@
-import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.TieStd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.IntSplitOf
 import Formalism.SharpRestriction.GenusPolyhedralBounds.RelativeIndexClassSets.LocIdFr
 import Formalism.LocalToGlobal.HermitianForms.BothLemmas
+import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.TiedRec
 
 noncomputable section
 

@@ -1,5 +1,6 @@
-import Mathlib
-import Development.DiscreteGroups.GlobalIrreducibility.ExistsOfMemKOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.SpanPowerMembership.LocAtA
 
 open IsDedekindDomain NumberField
 

@@ -1,4 +1,8 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementM
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Tactic.ReduceModChar
 
 open Formalism.FourierDecayAlt.M Formalism.FourierDecayAlt Finset
 

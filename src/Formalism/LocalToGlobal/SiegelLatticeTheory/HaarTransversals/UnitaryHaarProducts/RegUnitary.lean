@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.ProjRows
 import Formalism.SharpRestriction.CuspSpanNormBounds.UnimodularSchurMeasures.RightRegularIsometricMultiplicative
+import Mathlib.MeasureTheory.Measure.ContinuousPreimage
 
 noncomputable section
 
@@ -311,7 +313,7 @@ theorem adele_tendsto (μf : Measure I.Gf) [SigmaFinite μf] {A : Set I.GA} (hA 
         = (fun x : I.Ginf => (x, y)) ⁻¹' A \ (fun x => x * g) ⁻¹' ((fun x : I.Ginf => (x, y)) ⁻¹' A) := by
     intro g y
     ext x
-    simp [Set.mem_diff]
+    simp
   have hmA : ∀ y : I.Gf, MeasurableSet ((fun x : I.Ginf => (x, y)) ⁻¹' A) := fun y => by
     first
     | exact hA.preimage measurable_prod_mk_right
@@ -702,9 +704,9 @@ theorem ind_tendsto {s : Set I.GA} (hs : MeasurableSet s) (hμs : (I.muA μf).re
     by_cases h1 : c * (x * ((g, 1) : I.GA)) ∈ s <;> by_cases h0 : x ∈ s
     · simp [Set.indicator_apply, h1, h0]
     · have hxE : x ∈ E g := hEx.mpr (Or.inl ⟨hP1.mp h1, fun h => h0 (hP0.mpr h)⟩)
-      simp [Set.indicator_apply, h1, h0, hxE]
+      simp [h1, h0, hxE]
     · have hxE : x ∈ E g := hEx.mpr (Or.inr ⟨hP0.mp h0, fun h => h1 (hP1.mpr h)⟩)
-      simp [Set.indicator_apply, h1, h0, hxE]
+      simp [h1, h0, hxE]
     · simp [Set.indicator_apply, h1, h0]
   have hET : ∀ g : I.Ginf, (I.muA μf).restrict fund (E g) ≤ I.muA μf (T g) := by
     intro g

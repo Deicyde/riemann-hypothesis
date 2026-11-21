@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.DepthPays
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ContDiffSetIntegralNat
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RowBesZeroE
 
 noncomputable section
@@ -89,7 +89,7 @@ theorem exists_adapted {Y V : HSp D} (d : HermitianOrthogonalExtensionData Y V 1
     (by rw [hm, show (frameMat V Y d.ι)ᴴ * V.gram * d.a = 0 from d.perp]; ext i j; simp)
     (by rw [hm, show d.aᴴ * V.gram * d.a = antiDiagonalSignGramMatrix 1 1 from d.gram]; ext i j
         obtain rfl := Subsingleton.elim i j
-        simp [antiDiagonalSignGramMatrix, Matrix.one_apply])
+        simp [antiDiagonalSignGramMatrix])
   choose ε fr h1 h2 h3 using H
   exact ⟨⟨ε, fr, h1, h2⟩, h3⟩
 

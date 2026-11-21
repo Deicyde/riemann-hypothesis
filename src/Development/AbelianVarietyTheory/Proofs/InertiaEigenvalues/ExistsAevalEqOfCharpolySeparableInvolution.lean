@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.UnitLemmaGroup
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CharpolyDvdPowFinrankOfAevalEqZero
+import Mathlib.RingTheory.Artinian.Instances
+import Mathlib.RingTheory.PicardGroup
 open GlobalTheory.UnitLemma Polynomial
 
 namespace GlobalTheory.UnitLemma

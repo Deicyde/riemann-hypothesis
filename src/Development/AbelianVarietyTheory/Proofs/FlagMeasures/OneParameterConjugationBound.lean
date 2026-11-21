@@ -1,14 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.CuspFrameWeights.ConvolutionSmoothL2
-import Development.AbelianVarietyTheory.Statements.CuspFrameWeights.DiscreteSpectrumKFiniteDecomposition
-import Formalism.HarderNarasimhan.ShiftInvariance
-import Development.AbelianVarietyTheory.Statements.CuspFrameWeights.EigenfunctionFiniteCoefficients
-import Formalism.RealPlaceAnalysis.FinalF
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.NormPosOfIsUnit
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsOrthonormalBasis
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.UnitaryRepMatrixCoefficientBoundStatement
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.HaarSubgroupBiInvariantStatement
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.UnipotentRadicalVolumeGrowthStatement
 
 open MeasureTheory NumberField Matrix Finset Formalism.MainNotions.S Formalism.REAL Formalism.QuantumDeterminants GlobalTheory.Count GlobalTheory.Dec GlobalTheory.DSId
 open scoped InnerProductSpace ComplexOrder ContDiff
@@ -28,7 +21,7 @@ lemma sq_integral_le {r : ℝ → ℝ} (hr : Continuous r) :
   rw [intervalIntegral.integral_sub h2 ((h1.const_mul (2 * a)).sub intervalIntegrable_const),
     intervalIntegral.integral_sub (h1.const_mul (2 * a)) intervalIntegrable_const,
     intervalIntegral.integral_const_mul, intervalIntegral.integral_const] at hnn
-  simp only [sub_zero, one_smul, smul_eq_mul, one_mul] at hnn
+  simp only [sub_zero, smul_eq_mul, one_mul] at hnn
   nlinarith
 
 lemma torus_lipschitz_l2_bound {G ι : Type} [Fintype ι] [TopologicalSpace G] [SecondCountableTopology G] [MeasurableSpace G]

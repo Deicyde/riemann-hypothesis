@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.BesselHermitianTheta.DefsReal
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.ExistsBlockOrd
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.TorusWeightVectorIffCartanWeightVector
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.FiniteDimKStableSubspaceKFiniteLie
 import ReciprocityTheory.GeometryOfNumbers.PluriharmonicAnalysis.LogDetSt
@@ -128,7 +128,7 @@ def twist (R : DSRep T) : DSRep T where
   schur x y := by
     have h1 : ∀ (x y : R.U.H) (g : T.G),
         ‖(inner ℂ y (((T.sq g : ℂˣ) : ℂ)⁻¹ • R.U.π g x) : ℂ)‖ = ‖(inner ℂ y (R.U.π g x) : ℂ)‖ := fun x y g => by
-      simp [inner_smul_right, norm_sq]
+      simp [norm_sq]
     have h2 := R.schur x y
     simp only [← h1 x y] at h2
     exact h2

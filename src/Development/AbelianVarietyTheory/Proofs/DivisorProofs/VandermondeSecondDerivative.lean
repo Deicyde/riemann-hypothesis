@@ -1,10 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecondChernDensity
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.JacobianDensityHermitianMetrics
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.JacobiDensityWeightedThetaIntegralZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagDegreeEqFormDegree
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VandermondeWeightedRootProductSum
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VandermondeLaplacianVanishesStatement
+import Mathlib.RingTheory.MvPolynomial.EulerIdentity
 open Filter Topology MeasureTheory Matrix
 open GlobalTheory GlobalTheory.HermFrame GlobalTheory.ArInt GlobalTheory.VdmRec GlobalTheory.ArchLim
 open GlobalTheory.MixDens (emb jacDens)

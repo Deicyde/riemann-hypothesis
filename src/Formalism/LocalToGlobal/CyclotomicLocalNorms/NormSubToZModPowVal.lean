@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.DataNLoc
+import Mathlib.NumberTheory.Cyclotomic.CyclotomicCharacter
+import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
 
 noncomputable section
 

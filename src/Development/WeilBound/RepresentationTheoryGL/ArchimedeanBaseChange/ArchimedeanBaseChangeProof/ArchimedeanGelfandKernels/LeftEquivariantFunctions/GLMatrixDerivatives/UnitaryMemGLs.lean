@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.ArchimedeanGelfandKernels.LeftEquivariantFunctions.GLMatrixDerivatives.FrameDer
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PositiveConeStructure
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LengthFunctionFactsHold
+import Mathlib.MeasureTheory.Measure.Haar.MulEquivHaarChar
 
 noncomputable section
 

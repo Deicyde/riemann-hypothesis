@@ -1,7 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.GeometricLemmaFiltration
-import GroundTheory.AutomorphicForms.GeometricLemma
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.IsSphericalTwistOfJacquetConstituentEmptyBlock
+import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.ExistsCellOfIsSubquotient
+import Mathlib.Data.Matrix.PEquiv
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
 set_option maxSynthPendingDepth 1
 open GlobalTheory.SmGL
 open GroundTheory.Automorphic.Parabolic (levi parabolicInd jacquetRep JacquetModule sqrtModular leviIncl cellLeviSub normInducing unipotentRadical)
@@ -24,11 +26,11 @@ def permU (s : n ≃ n) : GL n R where
   val_inv := by
     rw [PEquiv.mul_toMatrix_toPEquiv, PEquiv.toMatrix_toPEquiv_eq]
     ext i j
-    simp [Matrix.one_apply, Equiv.Perm.permMatrix, PEquiv.toMatrix_apply]
+    simp [Matrix.one_apply]
   inv_val := by
     rw [PEquiv.mul_toMatrix_toPEquiv, PEquiv.toMatrix_toPEquiv_eq]
     ext i j
-    simp [Matrix.one_apply, Equiv.Perm.permMatrix, PEquiv.toMatrix_apply]
+    simp [Matrix.one_apply]
 
 theorem permU_conj (s : n ≃ n) (M : GL n R) :
     permU s.symm * M * (permU s.symm)⁻¹ = reindexGL s M := by

@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsSummandTw
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.JointConditionsZpowers.BaseFont
+import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsDual1Dot
 
 open Formalism Formalism.MainNotions Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.MainNotions.N Formalism.WeaklyAdmissibleFiltrations NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Module GlobalTheory.Pass Formalism.MainNotions.PairedCharacterCondition GlobalTheory.Pass.LocDual
 
@@ -27,7 +28,7 @@ theorem loc_mulVec {k : ℕ} (M : GE D.nd →* Matrix (Fin k) (Fin k) (D.nd.O i)
   rw [RingHom.map_mulVec]
   congr 1
   ext p q
-  simp [Br.loc, Br.locM, Br.locO, mapM, Br.iota, Br.toLLK_alg]
+  simp [Br.loc, Br.locM, Br.locO, mapM, Br.toLLK_alg]
   rfl
 
 variable (r : D.nd.X i → (GE D.nd →* GL (Fin D.R.nV) (D.nd.O i))) (Xs : Set (D.nd.X i))

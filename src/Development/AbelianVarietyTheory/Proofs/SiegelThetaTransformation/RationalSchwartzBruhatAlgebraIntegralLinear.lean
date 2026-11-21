@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SpanningFamilies.IMemSiegel
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.FinsumQuotientOfLe
+import Mathlib.RingTheory.PiTensorProduct
 open Matrix Complex GlobalTheory.SW
 open scoped ComplexConjugate Real
 

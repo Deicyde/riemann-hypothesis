@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AutomorphicArithmetic.Foundations.EtaleClopenDescent.BothToSecondRelation
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CommutativeAlgebra.RepresentedByUnits
 open CategoryTheory Limits AlgebraicGeometry Opposite GlobalTheory.EtC LateralTheory.E.t_E6Cut UpperTheory.Aff
 

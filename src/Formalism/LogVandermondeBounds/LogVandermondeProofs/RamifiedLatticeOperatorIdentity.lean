@@ -1,4 +1,13 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LogVandermondeBounds.FinrankFiberSumZero
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace Formalism.LogVandermondeBounds.product_first_zeroth_parts
 
@@ -28,7 +37,7 @@ lemma pair_single_left (i : Fin r) (t : k) (x : Fin r → k) :
   unfold pair
   rw [Finset.sum_eq_single i]
   · simp
-  · intro j _ hj; simp [Pi.single_apply, hj]
+  · intro j _ hj; simp [hj]
   · simp
 
 lemma ne_zero_of_pair_eq_one {f x : Fin r → k} (h : pair f x = 1) : x ≠ 0 := by

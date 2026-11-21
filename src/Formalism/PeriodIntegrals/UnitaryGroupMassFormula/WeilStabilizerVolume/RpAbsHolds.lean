@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeilStabilizerVolume.KapIntegral
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeilStabilizerVolume.RestrProdSt
 
 noncomputable section
 
@@ -69,7 +70,7 @@ theorem rpAbs_holds : RPAbs := by
       refine ⟨?_, ?_⟩
       · rw [integral_congr_ae (hae S)]; simp [hs]
       · refine (integral_congr_ae ((hae S).fun_comp norm)).trans ?_
-        simp [hs, Function.comp_def]
+        simp [hs]
     have hint : Integrable (fun x => ∏ᶠ i, f i (x i)) (Measure.sum (kap m L)) :=
       integrable_sum_measure hIntS (summable_of_ne_finset_zero (s := S0.powerset)
         (fun S hS => (hzero S hS).2))

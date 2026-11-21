@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ExpTie
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.WickVanishing.MonoVal
+import Mathlib.Topology.Connected.Separation
 
 set_option autoImplicit false
 
@@ -48,9 +51,9 @@ theorem pderiv_subst {σ τ : Type} [Fintype σ] [DecidableEq σ] {a : σ → Mv
       simp only [MvPolynomial.coe_add, map_add, hsa, add_mul, Finset.sum_add_distrib, hp, hq]
     next p n hp =>
       simp only [MvPolynomial.coe_mul, MvPolynomial.coe_X, hm, subst_X ha, Derivation.leibniz, smul_eq_mul,
-        map_add, hsa, pderiv_X, add_mul, Finset.sum_add_distrib, hp, Pi.single_apply, apply_ite (subst a), h1, hz,
-        mul_one, mul_zero, ite_mul, zero_mul, Finset.sum_ite_eq, Finset.sum_ite_eq', Finset.mem_univ, if_true,
-        Finset.mul_sum, mul_assoc, mul_ite, one_mul]
+        hsa, pderiv_X, add_mul, Finset.sum_add_distrib, hp, Pi.single_apply, apply_ite (subst a), hz,
+        mul_one, mul_zero, ite_mul, zero_mul, Finset.sum_ite_eq, Finset.mem_univ, if_true,
+        Finset.mul_sum, mul_assoc, mul_ite]
   letI : UniformSpace S := ⊥
   haveI : DiscreteUniformity S := by first | exact ⟨rfl⟩ | exact inferInstance
   haveI : DiscreteTopology S := by first | exact inferInstance | exact ⟨rfl⟩
@@ -138,15 +141,15 @@ theorem dof_addF (u : Fin N → S) (g : PS S 1 N) :
         if j = i then (1 : PS S 2 N) else 0 := by
       by_cases h : j = i
       · subst h
-        simp [ReciprocityTheory.ChartRestriction.G.TB.MV.addF, pderiv_X, Pi.single_apply]
-      · simp [ReciprocityTheory.ChartRestriction.G.TB.MV.addF, pderiv_X, Pi.single_apply, h]
+        simp [ReciprocityTheory.ChartRestriction.G.TB.MV.addF]
+      · simp [ReciprocityTheory.ChartRestriction.G.TB.MV.addF, h]
     rw [hp, ev, ← coe_substAlgHom hs]
     split_ifs
     · exact map_one _
     · exact map_zero _
   simp only [Dof, h1]
   refine Finset.sum_congr rfl fun j _ => ?_
-  simp [mul_ite, Finset.sum_ite_eq, Finset.sum_ite_eq']
+  simp [mul_ite, Finset.sum_ite_eq]
 
 section Exp
 
@@ -196,7 +199,7 @@ theorem pderiv_cpy (b : Fin 2) (q : Fin N) (g : MvPowerSeries (Fin 1 × Fin N) S
   simp only [cpy, pderiv_X, Pi.single_apply, Prod.mk.injEq, mul_ite, mul_one, mul_zero]
   by_cases hb : b = 1
   · subst hb
-    simp [Finset.sum_ite_eq, Finset.sum_ite_eq']
+    simp [Finset.sum_ite_eq']
   · simp [hb]
 
 theorem key (h0 : ∀ j, constantCoeff (φ j) = 0) (w : Fin N → Fin d → S)
@@ -280,7 +283,7 @@ theorem dof_comp (q : Fin N) (g : PS S 1 d) :
   have hk : ∀ k : Fin d, pderiv S ((0 : Fin 1), q) (famL φ ((0 : Fin 1), k)) =
       ∑ i, subst (famL φ) (ev (n := 1) ![pt S d 0, 0] (pderiv S ((1 : Fin 2), i) (F k))) * C (w q i) :=
     fun k => key F φ h0 w hlin hhom q k
-  rw [dof_addF, Finset.sum_eq_single q (fun j _ hj => by simp [Pi.single_apply, hj]) (by simp)]
+  rw [dof_addF, Finset.sum_eq_single q (fun j _ hj => by simp [hj]) (by simp)]
   simp only [Pi.single_eq_same, map_one, one_mul]
   rw [pderiv_subst hL, Fintype.sum_prod_type, Fin.sum_univ_one]
   simp only [hk]
@@ -366,7 +369,7 @@ private theorem foldr_coeff_lemma_2 {S : Type} [CommRing S] {σ κ : Type} [Deci
       ring
     · intro l' hl'
       have hne : v l ≠ v l' := fun e => hnd.1 (by rw [hv e]; exact hl')
-      simp [hn l' (by simp [hl']), Finsupp.single_apply, hne]
+      simp [hn l' (by simp [hl']), hne]
 
 private theorem const_dpoly_lemma_3 {E : Type} [Field E] [NumberField E] [IsCMField E] {H : Host E} {Dw : Datum H}
     {S : Type} [CommRing S] (α : Lt1 Dw →₀ ℕ) (G : MvPowerSeries (Fin 1 × Fin (dL Dw)) S) :
@@ -377,7 +380,7 @@ private theorem const_dpoly_lemma_3 {E : Type} [Field E] [NumberField E] [IsCMFi
       PS S 1 (dL Dw) → PS S 1 (dL Dw)) = pderiv S ((0 : Fin 1), q) := by
     intro q
     funext f
-    rw [dof_addF, Finset.sum_eq_single q (fun j _ hj => by simp [Pi.single_apply, hj]) (by simp)]
+    rw [dof_addF, Finset.sum_eq_single q (fun j _ hj => by simp [hj]) (by simp)]
     simp
   by_cases h1 : (1 : S) = 0
   · haveI : Subsingleton S := subsingleton_of_zero_eq_one h1.symm
@@ -388,7 +391,7 @@ private theorem const_dpoly_lemma_3 {E : Type} [Field E] [NumberField E] [IsCMFi
   simp only [hD]
   rw [← coeff_zero_eq_constantCoeff_apply, foldr_coeff_lemma_2 (fun l => ((0 : Fin 1), ltIdx Dw l)) ?_ α G _
     (Finset.nodup_toList _) 0 (fun _ _ => by simp)]
-  · simp only [Finset.prod_toList, Finset.sum_toList, zero_add]
+  · simp only [zero_add]
     rw [expVal, Finsupp.mapDomain, Finsupp.prod_fintype, Finsupp.sum_fintype]
     all_goals simp
   · intro a b hab

@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.JDomBoundOfNnMaj
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.BetaSesquilinearity
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.RegularisedPairingViaPhase
 
 open Matrix MeasureTheory Filter Topology
 

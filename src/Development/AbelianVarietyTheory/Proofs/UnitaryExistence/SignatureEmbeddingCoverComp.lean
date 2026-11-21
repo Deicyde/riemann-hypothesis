@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.ExistenceTori.UnitaryDeterminantRoot
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.CoefChangeTypingsEquivOfValueWD
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.TransvectionEq
 
 set_option synthInstance.maxHeartbeats 200000
 set_option linter.unusedSectionVars false

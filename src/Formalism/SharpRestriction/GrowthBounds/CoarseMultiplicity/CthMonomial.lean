@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.CoarseMultiplicity.TopOddNeEnd
-import Formalism.SharpRestriction.GrowthBounds.PolBridge
 
 noncomputable section
 

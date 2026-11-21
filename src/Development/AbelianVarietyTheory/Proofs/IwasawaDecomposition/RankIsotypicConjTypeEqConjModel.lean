@@ -1,15 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.StableIffCarrierEq
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.WeilRepresentationUnitaryPair
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.DsExistsOfDiscreteSeriesExists
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.HarishChandraFinite
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsNormLeHeightPow
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinRepApply
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SignAtBasePlaceEqEmbedding
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.BlockFrameConjugationIdentity
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoreClausesOfWeakCharacterisation
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinrankKilledEqOfEqualMultiplicitiesStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConjugateModelsMultiplicityEqual
+import Formalism.LocalToGlobal.IndefiniteReal.ConjSubConjSub
 open Formalism.BasicNotions Formalism.MainNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix Formalism.L2.Theta Formalism.L2.DIV Formalism.L2.Indef Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.Mult Formalism.IndefR.Datum Formalism.IndefR.Cx
 open scoped TensorProduct InnerProductSpace
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
@@ -76,7 +68,7 @@ theorem cjS_add {n : ℕ} (π : Formalism.L2.NG.FinTyp D.host.E n) (x y : π.S) 
   Subtype.ext (funext fun _ => star_add _ _)
 
 theorem cjS_smul {n : ℕ} (π : Formalism.L2.NG.FinTyp D.host.E n) (a : ℂ) (x : π.S) : cjS π (a • x) = star a • cjS π x :=
-  Subtype.ext (funext fun _ => by simp [cjS, mul_comm])
+  Subtype.ext (funext fun _ => by simp [cjS])
 
 theorem conjT_conjT {n : ℕ} (π : Formalism.L2.NG.FinTyp D.host.E n) : principalLevelFrame.FinTyp.conjT (principalLevelFrame.FinTyp.conjT π) = π := by
   rcases π with ⟨S0, _, _, _, _⟩

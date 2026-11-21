@@ -1,4 +1,6 @@
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.OrbitQuotientTopology.ContinuousAtInvOfUh
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.CuspSpanNormBounds.RootMeasBig
 
 open Matrix MeasureTheory Measure Topology
 open scoped ENNReal
@@ -76,16 +78,16 @@ private theorem hpk_sq_lemma (k r : ℕ) : Hpk k r * Hpk k r = 1 := by
   · by_cases hij : i = j
     · subst hij
       rw [if_pos rfl]
-      simp only [Hpk, Fin.ext_iff, Fin.val_mk, eq_self_iff_true, and_true]
-      split_ifs <;> first | (exfalso; (try simp only [Fin.val_mk] at *); omega) | (simp_all; done) | norm_num
+      simp only [Hpk, Fin.ext_iff]
+      split_ifs <;> first | (exfalso; (try simp only at *); omega) | (simp_all; done) | norm_num
     · rw [if_neg hij]
       rw [Fin.ext_iff] at hij
-      simp only [Hpk, Fin.ext_iff, Fin.val_mk]
-      split_ifs <;> first | (exfalso; (try simp only [Fin.val_mk] at *); omega) | (simp_all; done) | norm_num
+      simp only [Hpk, Fin.ext_iff]
+      split_ifs <;> first | (exfalso; (try simp only at *); omega) | (simp_all; done) | norm_num
   · intro l _ hl
     rw [Ne, Fin.ext_iff, Fin.val_mk] at hl
     simp only [Hpk, Fin.ext_iff]
-    split_ifs at * <;> first | (exfalso; (try simp only [Fin.val_mk] at *); omega) | (simp_all; done) | norm_num
+    split_ifs at * <;> first | (exfalso; (try simp only at *); omega) | (simp_all; done) | norm_num
   · intro h
     exact absurd (Finset.mem_univ _) h
 

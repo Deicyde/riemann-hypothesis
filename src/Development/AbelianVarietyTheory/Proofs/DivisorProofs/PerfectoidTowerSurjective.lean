@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PrismaticDieudonnePerfd
+import BuildAid.Leniency.Open
 import ReciprocityTheory.DualLattices.ExistsPrimitiveRoot
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
 
 open Ideal WittVector
 

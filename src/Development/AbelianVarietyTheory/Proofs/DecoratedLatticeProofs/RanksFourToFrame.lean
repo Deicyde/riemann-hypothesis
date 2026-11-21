@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.ChainInst
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.PhiTopAgree
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ExistsAtTypeAndOrd
 
 open NumberField IsDedekindDomain MeasureTheory ValuativeRel Matrix

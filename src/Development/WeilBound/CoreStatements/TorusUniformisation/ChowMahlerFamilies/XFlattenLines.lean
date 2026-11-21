@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.IsLatticeFamily
-import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.BundleChernComparison
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.TorusUniformisation.ChowMahlerFamilies.XChartNoethFrac
 import Development.WeilBound.CoreStatements.TorusUniformisation.ChowMahlerFamilies.XCoherentGens
 import Development.WeilBound.CoreStatements.TorusUniformisation.ChowMahlerFamilies.X_join_model
@@ -56,7 +54,7 @@ theorem chartMon_join {Ω : Type} [Field Ω] {K K' : Type} [Fintype K] [Fintype 
   rw [Finset.prod_eq_single j]
   · simp
   · intro b _ hb
-    simp [Pi.single_apply, hb]
+    simp [hb]
   · intro h
     exact absurd (Finset.mem_univ j) h
 

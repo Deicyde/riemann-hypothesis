@@ -1,4 +1,8 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.LaplaceOperators.SpectralGap.CasOnLowStatement
+import Mathlib.Tactic.ENatToNat
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -38,10 +42,10 @@ theorem vogDrop (n : ℕ) : VogDropStatement n := by
   have key : vogSq ε (lowK ε lam - root a b) - vogSq ε (lowK ε lam) = 2 - 2 * (w a - w b) := by
     simp only [vogSq, nsq, dot, lowK, root]
     rw [← Finset.sum_sub_distrib, Fintype.sum_eq_add a b hab']
-    · simp [Pi.single_apply, hab', hab'.symm, w]
+    · simp [hab', hab'.symm, w]
       ring
     · rintro x ⟨hxa, hxb⟩
-      simp [Pi.single_apply, hxa, hxb]
+      simp [hxa, hxb]
   have hw_ab : w a - w b = (lam a - lam b) + (((b : ℕ) : ℝ) - (a : ℕ)) := by
     have ha := vogDrop_rhoSum ε a
     have hb := vogDrop_rhoSum ε b

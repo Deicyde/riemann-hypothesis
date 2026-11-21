@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.MirabolicDerivatives.ColMatMulGlEmbMat
+import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsSubquotientDetRepParInd
 
 noncomputable section
 
@@ -88,7 +90,7 @@ theorem hgp_block_mem (m j : ℕ) (h : MirabolicParabolic k m j) :
     simp [GlobalTheory.BZMir.eLast, GlobalTheory.BZMir.Leib.blockIndex_true_last]
   · have hne : GlobalTheory.BZMir.Leib.eGP m j ⟨true, b⟩ ≠ Fin.last (m + j) :=
       fun h' => hb ((GlobalTheory.BZMir.Leib.blockIndex_true_eq_last_iff m j b).1 h')
-    simp [GlobalTheory.BZMir.eLast, Pi.single_apply, hne, hb]
+    simp [GlobalTheory.BZMir.eLast, hne, hb]
 
 variable (k) in
 
@@ -152,7 +154,7 @@ theorem hpg_block_mem (i t : ℕ) (h : HPG k i t) :
     simp [GlobalTheory.BZMir.eLast, GlobalTheory.BZMir.Leib.ePG_false_last]
   · have hne : GlobalTheory.BZMir.Leib.ePG i t ⟨false, b⟩ ≠ Fin.last (i + t) :=
       fun h' => hb ((GlobalTheory.BZMir.Leib.ePG_false_eq_last_iff i t b).1 h')
-    simp [GlobalTheory.BZMir.eLast, Pi.single_apply, hne, hb]
+    simp [GlobalTheory.BZMir.eLast, hne, hb]
 
 variable (k) in
 

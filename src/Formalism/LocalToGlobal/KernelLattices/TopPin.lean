@@ -1,6 +1,5 @@
-import Formalism.LocalToGlobal.KernelLattices.FirstKernelLawReading
-import Formalism.LocalToGlobal.KernelLattices.ThDatRead
-import Formalism.LocalToGlobal.Columns.ChainInstY
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.ChainTwFrA
 
 open NumberField IsDedekindDomain

@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.RootWeights.HeisenbergDividedPowerExpansion
+import Formalism.SharpRestriction.GrowthBounds.RootWeights.WeightEntriesBetweenExtremeHighest
 
 noncomputable section
 
@@ -33,7 +36,7 @@ theorem raise_lower_commutator_on_weight {E : GLOps n (KK O) V} (hE : IsGLRep E)
       sub_eq_zero] at h
     exact h
   have hc := congrArg (fun f : Module.End (KK O) V => f z) (hE.1 a b b a)
-  simp only [LinearMap.sub_apply, Module.End.mul_apply, if_true, eq_self_iff_true] at hc
+  simp only [LinearMap.sub_apply, Module.End.mul_apply, if_true] at hc
   rw [hw a, hw b] at hc
   rw [← sub_eq_iff_eq_add', hc, Int.cast_sub, sub_smul]
 
@@ -50,9 +53,9 @@ theorem raise_lower_pow_commutator_on_weight {E : GLOps n (KK O) V} (hE : IsGLRe
     have hy := integral_operator_pow_shifts_weight hE hz b a r
     have h0 := raise_lower_commutator_on_weight (a := a) (b := b) hE hy
     have hA : (mu + (r : ℤ) • rootW b a) a = mu a - r := by
-      simp [rootW, Pi.single_apply, hab, hab.symm] <;> ring
+      simp [rootW, hab] <;> ring
     have hB : (mu + (r : ℤ) • rootW b a) b = mu b + r := by
-      simp [rootW, Pi.single_apply, hab, hab.symm] <;> ring
+      simp [rootW, hab.symm] <;> ring
     rw [hA, hB] at h0
     have e2 : ((r : KK O) * ((((mu a - mu b : ℤ)) : KK O) - r + 1)) • E b a (((E b a) ^ (r - 1)) z) =
         ((r : KK O) * ((((mu a - mu b : ℤ)) : KK O) - r + 1)) • ((E b a) ^ r) z := by
@@ -104,9 +107,9 @@ theorem raise_pow_lower_pow_expansion {E : GLOps n (KK O) V} (hE : IsGLRep E) {a
       beta_reduce
       have hjk : j ≤ k := Nat.lt_succ_iff.mp hj
       have hA : (nu + ((k - j : ℕ) : ℤ) • rootW a b) a = nu a + ((k - j : ℕ) : ℤ) := by
-        simp [rootW, Pi.single_apply, hab, hab.symm]
+        simp [rootW, hab]
       have hB : (nu + ((k - j : ℕ) : ℤ) • rootW a b) b = nu b - ((k - j : ℕ) : ℤ) := by
-        simp [rootW, Pi.single_apply, hab, hab.symm] <;> ring
+        simp [rootW, hab.symm] <;> ring
       rw [hA, hB]
       have hx : nu a - nu b + ((k + 1 : ℕ) : ℤ) - (l : ℤ) = (nu a - nu b + (k : ℤ) - (l : ℤ)) + 1 := by
         push_cast

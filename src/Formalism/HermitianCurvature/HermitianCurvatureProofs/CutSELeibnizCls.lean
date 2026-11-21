@@ -1,4 +1,5 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutSELeib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.WaveOperatorLeL2Subspace
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutSEOuterLeib
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutSEPairAtDeriv
@@ -49,7 +50,7 @@ theorem slDom_zero : SlDom μ l c (0 : RadSp k r z z' π π') := by
     rw [show B.hsVec (0 : Wq →L[ℂ] Wp) = 0 from map_zero hsVecLin, inner_zero_left]
   have h0 : ∀ p : Fin r → ℂ, pairAt μ (0 : RadSp k r z z' π π') 0 p = 0 := fun p => by
     unfold pairAt
-    simp only [Submodule.coe_zero, ZeroMemClass.coe_zero, Pi.zero_apply, hz, integral_zero]
+    simp only [Submodule.coe_zero, Pi.zero_apply, hz, integral_zero]
   intro t0 _
   refine ⟨1, one_pos, fun _ => 0, integrable_zero _ _ _, fun t _ c' => ?_⟩
   rw [h0, mul_zero, norm_zero]

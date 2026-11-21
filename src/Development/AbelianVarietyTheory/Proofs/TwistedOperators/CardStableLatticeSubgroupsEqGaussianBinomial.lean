@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.NonemptyTransferEquiv
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.GaussianBinomialFormula
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.GaussBinomMulProd
 import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.CycOfPrime
 open NumberField

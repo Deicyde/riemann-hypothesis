@@ -1,6 +1,42 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.TensorEqZeroOfForallGeometricPoint
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.GroupLikeIntegralOfFiniteFree
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
 open scoped TensorProduct
 
 namespace GlobalTheory
@@ -31,7 +67,7 @@ theorem exists_smul_fun_eq_eval_points (O C A : Type) [CommRing O] [IsDomain O] 
       rw [LinearMap.sum_apply, Finset.sum_eq_single j]
       · simp
       · intro i _ hij
-        simp [Finsupp.single_apply, hij.symm]
+        simp [hij.symm]
       · simp
     conv_lhs => rw [this]
     simp only [map_sum, map_smul, smul_eq_mul, c]
@@ -57,8 +93,7 @@ private lemma eq_zero_of_forall_algHom_apply_eq_zero_of_isReduced {C V : Type} [
     let eqv : C ≃ₐ[C] V ⧸ m := AlgEquiv.ofBijective (Algebra.ofId C (V ⧸ m))
       ⟨(algebraMap C (V ⧸ m)).injective, hsurj⟩
     have h := hv (eqv.symm.toAlgHom.comp (Ideal.Quotient.mkₐ C m))
-    simp only [AlgHom.comp_apply, Ideal.Quotient.mkₐ_eq_mk, AlgEquiv.toAlgHom_eq_coe,
-      AlgHom.coe_coe] at h
+    simp only [AlgHom.comp_apply, Ideal.Quotient.mkₐ_eq_mk] at h
     exact Ideal.Quotient.eq_zero_iff_mem.mp ((map_eq_zero_iff _ eqv.symm.injective).mp h)
   rw [IsArtinianRing.jacobson_eq_radical] at hmem
   obtain ⟨n, hn⟩ := hmem
@@ -170,7 +205,7 @@ theorem _root_.GlobalTheory.exists_eval_eq_of_multiplicative_on_points : ∀ (O 
         ∑ i, ∑ j, algebraMap O C (m k i j) * (x (e i) * y (e j)) := by
     intro x y k
     conv_lhs => rw [← (e.tensorProduct e).sum_repr (Δ (e k))]
-    simp only [map_sum, map_smul, Module.Basis.tensorProduct_apply,
+    simp only [map_sum, Module.Basis.tensorProduct_apply,
       Algebra.smul_def, Fintype.sum_prod_type, map_mul, AlgHom.commutes,
       Algebra.TensorProduct.lift_tmul, m]
   have key : ∀ x y : A →ₐ[O] C, ∑ j, (∑ i, (∑ k, c k * algebraMap O C (m k i j) - c i * c j) *

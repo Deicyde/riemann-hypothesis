@@ -1,12 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.IsSelfDualE
-import Formalism.LocalToGlobal.Columns.CoefficientsModP.PairingNondegenerateHolds
-import Formalism.LocalToGlobal.Columns.CoefficientsModP.FkPderivBlockEmbNe
-import Formalism.GradedWeylDivisibility.StatementE
-import Formalism.HarderNarasimhan.ShiftInvariance
-import Formalism.QuotientMetricDivisors.ReductionLemmaZero
-import Formalism.QuotientMetricDivisors.ProdFormula
-import Formalism.LocalToGlobal.IndefiniteForms.IndefiniteTree.RealCubicMeans.LeafBounds.MeanMaxLeaf.LeafMMFree
 import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.ValBasic
 import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.IdxChange
 open NumberField IsDedekindDomain MvPolynomial Formalism.BasicNotions Formalism.L2.DIV Formalism.DivisionValues GlobalTheory.TestLat Formalism.L2.Indef.Tree.ArchimedeanLeafBounds.Cuts
@@ -41,19 +35,19 @@ def locRing (w : HeightOneSpectrum (𝓞 K)) : Subring K where
   mul_mem' := by
     rintro a b ⟨s, hs, r, hr⟩ ⟨t, ht, u, hu⟩
     refine ⟨s * t, fun h => (w.isPrime.mem_or_mem h).elim hs ht, r * u, ?_⟩
-    simp only [RingOfIntegers.coe_eq_algebraMap, map_mul, map_add, map_neg] at *
+    simp only [RingOfIntegers.coe_eq_algebraMap, map_mul] at *
     rw [← hr, ← hu]; ring
   one_mem' := ⟨1, (Ideal.ne_top_iff_one _).1 w.isPrime.ne_top, 1, by simp⟩
   add_mem' := by
     rintro a b ⟨s, hs, r, hr⟩ ⟨t, ht, u, hu⟩
     refine ⟨s * t, fun h => (w.isPrime.mem_or_mem h).elim hs ht, t * r + s * u, ?_⟩
-    simp only [RingOfIntegers.coe_eq_algebraMap, map_mul, map_add, map_neg] at *
+    simp only [RingOfIntegers.coe_eq_algebraMap, map_mul, map_add] at *
     rw [← hr, ← hu]; ring
   zero_mem' := ⟨1, (Ideal.ne_top_iff_one _).1 w.isPrime.ne_top, 0, by simp⟩
   neg_mem' := by
     rintro a ⟨s, hs, r, hr⟩
     refine ⟨s, hs, -r, ?_⟩
-    simp only [RingOfIntegers.coe_eq_algebraMap, map_mul, map_add, map_neg] at *
+    simp only [RingOfIntegers.coe_eq_algebraMap, map_neg] at *
     rw [← hr]; ring
 
 theorem det_mem_subring (S : Subring K) (P : Matrix (Fin n) (Fin n) K) (h : ∀ a b, P a b ∈ S) :

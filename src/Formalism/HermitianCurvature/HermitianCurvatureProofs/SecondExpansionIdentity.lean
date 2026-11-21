@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.FirstExpansionIdentity
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.SignPermutationIdentity
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.ThirdPeelingMinorMemIdeal
 
 open Matrix Finset
 
@@ -113,7 +116,7 @@ theorem second_expansion_identity : ExpansionDualColumn := by
       rw [hav, hsv]
       rw [dif_pos a.isLt, dif_pos (by omega)]
       congr 2
-      apply Fin.ext; simp only [Fin.val_mk]; omega
+      apply Fin.ext; simp only; omega
   have hP := third_peeling_identity A k r z' E hG (i0 + s') hm' ⟨i0, by omega⟩ ell
   have hLa : La (qminor E e2 (sR k r (i0 + s') hm) (ell + ((i0 + s' : ℕ) : ℂ) - 1)) =
       La (qminor E (sR k r i0 (by omega)) (sR k r i0 (by omega)) (ell + (i0 : ℂ) - 1)) := la_congr hR hP

@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.HodgeTateChains.H2KilledByTateDuality
 import Formalism.WachLatticeTwists.CoprimeLiftBounds.StatBridgeChiOne
 import Formalism.WachLatticeTwists.LatticeDualFibres.Statement
+import Formalism.WachLatticeTwists.HodgeTateChains.XiAdicFiltrationData
 
 open Finset Classical
 

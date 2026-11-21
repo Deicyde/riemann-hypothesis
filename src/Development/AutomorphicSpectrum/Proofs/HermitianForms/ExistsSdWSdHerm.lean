@@ -1,11 +1,13 @@
-import Mathlib
-import Formalism.UnipotentAdelicQuotients.SiegelWeilUnitaryConvergent
-import Formalism.UnipotentAdelicQuotients.StdAdditiveCharExists
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.HermitianForms.IndicatorInSchrodingerSpanStatement
 import Development.AutomorphicSpectrum.Proofs.HermitianForms.AdelicCharacterLocalNontrivial
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsSmallDualLattices
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.AdditiveCharConductorExists
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Tjcosets
+import Mathlib.Topology.Algebra.Valued.LocallyCompact
+import Mathlib.Topology.Connected.Separation
+import Mathlib.Topology.MetricSpace.Ultra.TotallySeparated
 
 open NumberField IsDedekindDomain MeasureTheory HeckeCharacterZeroLocus.SiegelWeilU Topology
 open scoped TensorProduct
@@ -71,7 +73,7 @@ theorem exists_of_std (ψ : AddChar K ℂ) (hψ : GlobalTheory.JR.IsStdChar ψ) 
   · intro x
     obtain ⟨n, hn⟩ := hex e x
     refine ⟨-(n : ℤ), fun i => (hn i).trans_eq ?_⟩
-    simp [norm_zpow]
+    simp
   · intro y
     obtain ⟨n, hn⟩ := hex e' y
     refine ⟨(n : ℤ), fun i => (hn i).trans_eq ?_⟩

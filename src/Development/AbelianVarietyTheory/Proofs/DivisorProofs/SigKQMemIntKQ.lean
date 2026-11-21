@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.TwOrbMEqTwOrbUOfNormal
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrobeniusPreservesIntegerRingStatement
 open ReciprocityTheory.DiscreteGroups.LocalClassField Matrix GlobalTheory.LKRes
@@ -19,7 +19,7 @@ theorem sigKQ_mem_intKQ (p : ℕ) [Fact p.Prime] (K : IntermediateField ℚ_[p] 
       have hb : GlobalTheory.LKLoc.frobR p (Q0 p) r b ∈ GlobalTheory.LKLoc.intR p (Q0 p) r :=
         GlobalTheory.T.frobenius_preserves_integer_ring p (Q0 p) r b b.2
       have : sigKQ p K r (inclQ p K r b) = inclQ p K r (⟨_, hb⟩ : GlobalTheory.LKLoc.intR p (Q0 p) r) := by
-        simp [sigKQ, inclQ, Algebra.TensorProduct.map_tmul]
+        simp [sigKQ, inclQ]
         rfl
       rw [this]
       exact Subring.subset_closure (Or.inr ⟨_, rfl⟩)

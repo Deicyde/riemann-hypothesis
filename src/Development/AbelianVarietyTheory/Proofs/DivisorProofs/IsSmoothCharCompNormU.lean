@@ -1,8 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.LocalCyclic
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.ExistsSmallStable
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.AdicCompletionTraceNormContinuous
 import GroundTheory.GlobalFields.CompletionAtPlace
+import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsUnitarisableOfCharIff
+import GroundTheory.LocalFields.PadicLogSeries
 
 noncomputable section
 

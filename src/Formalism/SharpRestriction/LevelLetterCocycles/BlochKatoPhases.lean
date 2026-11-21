@@ -1,10 +1,5 @@
-import Mathlib
-import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
-import Formalism.GaloisCohomology.Statement
-import Formalism.GaloisCohomology.LocalTateDualityK
-import Formalism.SharpRestriction.LevelLetterCocycles.DataN
-import Formalism.SharpRestriction.LevelLetterCocycles.DataNLoc
-import Formalism.SharpRestriction.LevelLetterCocycles.LocCoh
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.LocalSituation
 import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.CyclotomicTotient.NuInf
 

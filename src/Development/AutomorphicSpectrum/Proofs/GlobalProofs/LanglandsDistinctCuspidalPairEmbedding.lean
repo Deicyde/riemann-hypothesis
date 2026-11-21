@@ -1,15 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.TotallyDisjointProductIrreducible
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.ExistsCellOfIsSubquotient
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HasFiniteLengthOfIsIrreducible
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.BernsteinUnitaryProductIrreducible
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SupercuspidalSupportUniqueGL
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ExistsCuspidalSupportIrreducibleSmoothGL
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.GeometricLemmaCellOneBlockSwapEquiv
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.CuspidalJacquetSubquotientAtMostOneNonemptyBlock
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.CuspidalPairIrreducibleProduct
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.IsSubquotientCompMulSingle
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.PiExteriorTensorSmoothIrreducibleIsIrreducible
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.EqOfSubsingletonStep
 
 noncomputable section
@@ -199,7 +192,7 @@ theorem exists_map_two_step (hBZ : BernsteinZelevinskyFiniteness) {D : ℕ} (hD 
         by_cases hi : i = 0
         · subst hi
           simpa [ψ] using hω 0 z v
-        · simp [ψ, Pi.mulSingle_eq_of_ne hi, hi]) y
+        · simp [ψ, hi]) y
     simpa [Fin.prod_univ_two] using h1
   by_cases hsc : ∀ (z : kˣ) v, μ (ψ (GeneralLinearGroup.scalar _ z)) v = (ω 0 z : ℂ) • v
   · have hsub : IsSubquotient (σ 0).π (μ.comp ψ : Representation ℂ (GL (Fin D) k) V) :=

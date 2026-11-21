@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.GeometricLemmaFiltration
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HasFiniteLengthOfIsIrreducible
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.BernsteinUnitaryProductIrreducible
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.ExistsCellOfIsSubquotient
 open GlobalTheory.PRep GlobalTheory.SmGL Matrix
 
 noncomputable section
@@ -44,13 +43,13 @@ variable {k : Type} [Field k] [ValuativeRel k] [TopologicalSpace k] [IsNonarchim
 
 theorem modExp_bool_true (m : Bool → Type) [∀ a, Fintype (m a)] :
     modExp m true = -(Fintype.card (m false) : ℤ) := by
-  simp [modExp, Finset.sum_filter, Fintype.sum_bool]
+  simp [modExp, Finset.sum_filter]
 
 theorem relDeltaHalf_cols_scalar (n : Bool → Bool → ℕ) (h01 : n false true = 0) (ϖ : kˣ) :
     relDeltaHalf k (fun j i => Fin (n i j))
       (fun j i => GeneralLinearGroup.scalar (Fin (n i j)) (cond j ϖ 1)) = 1 := by
   rw [relDeltaHalf_apply, Fintype.prod_bool, deltaHalf_apply, deltaHalf_apply]
-  simp only [Fintype.prod_bool, det_scalar_fin, cond_true, cond_false, one_pow, map_one, h01, pow_zero,
+  simp only [Fintype.prod_bool, det_scalar_fin, cond_true, cond_false, map_one, h01, pow_zero,
     mul_one, modExp_bool_true, Fintype.card_fin]
   simp
 
@@ -61,7 +60,7 @@ theorem relDeltaHalf_rows_scalar (n : Bool → Bool → ℕ) (h01 : n false true
         absPow k (-((n true false : ℕ) : ℂ) / 2) ϖ := by
   rw [relDeltaHalf_apply, Fintype.prod_bool, deltaHalf_apply, deltaHalf_apply]
   simp only [Fintype.prod_bool, det_scalar_fin, cond_true, cond_false, one_pow, map_one, h01, h11, pow_zero,
-    pow_one, mul_one, one_mul, modExp_bool_true, Fintype.card_fin]
+    pow_one, mul_one, modExp_bool_true, Fintype.card_fin]
   push_cast
   ring_nf
 
@@ -70,7 +69,7 @@ theorem det_relEmb_scalar {M : Bool → Type} [∀ i, Fintype (M i)] [∀ i, Dec
     (f : ∀ i, (Σ j, Fin (n i j)) ≃ M i) (ϖ : kˣ) (i : Bool) :
     GeneralLinearGroup.det
         (relEmb k f (fun i j => GeneralLinearGroup.scalar (Fin (n i j)) (cond j ϖ 1)) i) = cond i ϖ 1 := by
-  cases i <;> simp [relEmb_apply, det_leviEmb, Fintype.prod_bool, det_scalar_fin, h01, h11]
+  cases i <;> simp [relEmb_apply, det_leviEmb, h01, h11]
 
 end
 
@@ -110,7 +109,7 @@ theorem GlobalTheory.cellFunctor_detTensor_scalar_lower : ∀ {k : Type} [Field 
     funext j
     rw [Pi.mul_apply, Pi.mul_apply, hzs j]
     ext1
-    simp only [Units.val_mul, Matrix.GeneralLinearGroup.scalar, Units.coe_map, MonoidHom.coe_coe]
+    simp only [Units.val_mul, Matrix.GeneralLinearGroup.scalar, Units.coe_map]
     exact (Matrix.scalar_commute _ (fun r => Commute.all _ r) _).symm.eq
   have hproj : relProj k (c := fun j i => Fin (b.1 i j)) g ⟨z, hz⟩ =
       fun j i => GeneralLinearGroup.scalar (Fin (b.1 i j)) (s j) := by
@@ -132,6 +131,6 @@ theorem GlobalTheory.cellFunctor_detTensor_scalar_lower : ∀ {k : Type} [Field 
     push_cast at this
     linear_combination this
   rw [hv, neg_div, absPow_neg, MonoidHom.inv_apply, inv_inv]
-  simp only [cond_true, cond_false, map_one, one_mul, Units.val_one, one_smul, Submodule.Quotient.mk_smul,
+  simp only [cond_true, cond_false, map_one, one_mul, Units.val_one, Submodule.Quotient.mk_smul,
     smul_smul, MonoidHom.mul_apply, Units.val_mul]
   rw [mul_comm]

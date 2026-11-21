@@ -1,5 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsRationalDblCoord
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import Development.AbelianVarietyTheory.Definitions.Foundations.AnalyticOnNhdTsumNpow
+import Development.AbelianVarietyTheory.Definitions.Foundations.MemSiegelOfIffRightAct
 
 noncomputable section
 

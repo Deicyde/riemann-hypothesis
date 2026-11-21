@@ -1,4 +1,13 @@
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.SaturationChartsHolds
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.ProjectiveLattices.SubConstMemOrig
+import Mathlib.CategoryTheory.Monoidal.Cartesian.Over
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ChartPullbacks.UniversalCharts.SpanXLeKerAevalZero
+import Std.Tactic.BVDecide.Normalize.Prop
 
 set_option autoImplicit false
 
@@ -30,8 +39,8 @@ theorem aeval_tan {ι : Type} [DecidableEq ι] (ℓ : ι) (P : MvPolynomial ι V
       have hs : n ∈ (Finsupp.single n (1 : ℕ)).support := by simp
       rw [if_pos rfl, if_pos hs, tsub_self, ← MvPolynomial.constantCoeff_eq, add_mul, smul_mul_assoc,
         DualNumber.eps_mul_eps, smul_zero, add_zero, Algebra.smul_def]
-    · have : n ∉ (Finsupp.single ℓ 1).support := by simp [Finsupp.support_single_ne_zero, Ne.symm h, h]
-      simp [h, this]
+    · have : n ∉ (Finsupp.single ℓ 1).support := by simp [h]
+      simp [h]
 
 theorem coeff_psTrunc {ι : Type} [Fintype ι] [DecidableEq ι] (m : ℕ) (f : MvPowerSeries ι V) (e : ι →₀ ℕ)
     (he : e ∈ degLE m) : coeff e (psTrunc m f) = MvPowerSeries.coeff e f := by
@@ -43,7 +52,7 @@ theorem single_mem_degLE {ι : Type} [Fintype ι] [DecidableEq ι] (ℓ : ι) : 
   · ext i
     by_cases h : i = ℓ
     · subst h; simp
-    · simp [h, Finsupp.single_apply, Ne.symm h]
+    · simp [h]
   · simp [Finsupp.sum_single_index]
 
 theorem ker_jetAug_sq {κ : Type} : (RingHom.ker (jetAug (R := V) (ι := κ) (m := 1))) ^ (1 + 1) = ⊥ := by

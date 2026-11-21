@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Variable
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.CechHdegOfSubSt
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PCechTransport
 set_option maxSynthPendingDepth 1

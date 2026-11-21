@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.HarderNarasimhan.StatementPl
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HarderNarasimhan.ShiftInvariance
 
 open Module NumberField IsDedekindDomain

@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.CrudeBase
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Tactic.ENatToNat
 
 set_option autoImplicit false
 
@@ -30,9 +35,9 @@ theorem Lin_linForm (b b' : Fin n) (v w : Fin d → k) :
   unfold Lin
   by_cases h : b = b'
   · subst h
-    simp [MvPowerSeries.pderiv_X, MvPowerSeries.pderiv_C, Derivation.leibniz, Finset.mul_sum,
+    simp [MvPowerSeries.pderiv_X, MvPowerSeries.pderiv_C, Derivation.leibniz,
       map_sum, Pi.single_apply, Prod.ext_iff]
-  · simp [MvPowerSeries.pderiv_X, MvPowerSeries.pderiv_C, Derivation.leibniz, Pi.single_apply,
+  · simp [MvPowerSeries.pderiv_X, MvPowerSeries.pderiv_C, Derivation.leibniz,
       Prod.ext_iff, h]
 
 theorem div_ordGe_mul {a b : ℕ} {f g : PS k n d} (hf : OrdGe a f) (hg : OrdGe b g) : OrdGe (a + b) (f * g) := by
@@ -87,7 +92,7 @@ theorem div_Lin_aeval {ι : Type} [DecidableEq ι] (cp : ι → Fin n) (u : ι �
     · subst h
       simp
       ring
-    · simp [h, Pi.single_apply]
+    · simp [h]
       ring
 
 theorem div_Lin_iter_aeval {ι : Type} [DecidableEq ι] (cp : ι → Fin n) (u : ι → Fin d → k) (φ : ι → PS k n d)
@@ -151,7 +156,7 @@ theorem div_listSum_apply_of_notMem {ι : Type} (a : ι →₀ ℕ) (L : List ι
   | nil => simp
   | cons x L ih =>
     simp only [List.mem_cons, not_or] at hl
-    simp [Finsupp.single_apply, Ne.symm hl.1, ih hl.2]
+    simp [Ne.symm hl.1, ih hl.2]
 
 theorem div_fold_monomial {ι : Type} [DecidableEq ι] (a : ι →₀ ℕ) (L : List ι) (hL : L.Nodup) (s : ι →₀ ℕ)
     (c : k) :
@@ -190,7 +195,7 @@ theorem linMon_aeval_monomial {ι : Type} [Fintype ι] [DecidableEq ι] (cp : ι
   have hS : ((Finset.univ : Finset ι).toList.map fun l => Finsupp.single l (a l)).sum = a := by
     rw [hLs]
     ext j
-    simp [Finsupp.finset_sum_apply, Finsupp.single_apply]
+    simp
   have hP : ((Finset.univ : Finset ι).toList.map fun l => ((α l).descFactorial (a l) : k)).prod =
       ∏ l, ((α l).descFactorial (a l) : k) := hLp k _
   rw [hS, hP, one_mul]

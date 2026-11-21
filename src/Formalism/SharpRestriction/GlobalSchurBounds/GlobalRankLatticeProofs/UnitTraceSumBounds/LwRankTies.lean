@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.MainSup
 import Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.CountHypothesesIffText
-import Formalism.SharpRestriction.AdmissibleParameterJoins.SfromGLu
 import Formalism.SharpRestriction.AdmissibleParameterJoins.DIVfromGLz
 
 noncomputable section

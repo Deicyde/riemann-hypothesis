@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TraceDualLatticeBoundedDenominator
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -65,7 +64,7 @@ theorem nat_mul_integral_of_trace_form_int : ∀ {F E : Type} [Field F] [NumberF
       funext j
       by_cases hj : j = k
       · subst hj; simp
-      · simp [Pi.single_apply, hj]
+      · simp [hj]
     simp only [form, Matrix.dotProduct_mulVec, hs]
     simp [dotProduct, Pi.single_apply, ha, mul_assoc]
   choose o ho using hv

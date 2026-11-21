@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.SemidirectVolume.ModVec
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.SemidirectVolume.ProjCont
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.SemidirectVolume.ProjHA
 
 noncomputable section
 

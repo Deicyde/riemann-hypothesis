@@ -1,4 +1,4 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.FromBaseAlt
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsCubicalRigidifiedExtension
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLineBundleExtensionDescendedSemiAbelianStatement
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj IsLocalRing NumberField

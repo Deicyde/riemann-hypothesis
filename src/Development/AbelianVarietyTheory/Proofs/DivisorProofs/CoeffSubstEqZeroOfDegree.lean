@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.EqZeroOfForallPowDvd
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PadicContinuousMvPowerSeriesAlgHomExtStatement
+import Mathlib.Order.CompletePartialOrder
 
 set_option autoImplicit false
 
@@ -128,7 +130,7 @@ theorem ev_nmul (n k : ℕ) (i : Fin d) :
       rintro (j | j)
       · rw [hΘ, hΛ, AlgHom.comp_apply, AlgHom.comp_apply, AlgHom.comp_apply, substAlgHom_X,
           (c.isEval₂ n).1]
-        simp only [Sum.elim_inl, Algebra.TensorProduct.map_tmul, AlgHom.coe_id, id_eq,
+        simp only [Sum.elim_inl, Algebra.TensorProduct.map_tmul,
           Algebra.TensorProduct.lmul'_apply_tmul, map_one, mul_one]
         exact ih j
       · rw [hΘ, hΛ, AlgHom.comp_apply, AlgHom.comp_apply, AlgHom.comp_apply, substAlgHom_X,

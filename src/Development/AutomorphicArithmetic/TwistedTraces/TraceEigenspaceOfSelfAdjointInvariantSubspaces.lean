@@ -1,4 +1,7 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.TvDefs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.CuspidalMultiplicityOneTotallyComplex
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open MeasureTheory NumberField IsDedekindDomain Filter GroundTheory.Automorphic GroundTheory.Automorphic.Reduction GroundTheory.Automorphic.RightCosetSpace GroundTheory.Automorphic.AutomorphicForm
 open GroundTheory.Automorphic.CuspidalSpectrum GlobalTheory.IndefiniteRowSideFullHecke.IwahoriDoubleCosets GlobalTheory.PRep Formalism.BasicNotions GlobalTheory.CuspRep GlobalTheory.SmGL PositivityTheory.Rg.Tf.Core PositivityTheory.Rg.Tf.Geo GroundTheory.Global GroundTheory.Global.SemiLocal UpperTheory.ConvolutionTheory UpperTheory.ConvolutionTheory.L1 UpperTheory.ConvolutionTheory.C
 open scoped ComplexConjugate Classical InnerProductSpace
@@ -33,13 +36,13 @@ private theorem eigIn_closed {W : Submodule ℂ H} (hW : IsClosed (W : Set H)) (
     IsClosed (eigIn W A x : Set H) := by
   have : (eigIn W A x : Set H) = (W : Set H) ∩ {v | A v = (x : ℂ) • v} := by
     ext v
-    simp [eigIn, Module.End.mem_eigenspace_iff]
+    simp [eigIn]
   rw [this]
   exact hW.inter (isClosed_eq A.continuous (continuous_const_smul _))
 
 private theorem mem_eigIn {W : Submodule ℂ H} {A : H →L[ℂ] H} {x : ℝ} {v : H} :
     v ∈ eigIn W A x ↔ v ∈ W ∧ A v = (x : ℂ) • v := by
-  simp [eigIn, Module.End.mem_eigenspace_iff]
+  simp [eigIn]
 
 private theorem prj_inf {P X : Submodule ℂ H} (hP : IsClosed (P : Set H)) (hX : IsClosed (X : Set H))
     (h : ∀ v ∈ X, prj P v ∈ X) : prj X * prj P = prj (X ⊓ P) ∧ prj P * prj X = prj (X ⊓ P) := by

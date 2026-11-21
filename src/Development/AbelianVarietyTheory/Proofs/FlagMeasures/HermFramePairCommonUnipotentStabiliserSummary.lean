@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.FlagPairDefinitePartLattice
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ChartGen
-import Development.AbelianVarietyTheory.PublishedTheorems.DiscreteSeriesUnitary₂.MaxMass
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.NormalFormDualOrthogonalLast
 
 open NumberField Formalism.HermitianLatticeCounting.S6 GlobalTheory.HermLat GlobalTheory.DegCnt
@@ -116,7 +114,7 @@ variable {F} in
 theorem _root_.GlobalTheory.UnipStab.inN_one : F.InN ((1 : V ≃ₗ[K] V) : V →ₗ[K] V) := by
   unfold _root_.Formalism.HermitianLatticeCounting.S6.FlagD.InN
   refine ⟨fun x y => rfl, (1 : V ≃ₗ[K] V).bijective, fun a => ?_, fun y _ => ?_⟩ <;>
-    simp [LinearEquiv.coe_coe]
+    simp
 
 open NumberField in
 open scoped Pointwise ENNReal Classical in

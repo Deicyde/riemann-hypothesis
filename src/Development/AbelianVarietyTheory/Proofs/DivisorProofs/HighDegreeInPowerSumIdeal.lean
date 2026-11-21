@@ -1,7 +1,4 @@
-import Mathlib
-import Formalism.DegreeFormula.PointDegree.PowSum
-import Formalism.DegreeFormula.PointDegree.PermExpInj
-import Development.AbelianVarietyTheory.Definitions.Foundations.CurveCl
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolynomialReductionModElementaryStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SpanPsumEqSpanEsymm
 open MvPolynomial Formalism.DegreeFormula GlobalTheory.FlagPoly

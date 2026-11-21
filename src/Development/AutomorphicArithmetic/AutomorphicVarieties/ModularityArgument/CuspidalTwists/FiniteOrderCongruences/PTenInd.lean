@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.CuspidalTwists.FiniteOrderCongruences.TwistIne
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.MkMemAdmissibleAtIffCocycle
+import Formalism.GaloisIrreducibility.GaloisIrreducibilityProofs.OneNonUnit
 
 noncomputable section
 
@@ -45,7 +49,7 @@ theorem ti_conj_mat (a b p q : k) (h : p ^ 2 - q ^ 2 = 1) :
     (!![p, q; -q, -p] * !![a, b; b, a] * !![p, q; -q, -p]) 0 0 +
       (!![p, q; -q, -p] * !![a, b; b, a] * !![p, q; -q, -p]) 0 1 = a - b := by
   first
-  | (simp [Matrix.mul_fin_two]; linear_combination (a - b) * h)
+  | (simp; linear_combination (a - b) * h)
   | (simp [Matrix.mul_apply, Fin.sum_univ_two]; linear_combination (a - b) * h)
 
 theorem ti_cp_conj {n : ℕ} (c : k) (M : GL (Fin n) k) (N : Matrix (Fin n) (Fin n) k) :

@@ -1,5 +1,7 @@
-import Formalism.LocalToGlobal.CharacterGerms.RowTieUpFBrPl
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Lemmata.MiscLemmasH.Imports
+import Mathlib.Tactic.Polynomial.Basic
 
 set_option autoImplicit false
 

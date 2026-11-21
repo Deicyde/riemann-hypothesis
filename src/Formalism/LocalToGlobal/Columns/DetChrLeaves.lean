@@ -1,6 +1,8 @@
-import Mathlib
-import Formalism.LocalToGlobal.Columns.MuDetOfLoc
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.ColumnsProofs.ChainCounts
+import Formalism.LocalToGlobal.Columns.Adelic
+import Formalism.LocalToGlobal.KernelLattices.ThDistC
 
 open NumberField IsDedekindDomain
 open scoped TensorProduct

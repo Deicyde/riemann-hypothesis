@@ -1,6 +1,13 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.ActualZetaSmooth
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ActualAdjointnessFromHermitian
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ModelLevelMultiplier
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.QuasiDeterminantFromEntries
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.TransferRtt
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.WeightedSumDifferenceIdentity
+import Mathlib.Analysis.Calculus.FDeriv.Star
+import Mathlib.Data.Int.Star
 
 section
 noncomputable section
@@ -44,7 +51,7 @@ theorem mulZ_lin (f : ℂ → ℂ) (Φ Ψ : Fn k r (Wq →L[ℂ] Wp)) (s : ℂ) 
   funext c g
   simp only [mulZ, Pi.add_apply, Pi.smul_apply]
   by_cases hx : (c, g) ∈ DomR k r z z'
-  · simp only [Set.indicator_of_mem hx, Pi.add_apply, Pi.smul_apply, smul_add]
+  · simp only [Set.indicator_of_mem hx, smul_add]
     rw [smul_comm]
   · simp [Set.indicator_of_notMem hx]
 
@@ -2126,7 +2133,7 @@ theorem blk_mixed1 (u v : ℂ) :
   · rw [term_up hd]
   · intro m _ hml
     rw [term_up hd, supp_mul d.κ (supp_SSs hd m) (supp_SS hd j) ρ σ, smul_zero]
-    exact mixed_not_off_l hd hl hj hjl hσ (by simp only [Pi.add_apply, Pi.neg_apply, ee, if_neg hjl, if_neg (Ne.symm hml)]; omega)
+    exact mixed_not_off_l hd hl hj hjl hσ (by simp only [Pi.add_apply, Pi.neg_apply, ee, if_neg (Ne.symm hml)]; omega)
   · intro h'; exact absurd hl h'
   · intro i _ hij
     refine Finset.sum_eq_zero fun m _ => ?_
@@ -2524,8 +2531,8 @@ theorem op_identity (u v : ℂ) :
     (u - v) • (L.GG * L.GG * (L.nabs * L.nab - L.nab * L.nabs) +
       (1 + u + v) • (L.ζ * L.ζb - L.GG)) := by
   unfold R.LevelData.m0 R.LevelData.l0
-  simp only [alg_mul, mul_add, add_mul, mul_sub, sub_mul, mul_neg, neg_mul, neg_neg, smul_mul_assoc,
-    mul_smul_comm, mul_assoc, smul_add, smul_sub, smul_neg, neg_sub, neg_add]
+  simp only [alg_mul, mul_sub, sub_mul, mul_neg, neg_mul, smul_mul_assoc,
+    mul_smul_comm, mul_assoc, smul_add, smul_sub, smul_neg, neg_sub]
   simp only [M1, M2, M3', M4, M5, M6', M7, M8, M9, gamma_zeta_nabla_cancel, gamma_zeta_conj_cancel, s_zb, gamma_nabla_zeta_commutator]
   module
 

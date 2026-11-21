@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SplitHomeoApply
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ParabolicFundamentalDomainSplitStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ModularCharacterTrivialFiniteCovolumeStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ParabolicHaarDecompositionStatement
@@ -33,7 +32,7 @@ theorem exists_haar_fundamentalDomain : ∀ (P G₁ : Type) [Group P] [Topologic
   refine ⟨ν, D, _, _, inferInstance, hνF, hν0, hνfin, hH,
     IsFundamentalDomain.mk'' hnull hcov hdis (fun γ => (measurePreserving_smul γ _).quasiMeasurePreserving), ?_, hint⟩
   have h1 := hint (fun _ => 1) measurable_const
-  simp only [lintegral_const, one_mul, Measure.restrict_apply_univ, setLIntegral_one] at h1
+  simp only [lintegral_const, one_mul, Measure.restrict_apply_univ] at h1
   rw [h1]
   exact ENNReal.mul_lt_top hνfin hfin
 

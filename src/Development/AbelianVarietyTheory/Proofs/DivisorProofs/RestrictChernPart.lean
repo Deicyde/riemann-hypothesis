@@ -1,9 +1,10 @@
-import Mathlib
-import ReciprocityTheory.AnalyticForms.PotentialTheory.IsPotentialPullbackStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PotentialTheory.Measure
-import Development.AbelianVarietyTheory.Definitions.Divisors.NefFibOfIsNef
 import Development.AbelianVarietyTheory.Definitions.Divisors.AnalyticOnNhdFinChartIff
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.IntegrableMonomialMulConjComplexGaussian
+import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsClosedImmersionGenericPoint
+import ReciprocityTheory.AnalyticForms.PotentialTheory.HessCIsHermitian
 
 set_option autoImplicit false
 

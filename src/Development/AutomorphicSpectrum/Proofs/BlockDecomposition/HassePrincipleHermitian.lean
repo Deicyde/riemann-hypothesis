@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.BaseOneSide.PsiSide
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SwMeasPlaneOfNotRepresented
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.HasseNormTheoremQuadraticExtension
 
 open HeckeCharacterZeroLocus.SiegelWeilU GlobalTheory.CompanionTheory.SW NumberField IsDedekindDomain MeasureTheory Topology PositivityTheory.Rg.Base1
@@ -111,7 +111,7 @@ theorem exists_real_hom (τ : F →+* ℝ) : ∃ ψ : Ainf F →+* ℝ, ∀ x, �
   let φ : F →+* ℂ := Complex.ofRealHom.comp τ
   have hφ : ComplexEmbedding.IsReal φ := by
     ext x
-    simp [φ, ComplexEmbedding.conjugate]
+    simp [φ]
   let v : InfinitePlace F := InfinitePlace.mk φ
   have hv : v.IsReal := InfinitePlace.isReal_mk_iff.2 hφ
   refine ⟨(InfinitePlace.Completion.extensionEmbeddingOfIsReal hv).comp

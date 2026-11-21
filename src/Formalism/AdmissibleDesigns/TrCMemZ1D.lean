@@ -1,4 +1,8 @@
-import Formalism.AdmissibleDesigns.SelfGood
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.AdmissibleDesigns.NonemptyPl
+import Formalism.SharpRestriction.LevelLetterCocycles.GoodCongruenceDataOf
+import Formalism.WachLatticeTwists.ShapeRowIsomorphisms.Statement
 
 variable [hT2Core : Fact ReciprocityTheory.ChartRestriction.T2.Core]
 

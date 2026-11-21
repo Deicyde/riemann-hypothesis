@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.Direct
-import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.PoincareInHH
-import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.DualFamilyCounting.NOfibRat
+import Development.AbelianVarietyTheory.Definitions.Foundations.InFrameStabilizer
 open scoped Classical ENNReal
 open Matrix MeasureTheory NumberField Formalism.BasicNotions Formalism.MainNotions.S Formalism.L2.SG.HidaSetting Formalism.L2.SG.LocWSOf Formalism.L2.SG.PoincareInHH.PoincareSetting GlobalTheory.CovDom
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
@@ -91,8 +91,8 @@ theorem exists_equiv (γ : Matrix (Fin (2 * D.R.rS + D.R.k + 1)) (Fin (2 * D.R.r
   have h1 : γ⁻¹ * γ = 1 := Matrix.nonsing_inv_mul γ hdet
   have h2 : γ * γ⁻¹ = 1 := Matrix.mul_nonsing_inv γ hdet
   refine ⟨(coordEquiv X).symm.trans ((Matrix.toLin'OfInv h1 h2).trans (coordEquiv X)), fun y => ?_⟩
-  simp only [LinearEquiv.trans_apply, coordEquiv_symm_apply, coordEquiv_apply, Matrix.toLin'OfInv_apply,
-    Matrix.toLin'_apply, crdH_vecOf]
+  simp only [LinearEquiv.trans_apply, coordEquiv_symm_apply, coordEquiv_apply,
+    crdH_vecOf]
   rfl
 
 end GlobalTheory.CovDomGrp

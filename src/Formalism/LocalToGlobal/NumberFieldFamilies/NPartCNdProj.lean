@@ -1,4 +1,6 @@
-import Formalism.LocalToGlobal.NumberFieldFamilies.NPartCNdTie
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.NumberFieldFamilies.NPartCNd
 
 noncomputable section
 

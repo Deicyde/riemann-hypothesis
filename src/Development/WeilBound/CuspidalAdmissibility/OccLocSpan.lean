@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.TensorProductTheorem.Restricted
+import Mathlib.Analysis.CStarAlgebra.Module.Constructions
 
 open GroundTheory.Automorphic.RestrictedTensor
 open scoped TensorProduct

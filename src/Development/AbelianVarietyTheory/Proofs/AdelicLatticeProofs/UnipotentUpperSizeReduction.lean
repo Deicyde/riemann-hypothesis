@@ -1,5 +1,38 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AdelicHermitianForms.AdelicPair
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
 open Matrix GlobalTheory.ClassFin
 open scoped Kronecker ComplexOrder TensorProduct
 
@@ -11,7 +44,7 @@ theorem unipotent_size_reduction_column {N : ℕ} (n : Matrix (Fin N) (Fin N) �
       ∀ i, i < j → (j : ℕ) ≤ i + k → |∑ l, n i l * (z l : ℝ)| ≤ 1 / 2 := by
   induction k with
   | zero =>
-    refine ⟨Pi.single j 1, by simp, fun l hl => by simp [Pi.single_apply, hl.ne'], ?_⟩
+    refine ⟨Pi.single j 1, by simp, fun l hl => by simp [hl.ne'], ?_⟩
     intro i hi hk
     exact absurd hk (by have : (i : ℕ) < j := hi; omega)
   | succ k ih =>
@@ -31,12 +64,12 @@ theorem unipotent_size_reduction_column {N : ℕ} (n : Matrix (Fin N) (Fin N) �
         rw [Finset.sum_eq_single i0]
         · simp
         · intro b _ hb
-          simp [Pi.single_apply, hb]
+          simp [hb]
         · simp
       refine ⟨z + Pi.single i0 c, ?_, ?_, ?_⟩
-      · simp [Pi.single_apply, hi0.ne', hz1]
+      · simp [hi0.ne', hz1]
       · intro l hl
-        simp [Pi.single_apply, (hi0.trans hl).ne', hz0 l hl]
+        simp [(hi0.trans hl).ne', hz0 l hl]
       · intro i hi hik
         rw [key]
         by_cases h : i = i0

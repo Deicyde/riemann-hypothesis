@@ -1,5 +1,12 @@
-import Mathlib
-import Formalism.MeanHeightDescent.AverageDegreeBounds.CombinedAverageDegreeBoundOf
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Formalism.MeanHeightDescent.BadRowsNumeric
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open Finset
 

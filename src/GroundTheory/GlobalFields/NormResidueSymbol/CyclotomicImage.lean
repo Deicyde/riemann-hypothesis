@@ -1,8 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.NormResidueSymbol.CyclotomicCompositum
 import GroundTheory.GlobalFields.IdeleGroups.NormOneCompact
 import GroundTheory.GlobalFields.CyclotomicCharacters.Degree
 import GroundTheory.GlobalFields.NormResidueSymbol.RationalContinuous
+import GroundTheory.GlobalFields.NormResidueSymbol.CyclotomicBase
+import GroundTheory.GlobalFields.NormResidueSymbol.Rational
 
 namespace GroundTheory.Global
 

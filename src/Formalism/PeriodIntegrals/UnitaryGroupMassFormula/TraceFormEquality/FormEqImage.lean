@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.PeriodIntegrals.SameFormAllLevels
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.TraceFormEquality.ExistsSumEqOne
 
 noncomputable section

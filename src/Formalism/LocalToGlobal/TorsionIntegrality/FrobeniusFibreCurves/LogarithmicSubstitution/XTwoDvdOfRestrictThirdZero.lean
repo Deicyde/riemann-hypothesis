@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.FrobeniusFibreCurves.StatementD
 import Formalism.FormalGroupLog.FormalGroupLogProofs.ChainRule
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
 
 noncomputable section
 
@@ -202,7 +205,7 @@ private theorem pderiv_X_fin_three_of_ne {i j : Fin 3} (hij : j ≠ i) :
 theorem partialDeriv_two_shear (h : MvPowerSeries (Fin 3) K) : pd 2 (sh h) = sh (pd 2 h) - sh (pd 1 h) := by
   unfold sh Formalism.L2.Th1.B.pd
   rw [Formalism.G.LogCR.pderiv_subst cc_sh, Fin.sum_univ_three]
-  simp [pderiv_X_fin_three_self, pderiv_X_fin_three_of_ne]
+  simp
   try ring
 
 theorem shearedWronskianUniqueness : ShearLemma := by

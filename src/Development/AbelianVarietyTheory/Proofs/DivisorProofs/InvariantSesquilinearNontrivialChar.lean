@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRk
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SubMemTwistSpan
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InvariantBilinearNontrivialCharacterStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRankNormalFormValuationStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InvariantBilinearDoubleCosetStatement

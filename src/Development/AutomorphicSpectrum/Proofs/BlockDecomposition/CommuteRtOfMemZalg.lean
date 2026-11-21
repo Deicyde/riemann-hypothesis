@@ -1,8 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.OneMemGoodCT
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FiniteDimCoefficientsFiniteDetermining
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CapCommuteRtInfGL
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CommuteCapOfCommuteEop
+import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.AffineGLForms.GenSpace
 
 open NumberField GlobalTheory.CuspRep MeasureTheory PositivityTheory.Affgl GlobalTheory.CompanionTheory.CTFin Matrix
 
@@ -86,7 +88,7 @@ def levelOne (L : Subgroup (GL (Fin (r + s)) (Af E))) (t : GL (Fin (r + s)) (Af 
 
 theorem mem_levelOne {L : Subgroup (GL (Fin (r + s)) (Af E))} {t : GL (Fin (r + s)) (Af E)} {k : GL (Fin r) (Af E)} :
     k ∈ levelOne s L t ↔ t⁻¹ * lev (Af E) r s (k, 1) * t ∈ L := by
-  simp [levelOne, MulAut.conj_apply]
+  simp [levelOne]
 
 theorem continuous_lev (R : Type) [CommRing R] [TopologicalSpace R] [IsTopologicalRing R] : Continuous (lev R r s) :=
   (GlobalTheory.SmGL.continuous_leviEmb R _).comp (GlobalTheory.SmGL.continuous_leviTwo R)

@@ -1,6 +1,6 @@
-import Mathlib
-import Development.EtaleCohomology.EtaleSheaves.H0TwistOverClosedField
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.ExistsLocalGenerator
+import Mathlib.AlgebraicGeometry.Morphisms.Affine
 open CategoryTheory Limits AlgebraicGeometry Opposite GlobalTheory.EtC LateralTheory.E.E4
 
 private lemma exists_local_generator {B : Type} [CommRing B] [IsDedekindDomain B]

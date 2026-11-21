@@ -1,11 +1,5 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.RegularisedSiegelWeil.ThetaIdempotents.HeckeEta
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.UnfoldingHolds
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FundamentalDomainFourierUnfolding
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.BigCellCosetsHermitianParam
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CosetCellInvariantUnipotent
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.NondegenerateCharacterCellFactorization
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SiegelEisensteinConvergent
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RowD
 noncomputable section
 open scoped Matrix NNReal ENNReal ComplexConjugate TensorProduct
@@ -83,7 +77,7 @@ theorem lowerRows_determine : ∀ {K : Type} [Field K] (σ : K →+* K), (∀ x,
   have hT₂₁ : T₂₁ = 0 := by
     simpa using e₃.symm
   subst hT₁₁ hT₂₁
-  simp only [Matrix.zero_mul, Matrix.mul_zero, Matrix.one_mul, Matrix.mul_neg, zero_add, add_zero,
+  simp only [Matrix.zero_mul, Matrix.one_mul, Matrix.mul_neg, zero_add,
     neg_zero] at e₂ e₄ f₁ f₂ f₃ f₄
   refine ⟨⟨T₂₂, e₄, f₄⟩, ?_⟩
   intro hy ha hb hc hd

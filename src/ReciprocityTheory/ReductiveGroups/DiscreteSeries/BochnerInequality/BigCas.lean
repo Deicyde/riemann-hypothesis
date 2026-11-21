@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.BochnerInequality.BigRep
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.BochnerInequality.BigCasA
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -100,7 +102,7 @@ theorem factorCasimir_ncV_one {F : Big n 1 M} (hF : F ∈ ncV ε V 1) :
     · by_cases h2 : q = b
       · subst h2
         simp [h1, hz _ _ hpq, fun x => hz x x rfl]
-      · simp [h1, h2, fun x => hz x x rfl]
+      · simp [h1, h2]
   · have hpq' : p ≠ q := fun h => hpq (h ▸ rfl)
     trans ∑ a, ∑ b ∈ univ.filter (fun b => ε b = ε a),
       ((if p = a then F (fun _ => (p, q)) else 0) + (if q = b then F (fun _ => (p, q)) else 0))
@@ -110,10 +112,10 @@ theorem factorCasimir_ncV_one {F : Big n 1 M} (hF : F ∈ ncV ε V 1) :
         by_cases h2 : q = b
         · subst h2
           simp [hpq', Ne.symm hpq']
-        · simp [h2, hpq', Ne.symm hpq']
+        · simp [h2, Ne.symm hpq']
       · by_cases h2 : q = b
         · subst h2
-          simp [h1, hpq', Ne.symm hpq']
+          simp [h1, hpq']
         · simp [h1, h2]
     · simp only [Finset.sum_add_distrib]
       have h1 : ∑ a, ∑ b ∈ univ.filter (fun b => ε b = ε a),
@@ -274,8 +276,8 @@ theorem crossOp_mem_ncV (hV : IsKStableSub ε E V) (k : ℕ) (i : Fin k) {F : Bi
     refine forall_congr' fun j => ?_
     by_cases hj : j = i
     · subst hj
-      simp [Function.update_apply, h1, h2]
-    · simp [Function.update_apply, hj]
+      simp [h1, h2]
+    · simp [hj]
   have hval : (crossOp ε E k i F) κ = ∑ a, ∑ b ∈ univ.filter (fun b => ε b = ε a),
       ((if (κ i).1 = a then E b a (F (Function.update κ i (b, (κ i).2))) else 0) -
         (if (κ i).2 = b then E b a (F (Function.update κ i ((κ i).1, a))) else 0)) := by

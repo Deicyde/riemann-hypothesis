@@ -1,6 +1,4 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.MultihomogeneousIdeals.ExistsUniqueStatement
-import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StatementsSymmRelabel
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.RelabelTransport
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.IntNumCompPerm
 set_option maxSynthPendingDepth 1

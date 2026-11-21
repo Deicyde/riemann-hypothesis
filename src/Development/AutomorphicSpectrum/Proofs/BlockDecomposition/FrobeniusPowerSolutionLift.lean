@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.WittExactSequences.IsCompl
+import Mathlib.RingTheory.WittVector.IsPoly
 
 open TensorProduct CrystallineSemistableComparison.D
 open scoped LaurentPolynomial

@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.WeylAlgebraQuantumDet.IsTop
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
 
 open Matrix UpperTheory.V.Weyl
 
@@ -25,7 +27,7 @@ theorem UpperTheory.V.Weyl.rtrPoly :
     refine ⟨∑ k, MvPolynomial.X (k, ij.2) * P k, fun g => ?_⟩
     have hX : rtr g (MvPolynomial.X ij : Pol n)
         = ∑ k, (MvPolynomial.X (ij.1, k) : Pol n) * MvPolynomial.C (g k ij.2) := by
-      simp [rtr, MvPolynomial.aeval_X]
+      simp [rtr]
     rw [map_mul, hX, Finset.mul_sum, map_sum, map_sum]
     refine Finset.sum_congr rfl fun k _ => ?_
     have hk := hP k g

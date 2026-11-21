@@ -1,8 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.OmegaFactorization
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PartialZetaFunctionalEquation
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KFacDifferentiable
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RembApply
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiscreteTopologyFractionalIdealRealLatticeImage
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsZLatticeFractionalIdealRealLatticeImage
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CovolumeFractionalIdealRealLatticeImage
@@ -41,7 +37,7 @@ theorem prod_isBigO : ∀ (ι : Type) [Fintype ι] (g : ι → ℝ → ℂ) (b :
 
 theorem fourier_prod (ι : Type) [Fintype ι] (f : ι → ℝ → ℂ) (x : EuclideanSpace ℝ ι) :
     𝓕 (fun ξ : EuclideanSpace ℝ ι => ∏ i, f i (ξ i)) x = ∏ i, 𝓕 (f i) (x i) := by
-  simp only [Real.fourier_eq', Real.fourier_real_eq]
+  simp only [Real.fourier_eq']
   rw [← integral_fintype_prod_volume_eq_prod,
     ← (PiLp.volume_preserving_toLp ι).integral_comp (MeasurableEquiv.toLp 2 (ι → ℝ)).measurableEmbedding]
   refine integral_congr_ae (Filter.Eventually.of_forall fun ξ => ?_)
@@ -64,7 +60,7 @@ theorem hTrans_eq_fourier (σ : ℂ) (y : ℝ) :
   rw [Real.fourier_real_eq]
   unfold hTrans
   refine integral_congr_ae (Filter.Eventually.of_forall fun t => ?_)
-  simp only [smul_eq_mul, Real.fourierChar_apply]
+  simp only
   rw [mul_comm]
   congr 2
   push_cast

@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.DualFockLinear.JetMatrixAlgebra
 import Formalism.SharpRestriction.GrowthBounds.DualFockLinear.WspanLeOpCl
 import Formalism.SharpRestriction.GrowthBounds.DualFockLinear.FockRAddRight
+import Formalism.SharpRestriction.GrowthBounds.DualFockLinear.RestrictedWeightFirstTwoEq
 
 open MvPolynomial
 

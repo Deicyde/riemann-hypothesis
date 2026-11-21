@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsRapidInf
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AutomorphicFormGLContinuous
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConstantTermAutomorphicFormIntegral
-import GroundTheory.AutomorphicForms.FourierWhittaker
 open NumberField IsDedekindDomain GlobalTheory.CuspRep Matrix
 
 namespace GlobalTheory.JSW

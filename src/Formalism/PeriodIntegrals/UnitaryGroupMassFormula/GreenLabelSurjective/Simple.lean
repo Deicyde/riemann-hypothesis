@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PadicSubsetSums.CentralIdempotents.IsConstituent
+import Mathlib.Combinatorics.Quiver.ReflQuiver
+import Mathlib.RepresentationTheory.Coinduced
+import Mathlib.RepresentationTheory.FinGroupCharZero
 
 open CategoryTheory Formalism.IrreducibleCountingLemmas.TYPES
 

@@ -1,4 +1,17 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import ReciprocityTheory.L2DbarEstimates.WeakHolomorphy.HoloWeakStatement
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.MeasureTheory.Constructions.HaarToSphere
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
 
 namespace ReciprocityTheory.L2DbarEstimates.C
 
@@ -15,7 +28,7 @@ theorem mvPow : MVPowStatement := by
   have hind : (ball (0 : V n) 1).indicator (fun z : V n => ‖z‖ ^ (-2 * s)) =
       fun z => (Iio (1 : ℝ)).indicator (fun y : ℝ => y ^ (-2 * s)) ‖z‖ := by
     funext z
-    by_cases h : ‖z‖ < 1 <;> simp [Set.indicator, mem_ball_zero_iff, h]
+    by_cases h : ‖z‖ < 1 <;> simp [Set.indicator, h]
   rw [← integrable_indicator_iff measurableSet_ball, hind, integrable_fun_norm_addHaar,
     finrank_real_V]
   have hfun : (fun y : ℝ => y ^ (2 * n - 1) • (Iio (1 : ℝ)).indicator (fun y : ℝ => y ^ (-2 * s)) y) =

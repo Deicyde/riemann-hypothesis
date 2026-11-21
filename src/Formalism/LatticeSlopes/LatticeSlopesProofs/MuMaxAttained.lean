@@ -1,5 +1,6 @@
-import Formalism.LatticeSlopes.CovolAntiSameRank
-import Formalism.LatticeSlopes.LatticeSlopesProofs.DiscreteTopologyOfLe
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LatticeSlopes.Statement
 
 open Module
 

@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsClopenDegree
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsClopenComponents
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsComponentDegree

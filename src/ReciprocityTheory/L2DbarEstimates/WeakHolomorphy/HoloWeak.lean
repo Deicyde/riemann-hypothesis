@@ -1,5 +1,8 @@
-import ReciprocityTheory.L2DbarEstimates.WeakHolomorphy.HoloWeakStatement
+import BuildAid.Leniency.Open
 import Lemmata.MiscLemmasF.Imports
+import Mathlib.Analysis.Calculus.LineDeriv.IntegrationByParts
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Topology.Sheaves.Presheaf
 
 namespace ReciprocityTheory.L2DbarEstimates.C
 

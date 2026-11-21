@@ -1,7 +1,9 @@
-import Development.WeilBound.CoreStatements.VolumeEquality.DegPushPFa
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.VolumeEquality.DegPushPFb
 import GroundTheory.HeightsAndTheta.Heights.FieldsOfNumbers.Assembly
-import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.ImageCoord
+import Development.WeilBound.CoreStatements.VolumeEquality.DegPushDefs
+import GroundTheory.HeightsAndTheta.Heights.WeightedHomogeneous.PConeTrdeg
 
 noncomputable section
 

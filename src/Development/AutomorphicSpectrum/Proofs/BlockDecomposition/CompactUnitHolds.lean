@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.SatakeExponents.UniformizerValuations.SetupEig
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsoDefiniteUnitaryAdelicUnitaryGroup
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralAdaptedTriangularBounded
@@ -6,8 +7,6 @@ import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsCompactIma
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ProductOfLocalLevelsUnitaryIsOpenIsCompactIsLeve
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PlaceConjugationPropertiesCmField
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FixedPlaceUnitaryLocalPointsEquivLocalUnitaryGro
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SplitPlaceUnitaryLocalPointsEquivGL
-import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.DiscreteTopologyRationalPointsHermitianSpace
 import Development.AbelianVarietyTheory.Definitions.Foundations.InnerEqZeroOfNotUEquiv
 
 noncomputable section
@@ -146,7 +145,7 @@ theorem setup (n : ℕ) : IsTopologicalGroup (UA E n) ∧ LocallyCompactSpace (U
     refine ⟨fun a b => ?_, by simp⟩
     by_cases e : a = b
     · subst e; simp
-    · simp [Matrix.one_apply, e, Ne.symm e]
+    · simp [e, Ne.symm e]
   obtain ⟨K, hK, hKe⟩ := GlobalTheory.AnisoCocompact.exists_compact σ₀ hcm 1 hherm hform_one_ne_zero
   haveI := GlobalTheory.RationalDiscrete.discreteTopology_HFinIn σ₀ (1 : Matrix (Fin n) (Fin n) E)
   have hcf : Continuous (fun x : ratU E n =>

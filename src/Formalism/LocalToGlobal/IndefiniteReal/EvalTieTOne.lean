@@ -1,4 +1,6 @@
-import Formalism.LocalToGlobal.IndefiniteReal.SEEofApply
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.IndefiniteReal.AutomorphicEvaluation
 
 noncomputable section
 

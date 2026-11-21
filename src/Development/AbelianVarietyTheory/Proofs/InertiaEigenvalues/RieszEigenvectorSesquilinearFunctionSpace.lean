@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.HermitianAdjointExistsUniqueOfPosDef
+import Mathlib.LinearAlgebra.Eigenspace.Triangularizable
+import Mathlib.Tactic.ENatToNat
 
 open scoped ComplexConjugate
 

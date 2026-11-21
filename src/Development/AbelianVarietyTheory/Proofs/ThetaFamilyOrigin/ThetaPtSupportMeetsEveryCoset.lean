@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Degenerations.PullChartIsLB
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.ThetaFamilyOrigin.IsVVGenOfIsThetaFamily
-import Development.AbelianVarietyTheory.Proofs.ToricGeometry.ExistsIndepSections
 
 set_option autoImplicit false
 

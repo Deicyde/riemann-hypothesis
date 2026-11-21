@@ -1,4 +1,5 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.FinalLevelsOf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.LevelKernelDetection.PfLvBasis
 
 noncomputable section

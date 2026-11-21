@@ -1,8 +1,6 @@
-import Mathlib
-import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.NotFullBot
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.MapMulLeft
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.WachInclusionXQFrobenius
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.MemRangeOfIsIntegral
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CoeAlgebraMapOC
 
@@ -311,7 +309,7 @@ theorem core_gen (Ct : CmpTie W E ιdR p1 tS zS) (T : LocLat G Qp LL O) (hT : Is
         have e : mulVR T b (Ct.βdR T (a • Y x)) = mulVR T b (Ct.βdR T (a • Y x) - mulVR T β (Ct.βdR T (Y x))) +
             mulVR T (b * (β * ιdR p1 ^ m)) (Ψ x) := by
           rw [map_sub, hΨβ x]
-          simp only [mulVR_mulVR, mul_assoc]
+          simp only [mulVR_mulVR]
           abel
         rw [e]
         refine add_mem (Submodule.mem_sup_left (mulVR_compKer T ι b (hβY _))) (mem_gen T ι Ψ ?_ x)

@@ -1,10 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.TestFnConstTermVanishX
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.TestDataHaarFactorizationStatement
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.DiscreteSeriesSpectralSideStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiscreteSeriesModelTraceTermsStatement
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.DiscreteSeriesMultiplicityStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PseudoCoefficientSeparationStatement
+import Development.AbelianVarietyTheory.Definitions.Foundations.T2SpaceAdeleRing
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.MeasurableEmbeddingEquiv
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.TestDataHaarFactorization
+import Development.AbelianVarietyTheory.Proofs.TwistedOperators.DiscreteSeriesMultiplicity
+import Development.AbelianVarietyTheory.PublishedTheorems.DiscreteSeriesUnitary₂.DiscreteSeriesClassificationIff
 
 section
 open MeasureTheory Set Filter NumberField IsDedekindDomain
@@ -105,8 +106,8 @@ theorem hasTrace_repOp_of_isCopyFinDSX : ∀ (D : D7) (V : HSp D) (lam : D.what�
       intro z hz
       let l : W →ₗ[ℂ] ℂ :=
         { toFun := fun v => bePi (Tm v) (Tm z)
-          map_add' := fun a b => by simp [bePi, inner_add_right]
-          map_smul' := fun a b => by simp [bePi, inner_smul_right] }
+          map_add' := fun a b => by simp [bePi]
+          map_smul' := fun a b => by simp [bePi] }
       have hl : ∀ g ∈ K, l (σ g w) = l w := fun g hg => by
         have hz' : σ g z = z := mem_fixed.1 hz g hg
         show bePi (Tm (σ g w)) (Tm z) = bePi (Tm w) (Tm z)

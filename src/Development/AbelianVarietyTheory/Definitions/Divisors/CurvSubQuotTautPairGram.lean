@@ -1,4 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExtFormAdjEqNegSecondForm
 
 open Matrix Complex ComplexConjugate Filter Topology
@@ -134,7 +136,7 @@ theorem mContDiffAt_pairFrame (k : WithTop ℕ∞) (z : ℂ) : MContDiffAt k pai
     fromBlocks_apply₂₁, fromBlocks_apply₂₂, of_apply] <;> fun_prop
 
 theorem det_pairFrame (z : ℂ) : (pairFrame z).det = 1 := by
-  simp [pairFrame, det_fromBlocks_zero₁₂]
+  simp [pairFrame]
 
 theorem isPosFrame_tautPairGram : IsPosFrame Set.univ tautPairGram := by
   refine ⟨isOpen_univ, fun a b z _ => ?_, fun z _ => ?_⟩

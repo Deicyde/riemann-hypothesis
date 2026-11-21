@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousToGAd
 
 noncomputable section
@@ -96,7 +97,7 @@ theorem sq_incV (σ : E →ₐ[F] E) {n : ℕ} (J : Matrix (Fin n) (Fin n) E) (p
 theorem mulVec_eq_sum {n m : ℕ} (ι : Matrix (Fin n) (Fin m) E) (z : Fin m → AE F E) :
     incM F ι *ᵥ z = ∑ k, z k • incV F (ι *ᵥ Pi.single k 1) := by
   funext i
-  simp [incM, incV, Matrix.mulVec, dotProduct, Finset.sum_apply, mul_comm, Pi.single_apply]
+  simp [incM, incV, Matrix.mulVec, dotProduct, Finset.sum_apply, mul_comm]
 
 theorem exists_unitary_of_fix : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [NumberField E] [Algebra F E] (σ : E →ₐ[F] E), IsCMExt F E σ →
     ∀ (hσ : ∀ x, σ (σ x) = x) (n n₁ : ℕ) (W : Spc F E n) (W₁ : Spc F E n₁) (H : Plane E n n₁), (∀ i j, σ (W.J j i) = -W.J i j) → n = n₁ + 2 →

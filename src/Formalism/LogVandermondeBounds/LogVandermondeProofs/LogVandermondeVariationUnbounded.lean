@@ -1,5 +1,12 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.LogVandermondeBounds.LogVandermondeVariationUnbounded
-import Mathlib
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.NumberTheory.Harmonic.Bounds
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace Formalism.LogVandermondeBounds.StandardLattice
 

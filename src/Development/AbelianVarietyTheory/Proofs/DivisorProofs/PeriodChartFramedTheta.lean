@@ -1,12 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsTateZero
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsEquivOfExp
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LePreimageOfFst
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RiemannDataLinearChart
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlatFormVerticalNegativeImagPositive
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PeriodTorusFlatCoordsInverse
 import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.ExistsEqCexpQuadraticOfEquivalentFactors
-import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.HermFormPullEqOfLbIsoPow
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsThetaOfPolAV
 
 set_option autoImplicit false
 
@@ -147,8 +146,8 @@ theorem exists_log {g : ℕ} {τ : Matrix (Fin g) (Fin g) ℂ} (hτ : IsSiegel �
     rw [(flatOf_per_inv τ hτ.2).1, (flatOf_per_inv τ hτ.2).1] at e1
     have e2 : herm τ (per τ l') (per τ l) = star (herm τ (per τ l) (per τ l')) := by
       have s : ((τ.map Complex.im)⁻¹)ᵀ = (τ.map Complex.im)⁻¹ := (hτ.1.map Complex.im).inv
-      simp only [herm, dotProduct, vecMul, star_sum, star_mul, Finset.sum_mul, Finset.mul_sum, Pi.star_apply,
-        star_star, map_apply, Complex.star_def, Complex.conj_ofReal, map_sum, map_mul, Complex.conj_conj]
+      simp only [herm, dotProduct, vecMul, star_sum, star_mul, Finset.sum_mul, Pi.star_apply,
+        map_apply, Complex.star_def, Complex.conj_ofReal, Complex.conj_conj]
       rw [Finset.sum_comm]
       refine Finset.sum_congr rfl fun a _ => Finset.sum_congr rfl fun b _ => ?_
       rw [← congrFun (congrFun s a) b, transpose_apply]

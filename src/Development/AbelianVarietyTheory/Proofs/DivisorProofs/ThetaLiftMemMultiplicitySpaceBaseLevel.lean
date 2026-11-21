@@ -1,6 +1,4 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.ThetaFireRow
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ContDiffDerivSnoc
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LevelCharacterConjugate
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLiftOfMemLevel
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PlacesApart

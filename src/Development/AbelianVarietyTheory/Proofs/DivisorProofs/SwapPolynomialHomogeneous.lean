@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OddHarmZero
 
 set_option autoImplicit false
@@ -52,14 +52,14 @@ theorem dif_mid (x y : κ) (hxy : x ≠ y) (M : MvPolynomial κ ℝ) : dif x y (
     rw [map_mul, Derivation.leibniz, hp, smul_zero, add_zero]
     have : dif x y (mid x y (X z)) = 0 := by
       by_cases hx : z = x
-      · subst hx; rw [mid_X_left]; simp [pderiv_X, Pi.single_apply, hxy, hxy.symm]
+      · subst hx; rw [mid_X_left]; simp [pderiv_X, hxy, hxy.symm]
       by_cases hy : z = y
-      · subst hy; rw [mid_X_right]; simp [pderiv_X, Pi.single_apply, hxy, hxy.symm]
-      rw [mid_X_of_ne hx hy]; simp [pderiv_X, Pi.single_apply, hx, hy, Ne.symm hx, Ne.symm hy]
+      · subst hy; rw [mid_X_right]; simp [pderiv_X, hxy, hxy.symm]
+      rw [mid_X_of_ne hx hy]; simp [pderiv_X, hx, hy]
     rw [this, smul_zero]
 
 theorem dif_u (x y : κ) (hxy : x ≠ y) : dif x y (X y - X x) = 2 := by
-  simp [pderiv_X, Pi.single_apply, hxy, hxy.symm]
+  simp [pderiv_X, hxy, hxy.symm]
   norm_num
 
 def gens (x y : κ) (N : ℕ) : Set (MvPolynomial κ ℝ) :=

@@ -1,5 +1,10 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.LocalisationLadders.CriterionTruncation
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.LocalisationLadders.TruncationHomExt
+import Mathlib.Data.Finsupp.Pointwise
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Tactic.ENatToNat
+import Std.Tactic.BVDecide.Normalize.Prop
 
 set_option backward.isDefEq.respectTransparency false
 set_option autoImplicit false
@@ -37,7 +42,7 @@ def sh {M : Type} [AddCommMonoid M] : (ℕ →₀ M) →+ (ℕ →₀ M) where
 @[simp] theorem sh_apply {M : Type} [AddCommMonoid M] (c : ℕ →₀ M) (k : ℕ) : sh c k = c (k + 1) := rfl
 
 theorem sh_single_zero {M : Type} [AddCommMonoid M] (y : M) : sh (Finsupp.single 0 y) = 0 := by
-  ext k; simp [Finsupp.single_apply]
+  ext k; simp
 
 theorem sh_single_succ {M : Type} [AddCommMonoid M] (n : ℕ) (y : M) :
     sh (Finsupp.single (n + 1) y) = Finsupp.single n y := by

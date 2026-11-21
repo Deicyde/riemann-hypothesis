@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ModelGramPosSemidef
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PosDefContinuousCompactNormEquivStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormLeModelGramNormStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConnectionFormCompactBoundStatement

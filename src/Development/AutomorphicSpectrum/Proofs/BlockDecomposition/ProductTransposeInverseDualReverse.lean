@@ -1,6 +1,5 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.ZelevinskyJacquet.ZelevinskyCosocles.GKLocal
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IrreducibleAdmissibleGL
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.NormalisedParabolicInductionReindexEquiv
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.TransposeInverseInvolutionApply
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GelfandKazhdanContragredient
@@ -139,7 +138,7 @@ theorem deltaHalf_thetaL {h : ℕ} (d : Fin h → ℕ) (g : Levi k (fun a => Fin
   simp only [hg]
   rw [← Equiv.prod_comp Fin.revPerm]
   refine Finset.prod_congr rfl fun a _ => ?_
-  simp only [Fin.revPerm_apply, Fin.rev_rev, modExp_rev, Int.cast_neg, neg_div, absPow_neg, map_inv,
+  simp only [Fin.revPerm_apply, modExp_rev, Int.cast_neg, neg_div, absPow_neg, map_inv,
     MonoidHom.inv_apply, inv_inv]
   exact congrArg (fun b => (absPow k ((modExp (fun b => Fin (d b)) a : ℂ) / 2)) (Matrix.GeneralLinearGroup.det (g b)))
     (Fin.rev_rev a)

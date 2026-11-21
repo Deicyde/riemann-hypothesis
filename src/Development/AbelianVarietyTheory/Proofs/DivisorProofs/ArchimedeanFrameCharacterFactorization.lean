@@ -1,4 +1,5 @@
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockMap
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryLieElementsGenerateOneParamLines
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsGrpDataMapHaar
@@ -101,7 +102,7 @@ theorem charUpq : ∀ (R S : ℕ) (χ : Mat R S → ℂ),
           rw [star_zeta]; field_simp [ne_zero_add t, ne_zero_sub t])
         have hu2 := diag_unit (⟨0, hS⟩ : Fin S) ((1 - 2 * Complex.I * t) / (1 + 2 * Complex.I * t)) (by
           rw [star_div₀]
-          have e1 : star (1 - 2 * Complex.I * t) = 1 + 2 * Complex.I * t := by simp [Complex.ext_iff]
+          have e1 : star (1 - 2 * Complex.I * t) = 1 + 2 * Complex.I * t := by simp
           have e2 : star (1 + 2 * Complex.I * t) = 1 - 2 * Complex.I * t := by simp [Complex.ext_iff]
           rw [e1, e2]; field_simp [ne_zero_add t, ne_zero_sub t])
         rw [hxy _ _ hu1 hu2, det_diag, det_diag] at e
@@ -209,7 +210,7 @@ theorem prod_char {ι : Type} [Fintype ι] [DecidableEq ι] (χ : (ι → Mat R 
         funext v
         by_cases hv : v = a
         · subst hv; simp [Finset.piecewise, ha]
-        · simp [Finset.piecewise, hv, Function.update_of_ne hv]
+        · simp [Finset.piecewise, hv]
       rw [e, hmul _ _ (upd a (g a) (hg a)) (pc s), hn a (g a) (hg a), ih, Finset.prod_insert ha]
   simpa using ind Finset.univ
 

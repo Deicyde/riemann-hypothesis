@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.IsFirstChernClassOfLineBundle
+import Mathlib.Tactic.Polynomial.Basic
 open GlobalTheory.NeedB Polynomial
 
 namespace GlobalTheory

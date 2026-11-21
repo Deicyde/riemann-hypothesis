@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BaseLApply
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdjacentPullPull
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GeometricallyConnectedOfIsIsoRestrict
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PullbackChartMetricBlockForm
 open CategoryTheory AlgebraicGeometry TopologicalSpace Filter Topology MeasureTheory Matrix
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -29,7 +27,7 @@ theorem cHess_comp_base {ι : Type} [Fintype ι] {r : ι → ℕ} {n D : ℕ} (�
   rw [ContinuousLinearMap.fderiv] at this
   refine this.trans ?_
   simp only [hb, BigCell.blk, submatrix_apply, baseL_apply]
-  cases ε j <;> cases ε l <;> simp [diagonal_apply, apply_ite (starRingEnd ℂ)]
+  cases ε j <;> cases ε l <;> simp [apply_ite (starRingEnd ℂ)]
 
 theorem chern_bc_cell : ∀ (k : Type) [CommRing k] (B Y : Scheme.{0}) (q : B ⟶ Sp k) (p : Y ⟶ Sp k) (π : Y ⟶ B) (w : π ≫ q = p) (ι : Type) [Fintype ι] (r : ι → ℕ) (n D : ℕ) (ε : Fin D ≃ Fin n ⊕ (Σ a, Low (r a))) (σ : k →+* ℂ) (E : ι → B.Modules) (h : ∀ a, VMetric q (E a) (r a)) (H : ∀ a, (h a).IsCInf) (fl : ∀ a, Vert.Flag ((Scheme.Modules.pullback π).obj (E a)) (r a)) (c : AlgChart q σ n) (cE : ∀ a, Chart (E a) (r a)) (c' : AlgChart p σ D), BigCell.IsCell ε π w c c' → (∀ a, BigCell.IsCellFrame ε π w c' a (h a) (fl a) (cE a)) → ∀ y ∈ c'.e.source, (∀ z : Σ a, Fin (r a), chernMat ((VMetric.grLB (fl z.1) z.2 ((H z.1).pull π w)).φ σ) c' y = cHess D (fun v => (BigCell.rootWt ε (fun a u => ((h a).met σ).G (cE a) (c.e.symm u)) z v : ℂ)) (c'.e y)) ∧ (∀ a, flagMat ((h a).pull π w) (fl a) σ c' y = ∑ i, formMat (extTrace (BigCell.stepGram ε (fun a u => ((h a).met σ).G (cE a) (c.e.symm u)) a i) (c'.e y))) ∧ ∀ A : HermLB q, chernMat ((A.pull π w).φ σ) c' y = BigCell.blk ε (chernMat (A.φ σ) c (PtsOver.map π w (spMap σ) y)) 0 := by
   intro k _ B Y q p π w ι _ r n D e σ E h H fl c cE c' hc hcf y hy

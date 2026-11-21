@@ -1,4 +1,8 @@
-import Development.WeilBound.ThetaLifts.LocalTheory.UatClosure
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.ThetaLifts.CartanFactorisation.TensOfEval
+import Development.WeilBound.ThetaLifts.ConeHypotheses.PureEqPureA
+import Development.WeilBound.ThetaLifts.LocalTheory.IsArchimedeanLocalEquivariantMap
 
 noncomputable section
 

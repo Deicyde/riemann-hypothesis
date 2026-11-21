@@ -1,10 +1,6 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasTypeVec
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.LabesseWaldspurger
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.ConstantTermVanishing
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.AdjointRadical
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.CuspidalNoRadicalFixed
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.StandardMaximalParabolic
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.CentralizerTensorForms
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.LinearIndependentE
 open MeasureTheory Set Filter NumberField IsDedekindDomain
 open GlobalTheory.AdelicU GlobalTheory.OpTrace GlobalTheory.Orb GlobalTheory.AutomorphicL2Unitary GlobalTheory.AutMult Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.L2.Theta Formalism.IndefR.Mult
@@ -57,7 +53,7 @@ theorem frameLevi_mul (hEE : cT s E0 * J * E0 = 0) (hFF : cT s F0 * J * F0 = 0) 
   have e4 : ∀ {k : Type} (Z : Matrix (Fin r) k A), cT s E0 * (J * (F0 * Z)) = Z := fun Z => by
     rw [← Matrix.mul_assoc, ← Matrix.mul_assoc, hEF, Matrix.one_mul]
   simp only [frameLevi, Matrix.add_mul, Matrix.mul_add, Matrix.mul_one, Matrix.one_mul, Matrix.mul_assoc, e1, e2, e3, e4,
-    Matrix.mul_zero, add_zero, zero_add]
+    Matrix.mul_zero, add_zero]
   abel
 
 theorem frameLevi_zero : frameLevi s J E0 F0 0 0 = 1 := by
@@ -89,7 +85,7 @@ theorem frameLevi_unitary (hs : ∀ x, s (s x) = x) (hJ : cT s J = J) (hEE : cT 
       = J + (J * (E0 * ((a + cT s b + cT s b * a) * (cT s F0 * J))) +
           J * (F0 * ((b + cT s a + cT s a * b) * (cT s E0 * J)))) := by
         simp only [frameLevi, cT_add', Formalism.UG.cT_mul, Formalism.UG.cT_one, cT_cT' s hs, hJ, Matrix.add_mul, Matrix.mul_add,
-          Matrix.mul_one, Matrix.one_mul, Matrix.mul_assoc, e1, e2, e3, e4, Matrix.mul_zero, add_zero, zero_add]
+          Matrix.mul_one, Matrix.one_mul, Matrix.mul_assoc, e1, e2, e3, e4, Matrix.mul_zero, add_zero]
         abel
     _ = J := by rw [key, add_zero]
 
@@ -135,7 +131,7 @@ theorem hform_coordR (R : Type) [CommRing R] [Algebra F R] (x y : V.V) :
     hform (sigR R hc.sig) (JR R V.gram) (GlobalTheory.IndefiniteRowSideFullHecke.AdelicUnitaryGroups.coordR (F := F) V R x) (GlobalTheory.IndefiniteRowSideFullHecke.AdelicUnitaryGroups.coordR (F := F) V R y) =
       inclR R (V.hT x y) := by
   rw [GlobalTheory.IndefiniteRowSideFullHecke.AdelicUnitaryGroups.hT_coord]
-  simp [hform, GlobalTheory.IndefiniteRowSideFullHecke.AdelicUnitaryGroups.coordR, JR, inclR, sigR, CMData.sig, TensorProduct.tmul_sum, starRingEnd_apply]
+  simp [hform, GlobalTheory.IndefiniteRowSideFullHecke.AdelicUnitaryGroups.coordR, JR, inclR, sigR, CMData.sig, starRingEnd_apply]
 
 theorem cT_frameMat_mul (R : Type) [CommRing R] [Algebra F R] {k l : ℕ} (x : Fin k → V.V) (y : Fin l → V.V) :
     cT (sigR R hc.sig) (frameMat (F := F) V R x) * JR (F := F) R V.gram * frameMat (F := F) V R y =

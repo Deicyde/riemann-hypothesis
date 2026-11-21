@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.HermitianTensor.ShapeCovering.StatementY
-import Formalism.GradedWeylDivisibility.FinalD
+import Formalism.GradedWeylDivisibility.FinalC
+import Mathlib.RingTheory.SimpleRing.Principal
 
 noncomputable section
 

@@ -1,8 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LinHomIffLinEnd
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPowPolAV
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CommGroupSixTermRelationToZpowForm
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsSiegPreOfPolAV
+import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsUnifOfIsMumfordOf
+import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsPolAVHypSRetract
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj IsLocalRing
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open GlobalTheory.Toroidal GlobalTheory.LocM GlobalTheory.PolFan GlobalTheory.ZM GlobalTheory.SiegelTor GlobalTheory.TorRef GlobalTheory.PolDeg GlobalTheory.Mum
@@ -59,7 +58,7 @@ theorem lbIso_diag_data {R : Type} [CommRing R] [IsDomain R] (Q : Data R) :
   refine lbIso_nested hL _ _ _ _ _ _ ?_
   rw [Fintype.prod_unique, zpow_one, Fin.prod_univ_two]
   refine (prod_lam _ _ (cls Q.M.L)).trans ?_
-  simp only [Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons, zpow_one]
+  simp only [Matrix.cons_val_zero, Matrix.cons_val_one, zpow_one]
   refine key.trans ?_
   rw [einv]
   rfl

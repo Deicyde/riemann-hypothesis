@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.InclEquiv
-import Development.AbelianVarietyTheory.Definitions.Divisors.IntegralBound
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ComplexifyStatement
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MulBoundAtOfNotIsReal
 
 set_option autoImplicit false
 

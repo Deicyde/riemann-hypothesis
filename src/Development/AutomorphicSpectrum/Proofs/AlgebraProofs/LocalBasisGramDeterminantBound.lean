@@ -1,12 +1,11 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsTransition
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.SkewHermitianDiagonalizableStatement
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.ExistsRealDifferentGeneratorStatement
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.PadicIntegralIffDenominatorStatement
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.ExistsNotMemSubConjStatement
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.GramDeterminantLogDifferentStatement
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.ExistsLocalBasisStatement
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.SesqSesquilinearSkewHermitianStatement
 
 noncomputable section
 

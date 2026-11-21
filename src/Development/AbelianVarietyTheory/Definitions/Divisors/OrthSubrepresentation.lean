@@ -1,6 +1,14 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.CommutativeAlgebra.AbByPOfComm
 import Development.AbelianVarietyTheory.Definitions.CommutativeAlgebra.InvariantSubspaceMobiusInverseRecEqOfFinrankLt
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.GroupTheory.SemidirectProduct
+import Mathlib.RepresentationTheory.Maschke
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 
@@ -275,7 +283,7 @@ example : ¬ Kills (fun g : ℤˣ => 1 - ((g : ℤ) : ℂ)) (fun g => 1 - ((g : 
   let ρ : Representation ℂ ℤˣ (ℂ × ℂ) :=
     { toFun := fun g => LinearMap.prodMap LinearMap.id (((g : ℤ) : ℂ) • LinearMap.id)
       map_one' := by ext <;> simp
-      map_mul' := fun g k => by ext <;> simp [mul_comm] }
+      map_mul' := fun g k => by ext <;> simp }
   have hρ : ∀ g : ℤˣ, ρ g = LinearMap.prodMap LinearMap.id (((g : ℤ) : ℂ) • LinearMap.id) := fun _ => rfl
   have h1 := h (ℂ × ℂ) ρ (by
     rw [finsum_eq_sum_of_fintype]

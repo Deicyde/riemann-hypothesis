@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ResAlgSplitTwo
+import BuildAid.Leniency.Open
+import Development.WeilBound.CoreStatements.AutomorphicKernels.UnitarySchrodingerModel.LocalDefs
 
 open PositivityTheory.PfSWUS.Loc
 

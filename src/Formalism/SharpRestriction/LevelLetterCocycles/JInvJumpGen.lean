@@ -1,4 +1,8 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.JsetEmb
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Formalism.WeaklyAdmissibleFiltrations.Statement
+import Mathlib.Tactic.Polynomial.Basic
 
 noncomputable section
 

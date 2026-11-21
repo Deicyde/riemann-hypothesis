@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.HeckeInertLemmas
-import Formalism.LocalToGlobal.Columns.WmLemmas
 import Formalism.LocalToGlobal.Divisibility.LiftLatInst
 
 noncomputable section

@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.RingSpecNormalisedCharacterEq
 import Formalism.LocalToGlobal.UnitaryNorms.CharShare
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ContinuousNormFin

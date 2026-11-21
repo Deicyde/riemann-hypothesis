@@ -1,5 +1,19 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsTestRep
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.FourierMatch
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.Analysis.Normed.Field.ProperSpace
+import Mathlib.Data.Finsupp.Pointwise
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.MetricSpace.Ultra.Pi
 open GlobalTheory.JR MeasureTheory Filter Topology
 
 namespace GlobalTheory.JR.DualLattice
@@ -90,7 +104,7 @@ theorem box_dual [IsUltrametricDist F] {ψ : AddChar F ℂ} (hψ : IsStdChar ψ)
       rw [hB, Finset.sum_eq_single i] at this
       · simpa [mul_assoc] using this
       · intro j _ hj
-        simp [Finsupp.single_apply, hj.symm]
+        simp [hj.symm]
       · simp
     rw [norm_mul] at h1
     rw [norm_inv, ← one_div, le_div_iff₀ htp, mul_comm]

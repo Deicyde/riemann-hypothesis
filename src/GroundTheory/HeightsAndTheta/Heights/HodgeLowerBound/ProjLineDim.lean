@@ -1,5 +1,8 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.StatementsProjLineAmple
+import BuildAid.Leniency.Open
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.KrullDimension.Polynomial
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterSt
 set_option maxSynthPendingDepth 1
 
 noncomputable section

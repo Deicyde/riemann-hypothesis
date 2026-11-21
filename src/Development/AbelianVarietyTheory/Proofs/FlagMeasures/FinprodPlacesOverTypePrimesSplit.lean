@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.GlobalSchurBounds.ThickPlacesCorollaryOfAnyTranslate
-import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GlobalSchurBounds.StandardLattice
 
 open Formalism.BasicNotions Formalism.MainNotions NumberField IsDedekindDomain
 

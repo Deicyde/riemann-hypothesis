@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.Chebotarev.EulerFin
+import Mathlib.Analysis.Normed.Group.Tannery
+import Mathlib.Analysis.SpecialFunctions.Log.Summable
+import Mathlib.Tactic.ReduceModChar
 
 open NumberField Filter Topology
 

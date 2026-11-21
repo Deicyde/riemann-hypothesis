@@ -1,6 +1,10 @@
-import Mathlib
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ResidueLatticeCount.UnitPreserving
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ResidueLatticeCount.LatticeCountGen
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
 
 open NumberField NumberField.mixedEmbedding NumberField.mixedEmbedding.fundamentalCone
   NumberField.InfinitePlace NumberField.Units MeasureTheory

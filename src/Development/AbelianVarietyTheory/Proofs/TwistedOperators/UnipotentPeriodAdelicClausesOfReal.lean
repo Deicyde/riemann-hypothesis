@@ -1,9 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.DepthPays
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsNormLeHeightPow
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IntegrableScalarActionMultiplicityMapValuesStatement
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.UnitaryEmbeddingContinuousMulRational
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ContinuousOnAtTau
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.AdelicUnitaryHaarEqMapProdRealFiniteStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CongruencePreimageVolumeFiniteStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MemIdealSmulAdelicPointRationalLatticeStatement
@@ -21,7 +18,7 @@ variable {D : D7}
 theorem cmp_of_mem_GfC (θ : InfFam D) {V : HSp D} {b : GA D V} (hb : b ∈ GfC V) (τ : D.what₂.Tau) : cmp θ τ b = 1 := by
   have h1 : infHom V b = 1 := hb
   have h2 := congrArg Units.val h1
-  simp only [infHom, MonoidHom.comp_apply, Formalism.UG.bc, Units.coe_map, MonoidHom.coe_coe, RingHom.mapMatrix_apply, Units.val_one] at h2
+  simp only [infHom, MonoidHom.comp_apply, Formalism.UG.bc, Units.coe_map, Units.val_one] at h2
   have h4 : (matHom V b).1.map (Algebra.TensorProduct.map (fstA D.host.F) (AlgHom.id D.host.F D.host.E)) = 1 := h2
   have h3 : cmp θ τ b = ((matHom V b).1.map (Algebra.TensorProduct.map (fstA D.host.F) (AlgHom.id D.host.F D.host.E))).map (θ τ) := rfl
   rw [h3, h4]

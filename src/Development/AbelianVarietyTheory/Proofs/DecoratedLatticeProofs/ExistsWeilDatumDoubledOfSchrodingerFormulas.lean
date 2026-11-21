@@ -1,12 +1,14 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.SiegelWeil₂.SiegelWeilUnitarySchrodinger
-import Development.AbelianVarietyTheory.PublishedTheorems.SiegelWeil₂.SiegelEisensteinPolesStd
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.WeilThetaConvergence
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.HalfData
-import Development.AbelianVarietyTheory.PublishedTheorems.SiegelWeil₂.SiegelWeilUnitaryConvergent
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.HypsSatisfiable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.SecondOnCommonRangeOfSecond
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HasDerivAtAndIsTheta
+import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ExistsStandardUnitaryChartDoubledSpace
+import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ExistsWeilDatumTransportSchwartzBruhatStandard
+import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ImportsBis
+import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.IsHeckeCharRestrictionEtaInv
+import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.TransportedSchrodingerSiegelUnipotentAction
+import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.TransportedSchrodingerStandardLeviAction
+import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.WeylFormulaStandardUnitaryGroupWeilDatum
+import Development.AbelianVarietyTheory.PublishedTheorems.SiegelWeil₂.EisPoleLEZeroOfLt
 
 noncomputable section
 open scoped Matrix NNReal ComplexConjugate TensorProduct
@@ -39,7 +41,7 @@ theorem exists_datum : ∀ (D : D7) (A V : HSp D) (ψ : AddChar (AF D.host.F) �
   have hr1 : ResEta D 1 (dblSp A).rank := by
     have := GlobalTheory.Eis.SimplePoleModel.resEta_one_two_mul D A.rank
     convert this using 2
-    simp [GlobalTheory.Doubling.dblSp]
+    simp
     omega
   obtain ⟨omh, homh⟩ := GlobalTheory.weilRepresentationUnitaryPair D ψ₀ (dblSp A) V 1 χ⁻¹ h₀
     ⟨continuous_const, fun _ => rfl⟩ hχi hr1 hri

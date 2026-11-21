@@ -1,11 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.IsAdaptedEmpty
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.LeviNormalizesUnipotentVariant
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.EmbRelAtRealPlaceOfUnitaryEmbedding
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.FiniteDimensionalCoeffSpan
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsContinuousAdelicUnitaryEmbedding
-import GroundTheory.LocalFields.CompleteTrivialLocal
-import GroundTheory.PAdicHodge.Admissible
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Matrix
 open scoped TensorProduct ContDiff
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
@@ -24,7 +21,7 @@ def incl (e : Fin n' → Fin n) : Matrix (Fin n) (Fin n') ℂ :=
 
 theorem incl_ct_mul {e : Fin n' → Fin n} (he : Function.Injective e) : (incl e)ᴴ * incl e = 1 := by
   ext a b
-  simp [incl, Matrix.mul_apply, Matrix.one_apply, Matrix.conjTranspose_apply, he.eq_iff]
+  simp [incl, Matrix.mul_apply, Matrix.one_apply, he.eq_iff]
 
 theorem incl_mul_apply {e : Fin n' → Fin n} (he : Function.Injective e) {m : Type} (X : Matrix (Fin n') m ℂ)
     (a : Fin n') (c : m) : (incl e * X) (e a) c = X a c := by
@@ -35,7 +32,7 @@ theorem incl_mul_apply_of_notMem {e : Fin n' → Fin n} {m : Type} (X : Matrix (
   rw [Matrix.mul_apply]
   refine Finset.sum_eq_zero fun a _ => ?_
   have : i ≠ e a := fun h => hi ⟨a, h.symm⟩
-  simp [incl, Matrix.one_apply, this]
+  simp [incl, this]
 
 theorem Jm_mul_incl (ε : Fin n → Bool) (e : Fin n' → Fin n) : Jm ε * incl e = incl e * Jm (ε ∘ e) := by
   ext i c
@@ -234,7 +231,7 @@ variable {n n' : ℕ}
 
 theorem incl_ct_mul_apply (e : Fin n' → Fin n) {m : Type} (Y : Matrix (Fin n) m ℂ) (a : Fin n') (c : m) :
     ((incl e)ᴴ * Y) a c = Y (e a) c := by
-  simp [incl, Matrix.mul_apply, Matrix.one_apply, Matrix.conjTranspose_apply]
+  simp [incl, Matrix.mul_apply, Matrix.one_apply]
 
 theorem exists_frame {κ : Type} [Fintype κ] [DecidableEq κ] {ε : Fin n → Bool} {P : Matrix (Fin n) (Fin n) ℂ}
     (hP : IsUnit P) (k : KG ε) (S : Set (Fin n)) (C : Matrix (Fin n) κ ℂ) (M : Matrix (Fin n) (Fin n') ℂ)

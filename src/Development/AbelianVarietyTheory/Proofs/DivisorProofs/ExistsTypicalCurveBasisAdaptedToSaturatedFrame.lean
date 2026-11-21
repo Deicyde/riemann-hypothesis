@@ -1,9 +1,8 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.WeightedSumBounds.PeriodValuationTheory
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.WeightedSumBounds.WtSubOneLe
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.IsSatFrame
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RootExtractionLemmaSheafStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TypicalCurvesTangentAndBasesStatement
+import Mathlib.RingTheory.PicardGroup
 
 open MvPowerSeries ReciprocityTheory.PGsh ReciprocityTheory.ChartRestriction.G.Sh GlobalTheory.FGDepth
 
@@ -105,10 +104,10 @@ theorem exists_basis_adapted_frame : ∀ (C : Type) [Field C] [IsAlgClosed C] [C
         unfold IsIntV
         by_cases hc : c = e
         · subst hc; simp
-        · simp [Pi.single_apply, hc])
+        · simp [hc])
       (fun c hc => by
         have : c ≠ e := fun h' => hc (h' ▸ rfl)
-        simp [Pi.single_apply, this])
+        simp [this])
   let γ : Fin d → Fin d → PowerSeries C := fun e =>
     if hm : e ∈ Set.range r0 then γ' ((Equiv.ofInjective r0 hinj).symm ⟨e, hm⟩) else ζ e
   have hγr : ∀ a, γ (r0 a) = γ' a := by

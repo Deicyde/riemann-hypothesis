@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.LevelGatherings.ComplSmulMapENe
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.SplitUnitaryGroupIso
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Transport

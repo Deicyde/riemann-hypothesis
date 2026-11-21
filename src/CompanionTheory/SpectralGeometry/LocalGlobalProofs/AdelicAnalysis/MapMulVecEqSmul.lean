@@ -1,8 +1,8 @@
-import Mathlib
-import Formalism.UnipotentAdelicQuotients.SWXSDefs
-import Formalism.SharpRestriction.GlobalSchurBounds.GeneralLinearActions.GenusMassVolumes
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.MatrixTransvectionDiagonalDecompositionStatement
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.HaarInvariantUnderTransvectionStatement
+import Mathlib.MeasureTheory.Measure.Haar.DistribChar
 open MeasureTheory Topology Matrix
 open scoped ENNReal NNReal
 

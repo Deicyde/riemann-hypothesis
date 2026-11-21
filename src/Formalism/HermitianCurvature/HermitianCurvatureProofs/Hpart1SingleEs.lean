@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LeftRuleLevelPoint
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutHL2
 
 open Matrix
 open scoped ComplexConjugate

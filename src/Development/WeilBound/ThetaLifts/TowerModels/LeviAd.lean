@@ -1,6 +1,8 @@
-import Development.WeilBound.ThetaLifts.EigenvalueEndgame.PlaneRemovalConfiguration
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.TowerModels.LeviAlg
 import Development.AbelianVarietyTheory.Definitions.Foundations.EqPlaceIdemOfIsPrimeIdem
+import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
 noncomputable section
 

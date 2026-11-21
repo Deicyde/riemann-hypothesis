@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DerivCompM
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Rat.Star
 
 open GlobalTheory.Nef
 

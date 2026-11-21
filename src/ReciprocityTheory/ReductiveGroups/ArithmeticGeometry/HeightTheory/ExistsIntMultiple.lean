@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.GaussAbsMulSupportFinite
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.Qdist
+import ReciprocityTheory.SemistableReduction.LatSemiSt
 
 namespace ReciprocityTheory.ChartRestriction.G.T0.SatakeVectors
 

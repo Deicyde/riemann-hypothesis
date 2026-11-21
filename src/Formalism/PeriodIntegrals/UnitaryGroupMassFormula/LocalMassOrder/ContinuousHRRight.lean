@@ -1,4 +1,5 @@
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalMassOrder.Development
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalMassOrder.IsTopRingTens
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalMassOrder.SelfDualMeasureSFinite
 

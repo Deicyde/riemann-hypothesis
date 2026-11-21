@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.PinColL
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsBlockOfEntries
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.StdLvPr
+import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsRatDatum
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.L2.DIV Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.IndefR.Lev Formalism.IndefR.Mult Formalism.L2.Forms Formalism.L2.Ker
 open NumberField IsDedekindDomain Matrix MeasureTheory GlobalTheory.Mem GlobalTheory.Mem.Col2 GlobalTheory.MixPer GlobalTheory.KJInf GlobalTheory.SeeSaw GlobalTheory.Fam GlobalTheory.AdForm
 open scoped TensorProduct Classical
@@ -25,11 +26,11 @@ theorem iXm_entry {D : D7}
     rw [LinearEquiv.symm_apply_eq]
     ext j
     simp only [LinearEquiv.trans_apply, LinearEquiv.funCongrLeft_apply, Module.Basis.equivFun_apply, Module.Basis.repr_self,
-      Pi.single_apply, Finsupp.single_apply, Fin.ext_iff, Fin.val_cast, finCongr_symm, finCongr_apply, Fin.coe_cast, LinearMap.funLeft_apply, Function.comp_apply]
+      Pi.single_apply, Finsupp.single_apply, Fin.ext_iff, Fin.val_cast, finCongr_symm, finCongr_apply, LinearMap.funLeft_apply]
     split_ifs <;> first | rfl | (exfalso; omega)
   simp only [LinearMap.comp_apply, LinearEquiv.coe_coe, hs, key]
   simp only [LinearEquiv.trans_apply, LinearEquiv.funCongrLeft_apply, Module.Basis.equivFun_apply, Module.Basis.repr_self,
-      Pi.single_apply, Finsupp.single_apply, Fin.ext_iff, Fin.val_cast, finCongr_symm, finCongr_apply, Fin.coe_cast, LinearMap.funLeft_apply, Function.comp_apply]
+      Finsupp.single_apply, Fin.ext_iff, Fin.val_cast, finCongr_symm, finCongr_apply, LinearMap.funLeft_apply]
   split_ifs <;> first | rfl | (exfalso; omega)
 
 end GlobalTheory.EmbTopBlock

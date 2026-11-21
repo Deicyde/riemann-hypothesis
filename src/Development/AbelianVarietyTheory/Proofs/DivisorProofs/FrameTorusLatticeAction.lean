@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MajINonneg
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsSmoothModerateOfIsAutFunSm
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SymplecticBlockBasisOrthogonal
+import Mathlib.Algebra.Module.Torsion.Prod
 
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -76,7 +76,7 @@ theorem GlobalTheory.ThKTorus.frameCo_vecMulVec_mem_block : ∀ (F E : Type) [Fi
     have h1 : mat a * w = tAd F 2 • w := by
       rw [hw, mul_vecMulVec_eq, mulVec_eq_tAd _ _ _ (ha.1 i), hti]
       ext r l
-      simp [Matrix.vecMulVec_apply, smul_mul_assoc]
+      simp [Matrix.vecMulVec_apply]
     have h2 : w = M₁.co.e.symm (fun j => algebraMap F (AF F) (u j), 0) +
         M₁.co.e.symm (0, fun j => algebraMap F (AF F) (v j)) := by
       rw [← map_add, Prod.mk_add_mk, add_zero, zero_add, ← huv, LinearEquiv.symm_apply_apply]

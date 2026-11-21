@@ -1,5 +1,6 @@
-import Formalism.LatticeSlopes.Statement
+import BuildAid.Leniency.Open
 import Formalism.LatticeSlopes.LatticeSlopesProofs.CovolEqGram
+import Mathlib.RingTheory.SimpleRing.Principal
 
 open Module Submodule
 

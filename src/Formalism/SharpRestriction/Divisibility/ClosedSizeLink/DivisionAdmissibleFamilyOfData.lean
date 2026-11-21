@@ -1,4 +1,5 @@
-import Formalism.SharpRestriction.GlobalTheoremInputs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.AdmissibleParameterJoins
 import Formalism.SharpRestriction.Divisibility.LocalQuadraticParts
 import Formalism.SharpRestriction.Divisibility.ClosedSizeLink.AdmissibleFamilyOfThreshold

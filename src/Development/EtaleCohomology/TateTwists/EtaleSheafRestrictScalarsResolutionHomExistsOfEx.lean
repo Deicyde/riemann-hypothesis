@@ -1,9 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.TateTwists.EtaleSheafRestrictScalarsInjectiveResolutionHomE
-import Mathlib.Algebra.Homology.HomotopyCategory.KInjective
-import Mathlib.Algebra.Homology.HomotopyCategory.Acyclic
-import Mathlib.CategoryTheory.Triangulated.Orthogonal
-import Mathlib.Algebra.Homology.Localization
-import Mathlib.CategoryTheory.Abelian.Injective.Extend
+import Mathlib.CategoryTheory.Abelian.Injective.Ext
 
 open CategoryTheory Limits AlgebraicGeometry Opposite CochainComplex CochainComplex.HomComplex GlobalTheory.EtC
 
@@ -53,9 +50,7 @@ theorem etaleSheaf_restrictScalars_resolution_hom_exists_of_exact (hE : EtaleShe
         ((res R (G.obj F)).isZero_of_isStrictlyGE 0 (-1) (by decide)).eq_of_tgt (h.hom 0 (-1)) 0, zero_comp]
     rw [e1, e2, zero_add, zero_add]
   have key2 := congrArg (fun x => G.map (HomologicalComplex.singleObjXSelf (ComplexShape.up ℤ) 0 F).inv ≫ x) key
-  simp only [s, f0, HomologicalComplex.comp_f, Functor.mapHomologicalComplex_map_f,
-    HomologicalComplex.singleMapHomologicalComplex_hom_app_self, ← Category.assoc, ← Functor.map_comp,
-    Iso.inv_hom_id, Functor.map_id, Category.id_comp] at key2
+  simp only [s, f0, HomologicalComplex.comp_f, Functor.mapHomologicalComplex_map_f] at key2
   have key3 : G.map (HomologicalComplex.singleObjXSelf (ComplexShape.up ℤ) 0 F).inv ≫ G.map (IS.ι'.f 0) ≫ g.f 0 =
       (HomologicalComplex.singleObjXSelf (ComplexShape.up ℤ) 0 (G.obj F)).inv ≫ IR.ι'.f 0 := by
     refine key2.trans ?_

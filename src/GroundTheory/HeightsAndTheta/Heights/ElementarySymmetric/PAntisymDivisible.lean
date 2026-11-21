@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Antisymmetric.Statements
+import Mathlib.Algebra.AffineMonoid.UniqueSums
+import Mathlib.Tactic.Polynomial.Basic
 set_option maxSynthPendingDepth 1
 
 noncomputable section
@@ -45,7 +49,7 @@ lemma dvd_of_vanish (u v : σ) (P : MvPolynomial σ ℝ)
     intro x
     rw [eval_rename, map_zero]
     apply h
-    simp only [Function.comp, collapse, if_pos rfl]
+    simp only [Function.comp, collapse]
     split_ifs <;> rfl
   have := sub_rename_collapse_mem u v P
   rw [h0, sub_zero] at this
@@ -120,7 +124,7 @@ lemma vanish_of_open [Fintype σ] (u v : σ) (P : MvPolynomial σ ℝ) (O : Set 
       apply h
       refine ⟨hball hy, ?_⟩
       show (y ∘ collapse u v) u = (y ∘ collapse u v) v
-      simp only [Function.comp, collapse, if_pos rfl]
+      simp only [Function.comp, collapse]
       split_ifs <;> rfl
   intro x hx
   have := congrArg (eval x) hQ
@@ -344,7 +348,7 @@ theorem AntisymDivisible.proof : AntisymDivisible.Statement := by
     simp only [map_smul, rename_X] at h
     rw [coeff_lin, coeff_lin] at h
     simp only [Equiv.swap_apply_eq_iff, Equiv.swap_apply_left, Finset.sum_ite_eq',
-      Finset.mem_univ, if_true, id] at h
+      Finset.mem_univ, if_true] at h
     exact h.symm
   refine ⟨l₁, ⟨?_, ?_⟩, hP1⟩
   · exact homogeneousComponent_isHomogeneous 1 l

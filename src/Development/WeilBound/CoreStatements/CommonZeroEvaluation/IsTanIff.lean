@@ -1,11 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.CommonZeroEvaluation.CombComb
 import Development.WeilBound.CoreStatements.CommonZeroEvaluation.ExistsLeftInv
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ConjEmbRtOfNe
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.CompleteDvrPullbackSemiabelianStatement
-import Development.AbelianVarietyTheory.Proofs.GenericRegularity.ExistsAffineLieBasisBaseChange
 import Development.AbelianVarietyTheory.Proofs.GenericRegularity.ExistsChartFiniteType
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.BCTools
+import Development.AutomorphicSpectrum.Proofs.GeometryProofs.SpecFracExt
 
 noncomputable section
 

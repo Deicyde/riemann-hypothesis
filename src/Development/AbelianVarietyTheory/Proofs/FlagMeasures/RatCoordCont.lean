@@ -1,6 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.LoopTerm
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.OfRoots
+import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.RealObj
 
 noncomputable section
 

@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.QuotientMeasureFibration
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoordMeasure
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompactTorusQuotientIntegrationStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompactTorusQuotientInvarianceStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompactTorusQuotientUnfoldingStatement

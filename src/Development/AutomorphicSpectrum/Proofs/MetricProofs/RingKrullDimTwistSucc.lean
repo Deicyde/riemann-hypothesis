@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.IsHorizontalTwist
 import ReciprocityTheory.CommutativeAlgebra.SaturatedChains.Integral
+import Mathlib.RingTheory.KrullDimension.Polynomial
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 noncomputable section
 
@@ -58,7 +61,7 @@ theorem toA_quad (p : ℕ) (W : Ideal (MRing ι)) : toA p W (quad p) = 0 := by
   have h : AdjoinRoot.mk (quadP p W) (Polynomial.X ^ 2 +
       Polynomial.C (Polynomial.C ((p : ℤ) : MRing ι ⧸ W) * Polynomial.X ^ 2)) = 0 :=
     AdjoinRoot.mk_self
-  simp only [map_add, map_pow, map_mul, AdjoinRoot.mk_X, AdjoinRoot.mk_C, map_intCast,
+  simp only [map_add, map_pow, map_mul, AdjoinRoot.mk_X, AdjoinRoot.mk_C,
     Int.cast_natCast, map_natCast] at h
   have hC : toA p W (MvPolynomial.C (p : ℤ)) = (p : AdjoinRoot (quadP p W)) := by
     rw [map_natCast MvPolynomial.C p, map_natCast]
@@ -132,8 +135,8 @@ theorem baseMap_isIntegralElem_xN (p : ℕ) (W : Ideal (MRing ι)) :
       (p : MRing (Tb ι) ⧸ twist p W) := by
     rw [map_natCast MvPolynomial.C p, map_natCast]
   simp only [quadP, quad, Polynomial.eval₂_add, Polynomial.eval₂_mul, Polynomial.eval₂_pow,
-    Polynomial.eval₂_X, Polynomial.eval₂_C, map_mul, map_pow, map_add, baseP_X, map_intCast,
-    Int.cast_natCast, hp, map_natCast, Polynomial.eval₂_natCast]
+    Polynomial.eval₂_X, Polynomial.eval₂_C, map_mul, map_pow, map_add, baseP_X,
+    Int.cast_natCast, map_natCast, Polynomial.eval₂_natCast]
 
 theorem baseMap_isIntegralElem_X (p : ℕ) (W : Ideal (MRing ι)) (q : Σ o, Tb ι o) :
     (baseP p W).IsIntegralElem (Ideal.Quotient.mk (twist p W) (X q)) := by

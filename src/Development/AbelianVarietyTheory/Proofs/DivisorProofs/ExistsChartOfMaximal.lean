@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ExistsChartOfMaximal
-import Development.AbelianVarietyTheory.Definitions.Divisors.GrNormCompCast
 
 set_option autoImplicit false
 

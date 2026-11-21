@@ -1,6 +1,7 @@
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.MetaplecticRepresentation
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IteratedLineDerivMemWeylAlg
-import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.ExistsEqTransposeMulDiagonalMul
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.ThetaMetrics.ExistsEventuallyNormRiemannThetaTermLe
+import Mathlib.LinearAlgebra.SymplecticGroup
+import Mathlib.RingTheory.SimpleRing.Principal
 open MeasureTheory Matrix Complex GlobalTheory.RealWeil
 open scoped Real SchwartzMap ComplexConjugate
 
@@ -41,7 +42,7 @@ theorem IsSiegel.neg_mul_inv_of_symplectic (l : Type) [Fintype l] [DecidableEq l
   have key : Pᴴ * Q - Qᴴ * P = -(2 * I) • (1 : Matrix l l ℂ) := by
     rw [hPe, hQe]
     simp only [conjTranspose_sub, conjTranspose_smul, hAs, hBs, hCs, hDs, Complex.star_def, conj_I,
-      sub_mul, mul_sub, smul_mul_assoc, mul_smul_comm, smul_smul]
+      sub_mul, mul_sub, smul_mul_assoc, mul_smul_comm]
     linear_combination (norm := (match_scalars <;> ring_nf <;> (try simp only [I_sq]) <;> ring_nf)) -h11 - h22 + I • h12 - I • h21
   have hu : IsUnit P.det := isUnit_iff_ne_zero.mpr hdet
   set τ := -(Q * P⁻¹) with hτ

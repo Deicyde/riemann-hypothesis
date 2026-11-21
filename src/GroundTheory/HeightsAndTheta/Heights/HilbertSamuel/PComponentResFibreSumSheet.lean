@@ -1,7 +1,8 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsComponentResFibreSum
-import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.AnResBridgeSheet
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Intersections.FourierIntegralBound
+import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsComponentResBadNull
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterBridgeF
 set_option maxSynthPendingDepth 1
 
 noncomputable section

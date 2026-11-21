@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.InjPrimeTo
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsPowLeSpan
+import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
 
 namespace GlobalTheory.TypeLeaf
 

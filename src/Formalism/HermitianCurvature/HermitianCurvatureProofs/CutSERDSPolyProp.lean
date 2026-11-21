@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutSERDSOpA
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJDCCLower
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJDHatPolyOK
 
 open Formalism.REAL Formalism.QuantumDeterminants Formalism.FourierDecayAlt Formalism.FourierDecayAlt.B Formalism.FourierDecayAlt.P.BetaSesquilinearity
 open scoped ContDiff

@@ -1,4 +1,12 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.LatticeDualFibres.StatDualFibreLattice
+import Mathlib.Algebra.Module.Lattice
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 universe u
 

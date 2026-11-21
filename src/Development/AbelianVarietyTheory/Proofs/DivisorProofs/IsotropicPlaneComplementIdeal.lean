@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemThInt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SkewHermitianSelfDualLatticeHyperbolicPlaneSplit
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFinitePlaceVacuumAnyDarbouxCoordinates
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
 open scoped TensorProduct NNReal Matrix nonZeroDivisors
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.ThK.DescB GlobalTheory.ThK.FlagCT GlobalTheory.ThK.FlagPar GlobalTheory.ThK.TowerInt
@@ -33,7 +34,7 @@ theorem one_le_of_isotropic {n r s : ℕ} {M : Matrix (Fin n) (Fin n) ℂ} (h : 
   obtain ⟨a, rfl⟩ := hsurj X
   rw [Matrix.mulVecLin_apply] at hX h0
   have e : star (A *ᵥ a) = A.map star *ᵥ star a := by
-    funext i; simp [Matrix.mulVec, dotProduct, mul_comm]
+    funext i; simp [Matrix.mulVec, dotProduct]
   have h2 : a ⬝ᵥ (Aᵀ * M * A.map star) *ᵥ star a = 0 := by
     rw [← h0, e, ← Matrix.mulVec_mulVec, ← Matrix.mulVec_mulVec, Matrix.dotProduct_mulVec a, Matrix.vecMul_transpose]
   rw [hA] at h2

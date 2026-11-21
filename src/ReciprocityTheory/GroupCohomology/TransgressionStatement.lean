@@ -1,4 +1,7 @@
-import ReciprocityTheory.GroupCohomology.CupConnRightStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import ReciprocityTheory.GaloisValuations.ContinuousConstSMulQuotient
+import ReciprocityTheory.GroupCohomology.ContinuousContractNth
 
 namespace ReciprocityTheory.Coh
 

@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.IsCplAtSelf
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.CaCplUniq
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.CaCplEx
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.TotallySplit
 
 open IsLocalRing UpperTheory.V.AlgebraTools
 

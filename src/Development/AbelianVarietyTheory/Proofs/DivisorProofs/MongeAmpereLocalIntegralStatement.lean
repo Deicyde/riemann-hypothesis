@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MongeAmpereLocalIntegral
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ModelDdcForms
 open ReciprocityTheory.AnForm ReciprocityTheory.AnForm.M GlobalTheory.IndefiniteRowSideFullHecke.ModelDdcForms MeasureTheory
 open scoped ContDiff
 set_option maxHeartbeats 1000000 in

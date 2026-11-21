@@ -1,6 +1,5 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.HasDefect
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasRigidChart
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ToroidalCompactificationBis
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry NumberField IsLocalRing
 open scoped CategoryTheory.Obj Matrix TensorProduct
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj
@@ -71,7 +70,7 @@ theorem exists_tan_over {R : Type} [CommRing R] (G : Over (Sp R)) [GrpObj G] [Is
       apply Over.OverMorphism.ext
       show (spMap (TrivSqZeroExt.fstHom S S S).toRingHom ≫ spMap (dualMap φ)) ≫ spMap _ =
         spMap (TrivSqZeroExt.fstHom S S S).toRingHom ≫ spMap (dualMap φ)
-      simp only [spMap, ← Spec.map_comp, Category.assoc]
+      simp only [spMap, ← Spec.map_comp]
       congr 1
       apply CommRingCat.hom_ext
       apply RingHom.ext

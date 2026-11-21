@@ -1,13 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SquareTriple
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.UnifModGrowthOfIsUnifModerate
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LiftPRouteSmall
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsNatMulIntegralOfIsCompact
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsTranslatesEqPrimFrameLat
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatAtVAtStable
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EventuallySelfDualLatticeIndicatorIsVacuum
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TensorLatticeAtFinitePlaceEqIntegralSpanGenerato
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.DivisiblePontryaginAnnihilatorDuality
+import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsGivenStageEqOne
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR.Datum Formalism.IndefR.Links
 open IsDedekindDomain NumberField MeasureTheory Matrix
@@ -85,7 +79,7 @@ theorem exists_finite_residues_pi {κ : Type} [Fintype κ] (n : ℕ) (hn : 0 < n
   choose r hr u hu hru using fun i => h (t i) (ht i)
   refine ⟨fun i => r i, ⟨fun i => ⟨r i, hr i⟩, rfl⟩, u, hu, ?_⟩
   funext i
-  simp only [Pi.add_apply, Pi.smul_apply, nsmul_eq_mul]
+  simp only [Pi.add_apply, nsmul_eq_mul]
   exact hru i
 
 theorem exists_pair_of_annihilator : ∀ {F : Type} [Field F] [NumberField F] (v : IsDedekindDomain.HeightOneSpectrum (𝓞 F)) {κ : Type} [Fintype κ]
@@ -123,7 +117,7 @@ theorem exists_pair_of_annihilator : ∀ {F : Type} [Field F] [NumberField F] (v
     intro i t ht j
     by_cases h : j = i
     · subst h; simpa using ht
-    · simp [Pi.single_apply, h, O.zero_mem]
+    · simp [h, O.zero_mem]
 
   have hcη : ∀ i, c * η i ∈ O := by
     intro i

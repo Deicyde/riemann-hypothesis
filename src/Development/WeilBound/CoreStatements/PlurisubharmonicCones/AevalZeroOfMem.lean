@@ -1,7 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.HodgeTatePoints.GfForms
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.PCoordConeArithVar
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.ImportsSideRest
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.Valuation.LocalSubring
 
 open MvPolynomial ReciprocityTheory.ChartRestriction.G.Geo PositivityTheory.HtPt
 open GroundTheory.Heights₂.Heights.CoordinateConeArithVar

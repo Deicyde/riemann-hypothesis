@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.GlobalSectionsRankAlgClosed
 import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.BijectiveRestrictPointsOfEtaleOfHenselian
+import Mathlib.AlgebraicGeometry.AlgClosed.Basic
+import Mathlib.RingTheory.PicardGroup
 
 set_option autoImplicit false
 

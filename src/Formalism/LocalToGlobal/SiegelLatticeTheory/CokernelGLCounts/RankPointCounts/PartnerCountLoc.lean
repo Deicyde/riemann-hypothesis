@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.PartnerCount
 
 noncomputable section
@@ -35,7 +37,7 @@ theorem zz1' (u u' : D.what₂.Word) (Z : PairVal.MatR D) :
   ext a b
   simp only [Matrix.map_apply, CntLocal.ZZP, Loc.HermSp.ZZplusOf, hM, CntLocal.ZhatLoc, LsDatumB.sgnP,
     Matrix.mul_diagonal, Matrix.diagonal_mul, Matrix.of_apply, hge, hgq, map_mul, map_sub, fst_proj_symm,
-    apply_ite (p1 sg.e), map_zero, Prod.fst_mul, ← adeleInfiniteComponent_apply, ← adele_ext_components, hcj1, hf1, hf2, hm1, Zd.hcj p,
+    apply_ite (p1 sg.e), map_zero, Prod.fst_mul, ← adeleInfiniteComponent_apply, hcj1, hf1, hf2, hm1, Zd.hcj p,
     Matrix.sub_apply, Matrix.smul_apply, smul_eq_mul, Ecorner, Sg, RingHom.comp_apply, map_pow, map_neg, map_one]
   split_ifs with h
   · obtain ⟨rfl, rfl⟩ := h
@@ -56,8 +58,8 @@ theorem zz2' (u u' : D.what₂.Word) (Z : PairVal.MatR D) :
   ext a b
   simp only [Matrix.map_apply, CntLocal.ZZP, Loc.HermSp.ZZplusOf, hM, CntLocal.ZhatLoc, LsDatumB.sgnP,
     Matrix.mul_diagonal, Matrix.diagonal_mul, Matrix.of_apply, hge, hgq, map_mul, map_sub, snd_proj_symm,
-    apply_ite (p2 sg.e), map_zero, Prod.snd_mul, ← adeleInfiniteComponent_apply, ← adele_ext_components, hcj2, hf1, hf2, hm2, Zd.hcj p,
-    Matrix.sub_apply, Matrix.smul_apply, smul_eq_mul, Ecorner, Sg, RingHom.comp_apply, map_pow, map_neg, map_one,
+    apply_ite (p2 sg.e), map_zero, Prod.snd_mul, ← adele_ext_components, hcj2, hf1, hf2, hm2, Zd.hcj p,
+    Matrix.sub_apply, Matrix.smul_apply, smul_eq_mul, Ecorner, Sg, RingHom.comp_apply,
     Matrix.transpose_apply]
   split_ifs with h
   · obtain ⟨rfl, rfl⟩ := h

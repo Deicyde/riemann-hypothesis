@@ -1,5 +1,6 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.HeightKernels.StatementsClosedPointChart
+import BuildAid.Leniency.Open
+import GroundTheory.HeightsAndTheta.Heights.HeightKernels.StatementsPointVertRSteps
+import Mathlib.RingTheory.Valuation.LocalSubring
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

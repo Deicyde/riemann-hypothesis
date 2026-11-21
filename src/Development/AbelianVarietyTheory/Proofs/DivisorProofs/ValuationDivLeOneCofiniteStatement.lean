@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ValuationDivLeOneCofinite
-import Mathlib
-import Formalism.LocalToGlobal.CMDeterminantIdeals.DetIdeal
 open NumberField IsDedekindDomain
 open scoped nonZeroDivisors
 set_option maxHeartbeats 1000000 in

@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.KernelLattices.ColumnData.ColumnDataEquations.SqLMain
-import Formalism.LocalToGlobal.KernelLattices.ColumnData.ColumnDataEquations.PolFamInhabited
+import Formalism.LocalToGlobal.KernelLattices.ColumnData.ColumnDataEquations.MuFinal
+import Formalism.LocalToGlobal.KernelLattices.ColumnData.ColumnDataEquations.SqFinal
 
 noncomputable section
 open NumberField Formalism.BasicNotions Classical

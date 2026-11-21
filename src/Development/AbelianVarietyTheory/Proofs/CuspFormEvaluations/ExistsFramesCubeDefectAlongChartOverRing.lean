@@ -1,8 +1,6 @@
-import Mathlib
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GermCut
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GermBGen
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GermBFr
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.SecBaseChangeAnySt
 import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.ExistsGenLiftOfIsNilpotent
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField

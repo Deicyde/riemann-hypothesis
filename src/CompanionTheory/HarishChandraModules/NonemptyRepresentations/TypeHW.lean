@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.SingleMulVecOne
-import Formalism.RealPlaceAnalysis.ThirdArithmeticHolds
 
 open Matrix
 

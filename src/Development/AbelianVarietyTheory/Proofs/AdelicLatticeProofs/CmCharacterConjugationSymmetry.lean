@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.UnipotentAdelicQuotients.ThmBInHecke
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.CmLocalCharacterValueBounded
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.CmCharacterConjugateInverse
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 open NumberField IsDedekindDomain NumberField.mixedEmbedding Complex Classical HeckeCharacterZeroLocus.ThmBIn
 open scoped TensorProduct ContDiff nonZeroDivisors

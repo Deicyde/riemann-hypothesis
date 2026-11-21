@@ -1,9 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.ShCocOn
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsLocallyConstantCycMod
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.AlgebraMapPadicIntQbarContinuous
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.SpecCauchy
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.NormIntCastLeOfDvd
+import Development.AbelianVarietyTheory.Definitions.Foundations.FinalTheorems
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.MainNotions.N GlobalTheory.GalOfCusp UpperTheory.V UpperTheory.V.Af UpperTheory.V.HV GlobalTheory.Ord2 GlobalTheory.KZ GlobalTheory.KA
 open scoped Matrix
 

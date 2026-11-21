@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.CohomologicalDimension.Closed
 import GroundTheory.ProfiniteCohomology.NotDvdSuperIndexIffMap
+import GroundTheory.ProfiniteCohomology.CohomologicalDimension.CdpOpenSubgroupLe
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

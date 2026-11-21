@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.SiegelMeanCc
 import Formalism.UnipotentAdelicQuotients.SiegelWeilUnitaryConvergent
+import Mathlib.Algebra.Module.StablyFree.Basic
 
 open MeasureTheory NumberField IsDedekindDomain
 open scoped TensorProduct

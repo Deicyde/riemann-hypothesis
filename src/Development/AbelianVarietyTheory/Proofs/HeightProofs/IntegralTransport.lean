@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.BesselHermitianTheta.TiedLocW
 import Development.AbelianVarietyTheory.BlockTheory.HeightDefect.SymplecticTensorMeasures
 

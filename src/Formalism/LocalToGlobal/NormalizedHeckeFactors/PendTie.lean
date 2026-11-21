@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.FourthHypothesisOfLifting
 import Formalism.LocalToGlobal.NormalizedHeckeFactors.GlobalDatumRegularityOfTypesCompatibility
 import Development.WeilBound.CoreStatements.FiniteTypeHarishChandra.IntertwiningIsomorphisms.IsoIffIntertwiningHolds
@@ -276,7 +278,7 @@ theorem eSerO_eq_sum (t : LzTieC O L) (hL : HCLabelO O) {r : ℕ} (hr : 1 ≤ r)
     rw [propext (key z)]
   rw [finsum_congr hS, finsum_mem_image hinj.injOn, finsum_mem_def, finsum_eq_sum_of_fintype]
   refine Finset.sum_congr rfl fun τ _ => ?_
-  by_cases h : L.lab τ = f <;> simp [Set.indicator_apply, h]
+  by_cases h : L.lab τ = f <;> simp [h]
 
 variable {D : D7} {jE : D.host.E →+* Formalism.L2.Host.Qb}
 

@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.PolynomialDimension.FinalHar
+import Mathlib.Algebra.AffineMonoid.UniqueSums
+import Mathlib.Algebra.Module.StablyFree.Basic
 
 noncomputable section
 

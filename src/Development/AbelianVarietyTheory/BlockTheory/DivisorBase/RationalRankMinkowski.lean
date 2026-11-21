@@ -1,8 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.ParConsts
-import Formalism.SharpRestriction.ParamsHeightRankConstant
-import Formalism.SharpRestriction.GlobalSchurBounds.MainIn
-import Formalism.LocalRingCardinality.DataErr
 
 noncomputable section
 

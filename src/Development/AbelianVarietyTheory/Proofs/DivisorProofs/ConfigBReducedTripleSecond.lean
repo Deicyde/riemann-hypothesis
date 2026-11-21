@@ -1,11 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocUnifSum
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemCtIntSub
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DisjointLineMid
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NeOfReNe
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsShear
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLeviTorusElementCm
 open scoped TensorProduct NNReal Matrix
@@ -42,7 +36,7 @@ theorem incV_single' {n : ℕ} (j : Fin n) : incV F (Pi.single j (1 : E)) = Pi.s
   ext k
   by_cases h : k = j
   · subst h; simp [incV]
-  · simp [incV, Pi.single_apply, h]
+  · simp [incV, h]
 
 end Lemmas
 

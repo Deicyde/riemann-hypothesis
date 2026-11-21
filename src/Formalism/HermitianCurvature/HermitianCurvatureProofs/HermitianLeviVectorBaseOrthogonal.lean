@@ -1,10 +1,9 @@
-import Formalism.HermitianCurvature.WeylElementCommutesLevelOne
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.ConjugationContinuousOnInvertible
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CompactGroupHaarExists
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.OppositeWeylSubgroupClosed
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ConjugationInvarianceEverySetting
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.HeisenbergLeviConjugationMeasure
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CmHalfIntegralGeneratorMemAlgebraicClosure
+import Mathlib.MeasureTheory.Measure.RegularityCompacts
 
 open Matrix MeasureTheory Filter Topology
 open scoped ComplexConjugate ENNReal NNReal
@@ -38,7 +37,7 @@ private lemma star_bvec' {m : ℕ} (p : Fin m) : star (bvec p) = bvec p := by
   ext j
   by_cases h : j = p
   · subst h; simp [bvec]
-  · simp [bvec, Pi.single_apply, h]
+  · simp [bvec, h]
 
 private lemma herm_bvec_right_eq_mulVec_apply {m : ℕ} (H : Matrix (Fin m) (Fin m) ℂ) (u : Fin m → ℂ) (p : Fin m) :
     herm H u (bvec p) = (H *ᵥ u) p := by
@@ -98,7 +97,7 @@ def eta (k r' : ℕ) (v : Fin (2 * (1 + r') + k + 1) → ℂ) : ℂ × HPar k r'
   (v (iL k r'), (fun j => v (levPos k 1 r' j) / v (iL k r'), (v (iF k r') / v (iL k r')).im))
 
 lemma xi_last (p : ℂ × HPar k r') : xi k r' p (iL k r') = p.1 := by
-  simp [xi, dual_base_vector_eq_single, e0_eq, liftVec_last, Pi.single_apply, (first_ne_last (k := k) (r' := r')).symm]
+  simp [xi, dual_base_vector_eq_single, e0_eq, liftVec_last, (first_ne_last (k := k) (r' := r')).symm]
 
 lemma hb_im (y : Fin (2 * r' + k + 1) → ℂ) (s : ℝ) : (hb k r' y s).im = s := by
   simp [hb]
@@ -109,9 +108,9 @@ lemma eta_xi (p : ℂ × HPar k r') (hc : p.1 ≠ 0) : eta k r' (xi k r' p) = p 
   have hL : xi k r' (c, y, s) (iL k r') = c := xi_last _
   have hM : ∀ j, xi k r' (c, y, s) (levPos k 1 r' j) = c * y j := by
     intro j
-    simp [xi, dual_base_vector_eq_single, e0_eq, liftVec_mid, Pi.single_apply, levPos_ne_first, levPos_ne_last]
+    simp [xi, dual_base_vector_eq_single, e0_eq, liftVec_mid, levPos_ne_first, levPos_ne_last]
   have hF : xi k r' (c, y, s) (iF k r') = c * hb k r' y s := by
-    simp [xi, dual_base_vector_eq_single, e0_eq, liftVec_first, Pi.single_apply, first_ne_last]
+    simp [xi, dual_base_vector_eq_single, e0_eq, liftVec_first, first_ne_last]
   simp only [eta, hL, hM, hF]
   refine Prod.ext rfl (Prod.ext ?_ ?_)
   · funext j
@@ -149,7 +148,7 @@ lemma long_weyl_sends_base_to_dual (c : ℂ) : w0 k r' c *ᵥ e0 k r' = c • es
   rw [e0_eq, dual_base_vector_eq_single]
   ext i
   have hcol : (w0 k r' c *ᵥ Pi.single (iF k r') 1) i = w0 k r' c i (iF k r') := by
-    simp only [mulVec, dotProduct, Pi.single_apply, mul_ite, mul_one, mul_zero, Finset.sum_ite_eq,
+    simp only [mulVec, dotProduct, Pi.single_apply, mul_ite, mul_one, mul_zero,
       Finset.sum_ite_eq', Finset.mem_univ, if_true]
   rw [hcol, w0_apply_iF_col, Pi.smul_apply, Pi.single_apply, smul_eq_mul]
   split_ifs <;> simp
@@ -235,7 +234,7 @@ lemma lev_mul (g h : Mat k r') : ιLev k 1 r' (g * h) = ιLev k 1 r' g * ιLev k
       · rw [iotaLev_levPos_apply_of_col_outside h l q hq, mul_zero]
       · rw [iotaLev_levPos_apply_of_col_outside g i m hm, zero_mul]
   · rw [iotaLev_apply_of_first_index_outside (g * h) p hp q]
-    simp only [iotaLev_apply_of_first_index_outside g p hp, ite_mul, one_mul, zero_mul, Finset.sum_ite_eq, Finset.sum_ite_eq',
+    simp only [iotaLev_apply_of_first_index_outside g p hp, ite_mul, one_mul, zero_mul, Finset.sum_ite_eq,
       Finset.mem_univ, if_true]
     rw [iotaLev_apply_of_first_index_outside h p hp q]
 
@@ -916,7 +915,7 @@ lemma herm_bvec {m : ℕ} (H : Matrix (Fin m) (Fin m) ℂ) (p q : Fin m) : herm 
 
 lemma base_vector_levi_coordinate_zero (i : Fin (2 * r' + k + 1)) : e0 k r' (levPos k 1 r' i) = 0 := by
   rw [e0_eq]
-  simp [Pi.single_apply, levPos_ne_first]
+  simp [levPos_ne_first]
 
 lemma hermitian_levi_vector_base_orthogonal (j : Fin (2 * r' + k + 1)) :
     herm (Hpk k (1 + r')) (bvec (levPos k 1 r' j)) (e0 k r') = 0 := by

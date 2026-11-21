@@ -1,7 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.OneMapOfOfPtIdent
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMapOfOfExtends
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ReadingsIndependentAndSpan
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LevelMapExtensionStatement
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.OmegaDataLevelFormsStatement
 
 set_option autoImplicit false
 set_option synthInstance.maxHeartbeats 200000

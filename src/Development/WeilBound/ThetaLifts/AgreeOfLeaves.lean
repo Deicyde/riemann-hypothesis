@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.ConeHypotheses.CtSmallCone
 
 namespace PositivityTheory.ThKG

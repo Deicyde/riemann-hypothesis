@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.IrreducibleCapelliModules
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.GroupGeneratedByExp
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LieBracketMultiplication

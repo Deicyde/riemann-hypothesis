@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GapGeSubKapBase
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.FlagComponentFramedPointFrame
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.DualGramInterpGram
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsAffineStableLieEigenspaceFrame
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsEigenFrameChartVectorsCompactFlagSpaceAffi
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FlagDeterminantIso
@@ -212,7 +211,7 @@ theorem IsQuot.compare {k k' : TF.X.F.J} {g g' : (X₀ TF.Y Z).functionFieldˣ} 
     apply Units.map_injective (f := (algebraMap _ (X₀ TF.Y Z).functionField).toMonoidHom)
       (IsFractionRing.injective _ _)
     rw [map_mul, map_mul, map_inv, h3, h3', hw, ← e1, ← detPow_mul a fK fK' f₀]
-    simp only [div_eq_mul_inv, mul_inv, inv_inv, _root_.mul_assoc, inv_mul_cancel_left, mul_left_comm g'⁻¹, inv_mul_cancel, _root_.mul_one]
+    simp only [div_eq_mul_inv, mul_inv, inv_inv, _root_.mul_assoc, mul_left_comm g'⁻¹, inv_mul_cancel, _root_.mul_one]
   rw [e3, map_mul, map_mul, map_inv, ← e2, ← _root_.mul_assoc, ← _root_.mul_assoc, detPow_mul, ← detPow_mul a gy gy' fy']
   ac_rfl
 

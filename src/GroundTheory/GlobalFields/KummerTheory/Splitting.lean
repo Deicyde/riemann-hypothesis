@@ -1,6 +1,7 @@
-import Mathlib
-import GroundTheory.GlobalFields.SemilocalAlgebras.Finite
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.SemilocalAlgebras.Galois
+import Mathlib.RingTheory.TotallySplit
 
 noncomputable section
 

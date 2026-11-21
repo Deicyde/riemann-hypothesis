@@ -1,4 +1,6 @@
-import ReciprocityTheory.NeutralLocalFields.LocalFieldComparison.HCFFromRecipA
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import ReciprocityTheory.NeutralLocalFields.Reciprocity
 
 set_option linter.style.haveILetI false
 

@@ -1,5 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ArithmeticHilbertSamuelLowerBound
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -106,7 +113,7 @@ theorem overInt_pt : OverInt (pt F) (RingHom.id F) := by
     have := mul_mem (hg p) h1
     rwa [div_mul_cancel₀ _ (hc ())] at this
   rw [← (RingOfIntegers.basis F).sum_repr a]
-  simp only [RingHom.id_apply, map_sum, map_zsmul, RingOfIntegers.coe_eq_algebraMap]
+  simp only [RingHom.id_apply, map_sum, map_zsmul]
   exact Subalgebra.sum_mem _ fun i _ => zsmul_mem (h2 ⟨(), some i⟩) _
 
 theorem X_none_notMem (W : Ideal (MRing (Idx F))) (hW : W.IsPrime) (hP : mCoordIdeal (pt F) ≤ W)
@@ -156,7 +163,7 @@ theorem homog_X (i : Idx F ()) : IsMultiHomog (X ⟨(), i⟩ : MRing (Idx F)) (f
   intro m hm k
   rw [support_X, Finset.mem_singleton] at hm
   subst hm
-  rw [Finset.sum_eq_single i] <;> simp +contextual [Finsupp.single_apply, eq_comm]
+  rw [Finset.sum_eq_single i] <;> simp +contextual [eq_comm]
 
 theorem sum_pos (σ : F →+* ℂ) : 0 < ∑ p, ‖σ (pt F p)‖ ^ 2 :=
   Finset.sum_pos' (fun _ _ => by positivity) ⟨⟨(), none⟩, Finset.mem_univ _, by simp [pt_none]⟩

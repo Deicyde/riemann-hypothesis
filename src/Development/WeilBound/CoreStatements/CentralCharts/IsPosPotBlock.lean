@@ -1,6 +1,6 @@
-import Development.WeilBound.CoreStatements.CentralCharts.PshAt0
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.LogResolutionFubiniStudyPositive
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HolomorphicAtlasCoordCompatStatement
 
 noncomputable section
 
@@ -18,7 +18,7 @@ theorem fs_single_h (k₀ : K) (z : (Σ k, J k) → ℂ) :
   rw [Finset.prod_eq_single k₀]
   · simp [Real.sqrt_eq_rpow]
   · intro k _ hk
-    simp [Pi.single_apply, hk]
+    simp [hk]
   · intro h
     exact absurd (Finset.mem_univ k₀) h
 

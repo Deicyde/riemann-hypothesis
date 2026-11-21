@@ -1,4 +1,13 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.LogVandermondeBounds.LogVandermondeVariationUnbounded
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Data.Int.Star
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 namespace Formalism.LogVandermondeBounds.StandardLattice
 
@@ -20,15 +29,15 @@ private lemma card_ordered_pairs_in_shifted_interval (a n N : ℕ) (h : a + n �
       ((range n ×ˢ range n).filter (fun p : ℕ × ℕ => p.1 < p.2)).card := by
   refine Finset.card_nbij' (fun p => (p.1 - a, p.2 - a)) (fun p => (p.1 + a, p.2 + a)) ?_ ?_ ?_ ?_
   · intro p hp
-    simp only [Finset.coe_filter, Set.mem_setOf_eq, Finset.mem_coe, Finset.mem_filter,
+    simp only [Finset.coe_filter, Set.mem_setOf_eq,
       Finset.mem_product, Finset.mem_range] at hp ⊢
     omega
   · intro p hp
-    simp only [Finset.coe_filter, Set.mem_setOf_eq, Finset.mem_coe, Finset.mem_filter,
+    simp only [Finset.coe_filter, Set.mem_setOf_eq,
       Finset.mem_product, Finset.mem_range] at hp ⊢
     omega
   · intro p hp
-    simp only [Finset.coe_filter, Set.mem_setOf_eq, Finset.mem_coe, Finset.mem_filter,
+    simp only [Finset.coe_filter, Set.mem_setOf_eq,
       Finset.mem_product, Finset.mem_range] at hp
     ext <;> simp <;> omega
   · intro p hp
@@ -118,7 +127,7 @@ theorem vandermondeAppendNeg : VandermondeAppendNeg := by
   rw [Fin.prod_univ_add]
   simp only [Fin.prod_univ_add, Fin.append_left, Fin.append_right, castAdd_lt_castAdd_iff',
     castAdd_lt_natAdd', not_natAdd_lt_castAdd', natAdd_lt_natAdd_iff', if_true, if_false,
-    Finset.prod_const_one, mul_one, one_mul, sub_neg_eq_add, neg_sub_neg, neg_add_eq_sub, Finset.prod_mul_distrib]
+    Finset.prod_const_one, one_mul, sub_neg_eq_add, neg_add_eq_sub, Finset.prod_mul_distrib]
   ring
 
 theorem eulerProductBounds : EulerProductBounds := by

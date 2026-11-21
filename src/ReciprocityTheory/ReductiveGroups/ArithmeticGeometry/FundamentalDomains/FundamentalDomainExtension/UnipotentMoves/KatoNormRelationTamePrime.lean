@@ -1,6 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.FundamentalDomainExtension.UnipotentMoves.KatoClassHeckeEulerFactorRelation
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.OrthonormalFlagTranslateHolds
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.SignTypeCancelIdentity
+import Mathlib.Analysis.Real.Pi.Bounds
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 namespace UnipMove
 
@@ -35,7 +40,7 @@ theorem sFlagMap : SFlagMap E := by
       col (mat (X.lmulC n z) τ) a = (n τ).mulVec (col (mat z τ) a) := by
     intro z a
     funext k
-    simp [col, mat, Data.lmulC, Matrix.of_apply, Matrix.mul_apply, Matrix.mulVec, dotProduct]
+    simp [col, mat, Data.lmulC, Matrix.of_apply, Matrix.mulVec, dotProduct]
     rfl
   simp only [hcol]
   have hr : ∀ z : Frame X.Ψ r, (Set.range fun a : Fin X.p0 =>

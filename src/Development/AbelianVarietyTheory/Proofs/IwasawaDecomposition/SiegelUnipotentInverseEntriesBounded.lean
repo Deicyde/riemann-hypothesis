@@ -1,4 +1,11 @@
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsSiegelZeroFront
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.LinearAlgebra.Matrix.AbsoluteValue
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open Matrix GlobalTheory.RedTh NumberField GlobalTheory.PolFan ReciprocityTheory.ChartRestriction.G.Geo.Tor
 
 namespace GlobalTheory
@@ -27,7 +34,7 @@ theorem siegel_unipotent_inv_bounded : ∀ n : ℕ, ∃ c : ℝ, ∀ u : Matrix 
         rw [Matrix.updateRow_self]
         by_cases hb : b = i
         · subst hb; simp
-        · simp [Pi.single_apply, hb]
+        · simp [hb]
       · rw [Matrix.updateRow_ne ha]
         rcases lt_trichotomy a b with h | h | h
         · linarith [hup a b h]

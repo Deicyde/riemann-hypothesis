@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.LimitMultiplicityWeights.RegularClassIntegrals.ClosedGraph
 import Mathlib.LinearAlgebra.Lagrange
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.ImportsSideTer

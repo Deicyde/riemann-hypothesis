@@ -1,4 +1,5 @@
-import Development.WeilBound.ThetaLifts.LatticeBasics.PairsStable
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LatticeBasics.PairsD
 import Development.WeilBound.ThetaLifts.ConeHypotheses.PureEqPureA
 import Development.WeilBound.ThetaLifts.CartanFactorisation.CartanConj

@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DbarEqZeroOfHolomorphic
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WedgeContrSelfApply
 
 set_option autoImplicit false
 noncomputable section
@@ -29,7 +28,7 @@ theorem adjL_comm {g : ℕ} (G : Matrix (Fin g) (Fin g) ℂ) (a a' : Fin g) (w :
       ∑ c, ∑ c', (G b c * G b' c') • contr (dzb 0 c) (contr (dzb 0 c') w) := by
     intro b b'
     simp only [adjL, LinearMap.neg_apply, LinearMap.sum_apply, LinearMap.smul_apply, map_neg, map_sum,
-      map_smul, contrL_apply, Finset.smul_sum, smul_smul, neg_neg, Finset.sum_neg_distrib]
+      map_smul, contrL_apply]
     simp only [Finset.smul_sum, smul_neg, Finset.sum_neg_distrib, neg_neg, smul_smul]
     first
       | rw [Finset.sum_comm (β := Ext (0 + 0 + g))]

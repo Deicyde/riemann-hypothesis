@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.RealClassMaps.RealClassMapLift
 import Formalism.WachLatticeTwists.RealClassMaps.RealClassMapProofs.TheoremNFiveRealSecond
 import Formalism.WachLatticeTwists.SplitClassesAll.SplitClassesProofs.SourceCaseBSpecialHolds

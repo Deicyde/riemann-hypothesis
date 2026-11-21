@@ -1,4 +1,14 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.TraceFormulaEigenvalues.FormsFin
+import Mathlib.Algebra.DirectSum.LinearMap
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.LinearAlgebra.Eigenspace.Pi
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Topology.Sheaves.Presheaf
 
 open Module
 
@@ -242,7 +252,7 @@ theorem UpperTheory.V.Z.Sym.Tf.trTheta :
           apply LinearMap.ext
           intro y
           apply Subtype.ext
-          simp only [N, Module.End.mul_apply, LinearMap.restrict_coe_apply]
+          simp only [N, Module.End.mul_apply]
           exact LinearMap.congr_fun h0.eq y
         have hnN : ∀ b, IsNilpotent (N b) := fun b =>
           Module.End.isNilpotent_restrict_of_le (iInf_le (fun a => (u a).maxGenEigenspace (χ a)) b)

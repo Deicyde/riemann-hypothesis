@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.CuspDiscreteDecompositionGL
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.SiegelHeights.SiegelHeight
-import GroundTheory.AutomorphicForms.CuspidalDiscreteness
 import GroundTheory.AutomorphicForms.L2LocalComponents.Summand
 
 noncomputable section

@@ -1,12 +1,9 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ExistsZeroGt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.DataRigidSt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.DvrLem
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.UnifUniqSt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ThetaVV
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.PhiGenPf
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FirstCohomology.PhiPow
 import Development.AbelianVarietyTheory.Definitions.Uniformization.TXFrame
+import Mathlib.Data.Int.Star
 open CategoryTheory CategoryTheory.Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry IsLocalRing
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.DVR
 open scoped CategoryTheory.Obj
@@ -215,7 +212,7 @@ theorem rep_cubN (j : ℕ) : Rep D (fun _ x z J => cubN (th D z J) j 1 x x) (fun
   refine ⟨_, inferInstance, _, _, t, ht, fun U _ h => ?_, fun T x z J hJ => ?_⟩
   · rw [_root_.one_mul, _root_.one_mul, ← pow_succ, ← sq]
     apply Additive.ofMul.injective
-    simp [wN, Fin.prod_univ_succ, ofMul_mul, ofMul_inv, ofMul_zpow, ofMul_pow]
+    simp [wN, Fin.prod_univ_succ, ofMul_mul, ofMul_inv, ofMul_pow]
     module
   · rw [hv T x z J hJ, MonObj.comp_one, Category.comp_id]
 

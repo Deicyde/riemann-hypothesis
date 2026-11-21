@@ -1,18 +1,16 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsCrystalPairing
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPowEqOneOfSurjective
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.HomDerivDescendsToNumberField
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.MultiplierIffExistsHom
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsDenominatorOfAdelicLattice
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FractionalIdealNormPowSixMulDiscriminantClassInv
-import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.PolCountableAndTangentExt
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.ExistsPolarisedAbelianSchemeLieBasisInvariants
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.ExistsCmCurvesOfWeierstrassCurves
 import Development.AbelianVarietyTheory.Proofs.ThetaLawProofs.IsDiffSumSmulOfIsLieComb
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.AbelianSchemeLawsWithoutCohomology
 
 noncomputable section
 
@@ -227,7 +225,7 @@ theorem descend_pullback {k : Type} [Field k] [Countable k] [IsAlgClosed k] [Alg
     obtain ⟨a, rfl⟩ : c ∈ (algebraMap k R).range := by
       exact minpoly.mem_range_of_degree_eq_one k c
         (IsAlgClosed.degree_eq_one_of_irreducible k (minpoly.irreducible hc.isIntegral))
-    simp [Algebra.ofId_apply]
+    simp
   obtain ⟨f₁, hf₁, e₁⟩ := exists_specialise fR ρ
   choose g hg eg using fun σ : R →ₐ[k] ℂ => exists_specialise fR σ
   have main : g ((Algebra.ofId k ℂ).comp ρ) = f := by

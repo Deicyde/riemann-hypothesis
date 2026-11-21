@@ -1,7 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJDHatJDCapRGrpP
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJDHatQMinOp
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.RegularisedPairingViaPhase
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.NormDiagonalEntryDilationGeneratorLeOne
 
 open Formalism.REAL Formalism.QuantumDeterminants Formalism.FourierDecayAlt
 

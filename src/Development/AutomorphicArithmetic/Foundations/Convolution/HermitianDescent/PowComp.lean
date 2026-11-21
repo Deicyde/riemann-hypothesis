@@ -1,5 +1,5 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.HermitianDescent.NormAlmostAll
-import Development.AutomorphicArithmetic.Foundations.Convolution.HermitianDescent.NmPoly
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.HermitianDescent.SeparableOfMap
 import Development.AutomorphicArithmetic.Foundations.Convolution.HermitianDescent.NmCent
 

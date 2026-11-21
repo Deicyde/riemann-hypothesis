@@ -1,8 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CTUnitsLeft
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiniteTwistedClassesCharpoly
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.SelfReciprocalLocalField
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsInfiniteDecomp
+import Development.AbelianVarietyTheory.Definitions.Divisors.SimpleTwistedTraceFormulaStable
 open NumberField IsDedekindDomain Matrix Polynomial Filter GlobalTheory.CuspRep GlobalTheory.PRep Formalism.UG Formalism.BasicNotions GlobalTheory.UnitaryBC Formalism.L2.Host GlobalTheory.BCT GlobalTheory.UnitaryClasses
 open scoped Classical TensorProduct ComplexOrder
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
@@ -83,8 +82,8 @@ theorem exists_sq_of_split (E : Type) [Field E] [NumberField E] [IsCMField E]
     rw [show ψ v u u₀ = e₀ u from congrFun hu₀ u, show ψ v u u₁ = e₁ u from congrFun hu₁ u]
     by_cases h : u = w₀
     · subst h
-      simp [e₁, Pi.single_apply, h01]
-    · simp [e₀, Pi.single_apply, h]
+      simp [e₁, h01]
+    · simp [e₀, h]
   have hn₀ : u₀ ≠ 0 := by
     rintro rfl
     have := congrFun hu₀ w₀

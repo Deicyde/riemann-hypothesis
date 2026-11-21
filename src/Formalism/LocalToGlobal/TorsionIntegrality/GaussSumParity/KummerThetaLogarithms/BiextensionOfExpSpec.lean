@@ -1,5 +1,9 @@
-import Formalism.LocalToGlobal.TorsionIntegrality.GaussSumParity.KummerThetaLogarithms.BiextensionPointsOfExpSpec
+import BuildAid.Leniency.Open
 import Formalism.GaussJetBounds.GaussJetProofs.Transfer
+import Formalism.LocalToGlobal.TorsionIntegrality.GaussSumParity.BiextensionPointsIntegral
+import Formalism.LocalToGlobal.TorsionIntegrality.GaussSumParity.KummerThetaLogarithms.EqZeroOfPowEqOne
+import Formalism.LocalToGlobal.TorsionIntegrality.GaussSumParity.KummerThetaLogarithms.SubstFirstCoboundaryThree
+import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.FinalS
 
 noncomputable section
 open scoped BigOperators

@@ -1,7 +1,8 @@
-import Mathlib
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutMP2
-import Formalism.FormalDegreeBessel.FormalDegreeRatio.CapelliHighestWeightConjugated
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.HarishChandraModules.NonemptyRepresentations.ExpEntry
+import Formalism.HermitianCurvature.StatementB
+import Mathlib.Tactic.ENatToNat
 
 open Matrix Formalism.FourierDecayAlt Formalism.REAL Formalism.QuantumDeterminants
 

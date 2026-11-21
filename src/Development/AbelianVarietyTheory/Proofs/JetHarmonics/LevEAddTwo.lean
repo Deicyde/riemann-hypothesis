@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Jets.SumIoPr
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.CompactCasimirBoundElementaryApply
+import Development.AbelianVarietyTheory.Proofs.JetHarmonics.CompactCasimirLeTensorOperatorRaise
 
 open Finset BranchingSupport Formalism.REAL Formalism.QuantumDeterminants
 open scoped InnerProductSpace
@@ -118,7 +118,7 @@ private lemma isWeight_shift_of_glRel {M : Type} [AddCommGroup M] [Module ℂ M]
     _root_.Formalism.REAL.IsWeight E (fun c => ω c + (if c = a then 1 else 0) - (if c = b then 1 else 0)) (E a b x) := by
   intro c
   have h := LinearMap.congr_fun (hG c c a b) x
-  simp only [LinearMap.sub_apply, Module.End.mul_apply, hx c, map_smul, ite_apply, LinearMap.zero_apply,
+  simp only [LinearMap.sub_apply, Module.End.mul_apply, hx c, map_smul,
     @eq_comm _ b c] at h
   rw [sub_eq_iff_eq_add] at h
   rw [h]
@@ -146,7 +146,7 @@ theorem _root_.GlobalTheory.lev_E_add_two : ∀ (M : Type) [NormedAddCommGroup M
         simp only at hs ⊢
         rw [hs]
         have h := LinearMap.congr_fun (hG a b k.1 k.2) v
-        simp only [LinearMap.sub_apply, Module.End.mul_apply, ite_apply, LinearMap.zero_apply,
+        simp only [LinearMap.sub_apply, Module.End.mul_apply,
           @eq_comm _ b k.1] at h
         rw [sub_eq_iff_eq_add'] at h
         rw [h]

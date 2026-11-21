@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.OverLaUnique
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.NoCommonZeroIffOfSec
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ExistsFiniteExtAllModelsUniformised
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.TypingsAgree
 

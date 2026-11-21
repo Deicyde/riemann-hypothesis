@@ -1,8 +1,7 @@
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.PseudoCoefficientSeparation
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HarishChandraModulesOn
-import Formalism.RealPlaceAnalysis.StatementE
-import Formalism.RealPlaceAnalysis.StatementB
+import BuildAid.Leniency.Open
 import Formalism.RealPlaceAnalysis.ThirdArithmeticHolds
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.SimpleRing.Principal
 open MeasureTheory Matrix Formalism.REAL Formalism.MainNotions.S Formalism.L2.Theta GlobalTheory.FlagMeas GlobalTheory.GKModule GlobalTheory.RealInd GlobalTheory.OpTrace
 open GlobalTheory.SmoothGlob (lieSet)
 open GlobalTheory.Dec (IsHaarSub HasInfChar UEquiv gelfVal)
@@ -41,7 +40,7 @@ theorem kill_left {V : Type} [AddCommGroup V] [Module ℂ V] {n : ℕ} (E : Fin 
     · simp only [hbc, if_true, LinearMap.sub_apply, Module.End.mul_apply] at hw
       subst hbc
       rw [hw, map_sub, map_sub, ih hL' b hb, ih hL' d hd, sub_zero]
-    · simp only [hbc, if_false, LinearMap.sub_apply, Module.End.mul_apply, LinearMap.zero_apply, sub_zero] at hw
+    · simp only [hbc, if_false, Module.End.mul_apply, sub_zero] at hw
       rw [hw, ih hL' b hb]
 
 theorem poly_of_list {V : Type} [AddCommGroup V] [Module ℂ V] :
@@ -156,7 +155,7 @@ theorem term_eq {V : Type} [AddCommGroup V] [Module ℂ V] {m : ℕ} (E : Fin (m
   by_cases hl : σ (Fin.last (m+1)) = Fin.last (m+1)
   · by_cases h0 : σ 0 = 0
     · rw [if_pos ⟨h0, hl⟩, List.ofFn_succ, List.ofFn_succ']
-      simp only [List.prod_cons, List.concat_eq_append, List.prod_append, List.prod_singleton,
+      simp only [List.prod_cons, List.concat_eq_append, List.prod_append,
         List.prod_nil, mul_one, Module.End.mul_apply]
       have hcomm : Commute (F (Fin.last m).succ)
           (List.ofFn fun i : Fin m => F i.castSucc.succ).prod := by
@@ -174,7 +173,7 @@ theorem term_eq {V : Type} [AddCommGroup V] [Module ℂ V] {m : ℕ} (E : Fin (m
       rw [← hw]
       simp only [hF, h0, hτ0, Fin.succ_last, hl, hτl]
       rw [Tm_diag_apply E ℓ q β h4, Tm_diag_apply E ℓ p α h3]
-      simp only [Fin.val_zero, Fin.val_last, Nat.cast_zero, sub_zero, Nat.cast_add, Nat.cast_one, Nat.cast_succ]
+      simp only [Fin.val_zero, Fin.val_last, Nat.cast_zero, sub_zero, Nat.cast_succ]
       ring
     · rw [if_neg (fun h => h0 h.1), mul_zero, List.ofFn_succ, List.prod_cons, Module.End.mul_apply]
       have hne : τ (σ 0) ≠ q := fun h => h0 (τ.injective (h.trans hτ0.symm) |>.trans rfl)

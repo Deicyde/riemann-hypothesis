@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.Joints
 import Formalism.SharpRestriction.GrowthBounds.LogarithmicSums.MeanNum
-import Development.AutomorphicArithmetic.CyclotomicBounds.NotInert
 
 noncomputable section
 

@@ -1,4 +1,7 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.OfinProd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.Foundations.Convolution.TensFun
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 noncomputable section
 

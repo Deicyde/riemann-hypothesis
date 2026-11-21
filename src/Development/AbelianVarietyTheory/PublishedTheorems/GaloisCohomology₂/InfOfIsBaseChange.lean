@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.BaseChangeDefiniteUnitary
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.NonemptyEquivMultiProdOne
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsCompactLatticeGL
 
@@ -107,7 +108,7 @@ theorem sqRep_one (lam : DomWeight 1) (g : GL (Fin 1) ℂ) (v : nablaSq ℂ 1 la
   apply Subtype.ext
   change sqAct ℂ 1 lam g v.1 = _ • v.1
   rw [hc]
-  simp [sqAct, detPow, DomWeight.detShift, Formalism.GradedWeylDivisibility.rowAct, MvPolynomial.algebraMap_eq, Matrix.det_fin_one]
+  simp [sqAct, detPow, DomWeight.detShift, Formalism.GradedWeylDivisibility.rowAct, MvPolynomial.algebraMap_eq]
 
 theorem coord_expU (τ : E →+* ℂ) (z : Cinf E) : coord τ (expU z).val = Complex.exp (coord τ z) := by
   unfold coord

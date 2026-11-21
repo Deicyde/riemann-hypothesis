@@ -1,4 +1,14 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.EisensteinTranslationProducts.Legendre
+import Mathlib.Data.Int.Star
+import Mathlib.NumberTheory.ModularForms.EisensteinSeries.E2.Transform
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 open UpperHalfPlane hiding I
@@ -110,7 +120,7 @@ lemma sumA (u v : ℂ) (h : 0 < (v / u).im) :
   rw [← tsum_mul_left]
   congr 1
   funext m
-  simp only [eisSummand, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons, hc]
+  simp only [eisSummand, Matrix.cons_val_zero, Matrix.cons_val_one]
   apply one_div_sq_eq_of_eq_mul
   field_simp
   ring
@@ -137,7 +147,7 @@ lemma sumB (u v : ℂ) (h : 0 < (v / u).im) :
   rw [← tsum_mul_left]
   congr 1
   funext n
-  simp only [eisSummand, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons, hw]
+  simp only [eisSummand, Matrix.cons_val_zero, Matrix.cons_val_one, hw]
   apply one_div_sq_eq_of_eq_mul
   field_simp
   push_cast

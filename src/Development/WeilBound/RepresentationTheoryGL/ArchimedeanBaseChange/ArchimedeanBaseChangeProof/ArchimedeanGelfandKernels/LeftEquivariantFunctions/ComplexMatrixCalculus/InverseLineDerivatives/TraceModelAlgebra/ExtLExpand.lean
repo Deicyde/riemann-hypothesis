@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.ArchimedeanGelfandKernels.LeftEquivariantFunctions.ComplexMatrixCalculus.InverseLineDerivatives.TraceModelAlgebra.TraceOnModel
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.TrETransposeEqPhiSeq
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GelfandValueNegation
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GelfandOperatorCenterExpansion
 
 noncomputable section
@@ -108,9 +108,9 @@ theorem glRel_At (lam : Fin n → ℤ) (a b c d : Fin n) :
   rw [matB_sub, matB_mul lam _ _ (hm c d), matB_mul lam _ _ (hm a b), matB_sub] at this
   rw [At_eq, At_eq, At_eq, At_eq, this]
   congr 1
-  · split_ifs <;> simp [At_eq, matB_zero]
+  · split_ifs <;> simp [matB_zero]
   · by_cases h1 : a = d
-    · subst h1; simp [At_eq]
+    · subst h1; simp
     · have h2 : ¬ d = a := fun e => h1 e.symm
       simp [h1, h2, matB_zero]
 

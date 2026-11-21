@@ -1,16 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.PublishedTheorems.Metrics₂.PoincareLelongInv
 import Development.AutomorphicSpectrum.PublishedTheorems.Metrics₂.PoincareLelong
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.BlowupProjections.BlowupProjStatement
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterRed
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterBridge
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterGood
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterDivSupp
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterFib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterSheet
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.PointsIntegrableOfResolutionStatement
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.ResolutionExistsOfResolutionStatementStatement
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.IsHorizontalTwist
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.FinitePrimesSumSquaresZeroStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.TwistIsPrimeStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.RingKrullDimTwistSuccStatement
@@ -168,7 +161,7 @@ theorem twist_integral (hI : PtsIntegrableStatement) (hD : PtsIndepStatement)
       rw [Set.disjoint_left]
       rintro _ ⟨w, hw, rfl⟩ ⟨w', hw', he⟩
       have hc : cRoot p ≠ 0 := by
-        simp [cRoot, Real.sqrt_eq_zero', hp, Nat.pos_of_ne_zero hp]
+        simp [cRoot, hp]
       have hww : w' = w := by
         funext j
         have := congrFun he (fun o => match o with | none => (1 : Fin 2) | some k => j k)

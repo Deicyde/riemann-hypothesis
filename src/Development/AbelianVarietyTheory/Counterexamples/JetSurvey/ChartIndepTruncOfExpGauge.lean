@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ExpUniqChart
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ConstantCoeffPolyAdd
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ExpTiePf

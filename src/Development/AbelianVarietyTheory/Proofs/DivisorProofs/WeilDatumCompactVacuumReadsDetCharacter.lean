@@ -1,9 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.PerCEmb
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.MarkAd
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VacuumCharacterPositiveDefiniteSource
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VacuumCharacterPositiveDefiniteSourceStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CplxOfFrame
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockVacAtOfReads
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaReadingLinearInjectiveAtOrthonormalFrame
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsUnitDetOfIsONFr

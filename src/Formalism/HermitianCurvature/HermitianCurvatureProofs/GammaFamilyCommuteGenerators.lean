@@ -1,8 +1,10 @@
-import Formalism.HermitianCurvature.StatementM
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.FirstEmbeddingOne
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.MultiplicationOpHom
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LevelNablaStarRelations
-import Formalism.YangianSpanCharacter.YangianRelationFirst
+import Formalism.YangianSpanCharacter.YangianRTTProofs.RttRelation
+import Formalism.YangianSpanCharacter.YangianRTTProofs.TransposeSymplecticShift
 
 open Formalism.FourierDecayAlt.M Formalism.FourierDecayAlt.Fr Formalism.FourierDecayAlt.Wd Formalism.FourierDecayAlt.R Formalism.FourierDecayAlt.W Formalism.YangianSpanCharacter.T Formalism.FourierDecayAlt Matrix Finset
 
@@ -38,7 +40,7 @@ def sStar (σ : Site A) : Site A := ⟨star σ.p, -star σ.ci, -star σ.c⟩
 theorem Ts_conj (σ : Site A) (Y : ℂ) : (Ts σ (star Y))ᴴ = Ts (sStar σ) Y := by
   ext i j
   fin_cases i <;> fin_cases j <;>
-    simp [Ts, Tm, sStar, Matrix.conjTranspose_apply, algebraMap_star_comm]
+    simp [Ts, Tm, sStar, Matrix.conjTranspose_apply]
   rw [starRingEnd_apply, ← algebraMap_star_comm, star_star]
 
 theorem weyl_ci {p c ci : A} (h : WeylRel p c ci) : p * ci = ci * p - ci := by
@@ -181,7 +183,7 @@ theorem gamma_family_commute_generators (l : Fin r) : ∀ x ∈ G L l,
   simp only [G, Set.mem_insert_iff, Set.mem_singleton_iff] at hx hy
   rcases hx with rfl | rfl | rfl | rfl | rfl | rfl <;>
     rcases hy with rfl | rfl | rfl | rfl | rfl | rfl <;>
-    (try simp only [Commute.neg_left_iff, Commute.neg_right_iff]) <;>
+    (try simp only [Commute.neg_left_iff]) <;>
     first
     | exact L.p_ζ _ | exact L.p_ζb _ | exact L.p_GG _ | exact L.p_GGi _ | exact L.p_nab _ | exact L.p_nabs _
     | exact L.pb_ζ _ | exact L.pb_ζb _ | exact L.pb_GG _ | exact L.pb_GGi _ | exact L.pb_nab _
@@ -196,7 +198,7 @@ theorem hol_comm (l : Fin r) : ∀ x ∈ ({L.p l, L.c l, L.ci l} : Set A),
   intro x hx y hy
   simp only [Set.mem_insert_iff, Set.mem_singleton_iff] at hx hy
   rcases hx with rfl | rfl | rfl <;> rcases hy with rfl | rfl | rfl <;>
-    (try simp only [Commute.neg_left_iff, Commute.neg_right_iff]) <;>
+    (try simp only [Commute.neg_right_iff]) <;>
     first
     | exact L.p_pb _ _ | exact L.p_cb _ _ | exact L.p_cbi _ _
     | exact (L.pb_c _ _).symm | exact (L.pb_ci _ _).symm
@@ -252,7 +254,7 @@ theorem star_kap (P : Par) (f : Ty P → ℂ) : star (kap P f) = kap P (star f) 
   rw [kap_eq, kap_eq, Matrix.star_eq_conjTranspose, Matrix.diagonal_conjTranspose]
   congr 1
   funext π
-  simp [algebraMap_star_comm]
+  simp
   rw [starRingEnd_apply, algebraMap_star_comm]
 
 theorem kappa_sign_coordinate (P : Par) (l : ℕ) (Y : ℂ) : (kap P fun π => x0 P l π Y) = sgn P l • xA P Y := by

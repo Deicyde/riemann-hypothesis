@@ -1,5 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.ConcretePkgSpec
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.IndefiniteReal.LinksChar
 
 noncomputable section
 

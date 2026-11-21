@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CrdInjective
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdditiveMapsGlueAffineCoverStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFrob
 
 set_option autoImplicit false
 set_option synthInstance.maxHeartbeats 400000

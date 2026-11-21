@@ -1,4 +1,4 @@
-import CompanionTheory.SpectralGeometry.CountingDefinitions.AdelicEulerProducts.CountData
+import BuildAid.Leniency.Open
 import CompanionTheory.AutomorphicTheory.ThetaDilations.FstarDil
 
 open NumberField IsDedekindDomain MeasureTheory Matrix Topology GlobalTheory.CompanionTheory.SW.Core

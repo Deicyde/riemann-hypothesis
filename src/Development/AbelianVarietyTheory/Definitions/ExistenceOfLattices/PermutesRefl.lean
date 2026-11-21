@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Statements.PrincipalLattices.FiniteDimensionalBase
-import Formalism.LocalToGlobal.ProjectiveLattices.CompHt
 
 noncomputable section
 

@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnitDeterminantRoot.GlobalLUnit
+import Mathlib.Tactic.Polynomial.Basic
 
 noncomputable section
 open scoped ComplexConjugate

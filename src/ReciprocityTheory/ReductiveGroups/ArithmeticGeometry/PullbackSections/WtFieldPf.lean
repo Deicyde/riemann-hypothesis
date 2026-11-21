@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.WtFieldPfA
+import Formalism.LocalToGlobal.ProjectiveLattices.CoreProofs
 
 noncomputable section
 

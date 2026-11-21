@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.EHHre
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ColDictLReTr
 import Formalism.LocalToGlobal.IndefiniteReal.HeckeNonvanishing.Imports
+import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.ParametersTermRelations
 
 noncomputable section
 

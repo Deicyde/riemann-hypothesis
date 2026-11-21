@@ -1,5 +1,5 @@
-import Mathlib
-import ReciprocityTheory.NeutralLocalFields.Reciprocity
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.UnitaryNorms.IsUnitaryNormOf
 import Formalism.UnipotentAdelicQuotients.FinOrdValGen
 

@@ -1,9 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.DualFamilyCounting.NcSFinVolSk
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.DualFamilyCounting.NcSAdTup
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.DualFamilyCounting.NcSOmDecomp
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.MassComputations.LatHat
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerVolume.RPGlue
 
 noncomputable section
 
@@ -74,7 +73,7 @@ theorem entries_oev {n : ℕ} (v : HeightOneSpectrum (𝓞 F)) (g : GL (Fin n) (
     funext k
     by_cases h : k = j
     · subst h; simp [ratV, inclR, Algebra.TensorProduct.one_def]
-    · simp [ratV, inclR, Pi.single_apply, h]
+    · simp [ratV, inclR, h]
   rw [e1] at h2
   have h3 := mem_oev_of_std v _ h2 i
   simpa [Matrix.mulVec, dotProduct, Pi.single_apply] using h3

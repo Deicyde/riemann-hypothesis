@@ -1,6 +1,6 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.StabilizerCovolume.StMUSemipositive
-import GroundTheory.HeightsAndTheta.Heights.StabilizerCovolume.BRegWeightLevi
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.FrameDefinitions.CpRegPhRegOfNonneg
 set_option maxSynthPendingDepth 1
 
 noncomputable section

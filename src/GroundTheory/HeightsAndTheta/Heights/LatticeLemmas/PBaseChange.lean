@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.LatticeLemmas.Statements
 import GroundTheory.HeightsAndTheta.Heights.LatticeLemmas.BaseChangeIndex
 set_option maxSynthPendingDepth 1

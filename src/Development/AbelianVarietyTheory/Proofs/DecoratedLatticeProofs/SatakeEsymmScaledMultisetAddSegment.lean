@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.TransferOn
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsPairingSingleNe
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsNormLeHeightPow
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.IsSatVecUOfIsSphericalU
+import Formalism.LocalToGlobal.Columns.HeckeSp
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix
 open Formalism.L2.Theta Formalism.L2.DIV Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.Mult Formalism.IndefR.Datum
 open scoped TensorProduct InnerProductSpace ComplexConjugate
@@ -128,7 +127,7 @@ theorem satEig_map_add_seg : ∀ (E : Type) [Field E] [NumberField E] (w : Heigh
     exact (by omega : qV E w ≠ 0) (by exact_mod_cast this)
   have hA : (B.map (z * y⁻¹ * ·)).map (fun b : ℂˣ => (b : ℂ)) =
       (B.map fun b : ℂˣ => (b : ℂ)).map fun x => ((z : ℂ) * (y : ℂ)⁻¹) * x := by
-    simp [Multiset.map_map, Function.comp_def]
+    simp [Multiset.map_map]
   have hBc : (B.map fun b : ℂˣ => (b : ℂ)).card = a := by simp [hB]
   set Q := qV E w with hQdef
   set s : ℂ := ((Real.sqrt Q : ℝ) : ℂ) with hsdef
@@ -160,7 +159,7 @@ theorem satEig_map_add_seg : ∀ (E : Type) [Field E] [NumberField E] (w : Heigh
       rw [mul_pow, mul_right_comm, ← pow_add, Nat.add_sub_cancel' hjk]
     have hsI : s ^ ((k : ℤ) * ((a : ℤ) + t - k)) * s ^ (-(((k - j : ℕ) : ℤ) * ((t : ℤ) - ((k - j : ℕ) : ℤ)))) =
         (s ^ 2) ^ ((a - j) * (k - j)) * ((s ^ a)⁻¹) ^ k * (s ^ (a + t)) ^ j * s ^ ((j : ℤ) * ((a : ℤ) - j)) := by
-      simp only [← pow_mul, inv_pow, ← zpow_natCast, ← _root_.zpow_neg, ← _root_.zpow_mul, ← zpow_add₀ hs]
+      simp only [← zpow_natCast, ← _root_.zpow_neg, ← _root_.zpow_mul, ← zpow_add₀ hs]
       congr 1
       push_cast [Nat.cast_sub hja, Nat.cast_sub hjk]
       ring

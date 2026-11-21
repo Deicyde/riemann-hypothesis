@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsOverIff
-import Development.AbelianVarietyTheory.Definitions.Divisors.ThetaSetupStructureMapComp
 import Development.AbelianVarietyTheory.Proofs.ThetaLawProofs.ExistsPolAVFiniteTypeSubring
+import Development.AbelianVarietyTheory.Definitions.Divisors.ClassSums
 
 noncomputable section
 

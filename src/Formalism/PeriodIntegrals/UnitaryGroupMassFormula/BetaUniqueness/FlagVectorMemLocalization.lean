@@ -1,7 +1,8 @@
-import Mathlib
-import Formalism.PeriodIntegrals.BetaLUniq
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.BetaUniqueness.Lemmas
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.BetaUniqueness.EqZeroOfNormLtOne
+import Mathlib.Algebra.Module.StablyFree.Basic
 
 noncomputable section
 
@@ -593,7 +594,7 @@ theorem cong {g r : ℕ} {T T' : E} {F : LFlag S r T} {F' F'' : LFlag S r T'}
     · exact hs h
     · exact ht h
   · have key : (s * t) • (β₁.symm (β₂ y) - y) = β₁.symm (s • (β₂ x - β₁ x)) := by
-      simp only [x, smulO, map_smul, map_sub, LinearEquiv.symm_apply_apply, smul_sub, map_mul,
+      simp only [x, smulO, map_smul, map_sub, LinearEquiv.symm_apply_apply, smul_sub,
         mul_smul]
     rw [key, ← hz, map_add, smulO, map_smul, ← smulO]
     refine Submodule.add_mem _ (Submodule.mem_sup_left (g_mem_gΛ (Λ := Λ) g

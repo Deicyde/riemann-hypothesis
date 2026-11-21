@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Variable
 import Development.WeilBound.ThetaLifts.SphericalLattices.FunDefs
 
 noncomputable section

@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConvUAbsU
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemShellUIffDepth
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIdealWeight
 open MeasureTheory GlobalTheory.SplitWeil GlobalTheory.SmGL GlobalTheory.SatakeBound GlobalTheory.WeylCell Formalism.UG GlobalTheory.WeylCell.WeylUnipotentShell
 
 noncomputable section
@@ -151,7 +153,7 @@ theorem torus_factor : ∀ (L : Type) [Field L] [Valued L (WithZero (Multiplicat
     rw [dif_neg hk]
     by_cases hi : i = k
     · subst hi; simp [Function.update_self, Units.val_inv_eq_inv_val]
-    · simp [Function.update_of_ne hi, hi]
+    · simp [hi]
   have key : chiDeltaU q (fun i => (α i : ℂ)) b * (q : ℂ) ^ (-4 * ordL (T (lo k) (lo k))) =
       chiDeltaU q (fun i => (actU k α i : ℂ)) t := by
     rw [e, e, Fintype.prod_eq_mul_prod_compl k, Fintype.prod_eq_mul_prod_compl k]

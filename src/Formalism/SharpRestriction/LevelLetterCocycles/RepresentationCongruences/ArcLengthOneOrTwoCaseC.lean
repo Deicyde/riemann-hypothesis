@@ -1,8 +1,11 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.ImportsAlt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.DivAddLogbLeEightMulErrorScale
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.LiftsAtThickLetterType
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.ContentStep
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.LiftsLE
+import Formalism.SharpRestriction.LevelLetterCocycles.AdmBoundsBOfAdm
+import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.LogbNn
 
 noncomputable section
 
@@ -109,7 +112,7 @@ theorem arc_length_one_or_two_case_c [NeZero n] [Fintype (K →ₐ[Qp] LL)] [IsD
     refine ⟨lA W ^ ArcLengthOneTwo.deA PD.p (size c) (size (c - 1) + S) * u₀ - qA W ^ size c * algebraMap O (LetA O n) x'',
       Subalgebra.sub_mem _ (Subalgebra.mul_mem _ (Subalgebra.pow_mem _ (Subalgebra.natCast_mem _ _) _) hu₀)
         (Subalgebra.mul_mem _ (Subalgebra.pow_mem _ (GS.qA_mem W) _) (Subalgebra.algebraMap_mem _ _)), ?_⟩
-    simp only [map_mul, map_sub, map_one, mul_one, hlE, hxE] at e1 ⊢
+    simp only [map_mul, map_sub, mul_one, hlE, hxE] at e1 ⊢
     linear_combination lE W (ArcLengthOneTwo.deA PD.p (size c) (size (c - 1) + S)) * e1
   have hgdown : ∀ s < (arcOf b w S η up size).len c, ∀ bs,
       (arcOf b w S η up size).ty (c - (s : ZMod n)) = Formalism.MainNotions.LocalTheoryWindows.LT.down bs →

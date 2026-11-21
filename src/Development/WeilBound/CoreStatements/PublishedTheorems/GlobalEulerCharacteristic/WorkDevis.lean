@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PublishedTheorems.GlobalEulerCharacteristic.Reduce
-import GroundTheory.ProfiniteCohomology.GlobalEulerCharacteristic.DefsForms
-import GroundTheory.ProfiniteCohomology.LocalEulerCharacteristic.MainCoind
+import Development.WeilBound.CoreStatements.PublishedTheorems.GlobalEulerCharacteristic.RatioOneKilled
 
 open NumberField IsDedekindDomain CategoryTheory GroundTheory.ProfCoh GroundTheory.Global
 

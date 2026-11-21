@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitChartAt
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DensityStatementHoldsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RestrictionStatementHoldsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ModularityOfDensityStatement

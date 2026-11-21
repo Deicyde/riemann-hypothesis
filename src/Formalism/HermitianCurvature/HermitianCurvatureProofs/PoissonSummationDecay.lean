@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.LevelRecursionCondNeeded
-import Formalism.LatticeTheta.ThetaShiftInversion
+import Formalism.LatticeTheta.LatticeThetaProofs.LatticeFourierSeries
+import Formalism.LatticeTheta.LatticeThetaProofs.UnfoldCoeff
 
 namespace Formalism.FourierDecayAlt.P.PoissonSummationDecay
 

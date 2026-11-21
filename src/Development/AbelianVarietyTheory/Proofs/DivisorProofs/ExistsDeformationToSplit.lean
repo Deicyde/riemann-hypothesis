@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecondCountableTopologySphere
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OpNormLeOpNormBlockDiagonal
 
@@ -69,7 +70,7 @@ theorem dGram_chg {g : Matrix (m ⊕ l) (m ⊕ l) ℂ} (h : g.toBlocks₂₁ = 0
     simp [chg, Matrix.mul_add, Matrix.add_mul]
   rw [dGram_eq, dGram_eq, e₂, chg_chg, chg_chg, e₁, dTr, chg_fromBlocks _ _ _ (fromBlocks _ _ _ _)]
   subst e'
-  simp [chg, smul_smul, conjTranspose_smul, Matrix.mul_assoc, mul_comm, mul_left_comm, mul_assoc]
+  simp [chg, smul_smul, conjTranspose_smul, mul_comm, mul_left_comm, mul_assoc]
 
 omit [Fintype l] [DecidableEq l] in
 

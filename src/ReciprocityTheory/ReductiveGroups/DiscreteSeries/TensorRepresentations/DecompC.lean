@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.DecompB
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.DcAevalIntertwine
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.BochnerInequality.CasimirGapAtNoncompactWeight
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.DecompA
 
 noncomputable section
 

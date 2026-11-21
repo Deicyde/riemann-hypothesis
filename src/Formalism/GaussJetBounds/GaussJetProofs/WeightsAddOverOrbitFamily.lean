@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.GaussJetBounds.StatementR
-import Formalism.GaussJetBounds.GaussJetProofs.WeightsAddOverOrbitsLogLoss
+import Formalism.GaussJetBounds.OneLetterRadius
 
 noncomputable section
 open scoped BigOperators

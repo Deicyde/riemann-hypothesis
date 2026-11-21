@@ -1,11 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAut
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RegFamOfContinuousAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ProductFunctionOnSumCoordsMemAdelicSchwartzSpace
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsAdelicSchwartzNeZeroAtOrigin
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ModulusOfNormEqAbs
+import Development.AbelianVarietyTheory.Definitions.Foundations.MemSiegelOfIffRightAct
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK
@@ -127,7 +126,7 @@ theorem mul_blkA₁ {P : Matrix β β A} (h : KeepsDiag e P) : P * blkA₁ e = b
   congr 1
   rw [← fromBlocks_toBlocks (P.submatrix e e), fromBlocks_multiply, fromBlocks_multiply]
   have h' : (P.submatrix e e).toBlocks₂₁ + (P.submatrix e e).toBlocks₂₂ = leviMat e P := h
-  simp only [Matrix.mul_one, Matrix.mul_zero, add_zero, zero_add, Matrix.one_mul, Matrix.zero_mul]
+  simp only [Matrix.mul_one, Matrix.mul_zero, add_zero, Matrix.one_mul]
   rw [h']
   rfl
 

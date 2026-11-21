@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.LineBundleGlobalSectionsDimCongrPicardClass
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsUnitMkOfFormallyUnramified
-import Development.AbelianVarietyTheory.Definitions.Divisors.SmoothOfRelativeDimensionPspace
 
 set_option autoImplicit false
 

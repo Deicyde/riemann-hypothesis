@@ -1,5 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.RowLetter
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open MvPolynomial
 
@@ -71,6 +77,6 @@ theorem REder_X (K : Type) [CommRing K] (k : ℕ) (a b : Fin k) (i j : Fin k) :
   by_cases h : i = b
   · subst h
     simp [Pi.single_apply, mul_ite]
-  · simp [Pi.single_apply, h]
+  · simp [h]
 
 end PI.RL.W

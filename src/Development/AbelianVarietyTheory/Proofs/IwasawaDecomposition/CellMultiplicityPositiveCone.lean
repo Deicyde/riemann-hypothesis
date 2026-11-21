@@ -1,8 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MultCellsAmong
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsBaryStageStart
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EqZeroOfToRealRel
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsSmoothAdmissibleFanOfCellMultOneCMField
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.NotIsPrimZero
 open NumberField ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.Toroidal GlobalTheory.LocM GlobalTheory.TorRef GlobalTheory.PolFan
 
 noncomputable section
@@ -67,7 +66,7 @@ theorem relIndex_cons_smul {p : ℕ} (v : M) (w : Fin p → M) (n : ℤ)
   let f : K →ₗ[ℤ] ℤ := b.coord 0
   have hf0 : f (b 0) = 1 := by simp [f]
   have hfs : ∀ i : Fin p, f (b i.succ) = 0 := fun i => by
-    simp [f, Finsupp.single_apply, Fin.succ_ne_zero]
+    simp [f, Fin.succ_ne_zero]
   have hmem : ∀ x : K, (x : M) ∈ K' ↔ n ∣ f x := by
     intro x
     constructor
@@ -78,7 +77,7 @@ theorem relIndex_cons_smul {p : ℕ} (v : M) (w : Fin p → M) (n : ℤ)
         rintro _ ⟨i, rfl⟩
         refine Fin.cases ?_ (fun i => ?_) i
         · refine ⟨n • b 0, ?_, ?_⟩
-          · simp [S', Ideal.mem_span_singleton, hf0]
+          · simp [S', hf0]
           · simp [hb, u]
         · refine ⟨b i.succ, ?_, ?_⟩
           · simp [S', hfs]

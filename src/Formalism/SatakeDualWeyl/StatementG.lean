@@ -1,4 +1,4 @@
-import Formalism.SatakeDualWeyl.StatementC
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.StatementE
 import Formalism.SatakeDualWeyl.StatementF
 

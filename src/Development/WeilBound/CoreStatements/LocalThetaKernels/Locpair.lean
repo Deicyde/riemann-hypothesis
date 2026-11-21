@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.LocalThetaKernels.LocpairRep
+import Development.AutomorphicSpectrum.Proofs.MembershipProofs.BoxFunMemSB
+import Development.WeilBound.CoreStatements.LocallyConstantCoinvariants.PfDictAd
 
 noncomputable section
 

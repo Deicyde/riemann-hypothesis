@@ -1,10 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsPFSecRed
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsPFVert
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsPFIntZero
-import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsPFHoriz
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsPFFibreSum
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterDivSupp
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.MixedFieldContraction.ContractMixedFieldStatement
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.Inter

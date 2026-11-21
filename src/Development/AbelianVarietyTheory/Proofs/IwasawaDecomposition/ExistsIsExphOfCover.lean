@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.MemSupportBDIff
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EqConjugateOfIsConjMap
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MemConjChartSource
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsExphOnEmpty
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsIsExphOn
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsIsExphOnUnion
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsIsExphOfIsExphOnUniv

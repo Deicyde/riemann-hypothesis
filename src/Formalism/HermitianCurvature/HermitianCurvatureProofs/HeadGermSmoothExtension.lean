@@ -1,8 +1,9 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.SideOnePositive
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.PointLevelZeroEqEmbedding
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutHBFinal
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.HeadJacquetOfLetterAndHead
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutHLFinal
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.WordSmoothPartialBessel
 
 open Matrix MeasureTheory
 

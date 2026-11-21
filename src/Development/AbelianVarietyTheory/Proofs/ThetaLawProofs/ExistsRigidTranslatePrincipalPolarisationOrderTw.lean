@@ -1,11 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.KeyFormula.GeomIntSelf
-import Development.AbelianVarietyTheory.Statements.FundamentalDomains.AtOfNumberField
-import Development.AbelianVarietyTheory.Statements.ThetaLevelCharacters.MemThetaLevelCharDimZero
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ValCalc
 import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.ExistsPullbackSectionNonzeroLocus
 import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.IsAbelianSchemeThick
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.RelAmpleOfLocallyOnBase
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.LineBundleIsoExtendOfNormalBase
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.TheoremOfCubePolAbelianScheme
 
@@ -49,7 +46,7 @@ theorem lbIso_diff_diff {L : LB X} (hL : L.IsLB) (u v : Y ⟶ X) (a b : Z ⟶ Y)
     LBIso (diff (diff L u v) a b) (diff (L.pull u) a b) := by
   refine lbIso_of_refines hL ((refines_self _ _).linComb _ _) ((refines_self _ _).linComb _ _) _ isGen_one
     fun U _ f => ?_
-  simp [Fintype.prod_prod_type, Fin.prod_univ_two, e, mul_comm (f (b ≫ u))⁻¹, mul_assoc]
+  simp [Fintype.prod_prod_type, Fin.prod_univ_two, e, mul_comm (f (b ≫ u))⁻¹]
 
 theorem lbIso_diff_pull {L : LB X} (hL : L.IsLB) (u v : Y ⟶ X) (a : Z ⟶ Y) (i : L.ι) (h : ∀ z, (a ≫ v) z ∈ L.U i) :
     LBIso ((diff L u v).pull a) (L.pull (a ≫ u)) := by

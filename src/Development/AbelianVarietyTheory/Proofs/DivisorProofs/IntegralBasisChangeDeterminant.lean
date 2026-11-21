@@ -1,4 +1,43 @@
-import Mathlib
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
 
 namespace GlobalTheory
 
@@ -59,7 +98,7 @@ theorem det_saturated_lattice_baseChange : ∀ (O k V K : Type) [CommRing O] [Is
       intro i
       refine (hO _).mpr ⟨Pi.single i 1, ?_⟩
       have : (fun j => algebraMap O k ((Pi.single i 1 : Fin m → O) j)) = Pi.single i 1 := by
-        ext j; by_cases h : j = i <;> simp [Pi.single_apply, h]
+        ext j; by_cases h : j = i <;> simp [h]
       rw [this, Matrix.single_one_vecMul]; rfl
     choose a ha using this
     refine ⟨Matrix.of a, ?_⟩
@@ -111,7 +150,7 @@ theorem det_saturated_lattice_baseChange : ∀ (O k V K : Type) [CommRing O] [Is
   have h2 : (P' * Q') * M' = 1 := mul_eq_one_comm.mp h1
   have hsingle : ∀ i : Fin m, (fun j => algebraMap V K ((Pi.single i 1 : Fin m → V) j)) = Pi.single i 1 := by
     intro i
-    ext j; by_cases h : j = i <;> simp [Pi.single_apply, h]
+    ext j; by_cases h : j = i <;> simp [h]
   have hU : ∃ U : Matrix (Fin m) (Fin m) V, C = U.map (algebraMap V K) * M' := by
     have : ∀ i, ∃ a : Fin n → V, Matrix.vecMul (C i) P' = fun j => algebraMap V K (a j) := by
       intro i

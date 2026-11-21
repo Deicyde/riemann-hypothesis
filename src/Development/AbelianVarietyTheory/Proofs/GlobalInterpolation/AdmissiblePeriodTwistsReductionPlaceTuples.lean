@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.HookProducts.AdmPerTw
-import Formalism.SharpRestriction.Divisibility.HookProducts.AdmPtTw
 import Formalism.LocalToGlobal.GroupLattices.AdmissibleAtGeneratorPlaces
 
 noncomputable section

@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CharacterGerms.RowTiePGerm
-import Formalism.LocalToGlobal.CharacterGerms.RowTieCartTop
+import Formalism.LocalToGlobal.CharacterGerms.RowTieCartAdd
 
 noncomputable section
 

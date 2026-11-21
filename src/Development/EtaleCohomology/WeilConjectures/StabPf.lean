@@ -1,4 +1,6 @@
-import Development.EtaleCohomology.WeilConjectures.ContinCut
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.EtaleCohomology.WeilConjectures.FermatCount
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry GlobalTheory.EtC GlobalTheory.Et

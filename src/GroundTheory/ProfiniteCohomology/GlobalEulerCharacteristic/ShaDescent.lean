@@ -1,6 +1,5 @@
-import Mathlib
-import GroundTheory.ProfiniteCohomology.MackeyFormula.CompactSupport
-import GroundTheory.ProfiniteCohomology.LocalEulerCharacteristic.InnerConj
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.LocalEulerCharacteristic.Descent
 import GroundTheory.ProfiniteCohomology.PoitouTate.PtCompactDualMapEqZeroOfPtCompactToGlobalEqZero
 import GroundTheory.ProfiniteCohomology.PoitouTate.PoitouTateInfinite.DescentMaps

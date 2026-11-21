@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.SphericalIntegral
 import GroundTheory.AutomorphicForms.SatakeSymmetric
 import GroundTheory.LocalFields.LocalFourierHaar

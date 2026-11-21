@@ -1,8 +1,4 @@
-import Mathlib
-import Development.AutomorphicArithmetic.LocalEmbeddings.ExistsIsMapToFn
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFlagBundleIff
-import Development.AutomorphicArithmetic.DivisorFrames.ExistsAdaptedFlagCharts
-import Development.AutomorphicArithmetic.DivisorFrames.ChartFrameDivisor
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.DivisorFrames.FlagLineMetricExpBound
 import Development.AutomorphicArithmetic.DivisorFrames.GrSqTransposeInverse
 import Development.AutomorphicArithmetic.DivisorFrames.TrueModelChartDivisor

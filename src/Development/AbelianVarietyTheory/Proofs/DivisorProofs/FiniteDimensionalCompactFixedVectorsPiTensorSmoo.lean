@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsUnitarisableOfCharIff
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.SmoothContragredientIrreducibleAndReflexive
+import Mathlib.LinearAlgebra.PiTensorProduct.Finite
 
 open GlobalTheory.PRep GlobalTheory.SmGL
 open scoped TensorProduct

@@ -1,9 +1,8 @@
-import Mathlib
-import ReciprocityTheory.L2DbarEstimates.Imports
-import ReciprocityTheory.L2DbarEstimates.PlurisubharmonicCharts.FourSignHolds
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.L2DbarEstimates.PlurisubharmonicCharts.FlatNullB
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.L2ExtensionLogCanonical
 import Development.AbelianVarietyTheory.Definitions.Divisors.EtaleEmpty
+import ReciprocityTheory.L2DbarEstimates.NormFibrations.MvBlowup
 
 namespace GlobalTheory.OTY
 

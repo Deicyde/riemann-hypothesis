@@ -1,17 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.KeyPBIff
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.AbsoluteSiegel
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoeffTopMonEqZero
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.BOfNsmulLeft
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.PullbackValuationInvarianceOf
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.ExpansionPullbackSectionEndomorphism
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.ThetaConstantEqSumThetaTermsOddMultiple
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.ExistsNsmulAndNeg
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.AllUniformizationLawsHold
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.DescentPowerIsoEndomorphismAbelianPartUniformizaStatement
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.PullbackSectionEndomorphismExpansionStatement
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.TwistThroughIsoStatement
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ValCalc
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Uniformization.TXFrame
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.PullGenPf
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField MeasureTheory
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.GeometryOfNumbersTheory
 open GlobalTheory GlobalTheory.LieHt GlobalTheory.Cartier GlobalTheory.ThetaOnto GlobalTheory.MBModel GlobalTheory.KeyCl GlobalTheory.Ex GlobalTheory.MBLow GlobalTheory.SecJet
@@ -54,10 +45,10 @@ theorem gen_shape (D : DegPre R) (a : D.P.A ⟶ D.P.A) (k' k : ℕ) (hk : k ≤ 
   obtain ⟨eB, he, hv⟩ := exists_gen hL (φ' := Sum.elim (D.famφB χ') (fun i => a.left ≫ D.famφB χ i))
     (ε' := Sum.elim (DegPre.famε k') (fun i => - DegPre.famε k i)) (fun U _ h => by
       simp only [Fintype.prod_sum_type, Fin.prod_univ_four, Fin.prod_univ_three, Finset.univ_unique,
-        Finset.prod_singleton, DegPre.famφB, DegPre.famε, DegPre.Oφ, Oε, Oinvε, kapLB, Sum.elim_inl, Sum.elim_inr,
-        Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_two, Matrix.cons_val_three, Matrix.head_cons,
+        Finset.prod_singleton, DegPre.famφB, DegPre.famε, DegPre.Oφ, Oε, Oinvε, Sum.elim_inl, Sum.elim_inr,
+        Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_two, Matrix.cons_val_three,
         Category.comp_id, ← Over.comp_left, e₁, ← Category.assoc, e₂, one_left, unit_left, Over.id_left, Nat.cast_sub hk, e₃, Matrix.vecHead, Matrix.vecTail,
-        Function.comp_apply, Fin.succ_zero_eq_one, Fin.succ_one_eq_two, mul_one, zpow_one]
+        Function.comp_apply, Fin.succ_zero_eq_one, Fin.succ_one_eq_two, zpow_one]
       apply Additive.ofMul.injective
       simp only [ofMul_mul, ofMul_zpow]
       module) t ht

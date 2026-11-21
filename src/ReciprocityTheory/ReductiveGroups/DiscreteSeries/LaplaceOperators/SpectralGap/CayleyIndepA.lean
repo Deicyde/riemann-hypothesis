@@ -1,4 +1,6 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.LaplaceOperators.SpectralGap.NonvanishingHypotheses
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
 
 open Matrix
 open scoped InnerProductSpace

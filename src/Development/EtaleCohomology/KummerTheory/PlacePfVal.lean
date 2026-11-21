@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.KummerTheory.PlacePf
+import Mathlib.RingTheory.Valuation.LocalSubring
 
 noncomputable section
 open GlobalTheory.EtC Polynomial

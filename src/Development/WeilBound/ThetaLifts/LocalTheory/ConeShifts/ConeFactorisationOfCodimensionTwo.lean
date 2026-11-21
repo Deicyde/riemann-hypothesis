@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LocalTheory.ConeShifts.PureIte
 import Development.WeilBound.ThetaLifts.ConeHypotheses.PureEqPureA
 import Development.WeilBound.ThetaLifts.EigenvalueEndgame.EigenKilling.ConeIntegralFactorisation
+import Development.WeilBound.ThetaLifts.LocalTheory.UnramifiedDeterminedBySpherical
 
 noncomputable section
 

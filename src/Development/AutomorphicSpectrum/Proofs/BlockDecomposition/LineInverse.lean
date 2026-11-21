@@ -1,8 +1,7 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.ArchimedeanGelfandKernels.LeftEquivariantFunctions.ComplexMatrixCalculus.SwapLaws
-import Formalism.GelfandTransference.HadamardGelfand.Highest
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.WeightEqOfFinitePartNeBot
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.EventuallyLineUnit
+import Formalism.GelfandTransference.GelfandCentral
 
 noncomputable section
 
@@ -41,7 +40,7 @@ theorem conj_line {lam : Fin n → ℤ} (hD : HolRm lam) {e : Mat n} (B : Mat n)
   obtain ⟨-, hyx⟩ := line_inverse he hs
   have hB' : (1 + t • e) * B * (1 - (t / (1 + t * δ)) • e) =
       B + t • (e * B) + (-(t / (1 + t * δ))) • (B * e) + (-(t * (t / (1 + t * δ)))) • (e * B * e) := by
-    simp only [add_mul, mul_add, sub_mul, mul_sub, one_mul, mul_one, smul_mul_assoc, mul_smul_comm,
+    simp only [add_mul, mul_sub, one_mul, mul_one, smul_mul_assoc, mul_smul_comm,
       mul_assoc]
     module
   have hcomm : (1 + t • e) * B = ((1 + t • e) * B * (1 - (t / (1 + t * δ)) • e)) * (1 + t • e) := by

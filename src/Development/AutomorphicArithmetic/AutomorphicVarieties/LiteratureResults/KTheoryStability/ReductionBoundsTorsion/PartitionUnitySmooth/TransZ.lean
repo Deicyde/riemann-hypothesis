@@ -1,6 +1,10 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.KTheoryStability.ReductionBoundsTorsion.PartitionUnitySmooth.Smoothing
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.KTheoryStability.ReductionBoundsTorsion.PartitionUnitySmooth.MzMulEqOne
 import Development.AutomorphicArithmetic.AutomorphicVarieties.HermiteNormalForms.Gramlow
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.TotallySplit
 
 open Matrix
 

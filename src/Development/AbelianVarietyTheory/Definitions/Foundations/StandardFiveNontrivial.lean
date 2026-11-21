@@ -1,5 +1,19 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.SamePartIffOfNeZero
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.Analysis.SpecialFunctions.Complex.CircleAddChar
+import Mathlib.GroupTheory.FiniteAbelian.Duality
+import Mathlib.RepresentationTheory.FinGroupCharZero
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
 
 noncomputable section
 open Polynomial Classical
@@ -85,9 +99,9 @@ def PrimeOK (g q d : ℕ) : Prop :=
 namespace Basic
 
 theorem mem_one (L : Lev g N) : L.Mem 1 := by
-  refine ⟨⟨fun a => by simp, fun a b h => by simp [Matrix.one_apply, h.ne']⟩, fun _ a b h1 h2 h3 => ?_⟩
+  refine ⟨⟨fun a => by simp, fun a b h => by simp [h.ne']⟩, fun _ a b h1 h2 h3 => ?_⟩
   have : a ≠ b := by intro h; subst h; omega
-  simp [Matrix.one_apply, this]
+  simp [this]
 
 theorem mem_mul (L : Lev g N) {u w : GG g N} (hu : L.Mem u) (hw : L.Mem w) : L.Mem (u * w) := by
   have isUp_mul : ∀ {u w : GG g N}, IsUp g N u → IsUp g N w → IsUp g N (u * w) := by

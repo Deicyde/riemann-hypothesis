@@ -1,7 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.KernelLattices.ColumnData.ColumnDataEquations.Reduction
 import Formalism.LocalToGlobal.TorsionIntegrality.QuadraticSemicharacters.QuadraticSemicharacterIdentityReformulated2
-import Formalism.LocalToGlobal.KernelLattices.ColumnData.DetIdealsKernelNormOne
-import Formalism.LocalRingCardinality.SpanPowerMembership.RelDet
 import Formalism.LocalToGlobal.KernelLattices.ColumnData.StdLat
 
 noncomputable section

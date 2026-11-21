@@ -1,9 +1,9 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SecondCountableHermC
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.TupCoordApply
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousSeminormDiffSLe
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DetConjUnitary
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ArchimedeanOrbitMeasures.PiDens
+import Mathlib.Algebra.Ring.IsFormallyReal
 
 open MeasureTheory
 open GlobalTheory.CompanionTheory.SiegelND.Integ.Arch
@@ -174,7 +174,7 @@ theorem inner_polarOp {W : Type} [Fintype W] {n M : ℕ} (J : W → Matrix (Fin 
          exact Finset.sum_congr rfl fun a _ => by first | rfl | exact Complex.real_inner_eq_re_inner _ _)
   have key : ∑ p, inner ℂ (x (w, p)) (mixOp J (diagOp b y) (w, p)) =
       2 * sesq (J w) (b w) (tupCoord x w) (tupCoord y w) := by
-    simp only [PiLp.inner_apply, mixOp_apply, diagOp_apply, tupCoord_apply]
+    simp only [PiLp.inner_apply, mixOp_apply, diagOp_apply]
     simp [sesq, Matrix.toEuclideanLin_apply, Matrix.mulVec, dotProduct, Finset.mul_sum, Finset.sum_mul]
     refine Finset.sum_congr rfl fun _ _ => Finset.sum_congr rfl fun _ _ =>
       Finset.sum_congr rfl fun _ _ => Finset.sum_congr rfl fun _ _ => by ring

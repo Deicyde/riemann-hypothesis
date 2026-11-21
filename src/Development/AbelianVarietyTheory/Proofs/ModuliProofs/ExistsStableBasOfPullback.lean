@@ -1,7 +1,5 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.AmplePt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.SabPull
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.DivCalc
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ChartPullbacks.CubePullbacks.CubePull
 import Development.AbelianVarietyTheory.Definitions.Degenerations.AdmissiblePadicIntMaximalIdeal
 import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.ThetaGrpActsLinearly
@@ -292,7 +290,7 @@ theorem exists_stableBas_polAV (H : SecBaseChangeAnySt) {S : Scheme.{0}} (P : Po
     h₃ ▸ span_of_retract P.A P.L n e e' h₁ (homAt t) _ hb'.2⟩
   have q := congrArg (pull P.A P.L n e) hc
   rw [map_sum, map_zero] at q
-  simp only [map_smulₛₗ, pull_pull, h₂] at q
+  simp only [map_smulₛₗ, pull_pull] at q
   have q' := congrArg (pa e'.left (V := ⊤) (le_pre_top _)) (Fintype.linearIndependent_iff.1 hb'.1 _ q i)
   rw [map_zero, pa_pa _ _ _ _ (𝟙 _) (congrArg (fun u => u.left) h₁) (le_pre_top _), pa_id] at q'
   exact (rs_self _ _).symm.trans q'

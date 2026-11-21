@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.CrisTheta
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.TeichmullerLogarithm.CyclotomicPowSubOneNilpotent
 
 open Ideal Reformulated.AutPerF

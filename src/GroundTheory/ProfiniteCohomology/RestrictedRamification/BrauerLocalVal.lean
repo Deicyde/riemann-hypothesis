@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.BrauerLocalDefs
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.BrauerOrd
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.DivisorModule

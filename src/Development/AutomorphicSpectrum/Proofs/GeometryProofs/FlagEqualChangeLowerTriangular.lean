@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.IsFrameVec
+import BuildAid.Leniency.Open
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsGenericFlag
+import Formalism.LocalRingCardinality.DataHost
 open NumberField IsDedekindDomain MeasureTheory Filter Topology
 open Formalism.L2.Pj ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.FD ReciprocityTheory.ChartRestriction.G.AR.Up ReciprocityTheory.ChartRestriction.G.AR.Inst Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.L2.Theta
 open GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Rec
@@ -20,12 +21,12 @@ theorem independent_and_triangular : ∀ (Ω : Type) [Field Ω] (L : Type) [AddC
       rw [← Set.image_univ]
       congr 1
       ext k
-      simp [k.isLt]
+      simp
     have e2 : b '' {k : Fin r | (k : ℕ) < r} = Set.range b := by
       rw [← Set.image_univ]
       congr 1
       ext k
-      simp [k.isLt]
+      simp
     rw [e1, e2] at h
     exact h.symm
   have hb₀ : LinearIndependent Ω b₀ := by

@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OrderPositiveAlongFibre
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OrdEqZeroOfUnderEqBot
 open CategoryTheory AlgebraicGeometry
 
 set_option maxHeartbeats 1000000 in

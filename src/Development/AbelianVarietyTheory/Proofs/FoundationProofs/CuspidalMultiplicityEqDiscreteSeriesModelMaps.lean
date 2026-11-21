@@ -1,15 +1,6 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasTypeVec
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsNormLeHeightPow
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.HarishChandraFinite
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.CuspDiscreteDecompositionOfTraceClass
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.IsClosedEmbeddingOfLocallyCompact
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.ExistsFactorisationCuspidal
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.PseudoCoefficientUpqTrivial
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.DiscreteSeriesCharacter
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.LanglandsClassification
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.LabesseWaldspurger
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.ExistsCellOfIsSubquotient
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.RadfordShufflePolynomialHolds
 import Development.AbelianVarietyTheory.Definitions.Foundations.MemL2OfAutomorphicEmbedding
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsUniqueIntertwiner
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsAllMaps
@@ -50,17 +41,17 @@ theorem eq_of_represents_cont {Φ : ContinuousMultilinearMap ℂ M.H (DividedPow
   MultilinearMap.ext fun v => (hT v).ae_eq_iff_eq μ (hT' v) |>.1 ((h v).symm.trans (h' v))
 
 theorem represents_zero : Represents μ (0 : ContinuousMultilinearMap ℂ M.H (DividedPowerChartLift V μ)) 0 := fun _ => by
-  simp only [ContinuousMultilinearMap.zero_apply, MultilinearMap.zero_apply]
+  simp only [ContinuousMultilinearMap.zero_apply]
   exact ae_quotMeasure_iff.1 (Lp.coeFn_zero ℂ 2 _)
 
 theorem Represents.add {Φ Φ' : ContinuousMultilinearMap ℂ M.H (DividedPowerChartLift V μ)} {T T' : MMap M} (h : Represents μ Φ T)
     (h' : Represents μ Φ' T') : Represents μ (Φ + Φ') (T + T') := fun v => by
-  simp only [ContinuousMultilinearMap.add_apply, MultilinearMap.add_apply]
+  simp only [ContinuousMultilinearMap.add_apply]
   exact lift_add_ae (h v) (h' v)
 
 theorem Represents.smul (c : ℂ) {Φ : ContinuousMultilinearMap ℂ M.H (DividedPowerChartLift V μ)} {T : MMap M} (h : Represents μ Φ T) :
     Represents μ (c • Φ) (c • T) := fun v => by
-  simp only [ContinuousMultilinearMap.smul_apply, MultilinearMap.smul_apply]
+  simp only [ContinuousMultilinearMap.smul_apply]
   exact lift_smul_ae c (h v)
 
 theorem Represents.translate (g : GfC V) {Φ : ContinuousMultilinearMap ℂ M.H (DividedPowerChartLift V μ)} {T : MMap M}

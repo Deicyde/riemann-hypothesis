@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.TorsionIntegrality.EisensteinTranslationProducts.EisensteinRecursion
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.TorsionIntegrality.EisensteinTranslationProducts.MulStableIntegral
 
 noncomputable section
 

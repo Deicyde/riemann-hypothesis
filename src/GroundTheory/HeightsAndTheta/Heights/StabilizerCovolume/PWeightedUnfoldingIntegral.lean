@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.StabilizerCovolume.WeightedUnfoldingIntegral
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.StatementsProved
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.MeasureInterEqOfIsFundamentalDomain

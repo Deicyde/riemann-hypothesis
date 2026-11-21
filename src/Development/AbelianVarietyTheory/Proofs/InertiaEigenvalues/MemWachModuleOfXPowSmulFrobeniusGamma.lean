@@ -1,10 +1,9 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.UsedLocalConclusion
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.NotFullBot
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.MemRangeOfFrob
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.EtaleComparisonOfWachBasis
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.WachInclusionXQFrobenius
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.MapConstantCoeffEqOne
+import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.NBasisLoc
+import Formalism.SharpRestriction.LevelLetterCocycles.DeltaInvariantLattices
 open Formalism.WeaklyAdmissibleFiltrations Formalism.BasicNotions Formalism.BasicNotions.Loc TensorProduct GlobalTheory.NL Formalism.MainNotions.DeltaInvariantLattices
 set_option maxHeartbeats 1000000
 
@@ -192,30 +191,30 @@ theorem mem_N_of_div {r : ℕ} (b : Fin r → W.DD T) (hbN : ∀ j, b j ∈ W.N 
     rcases p with i | i <;> rcases q with j | j
     · simp [Matrix.mul_apply, Fintype.sum_sum_type, Matrix.one_apply, apply_ite (W.γA W.gam)]
       ring
-    · simp [Matrix.mul_apply, Fintype.sum_sum_type, Matrix.one_apply, apply_ite (W.γA W.gam)]
+    · simp [Matrix.mul_apply, Fintype.sum_sum_type, Matrix.one_apply]
       linear_combination (-1 : LetA O n) * E1 i
     · simp [Matrix.mul_apply, Fintype.sum_sum_type, Matrix.one_apply, apply_ite (W.γA W.gam)]
-    · simp [Matrix.mul_apply, Fintype.sum_sum_type, Matrix.one_apply, apply_ite (W.γA W.gam)]
+    · simp [Matrix.mul_apply, Fintype.sum_sum_type]
       ring
   · refine Matrix.ext fun p q => ?_
     rcases p with i | i <;> rcases q with j | j
     · simp [Matrix.mul_apply, Fintype.sum_sum_type, Matrix.one_apply]
       rw [E3 j i, pow_add]
-    · simp [Matrix.mul_apply, Fintype.sum_sum_type, Matrix.one_apply]
-    · simp [Matrix.mul_apply, Fintype.sum_sum_type, Matrix.one_apply]
-    · simp [Matrix.mul_apply, Fintype.sum_sum_type, Matrix.one_apply]
+    · simp [Matrix.mul_apply, Fintype.sum_sum_type]
+    · simp [Matrix.mul_apply, Fintype.sum_sum_type]
+    · simp [Matrix.mul_apply, Fintype.sum_sum_type]
       ring
   · refine Matrix.ext fun p q => ?_
     rcases p with i | i <;> rcases q with j | j
     · simp [Matrix.mul_apply, Fintype.sum_sum_type, Matrix.one_apply, apply_ite W.φA]
       rw [W.φA_X]; ring
-    · simp [Matrix.mul_apply, Fintype.sum_sum_type, Matrix.one_apply, apply_ite W.φA]
+    · simp [Matrix.mul_apply, Fintype.sum_sum_type, Matrix.one_apply]
       rw [W.φA_X]
       simp_rw [mul_assoc]
       rw [← Finset.mul_sum]
       linear_combination (-1 : LetA O n) * E2 i
     · simp [Matrix.mul_apply, Fintype.sum_sum_type, Matrix.one_apply, apply_ite W.φA]
-    · simp [Matrix.mul_apply, Fintype.sum_sum_type, Matrix.one_apply, apply_ite W.φA]
+    · simp [Matrix.mul_apply, Fintype.sum_sum_type]
       rw [W.φA_X]; ring
 
 end Generic

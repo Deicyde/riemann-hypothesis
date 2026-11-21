@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsDetInt
+import Formalism.LocalToGlobal.Columns.LevGCount
 
 noncomputable section
 

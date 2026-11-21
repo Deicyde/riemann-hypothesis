@@ -1,5 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.FundSetMeasStatement
 import Development.WeilBound.CoreStatements.EqualVolumeCompactOpens.IsIsotropicHermitianSetting
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 
@@ -92,7 +97,7 @@ theorem gamma_le_u {E : Type} [Field E] [NumberField E] [IsCMField E] {r : ℕ} 
   have h := hst (Pi.single i 1) (Pi.single j 1)
   simp only [ReciprocityTheory.ChartRestriction.G.FD.herm, ReciprocityTheory.ChartRestriction.G.FD.cc, Matrix.mulVec, dotProduct, Pi.single_apply,
     apply_ite (⇑(NumberField.IsCMField.complexConj E)), map_one, map_zero, mul_ite, ite_mul, mul_one, one_mul,
-    mul_zero, zero_mul, Finset.sum_ite_eq, Finset.sum_ite_eq', Finset.mem_univ, if_true] at h
+    mul_zero, zero_mul, Finset.sum_ite_eq', Finset.mem_univ, if_true] at h
   rw [← h]
   simp only [Matrix.mul_apply, Matrix.transpose_apply, Matrix.map_apply, Finset.sum_mul]
   rw [Finset.sum_comm]

@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.KernelLattices.ThDistC
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.ThDistC
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FinAlgOfFinite
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.DerivAt0CompMem

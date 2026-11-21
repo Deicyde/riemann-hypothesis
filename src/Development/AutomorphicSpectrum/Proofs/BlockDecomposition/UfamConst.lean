@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.ResidualSpectrum.ExponentialNegativity.L2DecayOfCountEscape
-import GroundTheory.AutomorphicForms.CuspidalDiscreteness.CuspFormsDiff
 
 noncomputable section
 

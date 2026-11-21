@@ -1,8 +1,7 @@
-import Mathlib
-import Development.AutomorphicArithmetic.Foundations.Convolution.SphericalIdeles.RamDefs
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.SphericalIdeles.CbcSph
-import Development.AutomorphicArithmetic.Foundations.Convolution.SphericalIdeles.LiftAll
 import Development.AutomorphicArithmetic.Foundations.Convolution.SphericalIdeles.NormRam
+import Development.AutomorphicArithmetic.Foundations.Convolution.Cbcc
 
 open NumberField IsDedekindDomain Filter
 open GlobalTheory.CuspRep Formalism.L2.Host Formalism.ConjugateSelfDual UpperTheory.V.Published UpperTheory.CBC

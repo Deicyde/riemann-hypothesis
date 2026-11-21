@@ -1,8 +1,7 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.KleimanNefness.AlgDimSt
 import ReciprocityTheory.CommutativeAlgebra.PolynomialHeights.HeightAddRingKrullDimQuotientMvPolynomialField
 import ReciprocityTheory.CommutativeAlgebra.WeakRegularity.RingKrullDimQuotientAddOneLeOfLt
-import ReciprocityTheory.CommutativeAlgebra.CohenMacaulay.LocDim
-import ReciprocityTheory.CommutativeAlgebra.CohenMacaulay.Bridge
 import ReciprocityTheory.CommutativeAlgebra.SaturatedChains.DimFormulaOfSurjective
 
 noncomputable section

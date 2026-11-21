@@ -1,10 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FramePinSmul
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsGeometricHalfRealisationGeometricAction
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.GeometricHalfCoreFormsUniformisationIntegral
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.GeoHalfUpd
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PbEqOfPins
-import Formalism.LocalToGlobal.IndefiniteReal.WeakCharacterisationWithError
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsCoreConstantsBaseSolutionEquivariant
 
 set_option autoImplicit false
 

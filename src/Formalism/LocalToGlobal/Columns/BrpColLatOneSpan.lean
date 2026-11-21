@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.BrpAevalScaleMonomial
 import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.ImageLcv
+import Formalism.LocalToGlobal.Columns.BrpStarLatLattice
 
 open NumberField IsDedekindDomain Module
 open scoped Matrix
@@ -197,7 +199,7 @@ theorem brp_lcvInf_std (n : ℕ) :
     rw [Finset.sum_eq_single a]
     · by_cases h : a = c
       · subst h; simp
-      · simp [Pi.single_apply, Matrix.one_apply, h, Ne.symm h]
+      · simp [h]
     · intro b _ hb
       simp [Pi.single_apply, hb]
     · intro h; exact absurd (Finset.mem_univ _) h

@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlatVectorThreeStepsConjugatePlaces
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SuppAtMul
 set_option autoImplicit false
 noncomputable section
 open NumberField IsDedekindDomain

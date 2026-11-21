@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsModGrowthExpLeNormInfPow
+import Formalism.LocalToGlobal.ProjectiveLattices.PartitionExtendByZeroAntitone
 
 noncomputable section
 

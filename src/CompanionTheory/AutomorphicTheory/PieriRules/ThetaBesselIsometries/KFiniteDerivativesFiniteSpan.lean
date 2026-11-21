@@ -1,8 +1,6 @@
-import Mathlib
-import CompanionTheory.AutomorphicTheory.PieriRules.PieriDegreeBounds.Imports
-import Development.AbelianVarietyTheory.Definitions.Jets.SumIoPr
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.AutomorphicTheory.PieriRules.ThetaBesselIsometries.DerivedActionDiscreteSeriesProperties
-import CompanionTheory.AutomorphicTheory.PieriRules.ThetaBesselIsometries.IsDSOfIsDG
 
 namespace GlobalTheory
 end GlobalTheory
@@ -59,8 +57,8 @@ theorem exists_box_generators (k r : ℕ) : ∃ (J : Type) (_ : Fintype J) (Z : 
         simp
       rw [← Finset.sum_subset (Finset.subset_univ {(a, b, true), (a, b, false)})]
       · rw [Finset.sum_pair hpair, hE, hE, hc, hc]
-        simp only [Matrix.of_apply, and_self, if_true, Complex.real_smul, mul_one]
-        simp only [Bool.false_eq_true, if_false, ite_true]
+        simp only [Matrix.of_apply, and_self, if_true, Complex.real_smul]
+        simp only [Bool.false_eq_true, if_false]
         linear_combination (-1 : ℂ) * Complex.re_add_im (Y a b)
       · rintro ⟨i, j, β⟩ _ hx
         rw [hE]

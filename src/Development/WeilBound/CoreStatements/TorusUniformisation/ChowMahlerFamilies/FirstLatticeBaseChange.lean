@@ -1,10 +1,11 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.LieLatticeData
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.MemSpanOverOfMem
 import Development.WeilBound.CoreStatements.TorusUniformisation.ChowMahlerFamilies.XDotdualBc
 import Development.WeilBound.CoreStatements.TorusUniformisation.ChowMahlerFamilies.XSummandBc
 import Development.WeilBound.CoreStatements.TorusUniformisation.ChowMahlerFamilies.XSummandOfQuot
 import Development.WeilBound.CoreStatements.TorusUniformisation.ChowMahlerFamilies.XGraphRestrictBc
+import Mathlib.Tactic.Monotonicity.Lemmas
 open GlobalTheory.CompanionTheory.Ar.Num
 
 namespace PositivityTheory.Xgn.GoodLatticeBaseChange

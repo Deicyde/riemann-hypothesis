@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.PAdicHodge.BdRAlg
 import GroundTheory.PAdicHodge.BdRGalois
+import Mathlib.RingTheory.Etale.Field
 set_option maxSynthPendingDepth 1
 
 noncomputable section

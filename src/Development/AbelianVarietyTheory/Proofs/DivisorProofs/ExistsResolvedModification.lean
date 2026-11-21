@@ -1,10 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GapGeSubKapBase
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeakResolutionOfPrincipalisationStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsModificationExtendingMapFromOpenStatement
-import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.IsProjOverIffIsProperAndExistsIsAmpleLB
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemNonzeroLocusFormMap
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KawamataViehwegVanishingNumberFieldTwist
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TopologicalKrullDimEqOfOpenImmersionIntegralScheStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GeometricallyConnectedSmoothProjModificationOffOStatement
 open CategoryTheory AlgebraicGeometry TopologicalSpace Limits NumberField
@@ -158,7 +154,7 @@ theorem exists_resolved_modification : GlobalTheory.Published.Principalisation �
     · rw [Category.assoc, Category.assoc, hcf, ← reassoc_of% hwe]
     · simp only [f, ← hw', Category.assoc]
       rw [reassoc_of% hrM]
-      simp only [r₀, pullback.lift_snd, Category.assoc]
+      simp only [r₀, pullback.lift_snd]
   choose d hd hzd using key
   haveI : Nonempty UW.toScheme := ⟨⟨_, hηUW⟩⟩
   haveI : IsIntegral UW.toScheme := isIntegral_of_isOpenImmersion UW.ι

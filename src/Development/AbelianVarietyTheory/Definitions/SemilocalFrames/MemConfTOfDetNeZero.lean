@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.StandardLattice
-import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.Partners
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.FrameLats
 
@@ -174,7 +175,7 @@ theorem dualM_one_one (σ : E →+* E) {a : ℕ} :
   constructor
   · intro h i
     have := h (Pi.single i 1) ((mem_tupLat_one _).2 fun j => by
-      by_cases hj : j = i <;> simp [Pi.single_apply, hj])
+      by_cases hj : j = i <;> simp [hj])
     simpa [form, dotProduct, Pi.single_apply, apply_ite σ] using this
   · intro h y hy
     rw [mem_tupLat_one] at hy

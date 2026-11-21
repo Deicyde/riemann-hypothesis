@@ -1,8 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.EntryAgree
-import Formalism.LocalToGlobal.Columns.ChainTw
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ExtXCastAdd
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RootExchangeUnipotentHaarAndModulus
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ParahoricLevelsCharactersDoubleCosetsAgreeRationStatement
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.MemN1IffLocalHomStatement
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.MemR1IffLocalHomStatement
@@ -72,7 +68,7 @@ theorem vol_agree : ∀ (X : Fields) (Pr : Primes X) (R : Ranks) (Ch : Chars X P
   have hC : ∀ x : AutY X R j, x ∈ Loc.Cbe (Jat (Pr := Pr) cst.sharp j P.1) γ ↔ φ x ∈ Cgrp J g := by
     intro x
     rw [mem_Cgrp, ← GlobalTheory.T.mem_R1_iff_local_hom ι e hcc heR x, (hLev j (c + 1) h _ _ (hIsGL x)).1]
-    simp [Loc.Cbe, Subgroup.mem_comap, MulAut.conj_apply]
+    simp [Loc.Cbe, Subgroup.mem_comap]
   have hN1 := GlobalTheory.T.mem_N1_iff_locHom_mem_N_one ι e hcc heR
   have hlam : lamYat (Pr := Pr) (R := R) j P.1 = stdAt X.E _ P.1 := by
     ext v

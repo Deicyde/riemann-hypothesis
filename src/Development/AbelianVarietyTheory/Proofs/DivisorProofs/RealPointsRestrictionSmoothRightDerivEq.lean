@@ -1,8 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.GlRes
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsExpLieAlgebraComplexUnits
-import Development.AbelianVarietyTheory.Definitions.Divisors.CentralNilGL
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqZeroOfMemWeakIn
+import GroundTheory.AutomorphicForms.GKModules.RightRegular
 
 noncomputable section
 

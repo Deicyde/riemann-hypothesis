@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.GeometricLemmaFiltration
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HasFiniteLengthOfIsIrreducible
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.BernsteinUnitaryProductIrreducible
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.ExistsCellOfIsSubquotient
 open GlobalTheory.PRep GlobalTheory.SmGL Matrix
 
 noncomputable section
@@ -68,15 +67,15 @@ private theorem card_two_true' (a b : Type) [Fintype a] [Fintype b] :
 private def sizeSecond (u v : ℕ) : SizeMatrix (Two (Fin (u + 1)) (Fin v)) (Two (Fin (u + v)) (Fin 1)) :=
   ⟨fun i j => cond i (cond j 0 v) (cond j 1 u), by
     refine ⟨fun i => ?_, fun j => ?_⟩
-    · cases i <;> simp [Fintype.sum_bool, card_two_false', card_two_true'] <;> omega
-    · cases j <;> simp [Fintype.sum_bool, card_two_false', card_two_true'] <;> omega⟩
+    · cases i <;> simp <;> omega
+    · cases j <;> simp <;> omega⟩
 
 private theorem eq_sizeSecond {u v : ℕ} (b : SizeMatrix (Two (Fin (u + 1)) (Fin v)) (Two (Fin (u + v)) (Fin 1)))
     (h : b.1 false true = 1) : b = sizeSecond u v := by
   have r0 := b.2.1 false
   have r1 := b.2.1 true
   have c1 := b.2.2 true
-  simp only [Fintype.sum_bool, card_two_false', card_two_true', Fintype.card_fin] at r0 r1 c1
+  simp only [Fintype.sum_bool, Fintype.card_fin] at r0 r1 c1
   refine Subtype.ext (funext fun i => funext fun j => ?_)
   cases i <;> cases j <;> simp [sizeSecond] <;> omega
 
@@ -355,7 +354,7 @@ private theorem restr_law (χ₁ χ₂ : kˣ →* ℂˣ) (u v : ℕ) (Φ : CellS
   unfold restr
   rw [Submodule.quotEquivOfEqBot_apply_mk]
   congr 1
-  simp only [Subtype.coe_mk, incl_true, incl_false, Subtype.coe_eta, map_one, one_mul, Units.val_mul]
+  simp only [incl_true, incl_false, Subtype.coe_eta, map_one, one_mul, Units.val_mul]
 
 private theorem restr_smooth (χ₁ χ₂ : kˣ →* ℂˣ) (u v : ℕ) (Φ : CellSp (k := k) χ₁ χ₂ u v) :
     (⟨restr χ₁ χ₂ u v Φ, fun q x₁ => restr_law χ₁ χ₂ u v Φ q x₁⟩ :
@@ -402,7 +401,7 @@ private theorem toCell_surjective {χ₁ χ₂ : kˣ →* ℂˣ} (hχ₁ : IsSmo
   conv_rhs => rw [hx, h1, ← mk_restr χ₁ χ₂ u v Φ (x false), inducing_mk]
   unfold toFun
   rw [hl]
-  simp only [map_one, Pi.one_apply, Units.val_one, mul_one]
+  simp only [map_one, Pi.one_apply, mul_one]
   rfl
 
 private def mapF {χ₁ χ₂ : kˣ →* ℂˣ} (hχ₁ : IsSmoothChar χ₁) (u v : ℕ) :

@@ -1,13 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.SiegelKlingenDeligneRibet
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.ExistsAvoidOne
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.PartialSum
-import Development.AbelianVarietyTheory.PublishedTheorems.PublishedFoundations.NonemptyAlgHomOfIsRayOfDvd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.MemConnectedComponentOfOneOfPos
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.ChebotarevDegreeOneIffCheb
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ChebotarevDegreeOne
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.Imports
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.FixedCoefficientFieldInComplex
+import Formalism.SharpRestriction.GlobalSchurBounds.ShortIntervalPrimes
 
 open NumberField IsDedekindDomain Formalism.MainNotions.ShortIntervalPrimes GlobalTheory.RayZeta GlobalTheory.CompanionTheory.Hypotheses₂.Shintani GlobalTheory.CompanionTheory.Hypotheses₂.Shintani.Abel
 open scoped nonZeroDivisors
@@ -92,7 +88,7 @@ theorem finite_excluded (𝔣 : Ideal (𝓞 F)) (hf : 𝔣 ≠ ⊥) (W : Finset 
     have h : {I : Ideal (𝓞 F) | Ideal.absNorm I ≤ B}.Finite := by
       have : {I : Ideal (𝓞 F) | Ideal.absNorm I ≤ B} =
           ⋃ n ∈ Finset.range (B + 1), {I : Ideal (𝓞 F) | Ideal.absNorm I = n} := by
-        ext I; simp [Nat.lt_succ_iff]
+        ext I; simp
       rw [this]
       exact Set.Finite.biUnion (Finset.finite_toSet _) fun n _ => Ideal.finite_setOfPred_absNorm_eq n
     exact (h.preimage (f := fun v : HeightOneSpectrum (𝓞 F) => v.asIdeal)

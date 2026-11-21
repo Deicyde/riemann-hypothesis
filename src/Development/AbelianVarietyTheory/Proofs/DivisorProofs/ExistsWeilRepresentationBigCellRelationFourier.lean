@@ -1,19 +1,14 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.UnipVal
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.PadicIsNonarchimedeanLocalField
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SplitUnitarySiegelParabolicBlockRelationsStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InCellIffDetNeZeroStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ParFunSiegMulStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FourierIntertwinesSiegelLeviOperatorStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FourierHermitianMultiplierBraidRelationStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryCharacterAbsScalarBasicPropertiesStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HasGaussIntegralHermitianQuadraticCharacterStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BicharacterFourierTransformTwiceEqPosSmulReflectStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BicharacterFourierTransformMemSchwartzBruhatStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianMatrixColumnPairingAlgebraicPropertiesStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSelfDualBicharacterPairingOfSymmBilinFormStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SiegelParabolicPreservesSchwartzBruhatStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.QuadExtTopologyStatement
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
 open MeasureTheory Matrix GlobalTheory.KSp GlobalTheory.SplitUnitary
 open GlobalTheory.WeilM (UG IsQuad IsHerm ResEtaPow)
 open GlobalTheory.SplitWeil (SB nabs)
@@ -43,7 +38,7 @@ theorem splitUnitaryElementMatrix_bigCell_product (b : Matrix ν ν E) (hb : (b.
       fromBlocks (-b⁻¹) 1 0 (-b) := by
   have h1 : b * b⁻¹ = 1 := mul_nonsing_inv b (isUnit_iff_ne_zero.mpr hb0)
   rw [mat_mul, mat_mul, mat_mul, mat_mul, mat_weyl_inv, mat_unip_inv, mat_unip, mat_weyl]
-  simp only [stdJ, fromBlocks_multiply, fromBlocks_neg, h1]
+  simp only [stdJ, fromBlocks_multiply, fromBlocks_neg]
   simp [h1]
 
 theorem conj_levi_mem (hc : ∀ z, c (c z) = z) (a : GL ν E) :
@@ -99,7 +94,7 @@ theorem GlobalTheory.KSp.WeylCellRel.gauss_const_ne_zero : ∀ (F : Type) [Field
     convert this using 1
     funext y
     exact (LocallyConstant.indicator_apply (1 : LocallyConstant (Matrix α ν E) ℂ) hLcl y).symm
-  have hφ0 : φ 0 = 1 := by simp [hφd, Set.indicator_of_mem (zero_mem L)]
+  have hφ0 : φ 0 = 1 := by simp [hφd]
   have hfφ : fou c ψ Q μ φ ∈ SB (Matrix α ν E) := by
     rw [hfou]; exact GlobalTheory.T.bicharacterFourierTransform_mem_schwartzBruhat (Matrix α ν E) hgood μ _ hpair φ hφ
   have h1 : ((1 : Matrix ν ν E).map c)ᵀ = 1 := by

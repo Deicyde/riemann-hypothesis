@@ -1,5 +1,5 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.PlaneSupports.PlaneSupp
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousSingleV
 
 noncomputable section
@@ -59,9 +59,9 @@ theorem exists_diag (hc : ∀ t, c (c t) = t) (hJ : ∀ i j, c (Jm j i) = Jm i j
     rw [form_left, hvw, huw, map_one, map_neg, hcr]
     linear_combination -h2r
   refine ⟨(1 : R) • u + (1 : R) • w, (1 : R) • u + (-1 : R) • w, ?_, ?_, ?_, ?_⟩
+  · rw [form_left, form_right, form_right, huu, huw, hwu, hww]; simp only [map_one]; ring
   · rw [form_left, form_right, form_right, huu, huw, hwu, hww]; simp only [map_one, map_neg]; ring
-  · rw [form_left, form_right, form_right, huu, huw, hwu, hww]; simp only [map_one, map_neg]; ring
-  · rw [form_left, form_right, form_right, huu, huw, hwu, hww]; simp only [map_one, map_neg]; ring
+  · rw [form_left, form_right, form_right, huu, huw, hwu, hww]; simp only [map_one]; ring
   · rw [form_left, form_right, form_right, huu, huw, hwu, hww]; simp only [map_one, map_neg]; ring
 
 theorem plane_of (hc : ∀ t, c (c t) = t) (hJ : ∀ i j, c (Jm j i) = Jm i j) (a b : Fin M → R) (T S : R)

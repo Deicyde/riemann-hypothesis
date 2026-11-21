@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.SiegelKlingenDeligneRibet
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.AbelContinuation
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.CongSubgroup
 
 set_option autoImplicit false
 

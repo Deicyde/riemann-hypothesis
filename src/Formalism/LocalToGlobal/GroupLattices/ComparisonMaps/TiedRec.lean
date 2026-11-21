@@ -1,8 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.ValRat
-import Formalism.LocalToGlobal.HermitianForms.RankEqFirstLevel
 import Formalism.LocalToGlobal.GroupLattices.DownNaturalLevelZero
 import Formalism.LocalToGlobal.HermitianColumns.BaseModelLevelEq
-import Formalism.LocalRingCardinality.DataLatDefs
 
 noncomputable section
 

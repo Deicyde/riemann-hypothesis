@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import ReciprocityTheory.SemistableReduction.SphereLogIntegrableStatement
 
 set_option autoImplicit false

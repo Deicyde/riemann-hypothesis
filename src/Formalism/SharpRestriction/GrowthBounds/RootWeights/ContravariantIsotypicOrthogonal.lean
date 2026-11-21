@@ -1,4 +1,6 @@
-import Formalism.SharpRestriction.GrowthBounds.RootWeights.InvariantDenominatorEllPBound
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.ObjPol
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 noncomputable section
 

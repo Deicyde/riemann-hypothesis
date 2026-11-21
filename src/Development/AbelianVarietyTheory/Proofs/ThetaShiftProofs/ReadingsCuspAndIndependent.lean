@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.ArchimedeanThetaValues.CarchAt
-import Development.AbelianVarietyTheory.Definitions.ThetaValues.Generic
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.TieUpA
 import Formalism.LocalToGlobal.ProjectiveLattices.RosatiLatticeNorms.LinkFD
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.SiegelSpaceAlgebraHolds

@@ -1,4 +1,7 @@
-import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.TotallyRealRoots.UnitsMapSurjOfZmod
+import BuildAid.Leniency.Variable
+import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.TotallyRealRoots.LeNuIffPowMemPrinc
+import Mathlib.NumberTheory.Padics.Hensel
+import Mathlib.Tactic.Polynomial.Basic
 
 namespace KStar.TotallyRealRoots
 

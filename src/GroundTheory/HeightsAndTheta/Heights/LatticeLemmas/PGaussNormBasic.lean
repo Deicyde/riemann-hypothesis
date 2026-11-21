@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.LatticeLemmas.IsProbabilityMeasureSphereLaw
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

@@ -1,10 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.SpanningFamilies.IsSystem
-import Development.AbelianVarietyTheory.Definitions.SpanningFamilies.IsHeatZero
 import Development.AbelianVarietyTheory.Definitions.HermitianLattices.TraceFormBilinSeparatingLeftIff
 import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.IsLocalizedModuleSubtype
 import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.ExistsCoeEqSpanDetOfIntVecLe
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsSmulMemOfMemSpanFraction
 
 open Matrix Complex NumberField MeasureTheory GlobalTheory GlobalTheory.SW GlobalTheory.ThFr ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.FD
 open scoped ComplexConjugate ComplexOrder Real Classical nonZeroDivisors
@@ -243,7 +242,7 @@ theorem EF_swap (u v : Fin r → E) : EF X v u = -EF X u v := by
   refine EFf_swap ?_ X.Gm_herm u v
   have h := X.ξ0_im
   unfold cc at h ⊢
-  rcases X.κ0_xi with k | k <;> simp [k, h, map_ofNat, neg_div]
+  rcases X.κ0_xi with k | k <;> simp [k, h, neg_div]
 
 theorem sum_EF_pure (y : Matrix (Fin n) (Fin r) E) (v : Fin n → E) (u : Fin r → E) :
     ∑ k, EF X (y k) (vecMulVec v u k) = EF X (ctr y v) u := by

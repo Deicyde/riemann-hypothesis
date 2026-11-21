@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsorsTrivialIff
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open IsLocalRing Polynomial
 open scoped TensorProduct
 
@@ -53,8 +58,7 @@ theorem isZModTorsor_baseChange : ∀ (B B' D : Type) [CommRing B] [CommRing B']
       | tmul x y =>
         funext g
         simp [dBC, pR, e, Φ, TensorProduct.AlgebraTensorModule.distribBaseChange_tmul,
-          Algebra.TensorProduct.productMap_apply_tmul, hact, Algebra.TensorProduct.tmul_mul_tmul,
-          LinearEquiv.ofBijective_apply]
+          Algebra.TensorProduct.productMap_apply_tmul, hact, Algebra.TensorProduct.tmul_mul_tmul]
         rfl
       | add s t hs ht => rw [TensorProduct.tmul_add, map_add, map_add, map_add, map_add, hs, ht]
     | add s t hs ht => rw [map_add, map_add, map_add, map_add, hs, ht]

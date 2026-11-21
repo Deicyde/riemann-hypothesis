@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.UnitTraceSumBounds.PhNormOfUnits
 import Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.UnitTraceSumBounds.SplitZeroOf
 
@@ -42,8 +43,8 @@ theorem phNorm_of (H1 : PhNormOfUnits) (H2 : PhNormClosed) (D : D7) (hOK : PhNor
     unfold Formalism.HC.HostRaw.K at hsqK ⊢
     intro y hy
     induction hy using IntermediateField.adjoin_induction
-    all_goals simp_all [Set.mem_singleton_iff, map_add, map_mul, map_inv₀, map_neg, AlgEquiv.commutes,
-      add_mem, mul_mem, inv_mem, neg_mem, IntermediateField.algebraMap_mem]
+    all_goals simp_all [Set.mem_singleton_iff, map_add, map_mul, map_inv₀,
+      add_mem, mul_mem]
   have hQ : ∀ x : D.host.E, D.host.φ₀ x ∈ Qbar := by
     intro x
     have hx : IsIntegral ℚ (D.host.φ₀ x) :=

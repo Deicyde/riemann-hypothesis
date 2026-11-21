@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.BesselModels.BurGapOfHyp
 import Development.AutomorphicArithmetic.ThetaCorrespondence.BesselModels.GapArith
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SeparationLineOfBessel
@@ -8,6 +9,7 @@ import Development.AbelianVarietyTheory.Proofs.TwistedOperators.BesselCharacterR
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.TopLineFromSeparation
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.FactorisationFromTopLine
 import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.InfFam
+import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.LiftsCart
 
 noncomputable section
 

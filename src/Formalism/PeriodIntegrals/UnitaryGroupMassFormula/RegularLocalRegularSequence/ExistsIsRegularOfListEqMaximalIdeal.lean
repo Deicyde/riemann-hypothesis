@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.RegularLocalRegularSequence.RingKrullDimQuotientSpanSingletonAddOne
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.Regular.RegularSequence
 
 namespace PI.UnitaryGroupMassFormula.RLRS
 

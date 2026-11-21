@@ -1,34 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.CInfGood
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.BcMapBcVec
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.FlatChernWeightEqOfIndependence
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.OnbMat
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.RegularFormsIsBundleProjectiveCover
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.TwistedDualRegularFormsFiniteCover
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.CuspOnto
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.AdelicGLLastRowAndDetModuleUnderLeftMultiplicati
-import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.GoodOrigin
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.LamLevel
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.ThmFlatA
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.FlatDegree
-import Development.AutomorphicSpectrum.Statements.MetricStatements.SmallOnTower
-import Development.AutomorphicSpectrum.Statements.MetricStatements.RankBound
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsProbabilityMeasureMuPart
-import Formalism.LocalToGlobal.ProjectiveLattices.CompHt
-import Formalism.LocalToGlobal.IndefiniteForms.IndefiniteTree.RealCubicMeans.LogMeanShares.LogMeanStatements.HSClaim
-import Formalism.LocalToGlobal.IndefiniteForms.IndefiniteTree.RealCubicMeans.LogMeanShares.LogMeanStatements.ShareLow
-import Formalism.LocalToGlobal.IndefiniteForms.IndefiniteTree.RealCubicMeans.LogMeanShares.LogMeanStatements.LineDegreeClosedFormula
-import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.SpecFirstDetFormNeZero
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.RootOriginGenericFrameStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LieModelPullbackEquivalence
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.StalkSpecializesBijective
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.NonemptyCptOverOfFlatPreimmersion
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HodgeCompComparisonMiddle
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.FlagEqualChangeLowerTriangular
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsFramedPointBaseChangeAlgebraMap
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.AbelianSchemeLawsUnconditional
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.FrameLawsOfModuli
-import Development.AbelianVarietyTheory.Proofs.GenericRegularity.TriangularInvOfDiagNe
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.FrMapComp
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.GenericLuDecompositionUniqueStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LuFactorsGenerateSameFieldStatement
@@ -244,7 +219,7 @@ theorem lin_core {Ω₀ Ω Li₀ Li : Type} [Field Ω₀] [Field Ω] [Algebra Ω
   have hTm := fun s => GlobalTheory.T.generic_flag_triangular_change Ω Li (r s) (fun k => j (ec s k)) (b s)
     (fun k => ∑ l, u s l k • j (cc s l)) (v s) (w s) (hf s) (hb s) (hv1 s) (hv0 s) (hw0 s) (hw s) (fun k => by
       rw [← hvw s]
-      simp only [Matrix.mul_apply, Matrix.map_apply, Matrix.transpose_apply, Finset.sum_smul, smul_smul]
+      simp only [Matrix.mul_apply, Matrix.map_apply, Matrix.transpose_apply, Finset.sum_smul]
       rw [Finset.sum_comm]
       refine Finset.sum_congr rfl fun l _ => ?_
       have e1 : j (cc s l) = ∑ m, algebraMap Ω₀ Ω (P s l m) • j (ec s m) := by

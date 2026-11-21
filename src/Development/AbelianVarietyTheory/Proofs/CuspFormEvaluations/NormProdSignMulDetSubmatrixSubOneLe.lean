@@ -1,7 +1,13 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.CuspidalExponentialDecay
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.DiscriminantEstimates.DiscriminantTheorems.ScaledBoundInequality
 import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.ImportsAlt
+import Mathlib.LinearAlgebra.Eigenspace.Matrix
+import Mathlib.LinearAlgebra.Matrix.Charpoly.Eigs
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.PicardGroup
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.Signature
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open NumberField ReciprocityTheory.ChartRestriction.G.FD
 open Matrix hiding gram
@@ -87,7 +93,7 @@ theorem norm_prod_sign_mul_det_submatrix_sub_one_le {r : ℕ} (j : Fin r → ℂ
     by_cases h : a = b
     · subst h
       rcases hj (e a) with h | h <;> simp [h]
-    · simp [h, he.eq_iff, diagonal_apply]
+    · simp [h, he.eq_iff]
   have h2 := norm_det_one_add_sub_one_le_exp
     (diagonal (fun a => j (e a)) * (G - diagonal j).submatrix e e) hε (fun a b => by
       rw [diagonal_mul, norm_mul, submatrix_apply]

@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.TowerModels.PlaneCodiff
 import Development.WeilBound.ThetaLifts.TowerModels.PlaneReal
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.ExistsIsotropicOfIndefinite
+import Development.WeilBound.ThetaLifts.TowerModels.PlaneForm
 
 noncomputable section
 

@@ -1,4 +1,7 @@
-import Formalism.LocalToGlobal.CharacterGerms.IntSubst
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.CharacterGerms.Interface
+import Mathlib.RingTheory.PowerSeries.Basic
 
 noncomputable section
 

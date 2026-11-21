@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ClosureUAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsComplementaryAdelicSchwartzRestFunction
 
@@ -52,7 +52,7 @@ theorem isContOn_locOps_member_nonsplit : ∀ (F E : Type) [Field F] [NumberFiel
       simp only [pureA, h0, Pi.smul_apply, smul_eq_mul]
     show (R 0)⁻¹ • l (fun t => pureA F f g (lift t)) = _
     rw [e, map_smul]
-    simp [smul_eq_mul, mul_comm, mul_assoc, mul_left_comm]
+    simp [smul_eq_mul, mul_comm, mul_left_comm]
   have hc0 : IsContOn (adeleClass F) omB := hsp.cont
   have hc := (hc0 L hL _ (hR φ hφ).2).comp
     (continuous_subtype_val (p := (· ∈ UAtGrp σ B (evFin F v))))

@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsMulMemOfForall
+import Mathlib.Algebra.Module.SpanRankOperations
 open IsLocalRing TensorProduct
 
 namespace GlobalTheory

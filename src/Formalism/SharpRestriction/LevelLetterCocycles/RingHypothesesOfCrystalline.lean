@@ -1,7 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.ExpRules
 import Formalism.SharpRestriction.LevelLetterCocycles.CoordHomMapTrace
 import Formalism.SharpRestriction.LevelLetterCocycles.SaturationUnramifiedOfRingCondition
 import Formalism.SharpRestriction.LevelLetterCocycles.FrobeniusPowUniformizerFactorisation
+import Mathlib.Order.Interval.Finset.Box
 
 noncomputable section
 
@@ -679,7 +682,7 @@ theorem idempotent_mul_eq_eval_zero (hR9 : R9 W T) {a : LetA O n} (ha : a ∈ W.
   refine ⟨f c, funext fun c' => ?_⟩
   by_cases h : c' = c
   · subst h; simp [letE, hf, at0]
-  · simp [letE, Pi.single_apply, h]
+  · simp [letE, h]
 
 theorem inv_col [IsDomain O] (hR9 : R9 W T) (hΔ : IsUnit ((W.DelF.card : ℕ) : O)) {i : ZMod n} {j X σ r : ℕ}
     {e : Fin r → W.DD T} (z : Fin r → W.DD T) (Z : Matrix (Fin r) (Fin r) (PowerSeries O))

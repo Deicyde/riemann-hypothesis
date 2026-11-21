@@ -1,10 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.GlobalHeightBoundIffAtGoodPrimes
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsDividedDifference
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CkUniqueCharacterizationStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CapDegreeSymmetricStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CapDegreeFinitePullbackStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GenericIsoNormalModelStatement
 
 open CategoryTheory Limits AlgebraicGeometry IsLocalRing MvPolynomial

@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.CommutativeAlgebra.AbByPOfComm
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CharacterTheory.IsCharTraceMulIdempotent
 import Development.AbelianVarietyTheory.Proofs.CharacterTheory.SumConjIdempotentEqCardSmul
+import Mathlib.Tactic.ENatToNat
 
 open GlobalTheory.BI
 

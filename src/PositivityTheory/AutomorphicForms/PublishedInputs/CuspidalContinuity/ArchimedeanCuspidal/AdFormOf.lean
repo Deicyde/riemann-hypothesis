@@ -1,9 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.FourierWhittaker
-import GroundTheory.AutomorphicForms.MacdonaldWhittakerHecke
-import GroundTheory.LocalFields.LocalZeta
-import GroundTheory.GlobalFields.TateThesis.RootNumberLocalFinite
 import Formalism.RealPlaceAnalysis.StatementE
+import GroundTheory.AutomorphicForms.GL2.GodementSectionFactor
+import GroundTheory.AutomorphicForms.MacdonaldWhittaker
+import GroundTheory.LocalFields.LocalZetaEpsilon
+import Mathlib.NumberTheory.LSeries.DirichletContinuation
+import Mathlib.NumberTheory.ModularForms.Basic
 
 noncomputable section
 

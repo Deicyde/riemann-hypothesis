@@ -1,7 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.CoefModB
 import Formalism.LocalToGlobal.Columns.CoefficientsModP.NablaIndependenceHolds
 import Formalism.LocalToGlobal.Columns.CoefficientsModP.NablaRoundFreeHolds
-import Formalism.GradedWeylDivisibility.StatementE
 
 open MvPolynomial NumberField IsDedekindDomain
 open scoped Matrix

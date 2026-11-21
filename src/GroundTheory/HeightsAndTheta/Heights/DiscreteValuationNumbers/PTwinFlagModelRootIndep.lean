@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.InhabitAlt
 import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.InhabitBis
+import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.ScaledRankOneLeStandardRankOne
 set_option maxSynthPendingDepth 1
 
 noncomputable section

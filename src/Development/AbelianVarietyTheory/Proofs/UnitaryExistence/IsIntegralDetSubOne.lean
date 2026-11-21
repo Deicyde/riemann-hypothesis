@@ -1,6 +1,16 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsHolPeriods
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.Signature
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.LinearAlgebra.Matrix.Charpoly.Eigs
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open NumberField Matrix
 open scoped nonZeroDivisors
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -133,7 +143,7 @@ theorem _root_.GlobalTheory.CongruenceDet.det_mul_conj {E : Type} [Field E] [Num
     have := h (Pi.single i 1) (Pi.single j 1)
     have hcs : c ∘ (Pi.single j (1 : E)) = Pi.single j 1 := by
       funext k
-      by_cases hk : k = j <;> simp [Pi.single_apply, hk]
+      by_cases hk : k = j <;> simp [hk]
     have hgs : c ∘ (g *ᵥ Pi.single j 1) = g.map c *ᵥ (c ∘ Pi.single j 1) := by
       funext k
       exact RingHom.map_mulVec _ _ _ k

@@ -1,13 +1,10 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsCMFrame
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.TransitionMatrixPeriodFrameStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.CmPackEigenPeriodStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.TangentVectorsBaseChangeStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.CmPackPureFrameStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.CurveZNeZeroStatement
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.GramDetNeZeroLocalBasisCofiniteStatement
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.PureTypeLatticesOrthogonalStatement
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.ExistsTransitionMatrixGramStatement
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -21,7 +18,7 @@ theorem det_rows (p q : ℕ) (z₁ z₂ : ℂ) (G : Matrix (Fin q) (Fin q) ℂ) 
       (Matrix.fromCols (0 : Matrix (Fin q) (Fin p) ℂ) (z₂⁻¹ • G⁻¹))).det * (z₂ ^ q * G.det) = z₁ ^ p := by
   rw [Matrix.fromRows_fromCols_eq_fromBlocks, Matrix.det_fromBlocks_zero₂₁, Matrix.det_smul, Matrix.det_one,
     Matrix.det_smul, Matrix.det_nonsing_inv]
-  simp only [Fintype.card_fin, mul_one, Ring.inverse_eq_inv', inv_pow]
+  simp only [Fintype.card_fin, Ring.inverse_eq_inv', inv_pow]
   field_simp
 
 theorem range_comp {K L : Type} [Field K] [Field L] (f : K →+* L) {Y : Scheme.{0}} (y : Sp K ⟶ Y) :

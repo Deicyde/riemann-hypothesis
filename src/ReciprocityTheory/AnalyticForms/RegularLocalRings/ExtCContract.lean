@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.BaseChangeC
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.RingTheory.PiTensorProduct
 
 namespace ReciprocityTheory.AnForm.R
 

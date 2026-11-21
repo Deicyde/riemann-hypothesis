@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.MeasurableBetGm
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.JReproB
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.JReproA
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.StSInt
 
 noncomputable section
 

@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Variable
 import GroundTheory.PAdicHodge.TiltAlgebra
 set_option maxSynthPendingDepth 1
 

@@ -1,7 +1,4 @@
-import Mathlib
-import Formalism.LocalToGlobal.Columns.HeckeInertComm
-import Formalism.LocalToGlobal.Columns.CoefficientsModP.LatticeBasisExistsHolds
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PatchAtSelf
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsSmulMemOfIsLattice
 
 noncomputable section
@@ -30,7 +27,7 @@ theorem exists_smul_mem_of_fg {R M : Type*} [CommRing R] [AddCommGroup M] [Modul
       rw [Finset.coe_insert, Submodule.mem_span_insert] at hx
       obtain ⟨r, y, hy, rfl⟩ := hx
       have e : (t * s) • (r • a + y) = (r * s) • (t • a) + t • (s • y) := by
-        simp only [smul_add, smul_smul, mul_comm, mul_assoc, mul_left_comm]
+        simp only [smul_add, smul_smul, mul_comm, mul_left_comm]
       rw [e]
       exact B.add_mem (B.smul_mem _ hta) (B.smul_mem _ (hsG y hy))
   exact key G subset_rfl

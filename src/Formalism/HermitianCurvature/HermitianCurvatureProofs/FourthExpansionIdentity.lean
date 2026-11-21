@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ScalarInverseSimplification
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.SecondExpansionIdentity
 
 open Matrix Finset
 
@@ -82,7 +84,7 @@ theorem fourth_expansion_identity : ExpansionDualCovector := by
       rw [show i.val + (i0 + s'') = (i0 + i0) + s'' by simp [i]; ring, pow_add, ← two_mul, pow_mul]
       norm_num
     · intro j _ hj
-      simp only [Matrix.of_apply, if_pos rfl]
+      simp only [Matrix.of_apply]
       rw [if_neg (fun h' => hj ((hew_last w j).mp h'))]; simp
     · simp
   have harg : ell + (((i0 + s'' + 1 : ℕ)) : ℂ) - 1 = ell + ((i0 + s'' : ℕ) : ℂ) := by push_cast; ring

@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SpanningFamilies.IsWeakOfDatum
-import Development.AbelianVarietyTheory.Definitions.SpanningFamilies.IsHeatZero
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.LevelStructureProperties
 import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.TensorLatticeSelfDualSemicharacterIndex
 import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.CompletedTensorLatticeStrongApproxOpenCompact
@@ -94,7 +92,7 @@ theorem vac_base : ∀ (D : D7) (S T : HSp D) (C : Ctx S T), ∀ (μ : Measure (
     Lv.w_int Lv.w_tr _ hsd M _ (SW.Base.stdL_mem_Vset S.rank M)).1
   have hN : ∀ v ∈ Lv.sh C.X.Λ, (2 * k + 1) • v ∈ C.X.Λ := fun v hv => by
     have hc : ((2 * k + 1 : ℕ) : 𝓞 D.host.E) ∈ conjI Lv.𝔪 :=
-      Ideal.subset_span ⟨_, hk, by simp only [RingOfIntegers.coe_eq_algebraMap, map_natCast, cc]⟩
+      Ideal.subset_span ⟨_, hk, by simp only [map_natCast, cc]⟩
     have := Submodule.smul_le_right (hv _ hc)
     rwa [Nat.cast_smul_eq_nsmul] at this
   have hspan : Submodule.span D.host.E (Lv.sh C.X.Λ : Set (Fin T.rank → D.host.E)) = ⊤ := by

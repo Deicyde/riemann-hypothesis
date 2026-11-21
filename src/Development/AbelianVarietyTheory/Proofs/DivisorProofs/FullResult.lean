@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsWeilChar
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsDlogUniqueModuloP
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.UniqueIntegralLiftNormPInverse
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.GrNormPosOfBasis
 
 set_option autoImplicit false
 
@@ -117,7 +118,7 @@ theorem GlobalTheory.HalfGeo.fullSt : FullSt := by
       rw [hw']; exact GlobalTheory.DlogEx.chi_fst _ hqR (c m) _
     rw [prodChar_val]
     rw [(dual_prod _ _ fun m => (dual_pow _ (hf m) _).1).2]
-    simp only [map_sum, map_mul, map_natCast, Finset.sum_mul, Finset.mul_sum]
+    simp only [map_sum, map_mul, map_natCast, Finset.sum_mul]
     rw [Finset.sum_comm]
     refine Finset.sum_congr rfl fun m _ => ?_
     rw [(dual_pow _ (hf m) _).2, hdl m a v hav w hw, map_sum, Finset.mul_sum]

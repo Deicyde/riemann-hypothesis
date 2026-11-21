@@ -1,8 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.DiscreteGroups.PiInvariants.CompactSupportTwists.ExistsBumpOne
-import Development.DiscreteGroups.PiInvariants.CompactSupportTwists.PiClosT
 import Development.DiscreteGroups.PiInvariants.CompactSupportTwists.CuspPairD
-import Development.DiscreteGroups.PiInvariants.CompactSupportTwists.LogAbsEqLogIdeleNorm
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ContinuousSplitCentre
 
 set_option linter.all false
 

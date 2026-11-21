@@ -1,16 +1,11 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.CuspidalExponentialDecay
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.IntegralBasisReduction
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.HermitianLatticeMaps
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.WeightFunctionOnFrames
-import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.DetNeZeroOfIsOrth
-import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.FinMuOfFiniteCovolume
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.ExistsIntMulIntegral
-import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.MahlerCompactness
 import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.ExistsStabiliserImageSubgroup
 import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.OrthonormalFramesBoundedOfDefinite
 import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.IsOrthUpdateMulInv
 import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.FrameStepOfRightMulRealUnitaryGroup
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.HermitianTraceFormVanishing
 
 open NumberField ReciprocityTheory.ChartRestriction.G.FD ReciprocityTheory.ChartRestriction.G.AR.Inst ReciprocityTheory.ChartRestriction.G.AR.Up MeasureTheory Topology
 open scoped ComplexOrder ENNReal Matrix ComplexConjugate
@@ -258,7 +253,7 @@ theorem isUnitaryC_of_isUStab {r : ℕ} (X : Data E r) {G : Matrix (Fin r) (Fin 
     simp only [herm, Matrix.mulVec, dotProduct, Pi.single_apply, mul_ite, mul_one, mul_zero,
       Finset.sum_ite_eq', Finset.mem_univ, if_true, ite_mul, zero_mul, one_mul] at h
     have h2 : G a b = ∑ x, ∑ x_1, if x = a then G x x_1 * cc (if x_1 = b then 1 else 0) else 0 := by
-      simp [apply_ite cc, cc_one, cc_zero]
+      simp [apply_ite cc]
     rw [h2, ← h]
     simp only [Matrix.mul_apply, Matrix.transpose_apply, Matrix.map_apply]
     simp_rw [Finset.sum_mul]
@@ -402,7 +397,7 @@ theorem gamDisc : (∀ (r : ℕ) (X : Data E r) {G : Matrix (Fin r) (Fin r) E} (
       ((Units.continuous_val.comp
         ((continuous_apply τ).comp continuous_subtype_val)).matrix_elem a b).norm
     refine hc.continuousAt.eventually_lt continuousAt_const ?_
-    by_cases h : a = b <;> simp [Matrix.one_apply, h]
+    by_cases h : a = b <;> simp [h]
   refine ⟨_, Filter.inter_mem hC hV, ?_⟩
   rintro g ⟨γ, hγ, hg⟩ ⟨h1, h2⟩
   by_contra hne

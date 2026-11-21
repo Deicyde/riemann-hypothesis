@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.MeanSquareBounds.PrimeSetTwoBounds
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CharacterBoxes.PairGood
 import Development.AutomorphicArithmetic.MeanSquareBounds.PairExists
 import Development.AutomorphicArithmetic.MeanSquareBounds.Kappa4Loglog

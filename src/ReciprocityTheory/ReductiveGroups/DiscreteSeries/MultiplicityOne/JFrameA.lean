@@ -1,4 +1,9 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.StDiagExists
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Formalism.FormalDegreeBessel.StatementBF
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Tactic.ENatToNat
 
 noncomputable section
 
@@ -99,14 +104,13 @@ theorem frameMat_unitary (k : ℕ) (u : Fin (k + 1) → ℂ)
             (star (u j.castSucc) * (c : ℂ)) := by
         intro x; split_ifs with h <;> [subst h; skip] <;> ring
       rw [Finset.sum_congr rfl (fun x _ => hpt x)]
-      simp only [Finset.sum_add_distrib, Finset.sum_ite_eq', Finset.mem_univ, if_true, ← Finset.sum_mul, hu,
-        star_mul, frameMat_star_ofReal, star_star]
+      simp only [Finset.sum_add_distrib, Finset.sum_ite_eq', Finset.mem_univ, if_true, ← Finset.sum_mul, hu]
       linear_combination (star (u j.castSucc)) * key2 +
         (star (u j.castSucc) * (c : ℂ) - star (u j.castSucc) * (m : ℂ)) * ht2
   | cast i =>
     cases j using Fin.lastCases with
     | last =>
-      simp only [frameMat_ll, frameMat_cl, frameMat_lc, frameMat_cc, Matrix.diagonal_apply, hne, hne', if_true, if_false, mul_one,
+      simp only [frameMat_ll, frameMat_cl, frameMat_lc, frameMat_cc, Matrix.diagonal_apply, hne', if_true, if_false, mul_one,
         ← ht, ← hn, ← hc, ← hm]
       have hpt : ∀ x : Fin k, star ((if x = i then (1 : ℂ) else 0) +
           u x.castSucc * star (u i.castSucc) * (c : ℂ)) * u x.castSucc =
@@ -120,7 +124,7 @@ theorem frameMat_unitary (k : ℕ) (u : Fin (k + 1) → ℂ)
       linear_combination (u i.castSucc) * key2 +
         (u i.castSucc * (c : ℂ) - u i.castSucc * (m : ℂ)) * ht2
     | cast j =>
-      simp only [frameMat_ll, frameMat_cl, frameMat_lc, frameMat_cc, Matrix.diagonal_apply, hne, hne', if_true, if_false, mul_one,
+      simp only [frameMat_lc, frameMat_cc, Matrix.diagonal_apply, hne', if_true, if_false, mul_one,
         Fin.castSucc_inj, ← ht, ← hn, ← hc, ← hm]
       have hpt : ∀ x : Fin k, star ((if x = i then (1 : ℂ) else 0) +
           u x.castSucc * star (u i.castSucc) * (c : ℂ)) * ((if x = j then (1 : ℂ) else 0) +

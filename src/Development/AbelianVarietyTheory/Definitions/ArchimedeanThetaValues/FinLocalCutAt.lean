@@ -1,8 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.ArchimedeanThetaValues.IsFramedPointChangedByLetters
 import Formalism.LocalToGlobal.ProjectiveLattices.PtFree
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.Rationality.FinCoreSt
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.Rationality.QuotSt
+import Formalism.LocalToGlobal.ProjectiveLattices.ArchimedeanQuadraticData.ArcLineFunctions.FunDef
+import ReciprocityTheory.SemistableReduction.ComapInclusionIsLocalHom
 
 noncomputable section
 

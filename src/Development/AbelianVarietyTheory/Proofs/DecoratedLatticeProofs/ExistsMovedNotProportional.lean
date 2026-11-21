@@ -1,9 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.SiegelEisenstein.GlobalLocalFactorization
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.VacOfShape
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.CmHostImaginaryGeneratorNeZero
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.BesselThetaContractionExtendByZeroVacuumSmooth
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ThetaConstMul
+import Development.AbelianVarietyTheory.Definitions.LatticeFrames.PlaceLaws
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsEtaTildeUnramified
 
 set_option genSizeOfSpec false
 set_option genInjectivity false

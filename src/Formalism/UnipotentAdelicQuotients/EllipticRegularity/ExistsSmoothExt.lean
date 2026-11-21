@@ -1,6 +1,9 @@
-import Formalism.UnipotentAdelicQuotients.EllipticRegularity.KernDecay
+import BuildAid.Leniency.Open
 import Formalism.UnipotentAdelicQuotients.EllipticRegularity.KernDil
 import Formalism.UnipotentAdelicQuotients.EllipticRegularity.KernDer
+import Formalism.UnipotentAdelicQuotients.EllRegCut
+import Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension
+import Mathlib.Tactic.Polynomial.Basic
 
 namespace ZetaZeros.D.EllReg
 

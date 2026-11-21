@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementM
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Formalism.FourierDecayAlt.M Formalism.FourierDecayAlt Finset
 
@@ -36,7 +39,7 @@ open Mx1
 theorem multiplication_op_hom : Formalism.FourierDecayAlt.M.MulOpHom := by
   intro r f g z
   refine ⟨?_, ?_, ?_, ?_⟩ <;> refine LinearMap.ext fun x => ?_ <;>
-    simp [mulOp, mul_assoc, add_mul, Algebra.smul_def]
+    simp [mulOp, add_mul, Algebra.smul_def]
 
 theorem euler_leibniz : Formalism.FourierDecayAlt.M.EulerLeibniz := by
   intro r v f g
@@ -71,7 +74,7 @@ theorem euler_coordinates : Formalism.FourierDecayAlt.M.EulerCoord := by
       simp only [coord, HahnSeries.coeff_single, HahnSeries.coeff_zero]
       split_ifs with hγ
       · subst hγ
-        simp [Pi.single_apply, hvw]
+        simp [hvw]
       · simp
   · ext γ
     rw [hc]
@@ -106,10 +109,10 @@ theorem function_nonzero : Formalism.FourierDecayAlt.M.FnNonzero := by
     intro h0
     have := congrFun (congrArg ofLex h0) vz
     change ((Pi.single vz (1 : ℤ) + Pi.single vzb 1 : Var r → ℤ) vz) = (0 : Var r → ℤ) vz at this
-    simp [Pi.single_apply, vz_ne (r := r)] at this
+    simp [vz_ne (r := r)] at this
   have hc := congrArg (fun s : Fn r => s.coeff (toLex (Pi.single vz 1) + toLex (Pi.single vzb 1))) h
   simp [gg, coord, HahnSeries.single_mul_single, HahnSeries.algebraMap_apply, HahnSeries.C_apply,
-    HahnSeries.coeff_single, he] at hc
+    he] at hc
 
 theorem model_nontrivial : Formalism.FourierDecayAlt.M.ModelNontrivial := by
   intro P
@@ -174,6 +177,6 @@ theorem level_star : Formalism.FourierDecayAlt.M.LevelStar := by
   · rw [hn, hns]
     exact hS.2.2.2.2.2
   · rw [hT]
-    simp [Complex.star_def, Complex.conj_ofReal]
+    simp [Complex.conj_ofReal]
 
 end Formalism.FourierDecayAlt.P

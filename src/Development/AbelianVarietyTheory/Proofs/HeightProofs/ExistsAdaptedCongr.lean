@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.ThClass
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.FullExists
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.ExistsUnitaryCongruentLattice
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Pj ReciprocityTheory.ChartRestriction.G.Geo.Tor

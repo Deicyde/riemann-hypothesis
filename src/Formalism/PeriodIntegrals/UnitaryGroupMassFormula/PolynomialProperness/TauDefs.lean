@@ -1,4 +1,5 @@
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.PolynomialProperness.UnitriangularInversePolynomialBound
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.FiniteOrderIntersectionInSmooth
 
 open Matrix Formalism.QuantumDeterminants Formalism.FourierDecayAlt Formalism.FourierDecayAlt.C2
 

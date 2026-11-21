@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.ThetaSeriesTies
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.TwistTrivialOnRational
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LevelGroupLatticeCongruence
+import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.AdelicElementLatticeFullAndCompletion
 
 set_option autoImplicit false
 

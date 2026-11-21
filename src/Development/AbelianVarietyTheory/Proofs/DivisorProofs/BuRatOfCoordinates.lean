@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.LocalRingCardinality.DataBu
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.WeightDegreeSizes
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SpanRangeInfKerLeOfBasis
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsRationalOrthogonalProjectionSemilinearStatement

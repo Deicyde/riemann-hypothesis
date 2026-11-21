@@ -1,7 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.FiltLen
 import Formalism.PeriodIntegrals.FiltLenF
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.FiltrationLength.LengthQuotLeOfKerLe
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 namespace PI.FiltrationLength
 

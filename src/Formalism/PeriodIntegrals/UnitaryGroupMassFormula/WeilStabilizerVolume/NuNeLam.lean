@@ -1,9 +1,5 @@
-import Mathlib
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeilStabilizerVolume.NuNeSt
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeilStabilizerVolume.ExStabU
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeilStabilizerVolume.InvInvSt
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeilStabilizerVolume.MeasOrbSt
-import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.WeilQuotMeas
+import BuildAid.Leniency.Open
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeilStabilizerVolume.VolStabFromSWW
 
 noncomputable section
 

@@ -1,8 +1,7 @@
-import Mathlib
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.LocalWhittakerDuality.WhittakerFunctionalEquationAdditive
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GodementJacquetMinusOne
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PhdEqPhk
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Theta.WeilBox
+import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.LocalWhittakerDuality.DampedFunctionalEquationAtPoint
 
 open MeasureTheory Matrix GroundTheory.LocalField GroundTheory.Automorphic Ad3 Ad3.K.GL2LocalData GroundTheory.Heights₂.Theta
 open scoped ValuativeRel

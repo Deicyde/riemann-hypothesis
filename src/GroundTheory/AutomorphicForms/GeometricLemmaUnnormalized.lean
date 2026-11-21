@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.GeometricLemmaGraded
 import GroundTheory.AutomorphicForms.GeometricLemmaCellKernel
 import GroundTheory.AutomorphicForms.GeometricLemmaCellSurjective

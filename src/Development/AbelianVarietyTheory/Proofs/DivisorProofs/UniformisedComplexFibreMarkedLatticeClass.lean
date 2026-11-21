@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.Uniformised
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiagFormTwoSmulAndKerStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilPairingComplexValueUniqueStatement
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.PELU
 open scoped Matrix
@@ -282,7 +282,7 @@ theorem unifAt_cls : ∀ (p : ℕ) [Fact p.Prime] (D : Datum p) (R : Type) [Comm
     obtain ⟨w, hw⟩ := (unifCls_unit_iff e P hker hinj hk _).1 hpow'
     refine ⟨w, LinearMap.ext fun y => ?_⟩
     have h1 := congrArg (fun x => E₁ x y) hw
-    simp only [map_nsmul, LinearMap.smul_apply, ha, smul_eq_mul, nsmul_eq_mul] at h1
+    simp only [map_nsmul, LinearMap.smul_apply, ha, nsmul_eq_mul] at h1
     have hk0 : (k : ℤ) ≠ 0 := by exact_mod_cast hk.ne'
     apply mul_left_cancel₀ hk0
     simp only [LinearMap.smul_apply, nsmul_eq_mul]

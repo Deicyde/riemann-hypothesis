@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Statements.AlgebraStatements.HodgeTateNormComparison
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Statements.GeometryStatements.IsPolLatticePlane
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.PrimRootSubOnePowAssociated
 

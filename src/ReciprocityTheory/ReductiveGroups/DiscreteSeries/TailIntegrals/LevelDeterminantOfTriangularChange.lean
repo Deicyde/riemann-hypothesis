@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TailIntegrals.InvSqrtTwoMulSelf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 open Matrix MeasureTheory
@@ -11,7 +14,7 @@ namespace BL
 
 theorem Iic_zero (n : ℕ) : Finset.Iic (0 : Fin (n + 1)) = {0} := by
   ext a
-  simp [Fin.le_zero_iff]
+  simp
 
 section Lv
 variable {k r' : ℕ}

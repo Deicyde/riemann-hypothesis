@@ -1,8 +1,11 @@
-import Formalism.SharpRestriction.Divisibility.HookProducts.HhOfInputs
-import Formalism.SharpRestriction.GlobalSchurBounds.GlobalLinkOfBranchIdentitiesAndMultiplicity
-import Formalism.SharpRestriction.GlobalSchurBounds.LogXLowerFamilyOfTheorems
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.UnramifiedTrace.HeckeRamifiedZeroAll
 import Formalism.LocalToGlobal.ClassOfRecordOfChoice
+import Formalism.LocalToGlobal.GlobalTheory.CoordinateLengths.SecondBranchAllMembers
+import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.IntegralAtT0Lattice
+import Formalism.SharpRestriction.Divisibility.HookProducts.GaugeFormBoundOfUniformSize
+import Formalism.SharpRestriction.Divisibility.SlopeExcess.HeightBoundOfComponentBounds
 
 noncomputable section
 

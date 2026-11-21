@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.RealCusp
-import GroundTheory.AutomorphicForms.AutomorphicFormSpaces
+import GroundTheory.AutomorphicForms.AutomorphicFormSpaces.Archimedean
+import GroundTheory.AutomorphicForms.GKModules.LieAlgebra
 
 noncomputable section
 

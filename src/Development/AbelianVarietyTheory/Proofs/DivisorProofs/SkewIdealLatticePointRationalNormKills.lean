@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CosetVecEq
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CosetVecMemThetaSpace
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.PtHomInjective
 open scoped Pointwise

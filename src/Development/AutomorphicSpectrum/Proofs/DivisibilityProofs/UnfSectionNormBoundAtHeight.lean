@@ -1,14 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.HasBareNormDisc
-import Development.AutomorphicSpectrum.PublishedTheorems.Geometry₂.GagaSections
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.BlowupProjections.BlowupProjStatement
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.FlatDegree
-import Formalism.LocalToGlobal.ProjectiveLattices.CompHt
-import Development.AbelianVarietyTheory.Definitions.Divisors.HtValOnSubset
 import Development.AbelianVarietyTheory.Definitions.Foundations.NotFlatExistsOfIsEmpty
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.FramePointVectors
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.IsDerivAt0CompLinMap
 import Development.WeilBound.CoreStatements.HomogeneousNonvanishing.LeadMinorSmulOne
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField IsDedekindDomain
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Fl GlobalTheory.CompanionTheory.Ar.Flat GlobalTheory.CompanionTheory.Ar.Br
@@ -70,7 +64,7 @@ theorem exists_gram_det (hσ : GoodEmb c σ) (hU : IsUnf U) {k : U.Comp} (x : (U
         simp
       · rw [Pi.single_eq_of_ne (fun hh => hab (eq_of_heq (Sigma.mk.inj (W.e.symm.injective hh)).2))]
         simp
-    simp only [hf, Matrix.mul_smul, Matrix.smul_mul, Matrix.mul_one, Matrix.smul_apply, Matrix.mul_apply,
+    simp only [hf, Matrix.mul_smul, Matrix.mul_one, Matrix.smul_apply, Matrix.mul_apply,
       Matrix.conjTranspose_apply, mul_ite, ite_mul, mul_zero, zero_mul, Finset.sum_ite_eq, Finset.mem_univ, if_true,
       smul_eq_mul, Finset.mul_sum, hκ]
     refine Finset.sum_congr rfl fun j _ => ?_

@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.GKModules.RightRegular
+import Mathlib.Order.CompletePartialOrder
 
 namespace GroundTheory.Automorphic
 

@@ -1,15 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsThetaMeanSquareNorm
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.ZhangDimensionPushDownGrassmannianHeightBounds
-import GroundTheory.HeightsAndTheta.Heights.KernelsLattice
-import GroundTheory.HeightsAndTheta.Heights.LatticeLemmas.StatementsBundles
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.KernelsMatrix
-import GroundTheory.HeightsAndTheta.Heights.HeightKernels.AssemblyAnalytic
-import GroundTheory.HeightsAndTheta.Heights.FactorialBounds.Assembly
-import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.HasSumPolyDerivMulProdAddMatrix
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsFundamentalDomainMeanNormSqThetaChar
-import Development.AbelianVarietyTheory.Proofs.ToricGeometry.IsUnitOfLagrangian
-import GroundTheory.HeightsAndTheta.Heights.HeightKernels.CoordSiegel
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsThetaHolomorphic
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField MeasureTheory
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi
@@ -24,7 +14,7 @@ private theorem hermForm_cols {g : ℕ} (N P Q : Matrix (Fin g) (Fin g) ℂ) (i 
     hermForm N (P *ᵥ Pi.single i 1) (Q *ᵥ Pi.single j 1) =
       (Pᵀ * N * Q.map (starRingEnd ℂ)) i j := by
   simp only [mulVec_single_one, hermForm]
-  simp [Matrix.mul_apply, dotProduct, mulVec, Finset.sum_mul, Finset.mul_sum, mul_assoc, col_apply]
+  simp [Matrix.mul_apply, dotProduct, mulVec, Finset.sum_mul, Finset.mul_sum, col_apply]
   rw [Finset.sum_comm]
   exact Finset.sum_congr rfl fun _ _ => Finset.sum_congr rfl fun _ _ => by ring
 

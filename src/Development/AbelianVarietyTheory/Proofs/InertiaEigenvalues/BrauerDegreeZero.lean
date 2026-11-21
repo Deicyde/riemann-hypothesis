@@ -1,16 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.BrauerDegreeZero
-import Development.AbelianVarietyTheory.Definitions.CommutativeAlgebra.AbByPOfComm
-import Development.AbelianVarietyTheory.Proofs.CharacterTheory.IsCharacterOverSubfieldOfRepresentation
-import Development.AbelianVarietyTheory.Proofs.CharacterTheory.IsCharacterOverSubfieldRestrictClassFunctionOne
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CharacterTheory.IsCharacterOverSubfieldInductionIrreducible
-import Development.AbelianVarietyTheory.Proofs.CharacterTheory.MemVirtualCharactersIffSubCharacters
 import Development.AbelianVarietyTheory.Proofs.CharacterTheory.IrreducibleCharacterLinearOrInducedAbelianByPrim
-import Development.AbelianVarietyTheory.Proofs.CharacterTheory.VirtualCharactersMulComapConjIndLinear
-import Development.AbelianVarietyTheory.Proofs.CharacterTheory.IndMulClassFunEqIndMulRestrict
 import Development.AbelianVarietyTheory.Proofs.CharacterTheory.OneMemClosureInducedCentralByPrimePower
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IndApplyOne
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.InducedClassFunctionFromSubgroupTransStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.InducedClassFunctionMemInducedDegreeOneCharDiffStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.InducedOneSubIndexMemDegreeOneCharacterDiffStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsLtCommutatorMemOfNeTopStatement
@@ -71,8 +62,8 @@ theorem ind_one_sub_index_mem_degreeOneDiff_nilpotent {G : Type} [Group G] [Fini
         rw [ind_sub, ← t, ← hrel]
         funext g
         have hc1 := ind_const A (((K.subgroupOf A).index : ℕ) : ℂ) g
-        simp only [Pi.sub_apply, Pi.add_apply, Pi.smul_apply, hc1, zsmul_eq_mul]
-        simp only [Pi.mul_apply, Pi.sub_apply, Pi.intCast_apply, Pi.natCast_apply, Int.cast_natCast]
+        simp only [Pi.sub_apply, Pi.add_apply, hc1, zsmul_eq_mul]
+        simp only [Pi.mul_apply, Pi.sub_apply, Pi.natCast_apply, Int.cast_natCast]
         simp only [Subgroup.relIndex]
         push_cast
         ring
@@ -142,8 +133,8 @@ theorem central_case (G : Type) [Group G] [Finite G]
         have key : ind T ψ - (fun _ => ind T ψ 1) = ind T (ψ - fun _ => ψ 1) +
             (n : ℤ) • (ind T (fun _ => (1 : ℂ)) - fun _ => (T.index : ℂ)) := by
           rw [ind_sub]; funext g
-          simp only [Pi.sub_apply, Pi.add_apply, Pi.smul_apply, ind_apply_one, hn, ind_const T (n : ℂ) g,
-            zsmul_eq_mul, Pi.mul_apply, Pi.intCast_apply, Pi.natCast_apply]
+          simp only [Pi.sub_apply, Pi.add_apply, ind_apply_one, hn, ind_const T (n : ℂ) g,
+            zsmul_eq_mul, Pi.mul_apply, Pi.intCast_apply]
           push_cast; ring
         rw [key]; exact add_mem h1 (zsmul_mem h2 _)
   intro f hf hf1

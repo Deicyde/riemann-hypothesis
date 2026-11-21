@@ -1,9 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.ThClass
 import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.ExistsEqSumIndicatorOfRightInvariant
 import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.ProjectiveOfFg
 import Development.AbelianVarietyTheory.Counterexamples.LevelGroupExamples.ZeroNotAdmissibleOfRankPos
 import Development.AbelianVarietyTheory.Counterexamples.JetSurvey.UnimodularStandardLattice
+import Batteries.Data.Nat.Gcd
 
 set_option autoImplicit false
 
@@ -442,8 +444,8 @@ theorem exists_unitary_mod (g g' : Matrix (Fin n) (Fin n) (𝓞 E)) (h : ∀ i j
       have key := Ideal.Quotient.eq_zero_iff_mem.2 (bar_mem_Mb (h i j))
       simp only [Matrix.sub_apply, Matrix.mul_apply, Matrix.of_apply, Matrix.transpose_apply, Matrix.map_apply, Matrix.one_apply,
         map_sub, map_sum, map_mul, map_add, map_one, bar_bar, apply_ite (H.bar), map_zero,
-        apply_ite (Ideal.Quotient.mk l.Mb), e1, e2, sub_self, zero_mul, one_mul, add_zero, zero_add, mul_zero,
-        mul_one, sub_zero] at key ⊢
+        apply_ite (Ideal.Quotient.mk l.Mb), e1, e2, sub_self, zero_mul, one_mul, add_zero, zero_add,
+        sub_zero] at key ⊢
       exact key
     · rw [← Ideal.Quotient.eq_zero_iff_mem]
       have e1 : Ideal.Quotient.mk (Mfr l) (cSep l) = 0 := Ideal.Quotient.eq_zero_iff_mem.2 hc0
@@ -458,9 +460,9 @@ theorem exists_unitary_mod (g g' : Matrix (Fin n) (Fin n) (𝓞 E)) (h : ∀ i j
       rw [Matrix.sub_apply, hsym] at key0
       have key := Ideal.Quotient.eq_zero_iff_mem.2 key0
       simp only [Matrix.sub_apply, Matrix.mul_apply, Matrix.of_apply, Matrix.transpose_apply, Matrix.map_apply, Matrix.one_apply,
-        map_sub, map_sum, map_mul, map_add, map_one, bar_bar, apply_ite (H.bar), map_zero,
-        apply_ite (Ideal.Quotient.mk (Mfr l)), e1, e2, sub_self, zero_mul, one_mul, add_zero, zero_add, mul_zero,
-        mul_one, sub_zero] at key ⊢
+        map_sub, map_sum, map_mul, map_add, map_one, bar_bar, map_zero,
+        apply_ite (Ideal.Quotient.mk (Mfr l)), e1, e2, sub_self, zero_mul, one_mul, add_zero, zero_add,
+        sub_zero] at key ⊢
       simpa [mul_comm] using key
   · show cSep l * H.bar (g i j) + (1 - cSep l) * g' j i - H.bar (g i j) ∈ l.Mb
     have : cSep l * H.bar (g i j) + (1 - cSep l) * g' j i - H.bar (g i j) =

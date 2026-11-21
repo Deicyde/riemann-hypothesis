@@ -1,6 +1,7 @@
-import Formalism.LocalToGlobal.ProjectiveLattices.IsLevMove
-import Formalism.LocalToGlobal.ProjectiveLattices.HeckeStabSet
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.HeckeKer
+import Formalism.LocalToGlobal.ProjectiveLattices.IsCombAt
 
 noncomputable section
 

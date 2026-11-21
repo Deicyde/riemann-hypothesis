@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.CoarseMultiplicity.CthMonomial
+import Formalism.SharpRestriction.GrowthBounds.PolBridge
+import Formalism.SharpRestriction.GrowthBounds.RootWeights.DerivativeValuationBounds
+import Formalism.SharpRestriction.GrowthBounds.RootWeights.IntegralPolyLinearMapClosed
 
 noncomputable section
 

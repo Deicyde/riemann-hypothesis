@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.GL2.GJFEInducedTensor
-import GroundTheory.AutomorphicForms.InductionParabolicLocal
+import GroundTheory.AutomorphicForms.GL2.GJFEInducedInv
 
 noncomputable section
 

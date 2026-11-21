@@ -1,8 +1,8 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.BridgeKType
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.BridgeExpK
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.MeasurePreservingMulRight
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.CFCoreA
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.LaplaceOperators.SpectralGap.VogDrop
+import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.SmoothDefs
 
 noncomputable section
 
@@ -74,7 +74,7 @@ theorem vNormSq_lowK_sub_root_lt {ε : Fin n → Bool} {lam : Fin n → ℝ} (hm
   have hsum : ∑ c, (root a b c * root a b c - 2 * (w c * root a b c)) = 2 - 2 * (w a - w b) := by
     rw [Fintype.sum_eq_add a b hab']
     · rw [hr a, hr b]
-      simp only [if_neg hab', if_neg hab'.symm, eq_self_iff_true, ↓reduceIte]
+      simp only [if_neg hab', if_neg hab'.symm, ↓reduceIte]
       ring
     · intro c hc
       rw [hr c]
@@ -181,8 +181,7 @@ private theorem casGen_inG_entry_of_lt (ε : Fin n → Bool) {a b : Fin n} (h : 
     star (casGen ε (a, b) j i) * (if ε j then (1:ℂ) else -1) +
       (if ε i then (1:ℂ) else -1) * casGen ε (a, b) i j = 0 := by
   have hI : star Complex.I = -Complex.I := Complex.conj_I
-  simp only [casGen, casSg, Matrix.sub_apply, Matrix.add_apply, Matrix.smul_apply, Matrix.single,
-    Matrix.of_apply, smul_eq_mul]
+  simp only [casGen, casSg, Matrix.single]
   split_ifs <;> simp_all
   all_goals (split_ifs <;> simp_all)
   all_goals ring
@@ -208,8 +207,7 @@ private theorem casGen_inG_entry_of_gt (ε : Fin n → Bool) {a b : Fin n} (h : 
     star (casGen ε (a, b) j i) * (if ε j then (1:ℂ) else -1) +
       (if ε i then (1:ℂ) else -1) * casGen ε (a, b) i j = 0 := by
   have hI : star Complex.I = -Complex.I := Complex.conj_I
-  simp only [casGen, casSg, Matrix.sub_apply, Matrix.add_apply, Matrix.smul_apply, Matrix.single,
-    Matrix.of_apply, smul_eq_mul]
+  simp only [casGen, casSg, Matrix.single]
   split_ifs <;> simp_all
   all_goals (split_ifs <;> simp_all)
   all_goals ring

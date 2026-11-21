@@ -1,12 +1,9 @@
-import Mathlib
-import Formalism.LocalRingCardinality.DataCD
-import Formalism.SharpRestriction.GlobalSchurBounds.GeneralLinearActions.GenusMassVolumes
-import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.PerpendicularEmbedding
-import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ContinuousMatrixEntryAbsSum
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.CdScaleIsTrueScale
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.GaugeUnfold
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ContinuousGaussSp
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.IntegrableMonomialMulConjComplexGaussian
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.TotallySplit
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open MeasureTheory Matrix Filter Topology Formalism.BasicNotions Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.IndefiniteRowSideFullHecke.PerpendicularEmbedding GlobalTheory.CompactDualQuot GlobalTheory.GaugeQuot GlobalTheory.Mem.Vol.Scale
 open scoped ENNReal NNReal
@@ -86,7 +83,7 @@ theorem ballVol_succ_sq (P Q : ℕ) (r : ℝ) (hr : 0 < r) :
       Prod.map (Prod.map id fun y : Sp P Q => (√2 : ℝ) • y) id ⁻¹'
       {p | p.1.1 ^ 2 + ∑ i, ‖p.1.2 i‖ ^ 2 + ‖p.2‖ ^ 2 < r ^ 2} := by
     ext p
-    simp [tanSq, norm_smul, mul_pow, Finset.mul_sum, mul_add]
+    simp [tanSq, mul_pow, Finset.mul_sum, mul_add]
   rw [h3, h2, ← mul_assoc, ENNReal.mul_inv_cancel hne hnt, one_mul]
 
 end GlobalTheory.GaugeQuot.BallProd

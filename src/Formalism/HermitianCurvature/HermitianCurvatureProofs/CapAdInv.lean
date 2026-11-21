@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.EHcChange
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.DilationUnipotentWeylMeasure
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.BridgeQminor
 
 open Matrix Finset
 open scoped ContDiff

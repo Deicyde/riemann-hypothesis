@@ -1,7 +1,6 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.DivisorSupportCondition
-import Development.AbelianVarietyTheory.Definitions.Divisors.SecClass
-import Development.EtaleCohomology.TateTwists.AlexanderWhitneyExistence
-import Development.EtaleCohomology.TateTwists.EtaleChainCochainExistsOfEvalData
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.PullHlComp
 
 open CategoryTheory Limits AlgebraicGeometry Opposite CochainComplex CochainComplex.HomComplex GlobalTheory.EtC
 

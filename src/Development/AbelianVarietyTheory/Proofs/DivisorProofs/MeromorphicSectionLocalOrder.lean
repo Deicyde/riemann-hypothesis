@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsMemChart
-import ReciprocityTheory.AnalyticForms.PotentialTheory.IsPotentialPullbackStatement
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PotentialTheory.Partition
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Std.Tactic.BVDecide.Normalize.Prop
 open CategoryTheory AlgebraicGeometry TopologicalSpace Filter Topology
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open ReciprocityTheory.ChartRestriction.G.Out (nonzeroLocus)
@@ -84,7 +84,7 @@ theorem isSNC_of_local_power : ∀ (X : Type) [TopologicalSpace X] [T2Space X]
   set ψ' : OpenPartialHomeomorph X (Fin 1 → ℂ) :=
     (ψ.restrOpen V hVo).transHomeomorph (pa_aff 1 one_ne_zero (ψ x)) with hψ'
   have hsrc : ψ'.source = ψ.source ∩ V := by
-    simp [ψ', OpenPartialHomeomorph.restrOpen_source]
+    simp [ψ']
   have hψ'app : ∀ y, ψ' y = ψ y - ψ x := by
     intro y
     simp [ψ', pa_aff]

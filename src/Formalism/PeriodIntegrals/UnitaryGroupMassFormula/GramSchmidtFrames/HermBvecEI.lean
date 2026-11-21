@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.GramSchmidtFrames.MemXspIff
 
 open MeasureTheory Formalism.REAL Formalism.QuantumDeterminants Formalism.FourierDecayAlt Formalism.FourierDecayAlt.C6
@@ -64,7 +66,7 @@ lemma herm_bvec_eI (v : Fin (2 * r + k + 1) → ℂ) (a : Fin r) :
   unfold herm bvec
   have hs : star (Pi.single (eI k r a) (1 : ℂ) : Fin (2 * r + k + 1) → ℂ) = Pi.single (eI k r a) 1 := by
     ext i
-    by_cases h : i = eI k r a <;> simp [Pi.single_apply, h]
+    by_cases h : i = eI k r a <;> simp [h]
   rw [hs]
   simp [key, Matrix.mulVec, dotProduct, Pi.single_apply]
 

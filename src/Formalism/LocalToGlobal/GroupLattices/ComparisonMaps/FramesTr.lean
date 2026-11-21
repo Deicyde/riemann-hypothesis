@@ -1,5 +1,7 @@
-import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.ValUniqOf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.YvRatOfValRat
+import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.CmpLApply
 
 noncomputable section
 

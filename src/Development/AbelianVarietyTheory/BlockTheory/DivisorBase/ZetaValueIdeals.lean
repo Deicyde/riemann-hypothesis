@@ -1,5 +1,15 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.PairingDivisors.StatementN
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Analysis.Normed.Module.Connected
+import Mathlib.NumberTheory.LSeries.RiemannZeta
+import Mathlib.NumberTheory.NumberField.CMField
+import Mathlib.NumberTheory.NumberField.ClassNumber
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
 
 noncomputable section
 

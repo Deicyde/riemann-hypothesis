@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.StabilizerCovolume.ImportsFurther
 import GroundTheory.HeightsAndTheta.Heights.StabilizerCovolume.PowLeSqrtDetGram
 import GroundTheory.HeightsAndTheta.Heights.StabilizerCovolume.LinearIndependentReal

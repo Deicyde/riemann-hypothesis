@@ -1,11 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.Chebotarev.CycStatement
-import ReciprocityTheory.Chebotarev.CasimirPowerSurjectiveSymmetric
 import ReciprocityTheory.Chebotarev.NoWind
 import ReciprocityTheory.Chebotarev.CycOrth
 import ReciprocityTheory.Chebotarev.CycTail
-import ReciprocityTheory.Chebotarev.ChebyshevLambdaSubPsiBounded
 import ReciprocityTheory.Chebotarev.SummableGfun
-import ReciprocityTheory.Chebotarev.PowerSeriesDiagonalLinear
 
 open NumberField Filter Topology
 

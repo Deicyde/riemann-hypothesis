@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AlgebraicValuesFinite.ClassSame
+import Mathlib.Algebra.AffineMonoid.Basic
 
 noncomputable section
 
@@ -16,7 +19,7 @@ theorem valuation_eq_exp (v : HeightOneSpectrum (𝓞 L)) (k : Lˣ) :
 theorem toNNReal_exp {e : NNReal} (he : e ≠ 0) (n : ℤ) :
     WithZeroMulInt.toNNReal he (WithZero.exp n) = e ^ n := by
   first
-    | (simp [WithZero.exp, WithZeroMulInt.toNNReal_pos_apply he]; done)
+    | (simp [WithZero.exp]; done)
     | (rw [WithZeroMulInt.toNNReal_pos_apply he WithZero.exp_ne_zero]; simp [WithZero.exp]; done)
     | rfl
 

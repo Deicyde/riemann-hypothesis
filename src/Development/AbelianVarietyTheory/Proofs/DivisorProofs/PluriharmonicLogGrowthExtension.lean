@@ -1,7 +1,8 @@
-import Mathlib
-import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.PshPoisson
-import ReciprocityTheory.AnalyticForms.PotentialTheory.PshShiftA
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HarmonicPoissonPuncturedDiscStatement
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Topology.Sheaves.Presheaf
+import ReciprocityTheory.AnalyticForms.MaIntEmpty
 open Filter Topology Set Metric MeasureTheory ReciprocityTheory.AnForm
 open scoped ContDiff
 
@@ -81,8 +82,7 @@ theorem poissonInt_update_eq_of_levi_flat : ∀ (e : ℕ) (S : Finset (Fin e)) (
       exact h1.comp ζ (by fun_prop)
     · filter_upwards [hV.mem_nhds hm] with y hy
       rw [InnerProductSpace.laplacian_eq_iteratedFDeriv_complexPlane]
-      simp only [iteratedFDeriv_two_apply, Pi.zero_apply, Matrix.cons_val_zero, Matrix.cons_val_one,
-        Matrix.head_cons]
+      simp only [iteratedFDeriv_two_apply, Pi.zero_apply, Matrix.cons_val_zero, Matrix.cons_val_one]
       rw [fderiv_fderiv_comp_affine_of_contDiffOn f a L U hUo hf y hy,
         fderiv_fderiv_comp_affine_of_contDiffOn f a L U hUo hf y hy]
       have hl := hlevi (a + L y) hy.1 hy.2 (L 1)

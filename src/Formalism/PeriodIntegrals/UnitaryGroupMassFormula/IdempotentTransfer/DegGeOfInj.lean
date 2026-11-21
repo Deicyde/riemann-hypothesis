@@ -1,5 +1,7 @@
-import Mathlib
-import Formalism.HarderNarasimhan.FinalCor
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.HarderNarasimhan.Statement
+import Formalism.LatticeSlopes.ExistsSaturatedSlopeEqMuMax
 
 noncomputable section
 

@@ -1,4 +1,10 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.FormalDegreeBessel.StatementDS
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Finset
 
@@ -36,7 +42,7 @@ private lemma fdFull_perm {n : ℕ} (lam : Fin n → ℝ) (σ : Equiv.Perm (Fin 
     fdFull (lam ∘ σ) = fdFull lam := by
   unfold fdFull
   exact Fintype.prod_equiv σ _ _ fun a => Fintype.prod_equiv σ _ _ fun b => by
-    simp [Equiv.apply_eq_iff_eq]
+    simp
 
 private lemma fdNum_perm {n : ℕ} (lam : Fin n → ℝ) (σ : Equiv.Perm (Fin n)) :
     fdNum (lam ∘ σ) = fdNum lam := by

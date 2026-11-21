@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.LineSCShortExact
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleChernIntegralPullThirdStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FirstChernFormPropertiesStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SmoothFormsCalculusHolomorphicAtlasStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HolAtlasTopFormIntegralFiniteAdditiveHomogeneousStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralEvalFormModRelationEqStatement
 open CategoryTheory AlgebraicGeometry MvPolynomial MeasureTheory
@@ -183,9 +181,9 @@ theorem gysin : ∀ (k : Type) [CommRing k] (B Y : Scheme.{0}) [IsIntegral B] [I
   have G1 := (G 1).1
   have G0 := (G 0).2
   rw [hs, pow_zero, mul_one] at G0
-  simp only [Finset.range_one, Finset.sum_singleton, pow_zero, Nat.choose_zero_right, mul_one, Nat.cast_one, map_one,
-    Nat.sub_zero, Nat.mul_zero, Nat.zero_sub, Nat.choose_self, one_mul, evalF_one, CharP.cast_eq_zero, zero_add,
-    div_one, MvPolynomial.C_1] at G0
+  simp only [Finset.range_one, Finset.sum_singleton, pow_zero, mul_one, Nat.cast_one, map_one,
+    Nat.zero_sub, Nat.choose_self, one_mul, evalF_one, CharP.cast_eq_zero, zero_add,
+    div_one] at G0
   rw [pow_one] at G1
   set x0 := fld (hY.atlas σ) (c1F hY σ (fam5 π w H flB fl A 0))
   set om := fld (hY.atlas σ) (omF hY σ (h.pull π w) fl)

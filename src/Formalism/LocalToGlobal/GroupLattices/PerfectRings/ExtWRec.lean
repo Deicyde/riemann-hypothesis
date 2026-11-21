@@ -1,4 +1,5 @@
-import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.PerfectRings.ExtWEx
 
 noncomputable section

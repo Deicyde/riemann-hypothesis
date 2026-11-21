@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.GlobalUnitaryForms.FibCon
 
 open UpperTheory.V.Z.Sym UpperTheory.V.Z.Sym.Glob Matrix

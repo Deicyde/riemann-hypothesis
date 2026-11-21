@@ -1,4 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.GL1.CompactFixesLattice.CompactFixesLattice
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 
@@ -51,7 +58,7 @@ theorem exists_basis (F E : Type) [Field F] [NumberField F] [Field E] [NumberFie
     have hxe : algebraMap (𝓞 E) E y = ∑ j, ((NumberField.RingOfIntegers.basis E).repr y j) • β j := by
       conv_lhs => rw [← (NumberField.RingOfIntegers.basis E).sum_repr y]
       rw [map_sum]
-      simp [β, map_zsmul]
+      simp [β]
     rw [hxe]
     simp only [map_sum, map_zsmul, Finsupp.coe_finset_sum, Finset.sum_apply, Finsupp.coe_smul,
       Pi.smul_apply, Finset.mul_sum, mul_smul_comm]

@@ -1,4 +1,6 @@
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GaugeUniqA
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GermFunPf
 
 set_option autoImplicit false
 

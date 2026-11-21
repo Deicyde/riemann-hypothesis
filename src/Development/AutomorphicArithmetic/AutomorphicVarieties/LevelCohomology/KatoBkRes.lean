@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PublishedTheorems.QuotRepMk
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LevelCohomology.KatoResAway
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LevelCohomology.KatoEmbConj
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.AdTransfer
@@ -56,5 +55,5 @@ theorem UpperTheory.V.X.Kato.bkRes :
   rw [map_sub, key, TensorProduct.AlgebraTensorModule.map_tmul, LinearMap.id_apply] at h2
   rw [map_sub, TensorProduct.AlgebraTensorModule.map_tmul, eq_sub_of_add_eq e2, TensorProduct.sub_tmul,
     TensorProduct.add_tmul, h2]
-  simp only [AlgHom.toLinearMap_apply, AlgEquiv.toLinearMap_apply, map_one]
+  simp only [AlgEquiv.toLinearMap_apply, map_one]
   abel

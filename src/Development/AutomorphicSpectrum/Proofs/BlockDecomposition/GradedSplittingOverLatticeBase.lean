@@ -1,6 +1,8 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.SplittingFieldLattices.BasisB
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.CechPairings.Imports
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.SplittingFieldLattices.GrSplit
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.RingTheory.RegularLocalRing.Defs
 set_option backward.isDefEq.respectTransparency false
 open CategoryTheory AlgebraicGeometry TensorProduct GlobalTheory.LogCris DividedPowers CrystallineSemistableComparison CrystallineSemistableComparison.Pb
 
@@ -285,7 +287,7 @@ theorem exists_section (M' : Submodule O M) (c : O) (hc : c ≠ 0)
     simp
   refine ⟨M'.liftQ (LinearMap.id - M'.subtype ∘ₗ ρ) ?_, fun n => ?_⟩
   · intro x hx
-    simp [LinearMap.mem_ker, hker x hx, sub_eq_zero]
+    simp [LinearMap.mem_ker, hker x hx]
   · obtain ⟨x, rfl⟩ := M'.mkQ_surjective n
     have h4 : M'.mkQ ((ρ x : M') : M) = 0 := (Submodule.Quotient.mk_eq_zero _).2 (ρ x).2
     simp only [Submodule.mkQ_apply, Submodule.liftQ_apply, LinearMap.sub_apply, LinearMap.id_apply,

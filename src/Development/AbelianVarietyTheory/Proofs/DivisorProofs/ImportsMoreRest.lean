@@ -1,4 +1,37 @@
-import Mathlib
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
 
 namespace GlobalTheory.AbelianSumIdentityFourth
 
@@ -17,13 +50,13 @@ theorem main : ∀ {A : Type} [inst : CommRing A] {n q : ℕ} (X Y : Matrix (Fin
   have hDa : Matrix.diagonal a + Matrix.diagonal a' + Matrix.diagonal a * Matrix.diagonal a' = 0 := by
     ext i j
     by_cases hij : i = j
-    · subst hij; simp [Matrix.diagonal_apply, ha i]
-    · simp [Matrix.diagonal_apply, hij]
+    · subst hij; simp [ha i]
+    · simp [hij]
   have hDb : Matrix.diagonal b + Matrix.diagonal b' + Matrix.diagonal b * Matrix.diagonal b' = 0 := by
     ext i j
     by_cases hij : i = j
-    · subst hij; simp [Matrix.diagonal_apply, hb i]
-    · simp [Matrix.diagonal_apply, hij]
+    · subst hij; simp [hb i]
+    · simp [hij]
   have kx : X * (Matrix.diagonal a * RY) + X * (Matrix.diagonal a' * RY)
       + X * (Matrix.diagonal a * (Matrix.diagonal a' * RY)) = 0 := by
     have := congrArg (fun M => X * (M * RY)) hDa
@@ -37,7 +70,7 @@ theorem main : ∀ {A : Type} [inst : CommRing A] {n q : ℕ} (X Y : Matrix (Fin
         + (Y * (Matrix.diagonal b * RX) + Y * (Matrix.diagonal b' * RX)
           + Y * (Matrix.diagonal b * (Matrix.diagonal b' * RX))) := by
         simp only [Matrix.add_mul, Matrix.mul_add, Matrix.mul_assoc, Matrix.mul_one, Matrix.one_mul,
-          e1, e2, e3, e4, Matrix.zero_mul, Matrix.mul_zero, add_zero]
+          e1, e2, e3, e4, Matrix.mul_zero, add_zero]
         abel
     _ = 1 := by rw [kx, ky, add_zero, add_zero]
 

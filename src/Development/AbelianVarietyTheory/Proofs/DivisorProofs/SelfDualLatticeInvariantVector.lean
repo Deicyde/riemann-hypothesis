@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ActFromBlocks
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SelfDualLocalSubgroupFirstProjEqAnnihilator
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.AdditiveCharConductorExists
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 open scoped Matrix GlobalTheory.VacAny
 open NumberField IsDedekindDomain MeasureTheory Filter Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.RatWeilOp
 
@@ -73,7 +73,7 @@ theorem exists_pair_of_annihilator_any : ∀ (F : Type) [Field F] [NumberField F
       have := h _ hl'
       rw [hψ₀] at this
       convert this using 2
-      simp only [mul_sub, dotProduct_smul, smul_eq_mul, smul_dotProduct]
+      simp only [mul_sub, dotProduct_smul, smul_eq_mul]
       rw [← mul_assoc, mul_inv_cancel₀ ha0, one_mul]
 
   obtain ⟨c', hc', hbd₀⟩ : ∃ c' : Fv F v, c' ≠ 0 ∧ ∀ l ∈ Λ₀, ∀ i,

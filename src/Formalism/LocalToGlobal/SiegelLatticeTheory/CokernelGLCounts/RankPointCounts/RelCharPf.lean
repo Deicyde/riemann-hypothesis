@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.FormTransp
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.RCocompactPfMain
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.RCocompactPfApproxFinal
@@ -240,7 +241,7 @@ theorem lamPat2_holds : LamPat2 := by
       · have : ¬ b.1 < a.1 := fun h => hk ⟨b, h, rfl⟩
         simp only [lvk, Sum.elim_inl] at hl ⊢; omega
       · simp only [lvk, Sum.elim_inl, Sum.elim_inr] at hl ⊢; have := a.2; omega
-      · simp only [lvk, Sum.elim_inl, Sum.elim_inr] at hl ⊢; have := a.2; have := b.2; omega
+      · simp only [lvk, Sum.elim_inr] at hl ⊢; have := a.2; have := b.2; omega
   have e : (Bv X v * A * Bv' X v) *ᵥ nxt (fun b => rv X.B.I v (X.eR b)) (rv X.B.I v (X.zR w)) a =
       Bv X v *ᵥ (A *ᵥ (Bv' X v *ᵥ nxt (fun b => rv X.B.I v (X.eR b)) (rv X.B.I v (X.zR w)) a)) := by
     simp only [Matrix.mulVec_mulVec, Matrix.mul_assoc]

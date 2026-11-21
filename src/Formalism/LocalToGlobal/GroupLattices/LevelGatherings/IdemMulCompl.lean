@@ -1,4 +1,6 @@
-import Formalism.LocalToGlobal.GroupLattices.LevelGatherings.FiniteClassSetOfLe
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.GroupLattices.LevelGatherings.CompletionIntegersIff
 
 noncomputable section
 

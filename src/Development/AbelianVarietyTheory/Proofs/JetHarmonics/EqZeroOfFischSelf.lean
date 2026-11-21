@@ -1,6 +1,10 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.RowDeg
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.InvariantOperatorValueTriangularChange
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Rat.Star
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 set_option autoImplicit false
 
@@ -51,7 +55,7 @@ theorem mem_harmK_iff (cc : T → T) (isX : T → Prop) (P : MvPolynomial (Lette
     P ∈ harmK r n k cc isX (fun _ => 1) ↔ ∀ τ, isX τ → ∀ (i : Fin (r τ)) (i' : Fin (r (cc τ))),
       ∑ b : Fin n, pderiv (⟨τ, i, b⟩ : Letter T r n) (pderiv (⟨cc τ, i', b⟩ : Letter T r n) P) = 0 := by
   simp only [harmK, Submodule.mem_iInf, LinearMap.mem_ker, lap,
-    LinearMap.sum_apply, LinearMap.smul_apply, Matrix.one_apply, ite_smul, one_smul, zero_smul,
+    LinearMap.sum_apply, Matrix.one_apply, ite_smul, one_smul, zero_smul,
     Finset.sum_ite_eq, Finset.mem_univ, if_true]
   rfl
 
@@ -235,7 +239,7 @@ theorem RowStable.rowShift_mem {U : Submodule k (MvPolynomial (Letter T r n) k)}
       · subst hj
         simp [apply_ite, ite_mul]
       · simp [apply_ite, ite_mul, hj, Ne.symm hj]
-    · simp [h, Function.update_of_ne h, Matrix.one_apply, apply_ite, ite_mul]
+    · simp [h, Matrix.one_apply, apply_ite, ite_mul]
   rw [e]
   refine hU _ (fun σ' => ?_) P hP
   by_cases h : σ' = σ

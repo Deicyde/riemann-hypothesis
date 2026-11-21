@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MeasureTranslateShellLeDivModulus
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.LocallyCompactSpaceAxis
 open MeasureTheory Filter Topology GlobalTheory.ResLine
 open scoped ENNReal
 set_option maxHeartbeats 1000000 in

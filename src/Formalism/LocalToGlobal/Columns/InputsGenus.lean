@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.LocalToGlobal.Columns.Inputs
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.UnimodGenus
 import Formalism.LocalToGlobal.GenusGluing.GenusApproximation.FinalW
 

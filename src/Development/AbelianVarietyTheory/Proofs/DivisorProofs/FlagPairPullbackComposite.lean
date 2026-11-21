@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.GlobalHeightBoundIffAtGoodPrimes
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.ToIThCapDegOfAddNsmulDivP
 open CategoryTheory Limits AlgebraicGeometry IsLocalRing MvPolynomial
 open ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.BasicNotions Formalism.MainNotions Formalism.BasicNotions.DV Formalism.DegreeFormula Formalism.MainNotions.LatticeTransfer Formalism.MainNotions.WeightThresholdDefs
 open GlobalTheory GlobalTheory.QCoh GlobalTheory.CechPic GlobalTheory.Vert GlobalTheory.ShFam GlobalTheory.ShFam.Pad GlobalTheory.Mean4O GlobalTheory.MixedLocalChains
@@ -82,7 +82,7 @@ theorem theta (M : B.X.Modules) :
   rw [← cancel_mono ((compIso (genMap hc) B.gen.ι _ (genMap_comp_ι hc)).hom.app M)]
   simp only [Category.assoc, Iso.inv_hom_id_app, Category.comp_id]
   rw [A3]
-  simp only [← Functor.map_comp_assoc, Category.assoc, Iso.inv_hom_id_app, Category.comp_id]
+  simp only [← Functor.map_comp_assoc, Iso.inv_hom_id_app, Category.comp_id]
   rw [← A2, Iso.inv_hom_id_app_assoc, A1]
 
 include hfc in

@@ -1,4 +1,4 @@
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ExistsIsHodgeFrameIff
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EigenMetricOnSetStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HodgeSmoothConjStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EigenframeGramNearPointStatement

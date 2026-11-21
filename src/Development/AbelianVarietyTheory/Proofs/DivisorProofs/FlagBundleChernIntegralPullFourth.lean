@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.LineSCShortExact
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleHermitianLinePullbackFormStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleHermitianLineIntegralFormulaStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleHermitianLineDegreeIdentityStatement

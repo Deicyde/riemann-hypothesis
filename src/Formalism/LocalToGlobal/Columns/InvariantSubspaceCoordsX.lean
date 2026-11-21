@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.RowFormsLemmas
-import Formalism.LocalToGlobal.Divisibility.ProjLemmas
 
 open NumberField IsDedekindDomain Module
 

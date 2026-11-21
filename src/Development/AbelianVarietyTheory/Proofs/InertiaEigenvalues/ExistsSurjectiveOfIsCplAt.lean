@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.ProjectionSurjective
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsUniqueAlgEquivOfCompatibleQuotient
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CompletionUniqueUpToIsoStatement
 open IsLocalRing GlobalTheory.Pat

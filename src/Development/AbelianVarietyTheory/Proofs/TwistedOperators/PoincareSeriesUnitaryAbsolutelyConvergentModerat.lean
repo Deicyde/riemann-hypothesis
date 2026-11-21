@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.DepthPays
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsModGrowthExpLeNormInfPow
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.HeckeCharInfinityEqCoeffMulHalfNormPow
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.UnitaryAdelicHeightCosetLeNormInfPow
 import Formalism.LocalToGlobal.Columns.TiedTilA
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SumProductWeightsLeOfSeparatedGeometricMeanStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsCommonDenominatorSelfDualLevelStatement
@@ -68,7 +66,7 @@ theorem one_le_prod_tauE (D : D7) {y : D.host.E} (hy : y ≠ 0) (hi : IsIntegral
 theorem exists_rat (V : HSp D) (γ : GQ V) :
     ∃ δ : GL (Fin V.rank) D.host.E, Formalism.UG.bc (inclR (AF D.host.F)) δ = matHom V (γ : GA D V) := by
   have h1 := γ.2
-  simp only [GQ, HFinIn, HFin, Subgroup.mem_subgroupOf, Subgroup.mem_map] at h1
+  simp only [GQ, HFinIn, HFin] at h1
   obtain ⟨δ, -, hδ⟩ := h1
   exact ⟨δ, hδ⟩
 

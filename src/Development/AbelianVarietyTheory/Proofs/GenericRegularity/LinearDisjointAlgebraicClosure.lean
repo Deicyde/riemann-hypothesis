@@ -1,10 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.PetersonNormSubspace
-import Formalism.LocalToGlobal.ProjectiveLattices.CompOrd
-import Formalism.LocalToGlobal.ProjectiveLattices.CompHt
-import Formalism.LocalToGlobal.ProjectiveLattices.FreeBridge
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.ExistsOpenSameModel
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.FiniteImageOfLocallyConstantOnHolomorphicFamilie
 import Development.AbelianVarietyTheory.Proofs.ThetaLawProofs.ExistsFiniteExtGeomIntegralLocalization
 import Development.AbelianVarietyTheory.Proofs.GenericRegularity.MemRangeOfIsAlgebraicRatFun
 

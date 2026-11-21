@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.FlagExtensionRegularity
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.HermitianSumFrames
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.TraceEqSumPlaces
@@ -210,7 +211,7 @@ theorem form_regular_of_realization (hF1 : NRealize) (u u' : D.what₂.Word) (F0
   rw [hpis, hpis'] at hEq
   have hψu : X.psiInfU u s = Formalism.L2.SG.PairVal.psiInf X.B.g (Formalism.L2.SG.PairVal.sgLo L) := by
     refine psi_of_frame X u s P hsP _ fun v => ?_
-    simp only [P, ψ, Matrix.map_apply, star_star, RingHom.coe_comp, Function.comp_apply, RingEquiv.coe_toRingHom,
+    simp only [P, ψ, Matrix.map_apply, star_star, RingHom.coe_comp, Function.comp_apply,
       sgLo_eq, map_sum, star_sum, ← Finset.sum_add_distrib]
     exact Finset.sum_congr rfl fun a _ => add_comm _ _
   have hψu' : X.psiInfU u' s' = Formalism.L2.SG.PairVal.psiInf X.B.g (-Formalism.L2.SG.PairVal.sgUp U) := by
@@ -219,7 +220,7 @@ theorem form_regular_of_realization (hF1 : NRealize) (u u' : D.what₂.Word) (F0
       intro a
       simp only [P', Matrix.transpose_apply, sgn, Matrix.mul_diagonal, Matrix.diagonal_mul, Matrix.map_apply]
       linear_combination (ψ v (U a.castSucc a.succ)) * sgn_adj a
-    simp only [h1, ψ, RingHom.coe_comp, Function.comp_apply, RingEquiv.coe_toRingHom, sgUp_eq, map_neg, map_sum,
+    simp only [h1, ψ, RingHom.coe_comp, Function.comp_apply, sgUp_eq, map_neg, map_sum,
       star_neg, star_sum, Finset.sum_add_distrib, Finset.sum_neg_distrib]
     rfl
   have hgS : X.B.g = gS D := X.g_eq

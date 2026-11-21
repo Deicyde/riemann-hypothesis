@@ -1,8 +1,8 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StatementsCurveVertPointLengthSteps
-import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.CurveCountObjects
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PSmallSectionsNonzero
 import GroundTheory.HeightsAndTheta.Heights.Intersections.AvoidRing
+import GroundTheory.HeightsAndTheta.Heights.HeightKernels.StatementsVertRIndexSteps
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.Targets

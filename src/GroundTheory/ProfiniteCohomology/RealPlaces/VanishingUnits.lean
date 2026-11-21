@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.RealPlaces.VanishingUnitsDefs
+import GroundTheory.ProfiniteCohomology.RealPlaces.GSDefs
+import GroundTheory.ProfiniteCohomology.RestrictedRamification.EqZeroOfPowNsmulCohomologySUnitsOfOdd
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

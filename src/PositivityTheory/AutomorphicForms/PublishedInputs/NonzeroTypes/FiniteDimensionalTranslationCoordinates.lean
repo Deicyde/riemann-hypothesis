@@ -1,7 +1,8 @@
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.NonzeroTypes.KIface
 import PositivityTheory.AutomorphicForms.PublishedInputs.NonzeroTypes.CIface
 import PositivityTheory.AutomorphicForms.PublishedInputs.NonzeroTypes.ScalarOnInertiaProp
-import PositivityTheory.AutomorphicForms.PublishedInputs.NonzeroTypes.TensorProductVectors
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.MkMemAdmissibleAtIffCocycle
 
 noncomputable section
 

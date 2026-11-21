@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.EllipticCurveLevels.HenselianLocalRingOfIsAdicComplete
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.SmoothNearbyCycles
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.IsSepClosedResidueFieldPowerSeriesComplex
 
 noncomputable section
 

@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.NefFibOfIsNef
 open MvPolynomial GlobalTheory.ArInt
 
@@ -90,7 +90,7 @@ theorem GlobalTheory.Div.polar_prod_eq_zero (D : ℕ) (Ψ : MvPolynomial (Fin D)
       funext i
       by_cases hi : i = j
       · subst hi; simp [e, hj]
-      · simp [e, hi, Function.update_of_ne hi]
+      · simp [e, hi]
     rw [← hlin (insert j S), ← hlin S, h, hu]
   have hP := congrArg Ψ (GlobalTheory.PolarFlat.polar D)
   rw [map_sum] at hP

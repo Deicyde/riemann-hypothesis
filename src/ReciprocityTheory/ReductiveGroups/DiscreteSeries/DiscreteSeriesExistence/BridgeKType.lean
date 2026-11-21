@@ -1,6 +1,7 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.Bridge
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.BridgeWt
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.MeasurePreservingMulRight
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DefsRep
 
 noncomputable section
 
@@ -178,7 +179,7 @@ private lemma actM_diagonal_I_single {M : Type*} [AddCommGroup M] [Module ℂ M]
   rw [actM_diagonal, Finset.sum_eq_single a]
   · simp
   · intro b _ hb
-    simp [Pi.single_apply, hb]
+    simp [hb]
   · intro h
     exact absurd (Finset.mem_univ a) h
 

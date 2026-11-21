@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.RealSeparation.NotRootUnity
+import Mathlib.AlgebraicTopology.FundamentalGroupoid.SimplyConnected
 
 noncomputable section
 

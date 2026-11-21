@@ -1,11 +1,12 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FibRepApply
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FiniteLengthCoinvariantsExactStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FiniteTwistedRankQuotientStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.OmegaEquivInducedFibreStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CoinvariantsFiniteOfSmoothLeviStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FibreRepresentationSmoothStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FiniteLengthCoinvariantsSwapStatement
+import Mathlib.Algebra.Order.PUnit
 
 noncomputable section
 

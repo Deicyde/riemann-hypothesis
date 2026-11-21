@@ -1,21 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockFirstActionMatrixUnitEq
-import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.Sl2NonnegWeightOfHighestWeightVector
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ZRYRCover
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.LengthPosOfPosDef
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.AdjFormula
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.ParamsEx
-import Formalism.LocalToGlobal.IndefiniteReal.LinksStage
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsNormLeHeightPow
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.HoweUnram
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.GaussianBinomialClosedForm
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.SqNormIntegralFundamentalDomainEqL2NormSq
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ActOfMemGfC
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.RaisingLoweringOperators
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.TranslateMemCoefLatFn
-import Development.AbelianVarietyTheory.Definitions.Foundations.ForallEventuallyFinLocIff
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.RealLowestKTypeCoeffSquareIntegrable
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsKHwMap
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUniqueJointTop
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix
 open Formalism.L2.Theta Formalism.L2.DIV Formalism.L2.Indef
 open Formalism.IndefR.Lev Formalism.IndefR.Mult Formalism.IndefR.Datum Formalism.IndefR.Cx Formalism.IndefR.Links
@@ -55,9 +42,9 @@ theorem kop_apply (w : GlobalTheory.ExportSeries.Weight D n) (τ : D.what₂.Tau
       congr 1
       ring
     · simp
-  · intro k _ hk; simp [Matrix.single_apply, Ne.symm hk]
+  · intro k _ hk; simp [Ne.symm hk]
   · simp
-  · intro k _ hk; simp [Matrix.single_apply, Ne.symm hk]
+  · intro k _ hk; simp [Ne.symm hk]
   · simp
 
 theorem sop_apply (w : GlobalTheory.ExportSeries.Weight D n) (τ : D.what₂.Tau) (a b : Fin n) (P : PolF D m n) :
@@ -76,9 +63,9 @@ theorem sop_apply (w : GlobalTheory.ExportSeries.Weight D n) (τ : D.what₂.Tau
       congr 1
       ring
     · simp
-  · intro k _ hk; simp [Matrix.single_apply, Ne.symm hk]
+  · intro k _ hk; simp [Ne.symm hk]
   · simp
-  · intro k _ hk; simp [Matrix.single_apply, Ne.symm hk]
+  · intro k _ hk; simp [Ne.symm hk]
   · simp
 
 end GlobalTheory.JointDict
@@ -149,7 +136,7 @@ theorem sop_eq (w : GlobalTheory.ExportSeries.Weight D n) (τ : D.what₂.Tau) (
   split_ifs with h
   · simp only [Finset.sum_const, Finset.card_univ, Fintype.card_fin, ← Nat.cast_smul_eq_nsmul ℂ, sub_smul]
     abel
-  · simp only [h, false_and, if_false, Finset.sum_const_zero, sub_zero, add_zero]
+  · simp only [Finset.sum_const_zero, sub_zero, add_zero]
     abel
 end GlobalTheory.JointDict
 

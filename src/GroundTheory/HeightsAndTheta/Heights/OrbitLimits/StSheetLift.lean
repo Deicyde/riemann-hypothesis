@@ -1,6 +1,5 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterSheet
-import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StPtsGenericCount
+import BuildAid.Leniency.Open
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.IsIntersectionFamily
 set_option maxSynthPendingDepth 1
 
 noncomputable section

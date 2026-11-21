@@ -1,8 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.GL2.GodementSectionUnramified
 import GroundTheory.AutomorphicForms.GL2.GodementSectionLocal
-import GroundTheory.GlobalFields.KummerTheory.LocalIndexAtPlace
 import GroundTheory.AutomorphicForms.GL2.FiniteIdeleDecomp
+import GroundTheory.AutomorphicForms.GL2.GodementSectionSplit
+import GroundTheory.GlobalFields.TateThesis.EulerFactorsFinite
 
 open NumberField IsDedekindDomain IsDedekindDomain.HeightOneSpectrum MeasureTheory Matrix Filter
   Topology

@@ -1,9 +1,11 @@
-import Formalism.SharpRestriction.CuspSpanNormBounds.BruhatCellsKronecker.IdLiftDef
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.BruhatCellsKronecker.LadjFrame
 import Formalism.SharpRestriction.CuspSpanNormBounds.BruhatCellsKronecker.LTheta
 import Formalism.SharpRestriction.CuspSpanNormBounds.BruhatCellsKronecker.LretrCancel
 import Formalism.SharpRestriction.CuspSpanNormBounds.BruhatCellsKronecker.LisoSmulMem
 import Formalism.SharpRestriction.CuspSpanNormBounds.BruhatCellsKronecker.LFrame
+import Formalism.SharpRestriction.CuspSpanNormBounds.BruhatCellsKronecker.UnitriangularFrameLift
 
 noncomputable section
 

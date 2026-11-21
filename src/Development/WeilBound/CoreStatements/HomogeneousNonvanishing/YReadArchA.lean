@@ -1,12 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.RootOriginFrameLocalBound
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.FlagEqualChangeLowerTriangularStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.RootOriginFrameSectionBound
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HodgeCptFlagXdeg
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.SpecializesOfUnits
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.HodgeCompactificationInteriorPoint
 import Development.AutomorphicSpectrum.Definitions.MetricPeriods.FiniteEtaleSurjectiveOfPullback
-import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.BcExAll
+import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ContDiffUncentre
+import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsLieModel
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.BCRing
 open NumberField IsDedekindDomain MeasureTheory Filter Topology
 open Formalism.L2.Pj ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.FD ReciprocityTheory.ChartRestriction.G.AR.Up ReciprocityTheory.ChartRestriction.G.AR.Inst Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.L2.Theta
 open GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Rec
@@ -134,7 +134,7 @@ theorem interior_of {S : Finset ℕ} {Ω : Type} [Field Ω] {K : Type} [Fintype 
       have h2 : (v ≫ Y.jQ ≫ Limits.pullback.fst Y.s (spMap β))
           (IsLocalRing.closedPoint ℂ) = (z ≫ 𝔐.f) (IsLocalRing.closedPoint ℂ) := by
         rw [show v ≫ Y.jQ ≫ Limits.pullback.fst Y.s (spMap β) = z ≫ 𝔐.f from hv]
-      simp only [Scheme.Hom.comp_apply] at h2
+      simp only at h2
       exact h2
     have hab : 𝔐.f (GlobalTheory.CompanionTheory.Ar.centre z) ∈ abLocus Y.t.G := e ▸ hmem
     exact (abLocus_pullback abLocusOne Y.t.semi 𝔐.m.cart.1 (GlobalTheory.CompanionTheory.Ar.centre z)).1 hab

@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.CayleyCosetSums.DifferentiableAtFirstCayleyBlock
+import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.CayleyCosetSums.ConjImaginaryPartFixed
 
 noncomputable section
 
@@ -45,7 +48,7 @@ theorem fderiv_F0E_low (m : ℕ) (e : ℤ) (x : M2 n) (h0 : x.det ≠ 0) (h : (u
 theorem low_blocks (R : Matrix (Fin n) (Fin n) ℂ) :
     lowQ R = fromBlocks ((-1 / 2 : ℂ) • R) ((Complex.I / 2) • R) ((Complex.I / 2) • R) ((1 / 2 : ℂ) • R) := by
   rw [lowQ_eq, Cm, Cmi, fromBlocks_multiply, fromBlocks_multiply]
-  congr 1 <;> ext i j <;> simp [Matrix.smul_apply, Matrix.mul_apply, Matrix.one_apply] <;> ring_nf <;>
+  congr 1 <;> ext i j <;> simp [Matrix.smul_apply] <;> ring_nf <;>
     simp [Complex.I_sq] <;> ring
 
 def raiseR (S : Matrix (Fin n) (Fin n) ℂ) : M2 n := mX 1 0 S 1 - 1
@@ -66,7 +69,7 @@ theorem raise_eq (S : Matrix (Fin n) (Fin n) ℂ) : raiseR S = Cm n * fromBlocks
 theorem raise_blocks (S : Matrix (Fin n) (Fin n) ℂ) :
     raiseR S = fromBlocks ((-1 / 2 : ℂ) • S) ((-Complex.I / 2) • S) ((-Complex.I / 2) • S) ((1 / 2 : ℂ) • S) := by
   rw [raise_eq, Cm, Cmi, fromBlocks_multiply, fromBlocks_multiply]
-  congr 1 <;> ext i j <;> simp [Matrix.smul_apply, Matrix.mul_apply, Matrix.one_apply] <;> ring_nf <;>
+  congr 1 <;> ext i j <;> simp [Matrix.smul_apply] <;> ring_nf <;>
     simp [Complex.I_sq] <;> ring
 
 theorem sig_fromBlocks (A B C D : Matrix (Fin n) (Fin n) ℂ) :

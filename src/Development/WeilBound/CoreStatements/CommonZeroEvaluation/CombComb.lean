@@ -1,9 +1,12 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.VAtVNeBot
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.LiePush
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.OneArc
 import Development.AbelianVarietyTheory.Proofs.GenericRegularity.LieCombBaseChange
 import Development.AbelianVarietyTheory.Proofs.GenericRegularity.IsEigenvectorIffLieBasisCoordinates
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.TotallySplit
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.SabPull
 
 noncomputable section
 
@@ -43,7 +46,7 @@ theorem alg_fst : spMap (TrivSqZeroExt.fstHom R R R).toRingHom ≫ spMap (algebr
   rw [← spMap_comp]
   have : (TrivSqZeroExt.fstHom R R R).toRingHom.comp (algebraMap R (DualNumber R)) = RingHom.id R := by
     ext r
-    simp [TrivSqZeroExt.algebraMap_eq_inl]
+    simp
   rw [this]
   exact Spec.map_id _
 

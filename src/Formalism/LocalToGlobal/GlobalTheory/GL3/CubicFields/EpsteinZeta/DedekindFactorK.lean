@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.GL3.CubicFields.DedekindFactorization.OmegaPoly
+import Mathlib.NumberTheory.Harmonic.EulerMascheroni
+import Mathlib.NumberTheory.LSeries.DirichletContinuation
+import Mathlib.NumberTheory.ModularForms.DedekindEta
+import Mathlib.NumberTheory.NumberField.DedekindZeta
 
 noncomputable section
 

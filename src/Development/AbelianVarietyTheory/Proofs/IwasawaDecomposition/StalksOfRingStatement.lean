@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.InRealConeSelf
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.StalkCharZeroEssFiniteType
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.GenericFiberNormalReduced
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsProperToroidalModelStructureMap
+import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ThetaLevelObjectDescendsFgSubfield
 open AlgebraicGeometry CategoryTheory Limits NumberField IsLocalRing TopologicalSpace
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.AnForm.R Formalism.L2.Pj
 open GlobalTheory GlobalTheory.Toroidal GlobalTheory.Models GlobalTheory.LN GlobalTheory.ShFam GlobalTheory.LocM GlobalTheory.PolFan GlobalTheory.TorRef
@@ -43,7 +42,7 @@ theorem chart : ∀ (X G : Scheme.{0}) (U : X.Opens) (hU : IsAffineOpen U) (W : 
   let ℓ := pullback.lift _ _ hc
   have hℓ : ℓ ≫ m = pullback.fst _ _ := by
     apply pullback.hom_ext
-    · simp only [Category.assoc, ℓ, m, pullback.map, pullback.lift_fst, pullback.lift_fst_assoc, Category.comp_id]
+    · simp only [Category.assoc, ℓ, m, pullback.map, pullback.lift_fst, Category.comp_id]
     · simp only [Category.assoc, ℓ, m, pullback.map, pullback.lift_snd, pullback.lift_snd_assoc]
       exact e2.symm
   refine ⟨(pullbackSpecIso Γ(X, U) R Γ(G, W)).hom (ℓ q), ?_⟩

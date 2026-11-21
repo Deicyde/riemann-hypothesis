@@ -1,8 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.AutomorphyLifting.UnitaryGaloisFamilies.IrrCaseT
-import Development.AutomorphicArithmetic.AutomorphicVarieties.BuildingsResidueChars.TotalFrobeniusCompatibility
 import Development.AutomorphicArithmetic.Foundations.LocalLanglands.LocalCentralUnits.RecTExists
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.SphericalRepGLExistsSatakeParameters
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.HasSatakeGLOfHasSatakeParametersPrincipalSeries
+import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.HasSatakeGLOfHasSatakeParametersPrincipalSeriesStatement
+import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.AutomorphyLifting.AbsCentral
 
 noncomputable section
 
@@ -71,7 +72,7 @@ private theorem rec_tw_diag {rc : IrrGL (w.adicCompletion E) → WD h} (H : IsRe
     rec_eq_diagV H (σ := ParLaws.toRep σ) hα
   rw [e, WD.lpTw_mk]
   refine WD.sound ⟨.refl _ _, fun g v => funext fun i => ?_, fun v => rfl⟩
-  simp [mul_zpow, mul_comm, mul_left_comm, mul_assoc]
+  simp [mul_zpow, mul_comm, mul_left_comm]
 
 private theorem val_inv_eq (n d k : ℕ) (a : ℂˣ) :
     (((a⁻¹ * qPow w ((ex n d k : ℝ) / 2) : ℂˣ) : ℂ)) ^ (-1 : ℤ) =

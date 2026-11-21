@@ -1,6 +1,4 @@
-import Mathlib
-import Formalism.SharpRestriction.Divisibility.SchurIrreducible
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsFockIPOfFockData
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ContinuousOfDense
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.AbsSubOfDisjoint
 

@@ -1,8 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.UnivChar
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.CmQuadraticFormEqAlternatingForm
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.TwistDataAgreeAcrossCoefficients
 import Formalism.LocalToGlobal.IndefiniteReal.DoubleCosetOperators.CoreBC
+import Formalism.SharpRestriction.Divisibility.LiftErrorLocal
 
 noncomputable section
 
@@ -29,7 +31,7 @@ def tensMap (r : R →+* R') (κ : K →+ K') (φ : M →+ M') (hκ : ∀ c a, �
   TensorProduct.liftAddHom
     { toFun := fun a => (TensorProduct.mk R' K' M' (κ a)).toAddMonoidHom.comp φ
       map_zero' := by ext; simp
-      map_add' := fun _ _ => by ext; simp [TensorProduct.add_tmul] }
+      map_add' := fun _ _ => by ext; simp }
     fun c a x => by
       change κ (c • a) ⊗ₜ[R'] φ x = κ a ⊗ₜ[R'] φ (c • x)
       rw [hκ, hφ, TensorProduct.smul_tmul]

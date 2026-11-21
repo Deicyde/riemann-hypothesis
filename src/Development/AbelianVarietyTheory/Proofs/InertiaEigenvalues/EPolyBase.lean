@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.JSmul
-import Formalism.LocalRingCardinality.AdicCompletionLocal.LocTied
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.AevalApplyComm
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.Saturated
 
 noncomputable section
 namespace GlobalTheory.BaseLatticeE
@@ -139,7 +140,7 @@ theorem red_smul (hq : Onto T A q) (c : O) (y : ↥(W.NΔ T)) :
   · rw [algebraMap_smul] at this; exact this
   · have h1 : PowerSeries.map (algebraMap O k) (algebraMap O (LetA O n₀) c (τ i)) =
         algebraMap k k⟦X⟧ (algebraMap O k c) := by
-      simp [PowerSeries.algebraMap_apply]
+      simp
     rw [h1]
     exact ι.commutes _
 

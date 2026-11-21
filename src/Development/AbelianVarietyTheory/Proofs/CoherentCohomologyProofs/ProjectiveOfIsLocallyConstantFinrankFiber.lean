@@ -1,7 +1,16 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.MapSpanBaseChangeEquivSubmoduleOf
 import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.ExistsBasisMapOfLiftBaseChangeSurjective
 import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.ExistsFiniteProjectiveComplexQuasiIso
+import Mathlib.Algebra.Homology.EulerCharacteristic
+import Mathlib.CategoryTheory.Monoidal.Mon
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.Spectrum.Prime.Module
+import Mathlib.RingTheory.Unramified.LocalStructure
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open TensorProduct Module Function Filter Topology
 

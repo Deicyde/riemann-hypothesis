@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.PolynomialLevels.TlNonempty
+import Formalism.SharpRestriction.GrowthBounds.DiagonalSupport.ValuationOneEqZero
+import Formalism.SharpRestriction.GrowthBounds.PlaneCoefficients.PlaneCoeffOneTTens
 
 noncomputable section
 

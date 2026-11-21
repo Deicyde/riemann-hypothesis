@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsDetEltOne
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RelativeLatticeElementPropertyStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AinfCoefficientPsiPropertyStatement
@@ -6,7 +6,6 @@ import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MuCoeffZeroNeZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AinfElementThetaCompatible
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DvdOfLeadOrdersEq
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DvdOfTwistedEq
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FontaineAinfLocalDomainXiAdicOrder
 open GlobalTheory.Sandwich GlobalTheory.IndefiniteRowSideFullHecke.SandwichMaps GlobalTheory.DetInv Matrix TensorProduct
 
 namespace GlobalTheory.DetInv

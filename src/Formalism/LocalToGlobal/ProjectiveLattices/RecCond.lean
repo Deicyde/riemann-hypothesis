@@ -1,4 +1,6 @@
-import Formalism.LocalToGlobal.ProjectiveLattices.HasDataCondition
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.ProjectiveLattices.PartitionExtendByZeroAntitone
+import Formalism.LocalToGlobal.ProjectiveLattices.ThShort
 
 namespace Formalism.L2.Pj
 

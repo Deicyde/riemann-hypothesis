@@ -1,5 +1,6 @@
-import Formalism.LocalToGlobal.HermitianForms.RankEqFirstLevel
-import Formalism.LocalToGlobal.HermitianColumns.TiedQC
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.HermitianForms.FormsTied
 
 noncomputable section
 

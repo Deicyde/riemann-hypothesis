@@ -1,5 +1,6 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.HarishChandraCentre.ConstantCoeffRhoOneCanonMonomial
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.AutomorphicForms.HarishChandraCentre.MemOfMemSupportToFinsupp
 
 namespace GroundTheory.Automorphic.HarishChandra
 

@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.AdmissibleDesigns.TrCMemZ1D
 import Formalism.AdmissibleDesigns.FiniteClassesContinuousLattice
+import Formalism.WachLatticeTwists.CoprimeLiftBounds.FirstSummandRepresentation
 
 variable [hT2Core : Fact ReciprocityTheory.ChartRestriction.T2.Core]
 

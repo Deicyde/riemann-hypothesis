@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.Bridge
-import Formalism.SatakeDualWeyl.KpqSubgroupCompact
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ClassPresBasic
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.HasRatBasisOfAct
 

@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import ReciprocityTheory.DualLattices.Eisenstein4CoeffBound
+import Mathlib.NumberTheory.ModularForms.LevelOne.GradedRing
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.Polynomial.Basic
 
 namespace ReciprocityTheory.PGsh
 

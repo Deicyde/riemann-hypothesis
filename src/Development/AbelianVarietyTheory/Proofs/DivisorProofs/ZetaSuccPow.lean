@@ -1,5 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.FaithfulSMulAlgClosure
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.TorsionTowersOfDivisibleGroup
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 set_option autoImplicit false
 
@@ -48,7 +50,7 @@ theorem latPt_add (n : ℕ) (x y : Dw.La) :
     toConv (latPt tw I n (x + y)) = toConv (latPt tw I n x) * toConv (latPt tw I n y) := by
   refine TorsionTower.pts_injective tw n k ?_
   rw [map_mul, TorsionTower.pts_apply, TorsionTower.pts_apply, TorsionTower.pts_apply]
-  simp only [WithConv.ofConv_toConv, latPt_y, I.add, MonObj.comp_mul]
+  simp only [latPt_y, I.add, MonObj.comp_mul]
 
 def tau : Dw.La →+ GG.Tate :=
   AddMonoidHom.mk' (fun x => ⟨fun n => latPt tw I n x, fun n => latPt_compat tw I n x⟩) fun x y =>

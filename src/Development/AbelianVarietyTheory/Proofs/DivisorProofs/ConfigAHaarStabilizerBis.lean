@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StabilizerArchimedeanIntegralUnfoldStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchimedeanEigenvectorIdeleMemStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchimedeanParabolicFixedDecompositionStatement

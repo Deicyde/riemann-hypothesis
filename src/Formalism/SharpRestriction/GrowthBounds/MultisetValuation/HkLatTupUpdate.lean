@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.CountLoc
-import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.FormValuationGeNegDegree
+import Formalism.SharpRestriction.GrowthBounds.LatticeSystems
 
 noncomputable section
 

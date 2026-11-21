@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
 import Development.AbelianVarietyTheory.BlockTheory.TorsionBlocks.JumpDictionary
 import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.PrimeTypeRows
@@ -7,6 +8,8 @@ import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.GaloisSideT
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.AbsNormPrimeIffInertiaDegEqOneAndFiniteRamified
 import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.TwistedGLEmbedding
 import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.DeterminantInTorus
+import Mathlib.Topology.Connected.Separation
+import Mathlib.Topology.MetricSpace.Ultra.TotallySeparated
 
 noncomputable section
 

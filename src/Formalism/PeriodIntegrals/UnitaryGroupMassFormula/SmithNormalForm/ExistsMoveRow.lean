@@ -1,6 +1,8 @@
-import Mathlib
-import Formalism.PeriodIntegrals.SmithMat
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.SmithNormalForm.IsUnitOneAddVecMulVec
+import Mathlib.LinearAlgebra.Matrix.Permutation
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace PI.SmithWork
 
@@ -19,7 +21,7 @@ private theorem sum_pairSingle_mul_eq_ite (i j : ι) (hij : i ≠ j) (x y z w : 
   by_cases hpi : p = i
   · simp [hpi, Pi.single_apply, add_mul, Finset.sum_add_distrib, ite_mul]
   · by_cases hpj : p = j
-    · simp [hpi, hpj, Ne.symm hij, Pi.single_apply, add_mul, Finset.sum_add_distrib, ite_mul]
+    · simp [hpj, Ne.symm hij, Pi.single_apply, add_mul, Finset.sum_add_distrib, ite_mul]
     · simp [hpi, hpj, Pi.single_apply, ite_mul]
 
 private theorem unit_lemma' (i j : ι) (hij : i ≠ j) (x y a' b' : R) (key : x * a' + y * b' = 1) :
@@ -213,10 +215,10 @@ theorem smith (n : ℕ) : ∀ A : Matrix (Fin n) (Fin n) R,
       | zero =>
         cases c using Fin.cases with
         | zero => simp
-        | succ k => simp [Matrix.diagonal_apply, (Fin.succ_ne_zero k).symm]
+        | succ k => simp [(Fin.succ_ne_zero k).symm]
       | succ i =>
         cases c using Fin.cases with
-        | zero => simp [Matrix.diagonal_apply, Fin.succ_ne_zero]
+        | zero => simp [Fin.succ_ne_zero]
         | succ k => simp [Matrix.diagonal_apply, Fin.succ_inj]
     refine ⟨Fin.cons b d, ?_, ?_⟩
     · rw [← eb]

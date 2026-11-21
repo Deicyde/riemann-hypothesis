@@ -1,8 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJDHatOpA
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGaugeCut
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BetaSesquilinearity
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.UsCompose
-import Formalism.FormalDegreeBessel.FinalG
 
 open Matrix Set
 open scoped ContDiff Topology

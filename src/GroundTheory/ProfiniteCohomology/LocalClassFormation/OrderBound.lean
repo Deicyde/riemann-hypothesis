@@ -1,8 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.LocalClassFormation.OrderCyclic
 import GroundTheory.TateCohomology.InfRes
 import GroundTheory.LocalFields.RamificationStructure
 import GroundTheory.LocalFields.IntermediateField
+import GroundTheory.ProfiniteCohomology.GaloisCohomology.IsZeroGroupCohomologyQuotientToInvariantsGalAdd
+import Mathlib.Algebra.Lie.OfAssociative
+import Mathlib.RingTheory.PicardGroup
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

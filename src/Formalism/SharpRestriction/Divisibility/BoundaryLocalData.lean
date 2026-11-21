@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
-import Formalism.SharpRestriction.ParConsts
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.ParamsHeightRankConstant
 import Formalism.SharpRestriction.Divisibility.ModuliIntegralCharts
 

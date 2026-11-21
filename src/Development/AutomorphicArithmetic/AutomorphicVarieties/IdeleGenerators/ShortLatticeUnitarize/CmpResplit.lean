@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.IdeleGenerators.WeightChange
+import Formalism.LocalRingCardinality.SpanPowerMembership.NZLevD
 
 noncomputable section
 

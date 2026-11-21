@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CmIdempotentAddStarEqOne
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.CocycleIdentityIso
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsRationalPair
 open AlgebraicGeometry CategoryTheory Limits NumberField IsLocalRing TopologicalSpace
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj
@@ -33,7 +33,7 @@ theorem genRel_psi_D0 (P : PELUnif (maximalIdeal T.V) t) {ϖ : T.V} (hϖ : Irred
   refine ArcOfPoint.genRel_id_of_val P.D.toPre.P.isLB (pullGen_isGen _ _ _ _ (P.D.toPre.psi_gen y) _) fun z J hJ => ?_
   have ht : Units.map (algebraMap (FractionRing T.V) F).toMonoidHom (tF P hϖ y (H.w0 • y)) = u⁻¹ := by
     apply Units.ext
-    simp only [u, tF, beF_w0, hq, Units.coe_map, map_zpow, Units.val_inv_eq_inv_val, Units.val_zpow_eq_zpow_val,
+    simp only [u, tF, beF_w0, hq, Units.coe_map, Units.val_inv_eq_inv_val, Units.val_zpow_eq_zpow_val,
       Units.val_mk0, zpow_neg]
     show (algebraMap (FractionRing T.V) F) ((((piK hϖ : (FractionRing T.V)ˣ) : FractionRing T.V) ^ qv P hϖ y)⁻¹) = _
     rw [map_inv₀, map_zpow₀]; rfl

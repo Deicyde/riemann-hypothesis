@@ -1,6 +1,4 @@
-import Formalism.SharpRestriction.Divisibility.WeightDegreeSizes
-import Formalism.SharpRestriction.SmoothDesignExistence.DGamSmooth
-import Formalism.SharpRestriction.GlobalSchurBounds.ProductFirstZerothParts
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.AdmissibleParameterJoins.DIVfromGLbud
 import Formalism.LocalToGlobal.GlobalTheory.PlacesP
 open Formalism.BasicNotions Formalism.BasicNotions.DV Formalism.MainNotions NumberField Classical

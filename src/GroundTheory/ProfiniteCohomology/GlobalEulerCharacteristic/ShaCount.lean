@@ -1,7 +1,6 @@
-import Mathlib
-import GroundTheory.ProfiniteCohomology.GlobalEulerCharacteristic.MemShaSubmoduleCohomologyAddEquivOfEquivIff
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.PoitouTate.Deduction
-import GroundTheory.ProfiniteCohomology.PoitouTate.BrauerInvZOfIsSepClosureCohomologyULiftIntAddEqu
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

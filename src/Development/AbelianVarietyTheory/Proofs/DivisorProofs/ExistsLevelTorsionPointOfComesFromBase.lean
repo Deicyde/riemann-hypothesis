@@ -1,15 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasRigidCoords
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsTautologicalBaseNsmulDegenerationDataStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ComesFromTautBaseOfRescaledPullbackMonomialStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PeriodPartMemTautologicalPointTorsion
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DegenerationDataNsmulRescaleKeepsLaws
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.NonemptyCubicalPull
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.ValEqOfAppInjective
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.TauBimultOfIsPullDeg
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PsiUnitOnUniv
-import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.TraceFormTwistIsoOfPullback
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.AbelianSchemeLawsWithoutCohomology
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NonemptyIsPullDegId
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj IsLocalRing NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.AnForm.R
@@ -80,12 +75,12 @@ theorem exists_qkPt_of_divFrom : ∀ {E : Type} [Field E] [NumberField E] [IsCMF
     LinearMap.mk₂ ℤ (fun u v => ε k (x u) (H.w0 • x v) + ε k (x v) (H.w0 • x u))
       (fun m₁ m₂ n => by simp only [map_add, smul_add, LinearMap.add_apply]; ring)
       (fun c m n => by
-        simp only [map_zsmul, LinearMap.smul_apply, LinearMap.map_smul, smul_eq_mul]
+        simp only [map_zsmul, LinearMap.smul_apply, smul_eq_mul]
         rw [smul_comm H.w0 c (x m)]
         simp only [LinearMap.map_smul, smul_eq_mul]; ring)
       (fun m n₁ n₂ => by simp only [map_add, smul_add, LinearMap.add_apply]; ring)
       (fun c m n => by
-        simp only [map_zsmul, LinearMap.smul_apply, LinearMap.map_smul, smul_eq_mul]
+        simp only [map_zsmul, LinearMap.smul_apply, smul_eq_mul]
         rw [smul_comm H.w0 c (x n)]
         simp only [LinearMap.map_smul, smul_eq_mul]; ring)
   have hne : ∀ i, algebraMap R (FractionRing R) (s i) ≠ 0 := fun i =>

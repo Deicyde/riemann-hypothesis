@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.ResBound
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.Saturated
 
 noncomputable section
 namespace GlobalTheory.Present

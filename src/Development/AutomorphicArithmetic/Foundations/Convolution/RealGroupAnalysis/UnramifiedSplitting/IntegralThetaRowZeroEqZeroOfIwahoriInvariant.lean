@@ -1,13 +1,11 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.UnramifiedSplitting.SplitAt
-import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.WeilRepresentation.HatSt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.UnramifiedSplitting.WWMulCube
 import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.UnramifiedSplitting.SlZero
 import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.UnramifiedSplitting.Imports
 import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.UnramifiedSplitting.RightInv
 import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.UnramifiedSplitting.JExExists
-import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.UnramifiedSplitting.SgLaws
-import GroundTheory.HeightsAndTheta.Theta.Weil.PartialFourierAdelicPi
-import GroundTheory.HeightsAndTheta.Theta.AdelicFourierCoord
+import GroundTheory.LocalFields.LocalFourierHaar
 
 open NumberField IsDedekindDomain MeasureTheory Matrix Topology Filter
 open Neutral.B1 Formalism.L2.Host Formalism.ConjugateSelfDual GlobalTheory.CuspRep GlobalTheory.GalOfCusp UpperTheory.V UpperTheory.V.Af UpperTheory.V.Published GroundTheory.Global GroundTheory.Automorphic.GJMatrix
@@ -265,7 +263,7 @@ private theorem w_conj (t : A F) : wW F * nU t * (wW F)⁻¹ = lU (-t) := by
   rw [mul_inv_eq_iff_eq_mul]
   apply Subtype.ext
   show (!![0, 1; -1, 0] : Matrix (Fin 2) (Fin 2) (A F)) * !![1, t; 0, 1] = !![1, 0; -t, 1] * !![0, 1; -1, 0]
-  simp [Matrix.mul_fin_two]
+  simp
 
 end UpperTheory.ConvolutionTheory.R2.H.T0
 

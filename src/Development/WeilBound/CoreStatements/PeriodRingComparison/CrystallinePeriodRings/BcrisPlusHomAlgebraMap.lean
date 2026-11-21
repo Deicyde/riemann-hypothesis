@@ -1,9 +1,7 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.PeriodRingComparison.CrystallinePeriodRings.GammaEqDpow
-import Development.WeilBound.CoreStatements.PeriodRingComparison.PrimitiveEpsilon.UntiltEpsilonEqOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PeriodRingComparison.TeichmullerLogarithm.LogEps
 import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.Period
-import Development.WeilBound.CoreStatements.CrystallinePeriodRings.ExistsMapEqOfPowMul
 
 noncomputable section
 

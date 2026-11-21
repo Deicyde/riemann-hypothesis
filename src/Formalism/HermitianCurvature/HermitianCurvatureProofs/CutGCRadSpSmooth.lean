@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGCoreCut
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGaugeGRawSmooth
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutEnTrSmooth
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.NFRadRedLocSec
 
 open Formalism.REAL Formalism.QuantumDeterminants Formalism.FourierDecayAlt
 open scoped ContDiff

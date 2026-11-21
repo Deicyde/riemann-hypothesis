@@ -1,5 +1,5 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.IsotropicMahlerBounds.LogAbsoluteWedges.LogAbsBasic
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MahlerBoundOfDegree
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DegreeBoundedOfBasis
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DegreeRationalSubspace
@@ -14,7 +14,6 @@ import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Multiplicativit
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WedgeBoundFinitePlaces
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WedgeBoundInfinitePlaces
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.AdelicGLNormOneSplit
-import GroundTheory.AutomorphicForms.ReductionMahler
 
 noncomputable section
 

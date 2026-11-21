@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.AutTrace
 import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.AutReal
 import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.AutEta
@@ -5,12 +7,7 @@ import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.AutProd
 import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.AutGen
 import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.AutSubst
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaDistributionInvariantRationalTarget
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryAdelicPointEqRealMulFiniteBothOrdersStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaFunctionHeisenbergInvariantStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianFormRealCoordinateMatrixHermitianDetNeZStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RealCoordinateActionUnitaryPreservesHermitianForStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsRealChartAdeleTensorAdmissibleCMBaseStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StandardTraceAddCharIsStandardCharOfAdmissibleCMStatement
 
 noncomputable section
 

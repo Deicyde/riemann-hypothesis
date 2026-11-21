@@ -1,11 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.StrictHenselianAcyclic
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsUnlocalizedSaturatedState
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.DsExistsOfDiscreteSeriesExists
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.DofOTw
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ThetaPsi
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.RingSpecNormalisedCharacterEq
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ExistsSameData
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.BaseLevelCharacterEqProdSuperdiagonalSum
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.EigenCompatibleOfBadSet
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsDescentMapNonzeroOfSmallFieldFormStatement
@@ -15,6 +11,7 @@ import Development.AutomorphicArithmetic.UnitTensorPairings.HeckeEigenspaceDesce
 import Development.AutomorphicArithmetic.UnitTensorPairings.GaloisRepTransportOfCopyAll
 import Development.AutomorphicArithmetic.UnitTensorPairings.SidePlaceExistsOfCopyAll
 import Development.AutomorphicArithmetic.UnitTensorPairings.NonemptyCoefficientRingDataOfIsomorphicCMDatum
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.CenUsedOfCenReal
 
 section
 open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.L2 Formalism.L2.Host Formalism.L2.NT Formalism.IndefR.NX NumberField IsDedekindDomain GlobalTheory.HeightCounting GlobalTheory.TwInputs.Move GlobalTheory.HeightCounting.SideCopy
@@ -81,7 +78,7 @@ private theorem hpsi (h : CopyAll D D' ι e) {S : RatDat D.ntw} {S' : RatDat D'.
       ((psiUOf D.nd (NX.xiRed D) θ ⟨u, hu'⟩ : (↥D.LL0)ˣ) : ↥D.LL0) := by
     apply (embLL0 D).injective
     rw [h.cp.embLL0_eq, a1]
-    simp only [hxi]
+    simp only
     exact (by with_unfolding_all exact (a2 :))
   have a4 := h3 i b u hu hu'
   rw [← a3] at a4

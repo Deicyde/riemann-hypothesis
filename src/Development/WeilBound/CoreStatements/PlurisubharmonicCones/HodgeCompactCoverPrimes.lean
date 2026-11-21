@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PlurisubharmonicCones.Imports
 import Development.WeilBound.CoreStatements.PlurisubharmonicCones.ExistsJoin
 import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.Birational

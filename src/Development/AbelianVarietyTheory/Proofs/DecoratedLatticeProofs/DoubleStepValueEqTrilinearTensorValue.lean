@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.MemTranslate
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.LocalDoublingIntegralOddCase
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.AddCharConductorIntegersContinuousNeOne
@@ -32,7 +32,7 @@ theorem val_eq_tensorVal : ∀ (D : D7) (ψ : AddChar (AF D.host.F) ℂ), IsStdC
     apply Subtype.ext
     funext x
     rw [hΞ, hsum m Ψ Φ₀ hfl x]
-    simp [Submodule.coe_sum, Finset.sum_apply, GlobalTheory.LocFlat.CFac.prodSB_apply]
+    simp [Finset.sum_apply, GlobalTheory.LocFlat.CFac.prodSB_apply]
   rw [e1, ← hT, e2, map_sum, LinearMap.sum_apply]
   refine Finset.sum_congr rfl fun i _ => ?_
   have h := GlobalTheory.IndefiniteRowSideFullHecke.FourierJacobiAverage.app_coe (((GlobalTheory.LocFlat.CFac.prodSBBil _ _).compr₂ T) (Ψ i)) ⟨_, hop (Φ₀ i)⟩

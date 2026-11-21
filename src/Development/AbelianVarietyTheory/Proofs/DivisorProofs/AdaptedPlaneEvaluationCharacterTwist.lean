@@ -1,9 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentCocompactInArithmetic
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicPlaneComplementDet
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DetNeZeroOfSkewHermitianSelfDualLatticeSpace
 
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -44,7 +43,7 @@ theorem det_ne_zero_of_adapted (B : Base F E) {d d₁ : ℕ} {W : Spc F E d} {W�
       funext fun i => RingHom.map_mulVec (σ : E →+* E) H.ι v i
     simp only [form]
     rw [hσv, ← Matrix.vecMul_transpose, Matrix.dotProduct_mulVec, Matrix.dotProduct_mulVec]
-    simp only [Matrix.vecMul_vecMul, ← Matrix.mul_assoc, hgram, hJu, zero_dotProduct]
+    simp only [Matrix.vecMul_vecMul, hgram, hJu, zero_dotProduct]
   have hall : ∀ z, form σ W.J (H.ι *ᵥ u) z = 0 := fun z => by
     obtain ⟨s, t, w, rfl⟩ := hdec z
     rw [GlobalTheory.UnipCocompact.form_add, GlobalTheory.UnipCocompact.form_add, GlobalTheory.UnipCocompact.form_smul,
@@ -55,7 +54,7 @@ theorem det_ne_zero_of_adapted (B : Base F E) {d d₁ : ℕ} {W : Spc F E d} {W�
     have hs : (fun i => σ ((Pi.single j (1 : E) : Fin d → E) i)) = Pi.single j 1 := funext fun i => by
       by_cases hij : i = j
       · subst hij; simp
-      · simp [Pi.single_apply, hij]
+      · simp [hij]
     simp only [form] at h
     rw [hs, Matrix.dotProduct_mulVec, dotProduct_single, mul_one] at h
     exact h

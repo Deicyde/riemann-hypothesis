@@ -1,4 +1,12 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.LevelRecursionCondNeeded
+import Mathlib.LinearAlgebra.Lagrange
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 namespace Formalism.FourierDecayAlt.P.WordMonicExtraction
 
@@ -158,9 +166,9 @@ theorem pairTop (Ξ : Sesq M) (P₁ P₂ : R[X]) (a b : ℕ) (h : ℝ) (X X' : M
     beta_reduce
     rw [evR_smul P₁ a ha Y X, evR_smul P₂ b hb (Y + h) X']
     simp only [map_sum, LinearMap.sum_apply, map_smul, map_smulₛₗ, LinearMap.smul_apply, smul_eq_mul,
-      RingHom.id_apply, Polynomial.eval_finset_sum, Polynomial.eval_mul, Polynomial.eval_C,
+      Polynomial.eval_finset_sum, Polynomial.eval_mul, Polynomial.eval_C,
       Polynomial.eval_pow, Polynomial.eval_X, Polynomial.eval_add, map_pow, map_add, Complex.conj_ofReal,
-      Complex.ofReal_add, Finset.mul_sum, Finset.sum_mul]
+      Complex.ofReal_add, Finset.mul_sum]
     first
       | (refine Finset.sum_congr rfl (fun i _ => Finset.sum_congr rfl (fun k _ => ?_)); ring)
       | (rw [Finset.sum_comm]; refine Finset.sum_congr rfl (fun i _ => Finset.sum_congr rfl (fun k _ => ?_)); ring)
@@ -238,7 +246,7 @@ theorem liftLetter (Ξ : Sesq M) (n s : ℕ) (D : Dat R) (A₀ A₀v : R[X]) (e 
     funext Y
     unfold letterVal
     rw [hs, map_zero, zero_mul, add_zero, hB Y (Y + 1), hBv Y (Y + 1)]
-    simp only [map_smul, map_smulₛₗ, LinearMap.smul_apply, smul_eq_mul, RingHom.id_apply, map_mul,
+    simp only [map_smul, map_smulₛₗ, LinearMap.smul_apply, smul_eq_mul, map_mul,
       map_inv₀, Complex.conj_conj, hce]
   rw [hfun]
   convert ht using 1

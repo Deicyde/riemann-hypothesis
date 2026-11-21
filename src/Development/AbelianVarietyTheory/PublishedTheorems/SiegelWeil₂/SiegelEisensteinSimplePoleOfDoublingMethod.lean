@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.SiegelWeil₂.SiegelEisensteinContinuationOfDoublingMethod
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.EisValueAtIffEisPoleLE
 
 noncomputable section
 

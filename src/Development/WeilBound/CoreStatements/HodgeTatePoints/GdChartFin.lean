@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.HodgeTatePoints.GdChart
 import Development.WeilBound.CoreStatements.HodgeTatePoints.GcIncl
 import Development.WeilBound.CoreStatements.HodgeTatePoints.GcDescend

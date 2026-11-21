@@ -1,5 +1,8 @@
-import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.FatouOm
-import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.ContinuousSplitInv
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.AtTauExUniqueHolds
+import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.ContinuousTensMap
+import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.SobDer
 
 noncomputable section
 
@@ -34,7 +37,7 @@ theorem dH_comp_bound {ψ : AddChar (AF D.host.F) ℂ} {f : WO S T → ℂ} {L M
     by_cases h : m = j
     · subst h
       simp
-    · simp [Pi.single_apply, h]
+    · simp [h]
   have hc : ∀ i j, ‖(A (Pi.single (l i) (1 : ℝ))) j‖ ≤ ‖A‖ := fun i j =>
     (norm_le_pi_norm _ j).trans ((A.le_opNorm _).trans
       (by simpa using mul_le_mul_of_nonneg_left (he1 (l i)) (norm_nonneg A)))

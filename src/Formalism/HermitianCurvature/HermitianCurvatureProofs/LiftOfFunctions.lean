@@ -1,7 +1,7 @@
-import Formalism.HermitianCurvature.StatementTL
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.BigCellValues
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LiftZeroOrder
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.TheoremPIntegralOfPlaces
 
 namespace Formalism.FourierDecayAlt.P.TLB
 

@@ -1,4 +1,6 @@
-import Formalism.LocalToGlobal.TorsionIntegrality.GaussSumParity.TwoPlaces
+import BuildAid.Leniency.Open
+import Formalism.GaussJetBounds.StatementW
+import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.CyclicPowerClassOfExpEquiv
 
 noncomputable section
 

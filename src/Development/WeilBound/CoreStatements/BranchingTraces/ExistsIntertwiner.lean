@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.BranchingTraces.FormTSingle
+import Development.WeilBound.CoreStatements.BranchingTraces.ContinuousEmb
 
 noncomputable section
 

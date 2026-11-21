@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.DiscreteSeriesUnitary₂.SubmatrixMemUJsetIff
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.RhoCompactTwiceEqOfSignBlockOrdered
 
@@ -60,7 +60,7 @@ theorem isFdeg_of_scalar {n : ℕ} {s : Bool} {H : Type} [NormedAddCommGroup H] 
     have h1 : z * (starRingEnd ℂ) z = 1 := by rw [Complex.mul_conj, Complex.normSq_eq_norm_sq, hz]; simp
     have h2 : (starRingEnd ℂ) ⟪e, e⟫_ℂ = ⟪e, e⟫_ℂ := inner_conj_symm e e
     simp only [coefOn, map_smul, hg, inner_smul_left, inner_smul_right, RCLike.star_def, map_mul, h2,
-      RingHomCompTriple.comp_apply, RingHom.id_apply, Complex.conj_conj]
+      RingHomCompTriple.comp_apply, RingHom.id_apply]
     linear_combination (a * (starRingEnd ℂ) b * (starRingEnd ℂ) a' * b' * ⟪e, e⟫_ℂ * ⟪e, e⟫_ℂ) * h1
   rw [key]
   refine ⟨integrable_const _, ?_⟩

@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.LatCountG
-import Formalism.HarderNarasimhan.StatementPl
-import Formalism.SharpRestriction.CuspSpanNormBounds.UnimodularSchurMeasures.TheoremCountStatementOfGeometry
+import Formalism.SharpRestriction.CuspSpanNormBounds.UnimodularSchurMeasures.CNDefs
+import Formalism.SharpRestriction.CuspSpanNormBounds.UnimodularSchurMeasures.CnDensNonneg
 
 noncomputable section
 

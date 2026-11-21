@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.CoordHomMapTrace
-import Formalism.SharpRestriction.LevelLetterCocycles.DeltaInvariantLattices
 
 noncomputable section
 
@@ -114,8 +115,7 @@ theorem liftF_of {F : LatHom T₁.L T₂.L} {C₁ : Coord W I T₁} {C₂ : Coor
     rw [← hs]
     exact sub_eq_zero.1 h0
   rw [hw, ← hnat, ← hz₁e, ← map_smul] at hD'
-  simp only [Formalism.WeaklyAdmissibleFiltrations.LatHom.H1map, Submodule.mkQ_apply, Submodule.mapQ_apply,
-    Submodule.Quotient.eq] at hD'
+  simp only [Formalism.WeaklyAdmissibleFiltrations.LatHom.H1map, Submodule.mkQ_apply] at hD'
   erw [Submodule.mapQ_apply, Submodule.Quotient.eq] at hD'
   have hB : (((PD.p : ℕ) : O) ^ e) • c - F.post (z₁ : G → _) ∈ latticeCoboundaries T₂.L := hD'
   refine Submodule.mem_sup.2 ⟨F.post (z₁ : G → _), ⟨(z₁ : G → _), hz₁, rfl⟩, _, hB, ?_⟩

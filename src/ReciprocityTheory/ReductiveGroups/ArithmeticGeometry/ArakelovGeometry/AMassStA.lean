@@ -1,12 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.IsSemipositiveOn
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterFS
 import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.MdiscSt
-import Mathlib.Analysis.SpecialFunctions.PolarCoord
-import Mathlib.MeasureTheory.Integral.IntegralEqImproper
-import Mathlib.MeasureTheory.Constructions.Pi
-import Mathlib.Analysis.Calculus.FDeriv.Bilinear
-import Mathlib.Analysis.SpecialFunctions.Log.Deriv
-import Mathlib.Analysis.SpecialFunctions.Sqrt
+import Mathlib.Algebra.Ring.IsFormallyReal
 
 noncomputable section
 
@@ -238,13 +234,13 @@ theorem gbBil_single (y : Fin D → ℂ) (i : Fin D) (a : ℂ) :
     gbBil D y (Pi.single i a) = (y i).re * a.re + (y i).im * a.im := by
   rw [gbBil_apply, Finset.sum_eq_single i]
   · simp
-  · intro k _ hk; simp [Pi.single_apply, hk]
+  · intro k _ hk; simp [hk]
   · simp
 
 theorem gb_I_single (i : Fin D) : (Complex.I • Pi.single i (1 : ℂ) : Fin D → ℂ) = Pi.single i Complex.I := by
   ext k; by_cases h : k = i
   · subst h; simp
-  · simp [h, Pi.single_apply]
+  · simp [h]
 
 theorem gb_conj_mul (u v : ℂ) : starRingEnd ℂ u * v =
     ((u.re * v.re + u.im * v.im : ℝ) : ℂ) + ((u.re * v.im - u.im * v.re : ℝ) : ℂ) * Complex.I := by
@@ -294,7 +290,7 @@ theorem det_cxHessian_gbPot (y : Fin D → ℂ) :
     ring
   rw [hdot, hs, Fintype.card_fin]
   push_cast
-  simp only [inv_pow, one_div_pow, one_div]
+  simp only [inv_pow, one_div]
   field_simp
   ring
 

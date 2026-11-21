@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CountingFormula.OFRepFin
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CountingFormula.WeightPositive
+import BuildAid.Leniency.Open
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CountingFormula.UnipotentIntegralPreservesLattice
 
 noncomputable section
 
@@ -69,8 +68,8 @@ theorem inW_pW (D : Formalism.BasicNotions.D7) (v : (VS D).V) : InW D (pW D v) :
   unfold InW
   refine ⟨fun b => ?_, fun b => ?_, ?_⟩
   · simp [pW, map_sum, D.sp.hyp_ee, D.sp.hyp_ef, hEZ, mul_ite, Finset.sum_ite_eq]
-  · simp [pW, map_sum, hT_hypF_hypE, D.sp.hyp_ff, hFZ, mul_ite, Finset.sum_ite_eq']
-  · simp [pW, map_sum, hZE, hZF, D.sp.zm_norm, div_mul_cancel₀, hT0]
+  · simp [pW, map_sum, hT_hypF_hypE, D.sp.hyp_ff, hFZ, mul_ite]
+  · simp [pW, map_sum, hZE, hZF, D.sp.zm_norm, hT0]
 
 def eichL (D : Formalism.BasicNotions.D7) (e y : (VS D).V) (c : D.host.E) : (VS D).V →ₗ[D.host.E] (VS D).V :=
   LinearMap.id + ((VS D).hT e).smulRight y - ((VS D).hT y).smulRight e + c • ((VS D).hT e).smulRight e

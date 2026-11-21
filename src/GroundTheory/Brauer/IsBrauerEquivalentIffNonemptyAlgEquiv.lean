@@ -1,5 +1,15 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.Brauer.TensorSimple
+import Mathlib.Algebra.Azumaya.Basic
+import Mathlib.Algebra.Central.Matrix
+import Mathlib.LinearAlgebra.Basis.MulOpposite
+import Mathlib.LinearAlgebra.Matrix.Unique
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleModule.WedderburnArtin
+import Mathlib.RingTheory.TotallySplit
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Brauer

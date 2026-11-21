@@ -1,4 +1,5 @@
-import Formalism.MahlerMeasure.GoodCount
+import BuildAid.Leniency.Open
+import Formalism.MahlerMeasure.LevelSum
 
 namespace Formalism.GM.M
 

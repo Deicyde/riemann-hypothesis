@@ -1,6 +1,7 @@
-import Mathlib
-import Formalism.LocalRingCardinality.AdicCompletionLocal.LocTied
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsCrisP
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.LevelLetterCocycles.DataNLoc
+import Mathlib.NumberTheory.Cyclotomic.CyclotomicCharacter
+import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
 open Formalism Formalism.BasicNotions Formalism.BasicNotions.Loc GlobalTheory.MemLoc
 open scoped Formalism.Per
 namespace GlobalTheory.MemLoc

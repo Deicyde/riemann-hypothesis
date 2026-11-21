@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.MahlerMeasure.HasOrder
-import Formalism.MahlerMeasure.QuotientUpperBoundsOfPowerBounds
 
 namespace Formalism.GM.M
 

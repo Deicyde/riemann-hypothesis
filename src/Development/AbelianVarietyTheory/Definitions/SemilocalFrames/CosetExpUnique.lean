@@ -1,8 +1,5 @@
-import Mathlib
-import Formalism.LocalRingCardinality.SpanPowerMembership
-import Formalism.LocalRingCardinality.SpanPowerMembership.RankRecordRowDimensionZero
-import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.SecondLabelsNonempty
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.SmallHostRootDiscriminantLe
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.OneScaleDatumRelabelRec
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.InhabitedAtLargeScale

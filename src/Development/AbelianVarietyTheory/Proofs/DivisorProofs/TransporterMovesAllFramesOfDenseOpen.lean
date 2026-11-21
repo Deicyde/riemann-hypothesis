@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTranspOfMovesAt
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TransporterMovesNearbyFramesOfDenseStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TransporterMovesAtOfMovesAtOpenSetStatement
 

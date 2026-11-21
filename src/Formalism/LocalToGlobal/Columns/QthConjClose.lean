@@ -1,4 +1,6 @@
-import Formalism.LocalToGlobal.Columns.QthPrincInv
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.Columns.QthCloseScl
 
 open NumberField IsDedekindDomain
 

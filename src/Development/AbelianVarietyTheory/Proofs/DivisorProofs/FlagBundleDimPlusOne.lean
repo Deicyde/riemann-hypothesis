@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KrullDimSmoothSurjectiveTotal
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleSmoothRelativeDimensionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleProjectionSurjective
@@ -88,7 +85,7 @@ theorem topologicalKrullDim_eq_add_one : ∀ (k : Type) [CommRing k] [IsNoetheri
   simp_rw [GlobalTheory.SmoothDimTotal.ringKrullDim_stalk_eq_add Y₁ Y ρ]
   rcases isEmpty_or_nonempty Y₁ with hY₁ | hY₁
   · haveI : IsEmpty Y := ⟨fun y => hY₁.false (ρ y)⟩
-    simp [iSup_of_empty]
+    simp
   apply le_antisymm
   · refine iSup_le fun y => add_le_add (le_iSup (fun b : Y₁ => ringKrullDim (Y₁.presheaf.stalk b)) (ρ y)) ?_
     simpa using GlobalTheory.SmoothDimTotal.fib_le Y₁ Y ρ 1 y

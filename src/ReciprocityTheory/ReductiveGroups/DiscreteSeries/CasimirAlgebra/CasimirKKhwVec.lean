@@ -1,4 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.IsInfUnitary
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -22,7 +28,7 @@ theorem pair_apply_hw {E : Fin n → Fin n → Module.End ℂ M} (hE : IsGlRep E
   rcases lt_trichotomy a b with h | rfl | h
   ·
     have hc := congrArg (fun f : Module.End ℂ M => f v) (hE a b b a)
-    simp only [if_pos rfl, if_true, ite_true, LinearMap.sub_apply, Module.End.mul_apply, hab h, map_zero,
+    simp only [if_true, LinearMap.sub_apply, Module.End.mul_apply, hab h, map_zero,
       sub_zero] at hc
     rw [Module.End.mul_apply, hc, hd, hd]
     simp [hwTerm, h, h.ne, sub_smul]

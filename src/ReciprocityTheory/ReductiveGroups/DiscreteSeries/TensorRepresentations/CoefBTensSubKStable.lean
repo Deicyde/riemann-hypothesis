@@ -1,10 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.HidaSetting
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.TensorV
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirAlgebra.CasimirKKhwVec
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirAlgebra.MulMulSubMulMulEqAdd
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.BochnerInequality.CasimirGapAtNoncompactWeight
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.BochnerInequality.KUnitB
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.CoefAInnerEqZero
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.AnalyticVectors.Closure
 
 noncomputable section
 
@@ -146,7 +145,7 @@ theorem coefB_isKUnitary (dual : Bool) {ε : Fin n → Bool} {E : Fin n → Fin 
     (hU : IsKUnitary ε E) : IsKUnitary ε (fun a b => coefTr (tensF dual E a b)) := by
   intro a b hab x y
   cases dual <;>
-  simp only [PiLp.inner_apply, coefTr_apply, PiLp.toLp_apply, tensF_apply, cond_false,
+  simp only [PiLp.inner_apply, coefTr_apply, tensF_apply, cond_false,
     cond_true, inner_add_left, inner_add_right, inner_neg_left, inner_neg_right,
     Finset.sum_add_distrib, Finset.sum_neg_distrib, hU a b hab, coefB_sum_ite_left,
     coefB_sum_ite_right]

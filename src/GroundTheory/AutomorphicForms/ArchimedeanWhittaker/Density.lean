@@ -1,5 +1,7 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.ArchimedeanWhittaker.MultOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.AutomorphicForms.ArchimedeanWhittaker.Frechet
+import GroundTheory.AutomorphicForms.GKModules.Garding
 
 namespace GroundTheory.Automorphic
 

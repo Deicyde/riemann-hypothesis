@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.CoveringOfForallMem
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.FreeHomExtOfCoveringStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.SplittingSieveMemEtaleTopologyStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.SplitByBaseChangeStatement

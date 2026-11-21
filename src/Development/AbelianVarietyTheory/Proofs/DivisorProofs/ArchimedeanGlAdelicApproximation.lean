@@ -1,11 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoreConcl
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTransv
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLineReps
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemLatticeZeroTorus
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.EventuallyNormFinLeOne
 open scoped TensorProduct NNReal Matrix
 open NumberField MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SiegelSet GlobalTheory.EisRes GlobalTheory.EisRestrict
 open GlobalTheory.Doubling (absE)
@@ -45,8 +40,7 @@ theorem splitEquiv_fst (w : InfinitePlace F) (z : AF F ⊗[F] E) :
   | tmul a e =>
     simp only [splitEquiv, AlgEquiv.trans_apply, Algebra.TensorProduct.comm_tmul,
       Algebra.TensorProduct.congr_apply, Algebra.TensorProduct.map_tmul, AlgEquiv.refl_toAlgHom,
-      Algebra.TensorProduct.prodRight_tmul, AlgEquiv.prodCongr_apply, Prod.map_fst,
-      Algebra.TensorProduct.piRight_tmul, AlgEquiv.piCongrRight_apply]
+      Algebra.TensorProduct.prodRight_tmul]
     rfl
 
 def pairMat {R S : Type} {m : ℕ} (A : Matrix (Fin m) (Fin m) R) (B : Matrix (Fin m) (Fin m) S) :

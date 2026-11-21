@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.SlashToGLSmul
 open GlobalTheory.HeckeFamilyMatrices UpperHalfPlane CongruenceSubgroup
 open scoped MatrixGroups ModularForm Manifold

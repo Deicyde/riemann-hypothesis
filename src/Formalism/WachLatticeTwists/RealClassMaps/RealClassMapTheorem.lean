@@ -1,5 +1,8 @@
-import Formalism.WachLatticeTwists.SplitClassesAll.WachTwistSplitTheoremRankForm
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.RealClassMaps.Statement
+import Formalism.WachLatticeTwists.CharacterSplitJumps.WachTwistSplitTheoremFromTorsionBound
+import Formalism.WachLatticeTwists.SplitClassesAll.Statement
 
 open Finset Classical
 

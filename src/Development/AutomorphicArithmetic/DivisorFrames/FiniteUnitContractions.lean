@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AutomorphicArithmetic.LocalEmbeddings.ConeBumpB
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
+import Development.AbelianVarietyTheory.Definitions.Foundations.T2SpaceTensorProductFiniteExtension
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK
@@ -63,7 +64,7 @@ private lemma key {K A : Type} [NormedField K] [CommRing A] [Algebra K A] [Modul
     have hz : Algebra.norm K (1 + ((0 : K) - 1) • e m) = 0 := by
       rw [Algebra.norm_apply, LinearMap.det_eq_zero_iff_ker_ne_bot, Submodule.ne_bot_iff]
       refine ⟨e m, ?_, he0 m⟩
-      simp [add_mul, he1]
+      simp [he1]
     rw [hz, norm_zero] at h0
     exact zero_ne_one h0
   · intro t ht

@@ -1,4 +1,14 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.HarishChandraModules.KFiniteAnalyticVectors.FundamentalDomainCusps.NilpAlg
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
 
 open Matrix
 
@@ -124,8 +134,8 @@ theorem nilpotent_lie_algebra : NilpAlg := by
     have b := hY.2
     rw [second_order_exp_mul a b]
     simp only [ex2, mul_add, add_mul, mul_sub, sub_mul, smul_mul_assoc, mul_smul_comm, Matrix.mul_assoc,
-      a.triple a a, a.triple a b, a.triple b a, a.triple b b, b.triple a a, b.triple a b, b.triple b a,
-      b.triple b b, Matrix.mul_zero, smul_zero, sub_zero, add_zero, sub_self]
+      a.triple a b, a.triple b a, a.triple b b, b.triple a a, b.triple a b, b.triple b a,
+      Matrix.mul_zero, smul_zero, add_zero, sub_self]
     module
   · rw [conjTranspose_neg, Matrix.neg_mul, Matrix.mul_neg, ← neg_add, hZ.1, neg_zero]
   · rw [neg_mulVec, hZ.2.1 z hz, neg_zero]

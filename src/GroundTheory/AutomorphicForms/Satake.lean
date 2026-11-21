@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.SatakeTriangular
 import GroundTheory.AutomorphicForms.Spherical
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.ImportsSideLast

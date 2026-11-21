@@ -1,4 +1,37 @@
-import Mathlib
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
 
 open Polynomial
 
@@ -36,7 +69,7 @@ theorem antidiag_twisted_norm : ∀ (E : Type) [Field E] (c : E ≃+* E), (∀ x
         simp only [Fin.rev_rev, if_true, hsign]
         rw [mul_one, mul_left_comm, hpm, mul_one]
       · have : ¬ k = i.rev.rev := by rwa [Fin.rev_rev]
-        simp [this, h, Ne.symm h]
+        simp [h, Ne.symm h]
     · intro j _ hj; simp [hj]
     · intro h; exact absurd (Finset.mem_univ _) h
   have hright : Φ * Φ.transpose = 1 := by
@@ -61,7 +94,7 @@ theorem antidiag_twisted_norm : ∀ (E : Type) [Field E] (c : E ≃+* E), (∀ x
     intro A; ext i j; simp [hc]
   refine ⟨hT, hdet, fun δ hδ => ⟨?_, ?_⟩⟩
   · rw [hmapmul, hΦc, Matrix.transpose_mul, Matrix.mul_inv_rev, hTinv, hinv, hT]
-    simp only [Matrix.mul_smul, Matrix.smul_mul, Matrix.mul_assoc]
+    simp only [Matrix.mul_smul, Matrix.mul_assoc]
   · have hYd : IsUnit ((δ.map c).transpose).det := by
       rw [Matrix.det_transpose]
       have h1 := RingHom.map_det (c : E →+* E) δ

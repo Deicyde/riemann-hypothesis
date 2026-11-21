@@ -1,9 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LinePlace
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipAugLeJacKer
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBThetaDescentIdentity
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SplitPlaceEmbeddingExists
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalCharacterNormOneUnit
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviBlockSizesSum
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LogAbsEEqZero
 
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes

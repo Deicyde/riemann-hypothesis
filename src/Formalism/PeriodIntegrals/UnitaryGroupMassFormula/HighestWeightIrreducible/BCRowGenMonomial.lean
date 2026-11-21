@@ -1,9 +1,9 @@
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.HighestWeightIrreducible.ClosedEqNablaC
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.GradedWeylDivisibility.FockSpaceTableaux.LGradedLemmas
-import Formalism.GradedWeylDivisibility.FockSpaceTableaux.LHwinLemmas
-import Formalism.GradedWeylDivisibility.FockSpaceTableaux.ClosedEqNabla
-import Formalism.GradedWeylDivisibility.FockSpaceTableaux.FockQRowDivAdj
-import Formalism.GradedWeylDivisibility.FockSpaceTableaux.LFocksLemmas
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
 
 open MvPolynomial Formalism.GradedWeylDivisibility Formalism.REAL
 
@@ -23,7 +23,7 @@ theorem bC_rowGen_X {r n : ℕ} (a : Fin r) (v : Fin r × Fin n) :
 theorem bC_rowGen_C {r n : ℕ} (a : Fin r) (c : ℂ) :
     rowGen ℂ a a (C c : MvPolynomial (Fin r × Fin n) ℂ) = Polynomial.C (C c) := by
   first
-    | simp [rowGen, MvPolynomial.aeval_C]
+    | simp [rowGen]
     | rfl
 
 theorem bC_rowGen_monomial {r n : ℕ} (a : Fin r) (m : Fin r × Fin n →₀ ℕ) (c : ℂ) :
@@ -150,8 +150,8 @@ theorem bC_multi {r n : ℕ} (M : Submodule ℂ (MvPolynomial (Fin r × Fin n) �
         (fun m hm => Finset.mem_image_of_mem _ hm) (μ a0), fun m => ?_⟩
     rw [MvPolynomial.coeff_weightedHomogeneousComponent, hh]
     by_cases h1 : Finsupp.weight (lgraded_wa a0) m = μ a0
-    · simp [h1, Finset.forall_mem_insert]
-    · simp [h1, Finset.forall_mem_insert]
+    · simp [h1]
+    · simp [h1]
 
 theorem bC_graded {r n : ℕ} (M : Submodule ℂ (MvPolynomial (Fin r × Fin n) ℂ)) (hM : RowDivClosed M)
     (f : MvPolynomial (Fin r × Fin n) ℂ) (hf : f ∈ M) (μ : Fin r → ℕ) :
@@ -256,7 +256,7 @@ private theorem isWeightedHomogeneous_coeff_rowGen_monomial {r n : ℕ} (a b : F
         Polynomial.C (MvPolynomial.C c0) := by
       rw [MvPolynomial.monomial_zero']
       first
-        | simp [rowGen, MvPolynomial.aeval_C]
+        | simp [rowGen]
         | rfl
     rw [hC, Polynomial.coeff_C]
     by_cases hk : k = 0
@@ -269,7 +269,7 @@ private theorem isWeightedHomogeneous_coeff_rowGen_monomial {r n : ℕ} (a b : F
     rw [MvPolynomial.monomial_single_add, map_mul, map_pow]
     have hw : Finsupp.weight (fun v : Fin r × Fin n => ((v.1 : ℕ) : ℤ)) (Finsupp.single v e + m) =
         (e : ℤ) * ((v.1 : ℕ) : ℤ) + Finsupp.weight (fun v : Fin r × Fin n => ((v.1 : ℕ) : ℤ)) m := by
-      simp [map_add, Finsupp.weight_apply, Finsupp.sum_single_index, nsmul_eq_mul]
+      simp [map_add, Finsupp.weight_apply, Finsupp.sum_single_index]
     rw [hw]
     have hpow : ∀ j : ℕ, ∀ k : ℕ, IsWeightedHomogeneous (fun v : Fin r × Fin n => ((v.1 : ℕ) : ℤ))
         (((rowGen ℂ a b (X v)) ^ j).coeff k) ((j : ℤ) * ((v.1 : ℕ) : ℤ) + (k : ℤ) * (((a : ℕ) : ℤ) - ((b : ℕ) : ℤ))) := by
@@ -351,8 +351,8 @@ theorem bC_exists_killed {r n : ℕ}
   have hL : ∀ m : Fin r × Fin n →₀ ℕ, Finsupp.weight (fun v : Fin r × Fin n => ((v.1 : ℕ) : ℤ)) m =
       ∑ i : Fin r, ((i : ℕ) : ℤ) * ((Finsupp.weight (rowW r n) m i : ℕ) : ℤ) := by
     intro m
-    simp only [Finsupp.weight_apply, Finsupp.sum, Finset.sum_apply, rowW, Pi.smul_apply, Pi.single_apply,
-      smul_eq_mul, nsmul_eq_mul, Nat.cast_sum, Nat.cast_mul, Finset.mul_sum]
+    simp only [Finsupp.weight_apply, Finsupp.sum, Finset.sum_apply, rowW,
+      nsmul_eq_mul, Nat.cast_sum, Finset.mul_sum]
     rw [Finset.sum_comm]
     refine Finset.sum_congr rfl fun v _ => ?_
     simp [Pi.single_apply] <;> ring

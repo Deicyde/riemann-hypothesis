@@ -1,4 +1,7 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.InNOfPiLam
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.LevelLetterCocycles.ArcCoordinatesOfMembership
+import Formalism.SharpRestriction.LevelLetterCocycles.CoprimeFrobeniusUniformizerPowers
 
 noncomputable section
 

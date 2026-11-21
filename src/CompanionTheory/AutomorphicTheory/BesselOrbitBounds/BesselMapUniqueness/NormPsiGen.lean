@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.AutomorphicTheory.BesselOrbitBounds.BesselMapUniqueness.BesselMapUniqGap
 import Formalism.FormalDegreeBessel.FormalDegreeRatio.UnitaryWeylNormalHolds
+import Mathlib.Algebra.Order.Ring.Star
 
 open Matrix MeasureTheory Formalism.QuantumDeterminants CompanionTheory.D.Upq.Sm
 open scoped ContDiff InnerProductSpace ComplexConjugate

@@ -1,12 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.TrivIsCr
-import Development.AbelianVarietyTheory.Statements.EllipticCurveLevels.HasLevel
-import Formalism.SharpRestriction.LevelLetterCocycles.LocCoh
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.DeRhamPotSemistable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Statements.EllipticCurveLevels.ClosedAtLConclusionOfMem
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FiniteDimensionalFilDR
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CompactGroupRepDefinedOverFiniteExtension
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.DeRhamGaloisSideIffDeRhamAtLocalEmbedding
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ClosedOfCover
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CoverExists
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CoverPull
@@ -47,7 +40,7 @@ theorem closedAtL : ClosedAtL := by
       simpa [jl, mapRep] using this
     · refine MonoidHom.ext fun g => LinearMap.ext fun v => ?_
       rw [hR]
-      simp [LocBridge.repE, Matrix.toLin'_apply]
+      simp [LocBridge.repE]
 
   have hCl : ∀ ρ₁ ∈ (fun ρ => ρ.comp jl) '' C, ∀ (L : FinExt l) (r' : ↥(GK Bw.Kw) →* GL (Fin a) ↥L.1)
       (R : Representation ↥L.1 ↥(GK Bw.Kw) (Fin a → ↥L.1)), Bw.LL.1 ≤ L.1 → (∀ g v, R g v = (r' g).val *ᵥ v) →
@@ -93,7 +86,7 @@ theorem closedAtL : ClosedAtL := by
       ⟨hle, by rw [← hr₁]; rfl⟩
     obtain ⟨hdr, hmu, hcy⟩ := GlobalTheory.CovClose.closed_of_cover l Bw.Kw Bw.LL P AI T a ha Bw.LL_split (r.comp jl) _ Cv' J' hCl L
       (r₁.comp jl) (Bw.repE L (r₁.comp (ReciprocityTheory.Gal.Dec (F := E) A).subtype)) hle
-      (fun g v => by simp [LocBridge.repE, jl, Matrix.toLin'_apply]) (fun g i k => by rw [← hr₁]; rfl)
+      (fun g v => by simp [LocBridge.repE, jl]) (fun g i k => by rw [← hr₁]; rfl)
     refine ⟨hmod, ?_, hmu, fun hc => hcy (hcr hc)⟩
     have h := hdr
     unfold Formalism.MainNotions.N.IsDR at h

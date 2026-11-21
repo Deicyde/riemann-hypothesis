@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.SubMul
+import Formalism.LocalToGlobal.ProjectiveLattices.CuspMulOf
+import Mathlib.Data.Finsupp.Pointwise
 
 noncomputable section
 

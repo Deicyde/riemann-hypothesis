@@ -1,6 +1,7 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.Satake
-import GroundTheory.AutomorphicForms.GL2.GJUnramifiedDegree
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.AutomorphicForms.GL2.GJLeviZetaBlocks
+import GroundTheory.AutomorphicForms.SatakeNormalized
 set_option maxSynthPendingDepth 1
 
 noncomputable section

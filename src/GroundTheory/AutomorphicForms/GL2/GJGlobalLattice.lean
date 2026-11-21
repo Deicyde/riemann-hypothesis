@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.GL2.GJGlobalDefs
 import GroundTheory.GlobalFields.TateThesis.GlobalZetaFinite
-import GroundTheory.AutomorphicForms.CuspidalDiscreteness.CuspFormsDecay
+import GroundTheory.AutomorphicForms.GL2.GJMatrixSchwartz
+import Mathlib.Analysis.Normed.Unbundled.RingSeminorm
 
 open MeasureTheory NumberField Topology Filter Set
 open scoped NumberField.AdeleRing Classical nonZeroDivisors

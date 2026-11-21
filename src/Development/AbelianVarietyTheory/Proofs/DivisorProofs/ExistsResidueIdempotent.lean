@@ -1,6 +1,13 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AzumayaBaseChange
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsOneTmulEq
+import Mathlib.Algebra.Azumaya.Basic
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.LittleWedderburn
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleModule.WedderburnArtin
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
 open IsLocalRing
 open scoped TensorProduct
 

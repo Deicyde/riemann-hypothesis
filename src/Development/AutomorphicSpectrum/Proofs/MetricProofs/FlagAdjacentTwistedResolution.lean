@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.IsLocSec
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.MinorIJMap
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.FlagCoverTwoFramesComparison
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.ElementaryTwistMinorScalarStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.TwistedAtlasCompatibilityStatement

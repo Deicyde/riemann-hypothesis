@@ -1,11 +1,6 @@
-import Mathlib
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.ExistsNormBoundThreeFamilies
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.MemLevelZeroOfMemGroup
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.OnePointBasisFundamentalDomainVolume
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.StandardPairingOfHeads
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.HeadGermSmoothExtension
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.RadialExhaustion
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.PBGWaveMain
 
 noncomputable section
 

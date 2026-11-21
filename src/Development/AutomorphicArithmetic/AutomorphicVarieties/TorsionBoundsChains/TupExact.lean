@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.TorsionBoundsChains.FaceDSingle
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ConvexNerveComplexes.AltDoubleSum
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ConvexNerveComplexes.BdMem
 
 open CategoryTheory UpperTheory.V.KH
 

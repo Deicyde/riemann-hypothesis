@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.CechLevelsGeneration.LevelsOfGen
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry Opposite GlobalTheory.EtC

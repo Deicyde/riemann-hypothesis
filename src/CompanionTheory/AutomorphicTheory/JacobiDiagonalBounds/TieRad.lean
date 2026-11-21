@@ -1,6 +1,8 @@
-import Formalism.HermitianCurvature.RealInputsClosedAdmissibleSettings
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJDHat
 import CompanionTheory.AutomorphicTheory.JacobiDiagonalBounds.TieAlg
+import Formalism.HermitianCurvature.StatementTop
 
 namespace Formalism.FourierDecayAlt.P.NormalFormRelations
 

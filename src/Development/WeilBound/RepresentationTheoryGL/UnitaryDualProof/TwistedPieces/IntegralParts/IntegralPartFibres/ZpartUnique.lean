@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.TwistedPieces.IntegralParts.IntegralPartFibres.Zpart
 import Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.CompactOrbits.NilpotentOrbits.OrbitIntegrals.CompactPowers.ExistsPowSmulMemOfIsCompact
+import Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.TwistedPieces.TraceForm
 
 noncomputable section
 
@@ -94,7 +97,7 @@ theorem cc_conj {Z : Subalgebra k (Matrix (Fin n) (Fin n) k)} (hZ : CR Z) {g : G
     have : ∀ j : ℕ, (g.val * (x - zpart Z x) * g⁻¹.val) ^ j = g.val * (x - zpart Z x) ^ j * g⁻¹.val := by
       intro j
       induction j with
-      | zero => simp [← Units.val_mul]
+      | zero => simp
       | succ j ih =>
         rw [pow_succ, ih, pow_succ]
         simp only [mul_assoc]

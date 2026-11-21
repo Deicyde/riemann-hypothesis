@@ -1,9 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.StepsNonvacuous
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GrothendieckDeformation
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsCrystalPairing
 import Development.AbelianVarietyTheory.Definitions.ThetaValues.MemAnalyticAtZeroOfEventuallyDifferentiableAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.JetRingProdEqFactorialSmulStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.JetRingProdEqZeroOfLongStatement
@@ -170,7 +167,7 @@ theorem jetCalc : JetCalc := by
     by_cases hν : ν.1 = Pi.single i 1
     · have h1 : (⟨Pi.single i 1, by simp⟩ : Idx I n) = ν := Subtype.ext hν.symm
       have h2 : Finsupp.equivFunOnFinite.symm ν.1 = Finsupp.single i 1 := by
-        ext j; simp [hν, Pi.single_apply, Finsupp.single_apply, eq_comm]
+        ext j; simp [hν, Finsupp.single_apply]
       rw [if_pos h1, if_pos h2, hν, mul_one]
       have : ∀ j, (Pi.single i 1 : I → ℕ) j = 0 ∨ (Pi.single i 1 : I → ℕ) j = 1 := fun j => by
         by_cases hj : j = i <;> simp [hj]

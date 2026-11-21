@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsDatNeZero
 
 set_option autoImplicit false
@@ -41,7 +42,7 @@ theorem spOver_epsHom_ptV (v : epsR R ⟶ B) (φ : D →ₐ[R] D') (x : Pt A D) 
   ext1
   · simp only [ptV, comp_lift, lift_fst, ← Category.assoc, spOver_comp]
     congr 2
-    ext c <;> simp [epsHom, DualNumber.lift_apply_apply]
+    ext c <;> simp [epsHom]
   · simp only [ptV, comp_lift, lift_snd, ← Category.assoc, spOver_comp]
     congr 2
     ext <;> simp only [AlgHom.comp_apply, EpsWeil.epsMap, epsHom, DualNumber.lift_apply_eps]

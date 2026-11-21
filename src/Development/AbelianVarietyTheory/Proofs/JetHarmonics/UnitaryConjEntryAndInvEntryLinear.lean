@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementU
-import Formalism.HermitianCurvature.StatementQ
-import Formalism.HermitianCurvature.LetterProductDoubleDegreeCount
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.BesselJUnitaryEquivariant
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
 
 open Formalism.FourierDecayAlt Formalism.REAL Formalism.QuantumDeterminants Finset Matrix
 

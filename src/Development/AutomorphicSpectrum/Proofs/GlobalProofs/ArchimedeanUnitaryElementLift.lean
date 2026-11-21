@@ -1,10 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.IsAdaptedEmpty
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.LanglandsDecompositionUnipotentLevi
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.AdelicUnitaryRealPointsStructureRealPlaces
-import Formalism.LocalToGlobal.IndefiniteReal.RealSeparation.RealPtExHolds
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ContinuousKapSymm
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompInfRTensorInlA
+import Development.AutomorphicSpectrum.Proofs.GlobalProofs.FiniteDimensionalOfSlices
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Matrix
 open scoped TensorProduct
 attribute [local instance] Formalism.BasicNotions.Host.cmStar

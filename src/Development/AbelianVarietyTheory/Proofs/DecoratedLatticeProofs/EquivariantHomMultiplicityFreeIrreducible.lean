@@ -1,5 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.EvalAtOneExtremalMul
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RepresentationTheory.Irreducible
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
 open MvPolynomial Formalism.BasicNotions Formalism.L2.Forms Formalism.L2.Ker GlobalTheory.KJInf MeasureTheory
 open scoped TensorProduct
 
@@ -114,7 +117,7 @@ theorem equivariantHom_mem_of_stable : ∀ (G H J : Type) [Group G] [Group H] [D
   let Φ : B j0 →ₗ[ℂ] (V →ₗ[ℂ] W) :=
     { toFun := fun b => e.toLinearMap ∘ₗ DirectSum.lof ℂ J (fun j => A j ⊗[ℂ] B j) j0 ∘ₗ
         (TensorProduct.mk ℂ (A j0) (B j0)).flip b ∘ₗ ι.toLinearMap
-      map_add' := by intros; ext; simp [TensorProduct.tmul_add]
+      map_add' := by intros; ext; simp
       map_smul' := by intros; ext; simp }
   have hΦ : ∀ b v, e.symm (Φ b v) = DirectSum.lof ℂ J (fun j => A j ⊗[ℂ] B j) j0 (ι v ⊗ₜ b) := by
     intro b v

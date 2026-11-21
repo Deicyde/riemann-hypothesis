@@ -1,6 +1,5 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.TwGood
-import Formalism.SharpRestriction.LevelLetterCocycles.CommutingEndomorphismPreservesInvariants
-import Formalism.LocalToGlobal.UnitaryNorms.LeastSplitAuxiliaryPrimeThetaChainSpec
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.NormalizedHeckeFactors.WittCoreInclusionMulVecMemLatticeCompletionAtPla
 import Formalism.SharpRestriction.LevelLetterCocycles.ExistsGoodPlacesEveryConjugate
 

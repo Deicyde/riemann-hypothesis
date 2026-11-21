@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MembershipProofs.BoundMulTranslate
 import Development.AutomorphicSpectrum.Proofs.MembershipProofs.NormIteratedFDerivCexpCompLe
+import Mathlib.Analysis.Calculus.LineDeriv.Basic
+import Mathlib.Analysis.Complex.TaylorSeries
 
 noncomputable section
 

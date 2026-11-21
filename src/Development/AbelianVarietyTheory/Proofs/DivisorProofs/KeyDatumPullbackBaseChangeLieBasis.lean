@@ -1,10 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.UnifAlong
-import Development.AbelianVarietyTheory.Definitions.ModuliSpaces.FiniteHomogeneousInf
-import Development.AbelianVarietyTheory.Statements.FundamentalDomains.ExistsIsAddFundamentalDomain
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.PullCub
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.BCRing
-import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.IsLieCombOneIffComp
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsLieBasisPullbackGeneric
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -127,7 +122,7 @@ theorem keyOn_pullback : ∀ (A B K : Type) [CommRing A] [CommRing B] [CommRing 
     · have e1 := hF1 a
       simp only [TrivSqZeroExt.algebraMap_eq_inl] at e1
       rw [e1]
-      simp [Chart.dualMapR, TrivSqZeroExt.algebraMap_eq_inl]
+      simp [Chart.dualMapR]
     · rw [hF2]
       ext <;> simp [Chart.dualMapR]
   have hv' : ∀ i, (x.v i).left ≫ φ' = spMap (Chart.dualMapR h) ≫ (y' i).left := fun i => by

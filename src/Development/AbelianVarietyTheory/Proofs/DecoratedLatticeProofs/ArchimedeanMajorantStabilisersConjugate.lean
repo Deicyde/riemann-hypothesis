@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.ContinuesConst
-import Development.AbelianVarietyTheory.PublishedTheorems.SiegelWeil₂.EisensteinMaximalParabolic
-import Development.AbelianVarietyTheory.PublishedTheorems.SiegelWeil₂.SiegelEisensteinContinuationOfDoublingMethod
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.MixSDblDecZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.HermitianSpaceBaseLatticeEqFrameLattice
 
 noncomputable section
 
@@ -155,7 +153,7 @@ theorem permGL_diagonal (π : Equiv.Perm (Fin n)) (d : Fin n → A) :
   show ((1 : Matrix (Fin n) (Fin n) A).submatrix id π)ᵀ * Matrix.diagonal d *
     (1 : Matrix (Fin n) (Fin n) A).submatrix id π = _
   ext i j
-  simp [Matrix.mul_apply, Matrix.one_apply, Matrix.diagonal_apply, Matrix.transpose_apply]
+  simp [Matrix.mul_apply, Matrix.one_apply, Matrix.diagonal_apply]
   split_ifs with hij
   · rw [hij]
   · rfl

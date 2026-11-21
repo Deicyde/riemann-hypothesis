@@ -1,4 +1,10 @@
+import BuildAid.Leniency.Open
 import Formalism.EisensteinCokernelLengths.RationalTailBound
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
 
 open scoped ENNReal
 

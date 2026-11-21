@@ -1,4 +1,11 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.DefsCS
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.Data.Rat.Star
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 noncomputable section
 open Module NumberField Matrix
@@ -232,7 +239,7 @@ theorem covolume_of_dual_holds : Formalism.UG.CS.CovolOfDual := by
     simp only [Matrix.mul_apply, Matrix.map_apply, P, Matrix.of_apply, Matrix.smul_apply,
       Matrix.one_apply, smul_eq_mul]
     rw [this, hD]
-    simp [Pi.single_apply, eq_comm]
+    simp [Pi.single_apply]
   have hle := csCovol_det_le G hGpos D hD0 P hP
   have hleR : ZLattice.covolume (Formalism.HermitianLatticesTheory.zmap ι M) ^ 2 ≤ |(D : ℝ)| ^ N := by
     rw [hsq]

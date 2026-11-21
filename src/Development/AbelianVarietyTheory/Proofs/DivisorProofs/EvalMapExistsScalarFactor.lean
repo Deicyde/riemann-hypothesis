@@ -1,8 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicSchwartzFinitePureTensors
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepresentationPreservesSchwartz
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaTransformRationalTranslateQuasiInvariant
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StandardAdelicCharacterNontrivialAtPlaces
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedPlaneHermitianIdealCoprime
@@ -119,7 +117,7 @@ theorem GlobalTheory.ExpandDenom.main : GlobalTheory.ThK.KP → ∀ (F E : Type)
     have h1 := hH.xy
     have h2 : σ (form σ W.J H'.x H'.y) = -form σ W.J H'.y H'.x := by
       simp only [form, dotProduct, Matrix.mulVec, map_sum, map_mul, hW.skew, Finset.mul_sum, neg_mul, mul_neg,
-        Finset.sum_neg_distrib, AlgHom.commutes]
+        Finset.sum_neg_distrib]
       rw [Finset.sum_comm]
       refine congrArg Neg.neg (Finset.sum_congr rfl fun k _ => Finset.sum_congr rfl fun i _ => ?_)
       rw [GlobalTheory.AdelicU.cm_conj_conj hB.cm]

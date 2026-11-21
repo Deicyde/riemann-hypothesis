@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.GlobalClassFormation.LevelDefs
 import GroundTheory.GlobalFields.SecondInequality.Cyclic
 import GroundTheory.TateCohomology.HerbrandTate

@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.PrismaticDieudonnePerfdIff
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ProjectiveRangeOfCompEqSmul
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ZetaSubOneMemJacobson
 

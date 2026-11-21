@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.TorsionNormIteration.InvIntegralOfClass
 import Formalism.FormalGroupLog.LogDeterminesLaw
+import Mathlib.RingTheory.PowerSeries.Expand
 
 noncomputable section
 

@@ -1,14 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SecJets4
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.MatrixLemma
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.AbsoluteSiegel
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ConjInvIff
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LogHeightBoundFromInequalityStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianLatticeBaseChangeStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SemiFibrationLieLatticeFullStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.JetSlopeDegreeInequalityStatement
-import ReciprocityTheory.GeometryOfNumbers.LatticeCovolumes.PosSemidefOfForallCombination
-import ReciprocityTheory.GeometryOfNumbers.MatrixArithmetic.WeakMatSt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.TorusExt
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.Etale.Weakly
 open NumberField MeasureTheory ReciprocityTheory.GeometryOfNumbersTheory ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.LieHt
 open scoped ComplexOrder
 
@@ -88,7 +82,7 @@ theorem GlobalTheory.baseChange_isometry_injective : ∀ (K K' : Type) [Field K]
     refine Finset.sum_congr rfl fun i _ => Finset.sum_congr rfl fun j _ => ?_
     congr 1
     have e : ∀ k, (Pi.single k 1 : Fin n → K') = fun i => algebraMap K K' ((Pi.single k 1 : Fin n → K) i) := by
-      intro k; ext i; by_cases hik : i = k <;> simp [Pi.single_apply, hik]
+      intro k; ext i; by_cases hik : i = k <;> simp [hik]
     rw [e i, e j, h3, h3, bc_form h h' hb, ← hα, ← bc_form hW hW' hbW]
   refine ⟨β, ?_, hiso, h3⟩
   rw [← LinearMap.ker_eq_bot, LinearMap.ker_eq_bot']

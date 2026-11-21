@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.ImportsTailSide
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PSegreBase
 set_option maxSynthPendingDepth 1

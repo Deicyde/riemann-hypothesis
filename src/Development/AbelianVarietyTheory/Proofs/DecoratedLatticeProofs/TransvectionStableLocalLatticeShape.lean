@@ -1,4 +1,8 @@
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.NormOneAtOne
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.DataHost
+import Mathlib.NumberTheory.LocalField.Basic
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.Tactic.Polynomial.Basic
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.S Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes MeasureTheory IsDedekindDomain NumberField Matrix Formalism.L2.Theta Formalism.L2.DIV Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.Lev Formalism.IndefR.Mult Formalism.IndefR.Datum Formalism.IndefR.AutomorphicEvaluation Formalism.L2.SG.HidaSetting Formalism.L2.SG.PoincareInHH.PoincareSetting Formalism.L2.SG.RowDict Formalism.L2.SG.RowsJoinPinned GlobalTheory.MixModel GlobalTheory.MixPer GlobalTheory.Unf GlobalTheory.Core.Rk GlobalTheory.Core.Mi
 open scoped TensorProduct InnerProductSpace Classical
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
@@ -28,7 +32,7 @@ theorem GlobalTheory.LatPairStab.stable_lattice_shape : ∀ (k : Type) [Field k]
     ext m
     by_cases hm : m = b
     · subst hm; simp [Subring.smul_def]
-    · simp [hm, Subring.smul_def]
+    · simp [hm]
 
   have ha : ∀ t : 𝒪[k], Pi.single a ((t : k) * c) ∈ L := by
     intro t

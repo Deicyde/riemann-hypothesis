@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import ReciprocityTheory.SemistableReduction.ComapInclusionIsLocalHom
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
 
 namespace ReciprocityTheory.MultiplicativeHeights
 

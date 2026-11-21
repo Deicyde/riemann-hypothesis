@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DbarAddVectorScalar
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.DifferentiableOnOfTendstoLocallyUniformlyOn
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsTorsionFormPoint
+import Mathlib.RingTheory.SimpleRing.Principal
 open Matrix Set Filter Topology
 open GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe GlobalTheory.TorsionForm GlobalTheory.TorsionForm.Pullback
 open scoped ContDiff
@@ -35,8 +36,8 @@ theorem hasFDerivAt_apply_of_vanish {X V F : Type} [NormedAddCommGroup X] [Norme
   · exact Filter.Eventually.of_forall fun x => by
       simp only [Finset.sum_apply, hc]; exact hexp x (u x)
   · intro w
-    simp only [ContinuousLinearMap.sum_apply, ContinuousLinearMap.add_apply,
-      ContinuousLinearMap.smul_apply, ContinuousLinearMap.smulRight_apply,
+    simp only [ContinuousLinearMap.sum_apply,
+      ContinuousLinearMap.smulRight_apply,
       ContinuousLinearMap.comp_apply, hu0, map_zero, hc, Finsupp.coe_zero, Pi.zero_apply,
       zero_smul, zero_add]
     exact (hexp x₀ (u' w)).symm

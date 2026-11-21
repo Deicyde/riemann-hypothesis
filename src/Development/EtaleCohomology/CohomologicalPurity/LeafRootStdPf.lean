@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.CohomologicalPurity.LeafRootPf
 import Mathlib.RingTheory.Etale.StandardEtale
-import Mathlib.RingTheory.RingHom.Etale
 
 noncomputable section
 open Polynomial

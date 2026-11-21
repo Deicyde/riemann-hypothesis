@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.StatementsPlueckerSpan
+import Mathlib.LinearAlgebra.ExteriorPower.Basis
 set_option maxSynthPendingDepth 1
 
 noncomputable section

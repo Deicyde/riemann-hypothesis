@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EtaleLocalRingOfLocalizationStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EtaleAdjoinBaseChangeImageStatement
+import Mathlib.Tactic.Monotonicity.Lemmas
 open IsLocalRing TensorProduct
 
 namespace GlobalTheory.EtaleOverDirectedUnion

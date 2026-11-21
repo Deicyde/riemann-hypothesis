@@ -1,7 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PolyBall
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MemTwKerIffAverage
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.FourierTransformInversionLocalFieldPi
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 

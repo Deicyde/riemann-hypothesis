@@ -1,12 +1,6 @@
-import Mathlib
-import ReciprocityTheory.DualLattices.TowerZeroSurjective
-import ReciprocityTheory.DualLattices.LinPairStatement
-import ReciprocityTheory.DualLattices.SubMemOfCompat
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ChartPullbacks.UniversalCharts.LePreimageOfNil
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.RosVal
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SemiabelianSchemes.Biextensions.GenericFiberCubeInclusion
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PlaceDivisors.AlWellDefSt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.Clauses
 open TensorProduct IsLocalRing Matrix CategoryTheory AlgebraicGeometry MonoidalCategory CartesianMonoidalCategory MonObj ReciprocityTheory.PGsh ReciprocityTheory.PGsh.Up ReciprocityTheory.PGsh.L2 ReciprocityTheory.PGsh.Be2 ReciprocityTheory.ChartRestriction.G.Chart
 open scoped CategoryTheory.Obj CategoryTheory.MonObj
 attribute [local instance] Over.cartesianMonoidalCategory
@@ -212,7 +206,7 @@ theorem exists_sigma {T : Over S} (x a : T ⟶ G) (n : ℕ) (hx : x ^ n = 1) (ψ
         (DVR.prod_neg _ _ (prod_law₂ x 1 1 h))) ?_
       rw [hx, hψ]
       apply Additive.ofMul.injective
-      simp [Fin.prod_univ_succ, ofMul_mul, ofMul_inv, ofMul_zpow, ofMul_pow]
+      simp [Fin.prod_univ_succ, ofMul_mul, ofMul_inv, ofMul_pow]
       try module)
     (LB.mulGen P _ _ _ _ (LB.mulGen P _ _ _ _ t₂ (LB.invGen P _ _ t₁))
       (LB.invGen P _ _ (LB.pullGen P _ _ β.law2 (lift x (lift (1 : T ⟶ G) (1 : T ⟶ G))).left)))

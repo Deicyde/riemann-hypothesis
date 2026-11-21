@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.Columns.ColFormsLemmas
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.BaseInst
 
 open NumberField IsDedekindDomain IntermediateField Module

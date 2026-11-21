@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.ThetaMetrics.IsKMeas
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.LintegralGaussianHyperboloidFiberStatement
+import Std.Tactic.BVDecide.Normalize.Prop
 open Matrix MeasureTheory Formalism.QuantumDeterminants Formalism.FourierDecayAlt.B Formalism.FourierDecayAlt.B2 GlobalTheory.HCXi
 open scoped ENNReal ComplexOrder
 

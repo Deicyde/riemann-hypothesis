@@ -1,10 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.PAdicHodge.BdRAlg
 import GroundTheory.PAdicHodge.BdRSeries
-import GroundTheory.PAdicHodge.BdRLattice
-import GroundTheory.PAdicHodge.BdRGalois
 import GroundTheory.PAdicHodge.AInfXi
-import GroundTheory.PAdicHodge.TateCpTwist
+import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
 set_option maxSynthPendingDepth 1
 
 noncomputable section

@@ -1,9 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataHost
 import Formalism.LocalRingCardinality.SpanPowerMembership.Primes
 import Formalism.LocalRingCardinality.DataSpaces
 import Formalism.LocalRingCardinality.SpanPowerMembership.ExampleRanksRankComplement
-import Formalism.FrobeniusOrbits.HostCorollaries
-import Formalism.TameInertiaTowers.TowerFieldFoundations
 import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.FrameFacts
 import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.NonemptyFieldAxiomsCyclicPow
 

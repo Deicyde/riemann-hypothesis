@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.PAdicHodge.AnnNormAcrisToAnnPosBig
 import GroundTheory.PAdicHodge.WAFracGlue
 set_option maxSynthPendingDepth 1

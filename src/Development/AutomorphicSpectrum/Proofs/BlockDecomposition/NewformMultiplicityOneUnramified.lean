@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.VerticalStrips.UnramifiedEulerProductIntegral
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WhittakerCentralCharacter
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WhittakerRightTranslation
@@ -48,8 +49,7 @@ theorem det_dg (a d : Fˣ) : GeneralLinearGroup.det (dg2 a d : GL (Fin 2) F) = a
 
 theorem det_upm (ϖ : Fˣ) (b : F) : GeneralLinearGroup.det (upm ϖ b) = ϖ := by
   ext
-  simp [upm, uni2, dg2, Matrix.GeneralLinearGroup.val_det_apply, Matrix.det_fin_two,
-    Matrix.mul_apply, Fin.sum_univ_two]
+  simp [upm, uni2, dg2, Matrix.GeneralLinearGroup.val_det_apply, Matrix.det_fin_two]
 
 theorem dg_comm (a : Fˣ) (g : GL (Fin 2) F) : dg2 a a * g = g * dg2 a a := by
   ext i j
@@ -348,7 +348,7 @@ theorem hecke {ψ : AddChar F Circle} (hψ : IsStd ψ) {μ₁ μ₂ : Fˣ →* �
   have e2 := congrFun (hlin ((B.card : ℂ) • ind0) (Submodule.smul_mem _ _ hsb) _ (hrt (dg2 ϖ ϖ))).1 g
   have e3 := congrFun ((hlin _ hsb _ hsb).2 (B.card : ℂ)) g
   rw [hfun, e2, Pi.add_apply, e3, Pi.add_apply, hS] at e1
-  simp only [Pi.add_apply, Pi.smul_apply, Finset.sum_apply, smul_eq_mul] at e1
+  simp only [Pi.smul_apply, Finset.sum_apply, smul_eq_mul] at e1
   have hcen : W2 ψ μ₁ μ₂ ind0 (g * dg2 ϖ ϖ) = ((μ₁ ϖ * μ₂ ϖ : ℂˣ) : ℂ) * W2 ψ μ₁ μ₂ ind0 g := by
     rw [← dg_comm]
     exact GlobalTheory.CompanionTheory.WhittakerCentral.whittaker_central_character_equivariance ψ μ₁ μ₂ ind0 ϖ g

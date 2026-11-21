@@ -1,4 +1,6 @@
-import Formalism.LocalToGlobal.Columns.RecChainYUnfPol
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.Columns.Record
 
 open NumberField IsDedekindDomain Module
 

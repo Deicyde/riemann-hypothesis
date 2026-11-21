@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.TateThesis.EulerFactorsInfinite
 import GroundTheory.GlobalFields.TateThesis.EulerFactorsInverse
 import GroundTheory.GlobalFields.TateThesis.GaussianComplexFourier

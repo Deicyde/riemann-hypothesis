@@ -1,4 +1,46 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.DualNumber
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
 
 open MvPolynomial
 
@@ -56,7 +98,7 @@ theorem exists_relation_gradient {R A k ι : Type} [CommRing R] [CommRing A] [Fi
         rw [pderiv_mul, pderiv_X]
         by_cases hj : j = n
         · subst hj; simp; ring
-        · simp [hj, Pi.single_apply, Ne.symm hj]; ring
+        · simp [hj, Ne.symm hj]; ring
       simp only [this, Finset.sum_add_distrib, Finset.sum_mul]
       simp [add_comm]
   have hker : RingHom.ker ev ≤ RingHom.ker ψ := by
@@ -118,7 +160,7 @@ theorem taylor_bound [Fintype ι] [DecidableEq ι] (c : R →+* K) (hc : ∀ w, 
       rw [pderiv_mul, pderiv_X]
       by_cases hj : j = n
       · subst hj; simp [eval₂_mul]; ring
-      · simp [hj, Pi.single_apply, Ne.symm hj, eval₂_mul]; ring
+      · simp [hj, Ne.symm hj, eval₂_mul]; ring
     have hL : ‖∑ j, eval₂ c x (pderiv j p) * (y j - x j)‖ ≤ r := by
       refine norm_sum_le_of_le _ hr fun j => ?_
       rw [norm_mul]

@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.QuasiCompact
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EtaleNearPointOfEtaleOnFibreSmooth
+import Development.AbelianVarietyTheory.Definitions.Divisors.TateProductRigidificationTrivial
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj IsLocalRing NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open scoped CategoryTheory.Obj
@@ -92,7 +92,7 @@ theorem GlobalTheory.Mum.fibre_etale_near : ∀ (R : Type) [CommRing R] [IsDomai
   have hxk : x' ≫ M.π = k' ≫ spMap (residue R) := by
     simp only [x', k', Category.assoc, hκ, ← Spec.map_comp]; rfl
   have hpt : x' (closedPoint Ω') = p z := by
-    simp only [x', Scheme.Hom.comp_apply]
+    simp only [x']
     have := Set.mem_range_self (f := ⇑(M.S.fromSpecResidueField (p z))) ((spMap io) (closedPoint Ω'))
     rwa [Scheme.range_fromSpecResidueField] at this
   obtain ⟨w, hw1, -⟩ := Scheme.Pullback.exists_preimage_pullback (f := p) (g := x') z (closedPoint Ω') hpt.symm

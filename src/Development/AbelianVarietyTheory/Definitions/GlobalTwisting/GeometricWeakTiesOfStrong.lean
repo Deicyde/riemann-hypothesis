@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.GoodReductionCondition
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.MultW
-import Formalism.SharpRestriction.DesignExistsOfChoices
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ReadPk
 
 noncomputable section
 

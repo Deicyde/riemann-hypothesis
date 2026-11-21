@@ -1,10 +1,10 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.IsEigFrames
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.IntEmbInjective
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.IsFundSet
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.SignatureBlockDiagonal
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.HermitianPositiveSymplectic
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.TraceEqSumReCmType
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
 
 namespace UpperTheory.Reformulated.B.Gwb8
 

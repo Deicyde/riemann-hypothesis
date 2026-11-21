@@ -1,5 +1,8 @@
-import Development.WeilBound.CoreStatements.HodgeTatePoints.TorusExtensionPairCorrectionEqValueQuotient
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.RelatedPairsOrbitalTermEq
+import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.OmStable
+import Mathlib.RingTheory.PicardGroup
 
 open Module NumberField GlobalTheory.CompanionTheory.Ar.HT
 

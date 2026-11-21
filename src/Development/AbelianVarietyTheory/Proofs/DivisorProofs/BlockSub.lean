@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BaseChange
+import BuildAid.Leniency.Open
+import Formalism.PieriBlockIdeals.BlockIdealBound5Derived
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 set_option autoImplicit false
 

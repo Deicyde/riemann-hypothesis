@@ -1,17 +1,10 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.BdryChart
-import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.IsPshLocallyIntegrableStatement
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.FlatDegree
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.NineGeoU
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HodgeCptAwayFromPrimesStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.CuspCorrespondenceBoundStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.FamilyExpDerivativeLie
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.IsExcisionNbhdAway
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsLieModel
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LieModelExistsUniqueSemilinearStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LieModelFiniteBaseChangeStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LieModelPushAlongMap
-import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.HolomorphicHomDetermined
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.IsEigAtIffOfIsDerivAt0
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.ExistsValueBasis
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField Matrix Filter Topology
@@ -143,7 +136,7 @@ theorem isDerivAt0_all (e : Flat.FamExp G M B ψ) {b : Fin n → ℂ} (hb : b �
       funext c
       by_cases h : c = a
       · subst h; simp
-      · simp [Pi.single_apply, h]
+      · simp [h]
     have := hpt (Pi.single a 1)
     rwa [h3] at this
   have hsm : ∀ (c : ℂ) (w : Fin g → ℂ), IsDerivAt0 (fun z => (e.ex b z).left) w (N.pt w).left →

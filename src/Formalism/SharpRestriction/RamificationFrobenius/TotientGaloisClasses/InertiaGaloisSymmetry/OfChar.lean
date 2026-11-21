@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.ArtinMapSecondEqJacobiSym
+import Mathlib.NumberTheory.NumberField.Cyclotomic.Galois
 
 open NumberField IntermediateField
 

@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJDHatJDRStepBRules
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.RadialRaisingTopOfParts
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.HasDerivAtNormPow
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.QminorZero
 
 open Matrix
 
@@ -122,9 +124,9 @@ theorem stepB_pt (z z' : Fin (2 * r + k + 1) → ℂ) (hz : inWb k r z) (hz' : i
   have hLv : LeftEq k r z 0 D (v₀ : Mx k r → E) := leftEq_cut z hN hLf
   set Λ := La hD v₀ x0 with hΛ
   set tt := r - l - 2 + k with htt
-  have hT : tt + 2 = r - (⟨l, by omega⟩ : Fin (r + 1)).val + k := by simp only [Fin.val_mk]; omega
-  have hT1 : tt + 1 = r - (⟨l + 1, by omega⟩ : Fin (r + 1)).val + k := by simp only [Fin.val_mk]; omega
-  have hT2 : tt = r - (⟨l + 2, by omega⟩ : Fin (r + 1)).val + k := by simp only [Fin.val_mk]; omega
+  have hT : tt + 2 = r - (⟨l, by omega⟩ : Fin (r + 1)).val + k := by simp only; omega
+  have hT1 : tt + 1 = r - (⟨l + 1, by omega⟩ : Fin (r + 1)).val + k := by simp only; omega
+  have hT2 : tt = r - (⟨l + 2, by omega⟩ : Fin (r + 1)).val + k := by simp only; omega
   set a := rowsN k r ⟨l, by omega⟩ s ∘ Fin.cast hT with ha
   set b := rowsN k r ⟨l, by omega⟩ t ∘ Fin.cast hT with hb
   have hav : ∀ m : Fin (tt + 2), (a m).val = if m.val < r - l + s.val then l + m.val else l + m.val + 1 := by
@@ -248,7 +250,7 @@ variable {k r : ℕ}
 
 theorem uC_step (l : ℕ) (hl : l + 1 ≤ r) (Y : ℂ) :
     Q.uC k r ⟨l + 1, by omega⟩ Y = Q.uC k r ⟨l, by omega⟩ Y - 1 := by
-  simp only [Q.uC, Q.mdim, Fin.val_mk]
+  simp only [Q.uC, Q.mdim]
   have e : r - l = r - (l + 1) + 1 := by omega
   rw [e]
   push_cast
@@ -256,7 +258,7 @@ theorem uC_step (l : ℕ) (hl : l + 1 ≤ r) (Y : ℂ) :
 
 theorem uC_gauge (l : ℕ) (hl : l < r) (Y : ℂ) :
     Q.uC k r ⟨l, by omega⟩ Y = Y + ((Mdim k r ⟨l, hl⟩ - 1 : ℕ) : ℂ) / 2 := by
-  simp only [Q.uC, Q.mdim, Mdim, Fin.val_mk]
+  simp only [Q.uC, Q.mdim, Mdim]
   have e : 2 * (r - l) + k + 1 - 1 = 2 * (r - l) + k := by omega
   rw [e]
   push_cast

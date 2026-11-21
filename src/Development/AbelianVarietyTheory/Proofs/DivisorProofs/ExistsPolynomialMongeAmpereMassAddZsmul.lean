@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ChernDegreeComplex
-import Development.AbelianVarietyTheory.Definitions.Divisors.AnalyticOnNhdFinChartIff
-import ReciprocityTheory.AnalyticForms.PotentialTheory.ProjectiveLineFubiniStudyFacts
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import ReciprocityTheory.AnalyticForms.PotentialTheory.ContDiffAtOfIsPotential
+import ReciprocityTheory.AnalyticForms.PotentialTheory.IntegrableOnTargetOfTsupport
+import ReciprocityTheory.AnalyticForms.PotentialTheory.PotentialContDiffAt
 open CategoryTheory AlgebraicGeometry TopologicalSpace Set Filter Topology MeasureTheory
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open ReciprocityTheory.ChartRestriction.G.Out (nonzeroLocus)
@@ -79,7 +80,7 @@ theorem exists_poly_finset [CompactSpace X] [T2Space X] {e : ℕ} (A : FinHolAtl
       funext i
       by_cases h : i = a
       · subst h; simp
-      · simp [hF, Function.update_of_ne h, h]
+      · simp [hF, h]
     have e1 : Function.update F a (Φ a) = F := by
       funext i
       by_cases h : i = a

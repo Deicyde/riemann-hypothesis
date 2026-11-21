@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.SphericalHeckeOperators.SymSum
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.SphericalHeckeOperators.DcoShape
 import GroundTheory.AutomorphicForms.WhittakerGroups
 

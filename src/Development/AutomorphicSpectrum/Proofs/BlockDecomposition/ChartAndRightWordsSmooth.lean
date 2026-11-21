@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DwCons
 open MeasureTheory Matrix Finset
 open scoped ContDiff

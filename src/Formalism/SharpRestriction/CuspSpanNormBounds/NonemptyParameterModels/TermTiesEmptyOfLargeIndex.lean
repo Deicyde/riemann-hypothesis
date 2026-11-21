@@ -1,8 +1,8 @@
-import Formalism.SharpRestriction.CuspSpanNormBounds.FlagEEqHyperbolic
-import Formalism.SharpRestriction.CuspSpanNormBounds.LocalGroupInFamilyNontrivial
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.UniformConstantsAndStatements
-import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
 import Formalism.LocalRingCardinality.SpanPowerMembership.ExampleClassGroupCardPos
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
 
 noncomputable section
 
@@ -39,7 +39,7 @@ theorem tie_hypE_indep (D : D7) : LinearIndependent D.host.E D.sp.hypE := by
     rw [tie_hypFE]
     by_cases h : i = j
     · subst h; simp
-    · simp [h, Ne.symm h, Pi.single_apply]
+    · simp [h, Ne.symm h]
   rw [hfun]
   exact (Pi.basisFun D.host.E (Fin D.R.rS)).linearIndependent
 
@@ -480,7 +480,7 @@ theorem tie_bc_form (x y : (hS D).V) :
   have key : (hS D).hT y x = ∑ j, ∑ i, star ((hS D).frame.repr y j) *
       ((hS D).gram j i * (hS D).frame.repr x i) := by
     conv_lhs => rw [← (hS D).frame.sum_repr y, ← (hS D).frame.sum_repr x]
-    simp only [map_sum, map_smulₛₗ, LinearMap.sum_apply, LinearMap.smul_apply, map_smul, smul_eq_mul,
+    simp only [map_sum, map_smulₛₗ, LinearMap.sum_apply, LinearMap.smul_apply, smul_eq_mul,
       starRingEnd_apply, HSpace.gram, Finset.mul_sum, RingHom.id_apply]
     rw [Finset.sum_comm]
     apply Finset.sum_congr rfl
@@ -583,8 +583,8 @@ theorem tie_diagPt_mat {K : Type*} [Zero K] {n : ℕ} (f : Fin n → K) (hf : �
   rw [tie_ptEntry_diag]
   by_cases h : a = b
   · subst h
-    simp [List.getD_eq_getElem, Matrix.diagonal_apply_eq]
-  · simp [h, Fin.val_inj, Matrix.diagonal_apply_ne _ h]
+    simp [Matrix.diagonal_apply_eq]
+  · simp [h, Fin.val_inj]
 
 theorem zero_of_gram_point_exists (D : D7) (u u' : D.what₂.Word) :
     ∃ w : Point D.host.E (D.R.rS + 1), Gpt (D.mem u).A.T (D.mem u').A.T w = 0 := by

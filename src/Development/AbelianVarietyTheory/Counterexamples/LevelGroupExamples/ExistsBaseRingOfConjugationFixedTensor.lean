@@ -1,6 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.FamilyUniformisationBasePointOrthogonal
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsIsDetRoot
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.BesselHermitianTheta.TiedWeil
 
 open NumberField Formalism.BasicNotions Formalism.MainNotions Formalism.BasicNotions.TH Formalism.L2.Theta Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.L2.Pj
 open scoped TensorProduct

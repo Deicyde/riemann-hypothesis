@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
-import Formalism.LocalToGlobal.PlaceMapInjectivity.MapPlInjective
 
 noncomputable section
 

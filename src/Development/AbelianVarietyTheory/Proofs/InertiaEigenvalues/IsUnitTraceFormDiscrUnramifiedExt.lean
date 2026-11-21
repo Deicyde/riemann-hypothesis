@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.OverExtAlgebraMap
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsLocalRingOfIdem
+import Mathlib.RingTheory.Trace.Quotient
 open GlobalTheory.UnitLemma GlobalTheory.UnitLemma.Unr Polynomial
 
 noncomputable section

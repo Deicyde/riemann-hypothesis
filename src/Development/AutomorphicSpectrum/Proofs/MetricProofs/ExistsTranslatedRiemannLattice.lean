@@ -1,10 +1,8 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.GroupDict
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsSheetCover
-import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.StatementsProved
-import GroundTheory.HeightsAndTheta.Heights.CountingLowerBound.Assembly
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.IntEmbInjective
 import GroundTheory.HeightsAndTheta.Theta.CMDatum
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
 
 noncomputable section
 
@@ -69,7 +67,7 @@ theorem sum_embeddings_cm {σ : Ψ → (𝓞 E →+* ℂ)} (hσ : IsCMFam σ) (f
         rw [hr, hτ, hcc]
   rw [← (Equiv.ofBijective m hm).sum_comp, Fintype.sum_prod_type]
   refine Finset.sum_congr rfl fun τ _ => ?_
-  simp [m, Fintype.sum_bool, add_comm]
+  simp [m, add_comm]
 
 theorem trace_eq_sum_re {σ : Ψ → (𝓞 E →+* ℂ)} (hσ : IsCMFam σ) (z : E) :
     ((Algebra.trace ℚ E z : ℚ) : ℝ) = ∑ τ, 2 * (embOf (σ τ) z).re := by

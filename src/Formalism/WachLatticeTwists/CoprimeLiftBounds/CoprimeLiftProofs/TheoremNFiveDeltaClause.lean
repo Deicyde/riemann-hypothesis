@@ -1,7 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.CoprimeLiftBounds.WachTwistTheoremDeltaClause
 import Formalism.WachLatticeTwists.CoprimeLiftBounds.CoprimeLiftProofs.TheoremNFiveTopHolds
 import Formalism.WachLatticeTwists.CoprimeLiftBounds.CoprimeLiftProofs.SelmerInjColumnPlace
-import Formalism.CharacterColumnKernels.IdempotentNormalForms.LengthKerOfDetEqZero
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
+import Mathlib.NumberTheory.Multiplicity
 
 open Finset
 

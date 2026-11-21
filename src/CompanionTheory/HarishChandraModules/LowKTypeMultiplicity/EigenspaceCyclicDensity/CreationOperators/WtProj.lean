@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import CompanionTheory.HarishChandraModules.LowKTypeMultiplicity.EigenspaceCyclicDensity.LowKMultOneP
-import Formalism.RealPlaceAnalysis.ThirdArithmeticHolds
+import Mathlib.Analysis.InnerProductSpace.Spectrum
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Finset
 open scoped InnerProductSpace

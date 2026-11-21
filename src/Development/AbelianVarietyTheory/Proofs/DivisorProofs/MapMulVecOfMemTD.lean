@@ -1,7 +1,12 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsoRows
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.HaarMapLinearScalingByDeterminant
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.LcscAdelicUnitaryGroup
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.MeasureTheory.Measure.Haar.DistribChar
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 
@@ -76,7 +81,7 @@ private lemma map_transvection_mulVec_addHaar_eq_self {R : Type} [CommRing R] [T
     rw [hD0, diagonal_mul_diagonal, ← diagonal_one]
     congr 1
     funext k
-    by_cases hk : k = i <;> simp [Function.update_apply, hk]
+    by_cases hk : k = i <;> simp [hk]
   have hT : transvection i j c * transvection i j (-c) = 1 := by
     rw [transvection_mul_transvection_same (h := hij), add_neg_cancel, transvection_zero]
   have hT' : transvection i j (-c) * transvection i j c = 1 := by

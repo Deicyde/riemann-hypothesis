@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.PlaceShiftSt
+import Development.AbelianVarietyTheory.Definitions.Divisors.PointShiftSt
 
 set_option autoImplicit false
 

@@ -1,8 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSectionOfChg
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.ExistsUniformisationOfComplexConjugateKeyDatum
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ObjPull
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ObjMapIdCompCancel
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.HermitianCompactForm
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.DeterminantSectionRule
 
 set_option autoImplicit false
 

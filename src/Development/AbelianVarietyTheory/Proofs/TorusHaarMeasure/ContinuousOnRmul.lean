@@ -1,8 +1,7 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.WeightFunctionOnFrames
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.FundSetPf
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.OntoStatementPfS
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.InterpCStatementPfA
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.ExtFStatementPfA
 
 open NumberField ReciprocityTheory.ChartRestriction.G.FD ReciprocityTheory.ChartRestriction.G.AR.Inst ReciprocityTheory.ChartRestriction.G.AR.Up ReciprocityTheory.L2DbarEstimates MeasureTheory Topology
 open scoped ContDiff ENNReal Matrix
@@ -113,7 +112,7 @@ theorem _root_.GlobalTheory.UnitaryInvMeasure.gram_lmulC {n : X.Ψ → Matrix (F
     intro c
     unfold _root_.ReciprocityTheory.ChartRestriction.G.FD.col
     ext k
-    simp [_root_.ReciprocityTheory.ChartRestriction.G.FD.mat, _root_.ReciprocityTheory.ChartRestriction.G.FD.Data.lmulC, Matrix.mulVec, dotProduct, Matrix.mul_apply]
+    simp [_root_.ReciprocityTheory.ChartRestriction.G.FD.mat, _root_.ReciprocityTheory.ChartRestriction.G.FD.Data.lmulC, Matrix.mulVec, dotProduct]
     rfl
   rw [key, key, hn τ]
 

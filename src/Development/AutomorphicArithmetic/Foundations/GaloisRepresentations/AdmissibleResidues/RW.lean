@@ -1,5 +1,7 @@
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.AdmissibleResidues.WitApi
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.AdmissibleResidues.RealDefs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.ConjugateSelfDual.Statement
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 noncomputable section
 

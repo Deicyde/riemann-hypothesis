@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.AdmissibleDesigns.SelFSOfNormAt
 import Formalism.AdmissibleDesigns.RankFfNormAt
+import Formalism.AdmissibleDesigns.GlobalIndexTheoremPlacesOfRNAdm
 
 variable [hT2Core : Fact ReciprocityTheory.ChartRestriction.T2.Core] [hH0Fin : Fact Formalism.MainNotions.N.K.H0.FinCore]
 

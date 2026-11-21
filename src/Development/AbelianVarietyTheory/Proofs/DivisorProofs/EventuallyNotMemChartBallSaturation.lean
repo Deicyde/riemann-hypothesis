@@ -1,11 +1,8 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.WeightFunctionOnFrames
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.KaUnfoldPfC
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.InterpStatementPfM
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.DifferentiableChart
 import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.FirstMinimumInvariantContinuousPosOnFrames
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormFactorAndDensityNearOneInFlagChart
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GramChartSubFormEntryLe
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open NumberField ReciprocityTheory.ChartRestriction.G.FD ReciprocityTheory.ChartRestriction.G.AR.Inst ReciprocityTheory.ChartRestriction.G.AR.Up ReciprocityTheory.L2DbarEstimates MeasureTheory Topology
 open scoped ContDiff ENNReal Matrix
 
@@ -38,7 +35,7 @@ theorem adjEnt_rmul {Ψ : Finset (E →+* ℂ)} (k b : Frame Ψ r) (hb : b ∈ B
     (hca : c < a) : adjEnt k (rmul k b) τ a c = 0 := by
   have h1 : mat (rmul k b) τ = mat k τ * mat b τ := rfl
   rw [adjEnt, h1, ← Matrix.mul_assoc, Matrix.adjugate_mul]
-  simp [Matrix.smul_mul, mat, (hb τ).2 a c hca]
+  simp [mat, (hb τ).2 a c hca]
 
 omit [NumberField E] [IsCMField E] in
 

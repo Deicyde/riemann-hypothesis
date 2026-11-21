@@ -1,5 +1,5 @@
-import Formalism.LocalToGlobal.TorsionIntegrality.WeierstrassTwoTorsion.StatementZ
-import Formalism.FormalGroupLog.LogDeterminesLaw
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.TorsionIntegrality.WeierstrassTwoTorsion.CompInv
 
 open PowerSeries
 

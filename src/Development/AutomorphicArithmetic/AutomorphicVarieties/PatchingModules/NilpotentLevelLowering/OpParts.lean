@@ -1,13 +1,9 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.NilpotentLevelLowering.ActUVariableEqPow
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.NilpotentLevelLowering.PsModule
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.NilpotentLevelLowering.PsLinSmall
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.NilpotentLevelLowering.SpLocIdem
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.NilpotentLevelLowering.FreeSummand
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.TopNilMapMem
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.DeterminantRepresentations.ChiApi
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebraHeight.PairMap
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.CoEvLow
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.CoMvps
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.BasicNotions Formalism.MainNotions.N ValuativeRel IsLocalRing
 open GlobalTheory.CuspRep GlobalTheory.WeilDeligne GlobalTheory.LocLanglands GlobalTheory.LocGL GlobalTheory.GalOfCusp GlobalTheory.SmGL GlobalTheory.SplitWeil
@@ -223,10 +219,10 @@ theorem freePart {Λ : Type} [CommRing Λ] [IsLocalRing Λ] [IsNoetherianRing Λ
   let act : MvPowerSeries (Fin q × Fin n) Λ →ₐ[Λ] Module.End Λ (LinearMap.range i) :=
     { toFun := fun z => E.conj (Algebra.lsmul Λ Λ N (s z))
       map_one' := by ext x; simp [LinearEquiv.conj_apply]
-      map_mul' := by intro a b; ext x; simp [LinearEquiv.conj_apply, mul_smul]
+      map_mul' := by intro a b; ext x; simp [LinearEquiv.conj_apply]
       map_zero' := by ext x; simp [LinearEquiv.conj_apply]
-      map_add' := by intro a b; ext x; simp [LinearEquiv.conj_apply, add_smul]
-      commutes' := by intro c; ext x; simp [LinearEquiv.conj_apply, algebraMap_smul] }
+      map_add' := by intro a b; ext x; simp [LinearEquiv.conj_apply]
+      commutes' := by intro c; ext x; simp [LinearEquiv.conj_apply] }
   have hact : ∀ z y, act z (E y) = E (s z • y) := by
     intro z y
     show E.conj (Algebra.lsmul Λ Λ N (s z)) (E y) = _

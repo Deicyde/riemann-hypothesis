@@ -1,4 +1,5 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGCoreCut
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.QNFAsm
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.IntertwinerStructure
 

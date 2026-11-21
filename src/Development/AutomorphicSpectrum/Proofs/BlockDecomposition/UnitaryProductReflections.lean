@@ -1,5 +1,5 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.PlaneSupports.PlaneSupp
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousSingleV
 
 noncomputable section
@@ -59,7 +59,7 @@ theorem hform_mulVec (g : Matrix (Fin M) (Fin M) R) (x y : Fin M → R) :
 theorem hform_single (i j : Fin M) : hform c Jm (Pi.single i 1) (Pi.single j 1) = Jm i j := by
   have h1 : c ∘ (Pi.single i 1 : Fin M → R) = Pi.single i 1 := by
     ext l
-    by_cases h : l = i <;> simp [Pi.single_apply, h]
+    by_cases h : l = i <;> simp [h]
   rw [hform_eq_dot, h1]
   simp
 
@@ -80,7 +80,7 @@ theorem qr_mulVec (a z : Fin M → R) (k : R) :
     qr c Jm a k *ᵥ z = z + (k * hform c Jm a z) • a := by
   rw [qr_eq, Matrix.add_mulVec, Matrix.one_mulVec, Matrix.smul_mulVec, ← rowV_dot]
   ext i
-  simp [Matrix.mulVec, Matrix.vecMulVec_apply, dotProduct, Finset.mul_sum, mul_assoc, mul_comm, mul_left_comm]
+  simp [Matrix.mulVec, Matrix.vecMulVec_apply, dotProduct, Finset.mul_sum, mul_comm, mul_left_comm]
 
 theorem qr_mul (a : Fin M → R) (k k' : R) :
     qr c Jm a k * qr c Jm a k' = qr c Jm a (k + k' + k * k' * hform c Jm a a) := by
@@ -89,7 +89,7 @@ theorem qr_mul (a : Fin M → R) (k k' : R) :
     ext i j
     rw [← rowV_dot]
     simp only [Matrix.mul_apply, Matrix.vecMulVec_apply, Matrix.smul_apply, smul_eq_mul, dotProduct,
-      Finset.sum_mul, Finset.mul_sum]
+      Finset.sum_mul]
     exact Finset.sum_congr rfl fun l _ => by ring
   simp only [qr_eq, add_mul, mul_add, one_mul, mul_one, Matrix.smul_mul, Matrix.mul_smul, h, smul_smul, add_smul]
   abel_nf

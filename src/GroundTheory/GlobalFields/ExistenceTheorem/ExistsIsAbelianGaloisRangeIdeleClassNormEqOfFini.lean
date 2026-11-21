@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.ExistenceTheorem.Kummer
 import GroundTheory.GlobalFields.ExistenceTheorem.NormLimitation
-import GroundTheory.GlobalFields.IdeleGroups.GaloisOnAdeles
 
 namespace GroundTheory.Global
 

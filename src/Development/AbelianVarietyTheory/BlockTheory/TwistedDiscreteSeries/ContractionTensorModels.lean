@@ -1,5 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsStepWeil
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.IndefiniteReal.LinksDefs
+import Mathlib.Analysis.Calculus.Deriv.Star
 
 noncomputable section
 

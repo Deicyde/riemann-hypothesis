@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.IntAOfNonpol
+import Formalism.SharpRestriction.LevelLetterCocycles.CancelUnitMulUniformizerPow
+import Formalism.SharpRestriction.LevelLetterCocycles.UniversalGeneralOfRestriction
 
 noncomputable section
 

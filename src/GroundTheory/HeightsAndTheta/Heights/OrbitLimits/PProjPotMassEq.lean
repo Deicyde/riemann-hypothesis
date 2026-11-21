@@ -1,5 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.PProjPotMassEqGen
+import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.PProjRegular
+import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StatementsProjPotMassEq
+import Mathlib.Algebra.Ring.IsFormallyReal
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterRedF
 set_option maxSynthPendingDepth 1
 
 noncomputable section

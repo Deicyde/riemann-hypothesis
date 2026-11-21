@@ -1,8 +1,12 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.LocalHermitianForms.LocalOrbitCounts.Descent
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.LocalHermitianForms.LocalOrbitCounts.NormEx
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.LocalHermitianForms.LocalOrbitCounts.WCard
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.LocalHermitianForms.LocalOrbitCounts.HsNE
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.LocalHermitianForms.LocalOrbitCounts.DatLam
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.PiTensorProduct
 
 open QuadraticAlgebra UpperTheory.V.Z.Sym UpperTheory.V.Z.Sym.Loc
 
@@ -394,7 +398,7 @@ private theorem herm_E (c t k : K) (a y : Etau K τ) :
   rw [herm, ← ofE_smul, sigL_ofE, ofE_star, ← ofE_one, ← ofE_smul, ← ofE_mul, ← ofE_mul, trace_ofE]
   simp only [mul_zero, zero_mul, zero_add]
   congr 1
-  simp [trace_def, QuadraticAlgebra.re_one, QuadraticAlgebra.im_one]
+  simp [trace_def]
   ring
 
 private theorem fx_gen [IsDomain O] [IsDiscreteValuationRing O] (hl : IsLoc O Δ) {t : K} (hS : IsFix O c d (t • 1) S)

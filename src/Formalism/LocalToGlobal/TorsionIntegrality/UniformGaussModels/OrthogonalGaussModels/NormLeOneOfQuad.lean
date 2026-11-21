@@ -1,7 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.UniformGaussModels.GoodModelAll
 import Formalism.LocalToGlobal.TorsionIntegrality.GaussSumParity.KummerThetaLogarithms.SecondLogDerivativeUnique
 import Formalism.LocalToGlobal.TorsionIntegrality.TorsionTranslationPowers.AnalyticTransOfAdd
-import Formalism.LocalToGlobal.TorsionIntegrality.RamifiedCurveKernels.FinalA
 import Formalism.LocalToGlobal.TorsionIntegrality.RamifiedCurveKernels.FinalD
 
 noncomputable section

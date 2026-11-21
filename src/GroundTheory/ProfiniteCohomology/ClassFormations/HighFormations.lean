@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.ClassFormations.SubsingletonCohomologyTopOfThreeLeInt
-import GroundTheory.ProfiniteCohomology.LocalClassFormationAlt
 import GroundTheory.ProfiniteCohomology.GlobalClassFormation
 set_option maxSynthPendingDepth 1
 

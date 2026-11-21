@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAut
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RegFamOfContinuousAt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsRationalDblCoord
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -39,8 +36,8 @@ def darbouxTransp {c : A →ₐ[R] A} {ξ : A} {JA : Matrix α α A} {JB : Matri
     rw [Matrix.transpose_transpose, Matrix.transpose_transpose] at h
     rw [h, d.form]
     simp only [LinearEquiv.trans_apply, LinearEquiv.prodCongr_apply, Matrix.transposeLinearEquiv_apply,
-      LinearEquiv.funCongrLeft_apply, LinearMap.funLeft_apply]
-    simp only [dotProduct, Fintype.sum_prod_type, Function.comp_apply, Equiv.prodComm_apply, Prod.swap_prod_mk]
+      LinearEquiv.funCongrLeft_apply]
+    simp only [dotProduct, Fintype.sum_prod_type]
     rw [Finset.sum_comm, Finset.sum_comm (f := fun a b => (d.e yᵀ).1 (a, b) * (d.e xᵀ).2 (a, b))]
     rfl
 

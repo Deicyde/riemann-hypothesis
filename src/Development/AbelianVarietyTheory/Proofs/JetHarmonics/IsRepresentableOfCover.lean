@@ -1,5 +1,10 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SemiabelianSchemes.PrecompleteBases.PsbLb
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.AlgebraicGeometry.Sites.Representability
+import Mathlib.CategoryTheory.EffectiveEpi.Comp
+import Mathlib.CategoryTheory.ExtremalEpi
+import Mathlib.Tactic.Monotonicity.Lemmas
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SemiabelianSchemes.CubicalStructures.CubeSymmetricSwapFirst
 
 noncomputable section
 
@@ -178,7 +183,7 @@ theorem exists_universal_units (K : Type) :
   · apply Units.ext
     rw [hpb, ← hφ]
     have : i.inv ≫ (Z.toSpecΓ ≫ Spec.map (CommRingCat.ofHom φ)).appTop = CommRingCat.ofHom φ := by
-      simp [i, ← Scheme.ΓSpecIso_inv_naturality_assoc]
+      simp [i]
     rw [this]; rfl
   · intro c c' h h'
     apply ext_of_isAffine

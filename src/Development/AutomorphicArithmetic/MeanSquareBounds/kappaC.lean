@@ -1,6 +1,6 @@
-import Development.AutomorphicArithmetic.MeanSquareBounds.PrimeSetTwoBounds
-import Formalism.GL3MeanSquares.GenusMeanAsymptotics.JacobiCharacterSums.TailFinal
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.MeanSquareBounds.TailKExp
+import Formalism.GL3MeanSquares.GenusMeanAsymptotics.JacobiCharacterSums.TailMertens
 
 open Finset Formalism.HermitianLattices.ZeroFreeRegionGL2 Formalism.HermitianLattices.Ext.LogarithmicIntegralBounds
 

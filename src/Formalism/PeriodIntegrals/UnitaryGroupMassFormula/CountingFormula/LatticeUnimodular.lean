@@ -1,6 +1,6 @@
-import Mathlib
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CountingFormula.LatticeFlagExists
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CountingFormula.CoordLInjective
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CountingFormula.UnimodOneGenus
 
 open NumberField Module Formalism.MainNotions.S Formalism.MainNotions.S.Lat Formalism.BasicNotions Formalism.L2.SG.CntLocal
 open Classical
@@ -34,13 +34,13 @@ theorem rs_mem_dual {h : (VS D).V →ₗ⋆[D.host.E] (VS D).V →ₗ[D.host.E] 
     {L : Submodule (𝓞 D.host.E) (VS D).V} {v : (VS D).V} :
     v ∈ Formalism.HermitianLatticesTheory.dual h L ↔ ∀ y ∈ L, h y v ∈ (1 : Submodule (𝓞 D.host.E) D.host.E) := by
   simp only [Formalism.HermitianLatticesTheory.dual, Formalism.E.hdual, Submodule.mem_iInf, Submodule.mem_comap,
-    LinearMap.restrictScalars_apply, LinearMap.coe_restrictScalars]
+    LinearMap.restrictScalars_apply]
 
 theorem rs_mem_dualW {h : WbQ D F0 →ₗ⋆[D.host.E] WbQ D F0 →ₗ[D.host.E] D.host.E}
     {L : Submodule (𝓞 D.host.E) (WbQ D F0)} {v : WbQ D F0} :
     v ∈ Formalism.HermitianLatticesTheory.dual h L ↔ ∀ y ∈ L, h y v ∈ (1 : Submodule (𝓞 D.host.E) D.host.E) := by
   simp only [Formalism.HermitianLatticesTheory.dual, Formalism.E.hdual, Submodule.mem_iInf, Submodule.mem_comap,
-    LinearMap.restrictScalars_apply, LinearMap.coe_restrictScalars]
+    LinearMap.restrictScalars_apply]
 
 theorem rs_inv_mul {a : Fin D.R.rS} {s x : D.host.E} (hs : s ∈ (aaI D a)⁻¹) (hx : x ∈ aaI D a) :
     ∃ o : 𝓞 D.host.E, (o : D.host.E) = s * x := by
@@ -73,7 +73,7 @@ private theorem hT_eq_hT_vPr_right_add_sum (x z : (VS D).V) : (VS D).hT x z =
 
 private theorem hT_eq_hT_vPr_left_add_sum (x z : (VS D).V) : (VS D).hT x z =
     (VS D).hT (vPr D F0 f x) z + ∑ a, star ((VS D).hT (F0.e a) x) * (VS D).hT (f a) z := by
-  simp [vPr, LinearMap.map_sub₂, LinearMap.map_sum₂, LinearMap.map_smulₛₗ₂, starRingEnd_apply]
+  simp [vPr, starRingEnd_apply]
 
 private theorem mem_perpS_X_of_hT_e_eq_zero (z : (VS D).V) (hz : ∀ b, (VS D).hT (F0.e b) z = 0) :
     z ∈ perpS (VS D) F0.X := by
@@ -201,7 +201,7 @@ theorem rs_dual_le_lam (hf : PartnerOK D F0 f) (hM : IsGlueLat (hWb D F0) (zbar 
       rw [hT_eq_hT_vPr_right_add_sum (F0 := F0) (f := f) t v]
       simp only [htf, mul_zero, Finset.sum_const_zero, add_zero]
       rw [ht]
-      simp [LinearMap.map_sub₂, LinearMap.map_sum₂, LinearMap.map_smulₛₗ₂, hT_e_vPr_eq_zero_of_partnerOK hf]
+      simp [hT_e_vPr_eq_zero_of_partnerOK hf]
     rw [← e1]
     exact hv' t htL
   have hWM : (Submodule.Quotient.mk ⟨vPr D F0 f v, hPerp⟩ : WbQ D F0) ∈

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Divisibility.CoefModLemmas
 import Formalism.LocalToGlobal.Columns.LocWLemmas
 import Lemmata.GeneralBFactSecondBisAlt.Imports

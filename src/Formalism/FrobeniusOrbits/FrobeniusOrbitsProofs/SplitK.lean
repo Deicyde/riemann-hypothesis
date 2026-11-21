@@ -1,7 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.FrobeniusOrbits.Statement
 import Formalism.TameInertiaTowers.CentralOrderTwo.OddEqOneOfSubOneMem
 import Formalism.TameInertiaTowers.CentralOrderTwo.DecompositionSubgroupIndex
+import Mathlib.Data.Rat.Star
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 open NumberField IntermediateField Ideal
 open scoped Pointwise
@@ -146,7 +150,7 @@ private theorem Kd_exists_algEquiv_bK_eq_neg (hd : 0 < d) (hb : b ^ 2 = -(d : L)
   have hroot : Polynomial.aeval (-pb.gen) (minpoly ℚ pb.gen) = 0 := by
     rw [hmin, minpoly_eq_X_sq_add_C_of_sq_eq_neg hd hb, hgen]
     first
-    | (simp only [map_add, map_pow, Polynomial.aeval_X, Polynomial.aeval_C, map_natCast]; linear_combination bK_sq hb)
+    | (simp only [map_add, map_pow, Polynomial.aeval_X, map_natCast]; linear_combination bK_sq hb)
     | (simp; linear_combination bK_sq hb)
     | (simp; rw [neg_sq, bK_sq hb]; ring)
     | (simp only [map_add, map_pow, Polynomial.aeval_X, Polynomial.aeval_C]; rw [neg_sq, bK_sq hb]; simp)

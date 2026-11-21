@@ -1,4 +1,46 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.Analysis.Complex.Harmonic.MeanValue
+import Mathlib.Analysis.Complex.Poisson
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.InnerProductSpace.Harmonic.Constructions
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
 
 open Complex Metric Real Filter Topology InnerProductSpace
 
@@ -152,7 +194,7 @@ lemma poissonInt_eq_re {g : ℂ → ℝ} {r : ℝ} (hr : 0 < r) (hg : Continuous
   congr 1
   apply intervalIntegral.integral_congr
   intro θ _
-  simp only [Pi.smul_apply, Pi.mul_apply, smul_eq_mul, Complex.mul_re, Complex.ofReal_re,
+  simp only [Pi.mul_apply, smul_eq_mul, Complex.mul_re, Complex.ofReal_re,
     Complex.ofReal_im, mul_zero, sub_zero, re_herglotzRieszKernel_eq_poissonKernel]
 
 private lemma poissonInt_eq_re_cauchy_integral {g : ℂ → ℝ} {r : ℝ} (hr : 0 < r)
@@ -235,7 +277,7 @@ lemma poissonInt_zero {g : ℂ → ℝ} {r : ℝ} (hr : 0 < r) :
   intro z hz
   rw [mem_sphere_zero_iff_norm, abs_of_pos hr] at hz
   have hz0 : ‖z‖ ≠ 0 := by rw [hz]; exact hr.ne'
-  simp only [Pi.smul_apply, Pi.mul_apply, smul_eq_mul, poissonKernel_def, sub_zero, norm_zero]
+  simp only [Pi.mul_apply, smul_eq_mul, poissonKernel_def, sub_zero, norm_zero]
   rw [div_mul_eq_mul_div, div_eq_iff (pow_ne_zero 2 hz0)]
   ring
 
@@ -261,7 +303,7 @@ lemma poissonInt_sub {g : ℂ → ℝ} {r : ℝ} (hr : 0 < r) (hg : ContinuousOn
     congr 1
     funext θ
     ring
-  simp only [Pi.smul_apply, smul_eq_mul] at h1 ⊢
+  simp only [smul_eq_mul] at h1 ⊢
   rw [hI]
   linear_combination c * h1
 

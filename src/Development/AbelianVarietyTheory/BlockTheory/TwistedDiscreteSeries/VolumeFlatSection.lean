@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.MatrixMeasurableSpace
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsSubquotientDetRepParInd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.PairwiseDisjointCell
+import Mathlib.Data.Matrix.ColumnRowPartitioned
 
 noncomputable section
 
@@ -42,7 +43,7 @@ theorem mem_parahoric {g : GL (A ⊕ D) k} : g ∈ parahoric k A D ↔
     refine ⟨⟨h, rfl⟩, fun i j => ?_⟩
     rw [SetLike.mem_coe, Subgroup.mem_comap, GlobalTheory.SmGL.mem_parab] at hh
     have h0 := hh (Sum.inr i) (Sum.inl j) (by rw [hl, hr]; decide)
-    simp only [GeneralLinearGroup.map_apply, RingHom.mapMatrix_apply, Matrix.map_apply] at h0 ⊢
+    simp only [GeneralLinearGroup.map_apply] at h0 ⊢
     exact (hval _).mp h0
   · rintro ⟨⟨h, rfl⟩, hv⟩
     refine ⟨h, ?_, rfl⟩
@@ -51,7 +52,7 @@ theorem mem_parahoric {g : GL (A ⊕ D) k} : g ∈ parahoric k A D ↔
     rcases i with i | i <;> rcases j with j | j <;> simp only [hl, hr, lt_self_iff_false] at hij
     · exact absurd hij (by decide)
     · have h0 := hv i j
-      simp only [GeneralLinearGroup.map_apply, RingHom.mapMatrix_apply, Matrix.map_apply] at h0 ⊢
+      simp only [GeneralLinearGroup.map_apply] at h0 ⊢
       exact (hval _).mpr h0
 
 def typeSpace {V : Type} [AddCommGroup V] [Module ℂ V] (π : Representation ℂ (GL (A ⊕ D) k) V) (ξ : kˣ →* ℂˣ) :
@@ -181,7 +182,7 @@ example {A D D' : Type} [Fintype A] [DecidableEq A] (ξ : kˣ →* ℂˣ) :
     all_goals exact zero_mem _
   rw [datum, dif_pos h]
   have : Units.mk0 _ h.det_ne = 1 := by ext; simp
-  simp [this]
+  simp
 
 example {D : Type} [Fintype D] [DecidableEq D] (ξ : kˣ →* ℂˣ) :
     (1 : ℂ) ∈ typeSpace (A := Fin 0) (detRep (Fin 0 ⊕ D) ξ) ξ := fun g _ d hd => by

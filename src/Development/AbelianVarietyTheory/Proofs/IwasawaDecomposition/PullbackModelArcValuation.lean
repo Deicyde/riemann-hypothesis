@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsIntOfIsIntegral
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PowerSeriesArcAbelianLocusStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PullbackModelArcTorusStatement
 open AlgebraicGeometry CategoryTheory Limits NumberField IsLocalRing TopologicalSpace

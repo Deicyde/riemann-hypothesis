@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.HodgeFrameGram
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SubquotientCurvatureStatementStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaZeroOneSkewConjStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaZeroOneLowerVanishStatement
@@ -43,8 +43,8 @@ theorem diagVal_vertForm (H : (ι → ℂ) → Matrix (Fin n) (Fin n) ℂ) (π :
   have hk : -I * kappa = ((1 / (2 * Real.pi) : ℝ) : ℂ) := by
     rw [kappa]; push_cast; field_simp; rw [I_sq]; ring
   simp only [diagVal, vertForm, thetaSq, ← mul_assoc, hk, mul_conj, ← ofReal_mul,
-    ← ofReal_sum, Finset.mul_sum, re_ofReal_mul]
-  simp [Complex.re_sum, ← ofReal_mul]
+    ← ofReal_sum, Finset.mul_sum]
+  simp [Complex.re_sum]
 
 theorem vertForm_nonneg (H : (ι → ℂ) → Matrix (Fin n) (Fin n) ℂ) (π : E → ι → ℂ)
     (e : E → Matrix (Fin n) (Fin n) ℂ) {lam : Fin n → ℝ} (h : Antitone lam) (y : E) :

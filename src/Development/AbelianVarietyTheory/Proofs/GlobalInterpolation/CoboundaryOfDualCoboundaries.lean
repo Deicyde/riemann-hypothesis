@@ -1,9 +1,7 @@
-import Mathlib
-import ReciprocityTheory.Hypotheses.GalCoh
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.GaloisValuations.ArithOfA
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.CardDualZmodModuleEqCard
-import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.IsAlgClosureAlgebraicClosureRat
-import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.IsLocallyConstantRed
+import ReciprocityTheory.Hypotheses.GalCohDefs
 
 noncomputable section
 

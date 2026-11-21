@@ -1,6 +1,7 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.HolomorphicDiscreteSeries.EmbeddedFrames.PfD
+import BuildAid.Leniency.Open
 import Formalism.RealPlaceAnalysis.Complexify
+import Mathlib.Analysis.Matrix.Normed
+import Mathlib.RingTheory.PiTensorProduct
 open Finset Matrix PositivityTheory.RgHe.Frame
 
 namespace GlobalTheory.CompanionTheory.RgHeFrame

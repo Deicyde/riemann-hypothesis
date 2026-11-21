@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousMulVec
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PairIterPhiMir
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DerivativeTwistedIso
 

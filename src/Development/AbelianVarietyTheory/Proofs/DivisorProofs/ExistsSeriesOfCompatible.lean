@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.EqZeroOfForallPowDvd
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PadicContinuousEvaluationExistsUniqueSubstNaturaStatement
 open MvPowerSeries GlobalTheory GlobalTheory.Katz GlobalTheory.QLog GlobalTheory.PDivGroup GlobalTheory.Sandwich GlobalTheory.IndefiniteRowSideFullHecke.EpsilonPairingZeta GlobalTheory.PDivLat
 open TensorProduct
 
@@ -84,7 +83,7 @@ theorem exists_series_of_compatible : ∀ (p : ℕ) (O σ : Type) [CommRing O] [
   let R := μ - h (m + N + n) - (p : O) ^ m • Q
   have hR : ∀ α : σ →₀ ℕ, α.degree < N → coeff α R = 0 := by
     intro α hα
-    simp only [R, map_sub, MvPowerSeries.coeff_smul, hQ α hα, smul_eq_mul, hq α hα, sub_self]
+    simp only [R, map_sub, MvPowerSeries.coeff_smul, hQ α hα, hq α hα, sub_self]
   have hER := hN R hR
   have hsplit : E n μ - t n = E n R + (p : A n) ^ m * E n Q := by
     have hμeq : μ = h (m + N + n) + ((p : O) ^ m • Q + R) := by simp only [R]; abel

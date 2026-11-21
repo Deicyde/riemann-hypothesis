@@ -1,13 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.IsEigFrames
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.BdryChart
-import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.IsPshLocallyIntegrableStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LogPeriodLimit
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.ExistsIsChart
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.IsotropicSublatticeCovolumePositiveStatement
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.RiemannLatticeEigenProjectionStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.ExistsIntPreimageOfOrthogonalKernelStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.RiemannFormHermitianLatticeStatement
 open NumberField Matrix Filter Topology GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Cusp GroundTheory.Heights₂.Heights.LowerBoundFree GroundTheory.Heights₂.Heights.Regular
 open GlobalTheory.CompanionTheory.Ar.RiemannLimit GlobalTheory.CompanionTheory.Ar.Cusp.BoundaryLimit
 
@@ -119,7 +113,7 @@ theorem kappa_transpose (R : Matrix (Fin g) (Fin g) ℝ) : κ[R]ᵀ = κ[Rᵀ] :
 theorem star_kappa_mulVec (R : Matrix (Fin g) (Fin g) ℝ) (v : Fin g → ℂ) :
     star (κ[R] *ᵥ v) = κ[R] *ᵥ star v := by
   funext i
-  simp [mulVec, dotProduct, map_sum]
+  simp [mulVec, dotProduct]
 
 theorem kappa_mulVec_ofReal (R : Matrix (Fin g) (Fin g) ℝ) (r : Fin g → ℝ) :
     κ[R] *ᵥ (fun k => (r k : ℂ)) = fun k => ((R *ᵥ r) k : ℂ) := by
@@ -246,7 +240,7 @@ theorem riemann_real (τ G : Matrix (Fin g) (Fin g) ℂ)
     have e2 : ((Pi.single i 1 : Fin g → ℤ) ⬝ᵥ (Pi.single j 1 : Fin g → ℤ)) = if i = j then 1 else 0 := by
       by_cases hij : i = j
       · subst hij; simp
-      · simp [hij, Pi.single_apply, Ne.symm hij]
+      · simp [hij, Ne.symm hij]
     have e3 : ∀ k, (G i k * star (τ k j)).im = -((G i k).re * (τ k j).im) := by
       intro k
       simp [Complex.mul_im, h1]

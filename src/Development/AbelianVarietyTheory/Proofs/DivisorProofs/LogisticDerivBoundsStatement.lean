@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LogisticDerivBounds
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeightBoundConst
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LogisticFactorMem
 open GlobalTheory Matrix Filter Topology Set GlobalTheory.HermFrame GlobalTheory.IndefiniteRowSideFullHecke.HermitianInterpolation GlobalTheory.InterpCurv
 open scoped ComplexOrder ContDiff
 set_option maxHeartbeats 1000000 in

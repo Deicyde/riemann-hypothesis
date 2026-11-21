@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.RatKDeg
 import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.KerEquivConcrete
 import Formalism.LocalToGlobal.Columns.RecChainUnfOne

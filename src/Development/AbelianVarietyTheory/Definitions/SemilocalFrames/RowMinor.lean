@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.CntPartners
-import Formalism.ThetaLiftIndependence.Statement
-import Formalism.FlagUnipotentLattices.CardSubmodulesAndLinearEquivBounds
 
 noncomputable section
 

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ContinuousMatQApply
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.SelNZero
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.CoboundaryInertiaIndependent

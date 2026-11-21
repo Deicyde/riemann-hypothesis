@@ -1,6 +1,14 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.FrobeniusSmoothVectors.Integral
 import Development.AutomorphicArithmetic.AutomorphicVarieties.FrobeniusSmoothVectors.Imports
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.SqrtOneAdd
+import Mathlib.Algebra.Group.Pi.Units
+import Mathlib.LinearAlgebra.Eigenspace.Basic
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import Mathlib.RingTheory.Ideal.Quotient.HasFiniteQuotients
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.TotallySplit
 
 open IsLocalRing Matrix UpperTheory.V.Alg UpperTheory.V.U3 UpperTheory.V.Fr
 
@@ -277,10 +285,10 @@ theorem UpperTheory.V.Fr.of_form :
     have hb : (a : ResidueField O) ≠ 0 := a.ne_zero
     rw [hX, map_sub, htr.2, htr.2, hP1, hP2, hz, Units.val_inv_eq_inv_val]
     rcases hn with rfl | rfl
-    · simp [Fin.sum_univ_two, UpperTheory.V.Fr.w, Units.val_inv_eq_inv_val]
+    · simp [Fin.sum_univ_two, UpperTheory.V.Fr.w]
       field_simp
       ring
-    · simp [Fin.sum_univ_three, UpperTheory.V.Fr.w, Units.val_inv_eq_inv_val]
+    · simp [Fin.sum_univ_three, UpperTheory.V.Fr.w]
       field_simp
       ring
   have hk2 : (2 : ResidueField O) ≠ 0 := by

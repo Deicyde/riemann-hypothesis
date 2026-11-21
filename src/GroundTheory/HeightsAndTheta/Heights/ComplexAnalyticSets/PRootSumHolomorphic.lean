@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StRootSumHolomorphic
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PSimpleRootBranch
 set_option maxSynthPendingDepth 1

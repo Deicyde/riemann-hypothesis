@@ -1,11 +1,28 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ArchBetween
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LineHeightInvariantScaling
-import GroundTheory.HeightsAndTheta.Heights.HeightComparison.HeightAssemblyFinal
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.PCurveRatSectionSum
 import GroundTheory.HeightsAndTheta.Heights.ElementarySymmetric.PFlZArithVar
 import GroundTheory.HeightsAndTheta.Heights.Antisymmetric.PNefOnFibresRelabel
-import GroundTheory.HeightsAndTheta.Heights.WeightedHomogeneous.Reading
+import GroundTheory.HeightsAndTheta.Heights.HeightComparison.HeightAssemblyFull
+import GroundTheory.HeightsAndTheta.Heights.HeightComparison.PCentredPlacesFinite
+import GroundTheory.HeightsAndTheta.Heights.HeightComparison.PCentredRingNormal
+import GroundTheory.HeightsAndTheta.Heights.HeightComparison.PLocalLengthPlaces
+import GroundTheory.HeightsAndTheta.Heights.HeightComparison.PLocalNormalIndex
+import GroundTheory.HeightsAndTheta.Heights.HeightComparison.POrbitCenterChart
+import GroundTheory.HeightsAndTheta.Heights.HeightComparison.POrbitCenterDivSupp
+import GroundTheory.HeightsAndTheta.Heights.HeightComparison.POrbitCenterLe
+import GroundTheory.HeightsAndTheta.Heights.HeightComparison.POrbitCenterPrime
+import GroundTheory.HeightsAndTheta.Heights.HeightComparison.POrbitCenterZero
+import GroundTheory.HeightsAndTheta.Heights.HeightComparison.POrbitChartDehom
+import GroundTheory.HeightsAndTheta.Heights.HeightComparison.POrbitChartMult
+import GroundTheory.HeightsAndTheta.Heights.HeightComparison.POrbitChartRing
+import GroundTheory.HeightsAndTheta.Heights.HeightComparison.POrbitChartTerm
+import GroundTheory.HeightsAndTheta.Heights.HeightComparison.POrbitConjSum
+import GroundTheory.HeightsAndTheta.Heights.HeightComparison.POrbitDegreeRatio
+import GroundTheory.HeightsAndTheta.Heights.HeightComparison.POrbitLocalSum
+import GroundTheory.HeightsAndTheta.Heights.HeightComparison.PPlaceCentredSum
+import GroundTheory.HeightsAndTheta.Heights.HeightComparison.PPlacesRingQuot
 
 noncomputable section
 
@@ -222,7 +239,7 @@ theorem arInt_map (e : ∀ k, ι k ≃ Fin (n k + 1)) {P : Ideal (MRing ι)} (hP
 theorem mConeMap_ren {Ω : Type} [Field Ω] (e : ∀ k, ι k ≃ Fin (n k + 1)) (y : Coord n → Ω) (f : MRing ι) :
     mConeMap (ι := blockIdx n) y (ren e f) = mConeMap (y ∘ sig e) f := by
   induction f using MvPolynomial.induction_on with
-  | C a => simp [mConeMap, ren_C]
+  | C a => simp [mConeMap]
   | add p q hp hq => simp only [map_add, hp, hq]
   | mul_X p q hp =>
     rw [map_mul, map_mul, map_mul, hp]

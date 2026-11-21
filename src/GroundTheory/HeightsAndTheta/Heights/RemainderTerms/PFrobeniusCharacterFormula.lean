@@ -1,7 +1,6 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.RemainderTerms.Statements
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.RemainderTerms.StatementsSchur
-import GroundTheory.HeightsAndTheta.Heights.RemainderTerms.AltCoeff
+import Mathlib.Algebra.AffineMonoid.UniqueSums
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.RestTerms

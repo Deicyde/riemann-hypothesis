@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.SpecialLinearCosets.GoodU
 import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.UnramifiedSplitting.SgLaws
 
@@ -90,7 +92,7 @@ theorem UpperTheory.ConvolutionTheory.R2.I.matLaws :
       fin_cases i <;> simp [cp_sg] <;> ring
   · intro X Y
     have hB : BM (mat v θ Y) (mat v θ X) = cp v (B4 δ Y X) := by
-      simp only [BM, mat, B4, map_sub, map_add, map_mul, cp_rt, ← hθ, map_ofNat]
+      simp only [BM, mat, B4, map_sub, map_mul, cp_rt, ← hθ, map_ofNat]
       simp
       ring
     rw [hB, sg_cp]

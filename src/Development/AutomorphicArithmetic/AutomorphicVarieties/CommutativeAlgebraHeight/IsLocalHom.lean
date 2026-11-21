@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.ResMapBijective
-import ReciprocityTheory.CommutativeAlgebra.SaturatedChains.IsSaturatedChain
+import Mathlib.RingTheory.AdicCompletion.Algebra
 
 noncomputable section
 

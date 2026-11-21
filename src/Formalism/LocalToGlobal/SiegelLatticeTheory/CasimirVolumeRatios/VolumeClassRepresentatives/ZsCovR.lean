@@ -1,8 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CasimirVolumeRatios.VolumeClassRepresentatives.IwasawaCovolume
 import Formalism.LocalToGlobal.GlobalTheory.GL5.Statement
 import Formalism.SharpRestriction.CuspSpanNormBounds.MassRatioBoundPower
 import Formalism.SharpRestriction.CuspSpanNormBounds.BridgeLemV
-import Formalism.SharpRestriction.CuspSpanNormBounds.BridgeLevelGen
 import Formalism.SharpRestriction.CuspSpanNormBounds.BridgeVolRatio
 
 noncomputable section

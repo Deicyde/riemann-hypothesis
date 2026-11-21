@@ -1,6 +1,4 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.FWTie
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FibExtMarked
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.ReadsExistsUniqueTheta
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsObjMapPhi
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AnFibFrEqOfExLeftEq

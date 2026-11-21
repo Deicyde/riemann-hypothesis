@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.IsCombAt
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.TowerOrigin
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.OverLaUnique
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 noncomputable section
 

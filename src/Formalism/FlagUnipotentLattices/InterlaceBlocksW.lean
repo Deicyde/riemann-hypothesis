@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.FlagUnipotentLattices.MemLpTwoOfOneTop
 
 open Finset TensorProduct

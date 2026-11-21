@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.PAdicHodge.WAPeriodT
 import GroundTheory.PAdicHodge.WABridgeGerm
-import GroundTheory.PAdicHodge.CauchySeqOfIncrements
-import GroundTheory.PAdicHodge.ExtRobbaTrivialV
+import GroundTheory.PAdicHodge.ExtRobbaTrivialUnits
 set_option maxSynthPendingDepth 1
 
 noncomputable section

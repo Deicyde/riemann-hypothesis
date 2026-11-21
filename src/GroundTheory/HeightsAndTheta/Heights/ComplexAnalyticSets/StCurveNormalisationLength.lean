@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceObjects
+import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.Statements
+import Mathlib.RingTheory.OrderOfVanishing.Basic
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

@@ -1,5 +1,7 @@
-import Mathlib
-import Development.AutomorphicArithmetic.PrimeDiscriminants.RamDiscr
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.PrimeDiscriminants.SmallRam
+import Formalism.LocalRingCardinality.DataHost
 
 open NumberField IsDedekindDomain
 

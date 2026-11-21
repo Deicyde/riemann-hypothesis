@@ -1,6 +1,7 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.AmplePt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.PullFEPf
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ThetaVV
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ThetaCore
+import Std.Tactic.BVDecide.Normalize.BitVec
 
 noncomputable section
 
@@ -277,7 +278,7 @@ theorem prod_mulN (N : ℕ) {T : Over S} (y : T ⟶ A) {U : Type} [CommGroup U] 
   have e : y.left ≫ (mulA A N).left = (y ^ N).left := by
     rw [← Over.comp_left, mulA, comp_pow, Category.comp_id]
   rw [Fin.prod_univ_two]
-  simp only [Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons, Category.comp_id, e, zpow_neg,
+  simp only [Matrix.cons_val_zero, Matrix.cons_val_one, Category.comp_id, e, zpow_neg,
     zpow_one]
   norm_cast
 
@@ -286,7 +287,7 @@ theorem prod_pm (N : ℕ) {T : Over S} (a b : T ⟶ A) {U : Type} [CommGroup U] 
     ∏ i, h ((![a.left, b.left] : Fin 2 → _) i) ^ (![(N : ℤ) ^ 2, -(N : ℤ) ^ 2] : Fin 2 → ℤ) i =
       h a.left ^ (N ^ 2) * (h b.left ^ (N ^ 2))⁻¹ := by
   rw [Fin.prod_univ_two]
-  simp only [Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons, zpow_neg]
+  simp only [Matrix.cons_val_zero, Matrix.cons_val_one, zpow_neg]
   norm_cast
 
 include c in

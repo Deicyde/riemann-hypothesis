@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.MacdonaldHecke
-import GroundTheory.IdeleRoots.TorusPowers.SatakeBoundGauss
 set_option maxSynthPendingDepth 1
 
 noncomputable section

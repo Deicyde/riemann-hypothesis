@@ -1,7 +1,7 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.RemainderTerms.StatementsElem
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.RemainderTerms.Inhabitants
 import GroundTheory.HeightsAndTheta.Heights.RemainderTerms.Elementary
+import Mathlib.Data.Rat.Star
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

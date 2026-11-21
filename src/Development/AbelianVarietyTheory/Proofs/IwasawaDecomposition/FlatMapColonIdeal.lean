@@ -1,4 +1,39 @@
-import Mathlib
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
 open IsLocalRing
 
 namespace GlobalTheory
@@ -43,7 +78,7 @@ theorem _root_.GlobalTheory.ideal_map_colon_eq_of_flat : ∀ {A R : Type} [CommR
     have hxf : x ∘ₗ f = 0 := by
       refine LinearMap.ext fun v => ?_
       simp [f, x, Algebra.smul_def, Fintype.sum_prod_type, Fintype.linearCombination_apply,
-        LinearMap.pi_apply, map_sum, Finset.sum_mul]
+        LinearMap.pi_apply, map_sum]
       rw [← sub_eq_add_neg, sub_eq_zero]
       refine Finset.sum_congr rfl fun i _ => ?_
       have e : ∑ j, algebraMap A R (b j) * algebraMap A R (v i) * c i j
@@ -74,8 +109,7 @@ theorem _root_.GlobalTheory.ideal_map_colon_eq_of_flat : ∀ {A R : Type} [CommR
       have hw1 : w.1 = a i := by simp [hw, f, Fintype.linearCombination_apply]
       have hw2 : ∀ p, w.2 p ∈ Ideal.span (Set.range b) := by
         intro p
-        simp only [hw, f, LinearMap.prod_apply, Pi.prod, LinearMap.pi_apply, LinearMap.smul_apply,
-          LinearMap.proj_apply, smul_eq_mul]
+        simp only [hw, f, LinearMap.prod_apply]
         exact Ideal.mul_mem_right _ _ (neg_mem (Ideal.subset_span ⟨p.2, rfl⟩))
       have h0 := DFunLike.congr_fun (hdec w) q
       rw [show g w = 0 from LinearMap.congr_fun hgf _] at h0

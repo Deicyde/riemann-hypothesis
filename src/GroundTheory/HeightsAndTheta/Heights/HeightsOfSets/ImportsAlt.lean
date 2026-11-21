@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HeightsOfSets.IsSmoothHermConstLine
-import GroundTheory.HeightsAndTheta.Heights.HeightsOfSets.Comparison
 set_option maxSynthPendingDepth 1
 
 noncomputable section

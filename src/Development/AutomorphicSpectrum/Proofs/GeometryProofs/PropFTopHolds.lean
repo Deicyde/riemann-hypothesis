@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Statements.GeometryStatements.PropFTop
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.DeltaTermLogDegreeBoundStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HBBound

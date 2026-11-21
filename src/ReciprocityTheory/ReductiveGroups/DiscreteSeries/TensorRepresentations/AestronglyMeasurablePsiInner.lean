@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.FormulaF
-import Formalism.RealPlaceAnalysis.InstMeasurableSpaceUJ
 
 noncomputable section
 

@@ -1,10 +1,14 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.RepresentsOfComputes
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.DetMemSpanAdjugate
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.EqOneOfMemProKer
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CokEquivOfExact
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CoeffMemOfPowMul
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CoeffMemOfToLamMem
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.Small2
+import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.GaloisTwistedSelmerAuxprimesOfMatrixAndBounds
+import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsPlaceOverMoveValCc
 
 noncomputable section
 

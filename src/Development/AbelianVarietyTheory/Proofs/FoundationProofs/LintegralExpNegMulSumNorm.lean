@@ -1,5 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.StarMulOfMemKc
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.MeasureTheory.Integral.Gamma
+import Mathlib.MeasureTheory.Integral.Pi
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.SchurIrreducible GlobalTheory.PolarU GlobalTheory.IndefiniteRowSideFullHecke.CartanCoshPower GlobalTheory.CartanInt Matrix MeasureTheory
 
 namespace GlobalTheory.CartanInt

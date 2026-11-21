@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.BasicOpenSections.ResClosed
 
 open CategoryTheory Limits AlgebraicGeometry GlobalTheory.EtC

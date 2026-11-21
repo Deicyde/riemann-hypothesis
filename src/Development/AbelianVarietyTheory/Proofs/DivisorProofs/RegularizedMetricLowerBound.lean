@@ -1,16 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.KernelSt
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.DemaillyRegularisation
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.MatrixLemma
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.AbsoluteSiegel
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ScholzeWeinsteinB
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.QuasiPlurisubharmonic
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.LieAlgebraMaps
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InSOfParts
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PotentialSmoothOffBoundary
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MixedIntegralCutoffLogDecay
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ChernPotentialPositiveOnComponents
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.LeviNonnegOfIsPshExt
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CombSmoothCurv
 open NumberField Formalism.BasicNotions Formalism.MainNotions ReciprocityTheory.GeometryOfNumbersTheory GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.Mean4 GlobalTheory.Mean4O GlobalTheory.LieHt GlobalTheory.HeightParts
@@ -78,7 +67,7 @@ theorem curv_lower : HessSt → CentSt → OnCore fun D O x P => ∃ C t₀ : �
           have := ContDiffAt.sum (s := Finset.univ) fun i (_ : i ∈ Finset.univ) => hs1 τ i
           convert this using 1
           funext z
-          simp [Function.comp_def]) ξ]
+          simp) ξ]
       refine Finset.sum_congr rfl fun τ _ => ?_
       rw [GlobalTheory.ShFam.CombCurv.levi_sum Finset.univ (fun i z => coef u τ i * P.regFund c σ τ i t z) (hs1 τ) ξ]
       exact Finset.sum_congr rfl fun i _ => AlgChart.levi_const_mul _ (hsm τ i) ξ

@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsGrpPullbackFactor
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ExistsAwayNotMem
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsLieBasisBaseChange
 
 set_option autoImplicit false
 
@@ -221,7 +225,7 @@ theorem frameLieBC {S : Type} [CommRing S] (G : Over (Spec (CommRingCat.of S))) 
     simp only [resP, pullR, Over.homMk_left, Category.assoc, IsPullback.lift_fst, Over.comp_left, spMap]
     rw [← Category.assoc, Geo.Tor.spMap, Geo.Tor.spMap, ← Spec.map_comp, ← CommRingCat.ofHom_comp, hring]
   · rw [Category.assoc, pullback.lift_snd]
-    simp only [resP, pullR, Over.homMk_left, Category.assoc, IsPullback.lift_snd]
+    simp only [resP, pullR, Over.homMk_left, Category.assoc]
     rw [← Category.assoc, Over.w (u' j)]
     simp only [Geo.Tor.epsR, sp, Over.mk_hom, Geo.Tor.spMap]
     erw [IsPullback.lift_snd]

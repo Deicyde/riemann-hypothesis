@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.ExistenceOfLattices.NormConst
+import Formalism.LocalToGlobal.ProjectiveLattices.UnifDom
 
 noncomputable section
 
@@ -67,7 +70,7 @@ theorem pow_four_complementary_modEight (H : ReciprocityTheory.ChartRestriction.
 theorem sign_genus_one (t : ℂ) (ht : 0 < t.im) :
     (hermForm (g := 1) (fun _ _ => ((t.im⁻¹ : ℝ) : ℂ)) (fun _ => 1) (fun _ => t)).im =
       -(omegaStd (h := 1) (Pi.single (Sum.inl 0) 1) (Pi.single (Sum.inr 0) 1) : ℤ) := by
-  simp [hermForm, omegaStd, Matrix.mulVec, dotProduct, ← Complex.ofReal_inv, ht.ne']
+  simp [hermForm, omegaStd, Matrix.mulVec, dotProduct, ht.ne']
 
 open Classical in
 

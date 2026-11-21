@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsGradedOfDivisors
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.AntisymmFibrePointTwo
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsClosedImmersionGenericPoint
-import Development.AbelianVarietyTheory.Definitions.Divisors.AnalyticOnNhdFinChartIff
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.MSmoothOfWeightIffIsCInf
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsAlgAtlasAtlasOf
 open NumberField MvPolynomial ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.AnForm ReciprocityTheory.AnForm.M GlobalTheory.Cartier GlobalTheory.ProjVar GlobalTheory.CxPts GlobalTheory.ChartGlue GlobalTheory.FlagBundle GlobalTheory.HermFrame GlobalTheory.GoodMetric GlobalTheory.TrueGeo GlobalTheory.Mean4O GlobalTheory.ChernWeilLine
 open ReciprocityTheory.L2DbarEstimates (V)
 open scoped Classical
@@ -126,7 +126,7 @@ theorem isMetricOn_lineGram_of_isPot : ∀ {F : Type} [Field F] [NumberField F] 
     rw [Subsingleton.elim u 0, Subsingleton.elim v 0]
     simp only [lineGram, Matrix.mul_apply, Fin.sum_univ_one, Matrix.of_apply, Matrix.conjTranspose_apply, Mat.map,
       Matrix.map_apply, e2]
-    have e3 : (A' * A⁻¹) τ 0 0 = A' τ 0 0 * (A τ 0 0)⁻¹ := by simp [Matrix.mul_apply, Matrix.inv_def]
+    have e3 : (A' * A⁻¹) τ 0 0 = A' τ 0 0 * (A τ 0 0)⁻¹ := by simp [Matrix.mul_apply]
     rw [e3]
     set w := ratVal (A' τ 0 0 * (A τ 0 0)⁻¹) y
     push_cast

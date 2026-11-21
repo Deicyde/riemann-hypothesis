@@ -1,5 +1,5 @@
-import Mathlib
-import Development.WeilBound.ThetaLifts.Reductions.SiegelCore
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
 
 noncomputable section

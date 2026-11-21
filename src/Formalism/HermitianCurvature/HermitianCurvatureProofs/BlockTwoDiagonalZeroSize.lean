@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.KloostDensOfParts
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.SymmetricScalarBlockMatrixMul
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.DirectionsInParabolic
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.TopCellsOfParts
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.UnitaryInvariantGaussian
 

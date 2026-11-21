@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ZetaActRefl
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RootOfUnityExpZModAdditiveCharacterProperties
+import Mathlib.NumberTheory.ModularForms.EisensteinSeries.QExpansion
+import Mathlib.Tactic.ENatToNat
 
 open scoped UpperHalfPlane MatrixGroups Matrix ModularForm ComplexConjugate
 open GlobalTheory.QFam GlobalTheory.WpFam
@@ -60,7 +61,7 @@ theorem _root_.GlobalTheory.WpFam.torsion_row_series : ∀ (N : ℕ) [NeZero N] 
   constructor
   · have h := EisensteinSeries.qExpansion_identity_pnat he
       ⟨(((d : ℕ) : ℂ) * τ + (b.val : ℂ)) / N, him _ (Complex.natCast_im _)⟩
-    simp only [UpperHalfPlane.coe_mk] at h
+    simp only at h
     have hS : (∑' j : ℕ+, ((j : ℕ) : ℂ) ^ e * Complex.exp (2 * Real.pi * Complex.I
         * ((((d : ℕ) : ℂ) * τ + (b.val : ℂ)) / N)) ^ (j : ℕ))
         = ∑' j : ℕ+, ((j : ℕ) : ℂ) ^ e * _root_.GlobalTheory.WpFam.ch N (((j : ℕ) : ZMod N) * b)
@@ -73,7 +74,7 @@ theorem _root_.GlobalTheory.WpFam.torsion_row_series : ∀ (N : ℕ) [NeZero N] 
   · have h := EisensteinSeries.qExpansion_identity_pnat he
       ⟨(((d : ℕ) : ℂ) * τ + -(b.val : ℂ)) / N, him _
         (by rw [Complex.neg_im, Complex.natCast_im, neg_zero])⟩
-    simp only [UpperHalfPlane.coe_mk] at h
+    simp only at h
     have hterm : ∀ m : ℤ, 1 / ((-((d : ℕ) : ℂ) * τ + (b.val : ℂ)) / N + m) ^ (e + 1)
         = (-1) ^ (e + 1) * (1 / ((((d : ℕ) : ℂ) * τ + -(b.val : ℂ)) / N + ((-m : ℤ) : ℂ)) ^ (e + 1)) := by
       intro m

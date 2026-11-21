@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.JpUnif
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.UniformBoundednessStatement
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ReductionUniqueUpToParabolicStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LevelSquareCongruenceConjugationStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ResidueUpperUnipotentLiftStatement
@@ -12,6 +10,7 @@ import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CardRankLowerLe
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CardFixedLowerRightBlockStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CardCompletionsToFullRankStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CardRankCompletionSymmetryStatement
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 noncomputable section
 open Matrix

@@ -1,6 +1,8 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebraHeight.OfDetToDet
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebraHeight.IsLocalHom
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebraHeight.BcChiTmul
+import Mathlib.RingTheory.TwoSidedIdeal.Instances
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open TensorProduct IsLocalRing Polynomial UpperTheory.V.W UpperTheory.V.Alg UpperTheory.V.CA
 
@@ -140,7 +142,7 @@ private theorem chElt_one (S : Type) [CommRing S] [Algebra A S] {k : ℕ} (x : F
   | zero => simp
   | add a b ha hb => simp only [map_add, tmul_add, ha, hb]
   | tmul s y =>
-    simp [MvPolynomial.coeff_map, Algebra.ofId_apply, Algebra.algebraMap_eq_smul_one, smul_tmul]
+    simp [MvPolynomial.coeff_map, Algebra.algebraMap_eq_smul_one, smul_tmul]
 
 private theorem span_mul (S : Type) [CommRing S] [Algebra A S] (I : TwoSidedIdeal E) (w : S ⊗[A] E)
     (h : w ∈ Submodule.span S ((fun z : E => (1 : S) ⊗ₜ[A] z) '' (I : Set E))) (u : S ⊗[A] E) :

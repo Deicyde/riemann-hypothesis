@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.LevelGatherings.HostPlacesWeight
-import Formalism.SatakeDualWeyl.Statement
 
 noncomputable section
 

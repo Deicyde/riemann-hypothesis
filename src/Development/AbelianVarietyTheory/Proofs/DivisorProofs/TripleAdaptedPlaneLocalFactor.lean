@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.TensorIdeleNormalizedAbsIdeleHalfAtInfinity
 
@@ -51,7 +51,7 @@ theorem levi_mulVec (x y : Fin n → R) (t s : R) (z : Fin n → R) :
 
 theorem sf_skew (hc : ∀ r, c (c r) = r) (hJ : ∀ i j, c (J j i) = -J i j) (u v : Fin n → R) :
     sf c J u v = -c (sf c J v u) := by
-  simp only [sf, dotProduct, mulVec, map_sum, map_mul, hc, Finset.mul_sum, Finset.sum_mul, ← Finset.sum_neg_distrib]
+  simp only [sf, dotProduct, mulVec, map_sum, map_mul, hc, Finset.mul_sum, ← Finset.sum_neg_distrib]
   rw [Finset.sum_comm]
   refine Finset.sum_congr rfl fun i _ => Finset.sum_congr rfl fun j _ => ?_
   rw [hJ]
@@ -197,7 +197,7 @@ theorem exists_levi : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [Numb
     refine ext_mulVec_single fun k => ?_
     have hcol : incM F H'.ι *ᵥ Pi.single k 1 = incV F (H'.ι *ᵥ Pi.single k 1) := by
       ext i
-      simp [mulVec_single_one, incM, incV]
+      simp [incM, incV]
     rw [← mulVec_mulVec, hcol]
     exact levi_mulVec_of_orth _ _ _ _ (by rw [sf_inc, (hH.orth _).1, map_zero]) (by rw [sf_inc, (hH.orth _).2, map_zero])
   · have h1 := GlobalTheory.Eis.Conv.absE_halfE F E σ hcm

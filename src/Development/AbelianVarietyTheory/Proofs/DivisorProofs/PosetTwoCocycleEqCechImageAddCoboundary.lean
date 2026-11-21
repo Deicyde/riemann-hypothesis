@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.AxesVanishingStructureSheafDegOne
-import Development.AbelianVarietyTheory.Definitions.AbelianSchemeLaws.IsScalarTowerOfAlgebraMapEq
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.AbelianHodgeDeRham
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CardNonempty
 open CategoryTheory CategoryTheory.Limits AlgebraicGeometry KaehlerDifferential MonoidalCategory CartesianMonoidalCategory MonObj TensorProduct
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory.CatCoh GlobalTheory.Cris GlobalTheory.CechDR GlobalTheory.AbCoh
@@ -176,7 +174,7 @@ theorem sign4 {i0 i1 i2 i3 : κ} (h01 : i0 < i1) (h12 : i1 < i2) (h23 : i2 < i3)
   have h02 := h01.trans h12; have h13 := h12.trans h23; have h03 := h01.trans h13
   simp [GlobalTheory.cubeSign, Finset.filter_insert, h01, h12, h23, h02, h13, h03, not_lt.2 h01.le,
     not_lt.2 h12.le, not_lt.2 h23.le, not_lt.2 h02.le, not_lt.2 h13.le, not_lt.2 h03.le,
-    Finset.filter_singleton, h01.ne, h12.ne, h23.ne, h02.ne, h13.ne, h03.ne, lt_irrefl]
+    Finset.filter_singleton, h01.ne, h12.ne, h02.ne]
 
 theorem δ_yc (w : Z2 F) : δ F 2 (yc w.1) = 0 := by
   funext t

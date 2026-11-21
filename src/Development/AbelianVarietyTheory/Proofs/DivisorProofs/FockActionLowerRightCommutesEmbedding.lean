@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DetSNeZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockFirstActionMatrixUnitEq
 
@@ -36,7 +37,7 @@ theorem wPolarize_aeval_mR (b b' : Fin Q) (G : Mdl P Q) :
       by_cases hb : b'' = b
       · subst hb
         simp [mR, pderiv_X, Pi.single_apply, mul_comm]
-      · simp [mR, pderiv_X, Pi.single_apply, hb]
+      · simp [mR, pderiv_X, hb]
     have e1 : ∀ (A B : Pol P Q R 0), ∑ c : Fin R, X (Sum.inr b', Sum.inl c) * pderiv (Sum.inr b, Sum.inl c) (A * B) =
         (∑ c : Fin R, X (Sum.inr b', Sum.inl c) * pderiv (Sum.inr b, Sum.inl c) A) * B +
           A * ∑ c : Fin R, X (Sum.inr b', Sum.inl c) * pderiv (Sum.inr b, Sum.inl c) B := by

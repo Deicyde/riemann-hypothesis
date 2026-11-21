@@ -1,4 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.FirstChernIntegralEqDegree
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsIsoGenResMapSmulHom
 
@@ -495,7 +497,7 @@ theorem bcMeas_eq_zero (H : ∀ (c : AlgChart p σ 1), ∀ y ∈ c.e.source, h.b
 
 theorem bcMeas_rank_zero {h : Met p σ S.X₂ (0 + s)} (h₁ : IsVB S.X₁ 0) : h.bcMeas hS h₁ h₃ = 0 :=
   bcMeas_eq_zero hS h₁ h₃ fun c y _ => by
-    simp [bcDens, bcForm, diagVal, extTrace, Matrix.mul_apply, trace]
+    simp [bcDens, bcForm, diagVal, extTrace, trace]
 
 end Met
 

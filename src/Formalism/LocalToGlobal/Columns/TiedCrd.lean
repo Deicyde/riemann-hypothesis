@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.WordFin
-import Formalism.LocalToGlobal.Columns.TiedCB
+import Formalism.LocalToGlobal.Columns.TiedCG
 
 open NumberField IsDedekindDomain Module Matrix
 open scoped TensorProduct

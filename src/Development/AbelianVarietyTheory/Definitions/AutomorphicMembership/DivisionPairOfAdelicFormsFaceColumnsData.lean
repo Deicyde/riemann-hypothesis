@@ -1,10 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.StableIffCarrierEq
 import Formalism.LocalToGlobal.IndefiniteReal.RealTB
 import Formalism.LocalToGlobal.IndefiniteReal.RealRec
-import Formalism.LocalToGlobal.IndefiniteReal.RealPins
-import Formalism.LocalToGlobal.IndefiniteReal.RealRecPins
-import Formalism.LocalToGlobal.IndefiniteReal.HeckeNonvanishing.Imports
 
 noncomputable section
 

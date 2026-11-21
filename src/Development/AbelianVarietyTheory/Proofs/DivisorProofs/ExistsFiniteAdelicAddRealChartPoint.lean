@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTopologicalRingAE
 import Formalism.LocalToGlobal.NumberFieldFamilies.ThetaCB
 open scoped TensorProduct Matrix BoundedContinuousFunction ContDiff

@@ -1,10 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsorsTrivial
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OriginIdeal
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ClosureFiniteEtale
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PointAtZero
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GoodIffEtaleAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsZModTorsorFiniteProjectiveBaseChange
+import Mathlib.RingTheory.PiTensorProduct
 
 open IsLocalRing Polynomial
 open scoped TensorProduct
@@ -552,7 +551,7 @@ theorem reduceLoc_algebraMap {T O : Type} [CommRing T] [CommRing O] [IsLocalRing
       (algebraMap A₁ (Loc₁ f i i₁ EA QA jA hcomp hj)) = RingHom.id A₁ := by
   apply RingHom.ext; intro x
   rw [RingHom.comp_apply, IsScalarTower.algebraMap_apply A₁ (Ext f EA) (Loc₁ f i i₁ EA QA jA hcomp hj)]
-  simp only [reduceLoc, IsLocalization.lift_eq, algebraMap_ext, reduce_tmul]
+  simp only [reduceLoc, IsLocalization.lift_eq, algebraMap_ext]
   change Polynomial.eval 0 (Polynomial.C x) * _ = _
   simp
 end GlobalTheory.KeyOriginBC

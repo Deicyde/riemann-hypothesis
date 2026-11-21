@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.JacobiPathWeights.StatementP
-import Formalism.ThetaLogCoordinates.JacobiPathWeights.JacobiMinorProofs.LeIffLtColHeight
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 
@@ -182,7 +185,7 @@ theorem dGT_zero (n : ℕ) : dGT n 0 = 1 := by
   | succ n ih =>
     have h : gtBox (0 : Fin (n + 1) → ℤ) = {0} := by
       ext κ
-      simp [gtBox, Fintype.mem_piFinset, funext_iff]
+      simp [gtBox, funext_iff]
     show ∑ κ ∈ gtBox (0 : Fin (n + 1) → ℤ), dGT n κ = 1
     rw [h, Finset.sum_singleton, ih]
 

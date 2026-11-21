@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipMat
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorusMulVecX
 
@@ -92,7 +90,7 @@ theorem incV_single {F E : Type} [Field F] [NumberField F] [Field E] [Algebra F 
     incV F (Pi.single j (1 : E)) = Pi.single j 1 := by
   funext i; by_cases h : i = j
   · subst h; simp [incV]
-  · simp [incV, Pi.single_apply, h]
+  · simp [incV, h]
 
 end GlobalTheory.DiagUnip
 
@@ -164,7 +162,7 @@ theorem GlobalTheory.DiagUnip.diag_stab : ∀ (F E : Type) [Field F] [NumberFiel
   · simp only [GlobalTheory.DblUnip.unipMat, diagCols]
     rw [Matrix.fromBlocks_multiply]
     erw [Matrix.fromBlocks_mul_fromRows, Matrix.fromRows_mul]
-    simp only [Matrix.mul_one, Matrix.one_mul, Matrix.zero_mul, Matrix.mul_zero, add_zero, zero_add]
+    simp only [Matrix.mul_one, Matrix.one_mul, Matrix.zero_mul, add_zero, zero_add]
     congr 1
     · rw [← hmul, Matrix.mul_add, Matrix.mul_one]
     · rw [GlobalTheory.DblUnip.diagMat, neg_smul]; abel

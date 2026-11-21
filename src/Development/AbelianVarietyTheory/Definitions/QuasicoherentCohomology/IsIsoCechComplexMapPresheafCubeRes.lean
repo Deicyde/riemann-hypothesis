@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.QuasicoherentCohomology.HomologyRestrictScalarsBijective
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.Topology.Sheaves.SheafCondition.UniqueGluing
 
 open CategoryTheory Limits TopologicalSpace Opposite
 
@@ -127,7 +130,7 @@ variable (P : (Opens T)ᵒᵖ ⥤ ModuleCat.{v} R) {Q Q' : (Opens T)ᵒᵖ ⥤ M
 @[simp]
 theorem presheafRes_self {W : Opens T} (h : W ≤ W) (x : P.obj (op W)) : presheafRes P h x = x := by
   have : (homOfLE h).op = 𝟙 (op W) := rfl
-  simp [presheafRes, this]
+  simp [presheafRes]
 
 @[simp]
 theorem presheafRes_presheafRes {W W' W'' : Opens T} (h : W' ≤ W) (h' : W'' ≤ W')

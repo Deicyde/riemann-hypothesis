@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.JoinCastSucc
-import ReciprocityTheory.SemistableReduction.TorusL2CauchyInequality
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.FramedLatticeZeroCycleHeight
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeOfRingKrullDimConeIdeal
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIntegralRelation
 
@@ -38,7 +35,7 @@ theorem exists_pt_of_mem_cone : ∀ (F : Type) [Field F] [NumberField F] (S : Li
   change y i₀ ≠ 0 at hi₀
   let u : Fin S.N → Fin S.N → K := fun j => y i₀ • Pi.single j 1 - y j • Pi.single i₀ 1
   have hu : ∀ (j : Fin S.N) (c : Fin S.N → K), ∑ l, u j l * c l = y i₀ * c j - y j * c i₀ := fun j c => by
-    simp [u, sub_mul, Finset.sum_sub_distrib, Pi.single_apply, mul_assoc]
+    simp [u, sub_mul, Finset.sum_sub_distrib, Pi.single_apply]
 
   have hcov : ∀ z : (S.baseChange K).Y, ∃ j, z ∈ nonzeroLocus ((S.baseChange K).comb (u j)) := by
     by_contra hc

@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ZetaValueIdeals
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.SiegelKlingenDeligneRibet
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GlobalSchurBounds.ShortIntervalPrimes
 
 open NumberField
 

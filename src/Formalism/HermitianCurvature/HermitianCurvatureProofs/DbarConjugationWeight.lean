@@ -1,4 +1,8 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.LetterProductDoubleDegreeCount
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
+import Mathlib.Topology.Sheaves.Presheaf
 
 open Formalism.FourierDecayAlt
 open scoped ComplexConjugate

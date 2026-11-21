@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.H0TwistOverClosedField
 import Development.EtaleCohomology.KummerTheory.FinSHInv
 

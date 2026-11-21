@@ -1,7 +1,9 @@
-import Mathlib
-import GroundTheory.PAdicHodge.PerfectoidField
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.PAdicHodge.TiltValuation
 import GroundTheory.PowerSubgroups.CountableNeighbourhoods.TiltCountableNeighbourhoods
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.Polynomial.Basic
 set_option maxSynthPendingDepth 1
 
 noncomputable section

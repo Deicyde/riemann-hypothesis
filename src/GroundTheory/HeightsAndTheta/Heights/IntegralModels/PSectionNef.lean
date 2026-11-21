@@ -1,10 +1,14 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.IntegralModels.Statements
 import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.PMinimalPrimeMultiHomog
 import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.PColonMultiHomog
 import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.PSupSpanMultiHomog
 import GroundTheory.HeightsAndTheta.Heights.FieldsOfNumbers.PGradedFinite
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.IsMultiHomogIdealIff
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.Model

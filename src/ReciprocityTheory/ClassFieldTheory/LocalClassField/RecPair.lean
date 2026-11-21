@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ClassFieldTheory.LocalClassField.RecPairDefs
 import ReciprocityTheory.ClassFieldTheory.LocalClassField.RecPairA
 

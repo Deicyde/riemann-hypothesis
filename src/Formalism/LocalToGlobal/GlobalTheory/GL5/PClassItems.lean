@@ -1,7 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.UJClassFin
-import Formalism.PeriodIntegrals.UJClassMassAlt
 import Formalism.PeriodIntegrals.MassRankOne
-import Formalism.GL3MeanSquares.GenusMeanAsymptotics.UnimodularClassRepresentatives.FiniteDimensionalOfOrtho
 import Formalism.LocalToGlobal.GlobalTheory.GL5.PClassZero
 import Formalism.LocalToGlobal.GlobalTheory.GL5.PClassSteps
 

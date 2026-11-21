@@ -1,7 +1,6 @@
-import Mathlib
-import Development.ResolutionOfSingularities.EmbeddedResolution.EtaleCoordinates.EtaleCoordinates
-import Development.ResolutionOfSingularities.EmbeddedResolution.DerivativeIdeal.DerivativeIdeal
+import BuildAid.Leniency.Variable
 import Development.ResolutionOfSingularities.EmbeddedResolution.DerivativeIdeal.DerivativeIdealEtaleBaseChange
+import Mathlib.RingTheory.PiTensorProduct
 namespace FunctorialResolution.EmbeddedResolution
 namespace EtaleCoordinates
 

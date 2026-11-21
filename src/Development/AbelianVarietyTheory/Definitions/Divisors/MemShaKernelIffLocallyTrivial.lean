@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.NormSub
+import Mathlib.NumberTheory.Padics.PadicNumbers
 
 noncomputable section
 

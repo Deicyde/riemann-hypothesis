@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.IsMirClass
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.BlockParabolicUnitriangularSubgroupsGLnPrimeFielStatement
 
@@ -383,7 +384,7 @@ private theorem dM_mul_flag_measures {k : ℕ} (A B : Mt g k) : dM A * dM B = dM
   | last =>
     induction c using Fin.lastCases with
     | last => simp [Matrix.mul_apply, Fin.sum_univ_castSucc, dM_lc, dM_ll]
-    | cast b => simp [Matrix.mul_apply, Fin.sum_univ_castSucc, dM_lc, dM_ll, dM_cl]
+    | cast b => simp [Matrix.mul_apply, Fin.sum_univ_castSucc, dM_lc, dM_ll]
   | cast a =>
     induction c using Fin.lastCases with
     | last => simp [Matrix.mul_apply, Fin.sum_univ_castSucc, dM_cl, dM_ll, dM_cc]
@@ -425,10 +426,10 @@ theorem inR_iff_ent {i n : ℕ} (M : Mt g n) :
       · exact hP ⟨a, hh.1⟩ ⟨b, hh.2⟩ hb ha
       · rfl
     · have := (hu ⟨a - i, by omega⟩ ⟨b - i, by omega⟩).1 (by show b - i < a - i; omega)
-      simp only [br, Fin.val_mk] at this
+      simp only [br] at this
       rwa [show i + (a - i) = a by omega, show i + (b - i) = b by omega] at this
     · have := (hu ⟨a - i, by omega⟩ ⟨b - i, by omega⟩).2 (Fin.ext (by show a - i = b - i; omega))
-      simp only [br, Fin.val_mk] at this
+      simp only [br] at this
       rwa [show i + (a - i) = a by omega, show i + (b - i) = b by omega] at this
   · rintro ⟨hA, hB⟩
     refine ⟨fun r c hc hr => ?_, fun a b => ⟨fun hba => ?_, fun hab => ?_⟩⟩

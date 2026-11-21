@@ -1,17 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.ThetaValues.SWEqSOf
-import Development.AbelianVarietyTheory.Definitions.ThetaValues.GamAt
-import Formalism.SharpRestriction.GenusPolyhedralBounds.RelativeIndexClassSets.AdmissibleModuleIffLatticeQuotients
-import Formalism.SharpRestriction.GenusPolyhedralBounds.RelativeIndexClassSets.TheoremZeroOfReducedInputs
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.SupBoundPageRows
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.LatOfLamSt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.NoCommonZeroSt
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.HolomorphicFamilies.SumSingleEmbeddingExtendLe
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ThExprUniqOfChartIndep2
 import Formalism.LocalToGlobal.ProjectiveLattices.HostSize
 import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.HarmAMemSpanShort
 import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.ThetaGeneratorsNoCommonZeroOfChartIndependenceStatement
 import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.ThetaRulesLinearAndLevelCongruenceStatement
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.ThetaWeightBounds
 
 set_option autoImplicit false
 
@@ -44,7 +37,7 @@ theorem rank_of_pins {D : D7} {Q : Par D} (h : Q.Pins) {j : ℕ} (hj : InR D j) 
   obtain ⟨h1, h2⟩ := hj
   rw [hp, hq]
   have := And.intro (Nat.one_le_two_pow (n := D.R.e)) (show 0 < D.R.ord by positivity)
-  simp only [Ranks.sigW, Ranks.r, Ranks.k]
+  simp only [Ranks.sigW, Ranks.r]
   omega
 
 theorem log_rdE (D : D7) : Real.log (FD.rdE D.host.E) = lrd D := by

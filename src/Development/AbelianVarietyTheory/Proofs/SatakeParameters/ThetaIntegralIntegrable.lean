@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LeviRep
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IntegrableZetaIntegrand
 
@@ -100,7 +101,7 @@ theorem integrable_om_eMat : ∀ (k : Type) [Field k] [ValuativeRel k] [Topologi
   set a := nabs k (GeneralLinearGroup.det g) with ha
   have e1 : ‖om μ g h Φ (eMat k r t)‖ = a ^ (((r : ℝ) + t) / 2) * c * ‖Φ' g.val‖ := by
     simp only [om, norm_mul, Units.val_inv_eq_inv_val, norm_inv, hu, Complex.norm_real,
-      Real.norm_of_nonneg (Real.rpow_nonneg hp.le _), Real.norm_of_nonneg (Real.rpow_nonneg hq.le _),
+      Real.norm_of_nonneg (Real.rpow_nonneg hq.le _),
       Fintype.card_fin, Nat.cast_add, hc, ha, hΦ']
     rw [Real.norm_of_nonneg (Real.rpow_nonneg (nabs_pos' k _).le _)]
     ring

@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.GL2.GJUnramified
+import Mathlib.Analysis.Complex.LocallyUniformLimit
 
 open MeasureTheory Filter Set Topology Metric
 open scoped ValuativeRel

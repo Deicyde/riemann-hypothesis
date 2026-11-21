@@ -1,9 +1,9 @@
-import Mathlib
-import Formalism.LocalToGlobal.UnitaryNorms.IsUnitaryNormOf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HeckeCharacterUnramifiedAeAndExistsLevel
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsNatCongrOfAbsNormPrime
 import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.ExistsAbsoluteValueOfIsDiscreteValuationRing
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ValuationPowSubPowLe
+import ReciprocityTheory.Automorphisms.PlaceA
 
 open NumberField IsDedekindDomain Formalism.L2.Host IsLocalRing Polynomial
 

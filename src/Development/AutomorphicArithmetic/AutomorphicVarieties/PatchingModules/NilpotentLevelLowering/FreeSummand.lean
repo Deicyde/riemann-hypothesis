@@ -1,6 +1,7 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.NilpotentLevelLowering.ActUVariableEqPow
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.ExistsGroupRingSurj
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.InjOfSandwich
+import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.NilpotentLevelLowering.LevelModule
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.BasicNotions Formalism.MainNotions.N ValuativeRel IsLocalRing
 open GlobalTheory.CuspRep GlobalTheory.WeilDeligne GlobalTheory.LocLanglands GlobalTheory.LocGL GlobalTheory.GalOfCusp GlobalTheory.SmGL GlobalTheory.SplitWeil
@@ -166,7 +167,7 @@ theorem UpperTheory.V.Pa.Lev.freeSummand :
     intro z
     apply ψ.symm.injective
     rw [AlgEquiv.symm_apply_apply]
-    simp [ψ, Ideal.quotientKerAlgEquivOfSurjective_apply]
+    simp [ψ]
   refine ⟨rk, e0.trans (AddEquiv.piCongrRight fun _ => ψ.toRingEquiv.toAddEquiv), fun z m => ?_⟩
   have h1 := he0 (φ z) m (act z m) (hagree z m)
   funext i

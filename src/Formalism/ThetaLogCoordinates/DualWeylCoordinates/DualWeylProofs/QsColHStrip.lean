@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.DualWeylCoordinates.DualWeylProofs.QsColHHigh
+import Formalism.ThetaLogCoordinates.DualWeylCoordinates.DualWeylProofs.QsRemIffAdd
 
 noncomputable section
 

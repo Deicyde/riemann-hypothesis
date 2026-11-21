@@ -1,5 +1,7 @@
-import Formalism.LocalToGlobal.ProjectiveLattices.PetersonNormSubspace
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.GramCEqTranspose
+import Formalism.LocalToGlobal.ProjectiveLattices.EquivariantFiniteGroup
 
 noncomputable section
 

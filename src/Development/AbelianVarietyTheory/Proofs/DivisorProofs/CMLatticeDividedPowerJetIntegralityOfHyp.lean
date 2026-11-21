@@ -1,11 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasLevelStd
-import Development.AbelianVarietyTheory.Definitions.Divisors.ZetaActRefl
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsEqOfNatCastMulMem
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.SiegelKlingenDeligneRibet
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PartialZetaFunctionalEquation
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HeckeTateFunctionalEquationCM
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeValueIntegralityRamifiedOfExpansion
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeckeWeightTwoContinuationOfFunctionalEquationStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LipschitzFormulaTotallyRealPoissonStatement
@@ -17,7 +12,6 @@ import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemPassScaled
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinrankLeTwoMulPadicValIntDiscr
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PadicValIntDiscrDivLeDeltaVp
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntOfIsIntegral
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsAlgebraicOfRationalValuation
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SzJetConj
 
 noncomputable section
@@ -84,14 +78,14 @@ theorem theta_facts {E : Type} [Field E] [NumberField E] [IsCMField E] (ψ : E �
     obtain ⟨m, hm⟩ : ∃ m : ℕ, d + 1 = 4 * m := ⟨(d + 1) / 4, by omega⟩
     have hm' : (d : E) + 1 = 4 * m := by exact_mod_cast hm
     refine ⟨⟨Polynomial.X ^ 2 + Polynomial.X + Polynomial.C (m : ℤ), by monicity!, ?_⟩, ?_⟩
-    · simp only [Polynomial.eval₂_add, Polynomial.eval₂_pow, Polynomial.eval₂_X, Polynomial.eval₂_C, Polynomial.eval₂_X_pow]
+    · simp only [Polynomial.eval₂_add, Polynomial.eval₂_pow, Polynomial.eval₂_X, Polynomial.eval₂_C]
       simp only [eq_intCast, Int.cast_natCast, algebraMap_int_eq]
       linear_combination (1 / 4 : E) * hw - (1 / 4 : E) * hm'
     · rw [map_div₀, map_add, map_neg, map_one, hc, map_ofNat]
       linear_combination hw
   · subst hθ
     refine ⟨⟨Polynomial.X ^ 2 + Polynomial.C (d : ℤ), by monicity!, ?_⟩, ?_⟩
-    · simp only [Polynomial.eval₂_add, Polynomial.eval₂_pow, Polynomial.eval₂_X, Polynomial.eval₂_C, Polynomial.eval₂_X_pow]
+    · simp only [Polynomial.eval₂_add, Polynomial.eval₂_pow, Polynomial.eval₂_X, Polynomial.eval₂_C]
       simp only [eq_intCast, Int.cast_natCast, algebraMap_int_eq]
       linear_combination hw
     · rw [hc]; push_cast

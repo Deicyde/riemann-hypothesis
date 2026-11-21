@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -57,7 +58,7 @@ theorem incV_single (j : Fin n') : incV F (Pi.single j (1 : E)) = Pi.single j 1 
   funext k
   by_cases hk : k = j
   · subst hk; simp [incV]
-  · simp [incV, Pi.single_apply, hk]
+  · simp [incV, hk]
 
 theorem levi_unique {σ : E →ₐ[F] E} (B : Base F E) {n n₁ : ℕ} (Y : Spc F E n) (Y₁ : Spc F E n₁) (H : Plane E n n₁)
     (hσ : ∀ x, σ (σ x) = x) (hJ : ∀ i j, σ (Y.J j i) = -Y.J i j) (hP : IsIsoPlane σ B H Y Y₁)

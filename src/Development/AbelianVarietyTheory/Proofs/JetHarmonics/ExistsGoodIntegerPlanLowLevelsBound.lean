@@ -1,8 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.CharacterGerms.ValuationChoiceHypothesis
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.OrbitSumFiftyOne
-import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.LevelsUsedBalancedValueOrbitSums
-import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.DropLevelsBasic
 
 open scoped BigOperators
 open Formalism.L2.FormalSeriesBounds Formalism.IncomingBounds Formalism.UnitaryBoundIntegral

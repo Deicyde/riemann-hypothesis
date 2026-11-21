@@ -1,6 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.OmegaFactorization
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KFacDifferentiable
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Topology.Separation.CompletelyRegular
 
 open NumberField Complex
 open scoped nonZeroDivisors ContDiff

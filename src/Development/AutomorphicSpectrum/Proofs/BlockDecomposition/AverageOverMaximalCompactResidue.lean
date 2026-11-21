@@ -1,6 +1,9 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.JpUnif
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.UniformBoundednessStatement
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
 
 noncomputable section
 

@@ -1,10 +1,9 @@
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.HodgeBundleWeights.TamagawaNumberSpecialUnitary
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GoodAtOfAntitoneGapWeight
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.HodgeBundleWeights.ToKnownTheoremsOf
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.HodgeBundleWeights.CoveringDomainLatticeRegularity
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.HodgeBundleWeights.ShiftedWeightLatticeFg
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.HodgeBundleWeights.WeightLatticeSpannedByWeights
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GoodAtOfAntitoneGapWeightStatement
 
 section
 open CategoryTheory AlgebraicGeometry NumberField
@@ -34,7 +33,7 @@ theorem covering_goodAt_shift : _root_.GlobalTheory.CovTop.PublishedHodgeBundleT
       simp only [Pi.smul_apply]
       unfold gap at this ⊢
       split_ifs at this ⊢ with h1
-      · simp only [Pi.smul_apply, smul_eq_mul, nsmul_eq_mul] at this ⊢
+      · simp only [Pi.smul_apply, nsmul_eq_mul] at this ⊢
         have hk : (1 : ℤ) ≤ ((k + 1 : ℕ) : ℤ) := by exact_mod_cast Nat.succ_pos k
         rw [← mul_sub]
         exact this.trans (le_mul_of_one_le_left (by linarith) hk)

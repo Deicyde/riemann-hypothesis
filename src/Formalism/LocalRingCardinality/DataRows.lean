@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
 import Formalism.LocalRingCardinality.Params
-import Formalism.CoboundaryTransfers.Statement
+import Mathlib.Analysis.InnerProductSpace.Adjoint
 
 namespace Formalism.BasicNotions.Rows
 

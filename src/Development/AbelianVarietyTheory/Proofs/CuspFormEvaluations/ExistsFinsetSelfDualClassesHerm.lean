@@ -1,10 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.SemistableReduction.SemiAll
-import ReciprocityTheory.SemistableReduction.SemiDegZ
 import ReciprocityTheory.SemistableReduction.LatTest
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.CmApproximationTransference
 import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.ExistsThickPointHyperbolic
 import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.ExistsFinsetTypesOfBoundedBases
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.DiscriminantEstimates.DiscriminantTheorems.ScaledBoundInequality
 
 open NumberField Matrix Module Submodule ReciprocityTheory.MultiplicativeHeights ComplexConjugate
 open ReciprocityTheory.ChartRestriction.G.FD (herm cc fdeg dE)

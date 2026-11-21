@@ -1,6 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.TorsionBlocks.LowerUnipotentMinors
-import Development.AbelianVarietyTheory.BlockTheory.TorsionBlocks.BottomMinor
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.FockGram.StatementFock
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 

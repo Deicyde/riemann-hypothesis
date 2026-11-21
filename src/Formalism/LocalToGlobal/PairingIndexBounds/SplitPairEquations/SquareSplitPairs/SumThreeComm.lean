@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.PairingIndexBounds.SplitPairEquations.SquareSplitPairs.HomLMulPres
+import Formalism.LocalToGlobal.PairingIndexBounds.SplitPairEquations.GMConjTranspose
 
 noncomputable section
 open NumberField Formalism.BasicNotions Classical Matrix

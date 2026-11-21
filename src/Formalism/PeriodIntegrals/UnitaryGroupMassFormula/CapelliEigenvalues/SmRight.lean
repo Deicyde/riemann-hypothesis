@@ -1,6 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.CapelliEig
-import Formalism.PeriodIntegrals.KFinSmooth
-import Formalism.PeriodIntegrals.DSInfCharCap
 
 open Matrix PI.UpqRep
 

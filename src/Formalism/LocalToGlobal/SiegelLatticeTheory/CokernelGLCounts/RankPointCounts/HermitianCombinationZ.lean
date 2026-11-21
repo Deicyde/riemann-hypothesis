@@ -1,5 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.InHHDef
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.HidaSetting
+import Mathlib.RingTheory.TotallySplit
 
 noncomputable section
 
@@ -338,7 +340,7 @@ theorem Vm_mulVec (w : Fin k → Fin n → ℂ) (y : Fin n → ℂ) :
   have hv : ∀ a b : Fin n → ℂ, vecMulVec a b *ᵥ y = (b ⬝ᵥ y) • a := by
     intro a b
     ext i
-    simp [Matrix.mulVec, dotProduct, Matrix.vecMulVec_apply, Finset.sum_mul, mul_comm, mul_left_comm]
+    simp [Matrix.mulVec, dotProduct, Matrix.vecMulVec_apply, mul_comm]
     rw [Finset.mul_sum]
     exact Finset.sum_congr rfl fun _ _ => by ring
   unfold Vm

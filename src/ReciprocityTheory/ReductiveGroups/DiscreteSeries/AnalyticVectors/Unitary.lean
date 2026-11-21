@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.AnalyticVectors.ConjTransposeEqOfInG
+import Mathlib.Analysis.InnerProductSpace.Calculus
+import Mathlib.Tactic.ENatToNat
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -115,7 +120,7 @@ theorem theta_single (ε : Fin n → Bool) (a b : Fin n) :
     Jm ε * (Matrix.single a b (1 : ℂ))ᴴ * Jm ε = adjSign ε a b • Matrix.single b a 1 := by
   ext i j
   simp [Jm, adjSign, Matrix.diagonal_mul, Matrix.mul_diagonal, Matrix.single_apply,
-    Matrix.conjTranspose_apply, Matrix.smul_apply] <;> split_ifs <;> simp_all
+    Matrix.smul_apply] <;> split_ifs <;> simp_all
 
 theorem isInfUnitary_of_isDerivedOn (hσ : IsURepOn (UJset ε) σ) (hD : IsDerivedOn ε σ D E) :
     IsInfUnitary ε E := by

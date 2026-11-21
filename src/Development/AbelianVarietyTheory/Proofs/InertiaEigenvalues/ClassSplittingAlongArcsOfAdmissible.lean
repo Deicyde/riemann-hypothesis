@@ -1,7 +1,4 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.FiltrationSaturationKiller
-import Formalism.SharpRestriction.LevelLetterCocycles.InvariantsGenerators
-import Formalism.GaloisCohomology.LocalTateDualityK
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.RationalDualityOfAllCoefficients
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.ArcCoordinatesFinal
 open Formalism Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N
 

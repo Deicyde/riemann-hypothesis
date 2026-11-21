@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SiegelReframe
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorusFundamentalDomainCoversStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PluriharmonicHolomorphicDerivativeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PluriharmonicPeriodicConstantStatement

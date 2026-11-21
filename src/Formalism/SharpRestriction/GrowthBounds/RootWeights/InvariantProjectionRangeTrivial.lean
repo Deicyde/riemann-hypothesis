@@ -1,4 +1,8 @@
-import Formalism.SharpRestriction.GrowthBounds.RootWeights.HomLatticeDividedPowerStable
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.CovariantDegrees
+import Formalism.SharpRestriction.GrowthBounds.RootWeights.OperatorsKillInvariantProjection
+import Formalism.SharpRestriction.GrowthBounds.RootWeights.WeightSpaceEqBotOutsideSupport
 
 noncomputable section
 

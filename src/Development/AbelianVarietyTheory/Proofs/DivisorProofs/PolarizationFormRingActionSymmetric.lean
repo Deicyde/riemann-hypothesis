@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
-import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsCrystalPairing
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolarizationFormExistsForCmObject
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KodairaSpencerMatrixUnique
@@ -31,8 +28,8 @@ theorem polForm_adjoint_rm : GlobalTheory.Published.AbelianDeRham → GlobalTheo
   have eψ : ψ = (2 : R) • φ := IsPolForm.unique HR.1 X.ab X.dim (pull_isLB (X.isLB c) _) hψ h2φ
   obtain ⟨χ, hχ, k⟩ := hφ.pull (X.isLB c) (homMor (dp0 R) (𝟙 _) (𝟙 X.A))
     (homMor (dp0 R) (𝟙 _) (X.rm.act b)) (h := (lift (fst X.A X.A) (snd X.A X.A ≫ X.rm.act b)).left)
-    (by simp only [← Over.comp_left, lift_fst, lift_snd, Category.comp_id])
-    (by simp only [← Over.comp_left, lift_fst, lift_snd, Category.comp_id])
+    (by simp only [← Over.comp_left, lift_fst, Category.comp_id])
+    (by simp only [← Over.comp_left, lift_snd])
     (X.isLB (b • c)) (LBIso.symm (X.smul b c))
   obtain rfl := hχ.unique C (X.isLB (b • c)) hφ'
   have key : ∀ u v, χ u v = φ u (push (dp0 R) (𝟙 _) (X.rm.act b) v) := fun u v ↦ by

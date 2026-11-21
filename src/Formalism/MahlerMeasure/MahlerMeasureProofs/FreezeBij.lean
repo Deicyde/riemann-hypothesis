@@ -1,4 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.MahlerMeasure.IsFrozenInv
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace Formalism.GM.M.FB
 
@@ -140,7 +147,7 @@ lemma glAct_X {M : ℕ} (LL : Letters M) (c d : Fin r) (j : Fin M) (a : Fin r) :
   · by_cases hv : LL.vec j <;> by_cases ha : a = d <;> by_cases hc : a = c <;>
       simp [hv, ha, hc, MvPolynomial.pderiv_X, Pi.single_apply, j.isLt] <;> split_ifs <;> simp_all
   · intro i _ hij
-    split_ifs <;> simp [MvPolynomial.pderiv_X, Pi.single_apply, Ne.symm hij]
+    split_ifs <;> simp [MvPolynomial.pderiv_X, Ne.symm hij]
   · intro h
     exact absurd (Finset.mem_univ j) h
 
@@ -162,8 +169,8 @@ lemma glAct_freezeSub (LL : Letters N) (n : ℕ) (ρ c : Fin r) (hc : c ≠ ρ) 
     glAct p (LL.snoc n) (N + 1) c ρ (freezeSub p LL ρ v) = 0 := by
   rcases v with ⟨i, c0⟩
   by_cases hv : LL.vec i <;> by_cases hc0 : c0 = ρ <;>
-    simp [freezeSub, hv, hc0, glAct_mul, glAct_X, map_sum, map_sub, Ne.symm hc, hc, mul_ite,
-      Finset.sum_add_distrib, Finset.sum_ite_eq', Finset.sum_ite_eq] <;> ring
+    simp [freezeSub, hv, hc0, glAct_mul, glAct_X, map_sum, map_sub, Ne.symm hc, mul_ite,
+      Finset.sum_add_distrib, Finset.sum_ite_eq'] <;> ring
 
 lemma glAct_aeval_freezeSub (LL : Letters N) (n : ℕ) (ρ c : Fin r) (hc : c ≠ ρ)
     (f : MvPolynomial (Fin N × Fin r) ℚ_[p]) :

@@ -1,10 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.TrivFlagMod
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.FlagMinor
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.PluckerCoord
-import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.StatementsBundles
-import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.SameGenericSymm
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.DvrBundleStatementAStatement
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.DvrBundleStatementDStatement
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.ChartBundleExtensionIntersectionStatement
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.SameGenericLinearEquivStatement
@@ -26,7 +20,7 @@ theorem algebraMap_ne_zero_of_model {O : Type} [CommRing O] [IsDomain O] [IsDisc
     show _ = _
     have : (C w : MvPolynomial (Σ k, ι k) O) = algebraMap O _ w := rfl
     rw [this, AlgHom.commutes]
-    simp [MvPolynomial.algebraMap_eq, h0]
+    simp [h0]
   rw [hm.2.2.1] at hmem
   simpa using hmem
 

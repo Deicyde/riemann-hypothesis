@@ -1,5 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.GlobalTheory.GL3.IntegralityIffAwayAtD
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GlobalSchurBounds.GeneralLinearActions.IsDiscriminantTwelfthRootOfIdealLattice
 
 noncomputable section
 

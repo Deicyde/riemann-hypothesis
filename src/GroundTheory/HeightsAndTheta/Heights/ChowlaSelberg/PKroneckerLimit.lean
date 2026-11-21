@@ -1,5 +1,4 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.ChowlaSelberg.Statements
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ChowlaSelberg.KroneckerSplitStatement
 import GroundTheory.HeightsAndTheta.Heights.ChowlaSelberg.PowerIntegralStatement
 import GroundTheory.HeightsAndTheta.Heights.ChowlaSelberg.ShiftedSumIntegralStatement

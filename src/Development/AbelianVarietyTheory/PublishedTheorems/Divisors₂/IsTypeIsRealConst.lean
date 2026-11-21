@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PotentialTheory.IsPotentialOfFun
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiagValExtTraceNonneg
 import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.InterPolyProdSum
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TopologicalKrullDimEqSucc
 
@@ -129,7 +129,7 @@ theorem isType_isReal_const (t : ℝ) : IsType 0 0 (algebraMap ℂ (Alt n) t) �
     simp
   · rw [AlgHom.commutes]
     by_cases h : ∅ = S <;>
-      simp [Algebra.algebraMap_eq_smul_one, ← bas_empty, Finsupp.single_apply, h, -Complex.coe_smul]
+      simp [Algebra.algebraMap_eq_smul_one, ← bas_empty, h, -Complex.coe_smul]
 
 theorem isReal_I_smul_sym (a : Fin n) : IsReal (Complex.I • (dz a * dzb a)) := fun S => by
   obtain ⟨ε, h⟩ := bas_mul (S := {finSumFinEquiv (.inl a)}) (T := {finSumFinEquiv (.inr a)})
@@ -142,7 +142,7 @@ theorem isReal_I_smul_sym (a : Fin n) : IsReal (Complex.I • (dz a * dzb a)) :=
 
 theorem coefwise_smul {T : (V n → ℂ) → ℂ} (hT : T (fun _ => 0) = 0) (u : V n → ℂ) (S : Finset (Fin (n + n))) :
     coefwise T (fun x => u x • bas n S) = T u • bas n S := by
-  rw [coefwise, Finset.sum_eq_single S (fun S' _ h => by simp [Finsupp.single_apply, h.symm, hT]) (by simp)]
+  rw [coefwise, Finset.sum_eq_single S (fun S' _ h => by simp [h.symm, hT]) (by simp)]
   simp
 
 theorem delAt_dbarAt_fun {u : V n → ℝ} {v : V n} (hu : ContDiffAt ℝ 2 u v) :

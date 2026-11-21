@@ -1,4 +1,4 @@
-import Formalism.MahlerMeasure.FinalM
+import BuildAid.Leniency.Open
 import Formalism.MahlerMeasure.MahlerMeasureProofs.GamDeg
 import Formalism.MahlerMeasure.MahlerMeasureProofs.GamLead
 import Formalism.MahlerMeasure.MahlerMeasureProofs.GamInt

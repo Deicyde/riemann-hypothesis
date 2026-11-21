@@ -1,6 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.WeylForU
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CompactGroupIntegrability.InstCompactUG
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Algebra.Star.Unitary
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -55,7 +60,7 @@ lemma inner_sigma_T_eq_integral_mul_inner [FiniteDimensional ℂ S] (hrep : IsUR
   have hmul : σ ((h * x : UG N) : Matrix (Fin N) (Fin N) ℂ) = (σ h).comp (σ x) :=
     hrep.1.2 _ (memK h) _ (memK x)
   simp only [ContinuousLinearMap.comp_apply, innerSL_apply_apply, Submodule.subtypeL_apply, orb,
-    Submodule.coe_smul, map_smul, inner_smul_right, hmul, smul_eq_mul]
+    map_smul, hmul, smul_eq_mul]
   try rfl
 
 lemma isPositiveDefinite_matrix_coefficient_of_mem_algA [FiniteDimensional ℂ S] (hrep : IsURepOn (Kset (allPos N)) σ) (hst : IsKStableOn (allPos N) σ S)

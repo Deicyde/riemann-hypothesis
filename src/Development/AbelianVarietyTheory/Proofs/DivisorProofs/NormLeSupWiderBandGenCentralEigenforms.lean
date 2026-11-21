@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemBand
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemExpSolCons
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExponentialPolynomialSolutionSpaceFiniteDimensioStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExponentialPolynomialEqZeroOfEqOnIooStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiniteDimContinuousNormLeOnIccOfDeterminedStatement
@@ -22,7 +21,7 @@ theorem hasDerivAt_expCurve (ψ : Sm E a) (g : GA E a) (t : ℝ) :
   refine h3.congr_of_eventuallyEq (Filter.Eventually.of_forall fun x => ?_)
   have e : expCurve E a x = expCurve E a t * expCurve E a (x - t) := by
     rw [← expCurve_add, add_sub_cancel]
-  simp only [Function.comp_apply]
+  simp only
   rw [e, ← mul_assoc]
   rfl
 

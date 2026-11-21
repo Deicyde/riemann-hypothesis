@@ -1,5 +1,8 @@
-import Formalism.LocalToGlobal.GlobalTheory.BlockActions.MapBrTenL
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.BlockActions.NormBoundOfClasses
+import Formalism.LocalToGlobal.GlobalTheory.BlockActions.NfAllSmulReB
+import Formalism.LocalToGlobal.GlobalTheory.BlockActions.NormOneOfPow
 
 noncomputable section
 

@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.WeierstrassPAddOfNeOfDerivNeZero
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.JetRelOfWeierstrassSystem
+import Mathlib.AlgebraicTopology.FundamentalGroupoid.SimplyConnected
 
 open Filter Topology PeriodPair
 

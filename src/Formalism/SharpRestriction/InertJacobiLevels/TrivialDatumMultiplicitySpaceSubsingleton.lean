@@ -1,5 +1,7 @@
-import Formalism.SharpRestriction.InertJacobiLevels.ExtraRec
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.SpanPowerMembership.TwistRecordRowDimensionZero
+import Formalism.SharpRestriction.InertJacobiLevels.ExtraMods
 
 noncomputable section
 

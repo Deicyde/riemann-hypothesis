@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.DedekindLFunctions.SplitInertia
+import Formalism.SizeWindowBrackets.ChainSlopeWindows.PChain
 
 open Finset
 
@@ -24,7 +26,7 @@ lemma ch_top_main_eq {H : Type} [AddCommGroup H] [Fintype H] [DecidableEq H] {U0
     rw [← Finset.sum_coe_sort PhiSet]
     exact Equiv.sum_comp eP (fun x => g x)
   unfold Data.Main
-  simp only [ha, hw, hg, hL, hsum, hf]
+  simp only [ha, hw, hg, hL, hf]
   rw [Finset.sum_comm]
   rw [← Finset.sum_coe_sort TT]
   rw [← Equiv.sum_comp eT]

@@ -1,9 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.StatementsHodgeFlag
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterNamed
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterRedF
-import GroundTheory.HeightsAndTheta.Heights.Intersections.Statements
-import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsPFStep
 import GroundTheory.HeightsAndTheta.Heights.Intersections.PPFHoriz
 set_option maxSynthPendingDepth 1
 

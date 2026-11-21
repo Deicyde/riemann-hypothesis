@@ -1,5 +1,7 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.GaussSumFiltrations.EvenPos
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.KLevTop
+import Development.AutomorphicArithmetic.AutomorphicVarieties.IdeleGenerators.IsCondAt
 open NumberField IsDedekindDomain Neutral.B1 Formalism.L2.Host Formalism.ConjugateSelfDual GlobalTheory.CuspRep UpperTheory.V UpperTheory.V.Af UpperTheory.V.Sd GlobalTheory.HilbertThetaSeries
 open scoped Matrix
 
@@ -74,7 +76,7 @@ theorem GlobalTheory.HilbertThetaSeries.kMem : ∀ (F : Type) [Field F] [NumberF
     · simp [aff, Matrix.det_fin_two, hu w]
   · refine (mem_KLev_iff _).2 ⟨fun w i j => ?_, fun w => ?_⟩
     · fin_cases i <;> fin_cases j <;> simp [Matrix.GeneralLinearGroup.scalar, (hu w).le]
-    · simp [Matrix.GeneralLinearGroup.scalar, Matrix.det_fin_two, hu w]
+    · simp [Matrix.GeneralLinearGroup.scalar, hu w]
   · obtain ⟨k, -, rfl⟩ := Subgroup.mem_map.1 hg
     have hk : ∀ i j, Valued.v ((k.val i j : w.adicCompletionIntegers F) : w.adicCompletion F) ≤ 1 :=
       fun i j => (HeightOneSpectrum.mem_adicCompletionIntegers _ _ _).1 (k.val i j).2

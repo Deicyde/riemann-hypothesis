@@ -1,10 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsFSGeomDegPos
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsMultiDegreePositive
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PZCombLimit
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.PFibreDegreeSum
-import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsAntisym
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterSt
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.HilbertSamuel

@@ -1,4 +1,7 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.ClassMapStep
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.LevelLetterCocycles.DownSlotProposition
+import Mathlib.Order.Interval.Finset.Box
 
 noncomputable section
 

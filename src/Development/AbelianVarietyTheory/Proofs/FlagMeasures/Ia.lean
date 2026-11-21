@@ -1,5 +1,6 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.IsPrimitiveSub
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.CuspSpanNormBounds.BlockEnds
 
 noncomputable section
 

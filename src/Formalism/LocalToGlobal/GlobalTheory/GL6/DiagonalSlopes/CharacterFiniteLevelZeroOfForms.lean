@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.DownNaturalLevelZero
-import Formalism.LocalToGlobal.GlobalTheory.GL6.Statement
 
 noncomputable section
 

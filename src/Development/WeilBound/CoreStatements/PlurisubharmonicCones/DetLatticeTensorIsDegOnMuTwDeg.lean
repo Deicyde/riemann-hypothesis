@@ -1,10 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PlurisubharmonicCones.ExistsUnitOfSum
 import Development.WeilBound.CoreStatements.PlurisubharmonicCones.ComponentDataHeightIdentity
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ComponentDataHodgeSecond
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.IntersectionSystemHodgeDegree
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.SumLatticeWedgeComapStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.TensorWedgeDetChangeStatement
+import Development.WeilBound.CoreStatements.PlurisubharmonicCones.DeterminantLatticeGradedTensor
 
 open AlgebraicGeometry CategoryTheory NumberField Matrix
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi

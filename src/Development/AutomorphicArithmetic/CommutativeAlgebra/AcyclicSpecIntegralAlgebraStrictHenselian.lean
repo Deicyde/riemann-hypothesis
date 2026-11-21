@@ -1,4 +1,5 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.DivisorSupportCondition
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CommutativeAlgebra.AcyclicSpecFiniteAlgebraStrictHenselian
 import Development.AutomorphicArithmetic.CommutativeAlgebra.TwistCohomologyCommutesWithFilteredColimits
 

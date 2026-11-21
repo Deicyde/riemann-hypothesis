@@ -1,4 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeylFormulaCompact.FormulaStep
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 
@@ -35,10 +41,10 @@ lemma signatureMatrix_eq_blockReindex (ε : Fin N → Bool) : Jm ε = blR ε (fr
   simp only [Matrix.submatrix_apply, Equiv.symm_apply_apply, Jm, Matrix.diagonal_apply,
     (blk ε).injective.eq_iff]
   rcases x with i | j <;> rcases y with i' | j'
-  · by_cases h : i = i' <;> simp [h, Matrix.one_apply, sign_blockEquiv_inl]
+  · by_cases h : i = i' <;> simp [h, sign_blockEquiv_inl]
   · simp
   · simp
-  · by_cases h : j = j' <;> simp [h, Matrix.one_apply, sign_blockEquiv_inr]
+  · by_cases h : j = j' <;> simp [h, sign_blockEquiv_inr]
 
 lemma signatureMatrix_allPos_eq_one (n : ℕ) : Jm (allPos n) = 1 := by
   simp [Jm, allPos]

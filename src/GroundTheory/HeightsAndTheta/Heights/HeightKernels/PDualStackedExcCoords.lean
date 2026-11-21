@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.StatementsDualStackedExcChart
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.PDualStackedExcResidueExists
 set_option maxSynthPendingDepth 1

@@ -1,9 +1,13 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.PropFTop
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HBBound
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.DegreeOfIsIntersectionSystem
-import GroundTheory.HeightsAndTheta.Heights.SemipositiveHeights.MetricLocal
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FirstCohomology.PrimeLogSum
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.CompactGapsGE
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 

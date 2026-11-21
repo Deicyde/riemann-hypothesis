@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.CyclotomicDvdExpandOfCoprime
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsBasisOneAddXPow
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsOfRedEqZero
 open GlobalTheory.Col PowerSeries

@@ -1,6 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IotaScalarOne
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoeffAddPPowMulLt
+import Mathlib.RingTheory.LocalProperties.Reduced
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.WittVector.DiscreteValuationRing
 open GlobalTheory.Sandwich GlobalTheory.IndefiniteRowSideFullHecke.SandwichMaps GlobalTheory.DetInv Matrix TensorProduct
 
 namespace GlobalTheory.LemY
@@ -17,7 +19,7 @@ theorem perfectRing_fractionRing (p : ℕ) [Fact p.Prime] (S : Type) [CommRing S
   obtain ⟨a', rfl⟩ := surjective_frobenius S p a
   obtain ⟨b', rfl⟩ := surjective_frobenius S p b
   refine ⟨algebraMap S (FractionRing S) a' / algebraMap S (FractionRing S) b', ?_⟩
-  simp [frobenius_def, div_pow, map_pow]
+  simp [frobenius_def, map_pow]
 
 theorem dvd_of_frobenius_eq : ∀ (p : ℕ) [Fact p.Prime] (S : Type) [CommRing S] [IsDomain S] [ValuationRing S] [CharP S p] [PerfectRing S p] (d : ℕ) (m : WittVector p S) (U : Matrix (Fin d) (Fin d) (WittVector p S)) (Z : Fin d → WittVector p S), m.coeff 0 ≠ 0 → (∀ i, m * WittVector.frobenius (Z i) = WittVector.frobenius m * (U *ᵥ Z) i) → ∀ i, m ∣ Z i := by
   intro p _ S _ _ _ _ _ d m U Z hm hZ i

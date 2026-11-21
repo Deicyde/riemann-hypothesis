@@ -1,5 +1,14 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.BijectiveRestrictPointsOfEtaleOfHenselian
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Algebra.AffineMonoid.UniqueSums
+import Mathlib.AlgebraicGeometry.ValuativeCriterion
+import Mathlib.CategoryTheory.Monoidal.Cartesian.Grp
+import Mathlib.RingTheory.LaurentSeries
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 namespace GlobalTheory.LaurentConst
 
@@ -93,11 +102,11 @@ theorem eq_const {z : AddMonoidAlgebra R ℤ} {p q : PowerSeries R}
   ext n
   rcases lt_trichotomy n 0 with h | rfl | h
   · rw [← coeff_atZero, hp, PowerSeries.coeff_coe, if_pos h]
-    simp [Finsupp.single_apply, h.ne]
+    simp [h.ne]
   · rw [← coeff_atZero, hp, PowerSeries.coeff_coe]
     simp
   · rw [← coeff_atInf, hq, PowerSeries.coeff_coe, if_pos (by omega)]
-    simp [Finsupp.single_apply, h.ne']
+    simp [h.ne']
 
 variable (r : L →+* R) (t : Rˣ)
 

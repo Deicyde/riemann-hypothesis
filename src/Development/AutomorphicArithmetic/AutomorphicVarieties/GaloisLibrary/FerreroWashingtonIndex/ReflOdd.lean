@@ -1,8 +1,8 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.FerreroWashingtonIndex.CycRepApply
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.FerreroWashingtonIndex.CardTors
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.KummerTheory.Reflect
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.KummerTheory.PullEq
-import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.KummerTheory.PullMem
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.KummerTheory.ClMapBasic
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.GaloisCohomology UpperTheory.V UpperTheory.V.Base UpperTheory.V.Kum UpperTheory.V.Stick UpperTheory.V.FW
@@ -81,7 +81,7 @@ theorem UpperTheory.V.FW.reflOdd :
       intro τ hτ c
       have h1 : τ = cE K := reflOdd_uniq hτ hσl
       subst h1
-      simp only [LinearMap.smul_apply, LinearMap.id_apply, one_smul]
+      simp only [LinearMap.id_apply, one_smul]
       rw [hmk c]
   let Φ : (Cl K ⧸ H →* Multiplicative (ZMod l)) →
       ClEig K 1 (scalRep (ZMod l) (1 : G K (AlgebraicClosure K) →* (ZMod l)ˣ)) σ (1 : ZMod l) :=

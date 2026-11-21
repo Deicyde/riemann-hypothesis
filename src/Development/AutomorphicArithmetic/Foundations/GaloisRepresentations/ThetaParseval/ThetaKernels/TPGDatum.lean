@@ -1,11 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BcCompFinAwayPtOfNotMem
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.HalfIndexLattices.SplitStab
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.HalfIndexLattices.IsLatRepL
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.ThetaKernels.GalTPDefs
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.ThetaKernels.ThetaBasicK
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.ThetaKernels.ThkBaseBadFactor
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.ThetaKernels.TPGDecomp
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.ThetaKernels.ThkBaseBadA
+import Development.WeilBound.ThetaLifts.LatticeBasics.BadFactor
 
 set_option synthInstance.maxHeartbeats 200000
 
@@ -130,7 +128,7 @@ private theorem cut_add_pk {S R k : Type} [CommRing S] [CommRing R] [Algebra S R
   have e : ∀ c : S, Euler.cut c A = 1 + c • (A - 1) := fun c => eq_add_of_sub_eq' (Euler.cut_sub A)
   have h' : c₂ * c₁ = 0 := by rw [mul_comm, h]
   rw [e, e, e]
-  simp only [add_mul, mul_add, one_mul, mul_one, add_smul, Matrix.smul_mul, Matrix.mul_smul, smul_smul, h, h', zero_smul, add_zero]
+  simp only [add_mul, mul_add, one_mul, mul_one, add_smul, Matrix.smul_mul, Matrix.mul_smul, smul_smul, h', zero_smul, add_zero]
   abel
 private theorem int_aS_pk (T : Finset (Pl F)) (u : Pl F) : evFin F u (aS F T) ∈ u.adicCompletionIntegers F := by
   by_cases h : u ∈ T

@@ -1,9 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairData
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsModelPresentingDivisor
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PAdicPointPairingCompatible
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConnectingStatement
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.IsCombAtGMulVec
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ChartFlagBaseHolds
 import Development.AbelianVarietyTheory.Proofs.FormalGroupCharts.PushChart
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUniqueCmOrderActionMatrixOnAffineOpen

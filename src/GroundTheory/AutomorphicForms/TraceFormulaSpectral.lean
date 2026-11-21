@@ -1,7 +1,8 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.DiscreteSpectrumAbstract
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.TraceClass
 import GroundTheory.AutomorphicForms.UnitaryRepresentations
+import Mathlib.Topology.UniformSpace.Uniformizable
 
 open MeasureTheory ContinuousLinearMap
 open scoped ENNReal InnerProductSpace InnerProduct

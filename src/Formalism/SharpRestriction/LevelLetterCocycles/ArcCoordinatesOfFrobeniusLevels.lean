@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.ExistsPrimOfGood
 import Formalism.SharpRestriction.LevelLetterCocycles.SplitShapeLRec
-import Formalism.SharpRestriction.LevelLetterCocycles.SplittingOfPolarShape
+import Formalism.SharpRestriction.LevelLetterCocycles.SplittingOfLiteratureExactness
 
 noncomputable section
 

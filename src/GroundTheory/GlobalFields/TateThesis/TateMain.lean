@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.TateThesis.TateThetaDecay
 import GroundTheory.GlobalFields.TateThesis.ArchCharsUnitary
+import GroundTheory.GlobalFields.TateThesis.GlobalZetaSplit
+import Mathlib.NumberTheory.LSeries.AbstractFuncEq
 
 open NumberField IsDedekindDomain Topology Filter MeasureTheory Complex
 open scoped NumberField.AdeleRing

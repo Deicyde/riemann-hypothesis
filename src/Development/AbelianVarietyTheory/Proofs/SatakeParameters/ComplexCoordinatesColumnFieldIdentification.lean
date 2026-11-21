@@ -1,4 +1,6 @@
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.UnderTie
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ExistsMidLevIff
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions Formalism.UG Formalism.L2.Col Formalism.L2.Ker Formalism.L2.DIV Formalism.L2.Forms Formalism.L2.PairingIndexBounds.F Formalism.MainNotions.G.KAat GlobalTheory.TwU GlobalTheory.TwV
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 noncomputable section
@@ -14,7 +16,7 @@ theorem iE_single {a : ℕ} (j : Fin a) : (fun k => s.iE ((Pi.single j (1 : X.E)
   funext k
   by_cases h : k = j
   · subst h; simp
-  · simp [Pi.single_apply, h]
+  · simp [h]
 
 theorem seamHom_injective {a b : ℕ} : Function.Injective (seamHom s (a := a) (b := b)) := by
   intro x x' h

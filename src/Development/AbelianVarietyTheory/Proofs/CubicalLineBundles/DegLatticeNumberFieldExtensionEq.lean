@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.CMLattices.ExistsIsThetaDegOfIsLocalModel
-import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.LengthCommensurableSpanSpanOfDetNeZero
-import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.LengthLocalizedModuleEqZeroOfNotAnnihilatorLe
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.OneMulConjFracOneEqInvDifferent
 
 open NumberField Module ReciprocityTheory.GeometryOfNumbersTheory
@@ -17,7 +15,7 @@ variable [Module K V] [IsScalarTower (𝓞 K) K V] [Module K' V'] [IsScalarTower
 theorem form_eq_sum {L : Type} [Field L] {n : ℕ} (h : HermFam L (Fin n → L)) (s : L →+* ℂ) (x y : Fin n → L) :
     h.form s x y = ∑ a, ∑ b, starRingEnd ℂ (s (x a)) * s (y b) * h.form s (Pi.single a 1) (Pi.single b 1) := by
   conv_lhs => rw [pi_eq_sum_univ' x, pi_eq_sum_univ' y]
-  simp only [h.ds_form_sum_left, h.ds_form_sum_right, h.ds_form_smul_left, h.smul_right, Finset.mul_sum,
+  simp only [h.ds_form_sum_left, h.ds_form_sum_right, h.ds_form_smul_left, h.smul_right,
     mul_assoc]
 
 end GlobalTheory.LatticeExtension
@@ -178,7 +176,7 @@ private lemma exists_linearForm_vanish_init_eq_one_last {r : ℕ} {v : Fin (r + 
     simp [Module.Basis.span_apply]
   refine ⟨g, fun i => ?_, ?_⟩
   · rw [key]
-    simp [Finsupp.single_apply, Fin.castSucc_ne_last]
+    simp [Fin.castSucc_ne_last]
   · rw [key]
     simp
 

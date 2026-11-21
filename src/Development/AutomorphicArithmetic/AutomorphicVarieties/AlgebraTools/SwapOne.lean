@@ -1,8 +1,10 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.HkDefs
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.HkBern
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.SwapOneAlt
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.EqOneOfStrictMono
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.HkInd
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
 
 open MvPolynomial Equiv UpperTheory.V.AlgebraTools.Hk
 

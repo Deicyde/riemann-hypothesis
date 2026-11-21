@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.QuotientMeasure
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HaarMeasureIwasawaQuotient
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InvariantMeasurableModificationStatement

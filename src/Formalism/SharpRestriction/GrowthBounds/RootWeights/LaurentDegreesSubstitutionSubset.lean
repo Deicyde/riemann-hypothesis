@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.RootWeights.SpecialiseGenericMatrixInverse
 
 noncomputable section
@@ -98,7 +100,7 @@ private theorem genericMatrixBis_mul_genericMatrixInverse (R : Type) [Field R] (
     simp only [Matrix.smul_apply, Matrix.map_apply, Matrix.one_apply_eq, smul_eq_mul, mul_one]
     rw [mul_comm]
     exact IsLocalization.Away.mul_invSelf _
-  · simp [Matrix.smul_apply, Matrix.one_apply, hab]
+  · simp [Matrix.smul_apply, hab]
 
 private theorem map_C_genericMatrixBis_and_inverse_eq_gL_gLinv (R : Type) [Field R] (n : ℕ) :
     (genericMatrixRootWeights R n).map LaurentPolynomial.C = gL R n ∧ (genericMatrixInverse R n).map LaurentPolynomial.C = gLinv R n := by

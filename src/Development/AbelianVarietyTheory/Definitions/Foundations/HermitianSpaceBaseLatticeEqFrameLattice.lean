@@ -1,5 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.BesselHermitianTheta.IsAutFunDef
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.OfInfProjInfMulOfFinProjFin
 
 noncomputable section

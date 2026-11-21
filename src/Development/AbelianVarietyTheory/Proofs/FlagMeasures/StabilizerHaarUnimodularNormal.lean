@@ -1,9 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.IsNormalFormStabilizerMeasure
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.CommonStabilizerSetEqRangeNormalFormStatement
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.IsotropicLeviEmbeddingHomomorphismProperties
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.IsotropicStabilizerRadicalStructure
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.LintegralInvEqOfBiInvariantMatGroup
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
+import Mathlib.CategoryTheory.Countable
+import Mathlib.LinearAlgebra.Eigenspace.Zero
+import Mathlib.Topology.Separation.CompletelyRegular
 
 noncomputable section
 
@@ -282,8 +284,8 @@ theorem pTop_shear (c : ℝ) (q₀ : PTop k r j) : ∃ T : PTop k r j → PTop k
       rw [hN]
       refine ⟨fun a _ => rfl, ?_, fun a b ha => ?_⟩
       · ext a b
-        simp only [Matrix.conjTranspose_apply, Matrix.neg_apply, Matrix.smul_apply, hm_apply, star_smul, star_trivial,
-          star_div₀, star_sub, Rad.herm_star, star_ofNat, Complex.real_smul]
+        simp only [Matrix.conjTranspose_apply, Matrix.neg_apply, Matrix.smul_apply, hm_apply,
+          Complex.real_smul]
         simp [Rad.herm_star]
         ring
       · simp only [Matrix.smul_apply, hm_apply, (topC_topL q).1 a ha, (topC_topL q₀).1 a ha]

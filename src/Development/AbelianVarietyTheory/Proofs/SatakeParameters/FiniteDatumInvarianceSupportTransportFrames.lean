@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.UnderTie
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ExistsMidLevIff
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Col Formalism.L2.Ker Formalism.L2.DIV GlobalTheory.TwU GlobalTheory.TwV
 open Classical
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
@@ -67,7 +68,7 @@ theorem perO_apply_mem (AA : Submodule (𝓞 E) E) (q : Ideal (𝓞 E)) [q.IsPri
       have e1 : (t2 * t1) • ((r • x) y) = o • (t1 • x y) := by
         funext l
         rw [Algebra.smul_def] at ho
-        simp only [LinearMap.smul_apply, Pi.smul_apply, Algebra.smul_def, smul_eq_mul, map_mul, ho, Pi.mul_apply,
+        simp only [LinearMap.smul_apply, Pi.smul_apply, Algebra.smul_def, map_mul, ho, Pi.mul_apply,
           Pi.algebraMap_apply, Algebra.algebraMap_self, RingHom.id_apply]
         ring
       rw [e1]

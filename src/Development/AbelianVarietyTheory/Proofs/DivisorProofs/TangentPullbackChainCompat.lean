@@ -1,17 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
-import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsCrystalPairing
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.PolarisationModuleIndex
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ConjugateOrderData
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsPlaceRing
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SzPeriodsOfTangent
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EventuallyOfForall
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsPullByCompAlt
-import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.HomLieEquivScalarTmul
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.PolBaseChangeOfRelAmpleLocal
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.EigLatBasis
 
 set_option autoImplicit false
 
@@ -63,7 +53,7 @@ theorem exists_tangent_baseChange : ∀ (R₀ R : Subring ℂ) (ic : R₀ →+* 
     · have hr : ((TrivSqZeroExt.fstHom R R R).toRingHom).comp (algebraMap R (DualNumber R)) =
           RingHom.id R := by
         refine RingHom.ext fun x => ?_
-        simp [TrivSqZeroExt.algebraMap_eq_inl]
+        simp
       rw [Category.assoc, hvG, spMap_comp_ring, hr, Over.w η[G]]
       simp
   · apply hg.1.hom_ext

@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.PrincipalLattices.ConclusionsAtIdentity
-import ReciprocityTheory.GeometryOfNumbers.LatticeCovolumes.PosSemidefOfForallCombination
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.LieLatticeFgAndSpanEqTopRingOfIntegers
-import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.LieAlgebraEigenDecompositionCMSignature
 
 set_option autoImplicit false
 

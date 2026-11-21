@@ -1,14 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
-import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.LanglandsSquareIntegrable
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPurelyImaginaryElement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsHermNDSmulSkewForm
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentMemIffUnipotentRadical
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegrableOnSqFundamentalDomain
 open scoped TensorProduct NNReal Matrix
@@ -69,7 +62,7 @@ theorem det_ne_zero_cartan (B : Base F E) {n : ℕ} (Y : Spc F E n)
     ext i
     have := congrArg τ (congrFun hJv i)
     simp only [Matrix.mulVec, dotProduct, map_sum, map_mul, Pi.zero_apply, map_zero] at this
-    simp only [M, v', Matrix.smul_mulVec, Matrix.mulVec, dotProduct, Matrix.map_apply, Pi.smul_apply, smul_eq_mul,
+    simp only [M, v', Matrix.mulVec, dotProduct, Matrix.map_apply, smul_eq_mul,
       Pi.zero_apply, Matrix.smul_apply, mul_assoc, ← Finset.mul_sum, this, mul_zero]
   have hx : star v' ≠ 0 := fun h => hv' (by simpa using congrArg star h)
   have := (h w).2.2 (star v') hx
@@ -180,7 +173,7 @@ theorem gen_iff' {σ : E →ₐ[F] E} (hσ : ∀ x, σ (σ x) = x) {c : E} (hc :
       refine ⟨a 0, ?_⟩
       rw [← hcol, ← ha, incV_mulVec]
       congr 2
-      funext i; by_cases hij : i = j <;> simp [incV, Pi.single_apply, hij]
+      funext i; by_cases hij : i = j <;> simp [incV, hij]
     choose a ha using h3
     refine ⟨∑ j, z j * a j, ?_⟩
     rw [← sub_eq_iff_eq_add', show mat u *ᵥ (incM F H'.ι *ᵥ z) - incM F H'.ι *ᵥ z = (mat u - 1) *ᵥ (incM F H'.ι *ᵥ z) by

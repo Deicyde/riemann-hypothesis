@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.GeometricLemmaFiltration
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HasFiniteLengthOfIsIrreducible
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.BernsteinUnitaryProductIrreducible
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.ExistsCellOfIsSubquotient
 
 open GlobalTheory.PRep GlobalTheory.SmGL Matrix
 
@@ -14,28 +13,28 @@ def cellFirst (u v : ℕ) : SizeMatrix (Two (Fin (u + 1)) (Fin v)) (Two (Fin 1) 
     refine ⟨fun i => ?_, fun j => ?_⟩
     · cases i
       · show (∑ j : Bool, cond j u 1) = Fintype.card (Fin (u + 1))
-        simp [Fintype.sum_bool, add_comm]
+        simp
       · show (∑ j : Bool, cond j v 0) = Fintype.card (Fin v)
-        simp [Fintype.sum_bool]
+        simp
     · cases j
       · show (∑ i : Bool, cond i 0 1) = Fintype.card (Fin 1)
-        simp [Fintype.sum_bool]
+        simp
       · show (∑ i : Bool, cond i v u) = Fintype.card (Fin (u + v))
-        simp [Fintype.sum_bool, add_comm]⟩
+        simp [add_comm]⟩
 
 def cellSecond (u v : ℕ) (hv : 1 ≤ v) : SizeMatrix (Two (Fin (u + 1)) (Fin v)) (Two (Fin 1) (Fin (u + v))) :=
   ⟨fun i j => cond i (cond j (v - 1) 1) (cond j (u + 1) 0), by
     refine ⟨fun i => ?_, fun j => ?_⟩
     · cases i
       · show (∑ j : Bool, cond j (u + 1) 0) = Fintype.card (Fin (u + 1))
-        simp [Fintype.sum_bool]
+        simp
       · show (∑ j : Bool, cond j (v - 1) 1) = Fintype.card (Fin v)
-        simp [Fintype.sum_bool]; omega
+        simp; omega
     · cases j
       · show (∑ i : Bool, cond i 1 0) = Fintype.card (Fin 1)
-        simp [Fintype.sum_bool]
+        simp
       · show (∑ i : Bool, cond i (v - 1) (u + 1)) = Fintype.card (Fin (u + v))
-        simp [Fintype.sum_bool]; omega⟩
+        simp; omega⟩
 
 theorem eq_cellFirst_or (u v : ℕ) (b : SizeMatrix (Two (Fin (u + 1)) (Fin v)) (Two (Fin 1) (Fin (u + v)))) :
     b = cellFirst u v ∨ ∃ hv : 1 ≤ v, b = cellSecond u v hv := by

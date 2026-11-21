@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.FrobeniusLocalisation.DiffDefs
+import Development.AutomorphicArithmetic.PrimeDiscriminants.SlopeTestRemainingChoices
 
 open UpperTheory.HF
 

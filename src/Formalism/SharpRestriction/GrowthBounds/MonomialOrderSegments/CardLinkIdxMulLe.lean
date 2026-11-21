@@ -1,8 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.MonomialOrderSegments.CgeZeroIffIntegral
 import Formalism.SharpRestriction.GrowthBounds.MonomialOrderSegments.ProjKeepsLetter
 import Formalism.SharpRestriction.GrowthBounds.MonomialOrderSegments.AddMemSupportOfMemSupportCoefOut
 import Formalism.SharpRestriction.GrowthBounds.MonomialOrderSegments.SlopeOfBinomCombGen
-import Formalism.SharpRestriction.GrowthBounds.MonomialOrderSegments.DigitPartMonomial
+import Formalism.SharpRestriction.GrowthBounds.MonomialOrderSegments.CollapseExponent
 
 noncomputable section
 

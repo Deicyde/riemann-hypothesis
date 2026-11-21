@@ -1,7 +1,8 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.OmegaFactorization
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.TraceDualDifferent
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RepNeZero
+import Mathlib.Algebra.Order.Star.Real
 open NumberField
 open scoped nonZeroDivisors
 

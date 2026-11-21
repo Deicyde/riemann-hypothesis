@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.LinksExistW
-import Formalism.LocalToGlobal.IndefiniteReal.ZeroPartEigenvalueConvention
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IoPOfIsIoWAt
 import Formalism.LocalToGlobal.IndefiniteReal.HeckeNonvanishing.Imports
 

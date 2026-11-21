@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ChosenSeries
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.NotTrivialAndTwist
+import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.BarMatrix
+import Mathlib.Analysis.Calculus.Deriv.Star
 
 noncomputable section
 

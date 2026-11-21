@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.SobSympl
-import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.SobPhase
 import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.IterEqOfRange
+import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.ThetaSquareIntegrable
 
 noncomputable section
 

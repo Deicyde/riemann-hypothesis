@@ -1,4 +1,6 @@
-import Formalism.WachLatticeTwists.RealDisplaySplitting.GaloisTheoremThirdForms
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.WachLatticeTwists.RealClassMaps.RealClassMapTheorem
 
 variable [hT2Core : Fact ReciprocityTheory.ChartRestriction.T2.Core]
 

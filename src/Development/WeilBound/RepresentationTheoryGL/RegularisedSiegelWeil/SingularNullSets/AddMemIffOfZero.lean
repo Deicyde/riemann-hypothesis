@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.RegularisedSiegelWeil.SingularNullSets.FixMulKer
+import Development.AutomorphicSpectrum.Proofs.GlobalProofs.CoefS
 
 noncomputable section
 

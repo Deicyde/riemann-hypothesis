@@ -1,12 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFactorPureTensorComponentAtPlace
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqOfComponentTensorAdelicFunctionEq
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFinPartNeZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLeviElementSkewCmStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaStabilizerExistsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaLiftLinearCombinationStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaLiftLeftInvariantAltBis
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalComponentsSchwartzMembershipStatement
@@ -206,7 +200,7 @@ theorem nonzero : GlobalTheory.ThK.KP → ∀ (F E : Type) [Field F] [NumberFiel
         funext v
         by_cases hv : v = w
         · subst hv; simp [cur]
-        · simp [cur, Function.update_of_ne hv, Finset.mem_insert, hv]
+        · simp [cur, Finset.mem_insert, hv]
       rw [e, ← hrt]
       intro h0
       exact hlw ((hl' _ hcw).trans h0)
@@ -274,7 +268,7 @@ theorem nonzero : GlobalTheory.ThK.KP → ∀ (F E : Type) [Field F] [NumberFiel
         funext v
         by_cases hv : v = B.v₁
         · subst hv; simp [cur]
-        · simp [cur, Function.update_of_ne hv, hv]
+        · simp [cur, hv]
       rw [e, ← hrt]
       intro h0
       exact hlv ((hl' _ (Submodule.subset_span hcv)).trans h0)

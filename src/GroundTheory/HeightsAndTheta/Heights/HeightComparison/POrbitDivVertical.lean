@@ -1,5 +1,4 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.HeightComparison.HeightOrbitDivVertical
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.PHeightRecR
 set_option maxSynthPendingDepth 1
 

@@ -1,28 +1,14 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SquareTriple
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.UnifModGrowthOfIsUnifModerate
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LiftPRouteSmall
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsNatMulIntegralOfIsCompact
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.ThetaNormSqSumHeisenbergTranslatesDistinctChars
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaSeriesSummableOnCovolumeDomain
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSplittingSplitOm
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLocallyConstantAddChar
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.IsOpenNsmulAdelicCompletionOfVectorSet
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.FiniteAdeleStrongApproximationModNat
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.ExistsCompactAdeleRingModNumberField
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilObjectsInhabited
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsTranslatesEqPrimFrameLat
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsLocallyConstantSplitOm
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LocalComponentsNontrivialAdelicCharacter
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.FinPartIdemMulMemIff
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCompactOpenAddSubgroup
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LocalComponentsNontrivialAdelicCharacterStatement
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SchrodingerIntertwinerSchwartzBruhatIsThetaStatement
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EqZeroOfPderivStable
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IdempotentMulEqZeroOfOrthogonal
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.ExistsRealPlaceSymplecticFormPositiveComplexStru
 import Formalism.LocalToGlobal.IndefiniteReal.DatumLemmas
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.UnitaryConjugation
+import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsGivenStageEqOne
+import Mathlib.LinearAlgebra.Matrix.Swap
 
 section
 section
@@ -731,7 +717,7 @@ theorem L_half (hc : Continuous ψ) (h1 : ψ ≠ 1) (s : ((κ → k) × (κ → 
       show ((x, 0) : (κ → k) × (κ → k)) + w = (0, w.2) + (x + w.1, 0) by ext <;> simp, smul_eq_mul, smul_eq_mul,
       ← mul_assoc, ← AddChar.map_add_eq_mul]
     congr 2
-    simp only [zero_dotProduct, dotProduct_zero, add_dotProduct]
+    simp only [dotProduct_zero, add_dotProduct]
     linear_combination (x ⬝ᵥ w.2) * (invOf_two_add_invOf_two (R := k))
   have cs : Continuous s := by
     have : (s : _ → _) = fun w => (s ∘ₗ LinearMap.inl k _ _) w.1 + (s ∘ₗ LinearMap.inr k _ _) w.2 := funext fun w => by

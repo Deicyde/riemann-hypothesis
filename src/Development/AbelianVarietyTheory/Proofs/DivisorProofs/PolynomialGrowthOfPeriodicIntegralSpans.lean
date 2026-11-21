@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousOnCoordsOfLinearIndependentStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolyGrowthSpreadOfIntegralMonodromyStatement
+import Mathlib.Analysis.Complex.Convex
+import Std.Tactic.BVDecide.Normalize.Prop
 open Filter Topology
 
 namespace GlobalTheory.StripGrowth

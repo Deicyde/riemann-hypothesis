@@ -1,6 +1,6 @@
-import Development.AutomorphicArithmetic.FrobeniusLocalisation.DiffDefs
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.FrobeniusLocalisation.DiscrK
-import Development.AutomorphicArithmetic.FrobeniusLocalisation.LogRdSum
+import Mathlib.Algebra.Ring.IsFormallyReal
 
 open NumberField Ideal Formalism.HC Formalism.FrobeniusOrbits
 open scoped Pointwise

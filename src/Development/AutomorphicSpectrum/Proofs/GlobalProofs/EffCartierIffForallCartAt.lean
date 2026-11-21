@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GeometricallyConnectedOfIsIsoRestrict
+import BuildAid.Leniency.Open
+import ReciprocityTheory.AnalyticForms.RegularLocalRings.FinalTheorems
 
 noncomputable section
 

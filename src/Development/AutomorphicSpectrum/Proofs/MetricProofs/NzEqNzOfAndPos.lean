@@ -1,11 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.IsEigFrames
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.BdryChart
-import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.IsPshLocallyIntegrableStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LogPeriodLimit
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.ExistsIsChart
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.IsotropicSublatticeCovolumePositiveStatement
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.RiemannLatticeEigenProjectionStatement
 open NumberField Matrix Filter Topology GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Cusp GroundTheory.Heights₂.Heights.LowerBoundFree GroundTheory.Heights₂.Heights.Regular
 open GlobalTheory.CompanionTheory.Ar.RiemannLimit GlobalTheory.CompanionTheory.Ar.Cusp.BoundaryLimit
 
@@ -29,7 +23,7 @@ theorem nz_eq_nzOf_of_family : ∀ (E : Type) [Field E] [NumberField E] [IsCMFie
     have hof : R.nzOf σ (⊥ : Submodule (𝓞 E) Λ) y = 1 := by
       have hs : Submodule.span (𝓞 E) (Set.range y) = ⊥ := by
         simp [Set.range_eq_empty]
-      simp [RiemLat.nzOf, hs]
+      simp [RiemLat.nzOf]
     rw [hnz, hof]
     exact ⟨rfl, one_pos⟩
   · have hr : 1 ≤ r := by

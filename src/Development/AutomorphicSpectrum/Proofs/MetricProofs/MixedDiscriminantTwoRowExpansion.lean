@@ -1,14 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.IsTwiceDifferentiableAt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.CompRightEqZero
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.KappaSt
-import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsFibreLocal
-import GroundTheory.HeightsAndTheta.Heights.Antisymmetric.Statements
-import GroundTheory.HeightsAndTheta.Heights.ElementarySymmetric.PDiagFibreFubini
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.SphereMeasureStereographicIntegralStatement
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.XiPotentialHessianDecompositionStatement
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.MixedDiscriminantCofactorExpansionStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.EvalW
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
 open MvPolynomial MeasureTheory Filter Topology Matrix ReciprocityTheory.AnForm ReciprocityTheory.AnForm.M ReciprocityTheory.AnForm.P GlobalTheory.CompanionTheory.Ar.PB GroundTheory.Heights₂.Heights
 open scoped ComplexOrder
 open GlobalTheory.CompanionTheory.Ar.PB.FibN ReciprocityTheory.ChartRestriction.G.AI GroundTheory.Heights₂.Heights.Inter
@@ -40,14 +33,14 @@ theorem derivation_prod_succAbove_xt {σ : Type*} {n : ℕ}
   rfl
 
 theorem pderiv_rowW_zero_xt (u : Fin 2 → ℝ) (v : ℝ) : pderiv (some 0) (rowW u v) = C (u 0) := by
-  simp [rowW, pderiv_X, Pi.single_apply, pderiv_C, Derivation.leibniz]
+  simp [rowW, pderiv_X, Derivation.leibniz]
 
 theorem pderiv_rowW_one_xt (u : Fin 2 → ℝ) (v : ℝ) : pderiv (some 1) (rowW u v) = C (u 1) := by
-  simp [rowW, pderiv_X, Pi.single_apply, pderiv_C, Derivation.leibniz]
+  simp [rowW, pderiv_X, Derivation.leibniz]
 
 theorem pderiv_C_mul_xt {σ : Type*} [DecidableEq σ] (j : σ) (a : ℝ) (p : MvPolynomial σ ℝ) :
     pderiv j (C a * p) = C a * pderiv j p := by
-  simp [Derivation.leibniz, pderiv_C]
+  simp [Derivation.leibniz]
 
 theorem linear_form_linear_combination (a b : ℝ) (n m : Fin 3 → ℝ) :
     lin4 (fun i => a * n i + b * m i) = C a * lin4 n + C b * lin4 m := by

@@ -1,5 +1,7 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.DeterminantPadicFree.FrameWith
+import BuildAid.Leniency.Open
 import Mathlib.Algebra.Module.Lattice
+import Development.AutomorphicArithmetic.AutomorphicVarieties.WeilGroupCharacters.UniversalOrdinaryDeterminantRing
+import Mathlib.RingTheory.RegularLocalRing.Defs
 open Matrix IsLocalRing UpperTheory.V.Alg UpperTheory.V.W UpperTheory.V.Pa
 
 private theorem exists_stable_lattice {A F G : Type} [CommRing A] [IsDomain A] [IsDiscreteValuationRing A]
@@ -65,7 +67,7 @@ theorem UpperTheory.V.Pa.Det.latInt :
     intro g
     ext i j
     have e := congrArg (fun x : L => (x : Fin m → F) i) (bL.sum_repr ⟨_, hst g _ (bL j).2⟩)
-    simp only [Submodule.coe_sum, Submodule.coe_smul, Finset.sum_apply, Pi.smul_apply,
+    simp only [Submodule.coe_sum, Submodule.coe_smul, Finset.sum_apply,
       Algebra.smul_def] at e
     simp only [Matrix.mul_apply, hQa, Matrix.map_apply]
     refine Eq.trans e.symm ?_

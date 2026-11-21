@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HasTotalBiChains
+import Mathlib.Algebra.Homology.Embedding.ExtendHomotopy
+import Mathlib.CategoryTheory.ExtremalEpi
 open CategoryTheory Limits Opposite AlgebraicTopology GlobalTheory.EZ
 universe u v
 
@@ -181,7 +184,7 @@ lemma homF_comm (i j : ℤ) (hij : (ComplexShape.up ℤ).Rel i j) :
     rw [reassoc_of% (ι_homF K a b (a + b) rfl),
       HomologicalComplex.extend_d_eq _ ComplexShape.embeddingDownNat (i := a + b) (j := k) (fN _) (fN _),
       Iso.inv_hom_id_assoc]
-    simp only [HomologicalComplex₂.total_d, Preadditive.add_comp, Preadditive.comp_add, Category.assoc,
+    simp only [HomologicalComplex₂.total_d, Preadditive.add_comp, Preadditive.comp_add,
       HomologicalComplex₂.ι_D₁_assoc, HomologicalComplex₂.ι_D₂_assoc]
     have hd₁ : (kN K a b).hom ≫ K.d₁ (ComplexShape.down ℕ) a b k ≫
         ((K.total (ComplexShape.down ℕ)).extendXIso ComplexShape.embeddingDownNat (fN k)).inv =
@@ -252,7 +255,7 @@ variable (R : Type) [CommRing R]
 def diagSIso (X : SimplicialObject Spc) :
     ((SimplicialObject.whiskering _ _).obj (free R)).obj (bidiag.obj X) ≅ GlobalTheory.EZ.diag.obj ((freeBi R).obj X) :=
   NatIso.ofComponents (fun _ => Iso.refl _) (fun f => by
-    simp only [Iso.refl_hom, Category.comp_id, Category.id_comp]
+    simp only [Iso.refl_hom]
     exact ((free R).map_comp _ _))
 
 def diagIso (X : SimplicialObject Spc) :

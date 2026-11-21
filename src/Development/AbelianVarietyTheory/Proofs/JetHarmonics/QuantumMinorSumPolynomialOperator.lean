@@ -1,6 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Jets.BasicLiftAll
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.LiftCapelliOperators
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CapelliWordSumExpansion
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJDHatOpA
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.TendstoIntUv
 
 open Formalism.FourierDecayAlt Formalism.FourierDecayAlt.R Formalism.FourierDecayAlt.Wd Formalism.FourierDecayAlt.Fr Formalism.REAL Formalism.QuantumDeterminants MeasureTheory GlobalTheory.HatNF
 open scoped ComplexConjugate

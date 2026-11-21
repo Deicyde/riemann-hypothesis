@@ -1,10 +1,12 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LeviDeterminants.CharacterAdmissibility.DoublingGramFromBlocks
-import Development.WeilBound.ThetaLifts.LeviDeterminants.CharacterAdmissibility.AdelicCoordinatesEvalZeroFormMemAdmissible
 import Development.WeilBound.ThetaLifts.LeviDeterminants.CharacterAdmissibility.SchrodingerApplyZeroOfFst
 import Development.WeilBound.ThetaLifts.LeviDeterminants.EvFrame
 import Development.WeilBound.ThetaLifts.LeviDeterminants.MixedModels.PlaneC
 import Development.WeilBound.ThetaLifts.LeviDeterminants.MCSpan
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenIntertwinerTransitive
+import Development.WeilBound.ThetaLifts.LeviDeterminants.EqZeroOfTheta
 
 noncomputable section
 

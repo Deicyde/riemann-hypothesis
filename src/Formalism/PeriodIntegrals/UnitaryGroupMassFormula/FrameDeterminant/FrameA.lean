@@ -1,6 +1,6 @@
-import Mathlib
-import Formalism.PeriodIntegrals.TripleFrameDeterminant
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IsometryDeterminant.LocalDet
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.CuspSpanNormBounds.BlockEnds
 
 noncomputable section
 

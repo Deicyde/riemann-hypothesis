@@ -1,5 +1,16 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.FourierTransformKernelSurjective
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Data.Int.Star
+import Mathlib.Data.Rat.Star
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace Formalism.HermitianLattices.LocalLatticeBases
 
@@ -281,7 +292,7 @@ theorem sum_zero_lattice_spanning : SumZeroLatticeSpanning := by
     simp only [Finset.sum_apply, Pi.smul_apply, Pi.sub_apply, smul_eq_mul]
     rw [Fin.sum_univ_castSucc] at hv
     refine Fin.lastCases ?_ (fun j => ?_) j
-    · simp [Pi.single_apply, Fin.ext_iff, (Fin.is_lt _).ne']
+    · simp [Fin.ext_iff, (Fin.is_lt _).ne']
       linarith
     · simp [Pi.single_apply, Fin.ext_iff, (Fin.is_lt _).ne]
       simp only [← Fin.ext_iff]; simp
@@ -290,7 +301,7 @@ theorem sum_zero_lattice_spanning : SumZeroLatticeSpanning := by
           (Pi.single j.castSucc (1 : ℚ) - Pi.single (Fin.last n) 1))) =
         1 + Matrix.replicateCol Unit (fun _ => (1:ℚ)) * Matrix.replicateRow Unit (fun _ => (1:ℚ)) := by
       ext i j
-      simp [Matrix.one_apply, Matrix.mul_apply, dotProduct_sub, sub_dotProduct, Pi.single_apply, Fin.ext_iff,
+      simp [Matrix.one_apply, Matrix.mul_apply, dotProduct_sub, Pi.single_apply, Fin.ext_iff,
         (Fin.is_lt _).ne, (Fin.is_lt _).ne']
       by_cases h : (j:ℕ) = i
       · simp [h]

@@ -1,8 +1,7 @@
-import Mathlib
-import GroundTheory.ProfiniteCohomology.RestrictedRamification.SInvariantToInvariantsEqZeroIff
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.SPicFinite
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.Brauer
-import GroundTheory.GlobalFields.SUnits
 import GroundTheory.ProfiniteCohomology.LocalClassFormation.FiniteVanishing.Devissage
 set_option maxSynthPendingDepth 1
 

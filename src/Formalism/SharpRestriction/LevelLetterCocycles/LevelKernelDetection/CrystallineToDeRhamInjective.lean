@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.LevelKernelDetection.CvZeroTerm
-import Formalism.SharpRestriction.LevelLetterCocycles.FinalLevelsOf
 import Formalism.SharpRestriction.LevelLetterCocycles.LevelKernelDetection.VSumPowNonneg
+import Formalism.SharpRestriction.LevelLetterCocycles.MapEvalPsPi
 
 noncomputable section
 

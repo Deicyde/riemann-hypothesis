@@ -1,8 +1,5 @@
-import Mathlib
-import Formalism.PeriodIntegrals.UpqRep
-import Formalism.PeriodIntegrals.IsLowUnitH
-import Formalism.PeriodIntegrals.ZuckTensor
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ZuckermanTensor.DualDefs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ZuckermanTensor.DualChoice
 
 open MeasureTheory Matrix Finset

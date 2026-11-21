@@ -1,6 +1,8 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.LevBasis
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CharacterLevelBounds.ClsFacts
 import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.RamifiedLineCharacters.CoefFacts
+import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CyclotomicCharInertiaSurjective
+import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.BlochKatoSelmerVanishes
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal IsLocalRing UpperTheory.V UpperTheory.V.Base UpperTheory.V.Alg UpperTheory.V.HV UpperTheory.V.GradeZeroInterpolatingElement
 
@@ -46,7 +48,7 @@ theorem UpperTheory.V.Lev.teichDvd :
     · rw [Nat.one_mod_eq_one.mpr (by omega), pow_one]
   have hbar := hD.om_bar σ
   simp only [Raw.bar, hom, chiO, MonoidHom.comp_apply, hcyc] at hbar
-  simp [Units.coe_map] at hbar
+  simp at hbar
   have hch := (Ws.Gys.coefFacts c (ResidueField c.O) (residue c.O)
     (fun x hx => (IsLocalRing.residue_eq_zero_iff x).mpr hx)).1
   have h2 : ((2 : ℕ) : ResidueField c.O) = 0 := by

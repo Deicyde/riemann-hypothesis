@@ -1,9 +1,9 @@
-import Formalism.HermitianCurvature.StatementJF
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.DilationUnipotentWeylMeasure
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.RegularisedPairingViaPhase
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.WordIntegralScaling
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.WordKeyIdentity
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.BigCellZetaMinors
+import Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension
 
 open Matrix MeasureTheory Filter Topology
 open scoped ContDiff

@@ -1,8 +1,7 @@
-import Mathlib
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GermCut
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GermBGen
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.SecBaseChangeAnySt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.ThetaMetrics.ExistsSecNonzeroLocusEqBasicOpen
+import Mathlib.AlgebraicGeometry.QuasiAffine
 
 noncomputable section
 

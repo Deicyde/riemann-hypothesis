@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.DualFockLinear.TestSideExplicitIdentification
-import Formalism.LocalToGlobal.GroupLattices.FockModels.DualInclusionLattices
-import Formalism.LocalToGlobal.GroupLattices.FockModels.MulMemRiemannRochSpaceAdd
+import Mathlib.RingTheory.LocalProperties.Reduced
 
 noncomputable section
 

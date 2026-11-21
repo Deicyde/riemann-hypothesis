@@ -1,5 +1,10 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.SelmerTransport.ConjStableShaFam
-import ReciprocityTheory.GroupCohomology.ImportsAlt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.SelmerTransport.RestrictionMemInvariantH1
+import ReciprocityTheory.GroupCohomology.FiveTerm
+import ReciprocityTheory.GroupCohomology.IsLowExists
+import ReciprocityTheory.GroupCohomology.LowNat
+import ReciprocityTheory.Hypotheses.GalCohDefs
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.GaloisCohomology UpperTheory.V UpperTheory.V.Base
 

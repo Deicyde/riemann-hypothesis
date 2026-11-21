@@ -1,12 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.IwahoriDoubleCosets
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.BorelCasselmanHolds
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsLocallyConstantOrbit
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IwahoriProjSurjective
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.BlockTriangularOneAddMat
 import Development.AbelianVarietyTheory.Proofs.CharacterTheory.ExistsCharacterEigenvectorOfCommutingRepresentat
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.NontrivialOfIrreducible
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.ValuationDetOfMemKO
+import Mathlib.CategoryTheory.Countable
 
 noncomputable section
 

@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.StripEstimates.FaceMapCompSuccAboveCastSucc
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DifferentiableOnTprodCubicFactor
 
@@ -167,10 +168,10 @@ theorem adjoint_lift_twisted_euler_product : faceMap_comp_succAbove_castSucc →
     refine tprod_congr fun v => ?_
     by_cases hS : v ∈ S
     · have hT : v ∈ T := hST hS
-      simp [Set.mulIndicator_apply, hS, hT]
+      simp [hS, hT]
     · by_cases hT : v ∈ T
-      · simp [Set.mulIndicator_apply, hS, hT]
-      · simp [Set.mulIndicator_apply, hS, hT]
+      · simp [hS, hT]
+      · simp [hS, hT]
   · intro v hv
     have he : lf3 (D.ν v) (localChar c v) =
         cubicFactor (pOf v) (parA D c v) (parB c v) (parC D c v) := funext (local_l_factor_rank_three_unramified hE hA hv)

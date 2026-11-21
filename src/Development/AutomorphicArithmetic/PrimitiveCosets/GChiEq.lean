@@ -1,4 +1,7 @@
-import Development.AutomorphicArithmetic.PrimitiveCosets.CoreAtH
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.DedekindLFunctions.CharFamily
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.Analytic
+import Mathlib.Tactic.Polynomial.Basic
 
 open UpperTheory.Comparison₂ Deduction.CH Formalism Formalism.HC Formalism.D5 Formalism.RankGapBounds.WeightedMeanData Formalism.LFunctionChainParameters.WeightedSlopeBounds Formalism.LFunctionChainParameters.characterSumData Formalism.LFunctionChainParameters.ThickSetMeanBounds Formalism.LFunctionChainParameters.LErr
   Formalism.LFunctionChainParameters.LChain Formalism.LFunctionChainParameters.LHost
@@ -9,7 +12,7 @@ private theorem UpperTheory.Comparison₂.gChi_eq_ramp (f : ℕ → ℂ) (y : �
   rw [Finset.range_eq_Ico, Finset.sum_eq_sum_Ico_succ_bot (Nat.succ_pos _), zero_add]
   have e : Finset.Ico 1 ⌊y⌋₊.succ = Finset.Icc 1 ⌊y⌋₊ := by
     ext n
-    simp [Nat.lt_succ_iff]
+    simp
   rw [e]
   simp
 

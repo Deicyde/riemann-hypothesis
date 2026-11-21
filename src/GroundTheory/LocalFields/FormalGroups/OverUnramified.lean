@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.LocalFields.FormalGroups.FrobeniusTwist
 import GroundTheory.LocalFields.FormalGroups.TwistedLift
+import Mathlib.RingTheory.PiTensorProduct
 
 namespace GroundTheory.LocalField.FormalGroup
 

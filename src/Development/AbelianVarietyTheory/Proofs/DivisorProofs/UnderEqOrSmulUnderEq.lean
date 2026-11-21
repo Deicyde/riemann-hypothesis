@@ -1,6 +1,4 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.BridgeTie
-import Formalism.LocalToGlobal.UnitaryNorms.CharTied
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.DecoFin
 import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CompletelySplitPrimeHostPlaceProperties

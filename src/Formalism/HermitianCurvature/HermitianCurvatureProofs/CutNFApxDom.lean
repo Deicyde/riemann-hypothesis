@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutNFTopForm
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutNFTopDom
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CccoefMono
 
 namespace Formalism.FourierDecayAlt.P.CutBP
 

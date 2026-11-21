@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.LogDerivativeBound
-import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.LogDerivRiemannZetaLocalZeroSumStatement
+import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.LogDerivRiemannZetaLocalZeroSum
+import Mathlib.NumberTheory.LSeries.Nonvanishing
 open Complex DirichletCharacter ArithmeticFunction MeasureTheory
 open Filter Topology
 

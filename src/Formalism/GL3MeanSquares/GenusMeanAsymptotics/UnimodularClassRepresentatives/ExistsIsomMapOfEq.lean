@@ -1,4 +1,6 @@
-import Formalism.GL3MeanSquares.GenusMeanAsymptotics.UnimodularClassRepresentatives.FiniteDimensionalOfOrtho
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.GL3MeanSquares.GenusMeanAsymptotics.UnimodularClassRepresentatives.MassSt
 
 open NumberField Module
 
@@ -42,7 +44,7 @@ theorem transvEquiv_isom {h : V →ₗ⋆[K] V →ₗ[K] K} (hs : h.IsSymm) (u :
   rw [transvEquiv_apply, transvEquiv_apply]
   have h1 : star (h u v) = h v u := by rw [← starRingEnd_apply]; exact hs.eq u v
   simp only [map_sub, LinearMap.map_smulₛₗ, LinearMap.sub_apply, LinearMap.smul_apply, map_smul, smul_eq_mul,
-    map_mul, starRingEnd_apply, star_mul', h1]
+    map_mul, starRingEnd_apply, h1]
   linear_combination (-(h v u * h u w)) * hξ
 
 end WittTransvections
@@ -92,7 +94,7 @@ theorem exists_isom_map_unit (hK : Formalism.HermitianLatticesTheory.IsCMUnram K
     have hxs : x ∈ Submodule.span K (Set.range e) := by rw [hsp]; exact Submodule.mem_top
     obtain ⟨c, rfl⟩ := (Submodule.mem_span_range_iff_exists_fun K).1 hxs
     have hval : h (∑ i, c i • e i) (∑ i, c i • e i) = ∑ i, star (c i) * c i := by
-      simp [map_sum, he, Finset.mul_sum, mul_ite, ite_mul, smul_eq_mul]
+      simp [map_sum, he, mul_ite, smul_eq_mul]
       exact Finset.sum_congr rfl fun i _ => by rw [starRingEnd_apply, mul_comm]
     rw [hval, map_sum, Complex.re_sum]
     have hc : ∃ i, c i ≠ 0 := by

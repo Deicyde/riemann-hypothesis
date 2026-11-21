@@ -1,11 +1,8 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.LBPull
-import Development.AbelianVarietyTheory.Definitions.ArchimedeanThetaValues.NonemptyGtAnOfToric
-import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.SectionsEquivAnArcTheta
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.TraceFormTwistIsoOfPullback
 import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.ExistsPhiEqShift
 import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.ExistsRingHomLift
-import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.TorusExtensionComplexPointsEqCharacters
 
 noncomputable section
 
@@ -527,7 +524,7 @@ theorem psi_weight_zero_linear_combination (oa : D.OAct O) {w : O} (hw : w + sta
     · exact jFK_eSec
   · simp [Fintype.prod_sum_type, tauLift, Fin.prod_univ_four, A.ct_smul]
     apply Additive.ofMul.injective
-    simp only [ofMul_mul, ofMul_inv, ofMul_zpow, ofMul_pow]
+    simp only [ofMul_mul, ofMul_inv, ofMul_pow]
     abel
   · refine (genVal_mul_of (genVal_tau rig hψ _ _) (genVal_pull_of (jFK_xK hct x)
       (genVal_prim D.P.isLB lam ah hf hw t ht h₀ _))).trans

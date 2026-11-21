@@ -1,12 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.SiegelWeilLocal.OrbitStepSpace
-import Development.AbelianVarietyTheory.BlockTheory.SiegelWeilLocal.OrthonormalPlaceBasis
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsOrthonormalBasis
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsContinuousMultilinearMapOfInnerProd
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsNormSqTensUpdate
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.HasDerivAtOrbitTens
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.StepSpacePropsOfDiff
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.VPSubOfLocalBound
+import Mathlib.LinearAlgebra.PiTensorProduct.Finite
 
 open Formalism.MainNotions.S NumberField Matrix GlobalTheory.IndefiniteRowSideFullHecke.OrthonormalPlaceBasis
 open GlobalTheory.IndefiniteRowSideFullHecke.OrbitDifferenceSpace (stepSpace IsDiffVec IsONFamily stepConst)

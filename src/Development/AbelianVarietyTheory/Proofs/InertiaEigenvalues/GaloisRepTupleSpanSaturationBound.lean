@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.TupMemLatT
 open Formalism Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.WeaklyAdmissibleFiltrations Formalism.MainNotions.N TensorProduct PowerSeries GlobalTheory.Prism GlobalTheory.BKReal GlobalTheory.Per GlobalTheory.BSP GlobalTheory.MemLoc GlobalTheory.Pst GlobalTheory.BKLim GlobalTheory.Cong Matrix
 open scoped Formalism.Per NNReal
@@ -36,7 +36,7 @@ theorem satA : ∀ (l : ℕ) [Fact l.Prime] (Γ : Type) [Group Γ] (a m : ℕ) (
       ext i : 1
       by_cases hi : i = k
       · subst hi; simp
-      · simp [Pi.single_apply, hi]
+      · simp [hi]
     | zero => exact ⟨0, Λ.zero_mem, by simp⟩
     | add x y _ _ hx hy =>
       obtain ⟨x', hx', rfl⟩ := hx

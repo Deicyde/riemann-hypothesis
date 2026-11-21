@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LeviDeterminants.LagrangianUniqueness.LagLine
 import Development.WeilBound.ThetaLifts.LeviDeterminants.LagrangianUniqueness.GeoCore
 import Development.WeilBound.ThetaLifts.LeviDeterminants.LagrangianUniqueness.GeoAdm

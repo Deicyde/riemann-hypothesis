@@ -1,13 +1,13 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaF
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SubquotientCurvatureStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecondChernFormPullback
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ChernAtOneEq
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FirstChernIsometricEq
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagOmegaFormReal
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DetMetricIsometricOfIsometry
 import Development.AbelianVarietyTheory.Definitions.Divisors.SecondChernDegreeFubiniStudyLine
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FsOne
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HPolyAddTwo
 
 set_option autoImplicit false
 
@@ -543,7 +543,7 @@ theorem lineVec_eq_gsLow (hG : G.PosDef) (x : ℂ) : ∃ t : ℂ, lineVec x =
   generalize (√(G 1 1).re : ℝ) = a at *
   generalize (√G.det.re : ℝ) = d at *
   funext i
-  fin_cases i <;> simp [lineVec, mulVec, dotProduct, Fin.sum_univ_two, ← ha] <;> field_simp
+  fin_cases i <;> simp [lineVec, ← ha] <;> field_simp
   ring
 
 variable {k : Type} [CommRing k] {X : Scheme.{0}} {p : X ⟶ Sp k} {σ : k →+* ℂ}

@@ -1,7 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.ConeBall
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.StatementsZeroLocusDimH
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.StatementsChowFormDim
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.KrullDimension.NonZeroDivisors
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.Topology.Sheaves.Presheaf
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

@@ -1,5 +1,5 @@
-import Formalism.LocalToGlobal.IndefiniteReal.DatumVec
-import Formalism.LocalToGlobal.IndefiniteReal.SubgroupCharExtensionOneApply
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.WeilFull
 
 noncomputable section

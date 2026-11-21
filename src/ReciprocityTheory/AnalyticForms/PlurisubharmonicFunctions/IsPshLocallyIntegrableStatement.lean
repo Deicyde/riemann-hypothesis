@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.MaIntEmpty
+import Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension
+import Mathlib.Analysis.Calculus.BumpFunction.Normed
+import Mathlib.MeasureTheory.Integral.CircleAverage
 
 namespace ReciprocityTheory.AnForm.A
 

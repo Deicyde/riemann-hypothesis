@@ -1,15 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ScalesBy
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsLv
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFrOfIsotropic
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentRadicalCoordinatesGroupLaw
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUnipotentFrameCoordsOfMemIsotropicUnipoten
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUnipotentRadicalPointWithCoords
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLeviSectionIsotropicFrame
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsotropicFrameDecompositionSubgroupProperties
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WittFrameLeviNormalizesRadicalProperties
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SemidirectHaarMeasureProduct
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MulVecCEApply
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemSkewA
 open scoped TensorProduct NNReal ENNReal Matrix
 open NumberField MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SiegelSet GlobalTheory.ResLine GlobalTheory.ResidueEisenstein
@@ -156,8 +147,8 @@ theorem uMat_unitary (hF : Fr σ J C D Z J₀) (b : Matrix (Fin j) (Fin m) (AF F
     (by
       simp only [gr_add_right, gr_add_left, gr_sub_left, gr_sub_right, gr_mul_right, gr_mul_left, hcz, hcc, hzc, gzz,
         hdz, hdc, hcd, hdd, hzd]
-      simp only [Matrix.mul_zero, Matrix.zero_mul, Matrix.mul_one, Matrix.one_mul, sub_zero, zero_add, add_zero, zero_sub,
-        sub_neg_eq_add, key]
+      simp only [Matrix.mul_zero, Matrix.mul_one, Matrix.one_mul, sub_zero, zero_add, add_zero, zero_sub,
+        key]
       simp only [Matrix.neg_mul, sub_neg_eq_add]
       rw [← hc]
       abel)

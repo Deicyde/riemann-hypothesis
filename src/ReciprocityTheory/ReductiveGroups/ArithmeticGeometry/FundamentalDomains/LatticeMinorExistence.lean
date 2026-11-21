@@ -1,6 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.IsotropicOutsideLine
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.SpanColsMul
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.LminorSubmatrixCastSucc
+import Mathlib.Analysis.Matrix.Hermitian
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.IsIntegralCc
 
 namespace ReciprocityTheory.ChartRestriction.G.FD.LatticeMinorExistence
 
@@ -23,8 +27,8 @@ lemma exists_minor {u : Fin 2 → Fin r → E} (hu : LinearIndependent E u) :
   have key := Fintype.linearIndependent_iff.1 hu ![u 1 a, -(u 0 a)] (by
     funext b
     have hb := hcon a b
-    simp only [Fin.sum_univ_two, Finset.sum_apply, Pi.add_apply, Pi.smul_apply, smul_eq_mul,
-      Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons, Pi.zero_apply]
+    simp only [Fin.sum_univ_two, Finset.sum_apply, Pi.smul_apply, smul_eq_mul,
+      Matrix.cons_val_zero, Matrix.cons_val_one, Pi.zero_apply]
     linear_combination -hb)
   exact ha (by simpa using key 1)
 

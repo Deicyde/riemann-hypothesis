@@ -1,13 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MemOffP
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.HermitianFormUnitaryOneOne
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.AdelicTransportMeasureFirst
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsCompactAdele
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ContinuousOnAtTau
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.AdelicUnitaryActionAtRealPlace
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.AtPlaceIffEqAtTau
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CmDataIsCMExtAndGramIsHermND
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsCMFamHost
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.IndefR.Mult Formalism.L2.DIV
 open IsDedekindDomain NumberField MeasureTheory GlobalTheory.ChiGrid GlobalTheory.FunObj GlobalTheory.Grow
 open GlobalTheory.IndefiniteRowSideFullHecke.LevelPlusSubgroup (coefPlus Cols SizeRows)
@@ -390,7 +385,7 @@ theorem isClosedEmbedding_atP : ∀ (D : D7) (θ : InfFam D), IsInfFam θ → �
     refine ⟨Pi.single ⟨0, hC.1⟩ 1, fun h => hC.2.1.ne_zero ⟨0, hC.1⟩ ?_⟩
     funext j
     have := congrFun h j
-    simp only [hKdef, Matrix.mulVec_single_one, Matrix.transpose_apply, Matrix.map_apply, Pi.zero_apply] at this
+    simp only [hKdef, Matrix.mulVec_single_one, Pi.zero_apply] at this
     simpa using (map_eq_zero_iff _ (tauE D τ).injective).1 this
   obtain ⟨a₀, ha₀⟩ := hne
   exact ⟨W, GlobalTheory.FibreAtTauEmb.isIsoC_range hP hPG hG hKGK ha₀, ⟨⟨hind, hinj⟩, by rw [hrange]; exact GlobalTheory.Dec.isClosed_NW _ _⟩,

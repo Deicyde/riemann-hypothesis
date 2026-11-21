@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WchartCompLe
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.PullSec
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj

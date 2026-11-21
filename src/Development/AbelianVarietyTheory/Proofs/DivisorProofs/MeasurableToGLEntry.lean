@@ -1,6 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.MirSet
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
+import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.NotIsGenericDetRepTwo
+import Mathlib.Analysis.Matrix.Normed
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Algebra.Group.Matrix
 
 noncomputable section
 

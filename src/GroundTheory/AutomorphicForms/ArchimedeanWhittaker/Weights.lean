@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.ArchimedeanWhittaker.FiltrationCocycleLiftCriterion
+import GroundTheory.AutomorphicForms.GKModules.Garding
+import Mathlib.Analysis.Fourier.AddCircle
 
 namespace GroundTheory.Automorphic.ArchWhittaker
 

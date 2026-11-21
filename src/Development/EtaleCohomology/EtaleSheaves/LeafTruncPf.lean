@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.LeafGhostRelCut
+import Mathlib.Algebra.Homology.DerivedCategory.TStructure
+import Mathlib.CategoryTheory.ExtremalEpi
+import Mathlib.CategoryTheory.Triangulated.TStructure.TruncLTGE
 
 noncomputable section
 open CategoryTheory Limits Pretriangulated Triangulated

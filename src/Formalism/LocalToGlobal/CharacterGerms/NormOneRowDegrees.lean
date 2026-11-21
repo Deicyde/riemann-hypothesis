@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CharacterGerms.BlockMembershipNormOne
 
 noncomputable section
@@ -77,7 +79,7 @@ theorem isWH_minorK_row {N N' k : ℕ} {w : Fin N × Fin N' → ℕ} (P : Prop) 
     by_cases hP : P
     · simp only [hP, true_and, Fin.coe_castLE]
       rw [sum_fin_ite]
-      simp [h.1, h.2, hP]
+      simp [h.1, h.2]
     · simp [hP]
   · unfold minorK
     rw [dif_neg h, if_neg (fun hc => h ⟨hc.1, hc.2.1⟩)]
@@ -181,7 +183,7 @@ theorem num_ch (g0 : Fin 2) (t0 : ZMod d) (c0 : ℕ) (g : Fin 2) (t : ZMod d) (u
   by_cases hg : g0 = g ∧ t0 = t
   · obtain ⟨rfl, rfl⟩ := hg
     rw [rkF_eq X hty]
-    simp only [le_refl, true_and, eq_self_iff_true]
+    simp only [le_refl, true_and]
     rw [Finset.sum_ite_eq']
     simp only [Finset.mem_Icc]
     by_cases hc : X.n ≤ r (tau o0 g0 t0) ∧ c0 < X.n
@@ -211,7 +213,7 @@ theorem num_mon (g0 : Fin 2) (t0 : ZMod d) (c0 : ℕ) (g : Fin 2) (e : ZMod d �
       rw [Finset.sum_congr rfl hL, ← Finset.sum_filter, ← Finset.sum_filter]
       congr 1
       ext k
-      simp only [Finset.mem_filter, Finset.mem_Icc, eq_self_iff_true, true_and]
+      simp only [Finset.mem_filter, Finset.mem_Icc, true_and]
       omega
     · intro t _ ht
       apply Finset.sum_eq_zero

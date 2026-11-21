@@ -1,5 +1,13 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.OddDualWeylJacobian.JacRev
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open MvPolynomial Matrix
 
@@ -51,7 +59,7 @@ lemma genM_map (A : Matrix (Fin k) (Fin k) (MvPolynomial (Fin k × Fin k) R)) :
 lemma cM_map (A : Matrix (Fin k) (Fin k) (MvPolynomial (Fin k × Fin k) R)) (g : Matrix (Fin k) (Fin k) R) :
     (cM g).map (sbs A) = cM g := by
   ext i j
-  simp [cM, sbs_C]
+  simp [cM]
 
 lemma cM_mul (g h : Matrix (Fin k) (Fin k) R) : cM (g * h) = cM g * cM h := by
   first

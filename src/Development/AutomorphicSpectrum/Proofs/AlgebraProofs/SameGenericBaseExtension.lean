@@ -1,11 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.TrivFlagMod
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.FlagMinor
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.PluckerCoord
-import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.StatementsBundles
-import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.SameGenericSymm
-import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.ClassListMapDomainPerm
-import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.PPairNumberRelabel
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.PTwinJoinPull
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.SameGenericFlagComparisonStatement
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.SameGenericBundleChain
@@ -194,7 +188,7 @@ theorem main : ∀ (O : Type) [CommRing O] [IsDomain O] [IsDiscreteValuationRing
       simp⟩
   obtain ⟨-, f, g, hfp⟩ := GlobalTheory.T.same_generic_flag_comparison O Ω _ _ (joinCoord (joinCoord x z) z₁)
     ϖ hϖ d hM₁ N V (F 0) (F 1) hs₁ w w _ _ (hF 0).2 (hF 1).2 (fun i j hij => by
-      simp [Finsupp.single_apply, hij.ne])
+      simp [hij.ne])
   have hσ := assocEquiv_fst ι ι' ι₁
   obtain ⟨hI, hK, hc, hE⟩ := relabel (O := O) (Equiv.sumAssoc K K' K₁) (assocEquiv ι ι' ι₁) hσ
     (joinCoord x (joinCoord z z₁)) _ (join_assoc x z z₁)

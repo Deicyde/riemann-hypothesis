@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StatementsInvertibleIndexMulSteps
-import GroundTheory.HeightsAndTheta.Heights.HeightKernels.PInvertibleIdealIndex
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.POrderIdealIndexExtension
+import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StatementsInvertibleIndexMul
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.Targets

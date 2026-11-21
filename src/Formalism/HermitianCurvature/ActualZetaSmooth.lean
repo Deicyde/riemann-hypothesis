@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementNF
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.LowerLevelsSameScalar
 
 open Matrix Finset
 open scoped ContDiff

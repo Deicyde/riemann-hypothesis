@@ -1,6 +1,5 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.SquareIntegrableTempered.CasselmanCriterion.Zj
-import GroundTheory.AutomorphicForms.SupercuspidalCoefficients
+import BuildAid.Leniency.Open
+import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.ZelevinskyJacquet.LSegJacquet
 
 noncomputable section
 

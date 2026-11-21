@@ -1,4 +1,7 @@
-import Formalism.GL3MeanSquares.GenusMeanAsymptotics.UnimodularClassRepresentatives.ExistsMatrixOfIsom
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.GL3MeanSquares.GenusMeanAsymptotics.UnimodularClassRepresentatives.LocalDensitySixth
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
 
 open NumberField Module Matrix
 

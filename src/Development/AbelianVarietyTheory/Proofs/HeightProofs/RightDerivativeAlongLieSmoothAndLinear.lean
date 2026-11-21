@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.IsLieDataCircle
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 open GlobalTheory.SmoothForms NumberField Matrix
 open scoped ContDiff Topology

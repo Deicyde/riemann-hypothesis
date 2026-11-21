@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.SemistableReduction.AeBlockSphereEvalNeZero
 import ReciprocityTheory.SemistableReduction.GaussAbsMulOfMonomialOrder
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.Topology.Sheaves.Presheaf
 
 namespace ReciprocityTheory.MultiplicativeHeights
 

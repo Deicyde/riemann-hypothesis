@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.ChainParSucc
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CartFrSgn
+import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsStepWeil
 
 noncomputable section
 

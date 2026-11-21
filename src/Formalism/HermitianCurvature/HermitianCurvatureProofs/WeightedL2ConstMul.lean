@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.StepClaimFromStepsFull
+import Mathlib.LinearAlgebra.Lagrange
 
 namespace Formalism.FourierDecayAlt.P.LEx1
 open Formalism.FourierDecayAlt.LE

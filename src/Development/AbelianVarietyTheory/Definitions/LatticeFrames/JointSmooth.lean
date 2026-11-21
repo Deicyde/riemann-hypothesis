@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsQuasiFam
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.ChainParSucc
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.UnfoldingConstantsPos
+import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsThetaFam
 
 set_option genSizeOfSpec false
 set_option genInjectivity false

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HaarOIsAddHaar
 
 noncomputable section
@@ -36,7 +37,7 @@ theorem dropCols_insB (Y : Matrix (Fin a) (Fin (a + b)) R) (t : Fin a → R) : d
     have h3 : j.1 + 1 ≠ a := by omega
     have h4 : j.1 + 1 ≠ a + b + 1 := by have := j.2; omega
     have h5 : j.1 ≠ a + b := by have := j.2; omega
-    simp [h, h2, h3, h4, h5]
+    simp [h, h2, h3, h5]
 
 end Zero
 

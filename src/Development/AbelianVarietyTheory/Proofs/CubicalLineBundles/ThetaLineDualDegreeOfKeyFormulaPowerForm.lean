@@ -1,7 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.CMDeterminantIdeals.LambdaLowerBound
-import ReciprocityTheory.SemistableReduction.LemmaH
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Statements.FundamentalDomains.KeyFormulaPowOfKeyFormula
+import Formalism.LocalToGlobal.CMDeterminantIdeals.CMIdealValuations.ValuationLeOfEqAlgebraMap
 
 noncomputable section
 

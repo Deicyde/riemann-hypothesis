@@ -1,8 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.DuStarPos
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.SpreadLe
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.AssembleLattice
-import Formalism.SharpRestriction.InertJacobiLevels.HostFam
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.Params
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
 open Formalism.BasicNotions NumberField IsDedekindDomain GlobalTheory.Mem
 
 namespace GlobalTheory.Mem

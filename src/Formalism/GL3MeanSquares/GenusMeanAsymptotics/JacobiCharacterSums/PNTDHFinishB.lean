@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.GenusMeanAsymptotics.JacobiCharacterSums.PNTDHFinishA
+import Mathlib.Algebra.Order.Ring.Star
 
 open Finset Complex
 

@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SizeWindowBrackets.MatrixFamilyBoundsOfCardEqCeil
 import Formalism.SizeWindowBrackets.ChainSlopeWindows.TraceConjTransposeMulSelf
-import Formalism.SizeWindowBrackets.ChainSlopeWindows.JointDModelAppliesUnitLattice
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Matrix Module NumberField
 open scoped ComplexOrder

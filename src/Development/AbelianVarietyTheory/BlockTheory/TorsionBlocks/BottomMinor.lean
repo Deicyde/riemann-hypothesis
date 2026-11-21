@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Example
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.FockGram.StatementFock
+import Mathlib.Data.Rat.Star
 
 open MvPolynomial
 
@@ -68,7 +71,7 @@ example : hookProd ![2, 1] = 3 := by
 example : hookProd ![1, 1] = 2 ∧ hookProd ![1, 1, 0] = 2 := by
   have e : Finset.Ioi (1 : Fin 2) = ∅ := by decide
   constructor
-  · simp [hookProd, hookDen, Fin.prod_univ_two, Nat.factorial, e]
+  · simp [hookProd, hookDen, Fin.prod_univ_two, e]
   · simp [hookProd, hookDen, Fin.prod_univ_succ, Nat.factorial]
     norm_num
 
@@ -84,6 +87,6 @@ example (k : ℕ) : Formalism.E.fock (delTop (n := 2) (l := 1) (by norm_num) ![k
     simp [delTop, topMinor, nextPart, X_pow_eq_monomial]
   have e' : Finset.Ioi (0 : Fin 1) = ∅ := by decide
   rw [e]
-  simp [Formalism.E.fock, support_monomial, Formalism.A.mfact, hookProd, hookDen, e']
+  simp [Formalism.E.fock, support_monomial, Formalism.A.mfact, hookProd, hookDen]
 
 end GlobalTheory.IndefiniteRowSideFullHecke.CornerMinors

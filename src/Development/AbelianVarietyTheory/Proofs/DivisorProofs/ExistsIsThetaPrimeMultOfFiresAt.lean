@@ -1,7 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.LinksChar
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ThetaKernelFiring
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.ThetaPrimeMultiplicity
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.IndefiniteReal.LinksDefs
 
 noncomputable section
 

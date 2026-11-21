@@ -1,9 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsBaseEnlargementFixedCoefFieldOfCoeffEnlargemen
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.Forms
-import Formalism.LocalToGlobal.IndefiniteReal.LinksStage
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsAdelicCoreTransportEnlargedCoefficientBase
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ModelSame
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CrdOver
 open Formalism.BasicNotions Formalism.MainNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField
 open Formalism.L2.Theta Formalism.L2.DIV Formalism.L2.Indef Formalism.L2.Rows Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.Lev Formalism.IndefR.Cx Formalism.IndefR.RecTie
 open scoped TensorProduct InnerProductSpace ComplexOrder
@@ -93,7 +91,7 @@ theorem reading_eq_zero {L L' : Type} [Field L] [Field L'] (ι : L →+* L') (σ
       by_cases hak : a = k
       · subst hak
         simp
-      · simp [Pi.single_apply, hak]⟩
+      · simp [hak]⟩
     exact (eq_of_heq (h1.trans hz.symm)).trans (map_zero j')
   refine LinearMap.ext fun x => ?_
   rw [pi_eq_sum_univ' x, map_sum]

@@ -1,21 +1,8 @@
-import Mathlib
-import ReciprocityTheory.DualLattices.CotangentSurjective
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.IsTight
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.StepOrderRes
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.NonzeroLocus
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.IsFinFlatSub
-import Development.AutomorphicSpectrum.PublishedTheorems.Algebra₂.QuotientByFiniteFlatStatement
-import Development.AutomorphicSpectrum.PublishedTheorems.Algebra₂.ZarhinStatement
-import Development.AutomorphicSpectrum.Statements.AlgebraStatements.HodgeTateDatumStatement
-import Development.AutomorphicSpectrum.Statements.AlgebraStatements.OrdinaryCurveStatement
-import Development.AutomorphicSpectrum.Statements.AlgebraStatements.PolarisedFlagStatement
-import ReciprocityTheory.DualLattices.CharTableIsUnit
-import ReciprocityTheory.DualLattices.IsUnitDetOfSpanEq
-import ReciprocityTheory.DualLattices.FourierMapSmulLambdaWeight
-import ReciprocityTheory.DualLattices.VIntCastLtOneOfDvd
-import ReciprocityTheory.DualLattices.PrimeHopfOrderOfAddEquiv
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.HopfOrderContainsAddCharactersStatement
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.TensorProductHopfOrdersStatement
+import Mathlib.CategoryTheory.Action.Concrete
 
 open ReciprocityTheory.PGsh.L2 ReciprocityTheory.PGsh.Up GlobalTheory.CompanionTheory.Ar.GR
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry
@@ -288,7 +275,7 @@ theorem exists_hasColen_tens (p : ℕ) [Fact p.Prime] (hv : v.Integers R) (hp : 
     by_cases h : x = j
     · subst h
       simp
-    · simp [h, Matrix.one_apply]
+    · simp [h]
   have hc₁ : HasColen R v A₁.carrier (v (Matrix.of fun x j : ZMod p => e j x).det) :=
     ⟨Matrix.of fun x j : ZMod p => e j x, rfl, rfl⟩
   have hc₂ : HasColen R v A₂.carrier 1 :=

@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.FockModels.FlatModels.Letter
+import Formalism.GradedWeylDivisibility.FinalD
+import Formalism.SharpRestriction.GrowthBounds.ObjSeg
+import Mathlib.Order.Interval.Finset.Box
 
 open MvPolynomial
 
@@ -292,7 +296,7 @@ theorem shape_sizes (m : ℕ) (hm : 1 ≤ m) (d : ℕ) (vec : Bool) {K : ℕ} (s
   have hsum : ∑ k, (if sz k = 0 then 0 else 1) = (Finset.univ.filter fun k : Fin K => ((0 : Fin (m + 1)) : ℕ) < sz k).card := by
     rw [Finset.card_filter]
     refine Finset.sum_congr rfl (fun k _ => ?_)
-    by_cases h : sz k = 0 <;> simp [h, Nat.pos_iff_ne_zero, Fin.val_zero]
+    by_cases h : sz k = 0 <;> simp [h, Nat.pos_iff_ne_zero]
   have h0 : (Finset.univ.filter fun k : Fin K => ((0 : Fin (m + 1)) : ℕ) < sz k).card = d := by
     rw [hA 0]
     cases vec <;> simp [nuL, hl]

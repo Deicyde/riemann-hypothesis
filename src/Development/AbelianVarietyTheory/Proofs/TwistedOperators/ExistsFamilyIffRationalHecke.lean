@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.RationalHeckeScalars
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsMemNotMem
+import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
 
 set_option autoImplicit false
 

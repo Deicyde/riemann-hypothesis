@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.VerticalStrips.UnramifiedEulerProductIntegral
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralCompSymm
+import Development.AbelianVarietyTheory.Definitions.Divisors.T2SpaceGeneralLinearGroup
+import Development.AbelianVarietyTheory.Definitions.Foundations.MeasurePreservingRmulQuotMeas
 
 noncomputable section
 
@@ -48,7 +51,7 @@ theorem plane_measure_ball {ψ : AddChar F Circle} (hψ : Ad3.IsStd ψ) (n : ℤ
     rw [measure_valBall, coe_valBall_zero, selfDualMeasure_integers, hψ.2.2]
     simp [uu]
   rw [Ad3.R.m2, ball_eq, Measure.pi_pi]
-  simp [h1, Fin.prod_univ_two, sq]
+  simp [h1, sq]
 
 omit [MeasurableSpace F] [BorelSpace F] in
 theorem uu_succ (n : ℤ) : uu F (n + 1) = uu F n * ((residueCard F : ℝ≥0))⁻¹ := by
@@ -250,8 +253,8 @@ theorem measurePreserving_act {ψ : AddChar F Circle} (hψ : Ad3.IsStd ψ) (κ :
       invFun := fun r => act r κ
       map_add' := fun x y => by simp [act, Matrix.add_vecMul]
       map_smul' := fun c x => by simp [act, Matrix.smul_vecMul]
-      left_inv := fun r => by simp [act_act, act]
-      right_inv := fun r => by simp [act_act, act] }
+      left_inv := fun r => by simp [act]
+      right_inv := fun r => by simp [act] }
   have hmeas : Measurable fun r : Fin 2 → F => act r κ :=
     measurable_act.comp (measurable_id.prodMk measurable_const)
   have h := GlobalTheory.ChangeVarPi.map_symm_eq_smul F (Fin 2) (Ad3.R.m2 ψ) M

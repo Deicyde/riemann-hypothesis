@@ -1,5 +1,6 @@
-import Formalism.WachLatticeTwists.RealDisplaySplitting.GaloisTheoremWithGenerator
-import ReciprocityTheory.GaloisValuations.Global
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.WachLatticeTwists.RealClassMaps.RealClassMapTheorem
 
 noncomputable section
 

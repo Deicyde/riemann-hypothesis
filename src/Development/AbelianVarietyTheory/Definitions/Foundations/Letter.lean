@@ -1,5 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.ExpUpper
+import Mathlib.NumberTheory.Cyclotomic.CyclotomicCharacter
+import Mathlib.RingTheory.AdicCompletion.Functoriality
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Topology.Compactification.OnePoint.ProjectiveLine
 
 noncomputable section
 

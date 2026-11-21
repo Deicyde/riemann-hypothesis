@@ -1,5 +1,7 @@
-import Formalism.LocalToGlobal.ProjectiveLattices.PetersonNormSubspace
-import Formalism.LocalToGlobal.ProjectiveLattices.PartitionExtendByZeroAntitone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.DataHost
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.TwoWeightEqOneAddRoot
 
 noncomputable section
 

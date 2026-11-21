@@ -1,9 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasDefect
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasRigidChart
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ToroidalCompactificationBis
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsBasisRaynaudTangentInvariantFields
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.LeISupInfPreimage
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RaynaudTorusWeightZeroInvariantFieldCoeffs
 import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.SvalEqSumOfHasVal
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry NumberField IsLocalRing
@@ -104,7 +100,7 @@ theorem isInv_comb : ∀ (R : Type) [CommRing R] (G : Over (Sp R)) [GrpObj G] [I
   simp only [a₃]
   show _ = valR x O (∑ c, constFn G.hom O (a c) * e c O f)
   conv_rhs => rw [GlobalTheory.ZH.CrdCalc.valR_eq x O hO, map_sum]
-  simp only [map_mul, ← GlobalTheory.ZH.CrdCalc.valR_eq x O hO]
+  simp only [← GlobalTheory.ZH.CrdCalc.valR_eq x O hO]
   rw [TrivSqZeroExt.snd_add, TrivSqZeroExt.snd_inl, zero_add, TrivSqZeroExt.snd_sum]
   refine Finset.sum_congr rfl fun c _ => ?_
   rw [GlobalTheory.ZH.CrdCalc.valR_mul x O hO, GlobalTheory.ArcPts.SecValue.valR_constFn G.hom φ x hx O hO]

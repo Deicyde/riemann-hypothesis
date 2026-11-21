@@ -1,10 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TranslationInv
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PullFullL
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CurvatureSumOfSectionsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CurvaturePullbackOneVectorStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SumLambdaPullRhoIdentityStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegrableOnPeriodicFundamentalDomainStatement
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
 
 set_option autoImplicit false
 
@@ -21,7 +21,7 @@ namespace HeatPull
 theorem pullOp_apply {n g : ℕ} (a : Fin n → ℂ) (K : Ext (n + n + g) →L[ℂ] Ext (n + n + g))
     (w : Ext (1 + 1 + g)) :
     pullOp a K w = ∑ S : Finset (Fin (1 + 1)), lamL S (pullFullL a (K (rhoL S w))) := by
-  simp [pullOp, ContinuousLinearMap.sum_apply]
+  simp [pullOp]
 
 theorem pullOp_add {n g : ℕ} (a : Fin n → ℂ) (K K' : Ext (n + n + g) →L[ℂ] Ext (n + n + g)) :
     pullOp a (K + K') = pullOp a K + pullOp a K' := by

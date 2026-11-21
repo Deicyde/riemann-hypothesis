@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsSmoothHermCombLine
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HermRepMetricSmooth
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HermRepTwistedBundleExistsStatement

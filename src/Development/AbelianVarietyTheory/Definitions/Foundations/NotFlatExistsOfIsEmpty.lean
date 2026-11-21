@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsFlatSecRankZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsNumberFieldPoint
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsIsUnf
 import Development.AbelianVarietyTheory.Proofs.GenericRegularity.MemRangeOfIsAlgebraicRatFun
@@ -113,7 +113,7 @@ theorem double_mem {X : Data E r} {y : Frame X.Ψ r} (hy : y ∈ X.dom) : rmul (
     refine Finset.sum_congr rfl fun _ _ => Finset.sum_congr rfl fun _ _ => by ring
   have : dmin X.Gm (rmul (lact 1 y) (twoFr X.Ψ r)) τ i = (((4 : ℝ) ^ (i : ℕ) : ℝ) : ℂ) * dmin X.Gm y τ i := by
     rw [dmin, mat_double, hg, dmin, lminor, lminor, Matrix.submatrix_smul]
-    simp [Matrix.det_smul]
+    simp
   rw [this, Complex.re_ofReal_mul, mul_left_comm]
   exact mul_pos (by positivity) ((hy τ).2 i)
 
@@ -180,7 +180,7 @@ theorem sum_flatWt (τ : Psi H) :
           simp only [conjEmb_conjEmb] at this
           rw [this]
           by_cases e : ρ = conjEmb τ.1
-          · simp [flatWt, parWt, Subtype.ext_iff, e, conjEmb_conjEmb]
+          · simp [flatWt, parWt, e, conjEmb_conjEmb]
           · have : conjEmb ρ ≠ τ.1 := fun e' => e (by rw [← e', conjEmb_conjEmb])
             simp [flatWt, parWt, Subtype.ext_iff, e, this]
       simp only [h2]

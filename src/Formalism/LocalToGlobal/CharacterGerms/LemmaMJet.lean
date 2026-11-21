@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CharacterGerms.LemmaMLin
 import Formalism.IncomingBounds.FlowDegreeBounds.ThmPJet
 
@@ -56,7 +58,7 @@ theorem mfact_add_single (m : σ →₀ ℕ) (x : σ) :
   have hrest : ∏ y ∈ s.erase x, ((m + Finsupp.single x 1 : σ →₀ ℕ) y).factorial = ∏ y ∈ s.erase x, (m y).factorial :=
     Finset.prod_congr rfl fun y hy => by
       rw [Finset.mem_erase] at hy
-      simp [Finsupp.single_apply, Ne.symm hy.1]
+      simp [Ne.symm hy.1]
   rw [hrest]
   simp [Nat.factorial_succ]
   ring

@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RowBlockIndicatorFromLtIff
+import Mathlib.Tactic.ENatToNat
 open NumberField UniqueFactorizationMonoid GlobalTheory.StdLoc
 
 noncomputable section

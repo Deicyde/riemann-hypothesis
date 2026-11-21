@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.RamifiedCoefficientChains
-import Formalism.JumpKernelCokernel.LengthTheoremsWithEarlier
 import Formalism.EisensteinCokernelLengths.FactorialValuationBounds.LagrangeIdealSgProof
+import Formalism.TruncatedSeriesCounting.EtaDeterminantPolynomialIdentities
+import Mathlib.LinearAlgebra.Lagrange
 
 noncomputable section
 

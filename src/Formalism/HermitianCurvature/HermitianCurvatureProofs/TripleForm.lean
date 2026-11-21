@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.BlockKernelPropertiesOfSteps
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
 
 open Formalism.DoubleCosetMeasures Formalism.FourierDecayAlt.A5 Matrix
 open scoped ComplexConjugate

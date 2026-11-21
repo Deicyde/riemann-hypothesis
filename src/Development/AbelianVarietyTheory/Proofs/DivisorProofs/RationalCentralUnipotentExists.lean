@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoC
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentCoordinateAdditive
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -157,7 +157,7 @@ theorem incM_gam_mulVec (σ : E →ₐ[F] E) {n : ℕ} (J : Matrix (Fin n) (Fin 
   rw [fA_incV_right]
   funext i
   simp only [incM, gam, nilM, Matrix.mulVec, dotProduct, Matrix.map_apply, Matrix.sub_apply, Matrix.smul_apply,
-    Matrix.vecMulVec_apply, map_sub, map_mul, smul_eq_mul, Pi.sub_apply, Pi.smul_apply, incV, sub_mul,
+    Matrix.vecMulVec_apply, map_sub, smul_eq_mul, Pi.sub_apply, Pi.smul_apply, incV, sub_mul,
     Finset.sum_sub_distrib, Finset.mul_sum, Finset.sum_mul]
   congr 1
   · simp [Matrix.one_apply]

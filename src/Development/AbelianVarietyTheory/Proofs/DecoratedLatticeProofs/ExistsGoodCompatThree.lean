@@ -1,8 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.SphericalEisensteinSeriesOnGroup
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsDualFamilyOfIsLattice
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsIsLatticeFrameIsMajorantFrame
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.WittDecompSymplInclIsotropicInclAnisotropic
 
 noncomputable section
 
@@ -79,11 +77,11 @@ theorem exists_frame_std (hn : m + 2 * r = n) {X Y : Matrix (Fin n) (Fin r) R} {
         mul_fromCols]
       simp only [Matrix.add_mul, Matrix.sub_mul, Matrix.mul_add, Matrix.mul_sub, Matrix.smul_mul, Matrix.mul_smul, XX, YY,
         YX, XY, IX', IY', XI', YI', II', smul_zero, add_zero, zero_add, sub_zero, zero_sub, fromRows_zero, fromCols_zero,
-        smul_smul, smul_neg, h1, sub_self, neg_add_cancel, add_neg_cancel, ← neg_add', sub_neg_eq_add]) (by
+        smul_smul, smul_neg, h1, sub_self, neg_add_cancel, ← neg_add']) (by
       rw [fromRows_mul_fromCols, fromRows_mul_fromCols, fromRows_mul, mul_fromCols]
       simp only [Matrix.add_mul, Matrix.sub_mul, Matrix.mul_add, Matrix.mul_sub, Matrix.smul_mul, Matrix.mul_smul, XX, YY,
         YX, XY, QX', QY', XI', YI', QI', smul_zero, add_zero, zero_add, sub_zero, zero_sub, fromRows_zero, fromCols_zero,
-        smul_smul, smul_neg, h1, sub_self, neg_add_cancel, add_neg_cancel, ← neg_add', sub_neg_eq_add, fromBlocks_one])
+        smul_smul, smul_neg, h1, sub_self, add_neg_cancel, sub_neg_eq_add, fromBlocks_one])
   refine ⟨b, δ, hb, hf.trans ?_⟩
   generalize cT s Y * J = P, cT s X * J = P'
   have hB : cT s (fromRows (fromRows (u • P + u • P') (u • P - u • P')) ((c⁻¹).1 * Q)) =

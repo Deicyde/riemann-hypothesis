@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.PolynomialDimension.FrameSum
+import Mathlib.Tactic.ENatToNat
 
 open scoped BigOperators
 open Finset Matrix

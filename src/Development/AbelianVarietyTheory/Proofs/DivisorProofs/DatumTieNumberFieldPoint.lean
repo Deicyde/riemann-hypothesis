@@ -1,14 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.LieInj
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ScholzeWeinsteinB
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.EpsilonPairingZeta
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.HodgeTateKernel
-import Development.AbelianVarietyTheory.Definitions.Divisors.TorsionTowersOfDivisibleGroup
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsLatBasisHtLatIffSpanEq
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PadicRingHomEqCanonical
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LieRankEqFinrankEigenInter
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SandwichDatumScalarAction
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SandwichKernelRangeExact
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open GlobalTheory GlobalTheory.Sandwich GlobalTheory.IndefiniteRowSideFullHecke.SandwichMaps GlobalTheory.DetInv GlobalTheory.HTLat GlobalTheory.CompHt GlobalTheory.PDivGroup Matrix TensorProduct NumberField CategoryTheory
 
 namespace GlobalTheory.DetInv.PadicInclusionHoms
@@ -48,7 +44,7 @@ theorem exists_hom_padicIncl (τ : Λ →+* O) :
 theorem mem_eig_iff {C : Type} [Field C] [Algebra O C] {h : ℕ} {Γ : Type} [CommRing Γ]
     (ρ : Γ → Matrix (Fin h) (Fin h) O) (σ : Γ →+* O) (x : Fin h → C) :
     x ∈ eig C ρ σ ↔ ∀ a, (ρ a).map (algebraMap O C) *ᵥ x = algebraMap O C (σ a) • x := by
-  simp [eig, Module.End.mem_eigenspace_iff, Matrix.toLin'_apply]
+  simp [eig, Matrix.toLin'_apply]
 
 theorem mem_eig_iff_padicIncl {C : Type} [Field C] [Algebra O C] {h : ℕ}
     (ρ : ℤ_[p] ⊗[ℤ] Λ →+* Matrix (Fin h) (Fin h) O)
@@ -121,7 +117,7 @@ theorem actT_algebraMap (D : Datum ε h (ℤ_[p] ⊗[ℤ] Λ)) (r : ℤ_[p]) :
   change (D.ρT (algebraMap ℤ_[p] _ r)).map (padicToO p O) = _
   rw [e]
   ext i j
-  by_cases hij : i = j <;> simp [Matrix.algebraMap_matrix_apply, Matrix.one_apply, hij]
+  by_cases hij : i = j <;> simp [Matrix.algebraMap_matrix_apply, hij]
 
 theorem mem_wRec_iff (hb : Function.Injective P.bLie) (τ : Λ →+* O) (x : P.V) :
     x ∈ P.wRec τ ↔ x ∈ P.latLie ∧ x ∈ P.eigV τ := by
@@ -227,7 +223,7 @@ theorem eig_lattices_of_isTie : ∀ (p : ℕ) [Fact p.Prime] (C : Type) [Field C
     change (D.ρM (algebraMap ℤ_[p] _ r)).map (WittVector.fontaineTheta O p) = _
     rw [(datum_scalar_intertwine p C v O hv ε hε _ h D).1]
     ext i j
-    by_cases hij : i = j <;> simp [Matrix.one_apply, padicToO, hij]
+    by_cases hij : i = j <;> simp [padicToO, hij]
   · rw [← hσ]
     ext z
     obtain ⟨z, rfl⟩ := φ.surjective z

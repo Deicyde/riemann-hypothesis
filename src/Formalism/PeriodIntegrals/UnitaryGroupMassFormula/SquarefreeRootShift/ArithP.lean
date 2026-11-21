@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.SquarefreeRootShift.SumLeProdOfTwoLe
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.NumberTheory.Harmonic.Bounds
+import Mathlib.RingTheory.PiTensorProduct
 
 open Finset
 

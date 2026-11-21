@@ -1,6 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.LinksChar
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.PosPartUnitaryMul
+import Formalism.LocalToGlobal.IndefiniteReal.LinksDefs
 
 noncomputable section
 

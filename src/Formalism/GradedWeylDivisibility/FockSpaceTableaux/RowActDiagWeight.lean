@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Open
 import Formalism.GradedWeylDivisibility.StatementD
-import Formalism.GradedWeylDivisibility.FockSpaceTableaux.LDrowLemmas
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open MvPolynomial Finset
 
@@ -27,7 +30,7 @@ theorem row_action_diagonal_weight : RowActDiagWeight := by
     rw [Finset.sum_eq_single a]
     · simp
     · intro b _ hb
-      simp [hb, Ne.symm hb]
+      simp [Ne.symm hb]
     · simp
   conv_lhs => rw [f.as_sum]
   conv_rhs => rw [f.as_sum]

@@ -1,6 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.DualFamilyCounting.NcRealPf
-import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.LocalJacobianOfDoubleCoset
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.JacobianCoordinates
+import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.BesselFrame
 
 noncomputable section
 
@@ -231,7 +232,7 @@ theorem hJ_Qm_self (hF : IsFrameJ ε e f wf z0) (zB : Fin (2 * r + k + 1) → �
     all_goals first | rw [hc1 i hi] | rw [hc2 i hi1 hi2] | rw [hc3 i hi] | rw [hc4 i hi]
     all_goals first | rw [hc1 j hj] | rw [hc2 j hj1 hj2] | rw [hc3 j hj] | rw [hc4 j hj]
     all_goals simp only [hF.ee, hF.ff, hF.ef, hJ_fe hF, hF.ew, hF.fw, hF.ww, hF.ez, hF.fz, hF.zz, hF.zw,
-      hwe, hwf, hze, hzf, hwz, Fin.ext_iff, Fin.mk.injEq]
+      hwe, hwf, hze, hzf, hwz, Fin.ext_iff]
     all_goals split_ifs <;> first | rfl | (exfalso; omega) | norm_num | omega
   have hX : hJ ε (Qm e f wf z0 *ᵥ zB) (Qm e f wf z0 *ᵥ zB) = herm (Hpk k r) zB zB := by
     rw [hQ, hJ_sum_l]
@@ -270,7 +271,7 @@ theorem e_li (hF : IsFrameJ ε e f wf z0) : LinearIndependent ℂ e := by
   rw [Fintype.linearIndependent_iff]
   intro c hc b
   have h := congrArg (fun v => hJ ε v (f b)) hc
-  simp only [hJ_sum_l, hF.ef, mul_ite, mul_one, mul_zero, Finset.sum_ite_eq', Finset.sum_ite_eq,
+  simp only [hJ_sum_l, hF.ef, mul_ite, mul_one, mul_zero, Finset.sum_ite_eq',
     Finset.mem_univ, if_true] at h
   simpa [hJ] using h
 

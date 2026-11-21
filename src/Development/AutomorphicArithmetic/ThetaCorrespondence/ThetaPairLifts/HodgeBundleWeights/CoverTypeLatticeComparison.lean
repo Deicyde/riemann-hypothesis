@@ -1,6 +1,8 @@
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.HodgeBundleWeights.TamagawaNumberSpecialUnitary
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LevelAutomorphismRepresentation
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.HodgeBundleWeights.ToKnownTheoremsOf
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoversOfLifts
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HostBoundHolds
+import Development.AutomorphicArithmetic.LocalEmbeddings.BadRepAt
 
 section
 open CategoryTheory AlgebraicGeometry NumberField

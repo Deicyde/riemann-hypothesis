@@ -1,10 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoreConcl
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTransv
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLineReps
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsSmoothModerateOfIsAutFunSm
 open scoped TensorProduct NNReal Matrix
 open NumberField MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SiegelSet GlobalTheory.EisRes
 open GlobalTheory.Doubling (absE)
@@ -30,7 +25,7 @@ theorem exists_reps : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [Numb
         rintro p ⟨l, hl⟩
         refine ⟨l⁻¹, ?_⟩
         have e : (matHom _ σ J (p⁻¹).1).1 = ((matHom _ σ J p.1)⁻¹ : GL (Fin n) (AF F ⊗[F] E)).1 := by
-          simp [Subgroup.coe_inv, map_inv]
+          simp [map_inv]
         rw [e]
         have h1 : ((matHom _ σ J p.1)⁻¹ : GL (Fin n) (AF F ⊗[F] E)).1 * ((matHom _ σ J p.1).1 * adMat F x) = adMat F x := by
           rw [← Matrix.mul_assoc, ← Units.val_mul, inv_mul_cancel, Units.val_one, Matrix.one_mul]

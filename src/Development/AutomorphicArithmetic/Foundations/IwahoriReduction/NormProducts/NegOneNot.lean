@@ -1,4 +1,5 @@
-import Development.AutomorphicArithmetic.Foundations.IwahoriReduction.NormProducts.LUnH
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.IwahoriReduction.NormProducts.ProdEqNorm
 import Development.AutomorphicArithmetic.Foundations.IwahoriReduction.NormProducts.EvalSmulCong
 import Development.AutomorphicArithmetic.Foundations.IwahoriReduction.NormProducts.CauchyFar

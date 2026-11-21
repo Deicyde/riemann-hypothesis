@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SiegelAtOfKnownTheorem
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsTamePolyhedralFanStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsOddLevelCoverStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PolyhedralFanSiegelBaseChangeStatement

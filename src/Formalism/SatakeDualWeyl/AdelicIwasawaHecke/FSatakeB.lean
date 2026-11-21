@@ -1,4 +1,9 @@
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.FSatakeA
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SatakeDualWeyl.StatementF
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
 
 open Formalism.UG
 
@@ -100,7 +105,7 @@ theorem fSatake_diag_exists (e : Fin n → L) (he : ∀ i, σ (e i) * e i.rev = 
     by_cases h : a = c
     · subst h
       simp [cT]
-    · simp [cT, Matrix.diagonal_apply, h, Ne.symm h]
+    · simp [cT, h, Ne.symm h]
   have hg : g ∈ GU σ n := by
     show cT σ (Matrix.diagonal e) * antiJ L n * Matrix.diagonal e = antiJ L n
     ext i l

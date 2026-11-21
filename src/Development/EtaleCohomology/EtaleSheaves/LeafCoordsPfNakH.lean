@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.LeafCoordsPf
 
 noncomputable section
@@ -40,7 +41,7 @@ theorem nakH : LeafNakH := by
       simp only [f, Module.algebraMap_end_apply, Submodule.mkQ_apply]
       show (Submodule.Quotient.mk (h • (⟨n, hn⟩ : N')) : N' ⧸ N.comap N'.subtype) = Submodule.Quotient.mk b'
       rw [Submodule.Quotient.eq, Submodule.mem_comap]
-      simp only [Submodule.subtype_apply, SetLike.val_smul, Submodule.coe_sub, hb'2]
+      simp only [Submodule.subtype_apply, SetLike.val_smul, Submodule.coe_sub]
       convert ha using 1
       rw [← hab]
       have hb3 : (b' : M) = b := hb'2

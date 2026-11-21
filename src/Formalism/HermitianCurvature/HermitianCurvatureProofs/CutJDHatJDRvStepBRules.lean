@@ -1,7 +1,8 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJDHatJDRStepB
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJDHatJDACapTodaVRules
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJDHatJDACapTodaVGrp
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJDHatJDACapTodaVCoef
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJDHatJDRStepBRules
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.HasDerivAtNormPow
 
 open Matrix
 open scoped ContDiff ComplexConjugate

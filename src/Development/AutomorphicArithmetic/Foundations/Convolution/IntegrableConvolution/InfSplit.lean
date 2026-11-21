@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.ClosedProperAlt
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.GalSplit
-import GroundTheory.GlobalFields.SemilocalAlgebras.InfiniteAdeleTopology
 
 open NumberField GroundTheory.Global.InfinitePlace
 open scoped TensorProduct

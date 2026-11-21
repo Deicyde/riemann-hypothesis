@@ -1,7 +1,4 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.ArithmeticCylinders
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.LabelDatum
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.IsMirClass
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.PhIUnionTrans
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.SumGraphEqSumEntN
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.TrFirstPattern

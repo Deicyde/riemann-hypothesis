@@ -1,10 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.NormalizedHeckeFactors.CoverAct
-import ReciprocityTheory.Automorphisms.SplitCoeAlgebraMap
-import ReciprocityTheory.Automorphisms.PlaceA
 import ReciprocityTheory.Automorphisms.InstMainA
 import Formalism.LocalRingCardinality.SpanPowerMembership.Adelic
-import Formalism.FrobeniusOrbits.RealSubfieldLeCompositum
 
 noncomputable section
 

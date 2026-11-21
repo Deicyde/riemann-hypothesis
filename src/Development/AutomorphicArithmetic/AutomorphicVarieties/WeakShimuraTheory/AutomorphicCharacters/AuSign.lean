@@ -1,4 +1,6 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.IsAlgClosureField
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.IsAlgChar
+import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.ResMapBijective
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual Formalism.HC ReciprocityTheory.Gal IsLocalRing Polynomial UpperTheory.V UpperTheory.V.Base UpperTheory.V.Alg UpperTheory.V.HV UpperTheory.V.GradeZeroInterpolatingElement UpperTheory.V.Ws GlobalTheory.GalOfCusp
 
@@ -13,7 +15,7 @@ theorem UpperTheory.V.Ws.auSign :
   let σ : Ω ≃ₐ[ℚ] Ω := AlgHom.restrictNormal' j'.toRatAlgHom Ω
   have hσ : ∀ x, j (σ x) = j' x := fun x => by
     have h := AlgHom.restrictNormal_commutes j'.toRatAlgHom Ω x
-    simp only [RingHom.algebraMap_toAlgebra, Algebra.algebraMap_self, RingHom.id_apply,
+    simp only [RingHom.algebraMap_toAlgebra, RingHom.id_apply,
       RingHom.toRatAlgHom_apply] at h
     exact h
   have key : σ * c' = c * σ := by

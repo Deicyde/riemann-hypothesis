@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.TruncatedChains.RestPair
+import Formalism.SharpRestriction.GrowthBounds.RootWeights.FiltrationAdjointStable
 
 noncomputable section
 
@@ -45,20 +48,20 @@ private theorem glRep_apply_mem_weightSp_shift {n : ℕ} {K V : Type*} [Field K]
   · subst hca
     by_cases hcb : c = b
     · subst hcb
-      simp only [eq_self_iff_true, if_true]
+      simp only [if_true]
       push_cast
       first
       | module
       | (simp [add_smul, sub_smul])
     · have hbc : ¬ b = c := fun h => hcb h.symm
-      simp only [eq_self_iff_true, if_true, if_neg hbc, if_neg hcb, LinearMap.zero_apply, sub_zero]
+      simp only [if_true, if_neg hbc, if_neg hcb, LinearMap.zero_apply, sub_zero]
       push_cast
       first
       | module
       | (simp [add_smul, sub_smul]; abel)
   · by_cases hcb : c = b
     · subst hcb
-      simp only [eq_self_iff_true, if_true, if_neg hca, LinearMap.zero_apply, zero_sub]
+      simp only [if_true, if_neg hca, LinearMap.zero_apply, zero_sub]
       push_cast
       first
       | module

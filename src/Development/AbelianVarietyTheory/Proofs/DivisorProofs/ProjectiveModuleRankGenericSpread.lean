@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSplitting
 open NumberField MvPolynomial Filter Topology Formalism.BasicNotions Formalism.MainNotions Formalism.DegreeFormula GlobalTheory.FlagPoly GlobalTheory.Mean4 GlobalTheory.Mean4O GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.CovTest GlobalTheory.Published
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory GlobalTheory.ArInt
@@ -254,7 +255,7 @@ theorem maxMinors_split : ∀ (R : Type) [CommRing R] [IsDomain R] [CharZero R] 
     have h2 : P'.map φ * U.map φ = (D : FractionRing R') • U.map φ := by
       rw [← map_mul_rect φ, hPU]; ext i j; simp
     have h3 : (Hψ.submatrix I id).map φ * U.map φ = (N : FractionRing R') • (1 : Matrix (Fin r) (Fin r) _) := by
-      rw [← map_mul_rect φ, hIU]; ext i j; by_cases hij : i = j <;> simp [Matrix.one_apply, hij]
+      rw [← map_mul_rect φ, hIU]; ext i j; by_cases hij : i = j <;> simp [hij]
     have := mul_mul_eq_smul_of_field (FractionRing R') g r (D : FractionRing R') (N : FractionRing R') (P'.map φ)
       (U.map φ) ((Hψ.submatrix I id).map φ) (Nat.cast_ne_zero.2 hD) (Nat.cast_ne_zero.2 hN0) h1 hrk h2 h3
     apply Matrix.map_injective hinj

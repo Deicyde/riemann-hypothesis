@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.GlobalClassFormation.ClassSplit
-import GroundTheory.ProfiniteCohomology.ClassFormationDefs
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

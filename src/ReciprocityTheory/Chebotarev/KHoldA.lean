@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.Chebotarev.NormGsEmbZLe
 import ReciprocityTheory.Chebotarev.RpowNegFinrankSubOne
 import ReciprocityTheory.Chebotarev.IdealLat

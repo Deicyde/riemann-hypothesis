@@ -1,5 +1,4 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PublishedTheorems.CuspSemisimpleReal
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PublishedTheorems.RepNewform
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.CuspidalFiniteness.TypePoly
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.CapCentral
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.CuspidalFiniteness.ExistsZalgOfCenterU
@@ -55,7 +54,7 @@ theorem UpperTheory.V.Af.cuspFormsFiniteReal :
   have hone : TR.oneL F a = ∑ v, ∑ i, b (v, i, i) := by
     funext i j w
     simp only [hb, Finset.sum_apply]
-    by_cases hij : i = j <;> simp [Matrix.single_apply, Matrix.one_apply, Pi.single_apply, hij, ite_and, ite_apply]
+    by_cases hij : i = j <;> simp [Matrix.single_apply, Pi.single_apply, hij, ite_and, ite_apply]
   obtain ⟨t, ht⟩ : TR.lie F a (TR.oneL F a) ∈ S := by
     rw [hone]
     simp only [map_sum, hbE]

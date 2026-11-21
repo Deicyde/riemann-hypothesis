@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SiegelReframe
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ChSingle
 open Matrix MeasureTheory GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe GlobalTheory.FamilyFourier
 open scoped Real ContDiff
@@ -16,7 +15,7 @@ theorem norm_ch_row {g : ℕ} (n : Fin g → ℤ) (τ : Matrix (Fin g) (Fin g) �
     ‖ch n (fun j => τ k j)‖ = Real.exp (-(2 * π * ∑ j, (τ k j).im * (n j : ℝ))) := by
   rw [ch, Complex.norm_exp]
   congr 1
-  simp [Complex.mul_re, Complex.re_sum, Complex.im_sum, Finset.mul_sum]
+  simp [Complex.mul_re, Complex.re_sum, Finset.mul_sum]
   exact Finset.sum_congr rfl fun j _ => by ring
 
 theorem le_norm_sub_one {e : ℂ} {s c : ℝ} (he : ‖e‖ = Real.exp (-(2 * π * s)))

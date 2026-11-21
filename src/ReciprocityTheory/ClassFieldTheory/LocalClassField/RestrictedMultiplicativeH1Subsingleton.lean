@@ -1,8 +1,9 @@
-import Mathlib
-import ReciprocityTheory.NeutralLocalFields.Duality
-import ReciprocityTheory.GroupCohomology.InfRes
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.GroupCohomology.FiveTerm
 import ReciprocityTheory.ClassFieldTheory.LocalClassField.KbarRepContAction
+import Mathlib.FieldTheory.Galois.Profinite
+import Mathlib.Topology.Connected.Separation
 
 namespace ReciprocityTheory.DiscreteGroups.LocalClassField
 

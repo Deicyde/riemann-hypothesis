@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.LieGeometryGrowth.ThStmt
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.L2Cusps.SplitEq
 open UpperTheory.V.Lit.Geo
@@ -13,7 +15,7 @@ private theorem mult_two (w : InfinitePlace E) : w.mult = 2 := by
 
 private theorem rank_eq : (Module.finrank ℚ E : ℝ) = 2 * Fintype.card (InfinitePlace E) := by
   rw [← InfinitePlace.sum_mult_eq]
-  simp [mult_two, mul_comm]
+  simp [mul_comm]
 
 private theorem mod_inf (h : GL (Fin a) (Cinf E)) :
     (Reduction.detModule E a (infGL E a h) : ℝ) = ∏ w : InfinitePlace E, ‖h.val.det w‖ ^ 2 := by

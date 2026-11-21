@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.StatementF
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.SphericalA
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.GlintPrincRelIndexNeZero
 
 open Formalism.UG Matrix
 
@@ -52,7 +52,7 @@ theorem fIwasawa_H_single_left (p : Fin n) (w : Fin n → L) :
   · simp
   · intro j _ hj
     have : Fin.rev j ≠ p := fun h => hj (by rw [← h, Fin.rev_rev])
-    simp [Pi.single_apply, this]
+    simp [this]
   · intro h; exact absurd (Finset.mem_univ _) h
 
 theorem fIwasawa_un_of_isometry (M : Matrix (Fin n) (Fin n) L)
@@ -64,7 +64,7 @@ theorem fIwasawa_un_of_isometry (M : Matrix (Fin n) (Fin n) L)
   rw [fIwasawa_gram, hc a, hc b, h, fIwasawa_H_single_left, fIwasawa_antiJ]
   by_cases hb : b = Fin.rev a
   · subst hb; simp
-  · simp [Pi.single_apply, hb, Ne.symm hb]
+  · simp [hb, Ne.symm hb]
 
 theorem fIwasawa_un_mul (A B : Matrix (Fin n) (Fin n) L) (hA : fIwasawaUn σ A) (hB : fIwasawaUn σ B) :
     fIwasawaUn σ (A * B) := by
@@ -78,7 +78,7 @@ theorem fIwasawa_antiJ_mul_antiJ : antiJ L n * antiJ L n = 1 := by
   · rw [fIwasawa_antiJ, fIwasawa_antiJ, Fin.rev_rev]
     by_cases h : i = j
     · subst h; simp
-    · simp [Matrix.one_apply, h, Ne.symm h]
+    · simp [h, Ne.symm h]
   · intro k _ hk
     simp [fIwasawa_antiJ, hk]
   · intro h; exact absurd (Finset.mem_univ _) h

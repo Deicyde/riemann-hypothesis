@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ComapMaximalIdealEqOrigin
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GoodIffEtaleAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RingHomExtTensor
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ClosureFiniteEtale
 
 open scoped TensorProduct
 

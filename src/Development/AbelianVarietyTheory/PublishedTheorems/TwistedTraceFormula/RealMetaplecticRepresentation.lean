@@ -1,4 +1,43 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Lie.Classical
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.Calculus.FDeriv.Symmetric
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.Distribution.SchwartzSpace.Deriv
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Covering.Basic
+import Mathlib.Topology.Sheaves.Init
 
 noncomputable section
 
@@ -150,13 +189,13 @@ theorem hasDerivAt_rhoFun (w : l ⊕ l → ℝ) (f : Sch l) (x : EuclideanSpace 
 
 theorem dRho_add (w w' : l ⊕ l → ℝ) : dRho (w + w') = dRho w + dRho w' := by
   ext f x
-  simp only [ContinuousLinearMap.add_apply, SchwartzMap.add_apply, dRho_apply, pPart_add, qPart_add, inner_add_left,
+  simp only [ContinuousLinearMap.add_apply, dRho_apply, pPart_add, qPart_add, inner_add_left,
     map_add, ofReal_add]
   ring
 
 theorem dRho_smul (t : ℝ) (w : l ⊕ l → ℝ) : dRho (t • w) = (t : ℂ) • dRho w := by
   ext f x
-  simp only [ContinuousLinearMap.smul_apply, SchwartzMap.smul_apply, dRho_apply, pPart_smul, qPart_smul,
+  simp only [ContinuousLinearMap.smul_apply, dRho_apply, pPart_smul, qPart_smul,
     real_inner_smul_left, map_smul, ofReal_mul, smul_eq_mul, real_smul]
   ring
 
@@ -180,8 +219,8 @@ theorem dRho_comm (w w' : l ⊕ l → ℝ) :
   ext f x
   have hs : fderiv ℝ (fderiv ℝ f) x (pPart w) (pPart w') = fderiv ℝ (fderiv ℝ f) x (pPart w') (pPart w) :=
     ((f.smooth 2).contDiffAt.isSymmSndFDerivAt (by simp)) _ _
-  simp only [ContinuousLinearMap.sub_apply, ContinuousLinearMap.mul_apply, SchwartzMap.sub_apply,
-    ContinuousLinearMap.smul_apply, ContinuousLinearMap.one_apply, SchwartzMap.smul_apply, smul_eq_mul]
+  simp only [ContinuousLinearMap.sub_apply, ContinuousLinearMap.mul_apply,
+    ContinuousLinearMap.smul_apply, ContinuousLinearMap.one_apply, smul_eq_mul]
   rw [dRho_apply w (dRho w' f), dRho_apply w' (dRho w f), key, key, dRho_apply, dRho_apply, hs]
   simp only [sympl, real_inner_comm (pPart w) (qPart w'), ofReal_sub]
   ring
@@ -303,7 +342,7 @@ theorem quad_fromBlocks {A B C D : Matrix l l ℝ} (hX : fromBlocks A B C D ∈ 
     have := dRho_comm (l := l) (Pi.single (Sum.inl j) 1) (Pi.single (Sum.inr k) 1)
     rw [sympl_single] at this
     rw [← sub_eq_iff_eq_add', this]
-    by_cases h : j = k <;> simp [Matrix.J, h, Matrix.one_apply]
+    by_cases h : j = k <;> simp [Matrix.J, h]
   have hQa : ∀ k (g : Sch l), Q k g x = 2 * π * I * x k * g x := fun k g => dRho_single_inr k g x
   have hq : quad (fromBlocks A B C D) = (4 * π * I : ℂ)⁻¹ • ((∑ j, ∑ k, (B j k : ℂ) • (P j * P k)) -
       (∑ j, ∑ k, (2 * A j k : ℂ) • (Q k * P j)) - (2 * π * I * (A.trace : ℝ) : ℂ) • 1 -
@@ -328,7 +367,7 @@ theorem quad_fromBlocks {A B C D : Matrix l l ℝ} (hX : fromBlocks A B C D ∈ 
   rw [hq]
   simp only [ContinuousLinearMap.smul_apply, ContinuousLinearMap.sub_apply, ContinuousLinearMap.sum_apply,
     ContinuousLinearMap.add_apply, ContinuousLinearMap.mul_apply, ContinuousLinearMap.one_apply,
-    SchwartzMap.smul_apply, SchwartzMap.sub_apply, SchwartzMap.add_apply, SchwartzMap.sum_apply, smul_eq_mul, hQa]
+    smul_eq_mul, hQa]
   simp only [hP, dRho_single_inl, mul_sub, Finset.mul_sum]
   congr 1
   · congr 1

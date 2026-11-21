@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.EntryMinorBounds
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.UpperMinorIdentity
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.DetSubmatrixUnitriangularEqOne
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
 
 open Matrix Formalism.FourierDecayAlt Formalism.QuantumDeterminants
 

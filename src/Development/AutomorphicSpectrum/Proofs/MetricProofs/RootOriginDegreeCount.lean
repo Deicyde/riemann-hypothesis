@@ -1,9 +1,6 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.VolumeInputs
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.TowerOrigin
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.SumFundCoMulSumIic
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ComplexPointsIffCentres
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.RegAtIffChartLocalizationStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.RootOriginCoordField
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.AlgebraicElementHomogRelation
 open MvPolynomial NumberField ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Top GlobalTheory.CompanionTheory.Ar.Small
@@ -89,7 +86,7 @@ theorem form_X (k : K) (i : J k) : IsMultiHomog (X ⟨k, i⟩ : MRing J) (Pi.sin
   by_cases h : k' = k
   · subst h
     simp [Finsupp.single_apply]
-  · simp [Finsupp.single_apply, Pi.single_apply, h, Ne.symm h]
+  · simp [h]
 
 theorem form_pow {f : MRing J} {a : K → ℕ} (h : IsMultiHomog f a) (n : ℕ) : IsMultiHomog (f ^ n) (n • a) := by
   induction n with

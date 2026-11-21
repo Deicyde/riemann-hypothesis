@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.RankOneUnitary
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.Mono0OfLpDimEqOne
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsEquivOfMapEq
@@ -241,7 +242,7 @@ theorem char_assoc (a b c : WD h) : (a.lpChar b).lpChar c = a.lpChar (b.lpChar c
     exact LinearMap.congr_fun this v
   · have : (TensorProduct.assoc ℂ _ _ _).toLinearMap ∘ₗ ((a.tensor b).tensor c).N =
         (a.tensor (b.tensor c)).N ∘ₗ (TensorProduct.assoc ℂ _ _ _).toLinearMap :=
-      TensorProduct.ext_threefold fun x y z => by simp [add_tmul, tmul_add, add_assoc]
+      TensorProduct.ext_threefold fun x y z => by simp [add_assoc]
     exact LinearMap.congr_fun this v
 
 theorem char_one (a : WD h) : a.lpChar (WD.lpUnr h {1}) = a := by

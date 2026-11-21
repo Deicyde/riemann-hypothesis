@@ -1,4 +1,4 @@
-import Formalism.LocalToGlobal.KernelLattices.KerStd
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.SelfDualLatticeNorms.EmbCInjective
 import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.SelfDualLatticeNorms.SelfDualComap
 import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.SelfDualLatticeNorms.SelfDualFourfoldCurveIdealLattice
@@ -7,7 +7,6 @@ import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.SelfDualLattice
 import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.SelfDualLatticeNorms.IsTorsionPointStandardCM
 import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.SelfDualLatticeNorms.KapAll
 import Formalism.LocalToGlobal.AlgebraicTheory.LocNormScale
-import Formalism.LocalToGlobal.AlgebraicTheory.SplitPlaceScaledBound
 import Formalism.LocalToGlobal.AlgebraicTheory.AlgebraicTheoryProofs.NormInter
 import Formalism.LocalToGlobal.AlgebraicTheory.AlgebraicTheoryProofs.NormPow
 

@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.ProfiniteCohomology.RestrictedRamification.LocalMaps
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.GlobalClassFormation.LocalLimits.IsScalarTowerFiniteSubfieldAlgebraicClosure
 set_option maxSynthPendingDepth 1
 

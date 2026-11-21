@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeightBoundConst
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LogisticFactorMem
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.HermitianInterpolation
 
 open GlobalTheory Matrix Filter Topology Set GlobalTheory.HermFrame GlobalTheory.IndefiniteRowSideFullHecke.HermitianInterpolation GlobalTheory.InterpCurv
 open scoped ComplexOrder ContDiff
@@ -34,7 +33,7 @@ theorem del_log_sq_le_and_levi_log_le (ι : Type) [Fintype ι] (r : (ι → ℂ)
       rw [← mul_div_assoc, gradForm, hI, dbar_ofReal, hd]
       push_cast
       rw [← Complex.mul_conj']
-      simp only [smul_eq_mul, map_mul, Complex.conj_ofReal, map_inv₀]
+      simp only [map_mul, Complex.conj_ofReal, map_inv₀]
       field_simp
     have h5 := diagVal_formOf_eq_gnorm_sq hG ξ
     have h6 := h1 ξ

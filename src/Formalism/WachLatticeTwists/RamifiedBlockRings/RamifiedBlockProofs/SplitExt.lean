@@ -1,5 +1,10 @@
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.RamifiedBlockRings.ChainFromPrimitiveData
 import Formalism.CharacterColumnKernels.IdempotentNormalForms.SpacedProductLowerBound
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.LocalRing.NonLocalRing
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
 
 open Finset Classical
 

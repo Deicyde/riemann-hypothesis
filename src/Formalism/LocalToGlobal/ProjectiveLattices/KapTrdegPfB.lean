@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.KapTrdegPfA
+import Mathlib.AlgebraicGeometry.Modules.Sheaf
+import Mathlib.AlgebraicGeometry.Morphisms.Smooth
+import Mathlib.Combinatorics.Quiver.ReflQuiver
+import Mathlib.Order.CompletePartialOrder
 
 namespace Formalism.L2.Pj.TranscendenceDegreeLemmas
 

@@ -1,4 +1,7 @@
-import PositivityTheory.AutomorphicForms.PublishedInputs.HilbertEisenstein.SSmooth
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.MkMemAdmissibleAtIffCocycle
+import Development.AutomorphicArithmetic.AutomorphicVarieties.IdeleGenerators.IsCondAt
 
 noncomputable section
 

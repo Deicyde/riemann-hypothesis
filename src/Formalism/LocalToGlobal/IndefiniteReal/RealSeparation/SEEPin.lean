@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.SEEofApply
 import Formalism.LocalToGlobal.IndefiniteReal.EvalTieTOne
 import Formalism.LocalToGlobal.IndefiniteReal.LinksDefs

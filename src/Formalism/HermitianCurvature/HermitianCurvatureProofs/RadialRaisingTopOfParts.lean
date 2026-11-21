@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.RadAATopOfParts
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.BigCellValues
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.LiftClosedUnderOperations
 
 open MeasureTheory Matrix
 

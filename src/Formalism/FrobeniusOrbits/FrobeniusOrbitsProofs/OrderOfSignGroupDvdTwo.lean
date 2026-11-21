@@ -1,9 +1,8 @@
-import Mathlib
-import Formalism.FrobeniusOrbits.Statement
+import BuildAid.Leniency.Open
 import Formalism.FrobeniusOrbits.DiscrMaximalRealCyclotomic
 import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.Galois
 import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.FrobMulInertia
-import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.CoprimeTwoPow
+import Mathlib.NumberTheory.Padics.Hensel
 
 open NumberField IntermediateField Ideal
 
@@ -22,7 +21,7 @@ theorem isSquare_of_hensel (p : ℕ) [Fact p.Prime] (c a : ℤ)
       ‖Polynomial.aeval (a : ℤ_[p])
         (Polynomial.derivative (Polynomial.X ^ 2 + Polynomial.C (c : ℤ_[p])))‖ ^ 2 := by
     push_cast at h
-    simp [Polynomial.derivative_X_pow, mul_comm] at h ⊢
+    simp [mul_comm] at h ⊢
     convert h using 4
     norm_num
   obtain ⟨z, hz, -⟩ := hensels_lemma h'

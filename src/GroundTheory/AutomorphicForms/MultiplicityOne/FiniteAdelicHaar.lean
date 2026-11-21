@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.GL2.GJGlobalHaar
-import GroundTheory.AutomorphicForms.MultiplicityOne.FiniteAdelicDistribution
 
 open MeasureTheory Measure Topology Filter Set IsDedekindDomain NumberField
 

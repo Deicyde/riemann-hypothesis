@@ -1,4 +1,6 @@
-import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.EquivIoYOf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.PrincipalLevelAction
 
 noncomputable section
 

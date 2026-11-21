@@ -1,17 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsIsIotaAt
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ExistsComplMapEq
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsFlipDet
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FlipIdxNeZero
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IdemSumMulOfSubset
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.ApplyAddInfRat
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.EqZeroOfLintegralEqZero
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.MemLatOIffExistsActO
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsNeZeroOfIsVacO
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CompAtMtOfMemGfC
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.PlaceModelIndicatorEqMean
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EqZeroOrEqOfPlaceIdem
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinPartConjMem
 open NumberField Matrix Complex IsDedekindDomain
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.FD GlobalTheory GlobalTheory.ThFr GlobalTheory.Dict GlobalTheory.AdTh GlobalTheory.ClsVal
 open ReciprocityTheory.ChartRestriction.G.Geo.Tor hiding Level Host
@@ -50,11 +41,11 @@ theorem eq_iota_cw {h : w.under (𝓞 D.host.F) = q} {ι : w.adicCompletion D.ho
 
 theorem gl_cancel {k : Type} [Field k] {m n : ℕ} (b : GL (Fin m) k) (a : GL (Fin n) k) (Y : Matrix (Fin m) (Fin n) k) :
     b.1 * ((b⁻¹).1 * Y * a.1) * (a⁻¹).1 = Y := by
-  simp only [Matrix.mul_assoc, ← Matrix.mul_assoc b.1, Units.mul_inv, Matrix.one_mul, ← Units.val_mul, mul_inv_cancel, Units.val_one, Matrix.mul_one]
+  simp only [Matrix.mul_assoc, ← Matrix.mul_assoc b.1, Matrix.one_mul, ← Units.val_mul, mul_inv_cancel, Units.val_one, Matrix.mul_one]
 
 theorem gl_cancel' {k : Type} [Field k] {m n : ℕ} (b : GL (Fin m) k) (a : GL (Fin n) k) (Y : Matrix (Fin m) (Fin n) k) :
     (b⁻¹).1 * (b.1 * Y * (a⁻¹).1) * a.1 = Y := by
-  simp only [Matrix.mul_assoc, ← Matrix.mul_assoc (b⁻¹).1, Units.inv_mul, Matrix.one_mul, ← Units.val_mul, inv_mul_cancel, Units.val_one, Matrix.mul_one]
+  simp only [Matrix.mul_assoc, ← Matrix.mul_assoc (b⁻¹).1, Matrix.one_mul, ← Units.val_mul, inv_mul_cancel, Units.val_one, Matrix.mul_one]
 
 end GlobalTheory.DivPtLocalCard
 

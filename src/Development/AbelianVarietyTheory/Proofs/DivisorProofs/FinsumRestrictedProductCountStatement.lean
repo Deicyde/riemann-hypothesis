@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinsumRestrictedProductCount
-import Mathlib
 open Filter
 open scoped Classical
 set_option maxHeartbeats 1000000 in

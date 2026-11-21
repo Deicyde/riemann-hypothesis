@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UMultOne
 
 namespace PI.UnitaryGroupMassFormula.CommMult

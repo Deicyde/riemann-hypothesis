@@ -1,4 +1,7 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.FourierProjections.PaUContinuous
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.RingTheory.PiTensorProduct
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.PropAA
 
 namespace ReciprocityTheory.ChartRestriction.G.I2.FPw
 
@@ -152,7 +155,7 @@ theorem paPoly_coord (i : ι) : (fun v : EuclideanSpace ℂ ι => v i) ∈ paPol
     rw [paMono_eq, Finset.prod_eq_single i]
     · simp
     · intro b _ hb
-      simp [Finsupp.single_apply, hb, Ne.symm hb]
+      simp [hb]
     · intro hi
       exact absurd (Finset.mem_univ i) hi
   rw [h1]

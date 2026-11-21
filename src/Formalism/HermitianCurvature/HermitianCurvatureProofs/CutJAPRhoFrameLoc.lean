@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJAPRhoCut
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJABddKapNrmW
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJASSnGeomAtGq
 
 open Formalism.REAL Formalism.QuantumDeterminants Formalism.FourierDecayAlt Formalism.FourierDecayAlt.Q Filter Topology
 open scoped Matrix ComplexConjugate

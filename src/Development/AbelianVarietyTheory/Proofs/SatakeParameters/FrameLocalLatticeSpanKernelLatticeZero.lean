@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.JointCmpEmbeddingY
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.LocSpBot
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LatticeTupleBasesSpanAtPlacesStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.GidxFacts
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.IsOrthCoToLEOfCTMulSelf

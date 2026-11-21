@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeIntZero
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAStabilizerThetaGlobal
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzContinuousAtOfPointwiseOfBounded
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFinPartNeZero
@@ -8,6 +7,7 @@ import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilActionMapsSchwa
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzValuedIntegralLinear
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegrableIdelesPowerDecayStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaStabilizerExists
+import Mathlib.LinearAlgebra.Multilinear.FiniteDimensional
 
 open scoped TensorProduct Matrix
 open MeasureTheory Filter Topology NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK

@@ -1,16 +1,17 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.MetricPeriods.IsTwiceDifferentiableAt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.CompRightEqZero
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.KappaSt
-import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsFibreLocal
-import GroundTheory.HeightsAndTheta.Heights.Antisymmetric.Statements
-import ReciprocityTheory.AnalyticForms.LeviForms.HomDens
 import ReciprocityTheory.AnalyticForms.PotentialTheory.PshShiftA
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.IsOpenFlagDomainNondegenerateMinorsStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.LogDetComparableGramBoundStatement
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.GramLogUnitaryTriangularInvarianceStatement
 import Development.WeilBound.CoreStatements.PluriharmonicCharts.XPerCell
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.FlagPotentialLeviFormCellStatement
+import Mathlib.Analysis.SpecialFunctions.Complex.Analytic
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
 
 open MvPolynomial MeasureTheory Filter Topology Matrix ReciprocityTheory.AnForm ReciprocityTheory.AnForm.M ReciprocityTheory.AnForm.P GlobalTheory.CompanionTheory.Ar.PB GroundTheory.Heights₂.Heights
 open scoped ComplexOrder
@@ -283,7 +284,7 @@ private theorem gramHead_det_ne_zero_of_inFlagDomain {j : ℕ} {c : Matrix (Fin 
     · simpa using h1
     · intro b _ hb
       have h2 : (s : ℕ) ≠ b := fun h => hb (Fin.ext h.symm)
-      simp [Fin.coe_castLE, h2]
+      simp [h2]
     · simp
   apply hz0
   funext o
@@ -318,7 +319,7 @@ private theorem star_quadForm_gramOf_swap (hd : Fin N → ℝ) (g : Matrix (Fin 
     star (star x ⬝ᵥ (gramOf hd g *ᵥ y)) = star y ⬝ᵥ (gramOf hd g *ᵥ x) := by
   rw [bilinForm_gramOf_eq_sum, bilinForm_gramOf_eq_sum, star_sum]
   refine Finset.sum_congr rfl fun i _ => ?_
-  simp only [star_mul', star_star, Complex.star_def, Complex.conj_ofReal, Complex.conj_conj]
+  simp only [star_mul', Complex.star_def, Complex.conj_ofReal, Complex.conj_conj]
   ring
 
 private theorem im_quadForm_gramOf_eq_zero (hd : Fin N → ℝ) (g : Matrix (Fin N) (Fin N) ℂ) (y : Fin N → ℂ) :
@@ -490,7 +491,7 @@ private theorem exists_triangular_gram_orthonormal_of_inFlagDomain {j : ℕ} {g 
   | zero =>
     intro _
     refine ⟨fun a => Pi.single a 1, fun a m ham => ?_, fun a => by simp, fun a b hab => ?_⟩
-    · simp [Pi.single_apply, (ne_of_lt ham).symm]
+    · simp [(ne_of_lt ham).symm]
     · omega
   | succ k ih =>
     intro hk
@@ -591,8 +592,8 @@ private theorem exists_triangular_gram_orthonormal_of_inFlagDomain {j : ℕ} {g 
             field_simp
             ring
           · have hb : (b : ℕ) < k := hlow b hb1 hb2
-            simp only [hv', if_pos rfl, if_neg hb1, if_neg hb2, if_neg hkb, Matrix.mulVec_smul,
-              dotProduct_smul, star_smul, smul_dotProduct, smul_eq_mul, hstar]
+            simp only [hv', if_pos rfl, if_neg hb1, if_neg hb2, if_neg hkb,
+              star_smul, smul_dotProduct, smul_eq_mul, hstar]
             have h1 := hor b kk (Or.inl hb)
             rw [if_neg hb1] at h1
             rw [← star_quadForm_gramOf_swap, h1]
@@ -605,7 +606,7 @@ private theorem exists_triangular_gram_orthonormal_of_inFlagDomain {j : ℕ} {g 
         have hak : (a : ℕ) < k := hlow a ha1 ha2
         by_cases hb1 : b = kk
         · subst hb1
-          simp only [hv', if_neg ha1, if_neg ha2, if_pos rfl, if_neg ha1, Matrix.mulVec_smul,
+          simp only [hv', if_neg ha2, if_pos rfl, if_neg ha1, Matrix.mulVec_smul,
             dotProduct_smul, smul_eq_mul]
           rw [hor a kk (Or.inl hak), if_neg ha1]
           simp
@@ -635,7 +636,7 @@ private theorem exists_triangular_gram_orthonormal_of_inFlagDomain {j : ℕ} {g 
       · rw [← star_quadForm_gramOf_swap, main b a hab]
         by_cases e : b = a
         · subst e
-          simp [Complex.star_def, Complex.conj_ofReal]
+          simp [Complex.conj_ofReal]
         · simp [e, Ne.symm e]
 private theorem exists_unitary_mul_blockTriangular_of_inFlagDomain {j : ℕ} (hj : j ≤ N) {g : Matrix (Fin N) (Fin N) ℂ}
     (hg : InFlagDomain N j g) :
@@ -705,7 +706,7 @@ private theorem inFlagDomain_inv_mul_mul {j : ℕ} {u g c : Matrix (Fin N) (Fin 
     have hneg : ∀ (A B : Matrix {a : Fin N // (a : ℕ) < N - j} {a : Fin N // (a : ℕ) < N - j} ℂ),
         -(Bᴴ * A * B) = Bᴴ * (-A) * B := by
       intro A B
-      simp [Matrix.mul_neg, Matrix.neg_mul]
+      simp
     rw [hneg]
     refine Matrix.PosDef.conjTranspose_mul_mul_same hgP ?_
     rw [Matrix.mulVec_injective_iff_isUnit, Matrix.isUnit_iff_isUnit_det]

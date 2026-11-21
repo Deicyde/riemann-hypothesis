@@ -1,5 +1,7 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJASSnGeomInvSqrt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.SeminormCompletion
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.ZinvBound
 
 open Formalism.FourierDecayAlt
 

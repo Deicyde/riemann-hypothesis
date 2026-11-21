@@ -1,6 +1,6 @@
-import Mathlib
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.RealLocalIntegrals.RealTemperedBounds.StepsD
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WeightVectorExplicitFormula
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.RealLocalIntegrals.StSmooth
 
 noncomputable section
 

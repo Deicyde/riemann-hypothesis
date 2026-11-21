@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.RealIoX
+import Formalism.LocalToGlobal.IndefiniteReal.ConcretePkgSpec
 
 noncomputable section
 

@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.FormalDegreeBessel.StatementDS
 import Formalism.FormalDegreeBessel.StatementG
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.NumberTheory.Zsqrtd.GaussianInt
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.FractionalIdeal.Norm
 
 namespace Formalism.HermitianLatticeCounting.ExpansionTerms
 

@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ProjectiveAutomorphicHecke.CentralEig2
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ProductOfLocalLevelsUnitaryIsOpenIsCompactIsLeve
 open NumberField IsDedekindDomain Matrix GlobalTheory.CuspRep GlobalTheory.UnitaryBC GlobalTheory.DefU GlobalTheory.PRep Formalism.L2.Host GlobalTheory.HeckeGal UpperTheory.Gal.CertificateRingHomMap
@@ -16,8 +16,8 @@ private theorem rel {E : Type} [Field E] [NumberField E] [IsCMField E] {n : ℕ}
   · ext i j
     by_cases hij : i = j
     · subst hij
-      simp [RingHom.mapMatrix_apply, sim, Matrix.one_apply]
-    · simp [RingHom.mapMatrix_apply, sim, Matrix.one_apply, hij]
+      simp [RingHom.mapMatrix_apply, sim]
+    · simp [RingHom.mapMatrix_apply, sim, hij]
 
 open GroundTheory.Global.AdeleBaseChange in
 private theorem val_le {E : Type} [Field E] [NumberField E] [IsCMField E] {n : ℕ} (hn : 0 < n) (k : GUf E n)

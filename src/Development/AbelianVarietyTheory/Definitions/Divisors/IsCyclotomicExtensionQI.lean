@@ -1,4 +1,59 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Azumaya.Basic
+import Mathlib.Algebra.Central.Matrix
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.Matrix.Spectrum
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.LinearAlgebra.Eigenspace.Triangularizable
+import Mathlib.LinearAlgebra.Semisimple
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.NumberField.CMField
+import Mathlib.NumberTheory.Padics.Complex
+import Mathlib.NumberTheory.Padics.Hensel
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.DedekindDomain.FiniteAdeleRing
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -467,7 +522,7 @@ theorem bcMap_bc {R R' : Type} [CommRing R] [Algebra ℚ R] [CommRing R'] [Algeb
       Algebra.TensorProduct.includeRight (((g : GL (Fin n) F × ℚˣ).1 : Matrix (Fin n) (Fin n) F) i j)
     simp [Algebra.TensorProduct.includeRight_apply, Algebra.TensorProduct.map_tmul]
   · apply Units.ext
-    simp only [bcMap, bc, simMap_snd]
+    simp only [bcMap, bc]
     exact f.commutes _
 
 end BcLemmas
@@ -518,7 +573,7 @@ def toP : G.GQ →* ℚ_[p]ˣ × ((i : Fin G.m) → GL (Fin G.n) (G.Fw i)) := G.
 
 theorem toPadic_fst (g : G.GQ) : (((G.toP g).1 : ℚ_[p]ˣ) : ℚ_[p]) = ((G.sim g : ℚ) : ℚ_[p]) := by
   show ((((ubc ℚ_[p] g : UPts G.star ℚ_[p]) : (ℚ_[p] ⊗[ℚ] G.C)ˣ × ℚ_[p]ˣ).2 : ℚ_[p]ˣ) : ℚ_[p]) = _
-  simp only [ubc, uMap_snd]
+  simp only [ubc]
   rfl
 
 theorem toPadic_snd (g : G.GQ) (w : G.W) :
@@ -845,7 +900,7 @@ theorem hK_QI : Module.finrank ℚ (⊤ : Subfield QI) = 2 ∧ ∀ τ : QI →+*
   · intro τ
     refine ⟨IsCyclotomicExtension.zeta 4 ℚ QI, Subfield.mem_top _, fun h => ?_⟩
     have h3 := congrArg (fun z => (τ z).re) zeta_sq
-    simp only [map_pow, map_neg, map_one, pow_two, map_mul, Complex.mul_re, h, Complex.neg_re, Complex.one_re] at h3
+    simp only [map_neg, map_one, pow_two, map_mul, Complex.mul_re, h, Complex.neg_re, Complex.one_re] at h3
     nlinarith [mul_self_nonneg (τ (IsCyclotomicExtension.zeta 4 ℚ QI)).re]
 
 instance fact_prime_five : Fact (Nat.Prime 5) := ⟨by norm_num⟩

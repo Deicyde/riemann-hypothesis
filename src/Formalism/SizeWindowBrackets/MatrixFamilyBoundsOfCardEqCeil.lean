@@ -1,5 +1,6 @@
-import Formalism.SizeWindowBrackets.TraceSquareAndDiagBounds
+import BuildAid.Leniency.Open
 import Formalism.SizeWindowBrackets.FrameTraceRatioFinEquiv
+import Mathlib.Data.Matrix.ColumnRowPartitioned
 
 open Matrix Module NumberField
 open scoped ComplexOrder

@@ -1,11 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.JointConditionsZpowers.TwentyWordsLeB
 import Formalism.SharpRestriction.LevelLetterCocycles.JointConditionsZpowers.LiftingConditionOfWindows
 import Formalism.SharpRestriction.LevelLetterCocycles.JointConditionsZpowers.GaloisConditionFiveExtraOf
-import Formalism.SharpRestriction.LevelLetterCocycles.DecompositionData
-import Formalism.SharpRestriction.LevelLetterCocycles.LiftingTheory
-import Formalism.SharpRestriction.LevelLetterCocycles.SumRepresentations
-import Formalism.SharpRestriction.LevelLetterCocycles.LocalSituation
-import Formalism.SharpRestriction.LevelLetterCocycles.CrystallineMapLemmas
 
 noncomputable section
 

@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.BaseClass
-import GroundTheory.ProfiniteCohomology.GaloisCohomology.IsZeroGroupCohomologyQuotientToInvariantsGalAdd
+import GroundTheory.ProfiniteCohomology.RestrictedRamification.ClassFieldGSPresentation
+import GroundTheory.ProfiniteCohomology.RestrictedRamification.SPicFinite
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

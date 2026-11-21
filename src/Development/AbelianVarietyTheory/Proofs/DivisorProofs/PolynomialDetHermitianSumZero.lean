@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.EqOfIsometricTrivShift
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsTorsionFreeOfForallExists
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolEqMultiDiff
 open CategoryTheory AlgebraicGeometry TopologicalSpace ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory GlobalTheory.ArInt GlobalTheory.Cartier GlobalTheory.CxPts GlobalTheory.Points GlobalTheory.FibreProj
 
@@ -123,7 +122,7 @@ theorem pol_eq_zero_of_mem_lowDeg {k : ℕ} (hk : k < Fintype.card β) {g : (α 
     congr 1
     refine hgT _ _ (fun a => by simp) fun b' hb' => ?_
     have : b' ≠ b := fun h => hb (h ▸ hb')
-    simp [Function.update_apply, this]
+    simp [this]
   | zero => intro L; simp [pol]
   | add x y _ _ hx hy =>
     intro L

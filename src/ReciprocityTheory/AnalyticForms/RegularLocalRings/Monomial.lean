@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.RegDom
+import Mathlib.RingTheory.OrderOfVanishing.Basic
+import Mathlib.Tactic.Polynomial.Basic
 
 namespace ReciprocityTheory.AnForm.R
 

@@ -1,5 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RowSubst
+import BuildAid.Leniency.Open
+import Formalism.GradedWeylDivisibility.StatementA
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 open MvPolynomial Formalism.GradedWeylDivisibility GlobalTheory.GenCoef
 
 namespace GlobalTheory.DualWeylDeg

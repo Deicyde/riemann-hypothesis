@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.FibreIff
-import Development.AbelianVarietyTheory.Proofs.GenericRegularity.LieCombBaseChange
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.RamifiedPlacesSplitEigen
 
 set_option autoImplicit false
 

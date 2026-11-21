@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.GermSCCols
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.WickVanishing.SCMain
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.ProdMemPow
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 set_option autoImplicit false
 

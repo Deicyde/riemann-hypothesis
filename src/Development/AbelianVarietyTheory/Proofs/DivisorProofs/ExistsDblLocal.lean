@@ -1,8 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ClosureUAt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LiftMatMapSelf
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CommOff
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoubledUnitaryElementActsLocalOperatorAtPlace
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsAdmittedDiagonalIntegralLinearForm
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TripleLocalUnitaryActionPreserves
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DistribHaarCharSupportedIdeleEqLocalAbsValue
@@ -11,10 +10,6 @@ import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SiegelParabolicLevi
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TripleLocalGlEmbeddingTheta
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsDblCoordDblD
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilObjectsInhabited
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StandardAdelicCharacterNontrivialAtPlaces
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchrodingerPreservesSchwartzBruhat
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicHeisenbergActsByLocalSchrodinger
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsComplementaryAdelicSchwartzRestFunction
 
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.HoweLocal
 open scoped TensorProduct Matrix
@@ -273,7 +268,7 @@ theorem isContOn_of_acts (v : Pl F) {G : Type} [Group G] [TopologicalSpace G]
       simp only [pureA, h0, Pi.smul_apply, smul_eq_mul]
     show (R 0)⁻¹ • l (fun t => pureA F f g (lift t)) = _
     rw [e, map_smul]
-    simp [smul_eq_mul, mul_comm, mul_assoc, mul_left_comm]
+    simp [smul_eq_mul, mul_comm, mul_left_comm]
   refine (hc0 L hL _ (hR φ hφ).2).congr fun q => ?_
   rw [hom q φ hφ R (hR φ hφ)]
   have e : (fun t => tens (evFin F v) (om q φ) R (lift t)) = R 0 • om q φ := by

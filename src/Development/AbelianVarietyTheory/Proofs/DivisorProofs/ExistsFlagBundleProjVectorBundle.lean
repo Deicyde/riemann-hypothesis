@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CmpNaturality
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.JointlyEpiSectionsGenerateStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GeneratingSectionsProjectiveMapStatement
@@ -8,6 +8,9 @@ import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ProjectiveRelationP
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ProjectiveRelationUniqueQuotientStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ProjectiveMapUniversalLineStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VanishingLocusClosedSubschemeStatement
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AppInjectiveOfFrames
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagExtensionOfSubbundle
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsoOfEqualSublinesShortExact
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

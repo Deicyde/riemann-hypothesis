@@ -1,5 +1,6 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.PUnipotentModulusHomeo
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.PUnipotentModulusCoords
 
 namespace GroundTheory.Heights₂.Heights.FiniteCovolume
 

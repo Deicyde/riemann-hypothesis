@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsHtFunGenericIff
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RegFlagged
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSplitting
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TotalEqCurve
 
 set_option autoImplicit false
 

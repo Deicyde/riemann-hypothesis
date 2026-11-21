@@ -1,10 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.IsAdaptedEmpty
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsBlockEmb
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsContinuousAdelicUnitaryEmbedding
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CuspFormBlockEmbLeftInvariant
-import Development.AutomorphicSpectrum.Definitions.TwistedFlags.WittDecompositionZeroSectionEmbedEqOne
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CmDataIsCMExtAndGramIsHermND
+import Development.AutomorphicSpectrum.Proofs.GlobalProofs.FiniteDimensionalOfSlices
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Matrix
 open scoped TensorProduct
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
@@ -148,7 +145,7 @@ theorem pair_vec (V : HSp D) {p : ℕ} (U : Matrix (Fin V.rank) (Fin p) D.host.E
       V.hT (V.frame.equivFun.symm fun k => U k i) (V.frame.equivFun.symm w) := by
   have hsig : ∀ x : D.host.E, (D.sp.cm.sig : D.host.E →+* D.host.E) x = starRingEnd D.host.E x :=
     fun _ => rfl
-  simp only [Module.Basis.equivFun_symm_apply, map_sum, LinearMap.map_smulₛₗ, LinearMap.map_smulₛₗ₂,
+  simp only [Module.Basis.equivFun_symm_apply, map_sum, LinearMap.map_smulₛₗ,
     LinearMap.sum_apply, LinearMap.smul_apply, smul_eq_mul, Matrix.mulVec,
     dotProduct, Matrix.mul_apply, Formalism.UG.cT, Matrix.transpose_apply, Matrix.map_apply, hsig,
     Formalism.BasicNotions.HSpace.gram, Finset.mul_sum, Finset.sum_mul, RingHom.id_apply]

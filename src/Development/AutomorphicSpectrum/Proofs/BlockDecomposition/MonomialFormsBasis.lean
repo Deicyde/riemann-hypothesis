@@ -1,7 +1,7 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.HodgeSurjectivity.NLeA
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.AlgebraMapConeRing
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MonLNegOneEMul
+import Mathlib.LinearAlgebra.ExteriorPower.Basis
 
 set_option autoImplicit false
 noncomputable section

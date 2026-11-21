@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LieDecompositionLocal
 import Formalism.RealPlaceAnalysis.RealPlaceTaylor.ShiftedGeneratorEqIteSmulAdd
 
@@ -159,7 +161,7 @@ theorem single_comm (a b c d : Fin (2 * r + k + 1)) :
   ext i j
   simp only [Msg, Matrix.sub_apply, Matrix.add_apply, Matrix.smul_apply, Matrix.mul_apply, Matrix.single_apply,
     smul_eq_mul]
-  simp [Finset.sum_ite_eq, Finset.sum_ite_eq', ite_and]
+  simp [Finset.sum_ite_eq, ite_and]
   split_ifs <;> simp_all
 
 theorem gl_single {Φ : Mat k r → E} {g : Mat k r} (hloc : Loc 2 Φ g) (hgG : g ∈ GV k r)
@@ -357,8 +359,7 @@ theorem key {m : ℕ} (a b : Fin (m + 1) → Fin (2 * r + k + 1)) (i : Fin m) (u
   · intro j h1 h2; simp only [Function.comp_apply, hsw j h1 h2]
   · intro j h1 h2; simp only [Equiv.Perm.mul_apply, Function.comp_apply, hsw j h1 h2]
   · intro Ψ x hx hΨ
-    simp only [hc, hs, Equiv.Perm.mul_apply, Function.comp_apply, Equiv.swap_apply_left, Equiv.swap_apply_right,
-      Fin.coe_castSucc, Fin.val_succ]
+    simp only [hc, hs, Equiv.Perm.mul_apply, Function.comp_apply, Equiv.swap_apply_left, Equiv.swap_apply_right]
     exact two hΨ hx _ _ (by push_cast; ring) _ _ _ _
 
 theorem adj {m : ℕ} (a b : Fin (m + 1) → Fin (2 * r + k + 1)) (i : Fin m) (u : ℂ)

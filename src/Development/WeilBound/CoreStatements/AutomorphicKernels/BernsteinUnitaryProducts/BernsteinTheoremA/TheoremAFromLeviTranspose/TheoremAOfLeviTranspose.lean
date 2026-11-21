@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.MirabolicDerivatives.UnipApplyCastSuccLast
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.TransposeInvariantOfConjInvariantDistributionGL
 
@@ -45,7 +46,7 @@ theorem vecMul_colMat {n : ℕ} (r : Fin (n + 1) → k) (w : Fin n → k) :
   funext j
   induction j using Fin.lastCases with
   | last => simp [vecMul, dotProduct, colMat, Fin.sum_univ_castSucc]
-  | cast j => simp [vecMul, dotProduct, colMat, Fin.castSucc_ne_last, Pi.single_apply]
+  | cast j => simp [vecMul, dotProduct, colMat, Fin.castSucc_ne_last]
 
 theorem colMat_mulVec {n : ℕ} (c : Fin n → k) (r : Fin (n + 1) → k) :
     colMat k n c *ᵥ r = r (Fin.last n) • colVec c := by
@@ -111,7 +112,7 @@ theorem exists_row {n : ℕ} (hn : 0 < n) (H : Subgroup (GL (Fin (n + 1)) k)) (h
     | cast j =>
       have hj : r (Fin.castSucc j) = 0 := congrFun h0 j
       simp [eLast, colVec, Fin.castSucc_ne_last, Pi.single_apply, hj, Finset.sum_ite_eq', htne]
-      split_ifs <;> simp [htne]
+      split_ifs <;> simp
   · obtain ⟨i, hi⟩ : ∃ i, r' i ≠ 0 := by
       by_contra hc
       push Not at hc
@@ -122,7 +123,7 @@ theorem exists_row {n : ℕ} (hn : 0 < n) (H : Subgroup (GL (Fin (n + 1)) k)) (h
     funext j
     induction j using Fin.lastCases with
     | last =>
-      simp [eLast, colVec, Pi.single_apply, Fin.castSucc_ne_last, Finset.sum_ite_eq', hi]
+      simp [eLast, colVec, Pi.single_apply, Fin.castSucc_ne_last, Finset.sum_ite_eq']
       field_simp
       ring
     | cast j =>

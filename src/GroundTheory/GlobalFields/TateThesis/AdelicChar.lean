@@ -1,6 +1,14 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.Adele.Approximation
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.InfiniteTraceAlgebraMap
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.Analysis.SpecialFunctions.Complex.Circle
+import Mathlib.RingTheory.DedekindDomain.Different
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 namespace GroundTheory.Global
 

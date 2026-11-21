@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.HermitianCurvatureForms
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CovariantSecondFundamentalForm
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiagValExtTraceNonneg
 open Matrix Complex ComplexConjugate Filter Topology
 open scoped ComplexOrder ContDiff
 open GlobalTheory.HermFrame GlobalTheory.IndefiniteRowSideFullHecke.HermitianCurvatureForms
@@ -19,7 +18,7 @@ theorem orthProj_transpose_mul_subGram (K : Matrix (m ⊕ l) (m ⊕ l) ℂ)
   rw [orthProj, transpose_fromCols, transpose_one, fromRows_mul, hc,
     subGram, nonsing_inv_mul_cancel_right K.toBlocks₁₁ _ hs]
   conv_rhs => rw [← fromBlocks_toBlocks K]
-  simp [incl, fromBlocks_mul_fromRows, subGram]
+  simp [incl, fromBlocks_mul_fromRows]
 
 theorem incl_transpose_mul_mul (M : Matrix (m ⊕ l) (m ⊕ l) ℂ) :
     (incl m l)ᵀ * M * incl m l = M.toBlocks₁₁ := by

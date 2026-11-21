@@ -1,8 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.Columns.FiniteSumNonzeroLargeDepth
-import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.SandwichNormalForm
-import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.SourceLatticeInvariance
-import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.LatticeNormalFormUnipotent
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.NormalFormAtPrime
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.UnipotentCharacterArgumentMulStabilizer
 
@@ -86,7 +83,7 @@ theorem _root_.GlobalTheory.Proof.localUnfoldingIntegrand_boundedSchwartz.intHom
   rw [_root_.GlobalTheory.QNormal.intHom_iff]
   intro s l
   simp only [_root_.GlobalTheory.Proof.localUnfoldingIntegrand_boundedSchwartz.freeMap, Matrix.toLin'_apply, Matrix.mulVec_single_one,
-    Matrix.transpose_apply, Matrix.col_apply, Matrix.of_apply]
+    Matrix.col_apply, Matrix.of_apply]
   split_ifs with hf
   · exact hu _
   · exact _root_.GlobalTheory.IndefiniteRowSideFullHecke.SourceLatticeInvariance.intAt_zero P

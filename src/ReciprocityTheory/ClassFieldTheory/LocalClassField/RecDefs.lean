@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ClassFieldTheory.LocalClassField.ExistsIntEKMulVbar
 
 namespace ReciprocityTheory.DiscreteGroups.LocalClassField

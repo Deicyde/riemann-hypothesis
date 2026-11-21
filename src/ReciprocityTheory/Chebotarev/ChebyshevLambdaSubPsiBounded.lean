@@ -1,6 +1,4 @@
-import ReciprocityTheory.Chebotarev.CasimirPowerSurjectiveSymmetric
-import ReciprocityTheory.Chebotarev.EulerSum
-import ReciprocityTheory.Chebotarev.EulerLim
+import BuildAid.Leniency.Open
 import ReciprocityTheory.Chebotarev.PrimeSum
 import ReciprocityTheory.Chebotarev.PrimeCont
 import ReciprocityTheory.Chebotarev.PrimeAsymp

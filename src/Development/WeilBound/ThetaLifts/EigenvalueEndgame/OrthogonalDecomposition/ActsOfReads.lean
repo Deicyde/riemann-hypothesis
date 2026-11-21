@@ -1,7 +1,7 @@
-import Development.WeilBound.ThetaLifts.LatticeBasics.ThConstLoc
-import Development.WeilBound.CoreStatements.LocallyConstantCoinvariants.IndicatorMem
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.LocallyConstantCoinvariants.PfActs
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqOfComponentTensorAdelicFunctionEq
+import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
 noncomputable section
 

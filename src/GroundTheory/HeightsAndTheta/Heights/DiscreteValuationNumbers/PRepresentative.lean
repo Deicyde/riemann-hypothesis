@@ -1,5 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.IsMultiHomogIdealSpanSingleton
+import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.Cartier
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Algebra.Order.Sub.Prod
+import Mathlib.Data.Int.Star
+import Std.Tactic.BVDecide.Normalize.Prop
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.NumbersDVR
@@ -188,7 +195,7 @@ theorem Representative.proof (h1 : DivCycleMul.Statement.{u}) : Representative.S
       funext k
       have h1k := hle H₁ hH₁ k
       have h2k := congrFun hde k
-      simp only [Pi.add_apply, Pi.sub_apply] at h1k h2k ⊢
+      simp only [Pi.add_apply] at h1k h2k ⊢
       simp only [hF, Pi.add_apply, Pi.sub_apply]
       omega
     have hdegv : ∀ H ∈ T', A H + (E - (A H + e H)) + d H = F := by

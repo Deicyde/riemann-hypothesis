@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.FlowMeanContinuity
-import ReciprocityTheory.L2DbarEstimates.PlurisubharmonicCharts.FourIndep
-import ReciprocityTheory.L2DbarEstimates.PlurisubharmonicCharts.FourBasic
 
 namespace ReciprocityTheory.ChartRestriction.G.FD.TubeSummability
 
@@ -16,7 +16,7 @@ lemma summable_exp_abs (c : ℝ) (hc : 0 < c) :
   have h1 : Summable (fun m : ℤ => Real.exp (-c * |(m : ℝ)|)) := by
     apply Summable.of_nat_of_neg
     · refine hgeo.congr fun m => ?_
-      simp only [Function.comp, Int.cast_natCast, Nat.abs_cast]
+      simp only [Int.cast_natCast, Nat.abs_cast]
       rw [← Real.exp_nat_mul]
       ring_nf
     · refine hgeo.congr fun m => ?_

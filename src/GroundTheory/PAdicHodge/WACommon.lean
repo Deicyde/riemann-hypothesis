@@ -1,10 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.PAdicHodge.BCrisNewtonLift
 import GroundTheory.PAdicHodge.PhiGammaBase
 import GroundTheory.PAdicHodge.SlopeDescentFixed
 import GroundTheory.PAdicHodge.ExtRobbaIsoLift
-import GroundTheory.PAdicHodge.ExtRobbaTrivialUnits
 import GroundTheory.PAdicHodge.BCrisEigenWitt
+import GroundTheory.PAdicHodge.ExtRobbaEigenStep
 set_option maxSynthPendingDepth 1
 
 noncomputable section

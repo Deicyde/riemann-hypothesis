@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.SplitRep
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.LevelLetterCocycles.DataN
 open Formalism.ConjugateSelfDual Formalism.MainNotions.N Polynomial
 
 namespace GlobalTheory
@@ -17,7 +17,7 @@ theorem lift_rep_of_entries_in_image : ∀ {k L Γ : Type} [Field k] [Field L] [
       map_mul' := fun x y => hinj (by rw [map_mul, key, key, key, map_mul]; rfl) }
   refine ⟨MonoidHom.toHomUnits m, ?_⟩
   ext g i j
-  simp only [mapRep, MonoidHom.comp_apply, Units.coe_map, MonoidHom.coe_coe]
+  simp only [mapRep, MonoidHom.comp_apply, Units.coe_map]
   rw [MonoidHom.coe_toHomUnits]
   exact congrFun (congrFun (key g) i) j
 

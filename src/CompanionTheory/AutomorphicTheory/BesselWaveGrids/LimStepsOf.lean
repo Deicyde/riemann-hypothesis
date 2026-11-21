@@ -1,5 +1,10 @@
+import BuildAid.Leniency.Open
 import CompanionTheory.AutomorphicTheory.SchurLimitBounds.ZuckermanDuality.LimBdFpm
 import CompanionTheory.AutomorphicTheory.BesselWaveGrids.KDecayOfGap
+import CompanionTheory.AutomorphicTheory.SchurLimitBounds.ZuckermanDuality.BetaAtInfinityZero
+import CompanionTheory.AutomorphicTheory.SchurLimitBounds.ZuckermanDuality.GeneratingFunctionPolynomial
+import CompanionTheory.AutomorphicTheory.ZuckermanCommutation.CapelliEigenvalues.CoefCC
+import CompanionTheory.AutomorphicTheory.ZuckermanCommutation.CapelliEigenvalues.CoefEigOfInfChar
 
 namespace CompanionTheory.WaveGrid
 

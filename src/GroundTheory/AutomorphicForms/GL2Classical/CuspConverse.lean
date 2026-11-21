@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.GL2Classical.Cuspidal
+import Mathlib.NumberTheory.ModularForms.CuspFormSubmodule
 
 open NumberField IsDedekindDomain Matrix MeasureTheory Set Filter Topology CongruenceSubgroup
 open UpperHalfPlane hiding I I_re I_im

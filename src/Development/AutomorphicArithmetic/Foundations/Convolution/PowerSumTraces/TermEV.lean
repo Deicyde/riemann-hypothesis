@@ -1,15 +1,9 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.TvDefs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.TwistFactorAlt
 import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.LocGalEx
 import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.OlocEx
-import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.OccursBasics
 import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.TwistY
-import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.EigBasic
-import Development.AutomorphicArithmetic.Foundations.Convolution.ConvolutionKernels.KernelTransforms.CommPrj
-import Development.AutomorphicArithmetic.Foundations.Convolution.ConvolutionKernels.KernelTransforms.LocEmb
-import Development.AutomorphicArithmetic.Foundations.Convolution.ConvolutionKernels.KernelTransforms.NormIntLe
-import Development.AutomorphicArithmetic.Foundations.Convolution.ConvolutionKernels.KernelTransforms.InnerOps
-import Development.AutomorphicArithmetic.TwistedTraces.ExistsBoundDimSimultaneousLocalEigenspaceOfOpenC
 import Development.AutomorphicArithmetic.TwistedTraces.ExistsPosConstEigenspaceBoundOfSplitCMDatum
 import Development.AutomorphicArithmetic.TwistedTraces.EigenspaceFactorizationOverNonsplitPlacesCMDatum
 import Development.AutomorphicArithmetic.TwistedTraces.TraceEigenspaceOfSelfAdjointInvariantSubspaces
@@ -105,7 +99,7 @@ private theorem prj_self' {V : Submodule ℂ H} {v : H} (hv : v ∈ V) : prj V v
 
 private theorem mem_eigIn' {W : Submodule ℂ H} {A : H →L[ℂ] H} {x : ℝ} {v : H} :
     v ∈ eigIn W A x ↔ v ∈ W ∧ A v = (x : ℂ) • v := by
-  simp [eigIn, Module.End.mem_eigenspace_iff]
+  simp [eigIn]
 
 private theorem trOn_congr {Y : Submodule ℂ H} (hY : IsClosed (Y : Set H)) {A B : H →L[ℂ] H} (h : ∀ v ∈ Y, A v = B v) :
     trOn Y A = trOn Y B := by

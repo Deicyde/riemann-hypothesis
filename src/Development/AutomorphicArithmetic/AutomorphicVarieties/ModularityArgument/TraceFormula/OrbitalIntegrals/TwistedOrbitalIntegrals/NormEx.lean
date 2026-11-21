@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.TraceFormula.OrbitalIntegrals.QuotFubini
+import Mathlib.GroupTheory.DoubleCoset
 
 open MeasureTheory Topology PositivityTheory.Rg.Tf.Loc
 open scoped ENNReal

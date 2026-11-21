@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousFourierGau
+import Mathlib.Analysis.Distribution.SchwartzSpace.Fourier
+import Mathlib.Analysis.Real.Pi.Bounds
+import Mathlib.Tactic.Polynomial.Basic
 open MeasureTheory Complex Matrix GlobalTheory.RealWeil
 open scoped RealInnerProductSpace ContDiff Real ComplexOrder FourierTransform
 

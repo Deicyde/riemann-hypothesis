@@ -1,10 +1,7 @@
-import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.HeckeCharacterChoice.IsOpenIsIdeleResOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.HeckeCharacterChoice.IsAntiHecke
 import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.HeckeCharacterChoice.SplitHom
-import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.IdealValuations.DelRay
-import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.HeckeCharacterChoice.ExtAlg
-import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.InertiaRamification.FieldDefs
-import Mathlib
 
 open NumberField IsDedekindDomain
 open scoped nonZeroDivisors

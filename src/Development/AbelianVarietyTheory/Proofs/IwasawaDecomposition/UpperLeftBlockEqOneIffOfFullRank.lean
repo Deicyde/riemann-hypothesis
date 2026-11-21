@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.GoodAtOfFixRed
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.GoodAtReductionConjugatedUnitaryElement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SurjectiveReductionOntoFiniteLevelGroup
@@ -8,6 +9,7 @@ import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SubOneIffEntries
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CrdLatEqLatFrame
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.PlaceCoverProd
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsRadicalSpanGMul
+import Formalism.SharpRestriction.Divisibility.LiftErrorLocal
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.L2.Theta Formalism.IndefR.Mult Formalism.IndefR.Links Formalism.IndefR.Lev Formalism.IndefR.AutomorphicEvaluation Formalism.L2.DIV Formalism.L2.SG.RowDict Formalism.L2.SG.RowsJoinPinned Formalism.L2.SG.RowLevelMatch Formalism.L2.SG.HidaSetting Formalism.L2.SG.PoincareInHH.PoincareSetting Formalism.L2.SG.ConcreteSettingExists MeasureTheory NumberField IsDedekindDomain GlobalTheory.Mem GlobalTheory.Mem.SRe
 open scoped TensorProduct Matrix
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
@@ -46,7 +48,7 @@ theorem core_unif (I : Formalism.MainNotions.S.AutInst) (w : HeightOneSpectrum (
   have hβsum : ∀ v, β.1 *ᵥ v = ∑ j, v j • col j := by
     intro v
     funext k
-    simp [col, Matrix.mulVec, dotProduct, Finset.sum_apply, Pi.single_apply, mul_comm]
+    simp [col, Matrix.mulVec, dotProduct, Finset.sum_apply, mul_comm]
   have hcol : ∀ j, col j ∈ I.Lf := by
     intro j
     refine (hL _).1 ((hβ _).2 fun k => ?_)

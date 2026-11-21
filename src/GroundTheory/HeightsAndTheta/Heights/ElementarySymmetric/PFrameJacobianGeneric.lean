@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ElementarySymmetric.StFrameJacobianGeneric
 import GroundTheory.HeightsAndTheta.Heights.ElementarySymmetric.StConormalGenerationGeneric
 import GroundTheory.HeightsAndTheta.Heights.Intersections.JacMinorC

@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsBasisOfBot
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RingHomsDvrCardEqFinrank
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TiltLatticeBoundSecondStatement
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TiltLatticeBoundThirdStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PsiEmbeddingDeterminantPropertyStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DvrAlphaDeterminantValuationStatement

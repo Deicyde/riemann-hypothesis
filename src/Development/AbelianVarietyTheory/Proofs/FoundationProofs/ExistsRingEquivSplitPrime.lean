@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.NonemptyAlgHomOfNotIsField
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsContinuousExtension
 

@@ -1,16 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinRel
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TrPApply
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AtVecMulVecRight
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinRelG
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemLagrangianSetArchimedean
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchroedingerPreservesSchwartzRealStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TracePairingNondegenerateStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DarbouxSchroedingerArchimedeanActsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LagrangianInvariantFunctionalUniqueStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LagrangianSetAdditiveSubgroup
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedPlanesGoodModelsDescentStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedPlanesGoodModelsLocalStatement
 
@@ -70,10 +64,10 @@ theorem GlobalTheory.ArchSchA.lagSetA_submodule : ∀ {F E : Type} [Field F] [Nu
       Matrix.vecMulVec (incV F H.x) (incM F H'.ι *ᵥ (a • c)) = a • Matrix.vecMulVec (incV F H.x) (incM F H'.ι *ᵥ c) := by
     intro a c
     rw [Matrix.mulVec_smul]
-    ext i j; simp [Matrix.vecMulVec_apply, mul_smul_comm]
+    ext i j; simp [Matrix.vecMulVec_apply]
   refine ⟨?_, ?_, ?_⟩
   · refine ⟨0, 0, 0, lagL_at_zero, lagL_at_zero, lagL_at_zero, by simp [lagL_arch_zero], ?_⟩
-    simp [lagL_arch_zero, zero_vecMulVec', vecMulVec_zero']
+    simp [lagL_arch_zero, vecMulVec_zero']
     rfl
   · rintro l ⟨y, c, z, hy, hc, hz, hz1, rfl⟩ l' ⟨y', c', z', hy', hc', hz', hz1', rfl⟩
     refine ⟨y + y', c + c', z + z', lagL_at_add hy hy', lagL_at_add hc hc', lagL_at_add hz hz', ?_, ?_⟩

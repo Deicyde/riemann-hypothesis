@@ -1,6 +1,10 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.DatumVec
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.RealIdemMulOfReal
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import Mathlib.RingTheory.TotallySplit
 
 noncomputable section
 

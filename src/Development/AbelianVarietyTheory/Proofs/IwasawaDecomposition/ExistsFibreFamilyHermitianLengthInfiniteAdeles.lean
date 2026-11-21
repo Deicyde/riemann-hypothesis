@@ -1,8 +1,13 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.T2SpaceNumberFieldInfiniteAdeles
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ContinuousDistribHaarCharUnits
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsNiceLocalFieldProductRingInfiniteAdelesComplet
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.HermitianFormFiniteZerosOnLineCmExt
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Compactness.Paracompact
+import Mathlib.Topology.Separation.CompletelyRegular
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open NumberField IsDedekindDomain MeasureTheory Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.GaugeEx
 open scoped TensorProduct NNReal ENNReal
@@ -385,7 +390,7 @@ theorem finite_quadratic_zeros {K : Type} [Field K] {a : K} (ha : a ≠ 0) (c d 
       + Polynomial.C d : Polynomial K) ≠ 0 := by
     intro h0
     have := congrArg (fun p => Polynomial.coeff p 2) h0
-    simp [Polynomial.coeff_X, Polynomial.coeff_C] at this
+    simp at this
     exact ha this
   refine (Polynomial.finite_setOf_isRoot hne).subset fun t ht => ?_
   simpa [Polynomial.IsRoot] using ht

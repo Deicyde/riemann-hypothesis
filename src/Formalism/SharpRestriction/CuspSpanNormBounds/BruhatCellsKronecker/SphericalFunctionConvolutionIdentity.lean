@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.PlaceDegreeData
 import Formalism.FlagUnipotentLattices.HalfDeltaL1Bound
 
@@ -440,9 +442,9 @@ private theorem exists_linearIsometry_intertwining_of_cyclic {G : Type} [Group G
     show ‖io0 (A c)‖ = ‖A c‖
     rw [hio0, hnorm]
   have hA1 : A (Finsupp.single 1 1) = w := by
-    simp [A, rep_one_apply']
+    simp [A]
   have hB1 : B (Finsupp.single 1 1) = v := by
-    simp [B, rep_one_apply']
+    simp [B]
   have hAg : ∀ (g : G) c, σ g (A c) = A (Finsupp.mapDomain (g * ·) c) := by
     intro g c
     have e1 : Finsupp.linearCombination ℂ (fun h => σ h w) (Finsupp.mapDomain (g * ·) c) =

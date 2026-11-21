@@ -1,7 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsArchOne
-import Development.AbelianVarietyTheory.BlockTheory.PoincareCuspForms.SmallUnipotentElements
-import Development.AbelianVarietyTheory.Definitions.UpperBounds.FreeBallIffOfDimXEqZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.BlockTheory.PoincareCuspForms.TwoLevelLogarithm
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.Tactic.ENatToNat
 
 set_option autoImplicit false
 
@@ -213,7 +216,7 @@ theorem exists_ne_zero : ∀ (E : Type) [Field E] [NumberField E] [IsCMField E] 
     · simp [deMul, h0]
     · have h : X.p0 = r := hp.resolve_left h0
       have hr : r ≠ 0 := h ▸ h0
-      simp [deMul, h0, h, hr, i.isLt]
+      simp [deMul, h, hr, i.isLt]
   · exact Finset.prod_ne_zero_iff.mpr fun τ _ => zpow_ne_zero _ (hx τ).1
 
 end GlobalTheory.DefConst

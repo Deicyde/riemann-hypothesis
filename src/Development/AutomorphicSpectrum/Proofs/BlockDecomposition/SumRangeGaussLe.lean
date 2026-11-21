@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.StripEstimates.FaceMapCompSuccAboveCastSucc
+import Mathlib.Analysis.SumIntegralComparisons
 
 open Ad3 Ad3.S
 open UpperHalfPlane hiding I

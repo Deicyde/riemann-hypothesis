@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.NonzeroTypes.TensorProductVectors
+import Mathlib.Algebra.Module.StablyFree.Basic
 
 noncomputable section
 

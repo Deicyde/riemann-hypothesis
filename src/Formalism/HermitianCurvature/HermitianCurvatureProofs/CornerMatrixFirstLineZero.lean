@@ -1,10 +1,7 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CoeffOfValues
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BaseIndexConstantInjective
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.IsotropicNormalFormFullStatement
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.TriangularFactorMiddleRow
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.OneAddProjectionMemIsotropicSet
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.ThirdPolynomialExpansion
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.SignPermutationIdentity
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.PBGLet
 
 open Matrix Finset
 open scoped ComplexConjugate
@@ -47,7 +44,7 @@ theorem herm_bvec_right (v : Fin (2 * r + k + 1) → ℂ) (p : Fin (2 * r + k + 
     by_cases h : q = p
     · subst h
       simp
-    · simp [Pi.single_apply, h]
+    · simp [h]
   unfold herm bvec
   rw [hs, single_dotProduct, one_mul, SignAntidiagonal.mulVec_hpk]
 

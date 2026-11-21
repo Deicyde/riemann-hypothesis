@@ -1,5 +1,6 @@
-import Mathlib
-import Formalism.SatakeDualWeyl.KpqSubgroupCompact
+import BuildAid.Leniency.Open
+import Formalism.SatakeDualWeyl.StatementE
+import Mathlib.Algebra.AffineMonoid.Basic
 open scoped NNReal
 open NumberField IsDedekindDomain
 

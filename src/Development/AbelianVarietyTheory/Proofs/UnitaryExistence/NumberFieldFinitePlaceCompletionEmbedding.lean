@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.IntAllProofFree
+import Mathlib.NumberTheory.RamificationInertia.Valuation
+import Mathlib.RingTheory.AdicCompletion.Noetherian
+import Mathlib.RingTheory.PicardGroup
 
 set_option autoImplicit false
 

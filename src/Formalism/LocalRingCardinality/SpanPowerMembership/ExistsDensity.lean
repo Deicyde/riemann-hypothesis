@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.SpanPowerMembership.LeOfEventuallyDown
 import Formalism.LocalRingCardinality.SpanPowerMembership.HasStrictFDerivAtExpZero
+import Mathlib.Algebra.Order.Star.Real
 
 noncomputable section
 

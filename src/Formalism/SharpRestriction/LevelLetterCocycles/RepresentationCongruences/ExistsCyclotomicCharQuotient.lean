@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.GammaOnLevels
-import Formalism.SharpRestriction.LevelLetterCocycles.FrobeniusPowUniformizerFactorisation
 import Formalism.SharpRestriction.LevelLetterCocycles.BaseChangePreservesUnitaryOf
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.ContentStep
 

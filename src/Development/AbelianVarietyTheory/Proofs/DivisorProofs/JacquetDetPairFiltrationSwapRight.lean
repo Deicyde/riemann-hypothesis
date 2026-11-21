@@ -1,8 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.GeometricLemmaFiltration
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HasFiniteLengthOfIsIrreducible
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.BernsteinUnitaryProductIrreducible
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.NonemptyEquivOfRangeEq
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CellFunctorTwoBlockEquivStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CellFunctorScalarUniformizerStatement
 open GlobalTheory.PRep GlobalTheory.SmGL Matrix
@@ -65,22 +62,22 @@ theorem card_two_true (a b : Type) [Fintype a] [Fintype b] : Fintype.card (Two a
 def sizeFirst (u v : ℕ) : SizeMatrix (Two (Fin u) (Fin (v + 1))) (Two (Fin (u + v)) (Fin 1)) :=
   ⟨fun i j => cond i (cond j 1 v) (cond j 0 u), by
     refine ⟨fun i => ?_, fun j => ?_⟩
-    · cases i <;> simp [Fintype.sum_bool, card_two_false, card_two_true] <;> omega
-    · cases j <;> simp [Fintype.sum_bool, card_two_false, card_two_true] <;> omega⟩
+    · cases i <;> simp <;> omega
+    · cases j <;> simp <;> omega⟩
 
 theorem eq_sizeFirst {u v : ℕ} (b : SizeMatrix (Two (Fin u) (Fin (v + 1))) (Two (Fin (u + v)) (Fin 1)))
     (h : b.1 false true = 0) : b = sizeFirst u v := by
   have r0 := b.2.1 false
   have r1 := b.2.1 true
   have c1 := b.2.2 true
-  simp only [Fintype.sum_bool, card_two_false, card_two_true, Fintype.card_fin] at r0 r1 c1
+  simp only [Fintype.sum_bool, Fintype.card_fin] at r0 r1 c1
   refine Subtype.ext (funext fun i => funext fun j => ?_)
   cases i <;> cases j <;> simp [sizeFirst] <;> omega
 
 theorem entry_eq_one {u v : ℕ} (b : SizeMatrix (Two (Fin u) (Fin (v + 1))) (Two (Fin (u + v)) (Fin 1)))
     (h : b.1 false true ≠ 0) : b.1 false true = 1 := by
   have c1 := b.2.2 true
-  simp only [Fintype.sum_bool, card_two_false, card_two_true, Fintype.card_fin] at c1
+  simp only [Fintype.sum_bool, Fintype.card_fin] at c1
   omega
 
 theorem main : ∀ {k : Type} [Field k] [ValuativeRel k] [TopologicalSpace k] [IsNonarchimedeanLocalField k], GlobalTheory.Published.GeometricLemmaFiltration → ∀ (χ₁ χ₂ : kˣ →* ℂˣ), IsSmoothChar χ₁ → IsSmoothChar χ₂ → ∀ (u v : ℕ) (e : Fin (u + v) ⊕ Fin 1 ≃ Fin (u + (v + 1))) (ϖ : kˣ), ∃ (N : ℕ) (S : Fin (N + 1) → Subrepresentation (jac₂ e (prod₂ (detRep (Fin u) χ₁) (detRep (Fin (v + 1)) χ₂)))), Monotone S ∧ S 0 = ⊥ ∧ S (Fin.last N) = ⊤ ∧ ∃ t₀ : Fin N, Nonempty ((subQuot (S t₀.succ) (S t₀.castSucc)).Equiv (extTensor (prod₂ (detRep (Fin u) χ₁) (detRep (Fin v) (χ₂ * absPow k (-(1 / 2))))) (detRep (Fin 1) (χ₂ * absPow k ((v : ℂ) / 2))))) ∧ ∀ t, t ≠ t₀ → ∀ w ∈ (S t.succ).toSubmodule, jac₂ e (prod₂ (detRep (Fin u) χ₁) (detRep (Fin (v + 1)) χ₂)) (1, GeneralLinearGroup.scalar (Fin 1) ϖ) w - (((χ₁ * absPow k (((u : ℂ) - 1) / 2)) ϖ : ℂˣ) : ℂ) • w ∈ (S t.castSucc).toSubmodule := by

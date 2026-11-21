@@ -1,10 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SmallFam
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.SmallSecTensTriv
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsAlgClosedBaseChange
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqZeroOfForallAlgHom
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsContinuousReadOnAffineOpenRingHoms
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermLineBundlePairNormIndependentOfFrames
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MaxPrincipleNear
 open CategoryTheory AlgebraicGeometry TopologicalSpace Filter Topology
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -69,7 +64,7 @@ theorem exists_coeff_le_of_linearIndependent : ∀ (k : Type) [CommRing k] (X : 
       (ptsIn_mono hl (hy (x s))) (ptsIn_mono hr (hy (x s)))
     rw [hsum, ratVal_fnOf (hy (x s)), ev_eq (hy (x s)), hyx] at e
     have hv : v s = x s (∑ l, cc l • g l) := by
-      simp [v, M, Matrix.mulVec, dotProduct, map_sum, map_zsmul, mul_comm]
+      simp [v, M, Matrix.mulVec, dotProduct, map_sum, mul_comm]
     have hb := hR.2 (σ (x s)) (y (x s))
     rw [e] at hb
     rw [hv]
@@ -91,7 +86,7 @@ theorem exists_coeff_le_of_linearIndependent : ∀ (k : Type) [CommRing k] (X : 
   have habs : |(cc l : ℝ)| = ‖(cc l : ℂ)‖ := by simp
   rw [habs, congrFun hinv l]
   calc ‖Matrix.mulVec M⁻¹ v l‖ = ‖∑ s, M⁻¹ l s * v s‖ := rfl
-    _ ≤ ∑ s, ‖M⁻¹ l s‖ * ‖v s‖ := (norm_sum_le _ _).trans (le_of_eq (by simp [norm_mul]))
+    _ ≤ ∑ s, ‖M⁻¹ l s‖ * ‖v s‖ := (norm_sum_le _ _).trans (le_of_eq (by simp))
     _ ≤ ∑ s, ‖M⁻¹ l s‖ * (R * E) := Finset.sum_le_sum fun s _ =>
         mul_le_mul_of_nonneg_left ((key s).trans (mul_le_mul_of_nonneg_left
           (Finset.single_le_sum (f := w) (fun t _ => (Real.exp_pos _).le) (Finset.mem_univ s)) hR0)) (norm_nonneg _)

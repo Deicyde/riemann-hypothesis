@@ -1,8 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.FieldValuesMemFixedField
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Divisibility.ColumnFamilyPlaceCharacterComap
-import Formalism.LocalToGlobal.Divisibility.TiedLemmas
-import Formalism.LocalToGlobal.IndefiniteReal.LiftGoodPartComplexEqRangeFamily
+import Formalism.LocalToGlobal.IndefiniteReal.LinksW
 
 noncomputable section
 

@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPinnedOfIsUnf
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.UnitaryLatticeStabilizerDetRoot
+import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ExistsIsometryOfSabMap
+import Formalism.LocalToGlobal.ProjectiveLattices.PartitionExtendByZeroAntitone
 open NumberField IsDedekindDomain ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.FD Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.L2.Theta Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.L2.Pj Formalism.IndefR.Lev GlobalTheory.IndefiniteRowSideFullHecke.LatticeBasisLifts GlobalTheory.GeoLevel
 open GlobalTheory.Member (FinCong IotaOK)
 open GlobalTheory.LevelCusp (IsMatch)
@@ -20,7 +21,7 @@ theorem det_mul_cc_det_of_isMatch {E : Type} [Field E] [NumberField E] [IsCMFiel
     ext i j
     have := h.iso (Pi.single i 1) (Pi.single j 1)
     simp only [herm, cc, Matrix.mulVec_single_one, Matrix.col_apply] at this
-    simp only [Pi.single_apply, apply_ite, map_one, map_zero, mul_ite, ite_mul, mul_one, one_mul, mul_zero,
+    simp only [Pi.single_apply, apply_ite, map_one, map_zero, ite_mul, mul_one, one_mul, mul_zero,
       zero_mul, Finset.sum_ite_eq', Finset.mem_univ, if_true] at this
     rw [← this]
     simp only [Matrix.mul_apply, Matrix.transpose_apply, RingHom.mapMatrix_apply, Matrix.map_apply,

@@ -1,10 +1,9 @@
-import Mathlib
-import CompanionTheory.SpectralGeometry.CountingDefinitions.AdelicEulerProducts.IsEulerProd
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.TensorLocallyCompactRing
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.UnitsOpenEmbeddingLocalTensor
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.HermitianMatricesLocallyCompactBorel
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.TensorLocallyCompactRingStatement
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.UnitsOpenEmbeddingLocalTensorStatement
+import Mathlib.Topology.Compactness.Paracompact
+import Mathlib.Topology.Separation.CompletelyRegular
 open HeckeCharacterZeroLocus.SiegelWeilU GlobalTheory.CompanionTheory.SW NumberField IsDedekindDomain MeasureTheory Topology
 open scoped TensorProduct ENNReal NNReal Matrix
 
@@ -112,7 +111,7 @@ theorem continuousOn_extend (A : {g : Matrix (Fin n) (Fin n) K // IsUnit g.det} 
       {g | IsUnit g.det} := by
   rw [continuousOn_iff_continuous_restrict]
   refine hA.congr fun g => ?_
-  simp [Set.restrict, g.2]
+  simp [g.2]
 
 end Mat
 
@@ -155,7 +154,7 @@ theorem conjT_one (σ : E →ₐ[F] E) {n : ℕ} :
   ext a b
   by_cases h : a = b
   · subst h; simp [conjT]
-  · simp [conjT, Matrix.one_apply, h, Ne.symm h]
+  · simp [conjT, h, Ne.symm h]
 
 theorem mem_hermR_iff (σ : E →ₐ[F] E) {n : ℕ} (S : Matrix (Fin n) (Fin n) (R ⊗[F] E)) :
     S ∈ HermR R σ n ↔ conjT R σ S = S := by

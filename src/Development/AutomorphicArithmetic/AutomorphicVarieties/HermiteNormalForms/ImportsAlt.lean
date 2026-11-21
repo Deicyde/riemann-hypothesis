@@ -1,6 +1,7 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.HermiteNormalForms.SmulNeZeroLat
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.HermiteNormalForms.Mink3
 import Development.AutomorphicArithmetic.AutomorphicVarieties.HermiteNormalForms.Stabfin
+import Development.AutomorphicArithmetic.AutomorphicVarieties.TorsionBoundsChains.FaceDSingle
 
 open NumberField Matrix UpperTheory.V UpperTheory.V.KT
 open scoped ComplexOrder

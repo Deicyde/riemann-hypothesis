@@ -1,9 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsRationalDarbouxHermitianTensorAdeles
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsDotProductRepresentationCompactCharacterLo
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFactorPureTensorComponentAtPlace
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsGoodSchrodingerModel
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsAdaptedBasisHermitian
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DarbouxCoordinatesGoodModelStatement
@@ -15,6 +11,7 @@ import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeInvariantVec
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VacuumVectorIffLatticeEigen
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeCoordinateInjectionAdapted
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeCoordinateInjectionDarboux
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StandardAdelicCharacterNontrivialAtPlaces
 
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -490,8 +487,7 @@ theorem exists_model_isEv : GlobalTheory.ThK.KP → ∀ (F E : Type) [Field F] [
         · obtain ⟨a, rfl⟩ := h
           simp [hj.extend_apply]
         · simp [Function.extend_apply' _ _ _ h]
-      simp only [ContinuousLinearMap.comp_apply, hR, hf₀, hz, ContinuousLinearMap.zero_apply,
-        SchwartzMap.zero_apply] at this
+      simp only [ContinuousLinearMap.comp_apply, hR, hf₀, hz, ContinuousLinearMap.zero_apply] at this
       exact hb0 this
     · intro v
       refine ⟨rfl, ?_⟩

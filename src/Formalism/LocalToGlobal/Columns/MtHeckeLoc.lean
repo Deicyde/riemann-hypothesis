@@ -1,8 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.Columns.TiedUpDnLoc
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.HeckeSpCount
 import Formalism.LocalToGlobal.Columns.TiedUpDnA
-import Formalism.LocalToGlobal.Columns.CoefficientsModP.LatticeBasisExistsHolds
 import Formalism.LocalToGlobal.Columns.MtHeckeKv
 
 open NumberField IsDedekindDomain Module Matrix

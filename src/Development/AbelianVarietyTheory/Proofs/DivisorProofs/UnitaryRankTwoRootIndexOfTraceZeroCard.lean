@@ -1,6 +1,7 @@
-import Mathlib
-import Formalism.SatakeDualWeyl.KpqSubgroupCompact
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AntiJMulApply
+import Mathlib.RingTheory.PiTensorProduct
 open Formalism.UG GlobalTheory.SatakeWeyl
 
 namespace GlobalTheory.SatakeWeyl

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsBasisOfBot
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SandwichDatumScalarAction
 
@@ -63,7 +64,7 @@ variable {O : Type} [CommRing O] (C : Type) [Field C] [Algebra O C]
 theorem mem_eig_iff {n : ℕ} {Δ : Type} [CommRing Δ] (ρ₀ : Δ → Matrix (Fin n) (Fin n) O)
     (σ : Δ →+* O) (v : Fin n → C) :
     v ∈ eig C ρ₀ σ ↔ ∀ a, (ρ₀ a).map (algebraMap O C) *ᵥ v = algebraMap O C (σ a) • v := by
-  simp [eig, Submodule.mem_iInf, Module.End.mem_eigenspace_iff, Matrix.toLin'_apply]
+  simp [eig, Submodule.mem_iInf, Matrix.toLin'_apply]
 
 theorem eig_P (hIP : I * P = ρ e) (hact : ∀ x, ρ' (π x) = P * ρ x * I)
     (hπ : Function.Surjective π) (he : π e = 1) (σ : Λ →+* O) {v : Fin h → C}
@@ -250,7 +251,7 @@ variable {p : ℕ} [Fact p.Prime] {O : Type} [CommRing O] [Fact ¬IsUnit (p : O)
 
 theorem mem_Tsub_iff (D : Datum ε h Λ) (σ : Λ →+* O) (t : Fin h → O) :
     t ∈ D.Tsub σ ↔ ∀ a, (actT D a).map (algebraMap O O) *ᵥ t = algebraMap O O (σ a) • t := by
-  simp [Datum.Tsub, actT, Submodule.mem_iInf, Module.End.mem_eigenspace_iff, Matrix.toLin'_apply]
+  simp [Datum.Tsub, actT, Submodule.mem_iInf, Matrix.toLin'_apply]
 
 theorem map_ofPadic_theta {m n : ℕ} (X : Matrix (Fin m) (Fin n) ℤ_[p]) :
     (X.map (ofPadic p O)).map (WittVector.fontaineTheta O p) = X.map (padicToO p O) := rfl

@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.GL4.PCoordQ
+import Formalism.LocalToGlobal.GlobalTheory.GL4.CTEqConjTranspose
 
 noncomputable section
 
@@ -168,8 +171,8 @@ theorem key_between (S : HSpace E) (q : ℕ) (L : Submodule (𝓞 E) S.V) (b : M
       rw [Matrix.mulVec_mulVec, Matrix.nonsing_inv_mul _ (isUnit_iff_ne_zero.2 hM), Matrix.one_mulVec]
     unfold psi
     simp only [LinearMap.coe_comp, Function.comp_apply, LinearMap.coe_restrictScalars,
-      LinearMap.compLeft_apply, Algebra.linearMap_apply, Matrix.mulVecLin_apply,
-      LinearEquiv.coe_coe, LinearEquiv.restrictScalars_apply]
+      Matrix.mulVecLin_apply,
+      LinearEquiv.coe_coe]
     rw [hx']
     exact key _ hG _
 

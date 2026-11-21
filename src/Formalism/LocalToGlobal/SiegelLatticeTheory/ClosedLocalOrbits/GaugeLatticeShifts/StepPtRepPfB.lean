@@ -1,5 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.StepPtRepPfA
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.RealObj
 
 noncomputable section
 
@@ -74,7 +75,7 @@ theorem T_ne : (F.T : ℂ) ≠ 0 := by
   exact_mod_cast F.T_pos.ne'
 
 theorem star_cz : star (-(F.T : ℂ)⁻¹) = -(F.T : ℂ)⁻¹ := by
-  simp [Complex.star_def]
+  simp
 
 def zd : Fin n → ℂ := (-(F.T : ℂ)⁻¹) • F.z
 
@@ -290,7 +291,7 @@ theorem p4 (i : Fin k) (c : Fin (r + 1)) :
   split_ifs with h
   · subst h
     simp
-  · simp [Ne.symm h]
+  · simp
 
 private lemma hJ_yv_left_eq_sum (y : Fin n → ℂ) (b : Fin (r + 1)) :
     hJ ε (F.yv i0 Z Aα t b) y = ∑ a, star (Z a b) * hJ ε (F.Fv a) y +

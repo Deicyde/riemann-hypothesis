@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GramNear
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsUnitHermOfDet
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.SubQRMemIntegers
 open scoped Matrix NNReal ENNReal ComplexConjugate TensorProduct

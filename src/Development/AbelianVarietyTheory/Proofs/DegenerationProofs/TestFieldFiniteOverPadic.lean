@@ -1,8 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Degenerations.BaseFacts
-import Development.AbelianVarietyTheory.Definitions.Degenerations.IsAffineSplitTorusLeft
-import Development.AbelianVarietyTheory.Definitions.Degenerations.CompanionTheory
-import Development.AbelianVarietyTheory.Statements.SemistableTorsion.UTorsSt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Degenerations.IsBasisB
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.NumberTheory.Padics.ProperSpace
+import Mathlib.Topology.Connected.Separation
+import Mathlib.Topology.MetricSpace.Ultra.TotallySeparated
+import Mathlib.Topology.Separation.CompletelyRegular
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry
 open scoped CategoryTheory.Obj
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -274,7 +277,7 @@ theorem _root_.GlobalTheory.ZH.FieldOfTest.exists_finiteDimensional_of_isComplet
     let g : Polynomial ℚ_[p] :=
       ∑ j : Fin (n + 1), Polynomial.C (c j : ℚ_[p]) * Polynomial.X ^ (j : ℕ)
     have hgi : g.coeff i = c i := by
-      simp [g, Polynomial.finset_sum_coeff, Polynomial.coeff_C_mul_X_pow, Fin.val_inj]
+      simp [g, Fin.val_inj]
     have hg0 : g ≠ 0 := by
       intro h0
       rw [h0, Polynomial.coeff_zero] at hgi

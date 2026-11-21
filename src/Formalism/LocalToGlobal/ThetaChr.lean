@@ -1,13 +1,12 @@
-import Formalism.SharpRestriction.ParamsHeightRankConstant
-import Formalism.LocalToGlobal.GaloisLevelStructure.LinkHost
-import Formalism.LocalToGlobal.UnitaryNorms.LeastSplitAuxiliaryPrimeThetaChainSpec
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.UnitaryNorms.CharGal
-import Formalism.LocalToGlobal.HermitianForms.RankEqFirstLevel
 import Formalism.LocalToGlobal.HermitianForms.TiedTwAll
 import Formalism.LocalToGlobal.JointCharacters.SameChr
 import Formalism.LocalToGlobal.HilbertRowConditions.KaTiedIffKapDef
 import Formalism.LocalToGlobal.BesselHermitianTheta.AllTied
 import Formalism.LocalToGlobal.NormalizedHeckeFactors.EMtLevel
+import Formalism.LocalToGlobal.UnitaryNorms.JointCut
 
 noncomputable section
 

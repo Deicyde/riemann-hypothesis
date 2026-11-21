@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.GradedModulesLength.ToDegInjective
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
 
 open IsLocalRing Filter Formalism.MainNotions.V.Pf.V2.Calc UpperTheory.V.Alg UpperTheory.V.Alg.M
 
@@ -38,7 +42,7 @@ private theorem e_eq (i : Fin k) : e i = toDeg (Finsupp.single i 1) := by
   by_cases h : j = i
   · subst h
     simp [e, toDeg]
-  · simp [e, toDeg, Pi.single_apply, h, Finsupp.single_apply, Ne.symm h]
+  · simp [e, toDeg, h]
 
 private theorem gr_add (m m' : Fin k →₀ ℕ) :
     reesGr N (toDeg (m + m')) = reesGr N (toDeg m) * reesGr N (toDeg m') := by

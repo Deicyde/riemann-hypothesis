@@ -1,7 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.DataN
-import Formalism.SharpRestriction.LevelLetterCocycles.DataNLoc
 import Formalism.WeaklyAdmissibleFiltrations.StatementTor
-import Formalism.GaloisCohomology.Statement
+import Mathlib.NumberTheory.NumberField.ClassNumber
+import Mathlib.RingTheory.TotallySplit
 
 noncomputable section
 

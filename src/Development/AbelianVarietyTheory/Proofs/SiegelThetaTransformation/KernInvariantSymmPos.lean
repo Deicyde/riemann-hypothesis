@@ -1,8 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SpanningFamilies.IsSystem
-import Development.AbelianVarietyTheory.Definitions.SpanningFamilies.IsHeatZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.DblZMemHn
 import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.PolyDerivEqSumList
+import Development.AbelianVarietyTheory.Definitions.ThetaValues.ExistsMemRowHighestTotalDegreeEqTwo
+import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.DifferentiableOnOfTendstoLocallyUniformlyOn
 
 open Matrix Complex NumberField MeasureTheory GlobalTheory GlobalTheory.SW GlobalTheory.ThFr ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.FD
 open scoped ComplexConjugate ComplexOrder Real Classical
@@ -264,7 +265,7 @@ theorem sgnM_mul_self : sgnM X * sgnM X = 1 := by
 
 theorem cj_sgnM : cj (-sgnM X) = -sgnM X := by
   ext a b
-  by_cases h : a = b <;> simp [cj, sgnM, diagonal_apply, h]
+  by_cases h : a = b <;> simp [cj, sgnM, h]
 
 variable {X} in
 

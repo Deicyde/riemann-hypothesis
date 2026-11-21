@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.FirstChernLeviEqConstant
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MvPolynomialEqZeroOfEvalEqZeroOnOpen
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CauchyLogSqrtTendstoStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LimitFamilyExistsOfCauchyStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FamilyRegularityCauchyEstimateStatement

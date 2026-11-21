@@ -1,11 +1,6 @@
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.GelfandKazhdanDual
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.CuspDiscreteDecompositionGL
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsSpanFormsNeBot
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.IsNormalisedOfIsDiscrete
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.CuspRapidDecaySiegelGL
-import Development.AbelianVarietyTheory.Definitions.Divisors.LineOppositeParabolicUnitaryLeviSectionEq
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsSatVecUOfIsSphericalU
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ExpoConjOfIsCsd
 open NumberField IsDedekindDomain Formalism.L2.Host GlobalTheory.CuspRep GlobalTheory.ContraPair
 
 namespace GlobalTheory.CuspRep.ConjZalg
@@ -47,7 +42,7 @@ theorem C_Eop (C : Sm E a ≃ₗ⋆[ℂ] Sm E a) (hC : ∀ o φ, act o (C φ) = 
     rw [atEmb_eq]; simp
   simp only [Eop, LinearMap.smul_apply, LinearMap.sub_apply, map_smulₛₗ, map_sub, hl, atEmb_conj, map_one,
     Complex.conj_I, e, map_neg, LinearMap.neg_apply]
-  have h2 : starRingEnd ℂ (1 / 2 : ℂ) = 1 / 2 := by simp [map_div₀, map_ofNat]
+  have h2 : starRingEnd ℂ (1 / 2 : ℂ) = 1 / 2 := by simp [map_ofNat]
   rw [h2]
   congr 1
   simp [sub_eq_add_neg, neg_smul, smul_neg]
@@ -57,7 +52,7 @@ theorem conjBy_Eop (C : Sm E a ≃ₗ⋆[ℂ] Sm E a) (hC : ∀ o φ, act o (C �
   LinearMap.ext fun φ => by
     apply C.injective
     have hcc : ComplexEmbedding.conjugate (ComplexEmbedding.conjugate τ) = τ :=
-      RingHom.ext fun x => by simp [ComplexEmbedding.conjugate_coe_eq]
+      RingHom.ext fun x => by simp
     rw [conjBy_apply, LinearEquiv.apply_symm_apply, C_Eop C hC, hcc]
 
 theorem conjBy_cap (C : Sm E a ≃ₗ⋆[ℂ] Sm E a) (hC : ∀ o φ, act o (C φ) = C (act o φ)) (τ : E →+* ℂ) (u : ℂ) :

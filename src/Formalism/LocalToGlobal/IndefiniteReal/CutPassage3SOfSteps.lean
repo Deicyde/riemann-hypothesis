@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.InBlock
 import Formalism.LocalToGlobal.IndefiniteReal.CxPassA
+import Formalism.LocalToGlobal.IndefiniteReal.CutPassage3S
 
 open Module NumberField IsDedekindDomain
 open scoped Matrix ComplexOrder InnerProductSpace
@@ -31,7 +33,7 @@ theorem epM_eq (h1 : I.ρf 1 = 1) (hm : ∀ g h, I.ρf (g * h) = I.ρf g * I.ρf
     (χ : P →* (𝓞 K)ˣ) (hχ : ∀ h, (((χ h : (𝓞 K)ˣ) : 𝓞 K) : K) = ((ψ h : Kˣ) : K)) :
     (I.epM P ψ).mulVecLin = Formalism.IndefR.TransferLatticeStatement.epP P χ (I.rep h1 hm) := by
   rw [← Matrix.toLin'_apply']
-  simp only [epM, Formalism.IndefR.TransferLatticeStatement.epP, map_smul, map_sum, hχ, map_inv]
+  simp only [epM, Formalism.IndefR.TransferLatticeStatement.epP, map_smul, map_sum, map_inv]
   congr 1
   refine Finset.sum_congr (by congr; exact Subsingleton.elim _ _) (fun h _ => ?_)
   have e := hχ h⁻¹

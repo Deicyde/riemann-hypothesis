@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.RigidityTheorems.RigidOrth
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.RigidityTheorems.MultOneA
 

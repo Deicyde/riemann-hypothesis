@@ -1,9 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsWeilChar
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFrameStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TestPointStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPolAVFibre
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsDescOfPoints
 
 set_option autoImplicit false
 

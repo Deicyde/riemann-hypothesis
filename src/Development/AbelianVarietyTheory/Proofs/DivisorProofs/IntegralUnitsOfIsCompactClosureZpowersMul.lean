@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.LinearDescent
-import Development.AbelianVarietyTheory.Definitions.Divisors.GaloisRepOfPolarizedCuspidal
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MulMat
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MulMatInjective
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsIntegralOfIsCompactClosureZpowers
 open NumberField GlobalTheory.UnitaryBC IsDedekindDomain Matrix Polynomial GlobalTheory.CuspRep Formalism.UG GlobalTheory.BCT
@@ -23,7 +21,7 @@ theorem mulMatHom_apply (a : B.A) : mulMatHom e b a = mulMat e b a := by
 
 theorem mulMatHom_algebraMap (x : K.E) :
     mulMatHom e b (algebraMap K.E B.A x) = algebraMap (w.adicCompletion E) _ (e x) := by
-  simp only [mulMatHom, RingHom.comp_apply, AlgHom.toRingHom_eq_coe, AlgEquiv.toRingEquiv_eq_coe,
+  simp only [mulMatHom, RingHom.comp_apply, AlgHom.toRingHom_eq_coe,
     RingEquiv.toRingHom_eq_coe, AlgHom.coe_toRingHom, AlgHom.commutes, RingEquiv.coe_toRingHom,
     AlgEquiv.coe_ringEquiv, AlgEquiv.commutes]
   rw [Matrix.algebraMap_eq_diagonal, Matrix.algebraMap_eq_diagonal]

@@ -1,4 +1,6 @@
-import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.EaDegreeMapDomain
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.GainOfCapacityLoss
 
 noncomputable section
 

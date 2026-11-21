@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PrismaticDieudonnePerfd
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.InjectiveOfSmulMemRange
-import Development.AbelianVarietyTheory.Definitions.Divisors.PadicActionConstInjective
+import Mathlib.RingTheory.Valuation.Integral
 
 set_option autoImplicit false
 

@@ -1,12 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceRegCutTail
-import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceFormMass
-import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceCutOffLimit
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PSliceCutOffLimit
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PSliceIdeal
-import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PCutOffDominated
-import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PSheetSumMeasurable
-import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.SliceCut
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

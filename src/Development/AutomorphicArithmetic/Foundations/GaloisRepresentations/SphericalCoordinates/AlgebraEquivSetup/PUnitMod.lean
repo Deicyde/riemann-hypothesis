@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.SphericalCoordinates.AlgebraEquivSetup.CodiffUnit
+import Mathlib.LinearAlgebra.Matrix.CharP
 
 noncomputable section
 
@@ -12,7 +13,7 @@ private theorem norm_cast_eq_one {E : Type} [Field E] [NumberField E] (M : ℕ) 
   classical
   let bs := Module.Free.chooseBasis ℤ (𝓞 E)
   rw [Algebra.norm_eq_matrix_det bs, ← eq_intCast (Int.castRingHom (ZMod M)), RingHom.map_det]
-  simp only [map_add, map_one, map_mul, map_natCast, ZMod.natCast_self, zero_mul, add_zero,
+  simp only [map_add, map_one, map_mul, map_natCast, zero_mul, add_zero,
     Matrix.det_one, CharP.cast_eq_zero]
 
 theorem pUnitMod : UnitMod := by

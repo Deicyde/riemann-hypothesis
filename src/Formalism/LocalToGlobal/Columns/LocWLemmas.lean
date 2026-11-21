@@ -1,12 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.AlgebraMapMemMaximalIdealPowIff
 import Formalism.SizeWindowBrackets.ChainSlopeWindows.ExistsNsmulMem
 import Formalism.SizeWindowBrackets.SBrDiv
-import Formalism.LocalRingCardinality.DataDIVDefs
-import Formalism.LocalRingCardinality.DataForms
 import Formalism.LocalRingCardinality.SpanPowerMembership.Places
 import Formalism.HermitianLattices.HermitianLatticesProofs.IndexBasic
 import Formalism.GL3MeanSquares.HookFormulaTorsion.InvariantKernelTraceVanishes
-import Formalism.LocalRingCardinality.DataIdx
 import Formalism.LocalRingCardinality.Lemmas
 import Formalism.SizeWindowBrackets.JointCSlopeExists
 import Formalism.LocalToGlobal.GlobalTheory.IsResidueClassZero

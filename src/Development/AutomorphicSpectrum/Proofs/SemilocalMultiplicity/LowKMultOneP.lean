@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import CompanionTheory.HarishChandraModules.LowKTypeMultiplicity.EigenspaceCyclicDensity.CreationOperators.WtProj
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.ExistsPowEqZero
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.InNOfMem
@@ -13,6 +13,7 @@ import CompanionTheory.HarishChandraModules.LowKTypeMultiplicity.EigenspaceCycli
 import CompanionTheory.HarishChandraModules.LowKTypeMultiplicity.EigenspaceCyclicDensity.CreationOperators.CycDense
 import CompanionTheory.HarishChandraModules.LowKTypeMultiplicity.EigenspaceCyclicDensity.Bridge
 import Development.AutomorphicSpectrum.Proofs.SemilocalMultiplicity.DsInfCharCap
+import CompanionTheory.HarishChandraModules.KFiniteAnalyticVectors.AdmissibleSmoothVectors.FinalAll
 
 namespace GlobalTheory.CompanionTheory.TypeCount.LowK
 

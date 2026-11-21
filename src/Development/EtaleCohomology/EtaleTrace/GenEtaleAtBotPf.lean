@@ -1,4 +1,5 @@
-import Development.EtaleCohomology.EtaleTrace.GenEtalePfData
+import BuildAid.Leniency.Open
+import Development.EtaleCohomology.EtaleTrace.GenEtalePfCut
 
 open CategoryTheory Limits AlgebraicGeometry
 

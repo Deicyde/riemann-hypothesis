@@ -1,10 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KaehlerPotentialLocallyIntegrableBound
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ContinuousAndSmul
-import Development.AbelianVarietyTheory.Definitions.Divisors.AnalyticOnNhdFinChartIff
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsClosedImmersionGenericPoint
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ChartMatrixSmoothInvertible
 open CategoryTheory AlgebraicGeometry Filter Topology Set MeasureTheory ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory GlobalTheory.CxPts GlobalTheory.ShFam GlobalTheory.ChernReg
 open scoped ContDiff
 set_option maxHeartbeats 1000000 in

@@ -1,10 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.StatementsChowDegreeSection
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.StatementsChowDegreeClosedPoint
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.StatementsReductionModP
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.StatementsSectionCycleModP
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.StatementsPointLengthModP
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterDivSupp
+import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.StatementsChowDegreeGeoNum
+import Mathlib.RingTheory.PiTensorProduct
 set_option maxSynthPendingDepth 1
 
 noncomputable section

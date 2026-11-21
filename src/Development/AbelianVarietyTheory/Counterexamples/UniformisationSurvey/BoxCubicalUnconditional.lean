@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.LcgLinCombEqProd
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.BoxSymIsSymmetry
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.PullGenBoxGen
-import Development.AbelianVarietyTheory.Statements.SemistableTorsion.IsIsoPullbackHom
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.DegProd
 
 set_option autoImplicit false
 

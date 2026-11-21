@@ -1,4 +1,5 @@
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LieLatticeEvalAtLocalRing
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LatticeFrameSpecializes
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.SegreChartBundle
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.CoordsAtSmul

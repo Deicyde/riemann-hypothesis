@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.JointCharacters.LocEMulLocE
+import Formalism.LocalToGlobal.UnitaryNorms.CharTied
 
 noncomputable section
 

@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.YangianSpanCharacter.StatementT
 
 namespace Formalism.YangianSpanCharacter.T

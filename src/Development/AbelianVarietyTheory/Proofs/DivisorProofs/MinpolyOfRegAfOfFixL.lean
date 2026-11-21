@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.PointsNonemptyUnitaryRankOne
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicHaarMeasureScaling
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StandardAdelicCharacter
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RegularElementSeparableMinpoly

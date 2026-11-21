@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CharacterGerms.PullbackLogCoordsEvalZero
-import Formalism.LocalToGlobal.CharacterGerms.RowTieCartFB
+import Formalism.LocalToGlobal.CharacterGerms.ValuationEqPairOfLogUnitGerm
 
 noncomputable section
 
@@ -128,7 +130,7 @@ def J (m k : Fin dd) : MvPowerSeries (Fin dd) C := MvPowerSeries.subst (e Y) (Mv
 theorem pderiv_l_zero (m i : Fin dd) :
     MvPowerSeries.constantCoeff (MvPowerSeries.pderiv C i (l Y m)) = if m = i then 1 else 0 := by
   rw [← MvPowerSeries.coeff_zero_eq_constantCoeff_apply, MvPowerSeries.coeff_pderiv]
-  simp only [Finsupp.coe_zero, Pi.zero_apply, zero_add, Nat.cast_zero, Nat.cast_one, one_mul, mul_one]
+  simp only [Finsupp.coe_zero, Pi.zero_apply, zero_add, Nat.cast_zero, mul_one]
   change MvPowerSeries.coeff (Finsupp.mapDomain (fun x : Fin dd => ((0 : Fin 1), x)) (Finsupp.single i 1))
     (Y.lg m) = _
   rw [Finsupp.mapDomain_single, Y.lg_lin m _ (by simp), MvPowerSeries.coeff_X]

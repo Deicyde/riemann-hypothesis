@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SpMapCompSpMap
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AlgebraicChartSmooth
-import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.IsDomainAndIsIntegrallyClosedAtPrimeOfSmoothOfCo
-import Development.AbelianVarietyTheory.Definitions.ShimuraVarieties.IsOpenOfMemIrreducibleComponentsOfFinite
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecondChernDensity
 
 set_option autoImplicit false
 

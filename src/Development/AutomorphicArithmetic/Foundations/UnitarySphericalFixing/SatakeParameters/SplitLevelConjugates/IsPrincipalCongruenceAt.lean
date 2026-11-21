@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.UnitarySphericalFixing.SatakeParameters.GoodAUIso
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SphericalInertiaOfIsotypic
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.StandardFrameNonsplitMaxCompactInLevel
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsComp
+import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.OverRowsAndMono
 
 noncomputable section
 

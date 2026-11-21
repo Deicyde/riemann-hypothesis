@@ -1,6 +1,8 @@
-import Development.WeilBound.ThetaLifts.SmallCones.ThetaUniq
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.SmallCones.ConeLaw
 import Development.WeilBound.ThetaLifts.SmallCones.IdeleTop
+import Development.WeilBound.ThetaLifts.SmallCones.ConeUnf
 
 noncomputable section
 

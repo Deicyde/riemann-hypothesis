@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.InvariantSeriesBidegreeOneOne
+import Mathlib.Tactic.ReduceModChar
 
 namespace Formalism.HermitianLattices.IntegralLatticeDensity.PD
 

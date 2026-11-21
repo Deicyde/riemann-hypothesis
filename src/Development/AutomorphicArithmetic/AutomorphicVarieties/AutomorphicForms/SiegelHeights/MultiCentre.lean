@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.DivisorFrames.MemAdjoinGelfandSupOfCommuteGlGenerators
 import Development.AutomorphicArithmetic.DivisorFrames.GelfandElementMemAdjoinCapelliCoeffs
-import Formalism.RealPlaceAnalysis.ThirdArithmeticHolds
 
 open Formalism.REAL
 open scoped TensorProduct

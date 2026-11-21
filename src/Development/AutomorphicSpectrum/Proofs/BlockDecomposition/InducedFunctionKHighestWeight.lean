@@ -1,7 +1,9 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.OrderedCechToCatCochainsOneApplyValueAtSubset
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.EuOfDifferentiableAt
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.InducedFunctionAtOne
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.EventuallyLineUnit
+import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.RealDescent.RealLeviDescent.IsCoreMod
 
 noncomputable section
 

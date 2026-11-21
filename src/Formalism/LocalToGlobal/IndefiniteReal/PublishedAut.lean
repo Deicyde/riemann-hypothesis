@@ -1,8 +1,7 @@
-import Formalism.LocalToGlobal.IndefiniteReal.ScalarOnPartsFull
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.AdelFinVol
 import Formalism.PeriodIntegrals.AdelClassFin
-import Formalism.SharpRestriction.CuspSpanNormBounds.DiscreteSeriesWeylDimension
-import Formalism.LocalToGlobal.IndefiniteReal.LocalNewformFunction
 import Formalism.LocalToGlobal.IndefiniteReal.AutomorphicEvaluation
 import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.AtTauExUniqueHolds
 

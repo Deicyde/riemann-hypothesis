@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.RatBasisLinearIndependentInt
+import Mathlib.RingTheory.DividedPowers.Padic
 
 set_option autoImplicit false
 

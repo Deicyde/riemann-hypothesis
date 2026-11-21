@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.H1algStatement
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.LemmaBStatement
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GermCut
+import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ExpBijectiveUniformisation
 
 set_option autoImplicit false
 

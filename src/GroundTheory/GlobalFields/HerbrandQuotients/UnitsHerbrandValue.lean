@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.HerbrandQuotients.UnitsHerbrand
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.TotallySplit
 
 namespace GroundTheory.Global
 

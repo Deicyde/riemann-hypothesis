@@ -1,8 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.AutomorphicTheory.SegmentRepresentations.RapidDecayFamilies.MirabolicColumnBlock
-import CompanionTheory.AutomorphicTheory.SegmentRepresentations.JacquetShalikaBounds.lift_levelP_alt₂
 import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.CuspDiscreteDecompositionGL
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.CuspidalMultiplicityOne
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsGenericOfIsLocComp
 
 noncomputable section
 

@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.ResolutionOfSingularities.EmbeddedResolution.AlgebraicPreliminaries.KernelFlatBaseChange
 import Development.ResolutionOfSingularities.Foundations.Schemes.SchemeMorphismProperties
+import Mathlib.AlgebraicGeometry.Morphisms.UniversallyOpen
+import Mathlib.SetTheory.ZFC.PSet
 universe u
 
 open CategoryTheory AlgebraicGeometry TopologicalSpace

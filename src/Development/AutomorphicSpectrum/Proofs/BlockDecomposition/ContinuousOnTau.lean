@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.RegularisedSiegelWeil.HermitianCellMeasures.CellDefs
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.InCell
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.UnitOfRetract
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsNMapAdd
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousUnipotentBlockFamily

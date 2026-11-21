@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.GEquivIntL
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.GaloisLevelStructure.DefsAutLoc
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 noncomputable section
 

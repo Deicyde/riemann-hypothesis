@@ -1,5 +1,5 @@
-import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
-import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.LocalDataRealPlace
 import Formalism.SharpRestriction.CuspSpanNormBounds.RootMeasBig
 

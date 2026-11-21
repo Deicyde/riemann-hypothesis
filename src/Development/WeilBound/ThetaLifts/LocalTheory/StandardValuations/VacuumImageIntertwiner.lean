@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.CompactAveragingSplitting.EigenvectorLifting.SplitDict
-import Development.WeilBound.CoreStatements.CompactAveragingSplitting.EigenvectorLifting.LocalDef
 import Development.WeilBound.CoreStatements.CompactAveragingSplitting.EigenvectorLifting.VaceigenDual
 import Development.WeilBound.CoreStatements.LocallyConstantCoinvariants.LmOfLinBar
 import Development.WeilBound.CoreStatements.LocallyConstantCoinvariants.PfDictAd
@@ -477,7 +478,7 @@ theorem model_alt {B : Base F E} (hB : B.IsGood σ) {r s r' s' : ℕ} (hX : X.Is
   · have e1 := congrArg invT (rel hD g)
     rw [map_mul, map_mul, map_inv, invT_invT, mul_assoc, inv_mul_eq_iff_eq_mul, ← mul_inv_eq_iff_eq_mul] at e1
     rw [← Units.val_mul, ← Units.val_mul, ← e1]
-    simp only [inB, map_mul, map_inv]
+    simp only [map_mul, map_inv]
     congr 1
     group
 

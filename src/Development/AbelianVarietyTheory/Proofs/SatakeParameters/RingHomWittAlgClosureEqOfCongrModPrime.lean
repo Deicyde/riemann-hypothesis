@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.GroupLattices.PendingLemmas.InvarianceIffAdditiveMapsExist
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.GroupLattices.PendingLemmas.ExistsCoprimePowEqOne
 
 namespace GlobalTheory
 

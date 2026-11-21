@@ -1,12 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsMemChart
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalSectionOrderFactorisationStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MeromorphicSectionLocalOrderStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ComplexPointsOffOpenFinite
-import Development.AbelianVarietyTheory.Definitions.Divisors.AnalyticOnNhdFinChartIff
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegrableOnSourceIffOfDensity
 import ReciprocityTheory.AnalyticForms.PotentialTheory.PLCurve
-import ReciprocityTheory.AnalyticForms.PotentialTheory.Stokes
 
 set_option autoImplicit false
 

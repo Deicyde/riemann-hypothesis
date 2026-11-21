@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.SiegelMassRatios.IdCell
+import Mathlib.RingTheory.RootsOfUnity.Lemmas
 
 namespace PI.RootUnitModP.W
 

@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataCD
-import Formalism.SatakeDualWeyl.KpqSubgroupCompact
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
 
 open Formalism.BasicNotions MeasureTheory Filter Topology Matrix
 open scoped ENNReal NNReal

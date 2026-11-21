@@ -1,5 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.LanglandsClassification
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.RealPlaceAnalysis.Complexify
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 noncomputable section
 

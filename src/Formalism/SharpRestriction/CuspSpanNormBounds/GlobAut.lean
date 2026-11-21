@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataSpaces
-import Formalism.SatakeDualWeyl.Statement
 import Formalism.RealPlaceAnalysis.InstMeasurableSpaceUJ
 
 noncomputable section

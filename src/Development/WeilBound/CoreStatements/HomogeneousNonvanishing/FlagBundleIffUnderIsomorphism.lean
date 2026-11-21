@@ -1,9 +1,6 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.AdelicGroupAlgebraActionInjective
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsHTFormOver
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.PushInvertible
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.GlueApplyOfNotInFibre
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsHodgeLine
+import BuildAid.Leniency.Open
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsGenericFlag
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsCompletedStrictHens
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.CompanionTheory.Ar
@@ -14,9 +11,9 @@ theorem flagiso_reg {X X' : Scheme.{0}} {Ω : Type} [Field Ω] (ξ' : Sp Ω ⟶ 
     (h : genPt (ξ' ≫ e.hom) ⤳ e.hom q.1) : regAt ξ' q = regAt (ξ' ≫ e.hom) ⟨e.hom q.1, h⟩ := by
   have key : ∀ y, genMap (ξ' ≫ e.hom) ⟨e.hom q.1, h⟩ y = genMap ξ' q (e.hom.stalkMap q.1 y) := by
     intro y
-    simp only [genMap, CommRingCat.comp_apply]
+    simp only [genMap]
     rw [Scheme.stalkClosedPointTo_comp]
-    simp only [CommRingCat.hom_comp, RingHom.comp_apply]
+    simp only
     exact congrArg (Scheme.stalkClosedPointTo ξ').hom
       (Scheme.Hom.stalkSpecializes_stalkMap_apply e.hom _ _ q.2 y)
   have hs : Function.Surjective (e.hom.stalkMap q.1) :=

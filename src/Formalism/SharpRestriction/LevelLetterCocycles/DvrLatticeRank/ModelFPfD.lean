@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.ModelFPfC
+import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.ModelFPfB
+import Formalism.SharpRestriction.LevelLetterCocycles.ExpansionFormAll
 
 noncomputable section
 

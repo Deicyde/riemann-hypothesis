@@ -1,6 +1,6 @@
-import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.GoodPathWeightOfParts
-import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.ReflectionMemGlevCastSucc
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.ValuationLowestDegreeRename
 
 noncomputable section
 

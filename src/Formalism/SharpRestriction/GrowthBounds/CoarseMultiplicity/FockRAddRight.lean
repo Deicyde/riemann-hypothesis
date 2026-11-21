@@ -1,9 +1,9 @@
-import Formalism.SharpRestriction.GrowthBounds.CoarseMultiplicity.RestBlockForm
-import Formalism.LocalToGlobal.GroupLattices.FockModels.FlatModels.LetterWtAnti
-import Formalism.LocalToGlobal.GroupLattices.FockModels.TransposeWords.FormCoreSK
-import Formalism.LocalToGlobal.GroupLattices.FockModels.TestSideEdge
-import Formalism.LocalToGlobal.GroupLattices.FockModels.DualInclusionLattices
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PolynomialDimension.MultinomialDepth.FockGaussComparisonHolds
+import Formalism.LocalToGlobal.GroupLattices.FockModels.FlatModels.LaTwTranspose
+import Formalism.LocalToGlobal.GroupLattices.FockModels.TransposeWords.TransposeWordsProofs.FockPairingRowAction
+import Formalism.LocalToGlobal.GroupLattices.FockModels.TransposeWords.TransposeWordsProofs.ProdBlockEmbMonomial
 
 noncomputable section
 
@@ -65,7 +65,7 @@ theorem Lin_chain (N : S → Matrix (Fin k) (Fin k) R) (s : S) (b : Fin k) (h : 
       · subst hts
         simp [eq_comm]
       · have hts' : ¬ s = t := fun h => hts h.symm
-        simp [hts, hts']
+        simp [hts]
     have hR : ∑ a : Fin k, N s a b • (Lin N p * Lin N (pderiv (s, a) (X (t, c))))
         = Lin N p * (if t = s then C (N t c b) else 0) := by
       simp only [pderiv_X, Pi.single_apply, Prod.mk.injEq]
@@ -73,7 +73,7 @@ theorem Lin_chain (N : S → Matrix (Fin k) (Fin k) R) (s : S) (b : Fin k) (h : 
       · subst hts
         simp [apply_ite, Finset.sum_ite_eq, smul_eq_C_mul, mul_comm]
       · have hts' : ¬ s = t := fun h => hts h.symm
-        simp [hts, hts']
+        simp [hts]
     simp only [map_mul, Derivation.leibniz, smul_eq_mul, map_add, Lin_X, hL, hp]
     simp only [smul_add, Finset.sum_add_distrib]
     rw [hR]

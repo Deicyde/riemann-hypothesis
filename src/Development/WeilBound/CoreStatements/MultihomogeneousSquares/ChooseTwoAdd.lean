@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.MultihomogeneousSquares.AntisymmetryFibreSquares
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.FlagModelExistsOfGivenStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.BaseMetricExistsOfGivenStatement
@@ -7,7 +8,6 @@ import Development.AutomorphicSpectrum.Proofs.MetricProofs.FlagCoverDegreeOneRea
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.FlagCoverRealisationPullbackStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HodgeCptFlagXdegStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HodgeCptBirationalArithVarStatement
-import Development.AutomorphicSpectrum.Proofs.DivisibilityProofs.CmHostRankBounds
 import Development.WeilBound.CoreStatements.FlagImmersions.SumFundOnRoot
 
 noncomputable section

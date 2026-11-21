@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.FramedDConst
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HoweDualityReal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolEval
 open scoped TensorProduct Matrix Classical GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels
 open NumberField MeasureTheory Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.BasicNotions.TH GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.FockAlg GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.RealLift
@@ -31,10 +30,10 @@ theorem sum_unitAtS [Fintype W] (j k : Σ w : W, Ix (P w) (Q w) × Ix (R w) (S w
           · subst hb; simp
           · have : (⟨w1, a0, b0⟩ : Σ w : W, Ix (P w) (Q w) × Ix (R w) (S w)) ≠ ⟨w1, a0, b1⟩ := by
               intro h; simp at h; exact hb h
-            simp [this, hb, Ne.symm hb]
+            simp [this, Ne.symm hb]
         · have : (⟨w1, a0, b0⟩ : Σ w : W, Ix (P w) (Q w) × Ix (R w) (S w)) ≠ ⟨w1, a1, b1⟩ := by
             intro h; simp at h; exact ha h.1
-          simp [this, ha, Ne.symm ha]
+          simp [this, Ne.symm ha]
       · intro b _ hb; simp [Ne.symm hb]
       · simp
       · intro a _ ha; simp [Ne.symm ha]
@@ -53,9 +52,9 @@ theorem sum_unitAtS_eq [Fintype W] (c : ∀ w : W, Matrix (Ix (P w) (Q w)) (Ix (
   · simp only [Pi.single_eq_same]
     rw [Fintype.sum_prod_type, Finset.sum_eq_single a, Finset.sum_eq_single b]
     · simp
-    · intro b' _ hb; simp [Matrix.single_apply, hb]
+    · intro b' _ hb; simp [hb]
     · simp
-    · intro a' _ ha; simp [Matrix.single_apply, ha]
+    · intro a' _ ha; simp [ha]
     · simp
   · intro w' _ hw; simp [Pi.single_eq_of_ne' hw]
   · simp

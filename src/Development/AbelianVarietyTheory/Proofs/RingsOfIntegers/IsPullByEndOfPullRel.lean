@@ -1,22 +1,14 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.NuChain
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.HolomorphicFamilies.NuChainPf
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.NuExtDone
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FirstCohomology.DimSplitPf
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.VtUniq
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsMonHomOfMul
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.BCTools
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.AmplePt
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.OverExtOfPoints
-import Development.AbelianVarietyTheory.Proofs.RingsOfIntegers.Imports
 import Development.AbelianVarietyTheory.Proofs.RingsOfIntegers.PullbackValuationNormPel
 import Development.AbelianVarietyTheory.Proofs.RingsOfIntegers.ExpansionOfIntegralSectionIsIntegral
 import Development.AbelianVarietyTheory.Proofs.RingsOfIntegers.ExistsIntOfVgeZero
 import Development.AbelianVarietyTheory.Proofs.RingsOfIntegers.SymmetricTranslatesMultiplicationPullbackDescrip
 import Development.AbelianVarietyTheory.Counterexamples.JetSurvey.PremisesMetRankOne
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.HypSEisensteinCurve
-import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.ExistsUniqueLiftSpecOfIsLocalizationAway
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.AbelianSchemeLawsUnconditional
+import Development.AbelianVarietyTheory.Counterexamples.JetSurvey.ExistsUniquePullExpands
 
 set_option autoImplicit false
 
@@ -83,7 +75,7 @@ theorem act_eq_one_of_gen (t : SAB H S) (hK : KTriv t.G t.PP.L) (π : 𝓞 E) (a
     have h := (cls_eq_zero_iff (LB.isLB_linComb hL _ _)).2 ⟨α₀, hα⟩
     rw [cls_linComb hL, Fin.sum_univ_two] at h
     have h' := congrArg (pull x.left) h
-    simp only [Matrix.cons_val_zero, Matrix.cons_val_one, map_add, map_zsmul, map_zero, ← pull_comp, Category.comp_id,
+    simp only [Matrix.cons_val_zero, Matrix.cons_val_one, map_add, map_zero, ← pull_comp, Category.comp_id,
       ← Over.comp_left, neg_smul, natCast_zsmul, map_neg, map_nsmul] at h'
     exact add_neg_eq_zero.1 h'
   have Bab : ∀ {T : Over S} (x y : T ⟶ t.G), a • B x y = b • B (x ≫ t.act.act π) (y ≫ t.act.act π) := fun x y => by

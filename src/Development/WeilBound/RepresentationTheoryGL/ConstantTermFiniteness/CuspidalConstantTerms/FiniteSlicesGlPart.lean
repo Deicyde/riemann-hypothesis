@@ -1,13 +1,8 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.FiniteDimensionalOfSlices
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.InjectiveOfIsBlockEmb
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsBlockEmb
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlockEmbNormalises
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MaxCompactBlockLeviSecond
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CuspFormBlockEmbLeftInvariant
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousOfIsBlockEmb
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KinfFinite
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CuspBlockConstantTermVanishing
 import Development.WeilBound.RepresentationTheoryGL.ConstantTermFiniteness.CuspidalConstantTerms.IsCuspidalCompBlockEmb
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MulVecInv
 import Development.WeilBound.RepresentationTheoryGL.ConstantTermFiniteness.CuspidalConstantTerms.EnvRepAllInjective
@@ -20,7 +15,6 @@ import Development.WeilBound.HeckeVectors.SmoothVectors.ContinuousUnits.LocInCom
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.IsBlockPointStatement
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.UnitaryAdelicUnipotentLiftStatement
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.DerEndMemLeftInv
-import GroundTheory.PAdicHodge.NormalizedTrace
 
 open NumberField Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Matrix
 open scoped TensorProduct

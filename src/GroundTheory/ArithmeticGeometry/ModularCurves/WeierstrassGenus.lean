@@ -1,7 +1,7 @@
-import Mathlib
-import GroundTheory.ArithmeticGeometry.ModularCurves.WeierstrassCechCurve
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ArithmeticGeometry.SchemeCohomology.ProjectiveCohomology.PSpaceFinite
-import GroundTheory.ArithmeticGeometry.SchemeCohomology.ProjTwistLeray
+import GroundTheory.ArithmeticGeometry.ModularCurves.WeierstrassProj
 
 open CategoryTheory AlgebraicGeometry Opposite TopologicalSpace GroundTheory.Arith.SchemeCoh
 

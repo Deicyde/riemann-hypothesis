@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataDIV
 import Formalism.LocalRingCardinality.SpanPowerMembership.ExampleClassGroupCardPos
 import Formalism.LocalRingCardinality.SpanPowerMembership.PlOver

@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.PublishedFoundations.FiniteIntertwining
-import Formalism.BranchSandwichDivisors.DivFromPassageAndNorm
-import Formalism.LocalToGlobal.Columns.PolyFn
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.RowActCoefPolyAndUnitaryDense
 open MvPolynomial Formalism.BasicNotions Formalism.GradedWeylDivisibility GlobalTheory.Branching
 open Formalism.MainNotions.PrimeDegreeVariant (embGL Interlace)

@@ -1,5 +1,8 @@
-import ReciprocityTheory.AnalyticForms.PotentialTheory.IsPotentialPullbackStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.PartsSt
+import Mathlib.Order.CompletePartialOrder
+import ReciprocityTheory.AnalyticForms.PotentialTheory.IsPotentialOfFun
 
 namespace ReciprocityTheory.AnForm.M.PLAux
 

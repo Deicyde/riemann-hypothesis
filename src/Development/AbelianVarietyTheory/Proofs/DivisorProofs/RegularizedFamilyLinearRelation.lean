@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAut
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RegFamOfContinuousAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EventuallyEqNhdsNEOfMeromorphicOfEqOnHalfPlane
 open scoped TensorProduct NNReal Matrix

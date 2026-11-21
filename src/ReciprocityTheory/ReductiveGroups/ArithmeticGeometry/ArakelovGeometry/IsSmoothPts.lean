@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.IsIntersectionFamily
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.ProjDefs
-import ReciprocityTheory.GeometryOfNumbers.AsymptoticSequences.ClosingHS
+import ReciprocityTheory.GeometryOfNumbers.AsymptoticSequences.DefectSt
 
 noncomputable section
 

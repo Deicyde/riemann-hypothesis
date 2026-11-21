@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.L2Cusps.AbsCompactAlt
-import GroundTheory.AutomorphicForms.TensorProductTheorem.KProjApplyEqSelfIff
 
 open GroundTheory.Automorphic
 

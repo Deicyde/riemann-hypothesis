@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.KummerTheory.Degree
-import GroundTheory.GlobalFields.KummerTheory.Splitting
 import GroundTheory.GlobalFields.KummerTheory.SplittingInfinite
 
 noncomputable section

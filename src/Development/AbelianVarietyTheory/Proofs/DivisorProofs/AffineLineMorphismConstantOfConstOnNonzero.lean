@@ -1,5 +1,14 @@
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
-import Development.AbelianVarietyTheory.Definitions.Degenerations.OfDerivationFnOn
+import BuildAid.Leniency.Open
+import Mathlib.AlgebraicGeometry.AlgClosed.Basic
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsCompletedStrictHens
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry
 open scoped CategoryTheory.Obj CategoryTheory.MonObj Pointwise
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -34,7 +43,7 @@ theorem eq_of_const_nonzero : ∀ (k : Type) [Field k] [IsAlgClosed k] (Y : Sche
       (PrimeSpectrum.basicOpen _).isOpen.isLocallyClosed ?_ ?_ ?_
     · refine IsOpen.dense (X := PrimeSpectrum (Polynomial k)) (PrimeSpectrum.basicOpen _).isOpen
         ⟨⟨⊥, Ideal.isPrime_bot⟩, ?_⟩
-      simp [PrimeSpectrum.mem_basicOpen, Polynomial.X_ne_zero]
+      simp [Polynomial.X_ne_zero]
     · intro x hx hcl
       have hp := pointOfClosedPoint_comp (f ≫ q) x hcl
       have hpx := pointOfClosedPoint_apply (f ≫ q) x hcl (IsLocalRing.closedPoint k)

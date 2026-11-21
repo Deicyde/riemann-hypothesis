@@ -1,7 +1,4 @@
-import Mathlib
-import Formalism.PeriodIntegrals.PairValDefs
-import Formalism.PeriodIntegrals.NormRepChange
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.NormRepresentationChange.Development
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.NormRepresentationChange.NlamFrameMem
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.NormRepresentationChange.CoefXOfMemXS
 

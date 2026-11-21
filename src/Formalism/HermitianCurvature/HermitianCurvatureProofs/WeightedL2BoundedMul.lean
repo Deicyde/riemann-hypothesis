@@ -1,6 +1,7 @@
-import Formalism.HermitianCurvature.StatementLE
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.MeasIterDeriv
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ThetaLimit
+import Mathlib.LinearAlgebra.Lagrange
 
 namespace Formalism.FourierDecayAlt.P.LEx2
 open Formalism.FourierDecayAlt.LE

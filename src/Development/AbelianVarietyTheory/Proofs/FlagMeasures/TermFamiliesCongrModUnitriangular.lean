@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.IsTermOver
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Std.Tactic.BVDecide.Normalize.Prop
 open Formalism.MainNotions.S
 
 namespace GlobalTheory.SlocCong
@@ -141,7 +144,7 @@ theorem coords_of_flag {F : Type} [Field F] [ValuativeRel F] [TopologicalSpace F
         map_add' := fun x y => H.h_add_left x y w
         map_smul' := fun a x => by simp [H.h_smul_left] }
     rw [show H.h (∑ a, c a • Fr.f a) w = φ (∑ a, c a • Fr.f a) from rfl, map_sum]
-    simp [φ, H.h_smul_left]
+    simp [φ]
   have hex : ∀ b, ∃ l : Fin (r + 1) →₀ E, (∀ c, ¬ c < b → l c = 0) ∧
       g (y b) = B b b • Fr.f b + ∑ c, l c • Fr.f c := by
     intro b

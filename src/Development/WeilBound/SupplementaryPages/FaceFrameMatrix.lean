@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.LeafObjects.OnObjOf3XEq
 import Formalism.LocalToGlobal.IndefiniteReal.LeafObjects.LatticeFramesAtBaseLevel
 

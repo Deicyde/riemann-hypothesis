@@ -1,4 +1,6 @@
-import Formalism.LocalToGlobal.CharacterGerms.RowTiePCEqSum2
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.CharacterGerms.RowTiePCEqOf
 
 noncomputable section
 

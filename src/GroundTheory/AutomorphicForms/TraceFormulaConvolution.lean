@@ -1,7 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.QuotientKernel
 import GroundTheory.AutomorphicForms.KernelTraceComp
 import GroundTheory.AutomorphicForms.LocallyConstantCompact
+import Mathlib.Dynamics.Ergodic.Action.Regular
+import Mathlib.Topology.LocallyConstant.Algebra
 
 open MeasureTheory Topology Filter Set Function
 open scoped ENNReal Pointwise

@@ -1,8 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LocalTheory.StandardValuations.SplitProd
 import Development.WeilBound.ThetaLifts.LocalTheory.IsArchimedeanLocalEquivariantMap
 import Development.WeilBound.ThetaLifts.CartanFactorisation.TensOfEval
 import Development.WeilBound.ThetaLifts.LocalTheory.StandardValuations.ValIffNorm
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsStdCharNegOneOfStandardTraceAdelicAddChar
+import Development.WeilBound.ThetaLifts.LocalTheory.StandardValuations.VacuumImageIntertwiner
 
 set_option linter.unusedSectionVars false
 
@@ -239,7 +242,7 @@ theorem ext_single {k : Type} [Field k] (jr : Fin n₁ → Fin n) (jc : Fin d₁
   simp only [emb, Matrix.mul_apply, single_apply, ite_and, of_apply, transpose_apply, mul_ite, ite_mul, mul_one, one_mul, mul_zero, zero_mul,
     Finset.sum_ite_eq, Finset.mem_univ, if_true]
   rw [Finset.sum_eq_single j (fun x _ hx => by simp [hx.symm]) (by simp)]
-  simp only [eq_comm, if_true, Finset.sum_ite_eq, Finset.sum_ite_eq', Finset.mem_univ]
+  simp only [eq_comm, if_true]
   split_ifs <;> rfl
 
 theorem ev_model [SecondCountableTopology (Fv F v)] [MeasurableSpace (Fv F v)] [BorelSpace (Fv F v)] {m : Measure (Fv F v)}

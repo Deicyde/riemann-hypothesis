@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.ShiftedBound
+import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.MdTendstoSeq
 
 noncomputable section
 

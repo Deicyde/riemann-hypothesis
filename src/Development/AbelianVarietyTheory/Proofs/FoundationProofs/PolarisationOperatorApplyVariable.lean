@@ -1,5 +1,14 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.TorsionBlocks.BottomMinor
+import Mathlib.Algebra.AffineMonoid.UniqueSums
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open MvPolynomial Matrix Finset
 
@@ -438,7 +447,7 @@ theorem mfact_add_single (m : σ →₀ ℕ) (v : σ) :
   · simp [Nat.factorial_succ]
   · refine Finset.prod_congr rfl fun i hi => ?_
     have := Finset.ne_of_mem_erase hi
-    simp [Finsupp.single_apply, Ne.symm this]
+    simp [Ne.symm this]
 
 theorem coeff_pderiv' (v : σ) (m : σ →₀ ℕ) (Q : MvPolynomial σ ℂ) :
     (pderiv v Q).coeff m = Q.coeff (m + Finsupp.single v 1) * (m v + 1) := by

@@ -1,14 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.SymTupOne
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsGeneratorThetaPointNormalisedThetaConstant
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsGeneratorThetaConstantsOverAlgClosedExtens
-import Development.AbelianVarietyTheory.Statements.TorsionEndomorphisms.ExistsGeneratorOfIsField
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.TorsionPointsFieldExtension
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.SecCoordBcScaleUnique
 import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.AllUniformizationLawsHold
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.ExistsGrpObjPolarised
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ThetaCoordinatesExistUniqueSeparatePoints
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HomExtOfSecCoord
+import Development.AbelianVarietyTheory.Definitions.ModuliSpaces.ExistsTwoPoints
+import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsIsoOfProjectiveCoordinateRepresentation
 
 noncomputable section
 
@@ -104,7 +102,7 @@ theorem symTup_eq_zero {K : Type} [Field K] {N : ℕ} (c : Fin N → K) (h : sym
     exact ⟨a, by simp, by simp⟩), Finset.sum_eq_single 0 (fun k hk h0 => by
       rw [he k (Nat.pos_of_ne_zero h0) (by simpa [Nat.lt_succ_iff] using hk)]; simp) (by simp)] at h1
   simp only [Multiset.esymm, Multiset.powersetCard_zero_left, Multiset.map_singleton, Multiset.prod_zero,
-    Multiset.sum_singleton, map_one, one_mul, Nat.sub_zero, Polynomial.eval_pow, Polynomial.eval_X] at h1
+    Multiset.sum_singleton, map_one, Nat.sub_zero] at h1
   simpa [hN.ne'] using h1.symm
 
 theorem prim_one_two : Prim (Int.castRingHom ℚ) ![(1 : ℚ), 2] := by

@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.BaseMatrixGlApply
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.BesselCompatibility
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.LatticeFrames.FrameTop
 
 set_option genSizeOfSpec false
 set_option genInjectivity false

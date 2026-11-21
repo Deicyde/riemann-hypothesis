@@ -1,11 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.HermitianMatrixRealizesCuspCoords
-import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.MaxCuspKilledCoefficientEqZero
-import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.MaxCuspMemCuspFormsOfKilledCoefZero
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ArithmeticGroupCuspCentreLattice
 import Development.AbelianVarietyTheory.Counterexamples.LevelGroupExamples.TransvMemZGam
 import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.HyperbolicFlagDataBasePoint
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.M3bExpHolds
+import Formalism.LocalToGlobal.ProjectiveLattices.ArchimedeanQuadraticData.MaximalCuspKernels.MaxCuspsSt
+import Formalism.LocalToGlobal.ProjectiveLattices.SpanRatSmulMem
 
 open NumberField ReciprocityTheory.ChartRestriction.G.FD Formalism.L2.Pj.FJ Formalism.L2.Pj.QAt
 open scoped ComplexConjugate
@@ -51,7 +51,7 @@ theorem exists_expo_scalar (X : Data E r) (cu : CuspFD X ρ) :
   have h1 : IsHermE (1 : Matrix (Fin ρ) (Fin ρ) E) := fun a b => by
     by_cases h : a = b
     · subst h; simp [cc]
-    · simp [cc, Matrix.one_apply, h, Ne.symm h]
+    · simp [cc, h, Ne.symm h]
   have hq' : ∀ k, ∃ q : ℚ, phZ X cu 1 k = q := fun k => by
     have hr := GlobalTheory.FJCuspCheck.pair_real X 1 (zBas X cu k) h1
       (zBas_skew X cu (basis_exists X cu) k)

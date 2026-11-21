@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ArithmeticGeometry.ModularCurves.WeierstrassProj
+import GroundTheory.ArithmeticGeometry.ModularCurves.WeierstrassCharts
 
 open CategoryTheory AlgebraicGeometry
 
@@ -120,8 +122,7 @@ theorem dehomZ_surjective : Function.Surjective (dehomZ W) := by
     | monomial n r _ =>
       refine ⟨C r * X 0 ^ (n + 1), ?_⟩
       simp only [dehomZ, map_mul, map_pow, coe_eval₂Hom, eval₂_C, eval₂_X]
-      simp only [Matrix.cons_val_zero, xC, ← Polynomial.C_mul_X_pow_eq_monomial, Polynomial.C_mul,
-        Polynomial.C_pow, map_mul, map_pow]
+      simp only [Matrix.cons_val_zero, xC]
       rfl
   | add p q hp hq =>
     obtain ⟨P, hP⟩ := hp
@@ -258,7 +259,7 @@ theorem val_scale_eq_zero_y :
   simp only [infPolynomial, Polynomial.eval₂_sub, Polynomial.eval₂_add,
     Polynomial.eval₂_pow, Polynomial.eval₂_mul, Polynomial.eval₂_X, Polynomial.eval₂_C,
     RingHom.comp_apply, Polynomial.coe_eval₂RingHom, HomogeneousLocalization.algebraMap_apply,
-    HomogeneousLocalization.val_add, HomogeneousLocalization.val_mul, HomogeneousLocalization.val_pow,
+    HomogeneousLocalization.val_mul, HomogeneousLocalization.val_pow,
     HomogeneousLocalization.val_sub, val_frac, val_scalarAway]
   simp only [scale, WeierstrassCurve.Projective.polynomial, map_sub, map_add, map_mul, map_pow,
     coe_eval₂Hom, eval₂_X, eval₂_C, RingHom.comp_apply, π_C] at h0

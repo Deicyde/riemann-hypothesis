@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.MeasFr
+import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.LevelA
+import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.MeasUpq
 
 noncomputable section
 
@@ -105,7 +109,7 @@ theorem isMeasLevW_exists
       UpqT.mat c * F.A ρ = F.A ρ * infMat D.sp.cm.sig V.gram (thetaC D ρ) h} =
       (Set.univ.pi fun v => MF.phiR F v '' B' (ρv v)) ×ˢ kf (MF.toFrames F) K := by
     ext x
-    simp only [Set.mem_preimage, Set.mem_setOf_eq, Set.mem_prod, Set.mem_univ_pi]
+    simp only [Set.mem_preimage, Set.mem_setOf_eq]
     rw [finE_brg, and_comm]
     refine and_congr ?_ Iff.rfl
     constructor

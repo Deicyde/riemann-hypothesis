@@ -1,12 +1,7 @@
-import PositivityTheory.AutomorphicForms.PublishedInputs.HilbertEisenstein.SExpDefs
-import GroundTheory.AutomorphicForms.GL2.GodementSectionFactor
-import GroundTheory.GlobalFields.TateThesis.RootNumberLocalPlace
-import GroundTheory.LocalFields.LocalZetaGauss
-import GroundTheory.LocalFields.LocalZeta
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.HilbertEisenstein.ArchInt
 import PositivityTheory.AutomorphicForms.PublishedInputs.HilbertEisenstein.UnitaryTransvectionZeroSecondMemClosure
-import GroundTheory.GlobalFields.TateThesis.RootNumberLocalFinite
-import GroundTheory.GlobalFields.TateThesis.FiniteOrderParams
 import GroundTheory.GlobalFields.WeilGroups.QuasiCharacterDecomposition
 
 noncomputable section

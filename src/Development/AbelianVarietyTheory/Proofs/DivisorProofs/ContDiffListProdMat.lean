@@ -1,19 +1,15 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemThInt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThLiftMemLiftSpace
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCuspW
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsNotIsConstTerm
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeApproximationUpwardIdele
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchEmbeddingConjByAdelic
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RealLineContinuous
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContDiffOfPartialDerivativeClosure
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ListProdUpdateConjugate
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MeasureFundDomLtTopSmul
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryHaarRightInvariant
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicUnitaryLocallyCompactHausdorff
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsAdmissibleFormAdelicThetaSum
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.ExistsHeightLeTwoMulQuotHeight
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MeasureFundDomLtTop
+import Mathlib.Analysis.Calculus.Deriv.Star
 open scoped TensorProduct NNReal Matrix ContDiff
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.ThK.LiftConst GlobalTheory.ThK.SplitInv GlobalTheory.ThK.SquareIntegrability
@@ -170,7 +166,7 @@ theorem smooth_of_der {F E : Type} [Field F] [NumberField F] [Field E] [NumberFi
         by_cases hi : i = j
         · subst hi
           simp [GlobalTheory.SiegelSet.isRealLine_add F E σ hcm _ J' (γ i) (hγ i)]
-        · simp [hi, Function.update_of_ne hi]
+        · simp [hi]
       simp only [P, γ', suf, e1, GlobalTheory.list_prod_ofFn_update_mul_right, mul_assoc]
     have hd := hDd (Zt t) γ' ((continuous_const.mul (GlobalTheory.RealLineCont.continuous_of_isRealLine F E σ hcm _ J' _ (hγ j))).mul
       continuous_const) (fun s u => by

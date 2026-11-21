@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.StrongApproximation.LocGen
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.StrongApproximation.EichAlongSub
 import GroundTheory.HeightsAndTheta.Heights.StrongApproximation.PHypPairExists
 import Development.WeilBound.CoreStatements.EqualVolumeCompactOpens.IsIsotropicHermitianSetting
 

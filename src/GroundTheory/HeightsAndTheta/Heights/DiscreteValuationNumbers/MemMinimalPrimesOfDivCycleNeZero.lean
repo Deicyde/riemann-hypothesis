@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.IsMultiHomogIdealSpanSingleton
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.LeOfAddOneLeSucc
+import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.Cartier
+import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.StatementsCN
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.NumbersDVR

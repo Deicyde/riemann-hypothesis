@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.EmbedsGeneric
-import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.GoodOrigin
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.SmallPointsCoordRatioBoundStatement
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory.CompanionTheory.Ar
@@ -29,7 +27,7 @@ theorem aeval_ringHom {σ A B : Type*} [CommRing A] [CommRing B] {algA : Algebra
     (φ : A →+* B) (a : σ → A) (P : MvPolynomial σ ℤ) :
     MvPolynomial.aeval (fun i => φ (a i)) P = φ (MvPolynomial.aeval a P) := by
   induction P using MvPolynomial.induction_on with
-  | C c => simp only [MvPolynomial.aeval_C, eq_intCast, map_intCast]
+  | C c => simp only [eq_intCast, map_intCast]
   | add p q hp hq => simp only [map_add, hp, hq]
   | mul_X p i hp => simp only [map_mul, hp, MvPolynomial.aeval_X]
 

@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HInv
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.RingKrullDimLtTopOfEssFiniteType
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EtaleCohomologyTwistedFilteredColimitContinuity
 open CategoryTheory Limits AlgebraicGeometry Opposite GlobalTheory.EtC
 open scoped TensorProduct
@@ -18,7 +18,7 @@ def polyDiag : J ⥤ CommRingCat.{0} where
     simp
   map_comp f g := by
     refine CommRingCat.hom_ext (RingHom.ext fun p => ?_)
-    simp [Polynomial.map_map]
+    simp
 
 def polyCocone (c : Cocone D) : Cocone (polyDiag D) where
   pt := CommRingCat.of (Polynomial c.pt)

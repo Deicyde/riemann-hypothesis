@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.ShimuraVarieties.IsOpenOfMemIrreducibleComponentsOfFinite
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormIdeal
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FamIdeal
+import Mathlib.Tactic.ENatToNat
 open AlgebraicGeometry CategoryTheory Limits
 
 namespace GlobalTheory.NormSheafDescent

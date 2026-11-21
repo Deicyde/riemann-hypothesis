@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.AdKMeasurePreserving
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.PSpecB
 
 noncomputable section
 

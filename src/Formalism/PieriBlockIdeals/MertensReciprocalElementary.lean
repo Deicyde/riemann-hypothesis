@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PieriBlockIdeals.Statement
-import Formalism.PieriBlockIdeals.ContentDistanceBounds
 
 noncomputable section
 

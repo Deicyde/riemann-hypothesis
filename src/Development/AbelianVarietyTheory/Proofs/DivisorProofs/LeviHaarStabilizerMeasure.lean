@@ -1,14 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsHaarOfIsCompact
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsClosedAdelicLatticeClosure
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RelativelyCompactStabilizer
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicUnitaryLocallyCompactHausdorff
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAHaarUnfoldingMeasure
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HaarMeasureIwasawaQuotient
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviSectionMultiplicative
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentRadicalClosedBis
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviNormalizesUnipotentRadical
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviStabilizerUnipotentIntegralStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviUnipotentHaarFactorStatement
@@ -118,7 +113,7 @@ theorem iwasawa_formula_adapted : ∀ (F E : Type) [Field F] [NumberField F] [Fi
     rw [e]
     simp only [hP, hR, GlobalTheory.IwEmb.frame, Matrix.mul_apply, Fintype.sum_sum_type, Fin.sum_univ_two, Matrix.fromCols_apply_inl,
       Matrix.fromCols_apply_inr, Matrix.of_apply, Sum.elim_inl, Sum.elim_inr, GlobalTheory.LeviElem.cols2, Matrix.cons_val_zero,
-      Matrix.cons_val_one, Matrix.head_cons, Pi.add_apply, Pi.smul_apply, smul_eq_mul, Matrix.mulVec, dotProduct]
+      Matrix.cons_val_one, Pi.add_apply, Pi.smul_apply, smul_eq_mul, Matrix.mulVec, dotProduct]
     ring
   have hRP : R * P = 1 := (Matrix.mul_eq_one_comm_of_equiv finSumFinEquiv.symm).1 hPR
   set f : E →+* AE F E := inclR (F := F) (E := E) (AF F) with hf

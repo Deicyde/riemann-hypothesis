@@ -1,5 +1,6 @@
-import Formalism.RankGapBounds.UniformMeanBound
-import Formalism.RankGapBounds.RankGapProofs.WeightedMeanData
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.RankGapBounds.MeanBoundSecondForm
 
 open Real
 

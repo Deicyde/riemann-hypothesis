@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.SumMulEqZeroOfSumToReal
-import Development.AbelianVarietyTheory.Definitions.ModuliSpaces.IsSeparatedOfIsQProjOver
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsIsoQuotToImOmegaLieOfSplit
-import Development.AbelianVarietyTheory.Definitions.ThetaMetrics.IsAmpleLBOfRelAmpleOfIsAffine
 
 noncomputable section
 
@@ -69,7 +69,7 @@ theorem isRelParam_X (o : Type) [CommRing o] [IsLocalRing o] :
       smul_mem' := fun f g h => ⟨h0 f g ▸ Ideal.mul_mem_left _ _ h.1,
         h1 f g ▸ add_mem (Ideal.mul_mem_left _ _ h.2) (Ideal.mul_mem_left _ _ h.1)⟩ }
   have hJ : maximalIdeal (PowerSeries o) ^ 2 ⊔ ((maximalIdeal (PowerSeries o)).comap PowerSeries.C).map PowerSeries.C ≤ J := by
-    refine sup_le ?_ (Ideal.map_le_iff_le_comap.2 fun a ha => ⟨by simpa [hm] using ha, by simp [PowerSeries.coeff_C]⟩)
+    refine sup_le ?_ (Ideal.map_le_iff_le_comap.2 fun a ha => ⟨by simpa [hm] using ha, by simp⟩)
     rw [sq]
     refine Ideal.mul_le.2 fun f hf g hg => ?_
     rw [hm] at hf hg

@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.CarrierTIn
 import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.CarrierBase
 import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.CarrierSizes
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.LevelsOfBuiltSetting
 
 noncomputable section
 
@@ -125,7 +125,7 @@ theorem onCut_setting (S : Formalism.FourierDecayAlt.C.HidaSetting E Wp Wq) (hw 
       (S.G.place (S.pl v)).v S.l - 1 / 2 - de S.l * (S.G.place (S.pl v)).Del := by
     intro de
     simp only [Formalism.FourierDecayAlt.Sz.Cfg.u, if_neg hl1, if_neg hlk, Nat.add_sub_cancel]
-  simp only [Formalism.FourierDecayAlt.I.OnCut, Formalism.FourierDecayAlt.D.parOf, hu]
+  simp only [Formalism.FourierDecayAlt.I.OnCut, hu]
   have hN : (0 : ℝ) ≤ (S.Ntop : ℝ) := Nat.cast_nonneg _
   have hD : 5 ≤ (S.G.place (S.pl v)).Del := by
     nlinarith [pow_nonneg hN 3]

@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLocSubSB
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HoweDualityUnitary
 
 open GlobalTheory.WeilM GlobalTheory.HoweAdelic
 

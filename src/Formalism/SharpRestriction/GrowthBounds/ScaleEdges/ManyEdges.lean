@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.TableLineDegreeFive
 import Formalism.SharpRestriction.GrowthBounds.SourceCleaning
 import Formalism.SharpRestriction.GrowthBounds.Lemma5aAt

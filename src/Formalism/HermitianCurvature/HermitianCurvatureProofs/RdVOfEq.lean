@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.RuleOfEq
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.SigmaFiniteOfHaar
 

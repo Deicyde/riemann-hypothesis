@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.SplitEigenfunctions.CharacterNorms.IdeleNormEmbeddingNegOneReal
 
 noncomputable section
@@ -54,7 +56,7 @@ theorem infOne_em {k : GL (Fin 2) (A ℚ)} (h : ∀ i j, (k.val i j).1 = ((1 : M
   have e2 : (AdeleBaseChange.adeleMap ℚ E (k.val i j)).1 = (AdeleBaseChange.adeleMap ℚ E ((1 : Matrix (Fin 2) (Fin 2) (A ℚ)) i j)).1 := by
     rw [AdeleBaseChange.adeleMap_apply, AdeleBaseChange.adeleMap_apply, h]
   rw [e, e2]
-  fin_cases i <;> fin_cases j <;> simp [Matrix.one_apply]
+  fin_cases i <;> fin_cases j <;> simp
 
 variable [IsTotallyComplex E]
 

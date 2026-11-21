@@ -1,10 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.FiniteDimensionalWdSpace
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsDeRhamFilGradedSymbolToTateTwist
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.NonemptyThetaDeRhamFilZeroConcretePeriod
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EqZeroOfTateTwistInvariantFiniteExtension
 import Formalism.SharpRestriction.LevelLetterCocycles.NormOfVOne
-import Development.AbelianVarietyTheory.CrystallinePeriods.RingBasics
+import Formalism.LocalRingCardinality.AdicCompletionLocal.LocTied
 open Formalism Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.WeaklyAdmissibleFiltrations Formalism.MainNotions.N
 open scoped Formalism.Per
 
@@ -183,7 +181,7 @@ theorem full (ζ : ℕ → Om l) (χ : GQ l →* ℤ_[l]ˣ) (cZ0 : ζ 0 = 1) (cZ
 def chiZ (P : LocPrime l) : GQ l →* ℤ_[l]ˣ where
   toFun g := PadicInt.mkUnits (Formalism.MainNotions.InvariantsGenerators.InvariantsFromGenerators.chiQ_norm P g)
   map_one' := Units.ext (Subtype.ext (by simp [PadicInt.mkUnits]))
-  map_mul' g h := Units.ext (Subtype.ext (by simp [PadicInt.mkUnits, PadicInt.coe_mul]; rfl))
+  map_mul' g h := Units.ext (Subtype.ext (by simp [PadicInt.mkUnits]; rfl))
 
 theorem chiZ_coe (P : LocPrime l) (g : GQ l) :
     (((chiZ P g : ℤ_[l]ˣ) : ℤ_[l]) : ℚ_[l]) = ((P.χQ g : ℚ_[l]ˣ) : ℚ_[l]) := by

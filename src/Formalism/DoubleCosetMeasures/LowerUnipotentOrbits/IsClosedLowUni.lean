@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.DoubleCosetMeasures.Statement
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.GLRealOpen
-import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.GlR
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Topology.Sheaves.Presheaf
 
 open MeasureTheory Measure Topology Matrix
 

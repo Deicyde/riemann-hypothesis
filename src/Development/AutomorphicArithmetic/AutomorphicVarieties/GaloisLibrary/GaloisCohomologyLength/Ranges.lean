@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.GaloisCohomologyLength.LevelInertiaLeLevelDec
-import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.TotallyRealRoots.FinrankAdjoinRootsEqRootDeg
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.LengthEqLengthInvariantsOfTorsionLevels
+import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.TotallyRealRoots.GalDefs
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 open NumberField IsDedekindDomain ReciprocityTheory.Gal Formalism.ConjugateSelfDual Formalism.GaloisCohomology UpperTheory.V.LDataCardLeFinrank
 
@@ -23,7 +23,7 @@ private theorem cyclotomicCharacter_conj_ringEquiv {L M : Type} [Field L] [Field
       rw [← map_pow, ht, map_one]
     have key := modularCyclotomicCharacter.spec L
       (HasEnoughRootsOfUnity.natCard_rootsOfUnity L (p ^ n)) g hs
-    simp only [Units.coe_map, Units.val_pow_eq_pow_val] at key
+    simp only [Units.coe_map] at key
     change g (φ.symm (t : M)) = (φ.symm (t : M)) ^ _ at key
     rw [RingEquiv.trans_apply, RingEquiv.trans_apply, key, map_pow, RingEquiv.apply_symm_apply]
   · have H' : ¬ ∀ i : ℕ, ∃ ζ : M, IsPrimitiveRoot ζ (p ^ i) := by

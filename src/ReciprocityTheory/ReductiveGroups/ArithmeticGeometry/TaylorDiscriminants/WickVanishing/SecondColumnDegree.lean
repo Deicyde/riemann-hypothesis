@@ -1,5 +1,9 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.ChartChg
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.WickVanishing.HarmSecond
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Tactic.ENatToNat
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.ConnectionKillsSeries
 
 set_option autoImplicit false
 
@@ -42,7 +46,7 @@ private theorem mvPolynomial_pderiv_comm (a b : σ) (P : MvPolynomial σ k) :
   · simp [*]
   · rename_i p m hp
     simp only [Derivation.leibniz, smul_eq_mul, map_add, hp, pderiv_X]
-    by_cases ha : a = m <;> by_cases hb : b = m <;> simp [Pi.single_apply, ha, hb] <;> ring
+    by_cases ha : a = m <;> by_cases hb : b = m <;> simp [ha, hb] <;> ring
 
 theorem pd4 (P : MvPolynomial σ k) (a b c d : σ) :
     pderiv a (pderiv b (pderiv c (pderiv d P))) = pderiv c (pderiv d (pderiv a (pderiv b P))) := by
@@ -156,7 +160,7 @@ private theorem pderiv_colE_eq_zero_of_ne (a b : Fin n) (hab : a ≠ b) (l : ι)
   · simp
   · simp [*]
   · rename_i p m hp
-    simp [hp, pderiv_X, Pi.single_apply, hab]
+    simp [hp, pderiv_X, hab]
 
 theorem pderiv_prod_colE (b : Fin n) (s : Finset (Fin n)) (hb : b ∉ s) (Q : Fin n → MvPolynomial ι k)
     (l : ι) : pderiv (l, b) (∏ b' ∈ s, colE b' (Q b')) = 0 := by

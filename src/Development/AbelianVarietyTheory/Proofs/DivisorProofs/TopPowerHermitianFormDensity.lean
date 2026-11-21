@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsTypeIsRealConst
 open GlobalTheory.CxForm
 
@@ -35,7 +36,7 @@ def row (a : Fin n) : (Fin n → ℂ) →ₗ[ℂ] Ev n where
 
 theorem coe_row (a : Fin n) (w : Fin n → ℂ) :
     (row a w : Alt n) = dz a * ExteriorAlgebra.ι ℂ (∑ b, w b • Pi.single (Sum.inr b) (1 : ℂ)) := by
-  simp [row, sym, dzb, Finset.mul_sum, mul_smul_comm]
+  simp [row, sym, dzb, Finset.mul_sum]
 
 theorem row_mul_row (a : Fin n) (w : Fin n → ℂ) : row a w * row a w = 0 := by
   apply Subtype.ext

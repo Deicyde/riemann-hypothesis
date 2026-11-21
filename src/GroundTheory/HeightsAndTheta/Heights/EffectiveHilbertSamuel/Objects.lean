@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.BergmanObjects
-import GroundTheory.HeightsAndTheta.Heights.EffectiveHilbertSamuel.PDivision
+import Mathlib.Topology.Covering.Basic
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.EffectiveHS

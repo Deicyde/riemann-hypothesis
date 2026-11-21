@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SiegelReframe
 import ReciprocityTheory.AnalyticForms.AnalyticCharts.Osgood
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
 open Matrix MeasureTheory GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe
 open scoped Real ContDiff
 
@@ -16,20 +20,20 @@ def quadL (g : ℕ) (F : Type) [NormedAddCommGroup F] [NormedSpace ℝ F] :
   map_add' L L' := by
     ext dL v
     simp [Fin.sum_univ_two, symp_apply, riem, Function.update_apply, ← Finset.sum_add_distrib]
-    simp only [← Finset.sum_sub_distrib, ← Finset.sum_add_distrib, Finset.mul_sum]
+    simp only [← Finset.sum_sub_distrib, ← Finset.sum_add_distrib]
     exact Finset.sum_congr rfl fun _ _ => by ring
   map_smul' c L := by
     ext dL v
-    simp [Fin.sum_univ_two, symp_apply, riem, Function.update_apply, Finset.mul_sum,
+    simp [Fin.sum_univ_two, symp_apply, riem, Function.update_apply,
       ← Finset.sum_add_distrib]
-    simp only [← Finset.sum_sub_distrib, ← Finset.sum_add_distrib, Finset.mul_sum]
+    simp only [← Finset.sum_sub_distrib, Finset.mul_sum]
     exact Finset.sum_congr rfl fun _ _ => by ring
 
 theorem comp_eq_half (g : ℕ) {F : Type} [NormedAddCommGroup F] [NormedSpace ℝ F]
     (L : F →L[ℝ] Fl g) :
     (symp g).compContinuousLinearMap L = (1 / 2 : ℝ) • quadL g F L L := by
   ext v
-  simp [quadL, Fin.sum_univ_two, symp_apply, riem, Function.update_apply]
+  simp [quadL, symp_apply, riem, Function.update_apply]
   ring
 
 def quadCL (g : ℕ) (F : Type) [NormedAddCommGroup F] [NormedSpace ℝ F] [FiniteDimensional ℝ F] :

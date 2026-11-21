@@ -1,10 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolEqISupFockDeg
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchActionReadingsCompatible
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchHeisenbergDerivativesExist
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockVacuaTripleProportionalToNonzero
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CompactUnitaryPreservesPolynomialFock
 
@@ -54,7 +51,7 @@ theorem exists_neg_one_kInf (τ : ∀ w : InfinitePlace F, EmbOver E w) :
     rw [Matrix.smul_mul, Matrix.mul_smul, smul_smul, sgnAd_mul_self, one_smul, Matrix.one_mul]
   have hmap : (sgnAd F • (1 : Matrix (Fin n) (Fin n) (AE F E))).map (cA σ) = sgnAd F • 1 := by
     ext i j
-    by_cases h : i = j <;> simp [Matrix.one_apply, h]
+    by_cases h : i = j <;> simp [h]
   refine ⟨⟨⟨sgnAd F • 1, sgnAd F • 1, hss, hss⟩, ?_⟩, ⟨?_, ?_⟩, ?_⟩
   · show (sgnAd F • (1 : Matrix (Fin n) (Fin n) (AE F E)))ᵀ * incM F Y.J * (sgnAd F • (1 : Matrix (Fin n) (Fin n) (AE F E))).map (cA σ) = incM F Y.J
     rw [hmap, Matrix.transpose_smul, Matrix.transpose_one, Matrix.smul_mul, Matrix.smul_mul, Matrix.mul_smul, smul_smul,
@@ -66,7 +63,7 @@ theorem exists_neg_one_kInf (τ : ∀ w : InfinitePlace F, EmbOver E w) :
     have e : (sgnAd F • (1 : Matrix (Fin n) (Fin n) (AE F E))).map (piInf (τ w)) =
         piInf (τ w) (sgnAd F • (1 : AE F E)) • (1 : Matrix (Fin n) (Fin n) ℂ) := by
       ext i j
-      by_cases h : i = j <;> simp [Matrix.one_apply, h]
+      by_cases h : i = j <;> simp [h]
     show Commute ((sgnAd F • (1 : Matrix (Fin n) (Fin n) (AE F E))).map (piInf (τ w))) (Y.θ w)
     rw [e]
     exact (Commute.one_left _).smul_left _

@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.HeckeThetaIntegrals.StepUnfold
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.RationalRowTestKernel
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.LocalEmbeddings.JetsGrid
 import Development.AutomorphicArithmetic.LocalEmbeddings.JetsTest
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsOrthogonalSummandEmbeddingHom

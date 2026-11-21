@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.PairAtTAdjCut
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.MeasurableOfContinuousOnZero
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.QQMemAdjAlgCpt
 
 open Matrix MeasureTheory Filter Topology
 open scoped ComplexConjugate InnerProductSpace ContDiff
@@ -25,7 +27,7 @@ theorem norm_hs_le (A C : Wq →L[ℂ] Wp) : ‖B.hsInner A C‖ ≤ ‖B.hsInne
   unfold B.hsInner
   have h1 := norm_inner_le_norm (𝕜 := ℂ) (B.hsVec C) (B.hsVec A)
   rw [inner_self_eq_norm_sq_to_K, inner_self_eq_norm_sq_to_K]
-  simp only [norm_pow, RCLike.norm_ofReal, Complex.norm_real, abs_norm, norm_norm]
+  simp only [norm_pow, RCLike.norm_ofReal, abs_norm]
   nlinarith [norm_nonneg (B.hsVec A), norm_nonneg (B.hsVec C), sq_nonneg (‖B.hsVec A‖ - ‖B.hsVec C‖)]
 
 end L2

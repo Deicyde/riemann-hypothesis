@@ -1,12 +1,8 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.FractionFieldToGenericStalkAlgebraMapEq
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsHermND
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ComplementReferenceCompactSubgroup
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsEqZpowMulUnit
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.BasisOfIsCompl
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.HermitianDoubleCosetTermBasicFacts
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.FrameUnipotentUnitriangular
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.RelIndexSpanLatticeMatrixDetNormStatement
+import Development.AbelianVarietyTheory.Proofs.FlagMeasures.RelIndexSpanLatticeMatrixDetNorm
 open ValuativeRel Formalism.MainNotions.S.Loc GlobalTheory.HL MeasureTheory
 open scoped Pointwise ENNReal Classical
 
@@ -63,7 +59,7 @@ private theorem span_image_frameScaledDifferenceFamily_eq_lemma_3 {E V : Type} [
         _root_.GlobalTheory.HL.TraceVol.dfam, Sum.map_inl]
       rw [unitriangular_sum_castLE_eq hJ f s hs j]
     · rw [Fintype.sum_sum_type]
-      simp only [Matrix.fromBlocks_apply₁₂, Matrix.fromBlocks_apply₂₂, Matrix.submatrix_apply,
+      simp only [Matrix.fromBlocks_apply₁₂, Matrix.fromBlocks_apply₂₂,
         Sum.elim_inl, Sum.elim_inr, _root_.GlobalTheory.HL.TraceVol.dfam, Sum.map_inr]
       rw [unitriangular_sum_castLE_eq hJ f s hs j, unitriangular_sum_castLE_eq hJ f' s' hs' j]
       simp only [Matrix.neg_apply, Matrix.smul_apply, Matrix.submatrix_apply, neg_smul, smul_sub,

@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.FinrankMulDiscrRpowLeSumSqOfMemTraceDual
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.TorsionTotientBound
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open NumberField Matrix
 
@@ -130,7 +132,7 @@ theorem unitary_integral_finite_and_ncard_le [StarRing K]
     obtain ⟨t, σ, ht, rfl⟩ := exists_monomial hconj n g hg hint
     rw [Finset.coe_image]
     refine ⟨(t, σ), ?_, rfl⟩
-    simp [P, R, Finset.mem_coe, Finset.mem_product, Fintype.mem_piFinset, Multiset.mem_toFinset,
+    simp [P, R, Multiset.mem_toFinset,
       Polynomial.mem_nthRoots hT, ht]
   refine ⟨(P.image Φ).finite_toSet.subset hsub, ?_⟩
   calc _ ≤ (↑(P.image Φ) : Set (Matrix (Fin n) (Fin n) K)).ncard :=

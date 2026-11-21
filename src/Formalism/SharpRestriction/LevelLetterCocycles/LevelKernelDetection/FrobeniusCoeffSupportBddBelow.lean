@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.LevelKernelDetection.PrimitiveRootPowPrime
 import Formalism.SharpRestriction.LevelLetterCocycles.LevelKernelDetection.CrystallineToDeRhamInjective
 import Formalism.SharpRestriction.LevelLetterCocycles.LevelKernelDetection.PfKapUnit

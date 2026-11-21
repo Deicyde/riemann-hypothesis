@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.DivisorSupportCondition
-import Development.AbelianVarietyTheory.Definitions.Divisors.SecClass
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EtaleLocalPropertyCalculusRulesStatement
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
+import Mathlib.RingTheory.TensorProduct.DirectLimitFG
 open CategoryTheory Limits AlgebraicGeometry Opposite CochainComplex CochainComplex.HomComplex GlobalTheory.EtC
 
 open scoped TensorProduct
@@ -148,7 +149,7 @@ theorem inj
     simp only [LinearMap.comp_apply, LinearMap.lTensor_tmul, TensorProduct.map_tmul]
     congr 1
     apply Subtype.ext
-    simp [ρ, nat_apply]
+    simp [ρ]
   have hy : LinearMap.lTensor _ (φ.app (op V)).hom.rangeRestrict
       (TensorProduct.map (C.map g.op).hom (P.map g.op).hom (LinearMap.lTensor _ B₀.subtype x₀)) = 0 := by
     have := congrArg (fun L => L x₀) key

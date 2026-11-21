@@ -1,12 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCochFrame
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorusLieAlgebraCoordinateLinearEquiv
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsConjFsBasisOfUnitary
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsIsBasisNear
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CompactSpacePts
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.LieBridgeG
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.BCTools
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.LinearIndependentFlagVec
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ToroidalCompactificationData
 open AlgebraicGeometry CategoryTheory Limits NumberField MonoidalCategory CartesianMonoidalCategory MonObj Matrix Topology
 open Formalism.BasicNotions ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.PullbackSections ReciprocityTheory.ChartRestriction.G.Pdiv ReciprocityTheory.GeometryOfNumbersTheory
 open scoped CategoryTheory.Obj ComplexOrder
@@ -185,7 +184,7 @@ theorem dual_pt (φ : R →+* R') (w : Sp R ⟶ W) (c : Fin r → R) :
 theorem dual_raw (φ : R →+* R') (w : Sp R ⟶ W) (i : Fin r) :
     spMap (dualMap φ) ≫ raw u w i = raw u (spMap φ ≫ w) i := by
   have e : φ ∘ (Pi.single i 1 : Fin r → R) = Pi.single i 1 := funext fun j => by
-    by_cases h : j = i <;> simp [Pi.single_apply, h]
+    by_cases h : j = i <;> simp [h]
   rw [raw, raw, ← e, reassoc_of% (dual_pt φ w (Pi.single i 1))]
 
 variable [IsMonHom u]

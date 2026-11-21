@@ -1,14 +1,8 @@
-import Mathlib
-import Development.AutomorphicSpectrum.PublishedTheorems.Metrics₂.PoincareLelong
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.PublishedTheorems.Metrics₂.SheetDensityEqSetSheetDensity
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterRed
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterRedF
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterGood
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterDivSupp
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterSheet
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterFib
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.CxPosDens
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.CxSimple
+import Mathlib.Algebra.Order.Sub.Prod
 
 noncomputable section
 
@@ -280,7 +274,7 @@ private lemma finite_zeros_lemma_9 {V : Type} [Fintype V] [DecidableEq V] (r : V
         refine ⟨α, ?_, rfl⟩
         rw [hT, Finset.coe_image]
         refine ⟨⇑α, ?_, ?_⟩
-        · simp [Fintype.mem_piFinset, hsmall]
+        · simp [hsmall]
         · ext v
           simp
       · push Not at hsmall

@@ -1,15 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HasInfExpDiv
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsPairReading
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LieActionFockOperatorsScalarsTrace
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ContDiffOfContinuousOneParameter
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzBruhatFiniteAdelesMemSpanRestrictedProdu
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ActFromBlocks
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.WeilModelGoodLineActionStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsClmThetaSumRhoPure
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepresentationPreservesSchwartz
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsNatMulIntegralOfIsCompact
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqOfComponentTensorAdelicFunctionEq
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix
 open Formalism.L2.Theta Formalism.L2.DIV Formalism.L2.Indef Formalism.DivisionValues
@@ -144,7 +138,7 @@ theorem good_pure (hPr : GlobalTheory.FunPr.Hypotheses₂) (M : Model σ Y Wd) (
     simp only [hc, hΛ]
     rw [hasDerivAt_iff_tendsto_slope]
     refine ((Λ.continuous.tendsto g).comp hlim).congr' (Eventually.of_forall fun t => ?_)
-    simp [slope_def_module, map_sub, map_smul]
+    simp [slope_def_module, map_sub]
 
 end GlobalTheory.ThetaInterchange
 

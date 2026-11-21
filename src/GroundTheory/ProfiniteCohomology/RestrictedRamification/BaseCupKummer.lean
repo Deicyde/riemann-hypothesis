@@ -1,9 +1,8 @@
-import Mathlib
-import GroundTheory.ProfiniteCohomology.RestrictedRamification.BaseKummerDefs
-import GroundTheory.ProfiniteCohomology.RestrictedRamification.BaseCupNat
-import GroundTheory.ProfiniteCohomology.LocalTateDuality.Bockstein
-import GroundTheory.ProfiniteCohomology.PoincarePairs.IsDiscreteRepResHomCoindRes
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.BaseCupLocal
+import GroundTheory.ProfiniteCohomology.CompactSupportCohomology.CompactCupEqCompactCupRight
+import GroundTheory.ProfiniteCohomology.PoincareDuality.NsmulEqZeroOfNonemptyAddEquiv
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

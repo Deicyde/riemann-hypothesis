@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.SiegelWeilLocal.CoveringRadii
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.SiegelWeilLocal.CenteredPerpendicularSets
 
 open NumberField Matrix Finset
@@ -39,7 +39,7 @@ private lemma hform_single_single' (s : A →+* A) (M : Matrix (Fin n) (Fin n) A
     funext a
     by_cases h : a = i
     · subst h; simp
-    · simp [Pi.single_apply, h]
+    · simp [h]
   rw [e]
   simp
 

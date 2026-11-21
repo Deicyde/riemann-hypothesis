@@ -1,5 +1,12 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementMA
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.LowerLevelsSameScalar
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.EulerZetaGammaInvIdentity
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.FrameOfAdmissibleWord
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.InterlaceSignTwo
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.ModelWordsAssemble
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.MultiplicationOpHom
+import Mathlib.Algebra.Module.StablyFree.Basic
 
 section
 
@@ -5951,8 +5958,7 @@ theorem wirt_wirt (v w : M.Var r) {F : E r → ℂ} {s : Set (E r)} (hs : IsOpen
   have e1 : wirt v (wirt w F) x = WL v (fderiv ℝ (wirt w F) x) := by rw [wirt_eq v (wirt w F)]
   have e2 : wirt w (wirt v F) x = WL w (fderiv ℝ (wirt v F) x) := by rw [wirt_eq w (wirt v F)]
   rw [e1, e2, key, key]
-  simp only [WL_apply, ContinuousLinearMap.coe_comp, Function.comp_apply, map_add, map_smul,
-    add_apply, smul_apply, smul_eq_mul]
+  simp only [WL_apply, ContinuousLinearMap.coe_comp, Function.comp_apply]
   rw [hsym (dirE w) (dirE v), hsym (dirE w) (Complex.I • dirE v), hsym (Complex.I • dirE w) (dirE v),
     hsym (Complex.I • dirE w) (Complex.I • dirE v)]
   ring

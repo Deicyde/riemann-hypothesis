@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThickFrames.MarkedLow
 import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.FrameFacts
 import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.ThickExists
+import Mathlib.RingTheory.PiTensorProduct
 
 open Finset UpperTheory.BernoulliSumsFrobeniusOrbits Formalism.G0
 

@@ -1,12 +1,19 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.DiscreteSeriesCoefficientsCuspidal
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.AutomorphyLifting.SubquotientSupport.TypeData
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.LitAut
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.TypesNZeroGDefs
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.TypesNZeroKIface
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.TypeDataOfSTy
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.TypesNZeroPProdIrr
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.TypesNZeroPCuspSupp
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.AutomorphyLifting.PolarizedLinkage.ExtraV
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BernsteinZelevinskyFinitenessHolds
+import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ToralAndGoodOfIsSpherical
+import PositivityTheory.AutomorphicForms.PublishedInputs.NonzeroTypes.DeterminantVector
+import PositivityTheory.AutomorphicForms.PublishedInputs.NonzeroTypes.Isotypic₂
+import PositivityTheory.AutomorphicForms.PublishedInputs.NonzeroTypes.PProdRc
+import PositivityTheory.AutomorphicForms.PublishedInputs.NonzeroTypes.PSumList
+import PositivityTheory.AutomorphicForms.PublishedInputs.NonzeroTypes.PUntwistRc
+import PositivityTheory.AutomorphicForms.PublishedInputs.NonzeroTypes.ScalarInertia
+import PositivityTheory.AutomorphicForms.PublishedInputs.NonzeroTypes.SphericalUnramified
+import PositivityTheory.AutomorphicForms.PublishedInputs.NonzeroTypes.UnramifiedTwist
 
 set_option maxHeartbeats 800000
 set_option synthInstance.maxHeartbeats 200000
@@ -150,7 +157,7 @@ private theorem gMainV (hLit : _root_.GlobalTheory.Mem.LiteralAutomorphy.LitLocA
     rw [← hx] at hP
     rw [hP]
     refine ⟨hl.1.2 fun y hy => ?_, fun t => ?_⟩
-    · simp only [List.mem_ofFn, Set.mem_range] at hy
+    · simp only [List.mem_ofFn] at hy
       obtain ⟨b, rfl⟩ := hy
       rw [hur b]
       exact (step_unrTwist E Ω A w h (u b) _ (hψ b) (hu b)).1

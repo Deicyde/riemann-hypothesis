@@ -1,5 +1,5 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.PlaneSupports.PlaneSupp
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousSingleV
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PlaneStrongApproxProduct
 

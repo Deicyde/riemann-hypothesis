@@ -1,9 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.PotentialsBoundedRegSettingEqReference
-import GroundTheory.HeightsAndTheta.Heights.Regularisation.BoundedStatements
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterSt
-import GroundTheory.HeightsAndTheta.Heights.Regularisation.PMaxOscillation
-import GroundTheory.HeightsAndTheta.Heights.Regularisation.PMollifierLowerBound
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Regularisation.PBoundedChartComparison
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.ExistsSmoothConjInvariantMetric
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.ExistsConjInvariantMollifier

@@ -1,8 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.BigCellVanishingOfCommute
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.OrbitalMeasurabilityWeakThreshold
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.PsiNormalization
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ConjugationInvarianceEverySetting
-import Formalism.FormalDegreeBessel.FormalDegreeRatio.BesselUnitaryEquivHolds
 import Formalism.FormalDegreeBessel.FormalDegreeRatio.BesselUnipotentEquivHolds
 
 open Matrix MeasureTheory Filter Topology

@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviBlockSizesSum
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsHermNDSmulSkewForm
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CentralExponentBoundOver
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalCharacterExponentListStatement

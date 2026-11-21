@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LevelStructures.LeviFixesAnisotropic
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LevelStructures.LeviInt
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LevelStructures.FrameStd
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LevelStructures.K2uGrpHolds
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalVolumeIndices.LocIdxLift
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.MassComputations.NLevelHolds
@@ -132,8 +131,8 @@ theorem psiV_inclE (v : HeightOneSpectrum (𝓞 I.F)) (a : I.E) :
 theorem psiV_hA (v : HeightOneSpectrum (𝓞 I.F)) (x y : VA I) :
     PI.FinKW.psiV I v (hA I x y) =
       hR (Fv I.F v) I.cm.sig I.J (PI.FinKW.vecV I v x) (PI.FinKW.vecV I v y) := by
-  simp [hA, hR, Formalism.UG.hform, JR, PI.FinKW.vecV, map_sum, map_mul, psiV_sigR, psiV_inclE, dotProduct,
-    mulVec, Matrix.map_apply]
+  simp [hA, hR, Formalism.UG.hform, JR, PI.FinKW.vecV, map_sum, map_mul, psiV_sigR, psiV_inclE,
+    Matrix.map_apply]
 
 end Lift
 

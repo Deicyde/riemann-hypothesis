@@ -1,7 +1,9 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeDeformations.IsCharZeroPt
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeDeformations.RelAlg
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeDeformations.ExistsUnobstructed
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeDeformations.ConjPushMat
+import Mathlib.RingTheory.Ideal.Quotient.Index
+import Mathlib.RingTheory.MvPowerSeries.Equiv
 
 open Matrix IsLocalRing ReciprocityTheory.Gal UpperTheory.V.U3 UpperTheory.V.Alg UpperTheory.V.UnitaryThreeInertia
 
@@ -146,7 +148,7 @@ theorem UpperTheory.V.UnitaryThreeInertia.exists_relations :
   haveI : Finite (P ⧸ T) := finite_quot_Tr _ N
   haveI : Nontrivial (P ⧸ T) := Ideal.Quotient.nontrivial_iff.2 (ne_top_of_le_ne_top (maximalIdeal.isMaximal P).ne_top hTm)
   have h5 : ∀ c : O, (MvPowerSeries.C c : P) = algebraMap O _ c := fun c => by
-    simp [P, MvPowerSeries.algebraMap_apply]
+    simp [MvPowerSeries.algebraMap_apply]
   haveI : IsLocalHom (algebraMap O P) := ⟨fun c h => by
     by_contra hn
     exact C_mem_max c hn (h5 c ▸ h)⟩

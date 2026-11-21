@@ -1,4 +1,4 @@
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaIntegralRationalFrameExpansionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GenericSubquotientPrincipalSeriesStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnramifiedPrincipalSeriesIrreducibleStatement

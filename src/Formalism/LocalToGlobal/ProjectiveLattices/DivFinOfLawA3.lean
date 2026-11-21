@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.CompHt
 
 noncomputable section
@@ -51,7 +53,7 @@ theorem divFin_of_lawA3' (δ : ∀ Z : Comp Xo c, AddValuation (Om Z) (WithTop �
   have hmem : AddMonoidAlgebra.single (0 : WTZ E) r ∈ AG Z 0 := by
     refine Submodule.mem_span_singleton.mpr ⟨r, ?_⟩
     first
-      | simp [AddMonoidAlgebra.smul_single']
+      | simp
       | (rw [AddMonoidAlgebra.smul_single', mul_one])
   have hne0 : AddMonoidAlgebra.single (0 : WTZ E) r ≠ 0 := by
     first

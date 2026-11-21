@@ -1,9 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.DistinguishedUnitIdeals.GammaCongruentArcFromStart
-import Formalism.SharpRestriction.LevelLetterCocycles.CyclotomicPowerSeries.ConstSectionStatement
 import Formalism.SharpRestriction.LevelLetterCocycles.CyclotomicPowerSeries.PsCycloStatement
 import Formalism.SharpRestriction.LevelLetterCocycles.CyclotomicPowerSeries.EmultiplicityEqValuation
 import Formalism.SharpRestriction.LevelLetterCocycles.CyclotomicPowerSeries.PowValMemPrimitiveRoots
+import Formalism.SharpRestriction.LevelLetterCocycles.CyclotomicPowerSeries.ConstantCoeffAeval
+import Mathlib.Tactic.Polynomial.Basic
 
 noncomputable section
 

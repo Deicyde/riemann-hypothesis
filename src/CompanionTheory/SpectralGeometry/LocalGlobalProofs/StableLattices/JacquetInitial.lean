@@ -1,7 +1,6 @@
-import Mathlib
-import CompanionTheory.RealGroups.DiscreteSeries.DiscreteSeriesClassification.DiscreteSeriesExhaustion.MatrixCoefficientDecay.InfinitesimalCharacterPaths.TensDecomp
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.PolynomialNilpotentPath
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.HasCharSub
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ExistsEvalAtOfMem
 
 noncomputable section
@@ -743,7 +742,7 @@ section MainPart
 theorem modExp_zero (d : Fin 3 → ℕ) : modExp (fun i => Fin (d i)) 0 = (d 1 : ℤ) + d 2 := by
   have h1 : (Finset.univ.filter fun b : Fin 3 => (0 : Fin 3) < b) = {1, 2} := by decide
   have h2 : (Finset.univ.filter fun b : Fin 3 => b < (0 : Fin 3)) = ∅ := by decide
-  simp [modExp, h1, h2]
+  simp [modExp, h1]
 
 theorem modExp_two (d : Fin 3 → ℕ) : modExp (fun i => Fin (d i)) 2 = -((d 0 : ℤ) + d 1) := by
   have h1 : (Finset.univ.filter fun b : Fin 3 => (2 : Fin 3) < b) = ∅ := by decide

@@ -1,12 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.WittOnFalse
-import Development.AbelianVarietyTheory.Definitions.Divisors.FormalCoboundarySmul
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PowerSeriesEvalTwoGroupsRulesStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SubstSubSubstIntegralOfIntegralDifferentialStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SubstMemIntegralDifferentialSubmoduleStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MvPowerSeriesReductionModPrimeRulesStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsIntegralReducingToMvPowerSeriesSubstStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoeffSubstLeadingOfAgreeDegreeOneStatement
+import Mathlib.Algebra.Order.Ring.Star
 open CategoryTheory TensorProduct MvPowerSeries GlobalTheory GlobalTheory.PDiv GlobalTheory.PDivGroup GlobalTheory.Katz
 
 namespace GlobalTheory.KatzPull
@@ -39,7 +38,7 @@ theorem lin_subst {R : Type} [CommRing R] {d e : ℕ} (a : Fin e → MvPowerSeri
         apply inj
         rw [map_zero, ← Multiset.card_eq_zero, hcard, h]
       subst h0
-      simp [hf1, coeff_X]
+      simp [hf1]
     · obtain ⟨j, hj⟩ := Multiset.card_eq_one.1 ((hcard α).trans h)
       have h1 : α = Finsupp.single j 1 := by
         apply inj
@@ -145,7 +144,7 @@ theorem quasiLog_pull : ∀ (p : ℕ) [Fact p.Prime] (k : Type) [Field k] [CharP
     refine ⟨∑ j, a j * WittVector.teichmuller p (lin (φ j) i), ?_, ?_⟩
     · simp only [pullLin, map_sum, map_mul, ha]
       rfl
-    · simp only [pullLin, map_sum, map_mul, ha', WittVector.teichmuller_coeff_zero]
+    · simp only [pullLin, map_sum, map_mul, ha']
       rfl
 
 end GlobalTheory.KatzPull

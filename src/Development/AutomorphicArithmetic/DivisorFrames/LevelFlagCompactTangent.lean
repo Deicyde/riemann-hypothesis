@@ -1,9 +1,7 @@
-import Mathlib
-import Development.AutomorphicArithmetic.LocalEmbeddings.VertCmp
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.LocalEmbeddings.ConsMatch
-import Development.AutomorphicArithmetic.LocalEmbeddings.ConsAgree
 import Development.AutomorphicArithmetic.DivisorFrames.FlagCarriesEigenframe
-import Development.AbelianVarietyTheory.PublishedTheorems.SemiabelianTori.GeometricallyConnectedSplitTorusAff
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LocalSystemModelMap
 open CategoryTheory Limits AlgebraicGeometry IsLocalRing NumberField IsDedekindDomain
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Pj

@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.TateThesis.AdeleIdealMeasure
 import GroundTheory.GlobalFields.TateThesis.AdelicCharDual
 import GroundTheory.GlobalFields.TateThesis.TraceDualLattice
+import Mathlib.NumberTheory.NumberField.Discriminant.Different
 
 namespace GroundTheory.Global
 

@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.MonomialOrderSegments.TestBoundOfRhoAndNormSets
 import Formalism.SharpRestriction.GrowthBounds.MonomialOrderSegments.SegDefs
+import Formalism.SharpRestriction.GrowthBounds.MonomialOrderSegments.DigitPartMonomial
+import Mathlib.Data.Int.Star
 
 noncomputable section
 

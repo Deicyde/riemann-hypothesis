@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsHolPeriods
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
 
 open NumberField ReciprocityTheory.ChartRestriction.G.Geo.Tor Matrix
 
@@ -14,7 +17,7 @@ theorem _root_.GlobalTheory.PeriodConn.hermForm_conj_mul {g : ℕ} (Hm N : Matri
     Matrix.vecMul_transpose]
   congr 2
   ext i
-  simp [Matrix.mulVec, dotProduct, star_sum, mul_comm]
+  simp [Matrix.mulVec, dotProduct, star_sum]
 
 variable {E : Type} [Field E] [NumberField E] [IsCMField E] {H : Host E}
 

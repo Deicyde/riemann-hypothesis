@@ -1,4 +1,5 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.IsClosedKset
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.PsiMLocal
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.CasLPsM
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.CasChain

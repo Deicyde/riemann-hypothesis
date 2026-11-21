@@ -1,9 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.JacConstGVol
-import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.JacConstBHLie
-import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.JacConstBHGlue
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.JacConstBHDim
-import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.BesselFrame
 
 noncomputable section
 
@@ -51,7 +49,7 @@ theorem iota_mul (A B : Matrix (Fin k) (Fin k) ℂ) : iota (r := r) (A * B) = io
   have h2 : ∀ X : Matrix (Fin k) (Fin (2 * r + k + 1)) ℂ, (Ew k r)ᵀ * (Ew k r * X) = X := fun X => by
     rw [← Matrix.mul_assoc, h, Matrix.one_mul]
   simp only [iota, Matrix.mul_add, Matrix.add_mul, Matrix.mul_sub, Matrix.sub_mul, Matrix.mul_one,
-    Matrix.one_mul, Matrix.mul_assoc, h1, h2]
+    Matrix.one_mul, Matrix.mul_assoc, h2]
   abel
 
 theorem iota_one : iota (k := k) (r := r) 1 = 1 := by
@@ -91,7 +89,7 @@ private lemma hpk_apply_of_outer_index (i j : Fin (2 * r + k + 1)) :
     Hpk k r i j = if j = tau k r i then sgn k r i else 0 := by
   have hi := i.isLt
   have hj := j.isLt
-  simp only [Hpk, tau, sgn, Fin.ext_iff, Fin.val_mk]
+  simp only [Hpk, tau, sgn, Fin.ext_iff]
   split_ifs <;> first | rfl | omega | norm_num
 
 theorem hpk_mul_apply' {X : Type*} (A : Matrix (Fin (2 * r + k + 1)) X ℂ) (i : Fin (2 * r + k + 1)) (j : X) :
@@ -108,7 +106,7 @@ theorem hpk_Ew : Hpk k r * Ew k r = Ew k r := by
   rw [hpk_mul_apply']
   have hi := i.isLt
   have hc := c.isLt
-  simp only [Ew, sgn, tau, pW, Fin.ext_iff, Fin.val_mk]
+  simp only [Ew, sgn, tau, pW, Fin.ext_iff]
   split_ifs <;> first | rfl | omega | (simp; done) | norm_num
 
 theorem EwT_hpk : (Ew k r)ᵀ * Hpk k r = (Ew k r)ᵀ := by
@@ -222,7 +220,7 @@ private lemma Ew_transpose_mul_iota (A : Matrix (Fin k) (Fin k) ℂ) :
   have h' : ∀ X : Matrix (Fin k) (Fin k) ℂ, (Ew k r)ᵀ * (Ew k r * X) = X := fun X => by
     rw [← Matrix.mul_assoc, h, Matrix.one_mul]
   simp only [iota, Matrix.mul_add, Matrix.add_mul, Matrix.mul_sub, Matrix.sub_mul, Matrix.mul_one,
-    Matrix.one_mul, Matrix.mul_assoc, h, h', sub_self, zero_add]
+    Matrix.mul_assoc, h, h', sub_self, zero_add]
 
 theorem iota_surj {g : Matrix (Fin (2 * r + k + 1)) (Fin (2 * r + k + 1)) ℂ} (hg : g ∈ UWset k r (wLastV k r)) :
     g = iota (r := r) ((Ew k r)ᵀ * g * Ew k r) ∧

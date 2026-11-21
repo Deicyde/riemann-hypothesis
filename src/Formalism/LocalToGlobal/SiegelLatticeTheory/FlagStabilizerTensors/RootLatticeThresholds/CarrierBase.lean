@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.StepPtRepPf
 
 noncomputable section
@@ -54,7 +55,7 @@ theorem gram_eq (F G : PtRepPf.Fr ε r k) (hT : F.T = G.T) (i j : PtRepPf.Fr.Ix 
           F.ew, G.ew, F.fw, G.fw, F.zw, G.zw]; done)
       | (conv_lhs => rw [← PtRepPf.hJ_conj]
          conv_rhs => rw [← PtRepPf.hJ_conj]
-         simp [F.ee, G.ee, F.ff, G.ff, F.ef, G.ef, F.ez, G.ez, F.fz, G.fz, F.zz, G.zz, hT, F.ww, G.ww,
+         simp [F.ef, G.ef, F.ez, G.ez, F.fz, G.fz,
           F.ew, G.ew, F.fw, G.fw, F.zw, G.zw])
 
 def trL (F G : PtRepPf.Fr ε r k) : (Fin n → ℂ) →ₗ[ℂ] (Fin n → ℂ) where

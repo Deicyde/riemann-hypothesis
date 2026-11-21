@@ -1,7 +1,7 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.RealDescent.RealLeviDescent.MuQMemHarmSet
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RightDerivativeCalculusHolds
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LieGeneratorsGlRelations
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DifferentiableAtOfSmooth
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MapMemKfin
 
 noncomputable section
 

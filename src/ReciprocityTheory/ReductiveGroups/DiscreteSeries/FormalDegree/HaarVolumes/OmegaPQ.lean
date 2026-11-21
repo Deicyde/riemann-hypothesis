@@ -1,6 +1,9 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.HaarVolumes.DensOn
-import Formalism.LocalRingCardinality.DataCD
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.HaarVolumes.OmegaPQB
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
+import Mathlib.Algebra.Ring.IsFormallyReal
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.HaarVolumes.OmegaPQA
 
 noncomputable section
 

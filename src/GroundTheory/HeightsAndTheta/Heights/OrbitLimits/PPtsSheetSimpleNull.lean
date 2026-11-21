@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StPtsSheetSimpleNull
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StPtsGenericCount
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterSheetB

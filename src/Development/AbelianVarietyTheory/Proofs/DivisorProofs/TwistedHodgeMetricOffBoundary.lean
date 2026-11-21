@@ -1,15 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SpecializationMapCompUniversalSection
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MetricConjugationSymmetry
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.FamilyUnifExpUnique
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.IsDerivAt0OfIsPullback
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.IsDerivAt0CompLinear
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.IsCombAtIffIsDerivAt0
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExponentialDerivativeAtZeroIsTangent
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.EqOfImHermFormEq
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.WeilIsGrpPullbackOfCommute
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsPushEquiv
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.UnitOnInjectiveOfCommRing
 open AlgebraicGeometry CategoryTheory Limits NumberField IsDedekindDomain ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.BasicNotions Formalism.L2.Pj GlobalTheory.CxPts GlobalTheory.Toroidal GlobalTheory.Cartier GlobalTheory.ProjVar GlobalTheory.ShFam GlobalTheory.ShFam.Pad GlobalTheory.ShFam.GalCarry
 
 set_option autoImplicit false
@@ -305,12 +297,12 @@ theorem unitary_push (T : Tw Z) (hσ : Formalism.L2.PjFree.GoodEmb c σ) {U : Fo
       ((2 * a : ℝ) : ℂ) • (((cxFrame Z (U.un k₁ x₁)).co g' τ)ᴴ * (cxFrame Z (U.un k₁ x₁)).co g' τ) := by
     ext b b'
     rw [of_apply, hcol, hcol]
-    simp [hHm, hermForm, smul_mulVec, sum_dotProduct, dotProduct_sum, star_sum, Pi.single_apply, hi, mul_apply, mul_comm]
+    simp [hHm, hermForm, smul_mulVec, dotProduct_sum, star_sum, Pi.single_apply, hi, mul_apply, mul_comm]
   have k2 : (of fun b b' : Fin (Dw.mult τ) => hermForm Hm (A *ᵥ (Pi.single (W.e.symm ⟨T.emb τ, T.ix b'⟩) 1))
       (A *ᵥ (Pi.single (W.e.symm ⟨T.emb τ, T.ix b⟩) 1))) = ((2 * a : ℝ) : ℂ) • 1 := by
     ext b b'
     rw [of_apply, GlobalTheory.UnitDet.hermForm_mulVec, key]
-    simp [hHm, hermForm, Pi.single_apply, hi', one_apply, eq_comm]
+    simp [hHm, hermForm, hi', one_apply, eq_comm]
   exact smul_right_injective _ h7 (k1.symm.trans k2)
 
 theorem unitary_at (T : Tw Z) (hσ : Formalism.L2.PjFree.GoodEmb c σ) {U : Formalism.L2.PjFree.Unf Xo c σ r}

@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.MatsushimaLattice
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ExistsUnitaryRepR
+import Mathlib.Combinatorics.Quiver.ReflQuiver
+import Mathlib.RepresentationTheory.Coinduced
+import Mathlib.RepresentationTheory.Homological.GroupCohomology.Functoriality
 
 noncomputable section
 
@@ -46,9 +50,9 @@ theorem infRep_apply (π : UnitaryRep (G × Gf) H) (g : G) (v : H) : infRep π g
 
 def fixSub (π : UnitaryRep (G × Gf) H) (Kf : Subgroup Gf) : Submodule ℂ H where
   carrier := {v | ∀ k ∈ Kf, π (1, k) v = v}
-  add_mem' {a b} ha hb k hk := by simp only [Set.mem_setOf_eq, map_add, ha k hk, hb k hk]
+  add_mem' {a b} ha hb k hk := by simp only [map_add, ha k hk, hb k hk]
   zero_mem' k _ := map_zero _
-  smul_mem' c v hv k hk := by simp only [Set.mem_setOf_eq, map_smul, hv k hk]
+  smul_mem' c v hv k hk := by simp only [map_smul, hv k hk]
 
 variable (π : UnitaryRep (G × Gf) H) (Kf : Subgroup Gf)
 
@@ -154,7 +158,7 @@ include hL hK in
 theorem cocyc_le_comap (q : ℕ) : D.cocyc L κ q ≤ (D.cocyc L κ q).comap (postL Φ q) := by
   refine Submodule.span_le.2 fun f hf => Submodule.subset_span ⟨relCo_postL D.adP κ Φ hK hf.1, ?_⟩
   rw [gd_postL L Φ hL, hf.2]
-  ext v; simp [postL_apply]
+  ext v; simp
 
 include hL hK in
 theorem cobd_le_comap (q : ℕ) : D.cobd L κ q ≤ (D.cobd L κ q).comap (postL Φ q) := by

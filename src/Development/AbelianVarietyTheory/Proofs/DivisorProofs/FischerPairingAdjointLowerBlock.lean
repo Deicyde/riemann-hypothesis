@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DetSNeZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockFirstActionMatrixUnitEq
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.RowDerivationChainRule.DetDer
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsBilinearFischerPairingMatrixEntryPolynomia
 
 noncomputable section
 
@@ -49,11 +51,11 @@ theorem rowD_X_inr_inr (b b' i : Fin Q) (c : Fin S) :
 theorem rowD_u (b b' : Fin Q) (a : Fin P) (c : Fin S) :
     rowD b b' (X (Sum.inl a, Sum.inr c) : Pol P Q 0 S) = 0 := by
   rw [rowD_apply]
-  simp [pderiv_X, Pi.single_apply]
+  simp [pderiv_X]
 
 theorem rowD_mS (b b' i : Fin Q) (a : Fin P) :
     rowD b b' (mS P Q S a i) = if i = b then mS P Q S a b' else 0 := by
-  simp only [mS, map_sum, Derivation.leibniz, rowD_X_inr_inr, rowD_u, smul_zero, add_zero, smul_eq_mul]
+  simp only [mS, map_sum, Derivation.leibniz, rowD_X_inr_inr, rowD_u, smul_eq_mul]
   split_ifs <;> simp
 
 theorem rowD_detS (h : Q ≤ S) (b b' : Fin Q) :

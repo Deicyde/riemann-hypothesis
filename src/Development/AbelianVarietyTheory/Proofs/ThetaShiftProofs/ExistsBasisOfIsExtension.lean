@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.RingsOfIntegers.ExpandsAtSecIsMul
-import Development.AbelianVarietyTheory.Proofs.RingsOfIntegers.ExpandsAtSub
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.IsFETranslateFeTranslate
+import Mathlib.GroupTheory.FiniteAbelian.Basic
 
 set_option autoImplicit false
 

@@ -1,5 +1,6 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
 import GroundTheory.HeightsAndTheta.Heights.IntegralModels.Statements
+import Mathlib.Tactic.Monotonicity.Lemmas
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.Model

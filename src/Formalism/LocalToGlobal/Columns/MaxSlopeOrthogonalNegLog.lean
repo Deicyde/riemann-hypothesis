@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.BrzoPairAtZeroRight
-import Formalism.SizeWindowBrackets.ChainSlopeWindows.TruncatedLatticeHolds
 import Formalism.MeanHeightDescent.AverageDegreeBounds.SpanMuMin
 
 open NumberField IsDedekindDomain Module

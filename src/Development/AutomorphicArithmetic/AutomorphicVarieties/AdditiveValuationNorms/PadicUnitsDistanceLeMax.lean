@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AdditiveValuationNorms.CokLenLeOfRangeLe
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AdditiveValuationNorms.Helly
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AdditiveValuationNorms.LteNorm
+import Mathlib.NumberTheory.Padics.Complex
 
 open UpperTheory.V UpperTheory.V.PropA
 

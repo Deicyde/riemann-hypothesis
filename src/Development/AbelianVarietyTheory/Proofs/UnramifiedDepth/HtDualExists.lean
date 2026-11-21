@@ -1,8 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import ReciprocityTheory.DualLattices.EvHtStatement
 import ReciprocityTheory.DualLattices.CharR
-import ReciprocityTheory.DualLattices.ThmAAll
 import ReciprocityTheory.DualLattices.DualPairInh
+import ReciprocityTheory.DualLattices.IsPairingValueAddRight
+import ReciprocityTheory.DualLattices.NilSurjOfSqZero
 
 noncomputable section
 

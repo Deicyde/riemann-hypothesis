@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.ShapeRowIsomorphisms.StatClause5Row
-import ReciprocityTheory.ReductiveGroups.TraceFormulas.ImportsAlt
-import ReciprocityTheory.ReductiveGroups.TraceFormulas.LatReal
 
 variable [hT2Core : Fact ReciprocityTheory.ChartRestriction.T2.Core]
 

@@ -1,36 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.CInfGood
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.BcMapBcVec
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.FlatChernWeightEqOfIndependence
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.OnbMat
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.RegularFormsIsBundleProjectiveCover
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.TwistedDualRegularFormsFiniteCover
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.CuspOnto
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.AdelicGLLastRowAndDetModuleUnderLeftMultiplicati
-import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.GoodOrigin
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.LamLevel
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.ThmFlatA
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.FlatDegree
-import Development.AutomorphicSpectrum.Statements.MetricStatements.SmallOnTower
-import Development.AutomorphicSpectrum.Statements.MetricStatements.RankBound
-import Formalism.LocalToGlobal.IndefiniteForms.IndefiniteTree.RealCubicMeans.LogMeanShares.LogMeanStatements.HSClaim
-import Formalism.LocalToGlobal.IndefiniteForms.IndefiniteTree.RealCubicMeans.LogMeanShares.LogMeanStatements.ShareLow
-import Formalism.LocalToGlobal.IndefiniteForms.IndefiniteTree.RealCubicMeans.LogMeanShares.LogMeanStatements.LineDegreeClosedFormula
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.IsEmptyZeroPieces
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.CcPreserving
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.InterpStatementPfO
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.HolomorphicFamilies.UnitHmE
-import Development.AutomorphicSpectrum.ParallelStatements.ParallelGeometry.LowerWeightVolume
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.FlagCellMongeAmpereDensityConstant
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.MongeAmpereSingularTotalMassDegree
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.MongeAmpereIntegralParametrizedCover
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.FlagPotentialLeviFormCell
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.MongeAmpereDensityDiagonalLevi
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.SepCountEqFactorialDegree
-import ReciprocityTheory.AnalyticForms.PotentialTheory.Degree
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HodgeCptInteriorFlag
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HodgeInnerProductMapIff
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HodgeHermitianFormExists
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ConjEmbRtOfNe
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.UnifMetricScalar
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.MetricChangeOfFrame
@@ -250,7 +221,7 @@ theorem gram (hσ : GoodEmb c σ) (hU : IsUnf U) (hpq : 1 ≤ Dw.p + Dw.q) {k : 
         simp
       · rw [Pi.single_eq_of_ne (fun hh => hab (eq_of_heq (Sigma.mk.inj (W.e.symm.injective hh)).2))]
         simp
-    simp only [hf, Matrix.mul_smul, Matrix.smul_mul, Matrix.mul_one, Matrix.smul_apply, Matrix.mul_apply,
+    simp only [hf, Matrix.mul_smul, Matrix.mul_one, Matrix.smul_apply, Matrix.mul_apply,
       Matrix.conjTranspose_apply, mul_ite, ite_mul, mul_zero, zero_mul, Finset.sum_ite_eq, Finset.mem_univ, if_true,
       smul_eq_mul, Finset.mul_sum, hκ]
     refine Finset.sum_congr rfl fun j _ => ?_

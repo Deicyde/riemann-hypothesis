@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReducedBases.TBInjective
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 noncomputable section
 

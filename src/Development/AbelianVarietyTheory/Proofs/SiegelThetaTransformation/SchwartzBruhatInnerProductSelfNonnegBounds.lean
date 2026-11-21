@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SpanningFamilies.IMemSiegel
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.FinsumQuotientOfLe
+import Mathlib.Tactic.Monotonicity.Lemmas
 open Matrix Complex GlobalTheory.SW
 open scoped ComplexConjugate Real
 
@@ -211,7 +212,7 @@ theorem _root_.GlobalTheory.SW.ip_self_nonneg_and_bounds : ∀ (K κ ι : Type) 
       calc _ ≤ (∑ q ∈ t, ‖φ q.out‖ * ‖ψ q.out‖) ^ 2 := by
             gcongr
             refine (norm_sum_le _ _).trans (le_of_eq ?_)
-            simp [Complex.norm_conj]
+            simp
         _ ≤ _ := Finset.sum_mul_sq_le_sq_mul_sq _ _ _
     calc (d⁻¹ * ‖∑ q ∈ t, φ q.out * conj (ψ q.out)‖) ^ 2
         = d⁻¹ * d⁻¹ * ‖∑ q ∈ t, φ q.out * conj (ψ q.out)‖ ^ 2 := by ring

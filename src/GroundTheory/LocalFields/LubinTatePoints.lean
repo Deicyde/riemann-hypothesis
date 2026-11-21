@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.LocalFields.Interface
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.LocalFields.ExamplesLaurent
 import GroundTheory.LocalFields.SeparableClosure
 import GroundTheory.LocalFields.FormalGroups.LubinTateGroup

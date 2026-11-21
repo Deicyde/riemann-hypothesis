@@ -1,6 +1,10 @@
-import Formalism.SatakeDualWeyl.StatementE
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.SphericalA
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.GlintPrincRelIndexNeZero
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open NumberField IsDedekindDomain Formalism.UG
 
@@ -44,7 +48,7 @@ private lemma column_operation_mul_neg_eq_one {R : Type*} [CommRing R] {n : ℕ}
   · by_cases har : a = r
     · subst har
       have hne : a ≠ b := fun h => hbr h.symm
-      simp [Matrix.one_apply, hbr, hne]
+      simp [hbr, hne]
     · simp [Matrix.one_apply, hbr, har]
 
 private lemma exists_GLint_eq_column_operation {n : ℕ} (r : Fin n) (c : Fin n → v.adicCompletion F)

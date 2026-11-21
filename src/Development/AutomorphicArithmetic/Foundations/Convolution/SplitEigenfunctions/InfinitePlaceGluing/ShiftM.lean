@@ -1,7 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.SplitEigenfunctions.Entire
 import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.IsotypicQuotients.NormWfLe
-import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.UnitaryActions.ContinuousAdelicGL2OfContinuousEntries
 import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.UnitaryActions.EqAmOfBarEq
+import Mathlib.Topology.Algebra.MvPolynomial
 
 noncomputable section
 
@@ -220,7 +222,7 @@ private theorem step (D : Dat ℚ E) {ω χ : HChar ℚ} (hχ : ∀ a, ‖((χ.1
       ← integral_add i₀ i₃]
     refine integral_congr_ae ?_
     filter_upwards [ae_ne] with y hy
-    simp only [G, pow_succ, Pi.add_apply]
+    simp only [G, pow_succ]
     linear_combination (((χ.1 (iy y) : ℂˣ) : ℂ) * (y : ℂ) ^ k * ((|y| : ℝ) : ℂ) ^ (s - 2)) * h y t hy
   simp only [hI, map_mul, map_pow, MvPolynomial.eval_X, Matrix.cons_val_zero, Matrix.cons_val_one]
   simp

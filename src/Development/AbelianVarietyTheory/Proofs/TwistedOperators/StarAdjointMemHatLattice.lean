@@ -1,9 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsAuxiliaryVectorWittDec
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsGivenStageEqOne
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.BesselStepLineComponentMemHomLatticeStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HermitianSkewAdjointMemAdjointHomLattice
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MemCompletedGridArrowLatticeIffIntegralFrameMatr
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.StarSmulMemSpanModulusDivConjugateLatticeStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ValuationAAModulusDivConjLeCosetExponentStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IdempotentSumScalarSmulMemCompletedModulusStatement
@@ -66,7 +63,7 @@ theorem smul_mem_hatMx_of_mem_latO {D : D7} {T : Type} {L : LevCh D T} {sc : Con
           rw [mul_comm, ← Algebra.smul_def]; exact Submodule.smul_mem _ o ha
         convert hx _ ha' using 4
         ext i j
-        simp only [Matrix.of_apply, Pi.smul_apply, Algebra.smul_def]
+        simp only [Pi.smul_apply, Algebra.smul_def]
         ring_nf
     exact key t ht a ha
   | zero => rw [smul_zero]; exact zero_mem _

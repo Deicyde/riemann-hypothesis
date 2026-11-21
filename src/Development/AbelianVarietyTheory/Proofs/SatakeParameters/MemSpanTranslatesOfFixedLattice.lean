@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.LinearIndependentWave
+import Mathlib.Analysis.CStarAlgebra.Classes
 
 noncomputable section
 

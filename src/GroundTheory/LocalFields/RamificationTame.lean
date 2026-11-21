@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.LocalFields.Eisenstein
 import GroundTheory.LocalFields.UnitsPowers
-import GroundTheory.LocalFields.RamificationStructure
 import GroundTheory.LocalFields.UnramifiedDefs
 import GroundTheory.LocalFields.IntermediateField
 

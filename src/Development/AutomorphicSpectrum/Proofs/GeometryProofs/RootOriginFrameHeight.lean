@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LabelSigBijective
 open NumberField IsDedekindDomain MeasureTheory Filter Topology
 open Formalism.L2.Pj ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.FD ReciprocityTheory.ChartRestriction.G.AR.Up ReciprocityTheory.ChartRestriction.G.AR.Inst Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.L2.Theta
@@ -54,7 +55,7 @@ theorem exists_coeff_of_mem {b₀ : Fin r → E} {n : ℕ} {x : E} (hx : x ∈ f
     refine ⟨Pi.single k 1, by simp [Pi.single_apply], fun j hj => ?_⟩
     have hk' : (k : ℕ) < n := hk
     have : j ≠ k := fun e => by subst e; omega
-    simp [Pi.single_apply, this]
+    simp [this]
   | zero => exact ⟨0, by simp, fun _ _ => rfl⟩
   | add x y _ _ hx hy =>
     obtain ⟨t, rfl, ht⟩ := hx

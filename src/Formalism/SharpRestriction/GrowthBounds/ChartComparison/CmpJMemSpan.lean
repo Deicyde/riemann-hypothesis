@@ -1,7 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.ChartComparison.StepIn
 import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.TieWeak
 import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.TieDim
-import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.MRatSpanOfRatInv
 
 noncomputable section
 

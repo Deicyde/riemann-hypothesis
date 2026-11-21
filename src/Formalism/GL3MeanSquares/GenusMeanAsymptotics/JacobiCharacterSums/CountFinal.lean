@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.GenusMeanAsymptotics.JacobiCharacterSums.CountSt
 import Formalism.GL3MeanSquares.GenusMeanAsymptotics.JacobiCharacterSums.CountA
-import Formalism.GL3MeanSquares.SecondEstimateOfIntervalHypothesis
 import Formalism.GL3MeanSquares.HookFormulaTorsion.TwistIsPrimitiveCharacter
 
 noncomputable section

@@ -1,5 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.EigenOfTwoStep
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.Letter
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open scoped MatrixGroups TensorProduct
 open Matrix GlobalTheory.KZ
@@ -132,7 +135,7 @@ theorem _root_.GlobalTheory.KZ.PolAct.subst_mem {A : Submodule R M} {w : â„•} (Ï
     (t := Finset.univ) (fun i _ => hterm i)
   convert hsum using 1
   funext u
-  simp [hbu, map_sum, map_smul, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Finset.sum_apply]
+  simp [hbu, map_sum, map_smul, Finset.sum_apply]
 
 open scoped MatrixGroups TensorProduct in
 open Matrix in

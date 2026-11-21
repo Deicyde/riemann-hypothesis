@@ -1,9 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
-import Formalism.RealPlaceAnalysis.SmoothOnGVIff
-import Formalism.RealPlaceAnalysis.StatementB
-import Formalism.RealPlaceAnalysis.RealPlaceTaylor.CartanInvolutionConjTransposeMul
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.LayerProd
+import Mathlib.LinearAlgebra.Matrix.Permutation
 
 open MeasureTheory Matrix Finset Formalism.MainNotions.S
 open scoped InnerProductSpace ComplexOrder
@@ -150,7 +149,7 @@ theorem stdRep_irred (S : Submodule ℂ (EuclideanSpace ℂ (Fin n))) (hS : IsKS
     have := hS _ (mem_Kset_allPos hP) _ h1
     convert this using 1
     ext a
-    simp [stdRep_apply, Equiv.Perm.permMatrix, PEquiv.toMatrix_apply, Equiv.swap_apply_eq_iff, Pi.single_apply]
+    simp [stdRep_apply, Equiv.Perm.permMatrix, PEquiv.toMatrix_apply, Equiv.swap_apply_eq_iff]
   rw [eq_top_iff]
   intro x _
   rw [← (EuclideanSpace.basisFun (Fin n) ℂ).sum_repr x]
@@ -177,8 +176,8 @@ theorem isTau_std (n : ℕ) :
   · intro y _ hy
     ext i
     by_cases h : i = Fin.last n
-    · simp [stdRep_apply, Pi.single_apply, h, (hy _ _).2 rfl]
-    · simp [stdRep_apply, Pi.single_apply, h, (hy i _).1 (Fin.lt_last_iff_ne_last.2 h)]
+    · simp [stdRep_apply, h, (hy _ _).2 rfl]
+    · simp [stdRep_apply, h, (hy i _).1 (Fin.lt_last_iff_ne_last.2 h)]
 
 theorem IsZEigen.smooth {ε : Fin n → Bool} {χ : Fin n → ℂ} {f : Matrix (Fin n) (Fin n) ℂ → ℂ}
     (h : IsZEigen ε χ f) : Formalism.REAL.SmoothOnG ε f := h.1

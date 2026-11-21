@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.PlaceInst
+import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.PlaceS
 
 noncomputable section
 

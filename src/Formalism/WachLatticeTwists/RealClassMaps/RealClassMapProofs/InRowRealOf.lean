@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.RealClassMaps.RealClassMapProofs.ClsRowVOfMem
-import Formalism.WachLatticeTwists.RealClassMaps.RealClassMapProofs.RowChiReal
 
 variable [hT2Core : Fact ReciprocityTheory.ChartRestriction.T2.Core]
 

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.RealClassMaps.StatClassMapReal
 
 variable [hT2Core : Fact ReciprocityTheory.ChartRestriction.T2.Core]

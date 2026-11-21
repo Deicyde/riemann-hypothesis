@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.TorRes
 import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.KurNewton
 
@@ -118,7 +119,7 @@ theorem sqrt_mem (hl : l ≠ 2) (c y : ℂ_[l]) (hc : c ∈ MaximalUnramifiedExt
   · rw [Polynomial.coeff_sub, Polynomial.coeff_X_pow, Polynomial.coeff_C]
     split_ifs <;> first | (exfalso; omega) | simp [hc1]
   · simp [h]
-  · simp [Polynomial.derivative_X_pow, norm_mul, hy]
+  · simp [norm_mul, hy]
     rw [one_add_one_eq_two]
     exact h2
 

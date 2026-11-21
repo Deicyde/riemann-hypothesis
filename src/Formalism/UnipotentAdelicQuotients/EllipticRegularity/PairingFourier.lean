@@ -1,4 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.UnipotentAdelicQuotients.EllRegCut
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
+import Mathlib.Analysis.Distribution.SchwartzSpace.Fourier
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Topology.Sheaves.Presheaf
 
 namespace ZetaZeros.D.EllReg
 

@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.SphericalCoordinates.RootSumWOff
+import Mathlib.LinearAlgebra.JordanChevalley
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory GlobalTheory.PELU Filter Topology
@@ -60,7 +62,7 @@ private theorem exists_integral_bezout_of_separable {F : Type} [Field F] [Number
   · apply Polynomial.map_injective (algebraMap (𝓞 F) F) RingOfIntegers.coe_injective
     rw [Polynomial.map_add, Polynomial.map_mul, Polynomial.map_mul, ← Polynomial.derivative_map,
       hq, hu, hv, Polynomial.map_C, Polynomial.derivative_C_mul, map_pow, map_intCast, C_pow]
-    simp only [map_intCast, C_eq_intCast]
+    simp only [map_intCast]
     linear_combination ((y : F[X])) ^ 2 * hab
 
 private theorem isSemisimple_of_commute_of_integral_bezout {R : Type} [CommRing R] {V : Type} [AddCommGroup V] [Module ℂ V]

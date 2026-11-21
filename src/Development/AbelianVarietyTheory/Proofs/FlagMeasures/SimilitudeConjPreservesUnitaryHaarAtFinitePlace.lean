@@ -1,8 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.Measures
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.LocalUnitaryGroupStabilizersUnimodularFinitePlac
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.LocalUnitaryGroupTuplesTopologicalFacts
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.StandardFrameGramDetNeZero
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.HermitianFlagDualBasis
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsHaarFrameStabiliserCompatibleFibreStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.GramMapFibreMeasureUnitriangularInvariantStatement
@@ -233,8 +231,7 @@ theorem gramR_mv (u : Matrix (Fin a) (Fin a) (R ⊗[F] E)) (X : Fin a → Fin n 
   ext i j
   simp only [gramR, mv, Matrix.mul_apply, Matrix.transpose_apply, Matrix.map_apply]
   rw [hR_sum_left]
-  simp only [hR_smul_left, hR_sum_right, GlobalTheory.UnitriangularCoeff.hR_smul_right, Finset.sum_mul,
-    Finset.mul_sum]
+  simp only [hR_smul_left, hR_sum_right, GlobalTheory.UnitriangularCoeff.hR_smul_right, Finset.sum_mul]
   rw [Finset.sum_comm]
   exact Finset.sum_congr rfl fun c _ => Finset.sum_congr rfl fun d _ => by ring
 

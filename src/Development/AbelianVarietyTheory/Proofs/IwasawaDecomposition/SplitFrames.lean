@@ -1,10 +1,10 @@
-import Mathlib
-import Formalism.LocalToGlobal.BesselHermitianTheta.AllTied
-import Formalism.LocalToGlobal.IndefiniteReal.DatumVec
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.JointCharacters.LocEMulLocE
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.AdelicDataRowMeasureScaleTrivialTuple
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.IntegralTransport
-import Development.AbelianVarietyTheory.BlockTheory.HeightDefect.WeilIdempotents
+import Development.AbelianVarietyTheory.BlockTheory.HeightDefect.SymplecticTensorMeasures
+import Formalism.LocalToGlobal.BesselHermitianTheta.TiedLocW
+import Mathlib.GroupTheory.Coprod.Basic
 
 noncomputable section
 

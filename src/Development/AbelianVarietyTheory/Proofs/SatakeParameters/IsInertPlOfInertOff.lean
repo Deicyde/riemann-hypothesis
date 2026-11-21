@@ -1,9 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.ZeroPartEigenvalueConvention
-import Development.AbelianVarietyTheory.BlockTheory.ThetaLiftGeometry.HeckeIntertwinersInert
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.UnramBridgeHolds
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.HeckeOpsIffHeckeLiftsAt
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ThetaLiftLevelsGoodPrimesProperties
+import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
 open Formalism.BasicNotions IsDedekindDomain NumberField
 
 noncomputable section

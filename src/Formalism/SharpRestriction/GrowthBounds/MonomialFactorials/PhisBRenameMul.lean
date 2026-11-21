@@ -1,5 +1,6 @@
-import Formalism.SharpRestriction.GrowthBounds.MonomialFactorials.RestPlusAOf
-import Formalism.PolynomialDimension.MultinomialDepth.TieOps
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.MonomialFactorials.RestPlusOf
 
 noncomputable section
 

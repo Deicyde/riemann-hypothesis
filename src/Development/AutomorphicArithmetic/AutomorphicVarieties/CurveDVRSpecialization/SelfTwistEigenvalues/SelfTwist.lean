@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CurveDVRSpecialization.SelfTwistEigenvalues.CliffordSS
+import Mathlib.LinearAlgebra.Eigenspace.Triangularizable
+import Mathlib.RingTheory.Henselian
 open Polynomial Matrix
 
 private theorem selfTwist_commonEig {K M ι : Type} [Field K] [IsAlgClosed K] [AddCommGroup M]

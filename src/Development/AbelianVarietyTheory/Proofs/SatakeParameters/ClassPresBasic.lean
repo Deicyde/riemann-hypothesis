@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.Bridge
-import Formalism.SatakeDualWeyl.KpqSubgroupCompact
+import Mathlib.LinearAlgebra.LinearIndependent.BaseChange
 
 open Formalism.IndefR.Bridge Formalism.L2.DIV Formalism.DivisionValues Formalism.L2.Col NumberField MeasureTheory Polynomial
 

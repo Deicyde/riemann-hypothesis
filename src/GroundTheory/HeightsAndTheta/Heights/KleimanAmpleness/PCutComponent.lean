@@ -1,8 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.CutComponentSt
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.CutZeroNotLeSt
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.CutNonemptySt
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.CutDimLowerSt
+import Mathlib.RingTheory.GradedAlgebra.Radical
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.Kleiman

@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.Columns.AbelianHostFieldConditions
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.StdLatUnimodular
 import Formalism.LocalToGlobal.Divisibility.CoefMod
 

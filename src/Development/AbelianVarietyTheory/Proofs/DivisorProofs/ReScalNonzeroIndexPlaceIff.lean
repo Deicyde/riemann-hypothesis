@@ -1,9 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ScalOf
-import Formalism.LocalToGlobal.Divisibility.NumbersLemmas
-import Formalism.LocalToGlobal.IndefiniteForms.IndefiniteTree.DepthCond
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.TraceLatticeLeThetaLatticeAtPlace
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.GoodLiftOnto
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsThetaLiftAdjointScalarOnPart
 
 open NumberField IsDedekindDomain Module

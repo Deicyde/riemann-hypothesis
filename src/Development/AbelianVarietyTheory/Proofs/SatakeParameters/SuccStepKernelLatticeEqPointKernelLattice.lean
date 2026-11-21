@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.JointCmpEmbeddingY
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.LocSpBot
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LatticeTupleChartSuccEqComponentChartStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LatticeTupleAdelicPointStepSuccStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ReindexRenamePointDetLatK

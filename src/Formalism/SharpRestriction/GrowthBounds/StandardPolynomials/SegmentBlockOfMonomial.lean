@@ -1,4 +1,7 @@
-import Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.DensitySumsAndDomination
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.CoarseMultiplicity.SymbolVariableLowerLetter
+import Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.RestSegCore
 
 noncomputable section
 

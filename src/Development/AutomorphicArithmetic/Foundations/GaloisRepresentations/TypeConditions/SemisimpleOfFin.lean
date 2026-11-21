@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.DiscreteGroups.GlobalIrreducibility.DzTame
-import Formalism.SharpRestriction.LevelLetterCocycles.QuotientHomNonvanishingBound
+import Mathlib.LinearAlgebra.Eigenspace.Semisimple
+import Mathlib.LinearAlgebra.Eigenspace.Zero
+import Mathlib.RingTheory.TotallySplit
 
 noncomputable section
 

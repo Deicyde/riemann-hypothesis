@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.IdeleClassGroup.Theory
-import GroundTheory.GlobalFields.NormResidueSymbol.Cyclotomic
-import GroundTheory.LocalFields.AbstractLocalReciprocity.Isomorphism
 
 namespace GroundTheory.Global
 

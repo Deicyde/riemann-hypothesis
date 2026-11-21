@@ -1,5 +1,6 @@
-import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.AffineProjectionSplitting
-import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.IpTheta
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.IsThetaFunOPull
 
 set_option synthInstance.maxHeartbeats 100000
 

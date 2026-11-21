@@ -1,4 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.Lemma5aAt
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.RingTheory.Derivation.Lie
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.LocalProperties.Reduced
+import Mathlib.RingTheory.TotallySplit
 
 noncomputable section
 

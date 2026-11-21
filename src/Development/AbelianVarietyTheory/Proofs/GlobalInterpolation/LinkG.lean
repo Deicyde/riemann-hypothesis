@@ -1,9 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.SmoothDesignExistence.AdmissibleTopsMertens
 import Formalism.LocalToGlobal.GroupLattices.LinkGConcreteNoKer
-import Formalism.LocalToGlobal.ClassRec
-import Formalism.LocalToGlobal.TieTwRecOf
-import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.JoinSISel
+import Formalism.LocalToGlobal.ClassOfRecordOfChoice
 
 noncomputable section
 

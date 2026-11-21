@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.MemLevelIffSymmetricPositionEntryPattern
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.OnesRepresent
 open ValuativeRel Matrix
 
 noncomputable section
@@ -86,9 +86,9 @@ theorem conj_inN (ϖ : kˣ) (hc : 0 + c = c) (p : ℕ) {g : GL (Fin κ ⊕ Fin c
   intro r s hrs
   rw [conj_reGL_val, hg _ _ (by rw [lev_ordZ_symm, lev_ordZ_symm]; exact hrs)]
   by_cases h : r = s
-  · subst h; simp [Matrix.one_apply, mul_inv_cancel₀ (dg_ne_zero ϖ r)]
+  · subst h; simp [mul_inv_cancel₀ (dg_ne_zero ϖ r)]
   · have h' : (ordZ t hc).symm r ≠ (ordZ t hc).symm s := fun e => h ((ordZ t hc).symm.injective e)
-    simp [Matrix.one_apply, h, h']
+    simp [h, h']
 
 theorem conj_embX (ϖ : kˣ) (hc : 0 + c = c) (γ : GL (Fin κ) k) :
     (typeFrame ϖ (stdOrd (Fin κ) t 0 c hc)).conj (reGL (ixZero (Fin κ ⊕ Fin c) t) (embX c γ)) =
@@ -113,8 +113,8 @@ theorem conj_embX (ϖ : kˣ) (hc : 0 + c = c) (γ : GL (Fin κ) k) :
     · exact j.elim0
     · rw [hs2, hs2]
       by_cases h : i = j
-      · subst h; simp [dg, Matrix.one_apply]
-      · simp [dg, Matrix.one_apply, h]
+      · subst h; simp [dg]
+      · simp [dg, h]
 end Zero
 
 end GlobalTheory.SymDec

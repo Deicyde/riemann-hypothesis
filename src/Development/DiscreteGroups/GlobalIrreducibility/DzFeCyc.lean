@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.DiscreteGroups.GlobalIrreducibility.DzFeCut
-import Development.DiscreteGroups.GlobalIrreducibility.DzRedTil
 
 noncomputable section
 

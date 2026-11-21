@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.DiscreteGroups.PiInvariants.CompactSupportTwists.PiClosU
 
 set_option linter.all false

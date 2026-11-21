@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.GaussianSeminormBounds.RealSeminormFiltration.Tensor
+import Mathlib.Algebra.Module.StablyFree.Basic
 
 noncomputable section
 

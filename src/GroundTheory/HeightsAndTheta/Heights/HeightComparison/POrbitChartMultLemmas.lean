@@ -1,6 +1,5 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.HeightComparison.HeightOrbitChartMult
-import GroundTheory.HeightsAndTheta.Heights.HeightComparison.POrbitCurve
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.POrbitChartQuot
 set_option maxSynthPendingDepth 1
 

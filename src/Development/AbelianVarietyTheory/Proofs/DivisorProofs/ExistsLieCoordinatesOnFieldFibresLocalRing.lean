@@ -1,11 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HenselianLocalRingOfIsAdicComplete
-import Development.AbelianVarietyTheory.Definitions.AbelianSchemeLaws.FirstCohomologyVanishesSpecOfIsLocalRing
-import Development.AbelianVarietyTheory.Definitions.Degenerations.ExistsGenPullTriv
-import Development.AbelianVarietyTheory.Definitions.Uniformization.IsCPPullback
-import Development.AbelianVarietyTheory.Statements.SemistableTorsion.SemistableFin
-import Development.AbelianVarietyTheory.Definitions.Degenerations.OfDerivationFnOn
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.Clauses
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsIsLieBasisEigen
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsLieBasisOfIsLocalRing
 import Development.AbelianVarietyTheory.Statements.FundamentalDomains.ExistsIsAddFundamentalDomain
@@ -96,7 +90,7 @@ theorem isTangent_iff_push (y : epsR k ⟶ (Over.pullback (spMap f)).obj G) :
     · rw [Category.assoc, Over.w y, Over.w η[(Over.pullback (spMap f)).obj G]]
       simp only [Over.mk_hom, spMap, ← Spec.map_comp, ← CommRingCat.ofHom_comp]
       have : (TrivSqZeroExt.fstHom k k k).toRingHom.comp (algebraMap k (DualNumber k)) = RingHom.id k := by
-        ext s; simp [TrivSqZeroExt.algebraMap_eq_inl]
+        ext s; simp
       rw [this]
       simp
 

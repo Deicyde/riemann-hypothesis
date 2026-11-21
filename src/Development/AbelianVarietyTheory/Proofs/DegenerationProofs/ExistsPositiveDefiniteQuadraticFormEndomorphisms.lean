@@ -1,9 +1,5 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion
-import Development.AbelianVarietyTheory.Definitions.AbelianSchemeLaws.FirstCohomologyVanishesSpecOfIsLocalRing
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Degenerations.OfDerivationFnOn
-import Development.AbelianVarietyTheory.Definitions.Degenerations.PlOrdSomeOfAssociated
-import Development.AbelianVarietyTheory.Statements.SemistableTorsion.SemistableFin
 import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.ForallGeometricallyIntegralOfSmoothOfGeometrical
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsProductFormulaPlacesOfFgFieldStatement
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsLineBundleHeightProperSchemeStatement
@@ -34,7 +30,7 @@ theorem gen_reindex {X Y : Scheme.{0}} (L : LB X) {I J : Type} [Fintype I] [Fint
   refine ((res_res _ _ _).trans (res_res _ _ _).symm).trans (h1.trans ((map_mul _ _ _).trans ?_))
   refine congrArg₂ (· * ·) ?_ ((res_res _ _ _).trans (res_res _ _ _).symm)
   refine (map_prod (res (inf_le_inf (hle j) (hle j'))) _ _).trans ?_
-  simp only [LB.LinComb, map_zpow, res_res]
+  simp only [LB.LinComb, map_zpow]
   refine Fintype.prod_equiv e.symm _ _ fun i => ?_
   obtain ⟨i, rfl⟩ := e.surjective i
   have key : ∀ (i' : J) (hi : i' = i) (a : LB.wchart L (fun i => φ (e i)) j ⊓ LB.wchart L (fun i => φ (e i)) j' ≤ φ (e i) ⁻¹ᵁ (L.U (j i') ⊓ L.U (j' i')))

@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Variable
 import GroundTheory.AutomorphicForms.TensorProductTheorem.CuspidalRep
 
 namespace GroundTheory.Automorphic

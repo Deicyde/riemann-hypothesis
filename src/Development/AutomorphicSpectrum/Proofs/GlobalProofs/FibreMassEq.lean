@@ -1,12 +1,8 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.CoefS
-import CompanionTheory.SpectralGeometry.CountingDefinitions.AdelicEulerProducts.IsEulerProd
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.CompletionIsLocalRing
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.TensorLocallyCompactRing
+import BuildAid.Leniency.Open
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.CoordinateHaarMeasure
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.ContinuousHermScal
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.HaarMeasureNonunitsNull
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.IsFibreFamilyLength
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerVolume.TensTop
 
 open NumberField IsDedekindDomain MeasureTheory Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.Published.SiegelOneVector GlobalTheory.CompanionTheory.Hypotheses₂.OneV
 open scoped TensorProduct ENNReal
@@ -155,7 +151,7 @@ theorem GlobalTheory.CompanionTheory.Hypotheses₂.OneV.avgV_tendsto : ∀ (F E 
   let φ : (Fin 1 → Fin M → Fv F v ⊗[F] E) → ℝ := A.indicator fun _ => 1
   have hφc : Continuous φ := by
     refine continuous_indicator ?_ continuous_const.continuousOn
-    simp [hAo.frontier_eq, hAcl.closure_eq]
+    simp [hAo.frontier_eq]
   have hφs : HasCompactSupport φ := by
     refine HasCompactSupport.intro hAc fun x hx => ?_
     exact Set.indicator_of_notMem hx _

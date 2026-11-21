@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.FormalGroupWitt.FormalGroupWittProofs.SolveV
 import Formalism.FormalGroupWitt.FormalGroupWittProofs.CoeffV
 import Formalism.FormalGroupWitt.FormalGroupWittProofs.IntegralSubstVector

@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.KunnethLefschetz.EtaleCharts.FinCover
 import Development.ResolutionOfSingularities.Foundations.Blowup.BlowupProper
 import Development.ResolutionOfSingularities.Foundations.Blowup.BlowupIsoOffCenter

@@ -1,8 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasDefect
-import Development.AbelianVarietyTheory.Definitions.Divisors.RigidForFan
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ToroidalCompactificationBis
-import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.ExistsUniqueIsPointOfDualNumber
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFormalPointOriginSmoothCommGroupSchemeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUniformisedGroupPointSameDerivationsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CommutingHeatOperatorsActOnValuesStatement
@@ -12,10 +8,6 @@ import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsKodairaSpencerAff
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TangentBasisUniformisedGroupOfRaynaudExtensionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsIntegralRaynaudExtensionNoetherianLocalStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSymmetricKodairaSpencerAbelianLocusStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsInvariantTangentBasisRaynaudExtension
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsPrimitiveScaling
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.TorsionValuesCoordsOperatorPermute
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.LBLocalC
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry NumberField IsLocalRing
 open scoped CategoryTheory.Obj Matrix TensorProduct
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj
@@ -33,7 +25,7 @@ theorem exists_der_ext {A S : Type} [CommRing A] [CommRing S] [Algebra A S] (M :
   let h : A →+* DualNumber S :=
     { toFun := fun a => TrivSqZeroExt.inl (algebraMap A S a) + TrivSqZeroExt.inr (algebraMap A S (δ a))
       map_one' := by ext <;> simp [-DualNumber.inr_eq_smul_eps]
-      map_mul' := fun a b => by ext <;> simp [Derivation.leibniz, Algebra.smul_def, mul_comm, add_comm, -DualNumber.inr_eq_smul_eps]
+      map_mul' := fun a b => by ext <;> simp [Derivation.leibniz, mul_comm, add_comm, -DualNumber.inr_eq_smul_eps]
       map_zero' := by ext <;> simp [-DualNumber.inr_eq_smul_eps]
       map_add' := fun a b => by ext <;> simp [add_add_add_comm, -DualNumber.inr_eq_smul_eps] }
   have hu : ∀ m : M, IsUnit (h m) := fun m => TrivSqZeroExt.isUnit_iff_isUnit_fst.2 (by
@@ -53,7 +45,7 @@ theorem exists_der_ext {A S : Type} [CommRing A] [CommRing S] [Algebra A S] (M :
       simp [mul_comm])
   refine ⟨δS, fun a => ?_⟩
   show (L (algebraMap A S a)).snd = _
-  simp [L, h, Algebra.smul_def, -DualNumber.inr_eq_smul_eps]
+  simp [L, h, -DualNumber.inr_eq_smul_eps]
 
 theorem exists_der_fun {A S : Type} [CommRing A] [CommRing S] [Algebra A S] (M : Submonoid A) [IsLocalization M S]
     (δ : Derivation ℤ A A) : ∃ f : S →+ S, (∀ x y, f (x * y) = x * f y + y * f x) ∧

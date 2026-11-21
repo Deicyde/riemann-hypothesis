@@ -1,4 +1,5 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsChartMemberP
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsUnimodMod
 open GlobalTheory.Poinc
 
 namespace GlobalTheory.Poinc

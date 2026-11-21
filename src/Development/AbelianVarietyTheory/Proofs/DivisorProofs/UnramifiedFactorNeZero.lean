@@ -1,10 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocCharEqValZpow
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeFinVac
 
 open scoped TensorProduct NNReal Matrix nonZeroDivisors
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes

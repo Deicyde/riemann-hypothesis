@@ -1,4 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.RationalLowerBounds
+import Mathlib.Analysis.Normed.Field.Instances
+import Mathlib.Analysis.Normed.Field.Ultra
+import Mathlib.Analysis.Normed.Unbundled.SpectralNorm
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 

@@ -1,11 +1,9 @@
-import Mathlib
-import GroundTheory.PAdicHodge.WAKummer
-import GroundTheory.PAdicHodge.FundamentalSeq
-import GroundTheory.PAdicHodge.SenTateCharClosure
-import GroundTheory.PAdicHodge.BCrisEigenFrob
-import GroundTheory.PAdicHodge.BCrisRegularSenTate
-import GroundTheory.PAdicHodge.BCrisGalois
-import GroundTheory.PAdicHodge.WAKummerEps
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.PAdicHodge.GaloisOnCp
+import Mathlib.NumberTheory.Cyclotomic.CyclotomicCharacter
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.SimpleRing.Principal
 
 noncomputable section
 

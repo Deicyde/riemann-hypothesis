@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsPairingStdP
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ProductFormulaHaar.TrSumOf
 
 open scoped SchwartzMap Matrix TensorProduct Classical
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -17,12 +17,12 @@ variable {F : Type} [Field F] [NumberField F]
 private theorem trace_pi_real_eq_sum' {ι : Type} [Fintype ι] (f : ι → ℝ) :
     Algebra.trace ℝ (ι → ℝ) f = ∑ i, f i := by
   rw [Algebra.trace_eq_matrix_trace (Pi.basisFun ℝ ι)]
-  simp [Matrix.trace, Algebra.leftMulMatrix_eq_repr_mul, Pi.single_apply]
+  simp [Matrix.trace, Algebra.leftMulMatrix_eq_repr_mul]
 
 private theorem trace_pi_complex_eq_sum_two_mul_re {ι : Type} [Fintype ι] (f : ι → ℂ) :
     Algebra.trace ℝ (ι → ℂ) f = ∑ i, 2 * (f i).re := by
   rw [Algebra.trace_eq_matrix_trace (Pi.basis fun _ : ι => Complex.basisOneI)]
-  simp [Matrix.trace, Algebra.leftMulMatrix_eq_repr_mul, Fintype.sum_sigma, Pi.single_apply, Fin.sum_univ_two,
+  simp [Matrix.trace, Algebra.leftMulMatrix_eq_repr_mul, Fintype.sum_sigma, Fin.sum_univ_two,
     Complex.coe_basisOneI, Complex.coe_basisOneI_repr]
   refine Finset.sum_congr rfl fun i _ => ?_
   ring

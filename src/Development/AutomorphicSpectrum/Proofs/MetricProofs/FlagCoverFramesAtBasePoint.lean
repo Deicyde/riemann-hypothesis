@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.TransPtBase
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.FlagCoverBasePointRegularStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.MinorOfRegularMatrixValueStatement

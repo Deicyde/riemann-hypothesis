@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTransl
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsChartPtChartPt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAffineHomOfField
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsRingHomAddEpsMul
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DeformationChartPointReductionEqSpecialFibreStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsDeformationChartPointSpecMapStatement

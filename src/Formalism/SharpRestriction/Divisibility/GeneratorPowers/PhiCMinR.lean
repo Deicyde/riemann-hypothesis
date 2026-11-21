@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.PhiCMinB
 
 set_option autoImplicit false
@@ -59,7 +61,7 @@ theorem repro_sigma (b : Basis ι ℤ Y) (β : SymB cj Y) (σ : E →+* ℂ) (y 
         σ (ed E i) := by
     simp_rw [← gram_expand b B (RingOfIntegers.basis E _ • y) (RingOfIntegers.basis E _ • z)]
     simp_rw [e2]
-    simp only [comp, Finset.sum_mul_sum, Finset.mul_sum, Finset.sum_mul, Complex.ofReal_sum,
+    simp only [comp, Finset.mul_sum, Finset.sum_mul, Complex.ofReal_sum,
       Complex.ofReal_mul]
     conv_lhs => arg 2; ext a; rw [Finset.sum_comm]; arg 2; ext i; rw [Finset.sum_comm]
     rw [Finset.sum_comm]

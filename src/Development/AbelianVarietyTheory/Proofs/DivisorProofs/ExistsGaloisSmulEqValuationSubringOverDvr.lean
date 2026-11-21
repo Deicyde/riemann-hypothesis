@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GaloisTransitiveOnValuationRingsStatement
+import Mathlib.FieldTheory.Galois.Profinite
 
 open scoped Pointwise
 open GlobalTheory.Published GlobalTheory.Published.AbVarRed

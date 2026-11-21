@@ -1,23 +1,18 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.RedSurjective
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SubstLiftXPowFrob
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsConnectedPDivGroupChartOfIsConnStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConnectedPDivGroupFormalLawCoordinatesStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCommFormalGroupLawOfIsLawOfStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsMapOfAddFormalGroupLawEvalPointsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsRigidifiedExtensionOfSeriesPairStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RigidifiedExtensionPresentationOfSeriesPairsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqZeroOfFormalGroupLawCoboundaryOneEqZeroStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PowerSeriesEvalAtNilpotentXEqCoordinate
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.QuasiLogReducesStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.QuasiLogarithmPullbackTeichmullerLift
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConstantCoeffSubstZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapExists
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ReductionMap
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WittModuleFreeFiniteOfReduction
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConstantCoeffSubstOfZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ModNoPTorsion
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinrankRigidExtensionsEqHeightAndDimAddDual
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCommFormalGroupLawMapStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUniquePowerSeriesSemilinearPDivGroupHomChaStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SemilinearPDivGroupHomChartConstantCoeffSubstStatement
@@ -56,7 +51,7 @@ theorem semiPull_exists {k k' : Type} [Field k] [CharP k p] [PerfectRing k p] [F
           coeff α ((WittVector.map (p := p) σ r) • MvPowerSeries.map (frMap p σ) f.1)
         rw [← algebraMap_smul (Fr p k) r f.1, ← algebraMap_smul (Fr p k') (WittVector.map (p := p) σ r),
           coeff_map, coeff_smul, coeff_smul, coeff_map]
-        simp only [smul_eq_mul, map_mul, frMap_algebraMap]) }
+        simp only [map_mul, frMap_algebraMap]) }
   let m0 : Mod p hμ →ₛₗ[WittVector.map (p := p) σ] Mod p hσμ :=
     Submodule.mapQ _ _ L0 (fun f hf => (hB f.1 f.2).2.1 hf)
   refine ⟨m1.comp m0, fun f => ?_⟩

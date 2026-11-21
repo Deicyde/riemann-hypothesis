@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.GermIntegrals.StepSt
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.TotallySplit
 
 open ValuativeRel Matrix GlobalTheory.SplitWeil PositivityTheory.Tls2.Ming3
 
@@ -21,7 +26,7 @@ theorem E_mul {R : Type*} [Semiring R] {a b c j : ℕ} (hb : j ≤ b) :
     obtain ⟨h1, h2⟩ := h
     have hi : (i : ℕ) < j := h1 ▸ h2
     rw [Finset.sum_eq_single (⟨i, by omega⟩ : Fin b)]
-    · simp [hi, h1, h2]
+    · simp [h1, h2]
     · intro m _ hm
       have hne : ¬ ((i : ℕ) = m ∧ (m : ℕ) < j) := fun e => hm (Fin.ext e.1.symm)
       rw [if_neg hne, zero_mul]

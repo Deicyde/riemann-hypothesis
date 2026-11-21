@@ -1,8 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.GelfandTsetlinLowering.LiftDefs
-import Formalism.GradedWeylDivisibility.DualWeylDominanceOf
-import Formalism.GradedWeylDivisibility.FockSpaceTableaux.LEhwLemmas
-import Formalism.GradedWeylDivisibility.FockSpaceTableaux.LRowdivLemmas
-import Formalism.GradedWeylDivisibility.FockSpaceTableaux.FockQRowDivAdj
+import Formalism.GradedWeylDivisibility.StatementE
+import Formalism.PeriodIntegrals.HwIrred
 
 noncomputable section
 
@@ -33,7 +32,7 @@ theorem weight_indicator_eq_degree {r n : ℕ} (m : Fin r × Fin n →₀ ℕ) (
   refine Finset.sum_congr rfl fun v _ => ?_
   by_cases hv : v.1 = c
   · simp [rw1, wa, rowW, hv]
-  · simp [rw1, wa, rowW, hv, Pi.single_apply, Ne.symm hv]
+  · simp [rw1, wa, rowW, hv, Ne.symm hv]
 
 theorem weight_rw1_eq_weight_wa {r n : ℕ} (m : Fin r × Fin n →₀ ℕ) (c : Fin r) :
     Finsupp.weight (rw1 c) m = ((Finsupp.weight (wa c) m : ℕ) : ℤ) := by

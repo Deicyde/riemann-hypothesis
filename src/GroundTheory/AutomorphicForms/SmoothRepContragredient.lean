@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.SmoothRep
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.RingTheory.PicardGroup
 
 noncomputable section
 

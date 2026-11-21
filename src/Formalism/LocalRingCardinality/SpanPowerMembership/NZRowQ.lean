@@ -1,4 +1,6 @@
-import Formalism.LocalRingCardinality.SpanPowerMembership.NZRowP
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.SpanPowerMembership.NZRowC
 
 noncomputable section
 

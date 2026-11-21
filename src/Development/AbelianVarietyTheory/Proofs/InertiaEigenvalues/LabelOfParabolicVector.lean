@@ -1,13 +1,9 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.ArithmeticCylinders
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.LabelDatum
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsCharLab
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CentralIdempotentOfIrrCharacterOrthogonalCentralStatement
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FiniteIrrCharactersAndFinsumCentralIdempotentsEqStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.GroupAlgebraTraceIdempotentAndIrreducibleDegreeStatement
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.HarishChandraFrobeniusReciprocityStatement
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ReductionActionOnFixK1
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.HarishChandraSeriesLabelMulOfConstituentStatement
+import Mathlib.Data.Finsupp.Pointwise
 
 noncomputable section
 open GlobalTheory.GLq GlobalTheory.GLp Formalism.MainNotions.ArithmeticCylinders Polynomial
@@ -19,7 +15,7 @@ variable {G : Type} [Group G] [Fintype G]
 
 theorem eq_sum_single (e : MonoidAlgebra ℂ G) : e = ∑ x, MonoidAlgebra.single x (e.coeff x) := by
   ext y
-  simp [MonoidAlgebra.coeff_sum, Finsupp.single_apply]
+  simp [MonoidAlgebra.coeff_sum]
 
 theorem idem_eq_zero (D : MonoidAlgebra ℂ G) (h : D * D = D) (h0 : D.coeff 1 = 0) : D = 0 := by
   have hi : IsIdempotentElem (LinearMap.mulLeft ℂ D) := by

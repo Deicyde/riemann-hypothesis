@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.GlobalClassFormation.LocalDegrees.Layers
 import GroundTheory.ProfiniteCohomology.GlobalClassFormation.LocalDegrees.Decomposition
-import GroundTheory.GlobalFields.SemilocalAlgebras.Finite
-import GroundTheory.GlobalFields.CompletionAtPlace.Galois
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.CayleyCosetSums.ConvPhi
-import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.AbsoluteConvergence.MapsToUpToSign
 
 noncomputable section
 
@@ -60,8 +60,7 @@ private theorem toBlocks₂_conj_relations_of_inG {x : M2 n} (hx : InG x) :
     toBlocks₂₁ x * (toBlocks₁₂ x)ᴴ - toBlocks₂₂ x * (toBlocks₁₁ x)ᴴ = -1 := by
   have e := mul_JJ_mul_conjTranspose_of_inG hx
   rw [← fromBlocks_toBlocks x] at e
-  simp only [JJ, fromBlocks_conjTranspose, fromBlocks_multiply, fromBlocks_inj,
-    toBlocks_fromBlocks₁₁, toBlocks_fromBlocks₁₂, toBlocks_fromBlocks₂₁, toBlocks_fromBlocks₂₂] at e
+  simp only [JJ, fromBlocks_conjTranspose, fromBlocks_multiply, fromBlocks_inj] at e
   simp at e
   refine ⟨?_, ?_⟩
   · have h := e.2.2.2

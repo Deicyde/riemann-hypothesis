@@ -1,8 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ElementarySymmetric.MuLineNormEq
 import GroundTheory.HeightsAndTheta.Heights.ElementarySymmetric.MuFrameNormIndep
-import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.EventuallyInFrameDomain
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.GramMatrices.PGramAtPosDef
+import Mathlib.Analysis.Matrix.PosDef
 set_option maxSynthPendingDepth 1
 
 noncomputable section

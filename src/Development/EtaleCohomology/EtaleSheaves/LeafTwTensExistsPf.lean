@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.LeafTwPairHtpyPf
+import Mathlib.Algebra.Homology.Bifunctor
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry Opposite CochainComplex CochainComplex.HomComplex GlobalTheory.EtC MonoidalCategory
@@ -63,8 +67,8 @@ def tau (I J : Cx R) : Pair I J (T I J) where
     change ((jm I J s t w h ≫ sheafifyMap Scheme.etaleTopology ((P I J).d w (w + 1))).app (op U)).hom (a ⊗ₜ b) = _
     rw [jm_d]
     simp only [NatTrans.app_add, NatTrans.app_zsmul, NatTrans.comp_app, ModuleCat.hom_add, ModuleCat.hom_comp,
-      LinearMap.add_apply, LinearMap.comp_apply, Units.smul_def]
-    simp only [ModuleCat.hom_zsmul, LinearMap.smul_apply, LinearMap.add_apply, LinearMap.comp_apply]
+      Units.smul_def]
+    simp only [ModuleCat.hom_zsmul]
     rfl
 
 def Phi (I J : Cx R) (U : Scheme.{0}) (w : ℤ) : Tens I J U w →ₗ[ULift.{1} R] ToType ((P I J).X w |>.obj (op U)) := by

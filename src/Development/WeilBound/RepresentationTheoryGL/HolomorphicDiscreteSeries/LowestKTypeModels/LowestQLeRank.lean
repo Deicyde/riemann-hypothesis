@@ -1,4 +1,7 @@
-import Development.WeilBound.RepresentationTheoryGL.HolomorphicDiscreteSeries.LowestKTypeModels.OfIntegralHolds
+import BuildAid.Leniency.Open
+import Development.WeilBound.CoreStatements.BranchingTraces.ContinuousEmb
+import Development.WeilBound.RepresentationTheoryGL.HolomorphicDiscreteSeries.WeightOccurrence.OccSome
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.ExceptionalGroupG2.HarishChandraMultiplicityBound
 
 noncomputable section
 
@@ -34,7 +37,7 @@ theorem models_holds : Models := by
     · have e1 : UH.symm (σ (um h) x) = σ0 (um h) (UH.symm x) := by
         apply UH.injective
         rw [hUH _ (umat_mem h), LinearIsometryEquiv.apply_symm_apply, LinearIsometryEquiv.apply_symm_apply]
-      simp only [ContinuousLinearMap.comp_apply, LinearIsometryEquiv.coe_coe'', ContinuousLinearEquiv.coe_coe]
+      simp only [ContinuousLinearMap.comp_apply, ContinuousLinearEquiv.coe_coe]
       show UG (j0 (UH.symm (σ (um h) x))) = π (emb e (um h)) (UG (j0 (UH.symm x)))
       have m1 : emb e (um h) ∈ UJset ε := umat_mem (embU hG.fits h)
       rw [e1, hj0, hUG _ m1]

@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TotalEqCurve
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdjacentPullPull
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GeometricallyConnectedOfIsIsoRestrict
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ChernMatrixIsForm
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ChartFormTransitionCompatibleStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ComplexHessianAdjugateDivergenceFreeStatement
@@ -58,7 +55,7 @@ theorem total_dbar_eq_zero_of_compact_chart : ∀ (k : Type) [CommRing k] (X : S
       simp only [hN, Matrix.of_apply, Matrix.zero_apply]
       rw [dbar_congr he, dbar_const]
       rfl
-    simp only [hρ, hN0, mix, Matrix.mul_zero, trace_zero, Complex.zero_re, mul_zero]
+    simp only [hρ, hN0, mix, trace_zero, Complex.zero_re, mul_zero]
 
   set A : Set (V (d + 1)) := c₀.e '' K with hAdef
   have hA : IsCompact A := hK.image_of_continuousOn (c₀.e.continuousOn.mono hKs)

@@ -1,7 +1,6 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.DiscreteSeriesCoefficientsCuspidal
-import PositivityTheory.AutomorphicForms.PublishedInputs.NonzeroTypes.GMain
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.TypesNZeroGDefs
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.LitAut
+import PositivityTheory.AutomorphicForms.PublishedInputs.NonzeroTypes.ScalarOnInertiaProp
 
 set_option maxHeartbeats 800000
 set_option synthInstance.maxHeartbeats 200000
@@ -68,7 +67,7 @@ theorem gMain_alt (h1 : DeterminantVectorProp) (h2 : UnramifiedTwistProp) (h3 : 
     rw [← hx] at hP
     rw [hP]
     refine ⟨hl.1.2 fun y hy => ?_, fun t => ?_⟩
-    · simp only [List.mem_ofFn, Set.mem_range] at hy
+    · simp only [List.mem_ofFn] at hy
       obtain ⟨b, rfl⟩ := hy
       rw [hur b]
       exact (h2 E Ω A w h (u b) _ (hψ b) (hu b)).1

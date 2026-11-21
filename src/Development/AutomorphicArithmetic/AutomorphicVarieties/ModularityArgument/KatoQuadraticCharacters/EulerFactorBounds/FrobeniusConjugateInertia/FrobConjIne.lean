@@ -1,7 +1,10 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.KatoQuadraticCharacters.EulerFactorBounds.SPushPsi
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.GaloisValuations.ArithOfA
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.CyclotomicCharacterFrobV
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CharacterLevelBounds.ClsFacts
+import Development.AbelianVarietyTheory.Definitions.Foundations.FinalTheorems
+import Mathlib.NumberTheory.Padics.HeightOneSpectrum
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.MainNotions.N GlobalTheory.GalOfCusp UpperTheory.V UpperTheory.V.Af UpperTheory.V.HV GlobalTheory.Ord2 GlobalTheory.KZ GlobalTheory.K4 GlobalTheory.KA UpperTheory.Kd.K4 UpperTheory.V.Z.Kato.Sym UpperTheory.V.Z.Kato.Nb
 open scoped Matrix MatrixGroups Classical Pointwise

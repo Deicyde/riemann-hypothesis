@@ -1,6 +1,7 @@
-import Development.WeilBound.ThetaLifts.LatticeBasics.FrameConj
-import Development.AbelianVarietyTheory.Definitions.Foundations.EqPlaceIdemOfIsPrimeIdem
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ValuationAlgebraMapEqOfInertPlace
+import Development.WeilBound.ThetaLifts.LatticeBasics.FrameB
 
 noncomputable section
 

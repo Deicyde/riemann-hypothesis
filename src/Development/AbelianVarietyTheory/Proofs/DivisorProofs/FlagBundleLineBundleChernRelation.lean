@@ -1,21 +1,20 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.LineSCShortExact
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FsOne
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DifferentiableProdPt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CellChart
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EtalePolynomialSubstitution
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleAffinePolynomialCoordsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FirstChernRealClosedStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PointsMapHolomorphicStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FirstChernFormPullbackStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFormOneAddMulSmulStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HolAtlasPullbackEqChartExpression
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HolAtlasIsFormPullbackHolomorphicStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TopDegreeDensityPullbackEqNormSqDetMul
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArithmeticDensityPushforwardIntegral
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCellFrameOfSpans
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleHermitianLinePullbackForm
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ReprEqZeroOfCardNe
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SwapSumSwap
 open CategoryTheory AlgebraicGeometry MvPolynomial MeasureTheory
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open GlobalTheory GlobalTheory.ArInt GlobalTheory.CxForm GlobalTheory.CxPts GlobalTheory.VB GlobalTheory.Cartier GlobalTheory.CovTest GlobalTheory.CovTest.SwapLine GlobalTheory.LineForm
@@ -62,7 +61,7 @@ theorem pull_vol : pull L (vol d : Alt d) =
     (∏ a : Fin d, (Complex.I / 2) • sym (a.castSucc, a.castSucc) : Ev (d + 1)) := by
   refine pull_prod L _ _ _ fun a => ?_
   have e (b : Fin (d + 1)) : L (coordVec b) a = if b = a.castSucc then 1 else 0 := by
-    rw [hL]; simp [coordVec, EuclideanSpace.single_apply, eq_comm]
+    rw [hL]; simp [coordVec, eq_comm]
   rw [Subalgebra.coe_smul, Subalgebra.coe_smul, map_smul]
   congr 1
   change pull L (dz a * dzb a) = dz _ * dzb _
@@ -75,7 +74,7 @@ theorem dens_sym_mul_pull (x : Fin (d + 1) × Fin (d + 1)) (β : Alt d) :
   have hv : (bas d).repr (vol d : Alt d) Finset.univ = c := by simp [e]
   conv_lhs => rw [← (bas d).sum_repr β]
   rw [map_sum, Finset.mul_sum, dens, map_sum, Finsupp.finset_sum_apply, Finset.sum_eq_single Finset.univ _ (by simp)]
-  · simp only [dens, hv, e, map_smul, mul_smul_comm, Finsupp.smul_apply, smul_eq_mul, Module.Basis.repr_self,
+  · simp only [dens, e, map_smul, mul_smul_comm, Finsupp.smul_apply, smul_eq_mul, Module.Basis.repr_self,
       Finsupp.single_eq_same]
     field_simp
   · intro S _ hS
@@ -183,7 +182,7 @@ theorem measurePreserving_prodPt (d : ℕ) :
       (volume_preserving_ofLp_complex (Fin (d + 1)))
   convert h5.comp (h2.comp h1) using 1
   funext z
-  simp [prodPt, MeasurableEquiv.piFinSuccAbove, Fin.insertNth_last', Fin.snocEquiv]
+  simp [prodPt, MeasurableEquiv.piFinSuccAbove, Fin.snocEquiv]
 
 theorem chartMeas_prod {X Y : Type} [TopologicalSpace X] [MeasurableSpace X] [BorelSpace X] [TopologicalSpace Y]
     [MeasurableSpace Y] [BorelSpace Y] {d : ℕ} (e : OpenPartialHomeomorph X (V d))
@@ -500,7 +499,7 @@ theorem dens_fibre {d : ℕ} {u : V (d + 1) → ℝ} {v : V (d + 1)} (hu : ContD
   let ψ : ℂ → V (d + 1) := fun t => prodPt (basePt v) 0 + t • coordVec (Fin.last d)
   have hψ (t : ℂ) : ψ t = prodPt (basePt v) t := by
     ext a
-    induction a using Fin.lastCases <;> simp [ψ, coordVec, EuclideanSpace.single_apply, Fin.castSucc_ne_last]
+    induction a using Fin.lastCases <;> simp [ψ, coordVec, Fin.castSucc_ne_last]
   have hv : ψ (v (Fin.last d)) = v := by rw [hψ, FibTriv.prodPt_basePt]
   have hd : fderiv ℂ ψ (v (Fin.last d)) 1 = coordVec (Fin.last d) := by
     have : HasFDerivAt ψ _ _ := ((hasFDerivAt_id (𝕜 := ℂ) (v (Fin.last d))).smul_const (coordVec (Fin.last d))).const_add _
@@ -578,7 +577,7 @@ theorem local_product : ∀ (k : Type) [CommRing k] (B Y : Scheme.{0}) [IsIntegr
   have hαe : α = (fld _ (c1F hY σ (VMetric.grLB fl 0 (H.pull π w))) +
       (-1 : ℂ) • fld _ (c1F hY σ ((VMetric.grLB flB 0 H).pull π w))) * pullF hB hY σ π w φ := by
     refine congrArg (· * pullF hB hY σ π w φ) (funext fun x => ?_)
-    simp only [evalF, fld, map_sub, map_X, aeval_X, Pi.add_apply, Pi.smul_apply, neg_one_smul, ← sub_eq_add_neg,
+    simp only [evalF, fld, map_sub, map_X, aeval_X, Pi.add_apply, neg_one_smul,
       AddSubgroupClass.coe_sub]
     exact sub_eq_add_neg _ _
   have hαx (x : (hY.atlas σ).Pt) : α x = ((c1F hY σ (VMetric.grLB fl 0 (H.pull π w)) x : Alt (d + 1)) -

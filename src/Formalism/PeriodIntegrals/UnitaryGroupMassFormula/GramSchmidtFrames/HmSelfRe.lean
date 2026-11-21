@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.GramSchmidtFrames.IsotropicSubspaceEqPrimed
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.TwoByOneBlock
 
 open MeasureTheory Formalism.REAL Formalism.QuantumDeterminants Formalism.FourierDecayAlt Formalism.FourierDecayAlt.C6
 open Matrix
@@ -52,7 +55,7 @@ lemma Hb_ct (k : ℕ) : (Hb k)ᴴ = Hb k := by
   · subst h
     simp [Hb, Matrix.conjTranspose_apply]
     try (split_ifs <;> simp)
-  · simp [Hb, Matrix.conjTranspose_apply, Matrix.diagonal_apply, h, Ne.symm h]
+  · simp [Hb, Matrix.conjTranspose_apply, h, Ne.symm h]
 
 lemma re_Hb (k : ℕ) (u : Fin (k + 1) → ℂ) :
     (herm (Hb k) u u).re = (∑ i : Fin k, Complex.normSq (u i.castSucc)) - Complex.normSq (u (Fin.last k)) := by

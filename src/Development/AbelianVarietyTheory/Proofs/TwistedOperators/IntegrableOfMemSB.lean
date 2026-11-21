@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.SimpleSum
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.SimpleSumRowCol
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.PadicIsNonarchimedeanLocalField
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RootExchangeSupportAndFourierRelation
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LinearChangeOfVariablesLocalFieldMatrix
 
@@ -69,7 +68,7 @@ theorem rowE_mul_embX (p : ℕ) (u : n → k) (g : GL n k) :
   simp only [rowE, lowU, embX, Units.val_mul, Units.coe_map, MonoidHom.coe_mk, OneHom.coe_mk,
     fromBlocks_multiply]
   congr 1 <;> simp
-  ext l s; by_cases h : l.val + 1 = p <;> simp [h, Matrix.mul_apply, Matrix.vecMul, dotProduct, Matrix.mulVec, mul_comm]
+  ext l s; by_cases h : l.val + 1 = p <;> simp [h, Matrix.mul_apply, dotProduct, Matrix.mulVec, mul_comm]
 
 theorem colE_mul_embX (p : ℕ) (u : n → k) (g : GL n k) :
     colE c p u * embX c g = embX c g * colE c p ((g⁻¹).val.mulVec u) := by

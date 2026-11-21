@@ -1,8 +1,9 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebraHeight.FinDefs
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebraHeight.DUnit
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebraHeight.DLiftIdem
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebraHeight.DIdemRank
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebraHeight.HomTwo
+import Mathlib.RingTheory.SimpleRing.Principal
 
 open TensorProduct IsLocalRing Polynomial UpperTheory.V.W UpperTheory.V.Alg UpperTheory.V.CA
 
@@ -40,7 +41,7 @@ theorem UpperTheory.V.CA.f_gma :
     refine (isUnit_one.neg.pow n).mul ?_
     refine (isUnit_map_iff (algebraMap B k) _).1 ?_
     rw [← coeff_map, hchi, hx, coeff_zero_eq_eval_zero, isUnit_iff_ne_zero]
-    simp [eval_prod]
+    simp
   have hk : ∀ x, π x = 0 → x ∈ Ring.jacobson E := by
     intro x hx
     rw [← Ideal.jacobson_bot, Ideal.mem_jacobson_iff]

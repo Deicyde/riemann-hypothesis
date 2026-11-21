@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CosetVecEq
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.IdemSplit
 import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.InfFam
+import Development.AbelianVarietyTheory.Definitions.Divisors.FinitePrimesUnder
 
 noncomputable section
 

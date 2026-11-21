@@ -1,8 +1,8 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.CuspidalDiscreteness.CuspFormsDiff
-import GroundTheory.AutomorphicForms.CuspidalDiscreteness.ExistsNormRconvLeSiegel
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.NormDetDiagUnitsPosRealToUnits
-import GroundTheory.AutomorphicForms.AutomorphicFormSpaces
+import GroundTheory.AutomorphicForms.AutomorphicFormSpaces.GKStable
+import GroundTheory.AutomorphicForms.ReductionSplitting
 
 open NumberField IsDedekindDomain Topology Filter Set MeasureTheory
 open scoped NumberField.AdeleRing Pointwise

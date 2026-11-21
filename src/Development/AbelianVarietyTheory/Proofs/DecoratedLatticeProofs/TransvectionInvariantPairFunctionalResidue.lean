@@ -1,4 +1,6 @@
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.NormOneAtOne
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.ExistsGlOfEquiv
+import Formalism.LocalRingCardinality.DataHost
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.S Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes MeasureTheory IsDedekindDomain NumberField Matrix Formalism.L2.Theta Formalism.L2.DIV Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.Lev Formalism.IndefR.Mult Formalism.IndefR.Datum Formalism.IndefR.AutomorphicEvaluation Formalism.L2.SG.HidaSetting Formalism.L2.SG.PoincareInHH.PoincareSetting Formalism.L2.SG.RowDict Formalism.L2.SG.RowsJoinPinned GlobalTheory.MixModel GlobalTheory.MixPer GlobalTheory.Unf GlobalTheory.Core.Rk GlobalTheory.Core.Mi
 open scoped TensorProduct InnerProductSpace Classical
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
@@ -18,7 +20,7 @@ theorem latPair_hasVal_residue_of_transvections : ∀ (k : Type) [Field k] [Valu
     intro b j
     by_cases h : j = b
     · subst h; simp [he_def, hc]
-    · simp [he_def, Pi.single_apply, h]
+    · simp [he_def, h]
   have hmem : ∀ b, e b ∈ P.lat := fun b => (hlat _).2 (fun j => by
     rw [hcoef]
     by_cases h : j = b
@@ -34,7 +36,7 @@ theorem latPair_hasVal_residue_of_transvections : ∀ (k : Type) [Field k] [Valu
       funext j
       by_cases h : j = a
       · subst h; simp [he_def]
-      · simp [he_def, Pi.single_apply, h]
+      · simp [he_def, h]
     rw [h2] at h1
     have h3 := h1.sub (hv i)
     rw [add_sub_cancel_left, sub_self] at h3
@@ -59,7 +61,7 @@ theorem latPair_hasVal_residue_of_transvections : ∀ (k : Type) [Field k] [Valu
         field_simp
       · intro b _ hb
         change ((s b : 𝒪[k]) : k) * (c * (Pi.single b (1:k) : n → k) j) = 0
-        simp [Pi.single_apply, Ne.symm hb]
+        simp [Ne.symm hb]
       · simp
     have := hsum s Finset.univ
     rw [hx', Finset.sum_eq_single i (fun b _ hb => by rw [hzero b hb, mul_zero]) (by simp)] at this

@@ -1,7 +1,6 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.CechFam
-import Development.AbelianVarietyTheory.Definitions.QuasicoherentCohomology.FiniteCohPushforwardIffOfIsClosedImmersion
-import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.CechModulesFunctorShortExactOfIsAffineOpen
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsSubsingletonCohTwistTensLbPow
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsEulerContraction
 open CategoryTheory AlgebraicGeometry TopologicalSpace Limits
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open GlobalTheory GlobalTheory.Cartier GlobalTheory.LogDR
@@ -162,7 +161,7 @@ def latModel : LatModel M (toMod hM) where
   inj U _ s t e := sv_ext M fun _ => e
   range U h := by
     ext v
-    simp only [AddMonoidHom.mem_range, AddMonoidHom.coe_mk, ZeroHom.coe_mk, latSec,
+    simp only [AddMonoidHom.mem_range, latSec,
       AddSubgroup.mem_iInf]
     constructor
     · rintro ⟨s, rfl⟩ y hy

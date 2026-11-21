@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.PredMemGamRanks
-import Formalism.LocalToGlobal.Columns.PolyFnLemmas
+import Formalism.LocalToGlobal.Columns.ColFormsLemmas
+import Mathlib.Analysis.Fourier.FiniteAbelian.PontryaginDuality
 
 noncomputable section
 

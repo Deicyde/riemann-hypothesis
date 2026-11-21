@@ -1,9 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.DivisionRowsRationalLattice
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ProjectionLattices.FinrankIntertw
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ProjectionLattices.IsIntegralTraceOfPow
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ProjectionLattices.MajAtZeroRight
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ProjectionLattices.StarMapTraceOfPowEqOne
+import Mathlib.Tactic.ENatToNat
 
 noncomputable section
 

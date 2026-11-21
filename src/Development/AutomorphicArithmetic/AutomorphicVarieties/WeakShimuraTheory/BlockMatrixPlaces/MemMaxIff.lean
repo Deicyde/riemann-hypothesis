@@ -1,6 +1,7 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.BlockMatrixPlaces.BlockDiagonalOrdinaryGSpRep
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.BlockMatrixPlaces.CcNeg
 import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.LMemMax
+import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.NearSplit
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual Formalism.HC ReciprocityTheory.Gal IsLocalRing Polynomial UpperTheory.V.Base UpperTheory.V.Alg UpperTheory.V.HV UpperTheory.V.GradeZeroInterpolatingElement UpperTheory.V.Ws UpperTheory.V.Ws.Bl
 
@@ -21,7 +22,7 @@ private theorem gsp_of_map {A B : Type} [CommRing A] [CommRing B] (f : A →+* B
   have e := congrFun (congrFun h i) j
   rw [Matrix.map_apply] at e
   rw [e]
-  by_cases hij : i = j <;> simp [Matrix.one_apply, hij]
+  by_cases hij : i = j <;> simp [hij]
 
 private theorem gsp_ex {A B : Type} [CommRing A] [CommRing B] (f : A →+* B) (hf : Function.Injective f) (ν : B) (X : M4 A)
     (h : IsGSp ν (X.map f)) : ∃ ν', IsGSp ν' X := by

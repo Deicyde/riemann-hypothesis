@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.LeafLevelPf
 
 noncomputable section
@@ -9,12 +11,12 @@ theorem pullK_comp {K L M : Cx R} (f : K ⟶ L) (g : L ⟶ M) (F : Shv R) (n : �
     HK.pull R (f ≫ g) F n x = HK.pull R f F n (HK.pull R g F n x) := by
   obtain ⟨x, rfl⟩ := x.mk_surjective
   refine congrArg CohomologyClass.mk (Cocycle.ext ?_)
-  simp [HK.pull, HK.pre, cpre, zcomp, Cochain.ofHom_comp]
+  simp [zcomp, Cochain.ofHom_comp]
 
 theorem pullK_id {K : Cx R} (F : Shv R) (n : ℤ) (x : HK R K F n) : HK.pull R (𝟙 K) F n x = x := by
   obtain ⟨x, rfl⟩ := x.mk_surjective
   refine congrArg CohomologyClass.mk (Cocycle.ext ?_)
-  simp [HK.pull, HK.pre, cpre, zcomp]
+  simp [zcomp]
 
 abbrev Ch (P : PSh) : Cx R := (chains R).obj (disc.obj P)
 
@@ -42,7 +44,7 @@ theorem d_zero (P : PSh) : (Ch R P).d (-1) 0 = 0 := by
     change (AlgebraicTopology.AlternatingFaceMapComplex.obj _).d (0+1) 0 = 0
     rw [AlgebraicTopology.AlternatingFaceMapComplex.obj_d_eq]
     rw [Fin.sum_univ_two]
-    simp only [Fin.val_zero, Fin.val_one, Fin.isValue, pow_zero, pow_one, one_smul, neg_smul, one_zsmul, neg_one_zsmul]
+    simp only [Fin.val_zero, Fin.val_one, Fin.isValue, pow_zero, pow_one, one_smul, neg_smul]
     exact add_neg_cancel _
   rw [this]; simp
 

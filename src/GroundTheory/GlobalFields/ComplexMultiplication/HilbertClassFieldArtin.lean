@@ -1,10 +1,9 @@
-import Mathlib
-import GroundTheory.GlobalFields.ComplexMultiplication.HilbertClassFieldModels
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.ClassFieldConsequences.HilbertClassField
 import GroundTheory.GlobalFields.TateThesis.Chebotarev
-import GroundTheory.GlobalFields.Artin.InflationTower
 import GroundTheory.GlobalFields.Artin.OneDim
-import GroundTheory.GlobalFields.CompletionAtPlace.Inertia
+import GroundTheory.GlobalFields.ComplexMultiplication.FrobeniusAtPrimes
 
 namespace GroundTheory.Global
 namespace Elliptic

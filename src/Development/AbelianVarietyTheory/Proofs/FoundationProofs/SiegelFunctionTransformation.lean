@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.Imports
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasQIff
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.SmoothedSiegelUnitModularSSmulStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.SmoothedSiegelUnitModularGroupTSmulStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.AdmissibleOfSl2ActionStatement

@@ -1,12 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MeasurePreservingMulRight
-import Development.AbelianVarietyTheory.Statements.HeckeThetaIntegrals.StepUnfold
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsDefiniteOfAllPlus
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.FiniteDimUnitaryKTypeEqDualWeylModule
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.TensorWeylModuleMapsInjectiveOnPureSpan
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.EqZeroOfFockSSelf
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.TrueColumnsBranchingMapEquivariantNonzeroCommon
-import Formalism.GradedWeylDivisibility.FinalD
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.DIV
 open GlobalTheory.ChiGrid GlobalTheory.RowReal GlobalTheory.IndefiniteRowSideFullHecke.MinorOrderedEntries
 open scoped TensorProduct Matrix
@@ -49,7 +45,7 @@ theorem step {n : ℕ} (lamH : Fin n → ℝ) (hH : StrictAnti lamH) (lam : ℕ 
   have h2 := lam_eq lamH lam hl ⟨a + 1, ha⟩
   have h3 : lamH (Fin.rev ⟨a, by omega⟩) < lamH (Fin.rev ⟨a + 1, ha⟩) :=
     hH (by rw [Fin.rev_lt_rev]; simp [Fin.lt_def])
-  simp only [Fin.val_mk] at h1 h2
+  simp only at h1 h2
   have h4 : ((lam (a + 1) : ℤ) : ℝ) < (lam a : ℝ) + 1 := by rw [h1, h2]; push_cast; linarith
   have h5 : lam (a + 1) < lam a + 1 := by exact_mod_cast h4
   omega

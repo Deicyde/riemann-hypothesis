@@ -1,11 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.LocalLanglands.RecTTransport
 import Development.AutomorphicArithmetic.Foundations.LocalLanglands.Multi
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DualClassCuspidalStatement
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DualClassInvolutive
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DualClassTwistNeg
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.AlgebraMapIntertwiningMapBijectiveOfIsSmooth
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ApplyMemTwKerOfNormalizer
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.ExhUnipRadOne
 
 noncomputable section
 

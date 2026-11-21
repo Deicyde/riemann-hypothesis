@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StPtsPosPartProjIndep
+import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StokesObjects
 set_option maxSynthPendingDepth 1
 
 noncomputable section

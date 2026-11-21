@@ -1,6 +1,5 @@
-import ReciprocityTheory.GeometryOfNumbers.LatticeCovolumes.ArakelovDegreeEqDegreeOfFamily
-import ReciprocityTheory.GeometryOfNumbers.LatticeCovolumes.CountZSt
-import ReciprocityTheory.GeometryOfNumbers.LatticeCovolumes.EllipsoidSt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.GeometryOfNumbers.LatticeCovolumes.CountStC
 
 namespace ReciprocityTheory.GeometryOfNumbersTheory

@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.FormModel
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.PositiveDensityModerateGrowth
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.DilationUnipotentWeylMeasure
 
 open Matrix MeasureTheory
 open scoped ContDiff

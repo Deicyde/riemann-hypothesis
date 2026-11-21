@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.HermitianCurvature.StatementTBB
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CccoefMono
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.OpApplyContinuousOn
 

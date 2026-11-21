@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SpanEqTopIffDense
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.TotallySplit
 
 namespace GlobalTheory.MoritaLocal
 
@@ -122,7 +126,7 @@ theorem morita_local : ∀ (R : Type) [CommRing R] (I : Ideal R), IsLocalRing (R
     funext l
     by_cases hl : l = i
     · subst hl; simp
-    · simp [Pi.single_apply, hl]
+    · simp [hl]
   have hΦO : ∀ (o : O) (x : M), Φ (o • x) = o • Φ x := by
     intro o x
     choose r hr using fun i j => Ideal.Quotient.mk_surjective (I := I) (φ o i j)

@@ -1,12 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.DatumVec
-import Formalism.LocalToGlobal.BesselHermitianTheta.TiedBessel
-import Formalism.LocalToGlobal.BesselHermitianTheta.LemmasWeil
-import Formalism.LocalRingCardinality.SpanPowerMembership.Spaces
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.ComplexEmbeddingHermitianQuadrupleSum
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.ExistsNormaliseMeanSquareOfCocompact
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.EmbeddingXiZeroNeZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.CovolOneIntegralAdd
+import Mathlib.Data.Matrix.ColumnRowPartitioned
 
 noncomputable section
 

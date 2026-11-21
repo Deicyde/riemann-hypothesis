@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.SiegelWeilActions.CBUnitary
+import Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.SiegelWeilActions.DMEqDiag
 
 noncomputable section
 
@@ -66,7 +69,7 @@ theorem cB_dM (hem : ∀ j, em j ≠ i₀) (u v : Fin k → R) (z x y : R) (hxy 
       · simp [ha]
     · by_cases hb : b = i₀
       · subst hb
-        simp only [if_neg hab, if_true, if_neg hab, zero_sub]
+        simp only [if_true, if_neg hab, zero_sub]
         ring
       · simp [hb, hab]
 

@@ -1,8 +1,8 @@
-import Formalism.HermitianCurvature.StatementG
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.PhaseFunctionCriticalPoints
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.OrbitalIntegralConvergesAbs
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.FourierUniquenessMirabolic
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CuspidalIrreducibleSubrep
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.Analysis.Calculus.Deriv.Pi
 
 section PartA
 

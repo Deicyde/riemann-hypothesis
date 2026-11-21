@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ArchimedeanSchwartz.NormChar
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsIsUnitaryTwistAbsPow
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIdelicAbsValueCpowCharacter
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CuspidalLetterCentralExponentProperties
 
 open NumberField IsDedekindDomain Polynomial Formalism.L2.Host GlobalTheory.CuspRep GlobalTheory.HenQ UpperTheory.V
@@ -40,7 +41,7 @@ private theorem sum_shift {ι : Type} [Fintype ι] (m : ι → Multiset ℂ) (z 
     (∑ τ, (m τ).map (· + z)).map (· - z) = ∑ τ, m τ := by
   rw [← Multiset.mapAddMonoidHom_apply, map_sum]
   refine Finset.sum_congr rfl fun τ _ => ?_
-  simp [Multiset.map_map, Function.comp_def]
+  simp [Multiset.map_map]
 
 end UpperTheory.V.Z.Inf
 

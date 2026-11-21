@@ -1,5 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DefsRep
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.InPApplyEqZero
+import Mathlib.Analysis.Normed.Algebra.MatrixExponential
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 

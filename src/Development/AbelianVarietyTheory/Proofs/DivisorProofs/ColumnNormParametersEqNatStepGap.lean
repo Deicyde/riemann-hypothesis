@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsClassFam
 import Formalism.LocalToGlobal.Divisibility.NumbersLemmas
 open Formalism.BasicNotions Formalism.MainNotions Formalism.L2.DIV

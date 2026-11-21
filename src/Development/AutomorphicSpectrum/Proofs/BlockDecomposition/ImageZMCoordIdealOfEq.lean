@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.ArakelovCycleHeights.QpSndStr
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ResidueDegreeOfIsClosedImmersion
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ArFormExists
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsPullHermPullLine
 open CategoryTheory AlgebraicGeometry Limits TopologicalSpace MvPolynomial
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -50,7 +49,7 @@ theorem imageZ_mCoordIdeal_of_eq (κ : K → K') (hκ : Function.Injective κ) (
       refine MvPolynomial.ringHom_ext (fun r => ?_) (fun p => ?_)
       · simp
       · simp only [ψ, Geo.mConeMap, RingHom.comp_apply, AlgHom.toRingHom_eq_coe, RingHom.coe_coe, aeval_X,
-          rename_X, map_mul, map_C, map_X, scaleT, algHom_C, rename_C]
+          rename_X, map_mul, map_C, map_X, scaleT, algHom_C]
         rw [hv p, h p]
         simp only [MvPolynomial.algebraMap_eq, rename_C]
         rw [← mul_assoc, ← C_mul, mul_comm (b p.1), mul_assoc, mul_inv_cancel₀ (hb p.1), mul_one]

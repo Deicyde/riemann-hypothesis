@@ -1,5 +1,5 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.Counts
-import Development.AutomorphicArithmetic.AutomorphicVarieties.GeneratorCountTuples.LemmaK
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.DirichletPrimeToLPartMulLPowerPart
 
 noncomputable section
 

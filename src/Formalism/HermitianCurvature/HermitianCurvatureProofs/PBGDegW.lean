@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.PBGWave
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.LagrangeExtraction
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.PBFVnice
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.PBGCongr
 
 open Matrix Finset
 open scoped ComplexConjugate

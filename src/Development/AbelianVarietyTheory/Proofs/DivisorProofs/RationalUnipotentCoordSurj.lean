@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoC
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TripleAdaptedPlaneLocalFactor
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentCoordinateAdditive
 open scoped TensorProduct NNReal Matrix
@@ -71,7 +71,7 @@ theorem eich_unitary (hc : ∀ r, c (c r) = r) (hJ : ∀ i j, c (J j i) = -J i j
   rw [hv]
   change _ = sf c J u v'
   rw [eich_mulVec, eich_mulVec]
-  simp only [sf_sub_left, sf_smul_left, sf_sub_right, sf_smul_right, map_mul, map_sub, hxx, hxw, hwx]
+  simp only [sf_sub_left, sf_smul_left, sf_sub_right, sf_smul_right, map_mul, hxx, hxw, hwx]
   rw [sf_skew c J hc hJ x v', sf_skew c J hc hJ w v']
   linear_combination (sf c J u x * c (sf c J v' x)) * hk
 

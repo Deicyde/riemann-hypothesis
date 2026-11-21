@@ -1,5 +1,6 @@
-import Formalism.LocalToGlobal.CharacterGerms.RowTieDefs
-import Formalism.LocalToGlobal.CharacterGerms.RowTieCartFB
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.CharacterGerms.ConstMemTypeSetOfNonneg
 
 set_option autoImplicit false
 

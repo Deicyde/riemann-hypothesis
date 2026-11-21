@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataAmbForm
+import Mathlib.LinearAlgebra.LinearIndependent.BaseChange
 
 noncomputable section
 

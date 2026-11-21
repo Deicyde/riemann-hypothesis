@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.WeylAlgebraQuantumDet.IsTop
-import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.WeylAlgebraQuantumDet.CoefDiff
+import Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.MvPolynomial
 
 open Matrix UpperTheory.V.Weyl
 

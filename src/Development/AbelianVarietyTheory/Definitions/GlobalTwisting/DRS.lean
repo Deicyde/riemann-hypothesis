@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.APerTw
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.DivRows3GIff
-import Formalism.LocalToGlobal.FiniteTOf
+import Formalism.LocalToGlobal.PtKOfReal
 
 noncomputable section
 

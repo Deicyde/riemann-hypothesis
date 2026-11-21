@@ -1,6 +1,9 @@
-import Formalism.LocalToGlobal.Columns.WmLemmas
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.FlagUnipotentLattices.IdealCountLeWAsm
 import Lemmata.GeneralBFactRightMore.Imports
+import Formalism.LocalToGlobal.Columns.GenericUnipotentCharacter
+import Formalism.LocalToGlobal.Columns.HeckeSpCount
 
 noncomputable section
 

@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.RamifiedCurveKernels.StatementH
 import Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.PhNormFromDatum
+import Mathlib.RingTheory.MvPowerSeries.Rename
 
 noncomputable section
 open scoped BigOperators
@@ -81,7 +83,7 @@ theorem coeff_inBlock_embDomain {K : Type} [Field K] {ι B : Type} (k : B) (f : 
   · intro b hb hbk
     exfalso
     apply hbk
-    simp only [Set.Finite.mem_toFinset, Set.mem_preimage, Set.mem_singleton_iff, Set.mem_setOf_eq] at hb
+    simp only [Set.Finite.mem_toFinset, Set.mem_preimage, Set.mem_singleton_iff] at hb
     exact Finsupp.mapDomain_injective (blockEmb B ι k).injective hb
   · intro hκ
     exfalso

@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LatticeReferenceFrame.IdemLiftOfSteps
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalEndomorphisms.HenselRoot
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 noncomputable section
 
@@ -75,10 +76,10 @@ theorem locIdem : LocIdem := by
     simp only [map_add, map_sub, map_mul, map_pow, map_one, map_ofNat] at e
     exact e
   · have e := congrArg (v.adicCompletionIntegers F).subtype hB
-    simp only [map_add, map_sub, map_mul, map_pow, map_one, map_ofNat, map_neg] at e
+    simp only [map_add, map_sub, map_mul, map_pow, map_one, map_neg] at e
     exact e
   · have e := congrArg (v.adicCompletionIntegers F).subtype hC
-    simp only [map_add, map_sub, map_mul, map_pow, map_one, map_ofNat, map_zero] at e
+    simp only [map_add, map_sub, map_mul, map_pow, map_one, map_zero] at e
     exact e
 
 end PI.ScRefExists.Id

@@ -1,9 +1,11 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.IsBergDensity
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.SectionModuleEqSpanPow
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.AParamSt
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.ABridgeStA
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.ABridgeStB
 import ReciprocityTheory.GeometryOfNumbers.PluriharmonicAnalysis.BergmanDerivSt
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.Analysis.Matrix.PosDef
 
 noncomputable section
 
@@ -278,13 +280,13 @@ theorem ae_secFun_change {x : Ix κ → Ω} {m : ConeMetric ℂ (Ix κ)} {μ : M
   have hd0 : aeval x d = 0 := by
     have e1 : aeval x f' = aeval x (b' k) := by rw [hf', hcast]
     have e2 : ∀ l, aeval x (f l) = aeval x (b l) := fun l => by rw [hf l, hcast]
-    simp only [d, map_sub, map_sum, map_mul, aeval_C, algebraMap_int_eq, eq_intCast, map_intCast, e1, e2]
+    simp only [d, map_sub, map_sum, map_mul, eq_intCast, map_intCast, e1, e2]
     rw [← hA k, sub_eq_zero]
     exact Finset.sum_congr rfl fun l _ => zsmul_eq_mul _ _
   filter_upwards [hpts] with z hz
   have h := secFun_eq_zero_of_pts hdh hd0 hz
   rw [secFun_map_int] at h
-  simp only [d, map_sub, map_sum, map_mul, map_C, eval_sub, eval_sum, eval_mul, eval_C, eq_intCast,
+  simp only [d, map_sub, map_sum, map_mul, eq_intCast,
     map_intCast] at h
   rw [hf', secFun_map_int]
   simp only [Matrix.of_apply, hf, secFun_map_int]

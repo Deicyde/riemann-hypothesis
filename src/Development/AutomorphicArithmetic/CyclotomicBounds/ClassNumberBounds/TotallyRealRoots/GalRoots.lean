@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
 import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.TotallyRealRoots.GalDefs
-import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.TotallyRealRoots.PrincTop
+import Mathlib.FieldTheory.Galois.Profinite
+import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
+import Mathlib.Topology.Connected.Separation
+import Mathlib.Topology.MetricSpace.Ultra.TotallySeparated
 
 namespace KStar.TotallyRealRoots
 
@@ -23,8 +27,7 @@ theorem eps_mem_princ_iff [CharZero E] (g : Gal(AlgebraicClosure E/E)) (n : ℕ)
   have key : eps l E g ∈ princ l n ↔
       (modularCyclotomicCharacter L hn σ : ZMod (l ^ n)) = 1 := by
     rw [← cyclotomicCharacter.toZModPow]
-    simp only [princ, redPow, MonoidHom.mem_ker, Units.ext_iff, Units.coe_map, Units.val_one,
-      map_one]
+    simp only [princ, redPow, MonoidHom.mem_ker, Units.ext_iff, Units.coe_map, Units.val_one]
     rfl
   have hpow : ∀ {M : Type _} [Monoid M] (a : M), a ^ l ^ n = 1 →
       a ^ (1 : ZMod (l ^ n)).val = a := by

@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.CayleyDegreeNondegeneracy.DegIsFdegCayley
+import Formalism.SharpRestriction.CuspSpanNormBounds.CayleyDegreeNondegeneracy.FamilyStatementOfAbsAndVandermonde
 
 noncomputable section
 
@@ -29,8 +31,8 @@ theorem deg_hc_add_single {n : ℕ} {μ : Fin n → ℝ} (h : IsHCParam μ) (hg 
   · have h1 := h.1 hab
     have h2 := hg a b (ne_of_lt hab)
     rw [abs_of_pos (by linarith)] at h2
-    have ha : (0 : ℝ) ≤ (Pi.single s (1 : ℝ) : Fin n → ℝ) a := by by_cases e : a = s <;> simp [Pi.single_apply, e]
-    have hb : (Pi.single s (1 : ℝ) : Fin n → ℝ) b ≤ 1 := by by_cases e : b = s <;> simp [Pi.single_apply, e]
+    have ha : (0 : ℝ) ≤ (Pi.single s (1 : ℝ) : Fin n → ℝ) a := by by_cases e : a = s <;> simp [e]
+    have hb : (Pi.single s (1 : ℝ) : Fin n → ℝ) b ≤ 1 := by by_cases e : b = s <;> simp [e]
     simp only [Pi.add_apply]
     linarith
   · obtain ⟨m, hm⟩ := h.2 a

@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.BaseDataEmbeddingConj
-import Formalism.LocalToGlobal.Columns.BaseLemmas
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ProdAbsNormDivsDvd
 
 open Formalism.BasicNotions NumberField IsDedekindDomain GlobalTheory.Mem

@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.ThPinsR
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.FWTie
 import Formalism.LocalToGlobal.ProjectiveLattices.ThClassPins
 

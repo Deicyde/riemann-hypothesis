@@ -1,9 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.PartsGiveDimension
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.HeckeGaloisLocalWeights
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.HeckeGaloisLocalWeightsDeRham
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.TypeConditions.GoodRCongr
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.TypeConditions.SplitBCOfGalIso
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.TypeConditions.DistinctAbsIrredConstituents
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.TypeConditions.TraceOfCharpoly
 open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formalism.ConjugateSelfDual ReciprocityTheory.Gal NumberField IsDedekindDomain Polynomial
 
@@ -23,9 +21,9 @@ theorem isoLoc_perm (D : D7) {Pa Pa' : List (Part D.naut.CG)} (h : Pa.Perm Pa') 
   unfold isoLoc
   induction h with
   | nil => rfl
-  | cons x _ ih => simp only [List.foldr_cons, List.map_cons] at ih ⊢; rw [ih]
+  | cons x _ ih => simp only [List.foldr_cons] at ih ⊢; rw [ih]
   | swap x y l =>
-    simp only [List.foldr_cons, List.map_cons]
+    simp only [List.foldr_cons]
     rw [← D.naut.lpSum_assoc, ← D.naut.lpSum_assoc, D.naut.lpSum_comm (spehLoc _ _ y w)]
   | trans _ _ a b => exact a.trans b
 
@@ -117,7 +115,7 @@ theorem crys_unram_of_lgc (D : D7) (htie : SumRepresentations.tie0 D) (hadm : Su
       rw [e, map_mul, map_mul, h2, mul_one, ← map_mul, mul_inv_cancel, map_one]
     apply Units.ext
     have h4 := congrArg (fun u : GL (Fin D.R.nV) (Qbar (D.nd.l i)) => u.val) h3
-    simp only [mapRep, MonoidHom.comp_apply, Units.coe_map, MonoidHom.coe_coe, Units.val_one] at h4
+    simp only [mapRep, MonoidHom.comp_apply, Units.coe_map, Units.val_one] at h4
     refine Matrix.map_injective (SumRepresentations.iotaOQ_injective D.nd D.naut i) ?_
     show (r x σ).val.map (iotaOQ D.nd D.naut i) = (1 : Matrix (Fin D.R.nV) (Fin D.R.nV) (D.nd.O i)).map (iotaOQ D.nd D.naut i)
     rw [Matrix.map_one _ (map_zero _) (map_one _)]

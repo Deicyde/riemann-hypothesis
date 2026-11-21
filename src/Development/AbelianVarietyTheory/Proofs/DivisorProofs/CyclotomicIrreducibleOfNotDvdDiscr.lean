@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import ReciprocityTheory.Chebotarev.CyclotomicIrreducibleOfForallIsUnramifiedAt
+import Mathlib.NumberTheory.NumberField.Discriminant.Different
 
 namespace GlobalTheory
 

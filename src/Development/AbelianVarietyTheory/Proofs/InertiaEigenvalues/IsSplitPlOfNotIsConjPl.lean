@@ -1,7 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.ArithmeticCylinders
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.LabelDatum
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsCharLab
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
 
 open GlobalTheory.GLq GlobalTheory.GLp Formalism.MainNotions.ArithmeticCylinders Polynomial NumberField
 open scoped Classical

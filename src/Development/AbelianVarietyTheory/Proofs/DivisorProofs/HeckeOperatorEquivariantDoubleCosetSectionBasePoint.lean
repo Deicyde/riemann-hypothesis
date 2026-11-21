@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinPtHomApply
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RelIndexProd
-import Development.AbelianVarietyTheory.Definitions.Foundations.SmoothPartStable
 open NumberField IsDedekindDomain Matrix Polynomial Filter GlobalTheory.CuspRep GlobalTheory.PRep Formalism.UG Formalism.BasicNotions GlobalTheory.UnitaryBC Formalism.L2.Host GlobalTheory.BCT GlobalTheory.BCT.TraceBlocks
 open scoped Classical TensorProduct
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
@@ -44,7 +43,7 @@ theorem levOp_secM_apply_self : ∀ (G H V : Type) [Group G] [Group H] [AddCommG
       rw [hcond] at hc
       rw [← hout, hc]; exact hq
   rw [Finset.sum_congr rfl fun q hq => by rw [hin q hq]]
-  simp only [LinearMap.sum_apply, Finset.sum_apply, ite_apply, LinearMap.zero_apply, Finset.smul_sum]
+  simp only [LinearMap.sum_apply, Finset.smul_sum]
   rw [Finset.sum_comm]
   refine Finset.sum_congr rfl fun h hh => ?_
   simp only [Set.Finite.mem_toFinset, Set.mem_setOf_eq] at hh

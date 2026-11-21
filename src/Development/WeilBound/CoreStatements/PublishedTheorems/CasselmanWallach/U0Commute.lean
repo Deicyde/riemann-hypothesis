@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PublishedTheorems.CasselmanWallach.FunctionalCalculusLaws
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.UnitaryGroupStatement
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.ParabolicUnipotentGL
+import Mathlib.Algebra.Order.Ring.Star
 
 noncomputable section
 

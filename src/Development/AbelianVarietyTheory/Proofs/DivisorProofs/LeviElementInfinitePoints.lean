@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLeviLeviElt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IdelesInf
@@ -36,7 +35,7 @@ theorem leviElt_mat (σ : E →ₐ[F] E) (B : Base F E) (hcm : IsCMExt F E σ) {
       fm c (incM F W.J) (fun i => incM F H'.ι i j) (incV F H'.y) = 0 := by
     intro j
     have hcol : (fun i => incM F H'.ι i j) = incV F (H'.ι *ᵥ Pi.single j 1) := by
-      ext i; simp [incV, incM, Matrix.mulVec_single_one]
+      ext i; simp [incV, incM]
     rw [hcol, fm_inc, fm_inc, (hH.orth _).1, (hH.orth _).2, map_zero]; exact ⟨rfl, rfl⟩
   let L : AE F E → AE F E → Matrix (Fin d) (Fin d) (AE F E) :=
     fun s r => lev c (incM F W.J) (incV F H'.x) (incV F H'.y) s r
@@ -153,7 +152,7 @@ theorem leviElt_arch : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [Num
     ext i j
     simp only [torMat, projL, Matrix.add_apply, Matrix.sub_apply, Matrix.smul_apply, Matrix.vecMulVec_apply, smul_eq_mul,
       Matrix.mulVec, Matrix.vecMul, dotProduct, map_sum, map_mul, incV, incM, Matrix.map_apply, piInf_inclR,
-      AlgHom.coe_toRingHom, cA_inclR, Pi.star_apply, hst]
+      Pi.star_apply, hst]
     have hτc : τ.1 c ≠ 0 := (map_ne_zero _).2 hc
     have hs1 : ∀ k, star (τ.1 c⁻¹ * τ.1 (H'.y k)) * (τ.1 c * τ.1 (σ (W.J k j))) = τ.1 (W.J j k) * τ.1 (σ (H'.y k)) := by
       intro k

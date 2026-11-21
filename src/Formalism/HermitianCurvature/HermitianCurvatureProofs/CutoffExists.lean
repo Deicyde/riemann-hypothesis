@@ -1,5 +1,5 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.PbWords
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.RightAverageSmoothComm
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.SlicesFiniteRegularityBuilt
 
 open Matrix

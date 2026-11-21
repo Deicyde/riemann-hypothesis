@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.FiltrationSaturationKiller
-import Formalism.SharpRestriction.LevelLetterCocycles.KillerSecondTheoremHolds
 import Formalism.SharpRestriction.LevelLetterCocycles.FrobeniusPowUniformizerFactorisation
 
 noncomputable section

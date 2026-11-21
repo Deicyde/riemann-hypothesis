@@ -1,4 +1,7 @@
-import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.CmpHyp0P
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.LatticeComparisonCompatible
+import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.ValUniqOf
 
 noncomputable section
 

@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsL2OnDiagonalOfIsL2Metric
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CharChPartZero
 
 set_option autoImplicit false
 
@@ -31,12 +32,12 @@ theorem unshear_fst : unshear A ≫ fst A A = fst A A := lift_fst _ _
 theorem shear_unshear : shear A ≫ unshear A = 𝟙 _ := by
   refine CartesianMonoidalCategory.hom_ext _ _ ?_ ?_
   · simp [shear, unshear]
-  · simp [shear, unshear, comp_mul, ← mul_assoc]
+  · simp [shear, unshear, comp_mul]
 
 theorem unshear_shear : unshear A ≫ shear A = 𝟙 _ := by
   refine CartesianMonoidalCategory.hom_ext _ _ ?_ ?_
   · simp [shear, unshear]
-  · simp [shear, unshear, comp_mul, GrpObj.comp_inv, ← mul_assoc]
+  · simp [shear, unshear, comp_mul, GrpObj.comp_inv]
 
 theorem diag_shear : lift (𝟙 A) (𝟙 A) ≫ shear A = unitPair A := by
   refine CartesianMonoidalCategory.hom_ext _ _ ?_ ?_

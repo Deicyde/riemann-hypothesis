@@ -1,24 +1,6 @@
-import Mathlib
-import Formalism.HermitianCurvature.StatementJCT
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.UnipotentCoordinatesMeasurePreserving
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.ComponentFamilySettingOfSetting
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.TheoremPIntegralOfPlaces
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CorollaryU1Plain
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.SeminormCompletion
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.RegularisedPairingViaPhase
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BetaSesquilinearity
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.ComposeDifferentialOperators
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnipotentComposition.Development
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnipotentComposition.DegPderivMul
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnipotentComposition.Expand
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CvRhoOfParts
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.SymmetricScalarBlockMatrixMul
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LevelFormSesquilinearFiniteClass
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.DerivativeBoundInBanachSpace
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.AdditiveCharacterPsi
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CompactlySupportedBanachModel
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.PhiBoundPartsOfRadicalParametrisation
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.WirtingerIntegrationByParts
 
 namespace Formalism.FourierDecayAlt.P.JCTx6
 
@@ -449,7 +431,7 @@ theorem lowV_liftVec {k i ρ j : ℕ} (hj : j = i) (e : i + ρ = j + ρ) (v : Fi
   subst hj
   funext x
   have hx := x.isLt
-  simp only [U.lowV, D.castV, liftVec, Fin.cast_mk, Fin.coe_cast, Fin.val_mk]
+  simp only [U.lowV, D.castV, liftVec, Fin.cast_mk, Fin.val_mk]
   split_ifs with hcond
   · congr 1
     apply Fin.ext
@@ -1193,7 +1175,7 @@ lemma Zu_apply (n : ℕ) (t : ℂ) (u : G.UT (n + 1) → ℂ) (a b : Fin (n + 1)
 lemma Zu_entry (n : ℕ) (t : ℂ) (u : G.UT (n + 1) → ℂ) (q : G.UT (n + 1)) :
     Zu n t u q.1.1.rev q.1.2 = t * u q := by
   rw [Zu_apply, Fin.rev_rev]
-  simp [G.upper, G.strictUpper, Matrix.one_apply, ne_of_lt q.2, q.2]
+  simp [G.upper, G.strictUpper, ne_of_lt q.2, q.2]
 
 lemma norm_u_le (n : ℕ) {t : ℂ} (ht : t ≠ 0) (u : G.UT (n + 1) → ℂ) :
     ‖u‖ ≤ ‖t‖⁻¹ * ‖Zu n t u‖ := by
@@ -1244,7 +1226,7 @@ private theorem det_upper_eq_one' {d : ℕ} (u : G.UT d → ℂ) : (G.upper u).d
   · intro i j hij
     have hij' : j < i := hij
     have hne : i ≠ j := (ne_of_lt hij').symm
-    simp [G.upper, G.strictUpper, Matrix.one_apply, hne, not_lt.mpr hij'.le]
+    simp [G.upper, G.strictUpper, hne, not_lt.mpr hij'.le]
 
 lemma detM_Zu (n : ℕ) {t : ℂ} (ht : t ≠ 0) (u : G.UT (n + 1) → ℂ) : G.detM (Zu n t u) ≠ 0 := by
   show Matrix.det (t • G.wMat (n + 1) * G.upper u) ≠ 0

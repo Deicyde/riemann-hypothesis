@@ -1,10 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HolomorphicConnectionAddSection
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SmoothDifferencePeriodDecompositionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SuperconnBaseSmulLeibnizStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SuperconnWedgeAnticommStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BaseCurvatureTermsSumZeroStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContDiffOnSuperconnStatement
+import Mathlib.Topology.Sheaves.Presheaf
 
 set_option autoImplicit false
 

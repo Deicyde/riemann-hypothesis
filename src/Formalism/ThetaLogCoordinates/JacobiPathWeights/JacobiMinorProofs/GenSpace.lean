@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.JacobiPathWeights.GenSpaceFacts
 import Formalism.ThetaLogCoordinates.JacobiPathWeights.JacobiMinorProofs.ExistsSuppOfEvalNe
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 

@@ -1,9 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.GlobalClassFormation.CupDecomposition
 import GroundTheory.ProfiniteCohomology.GlobalClassFormation.CupLocal
 import GroundTheory.ProfiniteCohomology.GlobalClassFormation.ResLocal
-import GroundTheory.ProfiniteCohomology.GlobalClassFormation.UnitsLevels
-import GroundTheory.ProfiniteCohomology.ClassFormations.IsIsoCohomologyMapAlongResSubgroupOfHom
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

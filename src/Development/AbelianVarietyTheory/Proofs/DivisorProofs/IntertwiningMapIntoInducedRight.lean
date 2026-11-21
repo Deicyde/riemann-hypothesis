@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndicatorIntMMemSB
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ScaledIntegerPeriodic
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsLocallyConstantSplitOm
 
 noncomputable section
@@ -74,7 +73,7 @@ theorem mapB_mem_indSp : ∀ (k : Type) [Field k] [ValuativeRel k] [TopologicalS
         omB (α / β) α 1 h Ψ (X * D.val * Y0 k (finSumFinEquiv : Fin a ⊕ Fin a' ≃ Fin (a + a')))) ∈ SB _ := by
       simpa using comp_mul_mem_SB (1 : GL (Fin a') k) D hφ
     have heq := hl.2.2 1 D _ hφ
-    simp only [Units.val_one, Matrix.one_mul, map_one, one_mul] at heq
+    simp only [Units.val_one, map_one, one_mul] at heq
     have hfun : (fun g : Matrix (Fin a') (Fin a') k =>
         omB (α / β) α 1 (b * h) Ψ (g * Y0 k (finSumFinEquiv : Fin a ⊕ Fin a' ≃ Fin (a + a')))) =
         ((α (gdet b) : ℂ) * apow (gdet b) ((a' : ℂ) / 2)) • (fun X : Matrix (Fin a') (Fin a') k =>

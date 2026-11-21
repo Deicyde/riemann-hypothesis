@@ -1,7 +1,4 @@
-import Formalism.HarderNarasimhan.DegSupermodZ
-import Formalism.LatticeSlopes.ExistsSaturatedSlopeEqMuMax
-import Formalism.HarderNarasimhan.HarderNarasimhanProofs.ExistsSmulMemOfFinrankEq
-import Formalism.HarderNarasimhan.HarderNarasimhanProofs.SatBasic
+import BuildAid.Leniency.Open
 import Formalism.HarderNarasimhan.HarderNarasimhanProofs.RatioMax
 
 open Module Submodule

@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.TwQDense
+import Formalism.LocalToGlobal.Columns.TwQDefs
+import Formalism.LocalToGlobal.Columns.TwQSpP
 
 open NumberField IsDedekindDomain
 open scoped TensorProduct

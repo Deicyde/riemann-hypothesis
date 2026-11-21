@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ArchimedeanSchwartz.NormChar
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ArchimedeanSchwartz.ShiftOf
-import GroundTheory.AutomorphicForms.GL2.GJStandardLCuspidalGen
+import Formalism.DoubleCosetMeasures.Statement
+import GroundTheory.AutomorphicForms.GL2.GJGlobalDefs
+import GroundTheory.AutomorphicForms.GL2.GJStandardLFourier
 
 noncomputable section
 

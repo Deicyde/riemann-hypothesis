@@ -1,8 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PhiAt
-import Development.AbelianVarietyTheory.Definitions.Divisors.PolyBetween
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaExponentsDominantLastEntryOneDegree
-import Development.AbelianVarietyTheory.Definitions.Divisors.MulSmulIdemMem
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.JetNumeratorWeightBoundStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CuspFormStalkIntegralFrameStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeightAntitoneBoundaryStatement

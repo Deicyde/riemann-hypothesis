@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.RadicalReductionUnitary
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.NFRadRedR
 
 open Matrix
 open scoped ContDiff

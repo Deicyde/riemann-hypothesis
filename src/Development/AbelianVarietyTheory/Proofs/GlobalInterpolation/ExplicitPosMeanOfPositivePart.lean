@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
 import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.SignedLogMeans
 import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.AbsoluteLogMeanBounds

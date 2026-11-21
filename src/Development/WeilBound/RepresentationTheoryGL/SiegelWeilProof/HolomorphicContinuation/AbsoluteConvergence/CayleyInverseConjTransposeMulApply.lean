@@ -1,7 +1,9 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.AbsoluteConvergence.VacOut
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.AbsoluteConvergence.GramDiagUnitary
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.AbsoluteConvergence.CayleyMulConjTranspose
+import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.AbsoluteConvergence.DerivativeVacuumDilationsAlt
+import Mathlib.Analysis.SpecialFunctions.Arsinh
 
 open scoped Matrix
 open Matrix
@@ -85,12 +87,12 @@ private theorem coshSinh_conjTranspose_mul_S0_mul_eq_S0 (X : Fin n → ℝ) :
   · ext i j
     by_cases h : i = j
     · subst h
-      simp [diagonal_apply, Matrix.one_apply]
+      simp
       all_goals first
         | ring1
         | linear_combination Complex.cosh_sq (X i : ℂ)
         | linear_combination -Complex.cosh_sq (X i : ℂ)
-    · simp [diagonal_apply, Matrix.one_apply, h]
+    · simp [h]
 
 private theorem coshSinh_blocks_mul_C1_eq_exp_diag (X : Fin n → ℝ) :
     C0 n * fromBlocks (diagonal fun j => (Real.cosh (X j) : ℂ)) (diagonal fun j => (Real.sinh (X j) : ℂ))
@@ -102,11 +104,11 @@ private theorem coshSinh_blocks_mul_C1_eq_exp_diag (X : Fin n → ℝ) :
   · ext i j
     by_cases h : i = j
     · subst h
-      simp [diagonal_apply, Matrix.one_apply, ← Real.cosh_add_sinh, ← Real.cosh_sub_sinh]
+      simp [← Real.cosh_add_sinh]
       all_goals first
         | ring1
         | linear_combination (Complex.sinh (X i : ℂ) - Complex.cosh (X i : ℂ)) * Complex.I_sq
-    · simp [diagonal_apply, Matrix.one_apply, h]
+    · simp [h]
 
 private theorem exists_unitary_coshSinh_decomposition (N : M2 n) (hN : Nᴴ * S0 n * N = S0 n) :
     ∃ (U1 U2 W V : Matrix (Fin n) (Fin n) ℂ) (X : Fin n → ℝ),
@@ -123,7 +125,7 @@ private theorem exists_unitary_coshSinh_decomposition (N : M2 n) (hN : Nᴴ * S0
   have e := hN
   rw [hNb, fromBlocks_conjTranspose, S0, fromBlocks_multiply, fromBlocks_multiply,
     fromBlocks_inj] at e
-  simp only [Matrix.mul_zero, Matrix.zero_mul, Matrix.mul_one, Matrix.mul_neg, Matrix.neg_mul,
+  simp only [Matrix.mul_zero, Matrix.mul_one, Matrix.mul_neg, Matrix.neg_mul,
     add_zero, zero_add] at e
   obtain ⟨e1, e2, -, e4⟩ := e
   have e1' : Pᴴ * P = 1 + Rᴴ * R := by
@@ -212,9 +214,9 @@ private theorem exists_unitary_coshSinh_decomposition (N : M2 n) (hN : Nᴴ * S0
     ext i j
     by_cases h : i = j
     · subst h
-      simp [hsXd, hcXd, diagonal_apply]
+      simp [hsXd, hcXd]
       linear_combination -Complex.cosh_sq (X i : ℂ)
-    · simp [hsXd, hcXd, diagonal_apply, h]
+    · simp [hsXd, hcXd, h]
   have hV : Vᴴ * V = 1 := by
     have hQQ : (U1ᴴ * Q)ᴴ * (U1ᴴ * Q) = Qᴴ * Q := by
       rw [conjTranspose_mul, conjTranspose_conjTranspose, Matrix.mul_assoc, ← Matrix.mul_assoc U1,

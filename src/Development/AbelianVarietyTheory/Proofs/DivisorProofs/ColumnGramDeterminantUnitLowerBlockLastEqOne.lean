@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NmatEqLowMat
+import Mathlib.Tactic.Polynomial.Basic
 open ReciprocityTheory.ChartRestriction.G.FD MeasureTheory GlobalTheory.IntBall
 open scoped ENNReal Matrix
 

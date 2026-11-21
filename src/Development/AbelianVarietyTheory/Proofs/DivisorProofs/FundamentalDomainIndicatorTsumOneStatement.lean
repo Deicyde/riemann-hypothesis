@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FundamentalDomainIndicatorTsumOne
-import Mathlib
 open MeasureTheory
 open scoped Pointwise
 set_option maxHeartbeats 1000000 in

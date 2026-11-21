@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.LatticeComparisonCompatible
-import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.MRatSpanOf
+import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.MRatSpanRec
 
 noncomputable section
 

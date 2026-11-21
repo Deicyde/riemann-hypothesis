@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.DiscreteGroups.GlobalIrreducibility.DzBigDef
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.TypeConditions.Triple
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.CharpolySmulOfProd
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SideEigenExport
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.MemMaximalIdealIff
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ResidualCompatibleRows

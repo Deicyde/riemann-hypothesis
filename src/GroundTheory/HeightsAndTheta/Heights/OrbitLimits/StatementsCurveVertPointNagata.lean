@@ -1,6 +1,5 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StatementsCurveVertPointLengthSteps
-import GroundTheory.HeightsAndTheta.Heights.HeightKernels.StatementsVertPointNagata
+import BuildAid.Leniency.Open
+import GroundTheory.HeightsAndTheta.Heights.HeightKernels.StatementsVertRIndexSteps
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.Targets

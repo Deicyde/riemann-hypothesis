@@ -1,5 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AdelicHermitianForms.MemPowSub
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.GroupTheory.FiniteAbelian.Basic
+import Mathlib.GroupTheory.IndexNSmul
+import Mathlib.LinearAlgebra.SymmetricAlgebra.Basis
+import Mathlib.LinearAlgebra.TensorAlgebra.Basis
+import Mathlib.RingTheory.TotallySplit
 open NumberField IsDedekindDomain Polynomial GlobalTheory.QNorm GlobalTheory.CNorm
 open scoped WithZero TensorProduct
 
@@ -69,7 +75,7 @@ private theorem card_quot_range_nsmul_eq_pow_finrank_mul_card_ker (M : Type) [Ad
       rintro ⟨x, y, rfl⟩
       refine ⟨(Nat.card D : ℤ), by exact_mod_cast Nat.card_pos.ne', ?_⟩
       apply Subtype.ext
-      simp only [SetLike.val_smul, LinearMap.coe_inr, Submodule.coe_zero, natCast_zsmul]
+      simp only [LinearMap.coe_inr, Submodule.coe_zero, natCast_zsmul]
       ext
       · simp
       · simpa using card_nsmul_eq_zero' (x := y)

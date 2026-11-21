@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.MemSupportBDIff
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsExphOnEmpty
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IteratedDerivCompEqJet
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ChartMatrixSmoothInvertibleStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ChartMatrixChangeOfCoordinatesStatement

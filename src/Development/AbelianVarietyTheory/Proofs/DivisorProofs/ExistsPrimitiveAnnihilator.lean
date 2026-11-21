@@ -1,4 +1,42 @@
-import Mathlib
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.NoZeroSMulDivisors.Pi
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
 
 open NumberField Matrix
 
@@ -85,7 +123,7 @@ theorem exists_vecMul_eq_zero {W Ω ι κ : Type} [CommRing W] [IsDomain W] [Fie
     rw [← LinearMap.toMatrix'_mulVec G] at this
     rw [Matrix.mul_apply, Matrix.one_apply,
       show (if i = j then (1:L) else 0) = (Pi.single i (1:L) : ι → L) j by simp [Pi.single_apply, eq_comm], ← this]
-    simp [Matrix.mulVec, dotProduct, P, mul_comm, Matrix.vecMulLinear_apply]
+    simp [Matrix.mulVec, dotProduct, P, mul_comm]
   have hAf : AL.map g = A.map f := by ext i j; simp [AL, hg]
   have hP' : A.map f * (P.transpose.map g) = 1 := by
     rw [← hAf, ← Matrix.map_mul, hP, Matrix.map_one _ (map_zero g) (map_one g)]
@@ -147,7 +185,7 @@ theorem exists_primitive_annihilator : ∀ (F : Type) [Field F] [NumberField F] 
         τ (algebraMap (𝓞 F) F a) * τ (b' i) := by
       intro i τ
       have e := congrArg (fun t : 𝓞 F => τ (algebraMap (𝓞 F) F t)) (b.sum_repr (a * b i))
-      simp only [map_sum, map_zsmul, map_mul, zsmul_eq_mul] at e
+      simp only [map_sum, map_mul, zsmul_eq_mul] at e
       simpa [hb'] using e
     have := inj (fun j => ∑ i, x i * (b.repr (a * b i) j : Ω) - σ a * x j) (fun τ => by
       have key : ∑ j, (∑ i, x i * (b.repr (a * b i) j : Ω)) * τ (b' j) =

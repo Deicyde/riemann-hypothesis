@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LevelModelsOfFunctoriality
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HighestWeightBelow
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CartFrSgn
 
 noncomputable section
 

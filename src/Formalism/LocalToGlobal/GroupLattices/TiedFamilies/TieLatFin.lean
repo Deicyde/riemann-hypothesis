@@ -1,7 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.TieSurj
 import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.CmpHyp0P
 import Formalism.LocalToGlobal.GroupLattices.FockModels.Sandwich
 import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.StabilizerCount
+import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.TieWeak
 
 noncomputable section
 

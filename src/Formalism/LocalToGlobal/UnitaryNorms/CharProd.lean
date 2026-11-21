@@ -1,4 +1,5 @@
-import Formalism.LocalToGlobal.UnitaryNorms.IsUnitaryNormOf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.HeckeProd
 
 noncomputable section

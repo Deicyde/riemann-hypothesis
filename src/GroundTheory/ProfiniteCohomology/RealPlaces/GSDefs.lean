@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.RealPlaces.ConeDefs
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.BaseChangeMackey
 import GroundTheory.ProfiniteCohomology.GlobalClassFormation.LocalInvariants
+import GroundTheory.ProfiniteCohomology.CompactSupportCohomology
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

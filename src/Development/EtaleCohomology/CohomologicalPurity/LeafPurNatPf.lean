@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.CohomologicalPurity.LeafPurPf
 
 noncomputable section
@@ -105,8 +106,8 @@ theorem purOf_nat (hN : DivisorNaturality) {d : ℕ} (hC : IsCl d (fcl d)) {P' P
   let ψ : abv P'.U t'.π ⟶ abv P.U t.π := Arrow.homMk (pullback.lift _ _ hw2) b (by simp only [abv, Arrow.mk_hom]; exact pullback.lift_fst _ _ _)
   have hsq : abvMap P'.U t'.π ≫ opnMap φ.f _ _ φ.le = ψ ≫ abvMap P.U t.π := by
     apply Arrow.hom_ext
-    · simp only [Arrow.comp_left, abvMap, opnMap, ψ, Arrow.homMk_left]; exact (pullback.lift_snd _ _ _).symm
-    · simp only [Arrow.comp_right, abvMap, opnMap, ψ, Arrow.homMk_right]; exact hb.symm
+    · simp only [Arrow.comp_left, abvMap, opnMap, ψ]; exact (pullback.lift_snd _ _ _).symm
+    · simp only [Arrow.comp_right, abvMap, opnMap, ψ]; exact hb.symm
   apply purOf_char t' q _ n i _ _ (pull _ b _ _ e)
   · rw [← pull_comp, ← pull_comp, show pullback.fst t'.π (sch.map P'.ι) ≫ b = c ≫ pullback.fst t.π (sch.map P.ι) from (pullback.lift_fst _ _ hw).symm,
       show pullback.snd t'.π (sch.map P'.ι) ≫ sch.map φ.g = c ≫ pullback.snd t.π (sch.map P.ι) from (pullback.lift_snd _ _ hw).symm,

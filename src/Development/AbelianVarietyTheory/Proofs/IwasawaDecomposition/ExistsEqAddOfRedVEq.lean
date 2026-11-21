@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.SumMulEqZeroOfSumToReal
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SysExOfPol
 
 noncomputable section
 

@@ -1,14 +1,10 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.FamCore
 import Formalism.SharpRestriction.ElevenLe
-import Formalism.LocalRingCardinality.DataParams
-import Formalism.LocalRingCardinality.DataDIV
 import Formalism.LocalRingCardinality.DataTies
 import Formalism.LocalRingCardinality.DataParamsT
 import Formalism.LocalRingCardinality.KernelPlaceMeanBound
 import Formalism.LocalRingCardinality.DataExtra
-import Formalism.LocalRingCardinality.DataDIVDefs
-import Formalism.LocalRingCardinality.DataGatTies
-import Formalism.SharpRestriction.GrowthBounds.IsResidueClassZero
 
 noncomputable section
 

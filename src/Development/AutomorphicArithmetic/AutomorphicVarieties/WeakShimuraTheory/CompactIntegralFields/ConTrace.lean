@@ -1,6 +1,5 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.NearSplit
-import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.EntryMem
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PublishedTheorems.FerreroWashington
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual Formalism.HC ReciprocityTheory.Gal IsLocalRing Polynomial UpperTheory.V.Base UpperTheory.V.Alg UpperTheory.V.HV UpperTheory.V.GradeZeroInterpolatingElement UpperTheory.V.Ws
 
@@ -33,7 +32,7 @@ private theorem con_span {K Γ n : Type} [Field K] [Group Γ] [Fintype n] [Decid
     | smul_right r a b _ _ h => simp only [smul_mul_assoc, mul_smul_comm, h]
   obtain ⟨i, j, hij⟩ := exists_pair_ne n
   have := congrFun (congrFun (h3 (Matrix.single i j 1) (Matrix.single j j 1)) i) j
-  simp [hij, hij.symm] at this
+  simp [hij.symm] at this
 
 private def con_e : Fin 2 ⊕ Fin 2 ≃ Fin 4 where
   toFun := Sum.elim ixA ixB

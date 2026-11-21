@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenIntertwinerDoubleRestrictionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenIntertwinerRestrictionCharacterStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentQuotientUnitVolumeStatement
@@ -41,7 +39,7 @@ theorem isCartan_restrict {n m : ℕ} (M θ : Matrix (Fin n) (Fin n) ℂ) (ι : 
       simpa [Matrix.mulVec_mulVec, hL] using this
     have key : θ₁ *ᵥ x ⬝ᵥ (ιᵀ * M * ι.map star) *ᵥ star x = θ *ᵥ (ι *ᵥ x) ⬝ᵥ M *ᵥ star (ι *ᵥ x) := by
       have e1 : (ι.map star) *ᵥ star x = star (ι *ᵥ x) := by
-        funext i; simp [Matrix.mulVec, dotProduct, star_sum, mul_comm]
+        funext i; simp [Matrix.mulVec, dotProduct, star_sum]
       rw [← Matrix.mulVec_mulVec, ← Matrix.mulVec_mulVec, e1, Matrix.dotProduct_mulVec,
         Matrix.vecMul_transpose, Matrix.mulVec_mulVec, ← hc, ← Matrix.mulVec_mulVec]
     rw [key]; exact h3 _ hy

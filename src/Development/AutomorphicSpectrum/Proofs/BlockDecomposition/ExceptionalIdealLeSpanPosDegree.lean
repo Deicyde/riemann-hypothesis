@@ -1,6 +1,6 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.HodgeSurjectivity.NLeA
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.AlgebraMapConeRing
+import Mathlib.RingTheory.PiTensorProduct
 
 set_option autoImplicit false
 noncomputable section

@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsFirstChernClassOfLineBundle
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.C1FiniteExtensionLangStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.TsenLangRatFuncStatement
 

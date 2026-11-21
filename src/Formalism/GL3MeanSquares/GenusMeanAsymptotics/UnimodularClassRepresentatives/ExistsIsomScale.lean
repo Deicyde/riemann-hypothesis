@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.GenusMeanAsymptotics.UnimodularClassRepresentatives.ExistsPrimitiveNorm
+import Formalism.HermitianLattices.StatementLat
 
 noncomputable section
 
@@ -141,7 +144,7 @@ theorem exists_isom_move (hs : h.IsSymm) (hd : ∀ x, h x x = 0 → x = 0) {x y 
   refine ⟨LinearEquiv.ofLinear f f' c1 c2, fun a b => ?_, ?_, fun v hxv hyv => ?_, fun W hxW hyW v => ?_⟩
   · change h (f a) (f b) = h a b
     rw [hf a, hf b]
-    simp only [map_sub, LinearMap.sub_apply, map_smul, LinearMap.map_smulₛₗ₂, LinearMap.smul_apply,
+    simp only [map_sub, LinearMap.sub_apply, map_smul, LinearMap.map_smulₛₗ₂,
       smul_eq_mul, map_mul, map_inv₀]
     rw [← hs.eq u a, hD]
     field_simp
@@ -185,7 +188,7 @@ theorem exists_isom_scale (hs : h.IsSymm) {z : V} (hz : h z z ≠ 0) {b : K} (hb
   refine ⟨LinearEquiv.ofLinear f f' c1 c2, fun a c => ?_, ?_, fun v hv => ?_⟩
   · change h (f a) (f c) = h a c
     rw [hf a, hf c]
-    simp only [map_add, LinearMap.add_apply, map_smul, LinearMap.map_smulₛₗ₂, LinearMap.smul_apply,
+    simp only [map_add, LinearMap.add_apply, map_smul, LinearMap.map_smulₛₗ₂,
       smul_eq_mul, map_mul, map_inv₀, map_sub, map_one, hN]
     rw [← hs.eq z a]
     simp only [starRingEnd_apply]

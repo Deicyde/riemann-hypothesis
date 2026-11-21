@@ -1,9 +1,12 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PlurisubharmonicCones.FinrankOfLieMult
 import Development.WeilBound.CoreStatements.PlurisubharmonicCones.ExistsGram
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HodgeInnerProductPullbackUniqueStatement
 import Development.AutomorphicSpectrum.Proofs.AdelicProofs.PadicEmbeddingDiscreteValuationRingStatement
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExtendedArcUAdicUniformisationOfArcData
 import GroundTheory.HeightsAndTheta.Heights.ArithDegree
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsConstMul
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.SlopeBoundSt
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi

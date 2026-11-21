@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.GL3.PHfArith
-import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.OrdUnimod
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsMonicAevalEqZero
 
 noncomputable section

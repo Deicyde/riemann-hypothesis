@@ -1,8 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ZeroMemSolSet
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.UnipotentAdelicQuotients.EllRegCheck
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AestronglyMeasurableExtendByZeroOffSubset
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsContinuousFunctionalIterPartialDerivStatement
+import Mathlib.Analysis.CStarAlgebra.ContinuousMap
 open ZetaZeros.D.EllReg GlobalTheory.HCA MeasureTheory
 open scoped ContDiff BoundedContinuousFunction
 

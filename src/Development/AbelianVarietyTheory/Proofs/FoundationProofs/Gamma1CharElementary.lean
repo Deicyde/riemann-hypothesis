@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.PetIPSmulRight
-import Development.AbelianVarietyTheory.Definitions.Foundations.RepL
-import CompanionTheory.EightfoldTheory.VariationTheory.AutomorphicForms.Newform
+import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.Newform
+import Mathlib.NumberTheory.ModularForms.Bounds
 open UpperHalfPlane Complex MeasureTheory CongruenceSubgroup GlobalTheory.EisM UpperTheory.V.Af Filter Topology
 open scoped MatrixGroups Real ComplexConjugate Manifold ModularForm
 
@@ -82,7 +83,7 @@ theorem gamma1_char_elementary : ∀ (k M : ℕ) (χ : DirichletCharacter ℂ M)
   refine ⟨C, fun τ => ?_⟩
   have h := hC τ
   rw [hq]
-  simp only [petersson, norm_mul, Complex.norm_conj, norm_zpow, Complex.norm_real,
+  simp only [petersson, norm_mul, Complex.norm_conj, Complex.norm_real,
     zpow_natCast, norm_pow, Real.norm_of_nonneg τ.im_pos.le] at h
   calc ‖f τ‖ ^ 2 * τ.im ^ k = ‖f τ‖ * ‖f τ‖ * τ.im ^ k := by ring
     _ ≤ C := h

@@ -1,5 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.DiscreteGroups.GlobalIrreducibility.DzGalOne
+import Development.DiscreteGroups.GlobalIrreducibility.DzGalChi
+import Development.DiscreteGroups.GlobalIrreducibility.DzGalEig
+import Development.DiscreteGroups.GlobalIrreducibility.DzGalInd
+import Development.DiscreteGroups.GlobalIrreducibility.DzGalUnr
+import Development.DiscreteGroups.GlobalIrreducibility.GalUnitCompat
+import Development.DiscreteGroups.GlobalIrreducibility.LpTwistLpTwist
 
 noncomputable section
 

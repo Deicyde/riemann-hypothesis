@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StatementsCurveCountLower
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StatementsCurveDegreeVert
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StatementsCurveVertIndex

@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.StripEstimates.FaceMapCompSuccAboveCastSucc
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.NormInvGammaLeReflect
 open Ad3 Ad3.S

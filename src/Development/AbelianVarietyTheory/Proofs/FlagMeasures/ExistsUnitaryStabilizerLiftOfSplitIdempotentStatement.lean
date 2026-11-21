@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsUnitaryStabilizerLiftOfSplitIdempotent
-import Formalism.SharpRestriction.CuspSpanNormBounds.GlobAut
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ExistsReduction
 open MeasureTheory Formalism.MainNotions.S GlobalTheory.RowLev NumberField IsDedekindDomain Matrix
 open scoped InnerProductSpace ComplexOrder TensorProduct Pointwise Classical
 set_option maxHeartbeats 1000000 in

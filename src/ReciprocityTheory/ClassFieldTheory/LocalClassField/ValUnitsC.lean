@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ClassFieldTheory.LocalClassField.ValUnitsB
+import ReciprocityTheory.ClassFieldTheory.LocalClassField.UnrExtC
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace ReciprocityTheory.DiscreteGroups.LocalClassField
 

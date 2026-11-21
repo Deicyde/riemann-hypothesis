@@ -1,4 +1,4 @@
-import Formalism.SharpRestriction.GlobalSchurBounds.LossesSmallShares
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.LossRequirementsOfSmallShares
 
 noncomputable section

@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.LiftCoordinatesInGoodPart
-import Formalism.LocalToGlobal.IndefiniteReal.LiftCoordinatesInGoodPartOfDefinite
 import Formalism.LocalToGlobal.IndefiniteReal.EigSumLeComapSemi
 import Formalism.LocalToGlobal.IndefiniteReal.LiftGoodPartComplexEqRange
 

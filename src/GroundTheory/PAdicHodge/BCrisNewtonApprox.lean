@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.PAdicHodge.BCrisNewtonNorm
 import GroundTheory.PAdicHodge.ACrisBdRInj
 set_option maxSynthPendingDepth 1

@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.UnipotentAdelicQuotients.SWXSDefs
+import Mathlib.Analysis.Distribution.SchwartzSpace.Basic
 
 noncomputable section
 
@@ -92,7 +95,7 @@ example {F E : Type} [Field F] [Field E] [Algebra F E] (σ : E →ₐ[F] E) (M :
   refine ⟨fun i j => ?_, by simp⟩
   by_cases h : i = j
   · subst h; simp
-  · simp [Matrix.one_apply, h, Ne.symm h]
+  · simp [h, Ne.symm h]
 
 example (M n r : ℕ) (h1 : 1 ≤ n) (h : 2 * n < M) (hr : 2 * r ≤ M) : n + 2 ≤ M ∧ n + r < M := by
   omega

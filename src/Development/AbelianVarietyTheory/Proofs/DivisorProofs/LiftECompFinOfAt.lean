@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ClosureUAt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLocCoLocDarboux
 
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.HoweLocal
@@ -58,14 +58,14 @@ def liftU (v : Pl F) : (Fv F v ⊗[F] E)ˣ →* (AE F E)ˣ where
     by rw [one_add_liftE_mul, Units.mul_inv, sub_self, map_zero, add_zero],
     by rw [one_add_liftE_mul, Units.inv_mul, sub_self, map_zero, add_zero]⟩
   map_one' := by ext; simp
-  map_mul' z w := by ext; simp only [Units.val_mul, Units.val_mk]; rw [one_add_liftE_mul]
+  map_mul' z w := by ext; simp only [Units.val_mul]; rw [one_add_liftE_mul]
 
 def liftUF (v : Pl F) : (Fv F v)ˣ →* (AF F)ˣ where
   toFun a := ⟨1 + GlobalTheory.LatVac.liftV v ((a : Fv F v) - 1), 1 + GlobalTheory.LatVac.liftV v (((a⁻¹ : (Fv F v)ˣ) : Fv F v) - 1),
     by rw [one_add_liftV_mul, Units.mul_inv, sub_self, map_zero, add_zero],
     by rw [one_add_liftV_mul, Units.inv_mul, sub_self, map_zero, add_zero]⟩
   map_one' := by ext; simp
-  map_mul' z w := by ext; simp only [Units.val_mul, Units.val_mk]; rw [one_add_liftV_mul]
+  map_mul' z w := by ext; simp only [Units.val_mul]; rw [one_add_liftV_mul]
 
 theorem liftU_val (v : Pl F) (z : (Fv F v ⊗[F] E)ˣ) :
     ((liftU v z : (AE F E)ˣ) : AE F E) = 1 + liftE v ((z : Fv F v ⊗[F] E) - 1) := rfl
@@ -92,7 +92,7 @@ theorem norm_map_tensor {F E A B : Type} [Field F] [Field E] [Algebra F E] [Fini
     | zero => simp
     | add y y' hy hy' => simp [map_add, hy, hy']
     | tmul a e =>
-      simp [bA, bB, Algebra.TensorProduct.basis_repr_tmul, Algebra.smul_def]
+      simp [bA, bB, Algebra.TensorProduct.basis_repr_tmul]
   have hb : ∀ j, bB j = Algebra.TensorProduct.map f (AlgHom.id F E) (bA j) := by
     intro j; simp [bA, bB, Algebra.TensorProduct.basis_apply]
   rw [Algebra.norm_eq_matrix_det bB, Algebra.norm_eq_matrix_det bA]

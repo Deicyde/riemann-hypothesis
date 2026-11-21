@@ -1,9 +1,13 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.EigenvalueEndgame.CuspidalAverages.AvLine
 import Development.WeilBound.ThetaLifts.EigenvalueEndgame.CuspidalAverages.KillCoef
 import Development.WeilBound.ThetaLifts.EigenvalueEndgame.SignatureSplitting.AeFacts
 import Development.WeilBound.ThetaLifts.EigenvalueEndgame.TowerCodimensionTwo
 import Development.WeilBound.ThetaLifts.ConeHypotheses.PureEqPureA
 import Development.WeilBound.CoreStatements.LocallyConstantCoinvariants.PfDictSec
+import Development.AbelianVarietyTheory.Definitions.Divisors.MatchingOfParts
+import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsGenericOfIsLocComp
 
 noncomputable section
 

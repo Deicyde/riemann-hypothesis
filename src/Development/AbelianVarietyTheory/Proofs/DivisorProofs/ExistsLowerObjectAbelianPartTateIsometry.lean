@@ -1,17 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiltGraded
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.AbPartActIsAdj
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FormallyUnramifiedEtaleCompletion
 import Development.AbelianVarietyTheory.Proofs.RingsOfIntegers.IsSymmetricOfSymmetryGenerator
-import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.IsAbelianSchemeAndExtendOfGenericHoms
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.ExistsEqNsmul
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.RankMulFinrank
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.TorsionSectionExtendsAbLocus
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.DeterminantConditionSpreadsOfDensePoints
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.AdmBaseOfCompleteDvr
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.LinearUniformisationTorsionIsomorphism
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.AllUniformizationLawsHold
-import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.GenericExistsUniqueOActOfIsGrpPullback
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSiegelObjectLoweredLevel
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LevelPointsCompatOfTateIsometriesStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsGradedTateIsoLowerDatumStatement
@@ -353,7 +346,7 @@ theorem exists_lowObj : ∀ {E : Type} [Field E] [NumberField E] [IsCMField E] {
   have hζ0 : (J0.ζ l.M' : F0) = lowF C F0 (baseKA (lowLevel l)).ζ := by
     rw [hJ0ζ, hX0.1]
     exact congrArg (toF C F0) (Subtype.ext (by
-      simp only [IntermediateField.coe_inclusion, zeta_val]; rfl))
+      simp only; rfl))
   let o' : Obj D' (lowLevel l) (baseKA (lowLevel l)) (lowS C) :=
     { t := abTriple C.P
       proper := C.P.D.toPre.P.isAb.proper

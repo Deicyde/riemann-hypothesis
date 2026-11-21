@@ -1,5 +1,5 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterBridgeB
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Intersections.PtsOverChart
 import GroundTheory.HeightsAndTheta.Heights.Intersections.ImportsMoreRest
 import GroundTheory.HeightsAndTheta.Heights.Intersections.ImportsMoreSide

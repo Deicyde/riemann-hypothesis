@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.StandingHypothesesHoldFamily
-import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.CountT
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ResidEvFree
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.CountParameterConditionsOfSizeHypothesesStatement
 open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.S

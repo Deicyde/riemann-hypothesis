@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.GlobalFields.NormResidueSymbol.Rational
+import BuildAid.Leniency.Open
+import GroundTheory.GlobalFields.NormResidueSymbol.RationalCyclotomic
 
 namespace GroundTheory.Global
 

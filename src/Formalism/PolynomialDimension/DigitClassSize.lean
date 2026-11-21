@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.SubspaceCounting.Statement
 import Formalism.PolynomialDimension.WeylDim
 

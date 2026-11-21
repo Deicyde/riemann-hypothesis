@@ -1,5 +1,13 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.GL3.CubicFields.EpsteinZeta.DedekindFactorK
 import Formalism.DirichletDensity.DirichletDensityProofs.QuadDiscr
+import Mathlib.Data.Int.Star
+import Mathlib.Data.Rat.Star
+import Mathlib.RingTheory.Prime
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 
@@ -205,7 +213,7 @@ lemma covA_span (K : Type) [Field K] [NumberField K] (d : ℕ) [Fact d.Prime] (h
     · exact ⟨u - v, by rw [hu, hv]; ring⟩
   refine ⟨m, B, ?_⟩
   apply FaithfulSMul.algebraMap_injective (𝓞 K) K
-  simp only [map_add, map_mul, map_intCast]
+  simp only [map_add, map_intCast]
   change (y : K) = (m : K) + (B : K) * ((1 + x) / 2)
   rw [hab]
   have ha2 : (2 : K) * a = A := by exact_mod_cast hA.symm

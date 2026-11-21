@@ -1,4 +1,14 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.CyclotomicNorms.StatementTW
+import Mathlib.LinearAlgebra.Matrix.Swap
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Polynomial Matrix
 
@@ -54,12 +64,12 @@ lemma blockExtend_mul_mul_eq_diagonal {a : ℕ} (P Q : Matrix (Fin a) (Fin a) R)
   have hd' : ∀ i j, (P * (Matrix.of fun i j : Fin a => E i.succ j.succ) * Q) i j = diagonal d i j := by
     rw [hd]; intros; rfl
   refine Fin.cases ?_ (fun i => ?_) i <;> refine Fin.cases ?_ (fun j => ?_) j
-  · simp [Matrix.mul_apply, Fin.sum_univ_succ, h1, h2]
-  · simp [Matrix.mul_apply, Fin.sum_univ_succ, h1, h2, diagonal_apply, (Fin.succ_ne_zero j).symm]
-  · simp [Matrix.mul_apply, Fin.sum_univ_succ, h1, h2, diagonal_apply, (Fin.succ_ne_zero i)]
+  · simp [Matrix.mul_apply, Fin.sum_univ_succ, h1]
+  · simp [Matrix.mul_apply, Fin.sum_univ_succ, h1, (Fin.succ_ne_zero j).symm]
+  · simp [Matrix.mul_apply, Fin.sum_univ_succ, h2, (Fin.succ_ne_zero i)]
   · have := hd' i j
     simp only [Matrix.mul_apply, Matrix.of_apply] at this
-    simp [Matrix.mul_apply, Fin.sum_univ_succ, h1, h2, diagonal_apply]
+    simp [Matrix.mul_apply, Fin.sum_univ_succ, h2, diagonal_apply]
     rw [this, diagonal_apply]
 
 lemma isUnit_det_swap {a : ℕ} (i j : Fin a) : IsUnit (Matrix.swap R i j).det :=

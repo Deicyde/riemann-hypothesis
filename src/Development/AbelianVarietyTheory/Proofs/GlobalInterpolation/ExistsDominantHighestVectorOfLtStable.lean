@@ -1,7 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.GoodTopBot
-import Development.AbelianVarietyTheory.PublishedTheorems.GlobalTheta.WeylDualWeylLatticesAgreeOfLowestAlcove
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.RowPolarizationOperatorsActionOnRowWeightStatement
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Tactic.ENatToNat
 
 open MvPolynomial Formalism.GradedWeylDivisibility Formalism.BasicNotions GlobalTheory.Alc
 
@@ -145,10 +148,10 @@ theorem GlobalTheory.Alc.exists_dominant_highest_vector_of_lt : ∀ (k : Type) [
       have hμ' : μ' + Pi.single b 1 = μ + Pi.single a 1 := by
         funext c
         by_cases hca : c = a
-        · subst hca; simp [μ', Pi.single_apply, hne]
+        · subst hca; simp [μ', hne]
         · by_cases hcb : c = b
-          · subst hcb; simp [μ', Pi.single_apply, hca]; omega
-          · simp [μ', Pi.single_apply, hca, hcb]
+          · subst hcb; simp [μ', hca]; omega
+          · simp [μ', hca, hcb]
       have h3 := hw μ' hμ'
       have h1 : rowE k N N a b v ∈ M' := hM'.1 a b v hv'
       have hle := hmax μ' _ h1 hnot h3

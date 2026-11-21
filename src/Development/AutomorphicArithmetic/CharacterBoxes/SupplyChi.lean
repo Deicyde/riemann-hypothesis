@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CharacterBoxes.Supply
-import Development.AutomorphicArithmetic.CharacterBoxes.Imports
 import Development.AutomorphicArithmetic.CharacterBoxes.HostOfField
 import Development.AutomorphicArithmetic.CoprimeRanks.AdmChi
 

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.BaseChangeIdentities.RealTraceClifford.ClifMod
 import Development.AutomorphicArithmetic.Foundations.BaseChangeIdentities.RealTraceClifford.SkewExp
 
@@ -90,11 +91,11 @@ private theorem single_dX {n : ℕ} {V : Type} [AddCommGroup V] [Module ℂ V] (
   rw [Finset.sum_eq_single a, Finset.sum_eq_single b]
   · simp
   · intro d _ hd
-    simp [Matrix.single_apply, hd.symm]
+    simp [hd.symm]
   · simp
   · intro c _ hc
     refine Finset.sum_eq_zero fun d _ => ?_
-    simp [Matrix.single_apply, hc.symm]
+    simp [hc.symm]
   · simp
 
 open UpperTheory.RealTr.DerivativeAtIdentity in

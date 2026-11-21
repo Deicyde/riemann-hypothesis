@@ -1,4 +1,7 @@
-import Development.WeilBound.CoreStatements.PublishedTheorems.GlobalEulerCharacteristic.GaloisCohomologyRatios.ModuleFiniteHomRep
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.ProfiniteCohomology.GlobalEulerCharacteristic.StabilizersFinite
+import GroundTheory.ProfiniteCohomology.LocalEulerCharacteristic.AdditiveDefs
 
 open NumberField IsDedekindDomain CategoryTheory GroundTheory.ProfCoh GroundTheory.Global
 

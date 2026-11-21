@@ -1,10 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PrimesLargeOfSizesUsed
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.RationalRankMinkowski
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.PredMemGamRanks
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.AdelicDataRowMeasureScaleTrivialTuple
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.LandherrHasse
-import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ObjOnNarrowOfObjectsExist
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.LatticeAutomorphismLcm
 
 noncomputable section
 

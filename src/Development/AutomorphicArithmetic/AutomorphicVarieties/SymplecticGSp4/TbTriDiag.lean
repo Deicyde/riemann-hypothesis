@@ -1,10 +1,8 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicCases.SymplecticGSp4
-import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.LocDefs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.PtInSmul
-import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.CopNormLt
 import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.EptInt
 import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.OrdLocal
-import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.LMemMax
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.SplAdjUnit
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.SpFlag
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.CrystallineTransferSurjection
@@ -13,7 +11,7 @@ import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.D
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.IotaFacts
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.FrobFree
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.Z1fCoef
-import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.SelmerTransport.Places
+import Mathlib.RingTheory.DualNumber
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal IsLocalRing UpperTheory.V UpperTheory.V.Base UpperTheory.V.Alg UpperTheory.V.HV UpperTheory.V.GradeZeroInterpolatingElement
 
 private theorem tb_avg {k G W : Type} [Field k] [CharZero k] [Group G] [AddCommGroup W] [Module k W]
@@ -68,7 +66,7 @@ private def tbFst (X : M4 (DualNumber E)) : M4 E := Matrix.of fun i j => (X i j)
 
 private theorem tbSnd_mul (X Y : M4 (DualNumber E)) : tbSnd (X * Y) = tbFst X * tbSnd Y + tbSnd X * tbFst Y := by
   ext a b
-  simp [tbSnd, tbFst, Matrix.mul_apply, Fin.sum_univ_four, DualNumber.snd_mul]
+  simp [tbSnd, tbFst, Matrix.mul_apply, Fin.sum_univ_four]
   ring
 
 private theorem tbFst_mul (X Y : M4 (DualNumber E)) : tbFst (X * Y) = tbFst X * tbFst Y := by

@@ -1,7 +1,8 @@
-import Mathlib
-import Formalism.PeriodIntegrals.IsLowUnitH
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.LowCyc
 import Formalism.PeriodIntegrals.KFinSmooth
+import Mathlib.Topology.Sheaves.Presheaf
 
 open Matrix
 

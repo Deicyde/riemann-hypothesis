@@ -1,5 +1,6 @@
-import Mathlib
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.TermsFiniteAtPoint.CarrierRow
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
 
 noncomputable section
 
@@ -79,7 +80,7 @@ theorem intg_of_entries {m n : Type*} {Z : Matrix m n E} (h : ∀ i j, ∃ o : �
     Intg 1 Z := by
   refine ⟨fun i j => Classical.choose (h i j), ?_⟩
   ext i j
-  simp only [Matrix.map_apply, map_one, one_smul]
+  simp only [map_one, one_smul]
   exact Classical.choose_spec (h i j)
 
 theorem exists_den (x : E) :

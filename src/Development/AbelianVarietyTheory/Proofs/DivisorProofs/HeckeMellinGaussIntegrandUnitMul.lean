@@ -1,7 +1,7 @@
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.CompletedLStripBounds
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormWt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GaussZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousTerm
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsFinSetSplitPlacesCoprimeConductor
 open NumberField MeasureTheory
 
 noncomputable section
@@ -46,7 +46,7 @@ theorem sum_ulog {K : Type} [Field K] [NumberField K] [IsTotallyComplex K] {I : 
       have hi := hk i (Or.inl rfl)
       rcases InfinitePlace.mk_eq_iff.1 hij with h | h
       · rw [hi, hk j (Or.inl h)]
-      · rw [hi, hk j (Or.inr (by rw [← h]; ext x; simp [ComplexEmbedding.conjugate_coe_eq]))]
+      · rw [hi, hk j (Or.inr (by rw [← h]; ext x; simp))]
     · intro w
       obtain ⟨k, hk, _⟩ := hφ w.embedding
       refine ⟨k, ?_⟩

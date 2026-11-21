@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HoweDualityUnitary
 import Development.AbelianVarietyTheory.Definitions.Divisors.AdelicAdmissibleSmul
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.ConclRankZeroRight
+import Mathlib.Algebra.Order.PUnit
 
 noncomputable section
 

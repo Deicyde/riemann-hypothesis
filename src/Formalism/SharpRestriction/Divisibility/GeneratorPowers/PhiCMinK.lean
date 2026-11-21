@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.PhiCMinR
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.PhiCMinI
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.PhiCMinC
@@ -89,7 +91,7 @@ theorem Kmat_det (b : Basis (Fin d) ℤ Y) (θ : 𝓞 E) (hθ : θ ≠ 0) : IsUn
   have h0 : Polynomial.aeval θ (minpoly ℤ θ) = 0 := minpoly.aeval ℤ θ
   have h1 : θ * Polynomial.aeval θ q = -(((minpoly ℤ θ).coeff 0 : ℤ) : 𝓞 E) := by
     have h := congrArg (Polynomial.aeval θ) hq
-    simp only [map_sub, Polynomial.aeval_C, map_mul, Polynomial.aeval_X, h0, zero_sub,
+    simp only [map_sub, map_mul, Polynomial.aeval_X, h0, zero_sub,
       eq_intCast, map_intCast] at h
     linear_combination -h
   have h2 : θ * (-(Polynomial.aeval θ q) * (((minpoly ℤ θ).coeff 0 : ℤ) : 𝓞 E)) =

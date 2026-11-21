@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
 open scoped TensorProduct NNReal Matrix
@@ -45,7 +45,7 @@ lemma form_swap (hσ : ∀ e, σ (σ e) = e) (hJ : ∀ i j, σ (J j i) = J i j) 
 
 lemma vecMulVec_mulVec' (x w v : Fin n → E) : Matrix.vecMulVec x w *ᵥ v = (w ⬝ᵥ v) • x := by
   ext i
-  simp [Matrix.mulVec, Matrix.vecMulVec, dotProduct, Finset.sum_mul, Finset.mul_sum, mul_comm, mul_left_comm, mul_assoc]
+  simp [Matrix.mulVec, Matrix.vecMulVec, dotProduct, Finset.mul_sum, mul_comm, mul_left_comm]
 
 lemma smul_vecMulVec_mulVec (c : E) (x w v : Fin n → E) : (c • Matrix.vecMulVec x w) *ᵥ v = (c * (v ⬝ᵥ w)) • x := by
   ext i

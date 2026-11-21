@@ -1,6 +1,4 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.FamilyUniformisationBasePointOrthogonalBis
-import Formalism.LocalToGlobal.ProjectiveLattices.FamilyUniformisationBasePointOrthogonal
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.RealAdelesCmFieldEquivComplexCmType
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.LatHatOpenAndContinuous
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.CmTypeRestrictRealSubfieldInfinitePlaceBijective
@@ -21,7 +19,7 @@ namespace GlobalTheory.HeckeConj
 
 def arg2 : ℂˣ →* Circle where
   toFun z := ⟨(z : ℂ) / starRingEnd ℂ (z : ℂ), by
-    simp [Submonoid.unitSphere, norm_div]⟩
+    simp [Submonoid.unitSphere]⟩
   map_one' := Circle.ext (by simp)
   map_mul' x y := Circle.ext (by
     show ((x * y : ℂˣ) : ℂ) / starRingEnd ℂ ((x * y : ℂˣ) : ℂ) =

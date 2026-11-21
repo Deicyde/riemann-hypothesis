@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.L2DbarEstimates.NormFibrations.MvBlowup
 import ReciprocityTheory.L2DbarEstimates.WeakHolomorphy.ImportsAlt
 

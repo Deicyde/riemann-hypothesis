@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.BochnerInequality.LayerWeight
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.BochnerInequality.SchPhiOneApply
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.BochnerInequality.BochIneq

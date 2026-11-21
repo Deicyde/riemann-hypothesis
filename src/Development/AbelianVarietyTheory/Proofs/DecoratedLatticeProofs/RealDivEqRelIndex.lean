@@ -1,10 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.SiegelEisenstein.GlobalLocalFactorization
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsOneComb
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.SymmetricLevelChainPatternIterated
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.IteratedDepthOneLevelCharacterClosedForm
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsMulLeftInvariantVolGL
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.EntriesWellDefined
+import Development.AbelianVarietyTheory.Definitions.LatticeFrames.OnesRepresent
 
 noncomputable section
 

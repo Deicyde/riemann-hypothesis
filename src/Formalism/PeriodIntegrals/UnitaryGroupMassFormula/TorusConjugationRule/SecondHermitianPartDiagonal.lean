@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.TorusConjugationRule.WColOther
 
 open Matrix Formalism.REAL Formalism.QuantumDeterminants Formalism.FourierDecayAlt.Q Filter Topology
@@ -41,7 +43,7 @@ private lemma hpk_eq_lemma (i j : Fin (2 * r + k + 1)) :
 private lemma hpk_sq_lemma : Hpk k r * Hpk k r = 1 := by
   ext i j
   rw [Matrix.mul_apply, Matrix.one_apply]
-  simp only [hpk_eq_lemma, ite_mul, zero_mul, Finset.sum_ite_eq, Finset.sum_ite_eq', Finset.mem_univ, if_true, tau_tau_lemma, sgn_tau_lemma]
+  simp only [hpk_eq_lemma, ite_mul, zero_mul, Finset.sum_ite_eq', Finset.mem_univ, if_true, tau_tau_lemma, sgn_tau_lemma]
   by_cases h : i = j
   · subst h
     simp [sgn_sq_lemma]
@@ -71,7 +73,7 @@ private lemma single_ct_lemma (a b : Fin (2 * r + k + 1)) (c : ℂ) :
 private lemma conj_single_lemma (A B : Mx k r) (a b : Fin (2 * r + k + 1)) (c : ℂ)
     (p q : Fin (2 * r + k + 1)) : (A * Matrix.single a b c * B) p q = A p a * c * B b q := by
   simp only [Matrix.mul_apply, Matrix.single_apply, ite_and, mul_ite, mul_zero, ite_mul, zero_mul,
-    Finset.sum_ite_eq, Finset.sum_ite_eq', Finset.mem_univ, if_true]
+    Finset.sum_ite_eq, Finset.mem_univ, if_true]
 
 lemma conj_single (x : Fin (2 * r + k + 1)) :
     Hpk k r * (single x x (1 : ℂ))ᴴ * Hpk k r =
@@ -112,13 +114,13 @@ lemma X1_eq (l : Fin r) : hpart1 (Hpk k r) (single (eI k r l) (eI k r l) 1) =
   unfold hpart1 dz
   rw [inv_conj_single, tau_e]
   ext p q
-  simp only [Matrix.smul_apply, Matrix.sub_apply, Matrix.add_apply, Matrix.single_apply,
+  simp only [Matrix.smul_apply, Matrix.sub_apply, Matrix.single_apply,
     Matrix.diagonal_apply, smul_eq_mul]
   by_cases hpq : p = q
   · subst hpq
     by_cases h1 : p = eI k r l
     · subst h1
-      simp [hne, hne.symm] <;> (try norm_num) <;> (try ring)
+      simp [hne.symm] <;> (try norm_num) <;> (try ring)
     · by_cases h2 : p = esI k r l
       · subst h2
         simp [hne, hne.symm] <;> (try norm_num) <;> (try ring)
@@ -133,13 +135,13 @@ lemma depthNumbers_threshold_eq (l : Fin r) : hpart2 (Hpk k r) (single (eI k r l
   unfold hpart2 dz
   rw [inv_conj_single, tau_e]
   ext p q
-  simp only [Matrix.smul_apply, Matrix.sub_apply, Matrix.add_apply, Matrix.single_apply,
+  simp only [Matrix.smul_apply, Matrix.add_apply, Matrix.single_apply,
     Matrix.diagonal_apply, smul_eq_mul]
   by_cases hpq : p = q
   · subst hpq
     by_cases h1 : p = eI k r l
     · subst h1
-      simp [hne, hne.symm] <;> (try norm_num) <;> (try ring)
+      simp [hne.symm] <;> (try norm_num) <;> (try ring)
     · by_cases h2 : p = esI k r l
       · subst h2
         simp [hne, hne.symm] <;> (try norm_num) <;> (try ring)
@@ -154,13 +156,13 @@ lemma first_hermitian_part_diagonal (l : Fin r) : hpart1 (Hpk k r) (single (esI 
   unfold hpart1 dz
   rw [inv_conj_single, tau_es]
   ext p q
-  simp only [Matrix.smul_apply, Matrix.sub_apply, Matrix.add_apply, Matrix.single_apply,
+  simp only [Matrix.smul_apply, Matrix.sub_apply, Matrix.single_apply,
     Matrix.diagonal_apply, smul_eq_mul]
   by_cases hpq : p = q
   · subst hpq
     by_cases h1 : p = eI k r l
     · subst h1
-      simp [hne, hne.symm] <;> (try norm_num) <;> (try ring)
+      simp [hne.symm] <;> (try norm_num) <;> (try ring)
     · by_cases h2 : p = esI k r l
       · subst h2
         simp [hne, hne.symm] <;> (try norm_num) <;> (try ring)
@@ -175,13 +177,13 @@ lemma second_hermitian_part_diagonal (l : Fin r) : hpart2 (Hpk k r) (single (esI
   unfold hpart2 dz
   rw [inv_conj_single, tau_es]
   ext p q
-  simp only [Matrix.smul_apply, Matrix.sub_apply, Matrix.add_apply, Matrix.single_apply,
+  simp only [Matrix.smul_apply, Matrix.add_apply, Matrix.single_apply,
     Matrix.diagonal_apply, smul_eq_mul]
   by_cases hpq : p = q
   · subst hpq
     by_cases h1 : p = eI k r l
     · subst h1
-      simp [hne, hne.symm] <;> (try norm_num) <;> (try ring)
+      simp [hne.symm] <;> (try norm_num) <;> (try ring)
     · by_cases h2 : p = esI k r l
       · subst h2
         simp [hne, hne.symm] <;> (try norm_num) <;> (try ring)
@@ -331,7 +333,7 @@ theorem ruleTorus : RuleTorus := by
     generalize hA : L' (Pi.single l (1 : ℂ)) = A
     generalize hB : L' (Pi.single l Complex.I) = B
     simp only [Complex.mul_re, Complex.mul_im, Complex.ofReal_re, Complex.ofReal_im, Complex.I_re,
-      Complex.I_im, Complex.neg_re, Complex.neg_im]
+      Complex.I_im]
     push_cast
     conv_rhs => rw [← Complex.re_add_im (c l)]
     try simp only [Complex.star_def, map_add, map_mul, Complex.conj_ofReal, Complex.conj_I]

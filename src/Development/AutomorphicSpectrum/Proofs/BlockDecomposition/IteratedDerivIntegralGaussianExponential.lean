@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.AesmIteratedDerivReal
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Analysis.SpecialFunctions.Gaussian.FourierTransform
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 open MeasureTheory Filter Topology
 
@@ -10,7 +13,7 @@ lemma integrable_gauss_complex :
   have hb : 0 < ((Real.pi : ℂ)).re := by simpa using Real.pi_pos
   have h := (GaussianFourier.integrable_cexp_neg_mul_sq_norm_add (V := ℂ) hb 0 0).norm
   refine h.congr (Filter.Eventually.of_forall fun w => ?_)
-  simp only [inner_zero_left, Complex.ofReal_zero, mul_zero, zero_mul, add_zero, Complex.norm_exp]
+  simp only [inner_zero_left, Complex.ofReal_zero, mul_zero, add_zero, Complex.norm_exp]
   rw [← Complex.ofReal_pow, ← Complex.ofReal_neg, ← Complex.ofReal_mul, Complex.ofReal_re]
 
 lemma integrable_gauss (m n : ℕ) :

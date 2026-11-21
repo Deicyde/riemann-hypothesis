@@ -1,6 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.ResolutionOfSingularities.EmbeddedResolution.DerivativeIdeal.IdealOrder
 import Development.ResolutionOfSingularities.Foundations.Schemes.AffineOpens
+import Mathlib.AlgebraicGeometry.Modules.Sheaf
+import Mathlib.AlgebraicGeometry.Noetherian
+import Mathlib.Combinatorics.Quiver.ReflQuiver
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Std.Tactic.BVDecide.Normalize.Prop
 namespace FunctorialResolution.EmbeddedResolution
 
 open AlgebraicGeometry TopologicalSpace

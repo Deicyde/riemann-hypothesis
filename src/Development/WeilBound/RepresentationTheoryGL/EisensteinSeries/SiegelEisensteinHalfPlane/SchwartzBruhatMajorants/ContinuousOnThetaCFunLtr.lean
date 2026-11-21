@@ -1,14 +1,11 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.EisensteinSeries.SiegelEisensteinContinuation.IsEpCont
-import Development.WeilBound.CoreStatements.AutomorphicKernels.EisensteinSeriesG2.HeisenbergTheta.HeisenbergThetaConstant.ThetaC
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ArchExponentEqZeroOfMulSelf
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FunctionalEquationPairEntirePartBound
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousSetIntegralIoiOne
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ImportsSide
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ThetaCIntNeg
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ThetaCIntSmul
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LinearChangeMemSchwartzBruhatPi
-import Development.WeilBound.RepresentationTheoryGL.EisensteinSeries.SiegelEisensteinHalfPlane.SchwartzBruhatMajorants.MeasurePreservingCompEquiv
 import Development.WeilBound.RepresentationTheoryGL.EisensteinSeries.SiegelEisensteinHalfPlane.SchwartzBruhatMajorants.ThetaCIntegrandMulDiagonalToNormOne
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousTranslatedIntegrand
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ThetaCIntLtrSubThetaCConst
@@ -145,7 +142,7 @@ theorem continuousOn_thetaCFun_ltr (w : InfinitePlace k) {Ψ : (ι → 𝔸[k]) 
     (Continuous.subtype_mk (continuous_snd.comp continuous_subtype_val) _).prodMk
       (continuous_fst.comp continuous_subtype_val)
   refine (h.comp hc).congr fun q ↦ ?_
-  simp only [restrict, Function.comp]
+  simp only [Function.comp]
   exact (thetaCFun_of_pos w _ ω q.2.2).symm
 
 theorem continuousOn_thetaCFun (w : InfinitePlace k) {F : (ι → 𝔸[k]) → ℂ}

@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.HeightFunctions.GrowthConstantBoundGcR
-import Development.AbelianVarietyTheory.Counterexamples.HeightSurvey.PageSupportRows
-import Formalism.SharpRestriction.GenusPolyhedralBounds.RelativeIndexClassSets.FourthHypothesisOfParams
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.Divisibility.WeightFamilies
+import Formalism.SharpRestriction.GenusPolyhedralBounds.RelativeIndexClassSets.LargeConstantLeParamCube
 
 set_option autoImplicit false
 

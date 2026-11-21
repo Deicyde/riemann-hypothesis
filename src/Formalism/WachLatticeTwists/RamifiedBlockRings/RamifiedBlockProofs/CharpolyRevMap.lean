@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.RamifiedBlockRings.RamifiedBlockProofs.IdempotentImageSurjective
 
 open Finset Classical
@@ -28,7 +29,7 @@ theorem cornerIdem : CornerIdempotentInSubalgebra := by
     have := B.mul_mem (B.mul_mem hw1B hc) hw2B
     convert this using 1
     refine Prod.ext ?_ ?_
-    · simp [hw1, hw2, Matrix.mul_sub, Matrix.sub_mul, Matrix.single_mul_single_same,
+    · simp [hw1, hw2, Matrix.mul_sub, Matrix.single_mul_single_same,
         Matrix.single_mul_single_of_ne, hpq]
     · simp
   have hA : (A, (0 : ι → k)) = ∑ i, ∑ j, A i j • ((Matrix.single i j (1 : k) : Matrix n n k), (0 : ι → k)) := by
@@ -46,7 +47,7 @@ theorem charpolyRev_map {A B : Type*} [CommRing A] [CommRing B] (f : A →+* B) 
   rw [← Polynomial.coe_mapRingHom, RingHom.map_det]
   congr 1
   ext i j
-  by_cases h : i = j <;> simp [h, Matrix.one_apply]
+  by_cases h : i = j <;> simp [h]
 
 theorem nilConst : StatNilConst := by
   intro O _ _ X T d _ _ hT a ha y hy x

@@ -1,5 +1,5 @@
-import Mathlib
-import ReciprocityTheory.AnalyticForms.PotentialTheory.ProjectiveLineFubiniStudyFacts
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.StListTailLog
 import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.StListTailLogSmooth
 import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.SystemIndependence

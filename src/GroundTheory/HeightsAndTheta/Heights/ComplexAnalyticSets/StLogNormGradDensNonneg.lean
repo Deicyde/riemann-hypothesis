@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.PartsSt
-import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StatementsCurrent
+import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.Statements
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

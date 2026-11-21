@@ -1,9 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MemRiemannRochSpaceIffRegularAtEverywhere
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CardAffineHyperplaneStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CardTwoAffineHyperplanesStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HermitianCountFromHyperplanesStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CardFunctionalsVanishingSubspaceStatement
-import Mathlib
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.LineSCShortExact
 
 set_option autoImplicit false
@@ -19,7 +20,7 @@ variable {n : ℕ}
 
 theorem coordVec_expand (w : V n) : w = ∑ a, w a • coordVec a := by
   ext i
-  simp [coordVec, EuclideanSpace.single_apply, Pi.single_apply]
+  simp [coordVec, Pi.single_apply]
 
 theorem sesq_sum_left {α : V n → V n → ℂ} (hα : IsSesq α) {ι : Type} (s : Finset ι) (c : ι → ℂ)
     (x : ι → V n) (y : V n) : α (∑ i ∈ s, c i • x i) y = ∑ i ∈ s, c i * α (x i) y := by

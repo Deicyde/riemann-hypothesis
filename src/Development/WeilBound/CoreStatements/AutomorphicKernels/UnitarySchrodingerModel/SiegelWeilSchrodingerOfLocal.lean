@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ThetaCoefficientOfConvergenceStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.UnfoldingHoldsStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.NondegenerateOfWhittakerStatement
@@ -10,8 +10,6 @@ import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MatchingMonomia
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DictionaryMaximalCompactPartsStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.AnisotropyOfRangeStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WhittakerMaximalCompactGeneralStatement
-import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.GlobalGaussLaws.VanishTop2
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ThetaAutomorphicOfConvergenceStatement
 
 noncomputable section
 

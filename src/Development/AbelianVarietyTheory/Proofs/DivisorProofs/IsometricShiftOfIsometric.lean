@@ -1,12 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.Definitions.Divisors.GenericPointAsIdeal
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NontrivialIsomClassInt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SwapSymmetricImpliesSwapFlag
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsHomogSwapSymmetric
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleHermitianMetricGrading
 open NumberField MvPolynomial Filter Topology Formalism.BasicNotions Formalism.MainNotions Formalism.DegreeFormula GlobalTheory.FlagPoly GlobalTheory.Mean4 GlobalTheory.Mean4O GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.CovTest GlobalTheory.Published
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory GlobalTheory.ArInt
 open scoped Classical
@@ -172,10 +167,10 @@ theorem geo_swap : ArCalc → RegularAlteration → ∀ (k : Type) [CommRing k] 
     · congr 1
       funext z
       by_cases h1 : z = x
-      · subst h1; simp [Function.update_apply, hxy, Equiv.swap_apply_left]
+      · subst h1; simp [hxy, Equiv.swap_apply_left]
       · by_cases h2 : z = y
-        · subst h2; simp [Function.update_apply, Equiv.swap_apply_right]
-        · simp [Function.update_apply, h1, h2, Equiv.swap_apply_of_ne_of_ne h1 h2]
+        · subst h2; simp [Equiv.swap_apply_right]
+        · simp [h1, h2, Equiv.swap_apply_of_ne_of_ne h1 h2]
   have hz := GlobalTheory.ArInt.Model.eq_zero_of_pow (d₁ + 1)
     (Ψ + Ψ ∘ₗ (rename (Equiv.swap x y) : MvPolynomial (Σ a, Fin (r a)) ℝ →ₐ[ℝ] _).toLinearMap)
     (fun n => by

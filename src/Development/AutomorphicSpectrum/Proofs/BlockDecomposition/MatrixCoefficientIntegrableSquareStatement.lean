@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MatrixCoefficientIntegrableSquare
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.IsNormEmbId
 open MeasureTheory GlobalTheory.CompanionTheory.UnitaryFramesMetricPeriods
 open scoped InnerProductSpace
 set_option maxHeartbeats 1000000 in

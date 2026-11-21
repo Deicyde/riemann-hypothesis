@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.Reductions.SiegelCore
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsAdaptedMajorant
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsUnitaryCommuting

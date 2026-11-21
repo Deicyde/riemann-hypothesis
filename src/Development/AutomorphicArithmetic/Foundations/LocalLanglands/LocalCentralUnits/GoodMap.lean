@@ -1,11 +1,9 @@
-import Development.AutomorphicArithmetic.Foundations.LocalLanglands.RecTTransport
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.LocalLanglands.LocalCentralUnits.CentralUnit
 import Development.AutomorphicArithmetic.Foundations.LocalLanglands.LocalCentralUnits.ParUniq
 import Development.AutomorphicArithmetic.Foundations.LocalLanglands.LocalCentralUnits.NormEqProd
 import Development.AutomorphicArithmetic.Foundations.LocalLanglands.LocalCentralUnits.ParOne
-import Development.AutomorphicArithmetic.Foundations.LocalLanglands.LocalCentralUnits.TwTame
-import Development.AutomorphicArithmetic.Foundations.LocalLanglands.LocalCentralUnits.ClBasic
-import Development.AutomorphicArithmetic.Foundations.LocalLanglands.LocalCentralUnits.WDBasic
 
 noncomputable section
 

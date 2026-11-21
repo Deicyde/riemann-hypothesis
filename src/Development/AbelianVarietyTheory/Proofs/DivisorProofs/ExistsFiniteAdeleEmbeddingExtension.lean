@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ClassesAt
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsContinuousExtensionAdicCompletion
-import Formalism.LocalRingCardinality.SpanPowerMembership.ExistsHomOfBasis
 import ReciprocityTheory.ReductiveGroups.LatticeEmbeddings.IotaPlace
 
 set_option autoImplicit false

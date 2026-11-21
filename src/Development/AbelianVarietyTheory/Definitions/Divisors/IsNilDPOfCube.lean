@@ -1,5 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.OneFormMapEqKaehlerDifferentialMap
+import Development.AbelianVarietyTheory.Definitions.Divisors.CrystallineConnectionFormCoboundaryZero
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
 
 set_option autoImplicit false
 
@@ -64,7 +69,7 @@ def cubeDP (hm : ∀ x ∈ J, g x ∈ J) (ha : ∀ x ∈ J, ∀ y ∈ J, g (x + 
       first
       | exact absurd rfl hn
       | (rw [big (by nlinarith)]; simp [cubePow, hx, hg x hx, hm x hx, g0]; done)
-      | simp [cubePow, hx, hm x hx, g0, Nat.uniformBell_zero_left, Nat.uniformBell_one_left,
+      | simp [cubePow, hx, hm x hx, Nat.uniformBell_zero_left, Nat.uniformBell_one_left,
           Nat.uniformBell_one_right]
 
 theorem isDPNilpotent_of_cube (δ : DividedPowers J) (h3 : ∀ a ∈ J, ∀ b ∈ J, ∀ c ∈ J, a * b * c = 0)
@@ -203,8 +208,8 @@ instance : CommRing (Bi R B) :=
     mul_comm := fun a b ↦ by ext1 <;> simp [mul_comm] <;> abel }
 
 instance : Algebra R (Bi R B) := Algebra.ofModule
-  (fun r x y ↦ by ext1 <;> simp [wedge_smul_left, wedge_smul_right, smul_comm r])
-  (fun r x y ↦ by ext1 <;> simp [wedge_smul_left, wedge_smul_right, smul_comm r])
+  (fun r x y ↦ by ext1 <;> simp [smul_comm r])
+  (fun r x y ↦ by ext1 <;> simp [smul_comm r])
 
 theorem algebraMap_eq (r : R) : algebraMap R (Bi R B) r = mk (algebraMap R B r) 0 0 0 := by
   rw [Algebra.algebraMap_eq_smul_one, Algebra.algebraMap_eq_smul_one]

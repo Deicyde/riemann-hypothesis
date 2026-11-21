@@ -1,9 +1,9 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.ThClassPinsRec
-import Development.AbelianVarietyTheory.BlockTheory.ExistenceTori.CoefficientSpaceWeights
-import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.ThetaLetterEquivConjugate
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.GeneralLinearGroupCharEqOneOfDetEqOne
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.FiniteNotIsUnitOneAddSmul
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Data.Rat.Star
 
 set_option autoImplicit false
 noncomputable section
@@ -159,12 +159,12 @@ theorem char_eq_one {F A n : Type} [Field F] [CharZero F] [CommGroup A] [Fintype
         ext a b
         by_cases h : i = a
         · subst h; simp [ddCharDiag_val]
-        · simp [ddCharDiag_val, Matrix.single_apply, h])
+        · simp [ddCharDiag_val, h])
       (by
         ext a b
         by_cases h : j = b
         · subst h; simp [ddCharDiag_val, Pi.mulSingle_eq_of_ne hij.symm]
-        · simp [ddCharDiag_val, Matrix.single_apply, h])
+        · simp [ddCharDiag_val, h])
       (by norm_num)
     rw [← this]
     exact congrArg ψ (Units.ext rfl)

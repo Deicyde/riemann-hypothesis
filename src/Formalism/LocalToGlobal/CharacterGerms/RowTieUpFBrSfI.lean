@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CharacterGerms.RowTieUpFBrSf
+import Formalism.LocalToGlobal.CharacterGerms.CharacterHypothesisUnramified
 
 set_option autoImplicit false
 
@@ -98,7 +101,7 @@ theorem eig_atS {Y : FBChart C V OE dd} (p : SelfData Y d I0) (hinj : Function.I
       simp_rw [h2, Finset.sum_mul]
       rw [Finset.sum_comm]
       simp_rw [_root_.mul_assoc, ← Finset.mul_sum, hw2]
-      simp only [mul_ite, mul_one, mul_zero]
+      simp only [mul_ite, mul_zero]
       rw [Finset.sum_eq_single k]
       · simp
       · intro m _ hm

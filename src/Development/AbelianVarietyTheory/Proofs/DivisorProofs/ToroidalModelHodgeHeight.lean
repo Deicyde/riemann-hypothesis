@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlockUniOne
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToroidalModelBaseChangeNormal
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TangentFrameAtIntegralPoint

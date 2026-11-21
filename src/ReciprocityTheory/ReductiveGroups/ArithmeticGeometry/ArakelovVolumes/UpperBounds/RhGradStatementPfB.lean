@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.RhGradStatementPfA
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.ExhaustStatementPfB
+import Mathlib.Topology.Sheaves.Presheaf
+import ReciprocityTheory.L2DbarEstimates.SkodaWeights.LeviVA
 
 namespace ReciprocityTheory.ChartRestriction.G.AR.Up.RgC
 
@@ -71,7 +75,7 @@ theorem posDef_swap {r s : ℕ} {Z : Matrix (Fin r) (Fin s) ℂ} (h : (1 - Z * Z
   have hAS : (1 - Z * Zᴴ) * S = 1 := Matrix.mul_nonsing_inv _ hu
   have key : (1 - Zᴴ * Z) * (1 + Zᴴ * S * Z) = 1 := by
     have e : (1 - Zᴴ * Z) * (1 + Zᴴ * S * Z) = 1 + Zᴴ * ((1 - Z * Zᴴ) * S - 1) * Z := by
-      simp only [Matrix.mul_add, Matrix.sub_mul, Matrix.mul_sub, Matrix.add_mul, Matrix.one_mul,
+      simp only [Matrix.mul_add, Matrix.sub_mul, Matrix.mul_sub, Matrix.one_mul,
         Matrix.mul_one, Matrix.mul_assoc]
       abel
     rw [e, hAS, sub_self, Matrix.mul_zero, Matrix.zero_mul, add_zero]
@@ -140,7 +144,7 @@ theorem block (hm : 0 < min p q) {v0 : V (nD f p q)} (hv0 : v0 ∈ Dset f p q) (
       refine Finset.sum_congr rfl fun a _ => Finset.sum_congr rfl fun b _ => ?_
       rw [← Complex.normSq_conj]
       congr 1
-      simp [Matrix.mul_apply, conjTranspose_apply, map_sum, Complex.star_def, mul_comm]
+      simp [Matrix.mul_apply, conjTranspose_apply, map_sum, mul_comm]
     refine ⟨Q, ?_, ?_, ?_, ?_⟩
     · rw [hQ]; exact quad_contDiff _ _ hℓ
     · intro ξ; rw [hQ]; exact levi_quad_nonpos _ _ hℓ v0 ξ

@@ -1,9 +1,6 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.ArithmeticCylinders
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ExistsReduction
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.TopfBasis
-import Development.AbelianVarietyTheory.Definitions.Foundations.CdScaleTieIff
+import Formalism.SharpRestriction.CuspSpanNormBounds.GlobAut
 open MeasureTheory Formalism.MainNotions.S Formalism.BasicNotions Formalism.MainNotions.ArithmeticCylinders GlobalTheory.RowLev NumberField IsDedekindDomain Matrix
 open scoped InnerProductSpace ComplexOrder TensorProduct Classical
 

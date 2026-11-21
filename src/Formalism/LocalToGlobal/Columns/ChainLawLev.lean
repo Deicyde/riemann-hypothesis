@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.ChainLawExt
 import Formalism.LocalToGlobal.Columns.ReducedMatrixExtensionEntry
-import Formalism.LocalToGlobal.Columns.ColumnsProofs.ChainCounts
 
 open NumberField IsDedekindDomain Module
 

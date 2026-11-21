@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.CupProducts.Pairing
-import GroundTheory.ProfiniteCohomology.GaloisCohomology.UnitsInflationCochainsFHomApply
+import GroundTheory.ProfiniteCohomology.GaloisModules.CoeGalRootsOfUnityHomApply
 set_option maxSynthPendingDepth 1
 
 noncomputable section

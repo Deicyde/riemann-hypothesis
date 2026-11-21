@@ -1,5 +1,4 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.PVectorOrbitsFinite
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.ImportsTerExtra
 
 namespace GroundTheory.Heights₂.Heights.FiniteCovolume

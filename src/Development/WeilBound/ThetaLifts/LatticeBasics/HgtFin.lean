@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LatticeBasics.HgtWitt
 import Development.WeilBound.CoreStatements.LocalThetaKernels.IwasFrame
 import Development.AutomorphicSpectrum.Proofs.AdelicProofs.MemKFinOfFrameIntegral

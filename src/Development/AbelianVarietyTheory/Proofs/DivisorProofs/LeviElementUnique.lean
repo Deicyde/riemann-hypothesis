@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLeviLeviElt
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK
@@ -68,7 +65,7 @@ theorem levi_unique : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [Numb
     have hs : incV F (Pi.single j (1 : E)) = Pi.single j 1 := by
       funext k; by_cases hk : k = j
       · subst hk; simp [incV]
-      · simp [incV, Pi.single_apply, hk]
+      · simp [incV, hk]
     rw [hs, Matrix.mulVec_single_one, Matrix.mulVec_single_one] at h
     simpa using h
   exact Subtype.ext (Units.ext hmat)

@@ -1,10 +1,10 @@
-import Mathlib
-import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.ColInst
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ColRecCEvBijective
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.NuRowSuccEqWt
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ThetaDistributionUnfolded
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.OrdSubDetSubStdL
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.H90USurjective
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsAbsIrrCharCompIff
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EvaluationDatumOkBaseTuple
+import Formalism.LocalToGlobal.Columns.InvariantSubspaceCoordsX
+import Formalism.LocalToGlobal.Columns.RecPerFF
 
 noncomputable section
 

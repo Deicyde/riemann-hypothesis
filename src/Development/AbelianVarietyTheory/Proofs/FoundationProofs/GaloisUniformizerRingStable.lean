@@ -1,7 +1,7 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.LocalSituation
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.TorsionBlocks.SelmerWindowSums
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FinrankCyclotomicExtAndCyclotomicCharSurjective
+import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.Kernel
 
 noncomputable section
 

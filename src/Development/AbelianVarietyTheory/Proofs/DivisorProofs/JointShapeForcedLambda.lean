@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockMap
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 open scoped TensorProduct GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels
 
 namespace GlobalTheory.ShapeForced
@@ -96,11 +95,11 @@ theorem GlobalTheory.RealLift.jointShape_halfKappa : ∀ (P Q P' Q' R S : ℕ) (
     funext x
     have := congrFun h2 x
     rcases x with ⟨i, hi⟩ | ⟨j, hj⟩
-    · simp only [shiftNu, ofBlocks, pad, List.map_append, List.map_replicate, hamap, List.map_nil, List.append_nil,
+    · simp only [shiftNu, ofBlocks, pad, List.map_append, List.map_replicate, hamap, List.append_nil,
         getD_replicate_append, Int.cast_zero] at this
       simp only [GlobalTheory.RealLift.lam]
       split_ifs at this ⊢ <;> first | linarith | omega
-    · simp only [shiftNu, ofBlocks, pad, List.map_append, List.map_replicate, hcmap, List.map_nil, List.append_nil,
+    · simp only [shiftNu, ofBlocks, pad, List.map_append, List.map_replicate, hcmap, List.append_nil,
         getD_replicate_append, Int.cast_zero] at this
       simp only [GlobalTheory.RealLift.lam]
       split_ifs at this ⊢ <;> first | linarith | omega
@@ -133,14 +132,14 @@ theorem GlobalTheory.RealLift.jointShape_halfKappa : ∀ (P Q P' Q' R S : ℕ) (
     funext x
     have := congrFun h2 x
     rcases x with ⟨i, hi⟩ | ⟨j, hj⟩
-    · simp only [shiftNu, ofBlocks, pad, List.map_append, List.map_replicate, hdmap, List.map_nil, List.nil_append,
+    · simp only [shiftNu, ofBlocks, pad, List.map_append, List.map_replicate, hdmap, List.nil_append,
         List.length_nil, getD_replicate_append, Int.cast_zero] at this
       simp only [GlobalTheory.RealLift.lam]
       subst hR hS
       unfold cPair at this ⊢
       push_cast at this ⊢
       split_ifs at this ⊢ <;> first | linarith | omega
-    · simp only [shiftNu, ofBlocks, pad, List.map_append, List.map_replicate, hbmap, List.map_nil, List.nil_append,
+    · simp only [shiftNu, ofBlocks, pad, List.map_append, List.map_replicate, hbmap, List.nil_append,
         List.length_nil, getD_replicate_append, Int.cast_zero] at this
       simp only [GlobalTheory.RealLift.lam]
       subst hR hS

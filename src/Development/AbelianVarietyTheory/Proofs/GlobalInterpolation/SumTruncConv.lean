@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.LFunctionEqTsumOfOneLt
+import Mathlib.Topology.Sheaves.Presheaf
 open Complex DirichletCharacter ArithmeticFunction MeasureTheory
 
 namespace GlobalTheory.ZeroDetect

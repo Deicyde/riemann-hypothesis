@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnfoldingEquivalence.Points
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
+import Mathlib.Tactic.Polynomial.Basic
 
 open PI.UnfoldEquiv PI.UnfoldEquiv.Loc
 

@@ -1,6 +1,5 @@
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.SameOffRefl
-import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.TiePtOne
-import Formalism.SharpRestriction.GrowthBounds.ChartedClasses.ToLEInvApply
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ExistsMidLevIff
 import ReciprocityTheory.NeutralLocalFields.LocalFieldComparison.HCFFromRecipA
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.G Formalism.L2.G Formalism.L2.G.Cmp Formalism.L2.Forms Formalism.UG Formalism.L2.DIV Formalism.L2.G.Pend Formalism.L2.PairingIndexBounds.F Formalism.MainNotions.G.KAat GlobalTheory.TwV GlobalTheory.TwV.Xc TensorProduct
@@ -123,7 +122,7 @@ theorem normOne_idele_pow_eq_normOne_principal_mul_unit (σ : E →ₐ[F] E) (h�
       apply ha
       rw [← hσ (a : E), h0, map_zero]
     simp only [sa, Units.val_mul, Units.val_inv_eq_inv_val, Units.coe_map, MonoidHom.coe_coe, RingHom.toMonoidHom_eq_coe,
-      AlgHom.coe_toRingHom, RingHom.coe_coe, map_mul, map_inv₀, hσ]
+      RingHom.coe_coe, map_mul, map_inv₀, hσ]
     field_simp
   · rw [U1, MonoidHom.mem_ker, MonoidHom.mul_apply, MonoidHom.id_apply, map_mul, map_inv, conjId_conjId σ hσ]
     rw [mul_assoc, inv_mul_cancel_left, mul_inv_cancel]

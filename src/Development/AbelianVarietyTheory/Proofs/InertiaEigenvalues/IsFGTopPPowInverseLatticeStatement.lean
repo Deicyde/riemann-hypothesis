@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsFGTopPPowInverseLattice
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.TraceFormulas.LatDefs
 open ReciprocityTheory.Gal Formalism.RepresentationBoundsCohomology.LOC ReciprocityTheory.ChartRestriction.T2
 open Formalism.NG (KO)
 set_option maxHeartbeats 1000000 in

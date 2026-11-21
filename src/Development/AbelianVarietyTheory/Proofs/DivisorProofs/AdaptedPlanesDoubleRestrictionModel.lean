@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatrixExtendByZeroAdd
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsRationalDarbouxHermitianTensorAdeles
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SymplecticFormBaseChangeMatrix
@@ -91,7 +90,7 @@ theorem hTens_gramM (c : S →ₐ[R] S) (J₁ : Matrix (Fin n₁) (Fin n₁) S) 
   simp only [hTens, Fintype.sum_sum_type, pos, mom, core, Sum.elim_inl, Sum.elim_inr, Matrix.fromBlocks_apply₁₁,
     Matrix.fromBlocks_apply₁₂, Matrix.fromBlocks_apply₂₁, Matrix.fromBlocks_apply₂₂, Matrix.neg_apply, Matrix.zero_apply,
     gramM, Matrix.of_apply, Fintype.sum_option, vec_three_none, vec_three_some_none, vec_three_some_some, Pi.zero_apply, mul_zero, zero_mul,
-    neg_zero, Finset.sum_const_zero, add_zero, zero_add, mul_one, mul_neg, neg_mul, Finset.sum_add_distrib,
+    Finset.sum_const_zero, add_zero, zero_add, mul_one, mul_neg, neg_mul, Finset.sum_add_distrib,
     Finset.sum_neg_distrib]
   ring
 

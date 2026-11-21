@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.KatoQuadraticCharacters.FrobeniusHodgeTateLaws.ChiFixAlt
+import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsEqSubOfMemCob
 
 noncomputable section
 

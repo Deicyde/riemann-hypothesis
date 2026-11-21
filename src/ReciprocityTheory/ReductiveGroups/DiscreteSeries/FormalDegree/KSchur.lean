@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.PmatIsHermitian
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.KinstSecondCountable
+import Mathlib.Analysis.InnerProductSpace.Trace
+import Mathlib.LinearAlgebra.Eigenspace.Triangularizable
 
 noncomputable section
 

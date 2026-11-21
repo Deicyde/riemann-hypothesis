@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IntegrandSZero
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.UnifModGrowthOfIsUnifModerate
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.IntegralUnramifiedOutsideOpenSubsetInsertPlaceStatement
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.PeterssonCoefficientBoundedSphericalUnramifiedStatement
 open scoped ComplexConjugate Matrix NNReal
@@ -28,7 +26,7 @@ theorem isOpen_openOff {D : D7} (A : HSp D) (L : Lat A) (hL : IsSelfDualC A L) (
       (by
         convert (isRestrGroup_GAd D.sp.cm.sig A.gram L).isOpen_all using 1
         ext g
-        simp [Subgroup.mem_iInf])
+        simp)
   convert hUo using 1
   exact Set.ext fun g => (hU g).symm
 

@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.GenericMinors
+import BuildAid.Leniency.Open
+import GroundTheory.HeightsAndTheta.Heights.Intersections.FlagPivot
 set_option maxSynthPendingDepth 1
 
 noncomputable section

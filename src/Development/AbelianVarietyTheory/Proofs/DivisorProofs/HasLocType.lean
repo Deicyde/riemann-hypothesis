@@ -1,8 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsUnitDetOfCartan
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsMidJacAt
-import Development.AbelianVarietyTheory.Definitions.Foundations.SmoothPartStable
 
 noncomputable section
 

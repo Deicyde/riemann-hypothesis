@@ -1,10 +1,9 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.HDiscDefs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.OmPoly
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.DiscProduct
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.DiscHadamard
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.HFour
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.NormFactorizationClause
-import ReciprocityTheory.SemistableReduction.TorusL2CauchyInequality
 
 namespace ReciprocityTheory.ChartRestriction.G.T0
 
@@ -73,8 +72,8 @@ theorem disc_global (hd : d.AxH 𝒜) (h : d.S1) (hI2be : d.HeightIntegralBoundE
     have h1 := ReciprocityTheory.MultiplicativeHeights.Closed.sphere_height_lower_bound K (d.D + 1) (d.N + 1) _ Om (Nat.succ_pos _) hOm0 hOmH
     have ht : ((d.aG h d.wF hd.a4.choose).toNat : ℝ) = (d.aG h d.wF hd.a4.choose : ℝ) := by
       exact_mod_cast Int.toNat_of_nonneg haG0
-    simp only [Fin.sum_univ_succ, Fin.succ_ne_zero, eq_self_iff_true, if_true, if_false,
-      ite_true, ite_false, Nat.cast_zero, zero_mul, zero_add, Finset.sum_const,
+    simp only [Fin.sum_univ_succ, Fin.succ_ne_zero, if_true, if_false,
+      Nat.cast_zero, zero_mul, zero_add, Finset.sum_const,
       Finset.card_univ, Fintype.card_fin, nsmul_eq_mul, Nat.cast_mul, Nat.cast_ofNat] at h1
     rw [ht] at h1
     linear_combination h1

@@ -1,7 +1,7 @@
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.KerBF
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.ThetaAbsoluteSum
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.TransvectionAction
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.WeilDatumExistence
+import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.WittSmallGroupEmbeddingMemPointwiseStabilizerIso
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR.Datum MeasureTheory IsDedekindDomain NumberField Matrix
 open GlobalTheory.MixModel GlobalTheory.MixPer GlobalTheory.Grow
 open scoped TensorProduct
@@ -53,7 +53,7 @@ theorem upSum_smul_vecMulVec {ρ : ℕ} (s : AE D) (x : Fin ρ → AE D) (j J : 
     · subst hk
       by_cases hi : i = j
       · subst hi
-        simp [hJ, Matrix.vecMulVec_apply, mul_comm]
+        simp [hJ, Matrix.vecMulVec_apply]
       · have : ¬ (k.1 = i.1 + 1) := fun h => hi (Fin.ext (by omega))
         simp [hi, this]
     · simp [hk, Matrix.vecMulVec_apply]
@@ -71,7 +71,7 @@ theorem form_jY_single (y : VA V) (J : Fin ρ) (s : AE D) :
     funext k
     by_cases hk : k = J
     · subst hk; simp [cA_cA]
-    · simp [Pi.single_apply, hk]
+    · simp [hk]
   rw [form_mulVec, h, ← d.pX_eq, single_dotProduct]
 
 theorem form_jX (y : VA V) (b : Fin ρ → AE D) :

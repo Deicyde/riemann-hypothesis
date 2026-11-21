@@ -1,12 +1,11 @@
-import ReciprocityTheory.AnalyticForms.LeviForms.TailCut
-import ReciprocityTheory.AnalyticForms.PotentialTheory.PLLocalStatement
-import ReciprocityTheory.AnalyticForms.PotentialTheory.Stokes
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PotentialTheory.PotentialContDiffAt
-import ReciprocityTheory.AnalyticForms.PotentialTheory.SNCAtlas
 import ReciprocityTheory.AnalyticForms.PotentialTheory.IntegrableOnTargetOfTsupport
-import ReciprocityTheory.AnalyticForms.PotentialTheory.DegreeInhab
-import ReciprocityTheory.AnalyticForms.LeviForms.PullDominateStatement
-import ReciprocityTheory.AnalyticForms.PotentialTheory.PshShiftB
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
+import ReciprocityTheory.AnalyticForms.PotentialTheory.PshShiftA
 
 namespace ReciprocityTheory.AnForm.P
 

@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.Rationality.LocalQuotientRank
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.Rationality.LocalLengthFraction
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 namespace ReciprocityTheory.ChartRestriction.G.FreeQuotientRank.LocalLengthAverage
 
@@ -22,7 +25,7 @@ lemma algebraMap_mem_Rv (w : HeightOneSpectrum (𝓞 K₁)) (a : 𝓞 K) :
   first
     | exact w.valuation_le_one _
     | exact w.valuation_le_one K₁ _
-    | simp [Rv, HeightOneSpectrum.valuationSubringAtPrime, HeightOneSpectrum.valuation_le_one]
+    | simp [Rv, HeightOneSpectrum.valuationSubringAtPrime]
 
 theorem lenW_bound (hL : QuotLocalStatement) (M : Submodule (𝓞 K) V) (hM : M.FG)
     (hspan : Submodule.span K (M : Set V) = ⊤) (W : Submodule K V)

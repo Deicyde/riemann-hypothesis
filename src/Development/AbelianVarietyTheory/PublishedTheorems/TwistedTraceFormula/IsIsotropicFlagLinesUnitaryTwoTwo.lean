@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.ComplexPrincipalSeriesIrreducible
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.NegNotMemSpecialLinearPartUnitaryOneOne
 
@@ -127,7 +128,7 @@ theorem conclusion_bot {b : ℕ} (W' : Flag n b) (S : Subgroup (UJ ε)) (hS : S 
 theorem pairing_rho_seven (x : ℝ) : pairing (fun _ : Fin 3 => 1) (rho 7 fun _ => 1) ![0, x, -x] = 2 * x := by
   have h1 : Finset.Iio (1 : Fin 3) = {0} := by decide
   have h2 : Finset.Iio (2 : Fin 3) = {0, 1} := by decide
-  simp [pairing, rho, Fin.sum_univ_three, h1, h2]
+  simp [pairing, rho, Fin.sum_univ_three]
   ring
 
 end GlobalTheory.Published.ComplexSeries

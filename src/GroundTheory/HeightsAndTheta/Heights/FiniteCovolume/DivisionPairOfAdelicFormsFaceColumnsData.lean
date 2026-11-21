@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.Statements
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.IsClosedUnitaryOfComplex
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.StDualIndexFinite
 set_option maxSynthPendingDepth 1

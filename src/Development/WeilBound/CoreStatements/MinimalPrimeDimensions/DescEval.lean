@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.MinimalPrimeDimensions.GenIdeal
 import Development.WeilBound.CoreStatements.HomogeneousNonvanishing.ValFUnitNeZero
 

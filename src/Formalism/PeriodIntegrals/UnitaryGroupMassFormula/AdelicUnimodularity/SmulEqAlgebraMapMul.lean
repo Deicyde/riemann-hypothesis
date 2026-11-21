@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdelicUnimodularity.CartierFrobeniusFormLocal
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdelicUnimodularity.CoordTmulOneMul
-import Formalism.SharpRestriction.CuspSpanNormBounds.GlobAut
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Tactic.ENatToNat
 
 noncomputable section
 

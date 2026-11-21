@@ -1,7 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.UsedLocalConclusion
-import Formalism.SharpRestriction.LevelLetterCocycles.LiftingTheory
-import Formalism.SharpRestriction.LevelLetterCocycles.SemisimpleLetterIffForallMem
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.WachOperatorProductShiftMemLatticeStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.UnitsEqOfPowPredEqOfValOne
 

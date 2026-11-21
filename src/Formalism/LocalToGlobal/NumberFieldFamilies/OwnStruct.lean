@@ -1,4 +1,6 @@
-import Lean
+import BuildAid.Leniency.Open
+import Lean.Elab.Command
+import Std.Do.Triple.SpecLemmas
 
 namespace Formalism.L2.Fam.KCopy
 

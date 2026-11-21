@@ -1,4 +1,4 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.QuasiCompact
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NonvanishingLocusPullbackAndVanishIntoLocus
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.PullSec
 

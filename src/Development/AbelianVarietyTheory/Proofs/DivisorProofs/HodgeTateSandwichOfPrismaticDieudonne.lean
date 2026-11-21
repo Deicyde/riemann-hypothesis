@@ -1,8 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.EpsilonPairingZeta
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.InjectiveOfSmulMemRange
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FontaineAinfLocalDomainXiAdicOrder
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SmulMemRange
+import Mathlib.RingTheory.Valuation.Integral
 
 noncomputable section
 
@@ -220,7 +221,7 @@ theorem sandwichAt_of_covariant {C : Type} [Field C] [IsAlgClosed C] [CharZero C
         refine (hGF (tb j) i).trans ?_
         by_cases hij : i = j
         · simp [e, hij]
-        · simp [e, hij, Finsupp.single_apply, Ne.symm hij]
+        · simp [e, hij, Ne.symm hij]
       F_eq := by
         ext1 i j
         refine Eq.trans ?_ (congrFun (hΨ (Φ (tb j))) i).symm
@@ -266,7 +267,7 @@ theorem sandwichAt_of_covariant {C : Type} [Field C] [IsAlgClosed C] [CharZero C
     have hr' : ∀ x, π G (c.equivFun.symm (D.al x)) = 0 := fun x => by
       have hx : x = ∑ j, x j • toO e (tb j) := by
         funext i
-        simp [toO, e, Finset.sum_apply, Finsupp.single_apply, apply_ite (padicToO p O)]
+        simp [toO, e, Finset.sum_apply, apply_ite (padicToO p O)]
       rw [hx, map_sum, map_sum, map_sum]
       refine Finset.sum_eq_zero fun j _ => ?_
       rw [map_smul, hal, map_smul, map_smul, map_smul, map_smul, LinearEquiv.symm_apply_apply,

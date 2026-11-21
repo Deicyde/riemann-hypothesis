@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.RamifiedBlockRings.RamifiedBlockProofs.FinrankRangeEq
+import Formalism.CharacterColumnKernels.IdempotentNormalForms.IsUnitDetOfConst
+import Formalism.TruncatedSeriesCounting.TruncatedSeriesProofs.BridgeDet
+import Formalism.WachLatticeTwists.RamifiedBlockRings.RamifiedBlockProofs.RankDiagIte
 
 open Finset Classical
 
@@ -68,7 +72,7 @@ theorem eDiag' (A : Type) [CommRing A] (d : Type) [Fintype d] [DecidableEq d] (S
     by_cases hab : a = b
     · subst hab
       by_cases hs : S a <;> simp [hs]
-    · simp [Matrix.diagonal_apply, hab]
+    · simp [hab]
   have hp : ∀ l : List ℕ, (Matrix.diagonal fun a => if S a then (1 : A) else 0) *
       (l.map fun i => Matrix.diagonal fun a => if S a then β a - α i else 0).prod =
       Matrix.diagonal fun a => if S a then (l.map fun i => β a - α i).prod else 0 := by

@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.FieldValuesMemFixedField
-import Formalism.LocalToGlobal.Divisibility.ColumnFamilyPlaceCharacterComap
-import Formalism.LocalToGlobal.Divisibility.TiedLemmas
-import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.ValBasic
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.InGeoIff
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.VolumeLeOfTrivialFirstPair
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.InclUInjective

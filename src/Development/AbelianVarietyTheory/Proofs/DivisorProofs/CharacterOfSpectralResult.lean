@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsWeilChar
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralPointExtensionSplit
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsTorsionSectionPullback

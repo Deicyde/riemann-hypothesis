@@ -1,21 +1,13 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsThetaMeanSquareNorm
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.ZhangDimensionPushDownGrassmannianHeightBounds
-import GroundTheory.HeightsAndTheta.Heights.KernelsLattice
-import GroundTheory.HeightsAndTheta.Heights.LatticeLemmas.StatementsBundles
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ThetaFunctionArchimedeanFrameStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ThetaMultiplierQuadraticCharacterStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.PolarizedDataFieldExtensionStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.SectionSupNormFieldExtension
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.TorsionValueUniqueBaseChangeStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsFullTorsionNumberFieldStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.TorsionValueIntegral
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.SectionDivisibleByDenominatorStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.TorsionFieldExtensionExistsStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.TorsionValueNormEqThetaNorm
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.ThetaFunctionSupBoundStatement
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.SabPull
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.SabComp
 import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.MeetsOpensOfSeparatesSections
 import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.RepTransport
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField MeasureTheory
@@ -175,7 +167,7 @@ def ptAt (D : PPData H L) (x : Over.mk (baseF L (RingHom.id L')) ⟶ D.t.G) {F :
     Over.mk (baseF L f) ⟶ D.t.G :=
   (Over.homMk (spMap f) (by
     show spMap f ≫ baseF L (RingHom.id L') = baseF L f
-    simp only [baseF, ← Category.assoc, ← spMap_comp]
+    simp only [baseF, ← spMap_comp]
     ) : Over.mk (baseF L f) ⟶ Over.mk (baseF L (RingHom.id L'))) ≫ x
 
 theorem ptAt_left (D : PPData H L) (x : Over.mk (baseF L (RingHom.id L')) ⟶ D.t.G) {F : Type} [Field F] (f : L' →+* F) :

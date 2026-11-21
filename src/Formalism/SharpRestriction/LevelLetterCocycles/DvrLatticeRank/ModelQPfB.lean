@@ -1,5 +1,10 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.ModelQPfA
-import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.PhibOLComplete
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.LevelLetterCocycles.DataNLoc
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.PowerSeries.WeierstrassPreparation
+import Mathlib.Tactic.ENatToNat
 
 noncomputable section
 
@@ -187,7 +192,7 @@ theorem div_at (hp : PD.p.Prime) [Nontrivial O] [IsAdicComplete (Ideal.span {((P
       simp only [Pi.add_apply, Pi.mul_apply, letE, Pi.single_eq_same, one_mul, Pi.pow_apply, hs₀, hRt]
       rw [hf, hφb, hπc, hEc]
       linear_combination (-(PowerSeries.X ^ (s' + 2 * h') * W.q₀ ^ (s' + 2 * h') * Q)) * key
-    · simp [letE, Pi.single_apply, hi]
+    · simp [letE, hi]
   have hR' : Rt = ∑ i : Fin (PD.p * N), algebraMap O (LetA O n) (R.coeff i) * (letπ : LetA O n) ^ (i : ℕ) := by
     have hdeg : ∀ m, PD.p * N ≤ m → R.coeff m = 0 := fun m hm =>
       Polynomial.coeff_eq_zero_of_degree_lt (lt_of_lt_of_le hR (by exact_mod_cast hm))

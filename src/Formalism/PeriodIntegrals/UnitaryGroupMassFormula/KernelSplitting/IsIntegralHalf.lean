@@ -1,5 +1,12 @@
-import Mathlib
-import Formalism.PeriodIntegrals.SelfDualOfDiff
+import BuildAid.Leniency.Open
+import Formalism.PeriodIntegrals.KerIso
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 open NumberField Polynomial
@@ -155,10 +162,10 @@ theorem splitsAt_odd {K E : Type} [Field K] [NumberField K] [Field E] [NumberFie
     exact P.add_mem (P.mul_mem_left _ (P.neg_mem hdP)) (P.mul_mem_left _ hpP)
   have hca : cj (algebraMap K E (algebraMap (𝓞 K) K ((r : 𝓞 K) + sO))) =
       algebraMap K E (algebraMap (𝓞 K) K ((r : 𝓞 K) - sO)) := by
-    simp only [map_add, map_sub, map_neg, map_intCast, hsK, hcj, sub_eq_add_neg]
+    simp only [map_add, map_neg, map_intCast, hsK, hcj, sub_eq_add_neg]
   have hcb : cj (algebraMap K E (algebraMap (𝓞 K) K ((r : 𝓞 K) - sO))) =
       algebraMap K E (algebraMap (𝓞 K) K ((r : 𝓞 K) + sO)) := by
-    simp only [map_add, map_sub, map_neg, map_intCast, hsK, hcj, sub_eq_add_neg, neg_neg]
+    simp only [map_add, map_neg, map_intCast, hsK, hcj, sub_eq_add_neg, neg_neg]
   have hcoe : ∀ z : 𝓞 K, (z : K) = algebraMap (𝓞 K) K z := fun _ => rfl
   rcases hP.mem_or_mem hab with ha | hb
   · refine ⟨P, hP, hpP, (r : 𝓞 K) + sO, (r : 𝓞 K) - sO, ?_, ha, fun hb => hnot ⟨ha, hb⟩⟩

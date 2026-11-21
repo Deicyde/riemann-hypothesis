@@ -1,8 +1,5 @@
-import Mathlib
-import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
-import Formalism.SharpRestriction.LevelLetterCocycles.LocalSituation
-import Development.AbelianVarietyTheory.Definitions.Foundations.HTBasis
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.ExpStar
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CoeAlgebraMapOC
 
 noncomputable section
@@ -32,7 +29,7 @@ theorem actMat_props {Z O N C : Type} [CommRing Z] [CommRing O] [Algebra Z O] [A
     by_cases h : i = j
     · subst h
       simp
-    · simp [Finsupp.single_apply, Matrix.one_apply, h, Ne.symm h]
+    · simp [h]
   · ext i j
     rw [Matrix.mul_apply, hA, mul_smul]
     conv_lhs => rw [← b.sum_repr (a' • b j)]

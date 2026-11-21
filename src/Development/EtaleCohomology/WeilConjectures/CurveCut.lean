@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.WeilConjectures.FermatCount
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry GlobalTheory.EtC GlobalTheory.Et Polynomial

@@ -1,9 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LeviDeterminants.CharacterAdmissibility.ResAdm
 import Development.WeilBound.ThetaLifts.LeviDeterminants.ExistsNeOfSurjOn
 import Development.WeilBound.ThetaLifts.LeviDeterminants.LagrangianUniqueness.RealTest
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExtendByZeroMemSchA
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ProductFunctionOnSumCoordsMemAdelicSchwartzSpace
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsAdelicSchwartzNeZeroAtOrigin
 
 open scoped TensorProduct NNReal Matrix Classical
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes

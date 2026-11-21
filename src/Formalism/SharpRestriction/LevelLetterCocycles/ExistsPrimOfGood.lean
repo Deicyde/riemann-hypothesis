@@ -1,8 +1,6 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.LevelOneUniformizerCoeffVanish
-import Formalism.SharpRestriction.LevelLetterCocycles.ArcCoordinatesOfLevelZeroParts
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.StrictSesLetter
-import Formalism.SharpRestriction.LevelLetterCocycles.LocalizationQuotientSeparatedDvd
-import Formalism.SharpRestriction.LevelLetterCocycles.WachFrobeniusLatticeUnramifiedFunctor
 import Formalism.SharpRestriction.LevelLetterCocycles.LevelZeroMembershipOfHorizontal
 
 noncomputable section

@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnitaryQuotientCompactness.SsetGroup
+import Mathlib.MeasureTheory.Group.ModularCharacter
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
 
 open MeasureTheory MeasureTheory.Measure Matrix TopologicalSpace
 open scoped ENNReal NNReal Pointwise

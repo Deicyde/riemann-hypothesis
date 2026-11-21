@@ -1,7 +1,9 @@
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.JacquetLanglands.TorusKernels.MultivariableReproducingFormula
 import PositivityTheory.AutomorphicForms.PublishedInputs.JacquetLanglands.TorusKernels.SigmaFiniteInverseAbsDensity
 import PositivityTheory.AutomorphicForms.PublishedInputs.JacquetLanglands.TorusKernels.HaarIcc
 import PositivityTheory.AutomorphicForms.PublishedInputs.JacquetLanglands.TorusKernels.IntegralProdLog
+import Mathlib.Algebra.Order.Star.Real
 
 noncomputable section
 open MeasureTheory
@@ -65,10 +67,10 @@ theorem UpperTheory.Esk.unipotent_integrand_vanishes_proof : UpperTheory.Esk.B1a
         have hz : z.1.im ≠ 0 := z.2
         apply Complex.ext
         · simp only [Complex.mul_re, Complex.ofReal_re, Complex.ofReal_im, Complex.add_re,
-            Complex.add_im, Complex.I_re, Complex.I_im, mul_zero, zero_mul, add_zero, sub_zero, zero_add, mul_one]
+            Complex.add_im, Complex.I_re, Complex.I_im, add_zero, sub_zero, zero_add, mul_one]
           field_simp
         · simp only [Complex.mul_im, Complex.ofReal_re, Complex.ofReal_im, Complex.add_re,
-            Complex.add_im, Complex.I_re, Complex.I_im, mul_zero, zero_mul, add_zero, sub_zero, zero_add, mul_one]
+            Complex.add_im, Complex.I_re, Complex.I_im, zero_mul, add_zero, zero_add, mul_one]
       measurable_toFun := hcont.measurable
       measurable_invFun := hgm }
   have hmpP : MeasurePreserving eP ((volume : Measure ℝ).prod nu1) (volume : Measure P) := hmp

@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousFirstCoords
-import ReciprocityTheory.SemistableReduction.TorusL2CauchyInequality
 import ReciprocityTheory.SemistableReduction.SJCoreA
 import ReciprocityTheory.SemistableReduction.SJCoreB
 open MeasureTheory Set MvPolynomial ReciprocityTheory.MultiplicativeHeights GlobalTheory.SphereMeanDrop

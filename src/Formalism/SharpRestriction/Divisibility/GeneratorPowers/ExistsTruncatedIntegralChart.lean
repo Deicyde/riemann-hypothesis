@@ -1,5 +1,5 @@
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ChartTransportSt
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.IntChartSt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.SaturationChartsHolds
 
 set_option autoImplicit false

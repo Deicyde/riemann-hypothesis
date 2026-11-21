@@ -1,8 +1,8 @@
-import Mathlib
-import Development.DiscreteGroups.GlobalIrreducibility.ExistsOfMemKOne
-import Development.DiscreteGroups.GlobalIrreducibility.DzLcFin
-import Development.DiscreteGroups.GlobalIrreducibility.DzLcIso
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.NotIsGenericDetRepTwo
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsContinuousPadic
+import GroundTheory.AutomorphicForms.Iwasawa
 
 noncomputable section
 

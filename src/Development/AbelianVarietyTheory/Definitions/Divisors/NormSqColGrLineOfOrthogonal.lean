@@ -1,9 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.NefFibOfIsNef
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.GenericPointAsIdeal
 import Development.AbelianVarietyTheory.Definitions.Foundations.CurveCl
 import Development.AbelianVarietyTheory.Definitions.ShimuraVarieties.FlatImageOfOverFractionFieldOfValuationRing
-import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.IsProjOverCompOfIsClosedImmersion
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.MulConjTransposeEqOneOfOrthonormal
 
 noncomputable section
@@ -489,7 +489,7 @@ example : flagPt (Prod.fst : Unit × Fin 3 → Unit) Prod.snd (fun _ => swapTwo)
     funext fun i => Finset.orderEmbOfFin_singleton _ _
   change (Matrix.submatrix (1 : Matrix (Fin 2) (Fin 2) ℤ) (subsetEnum (⟨{0}, rfl⟩ : Set.powersetCard (Fin 2) 1)) (Fin.castLE _)).det =
     u * (Matrix.submatrix !![0, 1; 1, 0] (subsetEnum (⟨{0}, rfl⟩ : Set.powersetCard (Fin 2) 1)) (Fin.castLE _)).det at this
-  simp [e, Matrix.one_apply, Fin.ext_iff] at this
+  simp [e, Matrix.one_apply] at this
 
 example {N : ℕ} (g : Matrix (Fin N) (Fin N) ℂ) (h : gᴴ * g = 1) (l : Fin (N + 1)) : volSq g l = 1 :=
   (volSq_of_orthogonal (d := fun _ => 1) (by simpa using h) l).trans (by simp)

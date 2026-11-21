@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.HermitianForms.TiedTwGen
 import Formalism.LocalToGlobal.HermitianColumns.TiedQCJoint
-import Formalism.LocalRingCardinality.DataKerP
+import Formalism.LocalToGlobal.HermitianForms.RankEqFirstLevel
 
 noncomputable section
 

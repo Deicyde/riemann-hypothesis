@@ -1,5 +1,7 @@
-import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.UnimodGA
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.AtTauExUniqueHolds
+import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.UnimodInst
 
 noncomputable section
 

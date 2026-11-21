@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HolSprayApply
-import ReciprocityTheory.SemistableReduction.ShareDetA
+import Mathlib.Analysis.CStarAlgebra.ContinuousLinearMap
 open Filter Topology Matrix
 open scoped ContDiff
 

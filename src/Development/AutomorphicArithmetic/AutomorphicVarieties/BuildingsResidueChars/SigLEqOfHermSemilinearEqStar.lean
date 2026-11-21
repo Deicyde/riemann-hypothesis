@@ -1,4 +1,6 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.GlobalUnitaryForms.HodgeTateFromSandwich
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.LocalHermitianForms.EvenVal
 open UpperTheory.V.Z.Sym UpperTheory.V.Z.Sym.Loc UpperTheory.V.Z.Sym.Glob Matrix
 
 section SlopeTestRemainingChoices
@@ -43,8 +45,7 @@ theorem UpperTheory.sigL_eq_of_herm_semilinear_eq_star :
   intro K _ _ Δ τ c d m hτ h
   have key : ∀ a : EL Δ τ, QuadraticAlgebra.trace ((m * d * star (sigL d) - sigL m) * a) = 0 := fun a => by
     have e := h (0, sigL a) (0, 1)
-    simp only [herm, semi, star_zero, mul_zero, zero_mul, zero_add, sigL_sigL', sigL_one', mul_one, star_one,
-      sigL_mul'] at e
+    simp only [herm, semi, star_zero, mul_zero, zero_add, sigL_sigL', sigL_one', mul_one, star_one] at e
     rw [← trace_sigL, sigL_mul', sigL_sigL'] at e
     rw [sub_mul, map_sub, sub_eq_zero, ← e]
     congr 1

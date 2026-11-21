@@ -1,5 +1,8 @@
-import Formalism.LocalToGlobal.ProjectiveLattices.Adm3OfExtension
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.TorusAt
+import Formalism.LocalToGlobal.ProjectiveLattices.HasDataCondition
+import Formalism.LocalToGlobal.ProjectiveLattices.XcLat
 
 noncomputable section
 

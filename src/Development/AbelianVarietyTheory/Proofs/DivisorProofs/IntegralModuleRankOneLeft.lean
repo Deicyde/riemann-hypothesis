@@ -1,10 +1,7 @@
-import Mathlib
-import Formalism.RealPlaceAnalysis.ThirdArithmeticHolds
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemNilRad
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatrixCompletionFirstColumnStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.QuantumDetCentralCoeffsConjStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralModuleOfCharPolyStatement
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.QdetPolyMapMonic
 open Matrix GlobalTheory.TorFin
 
 namespace GlobalTheory

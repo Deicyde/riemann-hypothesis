@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.StatementsFlagBundleForms
 import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.PFlagBundleSectionFormsTools
 set_option maxSynthPendingDepth 1
@@ -114,7 +114,7 @@ theorem FlagBundleSectionForms.proof : FlagBundleSectionForms.Statement := by
       (isWeightedHomogeneous_X F (blockWeight (bundleIdx ι M)) ⟨none, l⟩)
     convert h using 1
     funext o
-    cases o <;> simp [liftNat, blockWeight, Pi.single_apply]
+    cases o <;> simp [liftNat, blockWeight]
   · funext o
     cases o with
     | none => simp [liftNat, zetaDeg, liftDeg]

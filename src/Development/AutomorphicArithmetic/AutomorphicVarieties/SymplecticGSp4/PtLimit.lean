@@ -1,5 +1,4 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.EntryMem
-import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.SInternal
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.SpanMono
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal IsLocalRing UpperTheory.V UpperTheory.V.Base UpperTheory.V.Alg UpperTheory.V.HV UpperTheory.V.GradeZeroInterpolatingElement
@@ -65,9 +64,9 @@ private theorem limit_graded {O S X K : Type} [CommRing O] [CommRing S] [Algebra
     by_cases hj : p j = 0 <;> by_cases hk : p k = 0
     · simp [hj, hk, hm]
     · have : p j + p k ≠ 0 := by omega
-      simp [hj, hk, this]
+      simp [hj, hk]
     · have : p j + p k ≠ 0 := by omega
-      simp [hj, hk, this]
+      simp [hj, hk]
     · by_cases hs : p j + p k = 0
       · simp only [hs, hj, hk, if_true, if_false, mul_zero, hm]
         rcases lt_or_gt_of_ne hj with hj' | hj'

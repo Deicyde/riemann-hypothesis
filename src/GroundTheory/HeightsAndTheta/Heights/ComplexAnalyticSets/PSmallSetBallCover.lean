@@ -1,6 +1,11 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSmallSetBallCover
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSmallSetTubeVolume
+import Mathlib.MeasureTheory.Measure.Lebesgue.VolumeOfBalls
+import Mathlib.Topology.Algebra.MvPolynomial
+import Mathlib.Topology.MetricSpace.CoveringNumbers
+import Mathlib.Topology.Separation.CompletelyRegular
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

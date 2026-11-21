@@ -1,8 +1,5 @@
-import Mathlib
-import Formalism.PeriodIntegrals.BetaLUniq
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.BetaUniqueness.Skeleton
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.BetaUniqueness.Lemmas
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.BetaUniqueness.EqZeroOfNormLtOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.BetaUniqueness.FlagVectorMemLocalization
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.BetaUniqueness.WAniso
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.BetaUniqueness.CMNorm

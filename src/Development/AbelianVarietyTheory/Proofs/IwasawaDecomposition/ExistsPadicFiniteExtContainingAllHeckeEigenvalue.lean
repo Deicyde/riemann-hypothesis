@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.UnitsLiftSpec
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsUniqueHcharOfFiniteOrder
 import Formalism.LocalToGlobal.Columns.ColumnsProofs.HFSSplit
 open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formalism.ConjugateSelfDual ReciprocityTheory.Gal ReciprocityTheory.Aut Formalism.AUTREP Formalism.L2 Formalism.L2.Host Formalism.L2.NT Formalism.IndefR.NX GlobalTheory.HeightCounting NumberField IsDedekindDomain Polynomial
 open Formalism.L2.Fam.NPC Formalism.L2.Fam.NPC.BaseC GlobalTheory.HeckeLocN
@@ -86,7 +86,7 @@ theorem exists_finExt_split : ∀ (D : D7) (M : MtFam D) (C : NChoice D) (hR : H
     · change a ∈ ((p.map (ecC X j w)).map (iqC X j w)).roots at ha
       rw [hmap] at ha
       have haS : a ∈ S := by
-        simp only [S, Finset.coe_sort_coe, Finset.mem_coe, Multiset.mem_toFinset]
+        simp only [S, Finset.mem_coe, Multiset.mem_toFinset]
         exact ha
       exact iqC_surj X j w a (hF (IntermediateField.subset_adjoin _ _ haS))
   exact iSup_maxGen_baseChange op (fun x y => hcomm j w x.1 x.2 y.1 y.2) hp hsp (v, k)

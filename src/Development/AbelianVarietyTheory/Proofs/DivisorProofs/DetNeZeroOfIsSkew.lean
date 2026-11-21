@@ -1,4 +1,5 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
 open scoped TensorProduct NNReal Matrix
@@ -123,7 +124,7 @@ theorem eq_zero_of_pair (hJ : IsUnit J₁.det) (u : Fin d₁ → R) (h : ∀ u' 
     have e : (fun i => c ((Pi.single l (1 : R) : Fin d₁ → R) i)) = Pi.single l 1 := by
       ext i; by_cases hi : i = l
       · subst hi; simp
-      · simp [Pi.single_apply, hi]
+      · simp [hi]
     rw [e, dotProduct_single, mul_one] at this
     simpa using this
   have : u = (u ᵥ* J₁) ᵥ* J₁⁻¹ := by
@@ -235,7 +236,7 @@ theorem span_A (hσ : ∀ x, σ (σ x) = x) (hW : ∀ i j, σ (W.J j i) = -W.J i
   have e1 : (Pi.single i 1 : Fin d → AE F E) = incV F (Pi.single i 1) := by
     ext j; by_cases hj : j = i
     · subst hj; simp [incV]
-    · simp [incV, Pi.single_apply, hj]
+    · simp [incV, hj]
   rw [e1, hw, incM_mulVec]
   ext j; simp [incV]
 

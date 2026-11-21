@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SecMapApply
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.NotCoinvQuotEmpty
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsLocallyConstantSplitOm
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LagCoIsotropic
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StoneVonNeumannSchwartzBruhatAnyCharacter
 
@@ -80,7 +79,7 @@ def slU (x y z t : E) (hx : c x = x) (hy : c y = y) (hz : c z = z) (ht : c t = t
   ⟨GeneralLinearGroup.mkOfDetNeZero !![x, y; z, t] (by rw [det_fin_two_of, h]; exact one_ne_zero), by
     show (!![x, y; z, t])ᵀ * _ * (!![x, y; z, t]).map c = _
     ext i j
-    fin_cases i <;> fin_cases j <;> simp [mul_apply, Fin.sum_univ_two, hx, hy, hz, ht, vecMul, dotProduct] <;>
+    fin_cases i <;> fin_cases j <;> simp [mul_apply, Fin.sum_univ_two, hx, hy, hz, ht] <;>
       first | ring1 | linear_combination h | linear_combination -h⟩
 
 theorem slU_val (x y z t : E) (hx : c x = x) (hy : c y = y) (hz : c z = z) (ht : c t = t) (h : x * t - y * z = 1) :
@@ -108,7 +107,7 @@ theorem char_eq_one (χ : UG c (!![0, 1; -1, 0] : Matrix (Fin 2) (Fin 2) E) →*
   by_cases h0 : (h : GL (Fin 2) E).val 1 0 = 0
   · exact hχ h h0
   have h1 := congrFun (congrFun (show (h : GL (Fin 2) E).valᵀ * _ * (h : GL (Fin 2) E).val.map c = _ from h.2) 0) 0
-  simp [mul_apply, Fin.sum_univ_two, vecMul, dotProduct] at h1
+  simp [mul_apply, Fin.sum_univ_two] at h1
   have h2 : c ((h : GL (Fin 2) E).val 1 0) ≠ 0 := (map_ne_zero c).2 h0
   have hs : c (-((h : GL (Fin 2) E).val 0 0 / (h : GL (Fin 2) E).val 1 0)) =
       -((h : GL (Fin 2) E).val 0 0 / (h : GL (Fin 2) E).val 1 0) := by
@@ -116,7 +115,7 @@ theorem char_eq_one (χ : UG c (!![0, 1; -1, 0] : Matrix (Fin 2) (Fin 2) E) →*
     linear_combination -h1
   have := hχ (w * n _ hs * h) (by
     simp only [Subgroup.coe_mul, Units.val_mul, w, n, slU_val]
-    simp [mul_apply, Fin.sum_univ_two, vecMul, dotProduct, h0])
+    simp [mul_apply, Fin.sum_univ_two, h0])
   rwa [map_mul, map_mul, hw, hn, one_mul, one_mul] at this
 
 end Char
@@ -245,7 +244,7 @@ theorem trB_mulVec (h : UG c (!![0, 1; -1, 0] : Matrix (Fin 2) (Fin 2) E)) (u v 
   have h01 := h1 0 1
   have h10 := h1 1 0
   have h11 := h1 1 1
-  simp [mul_apply, Fin.sum_univ_two, vecMul, dotProduct] at h00 h01 h10 h11
+  simp [mul_apply, Fin.sum_univ_two] at h00 h01 h10 h11
   rw [trB_apply, trB_apply]
   congr 1
   simp [mulVec, dotProduct, Fin.sum_univ_two]
@@ -260,7 +259,7 @@ theorem symp_mul (g : UG c (!![0, 1; 1, 0] : Matrix (Fin 2) (Fin 2) E)) (x y : M
   have h01 := h1 0 1
   have h10 := h1 1 0
   have h11 := h1 1 1
-  simp [mul_apply, Fin.sum_univ_two, vecMul, dotProduct] at h00 h01 h10 h11
+  simp [mul_apply, Fin.sum_univ_two] at h00 h01 h10 h11
   unfold symp
   congr 2
   simp [hTens, mul_apply, Fin.sum_univ_two]

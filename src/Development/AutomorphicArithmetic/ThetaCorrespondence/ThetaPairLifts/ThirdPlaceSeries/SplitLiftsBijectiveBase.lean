@@ -1,6 +1,9 @@
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SplitRowsUniformLinksRank
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.CohomologicalCsdTempered
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.Realised
+import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CharacterUpdateOfWeakRealisation
+import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.SingleIndexPlacesAreTwisted
+import Formalism.LocalToGlobal.IndefiniteReal.PrimitiveStatementsBaseLevel
 
 set_option synthInstance.maxHeartbeats 200000
 

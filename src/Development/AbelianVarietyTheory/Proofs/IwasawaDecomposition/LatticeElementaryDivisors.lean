@@ -1,5 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsMulEqMulDiagonal
+import Mathlib.Algebra.Module.Lattice
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
 open IsDedekindDomain NumberField
 
 namespace GlobalTheory.LatticeMinuscule
@@ -112,7 +118,7 @@ theorem _root_.GlobalTheory.LatticeMinuscule.lattice_elementary_divisors (R K : 
   have key : ∀ z : Fin n → R, B0 *ᵥ (fun i => algebraMap R K (z i)) =
       ((b'.equivFun.symm z : Λ) : Fin n → K) := by
     intro z; ext i
-    simp [B0, Matrix.mulVec, dotProduct, Module.Basis.equivFun_symm_apply, Submodule.coe_sum,
+    simp [B0, Matrix.mulVec, dotProduct, Module.Basis.equivFun_symm_apply,
       Finset.sum_apply, Algebra.smul_def, mul_comm]
   have memL : ∀ y, y ∈ Λ ↔ ∃ z : Fin n → R, y = B0 *ᵥ (fun i => algebraMap R K (z i)) := by
     intro y; constructor

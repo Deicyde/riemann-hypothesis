@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AutomorphicArithmetic.PrimeDiscriminants.SlopeTestRemainingChoices
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CMTraceForms.CmDatumDiscriminantDepthBounds
+import Mathlib.Analysis.Complex.ExponentialBounds
 
 open NumberField Formalism.HC
 

@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CauchySliceEqRemovableExtensionStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.DifferentiableAtCoordinateCauchyIntegralStatement
+import Mathlib.Order.CompletePartialOrder
 open Metric Filter Topology Set
 
 namespace GlobalTheory

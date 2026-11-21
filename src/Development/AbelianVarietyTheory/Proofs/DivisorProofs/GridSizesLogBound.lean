@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.NormSmall
-import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.AuxiliaryPrimeNeTypePrime
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsValCharTwist
 import Formalism.LocalRingCardinality.CoeNeZeroOfNotMem
 import Formalism.LocalToGlobal.ProjectiveLattices.HostSize

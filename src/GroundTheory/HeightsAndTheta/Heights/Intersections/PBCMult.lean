@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Intersections.PBaseChange
 import GroundTheory.HeightsAndTheta.Heights.Intersections.PReducedCutLength
+import Mathlib.Data.ENat.BigOperators
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.Inter

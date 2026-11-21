@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCellOfIsFrameMat
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TangentCombinationPreservedByBaseChange
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPermutationLeadingMinors
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCellOfLeadingMinors
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrameVectorIsCombinationEigenbasisFlagSpacePointStatement

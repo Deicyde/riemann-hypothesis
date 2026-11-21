@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CyclotomicBounds.SmallFacts
 import Development.AutomorphicArithmetic.PrimeDiscriminants.CycImage
 import Development.AutomorphicArithmetic.PrimeDiscriminants.SmallRam
-import Formalism.SharpRestriction.LevelLetterCocycles.DataNLoc
 
 namespace UpperTheory.Small
 

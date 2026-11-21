@@ -1,6 +1,7 @@
-import Mathlib
-import Formalism.PeriodIntegrals.ScalarPairDr
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.PairCorankPositivity.EqZeroOfMulVec
+import Formalism.SharpRestriction.CuspSpanNormBounds.IsPrimitiveSub
 
 noncomputable section
 

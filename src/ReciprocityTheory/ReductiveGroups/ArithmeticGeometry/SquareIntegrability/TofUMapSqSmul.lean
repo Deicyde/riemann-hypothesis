@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.TofSpanCondition
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 namespace ReciprocityTheory.ChartRestriction.G.I2
 

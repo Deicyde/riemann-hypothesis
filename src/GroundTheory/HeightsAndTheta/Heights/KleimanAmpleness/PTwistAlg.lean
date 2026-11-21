@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.StatementsStepTwo
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.TwistAlg
 set_option maxSynthPendingDepth 1

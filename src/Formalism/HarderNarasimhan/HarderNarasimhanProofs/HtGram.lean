@@ -1,7 +1,9 @@
-import Formalism.HarderNarasimhan.StatementPl
-import Formalism.LatticeSlopes.ExistsSaturatedSlopeEqMuMax
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HarderNarasimhan.HarderNarasimhanProofs.DegSupermodZ
 import Formalism.HarderNarasimhan.HarderNarasimhanProofs.DiscreteSpanOfLinIndep
+import Mathlib.NumberTheory.NumberField.Discriminant.Basic
+import Mathlib.Topology.Separation.CompletelyRegular
 
 open Module NumberField Matrix
 
@@ -106,7 +108,7 @@ theorem det_realif (G : Matrix n n ℂ) : (realif G).det = Complex.normSq G.det 
   have hRU : R * U = U * D := by
     rw [hR]
     simp only [U, D, Matrix.fromBlocks_multiply, Matrix.mul_one, Matrix.one_mul, Matrix.mul_zero,
-      Matrix.zero_mul, Matrix.mul_smul, Matrix.smul_mul, add_zero, zero_add]
+      Matrix.mul_smul, Matrix.smul_mul, add_zero, zero_add]
     congr 1 <;> ext i j <;> apply Complex.ext <;> simp [Gre, Gim]
   have hU : U.det ≠ 0 := by
     simp only [U, Matrix.det_fromBlocks_one₁₁, Matrix.mul_one]

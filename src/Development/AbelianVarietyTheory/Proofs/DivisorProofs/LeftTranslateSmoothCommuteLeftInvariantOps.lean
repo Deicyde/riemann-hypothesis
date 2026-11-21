@@ -1,8 +1,6 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.ZeroMemSolSet
-import Formalism.UnipotentAdelicQuotients.EllRegCheck
-import GroundTheory.AutomorphicForms.GKModules.Casimir
-import GroundTheory.AutomorphicForms.HarishChandraRegularity.ExpHaar
-import GroundTheory.AutomorphicForms.HarishChandraInvariance.Compact
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.AutomorphicForms.GKModules.RightRegular
 open ZetaZeros.D.EllReg GlobalTheory.HCA MeasureTheory GroundTheory.Automorphic
 open scoped ContDiff
 

@@ -1,4 +1,7 @@
-import Formalism.LocalToGlobal.GlobalTheory.BlockActions.BlockActEqBlkRow
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.GaloisLevelStructure.TiedLevel
+import Formalism.LocalToGlobal.GlobalTheory.BlockActions.NfAllSmulReB
 
 noncomputable section
 

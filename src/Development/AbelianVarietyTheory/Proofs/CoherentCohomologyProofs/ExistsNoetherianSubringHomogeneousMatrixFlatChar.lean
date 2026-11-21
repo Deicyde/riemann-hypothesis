@@ -1,7 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.QuasicoherentCohomology.ExistsAwayFracOfMemHomLoc
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.ExistsWitnessesOfFormallySmoothQuotient
 import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.FlatQuotSMulTopCokerOfMatrixWitnesses
+import Development.AbelianVarietyTheory.Definitions.QuasicoherentCohomology.IsGradedMapLinearCombination
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import Mathlib.RingTheory.TotallySplit
 
 open CategoryTheory CategoryTheory.Limits DirectSum MvPolynomial TensorProduct GlobalTheory
 
@@ -61,7 +63,7 @@ private theorem exists_generalized_inverse_mod_ideal {R S B P : Type} [CommRing 
     intro j
     refine (hkerε _).2 ⟨Pi.single j 1, 0, ?_⟩
     funext l
-    simp [Matrix.mulVec, dotProduct, Pi.single_apply]
+    simp
   let Ψ : Matrix (Fin b) (Fin a) S := Matrix.of fun j m => w m j
   have hD : ∀ l j, (Φ * Ψ * Φ - Φ) l j ∈ Ideal.span (Set.range g) := by
     intro l j

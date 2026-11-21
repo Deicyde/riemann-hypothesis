@@ -1,4 +1,6 @@
-import Formalism.SharpRestriction.GenusPolyhedralBounds.RelativeIndexClassSets.PublishedIntClosHolds
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GenusPolyhedralBounds.RelativeIndexClassSets.GlobalFamilyData
 
 noncomputable section
 
@@ -228,7 +230,7 @@ theorem T_mul_cc_le_one {large₂ : SizeData₂ D} {K : KAdm} {H : KHyp}
   have hPP := PPv_pos_of_PolyDom hP
   simp only [H3] at h3
   obtain ⟨-, h2, -⟩ := h3
-  simp only [pow_zero, Real.rpow_zero, one_mul] at h2
+  simp only [Real.rpow_zero, one_mul] at h2
   have hA : 0 ≤ (T : ℝ) * WeightFamilies.RRv D CR * WeightFamilies.PPv D large₂ C2 A2 * (DF wL : ℝ) ^ 2 :=
     mul_nonneg (mul_nonneg (mul_nonneg (Nat.cast_nonneg _) hRR.le) hPP.le) (sq_nonneg _)
   have key : (T : ℝ) * WeightFamilies.RRv D CR * WeightFamilies.PPv D large₂ C2 A2 * (DF wL : ℝ) ^ 2 ≤ (qq D : ℝ) := by

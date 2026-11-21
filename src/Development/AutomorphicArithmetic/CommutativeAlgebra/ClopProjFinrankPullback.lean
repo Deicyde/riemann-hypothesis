@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AutomorphicArithmetic.RepresentationRank.RepOfRank
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CommutativeAlgebra.ClopProjFiniteEtaleOfIsClosed
+import Mathlib.AlgebraicGeometry.Morphisms.WeaklyEtale
+import Mathlib.CategoryTheory.Limits.Shapes.Connected
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory
 

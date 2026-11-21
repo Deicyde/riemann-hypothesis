@@ -1,10 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.ImportsRestRest
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.ImportsRestTail
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.ImportsRestSide
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.ImportsRestLast
-import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.ImportsTailTail
-import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.ImportsFurtherRest
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.ChartRingOverOneBlockBase
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.TwistModNatMul
 set_option maxSynthPendingDepth 1

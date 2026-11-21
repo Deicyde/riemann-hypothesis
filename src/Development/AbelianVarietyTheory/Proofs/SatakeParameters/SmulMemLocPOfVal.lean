@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LatticeFactsAt
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.IsHomogeneousOfMemWeyl
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ExistsMulOfApprox
+import Development.AbelianVarietyTheory.Proofs.SatakeParameters.DualWeylEqSpanColProd
 
 open NumberField IsDedekindDomain MvPolynomial Formalism.BasicNotions Formalism.HermitianLatticesTheory Formalism.L2.DIV Formalism.L2.Ker GlobalTheory.IndefiniteRowSideFullHecke.SubstitutionAdjoint
 

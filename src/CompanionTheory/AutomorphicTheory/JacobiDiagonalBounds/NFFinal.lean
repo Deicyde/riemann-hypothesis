@@ -1,9 +1,10 @@
+import BuildAid.Leniency.Open
 import CompanionTheory.AutomorphicTheory.JacobiDiagonalBounds.NFModel
 import CompanionTheory.AutomorphicTheory.NumberFieldModels.ModelPt
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.MatrixUnitZeroZeroEqInsert
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJDHatBdd
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.NFModelNFg
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LevelsOfBuiltSetting
+import Formalism.HermitianCurvature.StatementTBB
 
 namespace Formalism.FourierDecayAlt.P.NormalFormRelations
 

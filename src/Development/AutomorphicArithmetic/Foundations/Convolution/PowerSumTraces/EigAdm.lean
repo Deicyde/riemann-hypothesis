@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.OfinProd
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.OpBasics
 import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.FixLev
 import Development.AutomorphicArithmetic.Foundations.Convolution.ConvolutionKernels.KernelTransforms.RrTens

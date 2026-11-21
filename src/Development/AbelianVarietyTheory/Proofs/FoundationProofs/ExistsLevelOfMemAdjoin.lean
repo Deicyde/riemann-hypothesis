@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.CosetTrace
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.NotCoboundaryConstantOne
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 

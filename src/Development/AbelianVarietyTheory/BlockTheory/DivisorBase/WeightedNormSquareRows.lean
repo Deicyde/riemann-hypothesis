@@ -1,9 +1,8 @@
-import Mathlib
-import Formalism.LocalToGlobal.Divisibility.DivisionHeightBoundStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Divisibility.Numbers
 import Formalism.LocalToGlobal.Columns.FiniteSumNonzeroLargeDepth
 import Formalism.LocalToGlobal.Columns.ToHLat
-import Formalism.LocalToGlobal.Columns.RowFormsLemmas
 
 open NumberField IsDedekindDomain
 

@@ -1,5 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.FinitePresentationOfFaithfullyFlatStatement
+import Mathlib.AlgebraicGeometry.Modules.Sheaf
+import Mathlib.AlgebraicGeometry.Morphisms.Finite
+import Mathlib.AlgebraicGeometry.Morphisms.FinitePresentation
+import Mathlib.AlgebraicGeometry.Morphisms.Flat
+import Mathlib.Combinatorics.Quiver.ReflQuiver
 
 open CategoryTheory Limits AlgebraicGeometry
 

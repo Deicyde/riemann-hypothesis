@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleTrace.TorsionH0PointOfLocalTwist
 
 noncomputable section
@@ -16,7 +17,7 @@ theorem free_ext (R : Type) [CommRing R] (P : PSh) {G : Shv R} (f g : (free R).o
   have := h U.unop x
   simp only [freeGen] at this
   simp only [freeP, ModuleCat.freeMk] at this
-  simp only [NatTrans.comp_app, ConcreteCategory.comp_apply]
+  simp only
   exact this
 
 theorem cocEq : CocEq := by

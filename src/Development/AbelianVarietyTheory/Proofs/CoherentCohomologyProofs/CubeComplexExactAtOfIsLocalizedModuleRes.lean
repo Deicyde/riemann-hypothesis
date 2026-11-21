@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.QuasicoherentCohomology.IsIsoTermComparisonRestrictScalars
+import Mathlib.Algebra.Module.LocalizedModule.Away
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
 
 open CategoryTheory Limits
 

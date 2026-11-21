@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HolomorphicConnectionAddSection
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WedgeWedgeAnticomm
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import Mathlib.RingTheory.SimpleRing.Principal
 
 set_option autoImplicit false
 

@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.LandauZeroFreeBounds.Statement
+import Mathlib.NumberTheory.Harmonic.EulerMascheroni
 
 open Finset Filter Topology ArithmeticFunction
 open scoped ENNReal

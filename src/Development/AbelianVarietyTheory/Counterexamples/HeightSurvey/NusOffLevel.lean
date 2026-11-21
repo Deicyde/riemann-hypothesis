@@ -1,7 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.Divisibility.AbelianOpenPart.OEOsInjective
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.RPfVal
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.SpanResCharNeBot
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Counterexamples.HeightSurvey.WindowsAllowOffCentre
 
 noncomputable section

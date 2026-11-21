@@ -1,7 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Divisibility.GoodPartHermitianSpec
 import Formalism.LocalToGlobal.Divisibility.ClassSumLemmas
 import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.ClassSumDualGeOfFamily
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import Mathlib.RingTheory.SimpleModule.Rank
 
 open Module NumberField IsDedekindDomain
 open scoped Matrix ComplexOrder
@@ -160,7 +164,7 @@ private theorem dot_H_lemma {K : Type} [Field K] [NumberField K] [StarRing K] (S
   have hp : ∀ (x y : Fin S.dim → K) (u w : Fin S.dim → S.V),
       S.pair (∑ k, x k • u k) (∑ l, y l • w l) = ∑ k, ∑ l, star (x k) * y l * S.pair (u k) (w l) := by
     intro x y u w
-    simp only [map_sum, map_smulₛₗ, LinearMap.sum_apply, LinearMap.smul_apply, map_smul, smul_eq_mul,
+    simp only [map_sum, map_smulₛₗ, LinearMap.sum_apply, LinearMap.smul_apply, smul_eq_mul,
       starRingEnd_apply, RingHom.id_apply, Finset.mul_sum]
     rw [Finset.sum_comm]
     refine Finset.sum_congr rfl fun k _ => Finset.sum_congr rfl fun l _ => ?_
@@ -1000,7 +1004,7 @@ private theorem exists_mul_lemma {K : Type} [Field K] {m n p : ℕ} {A : Matrix 
     have hB : (fun i => B i j) ∈ LinearMap.range B.mulVecLin :=
       LinearMap.mem_range.mpr ⟨Pi.single j 1, by
         ext i
-        simp [Matrix.mulVecLin_apply, Matrix.mulVec, dotProduct, Pi.single_apply]⟩
+        simp [Matrix.mulVec, dotProduct, Pi.single_apply]⟩
     obtain ⟨c, hc⟩ := LinearMap.mem_range.mp (h hB)
     exact ⟨c, by rw [← Matrix.mulVecLin_apply]; exact hc⟩
   choose c hc using hc
@@ -1165,8 +1169,7 @@ private theorem hform_eq_lemma {K : Type} [Field K] [NumberField K] [StarRing K]
     (u v : Fin m → K) : hform M u v = star u ⬝ᵥ (M *ᵥ v) := by
   unfold hform
   rw [Matrix.toLinearMapₛₗ₂'_apply]
-  simp only [dotProduct, Matrix.mulVec, Finset.mul_sum, Pi.star_apply, starRingEnd_apply, RingHom.id_apply,
-    mul_assoc]
+  simp only [dotProduct, Matrix.mulVec, Finset.mul_sum, Pi.star_apply, starRingEnd_apply, RingHom.id_apply]
   refine Finset.sum_congr rfl fun i _ => Finset.sum_congr rfl fun j _ => ?_
   simp only [smul_eq_mul]
   ring

@@ -1,7 +1,9 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.CuspidalDiscreteness.SummandsAreCuspForms
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.TensorProductTheorem.CentralCuspSplit
 import GroundTheory.AutomorphicForms.UnitaryAdmissible.CuspFinite
+import GroundTheory.AutomorphicForms.CuspidalDiscreteness.ExistsIsOpenForallCuspRepTFinOneEq
+import GroundTheory.AutomorphicForms.GKModules.KernelCalculus
 
 open MeasureTheory Filter Topology
 

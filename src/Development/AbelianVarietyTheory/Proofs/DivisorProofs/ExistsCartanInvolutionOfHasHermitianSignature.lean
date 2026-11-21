@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 open scoped TensorProduct Matrix
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.AdelicU
@@ -10,7 +10,7 @@ open scoped ComplexOrder
 
 private lemma map_star_mul' {l m k : Type} [Fintype m] (X : Matrix l m ℂ) (Y : Matrix m k ℂ) :
     (X * Y).map star = X.map star * Y.map star := by
-  ext i j; simp [Matrix.mul_apply, star_sum]
+  ext i j; simp [Matrix.mul_apply]
 
 private lemma map_star_star {l m : Type} (X : Matrix l m ℂ) : (X.map star).map star = X := by
   ext i j; simp

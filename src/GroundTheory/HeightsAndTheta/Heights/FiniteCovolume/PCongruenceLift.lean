@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.StatementsStabilizerLevi
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.PComplementLattice
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.PComplementExtension

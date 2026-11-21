@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementK
+import Mathlib.Analysis.CStarAlgebra.Module.Constructions
 
 namespace Formalism.FourierDecayAlt.TA
 

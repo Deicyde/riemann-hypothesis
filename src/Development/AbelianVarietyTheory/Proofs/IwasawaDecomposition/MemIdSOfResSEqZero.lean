@@ -1,7 +1,9 @@
-import Mathlib
-import Formalism.LocalToGlobal.Columns.RecLevelLoc
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.HermitianForms.PsiZeroNontrivialCharacter
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.AfsplitB
+import Formalism.LocalToGlobal.Divisibility.DefGroup
+import Mathlib.RingTheory.Valuation.Integral
 
 open NumberField IsDedekindDomain Formalism.UG
 open scoped TensorProduct

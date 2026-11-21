@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsSecEq
-import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PSectionBounded
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PUpperNormalisation
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.AssemblyBase
 set_option maxSynthPendingDepth 1

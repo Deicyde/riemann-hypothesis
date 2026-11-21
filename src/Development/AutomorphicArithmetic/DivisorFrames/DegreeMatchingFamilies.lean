@@ -1,10 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.DivisorFrames.FunctionFieldEssFiniteTypeInt
 import Development.AutomorphicArithmetic.DivisorFrames.ExistsComplexEmbeddingExtension
 import Development.AutomorphicArithmetic.DivisorFrames.EqGenericPointOfIntegralDim
-import Development.AutomorphicArithmetic.LocalEmbeddings.ConsAgree
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToIThCapDegOfAddNsmulDivP
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ChiLenPicPushforwardOfIsClosedImmersion
 open CategoryTheory Limits AlgebraicGeometry IsLocalRing
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open GlobalTheory GlobalTheory.QCoh GlobalTheory.CechPic GlobalTheory.Cartier GlobalTheory.ConsGeo

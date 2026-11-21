@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DifferentiableOfIsSm
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiniteDimensionalSpanCommutant
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RealLineMemInfPointsStatement

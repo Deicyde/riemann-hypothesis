@@ -1,11 +1,10 @@
-import Formalism.LocalToGlobal.IndefiniteReal.ZeroPartEigenvalueConvention
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.EvalTieTOne
-import Formalism.LocalToGlobal.IndefiniteReal.RationalEmbedding
 import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RowLevelMatch
-import Development.AbelianVarietyTheory.PublishedTheorems.DiscreteSeriesUnitary₂.DiscreteSeriesClassificationIff
 import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.RowDictPf
 import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.RedBasicsPf
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LevelHyperspecialTrivialCharacterSplitsOffPlaces
+import Formalism.LocalToGlobal.IndefiniteReal.LinksChar
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.S Formalism.L2.Theta Formalism.L2.DIV Formalism.IndefR.Links Formalism.IndefR.Lev Formalism.IndefR.Mult Formalism.IndefR.AutomorphicEvaluation Formalism.L2.SG.RowDict Formalism.L2.SG.RowsJoinPinned Formalism.L2.SG.RowLevelMatch Formalism.L2.SG.PoincareInHH.PoincareSetting MeasureTheory NumberField IsDedekindDomain
 open scoped InnerProductSpace
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
@@ -74,7 +73,7 @@ theorem core (I : Formalism.MainNotions.S.AutInst) (w : HeightOneSpectrum (𝓞 
   have hβsum : ∀ v, β.1 *ᵥ v = ∑ j, v j • col j := by
     intro v
     funext k
-    simp [col, Matrix.mulVec, dotProduct, Finset.sum_apply, Pi.single_apply, mul_comm]
+    simp [col, Matrix.mulVec, dotProduct, Finset.sum_apply, mul_comm]
   have hcol : ∀ j, col j ∈ I.Lf := by
     intro j
     refine (hL _).1 ((hβ _).2 fun k => ?_)

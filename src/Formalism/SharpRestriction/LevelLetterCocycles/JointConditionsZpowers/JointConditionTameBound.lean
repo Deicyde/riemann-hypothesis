@@ -1,7 +1,6 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.DecompositionData
-import Formalism.SharpRestriction.LevelLetterCocycles.SumRepresentations
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.LocalSituation
-import Formalism.SharpRestriction.LevelLetterCocycles.CrystallineMapLemmas
 import Formalism.SharpRestriction.LevelLetterCocycles.JointConditionsZpowers.BaseFont
 
 noncomputable section

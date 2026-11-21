@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairBaseIff
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GradedMetricPullbackIsometric
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InducedMetricOfIsometric
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagGenericFibreIntegral
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleExistsArithmeticVarietyAltBis

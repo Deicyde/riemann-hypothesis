@@ -1,7 +1,9 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.RootWeights.MemWeightSpaceIffDiagonalEigen
 import Formalism.SharpRestriction.GrowthBounds.RootWeights.BinomialPreservesDiagonalStable
 import Formalism.SharpRestriction.GrowthBounds.RootWeights.LoweringWordWeightOrNMinus
 import Formalism.SharpRestriction.GrowthBounds.RootWeights.ExtremalProjectorLatticeScaledMem
+import Formalism.SharpRestriction.GrowthBounds.RootWeights.InvariantDenominatorEllPBound
 
 noncomputable section
 
@@ -59,7 +61,7 @@ theorem invariant_projection_denominator (D : Formalism.BasicNotions.D7) (h2 : a
     (binomial_subring_preserves_lattice hM.1 _ (hΘ1 0) x hx) (weight_projection_mem_weightSpace E hE Θ hΘ2 0 x)).1
 
 theorem root_multiple_apply_first {n : ℕ} (a b : Fin n) (hab : a ≠ b) (k : ℕ) : ((k : ℤ) • rootW a b) a = k := by
-  simp [rootW, Pi.single_apply, hab]
+  simp [rootW, hab]
 
 private theorem bddAbove_root_multiples_in_weights {n : ℕ} {K V : Type} [Field K] [CharZero K] [AddCommGroup V] [Module K V]
     [FiniteDimensional K V] (E : GLOps n K V) :
@@ -127,7 +129,7 @@ private theorem bddAbove_root_multiples_in_weight_differences {n : ℕ} {K V : T
   rintro k ⟨mu, hmu, nu, hnu, a, b, hab, h⟩
   refine ⟨(mu, nu, a), ⟨hmu, hnu, Set.mem_univ _⟩, ?_⟩
   have h1 := congrFun h a
-  simp [rootW, Pi.single_apply, hab] at h1
+  simp [rootW, hab] at h1
   show (mu a - nu a).toNat = k
   omega
 

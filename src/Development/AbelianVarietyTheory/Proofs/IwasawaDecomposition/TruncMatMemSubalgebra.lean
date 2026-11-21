@@ -1,4 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.DiagMatLower
 
 set_option autoImplicit false
@@ -105,7 +107,7 @@ example [Fintype ι] (b : Frames k V) : cellDisc b b = 1 := by
     simp only [truncMat, frameMat, Basis.repr_self, Matrix.one_apply]
     by_cases h : e = c
     · subst h; simp
-    · simp [Finsupp.single_apply, h, Ne.symm h]
+    · simp [Ne.symm h]
   rw [this, Matrix.det_one]
 
 end GlobalTheory.FlagPts

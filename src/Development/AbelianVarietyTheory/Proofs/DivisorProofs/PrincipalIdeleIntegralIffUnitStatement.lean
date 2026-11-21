@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PrincipalIdeleIntegralIffUnit
-import Mathlib
-import Formalism.LocalToGlobal.Divisibility.Tuples
 open NumberField IsDedekindDomain Formalism.L2.DIV Formalism.UG
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.principal_idele_integral_iff_unit : ∀ (L : Type) [Field L] [NumberField L] (a : Lˣ),

@@ -1,4 +1,7 @@
-import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.TameAtOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
+import Formalism.LocalToGlobal.Divisibility.DefGroup
 
 noncomputable section
 

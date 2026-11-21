@@ -1,9 +1,10 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.SameIdIff
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsCrystalPairing
-import Development.AbelianVarietyTheory.PublishedTheorems.RelativeAmpleness.RelAmpleAndKTrivIff
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCharacter
 import Development.AbelianVarietyTheory.Definitions.ShimuraVarieties.MemPrimitiveTensorsIffIsPrimitiveElem
 import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.ExistsIdPowEqOneOfIsFiniteOfFlat
+import Mathlib.RingTheory.HopfAlgebra.GroupLike
+import Mathlib.RingTheory.SimpleRing.Principal
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsCompletedStrictHens
 open CategoryTheory CategoryTheory.Limits AlgebraicGeometry MonoidalCategory CartesianMonoidalCategory MonObj
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.AbLaw GlobalTheory.CechPic GlobalTheory.AbDual GlobalTheory.DualCon
 open scoped CategoryTheory.Obj
@@ -276,7 +277,7 @@ theorem exists_character_ne_one : ∀ (K : Type) [Field K] (N : Over (Sp K)) [Gr
     refine eq_of_forall_apply (R := K) fun φ => ?_
     have h2 := congr(($h1 φ) a)
     rw [pairingMap_tmul, LinearMap.id_apply] at h2
-    simp only [ofConv_toConv, AlgHom.id_apply]
+    simp only [AlgHom.id_apply]
     rw [← h2]
     simp [one_apply, Algebra.algebraMap_eq_smul_one, mul_comm, AlgHom.convOne_apply]
   have hgl := (isPerfectBicharacter_canonical K B).left

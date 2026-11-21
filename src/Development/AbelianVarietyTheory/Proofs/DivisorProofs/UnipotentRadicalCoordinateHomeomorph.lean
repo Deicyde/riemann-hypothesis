@@ -1,10 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemImLine
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviEmbeddingExistsDoublingConfiguration
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentCoordinatesInverse
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SkewHyperbolicPlaneRestrictedForm
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentCoordinateAdditive
 
 open scoped TensorProduct NNReal Matrix ENNReal
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -200,7 +201,7 @@ theorem Hyp.u_form (h : Hyp σ J J₁ H) (β : Fin b → AE F E) (c : AE F E) (h
   rw [uMat_mulVec, uMat_mulVec]
   simp only [fA_add_left, fA_sub_left, fA_smul_left, fA_add_right, fA_sub_right, fA_smul_right]
   simp only [h.pp]
-  simp only [h.vp, h.pw, h.px, h.xp, h.fxx, h.ix, h.xi, fA_flip h.invol h.herm w (incV F H.x), map_zero]
+  simp only [h.vp, h.pw, h.fxx, h.xi, fA_flip h.invol h.herm w (incV F H.x), map_zero]
   linear_combination (fA σ J v (incV F H.x) * cA σ (fA σ J w (incV F H.x))) * hc
 
 theorem fA_mat (σ : E →ₐ[F] E) {n : ℕ} (J : Matrix (Fin n) (Fin n) E) (M : Matrix (Fin n) (Fin n) (AE F E))
@@ -244,7 +245,7 @@ theorem Hyp.u_mul_u (h : Hyp σ J J₁ H) (β : Fin b → AE F E) (c : AE F E) (
     rw [uMat_mulVec, pVec, pVec, Matrix.mulVec_neg, fA_neg_right]
     have h1 : fA σ J₁ (-β) β = -fA σ J₁ β β := by simp [fA, neg_dotProduct]
     rw [h1, show cA σ c = -fA σ J₁ β β - c by linear_combination hc]
-    simp only [smul_add, smul_sub, smul_neg, add_smul, sub_smul, neg_smul, smul_smul, mul_neg, neg_neg]
+    simp only [smul_add, smul_sub, smul_neg, add_smul, sub_smul, neg_smul, smul_smul, mul_neg]
     abel
   ext i j
   have := congrFun (key (Pi.single j 1)) i
@@ -319,7 +320,7 @@ theorem Hyp.eq_zero (h : Hyp σ J J₁ H)
   have hJv : incM F Jᵀ *ᵥ v = 0 := by
     have e : (fun l => fA σ J v (incV F (Pi.single l 1))) = incM F Jᵀ *ᵥ v := by
       funext l
-      simp [fA, incV, incM, dotProduct, Matrix.mulVec, Additive.cA_inclR, Pi.single_apply, mul_comm]
+      simp [fA, incV, incM, dotProduct, Matrix.mulVec, Pi.single_apply, mul_comm]
     rw [← e]
     funext l
     exact hall _

@@ -1,14 +1,12 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.ThetaValues.ThConst
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ThExprUniqOfChartIndep2
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.SecBaseChangeAnySt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.CubicalReadingOneAnalyticFrameStatement
-import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.IsHolFamPullbackLiftOfCommonBase
 import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.JetRdMulInvPow
 import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.CorrOfJetsOfAnalyticFrameProductsStatement
 import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.AppLESpMapJetPt
 import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.CmFrameJetPointsAreExponentialJets
 import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.JetReadingLinearSubstitutionPoints
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.HolomorphicFamilies.ComposeLinearAction
 
 set_option autoImplicit false
 
@@ -36,7 +34,7 @@ theorem tay_coord {N : ℕ} (k : Fin N) : tay (fun v : Fin N → ℂ => v k) 0 =
     rw [this, TM.tay_const, MvPowerSeries.pderiv_X]
     by_cases h : k = j
     · subst h; simp
-    · simp [h, Prod.ext_iff, Ne.symm h]
+    · simp [h, Prod.ext_iff]
   · rw [constantCoeff_tay, TM.mD_zero]; simp
 
 theorem jetOf_coord {N : ℕ} (m : ℕ) (k : Fin N) :

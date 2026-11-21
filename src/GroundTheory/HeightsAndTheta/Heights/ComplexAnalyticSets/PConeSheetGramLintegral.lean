@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StConeSliceSheetParam
-import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.StatementsConeMapArea
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.PConeSheetAreaLintegral
+import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StConeSheetGramLintegral
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

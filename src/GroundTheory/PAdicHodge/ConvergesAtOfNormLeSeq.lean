@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.PAdicHodge.ExtRobbaRoot
+import GroundTheory.PAdicHodge.ExtRobbaUnits
 set_option maxSynthPendingDepth 1
 
 noncomputable section

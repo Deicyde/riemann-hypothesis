@@ -1,4 +1,13 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.RealPlaceAnalysis.FockPairGl
+import Mathlib.RingTheory.Derivation.Lie
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open MvPolynomial
 
@@ -49,19 +58,19 @@ lemma deriv_mulX_commutator (v w : σ) : (D v) * (Mx w) - (Mx w) * (D v) = if v 
   by_cases h : v = w
   · subst h
     refine LinearMap.ext fun f => ?_
-    simp [pderiv_mul, pderiv_X, Pi.single_apply]
+    simp [pderiv_X]
     all_goals abel
   · refine LinearMap.ext fun f => ?_
-    simp [pderiv_mul, pderiv_X, Pi.single_apply, h, Ne.symm h]
+    simp [pderiv_X, h, Ne.symm h]
 
 lemma mulX_negDeriv_commutator (v w : σ) : (Mx v) * -(D w) - -(D w) * (Mx v) = if v = w then 1 else 0 := by
   by_cases h : v = w
   · subst h
     refine LinearMap.ext fun f => ?_
-    simp [pderiv_mul, pderiv_X, Pi.single_apply]
+    simp [pderiv_X]
     all_goals abel
   · refine LinearMap.ext fun f => ?_
-    simp [pderiv_mul, pderiv_X, Pi.single_apply, h, Ne.symm h]
+    simp [pderiv_X, h]
     all_goals abel
 
 lemma deriv_mul_deriv_comm (v w : σ) : (D v) * (D w) = (D w) * (D v) := by

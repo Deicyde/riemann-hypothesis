@@ -1,7 +1,8 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.GlobalUnitaryForms.HodgeTateFromSandwich
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.TraceFormulaEigenvalues.FormsFin
+import BuildAid.Leniency.Open
 import GroundTheory.LocalFields.NormCorrespondence
 import GroundTheory.GlobalFields.LocalFieldAtPlace
+import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.GlobalUnitaryForms.SymbolEx
+import Mathlib.Algebra.QuadraticAlgebra.NormDeterminant
 
 open UpperTheory.V.Z.Sym.Loc
 
@@ -15,7 +16,7 @@ private theorem mem_val {K : Type} [Field K] (d : K) (u : Kˣ) :
   constructor
   · rintro ⟨w, rfl⟩
     refine ⟨(w : QuadraticAlgebra K d 0).re, (w : QuadraticAlgebra K d 0).im, ?_⟩
-    simp only [Units.coe_map, MonoidHom.coe_coe, QuadraticAlgebra.norm_def]
+    simp only [Units.coe_map, QuadraticAlgebra.norm_def]
     ring
   · rintro ⟨a, b, h⟩
     have hn : QuadraticAlgebra.norm (⟨a, b⟩ : QuadraticAlgebra K d 0) = u := by
@@ -71,7 +72,7 @@ private theorem index_val {K : Type} [Field K] [CharZero K] [ValuativeRel K] [To
       map_mul' := by
         intro z w
         simp only [QuadraticAlgebra.re_mul, QuadraticAlgebra.im_mul, map_add, map_mul,
-          map_zero, zero_mul, add_zero]
+          zero_mul, add_zero]
         linear_combination (-(algebraMap K L z.im * algebraMap K L w.im)) * hβ
       map_zero' := by simp
       map_add' := by

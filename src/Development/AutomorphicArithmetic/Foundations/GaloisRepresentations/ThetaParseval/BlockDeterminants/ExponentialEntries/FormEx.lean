@@ -1,11 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ISupRangeWeightMapsEqTopDefiniteUnitary
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.WeightEqOfFinitePartNeBot
-import Development.AutomorphicArithmetic.AutomorphicVarieties.BuildingsResidueChars.IsotypicOfJointlyInjectiveIntoIsotypic
 import Development.AutomorphicArithmetic.AutomorphicVarieties.BuildingsResidueChars.ExistsMultilinearIntertwinerOfCommutingSubgroups
 import Development.AutomorphicArithmetic.AutomorphicVarieties.BuildingsResidueChars.ArchimedeanUnitaryLeISupEmbUAndCommute
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.BlockDeterminants.ExponentialEntries.RightSub
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.SchurStep
+import Mathlib.LinearAlgebra.PiTensorProduct.Dual
+import Mathlib.LinearAlgebra.PiTensorProduct.Finite
 
 open scoped TensorProduct Matrix Classical
 open NumberField MeasureTheory Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.BasicNotions Formalism.BasicNotions.TH GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.FockAlg GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.RealLift UpperTheory.TP.RP
@@ -83,10 +82,9 @@ private theorem map_rank_one (f : ∀ i, Module.Dual ℂ (V i)) (v : ∀ i, V i)
       PiTensorProduct.dualDistrib (PiTensorProduct.tprod ℂ f) x • PiTensorProduct.tprod ℂ v := by
   induction x using PiTensorProduct.induction_on with
   | smul_tprod c w =>
-    simp only [map_smul, PiTensorProduct.map_tprod, PiTensorProduct.dualDistrib_apply, LinearMap.smulRight_apply,
-      LinearMap.smul_apply]
+    simp only [map_smul, PiTensorProduct.map_tprod, PiTensorProduct.dualDistrib_apply, LinearMap.smulRight_apply]
     rw [MultilinearMap.map_smul_univ, smul_assoc]
-  | add a b ha hb => simp only [map_add, ha, hb, LinearMap.add_apply, add_smul]
+  | add a b ha hb => simp only [map_add, ha, hb, add_smul]
 
 private theorem eq_top_of_closed (S : Submodule ℂ (⨂[ℂ] i, V i)) (hne : S ≠ ⊥)
     (hS : ∀ A : ∀ i, Module.End ℂ (V i), ∀ x ∈ S, PiTensorProduct.map A x ∈ S) : S = ⊤ := by

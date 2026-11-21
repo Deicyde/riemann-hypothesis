@@ -1,10 +1,12 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.IsFirstOrderDeformationOfRZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.SpFlag
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.SpBorLift
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.IotaFacts
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.DecEmb
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.LiftSymplecticSimilitudeNilpotent
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.LiftUnramifiedUnipotentCharacter
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.PadicIsNonarchimedeanLocalField
 open Formalism.ConjugateSelfDual ReciprocityTheory.Gal Module UpperTheory.V.Loc UpperTheory.V.Alg UpperTheory.V.GradeZeroInterpolatingElement UpperTheory.V.HV UpperTheory.V.Base IsLocalRing
 
 private theorem exists_iso {Ω : Type} [Field Ω] [CharZero Ω] [IsAlgClosure ℚ Ω] (l : ℕ) [Fact l.Prime]
@@ -47,7 +49,7 @@ private theorem nonres {Ω : Type} [Field Ω] [CharZero Ω] [IsAlgClosure ℚ Ω
       rw [← map_zpow, ← map_mul] at h
       exact congrArg Units.val h)
   have h4 : R (D.al (D.sg l)) = R (D.ξ (D.sg l)) := by
-    simp only [Raw.al, MonoidHom.mul_apply, MonoidHom.inv_apply, map_mul, map_inv, h1, h2, map_one, inv_one, one_mul]
+    simp only [Raw.al, MonoidHom.mul_apply, MonoidHom.inv_apply, map_mul, map_inv, h1, h2, inv_one, one_mul]
   refine ⟨⟨⟨_, hs⟩, fun h => h3 0 ?_⟩, ⟨⟨_, hs⟩, fun h => h3 (-1) ?_⟩, ⟨D.s0, fun h => hD.decompSigma_ord ?_⟩,
     ⟨_, hs⟩, fun h => h3 1 ?_⟩
   · rw [zpow_zero, mul_one, ← h4, h, h1, map_one]

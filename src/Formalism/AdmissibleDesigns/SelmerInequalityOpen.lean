@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.AdmissibleDesigns.SelmerInequalityOfInputs
-import Formalism.AdmissibleDesigns.TheoremN5OfNormalizedItems
-import Formalism.AdmissibleDesigns.DesignNormalizedOfAdmitted
 
 variable [hT2Core : Fact ReciprocityTheory.ChartRestriction.T2.Core] [hH0Fin : Fact Formalism.MainNotions.N.K.H0.FinCore]
 

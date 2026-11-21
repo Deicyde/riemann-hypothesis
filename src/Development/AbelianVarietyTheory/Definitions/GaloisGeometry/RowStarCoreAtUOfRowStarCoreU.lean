@@ -1,9 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.EllipticCurveLevels.X0OfStarCondition
-import Development.AbelianVarietyTheory.Statements.EllipticCurveLevels.ClosedAtLConclusionOfMem
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.MatchOfMatchOffTEmpty
-import Development.AbelianVarietyTheory.Definitions.Divisors.LineOppositeParabolicUnitaryLeviSectionEq
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.LatticeDataThicknessBound
+import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.CyclicStrongAtCusp
 
 noncomputable section
 

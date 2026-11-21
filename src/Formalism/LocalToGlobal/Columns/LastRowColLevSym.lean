@@ -1,6 +1,7 @@
-import Formalism.LocalToGlobal.Columns.TopInvHolds
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.RecLevelSym
-import Formalism.LocalToGlobal.Columns.LevGCount
+import Formalism.LocalToGlobal.Columns.XtSumSingle
 
 open NumberField IsDedekindDomain Module Matrix
 

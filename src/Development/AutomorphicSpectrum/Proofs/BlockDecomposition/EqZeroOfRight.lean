@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.QuotientVanishing.NonEllFlag
+import Mathlib.LinearAlgebra.Eigenspace.Semisimple
 
 noncomputable section
 
@@ -28,7 +30,7 @@ theorem mem_perpD_iff (D : GL (Fin n) ℂ) (W : Submodule ℂ (Fin n → ℂ)) (
   · intro h
     refine Submodule.mem_map.2 ⟨(D⁻¹ : GL (Fin n) ℂ).val *ᵥ y, fun x hx => ?_, ?_⟩
     · simpa [formB, dotProduct] using h x hx
-    · simp [Matrix.toLin'_apply, Matrix.mulVec_mulVec, hDi]
+    · simp [Matrix.toLin'_apply, Matrix.mulVec_mulVec]
 
 theorem formB_nrm (D : GL (Fin n) ℂ) (x y : Fin n → ℂ) :
     formB D ((nrmC D).val *ᵥ x) ((nrmC D).val *ᵥ y) = formB D x y := by

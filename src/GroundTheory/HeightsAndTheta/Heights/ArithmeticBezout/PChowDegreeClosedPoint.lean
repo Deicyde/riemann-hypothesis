@@ -1,9 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.StatementsClosedPointChartField
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.StatementsClosedPointConeCoord
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.PIntChowFormExists
 import GroundTheory.HeightsAndTheta.Heights.VerticalDivisors.PChowFormHomog
 import GroundTheory.HeightsAndTheta.Heights.VerticalDivisors.PNormFormIrreducible
+import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.StatementsChowDegreeClosedPoint
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

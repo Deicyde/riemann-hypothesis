@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.ThetaValues.LetAct
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ActPMemLocPNabStdOfIsBasisAt
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsMapEqOfMemNabStd
+import Formalism.LocalToGlobal.ProjectiveLattices.ThShort
 
 open NumberField MvPolynomial ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj Formalism.BasicNotions Formalism.L2.DIV GlobalTheory.FrameRead
 open scoped Classical
@@ -38,7 +38,7 @@ theorem tauLat_stdLat {E K : Type} [Field E] [NumberField E] [Field K] [NumberFi
       · exact Submodule.mem_one.2 ⟨1, by simp [h]⟩
       · exact Submodule.mem_one.2 ⟨0, by simp [h]⟩
     · funext a
-      by_cases h : a = j <;> simp [h, Matrix.one_apply]
+      by_cases h : a = j <;> simp [h]
 
 theorem dualFr_colLat_one {K : Type} [Field K] [NumberField K] {n : ℕ} :
     dualFr (colLat (1 : GL (Fin n) K)) = colLat (1 : GL (Fin n) K) := by

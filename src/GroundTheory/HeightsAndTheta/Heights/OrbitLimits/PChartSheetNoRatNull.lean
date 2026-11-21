@@ -1,10 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StChartSheetNoRatNull
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.PCriticalFibreInfinite
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PSheetOnlyNull
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PDiscriminantSheetCover
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PBadSetSmaller
-import ReciprocityTheory.AnalyticForms.AnalyticCharts.NullZero
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

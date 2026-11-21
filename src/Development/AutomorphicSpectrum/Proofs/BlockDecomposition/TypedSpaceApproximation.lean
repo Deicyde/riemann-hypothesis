@@ -1,14 +1,7 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.InfinitesimalCharacterLimits.InfinitesimalCharacterGlue
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.T2SpaceAdelicGeneralLinearGroupNumberField
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ContinuousOfIsOpenStab
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.InfinitesimalCharacterLimits.AllLeaves
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.UfamConst
-import Development.WeilBound.RepresentationTheoryGL.ResidualSpectrum.ExponentialNegativity.SquareIntegrableCovers.SetLIntegralLeOfCover
-import Development.WeilBound.RepresentationTheoryGL.ResidualSpectrum.ExponentialNegativity.AutomorphicLipschitz.NiceAut
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.UpdateLeUpdate
-import Development.WeilBound.RepresentationTheoryGL.ResidualSpectrum.ExponentialNegativity.NormalisedExistence.ExistsNormed
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.DiscreteAutomorphicRepGLLocalComponentIsUnitaris
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.UniformBoundConstantTermStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.UniformBoundOfArchimedeanLipschitzStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousArchimedeanSmoothingStatement
@@ -178,7 +171,7 @@ theorem iterU {ι : Type} {f : ι → AdelicGLn.AdelicGL K n → ℂ} {M : ℝ} 
       · subst hr
         simp only [Function.update_self, Finset.mem_insert, true_or, if_true, hna, if_false]
         exact max_le (by linarith) le_rfl
-      · simp [Function.update_of_ne hr, Finset.mem_insert, hr]
+      · simp [Finset.mem_insert, hr]
   obtain ⟨k, hk⟩ := key (Finset.Ioo 0 n) (fun r hr => Finset.mem_Ioo.1 hr)
   refine ⟨k, fun β hβ => ubnd_mono (fun r h0 h1 => ?_) (hk β hβ)⟩
   simp [h0, h1]

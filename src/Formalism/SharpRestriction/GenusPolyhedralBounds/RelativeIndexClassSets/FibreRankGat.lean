@@ -1,5 +1,8 @@
-import Formalism.LocalRingCardinality.SpanPowerMembership.NZRowGat
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.InertJacobiLevels.ExtraNum
+import Formalism.LocalRingCardinality.SpanPowerMembership.NZColC
+import Formalism.LocalRingCardinality.SpanPowerMembership.NZLevM
 
 noncomputable section
 

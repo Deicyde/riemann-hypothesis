@@ -1,12 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.InfUniv
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AbelianSchemeFirstDeRhamStructureStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BaseChangeTensorModuleCompat
-import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.SpanSingletonEqTopIffIsUnitOfIsBaseChange
-import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.IsAbelianSchemeAndExtendOfGenericHoms
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.SABBaseChangeSt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.SabPull
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ThetaCore
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BcObjIsAbelianScheme
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -114,7 +109,7 @@ theorem baseChange_equiv :
     rw [hr, ← TensorProduct.smul_tmul, Algebra.smul_def]
     congr 1
     change _ = f (r ⊗ₜ 1) * _
-    simp only [hf, Algebra.TensorProduct.tmul_mul_tmul, _root_.mul_one, Algebra.smul_def])
+    simp only [hf, Algebra.TensorProduct.tmul_mul_tmul, _root_.mul_one])
   have h1 : ∀ y, Φ (ψ y) = e y := by
     intro y
     induction y using TensorProduct.induction_on with

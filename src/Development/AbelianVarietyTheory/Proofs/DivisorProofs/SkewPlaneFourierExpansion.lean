@@ -1,13 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
-import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.LanglandsSquareIntegrable
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicPlaneOrthogonalGramRestrictionStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsConstAlong
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousToGAd
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StandardParabolicUnipotentMono
 open scoped TensorProduct NNReal Matrix ComplexConjugate
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.ThK.DescB GlobalTheory.ThK.FlagCT GlobalTheory.ThK.FlagPar
@@ -127,7 +120,7 @@ theorem T_apply {σ : E →ₐ[F] E} (hσ : ∀ x, σ (σ x) = x) {n m : ℕ} (J
     (C : Matrix (Fin n) (Fin m) E) (v : Fin n → E) (i : Fin m) :
     ((Formalism.UG.cT (σ : E →+* E) C * (c₀ • J.map σ)) *ᵥ v) i = c₀ * σ (form σ J (fun l => C l i) v) := by
   simp only [Formalism.UG.cT, form, Matrix.mulVec, dotProduct, Matrix.mul_apply, Matrix.transpose_apply, Matrix.map_apply,
-    Matrix.smul_apply, smul_eq_mul, map_sum, map_mul, hσ, Finset.sum_mul, Finset.mul_sum, AlgHom.coe_toRingHom,
+    Matrix.smul_apply, smul_eq_mul, map_sum, map_mul, hσ, Finset.sum_mul, Finset.mul_sum,
     RingHom.coe_coe]
   rw [Finset.sum_comm]
   exact Finset.sum_congr rfl fun _ _ => Finset.sum_congr rfl fun _ _ => by ring

@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaussSumFiltrations.EvenPos
 
 open NumberField IsDedekindDomain Neutral.B1 Formalism.L2.Host Formalism.ConjugateSelfDual GlobalTheory.CuspRep UpperTheory.V UpperTheory.V.Af UpperTheory.V.Sd GlobalTheory.HilbertThetaSeries
@@ -150,7 +150,7 @@ private theorem ez_at_imaginary_unit_shift_eq {F : Type} [Field F] [NumberField 
     ez ζ (fun v => UpperHalfPlane.mk ((x v : ℂ) + Complex.I) (by simp)) =
       GlobalTheory.HilbertThetaSeries.QUniq.chr (fun v => reAt v ζ) x *
         Complex.exp (2 * Real.pi * Complex.I * ∑ v, (reAt v ζ : ℂ) * Complex.I) := by
-  simp only [ez, GlobalTheory.HilbertThetaSeries.QUniq.chr, UpperHalfPlane.coe_mk]
+  simp only [ez, GlobalTheory.HilbertThetaSeries.QUniq.chr]
   rw [← Complex.exp_add]
   congr 1
   simp only [mul_add, Finset.sum_add_distrib]

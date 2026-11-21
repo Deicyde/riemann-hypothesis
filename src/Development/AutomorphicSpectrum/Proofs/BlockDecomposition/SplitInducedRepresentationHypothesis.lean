@@ -1,5 +1,5 @@
-import Mathlib
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.LocalWhittakerDuality.WSteps
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SplitRepresentationHypothesis
 open MeasureTheory Matrix GroundTheory.LocalField GroundTheory.Automorphic Ad3 Ad3.K.GL2LocalData
 open scoped ValuativeRel
@@ -112,7 +112,7 @@ theorem normalized_determinant_cocycle (g h : GL (Fin 2) F) : one1 (g * h) = one
   have hB := det_ne h
   ext i j
   fin_cases i <;> fin_cases j <;>
-    simp [one1, cjA, Matrix.mul_apply, Fin.sum_univ_two, det_mul', -Matrix.GeneralLinearGroup.val_det_apply] <;>
+    simp [one1, cjA, Matrix.mul_apply, Fin.sum_univ_two, -Matrix.GeneralLinearGroup.val_det_apply] <;>
     field_simp
 
 def cst (c₁ : Fˣ →* ℂˣ) (h : GL (Fin 2) F) : ℂ :=

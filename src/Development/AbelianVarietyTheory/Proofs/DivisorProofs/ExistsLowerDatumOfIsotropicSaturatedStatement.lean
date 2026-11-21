@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLowerDatumOfIsotropicSaturated
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiltGraded
 
 noncomputable section
 

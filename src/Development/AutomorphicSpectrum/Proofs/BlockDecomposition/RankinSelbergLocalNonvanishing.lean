@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.VerticalStrips.UnramifiedEulerProductIntegral
 
 noncomputable section
@@ -378,7 +379,7 @@ theorem continuous_low : Continuous (low : F → GL (Fin 2) F) := by
   rw [Units.continuous_iff]
   constructor
   · refine continuous_matrix fun i j => ?_
-    fin_cases i <;> fin_cases j <;> simp [low, Function.comp_def] <;> fun_prop
+    fin_cases i <;> fin_cases j <;> simp [low] <;> fun_prop
   · refine continuous_matrix fun i j => ?_
     fin_cases i <;> fin_cases j <;> simp [low] <;> fun_prop
 
@@ -390,7 +391,7 @@ theorem continuous_dg : Continuous (fun a : Fˣ => (dg2 a 1 : GL (Fin 2) F)) := 
   rw [Units.continuous_iff]
   constructor
   · refine continuous_matrix fun i j => ?_
-    fin_cases i <;> fin_cases j <;> simp [dg2, Function.comp_def] <;> first | exact h1 | fun_prop
+    fin_cases i <;> fin_cases j <;> simp [dg2] <;> first | exact h1 | fun_prop
   · refine continuous_matrix fun i j => ?_
     fin_cases i <;> fin_cases j <;> simp [dg2] <;> first | exact h2 | fun_prop
 

@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJAGQQSSFCut
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.NormalFormOrderZeroOfParts
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CoordinateCommuteRaisingConstant
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGCRadSpSmooth
 
 open Formalism.REAL Formalism.QuantumDeterminants Formalism.FourierDecayAlt

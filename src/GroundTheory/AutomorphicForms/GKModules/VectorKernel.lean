@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.GKModules.Casimir
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.GKModules.Garding
 import GroundTheory.AutomorphicForms.AutomorphicFormSpaces.GKStableConv
 import GroundTheory.AutomorphicForms.AutomorphicFormSpaces.GKStableLaplacian

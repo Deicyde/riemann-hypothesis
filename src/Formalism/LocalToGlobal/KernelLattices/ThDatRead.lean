@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.KernelLattices.FirstKernelLawReading
-import Formalism.LocalToGlobal.KernelLattices.ColInst
 import Formalism.LocalToGlobal.KernelLattices.MatrixKernelDiamondCommutation
 
 open NumberField IsDedekindDomain

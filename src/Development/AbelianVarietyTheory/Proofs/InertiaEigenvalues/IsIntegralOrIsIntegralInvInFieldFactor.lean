@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.UnitLemmaGroup
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.LinearDescent
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.DltEqZero
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsValuationSubringIntegralClosureCompleteDVR
 
 noncomputable section
@@ -54,7 +52,7 @@ theorem isIntegral_or_isIntegral_of_fieldFactor : ∀ (K : UQ) (B : InvAlg K) (f
     refine ⟨⟨0, 1, fun h => hf0 ?_⟩, mul_comm, ?_⟩
     · obtain ⟨c, hc⟩ := (hmk 0 1).1 h
       have := congrArg (f * ·) hc
-      simp only [mul_sub, mul_zero, mul_one, zero_sub] at this
+      simp only [zero_sub] at this
       rw [← mul_assoc, mul_sub, mul_one, hf.eq, sub_self, zero_mul] at this
       simpa using this
     · intro a ha

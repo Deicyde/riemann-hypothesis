@@ -1,12 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.L2UnitaryRepresentationData
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsLowestKTypeFockMapThetaVectors
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.WeilMaximalCompactFockSubstitutionCharacterStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsCoefDualPair
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsPolynomialModelCoefficientSpaceRealPoints
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsDefiniteOfAllPlus
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HolomorphicDiscreteSeries
-import Development.AbelianVarietyTheory.Counterexamples.RotationExamples.OneLeAPlLast
+import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.AdmissibleDiscreteSeriesOfHasParam
+import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HarishChandraModulesOn
 
 open Formalism.BasicNotions Formalism.MainNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory NumberField Matrix Formalism.L2.Theta Formalism.L2.DIV Formalism.L2.Indef Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.Mult Formalism.IndefR.Datum GlobalTheory.JointHarm
 open GlobalTheory.IndefiniteRowSideFullHecke.ThetaSourceAction (parDef parHol IsAdapted)
@@ -256,7 +255,7 @@ theorem ioEx (D : D7) : IoEx D := by
     (fun τ => (GlobalTheory.T.thetaWeightArithmeticAtPlace_proof D i τ).aPlus_antitone) (fun τ => (GlobalTheory.T.thetaWeightArithmeticAtPlace_proof D i τ).aM_anti) (fun τ => (hx τ).2.2.2.1)
     (fun τ => (hx τ).2.2.2.2)
   have hth : IsThetaFunO ψ (Vc D i) (Wc D i) f := by
-    obtain ⟨τ⟩ : Nonempty D.what₂.Tau := ⟨D.eTau.symm ⟨1, by simp [Formalism.FrobeniusOrbits.Psi]⟩⟩
+    obtain ⟨τ⟩ : Nonempty D.what₂.Tau := ⟨D.eTau.symm ⟨1, by simp⟩⟩
     exact (hf τ).theta
   have hact := GlobalTheory.T.weil_maximalCompact_fock_substitution_character D ψ θ (Vc D i) (Wc D i) _ _ ω _ M' BV hω hθ
     (D.sp.V_sig _) (D.sp.W_sig _) hBS _ _ hpq hord _ _ (fun τ => (hχ τ).1)

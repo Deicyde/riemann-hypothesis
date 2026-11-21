@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.CountingStatementReduction
-import Formalism.MahlerMeasure.LevelLattice
 
 noncomputable section
 

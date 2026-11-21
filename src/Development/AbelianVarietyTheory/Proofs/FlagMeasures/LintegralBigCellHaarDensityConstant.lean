@@ -1,13 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.Dchart
-import Formalism.LocalRingCardinality.DataCD
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.FormalDegreeBessel.FinalBF
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LongWeylElement
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.IsHaarOnIffGroupsUnitaryUnipotent
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.HaarLieIsHaarOnUnipotentRadicalStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.DensityInChartStatement
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.LieAlgebraBesselModelMiddleUnitaryEntriesStatement
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.LieEntriesUnipotentBesselNCharacterizationStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.BesselBigCellCoordinatesUniqueStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExpInjectiveStrictUpperTriangularStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.BigCellChartDifferentialSkewAndFrobeniusStatement
@@ -272,7 +269,7 @@ theorem meas_formula (μG μN μb : Measure (Mt k r)) (hG : IsHaarOn (GG k r) μ
     have := mem_UU hρ hx hp.1.1 hp.1.2 hp.2
     simp only [hx1, true_and] at this
     classical
-    simp only [Set.indicator_apply, Set.mem_preimage, Pi.one_apply]
+    simp only [Set.indicator_apply, Pi.one_apply]
     exact if_congr this rfl rfl
   · rw [Set.indicator_of_notMem hx1]
     refine mul_eq_zero_of_right _ ?_

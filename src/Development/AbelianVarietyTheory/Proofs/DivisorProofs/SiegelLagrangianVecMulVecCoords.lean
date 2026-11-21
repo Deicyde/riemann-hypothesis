@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AvgFormApply
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SmulIncMLagP
 
 open scoped TensorProduct NNReal Matrix
@@ -19,11 +16,11 @@ theorem vecOf_single_basis (F : Type) [Field F] {E : Type} [Field E] [Algebra F 
   · subst h
     rw [Finset.sum_eq_single i]
     · simp
-    · intro b _ hb; simp [Pi.single_apply, hb]
+    · intro b _ hb; simp [hb]
     · simp
   · rw [Pi.single_eq_of_ne h]
     refine Finset.sum_eq_zero fun b _ => ?_
-    simp [Pi.single_apply, h]
+    simp [h]
 
 theorem De_vecMulVec_basisMap : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [NumberField E] [Algebra F E] (n d : ℕ) (κ : Type) [Fintype κ]
     (De : Matrix (Fin d) (Fin n ⊕ Fin n) (AE F E) →ₗ[AF F] (κ → AF F) × (κ → AF F))

@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.GlobalUnitaryForms.FibCon
+import Mathlib.Algebra.Order.Ring.Star
 
 open UpperTheory.V.Z.Sym UpperTheory.V.Z.Sym.Glob UpperTheory.V.Z.Sym.Loc Matrix
 
@@ -49,4 +51,4 @@ theorem UpperTheory.orbitalFiber_det_eq_one :
   rw [← hz, MonoidHom.comp_apply, ← hw]
   apply Units.ext
   ext i j : 1
-  by_cases hij : i = j <;> simp [hij, Matrix.diagonal_apply]
+  by_cases hij : i = j <;> simp [hij]

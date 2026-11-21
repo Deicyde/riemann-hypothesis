@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DifferentiableRisingS
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.DifferentiableOnOfTendstoLocallyUniformlyOn
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.DefiningCoordinates
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.OmegaFactorization
 open NumberField IsDedekindDomain GlobalTheory.CMVal GlobalTheory.IndefiniteRowSideFullHecke.DefiningCoordinates GlobalTheory.IndefiniteRowSideFullHecke.OmegaFactorization GlobalTheory.WeightTwoSum
 open scoped ContDiff nonZeroDivisors
 
@@ -14,7 +15,7 @@ theorem clm_single_I {I : Type} (f : (I → ℂ) →L[ℂ] ℂ) (i : I) :
   ext j
   by_cases hj : j = i
   · subst hj; simp
-  · simp [Pi.single_apply, hj]
+  · simp [hj]
 
 theorem wirt_false_eq_lineDeriv {I : Type} [Fintype I] [DecidableEq I] (i : I) (h : (I → ℂ) → ℂ) (z : I → ℂ)
     (hd : DifferentiableAt ℂ h z) : wirt i false h z = lineDeriv ℂ h z (Pi.single i 1) := by

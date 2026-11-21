@@ -1,6 +1,8 @@
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AlternatingSumThreeTerms
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ChosenInjectiveResolutionEtaleSheafBasicPropertiStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SimplicialCochainClassesBasicProperties
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
 open CategoryTheory Limits AlgebraicGeometry Opposite CochainComplex CochainComplex.HomComplex Simplicial TensorProduct GlobalTheory.EtC GlobalTheory.CechOne
 
 namespace GlobalTheory.CechOne
@@ -46,7 +48,7 @@ theorem cobd_of_isCls_zero : ∀ (R : Type) [CommRing R] (F : Shv R) (E : Spc) (
   refine ⟨(((1 : ℕ) : ℤ).negOnePow : ℤ) • ((chainsXIso R E 0).inv ≫ t'), ?_⟩
   rw [hs]
   simp only [D, cobd, Preadditive.sum_comp, Preadditive.comp_zsmul, Preadditive.zsmul_comp, Finset.smul_sum,
-    smul_smul, Category.assoc]
+    smul_smul]
   refine Finset.sum_congr rfl fun i _ => ?_
   rw [mul_comm]
 

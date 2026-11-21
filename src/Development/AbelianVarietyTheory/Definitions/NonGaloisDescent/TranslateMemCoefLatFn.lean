@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.LinksDefs
-import Formalism.LocalToGlobal.Columns.CoefColLemmas
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.CsEquiv
 
 noncomputable section
 
@@ -39,8 +39,8 @@ theorem fockSubst_one (p : D.what₂.Tau → ℕ) : fockSubst (m := m) p (1 : GL
   refine MvPolynomial.algHom_ext fun v => ?_
   rw [fockSubst, aeval_X, AlgHom.id_apply]
   split_ifs
-  · rw [Finset.sum_eq_single v.2.2 (fun b _ hb => by simp [Matrix.one_apply, Ne.symm hb]) (by simp)]; simp
-  · rw [Finset.sum_eq_single v.2.2 (fun b _ hb => by simp [Matrix.one_apply, hb]) (by simp)]; simp
+  · rw [Finset.sum_eq_single v.2.2 (fun b _ hb => by simp [Ne.symm hb]) (by simp)]; simp
+  · rw [Finset.sum_eq_single v.2.2 (fun b _ hb => by simp [hb]) (by simp)]; simp
 
 theorem fockSubst_mul (p : D.what₂.Tau → ℕ) (u u' : GLR D n) :
     fockSubst (m := m) p (u * u') = (fockSubst p u).comp (fockSubst p u') := by

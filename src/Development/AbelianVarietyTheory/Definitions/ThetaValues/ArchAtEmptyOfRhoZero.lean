@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.ThetaValues.Generic
 import Development.AbelianVarietyTheory.Counterexamples.JetSurvey.NotJInjRdOfConst
 import Formalism.LocalToGlobal.ProjectiveLattices.CuspMulOf
@@ -260,7 +261,7 @@ theorem anFacts_of_poly (hφ : Function.Injective φ) (x0 : R.Y) (hx : ∀ p, φ
     have h2 := (h1.units_smul fun p => Units.mk0 _ (hne p.2)).map' φ.toLinearMap (LinearMap.ker_eq_bot.2 hφ)
     refine li_congr h2 fun p => ?_
     rw [hlead θ hθ]
-    simp [Units.smul_def, smul_monomial, ← map_smul]
+    simp [Units.smul_def, smul_monomial]
   · have h1 : Submodule.span ℂ (Set.range (R.lead w t T (a0 D j T) θ)) ≤
         (supp fun β => tl β < a0 D j T).map φ.toLinearMap := by
       refine Submodule.span_le.2 ?_

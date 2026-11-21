@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ExistsIsHaarMeasureSUJ
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.HarishChandraCentralActionStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExtendSpecialUnitaryRepStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.InfinitesimalCharacterExtensionStatement

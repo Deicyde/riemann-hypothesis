@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.NormSumPairRankZeroOfCurveCoordNorm
-import Formalism.PairingDivisors.StatementH
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.OddThetaFunctionExistenceUniqueness
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.DifferentiableSqTh
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsWeierstrassPSeriesAndSigmaStarQuotientSeriStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.WeierstrassPFormalGroupLogUniformisesStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsUniqueIsWeierstrassPSeriesStatement
@@ -30,7 +27,7 @@ theorem isWpSer_rescale {K : Type*} [CommRing K] (e : K) {a b : K} {P : PowerSer
   have hd : X * derivativeFun (rescale e P) = rescale e (X * derivativeFun P) := by
     ext n
     cases n with
-    | zero => simp [coeff_rescale]
+    | zero => simp
     | succ n => simp [coeff_rescale, coeff_succ_X_mul, derivativeFun, coeff_derivative, mul_assoc, pow_succ']
   have hC : ∀ c : K, rescale e (C c) = C c := by
     intro c

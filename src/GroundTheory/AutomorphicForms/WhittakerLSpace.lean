@@ -1,6 +1,8 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.LocallyProfinite
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.LocallyConstantCompact
+import Mathlib.RingTheory.PiTensorProduct
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace GroundTheory.Automorphic
 

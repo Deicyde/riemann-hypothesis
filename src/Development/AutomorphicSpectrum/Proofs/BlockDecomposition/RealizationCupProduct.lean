@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.LevelChainValuations.OneSTr
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
 
 set_option backward.isDefEq.respectTransparency false
 
@@ -13,7 +17,7 @@ theorem semilinear_eq_sum_coord {K B : Type*} {V : Type*} [Field K] [CommRing B]
     (φ : Module.Dual K V) : f φ = ∑ s, f (bs.coord s) * o (φ (bs s)) := by
   have hφ : φ = ∑ s, φ (bs s) • bs.coord s := by
     refine bs.ext fun t => ?_
-    simp [LinearMap.sum_apply, Finsupp.single_apply]
+    simp
   conv_lhs => rw [hφ]
   rw [map_sum]
   refine Finset.sum_congr rfl fun s _ => ?_

@@ -1,15 +1,13 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.VRatioGtStatement
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FirstCohomology.OneCHyp
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FirstCohomology.JetLemmaStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.TwistBC
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ChartPullbacks.UniversalCharts.IsUnivChart
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ChartPullbacks.UniversalCharts.DualLiftInjective
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ChartPullbacks.UniversalCharts.AlgChart
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FirstCohomology.LocalResidues
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FirstCohomology.SectionDivision
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.SectionScalarValuation
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.LBLocalC
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FirstCohomology.SquareUnits
 
 set_option autoImplicit false
 
@@ -96,7 +94,7 @@ theorem exists_unit_sec (hL : Laws) (hTW : TwistBCSpanStatement) (V : Type) [Com
   have hy : (snd T P.A).left y = (η[D.P.A]).left (closedPoint V) := by
     have e : o ≫ snd T P.A = toUnit T ≫ η[P.A] := lift_snd _ _
     have e2 := congrArg (fun q => q.left (closedPoint k)) e
-    simp only [Over.comp_left, Scheme.Hom.comp_apply, Over.toUnit_left] at e2
+    simp only [Over.comp_left, Over.toUnit_left] at e2
     refine e2.trans ((Scheme.Hom.comp_apply _ _ _).trans (congrArg _ ?_))
     exact IsLocalRing.comap_closedPoint f
   obtain ⟨b, hb⟩ := exists_root t hL.mulN P (toUnit _ ≫ D.c χ) r (by omega)

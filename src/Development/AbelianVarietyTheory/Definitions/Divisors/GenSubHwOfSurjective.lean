@@ -1,4 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryLieElementsGenerateOneParamLines
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.DerivedAdjoint
@@ -380,7 +382,7 @@ theorem stdMod_gen : genSub (stdMod (R + 1) S).act (hwSub (stdMod (R + 1) S).act
         rintro rfl
         cases b <;> simp [posC] at hbc
       ext e
-      simp [Eab, Matrix.single_apply, this]⟩
+      simp [Eab, this]⟩
   refine eq_top_iff.2 fun v _ => ?_
   rw [pi_eq_sum_univ' v]
   refine Submodule.sum_mem _ fun c _ => Submodule.smul_mem _ _ ?_

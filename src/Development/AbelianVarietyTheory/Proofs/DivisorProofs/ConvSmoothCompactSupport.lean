@@ -1,11 +1,7 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.GKModules.Casimir
-import GroundTheory.AutomorphicForms.HarishChandraRegularity.ExpHaar
-import GroundTheory.AutomorphicForms.HarishChandraInvariance.Compact
-import GroundTheory.AutomorphicForms.DixmierMalliavin
-import GroundTheory.AutomorphicForms.GKModules.ParametricIntegral
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LintegralInvLeOfSupportCompactStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSmoothFunIntegralMulRightStatement
+import Mathlib.LinearAlgebra.Basis.MulOpposite
 open MeasureTheory GroundTheory.Automorphic
 open scoped ContDiff
 

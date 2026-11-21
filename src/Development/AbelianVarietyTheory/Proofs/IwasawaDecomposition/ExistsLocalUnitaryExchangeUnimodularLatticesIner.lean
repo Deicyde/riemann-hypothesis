@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.HeckeInertComm
-import Formalism.LocalToGlobal.Columns.CoefficientsModP.LatticeBasisExistsHolds
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PatchAtSelf
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CartanExchangeUnimodularInertPrimeStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SubmodulePatchAtPrimeIsLatticeLocPStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SameAtOfLocalizationEqStatement

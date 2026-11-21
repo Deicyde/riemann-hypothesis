@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import GroundTheory.PAdicHodge.ExtRobbaDMRankOne
 import GroundTheory.PAdicHodge.SemilinearResidue
+import Mathlib.RingTheory.PicardGroup
 set_option maxSynthPendingDepth 1
 
 noncomputable section

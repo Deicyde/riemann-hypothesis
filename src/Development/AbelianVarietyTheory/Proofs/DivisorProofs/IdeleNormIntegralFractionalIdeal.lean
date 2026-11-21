@@ -1,10 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeIntZero
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TmulMemLocId
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaStabilizerExists
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousLogHomIsMultipleOfLogAbs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.TateThesis.GlobalZeta
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IdelesAtInfiniteFiniteIffStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdeleBaseChangeMemIdealStatement

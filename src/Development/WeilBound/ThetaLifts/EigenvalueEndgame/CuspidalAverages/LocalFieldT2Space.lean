@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.EigenvalueEndgame.CuspidalAverages.ZariskiLocallyAffineLine
+import Development.WeilBound.ThetaLifts.EigenvalueEndgame.CuspidalAverages.KeyThree
 
 noncomputable section
 

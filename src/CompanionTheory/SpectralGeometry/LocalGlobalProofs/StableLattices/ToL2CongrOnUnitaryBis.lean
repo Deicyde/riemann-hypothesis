@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.RealGroups.DiscreteSeries.DiscreteSeriesClassification.DiscreteSeriesExhaustion.MatrixCoefficientDecay.HilbertSchmidtDecay.HaarExists
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.InfChar
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.RightDerivativeToL2
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.NilpotentRightRule
 
 noncomputable section
@@ -242,7 +242,7 @@ theorem frechet (n : ℕ) (ε : Fin n → Bool) (X : GMod n) (c : X.V →ₗ[ℂ
   have hmv := Convex.norm_image_sub_le_of_norm_hasDerivWithin_le h1 hbd (convex_Icc 0 1)
     (⟨le_rfl, zero_le_one⟩ : (0:ℝ) ∈ Icc (0:ℝ) 1) (⟨zero_le_one, le_rfl⟩ : (1:ℝ) ∈ Icc (0:ℝ) 1)
   simp only [Complex.ofReal_one, Complex.ofReal_zero, one_smul, zero_smul, sub_zero, NormedSpace.exp_zero,
-    Matrix.mul_one, norm_one, mul_one] at hmv
+    norm_one, mul_one] at hmv
   rw [sub_right_comm] at hmv
   exact hmv
 

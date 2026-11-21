@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FderivIntegralMulKernelApply
-import Mathlib
 open MeasureTheory Filter Topology Metric
 open scoped ContDiff
 set_option maxHeartbeats 1000000 in

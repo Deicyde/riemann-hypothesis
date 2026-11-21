@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.NatCastMemPlaceAt
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.HeckePrimeDetection
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsUTestNontrivial
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsPlaceEmb
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.FiniteAndIntegral

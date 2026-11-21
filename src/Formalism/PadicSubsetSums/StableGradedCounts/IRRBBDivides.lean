@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.PadicSubsetSums.CentralIdempotents.GaloisIrreducibility
 
 namespace Formalism.IrreducibleCountingLemmas.GaloisIrreducibility

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.PAdicHodge.BCrisEigenFixed
 import GroundTheory.PAdicHodge.BCrisEigenChar
 import GroundTheory.PAdicHodge.BCrisEigenMaps

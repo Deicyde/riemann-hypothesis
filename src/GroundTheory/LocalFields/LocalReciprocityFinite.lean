@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.LocalFields.LocalAxiom
-import GroundTheory.LocalFields.LocalReciprocityLimitAbstract
+import GroundTheory.LocalFields.AbstractLocalReciprocity.Isomorphism
 
 namespace GroundTheory.LocalField
 

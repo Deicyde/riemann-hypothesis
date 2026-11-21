@@ -1,4 +1,5 @@
-import Formalism.LocalToGlobal.IndefiniteReal.LeafObjects.OnObjOf3XEq
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteForms.IndefiniteTree.RealCubicMeans.LeafBounds.LeafMeans.LeafMeansFree
 import Development.WeilBound.SupplementaryPages.FaceFrameMatrix
 

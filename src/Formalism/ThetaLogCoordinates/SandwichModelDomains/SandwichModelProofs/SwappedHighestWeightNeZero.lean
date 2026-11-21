@@ -1,8 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.SandwichModelDomains.SpreadSquare
 import Formalism.ThetaLogCoordinates.TraceIsometryWeights.DischargeHeightBound
-import Formalism.GradedWeylDivisibility.FinalD
 import Formalism.GradedWeylDivisibility.FockSpaceTableaux.LClosedeqLemmas
-import Formalism.GradedWeylDivisibility.FockSpaceTableaux.LHwrowLemmas
+import Formalism.GradedWeylDivisibility.FinalB
+import Formalism.ThetaLogCoordinates.TraceIsometryWeights.FinalP
 
 open MvPolynomial
 

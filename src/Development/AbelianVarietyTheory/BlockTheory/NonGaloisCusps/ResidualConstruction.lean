@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.QuotientHomNonvanishingBound
-import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
 import Formalism.SharpRestriction.ParamsHeightRankConstant
 
 noncomputable section
@@ -151,7 +152,7 @@ example {A : Type} [CommRing A] {n : ℕ} (M : Matrix (Fin n) (Fin n) A) : block
   unfold blockPol Matrix.charpoly Matrix.charmatrix
   congr 1
   ext a b
-  by_cases h : a = b <;> simp [h, Matrix.one_apply]
+  by_cases h : a = b <;> simp [h]
 
 def ConsExist_at (D : D7) : Prop := ∀ i : D.nd.Loc, ConsExist D.nd i
 

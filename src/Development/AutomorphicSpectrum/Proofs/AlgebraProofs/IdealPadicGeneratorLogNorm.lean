@@ -1,5 +1,4 @@
-import Development.AutomorphicSpectrum.Definitions.AdelicLattices.FactPrimes
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.LatNormGrLatNeZeroOfSpan
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.SesquilinearFractions.ExistsUnitValueSkewHermitian
 open NumberField Matrix GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Fl
 open scoped ComplexOrder

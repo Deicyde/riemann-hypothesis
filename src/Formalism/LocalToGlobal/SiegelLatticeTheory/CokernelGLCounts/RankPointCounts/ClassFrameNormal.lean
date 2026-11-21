@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.InfCut
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.ClassFrameCut
 
@@ -165,7 +166,7 @@ theorem normalFormC_of (h1 : LiftAtSomeC X Y u u' κ)
   unfold chiOO frameVal
   rw [h5 R ρ s hs g hg g' hg' hpt, hc, hV, hpt, hO, ← hph]
   ext ξ
-  simp [smul_smul, LinearIsometryEquiv.trans_apply]
+  simp [smul_smul]
   try ring_nf
 
 end Formalism.L2.SG.Pf.RowForm

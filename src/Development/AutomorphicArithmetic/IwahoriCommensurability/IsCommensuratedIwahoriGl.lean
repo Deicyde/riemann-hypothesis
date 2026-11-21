@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ScalarCommutation.AuxiliaryPrimeFunction
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.AffineBruhat
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.IwahoriSubgroupDefinitionsAgree
+import Formalism.SatakeDualWeyl.Statement
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import GroundTheory.LocalFields.PadicLogSeries
 open Formalism.UG GroundTheory.Automorphic GroundTheory.Automorphic.GLnLocal Matrix
 
 theorem UpperTheory.isCommensurated_iwahori_gl :

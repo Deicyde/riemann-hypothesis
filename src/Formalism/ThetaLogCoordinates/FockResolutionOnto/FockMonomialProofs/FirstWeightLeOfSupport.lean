@@ -1,4 +1,7 @@
-import Formalism.ThetaLogCoordinates.FockResolutionOnto.FockMonomialProofs.InitPartZeroXMul
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.PolynomialDimension.MultinomialDepth.PartnerM
+import Formalism.ThetaLogCoordinates.FockResolutionOnto.ShiftLastLetterThresholds
 
 namespace Formalism.InvariantFactorPaths.L4
 

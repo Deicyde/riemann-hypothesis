@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.CurveOpen
+import Formalism.LocalToGlobal.ProjectiveLattices.CurveComp
+import Mathlib.Algebra.Module.StablyFree.Basic
 
 noncomputable section
 

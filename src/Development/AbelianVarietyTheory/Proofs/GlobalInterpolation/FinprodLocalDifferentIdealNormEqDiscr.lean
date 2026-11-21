@@ -1,7 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.LocalDualIndex
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.ExistsUniqueIdeleOfLinearEquivQuotientLocal
-import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.HermitianFormFiniteZerosOnLineCmExt
+import Mathlib.NumberTheory.NumberField.Discriminant.Different
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.Topology.Sheaves.Presheaf
 
 open NumberField IsDedekindDomain IsDedekindDomain.HeightOneSpectrum WithZero Polynomial
 open Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.IndefiniteRowSideFullHecke.LocalDualIndex
@@ -272,7 +275,7 @@ theorem _root_.GlobalTheory.LocalDifferentProduct.finprod_card_quot_map {K : Typ
     Ideal.finite_mulSupport hI
   refine ⟨hfin.subset (Function.mulSupport_comp_subset (map_one _) _), ?_⟩
   have h := MonoidHom.map_finprod (Ideal.absNorm : Ideal (𝓞 K) →*₀ ℕ).toMonoidHom hfin
-  simp only [MonoidWithZeroHom.toMonoidHom_coe, Ideal.finprod_heightOneSpectrum_factorization hI] at h
+  simp only [Ideal.finprod_heightOneSpectrum_factorization hI] at h
   exact h.symm
 
 section Relative

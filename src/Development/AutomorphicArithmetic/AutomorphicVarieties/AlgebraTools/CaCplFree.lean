@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.IsCplAtSelf
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.CaCplMap
 
 open IsLocalRing UpperTheory.V.AlgebraTools TensorProduct
@@ -16,7 +15,7 @@ private theorem rTensor_inj_of_map {Λ : Type} [CommRing Λ] (p : Ideal Λ) {L :
   let σ : p ⊗[Λ] N →+ m ⊗[L] N :=
     TensorProduct.liftAddHom
       (AddMonoidHom.mk' (fun a => (TensorProduct.mk L m N (ι a)).toAddMonoidHom)
-        (fun a b => by ext n; simp [TensorProduct.add_tmul]))
+        (fun a b => by ext n; simp))
       (fun r a n => by
         change ι (r • a) ⊗ₜ[L] n = ι a ⊗ₜ[L] (r • n)
         have h : ι (r • a) = algebraMap Λ L r • ι a := by

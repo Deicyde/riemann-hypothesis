@@ -1,4 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.PushWithIsTranspose
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ReductionUniformizerPoint
 
@@ -185,7 +187,7 @@ theorem galStr_Ystrπ (σ : Ω ≃ₐ[k] Ω) (t : ℕ) :
 theorem δ_galStr (σ : Ω ≃ₐ[k] Ω) (t : ℕ) (j : Fin (t + 2)) :
     δ _ t j ≫ galStr Ω p I σ t = galStr Ω p I σ (t + 1) ≫ δ _ t j :=
   Ystr_hom_ext _ fun S => by
-    simp only [inj_δ_assoc, inj_galStr, inj_galStr_assoc, Category.assoc, inj_δ]
+    simp only [inj_δ_assoc, inj_galStr, inj_galStr_assoc, inj_δ]
     rw [← Category.assoc, ← Category.assoc]
     congr 1
     exact (cancel_mono (Yι _ _)).1 (by simp)

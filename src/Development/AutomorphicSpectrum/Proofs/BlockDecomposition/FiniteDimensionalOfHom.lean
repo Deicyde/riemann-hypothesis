@@ -1,4 +1,10 @@
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsCliff
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.RingTheory.WittVector.IsPoly
 open Matrix Finset
 open scoped InnerProductSpace
 open PositivityTheory.RgBcC PositivityTheory.RgBcC.Real PositivityTheory.RgBcC.RealD GlobalTheory.CompanionTheory.RealCount
@@ -51,7 +57,7 @@ theorem trace_sandwich {W H : Type} [AddCommGroup W] [Module ℂ W]
     apply TensorProduct.ext'
     intro φ h
     ext v
-    simp [e, M, dualTensorHomEquiv, dualTensorHomEquivOfBasis_apply, dualTensorHom_apply,
+    simp [e, M, dualTensorHomEquiv, dualTensorHom_apply,
       Module.Dual.transpose_apply]
   have hconj : e.conj M = sandwich a b := by
     rw [LinearEquiv.conj_apply]

@@ -1,7 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.WmpNatCardQuotEqPowFinrank
-import Formalism.LocalToGlobal.Columns.NonDeg
-import Formalism.LocalToGlobal.Columns.RowFormsGood
-import Formalism.LocalToGlobal.Columns.PathCountSymmetricHolds
+import Formalism.LocalToGlobal.Columns.GSetLemmas
 
 noncomputable section
 

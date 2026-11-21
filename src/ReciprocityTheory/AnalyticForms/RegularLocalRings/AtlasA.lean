@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.IsOpenAlt
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.AnChart
-import ReciprocityTheory.AnalyticForms.PotentialTheory.IsPotentialOfFun
 
 namespace ReciprocityTheory.AnForm.R
 

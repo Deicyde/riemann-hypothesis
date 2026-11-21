@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.PointMatrixPhases
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.FormRegularity
 
@@ -86,7 +87,7 @@ theorem frameMat_spec (e fd : Fin r → Fin n → ℂ) (z : Fin n → ℂ)
     induction a using Fin.lastCases with
     | last =>
       have hx := (expand_e ε e fd hfe hsp_l).2
-      simp only [fam, Fin.snoc_castSucc, Fin.snoc_last, if_pos rfl] at hx ⊢
+      simp only [fam, Fin.snoc_castSucc, Fin.snoc_last] at hx ⊢
       have h0 : ∀ b : Fin r, (if Fin.last r = b.castSucc then e b else 0) = 0 := fun b => by
         rw [if_neg (Fin.castSucc_lt_last b).ne']
       simp only [h0, Finset.sum_const_zero, zero_add]

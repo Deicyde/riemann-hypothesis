@@ -1,4 +1,5 @@
-import ReciprocityTheory.GroupCohomology.TransgressionStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.GroupCohomology.DEqZeroOfMemB
 
 namespace ReciprocityTheory.Coh

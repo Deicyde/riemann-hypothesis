@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceFormLelongCompact
-import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceIdeal
-import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceComponents
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PSliceFormLelongCompactLimit
+import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceCutOffLimit
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

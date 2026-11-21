@@ -1,5 +1,4 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.EntryMem
-import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.SInternal
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.SpanMono
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.PointsFinite
 
@@ -11,7 +10,7 @@ private theorem pts_wv {K : Type} [CommRing K] (t : Multiplicative (ℤ × ℤ) 
   have h : Multiplicative.ofAdd ((a, b) : ℤ × ℤ) =
       Multiplicative.ofAdd ((1, 0) : ℤ × ℤ) ^ a * Multiplicative.ofAdd ((0, 1) : ℤ × ℤ) ^ b := by
     apply Multiplicative.toAdd.injective
-    simp [toAdd_zpow, toAdd_mul, Prod.ext_iff]
+    simp [toAdd_zpow, toAdd_mul]
   rw [h, map_mul, map_zpow, map_zpow]
   rfl
 

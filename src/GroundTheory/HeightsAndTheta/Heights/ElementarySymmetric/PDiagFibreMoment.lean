@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Intersections.PFibreLocal
 import GroundTheory.HeightsAndTheta.Heights.ElementarySymmetric.StDiagFibreMoment
 import GroundTheory.HeightsAndTheta.Heights.ElementarySymmetric.StDiagFibreFubini

@@ -1,19 +1,9 @@
-import Formalism.HermitianCurvature.StatementJF
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.Block3MulBlocks
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.PhiBoundPartsOfRadicalParametrisation
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.DilationUnipotentWeylMeasure
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BetaSesquilinearity
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.LongWeylElement
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.SettingExistence
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.OppositeWeylSubgroupClosed
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.HermitianFormFactor
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.TwoByOneBlock
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CompactGroupHaarExists
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.SmoothnessOnGoodSet
-import Formalism.FormalDegreeBessel.FinalBF
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.NormDiagonalEntryDilationGeneratorLeOne
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.RegularisedPairingViaPhase
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.OrbitalIntegralAeConvergenceContinuity
+import Mathlib.Topology.Compactness.DeltaGeneratedSpace
 
 noncomputable section
 
@@ -596,7 +586,7 @@ lemma sz_hb_eq (k : ℕ) :
       simp [ha, this]
       have := a.isLt; omega
   · have : a.val ≠ b.val := fun h => hab (Fin.ext h)
-    simp [hab, this]
+    simp [hab]
 
 lemma sz_castW_mem {k : ℕ} (μ : B.Mat k 0) (hμ : μ ∈ B.GV k 0) : (castW μ)ᴴ * Hb k * castW μ = Hb k := by
   have h : μᴴ * Hpk k 0 * μ = Hpk k 0 := hμ

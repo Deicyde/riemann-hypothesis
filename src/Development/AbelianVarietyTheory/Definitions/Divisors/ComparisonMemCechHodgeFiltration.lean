@@ -1,4 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.CechDeRhamCoefMapOneFormsRestrictAlongFunctor
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsNilDPOfCube
 import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.StructureHomApply

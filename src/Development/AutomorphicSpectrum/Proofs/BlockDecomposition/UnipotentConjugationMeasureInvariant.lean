@@ -1,6 +1,8 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.MirabolicDerivatives.LeibnizDerivatives.GenericProdIff
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.OpenFns
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open GlobalTheory.PRep GlobalTheory.SmGL GlobalTheory.LocGL GlobalTheory.BZMir.Leib GlobalTheory.CompanionTheory.Rodier
 open scoped TensorProduct
 
@@ -63,7 +65,7 @@ theorem conj_measurePreserving : ∀ {G : Type} [Group G] [TopologicalSpace G] [
     have h3 := congrArg (fun ν : MeasureTheory.Measure U => ν Q') heq
     simp only [MeasureTheory.Measure.smul_apply, h1] at h3
     rw [one_mul]
-    exact h3.symm.trans (by simp [ENNReal.smul_def])
+    exact h3.symm.trans (by simp)
   have hκ : MeasureTheory.Measure.haarScalarFactor (μ.map c) μ = 1 := by
     have := (ENNReal.mul_left_inj hpos.ne' hfin).1 h2
     exact_mod_cast this

@@ -1,7 +1,6 @@
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.HodgeBundleWeights.TamagawaNumberSpecialUnitary
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TailWeightLineNef
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.HodgeBundleWeights.Hypotheses2
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TailWeightLineNefStatement
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsNefPullLLStepEx
 
 section
 open CategoryTheory AlgebraicGeometry TopologicalSpace Limits NumberField

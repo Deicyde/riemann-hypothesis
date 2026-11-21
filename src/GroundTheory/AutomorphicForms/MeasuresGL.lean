@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.MeasuresChart
 import GroundTheory.AutomorphicForms.RealGroupsHaar
 import GroundTheory.AutomorphicForms.Cartan
+import Mathlib.Algebra.Order.Star.Real
 
 namespace GroundTheory.Automorphic
 

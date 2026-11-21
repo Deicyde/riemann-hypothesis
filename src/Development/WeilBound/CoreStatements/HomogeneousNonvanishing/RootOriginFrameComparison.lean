@@ -1,9 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.IsFrameVec
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsEigenOpDiscr
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.RootOriginFrameNonarchimedeanStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LieLatticeEvalAtLocalRingStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.IsExcisionNbhdAway
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.RootModelFlagHeight
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ComponentSpecializationLatticeBasis
 
@@ -145,7 +143,7 @@ theorem fib_eq_lieEig_rf : ∀ (E : Type) [Field E] [NumberField E] [IsCMField E
     have h1 := P1 x hw
     rw [heig x] at h1
     have h2 := Pu h1 (P2 (hσ' x) hw)
-    simp [sub_eq_zero, h2]
+    simp [h2]
   · rintro w ⟨hw1, hw2⟩
     have key : ∀ u ∈ Or.𝔐.M.fibAt Or.𝔐.M.lat zV MC, Tc u ∈ Or.𝔐.M.fibAt (Or.𝔐.V s) zV MC := fun u hu => by
       induction hu using Submodule.span_induction with

@@ -1,5 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.USt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsMonoFamNontrivial
+import Development.AbelianVarietyTheory.Definitions.Divisors.SpecializesGenericImage
 
 noncomputable section
 

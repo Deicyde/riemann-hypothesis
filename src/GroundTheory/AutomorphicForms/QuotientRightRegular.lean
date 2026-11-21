@@ -1,5 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.QuotientMeasure
+import Mathlib.MeasureTheory.Function.ContinuousMapDense
+import Mathlib.MeasureTheory.Function.L2Space
+import Mathlib.Tactic.ENatToNat
 
 open MeasureTheory Topology Filter Set
 open scoped ENNReal

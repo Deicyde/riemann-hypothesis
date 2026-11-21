@@ -1,8 +1,8 @@
-import Mathlib
-import Formalism.LocalRingCardinality.Params
-import Formalism.GradedWeylDivisibility.StatementA
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.GradedWeylDivisibility.StatementB
 import Formalism.SatakeDualWeyl.StatementW
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 namespace Formalism.BasicNotions
 

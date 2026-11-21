@@ -1,6 +1,5 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.StabilizerCovolume.StMUcChartSemipos
-import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.StNbarLeviChart
+import BuildAid.Leniency.Open
+import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.ChartVel
 set_option maxSynthPendingDepth 1
 
 noncomputable section

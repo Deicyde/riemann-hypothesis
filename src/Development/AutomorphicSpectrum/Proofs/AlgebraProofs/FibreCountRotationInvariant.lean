@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.IsScaleStable
+import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.PTangentGaussInvariant
 set_option maxSynthPendingDepth 1
 
 open GroundTheory.Heights₂.Heights MeasureTheory MvPolynomial Matrix GlobalTheory.CompanionTheory.Ar.Short.Crofton
@@ -23,8 +24,8 @@ theorem measurePreserving_swapMat (m n : ℕ) :
           (Equiv.prodComm (Fin m) (Fin n))) ∘
           (MeasurableEquiv.curry (Fin m) (Fin n) ℂ).symm := by
     funext π j i
-    simp only [MeasurableEquiv.coe_curry_symm, MeasurableEquiv.curry, Function.comp]
-    simp only [MeasurableEquiv.coe_mk, Equiv.coe_fn_mk, Function.curry_apply,
+    simp only [MeasurableEquiv.curry, Function.comp]
+    simp only [MeasurableEquiv.coe_mk,
       MeasurableEquiv.coe_piCongrLeft]
     exact (Equiv.piCongrLeft_apply_apply (fun _ : Fin n × Fin m => ℂ)
       (Equiv.prodComm (Fin m) (Fin n)) (Function.uncurry π) (i, j)).symm

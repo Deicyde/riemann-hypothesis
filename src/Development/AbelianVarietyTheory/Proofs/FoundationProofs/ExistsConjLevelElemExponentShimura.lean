@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.EigenOfTwoStep
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.Klm
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.SpecialLinearGroupIntMapZmodSurjective
+import Development.AbelianVarietyTheory.Definitions.Foundations.Letter
+import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
 open scoped MatrixGroups TensorProduct
 open Matrix GlobalTheory.KZ
 
@@ -76,7 +76,7 @@ theorem _root_.GlobalTheory.exists_sl2_conj_diag_zmod (M i : ℕ) (hi : i.Coprim
   refine ⟨δ, ?_, ?_, ?_, ?_⟩ <;> simp only [_root_.GlobalTheory.KZ.en, he, hm_def]
   · simp
   · simp only [Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_zero, Matrix.cons_val_one,
-      Matrix.empty_val', Matrix.cons_val_fin_one, Matrix.head_cons]
+      Matrix.empty_val', Matrix.cons_val_fin_one]
     rw [← mul_assoc, ← hu, Units.mul_inv, one_mul]
   · simp
   · simp

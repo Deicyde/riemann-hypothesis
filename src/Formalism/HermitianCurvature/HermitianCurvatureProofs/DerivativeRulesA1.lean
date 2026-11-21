@@ -1,6 +1,5 @@
-import Formalism.HermitianCurvature.FiniteOrderIntersectionInSmooth
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.DilationUnipotentWeylMeasure
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BetaSesquilinearity
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.PhiBoundPartsOfRadicalParametrisation
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.MajorantEstimate
 

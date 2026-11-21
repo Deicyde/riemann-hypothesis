@@ -1,11 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TotalEqCurve
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdjacentPullPull
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GeometricallyConnectedOfIsIsoRestrict
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ChernOneEqNegDdcLogDet
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ChernDensDetWeightEqNegLeviLog
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DetBlockChangeOfBasisViaTwoFamiliesImplicit
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.ArakelovInstances.LminorMapConj
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.JacobianDensityUnipotentProductStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DetTriangularConjugateEqDiagonalRatioStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DdbarLogDetSubmatrixCurvatureStatement
@@ -354,7 +350,7 @@ theorem normal_coords : ∀ (ι : Type) [Fintype ι] (r : ι → ℕ) (d : ℕ) 
         rw [EuclideanSpace.single_apply, if_neg]
         simp
       rw [hconn, hbLv, h0, zero_smul, conn_zero_vec, Matrix.zero_mul, zero_add, hD, Matrix.mul_inv_rev]
-      simp [mul_apply, ite_and, Finset.sum_ite_eq', Finset.sum_ite_eq]
+      simp [mul_apply, ite_and, Finset.sum_ite_eq']
     have hdiff : ∀ a (a' : ι) (t : Low (r a')), a' ≠ a →
         conn (H' a) p (EuclideanSpace.single (e.symm (some ⟨a', t⟩)) 1) = 0 := by
       intro a a' t hne
@@ -487,7 +483,7 @@ theorem normal_coords : ∀ (ι : Type) [Fintype ι] (r : ι → ℕ) (d : ℕ) 
       ring
     · intro b _ hb
       refine Finset.sum_eq_zero fun s _ => ?_
-      simp [rootDiag, Sigma.mk.inj_iff, Ne.symm hb]
+      simp [rootDiag, Ne.symm hb]
     · simp
 
   ·
@@ -512,7 +508,7 @@ theorem normal_coords : ∀ (ι : Type) [Fintype ι] (r : ι → ℕ) (d : ℕ) 
       starRingEnd ℂ (conn (H' a) p (EuclideanSpace.single l 1) b c))]
     simp only [bcDiag, Option.elim, Complex.ofReal_zero, zero_mul, zero_add]
     rw [Finset.sum_eq_single a]
-    · simp [Complex.star_def]
+    · simp
     · intro b _ hb; simp [hb]
     · simp
 
@@ -525,7 +521,7 @@ theorem normal_coords : ∀ (ι : Type) [Fintype ι] (r : ι → ℕ) (d : ℕ) 
     · subst hj
       by_cases hl : e.symm none = l
       · subst hl; simp
-      · simp [hl, Ne.symm hl]
+      · simp [hl]
     · have hej : e j ≠ none := fun h => hj (by rw [← h, Equiv.symm_apply_apply])
       obtain ⟨y, hy⟩ := Option.ne_none_iff_exists'.1 hej
       by_cases hjl : j = l

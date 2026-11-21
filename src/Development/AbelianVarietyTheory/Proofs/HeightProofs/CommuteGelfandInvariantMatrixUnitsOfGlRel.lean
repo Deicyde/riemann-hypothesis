@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.IsLieDataCircle
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.PowEntryCommutator
 open GlobalTheory.SmoothForms NumberField Matrix

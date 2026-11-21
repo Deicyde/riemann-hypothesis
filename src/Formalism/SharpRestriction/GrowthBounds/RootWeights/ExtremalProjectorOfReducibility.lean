@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.RootWeights.FiltrationAdjointStable
+import Formalism.SharpRestriction.GrowthBounds.RootWeights.LoweringWordWeightOrNMinus
+import Formalism.SharpRestriction.GrowthBounds.RootWeights.MemWeightSpaceIffDiagonalEigen
 
 noncomputable section
 

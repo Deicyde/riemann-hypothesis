@@ -1,13 +1,13 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.SimilitudeFactorFormGroupBoundedOfTestSupport
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.MetricPeriods.MetricsProjectionFormulaNef
-import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.Proportional
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.MongeAmpereIntegralMultilinearExpansionStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.MongeAmpereIntegralCongrPotentialsStatement
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterBridge
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterRedF
-import ReciprocityTheory.AnalyticForms.PotentialTheory.ProjectiveLineFubiniStudyFacts
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.PHFlProdLinear
+import ReciprocityTheory.AnalyticForms.PotentialTheory.DegreeInt
+import ReciprocityTheory.AnalyticForms.PotentialTheory.Stokes
 open MvPolynomial MeasureTheory Filter Topology Matrix ReciprocityTheory.AnForm ReciprocityTheory.AnForm.M ReciprocityTheory.AnForm.P ReciprocityTheory.ChartRestriction.G.Geo GlobalTheory.CompanionTheory.Ar.PB GlobalTheory.CompanionTheory.Ar.Cmp
 
 noncomputable section
@@ -123,7 +123,7 @@ theorem sum_neg_mul_rootCoef [Fintype Ψ] (lam : Ψ × Fin N → ℝ) (p : Ψ ×
   have h3 : GlobalTheory.CompanionTheory.Ar.PB.gap lam (τ, l) =
       lam (τ, l) - if h : (l : ℕ) + 1 < N then lam (τ, ⟨(l : ℕ) + 1, h⟩) else 0 := by
     unfold GlobalTheory.CompanionTheory.Ar.PB.gap gapX
-    split_ifs with h <;> simp [h]
+    split_ifs with h <;> simp
   rw [h3, ← h1, ← h2, ← Finset.sum_sub_distrib]
   refine Finset.sum_congr rfl fun r _ => ?_
   simp only [rootCoef]

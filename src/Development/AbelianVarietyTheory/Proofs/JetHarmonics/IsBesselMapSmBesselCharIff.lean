@@ -1,6 +1,7 @@
-import Mathlib
-import Formalism.PeriodIntegrals.BesselMapUniq
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.IsWtOnIffOfTorus
+import Formalism.PeriodIntegrals.IsLowUnitH
 
 open Matrix
 

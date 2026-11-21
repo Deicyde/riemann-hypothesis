@@ -1,5 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.Statement
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 open scoped Matrix
 
 namespace GlobalTheory.MaxEvenLat
@@ -111,7 +116,7 @@ theorem exists_maximal_even_lattice : ∀ (A : Type) [CommRing A] [TopologicalSp
     have : v = ∑ i, (⟨(↑u⁻¹ : A) * v i, hv i⟩ : R) • Pi.single i ((2 * N₀ : ℕ) : A) := by
       funext j
       simp only [hsmulR, Finset.sum_apply, Pi.smul_apply, smul_eq_mul, Pi.single_apply, mul_ite,
-        mul_zero, Finset.sum_ite_eq, Finset.sum_ite_eq', Finset.mem_univ, if_true]
+        mul_zero, Finset.sum_ite_eq, Finset.mem_univ, if_true]
       rw [← hu, mul_comm _ (u : A), Units.mul_inv_cancel_left]
     rw [this]
     exact Submodule.sum_mem _ fun i _ => Submodule.smul_mem _ _ (Submodule.subset_span ⟨i, rfl⟩)
@@ -185,7 +190,7 @@ theorem exists_maximal_even_lattice : ∀ (A : Type) [CommRing A] [TopologicalSp
     · have hsing : Pi.single i ((2 * N₀ : ℕ) : A) ∈ L := hL0L (Submodule.subset_span ⟨i, rfl⟩)
       have := hLeven.1 _ hsing v hv
       have heq : (Pi.single i ((2 * N₀ : ℕ) : A) : Fin n → A) = ((2 * N₀ : ℕ) : A) • Pi.single i 1 := by
-        ext k; by_cases h : k = i <;> simp [Pi.single_apply, h]
+        ext k; by_cases h : k = i <;> simp [h]
       rw [heq, hform_smul_left, hσN, hform_single] at this
       simpa using this
     · simp only

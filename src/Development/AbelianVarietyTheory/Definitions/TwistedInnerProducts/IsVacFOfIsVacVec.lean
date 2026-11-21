@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.RaisingLoweringOperators
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.LoweredSignatureVanishing
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.SqNormIntegralFundamentalDomainEqL2NormSq
@@ -122,7 +123,7 @@ def posFr (D : D7) (n : ℕ) : Fr (posSp D n) where
   fr_gram τ := by
     rw [gramAt_posSp]
     ext a b
-    simp [Formalism.REAL.Jm, Matrix.diagonal_apply, Matrix.one_apply]
+    simp [Formalism.REAL.Jm, Matrix.one_apply]
 
 end GlobalTheory.ChainFr
 

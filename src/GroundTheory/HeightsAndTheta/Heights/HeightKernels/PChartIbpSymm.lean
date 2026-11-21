@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.StatementsChartIbpSymm
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.StatementsChartIbpSteps
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.ChartCutoffParts

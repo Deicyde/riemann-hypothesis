@@ -1,4 +1,6 @@
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Bridge
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SatakeDualWeyl.Statement
 
 noncomputable section
 
@@ -99,7 +101,7 @@ theorem int_conj_iff {K : Type} [CommRing K] {n : Type} [Fintype n] [DecidableEq
       rw [he]
       by_cases hc : c = b
       · subst hc; simp
-      · simp [Pi.single_apply, hc]
+      · simp [hc]
     have := H _ h0 a
     rw [hmat, he] at this
     simpa [Matrix.mulVec_single] using this

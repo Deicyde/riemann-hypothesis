@@ -1,6 +1,15 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.FrobeniusOrbits.HostThickExists
-import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.Galois
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.NumberTheory.Cyclotomic.Gal
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open NumberField IntermediateField Polynomial
 
@@ -134,7 +143,7 @@ theorem splits_sq {K : Type*} [Field K] [Algebra ℚ K] (c : ℕ) (g : K) (hg : 
   have hC : (C g : K[X]) ^ 2 = -(c : K[X]) := by
     rw [← C_pow, hg, C_neg, map_natCast]
   have hm : (X ^ 2 + C (c : ℚ) : ℚ[X]).map (algebraMap ℚ K) = (X - C g) * (X - C (-g)) := by
-    simp only [Polynomial.map_add, Polynomial.map_pow, Polynomial.map_X, Polynomial.map_C,
+    simp only [Polynomial.map_add, Polynomial.map_pow, Polynomial.map_X,
       map_natCast, C_neg, Polynomial.map_natCast]
     linear_combination hC
   rw [hm]

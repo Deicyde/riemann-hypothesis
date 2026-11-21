@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.GLnLattice
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.MulLeftCancelOfDetNeZero
+import Mathlib.Data.Fin.Tuple.Sort
+import Mathlib.GroupTheory.DoubleCoset
+import Mathlib.RingTheory.TotallySplit
 
 noncomputable section
 

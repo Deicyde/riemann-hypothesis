@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.GaussJetBounds.FrameJetEval
 import Formalism.GaussJetBounds.GaussJetProofs.ConstantCoeffAevalLinP
 

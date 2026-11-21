@@ -1,4 +1,10 @@
-import Development.WeilBound.RepresentationTheoryGL.CasimirAlgebra.TensorRelationsGL.LiftCommEAt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.RepresentationTheoryGL.CasimirAlgebra.TensorRelationsGL.KTypeData
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 
@@ -108,7 +114,7 @@ theorem entry_mem (hK : IsKD bar κ) {H : Set ι} (hH : ∀ τ, τ ∈ H ↔ bar
       rw [Finset.prod_eq_single (bar τ)]
       · simp
       · intro b _ hb
-        simp [Pi.single_apply, hb]
+        simp [hb]
       · intro h
         exact absurd (Finset.mem_univ _) h
     have hadj : (fun k => (κ (bar τ) k).adjugate j i) ∈ monoAlg hK H := by
@@ -133,7 +139,7 @@ theorem entry_mem (hK : IsKD bar κ) {H : Set ι} (hH : ∀ τ, τ ∈ H ↔ bar
       have e2 : star (κ (bar τ) k i j) = ((κ (bar τ) k)ᴴ) j i := by
         simp [Matrix.conjTranspose_apply]
       rw [Pi.mul_apply, e1, e2, ← hinvM]
-      simp [Matrix.inv_def, Ring.inverse_eq_inv', _root_.zpow_neg_one]
+      simp [Matrix.inv_def, Ring.inverse_eq_inv']
     rw [hkey]
     exact Subalgebra.mul_mem _ (hinv (-1)) hadj
 

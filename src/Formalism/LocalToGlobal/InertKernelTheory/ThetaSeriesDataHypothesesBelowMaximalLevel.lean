@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.InertKernelTheory.StatementAdmAt
 import Formalism.LocalToGlobal.InertKernelTheory.TranslatesOfInertKernelAtPlace
 

@@ -1,4 +1,6 @@
-import Formalism.LocalToGlobal.CharacterGerms.RowTieDesc
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.ProjectiveLattices.PlaceBelow
 
 set_option autoImplicit false
 

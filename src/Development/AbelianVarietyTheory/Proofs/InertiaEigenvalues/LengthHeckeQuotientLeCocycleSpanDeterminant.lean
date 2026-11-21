@@ -1,9 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.GlobalCore
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CMemCoeffSub
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.DeterminantLemmaDiscreteValuationRingQuotientLenStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CutValueMemHeckeValueIdealOffSupportStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ResidualSelmer
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
 
 open Formalism Formalism.MainNotions Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.MainNotions.N Formalism.WeaklyAdmissibleFiltrations NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Module GlobalTheory.Pass GlobalTheory.Cut
 
@@ -231,7 +232,7 @@ theorem exists_homs (hinj : Function.Injective (algebraMap O K)) {X ι ρ τ : T
         algebraMap O K c • (1 : Matrix κ κ K) := by
       intro κ _ _
       ext i j
-      by_cases hij : i = j <;> simp [Matrix.algebraMap_matrix_apply, Matrix.one_apply, hij]
+      by_cases hij : i = j <;> simp [Matrix.algebraMap_matrix_apply, hij]
     rw [← h _ (A.algebraMap_mem c), Pi.algebraMap_apply, h1, h1, Matrix.mul_smul, Matrix.mul_one,
       Matrix.smul_mul, hPQ, ← Matrix.fromBlocks_one, Matrix.fromBlocks_smul, Matrix.smul_one_eq_diagonal,
       Matrix.smul_one_eq_diagonal]

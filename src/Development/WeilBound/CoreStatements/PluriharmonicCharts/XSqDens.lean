@@ -1,9 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.MetricPeriods.Pull1
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.TsgPolyVolPolyCoeffEven
-import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsFibreLocal
-import Development.AutomorphicSpectrum.Statements.MetricStatements.AgreementIffGuarded
 import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.CovLog
+import Mathlib.Analysis.Matrix.PosDef
+import Mathlib.Topology.Sheaves.Presheaf
 open MvPolynomial MeasureTheory Filter Topology ReciprocityTheory.AnForm ReciprocityTheory.AnForm.M ReciprocityTheory.AnForm.P ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.AI ReciprocityTheory.ChartRestriction.G.AI.I1 ReciprocityTheory.ChartRestriction.G.AI.I2 ReciprocityTheory.ChartRestriction.G.AI.I4 GlobalTheory.CompanionTheory.Ar.PB GroundTheory.Heights₂.Heights GroundTheory.Heights₂.Heights.LowerBoundFree
 
 namespace PositivityTheory.Xgp.sq_dens
@@ -365,7 +365,7 @@ theorem part2 (c : σ → ℝ) (hc : c a₀ = 0) (n k : ℕ) (hk : 1 ≤ k) (i :
     · simp only [h0, ↓reduceIte, Pi.sub_apply, sub_mul, Finset.sum_sub_distrib]
       exact (K0 Q n hz).sub (K1 Q n hz)
     · by_cases h1 : (r : ℕ) = 1
-      · simp only [h0, h1, ↓reduceIte]
+      · simp only [h1, ↓reduceIte]
         exact K1 Q n hz
       · by_cases h2 : (r : ℕ) < 2 + 2 * i
         · simp only [h0, h1, h2, ↓reduceIte]
@@ -386,7 +386,7 @@ theorem part2 (c : σ → ℝ) (hc : c a₀ = 0) (n k : ℕ) (hk : 1 ≤ k) (i :
     · simp only [h0, ↓reduceIte]
       exact hx0.sub hx1
     · by_cases h1 : (r : ℕ) = 1
-      · simp only [h0, h1, ↓reduceIte]
+      · simp only [h1, ↓reduceIte]
         exact hx1
       · by_cases h2 : (r : ℕ) < 2 + 2 * i
         · simp only [h0, h1, h2, ↓reduceIte]

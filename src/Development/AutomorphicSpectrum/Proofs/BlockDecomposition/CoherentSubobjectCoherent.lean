@@ -1,4 +1,5 @@
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PowSubSuccLe
+import BuildAid.Leniency.Open
+import GroundTheory.ArithmeticGeometry.SchemeCohomology.ProperCohomology.CokernelCoherent
 open CategoryTheory CategoryTheory.Limits AlgebraicGeometry GroundTheory.Arith.SchemeCoh GlobalTheory.CompanionTheory.GE
 
 set_option autoImplicit false

@@ -1,5 +1,8 @@
-import Formalism.LatticeSlopes.Statement
+import BuildAid.Leniency.Open
 import Formalism.LatticeSlopes.LatticeSlopesProofs.CovolEqGram
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open Module Submodule MeasureTheory
 

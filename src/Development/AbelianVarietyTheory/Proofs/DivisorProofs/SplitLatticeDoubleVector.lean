@@ -1,9 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFinMapsOfForall
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AntiCols
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
-import Formalism.SharpRestriction.Divisibility.SchurIrreducible
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsDiagOneNegOneConjAntidiagonalStabilizerMem
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsDiagMemDoubledVacuumLatticeStabilizer
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.KFinLoc
@@ -38,7 +34,7 @@ theorem swapM_unitary {a b : A} (ha : a * a = a) (hb : b * b = b) (hab : a * b =
       fromBlocks J 0 0 (-J) := by
   rw [swapM, fromBlocks_transpose, fromBlocks_multiply, fromBlocks_multiply]
   simp only [transpose_smul, transpose_one, Matrix.smul_mul, Matrix.mul_smul, Matrix.one_mul, Matrix.mul_one, smul_smul,
-    Matrix.mul_zero, add_zero, zero_add, smul_zero]
+    Matrix.mul_zero, add_zero, zero_add]
   congr 1
   · linear_combination (norm := module) (-hab) • J
   · linear_combination (norm := module) (2 * hab + 2 * ha) • J
@@ -51,7 +47,7 @@ theorem swapM_conj_cols {a b : A} (ha : a * a = a) (hb : b * b = b) (hab : a * b
       fromRows (1 : Matrix (Fin d) (Fin d) A) 1 ⬝ₘ (1 + a • (K - 1)) := by
   rw [swapM, fromBlocks_multiply, fromBlocks_multiply, fromBlocks_mul_fromRows, fromRows_mul]
   simp only [Matrix.smul_mul, Matrix.mul_smul, Matrix.one_mul, Matrix.mul_one, smul_smul,
-    Matrix.mul_zero, add_zero, zero_add, smul_zero]
+    Matrix.mul_zero, add_zero, zero_add]
   congr 1
   · linear_combination (norm := module) hK + (hab + 2 * hb) • (1 : Matrix (Fin d) (Fin d) A)
   · linear_combination (norm := module) (-hab) • K + (6 * hab + 2 * ha + 4 * hb) • (1 : Matrix (Fin d) (Fin d) A)
@@ -80,7 +76,7 @@ theorem smul_swapM_sub_one {a b u : A} (hua : u * a = 0) (hub : u * b = 0) : u �
 
 theorem swapM_map {a b : A} (c : A →+* A) (hca : c a = b) (hcb : c b = a) :
     (swapM d a b).map c = fromBlocks 1 ((-a) • 1) (b • 1) ((1 - 2 * (a + b)) • 1) := by
-  ext (i | i) (j | j) <;> simp [swapM, Matrix.one_apply, hca, hcb] <;> split_ifs <;>
+  ext (i | i) (j | j) <;> simp [swapM, Matrix.one_apply] <;> split_ifs <;>
     simp [hca, hcb, map_ofNat, add_comm]
 
 end Alg

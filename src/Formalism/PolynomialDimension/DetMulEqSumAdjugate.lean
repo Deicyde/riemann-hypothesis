@@ -1,6 +1,12 @@
 import Formalism.PolynomialDimension.MultinomialDepth.ExistsNonzeroExchangedMinorHolds
 import Formalism.PolynomialDimension.MultinomialDepth.FrobeniusDetVanishingHolds
 import Formalism.PolynomialDimension.MultinomialDepth.FockGaussComparisonHolds
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Data.Int.Star
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.Topology.Sheaves.Presheaf
 
 namespace Formalism.CountingSumsFrames.Top
 
@@ -209,7 +215,7 @@ theorem keyVanish : Formalism.CountingSumsFrames.KeyVanish := by
     simp only [Matrix.mul_diagonal, Matrix.vecMul, dotProduct, T', P, G, Matrix.of_apply]
     refine Finset.sum_congr rfl fun i _ => ?_
     by_cases hi : i.val < r
-    · simp [hi, Matrix.diagonal_apply]
+    · simp [hi]
     · have h0 : t l i = 0 := ht l i (by omega)
       simp [hi, h0, zero_pow (hpne _)]
   · intro a t v ha ht hv

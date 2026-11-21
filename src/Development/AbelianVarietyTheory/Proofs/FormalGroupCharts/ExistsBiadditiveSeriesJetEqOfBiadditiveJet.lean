@@ -1,10 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.TwoChartAtlas.AdditionLawSecondIdentity
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FormalGroupCharts.ExistsFormalBiextMap
 import Development.AbelianVarietyTheory.Proofs.FormalGroupCharts.FormalCompApplyEqMvPowerSeriesSubst
 import Development.AbelianVarietyTheory.Proofs.FormalGroupCharts.PderivSecondEvFirstPointEqZero
 import Development.AbelianVarietyTheory.Proofs.FormalGroupCharts.JetEqBilinearSeriesOfBiadditiveStatement
-import Development.AbelianVarietyTheory.Proofs.FormalGroupCharts.MvPowerSeriesJetEqCalculus
 import Development.AbelianVarietyTheory.Proofs.FormalGroupCharts.FormalGroupLogEndomorphismLinear
 
 set_option autoImplicit false
@@ -147,10 +146,10 @@ theorem coeff_bilSer (β : Matrix (Fin d) (Fin d) k) (i j : Fin d) :
     refine ⟨fun h => ⟨?_, ?_⟩, by rintro ⟨rfl, rfl⟩; rfl⟩
     · have := DFunLike.congr_fun h (0, i)
       by_contra hne
-      simp [Finsupp.single_apply, Ne.symm hne] at this
+      simp [Ne.symm hne] at this
     · have := DFunLike.congr_fun h (1, j)
       by_contra hne
-      simp [Finsupp.single_apply, Ne.symm hne] at this
+      simp [Ne.symm hne] at this
   simp only [bilSer, pt, map_sum, coeff_C_mul, X_def, monomial_mul_monomial, coeff_monomial, key]
   rw [Finset.sum_eq_single i, Finset.sum_eq_single j]
   · simp

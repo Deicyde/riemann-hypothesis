@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsQuasiFinitePolynomialMapStatement
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.RingTheory.PicardGroup
 
 open IsLocalRing
 

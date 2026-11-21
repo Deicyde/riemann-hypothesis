@@ -1,6 +1,7 @@
-import Mathlib
-import Formalism.PeriodIntegrals.VolFromSW
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdelicLocalCompactness.T2SpaceTensorProductFiniteExtension
+import Mathlib.RingTheory.PiTensorProduct
 
 noncomputable section
 

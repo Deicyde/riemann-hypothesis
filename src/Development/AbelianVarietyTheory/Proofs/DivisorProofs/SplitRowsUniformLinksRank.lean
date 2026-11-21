@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.SingleIndexPlacesAreTwisted
-import Formalism.LocalToGlobal.IndefiniteReal.PrimitivePackageFullHecke
-import Formalism.LocalToGlobal.IndefiniteReal.PackageFromPrimitiveStatements
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CharacterUpdateOfWeakRealisation
+import Formalism.LocalToGlobal.IndefiniteReal.PrimitiveStatementsBaseLevel
 
 set_option autoImplicit false
 

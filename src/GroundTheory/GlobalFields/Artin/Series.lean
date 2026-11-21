@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.Artin.MemInvariantsCompSubtypeIff
-import GroundTheory.GlobalFields.TateThesis.HeckeLFunction
 import GroundTheory.GlobalFields.TateThesis.NonvanishingPrimes
 set_option maxSynthPendingDepth 1
 

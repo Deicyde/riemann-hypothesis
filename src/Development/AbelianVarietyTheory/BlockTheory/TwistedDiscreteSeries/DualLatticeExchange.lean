@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.MatrixMeasurableSpace
-import Development.AbelianVarietyTheory.Definitions.Foundations.SimpleSum
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.HasConductorMulShift
+import Mathlib.Analysis.CStarAlgebra.Classes
 
 open MeasureTheory ValuativeRel Matrix IsLocalRing
 open scoped Pointwise
@@ -106,7 +107,7 @@ example (c p : ℕ) (u x : n → k) :
     (rowE c p u).val *ᵥ inX k n c x = inX k n c x + (u ⬝ᵥ x) • avec k n c p := by
   ext (i | i)
   · simp [rowE, lowU, inX, avec, fromBlocks_mulVec]
-  · by_cases h : i.val + 1 = p <;> simp [rowE, lowU, inX, avec, fromBlocks_mulVec, mulVec, dotProduct, h]
+  · by_cases h : i.val + 1 = p <;> simp [rowE, lowU, inX, avec, mulVec, dotProduct, h]
 
 example : dualLat (stdLat k n) = stdLat k n := by
   ext u

@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.FiniteBruhat
 import GroundTheory.AutomorphicForms.Iwasawa
+import Mathlib.LinearAlgebra.Matrix.Rank
+import Mathlib.RingTheory.PiTensorProduct
 
 namespace GroundTheory.Automorphic
 

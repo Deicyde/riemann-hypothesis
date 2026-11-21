@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.NormSqLeShifted
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutFinal
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.cut_PtwCut
 
 namespace Formalism.FourierDecayAlt.P.CutBPEq
 

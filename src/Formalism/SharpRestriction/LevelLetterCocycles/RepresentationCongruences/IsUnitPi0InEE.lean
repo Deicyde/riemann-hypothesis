@@ -1,7 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.Pi0MemADelta
-import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.ImportsBis
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.SaturationFractionModule
-import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.GammaPi0EqPi0MulUnit
+import Mathlib.Order.Interval.Finset.Box
 
 noncomputable section
 
@@ -63,8 +64,8 @@ theorem inFr_div {a : ZMod n} {num den : LetA O n} {y : W.EE}
 theorem dv_eq_sum (T : LocLat G Qp LL O) (e : ℕ) {d : ℕ} (b : Fin d → W.DD T) (c₀ : Fin d → LL) :
     dv W T e b c₀ = ∑ k, c₀ k • dv W T e b (Pi.single k 1) := by
   unfold dv
-  simp only [Finset.smul_sum, Pi.single_apply, ite_smul, one_smul, zero_smul, smul_ite, smul_zero,
-    Finset.sum_ite_eq', Finset.sum_ite_eq, Finset.mem_univ, if_true]
+  simp only [Pi.single_apply, ite_smul, one_smul, zero_smul,
+    Finset.sum_ite_eq', Finset.mem_univ, if_true]
 
 theorem lam_mem_Ps (A : ArcP n) (a : ZMod n) (e : ℕ) : abelian₂ W A a e ∈ Ps W := by
   unfold abelian₂ Ps

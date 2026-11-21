@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.BesselHermitianTheta.MinfDensity
+import Mathlib.Algebra.Lie.BaseChange
 
 noncomputable section
 

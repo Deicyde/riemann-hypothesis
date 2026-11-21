@@ -1,5 +1,6 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.SelmerTransport.RestrictionMemInvariantH1
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.SelmerTransport.LenCokerLe
+import ReciprocityTheory.GaloisValuations.SeparatedDvrSecondCohomologyMem
 
 open ReciprocityTheory.Gal UpperTheory.V.Base
 

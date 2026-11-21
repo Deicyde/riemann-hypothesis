@@ -1,5 +1,6 @@
-import Development.WeilBound.CoreStatements.SatakeConjugation.SatFlipLoc
-import Formalism.LocalToGlobal.PlaceMapInjectivity.MapPlInjective
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.CoreStatements.SatakeConjugation.CsdIff
 
 noncomputable section
 

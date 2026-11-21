@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.DivisibilityProofs.FiniteNonunitMatrix
+import Mathlib.Analysis.CStarAlgebra.CStarMatrix
 
 open Matrix
 

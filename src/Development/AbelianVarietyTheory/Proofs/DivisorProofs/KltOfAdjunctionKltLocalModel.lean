@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GeometricallyConnectedOfIsIsoRestrict
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsLogMult
-import Development.AbelianVarietyTheory.Definitions.Divisors.AdjKltOfLtDisc
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsProjectiveVarietyOfIsLocalRingOfVarietyPoiStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RingEquivTransportsVarietyPairDataStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsDvrPlaceEquivOfRingEquivOverConstantsStatement
@@ -74,7 +72,7 @@ theorem klt_of_adjKlt_locModel : GlobalTheory.Published.Principalisation → ∀
   obtain ⟨Φ, hΦ⟩ := GlobalTheory.T.exists_dvrPlace_equiv_of_ringEquiv_over_constants c (Cartier.constFn p) e.symm hc'
   obtain ⟨hx', -, -, -⟩ := GlobalTheory.T.ringEquiv_transports_varietyPair_data c (Cartier.constFn p) e.symm hc' n x T φ hx
   have hψ0 : (φ + Finsupp.single f 1 : L →₀ ℚ) 0 = 0 := by
-    simp [hEff.apply_zero, Finsupp.single_apply, hf0]
+    simp [hEff.apply_zero, hf0]
   obtain ⟨m, g, hm, hg⟩ := GlobalTheory.T.exists_ordQ_eq_ord_div_of_rational_combination (Cartier.constFn p)
     (Finsupp.mapDomain e.symm (φ + Finsupp.single f 1)) (by
       rw [← map_zero e.symm, Finsupp.mapDomain_apply e.symm.injective]

@@ -1,5 +1,4 @@
-import Mathlib
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.LocallyConstantMajorants.SmoothMajorants.Bounds
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SecondIntegrandOfBound
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SecondFubini
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MatrixMulApply
@@ -672,7 +671,7 @@ theorem main : Ad3.K.LC.B.IbpBound → Ad3.K.LC.B.MajScaled → Ad3.K.LC.HasDer 
   refine ⟨_, hD, fun m => ?_⟩
   have hinv : (((g⁻¹ : GL (Fin 3) ℂ) : Matrix (Fin 3) (Fin 3) ℂ)) = (Matrix.of M)⁻¹ := by
     rw [Matrix.coe_units_inv]; rfl
-  simp only [hinv, ← ell_apply, ← ellc_apply]
+  simp only [hinv, ← ell_apply]
   have := alg (fun i j => ell M i j m) (fun i j => ellc M i j m) (fun i j => ∫ p, G k (PH i j Ψ) M p)
     (fun i j => ∫ p, G k (PA i j Ψ) M p) (∫ p, G k Ψ M p) ((‖(Matrix.of M).det‖ ^ 2 : ℝ) : ℂ)
   simp only [← hg, hsec M hM]

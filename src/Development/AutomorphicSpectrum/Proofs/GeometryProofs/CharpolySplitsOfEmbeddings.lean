@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsSubMemEigW
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.NatCardAlgHomEqFinrankOfIsReducedOfIsFractionRin
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.LinearAlgebra.Charpoly.ToMatrix
 
 open Polynomial NumberField
 

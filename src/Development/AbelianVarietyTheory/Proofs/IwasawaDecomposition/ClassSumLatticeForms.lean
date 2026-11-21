@@ -1,6 +1,4 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.FWTie
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FibExtMarked
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LevelCharacterEigenvectorStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OscillatorModelValuesFourth
 

@@ -1,5 +1,15 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.AlternatingMapSumSmulEqDetSmul
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.OrderOfVanishing.Noetherian
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.Smooth.Field
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace GlobalTheory
 
@@ -455,7 +465,7 @@ theorem exists_basis_kaehler_of_algebraicIndependent {K F ι : Type*} [Field K] 
     ((mvPolynomialBasis K ι).baseChange A).map (tensorKaehlerEquivOfFormallyEtale K P A)
   refine ⟨(b₁.baseChange F).map (tensorKaehlerEquivOfFormallyEtale K A F), fun i => ?_⟩
   simp only [b₁, Basis.map_apply, Basis.baseChange_apply, tensorKaehlerEquivOfFormallyEtale_apply,
-    mapBaseChange_tmul, one_smul, mvPolynomialBasis_apply, map_D]
+    mapBaseChange_tmul, one_smul, mvPolynomialBasis_apply]
   have h : algebraMap A F (algebraMap P A (MvPolynomial.X i)) = v i := by
     change algebraMap A F (hv.aevalEquiv (MvPolynomial.X i)) = v i
     rw [hv.algebraMap_aevalEquiv, MvPolynomial.aeval_X]

@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.CuspidalDescent.GLDenseRanges.MuRange
+import Mathlib.RingTheory.SimpleRing.Principal
 
 open UpperTheory.V.Alg UpperTheory.V.J UpperTheory.V.Z.Desc.V0
 

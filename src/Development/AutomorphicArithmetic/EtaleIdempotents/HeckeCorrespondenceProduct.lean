@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.VecZero
-import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.SplitOnOfDisj
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.ExistsKill
 
 set_option synthInstance.maxHeartbeats 200000

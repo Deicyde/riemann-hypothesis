@@ -1,6 +1,9 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.NearSplit
-import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.EntryMem
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.SgnMulSelf
+import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.DecompSigmaOrd
+import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.RedIdeal
 
 noncomputable section
 
@@ -194,7 +197,7 @@ example {R : Type} [CommRing R] : Matrix.single 1 2 (1 : R) ∈ uM R := by
   · fin_cases i <;> fin_cases j <;> simp_all [lamW]
   · show adj _ = -_
     ext i j
-    fin_cases i <;> fin_cases j <;> simp [adj_apply, sgn, Fin.rev, Matrix.single_apply]
+    fin_cases i <;> fin_cases j <;> simp [adj_apply, sgn, Fin.rev]
 
 end UpperTheory.V.Ws.Bl
 

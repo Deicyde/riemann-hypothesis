@@ -1,8 +1,4 @@
-import Mathlib
-import Formalism.LocalRingCardinality.AdicCompletionLocal.LocTied
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.ConvZero
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.NormCoeAlgebraMap
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.MemFilPIffEvPt
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.OneAddXMulDerivativeBinomial
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.TeichPow
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SpanRangeMap

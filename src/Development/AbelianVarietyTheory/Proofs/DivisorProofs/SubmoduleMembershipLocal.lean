@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.FaithfulSMulAlgClosure
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemRingOver
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PiMapMemLocalSpan
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.PrismaticDieudonnePerfdIff
+import Development.AbelianVarietyTheory.Definitions.QuasicoherentCohomology.BijectiveSmulChartSec
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open CategoryTheory Limits AlgebraicGeometry IsLocalRing TensorProduct
 open GlobalTheory GlobalTheory.QCoh GlobalTheory.Vert GlobalTheory.MixedLocalChains GlobalTheory.PerfdLat GlobalTheory.Published GlobalTheory.GroupBplus GlobalTheory.BplusDescent GlobalTheory.LatGlue
 open ReciprocityTheory.ChartRestriction.G.Geo.Tor (resG)
@@ -94,7 +94,7 @@ theorem mem_of_locally_mem_span_res :
     rw [← hW.self_le_iSup_basicOpen_iff]
     intro y hy
     obtain ⟨r, hyr, hr⟩ := H' y hy
-    simp only [TopologicalSpace.Opens.mem_iSup, SetLike.mem_coe]
+    simp only [TopologicalSpace.Opens.mem_iSup]
     exact ⟨⟨r, hr⟩, hyr⟩
   exact Submodule.mem_of_span_eq_top_of_smul_pow_mem T s hs v fun r => r.2
 

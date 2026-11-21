@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolynomialEvalBoundOnCircleFamily
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Analysis.Polynomial.CauchyBound
+import Mathlib.Topology.Algebra.MvPolynomial
 
 namespace GlobalTheory
 

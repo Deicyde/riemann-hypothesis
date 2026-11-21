@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.SemistableReduction.ApproxGraphC
 
 namespace ReciprocityTheory.MultiplicativeHeights

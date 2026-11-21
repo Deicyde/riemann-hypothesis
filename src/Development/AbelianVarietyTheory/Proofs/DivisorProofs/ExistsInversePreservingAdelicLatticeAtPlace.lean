@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFinMapsOfForall
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FromBlocksMem
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InertPlaceLocalFieldDataExists
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.KFinLoc
 open scoped TensorProduct Matrix
@@ -274,7 +273,7 @@ theorem mulVec_surj {d : ℕ} {W : Spc F E d} (hL : W.L.IsLattice E) (v : Pl F)
         rw [Pi.smul_apply, oneT_apply, smul_eq_mul, Algebra.TensorProduct.tmul_mul_tmul, mul_one, one_mul]
         by_cases hj : j = i
         · subst hj; simp
-        · simp [Pi.single_apply, hj]
+        · simp [hj]
       rw [he]
       exact T.smul_mem _ (hT _)
   intro w
@@ -342,7 +341,7 @@ theorem exists_inv_keeps_latAt : ∀ (F E : Type) [Field F] [NumberField F] [Fie
       ext i j
       by_cases hij : i = j
       · subst hij; simp
-      · simp [Matrix.one_apply, hij]
+      · simp [hij]
     · rw [← hs, ← Matrix.smul_mul, hsM, Matrix.smul_mul, Matrix.one_mul]
       simp only [M', smul_add, smul_smul]
       have h0 : (s * c) • Nv.map (liftT E v) = 0 := by

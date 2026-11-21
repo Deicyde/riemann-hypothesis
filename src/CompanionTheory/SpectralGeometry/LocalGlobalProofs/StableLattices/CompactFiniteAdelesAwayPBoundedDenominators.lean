@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import CompanionTheory.HarishChandraModules.LowKTypeMultiplicity.EigenspaceCyclicDensity.LowKMultOneP
-import Formalism.RealPlaceAnalysis.ThirdArithmeticHolds
 
 open Matrix Finset
 open scoped InnerProductSpace

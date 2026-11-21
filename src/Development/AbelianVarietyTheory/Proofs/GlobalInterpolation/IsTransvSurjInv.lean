@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.KernelLattices.ThDistC
-import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.IndexExponentDegree
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.EmbHInjective
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IntegralDensEqZero
 

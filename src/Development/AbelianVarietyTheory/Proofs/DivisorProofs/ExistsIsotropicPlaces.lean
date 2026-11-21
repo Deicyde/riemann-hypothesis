@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.NotIsCompactUnivFv
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.AdelicUnitaryGroups.Anisotropic
 import GroundTheory.GlobalFields.IdeleGroups.UnitBound
 import Formalism.LocalRingCardinality.SpanPowerMembership.LocAtA

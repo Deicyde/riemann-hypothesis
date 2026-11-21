@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IndApplyOne
+import Mathlib.Analysis.Fourier.FiniteAbelian.PontryaginDuality
 open GlobalTheory.BI GlobalTheory.BrauerZero
 
 namespace GlobalTheory.BrauerZero

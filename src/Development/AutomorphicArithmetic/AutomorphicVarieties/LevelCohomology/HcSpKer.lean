@@ -1,6 +1,6 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.LevelCohomology.HcDefs
-import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.ResidueCharMemLevelPrimes
-import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.LocalRingsCompletion.dvrFinite
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.DecompSigmaOrd
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal IsLocalRing Module UpperTheory.V UpperTheory.V.Base UpperTheory.V.HV UpperTheory.V.GradeZeroInterpolatingElement UpperTheory.V.X
 
@@ -45,7 +45,7 @@ theorem UpperTheory.V.X.spKer :
       by_cases h : i = j
       · subst h
         simp [Raw.rbar, Raw.r0, mapRep, diagRep]
-      · simp [Raw.rbar, Raw.r0, mapRep, diagRep, Matrix.diagonal_apply, h]
+      · simp [Raw.rbar, Raw.r0, mapRep, diagRep, h]
     rw [e, ← Matrix.diagonal_one, Matrix.diagonal_eq_diagonal_iff]
   let φ : G ℚ Ω →* (Fin 4 → (ResidueField c.O)ˣ) :=
     Pi.monoidHom fun i => (Units.map (residue c.O : c.O →* ResidueField c.O)).comp (D.ps i)

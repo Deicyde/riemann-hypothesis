@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.DifferentiableAtOfPuncturedSmooth
-import Formalism.HermitianCurvature.RealInputsClosedAdmissibleSettings
 
 open Matrix MeasureTheory
 open scoped ComplexConjugate

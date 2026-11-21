@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsAdelicOne
-import Formalism.LocalToGlobal.CMDeterminantIdeals.StatementG
-import Formalism.PolynomialDimension.WeylDim
 
 open NumberField IsDedekindDomain Module Formalism.BasicNotions Formalism.L2.Pj GlobalTheory.DualWeyl GlobalTheory.AllWt GlobalTheory.FlatLine GlobalTheory.DefPt MvPolynomial
 open scoped Matrix
@@ -64,7 +63,7 @@ theorem isLattice_locLat (K : Type) [Field K] [NumberField K] (ι : Type) [Finty
     have hm : (d : K) • (Pi.basisFun K ι j) ∈ locLat A := fun w i => by
       rw [Matrix.mulVec_smul, ← Matrix.smul_mulVec]
       refine mulVec_le w (hd w) (fun k => ?_) i
-      by_cases hk : k = j <;> simp [Pi.single_apply, hk]
+      by_cases hk : k = j <;> simp [hk]
     have := Submodule.smul_mem (Submodule.span K (locLat A : Set (ι → K))) (d : K)⁻¹ (Submodule.subset_span hm)
     rwa [inv_smul_smul₀ hdK] at this
 

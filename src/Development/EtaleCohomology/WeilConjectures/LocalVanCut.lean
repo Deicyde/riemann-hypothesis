@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.WeilConjectures.GysinSeqCut
+import Mathlib.AlgebraicGeometry.Morphisms.SchemeTheoreticallyDominant
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry GlobalTheory.EtC GlobalTheory.Et

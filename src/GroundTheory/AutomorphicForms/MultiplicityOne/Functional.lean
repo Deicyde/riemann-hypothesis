@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.MultiplicityOne.Equivariance
+import GroundTheory.AutomorphicForms.MultiplicityOne.NormOne
 
 open MeasureTheory Set Filter Topology Function
 open NumberField IsDedekindDomain

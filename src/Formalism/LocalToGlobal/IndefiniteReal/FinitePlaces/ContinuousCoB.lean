@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.LinIndepOneDelta
+import Formalism.LocalToGlobal.IndefiniteReal.InjectiveDecompositionAction
 
 noncomputable section
 

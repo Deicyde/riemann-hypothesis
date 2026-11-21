@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.StdChar
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.LocVol
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdelicClassFiniteness.DictRing
+import Formalism.LocalToGlobal.SiegelLatticeTheory.FundamentalEquivalence.FundamentalContinuity.AdelicIsomorphismStatement
 
 noncomputable section
 
@@ -68,7 +70,7 @@ theorem eq_psiStd (ψ : AddChar (AF F) ℂ) (h1 : IsCharAF F ψ) (h2 : Formalism
       first
         | exact InfinitePlace.Completion.extensionEmbedding_coe w a
         | exact InfinitePlace.Completion.extensionEmbedding_coe a
-        | simp [InfiniteAdeleRing]
+        | simp
     simp only [psiA, hw]
     first
       | rfl

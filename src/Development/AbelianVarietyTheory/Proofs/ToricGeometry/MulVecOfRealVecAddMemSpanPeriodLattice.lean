@@ -1,7 +1,8 @@
-import Mathlib
-import ReciprocityTheory.ThetaQuasiPeriods.ThetaQuasiPeriodStatement
-import ReciprocityTheory.ThetaQuasiPeriods.Transl
-import ReciprocityTheory.ThetaQuasiPeriods.Change
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Tactic.Polynomial.Basic
+import ReciprocityTheory.ThetaQuasiPeriods.PeriodLattice
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 

@@ -1,4 +1,6 @@
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.IsOrthFull
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.HeightsAndTheta.Heights.HeightsOfSets.LinearIndependentSumElimOfExact
 
 open GroundTheory.Heights₂.Heights NumberField TensorProduct ComplexAt GlobalTheory.CompanionTheory.Ar Matrix
 open scoped BigOperators ComplexOrder

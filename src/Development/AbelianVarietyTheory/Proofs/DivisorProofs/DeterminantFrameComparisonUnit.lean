@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IotaScalarOne
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrobeniusOfPadic
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SandwichDatumScalarActionStatement
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsMatrixOfIntertwinerStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrameMatrixCompositionUniqueStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFrobeniusTwistedFrameStatement

@@ -1,12 +1,10 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.ExistsGlRep
 import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.AdmissiblePi
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.CrystallineTowers.NegVan
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.CrystallineTowers.GoodOf
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.AnnihilatorModels.BrauerTraceSplitting.HeckeCl
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.AnnihilatorModels.BrauerTraceSplitting.AnnModel
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.KunnethLefschetz.EtSideGoodHolds
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.CrystallineTowers.LocTowerHolds
-import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.EtaleDualityTraceIsomorphism
 
 noncomputable section
 
@@ -146,7 +144,7 @@ private theorem e_facts {F : Type*} [Field F] {A : ℤ → Type*} [∀ n, AddCom
       · simp [DirectSum.component.lof_self]
       · intro k _ hk
         have hne : ((i : ℕ) : ℤ) ≠ ((k : ℕ) : ℤ) := fun h => hk (Fin.ext (by exact_mod_cast h.symm))
-        simp [DirectSum.component.of, hne]
+        simp [DirectSum.component.of]
         intro h
         exact absurd (Fin.ext h) hk
       · simp

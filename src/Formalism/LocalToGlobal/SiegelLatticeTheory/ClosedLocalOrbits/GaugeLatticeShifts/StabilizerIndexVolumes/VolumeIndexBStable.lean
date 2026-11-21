@@ -1,10 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.PairVal
-import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.StabilizerIndexVolumes.VolumeIndexFiniteNonzero
-import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.StabilizerIndexVolumes.StClosed
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.StabilizerIndexVolumes.AtNormRep
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.StabilizerIndexVolumes.DiagMulOfBt
-import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.StabilizerIndexVolumes.VolumeIndexAStable
 
 noncomputable section
 
@@ -116,7 +113,7 @@ theorem zhat_conj {T T' : E} (F : FlagG S r T) (F' : FlagG S r T') (s : S.V ≃�
   have key : S.hT (F.fvec a) (F'.fvec b) = S.hT (s (F.fvec a)) (s (F'.fvec b)) := (hs _ _).symm
   simp only [Zhat, brS, Matrix.mul_apply, Matrix.conjTranspose_apply]
   rw [key, hu a, hu' b]
-  simp only [map_sum, LinearMap.sum_apply, map_smulₛₗ, map_smul, LinearMap.smul_apply, smul_eq_mul,
+  simp only [map_sum, LinearMap.sum_apply, map_smulₛₗ, LinearMap.smul_apply, smul_eq_mul,
     starRingEnd_apply, RingHom.id_apply, Finset.mul_sum, Finset.sum_mul]
   first
   | exact Finset.sum_congr rfl fun _ _ => Finset.sum_congr rfl fun _ _ => by ring

@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.MovedReadingSameMapsBaseReadingAgrees
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.JetSplitAmb
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.SameForm
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SpanRangeMulVec
 import Formalism.LocalToGlobal.Columns.InvariantSubspaceCoordsX
 

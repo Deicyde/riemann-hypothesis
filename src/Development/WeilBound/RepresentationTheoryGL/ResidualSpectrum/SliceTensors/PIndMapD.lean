@@ -1,6 +1,6 @@
-import Development.WeilBound.RepresentationTheoryGL.ResidualSpectrum.SliceTensors.PIndMapC
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsEvalSum
-import GroundTheory.PAdicHodge.ACrisBdR
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.RepresentationTheoryGL.ResidualSpectrum.SliceTensors.PIndMapB
 
 noncomputable section
 

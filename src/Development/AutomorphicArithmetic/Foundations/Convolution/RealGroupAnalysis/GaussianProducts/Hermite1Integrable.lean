@@ -1,4 +1,15 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.GaussianProducts.ExistsRowSec
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.Analysis.SpecialFunctions.Gaussian.FourierTransform
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
 
 open NumberField IsDedekindDomain MeasureTheory Matrix Topology Filter
 open Neutral.B1 Formalism.L2.Host Formalism.ConjugateSelfDual GlobalTheory.CuspRep GlobalTheory.GalOfCusp UpperTheory.V UpperTheory.V.Af UpperTheory.V.Published GroundTheory.Global GroundTheory.Automorphic.GJMatrix
@@ -54,7 +65,7 @@ private lemma hermite1_rec (n : ℕ) (x : ℝ) :
     refine ((h2.mul h3).mul h4).congr_deriv ?_
     simp only [A, B, C, Pi.pow_apply, Pi.mul_apply]
     push_cast
-    simp only [Nat.add_one_sub_one, pow_one]
+    simp only [pow_one]
     ring
   have key := integral_eq_zero_of_hasDerivAt_of_integrable hd
     (((iA.const_mul _).sub (iB.const_mul _)).add (iC.const_mul _)) iC

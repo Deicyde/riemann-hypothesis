@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.DiagonalSupport.DecompositionOfThreeParts
+import Formalism.SharpRestriction.GrowthBounds.DualFockLinear.ValLeOfVK
 
 noncomputable section
 

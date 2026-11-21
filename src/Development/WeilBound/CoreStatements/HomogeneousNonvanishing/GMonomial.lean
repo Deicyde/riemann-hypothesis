@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PRiemannExtensionAnalytic
+import Mathlib.Analysis.Complex.AbsMax
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace PositivityTheory.UnitarySelfGeneration
 

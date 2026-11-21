@@ -1,8 +1,9 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.ChernClassExistence
-import Development.EtaleCohomology.EtaleSheaves.CupProductRingLaws
 import Development.EtaleCohomology.TateTwists.ExistsNaturalEtaleKummerDegreeOneValueOfRootsKum
 import Development.EtaleCohomology.TateTwists.EtaleLocallyExistsPrimitiveRootOfUnityOfInvertibleOrder
 import Development.EtaleCohomology.TateTwists.EtaleSheafSectionsGlueOfForgetIsSheaf
+import Development.EtaleCohomology.EtaleSheaves.ChernClassRootLocalization
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry Opposite CochainComplex CochainComplex.HomComplex GlobalTheory.EtC

@@ -1,4 +1,7 @@
-import Formalism.SharpRestriction.GrowthBounds.CovariantDegrees
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.ObjPol
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 noncomputable section
 

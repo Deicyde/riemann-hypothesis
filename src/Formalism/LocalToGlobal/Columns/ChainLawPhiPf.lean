@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.ChainLawPhiA
 import Formalism.LocalToGlobal.Columns.OcbTIntOfStab
-import Formalism.LocalToGlobal.Columns.FirstUnfoldingEqZeroOfNotIntegral
+import Formalism.LocalToGlobal.Columns.ChainLawPhi
 
 open NumberField IsDedekindDomain Module
 

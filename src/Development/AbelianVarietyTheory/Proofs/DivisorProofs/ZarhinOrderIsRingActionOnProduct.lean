@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KappaOK
+import Development.AbelianVarietyTheory.Definitions.Divisors.ToRingActOpOfRingAct
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TwoLeFinrankLa
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.UPel.HT GlobalTheory.SiegelTor GlobalTheory.EndLoc
 
@@ -141,7 +145,7 @@ theorem actZ_pb_mu [IsMonHom mu] (hla : la ≫ mu = 𝟙 A ^ d) (N : ord d) (i :
   rw [← Category.assoc, actZ_pb, E_comp]
   have e : ∀ k, (pa A B k ≫ la) ≫ mu = pa A B k ^ d := fun k => by
     rw [Category.assoc, hla, MonObj.comp_pow, Category.comp_id]
-  simp only [e, Category.assoc]
+  simp only [e]
   exact E_pow_left (fun k => pa A B k) _ d _ _
 
 theorem actZ_pa_la [IsMonHom la] (hml : mu ≫ la = 𝟙 B ^ d) (N : ord d) (i : Fin 4) :

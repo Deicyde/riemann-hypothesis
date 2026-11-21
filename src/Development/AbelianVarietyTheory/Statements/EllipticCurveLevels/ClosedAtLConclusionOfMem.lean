@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.IsWeight
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.PolyApproxZeroPadic
 
@@ -240,8 +241,7 @@ theorem multiset_eq_of_powSum {F : Type} [Field F] [CharZero F] {S : Set F} (hS 
       (p M).eval z = z ^ N * (M.map (z ^ ·)).sum := by
     intro M hM z hz
     rw [show (p M).eval z = Polynomial.evalRingHom z (p M) from rfl]
-    simp only [p, map_multiset_sum, Multiset.map_map, Function.comp_def, map_pow, Polynomial.coe_evalRingHom,
-      Polynomial.eval_X]
+    simp only [p, map_multiset_sum, Multiset.map_map, Function.comp_def, Polynomial.coe_evalRingHom]
     rw [← Multiset.sum_map_mul_left]
     congr 1
     refine Multiset.map_congr rfl fun n hn => ?_

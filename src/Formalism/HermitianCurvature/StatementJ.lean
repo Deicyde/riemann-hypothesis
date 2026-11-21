@@ -1,5 +1,5 @@
-import Formalism.LatticeRigidity.StatementC
-import Formalism.HermitianCurvature.StatementK
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementTA
 import Formalism.HermitianCurvature.StatementTB
 import Formalism.HermitianCurvature.LevelRecursionCondNeeded
@@ -7,6 +7,7 @@ import Formalism.HermitianCurvature.PrimeToDifferent
 import Formalism.HermitianCurvature.StatementSz
 import Formalism.HermitianCurvature.MemParahoricTimesPrincipalCongruenceIff
 import Formalism.HermitianCurvature.BlockKernelPropertiesOfSteps
+import Mathlib.Topology.Separation.CompletelyRegular
 
 namespace Formalism.FourierDecayAlt.J
 

@@ -1,6 +1,7 @@
-import Mathlib
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CapelliEigenvalues.Smooth
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CapCommuteRtInfGL
+import BuildAid.Leniency.Open
+import Formalism.FormalDegreeBessel.FormalDegreeRatio.CapelliHighestWeightConjugated
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CapelliEigenvalues.CoreDefs
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 open Matrix Formalism.REAL Formalism.QuantumDeterminants
 
@@ -151,7 +152,7 @@ private theorem qdet_conj_eq_qdet_of_mul_eq_one {A : Type} [Ring A] [Algebra ℂ
       exact Finset.sum_congr rfl fun σ _ => by rw [ha σ]
     rw [step]
     simp_rw [← hs]
-    simp only [Finset.sum_smul, Finset.mul_sum, Finset.smul_sum, hsg, smul_smul]
+    simp only [Finset.sum_smul, Finset.smul_sum, hsg, smul_smul]
     first
       | exact Finset.sum_comm
       | exact Eq.trans Finset.sum_comm (Finset.sum_congr rfl fun r _ => Finset.sum_comm)

@@ -1,8 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.PerCEmb
-import Formalism.LocalToGlobal.IndefiniteReal.ThPinsR
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.AdelicUnitaryRealPointsStructureRealPlaces
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.AdelicUnitaryActionAtRealPlace
+import Formalism.LocalToGlobal.IndefiniteReal.LocalNewformFunction
 
 namespace GlobalTheory.UnitaryChar
 

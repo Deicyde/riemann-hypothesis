@@ -1,4 +1,46 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.LinearAlgebra.Eigenspace.Pi
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -339,10 +381,10 @@ theorem decomp {V : Type} [AddCommGroup V] [Module ℂ V] {ι : Type} [Fintype �
   have hDR : ∀ i u, Dop i u ∈ R := fun i u => R.sum_mem fun k _ => R.smul_mem (hBR i k) _
   have hCv : ∀ i u (w : W), ((Cop i u w : W) : V) = (∑ k ∈ Finset.range (r + 1), u ^ k • A i k) w := by
     intro i u w
-    simp [Cop, A', LinearMap.sum_apply, Submodule.coe_sum]
+    simp [Cop, A', LinearMap.sum_apply]
   have hDv : ∀ i u (w : W), ((Dop i u w : W) : V) = (∑ l ∈ Finset.range (s + 1), u ^ l • B i l) w := by
     intro i u w
-    simp [Dop, B', LinearMap.sum_apply, Submodule.coe_sum]
+    simp [Dop, B', LinearMap.sum_apply]
 
   let v' : W := ⟨v, hv⟩
   let W' : Submodule ℂ W := (Subalgebra.toSubmodule R).map (LinearMap.applyₗ v')
@@ -410,10 +452,10 @@ theorem decomp {V : Type} [AddCommGroup V] [Module ℂ V] {ι : Type} [Fintype �
       have hb : b s = 1 := LinearMap.ext fun w => Subtype.ext (Subtype.ext (Subtype.ext (hB1 i _ w.1.1.2)))
       have hval : ∀ u (w : P χ), ((((∑ k ∈ Finset.range (r + 1), u ^ k • a k) w : P χ) : W') : W) = Cop i u w := by
         intro u w
-        simp [a, f, Cop, LinearMap.sum_apply, Submodule.coe_sum]
+        simp [a, f, Cop, LinearMap.sum_apply]
       have hvalD : ∀ u (w : P χ), ((((∑ l ∈ Finset.range (s + 1), u ^ l • b l) w : P χ) : W') : W) = Dop i u w := by
         intro u w
-        simp [b, f, Dop, LinearMap.sum_apply, Submodule.coe_sum]
+        simp [b, f, Dop, LinearMap.sum_apply]
       have hrelP : ∀ u : ℂ, (∑ k ∈ Finset.range (r + 1), u ^ k • a k) * (∑ l ∈ Finset.range (s + 1), u ^ l • b l) =
           ((m i).map (u + ·)).prod • (1 : Module.End ℂ (P χ)) := by
         intro u

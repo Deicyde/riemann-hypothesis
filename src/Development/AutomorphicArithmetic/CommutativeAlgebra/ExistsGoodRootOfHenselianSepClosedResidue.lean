@@ -1,5 +1,14 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.GoodRoot
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 open IsLocalRing UpperTheory.Et
@@ -48,7 +57,7 @@ theorem UpperTheory.exists_goodRoot_of_henselian_sepClosed_residue :
       simp [hz.pow_eq_one])
     (by
       simp only [Polynomial.derivative_sub, Polynomial.derivative_one, sub_zero,
-        Polynomial.derivative_X_pow, Polynomial.eval_mul, Polynomial.eval_C, Polynomial.eval_natCast,
+        Polynomial.derivative_X_pow, Polynomial.eval_mul, Polynomial.eval_C,
         Polynomial.eval_pow, Polynomial.eval_X]
       exact hqu.mul (ha0.pow _))
   have hζq : ζ ^ q = 1 := by

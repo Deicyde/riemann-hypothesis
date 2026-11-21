@@ -1,5 +1,13 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.IsWeaklyRegularMapCAppendMapLinForm
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.Tactic.Polynomial.Basic
 
 open MvPolynomial TensorProduct
 
@@ -84,7 +92,7 @@ theorem span_genericForm_isPrime_or_eq_top :
   haveI : IsScalarTower P B (K ⊗[k] A) := by
     refine IsScalarTower.of_algebraMap_eq fun p => ?_
     rw [hφ]
-    simp [φ, Algebra.TensorProduct.algebraMap_apply]
+    simp [φ]
     rfl
   have H : (algebraMap B (K ⊗[k] A)).comp Algebra.TensorProduct.includeRight.toRingHom =
       Algebra.TensorProduct.includeRight.toRingHom := by

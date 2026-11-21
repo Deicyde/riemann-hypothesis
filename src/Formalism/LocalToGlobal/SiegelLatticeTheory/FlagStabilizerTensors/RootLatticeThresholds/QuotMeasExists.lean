@@ -1,8 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CasimirReductionTheory.OneParameterDerivatives.WeilIndicatorMeasures.MeasurableUnitMulIndicator
-import Formalism.PeriodIntegrals.QuotInv
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.QuotSetU
 import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
+import Mathlib.Algebra.Group.MinimalAxioms
 
 open MeasureTheory Topology
 open scoped ENNReal

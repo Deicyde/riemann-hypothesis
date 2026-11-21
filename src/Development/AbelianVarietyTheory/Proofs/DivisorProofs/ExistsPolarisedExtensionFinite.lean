@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsKerTorusExtension
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorusPartOfPulledActionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RosatiPolarizationFiniteExtensionStatement
 

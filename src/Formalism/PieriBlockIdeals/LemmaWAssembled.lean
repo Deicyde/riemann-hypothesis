@@ -1,5 +1,6 @@
-import Formalism.PieriBlockIdeals.StatementLW
-import Formalism.PieriBlockIdeals.WEChain
+import BuildAid.Leniency.Open
+import Formalism.PieriBlockIdeals.Statement
+import Mathlib.RingTheory.PowerSeries.Basic
 
 noncomputable section
 

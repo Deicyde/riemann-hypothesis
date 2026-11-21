@@ -1,6 +1,7 @@
-import Mathlib
-import Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.PointsPropertyOfD7
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.LemmaOneEightOfPolarisation
+import Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.SecondPropositionEveryLocalisation
 
 noncomputable section
 
@@ -128,7 +129,7 @@ theorem im_pos (N : ℕ) (hN : N ≠ 0) (φ : D.host.E →+* ℂ) (hφ : φ ∈ 
     rw [Complex.I_sq]
   rw [key]
   simp only [Complex.mul_im, Complex.I_re, Complex.I_im, Complex.ofReal_re, Complex.ofReal_im,
-    zero_mul, one_mul, add_zero, mul_zero, zero_add]
+    one_mul, mul_zero, zero_add]
   exact inv_pos.mpr (mul_pos (by exact_mod_cast Nat.pos_of_ne_zero hN) hpos)
 
 theorem pol (hA : DiffK D) (hB : NormK D) : PolPart D := by

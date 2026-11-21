@@ -1,9 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PhiAt
-import Formalism.LocalToGlobal.ProjectiveLattices.SecPtOrd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.SecPtRed
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsCdvrMkLeContinuum
 import Development.AbelianVarietyTheory.Counterexamples.HeightSurvey.RegularityFirstClauseBot
+import Mathlib.RingTheory.Valuation.AlgebraInstances
 open CategoryTheory AlgebraicGeometry TopologicalSpace Limits NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.GeometryOfNumbersTheory Formalism.L2.Pj Formalism.BasicNotions
 open ReciprocityTheory.ChartRestriction.G.Out (nonzeroLocus)
@@ -133,7 +133,7 @@ theorem exists_dvr (hv : ∃ x : K, v x ≠ 0 ∧ v x < 1) :
     have hu := isUnit_of_val_eq_one v (y := ⟨w, hwO⟩) hvw
     refine ⟨n, hu.unit, ?_, ?_⟩
     · ext
-      simp only [IsUnit.unit_spec, Subring.coe_mul, Subring.coe_pow]
+      simp only [IsUnit.unit_spec]
       exact hwy
     · rw [hm, hnm]; ring
   have hlogϖ : -WithZero.log (v (ϖ : K)) = d := hπ

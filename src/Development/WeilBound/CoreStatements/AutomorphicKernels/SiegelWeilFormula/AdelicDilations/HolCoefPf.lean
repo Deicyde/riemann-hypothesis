@@ -1,4 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.AdelicDilations.WeightFactorDilation
+import Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.AdelicDilations.CharacterW1TraceExp
+import Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.AdelicDilations.DilExPf
+import Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.AdelicDilations.FcCont
+import Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.AdelicDilations.FourierZero
+import Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.SingularHermitian.AesmOfContinuous
 
 noncomputable section
 
@@ -95,9 +102,9 @@ theorem holCoef_pf (H : Hyps) {d : SD σ} (R : RD d) (L : LD d) (w : InfinitePla
     set M := d.cw w S with hMdef
     have hM : ∀ k l, k ≠ L.i₀ → M k l = 0 := by
       intro k l hk
-      simp [hMdef, hS, SD.cw, Matrix.map_apply, Matrix.sum_apply, Matrix.single_apply, Ne.symm hk]
+      simp [hMdef, hS, SD.cw, Matrix.map_apply, Matrix.sum_apply, Ne.symm hk]
     have hM0 : M L.i₀ L.i₀ = 0 := by
-      simp [hMdef, hS, SD.cw, Matrix.map_apply, Matrix.sum_apply, Matrix.single_apply, hne]
+      simp [hMdef, hS, SD.cw, Matrix.map_apply, Matrix.sum_apply, hne]
     have hmy : mR y = dZ d.n R.ζ * d.cw w (inFrame d.b (R.ι w y)) * dZ d.n R.ζ⁻¹ := by
       rw [KSplitW.cw_iota]
       simp only [← Matrix.mul_assoc, Krd.dZ_mul_inv h0, Matrix.one_mul]

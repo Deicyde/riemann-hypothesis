@@ -1,10 +1,6 @@
-import Mathlib
-import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.LocalSituation
-import Development.AbelianVarietyTheory.Definitions.Foundations.HTBasis
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.ExpStar
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IsDiscreteValuationRingIntegralClosurePadicInt
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CyclotomicCharacterPadicBasicProperties
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FrobSubMulSurjective
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.NormRootSubOneLt
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.TensorRight
@@ -194,7 +190,7 @@ theorem perfect_Cb : PerfectRing (Cb l) l := by
   obtain ⟨a', rfl⟩ := surjective_frobenius (OCb l) l a
   obtain ⟨b', rfl⟩ := surjective_frobenius (OCb l) l b
   refine ⟨algebraMap _ _ a' / algebraMap _ _ b', ?_⟩
-  simp [frobenius_def, div_pow]
+  simp [frobenius_def]
 
 theorem exists_trace {P : LocPrime l} (AI : LocAinf l P) (K : FinExt l) {G : Type} [Group G]
     [TopologicalSpace G] (ι : G →* GQ l) (hι : Topology.IsEmbedding ι) (hr : ι.range = Hinf K)

@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
 import Development.ResolutionOfSingularities.EmbeddedResolution.DerivativeIdeal.LogDerivativeIdeal
 import Development.ResolutionOfSingularities.EmbeddedResolution.AlgebraicPreliminaries.DerivationLocalization
+import Mathlib.RingTheory.PiTensorProduct
 
 namespace FunctorialResolution.EmbeddedResolution
 

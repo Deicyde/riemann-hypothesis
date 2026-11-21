@@ -1,19 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsRealFam
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsCombAt
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.CuspAlongSmoothRows
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MovY
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.WeilLatticeVacuumEqProdSplitPlaceFactors
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.GridStandardVacuumScalarEqProdLocalPlaces
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LatHatStabOfHatL
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ActOChiRight
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.UnfoldingExpansionProductFunctionLocalInvariant
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.FlatIntegrandFlippedTensorLocallyConstantCompact
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.WeilDatumAtPlaceEqLatticeIntertwinerMulDetChar
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.GivenLevelInner
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsTupChars
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.RamificationIdxEqOneOfIsSquare
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.DeterminantIdeleAtSplitPlaceMovedGridNode
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.DIV
 open IsDedekindDomain NumberField MeasureTheory Matrix GlobalTheory.ChiGrid GlobalTheory.FunObj GlobalTheory.RowTest GlobalTheory.StdFrames GlobalTheory.RowClaim
@@ -215,7 +208,7 @@ theorem om_vac {μ₀ : T} (hL : L.Is μ₀) (W : G.Weil) (t : T) {i : ℕ} (hi 
     W.om (.mu t D.R.m i) (g, h) f = (∏ w ∈ locPl G t, splitScal G (.mu t D.R.m i) w g h) • f := by
   have hm := D.R.two_le_m
   have hp : (Pair.mu t D.R.m i : Pair T).InRange D.R.m := by
-    simp only [Pair.InRange, Pair.big, Node.InRange]; omega
+    simp only [Pair.InRange, Node.InRange]; omega
   have sd : ∀ l, l ≤ D.R.m → IsSelfDualC (G.V (.grid D.R.m l)) (G.Λ (.grid D.R.m l)) := fun l hl =>
     (G.isV (X := .grid D.R.m l) ⟨le_rfl, hl⟩ (fun j e => by simp at e; omega)).sd
   exact GlobalTheory.LatStabScalar.om_eq_prod_splitFac (W.om_is _ hp) (sd i hi.le) (sd (i + 1) hi) (locPl G t)

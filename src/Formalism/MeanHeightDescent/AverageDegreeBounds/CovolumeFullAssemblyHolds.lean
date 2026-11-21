@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.MeanHeightDescent.StatementF
 import Formalism.MeanHeightDescent.AverageDegreeBounds.CovolumeAssemblyHolds
 import Formalism.MeanHeightDescent.AverageDegreeBounds.SumComponents
+import Formalism.MeanHeightDescent.AverageDegreeBounds.CombinedAverageDegreeBoundOf
 
 open Finset Module NumberField
 

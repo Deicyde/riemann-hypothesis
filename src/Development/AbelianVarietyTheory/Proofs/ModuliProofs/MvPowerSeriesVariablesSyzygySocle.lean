@@ -1,4 +1,43 @@
-import Mathlib
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.MvPowerSeries.Basic
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
+import Std.Tactic.BVDecide.Normalize.Prop
 open scoped TensorProduct
 
 namespace GlobalTheory
@@ -35,7 +74,7 @@ theorem mvPowerSeries_X_syzygy {k : Type} [CommRing k] {g : ℕ}
         tsub_add_cancel_of_le (by simpa [Finsupp.single_le_iff, Nat.one_le_iff_ne_zero] using hj)
       have e2 : (∀ l < j, (m - single j 1 : Fin g →₀ ℕ) l = 0) ↔ ∀ l < j, m l = 0 := by
         refine forall_congr' fun l => forall_congr' fun hl => ?_
-        simp [Finsupp.single_apply, hl.ne']
+        simp [hl.ne']
       simp only [e, e2, hj, ne_eq, not_false_eq_true, if_true, true_and]
   have h2 : ∀ j, coeff m (t j i * X j) =
       if (∀ l < i, m l = 0) ∧ j ≠ i then coeff (m + single i 1) (r j * X j) else 0 := by
@@ -44,7 +83,7 @@ theorem mvPowerSeries_X_syzygy {k : Type} [CommRing k] {g : ℕ}
     by_cases hji : j = i
     · simp [hji]
     have e0 : (m + single i 1 : Fin g →₀ ℕ) j = m j := by
-      simp [Finsupp.single_apply, Ne.symm hji]
+      simp [Ne.symm hji]
     rw [e0]
     by_cases hj : m j = 0
     · simp [hj]
@@ -56,7 +95,7 @@ theorem mvPowerSeries_X_syzygy {k : Type} [CommRing k] {g : ℕ}
       simp [this, h.not_gt]
     · have e2 : (∀ l < i, (m - single j 1 : Fin g →₀ ℕ) l = 0) ↔ ∀ l < i, m l = 0 := by
         refine forall_congr' fun l => forall_congr' fun hl => ?_
-        simp [Finsupp.single_apply, (hl.trans h).ne']
+        simp [(hl.trans h).ne']
       simp only [e2, hj, h, hji, ne_eq, not_false_eq_true, if_true, true_and, and_true]
   simp only [Matrix.mulVec, dotProduct, Matrix.sub_apply, Matrix.transpose_apply, sub_mul,
     map_sum, map_sub, h1, h2, Finset.sum_sub_distrib]

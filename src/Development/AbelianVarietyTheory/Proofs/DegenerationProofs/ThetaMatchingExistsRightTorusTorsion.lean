@@ -1,8 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Degenerations.NotAllMatchRankZero
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.FourierExtractionTsumClass
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.TendstoTsumZeroOfEventuallyNotMemRange
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsUniqueAddEquivOfCompatibleCongr
+import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
 open ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.Ex Module Filter
 open scoped BigOperators Topology
 

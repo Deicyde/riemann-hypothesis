@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ThetaPairContragredientQuotient
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.IsParahoricVec
 open GlobalTheory.PRep GlobalTheory.SmGL GlobalTheory.SplitWeil GlobalTheory.ThetaGL
 open scoped TensorProduct
 set_option maxHeartbeats 1000000 in

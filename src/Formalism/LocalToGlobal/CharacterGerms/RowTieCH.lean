@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CharacterGerms.RowTieTop
+import Formalism.LocalToGlobal.CharacterGerms.PlugUP
 
 set_option autoImplicit false
 

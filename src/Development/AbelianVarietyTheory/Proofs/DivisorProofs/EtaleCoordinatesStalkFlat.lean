@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsLifted
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsEtCoord
+import Mathlib.RingTheory.Etale.Weakly
 
 set_option autoImplicit false
 

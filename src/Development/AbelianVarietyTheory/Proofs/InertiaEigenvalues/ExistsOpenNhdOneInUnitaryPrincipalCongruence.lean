@@ -1,10 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.FinIso
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.RingSpecNormalisedCharacterEq
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.RecProdRecSatakeLL
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StandardCosocleGL
-import Formalism.SharpRestriction.LevelLetterCocycles.SphericalInertData
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsFiniteAdeleBaseChangeEquiv
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.DefiniteUnitaryClassSetFinite
 
 noncomputable section
@@ -108,7 +104,7 @@ theorem exists_open_cong : ∀ (L : Type) [Field L] [NumberField L] [IsCMField L
       refine add_mem (mul_mem (natCast_mem _ N) hy) ?_
       by_cases h : s = t
       · simp [Matrix.one_apply, h, one_mem]
-      · simp [Matrix.one_apply, h, zero_mem]
+      · simp [h, zero_mem]
     exact ⟨hU, key⟩
 
 end GlobalTheory.CongOpen

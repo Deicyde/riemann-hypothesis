@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.LatticeGeometry.LevPrPrime
 import Formalism.LocalToGlobal.LatticeGeometry.OperatorNormFibers.FormData
 
@@ -180,7 +182,7 @@ theorem decomp (x : P.Forms j) :
   induction m using WithZero.recZeroCoe with
   | zero =>
     rw [coeff_zero_eq]
-    simp [Finsupp.single_apply]
+    simp
   | coe w =>
     rw [coeff_coe_eq]
     simp only [Finsupp.single_apply, WithZero.coe_inj, WithZero.zero_ne_coe, if_false, zero_add]
@@ -229,7 +231,7 @@ theorem vAt_alg (a : P.KO) : P.vAt la y (algebraMap P.KO (P.Forms j) a) = vEK la
   have h0 : ∀ w, P.Fof w ((algebraMap P.KO (P.Forms j) a : P.Forms j) : P.FormsS j) = 0 := fun w => by
     apply P.Fof_eq_zero_of_coeff
     show (algebraMap P.KO (P.Amb j) a).coeff (w : WithZero (WeightFamilies.Wt D j)) = 0
-    simp [AddMonoidAlgebra.coe_algebraMap, Finsupp.single_apply]
+    simp [AddMonoidAlgebra.coe_algebraMap]
   simp only [h0, P.vAtC_zero, iInf_top, scal_alg]
   exact min_eq_left le_top
 

@@ -1,9 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.Pull1
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.TsgPolyVolPolyCoeffEven
-import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsFibreLocal
-import Development.AutomorphicSpectrum.Statements.MetricStatements.AgreementIffGuarded
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Intersections.PDiagPull
+import Development.AutomorphicSpectrum.Definitions.MetricPeriods.GeometricAbelianConnected
 open MvPolynomial MeasureTheory Filter Topology ReciprocityTheory.AnForm ReciprocityTheory.AnForm.M ReciprocityTheory.AnForm.P ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.AI ReciprocityTheory.ChartRestriction.G.AI.I1 ReciprocityTheory.ChartRestriction.G.AI.I2 ReciprocityTheory.ChartRestriction.G.AI.I4 GlobalTheory.CompanionTheory.Ar.PB GroundTheory.Heights₂.Heights GroundTheory.Heights₂.Heights.LowerBoundFree
 
 namespace PositivityTheory.Xgp.sq_diag
@@ -184,11 +182,11 @@ theorem key (n : ℕ) (i : ι k₀) (hi0 : (X (Q.v 0 ⟨k₀, i⟩) : MRing Q.ι
     by_cases ha : k = Q.κ 0 k₀
     · subst ha
       have hb : ¬ Q.κ 0 k₀ = Q.κ 1 k₀ := κ_ne Q
-      simp [Pi.single_apply, hb]
+      simp [hb]
     · by_cases hb : k = Q.κ 1 k₀
       · subst hb
-        simp [Pi.single_apply, ha]
-      · simp [Pi.single_apply, ha, hb]
+        simp [ha]
+      · simp [ha, hb]
   · simp only [map_pow, map_X, eval_X, norm_pow]
     exact hnorm z hz
 

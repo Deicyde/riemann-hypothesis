@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.LocalOperatorBlocks.LongWeylFunctional
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsSchwartzPolyMulGauss
 
@@ -182,7 +184,7 @@ theorem continuousOn_of_evX {X : Type} [TopologicalSpace X] {S : Set X} (d : ℕ
 
 theorem gramX_true (x : Fin m → Fin n → ℂ) : gramX (fun _ : Fin m => true) x = (Matrix.of x)ᴴ * Matrix.of x := by
   ext i j
-  simp [gramX, Qp, Qb, evX, Matrix.mul_apply, Matrix.conjTranspose_apply, MvPolynomial.eval_sum]
+  simp [gramX, Qp, Qb, evX, Matrix.mul_apply, Matrix.conjTranspose_apply]
 
 end PositivityTheory.SiegelWeilFormula.KLI
 

@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SimpleOver
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DixmierSchurOfRankLeAleph0
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
 
 open scoped TensorProduct
 
@@ -93,7 +94,7 @@ theorem simple_tensor :
         simp
       · intro j hj hji
         rw [TensorProduct.map_tmul, ← hrp _ (Finset.mem_image_of_mem b hj)]
-        simp [Finsupp.single_apply, hji]
+        simp [hji]
       · intro h; exact absurd hi h
     rwa [h3] at h2
   have h4 : U.comap (TensorProduct.mk ℂ S₀ S₁ (b i)) = ⊤ := by

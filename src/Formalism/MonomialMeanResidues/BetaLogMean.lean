@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.MonomialMeanResidues.FilteredDegree
+import Mathlib.NumberTheory.Harmonic.Defs
 
 open Module NumberField Finset
 

@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.MemEqnSetOmegaCoeff
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StrictPosOfExists
+import Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension
+import Mathlib.Analysis.Calculus.LineDeriv.IntegrationByParts
 
 set_option autoImplicit false
 

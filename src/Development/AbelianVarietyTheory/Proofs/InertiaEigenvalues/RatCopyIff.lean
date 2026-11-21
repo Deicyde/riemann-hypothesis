@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SameSetup
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsBasisAtTransport
+import Formalism.LocalToGlobal.IndefiniteReal.HeckeNonvanishing.Imports
 
 noncomputable section
 

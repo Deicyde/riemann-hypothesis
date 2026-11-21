@@ -1,8 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.CartanFactorisation.Kills0Of
 import Development.WeilBound.ThetaLifts.CartanFactorisation.KillInf
 import Development.WeilBound.ThetaLifts.Reductions.JoinDef
 import Development.WeilBound.ThetaLifts.SphericalLattices.ThetaSubSup
-import Development.WeilBound.ThetaLifts.SphericalLattices.ProperKilled
+import Development.WeilBound.ThetaLifts.CartanFactorisation.ExistsMaximalCompactInfinite
 
 noncomputable section
 

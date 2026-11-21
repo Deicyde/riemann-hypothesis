@@ -1,5 +1,9 @@
-import Formalism.LocalToGlobal.ProjectiveLattices.ThGerm
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ChartPullbacks.UniversalCharts.SpanXLeKerAevalZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.ProjectiveLattices.SubConstMemOrig
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
 
 set_option autoImplicit false
 

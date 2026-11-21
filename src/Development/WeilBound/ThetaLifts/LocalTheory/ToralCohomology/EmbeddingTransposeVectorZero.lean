@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LocalTheory.ToralCohomology.PiInfUnitNe
+import Development.WeilBound.ThetaLifts.LocalTheory.ToralCohomology.ParZero
 
 noncomputable section
 
@@ -155,7 +158,7 @@ theorem single_mulVec' (a b : Ix R S) (v : Ix R S → ℂ) : Matrix.single a b (
   funext c
   by_cases e : c = a
   · subst e; simp [Matrix.mulVec, dotProduct, Matrix.single_apply]
-  · simp [Matrix.mulVec, dotProduct, Matrix.single_apply, Ne.symm e, Pi.single_eq_of_ne e]
+  · simp [Matrix.mulVec, dotProduct, Ne.symm e]
 
 theorem J_single (a b : Ix R S) : Jm R S * Matrix.single a b (1 : ℂ) = sg a • Matrix.single a b 1 := by
   ext c d; rw [Jm_sg, Matrix.diagonal_mul]; simp only [Matrix.smul_apply, Matrix.single_apply]; split_ifs with h <;> simp [h]
@@ -239,7 +242,7 @@ theorem exists_frame (m : Emb R S R₁ S₁) (hs : ∀ b, sg (m.e b) = sg b) {d 
     · simp only [sml, smr, addl, addr, xx, zz, zx, zk, sN, star_neg, star_one]
       rw [Matrix.diagonal_apply_ne _ (by simp)]; ring
     · rw [herm, o1, Matrix.diagonal_apply_ne _ (m.ne_i b).symm, star_zero]
-    · simp only [sml, smr, addl, addr, xx, zz, zx, zk, sN, star_neg, star_one]
+    · simp only [sml, smr, addl, addr, xx, zz, zx, zk, sN, star_one]
       rw [Matrix.diagonal_apply_ne _ (by simp)]; ring
     · simp only [sml, smr, addl, addr, xx, zz, zx, zk, sN, Matrix.diagonal_apply_eq, sg_r, star_neg, star_one]
       linear_combination -NN

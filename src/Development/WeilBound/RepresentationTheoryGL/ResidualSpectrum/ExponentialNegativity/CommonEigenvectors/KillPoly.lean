@@ -1,7 +1,4 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.ResidualSpectrum.ExponentialNegativity.ExpNegGlue
-import Development.WeilBound.SimpleEigenvalues.SimpleEigenvalueExtension.SimEig
-import Development.AutomorphicArithmetic.AutomorphicVarieties.IntegralityNearIdentity.ExistsContDiffEventuallyEq
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.ResidualSpectrum.SliceTensors.PolynomialKilling.KillPoly4
 
 noncomputable section

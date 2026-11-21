@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.AllPositions
-import Development.AbelianVarietyTheory.Definitions.Foundations.SecondCountableAndT2LocalField
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.ValuationDetOfMemKO
+import Mathlib.Topology.Sheaves.Presheaf
 open MeasureTheory ValuativeRel Matrix GlobalTheory.SplitWeil GlobalTheory.RootEx GlobalTheory.StepData GlobalTheory.SymChain
 
 noncomputable section
@@ -22,8 +23,8 @@ theorem shape_inr {M : Matrix (n ⊕ Fin c) (n ⊕ Fin c) k}
     · rw [hij]
     exfalso
     rcases lt_or_gt_of_ne (Fin.val_ne_of_ne hij) with h | h
-    · exact hs (h1 (by simp only [Sum.elim_inl, Sum.elim_inr]; omega))
-    · exact hs (h2 (by simp only [lev, Sum.elim_inl, Sum.elim_inr, OrderDual.toDual_lt_toDual]; omega))
+    · exact hs (h1 (by simp only [Sum.elim_inr]; omega))
+    · exact hs (h2 (by simp only [lev, Sum.elim_inr, OrderDual.toDual_lt_toDual]; omega))
 
 theorem shape_inl {M : Matrix (n ⊕ Fin c) (n ⊕ Fin c) k} (hp : 1 ≤ p)
     (h1 : M.BlockTriangular (Sum.elim (fun _ : n => 2 * p - 1) (fun i : Fin c => 2 * (i.val + 1))))

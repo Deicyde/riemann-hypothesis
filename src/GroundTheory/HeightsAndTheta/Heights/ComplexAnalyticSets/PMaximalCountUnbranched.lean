@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StMaximalCountUnbranched
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StRiemannExtensionAnalytic
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.OsgoodSeparate
+import Mathlib.Analysis.Calculus.FDeriv.Pi
+import Mathlib.Order.CompletePartialOrder
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.IndefiniteRowSideFullHecke.ComplexSets

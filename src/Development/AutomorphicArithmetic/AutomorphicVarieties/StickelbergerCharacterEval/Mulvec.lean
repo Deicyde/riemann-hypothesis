@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.StickelbergerCharacterEval.MemZpowersIff
 
 open Finset UpperTheory.V.Bern UpperTheory.V.B4 UpperTheory.V.B5

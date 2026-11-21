@@ -1,4 +1,5 @@
-import Development.WeilBound.RepresentationTheoryGL.EisensteinSeries.SiegelEisensteinContinuation.Descend
+import BuildAid.Leniency.Variable
+import Development.WeilBound.RepresentationTheoryGL.EisensteinSeries.SiegelEisensteinContinuation.StripEntire
 
 noncomputable section
 

@@ -1,10 +1,8 @@
-import Formalism.LocalToGlobal.TorsionIntegrality.GaussSumParity.BiextensionHypothesesOfLevelOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.GaussSumParity.KummerThetaLogarithms.CoboundaryCommutesHomomorphism
-import Formalism.LocalToGlobal.TorsionIntegrality.GaussSumParity.StatementC
-import Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.FirstLevelFromUniversal
 import Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.PhNormFromDatum
 import Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.BinomialSeriesCoefficients.ConstantCoeffVecConsPairEqZero
-import Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.BinomialSeriesCoefficients.Closure
 
 noncomputable section
 open scoped BigOperators
@@ -27,7 +25,7 @@ private theorem lgF_zero_lemma (l : ℕ) : PowerSeries.constantCoeff (lgF K l) =
 private theorem lgF_one_lemma_2 {l : ℕ} (hl : 2 ≤ l) : PowerSeries.coeff 1 (lgF K l) = 1 := by
   have h1 : l ^ 2 ≠ 1 := by nlinarith
   rw [lgF, PowerSeries.coeff_mk]
-  simp [Finset.sum_range_succ, h1, h1.symm]
+  simp [Finset.sum_range_succ, h1.symm]
 
 theorem logPair {l : ℕ} (hl : 2 ≤ l) : C.IsLogPair (lgF K l) (expF K l) := by
   have h0 := lgF_zero_lemma (K := K) l

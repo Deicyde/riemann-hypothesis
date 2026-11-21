@@ -1,5 +1,9 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.LowFock
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TraceGap.BlockAnti
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.LowFockC
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.LowFockD
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.LowFockE
 
 noncomputable section
 

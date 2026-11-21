@@ -1,16 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.NormSmall
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFinPt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ComplTupBijective
-import Development.AbelianVarietyTheory.Statements.HeckeThetaIntegrals.ThetaIntegralsAgree
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HoweDualityReal
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ProdMinorsMemInv
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EvalBasePtTopMinors
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ColSubEqDetCharSmulOfMemInv
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BigMatConjTransposeMul
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockDetCharInvariantsLeSpanProdMaximalMinors
+import Formalism.LocalRingCardinality.DataHost
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
 
 noncomputable section
 open MvPolynomial
@@ -90,7 +85,7 @@ theorem lowScal_mem_unitary {d a : ℕ} {t : ℂ} (ht : ‖t‖ = 1) : lowScal d
     ← Matrix.diagonal_one]
   congr 1
   funext i
-  simp only [Pi.mul_apply, Pi.star_apply]
+  simp only [Pi.star_apply]
   by_cases hi : (i : ℕ) < a
   · simp [hi]
   · simp only [hi, if_false, RCLike.star_def]

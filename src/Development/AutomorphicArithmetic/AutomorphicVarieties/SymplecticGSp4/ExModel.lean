@@ -1,6 +1,5 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.ResidueCharMemLevelPrimes
-import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.EntryMem
-import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.ExDefs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.NonemptyLocalFramesOfGoodData
 import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.SmoothPtPartOfSmoothPtAssociatedGraded
 import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.NonemptyCoverOfRelativePresentationSmoothPt
@@ -8,8 +7,6 @@ import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.Exi
 import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.ExistsPointDerivationFramedCommutatorTangent
 import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.ExistsQuotientDerivationOfShaCocycle
 import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.SixBlock
-import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.LMemMax
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.CoQuot
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal IsLocalRing UpperTheory.V UpperTheory.V.Base UpperTheory.V.Alg UpperTheory.V.HV UpperTheory.V.GradeZeroInterpolatingElement
 
 namespace UpperTheory.V.GradeZeroInterpolatingElement.ExM
@@ -180,7 +177,7 @@ private theorem rootVec (O : Type) [CommRing O] (k : Fin 6) :
     ext i j; fin_cases i <;> fin_cases j <;> simp [adj_apply, sgn, Fin.rev]
 
 private theorem Xm_wt (O : Type) [CommRing O] (a b : Fin 4) (h : wt a b ≠ -wPs) : Xm O a b = 0 := by
-  fin_cases a <;> fin_cases b <;> first | (exfalso; revert h; decide) | simp [Xm, Matrix.single_apply]
+  fin_cases a <;> fin_cases b <;> first | (exfalso; revert h; decide) | simp [Xm]
 
 private theorem card_prod {A B : Type} (p : B → Prop) : Nat.card {k : A × B // p k.2} = Nat.card A * Nat.card {b // p b} := by
   rw [← Nat.card_prod]

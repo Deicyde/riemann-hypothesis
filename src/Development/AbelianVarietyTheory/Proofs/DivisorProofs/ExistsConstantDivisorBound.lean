@@ -1,9 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.WeightThresholdDefs
 import Formalism.DegreeFormula.PointDegree.PowSum
 import Development.AbelianVarietyTheory.Definitions.Foundations.AltCoeffRho
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KappaHookBoundStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SumLogDivSqPrimesTail
 
 open MvPolynomial Finset GlobalTheory.FlagHook Formalism.BasicNotions Formalism.BasicNotions.DV Formalism.DegreeFormula Formalism.MainNotions.WeightThresholdDefs
 

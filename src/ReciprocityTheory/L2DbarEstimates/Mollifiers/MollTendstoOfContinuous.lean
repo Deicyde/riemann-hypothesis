@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.L2DbarEstimates.Mollifiers.MollEnormSqLe
+import Mathlib.MeasureTheory.Function.ContinuousMapDense
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
 
 namespace ReciprocityTheory.L2DbarEstimates.B
 

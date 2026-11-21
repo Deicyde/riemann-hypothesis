@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.CuspidalDiscreteness.SummandsBase
-import GroundTheory.AutomorphicForms.CuspidalDiscreteness
-import GroundTheory.AutomorphicForms.NormDetDiagUnitsPosRealToUnits
+import GroundTheory.AutomorphicForms.AutomorphicFormSpaces.GKStable
 
 open MeasureTheory Set Filter Topology Function
 open scoped ENNReal NNReal

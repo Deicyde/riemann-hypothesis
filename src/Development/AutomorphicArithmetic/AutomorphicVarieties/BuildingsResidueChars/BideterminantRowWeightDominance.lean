@@ -1,4 +1,8 @@
-import Formalism.GradedWeylDivisibility.FinalD
+import BuildAid.Leniency.Open
+import Formalism.GradedWeylDivisibility.StatementD
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open MvPolynomial Formalism.GradedWeylDivisibility
 
@@ -75,7 +79,7 @@ private theorem strictMono_apply_add_le {n m : ℕ} (f : Fin m → Fin n) (hf : 
   have h1 := Finset.card_le_card_of_injOn f (s := Finset.Ici p) (t := Finset.Ici (f p))
     (by
       intro q hq
-      simp only [Finset.coe_Ici, Set.mem_Ici, Finset.mem_Ici] at hq ⊢
+      simp only [Finset.coe_Ici, Set.mem_Ici] at hq ⊢
       exact hf.monotone hq)
     (fun a _ b _ h => hf.injective h)
   simp only [Fin.card_Ici] at h1

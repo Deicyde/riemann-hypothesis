@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.IsTemperedGLOfIsUnitaryLSeg
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.BlochKatoSelmerVanishes
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.RealCusp
+import Mathlib.RepresentationTheory.Homological.GroupCohomology.Basic
 
 noncomputable section
 

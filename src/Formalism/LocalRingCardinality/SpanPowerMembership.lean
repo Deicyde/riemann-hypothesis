@@ -1,5 +1,4 @@
-import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
-import Formalism.LocalRingCardinality.DataParams₂
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.SpanPowerMembership.ExampleClassGroupCardPos
 import Formalism.LocalRingCardinality.SpanPowerMembership.SizeData₂
 import Formalism.LocalRingCardinality.SpanPowerMembership.DivXExample

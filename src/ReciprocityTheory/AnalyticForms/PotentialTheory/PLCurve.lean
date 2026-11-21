@@ -1,7 +1,5 @@
-import ReciprocityTheory.AnalyticForms.PotentialTheory.IsPotentialPullbackStatement
-import ReciprocityTheory.AnalyticForms.PotentialTheory.Stokes
-import ReciprocityTheory.AnalyticForms.PotentialTheory.LogInt
-import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.GreenSt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PotentialTheory.PLCurveB
 
 namespace ReciprocityTheory.AnForm.M

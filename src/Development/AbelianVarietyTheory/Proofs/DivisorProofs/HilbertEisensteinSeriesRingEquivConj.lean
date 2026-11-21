@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasLevelStd
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasQIff
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HilbertEisensteinFourierCoeffRingEquivConj
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OmegaFactorPowTwoMul
 open NumberField UpperHalfPlane GlobalTheory.HilbFam GlobalTheory.QFam
@@ -37,10 +35,10 @@ theorem _root_.GlobalTheory.HilbFam.hser_conj : ∀ (F : Type) [Field F] [Number
   congr 1
   refine Finset.sum_nbij' (fun μ j ↦ μ (π.symm j)) (fun μ i ↦ μ (π i)) ?_ ?_ ?_ ?_ ?_
   · intro μ hμ
-    simp only [Finset.mem_coe, Finset.mem_Iic] at hμ ⊢
+    simp only [Finset.mem_Iic] at hμ ⊢
     exact fun j ↦ hμ (π.symm j)
   · intro μ hμ
-    simp only [Finset.mem_coe, Finset.mem_Iic] at hμ ⊢
+    simp only [Finset.mem_Iic] at hμ ⊢
     intro i
     simpa using hμ (π i)
   · intro μ _

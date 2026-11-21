@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AutomorphicArithmetic.AutomorphicVarieties.NumberFieldTowers.XTwApplyApply
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.LocalRingsCompletion.nakayama
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AdditiveValuationNorms.CokLen
 import Development.AutomorphicArithmetic.AutomorphicVarieties.NumberFieldTowers.CokerDual

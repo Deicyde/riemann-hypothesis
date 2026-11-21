@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StProjBundleArith
-import GroundTheory.HeightsAndTheta.Heights.Intersections.IsSmoothHermOfIsPullHermInl
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StProjBundleMultiHomog
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StProjBundleDim
 import GroundTheory.HeightsAndTheta.Heights.Intersections.PProjBundleFibre

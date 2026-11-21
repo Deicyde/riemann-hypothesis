@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.DixmierMalliavinLineBounds
 import GroundTheory.AutomorphicForms.DixmierMalliavinLineLimit
+import Mathlib.Analysis.Normed.Group.Tannery
 
 namespace GroundTheory.Automorphic
 

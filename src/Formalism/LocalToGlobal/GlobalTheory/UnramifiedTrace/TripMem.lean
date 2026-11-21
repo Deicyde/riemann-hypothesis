@@ -1,5 +1,7 @@
-import Formalism.LocalToGlobal.GlobalTheory.UnramifiedTrace.DUAllOfPt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.GL6.DiagonalSlopes.LocalUnitaryOfMatchingZero
+import Formalism.LocalToGlobal.GlobalTheory.GL6.DiagonalSlopes.AdelicFunctionRightTranslateDiamond
 
 noncomputable section
 

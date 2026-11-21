@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ScaledBoxRadiiAtEntry
 
 open ValuativeRel Matrix GlobalTheory.SplitFlip GlobalTheory.FullRankCoinv GlobalTheory.RankCoinv GlobalTheory.NormalCore
@@ -67,7 +68,7 @@ theorem mul_tv_mem {m l : ℕ} {ϖ : kˣ} (hϖ : IsUnif ϖ) {N : ℕ} (hN : 1 �
       exact Valuation.map_sum_le _ fun l _ => val_mul_le hϖ hN (ebox_zero_le hϖ hr hX i l) (ht l)
   by_cases hj : j = j₀
   · subst hj; simpa using h1
-  · simp [Pi.single_apply, hj]
+  · simp [hj]
 
 theorem tv_mul_mem {m l : ℕ} {ϖ : kˣ} (hϖ : IsUnif ϖ) {N : ℕ} (hN : 1 ≤ N) {r : Fin m → Fin l → ℕ}
     (hr : ∀ i j, N ≤ r i j ∧ r i j ≤ N + 1) {t : Fin m → k}
@@ -208,7 +209,7 @@ theorem exists_unip_move : ∀ (k : Type) [Field k] [ValuativeRel k] [Topologica
       (fun δ hδ => by simpa using mul_tv_mem hϖ hN (rK2_bounds j₀ N) hsN j₀ hδ) ?_ ?_
     · simp only [Matrix.one_mul] at this; exact this
     · rw [Matrix.one_mul, add_mul_tv p₂ v s j₀ hs0, hps, sub_self]
-      ext i j; simp [vecMulVec_apply]
+      ext i j; simp
     · rw [mem_ebox_zero]
       intro i j
       have hx := hx₂ i j

@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.DiscreteGroups.GlobalIrreducibility.DzRedTil
-import Development.DiscreteGroups.GlobalIrreducibility.DzRedSupp
+import GroundTheory.AutomorphicForms.Iwasawa
 
 noncomputable section
 
@@ -15,8 +16,8 @@ theorem corner_torusPow {m : ℕ} (d : Fin m → ℤ) :
   refine Units.ext (Matrix.ext fun a b => ?_)
   induction a using Fin.lastCases <;> induction b using Fin.lastCases
   · rw [corner_last_last]; simp [Iwasawa.torusPow]
-  · rw [corner_last_cs]; simp [Iwasawa.torusPow, Matrix.diagonal_apply, (Fin.castSucc_lt_last _).ne']
-  · rw [corner_cs_last]; simp [Iwasawa.torusPow, Matrix.diagonal_apply, (Fin.castSucc_lt_last _).ne]
+  · rw [corner_last_cs]; simp [Iwasawa.torusPow, (Fin.castSucc_lt_last _).ne']
+  · rw [corner_cs_last]; simp [Iwasawa.torusPow, (Fin.castSucc_lt_last _).ne]
   · rw [corner_cs_cs]; simp [Iwasawa.torusPow, Matrix.diagonal_apply]
 
 theorem longElt_mul_invT_torusPow {n : ℕ} (D : Fin n → ℤ) :

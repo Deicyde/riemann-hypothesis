@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.LeviCartan
 import GroundTheory.AutomorphicForms.SmoothRepSchur
-import GroundTheory.AutomorphicForms.MeasuresModulus
+import GroundTheory.AutomorphicForms.AdmissibleInduction
+import Mathlib.Data.Finset.Functor
 
 noncomputable section
 

@@ -1,4 +1,9 @@
-import Formalism.LocalToGlobal.ProjectiveLattices.IntAllProof
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.ProjectiveLattices.OneLtAbsNormReal
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
 
 noncomputable section
 

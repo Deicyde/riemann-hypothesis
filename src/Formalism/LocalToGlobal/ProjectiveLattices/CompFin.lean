@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.IsGenFrGenFr
+import Mathlib.AlgebraicGeometry.ProjectiveSpectrum.Proper
+import Mathlib.AlgebraicGeometry.QuasiAffine
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 noncomputable section
 

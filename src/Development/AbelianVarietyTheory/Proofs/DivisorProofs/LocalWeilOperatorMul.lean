@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocOpInfMul
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilActionMapsSchwartz
 open scoped TensorProduct NNReal Matrix

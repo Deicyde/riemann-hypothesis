@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.IdeleGenerators.QuadraticSplitting.QuadSplit
+import Formalism.GaloisIrreducibility.GaloisIrreducibilityProofs.OneNonUnit
 
 open Polynomial Matrix
 

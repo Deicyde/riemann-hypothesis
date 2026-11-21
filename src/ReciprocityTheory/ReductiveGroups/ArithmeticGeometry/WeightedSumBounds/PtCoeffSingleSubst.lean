@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.DualLattices.VEqZeroOfPowEqOne
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.WeightedSumBounds.PtOrderProdSub
 
 namespace ReciprocityTheory.ChartRestriction.G.Sh
 
@@ -159,7 +159,7 @@ theorem pt_degree_eq_one {σ : Type*} {α : σ →₀ ℕ} (h : α.degree = 1) :
       Finset.single_le_sum (f := fun i => α i) (fun _ _ => Nat.zero_le _) hs
     omega
   · have hst : s ≠ t := Ne.symm hts
-    simp only [Finsupp.single_apply, hst, hts, if_false]
+    simp only [Finsupp.single_apply, hst, if_false]
     by_contra hne
     have ht : t ∈ α.support := Finsupp.mem_support_iff.mpr hne
     have hsub : ({s, t} : Finset _) ⊆ α.support := by
@@ -293,7 +293,7 @@ theorem pt_F_lin (G : LogFGL v d) (a : Fin d) (i : Fin d ⊕ Fin d) :
     pt_coeff_single_subst (hX Sum.inl) (fun b => constantCoeff_X _) (G.lg_const a),
     pt_coeff_single_subst (hX Sum.inr) (fun b => constantCoeff_X _) (G.lg_const a)] at key
   simp only [G.lg_lin, pt_coeff_single_X, ite_mul, one_mul, zero_mul, Finset.sum_ite_eq,
-    Finset.sum_ite_eq', Finset.mem_univ, if_true] at key
+    Finset.mem_univ, if_true] at key
   convert key
 
 end Law

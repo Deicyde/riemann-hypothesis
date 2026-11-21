@@ -1,14 +1,11 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.IdeleGenerators.HolomorphicIrreducibility.OrdIrr
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.RankTwoPatching.RatioWOfHasSat
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.AdmissibleResidues.RatioWOfHasSat
-import Development.AutomorphicArithmetic.AutomorphicVarieties.IdeleGenerators.WeightChange
-import Development.AutomorphicArithmetic.AutomorphicVarieties.IdeleGenerators.HolomorphicIrreducibility.OrdAbove
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.TemperedLocalComponents.AlgOfCyc
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.TemperedLocalComponents.RealExistenceFromPublished
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsDecompositionGroupCyclotomicCharacterZpowN
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ExistsPowHeckeCharUnramifiedEverywhere
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsEquivOfMapEq
-import Formalism.LocalToGlobal.UnitaryNorms.CharProd
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.MkMemAdmissibleAtIffCocycle
+import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.BlochKatoSelmerVanishes
+import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.ResMapBijective
+import Formalism.PadicSubsetSums.StableGradedCounts.ZBrauerNesbittAlg
+import Mathlib.NumberTheory.Padics.HeightOneSpectrum
 
 noncomputable section
 
@@ -79,9 +76,9 @@ private theorem chars_of_red {Γ : Type} [Group Γ] [TopologicalSpace Γ] {k : T
     rw [Matrix.trace_fin_two, Matrix.det_fin_two]
     refine mul_right_cancel₀ hi ?_
     fin_cases i
-    · simp only [Fin.zero_eta, Pi.zero_apply, mul_zero]
+    · simp only [Fin.zero_eta]
       linear_combination (r s 1 1 - c₀ s) * a0 - r s 0 1 * a1
-    · simp only [Fin.mk_one, Pi.zero_apply, mul_zero]
+    · simp only [Fin.mk_one]
       linear_combination (r s 0 0 - c₀ s) * a1 - r s 1 0 * a0
   have t : (r s : Matrix (Fin 2) (Fin 2) k).trace = c₀ s + (r s : Matrix (Fin 2) (Fin 2) k).det / c₀ s := by
     field_simp

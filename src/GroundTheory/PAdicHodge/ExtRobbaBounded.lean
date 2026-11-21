@@ -1,6 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.PAdicHodge.ExtRobbaTeich
 import GroundTheory.PAdicHodge.RobbaSeries
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Order.Interval.Finset.Box
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
 set_option maxSynthPendingDepth 1
 
 noncomputable section
@@ -554,7 +560,7 @@ theorem coeffB_eq {b : T.B} {x : Γ} {N : ℕ} (h : b * algebraMap Γ T.B T.π ^
 theorem convergesAt_pi_single (n₀ : ℤ) (c : L) (ρ : ℝ) : ConvergesAt (Pi.single n₀ c) ρ := by
   refine tendsto_const_nhds.congr' ?_
   filter_upwards [(Set.finite_singleton n₀).compl_mem_cofinite] with n hn
-  simp [Pi.single_apply, show n ≠ n₀ from hn]
+  simp [show n ≠ n₀ from hn]
 
 theorem zcoeff_π_pow_mul_teich (N : ℕ) (c : L) : T.zcoeff (T.π ^ N * T.teich c) = Pi.single (N : ℤ) c := by
   funext n

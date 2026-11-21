@@ -1,5 +1,13 @@
-import ReciprocityTheory.L2DbarEstimates.LeviForms.HoloClosedNeed
-import ReciprocityTheory.L2DbarEstimates.ChartDerivatives.Imports
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Analysis.Calculus.ParametricIntervalIntegral
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Topology.Sheaves.Presheaf
+import ReciprocityTheory.L2DbarEstimates.LeviForms.BergmanExistsStatement
 
 namespace ReciprocityTheory.L2DbarEstimates.I
 
@@ -473,7 +481,7 @@ theorem fx_wint_eq_withDensity {M : Type*} [MeasurableSpace M] (n : ℕ) (z : M 
   rw [lintegral_withDensity_eq_lintegral_mul_non_measurable _ hmeas
     (Filter.Eventually.of_forall fun x => ENNReal.ofReal_lt_top)]
   refine lintegral_congr fun x => ?_
-  simp only [Pi.mul_apply, Function.comp]
+  simp only [Pi.mul_apply]
   rw [← ofReal_norm_eq_enorm, ← ENNReal.ofReal_pow (norm_nonneg _),
     ← ENNReal.ofReal_mul (Real.exp_pos _).le, mul_comm]
 

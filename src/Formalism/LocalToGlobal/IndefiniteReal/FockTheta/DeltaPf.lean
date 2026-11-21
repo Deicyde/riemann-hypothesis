@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.FockTheta.SquareNormIntegralNonneg
-import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.HookBound
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.HookLengthBound.DiagonalMonomialFactorial
 
 noncomputable section
 
@@ -272,7 +274,7 @@ theorem minorMinus_eq (τ : D.what₂.Tau) (P : ℕ) {Q : ℕ} (hm : P + Q ≤ m
   · first
       | rfl
       | (congr 1
-         refine Prod.ext rfl (Prod.ext (Fin.ext ?_) (Fin.ext ?_)) <;> (try simp [Fin.val_rev]) <;> omega)
+         refine Prod.ext rfl (Prod.ext (Fin.ext ?_) (Fin.ext ?_)) <;> (try simp) <;> omega)
       | (simp [Fin.val_rev]; omega)
   · exact absurd ⟨by omega, by omega⟩ h
 

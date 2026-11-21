@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PublishedTheorems.JacquetShalikaBound.CMMul
+import GroundTheory.AutomorphicForms.MacdonaldWhittaker
 
 noncomputable section
 

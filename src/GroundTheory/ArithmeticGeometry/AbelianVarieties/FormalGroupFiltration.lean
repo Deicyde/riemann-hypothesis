@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ArithmeticGeometry.AbelianVarieties.FormalGroupIdeal
+import GroundTheory.ArithmeticGeometry.AbelianVarieties.FormalGroupInverse
+import Mathlib.Algebra.Order.Ring.Star
 
 namespace GroundTheory.Arith.Abelian
 

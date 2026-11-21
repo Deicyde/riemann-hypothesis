@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.OneLtAbsNormReal
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsComplexEmbeddingFractionFieldCdvr
 open NumberField Formalism.L2.Pj
 

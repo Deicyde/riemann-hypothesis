@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.HasLevelOffOf
 import Development.AbelianVarietyTheory.Definitions.Divisors.GenOf
 

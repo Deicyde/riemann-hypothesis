@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ExplicitFormula.HalfLeNormLentCtr
 
 noncomputable section
@@ -19,7 +21,7 @@ private lemma Lent_eq_zero_iff_LFunction_eq_zero_of_ne_one (χ : DirichletCharac
   unfold Lent
   split_ifs with h
   · subst h
-    simp [DirichletCharacter.LFunctionTrivChar₁, Function.update_apply, hρ, sub_eq_zero]
+    simp [DirichletCharacter.LFunctionTrivChar₁, hρ, sub_eq_zero]
   · exact Iff.rfl
 
 lemma DZ_facts (hZL : ZeroLocus) {χ : DirichletCharacter ℂ N} (hχ : χ.IsPrimitive) {t : ℝ} {ρ : ℂ}

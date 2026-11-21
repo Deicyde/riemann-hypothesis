@@ -1,4 +1,7 @@
-import Development.WeilBound.ThetaLifts.LocalTheory.StandardValuations.VacuumImageIntertwiner
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.GlobalUnitScalingHaarProductFormula
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 
 noncomputable section
 

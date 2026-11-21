@@ -1,5 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.BesselHermitianTheta.MinfDensity
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.BesselHermitianTheta.DefsReal
 
 noncomputable section
 

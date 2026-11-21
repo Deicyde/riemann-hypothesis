@@ -1,4 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.IterSymmR
+import Mathlib.Analysis.Calculus.FDeriv.Symmetric
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace Formalism.IndefR.Eqv
 
@@ -60,7 +67,7 @@ theorem fderiv_inv {H : Type} [NormedAddCommGroup H] [NormedSpace ℝ H] {n : �
     (A.hasFDerivAt.comp x (hΦ x).hasFDerivAt).fderiv
   rw [hzero, fderiv_const_apply] at h1
   have h2 := congrArg (fun T => T w) h1
-  simp only [Pi.zero_apply, ContinuousLinearMap.zero_apply, ContinuousLinearMap.comp_apply, A,
+  simp only [ContinuousLinearMap.zero_apply, ContinuousLinearMap.comp_apply, A,
     ContinuousLinearMap.sub_apply, ContinuousMultilinearMap.apply_apply] at h2
   exact (sub_eq_zero.mp h2.symm)
 

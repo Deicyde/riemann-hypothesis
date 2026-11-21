@@ -1,7 +1,8 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.VLetZeroNear
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.LevelZeroPointOver
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.EmbeddingMapApplyFirstBlock
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.OpApplyZeroNear
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.DegLiftOf
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.FirstDerivativeAtNormalSet
 
 open Matrix Finset MeasureTheory
 open scoped ComplexConjugate

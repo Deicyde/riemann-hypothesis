@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExtMapApply
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExtMapCompStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExtMapOneStatement
+import Mathlib.Topology.Sheaves.Presheaf
 open Matrix MeasureTheory Set GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe GlobalTheory.TorsionForm
 open scoped ContDiff
 
@@ -35,7 +36,7 @@ theorem genProd_card {m : ℕ} (φ : Matrix (Fin m) (Fin m) ℂ) (T : Finset (Fi
     rw [genProd_empty] at h
     by_contra hc
     have : T' ≠ ∅ := by rintro rfl; simp at hc
-    exact h (by simp [Pi.single_apply, this])
+    exact h (by simp [this])
   | insert i T hi ih =>
     intro T' h
     have hiT : i ∉ T := fun h' => lt_irrefl _ (hi i h')
@@ -166,7 +167,7 @@ theorem genProd_fib_support (a : Matrix (Fin g) (Fin g) ℂ) (J : Finset (Fin g)
     have hT : T ≠ ∅ := by rintro rfl; simp at hs
     have : join (∅ : Finset (Fin (n + n))) (∅ : Finset (Fin g)) = ∅ := by simp [join]
     rw [this, genProd_empty] at h
-    exact h (by simp [Pi.single_apply, hT])
+    exact h (by simp [hT])
   | insert j J hj ih =>
     intro T h s hs
     rw [join_insert_right, genProd_insert _ _ _ (natAdd_lt_of_mem_join j J hj), Finset.sum_apply] at h
@@ -256,7 +257,7 @@ theorem extMap_single {m : ℕ} (φ : Matrix (Fin m) (Fin m) ℂ) (T : Finset (F
     extMap φ (Pi.single T 1) = genProd φ T := by
   rw [extMap_apply, Finset.sum_eq_single T]
   · simp
-  · intro b _ hb; simp [Pi.single_apply, hb]
+  · intro b _ hb; simp [hb]
   · intro h; exact absurd (Finset.mem_univ T) h
 
 theorem extMap_fibMat_join (a : Matrix (Fin g) (Fin g) ℂ) (v : Ext (n + n + g))

@@ -1,4 +1,8 @@
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnimodularLocalStandard.Development
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Formalism.PeriodIntegrals.UnimodLocStd
+import Mathlib.Tactic.Polynomial.Basic
 
 noncomputable section
 open scoped ComplexConjugate
@@ -134,7 +138,7 @@ lemma stdLat_smul_idx (L : PeriodPair) (m : Type*) [Fintype m] {N : ℕ} (hN : N
     refine ⟨fun j => (⟨p j % N, Set.mem_Ico.mpr ⟨Int.emod_nonneg _ hN1, Int.emod_lt_of_pos _ hN0⟩⟩,
       ⟨q j % N, Set.mem_Ico.mpr ⟨Int.emod_nonneg _ hN1, Int.emod_lt_of_pos _ hN0⟩⟩), ?_⟩
     refine ⟨fun j => ((p j / N : ℤ) : ℂ) * L.ω₁ + ((q j / N : ℤ) : ℂ) * L.ω₂, ?_, ?_⟩
-    · simp only [PI.ULS.stdLat, AddSubgroup.mem_pi]
+    · simp only [PI.ULS.stdLat]
       intro j _
       exact (mem_lattice_iff_exists_int_comb L _).mpr ⟨_, _, rfl⟩
     · funext j

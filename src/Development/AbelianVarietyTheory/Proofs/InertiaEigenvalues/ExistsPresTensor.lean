@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CardLeOfSpan
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.T2SpaceLocalLatticeRepresentationSpace
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.DvrComplete
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsCyclotomic
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.GammaActionReduction
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsWachModuleGeneratorReductionStatement
@@ -18,6 +16,7 @@ import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ReductionMapPi
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FinrankAndKernelOfLetterImageTensorStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsExactFunctorPhiGammaOfFramesStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsFrameOfTorsionInvariantsStatement
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.InclWFrobIter
 
 noncomputable section
 

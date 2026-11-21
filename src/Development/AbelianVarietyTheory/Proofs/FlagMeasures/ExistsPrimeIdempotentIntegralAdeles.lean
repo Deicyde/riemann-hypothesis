@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.GlobAut
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Afsplit
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.CsDual
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ExistsReduction

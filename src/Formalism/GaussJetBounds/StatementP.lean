@@ -1,4 +1,8 @@
-import Formalism.GaussJetBounds.StatementM
+import BuildAid.Leniency.Open
+import Formalism.GaussJetBounds.Statement
+import Formalism.GaussJetBounds.StatementH
+import Mathlib.Analysis.Normed.Field.Instances
+import Mathlib.NumberTheory.Padics.Complex
 
 noncomputable section
 open scoped BigOperators

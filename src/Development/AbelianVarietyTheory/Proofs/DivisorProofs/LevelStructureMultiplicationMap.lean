@@ -1,10 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsMulVal
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsAlgHomCompEq
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PointsGroup
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LevelStructureLocalPointsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SemiabelianLocalPointDivisibleStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiniteHopfPointsSeparateStatement
 set_option autoImplicit false
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry MonoidalCategory CartesianMonoidalCategory MonObj NumberField WithConv

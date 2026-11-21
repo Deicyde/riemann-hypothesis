@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.TateThesis.HeckeChar
 import GroundTheory.GlobalFields.TateThesis.IdeleMeasure
 import GroundTheory.GlobalFields.TateThesis.ArchCharsUnitary
-import GroundTheory.GlobalFields.TateThesis.Gaussian
 import GroundTheory.GlobalFields.TateThesis.GaussianComplex
 
 open NumberField InfinitePlace InfinitePlace.Completion MeasureTheory Complex ComplexConjugate

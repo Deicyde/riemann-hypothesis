@@ -1,8 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.AnalyticClassNumber.HeckeContinued
-import GroundTheory.GlobalFields.TateThesis.RootNumberLocalFinite
-import GroundTheory.GlobalFields.IdeleGroups.ClassGroup
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PartialZetaFunctionalEquation
+import GroundTheory.GlobalFields.IdeleGroups.LocalConditionIndex
 open NumberField GroundTheory.Global GroundTheory.Global.IdeleGroup
 open scoped nonZeroDivisors
 

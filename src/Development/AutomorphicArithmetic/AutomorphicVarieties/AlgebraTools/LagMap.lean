@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.EqLagIff
+import Mathlib.Tactic.Polynomial.Basic
 
 open Polynomial Matrix IsLocalRing TensorProduct UpperTheory.V.AlgebraTools
 

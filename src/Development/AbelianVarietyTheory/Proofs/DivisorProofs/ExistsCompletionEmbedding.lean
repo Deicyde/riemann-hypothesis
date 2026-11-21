@@ -1,7 +1,15 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.PowLeSpanPowSup
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ImportsBis
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.Target
+import Mathlib.FieldTheory.PurelyInseparable.Exponent
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.PowerSeries.Trunc
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.Polynomial.Basic
 open Polynomial
 
 namespace GlobalTheory.CurveCompletionG
@@ -15,7 +23,7 @@ theorem residue_exists (k A : Type) [Field k] [IsAlgClosed k] [CommRing A] [Alge
     (Ideal.Quotient.mk Q c)
   refine ⟨a, ?_⟩
   rw [← Ideal.Quotient.eq_zero_iff_mem, map_sub, ← ha]
-  simp [Ideal.Quotient.algebraMap_eq]
+  simp
 
 section Dedekind
 variable {A : Type} [CommRing A] [IsDedekindDomain A]

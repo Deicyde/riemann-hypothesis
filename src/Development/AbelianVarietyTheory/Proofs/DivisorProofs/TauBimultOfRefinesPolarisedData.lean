@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.EvenDefect
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.SiegelToroidalPolCharts
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.SecCmp
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MumfordBundleIsoNormalisedRespectsLawsStatement
 
 noncomputable section
@@ -25,7 +23,7 @@ theorem exists_fracSpec {R R' : Type} [CommRing R] [IsDomain R] [CommRing R'] [I
   simp only [jK, spMap, ← Spec.map_comp]
   congr 1
   ext x
-  simp [IsLocalization.lift_eq]
+  simp
 
 theorem toUnit_left {S : Scheme.{0}} (T : Over S) : (toUnit T).left = T.hom := by
   simpa using Over.w (toUnit T)

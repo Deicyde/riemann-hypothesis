@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.BlockEnds
-import Formalism.SharpRestriction.CuspSpanNormBounds.IsPrimitiveSub
+import Mathlib.RingTheory.Nilpotent.Exp
 
 noncomputable section
 

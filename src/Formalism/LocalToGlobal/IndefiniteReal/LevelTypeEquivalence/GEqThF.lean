@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.GEqTie
-import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.GEqUnit
 
 noncomputable section
 

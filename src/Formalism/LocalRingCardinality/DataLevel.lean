@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.LocalRingCardinality.Params
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataSpaces
 import Formalism.LocalRingCardinality.DataKernels
 import Formalism.SatakeDualWeyl.StatementC

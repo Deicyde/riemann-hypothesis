@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.CompactOrbits.LocStep
 import GroundTheory.AutomorphicForms.GLnLocal
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 

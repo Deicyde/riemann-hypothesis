@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.HodgeTatePoints.IsMapOfCancel
 import Development.WeilBound.CoreStatements.HodgeTatePoints.CdAffine
-import Development.WeilBound.CoreStatements.HodgeTatePoints.IsPullbackWhisker
 import Development.WeilBound.CoreStatements.HodgeTatePoints.CocpMain
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField

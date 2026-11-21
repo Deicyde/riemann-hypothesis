@@ -1,7 +1,8 @@
-import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.GoodLat
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.TowerModels.PlaneCodiff
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsGoodIndexNormalizationNegativeInert
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsCmIdempotentsSelectConjugatePrimes
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntAFSmulMemLatOF
 
 noncomputable section
 

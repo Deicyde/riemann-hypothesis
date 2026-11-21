@@ -1,7 +1,9 @@
-import Mathlib
-import Development.AutomorphicArithmetic.RepresentationRank.RepOfRank
-import Development.AutomorphicArithmetic.CommutativeAlgebra.ClopProjFiniteEtaleOfIsClosed
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CommutativeAlgebra.ClopProjFinrankPullback
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.Tactic.ENatToNat
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory
 
@@ -27,7 +29,7 @@ private lemma preim_comp {A B C G : Over S} (a : A ⟶ B) (b : B ⟶ C)
     (W : (C ⊗ G).left.Opens) :
     ((a ≫ b) ▷ G).left ⁻¹ᵁ W = (a ▷ G).left ⁻¹ᵁ (b ▷ G).left ⁻¹ᵁ W := by
   ext1
-  simp [MonoidalCategory.comp_whiskerRight, Set.preimage_comp]
+  simp [MonoidalCategory.comp_whiskerRight]
 
 private lemma exists_whisker {T T' G : Over S} (y : T' ⟶ T) (t : T'.left)
     (x : (T ⊗ G).left) (h : y.left t = (fst T G).left x) :

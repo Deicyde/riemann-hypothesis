@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockMap
+import Mathlib.Analysis.CStarAlgebra.Unitary.Connected
+import Mathlib.Analysis.Calculus.Deriv.Star
 
 noncomputable section
 

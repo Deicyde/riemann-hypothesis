@@ -1,11 +1,6 @@
-import Mathlib
-import ReciprocityTheory.Hypotheses.GalCoh
-import GroundTheory.ProfiniteCohomology.RestrictedRamification.IsUnramifiedOutsideIffLeMaxUnramifiedOutside
-import GroundTheory.ProfiniteCohomology.RestrictedRamification.LocalMaps
-import GroundTheory.ProfiniteCohomology.CohomologicalDimension.Subgroup
-import GroundTheory.ProfiniteCohomology.GlobalClassFormation.EqZeroOfBrauerLocalApplyEqZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.GlobalClassFormation.OpenSubgroups
-import GroundTheory.ProfiniteCohomology.LocalClassFormation.FiniteVanishing.Vanishing
 set_option maxSynthPendingDepth 1
 
 namespace GlobalTheory.CompanionTheory.GSCd

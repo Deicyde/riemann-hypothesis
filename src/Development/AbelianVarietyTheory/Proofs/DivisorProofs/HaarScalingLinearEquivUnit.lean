@@ -1,8 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousCA
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.AddHaarLeftRightMulAdelicMatricesModule
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsRestrictScalarsMatrixLeftRightMulAdeleTens
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.LeviModulus
@@ -106,7 +105,7 @@ theorem haarChar_smul_mulVec : ∀ (F E : Type) [Field F] [NumberField F] [Field
   have hdet : Matrix.GeneralLinearGroup.det
       (Units.map (Matrix.scalar (Fin n₁) : AE F E →+* Matrix (Fin n₁) (Fin n₁) (AE F E)).toMonoidHom c) = c ^ n₁ := by
     ext
-    simp [Matrix.GeneralLinearGroup.val_det_apply, Matrix.det_smul]
+    simp [Matrix.GeneralLinearGroup.val_det_apply]
   rw [hdet, map_pow, GlobalTheory.Doubling.absE_conjUnit]
 
 end GlobalTheory.LeviModulus.CharVec

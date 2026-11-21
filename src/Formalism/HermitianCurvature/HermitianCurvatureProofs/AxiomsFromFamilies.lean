@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementJ
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Finset NumberField Formalism.FourierDecayAlt Formalism.FourierDecayAlt.J
 open scoped ComplexConjugate ComplexOrder

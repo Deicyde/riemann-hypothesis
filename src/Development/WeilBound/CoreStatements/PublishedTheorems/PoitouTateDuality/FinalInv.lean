@@ -1,7 +1,5 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.PublishedTheorems.PoitouTateDuality.PtfsDefs
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PublishedTheorems.PoitouTateDuality.FinalInvPf
-import GroundTheory.ProfiniteCohomology.PoitouTate.PoitouTateNineTermGs
 
 noncomputable section
 

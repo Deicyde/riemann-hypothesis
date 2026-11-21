@@ -1,4 +1,7 @@
-import Formalism.LocalToGlobal.PairingIndexBounds.SplitPairEquations.ReductionOf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.GlobalTheory.GL3.DeterminantNormOneOfUnitDisc
+import Formalism.LocalToGlobal.PairingIndexBounds.SplitPairEquations.NormOneUnitIdealAlt
 
 noncomputable section
 open NumberField Formalism.BasicNotions Classical

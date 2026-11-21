@@ -1,7 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CupPullbacks.ConstCompSingle
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.QuasiIsoHypercohomologyBijectiveStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TateTwistCupProductGradedCommStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TateTwistCupUnitAndPrimitiveRootClassesStatement
+import Mathlib.AlgebraicTopology.SimplicialObject.ChainHomotopy
 
 open CategoryTheory Limits AlgebraicGeometry Opposite CochainComplex CochainComplex.HomComplex GlobalTheory.EtC UpperTheory.Pbf Simplicial
 
@@ -69,11 +72,11 @@ private theorem hT_one {A : Type} [One A] {n : ℕ} (i : Fin (n + 1)) (v : Fin (
 
 private theorem hT_a {A : Type} [One A] {n : ℕ} (v : Fin (n + 1) → A) (j : Fin (n + 1)) :
     hT 0 v ((0 : Fin (n + 2)).succAbove j) = 1 :=
-  hT_one _ _ _ (by simp [sa_val])
+  hT_one _ _ _ (by simp)
 
 private theorem hT_b {A : Type} [One A] {n : ℕ} (v : Fin (n + 1) → A) (j : Fin (n + 1)) :
     hT (Fin.last n) v ((Fin.last (n + 1)).succAbove j) = v j :=
-  hT_val _ _ _ _ (by simp [sa_val]; omega) (by simp [sa_val])
+  hT_val _ _ _ _ (by simp; omega) (by simp)
 
 private theorem hT_eq_hT_of_le_iff_of_apply_eq {A : Type} [One A] {n m : ℕ} (a : Fin (n + 1)) (b : Fin (m + 1)) (v : Fin (n + 1) → A)
     (w : Fin (m + 1) → A) (x : Fin (n + 2)) (y : Fin (m + 2)) (h1 : (x : ℕ) ≤ a ↔ (y : ℕ) ≤ b)
@@ -95,7 +98,7 @@ private theorem hT_c {A : Type} [One A] {n : ℕ} (i : Fin (n + 2)) (j : Fin (n 
     simp only [Function.comp_apply]
     congr 1
     apply Fin.ext
-    simp only [sa_val, Fin.coe_castSucc, Fin.val_succ, Fin.val_mk] at hx hy ⊢
+    simp only [sa_val, Fin.coe_castSucc, Fin.val_succ] at hx hy ⊢
     all_goals (split_ifs at hx hy ⊢ <;> omega)
 
 private theorem hT_d {A : Type} [One A] {n : ℕ} (j : Fin (n + 1)) (v : Fin (n + 2) → A)
@@ -114,7 +117,7 @@ private theorem hT_e {A : Type} [One A] {n : ℕ} (i : Fin (n + 2)) (j : Fin (n 
     simp only [Function.comp_apply]
     congr 1
     apply Fin.ext
-    simp only [sa_val, Fin.coe_castSucc, Fin.val_succ, Fin.val_mk] at hx hy ⊢
+    simp only [sa_val, Fin.coe_castSucc, Fin.val_succ] at hx hy ⊢
     split_ifs at hx hy ⊢ <;> omega
 
 private theorem hT_f {A : Type} [One A] {n : ℕ} (i j : Fin (n + 1)) (hij : i ≤ j) (v : Fin (n + 1) → A)
@@ -127,7 +130,7 @@ private theorem hT_f {A : Type} [One A] {n : ℕ} (i j : Fin (n + 1)) (hij : i �
     simp only [Function.comp_apply]
     congr 1
     apply Fin.ext
-    simp only [pa_val, Fin.coe_castSucc, Fin.val_succ, Fin.val_mk] at hx hy ⊢
+    simp only [pa_val, Fin.coe_castSucc, Fin.val_succ] at hx hy ⊢
     all_goals (split_ifs at hx hy ⊢ <;> omega)
 
 private theorem hT_g {A : Type} [One A] {n : ℕ} (i j : Fin (n + 1)) (hji : j ≤ i) (v : Fin (n + 1) → A)
@@ -140,7 +143,7 @@ private theorem hT_g {A : Type} [One A] {n : ℕ} (i j : Fin (n + 1)) (hji : j �
     simp only [Function.comp_apply]
     congr 1
     apply Fin.ext
-    simp only [pa_val, Fin.coe_castSucc, Fin.val_succ, Fin.val_mk] at hx hy ⊢
+    simp only [pa_val, Fin.coe_castSucc, Fin.val_succ] at hx hy ⊢
     split_ifs at hx hy ⊢ <;> omega
 
 private theorem hT_map {A B : Type} [One A] [One B] {n : ℕ} (f : A → B) (hf : f 1 = 1) (i : Fin (n + 1)) (v : Fin (n + 1) → A)

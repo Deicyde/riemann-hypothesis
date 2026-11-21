@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.SubDSharpInDeg
-import Formalism.LocalToGlobal.KernelLattices.ThDistC
 
 open MvPolynomial Formalism.BasicNotions Formalism.L2.DIV Formalism.L2.Ker
 

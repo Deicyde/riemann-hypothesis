@@ -1,10 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.IsEigFrames
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.BdryChart
-import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.IsPshLocallyIntegrableStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LogPeriodLimit
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.ExistsIsChart
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.IsotropicSublatticeCovolumePositiveStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.RiemannLatticeEigenProjectionStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.ExistsEigenComponentPolynomialStatement
 
@@ -22,7 +17,7 @@ theorem det_fromBlocks_factor {m n : Type} [Fintype m] [Fintype n] [DecidableEq 
       Matrix.fromBlocks 1 0 Y 1 * Matrix.fromBlocks A 0 0 M * Matrix.fromBlocks 1 X 0 1 := by
     simp [Matrix.fromBlocks_multiply]
   rw [h, Matrix.det_mul, Matrix.det_mul]
-  simp [Matrix.det_fromBlocks_zero₁₂, Matrix.det_fromBlocks_zero₂₁]
+  simp [Matrix.det_fromBlocks_zero₂₁]
 
 section Riem
 

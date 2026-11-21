@@ -1,4 +1,4 @@
-import Development.WeilBound.CoreStatements.AbelianHeightsDuality.ZarhinTrick.QiDefs
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.AbelianHeightsDuality.ZarhinTrick.KilledAnyOf
 import Development.WeilBound.CoreStatements.AbelianHeightsDuality.ZarhinTrick.QiCore
 import Development.WeilBound.CoreStatements.AbelianHeightsDuality.ZarhinTrick.PolFibreIsogAny

@@ -1,13 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.InertKernelTheory.DefsFrONB
 import Formalism.LocalToGlobal.InertKernelTheory.InertCoprimeLemmas.KappaSelfDualFourthPowerLattice
 import Formalism.LocalToGlobal.InertKernelTheory.InertCoprimeLemmas.CurveIdealPrimeReduction
 import Formalism.LocalToGlobal.InertKernelTheory.InertCoprimeLemmas.IntBasis
-import Formalism.LocalToGlobal.InertKernelTheory.StatementAlgGr
-import Formalism.LocalToGlobal.InertKernelTheory.InertCoprimeLemmas.ReBase
-import Formalism.LocalToGlobal.TorsionIntegrality.UniformGaussModels.FinalFree
 import Formalism.LocalToGlobal.TorsionIntegrality.UniformGaussModels.OrthogonalGaussModels.HermitianBlockFrames.MemLatticeFourfoldOfMemDualLattice
-import Formalism.LocalToGlobal.GlobalTheory.GL3.PHfTrace
-import Formalism.LocalToGlobal.TorsionIntegrality.EisensteinTranslationProducts.AnalyticIdentityTheorems.QuasiPeriodConstUniqueOf
 
 noncomputable section
 open scoped BigOperators ComplexConjugate
@@ -213,7 +210,7 @@ theorem rational_coordinates : RatCoord := by
       rw [e2, ← h, Finset.sum_eq_single w (fun i _ hi => by simp [Pi.single_apply, hi]) (by simp)]
       by_cases hw : w = w'
       · subst hw; simp [ha]
-      · simp [hw, Pi.single_apply, Ne.symm hw]
+      · simp [hw]
     have hemb : ∀ w i' τ, TaylorLogMetric.embT D τ (∑ m, ((c w i' m : D.host.K) : D.host.E) * b m 0 0) =
         g₁.symm (Pi.single w 1) (i', τ) := by
       intro w i' τ

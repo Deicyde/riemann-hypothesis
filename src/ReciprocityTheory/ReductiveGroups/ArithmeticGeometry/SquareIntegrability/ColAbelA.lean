@@ -1,7 +1,9 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.SplitSt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.PropASt
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.RCauchy
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.ContDiffOfDifferentiableFd
+import Mathlib.Analysis.Analytic.IteratedFDeriv
+import Mathlib.Data.Fin.Tuple.Sort
+import Mathlib.RingTheory.SimpleRing.Principal
 
 namespace ReciprocityTheory.ChartRestriction.G.I2
 

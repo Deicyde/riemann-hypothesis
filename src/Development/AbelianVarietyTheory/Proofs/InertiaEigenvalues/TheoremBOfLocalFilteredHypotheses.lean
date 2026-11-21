@@ -1,9 +1,4 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.ArcLiftingSetup
-import Formalism.SharpRestriction.LevelLetterCocycles.CrystallineLiftingBounds
-import Formalism.SharpRestriction.LevelLetterCocycles.LetterConditionGlobal
-import Formalism.GaloisCohomology.LocalTateDualityK
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.RationalDualityOfAllCoefficients
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.FrobeniusStatementOfFontaine
 open Formalism Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N
 

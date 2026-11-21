@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.IsWeight
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.BaseChangeIsomorphicFields
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EquivOfISupRange

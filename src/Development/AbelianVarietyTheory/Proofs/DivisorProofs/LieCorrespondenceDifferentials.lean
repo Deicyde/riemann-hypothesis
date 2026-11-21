@@ -1,7 +1,5 @@
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsCrystalPairing
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUniqueDetGen
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsDetGenHolUnif
 

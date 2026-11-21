@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KappaOK
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TwoLeFinrankLa
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.UPel.HT GlobalTheory.SiegelTor GlobalTheory.EndLoc
 
@@ -82,10 +85,10 @@ theorem prZ_incZ (d : ℕ) (la : A ⟶ B) (mu : B ⟶ A) : prZ A B ≫ incZ A B 
   apply zob_ext
   · intro i
     rw [Category.assoc, incZ, mkZ_pa, actZ, mkZ_pa]
-    fin_cases i <;> simp [prZ, idem, Matrix.single_apply, Fin.prod_univ_four, MonObj.comp_one]
+    fin_cases i <;> simp [prZ, idem, Matrix.single_apply, MonObj.comp_one]
   · intro j
     rw [Category.assoc, incZ, mkZ_pb, actZ, mkZ_pb]
-    fin_cases j <;> simp [prZ, idem, Matrix.single_apply, Fin.prod_univ_four, MonObj.comp_one]
+    fin_cases j <;> simp [prZ, idem, MonObj.comp_one]
 
 end Obj
 

@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatHomOfGAdSymm
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAHaarUnfoldingMeasure
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentCoordinatesInverse
@@ -34,7 +33,7 @@ theorem entry_eq_fA (σ : E →ₐ[F] E) {n : ℕ} (J : Matrix (Fin n) (Fin n) E
     (i j : Fin n) :
     (Mᵀ * incM F J * M.map (cA σ)) i j = fA σ J (M *ᵥ Pi.single i 1) (M *ᵥ Pi.single j 1) := by
   have h : (fun k => cA σ ((M *ᵥ Pi.single j 1) k)) = M.map (cA σ) *ᵥ Pi.single j 1 := by
-    funext k; simp [Matrix.mulVec_single_one]
+    funext k; simp
   rw [fA, h, ← Matrix.vecMul_transpose, ← Matrix.dotProduct_mulVec, Matrix.mulVec_mulVec, ← Matrix.mulVec_mulVec]
   rw [Matrix.mulVec_mulVec, Matrix.mulVec_mulVec, single_one_dotProduct, Matrix.mulVec_single_one]
   rfl
@@ -59,7 +58,7 @@ theorem form_swap (σ : E →ₐ[F] E) (hσ : ∀ z, σ (σ z) = z) {n : ℕ} (J
 
 theorem incM_mulVec_single {n n₁ : ℕ} (ι : Matrix (Fin n) (Fin n₁) E) (i : Fin n₁) :
     incM F ι *ᵥ Pi.single i 1 = incV F (ι *ᵥ Pi.single i 1) := by
-  funext k; simp [incM, incV, Matrix.mulVec_single_one]
+  funext k; simp [incM, incV]
 
 end GlobalTheory.IwUnitaryPart
 
@@ -88,7 +87,7 @@ theorem unitary_part : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [Num
     rw [e]
     simp only [hP, hR, GlobalTheory.IwEmb.frame, Matrix.mul_apply, Fintype.sum_sum_type, Fin.sum_univ_two, Matrix.fromCols_apply_inl,
       Matrix.fromCols_apply_inr, Matrix.of_apply, Sum.elim_inl, Sum.elim_inr, GlobalTheory.LeviElem.cols2, Matrix.cons_val_zero,
-      Matrix.cons_val_one, Matrix.head_cons, Pi.add_apply, Pi.smul_apply, smul_eq_mul, Matrix.mulVec, dotProduct]
+      Matrix.cons_val_one, Pi.add_apply, Pi.smul_apply, smul_eq_mul, Matrix.mulVec, dotProduct]
     ring
   have hRP : R * P = 1 := (Matrix.mul_eq_one_comm_of_equiv finSumFinEquiv.symm).1 hPR
   set f : E →+* AE F E := inclR (F := F) (E := E) (AF F) with hf

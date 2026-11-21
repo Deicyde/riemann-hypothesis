@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.ThetaLiftGeometry.ConjugacyRepresentativeSystems
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
 
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.L2.Col GlobalTheory.IndefiniteRowSideFullHecke.ConjugacyRepresentativeSystems
 

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.LatticeVariant
 import Formalism.SharpRestriction.LevelLetterCocycles.CurveIdealTorusProperties
 import Formalism.SharpRestriction.LevelLetterCocycles.CommutingEndomorphismPreservesInvariants
@@ -6,7 +7,8 @@ import Formalism.PadicSubsetSums.StableGradedCounts.TWReuse
 import Formalism.PadicSubsetSums.StableGradedCounts.TWHeckeDetFactors
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.CayleySignature
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.CommonEigenvectorBis
-import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.NormLeOneOfMonicRoot
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
 
 noncomputable section
 

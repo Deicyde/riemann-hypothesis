@@ -1,4 +1,18 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TailIntegrals.Imports
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -29,13 +43,13 @@ private lemma sclL_apply (τ : ℝ) (p m : ℕ) (x : Xp (p + 1) m) : sclL τ p m
     by_cases hi : i = 0
     · subst hi
       simp [fL, gL, Complex.real_smul]
-    · simp [fL, gL, hi, Function.update_apply]
+    · simp [fL, gL, hi]
   have h2 : fL τ⁻¹ p b = Function.update b 0 (b 0 / (τ : ℂ)) := by
     funext i
     by_cases hi : i = 0
     · subst hi
       simp [fL, gL, Complex.real_smul, div_eq_inv_mul]
-    · simp [fL, gL, hi, Function.update_apply]
+    · simp [fL, gL, hi]
   simp [sclL, scl, h1, h2]
 
 theorem scl_mp {p m : ℕ} (τ : ℝ) (hτ : τ ≠ 0) :

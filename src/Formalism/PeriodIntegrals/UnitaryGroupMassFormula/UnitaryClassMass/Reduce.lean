@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UJClassMass
-import Formalism.ThetaLiftIndependence.ThetaOrbitSums.LatLiftIndep
 
 open NumberField Formalism.HermitianLatticesTheory Formalism.ThetaLiftIndependence
 

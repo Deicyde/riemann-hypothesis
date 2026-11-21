@@ -1,5 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.ArithmeticGeometry.SchemeCohomology.RegularLocalDomain
+import Mathlib.AlgebraicGeometry.Modules.Sheaf
+import Mathlib.AlgebraicGeometry.Morphisms.Smooth
+import Mathlib.Combinatorics.Quiver.ReflQuiver
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.RegularLocalRing.Polynomial
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Arith.SchemeCoh

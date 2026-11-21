@@ -1,5 +1,7 @@
-import Formalism.LocalToGlobal.TorsionIntegrality.UniformGaussModels.OrthShapeOne
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.TorsionTranslationPowers.StatementN
+import Formalism.LocalToGlobal.TorsionIntegrality.GaussSumParity.StatementE
+import Formalism.LocalToGlobal.TorsionIntegrality.UniformGaussModels.IsHypPair
 
 noncomputable section
 open scoped BigOperators

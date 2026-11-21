@@ -1,8 +1,12 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.AdelicProofs.RelIndexInfEqOfMemMul
 import Development.AutomorphicSpectrum.Proofs.AdelicProofs.RelIndexRatioCocycle
 import Development.AutomorphicSpectrum.Proofs.AdelicProofs.EqOneOfPowEqLeExponent
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.ExistsIsFundamentalDomainOfRelIndexNeZero
 import Development.WeilBound.CoreStatements.EqualVolumeCompactOpens.IsIsotropicHermitianSetting
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Rat.Star
 
 namespace PositivityTheory.EqVol
 

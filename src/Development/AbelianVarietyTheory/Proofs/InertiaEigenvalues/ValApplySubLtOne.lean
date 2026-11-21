@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsIsHeckeLOfHasInf
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsValuationSubringIntegralClosureCompleteDVR
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinPartEqOneOfLevel
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.LatticeNormTransport
+import Mathlib.GroupTheory.FiniteAbelian.Duality
 
 noncomputable section
 

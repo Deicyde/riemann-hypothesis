@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StTubeCollarCompare
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PTubeFormCompare
+import Mathlib.Algebra.Ring.IsFormallyReal
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

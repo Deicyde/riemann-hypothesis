@@ -1,7 +1,7 @@
-import Mathlib
-import ReciprocityTheory.AnalyticForms.PotentialTheory.PotentialContDiffAt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.AnalyticOnNhdFinChartIff
-import Development.AbelianVarietyTheory.Definitions.Divisors.NefFibOfIsNef
+import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsClosedImmersionGenericPoint
 
 set_option autoImplicit false
 

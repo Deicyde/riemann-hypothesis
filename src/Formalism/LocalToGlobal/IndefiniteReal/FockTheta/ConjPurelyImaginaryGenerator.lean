@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.FockTheta.UnitBracket
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.CharLem
 import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.InfFam
+import Mathlib.Analysis.Calculus.FDeriv.Symmetric
 
 noncomputable section
 
@@ -657,7 +660,7 @@ theorem cont_symplOH_right (S T : HSp D) (x : WO S T) : Continuous fun y : WO S 
 
 theorem continuous_compAt {m n : ℕ} (ρ : D.what₂.Tau) : Continuous fun x : Mx D m n => compAt (Eqv.thetaC D) ρ x := by
   refine continuous_matrix fun i j => ?_
-  simp only [compAt, Matrix.of_apply, Matrix.map_apply]
+  simp only [compAt, Matrix.map_apply]
   exact (continuous_thC D ρ).comp (continuous_id.matrix_elem i j)
 
 theorem continuous_phR (v : V D T.rank S.rank) : Continuous fun x : WO S T => phR S T x v := by

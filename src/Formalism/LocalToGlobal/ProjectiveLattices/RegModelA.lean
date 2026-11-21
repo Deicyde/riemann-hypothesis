@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.RegVert
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.RegAVpt
+import Mathlib.RingTheory.Etale.Weakly
 
 namespace Formalism.L2.Pj.RegA
 

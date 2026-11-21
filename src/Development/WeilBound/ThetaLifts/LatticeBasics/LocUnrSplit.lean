@@ -1,8 +1,12 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LatticeBasics.LocUnr
 import Development.WeilBound.ThetaLifts.LatticeBasics.LocUnrSplitA
 import Development.WeilBound.ThetaLifts.LatticeBasics.LocUnrSplitL
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.NormSatakeLeOfUnitarySphericalGL
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.NormUniformiserEqInvAbsNorm
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnramifiedCharacterAtUniformizer
+import Development.WeilBound.CoreStatements.LocalThetaKernels.IwasMain
 
 noncomputable section
 
@@ -186,7 +190,7 @@ theorem locUnrSplit : LocUnrSplit := by
     let p := bd b b * (bd y 1 * κ⁻¹) * (bd b b)⁻¹
     have hp : p.1 * fromRows 𝟙 𝟙 = fromRows 𝟙 𝟙 * (b * t * b⁻¹).1 := by
       have : ((bd b b)⁻¹).1 * fromRows 𝟙 𝟙 = fromRows 𝟙 𝟙 * (b⁻¹).1 := by
-        simp only [bd_inv, Matrix.fromBlocks_mul_fromRows, Matrix.fromRows_mul, Matrix.mul_one, Matrix.one_mul, Matrix.zero_mul,
+        simp only [bd_inv, Matrix.fromBlocks_mul_fromRows, Matrix.fromRows_mul, Matrix.mul_one, Matrix.one_mul,
           add_zero, zero_add]
       simp only [p, Units.val_mul, Matrix.mul_assoc, this]
       rw [← Matrix.mul_assoc (κ⁻¹).1, hκ]
@@ -227,7 +231,7 @@ theorem locUnrSplit : LocUnrSplit := by
       exact (inv_le_one₀ (norm_pos_iff.2 (Units.ne_zero _))).1 this
     have dp : GeneralLinearGroup.det t' = GeneralLinearGroup.det t * (GeneralLinearGroup.det y⁻¹ * GeneralLinearGroup.det κ) := by
       have : GeneralLinearGroup.det (bd y 1) = GeneralLinearGroup.det y := Units.ext (by
-        simp [bd_val, Matrix.det_fromBlocks_zero₂₁])
+        simp [bd_val])
       rw [dt]
       simp only [p, map_mul, map_inv, this, mul_inv_cancel_comm, mul_inv, inv_inv]
     have hk : Λ₂ (bd b b * κ * (bd b b)⁻¹) ∈ K := Inert.mem_K hK (by

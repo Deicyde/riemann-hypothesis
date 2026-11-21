@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Divisibility.LinkDef
-import Formalism.AdicCompletionExports.NonnegativeDivisors.Imports
 import Formalism.SharpRestriction.GlobalTheoremInputs
 import Formalism.LocalToGlobal.NormalizedHeckeFactors.CoverAct
 

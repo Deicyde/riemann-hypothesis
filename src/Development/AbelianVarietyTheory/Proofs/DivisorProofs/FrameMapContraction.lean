@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrameAtApply
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DbarAddVectorScalar
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExtMapComp
 open Matrix MeasureTheory Set Filter Topology GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe GlobalTheory.TorsionForm GlobalTheory.TorsionForm.Gauge
 open scoped ContDiff
@@ -41,14 +40,14 @@ theorem contr_wedge (k i : Fin m) (w : Ext m) :
   by_cases hk : k ∈ S
   · by_cases hi : i ∈ S <;> simp [hk, hi, hki]
   by_cases hi : i ∈ S
-  · simp only [hk, hi, if_false, if_true, or_true, and_true, Ne.symm hki, false_and, ne_eq, not_false_eq_true,
+  · simp only [hk, hi, if_false, if_true, or_true, Ne.symm hki, ne_eq,
       and_false]
     rw [Finset.erase_insert_of_ne hki]
     rcases lt_or_gt_of_ne hki with h | h
     · rw [sgn_insert_of_lt hk h, sgn_erase_of_not_lt (not_lt.2 h.le)]; ring
     · rw [sgn_insert_of_not_lt (not_lt.2 h.le), sgn_erase_of_lt hi h]; ring
   · have hik : i ≠ k := Ne.symm hki
-    simp [hk, hi, hki, hik]
+    simp [hk, hi, hik]
 
 theorem contr_wedgeVec (k : Fin m) (v : Fin m → ℂ) (w : Ext m) :
     contr k (wedgeVec v w) = v k • w - wedgeVec v (contr k w) := by
@@ -130,7 +129,7 @@ theorem frame_scalar {g : ℕ} (n : ℕ) (D : Matrix (Fin g) (Fin g) ℂ) (hD : 
         star (∑ a, D d a * D⁻¹ a c) := by
       rw [star_sum]
       refine Finset.sum_congr rfl fun a _ => ?_
-      simp [fibMat, dzb, Matrix.reindex_apply, finSumFinEquiv_symm_apply_natAdd, mul_comm]
+      simp [fibMat, dzb, Matrix.reindex_apply, finSumFinEquiv_symm_apply_natAdd]
     rw [e, hmul]
     by_cases hdc : d = c
     · subst hdc; simp [dzb]

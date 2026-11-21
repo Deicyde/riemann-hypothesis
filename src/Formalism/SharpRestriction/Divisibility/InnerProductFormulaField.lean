@@ -1,14 +1,7 @@
-import Mathlib
-import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
-import Formalism.LocalRingCardinality.DataParams₂
-import Formalism.LocalRingCardinality.DataDIV
-import Formalism.LocalRingCardinality.DataTheta
-import Formalism.LocalRingCardinality.DataKap
-import Formalism.SharpRestriction.Divisibility.SchurIrreducible
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.ZetaProductPairs
-import Formalism.SharpRestriction.Divisibility.PrimeDegreeVariant
 import Formalism.SharpRestriction.CuspSpanNormBounds.CayleySignature
-import Formalism.SharpRestriction.ParamsHeightRankConstant
 
 noncomputable section
 

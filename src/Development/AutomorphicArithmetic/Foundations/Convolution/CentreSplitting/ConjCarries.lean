@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.DefsTw
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.ExSummand
 import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.TwCls
 import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.TwUnitary

@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.HasSupportOfIsSubquotientProdIrr
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.NonemptyEquivMultiProdOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsIrreducibleIffOfLinearEquiv
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 open GlobalTheory.PRep GlobalTheory.SmGL GlobalTheory.SplitWeil ValuativeRel Matrix
 open scoped TensorProduct
@@ -120,7 +121,7 @@ theorem modExp_inl (i : β₀) : modExp m (toLex (Sum.inl i)) =
     modExp (fun i => m (toLex (Sum.inl i))) i + Fintype.card (Σ j, m (toLex (Sum.inr j))) := by
   simp only [modExp, Finset.sum_filter, Fintype.card_sigma, Nat.cast_sum]
   rw [sum_lex, sum_lex]
-  simp [Sum.Lex.inl_lt_inl_iff, Sum.Lex.not_inr_lt_inl]
+  simp
   ring
 
 omit [∀ c, DecidableEq (m c)] in
@@ -128,7 +129,7 @@ theorem modExp_inr (j : β₁) : modExp m (toLex (Sum.inr j)) =
     modExp (fun j => m (toLex (Sum.inr j))) j - Fintype.card (Σ i, m (toLex (Sum.inl i))) := by
   simp only [modExp, Finset.sum_filter, Fintype.card_sigma, Nat.cast_sum]
   rw [sum_lex, sum_lex]
-  simp [Sum.Lex.inr_lt_inr_iff, Sum.Lex.not_inr_lt_inl]
+  simp
   ring
 
 end Lex

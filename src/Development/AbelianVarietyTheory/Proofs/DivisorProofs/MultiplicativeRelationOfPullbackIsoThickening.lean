@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsThickId
-import Development.AbelianVarietyTheory.Definitions.Divisors.SameIdIff
 open CategoryTheory CategoryTheory.Limits AlgebraicGeometry MonoidalCategory CartesianMonoidalCategory MonObj
 open scoped TensorProduct
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.CatCoh GlobalTheory.Cris GlobalTheory.CechDR GlobalTheory.CechPic GlobalTheory.AbDual GlobalTheory.Obs GlobalTheory.LBLift
@@ -178,7 +179,7 @@ theorem mulRel_of_iso : ∀ (R : Type) [CommRing R] (I : Ideal R), I ^ 2 = ⊥ �
     have emp : (i'.app t'.unop.1.1.1).hom (mp (quadW i L φ₀ φ₁ φ₂ ⋙ OAff s') a (v t)) =
         (res (hV.trans (hc t)) (w.s (c t))).val := by
       have n := congrArg (fun q ↦ q.hom (v t)) (i'.naturality (homOfLE hWle).op)
-      simp only [CommRingCat.hom_comp, RingHom.comp_apply] at n
+      simp only [CommRingCat.hom_comp] at n
       refine n.trans ?_
       show (Y₀.presheaf.map _).hom ((i'.app t.unop.1.1.1).hom (v t)) = _
       rw [hv t]

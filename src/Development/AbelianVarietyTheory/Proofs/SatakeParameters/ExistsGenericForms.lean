@@ -1,12 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.FRatioSelf
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsAffCoverSpec
-import Development.AbelianVarietyTheory.Definitions.Divisors.ComparisonMemCechHodgeFiltration
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.RingKrullDimLeOfQuasiFinite
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.AbProj
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ExistsCotangentBasis
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.AlgebraMapBasicOpen
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.FRatioLinear
+import Development.AbelianVarietyTheory.Definitions.Divisors.DetJacMatCoordsEqTransitionJacobianDet
 
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory GlobalTheory.CechDR GlobalTheory.PD
 
@@ -117,7 +112,7 @@ theorem Lm_apply (hp : ι ≫ PSpace.str ℂ N = p) (c : Fin (N + 1) → ℂ) :
     fRatio_linear X p N ι hp g₀ hg₀ c (lin_mem c)
   rw [hfr]
   congr 1
-  simp only [vv, smul_sub, Finset.sum_sub_distrib, map_sum, ev₀_smul, map_mul, Algebra.smul_def,
+  simp only [vv, Finset.sum_sub_distrib, map_sum, map_mul, Algebra.smul_def,
     ev₀_algebraMap, mul_sub]
 
 end Cot

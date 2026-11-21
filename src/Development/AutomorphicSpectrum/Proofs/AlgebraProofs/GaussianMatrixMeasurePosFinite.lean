@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.IsScaleStable
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.PLeadBlockGaussTail
 

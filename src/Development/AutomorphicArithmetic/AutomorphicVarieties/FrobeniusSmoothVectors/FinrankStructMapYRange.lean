@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.FrobeniusSmoothVectors.StrYMap
 import Development.AutomorphicArithmetic.AutomorphicVarieties.FrobeniusSmoothVectors.Imports
+import Mathlib.RingTheory.SimpleRing.Principal
 
 open IsLocalRing Matrix UpperTheory.V.Alg UpperTheory.V.U3 UpperTheory.V.Fr
 
@@ -78,7 +80,7 @@ theorem UpperTheory.V.Fr.finrank_structMapY_range :
         rw [key]
         simp only [xf, Frame.loc2, if_true, MonoidHom.comp_apply]
         rw [hcv, ← hc, hβ' s⁻¹]
-        simp only [map_inv, inv_inv, Units.val_inv_eq_inv_val, smul_eq_mul]
+        simp only [map_inv, inv_inv, smul_eq_mul]
         field_simp
         ring
   let φ : F.strY k →ₗ[k] Z1C F.loc2 ρ (fun _ => ⊥) :=

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.AutomorphicTheory.SchurLimitBounds.ZuckermanDuality.Assemble
 import CompanionTheory.AutomorphicTheory.BesselSmoothness.BesselSmoothOf
 import CompanionTheory.AutomorphicTheory.BesselWaveGrids.EqShift

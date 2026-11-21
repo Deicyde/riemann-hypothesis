@@ -1,8 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasDivPlace
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsHeckeMap
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PowEqPowOfModEqSim
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeckeSubAFiniteFree
+import Development.AbelianVarietyTheory.Definitions.ModuliSpaces.IsGaloisCover
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 noncomputable section
 

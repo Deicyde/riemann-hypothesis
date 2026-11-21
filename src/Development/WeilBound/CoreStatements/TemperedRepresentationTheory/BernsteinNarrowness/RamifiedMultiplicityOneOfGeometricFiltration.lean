@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.GeometricLemmaFiltration
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Imports
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.KCoinvOfNarrow

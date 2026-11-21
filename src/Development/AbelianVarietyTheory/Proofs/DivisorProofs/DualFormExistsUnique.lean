@@ -1,5 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DTermOrigin
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.DefiningCoordinates
+import Mathlib.Algebra.Module.StablyFree.Basic
 open NumberField IsDedekindDomain GlobalTheory.CMVal GlobalTheory.IndefiniteRowSideFullHecke.DefiningCoordinates GlobalTheory.DeformedSum
 
 noncomputable section
@@ -134,6 +136,6 @@ theorem dualForm_existsUnique : ∀ (E : Type) [Field E] [NumberField E] [IsCMFi
     apply LinearMap.ext_basis cb cb
     intro i j
     rw [Matrix.toLinearMap₂_apply_basis, clBasis_apply, clBasis_apply, hB']
-    simp [Gc, gram_apply, b]
+    simp [Gc, gram_apply]
 
 end GlobalTheory.DualFormExists

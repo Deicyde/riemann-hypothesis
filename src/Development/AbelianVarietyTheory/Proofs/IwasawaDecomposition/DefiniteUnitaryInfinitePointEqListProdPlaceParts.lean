@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ContinuousMapPFin
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsContinuousRetractionOntoUnitaryArchimedean
 
 noncomputable section
@@ -17,7 +17,7 @@ theorem list_prod_map_mulSingle {ι M : Type} [DecidableEq ι] [Monoid M] (w : �
     by_cases hi : i = w
     · subst hi
       simp [h.1]
-    · simp [Pi.mulSingle_apply, hi, Ne.symm hi]
+    · simp [hi, Ne.symm hi]
 
 variable {E : Type} [Field E] [NumberField E] [IsCMField E] {n : ℕ}
 

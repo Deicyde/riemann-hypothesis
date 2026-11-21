@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.AtTOwedU
+import Formalism.LocalToGlobal.Columns.ScaledRamifiedLattice
 
 open NumberField IsDedekindDomain Module
 
@@ -266,7 +268,7 @@ theorem UG_DG_comm {P P' : ST} (hP : MoveHyp ST SG P) (hP' : MoveHyp ST SG P') (
     (hq2' : q' ∉ P'.1.asIdeal ^ 2) : UG C Λ P q * DG C Λ P' q' = DG C Λ P' q' * UG C Λ P q := by
   refine LinearMap.ext fun φ => Subtype.ext (funext fun d => ?_)
   simp only [Module.End.mul_apply, UG, DG, DaG, LocOp.op, LocOp.app, LocOp.ofNbr, LinearMap.coe_mk, AddHom.coe_mk]
-  simp only [Finsupp.sum_indicator_index, LinearMap.zero_apply, implies_true, Finset.sum_attach,
+  simp only [Finsupp.sum_indicator_index, LinearMap.zero_apply, implies_true,
     LinearMap.id_apply]
   exact DecoSet.sum_up_dn hP hP' hne hq hq2 hq' hq2' d (fun e => φ.1 e)
 

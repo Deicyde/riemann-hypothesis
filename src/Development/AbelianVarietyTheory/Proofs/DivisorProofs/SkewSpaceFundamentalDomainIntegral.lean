@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUnipotentFundamentalDomain
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicPairDecomposition
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecondConfigurationUnramifiedIdentity
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MeasureFundDomLtTopSmul
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPurelyImaginaryElement
@@ -168,7 +166,7 @@ private theorem det_ne_zero_of_cartan (B : Base F E) {n : ℕ} (Y : Spc F E n)
     ext i
     have := congrArg τ (congrFun hJv i)
     simp only [Matrix.mulVec, dotProduct, map_sum, map_mul, Pi.zero_apply, map_zero] at this
-    simp only [M, v', Matrix.smul_mulVec, Matrix.mulVec, dotProduct, Matrix.map_apply, Pi.smul_apply, smul_eq_mul,
+    simp only [M, v', Matrix.mulVec, dotProduct, Matrix.map_apply, smul_eq_mul,
       Pi.zero_apply, Matrix.smul_apply, mul_assoc, ← Finset.mul_sum, this, mul_zero]
   have hx : star v' ≠ 0 := fun h => hv' (by simpa using congrArg star h)
   have := (h w).2.2 (star v') hx

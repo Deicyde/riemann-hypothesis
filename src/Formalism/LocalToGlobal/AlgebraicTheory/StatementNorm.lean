@@ -1,4 +1,5 @@
-import Formalism.LocalToGlobal.AlgebraicTheory.StatementC
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.TorsionIntegrality.GaussianEigenFrames.StatementC
 
 noncomputable section
 open scoped BigOperators

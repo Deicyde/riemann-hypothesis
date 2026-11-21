@@ -1,6 +1,6 @@
-import Mathlib
-import Formalism.WeaklyAdmissibleFiltrations.Statement
-import Formalism.CoboundaryTransfers.Statement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.DataNLoc
 
 noncomputable section

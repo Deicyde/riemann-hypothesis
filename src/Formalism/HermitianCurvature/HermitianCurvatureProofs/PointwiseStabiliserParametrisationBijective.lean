@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.MemParahoricTimesPrincipalCongruenceIff
+import Mathlib.Data.Matrix.ColumnRowPartitioned
+import Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Card
+import Std.Tactic.BVDecide.Normalize.Prop
 
 set_option linter.unusedSimpArgs false
 set_option linter.unusedVariables false

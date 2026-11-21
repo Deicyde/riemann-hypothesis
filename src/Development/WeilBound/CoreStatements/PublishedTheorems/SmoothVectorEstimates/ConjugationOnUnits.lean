@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PublishedTheorems.SmoothVectorEstimates.MirabolicColumnBlock
+import Mathlib.Analysis.Calculus.ContDiff.Convolution
+import Mathlib.Topology.UniformSpace.Uniformizable
 
 noncomputable section
 

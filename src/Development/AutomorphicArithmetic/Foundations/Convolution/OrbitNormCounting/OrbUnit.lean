@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.OrbitNormCounting.NormCount
 
 open NumberField IsDedekindDomain Matrix Polynomial Filter

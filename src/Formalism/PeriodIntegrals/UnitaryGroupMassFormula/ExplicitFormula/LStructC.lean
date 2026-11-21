@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ExplicitFormula.GoodHeightExists
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ExplicitFormula.LStructA
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ExplicitFormula.LStructB
 

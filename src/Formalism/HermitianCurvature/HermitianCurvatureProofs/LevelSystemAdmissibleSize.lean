@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutMP2
+import Mathlib.Data.Int.Star
 
 open Formalism.FourierDecayAlt
 

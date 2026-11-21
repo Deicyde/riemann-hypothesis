@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementU
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BetaSesquilinearity
 
 open Matrix MvPolynomial
 open scoped ComplexConjugate

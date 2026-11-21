@@ -1,5 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ExistsIsHaarMeasureSUJ
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Data.Fin.Tuple.Sort
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open MeasureTheory Matrix Finset Formalism.MainNotions.S Formalism.REAL Formalism.QuantumDeterminants GlobalTheory.Dec GlobalTheory.DSId GlobalTheory.DSSU
 open scoped InnerProductSpace
@@ -48,14 +53,14 @@ lemma val_eq_rank {n : ℕ} (κ : Fin n → ℕ) (hκ : Function.Injective κ) (
   rw [← Fin.card_Iio (f a)]
   refine Finset.card_nbij' (fun i => f.symm i) (fun b => f b) ?_ ?_ ?_ ?_
   · intro i hi
-    simp only [Finset.coe_Iio, Set.mem_Iio, Finset.mem_Iio] at hi
-    simp only [Finset.coe_filter, Finset.mem_filter, Finset.mem_univ, true_and, Set.mem_setOf_eq]
+    simp only [Finset.coe_Iio, Set.mem_Iio] at hi
+    simp only [Finset.coe_filter, Finset.mem_univ, true_and, Set.mem_setOf_eq]
     rw [← hiff]
     simpa using hi
   · intro b hb
-    simp only [Finset.coe_filter, Finset.mem_filter, Finset.mem_univ, true_and,
+    simp only [Finset.coe_filter, Finset.mem_univ, true_and,
       Set.mem_setOf_eq] at hb
-    simp only [Finset.coe_Iio, Set.mem_Iio, Finset.mem_Iio]
+    simp only [Finset.coe_Iio, Set.mem_Iio]
     exact (hiff b).mpr hb
   · intro i _
     simp

@@ -1,15 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ReadsMove
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.AdmissibleBasePointUnitaryNormalisesLevelStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.InclMulInvMul
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TrueColumnSpacesStandardInFrameCoords
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ChartLevelTwistTrivialLocalMove
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.BaseFieldsDefiniteLaws
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.AfsplitC
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Afsplit
-import Formalism.LocalToGlobal.Columns.RecLevel
-import Formalism.LocalToGlobal.Columns.RecLevelLocP
-import Formalism.LocalToGlobal.Columns.RecLevelStep
 
 noncomputable section
 

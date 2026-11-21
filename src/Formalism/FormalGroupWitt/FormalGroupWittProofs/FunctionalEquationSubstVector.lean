@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.FormalGroupWitt.FormalGroupWittProofs.IntegralSubstVector
 import Formalism.TorsionNormIteration.InverseIntegralClasses.SigmaNormLeOne
 import Formalism.TorsionNormIteration.InverseIntegralClasses.MemSpanOfNormLe

@@ -1,4 +1,10 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.GL4.FockSelfImEqZero
+import Formalism.BranchSandwichDivisors.BranchIsometryProofs.BranchMap
+import Formalism.BranchSandwichDivisors.BranchIsometryProofs.BranchScale
+import Formalism.LocalToGlobal.GlobalTheory.GL4.BranchingLinkFamilyNormalised
+import Formalism.LocalToGlobal.GlobalTheory.GL4.ColAddGenCastSuccRename
+import Formalism.LocalToGlobal.GlobalTheory.GL4.InitMinorIdEqLpMinor
 
 noncomputable section
 
@@ -189,7 +195,7 @@ theorem xiB_ne_zero {n : ℕ} (lam sg : Fin n → ℕ) : Formalism.BranchingDete
     have hb := b.isLt
     have hi := i.isLt
     unfold Formalism.BranchingDeterminantCap.rowsB at this
-    split_ifs at this with h1 h2 h2 <;> simp only [Fin.val_last, Fin.val_mk] at this <;> omega
+    split_ifs at this with h1 h2 h2 <;> simp only [Fin.val_last] at this <;> omega
   exact mul_ne_zero (pow_ne_zero _ (initMinor_ne_zero _ hA _)) (pow_ne_zero _ (initMinor_ne_zero _ hB _))
 
 theorem weylProd_eq_dimV {N : ℕ} (nu : Fin (N + 1) → ℤ) : Formalism.BranchingDeterminantCap.weylProd nu = dimV nu := by

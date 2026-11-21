@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.InterPolyProdSum
+import Mathlib.Algebra.MvPolynomial.Coeff
 
 set_option autoImplicit false
 
@@ -20,7 +22,7 @@ theorem topCoeff_pow {n : ℕ} (K : Matrix (Fin n) (Fin n) ℂ) :
   refine Finset.sum_congr rfl fun w _ => ?_
   have hv (x : Fin n × Fin n) : (∑ a, Finsupp.single (a, w a) 1 : Fin n × Fin n →₀ ℕ) x = if w x.1 = x.2 then 1 else 0 := by
     obtain ⟨a, b⟩ := x
-    rw [Finsupp.finsetSum_apply, Finset.sum_eq_single a (fun c _ hc => by simp [Finsupp.single_apply, hc]) (by simp)]
+    rw [Finsupp.finsetSum_apply, Finset.sum_eq_single a (fun c _ hc => by simp [hc]) (by simp)]
     simp [Finsupp.single_apply]
   have hs : ∑ x, (∑ a, Finsupp.single (a, w a) 1 : Fin n × Fin n →₀ ℕ) x = n := by
     simp only [hv, Fintype.sum_prod_type, Finset.sum_ite_eq, Finset.mem_univ, if_true]
@@ -104,7 +106,7 @@ def ofDivisor (Δ : X.Dv) : Fr (ratOf X) (fun _ : Unit => 1) 0 where
     have e (i j) : (A * (fun _ => Matrix.diagonal fun _ => (g : X.Fn)⁻¹ : Mat (fun _ : Unit => 1) X.Fn)⁻¹) () i j =
         A () 0 0 * g := by
       rw [Subsingleton.elim i 0, Subsingleton.elim j 0]
-      simp [Matrix.mul_apply, Matrix.inv_def]
+      simp [Matrix.mul_apply]
     refine (hg z' hz').generatesAt_iff.trans ⟨fun h _ => ⟨fun i j => ?_, ?_, ?_, fun i j hi => absurd hi (by simp)⟩,
       fun h => ?_⟩
     · rw [e]; exact mem_O_ratOf.2 h.regAt
@@ -120,6 +122,6 @@ theorem isGraded_ofDivisor (Δ : X.Dv) : IsGraded (lineFlag (ofDivisor Δ)) fun 
   refine ⟨fun _ => Matrix.diagonal fun _ => (g : X.Fn)⁻¹, CartierDiv.isEqn_iff_generatesAt_inv.1 hg, g, ?_, hg⟩
   obtain ⟨⟨⟩, i⟩ := x
   rw [Subsingleton.elim i 0]
-  simp [Matrix.inv_def]
+  simp
 
 end GlobalTheory.GoodMetric

@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.AdmissibleDesigns.FiniteClassesContinuousLattice
-import Formalism.AdmissibleDesigns.LengthSemilinear
 
 variable [hT2Core : Fact ReciprocityTheory.ChartRestriction.T2.Core]
 

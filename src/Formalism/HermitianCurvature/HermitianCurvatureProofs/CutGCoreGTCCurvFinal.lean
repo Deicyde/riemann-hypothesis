@@ -1,4 +1,4 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGCoreGTCCurvCut
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGCoreGTCCurvPoly
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGCoreGTCCurvScal
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGCoreGTCCurvRTT

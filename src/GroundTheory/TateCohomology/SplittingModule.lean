@@ -1,9 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.TateCohomology.PullbackExtension
 import GroundTheory.TateCohomology.AugTrivial
 import GroundTheory.TateCohomology.DeltaMap
-import GroundTheory.TateCohomology.DimensionShift
-import GroundTheory.TateCohomology.TateConnecting
 set_option maxSynthPendingDepth 1
 
 open CategoryTheory Limits groupCohomology Rep

@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.GelfandTsetlinLowering.LiftTupleM
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -116,7 +120,7 @@ theorem sum_shape_lt {n K : ℕ} (sz : Fin K → ℕ) (hsz : ∀ k, sz k ≤ n) 
     rw [← card_filter_fin_val_lt' (n := n) (c := min t (sz k)) (le_trans (min_le_left _ _) ht)]
     apply congrArg Finset.card
     ext a
-    simp [lt_min_iff]
+    simp
   simp only [e]
   simp only [Finset.card_eq_sum_ones, Finset.sum_filter]
   rw [Finset.sum_comm]
@@ -205,7 +209,7 @@ theorem count_succ {n K : ℕ} (sz : Fin K → ℕ) (hsz : ∀ k, sz k ≤ n) (s
     (Finset.univ.filter fun k => sz k = s.1 + 1).card = shapeDeg sz s - nuNext (shapeDeg sz) s := by
   unfold nuNext shapeDeg
   split_ifs with h
-  · try simp only [Fin.val_mk]
+  · try simp only
     have hsub : (Finset.univ.filter fun k : Fin K => s.1 + 1 < sz k) ⊆ Finset.univ.filter fun k : Fin K => s.1 < sz k := by
       intro k hk
       simp only [Finset.mem_filter, Finset.mem_univ, true_and] at hk ⊢

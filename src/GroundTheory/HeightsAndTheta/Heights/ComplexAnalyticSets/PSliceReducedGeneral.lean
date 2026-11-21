@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceReducedGeneral
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceUnmixedGeneral
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceReducedAway
+import Mathlib.RingTheory.Ideal.AssociatedPrime.Localization
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.TheoremA
 import ReciprocityTheory.SemistableReduction.AlgAll
+import Mathlib.RingTheory.Valuation.LocalSubring
 
 namespace PI.HtPlacesSumWork
 

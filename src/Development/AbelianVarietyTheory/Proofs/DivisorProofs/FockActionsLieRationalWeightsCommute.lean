@@ -1,4 +1,4 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.ActAtApply
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockActDualPairCommutingLieActions
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockPolynomialsLocallyFiniteRationalWeights
 open scoped TensorProduct

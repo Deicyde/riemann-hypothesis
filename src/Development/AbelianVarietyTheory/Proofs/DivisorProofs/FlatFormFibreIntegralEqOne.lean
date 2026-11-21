@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SiegelReframe
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PeriodMapFlatDerivativeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WedgePowerEqFactorialDetStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VolumePeriodTorusEqDetImaginaryStatement
@@ -44,7 +43,7 @@ theorem riem_flatOf_single {g : ℕ} (τ0 : Matrix (Fin g) (Fin g) ℂ) (hs : τ
     have e : riem (Sum.elim a (-(a ᵥ* X))) (Sum.elim c (-(c ᵥ* X))) =
         -((a ᵥ* X) ⬝ᵥ c) + (c ᵥ* X) ⬝ᵥ a := by
       simp only [riem, Sum.elim_inl, Sum.elim_inr, Pi.neg_apply, dotProduct,
-        ← Finset.sum_neg_distrib, ← Finset.sum_add_distrib, ← Finset.sum_sub_distrib]
+        ← Finset.sum_neg_distrib, ← Finset.sum_add_distrib]
       exact Finset.sum_congr rfl fun k _ => by ring
     have e2 : (c ᵥ* X) ⬝ᵥ a = (a ᵥ* X) ⬝ᵥ c := by
       rw [← Matrix.dotProduct_mulVec c, dotProduct_comm, ← Matrix.vecMul_transpose, hX.eq]

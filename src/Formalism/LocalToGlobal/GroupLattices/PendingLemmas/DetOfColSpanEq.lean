@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.FormalGroupSystem
 import Formalism.SharpRestriction.GrowthBounds.ScaleEdges.EdgePlane
 
@@ -98,7 +100,7 @@ theorem exists_mul_of_le {k : ℕ} (g g' : Matrix (Fin k) (Fin k) Qq) (h : colSp
   refine Matrix.ext fun r c => ?_
   rw [Matrix.mul_apply]
   have h1 := congrFun (ha c) r
-  simp only [Finset.sum_apply, Pi.smul_apply, Algebra.smul_def] at h1
+  simp only [Finset.sum_apply, Algebra.smul_def] at h1
   rw [← h1]
   refine Finset.sum_congr rfl fun i _ => ?_
   simp [Matrix.of_apply, Matrix.map_apply, mul_comm]

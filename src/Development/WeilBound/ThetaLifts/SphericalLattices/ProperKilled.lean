@@ -1,4 +1,5 @@
-import Development.WeilBound.ThetaLifts.SphericalLattices.HoweInert
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HoweDualityUnitary
 
 noncomputable section
 

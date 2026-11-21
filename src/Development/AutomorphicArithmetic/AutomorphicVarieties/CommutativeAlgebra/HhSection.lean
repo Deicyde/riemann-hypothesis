@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.FramedTwoCoboundaries
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.ContSection
 open IsLocalRing MvPowerSeries UpperTheory.V.Alg

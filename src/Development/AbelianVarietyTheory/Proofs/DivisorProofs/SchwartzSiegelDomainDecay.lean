@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTorusUOne
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsSmoothModerateOfIsAutFunSm
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MajINonneg
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsModelBlocksUnitaryFrameStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryFrameModelEvaluationStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryFrameModelVacuumStatement

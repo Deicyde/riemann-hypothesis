@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.BesselHermitianTheta.AllTied
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.NotTrivialAndTwist
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.BlockOrderedSquareIntegrable
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.HaarUpqEqOfOmegaDensity

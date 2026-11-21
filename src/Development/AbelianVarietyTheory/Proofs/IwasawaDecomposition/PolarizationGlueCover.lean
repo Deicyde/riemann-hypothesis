@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Counterexamples.JetSurvey.NotIsProjOverAffineLine
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PhiDivisorArcBlowup
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsChartOf
 open AlgebraicGeometry CategoryTheory Limits NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory GlobalTheory.ShFam GlobalTheory.LocM GlobalTheory.TorRef
 
@@ -26,7 +25,7 @@ theorem isPhiDiv_of_openCover : ∀ {E : Type} [Field E] [NumberField E] [IsCMFi
     obtain ⟨z, hz⟩ := hgen ⟨y, rfl⟩
     refine ⟨z, (u i).isOpenEmbedding.injective ?_⟩
     rw [← Scheme.Hom.comp_apply, hj i, hz]
-    simp [Scheme.Hom.comp_apply]
+    simp
   obtain ⟨n, hn, hid⟩ := hphi i W hW ϖ hϖ χ' t m' P hgen' be hbe hmon
   refine ⟨n, hn, ?_⟩
   rw [← idlAlong_comap, hcomap i, hid]

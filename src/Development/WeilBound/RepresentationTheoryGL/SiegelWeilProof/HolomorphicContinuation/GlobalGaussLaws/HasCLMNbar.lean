@@ -1,6 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.GlobalGaussLaws.GenOps
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.GlobalGaussLaws.ReTraceEq
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.GlobalGaussLaws.AwayFact
+import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.GlobalGaussLaws.OpGenA
+import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.GlobalGaussLaws.OpGenOf
 
 noncomputable section
 
@@ -98,7 +102,7 @@ theorem hasCLM_nbar (hU : UnipTau) (hW : WEx) (hS : SchOps) (hF : FTfact) (hl0 :
   have hFT1 : ∀ S u, FT1 S u = κ * ftLoc ε (tLoc l τ) S u := by
     intro S u
     rw [h1]
-    simp only [FT1, ContinuousLinearMap.coe_smul', ContinuousLinearMap.coe_comp', Function.comp_apply, Pi.smul_apply,
+    simp only [FT1, ContinuousLinearMap.coe_comp', Function.comp_apply,
       SchwartzMap.smul_apply, SchwartzMap.compCLMOfContinuousLinearEquiv_apply, SchwartzMap.fourierTransformCLM_apply,
       smul_eq_mul]
     push_cast
@@ -106,7 +110,7 @@ theorem hasCLM_nbar (hU : UnipTau) (hW : WEx) (hS : SchOps) (hF : FTfact) (hl0 :
   have hFT2 : ∀ S u, FT2 S u = κ⁻¹ * ftLoc ε (-tLoc l τ) S u := by
     intro S u
     rw [h2]
-    simp only [FT2, ContinuousLinearMap.coe_smul', ContinuousLinearMap.coe_comp', Function.comp_apply, Pi.smul_apply,
+    simp only [FT2, ContinuousLinearMap.coe_comp', Function.comp_apply,
       SchwartzMap.smul_apply, SchwartzMap.compCLMOfContinuousLinearEquiv_apply, SchwartzMap.fourierTransformCLM_apply,
       smul_eq_mul]
     push_cast
@@ -119,8 +123,8 @@ theorem hasCLM_nbar (hU : UnipTau) (hW : WEx) (hS : SchOps) (hF : FTfact) (hl0 :
   rw [hform Ψ hΨ (⇑S) ⟨S, rfl⟩]
   congr 1
   funext u
-  simp only [ContinuousLinearMap.coe_restrictScalars', ContinuousLinearMap.coe_smul', ContinuousLinearMap.coe_comp',
-    Function.comp_apply, Pi.smul_apply, SchwartzMap.smul_apply, smul_eq_mul, hFT1]
+  simp only [ContinuousLinearMap.coe_restrictScalars', ContinuousLinearMap.coe_comp',
+    Function.comp_apply, SchwartzMap.smul_apply, smul_eq_mul, hFT1]
   congr 3
   funext v
   rw [hEm, hFT2]

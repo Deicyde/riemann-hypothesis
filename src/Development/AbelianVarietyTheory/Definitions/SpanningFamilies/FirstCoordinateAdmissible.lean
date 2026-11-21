@@ -1,7 +1,14 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.Signature
-import ReciprocityTheory.GeometryOfNumbers.LatticeCovolumes.InhabSt
 import Development.AbelianVarietyTheory.Definitions.SpanningFamilies.IMemSiegel
+import Mathlib.Algebra.GroupWithZero.Submonoid.CancelMulZero
+import Mathlib.LinearAlgebra.SymplecticGroup
+import Mathlib.NumberTheory.NumberField.Discriminant.Defs
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Matrix Complex NumberField
 open scoped ComplexConjugate ComplexOrder
@@ -360,7 +367,7 @@ theorem mem_stdL {m : ℕ} (x : Fin m → E) : x ∈ stdL E m ↔ ∀ a, IsInteg
 theorem herm_one {m : ℕ} (x y : Fin m → E) : herm 1 x y = ∑ a, x a * cc (y a) := by
   unfold herm
   refine Finset.sum_congr rfl fun a _ => ?_
-  rw [Finset.sum_eq_single a] <;> simp +contextual [Matrix.one_apply, eq_comm]
+  rw [Finset.sum_eq_single a] <;> simp +contextual [eq_comm]
 
 theorem stdL_mem_Vset (n M : ℕ) : stdL E n ∈ Vset E n M := by
   refine ⟨Submodule.fg_span (Set.finite_range _), fun x => ⟨fun hx y hy => ?_, fun h => ?_⟩,

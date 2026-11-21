@@ -1,22 +1,12 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.NormalFam
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.HoweUnram
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsStepWeil
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsNormLeHeightPow
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinRepApply
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DimPartsAtIffBadAndOff
-import Formalism.LocalToGlobal.IndefiniteReal.CutTuples2
-import Formalism.LocalToGlobal.Divisibility.ProjLemmas
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SumCoeffChiIdemMul
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCuspProdCharTransport
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCuspIndProdCharOfIsProdCuspChar
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLabelsSemisimpleParameterGLFiniteField
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GreenCuspidalCharIsCuspidalOfMinpolyOfParam
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PrimeToPartFrob
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlockTriangularPrimitiveCharacters
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GoodCharsGoodFamilyOfProductIrreducible
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.TraceCompLeftFunLeft
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ThetaOfPow
 
 noncomputable section
 
@@ -34,7 +24,7 @@ theorem sum_character_eq_zero_iff {G V : Type} [Group G] [Fintype G] [AddCommGro
   have h := ρ.card_inv_mul_sum_char_eq_finrank
   have e : ∑ g, ρ.character g = 0 ↔ ρ.invariants = ⊥ := by
     rw [← Submodule.finrank_eq_zero, ← Nat.cast_eq_zero (R := ℂ), ← h]
-    simp [hc]
+    simp
   rw [e, Submodule.eq_bot_iff]
   simp only [Representation.mem_invariants]
 

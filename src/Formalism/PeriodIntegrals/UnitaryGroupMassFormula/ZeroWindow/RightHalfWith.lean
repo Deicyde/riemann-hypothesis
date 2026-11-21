@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.PeriodIntegrals.ZerosWindow
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.ZerosWindowIn
 
 noncomputable section

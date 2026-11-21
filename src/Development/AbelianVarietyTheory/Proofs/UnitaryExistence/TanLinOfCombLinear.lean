@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ReFrameIffReframeIntegral
 import Formalism.LocalToGlobal.ProjectiveLattices.GenFrPf
 import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.AbelianSchemeLawsUnconditional
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.FramedPointFieldFromTestRing
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.IntegralFrameChangeIntegralInvertibleMatrix
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.IsCombAtGMulVec
 
@@ -97,7 +97,7 @@ theorem isTan_iff (v : epsOver V R ⟶ G) : IsTan v ↔ epsScal G 0 v = 1 := by
     intro r
     ext <;> simp [epsMul, TrivSqZeroExt.algebraMap_eq_inl]
   have hid : (TrivSqZeroExt.fstHom R R R).toRingHom.comp (algebraMap R (DualNumber R)) = RingHom.id R := by
-    ext r; simp [TrivSqZeroExt.algebraMap_eq_inl]
+    ext r; simp
   let p : epsOver V R ⟶ ptOver V R := Over.homMk (spMap (algebraMap R (DualNumber R)))
     (Formalism.L2.PjFree.spMap_comp' _ _)
   let q : ptOver V R ⟶ epsOver V R := Over.homMk (spMap (TrivSqZeroExt.fstHom R R R).toRingHom) (by
@@ -232,7 +232,7 @@ theorem tanLin_of_combLinear (h : CombLinear) : TanLin Xo := by
       refine (Category.assoc _ _ _).trans ((congrArg _ (Over.w (Φ (v₁ j)))).trans ?_)
       refine (Formalism.L2.PjFree.spMap_comp' _ _).trans (congrArg spMap ?_)
       ext r
-      simp [TrivSqZeroExt.algebraMap_eq_inl]
+      simp
   have := (key v₁ hv _ z₁).1 ((h S S _ m _ ht).2.2.2 m' (fun i j => A j i) _
     (fun i => (key v₁ hv _ (w₁ i)).2 (hw i)) N _ ((key w₁ tw _ z₁).2 hw'))
   rwa [show (fun j => ∑ i, N i * A j i) = A.mulVec N from funext fun j => Finset.sum_congr rfl fun i _ => mul_comm _ _]

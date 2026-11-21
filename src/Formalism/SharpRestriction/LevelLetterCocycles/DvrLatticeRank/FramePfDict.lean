@@ -1,7 +1,6 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.FramePfPt
-import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.DvdOfCoeffSubstXPowNeZero
-import Formalism.SharpRestriction.LevelLetterCocycles.DeltaInvariantUniformizer
-import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.GradNPfA
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.LevelLetterCocycles.LamPS
 
 noncomputable section
 
@@ -54,7 +53,7 @@ theorem framepf_ι_C (o : O) :
   funext j
   by_cases hj : j = i
   · subst hj; simp
-  · simp [Pi.single_apply, hj]
+  · simp [hj]
 
 theorem framepf_ι_one : framepf_ι π' i 1 = letE i := by
   have ha : PowerSeries.HasSubst (π' i) := PowerSeries.HasSubst.of_constantCoeff_zero' hπ0
@@ -73,7 +72,7 @@ theorem framepf_ι_X : framepf_ι π' i PowerSeries.X = letE i * π' := by
   funext j
   by_cases hj : j = i
   · subst hj; simp
-  · simp [Pi.single_apply, hj]
+  · simp [hj]
 
 theorem framepf_ι_pow (g : PowerSeries O) (k : ℕ) :
     framepf_ι π' i (g ^ k) = letE i * framepf_ι π' i g ^ k := by
@@ -85,7 +84,7 @@ theorem framepf_ι_pow (g : PowerSeries O) (k : ℕ) :
   funext j
   by_cases hj : j = i
   · subst hj; simp
-  · simp [Pi.single_apply, hj]
+  · simp [hj]
 
 private lemma powerSeries_algHom_eq_subst_X (ψ : PowerSeries O →ₐ[O] PowerSeries O)
     (hψ : PowerSeries.constantCoeff (ψ PowerSeries.X) = 0) (f : PowerSeries O) :
@@ -208,7 +207,7 @@ theorem framepf_coord {x : W.DD T} (hx : x ∈ NcS W T i) :
   funext j
   by_cases hj : j = i
   · subst hj; simp [framepf_ι, letE, hf k]
-  · simp [framepf_ι, letE, Pi.single_apply, hj]
+  · simp [framepf_ι, letE, hj]
 
 include hπ0 hΔπ hR2 in
 
@@ -269,7 +268,7 @@ theorem framepf_letE_ι (g : PowerSeries O) : letE i * framepf_ι π' i g = fram
   funext j
   by_cases hj : j = i
   · subst hj; simp [letE, framepf_ι]
-  · simp [letE, framepf_ι, Pi.single_apply, hj]
+  · simp [letE, framepf_ι, hj]
 
 include hπ0 hΔπ hR2 in
 

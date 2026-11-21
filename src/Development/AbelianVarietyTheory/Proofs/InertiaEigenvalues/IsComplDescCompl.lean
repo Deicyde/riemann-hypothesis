@@ -1,8 +1,6 @@
-import Mathlib
-import Formalism.LocalRingCardinality.ConjSqrtMinusD
-import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.DeterminantInTorus
-import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.BaseChangeInertUnramified
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.GaloisSideTwistedSelmerAuxiliaryPrimes
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.LevelLetterCocycles.DataN
 
 namespace GlobalTheory.RetractionComplement
 

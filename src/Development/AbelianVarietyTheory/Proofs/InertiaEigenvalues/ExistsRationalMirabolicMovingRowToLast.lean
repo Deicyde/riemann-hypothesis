@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.UnipotentBlockColumnIndex
 open NumberField IsDedekindDomain MeasureTheory Matrix GlobalTheory.CuspRep GlobalTheory.CuspGeneric
 
@@ -64,7 +64,7 @@ theorem mir_exists_row : ∀ (E : Type) [Field E] [NumberField E] (a m : ℕ), m
       · subst e1
         simp only [v, Matrix.one_apply, h1.symm, if_false]
         rw [dif_neg (by omega)]
-      · simp [e2, Matrix.one_apply, Ne.symm h2]
+      · simp [e2, Ne.symm h2]
       · rfl
   · intro t
     rw [IsUnit.unit_spec]

@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.BlockDegOfScale
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.GoodPrimesProperties
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.KTFiniteDimensional
+import Mathlib.Data.Int.Star
 
 theorem ReciprocityTheory.ChartRestriction.G.T0.prod_zpow_eq_zpow_sum_height {M : Type*} [CommGroupWithZero M] {α : Type*}
     (s : Finset α) (f : α → ℤ) (a : M) (ha : a ≠ 0) :
@@ -334,7 +337,7 @@ theorem sigF_fZ (hd : d.AxH 𝒜) (h : d.S1) (c : ι) (b : Fin (d.D + 1)) (u : K
   rw [map_mul, sigF_norm_w0rat d hd h c b u, sigF_cMM d hd h c b u]
   show _ = _ * (Algebra.norm (KTf K d.D d.N) (d.rationalBaseRow c) * d.cMM h c)
   split_ifs with hb
-  · simp only [zpow_zero, map_one, mul_one, zpow_natCast]
+  · simp only [zpow_zero, map_one, zpow_natCast]
     ring
   · simp only [one_pow, map_one, one_mul]
     ring

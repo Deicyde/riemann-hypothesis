@@ -1,8 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Regularisation.Assembly
 import GroundTheory.HeightsAndTheta.Heights.Regularisation.PPolyMaxLowerBound
 import GroundTheory.HeightsAndTheta.Heights.Regularisation.PTruncPsh
 import GroundTheory.HeightsAndTheta.Heights.Regularisation.PTruncTransfer
+import Mathlib.Topology.Connected.Separation
+import Mathlib.Topology.Separation.Lemmas
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.AnalyticLimit

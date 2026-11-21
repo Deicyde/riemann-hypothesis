@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LocalTheory.ArchimedeanBumps.TracePiReal
-import Development.WeilBound.ThetaLifts.LocalTheory.ArchimedeanBumps.SliceAn
 import Development.WeilBound.ThetaLifts.SmallCones.ExpAlg
 import Development.WeilBound.ThetaLifts.LeviDeterminants.MixedModels.PlaneAd
 import Development.WeilBound.ThetaLifts.CartanFactorisation.TensOfEval
@@ -220,7 +221,7 @@ theorem line_ex (hS : Slice) (hH : ArchHeis) (hU : ArchUniq) (hc : Cfg B M M₁ 
     refine SchwartzMap.ext fun y => ?_
     have h2 := congrFun h1 (ptA y a)
     simp only [Finset.sum_apply, pureA_ptA] at h2
-    simp only [ContinuousLinearMap.sum_apply, ContinuousLinearMap.smul_apply, SchwartzMap.sum_apply, SchwartzMap.smul_apply,
+    simp only [ContinuousLinearMap.sum_apply, ContinuousLinearMap.smul_apply,
       smul_eq_mul]
     rw [eq_div_of_mul_eq ha h2, Finset.sum_div]
     exact Finset.sum_congr rfl fun i _ => by ring

@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Jets.DepthNumbersThresholdEq
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.IndefiniteForms.IndefiniteTree.DepthTie
 
 set_option autoImplicit false
 

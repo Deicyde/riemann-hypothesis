@@ -1,9 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Counterexamples.LevelGroupExamples.SectionBaseChangeOfBasis
 import Development.AbelianVarietyTheory.Definitions.ThetaValues.IoOverLeftUnique
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TestValueEqConstMulReadingSecZ
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecZEqZeroOfGenVal
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.MemSuppOnIffIdemMulOfNatural
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.FlagComponentFramedPointFrame
 
 set_option autoImplicit false
@@ -87,7 +87,7 @@ theorem encard_le_pow {α β : Type} {S : Set α} {T : Set β} {d : ℕ} (g : α
   have := ENat.card_le_card_of_injective hφ
   refine this.trans_eq ?_
   simp only [Set.encard, ENat.card, Cardinal.mk_pi, Cardinal.prod_const, Cardinal.lift_id, Cardinal.mk_fin,
-    Cardinal.lift_natCast, Cardinal.power_natCast, map_pow, Cardinal.lift_uzero]
+    Cardinal.power_natCast, map_pow]
 
 theorem exists_dual (K K' : Type) [Field K] [Field K'] [NumberField K] [NumberField K'] [Algebra K K'] :
     ∃ (d N : ℕ) (B : Module.Basis (Fin d) K K') (bs : Fin d → K'), d ≠ 0 ∧ N ≠ 0 ∧
@@ -115,7 +115,7 @@ theorem exists_dual (K K' : Type) [Field K] [Field K'] [NumberField K] [NumberFi
     rw [← this]
     by_cases h : i = j
     · simp [h]
-    · simp [h, Ne.symm h]
+    · simp [h]
 
 end Generic
 

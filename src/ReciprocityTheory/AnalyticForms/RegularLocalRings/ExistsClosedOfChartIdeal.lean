@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.LiftChartIdeal
-import ReciprocityTheory.AnalyticForms.RegularLocalRings.BijOnClosedPointsOfIsIso
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.ExistsBasicOpenCover
 
 namespace ReciprocityTheory.AnForm.R

@@ -1,13 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviBlockSizesSum
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WittRankLeSkewSignature
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IsSplitChartSplitChart
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MeasureFundDomLtTop
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TripSizesSum
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRk
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InducedTwoBlockEquiv
 
@@ -91,8 +83,8 @@ theorem exists_perm (σ : Fin N ≃ Fin N) : ∃ w : GL (Fin N) k, invT w = w �
     (∀ X : Matrix (Fin N) (Fin N) k, w.val * X * (w⁻¹).val = X.submatrix σ σ) ∧
     ∀ X : Matrix (Fin N) (Fin N) k, (w⁻¹).val * X * (w⁻¹⁻¹).val = X.submatrix σ.symm σ.symm := by
   refine ⟨⟨σ.toPEquiv.toMatrix, σ.symm.toPEquiv.toMatrix, ?_, ?_⟩, Units.ext ?_, fun X => ?_, fun X => ?_⟩
-  · rw [PEquiv.toMatrix_toPEquiv_mul]; ext i j; simp [one_apply, eq_comm]
-  · rw [PEquiv.toMatrix_toPEquiv_mul]; ext i j; simp [one_apply, eq_comm]
+  · rw [PEquiv.toMatrix_toPEquiv_mul]; ext i j; simp [one_apply]
+  · rw [PEquiv.toMatrix_toPEquiv_mul]; ext i j; simp [one_apply]
   · show (σ.symm.toPEquiv.toMatrix)ᵀ = σ.toPEquiv.toMatrix
     ext i j; simp [Equiv.eq_symm_apply, eq_comm]
   · show σ.toPEquiv.toMatrix * X * σ.symm.toPEquiv.toMatrix = _

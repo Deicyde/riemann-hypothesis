@@ -1,9 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeIntZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TensorNiceRingArtinianReducedOpenUnits
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.AddEquivAddHaarCharMulVecArtinianReduced
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DistribHaarCharEqAddEquivAddHaarChar
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.GlobalUnitScalingHaarProductFormula
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
 open MeasureTheory Filter NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.ConeSoB
 open scoped TensorProduct NNReal ENNReal
 
@@ -133,10 +133,10 @@ theorem integrable_indicator_absE_pow : ∀ {F E : Type} [Field F] [NumberField 
         constructor
         · rintro ⟨x, hx, rfl⟩
           refine ⟨j (a * x), ⟨a * x, hx, rfl⟩, ?_⟩
-          simp [j, Units.smul_def, map_mul]
+          simp [j, map_mul]
         · rintro ⟨_, ⟨x, hx, rfl⟩, rfl⟩
           refine ⟨a⁻¹ * x, by simpa using hx, ?_⟩
-          simp [j, Units.smul_def, map_mul, map_inv]
+          simp [j, map_mul, map_inv]
       rw [e, ← distribHaarChar_mul lam (φ a)⁻¹ (j '' s), map_inv, distribHaarChar_Ev]
       rfl
     ext s hs

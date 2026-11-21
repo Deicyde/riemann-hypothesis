@@ -1,12 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsCrystalPairing
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.PolarisationModuleIndex
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ConjugateOrderData
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsPlaceRing
 open CategoryTheory CategoryTheory.Limits AlgebraicGeometry MonoidalCategory CartesianMonoidalCategory MonObj NumberField IsDedekindDomain
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory.Cris GlobalTheory.DeRham GlobalTheory.RealMult GlobalTheory.CMVal GlobalTheory.LatVal GlobalTheory.LatJet GlobalTheory.LatModel
 open GlobalTheory.IndefiniteRowSideFullHecke.ClassZetaValuationBounds (IsClassZetaVals c_vp cE_vp a0)
@@ -26,7 +21,7 @@ theorem conj_apply {M₁ M₂ : Type*} [AddCommGroup M₁] [Module R M₁] [AddC
 
 theorem conj_symm_conj {M₁ M₂ : Type*} [AddCommGroup M₁] [Module R M₁] [AddCommGroup M₂] [Module R M₂]
     (e : M₁ ≃ₗ[R] M₂) (f : Module.End R M₁) : e.symm.conjRingEquiv (e.conjRingEquiv f) = f := by
-  ext x; simp [conj_apply]
+  ext x; simp
 
 theorem inK_injective [IsFractionRing R K] (n : ℕ) : Function.Injective (inK (O := R) K (Fin n → R)) := by
   intro x y hxy

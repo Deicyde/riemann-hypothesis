@@ -1,5 +1,6 @@
-import Formalism.LocalToGlobal.PairingIndexBounds.RowActionCoefficients.CoefProd
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.PairingIndexBounds.RowActionCoefficients.WeylComplementInDetCoeffSpan
 
 open MvPolynomial
 

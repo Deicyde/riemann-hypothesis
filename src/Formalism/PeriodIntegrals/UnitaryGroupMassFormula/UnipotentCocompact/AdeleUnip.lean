@@ -1,6 +1,6 @@
-import Mathlib
-import Formalism.UnipotentAdelicQuotients.UnipotentAdelicCocompact
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnipotentApproximation.LieBasis
+import BuildAid.Leniency.Open
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnipotentApproximation.MemZeroLocusGLIff
+import Mathlib.NumberTheory.NumberField.AdeleRing
 
 open NumberField IsDedekindDomain
 

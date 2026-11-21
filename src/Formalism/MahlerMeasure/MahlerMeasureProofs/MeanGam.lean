@@ -1,6 +1,22 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.MahlerMeasure.StatementTM
 import Formalism.MahlerMeasure.GamInt
 import Formalism.MahlerMeasure.LegendreDigits
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
+import Mathlib.NumberTheory.Padics.Complex
+import Mathlib.Order.Interval.Finset.Box
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace Formalism.GM.MeanGammaLemmas
 open Polynomial Finset
@@ -719,13 +735,13 @@ theorem meanGam_of (hDeg : GamDeg) (hLead : GamLead) (hInt : GamInt) (hW : Forma
       have hpt : ((progr (s : ℤ) (d : ℤ) j : ℤ) : PadicAlgCl p) = ((s + d * j : ℕ) : PadicAlgCl p) := by
         simp [progr]
       have hfe := congrFun (congrFun hfac x) y
-      simp only [Matrix.of_apply, Matrix.mul_apply, Matrix.mul_diagonal] at hfe
-      simp only [Matrix.map_apply, hpt, eval_natCast_map, Matrix.mul_apply, Matrix.mul_diagonal]
+      simp only [Matrix.of_apply, Matrix.mul_apply] at hfe
+      simp only [Matrix.map_apply, hpt, eval_natCast_map, Matrix.mul_apply]
       rw [hAeval x y (s + d * j) (le_trans hSs (Nat.le_add_right _ _)), pow_add, mul_comm ((p : ℚ_[p]) ^ ⌈κ⌉₊),
         mul_assoc, hfe, Finset.mul_sum, map_sum]
       apply Finset.sum_congr rfl
       intro b _
-      simp [Matrix.diagonal_apply, map_sum]
+      simp [Matrix.diagonal_apply]
       ring
   have hcop' : IsCoprime (d : ℤ) (p : ℤ) := hcop
   have hE0 : (0 : ℝ) < E := by linarith

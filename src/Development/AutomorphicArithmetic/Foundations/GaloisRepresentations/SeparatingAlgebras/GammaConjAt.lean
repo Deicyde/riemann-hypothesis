@@ -1,5 +1,8 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.MacdonaldWhittakerHecke
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.AutomorphicForms.MacdonaldNormalization
+import GroundTheory.AutomorphicForms.MacdonaldSpherical
+import Mathlib.Analysis.SpecialFunctions.Complex.Circle
 
 noncomputable section
 

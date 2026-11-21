@@ -1,9 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.BaseChangeDefiniteUnitary
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.HasSatAtConstOne
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.NonemptyEquivLocProdTriv
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EquivOfISupRange
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsIsLocCompAndIsLocLoc
 
 noncomputable section
 
@@ -57,7 +55,7 @@ theorem cT_locGL_mul (c : E ≃+* E) {n : ℕ} (w : HeightOneSpectrum (𝓞 E))
       rw [e3]
       by_cases hij : i = j
       · subst hij; simp
-      · simp [Matrix.one_apply, hij, Ne.symm hij]
+      · simp [hij, Ne.symm hij]
     rw [e1, e2, Matrix.mul_one]
 
 variable [IsCMField E]
@@ -79,7 +77,7 @@ theorem finGL_locGL_mem_UA {n : ℕ} (w : HeightOneSpectrum (𝓞 E)) (s : w.adi
     rw [h1]
     by_cases hij : i = j
     · subst hij; simp
-    · simp [Matrix.one_apply, hij, Ne.symm hij]
+    · simp [hij, Ne.symm hij]
   have h4 : (cT (conjAd E) (finGL E n (locGL E n w g)).val).map (pFin E) =
       cT (conjFin (IsCMField.complexConj E).toRingEquiv) (locGL E n w g).val := by
     ext1 i j

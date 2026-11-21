@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EabIsKCInr
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockFirstActionMatrixUnitEq
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TprodMemTensSpan
 
 open MvPolynomial Formalism.BasicNotions.TH GlobalTheory.CompactHarm
 

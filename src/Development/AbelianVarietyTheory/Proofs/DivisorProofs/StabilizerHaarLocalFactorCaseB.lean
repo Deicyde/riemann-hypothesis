@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeLin
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LintegralMulRight
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DetNeZeroOfSig
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryAdelicGroupTopology
@@ -9,11 +9,11 @@ import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryHaarRightInv
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.QuotientHaarMeasureNormal
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviEmbeddingMultiplicative
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviUnipotentHaarModulusStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemUnipotentRadicalIff
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryFixingVectorPreserves
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviEmbeddingExistsDoublingConfiguration
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompMemOfIsStab
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousComponents
+import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 
 noncomputable section
 
@@ -176,7 +176,7 @@ theorem char_unip (hB : B.IsGood σ) (hX : X.IsHerm σ B r s) (hX₁ : X₁.IsHe
   have e := congrArg χ key'
   have hM : χ M ≠ 0 := ((Group.isUnit _).map χ).ne_zero
   have hu0 : χ u ≠ 0 := ((Group.isUnit _).map χ).ne_zero
-  simp only [map_mul, map_pow, map_inv₀, map_inv] at e
+  simp only [map_mul, map_pow, map_inv] at e
   rw [show (2 : ℕ) ^ 2 = 4 from rfl] at e
   field_simp at e
   have e3 : χ u ^ 3 = 1 := by first | exact e | exact e.symm

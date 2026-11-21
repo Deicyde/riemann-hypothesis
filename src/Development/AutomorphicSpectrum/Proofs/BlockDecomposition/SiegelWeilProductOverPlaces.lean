@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GramNear
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsUnitHermOfDet
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.AdelicMeasureEulerProductDecomposition
 
 noncomputable section

@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsEqOfNatCastMulMem
-import GroundTheory.GlobalFields.ComplexMultiplication.MainTheorem
+import GroundTheory.GlobalFields.ComplexMultiplication.IdeleActionQuotient
 open NumberField
 open scoped nonZeroDivisors
 open scoped GlobalTheory.Idele

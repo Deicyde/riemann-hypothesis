@@ -1,6 +1,9 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.RealGroups
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.StrictlyUpperRank
+import GroundTheory.AutomorphicForms.RealGroupsIwasawaHaar
+import Mathlib.Algebra.Algebra.Field
+import Mathlib.RingTheory.PiTensorProduct
 
 namespace GroundTheory.Automorphic
 

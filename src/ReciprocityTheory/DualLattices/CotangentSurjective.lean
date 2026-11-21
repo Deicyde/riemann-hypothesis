@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.DualLattices.TensorSpan
-import ReciprocityTheory.DualLattices.SmallLevelClassSet
+import Mathlib.NumberTheory.Padics.RingHoms
 
 noncomputable section
 

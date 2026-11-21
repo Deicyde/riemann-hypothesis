@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsFlatLift
+import Mathlib.RingTheory.PiTensorProduct
 
 open GlobalTheory GlobalTheory.DI
 

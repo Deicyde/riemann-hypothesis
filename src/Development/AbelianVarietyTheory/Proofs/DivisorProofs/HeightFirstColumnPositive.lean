@@ -1,9 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoreConcl
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTransv
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLineReps
 open scoped TensorProduct NNReal Matrix
 open NumberField MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SiegelSet GlobalTheory.EisRes
@@ -44,7 +40,7 @@ theorem normFin_unit_smul : ∀ {F E : Type} [Field F] [NumberField F] [Field E]
     · rintro ⟨l, hl, rfl⟩
       refine ⟨absEv F E v (μ⁻¹ * l), ⟨μ⁻¹ * l, ?_, rfl⟩, ?_⟩
       · rwa [mul_inv_rev, inv_inv, Units.val_mul, mul_smul]
-      · simp [map_mul, ← mul_assoc, ← map_mul]
+      · simp [← mul_assoc, ← map_mul]
     · rintro ⟨_, ⟨l, hl, rfl⟩, rfl⟩
       refine ⟨μ * l, ?_, ?_⟩
       · rwa [mul_inv_rev, Units.val_mul, mul_smul, ← mul_smul ((μ⁻¹ : (Fv F v ⊗[F] E)ˣ) : Fv F v ⊗[F] E), Units.inv_mul, one_smul]

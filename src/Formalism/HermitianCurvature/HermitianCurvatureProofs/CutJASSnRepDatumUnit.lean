@@ -1,7 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJASSnRepCut
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.FrameEntries
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.NFRadRedA
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.NFRadRedLocSec
 
 open Formalism.REAL Formalism.QuantumDeterminants Formalism.FourierDecayAlt NumberField
 open scoped ComplexConjugate Matrix
@@ -28,7 +29,7 @@ theorem hsmul_l {m : ℕ} (H : Matrix (Fin m) (Fin m) ℂ) (c : ℂ) (x w : Fin 
 
 theorem hsmul_r {m : ℕ} (H : Matrix (Fin m) (Fin m) ℂ) (c : ℂ) (x w : Fin m → ℂ) :
     herm H x (c • w) = conj c * herm H x w := by
-  simp [herm, smul_dotProduct, Complex.star_def]
+  simp [herm, smul_dotProduct]
 
 private theorem herm_swap_eq_zero_of_eq_zero {m : ℕ} (H : Matrix (Fin m) (Fin m) ℂ) (hH : ∀ i j, H i j = star (H j i))
     (v w : Fin m → ℂ) : herm H w v = conj (herm H v w) := by

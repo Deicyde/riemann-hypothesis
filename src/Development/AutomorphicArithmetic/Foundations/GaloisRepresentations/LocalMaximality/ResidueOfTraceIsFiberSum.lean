@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.LocalMaximality.DualForm
+import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.TcoMem
+import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.LocalMaximality.LiftFactorization
 
 set_option autoImplicit false
 

@@ -1,6 +1,8 @@
-import Mathlib
-import Formalism.SatakeDualWeyl.Statement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.SatGramLoc
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.RingTheory.Ideal.Quotient.HasFiniteQuotients
 
 noncomputable section
 

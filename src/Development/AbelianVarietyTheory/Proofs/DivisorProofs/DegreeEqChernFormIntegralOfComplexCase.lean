@@ -1,10 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.GenericOfIsIsoRestrict
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ResidueDegreeOfIsClosedImmersion
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ChernDegreeComplex
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.AnalyticWeightLinearComb
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EtaleCoordsBaseChange
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NonemptyHomologyEquiv
+import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ArBirational
 
 set_option autoImplicit false
 

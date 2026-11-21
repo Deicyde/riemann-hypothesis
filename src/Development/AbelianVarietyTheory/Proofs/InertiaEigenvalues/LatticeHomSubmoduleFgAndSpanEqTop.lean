@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.AdEApply
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.UnitLemmaGroup
+import Std.Tactic.BVDecide.Normalize.Prop
 open GlobalTheory.UnitLemma GlobalTheory.StableLatCount Polynomial
 
 noncomputable section

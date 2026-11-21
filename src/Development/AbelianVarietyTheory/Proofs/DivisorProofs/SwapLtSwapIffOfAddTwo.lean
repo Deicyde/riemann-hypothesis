@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConvUAbsU
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemShellUIffDepth
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeylRepInvMulDiag
 
 noncomputable section

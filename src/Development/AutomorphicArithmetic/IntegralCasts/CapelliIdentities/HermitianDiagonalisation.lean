@@ -1,4 +1,42 @@
-import Mathlib
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.LinearAlgebra.Matrix.Hermitian
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
 
 open Matrix in
 
@@ -54,15 +92,14 @@ private theorem Dz.sum {E A B : Type} [Field E] [StarRing E] [Fintype A] [Decida
       conjTranspose_conjTranspose, hXi, h4.eq, Matrix.mul_assoc]
   have key : Uᴴ * fromBlocks X Y Yᴴ W * U = fromBlocks X 0 0 S := by
     rw [hU, fromBlocks_conjTranspose, fromBlocks_multiply, fromBlocks_multiply]
-    simp only [conjTranspose_one, conjTranspose_zero, conjTranspose_neg, conjTranspose_mul, hXi,
-      h1.eq]
+    simp only [conjTranspose_one, conjTranspose_zero, conjTranspose_neg, conjTranspose_mul, hXi]
     have hXX' : X⁻¹ * X = 1 := nonsing_inv_mul X hu
     congr 1
     · simp
     · have hY : X * (X⁻¹ * Y) = Y := by rw [← Matrix.mul_assoc, hXX, Matrix.one_mul]
       simp [hY]
     · simp [Matrix.mul_assoc, hXX']
-    · simp [Matrix.mul_assoc, hXX, hXX', hS, Matrix.add_mul, Matrix.mul_add]
+    · simp [Matrix.mul_assoc, hXX', hS]
       abel
   refine Dz.of_congr hUdet ?_
   rw [key]

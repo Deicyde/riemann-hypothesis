@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsTestRep
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsSubringEqOK
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsIntegralPi
+import Mathlib.RingTheory.PicardGroup
 open GlobalTheory.JR Matrix MeasureTheory Filter Topology
 
 noncomputable section

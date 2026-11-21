@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.L2UnitaryRepresentationData
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsGrpDataMapHaar
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsConjGaugeInvariant

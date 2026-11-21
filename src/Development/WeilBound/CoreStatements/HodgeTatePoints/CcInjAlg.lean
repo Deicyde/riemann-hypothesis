@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.HodgeTatePoints.MapFirstPower
+import Mathlib.Data.Matrix.ColumnRowPartitioned
+import Mathlib.LinearAlgebra.LinearIndependent.BaseChange
 
 noncomputable section
 

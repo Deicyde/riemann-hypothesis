@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.InertKernelTheory.ScalG
 import Formalism.LocalToGlobal.InertKernelTheory.InertCoprimeLemmas.RepAsm
 import Formalism.LocalToGlobal.InertKernelTheory.InertCoprimeLemmas.RepScal
@@ -7,11 +9,9 @@ import Formalism.LocalToGlobal.InertKernelTheory.InertCoprimeLemmas.RepFrame
 import Formalism.LocalToGlobal.InertKernelTheory.InertCoprimeLemmas.RepTrace
 import Formalism.LocalToGlobal.InertKernelTheory.InertCoprimeLemmas.RepFrob
 import Formalism.LocalToGlobal.InertKernelTheory.InertCoprimeLemmas.RepDict
-import Formalism.LocalToGlobal.InertKernelTheory.InertCoprimeLemmas.JetsOrth
-import Formalism.LocalToGlobal.InertKernelTheory.InertCoprimeLemmas.GlobalOrthonormalBasisFour
-import Formalism.LocalToGlobal.InertKernelTheory.InertCoprimeLemmas.IntWAPlaces
 import Formalism.LocalToGlobal.InertKernelTheory.AdmissibleEleventhInert
 import Formalism.LocalToGlobal.InertKernelTheory.KernelsIntegralInert
+import Formalism.LocalToGlobal.InertKernelTheory.InertCoprimeLemmas.AdmissibleThirdOfSecondEleventh
 
 noncomputable section
 

@@ -1,10 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.NormSmall
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.LatticeNormTransport
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToricSumEqHeckeLValueMulAuxiliaryFactors
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsValCharTwist
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HeckeTateFunctionalEquationCM
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IdealPeriodLatticeOfCurveDatum
 open GlobalTheory.SqTop
 
 noncomputable section
@@ -57,8 +57,8 @@ theorem exists_rat_repr (D : D7) {w : D.host.E} (hw : w ^ 2 = -(D.host.d : D.hos
   have e := B.sum_repr y
   rw [Fin.sum_univ_two, hB, hB] at e
   have e2 := congrArg (fun z : D.host.K => (z : D.host.E)) e
-  simp only [IntermediateField.coe_add, IntermediateField.coe_smul, Matrix.cons_val_zero, Matrix.cons_val_one,
-    IntermediateField.coe_one, Rat.smul_def, mul_one] at e2
+  simp only [IntermediateField.coe_add, Matrix.cons_val_zero, Matrix.cons_val_one,
+    Rat.smul_def, mul_one] at e2
   rw [← e2]
   rfl
 

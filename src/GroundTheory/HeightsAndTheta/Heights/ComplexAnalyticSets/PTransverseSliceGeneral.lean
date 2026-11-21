@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StTransverseSliceGeneral
 import GroundTheory.HeightsAndTheta.Heights.Intersections.JacMinorC
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.ExistsExpansion
+import Mathlib.LinearAlgebra.Matrix.Rank
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights
@@ -158,7 +160,7 @@ theorem dense_linearIndependent {m d : ℕ} (h : m ≤ d) :
       · subst hkl
         simp [A, g, LinearMap.funLeft_apply]
       · have : ι l ≠ ι k := fun e => hkl (Fin.castLE_injective h e).symm
-        simp [A, g, LinearMap.funLeft_apply, Matrix.one_apply, hkl, Pi.single_apply, this]
+        simp [A, g, LinearMap.funLeft_apply, hkl, this]
     rw [hfun]
     exact Matrix.linearIndependent_rows_iff_isUnit.2 hU
   have hT : Tendsto (fun t : ℂ => f₀ + t • g) (𝓝[≠] 0) (𝓝 f₀) := by

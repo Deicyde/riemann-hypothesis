@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.LieLatticeData
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.LocallyFreeFiniteProjectiveBaseChange
+import Mathlib.Tactic.Monotonicity.Lemmas
 open GlobalTheory.CompanionTheory.Ar.Num
 
 namespace PositivityTheory.Xgn.KernelLatticeBaseChange

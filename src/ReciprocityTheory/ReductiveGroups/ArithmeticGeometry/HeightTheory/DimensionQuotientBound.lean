@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.AvPrimeDimOne
+import Mathlib.RingTheory.KrullDimension.NonZeroDivisors
 
 namespace ReciprocityTheory.ChartRestriction.G.T0.DimensionQuotientBound
 

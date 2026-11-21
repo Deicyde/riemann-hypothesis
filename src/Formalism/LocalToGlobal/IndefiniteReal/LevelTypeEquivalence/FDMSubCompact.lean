@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.RedLem
-import Formalism.LocalToGlobal.IndefiniteReal.PHeisFC
 
 noncomputable section
 

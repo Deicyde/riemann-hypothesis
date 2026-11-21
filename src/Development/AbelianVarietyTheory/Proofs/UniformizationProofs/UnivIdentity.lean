@@ -1,10 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ExistsZeroGt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.DataRigidSt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.DvrLem
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.UnifUniqSt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ThetaVV
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.PhiGenPf
 import Development.AbelianVarietyTheory.Definitions.Uniformization.TXFrame
 open CategoryTheory CategoryTheory.Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry IsLocalRing
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.DVR
@@ -157,7 +153,7 @@ theorem exists_kap [IsNoetherianRing R] (hM : MulPullSt) (n : ℕ) :
     (fun U _ h => by
       rw [Fin.prod_univ_three, one_pow]
       apply Additive.ofMul.injective
-      simp [ofMul_mul, ofMul_inv, ofMul_zpow, ofMul_pow]
+      simp [ofMul_mul, ofMul_inv, ofMul_zpow]
       module)
     (fun y J hJ => by
       beta_reduce
@@ -173,7 +169,7 @@ theorem exists_nu [IsNoetherianRing R] (hM : MulPullSt) (n : ℕ) : ∃ ν : LB.
     (fun U _ h => by
       rw [Fin.prod_univ_four]
       apply Additive.ofMul.injective
-      simp [ofMul_mul, ofMul_inv, ofMul_zpow, ofMul_pow]
+      simp [ofMul_mul, ofMul_inv, ofMul_zpow]
       module)
     (fun y J hJ => by
       beta_reduce
@@ -310,7 +306,7 @@ theorem main : LL → AllD fun {R} _ _ {I} D F _ _ => ∀ (N : ℕ), Odd N → �
       have hk' : (N : ℤ) = 2 * k + 1 := by exact_mod_cast hk
       rw [hk']
       apply Additive.ofMul.injective
-      simp only [ofMul_mul, ofMul_inv, ofMul_zpow, ofMul_pow, ofMul_one]
+      simp only [ofMul_mul, ofMul_inv, ofMul_zpow, ofMul_pow]
       module)
   have key : ∀ z J, Good D.toPre.P.L z J →
       val w (𝟙 _) z J ^ 2 = val (p.g.s p.y) (𝟙 _) z J * val ν p.g.b.left z J ∧

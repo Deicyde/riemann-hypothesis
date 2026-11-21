@@ -1,6 +1,7 @@
-import Formalism.HermitianCurvature.StatementTBB
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.TriangleInequalityAtPlace
-import Formalism.FlagUnipotentLattices.MinkowskiFactorialBounds.BlockMinorSumCounterexample
+import Mathlib.Algebra.Ring.IsFormallyReal
 
 namespace Formalism.FourierDecayAlt.P.TBBx4
 

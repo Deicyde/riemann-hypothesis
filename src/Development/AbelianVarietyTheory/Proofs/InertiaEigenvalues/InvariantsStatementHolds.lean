@@ -1,8 +1,9 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.InvariantsGenerators
-import Formalism.SharpRestriction.LevelLetterCocycles.InvariantsIsoOfGenerators
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.ZlWCbInjective
 import Formalism.SharpRestriction.LevelLetterCocycles.NormLtOneIffToZMod
+import Mathlib.Topology.Connected.Separation
+import Mathlib.Topology.MetricSpace.Ultra.TotallySeparated
 
 noncomputable section
 

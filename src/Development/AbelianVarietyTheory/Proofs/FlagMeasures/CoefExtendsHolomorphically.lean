@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.CuspFrameWeights.EigenfunctionFiniteCoefficients
-import Formalism.RealPlaceAnalysis.FinalF
-import Formalism.RealPlaceAnalysis.RealPlaceTaylor.CompactHaarRightInvariantInst
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.PosPartUnitaryMul
+import Mathlib.Algebra.Ring.IsFormallyReal
 
 open MeasureTheory Matrix Finset Formalism.MainNotions.S Formalism.REAL Formalism.QuantumDeterminants GlobalTheory.Count GlobalTheory.Dec GlobalTheory.DSId
 open scoped InnerProductSpace ComplexOrder
@@ -220,7 +220,7 @@ lemma eq_zero_of_orth (φ : C(KG ε, ℂ))
   have h1 : ∫ k, (star φ) k * φ k ∂(muK ε) = 0 := hall (star φ)
   have e : ∀ k, (star φ) k * φ k = ((‖φ k‖ ^ 2 : ℝ) : ℂ) := fun k => by
     rw [ContinuousMap.star_apply, Complex.star_def, Complex.conj_mul', Complex.ofReal_pow]
-  simp only [e, integral_ofReal] at h1
+  simp only [e] at h1
   have hreal : ∫ k, ‖φ k‖ ^ 2 ∂(muK ε) = 0 := by exact_mod_cast h1
   have hae : (fun k => ‖φ k‖ ^ 2) =ᵐ[muK ε] 0 :=
     (integral_eq_zero_iff_of_nonneg (fun k => sq_nonneg ‖φ k‖)

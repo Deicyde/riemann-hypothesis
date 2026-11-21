@@ -1,4 +1,4 @@
-import Formalism.CharacterColumnKernels.Statement
+import BuildAid.Leniency.Variable
 import Formalism.CharacterColumnKernels.StatementMF
 
 noncomputable section

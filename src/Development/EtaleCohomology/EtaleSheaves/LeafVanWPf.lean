@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.LeafVanStalk
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry Opposite GlobalTheory.EtC CochainComplex CochainComplex.HomComplex
@@ -137,23 +140,19 @@ theorem commGroup_inv_eq_conj_twist_identity {B W S X T : Scheme.{0}} (pA : X �
   refine ⟨⟨pullback.lift (pullback.lift (pullback.fst pA r) (pullback.snd pA r ≫ w) c1) (pullback.snd pA r) c2, ?_, ?_⟩⟩
   · apply pullback.hom_ext
     · apply pullback.hom_ext
-      · simp only [Category.assoc, Category.id_comp, pullback.lift_fst, pullback.lift_snd, pullback.lift_fst_assoc,
-          pullback.lift_snd_assoc]
+      · simp only [Category.assoc, Category.id_comp, pullback.lift_fst]
       · rw [← cancel_mono ι]
-        simp only [Category.assoc, Category.id_comp, pullback.lift_fst, pullback.lift_snd, pullback.lift_fst_assoc,
+        simp only [Category.assoc, Category.id_comp, pullback.lift_fst, pullback.lift_snd,
           pullback.lift_snd_assoc, hw]
         have e3 : pullback.fst (pA ≫ s) ι ≫ pA ≫ s = pullback.snd (pA ≫ s) ι ≫ ι := pullback.condition
         have e4 := pullback.condition_assoc (f := pullback.fst (pA ≫ s) ι ≫ pA) (g := r) s
         simp only [Category.assoc] at e4
         rw [← e3]
         first | exact e4 | exact e4.symm
-    · simp only [Category.assoc, Category.id_comp, pullback.lift_fst, pullback.lift_snd, pullback.lift_fst_assoc,
-          pullback.lift_snd_assoc]
+    · simp only [Category.assoc, Category.id_comp, pullback.lift_snd]
   · apply pullback.hom_ext
-    · simp only [Category.assoc, Category.id_comp, pullback.lift_fst, pullback.lift_snd, pullback.lift_fst_assoc,
-          pullback.lift_snd_assoc]
-    · simp only [Category.assoc, Category.id_comp, pullback.lift_fst, pullback.lift_snd, pullback.lift_fst_assoc,
-          pullback.lift_snd_assoc]
+    · simp only [Category.assoc, Category.id_comp, pullback.lift_fst, pullback.lift_fst_assoc]
+    · simp only [Category.assoc, Category.id_comp, pullback.lift_snd]
 
 theorem closed_eq {A : Type} [CommRing A] [IsLocalRing A] (x : Sp A) (hx : ∀ z : Sp A, z ⤳ x) :
     x = IsLocalRing.closedPoint A :=

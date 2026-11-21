@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
 import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.UnimodularGram.StarRingOfInvolution
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 namespace KStar.Cstarloc
 

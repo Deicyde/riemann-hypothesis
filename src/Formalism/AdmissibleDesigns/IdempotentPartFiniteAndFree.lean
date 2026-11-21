@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.AdmissibleDesigns.RowTopOf
-import Formalism.AdmissibleDesigns.FiniteClassesLocalEq
-import Formalism.AdmissibleDesigns.EKSymmCont
+import Formalism.AdmissibleDesigns.ExistsWildInertiaCyclotomicGenerator
+import Formalism.WachLatticeTwists.CoprimeLiftBounds.FirstSummandRepresentation
 
 variable [hT2Core : Fact ReciprocityTheory.ChartRestriction.T2.Core]
 

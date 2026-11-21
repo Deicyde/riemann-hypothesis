@@ -1,7 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.LieLatticeData
 import Development.AutomorphicSpectrum.Statements.AlgebraStatements.PolarisedFlagStatement
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.MemFlagSubIff
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
 
 noncomputable section
 
@@ -118,7 +123,7 @@ theorem step_coord (i : Fin n) (a : F) (k : Fin n → F)
   constructor
   · intro j hj
     have hne : j ≠ i := by rintro rfl; omega
-    simp [Pi.single_apply, hne, hk' j (by omega)]
+    simp [hne, hk' j (by omega)]
   · simp [hk' i le_rfl]
 
 theorem step_decomp (i : Fin n) (x : Fin n → F)
@@ -133,7 +138,7 @@ theorem step_decomp (i : Fin n) (x : Fin n → F)
   · funext j
     by_cases h : j = i
     · subst h; simp
-    · simp [Pi.single_apply, h]
+    · simp [h]
 
 theorem pInt_le_RC (p : ℕ) {y : C} (hy : y ∈ pInt (C := C) RC p) : y ∈ RC := by
   obtain ⟨r, rfl⟩ := (mem_pInt RC p y).1 hy
@@ -198,7 +203,7 @@ theorem dId_forward (D : LieLatticeData C F n Sg r s) (M : Submodule RC ((Fin n 
     rw [Finset.sum_eq_single j]
     · simp [hχ1]
     · intro b _ hb
-      simp [Pi.single_apply, hb, hχ0]
+      simp [hb, hχ0]
     · simp
   have hl : ∀ j, l j ∈ RC := by
     intro j

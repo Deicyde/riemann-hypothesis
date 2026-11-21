@@ -1,7 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
-import ReciprocityTheory.DualLattices.FischerSelfNeZero
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TotalDegreeSubstFLe
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.DetTwistedConjugateIsKTypeOfReversedStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsConjugateUnitaryKTypeSameWeightStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsTensorTypesIntertwinerMatrixPolynomialsStatement
@@ -120,7 +118,7 @@ theorem exists_contraction {H : Type} [NormedAddCommGroup H] [InnerProductSpace 
     simp only [map_add, LinearMap.add_apply, fischer_add_right, add_smul, Finset.sum_add_distrib]
   · intro c P v
     simp only [LinearMap.map_smulₛₗ, map_smul, LinearMap.smul_apply, fischer_smul_right, Finset.smul_sum,
-      smul_smul, Complex.conj_conj, RingHom.id_apply]
+      smul_smul, Complex.conj_conj]
   · intro P v u
     conv_rhs => rw [← b.sum_repr' u]
     simp only [LinearMap.mk₂_apply, inner_sum, inner_smul_right, map_sum, map_smul, fischer_sum_right,
@@ -165,7 +163,7 @@ theorem exists_local_contraction : ∀ (N n : ℕ) (hn : n ≤ N) (ν : Fin N �
     rw [hiso, hI, hI, inv_transpose hg, fischer_smul_left,
       ← fischer_subst2_unitary hh (map_star_mem hg) P, ← hΨ h hh _ (map_star_mem hg), hπJ]
     simp only [map_star_map_star, det_map_star, ContinuousLinearMap.smul_apply, LinearMap.map_smulₛₗ,
-      map_smul, LinearMap.smul_apply, fischer_smul_right, RingHom.id_apply, Complex.conj_conj,
+      map_smul, LinearMap.smul_apply, fischer_smul_right,
       map_zpow₀, starRingEnd_apply, star_star]
     rw [star_det hh, _root_.inv_zpow', neg_neg]
     ring

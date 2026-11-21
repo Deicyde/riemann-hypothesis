@@ -1,8 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
-import Formalism.LocalToGlobal.HermitianForms.IsLocBasis
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.PolyFnLemmas
-import Formalism.GradedWeylDivisibility.DualWeylDominanceOf
 
 open Formalism.BasicNotions Formalism.MainNotions.S Formalism.L2.Forms Formalism.UG Matrix NumberField IsDedekindDomain
 open scoped InnerProductSpace TensorProduct

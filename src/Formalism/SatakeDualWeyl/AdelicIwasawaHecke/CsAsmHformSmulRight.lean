@@ -1,6 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.DefsCS
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Bridge
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.LevelSubgroupFiniteAdelicStandard
 
 noncomputable section
 
@@ -14,7 +13,7 @@ theorem csAsm_hform_smul_right {E : Type} [Field E] (σ : E →+* E) {n : Type} 
     (J : Matrix n n E) (c : E) (y x : n → E) :
     hform σ J y (c • x) = c * hform σ J y x := by
   unfold Formalism.UG.hform
-  simp [Matrix.mulVec_smul, dotProduct_smul, Finset.mul_sum, smul_eq_mul, mul_left_comm]
+  simp [Finset.mul_sum, smul_eq_mul, mul_left_comm]
 
 theorem csAsm_gmap_mul {R K V : Type*} [CommRing R] [Field K] [StarRing K] [Algebra R K]
     [AddCommGroup V] [Module K V] [Module R V] [IsScalarTower R K V] (a b : V ≃ₗ[K] V)

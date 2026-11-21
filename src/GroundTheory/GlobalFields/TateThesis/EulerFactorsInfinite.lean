@@ -1,9 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.TateThesis.EulerFactorsArch
 import GroundTheory.GlobalFields.TateThesis.GaussianSchwartz
 import GroundTheory.GlobalFields.TateThesis.TraceFourier
 import GroundTheory.GlobalFields.TateThesis.HeckeCharRayClass
-import GroundTheory.GlobalFields.Adele.IntegersLattice
 
 open NumberField InfinitePlace InfinitePlace.Completion MeasureTheory Complex ComplexConjugate
   NumberField.mixedEmbedding Function

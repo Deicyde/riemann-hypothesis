@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.AutomorphicTheory.RankOneTori.Factor
 import CompanionTheory.AutomorphicTheory.RankOneTori.BeRankScale
 import CompanionTheory.AutomorphicTheory.RankOneTori.NzTranslate

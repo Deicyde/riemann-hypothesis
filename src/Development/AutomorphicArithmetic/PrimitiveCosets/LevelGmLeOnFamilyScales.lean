@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.PrimitiveCosets.WindowInequalityOfArtinInputs
 import Formalism.SharpRestriction.GlobalSchurBounds.TieGlobal
-import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.FrameFacts
 
 noncomputable section
 

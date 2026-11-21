@@ -1,12 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.ApplyEqOfMemAdjoin
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsTopWTopWOfExists
-import Development.AbelianVarietyTheory.Definitions.Foundations.Integral
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.DifferentiableAtGP
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.SmoothedSiegelUnitQExpansionCoeffsIntegral
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.SiegelUnitQExpansionCoefficients
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.SiegelUnitInTowerAnEqSiegelUnitOnComplex
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.GaloisActionSiegelUnitInTower
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HasQExpansionOfLevelCoeffAndFunctionUnique
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HasQExpansionOfLevelLinearOperations
 
 noncomputable section
 
@@ -41,10 +38,10 @@ theorem dm_mem (hv : v ≠ 0) {s t : ℤ} {x y : ℂ × ℂ} (hx : x ∈ jets M 
       push_cast
       congr 1
       ring
-    | zero => simp only [dm, Prod.fst_zero, Prod.snd_zero, mul_zero, zero_mul, add_zero]; exact zero_mem (jets M A v (s + t))
+    | zero => simp only [dm, Prod.fst_zero, Prod.snd_zero, mul_zero, add_zero]; exact zero_mem (jets M A v (s + t))
     | add y y' _ _ h1 h2 => convert add_mem h1 h2 using 1; simp only [dm, Prod.mk_add_mk, Prod.fst_add, Prod.snd_add]; congr 1 <;> ring
     | neg y _ h1 => convert neg_mem h1 using 1; simp only [dm, Prod.neg_mk, Prod.fst_neg, Prod.snd_neg]; congr 1 <;> ring
-  | zero => simp only [dm, Prod.fst_zero, Prod.snd_zero, mul_zero, zero_mul, add_zero]; exact zero_mem (jets M A v (s + t))
+  | zero => simp only [dm, Prod.fst_zero, Prod.snd_zero, zero_mul, add_zero]; exact zero_mem (jets M A v (s + t))
   | add y y' _ _ h1 h2 => convert add_mem h1 h2 using 1; simp only [dm, Prod.mk_add_mk, Prod.fst_add, Prod.snd_add]; congr 1 <;> ring
   | neg y _ h1 => convert neg_mem h1 using 1; simp only [dm, Prod.neg_mk, Prod.fst_neg, Prod.snd_neg]; congr 1 <;> ring
 

@@ -1,7 +1,11 @@
-import Mathlib
-import GroundTheory.GlobalFields.TateThesis.DegreeOnePrimes
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.TateThesis.PrimeZetaPole
 import GroundTheory.GlobalFields.KummerTheory.Splitting
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.DedekindDomain.Different
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Topology.Separation.CompletelyRegular
 
 namespace GroundTheory.Global
 

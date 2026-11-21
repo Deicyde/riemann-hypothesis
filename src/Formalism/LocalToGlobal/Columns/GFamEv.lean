@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.Record
 import Formalism.LocalToGlobal.Columns.FiniteDimensionalForms
 

@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.WdOfMono0L
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.TeichmullerInertiaLabelCondition
+import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.RankOneUnitary
 
 noncomputable section
 

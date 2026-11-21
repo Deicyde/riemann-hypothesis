@@ -1,10 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.DetCharacterMemPrincipalCongruenceFixedVectors
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.PadicIntGLSmulMemPrincipalCongruenceFixed
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.MatrixMeasurableSpace
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.TeichmullerRoots
 import Development.AbelianVarietyTheory.Counterexamples.DegenerateExamples.NotAdmissibleWithAmbientTop
 import Formalism.SharpRestriction.Divisibility.PrimeDegreeVariant
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsCharLab
+import Mathlib.RepresentationTheory.Coinduced
 
 noncomputable section
 

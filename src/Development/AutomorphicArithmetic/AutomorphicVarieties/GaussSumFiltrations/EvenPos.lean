@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PublishedTheorems.Hilbert
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.KLevTop
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.MkMemAdmissibleAtIffCocycle
+import Development.AutomorphicArithmetic.AutomorphicVarieties.IdeleGenerators.IsCondAt
 
 noncomputable section
 

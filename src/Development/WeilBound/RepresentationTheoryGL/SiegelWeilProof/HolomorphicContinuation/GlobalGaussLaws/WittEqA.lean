@@ -1,11 +1,8 @@
-import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.GlobalGaussLaws.SigOKOf
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.FiniteResidueFieldAdicCompletionIntegers
-import Development.AbelianVarietyTheory.PublishedTheorems.AdelicLattices₂.AlgebraMapNormOfBasisOneSqrt
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.ExistsCongrIffTraceFormsIsometricCm
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.HasseNormTheoremQuadraticExtension
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.AtPlaceIffEqAtTau
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLagrangianDecompositionInert
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SelfDualLatticeOfLevelClass
+import Formalism.LocalRingCardinality.DataHost
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.HermitianTraceFormVanishing
 
 noncomputable section
 
@@ -84,7 +81,7 @@ theorem mod_std (k : ℕ) (x : Fin r → E) : x ∈ GlobalTheory.InertWitt.stdLa
       rw [Finset.sum_eq_single i]
       · simp [ReciprocityTheory.ChartRestriction.G.FD.cc]
       · intro b _ hb
-        simp [Pi.single_apply, hb]
+        simp [hb]
       · simp
     have h3 := h2.mul (isIntegral_ite_one_neg_one k i)
     have h4 : x i * (if (i : ℕ) < k then (1 : E) else -1) * (if (i : ℕ) < k then (1 : E) else -1) = x i := by
@@ -110,7 +107,7 @@ theorem herm_ext {k : ℕ} (hr : 2 * k = r) (u v : Fin k → E) :
   rw [dSgn, herm_diag]
   subst hr
   rw [← Equiv.sum_comp (finCongr (two_mul k).symm), Fin.sum_univ_add]
-  simp [ext, Matrix.diagonal_apply_eq]
+  simp [ext]
 
 end Gen
 

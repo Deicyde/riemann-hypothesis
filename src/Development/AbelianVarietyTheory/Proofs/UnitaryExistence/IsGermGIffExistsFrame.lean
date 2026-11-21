@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.ExistenceTori.PrimitiveGermFrames
 import Formalism.LocalToGlobal.ProjectiveLattices.IsChartIff
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GermDJet
@@ -360,7 +361,7 @@ theorem exists_frameL (hw : w.IsGen) (he : ∀ m, (e m).IsGen)
       (ε' := fun _ => (1 : ℤ)) (by
         intro U _ hU
         rw [Fintype.prod_sum_type, Fintype.prod_sum_type]
-        simp only [Fintype.prod_sum_type, Sum.elim_inl, Sum.elim_inr, Fin.prod_univ_one, Category.comp_id, hφ m]
+        simp only [Sum.elim_inl, Sum.elim_inr, Fin.prod_univ_one, Category.comp_id, hφ m]
         rw [_root_.mul_assoc, ← Finset.prod_mul_distrib]
         simp only [← zpow_add, neg_add_cancel, zpow_zero, Finset.prod_const_one, _root_.mul_one]) _ hg
     exact ⟨u, hu, corr_of_val hL fun y J hJ => hv _ _ y J hJ⟩

@@ -1,7 +1,9 @@
-import Mathlib
-import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.QuotientHomNonvanishingBound
 import Formalism.SharpRestriction.ParamsHeightRankConstant
+import Mathlib.RepresentationTheory.Semisimple
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
 
 noncomputable section
 

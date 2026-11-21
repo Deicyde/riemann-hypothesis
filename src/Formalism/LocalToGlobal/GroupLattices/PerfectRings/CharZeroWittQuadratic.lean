@@ -1,6 +1,8 @@
-import Formalism.LocalToGlobal.GroupLattices.PerfectRings.GoodRingWittExtension
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.PerfectRings.IsLocalRingOfComplete
 import Formalism.LocalToGlobal.GroupLattices.LevelGatherings.StdSubPlacesConst
+import Formalism.LocalToGlobal.GroupLattices.PerfectRings.JOInjective
 
 noncomputable section
 
@@ -68,7 +70,7 @@ theorem range_le_simple (θ : LL) (hθ : ℚ⟮θ⟯ = ⊤) (x : LL) : τ x ∈ 
 
   let T : Subfield LL := ((KO p n)⟮τ θ⟯).toSubfield.comap τ
   have hQ : ∀ q : ℚ, algebraMap ℚ LL q ∈ T := fun q => by
-    simp [T, Subfield.mem_comap, eq_ratCast, map_ratCast, SubfieldClass.ratCast_mem]
+    simp [T, eq_ratCast, SubfieldClass.ratCast_mem]
   have key : ℚ⟮θ⟯ ≤ T.toIntermediateField hQ := by
     rw [IntermediateField.adjoin_simple_le_iff]
     exact IntermediateField.mem_adjoin_simple_self _ _

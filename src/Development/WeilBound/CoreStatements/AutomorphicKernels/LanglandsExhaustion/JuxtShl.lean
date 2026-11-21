@@ -1,8 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.AutomorphicKernels.LanglandsExhaustion.JuxtDefs
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.JacquetMultiplicityPosStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WordOccursOfSubquotientStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ShuffleOfPermStatement
-import CompanionTheory.AutomorphicTheory.HeckeStandardModules.EqZeroOfCompAt
 
 noncomputable section
 

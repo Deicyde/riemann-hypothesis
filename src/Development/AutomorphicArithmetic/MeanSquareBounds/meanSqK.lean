@@ -1,6 +1,5 @@
-import Development.AutomorphicArithmetic.MeanSquareBounds.PrimeSetTwoBounds
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.MeanSquareBounds.twistK
-import Development.AutomorphicArithmetic.MeanSquareBounds.SumMinLeDiv
 import Development.AutomorphicArithmetic.MeanSquareBounds.SPsqLe
 import Development.AutomorphicArithmetic.MeanSquareBounds.RRLe
 import Development.AutomorphicArithmetic.MeanSquareBounds.SumCNLe

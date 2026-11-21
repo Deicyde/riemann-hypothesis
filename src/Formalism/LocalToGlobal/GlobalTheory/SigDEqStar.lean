@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.StandardIntegralLatticeExists
 import Formalism.LocalToGlobal.GlobalTheory.NfAllSmulSelfRe
-import Formalism.LocalToGlobal.HermitianForms.FormsTied
 
 noncomputable section
 
@@ -98,7 +99,7 @@ theorem repr_bc (c : (D.mem u).C.cls 0) (τ : D.what₂.Tau) (y : (D.sp.X 0).V) 
     (B.Q c τ).b.repr (B.bc c τ y) ((B.eQ c τ).symm j) = (Mb B c τ *ᵥ fun i => B.rho τ (crd y i)) j := by
   unfold Mb crd
   conv_lhs => rw [← (D.sp.X 0).frame.sum_repr y]
-  simp only [map_sum, B.bc_smul, LinearMap.map_smulₛₗ, map_smulₛₗ, map_smul, Finsupp.coe_finset_sum, Finset.sum_apply, Finsupp.smul_apply, smul_eq_mul, Matrix.mulVec, dotProduct, RingHom.id_apply]
+  simp only [map_sum, B.bc_smul, map_smulₛₗ, Finsupp.coe_finset_sum, Finset.sum_apply, Finsupp.smul_apply, smul_eq_mul, Matrix.mulVec, dotProduct, RingHom.id_apply]
   rw [← (finCongr (rankN D 0 (Nat.zero_le _))).sum_comp]
   simp only [Equiv.symm_apply_apply]
   apply Finset.sum_congr rfl

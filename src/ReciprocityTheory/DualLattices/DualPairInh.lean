@@ -1,5 +1,8 @@
-import ReciprocityTheory.DualLattices.ModuliPointsState
-import ReciprocityTheory.DualLattices.AinfFacts
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Tactic.Polynomial.Basic
+import ReciprocityTheory.DualLattices.ATowerInh
 
 noncomputable section
 

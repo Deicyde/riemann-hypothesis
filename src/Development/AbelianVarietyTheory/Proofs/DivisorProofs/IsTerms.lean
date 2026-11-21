@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WtChar
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.NormVal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.LabRange
 
 noncomputable section
 

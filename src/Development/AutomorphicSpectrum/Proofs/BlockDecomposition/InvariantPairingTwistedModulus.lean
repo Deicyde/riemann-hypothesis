@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousMulVec
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsClopenCoset
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ZpowMulVec
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LatticeVolumeScalingLawsStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PairingLatticeRefinementCardStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsOpenStandardLatticeStabilizerStatement

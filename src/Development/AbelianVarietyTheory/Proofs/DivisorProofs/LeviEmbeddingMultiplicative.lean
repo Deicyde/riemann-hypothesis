@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsHaarOfIsCompact
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatHomOfGAdSymm
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicComplementHermitianStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicComplementFormRestrictStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicComplementNondegenerateStatement

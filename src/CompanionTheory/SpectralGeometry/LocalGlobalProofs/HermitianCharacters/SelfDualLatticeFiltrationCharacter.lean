@@ -1,8 +1,13 @@
-import Mathlib
-import Formalism.UnipotentAdelicQuotients.SiegelWeilUnitaryConvergent
-import Formalism.UnipotentAdelicQuotients.StdAdditiveCharExists
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.FiniteAdeleStrongApproximationModNat
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.IsOpenNsmulAdelicCompletionOfVectorSet
+import Formalism.UnipotentAdelicQuotients.SWXSDefs
+import Mathlib.Analysis.Convex.Contractible
+import Mathlib.Analysis.SpecialFunctions.Complex.Circle
+import Mathlib.NumberTheory.NumberField.ClassNumber
+import Mathlib.RingTheory.DedekindDomain.Different
+import Mathlib.Topology.Homotopy.Lifting
 
 open NumberField IsDedekindDomain MeasureTheory Topology HeckeCharacterZeroLocus.SiegelWeilU
 open scoped TensorProduct RestrictedProduct nonZeroDivisors

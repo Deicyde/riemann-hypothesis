@@ -1,7 +1,11 @@
-import Formalism.SharpRestriction.CuspSpanNormBounds.FractionFieldToGenericStalkAlgebraMapEq
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.IsHermND
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ComplementReferenceCompactSubgroup
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.HermLat
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.Polynomial.Basic
 
 noncomputable section
 open ValuativeRel Formalism.MainNotions.S.Loc
@@ -24,7 +28,7 @@ theorem exists_pow_mul_mem (L : LocE F E) {ϖ : 𝒪[F]} (hϖ : Irreducible ϖ) 
   refine ⟨k, (L.O_def _).2 ?_⟩
   have h2 : IsIntegral 𝒪[F] ((u : 𝒪[F]) • ((⟨m, hm0⟩ : nonZeroDivisors 𝒪[F]) • c)) := hm.smul _
   convert h2 using 1
-  simp only [Submonoid.smul_def, smul_smul, ← hu]
+  simp only [Submonoid.smul_def, smul_smul]
   rw [Algebra.smul_def, IsScalarTower.algebraMap_apply 𝒪[F] F E]
   rw [mul_comm (u : 𝒪[F]) m, hu]
   rfl

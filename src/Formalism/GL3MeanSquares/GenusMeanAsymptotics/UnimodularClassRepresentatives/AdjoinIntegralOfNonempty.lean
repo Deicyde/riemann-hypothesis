@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.GenusMeanAsymptotics.UnimodularClassRepresentatives.InvMemLocROfUnimod
+import Formalism.GL3MeanSquares.GenusMeanAsymptotics.UnimodularClassRepresentatives.SumOrbitsEquivariant
 
 open NumberField Module Formalism.HermitianLattices.Ext.L3.SplitA
 
@@ -81,7 +84,7 @@ theorem adjoin_integral_of_nonempty (hK : Formalism.HermitianLatticesTheory.IsCM
   rw [e1]
   rw [← algebraMap_smul K (algebraMap (𝓞 F) (𝓞 K) t) x',
     ← algebraMap_smul K (algebraMap (𝓞 F) (𝓞 K) s) y'] at key
-  simp only [LinearMap.map_smulₛₗ, LinearMap.smul_apply, LinearMap.map_smul, starRingEnd_apply,
+  simp only [LinearMap.map_smulₛₗ, LinearMap.smul_apply, starRingEnd_apply,
     star_algebraMap_of_fixed_field_eq hF] at key
   convert key using 1
   rw [Algebra.smul_def, map_mul, map_mul, smul_eq_mul, smul_eq_mul]

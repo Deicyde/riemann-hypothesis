@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ClassRec
 import Formalism.LocalToGlobal.KernelLattices.KerChTie
 import Formalism.LocalToGlobal.KernelLattices.AdaptedEnt

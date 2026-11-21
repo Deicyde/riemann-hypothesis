@@ -1,20 +1,11 @@
-import Mathlib
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.KFiniteThetaLifts.RationalPrimesBelowPlaces
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.SquareIntegrable.SSmooth
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.GaugeTopology.GTorus
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.TemperedBoundGL2
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IwasawaDecompositionGlTwoHolds
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IwasawaCoordinatesBoundedRegion
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IwasawaRegionMeasureBound
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GeometricSumBelowThreshold
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LocalTorusIntegralIdentity
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LocalFourierTransformIdentity
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LocalFunctionalSectionTranslation
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LocalFunctionalWhittakerCharacter
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LocalFunctionalWhittakerCentral
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LocalFunctionalWhittakerSmooth
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LocalFunctionalSectionSupport
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WhittakerIwasawaGrowthBound
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LocalDoubleIntegralIdentity
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LocalTorusReduction
 
@@ -183,7 +174,7 @@ theorem gInt2 (e : ℝ) (he0 : 0 < e) (he1 : e < 1 / 2) :
     refine IsLocallyConstant.continuous ?_
     rw [IsLocallyConstant.iff_exists_open]
     intro g
-    refine ⟨{x | g⁻¹ * x ∈ U}, U.isOpen.preimage (continuous_const.mul continuous_id), by simp [U.one_mem],
+    refine ⟨{x | g⁻¹ * x ∈ U}, U.isOpen.preimage (continuous_const.mul continuous_id), by simp,
       fun x hx => ?_⟩
     have := hU g _ hx
     simpa using this
@@ -435,7 +426,7 @@ theorem temperedBoundGL3_of_lift : ∀ (F : Type) [Field F] [ValuativeRel F] [To
   · refine IsLocallyConstant.continuous ?_
     rw [IsLocallyConstant.iff_exists_open]
     intro g
-    refine ⟨{x | g⁻¹ * x ∈ U}, U.isOpen.preimage (continuous_const.mul continuous_id), by simp [U.one_mem],
+    refine ⟨{x | g⁻¹ * x ∈ U}, U.isOpen.preimage (continuous_const.mul continuous_id), by simp,
       fun x hx => ?_⟩
     have := hU g _ hx
     simpa using this

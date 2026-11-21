@@ -1,11 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsFlagModelHermSum
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.EqOfIsometricTrivShift
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdjacentRefl
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BcDensEqOfGram
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ResidueDegreeOfIsOpenImmersion
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsFrameOfBijectiveStalk
-import ReciprocityTheory.AnalyticForms.RegularLocalRings.FinalTheorems
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsTorsionFreeOfForallExists
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 set_option autoImplicit false
 

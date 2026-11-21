@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AutomorphicArithmetic.LocalEmbeddings.ConeBDefs
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.DivisorFrames.FourierWeightIntegralSymmetry
 import Development.AutomorphicArithmetic.DivisorFrames.ExistsTestFourierNonvanishing
 import Development.AutomorphicArithmetic.DivisorFrames.SchwartzFourierPreimage

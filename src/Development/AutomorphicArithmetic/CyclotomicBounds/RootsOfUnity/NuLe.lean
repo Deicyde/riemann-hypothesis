@@ -1,9 +1,7 @@
-import Mathlib
-import Development.AutomorphicArithmetic.PrimeDiscriminants.ExistsPrimitiveRootTorsionOrder
-import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.CyclotomicTotient.NuBasic
-import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.CyclotomicTotient.TotientLeOfCycPowEqOne
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.CyclotomicTotient.NuSumApprox
 import Development.AutomorphicArithmetic.CyclotomicBounds.RootsOfUnity.HostApprox
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.HostFacts
 
 open NumberField Formalism.HC KStar.Tree
 
@@ -20,7 +18,7 @@ theorem UpperTheory.Mu.nuLe :
     rw [hN, Nat.factorization_mul (mul_ne_zero hQS0 hq0) hd0, Nat.factorization_mul hQS0 hq0]
     simp only [Finsupp.add_apply]
     rw [H.q_prime.factorization, H.d_prime.factorization]
-    simp [Finsupp.single_apply, Ne.symm hq, Ne.symm hd]
+    simp [Ne.symm hq, Ne.symm hd]
   have h2 : 2 ≤ H.condN := by
     have := Nat.le_of_dvd (Nat.pos_of_ne_zero H.condN_ne_zero) H.two_dvd_condN
     exact this

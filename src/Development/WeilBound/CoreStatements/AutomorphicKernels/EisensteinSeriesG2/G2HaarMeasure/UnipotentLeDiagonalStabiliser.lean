@@ -1,6 +1,7 @@
-import Development.WeilBound.CoreStatements.AutomorphicKernels.EisensteinSeriesG2.G2HaarMeasure.IsHaarMeasureDoubledGroup
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.AutomorphicKernels.EisensteinSeriesG2.G2HaarMeasure.PhiEqZeroIff
-import GroundTheory.GlobalFields.Adele.Compact
+import Development.WeilBound.ThetaLifts.LatticeBasics.Hypotheses2
 
 noncomputable section
 

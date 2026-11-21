@@ -1,9 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AdelicHermitianForms.IsHermHyperbolic
-import Development.AbelianVarietyTheory.Definitions.ExistenceOfLattices.Hat1
-import Development.AbelianVarietyTheory.PublishedTheorems.Landherr₂.LandherrStIffLandherr
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.ExistsCongrIffTraceFormsIsometricCm
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.ExistsZeroCoordNeZero
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.HasseNormTheoremQuadraticExtension
 
 open NumberField IsDedekindDomain Matrix GlobalTheory.UTrans GlobalTheory.AdLat
@@ -137,7 +135,7 @@ theorem _root_.GlobalTheory.UTrans.exists_isotropic_of_indefinite : ∀ (E : Typ
     rw [_root_.GlobalTheory.UTrans.herm_diagonal_self, Finset.sum_eq_single i]
     · simp [hi]
     · intro j _ hj
-      simp [Pi.single_apply, hj]
+      simp [hj]
     · simp
   · push_neg at hd0
     refine _root_.GlobalTheory.UTrans.exists_isotropic_diagonal hn hd hd0 fun τ => ?_

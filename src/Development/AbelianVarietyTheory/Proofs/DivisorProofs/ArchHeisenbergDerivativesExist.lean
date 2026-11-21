@@ -1,9 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockMap
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzSeminormTranslateSubLineDerivLeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzSeminormLinearPhaseSecondOrderLeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzSeminormSmulLeftLinearPhaseLeStatement
+import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.MetaplecticRepresentation
 
 noncomputable section
 
@@ -246,8 +247,8 @@ theorem derEx : GlobalTheory.RealLift.DerEx := by
       rw [rho_pureA d ψ hψ u t f g, hT]
   · have htg : Function.HasTemperateGrowth fun x : κ → mixedEmbedding.mixedSpace F => ((trL (y u) x : ℝ) : ℂ) :=
       (Complex.ofRealCLM.comp (trL (y u))).hasTemperateGrowth
-    simp only [ContinuousLinearMap.sub_apply, ContinuousLinearMap.smul_apply, SchwartzMap.sub_apply,
-      SchwartzMap.smul_apply, LineDeriv.lineDerivOpCLM_apply, SchwartzMap.lineDerivOp_apply_eq_fderiv,
+    simp only [ContinuousLinearMap.sub_apply, ContinuousLinearMap.smul_apply,
+      LineDeriv.lineDerivOpCLM_apply, SchwartzMap.lineDerivOp_apply_eq_fderiv,
       SchwartzMap.smulLeftCLM_apply_apply htg, smul_eq_mul]
     simp only [trL_apply, dotProduct, x₁, y]
     ring

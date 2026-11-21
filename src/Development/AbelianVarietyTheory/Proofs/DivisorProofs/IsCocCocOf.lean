@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsDatNeZero
 
 set_option autoImplicit false
@@ -50,7 +51,7 @@ theorem isCoc_cocOf (W : K → X.left.Opens)
   have key := hn (smallAt W x hx) (smallAt W _ (hx.map φ)) (smallAt W _ ((hx.map φ).map ψ))
     (ObjectProperty.homMk (trivMap φ x)) (ObjectProperty.homMk (trivMap ψ _)) rfl rfl rfl
   rw [d1_apply] at key
-  simp only [cocOf, dif_pos hx, dif_pos (hx.map φ), dif_pos (hx.map (ψ.comp φ))]
+  simp only [cocOf, dif_pos hx, dif_pos (hx.map φ)]
   have e := tr (spOver (ψ.comp φ) ≫ x) (spOver ψ ≫ spOver φ ≫ x)
     (by rw [← spOver_comp, Category.assoc]) (hx.map (ψ.comp φ)) ((hx.map φ).map ψ)
     (ObjectProperty.homMk (trivMap (ψ.comp φ) x))

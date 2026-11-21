@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ThetaMod
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.TypeOrthOfAvTied
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.FiniteDimensionalForms

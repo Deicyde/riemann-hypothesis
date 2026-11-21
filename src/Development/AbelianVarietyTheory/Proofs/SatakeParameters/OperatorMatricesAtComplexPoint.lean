@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.RkLe
 open Formalism.BasicNotions NumberField IsDedekindDomain Formalism.MainNotions.G Formalism.MainNotions.FormalGroupSystem Formalism.L2.G.Pend Formalism.MainNotions Formalism.L2.Ker Formalism.L2.PairingIndexBounds.F Formalism.L2.KerInert Formalism.UG Formalism.L2.G.Cmp Formalism.L2.Forms Formalism.L2.KerInert.SecondKernelProjection Formalism.L2.KerInert.QuadraticBaseChangeGL3 Formalism.L2.KerInert.SecondKernelDifference Formalism.L2.KerInert.SecondKernelHermitian GlobalTheory.TwV.DelA
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
@@ -16,7 +18,7 @@ theorem evD_yMat (v : X.Pl) (s : Fin (X.G.P.n' v)) :
     (yMat X Kc j v s).map (evD X D pos ι hN d f') =
       ((zT X D pos f' (pos ⟨v, s⟩)).map ι).submatrix (Fin.cast hN.2.symm) (Fin.cast hN.2.symm) := by
   ext b t
-  simp only [Matrix.map_apply, yMat, evD, MvPolynomial.eval₂Hom_C, RingHom.coe_comp, Function.comp_apply,
+  simp only [Matrix.map_apply, yMat, evD, MvPolynomial.eval₂Hom_C,
     MvPolynomial.eval_X, Matrix.submatrix_apply]
   rfl
 

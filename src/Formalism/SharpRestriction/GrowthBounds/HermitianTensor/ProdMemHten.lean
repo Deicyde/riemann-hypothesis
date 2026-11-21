@@ -1,4 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.HermitianTensor.LamPolySmulRight
+import Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.OneMemDualWeyl
+import Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.Tensor
+import Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.TensorKP
+import Formalism.SharpRestriction.GrowthBounds.HermitianTensor.CloudIsoDef
 
 noncomputable section
 

@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeVolSlopeOfTendsto
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.MemSupportBDIff
 open NumberField IsDedekindDomain Filter Topology
 open Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Pj ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open GlobalTheory GlobalTheory.AllWt GlobalTheory.CompHt GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.CovHt.Link GlobalTheory.ShFam GlobalTheory.ShFam.Pad GlobalTheory.TrueGeo GlobalTheory.ProjVar GlobalTheory.Cartier GlobalTheory.Mean4 GlobalTheory.Mean4O
@@ -26,8 +27,8 @@ theorem qDiv_bdQ (P : PolDat s Φ hm h0) (k : s.Comp) : qDiv (bdQ P k) = 1 ⊗�
   rw [bdQ, qDiv_comb, Fintype.sum_option]
   simp only [Option.elim]
   rw [PolDat.qDiv_ab]
-  simp only [e, qL, PolDat.dirQ, TensorProduct.smul_tmul', smul_eq_mul, mul_one, neg_smul, one_smul, neg_sub, neg_neg,
-    TensorProduct.neg_tmul, Finset.sum_neg_distrib, sub_neg_eq_add]
+  simp only [e, qL, PolDat.dirQ, TensorProduct.smul_tmul', smul_eq_mul, mul_one, neg_smul, one_smul, neg_sub,
+    Finset.sum_neg_distrib, sub_neg_eq_add]
   abel
 
 end GlobalTheory.CovHt.Link

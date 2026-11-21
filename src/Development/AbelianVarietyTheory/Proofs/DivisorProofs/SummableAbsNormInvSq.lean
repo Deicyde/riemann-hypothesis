@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.ExistsIdealInClassOfNormLeSqrtDiscr
+import Mathlib.NumberTheory.ZetaValues
 
 open MeasureTheory IsDedekindDomain NumberField
 

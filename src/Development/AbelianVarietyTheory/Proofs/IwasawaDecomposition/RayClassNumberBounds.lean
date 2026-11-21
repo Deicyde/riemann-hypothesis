@@ -1,10 +1,7 @@
-import Mathlib
-import Formalism.GL3MeanSquares.PrimeCountAsymptoticInProgressions
-import Formalism.SharpRestriction.InertJacobiLevels.AsmIface
-import Formalism.CyclotomicNorms.StatementI
-import Development.AbelianVarietyTheory.Definitions.Foundations.RayPrimes
-import Development.AbelianVarietyTheory.Definitions.Foundations.NormOneSevenOneTwo
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsIntegralOfMemRayI
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 noncomputable section
 

@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.AnnihilatorModels.SameNormBasic
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open CategoryTheory AlgebraicGeometry TensorProduct
 open UpperTheory.Gal.crystallineComparison
 
@@ -25,7 +27,7 @@ theorem UpperTheory.Gal.crystallineComparison.splitsBC_of :
         | tmul r s =>
           funext i
           rw [splitMap_tmul, hz', Algebra.TensorProduct.cancelBaseChange_tmul, splitMap_tmul]
-          simp [Algebra.smul_def, mul_assoc, mul_left_comm, mul_comm]
+          simp [Algebra.smul_def, mul_assoc, mul_comm]
     have hfun : (⇑(splitMap z') : B ⊗[R'] (R' ⊗[R] S) → (I → B)) =
         (splitMap z) ∘ (Algebra.TensorProduct.cancelBaseChange R R' B B S) := funext key
     unfold Splits

@@ -1,12 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsEigenBasisSameVec
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FramesOnEqModel
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.MemIffConjugateNotMem
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ModelBaseTrivModels
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsLocalRingTrivSqZeroExt
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsHorizontalGeneratorOfCharts
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ToroidalCompactification
 
 set_option autoImplicit false
 
@@ -82,7 +79,7 @@ theorem eq_zero_of_span {r : ℕ} (τ : E →+* ℂ) (Λ : Set (Fin r → E)) (h
     show f _ = 0
     convert this using 2
     funext m
-    by_cases e : m = n <;> simp [e, Pi.single_apply]
+    by_cases e : m = n <;> simp [e]
   exact this
 
 theorem det_sum_elim {p q r : ℕ} (ε : Fin q ⊕ Fin p ≃ Fin r) (Γ : Matrix (Fin r) (Fin r) ℂ)

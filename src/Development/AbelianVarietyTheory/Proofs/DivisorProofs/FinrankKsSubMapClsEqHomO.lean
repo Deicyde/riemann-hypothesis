@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.QActMSubAlgebraMap
 import Development.AbelianVarietyTheory.Definitions.Divisors.KottwitzDimSignatureOneOne
 open Module GlobalTheory.HTRho GlobalTheory.UPel.Sm GlobalTheory.UPel.Sm.Model
@@ -65,7 +66,7 @@ theorem finrank_ksSub_map_cls_eq_homO {k O H : Type*} [Field k] [AddCommGroup H]
         intro a q
         obtain ⟨x, rfl⟩ := Zc.mkQ_surjective q
         change S0 (Zc.mkQ (rAct σ G hG a x)) = qAct σ G hG a (S0 (Zc.mkQ x))
-        simp only [S0, Submodule.liftQ_mkQ]
+        simp only [S0]
         change G.mkQ (f (σ a x)) = G.mkQ (σ a (f x))
         rw [← sub_eq_zero, ← map_sub, Submodule.mkQ_apply, Submodule.Quotient.mk_eq_zero]
         exact hf.1 a x x.2

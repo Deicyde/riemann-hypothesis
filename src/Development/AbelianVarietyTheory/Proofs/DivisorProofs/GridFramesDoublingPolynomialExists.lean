@@ -1,8 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.RegConst
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FstIsFinFFrames
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFinFSndFrames
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.FockPolynomialVectorMaximalCompactMovedBases
+import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NegIdxOfIsStd
 
 noncomputable section
 

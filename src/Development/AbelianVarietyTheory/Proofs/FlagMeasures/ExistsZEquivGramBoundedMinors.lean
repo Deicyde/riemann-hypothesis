@@ -1,8 +1,4 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.CongruenceAtSplitFrobeniusHolds
-import Formalism.FlagUnipotentLattices.CardSubgroupsOfIndexLe
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.CoveringOHolds
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.GramUnipotentStabilizerBruhatCellConjRoot
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.CovolumeIntegralUnipotentStabilizerOfTerm
 open NumberField Module Matrix Formalism.MainNotions.S Formalism.MainNotions.S.Lat
 open scoped Classical

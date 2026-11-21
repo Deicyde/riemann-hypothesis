@@ -1,4 +1,11 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.JacquetLanglands.TorusKernels.MultivariableReproducingFormula
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -87,7 +94,7 @@ theorem UpperTheory.Esk.diagonal_truncated_integral_zero : UpperTheory.Esk.B1a �
     simp only [Dat.kk, Dat.kt, qq, Dat.J, Dat.act, Finset.prod_mul_distrib, hg]
   by_cases hc : D.Te a g (D.rep ω) = 0
   · have h0 : ∀ z, β z • (D.LamF T (γ : PG F)).indicator (D.kk k a (γ : PG F)) (ω, z) = 0 := by
-      intro z; simp [Set.indicator_apply, hkk, hc]
+      intro z; simp [hkk, hc]
     simp [h0]
   obtain ⟨i, hi⟩ := hsupp (γ : PG F) ω (by rw [hg]; exact hc)
   obtain ⟨htr0, htr1⟩ := htr (γ : PG F) ω i hi

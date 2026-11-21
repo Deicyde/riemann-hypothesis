@@ -1,4 +1,15 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TailIntegrals.GaugeSplittingAlgebra
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Separation.CompletelyRegular
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TailIntegrals.TailInt
 
 noncomputable section
 open MeasureTheory Module
@@ -231,7 +242,7 @@ lemma base_pt (m : ℕ) (v : ℝ) (hv : 0 < v) (x : Xp 0 m) :
 
 lemma volume_univ_fin_zero : (volume : Measure (Fin 0 → ℂ)) Set.univ = 1 := by
   first
-  | simp [MeasureTheory.volume_pi, MeasureTheory.Measure.pi_univ]
+  | simp [MeasureTheory.volume_pi]
   | (rw [MeasureTheory.volume_pi, MeasureTheory.Measure.pi_univ]; simp)
   | simp
 

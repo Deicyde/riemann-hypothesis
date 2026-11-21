@@ -1,6 +1,8 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.ThProps
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.HeckeKer
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.ProjectiveLattices.IsThRule
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.GroupTheory.FiniteAbelian.Basic
 
 set_option autoImplicit false
 

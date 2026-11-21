@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.EqZeroOfForallPowDvd
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.FormalCoboundarySmul
 open MvPowerSeries GlobalTheory GlobalTheory.Katz GlobalTheory.QLog GlobalTheory.PDivGroup
 
 namespace GlobalTheory.IdealAt2

@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsHaarOfIsCompact
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CartanCommutingIsometriesBoundedStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryGroupBoundedEntriesCompactStatement

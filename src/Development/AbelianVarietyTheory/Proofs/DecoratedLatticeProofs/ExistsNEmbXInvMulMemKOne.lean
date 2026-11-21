@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.UpZeroMemLev
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.MemLevelIffSymmetricPositionEntryPattern
+import Mathlib.Algebra.GroupWithZero.Submonoid.CancelMulZero
 open ValuativeRel Matrix
 open scoped Classical
 

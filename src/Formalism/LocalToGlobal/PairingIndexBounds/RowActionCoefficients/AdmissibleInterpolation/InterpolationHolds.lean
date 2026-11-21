@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.PairingIndexBounds.RowActionCoefficients.WeylComplementInDetCoeffSpan
+import Mathlib.Algebra.Module.StablyFree.Basic
 
 open MvPolynomial
 

@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.NeZeroTop
 import Formalism.LocalToGlobal.Columns.RecLevelTop
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.LatAtLattice
 
 noncomputable section
 

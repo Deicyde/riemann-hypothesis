@@ -1,8 +1,8 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsPreFamilyOfLatticeFamilyTwo
-import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.StatementsFlagIndependence
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.PDvrConeDimTrdeg
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.NatDegreeMinpolyEqOfClosed
+import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.BundleObjects
 
 namespace GlobalTheory.CompanionTheory.Ar.Num.BaseChange
 
@@ -243,7 +243,7 @@ theorem comap_C_pointIdeal_eq_bot (hinj : Function.Injective (algebraMap O' Ω')
   intro a ha
   have h0 : pointConeMap O' (fun v => algebraMap Ω Ω' (y v))
       (C a : MvPolynomial (Σ k, J k) O') = 0 := ha
-  simp only [pointConeMap, aeval_C, MvPolynomial.algebraMap_eq] at h0
+  simp only [pointConeMap, aeval_C] at h0
   have h1 : algebraMap O' Ω' a = 0 := by
     simpa using h0
   exact (Submodule.mem_bot _).2 (hinj (by rw [h1, map_zero]))

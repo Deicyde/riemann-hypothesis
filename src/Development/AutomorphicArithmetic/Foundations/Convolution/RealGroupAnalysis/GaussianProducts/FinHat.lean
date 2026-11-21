@@ -1,5 +1,7 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.GaussianProducts.ExistsRowSec
-import GroundTheory.HeightsAndTheta.Theta.Weil.PartialFourierAdelicPi
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import GroundTheory.AutomorphicForms.GL2.GJMatrixFinite
 
 open NumberField IsDedekindDomain MeasureTheory Matrix Topology Filter
 open Neutral.B1 Formalism.L2.Host Formalism.ConjugateSelfDual GlobalTheory.CuspRep GlobalTheory.GalOfCusp UpperTheory.V UpperTheory.V.Af UpperTheory.V.Published GroundTheory.Global GroundTheory.Automorphic.GJMatrix
@@ -37,7 +39,7 @@ private theorem T_tensor (h : Fin 4 → FiniteAdeleRing (𝓞 F) F → ℂ) :
   simp only [T, finiteFourier]
   simp_rw [hs]
   rw [integral_const_mul]
-  simp [finiteTensor, Fin.prod_univ_four, finiteFourier]
+  simp [finiteTensor, Fin.prod_univ_four]
   ring
 
 private theorem neg_mem {f : FiniteAdeleRing (𝓞 F) F → ℂ} (hf : f ∈ finiteSchwartzBruhat F) :

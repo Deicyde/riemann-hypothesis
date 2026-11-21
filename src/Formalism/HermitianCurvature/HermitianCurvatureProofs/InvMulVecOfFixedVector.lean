@@ -1,9 +1,7 @@
-import Formalism.HermitianCurvature.StatementTL
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.FrameCompletion
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.FlagUnipotentLattices.MinkowskiFactorialBounds.BlockMinorAbsoluteOfExplicit
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.HomogeneityNaturalDegree
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.WCellMemOmPlus
-import Formalism.FormalDegreeBessel.FormalDegreeRatio.BFCell
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.OmpCofLPd
 
 namespace Formalism.FourierDecayAlt.P.TLC
@@ -255,8 +253,8 @@ theorem om_norm {Wp Wq : Type} [NormedAddCommGroup Wp] [InnerProductSpace ℂ Wp
   have hm := (HermitianLatticeCounting.P.dual_vector_norm_on_group k r Bs.z Bs.z' Bs.z_mem Bs.z'_mem Bs.T'_pos g hg).1
   rw [← om_expand Bs hB hg] at hm
   simp only [om_herm_sum, om_herm_smul, om_herm_sum_right, om_herm_smul_right, hB.2.1,
-    mul_ite, mul_one, mul_zero, Finset.sum_ite_eq, Finset.mem_univ, if_true] at hm
-  simp only [Finset.sum_ite_eq', Finset.sum_ite_eq, Finset.mem_univ, if_true] at hm
+    mul_ite, mul_one, mul_zero] at hm
+  simp only [Finset.sum_ite_eq', Finset.mem_univ, if_true] at hm
   apply Complex.ofReal_injective
   rw [← hm]
   simp only [C6.sq2, Complex.ofReal_sum, Complex.normSq_eq_conj_mul_self]

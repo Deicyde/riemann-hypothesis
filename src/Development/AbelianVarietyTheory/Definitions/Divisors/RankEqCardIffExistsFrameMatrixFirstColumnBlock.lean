@@ -1,5 +1,19 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.T2SpaceGeneralLinearGroup
+import Mathlib.Algebra.Module.Lattice
+import Mathlib.Data.Matrix.ColumnRowPartitioned
+import Mathlib.GroupTheory.DoubleCoset
+import Mathlib.LinearAlgebra.Matrix.Rank
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.Ideal.Quotient.Index
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.Topology.Sheaves.Presheaf
 
 open MeasureTheory ValuativeRel Matrix
 open scoped NNReal ENNReal Pointwise
@@ -162,7 +176,7 @@ def invT : GL D k →* GL D k where
   toFun h := ⟨(h⁻¹).valᵀ, h.valᵀ, by rw [← transpose_mul, Units.mul_inv, transpose_one],
     by rw [← transpose_mul, Units.inv_mul, transpose_one]⟩
   map_one' := Units.ext (by simp)
-  map_mul' g h := Units.ext (by simp [Matrix.mul_inv_rev])
+  map_mul' g h := Units.ext (by simp)
 
 section
 omit [ValuativeRel k] [TopologicalSpace k] [IsNonarchimedeanLocalField k]
@@ -784,7 +798,7 @@ theorem exists_secondBlock_of_frameFirstBlock_eq (σ : A ⊕ A' ≃ D) {h h' : G
   · rw [Units.val_mul, ← Matrix.mul_assoc, ← Matrix.mul_assoc]
     congr 1
     ext i j
-    obtain ⟨j | j, rfl⟩ := σ.surjective j <;> simp [frameMatrixSecondColumnBlock_mul_apply, H2, Matrix.mul_apply, Y0, C]
+    obtain ⟨j | j, rfl⟩ := σ.surjective j <;> simp [H2, Matrix.mul_apply, Y0, C]
   · rw [gdet_mul]; congr 1; exact Units.ext hdet
 
 theorem splitTheta_fFun_frameFirstBlock_mul (μ : Measure (GL A' k)) [μ.IsHaarMeasure] (σ : A ⊕ A' ≃ D) (ν : kˣ →* ℂˣ)

@@ -1,5 +1,7 @@
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.LeadMinor
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.DifferentGeneratorDualIntegral
+import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.IsCompactUnitaryPointsAtPlaceFstMemCompact
 
 noncomputable section
 

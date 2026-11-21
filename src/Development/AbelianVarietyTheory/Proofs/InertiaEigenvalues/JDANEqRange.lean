@@ -1,8 +1,6 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.UsedLocalConclusion
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.NotFullBot
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsWeakTopologyWittTiltTensor
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ZlTowerGen
+import Formalism.SharpRestriction.LevelLetterCocycles.DeltaInvariantLattices
 open Formalism.WeaklyAdmissibleFiltrations Formalism.BasicNotions Formalism.BasicNotions.Loc TensorProduct GlobalTheory.NL Formalism.MainNotions.DeltaInvariantLattices GlobalTheory.WeakClosed
 open scoped Topology PowerSeries.WithPiTopology
 set_option synthInstance.maxHeartbeats 400000
@@ -33,7 +31,7 @@ theorem jD_aN_eq_range : ∀ {l : ℕ} [Fact l.Prime] {P : LocPrime l} {AI : Loc
     rw [hspan] at hm
     obtain ⟨c, rfl⟩ := (Submodule.mem_span_range_iff_exists_fun (AA K LL)).1 hm
     refine ⟨c, ?_⟩
-    simp only [smulA, LinearMap.smul_apply, LinearMap.id_apply, Finset.smul_sum, map_sum]
+    simp only [smulA, LinearMap.smul_apply, LinearMap.id_apply, map_sum]
     refine Finset.sum_congr rfl fun i _ => ?_
     simp only [jD_smul_letter]
     exact smul_comm _ _ _

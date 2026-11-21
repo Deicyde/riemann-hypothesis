@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.DatumVec
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Counterexamples.HeightSurvey.StarPurelyImaginaryEqNeg
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.MemHermitianStandardLatticeIffPairingIntegral
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.LinearIndependentWave
@@ -7,6 +7,7 @@ import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.SelfDualLatti
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.MemRangeOfOneTmulMem
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.SmulMemLatO
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.AddNsmulResidueAssoc
+import Formalism.LocalToGlobal.BesselHermitianTheta.LemmasWeil
 
 noncomputable section
 

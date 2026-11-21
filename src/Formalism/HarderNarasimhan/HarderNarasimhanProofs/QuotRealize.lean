@@ -1,8 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HarderNarasimhan.QuotRealize
-import Formalism.LatticeSlopes.ExistsSaturatedSlopeEqMuMax
-import Formalism.HarderNarasimhan.HarderNarasimhanProofs.DiscreteSpanOfLinIndep
-import Formalism.HarderNarasimhan.HarderNarasimhanProofs.PlaceSplit
 import Formalism.HarderNarasimhan.HarderNarasimhanProofs.SlopeIneqMean
+import Mathlib.Analysis.CStarAlgebra.Module.Constructions
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import Mathlib.RingTheory.TotallySplit
 
 open Module NumberField Matrix
 
@@ -142,7 +145,7 @@ theorem exists_mat {κ ι : Type} [Fintype κ] [DecidableEq κ] [Fintype ι]
     e.toLinearEquiv.toLinearMap ∘ₗ T.rangeRestrict
   have hf : ∀ z, ‖(WithLp.toLp 2 (f z) : EuclideanSpace ℂ κ)‖ = ‖T z‖ := by
     intro z
-    simp [f, LinearIsometryEquiv.norm_map]
+    simp [f]
   have hinj : Function.Injective f := by
     intro z w hzw
     apply hT
@@ -247,7 +250,7 @@ theorem pv_top (b : Basis ι K V) (X : InfinitePlace K → Matrix ι ι ℂ)
     funext i
     by_cases h : i = j
     · subst h; simp [Formalism.HermitianLatticesTheory.vecAt]
-    · simp [Formalism.HermitianLatticesTheory.vecAt, Finsupp.single_apply, Pi.single_apply, h, Ne.symm h]
+    · simp [Formalism.HermitianLatticesTheory.vecAt, h]
   have key : ∀ j, (WithLp.equiv 2 (ι → ℂ)).symm (Formalism.HermitianLatticesTheory.fcoord b X v (b j)) ∈ pv b X ⊤ v :=
     fun j => Submodule.subset_span ⟨b j, Submodule.mem_top, rfl⟩
   rw [eq_top_iff]
@@ -260,7 +263,7 @@ theorem pv_top (b : Basis ι K V) (X : InfinitePlace K → Matrix ι ι ℂ)
     funext i
     simp only [hf]
     conv_lhs => rw [WithLp.equiv_apply, e]
-    simp [Matrix.mulVec, dotProduct, Pi.single_apply, Finset.sum_apply, mul_comm]
+    simp [Matrix.mulVec, dotProduct, Finset.sum_apply, mul_comm]
   rw [hz]
   exact Submodule.sum_mem _ fun j _ => Submodule.smul_mem _ _ (key j)
 

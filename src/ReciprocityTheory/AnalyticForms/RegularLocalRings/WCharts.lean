@@ -1,7 +1,9 @@
-import ReciprocityTheory.AnalyticForms.RegularLocalRings.WChartsA
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.WChartsB
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.WChartsC
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.WChartsD
+import ReciprocityTheory.AnalyticForms.RegularLocalRings.ProjBCompl
 
 namespace ReciprocityTheory.AnForm.R
 

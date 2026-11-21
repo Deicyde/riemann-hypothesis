@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.CayleyCosetSums.RcCongr
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.AbsoluteConvergence.MapsToUpToSign
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.AbsoluteConvergence.FactorL
@@ -155,7 +157,7 @@ theorem JJ_conjTranspose : (JJ n)ᴴ = -JJ n := by
 theorem sig_eq (X : M2 n) : sig X = JJ n * Xᴴ * JJ n := by
   unfold sig
   rw [JJ_inv]
-  simp [Matrix.neg_mul]
+  simp
 
 theorem sig_conjTranspose (X : M2 n) : (sig X)ᴴ = JJ n * X * JJ n := by
   rw [sig_eq]

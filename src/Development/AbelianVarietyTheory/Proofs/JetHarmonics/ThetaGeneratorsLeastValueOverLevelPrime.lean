@@ -1,15 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.ThProps
-import Formalism.LocalToGlobal.ProjectiveLattices.ThGerm
-import Formalism.LocalToGlobal.ProjectiveLattices.PlaceBelow
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.CrudeMin
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PlaceDivisors.StChartF
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.LBLocalC
-import Development.AbelianVarietyTheory.Definitions.Jets.JetsOnCopiesCompatibleFrames
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.UnifUniqSt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.TwistBCPf
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ConstantCoeffDmonNCongr
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.MinorStProdRange
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ValueTranslatePullbackEqGeneratorStatement
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ExistsAlgClosedValuedFieldOverCompleteDVRStatement
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.DepthBelowOneOfHodgeTateChartFormStatement
@@ -84,7 +74,7 @@ theorem exists_minor_harm (E : Type) [Field E] [NumberField E] [IsCMField E] (H 
     rw [← Finset.sum_filter, Finset.sum_const, smul_eq_mul]
     congr 1
     have : (Finset.univ.filter fun i : Fin (Dw.mult τ) => (i : ℕ) < (s : ℕ) + 1) = Finset.Iic s := by
-      ext i; simp [Nat.lt_succ_iff]
+      ext i; simp
     rw [this, Fin.card_Iic]
   · rw [Crude.crP_map]
     refine ⟨crP_mem_harmK_of_disjoint c.F β a' _ _ ?_, Crude.crP_rowInv c.F β a', Crude.crP_rowDeg c.F β a' hdom⟩

@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.TemperedSubrepresentation
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.ExistsStandardIndModule
 
 noncomputable section
 
@@ -69,7 +70,7 @@ theorem sphericalDatum_steps (s : ℂ) : (sphericalDatum s).j = (fun _ => 1) ∧
 theorem pairing_rho_four (x : ℝ) : pairing (fun _ : Fin 2 => 1) (rho 4 fun _ => 1) ![x, -x] = 2 * x := by
   have h : Finset.Iio (1 : Fin 2) = {0} := by decide
   have h0 : Finset.Iio (0 : Fin 2) = ∅ := by decide
-  simp [pairing, rho, Fin.sum_univ_two, h, h0]
+  simp [pairing, rho, Fin.sum_univ_two]
   ring
 
 end GlobalTheory.Published.TemperedSub

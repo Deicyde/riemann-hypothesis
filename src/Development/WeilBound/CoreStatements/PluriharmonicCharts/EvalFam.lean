@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.SncModelEmbeddedLogResolution
 import Development.WeilBound.CoreStatements.PluriharmonicCharts.BlkDegLeTotalDegree
 import Development.WeilBound.CoreStatements.PluriharmonicCharts.HoloOnLocMono

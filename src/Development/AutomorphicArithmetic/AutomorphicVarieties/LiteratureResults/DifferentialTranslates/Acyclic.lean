@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.DifferentialTranslates.IntegralityGoodReduction
+import Mathlib.Combinatorics.Quiver.ReflQuiver
+import Mathlib.RepresentationTheory.Homological.GroupCohomology.Functoriality
+import Mathlib.RepresentationTheory.Homological.GroupCohomology.Shapiro
 
 noncomputable section
 
@@ -46,7 +50,7 @@ theorem acyclic : Acyclic := by
     rfl⟩
   have hri : i ≫ r = 𝟙 _ := by
     ext x
-    simp [i, r, rL, M, iL, L, ← Module.End.mul_apply, ← map_mul, hconst]
+    simp [i, r, rL, M, iL, L]
     show P (fun g => ρ g (ρ g⁻¹ x)) = x
     rw [show (fun g => ρ g (ρ g⁻¹ x)) = fun _ => x from
       funext fun g => by rw [← Module.End.mul_apply, ← map_mul, mul_inv_cancel, map_one, Module.End.one_apply], hconst]

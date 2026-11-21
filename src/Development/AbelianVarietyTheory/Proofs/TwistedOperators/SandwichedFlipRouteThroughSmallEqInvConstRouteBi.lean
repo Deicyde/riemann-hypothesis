@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.PathArgsOfNotMem
+import Development.AbelianVarietyTheory.Proofs.TwistedOperators.PathConvZipFock
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.DIV
 open IsDedekindDomain NumberField MeasureTheory GlobalTheory.ChiGrid GlobalTheory.FunObj GlobalTheory.RowTest GlobalTheory.StdFrames GlobalTheory.RowClaim GlobalTheory.FlipRun
 attribute [local instance] Formalism.BasicNotions.Host.cmStar GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField borelKw borelSpaceKw
@@ -153,13 +155,13 @@ theorem oneFlip_sandwich : ∀ {D : D7} {T : Type} {L : LevCh D T} {sc : Consts}
     obtain ⟨h6, -⟩ := Node.grid.inj h1
     intro b hb
     have := (h5 b hb).2.1
-    constructor <;> rintro rfl <;> simp only [GlobalTheory.SplitFlip.Edge.tgt] at this <;> omega
+    constructor <;> rintro rfl <;> simp only at this <;> omega
   have hedB : ∀ b ∈ edges Bp, b ≠ .ex i (j + 1) ∧ b ≠ .theta (i + 1) j := by
     obtain ⟨i', j', -, -, -, -, h5⟩ := edges_bound Bp hBp
     intro b hb
     have h1 := (h5 b hb).1
     have h2 := (h5 b hb).2.2.2
-    constructor <;> rintro rfl <;> simp only [GlobalTheory.SplitFlip.Edge.src] at h1 h2 <;> omega
+    constructor <;> rintro rfl <;> simp only at h1 h2 <;> omega
   have hF' : ∀ P : PolE G, IsCuspListed W.θ _ (liftP W M A (Path.Fam.zip (fun a (f : Sch G a) Q => W.fock a.pair f Q) α (restrictPol P A)) F) := fun P =>
     (pathConv_zip_fock M ρ t he hC A hA φA α hα (restrictPol P A) F hF).2
   have hcS : ∀ (P : PolE G) (P' : PolT G (routeSmall t i j)), ∀ d ∈ σs.support,

@@ -1,4 +1,12 @@
-import Mathlib.RingTheory.PowerSeries.WeierstrassPreparation
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Field.Basic
+import Mathlib.RingTheory.AdicCompletion.Basic
+import Mathlib.RingTheory.Ideal.BigOperators
+import Mathlib.RingTheory.LocalRing.MaximalIdeal.Defs
+import Mathlib.RingTheory.PowerSeries.Trunc
+import Mathlib.Tactic.ContinuousFunctionalCalculus
+import Mathlib.Tactic.Positivity.Finset
 
 namespace Formalism.MainNotions.N.FrobeniusPowerSeries.WeierS
 

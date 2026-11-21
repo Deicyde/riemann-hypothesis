@@ -1,12 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.DefiniteBound
 import Development.AbelianVarietyTheory.Definitions.ArchimedeanThetaValues.OneAddZeta21PowSevenAddPowFourteenEqZero
 import Development.AbelianVarietyTheory.Definitions.UpperBounds.SingleMemIntVec
 import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.FirstMinimumInvariantContinuousPosOnFrames
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.AdelicElementLatticeFullAndCompletion
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.FundSetPf
-import Formalism.FrobeniusOrbits.RealSubfieldLeCompositum
-import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.MuCardLeTwo
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.HermitianTraceFormVanishing
 
 noncomputable section
 
@@ -67,7 +67,7 @@ theorem selfDual_one : SelfDualLat (1 : Matrix (Fin r) (Fin r) E) (intVec E r) :
     have := h _ (single_mem_intVec a)
     rw [Up.Definite.herm_one, Finset.sum_eq_single a] at this
     · simpa [cc_one] using this
-    · intro b _ hb; simp [hb, cc_zero]
+    · intro b _ hb; simp [hb]
     · simp
   · rw [mem_intVec] at hx hy
     rw [Up.Definite.herm_one]
@@ -86,8 +86,8 @@ theorem selfDual_hyp : SelfDualLat (!![0, 1; 1, 0] : Matrix (Fin 2) (Fin 2) E) (
   have hh : ∀ x y : Fin 2 → E, herm (!![0, 1; 1, 0] : Matrix (Fin 2) (Fin 2) E) x y = x 0 * cc (y 1) + x 1 * cc (y 0) := by
     intro x y; simp [herm]
   refine ⟨⟨fun a b => ?_, by simp, (data E 2).Λ_fg, (data E 2).Λ_span, fun x => ⟨fun h => ?_, fun hx y hy => ?_⟩⟩,
-    ![1, 0], by simp, by simp [hh, cc_zero]⟩
-  · fin_cases a <;> fin_cases b <;> simp [cc_one, cc_zero]
+    ![1, 0], by simp, by simp [hh]⟩
+  · fin_cases a <;> fin_cases b <;> simp
   · rw [mem_intVec]
     intro a
     fin_cases a

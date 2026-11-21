@@ -1,9 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.LatSpanLeSpan
-import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.NormLinks
 import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.LatDict
-import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.FullExists
-import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.InHHNeat
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.NormClosed
 
 noncomputable section
@@ -127,8 +125,8 @@ def gamL_levi (TR : TypedRed X) (q : {Λ // Λ ∈ what₂}) (g : GamL cs q) : A
 theorem isUni_one (TR : TypedRed X) (v : TR.Pl) : Formalism.L2.SG.GGMirabolic.IsUni D.R.k ((1 : Iof TR) v) := by
   unfold Formalism.L2.SG.GGMirabolic.IsUni
   refine ⟨fun i => ?_, fun i j hij => ?_⟩
-  · simp [Matrix.one_apply]
-  · simp [Matrix.one_apply, ne_of_gt hij]
+  · simp
+  · simp [ne_of_gt hij]
 
 theorem gamL_levi_bij (TR : TypedRed X) (hK : X.LevelSubgroupCharacter) (hN : Formalism.L2.SG.PoincareInHH.Cut.NeatKu X u hK)
     (q : {Λ // Λ ∈ what₂}) : Function.Bijective (gamL_levi cs TR q) := by
@@ -208,10 +206,9 @@ theorem gf_eq {x x' : X.B.I.Gf} (h : ∀ y : (VS D).V,
       by_cases hk : k = j
       · subst hk
         simp [Formalism.L2.SG.HidaSetting.incl, Formalism.L2.SG.HidaSetting.HidaSetting.crd, Formalism.L2.SG.HidaSetting.crdOf]
-      · simp [Formalism.L2.SG.HidaSetting.incl, Formalism.L2.SG.HidaSetting.HidaSetting.crd, Formalism.L2.SG.HidaSetting.crdOf, hk,
-          Ne.symm hk, Finsupp.single_apply]
+      · simp [Formalism.L2.SG.HidaSetting.incl, Formalism.L2.SG.HidaSetting.HidaSetting.crd, Formalism.L2.SG.HidaSetting.crdOf, hk]
     rw [hc] at hj
-    simp only [Matrix.mulVec_single_one, Matrix.transpose_apply] at hj
+    simp only [Matrix.mulVec_single_one] at hj
     exact hj
   apply Subtype.ext
   apply Units.ext
@@ -276,7 +273,7 @@ theorem gamL_autLz_bij (hK : X.LevelSubgroupCharacter) (hN : Formalism.L2.SG.Poi
       refine hN 1 (g1⁻¹ * g2) ?_
       have e : (1 : Hfin X u)⁻¹ * iotaF X u (g1⁻¹ * g2) * 1 = 1 := by
         have : iotaF X u g1 = iotaF X u g2 := Subtype.ext h2
-        simp only [inv_one, one_mul, mul_one, map_mul, map_inv, this, inv_mul_cancel]
+        simp only [inv_one, mul_one, map_mul, map_inv, this, inv_mul_cancel]
       rw [e]; exact (Ku X u hK).one_mem
     rw [inv_mul_eq_one] at h0
     subst h0

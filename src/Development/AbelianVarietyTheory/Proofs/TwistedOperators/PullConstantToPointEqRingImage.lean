@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsIsCan
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.ProjectiveLattices.IsCombAt
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj
 open GlobalTheory.ThetaTrace GlobalTheory.HkFam GlobalTheory.Frames GlobalTheory.HeckeEx
@@ -21,7 +22,7 @@ theorem pull_const_apply : ∀ {T Ω : Type} [CommRing T] [CommRing Ω] (χ : T 
   rw [hwq]
   have h3 := Scheme.ΓSpecIso_inv_naturality (CommRingCat.ofHom χ)
   have h4 := congrArg (fun g => g.hom a) h3
-  simp only [CommRingCat.comp_apply] at h4
+  simp only at h4
   exact h4.symm
 
 end GlobalTheory.PullConst

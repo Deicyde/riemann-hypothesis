@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.RationalHermitianMeasures.ExistsNeZeroOfMap
+import Formalism.UnipotentAdelicQuotients.SWXSDefs
 
 set_option linter.unusedSectionVars false
 

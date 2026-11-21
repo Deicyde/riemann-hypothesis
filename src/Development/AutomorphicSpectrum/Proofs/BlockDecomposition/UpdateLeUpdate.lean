@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.ResidualSpectrum.ExponentialNegativity.L2DecayOfCountEscape
 
 noncomputable section
@@ -130,7 +131,7 @@ theorem bootGlue : BootGlue := by
       by_cases hr : r = a
       · subst hr
         simp
-      · simp [Function.update_of_ne hr, Finset.mem_insert, hr]
+      · simp [Finset.mem_insert, hr]
   refine bnd_mono (fun r h0 h1 => le_of_eq ?_) (key (Finset.Ioo 0 n) (fun r hr => Finset.mem_Ioo.1 hr))
   simp [h0, h1]
 

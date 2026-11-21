@@ -1,10 +1,11 @@
-import Formalism.LocalToGlobal.GroupLattices.PendingLemmas.SysC
-import Formalism.LocalToGlobal.GroupLattices.PendingLemmas.WittFractionToCoefficients
-import Formalism.LocalToGlobal.GroupLattices.PendingLemmas.ExistsCoprimePowEqOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.PendingLemmas.OrbitSumStabilizer
 import Formalism.LocalToGlobal.GroupLattices.PendingLemmas.InvarianceRepresentativesTrivial
 import Formalism.LocalToGlobal.GroupLattices.PendingLemmas.CardFilterValLt
 import Formalism.LocalToGlobal.GroupLattices.PendingLemmas.SuccMulSuccSubOneDivSucc
+import Formalism.LocalToGlobal.GroupLattices.PendingLemmas.CoeffOneLNe
+import Formalism.LocalToGlobal.GroupLattices.PendingLemmas.ConditionIffAdditiveMaps
 
 noncomputable section
 

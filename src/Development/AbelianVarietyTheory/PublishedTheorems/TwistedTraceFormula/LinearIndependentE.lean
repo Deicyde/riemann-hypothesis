@@ -1,8 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.MemL2OfBoundedContinuousInvariant
-import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsAuxiliaryPlaceNotMemFinset
-import Development.AbelianVarietyTheory.Definitions.Foundations.T2SpaceAdeleRing
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.InverseChamberMap
+import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsUniqueIsProdMeasureFinAway
+import Development.AbelianVarietyTheory.Definitions.Foundations.T2SpaceTensorProductFiniteExtension
+import Mathlib.LinearAlgebra.Semisimple
 
 noncomputable section
 
@@ -55,7 +57,7 @@ def sub (u : SV (wittIndex V)) : Submodule E V.V := Submodule.span E (Φ.e '' {i
 
 theorem sub_stdVec (j : Fin (wittIndex V)) : Φ.sub (stdVec j) = Φ.flag0.X j.succ := by
   have h1 : {i | stdVec j i = 1} = {i : Fin (wittIndex V) | i.val < j.succ.val} := Set.ext fun i => by
-    simp [stdVec, Nat.lt_succ_iff]
+    simp [stdVec]
   have h2 : {i | stdVec j i = -1} = ∅ := Set.ext fun i => by
     simp only [stdVec, Set.mem_setOf_eq, Set.mem_empty_iff_false, iff_false]; split_ifs <;> decide
   rw [sub, h1, h2, Set.image_empty, Set.union_empty]; rfl
@@ -75,7 +77,7 @@ def coef (i : Fin (wittIndex V)) : (Fin V.rank → R ⊗[F] E) →ₗ[R ⊗[F] E
 theorem coef_coordR (i : Fin (wittIndex V)) (x : V.V) : Φ.coef hc R i (coordR V R x) = inclR R (V.hD x (Φ.f i)) := by
   change hR R hc.sig V.gram _ _ = inclR R (V.hT _ _)
   rw [IndefiniteRowSideFullHecke.AdelicUnitaryGroups.hT_coord]
-  simp [hR, Formalism.UG.hform, coordR, JR, inclR, Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes.sigR, CMData.sig, TensorProduct.tmul_sum, starRingEnd_apply]
+  simp [hR, Formalism.UG.hform, coordR, JR, inclR, Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes.sigR, CMData.sig, starRingEnd_apply]
 
 theorem coef_eq_zero (i : Fin (wittIndex V)) {y : Fin V.rank → R ⊗[F] E}
     (hy : y ∈ extSub (F := F) V R (Φ.flag0.X i.castSucc)) : Φ.coef hc R i y = 0 := by

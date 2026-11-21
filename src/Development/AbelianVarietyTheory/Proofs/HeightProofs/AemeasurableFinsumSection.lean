@@ -1,9 +1,7 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.ValuationResidueLemmas
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.AlgebraMapOLInjective
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.NormOrderStatement
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.SacSuccAbove
-import ReciprocityTheory.SemistableReduction.AlgAll
+import Mathlib.MeasureTheory.Measure.RegularityCompacts
+import Mathlib.Topology.UniformSpace.Uniformizable
 
 open NumberField ReciprocityTheory.ChartRestriction.G.T0
 open scoped TensorProduct
@@ -118,7 +116,7 @@ theorem sImg_rel {Ω : Type} [Field Ω] {D N : ℕ} (j₀ : Fin (N + 1)) (x : Fi
   have hC : ∀ a : Ω, algebraMap (MvPolynomial (SVar D N) Ω) (OmS Ω D N) (C a) =
       algebraMap Ω (OmS Ω D N) a := fun a => by
     rw [← MvPolynomial.algebraMap_eq, ← IsScalarTower.algebraMap_apply]
-  simp only [sImg, sac_self, sac_succAbove, Fin.succ_ne_zero, if_false,
+  simp only [sImg, sac_self, sac_succAbove, Fin.succ_ne_zero,
     ↓reduceIte, map_neg, map_sum, map_mul, hC]
   exact neg_add_cancel _
 

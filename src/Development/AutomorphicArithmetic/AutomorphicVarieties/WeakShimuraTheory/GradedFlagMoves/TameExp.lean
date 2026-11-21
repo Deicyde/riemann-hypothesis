@@ -1,5 +1,6 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.NearSplit
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ValuationApplyOfWild
+import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.ResMapBijective
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual Formalism.HC ReciprocityTheory.Gal IsLocalRing Polynomial UpperTheory.V.Base UpperTheory.V.Alg UpperTheory.V.HV UpperTheory.V.GradeZeroInterpolatingElement UpperTheory.V.Ws
 
@@ -23,7 +24,7 @@ private theorem UpperTheory.V.Ws.Rt.wild_mem_ker
     refine ⟨j - i, Nat.sub_pos_of_lt hlt, ?_⟩
     intro x hx
     have hx' := congrArg (fun φ => φ ⟨x, hx⟩) he
-    simp only [f, AlgHom.comp_apply, IntermediateField.val_mk, AlgHom.coe_coe] at hx'
+    simp only [f, AlgHom.comp_apply, IntermediateField.val_mk] at hx'
     have hx'' : (σ.1 ^ i) x = (σ.1 ^ j) x := hx'
     have hj : σ.1 ^ j = σ.1 ^ i * σ.1 ^ (j - i) := by
       rw [← pow_add, Nat.add_sub_cancel' hlt.le]
@@ -62,7 +63,7 @@ theorem UpperTheory.V.Ws.Rt.tameExp :
     have hf := hφ.isOpen_fiber 1
     convert hf using 1
     ext x
-    simp [φ', MonoidHom.mem_ker, Units.ext_iff]
+    simp [φ', MonoidHom.mem_ker]
   have hφ'l : ∀ τ, φ' τ ^ l = 1 := by
     intro τ
     apply Units.ext

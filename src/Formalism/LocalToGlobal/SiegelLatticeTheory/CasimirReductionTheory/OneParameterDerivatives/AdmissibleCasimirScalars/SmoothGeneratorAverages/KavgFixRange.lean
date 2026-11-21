@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CasimirReductionTheory.OneParameterDerivatives.AdmissibleCasimirScalars.CompactDerivativesBounded
 
 open MeasureTheory Matrix Filter Topology
@@ -58,7 +60,7 @@ theorem kavg_fix_isoK {σ : Matrix (Fin n) (Fin n) ℂ → (H →L[ℂ] H)} (hσ
     refine sSup_le ?_
     rintro T ⟨Θ, hΘ, rfl⟩
     rintro x ⟨s, rfl⟩
-    simp [LinearMap.mem_ker, sub_eq_zero, kavg_fix_range hσ hst he hfix Θ hΘ s]
+    simp [LinearMap.mem_ker, kavg_fix_range hσ hst he hfix Θ hΘ s]
   have h := hle hv
   simpa [LinearMap.mem_ker, sub_eq_zero] using h
 

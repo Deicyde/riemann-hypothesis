@@ -1,7 +1,4 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ExistsDerivedActionFiniteDimUnitaryRep
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.WeightCompactDominanceOfMemHighestWeightSpan
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ExistsHighestWeightIrreducibleUnitaryRepU
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ExistsLinearEquivOfIrreducibleIsHW
 
@@ -32,7 +29,7 @@ theorem _root_.GlobalTheory.UnitaryHighestWeightUnique.height_le {n : ℕ} {ε :
     refine Finset.sum_congr rfl fun a _ => ?_
     rw [Finset.sum_comm]
     refine Finset.sum_congr rfl fun b _ => ?_
-    simp [mul_sub, Finset.sum_sub_distrib, mul_comm, mul_left_comm]
+    simp [mul_sub, Finset.sum_sub_distrib, mul_comm]
     ring
   have hterm : ∀ a b : Fin n, ((c a b : ℕ) : ℝ) * (((a : ℕ) : ℝ) - ((b : ℕ) : ℝ)) ≤ 0 := by
     intro a b
@@ -106,7 +103,7 @@ theorem _root_.GlobalTheory.UnitaryHighestWeightUnique.exists_derived_highest {k
         simp [hcb, Ne.symm hcb, add_smul, add_comm]
       · by_cases hcb : b = c
         · subst hcb
-          simp [hca, Ne.symm hca, add_smul, sub_eq_add_neg, add_comm]
+          simp [hca, add_smul, sub_eq_add_neg, add_comm]
         · simp [hca, hcb, Ne.symm hcb]
     have ht := _root_.GlobalTheory.UnitaryHighestWeight.isWtOn_of_isWeight hπ E hder _ _ hw
     have hD := hdom _ (E a b v) Submodule.mem_top hne ht

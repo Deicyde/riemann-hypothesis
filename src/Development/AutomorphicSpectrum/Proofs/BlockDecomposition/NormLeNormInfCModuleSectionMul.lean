@@ -1,5 +1,5 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.AutomorphicKernels.EisensteinSeriesG2.RankOneEisenstein.Theta2Integral
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.TateThesis.TateThetaDecay
 set_option maxSynthPendingDepth 1
 

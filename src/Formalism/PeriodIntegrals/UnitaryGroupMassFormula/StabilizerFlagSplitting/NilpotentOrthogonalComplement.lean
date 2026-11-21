@@ -1,5 +1,9 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerFlagSplitting.SubFlag
 import Formalism.FormalDegreeBessel.FormalDegreeRatio.GBasic
+import Formalism.FormalDegreeBessel.FormalDegreeRatio.GroupFactorizationHolds
+import Formalism.FormalDegreeBessel.FormalDegreeRatio.UnitaryWeylNormalHolds
 
 open Matrix Formalism.QuantumDeterminants Formalism.FourierDecayAlt Formalism.FourierDecayAlt.C2 Formalism.QuantumDeterminants.GBasic
 
@@ -16,7 +20,7 @@ def Lk (k r : ℕ) : Fin (2 * r + k + 1) := ⟨r + k, by omega⟩
 lemma mulVec_bvec {m : ℕ} (A : Matrix (Fin m) (Fin m) ℂ) (j : Fin m) :
     A *ᵥ bvec j = fun i => A i j := by
   funext i
-  simp [bvec, Matrix.mulVec, Pi.single_apply]
+  simp [bvec, Matrix.mulVec]
 
 lemma sig_gt {k r : ℕ} (i : Fin (2 * r + k + 1)) (h : i.val < r) : r + k < (sig k r i).val := by
   unfold sig
@@ -53,7 +57,7 @@ private lemma hpk_apply_of_outer_index (k r : ℕ) (i j : Fin (2 * r + k + 1)) :
     simp only [Hpk, sgn]
     by_cases hij : j = i
     · subst hij
-      simp only [if_true, and_true, eq_self_iff_true]
+      simp only [if_true, and_true]
       split_ifs <;> first | rfl | (exfalso; omega)
     · have hij' : ¬ i = j := fun h => hij h.symm
       simp only [hij, hij', if_false, and_false]
@@ -66,7 +70,7 @@ lemma herm_coord {k r : ℕ} (v w : Fin (2 * r + k + 1) → ℂ) :
   refine Finset.sum_congr rfl fun i _ => ?_
   congr 1
   simp only [Matrix.mulVec, dotProduct, hpk_apply_of_outer_index, ite_mul, zero_mul, Finset.sum_ite_eq',
-    Finset.sum_ite_eq, Finset.mem_univ, if_true]
+    Finset.mem_univ, if_true]
 
 lemma star_dotProduct_Hpk_mulVec_eq_sum_sub {k r : ℕ} {v w : Fin (2 * r + k + 1) → ℂ} (hv : perpX k r v) (hw : perpX k r w) :
     herm (Hpk k r) v w =
@@ -321,7 +325,7 @@ theorem nilpotent_orthogonal_complement : NPerp := by
       rw [hs, hsg] at h4
       simpa [bvec] using h4
     · intro j _ hj
-      simp [bvec, Pi.single_apply, hj]
+      simp [bvec, hj]
     · intro h
       exact absurd (Finset.mem_univ _) h
   have h5 := m_perp hcol hperp

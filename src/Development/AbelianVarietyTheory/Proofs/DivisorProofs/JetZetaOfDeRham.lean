@@ -1,9 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.StepsNonvacuous
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GrothendieckDeformation
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsCrystalPairing
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.JetDeterminantOfDeRham
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.IsValLineLogNormAtIffEmbedding
 
@@ -64,7 +60,7 @@ theorem exists_comb_eigen [IsCMField E] (H : GlobalTheory.Published.AbelianDeRha
   obtain ⟨χ, hχ⟩ := T.U.ah
   have hh : (T.U.h (T.U.e m) : ℂ) ≠ 0 := fun e ↦ by
     have := hχ.2.1 (Pi.single m 1) (by simp)
-    simp [Matrix.mulVec_diagonal, e] at this
+    simp [e] at this
   rw [← hd, pair_special T hP] at h0
   simp only [h1, h2, Pi.zero_apply, zero_mul, sub_zero, Pi.single_apply, ite_mul, _root_.one_mul, mul_ite, mul_zero,
     Finset.sum_ite_eq', Finset.mem_univ, if_true] at h0
@@ -89,7 +85,7 @@ theorem low_anti [IsCMField E] (H : GlobalTheory.Published.AbelianDeRham) (hφ :
     · subst hk
       simp only [if_true]
       ring
-    · simp [hk, Ne.symm hk]
+    · simp [hk]
   obtain ⟨d, e0, e1, e2⟩ := exists_comb_eigen H hφ hc T hP i
   refine ⟨(-(((ε : ℤ) : ℂ) * Real.pi * T.U.h i * T.s i * T.w i)) • d, ?_, by rw [map_smul, e2, smul_zero], fun k ↦ ?_⟩
   · rw [map_smul, e1, ← Pi.single_smul, smul_eq_mul, CxPt.A]

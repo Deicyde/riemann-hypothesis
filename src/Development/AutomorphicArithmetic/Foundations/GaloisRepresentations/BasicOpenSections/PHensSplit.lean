@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.BasicOpenSections.ResClosed
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.TranscendenceTraces.AllHolds
+import Mathlib.Tactic.Polynomial.Basic
 
 open CategoryTheory Limits AlgebraicGeometry GlobalTheory.EtC
 open UpperTheory.Gal.TranscendenceTraces (gp pt Wt fib IsWt nwt LocNml)

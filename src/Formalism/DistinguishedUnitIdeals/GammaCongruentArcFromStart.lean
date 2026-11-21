@@ -1,8 +1,6 @@
-import Mathlib
-import Formalism.DistinguishedUnitIdeals.ArcLiftOfLocalizationData
-import Formalism.DistinguishedUnitIdeals.FrobeniusDiffBijective
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.DistinguishedUnitIdeals.ExistsConstOfInvariantMod
-import Formalism.DistinguishedUnitIdeals.LemmaCFull
 import Formalism.DistinguishedUnitIdeals.FrobeniusCoboundedArc
 
 noncomputable section

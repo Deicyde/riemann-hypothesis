@@ -1,10 +1,9 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.GoodCoverEigenspaces.JumpStepOf
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.GoodCoverEigenspaces.CubeCechEquivalences.CoordsOfCommonEigenvector
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.HodgeMatrices.HodgeMat
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsNormalProjectiveModel
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.OmegaPullId
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.HodgePullHodgePull
-import Development.AbelianVarietyTheory.CrystallinePeriods.RingBasics
 
 noncomputable section
 

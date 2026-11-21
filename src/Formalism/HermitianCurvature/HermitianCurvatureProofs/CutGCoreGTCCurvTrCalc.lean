@@ -1,5 +1,6 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGCoreGTCRefCut
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.NormalFormOrderZeroOfParts
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.cut_GCore_GTConnCut
+import Mathlib.Analysis.Calculus.FDeriv.Star
 
 open Formalism.REAL Formalism.QuantumDeterminants Formalism.FourierDecayAlt
 
@@ -30,7 +31,7 @@ theorem dZb_modA (P : M.Par) (ρ : M.Ty P) {ζ : ℂ} (hζ : ζ ∈ Ann P) :
   simp only [NF.dZb]
   rw [hF'.fderiv]
   rw [← hns]
-  simp [Complex.star_def]
+  simp
   field_simp
   ring_nf
   simp only [Complex.I_sq]

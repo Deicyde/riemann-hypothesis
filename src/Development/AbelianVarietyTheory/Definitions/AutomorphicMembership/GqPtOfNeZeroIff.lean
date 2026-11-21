@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.PrimInIffSubsingleton
-import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
+import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsDifferentPair
 
 noncomputable section
 
@@ -131,7 +133,7 @@ theorem Gq_nullPt {ζ : E} (hζ : ζ ≠ 0) (h : ζ * σ ζ = T * T') :
       simp only [Fin.ext_iff, Fin.val_last]
       split_ifs <;> first | rfl | omega
     have h1 : (Formalism.MainNotions.S.ptMat w).det = ζ := by
-      simp [e, Fin.prod_univ_castSucc, (Fin.castSucc_lt_last _).ne]
+      simp [e]
     have h2 : SgAlg.lead (Formalism.MainNotions.S.ptMat w) r (Nat.le_succ r) = 1 := by
       rw [SgAlg.lead, e, Matrix.submatrix_diagonal _ _ (Fin.castLE_injective _), Matrix.det_diagonal]
       exact Finset.prod_eq_one fun i _ => if_neg (Fin.castSucc_lt_last i).ne

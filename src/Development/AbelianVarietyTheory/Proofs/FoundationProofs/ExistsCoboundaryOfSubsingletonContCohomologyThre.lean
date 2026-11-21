@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.GaloisCohomology.LocalTateDualityK
+import BuildAid.Leniency.Open
+import ReciprocityTheory.Hypotheses.GalCohDefs
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.GaloisCohomology
 
 namespace GlobalTheory

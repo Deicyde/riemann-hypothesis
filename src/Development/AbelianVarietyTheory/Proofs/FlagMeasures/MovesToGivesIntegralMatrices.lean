@@ -1,8 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.NGData
-import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.VolPin
-import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.Vanish
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.AtBase
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.PlacesOf
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.UpperUnitriangularMul
 
@@ -73,7 +71,7 @@ theorem exists_upUni (F : LFlag S r T) (n : S.V ≃ₗ[E] S.V)
     | last => simp
     | cast k => simp only [Fin.snoc_castSucc]; exact hl0 b k hab.le
   · intro a
-    simp only [Matrix.of_apply, if_pos rfl]
+    simp only [Matrix.of_apply]
     induction a using Fin.lastCases with
     | last => simp
     | cast k => simp only [Fin.snoc_castSucc]; rw [hl0 _ k le_rfl]; simp

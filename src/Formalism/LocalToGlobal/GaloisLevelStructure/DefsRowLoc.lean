@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GaloisLevelStructure.DefsAutLoc
-import Formalism.LocalToGlobal.GaloisLevelStructure.DefsFinTyp
 
 noncomputable section
 

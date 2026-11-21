@@ -1,11 +1,10 @@
+import BuildAid.Leniency.Variable
 import Development.WeilBound.CoreStatements.GaussianSeminormBounds.RealSeminormFiltration.TensorIrr
 import Mathlib.LinearAlgebra.PiTensorProduct.Basis
-import Mathlib.RingTheory.SimpleModule.Basic
 import Mathlib.RingTheory.Algebraic.LinearIndependent
-import Mathlib.FieldTheory.IsAlgClosed.Basic
-import Mathlib.Analysis.Complex.Polynomial.Basic
-import Mathlib.Analysis.Complex.Cardinality
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.SpectrumNonemptyOfCountableRank
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -121,7 +120,7 @@ theorem map_mem_of_one_op [Fintype ι] (N : Submodule ℂ (PiTensorProduct ℂ M
         funext j
         by_cases hj : j = i
         · subst hj; simp [hi]
-        · simp [hj, Function.update_of_ne hj]
+        · simp [hj]
       rw [e]
       exact hN i (f i) _ ih
   simpa using key Finset.univ

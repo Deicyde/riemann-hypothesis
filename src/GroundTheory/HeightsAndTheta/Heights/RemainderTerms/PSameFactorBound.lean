@@ -1,6 +1,9 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.RemainderTerms.StatementsTop
 import GroundTheory.HeightsAndTheta.Heights.RemainderTerms.PowerSums
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.Data.Rat.Star
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.RestTerms

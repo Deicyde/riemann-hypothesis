@@ -1,10 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.InvNormSqConjRatioPowIdentities
 import Formalism.GL3MeanSquares.HookFormulaTorsion.PrimesInProgressionCountLowerBound
-import Formalism.GL3MeanSquares.HookFormulaTorsion.HadamardUnitDiagonalDetLeOne
 import Formalism.GL3MeanSquares.HookFormulaTorsion.SumWeightsOverPrimeLeHalfDegree
-import Formalism.GL3MeanSquares.HookFormulaTorsion.ConditionIffDualEqFunctional
-import Formalism.GL3MeanSquares.HookFormulaTorsion.LengthQuotientBoundGeneral
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.Analysis.Real.Pi.Bounds
+import Mathlib.Data.Rat.Star
+import Mathlib.RingTheory.PiTensorProduct
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Finset Filter Topology ArithmeticFunction
 
@@ -538,7 +540,7 @@ theorem exponent_bounds : TableauExponentRange := by
             have h1 : (i, k) ∈ μ := hc'.1
             have h2 := μ.mem_iff_lt_rowLen.mp h1
             have h3 := μ.rowLen_anti 0 i (Nat.zero_le i)
-            simp only [Finset.coe_range, Set.mem_Iio, Finset.mem_range]
+            simp only [Finset.coe_range, Set.mem_Iio]
             omega
           · intro a ha b hb hab
             have ha' : a ∈ μ.cells ∧ T a.1 a.2 = j := by simpa using ha
@@ -1012,12 +1014,12 @@ private theorem div_sub_val_div_mem_intRange_iff_cast_eq (q : ℕ) [Fact q.Prime
     have h2 : a = (r.val : ℤ) + k * q := by exact_mod_cast h1
     rw [h2]
     push_cast
-    simp [ZMod.natCast_self, ZMod.natCast_zmod_val]
+    simp
   · intro h
     have h1 : ((a - (r.val : ℤ) : ℤ) : ZMod q) = 0 := by
       push_cast
       rw [h]
-      simp [ZMod.natCast_zmod_val]
+      simp
     obtain ⟨k, hk⟩ := (ZMod.intCast_zmod_eq_zero_iff_dvd _ _).mp h1
     refine ⟨k, ?_⟩
     have h2 : (a : ℚ) - (r.val : ℚ) = q * k := by exact_mod_cast hk

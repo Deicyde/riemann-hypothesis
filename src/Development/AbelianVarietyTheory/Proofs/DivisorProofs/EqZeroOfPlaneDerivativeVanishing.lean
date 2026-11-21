@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DarbouxCoordinatesInsertZero
 open scoped TensorProduct Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -39,8 +39,8 @@ theorem eq_zero_of_dH_plane_of_ins0 (F : Type) [Field F] [NumberField F] (n d d�
     have h1 := (f₀.differentiableAt (x := ins0 hd x₁ + t • p)).hasFDerivAt.comp_hasDerivAt t hl
     refine h1.congr_deriv ?_
     have hs : ∑ i, (ins0 hd x₁ + t • p) i * β i = t • ∑ i, p i * β i := by
-      simp only [Pi.add_apply, Pi.smul_apply, add_mul, Finset.sum_add_distrib, ins0_mul_plane hd x₁ β hβ,
-        Finset.sum_const_zero, zero_add, smul_mul_assoc, ← Finset.smul_sum]
+      simp only [Pi.add_apply, Pi.smul_apply, add_mul, ins0_mul_plane hd x₁ β hβ,
+        zero_add, smul_mul_assoc, ← Finset.smul_sum]
     have e := hc (ins0 hd x₁ + t • p)
     simp only [dH, Pi.zero_apply, mul_zero, Finset.sum_const_zero, map_zero, Complex.ofReal_zero, zero_mul,
       sub_zero, zero_sub, hs, map_smul, smul_eq_mul] at e

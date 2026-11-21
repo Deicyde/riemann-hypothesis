@@ -1,8 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.ComplexMultiplication.MainTheoremAssembly
 import GroundTheory.GlobalFields.ComplexMultiplication.MainTheoremModels
 import GroundTheory.GlobalFields.ComplexMultiplication.MainTheoremFields
-import GroundTheory.GlobalFields.ComplexMultiplication.BadPrimesFinite
+import GroundTheory.GlobalFields.ComplexMultiplication.MainTheoremFrobenius
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Global

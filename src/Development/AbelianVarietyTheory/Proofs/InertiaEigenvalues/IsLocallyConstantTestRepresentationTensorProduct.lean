@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.TensorRepApply
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsTestRep
 
 open GlobalTheory.JR GlobalTheory.JR.WeilProd Filter Topology
 

@@ -1,5 +1,7 @@
-import ReciprocityTheory.GroupCohomology.CupConnRightStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.GroupCohomology.Section
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace ReciprocityTheory.Coh.InflationTransgression
 
@@ -171,7 +173,7 @@ theorem inflD_of_ext (M : TRep R G) (N : Subgroup G) [N.Normal] (f : N → M.V) 
   · intro a b n
     simp only [D1]
     rw [h2 b n, ← mul_assoc, h2 (a * b) n]
-    simp only [map_add, map_sub, map_mul, Module.End.mul_apply]
+    simp only [map_add, map_mul, Module.End.mul_apply]
     abel
   · intro a b n
     simp only [D1]
@@ -179,7 +181,7 @@ theorem inflD_of_ext (M : TRep R G) (N : Subgroup G) [N.Normal] (f : N → M.V) 
     rw [e, h2 (a * b), h2 a n]
     simp only [map_mul, Module.End.mul_apply]
     rw [hc b n]
-    simp only [map_add, map_sub, map_mul, Module.End.mul_apply]
+    simp only [map_add, map_sub]
     abel
   · intro a b n
     simp only [D1, map_add, map_sub]

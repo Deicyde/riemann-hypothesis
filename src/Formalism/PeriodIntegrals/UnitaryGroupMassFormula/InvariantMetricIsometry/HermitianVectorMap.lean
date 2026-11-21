@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.InvariantMetricIsometry.ColChoiceFintype
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.InvariantMetricIsometry.MetricConstantBound
 
 noncomputable section

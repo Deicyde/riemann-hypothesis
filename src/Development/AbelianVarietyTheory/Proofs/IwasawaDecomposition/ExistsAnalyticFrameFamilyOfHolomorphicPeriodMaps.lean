@@ -1,11 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MultOfNotMem
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HodgeMetricUniformisationSmoothOnInterior
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PtEqOfPtOfFrameEq
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.DifferentiableOnOfTendstoLocallyUniformlyOn
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.LminorSubmatrixCastSucc
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.FourierCoefficientDomain
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.HolomorphicFamilies.UnitHmD
+import Formalism.LocalToGlobal.ProjectiveLattices.UnFree
+import ReciprocityTheory.L2DbarEstimates.IsLocalHomeomorph
 open AlgebraicGeometry CategoryTheory MvPolynomial NumberField ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj GlobalTheory.Toroidal GlobalTheory.ShFam GlobalTheory.ProjVar GlobalTheory.FlagBundle GlobalTheory.GoodMetric GlobalTheory.LieBase
 open Classical
 open GlobalTheory GlobalTheory.Cartier GlobalTheory.ProjVar GlobalTheory.CxPts GlobalTheory.ChartGlue GlobalTheory.FlagBundle GlobalTheory.HermFrame
@@ -110,7 +110,7 @@ theorem exists_fam {E : Type} [Field E] [NumberField E] [IsCMField E] {r : ℕ} 
     refine Finset.sum_congr rfl fun a _ => ?_
     rw [Finset.sum_eq_single b]
     · simp
-    · intro b' _ hb'; simp [Pi.single_apply, hb']
+    · intro b' _ hb'; simp [hb']
     · simp
   obtain ⟨L, hL⟩ := LinearMap.exists_leftInverse_of_injective Φ hΦ
   exact ⟨L, fun u => LinearMap.congr_fun hL u⟩

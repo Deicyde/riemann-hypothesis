@@ -1,5 +1,5 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.PeriodRingComparison.CrystallinePeriodRings.GammaEqDpow
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PeriodRingComparison.CrystallinePeriodRings.AcrisNAlgebraMapAinf
 import Development.WeilBound.CoreStatements.CrystallinePeriodRings.AinfMapSurjective
 

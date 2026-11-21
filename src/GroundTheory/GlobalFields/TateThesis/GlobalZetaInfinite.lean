@@ -1,6 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.TateThesis.IdeleMeasure
-import GroundTheory.GlobalFields.TateThesis.SchwartzBruhat
+import GroundTheory.GlobalFields.Adele.IntegersLattice
+import Mathlib.Analysis.Distribution.SchwartzSpace.Basic
+import Mathlib.MeasureTheory.Integral.Pi
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 open NumberField IsDedekindDomain Topology Filter MeasureTheory NumberField.mixedEmbedding
 open scoped NumberField.AdeleRing ENNReal NNReal SchwartzMap Classical

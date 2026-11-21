@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.TupleActions.InstMulActionTup
-import Mathlib.Algebra.QuadraticAlgebra.Basic
 
 open NumberField QuadraticAlgebra
 

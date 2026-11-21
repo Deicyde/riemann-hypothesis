@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.BesselHermitianTheta.TiedSmooth
 import Development.AbelianVarietyTheory.BlockTheory.HeightDefect.WordDerivatives
+import Mathlib.Algebra.Lie.DirectSum
 
 noncomputable section
 

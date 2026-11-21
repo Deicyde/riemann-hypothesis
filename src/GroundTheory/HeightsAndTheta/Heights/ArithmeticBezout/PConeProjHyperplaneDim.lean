@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.StatementsConeProjHyperplaneDim
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.PConeSheetParam
 import GroundTheory.ArithmeticGeometry.ToricVarieties.Dimension

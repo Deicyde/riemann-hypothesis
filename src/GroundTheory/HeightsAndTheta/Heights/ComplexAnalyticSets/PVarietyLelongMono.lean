@@ -1,8 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StVarietyLelongMono
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StVarWirtinger
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StVarLelongMono
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StLinearNoetherNormalization
+import Mathlib.RingTheory.Nullstellensatz
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

@@ -1,5 +1,7 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.LevelKernelDetection.CrystallineToDeRhamInjective
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.LevelKernelDetection.PfLvBasisCmp
+import Formalism.DistinguishedUnitIdeals.ExistsConstOfInvariantMod
 
 noncomputable section
 

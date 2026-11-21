@@ -1,5 +1,17 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.TZero
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.Data.Int.Star
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Finset GlobalTheory.CompanionTheory.CoefId
 
@@ -65,7 +77,7 @@ theorem sum_sym (f : Fin n → Fin n → ℤ) (hf : ∀ a b, f a b = f b a) :
       + (if a = b then f a a else 0) := by
     intro a b
     rcases lt_trichotomy a b with h | h | h
-    · simp [h, h.ne, h.le, not_lt.2 h.le]
+    · simp [h, h.ne, not_lt.2 h.le]
     · subst h; simp
     · simp [h, h.ne', not_lt.2 h.le, hf a b]
   have hA : ∑ a, ∑ b, (if a < b then f a b else 0) = ∑ p ∈ prs n, f p.1 p.2 := by

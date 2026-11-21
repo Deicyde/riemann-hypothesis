@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IwasawaMeasureExistence.MulEquivHaarCharEqOfChart
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.AddEquivAddHaarCharProdCongr
 
@@ -40,7 +40,7 @@ theorem mulEquivHaarChar_eq_mul_of_heisenberg_chart : ∀ (N V L : Type) [Group 
     have htr : ν.map (fun p : V × L => χ g + p) = ν := map_add_left_eq_self ν (χ g)
     have hτeq : τ = (fun p : V × L => χ g + p) ∘ (fun p : V × L => (p.1, p.2 + ω (χ g).1 p.1)) := by
       funext p
-      simp only [hτ, Function.comp_apply, Prod.mk_add_mk]
+      simp only [hτ, Function.comp_apply]
       congr 1
       abel
     have hτν : ν.map τ = ν := by

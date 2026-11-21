@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.EvalMod
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ValuationLtOneOfEq
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LocalEmbeddingRangeEqField
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsUniformizerGaloisAction
+import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.Kernel
 noncomputable section
 open NumberField IsDedekindDomain Neutral.B1 Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.L2.Host Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.WeaklyAdmissibleFiltrations
 open GlobalTheory.HeckeGal GlobalTheory.Pst GlobalTheory.TripleGal GlobalTheory.CompanionTheory.LTHodge GlobalTheory.CompanionTheory.LTPer
@@ -33,7 +33,7 @@ theorem norm_oc_le_one (K : FinExt l) (c : ↥(OL K)) : ‖oc K c‖ ≤ 1 := by
   exact h
 
 @[simp] theorem sh_zero : sh (0 : Tl l) = 0 := by
-  simp [sh, GroundTheory.PAdicHodge.untilt_zero]
+  simp [sh]
 
 @[simp] theorem sh_one : sh (1 : Tl l) = 1 := by
   simp [sh]

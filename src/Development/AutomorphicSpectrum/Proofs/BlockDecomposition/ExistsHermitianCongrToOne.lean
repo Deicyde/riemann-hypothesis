@@ -1,6 +1,9 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ResAlgSplitTwo
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CardOrthonormalFramesHermitianSpaceStatement
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
 
 open PositivityTheory.PfSWUS.Loc GlobalTheory.CompanionTheory.UnrDens
 

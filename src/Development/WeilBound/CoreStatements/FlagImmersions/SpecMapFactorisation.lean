@@ -1,10 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.FlagImmersions.FibSandwich
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.FlatTheoremOfParts
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.FlatTheoremOfResolutionGagaStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.FlatZeroFromResolutionAndGagaStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.FlatFirstFromResolutionAndGagaStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.KroneckerCharacterPeriodFormulaStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.FlatGenFrameComplexCompatStatement
 
 noncomputable section
 

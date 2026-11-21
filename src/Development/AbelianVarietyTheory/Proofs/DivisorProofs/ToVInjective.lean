@@ -1,4 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.PointsNonemptyUnitaryRankOne
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StabEqStabilizer
 
@@ -28,7 +30,7 @@ instance (G : HTGroup p) (v : InfinitePlace G.F) (β : G.Cˣ) : MulAction (grp G
     | h w hw =>
       rw [Projectivization.map_mk]
       congr 1
-      simp [Matrix.toLin'_apply]
+      simp
   mul_smul y y' l := by
     change Projectivization.map _ _ (l : Projectivization ℂ (Fin G.n → ℂ)) =
       Projectivization.map _ _ (Projectivization.map _ _ (l : Projectivization ℂ (Fin G.n → ℂ)))

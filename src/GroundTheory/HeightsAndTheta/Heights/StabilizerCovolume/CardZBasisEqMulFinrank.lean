@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Covolume
 import GroundTheory.HeightsAndTheta.Heights.StabilizerCovolume.GramLieEqConjTransposeMul
 set_option maxSynthPendingDepth 1
@@ -30,7 +31,7 @@ theorem mem_span_towerZBasis {M : Type} [AddCommGroup M] [Module (𝓞 Em) M] {�
     (hv : LinearIndependent (𝓞 Em) v) {x : M} (hx : x ∈ Submodule.span (𝓞 Em) (Set.range v)) :
     x ∈ Submodule.span ℤ (Set.range fun p => (towerZBasis hv p : M)) := by
   have h := congrArg Subtype.val ((towerZBasis hv).sum_repr ⟨x, hx⟩)
-  simp only [Submodule.coe_sum, Submodule.coe_smul] at h
+  simp only [Submodule.coe_sum] at h
   rw [← h]
   exact Submodule.sum_mem _ fun i _ => Submodule.smul_mem _ _ (Submodule.subset_span ⟨i, rfl⟩)
 

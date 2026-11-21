@@ -1,8 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ChartWiden
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ValLtOfRedM
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LiftsInvOne
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.NearPair
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsMidLevOfMem
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MidLevMulBeforeLast
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PenultimateChartLocalGroupMemNearLevelSetStatement

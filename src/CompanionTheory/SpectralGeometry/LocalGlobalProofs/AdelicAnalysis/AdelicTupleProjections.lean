@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.SpectralGeometry.CountingDefinitions.AdelicEulerProducts.IsEulerProd
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.TensorLocallyCompactRing
 import GroundTheory.GlobalFields.LocalAtPlace
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -21,7 +23,7 @@ theorem repr_map {d : ℕ} (b : Module.Basis (Fin d) F E) (f : R →ₐ[F] S) (y
   induction y using TensorProduct.induction_on with
   | zero => simp
   | tmul r e =>
-    simp [Algebra.TensorProduct.basis_repr_tmul, Algebra.smul_def]
+    simp [Algebra.TensorProduct.basis_repr_tmul]
   | add x y hx hy => simp [map_add, hx, hy]
 
 variable [TopologicalSpace R] [IsTopologicalRing R] [TopologicalSpace S] [IsTopologicalRing S]

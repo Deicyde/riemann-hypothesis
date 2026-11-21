@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.DiscreteGroups.GlobalIrreducibility.OneRatio
 import Development.DiscreteGroups.GlobalIrreducibility.DzGalSplit
 import Development.DiscreteGroups.GlobalIrreducibility.DzGalKappa

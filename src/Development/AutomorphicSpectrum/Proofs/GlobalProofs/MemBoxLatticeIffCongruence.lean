@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.MemConjSub
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.LocalFieldUniformizerNormProperties
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.MemIntegralGLIffIntegralUnitDet
 open MeasureTheory Matrix GlobalTheory.CompanionTheory.QL GlobalTheory.CompanionTheory.QL.QIndex
 open scoped ComplexConjugate ValuativeRel
@@ -21,7 +20,7 @@ theorem nrm_det_one_add {F : Type} [Field F] [ValuativeRel F] [TopologicalSpace 
     by_cases hab : a = b
     · simp [M, y, ϖ', hf', hab]
       rfl
-    · simp [M, y, ϖ', hf', hab, Matrix.one_apply]
+    · simp [M, y, ϖ', hf', hab]
       rfl
   let π := Ideal.Quotient.mk (Ideal.span {ϖ'})
   have hπ : π ϖ' = 0 := Ideal.Quotient.eq_zero_iff_mem.2 (Ideal.subset_span rfl)

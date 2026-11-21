@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TypePartBase
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Counterexamples.RotationExamples.LevelVectorSizeBounds
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsGalConjChrEq
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsGalConjEta
@@ -9,6 +9,8 @@ import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MulNormSqLeNormProj
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GoodScalarOfIsAdelicScalar
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicScalarBase
 import Development.AbelianVarietyTheory.Definitions.Divisors.RealisedChainTorusEq
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoefInjective
+import Development.AbelianVarietyTheory.Proofs.TwistedOperators.NormLiftFormsFiniteGroupAction
 
 set_option autoImplicit false
 

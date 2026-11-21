@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.RealDescent.RealLeviDescent.IsLevPairA
-import Formalism.RealPlaceAnalysis.StatementE
+import Mathlib.Tactic.ENatToNat
 
 noncomputable section
 

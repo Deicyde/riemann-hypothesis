@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.LaplaceOperators.LaplaceFoundations.RootSumApply
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.HighestWeights.UniqueU
 
 noncomputable section
 

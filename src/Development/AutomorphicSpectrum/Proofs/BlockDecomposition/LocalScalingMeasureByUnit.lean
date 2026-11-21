@@ -1,7 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.EMatMulNegCol
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.FibreMassEq
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IwasawaMeasureExistence.PseudoMetrizableAEf
+import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.CompletionIsLocalRing
+import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.CoordinateHaarMeasure
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IwasawaMeasureExistence.CharEqOneOfPreimage
 open scoped Matrix NNReal ENNReal TensorProduct
 open HeckeCharacterZeroLocus.SiegelWeilU GlobalTheory.CompanionTheory.WhitFree GlobalTheory.CompanionTheory.WeilSiegel.Frame GlobalTheory.CompanionTheory.AvgFree MeasureTheory
 
@@ -250,8 +253,8 @@ theorem hermCoord_cj [TopologicalSpace R] [CharZero F] {σ : E →ₐ[F] E} (hin
       simp [cU, Function.update_of_ne hij, mul_comm]
     · by_cases hi : i = l
       · subst hi
-        simp [cU, hj, Function.update_of_ne hj]
-      · simp [cU, hi, hj, Function.update_of_ne hi, Function.update_of_ne hj]
+        simp [cU, hj]
+      · simp [cU, hi, hj]
 
 end Tens
 

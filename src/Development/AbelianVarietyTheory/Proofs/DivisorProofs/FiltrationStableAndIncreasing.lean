@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RestrActApply
 open Formalism.BasicNotions.TH Formalism.MainNotions.SchurIrreducible GlobalTheory.FockAlg GlobalTheory.SteepMult
 
@@ -42,12 +44,12 @@ lemma bracket_eNC {Z : Mat R S} (hZ : IsKC Z) (x : NC R S) :
         · simp [hd, hc]
     · intro y _
       have : ¬ (y.1.1 = c ∧ y.1.2 = d) := fun ⟨h1, h2⟩ => y.2 (h1 ▸ h2 ▸ h)
-      simp [Matrix.single_apply, this]
+      simp [this]
   · rw [Finset.sum_eq_single ⟨(c, d), h⟩]
     · simp [adP]
     · intro y _ hy
       have : ¬ (y.1.1 = c ∧ y.1.2 = d) := fun ⟨h1, h2⟩ => hy (Subtype.ext (Prod.ext h1 h2))
-      simp [Matrix.single_apply, this]
+      simp [this]
     · simp
 
 variable {V : Type} [AddCommGroup V] [Module ℂ V]
@@ -75,7 +77,7 @@ lemma word_mem_range (act : Mat R S →ₗ[ℂ] Module.End ℂ V) (N : Submodule
   refine ⟨Pi.single g ⟨n, hn⟩, ?_⟩
   rw [phiN_apply, Finset.sum_eq_single g]
   · simp
-  · intro h _ hh; simp [Pi.single_apply, hh]
+  · intro h _ hh; simp [hh]
   · simp
 
 lemma act_eNC_mem_range (act : Mat R S →ₗ[ℂ] Module.End ℂ V) (N : Submodule ℂ V) {k : ℕ} (x : NC R S) {w : V}

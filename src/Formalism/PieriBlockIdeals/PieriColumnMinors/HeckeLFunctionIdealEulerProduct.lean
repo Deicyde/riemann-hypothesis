@@ -1,7 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PieriBlockIdeals.LemmaWFromLattice
 import Formalism.PieriBlockIdeals.PieriColumnMinors.HeightDescentMinors
 import Formalism.PieriBlockIdeals.PieriColumnMinors.RegularCuspidalTrace
+import Mathlib.Order.Interval.Finset.Box
+import Mathlib.RingTheory.LocalProperties.Reduced
 
 noncomputable section
 
@@ -301,7 +304,7 @@ theorem det_dvd_holds : DetDvd := by
 theorem map_smul_one_matrix {R S : Type} [CommRing R] [CommRing S] (f : R →+* S) (n : ℕ) (x : R) :
     ((x • (1 : Matrix (Fin n) (Fin n) R))).map f = f x • (1 : Matrix (Fin n) (Fin n) S) := by
   ext i j
-  by_cases h : i = j <;> simp [h, Matrix.one_apply]
+  by_cases h : i = j <;> simp [h]
 
 theorem blockTriangular_of_mul_eq_pow_smul_one {R : Type} [CommRing R] [IsDomain R] (π : R) (n h : ℕ)
     (Φ Φ' : Matrix (Fin n) (Fin n) R) (b : Fin n → ℕ) (hπ : π ≠ 0) (hΦ : Φ.BlockTriangular b)
@@ -312,7 +315,7 @@ theorem blockTriangular_of_mul_eq_pow_smul_one {R : Type} [CommRing R] [IsDomain
   have hm' : Φ.map φ * Φ'.map φ = (φ π ^ h) • (1 : Matrix (Fin n) (Fin n) (FractionRing R)) := by
     rw [← Matrix.map_mul, hm]
     ext a c
-    by_cases hac : a = c <;> simp [hac, Matrix.one_apply]
+    by_cases hac : a = c <;> simp [hac]
   have hc : (φ π) ^ h ≠ 0 := pow_ne_zero _ ((map_ne_zero_iff φ hinj).2 hπ)
   have hr : Φ.map φ * (((φ π) ^ h)⁻¹ • Φ'.map φ) = 1 := by
     rw [Matrix.mul_smul, hm', smul_smul, inv_mul_cancel₀ hc, one_smul]
@@ -333,7 +336,7 @@ theorem toSquareBlock_mul_of_blockTriangular_alt {R : Type} [CommRing R] {n : �
     (b : Fin n → ℕ) (hA : A.BlockTriangular b) (hB : B.BlockTriangular b) (r : ℕ) :
     (A * B).toSquareBlock b r = A.toSquareBlock b r * B.toSquareBlock b r := by
   ext ⟨i, hi⟩ ⟨j, hj⟩
-  simp only [Matrix.toSquareBlock_def, Matrix.toBlock_apply, Matrix.mul_apply,
+  simp only [Matrix.toSquareBlock_def, Matrix.mul_apply,
     Matrix.of_apply]
   rw [← Fintype.sum_subtype_add_sum_subtype (fun k => b k = r)]
   have hz : ∑ k : {k // ¬ b k = r}, A i k * B k j = 0 := by
@@ -564,13 +567,13 @@ theorem theta_base_change_holds : ThetaBaseChange := by
   have hAG1 : A.map (coeff 1) * G.map constantCoeff + A.map constantCoeff * G.map (coeff 1) = 0 := by
     rw [← hcoef, hAG]
     ext i j
-    by_cases hij : i = j <;> simp [hij, Matrix.one_apply]
+    by_cases hij : i = j <;> simp [hij]
   have hB0 : (1 + (X : k⟦X⟧) • D).map constantCoeff = 1 := by
     ext i j
     by_cases hij : i = j <;> simp [hij, Matrix.one_apply]
   have hB1 : (1 + (X : k⟦X⟧) • D).map (coeff 1) = D.map constantCoeff := by
     ext i j
-    by_cases hij : i = j <;> simp [hij, Matrix.one_apply, e1]
+    by_cases hij : i = j <;> simp [hij, e1]
   have hC0 : (G.map (gam0 0 un)).map constantCoeff = G.map constantCoeff := by
     ext i j
     simp only [Matrix.map_apply, hcc0]

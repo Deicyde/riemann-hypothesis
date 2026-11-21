@@ -1,6 +1,7 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.AutomorphicKernels.ResidualSpectrumHilbertSum.ResidualSpectrumTensors.LeviMaps
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsSplitAtOfIsSplitPl
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.DifferentiableAtChart
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsContinuousPadic
 
 noncomputable section
 

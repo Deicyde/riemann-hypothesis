@@ -1,13 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.TrivIsCr
-import Formalism.SharpRestriction.LevelLetterCocycles.LocCoh
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.TwistStep
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.AcrisTorsionFreeComplete
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.DeRhamPotSemistable
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LinearIndepOnOfInvariant
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.SecondTwistSmallIffExactlyAtAndFinClause
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.EventuallyClosedOfDictClosed
 import Formalism.SharpRestriction.LevelLetterCocycles.JsetEmb
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.EqOfPowEqOneOfNormSubLt
 open Formalism Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.WeaklyAdmissibleFiltrations Formalism.MainNotions.N TensorProduct PowerSeries GlobalTheory.Prism GlobalTheory.BKReal GlobalTheory.Per GlobalTheory.BSP GlobalTheory.MemLoc GlobalTheory.Pst GlobalTheory.BKLim GlobalTheory.Cong Matrix
 open scoped Formalism.Per NNReal
 
@@ -265,7 +262,7 @@ theorem colMap_equi {Γ : Type} [Group Γ] {a d : ℕ} {L₀ : FinExt l} {Cl : S
   simp only [qRep, MonoidHom.coe_comp, Function.comp_apply]
   show algebraMap ℚ_[l] (Om l) ((((ρ g).val.map (algebraMap ℤ_[l] ℚ_[l])) *ᵥ v) i) * _ = _
   simp only [Matrix.mulVec, dotProduct, map_sum, Finset.sum_mul,
-    RingHom.mapMatrix_apply, Matrix.map_apply, Units.coeHom_apply, map_mul, zOm, RingHom.comp_apply]
+    Matrix.map_apply, map_mul, zOm, RingHom.comp_apply]
   refine Finset.sum_congr rfl fun x _ => by ring
 
 end GlobalTheory.LayerJumps

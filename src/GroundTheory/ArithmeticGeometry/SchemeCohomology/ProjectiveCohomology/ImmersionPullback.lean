@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ArithmeticGeometry.EtaleCompletion.QcohZariski
 import GroundTheory.ArithmeticGeometry.SchemeCohomology.InvertibleDual
+import Mathlib.Algebra.Category.ModuleCat.Sheaf.PullbackFree
+import Mathlib.CategoryTheory.Sites.LocalSite
+import Mathlib.Tactic.ENatToNat
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Arith.SchemeCoh

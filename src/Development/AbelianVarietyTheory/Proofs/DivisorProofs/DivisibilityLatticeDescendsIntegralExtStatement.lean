@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DivisibilityLatticeDescendsIntegralExt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsRingRChain
 open GlobalTheory.RingChain GlobalTheory.PerfdLat
 open scoped TensorProduct Pointwise
 set_option maxHeartbeats 1000000 in

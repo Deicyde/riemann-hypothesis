@@ -1,7 +1,6 @@
-import Mathlib
-import Formalism.SharpRestriction.PageFix
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.AlignN
-import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.FamilyClassSevenDutiesAndStableLattices
+import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.AuxiliaryPrimeMemAvoidedPrimes
 
 namespace GlobalTheory.EX.DQ
 

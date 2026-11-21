@@ -1,15 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.CMLattices.IntegralOf
-import Development.AbelianVarietyTheory.Statements.PrincipalLattices.ExistsPrincipalLattice
-import Development.AbelianVarietyTheory.Definitions.RegularCharts.BaseNorm
-import Formalism.LocalToGlobal.ProjectiveLattices.L2DefiniteCuspForms
-import Formalism.LocalToGlobal.ProjectiveLattices.NonnegIffOfLiesTotal
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.NonemptyUnitAt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.NonvanishingNearMaximum
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.IsotropicCoefficientSplitting
-import Formalism.LocalToGlobal.CMDeterminantIdeals.LambdaLowerBound
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.HolomorphicFamilies.SupAtUnit
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.LawsFieldsSeparately
 import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.ThetaUniformisationComplexAbelianVariety
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.FibreSectionNowhereZeroOfGenerates
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.IsHolToFibPtAndCompFibre
@@ -17,7 +8,6 @@ import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.UniversalTripl
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.RigidifiedSectionCorrespondenceExistsUniqueNonva
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.ImDiagEqTrace
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.ExistsUniformisationOfComplexConjugateKeyDatum
-import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.HolomorphicUniformizationTangentUnimodularRiemann
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.AppellHumbertUnifTangentWeilPairing
 
 noncomputable section
@@ -308,7 +298,7 @@ theorem isMetric_of_isOrtho : ∀ (E : Type) [Field E] [NumberField E] [IsCMFiel
         Real.pi * hermForm Wu.Hm (Pi.single (W.e.symm ⟨b, j⟩) 1) (Pi.single (W.e.symm ⟨b, i⟩) 1) := by
     intro b i j
     rw [hH]
-    simp [hermForm, Matrix.smul_mulVec, Pi.single_apply, Matrix.one_apply]
+    simp [hermForm, Matrix.one_apply]
     split_ifs <;> simp_all <;> ring
   exact isMetricAt_of Φ hg u Wu.Hm χ Wu.θ Wu.Fd w (fun b i => Pi.single (W.e.symm ⟨b, i⟩) 1)
     ⟨ht, hA, hR, hF, hFd, hN, hw, hG⟩

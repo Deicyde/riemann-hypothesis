@@ -1,5 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.JacobiPathWeights.StatementC
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -175,7 +182,7 @@ lemma lap_row (m : Matrix (Fin n) (Fin n) R) (I' J : Finset (Fin n)) (a : Fin n)
       have hr : (fun x => (Fin.cons a ⇑(I'.orderEmbOfFin hd) : Fin (d + 1) → Fin n)
           ((0 : Fin (d + 1)).succAbove x)) = I'.orderEmbOfFin hd := by
         funext x
-        simp [Fin.succAbove_zero]
+        simp
       have hexp := det_rows_expand m (Fin.cons a ⇑(I'.orderEmbOfFin hd) : Fin (d + 1) → Fin n) 0 hJ hd hr
       simp only [Fin.cons_zero] at hexp
       rw [← hexp]
@@ -294,7 +301,7 @@ theorem actFormWedge : FactX2wedge := by
     simp only [Finset.mem_filter, Finset.mem_univ, true_and] at hI
     exact Finset.insert_erase hI
   · intro I' hI'
-    simp only [Finset.coe_filter, Finset.mem_filter, Finset.mem_univ, true_and, Set.mem_setOf_eq] at hI'
+    simp only [Finset.mem_filter, Finset.mem_univ, true_and] at hI'
     exact Finset.erase_insert hI'
   · intro I hI
     simp only [Finset.mem_filter, Finset.mem_univ, true_and] at hI
@@ -320,7 +327,7 @@ lemma basisF_insert {a : Fin n} {s : Finset (Fin n)} (hs : ∀ x ∈ s, x < a) :
     rfl
   funext I
   simp only [wedgeF, basisF, Pi.single_apply, mul_ite, mul_one, mul_zero]
-  simp only [Finset.sum_ite_eq', Finset.sum_ite_eq]
+  simp only [Finset.sum_ite_eq']
   by_cases ha : a ∈ I
   · rw [if_pos ha]
     by_cases hI : I = insert a s

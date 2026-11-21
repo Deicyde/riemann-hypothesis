@@ -1,9 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.ModuliSpaces.AllTorsMap
-import Development.AbelianVarietyTheory.Definitions.Uniformization.TXFrame
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsIsPullbackPow
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsUniqueIota
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.FormallyUnramifiedMulInvertibleInteger
+import Development.AbelianVarietyTheory.Proofs.ModuliProofs.FinitePartOfIsFinitePart
 
 set_option autoImplicit false
 

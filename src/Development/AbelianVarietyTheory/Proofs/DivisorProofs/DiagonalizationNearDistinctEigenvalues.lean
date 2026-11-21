@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsNonarchimedeanW
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ColumnMinorNormInequalityStatement
 open CategoryTheory AlgebraicGeometry NumberField IsDedekindDomain ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open Formalism.BasicNotions GlobalTheory GlobalTheory.Cartier GlobalTheory.CechPic GlobalTheory.ProjVar GlobalTheory.TrueGeo GlobalTheory.Mean4O GlobalTheory.CoverNorm GlobalTheory.ShFam.Pad GlobalTheory.TrivFlag GlobalTheory.WholeFlag GlobalTheory.ConstLat
@@ -159,7 +159,7 @@ theorem core (hw : IsNonarchimedean w) {N g : ℕ} {ι : Type} (H : Matrix (Fin 
     have ha := approx_kind hw H R β χ ε happ τ u hu
     have e : P.mulVec (R.mulVec (H.mulVec u) - χ τ • H.mulVec u) r = (χ (b r) - χ τ) * (P * H).mulVec u r := by
       rw [Matrix.mulVec_sub, Matrix.mulVec_mulVec, hPR, ← Matrix.mulVec_mulVec, Matrix.mulVec_smul, ← hyx]
-      simp [Matrix.mulVec_diagonal, sub_mul]
+      simp [sub_mul]
       rw [← Matrix.mulVec_mulVec, Matrix.mulVec_diagonal]
     have h1 : w (P.mulVec (R.mulVec (H.mulVec u) - χ τ • H.mulVec u) r) ≤ η⁻¹ * (ε * supN w (H.mulVec u)) :=
       (le_supN w _ r).trans ((hbound P (fun i j => (hb i j).1) _).trans (mul_le_mul_of_nonneg_left ha hηi))
@@ -350,7 +350,7 @@ theorem graded_minor_log_eigen : ∀ {K : Type} [Field K] (w : AbsoluteValue K �
     have hu : ∀ l, β l ≠ β i → (Pi.single i (1 : K) : Fin g → K) l = 0 := by
       intro l hl
       have : l ≠ i := by rintro rfl; exact hl rfl
-      simp [Pi.single_apply, this]
+      simp [this]
     obtain ⟨_, c2, c3⟩ := core hw H P Q R b β χ lam η ε hη hε hPQ hb hD hsep hlam happ (β i) _ hu
     have hne : H.mulVec (Pi.single i (1 : K)) ≠ 0 := by
       intro h

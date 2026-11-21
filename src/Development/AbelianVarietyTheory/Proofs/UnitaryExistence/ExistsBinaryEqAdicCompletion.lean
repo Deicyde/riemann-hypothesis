@@ -1,7 +1,12 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsHolPeriods
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.Signature
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.ExistsEqTransposeMulMapOfIdempotent
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.MetricSpace.Contracting
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.TwoWeightEqOneAddRoot
 
 open NumberField Matrix
 open scoped nonZeroDivisors
@@ -212,7 +217,7 @@ theorem exists_mul_norm_eq (x : maximalRealSubfield E) (hx : x ≠ 0) {I J : Ide
         = ((u : maximalRealSubfield E) : E) * (z₂ * IsCMField.complexConj E z₂) := by
   haveI := v.isMaximal
   obtain ⟨P, hP, hPv⟩ := Ideal.exists_ideal_over_maximal_of_isIntegral (S := 𝓞 E) v.asIdeal
-    (by simp [RingHom.ker_eq_bot_iff_eq_zero, (RingHom.injective_iff_ker_eq_bot _).1
+    (by simp [(RingHom.injective_iff_ker_eq_bot _).1
       (FaithfulSMul.algebraMap_injective (𝓞 (maximalRealSubfield E)) (𝓞 E))])
   set Q := v.asIdeal.map (algebraMap (𝓞 (maximalRealSubfield E)) (𝓞 E)) with hQdef
   have hQP : Q ≤ P := Ideal.map_le_iff_le_comap.2 hPv.ge
@@ -300,7 +305,7 @@ theorem exists_eq_sq_add_of_notMem (H : Host E)
   haveI := v.isMaximal
   haveI := H.unram
   obtain ⟨P, hP, hPv⟩ := Ideal.exists_ideal_over_maximal_of_isIntegral (S := 𝓞 E) v.asIdeal
-    (by simp [RingHom.ker_eq_bot_iff_eq_zero, (RingHom.injective_iff_ker_eq_bot _).1
+    (by simp [(RingHom.injective_iff_ker_eq_bot _).1
       (FaithfulSMul.algebraMap_injective (𝓞 (maximalRealSubfield E)) (𝓞 E))])
   obtain ⟨w, hw⟩ := exists_sub_notMem
     (IsCMField.ringOfIntegersComplexConj E : 𝓞 E →ₐ[𝓞 (maximalRealSubfield E)] 𝓞 E)

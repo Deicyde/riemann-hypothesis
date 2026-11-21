@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsIdTorusEltOne
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsConstAlongSingleton
 open NumberField Matrix Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SiegelSet GlobalTheory.UAut GlobalTheory.StdPar GlobalTheory.IdTorus
 open Formalism.UG (cT)
 open GlobalTheory.Doubling (absE conjUnit)
@@ -31,7 +31,7 @@ theorem levi_mulVec_col : ∀ {F E : Type} [Field F] [NumberField F] [Field E] [
     have hP : adMat F (initCols C k) = adMat F C * P := by
       ext i j; simp [P, initCols, Matrix.mul_apply, Matrix.one_apply]
     refine ⟨fun j => (P * B.1) j ⟨k, Nat.lt_succ_self _⟩, fun j hj => ?_, fun i => ?_⟩
-    · simp only [P, Matrix.mul_apply, Matrix.submatrix_apply, id]
+    · simp only [P, Matrix.mul_apply, Matrix.submatrix_apply]
       refine Finset.sum_eq_zero fun j' _ => ?_
       rw [Matrix.one_apply_ne, zero_mul]
       intro hjj
@@ -84,9 +84,9 @@ theorem levi_mulVec_col : ∀ {F E : Type} [Field F] [NumberField F] [Field E] [
   have hc : c = Pi.single k (c k) := by
     funext j
     rcases lt_trichotomy j k with hj | rfl | hj
-    · rw [hlt j hj]; simp [Pi.single_apply, hj.ne]
+    · rw [hlt j hj]; simp [hj.ne]
     · simp
-    · rw [hc0 j hj]; simp [Pi.single_apply, hj.ne']
+    · rw [hc0 j hj]; simp [hj.ne']
   funext i
   calc (M *ᵥ fun i => adMat F X i k) i = (M * adMat F X) i k := rfl
     _ = (adMat F X *ᵥ c) i := hcM i

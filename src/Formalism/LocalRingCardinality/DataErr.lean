@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataDIVDefs
-import Formalism.LocalRingCardinality.DataLatDefs
 import Formalism.LocalRingCardinality.DataForced
 import Formalism.LocalRingCardinality.DataLevelD
 

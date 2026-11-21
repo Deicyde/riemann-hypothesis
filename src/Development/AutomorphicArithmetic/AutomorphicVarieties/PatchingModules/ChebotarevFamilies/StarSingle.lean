@@ -1,4 +1,7 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.TaylorWilesObstructionBound
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.AutomorphicVarieties.WeilGroupCharacters.UniversalOrdinaryDeterminantRing
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.NumberTheory.Padics.RingHoms
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal IsLocalRing Filter UpperTheory.V.Alg UpperTheory.V.W UpperTheory.V.Pa
 
@@ -32,7 +35,7 @@ private theorem chib_conj_eq_one_of_chib_eq_one_of_eps_eq_one {l : ℕ} [Fact l.
       ext i k
       by_cases h : i = k
       · subst h; simp [mul_comm]
-      · simp [Matrix.diagonal, Matrix.one_apply, h]
+      · simp [Matrix.diagonal, h]
     rw [e, Matrix.det_diagonal]
   set t : ResidueField O := ((r.chib j (F.conj x) : (ResidueField O)ˣ) : ResidueField O) with ht
   have hs : F.star O (ResidueField O) n (MonoidAlgebra.single x t - 1) =

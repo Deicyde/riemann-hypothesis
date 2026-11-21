@@ -1,9 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HfMulVecMulVec
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConstantTermUnipotentIntegral
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.ExistsCompactAdeleRingModNumberFieldStatement
 
 open scoped TensorProduct NNReal Matrix
 
@@ -54,7 +53,7 @@ private theorem eq_eich (hc : ∀ r, c (c r) = r) (hJ : ∀ i j, c (J j i) = J i
     have hb' : b = -hf c J (ι *ᵥ z) (ι *ᵥ v) := by
       have := hu (ι *ᵥ z) y
       rw [hy, hb] at this
-      simp only [hf_add_left, hf_smul_left, hf_add_right, hf_smul_right, hxx, hιx, hyx, hxι, hyι, hxy, hyy, hιy] at this
+      simp only [hf_add_left, hf_smul_left, hf_add_right, hf_smul_right, hxx, hιx, hxι, hxy, hιy] at this
       linear_combination this
     rw [ht]
     simp only [Matrix.mulVec_add, Matrix.mulVec_smul]
@@ -90,7 +89,7 @@ private theorem dec_map {K : Type} [CommRing K] (f : K →+* R) {x y : Fin n →
   refine ⟨∑ k, t k * f (s k), ∑ k, t k * f (r k), fun j => ∑ k, t k * f (z k j), ?_⟩
   ext i
   have h1 : t i = ∑ k, t k * f ((Pi.single k 1 : Fin n → K) i) := by
-    rw [Finset.sum_eq_single i] <;> simp +contextual [Pi.single_apply, eq_comm]
+    rw [Finset.sum_eq_single i] <;> simp +contextual [eq_comm]
   rw [h1]
   simp only [h, Pi.add_apply, Pi.smul_apply, smul_eq_mul, Matrix.mulVec, dotProduct, map_add, map_mul, map_sum,
     Matrix.map_apply, Finset.mul_sum, Finset.sum_mul, mul_add, Finset.sum_add_distrib]

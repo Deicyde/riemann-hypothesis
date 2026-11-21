@@ -1,4 +1,15 @@
-import Development.DiscreteGroups.GlobalIrreducibility.LConvCut
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.Analysis.InnerProductSpace.Adjoint
+import Mathlib.Analysis.InnerProductSpace.Completion
+import Mathlib.RepresentationTheory.Basic
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Algebra.LinearMapCompletion
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 

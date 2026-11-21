@@ -1,5 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.GoodRoot
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 open IsLocalRing UpperTheory.Et
@@ -92,7 +97,7 @@ theorem UpperTheory.roots_of_unity_eq_locallyConstant_powers_spectrum :
     have hset : g0 ⁻¹' {a} = ⋂ b : ZMod q, ⋂ (_ : b ≠ a),
         (PrimeSpectrum.basicOpen (w - ζ ^ b.val) : Set (PrimeSpectrum S)) := by
       ext p
-      simp [hiff, PrimeSpectrum.mem_basicOpen]
+      simp [hiff]
     rw [hset]
     exact isOpen_iInter_of_finite fun b => isOpen_iInter_of_finite fun _ =>
       (PrimeSpectrum.basicOpen _).isOpen

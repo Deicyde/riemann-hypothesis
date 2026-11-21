@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.L2DbarEstimates.Localization.UnweightBackStatement
 import ReciprocityTheory.L2DbarEstimates.Mollifiers.MollifierL2LocTendsto
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Topology.Sheaves.Presheaf
 
 namespace ReciprocityTheory.L2DbarEstimates.F
 

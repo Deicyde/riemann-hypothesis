@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.HeightFunctions.ConclOfInputs4
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.NoCommonZeroSt
-import Formalism.LocalToGlobal.ProjectiveLattices.DepthTie
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.DeepSubMulSecNorm
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.ExistsFormFamilyHypothesesChangedSecondNormStatement
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.SecNormOfNetIn

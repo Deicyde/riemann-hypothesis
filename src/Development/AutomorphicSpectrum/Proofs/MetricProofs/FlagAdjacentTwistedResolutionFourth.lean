@@ -1,9 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.BasePartFlagPt
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.BlockDiagonalMinorVanishing
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.LowerUnipotentFamilyAnalytic
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.FlagAnalyticProjectionBijective
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.BaseVectorProperties
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.ExistsUpperOfMinors
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.IsParabolicTransvection
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.FlagAdjacentPluckerOrbit

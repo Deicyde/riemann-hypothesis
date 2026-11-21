@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.CloudPropOfMapsRetractionBasis
-import Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.LatRetract
 
 namespace Formalism.MainNotions.flipOneThree.Pf
 
@@ -83,7 +83,7 @@ theorem latRetract : LatRetract := by
       have hj : (b'.restrictScalars O) j = ⟨b' j, Submodule.subset_span ⟨j, rfl⟩⟩ :=
         Subtype.ext (Module.Basis.restrictScalars_apply _ _ _)
       rw [hj]
-      simp [ret, Module.Basis.constr_basis]
+      simp [ret]
     intro y
     exact LinearMap.congr_fun h3 y
   refine ⟨ret, ?_, ?_⟩

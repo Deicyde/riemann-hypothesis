@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.GlobalEulerCharacteristic.ShapiroCoind
-import GroundTheory.ProfiniteCohomology.GlobalEulerCharacteristic.DefsForms
 import GroundTheory.ProfiniteCohomology.RealPlaces.VanishingMackeyPlaces
 set_option maxSynthPendingDepth 1
 

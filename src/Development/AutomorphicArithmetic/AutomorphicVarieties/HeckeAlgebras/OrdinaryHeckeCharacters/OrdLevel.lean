@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.HeckeAlgebras.ContinuousTorusCharacter
 
 open IsLocalRing Matrix UpperTheory.V.Hi
@@ -23,7 +24,7 @@ theorem UpperTheory.V.Hi.ordLevel :
       ((h⁻¹ : V.subgroupOf U) : U), Subgroup.mem_subgroupOf.mp (h⁻¹).2, b, hb, ?_⟩
     simp only at hh ⊢
     rw [hh]
-    simp [Prod.ext_iff, mul_assoc]
+    simp [mul_assoc]
   · unfold Frame.Free at hF ⊢
     intro g γ u hu b hb h
     exact hF g γ u (hVU hu) b hb h

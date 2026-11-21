@@ -1,8 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.HodgeTatePoints.ReProd
 import Development.WeilBound.CoreStatements.HodgeTatePoints.CntCoord
 import Development.WeilBound.CoreStatements.HodgeTatePoints.HasLenOfEquiv
-import Development.AutomorphicSpectrum.Statements.AlgebraStatements.PolarisedAFStatement
-import Development.AutomorphicSpectrum.Statements.AlgebraStatements.PolarisedFlagStatement
 
 noncomputable section
 

@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Variable
 import Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.TwistedPieces.IntegralParts.QuasiOrbits.HomomorphismContinuity.T2SpaceLocalField
+import Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.TwistedPieces.IntegralParts.QuasiOrbits.ModulusSquares.ModBoundT
 
 namespace PositivityTheory.RgUd.TP.Nil.Orb
 

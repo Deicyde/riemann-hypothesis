@@ -1,10 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.HermitianTensor.CloudADef
-import Formalism.SharpRestriction.GrowthBounds.HermitianTensor.CloudIso
-import Formalism.SharpRestriction.GrowthBounds.HermitianTensor.MemInvariantSectionsTwoWeightIff
-import Formalism.SharpRestriction.GrowthBounds.HermitianTensor.CcDualWtAnti
 import Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.Tensor
-import Formalism.GradedWeylDivisibility.FockSpaceTableaux.LDrowLemmas
-import Formalism.GradedWeylDivisibility.FockSpaceTableaux.LClosedeqLemmas
 
 noncomputable section
 
@@ -165,7 +162,7 @@ theorem rowAct_D {k : ℕ} (c : K) (f : MvPolynomial (Fin (k + 1) × Fin (k + 1)
   rw [hmono, h u (mem_support_iff.mp hu)]
 
 theorem det_lb_D (k : ℕ) (c : K) : (lb_D (k + 1) 1 c).det = c⁻¹ := by
-  simp [lb_D, Matrix.det_diagonal, Fin.prod_univ_succ]
+  simp [lb_D, Matrix.det_diagonal]
 
 theorem scal_id (D c : K) (hD : D ≠ 0) (hc : c ≠ 0) (r n : ℕ) :
     (D * c⁻¹) ^ (-(r : ℤ)) * c ^ n * D ^ r * (c⁻¹) ^ (n + r) = 1 := by
@@ -200,7 +197,7 @@ theorem highest_weight_first_entry (k : ℕ) (ν : Fin (k + 1) → ℕ) (hν : A
     rw [Fintype.sum_prod_type, Finset.sum_eq_single (0 : Fin (k + 1))]
     · simp [rowW]
     · intro a _ ha
-      simp [rowW, Pi.single_apply, Ne.symm ha]
+      simp [rowW, Ne.symm ha]
     · intro hn
       exact absurd (Finset.mem_univ _) hn
   rw [← key, h]

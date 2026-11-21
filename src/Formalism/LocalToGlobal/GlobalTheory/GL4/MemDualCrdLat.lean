@@ -1,10 +1,13 @@
-import Mathlib
-import Formalism.LocalToGlobal.LatticeGeometry.GeometryDefinitions.GaloisCuspidalOfInput
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.LatticeGeometry.GeometryDefinitions.ExistsFrameOfSig
-import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.ReductionSecondStep
-import Formalism.SizeWindowBrackets.ChainSlopeWindows.TruncatedLatticeHolds
 import Formalism.SharpRestriction.GlobalSchurBounds.FlipTwoThree
 import Formalism.LocalToGlobal.GlobalTheory.GL4.PMuFrames
+import Formalism.LocalToGlobal.LatticeGeometry.GeometryDefinitions.SingleFacts
+import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.IdxChange
+import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.LcvBasis
+import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.LocBasis
+import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.RatHerm
 
 open Module NumberField IsDedekindDomain
 open scoped Matrix
@@ -42,8 +45,8 @@ theorem mem_dual_crdLat (hc : CMData F E) (S : HSpace E) (L : Submodule (𝓞 E)
   simp only [Formalism.HermitianLatticesTheory.dual, Formalism.E.hdual, Submodule.mem_iInf, Submodule.mem_comap,
     LinearMap.restrictScalars_apply, Submodule.mem_one, crdLat, Submodule.mem_map,
     forall_exists_index, and_imp, forall_apply_eq_imp_iff₂, LinearEquiv.coe_coe,
-    LinearMap.coe_restrictScalars, hform_crd_lemma, Submodule.mem_mk, AddSubmonoid.mem_mk,
-    AddSubsemigroup.mem_mk, Set.mem_setOf_eq, RingHom.mem_range]
+    hform_crd_lemma,
+    RingHom.mem_range]
   exact Iff.rfl
 
 theorem relIndex_crdLat (hc : CMData F E) (S : HSpace E) (L : Submodule (𝓞 E) S.V) :

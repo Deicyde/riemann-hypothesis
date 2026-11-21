@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GenusPolyhedralBounds.RelativeIndexClassSets.MassIntegralStmt
-import Formalism.ThetaLiftIndependence.ThetaOrbitSums.ClassRepsDefinite
 import Formalism.HermitianLattices.HermitianLatticesProofs.MassBasic
 
 noncomputable section

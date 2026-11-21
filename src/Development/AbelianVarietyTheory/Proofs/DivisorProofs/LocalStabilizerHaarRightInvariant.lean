@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeEvFun
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AbsPowApply
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StabilizerFixesIsotropicVectorStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalStabilizerHaarQuotientStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalStabilizerHaarQuotientSecondStatement

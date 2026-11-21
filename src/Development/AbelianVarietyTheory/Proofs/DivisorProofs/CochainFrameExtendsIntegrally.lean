@@ -1,11 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCochFrame
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.GenericExistsUniqueOActOfIsGrpPullback
-import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.HomBaseChangeBijectiveOfLeNilradical
-import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.LocallyOfFinitePresentationDiagMap
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorusLieAlgebraCoordinateLinearEquiv
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.SABBaseChangeSt
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.LinearIndependentFlagVec
 open AlgebraicGeometry CategoryTheory Limits NumberField MonoidalCategory CartesianMonoidalCategory MonObj Matrix Topology
 open Formalism.BasicNotions ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.PullbackSections ReciprocityTheory.ChartRestriction.G.Pdiv ReciprocityTheory.GeometryOfNumbersTheory
 open scoped CategoryTheory.Obj ComplexOrder
@@ -81,7 +77,7 @@ theorem exists_bcTan_eq_of_isCochFrame : GlobalTheory.Published.SemiAbelianHomEx
   obtain ⟨e₀, he₀⟩ := (lieCoord_bijective_add_smul (𝓞 K) r).1.2 (Pi.single i 1)
   have hb := left_comp_bcMap (algebraMap (𝓞 K) K) e₀ e fun j => by
     rw [he, he₀]
-    by_cases h : j = i <;> simp [Pi.single_apply, h]
+    by_cases h : j = i <;> simp [h]
   refine ⟨tanOf (isTan_of_lieG t xO (lieMap U e₀)), tan_ext ?_⟩
   rw [left_bcTan, left_tanOf, hi, ← hψ₁, ← Category.assoc u.left, hU', Category.assoc, ← Category.assoc e.1.left, hb]
   simp [lieMap]

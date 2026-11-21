@@ -1,5 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.IntegralLocallyConstCochainModPow
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.NotCoboundaryConstantOne
+import Mathlib.Algebra.TrivSqZeroExt.Basic
+import Mathlib.RingTheory.Etale.Field
 
 open GlobalTheory.K5
 

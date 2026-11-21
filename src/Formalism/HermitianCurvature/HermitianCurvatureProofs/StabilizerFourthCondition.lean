@@ -1,5 +1,11 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.FiniteOrderIntersectionInSmooth
-import Formalism.FormalDegreeBessel.FinalG
+import Formalism.FormalDegreeBessel.FormalDegreeRatio.UnitaryWeylNormalHolds
+import Mathlib.Analysis.Real.Pi.Bounds
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Matrix Formalism.FourierDecayAlt Formalism.QuantumDeterminants
 open scoped ComplexConjugate
@@ -75,7 +81,7 @@ theorem relevant_pair_criterion : C2.RelevantPair := by
     rw [Finset.sum_eq_single (w b)]
     · by_cases hi : i = w a <;> by_cases hj : j = b
       · subst hj; simp [hi]
-      · simp [hi, hj, Equiv.apply_eq_iff_eq, Ne.symm hj]
+      · simp [hi, hj, Ne.symm hj]
       · simp [hi]
       · simp [hi]
     · intro l _ hl
@@ -143,16 +149,16 @@ theorem relevant_pair_criterion : C2.RelevantPair := by
       · by_cases hq : (w a).val = (w b).val + 1
         · have h : (w b).val + 1 < m := hq ▸ (w a).isLt
           rw [dif_pos h, if_pos hq]
-          simp [C2.Eij, Matrix.add_apply, Matrix.one_apply, Fin.ext_iff, hq]
+          simp [C2.Eij, Matrix.add_apply, Fin.ext_iff, hq]
         · rw [if_neg hq]
           split_ifs with h
-          · simp [C2.Eij, Matrix.add_apply, Matrix.one_apply, Fin.ext_iff]
+          · simp [C2.Eij, Matrix.add_apply, Fin.ext_iff]
             omega
           · rfl
       · intro l _ hl
         have hl' : l.val ≠ _ := fun h => hl (Fin.ext h)
         split_ifs with h
-        · simp [C2.Eij, Matrix.add_apply, Matrix.one_apply, Fin.ext_iff, hl']
+        · simp [C2.Eij, Matrix.add_apply, Fin.ext_iff, hl']
         · rfl
       · simp
     have hU : C2.simpleUp (1 + C2.Eij a b x) = if b.val = a.val + 1 then x else 0 := by
@@ -161,16 +167,16 @@ theorem relevant_pair_criterion : C2.RelevantPair := by
       · by_cases hq : b.val = a.val + 1
         · have h : a.val + 1 < m := hq ▸ b.isLt
           rw [dif_pos h, if_pos hq]
-          simp [C2.Eij, Matrix.add_apply, Matrix.one_apply, Fin.ext_iff, hq]
+          simp [C2.Eij, Matrix.add_apply, Fin.ext_iff, hq]
         · rw [if_neg hq]
           split_ifs with h
-          · simp [C2.Eij, Matrix.add_apply, Matrix.one_apply, Fin.ext_iff]
+          · simp [C2.Eij, Matrix.add_apply, Fin.ext_iff]
             omega
           · rfl
       · intro l _ hl
         have hl' : l.val ≠ _ := fun h => hl (Fin.ext h)
         split_ifs with h
-        · simp [C2.Eij, Matrix.add_apply, Matrix.one_apply, Fin.ext_iff, hl']
+        · simp [C2.Eij, Matrix.add_apply, Fin.ext_iff, hl']
         · rfl
       · simp
     rw [hL, hU, hc]

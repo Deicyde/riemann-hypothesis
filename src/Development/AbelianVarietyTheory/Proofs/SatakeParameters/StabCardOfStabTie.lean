@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.ThetaLiftGeometry.WeightedChainData
 import Development.AbelianVarietyTheory.BlockTheory.ThetaLiftGeometry.AmbientLatticeAvoidance
-import Formalism.LocalToGlobal.Columns.DecorationStabilizerTrivialUnipotent
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.DecorationLiftStdLatticeReductionStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.IntegralGlReductionModPrimeStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ExistsDecorationExtensionAtPrimesStatement
@@ -10,12 +10,6 @@ import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LambdaCharMulInv
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LambdaCharSymMulInvEqOneStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LambdaQuotientCharMulInvEqOneStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.IntegralDivUniformizerOfRedZeroStatement
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.FiniteDivLatticeQuotient
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ThetaSupportInDivLattice
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.DatumSupportDivLatticeInterior
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.DatumPeriodicMulLatticeInterior
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.DatumSupportDivLatticeFinal
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.DatumPeriodicMulLatticeFinal
 
 open NumberField IsDedekindDomain
 open Formalism.BasicNotions Formalism.HermitianLatticesTheory Formalism.L2.DIV Formalism.L2.Col Formalism.L2.Ker Formalism.MainNotions
@@ -139,7 +133,7 @@ theorem lamY_zero (q : ℕ) (ex : ℕ → ℕ) (x : Sp E (n + 0)) : x ∈ LocE.l
   have e : (LinearMap.pi fun l : Fin (n + 0) => ((q : E) ^ LocE.scE n ex l.1)⁻¹ • (LinearMap.proj l : Sp E (n + 0) →ₗ[E] E)) x = x := by
     funext l
     have : l.1 < n := l.2
-    simp [LocE.scE, this]
+    simp [LocE.scE]
   show (LinearMap.pi fun l : Fin (n + 0) => ((q : E) ^ LocE.scE n ex l.1)⁻¹ • (LinearMap.proj l : Sp E (n + 0) →ₗ[E] E)) x ∈ stdAt E (n + 0) P ↔ _
   rw [e]
 

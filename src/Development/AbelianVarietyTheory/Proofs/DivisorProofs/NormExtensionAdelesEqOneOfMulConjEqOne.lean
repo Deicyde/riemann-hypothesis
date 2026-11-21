@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockMap
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DblCol
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 
 open scoped TensorProduct GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels Matrix Classical
 open NumberField Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.BasicNotions.TH GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.FockAlg GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.RealLift GlobalTheory.RealLift.Dbl
@@ -26,7 +25,7 @@ theorem algebraMap_norm_eq_mul {R A : Type*} [CommRing R] [CommRing A] [Algebra 
     rw [Algebra.norm_eq_matrix_det β, Matrix.det_fin_two]
     simp only [Algebra.leftMulMatrix_eq_repr_mul]
     rw [e0, e1]
-    simp [Finsupp.single_apply]
+    simp
   rw [hnorm]
   conv_rhs => rw [hz]
   simp only [map_add, map_mul, AlgHom.commutes, map_one, hs, Algebra.smul_def, map_sub]
@@ -47,7 +46,7 @@ theorem exists_moved {σ : E →ₐ[F] E} (h : IsCMExt F E σ) : ∃ x : E, σ x
     ext x
     have h1 := h.2.2.2 τ x
     rw [hc x] at h1
-    simp only [NumberField.ComplexEmbedding.conjugate_coe_eq, Function.comp_apply]
+    simp only [NumberField.ComplexEmbedding.conjugate_coe_eq]
     exact h1.symm
   exact (NumberField.InfinitePlace.isComplex_mk_iff.mp (h.2.1.isComplex _)) hr
 

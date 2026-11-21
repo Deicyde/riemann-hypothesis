@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.ThickAverageLoss.PartnersToFactorsAt
-import Mathlib.Analysis.Fourier.FiniteAbelian.PontryaginDuality
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open Finset ArithmeticFunction
 

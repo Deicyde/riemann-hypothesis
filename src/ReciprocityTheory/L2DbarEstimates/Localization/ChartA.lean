@@ -1,5 +1,10 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import ReciprocityTheory.L2DbarEstimates.Localization.UnweightBackStatement
-import ReciprocityTheory.L2DbarEstimates.ChartDerivatives.Imports
+import Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension
+import Mathlib.Topology.UniformSpace.Uniformizable
+import ReciprocityTheory.L2DbarEstimates.ChartDerivatives.MeasurableSetImageOfIsLocalHomeomorph
 
 namespace ReciprocityTheory.L2DbarEstimates.F
 

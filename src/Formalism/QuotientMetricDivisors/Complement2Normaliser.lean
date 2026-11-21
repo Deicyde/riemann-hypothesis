@@ -1,6 +1,6 @@
-import Mathlib
-import Formalism.QuotientMetricDivisors.ProdFormula
+import BuildAid.Leniency.Open
 import Formalism.LogFactorialIndices.StatementSize
+import Formalism.QuotientMetricDivisors.Statement
 
 open Module NumberField IsDedekindDomain Finset
 

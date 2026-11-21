@@ -1,8 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.FieldsOfNumbers.StatementsExamples
-import GroundTheory.HeightsAndTheta.Heights.FieldsOfNumbers.StatementsDivPushForward
-import GroundTheory.HeightsAndTheta.Heights.FieldsOfNumbers.PPFContractedDim
-import GroundTheory.HeightsAndTheta.Heights.FieldsOfNumbers.PRelevantPrimeDimGe
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.FieldNumbers

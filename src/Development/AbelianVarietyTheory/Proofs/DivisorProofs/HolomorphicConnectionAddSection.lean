@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TranslationInv
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlatFormSmoothOnCover
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsTorsionFormPoint
+import Mathlib.RingTheory.PicardGroup
 
 set_option autoImplicit false
 

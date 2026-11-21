@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import CompanionTheory.AutomorphicTheory.BesselWaveGrids.FamilyThroughDiscreteSeries
 
 open BranchingSupport Formalism.FourierDecayAlt Formalism.FourierDecayAlt.ThreeDimData Matrix MeasureTheory Finset CompanionTheory.WaveGrid.Ball

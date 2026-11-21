@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PublishedTheorems.SmoothVectorEstimates.MirabolicColumnBlock
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.FirstStatementC
+import Mathlib.Analysis.Fourier.FourierTransformDeriv
 
 noncomputable section
 

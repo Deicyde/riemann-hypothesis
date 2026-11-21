@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.WachLatticeTwists.LatticeDualFibres.FibreDualStable
-import Formalism.GaloisCohomology.LocalTateDualityK
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FactorMemCocyclesPowQuot
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FiniteH1H2Local
 open Formalism.RepresentationBoundsCohomology.LOC ReciprocityTheory.Gal GlobalTheory.LocDualInt

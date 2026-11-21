@@ -1,7 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.NormResidueSymbol.RangeFiniteLocalNormLeKerLocalSymbol
 import GroundTheory.LocalFields.ExplicitQp
 import GroundTheory.LocalFields.LocalArtinTransport
+import Mathlib.NumberTheory.Padics.Complex
+import Mathlib.NumberTheory.Padics.HeightOneSpectrum
 
 namespace GroundTheory.Global
 

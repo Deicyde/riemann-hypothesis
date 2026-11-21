@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.StepJumpDirect
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ContinuousLoc
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.GoodORingOfIntegers
 import Formalism.SharpRestriction.LevelLetterCocycles.JointConditionsZpowers.BaseFont

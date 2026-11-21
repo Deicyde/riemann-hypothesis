@@ -1,7 +1,13 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.SiegelKlingenDeligneRibet
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.AbelContinuation
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.PartialSum
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 open NumberField Formalism.MainNotions.ShortIntervalPrimes GlobalTheory.RayZeta GlobalTheory.CompanionTheory.Hypotheses₂.Shintani GlobalTheory.CompanionTheory.Hypotheses₂.Shintani.Abel
 
 set_option autoImplicit false
@@ -18,7 +24,7 @@ theorem update_add_single (i : Fin r) (m : Fin r → ℕ) (n k : ℕ) :
   by_cases hj : j = i
   · subst hj
     simp
-  · simp [Function.update_apply, hj, Pi.single_apply]
+  · simp [hj]
 
 theorem update_self_add (i : Fin r) (m : Fin r → ℕ) (e : ℕ) :
     Function.update m i (m i + e) = m + (Pi.single i e : Fin r → ℕ) := by
@@ -26,7 +32,7 @@ theorem update_self_add (i : Fin r) (m : Fin r → ℕ) (e : ℕ) :
   by_cases hj : j = i
   · subst hj
     simp
-  · simp [Function.update_apply, hj, Pi.single_apply]
+  · simp [hj]
 
 theorem partialSum_succ (i : Fin r) (v : (Fin r → ℕ) → ℚ) (m : Fin r → ℕ) :
     partialSum i v (m + Pi.single i 1) = partialSum i v m + v m := by
@@ -73,7 +79,7 @@ theorem partialSum_bound {l : ℕ} {i : Fin r} {v : (Fin r → ℕ) → ℚ} (hl
           · subst hj
             simp only [Pi.add_apply, Function.update_self, Pi.single_eq_same]
             omega
-          · simp [Function.update_apply, hj, Pi.single_apply]
+          · simp [hj]
         rw [hmm, partialSum_period h]
         exact ih (n - l) (by omega) _ (by simp)
   exact fun m => key (m i) m rfl
@@ -169,7 +175,7 @@ theorem stepIdentity (r l : ℕ) (i : Fin r) (v : (Fin r → ℕ) → ℚ) (g : 
     · subst hj
       simp only [Pi.add_apply, Pi.sub_apply, δ, Pi.single_eq_same]
       omega
-    · simp [δ, Pi.single_apply, hj]
+    · simp [δ, hj]
   calc ∑' m, (v m : ℂ) * g m
       = ∑' m, (((Bop l i v m : ℂ) * g m - (Aop l i v m : ℂ) * fd i g m) + (T (m + δ) - T m)) :=
         tsum_congr hpt

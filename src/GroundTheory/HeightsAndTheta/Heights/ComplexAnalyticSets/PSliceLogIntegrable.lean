@@ -1,9 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceFsLogIntegrable
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceCutOffLimit
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PSliceIdeal
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PSheetSumMeasurable
-import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.LogIntegrableOnOfLogIntegrable
+import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceLogIntegrable
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

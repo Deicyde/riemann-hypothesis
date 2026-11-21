@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ChosenSeries
+import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.BarMatrix
 
 noncomputable section
 

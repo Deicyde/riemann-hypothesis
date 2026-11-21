@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.VerticalStrips.UnramifiedEulerProductIntegral
 
 noncomputable section
@@ -226,7 +227,7 @@ theorem integrable_wt (n : ℤ) {τ : ℝ} (hτ : 0 < τ) : Integrable (wt (F :=
   refine h.norm.congr (Eventually.of_forall fun u => ?_)
   have hm : (0 : ℝ) ≤ (modulus (u : F) : ℝ) := NNReal.coe_nonneg _
   by_cases hu : (u : F) ∈ (valBall F n : Set F)
-  · simp [wt, hu, Complex.norm_cpow_eq_rpow_re_of_nonneg hm, hτ.ne', abs_of_nonneg (Real.rpow_nonneg hm τ)]
+  · simp [wt, hu, Complex.norm_cpow_eq_rpow_re_of_nonneg hm, hτ.ne']
   · simp [wt, hu]
 
 theorem modulus_le_of_mem {M : ℤ} {x : F} (hx : x ∈ valBall F M) :
@@ -422,7 +423,7 @@ theorem kr_pt (ν c : Fˣ →* ℂˣ) (hν : IsUnit1 ν) (s : ℂ) (u₁ u₃ : 
     rw [← Units.val_mul, mul_inv_cancel, Units.val_one]
   have ec3 : ((c u₃ : ℂˣ) : ℂ) * (((c u₃)⁻¹ : ℂˣ) : ℂ) = 1 := by
     rw [← Units.val_mul, mul_inv_cancel, Units.val_one]
-  simp only [MonoidHom.mul_apply, MonoidHom.inv_apply, Units.val_mul, map_mul, mp_mul, mul_inv]
+  simp only [MonoidHom.mul_apply, MonoidHom.inv_apply, Units.val_mul, map_mul, mp_mul]
   have hall : (((c u₁ : ℂˣ) : ℂ) * (((c u₁)⁻¹ : ℂˣ) : ℂ)) * (((c u₃ : ℂˣ) : ℂ) * (((c u₃)⁻¹ : ℂˣ) : ℂ)) *
       ((mp u₁ (s - 1) * mp u₁ (-s) * mp u₁ 1) * (mp u₃ (s - 1) * mp u₃ (-s) * mp u₃ 1)) = 1 := by
     rw [ec1, ec3, e1, e3]
@@ -485,7 +486,7 @@ theorem integrable_Tt {ψ : AddChar F Circle} (hψ : IsStd ψ) {ν c : Fˣ →* 
     have h3 : pf ψ φ₃ p.2.2 ((p.1 * p.2.2⁻¹ : Fˣ) : F) ≠ 0 := by
       intro h
       apply hp
-      simp only [Tt, h, mul_zero, zero_mul, map_zero]
+      simp only [Tt, h, mul_zero, map_zero]
     exact ⟨valBall_antitone (min_le_left _ _) (hs₁ _ _ h1).1, valBall_antitone (min_le_right _ _) (hs₃ _ _ h3).1,
       valBall_antitone (min_le_left _ _) (hs₁ _ _ h1).2, valBall_antitone (min_le_right _ _) (hs₃ _ _ h3).2⟩
 

@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToSpanSingletonConstGenInjective
 import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.ExistsCounitEqOneMulEqZeroOfIsNilpotent
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsUniqueAlgEquivOfCompatibleQuotient
+import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
 
 noncomputable section
 
@@ -122,7 +124,7 @@ theorem natCard_eq_pow_finrank [Module.Finite ℤ_[p] M] [Module.Free ℤ_[p] M]
       simp [← hc, mul_comm]
   rw [← Nat.card_congr (QuotientAddGroup.quotientKerEquivOfSurjective f hf).toEquiv, hker,
     Nat.card_congr (QuotientAddGroup.quotientKerEquivOfSurjective g hg).toEquiv]
-  simp [Nat.card_pi]
+  simp
 
 theorem bijective_of_mod [Module.Finite ℤ_[p] M] [Module.Free ℤ_[p] M] [Module.Finite ℤ_[p] N]
     [Module.Free ℤ_[p] N] (f : M →ₗ[ℤ_[p]] N) (hr : finrank ℤ_[p] M = finrank ℤ_[p] N)

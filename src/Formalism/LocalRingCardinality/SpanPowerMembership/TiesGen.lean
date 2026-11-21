@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.SpanPowerMembership.TwCore
+import Formalism.LocalRingCardinality.SpanPowerMembership.RankRecordRowDimensionZero
 
 noncomputable section
 

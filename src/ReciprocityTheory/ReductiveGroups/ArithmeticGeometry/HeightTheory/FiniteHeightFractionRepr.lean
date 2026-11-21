@@ -1,4 +1,9 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.SphereMeanSubArchimedean
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.GoodPrimesProperties
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.HDiscBDefs
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.HHINDA
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.ValUFD
 
 namespace ReciprocityTheory.ChartRestriction.G.T0
 

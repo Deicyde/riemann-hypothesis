@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdditiveIntegralGroups.CoeffWSeriesVarZero
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdditiveIntegralGroups.SubstMem
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 noncomputable section
 
@@ -238,7 +242,7 @@ theorem thirdRoot_sub_var_zero_ne_zero (W : WeierstrassCurve ℂ_[p]) (wq : Powe
     decide
   intro h0
   have h1 := congrArg (MvPowerSeries.coeff (Finsupp.single (1 : Fin 2) 1)) h0
-  simp [Z3, rt_coeff_BA, MvPowerSeries.coeff_X, hs, hs.symm] at h1
+  simp [Z3, rt_coeff_BA, MvPowerSeries.coeff_X, hs.symm] at h1
 
 theorem thirdRoot_sub_var_one_ne_zero (W : WeierstrassCurve ℂ_[p]) (wq : PowerSeries ℂ_[p]) : Z3 W wq - Xv 1 ≠ 0 := by
   have hs : Finsupp.single (0 : Fin 2) 1 ≠ Finsupp.single 1 1 := by
@@ -246,7 +250,7 @@ theorem thirdRoot_sub_var_one_ne_zero (W : WeierstrassCurve ℂ_[p]) (wq : Power
     decide
   intro h0
   have h1 := congrArg (MvPowerSeries.coeff (Finsupp.single (0 : Fin 2) 1)) h0
-  simp [Z3, rt_coeff_BA, MvPowerSeries.coeff_X, hs, hs.symm] at h1
+  simp [Z3, rt_coeff_BA, MvPowerSeries.coeff_X, hs] at h1
 
 theorem thirdRoot_mem_coeffSubring {S : Subring ℂ_[p]} {W : WeierstrassCurve ℂ_[p]} {wq : PowerSeries ℂ_[p]}
     (h1 : W.a₁ ∈ S) (h2 : W.a₂ ∈ S) (h3 : W.a₃ ∈ S) (h4 : W.a₄ ∈ S) (h6 : W.a₆ ∈ S) (h : IsWq W wq) :

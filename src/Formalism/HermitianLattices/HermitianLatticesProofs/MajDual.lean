@@ -1,6 +1,9 @@
-import Mathlib
-import Formalism.HermitianLattices.StatementMaj
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.HermitianLattices.HermitianLatticesProofs.MajLattice
+import Mathlib.RingTheory.DedekindDomain.Different
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open NumberField
 open scoped nonZeroDivisors
@@ -42,7 +45,7 @@ lemma majDual_herm (h : V →ₗ⋆[K] V →ₗ[K] K) (b : Module.Basis ι K V) 
     (hst : ∀ (φ : K →+* ℂ) (a : K), φ (star a) = starRingEnd ℂ (φ a)) (x y : V) :
     v.embedding (h x y) = dotProduct (star (vecAt b v x)) ((gramAt h b v).mulVec (vecAt b v y)) := by
   conv_lhs => rw [← b.sum_repr x, ← b.sum_repr y]
-  simp only [map_sum, map_smulₛₗ, LinearMap.sum_apply, LinearMap.smul_apply, map_smul,
+  simp only [map_sum, map_smulₛₗ, LinearMap.sum_apply, LinearMap.smul_apply,
     smul_eq_mul, map_mul, starRingEnd_apply, hst, RingHom.id_apply]
   simp only [dotProduct, Matrix.mulVec, vecAt, gramAt, Matrix.of_apply, Pi.star_apply]
   simp only [Finset.mul_sum]
@@ -115,8 +118,8 @@ lemma majDual_inner [IsTotallyComplex K] (h : V →ₗ⋆[K] V →ₗ[K] K) (b :
   rw [majDual_trace, mul_div_cancel_left₀ _ (two_ne_zero : (2 : ℝ) ≠ 0)]
   simp only [majDual_re h b X hst hX]
   simp only [PiLp.inner_apply, RCLike.inner_apply, conj_trivial, Fintype.sum_prod_type,
-    Fin.sum_univ_two, majDual_jW_apply, majDual_realize_apply, Fin.isValue, eq_self_iff_true,
-    if_true, one_ne_zero, if_false, ↓reduceIte]
+    Fin.sum_univ_two, majDual_jW_apply, majDual_realize_apply, Fin.isValue,
+    one_ne_zero, ↓reduceIte]
   refine Finset.sum_congr rfl fun v _ => Finset.sum_congr rfl fun i _ => ?_
   ring1
 

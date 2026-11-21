@@ -1,17 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KStab
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolEqISupFockDeg
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KEqOnId
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FixPartEqBotOfLt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TprodMemDegLE
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaKernelReal
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchimedeanThetaPolynomialLiftExistsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchimedeanPolynomialTensorCharacter
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.AbsSubOfDisjoint
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LineMatrixKroneckerLeftFactorEqZeroOfIsPC
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KFixedDegreeFiltrationStepUpStatement
 
 noncomputable section
@@ -38,13 +29,13 @@ theorem exists_upq_decomp {R S : ℕ} (Z : Formalism.BasicNotions.TH.Mat R S) :
       Matrix.conjTranspose_mul, Matrix.conjTranspose_conjTranspose, hJH, Matrix.smul_mul, Matrix.mul_smul,
       Matrix.add_mul, Matrix.mul_add, Matrix.neg_mul, Matrix.mul_neg, Matrix.mul_assoc, hJ, Matrix.mul_one]
     simp only [← Matrix.mul_assoc, hJ, Matrix.one_mul]
-    ext i j; simp [Matrix.add_apply, Matrix.sub_apply, Matrix.smul_apply]; try ring
+    ext i j; simp [Matrix.add_apply, Matrix.smul_apply]; try ring
   · show _ * Jm R S + Jm R S * _ = 0
     simp only [conjR, adjZ, Matrix.conjTranspose_smul, Matrix.conjTranspose_sub, Matrix.conjTranspose_neg,
       Matrix.conjTranspose_mul, Matrix.conjTranspose_conjTranspose, hJH, Matrix.smul_mul, Matrix.mul_smul,
       Matrix.sub_mul, Matrix.mul_sub, Matrix.neg_mul, Matrix.mul_neg, Matrix.mul_assoc, hJ, Matrix.mul_one]
     simp only [← Matrix.mul_assoc, hJ, Matrix.one_mul]
-    ext i j; simp [Matrix.add_apply, Matrix.sub_apply, Matrix.smul_apply]; try ring
+    ext i j; simp [Matrix.add_apply, Matrix.smul_apply]; try ring
   · ext i j; simp [Matrix.add_apply, Matrix.sub_apply, Matrix.smul_apply]; ring_nf; rw [Complex.I_sq]; ring
 
 end GlobalTheory.EvenStep

@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.HolomorphicFamilies.LatticeTraceImaginaryPart
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.HolomorphicFamilies.Pin4
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.HolomorphicFamilies.TorusLinv
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.TorusPin
 
 noncomputable section
 
@@ -142,7 +144,7 @@ theorem sT_mem (hx : (U.X k).IsOrtho x.1) (Wu : UnitAt W) (hθ : Differentiable 
     congr 2
     rw [Complex.star_def, ← Complex.exp_conj]
     congr 1
-    simp only [map_add, map_mul, map_div₀, Complex.conj_ofReal, Complex.star_def, Nat.cast_one, _root_.one_mul,
+    simp only [map_add, map_mul, map_div₀, Complex.conj_ofReal, Nat.cast_one, _root_.one_mul,
       map_ofNat]
     ring
 

@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.LinksChar
-import Formalism.LocalRingCardinality.DataParams
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.LabelDatum
+import Mathlib.Data.Multiset.Functor
 
 noncomputable section
 

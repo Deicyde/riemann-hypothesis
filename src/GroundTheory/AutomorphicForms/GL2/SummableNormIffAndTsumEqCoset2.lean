@@ -1,5 +1,7 @@
-import Mathlib
-import GroundTheory.GlobalFields.TateThesis.TraceLatticePoisson
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.GlobalFields.TateThesis.LatticePoisson
+import GroundTheory.GlobalFields.TateThesis.TraceDualLattice
 
 namespace GroundTheory.Automorphic.Adele2
 

@@ -1,4 +1,44 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.LinearAlgebra.Basis.Flag
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Module TensorProduct
 
@@ -22,7 +62,7 @@ def basisOfDual (v : ι → M) (c : ι → Dual R M) (h₁ : ∀ i j, c i (v j) 
 
 @[simp] theorem basisOfDual_apply (v : ι → M) (c : ι → Dual R M) (h₁ h₂) (j : ι) :
     basisOfDual v c h₁ h₂ j = v j := by
-  simp [basisOfDual, Fintype.linearCombination_apply, Function.update_apply]
+  simp [basisOfDual, Fintype.linearCombination_apply]
 
 @[simp] theorem basisOfDual_repr (v : ι → M) (c : ι → Dual R M) (h₁ h₂) (x : M) (i : ι) :
     (basisOfDual v c h₁ h₂).repr x i = c i x := by
@@ -233,7 +273,7 @@ def basisStepEquiv (b : Basis (Fin n) R M) (i : Fin n) :
       intro j hj
       rcases (Fin.castSucc_le_castSucc_iff.mp hj).eq_or_lt with rfl | h
       · simp
-      · simp [hx j (Fin.succ_le_castSucc_iff.mpr h), Finsupp.single_apply, h.ne])
+      · simp [hx j (Fin.succ_le_castSucc_iff.mpr h), h.ne])
 
 def ofBasis (b : Basis (Fin n) R M) : FullFlag R M n where
   sub := b.flag
@@ -489,7 +529,7 @@ example : (FullFlag.ofBasis (Pi.basisFun ℤ (Fin 2))).sub 1 =
   have : {i : Fin 2 | i.castSucc < 1} = {0} := by
     ext i
     fin_cases i <;> simp
-  simp [Basis.flag, this]
+  simp [Basis.flag]
 
 end
 

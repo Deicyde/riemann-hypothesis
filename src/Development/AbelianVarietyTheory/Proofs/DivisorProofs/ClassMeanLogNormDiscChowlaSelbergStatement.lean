@@ -1,8 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ClassMeanLogNormDiscChowlaSelberg
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.LatticeNormTransport
-import Formalism.LocalRingCardinality.DataParams₂
 open NumberField GlobalTheory.CMVal GlobalTheory.IndefiniteRowSideFullHecke.LatticeNormTransport
 open scoped nonZeroDivisors
 set_option maxHeartbeats 1000000 in

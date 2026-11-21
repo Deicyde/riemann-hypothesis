@@ -1,8 +1,4 @@
-import Mathlib
-import Formalism.LocalToGlobal.GlobalTheory.HLatOpsP
-import Formalism.HarderNarasimhan.FinalCor
-import Formalism.QuotientMetricDivisors.ReductionLemmaZero
-import Formalism.QuotientMetricDivisors.FinalW
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Divisibility.FramesLemmas
 open Module NumberField IsDedekindDomain Formalism.BasicNotions Formalism.DivisionValues
 open scoped Matrix ComplexOrder

@@ -1,8 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatAtVAtStable
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousAtPlace
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StandardAdelicCharacterNontrivialAtPlaces
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK
@@ -23,7 +20,7 @@ theorem smul_vecMulVec' {F E : Type} [Field F] [NumberField F] [Field E] [Number
     {m k : ℕ} (c : AF F) (x : Fin m → AE F E) (w : Fin k → AE F E) :
     c • Matrix.vecMulVec x w = Matrix.vecMulVec x (c • w) := by
   ext i j
-  simp [Matrix.vecMulVec_apply, mul_smul_comm]
+  simp [Matrix.vecMulVec_apply]
 
 theorem vecMulVec_add' {R : Type} [CommRing R] {m k : ℕ} (x : Fin m → R) (w w' : Fin k → R) :
     Matrix.vecMulVec x (w + w') = Matrix.vecMulVec x w + Matrix.vecMulVec x w' := by

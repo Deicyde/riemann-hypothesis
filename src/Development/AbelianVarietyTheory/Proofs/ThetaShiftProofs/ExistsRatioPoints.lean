@@ -1,9 +1,8 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.IsNsmul
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ChartPullbacks.TangentLinearity.ESecStruct
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.CubeVal
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.LBCorr
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.ThickenedPointToTorusExtensionGenerator
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ChartPullbacks.TangentLinearity.ConstPullback
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ChartPullbacks.TangentLinearity.FnOfComp
 
 set_option autoImplicit false
 
@@ -119,7 +118,7 @@ theorem val_lhs (x x' : T ⟶ thickObj R I e G) (r : Z ⟶ T) :
     ((val_cub D.cub ((Over.map (thick R I e)).map r) hJ _ _ _).trans ?_))
   · rw [← Over.comp_left, MonObj.comp_mul]
   · unfold cubeVal
-    congr 1 <;> simp [im]
+    congr 1 <;> simp
 
 theorem val_rhs (x x' : T ⟶ thickObj R I e G) (r : Z ⟶ T) :
     val (rhs g x x' χ) r.left z J =

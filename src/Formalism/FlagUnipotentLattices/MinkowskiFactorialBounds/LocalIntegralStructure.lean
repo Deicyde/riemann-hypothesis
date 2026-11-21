@@ -1,7 +1,9 @@
-import Formalism.FlagUnipotentLattices.DetIndexProductHyperbolicInequality
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.FlagUnipotentLattices.DetIndexProductPlacesInequalitySq
 import Formalism.HyperbolicPlaceProducts.SecondLevelArithmeticNorm
 import Formalism.HyperbolicPlaceProducts.ArithmeticCountRevised
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Module NumberField Formalism.HermitianLatticeCounting.LocalIntegralStructure nonZeroDivisors
 set_option linter.all false

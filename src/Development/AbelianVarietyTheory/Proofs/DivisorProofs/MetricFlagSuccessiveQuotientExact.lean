@@ -1,14 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ShortExactCompositionCompatibility
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsShortExactOfComposition
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DetMetricShortExactIsoIsometric
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NontrivialIsomClassInt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AppInjectiveOfFrames
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsIsometryPullIdComp
-import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.RestrictPullbackIsoHomAppPullbackSections
 
 set_option autoImplicit false
 
@@ -101,7 +96,7 @@ theorem isIsometry_quot_zero {S : ShortComplex X.Modules} (h : VMetric p S.X₂ 
   refine Eq.trans ?_ (Met.map_G (r := 1) (h.met σ) (asIso S.g) c ha).symm
   ext i j
   rw [← Met.form_frame (r := 1) (h.met σ) c ha]
-  simp [quotGram, Matrix.mul_apply, Matrix.toBlocks₂₂, Met.gram, AdaptedChart.frame, c]
+  simp [quotGram, Matrix.toBlocks₂₂, Met.gram, AdaptedChart.frame, c]
 
 theorem isometric_pair {E A B V : X.Modules} {r n : ℕ} {h : VMetric p E r} (H : h.IsCInf)
     (fl : Vert.Flag E r) (hn₀ : n < r) (hn : n + 1 < r) {u : A ⟶ B} {t : B ⟶ V} {w : u ≫ t = 0}

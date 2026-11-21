@@ -1,6 +1,8 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.HeckeIrreducible
-import GroundTheory.AutomorphicForms.MeasuresGL
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.AutomorphicForms.Cartan
+import GroundTheory.AutomorphicForms.HeckeAlgebraLevel
+import GroundTheory.AutomorphicForms.MeasuresModulus
 
 noncomputable section
 

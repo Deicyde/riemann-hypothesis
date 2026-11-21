@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Intersections.PtsOverChart
+import GroundTheory.HeightsAndTheta.Heights.Intersections.PtsOverPt
 set_option maxSynthPendingDepth 1
 
 noncomputable section

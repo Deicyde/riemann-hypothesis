@@ -1,5 +1,4 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.LocUApply
-import Development.AutomorphicArithmetic.TwistedTraces.FixedProjectionInvariantAndCommutingReps
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.TwistedTraces.InfFixedLeSpanFixOfDenseSpanAll
 import Development.AutomorphicArithmetic.TwistedTraces.ExistsAlgHomEndFixedVectorsToFixedSubspace
 

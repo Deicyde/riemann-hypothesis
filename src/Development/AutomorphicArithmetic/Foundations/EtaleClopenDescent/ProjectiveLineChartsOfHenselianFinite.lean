@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.ProjectiveLineTwoAffineChartsPolynomialGenerated
+import Development.EtaleCohomology.EtaleSheaves.LZProperCut
+import Mathlib.AlgebraicGeometry.ProjectiveSpectrum.Basic
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry HomogeneousLocalization

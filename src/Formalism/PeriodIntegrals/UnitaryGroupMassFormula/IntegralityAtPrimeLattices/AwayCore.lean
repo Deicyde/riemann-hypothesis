@@ -1,9 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IntegralityAtPrimeLattices.UpLatLoc0Of
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IntegralityAtPrimeLattices.AwayLoc
-import Formalism.LocalToGlobal.LatticeGeometry.GeometryDefinitions.PClassE
-import Formalism.LocalToGlobal.GlobalTheory.GL6.DiagonalSlopes.StabiliserOfLocalTransport
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.CsEquiv
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Levelaf
 
 noncomputable section
 

@@ -1,7 +1,6 @@
-import Mathlib
-import ReciprocityTheory.DualLattices.CotangentSurjective
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.IsTight
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.StepOrderRes
+import Mathlib.Data.Matrix.ColumnRowPartitioned
 
 noncomputable section
 

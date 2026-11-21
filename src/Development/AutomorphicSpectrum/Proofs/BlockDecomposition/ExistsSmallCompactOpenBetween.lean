@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsBump
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsCIndValue
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Topology.Sheaves.Presheaf
 
 open Matrix GlobalTheory.PRep GlobalTheory.SmGL GlobalTheory.BZMir GlobalTheory.BZMir.Leib GlobalTheory.RgGu.Leib GlobalTheory.CompanionTheory.BZPhiPG GlobalTheory.CompanionTheory.BZPhiPG.OntoO Topology
 open scoped TensorProduct
@@ -40,7 +40,7 @@ theorem exists_compactOpen_between_mul_small
   have hLo : IsOpen (L : Set K₀) := Subgroup.isOpen_mono (le_sup_left : M ≤ L) hMo
   have hLc : IsClosed (L : Set K₀) := OpenSubgroup.isClosed ⟨L, hLo⟩
   have himg : ((L.map K₀.subtype : Subgroup G) : Set G) = Subtype.val '' (L : Set K₀) := by
-    ext x; simp [Subgroup.mem_map]
+    ext x; simp
   refine ⟨L.map K₀.subtype, ?_, ?_, ?_, ?_, ?_⟩
   · rw [himg]
     exact hK₀o.isOpenMap_subtype_val _ hLo

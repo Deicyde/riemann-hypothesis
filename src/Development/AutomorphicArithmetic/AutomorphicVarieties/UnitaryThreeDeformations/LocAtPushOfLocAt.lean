@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeDeformations.IsCharZeroPt
 
 open Matrix IsLocalRing ReciprocityTheory.Gal UpperTheory.V.U3 UpperTheory.V.Alg UpperTheory.V.UnitaryThreeInertia
@@ -13,7 +15,7 @@ private theorem map_ofGL (f : R →+* R') (h : GL (Fin 3) R) :
 private theorem conj_push (φ : R →ₐ[O] R') (h : GL (Fin 3) R) (r : D →* GG 3 R) (g : D) :
     conjBy (GeneralLinearGroup.map (φ : R →+* R') h)⁻¹ (push φ r) g =
       GG.map (φ : R →+* R') (conjBy h⁻¹ r g) := by
-  simp only [conjBy, push, MonoidHom.comp_apply, MulEquiv.coe_toMonoidHom, MulAut.conj_apply,
+  simp only [conjBy, push, MonoidHom.comp_apply, MulEquiv.coe_toMonoidHom,
     MulAut.conj_inv_apply, map_mul, map_inv, map_ofGL]
 
 private theorem conj_push_mat (φ : R →ₐ[O] R') (h : GL (Fin 3) R) (r : D →* GG 3 R) (g : D) (a b : Fin 3) :
@@ -46,7 +48,7 @@ private theorem inHat_push (φ : R →ₐ[O] R') {h : GL (Fin 3) R} (H : InHat h
   intro a b
   have e : ((GeneralLinearGroup.map (φ : R →+* R') h : Matrix (Fin 3) (Fin 3) R') - 1) a b =
       φ (((h : Matrix (Fin 3) (Fin 3) R) - 1) a b) := by
-    by_cases hab : a = b <;> simp [Matrix.sub_apply, Matrix.one_apply, hab]
+    by_cases hab : a = b <;> simp [Matrix.sub_apply, hab]
   rw [e]
   exact hm _ (H a b)
 

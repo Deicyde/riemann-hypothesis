@@ -1,8 +1,8 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.TorsionTranslationPowers.Th0FromPhPrime
-import Formalism.LocalToGlobal.TorsionIntegrality.EisensteinTranslationProducts.GoodModelLattice
-import Formalism.LocalToGlobal.TorsionIntegrality.WeierstrassTwoTorsion.BridgeTwoMore
 import Formalism.LocalToGlobal.TorsionIntegrality.FrobeniusFibreCurves.FinalI
 import Formalism.LocalToGlobal.TorsionIntegrality.FrobeniusFibreCurves.StatementJ
+import Formalism.LocalToGlobal.TorsionIntegrality.FrobeniusFibreCurves.LogarithmicSubstitution.TwoTorsionCurveToSeries
 
 noncomputable section
 open scoped BigOperators ComplexConjugate

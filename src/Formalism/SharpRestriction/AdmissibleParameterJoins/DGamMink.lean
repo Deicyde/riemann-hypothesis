@@ -1,8 +1,6 @@
-import Formalism.LocalRingCardinality.MinkMEqMinkowskiNumber
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.SmoothDesignExistence.DGamSmooth
-import Formalism.SharpRestriction.CuspSpanNormBounds.CongruenceAtSplitFrobeniusHolds
-import Formalism.SharpRestriction.CuspSpanNormBounds.NonGenericAndKTwoTheorems
-import Formalism.SharpRestriction.Divisibility.ZetaProductPairs
+import Formalism.LocalRingCardinality.DataMink
 
 namespace Formalism.MainNotions.J
 

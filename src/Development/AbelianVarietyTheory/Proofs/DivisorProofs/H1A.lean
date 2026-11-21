@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.H1SplitConfigBIntegralStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.H1SplitConfigBRealPlacesStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.H1SplitConfigBFiniteStatement

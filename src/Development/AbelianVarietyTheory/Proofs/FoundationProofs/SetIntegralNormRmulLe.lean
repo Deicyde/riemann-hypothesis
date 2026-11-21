@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.AestronglyMeasurableQuotMeasureIffLift
+import Mathlib.MeasureTheory.Function.AEEqOfIntegral
 
 open MeasureTheory Filter Set GlobalTheory.AutomorphicL2Unitary
 open scoped InnerProductSpace ENNReal

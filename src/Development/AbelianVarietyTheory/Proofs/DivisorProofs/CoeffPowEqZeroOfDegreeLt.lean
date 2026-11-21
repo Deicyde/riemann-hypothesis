@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import ReciprocityTheory.DualLattices.VEqZeroOfPowEqOne
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.PowerSeries.Substitution
 open MvPowerSeries ReciprocityTheory.PGsh
 
 namespace GlobalTheory.LgSubst

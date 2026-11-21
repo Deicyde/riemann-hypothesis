@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import CompanionTheory.RealGroups.DiscreteSeries.DiscreteSeriesClassification.HilbertSpaceModels.StepSqInt
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.HighestWeights.Exists
 
 noncomputable section
 

@@ -1,5 +1,4 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.NearSplit
-import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.SgnMulSelf
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.FlagsAndDiagonals.LowAdj
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual Formalism.HC ReciprocityTheory.Gal IsLocalRing Polynomial UpperTheory.V.Base UpperTheory.V.Alg UpperTheory.V.HV UpperTheory.V.GradeZeroInterpolatingElement UpperTheory.V.Ws
@@ -9,7 +8,7 @@ private theorem diag_gsp {R : Type} [CommRing R] (e : R) :
   show adj _ * _ = e • 1
   ext i j
   fin_cases i <;> fin_cases j <;>
-    simp [adj_apply, Matrix.mul_apply, Fin.sum_univ_four, Matrix.diagonal_apply, sgn, Fin.rev]
+    simp [adj_apply, Matrix.mul_apply, Matrix.diagonal_apply, sgn, Fin.rev]
 
 theorem UpperTheory.V.Ws.Rq.luG :
     ∀ (R : Type) [CommRing R] (ν : R) (X n₀ : M4 R), IsUnit ν → IsGSp ν X → IsLow n₀ → IsUnit ((X * n₀) 0 0) →

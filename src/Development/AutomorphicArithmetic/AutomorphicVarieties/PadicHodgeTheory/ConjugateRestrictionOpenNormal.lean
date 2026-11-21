@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.TriDefs
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.AdmConj
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.AdmHom

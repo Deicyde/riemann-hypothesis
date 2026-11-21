@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.DecayTraceClassAlt
 import Development.AutomorphicArithmetic.Foundations.Convolution.ConvolutionKernels.QmapPres
 

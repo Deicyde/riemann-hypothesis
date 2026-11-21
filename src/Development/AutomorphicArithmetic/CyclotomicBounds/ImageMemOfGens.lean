@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AutomorphicArithmetic.CyclotomicBounds.ZmodTwoQuadraticNeZero
-import Development.AutomorphicArithmetic.PrimeDiscriminants.InertGen
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Batteries.Data.Nat.Gcd
+import Formalism.LocalRingCardinality.DataHost
 
 namespace UpperTheory.Small
 

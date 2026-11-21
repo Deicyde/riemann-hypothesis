@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.AdicLattices.LocVanK
-import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.LMemMax
+import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.XvanExt
+import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.AdicLattices.CompanionTheory
+import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.NearSplit
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual Formalism.HC ReciprocityTheory.Gal IsLocalRing Polynomial UpperTheory.V.Base UpperTheory.V.Alg UpperTheory.V.HV UpperTheory.V.GradeZeroInterpolatingElement UpperTheory.V.Ws UpperTheory.V.Ws.Lat
 
@@ -16,7 +20,7 @@ variable {Ω : Type} [Field Ω] [CharZero Ω] [IsAlgClosure ℚ Ω] {l : ℕ} [F
 private theorem ov_rt (pr : Bool) (g0 : G ℚ Ω) {w : ℤ × ℤ} (hw : w ∈ oddRoots) :
     (frQ D pr g0).rt w ∈ [D.al, D.be, D.th, D.al⁻¹, D.be⁻¹, D.th⁻¹] := by
   have e : ∀ w g, (frQ D pr g0).rt w g = D.al g ^ w.1 * (if pr then (D.Psi g)⁻¹ else D.Psi g) ^ w.2 := fun w g => by
-    cases pr <;> simp [Fr.rt, frQ, chi, lab, Raw.ps, Raw.th, mul_assoc, mul_right_comm (D.al g) (D.Psi g)]
+    cases pr <;> simp [Fr.rt, frQ, chi, lab, Raw.ps, Raw.th, mul_assoc]
   have a1 : (frQ D pr g0).rt wAl = D.al := MonoidHom.ext fun g => by simp [e, wAl]
   have a2 : (frQ D pr g0).rt (-wAl) = D.al⁻¹ := MonoidHom.ext fun g => by simp [e, wAl]
   have a3 : (frQ D pr g0).rt wBe = if pr then D.th⁻¹ else D.be :=

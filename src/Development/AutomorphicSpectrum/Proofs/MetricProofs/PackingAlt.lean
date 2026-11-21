@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.HasMultiplier
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.RationalSupMetrics.PullRatiosAlgebraic
 
 open MvPolynomial ReciprocityTheory.ChartRestriction.G.Geo GlobalTheory.CompanionTheory.Ar.Small Filter Topology

@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ValuationGdetKapAt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiniteUnfSupportOfNeOne
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsGivenStageEqOne
+import Development.AbelianVarietyTheory.Definitions.Divisors.FlatTensorVacuum
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.DIV
 open IsDedekindDomain NumberField MeasureTheory Matrix ValuativeRel GlobalTheory.ChiGrid GlobalTheory.FunObj GlobalTheory.ExpansionInvariance GlobalTheory.SplitFlip GlobalTheory.SplitWeil GlobalTheory.RootEx
 attribute [local instance] Formalism.BasicNotions.Host.cmStar GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField borelKw borelSpaceKw
@@ -45,7 +45,7 @@ theorem phase_eq_of_two_steps : ∀ {k : Type} [Field k] [ValuativeRel k] [Topol
     rw [hP1]
     linear_combination -h0
   · rintro ⟨i, hi⟩ ⟨h1, h2⟩
-    simp only [ne_eq, Fin.ext_iff, Fin.val_mk] at h1 h2
+    simp only [ne_eq, Fin.ext_iff] at h1 h2
     rw [sub_eq_zero, hch ⟨i, hi⟩ h1 h2]
     congr 1
     by_cases hij : i + 1 = j

@@ -1,6 +1,5 @@
-import Development.AutomorphicArithmetic.FrobeniusLocalisation.DiffDefs
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.FrobeniusLocalisation.DiffEKSupp
-import Development.AutomorphicArithmetic.FrobeniusLocalisation.DiscrK
 
 open UpperTheory.HF
 

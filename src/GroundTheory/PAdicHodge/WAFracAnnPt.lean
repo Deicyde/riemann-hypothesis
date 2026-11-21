@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.PAdicHodge.WAFracAnn
-import GroundTheory.PAdicHodge.ToUntiltFieldEqZeroIff
 import GroundTheory.PAdicHodge.ExtRobbaRoot
 set_option maxSynthPendingDepth 1
 

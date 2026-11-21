@@ -1,8 +1,12 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeDeformations.IsCharZeroPt
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.AdRepBaseLiftApply
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.DefCoc
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.NormCob
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.ZetaReducibleRepEqSubInvAndIsUnit
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.TotallySplit
 
 open Matrix IsLocalRing ReciprocityTheory.Gal UpperTheory.V.U3 UpperTheory.V.Alg UpperTheory.V.UnitaryThreeInertia
 
@@ -223,7 +227,7 @@ private theorem exists_cocycle_of_dual_lift {Γ : Type} [Group Γ] (η : Γ →*
       ext a b; show ((r0 η Ψ' g).mat a b).snd = _; rw [h0]; rfl
     have a3 : ms (1 + γ g) = ms (γ g) := by
       ext a b
-      by_cases h : a = b <;> simp [ms, Matrix.one_apply, h]
+      by_cases h : a = b <;> simp [ms, h]
     rw [(h3 g).2, ms_mul, a1, a2, a3, Matrix.mul_zero, zero_add]
 
 end SlopeTestRemainingChoices

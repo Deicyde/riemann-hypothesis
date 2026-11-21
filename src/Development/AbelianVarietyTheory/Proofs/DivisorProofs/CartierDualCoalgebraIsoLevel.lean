@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsMulVal
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsAlgHomCompEq
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilPairingLevelStructureFiniteFlatStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CartierDualityTensorPairingCompatStatement
 set_option autoImplicit false
@@ -41,7 +39,7 @@ theorem bialgHom_dual_integral_of_pairs : ∀ (R K : Type) [CommRing R] [IsDomai
       (CartierDual.isGroupLikeElem_dual_iff _).2 ⟨map_one u, map_mul u⟩
     have h2 : IsGroupLikeElem K ((1 : K) ⊗ₜ[R] (toConv u.toLinearMap : CartierDual R A)) := by
       rw [isGroupLikeElem_tensor_iff]
-      simp [h1.counit_eq_one, h1.comul_eq_tmul_self, Algebra.TensorProduct.one_def]
+      simp [h1.counit_eq_one, h1.comul_eq_tmul_self]
     exact h2.map F
   have hlift : ∀ (y : A →ₐ[R] K) (t : K ⊗[R] A),
       Algebra.TensorProduct.lift (AlgHom.id K K) y (fun _ _ => .all _ _) t =

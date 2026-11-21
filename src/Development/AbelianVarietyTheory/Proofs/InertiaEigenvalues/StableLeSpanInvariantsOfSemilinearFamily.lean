@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CardLeOfSpan
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.MkMemAdmissibleAtIffCocycle
 
 open GlobalTheory.PhiGam GlobalTheory.AdmLoc GlobalTheory.Models GlobalTheory.TopSteps GlobalTheory.Present GlobalTheory.RedFun Formalism.WeaklyAdmissibleFiltrations Formalism.BasicNotions Formalism.BasicNotions.Loc
 open scoped LaurentSeries PowerSeries TensorProduct
@@ -70,7 +70,7 @@ theorem stable_le_span_invariants_of_semilinear_family :
     rw [Finset.sum_eq_single d₀]
     · simp [hd₀ y hy]
     · intro b _ hb
-      simp [Pi.single_apply, hb]
+      simp [hb]
     · intro h
       exact absurd (Finset.mem_univ _) h
   rw [h2] at h1

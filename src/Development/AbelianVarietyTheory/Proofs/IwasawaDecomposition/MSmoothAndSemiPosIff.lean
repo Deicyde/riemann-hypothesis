@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.RingKrullDimIntegers
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IntegralMulFderivOfTsupport
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.GenericallySmoothModel
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EtaleCoordsBaseChange

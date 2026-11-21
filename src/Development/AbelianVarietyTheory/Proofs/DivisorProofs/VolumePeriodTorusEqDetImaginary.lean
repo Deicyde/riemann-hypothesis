@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SiegelReframe
 open Matrix MeasureTheory GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe
 
@@ -43,7 +43,7 @@ theorem reIm_per {g : ℕ} (τ0 : Matrix (Fin g) (Fin g) ℂ) (x : Fl g) :
 
 theorem det_perMat {g : ℕ} (τ0 : Matrix (Fin g) (Fin g) ℂ) :
     (perMat τ0).det = (τ0.map Complex.im).det := by
-  simp [perMat, Matrix.det_fromBlocks_zero₁₂]
+  simp [perMat]
 
 end GlobalTheory.PerVol
 

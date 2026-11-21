@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LevelZeroKernel
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.UpperMinorOfLevelPoint
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.PBGLet
 
 open Matrix
 open scoped ComplexConjugate

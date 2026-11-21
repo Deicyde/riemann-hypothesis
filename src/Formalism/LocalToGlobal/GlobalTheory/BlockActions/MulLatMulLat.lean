@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.BlockActions.FixOrthogonalVector
-import Formalism.LocalToGlobal.HermitianForms.TiedSym
-import Formalism.LocalToGlobal.HermitianForms.TiedBrUnit
 import Formalism.LocalToGlobal.GlobalTheory.BlockActions.ExtendOneMulVecSingleLast
 import Formalism.LocalToGlobal.GlobalTheory.BlockActions.ArchimedeanSignatureMatchingOfTrivialBranchingSymm
 

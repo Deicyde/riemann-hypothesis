@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.LemmasUnramifiedOfRingCondition
-import Formalism.SharpRestriction.LevelLetterCocycles.SecondComparisonInCoordinates
 import Formalism.SharpRestriction.LevelLetterCocycles.KillerLevCoreOf
 
 noncomputable section

@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.FixedVectorEqOfStandardData
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.FormsPin
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.LatAtLattice
+import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.FormsAre
 
 noncomputable section
 

@@ -1,9 +1,8 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LevelCohomology.SoLine
-import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeDeformations.FiniteResidue
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LevelCohomology.SoCocL
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LevelCohomology.SoCobIndex
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CharacterLevelBounds.ClsFacts
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CharacterLevelBounds.PlacesQ
+import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeDeformations.IsHostFrame
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.GaloisCohomology IsLocalRing UpperTheory.V UpperTheory.V.Base UpperTheory.V.X
 
@@ -33,7 +32,7 @@ theorem UpperTheory.V.X.So.lineNeg :
     intro g
     have h1 : etaO F (F.π g) = η₀ g := by
       simp only [etaO, η₀, MonoidHom.comp_apply, hη]
-    simp only [lineChar, MonoidHom.mul_apply, MonoidHom.zpow_apply, MonoidHom.pow_apply, MonoidHom.inv_apply, hΨ, h1,
+    simp only [lineChar, MonoidHom.mul_apply, MonoidHom.pow_apply, MonoidHom.inv_apply, hΨ, h1,
       Chr.Psi, ψ', zpow_neg, zpow_natCast, mul_pow, pow_mul, mul_inv, inv_inv, mul_assoc]
   have ho : IsOpen (ψ'.ker : Set (G ℚ Ω)) := by
     refine Subgroup.isOpen_mono (H₁ := (Chr.cls ℚ Ω N).ker ⊓ (Chr.cls ℚ Ω 4).ker) (fun g hg => ?_)

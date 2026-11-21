@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.LocalEmbeddings.ConeBDefs
+import Mathlib.Analysis.Distribution.SchwartzSpace.Fourier
+import Mathlib.Topology.Separation.CompletelyRegular
 open MeasureTheory FreeSingleHomotopyEquivDiscreteChains.UpperTheory.Dv.ConeB
 open scoped FourierTransform SchwartzMap
 

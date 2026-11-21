@@ -1,8 +1,8 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.UniformGaussModels.StatementJ
 import Formalism.LocalToGlobal.TorsionIntegrality.UniformGaussModels.StatementE
 import Formalism.LocalToGlobal.TorsionIntegrality.UniformGaussModels.StatementF
 import Formalism.LocalToGlobal.TorsionIntegrality.UniformGaussModels.OneLetterGaussEveryOrth7
-import Formalism.LocalToGlobal.TorsionIntegrality.EisensteinTranslationProducts.HasCMByStable
 
 namespace Formalism.L2.Th1.Top
 

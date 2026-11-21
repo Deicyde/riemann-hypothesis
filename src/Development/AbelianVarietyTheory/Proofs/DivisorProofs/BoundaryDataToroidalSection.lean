@@ -1,9 +1,9 @@
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecondChernDensity
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PoincareFormStatementStatement
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsProperToroidalModelStructureMap
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsPotentialPullback
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DivisorPotentialIsSNCBoundary
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SncComponentsLocalSncStatement
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ModelDdcForms
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ToroidalCompactificationData
 open CategoryTheory AlgebraicGeometry TopologicalSpace Filter Topology MeasureTheory Matrix NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open GlobalTheory GlobalTheory.Points GlobalTheory.CxPts GlobalTheory.VB GlobalTheory.HermFrame GlobalTheory.ArInt GlobalTheory.CovTest GlobalTheory.VdmRec GlobalTheory.ArchLim
@@ -267,7 +267,7 @@ theorem isSNC_compSec (B : FinHolAtlas d (CxPts p σ)) (hB : IsAlgAtlas B) (hsnc
   · by_cases hi : LiesIn x (C i)
     · refine ⟨fun _ => 1, fun j => by exact analyticOnNhd_const, fun _ _ => one_ne_zero, fun z hz => ?_⟩
       show compSec hn i x z = 1 * _
-      rw [one_mul, Finset.prod_eq_single i (fun k _ hk => by simp only [τ]; split_ifs <;> simp [Pi.single_apply, hk]) (by simp)]
+      rw [one_mul, Finset.prod_eq_single i (fun k _ hk => by simp only [τ]; split_ifs <;> simp [hk]) (by simp)]
       simp only [τ, hi, dite_true, Pi.single_eq_same, pow_one]
       exact (hτ i hi z hz).symm
     · refine ⟨fun z => ev p σ _ (GlobalTheory.DivSec.eqT hn i x) z, ?_, fun z hz h => ?_, fun z hz => ?_⟩
@@ -278,7 +278,7 @@ theorem isSNC_compSec (B : FinHolAtlas d (CxPts p σ)) (hB : IsAlgAtlas B) (hsnc
         · rfl
         · by_cases hk : k = i
           · subst hk; simp only [τ, hi, dite_false]
-          · simp only [τ]; split_ifs <;> simp [Pi.single_apply, hk]
+          · simp only [τ]; split_ifs <;> simp [hk]
 
 end GlobalTheory.BdryData
 

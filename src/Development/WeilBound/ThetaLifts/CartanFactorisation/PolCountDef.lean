@@ -1,4 +1,5 @@
-import Development.WeilBound.ThetaLifts.CartanFactorisation.CartanConj
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
 noncomputable section
 

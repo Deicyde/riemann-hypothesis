@@ -1,5 +1,5 @@
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ExpTie
-import Formalism.FormalGroupWitt.FormalGroupWittProofs.SolveV
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.ChartChg
 import Formalism.LocalToGlobal.ProjectiveLattices.SatLeaves
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.DegreeOneStatement

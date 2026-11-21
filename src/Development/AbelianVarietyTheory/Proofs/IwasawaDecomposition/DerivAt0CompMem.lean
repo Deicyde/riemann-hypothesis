@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.KernelLattices.ThDistC
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FinAlgOfFinite
 import ReciprocityTheory.L2DbarEstimates.PlurisubharmonicCharts.ZeroDimA
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.Taylor
 

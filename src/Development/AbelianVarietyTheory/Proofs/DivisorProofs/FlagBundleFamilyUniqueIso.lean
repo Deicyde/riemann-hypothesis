@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ScholzeWeinsteinB
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 open NumberField MvPolynomial Filter Topology Formalism.BasicNotions Formalism.MainNotions Formalism.DegreeFormula GlobalTheory.FlagPoly GlobalTheory.Mean4 GlobalTheory.Mean4O GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.CovTest GlobalTheory.Published
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory GlobalTheory.ArInt
 open scoped Classical
@@ -62,8 +60,8 @@ theorem carries_comp {T Y' : Scheme.{0}} (π : Y ⟶ B) (π' : Y' ⟶ B) (g : T 
   have h4 := congrArg (fun f => (Scheme.Modules.pullbackComp h₁ h₂).inv.app ((Scheme.Modules.pullback π).obj (E a)) ≫
     (Scheme.Modules.pullback h₁).map ((Scheme.Modules.pullbackComp h₂ π).hom.app (E a)) ≫
     (Scheme.Modules.pullbackComp h₁ (h₂ ≫ π)).hom.app (E a) ≫ f ≫ eqToHom (by rw [Category.assoc])) h3
-  simp only [Category.assoc, Iso.hom_inv_id_app_assoc, ← Functor.map_comp_assoc, Iso.hom_inv_id_app, CategoryTheory.Functor.map_id,
-    Category.id_comp, Iso.inv_hom_id_app_assoc, eqToHom_trans, eqToHom_refl, Category.comp_id] at h4
+  simp only [Category.assoc, Iso.hom_inv_id_app_assoc, ← Functor.map_comp_assoc, Iso.hom_inv_id_app,
+    eqToHom_trans, eqToHom_refl, Category.comp_id] at h4
   erw [CategoryTheory.Functor.map_id, Category.id_comp, Iso.inv_hom_id_app_assoc] at h4
   exact h4.symm
 

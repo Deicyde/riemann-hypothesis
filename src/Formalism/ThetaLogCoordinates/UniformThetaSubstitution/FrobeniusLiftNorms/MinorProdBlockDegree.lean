@@ -1,5 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.StatementE
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -330,7 +337,7 @@ lemma minorAt_posWt {l : ℕ} (s s' : σ) (T : Fin l → Fin r0 → K) (I : Fin 
     MvPolynomial.IsWeightedHomogeneous (posWt r0 r1 s) (minorAt s' T I)
       (if s' = s then l else 0) := by
   have hdeg : (if s' = s then l else 0) = 0 + ∑ _i : Fin l, (if s' = s then 1 else 0) := by
-    split_ifs with h <;> simp [h]
+    split_ifs with h <;> simp
   rw [hdeg, minorAt, Matrix.det_apply']
   refine MvPolynomial.IsWeightedHomogeneous.sum _ _ _ (fun e _ => ?_)
   refine MvPolynomial.IsWeightedHomogeneous.mul ?hsign

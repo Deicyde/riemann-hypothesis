@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.UnipotentAdelicQuotients.SiegelWeilUnitaryConvergent
 import GroundTheory.AutomorphicForms.HermitianExistenceLocal
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.Statements

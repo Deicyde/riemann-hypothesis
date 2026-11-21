@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.TorusAtDataPf
 
 open NumberField ReciprocityTheory.ChartRestriction.G.FD ReciprocityTheory.ChartRestriction.G.I2 ReciprocityTheory.ChartRestriction.G.I2.TorusAtDataPf
@@ -407,7 +408,7 @@ theorem _root_.GlobalTheory.exists_torus_coordinates : ∀ (E : Type) [Field E] 
           rw [coord_conjugate_eq_neg_conj_pr, neg_eq_zero, map_eq_zero] at h2
           convert h2 using 3
           first
-            | (simp only [Fin.val_mk]; omega)
+            | (simp only; omega)
             | (ext; simp only [Fin.val_mk]; omega)
       exact (mul_eq_zero.mp key).resolve_left (hc τ)
     show y τ = 0
@@ -430,7 +431,7 @@ theorem _root_.GlobalTheory.exists_torus_coordinates : ∀ (E : Type) [Field E] 
     split_ifs with hσ
     · simp only [_root_.GlobalTheory.TorusCoord.pr, _root_.ReciprocityTheory.ChartRestriction.G.FD.hermC_smul_left]
       ring
-    · simp only [_root_.GlobalTheory.TorusCoord.pr, _root_.ReciprocityTheory.ChartRestriction.G.FD.hermC_smul_left, map_mul, map_neg,
+    · simp only [_root_.GlobalTheory.TorusCoord.pr, _root_.ReciprocityTheory.ChartRestriction.G.FD.hermC_smul_left, map_mul,
         ComplexEmbedding.conjugate_coe_eq, Complex.conj_conj, Complex.conj_ofReal]
       ring
   · intro y y'

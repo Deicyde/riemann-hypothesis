@@ -1,4 +1,5 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.IsFirstOrderDeformationOfRZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.SpTanP
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.ExistsUniqueUnramifiedHomOfFrobeniusValue
 import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.LMemMax
@@ -70,7 +71,7 @@ private theorem hom_iff (χ : Fin 4 → H →* Eˣ) (γ : H → M4 E) :
         show (if a = b then ((χ a (g * h) : Eˣ) : E) else 0) =
           ∑ c, (if a = c then ((χ a g : Eˣ) : E) else 0) * (if c = b then ((χ c h : Eˣ) : E) else 0)
         simp only [ite_mul, mul_ite, zero_mul, mul_zero,
-          Finset.sum_ite_eq, Finset.sum_ite_eq', Finset.mem_univ, if_true, map_mul, Units.val_mul]
+          Finset.sum_ite_eq', Finset.mem_univ, if_true, map_mul, Units.val_mul]
         split_ifs with hab
         · subst hab
           rfl

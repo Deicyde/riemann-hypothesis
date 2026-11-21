@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsLv
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.TensorIdeleNormalizedAbsIdeleHalfAtInfinity
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsModerateFormAdd
 
 noncomputable section
 
@@ -101,8 +104,8 @@ theorem gram_unip_iff (hs : ∀ x, s (s x) = x) (g : Gram s J C D Z J₀) (h₀ 
     rw [← Matrix.mul_one (cT s Ji), ← hi, ← Matrix.mul_assoc, h₀, Matrix.one_mul]
   have i4 : Ji * J₀ = 1 := by rw [← h₀, i3]
   simp only [Gram, cT_add, cT_sub, cT_mul, cT_cT hs, Matrix.mul_add, Matrix.add_mul, Matrix.mul_sub, Matrix.sub_mul,
-    Matrix.mul_assoc, b', h1, h2, h3, h4, h5, h6, h7, h8, h9, i1, i2, i3, i4, Matrix.zero_mul, Matrix.mul_zero, Matrix.one_mul,
-    Matrix.mul_one, add_zero, zero_add, sub_zero, zero_sub, true_and, neg_add_cancel, neg_neg, sub_neg_eq_add, sub_self]
+    Matrix.mul_assoc, b', h1, h2, h3, h4, h5, h6, h7, h8, h9, i1, i3, i4, Matrix.zero_mul, Matrix.mul_zero, Matrix.one_mul,
+    Matrix.mul_one, add_zero, zero_add, sub_zero, zero_sub, true_and, neg_add_cancel, sub_neg_eq_add, sub_self]
   constructor
   · intro h; rw [← h]; abel
   · intro h; rw [← h]; abel

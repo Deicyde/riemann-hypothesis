@@ -1,5 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.UnipotentAdelicQuotients.ThmBInHecke
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
 open NumberField IsDedekindDomain NumberField.mixedEmbedding Complex Classical HeckeCharacterZeroLocus.ThmBIn
 open scoped TensorProduct ContDiff nonZeroDivisors
 namespace GlobalTheory

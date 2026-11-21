@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.LocalNewformFunction
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsContinuousAdelicUnitaryEmbedding
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsSmoothAutomorphicFunctionTranslateAtRealPlace
 
 noncomputable section

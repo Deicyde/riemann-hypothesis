@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.UnitarySplit
-import GroundTheory.AutomorphicForms.HermitianSpaces
 
 namespace GroundTheory.Automorphic
 

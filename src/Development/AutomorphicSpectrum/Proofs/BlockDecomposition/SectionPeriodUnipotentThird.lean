@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.LocallyConstantMajorants.GammaSplitting.UnipotentTateFunctionalEquation
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntegrableMulCIff
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.TateLocalL1
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PartialFourierBoundSeminorm
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.NormWhittakerGL2LeIntegral
@@ -59,7 +59,7 @@ theorem left_side (F : ℂ → ℂ) (n : ℤ) (s : ℂ) :
       push_cast
       field_simp
     rw [this, mul_zpow, _root_.inv_zpow, _root_.zpow_neg]
-  simp only [hΦ, chC, hv, hn, neg_neg, inv_inv]
+  simp only [hΦ, chC, hv, hn]
   have hFz : -(-z⁻¹)⁻¹ = z := by simp
   rw [hph, hBi, inv_inv, hFz]
   change (-1) ^ n * (z / (ρ : ℂ)) ^ (-n) * B⁻¹ ^ s * B * F z =
@@ -141,7 +141,7 @@ def vmL (M : Matrix (Fin 2) (Fin 2) ℂ) : (Fin 2 → ℂ) →ₗ[ℝ] (Fin 2 �
   map_add' a b := Matrix.add_vecMul M a b
   map_smul' r a := by
     funext i
-    simp [Matrix.vecMul, dotProduct, Finset.smul_sum, mul_assoc]
+    simp [Matrix.vecMul, dotProduct, mul_assoc]
 
 theorem vmL_inj {M : Matrix (Fin 2) (Fin 2) ℂ} (hM : M.det ≠ 0) : Function.Injective (vmL M) :=
   (injective_iff_map_eq_zero _).2 fun _ hv => Matrix.eq_zero_of_vecMul_eq_zero hM hv
@@ -655,7 +655,7 @@ theorem core (hT : TateFunctionalEquationComplex) (hI : IbpQ) (k : ℕ) (Ψ : Sw
       (Complex.measurable_ofReal.comp (measurable_norm.pow_const _)).aestronglyMeasurable
     have hw : Integrable (fun w : ℂ => ‖((‖w‖ ^ (2 * (s.re - 1)) : ℝ) : ℂ)‖ * dd w ^ 2) := by
       refine (wt_sq h0 h1).congr (Filter.Eventually.of_forall fun w => ?_)
-      simp only [Complex.norm_real, norm_norm]
+      simp only [Complex.norm_real]
       rw [Real.norm_of_nonneg (Real.rpow_nonneg (norm_nonneg _) _)]
       congr 2
       ring

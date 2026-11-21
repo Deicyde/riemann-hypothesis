@@ -1,5 +1,8 @@
-import Formalism.LocalRingCardinality.SpanPowerMembership.NZTypeE
-import Formalism.LocalRingCardinality.SpanPowerMembership.NZTypeC
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.SpanPowerMembership.NZTypeD
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Tactic.ENatToNat
 
 noncomputable section
 
@@ -142,7 +145,7 @@ def cfQ (f : Λ) (h : Γ) : ℚ :=
 
 theorem esZ_coeff [CharZero K] (f : Λ) (h : Γ) : (esZ K Γ fA fB f).coeff h = (cfQ Γ fA fB f h : K) := by
   unfold esZ cfQ
-  split_ifs <;> simp [eT_coeff, one_def, MonoidAlgebra.coeff_single_apply, *]
+  split_ifs <;> simp [eT_coeff, one_def, *]
 
 variable {K Γ fA fB} [CharZero K] (hAB : fA ≠ fB)
 

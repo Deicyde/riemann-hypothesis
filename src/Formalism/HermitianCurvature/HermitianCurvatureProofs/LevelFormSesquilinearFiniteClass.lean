@@ -1,28 +1,8 @@
-import Formalism.HermitianCurvature.StatementJC
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.TwoByOneBlock
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.RegularisedPairingViaPhase
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.NormDiagonalEntryDilationGeneratorLeOne
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.OrbitalIntegralAeConvergenceContinuity
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BetaSesquilinearity
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.ExistsAuxiliaryXi
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.BXiAsm
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.ZinvBound
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.SplLen
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.ComponentFamilySettingOfSetting
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BigCellOrbitSet
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CvRhoOfParts
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.PsiNormalization
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CapelliUnderIntegral
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CapelliWordSumExpansion
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CompactSupportFiniteClass
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.WCellMemOmPlus
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.RadJFExists
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.InvariantOperatorUnderJacquet
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.SumDualVectorEqZeta
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.ActualAdjointnessFromHermitian
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.RestrictionIrrelevantDoubleLevelOperator
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.QxChain
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.OperatorPreservesFusionForms
 
 noncomputable section
 
@@ -1009,15 +989,15 @@ theorem bc_tL_post {E E' : Type} [NormedAddCommGroup E] [NormedSpace ℂ E] [Nor
   · show -(Q.chatL (Q.EH k r) (Q.posL k r 0) (Q.uC k r 0 Y - 1) (fun _ => Q.xv k r z' 0) (Q.ybv k r z 0)
       (fun x => L (f x))) g = L (-(Q.chatL (Q.EH k r) (Q.posL k r 0) (Q.uC k r 0 Y - 1) (fun _ => Q.xv k r z' 0)
         (Q.ybv k r z 0) f) g)
-    simp only [Pi.neg_apply, Q.chatL, map_neg, map_sum, map_smul, bc_qminor_post L hf hg]
+    simp only [Q.chatL, map_neg, map_sum, map_smul, bc_qminor_post L hf hg]
   · show -(Q.chatL (Q.EH k r) (Q.posL k r 0) (Q.uC k r 0 Y) (Q.yv k r z 0) (fun _ => Q.xbv k r z' 0)
       (fun x => L (f x))) g = L (-(Q.chatL (Q.EH k r) (Q.posL k r 0) (Q.uC k r 0 Y) (Q.yv k r z 0)
         (fun _ => Q.xbv k r z' 0) f) g)
-    simp only [Pi.neg_apply, Q.chatL, map_neg, map_sum, map_smul, bc_qminor_post L hf hg]
+    simp only [Q.chatL, map_neg, map_sum, map_smul, bc_qminor_post L hf hg]
   · show -(Q.chat2L (Q.EH k r) (Q.posL k r 0) (Q.uC k r 0 Y - 1) (Q.yv k r z 0) (fun _ => Q.xv k r z' 0)
       (Q.ybv k r z 0) (fun _ => Q.xbv k r z' 0) (fun x => L (f x))) g = L (-(Q.chat2L (Q.EH k r) (Q.posL k r 0)
         (Q.uC k r 0 Y - 1) (Q.yv k r z 0) (fun _ => Q.xv k r z' 0) (Q.ybv k r z 0) (fun _ => Q.xbv k r z' 0) f) g)
-    simp only [Pi.neg_apply, Q.chat2L, map_neg, map_sum, apply_ite L, map_smul, map_zero, bc_qminor_post L hf hg]
+    simp only [Q.chat2L, map_neg, map_sum, apply_ite L, map_smul, map_zero, bc_qminor_post L hf hg]
 
 theorem bc_smoothLev {E : Type} [NormedAddCommGroup E] [NormedSpace ℂ E] {f : B.Mat k r → E}
     (hf : CkOn (⊤ : ℕ∞) (GV k r) f) : Q.SmoothLev k r 0 Set.univ f := by
@@ -2942,7 +2922,7 @@ theorem pd_phi_deriv (m : ℕ) : ∃ C : ℝ, 0 ≤ C ∧ ∀ w, admitted m w �
     have hz : ∀ M' ∈ {M : Mat k r | 4 < pdSq M}, pdPhi M' = (fun _ => (0 : ℂ)) M' := by
       intro M' hM'
       simp [pdPhi, pd_chi_zero (le_of_lt hM')]
-    rw [pd_Dw_congr_open hU hz w M (by simp only [Set.mem_setOf_eq]; simp only [Set.mem_setOf_eq, not_le] at hM; linarith), Dw_zero]
+    rw [pd_Dw_congr_open hU hz w M (by simp only [Set.mem_setOf_eq]; simp only [not_le] at hM; linarith), Dw_zero]
     simpa using hC0
 
 theorem pd_psi_deriv (m : ℕ) : ∃ C : ℝ, 0 ≤ C ∧ ∀ R : ℝ, 0 < R → ∀ w, admitted m w → ∀ g : Mat k r,

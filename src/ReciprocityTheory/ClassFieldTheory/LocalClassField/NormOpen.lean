@@ -1,6 +1,5 @@
-import Mathlib
-import ReciprocityTheory.ClassFieldTheory.LocalClassField.RecDefs
-import ReciprocityTheory.ClassFieldTheory.LocalClassField.GalBasic
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ClassFieldTheory.LocalClassField.NormOpenA
 import ReciprocityTheory.ClassFieldTheory.LocalClassField.NormOpenB
 

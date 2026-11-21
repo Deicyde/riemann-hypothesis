@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsFlatSecRankZero
+import BuildAid.Leniency.Open
 import Formalism.MeanHeightDescent.DivisionInequalityWithCovolume
 import Formalism.LocalRingCardinality.Lemmas
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SlopeSqSubLeSlopeSqSpan

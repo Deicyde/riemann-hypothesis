@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.PrismaticDieudonnePerfdIff
 
 set_option autoImplicit false
@@ -26,7 +27,7 @@ def fx (x : Fin h → A) : L :=
 
 theorem fx_eq_sum (x : Fin h → A) : fx hN hL x = ∑ j, x j • fx hN hL (Pi.single j 1) := by
   ext k
-  simp [fx, Submodule.coe_sum, Finset.sum_apply, Pi.single_apply, mul_comm]
+  simp [fx, Finset.sum_apply, Pi.single_apply, mul_comm]
 
 def D (a : L) (y : Fin h → B) : B ⊗[A] L := (1 : B) ⊗ₜ a + ∑ j, y j ⊗ₜ fx hN hL (Pi.single j 1)
 

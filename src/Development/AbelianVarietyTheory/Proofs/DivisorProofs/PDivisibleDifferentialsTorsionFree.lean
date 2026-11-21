@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.InjectiveOfSmulMemRange
-import ReciprocityTheory.DualLattices.ExistsPrimitiveRoot
 
 noncomputable section
 

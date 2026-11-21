@@ -1,5 +1,5 @@
-import Formalism.SharpRestriction.Divisibility.PrimeDegreeVariant
-import Formalism.HarderNarasimhan.ShiftInvariance
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.ChainOperators.ClosedPartStatementHolds
 
 noncomputable section

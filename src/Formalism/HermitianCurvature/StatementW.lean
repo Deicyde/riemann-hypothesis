@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.YangianSpanCharacter.ExchangeGen
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.RingTheory.FractionalIdeal.Norm
 
 namespace Formalism.FourierDecayAlt.W
 

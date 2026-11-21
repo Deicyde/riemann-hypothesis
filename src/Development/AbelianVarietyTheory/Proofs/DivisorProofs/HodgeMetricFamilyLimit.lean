@@ -1,9 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TendstoUniformlyOfFamAt
-import Development.AbelianVarietyTheory.Definitions.Divisors.HypothesesX
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsX
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GradedNormInterpolationBoundStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AuxiliaryDataBaseChangeStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MulPowLeRpow

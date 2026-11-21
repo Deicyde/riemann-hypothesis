@@ -1,8 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Divisibility.Numbers
 import Formalism.LocalRingCardinality.DataErr
 import Formalism.LocalRingCardinality.DataMink
-import Formalism.SharpRestriction.GrowthBounds.DefsInst
-import Formalism.SizeWindowBrackets.GaloisToProductIsIso
 import Formalism.SizeWindowBrackets.Chain2aCoreNoAnalytic
 
 noncomputable section

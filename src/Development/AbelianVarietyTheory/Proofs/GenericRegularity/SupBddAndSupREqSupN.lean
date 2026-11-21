@@ -1,8 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.AxHSupA
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.FreeBridge
-import Development.AbelianVarietyTheory.Definitions.RegularCharts.BaseNorm
-import Development.AbelianVarietyTheory.Proofs.GenericRegularity.PointwiseNormSectionEqFlagDomainNorm
 import Development.AbelianVarietyTheory.Proofs.GenericRegularity.PointwiseNormBddAboveISupEqCuspFormSupNorm
 import Development.AbelianVarietyTheory.Proofs.GenericRegularity.NumericalConsequencesOfPins
 

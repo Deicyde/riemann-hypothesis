@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 
 set_option autoImplicit false
@@ -116,7 +117,7 @@ theorem exists_bLie_eq_sq_smul (hcok : ∀ f : omega P.Gt, (p : O) ^ 2 • f ∈
       simp [map_pow, map_natCast, mul_comm]
     · intro i _ hij
       rw [hyF]
-      simp [hij, Ne.symm hij]
+      simp [hij]
     · simp
   choose b hb using hint
   have hx : P.bLie (F b) = ((p : C) ^ 2) • u := by

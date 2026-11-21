@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.ExistsSchemeOfThickenings
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PreimageUpOpen
 open CategoryTheory CategoryTheory.Limits AlgebraicGeometry Opposite
 
 namespace GlobalTheory.ThickGlue

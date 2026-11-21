@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SiegelReframe
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ChSingle
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.QuasiperiodicDifferenceSymmetricFamilyStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeCocycleZeroOfGeneratorsStatement
 
@@ -77,7 +75,7 @@ theorem exists_coboundary_add_char : ∀ {g : ℕ} {E : Type} [NormedAddCommGrou
             c k P.1 := by
           rw [Finset.sum_eq_single k]
           · simp
-          · intro j _ hj; simp [Pi.single_apply, hj]
+          · intro j _ hj; simp [hj]
           · simp
         show H _ P - (K _ - K P + ∑ j, ((Pi.single (Sum.inl k) (1 : ℝ) : Fl g) (Sum.inl j) : ℂ) * c j P.1) = 0
         rw [hs, this]
@@ -85,6 +83,6 @@ theorem exists_coboundary_add_char : ∀ {g : ℕ} {E : Type} [NormedAddCommGrou
       | inr i =>
         show H _ P - (K _ - K P + _) = 0
         rw [transl_inr, hKper P hP i, hq i P (covVU hP)]
-        simp [Pi.single_apply]
+        simp
 
 end GlobalTheory.PeriodCocycle

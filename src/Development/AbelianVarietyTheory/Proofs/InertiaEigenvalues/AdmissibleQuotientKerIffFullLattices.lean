@@ -1,7 +1,7 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.InvariantsGenerators
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.JSmul
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.AdmissibleModuleIffLatticeQuotients
+import Formalism.SharpRestriction.LevelLetterCocycles.TableLineDegreeTwo
 
 noncomputable section
 

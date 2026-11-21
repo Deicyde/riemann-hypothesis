@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.TranslateMemIndOrder
-import Development.WeilBound.CoreStatements.HodgeTatePoints.TwhopfInd
+import Mathlib.Tactic.ReduceModChar
 open GlobalTheory.CompanionTheory.Ar.BT TensorProduct
 
 namespace GlobalTheory.CompanionTheory.Ar.BT.Induced

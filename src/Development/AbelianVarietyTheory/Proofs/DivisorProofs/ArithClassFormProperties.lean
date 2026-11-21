@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemConeOfMem
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormsOfInduces
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NontrivialIsomClassInt
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Pj Formalism.BasicNotions.TH Formalism.L2.Theta ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.FD GlobalTheory.AllWt GlobalTheory.CompHt GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.Mean4 GlobalTheory.Mean4O
 open scoped ENNReal Classical
@@ -62,7 +60,7 @@ theorem sub_sum_mem_rad_of_isometric (hE : GlobalTheory.Published.ArExists) {D :
     rw [ArInt.aeval_lin]
     have : (fun c : κ ⊕ Fin N => ∑ o, a j o * (A o c : ℝ)) = 0 := by
       funext c
-      rcases c with c | c <;> simp [a, A, Fintype.sum_option, Fintype.sum_sum_type, Pi.single_apply]
+      rcases c with c | c <;> simp [a, A, Fintype.sum_option, Pi.single_apply]
     rw [this]
     simp [lin]
   rw [LinearMap.comp_apply, AlgHom.toLinearMap_apply, map_prod, Finset.prod_eq_zero (Finset.mem_univ j) h3, map_zero]

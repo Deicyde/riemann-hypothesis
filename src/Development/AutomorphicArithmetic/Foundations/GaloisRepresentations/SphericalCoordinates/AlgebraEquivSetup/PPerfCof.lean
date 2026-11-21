@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.SphericalCoordinates.AlgebraEquivSetup.CodiffUnit
 
 open NumberField Matrix GlobalTheory.UPel.HT GlobalTheory.UPel.HT.Gen GlobalTheory.LKTrip GlobalTheory.LKGeo UpperTheory.Gal.W2.Seed
@@ -65,7 +65,7 @@ theorem UpperTheory.Gal.W2.Seed.pPerfCof :
       rcases eq_or_ne j i with h | h
       · subst h
         simp
-      · simp [Finsupp.single_apply, h]
+      · simp [h]
     intro z
     exact LinearMap.congr_fun hlin z
   have hdual : ∀ f : 𝓞 E →ₗ[ℤ] ℤ, ∃ x : 𝓞 E, ∀ z,

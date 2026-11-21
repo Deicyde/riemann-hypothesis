@@ -1,4 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorusThreeBlockApply
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CentralExponentBoundOver
 open GlobalTheory.SmGL GlobalTheory.PRep GlobalTheory.LeviBlockExponent GlobalTheory.IndJacBlock GlobalTheory.SplitWeil
@@ -49,7 +51,7 @@ theorem cellChar_distinct : ∀ (k : Type) [Field k] [ValuativeRel k] [Topologic
     intro a a' p
     unfold cellChar₂
     simp only [Units.val_mul, norm_mul, norm_chi2_eq_one hν, norm_absPow, one_mul, mul_one]
-    congr 2 <;> simp [Complex.div_re]
+    congr 2 <;> simp
   rcases hij with h | h
   · refine ⟨(ϖ, 1), fun e => ?_⟩
     have e' := congrArg norm e

@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrameAtApply
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DbarAddVectorScalar
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PeriodMapMoebiusDenomUnit
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlatFormSmoothOnCover
 open Matrix MeasureTheory Set Filter Topology GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe GlobalTheory.TorsionForm GlobalTheory.TorsionForm.Gauge
@@ -44,7 +42,7 @@ theorem reframe_contDiffOn : ∀ {E : Type} [NormedAddCommGroup E] [NormedSpace 
     contDiffOn_inv_cplx hden fun P hP =>
       ((Matrix.isUnit_iff_isUnit_det _).1 (hU P.1 hP.1)).ne_zero
   refine contDiffOn_fst.prodMk (contDiffOn_pi.2 fun j => ?_)
-  simp only [reframe, Matrix.vecMul, dotProduct]
+  simp only [Matrix.vecMul, dotProduct]
   refine ContDiffOn.sum fun i _ => ContDiffOn.mul ?_ (hent i j)
   exact ((contDiff_apply ℝ ℂ i).comp contDiff_snd).contDiffOn
 

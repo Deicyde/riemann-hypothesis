@@ -1,4 +1,4 @@
-import Formalism.LocalToGlobal.InertKernelTheory.ScalG
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.InertKernelTheory.DefsRepLt
 
 noncomputable section

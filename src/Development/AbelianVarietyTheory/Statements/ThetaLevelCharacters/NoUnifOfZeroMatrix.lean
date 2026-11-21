@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Statements.ThetaLevelCharacters.MemThetaLevelCharDimZero
 
 noncomputable section
@@ -85,7 +86,7 @@ theorem square_lattice (H : TorusAlgebraic) :
     rw [hΛ]
     constructor
     · rintro ⟨m, n, rfl⟩
-      exact ⟨m 0, n 0, by simp [Matrix.mulVec, dotProduct]⟩
+      exact ⟨m 0, n 0, by simp [dotProduct]⟩
     · rintro ⟨m, n, h⟩
       refine ⟨fun _ => m, fun _ => n, funext fun i => ?_⟩
       fin_cases i

@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.EigenLatticesDifferentStatementHolds
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.StabilizerCovolume.EigenLatDifferent
 open NumberField GroundTheory.Heights₂.Heights.NineStatements
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.eigen_lattices_different_statement_holds : GroundTheory.Heights₂.Heights.NineStatements.EigenLatDifferent.Statement := by

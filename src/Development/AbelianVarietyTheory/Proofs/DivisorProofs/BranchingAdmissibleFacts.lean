@@ -1,9 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CapelliDeterminantFirstRowsMemBmW
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.DualWeylEqEvalAtOneSmulExtremalOfRowWeight
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.TransportedLatticeLocalizationFreeLeCoefficientS
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.IsBasisAtBlock
-import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.CoefficientSpaceEqSpanOrbitExtremalVector
 import Formalism.BranchSandwichDivisors.DivFromPassageAndNorm
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DualWeylLeOfHighestVectorRowOperatorStableStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LastRowTopComponentDualWeylEqMonomialMulStatement
@@ -12,6 +11,7 @@ import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DualWeylSpannedByIn
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DualWeylLastZeroInclusionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockPairingLastRowMonomialReadsCoefficientStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BranchingListCharacterProductStatement
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
 
 open MvPolynomial Formalism.GradedWeylDivisibility Formalism.BranchingDeterminantCap Formalism.BasicNotions Formalism.L2.DIV GlobalTheory.Mem.Gelf GlobalTheory.Mem.GelfCheck GlobalTheory.BrCompare
 
@@ -53,7 +53,7 @@ theorem branchingAdmissible_facts {lam : Fin n → ℕ} {d : ℕ} {β : Fin n �
   have hb : ∀ s, b s ≤ lam s := fun s => by
     have h3 := (h2 s).2
     rw [bmH_lamZ_succ] at h3
-    simp only [Function.comp] at h3
+    simp only at h3
     omega
   refine ⟨b, rfl, hb, bmK_antitone lam (fun s => lam s - b s) (bm_IL_of lam _ ?_)⟩
   simpa only [Nat.cast_sub (hb _)] using h2

@@ -1,10 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.FamCol
-import Formalism.LocalToGlobal.GlobalTheory.FamRecP
 import Formalism.LocalToGlobal.GlobalTheory.ArithP
-import Formalism.LocalToGlobal.GlobalTheory.HLatOpsP
-import Formalism.SizeWindowBrackets.ChainSlopeWindows.SecondPriceSumWeightsUncovered
-import Formalism.SizeWindowBrackets.ChainSlopeWindows.ChainLatticeSizesModelEventually
-import Formalism.SizeWindowBrackets.ChainSlopeWindows.AnalyticFirstToLatticeDiscriminant
 
 open Module NumberField IsDedekindDomain Matrix
 

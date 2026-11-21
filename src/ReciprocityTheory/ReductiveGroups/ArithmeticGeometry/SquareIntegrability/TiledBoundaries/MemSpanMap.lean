@@ -1,5 +1,9 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.TiledBoundaries.MemSpanBn
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.TiledBoundaries.TileIntegral
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.Analysis.CStarAlgebra.Module.Constructions
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.TiledBoundaries.PointwiseNormSqPullbackTensorEqProd
 
 namespace ReciprocityTheory.ChartRestriction.G.I2.TiledBoundaries
 
@@ -39,7 +43,7 @@ theorem fdP (X : PT E) {q : ℕ} {π : Vsp X.dim →ₗ[ℂ] Vsp X.dim} (hq : 1 
 
 theorem norm_pi (X : PT E) {q : ℕ} {π : Vsp X.dim →ₗ[ℂ] Vsp X.dim} (hπ : IsPi X q π) (x : Vsp X.dim) : ‖π x‖ = Real.sqrt q * ‖x‖ := by
   have hn : ∀ v : Vsp X.dim, Hf v v = @inner ℂ _ _ v v := fun v => by
-    simp only [Hf, PiLp.inner_apply, RCLike.inner_apply, mul_comm]
+    simp only [Hf, PiLp.inner_apply, RCLike.inner_apply]
   have h := hπ.2.2.1 x x
   rw [hn, hn, inner_self_eq_norm_sq_to_K, inner_self_eq_norm_sq_to_K] at h
   have h2 : ‖π x‖ ^ 2 = (q : ℝ) * ‖x‖ ^ 2 := by
@@ -145,7 +149,7 @@ theorem P_le_Q (X : PT E) {q : ℕ} {π : Vsp X.dim →ₗ[ℂ] Vsp X.dim} (hq :
   rw [mem_P] at hx
   rw [mem_Q]
   have hH : ∀ a c : Vsp X.dim, Hf a c = @inner ℂ _ _ c a := fun a c => by
-    simp only [Hf, PiLp.inner_apply, RCLike.inner_apply, mul_comm]
+    simp only [Hf, PiLp.inner_apply, RCLike.inner_apply]
   have hround : ∀ y : Vsp X.dim, y ∈ X.L →
       ((round (Hf (π x) (π y)).im : ℤ) : ℝ) = (Hf (π x) (π y)).im := by
     intro y hy

@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.MonomialFactorials.RestDecompProved
-import Formalism.SharpRestriction.GrowthBounds.MonomialFactorials.StructureSheafH2BaseChange
 
 noncomputable section
 

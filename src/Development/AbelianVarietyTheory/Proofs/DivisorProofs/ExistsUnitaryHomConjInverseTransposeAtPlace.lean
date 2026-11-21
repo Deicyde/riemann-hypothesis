@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFinMapsOfForall
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAt
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.HoweUnram
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.XmApply
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.KFinLoc
 open scoped TensorProduct Matrix
@@ -133,7 +131,7 @@ theorem mem (σ : E →ₐ[F] E) (v : Pl F) (σL : L →+* L) (ι : L →+ AE F 
   have hMc : (Mg ι P g).map (cA σ) =
       (1 - ι 1) • (1 : Matrix (Fin n) (Fin n) (AE F E)) + ((Am P g).map σL).map ι := by
     ext i j
-    by_cases h : i = j <;> simp [Mg, h, Matrix.one_apply, ← hσ, hce]
+    by_cases h : i = j <;> simp [Mg, h, ← hσ]
   have hsplit : incM F J = (1 - ι 1) • incM F J + (tJ ι J).map ι := by
     ext i j
     have hex : ∃ x, ι x = ι 1 * inclR (F := F) (AF F) (J i j) := (hsupp _).1 (fun u hu => by

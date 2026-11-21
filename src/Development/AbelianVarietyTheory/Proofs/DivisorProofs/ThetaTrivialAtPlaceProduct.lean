@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.MatchingOfParts
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchimedeanThetaLocalActionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaTrivialAtFiniteSetStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaTrivialAtInfinitySetStatement

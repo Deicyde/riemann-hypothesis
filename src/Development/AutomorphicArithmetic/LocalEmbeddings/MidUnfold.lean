@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsHaarFundamentalDomainOneFlagTwo
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ReconfiguredTripleCompatibility
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdeleQuotientCompactFundamentalSet
-import Development.AutomorphicArithmetic.LocalEmbeddings.SemiUnfold
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK
@@ -50,7 +49,7 @@ theorem spans_of_span (H : Plane E d₁ e)
   rw [← Finset.univ_sum_single z]
   refine S.sum_mem fun j _ => ?_
   have : (Pi.single j (z j) : Fin d₁ → AE F E) = z j • incV F (Pi.single j (1 : E)) := by
-    ext k; by_cases hk : k = j <;> simp [incV, Pi.single_apply, hk]
+    ext k; by_cases hk : k = j <;> simp [incV, hk]
   rw [this]
   exact S.smul_mem _ (key _)
 

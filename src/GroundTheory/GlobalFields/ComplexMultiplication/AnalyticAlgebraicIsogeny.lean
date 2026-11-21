@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.ComplexMultiplication.AnalyticAlgebraicIndependent
 import GroundTheory.GlobalFields.ComplexMultiplication.AnalyticAlgebraicUnivAdd
 import GroundTheory.GlobalFields.ComplexMultiplication.DifferentialConstant
-import GroundTheory.ArithmeticGeometry.AbelianVarieties.DualWeil
 
 open Filter Topology Set Polynomial WeierstrassCurve.Affine GroundTheory.Arith.Abelian KaehlerDifferential
 open scoped PeriodPair

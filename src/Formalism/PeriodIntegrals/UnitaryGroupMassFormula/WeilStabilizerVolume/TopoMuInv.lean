@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeilStabilizerVolume.TopoFibInv
 
 noncomputable section
@@ -20,8 +21,7 @@ theorem BR_smul (h : HA R σ J) {n : ℕ} (X Y : Fin n → Fin M → R ⊗[F] E)
   simp only [BR, smul_apply]
   refine Finset.sum_congr rfl fun a _ => ?_
   obtain ⟨g, hg⟩ := h
-  simp only [HA.mat, HR, hR, Subgroup.mem_mk, Submonoid.mem_mk, Subsemigroup.mem_mk,
-    Set.mem_setOf_eq] at hg ⊢
+  simp only [HA.mat, HR, hR] at hg ⊢
   simp only [Formalism.UG.UJ, Formalism.UG.hform, Subgroup.mem_mk, Submonoid.mem_mk, Subsemigroup.mem_mk,
     Set.mem_setOf_eq] at hg ⊢
   congr 1

@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockMap
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchurAndTensorSubmodule
+import Mathlib.LinearAlgebra.PiTensorProduct.Basis
 open scoped TensorProduct GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels
 
 noncomputable section
@@ -105,7 +106,7 @@ theorem stable_map (N : Submodule ℂ (⨂[ℂ] i, V i))
         funext j
         by_cases h : j = a
         · subst h; simp [ha]
-        · simp [Function.update_of_ne h, Finset.mem_insert, h]
+        · simp [Finset.mem_insert, h]
       rw [e]
       exact hN a _ _ (ih y hy)
   intro y hy

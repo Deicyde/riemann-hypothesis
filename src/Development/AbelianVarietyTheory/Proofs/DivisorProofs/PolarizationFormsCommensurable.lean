@@ -1,12 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
-import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsCrystalPairing
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.PolarisationModuleIndex
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ConjugateOrderData
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsPlaceRing
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsHolFormConst
 open CategoryTheory CategoryTheory.Limits AlgebraicGeometry MonoidalCategory CartesianMonoidalCategory MonObj NumberField IsDedekindDomain
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory.Cris GlobalTheory.DeRham GlobalTheory.RealMult GlobalTheory.CMVal GlobalTheory.LatVal GlobalTheory.LatJet GlobalTheory.LatModel
 open GlobalTheory.IndefiniteRowSideFullHecke.ClassZetaValuationBounds (IsClassZetaVals c_vp cE_vp a0)
@@ -74,7 +69,7 @@ theorem corrForm_antisymm (H : Published.AbelianDeRham.Free) (X : Obj F 𝔠 (Sp
     (push (dp0 R) (𝟙 _) (lift (snd X.A X.A) (fst X.A X.A)) (push (dp0 R) (𝟙 _) (inr X.A X.A) y))
     (push (dp0 R) (𝟙 _) (inr X.A X.A) y) (fun _ ↦ rfl) fun _ ↦ rfl
   rw [← u, RingHom.id_apply, push_swap_inl, push_swap_inr, e, e] at k'
-  simp only [push_fst_inl, push_snd_inl, push_fst_inr, push_snd_inr, map_zero, LinearMap.zero_apply,
+  simp only [push_fst_inl, push_snd_inl, push_fst_inr, push_snd_inr, map_zero,
     sub_zero, zero_sub] at k'
   exact k'
 
@@ -152,7 +147,7 @@ theorem exists_nat_mul_polForm_eq : GlobalTheory.Published.AbelianDeRham → ∀
   refine ⟨n, t, hn, fun x y ↦ ?_⟩
   have v := LinearMap.congr_fun (LinearMap.congr_fun u x) y
   rw [u₁, u₂]
-  simp only [LinearMap.sub_apply, LinearMap.flip_apply, kn, kt, act_natCast, map_smul, LinearMap.smul_apply,
+  simp only [LinearMap.sub_apply, LinearMap.flip_apply, kn, kt, act_natCast, map_smul,
     smul_eq_mul] at v ⊢
   have a₁ := corrForm_antisymm H.1 X _ hφt y x
   have a₂ := corrForm_antisymm H.1 X c₀ hφ₀ (act (dp0 R) (𝟙 _) X.rm t y) x

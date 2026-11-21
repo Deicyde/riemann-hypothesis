@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LocRatio
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.GrGenOfIsFlagVBOn
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.GradedDegreeFormulaStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.FlagLabelBasesExistStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.CoordDegreeBoundGenericStatement
@@ -13,6 +12,7 @@ import Development.AutomorphicSpectrum.Proofs.GeometryProofs.CoordsAtComplexEmbe
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ValAtComplexEmbeddingStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LieModelValueLiftStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.GramDetNeZeroOfIndepStatement
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ArchBetween
 
 noncomputable section
 

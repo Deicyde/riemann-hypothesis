@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleTrace.GenEtalePfCut
+import Mathlib.AlgebraicGeometry.Morphisms.SchemeTheoreticallyDominant
 
 open CategoryTheory Limits AlgebraicGeometry
 

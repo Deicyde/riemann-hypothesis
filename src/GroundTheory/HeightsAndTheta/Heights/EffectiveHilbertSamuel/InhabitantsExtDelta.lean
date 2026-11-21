@@ -1,9 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.EffectiveHilbertSamuel.InhabitantsExt
-import GroundTheory.HeightsAndTheta.Heights.EffectiveHilbertSamuel.StatementsExtTwist
-import GroundTheory.HeightsAndTheta.Heights.EffectiveHilbertSamuel.StatementsExtShell
-import GroundTheory.HeightsAndTheta.Heights.EffectiveHilbertSamuel.StatementsExtCutoff
-import GroundTheory.HeightsAndTheta.Heights.EffectiveHilbertSamuel.StatementsExtBergman
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.EffectiveHS

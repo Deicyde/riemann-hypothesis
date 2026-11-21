@@ -1,9 +1,9 @@
-import Mathlib
-import Formalism.PeriodIntegrals.SelfDualLoc
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.SelfDualLocalBasis.DualBasis
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.SelfDualLocalBasis.HformSumRight
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.SelfDualLocalBasis.OneTmulMemOloc
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.SelfDualLocalBasis.SelfDualLocOfDirs
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Tactic.ENatToNat
 
 open Matrix NumberField IsDedekindDomain
 open scoped TensorProduct

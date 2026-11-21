@@ -1,7 +1,6 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.PerpVecPerpSt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.DiscriminantEstimates.DiscriminantLemmas.PerpendicularDeterminants.DetMemSubalgebra
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.DiscriminantEstimates.DiscriminantLemmas.PerpendicularDeterminants.PerpVecOfPerp
+import Mathlib.Tactic.ENatToNat
+import Std.Tactic.BVDecide.Normalize.Prop
 
 private theorem det_mem_subalgebra_of_entries_mem {R : Type} [CommRing R] {A : Type} [CommRing A] [Algebra R A]
     (S : Subalgebra R A) {m : ℕ} (M : Matrix (Fin m) (Fin m) A) (hM : ∀ i j, M i j ∈ S) :
@@ -89,28 +88,26 @@ theorem det_polynomial_harmonic : ReciprocityTheory.ChartRestriction.G.TB.DetPol
     intro a' b'
     rw [hSx]
     refine ⟨fun j => ?_, fun d => if d = b' ∧ a' = a then 1 else 0, fun k => ?_⟩
-    · simp [ReciprocityTheory.ChartRestriction.G.TB.xForm, map_sum, MvPolynomial.pderiv_mul, MvPolynomial.pderiv_X,
-        Pi.single_apply]
+    · simp [ReciprocityTheory.ChartRestriction.G.TB.xForm, map_sum, MvPolynomial.pderiv_X]
     · by_cases hab : a' = a
-      · simp [ReciprocityTheory.ChartRestriction.G.TB.xForm, map_sum, MvPolynomial.pderiv_mul, MvPolynomial.pderiv_X,
+      · simp [ReciprocityTheory.ChartRestriction.G.TB.xForm, map_sum, MvPolynomial.pderiv_X,
           Pi.single_apply, hab]
-      · simp [ReciprocityTheory.ChartRestriction.G.TB.xForm, map_sum, MvPolynomial.pderiv_mul, MvPolynomial.pderiv_X,
-          Pi.single_apply, hab]
+      · simp [ReciprocityTheory.ChartRestriction.G.TB.xForm, map_sum, MvPolynomial.pderiv_X,
+          hab]
   have hygen : ∀ b' d', ReciprocityTheory.ChartRestriction.G.TB.yForm (p := p) f b' d' ∈ Sy := by
     intro b' d'
     rw [hSy, hAy]
     refine ⟨fun i => ?_, fun d => if d = d' ∧ b' = b then 1 else 0, fun d => ?_, fun k => ?_⟩
-    · simp [ReciprocityTheory.ChartRestriction.G.TB.yForm, map_sum, MvPolynomial.pderiv_mul, MvPolynomial.pderiv_X,
-        Pi.single_apply]
+    · simp [ReciprocityTheory.ChartRestriction.G.TB.yForm, map_sum, MvPolynomial.pderiv_X]
     · dsimp only
       split_ifs
       · exact Ay.one_mem
       · exact Ay.zero_mem
     · by_cases hab : b' = b
-      · simp [ReciprocityTheory.ChartRestriction.G.TB.yForm, map_sum, MvPolynomial.pderiv_mul, MvPolynomial.pderiv_X,
+      · simp [ReciprocityTheory.ChartRestriction.G.TB.yForm, map_sum, MvPolynomial.pderiv_X,
           Pi.single_apply, hab]
-      · simp [ReciprocityTheory.ChartRestriction.G.TB.yForm, map_sum, MvPolynomial.pderiv_mul, MvPolynomial.pderiv_X,
-          Pi.single_apply, hab]
+      · simp [ReciprocityTheory.ChartRestriction.G.TB.yForm, map_sum, MvPolynomial.pderiv_X,
+          hab]
 
   have hP : (∏ i, ReciprocityTheory.ChartRestriction.G.TB.leadMinor (Matrix.of (ReciprocityTheory.ChartRestriction.G.TB.xForm (q := q) e)) i ^ c i)
       ∈ Sx := by

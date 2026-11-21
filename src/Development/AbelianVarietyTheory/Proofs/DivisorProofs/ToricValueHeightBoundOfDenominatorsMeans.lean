@@ -1,12 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.NormSmall
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.VpBounds
-import Formalism.PairingDivisors.PairingDivisorProofs.Height
 import Formalism.LocalToGlobal.TorsionIntegrality.EisensteinTranslationProducts.EllipticOnePole
-import Development.AbelianVarietyTheory.BlockTheory.TorsionBlocks.RootsOfUnityDivisibility
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsMulPowIntegral
-import Formalism.LocalToGlobal.IndefiniteForms.IndefiniteTree.DepthTie
-import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.ReductionLemmaFirst
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AbsNormMinpolyCoeffZeroPowNumberFieldStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MeanInfLogNormEmbeddingEqLogNormDivStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ValuationMinpolyCoeffZeroGeOfPowMulIntegralStatement
@@ -138,14 +133,14 @@ theorem htLe_of_real [StarRing K] (g : Formalism.PairingDivisionLocalBalance.Pl 
   · intro h; apply hw
     have := hb w
     have h0 : 0 ≤ lw w * |((vw w z + g w : ℤ) : ℝ)| := mul_nonneg (lw_nonneg w) (abs_nonneg _)
-    simp only [Function.mem_support, ne_eq, not_not] at h ⊢
+    simp only at h ⊢
     linarith
   · calc ∑ᶠ w, lw w * |((vw w z + g w : ℤ) : ℝ)| ≤ ∑ᶠ w, (lw w * |y' w| + lw w * |y w|) :=
           finsum_le_finsum' (hfin.subset fun w hw => by
             intro h; apply hw
             have := hb w
             have h0 : 0 ≤ lw w * |((vw w z + g w : ℤ) : ℝ)| := mul_nonneg (lw_nonneg w) (abs_nonneg _)
-            simp only [Function.mem_support, ne_eq, not_not] at h ⊢
+            simp only at h ⊢
             linarith) hfin (fun w => hb w)
       _ = ∑ᶠ w, lw w * |y' w| + ∑ᶠ w, lw w * |y w| := finsum_add_distrib h2 h1
       _ ≤ 2 * H := by linarith

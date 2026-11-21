@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.Signature
 import ReciprocityTheory.SemistableReduction.TorsionNonvanishStatement
 import Development.AbelianVarietyTheory.PublishedTheorems.AdelicLattices₂.ExistsFiniteRepresentatives
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
 
 namespace GlobalTheory
 

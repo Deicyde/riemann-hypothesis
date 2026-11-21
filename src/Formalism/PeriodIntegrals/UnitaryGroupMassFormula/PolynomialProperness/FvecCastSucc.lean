@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.PolynomialProperness.TauDefs
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.HermitianFormFlagVector
-import Formalism.FormalDegreeBessel.FormalDegreeRatio.UnitaryWeylNormalHolds
 
 open Matrix Formalism.QuantumDeterminants Formalism.FourierDecayAlt Formalism.FourierDecayAlt.C2
 
@@ -22,7 +22,7 @@ lemma xiV_eq_sum (k r : ℕ) (p : Fin r → ℂ) : xiV k r p = ∑ a, p a • bv
       intro he
       apply hb
       ext
-      simp only [Fin.val_mk]
+      simp only
       have := congrArg Fin.val he
       simp [eI] at this
       omega

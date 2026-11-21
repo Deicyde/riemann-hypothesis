@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.TraceIsometryWeights.SchurTraceProofs.LatData
 import Formalism.ThetaLogCoordinates.TraceIsometryWeights.StatementB
-import Formalism.ThetaLogCoordinates.TraceIsometryWeights.StatementC
+import Formalism.PolynomialDimension.MultinomialDepth.MonoCount
 
 namespace Formalism.InvariantFactorPaths.PW
 

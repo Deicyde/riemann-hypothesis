@@ -1,5 +1,11 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.SamePartIffOfNeZero
+import Mathlib.Data.Int.Star
+import Mathlib.FieldTheory.Minpoly.IsConjRoot
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
 
 open Polynomial Classical GlobalTheory.BadShare
 namespace GlobalTheory.BadShare.TwoRoots

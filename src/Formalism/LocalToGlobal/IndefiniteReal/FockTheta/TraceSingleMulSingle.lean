@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.FockTheta.UnitBracket
 
 noncomputable section
@@ -111,7 +113,7 @@ theorem toMultiset_sub_single (k : ι →₀ ℕ) (i : ι) :
   · subst ha
     rw [Multiset.count_erase_self, Finsupp.count_toMultiset, Finsupp.single_eq_same]
   · rw [Multiset.count_erase_of_ne ha, Finsupp.count_toMultiset]
-    simp [Finsupp.single_apply, Ne.symm ha]
+    simp [Ne.symm ha]
 
 theorem aM_opPow (h : IsCCR Sm aP aM) (hv : v ∈ Sm) (i : ι) (hi : aM i v = 0) (k : ι →₀ ℕ) :
     aM i (opPow aP k v) = ((k i : ℕ) : ℂ) • opPow aP (k - Finsupp.single i 1) v := by
@@ -371,7 +373,7 @@ theorem cart_of {k : ℕ} {B Bi D s G : Matrix (Fin k) (Fin k) ℂ} (h1 : Bi * B
     rw [← Matrix.mul_assoc, hBh2, Matrix.one_mul]
   subst hs hG
   refine ⟨?_, ?_, ?_, ?_, ?_⟩ <;>
-    simp only [Matrix.conjTranspose_mul, hDh, Matrix.mul_assoc, c1, c2, c3, c4, c5, h2, hBh2, hD]
+    simp only [Matrix.conjTranspose_mul, hDh, Matrix.mul_assoc, c1, c3, c4, h2, hBh2]
 
 theorem onb_data {k p : ℕ} {G s B : Matrix (Fin k) (Fin k) ℂ} (h : IsONBasis G s B p) :
     ∃ ε : Fin k → ℝ, (∀ a, (ε a = 1 ∧ a.val < p) ∨ (ε a = -1 ∧ p ≤ a.val)) ∧ B⁻¹ * B = 1 ∧ B * B⁻¹ = 1 ∧
@@ -420,13 +422,12 @@ theorem diag_single_diag {p q r : ℕ} (d : Fin p → ℂ) (d' : Fin q → ℂ) 
     (Y : Matrix (Fin q) (Fin r) ℂ) :
     diagonal d * (Matrix.single a b x * (diagonal d' * Y)) = Matrix.single a b (d a * x * d' b) * Y := by
   ext i j
-  simp [Matrix.mul_apply, Matrix.single_apply, Matrix.diagonal_apply, ite_and, Finset.sum_ite_eq,
-    Finset.sum_ite_eq', Finset.mul_sum, Finset.sum_mul]
+  simp [Matrix.mul_apply, Matrix.single_apply, Matrix.diagonal_apply, ite_and, Finset.sum_ite_eq]
   split_ifs <;> subst_vars <;> first | ring1 | (exfalso; simp_all)
 
 theorem trace_single_mul_single {p q : ℕ} (a : Fin p) (b b' : Fin q) (e : Fin p) (x y : ℂ) :
     (Matrix.single a b x * Matrix.single b' e y).trace = if b = b' ∧ a = e then x * y else 0 := by
-  simp [Matrix.trace, Matrix.mul_apply, Matrix.single_apply, ite_and, Finset.sum_ite_eq, Finset.sum_ite_eq']
+  simp [Matrix.trace, Matrix.mul_apply, Matrix.single_apply, ite_and, Finset.sum_ite_eq]
   split_ifs <;> simp_all
 
 variable {m n : ℕ}

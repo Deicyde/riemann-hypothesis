@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.MixedCoefficientClosed
+import Formalism.LocalToGlobal.CharacterGerms.GeOfPowEqOne
+import Formalism.LocalToGlobal.CharacterGerms.ValNonnegLeadingCoeffOfMemTySet
 
 noncomputable section
 

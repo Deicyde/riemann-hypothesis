@@ -1,7 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.SameOffRefl
-import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.TiePtOne
-import Formalism.SharpRestriction.GrowthBounds.ChartedClasses.ToLEInvApply
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ExistsMidLevIff
+import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.EqOneOfPh
 
 noncomputable section
 

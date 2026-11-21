@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.Statement
 import Formalism.LatticeRigidity.HeightMinimum.SqrtAbsNormLeProd
+import Mathlib.Algebra.Order.Field.GeomSum
 
 namespace Formalism.FourierDecayAlt.P.BoxOne
 

@@ -1,5 +1,4 @@
-import Mathlib
-import ReciprocityTheory.AnalyticForms.PotentialTheory.ContDiffAtOfIsPotential
+import BuildAid.Leniency.Open
 import ReciprocityTheory.L2DbarEstimates.LeviForms.LogNormSq
 import Development.AbelianVarietyTheory.Definitions.Divisors.AnalyticOnNhdFinChartIff
 

@@ -1,8 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.CovolXOfCovol
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.Definitions.Divisors.EigLatLe
-import Development.AbelianVarietyTheory.Definitions.Divisors.QuoIff
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FreeActionFramedPointsOfUnipotentModTwoPrimesStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinalRowWeightGramAlgebraicStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinalRowGramAlgebraicSectionStatement

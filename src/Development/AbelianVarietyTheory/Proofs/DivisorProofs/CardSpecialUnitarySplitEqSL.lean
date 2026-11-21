@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntLocConjIntLocConj
+import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.DefiniteBound
 
 noncomputable section
 
@@ -174,9 +176,9 @@ theorem card_suMat_split : ∀ (E : Type) [Field E] [NumberField E] [IsCMField E
     obtain ⟨y, rfl⟩ := Ideal.Quotient.mk_surjective x
     rw [resConj_mk]
     refine Prod.ext ?_ ?_
-    · simp [e, τ, Ideal.quotientEquiv_mk]
+    · simp [e, τ]
       rfl
-    · simp [e, τ, Ideal.quotientEquiv_mk]
+    · simp [e, τ]
       rw [Ideal.Quotient.factor_mk, Ideal.Quotient.factor_mk, Ideal.quotientMap_mk]
       exact congrArg (Ideal.Quotient.mk P) (hf y)
   exact card_suMat_of_swap _ e he r

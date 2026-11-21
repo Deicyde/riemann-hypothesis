@@ -1,14 +1,14 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.RegularSemisimpleFibres.ResEmbCompat
-import Development.AutomorphicArithmetic.Foundations.LocalLanglands.RecTTransport
 import Development.WeilBound.RepresentationTheoryGL.GaloisPermutationReps.SubquotientEquivalence.ConjTorusSubApply
 import Development.WeilBound.RepresentationTheoryGL.GaloisPermutationReps.SubquotientEquivalence.FiniteCuspidalOfIsCuspidal
 import Development.DiscreteGroups.GlobalIrreducibility.DzIsoKO
 import Development.DiscreteGroups.GlobalIrreducibility.DzTwChar
 import Development.DiscreteGroups.GlobalIrreducibility.DzKSchur
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.DepthZeroSupercuspidalCuspidalModule
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.RegularLocalOfDepthZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CentralCharacterSubquotientProductIrreduciblesStatement
 import Development.WeilBound.CoreStatements.FiniteTypeHarishChandra.GreenCuspLabels.GreenCuspidal
+import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.TransportKeepsProductsCosocles
 
 open NumberField IsDedekindDomain ValuativeRel Polynomial Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.BasicNotions Formalism.L2.Host
 open GlobalTheory.PRep GlobalTheory.SmGL GlobalTheory.SplitWeil GlobalTheory.LocGL GlobalTheory.CuspRep GlobalTheory.WeilDeligne GlobalTheory.LocLanglands GlobalTheory.Shin
@@ -38,7 +38,7 @@ private theorem resE_redK {n : ℕ} (x : KO (w.adicCompletion E) (Fin n)) (κ : 
   ext a b
   have hx : ((x : GL (Fin n) (w.adicCompletion E)) : Matrix _ _ _) a b = i (κ a b : ℚ_[g]) := by
     rw [← hκ]; rfl
-  simp only [GeneralLinearGroup.map_apply, RingHom.mapMatrix_apply, Matrix.map_apply, redK_apply]
+  simp only [GeneralLinearGroup.map_apply, redK_apply]
   have key : ∀ y : 𝒪[w.adicCompletion E], (y : w.adicCompletion E) = i (κ a b : ℚ_[g]) →
       (resE i hi).toRingHom (IsLocalRing.residue _ y) = PadicInt.toZMod (κ a b) := by
     intro y hy
@@ -64,7 +64,7 @@ private theorem finCusp_comp {n : ℕ} (τ : FDRep ℂ (Gn g n)) (hτ : IsCusp �
   rw [GlobalTheory.SmGL.CuspMax.mem_unipRad_iff_entries] at hu ⊢
   intro a b hab
   have h1 := hu a b hab
-  simp only [GeneralLinearGroup.map_apply, RingHom.mapMatrix_apply, Matrix.map_apply, h1]
+  simp only [GeneralLinearGroup.map_apply, h1]
   by_cases hab' : a = b
   · subst hab'; simp
   · simp [Matrix.one_apply_ne hab']

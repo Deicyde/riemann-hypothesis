@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.GL2.GJStandardLUnramified
 import GroundTheory.AutomorphicForms.WhittakerCriterion
-import GroundTheory.AutomorphicForms.SmoothRepContragredient
 
 open MeasureTheory
 

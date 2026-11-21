@@ -1,8 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.FinalTheorems
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.UnramifiedH1CardInvariantsStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.TwistedDualEvalBidualApply
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CardKerMulCardEq
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.Brauer
 
 noncomputable section
 

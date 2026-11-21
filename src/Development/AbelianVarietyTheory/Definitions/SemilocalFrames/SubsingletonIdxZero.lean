@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
+import Std.Tactic.BVDecide.Normalize.BitVec
 
 open Matrix MeasureTheory Finset Formalism.QuantumDeterminants Formalism.MainNotions.S
 open scoped InnerProductSpace ENNReal

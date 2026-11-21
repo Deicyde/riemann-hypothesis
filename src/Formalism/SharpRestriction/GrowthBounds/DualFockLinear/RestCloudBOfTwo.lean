@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.DualFockLinear.RestCloudBOfThree
 import Formalism.LocalToGlobal.GroupLattices.FockModels.Cartan
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.ProductFirstParts

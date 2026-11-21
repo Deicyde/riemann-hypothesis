@@ -1,9 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
-import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.LanglandsSquareIntegrable
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.InducedSectionZFinite
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsConstAlongSingleton
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.ThK.DescB GlobalTheory.ThK.FlagCT GlobalTheory.ThK.FlagPar
@@ -74,7 +72,7 @@ theorem isAutOn_realConj (hCM : IsCMExt F E σ) (ha : a ∈ infPts σ J) (hK : �
     have hk2 : a⁻¹ * k * a ∈ K₂ := (hK _).2 (by simpa [mul_assoc] using hk)
     refine ⟨fun g => ψ (g * (a⁻¹ * k * a)), Submodule.subset_span ⟨⟨_, hk2⟩, rfl⟩, ?_⟩
     funext g
-    simp [LinearMap.funLeft_apply, Function.comp, mul_assoc]
+    simp [LinearMap.funLeft_apply, mul_assoc]
   · have := h.zfin
     refine Submodule.finiteDimensional_of_le
       (S₂ := (Submodule.span ℂ {f | ∃ z, IsCentral σ J z ∧ f = dop z ψ}).map

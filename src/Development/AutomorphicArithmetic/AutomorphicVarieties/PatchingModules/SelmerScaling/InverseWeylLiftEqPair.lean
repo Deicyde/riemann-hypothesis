@@ -1,4 +1,5 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.SelmerScaling.EpC
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.SelmerScaling.OddDiag
 open IsLocalRing Matrix UpperTheory.V.Alg UpperTheory.V.W UpperTheory.V.AlgebraTools UpperTheory.V.Pa
 
@@ -158,7 +159,7 @@ theorem UpperTheory.V.Pa.rho1Tri :
       simp [Matrix.transpose_mul, Matrix.mul_assoc]
     rw [this, ← PP_map]
     ext1 a b
-    by_cases hab : a = b <;> simp [Matrix.one_apply, hab]
+    by_cases hab : a = b <;> simp [hab]
   · rw [ρ1_eq, ← PP_one (A := x.A) R]
     have : x.ρX x.A g = 1 := by simp [hρ, mat, x.ine w g hg]
     rw [this]

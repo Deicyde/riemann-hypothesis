@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Statements.CuspFrameWeights.FamilyGroupSumFactorsWeightAmplitude
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.GenericTermsScalarClassesFormFamilyStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.CorankOneScalarPairSymmetricStatement

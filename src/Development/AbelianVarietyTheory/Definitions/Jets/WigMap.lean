@@ -1,4 +1,4 @@
-import Formalism.HermitianCurvature.StatementQ
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementD
 
 open Matrix Finset

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.UnitaryNorms.CharExGen
 import Formalism.LocalToGlobal.UnitaryNorms.CharUniq
 

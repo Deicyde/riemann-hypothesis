@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.RootOfUnityEightQMemCoeffGaloisSubfield
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsPrimeElementCongruentStatement
 import Formalism.LocalRingCardinality.ConjSqrtMinusD
 import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.SplitK

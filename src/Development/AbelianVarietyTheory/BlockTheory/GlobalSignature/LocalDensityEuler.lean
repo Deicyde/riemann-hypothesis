@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.GeneralLinearActions.GenusMassVolumes
 import Formalism.HermitianLattices.StatementMass
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.RingTheory.DedekindDomain.Different
+import Mathlib.RingTheory.PiTensorProduct
 
 noncomputable section
 

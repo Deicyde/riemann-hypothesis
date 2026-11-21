@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.PAdicHodge.PerfectoidField
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.LeSpanSingletonOfForallMemEq
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Topology.Sheaves.Presheaf
 set_option maxSynthPendingDepth 1
 
 noncomputable section

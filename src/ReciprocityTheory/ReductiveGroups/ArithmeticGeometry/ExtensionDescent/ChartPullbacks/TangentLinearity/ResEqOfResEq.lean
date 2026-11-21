@@ -1,4 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ChartPullbacks.TangentLinearity.PairProp
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.CanonGenIsGen
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ChartPullbacks.TangentLinearity.ConstPullback
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ChartPullbacks.WeightedChartPullback.WchartPullLe
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SemiabelianSchemes.PrecompleteBases.PsbLb
 
 set_option autoImplicit false
 
@@ -192,7 +198,7 @@ lemma zz_sameSum : LB.SameSum (Y := B.left) (K := PEmpty) PEmpty.elim PEmpty.eli
   by_cases hf : Over.Hom.left f = ψ <;> by_cases hu : (toUnit B ≫ η[B]).left = ψ <;>
     by_cases hi : Over.Hom.left (𝟙 B) = ψ <;>
     first
-    | (simp only [hf, hu, hi, eq_self_iff_true, ↓reduceIte]; simp [rosatiε]; done)
+    | (simp only [hf, hu, hi, ↓reduceIte]; simp [rosatiε]; done)
     | simp [hf, hu, hi, rosatiε]
 
 end Z
@@ -222,7 +228,7 @@ lemma eSec_pG : (Over.map (thick R I e)).map η[thickObj R I e G] ≫ (U.gt e).p
   have h3 := Over.w (toUnit ((Over.map (thick R I e)).obj (𝟙_ _)))
   have h4 := Over.w (Functor.LaxMonoidal.ε (Over.pullback (thick R I e)))
   have h5 := pullback.condition (f := (𝟙_ (Over (Spec (CommRingCat.of R)))).hom) (g := thick R I e)
-  simp only [Over.map_obj_hom, Functor.id_obj, Over.pullback_obj_hom] at h3 h4 h5
+  simp only [Over.map_obj_hom, Over.pullback_obj_hom] at h3 h4 h5
   have h5' : pullback.fst (𝟙_ (Over (Spec (CommRingCat.of R)))).hom (thick R I e) =
       pullback.snd (𝟙_ (Over (Spec (CommRingCat.of R)))).hom (thick R I e) ≫ thick R I e :=
     (Category.comp_id _).symm.trans h5

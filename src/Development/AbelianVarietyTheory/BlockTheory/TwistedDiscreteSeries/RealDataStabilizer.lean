@@ -1,7 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.LinksDefs
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.WittSmallGroupEmbeddingMemPointwiseStabilizerIso
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PrincipalLevelMulArchimedeanMemNhds
+import Formalism.LocalToGlobal.IndefiniteReal.DatumVec
 
 noncomputable section
 
@@ -324,7 +327,7 @@ def OneFunctional (D : D7) : Prop :=
         Construct P θ o B π δ
 
 example : StrictInterlace 1 {3 / 2, -1 / 2} {0} :=
-  ⟨![3 / 2, -1 / 2], ![0], by ext x; simp [Fin.exists_fin_two, eq_comm], by ext x; simp [eq_comm],
+  ⟨![3 / 2, -1 / 2], ![0], by ext x; simp [Fin.exists_fin_two, eq_comm], by ext x; simp,
     fun i => by fin_cases i; norm_num⟩
 
 example (θ : InfFam D) {S T : HSp D} (BS : Bas S) (BT : Bas T) (e : D.what₂.Tau → ℚ) (g : GA D S) (h : GA D T) :

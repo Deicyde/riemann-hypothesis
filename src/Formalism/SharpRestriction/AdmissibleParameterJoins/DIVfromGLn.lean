@@ -1,6 +1,5 @@
-import Formalism.SharpRestriction.AdmissibleParameterJoins.DIVfromGLk
-import Formalism.SharpRestriction.AdmissibleParameterJoins.DIVfromGLm
-import Formalism.SharpRestriction.AdmissibleParameterJoins.DIVfromGLf
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.Divisibility.LocalQuadraticParts
 
 noncomputable section
 

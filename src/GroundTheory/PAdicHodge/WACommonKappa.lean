@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.PAdicHodge.WACommon
-import GroundTheory.PAdicHodge.UnramifiedFrob
+import GroundTheory.PAdicHodge.BCrisTensorK
 set_option maxSynthPendingDepth 1
 
 noncomputable section

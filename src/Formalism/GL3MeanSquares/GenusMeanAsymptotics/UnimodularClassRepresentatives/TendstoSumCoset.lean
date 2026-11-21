@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.GenusMeanAsymptotics.UnimodularClassRepresentatives.MemIdealLatticeIff
+import Mathlib.Algebra.Ring.IsFormallyReal
 
 open NumberField Module Filter Topology
 open scoped Classical

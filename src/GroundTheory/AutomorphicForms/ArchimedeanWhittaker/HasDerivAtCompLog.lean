@@ -1,6 +1,8 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.ArchimedeanWhittaker.Density
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.ArchimedeanWhittaker.WronskianEqZeroOfModerate
+import GroundTheory.AutomorphicForms.ArchimedeanWhittaker.Frechet
+import GroundTheory.AutomorphicForms.ArchimedeanWhittaker.Weights
 
 namespace GroundTheory.Automorphic.ArchWhittaker
 

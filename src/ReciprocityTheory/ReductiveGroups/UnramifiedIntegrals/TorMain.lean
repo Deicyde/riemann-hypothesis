@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.TorTwo
 import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.TorLift
 import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.TorContr

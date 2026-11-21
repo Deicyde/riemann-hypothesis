@@ -1,10 +1,4 @@
-import Mathlib
-import Formalism.LocalToGlobal.HilbertRowConditions.RowPin
-import Formalism.LocalToGlobal.KernelLattices.InterlaceAll
-import Formalism.SharpRestriction.GlobalSchurBounds.ProductFirstZerothParts
-import Formalism.SharpRestriction.GlobalSchurBounds.FiniteModelOfAdmissibleTransports
-import Formalism.LocalToGlobal.GlobalTheory.BlockActions.NfAllSmulReB
-import Formalism.LocalToGlobal.GlobalTheory.BlockActions.ExistsOnOfPosDef
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.BlockActions.BrExistsOfRestS
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.UpwardOperatorPreservesRationality
 

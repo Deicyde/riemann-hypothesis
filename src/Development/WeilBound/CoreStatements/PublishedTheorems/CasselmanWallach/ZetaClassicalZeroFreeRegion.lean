@@ -1,4 +1,5 @@
-import Development.WeilBound.CoreStatements.PublishedTheorems.CasselmanWallach.ExistsNormingFunctional
+import BuildAid.Leniency.Open
+import Development.WeilBound.CoreStatements.PublishedTheorems.CasselmanWallach.SmoothSeminormAndSobolevBounds
 
 noncomputable section
 

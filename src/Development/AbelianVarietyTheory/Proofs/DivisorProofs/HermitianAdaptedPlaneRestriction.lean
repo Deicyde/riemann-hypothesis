@@ -1,5 +1,7 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -76,8 +78,7 @@ theorem torus_mul_inv (t : Rˣ) (hXX : X ⬝ᵥ J *ᵥ (fun i => c (X i)) = 0)
     Matrix.mul_smul, vecMulVec_mul_vecMulVec]
   rw [dotProduct_comm (J *ᵥ fun i => c (Y i)) X, dotProduct_comm (J *ᵥ fun i => c (Y i)) Y,
     dotProduct_comm (J *ᵥ fun i => c (X i)) X, dotProduct_comm (J *ᵥ fun i => c (X i)) Y, hXY, hYY, hXX, hyx]
-  simp only [vecMulVec_smul, vecMulVec_neg, zero_smul, vecMulVec_zero, smul_zero, add_zero, zero_add, one_smul, neg_smul, smul_neg,
-    smul_smul]
+  simp only [zero_smul, vecMulVec_zero, smul_zero, add_zero, one_smul]
   match_scalars <;> first | linear_combination ht | linear_combination hct | linear_combination -hct | ring1
 
 theorem torus_unitary (t : Rˣ) (hXX : X ⬝ᵥ J *ᵥ (fun i => c (X i)) = 0)
@@ -102,10 +103,9 @@ theorem torus_unitary (t : Rˣ) (hXX : X ⬝ᵥ J *ᵥ (fun i => c (X i)) = 0)
   have d4 : (Y ᵥ* J) ⬝ᵥ (fun i => c (Y i)) = 0 := by rw [← dotProduct_mulVec]; exact hYY
   rw [hmap, htr]
   simp only [Matrix.add_mul, Matrix.mul_add, Matrix.one_mul, Matrix.mul_one, Matrix.smul_mul, Matrix.mul_smul]
-  simp only [vecMulVec_mul, mul_vecMulVec, vmv_mulVec, vecMul_vecMulVec, d1, d2, d3, d4, smul_vecMulVec, vecMulVec_smul,
-    dotProduct_smul, smul_dotProduct]
-  simp only [vecMulVec_smul, smul_vecMulVec, zero_smul, vecMulVec_zero, smul_zero, add_zero, zero_add, one_smul,
-    smul_smul, map_sub, map_one, hc]
+  simp only [vecMulVec_mul, mul_vecMulVec, vmv_mulVec, d1, d2, d3, d4, smul_vecMulVec]
+  simp only [zero_smul, smul_zero, add_zero, one_smul,
+    map_sub, map_one, hc]
   match_scalars <;> first | linear_combination ht | linear_combination -ht | linear_combination hct |
     linear_combination -hct | ring1
 

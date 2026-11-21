@@ -1,4 +1,39 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
 open scoped InnerProductSpace
 
 namespace GlobalTheory
@@ -68,22 +103,22 @@ theorem weyl_number_operator_commutation
     rw [ha, hc]
     simp only [mul_sub, sub_mul, mul_add, add_mul, neg_mul, mul_neg, smul_mul_assoc, mul_smul_comm]
     rw [hsw z w, hsw z (J w), hsw (J z) w, hsw (J z) (J w)]
-    simp only [hJJ, map_neg, inner_neg_right, inner_neg_left, hJl, neg_neg]
+    simp only [hJJ, map_neg, inner_neg_right, hJl, neg_neg]
     match_scalars <;> (ring_nf; try simp only [Complex.I_sq, I3]; try ring_nf)
   have hcc : ∀ z w, c z * c w = c w * c z := by
     intro z w
     rw [← sub_eq_zero, hc, hc]
-    simp only [mul_sub, sub_mul, mul_add, add_mul, neg_mul, mul_neg, smul_mul_assoc, mul_smul_comm]
+    simp only [mul_sub, sub_mul, smul_mul_assoc, mul_smul_comm]
     rw [hsw z w, hsw z (J w), hsw (J z) w, hsw (J z) (J w)]
-    simp only [hJJ, map_neg, inner_neg_right, inner_neg_left, hJl, neg_neg]
-    match_scalars <;> (ring_nf; try simp only [Complex.I_sq, I3]; try ring_nf)
+    simp only [hJJ, map_neg, inner_neg_right, hJl, neg_neg]
+    match_scalars <;> (ring_nf; try simp only [I3]; try ring_nf)
   have haa : ∀ z w, a z * a w = a w * a z := by
     intro z w
     rw [← sub_eq_zero, ha, ha]
-    simp only [mul_sub, sub_mul, mul_add, add_mul, neg_mul, mul_neg, smul_mul_assoc, mul_smul_comm]
+    simp only [mul_add, add_mul, neg_mul, mul_neg, smul_mul_assoc, mul_smul_comm]
     rw [hsw z w, hsw z (J w), hsw (J z) w, hsw (J z) (J w)]
-    simp only [hJJ, map_neg, inner_neg_right, inner_neg_left, hJl, neg_neg]
-    match_scalars <;> (ring_nf; try simp only [Complex.I_sq, I3]; try ring_nf)
+    simp only [hJJ, map_neg, inner_neg_right, hJl, neg_neg]
+    match_scalars <;> (ring_nf; try simp only [I3]; try ring_nf)
   have hcsum := key c hca hcs
   have hasum := key a haa' has
   refine ⟨?_, ?_, ?_, ?_⟩

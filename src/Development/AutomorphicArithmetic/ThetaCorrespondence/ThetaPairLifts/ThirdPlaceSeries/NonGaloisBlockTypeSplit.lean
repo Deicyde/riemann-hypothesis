@@ -1,10 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SplitLocalOfGreenStatement
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.CohomologicalCsdTempered
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.ThetaLocalInputs
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.SplitLoc
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.LocalSeriesConcreteOfDzSwap
-import Development.AutomorphicArithmetic.Foundations.LocalLanglands.IsRecTOfIsRec
+import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SplitLocalOfGreen
 
 set_option synthInstance.maxHeartbeats 200000
 
@@ -56,7 +53,7 @@ theorem block_type_split_local_alt (hP : _root_.GlobalTheory.NRows.ThetaLocalInp
     obtain ⟨hd, α, hα⟩ := hi
     have hi1 : b.1 i false = 1 := by
       have h1 := b.2.1 i
-      simp [Fintype.sum_bool] at h1
+      simp at h1
       omega
     have hact := GlobalTheory.T.jacquetSubquotient_detCharacter_factors_integral F _ Bool (b.1 i) (fr i) _ (σ i).π _ (S i) hα (hrow i) false
     obtain ⟨w, hw⟩ := typeVec_first (fun j => multiProd (gc j) fun i => (S i j).ρ) (fun j => isSmooth_parInd _ _) hcol hyρ
@@ -102,7 +99,7 @@ theorem block_type_split_local_alt (hP : _root_.GlobalTheory.NRows.ThetaLocalInp
     have hm' : b.1 true false = 0 := by
       have h1 := b.2.1 false
       have h2 := b.2.2 false
-      simp [Fintype.sum_bool] at h1 h2
+      simp at h1 h2
       omega
     obtain ⟨w₁, hw₁⟩ := typeVec_first (fun j => multiProd (gc j) fun i => (S i j).ρ) (fun j => isSmooth_parInd _ _) hcol hyρ
     obtain ⟨φ₁, h1⟩ := GlobalTheory.T.jacquetSubquotient_firstFactor_of_emptySecondBlock F r (b.1 false) (fr false) _ π₁.π (S false) hm (hrow false)

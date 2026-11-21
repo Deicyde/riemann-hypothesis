@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.GeometricLemmaFiltration
-import GroundTheory.AutomorphicForms.GeometricLemma
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.LeviEmbMemNormalizerLower
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 set_option maxSynthPendingDepth 1
 open GlobalTheory.SmGL
 open GroundTheory.Automorphic.Parabolic (levi parabolicInd jacquetRep JacquetModule sqrtModular leviIncl cellLeviSub normInducing unipotentRadical)
@@ -17,8 +17,7 @@ theorem card_blk_fiber {α : Type} {N : ℕ} {m : α → Type} [DecidableEq α] 
       (Finset.univ : Finset (m i)).map
         ⟨fun y => e ⟨i, y⟩, fun a b hab => by simpa using e.injective hab⟩ := by
     ext x
-    simp only [Finset.mem_filter, Finset.mem_univ, true_and, Finset.mem_map,
-      Function.Embedding.coeFn_mk]
+    simp only [Finset.mem_filter, Finset.mem_univ, true_and, Finset.mem_map]
     constructor
     · rintro rfl
       exact ⟨(e.symm x).2, e.apply_symm_apply x⟩

@@ -1,8 +1,11 @@
+import BuildAid.Leniency.Open
 import Formalism.PieriBlockIdeals.StatementLA
 import Formalism.GradedWeylDivisibility.FinalC
 import Formalism.GradedWeylDivisibility.FockSpaceTableaux.LDlatLemmas
-import Formalism.PieriBlockIdeals.PieriColumnMinors.PadicValIntProdElevenMultiples
 import Formalism.PieriBlockIdeals.PieriColumnMinors.JointExactExponentStopHigh
+import Formalism.GradedWeylDivisibility.FinalB
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Algebra.Ring.IsFormallyReal
 
 open MvPolynomial
 
@@ -485,7 +488,7 @@ theorem la_mono_of_weight {m : Fin 2 × Fin 1 →₀ ℕ} {ν : Fin 1 → ℕ}
   simp [Fintype.sum_prod_type, Fin.sum_univ_two, colW] at h0
   refine ⟨?_, h0⟩
   ext ⟨i, j⟩
-  fin_cases i <;> fin_cases j <;> simp [la_mono, Finsupp.single_apply]
+  fin_cases i <;> fin_cases j <;> simp [la_mono]
 
 theorem la_nabla_r2n1 (R : Type) [CommRing R] (ν : Fin 1 → ℕ) :
     dualWeyl R 2 1 ν = la_monLat R (0 : Fin 1) (ν 0) := by
@@ -523,7 +526,7 @@ theorem la_binForm_single (R : Type) [CommRing R] (d : ℕ) (i : Fin (d + 1)) (t
   rw [la_binForm_apply, Finset.sum_eq_single i]
   · simp
   · intro j _ hj
-    simp [Pi.single_apply, hj]
+    simp [hj]
   · intro h
     exact absurd (Finset.mem_univ i) h
 
@@ -555,7 +558,7 @@ theorem la_range_binForm (R : Type) [CommRing R] (d : ℕ) :
     rintro f ⟨p, q, hpq, rfl⟩
     refine ⟨Pi.single ⟨q, by omega⟩ 1, ?_⟩
     rw [la_binForm_single, one_smul]
-    simp only [Fin.val_mk, show d - q = p by omega]
+    simp only [show d - q = p by omega]
 
 theorem nabla_rank_two_one_column : DualWeylBinaryForms := by
   unfold DualWeylBinaryForms
@@ -580,11 +583,11 @@ theorem delta_rank_two_one_column : WeylRankTwoOneColumnImage := by
       by_cases hj : j = ⟨q, by omega⟩
       · subst hj
         simp
-      · simp [Pi.single_apply, hj]
+      · simp [hj]
     refine Submodule.mem_map.mpr ⟨Formalism.CohomologicalDescent.diagBinom R (ν 0) (Pi.single ⟨q, by omega⟩ 1),
       LinearMap.mem_range_self _ _, ?_⟩
     rw [hsingle, la_binForm_single, MvPolynomial.smul_eq_C_mul, map_natCast]
-    simp only [Fin.val_mk, ← hpq, Nat.add_sub_cancel]
+    simp only [← hpq, Nat.add_sub_cancel]
   · rw [Submodule.map_le_iff_le_comap]
     rintro _ ⟨c, rfl⟩
     rw [Submodule.mem_comap, la_binForm_apply, la_binLat]

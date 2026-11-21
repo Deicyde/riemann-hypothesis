@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.IsScaleStable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.CommonZeroEvaluation.GaussianSphereMeanIntegral
+import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.GaussianMatrixMeasurePosFinite
 
 set_option maxSynthPendingDepth 1
 open GroundTheory.Heights₂.Heights MeasureTheory MvPolynomial Matrix GlobalTheory.CompanionTheory.Ar.Short.Crofton

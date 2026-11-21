@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsRootSelectionUnitaryRankOne
 open Matrix NumberField GlobalTheory.LKTrip GlobalTheory.LKRes GlobalTheory.LKMid GlobalTheory.LKCount
 open scoped TensorProduct Classical
@@ -25,7 +26,7 @@ theorem rel_equivalence : ∀ (p : ℕ) [Fact p.Prime] (G : HTGroup p), Equivale
         rw [← sh_mul', Units.inv_mul, sh_one']
       rw [hβ]
       simp only [← Algebra.smul_def, mul_smul_comm, smul_mul_assoc, smul_smul, mul_assoc, e, mul_one,
-        inv_mul_cancel₀ hs.ne', mul_inv_cancel₀ hs.ne', one_smul, Units.inv_mul_cancel_left]
+        mul_inv_cancel₀ hs.ne', one_smul, Units.inv_mul_cancel_left]
     · rw [hγ]; group
   · obtain ⟨y, s, hs, hβ, hγ⟩ := h
     obtain ⟨y', s', hs', hβ', hγ'⟩ := h'

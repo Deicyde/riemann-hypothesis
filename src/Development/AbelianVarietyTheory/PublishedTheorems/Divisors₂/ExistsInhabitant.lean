@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.LeviCentreFiniteUnitary
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsNotIsConstTerm
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsValEq
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsLevi

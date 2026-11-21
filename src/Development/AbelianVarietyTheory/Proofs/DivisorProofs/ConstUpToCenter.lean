@@ -1,11 +1,10 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.KerDatTuple
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.NormalFam
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMapOfOfExtends
 import Development.AbelianVarietyTheory.Definitions.Divisors.GenReads
-import Formalism.LocalToGlobal.IndefiniteReal.RhoGeo
-import Formalism.LocalToGlobal.IndefiniteReal.FWExist
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsDeltaDelAtOwnAt
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.OneMapOfOfPtIdent
+import Development.AbelianVarietyTheory.Definitions.Divisors.MarkAd
+import Formalism.LocalToGlobal.ProjectiveLattices.FullExists
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.DIV.Cons Formalism.L2.Pj Formalism.L2.Indef Formalism.L2.Indef.Tree
 open Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.L2.Theta Formalism.L2.DIV Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.FWT Formalism.IndefR.Datum Formalism.IndefR.Lev
 open GlobalTheory.FormTies GlobalTheory.OnTies GlobalTheory.TraceClassRank
@@ -79,7 +78,7 @@ theorem GlobalTheory.OnCmp.const_upTo_center : ∀ (D : D7) (G : Type) [Group G]
     have e := span q _ hF
     rw [geo_of_isBC (O i) hP.act.1 _ 1 (GlobalTheory.FieldBCModel.rulBC_mem_sec _ hfs) hs1 hBC q,
       geo_of_isBC (O i) hP.act.1 _ z (GlobalTheory.FieldBCModel.rulBC_mem_sec _ hfs) hs1 hBC q] at e
-    simp only [Fin.sum_univ_one, Matrix.cons_val_zero, map_one, OneMemClass.coe_one, one_mul] at e
+    simp only [Fin.sum_univ_one, Matrix.cons_val_zero, OneMemClass.coe_one, one_mul] at e
     have h1 : actLev T.J.toCore.Q.c (O i).lev2 1 f = f :=
       actL_one _ _ _ hP.act.1.total hP.act.1.func hP.act.1.one hfs.1
     rw [h1] at e

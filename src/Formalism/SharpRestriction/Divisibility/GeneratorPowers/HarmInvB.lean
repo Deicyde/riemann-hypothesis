@@ -1,7 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.CIndFrFix
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ExpOfPf
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.HarmInvA
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.WickVanishing.CalcAdd
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.KillAdd
 
 set_option autoImplicit false
@@ -212,7 +212,7 @@ theorem compL_diagL {O : Type} [CommRing O] [StarRing O] (B : FB S d O) (w0 : O)
   simp only [MvPowerSeries.coe_substAlgHom]
   refine Finset.sum_congr rfl (fun i _ => Finset.sum_congr rfl (fun l _ => ?_))
   rw [subst_lg B.G (fun p : Fin 2 × Fin d => (![pt S d 0, comp1 (B.A.act w0) (pt S d 0)] : Fin 2 → Pt S 1 d) p.1 p.2) hV0 0 i, subst_lg B.G (fun p : Fin 2 × Fin d => (![pt S d 0, comp1 (B.A.act w0) (pt S d 0)] : Fin 2 → Pt S 1 d) p.1 p.2) hV0 1 l]
-  simp only [Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons, germCompOne_identityPoint_left]
+  simp only [Matrix.cons_val_zero, Matrix.cons_val_one, germCompOne_identityPoint_left]
   have hP0 : ∀ p : Fin 1 × Fin d, MvPowerSeries.constantCoeff (pt S (n := 1) d 0 p.2) = 0 := by
     intro p
     simp [ReciprocityTheory.ChartRestriction.G.Geo.Tor.Germ.pt]

@@ -1,8 +1,8 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.ArithmeticCylinders
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.LabelDatum
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.MemRootsBarXSubC
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsCharLab
+import Mathlib.Data.Finsupp.Pointwise
 
 noncomputable section
 
@@ -142,7 +142,7 @@ theorem tame_lift (χ : (ZMod g)ˣ →* ℂˣ) (x : Gn g n) (v : ℂ) :
 
 theorem det_one' {R : Type} [CommRing R] (y : GL (Fin 1) R) :
     ((Matrix.GeneralLinearGroup.det y : Rˣ) : R) = (y : Matrix (Fin 1) (Fin 1) R) 0 0 := by
-  simp [Matrix.det_fin_one]
+  simp
 
 theorem det_two' {R : Type} [CommRing R] (y : GL (Fin 2) R) (h : (y : Matrix (Fin 2) (Fin 2) R) 1 0 = 0) :
     ((Matrix.GeneralLinearGroup.det y : Rˣ) : R) =
@@ -271,7 +271,7 @@ theorem theta_eq (L : LabelDatum g) {χ : (ZMod g)ˣ →* ℂˣ} {c : ZMod g} (h
     {z : Formalism.CyclotomicNorms.Fbar g} (hz : z ∈ Formalism.CyclotomicNorms.rootsBar (y : Mt g 1).charpoly) :
     (-1) ^ (1 - 1) * ∑ i ∈ Finset.range 1, thetaOf L 1 (algebraMap (ZMod g) _ c) (z ^ (g ^ i)) = dch χ y := by
   have hcp : (y : Mt g 1).charpoly = X - C ((y : Mt g 1) 0 0) := by
-    simp [Matrix.charpoly, Matrix.det_fin_one]
+    simp [Matrix.charpoly]
   rw [hcp] at hz
   have hz1 := GLq.Model.mem_rootsBar_X_sub_C hz
   obtain ⟨u, hu, ho⟩ := exists_gen L
@@ -293,7 +293,7 @@ theorem isCuspOf_iff (L : LabelDatum g) {χ : (ZMod g)ˣ →* ℂˣ} {c : ZMod g
   · rintro ⟨-, -, h⟩
     funext y
     have hcp : (y : Mt g 1).charpoly = X - C ((y : Mt g 1) 0 0) := by
-      simp [Matrix.charpoly, Matrix.det_fin_one]
+      simp [Matrix.charpoly]
     have hz : algebraMap (ZMod g) (Formalism.CyclotomicNorms.Fbar g) ((y : Mt g 1) 0 0) ∈ Formalism.CyclotomicNorms.rootsBar (y : Mt g 1).charpoly := by
       rw [hcp]; simp [Formalism.CyclotomicNorms.rootsBar]
     rw [h (algebraMap (ZMod g) _ c) (by simp [Formalism.CyclotomicNorms.rootsBar]) y (hcp ▸ irreducible_X_sub_C _) _ hz,
@@ -395,11 +395,11 @@ theorem mapsToInd_of_too_large (μ μ' ν₁ ν₂ : ℚ_[g]ˣ →* ℂˣ) : Map
   have h := h3 0 0
   have := y.det_ne_zero
   simp [Formalism.MainNotions.ArithmeticCylinders.entN] at h
-  simp [Matrix.det_fin_one, h] at this
+  simp [h] at this
 
 theorem actTop_tame (χ : (ZMod g)ˣ →* ℂˣ) (x : Gn g 1) (v : ℂ) :
     actTop (detRep 2 (tame χ)) 1 1 (MonoidAlgebra.single x 1) v = dch χ x * v := by
-  simp [actTop, LinearMap.sum_apply, tame_lift, det_blk, Finsupp.single_apply, dch]
+  simp [actTop, tame_lift, det_blk, Finsupp.single_apply, dch]
 
 theorem hasLab_inhabited (χ : (ZMod g)ˣ →* ℂˣ) :
     ∃ f, HasLab (GLq.Model.datum g) (detRep 1 (tame χ)) f := by

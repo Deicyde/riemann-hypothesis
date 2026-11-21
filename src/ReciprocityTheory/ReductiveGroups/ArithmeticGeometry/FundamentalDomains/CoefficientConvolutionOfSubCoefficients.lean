@@ -1,5 +1,8 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.FlowMeanContinuity
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.L2DbarEstimates.PlurisubharmonicCharts.FourMul
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.RealEmbeddingCharacters
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.TransvectionPeriodicity
 
 namespace ReciprocityTheory.ChartRestriction.G.FD.PeriodLatticeMembership
 
@@ -298,7 +301,7 @@ private lemma gramflow_lemma_29 {ξ : Fin r → E} (hξ : herm X.Gm ξ ξ = 0) (
   rw [colmul_lemma_27, colmul_lemma_27, flowmv_lemma_28, flowmv_lemma_28]
   simp only [hsubl_lemma_21, hsubr_lemma_23, hsmull_lemma_22, hsmulr_lemma_24, hu]
   rw [← hconj_lemma_25 τ (col M b) (Data.emb τ.1 ξ)]
-  simp only [map_mul, Complex.conj_I, Complex.conj_ofReal, Complex.conj_conj]
+  simp only [map_mul, Complex.conj_I, Complex.conj_ofReal]
   have hs : (starRingEnd ℂ) s = s - 2 * I * (s.im : ℂ) := by
     apply Complex.ext <;> simp <;> ring
   rw [hs]

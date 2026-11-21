@@ -1,7 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.T2SpaceFiniteAdeleRing
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsCompactIntegralGLFiniteAdeles
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SplitPlaceUnitaryLocalPointsEquivGL
 import Development.AbelianVarietyTheory.Definitions.Foundations.GLintEqKOAndPrincEqKOne
+import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsFinsetOfEventually
 open NumberField IsDedekindDomain Matrix Polynomial Filter GlobalTheory.CuspRep GlobalTheory.PRep Formalism.UG Formalism.BasicNotions GlobalTheory.UnitaryBC Formalism.L2.Host GlobalTheory.BCT
 open scoped Classical TensorProduct
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
@@ -101,7 +104,7 @@ theorem loc_prjG (T : Finset (Pl E)) (g : GL (Fin n) (FiniteAdeleRing (𝓞 E) E
 
 theorem prjG_prjG (T : Finset (Pl E)) (g : GL (Fin n) (FiniteAdeleRing (𝓞 E) E)) :
     prjG E n T (prjG E n T g) = prjG E n T g :=
-  gl_ext fun w => by rw [loc_prjG, loc_prjG]; split_ifs with h <;> simp [loc_prjG, h]
+  gl_ext fun w => by rw [loc_prjG, loc_prjG]; split_ifs with h <;> simp
 
 theorem loc_eq_one_of_mem_Gam {u w : Pl E} {y : GL (Fin n) (FiniteAdeleRing (𝓞 E) E)} (hy : y ∈ Gam E n u)
     (hw : w ∉ orb E u) : Matrix.GeneralLinearGroup.map (pLoc E w) y = 1 := by

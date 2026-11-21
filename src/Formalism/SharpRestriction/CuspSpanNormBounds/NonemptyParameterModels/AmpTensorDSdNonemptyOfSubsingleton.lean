@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.SBridge
-import Formalism.FormalDegreeBessel.FinalG
 import Formalism.SharpRestriction.CuspSpanNormBounds.OnePlaceEstimates
+import Mathlib.CategoryTheory.Countable
+import Mathlib.Topology.Separation.CompletelyRegular
 
 open MeasureTheory Matrix Finset
 open scoped InnerProductSpace ENNReal
@@ -139,7 +141,7 @@ theorem amp_z_exists (k r : ℕ) (T : ℝ) (hT : 0 ≤ T) : ∃ z : Fin (2 * r +
     have hs : Real.sqrt T * Real.sqrt T = T := Real.mul_self_sqrt hT
     have e : star ((Real.sqrt T : ℝ) : ℂ) * (-1 * ((Real.sqrt T : ℝ) : ℂ)) =
         ((-(Real.sqrt T * Real.sqrt T) : ℝ) : ℂ) := by
-      simp [Complex.ext_iff]
+      simp
     unfold Tz
     rw [hsum, hH, e, Complex.ofReal_re, hs, neg_neg]
 

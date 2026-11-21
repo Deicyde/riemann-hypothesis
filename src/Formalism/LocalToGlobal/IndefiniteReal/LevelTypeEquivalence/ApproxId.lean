@@ -1,4 +1,16 @@
-import Formalism.LocalToGlobal.IndefiniteReal.GvPairOfOrbitDerivCont
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Formalism.PeriodIntegrals.UpqRep
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Analysis.SpecialFunctions.SmoothTransition
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.UniformSpace.Matrix
+import Mathlib.Topology.UniformSpace.Uniformizable
 
 noncomputable section
 

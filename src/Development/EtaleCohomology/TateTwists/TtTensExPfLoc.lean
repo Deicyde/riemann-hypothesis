@@ -1,4 +1,6 @@
-import Development.EtaleCohomology.TateTwists.TtTensExPf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.SecClass
 
 open CategoryTheory Limits AlgebraicGeometry Opposite GlobalTheory.EtC
 

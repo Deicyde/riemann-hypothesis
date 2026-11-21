@@ -1,4 +1,4 @@
-import Formalism.HermitianCurvature.LowerBlockNormalisedBoundFromComponents
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.SecondPolynomialClauses
 
 open Finset

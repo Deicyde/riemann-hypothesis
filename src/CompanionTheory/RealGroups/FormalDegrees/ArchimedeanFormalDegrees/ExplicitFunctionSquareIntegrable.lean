@@ -1,7 +1,8 @@
+import BuildAid.Leniency.Open
 import CompanionTheory.RealGroups.FormalDegrees.ArchimedeanFormalDegrees.NormIndOfSteps
-import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.NormInductionOfEstimates
 import CompanionTheory.RealGroups.FormalDegrees.ArchimedeanFormalDegrees.FormalDegreeFormula.CoefPow
+import CompanionTheory.RealGroups.FormalDegrees.ArchimedeanFormalDegrees.SignDefiniteness.ExplicitFunctionSquareIntegrable
 
 namespace CompanionTheory.RgFd
 

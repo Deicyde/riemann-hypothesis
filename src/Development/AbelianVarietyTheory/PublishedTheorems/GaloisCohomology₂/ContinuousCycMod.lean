@@ -1,5 +1,7 @@
-import Mathlib
-import ReciprocityTheory.Hypotheses.GalCoh
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Topology.Instances.ZMod
+import ReciprocityTheory.Hypotheses.GalCohDefs
 
 noncomputable section
 

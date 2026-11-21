@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.UnipTool
-import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.SCompact
+import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.HidaSetting
+import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Bridge
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.TotallySplit
 
 noncomputable section
 
@@ -140,8 +144,8 @@ theorem pW_mem (x : Fin X.B.I.n → X.B.I.E) : pW X x ∈ Wsub X := by
   show ∀ a, hE X (X.eR a) (pW X x) = 0 ∧ hE X (X.fR a) (pW X x) = 0
   intro a
   constructor
-  · simp [pW, hE_sub_right, hE_sum_right, hE_smul_right, hE_ee, hE_ef, mul_boole, Finset.sum_ite_eq]
-  · simp [pW, hE_sub_right, hE_sum_right, hE_smul_right, hE_ff, hE_fe, mul_boole, Finset.sum_ite_eq]
+  · simp [pW, hE_sub_right, hE_sum_right, hE_smul_right, hE_ee, hE_ef, Finset.sum_ite_eq]
+  · simp [pW, hE_sub_right, hE_sum_right, hE_smul_right, hE_ff, hE_fe, Finset.sum_ite_eq]
 
 theorem pW_add (x y : Fin X.B.I.n → X.B.I.E) : pW X (x + y) = pW X x + pW X y := by
   simp only [pW, hE_add_right, add_smul, Finset.sum_add_distrib]
@@ -280,8 +284,8 @@ theorem JB_e_row (a : Fin D.R.rS) (k : Kap X) :
   · simp only [JB, Matrix.of_apply, bv, Sum.elim_inl, Sum.elim_inr, hE_ef, Sum.inr.injEq]
     by_cases h : a = b
     · subst h
-      simp [hE_ef]
-    · simp [hE_ef, h, Ne.symm h]
+      simp
+    · simp [h, Ne.symm h]
 
 def JB' : Matrix (Kap X) (Kap X) X.B.I.E := Bm' X * (X.B.I.J)⁻¹ * (Bm' X)ᴴ
 

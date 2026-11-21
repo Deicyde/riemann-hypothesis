@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.DiagonalSupport.FactorLeProductSeven
+import Formalism.SharpRestriction.GrowthBounds.DiagonalSupport.DigAbs
 
 noncomputable section
 

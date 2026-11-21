@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.ShapeRowIsomorphisms.Statement
-import Formalism.WachLatticeTwists.CharacterSplitJumps.CharacterJumpProofs.InChiSplit
 
 variable [hT2Core : Fact ReciprocityTheory.ChartRestriction.T2.Core]
 

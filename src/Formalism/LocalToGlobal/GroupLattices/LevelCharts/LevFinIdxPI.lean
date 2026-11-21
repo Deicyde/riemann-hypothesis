@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.LevelProdIdx
 import Formalism.LocalToGlobal.GroupLattices.LevelCharts.FiniteClassSetOfFiniteIndex
-import Formalism.PeriodIntegrals.LevelProdIdx
 
 open NumberField IsDedekindDomain Matrix Formalism.UG
 open scoped TensorProduct

@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ValRingLocRing
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SqRootIdentity
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsCuspCoefficient
@@ -8,12 +8,8 @@ import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CoefMapSmulMap
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.PureTensorOTransSumLin
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsRingEquivComplexCompEq
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsDeltaDatumHigherLevel
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsIsUnf
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.CmModuliConsequenceOfAbelianSchemeLaws
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.HasseNormTheoremQuadraticExtension
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.AbelianSchemeLawsUnconditional
-import Formalism.LocalToGlobal.ProjectiveLattices.CuspFormsFiniteDimensionalOf
-import Formalism.LocalToGlobal.ProjectiveLattices.FreeBridge
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsAdelicLiftEqGeometricClassSumAllTuples
+import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ThetaKernelTranslateSumEqClassicalShortSeriesStatement
 open NumberField Matrix Complex IsDedekindDomain
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.FD GlobalTheory GlobalTheory.ThFr GlobalTheory.Dict GlobalTheory.AdTh GlobalTheory.ClsVal
 open ReciprocityTheory.ChartRestriction.G.Geo.Tor hiding Level Host
@@ -87,7 +83,7 @@ theorem thetaSum_value_emb : ∀ (D : D7) (H : Geo.Tor.Host D.host.E) (Dw : Datu
       Dc.sympl hx hsd Dw.p V.rank Dc.hr Dc.eL hrpq hVP.1.even Dc.dir_eq d.nab₂ hnab' ϑ v κ' (hrd₂ ϑ hϑ) hv hκ mk₂ hm₂ hB₂
       Λ.La hVset N hN Y hY a _ hP2 (fun q => d.eF (w t q)) 1 (vt t) (hvt t)
     rw [e1, MvPolynomial.map_map, hcomp]
-    simp only [halg, map_mul, map_inv₀, map_natCast, map_one, inv_one, one_mul]
+    simp only [halg, map_mul, map_inv₀, map_natCast, inv_one, one_mul]
     rfl
 
   obtain ⟨vr, hvr⟩ := GlobalTheory.PtId.exists_isVarOf V W hr _ (hMod (dict g).1) Dw.p Dc.hr

@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AwayHomCompAlgebraMap
+import Mathlib.RingTheory.RegularLocalRing.Defs
 open GlobalTheory.AffineCurveNbhd
 
 noncomputable section

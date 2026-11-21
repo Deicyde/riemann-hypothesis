@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.FgBasic
 import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.CoeffOneSubstOfConstantCoeffEqZero
 import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.SemilinNormPowSubPow
+import Formalism.TorsionNormIteration.LubinTateExample
 
 noncomputable section
 

@@ -1,9 +1,8 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsCMFrame
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LieModelEigenvectorsActionStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.CmImageUniqueLatticeStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LieModelWithCmActionStatement
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.HolomorphicFamilies.ExpRowsPf
 
 noncomputable section
 

@@ -1,9 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.JointsF
 import Formalism.SharpRestriction.GlobalSchurBounds.QuadraticLogDerivCongr
-import Formalism.SharpRestriction.GlobalSchurBounds.Chosen
 import Formalism.LocalRingCardinality.Lemmas
-import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
-import Formalism.SharpRestriction.ParamsHeightRankConstant
 
 noncomputable section
 

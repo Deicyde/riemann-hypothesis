@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.DivisorSupportCondition
 
 open CategoryTheory Limits AlgebraicGeometry Opposite GlobalTheory.EtC

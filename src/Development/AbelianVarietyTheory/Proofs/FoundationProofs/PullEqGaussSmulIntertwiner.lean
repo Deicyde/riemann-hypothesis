@@ -1,10 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.NormSumPairRankZeroOfCurveCoordNorm
-import Formalism.PairingDivisors.StatementH
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.InducedTypeThetaGenusOnePermutes
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ThetaTranslationIntertwinerUnitary
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ThetaSpaceSelfDualPairAtMostLine
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.HeisenbergReproducingKernelSumSpec
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IntegralHeisKerSumDiag
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IntegralKerSumGraphEq
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ThetaTransport
@@ -55,7 +50,7 @@ theorem const_eq (μ : Measure V) [μ.IsAddHaarMeasure] (H : Sesq V) (hH : IsPos
     rw [hB1, hC]
     have h1 := hH.1 (a y) y
     have h2 : (H y y).im = 0 := Complex.conj_eq_iff_im.1 (hH.1 y y).symm
-    simp only [map_smul, map_add, map_sub, LinearMap.smul_apply, LinearMap.add_apply, LinearMap.sub_apply, ha, h1,
+    simp only [map_smul, map_add, map_sub, LinearMap.smul_apply, LinearMap.add_apply, ha, h1,
       smul_eq_mul]
     apply Complex.ext <;> simp [h2] <;> ring
   let Λ : AddSubgroup V := (subLa m A).comap (1 - (a : V →ₗ[ℂ] V)).toAddMonoidHom

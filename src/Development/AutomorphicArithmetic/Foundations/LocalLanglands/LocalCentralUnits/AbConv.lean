@@ -1,9 +1,9 @@
-import Development.AutomorphicArithmetic.Foundations.LocalLanglands.RecTTransport
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.LocalLanglands.Multi
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LocalLanglandsExtensionPreservesCuspidal
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LocalLanglandsExtensionCentralCharacter
-import Development.AutomorphicArithmetic.Foundations.LocalLanglands.LocalCentralUnits.GoodSeg
-import Development.AutomorphicArithmetic.Foundations.LocalLanglands.LocalCentralUnits.WDBasic
+import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LanglandsClassificationSupercuspidalSupportMulti
+import Development.AutomorphicArithmetic.Foundations.LocalLanglands.IsRecTOfIsRec
 
 open NumberField IsDedekindDomain ValuativeRel Matrix Polynomial Formalism.ConjugateSelfDual ReciprocityTheory.Gal GlobalTheory.WeilDeligne GlobalTheory.LocGL GlobalTheory.LocLanglands GlobalTheory.GLq
 open GlobalTheory.PRep GlobalTheory.SmGL GlobalTheory.SplitWeil
@@ -143,5 +143,5 @@ theorem UpperTheory.Zero.LLC.abConv :
     rw [← WD.charPol_mk, hb, e]
     refine (hd _).trans ?_
     rw [hξ]
-    simp [h1]⟩
+    simp⟩
   exact hdim.symm.trans hn

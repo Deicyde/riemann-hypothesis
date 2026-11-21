@@ -1,12 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsTestRep
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.JacquetRallisUnitMatchStepOfOneLeNormStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.JacquetRallisMatchOfDenseSeparableStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.PartialFourierPreservesTestFixesUnitStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.Sl2GeneratedWeylUnipotentStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsWeilRepSL2GlBorderedBlockStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsWeilRepSL2HermitianBlockStatement
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.UnramifiedStandardAddCharConductorPropertiesStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.JacquetRallisMatchingAddStatement
 
 open GlobalTheory.JR Matrix MeasureTheory Filter Topology
@@ -91,12 +90,12 @@ theorem isTest_sub {X : Type} [TopologicalSpace X] {f g : X → ℂ} (hf : IsTes
 theorem wS_inv : (wS F)⁻¹ = wS F * wS F * wS F := by
   refine inv_eq_of_mul_eq_one_right (Subtype.ext ?_)
   simp only [Matrix.SpecialLinearGroup.coe_mul, Matrix.SpecialLinearGroup.coe_one]
-  simp [wS, Matrix.mul_fin_two, Matrix.one_fin_two]
+  simp [wS, Matrix.one_fin_two]
 
 theorem nS_inv (t : F) : (nS t)⁻¹ = nS (-t) := by
   refine inv_eq_of_mul_eq_one_right (Subtype.ext ?_)
   show (!![1, t; 0, 1] : Matrix (Fin 2) (Fin 2) F) * !![1, -t; 0, 1] = 1
-  simp [Matrix.mul_fin_two, Matrix.one_fin_two]
+  simp [Matrix.one_fin_two]
 
 variable (E) in
 

@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CellOpenLe
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFrameIn
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagComponentStructureMapSpecStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagToroidalEigenframeOnAffineOpenStatement
 

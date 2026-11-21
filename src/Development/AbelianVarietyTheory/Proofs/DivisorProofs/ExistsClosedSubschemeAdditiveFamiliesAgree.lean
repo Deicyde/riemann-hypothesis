@@ -1,10 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.SameIdIff
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsCrystalPairing
 import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.ExistsClosedSubschemeLocallyTrivialProductLineBu
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.TrivOnOfSubsingleton
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsProjOverOfIsProjOverBase
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.TrivPullCompIff
 import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.SecLinOfSecScal
 
 open CategoryTheory CategoryTheory.Limits AlgebraicGeometry MonoidalCategory CartesianMonoidalCategory MonObj
@@ -157,11 +155,11 @@ theorem same_iff_locTriv (hG : GlobalFnsSt) (hA : IsAbelianScheme A) {T : Over S
         refine ⟨U, hU, ?_⟩
         unfold CubeGen.TrivAt
         rw [cl]
-        simp only [Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons]
+        simp only [Matrix.cons_val_zero, Matrix.cons_val_one]
         rw [sec, sub_zero, pull_comp]
         exact (key _).1 ht
     have := (cl _).1 T₀
-    simp only [Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons] at this
+    simp only [Matrix.cons_val_zero, Matrix.cons_val_one] at this
     have s₁ := sec (𝟙 _)
     rw [Category.id_comp] at s₁
     rwa [s₁, sub_zero] at this

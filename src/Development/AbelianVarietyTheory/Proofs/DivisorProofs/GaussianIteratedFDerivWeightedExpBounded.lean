@@ -1,6 +1,13 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PowForm
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolyMulGaussianBounded
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.Analysis.Calculus.ContDiff.Bounds
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
 open MeasureTheory Filter Topology
 
 noncomputable section
@@ -66,7 +73,7 @@ theorem weighted_bound : ∀ (E : Type) [NormedAddCommGroup E] [InnerProductSpac
   intro E _ _ c α hc hα k m
   set B : E →L[ℝ] E →L[ℝ] ℝ := (-c) • innerSL ℝ with hBdef
   have hBy : ∀ y : E, B y y = -(c * ‖y‖ ^ 2) := fun y => by
-    simp [hBdef, real_inner_self_eq_norm_sq]
+    simp [hBdef]
     left
     first | exact real_inner_self_eq_norm_sq y | simp [innerSL_apply, real_inner_self_eq_norm_sq] | rfl
   have hfun : (fun y : E => Complex.exp (-((c * ‖y‖ ^ 2 : ℝ) : ℂ))) =

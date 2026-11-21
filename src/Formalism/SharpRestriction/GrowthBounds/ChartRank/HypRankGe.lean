@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.ChartRank.HypCard
 import Formalism.SharpRestriction.GrowthBounds.ChartedClasses.CompInjLocJ
 

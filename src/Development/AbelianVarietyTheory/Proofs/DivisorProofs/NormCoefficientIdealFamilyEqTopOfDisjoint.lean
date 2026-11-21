@@ -1,7 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.ShimuraVarieties.IsOpenOfMemIrreducibleComponentsOfFinite
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormIdeal
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FamIdeal
+import Mathlib.AlgebraicGeometry.Morphisms.Finite
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 open AlgebraicGeometry CategoryTheory Limits
 
 namespace GlobalTheory.NormSheafDescent
@@ -17,7 +20,7 @@ theorem normIdeal_top (A K L B : Type) [CommRing A] [Field K] [Field L] [Algebra
   have hform : GlobalTheory.NormSheaf.normForm K L (fun _ : Fin 1 => algebraMap B L 1) =
       X 0 ^ Module.finrank K L := by
     unfold GlobalTheory.NormSheaf.normForm
-    simp [Fin.sum_univ_one, map_one, Matrix.det_smul]
+    simp [map_one]
   rw [hform, coeff_X_pow]
   simp
 

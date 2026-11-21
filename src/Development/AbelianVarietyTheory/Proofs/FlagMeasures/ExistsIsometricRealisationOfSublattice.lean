@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.HarderNarasimhan.ShiftInvariance
-import Formalism.RealPlaceAnalysis.Complexify
 
 open Formalism.HN Formalism.HermitianLatticesTheory Matrix NumberField Finset
 open scoped ComplexOrder MatrixOrder

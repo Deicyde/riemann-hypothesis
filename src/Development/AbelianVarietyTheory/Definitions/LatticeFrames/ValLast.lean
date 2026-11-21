@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsBiSmooth
+import Development.AbelianVarietyTheory.Definitions.LatticeFrames.FiniteDimensionalMram
 
 noncomputable section
 

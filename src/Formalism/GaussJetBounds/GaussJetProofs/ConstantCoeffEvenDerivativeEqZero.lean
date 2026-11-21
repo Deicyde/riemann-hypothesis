@@ -1,4 +1,10 @@
-import Formalism.GaussJetBounds.GaussJetProofs.LogarithmWeightComparison
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Formalism.GaussJetBounds.GenLogInverse
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 open scoped BigOperators

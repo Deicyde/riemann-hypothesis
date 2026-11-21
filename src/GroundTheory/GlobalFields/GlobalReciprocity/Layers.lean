@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.GlobalReciprocity.InfKerDegreeLeOfLeSupZhatField
+import GroundTheory.GlobalFields.NormResidueSymbol.Cyclotomic
 
 namespace GroundTheory.Global
 

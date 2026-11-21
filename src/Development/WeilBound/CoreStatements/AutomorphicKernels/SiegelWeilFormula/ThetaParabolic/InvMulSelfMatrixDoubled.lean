@@ -1,6 +1,6 @@
-import Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.AuxiliaryPrimeFunction
-import Development.WeilBound.ThetaLifts.LatticeBasics.SiegelWeilAnisoOf
-import Development.WeilBound.ThetaLifts.LatticeBasics.SecLaw
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.ThetaLifts.LatticeBasics.HypothesesE
 
 noncomputable section
 

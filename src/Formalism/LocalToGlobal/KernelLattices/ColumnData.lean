@@ -1,9 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.KernelLattices.ThDistC
-import Formalism.LocalToGlobal.KernelLattices.BaseEx
 import Formalism.LocalToGlobal.Columns.WordFin
 import Formalism.LocalToGlobal.GlobalTheory.JetPositivity.DeltaPowTwelveEqDiscr
 import Formalism.LocalToGlobal.GlobalTheory.GL3.Statement
+import Formalism.PeriodIntegrals.KerIso
 
 noncomputable section
 

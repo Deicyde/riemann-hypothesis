@@ -1,7 +1,9 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.CxPass
-import Formalism.LocalToGlobal.Divisibility.GoodPartHermitianSpec
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsGoodSet
+import Formalism.LocalToGlobal.IndefiniteReal.IndefiniteEpsilonOperator
+import Formalism.LocalToGlobal.IndefiniteReal.TransferStatement
+import Mathlib.Algebra.Module.StablyFree.Basic
 
 noncomputable section
 
@@ -22,7 +24,7 @@ theorem nOf_eq_nS {K : Type} [Field K] {G : Type} [Group G] [Fintype G] (T : For
       simp [this]), Finset.sum_map]
     simp only [Function.Embedding.subtype_apply]
     refine Finset.sum_congr (by convert rfl) fun h _ => ?_
-    simp [h.2, Representation.asAlgebraHom_of, map_inv]
+    simp [h.2, map_inv]
   unfold Formalism.IndefR.IndefiniteEpsilonOperator.nOf Formalism.IndefR.IndefiniteEpsilonOperator.epSp Formalism.MainNotions.PrimeDegreeVariant.nS
   rw [e]
 

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.LocalNewformFunction
 import Formalism.LocalToGlobal.Divisibility.DefGroup
 import Formalism.LocalToGlobal.HeckeThetaElements.IsHeckeElt

@@ -1,16 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.NormSmall
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFinPt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ComplTupBijective
-import Development.AbelianVarietyTheory.Statements.HeckeThetaIntegrals.ThetaIntegralsAgree
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HoweDualityReal
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ProdMinorsMemInv
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HasInfExpDiv
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ColDerApply
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IntegralDetCharacterFockColumnSubstitutionEqZero
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsDensityOfImmersion
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.AnalyticVectors.ExistsExpEqOfMemKset
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.FockSFockColumnSubstitutionUnitary
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockSourceGlActionSymmetrisedOppositeSignsStatement
@@ -85,7 +74,7 @@ theorem act_eq (D : D7) (ε : Bool) (M X : HSp D) (A : GlobalTheory.ChainFr.Fr M
       rw [← Matrix.conjTranspose_mul, hFFi, Matrix.conjTranspose_one]
     calc _ = F.conjTranspose * -Zf * ((F⁻¹).conjTranspose * F.conjTranspose) * F +
           F.conjTranspose * (F * F⁻¹) * Zf * F := by simp only [Matrix.mul_assoc]
-      _ = 0 := by rw [h1, hFFi]; simp [Matrix.mul_neg, Matrix.neg_mul]
+      _ = 0 := by rw [h1, hFFi]; simp
   · have hconj : F * (F⁻¹ * Zf * F) * F⁻¹ = Zf := by
       rw [← Matrix.mul_assoc, ← Matrix.mul_assoc, hFFi, Matrix.one_mul, Matrix.mul_assoc, hFFi, Matrix.mul_one]
     have htr : (F⁻¹ * Zf * F).trace = Zf.trace := by
@@ -174,7 +163,7 @@ theorem colSub_unitary_of_coinv : ∀ (D : D7) (ε : Bool) (M X : HSp D) (A : Gl
         by_cases h : σ = τ
         · subst h
           simp [GlobalTheory.ColLie.atPl, hτ]
-        · simp [GlobalTheory.ColLie.atPl, h, Function.update_of_ne h]
+        · simp [GlobalTheory.ColLie.atPl, h]
       rw [hsplit, GlobalTheory.MinorFrame.colSub_mul, h1, ih, smul_smul, Finset.prod_insert hτ]
   have := key Finset.univ P
   simp only [Finset.mem_univ, if_true] at this

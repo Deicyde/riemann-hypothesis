@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ChartMeasApplyOfSubset
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HasChernIntegralOfEqMul
 open MeasureTheory GlobalTheory.ChartGlue
 open ReciprocityTheory.L2DbarEstimates (V)

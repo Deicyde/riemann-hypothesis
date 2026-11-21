@@ -1,8 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.HodgeFrameGram
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ModelHodgeGram
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ModelHodgeGramPosDefQuotientStatement
-import ReciprocityTheory.AnalyticForms.AnalyticCharts.Osgood
 open Matrix
 open scoped ComplexOrder
 open GlobalTheory.HodgeLocGeo
@@ -51,9 +49,9 @@ theorem isHodgeFrame_model {ι : Type} [Fintype ι] {p q : ℕ} (U : Set (ι →
     · simp only [hAdef, modelFrame, fromBlocks_apply₂₁]; exact hz a b
     · simp only [hAdef, modelFrame, fromBlocks_apply₂₂]; exact contDiffAt_const
   have hAu : ∀ x, IsUnit (A x).det := fun x => by
-    simp [hAdef, modelFrame, det_fromBlocks_zero₁₂]
+    simp [hAdef, modelFrame]
   have hJ : IsUnit (fromBlocks (-1) 0 0 1 : Matrix (Fin q ⊕ Fin p) (Fin q ⊕ Fin p) ℂ).det := by
-    simp [det_fromBlocks_zero₁₂, det_neg]
+    simp [det_neg]
   have hA0 : ∀ x ∈ U, ∀ η, mdbar A x η = 0 := fun x hx η => by
     ext (a | a) (b | b)
     · simp [hAdef, modelFrame]

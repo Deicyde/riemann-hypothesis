@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.BlockRelationTwistedHeight
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.FrameOfAdmissibleWord
 

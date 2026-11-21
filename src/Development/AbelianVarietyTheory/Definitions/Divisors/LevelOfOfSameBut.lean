@@ -1,9 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.SingleIndexPlacesAreTwisted
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsRatScalarMulIff
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.ToUnitsCompToCircle
-import Formalism.LocalToGlobal.IndefiniteReal.OneMapT
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VStdOfOrthonormalSpan
+import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.NormalFam
 
 set_option autoImplicit false
 

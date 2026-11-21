@@ -1,6 +1,4 @@
-import Mathlib
-import Formalism.PieriBlockIdeals.StatementE
-import Formalism.PieriBlockIdeals.TailInequalityEventually
+import BuildAid.Leniency.Open
 import Formalism.PieriBlockIdeals.PieriColumnMinors.WeightBounds
 
 open Formalism.CohomologicalDescent Formalism.CohomologicalDescent.LogSmallConstantBounds Formalism.CohomologicalDescent.ShortWeightBounds

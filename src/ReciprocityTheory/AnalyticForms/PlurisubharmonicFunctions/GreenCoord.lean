@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.LeviOneEqLaplacianThm
 import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.LogInt
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Analysis.Calculus.FDeriv.Symmetric
 
 open MeasureTheory
 open scoped Laplacian Pointwise
@@ -15,7 +18,7 @@ theorem insertNth_eq_add {D : ℕ} (j : Fin (D + 1)) (w : Fin D → ℂ) (ζ : �
   · subst hk
     simp
   · obtain ⟨i, rfl⟩ := Fin.exists_succAbove_eq hk
-    simp [Pi.single_apply]
+    simp
 
 theorem levi_insertNth {D : ℕ} (j : Fin (D + 1)) (u : (Fin (D + 1) → ℂ) → ℝ)
     (hu : ContDiff ℝ 2 u) (w : Fin D → ℂ) (ζ : ℂ) :
@@ -48,7 +51,7 @@ theorem levi_insertNth {D : ℕ} (j : Fin (D + 1)) (u : (Fin (D + 1) → ℂ) �
     ext k
     by_cases hk : k = j
     · subst hk; simp
-    · simp [Pi.single_apply, hk]
+    · simp [hk]
   rw [hAI, hAv]
   rfl
 

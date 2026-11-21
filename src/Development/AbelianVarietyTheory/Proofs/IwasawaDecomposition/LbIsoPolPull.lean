@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.MemSupportBDIff
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FlagDeterminantIsoStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FlagBoundaryIsoStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FlagRootDivisorRelationStatement

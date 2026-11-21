@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.GenusMeanAsymptotics.JacobiCharacterSums.PNTDHPos
-import Formalism.GL3MeanSquares.GenusMeanAsymptotics.JacobiCharacterSums.DHFinish2Of
 import Formalism.LandauZeroFreeBounds.ExceptionalZeroBounds.LDerivNearOne
 
 open Finset Complex Classical
@@ -129,7 +129,7 @@ lemma dhpr_coef_le {M : ℕ} [NeZero M] (χ₁ : DirichletCharacter ℂ M) (h1 :
         have hre := congrArg Complex.re (hsum a)
         simp only [Complex.add_re, Complex.one_re] at hre
         have h2re : (2 * ∑ i ∈ range (a + 1), ((-1 : ℂ)) ^ i).re = 2 * (∑ i ∈ range (a + 1), ((-1 : ℂ)) ^ i).re := by
-          simp [Complex.mul_re] <;> split_ifs <;> simp
+          simp <;> split_ifs <;> simp
         rw [h2re] at hre
         simp only [Complex.one_re]
         linarith

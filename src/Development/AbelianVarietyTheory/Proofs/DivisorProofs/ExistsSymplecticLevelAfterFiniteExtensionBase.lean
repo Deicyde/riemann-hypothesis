@@ -1,17 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsProjOverWeierstrass
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.MumfordConstruction
-import Development.AbelianVarietyTheory.Definitions.Degenerations.AdmissibleBaseOfCompleteDvr
-import Development.AbelianVarietyTheory.Statements.SemistableTorsion.ImmersedBy
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLevelAfterExt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinExtIntegralClosure
-import Development.AbelianVarietyTheory.Proofs.ThetaFamilyOrigin.ExistsLevelStructureOfWeilPairing
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.LineBundleSymmetryHypothesisBaseChange
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsThetaSystemGenusOne
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.UniformizationLawsAndExpansionStatements
-import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.TraceFormTwistIsoOfPullback
-import Development.AbelianVarietyTheory.Statements.PrincipalLattices.LogHermFormOfUnitDiscriminant
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.AbelianSchemeLawsWithoutCohomology
+import Development.AbelianVarietyTheory.Definitions.Divisors.TateProductRigidificationTrivial
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj IsLocalRing NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -61,14 +52,14 @@ theorem omegaStd_single (g : ℕ) (a b : Fin g ⊕ Fin g) :
       | .inr p, .inl q => if p = q then -1 else 0
       | _, _ => 0 := by
   rcases a with p | p <;> rcases b with q | q <;>
-    simp [omegaStd, Pi.single_apply, Finset.sum_ite_eq, Finset.sum_ite_eq', eq_comm] <;> split_ifs <;> simp
+    simp [omegaStd, Pi.single_apply, Finset.sum_ite_eq, eq_comm] <;> split_ifs <;> simp
 
 theorem stdSymp_eq (g : ℕ) (i j : Fin (2 * g)) :
     stdSymp g i j = omegaStd (Pi.single (half g i) (1 : ℤ)) (Pi.single (half g j) 1) := by
   rw [omegaStd_single]
   unfold half stdSymp
   by_cases hi : (i : ℕ) < g <;> by_cases hj : (j : ℕ) < g <;> simp only [hi, hj, dif_pos, dif_neg, not_false_eq_true, true_and, false_and, if_false]
-  all_goals (try simp only [Fin.ext_iff, Fin.val_mk])
+  all_goals (try simp only [Fin.ext_iff])
   all_goals (have := i.2; have := j.2; split_ifs <;> omega)
 
 end GlobalTheory.MumLevel

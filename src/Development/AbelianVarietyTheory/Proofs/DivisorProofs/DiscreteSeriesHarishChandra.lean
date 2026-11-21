@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
 
 open Finset
@@ -14,7 +14,7 @@ private theorem diagonal_exp_single_two_pi_eq_one {n : ℕ} (a : Fin n) :
   funext b
   by_cases h : b = a
   · subst h; simp [Complex.exp_two_pi_mul_I]
-  · simp [Pi.single_apply, h]
+  · simp [h]
 
 open Finset in
 private theorem exists_int_eq_weight_of_isWtOn {n : ℕ} {H : Type} [NormedAddCommGroup H]

@@ -1,6 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.RealPtPf
 import Formalism.LocalToGlobal.ProjectiveLattices.FrameCharts
-import Formalism.LocalToGlobal.ProjectiveLattices.ModelAt
+import Formalism.LocalToGlobal.ProjectiveLattices.ComplPf
+import Formalism.LocalToGlobal.ProjectiveLattices.PtOfSInst
+import Formalism.LocalToGlobal.ProjectiveLattices.RealPtGeo
+import Formalism.LocalToGlobal.ProjectiveLattices.ValuedUnif
 
 set_option synthInstance.maxHeartbeats 400000
 

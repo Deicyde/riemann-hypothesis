@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsVeroneseGraph
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PVeroneseArith
-import GroundTheory.HeightsAndTheta.Heights.Intersections.IsSmoothHermFubiniStudyO1
 import GroundTheory.HeightsAndTheta.Heights.Intersections.AvoidRing
 import GroundTheory.HeightsAndTheta.Heights.Intersections.QuotientMapImageZInjective
 import GroundTheory.HeightsAndTheta.Heights.Intersections.PChartRankAdjoin

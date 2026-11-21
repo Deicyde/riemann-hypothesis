@@ -1,7 +1,9 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.VolumeEquality.RootBranches
 import Development.WeilBound.CoreStatements.VolumeEquality.ChartMeetsAlg
 import Development.WeilBound.CoreStatements.VolumeEquality.ChartMeetsPoint
 import GroundTheory.HeightsAndTheta.Heights.WeightedHomogeneous.PIntDomainDim
+import Development.WeilBound.CoreStatements.VolumeEquality.ChartMeetsForm
 
 noncomputable section
 

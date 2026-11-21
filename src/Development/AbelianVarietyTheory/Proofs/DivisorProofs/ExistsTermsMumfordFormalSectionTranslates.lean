@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsToricRankOneBis
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NonzeroAt
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ScalarsInt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsNormalisedTwistedGeneratorOfFactorStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsMumfordTermTranslateNormalisedGeneratorStatement
@@ -34,7 +32,7 @@ theorem exists_secT_weight_zero : ∀ (R : Type) [CommRing R] [IsDomain R] (D : 
     (fun U _ f => by
       simp only [tφ, tε, h1, h2, Fin.prod_univ_five, Fin.prod_univ_two, Fintype.prod_sum_type,
         Sum.elim_inl, Sum.elim_inr, Category.id_comp, Matrix.cons_val_zero, Matrix.cons_val_one,
-        Matrix.cons_val_two, Matrix.cons_val_three, Matrix.cons_val_four, Matrix.head_cons]
+        Matrix.cons_val_two, Matrix.cons_val_three, Matrix.cons_val_four]
       simp
       group)
   refine ⟨d, fun Z x z J hJ => ?_⟩

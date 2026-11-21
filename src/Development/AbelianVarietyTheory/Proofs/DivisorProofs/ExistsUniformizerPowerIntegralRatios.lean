@@ -1,6 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsRootSelectionUnitaryRankOne
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsIntBTmulBasis
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open Matrix NumberField GlobalTheory.LKTrip GlobalTheory.LKRes GlobalTheory.LKMid GlobalTheory.LKCount IsDedekindDomain GlobalTheory.AdicSpan
 open scoped TensorProduct Classical
 
@@ -40,7 +44,7 @@ theorem adicCompletion_tensor_matrixUnit_identity : ∀ (L : Type) [Field L] [Nu
         funext j'
         by_cases hj : j' = j
         · subst hj; simp
-        · simp [Pi.single_apply, hj]
+        · simp [hj]
       rw [this]; exact hpure a _
     | add x y hx hy =>
       rw [Pi.single_add]; exact hadd _ _ hx hy

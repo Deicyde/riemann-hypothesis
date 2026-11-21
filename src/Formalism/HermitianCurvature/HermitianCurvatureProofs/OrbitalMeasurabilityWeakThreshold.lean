@@ -1,8 +1,6 @@
-import Formalism.HermitianCurvature.StatementJF
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LUFactorOrbitBounds
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BesselDomainMeasurable
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.SmoothWordsAll
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.SandwichRhoAction
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.WordIntegralScaling
 
 open Matrix MeasureTheory Filter Topology

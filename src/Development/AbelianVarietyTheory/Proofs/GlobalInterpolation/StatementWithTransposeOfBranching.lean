@@ -1,15 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.InterlacingEquivariance
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.TensorMapDescent
-import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.SplitLastBlockActX
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.WeightedLeadingTermSplitZMinor
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.EquivariantMapEqSmul
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.IsBasisAtBlock
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.NonnegSubOfLt
-import Development.AbelianVarietyTheory.PublishedTheorems.PublishedFoundations.FiniteIntertwining
-import Formalism.LocalToGlobal.Columns.PolyFnLemmas
-import Formalism.GradedWeylDivisibility.DualWeylDominanceOf
-import Formalism.GradedWeylDivisibility.FockSpaceTableaux.LClosedeqLemmas
 
 open MvPolynomial NumberField IsDedekindDomain
 
@@ -174,7 +169,7 @@ theorem brOne_xi [CharZero K] (hN : N = n + 1) {lam : DomWeight N} {sg : DomWeig
   have h := projVV_coe (fun _ : Unit => sg) ⟨_, extVV_mem K fun _ : Unit => sg⟩
   simp only [extVV, ten_unit] at h
   simp only [brOne, brStdP, LinearMap.comp_apply, AlgHom.toLinearMap_apply, Submodule.subtype_apply, LinearMap.smul_apply,
-    GlobalTheory.XiTopCoef.coefLast_xi K N n hN lam sg hI hS, h, Submodule.coe_smul, map_smul, rename_snd_unit, brConst, Finset.univ_unique,
+    GlobalTheory.XiTopCoef.coefLast_xi K N n hN lam sg hI hS, h, map_smul, rename_snd_unit, brConst, Finset.univ_unique,
     Finset.prod_singleton]
 
 end One

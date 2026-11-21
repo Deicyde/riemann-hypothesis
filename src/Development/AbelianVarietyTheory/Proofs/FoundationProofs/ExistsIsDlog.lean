@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.NotCoboundaryConstantOne
 
 open GlobalTheory.K5 Polynomial

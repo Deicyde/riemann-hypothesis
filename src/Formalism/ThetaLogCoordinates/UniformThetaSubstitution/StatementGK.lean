@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.StatementJ
-import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.StatementW
 
 noncomputable section
 

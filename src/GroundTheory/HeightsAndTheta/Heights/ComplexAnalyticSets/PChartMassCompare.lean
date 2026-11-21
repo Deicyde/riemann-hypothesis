@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StChartMassCompare
-import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSheetComass
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSheetAreaCompare
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PFibreBound
 set_option maxSynthPendingDepth 1

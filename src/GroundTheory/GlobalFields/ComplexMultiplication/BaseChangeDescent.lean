@@ -1,5 +1,6 @@
-import Mathlib
-import GroundTheory.GlobalFields.ComplexMultiplication.BaseChangeDegree
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.GlobalFields.ComplexMultiplication.BaseChange
 
 namespace GroundTheory.Global
 

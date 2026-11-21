@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.TriDefs
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 open Formalism.BasicNotions Formalism.BasicNotions.Loc ReciprocityTheory.Gal Module UpperTheory.V.Loc UpperTheory.V.U3 UpperTheory.V.Alg IsLocalRing Polynomial Topology
 
@@ -30,7 +30,7 @@ theorem tripleProduct_stable_flag : ∀ {H C : Type} [Group H] [CommRing C] (I :
       Matrix.tail_cons] at h
     rw [hdiag, hdiag] at h
     have h2 := congrArg (fun M => M 0 0) h
-    simp only [Matrix.diagonal_mul, Matrix.mul_diagonal, Matrix.zero_apply, Matrix.sub_apply,
+    simp only [Matrix.mul_diagonal, Matrix.zero_apply, Matrix.sub_apply,
       Matrix.scalar_apply, Matrix.diagonal_apply] at h2
     rw [(hu 0 2 (by decide)).mul_left_eq_zero, (hu 0 1 (by decide)).mul_left_eq_zero, sub_eq_zero] at h2
     simpa using h2
@@ -64,7 +64,7 @@ theorem tripleProduct_stable_flag : ∀ {H C : Type} [Group H] [CommRing C] (I :
     have u11 := hmid _ ht 1 1 (by decide) (by decide)
     have u22 := hlast _ ht
     simp only [if_neg (by decide : (1 : Fin 3) ≠ 0), if_neg (by decide : (2 : Fin 3) ≠ 0),
-      if_neg (by decide : (2 : Fin 3) ≠ 1), if_pos rfl, ite_true, hψ] at u10 u20 u21 u11 u22
+      if_neg (by decide : (2 : Fin 3) ≠ 1), ite_true, hψ] at u10 u20 u21 u11 u22
     have p2 : ∀ j : Fin 3, j ≠ 2 → (ρ g : Matrix (Fin 3) (Fin 3) C) 2 j = 0 := by
       intro j hj
       have h := e 2 j

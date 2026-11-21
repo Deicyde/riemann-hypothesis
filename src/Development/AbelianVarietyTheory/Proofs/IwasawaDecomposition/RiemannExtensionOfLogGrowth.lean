@@ -1,7 +1,12 @@
-import Mathlib
-import ReciprocityTheory.AnalyticForms.AnalyticCharts.Osgood
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.DifferentiableOnOfTendstoLocallyUniformlyOn
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.FderivIntegralApplyOfHolomorphicOfDominated
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.Analysis.Calculus.ParametricIntervalIntegral
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import Mathlib.RingTheory.TotallySplit
 
 noncomputable section
 
@@ -303,7 +308,7 @@ private theorem isLittleO_sub_inv_sub_of_log_bound {ψ h : ℂ → ℂ} {s₀ : 
     refine h2.congr' ?_
     filter_upwards [self_mem_nhdsWithin] with x hx
     have hx0 : (0 : ℝ) < x := hx
-    simp [Real.log_inv, abs_pow, abs_of_pos hx0, div_inv_eq_mul]
+    simp [Real.log_inv, abs_of_pos hx0, div_inv_eq_mul]
   have hx : Tendsto (fun s => ‖s - s₀‖) (𝓝[≠] s₀) (𝓝[>] 0) := by
     refine tendsto_nhdsWithin_iff.mpr ⟨hdist.mono_left nhdsWithin_le_nhds, ?_⟩
     filter_upwards [self_mem_nhdsWithin] with s hs using norm_pos_iff.mpr (sub_ne_zero.mpr hs)

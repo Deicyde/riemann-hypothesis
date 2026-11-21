@@ -1,7 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.MultihomogeneousSquares.ChooseTwoAdd
 import Development.WeilBound.CoreStatements.MultihomogeneousSquares.SqOf
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.AntisymmetryStatement
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.AgreementPositiveStatement
 
 noncomputable section
 

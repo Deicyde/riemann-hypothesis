@@ -1,10 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJD
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.OrbitalIntegralIdentities
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.OrbitalMeasurabilityWeakThreshold
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BigCellHermitian
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.PositiveOrbitOpen
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.RadJFExists
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BetaSesquilinearity
 
 open Formalism.REAL Formalism.QuantumDeterminants Formalism.FourierDecayAlt
 

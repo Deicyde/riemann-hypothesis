@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.NonemptyValExtOfOverLa
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TangentVectorsUniversalBasis
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.ProjectiveLattices.SatLeaves
 
 set_option autoImplicit false
 

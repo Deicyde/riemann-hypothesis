@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.QuadraticCharacters.LogDerivAtOne
+import Mathlib.Topology.Sheaves.Presheaf
 
 open ArithmeticFunction
 

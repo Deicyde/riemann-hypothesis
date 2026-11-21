@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.OccDAdjA
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.OccDTensKStable
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.SmoothDefs
 
 noncomputable section
 
@@ -142,9 +144,9 @@ theorem adjB_block {k : Matrix (Fin n) (Fin n) ℂ} (hk : k ∈ Kset ε) {c d : 
     intro s t hst h2
     cases s <;> cases t
     · exact absurd rfl hst
-    · simp only [Bool.false_eq_true, ↓reduceIte, mul_one, one_mul] at h2
+    · simp only [Bool.false_eq_true, ↓reduceIte, mul_one] at h2
       first | exact h2 | linear_combination h2 / 2 | linear_combination -h2 / 2
-    · simp only [Bool.false_eq_true, ↓reduceIte, mul_one, one_mul] at h2
+    · simp only [Bool.false_eq_true, ↓reduceIte, one_mul] at h2
       first | exact h2 | linear_combination h2 / 2 | linear_combination -h2 / 2
     · exact absurd rfl hst
   exact key _ _ h h1

@@ -1,5 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.TranslateMemIndOrder
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open GlobalTheory.CompanionTheory.Ar.BT TensorProduct
 
 namespace GlobalTheory.CompanionTheory.Ar.BT.CharExt
@@ -100,7 +106,7 @@ lemma range_psi [FaithfulSMul R K] {A : Subalgebra R (T → R)} {d : R} (hd0 : d
     let L' : Module.Dual R A :=
       { toFun := L
         map_add' := fun a b => hinj (by
-          simp [hL, add_mul, mul_add, Finset.sum_add_distrib])
+          simp [hL, mul_add, Finset.sum_add_distrib])
         map_smul' := fun c a => hinj (by
           simp [hL, Finset.mul_sum, mul_left_comm]) }
     refine ⟨L', ?_⟩

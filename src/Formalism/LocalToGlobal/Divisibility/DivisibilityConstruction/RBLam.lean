@@ -1,6 +1,6 @@
-import Formalism.LocalToGlobal.Divisibility.NumbersLemmas
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Divisibility.ZscOfNum
-import Formalism.SharpRestriction.ElevenLe
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.GZeroLogBound
 
 open Formalism.BasicNotions Formalism.MainNotions

@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsPieceIntegral
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsClopenDegree
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.IntNumOffBlocks
+import Mathlib.Topology.Algebra.MvPolynomial
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.HilbertSamuel

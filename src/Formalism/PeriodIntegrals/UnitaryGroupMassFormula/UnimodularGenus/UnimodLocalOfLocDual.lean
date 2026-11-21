@@ -1,7 +1,8 @@
-import Mathlib
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnimodularGenus.StdLatEqSpan
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.HermitianLattices.StatementMass
 import Formalism.HermitianLattices.HermitianLatticesProofs.LocDual
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnimodularGenus.Development
 
 open NumberField
 
@@ -43,14 +44,14 @@ theorem stdLat_isOrtho (E : Type) [Field E] [NumberField E] [StarRing E] (n : �
       by_cases hij : j = i
       · subst hij
         exact ⟨1, by simp⟩
-      · exact ⟨0, by simp [Pi.single_apply, hij]⟩
+      · exact ⟨0, by simp [hij]⟩
   · intro i j
     simp only [hStd, LinearMap.mk₂'ₛₗ_apply]
     rw [Finset.sum_eq_single i (fun k _ hk => by simp [Pi.single_apply, hk]) (by simp)]
     by_cases hij : i = j
     · subst hij
       simp
-    · simp [Pi.single_apply, hij, Ne.symm hij]
+    · simp [hij]
 
 theorem unimodLocal_of_locDual (hLD : Formalism.HermitianLatticesTheory.LocDual) : UnimodLocal := by
   intro E _ _ _ n N hN hU p hp

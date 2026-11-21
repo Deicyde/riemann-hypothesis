@@ -1,5 +1,4 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.DatumEquiv
-import Development.AbelianVarietyTheory.Definitions.Divisors.VdmSplit
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VandermondeSplitsCompactNoncompact
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdjointDetOnCompactTorus
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NumShiftHolds

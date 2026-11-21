@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.LinksChar
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.IndefiniteReal.LinksDefs
 
 noncomputable section
 

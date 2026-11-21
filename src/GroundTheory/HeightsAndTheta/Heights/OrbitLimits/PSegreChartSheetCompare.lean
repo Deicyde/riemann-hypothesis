@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StSegreChartSheetCompare
-import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StSegreSheetFormCompare
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.PSegreSheetFormCompare
 set_option maxSynthPendingDepth 1
 

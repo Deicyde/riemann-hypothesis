@@ -1,5 +1,8 @@
-import Formalism.LocalToGlobal.CharacterGerms.RowTie
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.CocycleRightZeroThd
+import Formalism.LocalToGlobal.CharacterGerms.IntSubst
+import Formalism.LocalToGlobal.CharacterGerms.RowTieDefs
 
 noncomputable section
 

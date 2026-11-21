@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.FourierProjections.PaPolyTranslate
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
 
 namespace ReciprocityTheory.ChartRestriction.G.I2.FPw
 
@@ -29,7 +32,7 @@ theorem paD_smul (α : ι →₀ ℕ) (a : ℂ) {H : EuclideanSpace ℂ ι → �
   ring
 
 theorem paD_zero (α : ι →₀ ℕ) : paD α (0 : EuclideanSpace ℂ ι → ℂ) = 0 := by
-  simp [paD, polyDeriv, iteratedFDeriv_zero_fun]
+  simp [paD, polyDeriv]
 
 theorem paFact_ne (α : ι →₀ ℕ) : (paFact α : ℂ) ≠ 0 := by
   unfold paFact

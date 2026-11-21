@@ -1,7 +1,5 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.ModDefs
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.ModBasic
-import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.ModEisInt
 import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.ModDeltaInt
 
 noncomputable section
@@ -71,7 +69,7 @@ theorem exists_dC_inv : ∃ v : PowerSeries ℤ, PowerSeries.coeff 0 v = 1 ∧
   set u : PowerSeries ℤ := PowerSeries.mk fun n => PowerSeries.coeff (n + 1) dZ with hu
   have hd0 : PowerSeries.coeff 0 dZ = 0 := by
     rw [dZ, PowerSeries.coeff_mk]
-    simp [e4Z, e6Z, pow_succ, PowerSeries.coeff_mul]
+    simp [e4Z, e6Z, pow_succ]
   have hd1 : PowerSeries.coeff 1 dZ = 1 := by
     rw [dZ, PowerSeries.coeff_mk]
     simp [e4Z, e6Z, pow_succ, PowerSeries.coeff_mul, Finset.Nat.antidiagonal_succ] <;> norm_num

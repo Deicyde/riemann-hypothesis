@@ -1,9 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ThetaMod
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ExistsUniqueVec
-import Formalism.SharpRestriction.LevelLetterCocycles.ExistsInertiaCharpolyFactorOfTameType
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsSpanFormsNeBot
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.TendstoOneOfSummable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsParamDefinite
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ExtensionVectorThetaCompatibleStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ExistsSplitPlaceGoodStatement
@@ -34,7 +29,7 @@ theorem GlobalTheory.StrSplitDict.dict : GlobalTheory.Published.AutomorphicForms
     have h1 : X.R.extV j (X.tupT (D.nd.mu i)) y = 0 := by
       rw [hy]
       show (X.IL.jMt (D.nd.mu i) hμ j 0).1 = 0
-      simp only [map_zero, ZeroMemClass.coe_zero, Submodule.coe_zero]
+      simp only [map_zero, ZeroMemClass.coe_zero]
     exact X.hinj j (X.tupT (D.nd.mu i)) (h1.trans (LinearMap.map_zero _).symm)
   have hf'0 := GlobalTheory.StrSplitDict.cast_ne_zero D _ _ _ hj f hf0
   subst hspw
@@ -46,4 +41,4 @@ theorem GlobalTheory.StrSplitDict.dict : GlobalTheory.Published.AutomorphicForms
   obtain ⟨hu, hfr⟩ := GlobalTheory.T.satake_unramified_frobenius_eigen hL D P i Q sp σ α hloc hsat
   refine ⟨Q, hQx, hu, ?_⟩
   rw [hfr, ← hα]
-  simp [Multiset.map_map, Function.comp_def]
+  simp [Function.comp_def]

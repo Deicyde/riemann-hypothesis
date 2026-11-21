@@ -1,4 +1,5 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.KatoUse
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.ExistsDat
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.ULocEx
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.RingEx
@@ -6,11 +7,8 @@ import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.ModelUpper
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.VlenLe
 import Development.AutomorphicArithmetic.AutomorphicVarieties.TheoremsMuLinked.GaloisRepresentationTypes.MapReducibleThreeDim
-import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.PtShape
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.ExistsFlagCharactersOfUpperTriangular
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.AdmissibleOfTypeII
-import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.CoboundaryLemmaNoColumn
-import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.IsPtOf
 import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.CoefIndep
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.MainNotions.N Formalism.BasicNotions Formalism.BasicNotions.Loc GlobalTheory.GalOfCusp Matrix IsLocalRing
@@ -125,7 +123,7 @@ private theorem exists_unram {l : ℕ} [Fact l.Prime] (c : Coef l) {N : ℕ} [Ne
   by_cases ha : IsUnit a
   · obtain ⟨u, rfl⟩ := ha
     rw [MulChar.ofUnitHom_coe]
-    simp [g, MulChar.coe_toUnitHom]
+    simp [g]
   · rw [MulChar.map_nonunit _ ha, MulChar.map_nonunit _ ha]
     simp
 

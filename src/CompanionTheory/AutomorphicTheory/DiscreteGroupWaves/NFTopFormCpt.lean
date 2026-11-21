@@ -1,8 +1,4 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutFpmDecay
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.LimitOfModuleForms
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.StepFormCptAllOfStepFormAll
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.RadialExhaustion
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.HeadGermSmoothExtension
+import BuildAid.Leniency.Open
 import CompanionTheory.AutomorphicTheory.DiscreteGroupWaves.NFTopCpt
 
 namespace CompanionTheory.NFCpt

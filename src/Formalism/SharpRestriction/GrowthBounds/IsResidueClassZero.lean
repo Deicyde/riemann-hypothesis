@@ -1,7 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataParams₂
 import Formalism.LocalRingCardinality.DataGatTies
-import Formalism.SharpRestriction.GrowthBounds.UnramifiedQuadraticSetting
-import Formalism.SharpRestriction.GrowthBounds.DataG
 import Formalism.SharpRestriction.GrowthBounds.DataGChain
 
 noncomputable section

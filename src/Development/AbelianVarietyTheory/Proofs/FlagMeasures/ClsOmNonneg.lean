@@ -1,7 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.PerRowC
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.FrEqvEquivalence
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.InvVolPos
+import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.RowsMeanC
+import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.DimFormC
 
 noncomputable section
 open scoped Classical ENNReal Pointwise

@@ -1,8 +1,8 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.AutomorphicKernels.EisensteinSeriesG2.HeisenbergTheta.HeisenbergThetaConstant.ThetaC
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SchwartzBruhatUniformSummableMajorant
-import GroundTheory.AutomorphicForms.GL2.GJMatrixAdelic
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.SummableProdCoord
+import Development.WeilBound.RepresentationTheoryGL.EisensteinSeries.SiegelEisensteinContinuation.IsEpCont
 set_option maxSynthPendingDepth 1
 
 namespace GlobalTheory.CompanionTheory.EisRkNBound

@@ -1,8 +1,12 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.BcAtDesc
 import Formalism.SharpRestriction.LevelLetterCocycles.IsFracOL
 import Formalism.LocalRingCardinality.SpanPowerMembership.NDLocE
 import Formalism.SharpRestriction.LevelLetterCocycles.ExistsPosConstLagrangeCondition
 import Formalism.SharpRestriction.LevelLetterCocycles.FiltrationSaturationKiller
+import Mathlib.Topology.Connected.Separation
+import Mathlib.Topology.MetricSpace.Ultra.TotallySeparated
 
 noncomputable section
 

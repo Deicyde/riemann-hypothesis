@@ -1,6 +1,6 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.FockWeights
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.CFPrimeA
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DefsRep
 
 noncomputable section
 

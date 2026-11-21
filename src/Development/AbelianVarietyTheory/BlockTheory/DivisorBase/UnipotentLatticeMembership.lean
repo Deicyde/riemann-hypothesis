@@ -1,9 +1,10 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.GramCEqTranspose
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.BaseEmbeddingInclusion
 import Formalism.LocalToGlobal.ProjectiveLattices.FamilyUniformisationBasePointOrthogonalBis
 import Formalism.LocalToGlobal.Divisibility.DefGroup
 import Formalism.SharpRestriction.Divisibility.AbelianOpenPart.KaSmallNonpos
+import Formalism.SharpRestriction.Divisibility.LiftErrorLocal
 
 noncomputable section
 

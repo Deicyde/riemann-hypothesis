@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.QuotientMetricDivisors.Statement
-import Formalism.HermitianLattices.StatementLat
 import Formalism.HermitianLattices.HermitianLatticesProofs.DualLattice
+import Mathlib.Tactic.ENatToNat
 open NumberField IsDedekindDomain
 
 noncomputable section

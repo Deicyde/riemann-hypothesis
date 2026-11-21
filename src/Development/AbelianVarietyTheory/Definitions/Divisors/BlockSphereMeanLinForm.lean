@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.PointHeight
 import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.ExistsIsHomogeneousOfEquivariant
 import ReciprocityTheory.SemistableReduction.TorusL2CauchyInequality
+import Mathlib.RingTheory.Nullstellensatz
 
 set_option autoImplicit false
 noncomputable section
@@ -15,7 +16,7 @@ theorem isChowForm_point (k : Type) [Field k] :
     rw [support_X, Finset.mem_singleton] at hs
     subst hs
     fin_cases b
-    simp [Fin.sum_univ_two, Finsupp.single_apply]
+    simp [Finsupp.single_apply]
   · rw [map_X]; exact X_prime.irreducible
   · intro u
     rw [aeval_X]
@@ -141,7 +142,7 @@ theorem isChowForm_line (k : Type) [Field k] :
     · have := support_monomial_subset h
       rw [Finset.mem_singleton] at this
       subst this
-      fin_cases b <;> simp [Fin.sum_univ_two, Finsupp.single_apply]
+      fin_cases b <;> simp [Finsupp.single_apply]
   · have := GlobalTheory.BorelAlg.irreducible_det' (R := AlgebraicClosure k) (k := 2) (by norm_num) id
       Function.injective_id
     convert this using 1

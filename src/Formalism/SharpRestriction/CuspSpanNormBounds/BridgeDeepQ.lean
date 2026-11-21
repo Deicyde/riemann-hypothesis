@@ -1,7 +1,7 @@
-import Formalism.SharpRestriction.CuspSpanNormBounds.UnimodularSchurMeasures.CndDiamOfKnown
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.SGauge
 import Formalism.FlagUnipotentLattices.HeightThresholdInequalities
+import Formalism.SharpRestriction.CuspSpanNormBounds.UnimodularSchurMeasures.CNDefs
 
 noncomputable section
 

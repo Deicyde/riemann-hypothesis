@@ -1,4 +1,5 @@
-import Development.WeilBound.ThetaLifts.TowerModels.PlaneHerm
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.EigenvalueEndgame.PlaneRemovalConfiguration
 import Development.WeilBound.ThetaLifts.ConeHypotheses.PolDense
 import Development.WeilBound.ThetaLifts.TowerModels.LeviAd

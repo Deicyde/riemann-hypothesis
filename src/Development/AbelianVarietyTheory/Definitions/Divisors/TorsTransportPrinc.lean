@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.TorsTransport
 import Development.AbelianVarietyTheory.Definitions.ThetaMetrics.HasSumLocallyUniformlyWeierstrassZetaExcept
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsValuedHeckeCharRamified
+import Mathlib.Algebra.Ring.IsFormallyReal
 
 noncomputable section
 
@@ -68,7 +70,7 @@ theorem exists_isLatOf (d : ℕ) (δ : K) (ι : K →+* ℂ) (h2 : Module.finran
     exact ⟨by exact_mod_cast hs, by exact_mod_cast ht⟩
   refine ⟨⟨ι (B 0), ι (B 1), hind⟩, ?_⟩
   ext z
-  simp only [SetLike.mem_coe, PeriodPair.mem_lattice, Set.mem_image, FractionalIdeal.mem_coe, FractionalIdeal.mem_one_iff]
+  simp only [SetLike.mem_coe, PeriodPair.mem_lattice, Set.mem_image, FractionalIdeal.mem_one_iff]
   constructor
   · rintro ⟨m, n, rfl⟩
     exact ⟨_, ⟨m * b 0 + n * b 1, rfl⟩, by simp [hB]⟩
@@ -98,7 +100,7 @@ theorem torsTransport_princ (ι : K →+* ℂ) (α : Kˣ) (Λ₀ : PeriodPair) (
   · ext z
     have := H (ι α * z)
     rw [← mul_assoc, inv_mul_cancel₀ ha, one_mul] at this
-    simp only [SetLike.mem_coe, Set.mem_image, FractionalIdeal.mem_coe, this, hmem, FractionalIdeal.mem_spanSingleton,
+    simp only [SetLike.mem_coe, Set.mem_image, this, hmem, FractionalIdeal.mem_spanSingleton,
       FractionalIdeal.mem_one_iff]
     constructor
     · rintro ⟨_, ⟨r, rfl⟩, h⟩

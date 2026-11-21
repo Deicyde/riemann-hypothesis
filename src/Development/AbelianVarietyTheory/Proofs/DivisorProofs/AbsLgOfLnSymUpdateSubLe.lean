@@ -1,11 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VdivLnIdFalse
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ArTopTrue
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsMonomialEqProd
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCoverInducedMetricsArith
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalHeightBoundedByPrimeWeights
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LogGreenDifferenceDeterminantLe
+import Formalism.LocalToGlobal.Columns.LevGCount
+import Formalism.LocalToGlobal.Columns.StdLatUnimodular
 
 set_option autoImplicit false
 
@@ -73,7 +71,7 @@ theorem mem_support_lnSym {a : ℕ → Bool} {R : Option ℝ} {x : Ln Dw} {b : S
 
 theorem parOf_lnSym (a : ℕ → Bool) (R : Option ℝ) (x : Ln Dw) : parOf (lnSym a R x) = R := by
   have h : (lnSym a R x).support.Nonempty := by
-    rcases x with ⟨_ | _, st⟩ <;> simp [lnSym, Finsupp.support_single_ne_zero]
+    rcases x with ⟨_ | _, st⟩ <;> simp [lnSym]
   rw [parOf, dif_pos h]
   exact (mem_support_lnSym h.choose_spec).2
 

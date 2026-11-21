@@ -1,9 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.TrivIsCr
-import Formalism.SharpRestriction.LevelLetterCocycles.LocCoh
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.TwistStep
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.AcrisTorsionFreeComplete
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.DeRhamPotSemistable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsFiltrationAdaptedBasisOfSubspaceStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsInvariantBasisOfIsDeRhamLatticeStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.DeRhamFilteredComparisonCoordinatesStatement
@@ -35,7 +30,7 @@ theorem exists_hodge : ∀ (l : ℕ) [Fact l.Prime] (K : FinExt l) (P : LocPrime
         rw [this, Matrix.mulVec_add, hu g, hv g]
       zero_mem' := by
         intro g
-        simp only [Set.mem_setOf_eq, Pi.zero_apply, map_zero]
+        simp only [Pi.zero_apply, map_zero]
         exact Matrix.mulVec_zero _
       smul_mem' := by
         intro k u hu g
@@ -98,7 +93,7 @@ theorem exists_hodge : ∀ (l : ℕ) [Fact l.Prime] (K : FinExt l) (P : LocPrime
       funext i
       simp only [Finset.sum_apply, Pi.smul_apply, smul_eq_mul]
       conv_lhs => enter [2, r]; rw [hexp r]
-      simp only [Finset.sum_apply, Pi.smul_apply, smul_eq_mul, Finset.mul_sum, Finset.sum_mul]
+      simp only [Finset.sum_apply, Pi.smul_apply, Finset.mul_sum, Finset.sum_mul]
       rw [Finset.sum_comm]
       refine Finset.sum_congr rfl fun j _ => Finset.sum_congr rfl fun r _ => ?_
       simp only [Algebra.smul_def]

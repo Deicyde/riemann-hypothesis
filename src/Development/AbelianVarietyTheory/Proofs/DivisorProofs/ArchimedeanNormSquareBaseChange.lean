@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VecMulMapEqZero
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsSabCancel
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.AdelicDegreeTameRamification
+import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.CmCurveBaseChangeComp
 
 set_option autoImplicit false
 

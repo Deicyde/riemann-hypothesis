@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.QuotientMetricDivisors.ProdFormula
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open Module NumberField IsDedekindDomain
 open scoped Matrix

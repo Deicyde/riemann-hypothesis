@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.BesselHermitianTheta.TiedWeil
 import Formalism.LocalToGlobal.BesselHermitianTheta.LemmasChr
 

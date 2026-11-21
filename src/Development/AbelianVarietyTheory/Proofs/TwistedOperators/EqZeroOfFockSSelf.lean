@@ -1,10 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MeasurePreservingMulRight
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EqBotOrTopOfTensor
-import Development.AbelianVarietyTheory.PublishedTheorems.PublishedFoundations.FiniteIntertwining
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.LevelPlusSubgroup
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ContinuousCoeffBlockAct
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LeadingMinorsWeightVectorEqTensorExtremalVectors
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ChiGridHighestWeightEqCompactChainParameter
 
 noncomputable section
@@ -37,12 +34,11 @@ theorem hwVec_eq_ten (n : ℕ) (lam : ι → ℕ → ℤ) (lam' : ι → DomWeig
   have hs0 := s.isLt
   split_ifs with hs
   · congr 1
-    simp only [Formalism.GradedWeylDivisibility.nuNext, DomWeight.natW, DomWeight.detShift, dif_pos hs, dif_pos (show 0 < n by omega), hl,
-      Fin.val_mk]
+    simp only [Formalism.GradedWeylDivisibility.nuNext, DomWeight.natW, DomWeight.detShift, dif_pos hs, dif_pos (show 0 < n by omega), hl]
     have a1 := (lam' τ).anti (show s ≤ (⟨s.val + 1, hs⟩ : Fin n) by simp [Fin.le_def])
     have a2 := (lam' τ).anti (show (⟨s.val + 1, hs⟩ : Fin n) ≤ ⟨n - 1, by omega⟩ by simp [Fin.le_def]; omega)
     rw [hl, hl] at a1 a2
-    simp only [Fin.val_mk] at a1 a2
+    simp only at a1 a2
     omega
   · have hs' : s.val = n - 1 := by omega
     have h0 : (lam' τ).natW s = 0 := by
@@ -69,7 +65,7 @@ private theorem map_conj_blockAct {ι : Type} [Fintype ι] {n : ℕ} (U : ι →
       Formalism.GradedWeylDivisibility.blockAct ℂ (fun τ => (U τ).map (starRingEnd ℂ)) (map (starRingEnd ℂ) F) := by
   induction F using MvPolynomial.induction_on
   next a =>
-    simp [Formalism.GradedWeylDivisibility.blockAct, MvPolynomial.aeval_C, MvPolynomial.algebraMap_eq]
+    simp [Formalism.GradedWeylDivisibility.blockAct, MvPolynomial.algebraMap_eq]
   next p q hp hq =>
     simp only [map_add, hp, hq]
   next p v hp =>
@@ -215,7 +211,7 @@ def bilF (n : ℕ) : Formalism.L2.DIV.Pol ℂ ι n →ₗ[ℂ] Formalism.L2.DIV.
   LinearMap.mk₂ ℂ (fun F F' => fockS (map (starRingEnd ℂ) F) F')
     (fun F₁ F₂ F' => by simp only [map_add, ← fockL_apply, LinearMap.add_apply])
     (fun c F F' => by
-      simp only [← fockL_apply, smul_eq_C_mul, map_mul, map_C, RingHom.coe_comp, Function.comp_apply]
+      simp only [← fockL_apply, smul_eq_C_mul, map_mul, map_C]
       rw [← smul_eq_C_mul, LinearMap.map_smulₛₗ, LinearMap.smul_apply, smul_eq_mul]
       simp)
     (fun F F₁ F₂ => by simp only [← fockL_apply, map_add])

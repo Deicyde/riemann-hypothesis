@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.TheoremPCompactOfStepDensity
 
 open MeasureTheory Filter Topology

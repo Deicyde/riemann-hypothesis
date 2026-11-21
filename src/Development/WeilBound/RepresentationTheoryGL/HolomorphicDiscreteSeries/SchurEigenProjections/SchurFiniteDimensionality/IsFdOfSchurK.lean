@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.HolomorphicDiscreteSeries.SchurEigenProjections.BigProjP
 import Development.WeilBound.CoreStatements.BranchingTraces.HilbertSchmidtTraces.IntegralGermIndependentOfSystem
-import Development.WeilBound.CoreStatements.BranchingTraces.HilbertSchmidtTraces.UnitaryMatrixCoefficientDecay
 import Development.WeilBound.CoreStatements.BranchingTraces.HilbertSchmidtTraces.Imports
 import Development.WeilBound.CoreStatements.BranchingTraces.HilbertSchmidtTraces.ColSq
 

@@ -1,5 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.TateCohomology.ModuleHomologyData
+import Mathlib.RepresentationTheory.Coinduced
+import Mathlib.RepresentationTheory.Homological.TateCohomology.Basic
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.GroupCoh

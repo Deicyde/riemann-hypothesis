@@ -1,23 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.LevelGroupLifts
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.GeneralDiagonalMatrix
-import Formalism.LocalToGlobal.ProjectiveLattices.SpMapAlgHomId
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPinnedOfIsUnf
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UniformFamilyUnfoldingCompat
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchingDeterminantRootOfUnity
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianTraceFormLattice
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsConstMulReadingOfMovedSectionAtFrame
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConjugateCharacterOnLifts
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UniformFamilyComponentIndex
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MovedSectionReadingEqMovedFrameReadingStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLatticeBasisHermitianSpace
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompletedLatticeStabilizerIffBasisIntegral
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.AbsGeneratorRatioEqOneOfUnitFrameMove
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ActLevFullLevelGroupFramedPoints
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsUniqueFramedPointMoveUniversalTriple
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.FramedPointMoveCalculus
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.AdelicUnitaryLatticeRationalTranslateInvariance
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.CongruenceLatticeFractionalMultipleAgree
 
 set_option autoImplicit false
 
@@ -203,7 +190,7 @@ theorem mulVec_mem_idealLatHat {k : GA D V} (h : FinCong V 1 k) {I : Ideal (𝓞
 theorem gLat_mul {k k' : GA D V}
     (h : gLat V k' = (latHat V : Set (Fin V.rank → Af D.host.F ⊗[D.host.F] D.host.E))) : gLat V (k * k') = gLat V k := by
   conv_rhs => rw [gLat, ← h, gLat, Set.image_image]
-  simp only [gLat, map_mul, Units.val_mul, Subgroup.coe_mul, Matrix.mulVec_mulVec]
+  simp only [gLat, map_mul, Units.val_mul, Matrix.mulVec_mulVec]
 
 theorem gLat_one : gLat V 1 = (latHat V : Set (Fin V.rank → Af D.host.F ⊗[D.host.F] D.host.E)) := by
   simp [gLat]

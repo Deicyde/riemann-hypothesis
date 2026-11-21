@@ -1,4 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnipotentCost.ZIterA
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Topology.Sheaves.Presheaf
 
 open scoped ContDiff
 

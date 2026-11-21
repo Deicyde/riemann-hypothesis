@@ -1,8 +1,8 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.UsedLocalConclusion
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.NotFullBot
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsWeakTopologyWittTiltTensor
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ZlTowerGen
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.NumberTheory.Padics.PadicIntegers
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
 open Formalism.WeaklyAdmissibleFiltrations Formalism.BasicNotions Formalism.BasicNotions.Loc TensorProduct GlobalTheory.NL Formalism.MainNotions.DeltaInvariantLattices GlobalTheory.WeakClosed
 open scoped Topology PowerSeries.WithPiTopology
 set_option synthInstance.maxHeartbeats 400000
@@ -19,7 +19,7 @@ theorem linearMap_pi_continuous_coord : ∀ {l : ℕ} [Fact l.Prime] {O M ι : T
     rw [LinearMap.pi_apply_eq_sum_univ f c]
     refine Finset.sum_congr rfl fun i _ => ?_
     have hc : (fun j => if i = j then (1:O) else 0) = Pi.single i 1 := by
-      funext j; by_cases h : i = j <;> simp [Pi.single_apply, h, eq_comm]
+      funext j; by_cases h : i = j <;> simp [h, eq_comm]
     rw [hc]
     conv_lhs => rw [← bO.sum_equivFun (c i)]
     rw [Finset.sum_smul]

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexMetrics.Assembly
 import GroundTheory.HeightsAndTheta.Heights.HomogeneousLocalization.PFSCoord
 import GroundTheory.HeightsAndTheta.Heights.HomogeneousLocalization.PFSIndex

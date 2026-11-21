@@ -1,17 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RangeSndRel
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.CuspAlongSmoothRows
-import Development.AbelianVarietyTheory.Statements.HeckeThetaIntegrals.ThetaIntegralsAgree
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.ExistsAllTiedNotStable
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.DiscreteSeriesHermitianUniqueOfClassification
-import Development.AbelianVarietyTheory.BlockTheory.HeightDefect.FinitePartTypes
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.AutomorphicFormUniformLimitDiscreteSeriesSeriesStatement
-import Formalism.LocalToGlobal.IndefiniteReal.MultLemmas
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsSumOfMemMultSpan
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsLocSubLocGen
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.DifferentiableOneP
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.AutomorphicTypeFiniteDimStableStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SubmodulePowSimpleEqSumEquivValuesStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.DiscreteSeriesModelKFiniteStatement
@@ -349,11 +338,11 @@ theorem IsPartMult.rTr_comp (hθ : IsInfFam (D := D) θ) {A : Submodule ℂ (GA 
   refine ⟨fun u => hA.k τ g hg _ (hF.mem u), fun τ' hτ' h hh hk u w hw => ?_, fun τ' hτ' Y hY u w hw => ?_,
     fun τ' hτ' u w => ?_⟩
   · have hne : τ ≠ τ' := fun e => hτ (e ▸ hτ')
-    simp only [LinearMap.compMultilinearMap_apply, rTrL, LinearMap.coe_mk, AddHom.coe_mk]
+    simp only [LinearMap.compMultilinearMap_apply, rTrL]
     rw [hF.equivK τ' hτ' h hh hk u w hw]
     exact (place_comm θ V hθ τ τ' hne).1 g hg.1 h hh _
   · have hne : τ ≠ τ' := fun e => hτ (e ▸ hτ')
-    simp only [LinearMap.compMultilinearMap_apply, rTrL, LinearMap.coe_mk, AddHom.coe_mk]
+    simp only [LinearMap.compMultilinearMap_apply, rTrL]
     rw [hF.equivLie τ' hτ' Y hY u w hw]
     exact ((place_comm θ V hθ τ τ' hne).2.1 g hg.1 Y hY _).symm
   · simp only [LinearMap.compMultilinearMap_apply, hF.other τ' hτ' u w, map_smul]

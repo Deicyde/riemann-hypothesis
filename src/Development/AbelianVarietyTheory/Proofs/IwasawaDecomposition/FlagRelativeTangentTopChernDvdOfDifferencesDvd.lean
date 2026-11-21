@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.MumfordProportionality
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.InterPolyProdSum
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open AlgebraicGeometry CategoryTheory MvPolynomial NumberField ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj GlobalTheory.Toroidal GlobalTheory.ShFam GlobalTheory.ProjVar GlobalTheory.FlagBundle GlobalTheory.GoodMetric
 
 namespace GlobalTheory.GoodMetric.DiscrDvd
@@ -25,9 +26,9 @@ theorem isRelPrime_X_sub_X {σ : Type} {a b c d : σ} (h : a ≠ b) (h' : c ≠ 
   refine (irreducible_X_sub_X h).isRelPrime_iff_not_dvd.2 fun hd => ?_
   rcases hn with ⟨h1, h2⟩ | ⟨h1, h2⟩
   · have := map_dvd (eval (Pi.single c (1 : ℝ))) hd
-    simp [Pi.single_apply, h1.symm, h2.symm, h'.symm] at this
+    simp [h1.symm, h2.symm, h'.symm] at this
   · have := map_dvd (eval (Pi.single d (1 : ℝ))) hd
-    simp [Pi.single_apply, h1.symm, h2.symm, h'] at this
+    simp [h1.symm, h2.symm, h'] at this
 
 theorem rootDiscr_dvd (ι : Type) [Fintype ι] (m : ι → ℕ) (P : MvPolynomial (Root m) ℝ)
     (hP : ∀ (τ : ι) (i j : Fin (m τ)), i < j → (X ⟨τ, j⟩ - X ⟨τ, i⟩ : MvPolynomial (Root m) ℝ) ∣ P) :

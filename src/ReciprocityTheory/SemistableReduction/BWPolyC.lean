@@ -1,5 +1,15 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import ReciprocityTheory.SemistableReduction.TorsionNonvanishStatement
 import ReciprocityTheory.SemistableReduction.BWPolyA
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Analysis.CStarAlgebra.Matrix
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 
@@ -61,9 +71,9 @@ theorem bwp_finite_det_id_line {p : ℕ} (z : Fin p × Fin p → ℂ) :
   ext i j
   by_cases h : i = j
   · subst h
-    simp [Matrix.charmatrix_apply, bwpMat, bwpId, Matrix.diagonal_apply]
+    simp [bwpMat, bwpId]
     ring
-  · simp [Matrix.charmatrix_apply, bwpMat, bwpId, Matrix.diagonal_apply, h]
+  · simp [bwpMat, bwpId, h]
 
 theorem bwp_continuous_of_matrix {p : ℕ} :
     Continuous (fun y : Fin p → Fin p → ℂ => Matrix.of y) := by

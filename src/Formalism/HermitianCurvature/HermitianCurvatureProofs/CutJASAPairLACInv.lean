@@ -1,8 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJASAPairLACCut
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.ConjugationInvarianceEverySetting
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.RegularisedPairingViaPhase
-import Formalism.FormalDegreeBessel.FormalDegreeRatio.BesselUnitaryEquivHolds
-import Formalism.FormalDegreeBessel.FormalDegreeRatio.BesselUnipotentEquivHolds
 
 open MeasureTheory
 open Formalism.FourierDecayAlt

@@ -1,6 +1,12 @@
-import Formalism.FlagUnipotentLattices.MinkowskiFactorialBounds.LatticeSumBounds
+import BuildAid.Leniency.Open
 import Formalism.HyperbolicPlaceProducts.SecondLevelArithmeticNorm
 import Formalism.HyperbolicPlaceProducts.ArithmeticCountRevised
+import Formalism.FlagUnipotentLattices.CardSubmodulesAndLinearEquivBounds
+import Mathlib.Data.Int.Star
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.TotallySplit
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Module Matrix Formalism.HermitianLatticeCounting.LatticeSumBounds
 open scoped BigOperators ComplexConjugate
@@ -57,7 +63,7 @@ private theorem fo_step_lemma (N p q s : ℕ) (hp : p.Prime) (hq : q.Prime) (hs 
     rw [add_comm, hbin, hsplit] at this
     rw [eq_neg_iff_add_eq_zero]
     have h2 := congrArg (· - 1) this
-    simp only [add_sub_cancel_left, sub_self] at h2
+    simp only [sub_self] at h2
     rw [← h2]; abel
   by_cases hqp : q = p
   · subst hqp

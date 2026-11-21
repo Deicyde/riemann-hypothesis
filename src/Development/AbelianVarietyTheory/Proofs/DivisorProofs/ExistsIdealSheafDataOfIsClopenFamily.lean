@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.ShimuraVarieties.IsOpenOfMemIrreducibleComponentsOfFinite
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormIdeal
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FamIdeal
+import Std.Tactic.BVDecide.Normalize.Prop
 open AlgebraicGeometry CategoryTheory Limits
 
 namespace GlobalTheory.ClopenIdealSheaf
@@ -87,7 +86,7 @@ theorem exists_idealSheafData_of_isClopen : ∀ (Z : Scheme.{0}) (W : Set Z), Is
       (by
         rw [← inf_sup_left]
         have : W' ⊔ Wc = ⊤ := by
-          ext x; simp [W', Wc, em]
+          ext x; simp [W', Wc]
         rw [this, inf_top_eq])
       (by
         refine Disjoint.mono inf_le_right inf_le_right ?_

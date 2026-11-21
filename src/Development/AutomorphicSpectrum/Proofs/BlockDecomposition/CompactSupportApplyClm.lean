@@ -1,12 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.AverageDerivativeL1Bound
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LengthFunctionFactsHold
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DifferentiableAtOfSmooth
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Rr
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousOnFderivApply
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FderivZeroApply
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RdSkewEqConst
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CasimirRightLaplacianFormula
 
 noncomputable section
 
@@ -193,11 +189,11 @@ def Tm (T : V →L[ℂ] V) : Module.End ℂ (Hs μ V) where
   map_add' f h := Hs.ext_on fun y hy => by
     simp only [Hs.add_fn, Pi.add_apply]
     rw [toH_fn hy, toH_fn hy, toH_fn hy]
-    simp only [Hs.add_fn, Pi.add_apply, map_add]
+    simp only [map_add]
   map_smul' c f := Hs.ext_on fun y hy => by
     simp only [Hs.smul_fn, Pi.smul_apply, RingHom.id_apply]
     rw [toH_fn hy, toH_fn hy]
-    simp only [Hs.smul_fn, Pi.smul_apply, map_smul]
+    simp only [map_smul]
 
 variable {μ}
 

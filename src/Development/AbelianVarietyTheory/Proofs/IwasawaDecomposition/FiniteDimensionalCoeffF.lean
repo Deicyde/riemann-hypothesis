@@ -1,11 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.BlowPolSt
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ModuliSchemeLevelMapsHeckePoints
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.NsmulMemSmulTop
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.LevelMapFiniteEtaleSurjective
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.LevelQuotientRepresentsReduced
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.IsQProjOverOfIsIso
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.CardTorsionAbelianVariety
 import Development.AbelianVarietyTheory.BlockTheory.CMModuli.RelativeGroupHatForm
 
 noncomputable section

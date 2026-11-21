@@ -1,5 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.FormalDegreeSquareIntegrable.FormalDegreeFromOrthogonality
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.MeasureTheory.Function.L2Space
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 
@@ -58,7 +65,7 @@ theorem stOrthOf : StOrthOf := by
     refine integral_congr_ae ?_
     filter_upwards [hT w v, hT w' v'] with g h1 h2
     rw [h1, h2]
-    simp [cfL_apply, RCLike.inner_apply, mul_comm]
+    simp [cfL_apply, RCLike.inner_apply]
   have hpiadj : ∀ (h : G) (x y : H), ⟪π h⁻¹ x, y⟫_ℂ = ⟪x, π h y⟫_ℂ := by
     intro h x y
     rw [← inner_pi π hiso h (π h⁻¹ x) y, ← ContinuousLinearMap.mul_apply, ← map_mul, mul_inv_cancel, map_one,
@@ -130,7 +137,7 @@ theorem stOrthOf : StOrthOf := by
     rw [integral_pos_iff_support_of_nonneg (fun g => Complex.normSq_nonneg _) hφi]
     apply hφc.isOpen_support.measure_pos μ
     refine ⟨1, ?_⟩
-    simp [φ, cf, hee, hne]
+    simp [φ, cf, hne]
   refine ⟨(∫ g, φ g ∂μ)⁻¹, inv_pos.mpr hφpos, fun v w v' w' => ⟨integrable_cf π hL2 v w v' w', ?_⟩⟩
   have hκ : conj (c e e) = ((∫ g, φ g ∂μ : ℝ) : ℂ) := by
     have h1 := hBc e e e e

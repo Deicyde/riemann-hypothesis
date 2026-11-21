@@ -1,12 +1,11 @@
-import Mathlib
-import Development.AutomorphicArithmetic.IntegralCasts.Imports
-import Formalism.LocalToGlobal.UnitaryNorms.IsUnitaryNormOf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.RealPlaceAnalysis.ThirdArithmeticHolds
-import Development.AbelianVarietyTheory.Definitions.Foundations.SmoothPartStable
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.TwConj
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ContinuousOfValuedEq
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsOpenKerFinIdele
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.DifferentiableAtChart
+import Development.AutomorphicArithmetic.IntegralCasts.IsOpenStabOfMemNhds
 
 noncomputable section
 
@@ -309,7 +308,7 @@ theorem fderiv_det_one (X : Lie E a) :
     simp only [Polynomial.eval_eq_sum_range]
     fun_prop
   have h2 := ((hr.const_mul (Matrix.of X).trace).const_add 1).add (hP.hasDerivAt.mul (hr.mul hr))
-  simp only [mul_one, zero_smul, Pi.mul_apply, mul_zero, zero_mul, add_zero] at h2
+  simp only [mul_one, zero_smul, Pi.mul_apply, mul_zero, add_zero] at h2
   refine h2.congr_of_eventuallyEq (Filter.Eventually.of_forall fun t => ?_)
   have e : Matrix.of (oneL E a + t • X) = 1 + (t • (1 : Cinf E)) • Matrix.of X := by
     rw [smul_assoc, one_smul]; rfl

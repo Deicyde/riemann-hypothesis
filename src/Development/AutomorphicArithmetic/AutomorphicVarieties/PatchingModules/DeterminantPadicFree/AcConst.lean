@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.DeterminantPadicFree.FrameWith
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.DeterminantPadicFree.MemPowSmul
 
@@ -63,7 +64,7 @@ theorem UpperTheory.V.Pa.Det.matFg :
       map_mul' := by
         intro g h
         ext m : 1
-        simp [Matrix.mul_smul, Matrix.smul_mul, smul_smul, Matrix.mul_assoc, mul_comm] }
+        simp [smul_smul, Matrix.mul_assoc] }
   have hinv : ∀ i j, AdicCont (Ideal.span {algebraMap (PowerSeries K) R PowerSeries.X}) fun g => r g⁻¹ i j :=
     fun i j N => (hr i j N).comp_continuous continuous_inv
   refine Det.z1Fg l ρ Z hφ ?_ ?_

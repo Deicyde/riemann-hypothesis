@@ -1,10 +1,12 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.UpPositionHypothesis
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.UpPositionOfModels
 import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.UnivLinkPfA
 import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.ClassMapPf
 import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.DvdCondition
 import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.U3downPfFildRConst
 import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.WLocal
+import Formalism.SharpRestriction.LevelLetterCocycles.LemCStep
 
 noncomputable section
 

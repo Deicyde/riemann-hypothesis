@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsL2OnDiagonalOfIsL2Metric
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ContinuousAndExistsConjChart
 
@@ -87,7 +87,7 @@ theorem negP_mem {g : ℕ} {l : Fl g} (h : l ∈ stdLat g) : negP l ∈ stdLat g
 theorem star_per {g : ℕ} (t : Matrix (Fin g) (Fin g) ℂ) (l : Fl g) :
     star (per t l) = per (-(t.map (starRingEnd ℂ))) (negP l) := by
   ext i
-  simp [per, negP, vecMul, dotProduct, map_sum]
+  simp [per, negP, vecMul, dotProduct]
 
 theorem lat_conj {g : ℕ} (t : Matrix (Fin g) (Fin g) ℂ) (z : Fin g → ℂ) :
     (∃ l ∈ stdLat g, star z = per t l) ↔ ∃ l ∈ stdLat g, z = per (-(t.map (starRingEnd ℂ))) l := by

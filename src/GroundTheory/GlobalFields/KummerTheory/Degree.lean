@@ -1,6 +1,5 @@
-import Mathlib
-import GroundTheory.ProfiniteCohomology.KummerBasic
-import GroundTheory.ProfiniteCohomology.KummerFinite
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.KummerCorrespondence
 
 namespace GroundTheory.Global

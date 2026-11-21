@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.RealPlaceAnalysis.SmoothOnGVIff
+import BuildAid.Leniency.Open
 import Formalism.RealPlaceAnalysis.RealPlaceTaylor.ModularCharacterEqOneOnExpHermitian
 
 open MeasureTheory Matrix

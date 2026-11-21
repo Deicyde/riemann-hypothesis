@@ -1,6 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsClosedFlagsIff
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.UniMatBlockTriangular
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.KrullDimension.Polynomial
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
 open Module TopologicalSpace GlobalTheory.FlagPts
 
 set_option autoImplicit false
@@ -19,7 +22,7 @@ def affPtsVanIdeal (x : AffPts k J) : PrimeSpectrum (MvPolynomial J k) :=
 theorem mem_affPtsVanIdeal_preimage_basicOpen (p : MvPolynomial J k) (x : AffPts k J) :
     x ∈ affPtsVanIdeal ⁻¹' (PrimeSpectrum.basicOpen p : Set (PrimeSpectrum (MvPolynomial J k))) ↔
       MvPolynomial.eval x p ≠ 0 := by
-  simp [affPtsVanIdeal, PrimeSpectrum.mem_basicOpen]
+  simp [affPtsVanIdeal]
 
 theorem isInducing_affPtsVanIdeal : Topology.IsInducing (affPtsVanIdeal (k := k) (J := J)) := by
   rw [Topology.isInducing_iff, PrimeSpectrum.isTopologicalBasis_basic_opens.eq_generateFrom,

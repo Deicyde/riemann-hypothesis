@@ -1,7 +1,8 @@
-import Formalism.HermitianCurvature.TopDensNonnegOfKappa
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.LiftMemMatrixAlgebra
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.FsvMulFsvNeg
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.FrameOfAdmissibleWord
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.StatementWd
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open Matrix MeasureTheory
 open scoped ComplexConjugate

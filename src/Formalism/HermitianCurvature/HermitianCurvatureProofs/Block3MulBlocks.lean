@@ -1,6 +1,13 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementU
 import Formalism.FormalDegreeBessel.FormalDegreeRatio.GBasic
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.DetNormLe
+import Mathlib.LinearAlgebra.Matrix.Permutation
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
 
 open Matrix Formalism.FourierDecayAlt Formalism.FourierDecayAlt.U Formalism.QuantumDeterminants
 

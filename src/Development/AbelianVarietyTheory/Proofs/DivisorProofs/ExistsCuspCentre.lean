@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.UpperBounds.FreeBallIffOfDimXEqZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.SumRangeBlocks
-import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.ContDiffAtLogMinorProd
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsBlockDetGe
 import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.ExistsPhlaBound
 import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.ExistsMixedProj
@@ -9,10 +8,10 @@ import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.OneAddLeLminorSq
 import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.FirstMinimumInvariantContinuousPosOnFrames
 import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.DivisionWithBasisOfDivision
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.CuspStatementPf
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.ArakelovInstances.PointwiseNormInvarianceHolds
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.PoinStatementPf
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.KronHolPsiStatementHolds
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.MeasInvStatementPf
+import Mathlib.Analysis.Normed.Unbundled.RingSeminorm
+import Mathlib.LinearAlgebra.Matrix.AbsoluteValue
+import ReciprocityTheory.SemistableReduction.SemiAll
 
 open NumberField ReciprocityTheory.ChartRestriction.G.FD ReciprocityTheory.ChartRestriction.G.AR ReciprocityTheory.ChartRestriction.G.AR.Inst ReciprocityTheory.ChartRestriction.G.AR.Up ReciprocityTheory.L2DbarEstimates MeasureTheory Topology
 open scoped ContDiff ENNReal Matrix
@@ -426,7 +425,7 @@ theorem norm_lminor_le {r : ℕ} (g : Matrix (Fin r) (Fin r) ℂ)
     have h := hg (Pi.single b 1)
     have h1 : ReciprocityTheory.MultiplicativeHeights.normSq (Pi.single b 1 : Fin r → ℂ) = 1 := by
       unfold ReciprocityTheory.MultiplicativeHeights.normSq
-      rw [Finset.sum_eq_single b] <;> simp +contextual [Pi.single_apply]
+      rw [Finset.sum_eq_single b] <;> simp +contextual
     have h2 : ‖g a b‖ ^ 2 ≤ ReciprocityTheory.MultiplicativeHeights.normSq (g *ᵥ Pi.single b 1) := by
       unfold ReciprocityTheory.MultiplicativeHeights.normSq
       have := Finset.single_le_sum (f := fun k => ‖(g *ᵥ Pi.single b 1) k‖ ^ 2) (fun _ _ => sq_nonneg _)
@@ -553,7 +552,7 @@ theorem eq_one_of_cong {K : Type} [Field K] [NumberField K] {r M : ℕ} (hM : 5 
         simpa [Matrix.mulVec_mulVec, Matrix.nonsing_inv_mul _ hQu] using this
       have hmap : ((M : K)⁻¹ • (γ - 1)).map σ = (M : ℂ)⁻¹ • (γ.map σ - 1) := by
         ext a b
-        by_cases hab : a = b <;> simp [Matrix.one_apply, hab]
+        by_cases hab : a = b <;> simp [hab]
       have h1 := hb σ u
       rw [hQ, hQ] at h1
       rw [hQ, hQ, hmap, Matrix.smul_mulVec, Matrix.mulVec_smul, Matrix.sub_mulVec, Matrix.one_mulVec,

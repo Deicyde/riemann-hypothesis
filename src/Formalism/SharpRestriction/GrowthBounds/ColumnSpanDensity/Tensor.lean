@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.FactorsLEOfIndex
 import Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.FinrankTensor
-import Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.InvariantSectionsTransportGL
+import Formalism.SharpRestriction.GrowthBounds.LatticeSystems
 
 noncomputable section
 
@@ -47,7 +49,7 @@ private theorem rowAct_invariant_zero_weight_iff {K : Type} [CommRing K] {r n : 
   have e : (rowAct K (n := n) g).comp (rowAct K h) = rowAct K (h * g) := by
     apply MvPolynomial.algHom_ext
     intro v
-    simp only [rowAct, AlgHom.comp_apply, aeval_X, map_sum, map_mul, aeval_C, Matrix.mul_apply, C_mul,
+    simp only [rowAct, AlgHom.comp_apply, aeval_X, map_sum, map_mul, aeval_C, Matrix.mul_apply,
       Finset.mul_sum, Finset.sum_mul, algebraMap_eq, mul_assoc]
     exact Finset.sum_comm
   exact AlgHom.congr_fun e F

@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.SplitPart
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.NotIsCompactUnivFv
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.LevChiEqOne
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.ChartNonempty
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.UnitaryAdelicInfFinSplitPeriodsUnimodular
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ContinuousSwapR
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.FinMEqOneIffMemGinfC

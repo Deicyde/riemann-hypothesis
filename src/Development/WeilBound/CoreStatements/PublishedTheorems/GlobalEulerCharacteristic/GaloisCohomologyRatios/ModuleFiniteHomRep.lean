@@ -1,8 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PublishedTheorems.GlobalEulerCharacteristic.GaloisCohomologyRatios.NormalOfGsOpenSubgroupNormal
-import GroundTheory.ProfiniteCohomology.GlobalEulerCharacteristic.GEqAddOfExactOfFiniteCokernel
-import GroundTheory.ProfiniteCohomology.GlobalEulerCharacteristic.Stabilizers
-import GroundTheory.ProfiniteCohomology.GlobalEulerCharacteristic.ShaCount
-import GroundTheory.ProfiniteCohomology.LocalEulerCharacteristic.AdditiveInvariants
+import GroundTheory.ProfiniteCohomology.GlobalEulerCharacteristic.Kummer
 
 open NumberField IsDedekindDomain CategoryTheory GroundTheory.ProfCoh GroundTheory.Global
 

@@ -1,5 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsEtPlace
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.NotCompactOfMEqOne
+import Mathlib.NumberTheory.Padics.RingHoms
+import Mathlib.Tactic.Polynomial.Basic
 
 set_option autoImplicit false
 noncomputable section

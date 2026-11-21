@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.MahlerMeasure.HasOrder
 
 namespace Formalism.GM.M

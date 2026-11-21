@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.NotIsSplitOfIsInertAt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsIsSplitChartOfBasis
 
 noncomputable section
@@ -40,7 +40,7 @@ theorem exists_esymm_eq (n : ℕ) (a : ℕ → ℂ) (h0 : a 0 = 1) (hn : a n ≠
     · subst h
       simp [hp, hq]
     · rw [hpc 0 h]
-      simp only [hc, Fin.val_mk, Nat.sub_zero]
+      simp only [hc, Nat.sub_zero]
       exact mul_ne_zero (pow_ne_zero _ (by norm_num)) hn
   have hne : ∀ r ∈ p.roots, r ≠ 0 := by
     intro r hr h0
@@ -63,7 +63,7 @@ theorem exists_esymm_eq (n : ℕ) (a : ℕ → ℂ) (h0 : a 0 = 1) (hn : a n ≠
         Multiset.prod_zero, h0]
     · have hlt : n - j < n := Nat.sub_lt (lt_of_lt_of_le hj0 hj) hj0
       rw [hpc _ hlt] at hv
-      simp only [hc, Fin.val_mk, Nat.sub_sub_self hj] at hv
+      simp only [hc, Nat.sub_sub_self hj] at hv
       have hu : ((-1 : ℂ) ^ j) ≠ 0 := pow_ne_zero _ (by norm_num)
       exact (mul_left_cancel₀ hu hv).symm
 

@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.FirstDeriv
-import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.FrobeniusLiftNorms.CoeffSubstLgFOfDegreeOne
+import BuildAid.Leniency.Open
+import Formalism.GaussJetBounds.Statement
 
 noncomputable section
 

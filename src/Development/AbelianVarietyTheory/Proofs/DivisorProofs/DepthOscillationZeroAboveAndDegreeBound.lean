@@ -1,8 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ESmall
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PlaceDivisors.StChartF
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ProductDepthSumRoundingOscillationStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FactorDepthBetweenZeroAndBoundStatement
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.CmHostRootNegDiscriminantNeNegSelf
 open NumberField IsDedekindDomain Formalism.L2.Pj ReciprocityTheory.PGsh ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Geo.Tor.Germ GlobalTheory.FGDepth GlobalTheory.CharDepth GlobalTheory.FactorDepth GlobalTheory.RefSum
 open GlobalTheory.IndefiniteRowSideFullHecke.TypedPartSplitPrimes (IsIntHom IsOrbit FrobOnType embX primeBelow SplitInK InertInK)
@@ -95,7 +93,7 @@ theorem oscLe_zero_above_and_degree : ∀ (E : Type) [Field E] [NumberField E] [
     intro T io e ho y
     obtain ⟨h1, h2⟩ := h T io e ho y
     refine ⟨by simpa using h1, fun ha => (h2 ha).trans ?_⟩
-    simp only [Finset.sum_const_zero, Nat.cast_zero, zero_add]
+    simp only [Nat.cast_zero, zero_add]
     exact EReal.coe_le_coe_iff.2 hsum
 
 end GlobalTheory.RefSum

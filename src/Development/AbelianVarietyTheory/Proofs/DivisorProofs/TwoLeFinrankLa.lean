@@ -1,5 +1,7 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToRepFam
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.SiegelToroidalIntegral
+import Development.AbelianVarietyTheory.Definitions.Divisors.NotCompactOfMEqOne
 
 noncomputable section
 

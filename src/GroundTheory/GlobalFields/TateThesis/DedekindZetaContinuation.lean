@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.TateThesis.DedekindContinuation
 
 open NumberField InfinitePlace IsDedekindDomain MeasureTheory Complex Topology Filter Set

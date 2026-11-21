@@ -1,7 +1,6 @@
+import BuildAid.Leniency.Open
 import Mathlib.Data.Real.Basic
 import Mathlib.Algebra.Order.BigOperators.Ring.Finset
-import Mathlib.Algebra.Order.Field.Basic
-import Mathlib.Data.Finset.Lattice.Fold
 
 namespace Formalism.LFunctionChainParameters.WeightedMeanLemmas
 

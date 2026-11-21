@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.SpanPowerMembership.NStageTrivialCharacterCoeffEq
+import Formalism.LocalRingCardinality.SpanPowerMembership.Places
+import Mathlib.Algebra.Order.PUnit
+import Mathlib.Algebra.Ring.BooleanRing
 
 noncomputable section
 

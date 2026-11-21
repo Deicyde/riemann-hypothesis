@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.LatticeGluingRadicals
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.InvertibleIdealIndex.SubmodulePiToAddSubgroup
 import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.GramDeterminantOfGenericIndex
 
@@ -210,7 +210,7 @@ theorem hT_iota (u : Fin e → S.V) (v : S.V) (c : Fin e → E) :
   simp [j_iota, Fintype.linearCombination_apply, map_sum, map_smul]
 
 theorem hT_smul_left (x : E) (v w : S.V) : S.hT (x • v) w = star x * S.hT v w := by
-  simp [LinearMap.map_smulₛₗ₂]
+  simp
   left
   rfl
 

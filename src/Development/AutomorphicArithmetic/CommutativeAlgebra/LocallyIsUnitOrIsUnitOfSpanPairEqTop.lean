@@ -1,4 +1,5 @@
-import Development.AutomorphicArithmetic.CupPullbacks.ConstCompSingle
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.SecClass
 
 open CategoryTheory Limits AlgebraicGeometry Opposite GlobalTheory.EtC UpperTheory.Pbf
 

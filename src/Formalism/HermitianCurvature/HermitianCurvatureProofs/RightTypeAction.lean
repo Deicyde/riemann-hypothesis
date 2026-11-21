@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.OneParameterDifferentiable
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.RestrictionIrrelevantDoubleLevelOperator
 
@@ -212,7 +214,7 @@ theorem right_type_action : Formalism.FourierDecayAlt.Q.RightTypeAction := by
   simp only [List.map_ofFn, Function.comp_def, ite_smul, zero_smul] at key
   choose Bf hBf1 hBf2 using key
   simp only [id, Finset.sum_apply, Pi.smul_apply, ContinuousLinearMap.sum_apply,
-    ContinuousLinearMap.smul_apply, map_sum, map_zsmul, map_smul]
+    ContinuousLinearMap.smul_apply, map_sum, map_smul]
   refine Finset.sum_congr rfl fun σ _ => ?_
   rw [hBf1 σ g hg, ContinuousLinearMap.comp_apply, hBf2 σ v]
 

@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.ChowLCut
+import Mathlib.AlgebraicGeometry.ProjectiveSpectrum.Proper
+import Mathlib.RingTheory.TotallySplit
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry LateralTheory.E.t_E2Cut

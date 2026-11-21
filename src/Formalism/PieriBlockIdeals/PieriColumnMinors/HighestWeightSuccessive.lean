@@ -1,5 +1,17 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.PieriBlockIdeals.StatementLP
-import Formalism.PieriBlockIdeals.PieriColumnMinors.Symmetrization
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
 
 namespace Formalism.CohomologicalDescent.LP
 
@@ -91,7 +103,7 @@ theorem highest_weight_successive : StepHW := by
     · subst hab
       simp [sub_smul]
     · rw [if_neg (Ne.symm hab)]
-      simp [Pi.single_apply, hab]
+      simp [hab]
 
 section Tower
 

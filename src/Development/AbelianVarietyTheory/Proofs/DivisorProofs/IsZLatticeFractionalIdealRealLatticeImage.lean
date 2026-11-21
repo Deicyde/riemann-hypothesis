@@ -1,5 +1,10 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RembApply
-import Formalism.LatticeTheta.Statement
+import Mathlib.Algebra.Module.ZLattice.Basic
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open NumberField nonZeroDivisors MeasureTheory GlobalTheory.LipschitzTR GlobalTheory.IndefiniteRowSideFullHecke.TraceDualDifferent
 open scoped FourierTransform RealInnerProductSpace
 
@@ -18,7 +23,7 @@ theorem span_range_remb (F : Type) [Field F] [NumberField F] :
     have h1 : f (remb F a) = 0 := hle (Submodule.subset_span ⟨a, rfl⟩)
     have h2 : remb F a = ∑ τ : F →+* ℝ, τ a • EuclideanSpace.single τ (1 : ℝ) := by
       ext σ
-      simp [EuclideanSpace.single_apply, Pi.single_apply]
+      simp [Pi.single_apply]
     rw [h2, map_sum] at h1
     simpa [mul_comm] using h1
   have hcoef := Fintype.linearIndependent_iff.mp hli (fun τ => f (EuclideanSpace.single τ 1))
@@ -30,7 +35,7 @@ theorem span_range_remb (F : Type) [Field F] [NumberField F] :
   intro x
   have hx : x = ∑ τ : F →+* ℝ, x τ • EuclideanSpace.single τ (1 : ℝ) := by
     ext σ
-    simp [EuclideanSpace.single_apply, Pi.single_apply]
+    simp [Pi.single_apply]
   rw [hx, map_sum]
   simp [hcoef]
 

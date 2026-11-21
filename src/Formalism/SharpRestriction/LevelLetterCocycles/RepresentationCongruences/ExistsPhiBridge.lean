@@ -1,6 +1,8 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.ConstantCoeffResidueUXPow
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.GammaPi0EqPi0MulUnit
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.ConstantCoeffSubstAlgHom
+import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.ConstantLeRpowOfThreeLe
 
 noncomputable section
 

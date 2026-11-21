@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.LengthEqLengthInvariantsOfTorsionLevels
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GeneratorCountTuples.TensSurj
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GeneratorCountTuples.TensTors
 

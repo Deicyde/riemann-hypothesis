@@ -1,6 +1,5 @@
-import Formalism.HermitianCurvature.StatementLE
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ShiftBound
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.DegreeOfProdLinearLe
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.WeightedL2BoundedMul
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.Cauchy
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.Markov

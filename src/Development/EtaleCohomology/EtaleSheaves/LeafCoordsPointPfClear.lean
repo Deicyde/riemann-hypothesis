@@ -1,4 +1,6 @@
-import Development.EtaleCohomology.EtaleSheaves.LeafCoordsPfNakH
+import BuildAid.Leniency.Open
+import Development.EtaleCohomology.EtaleSheaves.LeafCoordsPf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 

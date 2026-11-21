@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.RecLevel
-import Formalism.SatakeDualWeyl.KpqSubgroupCompact
+import Formalism.LocalToGlobal.Columns.AdelicLemmas
 
 open NumberField IsDedekindDomain Matrix
 open scoped TensorProduct

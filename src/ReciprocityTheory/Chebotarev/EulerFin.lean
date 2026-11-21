@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.Chebotarev.EulerFac
+import Mathlib.Topology.Separation.CompletelyRegular
 
 open NumberField Filter Topology
 

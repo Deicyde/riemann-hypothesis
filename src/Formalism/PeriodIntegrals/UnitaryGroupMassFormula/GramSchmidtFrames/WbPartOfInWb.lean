@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.GramSchmidtFrames.PhiMulVec
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.GramSchmidtFrames.LocBCore
 
 open MeasureTheory Formalism.REAL Formalism.QuantumDeterminants Formalism.FourierDecayAlt Formalism.FourierDecayAlt.C6
 open Matrix
@@ -131,7 +134,7 @@ lemma sub_prW_X {z q : Fin (2 * r + k + 1) → ℂ} (hz : C2.StdZ k r z)
         · intro h
           exact absurd (Finset.mem_univ _) h
       · intro i _ hi
-        simp [Pi.single_apply, hi]
+        simp [hi]
       · intro h
         exact absurd (Finset.mem_univ _) h
     rw [hc] at h
@@ -268,7 +271,7 @@ private lemma herm_bvec_lemma (q : Fin (2 * r + k + 1) → ℂ) (a : Fin r) :
     · intro h
       exact absurd (Finset.mem_univ _) h
   · intro i _ hi
-    simp [Pi.single_apply, hi]
+    simp [hi]
   · intro h
     exact absurd (Finset.mem_univ _) h
 

@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsStableGauss
-import GroundTheory.LocalFields.FiniteExtension
 import GroundTheory.AutomorphicForms.HermitianClassification
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.NegOneMemNormOfValuationEqStatement
+import Mathlib.LinearAlgebra.Charpoly.BaseChange
 
 open scoped TensorProduct
 

@@ -1,7 +1,6 @@
-import Mathlib
-import GroundTheory.GlobalFields.HerbrandQuotients.Cyclic
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.HerbrandQuotients.Lattice
-import GroundTheory.GlobalFields.HerbrandQuotients.Permutation
 import GroundTheory.GlobalFields.HerbrandQuotients.CycTate
 
 namespace GroundTheory.Global

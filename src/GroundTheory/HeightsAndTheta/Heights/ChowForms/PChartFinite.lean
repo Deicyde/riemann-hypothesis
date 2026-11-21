@@ -1,7 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ChowForms.StatementsSectionOrder
 import GroundTheory.HeightsAndTheta.Heights.ChowForms.PFGNullstellensatz
 import GroundTheory.HeightsAndTheta.Heights.ChowForms.PChowFormMultiHomog
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Tactic.Monotonicity.Lemmas
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

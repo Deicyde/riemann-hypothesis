@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CubeRatio
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EqOfPderivOfBlinKill
 
 open GlobalTheory.RayHoriz.CubeNorm
@@ -50,7 +51,7 @@ theorem faceDeriv_constantCoeff_and_isSymCoc (G : MvPowerSeries (Fin 3 × ρ) S)
     rw [faceDeriv, blin_blin, blin_blin]
     congr 1
     funext k j
-    fin_cases k <;> fin_cases j <;> simp [Fin.sum_univ_three, Fin.sum_univ_two]
+    fin_cases k <;> fin_cases j <;> simp [Fin.sum_univ_two]
   ·
     have key : ∀ (A : Fin 3 → Finset (Fin 4)) (B : Fin 2 → Fin 3 → ℤ),
         (∀ k, (if (3 : Fin 4) ∈ A k then (1 : ℤ) else 0) = if k = 2 then 1 else 0) →
@@ -69,13 +70,13 @@ theorem faceDeriv_constantCoeff_and_isSymCoc (G : MvPowerSeries (Fin 3 × ρ) S)
       (pderiv S ((3 : Fin 4), r) F)) hc
     simp only [map_add, blin_add] at hc'
     rw [key _ (![![1, 1, 0], ![0, 0, 1]]) (by intro k; fin_cases k <;> simp)
-        (by intro k j; fin_cases k <;> fin_cases j <;> simp [Fin.sum_univ_four, Fin.sum_univ_three]),
+        (by intro k j; fin_cases k <;> fin_cases j <;> simp [Fin.sum_univ_four]),
       key _ (![![1, 0, 0], ![0, 1, 0]]) (by intro k; fin_cases k <;> simp)
-        (by intro k j; fin_cases k <;> fin_cases j <;> simp [Fin.sum_univ_four, Fin.sum_univ_three]),
+        (by intro k j; fin_cases k <;> fin_cases j <;> simp),
       key _ (![![1, 0, 0], ![0, 1, 1]]) (by intro k; fin_cases k <;> simp)
-        (by intro k j; fin_cases k <;> fin_cases j <;> simp [Fin.sum_univ_four, Fin.sum_univ_three]),
+        (by intro k j; fin_cases k <;> fin_cases j <;> simp [Fin.sum_univ_four]),
       key _ (![![0, 1, 0], ![0, 0, 1]]) (by intro k; fin_cases k <;> simp)
-        (by intro k j; fin_cases k <;> fin_cases j <;> simp [Fin.sum_univ_four, Fin.sum_univ_three])] at hc'
+        (by intro k j; fin_cases k <;> fin_cases j <;> simp)] at hc'
     exact hc'
 
 end GlobalTheory.CubeSeries

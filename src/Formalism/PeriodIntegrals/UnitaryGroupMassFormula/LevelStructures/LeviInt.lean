@@ -1,7 +1,7 @@
-import Mathlib
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LevelStructures.LocLevi
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LevelStructures.LatAdapted
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LevelStructures.CMInst
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.SiegelLatticeTheory.FundamentalEquivalence.LevelIntersectParabolic
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 noncomputable section
 

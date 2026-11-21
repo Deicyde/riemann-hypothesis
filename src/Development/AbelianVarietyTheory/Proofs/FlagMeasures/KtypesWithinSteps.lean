@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.RealPlaceAnalysis.StatementU
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.RealPlaceAnalysis.QuotientSettingHolds
 
 open Formalism.REAL

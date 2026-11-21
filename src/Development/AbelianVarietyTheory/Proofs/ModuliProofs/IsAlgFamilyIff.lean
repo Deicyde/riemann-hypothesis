@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.PrincipalLattices.FiniteDimensionalBase
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.CMModuli.CMUniformizationSpread
-import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.ExistsIsHomFamilyBaseChange
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.SabComp
 
 set_option autoImplicit false
 

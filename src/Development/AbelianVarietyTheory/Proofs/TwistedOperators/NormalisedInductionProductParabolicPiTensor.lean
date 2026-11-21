@@ -1,8 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.ExistsCellOfIsSubquotient
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HasFiniteLengthOfIsIrreducible
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SmRep
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.InductionContragredient
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.LinearAlgebra.PiTensorProduct.Basis
 
 noncomputable section
 

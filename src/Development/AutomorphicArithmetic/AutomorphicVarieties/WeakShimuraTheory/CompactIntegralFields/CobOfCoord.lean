@@ -1,13 +1,9 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.NearSplit
-import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.EntryMem
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PublishedTheorems.FerreroWashington
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.CompactIntegralFields.PtPair
 import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.GeAlgTop
 import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.EiiUnit
 import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.XvanExt
 import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.LocVanP
-import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.LMemMax
-import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.SelmerTransport.NormO
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual Formalism.HC ReciprocityTheory.Gal IsLocalRing Polynomial UpperTheory.V.Base UpperTheory.V.Alg UpperTheory.V.HV UpperTheory.V.GradeZeroInterpolatingElement UpperTheory.V.Ws
 
@@ -325,7 +321,7 @@ theorem UpperTheory.V.Ws.triV :
     unfold IsGSp at h ⊢
     rw [← hadj, ← map_mul, h]
     ext i j
-    by_cases hij : i = j <;> simp [Matrix.one_apply, hij]
+    by_cases hij : i = j <;> simp [hij]
   have hge : ∀ i j, Ge (mapRep 𝔞.toK r) i j ↔ Ge r i j := fun i j => by
     simp only [Ge, mapRep_apply, Ne, map_eq_zero_iff _ hinj]
   obtain ⟨-, grefl, gtr, h3, h5, -⟩ := geAlg 𝔞.K (mapRep 𝔞.toK r) _ (fun g => hgsp _ _ (hu.mult g)) fun i => push _ r i (hE i)

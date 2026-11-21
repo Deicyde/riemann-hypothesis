@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJDHatJDACapTodaVCut
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJDHatJDACapToda
 
 open Matrix
 

@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.ConjStable
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.AdRepBaseLiftApply
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PrimitiveFrobeniusFixed.QocEquiv
@@ -153,7 +154,7 @@ private theorem shaInj_mem {O Γ H : Type} [CommRing O] [IsDomain O] [IsLocalRin
   have hU : ∀ g : Γ, ((((Units.map (Ideal.Quotient.mk (Ideal.span {a})).toMonoidHom).comp Ψ g)⁻¹ :
       (O ⧸ Ideal.span {a})ˣ) : O ⧸ Ideal.span {a}) = Ideal.Quotient.mk _ (((Ψ g)⁻¹ : Oˣ) : O) := by
     intro g
-    simp [map_inv]
+    simp
   have had : ∀ (g : Γ) (x : O ⧸ Ideal.span {a}),
       adRep ((GG.map (Ideal.Quotient.mk (Ideal.span {a}))).comp (r0 η Ψ)) g (shaInj_mat x) =
         shaInj_mat (Ideal.Quotient.mk _ (((Ψ g)⁻¹ : Oˣ) : O) * x) := by

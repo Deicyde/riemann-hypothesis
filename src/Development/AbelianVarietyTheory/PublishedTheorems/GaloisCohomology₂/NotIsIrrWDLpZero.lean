@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.LocalLanglandsExists
 
 noncomputable section
@@ -63,7 +64,7 @@ theorem segSum_single (rc : IrrGL (w.adicCompletion E) → WD h) (ρ : IrrGL (w.
         (TensorProduct.congr (.refl ℂ _) (LinearEquiv.funUnique (Fin 1) ℂ ℂ) v))
     induction v using TensorProduct.induction_on with
     | zero => simp
-    | tmul x y => simp [WDRep.spEig, coe_qPow]
+    | tmul x y => simp [WDRep.spEig]
     | add x y hx hy => simp only [map_add, hx, hy]
   · obtain ⟨v, u⟩ := v
     show (TensorProduct.rid ℂ _) (TensorProduct.congr (.refl ℂ _) (LinearEquiv.funUnique (Fin 1) ℂ ℂ)

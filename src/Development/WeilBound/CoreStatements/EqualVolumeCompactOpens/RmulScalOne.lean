@@ -1,9 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.PowEqOneOfIsIntegralOfMulComplexConjEqOneAlt
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.RootOfUnityEqOneOfSubOneMemSpan
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.MemIdealSmulTopIffForallDual
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.IdealInfSmulTopOfProjective
 import Development.WeilBound.CoreStatements.EqualVolumeCompactOpens.DiagMulVecTmul
-import Development.WeilBound.CoreStatements.EqualVolumeCompactOpens.InfSpanNeBot
+import Development.WeilBound.CoreStatements.EqualVolumeCompactOpens.LevelIdeal
 
 noncomputable section
 

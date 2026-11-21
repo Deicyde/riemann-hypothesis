@@ -1,7 +1,6 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.NonemptyUnitAt
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.TorusPin
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.TorusAtData
-import Formalism.LocalToGlobal.ProjectiveLattices.RecPJThAllNeBot
+import Formalism.LocalToGlobal.ProjectiveLattices.HasDataCondition
 
 noncomputable section
 

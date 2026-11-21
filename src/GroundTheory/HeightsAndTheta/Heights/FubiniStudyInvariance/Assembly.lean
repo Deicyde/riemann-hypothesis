@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.FubiniStudyInvariance.Statements
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.FubiniStudyInvariance.PLinChange
 import GroundTheory.HeightsAndTheta.Heights.FubiniStudyInvariance.PRadial
 import GroundTheory.HeightsAndTheta.Heights.FubiniStudyInvariance.PAmbChart

@@ -1,5 +1,6 @@
-import Development.WeilBound.ThetaLifts.LocalTheory.UnramifiedDeterminedBySpherical
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.RamificationIdxEqOneOfIsSquare
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.ThetaLifts.LocalTheory.IsArchimedeanLocalEquivariantMap
 
 noncomputable section
 

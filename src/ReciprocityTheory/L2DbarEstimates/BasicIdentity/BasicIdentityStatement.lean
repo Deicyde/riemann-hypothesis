@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.L2DbarEstimates.IsLocalHomeomorph
 
 namespace ReciprocityTheory.L2DbarEstimates

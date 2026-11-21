@@ -1,10 +1,15 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.ImportsMoreFurther
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.CechHcSubsingletonOfBlock
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.ImportsRestBis
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.KleimanNefness.AlgCechSt
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PQuotPartGraded
 import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.IsVerticalDivOfIsVerticalDivisorAlt
+import GroundTheory.HeightsAndTheta.Heights.FieldsOfNumbers.PHilbDegreeBound
+import Mathlib.Data.Rat.Star
+import Mathlib.RingTheory.PicardGroup
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.Kleiman.SectionsOverLocalization

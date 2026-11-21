@@ -1,5 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.IsFrameVec
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.TowerOrigin
+import Formalism.LocalRingCardinality.DataHost
 open NumberField IsDedekindDomain MeasureTheory Filter Topology
 open Formalism.L2.Pj ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.FD ReciprocityTheory.ChartRestriction.G.AR.Up ReciprocityTheory.ChartRestriction.G.AR.Inst Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.L2.Theta
 open GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Rec
@@ -41,7 +43,7 @@ theorem flag_change {b c : Fin r → L} {T : Matrix (Fin r) (Fin r) Ω} (hb : Li
     rw [← Set.image_univ]
     congr 2
     ext k
-    simp [k.isLt]
+    simp
   have hc : LinearIndependent Ω c := by
     rw [linearIndependent_iff_card_eq_finrank_span]
     show Fintype.card (Fin r) = Module.finrank Ω (Submodule.span Ω (Set.range c))

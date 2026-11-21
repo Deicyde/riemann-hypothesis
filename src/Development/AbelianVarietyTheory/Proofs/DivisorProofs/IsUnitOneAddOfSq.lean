@@ -1,7 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemBand
-import GroundTheory.AutomorphicForms.CuspidalDiscreteness.ExistsNormRconvLeSiegel
-import GroundTheory.AutomorphicForms.ReductionSiegel
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.DifferentiableAtChart
+import GroundTheory.AutomorphicForms.CuspidalDiscreteness.MixedDifference
+import Mathlib.LinearAlgebra.Eigenspace.Zero
+import Mathlib.Tactic.Monotonicity.Lemmas
 open NumberField MeasureTheory GlobalTheory.CuspRep GlobalTheory.HCF Topology
 open scoped ContDiff
 

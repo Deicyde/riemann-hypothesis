@@ -1,5 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.CocycleRightZeroThd
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.GCauchyStatement
+import Mathlib.Analysis.Analytic.IteratedFDeriv
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Topology.Sheaves.Presheaf
 
 set_option autoImplicit false
 
@@ -44,13 +50,13 @@ theorem cml_perm {l l' : List V} (p : l.Perm l') :
         simp only [Function.comp_apply, Equiv.swap_apply_def, Fin.mk.injEq]
         split_ifs with h1 h2
         · subst h1
-          simp [List.getElem_append]
+          simp
         · subst h2
-          simp [List.getElem_append]
+          simp
         · rcases lt_or_ge i l₀.length with h3 | h3
-          · simp [List.getElem_append, h3]
+          · simp [h3]
           · obtain ⟨j, rfl⟩ : ∃ j, i = l₀.length + (j + 2) := ⟨i - (l₀.length + 2), by omega⟩
-            simp [List.getElem_append]
+            simp
       · have hk' : ¬ (l₀ ++ x :: y :: k).length = n := by simpa using hk
         rw [dif_neg hk, dif_neg hk']
     | trans _ _ ih₁ ih₂ => intro l₀; exact (ih₁ l₀).trans (ih₂ l₀)
@@ -125,9 +131,9 @@ theorem dof_addF {g : ℕ} (v : Fin g → R) (f : PS R 1 g) :
   refine Finset.sum_congr rfl fun j _ => ?_
   congr 1
   rw [Finset.sum_eq_single j]
-  · simp [addF, MvPowerSeries.pderiv_X, Pi.single_apply]
+  · simp [addF]
   · intro b _ hb
-    simp [addF, MvPowerSeries.pderiv_X, Pi.single_apply, hb, Ne.symm hb, ev_zero']
+    simp [addF, Ne.symm hb, ev_zero']
   · intro h
     exact absurd (Finset.mem_univ j) h
 
@@ -166,7 +172,7 @@ theorem fct_add_single (n : Fin 1 × Fin g →₀ ℕ) (p : Fin 1 × Fin g) :
       ((((n + Finsupp.single p 1 : Fin 1 × Fin g →₀ ℕ) q).factorial : ℕ) : ℂ) = ((n q).factorial : ℂ) := by
     intro q hq
     have hqp := Finset.ne_of_mem_erase hq
-    simp [Finsupp.single_apply, hqp, Ne.symm hqp]
+    simp [hqp]
   rw [Finset.prod_congr rfl h1, Finsupp.add_apply, Finsupp.single_eq_same, Nat.factorial_succ]
   push_cast
   ring
@@ -222,7 +228,7 @@ theorem toMultiset_map_eq {ι : Type} [Fintype ι] (u : ι → Fin g → ℂ) (m
     rw [Finset.sum_eq_single a]
     · simp
     · intro l _ hl
-      simp [Finsupp.single_apply, Ne.symm hl]
+      simp [Ne.symm hl]
     · intro h
       exact absurd (Finset.mem_univ a) h
 
@@ -243,7 +249,7 @@ theorem constantCoeff_dmonOf_tay {θ : (Fin g → ℂ) → ℂ} (hθ : ContDiffA
   first
   | exact Finset.sum_toList _ _
   | exact Finset.sum_to_list _ _
-  | simp [Finset.sum_toList]
+  | simp
 
 theorem coeff_tay_zero (θ : (Fin g → ℂ) → ℂ) (n : Fin 1 × Fin g →₀ ℕ) :
     fct n * coeff n (tay θ 0) = mD θ 0 (dirs n) := by

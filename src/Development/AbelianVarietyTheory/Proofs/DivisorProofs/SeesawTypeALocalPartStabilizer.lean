@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeEvFun
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StabilizerCompactLocalSchwartzStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TriplePairLocalPartCaseAStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IdeleAbsPowerIntegrableStatement

@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsTangent
-import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.IsProjOverCompOfIsClosedImmersion
 
 set_option autoImplicit false
 
@@ -209,7 +209,7 @@ theorem cutSet_unit : cutSet (proj F N) E (crd F N) (unitCoef E N) = {origin F E
     have h0 : v 0 ≠ 0 := fun e => hv (funext (Fin.cases e h))
     refine ((ptOf_eq_iff F E N _ _ _ _).2 ⟨Units.mk0 _ h0, funext (Fin.cases ?_ fun i => ?_)⟩).symm
     · simp [Units.smul_def]
-    · simp [Units.smul_def, h i]
+    · simp [h i]
   · rintro rfl i
     rw [origin, ptOf_mem_chart]
     simp
@@ -389,7 +389,7 @@ theorem exists_tangent_origin : ∃ δ, IsTangent (proj F 1) E (origin F E 1) δ
     rw [origin, ptOf_ι, back_ι] at h'
     obtain ⟨u, hu⟩ := (pt_eq_pt_iff _ _ _).1 ((spMap_pt _ _ _ _).symm.trans (h'.trans (Category.comp_id _)))
     have h1 := congrArg TrivSqZeroExt.snd (congrFun hu 1)
-    simp [Units.smul_def] at h1
+    simp at h1
 
 theorem not_cutGood_double (bd : (proj F 1).Cl) :
     ¬ cutGood (proj F 1) E ![1, crd F 1 1, crd F 1 1 ^ 2] (fun _ => ![0, 0, 1]) bd := fun h => by

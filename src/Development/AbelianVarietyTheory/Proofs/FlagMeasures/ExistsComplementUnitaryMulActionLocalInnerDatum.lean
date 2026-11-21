@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.IsTermOver
 open ValuativeRel Formalism.MainNotions.S Formalism.MainNotions.S.Loc
 open scoped Pointwise ENNReal Classical

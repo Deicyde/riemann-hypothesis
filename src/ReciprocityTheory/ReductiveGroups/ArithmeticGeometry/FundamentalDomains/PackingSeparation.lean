@@ -1,4 +1,10 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.IntegralTraceNormBounds
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.Topology.Separation.CompletelyRegular
 
 namespace ReciprocityTheory.ChartRestriction.G.FD.PackingSeparation
 

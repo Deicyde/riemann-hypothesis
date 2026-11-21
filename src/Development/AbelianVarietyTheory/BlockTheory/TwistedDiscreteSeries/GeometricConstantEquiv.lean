@@ -1,6 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.FWTie
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.ThClassPins
+import Formalism.LocalToGlobal.IndefiniteReal.ThPinsR
 
 noncomputable section
 

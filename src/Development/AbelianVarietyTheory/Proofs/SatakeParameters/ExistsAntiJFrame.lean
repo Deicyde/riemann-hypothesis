@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.ThetaLiftGeometry.InertPlaceSetting
 import Development.AbelianVarietyTheory.BlockTheory.ThetaLiftGeometry.SphericalThetaInertPlaces
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.InertPlaceHeckeDoubleCosetsInverseRepsLabel
@@ -465,7 +466,7 @@ theorem strPar_split {q : ℕ} (hq : q ≠ 0) (t : ℕ) : ∃ H : Multiset ℂ, 
     · rw [Multiset.mem_add, Multiset.mem_singleton]
       exact fun h => h.elim h2 (zpow_ne_zero _ (Nat.cast_ne_zero.2 hq)).symm
     · rw [strPar_add_two, h3, Multiset.map_add, Multiset.map_singleton]
-      simp only [Nat.odd_add, Nat.not_odd_iff_even.2 even_two, even_two, iff_true]
+      simp only [Nat.odd_add, even_two, iff_true]
       abel
 
 theorem exists_partner {q : ℕ} (hq : q ≠ 0) (a t : ℕ) (α : Fin (a / 2) → ℂ) (hα : ∀ l, α l ≠ 0) :
@@ -495,7 +496,7 @@ theorem exists_partner {q : ℕ} (hq : q ≠ 0) (a t : ℕ) (α : Fin (a / 2) �
     rw [e, e, hβ, h3]
     generalize Finset.univ.val.map α = A
     rcases Nat.even_or_odd a with ha | ha <;> rcases Nat.even_or_odd t with ht | ht <;>
-      simp [pow_add, ha, ht, Nat.odd_add, Nat.not_odd_iff_even.2, Nat.not_even_iff_odd.2, Even.neg_one_pow,
+      simp [pow_add, ha, ht, Nat.odd_add, Nat.not_odd_iff_even.2, Nat.not_even_iff_odd.2,
         Odd.neg_one_pow, Multiset.map_map, inv_neg] <;>
       (try simp only [← Multiset.singleton_add]) <;> abel
 

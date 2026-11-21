@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.GlobalClassFormation.CupDecompositionGlobal
 import GroundTheory.ProfiniteCohomology.GlobalClassFormation.Splitting
 import GroundTheory.ProfiniteCohomology.GlobalClassFormation.RealPlaces
-import GroundTheory.ProfiniteCohomology.GlobalClassFormation.UnitsLevels
 import GroundTheory.ProfiniteCohomology.GlobalClassFormation.LocalDegrees
 set_option maxSynthPendingDepth 1
 

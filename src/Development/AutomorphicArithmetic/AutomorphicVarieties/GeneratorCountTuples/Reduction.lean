@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GeneratorCountTuples.CardRed
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GeneratorCountTuples.TensCard
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GeneratorCountTuples.ChiTriv
@@ -8,6 +10,7 @@ import Development.AutomorphicArithmetic.AutomorphicVarieties.GeneratorCountTupl
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GeneratorCountTuples.NumGens
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GeneratorCountTuples.NumT
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GeneratorCountTuples.NumFin
+import Development.AutomorphicArithmetic.AutomorphicVarieties.GeneratorCountTuples.Bridge
 
 noncomputable section
 

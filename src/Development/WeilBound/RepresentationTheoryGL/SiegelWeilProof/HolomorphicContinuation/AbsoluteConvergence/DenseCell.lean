@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.AbsoluteConvergence.BlocksRel
 
 noncomputable section
@@ -127,7 +128,7 @@ theorem dense_cell : Dense {y : GR n | (mR y).toBlocks₂₁.det ≠ 0} := by
     simpa [nbG_zero] using h
   apply mem_closure_of_tendsto htend
   filter_upwards [nhdsWithin_le_nhds hT, self_mem_nhdsWithin] with t h1 h2
-  simp only [Set.mem_setOf_eq, nbG_low]
+  simp only [nbG_low]
   intro hdet
   exact h1 ⟨hdet, h2⟩
 

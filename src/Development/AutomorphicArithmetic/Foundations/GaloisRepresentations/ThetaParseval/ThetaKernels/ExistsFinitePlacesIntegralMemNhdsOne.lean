@@ -1,8 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.SchurStep
-import Development.WeilBound.ThetaLifts.LatticeBasics.BadFactor
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdeleEqZeroOfComp
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.HalfIndexLattices.SplitStab
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.HalfIndexLattices.IsLatRepL
+import Development.WeilBound.ThetaLifts.LatticeBasics.EulerProd
 
 set_option synthInstance.maxHeartbeats 200000
 

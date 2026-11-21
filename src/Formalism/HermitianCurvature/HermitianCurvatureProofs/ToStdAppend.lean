@@ -1,4 +1,5 @@
-import Formalism.HermitianCurvature.StatementU
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.PsiNegBetaL
 
 namespace Formalism.FourierDecayAlt.P.GermFibreKernels

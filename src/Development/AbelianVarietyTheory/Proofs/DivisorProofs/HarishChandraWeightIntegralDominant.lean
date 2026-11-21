@@ -1,4 +1,5 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.DatumEquiv
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.VdmSplit
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TraceGap.ExistsNonzeroPhysicalHighestWeightVectorTensFock
 

@@ -1,4 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.OmegaFactorization
 
 noncomputable section
@@ -34,6 +36,6 @@ def posCone (𝔞 : GlobalTheory.IndefiniteRowSideFullHecke.OmegaFactorization.F
   {ν : F // ν ∈ (𝔞 : FractionalIdeal (𝓞 F)⁰ F) ∧ ∀ τ : F →+* ℝ, 0 < τ (ν * b)}
 
 example : NzCls (1 : GlobalTheory.IndefiniteRowSideFullHecke.OmegaFactorization.Frac F) :=
-  Quotient.mk _ ⟨1, by simp [FractionalIdeal.one_mem_one], one_ne_zero⟩
+  Quotient.mk _ ⟨1, by simp, one_ne_zero⟩
 
 end GlobalTheory.SlopeTestRemainingChoices.EisFibre

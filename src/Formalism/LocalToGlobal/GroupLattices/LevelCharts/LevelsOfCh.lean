@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.LevelCharts.FiniteCompG
-import Formalism.LocalToGlobal.GroupLattices.LevelGatherings.CompletionIntegersIff
-import Formalism.SharpRestriction.GrowthBounds.DataGChain
 
 noncomputable section
 

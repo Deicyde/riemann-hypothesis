@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.LocalFields.LocalFourierTrace
+import GroundTheory.LocalFields.LocalFourier
+import Mathlib.Algebra.Ring.IsFormallyReal
 
 noncomputable section
 

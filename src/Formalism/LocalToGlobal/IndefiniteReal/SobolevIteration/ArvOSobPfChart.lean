@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.SobolevIteration.HasStrictFDerivAtOneProd
+import Formalism.LocalToGlobal.IndefiniteReal.SobolevIteration.HasStrictFDerivAtCay
 
 noncomputable section
 

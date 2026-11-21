@@ -1,6 +1,8 @@
-import Mathlib
-import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.LsDatumATop
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalGluing.ExistsIntegralMultiple
+import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.GlueBackOf
+import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.LsDatumACorr
 
 noncomputable section
 
@@ -94,10 +96,10 @@ theorem gramMM_holds (M : Model F E) (r n : ℕ) : GramMM M r n := by
       funext j
       rcases j with a | a
       · simp [A, Fintype.sum_sum_type, Matrix.one_apply]
-      · simp [A, Fintype.sum_sum_type, Matrix.one_apply, smul_sub, sub_eq_add_neg, add_comm]
+      · simp [A, Fintype.sum_sum_type, Matrix.one_apply, sub_eq_add_neg, add_comm]
     rw [hMM, hw, gram_recomb, det_mul, det_mul, det_transpose]
     have hA : A.det = qi ^ (r + 1) := by
-      simp [A, det_fromBlocks_zero₂₁, det_smul]
+      simp [A, det_fromBlocks_zero₂₁]
     have hAm : (A.map M.L.cj).det = M.L.cj A.det := by
       rw [show A.map M.L.cj = (M.L.cj.toRingEquiv.toRingHom).mapMatrix A from rfl, ← RingHom.map_det]
       rfl

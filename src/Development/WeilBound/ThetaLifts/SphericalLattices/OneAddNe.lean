@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.SphericalLattices.LocCommSt
 import Development.WeilBound.ThetaLifts.SphericalLattices.DgPerm
 import Development.WeilBound.ThetaLifts.SphericalLattices.MemIntGL

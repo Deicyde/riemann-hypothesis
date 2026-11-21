@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LeftMulTau
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.JacquetRallisInvKRegularIffIsUnit
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.Topology.Connected.Separation
+import Mathlib.Topology.MetricSpace.Ultra.TotallySeparated
 open GlobalTheory.JR Matrix MeasureTheory Filter Topology
 
 noncomputable section
@@ -198,9 +202,9 @@ theorem desc_fourG_eq_fourK_desc : ∀ (F E : Type) [NontriviallyNormedField F] 
     have hinv : ((g⁻¹ : GL (Fin r) F) : Matrix (Fin r) (Fin r) F) * (g : Matrix (Fin r) (Fin r) F) = 1 := by
       rw [← Units.val_mul, inv_mul_cancel, Units.val_one]
     refine ⟨hgS, ⟨_, ⟨(g, _), ⟨hgS, hYT⟩, rfl⟩, ?_⟩, ⟨_, ⟨(g, _), ⟨hgS, hYT⟩, rfl⟩, ?_⟩⟩
-    · simp only [act, pt, Matrix.mulVec_mulVec, hinv, Matrix.one_mulVec, LinearEquiv.symm_apply_apply]
+    · simp only [pt, Matrix.mulVec_mulVec, hinv, Matrix.one_mulVec, LinearEquiv.symm_apply_apply]
     · have hρc : ρe c = fun i : Fin r => Algebra.trace F A.K (τ ^ (i : ℕ) * c) := rfl
-      simp only [act, pt, Matrix.vecMul_vecMul, hinv, Matrix.vecMul_one]
+      simp only [pt, Matrix.vecMul_vecMul, hinv, Matrix.vecMul_one]
       rw [← hρc, LinearEquiv.symm_apply_apply]
 
 end GlobalTheory.JR.LinDesc.Swap

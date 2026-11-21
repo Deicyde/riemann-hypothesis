@@ -1,7 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.CrystallineBaseChange.RnStmt
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.AutomorphicRankinSelberg.StripInt
-import Development.AutomorphicArithmetic.AutomorphicVarieties.IdeleGenerators.ShortLatticeUnitarize.Unitarize
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.RTwist
+import Development.AutomorphicArithmetic.AutomorphicVarieties.PublishedTheorems.RepNewform
 
 noncomputable section
 

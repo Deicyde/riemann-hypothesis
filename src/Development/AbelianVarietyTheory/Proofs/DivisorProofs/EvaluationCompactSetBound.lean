@@ -1,22 +1,12 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MajINonneg
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsSmoothModerateOfIsAutFunSm
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchActionReadingsCompatible
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EvaluationGoodModelsIntertwine
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConjMapApply
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UniformSchwartzSeminormBound
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepresentationPointwiseArchimedeanDecayBound
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TransportDenom
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzBruhatInvariantUnderIntegralLattice
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzBruhatSupportBoundedDenominators
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousCharacterTrivialOnSmallIdeles
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzBruhatLevelConductorCompatible
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GoodModelsDifferBySymplecticMatrix
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SymplecticChangeOfGoodModelsIntertwines
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilEigenBijectiveSchwartzStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairEvaluationSelfLinearStatement
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.FiniteAdeleStrongApproximationModNat
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.ExistsHeightLeTwoMulQuotHeight
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTorusUOne
 
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -179,7 +169,7 @@ theorem support_unif : GlobalTheory.ThK.KP → ∀ (F E : Type) [Field F] [Numbe
     exact himpl.symm
   have key := hcond (((m₀ * N : ℕ) : AF F) * z j) (fun t ht0 ht1 => by
     have e1 := congrFun (hfix _ (isMulInt_single (m₀ * N) j t ht0 ht1)) z
-    simp only [schr, dotProduct_single, zero_dotProduct, Pi.zero_apply, zero_mul, mul_zero, add_zero] at e1
+    simp only [schr, dotProduct_single, Pi.zero_apply, zero_mul, mul_zero, add_zero] at e1
     have e2 := (mul_eq_right₀ hz').1 e1
     rw [← e2]
     congr 1

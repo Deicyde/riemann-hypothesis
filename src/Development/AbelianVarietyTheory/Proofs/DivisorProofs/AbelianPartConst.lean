@@ -1,11 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasDefect
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.HasRigidChart
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ToroidalCompactificationBis
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorusInvariantHeatOperatorPreservesWeight
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AppEqZeroOfValR
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SmoothRayQuotient
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.InvariantFunctionsDescend
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WedgeOrdVpBaseChangeOfNeBot
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry NumberField IsLocalRing
 open scoped CategoryTheory.Obj Matrix TensorProduct
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj
@@ -54,7 +53,7 @@ theorem lift_agree {R : Type} [CommRing R] {G : Over (Sp R)} {n : ℕ} {X : Sche
     ring
   simp only [op, pow_one, _root_.mul_one, Nat.cast_one, one_pow, map_add, map_sub, map_mul, map_sum, hΘ, zero_mul,
     Finset.sum_const_zero, sub_zero, map_ofNat, isField_one (hdd _) le_top, isField_one (h.lift i').1 hi', map_zero,
-    mul_zero, map_one] at e₁ e₀
+    mul_zero] at e₁ e₀
   rw [hs, (h.lift i).1.2.1 O hi, map_add, map_mul, map_mul] at e₁
   refine (h2.mul (hg.map π)).mul_left_cancel ?_
   linear_combination e₁ - π f * e₀

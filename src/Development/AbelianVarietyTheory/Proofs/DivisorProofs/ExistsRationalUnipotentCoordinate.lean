@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemAutSub
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoC
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DetNeZeroOfIsHypPl
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RationalUnipotentCoordinateSurjective
 open scoped TensorProduct NNReal Matrix
@@ -105,7 +104,7 @@ theorem exists_unip_rat_coA_hyp : ∀ (F E : Type) [Field F] [NumberField F] [Fi
   have hMιm : M * H'.ι = H'.ι + Matrix.vecMulVec H'.x α := by
     apply Matrix.ext_of_mulVec_single; intro k
     rw [← Matrix.mulVec_mulVec, hMι, Matrix.add_mulVec, Matrix.vecMulVec_mulVec, dotProduct_single_one]
-    ext i; simp [MulOpposite.smul_eq_mul_unop, mul_comm]
+    ext i; simp
   refine ⟨⟨_, hmem⟩, Subgroup.subset_closure ⟨?_, ?_⟩, Subgroup.mem_subgroupOf.2 ⟨γE, rfl⟩, ?_⟩
   · show M.map f *ᵥ incV F H'.x = incV F H'.x
     rw [hmv, hMx]

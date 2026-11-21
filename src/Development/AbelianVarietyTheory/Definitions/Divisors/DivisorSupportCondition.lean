@@ -1,7 +1,9 @@
-import Mathlib
-import GroundTheory.ProfiniteCohomology.CupProducts
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.PullHlComp
 import Development.AbelianVarietyTheory.Definitions.Divisors.BlockGLMap
+import GroundTheory.ProfiniteCohomology.ContinuousCochains
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.SimpleRing.Principal
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry Opposite CochainComplex CochainComplex.HomComplex

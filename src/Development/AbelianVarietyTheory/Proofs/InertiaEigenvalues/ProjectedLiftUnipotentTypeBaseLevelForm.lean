@@ -1,10 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.UnivChar
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.ThetaTranslateRangeGap
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.FiniteGroupLevelActionEqInvSmulTranslate
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaProjectionIntertwinesLevelLiftsStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.TrivialTwistBaseLevelEqTupleParahoricStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsLevelLiftBaseOfRealisationLiftStatement
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PlacesApart
+import Development.AbelianVarietyTheory.Proofs.TwistedOperators.TranslateUnitaryLifts
+import Formalism.SharpRestriction.Divisibility.LiftErrorLocal
 
 noncomputable section
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.L2.DIV Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links IsDedekindDomain NumberField Formalism.ConjugateSelfDual ReciprocityTheory.Gal GlobalTheory.ExportSeries GlobalTheory.SeriesTie GlobalTheory.TwInputs GlobalTheory.TwSys GlobalTheory.TwAll GlobalTheory.SupLaw GlobalTheory.LiftLeaf
@@ -139,7 +139,7 @@ theorem key_step (D : D7) (X : RealSide D) (E : IntegralHeckeForms.XD D) (Y : Se
   have hbq : Formalism.UG.bc (swapAE D) ((finHom (Vc D j)).range.subtype (((finHom (Vc D j)).rangeRestrict (κ (gk * g)))⁻¹ *
       (k : Bridge.Gf (Vc D j)) * (finHom (Vc D j)).rangeRestrict (κ g))) =
       (finE (Vc D j) (κ (gk * g)))⁻¹ * Formalism.UG.bc (swapAE D) ((k : Bridge.Gf (Vc D j)) : GL _ _) * finE (Vc D j) (κ g) := by
-    simp only [Subgroup.coe_subtype, Subgroup.coe_mul, Subgroup.coe_inv, map_mul, map_inv]
+    simp only [Subgroup.coe_subtype, map_mul, map_inv]
     rfl
   have hqP := mul_mem (mul_mem (inv_mem haP) hxkP) hcP
   have hqr : rTup (X.R.βV j) (X.R.datVt j t) ((finE (Vc D j) (κ (gk * g)))⁻¹ *

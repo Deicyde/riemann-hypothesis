@@ -1,6 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DbarAddVectorScalar
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.AnalyticCharts.Osgood
+import Mathlib.Analysis.Calculus.FDeriv.Symmetric
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Topology.Sheaves.Presheaf
 open Matrix Set Filter Topology
 open GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe GlobalTheory.TorsionForm GlobalTheory.TorsionForm.Pullback
 open scoped ContDiff
@@ -42,7 +44,7 @@ theorem fderiv_fderiv_apply_symm_of_eventually_differentiableAt
     fderiv ℂ (fun c => fderiv ℂ φ c v) b w = fderiv ℂ (fun c => fderiv ℂ φ c w) b v := by
   have hA : AnalyticAt ℂ φ b := analyticAt_of_eventually_differentiableAt_fin φ b h
   have hC : ContDiffAt ℂ ω φ b := hA.contDiffAt
-  have hS : IsSymmSndFDerivAt ℂ φ b := hC.isSymmSndFDerivAt (by simp [minSmoothness])
+  have hS : IsSymmSndFDerivAt ℂ φ b := hC.isSymmSndFDerivAt (by simp)
   have hF : DifferentiableAt ℂ (fderiv ℂ φ) b :=
     (hC.fderiv_right (m := 1) (by simp)).differentiableAt (by simp)
   have key : ∀ u, fderiv ℂ (fun c => fderiv ℂ φ c u) b = (fderiv ℂ (fderiv ℂ φ) b).flip u := by

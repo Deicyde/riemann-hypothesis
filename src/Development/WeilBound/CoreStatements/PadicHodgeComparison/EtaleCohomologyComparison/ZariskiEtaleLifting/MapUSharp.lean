@@ -1,6 +1,5 @@
-import Mathlib
-import GroundTheory.PAdicHodge.UntiltFrobeniusEquivSymmEpsilonNeOne
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.WittExactSequences.ObFacts
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.ZariskiEtaleLifting.MapAcrFromBase
 
 set_option autoImplicit false

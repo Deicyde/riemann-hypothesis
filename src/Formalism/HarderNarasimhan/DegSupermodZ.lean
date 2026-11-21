@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.HarderNarasimhan.Statement
 import Formalism.LatticeSlopes.CovolAntiSameRank
 

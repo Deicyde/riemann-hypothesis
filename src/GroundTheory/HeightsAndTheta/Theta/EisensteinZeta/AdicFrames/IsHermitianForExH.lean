@@ -1,8 +1,6 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.QuotientMeasure
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.CompactFormulaUnitary
-import GroundTheory.AutomorphicForms.AdelicUnitaryGroups
-import GroundTheory.AutomorphicForms.AdelicUnitaryGroups.Lattice
 import GroundTheory.GlobalFields.TateThesis.AdelicCharLocal
 import GroundTheory.HeightsAndTheta.Theta.GaussianExample
 
@@ -319,7 +317,7 @@ def exX : Matrix (Fin 3) (Fin 1) GaussQ := Matrix.of fun i _ ↦ ![1, 1, 0] i
 theorem isHermitianFor_exH : IsHermitianFor (conjHom ℚ GaussQ) exH := by
   refine Matrix.ext fun i j ↦ ?_
   fin_cases i <;> fin_cases j <;>
-    simp [exH, Matrix.diagonal_apply, Matrix.transpose_apply, Matrix.map_apply]
+    simp [exH, Matrix.transpose_apply]
 
 theorem isUnit_det_exH : IsUnit exH.det := by
   rw [exH, Matrix.det_diagonal, Fin.prod_univ_three]

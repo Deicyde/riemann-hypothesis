@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.GaussJetBounds.FrameJetEval
 import Formalism.GaussJetBounds.GaussJetProofs.NormDetLeOneOfEntries
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 open scoped BigOperators

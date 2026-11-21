@@ -1,8 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataCD
-import Formalism.SatakeDualWeyl.KpqSubgroupCompact
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ContinuousMatExp
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EntrySumMulLe
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Analysis.Matrix.Normed
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.SimpleRing.Principal
 open Formalism.BasicNotions MeasureTheory Filter Topology Matrix
 
 namespace GlobalTheory.ExpBallSandwich

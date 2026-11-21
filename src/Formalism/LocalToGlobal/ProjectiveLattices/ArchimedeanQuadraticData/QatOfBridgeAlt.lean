@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.ArchimedeanQuadraticData.QatOfBridge
 import Formalism.LocalToGlobal.ProjectiveLattices.ArchimedeanQuadraticData.QuotLocalOfQuotientLength
 import Formalism.LocalToGlobal.ProjectiveLattices.ArchimedeanQuadraticData.LenDescentOfLengthBaseChangeLocal

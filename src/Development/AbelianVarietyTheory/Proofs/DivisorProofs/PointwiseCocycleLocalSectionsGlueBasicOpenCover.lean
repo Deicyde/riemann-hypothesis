@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsDatNeZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NatFamilyExistsUnique
 open CategoryTheory AlgebraicGeometry MonoidalCategory CartesianMonoidalCategory MonObj TensorProduct WithConv
 open ReciprocityTheory.ChartRestriction.G.Geo.Tor (Sp spMap epsR IsTangent IsGrpPullback)
@@ -106,7 +106,7 @@ theorem glue_exists (hs : Ideal.span (Set.range s) = ⊤) (hu : IsCoc W u)
   let lam : F →ₐ[R] Localization.Away (ρ (ψ (s b))) := locAlg R (ρ (ψ (s b)))
   let mu : Localization.Away t.1 →ₐ[R] Localization.Away (ρ (ψ (s b))) := Localization.awayMapₐ ρ t.1
   have hmu : mu.comp (locAlg R t.1) = lam.comp ρ := AlgHom.ext fun z ↦ by
-    simp [mu, lam, t, Localization.awayMapₐ, IsLocalization.Away.mapₐ, IsLocalization.Away.map,
+    simp [mu, lam, t, IsLocalization.Away.mapₐ, IsLocalization.Away.map,
       IsLocalization.map_eq]
   change lam (ρ e) = lam (locVal x τ u a ψ F ρ)
   have het : locAlg R t.1 e = v t := he t

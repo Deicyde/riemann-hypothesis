@@ -1,17 +1,17 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.CharacteristicPolynomialRoots.LeKerPt
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebraHeight.DGmap
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.AutomorphicVarieties.WeilGroupCharacters.ArithmeticPointClassicality
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual Formalism.HC Formalism.MainNotions.N ReciprocityTheory.Gal IsLocalRing Polynomial UpperTheory.V UpperTheory.V.Base UpperTheory.V.Alg UpperTheory.V.HV UpperTheory.V.GradeZeroInterpolatingElement UpperTheory.V.Ws GlobalTheory.GalOfCusp
 
 private theorem chi_ofRep' {n : ℕ} {A Γ : Type} [CommRing A] [Group Γ] (ρ : Γ →* Matrix (Fin n) (Fin n) A) (g : Γ) :
     (W.GDet.ofRep ρ).chi (MonoidAlgebra.single g 1) = (ρ g).charpoly := by
   simp only [W.GDet.chi, W.GDet.ofRep, W.GDet.repAlg, MonoidHom.coe_comp, Function.comp_apply,
-    map_sub, MonoidAlgebra.mapRingHom_single, AlgHom.toRingHom_eq_coe,
-    AlgHom.coe_toRingHom, MonoidAlgebra.lift_single, Matrix.coe_detMonoidHom, map_one]
+    MonoidAlgebra.mapRingHom_single, AlgHom.toRingHom_eq_coe,
+    Matrix.coe_detMonoidHom, map_one]
   rw [Matrix.charpoly, Matrix.charmatrix]
   congr 1
   ext i j
-  simp [Matrix.one_apply, Matrix.diagonal_apply, Matrix.algebraMap_matrix_apply, Matrix.scalar_apply, Matrix.sub_apply]
+  simp [Matrix.one_apply, Matrix.diagonal_apply, Matrix.scalar_apply, Matrix.sub_apply]
 
 private theorem chi_comap' {n : ℕ} {A Γ H : Type} [CommRing A] [Group Γ] [Group H] (D : W.GDet n A Γ) (φ : H →* Γ) (g : H) :
     (D.comap φ).chi (MonoidAlgebra.single g 1) = D.chi (MonoidAlgebra.single (φ g) 1) := by

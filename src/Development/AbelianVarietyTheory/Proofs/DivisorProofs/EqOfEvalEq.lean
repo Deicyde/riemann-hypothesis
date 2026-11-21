@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsMulVal
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsionPrechartPointsSeparateStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFiniteTorsionPrechartCoverStatement
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsionOrderFiniteProjectiveStatement
 set_option autoImplicit false
 noncomputable section
@@ -22,8 +19,8 @@ theorem eq_of_eval_eq {R K T : Type} [CommRing R] [IsDomain R] [Field K] [Algebr
   by_contra hxy
   obtain ⟨r, hr, hm⟩ := hS (Pi.single x 1)
   have h1 := h ⟨_, hm⟩
-  simp only [Pi.smul_apply, Pi.single_eq_same, Pi.single_eq_of_ne (Ne.symm hxy), smul_zero, Algebra.smul_def,
-    mul_one, mul_zero] at h1
+  simp only [Pi.smul_apply, Pi.single_eq_same, Pi.single_eq_of_ne (Ne.symm hxy), Algebra.smul_def,
+    mul_zero] at h1
   exact hr ((IsFractionRing.injective R K) (by simpa using h1))
 
 theorem exists_eval {R K T : Type} [CommRing R] [IsDomain R] [Field K] [Algebra R K] [IsFractionRing R K] [Finite T]

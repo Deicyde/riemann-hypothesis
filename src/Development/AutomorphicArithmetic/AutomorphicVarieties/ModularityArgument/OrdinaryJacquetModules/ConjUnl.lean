@@ -1,10 +1,10 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.OrdinaryJacquetModules.CoreOrdAlt
-import Development.AutomorphicArithmetic.AutomorphicVarieties.BuildingsResidueChars.TwistedDualFrobeniusCompatibility
-import Development.AutomorphicArithmetic.AutomorphicVarieties.BuildingsResidueChars.SatakeParametersComplexConjugate
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.TemperedLocalComponents.IsoOfFrob
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PartsConj
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ClozelCohomology.ContinuousEntryPairings.ExConj
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ClozelCohomology.ContinuousEntryPairings.IsPairingOfIsAutCsd
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.MkMemAdmissibleAtIffCocycle
+import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CoeDualRep
+import Development.AutomorphicArithmetic.AutomorphicVarieties.WeilGroupCharacters.UniversalOrdinaryDeterminantRing
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.BasicNotions Formalism.MainNotions.N Polynomial ValuativeRel IsLocalRing GlobalTheory.CuspRep GlobalTheory.WeilDeligne
 open GlobalTheory.LocLanglands GlobalTheory.LocGL GlobalTheory.GalOfCusp GlobalTheory.SmGL GlobalTheory.SplitWeil GlobalTheory.UnitaryBC GlobalTheory.PRep UpperTheory.V UpperTheory.V.Hi UpperTheory.V.Hi.CaseU
@@ -128,14 +128,14 @@ private theorem aux₁ {C : Type} [CommGroup C] {a b e μ : C} {m : ℕ} (h : a 
     (b⁻¹ * μ) ^ m = (a⁻¹ * μ * e) ^ m := by
   simp only [mul_pow, inv_pow] at h ⊢
   rw [h, mul_inv]
-  simp only [mul_comm, mul_left_comm, mul_assoc]
+  simp only [mul_comm]
   rw [mul_left_comm (e ^ m), mul_left_comm (e ^ m), mul_inv_cancel, mul_one]
 
 private theorem aux₂ {C : Type} [CommGroup C] {x y e μ : C} {m : ℕ} (h : (x⁻¹ * μ) ^ m = (y⁻¹ * μ * e) ^ m) :
     y ^ m = (x * e) ^ m := by
   simp only [mul_pow, inv_pow] at h ⊢
   have h' : (x ^ m)⁻¹ = (y ^ m)⁻¹ * e ^ m := by
-    have := mul_right_cancel (b := μ ^ m) (a := (x ^ m)⁻¹) (c := (y ^ m)⁻¹ * e ^ m) (by rw [h]; simp [mul_comm, mul_left_comm, mul_assoc])
+    have := mul_right_cancel (b := μ ^ m) (a := (x ^ m)⁻¹) (c := (y ^ m)⁻¹ * e ^ m) (by rw [h]; simp [mul_comm, mul_left_comm])
     exact this
   have h2 : x ^ m = y ^ m * (e ^ m)⁻¹ := by
     have := congrArg (·⁻¹) h'
@@ -261,7 +261,7 @@ private theorem rel_conj [IsCMField E] {τ : E ≃+* E} {σ : Ω ≃+* Ω} (h : 
       simp only [Matrix.mul_smul, ← Matrix.mul_assoc, hD, Matrix.one_mul] at this
       exact this
     have h2 := congrArg (fun X => ((P⁻¹ : GL (Fin n) (Qbar l)) : Matrix (Fin n) (Fin n) (Qbar l)) * X) h1
-    simp only [← Matrix.mul_assoc, ← Units.val_mul, inv_mul_cancel, Units.val_one, Matrix.one_mul, Matrix.mul_smul] at h2
+    simp only [← Units.val_mul, Matrix.mul_smul] at h2
     rw [inv_mul_cancel_left, ← mul_assoc] at h2
     exact h2
   have ht : ρ t.1 = ρ u * ρ s' * (ρ u)⁻¹ := by

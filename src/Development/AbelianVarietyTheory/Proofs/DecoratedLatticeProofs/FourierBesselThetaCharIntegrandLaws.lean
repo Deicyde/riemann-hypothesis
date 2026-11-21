@@ -1,9 +1,8 @@
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.ExistsIsFundU
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.ThetaAbsoluteSum
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.TransvectionAction
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.WeilDatumExistence
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.WittExtensionHomMulEmbeddedAnisotropic
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.AnisotropicTermsMeanZeroUnipotentRadical
+import Development.AbelianVarietyTheory.Definitions.LatticeFrames.QuasiOfFam
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR.Datum MeasureTheory IsDedekindDomain NumberField Matrix
 open GlobalTheory.MixModel GlobalTheory.MixPer GlobalTheory.Grow
 open scoped TensorProduct
@@ -161,7 +160,7 @@ theorem th_laws : ∀ (D : D7) (ψ : AddChar (AF D.host.F) ℂ), IsStdChar D ψ 
   · intro c n hn
     have hc : J.d.nC c ∈ flagN J.d := J.d.nC_mem_NFlag c
     rw [th, (hmul _ hc n hn).2.2, th, psiFlag_mul J.d ψ hc hn, psiFlag_nC, jacS_nC]
-    simp only [Pi.smul_apply, smul_eq_mul, star_mul', one_mul, star_one]
+    simp only [Pi.smul_apply, smul_eq_mul, star_mul', one_mul]
     ring
   · intro n hn u hu
     have hl : J.d.levi u ∈ flagN J.d := J.d.levi_mem_NFlag hu

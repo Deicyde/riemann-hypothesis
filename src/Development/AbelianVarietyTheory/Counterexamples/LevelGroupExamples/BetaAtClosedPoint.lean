@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.BetaAtSymm
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.PsiCoordExistsUniqueUpToUnitLocal
 
 namespace GlobalTheory.PeriodFormEdge

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.PendingLemmas.DetYtMatNeZero
 import Formalism.GradedWeylDivisibility.FinalC
 

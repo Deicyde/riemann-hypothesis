@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.ColValS
 import Formalism.LocalToGlobal.GlobalTheory.LevelZeroClassLatticeIntegral
-import Formalism.LocalToGlobal.HermitianForms.BothSym
 
 noncomputable section
 

@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGCoreGenTransferCut
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGaugeVLem
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.NFRadRedA
 
 open Formalism.REAL Formalism.QuantumDeterminants Formalism.FourierDecayAlt
 

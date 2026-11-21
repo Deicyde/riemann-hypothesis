@@ -1,10 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.CubeVal
-import Development.AbelianVarietyTheory.Definitions.ShimuraVarieties.OpensRangeChartYSupOpensRangeChartZ
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.UnifUniqSt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ValCalc
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.FamMod
 import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.ExistsSplitTorusPointsMulEquiv
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SemiabelianSchemes.PrecompleteBases.PsaRos
 
 open CategoryTheory CategoryTheory.Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out
@@ -215,7 +213,7 @@ theorem splitTorus_gen_cubical :
       (ε := fun _ => 1) θ a.left q I) (fun _ => rfl), gs_eq _ q ⊤ trivial, map_one, map_one,
       Units.val_eq_one, mul_inv_eq_one]
     rcases h with rfl | rfl | rfl
-    · rw [C.face]; simp only [_root_.one_mul, _root_.mul_one]; ac_rfl
+    · rw [C.face]; simp only [_root_.one_mul]; ac_rfl
     · rw [C.face₂]; simp only [_root_.one_mul, _root_.mul_one]; ac_rfl
     · rw [C.face₃]; simp only [_root_.one_mul, _root_.mul_one]
   have key := unit_eq_one k X (m.left.appTop.hom w.val) (w.isUnit.map _)

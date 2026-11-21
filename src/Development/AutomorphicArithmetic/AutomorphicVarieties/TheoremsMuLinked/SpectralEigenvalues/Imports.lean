@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.TheoremsMuLinked.OrdinaryHeckeAlgebraIntegral
 open IsLocalRing Matrix Filter UpperTheory.V UpperTheory.V.Alg UpperTheory.V.W UpperTheory.V.Pa UpperTheory.V.Pa.Lev UpperTheory.V.AlgebraTools UpperTheory.V.Th
 open scoped TensorProduct
@@ -23,4 +24,4 @@ theorem UpperTheory.V.Th.Sp.chi :
   by_cases h : p = p'
   · subst h
     simp [f1]
-  · simp [h, Pi.mulSingle_eq_of_ne h]
+  · simp [h]

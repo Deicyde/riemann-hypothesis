@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementTL
-import Formalism.HermitianCurvature.ActualZetaSmooth
 
 namespace GlobalTheory.HatNF
 

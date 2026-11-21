@@ -1,9 +1,12 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementPB
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.JointInstanceTheoremA
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.PullLatticeTypedUnit
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.PeriodLatticeFactsSplitOfGeneral
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LocalisationScaledIdealMemIff
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.TwistedIsRealOrderLattice
+import Mathlib.Analysis.InnerProductSpace.Positive
 
 namespace Formalism.FourierDecayAlt.P.GrowthPolynomialOperator
 
@@ -570,24 +573,24 @@ theorem t_SplitSum : SplitSum := by
       have m2 : t ∉ X.genSet := fun h => (show X.G t ≠ 0 ∧ X.gener t from h).1 (hD t h1)
       have m3 : t ∉ X.ngSet := fun h => (show X.G t ≠ 0 ∧ ¬ X.gener t from h).1 (hD t h1)
       have m4 : t ∉ X.degSet := fun h => (show X.G t = 0 ∧ ¬ X.isId t from h).2 h1
-      simp [Set.indicator_apply, m1, m2, m3, m4]
+      simp [m1, m2, m3, m4]
     · by_cases h2 : X.G t = 0
       · have m1 : t ∉ X.idSet := h1
         have m2 : t ∉ X.genSet := fun h => (show X.G t ≠ 0 ∧ X.gener t from h).1 h2
         have m3 : t ∉ X.ngSet := fun h => (show X.G t ≠ 0 ∧ ¬ X.gener t from h).1 h2
         have m4 : t ∈ X.degSet := ⟨h2, h1⟩
-        simp [Set.indicator_apply, m1, m2, m3, m4]
+        simp [m1, m2, m3, m4]
       · by_cases h3 : X.gener t
         · have m1 : t ∉ X.idSet := h1
           have m2 : t ∈ X.genSet := ⟨h2, h3⟩
           have m3 : t ∉ X.ngSet := fun h => (show X.G t ≠ 0 ∧ ¬ X.gener t from h).2 h3
           have m4 : t ∉ X.degSet := fun h => h2 (show X.G t = 0 ∧ ¬ X.isId t from h).1
-          simp [Set.indicator_apply, m1, m2, m3, m4]
+          simp [m1, m2, m3, m4]
         · have m1 : t ∉ X.idSet := h1
           have m2 : t ∉ X.genSet := fun h => h3 (show X.G t ≠ 0 ∧ X.gener t from h).2
           have m3 : t ∈ X.ngSet := ⟨h2, h3⟩
           have m4 : t ∉ X.degSet := fun h => h2 (show X.G t = 0 ∧ ¬ X.isId t from h).1
-          simp [Set.indicator_apply, m1, m2, m3, m4]
+          simp [m1, m2, m3, m4]
   show ∑' t, X.op t = (∑' t, X.idSet.indicator X.op t + ∑' t, X.genSet.indicator X.op t +
     ∑' t, X.ngSet.indicator X.op t) + ∑' t, X.degSet.indicator X.op t
   have e1 : ∑' t, X.op t = ∑' t, (X.idSet.indicator X.op t + X.genSet.indicator X.op t +

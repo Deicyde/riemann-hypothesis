@@ -1,5 +1,7 @@
-import Mathlib
-import Development.DiscreteGroups.GlobalIrreducibility.DzRedSupp
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.DiscreteGroups.GlobalIrreducibility.ExistsOfMemKOne
+import GroundTheory.AutomorphicForms.Iwasawa
 
 noncomputable section
 

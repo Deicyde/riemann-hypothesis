@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsQuadOfPlane
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.PolarConjTranspose
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.CommuteGelfandInvariantMatrixUnitsOfGlRel
+import Std.Tactic.BVDecide.Normalize.Prop
 open Matrix GlobalTheory.Mem.Lift
 
 namespace GlobalTheory.Mem.Capelli
@@ -66,7 +67,7 @@ theorem comm_pow (p : ℕ) (a : Fin m) (l i j : Fin n) :
     D a l * ((X * D) ^ p) i j = ((X * D) ^ p) i j * D a l
       + ∑ r ∈ Finset.range p, ((X * D) ^ r) i l * (D * (X * D) ^ (p - (r + 1))) a j := by
   induction p generalizing i with
-  | zero => by_cases h : i = j <;> simp [Matrix.one_apply, h]
+  | zero => by_cases h : i = j <;> simp [h]
   | succ p ih =>
     have h1 : ∀ k, D a l * ((X * D) i k * ((X * D) ^ p) k j) =
         (X * D) i k * ((X * D) ^ p) k j * D a l
@@ -80,7 +81,7 @@ theorem comm_pow (p : ℕ) (a : Fin m) (l i j : Fin n) :
     · rw [Finset.sum_comm]
       refine Finset.sum_congr rfl fun r _ => ?_
       rw [← Finset.sum_mul, ← Matrix.mul_apply, ← pow_succ', Nat.add_sub_add_right]
-    · by_cases h : i = l <;> simp [h, Matrix.one_apply, Matrix.mul_apply]
+    · by_cases h : i = l <;> simp [h, Matrix.mul_apply]
 
 omit [Algebra ℂ A] in
 include hdd hdx in
@@ -159,7 +160,7 @@ theorem adjoin_gelfA_dual_pair : ∀ (A : Type) [Ring A] [Algebra ℂ A] (n m : 
   have h1 : (Matrix.of fun i j : Fin n => ∑ a, x (i, a) * d (j, a) + if i = j then algebraMap ℂ A c else 0)
       = (1 : ℂ) • (X * D) + c • 1 := by
     ext i j
-    by_cases hij : i = j <;> simp [X, D, Matrix.mul_apply, Matrix.one_apply, hij, Algebra.algebraMap_eq_smul_one]
+    by_cases hij : i = j <;> simp [X, D, Matrix.mul_apply, hij, Algebra.algebraMap_eq_smul_one]
   have h2 : (Matrix.of fun a b : Fin m => -∑ i, x (i, b) * d (i, a) + if a = b then algebraMap ℂ A c' else 0)
       = (-1 : ℂ) • (D * X) + (c' + n) • 1 := by
     ext a b

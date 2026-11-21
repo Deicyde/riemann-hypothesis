@@ -1,6 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.KummerTheory.FunRepMem
-import Development.AutomorphicArithmetic.AutomorphicVarieties.StmtFields
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GeneratorCountTuples.LemmaK
+import Mathlib.LinearAlgebra.Eigenspace.Basic
+import Mathlib.RepresentationTheory.Coinvariants
 
 noncomputable section
 

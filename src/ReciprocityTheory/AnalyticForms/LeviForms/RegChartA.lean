@@ -1,6 +1,7 @@
-import ReciprocityTheory.AnalyticForms.LeviForms.IsRegFamilyInhabitStatement
-import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.PshMoll
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.PshExt
+import Mathlib.RingTheory.SimpleRing.Principal
 
 namespace ReciprocityTheory.AnForm.P.RegularChartScaling
 
@@ -42,7 +43,7 @@ lemma exists_far_point (z : Fin D → ℂ) {s : ℝ} (hs : 0 < s) :
   let w : Fin D → ℂ := fun i => (s : ℂ) * u i
   have hw : ‖w‖ ≤ s := by
     refine (pi_norm_le_iff_of_nonneg hs.le).mpr fun i => ?_
-    simp [w, norm_mul, hu, abs_of_pos hs]
+    simp [w, hu, abs_of_pos hs]
   refine ⟨z + w, ?_, fun i => ?_, (norm_add_le _ _).trans (by linarith)⟩
   · rw [mem_closedBall, dist_eq_norm, add_sub_cancel_left]
     exact hw

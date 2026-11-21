@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsChartMember
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsionThetaValuesAbelianPartDefinedOverStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EighthPowerThetaCoefficientEqConstMulMonomialStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsStalkElementsApproxLeadingTermQuotientsStatement
@@ -10,7 +9,6 @@ import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PosDefMapIntOfPos
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsConePullOfSurjective
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsMonomialTauFirstCoordsOfUnitLastCoordsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPosMulExtendIntLinearFormStatement
-import ReciprocityTheory.AnalyticForms.RegularLocalRings.FinalTheorems
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj IsLocalRing
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open GlobalTheory.Toroidal GlobalTheory.LocM GlobalTheory.PolFan GlobalTheory.ZM GlobalTheory.SiegelTor GlobalTheory.TorRef GlobalTheory.PolDeg
@@ -134,7 +132,7 @@ theorem mem_balForms_of_symm {X : Type} [AddCommGroup X] (i : Module ℤ X)
     β ∈ @balForms ℤ _ id X _ i := by
   obtain rfl : i = AddCommGroup.toIntModule X := Subsingleton.elim _ _
   refine ⟨hs, fun a y z => ?_⟩
-  simp [map_zsmul]
+  simp
 
 end GlobalTheory.Poinc.Sep.Assembly
 

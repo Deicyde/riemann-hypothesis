@@ -1,11 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.LieLatticeData
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.LocFreeMapMkQIff
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.MemSpanOverOfMem
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.SmulMemSpanOver
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.LocallyFreeBaseChangeSummandStatement
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.LatticeGoodBaseChangeStatement
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.KernelGraphBaseChangeHoldsStatement
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.LatticeImageBaseChangeStatement
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.CharacterLatticeFibreIdealLocallyFreeStatement
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.CharacterLatticeGraphComapLocallyFreeStatement
@@ -40,7 +33,7 @@ private theorem loc_free_base_change {o Ω C : Type} [CommRing o] [Field Ω] [Fi
     (hiff (b q)).2 ⟨Pi.single q 1, fun q' => ⟨0, by
       rcases eq_or_ne q' q with rfl | h
       · simp [one_mem]
-      · simp [Pi.single_apply, h]⟩, by simp [Pi.single_apply]⟩
+      · simp [h]⟩, by simp [Pi.single_apply]⟩
   refine ⟨fun q => bcMap Ω C ι (b q), by rw [← hB']; exact B'.linearIndependent,
     by rw [← hB']; exact B'.span_eq, fun e => ?_⟩
   beta_reduce

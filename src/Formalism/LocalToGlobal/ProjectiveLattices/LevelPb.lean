@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.ExistsParameterConditions
+import Mathlib.Algebra.Polynomial.SpecificDegree
 
 noncomputable section
 

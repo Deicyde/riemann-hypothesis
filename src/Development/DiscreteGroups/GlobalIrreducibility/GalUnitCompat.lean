@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.DiscreteGroups.GlobalIrreducibility.DzGalTR
 import Development.DiscreteGroups.GlobalIrreducibility.DzGalRes
 import Development.DiscreteGroups.GlobalIrreducibility.DzGalFin

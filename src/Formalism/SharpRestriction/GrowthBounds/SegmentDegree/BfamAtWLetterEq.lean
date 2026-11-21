@@ -1,7 +1,8 @@
-import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.RestLamOf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.DivMulSubLeDivSubDiv
-import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.DistAddTwoLeOfSameVec
-import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.DiscriminantNonzeroModUniformiser
+import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.CardFinRange
+import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.LamMZero
 
 noncomputable section
 

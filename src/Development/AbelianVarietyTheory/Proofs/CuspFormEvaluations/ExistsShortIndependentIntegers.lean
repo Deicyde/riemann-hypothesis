@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.Transference
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.FinrankMulDiscrRpowLeSumSqOfMemTraceDual
+import Mathlib.Analysis.InnerProductSpace.Dual
 
 open NumberField Module Submodule
 open scoped nonZeroDivisors
@@ -170,7 +172,7 @@ theorem _root_.GlobalTheory.exists_short_independent_integers (K : Type) [Field 
     intro i
     refine InnerProductSpace.ext_inner_right_basis b fun j => ?_
     rw [hm, coe_basisOfLinearIndependentOfCardEqFinrank, hpair, hω, Finset.sum_mul, map_sum]
-    simp [smul_mul_assoc, hαβ]
+    simp [hαβ]
   refine ⟨ω, ?_, ?_⟩
   · have h := hyli.restrict_scalars' ℚ
     rw [show y = fun k => φ (ω k) from funext hy] at h

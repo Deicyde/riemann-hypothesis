@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.StatementsLineEigenvalue
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.PVecAtNeZero
 

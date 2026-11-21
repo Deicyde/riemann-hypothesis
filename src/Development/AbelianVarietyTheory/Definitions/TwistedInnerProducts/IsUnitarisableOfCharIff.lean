@@ -1,6 +1,14 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.SmoothPartStable
 import Development.AbelianVarietyTheory.Definitions.Foundations.MatrixMeasurableSpace
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RepresentationTheory.Irreducible
+import Mathlib.RepresentationTheory.Rep.Basic
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 noncomputable section
 

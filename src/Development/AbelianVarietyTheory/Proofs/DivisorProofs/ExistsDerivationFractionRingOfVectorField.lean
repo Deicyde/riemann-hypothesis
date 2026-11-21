@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ResV
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.ThetaMetrics.MemRangeCompIffOfIsClosedImmersion
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsDerivationExtendOfFormallySmooth
+import Development.AbelianVarietyTheory.Definitions.Divisors.HasDefect
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry NumberField IsLocalRing
 open scoped CategoryTheory.Obj Matrix TensorProduct
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj
@@ -230,7 +231,7 @@ theorem exists_derivation_fractionRing : ∀ (X : Scheme.{0}) (Ω : Type) [CommR
   · intro m y
     have := (AddMonoidHom.mk' d' hadd).map_zsmul m y
     simp only [AddMonoidHom.mk'_apply, zsmul_eq_mul] at this
-    simp only [RingHom.id_apply, Algebra.smul_def, algebraMap_int_eq, eq_intCast, smul_eq_mul]
+    simp only [Algebra.smul_def, eq_intCast]
     rw [this]; simp
   · have h1 := hmul 1 1
     simp only [RingHom.id_apply, _root_.one_mul, _root_.mul_one] at h1

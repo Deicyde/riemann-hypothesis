@@ -1,6 +1,7 @@
-import Formalism.LocalToGlobal.TorsionIntegrality.GaussianEigenFrames.StatementD
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.GaussianEigenFrames.StatementF
-import Formalism.LocalToGlobal.TorsionIntegrality.GaussianEigenFrames.StatementG
+import Formalism.LocalToGlobal.TorsionIntegrality.GaussianEigenFrames.StatementC
+import Formalism.LocalToGlobal.TorsionIntegrality.UniformGaussModels.UniformGaussModelConditionEquivalent
 
 noncomputable section
 open scoped BigOperators

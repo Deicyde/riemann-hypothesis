@@ -1,10 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.ZelevinskyJacquet.FineJacquetModules.SegDefs
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IrreducibleAdmissibleGL
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.SegmentRepresentation
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContragredientProductIrreducible
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DualClassCuspidal
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DualClassTwistNeg
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SegmentDualPrecedesIff
 
 noncomputable section

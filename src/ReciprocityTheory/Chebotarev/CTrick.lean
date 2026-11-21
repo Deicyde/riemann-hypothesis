@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.Chebotarev.Ucoord
-import ReciprocityTheory.Chebotarev.ChebyshevLambdaSubPsiBounded
+import Mathlib.NumberTheory.NumberField.ClassNumber
+import Mathlib.Tactic.ENatToNat
 
 open NumberField NumberField.mixedEmbedding NumberField.Units
 

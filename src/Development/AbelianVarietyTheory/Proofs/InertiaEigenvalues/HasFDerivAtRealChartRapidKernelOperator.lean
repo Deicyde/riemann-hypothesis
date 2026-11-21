@@ -1,19 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IdeleModuleDetDiagUnitsPosIdele
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSiegelSetDiagNormOne
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CuspRapidDecaySiegelGLOfFinite
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AutomorphicFormsFiniteGL
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqZeroOfMemWeakIn
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RealLieSmoothingMemSmoothAdelicFunctions
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LieDerivativeRealLieSmoothingEqDensity
-import Development.AbelianVarietyTheory.Definitions.Divisors.MemL2OfSmoothVector
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsAddHaarMeasureVolumeLie
-import GroundTheory.AutomorphicForms.ReductionFinite
-import Development.AbelianVarietyTheory.Definitions.Divisors.MemMspan
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.DecaysOfMemSmoothSpan
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.WordAppendSingle
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.KSpan
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.NormToLMulLe
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsRapidInf
 open NumberField Matrix MeasureTheory GlobalTheory.CuspRep GlobalTheory.CuspRep.CuspidalL2GL GlobalTheory.UnitaryBC GroundTheory.Global GroundTheory.Global.IdeleGroup
 open scoped Pointwise
 
@@ -242,7 +231,7 @@ theorem hasFDerivAt_chart_kernel : ∀ (E : Type) [Field E] [NumberField E] [IsT
       ContinuousOn.measurable_piecewise hΨc continuousOn_const isOpen_invSet.measurableSet
     have e : (fun x => Ψ (Γ x)) = (invSet E a).piecewise Ψ 0 ∘ Γ := by
       funext x
-      simp [Set.piecewise, Γ, val_mem_invSet (γ x)]
+      simp [Γ, val_mem_invSet (γ x)]
     have h3 : AEStronglyMeasurable (fun x => Ψ (Γ x)) ν := by
       rw [e]; exact (hm.comp hΓm).aestronglyMeasurable
     exact hk.aestronglyMeasurable.smul h3

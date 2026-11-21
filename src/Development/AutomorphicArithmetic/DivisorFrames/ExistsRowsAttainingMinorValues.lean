@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.LocalEmbeddings.RootFrame
 open CategoryTheory AlgebraicGeometry NumberField IsDedekindDomain ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open Formalism.BasicNotions Formalism.L2.Pj GlobalTheory GlobalTheory.Cartier GlobalTheory.ProjVar GlobalTheory.TrueGeo GlobalTheory.Mean4O GlobalTheory.ShFam GlobalTheory.ShFam.Pad GlobalTheory.TrivFlag GlobalTheory.LineNorm
@@ -43,7 +44,7 @@ private theorem positionOne_invariantIntegral_exchange_step {K : Type} [Field K]
     · simp [x]
     · congr 1
       ext a l
-      simp [Matrix.updateCol_apply, Fin.castSucc_ne_last]
+      simp [Fin.castSucc_ne_last]
   have hsn : ∀ ρ, w (M.submatrix (Fin.snoc (α := fun _ => Fin n) σ ρ) id).det = w (x ρ) * m := by
     intro ρ
     rw [hexp, Fin.sum_univ_castSucc]

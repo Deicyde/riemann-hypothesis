@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.NonemptyInvFunEquiv
 
 noncomputable section
@@ -155,7 +155,7 @@ theorem contracts_chain : ∀ (m : ℕ) (G : Fin (m + 1) → Type) [∀ j, Monoi
             gs (Fin.succ 0) = 1 ∧ (∀ j : Fin m, gs j.succ.castSucc = 1) ∧ (∀ j : Fin m, gs j.succ.succ = 1) ∧
             gs (Fin.last (m + 1)) = 1 :=
           ⟨Pi.mulSingle (Fin.castSucc 0) h, Pi.mulSingle_eq_same _ _, Pi.mulSingle_eq_same _ _,
-            Pi.mulSingle_eq_of_ne (by simp [Fin.ext_iff]) _, fun j => Pi.mulSingle_eq_of_ne (by simp [Fin.ext_iff]) _,
+            Pi.mulSingle_eq_of_ne (by simp) _, fun j => Pi.mulSingle_eq_of_ne (by simp [Fin.ext_iff]) _,
             fun j => Pi.mulSingle_eq_of_ne (by simp [Fin.ext_iff]) _, Pi.mulSingle_eq_of_ne (by simp [Fin.ext_iff]) _⟩
         have hinv := hl gs hgl (e (t ⊗ₜ a)) v
         rw [← hinv, he]

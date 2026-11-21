@@ -1,13 +1,7 @@
-import Mathlib
-import Formalism.LocalRingCardinality.AdicCompletionLocal.LocTied
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsCrisP
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PadicIntHomUnique
-import Development.AbelianVarietyTheory.CrystallinePeriods.RingIface
-import Development.AbelianVarietyTheory.CrystallinePeriods.CrisMaps
-import Development.AbelianVarietyTheory.CrystallinePeriods.CrisMapsLoc
-import Development.AbelianVarietyTheory.CrystallinePeriods.AdicMaps
 import Development.AbelianVarietyTheory.CrystallinePeriods.CrisLoc
-import Development.AbelianVarietyTheory.CrystallinePeriods.RingBasics
 
 noncomputable section
 namespace GlobalTheory.MemLoc.ActLaws
@@ -187,7 +181,7 @@ theorem σD_mul (g h : Per.Gq l) (x : Per.BdR l) : Per.σD (g * h) x = Per.σD g
 theorem σD_one (x : Per.BdR l) : Per.σD 1 x = x := by
   refine RingHom.congr_fun (GlobalTheory.CrisLoc.bdR_hom_ext l
     (f := Per.σD 1) (g := RingHom.id _) fun y => ?_) x
-  simp only [RingHom.comp_apply, σD_alg, σDp_one, RingHom.id_apply]
+  simp only [σD_alg, σDp_one, RingHom.id_apply]
 
 theorem endo_zA_pt (F : Per.Ainf l →+* Per.Ainf l) (z : ℤ_[l]) : F (Per.zA l z) = Per.zA l z := by
   rw [← sub_eq_zero]

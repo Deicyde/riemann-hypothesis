@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NmatEqLowMat
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ColumnGramDeterminantUnitLowerThreeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagGramDensityInequalityComplexStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LintegralUpdateSubShearStatement

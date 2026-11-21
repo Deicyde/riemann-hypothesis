@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.PeriodIntegrals.LatIdxDet
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.IdxChange
 
 open Module IsDedekindDomain Formalism.HermitianLatticesTheory Formalism.DivisionValues

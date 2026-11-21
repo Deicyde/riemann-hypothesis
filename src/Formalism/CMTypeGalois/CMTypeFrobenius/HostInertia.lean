@@ -1,5 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.CMTypeGalois.StatementField
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.NumberTheory.RamificationInertia.Galois
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.Ideal.Quotient.HasFiniteQuotients
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.ReduceModChar
 
 open NumberField Ideal
 

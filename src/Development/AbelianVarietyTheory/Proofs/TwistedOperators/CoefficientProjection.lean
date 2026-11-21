@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.OneMemNbh
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.DiscreteBranchingUpq
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.ProjExists
 
 open MeasureTheory Matrix Finset Formalism.MainNotions.S Formalism.REAL Formalism.QuantumDeterminants GlobalTheory.Ell
 open scoped InnerProductSpace
@@ -244,7 +244,7 @@ theorem coef_of_Q (σ : Mat n → (H' →L[ℂ] H')) (ρ : Mat n → (K →L[ℂ
   have hleft : ∀ y, ⟪Q x, y⟫_ℂ = (d : ℂ) * ∫ h, m h * ⟪ρ (umat h) x, y⟫_ℂ ∂muG ε' := by
     intro y
     rw [← inner_conj_symm, hQ, map_mul, ← integral_conj]
-    simp only [Complex.conj_ofReal, map_mul, hm, RCLike.star_def, RCLike.conj_conj, inner_conj_symm]
+    simp only [Complex.conj_ofReal, map_mul, hm, RCLike.star_def, inner_conj_symm]
   have hmid : ∀ h, ⟪ρ (umat h) x, ρ (umat g) (Q x)⟫_ℂ =
       (d : ℂ) * ∫ k, star (m (g⁻¹ * (h * k))) * c k ∂muG ε' := by
     intro h

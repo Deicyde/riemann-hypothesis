@@ -1,10 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.TrivFlagMod
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.FlagMinor
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.PluckerCoord
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.MonomialRatioIntegralModelStatement
-import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.StatementsBundles
-import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.SameGenericSymm
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.InstFintypeSumElim
+import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.PGenericProjClosureDivisor
 
 open MvPolynomial GlobalTheory.CompanionTheory.Ar.Num GroundTheory.Heights₂.Heights.NumbersDVR
 open ReciprocityTheory.ChartRestriction.G.Geo (ChartBundle chartRing)
@@ -88,7 +85,7 @@ private theorem isMultiHomog_prod_X_pow' {O : Type} [CommRing O] {K : Type} [Fin
     (fun k => e k • blockWeight ι ⟨k, c k⟩) (fun k _ => hXpow _ _)
   have hsum : (∑ k, e k • blockWeight ι ⟨k, c k⟩) = e := by
     funext k'
-    simp [Finset.sum_apply, blockWeight, Pi.single_apply, Pi.smul_apply]
+    simp [Finset.sum_apply, blockWeight, Pi.single_apply]
   rw [hsum] at h
   exact h
 

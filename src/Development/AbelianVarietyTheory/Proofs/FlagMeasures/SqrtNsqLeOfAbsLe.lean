@@ -1,7 +1,4 @@
-import Mathlib
-import Formalism.RealPlaceAnalysis.StatementU
-import Formalism.RealPlaceAnalysis.RealPlaceTaylor.SumOfSquaresIdentityHolds
-import Formalism.RealPlaceAnalysis.QuotientSettingHolds
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.SiegelWeilLocal.OrbitStepSpace
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.RhoNNormLeAndCasimirArith
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.KtypesWithinSteps

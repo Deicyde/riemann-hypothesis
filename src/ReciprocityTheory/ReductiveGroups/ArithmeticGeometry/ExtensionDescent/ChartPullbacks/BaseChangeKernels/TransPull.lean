@@ -1,5 +1,5 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.Splits
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PlaceDivisors.SiegelPullbackTransfer.ExistsGenTransfer
+import BuildAid.Leniency.Open
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SemiabelianSchemes.CubicalStructures.CubeSymmetricSwapFirst
 
 set_option autoImplicit false
 
@@ -61,7 +61,7 @@ theorem trans_pull {G' G B' B : Scheme.{0}} (a : G' ⟶ G) (q : G ⟶ B) (q' : G
   have hW : q' ⁻¹ᵁ (V ⊓ V') ≤ a ⁻¹ᵁ (q ⁻¹ᵁ (U ⊓ U')) := le_inf hW1 hW2
   have h1 := congrArg (fun y => res hW (pullU a (q ⁻¹ᵁ (U ⊓ U')) y)) h
   simp only [map_mul, pullU_res_lemma_2, res_res_lemma] at h1
-  simp only [LB.pull, LB.LinComb, pidx, Fintype.prod_unique, zpow_one, pullU_res_lemma_2,
+  simp only [LB.pull, LB.LinComb, pidx, Fintype.prod_unique, zpow_one,
     res_res_lemma]
   rw [h1]
   congr 1

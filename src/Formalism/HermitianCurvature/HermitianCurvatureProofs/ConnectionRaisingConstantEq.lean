@@ -1,7 +1,13 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementNF
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.QuasiDeterminantFromEntries
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.InterlaceSignTwo
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.IsPFSum
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
+import Mathlib.RingTheory.SimpleRing.Principal
 
 open Matrix Finset Polynomial
 

@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.ExistsStandardIndModule
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ParabolicProjectionToLeviStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ContinuousSectionLeviEquivariantStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ContinuousOfIwasawaContinuousStatement

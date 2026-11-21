@@ -1,7 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.HilbertEisenstein.Imports
 import GroundTheory.AutomorphicForms.GL2.SummableNormIffAndTsumEqCoset2
 import GroundTheory.GlobalFields.TateThesis.Gaussian
-import GroundTheory.GlobalFields.TateThesis.AdelicCharLocal
+import PositivityTheory.AutomorphicForms.PublishedInputs.HilbertEisenstein.SSmooth
 
 noncomputable section
 

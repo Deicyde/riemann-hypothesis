@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.ArtSch
 import GroundTheory.PAdicHodge.PerfectoidField
+import Mathlib.RingTheory.SimpleRing.Principal
 
 namespace PI.ASDivW
 

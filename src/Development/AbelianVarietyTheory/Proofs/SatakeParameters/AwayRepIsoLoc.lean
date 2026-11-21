@@ -1,8 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ThetaMod
-import Formalism.SharpRestriction.LevelLetterCocycles.ExistsInertiaCharpolyFactorOfTameType
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LocalInvariantsMatchSemisimple
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.PolarizedGaloisRep
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsContinuousPadic
 open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formalism.ConjugateSelfDual ReciprocityTheory.Gal ReciprocityTheory.Aut Formalism.AUTREP Formalism.L2 Formalism.L2.Host Formalism.L2.NT NumberField IsDedekindDomain Polynomial GlobalTheory.HeightCounting GlobalTheory.RowTie GlobalTheory.SplitRead GlobalTheory.NPin
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
 
@@ -185,11 +185,11 @@ theorem awayRep_isoLoc (hGal : TieGal N A) (c : ℝ) (Pa : List (Part A.CG))
           (by rw [List.length_cons, mul_add, mul_one, add_comm]) fun w => ?_
         rw [List.foldr_cons, A.lpTw_sum, A.lpTw_add]
     have h2 := h1 ((List.range p.d : List ℕ) : List ℝ) fun k hk => by
-      simp [Lean.Internal.coeM] at hk
+      simp at hk
       obtain ⟨n, hn, rfl⟩ := hk
       exact ⟨n, hn, rfl⟩
     refine (h2.sum N A i hGal (ih fun q hq => h q (List.mem_cons_of_mem _ hq))).congr N A i
-      (by simp [rankIso, Lean.Internal.coeM]) fun w => ?_
+      (by simp [rankIso]) fun w => ?_
     simp only [isoLoc, spehLoc, List.foldr_cons, A.lpTw_sum]
 
 end List

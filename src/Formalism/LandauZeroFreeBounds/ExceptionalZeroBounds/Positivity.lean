@@ -1,4 +1,9 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.LandauZeroFreeBounds.NoZeroComplexOf
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open Complex LSeries ArithmeticFunction DirichletCharacter
 open scoped LSeries.notation
@@ -123,7 +128,7 @@ lemma term_two_real_nonneg {q : ℕ} [NeZero q] (χ₁ χ₂ : DirichletCharacte
     rcases eq_one_or_eq_neg_one_of_sq_eq_one χ₁ h₁ hu with h | h <;>
       rcases eq_one_or_eq_neg_one_of_sq_eq_one χ₂ h₂ hu with h' | h' <;> rw [h, h'] <;>
       generalize Λ n / (n : ℝ) ^ σ = a at ha ⊢ <;>
-      simp [Complex.re_ofReal_mul] <;> linarith
+      simp <;> linarith
   · rw [MulChar.map_nonunit _ hu, MulChar.map_nonunit _ hu, MulChar.map_nonunit _ hu]
     simp
 

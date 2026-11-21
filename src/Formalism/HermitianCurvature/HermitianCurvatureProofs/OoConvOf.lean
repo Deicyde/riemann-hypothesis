@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.TripleIntegrandMeasurable
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.PhiRegOf
 
 noncomputable section
 

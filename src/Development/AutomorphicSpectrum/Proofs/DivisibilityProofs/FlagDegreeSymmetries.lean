@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.CompactGapsGE
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.FlagImmersions.DegFlSymmetryInvariance
 open MvPolynomial Filter Topology GlobalTheory.CompanionTheory.Ar.Top
 

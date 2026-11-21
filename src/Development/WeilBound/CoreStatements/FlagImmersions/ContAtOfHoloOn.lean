@@ -1,8 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.FlagImmersions.Transport
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.RiemannExtensionOfLogGrowth
 import ReciprocityTheory.AnalyticForms.PotentialTheory.DegreeSheets
 import ReciprocityTheory.AnalyticForms.PotentialTheory.AnalyticSubsetChartLocal
-import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.DifferentiableOnOfTendstoLocallyUniformlyOn
+import Mathlib.Analysis.Calculus.InverseFunctionTheorem.ContDiff
 
 noncomputable section
 

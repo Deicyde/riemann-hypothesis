@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LMulBeta
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.TwistedShiftFixedRatioConstDomainStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.IsUnitOfStableLineStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ClosEqZeroOfMulMemStatement
@@ -13,7 +12,8 @@ import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LogPeriodCongrue
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ExistsLogOnePlusKerThetaDeRhamPlusStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.GaloisLogTeichmullerRatioEqAddKummerStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ExistsKummerFracCoboundaryFullGaloisStatement
-import Development.AbelianVarietyTheory.CrystallinePeriods.RingIface
+import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.AssociatedPowOfUnits
+import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FontaineBcrisHolds
 
 noncomputable section
 

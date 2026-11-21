@@ -1,12 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsChartMember
-import ReciprocityTheory.AnalyticForms.RegularLocalRings.FinalTheorems
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GsAppTopOfSection
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsDominantToUnitLeft
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GmSpMapUnitOn
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaNonvanishTorsion
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ExistsIntegralSectionUnitAt
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsPullbackDegPreStrictLineBundleIso
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsGenOfIsoRel
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj IsLocalRing
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -267,14 +261,14 @@ theorem prod_gt {Z : Scheme.{0}} {U : Type} [CommGroup U] (c b : 𝟙_ (Over (Sp
     ∏ k : Fin 4, h (𝟙 _ ≫ ![(c * b).left, c.left, b.left, (η[D.P.A]).left] k) ^ DegPre.gtε k =
       (h (c * b).left)⁻¹ * h c.left * h b.left * (h (1 : 𝟙_ (Over (Sp V₁)) ⟶ D.P.A).left)⁻¹ := by
   rw [Fin.prod_univ_four, ← SymFrame.eta_eq]
-  simp [DegPre.gtε, zpow_neg, zpow_one]
+  simp [DegPre.gtε, zpow_neg]
 
 theorem prod_ln {U : Type} [CommGroup U] (b : 𝟙_ (Over (Sp V₁)) ⟶ D.P.A)
     (h : ((𝟙_ (Over (Sp V₁))).left ⟶ D.P.A.left) → U) :
     ∏ k : Fin 2, h (𝟙 _ ≫ ![(η[D.P.A]).left, b.left] k) ^ DegPre.lineε 1 k =
       h (1 : 𝟙_ (Over (Sp V₁)) ⟶ D.P.A).left * (h b.left)⁻¹ := by
   rw [Fin.prod_univ_two, ← SymFrame.eta_eq]
-  simp [DegPre.lineε, zpow_neg, zpow_one]
+  simp [DegPre.lineε, zpow_neg]
 
 theorem char_mem [IsIntegrallyClosed V₁] (H : Desc f q ev k₀ u) {N : ℕ} (hN : 1 ≤ N)
     (htor : ∀ x : Over.mk (spMap ev) ⟶ D.P.A, x ^ N = 1 → RatP q k₀ x.left)

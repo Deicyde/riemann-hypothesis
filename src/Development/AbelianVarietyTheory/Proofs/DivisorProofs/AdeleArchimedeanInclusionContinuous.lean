@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CombineApply
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsIsLatticeFrameIsMajorantFrame
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK
 open scoped Matrix TensorProduct
 
@@ -34,7 +33,7 @@ theorem continuous_symm_inf : ∀ (F E : Type) [Field F] [NumberField F] [Field 
     by_cases hv : v = w
     · subst hv
       rw [Pi.mul_apply]
-      simp only [rr, Pi.single_eq_same, he, mul_one]
+      simp only [rr, Pi.single_eq_same, he]
     · simp [rr, Pi.single_eq_of_ne hv]
   have hsum : (fun c : InfinitePlace F → ℂ => Φ.symm (c, 0)) = fun c =>
       ∑ w, (rr w (c w).re • Φ.symm (Pi.single w 1, 0) +

@@ -1,7 +1,9 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.IsClosedKset
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.PsiExistsOfFormula
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.PhiCas
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.GelfandHW
+import Mathlib.Analysis.Calculus.FDeriv.Symmetric
+import Mathlib.Topology.Sheaves.Presheaf
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.Gelfand
 
 noncomputable section
 
@@ -178,9 +180,9 @@ theorem opPow_eqOn (X Y : Fin n → Fin n → Matrix (Fin n) (Fin n) ℂ) (σ : 
     intro z hz
     by_cases hab : a = b
     · subst hab
-      simp [opPow, Matrix.one_apply, hFG hz]
+      simp [opPow, hFG hz]
     · have hs : σ a ≠ σ b := fun h => hab (σ.injective h)
-      simp [opPow, Matrix.one_apply, hab, hs]
+      simp [opPow, hab, hs]
   | succ k ih =>
     intro z hz
     have hterm : ∀ d, Lhol (Y a d) (opPow (fun a b => Lhol (Y a b)) k d b F) z =

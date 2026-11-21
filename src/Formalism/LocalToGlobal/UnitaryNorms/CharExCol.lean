@@ -1,7 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.UnitaryNorms.CharExEta
 import Formalism.LocalToGlobal.Columns.AbelianHostFieldConditions
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.CharExtend
-import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.IdeleUnitsOpen
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IdeleUnitsOpen.IsOpenAdicCompletionIntegers
 
 noncomputable section
 

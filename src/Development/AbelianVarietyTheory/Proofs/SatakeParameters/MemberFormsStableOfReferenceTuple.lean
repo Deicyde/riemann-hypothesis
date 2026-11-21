@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataKerP
-import Formalism.LocalRingCardinality.DataAmbForm
 open Formalism.BasicNotions Classical
 
 namespace GlobalTheory.KFiMu0

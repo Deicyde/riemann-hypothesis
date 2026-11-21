@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.LefschetzSigmaSums.HeckeTraceSemi
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.ExistsPermOfMapEq
+import GroundTheory.HeightsAndTheta.Heights.RemainderTerms.JacobiTrudi
 open UpperTheory.Gal.LocalSmoothExtension
 
 private theorem exists_perm_of_map_eq {n : ℕ} (a b : Fin n → ℂ)

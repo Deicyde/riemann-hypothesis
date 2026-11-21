@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.CuspFrameWeights.EigenfunctionFiniteCoefficients
-import Formalism.RealPlaceAnalysis.FinalF
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.InnerRepK
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.TraceTransposePow
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.PhiPositiveDefiniteCholeskyFormulaStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.PsiEntriesCentreEigenfunctionsDiscreteSeriesStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.PsiPolarDecompositionEquivarianceStatement
@@ -139,7 +136,7 @@ lemma compress_of_formula (hF : FormulaGap) {ε : Fin n → Bool} {lam : Fin n �
     linarith
   have hreal : star (Phi lam ((toMK k')ᴴ * NormedSpace.exp X * toMK k')) =
       Phi lam ((toMK k')ᴴ * NormedSpace.exp X * toMK k') :=
-    Complex.ext (by simp [Complex.star_def]) (by simp [Complex.star_def, him])
+    Complex.ext (by simp) (by simp [him])
   rw [hreal]
   try rfl
 

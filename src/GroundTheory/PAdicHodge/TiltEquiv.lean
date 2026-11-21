@@ -1,12 +1,8 @@
-import Mathlib
-import GroundTheory.PAdicHodge.UntiltPerfectoid
+import BuildAid.Leniency.Variable
 import GroundTheory.PAdicHodge.UntiltApprox
-import GroundTheory.PAdicHodge.UntiltGalois
 import GroundTheory.PAdicHodge.UntiltGaloisCorr
 import GroundTheory.PAdicHodge.CompletedAlgClosure
 import GroundTheory.PAdicHodge.PerfectoidCharP
-import GroundTheory.PAdicHodge.PerfectoidCriterion
-import GroundTheory.PAdicHodge.TiltAlgClosed
 set_option maxSynthPendingDepth 1
 
 noncomputable section

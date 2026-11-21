@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.NnDefs
 import Development.AutomorphicArithmetic.AutomorphicVarieties.WeilGroupCharacters.Inertia
+import Mathlib.NumberTheory.Padics.RingHoms
 
 open IsLocalRing UpperTheory.V.Alg UpperTheory.V.Ws
 

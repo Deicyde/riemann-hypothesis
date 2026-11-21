@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.GaussianEigenFrames.IsPairFrame
+import Formalism.LocalToGlobal.TorsionIntegrality.CMGoodModels.Statement
+import Formalism.LocalToGlobal.TorsionIntegrality.QuadraticSemicharacters.QuadraticSemicharactersFactAltForm
 
 noncomputable section
 open scoped BigOperators ComplexConjugate

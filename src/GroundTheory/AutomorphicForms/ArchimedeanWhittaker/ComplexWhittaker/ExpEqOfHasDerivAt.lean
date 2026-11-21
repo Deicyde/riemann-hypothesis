@@ -1,6 +1,5 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.ArchimedeanWhittaker
-import GroundTheory.AutomorphicForms.RealGroupsIwasawa
+import BuildAid.Leniency.Open
+import GroundTheory.AutomorphicForms.HarishChandraRegularity.CartanBasis
 
 namespace GroundTheory.Automorphic.ArchWhittakerC
 

@@ -1,9 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ZetaOn
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaKernelReal
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCompactOpenCompactAtInfinity
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepIntertwinesAction
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzEqOfIntegralsEq
+import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFinPartNeZero
 
 noncomputable section
 

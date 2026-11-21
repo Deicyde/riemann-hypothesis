@@ -1,8 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.ProductFirstZerothParts
 import Formalism.SharpRestriction.Divisibility.LocalQuadraticParts
 import Formalism.LocalRingCardinality.Lemmas
-import Formalism.LocalRingCardinality.DataForced
-import Formalism.LocalRingCardinality.DataParams
 
 noncomputable section
 

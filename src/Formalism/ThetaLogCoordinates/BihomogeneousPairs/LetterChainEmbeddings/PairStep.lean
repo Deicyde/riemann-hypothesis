@@ -1,4 +1,7 @@
-import Formalism.ThetaLogCoordinates.BihomogeneousPairs.LetterChainEmbeddings.BiHomPlus
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.ThetaLogCoordinates.BihomogeneousPairs.LetterChainEmbeddings.ChainEmbInj
+import Formalism.ThetaLogCoordinates.BihomogeneousPairs.LetterChainEmbeddings.TieFPowMulFree
 
 namespace Formalism.InvariantFactorPaths.KP.LL
 

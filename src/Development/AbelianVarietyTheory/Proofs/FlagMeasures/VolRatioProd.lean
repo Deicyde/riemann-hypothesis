@@ -1,7 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.GlobAut
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.GeneralLinearActions.GapAtLeast
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ExistsReduction
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.InflationBasic
 
 open MeasureTheory Formalism.MainNotions.S GlobalTheory.RowLev NumberField IsDedekindDomain Matrix

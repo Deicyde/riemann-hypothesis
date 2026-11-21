@@ -1,7 +1,8 @@
-import Mathlib
-import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
-import Formalism.LocalToGlobal.UnitaryNorms.CharTied
-import Formalism.FrobeniusOrbits.HostCorollaries
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.NcardEqTwoIff
+import Formalism.LocalRingCardinality.DataHost
+import Formalism.LocalToGlobal.UnitaryNorms.IsUnitaryNormOf
 
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.FrobeniusOrbits Neutral.B1 ReciprocityTheory.Neutral.Bridge.HCFR Formalism.L2.Host
 open scoped Pointwise

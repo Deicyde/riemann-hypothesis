@@ -1,9 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
-import Formalism.SharpRestriction.CuspSpanNormBounds.GlobAut
-import Formalism.SharpRestriction.CuspSpanNormBounds.SArith
-import Formalism.FormalDegreeBessel.StatementDS
-import Formalism.RealPlaceAnalysis.SmoothOnGVIff
 
 open MeasureTheory
 open scoped InnerProductSpace

@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.RealClassMaps.RealClassMapTheorem
 import Formalism.WachLatticeTwists.RealClassMaps.RealClassMapProofs.RowChiReal
 import Formalism.WachLatticeTwists.SplitClassesAll.SplitClassesProofs.TheoremNFiveSplitRankForm
+import Formalism.WachLatticeTwists.CupProductVanishing.CupProductProofs.CoboundaryTrivialActionZero
 
 variable [hT2Core : Fact ReciprocityTheory.ChartRestriction.T2.Core]
 

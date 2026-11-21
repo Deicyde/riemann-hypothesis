@@ -1,5 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.IsLieDataCircle
+import Mathlib.Analysis.Calculus.InverseFunctionTheorem.ContDiff
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 open GlobalTheory.SmoothForms NumberField Matrix
 open scoped ContDiff Topology
 
@@ -281,7 +288,7 @@ theorem _root_.GlobalTheory.SmoothForms.SecondKind.sm_iff (H : _root_.GlobalTheo
           rw [list_prod_ofFn_eq_of_eq_one_of_ne _ _ i]
           · simp
           · intro m hm
-            simp [Pi.single_apply, hm]
+            simp [hm]
         show r • (x • Y i) = Λ (Φ (id r • Pi.single i x))
         rw [hprod, hr, mul_smul]
       have := h1.unique (h2.congr_of_eventuallyEq hev.symm)

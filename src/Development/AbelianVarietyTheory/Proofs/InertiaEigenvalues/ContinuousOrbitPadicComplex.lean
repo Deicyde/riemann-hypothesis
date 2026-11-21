@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.DataNLoc
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.HTBasis
 
 open Formalism.BasicNotions Formalism.BasicNotions.Loc GlobalTheory.Cyc

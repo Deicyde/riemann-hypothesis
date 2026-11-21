@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsAdmissibleIntegralBasisChangeOne
+import Mathlib.Algebra.Polynomial.Basis
 
 open scoped IntermediateField Polynomial RatFunc
 open GlobalTheory.Nef

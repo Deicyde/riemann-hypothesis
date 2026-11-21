@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.InvariantSeriesBidegreeOneOne
+import Mathlib.RingTheory.PowerSeries.Derivative
 
 namespace Formalism.HermitianLattices.ModelCocycles
 

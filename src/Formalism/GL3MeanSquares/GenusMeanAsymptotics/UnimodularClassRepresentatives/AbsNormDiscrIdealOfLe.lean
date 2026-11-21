@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.GenusMeanAsymptotics.UnimodularClassRepresentatives.ConjOMemConjIdeal
+import Mathlib.Data.Int.Star
 
 open NumberField Module
 
@@ -19,7 +23,7 @@ theorem det_update_sum {ι : Type*} [Fintype ι] [DecidableEq ι] (b : Basis ι 
     ext r s
     rcases eq_or_ne r i with rfl | hr
     · simp [Basis.toMatrix_apply, Matrix.updateRow_self, Finset.sum_apply, map_sum, map_smul]
-    · simp [Basis.toMatrix_apply, Matrix.updateRow_ne hr, Function.update_apply, hr]
+    · simp [Basis.toMatrix_apply, hr]
   rw [e, Matrix.det_updateRow_sum, smul_eq_mul]
 
 theorem exists_adjust (hK : Formalism.HermitianLatticesTheory.IsCMUnram K) {P : Ideal (𝓞 K)} (hP : P.IsMaximal) {c : 𝓞 K}

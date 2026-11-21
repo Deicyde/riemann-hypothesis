@@ -1,8 +1,5 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.GlobalSectionsRankAlgClosed
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IntegralClosureHeightEqOneOfLiesOver
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.GlueApplyOfNotInFibre
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.GenWeil
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsChartOfLineBundle
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LatticeVectorBundlePullbackStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.RegAtNoetherianModelNoetherianStatement
@@ -97,7 +94,7 @@ theorem exists_adjoint {Ω Ω' : Type} [Field Ω] [Field Ω'] {V V' : Type} [Add
       simp)
   have hjd : ∀ w k, jd w (v' k) = i (w (v k)) := fun w k => by
     show (v'.constr Ω' fun k => i (w (v k))) (v' k) = _
-    simp [Module.Basis.constr_basis]
+    simp
   have hadj : ∀ w u, jd w (j u) = i (w u) := fun w u => by
     rw [hexp u]
     conv_rhs => rw [← v.sum_repr u]

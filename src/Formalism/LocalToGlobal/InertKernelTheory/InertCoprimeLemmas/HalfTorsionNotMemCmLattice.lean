@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.InertKernelTheory.StatementCurve
 import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.BaseEx
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.QuadraticDedekindZeta.LocOdd
@@ -49,7 +50,7 @@ theorem bw_repr (hq : PI.ClassNumImQ.QuadData d K b) (u v : ℤ) :
   have hx : ((u : 𝓞 K) + (v : 𝓞 K) * om hq) = u • (bw hq) 0 + v • (bw hq) 1 := by
     simp [bw, Module.Basis.mk_apply, zsmul_eq_mul]
   rw [hx, map_add, map_zsmul, map_zsmul, Module.Basis.repr_self, Module.Basis.repr_self]
-  simp [Finsupp.single_apply]
+  simp
 
 theorem hnf (hq : PI.ClassNumImQ.QuadData d K b) (m : ℤ) (hm : (d : ℤ) + 1 = 4 * m) (cc : Ideal (𝓞 K)) (hcc : cc ≠ ⊥) :
     ∃ (g a : ℕ) (k : ℤ), 0 < g ∧ 0 < a ∧ (a : ℤ) ∣ k * k + k + m ∧

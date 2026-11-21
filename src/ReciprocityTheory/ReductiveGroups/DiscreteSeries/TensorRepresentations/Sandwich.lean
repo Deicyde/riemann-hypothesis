@@ -1,8 +1,6 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.Residue
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.Transported
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.SandwichA
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.PsiExistsStatement
-import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
 
 noncomputable section
 

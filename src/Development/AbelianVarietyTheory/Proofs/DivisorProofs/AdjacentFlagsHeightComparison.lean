@@ -1,15 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TotalEqCurve
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFlagCh2EqOfAdjacent
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ShortExactCompositionMetricCompat
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DetMetricShortExactIsoIsometric
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DensityInequalityLogOneSubCosSq
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.TraceAdjugateMulEqSumPermRing
 import Development.AbelianVarietyTheory.Definitions.Divisors.GenericPointAsIdeal
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ChernMatrixIsForm
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ChernMatLinearCombination
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ClosedSubsetPartitionNull
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArithmeticVarietyPartitionDensity
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BottChernMatrixIsFormStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ShortExactVectorBundlesHeightCompareStatement
 
@@ -103,7 +98,7 @@ theorem IsWeights.det (hc : IsWeights d ((d + 1 : ℝ)⁻¹) c) (A M : Matrix (F
 variable {k : Type} [CommRing k] {X : Scheme.{0}} {p : X ⟶ Sp k} {σ : k →+* ℂ} {D : ℕ}
 
 theorem mix_sub (A M M' : Matrix (Fin (d + 1)) (Fin (d + 1)) ℂ) : mix d A (M - M') = mix d A M - mix d A M' := by
-  simp only [mix, Matrix.mul_sub, Matrix.trace_sub, Complex.sub_re, mul_sub]
+  simp only [mix, Matrix.trace_sub, Complex.sub_re, mul_sub]
 
 theorem isDens_chernDens {B : LB X} {φ : Weight p σ B} (h : φ.IsCInf) :
     IsDens fun (c : AlgChart p σ (d + 1)) y => c.chernDens φ y :=

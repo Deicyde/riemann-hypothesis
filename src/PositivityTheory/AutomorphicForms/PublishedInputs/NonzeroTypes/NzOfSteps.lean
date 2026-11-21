@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.NonzeroTypes.FiniteDimensionalTranslationCoordinates
 import PositivityTheory.AutomorphicForms.PublishedInputs.NonzeroTypes.NzOfTypeData
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsFixedIff
+import PositivityTheory.AutomorphicForms.PublishedInputs.NonzeroTypes.TensorProductVectors
 
 noncomputable section
 

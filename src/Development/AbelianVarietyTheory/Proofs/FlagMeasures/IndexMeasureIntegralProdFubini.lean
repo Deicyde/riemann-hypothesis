@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.Cint
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.CintTranslate
+import Mathlib.Analysis.CStarAlgebra.Classes
 
 open GlobalTheory.IdxInt
 open scoped Pointwise Classical

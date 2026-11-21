@@ -1,14 +1,8 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.DifferentialFormsCech.AffineHodgeIsomorphisms.IsFormT
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.HodgeSurjectivity.CosieveBot
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.HodgeSurjectivity.RelativeLiftCosieves.TopRes
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.HodgeSurjectivity.RelativeLiftCosieves.ZarAbs
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.CechPairings.Imports
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.GrCechFin
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.GlobalSerreRelations.CechAugRowU
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CocycleZero
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SerreClassOfCechSpectralSequence
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.InOpenOfThickeningMorphism
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.InOpenFiniteInfIff
 set_option backward.isDefEq.respectTransparency false
 open CategoryTheory AlgebraicGeometry GlobalTheory.LogCris DividedPowers GlobalTheory.CechDR GlobalTheory.HodgeCoh
@@ -141,7 +135,7 @@ theorem deg_inj (e : DCx.AugRow A K) (a : ℕ) (hb : Function.Injective (e.edge.
         intro q
         rw [hxdef, K.D_sgl, hw']
         change K.sgl 0 (m + 1) (e.ε (m + 1) c) 0 q - _ = 0
-        simp only [pow_zero, one_smul, Pi.add_apply, Pi.sub_apply]
+        simp only [pow_zero, one_smul, Pi.add_apply]
         rw [K.sgl_ne (K.dh 0 m w) (Or.inl (by omega) : 0 ≠ 0 + 1 ∨ q ≠ m)]
         simp
       obtain ⟨y, hy, -, hDy⟩ := tail K (m + 1) (m + 1) h le_rfl x hxT hDx h0

@@ -1,10 +1,9 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.IsSplitGaussChars
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.GapCondExample
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.BundleDegreeEqSumValuationsStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.FrobeniusLatticeDegreeMulPStatement
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.LatticeBasisAdaptedToSubspaceStatement
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.SubAndQuotientBundlesStatement
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.TotallySplit
 
 noncomputable section
 
@@ -113,7 +112,7 @@ theorem linearIndependent_mapVec (σ : K →+* K) {d n : ℕ} (v : Fin n → Fin
   have h2 : Matrix.of v * B = 1 := by
     ext a b
     have := congrFun (LinearMap.congr_fun hg (Pi.single a 1)) b
-    simp only [LinearMap.comp_apply, hgB, Matrix.vecMulLinear_apply, Matrix.vecMul_vecMul,
+    simp only [LinearMap.comp_apply, hgB, Matrix.vecMulLinear_apply,
       LinearMap.id_apply, Matrix.single_one_vecMul] at this
     rw [Matrix.one_apply]
     change Matrix.vecMul (v a) B b = _

@@ -1,6 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.CayleyDegreeNondegeneracy.RowsDef
 import Formalism.SharpRestriction.CuspSpanNormBounds.LocalModelPeriodLattices
 import Formalism.FormalDegreeBessel.FinalG
+import Formalism.FlagUnipotentLattices.CardSubgroupsOfIndexLe
+import Formalism.SharpRestriction.CuspSpanNormBounds.BruhatCellsKronecker.FamilyPacketOfEquivalentStatement
 
 noncomputable section
 

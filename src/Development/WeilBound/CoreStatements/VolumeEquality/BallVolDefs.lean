@@ -1,7 +1,8 @@
-import Development.WeilBound.CoreStatements.VolumeEquality.BaseUnifEx2
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.EqualVolumeCompactOpens.InfSpanNeBot
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.IntEmbInjective
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.HaarPushforwardEqBallDensity
+import Development.WeilBound.CoreStatements.VolumeEquality.RootBranches
 
 noncomputable section
 

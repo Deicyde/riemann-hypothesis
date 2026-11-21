@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.HodgeTateCokerSharp
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConvEqOneOfForallPairing
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.ToSpanSingletonConstGenInjective
+import Mathlib.Data.Finsupp.Pointwise
 
 noncomputable section
 

@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.KernelNormConstantSpec
-import Formalism.SharpRestriction.GlobalSchurBounds.StandardLatticesGL3
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.MapFinNeg
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsThetaAtOfVac
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsWeilOver
 

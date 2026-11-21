@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.MaIntEmpty
+import Mathlib.Order.CompletePartialOrder
 
 namespace ReciprocityTheory.AnForm
 

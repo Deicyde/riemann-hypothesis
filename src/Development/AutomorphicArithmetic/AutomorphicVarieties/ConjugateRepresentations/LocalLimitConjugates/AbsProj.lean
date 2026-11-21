@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ConjugateRepresentations.LocalLimitConjugates.CasimirResolventProjection
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ConjugateRepresentations.LocalLimitConjugates.AbsDense
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ConjugateRepresentations.LocalLimitConjugates.AbsInv
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ConjugateRepresentations.LocalLimitConjugates.AbsLim
@@ -89,7 +89,7 @@ theorem UpperTheory.V.Cj.H.absProj :
       simp [Function.comp_apply, map_smul, hTR k g w]
     exact tendsto_nhds_unique (hlim (R g w)) h2
   · intro k g w
-    simp [ContinuousLinearMap.smul_apply, map_smul, hTR k g w]
+    simp [map_smul, hTR k g w]
   · intro k g w
     exact hTR k g w
   · intro k v

@@ -1,10 +1,6 @@
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.LocalFieldUniformizerNormPropertiesStatement
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.MatrixHaarRightTranslateStatement
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.MeasureUniformizerMultipleMatricesStatement
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.MeasureInvertibleIntegralMatricesStatement
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.WeilIntegralUnipotentLeviFormula
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.GeneralLinearIntegralCompactOpenStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.InstBorelGL
 
 noncomputable section
 

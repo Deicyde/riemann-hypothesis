@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.FormsFiniteness.OrderedCechToCatCochainsOneApplyValueAtSubset
 
 open NumberField NumberField.mixedEmbedding Matrix MeasureTheory GroundTheory.Automorphic GroundTheory.Automorphic.AutomorphicForm UpperTheory.V.Af.Fin
@@ -24,7 +25,7 @@ private theorem one_tmul_add_tmul_mul_I_eq_smul_of_sq_eq_one {R : Type} [CommRin
   simp only [TensorProduct.tmul_add, TensorProduct.tmul_smul]
   rw [hc (σ * Complex.I) (g 1), hc (σ * Complex.I) (g Complex.I)]
   simp only [← algebraMap_smul ℂ z.re, ← algebraMap_smul ℂ z.im, ← algebraMap_smul ℂ (-z.im)]
-  match_scalars <;> simp only [Complex.coe_algebraMap, Complex.ofReal_neg] <;>
+  match_scalars <;> simp only [Complex.coe_algebraMap] <;>
     first
     | ring1
     | linear_combination (z.im * σ * σ) * Complex.I_mul_I - z.im * hσ

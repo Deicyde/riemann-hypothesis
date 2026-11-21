@@ -1,11 +1,10 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.WeightFunctionOnFrames
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.LUStatementPf
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.OrthoStatementPf
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.FundSetPf
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.OntoStatementPfS
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.InterpCStatementPfA
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.InterpStatementPfH
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.ArakelovInstances.PnormInvStatement
 
 namespace GlobalTheory.PoinHol
 
@@ -222,7 +221,7 @@ theorem _root_.GlobalTheory.PoinHol.poin_summable_isBddSec :
     rw [← tsum_mul_left]
     conv_rhs => rw [← (Equiv.mulRight (⟨γ0, hγ0⟩ : X.Γ)).tsum_eq]
     refine tsum_congr fun γ => ?_
-    simp only [Equiv.coe_mulRight, Subgroup.coe_mul, Subgroup.coe_mk]
+    simp only [Equiv.coe_mulRight, Subgroup.coe_mul]
     rw [lact_lact_eq_lact_mul', X.χ_mul la γ γ.2 γ0 hγ0, mul_inv]
     have h0 := _root_.ReciprocityTheory.ChartRestriction.G.AR.Up.IC.chi_ne_zero X la hγ0
     calc _ = X.χ la γ0 * (X.χ la γ0)⁻¹ *

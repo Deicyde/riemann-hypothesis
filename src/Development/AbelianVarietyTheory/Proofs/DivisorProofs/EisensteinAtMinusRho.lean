@@ -1,10 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoreConcl
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisensteinConstantTermSettingStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocallyUniformModerateGrowth
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRhoOfCore
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisensteinConstantTermSettingAltBis
 

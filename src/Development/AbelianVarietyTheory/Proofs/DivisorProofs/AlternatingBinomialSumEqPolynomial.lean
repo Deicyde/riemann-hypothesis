@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.LineSCShortExact
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AevalFibPowExplicit
 import ReciprocityTheory.GeometryOfNumbers.PluriharmonicAnalysis.LogDetSt
@@ -59,7 +59,7 @@ theorem eval_hs_mul (a b : ℝ) (n : ℕ) :
     | succ n ih =>
       refine ⟨ih.2, ?_⟩
       rw [hs_rec]
-      simp only [map_sub, map_mul, eval_X, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons]
+      simp only [map_sub, map_mul, eval_X, Matrix.cons_val_zero, Matrix.cons_val_one]
       linear_combination (a + b) * ih.2 - a * b * ih.1
   exact (key n).1
 

@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.TupleReadBaseTupleEqFamily
-import Formalism.LocalToGlobal.IndefiniteReal.DoubleCosetOperators.NHkRow
 
 noncomputable section
 

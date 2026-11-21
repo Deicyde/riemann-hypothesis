@@ -1,4 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.KTheoryStability.ReductionBoundsTorsion.HeckeDoubleCosets.PHeckeFormal
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.LinearAlgebra.Matrix.Permutation
+import Mathlib.NumberTheory.NumberField.Ideal.Basic
+import Mathlib.RingTheory.PiTensorProduct
 
 noncomputable section
 
@@ -259,7 +265,7 @@ theorem exists_clear (n : ℕ) (hn : 1 ≤ n) (I : Ideal R) (hI : I.IsMaximal) (
     split_ifs with h1 h2 <;> first | simp | exact absurd h1.1 h2.2
   let U : Matrix (Fin n) (Fin n) R := 1 - Nm
   have hU : U * (1 + Nm) = 1 := by
-    simp only [U, sub_mul, one_mul, mul_add, mul_one, hNN, add_zero]
+    simp only [U, sub_mul, one_mul, mul_add, mul_one, hNN]
     abel
   let M : Matrix (Fin n) (Fin n) R := U * σ.permMatrix R
   have hM : IsUnit M.det := by

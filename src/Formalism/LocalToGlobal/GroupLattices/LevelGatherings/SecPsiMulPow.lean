@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.FrobeniusOrbits.Statement
-import Formalism.SharpRestriction.GrowthBounds.UnramifiedQuadraticSetting
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.InertJacobiLevels.VVEqEmptyOfNotIsResidueClassZero
 
 noncomputable section

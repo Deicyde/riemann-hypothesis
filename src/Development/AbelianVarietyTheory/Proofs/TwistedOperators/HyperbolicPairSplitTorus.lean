@@ -1,10 +1,7 @@
-import Mathlib
-import Formalism.PeriodIntegrals.DSInfCharCap
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.PseudoCoefficientSeparation
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HarishChandraModulesOn
-import Formalism.RealPlaceAnalysis.StatementE
-import Formalism.RealPlaceAnalysis.StatementB
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.LeviFactorInverseModulusProperties
+import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.ExistsStandardIndModule
 
 open Matrix Formalism.REAL Formalism.MainNotions.S GlobalTheory.FlagMeas GlobalTheory.RealInd
 
@@ -34,7 +31,7 @@ theorem coord {P : Matrix (Fin n) (Fin n) ℂ} (hP : IsUnit P) (b : Fin n) (y : 
   have hPP : P * P⁻¹ = 1 := mul_nonsing_inv P ((isUnit_iff_isUnit_det P).1 hP)
   conv_lhs => rw [show y = P *ᵥ (P⁻¹ *ᵥ y) by rw [mulVec_mulVec, hPP, one_mulVec]]
   rw [bJ, star_mulVec, ← dotProduct_mulVec, mulVec_mulVec, mulVec_mulVec, Matrix.mul_assoc]
-  simp [Pi.star_def, Pi.single_apply, dotProduct]
+  simp [Pi.single_apply, dotProduct]
 
 theorem row_p {P : Matrix (Fin n) (Fin n) ℂ} {p q : Fin n} (hpq : p ≠ q)
     (hG : ∀ a b, (a = p ∨ a = q ∨ b = p ∨ b = q) →
@@ -223,10 +220,10 @@ theorem lie_H {P : Matrix (Fin n) (Fin n) ℂ} (hP : IsUnit P) {p q : Fin n} (hp
   by_cases h : a = p ∨ a = q ∨ b = p ∨ b = q
   · rw [hG a b h]
     split_ifs with h2
-    · rcases h2 with ⟨rfl, rfl⟩ | ⟨rfl, rfl⟩ <;> simp [Pi.single_apply, hpq, hpq.symm]
+    · rcases h2 with ⟨rfl, rfl⟩ | ⟨rfl, rfl⟩ <;> simp [hpq, hpq.symm]
     · simp
   · push_neg at h
-    simp [Pi.single_apply, h.1, h.2.1, h.2.2.1, h.2.2.2]
+    simp [h.1, h.2.1, h.2.2.1, h.2.2.2]
 
 theorem lie_algebra_split_torus_generator {P : Matrix (Fin n) (Fin n) ℂ} (hP : IsUnit P) {p q : Fin n} (hpq : p ≠ q)
     (hG : ∀ a b, (a = p ∨ a = q ∨ b = p ∨ b = q) →
@@ -236,10 +233,10 @@ theorem lie_algebra_split_torus_generator {P : Matrix (Fin n) (Fin n) ℂ} (hP :
   by_cases h : a = p ∨ a = q ∨ b = p ∨ b = q
   · rw [hG a b h]
     split_ifs with h2
-    · rcases h2 with ⟨rfl, rfl⟩ | ⟨rfl, rfl⟩ <;> simp [Pi.single_apply, hpq, hpq.symm]
+    · rcases h2 with ⟨rfl, rfl⟩ | ⟨rfl, rfl⟩ <;> simp [hpq, hpq.symm]
     · simp
   · push_neg at h
-    simp [Pi.single_apply, h.1, h.2.1, h.2.2.1, h.2.2.2]
+    simp [h.1, h.2.1, h.2.2.1, h.2.2.2]
 
 theorem split_part {a : ℕ} {j : Fin a → ℕ} {W : Flag n a} (h : 0 < a) (hW : IsIsoFlag ε j W)
     (hj : j ⟨0, h⟩ = 1) {P : Matrix (Fin n) (Fin n) ℂ} (hP : IsUnit P) {p q : Fin n} (hpq : p ≠ q)
@@ -256,10 +253,10 @@ theorem split_part {a : ℕ} {j : Fin a → ℕ} {W : Flag n a} (h : 0 < a) (hW 
   change (uMat _)ᴴ * Jm ε * uMat _ = Jm ε at hgJ
   have hd : ∀ a, a ≠ p → a ≠ q →
       (fun a => Complex.exp (x * (Pi.single p 1 - Pi.single q 1 : Fin n → ℂ) a)) a = 1 := by
-    intro a hap haq; simp [Pi.single_apply, hap, haq]
+    intro a hap haq; simp [hap, haq]
   have hd' : ∀ a, a ≠ p → a ≠ q →
       (fun a => Complex.exp (-(x * (Pi.single p 1 - Pi.single q 1 : Fin n → ℂ) a))) a = 1 := by
-    intro a hap haq; simp [Pi.single_apply, hap, haq]
+    intro a hap haq; simp [hap, haq]
   have hdd : ∀ a, (fun a => Complex.exp (x * (Pi.single p 1 - Pi.single q 1 : Fin n → ℂ) a)) a *
       (fun a => Complex.exp (-(x * (Pi.single p 1 - Pi.single q 1 : Fin n → ℂ) a))) a = 1 := by
     intro a; simp only; rw [← Complex.exp_add, add_neg_cancel, Complex.exp_zero]
@@ -272,7 +269,7 @@ theorem split_part {a : ℕ} {j : Fin a → ℕ} {W : Flag n a} (h : 0 < a) (hW 
       obtain ⟨t, rfl⟩ := first_flag_space_one_dimensional hW h hj he (col_ne_zero hP p) hy
       rw [Pi.single_eq_same, mulVec_smul, hg, act_col hP]
       have h1 : Complex.exp (x * (Pi.single p 1 - Pi.single q 1 : Fin n → ℂ) p) =
-          ((Real.exp x : ℝ) : ℂ) := by simp [Pi.single_apply, hpq, Complex.ofReal_exp]
+          ((Real.exp x : ℝ) : ℂ) := by simp [hpq, Complex.ofReal_exp]
       rw [h1, smul_comm, sub_self]
       exact zero_mem _
     · rw [Pi.single_eq_of_ne hi, Real.exp_zero, Complex.ofReal_one, one_smul]
@@ -441,15 +438,15 @@ theorem circle_part {a : ℕ} {j : Fin a → ℕ} {W : Flag n a} (h : 0 < a) (hW
   have hgJ := (expG ε (P * diagonal (Pi.single p Complex.I + Pi.single q Complex.I) * P⁻¹) θ).2
   change (uMat _)ᴴ * Jm ε * uMat _ = Jm ε at hgJ
   have hdp : (fun a => Complex.exp (θ * (Pi.single p Complex.I + Pi.single q Complex.I : Fin n → ℂ) a)) p =
-      Complex.exp (θ * Complex.I) := by simp [Pi.single_apply, hpq]
+      Complex.exp (θ * Complex.I) := by simp [hpq]
   have hdq : (fun a => Complex.exp (θ * (Pi.single p Complex.I + Pi.single q Complex.I : Fin n → ℂ) a)) q =
-      Complex.exp (θ * Complex.I) := by simp [Pi.single_apply, hpq.symm]
+      Complex.exp (θ * Complex.I) := by simp [hpq.symm]
   have hd : ∀ a, a ≠ p → a ≠ q →
       (fun a => Complex.exp (θ * (Pi.single p Complex.I + Pi.single q Complex.I : Fin n → ℂ) a)) a = 1 := by
-    intro a hap haq; simp [Pi.single_apply, hap, haq]
+    intro a hap haq; simp [hap, haq]
   have hd' : ∀ a, a ≠ p → a ≠ q →
       (fun a => Complex.exp (-(θ * (Pi.single p Complex.I + Pi.single q Complex.I : Fin n → ℂ) a))) a = 1 := by
-    intro a hap haq; simp [Pi.single_apply, hap, haq]
+    intro a hap haq; simp [hap, haq]
   have hdd : ∀ a, (fun a => Complex.exp (θ * (Pi.single p Complex.I + Pi.single q Complex.I : Fin n → ℂ) a)) a *
       (fun a => Complex.exp (-(θ * (Pi.single p Complex.I + Pi.single q Complex.I : Fin n → ℂ) a))) a = 1 := by
     intro a; simp only; rw [← Complex.exp_add, add_neg_cancel, Complex.exp_zero]

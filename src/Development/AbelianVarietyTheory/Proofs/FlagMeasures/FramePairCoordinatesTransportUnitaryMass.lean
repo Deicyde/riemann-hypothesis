@@ -1,10 +1,8 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.IsTermOver
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsHermND
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ComplementReferenceCompactSubgroup
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.GgNone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.SpanToLePerp
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.SpanToZero
+import Mathlib.Tactic.Polynomial.Basic
 
 open ValuativeRel Formalism.MainNotions.S Formalism.MainNotions.S.Loc GlobalTheory.HL
 open scoped Pointwise ENNReal Classical
@@ -252,7 +250,7 @@ theorem _root_.GlobalTheory.HL.CoordMass.transport :
     unfold _root_.GlobalTheory.HL.Frames.H0
     rw [Subgroup.mem_inf, ← hfix]
     unfold _root_.GlobalTheory.HL.isomG _root_.GlobalTheory.HL.unipOn
-    simp only [Subgroup.mem_mk, Set.mem_setOf_eq, Submodule.mem_bot, sub_eq_zero]
+    simp only [Subgroup.mem_mk, Submodule.mem_bot, sub_eq_zero]
     constructor
     · rintro ⟨hiso, -, hfx⟩
       refine ⟨fun x y ↦ ?_, hfx⟩

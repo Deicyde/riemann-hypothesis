@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.TateThesis.EulerFactorsInfinite
 import GroundTheory.GlobalFields.TateThesis.EulerFactorsFinite
 import GroundTheory.GlobalFields.TateThesis.GlobalZeta
-import GroundTheory.GlobalFields.TateThesis.IdeleMeasureCosets
 
 open NumberField InfinitePlace IsDedekindDomain MeasureTheory Complex
 open scoped NumberField.AdeleRing Real

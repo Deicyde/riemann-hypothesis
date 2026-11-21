@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.TrDefs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.CutIrr
 import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.AlgTrace
+import Mathlib.Analysis.InnerProductSpace.Trace
 
 noncomputable section
 
@@ -263,7 +264,7 @@ private lemma irr (h : Slots π V m ι E A U) (y : ℝ) [FiniteDimensional ℂ (
         by_cases hk : k = a
         · subst hk
           simp [ha]
-        · simp [hk, Finset.piecewise, Pi.mulSingle_eq_of_ne hk]
+        · simp [hk, Finset.piecewise]
       obtain ⟨h1, h2, h3⟩ := ih w hw
       rw [e1, map_mul, hΦ, UnitaryRep.map_mul_apply]
       refine ⟨hRinv a _ _ h1, fun k hk => ?_, ?_⟩

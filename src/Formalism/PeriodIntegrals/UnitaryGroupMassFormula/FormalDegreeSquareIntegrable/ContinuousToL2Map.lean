@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.FormalDegreeSquareIntegrable.FormalDegreeFromOrthogonality
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.RingTheory.WittVector.IsPoly
 
 noncomputable section
 

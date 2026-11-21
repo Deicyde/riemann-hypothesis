@@ -1,8 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.WickVanishing.LogInv
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.WickVanishing.LogPoinc
-import Mathlib.RingTheory.Unramified.Field
 import Mathlib.RingTheory.Unramified.Pi
-import Mathlib.RingTheory.Unramified.Finite
 import Mathlib.RingTheory.LocalProperties.Reduced
 
 noncomputable section
@@ -97,7 +96,7 @@ theorem pderiv_primT (T : Finset τ) (ω : τ → MvPowerSeries τ k)
           · rw [Finsupp.add_apply, Finsupp.tsub_apply, Finsupp.single_apply, if_neg (Ne.symm hx)]
             simp
         have h1 : (p + Finsupp.single w 1 + Finsupp.single v 1 : τ →₀ ℕ) w ≠ 0 := by
-          simp [Finsupp.single_apply, hvw]
+          simp [hvw]
         have h2 : p + Finsupp.single w 1 + Finsupp.single v 1 - Finsupp.single w 1 =
             p + Finsupp.single v 1 := by
           rw [add_right_comm, add_tsub_cancel_right]
@@ -113,7 +112,7 @@ theorem pderiv_primT (T : Finset τ) (ω : τ → MvPowerSeries τ k)
       ∑ w ∈ T, (if (n + Finsupp.single v 1 : τ →₀ ℕ) w = 0 then 0 else
         coeff (n + Finsupp.single v 1 - Finsupp.single w 1) (ω w))) * ((n v : k) + 1) = coeff n (ω v)
   rw [mul_assoc, Finset.sum_mul, Finset.sum_congr rfl hterm, ← Finset.sum_mul, Finset.sum_add_distrib, hS]
-  simp only [Finset.sum_ite_eq', hv, if_true, ite_true]
+  simp only [Finset.sum_ite_eq', hv, if_true]
   have hc : (∑ w ∈ T, (n w : k)) + 1 = algebraMap ℚ k (((∑ w ∈ T, n w) + 1 : ℕ) : ℚ) := by simp
   rw [hc, ← mul_assoc, ← map_mul, inv_mul_cancel₀ (by positivity), map_one, one_mul]
 
@@ -219,7 +218,7 @@ theorem pd_sb {m : ℕ} (a : Fin m → Q k d n) (t : Fin m → PS k n d) {j : Fi
     (f : PS k m d) : pderiv k (j, b) (sb a f) = ∑ i, sb a (pderiv k (i, b) f) * t i := by
   rw [sb_apply, pderiv_ev (czQ a), Fintype.sum_prod_type]
   refine Finset.sum_congr rfl fun i _ => ?_
-  simp only [h i b, mul_ite, mul_zero, Finset.sum_ite_eq', Finset.sum_ite_eq, Finset.mem_univ, if_true, sb_apply]
+  simp only [h i b, mul_ite, mul_zero, Finset.sum_ite_eq', Finset.mem_univ, if_true, sb_apply]
 
 theorem pderiv_eval_two {j : Fin n} {u v : Q k d n} {s t : PS k n d} (hu : Dir j u s) (hv : Dir j v t) (b : Fin d) (f : PS k 2 d) :
     pderiv k (j, b) (E2 f u v) = E2 (pderiv k (0, b) f) u v * s + E2 (pderiv k (1, b) f) u v * t := by
@@ -332,7 +331,7 @@ private theorem pd_comm_lemma (i j : Fin n × Fin d) (f : PS k n d) :
     rfl
   · ext m
     simp only [MvPowerSeries.coeff_pderiv, Finsupp.add_apply, Finsupp.single_apply, h, Ne.symm h,
-      if_false, ite_false, add_zero]
+      if_false, add_zero]
     rw [add_right_comm m (Finsupp.single i 1) (Finsupp.single j 1)]
     ring
 
@@ -399,7 +398,7 @@ private theorem closed_lemma_5 (α : PS k 3 d) (sym : ∀ {n} (x y w : Q k d n),
   have e2 := congrArg (pderiv k ((1 : Fin 3), b)) (d0_lemma_4 α sym coc c)
   rw [map_sub, pderiv_eval_two (a0.add a1) a2, pderiv_eval_two a1 a2] at e1
   rw [map_sub, pderiv_eval_two (b1.add b0) b2, pderiv_eval_two b0 b2] at e2
-  simp only [mul_zero, add_zero, zero_add, mul_one, sub_zero] at e1 e2
+  simp only [mul_zero, add_zero, mul_one, sub_zero] at e1 e2
   rw [pd_comm_lemma, e2] at e1
   have e3 := congrArg (sb (![gen 0, 0, gen 1] : Fin 3 → Q k d 2)) e1
   have t0 : sq (![gen 0, 0, gen 1] : Fin 3 → Q k d 2) (gen 0) = gen 0 := sq_gen _ 0

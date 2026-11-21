@@ -1,9 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ZetaAwayPowSelf
-import Development.AbelianVarietyTheory.Definitions.ModuliSpaces.IsGaloisCover
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsHarrisTaylorObjectPullbackBis
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCycAwayHomComplex
-import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.IsIsoIffBijectiveOverAlgClosed
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFiniteEtaleSymplecticLevelSchemeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSymplecticLevelOfPulledBackObjectStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SymplecticLevelTwistBySimilitudeStatement
@@ -80,7 +76,7 @@ theorem exists_galoisCover_of_geom {p : ℕ} [Fact p.Prime] {D : Datum p} {R : T
     intro c
     have hw : liftMod (reduceMod M c) = c + M • (fun i => -(c i / M)) := by
       funext i
-      simp only [liftMod, reduceMod, ZMod.val_intCast, Pi.add_apply, Pi.smul_apply, nsmul_eq_mul, Pi.mul_apply,
+      simp only [liftMod, reduceMod, ZMod.val_intCast, Pi.add_apply, nsmul_eq_mul, Pi.mul_apply,
         Pi.natCast_apply]
       rw [Int.emod_def]
       ring

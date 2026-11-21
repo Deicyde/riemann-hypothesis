@@ -1,10 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CurveV
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsHomogeneousSides
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RamModelDR
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RamifiedModelDeRhamOfHeightAlterationStatement
 
 set_option autoImplicit false
@@ -106,7 +102,7 @@ theorem mixEv_empty (R : ℝ) (c : O.s.Comp) (P : Pol D.what₂.Tau O.N) :
   simp only [AlgHom.comp_apply] at e2
   rw [map_mul, e2, map_mul, map_mul, rename_rename]
   congr 1
-  simp only [ArIn.mixEv, aeval_X, update_ind_one ∅ hT, map_sum, map_pow, rename_X, map_mul, algHom_C]
+  simp only [ArIn.mixEv, aeval_X, update_ind_one ∅ hT, map_sum, map_pow, rename_X, algHom_C]
   norm_num
   rfl
 

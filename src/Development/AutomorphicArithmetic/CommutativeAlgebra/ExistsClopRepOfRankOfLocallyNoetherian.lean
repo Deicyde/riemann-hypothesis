@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AutomorphicArithmetic.RepresentationRank.RepOfRank
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CommutativeAlgebra.ClopProjFiniteEtaleOfIsClosed
 import Development.AutomorphicArithmetic.CommutativeAlgebra.IsOpenImmersionOfClosedImmersionFlatEtale
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HilbertSchemeFiniteLocallyFreeRepresentablePropeStatement

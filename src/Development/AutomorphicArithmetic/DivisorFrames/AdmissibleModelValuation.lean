@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AutomorphicArithmetic.LocalEmbeddings.VertCmp
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsModelPresentingDivisor
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LocalSystemModelMap
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ScaleZeroComp
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsPointOfIntegralPoint
 import Development.AutomorphicArithmetic.DivisorFrames.DominatingModelsSpherical

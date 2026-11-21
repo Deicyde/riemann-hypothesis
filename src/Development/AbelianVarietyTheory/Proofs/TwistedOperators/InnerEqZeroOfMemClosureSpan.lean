@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsSmoothVector
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsNormLeHeightPow
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasTypeVec
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.ExponentSeparation
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HilbertTensorTraceClassHasTraceProdStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HasFiniteRankTraceOfOfRangeLeFiniteDimensional
 open MeasureTheory Set Filter NumberField IsDedekindDomain
@@ -136,7 +133,7 @@ theorem hasTrace_finiteRank_tensor : ∀ (ι : Type) [Fintype ι] [DecidableEq �
       exists_orthonormal (evalAt T u) (evalAt_injective hβ hu hT) Z
     have hzz : ∀ j, β (z j) (z j) = 1 := fun j => by
       have := orthonormal_iff_ite.1 hon j j
-      simp only [if_pos rfl] at this
+      simp only at this
       rw [beta_eq hβ hu]
       exact this
     have hAw : ∀ w, A w = ∑ j, β w (z j) • A (z j) := by

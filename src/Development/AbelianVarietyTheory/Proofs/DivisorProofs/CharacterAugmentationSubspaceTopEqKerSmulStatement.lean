@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CharacterAugmentationSubspaceTopEqKerSmul
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.QActMSubAlgebraMap
 open scoped TensorProduct
 universe u
 set_option maxHeartbeats 1000000 in

@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.UniformizerMemDeltaInvariants
-import Formalism.SharpRestriction.GenusPolyhedralBounds.RelativeIndexClassSets.RecNZFullLen
 import Formalism.JumpKernelCokernel.LengthTheoremsWithEarlier
 
 noncomputable section
@@ -139,8 +139,7 @@ theorem lemmaDN_core {d : ℕ} {T₁ T₂ : LocLat G Qp LL O} {F : LatHom T₁.L
         first
           | rfl
           | exact (LinearMap.quotKerEquivOfSurjective_apply_mk red hsurj _).symm
-      simp only [f, LinearMap.coe_comp, Function.comp_apply, LinearEquiv.coe_coe, hv, he,
-        Submodule.factor_mk, Submodule.Quotient.mk_eq_zero]
+      simp only [f, LinearMap.coe_comp, Function.comp_apply, LinearEquiv.coe_coe, hv, he]
       first
         | rw [Submodule.factor_mk, Submodule.Quotient.mk_eq_zero]
         | (change Submodule.Quotient.mk (p := X) (∑ k', v k' • cols k') = 0

@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitChartAt
-import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.RangeSubsetAbLocusOfIsProper
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 
 set_option autoImplicit false
 
@@ -45,7 +44,7 @@ theorem isTest_lift (p : ℕ) [Fact p.Prime] (X X' : Scheme.{0}) (π : X' ⟶ X)
   show π _ ∈ Xw
   have := hrange ⟨z, rfl⟩
   rw [← hyT, ← hyT'] at this
-  simp only [Scheme.Hom.comp_apply, Category.assoc] at this
+  simp only [Scheme.Hom.comp_apply] at this
   exact this
 
 end GlobalTheory.FlatModel

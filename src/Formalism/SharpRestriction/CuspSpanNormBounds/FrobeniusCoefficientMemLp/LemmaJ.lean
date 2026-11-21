@@ -1,5 +1,6 @@
-import Formalism.SharpRestriction.CuspSpanNormBounds.SBridge
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.FiniteOrderIntersectionInSmooth
+import Formalism.SharpRestriction.CuspSpanNormBounds.CntPartners
 
 open MeasureTheory
 

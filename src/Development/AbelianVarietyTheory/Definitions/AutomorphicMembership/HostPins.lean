@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.CmQuadraticFormEqAlternatingForm
-import Formalism.LocalToGlobal.UnitaryNorms.MemFIffReal
+import Formalism.LocalToGlobal.UnitaryNorms.RealCyclotomicTwoPower
 
 noncomputable section
 

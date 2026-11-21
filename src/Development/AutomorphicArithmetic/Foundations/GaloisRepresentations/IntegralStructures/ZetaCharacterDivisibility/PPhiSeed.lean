@@ -1,10 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.IntegralStructures.ZetaCharacterDivisibility.PhiOfDivOf
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.AnnihilatorModels.PDetWD
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.AnnihilatorModels.PUnrGeom
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.AnnihilatorModels.PSatGeom
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.SplitLineSubtraction.PSatPol
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.WdParameterMonodromyZeroIffPotentiallyCrystallin
 open NumberField IsDedekindDomain Neutral.B1 Formalism.L2.Host Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.MainNotions.N Polynomial
 open GlobalTheory.CuspRep GlobalTheory.WeilDeligne GlobalTheory.Pst GlobalTheory.HeckeGal GlobalTheory.UnitaryBC GlobalTheory.Cong GlobalTheory.CongL GlobalTheory.RoadWGeo
 open Formalism.MainNotions.SumRepresentations.At (sumRep)
@@ -31,7 +30,7 @@ theorem UpperTheory.Gal.Int.Div.phiSeed_of :
         Matrix.GeneralLinearGroup.det ((r.comp (Dec (F := E) A).subtype) x) := by
       intro x
       apply Units.ext
-      simp [rk1, Matrix.det_fin_one, hdet]
+      simp [rk1, hdet]
     obtain ⟨J, hCl⟩ := hψ.2 w hw B hB
     obtain ⟨hcC, -, -, hcP⟩ := hCl.2 P AI hT A h O Bw hj
     have hcPst := ((hConj l P AI hT E Ω A O Bw 1 ((rk1 ψ).comp (Dec (F := E) A).subtype)

@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.Glues
+import Mathlib.Order.CompletePartialOrder
 open CategoryTheory AlgebraicGeometry TopologicalSpace
 
 set_option autoImplicit false

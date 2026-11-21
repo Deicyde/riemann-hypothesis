@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.IsStrictlySemistableAlt
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.GaloisRepOfPolarizedCuspidal
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsCompletedStrictHens
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 noncomputable section
 open CategoryTheory AlgebraicGeometry
@@ -33,7 +32,7 @@ theorem evalQ_bijective (O : Type) [CommRing O] (ϖ : O) : Function.Bijective (e
     change _ = Ideal.Quotient.mk I (MvPolynomial.C ϖ)
     rw [Ideal.Quotient.eq]
     apply Ideal.subset_span
-    simp [I]
+    simp
   refine ⟨fun a b hab => ?_, fun o => ⟨algebraMap O _ o, evalQ_algebraMap O ϖ o⟩⟩
   obtain ⟨a, rfl⟩ := Ideal.Quotient.mk_surjective a
   obtain ⟨b, rfl⟩ := Ideal.Quotient.mk_surjective b

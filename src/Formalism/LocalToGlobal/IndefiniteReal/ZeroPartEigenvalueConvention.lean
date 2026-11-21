@@ -1,4 +1,5 @@
-import Formalism.LocalToGlobal.IndefiniteReal.LinksLemmas
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.LinksW
 import Formalism.LocalToGlobal.IndefiniteReal.WeilFull
 import Formalism.LocalToGlobal.IndefiniteReal.PrimitiveStatementsWithPassage

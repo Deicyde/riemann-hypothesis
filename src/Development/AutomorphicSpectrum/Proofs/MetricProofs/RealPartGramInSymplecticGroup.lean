@@ -1,16 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsThetaMeanSquareNorm
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.ZhangDimensionPushDownGrassmannianHeightBounds
-import GroundTheory.HeightsAndTheta.Heights.KernelsLattice
-import GroundTheory.HeightsAndTheta.Heights.LatticeLemmas.StatementsBundles
-import GroundTheory.HeightsAndTheta.Heights.KernelsMatrix
-import GroundTheory.HeightsAndTheta.Heights.HeightKernels.AssemblyAnalytic
-import GroundTheory.HeightsAndTheta.Heights.FactorialBounds.Assembly
-import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.HasSumPolyDerivMulProdAddMatrix
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsFundamentalDomainMeanNormSqThetaChar
-import Development.AbelianVarietyTheory.Proofs.ToricGeometry.IsUnitOfLagrangian
-import GroundTheory.HeightsAndTheta.Heights.HeightKernels.CoordSiegel
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.AssemblySympl
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ThetaUnifAV
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField MeasureTheory
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi
 open GroundTheory.Heights₂.Heights TensorProduct
@@ -33,7 +24,7 @@ theorem hermForm_sum_right {κ : Type*} [Fintype κ] (Hm : Matrix (Fin g) (Fin g
     (y : κ → Fin g → ℂ) (z : Fin g → ℂ) :
     hermForm Hm z (∑ j, b j • y j) = ∑ j, (b j : ℂ) * hermForm Hm z (y j) := by
   have hs : star (∑ j, b j • y j) = ∑ j, b j • star (y j) := by
-    simp [star_sum, star_smul]
+    simp [star_sum]
   simp only [hermForm]
   rw [hs, Matrix.mulVec_sum, dotProduct_sum]
   refine Finset.sum_congr rfl fun j _ => ?_
@@ -98,7 +89,7 @@ theorem twist_apply {κ M : Type*} [Fintype κ] [DecidableEq κ] [AddCommGroup M
     twist b P Q h α = ∑ β, P α β • b β := by
   have h1 : b.equivFun (b α) = Pi.single α 1 := by
     ext j
-    simp [Module.Basis.equivFun_apply, Finsupp.single_apply, Pi.single_apply, eq_comm]
+    simp [Pi.single_apply, eq_comm]
   simp only [twist, Module.Basis.map_apply, LinearEquiv.trans_apply, h1,
     Module.Basis.equivFun_symm_apply]
   refine Finset.sum_congr rfl fun β _ => ?_
@@ -108,7 +99,7 @@ theorem twist_apply {κ M : Type*} [Fintype κ] [DecidableEq κ] [AddCommGroup M
 
 theorem coe_sum_smul {n : ℕ} {κ : Type*} [Fintype κ] (Λ : Submodule ℤ (Fin n → ℂ)) (v : κ → ℤ)
     (x : κ → Λ) : ((∑ α, v α • x α : Λ) : Fin n → ℂ) = ∑ α, v α • (x α : Fin n → ℂ) := by
-  simp [Submodule.coe_sum]
+  simp
 
 theorem symplectic_reduction_basis :
     ∀ (g : ℕ) [NeZero g] (Λ : Submodule ℤ (Fin g → ℂ)) (Hm : Matrix (Fin g) (Fin g) ℂ)

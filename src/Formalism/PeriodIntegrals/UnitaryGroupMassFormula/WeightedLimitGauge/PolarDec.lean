@@ -1,14 +1,6 @@
-import Mathlib
-import Formalism.PeriodIntegrals.RhsWLim
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeightedLimitGauge.VolumeLieE
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeightedLimitGauge.HaarUniq
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeightedLimitGauge.MBaseMem
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeightedLimitGauge.ConstCut
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeightedLimitGauge.ConstPair
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeightedLimitGauge.RhsTest
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeightedLimitGauge.TransW
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeightedLimitGauge.Unimod
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeightedLimitGauge.UnimodS
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeightedLimitGauge.BallConj
 
 set_option linter.unusedVariables false
@@ -139,10 +131,10 @@ theorem boost_herm (y : Fin k → ℂ) (n : ℝ) (hn : 0 < n) : (boost y (n : �
   | last =>
     induction j using Fin.lastCases with
     | last => simp [boost]
-    | cast j => simp [boost, hnn, hn0, abs_of_pos hn, div_self hn0]
+    | cast j => simp [boost, hn0, abs_of_pos hn]
   | cast i =>
     induction j using Fin.lastCases with
-    | last => simp [boost, hnn, hn0, abs_of_pos hn, div_self hn0]
+    | last => simp [boost, hn0, abs_of_pos hn]
     | cast j =>
       simp only [boost, Fin.lastCases_castSucc, hnn, map_add, map_div₀, map_mul, Complex.conj_conj,
         Complex.conj_ofReal, map_one]

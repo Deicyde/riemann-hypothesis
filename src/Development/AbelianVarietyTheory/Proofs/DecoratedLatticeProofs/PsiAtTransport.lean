@@ -1,10 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.SplitPart
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.CongAt
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.MemPrinCongOfSm
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LastTwoStepsGuarded
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.SmulCompSmul
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.BaseFieldsPrimesOk
+import Formalism.LocalRingCardinality.SpanPowerMembership.LocAtA
 
 noncomputable section
 

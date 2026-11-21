@@ -1,6 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.ShimuraVarieties.IsOpenOfMemIrreducibleComponentsOfFinite
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormIdeal
+import Mathlib.AlgebraicGeometry.FunctionField
+import Mathlib.AlgebraicGeometry.IdealSheaf.Basic
+import Mathlib.AlgebraicGeometry.Modules.Sheaf
+import Mathlib.AlgebraicGeometry.Morphisms.Affine
+import Mathlib.Combinatorics.Quiver.ReflQuiver
 
 noncomputable section
 open AlgebraicGeometry CategoryTheory Limits

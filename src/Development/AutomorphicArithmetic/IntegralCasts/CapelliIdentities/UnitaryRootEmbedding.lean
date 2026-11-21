@@ -1,4 +1,40 @@
-import Mathlib
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable def UpperTheory.Reformulated.B.AntidiagonalWeylElement.cT :
     {A : Type} → [inst : CommRing A] → (A →+* A) → {m p : Type} → Matrix m p A → Matrix p m A :=
@@ -527,11 +563,11 @@ private theorem pm_cases {n : ℕ} (A A1 B B1 k : Fin n) :
     simp [h1]
   by_cases h3 : k = B
   · subst h3
-    simp [h1, h2, Fin.ext_iff]
+    simp [h1, h2]
   by_cases h4 : k = B1
   · subst h4
-    simp [h1, h2, h3, Fin.ext_iff]
-  · simp [h1, h2, h3, h4, Fin.ext_iff]
+    simp [h1, h2, h3]
+  · simp [h1, h2, h3, h4]
     omega
 
 private theorem pm_invol {n : ℕ} {A A1 B B1 : Fin n} (hA : (A : ℕ) + 1 = A1) (hB : (B : ℕ) + 1 = B1)
@@ -630,7 +666,7 @@ private theorem partner_nU {L : Type} [Field L] (σ : L →+* L) (z : L) :
     fin_cases i <;> fin_cases j <;> simp [cT]
   simp only [partner]
   rw [e, e2]
-  simp [w2, Matrix.mul_fin_two]
+  simp [w2]
 
 private theorem S_apply {L : Type} [Field L] {n a : ℕ} (σ : L →+* L)
     (hσ : ∀ x : L, σ (σ x) = x) (h : 2 * (a + 2) ≤ n) (i j : Fin n) :

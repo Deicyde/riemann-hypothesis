@@ -1,4 +1,4 @@
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.InstBorelGL
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.GeneralLinearIntegralCompactOpenStatement
 import GroundTheory.AutomorphicForms.MeasuresGL
 open MeasureTheory Matrix GlobalTheory.CompanionTheory.QL

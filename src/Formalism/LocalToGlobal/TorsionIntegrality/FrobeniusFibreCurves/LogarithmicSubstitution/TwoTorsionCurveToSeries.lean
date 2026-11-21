@@ -1,7 +1,8 @@
-import Formalism.LocalToGlobal.TorsionIntegrality.FrobeniusFibreCurves.FinalD
-import Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.CurveJetsUnitBall
-import Formalism.LocalToGlobal.TorsionIntegrality.FrobeniusFibreCurves.StatementE
-import Formalism.LocalToGlobal.TorsionIntegrality.FrobeniusFibreCurves.StatementI
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.TorsionIntegrality.FrobeniusFibreCurves.DivByXSq
+import Formalism.LocalToGlobal.TorsionIntegrality.FrobeniusFibreCurves.LogarithmicSubstitution.NormHalfB2SubTwoTorsionLeOne
+import Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.CurveSecondLogDerivative
 
 noncomputable section
 open scoped BigOperators

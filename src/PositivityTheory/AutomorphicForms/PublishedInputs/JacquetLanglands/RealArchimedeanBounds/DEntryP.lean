@@ -1,4 +1,5 @@
-import PositivityTheory.AutomorphicForms.PublishedInputs.JacquetLanglands.RealArchimedeanBounds.ATrans
+import BuildAid.Leniency.Open
+import PositivityTheory.AutomorphicForms.PublishedInputs.JacquetLanglands.TorusKernels.IsHolVOf
 
 noncomputable section
 

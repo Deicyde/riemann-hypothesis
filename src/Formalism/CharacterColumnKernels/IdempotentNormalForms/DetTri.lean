@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.CharacterColumnKernels.Statement
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Finset
 

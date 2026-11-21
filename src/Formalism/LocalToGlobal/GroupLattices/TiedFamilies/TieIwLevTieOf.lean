@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.FullTiedCBase
 import Formalism.LocalToGlobal.GroupLattices.LevelGatherings.PosBridge
-import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.RecThm
 
 noncomputable section
 

@@ -1,12 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsMidJacAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndicatorIntMMemSB
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.HoweDualityOfMinguezStatement
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ThetaPairContragredientQuotientStatement
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.SmoothContragredientIrreducibleAndReflexiveStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ThetaCorrespondenceLargeRank
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.EventuallyCompSideMulEq
 
 noncomputable section
 
@@ -77,7 +74,7 @@ theorem isAdmissible_twist' {G V : Type} [Group G] [TopologicalSpace G] [IsTopol
   intro h
   have h3 := hv ⟨h.1, h.2.1⟩
   have h4 : χ h.1 = 1 := h.2.2
-  simp only [fixed, eig, MonoidHom.one_apply, Units.val_one, one_smul] at h3 ⊢
+  simp only [MonoidHom.one_apply, Units.val_one, one_smul] at h3 ⊢
   simpa [twist_apply, h4] using h3
 
 theorem isAdmissible_comp_invT {d : ℕ} {V : Type} [AddCommGroup V] [Module ℂ V]

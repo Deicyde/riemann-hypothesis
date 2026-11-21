@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConnFormSmul
+import Mathlib.Analysis.Calculus.FDeriv.Star
 open GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe GlobalTheory.TorsionForm GlobalTheory.TorsionForm.Gauge
 open scoped ContDiff
 
@@ -79,7 +81,7 @@ theorem dholo_log_isometry {B : Set E} {h h' : Pt E g → ℝ} {φ : Pt E g → 
   simp only [d10, hF.fderiv, ContinuousLinearMap.sub_apply, ContinuousLinearMap.comp_apply,
     ContinuousLinearMap.add_apply, ContinuousLinearMap.smul_apply, ContinuousLinearMap.coe_restrictScalars',
     ContinuousLinearMap.smulRight_apply, ContinuousLinearMap.one_apply, ContinuousLinearEquiv.coe_coe,
-    starL'_apply, hI, smul_eq_mul, hψ, star_mul', Complex.star_def, map_mul, Complex.conj_I]
+    starL'_apply, hI, smul_eq_mul, hψ, star_mul', Complex.star_def, Complex.conj_I]
   field_simp
   ring_nf
   rw [Complex.I_sq]
@@ -111,7 +113,7 @@ theorem superconn_isometry_smul (E : Type) [NormedAddCommGroup E] [NormedSpace �
     connection_isometry_smul hB hP hφ hφ0 hh0 hh hiso hs
   have e2 : ∀ v, d01 (fun Q => φ Q • s Q) P v = φ P • d01 s P v := fun v => (dholo_dbar_smul_holomorphic hφ hs v).2
   simp only [superconn, nablaE, dbarV, dbarAdj, e1, e2, connForm_smul, wedge_smul, contr_smul,
-    ← smul_add, Finset.smul_sum, smul_neg, smul_comm (φ P)]
+    ← smul_add]
   funext S
   simp only [Finset.sum_apply, Pi.add_apply, Pi.smul_apply, Pi.neg_apply, smul_eq_mul, Finset.mul_sum,
     mul_add, mul_neg, mul_left_comm]

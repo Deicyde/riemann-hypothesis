@@ -1,8 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ArithmeticGeometry.SchemeCohomology.ProjectiveCohomology.TwistingSheaf
 import GroundTheory.ArithmeticGeometry.SchemeCohomology.ProjectiveCohomology
 import GroundTheory.ArithmeticGeometry.SchemeCohomology.CechNaturality.NaturalLeray
 import GroundTheory.ArithmeticGeometry.SchemeCohomology.CechNaturality.Ordered
+import Mathlib.RingTheory.PicardGroup
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Arith.SchemeCoh

@@ -1,10 +1,10 @@
-import Mathlib
-import Formalism.LocalRingCardinality.AdicCompletionLocal.LocTied
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.ExistsOfLayers
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsAlgClosedTiltFieldAndValuationRing
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ContinuousOrbitPadicComplex
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsContinuousGaloisLatticeMatrixIntegral
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IntegersCompleteDVR
+import Mathlib.Topology.UniformSpace.Uniformizable
 
 noncomputable section
 
@@ -229,7 +229,7 @@ theorem coords_map (b : Module.Basis ι R T) (σ : W →ₐ[R] W) (ρ : T →ₗ
       generalize a • t = u
       conv_lhs => rw [← b.sum_repr u]
       simp only [map_sum, LinearMap.map_smul_of_tower, map_smul, Finsupp.coe_finset_sum,
-        Finset.sum_apply, Finsupp.smul_apply, Finset.sum_smul, smul_eq_mul, Algebra.smul_def,
+        Finset.sum_apply, Finsupp.smul_apply, smul_eq_mul, Algebra.smul_def,
         map_mul, Finset.sum_mul]
       exact Finset.sum_congr rfl fun j _ => by ring
 

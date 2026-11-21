@@ -1,6 +1,5 @@
-import GroundTheory.AutomorphicForms.AutomorphicFormSpaces.Height
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.ReductionMahler
-import Formalism.LocalToGlobal.UnitaryNorms.CharTransport
 import Development.AutomorphicArithmetic.Foundations.Convolution.ConvolutionKernels.AdBasic
 
 open NumberField IsDedekindDomain GroundTheory.Automorphic GroundTheory.Automorphic.Reduction Formalism.L2.Host

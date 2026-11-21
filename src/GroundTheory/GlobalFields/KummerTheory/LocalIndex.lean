@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.LocalFields.UnitsBasic
 import GroundTheory.LocalFields.FilteredSurj
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.Topology.Sheaves.Presheaf
 
 namespace GroundTheory.Global
 

@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.UltraDefs
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.TowerFin
+import Mathlib.RingTheory.AdicCompletion.LocalRing
+import Mathlib.Tactic.Polynomial.Basic
 
 open Filter UpperTheory.V.AlgebraTools
 open scoped TensorProduct

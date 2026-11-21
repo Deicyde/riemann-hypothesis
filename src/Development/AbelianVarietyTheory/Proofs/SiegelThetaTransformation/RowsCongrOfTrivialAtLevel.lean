@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SpanningFamilies.IsWeakOfDatum
-import Development.AbelianVarietyTheory.Definitions.SpanningFamilies.IsHeatZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.CompletedTensorLatticeStrongApproxOpenCompact
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.ExistsDenominatorPrimesPrescribed
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.OneEqSumPlaceIdempotentsOverTwoAddTwoMul
 
 noncomputable section
@@ -192,7 +190,7 @@ theorem mem_of_hat {N : Lt E r} (hfg : N.FG) (hsp : Submodule.span E (N : Set (F
     have h := HatLat.smul_mem_tens (stdL E 1) N (algebraMap (𝓞 F) (𝓞 E) c) hz
     convert h using 1
     ext i j
-    simp only [Matrix.smul_apply, Algebra.smul_def, smul_eq_mul]
+    simp only [Matrix.smul_apply, Algebra.smul_def]
     rfl
   have hfgT := HatLat.tens_fg (stdL E 1) N (stdL_fg' 1) hfg
   have hden := HatLat.tens_den (stdL E 1) N (span_stdL_eq_top 1) hsp

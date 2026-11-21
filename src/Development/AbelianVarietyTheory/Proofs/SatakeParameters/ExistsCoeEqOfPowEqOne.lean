@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.DualOm
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsAlgEquivRootOfUnityEqPow
-import Development.AbelianVarietyTheory.CrystallinePeriods.RingBasics
+import Mathlib.Topology.Algebra.Nonarchimedean.Completion
 
 noncomputable section
 

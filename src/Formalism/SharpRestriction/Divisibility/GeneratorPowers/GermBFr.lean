@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GermCut
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GermDJet
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GermBGen

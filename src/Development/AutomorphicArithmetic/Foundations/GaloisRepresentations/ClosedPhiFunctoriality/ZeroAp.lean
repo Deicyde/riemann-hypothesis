@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ClosedPhiFunctoriality.IntBasisAlt
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.AcrisFrobeniusMatrixEqZeroOfDvd
 open NumberField IsDedekindDomain Formalism Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.WeaklyAdmissibleFiltrations Formalism.MainNotions.N TensorProduct PowerSeries GlobalTheory.Prism GlobalTheory.BKReal GlobalTheory.Per GlobalTheory.BSP GlobalTheory.MemLoc GlobalTheory.Pst GlobalTheory.BKLim GlobalTheory.Cong GlobalTheory.WeilDeligne Matrix
@@ -37,7 +37,7 @@ theorem UpperTheory.Gal.ClosedPhiFromClosedTrace.zeroAp_holds :
     | zero =>
       refine ⟨Matrix.of fun i j => (hdiv' i j).choose, 0, ?_⟩
       ext i j
-      simp only [mul_zero, pow_zero, pow_one, one_smul, smul_zero, add_zero, Matrix.smul_apply,
+      simp only [mul_zero, pow_zero, pow_one, smul_zero, add_zero, Matrix.smul_apply,
         Matrix.of_apply, smul_eq_mul]
       rw [one_mul]
       exact (hdiv' i j).choose_spec

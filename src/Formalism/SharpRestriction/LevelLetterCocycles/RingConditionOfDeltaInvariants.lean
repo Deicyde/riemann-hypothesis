@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.CoordHomMapTrace
-import Formalism.SharpRestriction.LevelLetterCocycles.DeltaInvariantLattices
+import Formalism.DistinguishedUnitIdeals.FrobeniusCoboundedArc
+import Mathlib.RingTheory.AdicCompletion.Noetherian
 
 noncomputable section
 

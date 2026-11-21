@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.TensorProductTheorem.NonemptyAdelicDecomposition
 import GroundTheory.AutomorphicForms.CuspidalDiscreteness.CuspFormsDecay
 import GroundTheory.AutomorphicForms.CuspidalDiscreteness.SummandsMeasure
+import Mathlib.Analysis.Calculus.Deriv.Star
 
 noncomputable section
 

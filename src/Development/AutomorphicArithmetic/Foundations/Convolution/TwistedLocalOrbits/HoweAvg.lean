@@ -1,4 +1,10 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.TwistedLocalOrbits.HoweSpace
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.SmoothPartStable
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.RingTheory.PiTensorProduct
 
 open GlobalTheory.PRep MeasureTheory
 

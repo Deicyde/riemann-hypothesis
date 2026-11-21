@@ -1,9 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.UnitaryNorms.ArtGCut
-import Formalism.LocalToGlobal.UnitaryNorms.JointCut
 import Formalism.SharpRestriction.Divisibility.AbsolutelyIrreducibleSpan
 import Formalism.LocalRingCardinality.SpanPowerMembership.PlacesOverNcardOfSplitInj
-import Formalism.SharpRestriction.GlobalTheoremInputs
-import Formalism.LocalRingCardinality.HostCls
 
 noncomputable section
 

@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.MatrixIntegralOfAddCharTraceDual
+import Mathlib.RingTheory.PiTensorProduct
 open ValuativeRel MeasureTheory Matrix
 
 noncomputable section

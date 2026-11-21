@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.TraceIsometryWeights.StatementG
+import Formalism.ThetaLogCoordinates.TraceIsometryWeights.StatementF
 
 namespace Formalism.InvariantFactorPaths.PW
 

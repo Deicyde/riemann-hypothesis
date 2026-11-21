@@ -1,10 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.AlgebraMapAEEqZero
-import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.RestrictedBlockMemBlockTriangular
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.InfPartOfSplitIdem
-import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.SplitOrInertP
-import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.PlaceFinal
-import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.LatSelf
-import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.SplitLinF
 
 noncomputable section
 

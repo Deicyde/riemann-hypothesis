@@ -1,6 +1,16 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.StatementW
 import Formalism.FormalGroupWitt.FormalGroupWittProofs.WittTeichmullerRoot
+import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.ThmSUniform
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.Valuation.Discrete.IsDiscreteValuationRing
+import Mathlib.RingTheory.WittVector.Complete
+import Mathlib.RingTheory.WittVector.DiscreteValuationRing
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 

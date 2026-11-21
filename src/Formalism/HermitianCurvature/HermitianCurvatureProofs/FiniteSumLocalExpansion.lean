@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.FourTermExpansion
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CvRhoOfParts
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.JfCVUnderIntOfParts
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.BigCellOrbitSet
 
@@ -347,7 +348,7 @@ theorem capAdInv_loc (y : Mat k r) (hy : y ∈ GV k r) (u : ℂ) (f : Mat k r �
     refine Finset.sum_congr rfl fun c _ => Finset.sum_congr rfl fun d _ => ?_
     have hp : ∏ j, (y⁻¹) (c (σ j)) (e (σ j)) = ∏ j, (y⁻¹) (c j) (e j) :=
       Equiv.prod_comp σ (fun i => (y⁻¹) (c i) (e i))
-    simp only [Equiv.arrowCongr_apply, Equiv.symm_symm, Equiv.coe_refl, Function.id_comp, Function.comp_apply,
+    simp only [Equiv.arrowCongr_apply, Equiv.symm_symm, Equiv.coe_refl, Function.comp_apply,
       id_eq, Finset.prod_mul_distrib, hp]
     rfl
   simp only [hA]

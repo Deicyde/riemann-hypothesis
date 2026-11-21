@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.UIObjects
-import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.PGreenMassZero
-import ReciprocityTheory.AnalyticForms.PotentialTheory.ProjectiveLineFubiniStudyFacts
+import ReciprocityTheory.AnalyticForms.PotentialTheory.AnalyticSubsetChartLocal
+import ReciprocityTheory.AnalyticForms.PotentialTheory.LogInt
+import ReciprocityTheory.AnalyticForms.PotentialTheory.PLCurveA
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.AnalyticLimit

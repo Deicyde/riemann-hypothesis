@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IdFMapAlgebraMap
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CongruenceUnitsBasisOfNbhdsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralUnitsFiniteCosetsStatement
@@ -95,7 +95,7 @@ theorem finite_doubleCoset_of_involutive (L : Type) [Field L] [NumberField L] (c
     obtain ⟨hε1, hε2⟩ := (GlobalTheory.T.principal_idele_integral_iff_unit L ε).1 hεU
     have hεc : c (ε : L) = ε := by
       simp only [ε, Units.val_mul, Units.val_inv_eq_inv_val, Units.coe_map, MonoidHom.coe_coe,
-        RingHom.toMonoidHom_eq_coe, AlgHom.toRingHom_eq_coe, RingHom.coe_coe, map_mul, map_inv₀, hc,
+        RingHom.toMonoidHom_eq_coe, RingHom.coe_coe, map_mul, map_inv₀, hc,
         AlgHom.commutes]
       ring
     obtain ⟨f, hf, η, hη1, hη2, hεf⟩ := hS₆ ε hε1 hε2 hεc
@@ -103,7 +103,7 @@ theorem finite_doubleCoset_of_involutive (L : Type) [Field L] [NumberField L] (c
     rw [← hεf]
     have hr : algebraMap ℚ L (r : ℚ) ≠ 0 := by simp
     simp only [ε, Units.val_mul, Units.val_inv_eq_inv_val, Units.coe_map, MonoidHom.coe_coe,
-      RingHom.toMonoidHom_eq_coe, AlgHom.toRingHom_eq_coe, RingHom.coe_coe]
+      RingHom.toMonoidHom_eq_coe, RingHom.coe_coe]
     field_simp
 
   have hB : ∀ x y f, x ∈ (B1 : Set (AfE ℚ L)ˣ) → y ∈ (B1 : Set (AfE ℚ L)ˣ) → x ∈ simTA L c → y ∈ simTA L c →

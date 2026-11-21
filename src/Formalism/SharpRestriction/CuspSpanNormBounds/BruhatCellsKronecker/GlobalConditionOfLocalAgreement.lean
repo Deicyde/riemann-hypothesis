@@ -1,4 +1,5 @@
-import Formalism.SharpRestriction.CuspSpanNormBounds.BruhatCellsKronecker.OwnEvIntro
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.LocalModelPeriodLattices
 
 noncomputable section
@@ -300,7 +301,7 @@ theorem cond_gen (c : F) (ν gp ot : ℕ) (hg : ((gp : ℕ) : A.Fp) ≠ 0) (ho :
   · refine scal_iff A (A.O : Set A.Ep) (O_scal A) _ _ ?_ ?_ ?_ _
     · exact inv_ne_zero (mul_ne_zero (pow_ne_zero _ (mul_ne_zero hg ho)) hC)
     · exact mul_ne_zero (inv_ne_zero (pow_ne_zero _ hg)) (inv_ne_zero hC)
-    · simp only [map_inv₀, map_mul, map_pow, hvo, one_pow, mul_one, mul_inv]
+    · simp only [map_inv₀, map_mul, map_pow, hvo, mul_one, mul_inv]
 
 theorem tw_gen (b : A.Fp) (s : ℕ) (t : E) :
     algebraMap A.Fp A.Ep b * A.ιE (t - (-1) ^ s * sig t) =

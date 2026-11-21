@@ -1,22 +1,16 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.GenericUnitaryGL.SegmentDerivatives.CuspPairSubGeneric
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.MirabolicDerivatives.LeibnizDerivatives.GenericProdIff
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.GeometricLemmaFiltration
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IrreducibleAdmissibleGL
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsSmoothIterPhi
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousInvAddChar
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsIrrRepInjectiveStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PairingTwistedDeterminantSubquotientStatement
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WhitImgMono
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ProductTransposeInverseDualReverse
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.JhMultSubAddQuot
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LocalLanglandsOfIrreducibleAdmissible
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.JacquetMultiplicityOfEquiv
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DerivativeJacquetTwistedQuotientStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WhittakerKernelPullbackJacquetStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.JacquetThetaReverseBlocksStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WhittakerTwoBlockInjectiveIrreducibleStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WhittakerTwoBlockSubquotientTensorStatement
+import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.NontrivialTwJacquetOfSurjective
 
 noncomputable section
 open GlobalTheory.PRep GlobalTheory.SplitWeil GlobalTheory.SmGL GlobalTheory.LocGL GlobalTheory.BZSeg GlobalTheory.BZMir Zc GlobalTheory.CompanionTheory.BZNuPair Zc.Cos GlobalTheory.CompanionTheory.ThetaProd GlobalTheory.JHMult
@@ -33,7 +27,7 @@ theorem deltaHalf_firstEmb (n j : ℕ) (g : GL (Fin n) k) :
   have h0 : modExp (fun a => Fin (![n, j + 1] a)) (0 : Fin 2) = (j : ℤ) + 1 := by
     have e1 : (Finset.univ.filter fun b : Fin 2 => (0 : Fin 2) < b) = {1} := by decide
     have e2 : (Finset.univ.filter fun b : Fin 2 => b < (0 : Fin 2)) = ∅ := by decide
-    simp [modExp, e1, e2]
+    simp [modExp, e1]
   have f0 : firstEmb ![n, j + 1] g (0 : Fin 2) = g :=
     Pi.mulSingle_eq_same (M := fun a => GL (Fin (![n, j + 1] a)) k) (0 : Fin 2) g
   have f1 : firstEmb ![n, j + 1] g (1 : Fin 2) = 1 :=
@@ -151,9 +145,9 @@ theorem isSubquotient_twist {G V W : Type} [Group G] [AddCommGroup V] [Module �
   refine ⟨T', .mk f.toLinearMap fun g => ?_, hf⟩
   ext v
   have e : T'.toRepresentation g v = ((χ g : ℂˣ) : ℂ) • T.toRepresentation g v :=
-    Subtype.ext (by simp [twist_apply]; rfl)
+    Subtype.ext (by simp; rfl)
   have h2 := f.isIntertwining _ _ g v
-  simp only [LinearMap.comp_apply, twist_apply, LinearMap.smul_apply]
+  simp only [LinearMap.comp_apply, twist_apply]
   erw [e]
   rw [map_smul]
   erw [h2]

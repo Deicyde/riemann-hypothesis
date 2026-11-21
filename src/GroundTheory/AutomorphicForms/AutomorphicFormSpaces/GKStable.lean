@@ -1,8 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.AutomorphicFormSpaces.GKStableConv
 import GroundTheory.AutomorphicForms.AutomorphicFormSpaces.GKStableCartan
 import GroundTheory.AutomorphicForms.AutomorphicFormSpaces.GKStableLaplacian
-import GroundTheory.AutomorphicForms.AutomorphicFormSpaces.GKStableParabolic
+import GroundTheory.AutomorphicForms.ReductionFinite
 
 open NumberField IsDedekindDomain Topology Filter Set MeasureTheory
 open scoped NumberField.AdeleRing

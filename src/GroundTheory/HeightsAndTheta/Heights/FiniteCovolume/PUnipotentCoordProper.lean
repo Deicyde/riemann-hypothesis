@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.HermitianOrthogonal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.StUnipotentCoordProper
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.PHermAtPlace
 

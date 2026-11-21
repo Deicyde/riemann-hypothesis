@@ -1,10 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCellOfIsFrameMat
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ChartFrameBaseHolds
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagChartFramesEigenFramesLocalRing
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TangentCombinationPreservedByBaseChange
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsAffineEigenframeNearImage
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsBlockMetricDiagForm
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsBaseFrame
 
 set_option autoImplicit false
 
@@ -63,7 +62,7 @@ theorem frameVector_isCombination_tangentBasis_flagCover_point {E : Type} [Field
       funext i
       by_cases hi : i = e ⟨τ, j⟩
       · subst hi; simp [hφψ]
-      · simp [Pi.single_apply, hi]
+      · simp [hi]
     rw [e1] at h
     have e2 : spMap (dualMap ψ) ≫ v (e ⟨τ, j⟩) ≫ (Y.t.act.act a).left =
         (tv (ReciprocityTheory.ChartRestriction.G.PullbackSections.actR Y.t.act a (V (e ⟨τ, j⟩)))).left := by

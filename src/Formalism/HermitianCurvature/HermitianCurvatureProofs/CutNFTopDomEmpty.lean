@@ -1,7 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutNFTopDomPtw
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJDHatPolyOK
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.TriangleInequalityAtPlace
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.HomogeneityNaturalDegree
 
 namespace Formalism.FourierDecayAlt.P.CutBP
 

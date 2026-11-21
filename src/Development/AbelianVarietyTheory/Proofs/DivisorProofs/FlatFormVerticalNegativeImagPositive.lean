@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SiegelReframe
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
 open Matrix MeasureTheory GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe
 open scoped Real ContDiff
 
@@ -80,7 +82,7 @@ def flatOfLin (T : Matrix (Fin g) (Fin g) ℂ) : (Fin g → ℂ) →ₗ[ℝ] Fl 
     funext k
     rcases k with i | i
     · simp [flatOf, Matrix.vecMul, dotProduct, Finset.mul_sum, mul_assoc]
-    · simp [flatOf, Matrix.vecMul, dotProduct, Finset.mul_sum, mul_assoc]
+    · simp [flatOf, Matrix.vecMul, dotProduct, mul_assoc]
       simp only [mul_sub, Finset.mul_sum]
 
 theorem dflat_vert {B : Set E} {τ : E → Matrix (Fin g) (Fin g) ℂ}

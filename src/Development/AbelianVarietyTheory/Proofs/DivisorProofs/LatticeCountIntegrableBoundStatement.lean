@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeCountIntegrableBound
-import Mathlib
 open scoped NNReal ENNReal
 open MeasureTheory
 set_option maxHeartbeats 1000000 in

@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LocalTheory.StandardValuations.IntIndPow
 import Development.WeilBound.ThetaLifts.LocalTheory.IsArchimedeanLocalEquivariantMap
 import Development.WeilBound.ThetaLifts.LocalTheory.StandardValuations.ValIffNorm
+import Development.WeilBound.ThetaLifts.LocalTheory.StandardValuations.VacuumImageIntertwiner
 
 set_option linter.unusedSectionVars false
 

@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.AdmissibleDesigns.LiftMapEquivariant
+import Formalism.AdmissibleDesigns.LengthSemilinear
 
 variable [hT2Core : Fact ReciprocityTheory.ChartRestriction.T2.Core]
 

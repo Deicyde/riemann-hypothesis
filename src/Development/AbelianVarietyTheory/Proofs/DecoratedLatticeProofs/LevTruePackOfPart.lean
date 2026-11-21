@@ -1,10 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.DivisionPairOfAdelicFormsFaceColumnsData
-import Development.AbelianVarietyTheory.Definitions.HeightFunctions.OntoAlong
-import Development.AbelianVarietyTheory.Definitions.Divisors.RowSideOfCompatibleThetaPair
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.IsTypePlacesOfLevCh
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.CornerCoordinateAutomatic
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.EZeroNe
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.StdLvPr
 
 noncomputable section
 

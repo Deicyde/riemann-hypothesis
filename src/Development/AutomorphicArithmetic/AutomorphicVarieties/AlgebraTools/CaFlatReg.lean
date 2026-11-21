@@ -1,7 +1,9 @@
-import Mathlib
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.CotInd
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.CaCotExtend
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.CaCotOfSpan
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
 
 open IsLocalRing UpperTheory.V.AlgebraTools
 

@@ -1,11 +1,11 @@
-import Formalism.SizeWindowBrackets.Chain2aCoreNoAnalytic
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SizeWindowBrackets.SmoothedRemainderRealIntegralFormula
 import Formalism.SizeWindowBrackets.SBrDiv
 import Formalism.SizeWindowBrackets.TranslateWordBoundHypotheses
 import Formalism.SizeWindowBrackets.MatrixFamilyBoundsOfCardEqCeil
-import Formalism.SizeWindowBrackets.GrowthBracketBoundOfSizeWindows
 import Formalism.SizeWindowBrackets.SSmall
-import Formalism.SizeWindowBrackets.JointCSlopeExists
+import Formalism.SizeWindowBrackets.CutFailsForRSubmodule
 
 open Module NumberField Matrix IsDedekindDomain
 open Formalism.HN

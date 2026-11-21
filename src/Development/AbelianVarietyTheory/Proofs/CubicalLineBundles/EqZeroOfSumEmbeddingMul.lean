@@ -1,5 +1,11 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsHolPeriods
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ThetaUnifAV
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj MeasureTheory NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -51,7 +57,7 @@ theorem _root_.GlobalTheory.EigenNorm.hermForm_conj (hH : Hm.IsHermitian) (z w :
   have h := congrFun (congrFun hH i) j
   simp only [Matrix.conjTranspose_apply] at h
   rw [← h]
-  simp [Pi.star_apply, Complex.star_def]
+  simp [Pi.star_apply]
   ring
 
 theorem eq_zero_of_sum_embedding_mul {E : Type} [Field E] [NumberField E] (f : (E →+* ℂ) → ℂ)

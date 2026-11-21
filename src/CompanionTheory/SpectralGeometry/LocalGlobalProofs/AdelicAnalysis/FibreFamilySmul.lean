@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.UnipotentAdelicQuotients.SWXSDefs
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.GeneralLinearActions.GenusMassVolumes
 open MeasureTheory Topology Matrix
 open scoped ENNReal NNReal

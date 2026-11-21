@@ -1,5 +1,14 @@
-import Mathlib
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ValuationLocalVolumes.CountGen
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerOrbitVolume.LocDensFF
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -99,7 +108,7 @@ private theorem natCard_ker_mul_card_pow_eq_of_surjective [Finite k] {a' : ℕ} 
   have hrn := LinearMap.finrank_range_add_finrank_ker (Matrix.mulVecLin B)
   rw [hs, finrank_top, Module.finrank_fin_fun, Module.finrank_fin_fun] at hrn
   have e : {u : Fin M → k // B.mulVec u = 0} ≃ LinearMap.ker (Matrix.mulVecLin B) :=
-    Equiv.subtypeEquivRight fun u => by simp [Matrix.mulVecLin_apply]
+    Equiv.subtypeEquivRight fun u => by simp
   rw [Nat.card_congr e]
   simp only [Nat.card_eq_fintype_card]
   rw [Module.card_eq_pow_finrank (K := k) (V := LinearMap.ker (Matrix.mulVecLin B)), ← pow_add]

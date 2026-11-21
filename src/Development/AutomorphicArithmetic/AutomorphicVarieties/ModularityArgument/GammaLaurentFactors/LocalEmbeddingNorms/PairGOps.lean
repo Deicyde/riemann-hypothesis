@@ -1,4 +1,14 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.GammaLaurentFactors.PairGOps
+import Mathlib.AlgebraicTopology.FundamentalGroupoid.SimplyConnected
+import Mathlib.Analysis.Convex.Contractible
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 
@@ -58,7 +68,7 @@ theorem pairGOps : PairGOps := by
     · intro h
       simpa using congrFun h 0
     · intro s _
-      simp [fac]
+      simp
     · intro s _
       simp [fac]
   · intro L₁ L₁' L₂ L₂' β₁ β₂ q P₁ P₂ h₁ h₂

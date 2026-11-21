@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.DifferentialTranslates.SecondFromFirstStatement
+import Mathlib.Analysis.Calculus.InverseFunctionTheorem.ContDiff
 
 noncomputable section
 

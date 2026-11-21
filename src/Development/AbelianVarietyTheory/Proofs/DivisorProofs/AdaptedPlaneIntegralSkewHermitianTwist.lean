@@ -1,11 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLeviLeviElt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLeviElementAdapted
-import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.LcscAdelicUnitaryGroup
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegrableOnSqFundamentalDomain
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviElementUniqueStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentMemIffUnipotentRadicalStatement
@@ -69,7 +65,7 @@ theorem isHermND_smul (σ : E →ₐ[F] E) (B : Base F E) {d r s : ℕ} (W : Spc
         ext i
         have := congrArg τ (congrFun hJv i)
         simp only [Matrix.mulVec, dotProduct, map_sum, map_mul, Pi.zero_apply, map_zero] at this
-        simp only [M, v', Matrix.smul_mulVec, Matrix.mulVec, dotProduct, Matrix.map_apply, Pi.smul_apply, smul_eq_mul,
+        simp only [M, v', Matrix.mulVec, dotProduct, Matrix.map_apply, smul_eq_mul,
           Pi.zero_apply, Matrix.smul_apply, mul_assoc, ← Finset.mul_sum, this, mul_zero]
       have hx : star v' ≠ 0 := fun h => hv' (by simpa using congrArg star h)
       have := (hW.cartan w).2.2 (star v') hx
@@ -99,7 +95,7 @@ theorem isIsoCols_plane (σ : E →ₐ[F] E) (B : Base F E) {d d₁ : ℕ} (W : 
     have h2 : c * σ (form σ W.J H'.x H'.x) = 0 := by rw [hH.xx, map_zero, mul_zero]
     rw [Matrix.zero_apply, ← h2]
     simp only [form, dotProduct, Matrix.mulVec, map_sum, map_mul, hσ, Formalism.UG.cT, Matrix.mul_apply, Matrix.transpose_apply,
-      Matrix.map_apply, Matrix.smul_apply, Matrix.of_apply, smul_eq_mul, Matrix.zero_apply, Finset.mul_sum, Finset.sum_mul]
+      Matrix.map_apply, Matrix.smul_apply, Matrix.of_apply, smul_eq_mul, Finset.mul_sum, Finset.sum_mul]
     rw [Finset.sum_comm]
     refine Finset.sum_congr rfl fun k _ => Finset.sum_congr rfl fun l _ => ?_
     simp only [AlgHom.coe_toRingHom]
@@ -159,7 +155,7 @@ theorem continuous_leviElt (σ : E →ₐ[F] E) (B : Base F E) (hcm : IsCMExt F 
       fm c (incM F W.J) (fun i => incM F H'.ι i j) (incV F H'.y) = 0 := by
     intro j
     have hcol : (fun i => incM F H'.ι i j) = incV F (H'.ι *ᵥ Pi.single j 1) := by
-      ext i; simp [incV, incM, Matrix.mulVec_single_one]
+      ext i; simp [incV, incM]
     rw [hcol, fm_inc, fm_inc, (hH.orth _).1, (hH.orth _).2, map_zero]; exact ⟨rfl, rfl⟩
   let L : AE F E → AE F E → Matrix (Fin d) (Fin d) (AE F E) :=
     fun s r => lev c (incM F W.J) (incV F H'.x) (incV F H'.y) s r

@@ -1,4 +1,5 @@
-import Formalism.LocalToGlobal.PairingIndexBounds.RowActionCoefficients.CoefProd
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.PairingIndexBounds.RowActionCoefficients.ColHLe
 
 open MvPolynomial
 

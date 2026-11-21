@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ClosureUAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsComplementaryAdelicSchwartzRestFunction
+import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.HoweLocal
 open scoped TensorProduct Matrix
@@ -51,7 +52,7 @@ theorem isContOn_locOps_nonsplit : GlobalTheory.FunPr.Hypotheses₂ → ∀ (F E
       simp only [pureA, h0, Pi.smul_apply, smul_eq_mul]
     show (R 0)⁻¹ • l (fun t => pureA F f g (lift t)) = _
     rw [e, map_smul]
-    simp [smul_eq_mul, mul_comm, mul_assoc, mul_left_comm]
+    simp [smul_eq_mul, mul_comm, mul_left_comm]
   have hc0 : IsContOn (adeleClass F) om := hWeil.2.2
   have hc := (hc0 L hL _ (hR φ hφ).2).comp ((continuous_subtype_val (p := (· ∈ UAtGrp σ X (evFin F v)))).prodMap
     (continuous_subtype_val (p := (· ∈ UAtGrp σ W (evFin F v)))))

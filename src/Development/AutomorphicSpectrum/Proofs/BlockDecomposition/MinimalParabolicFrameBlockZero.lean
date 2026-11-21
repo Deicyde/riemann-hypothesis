@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.Reductions.SiegelCore
-import Development.WeilBound.ThetaLifts.Reductions.SiegelPar
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GoodConstOfAniso
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SumFrameIdem
 
 noncomputable section
@@ -19,7 +17,7 @@ theorem single_mul_mul_single_eq_zero {R : Type} [CommRing R] {r : ℕ} {B : Mat
   ext a b
   simp only [Matrix.mul_apply, Matrix.single_apply, Matrix.zero_apply]
   rcases eq_or_ne m a with rfl | ha <;> rcases eq_or_ne i b with rfl | hb <;>
-    simp [*, Finset.sum_ite_eq, Finset.sum_ite_eq']
+    simp [*, Finset.sum_ite_eq]
 
 theorem map_single_one_eq {E : Type} [Field E] {r : ℕ} (f : E →+* ℂ) (i : Fin r) :
     (single i i (1 : E) : Matrix (Fin r) (Fin r) E).map f = single i i (1 : ℂ) := by
@@ -56,7 +54,7 @@ theorem minPar_frame_block_eq_zero : ∀ (F E : Type) [Field F] [NumberField F] 
     ext i j
     by_cases hij : i = j
     · subst hij; simp [Formalism.UG.cT]
-    · simp [Formalism.UG.cT, Matrix.one_apply, hij, Ne.symm hij]
+    · simp [Formalism.UG.cT, hij, Ne.symm hij]
   have hyx : cT (σ : E →+* E) Y * (J * X) = 1 := by
     have h := congrArg (cT (σ : E →+* E)) hW.xy
     rw [cT_mul, cT_mul, cT_cT, cT_J, cT_one] at h
@@ -95,7 +93,7 @@ theorem minPar_frame_block_eq_zero : ∀ (F E : Type) [Field F] [NumberField F] 
       · have h0 : frameIdem (σ : E →+* E) J X Y none * X = 0 := by
           change (1 - X * (cT (σ : E →+* E) Y * J) - Y * (cT (σ : E →+* E) X * J)) * X = 0
           simp only [Matrix.sub_mul, Matrix.one_mul, Matrix.mul_assoc, hyx, hxx,
-            Matrix.mul_one, Matrix.mul_zero, sub_self, sub_zero]
+            Matrix.mul_one, Matrix.mul_zero, sub_self]
         rw [h0]
         simp
       · have hj : ¬ j ≤ s := by

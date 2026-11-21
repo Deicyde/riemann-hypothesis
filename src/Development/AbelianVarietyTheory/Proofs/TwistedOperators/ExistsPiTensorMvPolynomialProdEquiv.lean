@@ -1,5 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.NonemptyInvFunEquiv
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.LinearAlgebra.PiTensorProduct.Basis
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
 
 open MvPolynomial GlobalTheory.IndefiniteRowSideFullHecke.MinorOrderedEntries GlobalTheory.OneFunctional Formalism.BasicNotions GlobalTheory.Branching
 open scoped TensorProduct DirectSum
@@ -50,7 +52,7 @@ theorem exists_piTensor_equiv : ∀ (ι σ : Type) [Fintype ι],
     change bT.equiv (MvPolynomial.basisMonomials (ι × σ) ℂ) (expEquiv ι σ) (bT v) = _
     rw [Module.Basis.equiv_apply]
     simp only [MvPolynomial.coe_basisMonomials, AlgHom.toLinearMap_apply,
-      MvPolynomial.rename_monomial, expEquiv, Equiv.ofBijective_apply]
+      MvPolynomial.rename_monomial, expEquiv]
     exact MvPolynomial.monomial_sum_one _ _
   refine ⟨e, fun f => ?_⟩
   simpa using congrArg (fun F : MultilinearMap ℂ (fun _ : ι => MvPolynomial σ ℂ) _ => F f) key

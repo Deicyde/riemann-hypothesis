@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGCoreGTCRefCut
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.NormalFormOrderZeroOfParts
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.InvariantOperatorUnderJacquet

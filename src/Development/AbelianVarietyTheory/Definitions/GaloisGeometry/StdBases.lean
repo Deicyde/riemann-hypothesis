@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataKerI
-import Formalism.SharpRestriction.GlobalSchurBounds.TaylorLogMetric
 import Formalism.SharpRestriction.GlobalSchurBounds.GL3Theta
 
 noncomputable section

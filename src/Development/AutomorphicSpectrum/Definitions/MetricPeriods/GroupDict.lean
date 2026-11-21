@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.MetricPeriods.IsFundSet
-import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.Statements
+import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.Objects
 
 noncomputable section
 

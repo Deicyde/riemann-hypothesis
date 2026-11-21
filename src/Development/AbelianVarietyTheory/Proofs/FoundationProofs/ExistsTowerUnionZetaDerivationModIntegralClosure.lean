@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.CosetTrace
-import Development.AbelianVarietyTheory.Definitions.Foundations.NotIsTrDataGaussianIntOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsDerivationOnISupOfCompatible
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsDerivationTowerLevelAlgebraPrescribedStatement
 open GlobalTheory.AlmostEt GlobalTheory.K5
@@ -104,7 +103,7 @@ theorem cyc_relation (hc : CharZero Ω) (T : Tower p Ω) (m : ℕ) :
     exact (T.prim (m + 1)).isRoot_cyclotomic hpos
   have hid := congrArg (fun f => Polynomial.aeval ζ (Polynomial.derivative f))
     (cyclotomic_prime_pow_mul_X_pow_sub_one (O0 p) p m)
-  simp only [derivative_mul, derivative_sub, derivative_X_pow, derivative_one, map_add, map_mul,
+  simp only [derivative_mul, derivative_X_pow, derivative_one, map_add, map_mul,
     map_sub, hroot, zero_mul, add_zero, sub_zero] at hid
   have hzval : (Polynomial.aeval z (Polynomial.derivative (Polynomial.cyclotomic (p ^ (m + 1)) (O0 p))) : Ω)
       = Polynomial.aeval ζ (Polynomial.derivative (Polynomial.cyclotomic (p ^ (m + 1)) (O0 p))) := by

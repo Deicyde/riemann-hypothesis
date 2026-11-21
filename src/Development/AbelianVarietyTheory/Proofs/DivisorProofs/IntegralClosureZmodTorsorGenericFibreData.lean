@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsorsTrivial
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OriginIdeal
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ClosureFiniteEtale
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsionFreeOver
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InjectiveTraceGaloisData
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralClosureOverGenericFibreHartogsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsMulMemIntegralClosureOverGenericFibreStatement
@@ -23,7 +20,7 @@ theorem algebraMap_mem_nonZeroDivisors [Module.Flat A R] {a : A} (ha : a ≠ 0) 
   have h : IsSMulRegular R a :=
     Module.Flat.isSMulRegular_of_nonZeroDivisors (mem_nonZeroDivisors_of_ne_zero ha)
   refine mem_nonZeroDivisors_iff_right.mpr fun x hx => h ?_
-  simp only [Algebra.smul_def, smul_zero]
+  simp only [Algebra.smul_def]
   rw [mul_comm, mul_zero]; exact hx
 
 theorem genFib_injective [Module.Flat A R] : Function.Injective (algebraMap R (GenFib A R)) := by

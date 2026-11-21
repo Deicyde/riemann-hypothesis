@@ -1,10 +1,8 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.NormalizedLocalScale
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.OrbitalSquareEqHilbertSchmidtNormalisedVector
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.StabilizerMeasureNormalisationSymm
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.NormalFormFlagZeroMiddleInverseMinorOrthogonal
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsIsQuotMeas
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.SettingConstruction
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.CellRep
 
 noncomputable section

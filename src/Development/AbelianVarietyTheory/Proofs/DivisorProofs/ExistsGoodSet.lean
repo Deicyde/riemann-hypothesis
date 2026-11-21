@@ -1,7 +1,4 @@
-import Mathlib
-import Formalism.LocalToGlobal.Divisibility.GoodPartHermitianSpec
-import Formalism.SharpRestriction.Divisibility.PrimeDegreeVariant
-import Development.AbelianVarietyTheory.Definitions.Divisors.SplitDoublingNBlock
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsRepRealisingCharOfMultiplicityOneStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CuspidalIdempotentCharacters
 

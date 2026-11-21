@@ -1,4 +1,4 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.DatumEquiv
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.VdmSplit
 
 section

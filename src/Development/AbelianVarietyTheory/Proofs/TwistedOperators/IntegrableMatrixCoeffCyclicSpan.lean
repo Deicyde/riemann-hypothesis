@@ -1,9 +1,7 @@
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.PseudoCoefficientUpqTrivial
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.DiscreteSeriesCharacter
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.AdmissibleCoefficientsAnalytic
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsAdmOnOfFiniteDimensional
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.IrreducibleUnitaryAdmissible
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.PseudoCoefficientExistence
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.IsHilbertSchmidtOfFiniteDimensional
+import Formalism.RealPlaceAnalysis.RealPlaceTaylor.ModularCharacterEqOneOnExpHermitian
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open MeasureTheory Matrix Filter Formalism.REAL Formalism.MainNotions.S Formalism.L2.Theta GlobalTheory.FlagMeas GlobalTheory.GKModule GlobalTheory.RealInd GlobalTheory.OpTrace
 open GlobalTheory.SmoothGlob (lieSet)
 open GlobalTheory.Dec (IsHaarSub HasInfChar IsSqIntIrr)
@@ -62,11 +60,11 @@ theorem span_orbit_coeff_memLp {n : ℕ} {ε : Fin n → Bool} (μ : Measure (UJ
     | add x y _ _ hx hy =>
       have : (fun g => ⟪π h v, π g (x + y)⟫_ℂ) =
           (fun g => ⟪π h v, π g x⟫_ℂ) + (fun g => ⟪π h v, π g y⟫_ℂ) := by
-        funext g; simp [map_add, inner_add_right]
+        funext g; simp [map_add]
       rw [this]; exact hx.add hy
     | smul c x _ hx =>
       have : (fun g => ⟪π h v, π g (c • x)⟫_ℂ) = c • (fun g => ⟪π h v, π g x⟫_ℂ) := by
-        funext g; simp [map_smul, inner_smul_right]
+        funext g; simp [map_smul]
       rw [this]; exact hx.const_smul c
   induction hu' using Submodule.span_induction with
   | mem x hx =>
@@ -77,11 +75,11 @@ theorem span_orbit_coeff_memLp {n : ℕ} {ε : Fin n → Bool} (μ : Measure (UJ
     rw [this]; exact MemLp.zero
   | add x y _ _ hx hy =>
     have : (fun g => ⟪x + y, π g u⟫_ℂ) = (fun g => ⟪x, π g u⟫_ℂ) + (fun g => ⟪y, π g u⟫_ℂ) := by
-      funext g; simp [inner_add_left]
+      funext g; simp
     rw [this]; exact hx.add hy
   | smul c x _ hx =>
     have : (fun g => ⟪c • x, π g u⟫_ℂ) = (starRingEnd ℂ c) • (fun g => ⟪x, π g u⟫_ℂ) := by
-      funext g; simp [inner_smul_left, mul_comm]
+      funext g; simp [mul_comm]
     rw [this]; exact hx.const_smul _
 
 theorem span_orbit_coeff_integrable : ∀ (n : ℕ) (ε : Fin n → Bool) (μ : Measure (UJ ε)) [μ.IsHaarMeasure] (U : Type) [NormedAddCommGroup U] [InnerProductSpace ℂ U] (π : UJ ε →* (U →L[ℂ] U)), IsUnitaryRep π → ∀ (p : ℝ), 1 ≤ p → ∀ v : U, Integrable (fun g => ‖⟪v, π g v⟫_ℂ‖ ^ p) μ → ∀ u ∈ Submodule.span ℂ (Set.range fun g => π g v), ∀ u' ∈ Submodule.span ℂ (Set.range fun g => π g v), Integrable (fun g => ‖⟪u', π g u⟫_ℂ‖ ^ p) μ := by

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.CharStd
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.CharCompl
 
@@ -264,7 +266,7 @@ theorem LamO_injective : Function.Injective (LamO S T) := by
       intro c
       rw [Matrix.trace, Finset.sum_eq_single i]
       · simp [Matrix.mul_apply, Matrix.single_apply]
-      · intro b _ hb; simp [Matrix.mul_apply, Matrix.single_apply, Ne.symm hb]
+      · intro b _ hb; simp [Matrix.mul_apply, Ne.symm hb]
       · simp
     rw [htr, key]
     field_simp

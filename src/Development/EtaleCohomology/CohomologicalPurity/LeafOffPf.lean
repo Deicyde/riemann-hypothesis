@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.CohomologicalPurity.LeafClCut
 
 open CategoryTheory AlgebraicGeometry

@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.RegularSemisimpleFibres.PowerMatchingTraces.MatchCut
-import Development.AutomorphicArithmetic.Foundations.Convolution.TraceSplitting.NormCharSplitAlt
+import Development.AutomorphicArithmetic.Foundations.Convolution.TraceSplitting.NormCharSplit
+import GroundTheory.GlobalFields.IdeleGroups.IdeleNorms.BaseChange
 
 noncomputable section
 

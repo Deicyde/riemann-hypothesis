@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LiftQMk
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ConstOneMem
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.AdmissibleQuotientKerIffFullLattices
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.MkMemAdmissibleAtIffCocycle
+import Formalism.SharpRestriction.LevelLetterCocycles.TableLineDegreeTwo
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
 set_option synthInstance.maxHeartbeats 400000
 set_option maxHeartbeats 1000000
 open NumberField IsDedekindDomain Formalism Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.MainNotions Formalism.MainNotions.N Formalism.WeaklyAdmissibleFiltrations GlobalTheory.Pass GlobalTheory.Cut GlobalTheory.UseLoc Module TensorProduct GlobalTheory.UseLoc.Cases
@@ -75,7 +76,7 @@ theorem actExtL_ker (lam : O) (a : ℕ) (hX : ∀ x : X, lam ^ a • x = 0) (g :
     | tmul t x => rw [TensorProduct.smul_tmul', TensorProduct.smul_tmul, hX, TensorProduct.tmul_zero]
     | add u v hu hv => rw [smul_add, hu, hv, add_zero]
   rintro ⟨m, y⟩ ⟨hm, hy⟩
-  simp only [Submodule.mem_bot] at hm
+  simp only at hm
   subst hm
   obtain ⟨c, rfl⟩ := Ideal.mem_span_singleton'.1 hy
   rw [Submodule.mem_comap, actExtL_apply]

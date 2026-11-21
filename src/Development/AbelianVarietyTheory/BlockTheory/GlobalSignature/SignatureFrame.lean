@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
-import Formalism.LocalRingCardinality.DataCD
 
 open MeasureTheory Matrix Finset
 
@@ -141,7 +142,7 @@ example (x y : ℝ) : dimV ![x, y] = x - y := by
   simp [dimV, Fin.prod_univ_succ]
 
 example (x y z : ℝ) : dimV ![x, y, z] = (x - y) * (x - z) * (y - z) / 2 := by
-  simp [dimV, Fin.prod_univ_succ, Fin.prod_Ioi_zero, Fin.prod_Ioi_succ]
+  simp [dimV, Fin.prod_univ_succ, Fin.prod_Ioi_succ]
   norm_num
 
 end GlobalTheory.IndefiniteRowSideFullHecke.SignatureFrame

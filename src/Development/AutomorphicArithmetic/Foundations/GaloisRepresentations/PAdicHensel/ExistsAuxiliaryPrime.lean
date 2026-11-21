@@ -1,11 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.SphericalCoordinates.AlgebraEquivSetup.SetupBasicHolds
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.PAdicHensel.PadicUnitNormHolds
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.PAdicHensel.PAuxPrime
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.PAdicHensel.PArithK
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.PAdicHensel.PScOf
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.PAdicHensel.PRootAt
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.PAdicHensel.PStdForm
 
 open UpperTheory.Gal.W2.Seed
 

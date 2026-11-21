@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.AevalValuation.PlDefs
+import Mathlib.Data.Finsupp.Pointwise
 
 noncomputable section
 

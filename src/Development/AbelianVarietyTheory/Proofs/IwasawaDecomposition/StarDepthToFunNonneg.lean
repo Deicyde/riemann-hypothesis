@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsBaryStageStart
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsStrictIff
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SysExOfPol
 
 noncomputable section
 

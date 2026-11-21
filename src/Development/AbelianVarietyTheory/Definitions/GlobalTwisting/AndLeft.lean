@@ -1,7 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.TiedColumnData
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.LowerTieTwAt
-import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.ValidForConstructedPointClassesEventuallyWorking
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.JetsInIffStepField
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.PositionOfIntro
 
 noncomputable section
 

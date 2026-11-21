@@ -1,12 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.TrueColumnChoicesHeckeCharReferenceEqOne
-import Development.AbelianVarietyTheory.Definitions.Foundations.NormSumPairRankZeroOfCurveCoordNorm
-import Formalism.PairingDivisors.StatementH
-import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
-import Formalism.LocalRingCardinality.ConjSqrtMinusD
-import Formalism.LocalToGlobal.ProjectiveLattices.HalfOneAddSqrtNegIsIntegral
-import Formalism.LocalToGlobal.ProjectiveLattices.LevelPb
-import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.Principal
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.DataHost
 
 namespace GlobalTheory.CoordsOfMemAdjoin
 

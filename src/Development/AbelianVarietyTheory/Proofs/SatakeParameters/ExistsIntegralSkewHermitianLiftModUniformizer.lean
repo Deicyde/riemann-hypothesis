@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.DvdPowZeroIff
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.CayleyTransformTrivialPhaseSkewHermitian
 open Matrix
@@ -17,7 +18,7 @@ theorem cT_cT (σ : L →+* L) (hσ : ∀ x, σ (σ x) = x) {a b : Type} (M : Ma
 
 theorem cT_mul_rect (σ : L →+* L) {a b c : Type} [Fintype b] (M : Matrix a b L) (N : Matrix b c L) :
     Formalism.UG.cT σ (M * N) = Formalism.UG.cT σ N * Formalism.UG.cT σ M := by
-  ext i j; simp [Formalism.UG.cT, Matrix.mul_apply, map_sum, mul_comm]
+  ext i j; simp [Formalism.UG.cT, Matrix.mul_apply, mul_comm]
 
 theorem isIntM_sub' [Valued L (WithZero (Multiplicative ℤ))] {a b : Type} {M N : Matrix a b L} (hM : IsIntM M) (hN : IsIntM N) : IsIntM (M - N) :=
   fun i j => sub_mem (hM i j) (hN i j)
@@ -71,7 +72,7 @@ theorem skew_lift : ∀ (L : Type) [Field L] [Valued L (WithZero (Multiplicative
   · have hP : ∀ k i, P k i = Formalism.UG.hform σ J (w k) (z i) := by
       intro k i
       show ∑ r, σ (B r k) * z i r = _
-      simp only [B, Formalism.UG.hform, Matrix.transpose_apply, Matrix.map_apply,
+      simp only [B, Formalism.UG.hform,
         Matrix.mulVec, dotProduct, map_sum, map_mul, herm, Finset.sum_mul]
       rw [Finset.sum_comm]
       refine Finset.sum_congr rfl fun s _ => Finset.sum_congr rfl fun t _ => by ring

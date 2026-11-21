@@ -1,4 +1,6 @@
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.KatzMessingTheorem.QFrobEqSchMap
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.BocksteinBaseChange.ResCoeff
 
 set_option backward.isDefEq.respectTransparency false
 

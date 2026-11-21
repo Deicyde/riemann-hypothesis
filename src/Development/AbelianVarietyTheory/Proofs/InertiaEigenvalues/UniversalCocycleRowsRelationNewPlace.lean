@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.CyclotomicTotient.OneAddPow
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.VecPairApply
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.TameRelationCocycleSquareZeroInertiaStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.TwistedRepresentationKillsSmallSubgroupStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ChebotarevInductionGrowBoundOfPresentation
@@ -112,7 +111,7 @@ theorem rel : TameLocal → ∀ (D : Formalism.BasicNotions.D7) (N : NData D.R D
     change mk (u • Z g c - v • Z h c) = 0
     rw [map_sub, map_smul, map_smul, e', sub_self]
   cases b
-  · simp only [two, Bool.false_eq_true, ↓reduceIte, mul_one]
+  · simp only [two, Bool.false_eq_true, ↓reduceIte]
     apply key
     have := r1
     rw [neg_smul, neg_smul, neg_inj] at this

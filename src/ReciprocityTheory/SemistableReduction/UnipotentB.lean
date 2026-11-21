@@ -1,4 +1,14 @@
-import ReciprocityTheory.SemistableReduction.LatSemiSt
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
+import ReciprocityTheory.SemistableReduction.TorsionNonvanishStatement
 
 namespace ReciprocityTheory.MultiplicativeHeights
 
@@ -27,7 +37,7 @@ theorem unip_normSq_single {r : ℕ} (j : Fin r) : normSq (Pi.single j (1 : ℂ)
   rw [Finset.sum_eq_single j]
   · simp
   · intro b _ hb
-    simp [Pi.single_apply, hb]
+    simp [hb]
   · intro h
     exact absurd (Finset.mem_univ j) h
 

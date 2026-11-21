@@ -1,4 +1,17 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.FlagUnipotentLattices.MemOfOrthogonalAnisotropic
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open Formalism.HermitianLatticeCounting.S6
 open scoped BigOperators
@@ -350,7 +363,7 @@ lemma nFStep_of (hY1 : Formalism.HermitianLatticeCounting.S6.Y1) (hPP : Formalis
     obtain ⟨-, -, hL, hc⟩ := hY1 K V H r F x (star t • v) a al hxa hvt
     obtain ⟨-, -, hL', hc'⟩ := hY1 K V H r F' x (star t • v) a' al' hxa' hvt'
     have h1 := hrel _ hL hL' _ _ hc hc'
-    simp only [HermSpace_B_smul_right_eq_star_mul, star_star, star_mul', star_add] at h1
+    simp only [HermSpace_B_smul_right_eq_star_mul, star_star, star_mul'] at h1
     rw [hd_def]
     simp only [star_mul', star_sub]
     linear_combination h1
@@ -847,7 +860,7 @@ theorem normalFormMinorNeZero : Formalism.HermitianLatticeCounting.S6.NFCaseB :=
   have hsub : (P.updateRow (Fin.last r) (fun b => H.B (F.z - x) (F'.e b))).submatrix Fin.castSucc Fin.castSucc =
       Matrix.of fun a b : Fin r => H.B (F.e (Fin.castLE (Nat.le_succ r) a)) (F'.e (Fin.castLE (Nat.le_succ r) b)) := by
     ext a b
-    simp [hPdef, Matrix.updateRow_ne (Fin.castSucc_ne_last a)] <;> rfl
+    simp [hPdef] <;> rfl
   have hP : Formalism.HermitianLatticeCounting.S6.Dl F F' (r + 1) le_rfl = P.det := by
     rw [hPdef]
     exact Dl_eq F F' (r + 1) le_rfl
@@ -1472,10 +1485,10 @@ theorem eichlerMapIsometry : Formalism.HermitianLatticeCounting.S6.EichlerIsom :
   · simp only [eich_apply_eq_add_wedge_add_smul, HermSpace_B_add_left, HermSpace_B_sub_left, HermSpace_B_smul_left, HermSpace_B_add_right, HermSpace_B_sub_right, HermSpace_B_smul_right_eq_star_mul,
       H.herm, hxx, hxv, hvx]
     linear_combination (H.B y x * H.B x y') * hc
-  · simp only [eich_apply_eq_add_wedge_add_smul, HermSpace_B_add_left, HermSpace_B_sub_left, HermSpace_B_smul_left, HermSpace_B_neg_left, map_neg, LinearMap.neg_apply, hxx, hxv, hvx]
+  · simp only [eich_apply_eq_add_wedge_add_smul, HermSpace_B_add_left, HermSpace_B_sub_left, HermSpace_B_smul_left, map_neg, hxx, hxv, hvx]
     rw [hcs]
     module
-  · simp only [eich_apply_eq_add_wedge_add_smul, HermSpace_B_add_left, HermSpace_B_sub_left, HermSpace_B_smul_left, HermSpace_B_neg_left, map_neg, LinearMap.neg_apply, hxx, hxv, hvx]
+  · simp only [eich_apply_eq_add_wedge_add_smul, HermSpace_B_add_left, HermSpace_B_sub_left, HermSpace_B_smul_left, map_neg, LinearMap.neg_apply, hxx, hxv, hvx]
     rw [hcs]
     module
 

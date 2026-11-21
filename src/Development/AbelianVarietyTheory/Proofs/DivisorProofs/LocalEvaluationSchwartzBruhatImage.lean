@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PlaneZeroInsertionLinearApply
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.LcscAdelicUnitaryGroup
 open scoped TensorProduct Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.ThK.PlaneEv
@@ -39,7 +37,7 @@ theorem continuous_glue : Continuous (glue (n := n) (R := R) hd) := by
 
 theorem glue_pr (y : Fin n × Fin d → R) : glue hd (pr1 hd y, pr2 hd y) = y := by
   funext k
-  simp only [glue, pr1, pr2]
+  simp only [glue]
   rcases h : idx hd k with q | q
   · show y ((idx hd).symm (Sum.inl q)) = y k; rw [← h, Equiv.symm_apply_apply]
   · show y ((idx hd).symm (Sum.inr q)) = y k; rw [← h, Equiv.symm_apply_apply]

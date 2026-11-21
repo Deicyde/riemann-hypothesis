@@ -1,10 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsGaloisCover
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.OmegaPullOmegaTraceOfSecTraceOne
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsAffCoverSpec
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.FiniteEtaleFunctionFieldIntegralClosureDifferentStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.SmoothSectionsInFunctionField
 import Development.AutomorphicArithmetic.Foundations.EtaleClopenDescent.IsSeparatedOfProj
+import Development.AbelianVarietyTheory.Definitions.Divisors.DlogRatioVolumeFormNeZero
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory GlobalTheory.HodgeCoh GlobalTheory.CechDR GlobalTheory.PD KaehlerDifferential GlobalTheory.W1
 
 set_option autoImplicit false

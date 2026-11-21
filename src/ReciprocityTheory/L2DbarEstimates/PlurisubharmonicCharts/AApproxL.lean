@@ -1,4 +1,7 @@
-import ReciprocityTheory.L2DbarEstimates.PlurisubharmonicCharts.AApproxK
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Topology.Sheaves.Presheaf
+import ReciprocityTheory.L2DbarEstimates.PlurisubharmonicCharts.AApproxJ
 
 namespace ReciprocityTheory.L2DbarEstimates.Y
 

@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.WeilCriterionInvariantMeasureHomogeneousSpace
-import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.InvariantRadonFibre
 open MeasureTheory GlobalTheory.IndefiniteRowSideFullHecke.InvariantRadonFibre
 open scoped ENNReal
 set_option maxHeartbeats 1000000 in

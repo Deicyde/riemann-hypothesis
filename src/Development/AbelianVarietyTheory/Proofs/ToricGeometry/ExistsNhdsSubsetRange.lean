@@ -1,8 +1,14 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.DifferentiableOnOfTendstoLocallyUniformlyOn
-import ReciprocityTheory.ThetaQuasiPeriods.ThetaQuasiPeriodStatement
-import ReciprocityTheory.ThetaQuasiPeriods.Transl
-import ReciprocityTheory.ThetaQuasiPeriods.Change
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.Topology.Algebra.MvPolynomial
+import ReciprocityTheory.ThetaQuasiPeriods.PeriodLattice
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open ReciprocityTheory.PTheta Complex Matrix Filter Topology
 open scoped BigOperators Real
@@ -45,7 +51,7 @@ theorem exists_compact_cover {g : ℕ} (τ : Matrix (Fin g) (Fin g) ℂ)
       obtain ⟨a, rfl⟩ := hx
       refine ⟨r • a, ?_⟩
       simp only [L, Prod.smul_fst, Prod.smul_snd, hsm, Matrix.mulVec_smul]
-      ext i; simp [mul_add]
+      ext i; simp
   refine ⟨L '' (Set.Icc 0 1), isCompact_Icc.image hc, fun z => ?_⟩
   obtain ⟨⟨a, b⟩, rfl⟩ := hs z
   refine ⟨L (fun i => Int.fract (a i), fun i => Int.fract (b i)), ⟨_, ?_, rfl⟩,

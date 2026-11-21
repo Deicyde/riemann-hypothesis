@@ -1,7 +1,19 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.FlipTwoThree
 import Formalism.LocalRingCardinality.Lemmas
 import Formalism.LogVandermondeBounds.HookGammaAmgmMultinomialBounds
-import Formalism.GL3MeanSquares.TraceIntegralityResults
+import Formalism.GL3MeanSquares.HookFormulaTorsion.BlockOperatorNormBound
+import Formalism.GL3MeanSquares.HookFormulaTorsion.HookRowProductEqFactorial
+import Formalism.GL3MeanSquares.HookFormulaTorsion.MinkowskiDivisorBound
+import Formalism.GL3MeanSquares.HookFormulaTorsion.SeparatedSetPackingBound
+import Formalism.GL3MeanSquares.HookFormulaTorsion.SquareMomentArithmeticBound
+import Formalism.GL3MeanSquares.HookFormulaTorsion.SquareMomentFromBound
+import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
+import Mathlib.Analysis.Complex.MeanValue
+import Mathlib.MeasureTheory.Measure.RegularityCompacts
+import Mathlib.Order.Interval.Finset.Box
+import Mathlib.Topology.UniformSpace.Uniformizable
 
 noncomputable section
 
@@ -461,7 +473,7 @@ theorem b_toEuc_mul {l m n : Type} [Fintype l] [Fintype m] [Fintype n] [Decidabl
     Matrix.toEuclideanLin (A * B) = (Matrix.toEuclideanLin A).comp (Matrix.toEuclideanLin B) := by
   apply LinearMap.ext
   intro x
-  simp [Matrix.mulVec_mulVec]
+  simp
 
 theorem matrix_mul_factor_through_inv {l m n : Type} [Fintype l] [Fintype m] [Fintype n] [DecidableEq l] [DecidableEq m] [DecidableEq n]
     (P : Matrix l l ℂ) (A : Matrix l m ℂ) (Y : Matrix m m ℂ) (B : Matrix m n ℂ) (Z : Matrix n n ℂ)

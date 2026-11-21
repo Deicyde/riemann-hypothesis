@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Variable
 import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.FlagMinor
 
 namespace GlobalTheory.CompanionTheory.Ar.Num

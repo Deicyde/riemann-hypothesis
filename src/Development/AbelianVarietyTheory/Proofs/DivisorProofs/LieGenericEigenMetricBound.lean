@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LieBaseIff
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LieBaseAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArithmeticBundleGenericFibreData
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DetQuotGramRe
@@ -48,7 +48,7 @@ theorem grSq_dual {M P A N : Matrix (Fin n) (Fin n) ℂ} (hM : M.PosDef) (hP : I
     rw [← e, Matrix.mul_inv_rev, Matrix.mul_inv_rev, conjTranspose_mul]
     simp only [Matrix.mul_assoc, mul_nonsing_inv_cancel_left _ _ hP, nonsing_inv_mul_cancel_left _ _ hP']
     ext a b
-    simp [HermFrame.chg, Matrix.mul_apply, Finset.mul_sum, Finset.sum_mul, mul_assoc]
+    simp [HermFrame.chg, Matrix.mul_apply, Finset.mul_sum, mul_assoc]
   have h5 : (N.submatrix Fin.rev Fin.rev)ᴴᴴ * (Pᴴ * M * P)⁻¹.submatrix Fin.rev Fin.rev * (N.submatrix Fin.rev Fin.rev)ᴴ =
       HermFrame.chg A M⁻¹ := by
     have := congrArg (fun X : Matrix (Fin n) (Fin n) ℂ => X.submatrix Fin.revPerm Fin.revPerm) h4

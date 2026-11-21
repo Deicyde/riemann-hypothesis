@@ -1,5 +1,8 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.MopBase
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.DerExtend
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.RingTheory.MvPowerSeries.Rename
+import Mathlib.RingTheory.TotallySplit
 open Matrix IsLocalRing UpperTheory.V.U3 UpperTheory.V.Alg UpperTheory.V.HV UpperTheory.V.U3.Mop
 
 private theorem coeff_single_mul {E σ : Type} [CommRing E] (i : σ) (f g : MvPowerSeries σ E) :

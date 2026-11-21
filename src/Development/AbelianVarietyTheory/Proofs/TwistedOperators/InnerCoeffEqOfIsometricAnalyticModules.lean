@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.Divisibility.SchurIrreducible
-import Formalism.LocalToGlobal.BesselHermitianTheta.DefsReal
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.DataTheta
 
 open Formalism.BasicNotions.TH Formalism.MainNotions.SchurIrreducible
 

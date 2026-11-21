@@ -1,7 +1,6 @@
-import Mathlib
-import Formalism.PeriodIntegrals.RhsWLim
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeightedLimitGauge.VolumeLieE
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeightedLimitGauge.ChartLim
+import Mathlib.Tactic.ENatToNat
 
 noncomputable section
 

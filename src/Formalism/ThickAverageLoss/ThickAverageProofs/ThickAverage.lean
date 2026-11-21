@@ -1,5 +1,12 @@
-import Formalism.ThickAverageLoss.ParametersAveragedDifferenceBound
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.ThickAverageLoss.PartnersToFactorsAt
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Finset
 
@@ -30,7 +37,7 @@ lemma signZModTwo_zero : sgn2 0 = 1 := by
   simp [sgn2]
 
 lemma signZModTwo_one : sgn2 1 = -1 := by
-  simp [sgn2, zmod_two_one_ne_zero]
+  simp [sgn2]
 
 def e10 : E0 × H := (((1 : ZMod 2), (0 : ZMod 2)), 0)
 
@@ -80,27 +87,27 @@ lemma trivH_formula (ψ : AddChar (E0 × H) ℂ) (hψ : TrivH ψ) (g : E0 × H) 
   · have e : ((((0 : ZMod 2), (1 : ZMod 2)), h) : E0 × H) = e01 + ((0, 0), h) := by simp [e01]
     conv_lhs => rw [e]
     rw [AddChar.map_add_eq_mul, h0]
-    simp [zmod_two_one_ne_zero]
+    simp
   · have e : ((((1 : ZMod 2), (0 : ZMod 2)), h) : E0 × H) = e10 + ((0, 0), h) := by simp [e10]
     conv_lhs => rw [e]
     rw [AddChar.map_add_eq_mul, h0]
-    simp [zmod_two_one_ne_zero]
+    simp
   · have e : ((((1 : ZMod 2), (1 : ZMod 2)), h) : E0 × H) = e10 + e01 + ((0, 0), h) := by
       simp [e10, e01]
     conv_lhs => rw [e]
     rw [AddChar.map_add_eq_mul, AddChar.map_add_eq_mul, h0]
-    simp [zmod_two_one_ne_zero]
+    simp
 
 lemma sq_one_of_order2 (ψ : AddChar (E0 × H) ℂ) (g : E0 × H) (hg : g + g = 0) : ψ g * ψ g = 1 := by
   rw [← AddChar.map_add_eq_mul, hg, AddChar.map_zero_eq_one]
 
 lemma firstBasis_add_self : (e10 : E0 × H) + e10 = 0 := by
   have h2 : (2 : ZMod 2) = 0 := by decide
-  simp [e10, zmod_two_one_add_one, h2]
+  simp [e10, zmod_two_one_add_one]
 
 lemma secondBasis_add_self : (e01 : E0 × H) + e01 = 0 := by
   have h2 : (2 : ZMod 2) = 0 := by decide
-  simp [e01, zmod_two_one_add_one, h2]
+  simp [e01, zmod_two_one_add_one]
 
 lemma trivH_cases (Hs : CycHost H) (ψ : AddChar (E0 × H) ℂ) (hψ : TrivH ψ) :
     ψ = 0 ∨ ψ = Hs.chC ∨ ψ = Hs.psC ∨ ψ = Hs.chpsC := by
@@ -118,27 +125,27 @@ lemma trivH_cases (Hs : CycHost H) (ψ : AddChar (E0 × H) ℂ) (hψ : TrivH ψ)
   · right; right; left
     ext ⟨⟨a, b⟩, h⟩
     rw [key, hx1, hy1, Hs.psC_apply]
-    rcases zmod_two_cases_bis b with rfl | rfl <;> simp [signZModTwo_zero, signZModTwo_one, zmod_two_one_ne_zero]
+    rcases zmod_two_cases_bis b with rfl | rfl <;> simp [signZModTwo_zero, signZModTwo_one]
   · right; left
     ext ⟨⟨a, b⟩, h⟩
     rw [key, hx1, hy1, Hs.chC_apply]
-    rcases zmod_two_cases_bis a with rfl | rfl <;> simp [signZModTwo_zero, signZModTwo_one, zmod_two_one_ne_zero]
+    rcases zmod_two_cases_bis a with rfl | rfl <;> simp [signZModTwo_zero, signZModTwo_one]
   · right; right; right
     ext ⟨⟨a, b⟩, h⟩
     rw [key, hx1, hy1, Hs.chpsC_apply]
     rcases zmod_two_cases_bis a with rfl | rfl <;> rcases zmod_two_cases_bis b with rfl | rfl <;>
-      simp [signZModTwo_zero, signZModTwo_one, zmod_two_one_ne_zero]
+      simp [signZModTwo_zero, signZModTwo_one]
 
 lemma cyclicCharacter_first_basis (Hs : CycHost H) : Hs.chC e10 = -1 := by
-  simp [Hs.chC_apply, e10, signZModTwo_one, signZModTwo_zero]
+  simp [Hs.chC_apply, e10, signZModTwo_one]
 lemma quadraticCharacter_first_basis (Hs : CycHost H) : Hs.psC e10 = 1 := by
-  simp [Hs.psC_apply, e10, signZModTwo_one, signZModTwo_zero]
+  simp [Hs.psC_apply, e10, signZModTwo_zero]
 lemma productCharacter_first_basis (Hs : CycHost H) : Hs.chpsC e10 = -1 := by
   simp [Hs.chpsC_apply, e10, signZModTwo_one, signZModTwo_zero]
 lemma cyclicCharacter_second_basis (Hs : CycHost H) : Hs.chC e01 = 1 := by
-  simp [Hs.chC_apply, e01, signZModTwo_one, signZModTwo_zero]
+  simp [Hs.chC_apply, e01, signZModTwo_zero]
 lemma quadraticCharacter_second_basis (Hs : CycHost H) : Hs.psC e01 = -1 := by
-  simp [Hs.psC_apply, e01, signZModTwo_one, signZModTwo_zero]
+  simp [Hs.psC_apply, e01, signZModTwo_one]
 lemma productCharacter_second_basis (Hs : CycHost H) : Hs.chpsC e01 = -1 := by
   simp [Hs.chpsC_apply, e01, signZModTwo_one, signZModTwo_zero]
 
@@ -206,8 +213,8 @@ lemma thick_filter (T2 : Finset H) (u0 t : H) :
   have h2 : (2 : ZMod 2) = 0 := by decide
   ext ⟨⟨a, b⟩, h⟩
   rcases zmod_two_cases_bis a with rfl | rfl <;> rcases zmod_two_cases_bis b with rfl | rfl <;>
-    simp [InPhi, IsThickAt, topPl, cconj, thickPl, zmod_two_one_add_one, zmod_two_one_ne_zero,
-      zmod_two_one_ne_zero.symm, h2, sub_eq_iff_eq_add]
+    simp [InPhi, IsThickAt, topPl, cconj, thickPl, zmod_two_one_add_one,
+      zmod_two_one_ne_zero.symm, sub_eq_iff_eq_add]
 
 lemma thick_inj (u0 t : H) :
     Set.InjOn (fun s => ((((1 : ZMod 2), (0 : ZMod 2)), s + u0 - t) : E0 × H)) Set.univ := by
@@ -217,7 +224,7 @@ lemma thick_inj (u0 t : H) :
 lemma rho_thick (s u0 t : H) :
     cconj + ((((1 : ZMod 2), (0 : ZMod 2)), s + u0 - t) : E0 × H) + topPl t = thickPl (s + u0) := by
   have h2 : (2 : ZMod 2) = 0 := by decide
-  simp [cconj, topPl, thickPl, zmod_two_one_add_one, h2]
+  simp [cconj, topPl, thickPl, zmod_two_one_add_one]
 
 def thickZ {m : ℕ} (Hs : CycHost H) (Nd : Nodes H m) (u0 t : H) (j : Fin m) : ℂ :=
   (1 / ((PhiSet (H := H)).card : ℂ)) * ∑ s ∈ Nd.T2, ∑ ψ : AddChar (E0 × H) ℂ,

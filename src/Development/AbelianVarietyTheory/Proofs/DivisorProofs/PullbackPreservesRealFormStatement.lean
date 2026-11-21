@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PullbackPreservesRealForm
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsTypeIsRealConst
 open GlobalTheory.CxForm
 open ReciprocityTheory.L2DbarEstimates (V)
 open scoped ComplexConjugate

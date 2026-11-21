@@ -1,9 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsLeSup
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LevSplitOf
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviIsoPlaneUnique
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.InducedSectionZFinite
 open scoped TensorProduct NNReal Matrix ContDiff
@@ -29,7 +27,7 @@ theorem exp_sandwich {n n₁ : ℕ} (ι : Matrix (Fin n) (Fin n₁) ℂ) (R : Ma
       map_mul' := fun p q => by
         simp only [Prod.fst_mul, Prod.snd_mul, Matrix.add_mul, Matrix.mul_add, Matrix.smul_mul, Matrix.mul_smul,
           Matrix.mul_sub, Matrix.sub_mul, Matrix.mul_assoc, h', Matrix.one_mul, Matrix.mul_one, sub_self, smul_zero,
-          smul_smul, sub_zero, add_zero, zero_add]
+          add_zero]
         module
       map_zero' := by simp
       map_add' := fun p q => by

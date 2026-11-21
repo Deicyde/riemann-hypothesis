@@ -1,5 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import ReciprocityTheory.L2DbarEstimates.IsLocalHomeomorph
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.Analysis.Matrix.Order
+import Mathlib.Analysis.SpecialFunctions.Gaussian.FourierTransform
+import Mathlib.RingTheory.Complex
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.Polynomial.Basic
 open Filter Topology MeasureTheory Metric ReciprocityTheory.L2DbarEstimates
 open scoped ComplexOrder
 
@@ -15,7 +22,7 @@ lemma det_toEuclideanLin {n : ℕ} (C : Matrix (Fin n) (Fin n) ℂ) :
       (EuclideanSpace.basisFun (Fin n) ℂ).toBasis C := by
     ext v i : 2
     simp [Matrix.toLin_apply, Matrix.toEuclideanLin_apply, Matrix.mulVec, dotProduct,
-      EuclideanSpace.single_apply, Pi.single_apply]
+      Pi.single_apply]
   rw [this, LinearMap.det_toLin]
 
 lemma quad_eq {n : ℕ} (H C : Matrix (Fin n) (Fin n) ℂ) (hC : H.transpose = C.conjTranspose * C)

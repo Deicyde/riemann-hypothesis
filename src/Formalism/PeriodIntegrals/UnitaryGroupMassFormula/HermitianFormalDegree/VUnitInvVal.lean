@@ -1,9 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.DegreeBoundOfHolomorphicContinuation
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.BesselSquareIntegrable.SchurHpk
 import Formalism.PeriodIntegrals.HCFdeg
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.FormalDegreeScaling.FdegScaleOf
-import Formalism.RealPlaceAnalysis.RealPlaceTaylor.ModularCharacterEqOneOnExpHermitian
 
 noncomputable section
 
@@ -78,7 +77,7 @@ theorem conjP_eq_conjP_conj (ε : Fin n → Bool) {P P₂ : Matrix (Fin n) (Fin 
   unfold PI.UnitaryGroupMassFormula.BesselL2FixAtZero.conjPrime₂
   congr 1
   have hP1 : P⁻¹ * P = 1 := Matrix.nonsing_inv_mul P ((Matrix.isUnit_iff_isUnit_det P).mp hP)
-  simp [vU, toM, vUnit_val, vUnit_inv_val]
+  simp [vU, toM, vUnit_val]
   simp only [Matrix.mul_inv_rev, Matrix.nonsing_inv_nonsing_inv _ ((Matrix.isUnit_iff_isUnit_det P₂).mp hP₂),
     ← Matrix.mul_assoc, hP1, Matrix.one_mul]
   rw [Matrix.mul_assoc _ P⁻¹ P, hP1, Matrix.mul_one]

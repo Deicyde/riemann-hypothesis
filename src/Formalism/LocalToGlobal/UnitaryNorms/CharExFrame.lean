@@ -1,7 +1,6 @@
-import Formalism.LocalToGlobal.UnitaryNorms.CharExEta
-import Formalism.LocalToGlobal.UnitaryNorms.CharTied
-import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.CharExtend
-import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.IdeleUnitsOpen
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.UnitaryNorms.CharExHost
 
 noncomputable section
 

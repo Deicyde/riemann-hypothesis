@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.QuotientMetricDivisors.StatementACE
+import BuildAid.Leniency.Open
+import Formalism.QuotientMetricDivisors.Statement
 
 open Module NumberField IsDedekindDomain
 open scoped Matrix

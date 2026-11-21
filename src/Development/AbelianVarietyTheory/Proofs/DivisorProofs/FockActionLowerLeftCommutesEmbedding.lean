@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DetSNeZero
 import ReciprocityTheory.SemistableReduction.AlgebraicIndependentOfDerivations
+import Mathlib.RingTheory.Derivation.Lie
 
 open MvPolynomial Formalism.BasicNotions.TH GlobalTheory.CharPair
 
@@ -64,7 +66,7 @@ theorem pderiv_w_detR (h : P ≤ R) (b : Fin Q) (c : Fin R) :
   rw [detR_eq]
   apply derivation_det_eq_zero
   intro i j
-  simp [blockR, pderiv_X, Pi.single_apply]
+  simp [blockR, pderiv_X]
 
 theorem pderiv_s_detR (h : P ≤ R) (a : Fin P) (c : Fin R) :
     pderiv (Sum.inl a, Sum.inl c) (detR P Q R h) =
@@ -79,7 +81,7 @@ theorem pderiv_s_detR (h : P ≤ R) (a : Fin P) (c : Fin R) :
     rw [Matrix.updateRow_apply]
     split_ifs with hi
     · simp [Pi.single_apply]; split_ifs <;> simp
-    · simp [blockR, pderiv_X, Pi.single_apply, hi]
+    · simp [blockR, pderiv_X, hi]
   rw [Derivation.leibniz, hadj]
   simp [blockR, pderiv_X, Pi.single_apply, eq_comm]
   done

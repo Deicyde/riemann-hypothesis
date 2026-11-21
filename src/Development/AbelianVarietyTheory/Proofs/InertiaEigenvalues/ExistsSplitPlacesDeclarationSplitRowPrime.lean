@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.EmbeddingTypes
-import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.SplitPlaceTypes
-import Development.AbelianVarietyTheory.Counterexamples.NonGaloisSurvey.SplitRowIffOfIsEmpty
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ConjugatePlaces
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SplitRowAt
 

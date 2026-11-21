@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LeftMulTau
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SelfDualIffLatticeVolumeAndPlancherelStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.JacquetRallisInvKRegularIffIsUnit
+import Mathlib.Topology.UniformSpace.Uniformizable
 open GlobalTheory.JR Matrix MeasureTheory Filter Topology
 
 noncomputable section
@@ -189,7 +190,7 @@ theorem fourG_act_pt_eq_fourK : ∀ (F E : Type) [NontriviallyNormedField F] [No
   let ρL : A.K →ₗ[F] (Fin r → F) :=
     { toFun := fun c i => Algebra.trace F A.K (τ ^ (i : ℕ) * c)
       map_add' := by intro x y; funext i; simp [mul_add]
-      map_smul' := by intro a x; funext i; simp [mul_smul_comm] }
+      map_smul' := by intro a x; funext i; simp }
   have hρ : Function.Bijective ρL := (GlobalTheory.JR.EtInv.invK_regular_iff_isUnit F E A r τ p lam hG).1
   let e₁ : A.K ≃ₗ[F] (Fin r → F) := (bas A hG).equivFun.trans gL
   let e₂ : A.K ≃ₗ[F] (Fin r → F) := (LinearEquiv.ofBijective ρL hρ).trans hL

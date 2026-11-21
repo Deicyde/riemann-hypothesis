@@ -1,6 +1,9 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ConvexNerveComplexes.NerveFaceClosed
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ConvexNerveComplexes.Sublevel
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ConvexNerveComplexes.VertFinite
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.TotallySplit
 
 open Set UpperTheory.V.ConeExtensionAcyclic
 

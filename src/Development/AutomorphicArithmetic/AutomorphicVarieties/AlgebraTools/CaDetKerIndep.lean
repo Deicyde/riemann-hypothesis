@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.CotInd
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.DetLocus
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.CaDetKerLe
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.CaDetChartPrime
 
 open IsLocalRing UpperTheory.V.AlgebraTools
 

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.KernelLattices.KerStd
 import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.StdOK
 import Formalism.LocalToGlobal.GlobalTheory.GL3.LinkThetaStatementFamily

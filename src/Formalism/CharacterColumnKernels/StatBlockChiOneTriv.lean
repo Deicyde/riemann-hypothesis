@@ -1,4 +1,5 @@
-import Formalism.CharacterColumnKernels.StatBlockRhoCount
+import BuildAid.Leniency.Open
+import Formalism.CharacterColumnKernels.StatementRho
 
 open Finset
 

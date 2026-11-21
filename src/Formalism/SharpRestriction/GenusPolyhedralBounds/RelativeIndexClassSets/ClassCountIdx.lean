@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GenusPolyhedralBounds.RelativeIndexClassSets.LevGap
-import Formalism.SharpRestriction.GlobalSchurBounds.GeneralLinearActions.GapAtLeast
 import Formalism.SharpRestriction.GenusPolyhedralBounds.RelativeIndexClassSets.ClassCountStmt
+import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.SplitUnitaryGroupIso
+import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Transport
 
 noncomputable section
 

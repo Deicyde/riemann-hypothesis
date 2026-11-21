@@ -1,9 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsGauss
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsGaussGCTarget
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.AcrisGaussNormEventuallyMonomial
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.Acris0TorsionFree
-import Development.AbelianVarietyTheory.CrystallinePeriods.RingBasics
+import Mathlib.Order.Interval.Finset.Box
 
 noncomputable section
 

@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.PeriodIntegrals.SelfDualLoc
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.SelfDualLocalBasis.DualBasis
 
 open Matrix NumberField IsDedekindDomain

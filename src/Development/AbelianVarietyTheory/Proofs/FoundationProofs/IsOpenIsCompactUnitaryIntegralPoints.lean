@@ -1,5 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.HeckeVecMemFixed
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.LineOppositeParabolicUnitaryLeviSectionEq
+import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Cartan
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 open Formalism.UG GlobalTheory.PRep GlobalTheory.LFun
 

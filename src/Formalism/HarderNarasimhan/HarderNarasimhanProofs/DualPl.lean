@@ -1,14 +1,17 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.HarderNarasimhan.QuotRealize
-import Formalism.LatticeSlopes.ExistsSaturatedSlopeEqMuMax
-import Formalism.HarderNarasimhan.HarderNarasimhanProofs.DiscreteSpanOfLinIndep
 import Formalism.HarderNarasimhan.HarderNarasimhanProofs.SizeMu
-import Formalism.HarderNarasimhan.HarderNarasimhanProofs.PlaceSplit
 import Formalism.HarderNarasimhan.HarderNarasimhanProofs.Duality
-import Formalism.HarderNarasimhan.HarderNarasimhanProofs.MuChar
-import Formalism.HarderNarasimhan.HarderNarasimhanProofs.SatBasic
-import Formalism.HarderNarasimhan.HarderNarasimhanProofs.ExistsSmulMemOfFinrankEq
 import Formalism.HarderNarasimhan.HarderNarasimhanProofs.ShiftInvariance
 import Formalism.HarderNarasimhan.HarderNarasimhanProofs.DegSupermodZ
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.NumberTheory.NumberField.Discriminant.Different
+import Mathlib.NumberTheory.RamificationInertia.Basic
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.TotallySplit
 
 open Module NumberField
 
@@ -822,9 +825,9 @@ theorem dualLat_span [FiniteDimensional K V] (A : Submodule (𝓞 K) V) (hA : A.
       obtain ⟨a, rfl⟩ := hz
       by_cases h : a = i
       · refine ⟨1, ?_⟩
-        simp [LinearMap.smul_apply, map_smul, Basis.dualBasis_apply_self, h, hyK]
+        simp [LinearMap.smul_apply, map_smul, h, hyK]
       · refine ⟨0, ?_⟩
-        simp [LinearMap.smul_apply, map_smul, Basis.dualBasis_apply_self, h]
+        simp [LinearMap.smul_apply, map_smul, h]
     | zero => exact ⟨0, by simp⟩
     | add z w _ _ hz hw =>
       obtain ⟨a, ha⟩ := hz
@@ -1101,7 +1104,7 @@ theorem realize_eval (b : Basis ι K V) (X : InfinitePlace K → Matrix ι ι �
       Formalism.HermitianLatticesTheory.vecAt b v x := by
     intro v
     funext i
-    simp [Formalism.HermitianLatticesTheory.vecAt, Basis.dualBasis_repr, Basis.dualBasis_apply]
+    simp [Formalism.HermitianLatticesTheory.vecAt, Basis.dualBasis_repr]
   have hf : ∀ v, Formalism.HermitianLatticesTheory.fcoord b.dualBasis.dualBasis X v (Module.Dual.eval K V x) =
       Formalism.HermitianLatticesTheory.fcoord b X v x := by
     intro v

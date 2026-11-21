@@ -1,7 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.GeneralLinearActions.GenusMassVolumes
 import Formalism.LocalToGlobal.Columns.GenericUnipotentCharacter
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.FrameLats
+import Mathlib.RepresentationTheory.Irreducible
 
 noncomputable section
 

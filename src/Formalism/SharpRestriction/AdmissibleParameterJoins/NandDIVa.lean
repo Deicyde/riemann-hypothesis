@@ -1,4 +1,4 @@
-import Formalism.LocalRingCardinality.DataParams₂
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataDIV
 
 noncomputable section

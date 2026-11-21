@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.SabMapCubical
 import ReciprocityTheory.AdicCompleteness.IsAdicCompleteComapConstantCoeff
+import Mathlib.RingTheory.PowerSeries.Ideal
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 noncomputable section
 

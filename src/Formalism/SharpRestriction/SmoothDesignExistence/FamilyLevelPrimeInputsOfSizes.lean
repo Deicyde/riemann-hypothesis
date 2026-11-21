@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.AdmissibleParameterJoins.DIVfromGLl
-import Formalism.LocalRingCardinality.Lemmas
 import Formalism.SharpRestriction.Divisibility.ClosedSizeLink.AdmissibleFamilyOfThreshold
 import Formalism.SharpRestriction.SmoothDesignExistence.LatticeIndexTer
 import Formalism.SharpRestriction.SmoothDesignExistence.WithSmOfWithCh

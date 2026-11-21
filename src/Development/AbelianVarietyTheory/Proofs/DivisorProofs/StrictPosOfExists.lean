@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.SecondCountableTopologyOfIsProjOver
 import ReciprocityTheory.L2DbarEstimates.PlurisubharmonicCharts.FlatLocA
 import ReciprocityTheory.L2DbarEstimates.PlurisubharmonicCharts.DerivDerivNonposOfIsLocalMax
-import ReciprocityTheory.L2DbarEstimates.LeviForms.OfRealNormSqSumMul
 import ReciprocityTheory.L2DbarEstimates.LeviForms.LogNormSq
 
 set_option autoImplicit false

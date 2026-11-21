@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.NearSplit
-import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.EntryMem
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PublishedTheorems.FerreroWashington
 import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.CompactIntegralFields.ChainMap
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual Formalism.HC ReciprocityTheory.Gal IsLocalRing Polynomial UpperTheory.V.Base UpperTheory.V.Alg UpperTheory.V.HV UpperTheory.V.GradeZeroInterpolatingElement UpperTheory.V.Ws
@@ -20,7 +20,7 @@ private theorem conj_map (j : R →+* R') (n X : M4 R) :
 private theorem isGSp_map (j : R →+* R') {ν : R} {X : M4 R} (hX : IsGSp ν X) : IsGSp (j ν) (X.map j) := by
   have h : (j ν) • (1 : M4 R') = (ν • (1 : M4 R)).map j := by
     ext i i'
-    by_cases h : i = i' <;> simp [Matrix.one_apply, h]
+    by_cases h : i = i' <;> simp [h]
   unfold IsGSp at hX ⊢
   rw [adj_map, ← Matrix.map_mul, h, hX]
 

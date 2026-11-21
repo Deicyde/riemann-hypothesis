@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.PoitouTateNineTermTransgressionZeroApply
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.ContinuousCycMod
-import Formalism.GaloisCohomology.Statement
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal GlobalTheory.Published GlobalTheory.Published.PoitouTate
 
@@ -289,7 +288,7 @@ theorem _root_.GlobalTheory.TamePairing.tame_pairing : _root_.GlobalTheory.Publi
     unfold _root_.ReciprocityTheory.Gal.H1ur
     rw [LinearMap.mem_ker]
     unfold _root_.ReciprocityTheory.Gal.resH1
-    simp only [Submodule.mkQ_apply, Submodule.mapQ_apply, Submodule.Quotient.mk_eq_zero]
+    simp only [Submodule.mapQ_apply, Submodule.Quotient.mk_eq_zero]
     convert Submodule.zero_mem _
     apply Subtype.ext
     funext g

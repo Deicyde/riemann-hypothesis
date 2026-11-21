@@ -1,5 +1,6 @@
-import Formalism.LocalToGlobal.HermitianColumns.ColsHerm
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.HermitianColumns.TiedCh
+import Formalism.LocalToGlobal.HermitianColumns.ZeroPointScaledByCharacter
 
 noncomputable section
 

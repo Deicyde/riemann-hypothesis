@@ -1,4 +1,46 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.FieldTheory.Finite.Extension
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.DiscreteValuationRing
+import Mathlib.RingTheory.WittVector.Teichmuller
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
 
 open Polynomial
 
@@ -358,7 +400,7 @@ theorem jW_finite : (jW p n).Finite := by
     obtain ⟨d, rfl⟩ := Nat.exists_eq_add_of_le hab
     have h1 : s a j - s (a + d) j = -((p : WQ p n) ^ a *
         ∑ l ∈ Finset.range d, (p : WQ p n) ^ l * A (Rm^[a + l] w) j) := by
-      simp only [Pi.sub_apply, hsdef, Finset.sum_range_add, Finset.mul_sum, pow_add]
+      simp only [hsdef, Finset.sum_range_add, Finset.mul_sum, pow_add]
       ring
     rw [Pi.sub_apply, h1, Ideal.span_singleton_pow]
     exact neg_mem (Ideal.mul_mem_right _ _ (Ideal.mem_span_singleton_self _))
@@ -438,7 +480,7 @@ theorem sq_lift (c : W2 p n) (y0 : F2 p n) (hc : c.coeff 0 = y0 * y0) (hy00 : y0
     apply WittVector.isUnit_of_coeff_zero_ne_zero
     show WittVector.constantCoeff _ ≠ 0
     simp only [Polynomial.derivative_sub, Polynomial.derivative_X_pow, Polynomial.derivative_C,
-      sub_zero, Polynomial.eval_mul, Polynomial.eval_C, Polynomial.eval_pow, Polynomial.eval_X,
+      sub_zero, Polynomial.eval_mul, Polynomial.eval_pow, Polynomial.eval_X,
       Polynomial.eval_natCast, map_mul, map_pow, map_natCast, ha00]
     norm_num
     exact ⟨h2, hy00⟩

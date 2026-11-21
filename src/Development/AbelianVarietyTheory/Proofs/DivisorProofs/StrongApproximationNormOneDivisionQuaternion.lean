@@ -1,9 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.OneMemH0WeightZero
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.NotIsCompactUnivFv
-import GroundTheory.GlobalFields.IdeleGroups.IdeleNorms
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FujisakiDivisionQuaternionAlgebraModCentreStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ClosureNormOneProductsSubgroupPropertiesStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsInverseConjMemClosureOfIsCompactStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormOneQuaternionNearConjRationalTimesSupportedStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.QuaternionAlgebraTopologicalRingStatement
@@ -78,7 +75,7 @@ theorem rat_one' {a b : F} : rat (1 : ℍ[F, a, b]) = 1 := by
 theorem continuous_smul_const {R : Type*} [CommRing R] [TopologicalSpace R] [IsTopologicalRing R] {a b : R}
     (x : ℍ[R, a, b]) : Continuous fun t : R => t • x := by
   refine continuous_induced_rng.2 (continuous_pi fun i => ?_)
-  fin_cases i <;> simp [coords, Function.comp_def] <;> fun_prop
+  fin_cases i <;> simp [coords] <;> fun_prop
 
 end GlobalTheory.QSA.DivAssembly
 

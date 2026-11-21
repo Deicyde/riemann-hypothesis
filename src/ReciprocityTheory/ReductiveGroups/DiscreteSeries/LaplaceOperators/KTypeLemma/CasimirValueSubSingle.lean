@@ -1,13 +1,11 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.LaplaceOperators.KTypeLemma.CoordinateEqPartialSumDifference
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.LaplaceOperators.KTypeLemma.ExistsCommutingProjectionImage
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.LaplaceOperators.KTypeLemma.CasimirTensVd
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.LaplaceOperators.KTypeLemma.SingleSmulFin
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.LaplaceOperators.KTypeLemma.DualKTypeOfStandardKType
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.LaplaceOperators.KTypeLemma.K2Vd
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.LaplaceOperators.KTypeLemma.SchmidCas
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.LaplaceOperators.KTypeLemma.ConeNorm
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.BochnerInequality.SchPhiOneApply
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.AnalyticVectors.Unitary
 
 noncomputable section
 
@@ -163,7 +161,7 @@ theorem k3Vd (n : ℕ) : QuotientHighestWeightTensorDual n := by
         rw [sub_eq_iff_eq_add] at this
         rw [this]; simp [add_smul, Pi.add_apply]
       · simp only [hca, if_false, sub_zero] at this
-        rw [this]; simp [Pi.add_apply, Pi.single_apply, Ne.symm hca]
+        rw [this]; simp [Pi.add_apply, Ne.symm hca]
     obtain ⟨w1, hw1V, hw10, hw1⟩ := hV.2.2.2
     intro k
     have := kirrPs_le hE hV hw1V hw10 hw1 (mem_pi_submodule_iff.1 hu1 c) (by simpa using hc0) hwt k

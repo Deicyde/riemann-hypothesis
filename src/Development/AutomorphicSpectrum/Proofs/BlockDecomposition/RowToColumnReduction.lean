@@ -1,5 +1,5 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.FiniteTypeHarishChandra.SupportExistsAll
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ChainIndependenceStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WhittakerSymmetryStatement
 

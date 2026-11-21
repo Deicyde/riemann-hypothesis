@@ -1,9 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.NormSumPairRankZeroOfCurveCoordNorm
-import Formalism.PairingDivisors.StatementH
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
-import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.Principal
 import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.InertiaGaloisSymmetry.KcDiffSmulMem
+import Formalism.SharpRestriction.GlobalSchurBounds.StandardLatticesGL3
 
 open NumberField Classical Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.TaylorLogMetric Formalism.MainNotions.StandardLatticesGL3 GlobalTheory.NormSum
 open scoped BigOperators Pointwise nonZeroDivisors
@@ -70,7 +69,7 @@ def twist (σ : E ≃ₐ[ℚ] E) (C : Set E) {N : ℕ} (L : Submodule (𝓞 E) (
     have := L.add_mem (hv c hc) (hw c hc)
     convert this using 1
     funext i
-    simp [mul_add]
+    simp
   zero_mem' := by
     intro c hc
     convert L.zero_mem using 1

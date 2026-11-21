@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.MetricPeriods.ClopenCondOnto
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.RingTheory.TotallySplit
 
 noncomputable section
 
@@ -96,7 +98,7 @@ def tate : LogPeriods 1 1 1 (Fin 2 → ℤ) where
   mono i w _ x := by
     fin_cases i
     funext j
-    simp [per_apply, mon, add_div, div_self two_pi_I_ne_zero]
+    simp [per_apply, mon, add_div]
     ring
   W := LinearMap.ker (LinearMap.proj (R := ℤ) (φ := fun _ : Fin 2 => ℤ) 1)
   coiso x hx := by

@@ -1,9 +1,7 @@
-import Formalism.LocalToGlobal.TorsionIntegrality.UniformGaussModels.StatementB
-import Formalism.LocalToGlobal.TorsionIntegrality.UniformGaussModels.UniformGaussModelCondition
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.GaussSumParity.SecondLevelOfNorm
 import Formalism.LocalToGlobal.TorsionIntegrality.GaussSumParity.BiextensionRelation
-import Formalism.LocalToGlobal.TorsionIntegrality.TorsionTranslationPowers.NonsingularJetNorms.GeneralIntegrality
-import Formalism.LocalToGlobal.TorsionIntegrality.GaussSumParity.KummerThetaLogarithms.SecondLevelOfNormHolds
+import Formalism.LocalToGlobal.TorsionIntegrality.UniformGaussModels.IsHypPair
 
 noncomputable section
 open scoped BigOperators

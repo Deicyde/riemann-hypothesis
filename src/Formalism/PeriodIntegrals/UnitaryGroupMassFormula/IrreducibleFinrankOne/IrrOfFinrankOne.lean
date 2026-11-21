@@ -1,5 +1,8 @@
-import Mathlib
-import Formalism.PeriodIntegrals.XgCTieBr
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.Columns.GoodXgFin
+import Formalism.PeriodIntegrals.XgNamed
+import Mathlib.RepresentationTheory.Maschke
 
 open scoped ComplexOrder Matrix
 

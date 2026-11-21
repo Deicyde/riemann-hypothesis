@@ -1,12 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.QuotientMetricDivisors.ClassSumDualLe
-import Formalism.QuotientMetricDivisors.ProdFormula
-import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.ValBasic
-import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.ProdFormula
-import Formalism.HermitianLattices.HermitianLatticesProofs.LocDual
-import Formalism.HermitianLattices.HermitianLatticesProofs.DualLattice
-import Formalism.HermitianLattices.HermitianLatticesProofs.DualBasic
-import Formalism.HermitianLattices.HermitianLatticesProofs.LocBasic
 
 namespace Bl.HermitianVanishing
 

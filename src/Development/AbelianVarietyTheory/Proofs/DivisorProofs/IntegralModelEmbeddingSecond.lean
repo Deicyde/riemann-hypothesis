@@ -1,10 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecValAt
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralModelEmbeddingFirstStatement
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.GrNormPosOfBasis
-import Formalism.LocalToGlobal.ProjectiveLattices.SatLeaves
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ChartFlagBaseHolds
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TangentFrameBaseChange
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OverInclusionBaseChangeModelStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralPointModelOverDvrStatement
@@ -28,7 +24,7 @@ theorem isUnit_det_of_factor {R : Type} [CommRing R] {m g : ℕ} (h U : Fin m �
   have e : (Matrix.of fun k k' : Fin m => ∑ b, h k' b * U k b) =
       M * Matrix.of (fun j k' => ∑ b, C j b * h k' b) := by
     ext k k'
-    simp only [Matrix.of_apply, Matrix.mul_apply, hU, Finset.mul_sum, Finset.sum_mul]
+    simp only [Matrix.of_apply, Matrix.mul_apply, hU, Finset.mul_sum]
     rw [Finset.sum_comm]
     exact Finset.sum_congr rfl fun j _ => Finset.sum_congr rfl fun b _ => by ring
   rw [pairDet, e, Matrix.det_mul] at hP

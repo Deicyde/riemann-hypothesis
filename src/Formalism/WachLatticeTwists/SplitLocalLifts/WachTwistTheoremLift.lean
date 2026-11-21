@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.SplitLocalLifts.StatCompColk
+import Formalism.CharacterColumnKernels.CharacterColumnKernelEqualityForm
+import Formalism.WachLatticeTwists.CoprimeLiftBounds.StatBridgeChiOne
 
 open Finset Classical
 

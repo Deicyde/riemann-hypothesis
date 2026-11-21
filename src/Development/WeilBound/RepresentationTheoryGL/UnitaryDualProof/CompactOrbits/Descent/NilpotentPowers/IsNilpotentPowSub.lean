@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.CompactOrbits.Descent.SliceVan
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.ImportsRestSide
+import Mathlib.RingTheory.PicardGroup
 
 noncomputable section
 

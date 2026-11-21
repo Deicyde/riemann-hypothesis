@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.OrthogonalProjectorMulEmbeddingColumns
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
 
 namespace ReciprocityTheory.ChartRestriction.G.T0
 
@@ -24,7 +29,7 @@ theorem realCoordsFun_add (x y : (K →+* ℂ) → Fin r → ℂ) : hReF (x + y)
 
 theorem inner_hRe (x y : (K →+* ℂ) → Fin r → ℂ) :
     inner ℝ (hRe x) (hRe y) = (∑ σ, star (x σ) ⬝ᵥ y σ).re := by
-  simp only [hRe, PiLp.inner_apply, PiLp.toLp_apply, RCLike.inner_apply, conj_trivial,
+  simp only [hRe, PiLp.inner_apply, RCLike.inner_apply, conj_trivial,
     Fintype.sum_prod_type, Fin.sum_univ_two, Complex.re_sum, dotProduct, Pi.star_apply,
     Complex.mul_re, Complex.star_def, Complex.conj_re, Complex.conj_im, hReF]
   refine Finset.sum_congr rfl fun σ _ => Finset.sum_congr rfl fun l _ => ?_

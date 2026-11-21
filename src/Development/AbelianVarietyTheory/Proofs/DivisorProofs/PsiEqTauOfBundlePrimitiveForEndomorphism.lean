@@ -1,23 +1,12 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.TateProductRigidificationTrivial
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.MumfordConstruction
-import Development.AbelianVarietyTheory.Definitions.Degenerations.AdmissibleBaseOfCompleteDvr
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsRescalePsiW0
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.PsiFunctionEqThetaOfPrimitiveLineBundle
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.UnivIdentity
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.FrameSqEqOfSymmetricThetaElement
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.LinearUniformisationTorsionMapIsLinear
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.ExistsGenMulPullPowUnif
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.UniformisationTorsionIdentificationWithPairing
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ExistsThetaOfField
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.AllSixAbelianSchemeLawsHold
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FirstCohomology.GenProd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.TWFinal
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.RepsXSt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSymmetricThetaElementLevelFourSquareStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolarisationBundleSymmetricPullbackOfUniformisatStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SymmetrySignsTwoTorsionRelationOfLbIsoStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PsiEqTauFromSignRelationFourTorsionStatement
+import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsToricRankOne
 open CategoryTheory CategoryTheory.Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry IsLocalRing
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.DVR
 open scoped CategoryTheory.Obj
@@ -70,7 +59,7 @@ theorem exists_gam (hG : GlobalFnsSt) {a : D.P.A ⟶ D.P.A} (ha : a = 𝟙 D.P.A
     ![(𝟙 D.P.A ^ 5).left, (𝟙 D.P.A ^ 4).left, 𝟙 _, (1 : D.P.A ⟶ D.P.A).left] ![2, -3, -2, 3] (fun U _ h => by
       rw [Fin.prod_univ_four, ← pow_mul, ← pow_succ, ← pow_two (𝟙 D.P.A)]
       apply Additive.ofMul.injective
-      simp [ofMul_mul, ofMul_inv, ofMul_zpow, ofMul_pow]
+      simp [ofMul_mul, ofMul_inv, ofMul_pow]
       module) (fun w I hI => by
       have C : IsCub (cubV D.cub (T := 𝟙_ _) w I) := isCub_cubV D.cub hI
       beta_reduce

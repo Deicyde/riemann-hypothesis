@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.KunnethLefschetz.BasisOne
 
 noncomputable section
@@ -46,7 +47,7 @@ theorem UpperTheory.Gal.KunnethLefschetz.kunL_holds :
     · intro u v
       obtain rfl : m = n - 2 * (d : ℤ) := by omega
       simp only [LinearMap.coe_comp, LinearEquiv.coe_coe, Function.comp_apply, he,
-        DirectSum.toModule_lof, dif_pos rfl]
+        DirectSum.toModule_lof]
       simp [TensorProduct.lift.tmul, LinearMap.compl₁₂_apply, LinearMap.lsmul_apply]
     · intro a b h' hbm u v
       obtain rfl : b = n - a := by omega

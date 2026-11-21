@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FrameOfFst
+import Development.AbelianVarietyTheory.Definitions.Foundations.T2SpaceAdeleRing
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsWeilDatumOOneOfRankZero
+import Mathlib.Data.Matrix.ColumnRowPartitioned
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix
 open Formalism.L2.Theta Formalism.L2.DIV Formalism.L2.Indef
 open Formalism.IndefR.Lev Formalism.IndefR.Mult Formalism.IndefR.Datum Formalism.IndefR.Cx Formalism.IndefR.Links
@@ -219,7 +223,7 @@ theorem frameOf_submatrix (W : HSp D)
   rw [frameOf, blk_submatrix]
   rw [← fromBlocks_toBlocks g, cT_fromBlocks, fromBlocks_multiply, fromBlocks_mul_fromRows,
     fromBlocks_mul_fromRows] at key
-  simp only [toBlocks_fromBlocks₁₁, toBlocks_fromBlocks₁₂, toBlocks_fromBlocks₂₁, toBlocks_fromBlocks₂₂,
+  simp only [
     Matrix.mul_zero, Matrix.zero_mul, add_zero, zero_add, Matrix.mul_one, Matrix.mul_neg, Matrix.neg_mul] at key
   obtain ⟨k1, k2⟩ := fromRows_inj key
   have a1 : cT (D.sp.cm.sig : D.host.E →+* D.host.E) (g.toBlocks₂₂ - g.toBlocks₁₂) * W.gram = W.gram * C.1 := by

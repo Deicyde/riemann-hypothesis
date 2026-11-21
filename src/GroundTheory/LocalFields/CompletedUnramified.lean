@@ -1,6 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import GroundTheory.LocalFields.MaximalUnramifiedIntegers
 import GroundTheory.PowerSubgroups.CountableNeighbourhoods.UnitMulPowAdic
+import Mathlib.RingTheory.AdicCompletion.AsTensorProduct
+import Mathlib.RingTheory.AdicCompletion.Noetherian
+import Mathlib.RingTheory.PicardGroup
 
 noncomputable section
 

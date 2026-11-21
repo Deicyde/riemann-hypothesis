@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.IdealValuations.ExistsUnitOfIsDecomp
+import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.IdealValuations.ExistsUnitDivConj
 
 open NumberField NumberField.IsCMField NumberField.Units IsDedekindDomain
 open scoped nonZeroDivisors

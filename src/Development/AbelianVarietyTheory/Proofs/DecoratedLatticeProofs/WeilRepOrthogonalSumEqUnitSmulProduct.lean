@@ -1,11 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsQuasiFam
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.ThetaAbsoluteSum
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.TransvectionAction
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.WeilDatumExistence
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.AdjointIsotropicDecomposition
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ThetaFunctionProductsSlicesOrthogonalDecompositiStatement
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.WeilOperatorOneVariableKeepsThetaFunctionsStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.WeilOperatorOneVariablePreservesSqNormOrthogonalStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchurLemmaThetaFunctionsOrientedPair
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.MemLatOIffExistsActO
@@ -60,7 +54,7 @@ theorem opB_heisO {ψ : AddChar (AF D.host.F) ℂ} {χ χ' : (AE D)ˣ →* Circl
     ring
   rw [heisO_sum, opB_apply, opB_apply, AddEquiv.apply_symm_apply, AddEquiv.apply_symm_apply,
     AddEquiv.apply_symm_apply]
-  simp only [AddEquiv.apply_symm_apply]
+  simp only
   rw [e, map_smul, hom.om_heis b h _ _ hg, Pi.smul_apply, smul_eq_mul, heisO]
   ring
 
@@ -80,7 +74,7 @@ theorem opA_heisO {ψ : AddChar (AF D.host.F) ℂ} {χ χ' : (AE D)ˣ →* Circl
     ring
   rw [heisO_sum, opA_apply, opA_apply, AddEquiv.apply_symm_apply, AddEquiv.apply_symm_apply,
     AddEquiv.apply_symm_apply]
-  simp only [AddEquiv.apply_symm_apply]
+  simp only
   rw [e, map_smul, hom.om_heis a h _ _ hg, Pi.smul_apply, smul_eq_mul, heisO]
   ring
 

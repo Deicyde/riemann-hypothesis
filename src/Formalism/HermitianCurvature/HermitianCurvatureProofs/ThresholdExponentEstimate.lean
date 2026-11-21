@@ -1,5 +1,9 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.LetterProductDoubleDegreeCount
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.AdditiveCharacterPsi
+import Mathlib.Data.Int.Star
+import Mathlib.Topology.Sheaves.Presheaf
 
 open Formalism.FourierDecayAlt
 

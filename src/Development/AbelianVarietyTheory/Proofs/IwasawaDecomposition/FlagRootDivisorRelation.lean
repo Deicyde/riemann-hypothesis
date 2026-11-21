@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.MemSupportBDIff
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsSmulMemBase
 open CategoryTheory AlgebraicGeometry Limits NumberField IsDedekindDomain Filter Topology Matrix
@@ -50,8 +51,7 @@ theorem eq_tau_or_conj (σ : D.host.E →+* ℂ) :
     obtain ⟨t, ht⟩ := DatOf.exists_tauEmb D hc
     refine ⟨t, RingHom.ext fun a => ?_⟩
     have := congrArg (fun ρ : D.host.E →+* ℂ => starRingEnd ℂ (ρ a)) ht
-    simp only [ComplexEmbedding.conjugate_coe_eq, Function.comp_apply, RingHomCompTriple.comp_apply,
-      Complex.conj_conj] at this
+    simp only [ComplexEmbedding.conjugate_coe_eq, RingHomCompTriple.comp_apply] at this
     simpa [conjEmb] using this
 
 def rootLetter (x : DV.Rt D.what₂.Tau N) : Letter S.Dw :=

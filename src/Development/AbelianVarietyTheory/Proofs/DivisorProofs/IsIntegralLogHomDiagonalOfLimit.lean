@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ResidueEqZeroIffV
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.ExistsPolyCoeff
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.TypedPartSplitPrimes
 
 set_option autoImplicit false
 

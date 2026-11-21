@@ -1,9 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.SignFrameUnitaryIso
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.TorsionBlocks.SingularValueFrame
-import Formalism.LocalRingCardinality.SpanPowerMembership.SignSplitEquivInl
-import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsAuxiliaryPlaceNotMemFinset
 open scoped TensorProduct Matrix
 open NumberField Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.UG GlobalTheory.AdelicU
 set_option maxHeartbeats 1000000 in

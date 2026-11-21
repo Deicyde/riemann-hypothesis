@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
 import Development.AbelianVarietyTheory.Definitions.Divisors.CovolXOfCovol
+import Development.AbelianVarietyTheory.Definitions.Divisors.GenRatios
 
 set_option autoImplicit false
 set_option synthInstance.maxHeartbeats 400000

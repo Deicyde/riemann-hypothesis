@@ -1,6 +1,11 @@
-import Mathlib
-import Formalism.RealPlaceAnalysis.ThirdArithmeticHolds
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemNilRad
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.RealPlaceAnalysis.StatementE
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open Matrix GlobalTheory.TorFin
 
 namespace GlobalTheory.CapelliNext
@@ -49,9 +54,9 @@ theorem prod_affine_two_top (t : ℕ) (p : Fin (t + 1) → ℂ) (q : Fin (t + 1)
       rw [hc0, hc1, smul_one_mul, mul_smul_comm, mul_one, smul_sum, add_comm]
       conv_rhs => rw [Fin.sum_univ_succ]
       congr 1
-      · simp [Fin.prod_univ_succ, smul_mul_assoc]
+      · simp [Fin.prod_univ_succ]
       · refine sum_congr rfl fun k _ => ?_
-        simp [Fin.prod_univ_succ, Fin.succ_ne_zero, smul_smul, (Fin.succ_ne_zero _).symm]
+        simp [Fin.prod_univ_succ, smul_smul, (Fin.succ_ne_zero _).symm]
     · rw [List.ofFn_succ, List.prod_cons, hc u]
       have : (u * p 0) • (1 : A) + q 0 = u • (p 0 • (1 : A)) + q 0 := by rw [smul_smul]
       rw [this, affine_mul_eq]

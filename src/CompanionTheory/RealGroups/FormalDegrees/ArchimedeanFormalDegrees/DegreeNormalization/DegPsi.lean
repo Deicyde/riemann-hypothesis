@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import CompanionTheory.RealGroups.FormalDegrees.ArchimedeanFormalDegrees.HlamStable
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.FdegTransfer
 
 noncomputable section
 

@@ -1,9 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.CosInj
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.SeeSawTwistPlaceLastTwoStepsStatement
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.MemSupportedSubgroupOfSuppAtSplitPlaceMemStatement
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.MemIdAtOfSupp
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.HeisOFinsetSum
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.LastSeeSawCombinationsOperatorDatum
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ThetaKernelExistsForContinuous
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum MeasureTheory IsDedekindDomain NumberField Matrix
@@ -62,7 +61,7 @@ theorem aconv_cons {G : Type} [AddMonoid G] (e : G →₀ ℂ) (l : List (G →�
     AddMonoidAlgebra.ofCoeff (aconv (e :: l)) = AddMonoidAlgebra.ofCoeff e * AddMonoidAlgebra.ofCoeff (aconv l) := by
   rw [AddMonoidAlgebra.mul_def]
   change AddMonoidAlgebra.ofCoeff (e.sum fun g a => (aconv l).sum fun h b => Finsupp.single (g + h) (a * b)) = _
-  simp only [AddMonoidAlgebra.ofCoeff_finsuppSum, AddMonoidAlgebra.ofCoeff_single, AddMonoidAlgebra.coeff_ofCoeff]
+  simp only [AddMonoidAlgebra.ofCoeff_finsuppSum, AddMonoidAlgebra.ofCoeff_single]
 
 theorem aconv_nil {G : Type} [AddMonoid G] : AddMonoidAlgebra.ofCoeff (aconv ([] : List (G →₀ ℂ))) = 1 := rfl
 
@@ -413,14 +412,14 @@ theorem iter_places {D : D7} {c : Comm D} {v : VCom c} {t : Tup c} {w : VTup t} 
     · intro k
       refine conv_alg.2.2.2.1 (WO (c.X j) (c.X (j + 1))) _ (halfSub _ _ _) ?_
       intro x hx u hu
-      simp only [List.mem_cons, List.mem_singleton, List.not_mem_nil, or_false] at hx
+      simp only [List.mem_cons, List.not_mem_nil, or_false] at hx
       rcases hx with rfl | rfl
       · exact h₁ k.succ u hu
       · exact half_one_sub_of_ne D _ _ (F.Q (σ k.succ)).q (F.Q (σ 0)).q (hne0 k) _ _ u (dL_half (F.Q (σ 0)) h _ _ u hu)
     · intro k
       refine conv_alg.2.2.2.1 (WO (c.X (j + 1)) (c.X (j + 1 + 1))) _ (halfSub _ _ _) ?_
       intro x hx u hu
-      simp only [List.mem_cons, List.mem_singleton, List.not_mem_nil, or_false] at hx
+      simp only [List.mem_cons, List.not_mem_nil, or_false] at hx
       rcases hx with rfl | rfl
       · exact h₂ k.succ u hu
       · exact half_one_sub_of_ne D _ _ (F.Q (σ k.succ)).q (F.Q (σ 0)).q (hne0 k) _ _ u (dL_half' (F.Q (σ 0)) h _ _ u hu)

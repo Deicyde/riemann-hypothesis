@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Open
 import Formalism.PadicSubsetSums.CentralIdempotents.SchurOrthogonalityCompact
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open scoped NumberField
 

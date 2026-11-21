@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.GaussianSeminormBounds.RealSeminormFiltration.CoreCasGl
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 
@@ -138,7 +142,7 @@ private theorem posC_props_and_sameBlock_trichotomy {r s : ℕ} (a b : Ix r s) :
   rcases a with a | a <;> rcases b with b | b <;>
     simp only [posC, sameBlock, ne_eq, Sum.inl.injEq, Sum.inr.injEq, reduceCtorEq,
       not_false_eq_true, true_implies, false_implies, implies_true, and_true, true_and,
-      false_or, or_false, not_lt] <;> omega
+      or_false, not_lt] <;> omega
 
 theorem local_of (act : Mat r s →ₗ[ℂ] Module.End ℂ M) (hL : IsLie act) (La : Ix r s → ℚ)
     {A : Type} [NormedAddCommGroup A] [InnerProductSpace ℂ A] [FiniteDimensional ℂ A]
@@ -378,8 +382,7 @@ theorem local_of (act : Mat r s →ₗ[ℂ] Module.End ℂ M) (hL : IsLie act) (
           push_cast
           ring_nf
         · have hc := LinearMap.congr_fun (hgl a b b a hsb (hsym hsb)) f
-          simp only [LinearMap.sub_apply, Module.End.mul_apply, hw.2 a b h, map_zero, sub_zero,
-            if_pos rfl, hw.1] at hc
+          simp only [LinearMap.sub_apply, Module.End.mul_apply, hw.2 a b h, map_zero, sub_zero] at hc
           rw [hc, if_neg ((posC_props_and_sameBlock_trichotomy a b).2.1 h), if_pos h]
           rw [if_pos trivial, if_pos trivial, hw.1 a, hw.1 b]
           push_cast

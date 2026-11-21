@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsCuspSpaceBot
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PutMulPut
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PutLinPack
 open ValuativeRel Matrix MeasureTheory
@@ -50,7 +49,7 @@ theorem val_uni_dg_shuf : ∀ (R : Type) [CommRing R] (n o₁ o₂ p q : ℕ),
         (1 - eye R n o₁ o₁ p + put n o₁ o₁ a.val) * (1 - eye R n o₁ o₁ p + put n o₁ o₁ b.val) = 1 := by
       intro a b hab
       have hab' : a.val * b.val = 1 := by rw [← Units.val_mul, hab]; rfl
-      simp only [eye, sub_mul, add_mul, mul_sub, mul_add, one_mul, mul_one, hm, Matrix.one_mul, Matrix.mul_one, hab']
+      simp only [eye, sub_mul, add_mul, mul_sub, mul_add, one_mul, mul_one, hm, hab']
       abel
     have h₁ := key g g⁻¹ (mul_inv_cancel g)
     have h₂ := key g⁻¹ g (inv_mul_cancel g)

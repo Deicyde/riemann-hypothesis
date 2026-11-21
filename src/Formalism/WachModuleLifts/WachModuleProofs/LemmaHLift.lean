@@ -1,4 +1,8 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.WachModuleLifts.Statement
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
 
 namespace Formalism.CL
 

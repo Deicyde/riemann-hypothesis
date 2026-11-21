@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SizeWindowBrackets.SlopesFromSizeAndCount
 import Formalism.SizeWindowBrackets.ChainSlopeWindows.ChainLatticeSizesModelEventually
 import Formalism.SizeWindowBrackets.ChainSlopeWindows.PrimeCongruenceConditions
@@ -6,9 +8,6 @@ import Formalism.SizeWindowBrackets.ChainSlopeWindows.SecondPriceSumWeightsUncov
 import Formalism.SizeWindowBrackets.ChainSlopeWindows.ExistsOrthonormalFrameComplement
 import Formalism.SizeWindowBrackets.ChainSlopeWindows.DisplayedInequalitySharpHalf
 import Formalism.SizeWindowBrackets.ChainSlopeWindows.PSmall
-import Formalism.SizeWindowBrackets.ChainSlopeWindows.LocalizationStructureHolds
-import Formalism.LandauZeroFreeBounds.ExceptionalZeroBounds.ZetaNegReal
-import Formalism.SizeWindowBrackets.ChainSlopeWindows.ChiEightNoRealZeroHypothesis
 
 open Module NumberField Matrix IsDedekindDomain
 open Formalism.HN

@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.LocalRingCardinality.DataParams
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsStepWeil
 
 noncomputable section

@@ -1,7 +1,6 @@
-import Mathlib
-import Formalism.SatakeDualWeyl.Statement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemMatLat
+import BuildAid.Leniency.Open
 import Formalism.PadicSubsetSums.StableGradedCounts.ExistsNeZeroAevalEqZero
+import Mathlib.RingTheory.TotallySplit
 
 open Polynomial Matrix GlobalTheory.LatOrb
 

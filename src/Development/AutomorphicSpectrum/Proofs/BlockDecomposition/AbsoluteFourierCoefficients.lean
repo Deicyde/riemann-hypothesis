@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.ArchimedeanGelfandKernels.FriedrichsKernels.Friedrichs
+import Mathlib.Analysis.CStarAlgebra.ContinuousLinearMap
+import Mathlib.Topology.Separation.CompletelyRegular
 
 noncomputable section
 

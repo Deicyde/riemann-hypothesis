@@ -1,5 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.GCauchyStatement
 import ReciprocityTheory.AnalyticForms.AnalyticCharts.Osgood
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.Topology.Sheaves.Presheaf
 
 namespace ReciprocityTheory.ChartRestriction.G.I2
 
@@ -187,7 +192,7 @@ theorem iOf (hJ : JStatement) (hN : NStatement) : IStatement := by
       ∑ b ∈ K, ‖l b‖ * ‖polyDeriv (P1 bs) dir (X.U P.q b (s0 X π s)) 0‖ := by
     rw [hpd]
     refine (norm_sum_le _ _).trans (le_of_eq ?_)
-    simp [norm_mul]
+    simp
   have hcs := Finset.sum_mul_sq_le_sq_mul_sq K (fun b => ‖l b‖)
     (fun b => ‖polyDeriv (P1 bs) dir (X.U P.q b (s0 X π s)) 0‖)
   have h1 : ‖polyDeriv (P1 bs) dir F 0‖ ^ 2 ≤ (∑ b ∈ K, ‖l b‖ ^ 2) *

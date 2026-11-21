@@ -1,5 +1,7 @@
-import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.ArtinMapSecondEqJacobiSym
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.HookFormulaTorsion.DifferentIdealConditions
+import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.MuCardLeTwo
 
 open NumberField IntermediateField Ideal
 open scoped Pointwise

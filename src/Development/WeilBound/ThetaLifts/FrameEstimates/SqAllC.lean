@@ -1,4 +1,5 @@
-import Development.WeilBound.ThetaLifts.FrameEstimates.SquareIntegrableWeilRange
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.FrameEstimates.Parity
 
 noncomputable section

@@ -1,5 +1,7 @@
-import Mathlib
-import GroundTheory.GlobalFields.AnalyticClassNumber.DirichletHecke
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.GlobalFields.AnalyticClassNumber.DirichletHeckeLocal
+import Mathlib.NumberTheory.LSeries.PrimesInAP
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Global

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ShiftAtRExistsEq
 import CompanionTheory.AutomorphicTheory.BesselWaveGrids.FourLeOfFive
 import CompanionTheory.AutomorphicTheory.BesselWaveGrids.PStarTie

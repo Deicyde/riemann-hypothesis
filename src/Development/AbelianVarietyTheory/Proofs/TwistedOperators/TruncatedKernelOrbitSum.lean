@@ -1,10 +1,7 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasTypeVec
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.LabesseWaldspurger
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.ConstantTermVanishing
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.AdjointRadical
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.CuspidalNoRadicalFixed
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.StandardMaximalParabolic
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.CentralizerTensorForms
+import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.LinearIndependentE
 open MeasureTheory Set Filter NumberField IsDedekindDomain
 open GlobalTheory.AdelicU GlobalTheory.OpTrace GlobalTheory.Orb GlobalTheory.AutomorphicL2Unitary GlobalTheory.AutMult Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.L2.Theta Formalism.IndefR.Mult
@@ -92,7 +89,7 @@ theorem GlobalTheory.TruncKer.kT_eq_of_unipIntegralsVanish : ∀ (D : D7) (V : H
     refine tsum_congr fun δ => ?_
     refine (integral_unipMeas_of_k_eq_zero (φ := fun n => f (((rat V) g * x)⁻¹ * rat V (e δ).1 * n * ((rat V) g * x))) _ hk).trans ?_
     have hδ : ((e δ).1 : GF V) = g * δ.1 * g⁻¹ := rfl
-    simp only [hδ, OneMemClass.coe_one, map_mul, map_inv, mul_inv_rev, mul_one]
+    simp only [hδ, map_mul, map_inv, mul_inv_rev, mul_one]
     congr 1
     group
   ·

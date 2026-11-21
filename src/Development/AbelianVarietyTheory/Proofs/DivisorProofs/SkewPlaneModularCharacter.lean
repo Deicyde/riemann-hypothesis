@@ -1,11 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
-import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.LanglandsSquareIntegrable
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicPlaneOrthogonalGramRestrictionStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsConstAlong
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousToGAd
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicPlaneComplementFirst
 open scoped TensorProduct NNReal Matrix ComplexConjugate
@@ -159,10 +153,10 @@ theorem exists_proj (hσ : ∀ z, σ (σ z) = z) {b : ℕ} (W : Spc F E (b + 2))
     exact (congrFun (congrFun hQP (.inl i)) (.inl j)).trans (by simp [Matrix.one_apply])
   have h2 : L *ᵥ H.x = 0 := by
     funext i
-    exact (congrFun (congrFun hQP (.inl i)) (.inr 0)).trans (by simp [Matrix.one_apply])
+    exact (congrFun (congrFun hQP (.inl i)) (.inr 0)).trans (by simp)
   have h3 : L *ᵥ H.y = 0 := by
     funext i
-    exact (congrFun (congrFun hQP (.inl i)) (.inr 1)).trans (by simp [Matrix.one_apply])
+    exact (congrFun (congrFun hQP (.inl i)) (.inr 1)).trans (by simp)
   have ho : ∀ v, (∀ u, form σ W.J (H.ι *ᵥ u) v = 0) → (W.J *ᵥ (σ ∘ v)) ᵥ* H.ι = 0 := fun v hv => by
     funext j
     have := hv (Pi.single j 1)

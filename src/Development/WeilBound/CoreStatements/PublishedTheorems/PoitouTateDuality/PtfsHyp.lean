@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.GelfandSpectralNormalisation.NormalisedInvariants.PTConclAt
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.NineTermExactIff
 
 noncomputable section
 

@@ -1,5 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsLamF
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.HtCoIOfEq
+import Development.AbelianVarietyTheory.Definitions.Foundations.IsLamOfLSmulIff
 
 noncomputable section
 

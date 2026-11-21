@@ -1,8 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SizeWindowBrackets.FrameTraceRatioFinEquiv
 import Formalism.HarderNarasimhan.ShiftInvariance
 import Formalism.SizeWindowBrackets.ChainSlopeWindows.TraceConjTransposeMulSelf
-import Formalism.SizeWindowBrackets.ChainSlopeWindows.CorollaryModelSideCondition
-import Formalism.SizeWindowBrackets.ChainSlopeWindows.ExistsNsmulMem
 
 open Module NumberField Matrix
 open Formalism.CorankShareLayerCake.FR Formalism.HN

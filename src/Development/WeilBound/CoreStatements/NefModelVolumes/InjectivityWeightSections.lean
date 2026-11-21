@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.NefModelVolumes.NormGenValLe
 import Development.WeilBound.CoreStatements.NefModelVolumes.WeightSectionBasisBound
 import Development.WeilBound.CoreStatements.NefModelVolumes.InjectivityWeightSectionsOf

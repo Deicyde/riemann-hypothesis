@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockMap
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 open scoped Matrix
 open GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.RealLift Formalism.BasicNotions.TH Matrix
 
@@ -51,17 +51,17 @@ theorem hyperbolic_pair_of_cartan_isotropic : ∀ {n : ℕ} (M θ : Matrix (Fin 
   · ext i; simp only [Pi.smul_apply, Pi.add_apply, Pi.sub_apply, smul_eq_mul, ht]; field_simp; ring
   · rw [mulVec_smul, mulVec_add, hθθv, add_comm]
   · rw [mulVec_smul, mulVec_sub, hθθv, ← smul_neg, neg_sub]
-  · simp only [star_smul, htstar, star_add, star_sub, mulVec_smul, mulVec_add, mulVec_sub, dotProduct_smul, smul_dotProduct,
-      dotProduct_add, dotProduct_sub, add_dotProduct, sub_dotProduct, smul_eq_mul, hxx, hyy, hxy', hyx]
+  · simp only [star_smul, htstar, star_add, mulVec_smul, mulVec_add, dotProduct_smul, smul_dotProduct,
+      dotProduct_add, add_dotProduct, smul_eq_mul, hxx, hyy, hxy', hyx]
     linear_combination htt
-  · simp only [star_smul, htstar, star_add, star_sub, mulVec_smul, mulVec_add, mulVec_sub, dotProduct_smul, smul_dotProduct,
-      dotProduct_add, dotProduct_sub, add_dotProduct, sub_dotProduct, smul_eq_mul, hxx, hyy, hxy', hyx]
+  · simp only [star_smul, htstar, star_sub, mulVec_smul, mulVec_sub, dotProduct_smul, smul_dotProduct,
+      dotProduct_sub, sub_dotProduct, smul_eq_mul, hxx, hyy, hxy', hyx]
     linear_combination -htt
-  · simp only [star_smul, htstar, star_add, star_sub, mulVec_smul, mulVec_add, mulVec_sub, dotProduct_smul, smul_dotProduct,
-      dotProduct_add, dotProduct_sub, add_dotProduct, sub_dotProduct, smul_eq_mul, hxx, hyy, hxy', hyx]
+  · simp only [star_smul, htstar, star_sub, mulVec_smul, mulVec_sub, dotProduct_smul, smul_dotProduct,
+      dotProduct_sub, add_dotProduct, smul_eq_mul, hxx, hyy, hxy', hyx]
     ring
-  · simp only [star_smul, htstar, star_add, star_sub, mulVec_smul, mulVec_add, mulVec_sub, dotProduct_smul, smul_dotProduct,
-      dotProduct_add, dotProduct_sub, add_dotProduct, sub_dotProduct, smul_eq_mul, hxx, hyy, hxy', hyx]
+  · simp only [star_smul, htstar, star_add, mulVec_smul, mulVec_add, dotProduct_smul, smul_dotProduct,
+      dotProduct_add, sub_dotProduct, smul_eq_mul, hxx, hyy, hxy', hyx]
     ring
   · intro u hu1 hu2
     have hue : u ⬝ᵥ M *ᵥ star (t • (x + y)) = 0 := by

@@ -1,4 +1,4 @@
-import Formalism.FrobeniusBaseCase.FrobeniusBaseCaseProofs.SecondWayHolds
+import BuildAid.Leniency.Open
 import Formalism.FrobeniusBaseCase.FrobeniusBaseCaseProofs.BaseCaseFalseGeneralHolds
 import Formalism.FrobeniusBaseCase.FrobeniusBaseCaseProofs.FixAll
 

@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.StabilizerCovolume.ThreeLeLevel
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.Data.Rat.Star
+import Mathlib.NumberTheory.NumberField.Cyclotomic.Basic
 set_option maxSynthPendingDepth 1
 
 noncomputable section

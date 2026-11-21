@@ -1,5 +1,6 @@
-import Mathlib
-import Formalism.SharpRestriction.Divisibility.ModuliIntegralCharts
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.BoundaryLocalData
 
 noncomputable section

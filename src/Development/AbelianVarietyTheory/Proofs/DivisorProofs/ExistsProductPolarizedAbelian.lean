@@ -1,8 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsProd
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsAdditiveLiftIff
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.SplitModelToPlaceModel
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneCompOfIsGrpPullback
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RelAmpleOfProductDecompositionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KTrivialOfProductDecompositionStatement
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory NumberField

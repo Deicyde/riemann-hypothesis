@@ -1,8 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ExpTie
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GermDPf
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.FBIdJet
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.FBIdLB
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.LBCorr
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.WickVanishing.HarmonicValueIntegral
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.CPfSym
 

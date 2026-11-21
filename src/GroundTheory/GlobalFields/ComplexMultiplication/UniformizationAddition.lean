@@ -1,7 +1,5 @@
-import Mathlib
-import GroundTheory.GlobalFields.ComplexMultiplication.EllipticFunctions
-import GroundTheory.GlobalFields.ComplexMultiplication.EllipticRational
-import GroundTheory.GlobalFields.ComplexMultiplication.EllipticDegree
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.ComplexMultiplication.Uniformization
 
 open Complex Filter Topology Set

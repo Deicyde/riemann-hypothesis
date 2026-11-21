@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.LocalNewformFunction
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.BesselHermitianTheta.LemmasWeil
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.MapMulRightUnitaryGramAdelicMatrixHaarEqStatement
 

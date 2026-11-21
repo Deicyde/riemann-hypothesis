@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ArithmeticGeometry.AbelianVarieties.DualQuadratic
 import GroundTheory.ArithmeticGeometry.AbelianVarieties.WeilPairingTate
+import GroundTheory.ArithmeticGeometry.AbelianVarieties.TateDeterminant
+import Mathlib.LinearAlgebra.Charpoly.ToMatrix
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Arith.Abelian

@@ -1,4 +1,8 @@
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MultOfNotMem
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.ExtFormAdjEqNegSecondForm
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import ReciprocityTheory.L2DbarEstimates.IsLocalHomeomorph
 open AlgebraicGeometry CategoryTheory MvPolynomial NumberField ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj GlobalTheory.Toroidal GlobalTheory.ShFam GlobalTheory.ProjVar GlobalTheory.FlagBundle GlobalTheory.GoodMetric GlobalTheory.LieBase
 open Classical
 open GlobalTheory GlobalTheory.Cartier GlobalTheory.ProjVar GlobalTheory.CxPts GlobalTheory.ChartGlue GlobalTheory.FlagBundle GlobalTheory.HermFrame
@@ -110,12 +114,12 @@ theorem curv_modelGram_lie (w ξ η : ReciprocityTheory.L2DbarEstimates.V n) (hw
     apply Matrix.inv_eq_right_inv
     have e : (1 - (Z w)ᴴ * Z w) * (1 + (Z w)ᴴ * (1 - Z w * (Z w)ᴴ)⁻¹ * Z w) =
         1 - (Z w)ᴴ * Z w + (Z w)ᴴ * ((1 - Z w * (Z w)ᴴ) * (1 - Z w * (Z w)ᴴ)⁻¹) * Z w := by
-      simp only [Matrix.sub_mul, Matrix.mul_add, Matrix.add_mul, Matrix.mul_sub, Matrix.one_mul,
+      simp only [Matrix.sub_mul, Matrix.mul_add, Matrix.mul_sub, Matrix.one_mul,
         Matrix.mul_one, Matrix.mul_assoc]
     rw [e, hP, Matrix.mul_one, sub_add_cancel]
   rw [hQ]
-  simp only [Matrix.mul_add, Matrix.add_mul, Matrix.mul_one, Matrix.one_mul, Matrix.mul_neg,
-    Matrix.neg_mul, neg_neg, Matrix.zero_mul, add_zero, zero_add, Matrix.mul_assoc, neg_add]
+  simp only [Matrix.mul_add, Matrix.add_mul, Matrix.mul_one, Matrix.mul_neg,
+    Matrix.neg_mul, neg_neg, Matrix.zero_mul, add_zero, Matrix.mul_assoc, neg_add]
   abel
 
 end LinearModel

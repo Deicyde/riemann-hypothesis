@@ -1,8 +1,11 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.UnFree
-import Formalism.LocalToGlobal.ProjectiveLattices.FibreUniformisationLevelTwo
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.FourierCoefficientDomain
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.InterpStatementPfH
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.Topology.Baire.LocallyCompactRegular
+import Mathlib.Topology.UniformSpace.Uniformizable
 open NumberField Matrix ReciprocityTheory.ChartRestriction.G.FD ReciprocityTheory.ChartRestriction.G.Geo.Tor
 
 namespace GlobalTheory
@@ -79,7 +82,7 @@ theorem FramesCover.coord_of_lattice {E : Type} [Field E] [NumberField E] [IsCMF
       linear_combination τ₁ c * hx
   have e := h2 (Pi.single a 1) (Pi.single b 1)
   have hs : ∀ c, y ⬝ᵥ Data.emb τ₁ (W *ᵥ Pi.single c 1) = ∑ i, y i * τ₁ (W i c) := fun c => by
-    simp [dotProduct, Data.emb, mulVec_single_one]
+    simp [dotProduct, Data.emb]
   have ht : ∀ c, y ⬝ᵥ Data.emb τ₁ (Pi.single c 1) = y c := fun c => by
     simp [dotProduct, Data.emb, Pi.single_apply]
   simpa only [P, hs, ht] using e

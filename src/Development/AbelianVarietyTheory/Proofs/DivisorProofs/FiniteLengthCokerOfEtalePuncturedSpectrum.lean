@@ -1,5 +1,4 @@
-import Mathlib
-import ReciprocityTheory.CommutativeAlgebra.CohenMacaulay.ModDepthGE
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AlgebraTraceMapOfCokernelKilledByScalarStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SurjectiveOfTraceOfSmulMemRangeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalizationTensorMapInjectiveCokerKilledStatement

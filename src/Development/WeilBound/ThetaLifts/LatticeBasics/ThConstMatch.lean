@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LatticeBasics.ThConstInv
 import Development.WeilBound.ThetaLifts.LatticeBasics.NonZero
 

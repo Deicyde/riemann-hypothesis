@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.ThetaLawProofs.DiscrEqJacobianOfIntegralPoints
-import Development.AbelianVarietyTheory.Definitions.KeyFormula.DegProd
 open GlobalTheory.KeyKa
 
 set_option maxHeartbeats 1000000 in

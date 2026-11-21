@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.AestronglyMeasurableMainD
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.IntegralNormCvecSq
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.GermFibreKernels
 
 namespace Formalism.FourierDecayAlt.P.PBK

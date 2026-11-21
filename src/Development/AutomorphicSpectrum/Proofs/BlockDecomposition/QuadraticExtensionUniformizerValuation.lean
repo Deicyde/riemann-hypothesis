@@ -1,8 +1,5 @@
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.KFiniteThetaLifts.RationalPrimesBelowPlaces
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntInd
-import GroundTheory.LocalFields.QuadraticAbelian.WeilRepQuadratic
-import GroundTheory.AutomorphicForms.MacdonaldWhittaker
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ModulusEntryLeMRow
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.OrdEqZeroOfModulusEqOne
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntegrableMulIntInd
 open NumberField IsDedekindDomain MeasureTheory Matrix Filter Topology
@@ -26,14 +23,14 @@ theorem evalAt_monomial_single (w : Fin 2 → ℂˣ) (a : Fin 2) (p : ℤ) :
     Finset.prod_eq_single a]
   · simp [Units.val_zpow_eq_zpow_val]
   · intro j _ hj
-    simp [Pi.single_apply, hj]
+    simp [hj]
   · simp
 
 theorem evalAt_alternant_two (w : Fin 2 → ℂˣ) (p r : ℤ) :
     Spherical.evalAt w (Spherical.alternant ![p, r]) =
       (w 0 : ℂ) ^ p * (w 1 : ℂ) ^ r - (w 0 : ℂ) ^ r * (w 1 : ℂ) ^ p := by
   rw [Spherical.alternant_eq_det, Matrix.det_fin_two]
-  simp only [Matrix.of_apply, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val]
+  simp only [Matrix.of_apply, Matrix.cons_val_zero, Matrix.cons_val_one]
   rw [map_sub, map_mul, map_mul]
   simp only [evalAt_monomial_single]
 

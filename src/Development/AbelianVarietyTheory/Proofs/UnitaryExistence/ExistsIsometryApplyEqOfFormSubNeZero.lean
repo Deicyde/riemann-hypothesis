@@ -1,4 +1,43 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.LinearAlgebra.Matrix.Hermitian
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
 open MeasureTheory Topology Matrix
 open scoped ENNReal
 
@@ -22,7 +61,7 @@ theorem exists_isometry_apply_eq_of_form_sub_ne_zero (B : V →ₗ[ℂ] V →ₗ
   · intro x y
     simp only [LinearMap.sub_apply, LinearMap.id_apply, LinearMap.smulRight_apply,
       LinearMap.smul_apply, LinearMap.flip_apply, map_sub, map_smul, map_smulₛₗ, smul_eq_mul,
-      map_mul, map_inv₀, hdd, hB y d, RingHom.id_apply]
+      map_mul, map_inv₀, hdd, hB y d]
     field_simp
     ring
   · simp only [LinearMap.sub_apply, LinearMap.id_apply, LinearMap.smulRight_apply,
@@ -51,7 +90,7 @@ theorem form_eq_smul_of_const_on_orbit (A B : V →ₗ[ℂ] V →ₗ⋆[ℂ] ℂ
     have hww : B w w = 0 := by
       have h2 : (starRingEnd ℂ) 2 = 2 := map_ofNat _ 2
       simp only [hw, map_add, map_smul, map_smulₛₗ, LinearMap.add_apply, LinearMap.smul_apply,
-        smul_eq_mul, ha, hB x₀ y, map_div₀, map_neg, map_mul, ← hB y y, h2, RingHom.id_apply]
+        smul_eq_mul, ha, hB x₀ y, map_div₀, map_neg, map_mul, ← hB y y, h2]
       field_simp
       ring
     have hxw : B x₀ w = B x₀ y := by
@@ -95,16 +134,15 @@ theorem form_eq_smul_of_const_on_orbit (A B : V →ₗ[ℂ] V →ₗ⋆[ℂ] ℂ
         rw [← hBre v]; exact_mod_cast hss
       have := reach2 ((s : ℂ) • v) (by
         simp only [map_smul, map_smulₛₗ, LinearMap.smul_apply, smul_eq_mul, Complex.conj_ofReal,
-          RingHom.id_apply, haC]
+          haC]
         linear_combination hssC)
-      simp only [map_smul, map_smulₛₗ, LinearMap.smul_apply, smul_eq_mul, Complex.conj_ofReal,
-          RingHom.id_apply] at this
+      simp only [map_smul, map_smulₛₗ, LinearMap.smul_apply, smul_eq_mul, Complex.conj_ofReal] at this
       rw [← this, ← hssC]; ring
     have diag : ∀ y, (a : ℂ) * A y y = e * B y y := by
       intro y
       have hcont : Continuous fun t : ℝ => a * (B (x₀ + (t : ℂ) • y) (x₀ + (t : ℂ) • y)).re := by
         simp only [map_add, map_smul, map_smulₛₗ, LinearMap.add_apply, LinearMap.smul_apply,
-          smul_eq_mul, Complex.conj_ofReal, RingHom.id_apply]
+          smul_eq_mul, Complex.conj_ofReal]
         fun_prop
       have hpos : 0 < (fun t : ℝ => a * (B (x₀ + (t : ℂ) • y) (x₀ + (t : ℂ) • y)).re) 0 := by
         simp only [Complex.ofReal_zero, zero_smul, add_zero]
@@ -119,7 +157,7 @@ theorem form_eq_smul_of_const_on_orbit (A B : V →ₗ[ℂ] V →ₗ⋆[ℂ] ℂ
         exact_mod_cast (by positivity : (ε / 2 : ℝ) ≠ 0)
       generalize (ε / 2 : ℝ) = t at h1 h2 hεC
       simp only [map_add, map_smul, map_smulₛₗ, LinearMap.add_apply, LinearMap.smul_apply,
-          smul_eq_mul, Complex.conj_ofReal, RingHom.id_apply, h0, haC] at h1 h2
+          smul_eq_mul, Complex.conj_ofReal, h0, haC] at h1 h2
       push_cast at h1 h2
       have : (t : ℂ) ^ 2 * ((a : ℂ) * A y y - e * B y y) = 0 := by
         linear_combination (1 / 2 : ℂ) * (h1 + h2)
@@ -134,7 +172,7 @@ theorem form_eq_smul_of_const_on_orbit (A B : V →ₗ[ℂ] V →ₗ⋆[ℂ] ℂ
     have h3 := diag x
     have h4 := diag y
     simp only [map_add, map_smul, map_smulₛₗ, LinearMap.add_apply, LinearMap.smul_apply,
-          smul_eq_mul, Complex.conj_I, RingHom.id_apply] at h1 h2
+          smul_eq_mul, Complex.conj_I] at h1 h2
     push_cast
     rw [← heC]
     field_simp

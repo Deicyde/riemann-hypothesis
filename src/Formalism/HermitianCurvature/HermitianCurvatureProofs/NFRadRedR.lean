@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.NFRadRedS
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.DifferentialOperatorBracket
 
@@ -144,7 +146,7 @@ theorem repSmooth_of (hLL : LocLog) : NFRadRedS.RepSmooth := by
   let Lm : Q.Mx k r →ₗ[ℝ] Q.Mx k r :=
     { toFun := fun h => h₀⁻¹ * h
       map_add' := fun a b => Matrix.mul_add _ _ _
-      map_smul' := fun c a => by simp [Matrix.mul_smul] }
+      map_smul' := fun c a => by simp }
   let Lc := LinearMap.toContinuousLinearMap Lm
   have hV : IsOpen {h : Q.Mx k r | h₀⁻¹ * h ∈ O} := hO.preimage Lc.continuous
   refine ⟨{h : Q.Mx k r | h₀⁻¹ * h ∈ O}, hV, ?_, fun h => π h₀ * NormedSpace.exp (Tc (Λ (h₀⁻¹ * h))), ?_, ?_⟩

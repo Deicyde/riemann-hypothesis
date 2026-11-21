@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.SiegelKlingenDeligneRibet
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.ExistsAvoidOne
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.PartialSum
+import Development.AutomorphicSpectrum.Proofs.GlobalProofs.AbelContinuation
+import Mathlib.Algebra.Ring.IsFormallyReal
 
 set_option autoImplicit false
 

@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsLatFlagPair
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IntegralClosureHeightEqOneOfLiesOver
+import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.LocalAtPlaces
 
 namespace GlobalTheory.CompanionTheory.Ar
 

@@ -1,5 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.KernelSt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsUniqueLiesUnder
+import Development.AbelianVarietyTheory.Definitions.Divisors.TorusExt
 
 set_option autoImplicit false
 

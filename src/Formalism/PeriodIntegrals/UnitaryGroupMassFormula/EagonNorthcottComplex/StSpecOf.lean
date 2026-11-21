@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.PeriodIntegrals.EagonNorthcottSpec
+import BuildAid.Leniency.Open
+import Formalism.PeriodIntegrals.EagonNorthcott
 
 universe u
 

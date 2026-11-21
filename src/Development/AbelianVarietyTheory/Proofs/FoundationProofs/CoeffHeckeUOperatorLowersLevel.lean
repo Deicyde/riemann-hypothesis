@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.PetIPSmulRight
-import Development.AbelianVarietyTheory.Definitions.Foundations.RepL
-import CompanionTheory.EightfoldTheory.VariationTheory.AutomorphicForms.Newform
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.QExpansionHeckeUEqSumSlashStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.SlashIntMatrixPosDetPropertiesStatement
 open UpperHalfPlane Complex MeasureTheory CongruenceSubgroup GlobalTheory.EisM UpperTheory.V.Af Filter Topology
@@ -16,7 +13,7 @@ def idx (l : ℕ) [NeZero l] (b d : ℤ) (j : Fin l) : Fin l :=
 
 lemma idx_cast (l : ℕ) [NeZero l] (b d : ℤ) (j : Fin l) :
     ((idx l b d j : ℕ) : ZMod l) = (((b + ((j : ℕ) : ℤ) * d) * d : ℤ) : ZMod l) := by
-  simp [idx, ZMod.natCast_zmod_val]
+  simp [idx]
 
 lemma idx_inj (l : ℕ) [NeZero l] (a b d : ℤ) (had : ((a * d : ℤ) : ZMod l) = 1) :
     Function.Injective (idx l b d) := by
@@ -58,8 +55,8 @@ lemma coset (L l : ℕ) [NeZero l] (hlL : l ∣ L) (γ : SL(2, ℤ)) (hc : (L : 
   · rw [Matrix.det_fin_two_of]
     linear_combination hdet + γ 1 0 * hB
   · refine ⟨m, ?_⟩
-    simp only [Matrix.SpecialLinearGroup.coe_mk, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_one,
-      Matrix.cons_val_zero, Matrix.empty_val', Matrix.cons_val_fin_one, Matrix.head_cons]
+    simp only [Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_one,
+      Matrix.cons_val_zero, Matrix.empty_val', Matrix.cons_val_fin_one]
     rw [hm]; push_cast; ring
   · simp
   · ext i k

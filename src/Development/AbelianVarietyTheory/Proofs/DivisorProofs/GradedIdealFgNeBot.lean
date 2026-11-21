@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LnStepFalse
 open AlgebraicGeometry CategoryTheory NumberField IsDedekindDomain
 open Formalism.BasicNotions Formalism.MainNotions ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.PullbackSections ReciprocityTheory.GeometryOfNumbersTheory Formalism.L2.Pj
@@ -61,8 +61,8 @@ theorem grIdeal_fg_ne_bot (K : Type) [Field K] [NumberField K] (V : Type) [AddCo
     intro hbot
     have hmem : algebraMap (𝓞 K) K d ∈ grIdeal E v i := by
       refine ⟨Pi.single i (algebraMap (𝓞 K) K d), by simp, fun k hk => ?_, ?_⟩
-      · simp [Pi.single_apply, (ne_of_lt hk).symm]
-      · rw [Finset.sum_eq_single i (fun k _ hk => by simp [Pi.single_apply, hk]) (by simp)]
+      · simp [(ne_of_lt hk).symm]
+      · rw [Finset.sum_eq_single i (fun k _ hk => by simp [hk]) (by simp)]
         simpa [algebraMap_smul] using hdE
     rw [hbot, Submodule.mem_bot] at hmem
     exact hd (by simpa using hmem)

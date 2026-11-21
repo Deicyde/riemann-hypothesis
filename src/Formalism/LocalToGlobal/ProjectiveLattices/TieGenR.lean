@@ -1,5 +1,7 @@
-import Formalism.LocalToGlobal.ProjectiveLattices.TieUpR
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.TieGen
+import Formalism.LocalToGlobal.ProjectiveLattices.TieUpA
 
 noncomputable section
 

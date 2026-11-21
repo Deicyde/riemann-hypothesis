@@ -1,5 +1,7 @@
-import Formalism.LocalToGlobal.GlobalTheory.GL6.Statement
-import Formalism.HarderNarasimhan.ShiftInvariance
+import BuildAid.Leniency.Open
+import Formalism.HarderNarasimhan.HarderNarasimhanProofs.DiscreteSpanOfLinIndep
+import Formalism.HarderNarasimhan.HarderNarasimhanProofs.MuChar
+import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
 
 noncomputable section
 

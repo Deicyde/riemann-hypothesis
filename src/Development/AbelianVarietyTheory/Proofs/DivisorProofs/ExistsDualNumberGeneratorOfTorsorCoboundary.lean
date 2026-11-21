@@ -1,9 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.PtAlgSpOver
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DualNumberPointPreimageTopOfReduction
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.AbelianHodgeDeRham
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PoincareDeRhamDuality
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
 
 set_option autoImplicit false
 noncomputable section
@@ -95,7 +93,7 @@ theorem ptV_nat (v : epsR R ⟶ B) {E E' : Type} [CommRing E] [Algebra R E] [Com
   · simp only [ptV, Category.assoc, lift_fst]
     rw [← Category.assoc, ← Category.assoc, spOver_comp, spOver_comp]
     congr 2
-    ext a <;> simp [epsHom, DualNumber.lift_apply_inl]
+    ext a <;> simp [epsHom]
   · simp only [ptV, Category.assoc, lift_snd]
     rw [← Category.assoc, spOver_comp]
     congr 2

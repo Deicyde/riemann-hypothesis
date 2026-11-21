@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CellFunctorOfCharCentral
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SmGL GlobalTheory.PRep GlobalTheory.SplitWeil GlobalTheory.LeviBlockExponent GlobalTheory.LeviBlockExponentLocal GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.UAut GlobalTheory.SiegelSet GlobalTheory.ThK.SquareIntegrability
 
@@ -58,7 +60,7 @@ variable {k : Type} [Field k] [ValuativeRel k] [TopologicalSpace k] [IsNonarchim
 
 theorem norm_pairChar (b : Fin 2 → ℕ) (χ : Fin 2 → kˣ →* ℂˣ) (hχ : ∀ j y, ‖((χ j y : ℂˣ) : ℂ)‖ = 1)
     (z : Levi k (fun j : Fin 2 => Fin (b j))) : ‖((pairChar k b χ z : ℂˣ) : ℂ)‖ = 1 := by
-  simp [pairChar, MonoidHom.finsetProd_apply, Units.coe_prod, norm_prod, hχ]
+  simp [pairChar, hχ]
 
 theorem norm_cellScalar_positionElt (N i : ℕ) (b : Fin 2 → ℕ) (χ : Fin 2 → kˣ →* ℂˣ)
     (hχ : ∀ j y, ‖((χ j y : ℂˣ) : ℂ)‖ = 1) (ϖ : kˣ)

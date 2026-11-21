@@ -1,12 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.CMLattices.ExistsIsThetaDegOfIsLocalModel
-import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.IntegralTangentVectorCoordinates
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.SingleMemSpanIffOfSelfDual
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.ExistsUniqueExtendRingOfIntegersHom
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.CmCurveLieCharacterOfAdjoinGenerator
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.HermFormSumSum
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.LieTensorLine
-import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.IntegersOfCmFieldConjStructure
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.ExistsLieRepresentationEigenLatticesStatement
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.ExistsUniqueCmHermitianLatticeFormStatement
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.TwoMulDegDualLineCmIdealStatement
@@ -43,7 +40,7 @@ theorem span_embeddings_eq_top {E K L I : Type} [Field E] [NumberField E] [Field
   intro g hg i
   have := hli (fun i => g i * σ i (e a₀)) (funext fun s => by
     have := congrFun hg (s • a₀)
-    simp only [Finset.sum_apply, Pi.smul_apply, smul_eq_mul, map_smul, Algebra.smul_def, map_mul, Pi.zero_apply] at this
+    simp only [Finset.sum_apply, Algebra.smul_def, Pi.zero_apply] at this
     simp only [Finset.sum_apply, Pi.smul_apply, smul_eq_mul, Pi.zero_apply, Function.comp]
     rw [← this]
     refine Finset.sum_congr rfl fun i _ => ?_

@@ -1,5 +1,16 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.HaarVolumes.TriDens
 import Formalism.LocalRingCardinality.DataCD
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
+import Mathlib.Analysis.SpecialFunctions.Gaussian.GaussianIntegral
+import Mathlib.CategoryTheory.Countable
+import Mathlib.MeasureTheory.Integral.Pi
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.TotallySplit
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -55,7 +66,7 @@ theorem skMat_conjTranspose_om (x : UCo N) : (skMat x)ᴴ = -skMat x := by
 theorem skMat_add_om (x y : UCo N) : skMat (x + y) = skMat x + skMat y := by
   ext a b
   simp only [skMat, Matrix.add_apply]
-  split_ifs <;> simp [mul_add, star_add, neg_add] <;> ring
+  split_ifs <;> simp [mul_add, star_add] <;> ring
 
 theorem skMat_smul_om (c : ℝ) (x : UCo N) : skMat (c • x) = (c : ℂ) • skMat x := by
   ext a b

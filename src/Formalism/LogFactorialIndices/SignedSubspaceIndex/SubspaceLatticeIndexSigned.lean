@@ -1,7 +1,6 @@
-import Formalism.LogFactorialIndices.SubspaceIndexSigned
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LogFactorialIndices.SignedSubspaceIndex.IdxBase
-import Formalism.LogFactorialIndices.SignedSubspaceIndex.IdxDet
-import Formalism.LogFactorialIndices.SignedSubspaceIndex.SubspaceLatticeIndex
 
 noncomputable section
 

@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
 import GroundTheory.PAdicHodge.PerfectoidField
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Topology.Sheaves.Presheaf
 set_option maxSynthPendingDepth 1
 
 noncomputable section

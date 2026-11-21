@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.FockResolutionOnto.StatementC
 import Formalism.ThetaLogCoordinates.FockResolutionOnto.FockMonomialProofs.InitPartZeroXMul
+import Formalism.MahlerMeasure.MahlerMeasureProofs.TheoremM
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.TotallySplit
 
 namespace Formalism.InvariantFactorPaths.L4
 

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.FunctionField.PlaceAbove
 
 namespace GroundTheory.FunctionField

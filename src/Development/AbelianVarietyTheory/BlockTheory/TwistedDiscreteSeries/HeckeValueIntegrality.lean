@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.NonnegIffOfLiesTotal
-import Formalism.LocalToGlobal.ProjectiveLattices.HeckeFr
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsPointedOfIsHkIsog
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.BddGood
 

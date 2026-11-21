@@ -1,7 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ConjugateRepresentations.PartHOfSs
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ConjugateRepresentations.CuspidalSupport.HasCapOneFn
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.ConjSep
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.ClozelConjCOf
+import Development.AutomorphicArithmetic.AutomorphicVarieties.ConjugateRepresentations.ConjugateCuspidalReps.IsConjRepRefl
 
 noncomputable section
 

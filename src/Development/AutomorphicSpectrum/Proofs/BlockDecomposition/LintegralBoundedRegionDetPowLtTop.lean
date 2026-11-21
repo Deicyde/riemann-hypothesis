@@ -1,9 +1,6 @@
-import Mathlib
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.LocalWhittakerDuality.WhittakerFunctionalEquationAdditive
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GodementJacquetMinusOne
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PhdEqPhk
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GodementJacquetMinusTwo
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntegrableOnModulusPowBall
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.GaugeTopology.SSmoothW
 
 noncomputable section
 

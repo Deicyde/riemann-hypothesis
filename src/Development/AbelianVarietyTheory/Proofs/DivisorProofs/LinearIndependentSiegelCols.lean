@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.AnisoClauseOfFirstTerm
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsSmoothModerateOfIsAutFunSm
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.PublishedTheorems.SiegelWeil₂.SiegelWeilUnitarySchrodinger
 
 noncomputable section
 
@@ -41,7 +41,7 @@ theorem siegelCols_isotropic :
     Formalism.UG.cT (D.sp.cm.sig : D.host.E →+* D.host.E) (siegelCols D n) * StdUnn.Jst D n * siegelCols D n = 0 := by
   ext i j
   simp only [Matrix.mul_apply, Fin.sum_univ_add, Formalism.UG.cT, Matrix.transpose_apply, Matrix.map_apply, siegelCols_castAdd,
-    siegelCols_natAdd, jst_cc, map_zero, zero_mul, mul_zero, Finset.sum_const_zero, add_zero, zero_add]
+    siegelCols_natAdd, jst_cc, map_zero, zero_mul, mul_zero, Finset.sum_const_zero, add_zero]
   simp
 
 end GlobalTheory.FirstTermIsoCst

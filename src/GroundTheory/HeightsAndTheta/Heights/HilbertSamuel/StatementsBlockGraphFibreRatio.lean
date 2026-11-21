@@ -1,6 +1,5 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsBlockGraphDeg
-import GroundTheory.HeightsAndTheta.Heights.Intersections.QuotientMapImageZInjective
+import BuildAid.Leniency.Open
+import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsBlockGraphImage
 set_option maxSynthPendingDepth 1
 
 noncomputable section

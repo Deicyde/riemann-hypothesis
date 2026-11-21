@@ -1,4 +1,4 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.DivisorSupportCondition
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LaurentPolynomialCohomologyVanishingStatement
 open CategoryTheory Limits AlgebraicGeometry Opposite GlobalTheory.EtC
 

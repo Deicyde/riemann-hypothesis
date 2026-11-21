@@ -1,5 +1,7 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.CuspidalDiscreteness.SmoothingFinite
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.AutomorphicForms.AutomorphicFormSpaces.ConstantTerm
+import GroundTheory.AutomorphicForms.NormDetDiagUnitsPosRealToUnits
 
 open Set Filter Topology
 open NumberField IsDedekindDomain

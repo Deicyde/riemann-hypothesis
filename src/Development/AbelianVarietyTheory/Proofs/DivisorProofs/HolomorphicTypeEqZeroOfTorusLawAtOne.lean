@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsSmoothVector
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SmoothGramSchmidtIndefiniteHermitianFrames
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NegativeFrameDomainProductOpenPreconnectedStable
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorusLawOfKilled
@@ -41,7 +41,7 @@ lemma luMap_eq (z : ι → Fin n → Fin n → ℂ) :
     simp only [loP, upperParabolic]; split_ifs <;> simp
   simp only [luMap, Pi.add_apply, Matrix.mul_apply, Matrix.of_apply, add_mul, mul_add,
     Finset.sum_add_distrib, oneE, ite_mul, one_mul, zero_mul, mul_ite, mul_one, mul_zero,
-    Finset.sum_ite_eq, Finset.sum_ite_eq', Finset.mem_univ, if_true, ↓reduceIte]
+    Finset.sum_ite_eq, Finset.sum_ite_eq', Finset.mem_univ, ↓reduceIte]
   linear_combination hz
 
 lemma strict_coord (τ : ι) (a c : Fin n) : ∃ L, HasStrictFDerivAt (𝕜 := ℂ) (fun z : ι → Fin n → Fin n → ℂ => z τ a c) L 0 := by

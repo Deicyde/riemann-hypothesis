@@ -1,16 +1,12 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.JEvExists
-import Formalism.LocalToGlobal.UnitaryNorms.CharTied
-import Formalism.LocalRingCardinality.DataKap
-import Formalism.LocalToGlobal.ProjectiveLattices.HasDataCondition
-import Formalism.LocalToGlobal.ProjectiveLattices.RecCond
-import Formalism.LocalToGlobal.ProjectiveLattices.ParCanon
-import Formalism.LocalToGlobal.ProjectiveLattices.ExistsParameterConditions
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ThExprUniqOfChartIndep2
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.DsExistsOfDiscreteSeriesExists
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsNormLeHeightPow
-import Formalism.LocalRingCardinality.Lemmas
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ResidualCharacterDetValuesMemCoeffField
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.DataHost
+import Formalism.LocalToGlobal.IndefiniteReal.GramCEqTranspose
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.Tactic.Polynomial.Basic
 
 noncomputable section
 
@@ -36,7 +32,7 @@ theorem coordMap_smul (b : Basis ι L V) (φ : L →ₗ[K] K) {w : V} (hw : w �
   | mem x hx =>
     obtain ⟨j, rfl⟩ := hx
     rw [coordMap_apply, map_smul, Basis.repr_self]
-    rw [Finset.sum_eq_single j (fun i _ hi => by simp [Finsupp.single_apply, Ne.symm hi]) (by simp)]
+    rw [Finset.sum_eq_single j (fun i _ hi => by simp [Ne.symm hi]) (by simp)]
     simp
   | zero => simp
   | add x y _ _ hx hy => rw [smul_add, map_add, hx, hy, smul_add]

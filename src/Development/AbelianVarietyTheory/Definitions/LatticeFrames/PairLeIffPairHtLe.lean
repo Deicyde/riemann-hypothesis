@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.ColHeightWith
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.HtPsiLeIffExists
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.SlopeStepG
 
 noncomputable section
 

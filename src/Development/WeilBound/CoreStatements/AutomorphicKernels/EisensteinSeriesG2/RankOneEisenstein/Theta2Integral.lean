@@ -1,5 +1,7 @@
-import Development.WeilBound.CoreStatements.AutomorphicKernels.EisensteinSeriesG2.RankOneEisenstein.GodementEis
-import GroundTheory.GlobalFields.TateThesis.TateMain
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.AutomorphicForms.GL2.GodementSection
+import GroundTheory.GlobalFields.TateThesis.IdeleMeasureQuotient
 
 open NumberField Matrix MeasureTheory
 open scoped NumberField.AdeleRing

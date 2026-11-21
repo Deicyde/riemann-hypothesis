@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.FiniteResidueFieldAdicCompletionIntegers
 
 open scoped TensorProduct
@@ -24,7 +24,7 @@ theorem exists_root {F : Type} [Field F] [NumberField F] (v : HeightOneSpectrum 
       simpa using this)
   refine ⟨r, ?_⟩
   have := congrArg (fun x : O => (x : v.adicCompletion F)) hr
-  simp only [IsRoot.def, eval_add, eval_pow, eval_X, eval_mul, eval_C] at this
+  simp only [eval_add, eval_pow, eval_X, eval_mul, eval_C] at this
   push_cast at this
   exact this
 

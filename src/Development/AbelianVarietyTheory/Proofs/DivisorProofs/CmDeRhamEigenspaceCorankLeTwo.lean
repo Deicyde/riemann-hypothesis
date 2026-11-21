@@ -1,8 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsCrystalPairing
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SemiabelianSchemes.PrecompleteBases.PsbLb
 open GlobalTheory.LatVal GlobalTheory.LatJet
 open CategoryTheory AlgebraicGeometry MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory.Cris GlobalTheory.DeRham GlobalTheory.RealMult GlobalTheory.CMVal
@@ -21,7 +22,7 @@ theorem diagonalizable_corank_le_two {V : Type*} {κ : Type} [AddCommGroup V] [M
     have : (b.coord k) ∘ₗ S = ν k • b.coord k := b.ext fun l => by
       by_cases h : l = k
       · subst h; simp [hS]
-      · simp [hS, Finsupp.single_apply, h]
+      · simp [hS, h]
     simpa using LinearMap.congr_fun this x
   constructor
   · let q := (LinearMap.range S).mkQ
@@ -106,7 +107,7 @@ theorem exists_eigenbasis {V : Type*} [AddCommGroup V] [Module ℂ V] {g : ℕ} 
     funext l
     by_cases h : l = k.1
     · subst h; simp [M]
-    · simp [M, Pi.single_apply, h]
+    · simp [M, h]
   simp only [v]
   rw [hTQ, this, map_smul]
   rfl

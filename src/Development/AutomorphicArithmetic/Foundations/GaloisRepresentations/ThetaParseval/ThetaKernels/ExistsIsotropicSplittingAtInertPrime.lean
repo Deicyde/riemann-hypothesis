@@ -1,7 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.BlockDeterminants.BumpLat
 import Development.WeilBound.CoreStatements.LocalThetaKernels.IwasMain
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.HalfIndexLattices.SplitStab
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.HalfIndexLattices.IsLatRepL
 
 set_option synthInstance.maxHeartbeats 200000
 
@@ -76,7 +77,7 @@ theorem exists_isoW_k {σ : E →ₐ[F] E} {B : Base F E} {n d : ℕ} {W : Spc F
     have e4 : (f i : ℕ) = i := rfl
     have e5 : (f j : ℕ) = j := rfl
     rw [Matrix.smul_apply]
-    simp only [antiJ, Matrix.of_apply]
+    simp only [antiJ]
     rw [if_neg (by omega)]
     simp
   · obtain ⟨h3, h4⟩ := (mem_latW_iff hw h W z).1 hz

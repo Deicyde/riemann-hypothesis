@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.AdCpctDen
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.RingTheory.WittVector.IsPoly
 
 namespace PI.AdCpctDenWork
 

@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AutomorphicArithmetic.AutomorphicVarieties.IntegralityNearIdentity.EqOneOfNear
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.ConjugateOfRoots
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.WeightedSumBis
 

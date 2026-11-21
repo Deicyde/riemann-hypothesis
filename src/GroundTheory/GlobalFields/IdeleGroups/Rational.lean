@@ -1,5 +1,11 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.IdeleGroups.StandardOpenEquiv
+import GroundTheory.GlobalFields.IdeleGroups.ClassGroup
+import Mathlib.NumberTheory.NumberField.ClassNumber
+import Mathlib.NumberTheory.Padics.HeightOneSpectrum
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.Tactic.Polynomial.Basic
 
 namespace GroundTheory.Global
 

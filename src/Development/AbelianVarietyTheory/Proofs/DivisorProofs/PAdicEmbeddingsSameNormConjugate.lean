@@ -1,4 +1,45 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.Normed.Field.Instances
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.Padics.Complex
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Connected.Separation
+import Mathlib.Topology.MetricSpace.Ultra.TotallySeparated
+import Mathlib.Topology.Sheaves.Init
 open NumberField Polynomial
 
 noncomputable section
@@ -73,9 +114,9 @@ theorem exists_isometric_ringEquiv :
   obtain ⟨t, htc, htn, ht⟩ := exists_extend ι' ι hd' (fun a => h a)
   obtain ⟨s, hsc, hsn, hs⟩ := exists_extend ι ι' hd (fun a => (h a).symm)
   have h1 : ∀ z, t (s z) = z := congrFun (hd.equalizer (htc.comp hsc) continuous_id
-    (funext fun a => by simp only [Function.comp_apply, hs, ht, id]))
+    (funext fun a => by simp only [Function.comp_apply, hs, ht]))
   have h2 : ∀ z, s (t z) = z := congrFun (hd'.equalizer (hsc.comp htc) continuous_id
-    (funext fun a => by simp only [Function.comp_apply, hs, ht, id]))
+    (funext fun a => by simp only [Function.comp_apply, hs, ht]))
   let σ : ℂ_[p] ≃+* ℂ_[p] :=
     { toFun := t, invFun := s, left_inv := h2, right_inv := h1, map_mul' := t.map_mul, map_add' := t.map_add }
   exact ⟨σ, htn, ht⟩

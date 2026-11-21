@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.MemSupportBDIff
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsExphOnEmpty
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsOpenClosureSubset
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ChartMatrixSmoothInvertible
 open CategoryTheory AlgebraicGeometry Limits NumberField IsDedekindDomain Filter Topology Matrix
 open ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Pj Formalism.L2.Geo
@@ -98,13 +96,13 @@ theorem short_vectors_near_base : ∀ (k : Type) [CommRing k] (Y : Scheme.{0}) (
   have hyc := hLs hy
   have ha' : a c₀ y ξ = a c y (c₀.dtrans c y ξ) := ha.trans hy₀ hyc ξ
   have h1 := hmL y hy (WithLp.toLp 2 (c₀.dtrans c y ξ))
-  simp only [WithLp.ofLp_toLp] at h1
+  simp only at h1
   have hns : ‖(WithLp.toLp 2 (c₀.dtrans c y ξ) : ReciprocityTheory.L2DbarEstimates.V d)‖ < s := by
     have h2 : m * ‖(WithLp.toLp 2 (c₀.dtrans c y ξ) : ReciprocityTheory.L2DbarEstimates.V d)‖ ^ 2 < m * s ^ 2 := by linarith
     exact lt_of_pow_lt_pow_left₀ 2 hs0.le (lt_of_mul_lt_mul_left h2 hm.le)
   have hP' := hsball (y := WithLp.toLp 2 (c₀.dtrans c y ξ)) (by rw [dist_zero_right]; exact hns) (c.e y)
     (mem_image_of_mem _ hy)
-  simp only [WithLp.ofLp_toLp, c.e.left_inv hyc] at hP'
+  simp only [c.e.left_inv hyc] at hP'
   rw [hE.trans c₀ c y hy₀ hyc ξ]
   exact ⟨hP'.1, hP'.2⟩
 

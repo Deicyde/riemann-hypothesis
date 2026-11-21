@@ -1,9 +1,9 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.DecompositionData
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.LargeLevelLemmas
 import Formalism.SharpRestriction.LevelLetterCocycles.SumRepresentations
 import Formalism.SharpRestriction.LevelLetterCocycles.ArithmeticCylinders
 import Formalism.SharpRestriction.LevelLetterCocycles.ElementDenominator
-import Formalism.SharpRestriction.LevelLetterCocycles.LocalSituation
 import Formalism.SharpRestriction.LevelLetterCocycles.BlochKatoDuality
 
 noncomputable section

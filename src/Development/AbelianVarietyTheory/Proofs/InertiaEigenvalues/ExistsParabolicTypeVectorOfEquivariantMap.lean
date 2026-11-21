@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsIsLiftOfMemKO
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.GoodIdempotentFixesOfOnlySeriesOfLabelActs
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.DepthZeroInertia
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsInSupportOfMultiProd
+import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsIrreducibleIffOfLinearEquiv
 
 noncomputable section
 
@@ -73,7 +72,7 @@ theorem exists_parVec_of_map : ∀ (F : Type) [Field F] [ValuativeRel F] [Topolo
       rw [hh]
       change ((((x : GL n (ZMod p)) : Matrix n n (ZMod p)) _ _).val : F) = _
       rw [h3]
-      by_cases hij : i = j <;> simp [Matrix.one_apply, hij, ZMod.val_one]
+      by_cases hij : i = j <;> simp [hij, ZMod.val_one]
     have hqa : leviProj F e q = Pi.mulSingle a (leviProj F e q a) := by
       funext b
       by_cases hb : b = a

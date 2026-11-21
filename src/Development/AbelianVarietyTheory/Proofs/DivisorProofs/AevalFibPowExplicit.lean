@@ -1,10 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HPolyAddTwo
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralCompFsDens
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DivFractionsBilinearFormula
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqZeroOfEvalHermitian
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralAffinePowEqHPoly
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegrableProdQCoefMulFsDens
+import Mathlib.Analysis.Matrix.Spectrum
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
 
 set_option autoImplicit false
 
@@ -34,8 +35,8 @@ theorem qMat_diagonal (a b x : ℂ) : qMat (Matrix.diagonal ![a, b]) x =
   have hx : x * starRingEnd ℂ x = ((‖x‖ ^ 2 : ℝ) : ℂ) := by
     rw [Complex.mul_conj, Complex.normSq_eq_norm_sq]
   simp only [qMat, entries, Fintype.sum_prod_type, Fin.sum_univ_two, qCoef, lineVec, Matrix.diagonal_apply,
-    Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons, if_true, if_false, smul_zero, add_zero,
-    zero_add, smul_eq_mul, map_one, mul_one, hx]
+    Matrix.cons_val_zero, Matrix.cons_val_one, if_true,
+    smul_eq_mul, map_one, mul_one, hx]
   simp
   left
   have h1 : (1 + (‖x‖ : ℂ) ^ 2) ≠ 0 := by exact_mod_cast h0

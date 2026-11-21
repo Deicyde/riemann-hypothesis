@@ -1,5 +1,6 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.QuotientHomNonvanishingBound
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.LevelLetterCocycles.DataN
 open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N
 
 namespace GlobalTheory.SemisimpleDecomp

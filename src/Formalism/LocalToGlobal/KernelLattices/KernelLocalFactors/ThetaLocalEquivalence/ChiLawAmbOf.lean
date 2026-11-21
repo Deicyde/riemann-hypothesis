@@ -1,8 +1,9 @@
-import Mathlib
-import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.ThetaLocalEquivalence.ThEquivPStepCIff
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.PairingIndexBounds.SplitPairEquations.CharacterFactorUnitaryAction
 import Formalism.LocalToGlobal.PairingIndexBounds.SplitPairEquations.NormOneUnitIdeal
-import Formalism.LocalToGlobal.GlobalTheory.GL3.PLinkThIndep
+import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.ColInst
+import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.ThetaLocalEquivalence.ThEquivPOf
 
 open NumberField IsDedekindDomain
 

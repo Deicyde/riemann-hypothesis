@@ -1,9 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.HeightBoundStatement.HTBoundSt
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.LineModel
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LocalSystemModelMapStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LocalSystemCommonRefinementStatement
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LocalSystemModelExistsStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LocalSystemLevelGrowthStatement
 
 noncomputable section

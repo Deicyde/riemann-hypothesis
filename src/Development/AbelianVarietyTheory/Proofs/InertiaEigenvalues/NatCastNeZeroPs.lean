@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsPotential
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.OneSubPhiOntoOfFilZero
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.BhattScholzeCrystallineLattices
-import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.ConductorExponents
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.ExistsGenIsUnitSub
 
 noncomputable section
 
@@ -118,7 +116,7 @@ theorem sh_X : sh X = C X + X := by
   have h := hsh X i
   rcases i with _ | _ | i
   · simpa using h
-  · simp [coeff_C, coeff_X]
+  · simp [coeff_X]
     simpa [derivative_X] using h
   · have h3 : ((i + 2).factorial : K⟦X⟧) ≠ 0 := natCast_ne_zero_ps (Nat.cast_ne_zero.2 (Nat.factorial_ne_zero _))
     have h4 : (PowerSeries.derivative K)^[i + 2] X = 0 := by
@@ -127,7 +125,7 @@ theorem sh_X : sh X = C X + X := by
       rw [this]; exact Function.iterate_fixed (map_zero _) i
     rw [h4] at h
     rw [(mul_eq_zero.1 h).resolve_left h3]
-    simp [coeff_C, coeff_X]
+    simp [coeff_X]
 
 theorem constantCoeff_φ₂ (l : ℕ) [Fact l.Prime] (φ₂ : K⟦X⟧⟦X⟧ →+* K⟦X⟧⟦X⟧)
     (hφC : ∀ f : K⟦X⟧, φ₂ (PowerSeries.C f) = PowerSeries.C (frob K l f))

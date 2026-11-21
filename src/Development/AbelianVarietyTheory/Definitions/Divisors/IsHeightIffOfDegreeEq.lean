@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.PointHeight
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.BlockSphereMeanLinForm
-import Development.AbelianVarietyTheory.Definitions.Divisors.MemSubPtsCutBaseChangeIff
 import Development.AbelianVarietyTheory.Definitions.Divisors.SmoothOfRelativeDimensionPspace
 import Development.AbelianVarietyTheory.Definitions.Divisors.IrreducibleOfIrreducibleMap
 

@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsUMOfMem
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralCompSymm
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.OpenFns
 
 noncomputable section
 

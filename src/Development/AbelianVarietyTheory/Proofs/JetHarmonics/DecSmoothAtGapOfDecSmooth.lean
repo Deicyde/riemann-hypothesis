@@ -1,8 +1,6 @@
-import Mathlib
-import Formalism.HermitianCurvature.BesselNonvanishingReduction
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LowerSmoothStability.ExistsFinStableOfMemSSup
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.JetGauges.SideNormalisedGap
-import Development.AbelianVarietyTheory.BlockTheory.JetGauges.LieMatrixVectors
 import Development.AbelianVarietyTheory.Counterexamples.JetSurvey.KFinDecayOfDecInf
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.SigmaFiniteOfPosLintegralNeTop
 

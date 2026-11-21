@@ -1,10 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.WuDecayAll
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedVolumeStatements.SettingExistsOfGap
-import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.QuotProdK
-import Formalism.RealPlaceAnalysis.FinalF
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.FormalDegreeSquareIntegrable.Closed
-import Formalism.SharpRestriction.CuspSpanNormBounds.ExpansionFromLemmaB
 
 noncomputable section
 

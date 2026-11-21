@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.Statement
 
 open Matrix
@@ -25,7 +26,7 @@ theorem mulVec_maps_iff (M : Matrix (Fin r) (Fin r) K) :
     have := h (Pi.single j 1) (fun k => by
       by_cases hk : k = j
       · subst hk; simp
-      · simp [Pi.single_apply, hk]) i
+      · simp [hk]) i
     simpa [Matrix.mulVec_single_one] using this
   · intro h y hy i
     simp only [Matrix.mulVec, dotProduct]

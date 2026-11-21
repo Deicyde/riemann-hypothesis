@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.FunctionField.PlaceDefs
+import Mathlib.RingTheory.Valuation.LocalSubring
 
 namespace GroundTheory.FunctionField
 

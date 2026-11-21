@@ -1,5 +1,5 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.KleimanNefness.TargetSt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.IntegralModels.PFiniteIntegralClosure
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PSectionBounded
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PNmSectionsRational

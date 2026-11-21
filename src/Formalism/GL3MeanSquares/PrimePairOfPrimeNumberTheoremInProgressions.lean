@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.PrimePairOfBoxAndWeakMeanSquareHypotheses
-import Formalism.GL3MeanSquares.ZeroDensityBox
-import Formalism.GL3MeanSquares.BoxCountAll
 
 open Finset Classical
 

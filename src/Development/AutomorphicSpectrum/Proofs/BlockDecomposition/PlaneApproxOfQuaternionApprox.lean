@@ -1,6 +1,5 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.PlaneSupports.PlaneSupp
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HermitianPlaneStrongApprox
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.AnisotropicQuaternionNormOneCompactStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FinitePlaceNormOneCompactSupportStatement
 
@@ -144,7 +143,7 @@ theorem decomp (hb0 : b 0 = 1) (hb1 : b 1 = ξ) (t : R ⊗[F] E) :
   rw [Fin.sum_univ_two] at h
   conv_lhs => rw [← h]
   simp only [Algebra.TensorProduct.basis_apply, hb0, hb1, co, inclR, Algebra.smul_def]
-  simp [Algebra.TensorProduct.one_def]
+  simp
 
 theorem co_emb (hb0 : b 0 = 1) (hb1 : b 1 = ξ) (x y : R) :
     co b R 0 (algebraMap R (R ⊗[F] E) x + algebraMap R (R ⊗[F] E) y * inclR (F := F) R ξ) = x ∧
@@ -152,7 +151,7 @@ theorem co_emb (hb0 : b 0 = 1) (hb1 : b 1 = ξ) (x y : R) :
   have h : algebraMap R (R ⊗[F] E) x + algebraMap R (R ⊗[F] E) y * inclR (F := F) R ξ =
       x • Algebra.TensorProduct.basis R b 0 + y • Algebra.TensorProduct.basis R b 1 := by
     simp only [Algebra.TensorProduct.basis_apply, hb0, hb1, inclR, Algebra.smul_def]
-    simp [Algebra.TensorProduct.one_def]
+    simp
   simp only [co, h, map_add, map_smul, Module.Basis.repr_self]
   simp
 

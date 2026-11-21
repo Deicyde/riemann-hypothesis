@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Intersections.HasStrictFDerivAtEquiv
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsBlockGenFinite
+import GroundTheory.HeightsAndTheta.Heights.Intersections.PullWMemFibre
 set_option maxSynthPendingDepth 1
 
 noncomputable section

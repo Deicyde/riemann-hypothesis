@@ -1,5 +1,6 @@
-import Mathlib
-import GroundTheory.ArithmeticGeometry.AbelianVarieties.Supersingular
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.ArithmeticGeometry.AbelianVarieties.IsogenyFrobenius
 
 namespace GroundTheory.Arith.Abelian
 

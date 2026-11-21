@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.TorsionBlocks.GraphHeightLattice
-import Formalism.SatakeDualWeyl.KpqSubgroupCompact
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.GraphElementIwasawaSplitPlaceStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.GraphElementIwasawaInertPlaceStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.DoublingNormDetSplitPlaceLatticeIntersectionStatement

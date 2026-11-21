@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.FsvMulFsvNeg
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open scoped ComplexConjugate ContDiff
 open Filter Topology
@@ -79,7 +82,7 @@ theorem qminorOp_smulC {t : ℕ}
       α • (List.ofFn fun k : Fin t => Formalism.QuantumDeterminants.Top Eop (u - ((k : ℕ) : ℂ)) (a (σ k)) (b k)).foldr (fun T h => T h) f :=
     foldr_smulC (List.ofFn fun k : Fin t => Formalism.QuantumDeterminants.Top Eop (u - ((k : ℕ) : ℂ)) (a (σ k)) (b k))
       (fun T hT => by
-        simp only [List.mem_ofFn, Set.mem_range] at hT
+        simp only [List.mem_ofFn] at hT
         obtain ⟨k, rfl⟩ := hT
         exact top_smulC hE _ _ _) α f
   rw [hT, smul_comm]
@@ -153,7 +156,7 @@ theorem hasFDerivAt_fsv_other (t : ℂ) (l : Fin m) (c : Fin m → ℂ) :
   · have h := hg.hasFDerivAt.comp c (hasFDerivAt_apply (𝕜 := ℝ) l c)
     exact h
   · intro l' hl' v
-    simp [Pi.single_apply, Ne.symm hl']
+    simp [Ne.symm hl']
 
 theorem wirt_fsv_smul_other (t : ℂ) {l l' : Fin m} (hl : l' ≠ l) (φ : (Fin m → ℂ) → E) (c : Fin m → ℂ)
     (hφ : DifferentiableAt ℝ φ c) :

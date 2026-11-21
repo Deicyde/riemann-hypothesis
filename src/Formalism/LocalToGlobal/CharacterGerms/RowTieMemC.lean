@@ -1,4 +1,5 @@
-import Formalism.LocalToGlobal.CharacterGerms.ValBlocksCChart
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CharacterGerms.NormOneIntegral
 
 noncomputable section

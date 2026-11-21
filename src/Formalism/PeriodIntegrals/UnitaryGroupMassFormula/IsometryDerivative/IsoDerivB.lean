@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.PeriodIntegrals.IsoDerivB
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IsometryDerivative.ExistsOePerm
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IsometryDerivative.ApplyAt0EqSum
 
 open Finset

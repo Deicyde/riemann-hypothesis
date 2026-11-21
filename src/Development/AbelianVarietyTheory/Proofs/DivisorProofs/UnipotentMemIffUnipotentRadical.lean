@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLeviLeviElt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLeviElementAdapted
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -105,7 +103,7 @@ theorem gen_iff {σ : E →ₐ[F] E} {B : Base F E} {d r s : ℕ} {W : Spc F E d
       refine ⟨a 0, ?_⟩
       rw [← hcol, ← ha, incV_mulVec]
       congr 2
-      funext i; by_cases hij : i = j <;> simp [incV, Pi.single_apply, hij]
+      funext i; by_cases hij : i = j <;> simp [incV, hij]
     choose a ha using h3
     refine ⟨∑ j, z j * a j, ?_⟩
     rw [← sub_eq_iff_eq_add', show mat u *ᵥ (incM F H'.ι *ᵥ z) - incM F H'.ι *ᵥ z = (mat u - 1) *ᵥ (incM F H'.ι *ᵥ z) by

@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementQ
-import Formalism.HermitianCurvature.StatementFr
-import Formalism.HermitianCurvature.StatementTB
 import Formalism.HermitianCurvature.StatementLE
 
 open Matrix MeasureTheory Filter Topology

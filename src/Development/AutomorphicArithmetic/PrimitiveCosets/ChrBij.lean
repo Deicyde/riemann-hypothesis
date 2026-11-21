@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.PrimitiveCosets.CoreAtH
 import Development.AutomorphicArithmetic.PrimitiveCosets.ToEBij
 

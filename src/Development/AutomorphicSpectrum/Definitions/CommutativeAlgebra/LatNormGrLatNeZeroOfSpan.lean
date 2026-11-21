@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.LogAbsVpOfNormalised
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.IdemDen
+import Mathlib.LinearAlgebra.Basis.Flag
+import Mathlib.RingTheory.DedekindDomain.Different
 
 noncomputable section
 
@@ -225,7 +228,7 @@ theorem repr_eq_trace (a : 𝓞 E) (k) :
     (((RingOfIntegers.basis E).repr a k : ℤ) : ℚ) = Algebra.trace ℚ E (dualInt E k * (a : E)) := by
   classical
   conv_rhs => rw [← (RingOfIntegers.basis E).sum_repr a]
-  simp only [map_sum, RingOfIntegers.coe_eq_algebraMap, Finset.mul_sum, map_zsmul, mul_smul_comm,
+  simp only [map_sum, Finset.mul_sum, map_zsmul, mul_smul_comm,
     ← integralBasis_apply, trace_dualInt]
   simp
 

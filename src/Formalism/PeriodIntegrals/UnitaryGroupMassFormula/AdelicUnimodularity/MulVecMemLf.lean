@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdelicUnimodularity.LamAfLeOhatL
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdelicUnimodularity.KCountable
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdelicUnimodularity.ExistsNatSmulMem
 
 noncomputable section
 
@@ -123,7 +125,7 @@ theorem bound_K (d D D1 : ℕ)
   have e : (I.fmat x *ᵥ (d • (Pi.single j (D1 • (1 : I.E ⊗[I.F] Af I.F)) : Fin I.n → I.E ⊗[I.F] Af I.F))) i =
       (d * D1) • I.fmat x i j := by
     rw [Matrix.mulVec_smul, Pi.smul_apply]
-    simp [Matrix.mulVec, dotProduct, Pi.single_apply, mul_smul_comm, smul_smul, mul_comm]
+    simp [Matrix.mulVec, dotProduct, Pi.single_apply, mul_comm]
     ring
   rw [e, smul_smul] at this
   exact this

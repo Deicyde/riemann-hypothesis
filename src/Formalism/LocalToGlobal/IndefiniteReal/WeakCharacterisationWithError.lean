@@ -1,5 +1,7 @@
-import Formalism.LocalToGlobal.IndefiniteReal.LinksExistW
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.ZeroPartEigenvalueConvention
+import Formalism.LocalToGlobal.IndefiniteReal.LinksStage
 
 noncomputable section
 

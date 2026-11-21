@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ComapBcComp
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqOfSecAlgTop
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsChartOfQuotient
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TensorBasisCriterion
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KerAffineHilbertTensorToSubschemeSectionsRestricStatement

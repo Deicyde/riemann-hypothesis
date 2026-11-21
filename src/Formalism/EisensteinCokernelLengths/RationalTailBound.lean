@@ -1,7 +1,5 @@
-import Mathlib
-import Formalism.GaussValuationBounds.Statement
+import BuildAid.Leniency.Open
 import Formalism.GaussValuationBounds.GaussUnit
-import Formalism.FrobeniusContraction.Statement
 
 noncomputable section
 

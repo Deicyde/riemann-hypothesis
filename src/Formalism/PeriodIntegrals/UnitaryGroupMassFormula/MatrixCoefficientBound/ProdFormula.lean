@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GGMirabolic
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.MatrixCoefficientBound.PermRepApply
 
 open Finset
@@ -28,7 +28,7 @@ theorem beta_insert (ψ : ∀ v, AddChar (Fq v) ℂ) {a : ι} {s : Finset ι} (h
     by_cases hw : w = a
     · subst hw
       simp
-    · simp [hw, Pi.mulSingle_eq_of_ne hw]
+    · simp [hw]
   rw [Finset.sum_eq_single (z a)]
   · unfold beta
     have hcond : (∀ w, w ∉ insert a s → z w = 1) ↔

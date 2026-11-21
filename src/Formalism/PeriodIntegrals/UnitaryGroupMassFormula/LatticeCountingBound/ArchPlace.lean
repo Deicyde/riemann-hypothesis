@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LatticeCountingBound.SepDefs
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LatticeSizeContinuity.GramLowOf
 
 noncomputable section
 
@@ -310,7 +310,7 @@ theorem archimedean_place_exists : ArchPlaceOf := by
     have h1 : ‖(amat I x y v δ *ᵥ w) i‖ ≤ ∑ j, ‖amat I x y v δ i j‖ * ‖w j‖ := by
       simp only [Matrix.mulVec, dotProduct]
       refine (norm_sum_le _ _).trans (le_of_eq ?_)
-      simp [norm_mul]
+      simp
     have h2 := Finset.sum_mul_sq_le_sq_mul_sq Finset.univ (fun j => ‖amat I x y v δ i j‖) (fun j => ‖w j‖)
     calc ‖(amat I x y v δ *ᵥ w) i‖ ^ 2 ≤ (∑ j, ‖amat I x y v δ i j‖ * ‖w j‖) ^ 2 := by
           nlinarith [h1, norm_nonneg ((amat I x y v δ *ᵥ w) i)]

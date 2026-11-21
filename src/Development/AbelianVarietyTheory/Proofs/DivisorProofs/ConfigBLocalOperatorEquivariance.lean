@@ -1,18 +1,13 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinRelAlt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinRel
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSplittingSplitOm
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicHeisenbergActsByLocalSchrodinger
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchrodingerPreservesSchwartzBruhat
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StandardAdelicCharacterNontrivialAtPlaces
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatAtVAtStable
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousAtPlace
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianTensorSkewHermitianLatticeOpenCompact
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsotropicSubspaceInvariantSchwartzStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianSkewLocalPlaceDataStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianSkewLocalPlaceCompatibleStatement
+import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK
@@ -140,7 +135,7 @@ theorem finRel_unique : GlobalTheory.FunPr.Hypotheses₂ → ∀ (F E : Type) [F
         rintro u (⟨z, rfl⟩ | ⟨y, rfl⟩) hat
         · refine hw _ ⟨z, 0, hat, ?_, ?_⟩
           · simpa [vz] using at0
-          · simp [vz]
+          · simp
         · refine hw _ ⟨0, y, ?_, hat, ?_⟩
           · simpa [vz] using at0
           · simp [vz]

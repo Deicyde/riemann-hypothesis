@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.RowsRestWordColumnUnitBaseTuple
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsMemberFormsNonempty
-import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.HostFacts
+import Mathlib.LinearAlgebra.LinearIndependent.BaseChange
 
 noncomputable section
 
@@ -76,7 +77,7 @@ theorem stdJ_single {L : Type} [Field L] (σ : L →+* ℂ) (n : ℕ) (i : Fin n
   ext k
   by_cases h : k = i
   · subst h; simp [stdJ]
-  · simp [stdJ, h, Pi.single_eq_of_ne h]
+  · simp [stdJ, h]
 
 theorem stdJ_basis {L : Type} [Field L] (σ : L →+* ℂ) (n : ℕ) {κ : Type} (b : Module.Basis κ L (Fin n → L)) :
     LinearIndependent ℂ (fun i => stdJ σ n (b i)) ∧

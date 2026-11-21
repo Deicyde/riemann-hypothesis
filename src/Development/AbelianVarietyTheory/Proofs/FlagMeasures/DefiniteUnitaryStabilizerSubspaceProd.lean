@@ -1,6 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ChartGen
-import Development.AbelianVarietyTheory.PublishedTheorems.DiscreteSeriesUnitary₂.MaxMass
+import Formalism.HermitianLattices.StatementMass
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
 open NumberField Matrix GlobalTheory.Mass Formalism.HermitianLatticesTheory
 open scoped ENNReal Classical
 
@@ -213,9 +218,9 @@ theorem _root_.GlobalTheory.Mass.StabSplit.main : ∀ (K V : Type) [Field K] [Nu
     let e := Submodule.prodEquivOfIsCompl U W hc
     let g : V ≃ₗ[K] V := e.symm.trans ((LinearEquiv.prodCongr a.1 c.1).trans e)
     have gU : ∀ u : U, g u = ((a.1 u : U) : V) := fun u => by
-      simp [g, e, Submodule.prodEquivOfIsCompl_symm_apply_left]
+      simp [g, e]
     have gW : ∀ w : W, g w = ((c.1 w : W) : V) := fun w => by
-      simp [g, e, Submodule.prodEquivOfIsCompl_symm_apply_right]
+      simp [g, e]
     have gsum : ∀ (u : U) (w : W), g ((u : V) + w) = ((a.1 u : U) : V) + (c.1 w : W) := by
       intro u w
       rw [map_add, gU, gW]

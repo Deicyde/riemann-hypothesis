@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.AdmissibleDesigns.YtTargetOf
-import Formalism.WachLatticeTwists.CoprimeLiftBounds.CoprimeLiftProofs.FirstSummandActionMem
+import Mathlib.Algebra.NoZeroSMulDivisors.Pi
 
 variable [hT2Core : Fact ReciprocityTheory.ChartRestriction.T2.Core]
 
@@ -24,7 +26,7 @@ variable (O) in
 def lRep : Representation O GG A where
   toFun g := LinearMap.mulLeft O (uElt r χ g)
   map_one' := LinearMap.ext fun a => by simp [uElt_one]
-  map_mul' g h := LinearMap.ext fun a => by simp [uElt_mul, mul_assoc]
+  map_mul' g h := LinearMap.ext fun a => by simp [uElt_mul]
 
 abbrev aVG : Representation LL G (TrV e (MK (O := O) A)) :=
   repL e (locRep (resRep (lRep O r χ) Dw)) eG.symm.toMonoidHom
@@ -36,7 +38,7 @@ theorem projection_equivariant (g : GG) (m : ↥(Ymod r χ E) × O) : j1 r χ E 
   have hu : ((↑(χ g)⁻¹ : T') • r g : A) = uElt r χ g := by simp [uElt]
   simp only [j1, ytEmb, ytRep, lRep, LinearMap.comp_apply, LinearMap.fst_apply, LinearMap.coe_mk, AddHom.coe_mk,
     MonoidHom.coe_mk, OneHom.coe_mk, LinearMap.mulLeft_apply, Submodule.coe_add, Submodule.coe_smul_of_tower]
-  simp [yY, ycoc, hu, sub_mul, smul_sub, mul_add, mul_smul_comm, smul_eq_mul]
+  simp [yY, ycoc, hu, sub_mul, smul_sub, mul_add, smul_eq_mul]
   all_goals first | abel1 | exact trivial
 
 def jK : MK (O := O) (↥(Ymod r χ E) × O) →ₗ[O] MK (O := O) A := liftK (mkK ∘ₗ j1 r χ E)
@@ -239,7 +241,7 @@ theorem fixK (hD : TruncatedSeriesCountingIdentities.SemisimpleDecomposition i r
     · funext c
       by_cases hc : c = ⟨0, ht⟩
       · subst hc
-        simp [← map_mul]
+        simp
       · simp [Pi.single_apply, hc]
 
 theorem lineW_of (hD : TruncatedSeriesCountingIdentities.SemisimpleDecomposition i r ρ π) {w : HeightOneSpectrum (𝓞 D.host.E)}

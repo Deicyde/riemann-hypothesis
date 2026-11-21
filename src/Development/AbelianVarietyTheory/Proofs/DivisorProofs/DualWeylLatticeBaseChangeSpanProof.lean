@@ -1,13 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NabBaseChange
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.TransportedLatticeLocalizationFreeLeCoefficientS
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.NablaDeltaOperatorLatticePreserved
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.TensorLatSpan
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.SpanMapNabKDelK
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsSmulMemOfLeLocP
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.TensorMapDescent
 import Formalism.LocalToGlobal.Columns.CoefModAt
-import Formalism.LocalToGlobal.Columns.CoefficientsModP
 
 open NumberField IsDedekindDomain Formalism.L2.DIV Formalism.BasicNotions MvPolynomial
 open scoped Matrix
@@ -118,7 +117,7 @@ theorem nabStd_le_span_map {ι : Type} [Fintype ι] {n : ℕ} (f : K₀ →+* K)
 theorem map_smul_int {σ : Type} (f : K₀ →+* K) (t : 𝓞 K₀) (P : MvPolynomial σ K₀) :
     RingOfIntegers.mapRingHom f t • MvPolynomial.map f P = MvPolynomial.map f (t • P) := by
   ext m
-  simp only [MvPolynomial.coeff_smul, MvPolynomial.coeff_map]
+  simp only [MvPolynomial.coeff_map]
   change ((RingOfIntegers.mapRingHom f t : 𝓞 K) : K) * f (P.coeff m) = f ((t : K₀) * P.coeff m)
   rw [map_mul]
   rfl

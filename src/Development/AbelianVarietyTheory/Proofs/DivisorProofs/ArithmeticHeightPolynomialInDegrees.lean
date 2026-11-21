@@ -1,13 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OfSwap2
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SwapSumSwap
-import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemConeOfMem
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormsOfInduces
-import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.ExistsLinearMapMultilinearMapBaseChange
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AmpleSectionsAvoidClosedPoints
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ClosedSubschemeModLProjective
 open NumberField MvPolynomial Filter Topology Formalism.BasicNotions Formalism.MainNotions Formalism.DegreeFormula GlobalTheory.FlagPoly GlobalTheory.Mean4 GlobalTheory.Mean4O GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.CovTest GlobalTheory.Published
@@ -26,7 +17,7 @@ theorem pderiv_lin {ι : Type} [Fintype ι] (x : ι → ℝ) (j : ι) :
   rw [lin, map_sum, Finset.sum_eq_single j]
   · simp
   · intro b _ hb
-    simp [MvPolynomial.pderiv_X, Pi.single_apply, hb, hb.symm]
+    simp [MvPolynomial.pderiv_X, hb]
   · simp
 
 theorem iterD_lin_pow {ι : Type} [Fintype ι] (x : ι → ℝ) (N : ℕ) : ∀ (m : ℕ) (a : Fin m → ι),

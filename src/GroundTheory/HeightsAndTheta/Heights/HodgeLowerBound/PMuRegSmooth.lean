@@ -1,7 +1,5 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.StatementsMuRegSmooth
-import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.StatementsVertFactorPos
-import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.StatementsHermExtend
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.StatementsProjSmoothAlong
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.StatementsVertFactorSmooth
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.PTopNPoly

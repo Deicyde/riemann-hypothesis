@@ -1,4 +1,13 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementFr
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.BitVec
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace Formalism.FourierDecayAlt.P.Fr11
 
@@ -160,7 +169,7 @@ lemma Kw_cons {r : ℕ} (L : LevelData A r) (l : Letter ℂ S) (w : List (Letter
   rw [Matrix.diagonal_add]
   congr 1
   funext e
-  by_cases h : e l.intersection_update_fsHerm_neg_one = 0 <;> simp [List.filter_cons, h]
+  by_cases h : e l.intersection_update_fsHerm_neg_one = 0 <;> simp [h]
 
 lemma letterSum_step (l : Letter ℂ S) (Y : ℂ) (hY : Y ≠ l.pt) :
     ∀ (w v : List (Letter ℂ S)), (∀ l' ∈ w, l.intersection_update_fsHerm_neg_one ≠ l'.intersection_update_fsHerm_neg_one ∧ Y ≠ l'.pt ∧ l.pt ≠ l'.pt) →

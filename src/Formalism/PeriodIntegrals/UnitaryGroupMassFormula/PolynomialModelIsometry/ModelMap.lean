@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.PolynomialModelIsometry.IsPolyMon
+import Formalism.GradedWeylDivisibility.DualWeylDominanceOf
+import Mathlib.RingTheory.SimpleRing.Principal
 
 noncomputable section
 
@@ -56,7 +60,7 @@ lemma evM_colAdd {N : ℕ} (l j : Fin N) (c : ℂ) (A : Matrix (Fin N) (Fin N) �
   split_ifs with h
   · simp [Matrix.mul_apply, Matrix.single_apply, h, mul_comm]
   · have h' : j ≠ v.2 := fun e => h e.symm
-    simp [Matrix.mul_apply, Matrix.single_apply, h']
+    simp [Matrix.mul_apply, h']
 
 lemma evM_scale {N : ℕ} (t : Fin N → ℂ) (A : Matrix (Fin N) (Fin N) ℂ)
     (f : MvPolynomial (Fin N × Fin N) ℂ) :

@@ -1,8 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.Objects
-import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.UIObjects
-import ReciprocityTheory.AnalyticForms.PotentialTheory.ProjectiveLinePartitionContinuousCoe
-import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.EnergySum
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.AnalyticLimit

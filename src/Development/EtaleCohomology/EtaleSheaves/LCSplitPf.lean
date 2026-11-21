@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.EtaleDegreeZeroCohomologyEquivLocallyConstantFun
+import Mathlib.RingTheory.PiTensorProduct
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry Opposite

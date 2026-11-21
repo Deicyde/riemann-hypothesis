@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.NumberField
+import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.Proportional
 
 noncomputable section
 

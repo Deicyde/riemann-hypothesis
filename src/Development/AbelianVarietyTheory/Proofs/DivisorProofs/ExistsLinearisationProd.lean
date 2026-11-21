@@ -1,11 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ValCalc
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompEqOneOfTransl
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ConstGen
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLinearisationInvariantRigidifiedBundle
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.GlobalFnsHolds
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ClsLinCombSingle
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.AbelianSchemeGerms
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.LBCorr
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.UPel.HT
 
@@ -32,13 +28,13 @@ theorem exists_linearisation_prod : ∀ (X : Scheme.{0}) (L : LB X), L.IsLB → 
   have f1 := val_corr hJ (hc₁ a c) (𝟙 X)
   have f2 := val_corr hJ (hc₂ b d) (ρ₁ (a * c))
   have g := val_corr hJ (hc c b) (ρ₁ a)
-  try simp only [val_mul hJ, val_pull hJ, Prod.mk_mul_mk, Category.id_comp, Category.assoc, hρ, hρ₁] at e0
-  try simp only [val_mul hJ, val_pull hJ, Prod.mk_mul_mk, Category.id_comp, Category.assoc, hρ, hρ₁] at e1
-  try simp only [val_mul hJ, val_pull hJ, Prod.mk_mul_mk, Category.id_comp, Category.assoc, hρ, hρ₁] at e2
-  try simp only [val_mul hJ, val_pull hJ, Prod.mk_mul_mk, Category.id_comp, Category.assoc, hρ, hρ₁] at f1
-  try simp only [val_mul hJ, val_pull hJ, Prod.mk_mul_mk, Category.id_comp, Category.assoc, hρ, hρ₁] at f2
-  try simp only [val_mul hJ, val_pull hJ, Prod.mk_mul_mk, Category.id_comp, Category.assoc, hρ, hρ₁] at g
-  try simp only [val_mul hJ, val_pull hJ, Prod.mk_mul_mk, Category.id_comp, Category.assoc, hρ, hρ₁]
+  try simp only [val_mul hJ, val_pull hJ, Category.id_comp, hρ₁] at e0
+  try simp only [val_mul hJ, val_pull hJ, Category.id_comp] at e1
+  try simp only [val_mul hJ, val_pull hJ, Category.id_comp, Category.assoc, hρ] at e2
+  try simp only [val_mul hJ, val_pull hJ, Category.id_comp] at f1
+  try simp only [val_mul hJ, val_pull hJ, Category.assoc, hρ₁] at f2
+  try simp only [val_mul hJ, val_pull hJ] at g
+  try simp only [val_mul hJ, val_pull hJ, Prod.mk_mul_mk, Category.id_comp, hρ]
   rw [e0, e1, e2, f1, f2, ← hcomm c b, _root_.mul_assoc, _root_.mul_assoc, ← _root_.mul_assoc (val (v₁ c) (ρ₁ a) y J), g]
   simp only [_root_.mul_assoc]
 end GlobalTheory.ProdLin

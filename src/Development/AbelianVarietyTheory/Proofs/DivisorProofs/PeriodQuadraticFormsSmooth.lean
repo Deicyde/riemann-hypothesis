@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ReQuad
 import ReciprocityTheory.AnalyticForms.AnalyticCharts.Osgood
+import Mathlib.RingTheory.SimpleRing.Principal
 open Matrix GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe GlobalTheory.ThetaMet
 open scoped Real ContDiff
 

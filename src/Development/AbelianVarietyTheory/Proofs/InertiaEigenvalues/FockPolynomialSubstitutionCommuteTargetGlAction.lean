@@ -1,15 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.LengthPosOfPosDef
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.AdjFormula
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.ParamsEx
-import Formalism.LocalToGlobal.IndefiniteReal.LinksStage
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsNormLeHeightPow
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.HoweUnram
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.GaussianBinomialClosedForm
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.SqNormIntegralFundamentalDomainEqL2NormSq
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.ToUnitsCompToCircle
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ActOfMemGfC
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.RaisingLoweringOperators
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.TranslateMemCoefLatFn
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix
 open Formalism.L2.Theta Formalism.L2.DIV Formalism.L2.Indef
 open Formalism.IndefR.Lev Formalism.IndefR.Mult Formalism.IndefR.Datum Formalism.IndefR.Cx Formalism.IndefR.Links
@@ -38,18 +30,18 @@ theorem pderiv_fockSubst_X (p : D.what₂.Tau → ℕ) (g : GLR D n) (τ : D.wha
     (u : FVar D m n) :
     pderiv (τ, i, b) (fockSubst p g (X u)) = if u.1 = τ ∧ u.2.1 = i then C (rowMat p g τ i u.2.2 b) else 0 := by
   rw [fockSubst_X]
-  simp only [map_sum, Derivation.leibniz, pderiv_C, smul_zero, add_zero, pderiv_X, smul_eq_mul]
+  simp only [map_sum, Derivation.leibniz, pderiv_C, pderiv_X, smul_eq_mul]
   split_ifs with h
   · obtain ⟨h1, h2⟩ := h
     subst h1; subst h2
     rw [Finset.sum_eq_single b]
-    · simp [Pi.single_apply]
-    · intro c _ hc; simp [Pi.single_apply, Prod.ext_iff, hc]
+    · simp
+    · intro c _ hc; simp [Prod.ext_iff, hc]
     · simp
   · refine Finset.sum_eq_zero fun c _ => ?_
     have : (u.1, u.2.1, c) ≠ (τ, i, b) := by
       intro e; simp [Prod.ext_iff] at e; exact h ⟨e.1, e.2.1⟩
-    simp [Pi.single_apply, this]
+    simp [this]
 
 theorem chain_X (p : D.what₂.Tau → ℕ) (g : GLR D n) (τ : D.what₂.Tau) (i : Fin m) (c : Fin n)
     (C' : Matrix (Fin n) (Fin n) ℂ) (hC : rowMat p g τ i * C' = 1) (u : FVar D m n) :
@@ -71,17 +63,17 @@ theorem chain_X (p : D.what₂.Tau → ℕ) (g : GLR D n) (τ : D.what₂.Tau) (
     by_cases h3 : u3 = c
     · subst h3; simp
     · have : ((u1, u2, u3) : FVar D m n) ≠ (u1, u2, c) := by simp [h3]
-      simp [Pi.single_apply, this, Matrix.one_apply, h3]
+      simp [this, h3]
   · simp only [if_neg h, smul_zero, Finset.sum_const_zero]
     have : u ≠ (τ, i, c) := by
       rintro rfl; exact h ⟨rfl, rfl⟩
-    simp [Pi.single_apply, this]
+    simp [this]
 
 theorem chain (p : D.what₂.Tau → ℕ) (g : GLR D n) (τ : D.what₂.Tau) (i : Fin m) (c : Fin n)
     (C' : Matrix (Fin n) (Fin n) ℂ) (hC : rowMat p g τ i * C' = 1) (P : PolF D m n) :
     fockSubst p g (pderiv (τ, i, c) P) = ∑ b, C' b c • pderiv (τ, i, b) (fockSubst p g P) := by
   induction P using MvPolynomial.induction_on with
-  | C a => simp [pderiv_C]
+  | C a => simp
   | add P Q hP hQ =>
     simp only [map_add, hP, hQ, smul_add, Finset.sum_add_distrib]
   | mul_X P u ih =>

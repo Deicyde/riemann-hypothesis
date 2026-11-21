@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.SpanPowerMembership.UrRing
+import Mathlib.Analysis.Normed.Field.Instances
+import Mathlib.NumberTheory.Padics.Complex
+import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
 
 noncomputable section
 

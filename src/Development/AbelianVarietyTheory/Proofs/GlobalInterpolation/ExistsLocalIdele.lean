@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.KernelLattices.ThDistC
-import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.IndexExponentDegree
-import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.EmbHInjective
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ExistsSupportedIdele
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsFiniteAdeleBaseChangeEquiv
 

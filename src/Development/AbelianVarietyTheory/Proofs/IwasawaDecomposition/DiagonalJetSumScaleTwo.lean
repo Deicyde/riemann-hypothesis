@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MulCoeEqZero
-import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.FormallyUnramifiedOfTangentMapInjective
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
 
 set_option autoImplicit false
 
@@ -18,13 +18,13 @@ namespace GlobalTheory.ExpUniqCh0
 theorem jetMap_mk_X' {S : Type} [CommRing S] {α β : Type} {m : ℕ} (φ : α → MvPolynomial β S)
     (hφ : ∀ i, φ i ∈ orig S β) (r : α) :
     jetMap (m := m) φ hφ (Ideal.Quotient.mk _ (MvPolynomial.X r)) = Ideal.Quotient.mk _ (φ r) := by
-  simp only [jetMap, liftJet, Ideal.Quotient.liftₐ_apply, Ideal.Quotient.lift_mk]
+  simp only [jetMap, liftJet, Ideal.Quotient.liftₐ_apply]
   simp
 
 theorem jetMap_mk' {S : Type} [CommRing S] {α β : Type} {m : ℕ} (φ : α → MvPolynomial β S)
     (hφ : ∀ i, φ i ∈ orig S β) (P : MvPolynomial α S) :
     jetMap (m := m) φ hφ (Ideal.Quotient.mk _ P) = Ideal.Quotient.mk _ (MvPolynomial.aeval φ P) := by
-  simp only [jetMap, liftJet, Ideal.Quotient.liftₐ_apply, Ideal.Quotient.lift_mk]
+  simp only [jetMap, liftJet, Ideal.Quotient.liftₐ_apply]
   rfl
 
 end GlobalTheory.ExpUniqCh0
@@ -37,8 +37,8 @@ theorem GlobalTheory.ExpUniqCh0.diag_comp_jet : ∀ {S : Type} [CommRing S] {ρ 
   · apply Ideal.Quotient.algHom_ext
     apply MvPolynomial.algHom_ext
     intro r
-    simp only [AlgHom.comp_apply, Ideal.Quotient.mkₐ_eq_mk, jetSum, jetScale, diag, jetMap_mk_X', jetMap_mk',
-      map_sum, map_mul, MvPolynomial.aeval_X, MvPolynomial.aeval_C, Fin.sum_univ_two]
+    simp only [AlgHom.comp_apply, Ideal.Quotient.mkₐ_eq_mk, jetSum, jetScale, diag, jetMap_mk',
+      map_mul, MvPolynomial.aeval_X, Fin.sum_univ_two]
     rw [← map_mul, map_add, MvPolynomial.aeval_X, MvPolynomial.aeval_X, ← two_mul]
     congr 1
   · apply Ideal.Quotient.algHom_ext

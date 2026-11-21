@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.PeriodIntegrals.ScPiExists
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.HermitianFrameExistence.HJSumSmulRight
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.HermitianFrameExistence.PosOfPerp
 
 noncomputable section

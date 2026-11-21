@@ -1,12 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsHtFunGenericIff
-import Development.AbelianVarietyTheory.Definitions.Divisors.HypothesesX
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsX
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ScholzeWeinsteinB
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsMonomialEqProd
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ArTopTrue
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagAtWholeSymbolReindexedStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairStatementOfHeightAlterationStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ChainStatementOfPublishedInputsStatement
@@ -16,6 +10,8 @@ import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdmissibleModelComm
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenAwayAgree
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LetterHeightDifferenceBounded
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolynomialNumeratorLinearExtension
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.FiniteTwistingNotIsGenerator
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.AdmEx
 
 open CategoryTheory AlgebraicGeometry NumberField IsDedekindDomain ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Pj GlobalTheory GlobalTheory.Cartier GlobalTheory.CechPic GlobalTheory.ArInt GlobalTheory.ProjVar GlobalTheory.TrueGeo GlobalTheory.Mean4O GlobalTheory.CoverNorm GlobalTheory.ShFam GlobalTheory.ShFam.Pad GlobalTheory.VertForm GlobalTheory.TrivFlag GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.TrueCx
@@ -796,7 +792,7 @@ theorem sum_kill (hX : HypothesesXH) (h2 : Hypotheses2) (hH : HypothesesH) (hRA 
 theorem rename_lamA : rename (Sum.inl : _ → Vr O) (lamA D.what₂.Tau O.N O.j) = dl O ℝ + ∑ k, X (.inr (.inr k)) := by
   rw [dl, sub_add_cancel, lamA, map_sum, Fintype.sum_prod_type]
   refine Finset.sum_congr rfl fun τ _ => ?_
-  simp only [pHigh, pLow, map_sub, map_sum, pow_one, rename_X, Finset.sum_filter, ← Finset.sum_sub_distrib]
+  simp only [pHigh, pLow, map_sub, map_sum, pow_one, Finset.sum_filter, ← Finset.sum_sub_distrib]
   refine Finset.sum_congr rfl fun i _ => ?_
   by_cases h : (i : ℕ) < O.j
   · simp [h, not_le.2 h]
@@ -815,7 +811,7 @@ theorem mixEv_empty (R : ℝ) (c : O.s.Comp) (P : Pol D.what₂.Tau O.N) :
   simp only [AlgHom.comp_apply] at e2
   rw [map_mul, e2, map_mul, map_mul, rename_rename]
   congr 1
-  simp only [ArIn.mixEv, aeval_X, hT, pw, map_sum, map_pow, rename_X, map_mul, algHom_C, fa_inr]
+  simp only [ArIn.mixEv, aeval_X, hT, pw, map_sum, map_pow, rename_X, algHom_C, fa_inr]
   norm_num
   rfl
 

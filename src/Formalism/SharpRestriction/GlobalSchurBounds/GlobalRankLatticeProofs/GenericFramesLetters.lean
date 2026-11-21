@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.SecondPropositionEveryLocalisation
 
 noncomputable section
@@ -329,7 +329,7 @@ private theorem two_pow_dvd_sq_pm_one_iff_of_odd (x : ℤ) (hx : Odd x) (N : ℕ
   obtain ⟨k, rfl⟩ := hx
   rcases N with _ | _ | n
   · simp
-  · simp only [pow_one, Nat.sub_self, pow_zero, one_dvd, or_true, iff_true]
+  · simp only [Nat.sub_self, pow_zero, one_dvd, or_true, iff_true]
     left
     exact ⟨2 * k ^ 2 + 2 * k, by ring⟩
   · rw [show n + 1 + 1 - 1 = n + 1 by omega]

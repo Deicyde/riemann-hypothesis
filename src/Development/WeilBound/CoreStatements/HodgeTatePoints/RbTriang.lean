@@ -1,8 +1,5 @@
-import Mathlib
-import ReciprocityTheory.DualLattices.CotangentSurjective
+import BuildAid.Leniency.Open
 import ReciprocityTheory.DualLattices.UpSmith
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.IsTight
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.StepOrderRes
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.ComapFgOfValuationRing
 
 open ReciprocityTheory.PGsh.L2 ReciprocityTheory.PGsh.Up GlobalTheory.CompanionTheory.Ar.GR

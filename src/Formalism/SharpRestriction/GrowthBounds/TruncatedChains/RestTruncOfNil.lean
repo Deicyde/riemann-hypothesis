@@ -1,4 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.TruncatedChains.RestPair
+import Formalism.SharpRestriction.GrowthBounds.RootWeights.NontrivialIsotypicWeightZeroKilled
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
 
 noncomputable section
 
@@ -128,8 +135,8 @@ theorem tens_rel {E : GLOps n K V} (hE : IsGLRep E) (a b c d : Fin n) :
   simp only [LinearMap.sub_apply, Module.End.mul_apply] at hc
   simp only [LinearMap.sub_apply, Module.End.mul_apply, Pi.sub_apply, tensOps_apply, map_add]
   split_ifs at hc ⊢ <;> subst_vars <;>
-    (try simp only [tensOps_apply, LinearMap.zero_apply, Pi.zero_apply, map_zero, add_zero, zero_add,
-      sub_zero, LinearMap.sub_apply] at hc ⊢) <;>
+    (try simp only [tensOps_apply, LinearMap.zero_apply, Pi.zero_apply, map_zero, add_zero,
+      sub_zero] at hc ⊢) <;>
     (try split_ifs at hc ⊢) <;> (try subst_vars) <;>
     first
     | abel1

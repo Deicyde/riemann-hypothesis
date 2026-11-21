@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LatticeTheta.LatticeThetaProofs.TorusProjIsOpenQuotientMap
+import Formalism.LatticeTheta.LatticeSummableDecay
+import Mathlib.Dynamics.Ergodic.Action.Regular
 
 open MeasureTheory Set Complex
 open scoped RealInnerProductSpace

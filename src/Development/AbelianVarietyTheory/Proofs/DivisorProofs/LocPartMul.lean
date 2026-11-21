@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.MaxWeightGL1EqOne
+import BuildAid.Leniency.Variable
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlockParOpp
 
 noncomputable section

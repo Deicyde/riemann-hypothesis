@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.DeltaInvariantLattices
-import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.GradedSeries
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.EqZeroOfSumSmul
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SpanIsLinesOfGraded
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CoeffEqOfApply

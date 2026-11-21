@@ -1,8 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.DistinguishedUnitIdeals.WordConsts
 import Formalism.DistinguishedUnitIdeals.FinalE
-import Formalism.DistinguishedUnitIdeals.DescentLemmasAllHold
 import Formalism.DistinguishedUnitIdeals.DistinguishedOrderProofs.ArcLiftOfLocalizationData
+import Formalism.DistinguishedUnitIdeals.DistinguishedOrderProofs.DescentEstimateDownUp
+import Formalism.DistinguishedUnitIdeals.DistinguishedOrderProofs.LevelsModConstIffOfDownDown
+import Formalism.DistinguishedUnitIdeals.DistinguishedOrderProofs.LevelsModConstIffOfNoDown
+import Formalism.DistinguishedUnitIdeals.DistinguishedOrderProofs.LinExtEqZeroOfMemExt
 
 namespace Formalism.ExponentWindows.E.Full
 

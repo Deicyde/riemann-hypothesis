@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.TermOpStmt
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.NormCore
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.NormAsm
@@ -20,7 +21,7 @@ def opOf (x : Formalism.L2.SG.PackageTie.HS Wq Wp) : Wq →L[ℂ] Wp :=
 
 theorem opOf_apply (x : Formalism.L2.SG.PackageTie.HS Wq Wp) (e : Wq) :
     opOf x e = ∑ i, inner ℂ (stdOrthonormalBasis ℂ Wq i) e • x i := by
-  simp [opOf, ContinuousLinearMap.sum_apply]
+  simp [opOf]
 
 theorem opOf_add (x y : Formalism.L2.SG.PackageTie.HS Wq Wp) : opOf (x + y) = opOf x + opOf y := by
   ext e

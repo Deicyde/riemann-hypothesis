@@ -1,4 +1,5 @@
-import Formalism.LocalToGlobal.Divisibility.CoefModLemmas
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.CoefficientsModP.FkPderivBlockEmbNe
 import Formalism.LocalToGlobal.Columns.CoefficientsModP.PairingNondegenerateHolds
 
@@ -149,7 +150,7 @@ theorem pairP_trivial (lam : ι → DomWeight n) (F F' : Pol K ι n) :
     @pairP K _ ι _ n starRingOfComm lam (fun _ => 1) F F' = pairB lam F F' := by
   rw [pairB_apply]
   simp only [pairP, LinearMap.smul_apply, LinearMap.compl₂_apply, AlgHom.toLinearMap_apply, fockL,
-    LinearMap.mk₂'ₛₗ_apply, pb_gramTw_one, pb_blockAct_one_tr, pb_fockS_triv, pb_extNorm_triv, smul_eq_mul,
+    pb_gramTw_one, pb_blockAct_one_tr, pb_extNorm_triv, smul_eq_mul,
     one_div]
   rfl
 
@@ -283,7 +284,7 @@ private theorem actP_lamVec_vecP {K : Type} [Field K] (h : Unit → GL (Fin 2) K
   have h0 : (lamVec : DomWeight 2).detShift = 0 := by rfl
   have hd : detTwK (fun _ : Unit => lamVec) h = 1 := by
     simp [detTwK, detPow, h0]
-  simp only [actP, LinearMap.smul_apply, hd, one_smul, AlgHom.toLinearMap_apply, trAct, vecP, map_sum, map_mul,
+  simp only [actP, hd, one_smul, AlgHom.toLinearMap_apply, trAct, vecP, map_mul,
     Formalism.GradedWeylDivisibility.blockAct, MvPolynomial.aeval_C, MvPolynomial.aeval_X, MvPolynomial.algebraMap_eq,
     Matrix.transpose_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, map_add]
   ring

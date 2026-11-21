@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TranslationInv
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PullFullL
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlatFormClosedOnCover
-import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.DifferentiableOnOfTendstoLocallyUniformlyOn
 open Matrix MeasureTheory Set Filter Topology
 open GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe GlobalTheory.TorsionForm GlobalTheory.TorsionForm.OneVec
 open scoped Real ContDiff
@@ -101,7 +100,7 @@ theorem fderiv_per_apply {τ : E → Matrix (Fin g) (Fin g) ℂ} {b : E}
       fun l _ => ((hτ l k).hasFDerivAt.const_mul _)).add_const _
   rw [(hasFDerivAt_pi.2 hk).fderiv]
   funext k
-  simp [ContinuousLinearMap.sum_apply, smul_eq_mul]
+  simp
 
 theorem comp_fst {W : Type} [NormedAddCommGroup W] [NormedSpace ℝ W] {f : E → W} {b : E}
     {z : Fin g → ℂ} (hf : DifferentiableAt ℝ f b) :

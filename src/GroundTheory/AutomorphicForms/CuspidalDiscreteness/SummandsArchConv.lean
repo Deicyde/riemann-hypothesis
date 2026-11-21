@@ -1,6 +1,9 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.CuspidalDiscreteness.SummandsBase
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.CuspidalDiscreteness.SmoothingFinite
+import GroundTheory.AutomorphicForms.AutomorphicFormSpaces.GKStable
+import GroundTheory.AutomorphicForms.DiscreteSpectrumAbstract
+import GroundTheory.AutomorphicForms.GKModules.Garding
 
 open MeasureTheory Set Filter Topology Function
 open scoped InnerProductSpace ContDiff

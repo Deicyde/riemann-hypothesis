@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.Divisibility.ModuliIntegralCharts
-import Development.AbelianVarietyTheory.BlockTheory.JetGauges.TraceFormDualSystem
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.FunctionalValuesNonempty
 
 noncomputable section

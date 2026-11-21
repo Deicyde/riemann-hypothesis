@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.PhiItSmul
 import Formalism.SharpRestriction.LevelLetterCocycles.LiftFOf
 

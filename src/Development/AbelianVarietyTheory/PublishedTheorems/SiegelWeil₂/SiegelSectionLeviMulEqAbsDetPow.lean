@@ -1,10 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.SiegelWeil₂.EisensteinResidue
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.AdelicIwasawaDecompositionWittIsotropicStabilize
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsDualFamilyOfIsLattice
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ExtensionAdeleRealComponentsCmType
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.ExistsIsParamFunOne
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.SphericalSectionOfMemCompact
+import Development.AbelianVarietyTheory.Definitions.LatticeFrames.SphericalEisensteinSeriesOnGroup
 
 noncomputable section
 
@@ -249,7 +249,7 @@ theorem hE_split (x y : Fin V.rank → D.host.E) : hE D.sp.cm.sig V.gram x y =
   have e : V.gram = d.qYᴴ * d.qX + d.q0ᴴ * (V₀.gram * d.q0) + d.qXᴴ * d.qY := rat_injective (by
     simp only [rat_add, rat_mul, rat_conjTranspose]
     exact d.gA_eq)
-  simp only [hE_eq, Matrix.one_mulVec, Matrix.star_mulVec, ← Matrix.dotProduct_mulVec, Matrix.mulVec_mulVec,
+  simp only [hE_eq, Matrix.star_mulVec, ← Matrix.dotProduct_mulVec, Matrix.mulVec_mulVec,
     ← dotProduct_add, ← Matrix.add_mulVec, Matrix.one_mul]
   rw [← e]
 

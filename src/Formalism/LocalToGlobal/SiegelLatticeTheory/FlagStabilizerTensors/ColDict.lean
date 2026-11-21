@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.ParametersTermRelations
 import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.ConcreteSettingExists
-import Formalism.LocalToGlobal.HermitianForms.FormsTied
 import Formalism.LocalToGlobal.GroupLattices.DownNaturalLevelZero
 
 noncomputable section

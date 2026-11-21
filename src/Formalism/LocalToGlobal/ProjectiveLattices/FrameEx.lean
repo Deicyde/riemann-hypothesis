@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.FibreUniformisationLevelTwo
-import Formalism.LocalToGlobal.ProjectiveLattices.UnifGen
 
 noncomputable section
 
@@ -297,7 +298,7 @@ theorem hermC_dot (τ : E →+* ℂ) (G : Matrix (Fin r) (Fin r) E) (u w : Fin r
     hermC τ G u w = u ⬝ᵥ ((G.map τ) *ᵥ star w) := by
   first
     | rfl
-    | (unfold hermC; simp [Matrix.mulVec, dotProduct, Finset.mul_sum, mul_assoc, mul_comm, mul_left_comm]; done)
+    | (unfold hermC; simp [Matrix.mulVec, dotProduct, Finset.mul_sum, mul_assoc]; done)
 
 theorem star_mulVec_fx (Γ : Matrix (Fin r) (Fin r) ℂ) (w : Fin r → ℂ) :
     star (Γ *ᵥ w) = (Γ.map (starRingEnd ℂ)) *ᵥ star w := by

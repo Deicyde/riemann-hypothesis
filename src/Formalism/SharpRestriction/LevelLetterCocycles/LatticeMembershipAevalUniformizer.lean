@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.InId0OfMem
-import Formalism.SharpRestriction.LevelLetterCocycles.DvOZeroHigh
 
 noncomputable section
 
@@ -78,7 +79,7 @@ theorem nl_of_pi0Lam (hR : Formalism.MainNotions.UnusedSlot80.ToolsR.RingP W) [I
     · simp only [lE, pow_zero, one_mul]
       rw [Finset.sum_eq_single k]
       · simp
-      · intro i _ hik; simp [Pi.single_apply, Ne.symm hik]
+      · intro i _ hik; simp [Ne.symm hik]
       · simp
 
 variable [IsDomain O]

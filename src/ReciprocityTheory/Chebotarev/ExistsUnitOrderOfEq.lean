@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import ReciprocityTheory.Chebotarev.CycStatement
 import ReciprocityTheory.Chebotarev.CrossGal
 import ReciprocityTheory.Chebotarev.CrossLift
@@ -6,6 +6,8 @@ import ReciprocityTheory.Chebotarev.CrossFix
 import ReciprocityTheory.Chebotarev.CrossFrobE
 import ReciprocityTheory.Chebotarev.CrossRes
 import ReciprocityTheory.Chebotarev.CyclotomicIrreducibleOfForallIsUnramifiedAt
+import Mathlib.NumberTheory.PrimesCongruentOne
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open NumberField Polynomial
 

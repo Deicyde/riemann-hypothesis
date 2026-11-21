@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.NormsFree
 import Formalism.LocalToGlobal.ProjectiveLattices.IntegrableOnIntegrand
+import Mathlib.NumberTheory.NumberField.InfiniteAdeleRing
+import Mathlib.RingTheory.DedekindDomain.FiniteAdeleRing
 
 noncomputable section
 

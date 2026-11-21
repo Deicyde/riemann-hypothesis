@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.DefsCS
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.RationalPointsLeHolds
 
 noncomputable section
 

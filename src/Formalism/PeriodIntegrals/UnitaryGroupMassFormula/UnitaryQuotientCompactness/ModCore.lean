@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnitaryQuotientCompactness.ModBase
+import Mathlib.MeasureTheory.Group.ModularCharacter
 
 open MeasureTheory Matrix Topology
 open scoped ENNReal NNReal Pointwise

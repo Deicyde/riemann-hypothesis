@@ -1,4 +1,5 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.MaxWeightGL1EqOne
+import BuildAid.Leniency.Variable
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 noncomputable section
 

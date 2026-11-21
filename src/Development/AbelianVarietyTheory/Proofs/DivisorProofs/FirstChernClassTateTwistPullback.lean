@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ClsDivSymmPair
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatrixIntegralityFromCompletePointsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatrixRowNormPosOfUnitStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TriangularMatrixChainPointsStatement

@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipLeStabP
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SkewAdaptedPlanePairOfPair
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviTorusHyperbolicPairStatement
 
 open scoped TensorProduct NNReal Matrix
@@ -47,8 +45,8 @@ theorem tv_unitary (hcc : ∀ z, c (c z) = z) (hj : ∀ i k, c (j k i) = -j i k)
     have : (fun l => c ((Pi.single k (1 : R) : Fin d → R) l)) = Pi.single k 1 := by
       ext l; by_cases hl : l = k
       · subst hl; simp
-      · simp [Pi.single_apply, hl]
-    rw [this]; simp [mulVec_single_one]
+      · simp [hl]
+    rw [this]; simp
   rw [sesq_mulVec, hs, sesq] at h
   rw [h, hs j]
 
@@ -67,7 +65,7 @@ theorem nondeg {ι : Matrix (Fin d) (Fin d₁) R} {j₁ : Matrix (Fin d₁) (Fin
     have hs : (fun l => c ((Pi.single k (1 : R) : Fin d₁ → R) l)) = Pi.single k 1 := by
       ext l; by_cases hl : l = k
       · subst hl; simp
-      · simp [Pi.single_apply, hl]
+      · simp [hl]
     rw [sesq_mulVec_rect, hgram, hs, mulVec_single_one, dotProduct_comm] at this
     rw [Pi.zero_apply, ← this, vecMul, dotProduct_comm]
     rfl
@@ -146,7 +144,7 @@ theorem char_trivial_unip : ∀ (F E : Type) [Field F] [NumberField F] [Field E]
     intro z u
     rw [mulVec_transpose, dotProduct_comm z, dotProduct_comm (incM F H'.ι *ᵥ z), dotProduct_mulVec]
   have hcol : ∀ k, incM F H'.ι *ᵥ Pi.single k 1 = incV F (H'.ι *ᵥ Pi.single k 1) := by
-    intro k; ext i; simp [mulVec_single_one, incV, incM]
+    intro k; ext i; simp [incV, incM]
   have horth : ∀ z, sesq cc (incM F W.J) (incM F H'.ι *ᵥ z) (incV F H'.x) = 0 ∧
       sesq cc (incM F W.J) (incM F H'.ι *ᵥ z) (incV F H'.y) = 0 := by
     intro z
@@ -299,7 +297,7 @@ theorem char_trivial_unip : ∀ (F E : Type) [Field F] [NumberField F] [Field E]
       generalize (Pi.single k 1 : Fin d → AE F E) = v
       rw [hβ v]
       simp only [GlobalTheory.UnipEv.mat_mul', ← mulVec_mulVec, hmat, hmat', hw', hw'i]
-      simp only [tv_mulVec, mulVec_add, mulVec_smul, hm'x, hmx, hmm'v, sesq_add_left, sesq_smul_left, hm's, hxx]
+      simp only [tv_mulVec, mulVec_add, mulVec_smul, hm'x, hmx, hmm'v, hm's, hxx]
       ext i; simp only [Pi.add_apply, Pi.smul_apply, smul_eq_mul]
       linear_combination (sesq cc (incM F W.J) v (incV F H'.x) * β * h3 * incV F H'.x i) * h2two -
         (sesq cc (incM F W.J) v (incV F H'.x) * β * incV F H'.x i) * h3three

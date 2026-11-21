@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConstantTermUnipotentIntegral
 
 open scoped TensorProduct NNReal Matrix
@@ -204,7 +203,7 @@ theorem incV_single {n : ℕ} (j : Fin n) : incV F (Pi.single j (1 : E)) = Pi.si
   funext i
   by_cases h : i = j
   · subst h; simp [incV]
-  · simp [incV, Pi.single_apply, h]
+  · simp [incV, h]
 
 theorem incV_decomp {n n₁ : ℕ} (x y : Fin n → E) (ι : Matrix (Fin n) (Fin n₁) E) (s t : E) (u : Fin n₁ → E) :
     incV F (s • x + ι *ᵥ u + t • y) =

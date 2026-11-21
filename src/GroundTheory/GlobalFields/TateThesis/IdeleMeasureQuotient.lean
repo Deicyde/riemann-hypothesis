@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.TateThesis.IdeleMeasureNormOne
-import GroundTheory.GlobalFields.TateThesis.IdeleMeasureCosets
 import GroundTheory.GlobalFields.IdeleGroups.NormOneCompact
-import GroundTheory.GlobalFields.Adele.Discrete
 
 open NumberField IsDedekindDomain Topology Filter MeasureTheory TopologicalSpace
 open scoped NumberField.AdeleRing ENNReal NNReal Pointwise

@@ -1,11 +1,11 @@
-import Development.AbelianVarietyTheory.Definitions.Foundations.FinalTheorems
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsCoefficientRingFiniteExtensionPadicStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CompactGroupRepDefinedOverFiniteExtension
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ImportsExtra
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsUpperTriangularConjIntegralCompactStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.UnramifiedOfLevelAwayInertiaCharactersStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.CharacterPowPredEqOneOfKillsPrimeRootsStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IrreducibleRestrictionOfIsoStatement
+import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.KatoQuadraticCharacters.AdmissibleTwistByDet
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.MainNotions.N GlobalTheory.GalOfCusp UpperTheory.V UpperTheory.V.Af UpperTheory.V.HV GlobalTheory.Ord2
 open scoped Matrix
@@ -109,7 +109,7 @@ theorem exists_nf : ∀ (l : ℕ) [Fact l.Prime] (Ω : Type) [Field Ω] [Algebra
     · have hd : s ∈ Dec (F := ℚ) A := Ine_le_Dec A hs
       rw [(hup s hd).2, (hIne ⟨s, hd⟩ hs).1]
       have hχ1 := GlobalTheory.T.character_pow_pred_eq_one_of_killsPrimeRoots Ω l _ χ s hχ
-      simp only [Units.val_mul, Units.val_zpow_eq_zpow_val, zpow_natCast, mul_pow, eps]
+      simp only [Units.val_mul, zpow_natCast, mul_pow, eps]
       rw [← Units.val_pow_eq_pow_val (χ s), hχ1, Units.val_one, mul_one, Units.val_pow_eq_pow_val, ← pow_mul]
   · obtain ⟨s, hs⟩ := hne A κ hA ⟨g, hg⟩
     refine ⟨s, s.2, ?_⟩

@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.DataGChain
 import Formalism.LocalToGlobal.Columns.HeckeSp
-import Formalism.LocalToGlobal.Columns.ColFormsLemmas
+import Formalism.LocalToGlobal.Columns.CoefCol
 
 noncomputable section
 

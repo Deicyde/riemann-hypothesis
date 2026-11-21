@@ -1,15 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ThetaMod
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.DeRhamPotSemistable
-import Formalism.SharpRestriction.LevelLetterCocycles.SumRepresentations
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FiniteDimensionalFilDR
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.IsPotentiallySemistableCoefficientFieldEnlarge
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.CharpolyEqOfIsNilpotentSub
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.IsFrobSSWdRep
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.IsUnitOfStableLine
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FinrankLetterHomComp
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.CharpolyWeilDelignePotSemistableEnlargeCoefficie
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.RepERankOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.EqOfPowEqOneOfNormSubLt
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsContinuousPadic
 open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formalism.ConjugateSelfDual ReciprocityTheory.Gal ReciprocityTheory.Aut Formalism.AUTREP Formalism.L2 Formalism.L2.Host Formalism.L2.NT NumberField IsDedekindDomain Polynomial GlobalTheory.HeightCounting GlobalTheory.RowTie GlobalTheory.SplitRead GlobalTheory.NPin
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
 open Formalism.BasicNotions.Loc GlobalTheory.Pst GlobalTheory.WeilDeligne
@@ -26,8 +18,8 @@ variable {l : ℕ} [Fact l.Prime] (P : LocPrime l) {L : FinExt l}
 
 def smulEnd : (Fin 1 → ↥L.1) →ₗ[ℚ_[l]] End ℚ_[l] V where
   toFun v' := ((LinearMap.lsmul ↥L.1 V) (v' 0)).restrictScalars ℚ_[l]
-  map_add' x y := by ext v; simp [add_smul]
-  map_smul' c x := by ext v; simp [smul_assoc]
+  map_add' x y := by ext v; simp
+  map_smul' c x := by ext v; simp
 
 def mulB : ((Fin 1 → ↥L.1) ⊗[ℚ_[l]] Bst P) →ₗ[ℚ_[l]] End ℚ_[l] (V ⊗[ℚ_[l]] Bst P) :=
   TensorProduct.lift ((TensorProduct.mapBilinear (RingHom.id ℚ_[l]) V (Bst P) V (Bst P)).compl₁₂ (smulEnd V)
@@ -48,7 +40,7 @@ theorem mulB_smul (a : ↥L.1) (y : (Fin 1 → ↥L.1) ⊗[ℚ_[l]] Bst P) (x : 
     | zero => simp
     | tmul v b =>
       rw [TensorProduct.smul_tmul', mulB_tmul, mulB_tmul, TensorProduct.smul_tmul', smul_smul, smul_smul, mul_comm]
-    | add x x' hx hx' => simp only [map_add, LinearMap.add_apply, smul_add, hx, hx'] <;> abel
+    | add x x' hx hx' => simp only [map_add, smul_add, hx, hx'] <;> abel
   | add y y' hy hy' => simp only [map_add, LinearMap.add_apply, smul_add, hy, hy'] <;> abel
 
 theorem mulB_smul_left (a : ↥L.1) (y : (Fin 1 → ↥L.1) ⊗[ℚ_[l]] Bst P) (x : V ⊗[ℚ_[l]] Bst P) :
@@ -60,7 +52,7 @@ theorem mulB_smul_left (a : ↥L.1) (y : (Fin 1 → ↥L.1) ⊗[ℚ_[l]] Bst P) 
     | zero => simp
     | tmul v b =>
       rw [TensorProduct.smul_tmul', mulB_tmul, mulB_tmul, TensorProduct.smul_tmul', Pi.smul_apply, smul_eq_mul, mul_smul]
-    | add x x' hx hx' => simp only [map_add, LinearMap.add_apply, smul_add, hx, hx'] <;> abel
+    | add x x' hx hx' => simp only [map_add, smul_add, hx, hx'] <;> abel
   | add y y' hy hy' => simp only [map_add, LinearMap.add_apply, smul_add, hy, hy'] <;> abel
 
 theorem mulB_mulV (c : ↥(MaximalUnramifiedExtension l)) (y : (Fin 1 → ↥L.1) ⊗[ℚ_[l]] Bst P) (x : V ⊗[ℚ_[l]] Bst P) :
@@ -72,8 +64,8 @@ theorem mulB_mulV (c : ↥(MaximalUnramifiedExtension l)) (y : (Fin 1 → ↥L.1
     | zero => simp
     | tmul v b =>
       rw [mulV_tmul, mulB_tmul, mulB_tmul, mulV_tmul, mul_left_comm]
-    | add x x' hx hx' => simp only [map_add, LinearMap.add_apply, smul_add, hx, hx'] <;> abel
-  | add y y' hy hy' => simp only [map_add, LinearMap.add_apply, smul_add, hy, hy'] <;> abel
+    | add x x' hx hx' => simp only [map_add, hx, hx'] <;> abel
+  | add y y' hy hy' => simp only [map_add, LinearMap.add_apply, hy, hy'] <;> abel
 
 theorem mulV_mulB (c : ↥(MaximalUnramifiedExtension l)) (y : (Fin 1 → ↥L.1) ⊗[ℚ_[l]] Bst P) (x : V ⊗[ℚ_[l]] Bst P) :
     mulB P V (mulV P ↥L.1 (Fin 1 → ↥L.1) c y) x = mulV P ↥L.1 V c (mulB P V y x) := by
@@ -84,8 +76,8 @@ theorem mulV_mulB (c : ↥(MaximalUnramifiedExtension l)) (y : (Fin 1 → ↥L.1
     | zero => simp
     | tmul v b =>
       rw [mulV_tmul, mulB_tmul, mulB_tmul, mulV_tmul, mul_assoc]
-    | add x x' hx hx' => simp only [map_add, LinearMap.add_apply, smul_add, hx, hx'] <;> abel
-  | add y y' hy hy' => simp only [map_add, LinearMap.add_apply, smul_add, hy, hy'] <;> abel
+    | add x x' hx hx' => simp only [map_add, hx, hx'] <;> abel
+  | add y y' hy hy' => simp only [map_add, LinearMap.add_apply, hy, hy'] <;> abel
 
 theorem phiV_mulB (y : (Fin 1 → ↥L.1) ⊗[ℚ_[l]] Bst P) (x : V ⊗[ℚ_[l]] Bst P) :
     phiV P ↥L.1 V (mulB P V y x) = mulB P V (phiV P ↥L.1 (Fin 1 → ↥L.1) y) (phiV P ↥L.1 V x) := by
@@ -96,8 +88,8 @@ theorem phiV_mulB (y : (Fin 1 → ↥L.1) ⊗[ℚ_[l]] Bst P) (x : V ⊗[ℚ_[l]
     | zero => simp
     | tmul v b =>
       rw [mulB_tmul, phiV_tmul, phiV_tmul, phiV_tmul, mulB_tmul, map_mul]
-    | add x x' hx hx' => simp only [map_add, LinearMap.add_apply, smul_add, hx, hx'] <;> abel
-  | add y y' hy hy' => simp only [map_add, LinearMap.add_apply, smul_add, hy, hy'] <;> abel
+    | add x x' hx hx' => simp only [map_add, hx, hx'] <;> abel
+  | add y y' hy hy' => simp only [map_add, LinearMap.add_apply, hy, hy'] <;> abel
 
 theorem monV_mulB (y : (Fin 1 → ↥L.1) ⊗[ℚ_[l]] Bst P) (x : V ⊗[ℚ_[l]] Bst P) :
     monV P ↥L.1 V (mulB P V y x) = mulB P V (monV P ↥L.1 (Fin 1 → ↥L.1) y) x +
@@ -112,8 +104,8 @@ theorem monV_mulB (y : (Fin 1 → ↥L.1) ⊗[ℚ_[l]] Bst P) (x : V ⊗[ℚ_[l]
       congr 1
       simp only [monSt_apply, derivative_mul]
       ring
-    | add x x' hx hx' => simp only [map_add, LinearMap.add_apply, smul_add, hx, hx'] <;> abel
-  | add y y' hy hy' => simp only [map_add, LinearMap.add_apply, smul_add, hy, hy'] <;> abel
+    | add x x' hx hx' => simp only [map_add, hx, hx'] <;> abel
+  | add y y' hy hy' => simp only [map_add, LinearMap.add_apply, hy, hy'] <;> abel
 
 variable {K : FinExt l} (ρs ρt : Representation ↥L.1 ↥(GK K) V)
   (ρm : Representation ↥L.1 ↥(GK K) (Fin 1 → ↥L.1)) (χ : ↥(GK K) → ↥L.1)
@@ -129,8 +121,8 @@ theorem stRep_mulB (hm : ∀ g v, ρm g v = χ g • v) (ht : ∀ g v, ρt g v =
     | tmul v b =>
       rw [mulB_tmul, stRep_tmul, stRep_tmul, stRep_tmul, mulB_tmul, map_mul, ht, hm, map_smul, Pi.smul_apply,
         smul_eq_mul, smul_smul, mul_smul]
-    | add x x' hx hx' => simp only [map_add, LinearMap.add_apply, smul_add, hx, hx'] <;> abel
-  | add y y' hy hy' => simp only [map_add, LinearMap.add_apply, smul_add, hy, hy'] <;> abel
+    | add x x' hx hx' => simp only [map_add, hx, hx'] <;> abel
+  | add y y' hy hy' => simp only [map_add, LinearMap.add_apply, hy, hy'] <;> abel
 
 theorem mulB_mem_Dpst (hm : ∀ g v, ρm g v = χ g • v) (ht : ∀ g v, ρt g v = χ g • ρs g v)
     {x : V ⊗[ℚ_[l]] Bst P} {y : (Fin 1 → ↥L.1) ⊗[ℚ_[l]] Bst P} (hx : x ∈ Dpst P ρs) (hy : y ∈ Dpst P ρm) :

@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.TensorPlaceNorm
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.TensorNormBound
 
 open MvPolynomial
 

@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.FrobeniusLocalisation.DiffDefs
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.FrobeniusLocalisation.CondESpec
 import Development.AutomorphicArithmetic.FrobeniusLocalisation.CardImgOneDvd
 

@@ -1,8 +1,10 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.ResMapBijective
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.CoEvLow
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.CoSurj
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.CoMvps
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.PreservedCoefficient
+import Mathlib.RingTheory.AdicCompletion.Completeness
+import Mathlib.Tactic.Polynomial.Basic
 
 open IsLocalRing MvPowerSeries UpperTheory.V.Alg
 

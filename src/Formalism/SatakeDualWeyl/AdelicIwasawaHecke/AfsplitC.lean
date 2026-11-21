@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.AfsplitB
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Stabstd
 
 noncomputable section
 open Matrix TensorProduct NumberField IsDedekindDomain
@@ -51,8 +52,8 @@ theorem afsplit_one_map : (1 : Matrix n n Rv).map (afsplitIE v) = afsplitEps E v
   ext i j
   by_cases h : i = j
   · subst h
-    simp [Matrix.one_apply, h1]
-  · simp [Matrix.one_apply, h]
+    simp [h1]
+  · simp [h]
 
 theorem afsplitC_one : afsplitC v (1 : Matrix n n Rv) (1 : Matrix n n R) = 1 := by
   unfold afsplitC

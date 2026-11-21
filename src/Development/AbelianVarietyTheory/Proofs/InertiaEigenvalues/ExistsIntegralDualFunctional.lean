@@ -1,6 +1,4 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.LocalSituation
-import Formalism.SharpRestriction.LevelLetterCocycles.LocCoh
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CoefficientRingIntegersCompactAdicPropertiesStatement
 open Formalism Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.WeaklyAdmissibleFiltrations Formalism.MainNotions.N TensorProduct Module
 
@@ -26,7 +24,7 @@ theorem lattice_basis (l : ℕ) [Fact l.Prime] (LL : Type) [Field LL] [Algebra �
       intro h0; exact hr.ne_zero (hinj (h0.trans (map_zero _).symm))
     apply Subtype.ext
     have h1 := congrArg (fun s : S => (s : LL)) hac
-    simp only [Subalgebra.coe_smul, Algebra.smul_def] at h1
+    simp only [Algebra.smul_def] at h1
     exact mul_left_cancel₀ hr0 h1⟩
   haveI : Module.Free ℤ_[l] S := Module.free_of_finite_type_torsion_free'
   haveI : IsLocalization (Algebra.algebraMapSubmonoid S (nonZeroDivisors ℤ_[l])) LL :=

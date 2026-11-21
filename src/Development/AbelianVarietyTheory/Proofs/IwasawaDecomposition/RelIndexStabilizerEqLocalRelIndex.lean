@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SplitPlaceHeckeOperatorScalarOnSpherical
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.UnitaryFiniteAdelesSplitPlaceDecomposition
-import Formalism.LocalToGlobal.GaloisLevelStructure.DefsLevel
 open NumberField IsDedekindDomain ReciprocityTheory.Aut Formalism.L2
 open Formalism.AUTREP (GAf)
 

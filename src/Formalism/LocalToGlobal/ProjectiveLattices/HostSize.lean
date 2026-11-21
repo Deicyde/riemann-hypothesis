@@ -1,11 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.GCauchyStatement
 import Formalism.SharpRestriction.ElevenLe
-import Formalism.SharpRestriction.Divisibility.WeightAlgebra
 import Formalism.LocalRingCardinality.DataParams
-import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
-import Formalism.FrobeniusOrbits.RealSubfieldLeCompositum
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.TorusAtExC
 import Development.AutomorphicArithmetic.CyclotomicBounds.RamifiedDiscriminants.LogQdLeRd
+import Formalism.LocalRingCardinality.HostCls
 
 noncomputable section
 

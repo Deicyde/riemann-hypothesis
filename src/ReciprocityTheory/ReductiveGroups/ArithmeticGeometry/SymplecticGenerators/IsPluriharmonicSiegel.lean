@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ThetaQuasiPeriods.PeriodLattice
+import Mathlib.Analysis.InnerProductSpace.Harmonic.Basic
+import Mathlib.LinearAlgebra.SymplecticGroup
 
 noncomputable section
 

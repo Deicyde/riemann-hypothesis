@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SizeWindowBrackets.ErrorFormsEventualPowerBound
 import Formalism.SizeWindowBrackets.SlopesFromSizeAndCount
-import Formalism.SizeWindowBrackets.PowerBoundGivesRiemannHypothesis
 
 open Finset
 

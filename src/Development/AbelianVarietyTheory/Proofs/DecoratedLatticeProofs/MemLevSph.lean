@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.Live
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.LevTrue
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.LatticeFrames.NotBadPrimeBase
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.L2.DIV Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.Datum Formalism.L2.Forms MeasureTheory IsDedekindDomain NumberField Matrix
 open GlobalTheory.MixModel GlobalTheory.MixPer GlobalTheory.Unf GlobalTheory.SeeSaw GlobalTheory.LocMod GlobalTheory.MiS GlobalTheory.QPl GlobalTheory.QTw GlobalTheory.AdForm GlobalTheory.Mem GlobalTheory.Mem.Col2 GlobalTheory.Fam
 open scoped TensorProduct Classical
@@ -21,11 +21,11 @@ def levTw (W : RealPack ex) (x : GA (I.rec7 l Z) (I.rec7 l Z).sp.X') (t : W.P.T)
 
 theorem mem_levSph {W : RealPack ex} {x : GA (I.rec7 l Z) (I.rec7 l Z).sp.X'} (h : GA (I.rec7 l Z) (I.rec7 l Z).sp.X') :
     h ∈ levSph W x ↔ x⁻¹ * h * x ∈ levS _ (pk W).βX (datSph W) := by
-  simp [levSph, levS, MulAut.conj_apply]
+  simp [levSph, levS]
 
 theorem mem_levTw {W : RealPack ex} {x : GA (I.rec7 l Z) (I.rec7 l Z).sp.X'} {t : W.P.T} (h : GA (I.rec7 l Z) (I.rec7 l Z).sp.X') :
     h ∈ levTw W x t ↔ x⁻¹ * h * x ∈ levS _ (pk W).βX (datXP (pk W) (lvP W) t) := by
-  simp [levTw, levS, MulAut.conj_apply]
+  simp [levTw, levS]
 
 end GlobalTheory.TopVol
 

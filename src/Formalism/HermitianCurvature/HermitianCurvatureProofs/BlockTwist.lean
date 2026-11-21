@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CommuteMatrixTwoEntries
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.FreeOf2RmatrixTranspose
 
 open Matrix
 open scoped ComplexConjugate

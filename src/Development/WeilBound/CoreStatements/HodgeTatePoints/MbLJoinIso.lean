@@ -1,11 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.GlueApplyOfNotInFibre
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsGenericFlag
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.LatNormGrLatNeZeroOfSpan
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsCompletedStrictHens
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.HodgeTatePoints.MbLCentre
 import Development.WeilBound.CoreStatements.HodgeTatePoints.GenfibMap
-import Development.WeilBound.CoreStatements.HodgeTatePoints.MaBase
+import Mathlib.AlgebraicGeometry.Properties
 open AlgebraicGeometry CategoryTheory GlobalTheory.CompanionTheory.Ar NumberField
 
 namespace PositivityTheory.HtPt.Mb.LJoinIso.JoinIso

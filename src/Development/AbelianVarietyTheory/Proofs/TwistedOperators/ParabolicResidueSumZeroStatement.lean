@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ParabolicResidueSumZero
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.InverseChamberMap
 open GlobalTheory.Chamber
 open scoped InnerProductSpace ContDiff Classical
 set_option maxHeartbeats 1000000 in

@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.Rationality.KerCoreSt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.Rationality.DescPf
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.Rationality.FunKerPf
+import Mathlib.Algebra.Module.StablyFree.Basic
 
 namespace ReciprocityTheory.ChartRestriction.G.FreeQuotientRank
 

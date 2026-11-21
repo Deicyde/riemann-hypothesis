@@ -1,4 +1,7 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.LetterProductDoubleDegreeCount
+import Mathlib.Data.Int.Star
 
 open Formalism.FourierDecayAlt
 

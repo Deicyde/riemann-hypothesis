@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.ProjHyp
+import ReciprocityTheory.AnalyticForms.RegularLocalRings.LogResStC
 
 open AlgebraicGeometry CategoryTheory MvPolynomial
 

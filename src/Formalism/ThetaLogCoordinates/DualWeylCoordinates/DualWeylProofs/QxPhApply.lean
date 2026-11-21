@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.DualWeylCoordinates.StripDataTensorColumnFamilies
-import Formalism.ThetaLogCoordinates.DualWeylCoordinates.DualWeylProofs.QbIndepField
+import Formalism.ThetaLogCoordinates.DualWeylCoordinates.DualWeylProofs.BCoreT
 
 noncomputable section
 

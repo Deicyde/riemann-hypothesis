@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.CdScaleTieIff
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.IsInfEmbUnique
+import Formalism.SharpRestriction.GlobalSchurBounds.StandardLattice
 
 noncomputable section
 

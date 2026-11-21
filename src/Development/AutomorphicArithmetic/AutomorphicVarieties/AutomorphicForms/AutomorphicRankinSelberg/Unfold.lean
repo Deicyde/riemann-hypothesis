@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.AutomorphicRankinSelberg.StripInt
+import Mathlib.Topology.UniformSpace.Uniformizable
 
 open MeasureTheory Set
 open UpperHalfPlane hiding I

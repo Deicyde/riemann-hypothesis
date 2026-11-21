@@ -1,13 +1,8 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Statements.TowerExistence.GoodTowerExistsX
-import Development.AutomorphicSpectrum.Statements.MetricStatements.ExistsFlagModelBaseMetric
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.RootOnFund
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ContDiffUncentre
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.OmHeightslockG
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.AdaptedAtlasSncSectionStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.IsClosedSectionBoundaryStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.BoundaryPointsClosedStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ComplexPointsIffCentresStatement
 import Development.AutomorphicSpectrum.Proofs.DivisibilityProofs.CmHostRankBoundsStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.IsArithVarOfSncModelStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.LowerBoundHeightOnBoundaryStatement
@@ -55,7 +50,7 @@ theorem mem_bdry_conj_iff : ∀ (K : Type) [Fintype K] (J : K → Type) [∀ k, 
       funext q
       simp only [GroundTheory.Heights₂.Heights.LowerBoundFree.torusSmul, GroundTheory.Heights₂.Heights.LowerBoundFree.conjVec]
       rw [e]
-      simp [inv_mul_cancel_left₀, (map_ne_zero (starRingEnd ℂ)).2 (hc q.1)]
+      simp [(map_ne_zero (starRingEnd ℂ)).2 (hc q.1)]
     rw [e2] at h2
     exact h2.2
   · intro h

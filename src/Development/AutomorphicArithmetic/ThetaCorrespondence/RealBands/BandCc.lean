@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.RealBands.IsBand
+import Mathlib.Topology.Sheaves.Presheaf
 
 open MeasureTheory Filter UpperTheory.Lit.Cusp
 open scoped Topology Pointwise

@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.PoitouTate.RealEvenFree
+import GroundTheory.ProfiniteCohomology.PoitouTate.RealEvenLevel
 set_option maxSynthPendingDepth 1
 
 noncomputable section

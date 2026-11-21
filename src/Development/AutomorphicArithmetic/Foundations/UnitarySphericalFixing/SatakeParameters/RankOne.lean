@@ -1,5 +1,8 @@
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.TameUniformizerPower
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.UnitarySphericalFixing.SatakeParameters.GoodLem
+import Development.AbelianVarietyTheory.Proofs.FlagMeasures.LabLPIsLabelActK
+import Development.AutomorphicArithmetic.Foundations.UnitarySphericalFixing.SatakeParameters.AbsCentral
 
 section
 open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formalism.ConjugateSelfDual ReciprocityTheory.Gal ReciprocityTheory.Aut Formalism.AUTREP Formalism.L2 Formalism.L2.Host Formalism.L2.NT NumberField IsDedekindDomain Polynomial GlobalTheory.HeightCounting GlobalTheory.RowTie GlobalTheory.SplitRead GlobalTheory.NPin GlobalTheory.PendOf
@@ -40,7 +43,7 @@ theorem GlobalTheory.DepthZeroRankOneLabel.wild_trivial_m (D : D7) (k : Fin 2) (
     rw [Matrix.sub_apply, Matrix.one_apply_eq] at h1
     have h2 : μ (Matrix.GeneralLinearGroup.det u) = 1 := hT _ (by
       have e : ((Matrix.GeneralLinearGroup.det u : (_)ˣ) : (D.naut.plGw k v).adicCompletion D.host.E) = u.val 0 0 := by
-        simp [Matrix.det_fin_one]
+        simp
       rw [e]; exact h1)
     change (GlobalTheory.SmGL.detRep (Fin 1) μ) u (1 : ℂ) = (1 : ℂ)
     simp [GlobalTheory.SmGL.detRep, h2]))

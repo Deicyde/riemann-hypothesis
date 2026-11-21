@@ -1,4 +1,8 @@
-import Formalism.AdmissibleDesigns.BlockTwistedCyclotomic
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
+import Formalism.SharpRestriction.LevelLetterCocycles.GoodCongruenceDataOf
+import ReciprocityTheory.ReductiveGroups.TraceFormulas.LatDefs
 
 variable [hT2Core : Fact ReciprocityTheory.ChartRestriction.T2.Core]
 

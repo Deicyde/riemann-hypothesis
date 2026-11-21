@@ -1,9 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StSemilocRankFrac
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsSemilocFinite
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StRankFracDegree
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StSemilocChartRatio
 import GroundTheory.HeightsAndTheta.Heights.Intersections.AvoidRing
+import Mathlib.RingTheory.Henselian
 set_option maxSynthPendingDepth 1
 
 noncomputable section

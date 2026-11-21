@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.ObjectsAlt
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.TwistAlg
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.AmpleRingFiniteSt

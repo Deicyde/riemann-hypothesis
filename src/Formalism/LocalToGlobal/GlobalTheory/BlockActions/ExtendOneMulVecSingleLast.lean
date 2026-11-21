@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Mathlib.LinearAlgebra.Matrix.NonsingularInverse
-import Mathlib.Data.Matrix.Block
-import Mathlib.Algebra.BigOperators.Fin
 
 noncomputable section
 
@@ -65,7 +65,7 @@ theorem extM_spec {E : Type} [Field E] (φ : E →+* R) (A : Matrix (Fin (n + 1)
     congr 1
     by_cases hk : k = Fin.last n
     · subst hk; simp
-    · simp [Pi.single_apply, hk]
+    · simp [hk]
   refine ⟨?_, ?_, ?_⟩
   · rw [hA, extM, Matrix.mul_assoc, Matrix.mul_assoc, ← Matrix.mul_assoc (B.map φ)⁻¹, hinv,
       Matrix.one_mul, extendOne_mul_inclusion, ← Matrix.mul_assoc]

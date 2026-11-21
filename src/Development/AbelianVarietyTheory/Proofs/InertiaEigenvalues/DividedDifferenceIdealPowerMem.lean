@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.EqZeroOfEvalNatCastAdd
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
+import Mathlib.Tactic.Polynomial.Basic
 open Polynomial
 
 namespace GlobalTheory.FilCoeff
@@ -86,7 +88,7 @@ theorem smul_coeff_one_eq_zero {R : Type} [CommRing R] (hR : ∀ n : ℕ, n ≠ 
     rw [Finset.sum_range_succ', Finset.sum_range_succ']
     simp only [zero_add, pow_one, pow_zero, Nat.factorial_zero, Nat.factorial_one, Nat.cast_one,
       Ring.inverse_one, descPochhammer_one, descPochhammer_zero, coeff_X_one, coeff_one,
-      if_neg one_ne_zero, mul_zero, add_zero, mul_one, one_mul]
+      if_neg one_ne_zero, mul_zero, add_zero, mul_one]
     have e : ∀ j ∈ Finset.range t, y ^ (j + 1 + 1) * Ring.inverse (((j + 1 + 1).factorial : ℕ) : R)
         * (descPochhammer R (j + 1 + 1)).coeff 1
         = y * ((y ^ j * Ring.inverse (((j + 2).factorial : ℕ) : R) * (descPochhammer R (j + 2)).coeff 1) * y) := by

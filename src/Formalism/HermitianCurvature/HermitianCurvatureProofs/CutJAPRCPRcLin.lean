@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJAPRCoreCut
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CapelliCoordinates
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ActualAdjointnessFromHermitian
 
 open Matrix
@@ -19,7 +20,7 @@ theorem lie_rsmul {X : Q.Mx k r} (hX : Q.inLieLev k r i X) (x : ℝ) : Q.inLieLe
   obtain ⟨h1, h2⟩ := hX
   have hs : ∀ v : Fin (2 * r + k + 1) → ℂ, (x • X) *ᵥ v = x • (X *ᵥ v) := fun v => by
     ext j
-    simp [Matrix.mulVec, dotProduct, Finset.smul_sum, smul_mul_assoc, mul_assoc]
+    simp [Matrix.mulVec, dotProduct, Finset.smul_sum, mul_assoc]
   refine ⟨?_, fun a ha => ⟨?_, ?_⟩⟩
   · rw [Matrix.conjTranspose_smul, star_trivial, Matrix.smul_mul, Matrix.mul_smul, ← smul_add, h1, smul_zero]
   · rw [hs, (h2 a ha).1, smul_zero]

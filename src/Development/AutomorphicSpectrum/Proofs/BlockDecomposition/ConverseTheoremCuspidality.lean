@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.AdelicGaussians.UpperRightUnipotentInvariance
 open NumberField IsDedekindDomain MeasureTheory Matrix Filter Topology GroundTheory.Global GroundTheory.Automorphic GroundTheory.Automorphic.AutomorphicForm Ad3 Ad3.GA
 open GroundTheory.Automorphic.FourierWhittaker (vecDomain vecMeasure)
@@ -58,7 +58,7 @@ theorem unip2 (y : Fin 2 → 𝔸[ℚ]) :
     (Equiv.ofBijective pos2 second_position_bijective).symm_apply_apply 1
   ext i j
   fin_cases i <;> fin_cases j <;>
-    simp [uni, unipMatrix, blockEntry_apply, h0, h1, Matrix.one_apply]
+    simp [uni, unipMatrix, blockEntry_apply, h0, h1]
 
 theorem unip1 (y : Fin 2 → 𝔸[ℚ]) :
     (unipGL (fun p => y ((Equiv.ofBijective pos1 first_position_bijective).symm p)) : G3) = uni (y 0) (y 1) 0 := by
@@ -68,7 +68,7 @@ theorem unip1 (y : Fin 2 → 𝔸[ℚ]) :
     (Equiv.ofBijective pos1 first_position_bijective).symm_apply_apply 1
   ext i j
   fin_cases i <;> fin_cases j <;>
-    simp [uni, unipMatrix, blockEntry_apply, h0, h1, Matrix.one_apply]
+    simp [uni, unipMatrix, blockEntry_apply, h0, h1]
 
 theorem dia_sw_sq : dia sw * dia sw = 1 := by
   rw [dia, ← map_mul]

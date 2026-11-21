@@ -1,8 +1,5 @@
-import Mathlib
-import Formalism.UnipotentAdelicQuotients.SWXSDefs
-import Formalism.SharpRestriction.GlobalSchurBounds.GeneralLinearActions.GenusMassVolumes
+import BuildAid.Leniency.Open
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.DisintegrationDensityUniqueStatement
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.DisintegrationDensityContinuousStatement
 open MeasureTheory Topology Matrix
 open scoped ENNReal NNReal
 
@@ -34,7 +31,7 @@ theorem continuousOn_integral_of_bounded {V X P : Type}
     haveI := hloc b
     exact (hslice p hp).integrable_of_hasCompactSupport (hcs p hp)
   rintro ⟨p₀, b₀⟩ ⟨hp₀, hb₀⟩
-  simp only [Set.mem_prod] at hp₀ hb₀ ⊢
+  simp only at hp₀ hb₀ ⊢
   refine ContinuousAt.continuousWithinAt ?_
   obtain ⟨D, hDn, hDB, hDc⟩ := local_compact_nhds (hB.mem_nhds hb₀)
   obtain ⟨c, hc⟩ := hbd C D hC hDc hDB

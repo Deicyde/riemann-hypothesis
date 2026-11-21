@@ -1,12 +1,10 @@
-import Mathlib
-import Formalism.LocalRingCardinality.AdicCompletionLocal.LocTied
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.ExistsOfLayers
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.NormUnitPowSubOne
-import Formalism.SharpRestriction.LevelLetterCocycles.LocalSituation
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FinrankCyclotomicExtAndCyclotomicCharSurjective
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.NormPowSubOneOfNotDvd
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LocPrimeVNormalised
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsIntegralCyclotomicChar
+import Mathlib.NumberTheory.Padics.Hensel
 
 open Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.WeaklyAdmissibleFiltrations TensorProduct GlobalTheory.HWL
 
@@ -77,7 +75,7 @@ theorem exists_teich (a : ℤ_[l]ˣ) :
     rw [PadicInt.norm_def, PadicInt.coe_natCast, Nat.cast_sub hl.out.one_le, Nat.cast_one, this]
   obtain ⟨z, hz, hza, -⟩ := hensels_lemma (p := l)
     (F := (Polynomial.X ^ (l - 1) - 1 : Polynomial ℤ_[l])) (a := (a : ℤ_[l])) (by
-      simp only [map_sub, map_pow, Polynomial.aeval_X, map_one, Polynomial.derivative_sub,
+      simp only [map_sub, map_pow, Polynomial.aeval_X, map_one,
         Polynomial.derivative_X_pow, Polynomial.derivative_one, sub_zero, map_mul, Polynomial.aeval_C,
         Algebra.algebraMap_self, RingHom.id_apply, norm_mul, norm_pow, PadicInt.norm_units, hd]
       simpa using (PadicInt.norm_lt_one_iff_dvd _).2 hF)

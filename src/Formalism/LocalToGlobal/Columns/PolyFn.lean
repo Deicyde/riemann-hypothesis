@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.HermitianForms.IsLocBasis
 import Formalism.LocalToGlobal.Divisibility.CoefMod
-import Formalism.GradedWeylDivisibility.DualWeylDominanceOf
+import Mathlib.Data.Int.Star
 
 noncomputable section
 
@@ -273,7 +275,7 @@ theorem fnOf_injective (G : ι → Matrix (Fin n) (Fin n) ℂ) (sh : ι → ℤ)
   have h1 := congrFun hP ⟨fun τ => (M τ)⁻¹ * z τ, hy⟩
   have hMz : ∀ τ, M τ * ((M τ)⁻¹ * z τ) = z τ := fun τ => by
     rw [← Matrix.mul_assoc, mul_nonsing_inv _ (hM τ), Matrix.one_mul]
-  simp only [fnOf, LinearMap.coe_mk, AddHom.coe_mk, Pi.zero_apply, hMz] at h1
+  simp only [fnOf, LinearMap.coe_mk, AddHom.coe_mk, hMz] at h1
   rcases mul_eq_zero.mp h1 with h2 | h2
   · exfalso
     rw [Finset.prod_eq_zero_iff] at h2

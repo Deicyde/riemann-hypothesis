@@ -1,5 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.Columns.BrpStarLatLattice
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.Columns.BzdConjTTranspose
+import Mathlib.LinearAlgebra.Matrix.Permutation
 
 open MvPolynomial NumberField
 open scoped Matrix
@@ -126,7 +128,7 @@ theorem brp_detTwK_scalar (lam : DomWeight n) (t : Kˣ) :
     detTwK (oneW lam) (fun _ : Unit => brpSc K t) = (t : K) ^ ((n : ℤ) * lam.detShift) := by
   have hdet : Matrix.GeneralLinearGroup.det (brpSc K t : GL (Fin n) K) = t ^ n := by
     apply Units.ext
-    simp [Matrix.GeneralLinearGroup.val_det_apply, brpSc_coe, Matrix.det_smul]
+    simp [Matrix.GeneralLinearGroup.val_det_apply, brpSc_coe]
   simp only [detTwK, detPow, Finset.univ_unique, Finset.prod_singleton, hdet]
   rw [← zpow_natCast, ← zpow_mul, Units.val_zpow_eq_zpow_val]
 
@@ -169,16 +171,16 @@ theorem brp_diag_transvection (i j : Fin n) (hij : i ≠ j) (c : K) :
     rw [Matrix.diagonal_mul]
     by_cases ha : a = i
     · subst ha
-      by_cases hb : j = b <;> simp [Matrix.single_apply, hb]
-    · simp [Matrix.single_apply, ha, Ne.symm ha]
+      by_cases hb : j = b <;> simp [hb]
+    · simp [ha, Ne.symm ha]
   have h2 : Matrix.single i j (2 * c) * Matrix.diagonal (Function.update (1 : Fin n → K) i 2) =
       Matrix.single i j (2 * c) := by
     ext a b
     rw [Matrix.mul_diagonal]
     by_cases hb : b = j
     · subst hb
-      simp [Function.update_apply, Ne.symm hij]
-    · simp [Matrix.single_apply, Ne.symm hb]
+      simp [Ne.symm hij]
+    · simp [Ne.symm hb]
   rw [Matrix.transvection, Matrix.transvection, Matrix.mul_add, Matrix.add_mul, Matrix.mul_one, Matrix.one_mul, h1, h2]
 
 theorem chiW_transvection (lam : DomWeight n) (i j : Fin n) (hij : i ≠ j) (c : K) :

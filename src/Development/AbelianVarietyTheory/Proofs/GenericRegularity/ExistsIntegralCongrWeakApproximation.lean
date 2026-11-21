@@ -1,5 +1,7 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ValuationLifting.RApprox
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 namespace GlobalTheory.WeakApprox
 

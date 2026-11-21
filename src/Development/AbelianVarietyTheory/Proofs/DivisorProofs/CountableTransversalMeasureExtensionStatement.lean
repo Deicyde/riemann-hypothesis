@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CountableTransversalMeasureExtension
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SupMeas
 
 open MeasureTheory Pointwise
 open GlobalTheory.SupMeas

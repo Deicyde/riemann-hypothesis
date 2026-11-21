@@ -1,14 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RangeSndRel
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.CuspAlongSmoothRows
-import Development.AbelianVarietyTheory.Statements.HeckeThetaIntegrals.ThetaIntegralsAgree
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.AuxiliaryPrimeLtFirstTypePrimeOfSizes
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ConjThetaKOMulIntegrableOn
 import Formalism.LocalToGlobal.IndefiniteReal.MultLemmas
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.AdelicDataRowMeasureScaleTrivialTuple
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.GridParameterRegularCardEqRankFormula
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsTypeAtDualParIffStarIsTypeAtStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsThetaFunctionFockVectorRightwardArrowStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsConstSetIntegralHaarFundamentalDomainsUnitStatement
@@ -88,7 +82,7 @@ theorem isCuspListed_smul : ∀ {D : D7} {T : Type} {L : LevCh D T} {sc : Consts
   rcases X with ⟨i, j⟩ | i | j
   · intro τ
     have e : (fun g => star ((c • F) g)) = star c • fun g => star (F g) := by
-      funext g; simp [Pi.smul_apply, smul_eq_mul, star_mul', mul_comm]
+      funext g; simp [Pi.smul_apply, smul_eq_mul, star_mul']
     show IsTypeAt _ _ _ _ fun g => star ((c • F) g)
     rw [e]
     exact GlobalTheory.Mem.Th.isTypeAt_smul _ (h3 τ)

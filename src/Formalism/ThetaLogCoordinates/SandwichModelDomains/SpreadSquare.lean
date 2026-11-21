@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.SandwichModelDomains.StatementW
 import Formalism.ThetaLogCoordinates.TraceIsometryWeights.SchurTraceProofs.WeightCompApply
 

@@ -1,24 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ImaginaryRootNeZero
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MetsOfParOf
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.InducedMetricPow
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FromModelAdd
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FromModelNeg
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ExistsIsHodgeFrameIff
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.DegFrame
-import Development.AbelianVarietyTheory.Statements.HeightBoundStatement.HTBoundSt
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.LineModel
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ArBirational
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.EqOfIsometricTrivShift
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.AltSumMultilinear
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ArakelovTopUnique
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.InducedMetricPullbackStatement
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.InducedMetricPowStatement
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.AdmissibleModelsOfHtBound
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FromModelOfLocMax
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsModelPresentingDivisorStatement
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FamilyMetricsSmoothStatement
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MetricConjugationSymmetryStatement
 open AlgebraicGeometry CategoryTheory Limits NumberField IsDedekindDomain
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Pj Formalism.L2.Geo GlobalTheory.Toroidal GlobalTheory.ShFam GlobalTheory.ShFam.Pad GlobalTheory.TrueGeo GlobalTheory.Cartier GlobalTheory.ProjVar GlobalTheory.TrueCx
 
@@ -77,7 +59,7 @@ theorem induced_adlOf_zero : ∀ (D : D7) (A : Amb D) (N j : ℕ) (S : Sig A N j
     have a1 := hz (-1)
     have a2 := hz (-((m : ℕ) : ℤ))
     simp only [zpow_neg, zpow_one, zpow_natCast] at a1 a2
-    simp only [Units.val_mul, Units.val_one, mul_one, Units.val_pow_eq_pow_val, Units.val_inv_eq_inv_val, inv_pow, a1, a2,
+    simp only [mul_one, Units.val_pow_eq_pow_val, Units.val_inv_eq_inv_val, inv_pow, a1, a2,
       map_inv₀, map_pow, Real.log_inv, Real.log_pow, Pi.zero_apply, mul_zero, sub_zero]
     ring
 

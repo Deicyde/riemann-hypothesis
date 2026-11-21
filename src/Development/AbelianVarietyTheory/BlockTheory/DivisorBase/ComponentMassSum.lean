@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsProbabilityMeasureMuPart
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsFlatSecRankZero
+import Formalism.LocalToGlobal.ProjectiveLattices.CuspidalL2Subspace
 
 noncomputable section
 

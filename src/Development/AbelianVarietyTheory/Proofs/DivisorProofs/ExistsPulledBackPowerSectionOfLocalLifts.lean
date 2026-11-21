@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExtLIPreimageMono
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPreimageOfLocalPreimagesInjectiveStatement
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsProjOverWeierstrass
 
 noncomputable section
 

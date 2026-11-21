@@ -1,8 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StSemilocRankFrac
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StChartScalingIndep
 import GroundTheory.HeightsAndTheta.Heights.Intersections.PAdjoinIndepRelfinrank
 import GroundTheory.HeightsAndTheta.Heights.Intersections.PFinrankAdjoinRange
+import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsSemilocRankAdjoin
+import Mathlib.Order.CompletePartialOrder
 set_option maxSynthPendingDepth 1
 
 noncomputable section

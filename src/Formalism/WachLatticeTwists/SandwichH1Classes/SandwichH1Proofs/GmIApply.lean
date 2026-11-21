@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.SandwichH1Classes.SandwichH1Proofs.SandwichCompositeOnH1
 
 noncomputable section
@@ -94,7 +96,7 @@ theorem htW : StatHTW := by
     rw [this]
     have e4 : (((ℓ : Tt.Oi) ^ N) • (1 : Matrix (Fin r) (Fin r) Tt.Oi)) k t
         = al ((((ℓ : Tt.Om) ^ N) • (1 : Matrix (Fin r) (Fin r) Tt.Om)) k t) := by
-      by_cases h : k = t <;> simp [Matrix.one_apply, h, hal]
+      by_cases h : k = t <;> simp [h, hal]
     rw [e4, Tt.pr_alg]
 
   have heig : ∀ k, Tt.gmI Vm w i (Bm k) = ((w ^ (i - u k) : ℤ_[ℓ]ˣ) : ℤ_[ℓ]) • Bm k := by

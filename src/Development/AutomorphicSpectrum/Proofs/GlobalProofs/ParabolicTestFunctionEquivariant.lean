@@ -1,9 +1,6 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.InstBorelGL
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.BlockMatrixMulBlocks
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.LocalFieldUniformizerNormProperties
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.ParahoricSubgroupCompactOpenMeasure
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.MemIntegralGLIffIntegralUnitDetStatement
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.ParahoricCharacterModulusPropertiesStatement
 open MeasureTheory Matrix GlobalTheory.CompanionTheory.QL
 open scoped ComplexConjugate ValuativeRel

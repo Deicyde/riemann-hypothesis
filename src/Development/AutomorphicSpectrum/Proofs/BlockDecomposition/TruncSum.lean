@@ -1,5 +1,6 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.BinaryMassMeans.MeanVal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.UnipotentAdelicQuotients.SWXSDefs
 
 noncomputable section
 

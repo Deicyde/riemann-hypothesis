@@ -1,9 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AveragedIntegralFunctional
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianAdaptedPlaneSeesaw
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawPairTransferAlongPlane
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLeviElementSkewCm
 
 open scoped TensorProduct NNReal Matrix
@@ -131,7 +128,7 @@ theorem nondeg : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [NumberFie
       funext i
       by_cases h : i = l
       · subst h; simp
-      · simp [Pi.single_apply, h]
+      · simp [h]
     simp only [form] at h1
     rw [hs, Matrix.dotProduct_mulVec, dotProduct_single, mul_one] at h1
     exact h1

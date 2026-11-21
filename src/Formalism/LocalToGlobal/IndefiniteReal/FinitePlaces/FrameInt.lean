@@ -1,4 +1,6 @@
-import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.PlaceAt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.IndefiniteReal.DatumVec
 
 set_option synthInstance.maxHeartbeats 100000
 

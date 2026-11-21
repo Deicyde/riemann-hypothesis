@@ -1,5 +1,7 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.GL2.GJFEInducedInv
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.AutomorphicForms.GL2.GJFEDefs
+import GroundTheory.AutomorphicForms.LeviStagesJacquet
 
 noncomputable section
 

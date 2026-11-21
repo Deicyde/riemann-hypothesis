@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatrixFixesLowRankProjectorOfFixesRationalKernel
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EmbUnitary
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.Published GlobalTheory.QSA GlobalTheory.PlaneSU
 open scoped TensorProduct Quaternion
 set_option maxHeartbeats 1000000 in

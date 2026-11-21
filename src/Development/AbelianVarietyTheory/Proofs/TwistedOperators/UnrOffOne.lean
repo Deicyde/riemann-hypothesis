@@ -1,6 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.FWExist
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsUnitaryOnTheta
+import Formalism.LocalToGlobal.IndefiniteReal.DatumVec
 
 noncomputable section
 

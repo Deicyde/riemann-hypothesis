@@ -1,12 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.CommutativeAlgebra.AbByPOfComm
-import Development.AbelianVarietyTheory.Definitions.CommutativeAlgebra.InvariantSubspaceMobiusInverseRecEqOfFinrankLt
-import Development.AbelianVarietyTheory.Proofs.CharacterTheory.IsCharacterOverSubfieldRestrictClassFunctionOne
-import Development.AbelianVarietyTheory.Proofs.CharacterTheory.FiniteGroupFunctionPairingSelfIrreducibleAlgClos
-import Development.AbelianVarietyTheory.Proofs.CharacterTheory.StarVirtualCharacterEqApplyInv
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CharacterTheory.VirtualCharactersMulComapConjIndLinear
-import Development.AbelianVarietyTheory.Proofs.CharacterTheory.FiniteGroupFunctionPairingEqZeroOfDistinctIrredu
-import Development.AbelianVarietyTheory.Proofs.CharacterTheory.VirtualCharacterIrreducibleExpansionNormSq
 import Development.AbelianVarietyTheory.Proofs.CharacterTheory.IrreducibleOfVirtualCharacterNormOne
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IrrCharOneMulFinsumConjMul
 open Polynomial GlobalTheory.CuspGL GlobalTheory.BI
@@ -73,7 +66,7 @@ theorem irr_factor {ι : Type} [Fintype ι] [DecidableEq ι] {G : ι → Type} [
         by_cases hj : j = i
         · subst hj
           simp [hi]
-        · simp [Pi.mulSingle_eq_of_ne hj, hj]
+        · simp [hj]
       have := irr_mulSingle h i (x i) (fun j => if j ∈ s then x j else 1) (by simp [hi])
       rw [e, Finset.prod_insert hi]
       apply mul_left_cancel₀ h0
@@ -95,7 +88,7 @@ theorem exists_irr_pair_ne {G : Type} [Group G] [Finite G] {φ : G → ℂ} (h :
   refine ⟨ψ, hc ψ hψ, ?_⟩
   have e : pair φ ψ = ∑ χ ∈ c.support, (c χ : ℂ) * pair χ ψ := by
     rw [hφ]
-    simp only [pair, finsum_eq_sum_of_fintype, Finsupp.sum, Finset.sum_apply, Pi.smul_apply,
+    simp only [pair, finsum_eq_sum_of_fintype, Finsupp.sum, Finset.sum_apply,
       zsmul_eq_mul, Finset.sum_mul, Finset.mul_sum]
     rw [Finset.sum_comm]
     refine Finset.sum_congr rfl fun _ _ => Finset.sum_congr rfl fun _ _ => ?_

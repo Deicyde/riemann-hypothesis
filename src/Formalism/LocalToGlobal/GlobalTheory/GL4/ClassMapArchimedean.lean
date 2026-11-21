@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.GL4.PacketOfFrameDegree
-import Formalism.LocalToGlobal.GlobalTheory.GL4.PTenFrames
-import Formalism.LocalToGlobal.Columns.BrpStarLatLattice
 
 open Module NumberField IsDedekindDomain MvPolynomial
 open scoped Matrix

@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.TrueWtAddSSNonneg
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.SumFibreEqSumOrbits
-import Formalism.LocalToGlobal.KernelLattices.ThDistC
 
 noncomputable section
 

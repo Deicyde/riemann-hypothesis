@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ClassFieldTheory.LocalClassField.UnrExtB
+import Mathlib.FieldTheory.Relrank
 
 namespace ReciprocityTheory.DiscreteGroups.LocalClassField
 

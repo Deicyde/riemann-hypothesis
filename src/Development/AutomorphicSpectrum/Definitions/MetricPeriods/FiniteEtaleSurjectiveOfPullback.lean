@@ -1,10 +1,14 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.MetricPeriods.IsPeriodOn
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsHodgeLine
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ExistsCoordsAtOfCoordTie
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LatRestrictComapSpan
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.IsVBOnDualAndBidual
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.PCoordConeArithVar
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.RingTheory.PicardGroup
 
 noncomputable section
 

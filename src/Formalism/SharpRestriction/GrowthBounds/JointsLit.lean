@@ -1,11 +1,12 @@
-import Formalism.SharpRestriction.GrowthBounds.ValuationLowestDegreeRename
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.BinomialPolynomialIdentities.IndexOffRange
 import Formalism.ThetaLogCoordinates.JacobiPathWeights.FinalP
-import Formalism.LocalToGlobal.GroupLattices.FockModels.WeylDim
 import Formalism.SharpRestriction.GrowthBounds.LatticeSystems
 import Formalism.LocalRingCardinality.Lemmas
 import Formalism.SharpRestriction.GrowthBounds.CornerGLContinuity
 import Formalism.SharpRestriction.GrowthBounds.AdmissibleIntegers.FirstTermSizeBound
+import Formalism.PeriodIntegrals.AdmissibleModel.WeylDim
 
 noncomputable section
 open Finset Formalism.MainNotions.G
@@ -119,8 +120,8 @@ theorem span_inf_span {A K : Type*} [CommRing A] [IsDedekindDomain A] [Field K] 
     convert h using 1
     funext i
     rcases i with i | i
-    · ext <;> simp [φ', b', Module.Basis.prod_apply_inl_fst, Module.Basis.prod_apply_inl_snd]
-    · ext <;> simp [φ', b', Module.Basis.prod_apply_inr_fst, Module.Basis.prod_apply_inr_snd]
+    · ext <;> simp [φ', b']
+    · ext <;> simp [φ', b']
   let U : Submodule K (V × V) := LinearMap.range ((LinearMap.id : V →ₗ[K] V).prod LinearMap.id)
   have key := (FBC.flat_ext (V := V × V) (W := W × W) w σ hσ φ' hφ' b' hb').2 (L1.prod L2) U
   have hL : ∀ y ∈ Submodule.span O (φ '' (L1 : Set V)), (y, (0 : W)) ∈ Submodule.span O (φ' '' ((L1.prod L2 : Submodule A (V × V)) : Set (V × V))) := by

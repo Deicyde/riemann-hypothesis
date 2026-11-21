@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LocalTheory.ConeShifts.ActsRhoFin
 import Development.WeilBound.ThetaLifts.CartanFactorisation.ExistsPureML
 

@@ -1,9 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsHodgeLine
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.CurveSemiAbelianConjecture
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.SeparableFormGroupElementFixesUniquePositiveLine
-import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.Proportional
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.GlueApplyOfNotInFibre
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.FibrePowerFreePullbackStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.PowFnsOfAbelianGenericStatement
@@ -12,6 +8,7 @@ import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LatticeTensorPowerL
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.EtaleSpaceCohomologyEqZeroOfSimplicialRowExact
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HodgeCptInteriorGenericStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.FinrankFiniteFlatTorsionSubschemeEqCardPoints
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsFFCurve
 
 noncomputable section
 
@@ -114,7 +111,7 @@ theorem deg_neg_one {G G' : Lat ξ Ω} {T : Set (Cpt ξ)} {a : K → ℤ} {e : �
   rw [ht.2, zpow_neg_one] at h1
   have h2 := span_inv (regAt ξ q) hs.1 h1
   have e1 : (∏ k, y ⟨k, c k⟩ ^ (-a) k) • e⁻¹ = ((∏ k, y ⟨k, c k⟩ ^ a k) • e)⁻¹ := by
-    simp [Pi.neg_apply, zpow_neg, Finset.prod_inv_distrib, mul_inv, mul_comm]
+    simp [Pi.neg_apply, zpow_neg, Finset.prod_inv_distrib, mul_comm]
   rw [h q hq, hs.2, e1]
   exact h2
 

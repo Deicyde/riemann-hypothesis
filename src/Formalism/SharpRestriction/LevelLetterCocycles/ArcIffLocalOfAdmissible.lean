@@ -1,10 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.LocalTheoryWindows
 import Formalism.TruncatedSeriesCounting.TruncatedSeriesProofs.ColTwoStep
-import Formalism.TruncatedSeriesCounting.TruncatedSeriesProofs.ArcExp
 import Formalism.WeaklyAdmissibleFiltrations.CrystallineStableLifts.Galois
-import Formalism.TruncatedSeriesCounting.EtaDeterminantPolynomialIdentities
-import Formalism.DistinguishedUnitIdeals.DescentLemmasAllHold
 
 noncomputable section
 

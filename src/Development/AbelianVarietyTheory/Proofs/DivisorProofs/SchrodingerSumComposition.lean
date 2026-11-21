@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.HilbertNinetyQuotientHomEqIff
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 open scoped Matrix
 open Matrix
@@ -21,7 +21,7 @@ theorem schr_factor_data {R : Type} [CommRing R] [Invertible (2 : R)] (ψ : AddC
   · by_contra hne
     have hne' : b.1 + c.1 ≠ a.1 := fun e => hne e.symm
     have h0 := congrFun (h fun v => if v = a.1 then 1 else 0) 0
-    simp only [GlobalTheory.WeilM.schr, zero_add, if_pos rfl, if_true, if_neg hne', mul_zero, mul_one] at h0
+    simp only [GlobalTheory.WeilM.schr, zero_add, if_true, if_neg hne', mul_zero, mul_one] at h0
     exact hψne _ h0
   · have h1 := congrFun (h fun _ => 1) x
     simp only [GlobalTheory.WeilM.schr, mul_one] at h1
@@ -41,8 +41,8 @@ theorem schr_block_factor : ∀ {R : Type} [CommRing R] [Invertible (2 : R)] (ψ
   obtain ⟨ha1', hE'⟩ := schr_factor_data ψ h'
   funext X
   obtain ⟨x, x', rfl⟩ : ∃ x x' : κ → R, X = Sum.elim x x' := ⟨_, _, (Sum.elim_comp_inl_inr X).symm⟩
-  simp only [GlobalTheory.WeilM.schr, ← Sum.elim_add_add, sumElim_dotProduct_sumElim, dotProduct_neg, neg_dotProduct,
-    dotProduct_zero, zero_dotProduct, add_zero, zero_add]
+  simp only [GlobalTheory.WeilM.schr, ← Sum.elim_add_add, sumElim_dotProduct_sumElim, dotProduct_neg,
+    dotProduct_zero, add_zero, zero_add]
   have hP : Sum.elim (x + a.1) (x' + a'.1) = Sum.elim (x + b.1 + c.1) (x' + b'.1 + c'.1) := by
     rw [ha1, ha1', add_assoc, add_assoc]
   rw [hP]

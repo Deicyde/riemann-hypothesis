@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndicatorIntMMemSB
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianLatticeSelfDualEverywhere
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SplitBasisWittModelLocalStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SkewHermitianLatticeSplitPlaceComponentsDualStatement
@@ -51,7 +49,7 @@ theorem linBar_vac_indicator : GlobalTheory.FunPr.Hypotheses₂ → ∀ (F E : T
   ext Y i j
   rw [e1, e2]
   simp only [Units.val_mul, Units.coe_map, MonoidHom.coe_coe, RingHom.toMonoidHom_eq_coe, Matrix.transpose_mul, Matrix.scalar_apply,
-    Matrix.transpose_neg, Matrix.transpose_smul, Matrix.mul_neg, Matrix.neg_mul, Matrix.mul_smul, Matrix.smul_mul,
-    Matrix.diagonal_transpose, Matrix.mul_assoc, neg_neg]
-  simp [Matrix.mul_assoc, ← Matrix.smul_eq_diagonal_mul, Matrix.mul_smul, Matrix.smul_mul]
+    Matrix.transpose_neg, Matrix.transpose_smul, Matrix.mul_neg, Matrix.mul_smul,
+    Matrix.diagonal_transpose, Matrix.mul_assoc]
+  simp [← Matrix.smul_eq_diagonal_mul, Matrix.mul_smul]
 end GlobalTheory.SplitBarVac

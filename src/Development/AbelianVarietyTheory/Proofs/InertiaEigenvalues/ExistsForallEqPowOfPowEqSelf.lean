@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.DataNLoc
-import Development.AbelianVarietyTheory.Definitions.Foundations.HTBasis
 import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.FrobeniusPowerEmbeddings
 
 open Formalism.BasicNotions Formalism.BasicNotions.Loc GlobalTheory.Cyc

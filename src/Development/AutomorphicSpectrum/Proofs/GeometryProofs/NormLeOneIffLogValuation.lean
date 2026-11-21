@@ -1,8 +1,8 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsFlatAnIffIsConstMul
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.VAtVNeBot
-import Formalism.LocalToGlobal.ProjectiveLattices.RulInst
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.IsEigFrameOfFrPt
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsConstMul
 
 noncomputable section
 

@@ -1,5 +1,4 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.PairSums.SumPair
+import BuildAid.Leniency.Open
 import ReciprocityTheory.Hypotheses.GalCoh
 
 noncomputable section

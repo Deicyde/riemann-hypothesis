@@ -1,4 +1,6 @@
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.WHyp
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsTestRep
+import Mathlib.RingTheory.PiTensorProduct
 open GlobalTheory.JR Matrix MeasureTheory Filter Topology
 
 noncomputable section

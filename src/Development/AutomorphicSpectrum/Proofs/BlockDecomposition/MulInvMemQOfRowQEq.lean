@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousMatMir
 
 noncomputable section
@@ -36,12 +37,12 @@ theorem rowMat_single (n : ℕ) : rowMat n (Pi.single (Fin.last n) (1 : k)) = 1 
   split_ifs with hi
   · subst hi
     induction j using Fin.lastCases with
-    | last => simp [Matrix.one_apply, Fin.castSucc_ne_last]
+    | last => simp [Fin.castSucc_ne_last]
     | cast j =>
       by_cases hj : j = Fin.last n
       · subst hj
-        simp [Matrix.one_apply]
-      · simp [Matrix.one_apply, Pi.single_apply, hj, Ne.symm hj]
+        simp
+      · simp [hj, Ne.symm hj]
   · rfl
 
 def rowEl (n : ℕ) (r : Fin (n + 1) → k) (h : (rowMat n r).det ≠ 0) : Mir k (n + 1) :=

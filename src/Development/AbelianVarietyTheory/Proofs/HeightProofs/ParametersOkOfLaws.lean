@@ -1,9 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.HeightFunctions.NormComparisonConstants
-import Formalism.LocalToGlobal.ProjectiveLattices.DepthTie
-import Development.AbelianVarietyTheory.Definitions.Jets.EmbShortThLeThetaPlain
-import Development.AbelianVarietyTheory.Definitions.ExistenceOfLattices.CoeSelfDualLatticeInFrameCoordinatesEq
-import Development.AbelianVarietyTheory.Definitions.HeightFunctions.GrowthConstantBoundGcR
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.HalfEXIffOriented
 import Development.AbelianVarietyTheory.Proofs.RingsOfIntegers.LevelDvdBadN
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.FunctionFieldAlgClosedLevel

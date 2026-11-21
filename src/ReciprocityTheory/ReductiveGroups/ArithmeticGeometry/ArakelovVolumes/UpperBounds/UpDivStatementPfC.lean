@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.L2DbarEstimates.WeakHolomorphy.ExtNull
 import ReciprocityTheory.L2DbarEstimates.WeakHolomorphy.ImportsAlt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.UpDivStatementPfB
+import ReciprocityTheory.L2DbarEstimates.IsLocalHomeomorph
 
 namespace ReciprocityTheory.ChartRestriction.G.AR.Up
 

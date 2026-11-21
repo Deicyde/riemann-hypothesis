@@ -1,6 +1,9 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.AutomorphicKernels.EisensteinSeriesG2.RankOneEisenstein.Theta2Integral
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.TateThesis.AdelePoissonUniform
+import GroundTheory.AutomorphicForms.GL2.AdelicFourier2TensorCosetIndicatorAlgebraMap
+import GroundTheory.GlobalFields.TateThesis.GlobalZetaFinite
+import Mathlib.Algebra.Lie.OfAssociative
 set_option maxSynthPendingDepth 1
 
 namespace GlobalTheory.CompanionTheory.EisRk1Bound

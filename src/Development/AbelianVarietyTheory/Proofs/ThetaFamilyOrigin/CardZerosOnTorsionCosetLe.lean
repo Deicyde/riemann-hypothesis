@@ -1,6 +1,5 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ThetaUnifAV
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.SecBaseChangeAnySt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.ThetaMetrics.ExistsSecNonzeroLocusEqOfLbIso
 import Development.AbelianVarietyTheory.Proofs.ToricGeometry.ExistsUniquePointOfRingHom
 import Development.AbelianVarietyTheory.Proofs.ThetaFamilyOrigin.NonemptyGradedAlgebraSubGrading
@@ -99,7 +98,7 @@ theorem val_const (p : X ⟶ Sp K) (z : Sp K ⟶ X) (hz : z ≫ p = 𝟙 _) (U :
     rw [Scheme.Hom.appLE_comp_appLE]
     have : ∀ (q : Sp K ⟶ Sp K) (_ : q = 𝟙 _) e, q.appLE ⊤ ⊤ e = 𝟙 _ := by
       rintro _ rfl e
-      simp only [Scheme.Hom.appLE, Scheme.Hom.id_app, Category.id_comp]
+      simp only [Scheme.Hom.appLE, Scheme.Hom.id_app]
       exact (Sp K).presheaf.map_id _
     exact this _ hz _
   have h2 : (Scheme.ΓSpecIso (CommRingCat.of K)).inv ≫ p.appLE ⊤ U hU ≫

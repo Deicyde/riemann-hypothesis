@@ -1,5 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.ProjBCompl
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.EvalValChartCoord
+import Mathlib.Topology.Algebra.MvPolynomial
+import ReciprocityTheory.AnalyticForms.RegularLocalRings.BijOnClosedPointsOfIsIso
+import ReciprocityTheory.AnalyticForms.RegularLocalRings.MemBasicOpenSecHomIff
 
 namespace ReciprocityTheory.AnForm.R
 

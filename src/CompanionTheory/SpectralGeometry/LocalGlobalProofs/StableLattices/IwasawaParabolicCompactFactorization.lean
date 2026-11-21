@@ -1,5 +1,5 @@
-import Mathlib
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.HsConjTranspose
+import BuildAid.Leniency.Open
+import CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.ParabolicSubgroupEquality
 
 noncomputable section
 

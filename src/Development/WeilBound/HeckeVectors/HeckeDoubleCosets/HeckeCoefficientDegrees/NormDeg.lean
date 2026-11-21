@@ -1,12 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.NormSquareTransferIdentityHolds
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutNormDegGBetaInfAbs
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BXiAsm
-import Formalism.LocalToGlobal.SiegelLatticeTheory.BesselDiscreteSeries.DecLowPf
 import Development.WeilBound.CoreStatements.BetaInfinityCoefficients.BetaInfinityCoefficient
 import CompanionTheory.AutomorphicTheory.SchurLimitBounds.SchurOrthogonality.SchurH
 import CompanionTheory.HarishChandraModules.BesselParameterIntegrals.UniformCoefficientBounds.FromDS
-import CompanionTheory.AutomorphicTheory.RankOneEstimates.DecSender
 
 noncomputable section
 

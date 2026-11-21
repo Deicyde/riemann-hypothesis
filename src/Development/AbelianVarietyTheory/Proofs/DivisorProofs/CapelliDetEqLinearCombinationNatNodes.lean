@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ExpoConjOfIsCsd
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.QdetPolyMapMonic
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ContinuousConjFin
+import Mathlib.LinearAlgebra.Lagrange
 open NumberField GlobalTheory.CuspRep
 
 noncomputable section

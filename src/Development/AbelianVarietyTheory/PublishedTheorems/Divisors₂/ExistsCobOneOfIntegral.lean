@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PrismaticDieudonneAt
 import ReciprocityTheory.DualLattices.ExistsPrimitiveRoot
+import Mathlib.Analysis.Normed.Field.Instances
 
 noncomputable section
 

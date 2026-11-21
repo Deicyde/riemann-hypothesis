@@ -1,10 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.MemRangeOfCls
 import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.IsFETranslateFeTranslate
 import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.ScalCompSpecMap
 import Development.AbelianVarietyTheory.Proofs.RingsOfIntegers.ExistsGeneratorOfBasis
 import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.AbelianSchemeLawsUnconditional
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.GlobalFnsHolds
 
 set_option autoImplicit false
 
@@ -125,7 +125,7 @@ theorem exists_equiv (mu α : D.X) (eB : LB.Gen (LB.LinComb D.P.L (Sum.elim (D.f
     fun t => by
     obtain ⟨s, hs⟩ := exists_sec hL (φ' := D.famφB α) (ε' := DegPre.famε 1) (fun U _ h => by
       rw [Fintype.prod_sum_type]
-      simp only [DegPre.deltaε, Fintype.prod_sum_type, Sum.elim_inl, Sum.elim_inr, zpow_neg, neg_neg,
+      simp only [DegPre.deltaε, Fintype.prod_sum_type, Sum.elim_inl, Sum.elim_inr, zpow_neg,
         Finset.prod_inv_distrib, reassoc_of% i₁]
       rw [mul_inv, inv_inv, mul_inv_cancel_left])
       (pullMulSec t (trB D (-mu)).left (LB.pullGen D.P.L _ _ (LB.invGen D.P.L _ _ eB) (trB D (-mu)).left)

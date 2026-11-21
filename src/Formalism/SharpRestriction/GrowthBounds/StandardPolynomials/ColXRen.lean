@@ -1,5 +1,9 @@
-import Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.ColsDef
-import Formalism.SharpRestriction.GrowthBounds.FrobeniusPaths.LiftSubstitutionCoeffDivisible
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.ObjPol
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Tactic.ENatToNat
 
 noncomputable section
 
@@ -38,7 +42,7 @@ theorem liftSubst_rename (w : O) (r : ℕ) {ι ι' : Type} (LL : LiftLetters ι)
     rintro ⟨i, a⟩
     simp only [AlgHom.comp_apply, rename_X, liftSubst, aeval_X, renV, Fin.cast_eq_self, hvec]
     rw [sigMat_congr_pos g _ _ (hpos i)]
-    split_ifs <;> simp [map_sum, map_mul, rename_X, rename_C, apply_ite, renV, Fin.cast_eq_self]
+    split_ifs <;> simp [map_sum, map_mul, rename_X, apply_ite, renV, Fin.cast_eq_self]
   exact AlgHom.congr_fun key F
 
 theorem isGLW_submatrix_cast {k k' : ℕ} (hk : k = k') (g : Matrix (Fin k') (Fin k') (WF p f)) (hg : IsGLW g) :

@@ -1,16 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TotalEqCurve
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdjacentPullPull
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GeometricallyConnectedOfIsIsoRestrict
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsArFunRestrictInl
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GradedMetricPullbackIsometric
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TopologicalKrullDimEqSucc
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LintegralLeadingMinorFlagDensityPosDef
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleSmoothRelativeDimensionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KrullDimSmoothSurjectiveTotalStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleProjectionSurjectiveStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ChernMatrixIsFormStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BottChernMatrixIsFormStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ChernMatLinearCombinationStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArithmeticVarietyPartitionDensityStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PrincipalisationGenericSmoothCoverStatement
@@ -226,7 +219,7 @@ theorem cell_forms {c : AlgChart q σ 1} {cE : ∀ a, Chart (E a) (r a)} {c' : A
     simp only [chg, ← Matrix.sum_mul, ← Matrix.mul_sum]
     congr 2
     ext i j
-    by_cases hij : i = j <;> simp [Matrix.sum_apply, diagonal_apply, hij]
+    by_cases hij : i = j <;> simp [Matrix.sum_apply, hij]
 
 variable (hq : IsRegSurf q) (hp : IsArithVar p (d + 1)) (hs : GenSmooth p (d + 1)) (hfl : IsFlagBundle π E r fl)
   (hd : d = Fintype.card (Σ a, Low (r a))) {I : Type} [Fintype I] {c : I → ℝ} {n : I → (Σ a, Fin (r a)) → ℤ}

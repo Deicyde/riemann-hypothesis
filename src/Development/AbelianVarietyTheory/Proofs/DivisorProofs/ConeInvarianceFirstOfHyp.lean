@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeEvFun
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigALocalEigenStabilizerStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigALocalEigenTriplesStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAStabilizerHaarTripleStatement

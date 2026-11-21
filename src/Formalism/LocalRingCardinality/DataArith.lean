@@ -1,10 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.Params
-import Formalism.HarderNarasimhan.StatementPl
 import Formalism.HarderNarasimhan.QuotRealize
-import Formalism.HarderNarasimhan.StatementFrame
-import Formalism.LatticeLocalGlobal.Statement
-import Formalism.LatticeLocalGlobal.LatticeLocalGlobalOfGlobal
 
 open Module NumberField IsDedekindDomain
 

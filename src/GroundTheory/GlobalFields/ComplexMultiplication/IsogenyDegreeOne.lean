@@ -1,11 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.ComplexMultiplication.InseparableFrobeniusFactor
 import GroundTheory.ArithmeticGeometry.AbelianVarieties.IsogenyRamification
-import GroundTheory.ArithmeticGeometry.AbelianVarieties.DivisorsTranslate
-import GroundTheory.ArithmeticGeometry.AbelianVarieties.DivisorsValuation
-import GroundTheory.ArithmeticGeometry.AbelianVarieties.DivisorsPic
 import GroundTheory.GlobalFields.ComplexMultiplication.VariableChangePoints
-import GroundTheory.GlobalFields.ComplexMultiplication.DualDescentBase
 
 namespace GroundTheory.Global
 

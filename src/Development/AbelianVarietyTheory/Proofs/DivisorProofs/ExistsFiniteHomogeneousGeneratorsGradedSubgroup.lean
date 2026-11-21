@@ -1,4 +1,14 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsRatioOfWeight
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Data.Finset.Functor
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 open Filter Topology MvPolynomial GlobalTheory.HSAmp
 
 set_option autoImplicit false
@@ -118,7 +128,7 @@ theorem exists_finite_homogeneous_generators : ∀ (K : Type) [CommRing K] (D c 
       · simp only [Pi.add_apply, Finset.sum_add_distrib, Finset.sum_pi_single']
         simp; omega
       · have : ∏ i, x i ^ (Pi.single l 1 : Fin (D + 1) → ℕ) i = x l := by
-          rw [Finset.prod_eq_single l (fun b _ hb => by simp [Pi.single_apply, hb]) (by simp)]
+          rw [Finset.prod_eq_single l (fun b _ hb => by simp [hb]) (by simp)]
           simp
         simp only [Pi.add_apply, pow_add, Finset.prod_mul_distrib, this]; ring
     | zero => simpa using (A (q + 1)).zero_mem
@@ -149,7 +159,7 @@ theorem exists_finite_homogeneous_generators : ∀ (K : Type) [CommRing K] (D c 
     exact Submodule.span_mono (by
       intro p hp; simp only [Finset.coe_biUnion, Set.mem_iUnion, Finset.mem_coe]; exact ⟨s, hs, hp⟩) (hsT s hs)
   have h := (hgood _ hmem).2 q
-  simp only [v, Polynomial.coeff_C_mul_X_pow, if_pos rfl] at h
+  simp only [v, Polynomial.coeff_C_mul_X_pow] at h
   exact h
 
 end GlobalTheory.HSAmpGen

@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockMap
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TrPairApply
 open scoped TensorProduct Matrix GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels Classical
 open NumberField Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.BasicNotions.TH GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.FockAlg GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.RealLift GlobalTheory.VacLn
@@ -29,7 +28,7 @@ theorem trace_conjM_mul {F : Type} [Field F] [NumberField F] (z : mixedEmbedding
   rw [Algebra.trace_prod_apply, trace_pi', trace_pi']
   congr 1
   · refine Finset.sum_congr rfl fun w _ => ?_
-    simp [conjM, Algebra.trace_self_apply, sq]
+    simp [conjM, sq]
   · refine Finset.sum_congr rfl fun w _ => ?_
     simp [conjM, Algebra.trace_complex_apply, Complex.normSq_apply, Complex.mul_re]
 

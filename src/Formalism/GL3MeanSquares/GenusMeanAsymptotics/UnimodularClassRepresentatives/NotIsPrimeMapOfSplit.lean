@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
 import Lemmata.GeneralBFactSecondVariant.Imports
+import Mathlib.Tactic.ENatToNat
 
 namespace Formalism.HermitianLattices.Ext.L3.SplitPrimeIdeals
 

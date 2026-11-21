@@ -1,10 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StatementsNefCountAlongMultiples
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StatementsAmpleCountAlongMultiples
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StatementsNefCountDimZero
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsGenDegGeomDeg
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PConstantShift
-import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.IsSemipositiveRelConstShift
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.CharacterNondegenerate
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.CoeffLeOfEvalLeMul
 set_option maxSynthPendingDepth 1

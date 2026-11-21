@@ -1,7 +1,6 @@
-import Formalism.LocalRingCardinality.SpanPowerMembership.HaarDensityNeZero
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.HaarScaling.MapEqSelfOfIterate
 import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.UnimodGA
-import Formalism.LocalToGlobal.IndefiniteReal.SubgroupCharExtensionOneApply
 import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.MinfLev
 import Formalism.LocalToGlobal.IndefiniteReal.HaarTransfer.MinfUniqueP
 
@@ -103,7 +102,7 @@ instance instCompactUpq0 (q : ℕ) : CompactSpace (UpqT 0 q) := by
       have := congrArg Neg.neg h
       simpa [Matrix.mul_neg] using this
     · intro h
-      simp [Matrix.mul_neg, h]
+      simp [h]
   rw [← e] at hc
   exact isCompact_iff_compactSpace.mp hc
 

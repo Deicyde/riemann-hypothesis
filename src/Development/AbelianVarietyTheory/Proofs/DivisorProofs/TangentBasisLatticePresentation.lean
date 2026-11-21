@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSplitting
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.GrNormPosOfBasis
-import Development.AbelianVarietyTheory.Definitions.Divisors.NonemptyValExtOfOverLa
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsFlagFrame
 open NumberField MvPolynomial Filter Topology Formalism.BasicNotions Formalism.MainNotions Formalism.DegreeFormula GlobalTheory.FlagPoly GlobalTheory.Mean4 GlobalTheory.Mean4O GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.CovTest GlobalTheory.Published
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory GlobalTheory.ArInt
 open Formalism.BasicNotions.DV Formalism.MainNotions.WeightThresholdDefs GlobalTheory.FlagAr GlobalTheory.ShFam.Pad GlobalTheory.VB GlobalTheory.ShFam GlobalTheory.TrueGeo Formalism.L2.Pj GlobalTheory.Toroidal
@@ -18,7 +18,7 @@ theorem sp_epsMul_mul {S : Type} [CommRing S] (a b : S) :
     spMap (epsMul a) ≫ spMap (epsMul b) = spMap (epsMul (a * b)) := by
   rw [GlobalTheory.ShFam.Pad.Guard.sp_comp]
   congr 1
-  ext r <;> simp [epsMul, mul_assoc]
+  ext r <;> simp [epsMul]
 
 theorem exists_norm_eq_pi {m : ℕ} {C : Type} [NormedAddCommGroup C] (f : Fin m → C) (hf : 0 < ‖f‖) :
     ∃ k₀, ‖f k₀‖ = ‖f‖ ∧ ∀ k, ‖f k‖ ≤ ‖f k₀‖ := by

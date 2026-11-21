@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SchurEqJtDet
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.AddLeOfStrictAnti
+import Mathlib.Order.Interval.Finset.Box
 
 noncomputable section
 

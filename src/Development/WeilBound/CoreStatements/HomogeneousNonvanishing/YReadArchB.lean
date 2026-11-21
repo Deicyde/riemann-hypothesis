@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LabelSigBijective
 import Development.WeilBound.CoreStatements.HomogeneousNonvanishing.LeadMinorSmulOne
 open NumberField IsDedekindDomain MeasureTheory Filter Topology

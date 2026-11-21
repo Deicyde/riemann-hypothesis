@@ -1,7 +1,10 @@
-import Formalism.GaussJetBounds.GenLogInverse
-import Formalism.GaussJetBounds.StatementW
-import Formalism.GaussJetBounds.ThmAGauss
-import Formalism.GaussJetBounds.GaussJetProofs.OneGauss
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.GaussJetBounds.StatementP
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 open scoped BigOperators

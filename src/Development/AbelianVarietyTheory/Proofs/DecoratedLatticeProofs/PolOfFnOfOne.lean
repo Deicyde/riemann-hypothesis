@@ -1,17 +1,16 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.KmapEq
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.KmapOfOkOfVecP
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ThetaStepDistributionEquivariantRational
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.XiEntryInvariant
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.FirstCoupledKernelEquivariantCosets
-import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.KAtTopEquiv
-import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.ThetaLocalEquivalence.ThEquivPOf
 import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.ThetaLocalEquivalence.ThEquivPStepCIff
 import Formalism.LocalToGlobal.KernelLattices.ENatEq
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.OrdSubConjEqNeg
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.GmapToAddSubgroup
 import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.RkVolLaHyp
 import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.RkConj
+import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.IntAtOfLocTop
 
 noncomputable section
 
@@ -439,7 +438,7 @@ theorem scal_theta {e : X.Tau → ℤ} (hC : A.ThCEq a b Sa) (hχ : A.ChiLaw a b
   have d0' : ∀ τ, X.embC A.σ₀ τ ((LinearEquiv.det γ'.1 : X.Eˣ) : X.E) ≠ 0 := fun τ => (map_ne_zero _).2 (Units.ne_zero _)
   have e1 : ∀ τ (w : X.E) (k : ℤ), A.σ₀ (X.emb τ w ^ k) = X.embC A.σ₀ τ w ^ k := fun τ w k => map_zpow₀ _ _ _
   simp only [e1]
-  simp only [zpow_sub₀ (d0 _), zpow_sub₀ (d0' _), zpow_neg, Finset.prod_div_distrib, Finset.prod_inv_distrib, Finset.prod_zpow,
+  simp only [zpow_sub₀ (d0 _), zpow_sub₀ (d0' _), zpow_neg, Finset.prod_inv_distrib, Finset.prod_zpow,
     mul_inv, inv_inv, div_eq_mul_inv, Finset.prod_mul_distrib]
   generalize thC (X.embC A.σ₀) A.δ A.d A.sc A.AA Sa (gmap γ.1 N) (gmap γ'.1 N') (cA * cB) (fun x => A.σ₀ (Ξ' x))
     (A.e a b (gmap γ.1 N) (gmap γ'.1 N')) z = t' at h3 ⊢

@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
 open scoped TensorProduct NNReal Matrix
@@ -80,7 +80,7 @@ theorem phase_continuous : ∀ (F E : Type) [Field F] [NumberField F] [Field E] 
       continuous_finset_sum _ fun l _ =>
         (hLin (LinearMap.mulLeft (AF F) (u l))).comp ((hLin (cA σ).toLinearMap).comp (hmv l))
     have h3 := (hLin (LinearMap.mulLeft (AF F) ((-1) * K))).comp hin
-    exact htr.comp (h3.congr fun g => by simp [mul_assoc, Finset.mul_sum])
+    exact htr.comp (h3.congr fun g => by simp [Finset.mul_sum])
   · intro y b g hy
     have h1 := (hH.orth w).1
     have h2 := (hH.orth w).2

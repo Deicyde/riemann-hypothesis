@@ -1,4 +1,4 @@
-import Formalism.PeriodIntegrals.NablaSpans.ExpansionCoeffValuationGe
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.NablaSpans.MinorProdSpanHasCompl
 import Formalism.SharpRestriction.Divisibility.OrbitPlaces
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.MinorSpanCompl

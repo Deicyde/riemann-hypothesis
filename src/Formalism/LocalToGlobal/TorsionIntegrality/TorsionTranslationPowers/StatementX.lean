@@ -1,6 +1,8 @@
-import Formalism.LocalToGlobal.TorsionIntegrality.TorsionTranslationPowers.StatementV
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.TorsionTranslationPowers.StatementW
 import Formalism.LocalToGlobal.TorsionIntegrality.FrobeniusFibreCurves.StatementW
+import Formalism.LocalToGlobal.TorsionIntegrality.GaussSumParity.StatementE
+import Formalism.LocalToGlobal.TorsionIntegrality.TorsionTranslationPowers.StatementA
 
 open PowerSeries
 

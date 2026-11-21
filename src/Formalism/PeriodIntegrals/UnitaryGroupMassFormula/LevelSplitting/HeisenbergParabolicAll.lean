@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LevelSplitting.HeisenbergCocycleMemCentre
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LevelSplitting.NCHeisC
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LevelSplitting.NCIface
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdelicLocalCompactness.T2SpaceTensorProductFiniteExtension
 
 noncomputable section
 

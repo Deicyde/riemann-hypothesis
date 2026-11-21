@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.Columns.ScaledRamifiedLattice
-import Formalism.LocalToGlobal.Columns.BaseLemmas
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.KernelLattices.ThDistC
 import Formalism.LocalRingCardinality.CoeNeZeroOfNotMem
 import Development.AbelianVarietyTheory.Counterexamples.PlaceInjectivity.StandardDeterminantUnits

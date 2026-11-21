@@ -1,5 +1,6 @@
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.GramSchmidtFrames.GsFramesOfIso
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.DensityLemma.PGsWitt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.GramSchmidtFrames.IsotropicSubspaceEqPrimed
 
 open MeasureTheory Formalism.REAL Formalism.QuantumDeterminants Formalism.FourierDecayAlt Formalism.FourierDecayAlt.C6
 open Matrix
@@ -25,7 +26,7 @@ lemma herm_X_gen {x w : Fin (2 * r + k + 1) → ℂ} (hx : x ∈ Xsp k r) (hw : 
         have := congrArg Fin.val h
         simp [eI] at this
         omega
-      simp [bvec, Pi.single_apply, hne]
+      simp [bvec, hne]
     | zero => rfl
     | add y z _ _ hy hz => simp [hy, hz]
     | smul c y _ hy => simp [hy]
@@ -56,7 +57,7 @@ lemma herm_wb_X {x w : Fin (2 * r + k + 1) → ℂ} (hx : x ∈ Xsp k r) (hw : �
         have := congrArg Fin.val h
         simp [eI] at this
         omega
-      simp [bvec, Pi.single_apply, hne]
+      simp [bvec, hne]
     | zero => rfl
     | add y z _ _ hy hz => simp [hy, hz]
     | smul c y _ hy => simp [hy]
@@ -85,7 +86,7 @@ lemma X_hi {x : Fin (2 * r + k + 1) → ℂ} (hx : x ∈ Xsp k r) : ∀ i : Fin 
       have := congrArg Fin.val h
       simp [eI] at this
       omega
-    simp [bvec, Pi.single_apply, hne]
+    simp [bvec, hne]
   | zero => rfl
   | add y z _ _ hy hz => simp [hy, hz]
   | smul c y _ hy => simp [hy]
@@ -158,7 +159,7 @@ lemma uw_eq {z : Fin (2 * r + k + 1) → ℂ} (hz : C2.StdZ k r z) {nu : Fin (2 
           intro hij
           subst hij
           omega
-        simp [Pi.single_apply, hne]
+        simp [hne]
   ext i j
   have h1 := congrFun (hcol j) i
   simpa [Matrix.mulVec_single_one] using h1

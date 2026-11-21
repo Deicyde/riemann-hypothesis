@@ -1,13 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ContinuousMapPFin
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSystemOf
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.WeightModuleFiniteContinuousStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsSurjectiveDetPowMulDualWeyl
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.DualWeylInvariantPairingStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.TensorProductNondegeneratePairingStatement
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.DualWeylModuleTensorCoefficientUniversal
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.WeightEqOfFinitePartNeBot
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSemilinearActionDualWeylTensor
 open NumberField IsDedekindDomain GlobalTheory.CuspRep GlobalTheory.UnitaryBC GlobalTheory.DefU Formalism.BasicNotions Formalism.CohomologicalDescent.DepthNonnegative GlobalTheory.ExpFrame GlobalTheory.FrameAut
 open scoped Topology
 
@@ -66,7 +62,7 @@ theorem exists_invariant_pairing : ∀ (n : ℕ) (ι : Type) [Fintype ι] [Decid
         ∏ τ, detPow ℂ n (g τ) (sh τ) = 1 := by
       simp only [detPow]
       rw [← Units.coe_prod, ← Units.val_mul, ← Finset.prod_mul_distrib]
-      simp [← zpow_add]
+      simp
     have hpure : ∀ x y, B (Formalism.L2.DIV.rhoK lam g (GlobalTheory.CoefIrred.tenMul lam x))
         (wtOp ℂ n mu sh g (PiTensorProduct.tprod ℂ y)) = B (GlobalTheory.CoefIrred.tenMul lam x) (PiTensorProduct.tprod ℂ y) := by
       intro x y

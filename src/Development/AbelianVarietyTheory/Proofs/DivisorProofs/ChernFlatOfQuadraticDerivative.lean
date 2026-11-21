@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ReQuad
+import Mathlib.Topology.Sheaves.Presheaf
 
 open Matrix GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe GlobalTheory.ThetaMet
 open scoped Real ContDiff
@@ -20,7 +21,7 @@ theorem chernIsFlat_exp_quad :
   intro P hP v w
   have hS : IsOpen (cov B g) := hτ.1.prod isOpen_univ
   have h1 : (∞ : WithTop ℕ∞) ≠ 0 := by simp
-  have h2 : minSmoothness ℝ 2 ≤ ∞ := by simp [minSmoothness]; exact WithTop.coe_le_coe.2 le_top
+  have h2 : minSmoothness ℝ 2 ≤ ∞ := by simp; exact WithTop.coe_le_coe.2 le_top
   have hR : ContDiffAt ℝ ∞ (reQuad τ) P := hreQ.contDiffAt (hS.mem_nhds hP)
   have hF : ContDiffAt ℝ ∞ (flat τ) P := hflat.contDiffAt (hS.mem_nhds hP)
   have hRd : DifferentiableAt ℝ (fderiv ℝ (reQuad τ)) P :=

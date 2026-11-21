@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.GaussJetBounds.OneLetterGaussJets.StatementA
 import Formalism.GaussJetBounds.GaussJetProofs.CapacityLeReachCapacity
 

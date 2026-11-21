@@ -1,4 +1,6 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.BaseChangePreservesUnitaryOf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.LevelLetterCocycles.FrobeniusPowUniformizerFactorisation
 
 noncomputable section
 

@@ -1,16 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.DerRingInjective
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsUniqueBtOrderEmbeddingStatement
-import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.FormallyUnramifiedOfTangentMapInjective
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.EmbeddingBaseChangeCompatStatement
-import Development.WeilBound.CoreStatements.HodgeTatePoints.GeEmbSub
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.HopfOrderScalarExtensionStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HenselianQuasiFiniteFinitePartStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.IsFinOpenSubOfFiniteStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.BtOrderFlatBaseChangeStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.FlatLocalExtensionExistsStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LieModelFiniteBaseChangeStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.DualLatticePointUniversalStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HomAddMulOfUnitSectionStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.BtOrderValueEvalStatement
 
@@ -198,7 +188,7 @@ theorem rel_of_torsion (ht : Γ.IsTorsionAlong G x N i) (hj : Γ.IsEmb (Γ.btOrd
         change (a ≫ y) ≫ Γ.G.hom = 𝟙 _
         rw [Category.assoc, y1, ha])) 1 (by
       rw [one_left_eq]
-      simp only [Over.homMk_left, Over.mk_hom, Category.id_comp, Category.assoc]
+      simp only [Over.homMk_left, Over.mk_hom, Category.assoc]
       rw [unit_i' Γ ht, y3]
       have := congrArg Over.Hom.left h1
       rw [one_left_eq, Over.comp_left] at this

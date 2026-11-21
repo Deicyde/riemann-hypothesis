@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.SphericalCoordinates.PerCApply
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsGaloisCover
 
 noncomputable section
 

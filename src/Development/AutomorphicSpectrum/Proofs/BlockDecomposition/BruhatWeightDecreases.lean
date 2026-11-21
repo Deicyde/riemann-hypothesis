@@ -1,8 +1,7 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.IwahoriFactorisation.StrictDominance.UnitaryExtremality.SatPowNonvan
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsStrictDom
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsPermWOne
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MemIwUIff
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.IwahoriEntryBound
 open GlobalTheory.PRep Formalism.UG GlobalTheory.LFun PositivityTheory.SphericalProduct GlobalTheory.CompanionTheory.SatPow
 

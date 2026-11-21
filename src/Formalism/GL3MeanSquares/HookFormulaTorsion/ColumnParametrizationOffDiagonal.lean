@@ -1,5 +1,13 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.IntegralMultipleNormLowerBound
+import Mathlib.Data.Int.Star
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace Formalism.HermitianLattices.ExplicitEstimates
 
@@ -22,14 +30,13 @@ private theorem g4w9_prod_gt (N : ℕ) (i : Fin (N + 1)) (g : ℕ → ℝ) :
   · intro t ht
     simp only [Finset.mem_range] at ht
     have h : t + 1 + (i : ℕ) < N + 1 := by omega
-    simp only [dif_pos h, Finset.mem_filter, Finset.mem_univ, true_and, Fin.lt_iff_val_lt_val,
-      Fin.val_mk]
+    simp only [dif_pos h, Finset.mem_filter, Finset.mem_univ, true_and, Fin.lt_iff_val_lt_val]
     omega
   · intro j hj
     simp only [Finset.mem_filter, Finset.mem_univ, true_and, Fin.lt_iff_val_lt_val] at hj
     have hj2 := j.isLt
     have h : (j : ℕ) - (i : ℕ) - 1 + 1 + (i : ℕ) < N + 1 := by omega
-    simp only [dif_pos h, Fin.ext_iff, Fin.val_mk]
+    simp only [dif_pos h, Fin.ext_iff]
     omega
   · intro t ht
     simp only [Finset.mem_range] at ht
@@ -111,7 +118,7 @@ theorem lemma_c_explicit_bounds : LemC_bounds := by
               (fun j hj => (hd i j (Finset.mem_filter.mp hj).2).1)
     have hPle : ∏ t ∈ range (N - (i : ℕ)), ((nu i : ℝ) + ((t + 1 : ℕ) : ℝ))
         ≤ ((nu 0 : ℝ) + N + 1) ^ (N - (i : ℕ)) := by
-      have h0i : nu i ≤ nu 0 := hnu (by simp [Fin.le_iff_val_le_val])
+      have h0i : nu i ≤ nu 0 := hnu (by simp)
       calc _ ≤ ∏ t ∈ range (N - (i : ℕ)), ((nu 0 : ℝ) + N + 1) :=
             Finset.prod_le_prod (fun t _ => by positivity)
               (fun t ht => by
@@ -293,7 +300,7 @@ theorem column_parametrization_off_diagonal : Col_param_off := by
   have hlo : ∀ i : Fin (κ + 1), colW K U (Fin.last κ) ≤ colW K U i :=
     fun i => hanti (Fin.le_last i)
   have hhi : ∀ i : Fin (κ + 1), colW K U i ≤ colW K U 0 :=
-    fun i => hanti (by simp [Fin.le_iff_val_le_val])
+    fun i => hanti (by simp)
   have hb : ∀ i : Fin (κ + 1), 0 ≤ colW K U i ∧ colW K U i ≤ 3 * S := by
     intro i
     have h1 := hlo i

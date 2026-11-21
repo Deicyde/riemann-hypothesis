@@ -1,15 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
 import Development.AbelianVarietyTheory.Definitions.Divisors.PairsOfSquareTriple
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsMaxThOne
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqOfComponentTensorAdelicFunctionEq
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaIntegralArchimedeanInvariant
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RestrictedProductMemSchwartz
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaIntegralLinearStableRange
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilConvergenceOfKernelStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaBasicPropertiesStatement
 
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -65,7 +59,7 @@ theorem rest_pureA {F : Type} [Field F] [NumberField F] {κ : Type} [Fintype κ]
       have e := congrFun (GlobalTheory.ThK.partInf_of_at hz) i
       rw [← e]
       show ((realAd F 1 • z) i).2 = 0
-      simp only [Pi.smul_apply, smul_eq_mul, Prod.snd_mul]
+      simp only [Pi.smul_apply, smul_eq_mul]
       show (realAd F 1).2 * (z i).2 = 0
       rw [show (realAd F 1).2 = 0 from rfl, zero_mul]
     have e : (fun i => ((x + z) i).2) = fun i => (x i).2 := funext fun i => by

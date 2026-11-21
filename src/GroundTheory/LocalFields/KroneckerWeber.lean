@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.LocalFields.Existence
-import GroundTheory.LocalFields.LubinTateLimit
 import GroundTheory.LocalFields.PrincipalUnitsRank
 import GroundTheory.LocalFields.MaximalAbelianExtension
 

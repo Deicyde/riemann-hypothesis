@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LevelPrimeUnramifiedUniformizer
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.UG Matrix
 open scoped TensorProduct

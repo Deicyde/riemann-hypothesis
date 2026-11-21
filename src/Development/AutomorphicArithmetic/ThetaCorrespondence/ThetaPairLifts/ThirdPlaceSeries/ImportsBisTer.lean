@@ -1,7 +1,6 @@
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ImportsBisBis
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.CohomologicalCsdTempered
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.CharacterChoiceData
-import Development.AutomorphicArithmetic.Foundations.LocalLanglands.IsRecTOfIsRec
+import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ExistsFiniteClass
 
 set_option synthInstance.maxHeartbeats 200000
 

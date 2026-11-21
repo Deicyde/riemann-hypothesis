@@ -1,9 +1,12 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.HeightsOfSets.FiniteSupportHeight
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.WeightedHomogeneous.Objects
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ArithmeticHilbertSamuelLowerBound
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterSt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.RationalSections.IsRatSectionOn
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights
@@ -51,7 +54,7 @@ theorem weight_coordDeg_apply (d : Coord n →₀ ℕ) (k : ι) :
   · simp [coordDeg]
   · intro j _ hj
     refine Finset.sum_eq_zero fun i _ ↦ ?_
-    simp [coordDeg, Pi.single_apply, Ne.symm hj]
+    simp [coordDeg, Ne.symm hj]
   · simp
 
 theorem geoMultiHomog_iff (f : MvPolynomial (Coord n) ℤ) (a : ι → ℕ) :

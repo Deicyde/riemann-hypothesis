@@ -1,6 +1,4 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.CountI
-import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.PZeroLe
-import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.CountZ
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.CountVs
 import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.CountIV
 import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.FinalLe

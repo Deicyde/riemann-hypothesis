@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.BigCellDensity
 import Formalism.SharpRestriction.CuspSpanNormBounds.FrobeniusCoefficientMemLp.SigmaFiniteAmplitudes.RStabInv
-import Formalism.FormalDegreeBessel.FormalDegreeRatio.ReverseCauchySchwarzHolds
-import Formalism.FormalDegreeBessel.FinalG
 
 noncomputable section
 

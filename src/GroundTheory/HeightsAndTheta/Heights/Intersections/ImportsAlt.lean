@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Intersections.NotIsHorizontalSpanTwo
 import GroundTheory.HeightsAndTheta.Heights.Intersections.ImageVarIdBotTwo
 import GroundTheory.HeightsAndTheta.Heights.Intersections.IsMultiProjPrimeImageZ

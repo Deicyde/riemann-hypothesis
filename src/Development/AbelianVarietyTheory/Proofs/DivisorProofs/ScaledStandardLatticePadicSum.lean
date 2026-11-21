@@ -1,5 +1,12 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinPart
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open NumberField ReciprocityTheory.GeometryOfNumbersTheory GlobalTheory.LieHt GlobalTheory.LieRead
 
 set_option autoImplicit false
@@ -39,7 +46,7 @@ theorem mem_span_scaled {K : Type} [Field K] [NumberField K] {g : ℕ} (D : ℕ)
     intro i
     by_cases h : i = i0
     · subst h; exact ⟨1, by simp⟩
-    · exact ⟨0, by simp [Pi.single_apply, h]⟩
+    · exact ⟨0, by simp [h]⟩
   | zero => intro i; exact ⟨0, by simp⟩
   | add x y _ _ hx hy =>
     intro i
@@ -79,7 +86,7 @@ theorem lnGrP_scaled (K : Type) [Field K] [NumberField K] (g p : ℕ) [Fact p.Pr
   · refine ⟨fun i => j (((D : K) • (Pi.single k 1 : Fin g → K)) i), ?_, ?_, ?_, ?_⟩
     · simpa using hD0
     · intro i hi
-      simp [Pi.single_apply, (ne_of_gt hi)]
+      simp [(ne_of_gt hi)]
     · refine ⟨1, fun _ => 1, fun _ => (D : K) • (Pi.single k 1 : Fin g → K), fun _ => by simp,
         fun _ => Submodule.subset_span ⟨k, rfl⟩, ?_⟩
       ext i; simp

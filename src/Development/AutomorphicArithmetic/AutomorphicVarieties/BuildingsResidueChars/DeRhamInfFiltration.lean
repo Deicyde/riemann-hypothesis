@@ -1,5 +1,8 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.WtMatFix
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.DeRhamComparisonIsFiltered
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.MkMemAdmissibleAtIffCocycle
+import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.FiniteCohomology
 open Formalism.WeaklyAdmissibleFiltrations Formalism.MainNotions.N Formalism.BasicNotions Formalism.BasicNotions.Loc ReciprocityTheory.Gal TensorProduct Module UpperTheory.V.Loc Polynomial
 
 section Coord
@@ -19,7 +22,7 @@ private theorem coord_sum (c : Fin d → BdR) (i : Fin d) :
   rw [Finset.sum_eq_single i]
   · simp
   · intro j _ hj
-    simp [Finsupp.single_apply, hj]
+    simp [hj]
   · simp
 
 private theorem sum_mem_fil_iff (a : ℤ) (c : Fin d → BdR) :

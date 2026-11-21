@@ -1,9 +1,8 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.ConcretePkgSpec
-import Formalism.LocalToGlobal.IndefiniteReal.CutTuples2
-import Formalism.LocalToGlobal.Divisibility.LiftLatLemmas
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinRepApply
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsNeZeroOfRankEq
+import Mathlib.RingTheory.SimpleModule.Isotypic
 
 noncomputable section
 

@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.GaloisLevelStructure.DefsAut
+import BuildAid.Leniency.Open
+import ReciprocityTheory.Automorphisms.Unitary
 open Matrix
 
 namespace GlobalTheory

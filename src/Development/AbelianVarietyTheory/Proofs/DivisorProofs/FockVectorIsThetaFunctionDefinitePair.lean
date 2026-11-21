@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VacTheta
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.ThetaFinsetSum
 

@@ -1,7 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.StatementG
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Transport
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Stabstd
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Levelvsplit
 
 noncomputable section
 

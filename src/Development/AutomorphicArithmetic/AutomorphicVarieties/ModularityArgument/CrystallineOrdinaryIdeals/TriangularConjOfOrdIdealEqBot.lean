@@ -1,13 +1,9 @@
-import Mathlib
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.CrystallineOrdinaryIdeals.Imports
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.CrystallineOrdinaryIdeals.OrdinaryIdealSaturatorsConjInvariantStatement
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.CrystallineOrdinaryIdeals.NilpotentTwistStatement
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.CrystallineOrdinaryIdeals.IsUnitCharacterDiffAtChosenInertiaStatement
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.CrystallineOrdinaryIdeals.ExistsGLConjEqDiagonalOfCharpolyEqProdStatement
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.CrystallineOrdinaryIdeals.GaloisSubgroupLBasicPropertiesStatement
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.CrystallineOrdinaryIdeals.TripleProductStableFlag
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.CrystallineOrdinaryIdeals.UpperTriRepMulApplyZeroOne
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.IqBasic
+import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.TriDefs
 
 open Formalism.BasicNotions Formalism.BasicNotions.Loc ReciprocityTheory.Gal Module UpperTheory.V.Loc UpperTheory.V.U3 UpperTheory.V.Alg IsLocalRing Polynomial Topology
 
@@ -19,7 +15,7 @@ theorem conjBy_right_eq {G C : Type} [Group G] [CommRing C] (h : GL (Fin 3) C) (
 
 theorem conjBy_left_eq {G C : Type} [Group G] [CommRing C] (h : GL (Fin 3) C) (r : G →* GG 3 C) (g : G)
     (hg : (r g).right = 1) : (conjBy h r g).left = h * (r g).left * h⁻¹ := by
-  simp [conjBy, GG.ofGL, SemidirectProduct.mul_left, SemidirectProduct.mul_right, SemidirectProduct.inv_left, SemidirectProduct.inv_right, hg]
+  simp [conjBy, GG.ofGL, SemidirectProduct.mul_left, SemidirectProduct.mul_right, SemidirectProduct.inv_left, hg]
 
 end GlobalTheory.OrdLoc
 
@@ -70,7 +66,7 @@ private theorem exists_isUnit_det_apply_eq_sum_of_mem_Nof {C : Type} [CommRing C
   have e20 := congrFun (congrFun h 2) 0
   have e10 := congrFun (congrFun h 1) 0
   have e21 := congrFun (congrFun h 2) 1
-  simp [Matrix.mul_apply, Fin.sum_univ_three, Matrix.mul_diagonal, t10, t20, t21, t00, t11, t22] at e20 e10 e21
+  simp [Matrix.mul_apply, Fin.sum_univ_three, t10, t20, t21, t11, t22] at e20 e10 e21
   have m20 : M 2 0 = 0 := by
     have : (p 2 - p 0) * M 2 0 = 0 := by linear_combination e20
     exact (hp 2 0 (by decide)).mul_right_eq_zero.mp this
@@ -91,9 +87,9 @@ private theorem upperTriangular_fin_three_mul_entries {C : Type} [CommRing C] (A
   obtain ⟨b10, b20, b21⟩ := hB
   refine ⟨fun i => ?_, ?_, ?_, ?_⟩
   · fin_cases i <;> simp [Matrix.mul_apply, Fin.sum_univ_three, a10, a20, a21, b10, b20, b21]
-  · simp [Matrix.mul_apply, Fin.sum_univ_three, a10, a20, a21, b10, b20, b21]
-  · simp [Matrix.mul_apply, Fin.sum_univ_three, a10, a20, a21, b10, b20, b21]
-  · simp [Matrix.mul_apply, Fin.sum_univ_three, a10, a20, a21, b10, b20, b21]
+  · simp [Matrix.mul_apply, Fin.sum_univ_three, b21]
+  · simp [Matrix.mul_apply, Fin.sum_univ_three, a10]
+  · simp [Matrix.mul_apply, Fin.sum_univ_three]
 
 open GlobalTheory.OrdLoc in
 

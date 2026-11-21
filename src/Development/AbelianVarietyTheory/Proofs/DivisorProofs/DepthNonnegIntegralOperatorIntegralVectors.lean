@@ -1,9 +1,7 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.WeightedSumBounds.PeriodValuationTheory
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.WeightedSumBounds.WtSubOneLe
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsSatFrame
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IsExpEqOfSubstLg
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIntegralInvariantDerivationLogStatement
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
 open MvPowerSeries ReciprocityTheory.PGsh ReciprocityTheory.ChartRestriction.G.Sh GlobalTheory.FGDepth
 
 namespace GlobalTheory.DepthNonneg
@@ -194,7 +192,7 @@ theorem hurInt_subst_expOf {d : ℕ} (G : LogFGL v d) {f : MvPowerSeries (Fin d)
       have : ∀ i ∈ Finset.univ.erase k,
           (((β + Finsupp.single k 1 : Fin d →₀ ℕ) i).factorial : C) = ((β i).factorial : C) := by
         intro i hi
-        simp [Finsupp.single_apply, Ne.symm (Finset.ne_of_mem_erase hi)]
+        simp [Ne.symm (Finset.ne_of_mem_erase hi)]
       rw [Finset.prod_congr rfl this]
       simp [Nat.factorial_succ]
       ring

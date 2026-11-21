@@ -1,4 +1,8 @@
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MultOfNotMem
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.InterPolyProdSum
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.LinearAlgebra.Matrix.Permutation
 open AlgebraicGeometry CategoryTheory MvPolynomial NumberField ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj GlobalTheory.Toroidal GlobalTheory.ShFam GlobalTheory.ProjVar GlobalTheory.FlagBundle GlobalTheory.GoodMetric GlobalTheory.LieBase
 open Classical
 open GlobalTheory GlobalTheory.Cartier GlobalTheory.ProjVar GlobalTheory.CxPts GlobalTheory.ChartGlue GlobalTheory.FlagBundle GlobalTheory.HermFrame
@@ -56,7 +60,7 @@ theorem topCoeff_prod_X_of_ne {k : ℕ} (hk : k ≠ n) (f : Fin k → Fin n × F
 
 theorem graph_apply (g : Fin n → Fin n) (x y : Fin n) :
     (∑ a, Finsupp.single (a, g a) 1 : Fin n × Fin n →₀ ℕ) (x, y) = if g x = y then 1 else 0 := by
-  rw [Finsupp.finset_sum_apply, Finset.sum_eq_single x (fun c _ hc => by simp [Finsupp.single_apply, hc]) (by simp)]
+  rw [Finsupp.finset_sum_apply, Finset.sum_eq_single x (fun c _ hc => by simp [hc]) (by simp)]
   simp [Finsupp.single_apply]
 
 theorem graph_eq_iff (g h : Fin n → Fin n) :
@@ -141,7 +145,7 @@ theorem topCoeff_prod_X_pair (c d : Fin n → Fin n) :
       simpa [Function.Surjective] using this
     have h1 := DFunLike.congr_fun h (x, w x)
     rw [graph_apply, if_pos rfl, Finsupp.finset_sum_apply] at h1
-    simp [Finsupp.single_apply, hx] at h1
+    simp [hx] at h1
 
 theorem rowSel_mul_apply (c : Fin n → Fin n) (M : Matrix (Fin n) (Fin n) ℂ) (i b : Fin n) :
     (rowSel c * M) i b = M (c i) b := by

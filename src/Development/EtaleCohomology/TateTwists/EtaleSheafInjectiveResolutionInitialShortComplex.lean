@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.TateTwists.EtaleInjectiveResolutionSectionsLocallyExact
+import Mathlib.Algebra.Homology.ShortComplex.ModuleCat
 
 open CategoryTheory Limits AlgebraicGeometry Opposite CochainComplex CochainComplex.HomComplex GlobalTheory.EtC
 

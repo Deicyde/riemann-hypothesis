@@ -1,15 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsGradedRankOne
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsX
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VanishingOnRegularFlagged
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsHomogeneousSides
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleSectionLiftsMetric
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicLineBundleInducedArith
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoverInducesDualLineBundle
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenFamilySignsDimensionCount
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenFamilyRelabelledSigns
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.QuadraticFormRelabelling
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RootSubstitutionVandermondeClass
 open NumberField MvPolynomial CategoryTheory AlgebraicGeometry
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open Formalism.BasicNotions Formalism.MainNotions Formalism.DegreeFormula Formalism.L2.Pj GlobalTheory GlobalTheory.ArInt GlobalTheory.VB GlobalTheory.CovTest GlobalTheory.FlagPoly GlobalTheory.Mean4O GlobalTheory.ShFam GlobalTheory.ShFam.Pad GlobalTheory.Toroidal GlobalTheory.ArLieBase
@@ -51,7 +47,7 @@ theorem termW_eq (R : ℝ) (c : O.s.Comp) : termW O c R =
   · refine (congrArg _ e2).trans ?_
     rw [map_mul, map_mul, rename_rename]
     congr 1
-    simp only [ArIn.mixEv, aeval_X, EigWhole.update_ind_one ∅ hT, map_sum, map_pow, rename_X, map_mul, algHom_C]
+    simp only [ArIn.mixEv, aeval_X, EigWhole.update_ind_one ∅ hT, map_sum, map_pow, rename_X, algHom_C]
     norm_num
     rfl
   · rw [map_pow, map_sum, ← e0]

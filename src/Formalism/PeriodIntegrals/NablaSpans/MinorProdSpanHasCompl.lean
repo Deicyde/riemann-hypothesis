@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.NablaSpans.ExpansionCoeffValuationGe
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
 
 noncomputable section
 

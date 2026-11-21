@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalMassType.Development
 
 noncomputable section
@@ -23,7 +25,7 @@ theorem ratV_sum {ι : Type} (s : Finset ι) (x : ι → Fin n → E) :
   funext j; simp [ratV, map_sum, Finset.sum_apply]
 
 theorem ratV_zsmul (m : ℤ) (x : Fin n → E) : ratV (F := F) R (m • x) = m • ratV (F := F) R x := by
-  funext i; simp [ratV, map_zsmul]
+  funext i; simp [ratV]
 
 theorem ratV_smul (a : E) (x : Fin n → E) :
     ratV (F := F) R (a • x) = inclR (F := F) R a • ratV (F := F) R x := by

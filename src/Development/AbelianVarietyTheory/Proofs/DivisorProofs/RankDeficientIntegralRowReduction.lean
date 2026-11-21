@@ -1,8 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.MatchingOfParts
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
-import Development.AbelianVarietyTheory.Definitions.Divisors.RankEqCardIffExistsFrameMatrixFirstColumnBlock
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SubMemTwistSpan
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.T2SpaceGeneralLinearGroup
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.LinearAlgebra.Matrix.Rank
+import Mathlib.RingTheory.PiTensorProduct
 open ValuativeRel Matrix
 
 namespace GlobalTheory.RankCoinv
@@ -73,7 +73,7 @@ theorem exists_KO_row_zero_of_rank_lt (k : Type) [Field k] [ValuativeRel k] [Top
       intro l
       by_cases hl : l = i₀
       · subst hl; simp [E, hc'0]
-      · simp [E, hl, Matrix.one_apply, Ne.symm hl]
+      · simp [E, hl, Ne.symm hl]
     rw [Matrix.mul_apply]
     simp_rw [hrow, hc', div_mul_eq_mul_div, ← Finset.sum_div, hcj j, zero_div]
 

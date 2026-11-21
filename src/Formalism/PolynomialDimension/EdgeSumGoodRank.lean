@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.PolynomialDimension.StatementNum
-import Formalism.PolynomialDimension.WeylDim
 import Formalism.PolynomialDimension.FrameSum
 import Formalism.SubspaceCounting.Statement
+import Mathlib.LinearAlgebra.PiTensorProduct.Basic
 
 noncomputable section
 

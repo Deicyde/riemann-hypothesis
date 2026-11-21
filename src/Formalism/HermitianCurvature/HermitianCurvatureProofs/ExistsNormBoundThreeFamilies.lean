@@ -1,8 +1,7 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.WaveLocalBuiltPlaces
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.PbFormPos
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.PBGWaveMain
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.GramLocSetCApp
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.PBFCstmt
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.RatioBound
 
 namespace Formalism.FourierDecayAlt.P.PBL
 

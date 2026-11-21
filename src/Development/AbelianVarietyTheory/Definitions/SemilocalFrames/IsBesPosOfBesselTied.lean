@@ -1,9 +1,8 @@
-import Mathlib
-import Formalism.LocalToGlobal.BesselHermitianTheta.AllTied
-import Formalism.LocalRingCardinality.SpanPowerMembership.Spaces
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.OffCharsSeparates
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.MemberDatumOfFlagTie
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.AdelicDataRowMeasureScaleTrivialTuple
+import Development.AbelianVarietyTheory.Proofs.HeightProofs.ThetaContinuous
 
 noncomputable section
 

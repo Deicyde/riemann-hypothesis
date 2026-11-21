@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.CoveringOfForallMem
 open CategoryTheory Limits AlgebraicGeometry
 

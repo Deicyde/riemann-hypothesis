@@ -1,9 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.BranchSandwichDivisors.BranchIsometryProofs.BranchMap
-import Formalism.LocalToGlobal.Columns.PolyFnLemmas
 import Development.AbelianVarietyTheory.Definitions.Foundations.TracePowApply
-import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.SplitLastBlockActX
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ZetaPhiBranchOperator
+import Formalism.LocalToGlobal.Columns.FiniteSumNonzeroLargeDepth
 
 open MvPolynomial Formalism.GradedWeylDivisibility Formalism.BranchingDeterminantCap Formalism.BasicNotions Formalism.L2.DIV GlobalTheory.Mem.Gelf GlobalTheory.Mem.GelfCheck
 

@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsUSplittingInl
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ImportsBis
-import Development.AbelianVarietyTheory.Definitions.Foundations.T2SpaceAdeleRing
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsDblCoordDblD
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.L2.Theta
@@ -29,7 +26,7 @@ theorem dblGram_xi : ∀ (D : D7) (S : HSp D) (JB : Matrix (Fin S.rank) (Fin S.r
   rcases h1 : finSumFinEquiv.symm i with i' | i' <;> rcases h2 : finSumFinEquiv.symm j with j' | j' <;>
     simp only [blkMat, GlobalTheory.WeilM.dbl, GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.incM, Matrix.map_apply, Matrix.smul_apply, Matrix.submatrix_apply, h1, h2,
       Matrix.fromBlocks_apply₁₁, Matrix.fromBlocks_apply₁₂, Matrix.fromBlocks_apply₂₁, Matrix.fromBlocks_apply₂₂,
-      Matrix.zero_apply, Matrix.neg_apply, smul_zero, map_zero, smul_neg, map_neg, smul_eq_mul, mul_zero, mul_neg] at hij ⊢
+      Matrix.zero_apply, Matrix.neg_apply, map_zero, map_neg, smul_eq_mul, mul_zero, mul_neg] at hij ⊢
   · exact hij i' j'
   · exact congrArg Neg.neg (hij i' j')
 

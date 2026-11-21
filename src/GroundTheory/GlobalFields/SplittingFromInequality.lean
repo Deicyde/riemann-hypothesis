@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.FirstInequalityStatement
 import GroundTheory.GlobalFields.IdeleGroups.LocalNormsEverywhere
 import GroundTheory.GlobalFields.Adele.WeakApproxUnits

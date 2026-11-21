@@ -1,7 +1,4 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.BlowupProjections.BlowupProjStatement
-import Development.AutomorphicSpectrum.PublishedTheorems.Geometry₂.ConclusionOfSmooth
-import Development.AutomorphicSpectrum.PublishedTheorems.Geometry₂.NotSubsetOfDenseCompl
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.PublishedTheorems.PublishedGlobalResults.PrincipalizationOfPrincipalisation
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.CoordsStatementStatement
 

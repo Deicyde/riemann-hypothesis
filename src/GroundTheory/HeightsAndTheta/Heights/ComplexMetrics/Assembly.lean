@@ -1,4 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexPointsBase
 import GroundTheory.HeightsAndTheta.Heights.ComplexMetrics.PProjPointContinuous
 import GroundTheory.HeightsAndTheta.Heights.ComplexMetrics.PFractionContinuous

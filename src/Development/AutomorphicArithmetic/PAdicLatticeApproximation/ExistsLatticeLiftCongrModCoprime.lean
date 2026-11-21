@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.SphericalCoordinates.WitSys
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.PAdicLatticeApproximation.ExistsLatticeApproxModNCompletedLattice
 
 open NumberField

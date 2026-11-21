@@ -1,9 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.FormalDegreeUpperC
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.PolarisationOperatorApplyVariable
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.JointHarmonicOfHookNorm
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HookProductPosLogEq
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.HookREqHookProd
 
 noncomputable section
 

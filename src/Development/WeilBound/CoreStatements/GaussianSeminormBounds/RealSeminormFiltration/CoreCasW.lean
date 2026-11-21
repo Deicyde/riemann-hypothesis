@@ -1,4 +1,7 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.GaussianSeminormBounds.RealSeminormFiltration.CoreDefs
+import Mathlib.Data.Rat.Star
 
 noncomputable section
 
@@ -77,7 +80,7 @@ theorem casW_eq {r s : ℕ} (μ : Ix r s → ℚ) : casW μ = ∑ x, μ x ^ 2 + 
   unfold casW
   congr 1
   simp only [Fintype.sum_sum_type, posC, rho2]
-  simp only [if_false, ite_false, Finset.sum_const_zero, add_zero, zero_add]
+  simp only [ite_false, Finset.sum_const_zero, add_zero, zero_add]
   rw [cw_blk, cw_blk]
 
 theorem casW_root {r s : ℕ} {ν La : Ix r s → ℚ} {a b : Ix r s} (hab : a ≠ b) (h : RootTo ν a b La) :

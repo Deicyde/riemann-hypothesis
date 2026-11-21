@@ -1,5 +1,4 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.LevelZeroPointOver
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.StrictUpperNeg
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.MulVecBvecApply
 
 open Matrix MeasureTheory

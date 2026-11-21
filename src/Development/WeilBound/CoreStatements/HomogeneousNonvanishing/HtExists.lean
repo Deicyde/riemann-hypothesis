@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.TranslateMemIndOrder
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ExistsUnitFormLocalizationEtaleNbhd
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.HasValues
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.HodgeTatePoints.HtatHopfEx
 import Development.WeilBound.CoreStatements.HodgeTatePoints.HtatHens
 import Development.WeilBound.CoreStatements.HodgeTatePoints.HtatBcPull

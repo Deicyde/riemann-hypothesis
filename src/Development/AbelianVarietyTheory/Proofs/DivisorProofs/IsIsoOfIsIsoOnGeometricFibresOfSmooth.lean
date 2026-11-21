@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.QuasiCompact
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.MumfordConstruction
-import Development.AbelianVarietyTheory.Definitions.Degenerations.AdmissibleBaseOfCompleteDvr
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsIsoOfEtaleOfSurjectiveOfUniversallyInjectiveAlStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EtaleNearPointOfEtaleOnFibreSmoothStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCommonFieldExtension
@@ -95,7 +92,7 @@ theorem isIso_of_isIso_fibres : ∀ (T X Z : Scheme.{0}) (p : X ⟶ T) (q : Z �
     have haa : a ≫ m = a' ≫ m := by
       apply pullback.hom_ext
       · simp only [m, a, a', Category.assoc, pullback.lift_fst, pullback.lift_fst_assoc, hz]
-      · simp only [m, a, a', pullback.map, Category.assoc, pullback.lift_snd, pullback.lift_snd_assoc,
+      · simp only [m, a, a', pullback.map, Category.assoc, pullback.lift_snd,
           Category.comp_id]
     have haa' : a = a' := (cancel_mono m).1 haa
     have := congrArg (· ≫ pullback.fst p x) haa'

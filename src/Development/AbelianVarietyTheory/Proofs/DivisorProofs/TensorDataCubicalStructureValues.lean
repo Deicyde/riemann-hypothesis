@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsProjOverWeierstrass
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.MumfordConstruction
-import Development.AbelianVarietyTheory.Definitions.Degenerations.AdmissibleBaseOfCompleteDvr
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TensFacts
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TensorDataPsiIsEven
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj IsLocalRing NumberField
@@ -91,7 +89,7 @@ theorem cube_tens (hG : GlobalFnsSt) (T : Tens D D' W) {Z : Scheme.{0}} (q : Z �
     (surj_comp (surj_snd hG hA _) (surj_comp (surj_snd hG hA _) (hG _ _ hA).2)) (fun y I I' hI hI' => ?_) Z q z J J' hJ hJ'
   have p := prod_cub (1 : 𝟙_ (Over (Spec (CommRingCat.of R))) ⟶ D'.P.A) 1 1
     (fun ψ => GlobalTheory.TensEven.bwE T.w ψ y (fun i => I (ψ ≫ tensφ T.pr i)) (I' ψ))
-  simp only [_root_.mul_one, mul_inv_cancel, inv_mul_cancel] at p
+  simp only [_root_.mul_one, mul_inv_cancel] at p
   have c' : val (L := D'.P.L) (φ := thφ D'.P.A (x3 D'.P.A)) (ε := thε) D'.cub.t
       (lift 1 (lift 1 1) : 𝟙_ (Over (Spec (CommRingCat.of R))) ⟶ G3 D'.P.A).left y I' = 1 :=
     (isCub_cubV D'.cub hI').face 1 1
@@ -162,7 +160,7 @@ theorem theta_tens : ∀ (R : Type) [CommRing R] [IsDomain R] [IsLocalRing R], B
     simp only [tensε, Oε, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_two, Matrix.cons_val_three,
       Matrix.head_cons, Matrix.tail_cons, one_zpow, _root_.mul_one, zpow_mul]
     apply Additive.ofMul.injective
-    simp only [ofMul_mul, ofMul_inv, ofMul_zpow, ofMul_div, ofMul_one]
+    simp only [ofMul_mul, ofMul_zpow, ofMul_div]
     module
   rw [← hP] at key'
   apply (toStk z).injective

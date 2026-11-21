@@ -1,8 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsProbabilityMeasureMuPart
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsLocalRingTrivSqZeroExt
 import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.FrameChangeExistsUniqueInvertible
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.LowerTriIsUnitDet
 
 noncomputable section
 
@@ -158,11 +157,11 @@ theorem triM_diag (hij : i ≠ j) (x ξ : S) (k : Fin n) :
     triM i j x ξ k k = if k = i then x else if k = j then -ξ else 1 := by
   by_cases h1 : k = i
   · subst h1
-    simp [triM, Matrix.single_apply, hij, Ne.symm hij]
+    simp [triM, Ne.symm hij]
   · by_cases h2 : k = j
     · subst h2
-      simp [triM, Matrix.single_apply, h1, Ne.symm h1]
-    · simp [triM, Matrix.single_apply, h1, h2, Ne.symm h1, Ne.symm h2]
+      simp [triM, h1, Ne.symm h1]
+    · simp [triM, h1, h2, Ne.symm h1, Ne.symm h2]
 
 end Mat
 
@@ -260,7 +259,7 @@ theorem eq_zero_of_lt (Xo : Moduli Dw l) (c : Coeff l) (e : Ix Dw → ℤ) (τ :
       (by simp only [AlgHom.toRingHom_eq_coe, RingHom.coe_coe, Polynomial.aeval_X]; exact hT2 1) (χ1 a)
     simpa using this)
   replace hα2 : ∀ a, χ2 (α2 a) = Polynomial.toLaurent (χ1 a) := fun a => by
-    rw [hα2]; simp [Polynomial.toLaurentAlg_apply]
+    rw [hα2]; simp
   replace hβ : ∀ a, χ2 (β a) = Polynomial.aeval (T (-1) : LaurentPolynomial p.R) (χ1 a) := fun a => by
     rw [hβ]; simp
   set x2 := α2 x1 with hx2d

@@ -1,25 +1,15 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.EigLatLe
-import Formalism.LocalToGlobal.ProjectiveLattices.LiftLaSpec
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DualWeylTensorEvaluationTranslateKronecker
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MulNormDualWeylTensorEvaluationLeFibreNormStatement
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.MetricDataUnique
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.MetricChangeOfFrame
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.IsMetricConjugateFramedPoint
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.UnifMetricScalar
-import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.CuspFormBoundedBySupNormAtGoodEmbeddingAllEmbedd
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsUniqueFrameChangeByMatrices
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.FrameChangeExistsUniqueOfSamePoint
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.FrameChangeByMatricesReflAndComp
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.FrameChangeCommBaseChange
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.LowerTriIsUnitDet
 import Development.AbelianVarietyTheory.Proofs.GenericRegularity.PointwiseNormSectionEqFlagDomainNorm
 import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.RecordAtOfIsArcFr
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.FrMapComp
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.PlaceBoundSplitOfIntegral
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.HolomorphicFamilies.SupAtUnit
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.OrthonormalFlagTranslateHolds
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.OrthogonalFrameDomain
 
 noncomputable section
 
@@ -234,7 +224,7 @@ theorem exists_ortho {σ : c.F →+* ℂ} {r : ℕ} {U : Unf Xo c σ r} {ξ : �
       fun _ => 1 := by
     funext b
     have h3 : (ρ : ℂ) * ((2 * Real.pi * ξ : ℝ) : ℂ) * ρ = 1 := by exact_mod_cast hρκ
-    simp only [Y, Matrix.conjTranspose_smul, Matrix.conjTranspose_one, Matrix.smul_mul, Matrix.mul_smul, Matrix.mul_one,
+    simp only [Y, Matrix.conjTranspose_smul, Matrix.conjTranspose_one, Matrix.mul_smul, Matrix.mul_one,
       smul_smul, Complex.star_def, Complex.conj_ofReal]
     rw [← mul_assoc, h3, one_smul]
   rw [hG, norm_one, one_pow, mul_one] at hm1

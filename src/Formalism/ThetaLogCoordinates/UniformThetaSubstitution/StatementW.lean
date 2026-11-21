@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.ThmSUniform
+import BuildAid.Leniency.Open
+import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.IsLawOfLog
 
 noncomputable section
 

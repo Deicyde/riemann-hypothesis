@@ -1,5 +1,8 @@
-import Formalism.SatakeDualWeyl.StatementE
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.SatakeComb
+import Formalism.SatakeDualWeyl.Statement
+import Mathlib.Data.Matrix.PEquiv
 
 noncomputable section
 

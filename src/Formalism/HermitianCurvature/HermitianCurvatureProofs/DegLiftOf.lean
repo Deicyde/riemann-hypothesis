@@ -1,6 +1,8 @@
-import Formalism.HermitianCurvature.StatementHeads
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.PBGLift
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.PBGFormJ
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.PBGWaveMain
 
 open Matrix Finset
 open scoped ComplexConjugate

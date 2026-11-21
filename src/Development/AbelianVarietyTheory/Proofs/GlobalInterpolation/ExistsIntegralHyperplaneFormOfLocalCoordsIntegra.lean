@@ -1,4 +1,4 @@
-import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.CoP
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.LocalBasisRepLatticeIntegralCoordsSpecStatement
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ExistsHermitianFormDescentCoefficientFieldStatement
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.MemLocWHlatIffStatement

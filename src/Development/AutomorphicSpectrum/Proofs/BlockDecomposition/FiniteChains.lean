@@ -1,5 +1,4 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.HodgeWedgeFields.H1CommutesBaseChange
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HomotopyProjectorComplexBoundedStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ChainHomotopyFiniteProjectorStatement
 

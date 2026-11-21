@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinRel
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TrPApply
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AtVecMulVecRight
 open scoped TensorProduct Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -74,7 +71,7 @@ theorem lagSetB_isSubspace : ∀ {F E : Type} [Field F] [NumberField F] [Field E
             incM F H.ι * z * (incM F H'.ι)ᵀ) := by
         ext i j
         simp [Matrix.vecMulVec_apply, Matrix.mulVec, dotProduct, Matrix.mul_apply, Finset.smul_sum, Finset.sum_mul,
-          smul_add, mul_smul_comm, smul_mul_assoc]
+          smul_add]
       rw [this, map_smul, Prod.smul_fst, Prod.smul_snd, sub_arch_smul, sub_arch_smul]
       rfl
 

@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedPlaneThetaEmbeddingExists
 
 open scoped TensorProduct NNReal Matrix
@@ -23,7 +22,7 @@ theorem symp_freq_snd (σ : E →ₐ[F] E) {n d : ℕ} (JX : Matrix (Fin n) (Fin
   have hv : vecMulVec (incV F x) (∑ j, realAd F (t j) • incV F (q j)) =
       ∑ j, realAd F (t j) • vecMulVec (incV F x) (incV F (q j)) := by
     ext i l
-    simp [vecMulVec_apply, Matrix.sum_apply, Finset.mul_sum, mul_smul_comm]
+    simp [vecMulVec_apply, Matrix.sum_apply, Finset.mul_sum]
   unfold symp
   rw [hv]
   change Algebra.trace (AF F) (AE F E) (-1 * hTensR σ (incM F JX) (incM F JW) _ (∑ j, _)) = _

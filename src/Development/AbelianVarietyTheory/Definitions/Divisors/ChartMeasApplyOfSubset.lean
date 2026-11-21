@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.L2DbarEstimates.PlurisubharmonicCharts.FamilyLeCoords
 import ReciprocityTheory.L2DbarEstimates.ChartDerivatives.HoloSmooth
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.RingTheory.Complex
+import Mathlib.RingTheory.PiTensorProduct
 
 set_option autoImplicit false
 

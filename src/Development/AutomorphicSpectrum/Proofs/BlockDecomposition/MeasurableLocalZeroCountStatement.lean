@@ -1,10 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MeasurableLocalZeroCount
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ChernDegreeComplex
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsPresents
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.JoinCol
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MeasurableZeroCountStatement
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RandomSectionZeroCountStatement
 open CategoryTheory AlgebraicGeometry TopologicalSpace MeasureTheory
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open ReciprocityTheory.ChartRestriction.G.Out (nonzeroLocus)

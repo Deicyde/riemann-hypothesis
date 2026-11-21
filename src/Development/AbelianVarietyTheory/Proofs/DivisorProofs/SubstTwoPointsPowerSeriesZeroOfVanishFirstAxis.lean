@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.NonemptyValExtOfOverLa
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DetFactorDepthInChartChartIndependent
 import Development.AbelianVarietyTheory.Proofs.FormalGroupCharts.RelatedMap
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DerivAt0SubstLinearLipschitz

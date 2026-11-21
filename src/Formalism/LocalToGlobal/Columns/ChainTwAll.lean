@@ -1,7 +1,9 @@
-import Formalism.LocalToGlobal.Columns.ChainTwTop
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.ChainTwZero
 import Formalism.LocalToGlobal.Columns.ChainTwPsi
 import Formalism.LocalToGlobal.Columns.ChainTwAn
+import Formalism.LocalToGlobal.Columns.ChainTwMain
 
 open NumberField IsDedekindDomain Module
 

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlockMatrixMulVecBasis
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlatBoundTuple
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicPlaneComplementForm
@@ -166,12 +167,12 @@ theorem coefT_mul (hσ : ∀ x, σ (σ x) = x) (hsk : ∀ i j, σ (J j i) = -J i
   rw [← Matrix.mul_assoc, ← Matrix.transpose_mul, coef_frame hRF, ← Matrix.mul_assoc]
   ext col l
   rw [GlobalTheory.LeviPlaneSection.gram_apply, Matrix.mul_apply]
-  simp only [Matrix.transpose_apply, Matrix.submatrix_apply, id]
+  simp only [Matrix.transpose_apply, Matrix.submatrix_apply]
   rcases col_cases col with rfl | ⟨k, rfl⟩ | rfl
   · simp only [frame_alt, id_eq, Matrix.one_apply, if_neg (mid_ne_x _), zero_mul, Finset.sum_const_zero]
     rw [GlobalTheory.LeviPlaneSection.form_skew hσ hsk, col_eq, (horth _).1, map_zero, neg_zero]
   · simp only [frame_mid, id_eq, Matrix.one_apply, mid_injective.eq_iff, ite_mul, one_mul, zero_mul,
-      Finset.sum_ite_eq, Finset.sum_ite_eq', Finset.mem_univ, if_true]
+      Finset.sum_ite_eq', Finset.mem_univ, if_true]
     rw [← GlobalTheory.LeviPlaneSection.gram_apply, hgram]
   · simp only [frame_y, id_eq, Matrix.one_apply, if_neg (mid_ne_y _), zero_mul, Finset.sum_const_zero]
     rw [GlobalTheory.LeviPlaneSection.form_skew hσ hsk, col_eq, (horth _).2, map_zero, neg_zero]

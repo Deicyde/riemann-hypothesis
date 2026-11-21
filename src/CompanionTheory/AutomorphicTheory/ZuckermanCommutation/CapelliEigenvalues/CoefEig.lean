@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import CompanionTheory.AutomorphicTheory.ZuckermanCommutation.CapelliEigenvalues.FunAct
 import CompanionTheory.AutomorphicTheory.SchurLimitBounds.ZuckermanDuality.ZuckDualTOfZuckDual
+import CompanionTheory.AutomorphicTheory.ZuckermanCommutation.CapelliEigenvalues.Transport
 
 open Matrix PI.UpqRep Formalism.FourierDecayAlt
 open scoped InnerProductSpace

@@ -1,15 +1,12 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsPeriodAtRestrict
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.EmbedsGeneric
-import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.GoodOrigin
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.GlobalSectionsRankAlgClosed
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IntegralClosureHeightEqOneOfLiesOver
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.PotentialsBoundedRegSettingEqReference
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.PFsLineLevi
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.PFsLineSmooth
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.CoordinateIdeals.FubiniLeviGen
 import GroundTheory.HeightsAndTheta.Heights.ElementarySymmetric.PSmallGenHeightsNonneg
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.IsMultiHomogXpow
+import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.CoordinateIdeals
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterNamed
 
 noncomputable section
 
@@ -25,7 +22,7 @@ theorem log_rho_eq_phi (I : Type) [Fintype I] :
   funext z
   change Real.log ‖WithLp.toLp 2 z‖ = _
   rw [EuclideanSpace.norm_eq, Real.log_sqrt (Finset.sum_nonneg fun _ _ => sq_nonneg _)]
-  simp only [FubiniLevi.phi, FubiniLevi.sqSum, PiLp.toLp_apply]
+  simp only [FubiniLevi.phi, FubiniLevi.sqSum]
   ring
 
 variable {K : Type} [Fintype K] {J : K → Type} [∀ k, Fintype (J k)]

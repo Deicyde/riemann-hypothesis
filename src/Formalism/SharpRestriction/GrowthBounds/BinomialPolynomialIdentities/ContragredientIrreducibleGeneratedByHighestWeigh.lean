@@ -1,7 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.StatementOfDegreeAndBound
-import Formalism.SharpRestriction.GrowthBounds.RootWeights.RaiseLowerPowCommutatorOnWeight
-import Formalism.SharpRestriction.GrowthBounds.RootWeights.ExistsHighestCoordinateFunctional
-import Formalism.SharpRestriction.GrowthBounds.RootWeights.WeightConditionFromIntegralForm
 
 noncomputable section
 

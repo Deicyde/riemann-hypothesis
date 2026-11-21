@@ -1,4 +1,4 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.Qdist
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.ExistsIntMultiple
 
 namespace ReciprocityTheory.ChartRestriction.G.T0

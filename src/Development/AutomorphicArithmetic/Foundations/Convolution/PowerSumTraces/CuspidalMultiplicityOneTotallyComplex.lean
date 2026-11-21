@@ -1,8 +1,6 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.TraceClass
-import GroundTheory.AutomorphicForms.CuspidalDiscreteness
-import GroundTheory.AutomorphicForms.L2LocalComponents.Summand
-import GroundTheory.AutomorphicForms.GKModules.Casimir
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.AutomorphicForms.TensorProductTheorem.CentralCusp
 
 noncomputable section
 

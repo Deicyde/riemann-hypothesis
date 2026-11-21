@@ -1,8 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.IsGenFrGenFr
-import Formalism.LocalToGlobal.ProjectiveLattices.FamilyUniformisationBasePointOrthogonalBis
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Divisibility.Frames
-import Formalism.HarderNarasimhan.StatementPl
+import Formalism.LocalToGlobal.ProjectiveLattices.CuspidalL2Subspace
 
 open Module NumberField IsDedekindDomain MeasureTheory
 open scoped Matrix

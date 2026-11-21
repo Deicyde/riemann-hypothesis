@@ -1,8 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.WeightCongruences.ProdCMTypeEmbeddingsRootOfUnityEqOne
-import Formalism.FrobeniusOrbits.HostCorollaries
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.BoundedDenominatorsOfBeta
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.VpBounds
+import Formalism.LocalRingCardinality.ConjSqrtMinusD
 
 noncomputable section
 

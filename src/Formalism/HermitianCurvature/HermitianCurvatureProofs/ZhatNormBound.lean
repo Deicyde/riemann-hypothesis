@@ -1,4 +1,7 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.LinearChangeOfVariablesBis
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.FiniteOrderIntersectionInSmooth
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
 
 open Matrix Formalism.FourierDecayAlt Formalism.QuantumDeterminants
 open scoped ComplexConjugate

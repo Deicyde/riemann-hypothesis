@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompactTorusQuotientEquivariance
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoordMeasure
 open MeasureTheory
 open scoped NNReal ENNReal
 set_option maxHeartbeats 1000000 in

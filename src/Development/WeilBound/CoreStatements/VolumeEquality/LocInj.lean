@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.VolumeEquality.RootBranches
 import Development.WeilBound.CoreStatements.VolumeEquality.LocInjA
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.BallAutomorphismInverseExists

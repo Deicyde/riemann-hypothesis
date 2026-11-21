@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.DataN
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.Analysis.CStarAlgebra.Module.Constructions
 
 namespace GlobalTheory.IndefiniteRowSideFullHecke.ThetaGramMatrix
 

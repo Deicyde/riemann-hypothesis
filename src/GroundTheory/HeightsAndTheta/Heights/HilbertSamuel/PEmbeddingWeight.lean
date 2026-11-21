@@ -1,7 +1,14 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsEmbeddingWeight
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.PCoordConeArithVar
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterBridgeB
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Geometry.Manifold.PartitionOfUnity
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Algebra.MvPolynomial
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.HilbertSamuel
@@ -23,7 +30,7 @@ def conjVec (z : (Σ k, ι k) → ℂ) : (Σ k, ι k) → ℂ := fun p => conj (
 
 theorem blockNormSq_smul (c : K → ℂ) (z : (Σ k, ι k) → ℂ) (k : K) :
     blockNormSq (fun p => c p.1 * z p) k = ‖c k‖ ^ 2 * blockNormSq z k := by
-  simp [blockNormSq, norm_mul, mul_pow, Finset.mul_sum]
+  simp [blockNormSq, mul_pow, Finset.mul_sum]
 
 theorem blockNormSq_pos {z : (Σ k, ι k) → ℂ} (hz : ∀ k, ∃ i, z ⟨k, i⟩ ≠ 0) (k : K) :
     0 < blockNormSq z k := by

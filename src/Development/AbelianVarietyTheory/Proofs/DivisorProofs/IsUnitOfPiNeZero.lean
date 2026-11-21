@@ -1,10 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.StepsNonvacuous
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GrothendieckDeformation
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsCrystalPairing
-import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.HasAlgebraicChartsOfIsStandardSmooth
+import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.ExistsOpenPartialHomeomorphAnalytic
 
 set_option autoImplicit false
 
@@ -68,7 +65,7 @@ theorem adjoin_top (I : Type) [Fintype I] (n : ℕ) (J : JetRing ℂ I n) :
         · intro l _ hl; simp [hl]
         · simp
       have hb : J.b ⟨(Pi.single i 1 : I → ℕ) + ν'.1, hle⟩ = J.b ν := congrArg J.b (Subtype.ext hsum.symm)
-      simp only [Pi.add_apply] at hmul
+      simp only at hmul
       rw [hprod, hb] at hmul
       have hne : (ν.1 i : ℂ) ≠ 0 := by exact_mod_cast hi
       have : J.b ν = (ν.1 i : ℂ)⁻¹ • (J.t i * J.b ν') := by

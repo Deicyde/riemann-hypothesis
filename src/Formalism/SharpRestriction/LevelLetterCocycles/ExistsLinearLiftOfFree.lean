@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.InvariantLetterIdempotentOfFixed
+import Formalism.SharpRestriction.LevelLetterCocycles.IsTruncIff
 
 noncomputable section
 

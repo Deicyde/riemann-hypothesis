@@ -1,5 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.OrbitVanishingLocal
-import Formalism.SharpRestriction.ValuationFrobeniusEpsilon.LeastPrimeTwists.QuotientShiftIrreducible.UZGen
+import Formalism.SharpRestriction.ValuationFrobeniusEpsilon.LeastPrimeTwists.QuotientShiftIrreducible.NoetherianQuotientCalc.EulerVanishingBelowDimension
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -19,7 +24,7 @@ theorem lat_add (m m' : Fin k →₀ ℕ) : lat N (m + m') = lat N m * lat N m' 
 theorem lat_zero : lat N 0 = 1 := by simp [lat]
 
 theorem lat_single (i : Fin k) : lat N (Finsupp.single i 1) = N i := by
-  rw [lat, Finset.prod_eq_single i] <;> simp +contextual [Finsupp.single_apply, eq_comm]
+  rw [lat, Finset.prod_eq_single i] <;> simp +contextual [eq_comm]
 
 def rees : Subalgebra B (MvPolynomial (Fin k) A) where
   carrier := {p | ∀ m, MvPolynomial.coeff m p ∈ lat N m}

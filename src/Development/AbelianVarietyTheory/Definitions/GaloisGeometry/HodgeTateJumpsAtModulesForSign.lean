@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.DecompositionData
-import Formalism.LocalRingCardinality.DataParams₂
 
 noncomputable section
 

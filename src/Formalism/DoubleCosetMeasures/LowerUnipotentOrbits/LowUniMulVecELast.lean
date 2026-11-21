@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.DoubleCosetMeasures.Statement
 
 set_option maxHeartbeats 400000

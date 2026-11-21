@@ -1,7 +1,4 @@
-import Mathlib
-import Formalism.HermitianCurvature.StatementD
-import Formalism.HermitianCurvature.StatementQ
-import Formalism.HermitianCurvature.BigCellVanishingOfCommute
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ConjugationContinuousOnInvertible
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.OppositeWeylSubgroupClosed
 

@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.KappaSt
+import Mathlib.Tactic.ENatToNat
 
 open MeasureTheory Set
 open scoped Pointwise

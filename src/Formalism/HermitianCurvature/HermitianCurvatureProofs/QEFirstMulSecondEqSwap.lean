@@ -1,4 +1,5 @@
-import Formalism.HermitianCurvature.StatementWd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.FirstEmbeddingOne
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.PositionInsertionDiagonalCompat
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.SecondEmbedMulFirstEmbedApply

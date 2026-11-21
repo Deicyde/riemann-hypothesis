@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EvalInvarianceFirstOfHyp
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilActionMapsSchwartz
 open scoped TensorProduct NNReal Matrix

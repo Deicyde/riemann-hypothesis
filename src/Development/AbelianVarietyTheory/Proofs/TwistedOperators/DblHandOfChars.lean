@@ -1,9 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.TopOrthEmb
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.DoubleStepEqTwoThetaColumnLifts
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ExistsWeilDatumHermitianPair
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.FlatThetaMapsPreserveThetaFunctions
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.FlatThetaMapsConvergeThetaFunctionsStatement
+import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsWeilDatumAnisotropicKernelPair
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR.Datum MeasureTheory IsDedekindDomain NumberField Matrix
 open Formalism.IndefR Formalism.IndefR.Links GlobalTheory.MixModel GlobalTheory.MixPer GlobalTheory.Grow GlobalTheory.ChiGrid GlobalTheory.Unf GlobalTheory.FunObj GlobalTheory.RowUnf GlobalTheory.RowChain
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
@@ -42,9 +41,9 @@ theorem dbl_hand_of_chars {D : D7} {T : Type} {L : LevCh D T} {sc : Consts} (G :
               (besDecAt G (j + 1 + 1) σ (by omega))).om (h₁, h₂) Φ₂))) := by
   intro vN Φ₁ Φ₂ φ hΦ₁ hΦ₂ hφ g h₁ h₂
   have rA : Pair.InRange D.R.m (.top t j) := by
-    simp [Pair.InRange, Pair.big, Node.InRange]; omega
+    simp [Pair.InRange, Node.InRange]; omega
   have rB : Pair.InRange D.R.m (.top t (j + 1)) := by
-    simp [Pair.InRange, Pair.big, Node.InRange]; omega
+    simp [Pair.InRange, Node.InRange]; omega
   have hA := Wl.om_is (.top t j) rA
   have hB := Wl.om_is (.top t (j + 1)) rB
   have hoa : IsWeilDatumO Wl.ψ (G.V (.top j)) (G.V (.top (j + 1))) (G.chrS (.top t j)) (G.chrT (.mu t D.R.m j))

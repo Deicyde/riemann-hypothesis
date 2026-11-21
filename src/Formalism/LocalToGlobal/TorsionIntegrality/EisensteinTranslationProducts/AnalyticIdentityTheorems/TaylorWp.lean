@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.EisensteinTranslationProducts.EndoZInstance
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
 
 noncomputable section
 open scoped BigOperators

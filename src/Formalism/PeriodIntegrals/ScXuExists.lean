@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.GlobAut
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.ScRefExists
 
 noncomputable section

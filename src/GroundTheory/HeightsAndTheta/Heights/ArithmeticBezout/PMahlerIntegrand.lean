@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.StatementsMahler
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.LogIntSphere
 set_option maxSynthPendingDepth 1

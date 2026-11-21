@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ReferenceMetricMulDualEqOne
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocallyQuasiFiniteOfUniqueGeomPointsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsOpenIsoOfBijectiveGeomStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsNormalSmoothLocalModelStatement

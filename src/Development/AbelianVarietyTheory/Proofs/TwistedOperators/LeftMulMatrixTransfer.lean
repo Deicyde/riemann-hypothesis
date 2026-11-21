@@ -1,5 +1,14 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.PlusPolynomialInclusion
+import Mathlib.Algebra.Module.PID
+import Mathlib.FieldTheory.IsAlgClosed.Spectrum
+import Mathlib.LinearAlgebra.Charpoly.ToMatrix
+import Mathlib.LinearAlgebra.Matrix.Charpoly.Eigs
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.PicardGroup
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -566,7 +575,7 @@ theorem exists_basis_tensor {ι : Type} [Fintype ι] (b : Module.Basis ι E (Adj
     simp only [map_sum, map_smul_tensor, map_zero] at this
     rw [Finset.sum_eq_single j] at this
     · simpa [← Algebra.TensorProduct.one_def] using this
-    · intro i _ hij; simp [Finsupp.single_apply, hij]
+    · intro i _ hij; simp [hij]
     · simp
   · rintro y -
     induction y using TensorProduct.induction_on with

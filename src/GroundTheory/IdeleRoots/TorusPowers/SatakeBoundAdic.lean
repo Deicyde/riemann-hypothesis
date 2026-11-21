@@ -1,8 +1,7 @@
-import Mathlib
-import Formalism.UnipotentAdelicQuotients.ThmBInSatake
-import GroundTheory.IdeleRoots.TorusPowers.SatakeBoundReps
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.LocalFieldAtPlace
-import GroundTheory.GlobalFields.KummerTheory.LocalIndexAtPlace
+import GroundTheory.AutomorphicForms.MacdonaldHecke
 set_option maxSynthPendingDepth 1
 
 noncomputable section

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.ChainFirstChainK
 
 open Formalism.MainNotions.G Formalism.BasicNotions NumberField

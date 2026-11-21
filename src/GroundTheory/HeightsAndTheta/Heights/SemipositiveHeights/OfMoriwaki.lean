@@ -1,5 +1,4 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.MoriwakiSt
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.SemipositiveHeights.ImportsAlt
 import GroundTheory.HeightsAndTheta.Heights.SemipositiveHeights.PNmSmallIntoFS
 import GroundTheory.HeightsAndTheta.Heights.SemipositiveHeights.PFSSmallFinite

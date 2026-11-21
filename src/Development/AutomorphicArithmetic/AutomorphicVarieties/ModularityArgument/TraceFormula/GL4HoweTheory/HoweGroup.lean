@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.TwistedLocalOrbits.HoweSpace
+import Development.AbelianVarietyTheory.Definitions.Divisors.T2SpaceGeneralLinearGroup
 
 open MeasureTheory ValuativeRel GlobalTheory.PRep GlobalTheory.SmGL GlobalTheory.SplitWeil GlobalTheory.IndefiniteRowSideFullHecke.IwahoriDoubleCosets UpperTheory.ConvolutionTheory.Loc
 
@@ -96,7 +99,7 @@ private theorem conj_entry (t : Fin n → Eˣ) (g : GL (Fin n) E) (i j : Fin n) 
   rw [e, Matrix.sub_apply, Matrix.mul_diagonal, Matrix.diagonal_mul]
   by_cases h : i = j
   · subst h
-    simp [sub_mul, mul_right_comm]
+    simp [mul_right_comm]
   · simp [Matrix.one_apply_ne h]
     ring
 

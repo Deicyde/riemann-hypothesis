@@ -1,9 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.LocalSituation
-import Formalism.SharpRestriction.LevelLetterCocycles.QuotientHomNonvanishingBound
-import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
-import Formalism.FrobeniusOrbits.HostCorollaries
 import Development.AutomorphicArithmetic.PrimeDiscriminants.CycImage
+import Mathlib.LinearAlgebra.Lagrange
+import Mathlib.RingTheory.Polynomial.Dickson
+import Mathlib.Topology.Connected.Separation
+import Mathlib.Topology.MetricSpace.Ultra.TotallySeparated
 
 noncomputable section
 
@@ -177,7 +179,7 @@ theorem FilV_anti' (a : ℤ) : FilV PD (LL := LL) (V := V) (a + 1) ≤ FilV PD (
 theorem mu_mul (c d : K) (x : V ⊗[Qp] BdR) : μ (c * d) x = μ c (μ d x) := by
   induction x using TensorProduct.induction_on with
   | zero => simp
-  | tmul a b => simp [mulVdR, mul_assoc]
+  | tmul a b => simp [mulVdR]
   | add a b ha hb => rw [map_add, map_add, map_add, ha, hb]
 
 theorem mu_add (c d : K) (x : V ⊗[Qp] BdR) : μ (c + d) x = μ c x + μ d x := by

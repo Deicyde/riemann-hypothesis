@@ -1,24 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.IsPtRepTrDat
-import Formalism.SharpRestriction.CuspSpanNormBounds.AbsoluteAmplitudeSecondOfSource
-import Formalism.SharpRestriction.CuspSpanNormBounds.PExtra
-import Formalism.SharpRestriction.CuspSpanNormBounds.AmplitudeAndVolumeBounds
-import Formalism.SharpRestriction.CuspSpanNormBounds.BranchingAndRankConstants
-import Formalism.SharpRestriction.CuspSpanNormBounds.MassAndBranchingHypotheses
-import Formalism.SharpRestriction.CuspSpanNormBounds.SBridge
-import Formalism.LocalRingCardinality.DataTies
-import Development.AbelianVarietyTheory.Statements.DiscreteSeriesShifts.ThmBpDS
-import Development.AbelianVarietyTheory.Definitions.Jets.SideFam
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.FormalDegreeCompactDualIff
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.OnePlaceKF
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.SumPlacesEqTrace
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.JEqOrbInt
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.CellConv
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.UniformBesselConstant
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BigCellHermitian
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.SettingConstruction
-import Formalism.FormalDegreeBessel.FormalDegreeRatio.BFCell
-import Formalism.FormalDegreeBessel.FinalBF
 open MeasureTheory Matrix
 open scoped InnerProductSpace ENNReal
 open Formalism.BasicNotions Formalism.QuantumDeterminants Formalism.MainNotions.S BranchingSupport GlobalTheory.CellAmp
@@ -112,7 +93,7 @@ theorem inner_eq {k r : ℕ} (L : LocBessel k r) (a : Matrix (Fin (2 * r + k + 1
   have hH : Measurable fun n' : Mt k r => ∫⁻ h'', f (x, (h'', n')) ∂L.μW' := hH'.lintegral_prod_left'
   have hfx : Measurable fun y : Mt k r × Mt k r => f (x, y) := hfm.comp (measurable_const.prodMk measurable_id)
   rw [lintegral_prod _ hG.aemeasurable, lintegral_prod _ hfx.aemeasurable]
-  simp only [lintegral_const, L.hμW'.2, one_mul]
+  simp only [lintegral_const, L.hμW'.2]
   have e1 : ∫⁻ n', ∫⁻ h'', f (x, (h'', conjM a n')) ∂L.μW' ∂L.μN =
       ∫⁻ n', ∫⁻ h'', f (x, (h'', n')) ∂L.μW' ∂(L.μN.map (conjM a)) := by
     rw [lintegral_map hH hconj]

@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.IrreducibleFactorHeightBound
-import ReciprocityTheory.SemistableReduction.TorusL2CauchyInequality
+import Mathlib.Algebra.Order.Antidiag.FinsuppEquiv
 
 namespace ReciprocityTheory.ChartRestriction.G.T0
 

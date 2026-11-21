@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EventuallyPcRatFMem
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemMaxCompactGLOfCommuteEtaleCharpolyBounded
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralConjEtaleMemCentralizerMulIntegralGL
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InertIntegralTwistedConjugatesTwistedCentralizer
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFiniteAdelicUnitaryPointOfLocalFamily
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HasSatGLOfInvT
 open NumberField IsDedekindDomain Matrix Polynomial Filter GlobalTheory.CuspRep GlobalTheory.PRep Formalism.UG Formalism.BasicNotions GlobalTheory.UnitaryBC Formalism.L2.Host GlobalTheory.BCT
@@ -120,7 +119,7 @@ theorem split_twCent : ∀ (E : Type) [Field E] [NumberField E] [IsCMField E] (n
           _ = _ := by group
       · simp only [pcmul, pcinv, pcTo _ hne, pcθTb, pcδ _ hub, pcθδ _ hub]
         group
-    · simp [pcmul, pcinv, pc_gam _ hv]
+    · simp [pc_gam _ hv]
   · rw [memKU]
     intro v
     simp only [pcmul, pcinv]
@@ -144,7 +143,7 @@ theorem split_twCent : ∀ (E : Type) [Field E] [NumberField E] [IsCMField E] (n
           (mem_Kglob_iff _).1 (thF_mem_Kglob (locGL_mem_Kglob hk1)) _
         convert mul_mem (mul_mem (hD _ hub).1 h2) (inv_mem h1) using 1
         rw [hB]; group
-    · simp only [pc_gam _ hv, inv_one, mul_one, one_mul]
+    · simp only [pc_gam _ hv, inv_one, mul_one]
       exact one_mem _
 
 end GlobalTheory.EulerTwSplit

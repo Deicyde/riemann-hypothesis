@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.PointSide
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VolConjEqOneOfMassCNeZero
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MassMulVolumeCommensurable
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VolEqIdxRatio
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinsumDoubleCosetFoldIntermediateSubgroupStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TwistedCentralizerMassNeZeroOfMemSupportStatement
 
@@ -108,7 +105,7 @@ variable {G : Type} [Group G]
 
 theorem map_conj_one (A : Subgroup G) : A.map (MulAut.conj (1 : G)).toMonoidHom = A := by
   ext z
-  simp [mem_map_conj]
+  simp
 
 theorem vol_self (A : Subgroup G) : vol A A = 1 := by
   simp [vol, Subgroup.relIndex_self]

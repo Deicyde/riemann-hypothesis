@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.CapelliDeterminantAndBranching
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.QuantumMinorExpansion
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.QuantumMinorCommutation
+import Mathlib.LinearAlgebra.Lagrange
 
 open Finset Polynomial
 

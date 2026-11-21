@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.L2DbarEstimates.WeakHolomorphy.MollifyEqConvolution
+import Mathlib.Analysis.Calculus.FDeriv.Symmetric
 
 namespace ReciprocityTheory.L2DbarEstimates.C
 

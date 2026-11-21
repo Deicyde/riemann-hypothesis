@@ -1,4 +1,43 @@
-import Mathlib
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
 
 namespace GlobalTheory
 
@@ -69,7 +108,7 @@ theorem localizedModule_map_surjective_of_smul_mem_range
     rw [LocalizedModule.map_mk, LocalizedModule.mk_eq]
     refine ⟨1, ?_⟩
     rw [hx]
-    simp only [one_smul, Submonoid.smul_def, Submonoid.coe_mul, mul_smul]
+    simp only [one_smul, Submonoid.smul_def, mul_smul]
     exact smul_comm _ _ _
 
 theorem exists_pow_smul_eq_zero_of_localizedModule_map_injective
@@ -163,7 +202,7 @@ theorem exists_embedding_bijective_localizedModule_map_of_rankAtStalk :
     obtain ⟨n, hn⟩ := exists_pow_smul_eq_zero_of_localizedModule_map_injective φ f hloc _ hk
     rw [← LocalizedModule.zero_mk s, LocalizedModule.mk_eq]
     refine ⟨⟨f ^ n, n, rfl⟩ * u, ?_⟩
-    simp only [Submonoid.smul_def, smul_zero, Submonoid.coe_mul, mul_smul]
+    simp only [Submonoid.smul_def, smul_zero, mul_smul]
     exact hn
 
 end GlobalTheory

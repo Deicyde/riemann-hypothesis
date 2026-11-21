@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.HarmInvA
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ConstantCoeffPolyAdd
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.PsiCover
@@ -47,7 +49,7 @@ theorem subst_quadCol (b : Fin n) (r : S) (β : Matrix (Fin d) (Fin d) S) :
   have hC' : ∀ (c : S) (f : MvPowerSeries (Fin n × Fin d) S), MvPowerSeries.C c * f = c • f :=
     fun c f => by rw [MvPowerSeries.smul_eq_C_mul]
   rw [← MvPowerSeries.coe_substAlgHom hs]
-  simp only [ReciprocityTheory.ChartRestriction.G.TB.quadCol, Fin.sum_univ_one, mul_assoc, hC, hC', map_smul, map_sum, map_mul]
+  simp only [ReciprocityTheory.ChartRestriction.G.TB.quadCol, Fin.sum_univ_one, hC, hC', map_smul, map_sum, map_mul]
   simp only [MvPowerSeries.coe_substAlgHom, MvPowerSeries.subst_X hs, sb]
 
 theorem sum_subst_quadCol (r : S) (β : Matrix (Fin d) (Fin d) S) :

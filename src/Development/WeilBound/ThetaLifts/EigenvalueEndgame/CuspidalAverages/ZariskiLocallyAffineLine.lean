@@ -1,4 +1,8 @@
-import Development.WeilBound.ThetaLifts.EigenvalueEndgame.CuspidalAverages.KeyThree
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.HilbertNinetyQuotientHomEqIff
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Topology.LocallyConstant.Algebra
 
 noncomputable section
 

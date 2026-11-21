@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTorusUOne
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsSmoothModerateOfIsAutFunSm
 
@@ -141,7 +142,7 @@ theorem isTorusU_of_isTorusElt : ∀ (F E : Type) [Field F] [NumberField F] [Fie
         (Formalism.UG.cT (σ : E →+* E) Z * ((1 : E) • J.map σ)) *ᵥ z = 0 := fun Z hZ => funext fun i => by
       rw [Pi.zero_apply, ← hZ i]
       simp only [one_smul, Formalism.UG.cT, Matrix.mulVec, dotProduct, Matrix.mul_apply, Matrix.map_apply,
-        Matrix.transpose_apply, form, RingHom.coe_coe, hJ, Pi.zero_apply]
+        Matrix.transpose_apply, form, RingHom.coe_coe, hJ]
       simp only [Finset.sum_mul, Finset.mul_sum]
       first
         | exact Finset.sum_congr rfl fun _ _ => Finset.sum_congr rfl fun _ _ => by ring

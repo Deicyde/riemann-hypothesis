@@ -1,5 +1,7 @@
-import Formalism.LocalToGlobal.Columns.RecLevel
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.CmUnramifiedOfFieldConditions
+import Formalism.LocalToGlobal.Columns.AdelicLemmas
 
 open NumberField IsDedekindDomain Matrix
 open scoped TensorProduct

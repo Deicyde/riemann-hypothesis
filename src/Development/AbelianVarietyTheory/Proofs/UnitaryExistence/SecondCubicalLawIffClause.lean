@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.ExistenceTori.SymmetricAdjointUnits
 import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.FrameBiextDictionarySecondPartialLaw
+import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GermBGen
 
 set_option autoImplicit false
 

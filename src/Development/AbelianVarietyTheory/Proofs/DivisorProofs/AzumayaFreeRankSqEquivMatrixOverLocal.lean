@@ -1,8 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.ExistsCompleteDvrFiniteSubalgebra
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsResidueIdempotentStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIdempotentLiftAdicCompleteFreeAlgebraStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AzumayaAlgEquivMatrixOfIdempotentStatement
+import Mathlib.NumberTheory.Padics.RingHoms
 open IsLocalRing
 open scoped TensorProduct
 

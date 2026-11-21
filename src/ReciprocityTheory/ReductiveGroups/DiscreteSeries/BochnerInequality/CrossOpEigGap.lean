@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.BochnerInequality.InnerCrossOpEigEqZero
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.BochnerInequality.BigCasA
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.BochnerInequality.KUnitB
 
 noncomputable section
 

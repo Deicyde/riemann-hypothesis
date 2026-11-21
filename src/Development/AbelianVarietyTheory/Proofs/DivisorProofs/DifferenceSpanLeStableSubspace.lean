@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WEMulNUMulTD
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BallIndicatorSmallerBallsSumStatement
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 noncomputable section
 
@@ -116,7 +117,7 @@ theorem elemSpan_le : ∀ (k : Type) [Field k] [ValuativeRel k] [TopologicalSpac
       elemDiff 0 (z + z') s ∈ W := by
     intro s z z' h h'
     have h2 := shift 0 z' s (-z) h'
-    simp only [zero_sub, neg_neg, sub_neg_eq_add, zero_add] at h2
+    simp only [sub_neg_eq_add, zero_add] at h2
     have : elemDiff 0 (z + z') s = elemDiff 0 z s + elemDiff z (z' + z) s := by
       funext x; simp only [elemDiff_apply, Pi.add_apply, add_comm z' z]; ring
     rw [this]; exact W.add_mem h h2
@@ -174,7 +175,7 @@ theorem elemSpan_le : ∀ (k : Type) [Field k] [ValuativeRel k] [TopologicalSpac
       intro u hu
       have h1 := G2 s u (hTv u hu)
       have h2 := shift 0 u s (-z) h1
-      simp only [zero_sub, neg_neg, sub_neg_eq_add, zero_add] at h2
+      simp only [sub_neg_eq_add, zero_add] at h2
       have : elemDiff u (z + u) s - elemDiff 0 z s = elemDiff z (u + z) s - elemDiff 0 u s := by
         funext x; simp only [elemDiff_apply, Pi.sub_apply, add_comm u z]; ring
       rw [this]; exact W.sub_mem h2 h1

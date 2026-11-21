@@ -1,4 +1,6 @@
-import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.Sobolev2
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.SobDer
 
 noncomputable section
 
@@ -46,7 +48,7 @@ theorem beta_poly (s t : Fin k → ℝ) :
     have h1 : Continuous fun t => symplOH S T (L (ev i)) (L t) := (continuous_symplOH_right _).comp hL
     exact hΛ.comp (continuous_fst.comp h1)
   have := clm_sum (AddMonoidHom.toRealLinearMap g hg) t
-  simp only [AddMonoidHom.coe_toRealLinearMap, g, AddMonoidHom.mk'_apply, smul_eq_mul] at this
+  simp only [AddMonoidHom.coe_toRealLinearMap, g, AddMonoidHom.mk'_apply] at this
   rw [this, Finset.mul_sum]
   refine Finset.sum_congr rfl fun j _ => ?_
   simp only [Complex.real_smul]

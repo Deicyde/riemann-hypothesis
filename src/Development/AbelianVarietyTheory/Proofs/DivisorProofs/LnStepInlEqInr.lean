@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.DegFrame
-import Formalism.LocalToGlobal.ProjectiveLattices.SatLeaves
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsDescendingLetterChain
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnramifiedEmbeddingsSeparatingCombinationStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DeRhamLatticeTangentCombinationStatement

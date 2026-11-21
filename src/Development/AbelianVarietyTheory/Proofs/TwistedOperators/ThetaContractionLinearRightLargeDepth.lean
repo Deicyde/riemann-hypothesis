@@ -1,11 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SumEqZeroOfMultilin
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.FlatMapsSatisfyFlatLawsFinitePlaces
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.FlatThetaMapsConvergeThetaFunctions
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.JacobiToBesselFlatSchwartzAddSmul
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ContinuousKappa
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SpecialisedUniversalSeriesEqTwistedThetaSeries
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaPureTensorO
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.OmPureTensorOOfFinite
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.DIV
 open IsDedekindDomain NumberField MeasureTheory Matrix GlobalTheory.ChiGrid GlobalTheory.FunObj GlobalTheory.RowTest GlobalTheory.StdFrames GlobalTheory.RowClaim
 open GlobalTheory.MixModel GlobalTheory.MixPer GlobalTheory.Grow GlobalTheory.RowUnf GlobalTheory.RowChain GlobalTheory.SeeSaw GlobalTheory.RowVal GlobalTheory.RowReal GlobalTheory.Unf
@@ -81,10 +80,10 @@ theorem contrLin_one_of (ch : Choice R) : ContrLin ch 1 := by
     obtain ⟨r, hr⟩ := hj; obtain ⟨s, hs⟩ := hm; omega
   have hne : (⟨j, by omega⟩ : Fin D.R.m) ≠ ⟨j + 1, ha'⟩ := by simp
   have hin0 : (Pair.mu t D.R.m j : Pair T).InRange D.R.m := by
-    simp only [Pair.InRange, Pair.big, Node.InRange]; omega
+    simp only [Pair.InRange, Node.InRange]; omega
   have hin1 : (Pair.mu t D.R.m (j + 1) : Pair T).InRange D.R.m := by
-    simp only [Pair.InRange, Pair.big, Node.InRange]; omega
-  simp only [conAt, h0, hj', dite_false, dite_true, ↓reduceDIte]
+    simp only [Pair.InRange, Node.InRange]; omega
+  simp only [conAt, h0, hj', ↓reduceDIte]
   simp only [fockD, Function.update_of_ne hne, Function.update_self]
   simp only [fock_lin ch.W (Pair.mu t D.R.m (j + 1)) c hφ hφ', map_add, map_smul]
   erw [flatFB_lin ch.W.ψ_std, contr_lin_right ch.W.ψ_std]

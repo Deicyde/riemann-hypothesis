@@ -1,9 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.StepsNonvacuous
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GrothendieckDeformation
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsCrystalPairing
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AnalyticAtOfDifferentiableOnFin
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IteratedFDerivCompCongr
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsUnitOfPiNeZero

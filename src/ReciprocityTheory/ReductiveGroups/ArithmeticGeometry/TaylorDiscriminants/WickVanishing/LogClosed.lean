@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.WickVanishing.LogInv
 
 set_option autoImplicit false
@@ -58,7 +60,7 @@ theorem cc_jac (i b : Fin d) : constantCoeff (Jac G i b) = if i = b then 1 else 
   by_cases hib : i = b
   · subst hib
     simp
-  · simp [hib, Ne.symm hib]
+  · simp [hib]
 
 def JM : Matrix (Fin d) (Fin d) (PS k 1 d) := Matrix.of (Jac G)
 
@@ -278,7 +280,7 @@ theorem om_key (i a b : Fin d) :
     simp [pt, MvPowerSeries.pderiv_X, Pi.single_apply]
   have hR : pderiv k ((1 : Fin 2), b) (ev (n := 2) ![pt k d 0] (Om G i a)) = 0 := by
     rw [pderiv_ev czX, Fintype.sum_prod_type]
-    simp [pt, MvPowerSeries.pderiv_X, Pi.single_apply]
+    simp [pt]
   have hP := congrArg (⇑(pderiv k ((1 : Fin 2), b))) (om_P G i a)
   rw [hR, map_sum] at hP
   simp only [Derivation.leibniz, smul_eq_mul, d_evF] at hP

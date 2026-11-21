@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ActMatApply
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OmegaMapStatement
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsEquivOfIsGrpPullback
 
 set_option autoImplicit false
 set_option synthInstance.maxHeartbeats 400000

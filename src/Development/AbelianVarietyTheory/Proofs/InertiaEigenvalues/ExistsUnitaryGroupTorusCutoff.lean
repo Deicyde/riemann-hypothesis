@@ -1,8 +1,13 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.MulMatMemUnitaryGroup
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsLocallyConstantCutoffClosedEmbedding
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ConjugatesSeparableMatrixCompactModCentralizerStatement
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CharpolyEtaleGeneratorMulMatrixSeparable
+import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ConjugatesSeparableMatrixCompactModCentralizer
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.LinearAlgebra.Charpoly.BaseChange
+import Mathlib.Topology.Algebra.Star.Unitary
+import Mathlib.Topology.Connected.Separation
+import Mathlib.Topology.MetricSpace.Ultra.TotallySeparated
+import Mathlib.Topology.Separation.Connected
 
 open GlobalTheory.JR Matrix MeasureTheory Filter Topology
 
@@ -37,7 +42,7 @@ private lemma charpoly_separable_of_isGen {F E : Type} [NontriviallyNormedField 
     intro w
     induction w using TensorProduct.induction_on with
     | zero => simp
-    | tmul c k => simp [e, f, IsBaseChange.equiv_tmul, mul_smul_comm]
+    | tmul c k => simp [e, f, IsBaseChange.equiv_tmul]
     | add w₁ w₂ h₁ h₂ => simp only [map_add, h₁, h₂]
   have h3 : e.conj ((LinearMap.mul F A.K τ).baseChange E) = f := by
     apply LinearMap.ext

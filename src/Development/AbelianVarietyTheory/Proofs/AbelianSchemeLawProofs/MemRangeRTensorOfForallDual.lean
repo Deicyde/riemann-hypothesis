@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.ExistsSplitsOfIsAffineOpen
+import Mathlib.AlgebraicGeometry.Morphisms.Flat
+import Mathlib.Tactic.Polynomial.Basic
 
 open CategoryTheory CategoryTheory.Limits AlgebraicGeometry TopologicalSpace TensorProduct
 

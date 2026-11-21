@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.LengthCokerEqKerAddDimOneOrderSum
+import Mathlib.RingTheory.SimpleRing.Principal
 
 namespace ReciprocityTheory.ChartRestriction.G.AI
 

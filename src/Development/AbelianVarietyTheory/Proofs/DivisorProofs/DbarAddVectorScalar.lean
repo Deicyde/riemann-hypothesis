@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TranslationInv
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsTorsionFormPoint
 
 set_option autoImplicit false
 
@@ -210,7 +211,7 @@ theorem superconn_add (τ : E → Matrix (Fin g) (Fin g) ℂ) (h : Pt E g → �
     (hs : DifferentiableAt ℝ s P) (ht : DifferentiableAt ℝ t P) :
     superconn τ h β u (fun Q => s Q + t Q) P = superconn τ h β u s P + superconn τ h β u t P := by
   simp only [superconn, nablaE, dbarV, dbarAdj, pointDifference, dz_add_function hs ht, dbar_add_function hs ht,
-    connForm_add, contr_add, wedge_add, smul_add, Finset.sum_add_distrib, neg_add, add_smul]
+    connForm_add, contr_add, wedge_add, smul_add, Finset.sum_add_distrib, neg_add]
   abel
 
 end Add

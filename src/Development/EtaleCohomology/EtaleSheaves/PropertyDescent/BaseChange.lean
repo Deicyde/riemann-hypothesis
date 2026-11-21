@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.PropertyDescent
 
 noncomputable section
@@ -41,11 +43,11 @@ theorem leafBaseChangePre : LeafBaseChangePre := by
   · rw [E2]; exact sq hR p2
   · apply pullback.hom_ext
     · simp only [e1, pullback.map, Category.assoc, pullback.lift_fst, pullback.lift_fst_assoc]; exact h1
-    · simp only [e1, pullback.map, Category.assoc, pullback.lift_snd, pullback.lift_snd_assoc,
+    · simp only [e1, pullback.map, Category.assoc, pullback.lift_snd,
         Category.comp_id]
   · apply pullback.hom_ext
     · simp only [e2, pullback.map, Category.assoc, pullback.lift_fst, pullback.lift_fst_assoc]; exact h2
-    · simp only [e2, pullback.map, Category.assoc, pullback.lift_snd, pullback.lift_snd_assoc,
+    · simp only [e2, pullback.map, Category.assoc, pullback.lift_snd,
         Category.comp_id]
   · rw [E1]; exact IsPullback.of_hasPullback _ _
   · rw [E2]; exact IsPullback.of_hasPullback _ _

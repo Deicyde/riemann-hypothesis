@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.PAdicWittLattices.SplitsBasic
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.AnnihilatorModels.LocFacts
+import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.VecZero
+import Development.EtaleCohomology.EtaleTrace.LadicH0LocallyConstant
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 set_option backward.isDefEq.respectTransparency false
 

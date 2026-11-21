@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.LocalToGlobal.Columns.BaseLemmas
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.JetOpIntegral
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ExistsUnitaryCarries
 

@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AutomorphicArithmetic.LocalEmbeddings.VertCmp
-import Development.AutomorphicArithmetic.LocalEmbeddings.ConsMatch
-import Development.AutomorphicArithmetic.LocalEmbeddings.ConsAgree
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.DivisorFrames.LevelFlagCompactPoint
 import Development.AutomorphicArithmetic.DivisorFrames.LevelUnfoldingFlag
 import Development.AutomorphicArithmetic.DivisorFrames.LevelUnfoldingMetric

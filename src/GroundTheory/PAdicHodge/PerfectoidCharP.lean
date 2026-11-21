@@ -1,5 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
 import GroundTheory.PAdicHodge.PerfectoidField
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Topology.Connected.Separation
+import Mathlib.Topology.MetricSpace.Ultra.TotallySeparated
 set_option maxSynthPendingDepth 1
 
 noncomputable section

@@ -1,11 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.NonemptyTorusExtensionOfIsAlgClosed
-import Development.AbelianVarietyTheory.Definitions.ModuliSpaces.AllTorsMap
-import Development.AbelianVarietyTheory.Definitions.Uniformization.TXFrame
-import Development.AbelianVarietyTheory.Definitions.Uniformization.PointEqOfSubsingleton
-import Development.AbelianVarietyTheory.BlockTheory.ExistenceTori.GeneratorValues
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsFiniteTorusExtensionOfModel
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsFiniteDvrTorusExtensionSpecialFibre
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.RangeAlgebraMapEqIInfDiscreteValuationSubring
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField IsLocalRing
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -156,6 +150,6 @@ theorem GlobalTheory.exists_trait_nonlocal_torusExtension : ∀ (R : Type) [Comm
     simp only [RingHom.coe_comp, Function.comp_apply] at h1 ⊢
     show i (α₀ (algebraMap (R ⧸ p) k₀ (Ideal.Quotient.mk p r))) = _
     rw [h1]
-    simp [g₀, gA, φ₀, IsFractionRing.lift_algebraMap]
+    simp [g₀, gA, IsFractionRing.lift_algebraMap]
   · rw [← key, spMap_comp']
     exact T₂

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.ChainOperators.PerCol
 import Formalism.SharpRestriction.AdmissibleParameterJoins.GandSx
 import Formalism.SharpRestriction.AdmissibleParameterJoins.GandSy

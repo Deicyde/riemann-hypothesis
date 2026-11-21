@@ -1,4 +1,9 @@
-import Formalism.SharpRestriction.GrowthBounds.RootWeights.StableSubspaceCompleteReducibility
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.ObjPol
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -42,9 +47,9 @@ theorem v2con_der_X {R : Type*} [CommRing R] {ι : Type*} [Fintype ι] {n : ℕ}
       else 0 := by
   unfold letterPolarizationDerivation
   rw [v2con_sum_apply, Finset.sum_eq_single l]
-  · split_ifs <;> simp_all [pderiv_X, Pi.single_apply]
+  · split_ifs <;> simp_all [pderiv_X]
   · intro l' _ hl'
-    split_ifs <;> simp [pderiv_X, Pi.single_apply, Ne.symm hl']
+    split_ifs <;> simp [pderiv_X, Ne.symm hl']
   · simp
 
 end Formalism.MainNotions.G.GLWeightTheory

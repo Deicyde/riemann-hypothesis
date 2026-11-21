@@ -1,5 +1,6 @@
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
-import Development.AbelianVarietyTheory.Definitions.Degenerations.OfDerivationFnOn
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.OneArc
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry
 open scoped CategoryTheory.Obj CategoryTheory.MonObj Pointwise
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -41,7 +42,7 @@ theorem evalAt_comp (a : R) (ha : IsUnit (Polynomial.evalRingHom a P₁)) :
   apply IsLocalization.ringHom_ext (Submonoid.powers P₁)
   refine RingHom.ext fun p => ?_
   simp only [RingHom.comp_apply, locMap_algebraMap]
-  simp [evalAt, IsLocalization.Away.lift, IsLocalization.lift_eq, eval_map_apply']
+  simp [evalAt, IsLocalization.Away.lift, IsLocalization.lift_eq]
 
 theorem locMap_comp_algebraMap :
     (locMap ψ P₁).comp (algebraMap R (Localization.Away P₁)) =
@@ -49,7 +50,7 @@ theorem locMap_comp_algebraMap :
   refine RingHom.ext fun r => ?_
   rw [RingHom.comp_apply, IsScalarTower.algebraMap_apply R (Polynomial R) (Localization.Away P₁), locMap_algebraMap,
     RingHom.comp_apply, IsScalarTower.algebraMap_apply F (Polynomial F) (Localization.Away (P₁.map ψ))]
-  simp [Polynomial.algebraMap_apply]
+  simp
 
 end GlobalTheory.CurveBaseChange
 

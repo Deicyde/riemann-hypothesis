@@ -1,9 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.SimpleSum
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.T2SpaceGeneralLinearGroup
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.MeasurePreservingTriangular
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.NormalizedAbsCharacterization
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LinearChangeOfVariablesLocalFieldMatrix
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.UnipotentRadicalBasic
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RootExchangeUnipotentHaarAndModulus
 
@@ -444,7 +443,7 @@ theorem isSplit_row {p : ℕ} (hp1 : 1 ≤ p) (hp : p < c) : IsSplit (n := n) ν
   · rintro ⟨r | r, s | s⟩ <;> simp [Both, lev, Fin.ext_iff] <;> omega
   · rintro β (r | r) (s | s) h <;> simp [rowE, lowU, Matrix.one_apply]
     intro hs
-    exact absurd (by simp [Fin.ext_iff, ← hs]) (h s)
+    exact absurd (by simp [← hs]) (h s)
 
 theorem average_step {p q : ℕ} {E : (n → k) → GL (n ⊕ Fin c) k} (hE : IsSplit ν p q E)
     (μX : Measure (GL n k)) [μX.IsHaarMeasure] {F : GL (n ⊕ Fin c) k → ℂ} (hF : F ∈ SB (GL (n ⊕ Fin c) k))

@@ -1,7 +1,10 @@
-import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.GalAwayCongr
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.PAdicHodge.FontaineLemmaInvariants
 import GroundTheory.PAdicHodge.UnramifiedFrob
 import GroundTheory.PAdicHodge.BCrisEigenWitt
+import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.AbsInvOf
+import GroundTheory.PAdicHodge.LocalBridge
 
 set_option maxSynthPendingDepth 1
 set_option maxHeartbeats 1600000
@@ -54,7 +57,7 @@ private theorem untilt_pow' (x : Ob l) (n : ℕ) :
     ((PreTilt.untilt (x ^ n) : OC l) : ℂ_[l]) = ((PreTilt.untilt x : OC l) : ℂ_[l]) ^ n := by
   induction n with
   | zero => simp
-  | succ n ih => rw [pow_succ, pow_succ, untilt_mul]; simp [ih]
+  | succ n ih => rw [pow_succ, pow_succ, untilt_mul]; simp
 
 private theorem gfix (r : Res l K) (g : Gal(PadicAlgCl l/K)) (a : r.k) : EigenWitt.galFlat g (r.s a) = r.s a := by
   obtain ⟨f, hf, haf⟩ := pow_fix r a

@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataHost
-import Formalism.FrobeniusOrbits.HostCorollaries
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Algebra.QuadraticAlgebra.NormDeterminant
+import Mathlib.Tactic.Polynomial.Basic
 open NumberField IsDedekindDomain
 
 namespace GlobalTheory.NormSquareRamified

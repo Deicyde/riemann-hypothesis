@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LogAbsEEqZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ValuationOfMemNotMemSq
+import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK
@@ -81,7 +82,7 @@ theorem levi_locIdele_mem_UAt : ∀ (F E : Type) [Field F] [NumberField F] [Fiel
     funext k
     by_cases hk : k = j
     · subst hk; simp [incV]
-    · simp [incV, Pi.single_apply, hk]
+    · simp [incV, hk]
   rw [hsingle, Matrix.mulVec_single_one] at hcol
   have := congrFun hcol i
   simpa [Matrix.col] using this

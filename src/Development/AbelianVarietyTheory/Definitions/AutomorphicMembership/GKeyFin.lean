@@ -1,8 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.MultW
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.TwistPlacesOffPrimeQZero
 import Development.AbelianVarietyTheory.Definitions.Divisors.SlopeTestRemainingChoicesAlt
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.NormSmall
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.NotGeoClFalse
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.SettingsFormsExistList
 
 noncomputable section
 

@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PCechCone
-import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.VeryAmpleCechObj
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.Kleiman

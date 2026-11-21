@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.BesselHermitianTheta.TiedWeil
-import Formalism.LocalToGlobal.UnitaryNorms.CharTied
 
 noncomputable section
 

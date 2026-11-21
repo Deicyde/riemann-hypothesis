@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DivisorPotentialIsSNCBoundary
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SmoothRatioOfLocalGenerators
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SncComponentsLocalSnc
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalSncPullbackSmooth
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DivisorNormPullbackComponent

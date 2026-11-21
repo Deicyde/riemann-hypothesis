@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HeckeTateFunctionalEquationCM
-import GroundTheory.GlobalFields.TateThesis.RootNumberLocalFinite
-import GroundTheory.GlobalFields.AnalyticClassNumber.HeckeContinued
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.ContinuousIdeleCircle
+import GroundTheory.GlobalFields.TateThesis.EulerFactorsFinite
 
 noncomputable section
 

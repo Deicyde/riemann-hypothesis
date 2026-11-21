@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.LatticeLemmas.StatementsFibreMahler
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.GaussSum
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.ContinuousHermNormGroup

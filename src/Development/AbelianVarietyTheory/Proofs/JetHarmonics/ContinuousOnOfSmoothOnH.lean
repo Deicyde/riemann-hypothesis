@@ -1,10 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Jets.SumIoPrAlt
 import Development.AbelianVarietyTheory.BlockTheory.JetGauges.SmoothDecompositionForms
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ContinuousRepSmoothOnUH
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CasimirEigenvalueCoefficients
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ContinuousMulMt
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CapelliEigenvalues.HeckeMultiplication
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 open Matrix Finset PI.UpqRep
 open scoped InnerProductSpace ContDiff

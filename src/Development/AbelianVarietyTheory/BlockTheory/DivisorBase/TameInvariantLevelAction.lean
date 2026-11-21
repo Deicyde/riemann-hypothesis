@@ -1,7 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.FamilyUniformisationBasePointOrthogonalBis
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.ThClassPins
-import Formalism.LocalToGlobal.ProjectiveLattices.BaseEmbeddingInclusion
 import Formalism.LocalToGlobal.IndefiniteReal.SubgroupCharExtensionOneApply
 
 set_option autoImplicit false

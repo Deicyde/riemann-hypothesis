@@ -1,10 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.IwahoriTypeSupport.UnlLoc
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.IwahoriTypeSupport.TameSuppUniqueHolds
 import Development.WeilBound.RepresentationTheoryGL.GenericUnitaryGL.GenericUnitaryDualGLOfTwo
 import Development.WeilBound.CoreStatements.AutomorphicKernels.LanglandsExhaustion.Outright
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WhittakerHeredityGenericProduct
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WhittakerHeredity
 
 noncomputable section
 

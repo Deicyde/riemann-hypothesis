@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGCoreGTCRefTraceCut
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGCoreGenTransferKAsm
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGCoreGTKLine
 
 open Formalism.REAL Formalism.QuantumDeterminants Formalism.FourierDecayAlt

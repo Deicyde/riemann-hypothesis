@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ProjectiveAutomorphicHecke.CentralEig2
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsConjOfNotMem
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ProductOfLocalLevelsUnitaryIsOpenIsCompactIsLeve
@@ -14,7 +14,7 @@ private theorem comp_rel {E : Type} [Field E] [NumberField E] [IsCMField E] {n :
   refine Eq.trans ?_ (h.trans ?_)
   · rfl
   · ext i j
-    by_cases hij : i = j <;> simp [hij, Matrix.one_apply, sim]
+    by_cases hij : i = j <;> simp [hij, sim]
 
 private theorem val_sim {E : Type} [Field E] [NumberField E] [IsCMField E] {n : ℕ} (k : GUf E n) (hk : sim k ∈ ZU) (u : Plc E) :
     Valued.v (pLoc E u (GroundTheory.Global.AdeleBaseChange.finiteAdeleMap ℚ E ((sim k : AfQˣ) : AfQ))) = 1 := by

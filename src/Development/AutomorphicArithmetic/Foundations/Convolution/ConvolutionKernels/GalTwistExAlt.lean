@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.ConvolutionKernels.GalEquiv
 import Development.AutomorphicArithmetic.Foundations.Convolution.ConvolutionKernels.GalCusp
 import Development.AutomorphicArithmetic.Foundations.Convolution.ConvolutionKernels.TwOpEx

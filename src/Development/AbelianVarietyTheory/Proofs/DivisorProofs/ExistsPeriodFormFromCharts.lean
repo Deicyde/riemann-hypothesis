@@ -1,16 +1,12 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsL2OnDiagonalOfIsL2Metric
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PeriodChartHolomorphicOnCover
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PeriodChartFormEquation
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArithmeticFormPullbackClosed
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlatCubicalStatement
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ContinuousAndExistsConjChart
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PullbackPreservesFormType
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PeriodChartTransitionHolomorphicStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PeriodChartTransitionDifferentiableStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PeriodChartConjugateStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlatFormConjStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RiemannFormClosedStatement
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ConjSmoothOnPreimageCharts
 
 set_option autoImplicit false
 
@@ -99,9 +95,9 @@ theorem eval₂_eq (α : Alt n) (ξ ζ : V n) :
 theorem coef_eq (α : Alt n) (a b : Fin n) : coef α a b =
     (eval₂ α (coordVec a) (coordVec b) + Complex.I * eval₂ α (coordVec a) (Complex.I • coordVec b)) / 2 := by
   have h1 : eval₂ α (coordVec a) (coordVec b) = coef α a b - coef α b a := by
-    simp [eval₂_eq, mul_sub, Finset.sum_sub_distrib, Pi.single_apply, apply_ite (starRingEnd ℂ)]
+    simp [eval₂_eq, mul_sub, Finset.sum_sub_distrib, apply_ite (starRingEnd ℂ)]
   have h2 : eval₂ α (coordVec a) (Complex.I • coordVec b) = -Complex.I * coef α a b - Complex.I * coef α b a := by
-    simp [eval₂_eq, mul_sub, Finset.sum_sub_distrib, Pi.single_apply, apply_ite (starRingEnd ℂ)]
+    simp [eval₂_eq, mul_sub, Finset.sum_sub_distrib, apply_ite (starRingEnd ℂ)]
     ring
   rw [h1, h2]
   linear_combination ((coef α a b + coef α b a) / 2) * Complex.I_mul_I

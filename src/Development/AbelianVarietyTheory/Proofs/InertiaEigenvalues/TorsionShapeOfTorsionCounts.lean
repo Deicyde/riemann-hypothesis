@@ -1,11 +1,12 @@
-import Mathlib
-import Formalism.CharacterColumnKernels.StatementRho
-import Formalism.GaloisCohomology.LocalTateDualityK
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.CharacterSplitJumps.Statement
-import ReciprocityTheory.Hypotheses.GalCohDefs
-import ReciprocityTheory.ReductiveGroups.TraceFormulas.LatDefs
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LevRepZApply
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FiniteCardTorsionLevelFractionRingQuot
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.SimpleRing.Principal
 open ReciprocityTheory.Gal
 
 noncomputable section

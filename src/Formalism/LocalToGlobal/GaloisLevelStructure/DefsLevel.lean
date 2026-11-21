@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.Params
 import Formalism.LocalToGlobal.UnitaryNorms.IsUnitaryNormOf
-import Formalism.LocalToGlobal.GaloisLevelStructure.DefsAut
+import Formalism.AlgebraicWeights.IsAlgWeight
 
 noncomputable section
 

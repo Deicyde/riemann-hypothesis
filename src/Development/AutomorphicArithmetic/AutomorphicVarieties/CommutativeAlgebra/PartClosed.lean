@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.ResMapBijective
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.MemSpanVariable
+import Mathlib.RingTheory.MvPowerSeries.Inverse
 
 open IsLocalRing MvPowerSeries UpperTheory.V.Alg
 

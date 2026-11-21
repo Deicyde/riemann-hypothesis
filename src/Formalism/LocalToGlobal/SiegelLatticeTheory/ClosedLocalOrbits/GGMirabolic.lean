@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GGMirabolicBase
-import Formalism.HermitianCurvature.StatementPB
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.GrowthOfBasic
 
 namespace Formalism.L2.SG.GGMirabolic

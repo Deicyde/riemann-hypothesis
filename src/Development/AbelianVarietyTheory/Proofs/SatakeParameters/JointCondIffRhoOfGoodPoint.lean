@@ -1,6 +1,7 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.JointConditionsZpowers.ResidualIrreducibleOfTheorem
-import Development.AbelianVarietyTheory.BlockTheory.ThetaLiftGeometry.FrobeniusRankParts
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import ReciprocityTheory.GaloisValuations.Global
 
 noncomputable section
 

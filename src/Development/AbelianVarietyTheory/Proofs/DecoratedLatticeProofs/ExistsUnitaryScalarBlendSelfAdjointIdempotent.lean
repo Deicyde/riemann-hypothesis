@@ -1,14 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ExistsSingle
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.FlagLevelCharacterEqPsiDivN
-import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.PoincareInHH
-import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.InHHAlg
-import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.InHHGamUnipKuProj
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ProjectionMovesTypeVectorsModLevel
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ColumnsCharacterEqLinkedFrameCharacter
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.IntAfApproxInterUnitConj
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.RestrictedBlockUnipotentSymmetric
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ScalWIdent
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.HidaSetting
 open NumberField IsDedekindDomain Matrix Formalism.BasicNotions Formalism.MainNotions.S Formalism.L2.SG.HidaSetting Formalism.L2.SG.PoincareInHH.PoincareSetting Formalism.L2.DIV GlobalTheory.FlagBasis GlobalTheory.LevNorm
 open scoped TensorProduct
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
@@ -48,7 +39,7 @@ theorem unit_of_proj {A : Type} [CommRing A] {n : Type} [Fintype n] [DecidableEq
     ext i j
     by_cases h : j = i
     · subst h; simp [Formalism.UG.cT]
-    · simp [Formalism.UG.cT, Matrix.one_apply, h, Ne.symm h]
+    · simp [Formalism.UG.cT, h, Ne.symm h]
   refine ⟨?_, ?_, ?_⟩
   · simp only [add_mul, mul_add, Matrix.smul_mul, Matrix.mul_smul, Matrix.one_mul, Matrix.mul_one, hPP, smul_smul]
     calc _ = (c * σ c) • (1 : Matrix n n A) + (1 - c * σ c) • P := by module

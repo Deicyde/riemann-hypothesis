@@ -1,4 +1,17 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.KTheoryStability.ReductionBoundsTorsion.PermutationSigns.MatDefs
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.Analysis.Matrix.Spectrum
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
+import Mathlib.Combinatorics.Nullstellensatz
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -172,7 +185,7 @@ theorem all_of_herm (φ : Matrix (Fin q → Ix W m) (Fin q → Ix W m) ℂ →�
     funext w
     ext i j
     simp only [Pi.add_apply, Pi.smul_apply, H, K, Matrix.add_apply, Matrix.smul_apply, Matrix.sub_apply,
-      smul_eq_mul, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons]
+      smul_eq_mul, Matrix.cons_val_zero, Matrix.cons_val_one]
     linear_combination (2 : ℂ)⁻¹ * (d w i j - (d w)ᴴ i j) * Complex.I_sq
   rw [e]
   exact this

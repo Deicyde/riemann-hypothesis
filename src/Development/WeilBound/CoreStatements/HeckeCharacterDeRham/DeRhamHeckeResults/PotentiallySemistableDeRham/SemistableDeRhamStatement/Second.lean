@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.CrystallinePeriodRings.InstCommRingBcris
 import GroundTheory.PAdicHodge.BStPeriod
-import GroundTheory.PAdicHodge.BdRAlg
 
 noncomputable section
 

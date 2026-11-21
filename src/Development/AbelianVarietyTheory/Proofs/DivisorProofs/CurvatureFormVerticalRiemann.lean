@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DbarEqZeroOfHolomorphic
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PeriodMapFlatDerivative
 open Matrix GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe GlobalTheory.TorsionForm GlobalTheory.TorsionForm.FlatAcyc
 open scoped Real ContDiff
@@ -16,7 +15,7 @@ theorem curvature_vertical : ∀ {E : Type} [NormedAddCommGroup E] [NormedSpace 
   have hv := GlobalTheory.FlatVert.dflat_vert hτ b hb z v
   have hw := GlobalTheory.FlatVert.dflat_vert hτ b hb z w
   show riem _ _ = _
-  simp only [ContinuousAlternatingMap.compContinuousLinearMap_apply]
+  simp only
   simp [hv, hw]
 
 end GlobalTheory.TorsionForm.FlatAcyc

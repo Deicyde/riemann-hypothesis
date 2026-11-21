@@ -1,4 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Uniformization.ExistsUniqueSamePt
 import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.SecEqOfSecConst
 import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.ExistsCompleteDvrFiniteSubalgebra
@@ -90,7 +92,7 @@ theorem add_formEq (a b : D.X) (U : Type) [CommGroup U] (h : ((D.P.A ⊗ D.P.A).
     rw [e1, e2, e3, e3, zpow_one, zpow_one, zpow_neg_one]
   rw [key, key, key, key]
   simp only [Fin.prod_univ_succ, addφ, addε, Matrix.cons_val_zero, Matrix.cons_val_succ, Finset.univ_eq_empty,
-    Finset.prod_empty, Fin.prod_univ_zero]
+    Finset.prod_empty]
   apply Additive.ofMul.injective
   simp only [ofMul_mul, ofMul_inv, ofMul_zpow, ofMul_one]
   norm_num

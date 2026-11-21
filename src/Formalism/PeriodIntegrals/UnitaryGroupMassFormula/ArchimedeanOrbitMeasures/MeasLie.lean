@@ -1,4 +1,7 @@
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ArchimedeanOrbitMeasures.IsInfEmb
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ArchimedeanOrbitMeasures.InstTopologicalSpaceHA
+import Mathlib.RingTheory.PiTensorProduct
 
 noncomputable section
 

@@ -1,10 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.OmegaFactorization
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PartialZetaFunctionalEquation
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KFacDifferentiable
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeckeEisensteinConstantTermPartDifferentiableOn
-import ReciprocityTheory.Chebotarev.EulerSum
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IrreducibleXSqAddOne
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.Tactic.Polynomial.Basic
 open NumberField Complex Polynomial
 open scoped nonZeroDivisors ContDiff
 open GlobalTheory.IndefiniteRowSideFullHecke.OmegaFactorization GlobalTheory.HeckeTwo
@@ -40,7 +39,7 @@ theorem norm_gEmb_F (a b : F) : Algebra.norm F (gEmb F (a, b)) = a ^ 2 + b ^ 2 :
   simp only [Algebra.leftMulMatrix_apply, LinearMap.toMatrix_apply, Algebra.coe_lmul_eq_mul,
     LinearMap.mul_apply']
   rw [basisOneI_zero, mul_one, basisOneI_one, gEmb_mul_ii, gEmb_eq]
-  simp [Module.Basis.repr_self, Finsupp.single_apply]
+  simp [Module.Basis.repr_self]
   ring
 
 theorem norm_gEmb (a b : F) :

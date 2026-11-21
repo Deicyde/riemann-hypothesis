@@ -1,4 +1,8 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.LocUApply
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.SfDefs
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open MeasureTheory NumberField IsDedekindDomain Filter GroundTheory.Automorphic GroundTheory.Automorphic.Reduction GroundTheory.Automorphic.RightCosetSpace
 open GroundTheory.Automorphic.CuspidalSpectrum GlobalTheory.IndefiniteRowSideFullHecke.IwahoriDoubleCosets GlobalTheory.PRep Formalism.BasicNotions GlobalTheory.CuspRep GlobalTheory.SmGL UpperTheory.ConvolutionTheory UpperTheory.ConvolutionTheory.C UpperTheory.ConvolutionTheory.C.Sf
@@ -105,7 +109,7 @@ theorem UpperTheory.exists_compactOpen_family_inf_fixed_ne_bot :
       have hYc : IsClosed (Y : Set H) := by
         have e : (Y : Set H) = (Z : Set H) ∩ ⋂ i ∈ s, (fixU (π i) (U i) : Set H) := by
           ext x
-          simp [hYdef, Submodule.mem_inf, Submodule.mem_iInf]
+          simp [hYdef]
         rw [e]
         exact hZ.inter (isClosed_biInter fun i _ => isClosed_fixU _ _)
       have hYinv : (π j).IsInvariant Y := by

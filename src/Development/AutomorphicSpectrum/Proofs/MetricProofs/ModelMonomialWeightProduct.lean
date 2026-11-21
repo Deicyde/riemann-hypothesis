@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.ColFlags
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.ModelDyWeightsStatement
 
 open AlgebraicGeometry CategoryTheory NumberField Matrix

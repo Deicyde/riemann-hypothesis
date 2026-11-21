@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.HermitianCurvature.StatementTBB
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutLemB
 
 open Formalism.FourierDecayAlt Formalism.REAL Formalism.QuantumDeterminants Filter Topology MeasureTheory

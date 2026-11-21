@@ -1,12 +1,9 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.CMModuli.FractionLevelCorrespondence
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.TorsionIsoIffAt
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.InjectiveOfIsAlgebraic
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.GenRelNeZero
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsDescOfPoints
 import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.ExistsShiftGen
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.QkToAkUInvariantUnderFieldEmbedding
 
 set_option autoImplicit false
 

@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenIntertwinerGoodModelsStatement
 
 open scoped TensorProduct NNReal Matrix
@@ -52,7 +50,7 @@ theorem ev_levi : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [NumberFi
       change Matrix.vecMulVec y (incV F H'.x) * (mat m)ᵀ = _
       rw [vmv, hL.1]
       ext i j
-      simp [Matrix.vecMulVec_apply, mul_comm, mul_left_comm, mul_assoc]
+      simp [Matrix.vecMulVec_apply, mul_left_comm, mul_assoc]
     rw [hs.impl _ _ _ hΦ, h4, he.inv _ ⟨(t : AE F E) • y, rfl⟩ _ (hm1 Φ hΦ)]
   · have h1 := GlobalTheory.T.eigen_intertwiner_good_models F E σ B n d n d₁ X W X W₁ M M₁ 1 H'.ι (iso0 n H') e hP.good hP₁.good he l hl
     exact hs.adm (1, m) _ h1

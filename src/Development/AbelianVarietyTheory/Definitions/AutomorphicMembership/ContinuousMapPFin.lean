@@ -1,8 +1,8 @@
-import Mathlib
-import Formalism.LocalToGlobal.Divisibility.CoefModLemmas
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsSplitAtOfIsSplitPl
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.NonemptyEquivLocProdTriv
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.HasSatAtConstOne
 
 noncomputable section
 

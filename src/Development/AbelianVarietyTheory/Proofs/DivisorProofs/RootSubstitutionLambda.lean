@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RootSub
 open NumberField MvPolynomial
 open Formalism.BasicNotions Formalism.DegreeFormula GlobalTheory.FlagPoly GlobalTheory.Mean4O GlobalTheory.ShFam GlobalTheory.ShFam.Pad
@@ -22,7 +22,7 @@ theorem aeval_rootSub_lamA : ∀ (D : D7) (O : Setup D),
   rw [← (rootL_bijective_lam O).sum_comp (fun z => (X z : MvPolynomial _ ℝ)), Fintype.sum_prod_type,
     ← Finset.sum_neg_distrib, lamA, map_sum]
   refine Finset.sum_congr rfl fun τ _ => ?_
-  simp only [pHigh, pLow, pow_one, map_sub, map_sum, aeval_X, Finset.sum_filter]
+  simp only [pHigh, pLow, pow_one, map_sub, map_sum, Finset.sum_filter]
   rw [← Finset.sum_sub_distrib, ← Finset.sum_neg_distrib]
   refine Finset.sum_congr rfl fun i _ => ?_
   by_cases hi : (i : ℕ) < O.j

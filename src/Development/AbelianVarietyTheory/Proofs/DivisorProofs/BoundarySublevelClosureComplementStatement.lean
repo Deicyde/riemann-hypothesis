@@ -1,8 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BoundarySublevelClosureComplement
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AnalyticLogResolution
-import ReciprocityTheory.AnalyticForms.PotentialTheory.ContDiffAtOfIsPotential
 open MeasureTheory ReciprocityTheory.AnForm ReciprocityTheory.AnForm.M GlobalTheory.IndefiniteRowSideFullHecke.BoundaryPolynomialFunctions GlobalTheory.LogResInt
 open scoped ENNReal
 set_option maxHeartbeats 1000000 in

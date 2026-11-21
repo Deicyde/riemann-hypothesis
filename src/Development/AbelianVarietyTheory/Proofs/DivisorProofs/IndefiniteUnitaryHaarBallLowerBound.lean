@@ -1,7 +1,13 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsIntVZero
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EventuallyIntegralTensorPointsSharpStableRing
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FormalGroupActionRingHom
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open Matrix NumberField IsDedekindDomain GlobalTheory.LKTrip GlobalTheory.LKMid GlobalTheory.OrbFinAf
 open scoped TensorProduct Classical
 
@@ -13,7 +19,7 @@ def phiL {n : ℕ} (ι : K →ₐ[k] B) (E : Fin n → Fin n → B) :
     Matrix (Fin n) (Fin n) K →ₗ[k] B where
   toFun M := ∑ a, ∑ b, ι (M a b) * E a b
   map_add' M N := by simp [add_mul, Finset.sum_add_distrib]
-  map_smul' c M := by simp [Finset.smul_sum, smul_mul_assoc]
+  map_smul' c M := by simp [Finset.smul_sum]
 
 theorem phiL_apply {n : ℕ} (ι : K →ₐ[k] B) (E : Fin n → Fin n → B) (M) :
     phiL ι E M = ∑ a, ∑ b, ι (M a b) * E a b := rfl
@@ -69,7 +75,7 @@ theorem phiL_mul {n : ℕ} (ι : K →ₐ[k] B) (E : Fin n → Fin n → B)
     · subst hbc; rfl
     · rw [mul_zero]
   simp only [phiL_apply, Finset.sum_mul, Finset.mul_sum, h, Matrix.mul_apply, map_sum]
-  simp only [Finset.sum_ite_eq, Finset.sum_ite_eq', Finset.mem_univ, if_true]
+  simp only [Finset.sum_ite_eq', Finset.mem_univ, if_true]
   conv_lhs => rw [Finset.sum_comm]
   conv_rhs => rw [Finset.sum_comm]
   refine Finset.sum_congr rfl fun d _ => ?_

@@ -1,5 +1,7 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.ThetaSupremumBounds.StatementC
+import Mathlib.Topology.Sheaves.Presheaf
 
 open Finset
 open scoped Real

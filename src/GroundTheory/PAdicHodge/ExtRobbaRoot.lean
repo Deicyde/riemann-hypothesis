@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.PAdicHodge.ExistsIsRootForallNormPowMulLe
 import GroundTheory.PAdicHodge.ExtRobbaPointDiv
-import GroundTheory.PAdicHodge.ExtRobbaUnits
 set_option maxSynthPendingDepth 1
 
 noncomputable section
@@ -589,7 +589,7 @@ theorem step_estimate {x : T.RobbaExt ρ0} (hx : x ≠ 0) (hε0 : T.ptEval hξ h
       T.ptSharp hη ((D j).z) * T.ptE hη (D j).V := fun j => T.ptEval_liftExt hη hrη _ _
   have hexp := congrArg θ (T.taylor_eq hξ hr.le x J)
   rw [map_add, map_sum] at hexp
-  simp only [map_mul, map_pow, hθξ, hlift] at hexp
+  simp only [map_mul, map_pow, hθξ] at hexp
 
   set a : ℕ → L := fun j => s ^ j * b j
   have ha : ∀ j ∈ Finset.range (J + 1), ‖a j‖ ≤ ε := fun j hj => by

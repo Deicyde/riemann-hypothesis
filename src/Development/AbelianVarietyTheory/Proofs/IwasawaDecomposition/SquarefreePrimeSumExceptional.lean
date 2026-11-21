@@ -1,9 +1,4 @@
-import Mathlib
-import Formalism.GL3MeanSquares.PrimeCountAsymptoticInProgressions
-import Formalism.SharpRestriction.InertJacobiLevels.AsmIface
-import Formalism.CyclotomicNorms.StatementI
-import Development.AbelianVarietyTheory.Definitions.Foundations.RayPrimes
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.IsExcRat
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.PageThm
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsJacobiSymEqNegOne
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CardPrimesResidueGeRpow

@@ -1,6 +1,6 @@
-import Formalism.SharpRestriction.GrowthBounds.FrobeniusPaths.CanonicalTranslateJetIdentity
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.FrobeniusPaths.EqEmptyIffSplit
-import Mathlib
 
 noncomputable section
 

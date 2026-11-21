@@ -1,9 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPreChain
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsIsoRestrictPushforwardUnit
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrobeniusLiftPullback
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IdealSubschemeCounitIso
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PullbackPreservesLineBundleFlag
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CkPresentationInvariant
 
 set_option autoImplicit false

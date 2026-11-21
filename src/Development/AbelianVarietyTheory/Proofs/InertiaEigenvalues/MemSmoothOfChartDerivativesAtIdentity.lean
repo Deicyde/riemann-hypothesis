@@ -1,4 +1,6 @@
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SumLieCoord
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.DifferentiableAtChart
 
 noncomputable section
 

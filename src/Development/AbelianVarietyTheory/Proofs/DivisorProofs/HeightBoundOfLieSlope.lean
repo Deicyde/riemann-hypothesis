@@ -1,21 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.KernelSt
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.DemaillyRegularisation
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.MatrixLemma
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.AbsoluteSiegel
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ScholzeWeinsteinB
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.QuasiPlurisubharmonic
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.LieAlgebraMaps
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LieSlopePointBoundStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlatHeightStatementStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PointBoundStatementStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OmegaComparisonStatementStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorusSaturatedStatementStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AbelianHeightBoundedBelowStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeightAbelDecomposition
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsClosedBasePt
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsHermitianPeriodLatticeBasisSameSignature
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DualLineHeightNeg
 open NumberField Formalism.BasicNotions Formalism.MainNotions ReciprocityTheory.GeometryOfNumbersTheory GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.Mean4 GlobalTheory.Mean4O GlobalTheory.LieHt GlobalTheory.HeightParts
 
@@ -174,7 +164,7 @@ theorem main : Hypotheses2 → HypothesesH → GlobalTheory.Published.ScholzeWei
     have h1 : 1 + k - 1 < O.N := by omega
     have e1 : 1 + k - 1 = k := by omega
     have h2 : k < O.S.Dw.p := by omega
-    simp only [hxx, dif_pos h1, Setup.root0, Setup.adl0, rootSym, Fin.val_mk, e1, if_pos h2]
+    simp only [hxx, dif_pos h1, Setup.root0, Setup.adl0, rootSym, e1, if_pos h2]
     rfl
   have S2 : ∀ τ, ∀ i, O.j < i → i < O.N →
       ∑ l ∈ Icc (i + 1) O.N, xx τ l = stepHt O (ref0 O) y (conjEmb (DV.tauEmb D τ)) (O.N - i) := by
@@ -191,7 +181,7 @@ theorem main : Hypotheses2 → HypothesesH → GlobalTheory.Published.ScholzeWei
     have h2 : ¬ (O.N - 1 - k < O.S.Dw.p) := by omega
     have h3 : k < O.S.Dw.mult (conjEmb (DV.tauEmb D τ)) := by rw [mc τ]; omega
     have h4 : O.S.Dw.p + O.S.Dw.q - 1 - (O.N - 1 - k) = k := by omega
-    simp only [hxx, dif_pos h1, Setup.root0, Setup.adl0, rootSym, Fin.val_mk, e1, if_neg h2, h4]
+    simp only [hxx, dif_pos h1, Setup.root0, Setup.adl0, rootSym, e1, if_neg h2, h4]
     exact hDual c z hzc _ _ h3
 
   have hB0' : 0 ≤ C1 * Real.log (2 + C1 + H.hA y) + C1 := by

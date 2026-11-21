@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.NotCompactOfMEqOne
-import Development.AbelianVarietyTheory.Definitions.Divisors.InfUniv
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsKSValueOneOfRetraction
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open GlobalTheory.UPel.Sm GlobalTheory.Cris GlobalTheory.DeRham
@@ -63,7 +63,7 @@ theorem sum_proj_single {k : Type} [Field k] {d : ℕ} (c₀ : Fin d → k) (j :
     (∑ i, c₀ i • LinearMap.proj (R := k) (φ := fun _ : Fin d => k) i) (Pi.single j 1) = c₀ j := by
   rw [LinearMap.sum_apply]
   simp only [LinearMap.smul_apply, LinearMap.proj_apply, Pi.single_apply, smul_eq_mul, mul_ite,
-    mul_one, mul_zero, Finset.sum_ite_eq', Finset.mem_univ, if_true]
+    mul_zero, Finset.sum_ite_eq', Finset.mem_univ, if_true]
   try exact mul_one _
 
 end GlobalTheory.HTUniv

@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.StarVecMulDM
+import Mathlib.Topology.Separation.CompletelyRegular
 
 open MeasureTheory Matrix Finset
 open scoped ContDiff

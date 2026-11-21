@@ -1,15 +1,12 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.InductionEstimates.IwahoriBlocks.SimpleIn
-import Development.AutomorphicArithmetic.Foundations.Convolution.GeneralizedMeasures.HeckeFinAlt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.InductionEstimates.UnipotentBlockMatrices.ClosedKernelMinors.AdmissibleCuspFormsFinite
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.InductionEstimates.UnipotentBlockMatrices.ClosedKernelMinors.AdmCusp
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.InductionEstimates.UnipotentBlockMatrices.ClosedKernelMinors.TypeFin
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.InductionEstimates.IwahoriHeckeInjectivity.IdempotentTraces.TypeOf
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.InductionEstimates.IwahoriBlocks.IwahoriCentralBorel.OpenStab
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.InductionEstimates.IwahoriBlocks.IwahoriCentralBorel.LevLaws
 import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.FixLev
-import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.OpBasics
-import GroundTheory.AutomorphicForms.CuspidalDiscreteness.SummandsContRep
-import GroundTheory.AutomorphicForms.DiscreteSpectrumAbstract
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdelicLocalCompactness.AdeleLC
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeilStabilizerVolume.TopoAF
 
 open MeasureTheory NumberField IsDedekindDomain Filter Topology
 open GroundTheory.Automorphic GroundTheory.Automorphic.Reduction GroundTheory.Automorphic.RightCosetSpace
@@ -270,7 +267,7 @@ private theorem fixed_of (D : TypeDat K n) {κ : Measure (archCompact K n)} {e :
     have e2 : ∫ k, e k • rightRegularRep (Gam K n) μ (arc1 k) v ∂κ = v := hp
     rw [e2] at e1
     refine Eq.trans (integral_congr_ae (Eventually.of_forall fun k => ?_)) e1
-    simp [UnitaryRep.map_mul_apply, inner_smul_right]
+    simp
   have hFx : FixF U₀ fun g => ⟪u, rightRegularRep (Gam K n) μ g v⟫_ℂ := by
     intro y hy g
     have h1 : rightRegularRep (Gam K n) μ (fin1 y) v = v := by

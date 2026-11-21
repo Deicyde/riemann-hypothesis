@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsComponentDegree
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsComponentResInt
-import GroundTheory.HeightsAndTheta.Heights.Intersections.AnalyticResolutionHypothesesProjectiveLine
 import GroundTheory.HeightsAndTheta.Heights.Intersections.IsSmoothMetricOfIsSmoothHerm
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StResExists
 import GroundTheory.HeightsAndTheta.Heights.Intersections.PBaseChange

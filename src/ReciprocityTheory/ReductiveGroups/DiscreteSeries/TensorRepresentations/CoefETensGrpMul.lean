@@ -1,4 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.CoefDTensActPow
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.AnalyticVectors.Analytic
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.AnalyticVectors.ClosureK
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.AnalyticVectors.ExistsExpEqOfMemKset
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.AnalyticVectors.PolarJmConjTranspose
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.BochnerInequality.CasimirGapAtNoncompactWeight
 
 noncomputable section
 
@@ -38,7 +45,7 @@ def coefLam (dual : Bool) (σ : Matrix (Fin n) (Fin n) ℂ → (H →L[ℂ] H)) 
 
 theorem coefLam_apply (dual : Bool) (g : Matrix (Fin n) (Fin n) ℂ) (f u : Fin n → H) :
     coefLam dual σ g f u = ∑ c, inner ℂ (f c) (coefTG dual σ g u c) := by
-  simp [coefLam, coefTG, inner_sum, inner_smul_right]
+  simp [coefLam, coefTG]
 
 def CoefGood (E : Fin n → Fin n → Module.End ℂ D) (V : Submodule ℂ D) (X : Matrix (Fin n) (Fin n) ℂ)
     (r₀ : ℝ) : Prop :=
@@ -156,7 +163,7 @@ theorem coefE_step (dual : Bool) (hσ : IsURepOn (UJset ε) σ) (hD : IsDerivedO
     funext m
     rw [← coefE_ι_pow dual hιE X m hy, coefLam_apply,
       hQ _ (actM_pow_apply_mem_genSub X m hy)]
-    simp [inner_smul_right]
+    simp
   rw [hterms] at hL
   have key := hL.unique hR
   rw [coefLam_apply, ← coefE_tensGrp_mul dual hσ hh he] at key

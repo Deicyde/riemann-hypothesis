@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.HodgeSurjectivity.CupSurjectivity.StepA
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.HodgeSurjectivity.CupSurjectivity.GenPb
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsPrimitiveCl
+import Development.WeilBound.CoreStatements.PadicHodgeComparison.HodgeSurjectivity.TowerRallisLemma
+import GroundTheory.PAdicHodge.NormalizedTraceTower
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

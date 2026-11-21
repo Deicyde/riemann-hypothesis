@@ -1,7 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.CharacterGerms.Interface
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CharacterGerms.HostTraceIdentity
-import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.CubWeilOfInjective
+import Mathlib.RingTheory.Valuation.Integral
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj
 open ReciprocityTheory.ChartRestriction.G.Geo.Tor.Germ (PS ev pt addOf)

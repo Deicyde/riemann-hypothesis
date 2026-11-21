@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.CubeVal
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.RingTheory.TotallySplit
 open ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open scoped BigOperators
 
@@ -401,7 +405,7 @@ def regauge (B : NumB O) (h : B.A → Oˣ) (h₁ : h 1 = 1) : NumB O where
       coc := fun x x' x'' y => by
         have a := congrArg Additive.ofMul (B.cub.coc x x' x'' y)
         apply Additive.ofMul.injective
-        simp only [← mul_assoc x, ← mul_assoc (x * x'), ofMul_mul, ofMul_div] at a ⊢
+        simp only [← mul_assoc x, ofMul_mul, ofMul_div] at a ⊢
         linear_combination (norm := abel) a }
   σ x := B.σ x * h x / h x⁻¹
   σ_one := by rw [B.σ_one, inv_one, one_mul, div_self']

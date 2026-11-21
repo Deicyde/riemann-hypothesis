@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GenusPolyhedralBounds.RelativeIndexClassSets.PublishedIntClosHolds
 import Formalism.LocalToGlobal.ProjectiveLattices.ExtendedPointBaseChange
 import Formalism.LocalToGlobal.ProjectiveLattices.OneLtAbsNormReal
+import Mathlib.RingTheory.LocalProperties.Reduced
 
 noncomputable section
 

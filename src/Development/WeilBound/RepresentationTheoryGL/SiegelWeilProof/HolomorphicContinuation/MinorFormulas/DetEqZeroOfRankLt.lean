@@ -1,5 +1,14 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.MinorFormulas.CayDivOf
+import Mathlib.LinearAlgebra.Matrix.Rank
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.Nullstellensatz
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 
@@ -148,7 +157,7 @@ theorem null : Null := by
         refine h.trans ?_
         congr 1
         ext p q
-        simp [A, B, Matrix.add_apply]
+        simp [A, B]
         rfl
     _ = 0 := hdet
 

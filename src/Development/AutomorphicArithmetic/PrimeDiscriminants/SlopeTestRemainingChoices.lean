@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.PrimePairSizeCondition
+import BuildAid.Leniency.Variable
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.ConjEMemHostFIff
 
 noncomputable section
 

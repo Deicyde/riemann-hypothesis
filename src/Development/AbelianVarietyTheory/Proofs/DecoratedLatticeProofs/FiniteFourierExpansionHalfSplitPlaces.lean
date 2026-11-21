@@ -1,18 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.SplitPart
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.OmAtSmulRight
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.EventuallyFinEqOne
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.DifferentiableOfChar
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.SelfDualLatticePairingDual
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ThetaSupportInDivLattice
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IdempotentMulEqZeroOfOrthogonal
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeisenbergOperatorFinitePartLatticeVacuumSign
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeIsometrySignFirst
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.StdCharSymplecticHalfPeriodLatticeEqOne
-import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.AlternatingFormStandardHermitian
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.SmulMemLatO
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.MemRangeOfOneTmulMem
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.IdempotentHalfMemCompletedHomLatticeIffLocal
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.MemPerOInfHalfAO
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.HomAtIffLocPPerO
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ConjPNotMemOfIdemSum
@@ -150,9 +137,9 @@ theorem four_expand : ∀ (D : D7) (ψ : AddChar (AF D.host.F) ℂ) (θ : InfFam
   have heX : ∀ x, IsHalf e (eXm S T e x) := fun x i j => by
     simp only [eXm, Matrix.map_apply, ← mul_assoc, hee]
   have heX_add : ∀ x y, eXm S T e (x + y) = eXm S T e x + eXm S T e y := fun x y => by
-    ext i j; simp only [eXm, map_add, Matrix.map_apply, Matrix.add_apply, RingHom.map_add, mul_add]
+    ext i j; simp only [eXm, map_add, Matrix.map_apply, Matrix.add_apply, mul_add]
   have heX_sub : ∀ x y, eXm S T e (x - y) = eXm S T e x - eXm S T e y := fun x y => by
-    ext i j; simp only [eXm, map_sub, Matrix.map_apply, Matrix.sub_apply, RingHom.map_sub, mul_sub]
+    ext i j; simp only [eXm, map_sub, Matrix.map_apply, Matrix.sub_apply, mul_sub]
   have heF : ∀ M : Matrix (Fin T.rank) (Fin S.rank) D.host.E, e • GlobalTheory.LatVac.finTens 1 M = eXm S T e (Matrix.toLin' M) := fun M => by
     ext i j
     simp only [eXm, LinearMap.toMatrix'_toLin', Matrix.smul_apply, smul_eq_mul, Matrix.map_apply]

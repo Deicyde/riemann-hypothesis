@@ -1,7 +1,13 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HasLatticesComplete
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinrankEqOfRankAtStalk
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CobOneEqZeroOfConnecting
+import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.CubicalOfNormalised
+import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.GlobalFnsHolds
+import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.WeilIsGrpPullbackIff
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CubeTheorem
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsUniquePairsToTower
 
 set_option autoImplicit false
 
@@ -143,7 +149,7 @@ theorem pairsTo_epsPoint [Fact p.Prime] (hC : GlobalTheory.Published.CubeTheorem
     | add x y hx hy => simp only [map_add, TrivSqZeroExt.fst_add, TrivSqZeroExt.snd_add, hx, hy, and_self]
     | tmul x y =>
       simp [f, EpsWeil.epsMap, DualNumber.lift_apply_apply, TrivSqZeroExt.algebraMap_eq_inl', fst_epsPoint,
-        snd_epsPoint, Algebra.smul_def, mul_comm, CartierDual.one_apply]
+        snd_epsPoint, Algebra.smul_def, mul_comm]
   have e₃ : Units.map (spOver f).left.appTop.hom.toMonoidHom (unitOn U) = unitOn (EpsWeil.epsUnit (w.app 1 b)) := by
     refine (EpsWeil.map_unitOn _ U).trans (congrArg unitOn (Units.ext (TrivSqZeroExt.ext ?_ ?_)))
     · refine (hf _).1.trans ((hχ 1).symm.trans ((map_one (w.app 1)).trans ?_))

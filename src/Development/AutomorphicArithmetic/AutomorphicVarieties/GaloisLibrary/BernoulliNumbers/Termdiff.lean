@@ -1,6 +1,8 @@
-import Mathlib
-import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.BernoulliNumbers.MapGenBChar
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.BernoulliNumbers.BTaylor2
+import Mathlib.Analysis.Complex.LocallyUniformLimit
+import Mathlib.Analysis.PSeries
+import Mathlib.Tactic.ENatToNat
 
 open Finset UpperTheory.V.Bern
 

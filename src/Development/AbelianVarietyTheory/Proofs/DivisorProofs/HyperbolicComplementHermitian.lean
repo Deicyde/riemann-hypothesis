@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsHaarOfIsCompact
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatHomOfGAdSymm
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK
@@ -56,13 +54,13 @@ theorem span_adelic : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [Numb
   have hsurj : Function.Surjective L := by
     rw [← LinearMap.injective_iff_surjective_of_finrank_eq_finrank]
     · exact hinj
-    · simp [Module.finrank_prod, Module.finrank_fin_fun]; omega
+    · simp [Module.finrank_prod]; omega
   choose p hp using fun i : Fin n => hsurj (Pi.single i 1)
   set R := inclR (F := F) (E := E) (AF F) with hR
   refine ⟨∑ i, z i * R (p i).1, ∑ i, z i * R (p i).2.2, fun k => ∑ i, z i * R ((p i).2.1 k), ?_⟩
   funext j
   have key : z j = ∑ i, z i * R ((Pi.single i 1 : Fin n → E) j) := by
-    simp [Pi.single_apply, Finset.sum_ite_eq', eq_comm]
+    simp [Pi.single_apply]
   rw [key]
   simp only [← hp, hL, Pi.add_apply, Pi.smul_apply, smul_eq_mul, Matrix.mulVec, dotProduct, map_add, map_mul, map_sum,
     incV, incM, Matrix.map_apply]

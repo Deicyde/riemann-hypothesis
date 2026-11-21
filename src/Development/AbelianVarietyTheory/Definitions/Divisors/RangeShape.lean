@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.RealPlaceAnalysis.SmoothOnGVIff
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.PseudoCoefficientUpqTrivial
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.DiscreteSeriesCharacter
 import Development.AbelianVarietyTheory.Definitions.Divisors.TCoefMInMMul
 

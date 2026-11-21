@@ -1,8 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.KernelLattices.ColumnData
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.KernelLattices.ColumnData.HfArith
-import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.OrdUnimod
-import Lemmata.PowMulVecEigenvalue.PowMulVecEig
 import Lemmata.GeneralBFactThirdBis.Imports
 
 noncomputable section

@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.FinalTheorems
-import Development.AbelianVarietyTheory.Definitions.Foundations.VanishOrdL
-import Development.AbelianVarietyTheory.Statements.CuspidalUnitaryTwists.ZetaUr
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LevelCohomology.KatoConj
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.LocPublishedOfLitCoh
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsOrdinaryNormalFormUnramifiedSourceStatement

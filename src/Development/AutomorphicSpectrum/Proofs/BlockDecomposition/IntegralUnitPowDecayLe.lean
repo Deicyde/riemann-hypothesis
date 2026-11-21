@@ -1,11 +1,7 @@
-import Mathlib
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.LocallyConstantMajorants.GammaSplitting.UnipotentTateFunctionalEquation
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MajorantScaled
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LintegralKernelUniformBound
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MajorantLeSumSwap
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.TateLocalL1
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.AestronglyMeasurableWhittakerDiagUnits
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Ga
 open MeasureTheory Matrix
 
 noncomputable section

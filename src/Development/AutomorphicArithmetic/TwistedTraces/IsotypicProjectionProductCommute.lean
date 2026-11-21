@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.LocUApply
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.TwistedTraces.ListOfFnProdEqMulUpdateOneOfPairwiseCommute
 import Development.AutomorphicArithmetic.TwistedTraces.FixedProjectionInvariantAndCommutingReps
 import Development.AutomorphicArithmetic.TwistedTraces.FixedProjectionApplyEquivariantEq

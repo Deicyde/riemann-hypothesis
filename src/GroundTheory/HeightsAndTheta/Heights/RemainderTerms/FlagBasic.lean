@@ -1,5 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.RemainderTerms.Statements
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.Tactic.ENatToNat
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights
@@ -161,11 +166,11 @@ variable {f r a : ℕ}
 
 theorem yIndex_eq_yIndex_iff (c : SmallBlock) (τ σ : Fin f) (l i : Fin r) :
     yIndex f r a c τ l = yIndex f r a c σ i ↔ τ = σ ∧ l = i := by
-  cases c <;> simp only [yIndex, Prod.mk.injEq, Fin.mk.injEq, Fin.ext_iff] <;> omega
+  cases c <;> simp only [yIndex, Prod.mk.injEq, Fin.ext_iff] <;> omega
 
 theorem zIndex_eq_zIndex_iff (c : SmallBlock) (τ σ : Fin f) (l i : Fin a) :
     zIndex f r a c τ l = zIndex f r a c σ i ↔ τ = σ ∧ l = i := by
-  cases c <;> simp only [zIndex, Prod.mk.injEq, Fin.mk.injEq, Fin.ext_iff] <;> omega
+  cases c <;> simp only [zIndex, Prod.mk.injEq, Fin.ext_iff] <;> omega
 
 theorem yIndex_ne_zIndex (c : SmallBlock) (τ σ : Fin f) (l : Fin r) (i : Fin a) :
     yIndex f r a c τ l ≠ zIndex f r a c σ i := by
@@ -208,7 +213,7 @@ theorem derivation_restPolynomial (D : Derivation ℚ (RootRing f (r + a)) (Root
     ring
   rw [restPolynomial, Derivation.leibniz, hfib, smul_zero, zero_add, Derivation.leibniz_pow, hmu]
   simp only [smul_eq_mul, nsmul_eq_mul, Nat.add_sub_cancel]
-  simp only [map_mul, map_natCast, map_add, map_one]
+  simp only [map_mul, map_natCast]
   push_cast
   ring
 
@@ -325,7 +330,7 @@ theorem ShiftTotalValues.intersectionNumber_baseChange : ShiftTotalValues.Statem
       (fun σ => if σ = τ then 1 else 0) (fun σ i => ?_) (fun σ i => ?_), Flag.flagIntegral_C_mul]
     · simp
     · rw [if_neg (by rintro ⟨-, hh⟩; have hh2 := (Finset.mem_filter.mp hh).2; simp [yIndex, SmallBlock.jIndex] at hh2)]; simp
-    · by_cases h : σ = τ <;> simp [zIndex, SmallBlock.jIndex, Finset.mem_filter, h] <;> (try exact Finset.mem_filter.mpr ⟨Finset.mem_univ _, by simp [SmallBlock.jIndex]⟩) <;> (try (rw [if_neg]; intro hh; have hh2 := (Finset.mem_filter.mp hh.2).2; simp [SmallBlock.jIndex] at hh2))
+    · by_cases h : σ = τ <;> simp [zIndex, SmallBlock.jIndex, h] <;> (try exact Finset.mem_filter.mpr ⟨Finset.mem_univ _, by simp⟩) <;> (try (rw [if_neg]; intro hh; have hh2 := (Finset.mem_filter.mp hh.2).2; simp [SmallBlock.jIndex] at hh2))
   · rw [totalFunctional, Flag.sumPderiv_restPolynomial f r a .last τ _
       (fun σ => if σ = τ then 1 else 0) (fun σ => if σ = τ then 1 else 0) (fun σ i => ?_)
       (fun σ i => ?_), Flag.flagIntegral_C_mul, hsum, fibreDegree]
@@ -336,7 +341,7 @@ theorem ShiftTotalValues.intersectionNumber_baseChange : ShiftTotalValues.Statem
       (fun σ => if σ = τ then 1 else 0) (fun _ => 0) (fun σ i => ?_) (fun σ i => ?_),
       Flag.flagIntegral_C_mul, hsum, fibreDegree]
     · simp [SmallBlock.sign]
-    · by_cases h : σ = τ <;> simp [yIndex, SmallBlock.jIndex, Finset.mem_filter, h] <;> (try exact Finset.mem_filter.mpr ⟨Finset.mem_univ _, by simp [SmallBlock.jIndex]⟩) <;> (try (rw [if_neg]; intro hh; have hh2 := (Finset.mem_filter.mp hh.2).2; simp [SmallBlock.jIndex] at hh2))
+    · by_cases h : σ = τ <;> simp [yIndex, SmallBlock.jIndex, h] <;> (try exact Finset.mem_filter.mpr ⟨Finset.mem_univ _, by simp⟩) <;> (try (rw [if_neg]; intro hh; have hh2 := (Finset.mem_filter.mp hh.2).2; simp [SmallBlock.jIndex] at hh2))
     · rw [if_neg (by rintro ⟨-, hh⟩; have hh2 := (Finset.mem_filter.mp hh).2; simp [zIndex, SmallBlock.jIndex] at hh2)]; simp
   · rw [totalFunctional, Flag.sumPderiv_restPolynomial f r a .first τ _
       (fun σ => if σ = τ then 1 else 0) (fun σ => if σ = τ then 1 else 0) (fun σ i => ?_)

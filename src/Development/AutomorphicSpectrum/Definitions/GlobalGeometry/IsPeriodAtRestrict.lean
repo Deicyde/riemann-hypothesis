@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsHodgeLine
-import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.FlagIndices
 import GroundTheory.HeightsAndTheta.Heights.StabilizerCovolume.CuspFamily
 
 noncomputable section

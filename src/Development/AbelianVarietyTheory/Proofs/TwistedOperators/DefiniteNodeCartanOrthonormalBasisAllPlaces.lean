@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.EqConjOfInFrame
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MeasurePreservingMulRight
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.DIV
 open IsDedekindDomain NumberField MeasureTheory GlobalTheory.ChiGrid GlobalTheory.FunObj GlobalTheory.RowTest GlobalTheory.StdFrames GlobalTheory.RowClaim
@@ -43,7 +44,7 @@ theorem defNode_cart_onb {μ0 : T} (hL : L.Is μ0) (W : G.Weil) (X : Node) (hX :
   · rw [hn]; exact isCartanInv_neg hC
   · rw [hn, Matrix.mul_neg, Matrix.neg_mul, hP]
     ext i j
-    by_cases h : i = j <;> simp [Matrix.diagonal_apply, Matrix.one_apply, h]
+    by_cases h : i = j <;> simp [h]
   · rw [Matrix.neg_mul, h2]
     ext i j
     simp [Matrix.mul_diagonal]

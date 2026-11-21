@@ -1,5 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CharacterGerms.LatticeInclusionFormsInjective
-import Formalism.FrobeniusBaseCase.BaseCaseFalseGeneral
+import Formalism.FrobeniusBaseCase.FrobeniusBaseCaseProofs.HasUniqueFixedPoint
+import Mathlib.RingTheory.MvPowerSeries.Derivative
+import Mathlib.RingTheory.MvPowerSeries.Rename
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.SimpleRing.Principal
 
 noncomputable section
 

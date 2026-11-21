@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.LocalSituation
 import Lemmata.GeneralBFactUpperForm.Imports
 import Lemmata.GeneralBFactUpperVariant.Imports
+import Mathlib.LinearAlgebra.Lagrange
 
 noncomputable section
 

@@ -1,11 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.LemmasUnramifiedOfRingCondition
-import Formalism.SharpRestriction.LevelLetterCocycles.CrystallineLiftingInputs
-import Formalism.SharpRestriction.LevelLetterCocycles.QuotientImageDivisibility.ExistsXPowMul
-import Formalism.SharpRestriction.LevelLetterCocycles.LatticeBoundsOfThreeParts
-import Formalism.SharpRestriction.LevelLetterCocycles.ExpRules
-import Formalism.SharpRestriction.LevelLetterCocycles.DeltaInvariantLattices
-import Formalism.SharpRestriction.LevelLetterCocycles.QuotientImageDivisibility.RkMultVNonneg
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.QuotientImageDivisibility.RkFilLevEq
 import Formalism.SharpRestriction.LevelLetterCocycles.QuotientImageDivisibility.JumpsLetExists
 import Formalism.SharpRestriction.LevelLetterCocycles.QuotientImageDivisibility.SmulSDivMem
@@ -232,7 +226,7 @@ theorem qExpansion_smul_alt {a : ZMod n} {g : LetA O n} {F : PowerSeries O} (o :
   intro N
   obtain ⟨h, hh, e1⟩ := hF N
   refine ⟨o • h, SMulMemClass.smul_mem o hh, ?_⟩
-  simp only [trunc_smul_alt, map_smul, mul_smul_comm, e1, smul_add]
+  simp only [map_smul, mul_smul_comm, e1, smul_add]
 
 theorem qExpansion_mul_alt (hR : Formalism.MainNotions.UnusedSlot80.ToolsR.RingP W) {a : ZMod n} {g g' : LetA O n}
     {F F' : PowerSeries O} (hF : QExpansionAlt W a g F) (hF' : QExpansionAlt W a g' F') :
@@ -1205,7 +1199,7 @@ theorem integral_coordinate_of_relation (hinj : Function.Injective (algebraMap O
     simp only [hlam, Finset.smul_sum, smul_smul, hv] at h1
     rw [Finset.sum_comm] at h1
     have h2 : ∑ j, (P R * vv j - ∑ k, cc R k * algebraMap O LL (mm k j)) • ((bas j : M') : Q) = 0 := by
-      simp only [sub_smul, Finset.sum_sub_distrib, Finset.sum_smul, smul_smul]
+      simp only [sub_smul, Finset.sum_sub_distrib, Finset.sum_smul]
       rw [sub_eq_zero, h1]
     intro j
     exact sub_eq_zero.mp (hind _ h2 j)

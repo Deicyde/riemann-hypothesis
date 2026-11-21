@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.HilbertNinetyQuotientHomEqIff
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqSmulOfCommuteHeisenbergLinearModelSchwartzBruhStatement
 open Matrix
 
@@ -17,7 +17,7 @@ theorem eL_apply (C : Matrix (Fin n) (Fin (Fintype.card β)) k) (i : Fin n) (b :
 
 theorem eL_symm_apply (D : Matrix (Fin n) β k) (i : Fin n) (j : Fin (Fintype.card β)) :
     (eL k n β).symm D i j = D i ((Fintype.equivFin β).symm j) := by
-  simp [eL, reindexLinearEquiv_symm, reindexLinearEquiv_apply, reindex_apply, submatrix_apply]
+  simp [eL, reindexLinearEquiv_apply, reindex_apply, submatrix_apply]
 
 theorem continuous_eL : Continuous (eL k n β) := by
   refine continuous_pi fun i => continuous_pi fun b => ?_

@@ -1,7 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.IsCombAt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.CuspidalL2Subspace
-import Formalism.SharpRestriction.LevelLetterCocycles.DataN
 
 noncomputable section
 

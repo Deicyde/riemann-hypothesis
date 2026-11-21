@@ -1,5 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.SummableAndAbsTsumSubIntegralLe
+import Mathlib.Analysis.Normed.Group.Tannery
+import Mathlib.Data.Int.Star
+import Mathlib.NumberTheory.Harmonic.ZetaAsymp
+import Mathlib.NumberTheory.ModularForms.DedekindEta
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Topology.UniformSpace.Uniformizable
 
 open Filter Topology MeasureTheory Set
 open scoped Real

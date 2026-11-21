@@ -1,9 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsPullFormsGeneric
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsPullRatiosAlgebraic
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PCoordArithOfFnField
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.GenericComplexPoint
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.FibreNormCharpolyFalse
+import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsArith
+import Mathlib.Data.Rat.Star
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.HilbertSamuel

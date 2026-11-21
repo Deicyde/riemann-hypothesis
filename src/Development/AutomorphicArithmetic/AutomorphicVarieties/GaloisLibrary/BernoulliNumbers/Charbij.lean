@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.BernoulliNumbers.MapGenBChar
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
 
 open Finset UpperTheory.V.Bern
 
@@ -42,7 +45,7 @@ theorem UpperTheory.V.Bern.b_charbij :
       rw [MulChar.ringHomComp_apply, MulChar.ofUnitHom_coe]
       show f (((rootsOfUnityEquivOfPrimitiveRoots hf hne).symm ⟨MulChar.toUnitHom χ' u, hmem u⟩ : Kˣ) : K) = χ' u
       rw [rootsOfUnityEquivOfPrimitiveRoots_symm_apply]
-      simp [MulChar.coe_toUnitHom]
+      simp
     refine ⟨MulChar.ofUnitHom ψ, ?_, hcomp⟩
     simp only [charSet, Set.mem_setOf_eq] at hχ' ⊢
     rw [← hker, hcomp]

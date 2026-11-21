@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LatticeIndices.ParabolicImageOfAdapted
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LatticeIndices.StKHolds
 
 noncomputable section
 

@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsSubquotientDetRepParInd
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.ExistsCellOfIsSubquotient
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CellFunctorScalarUniformizer
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CentralExponentBoundOver
 open GlobalTheory.PRep GlobalTheory.SmGL Matrix GlobalTheory.CellScalarTwo
@@ -304,7 +303,7 @@ theorem cell_scalar_case {W : Type} [AddCommGroup W] [Module ℂ W] (χ₁ χ₂
   have h1 : relDeltaHalf k (fun j i => Fin (B.1 i j)) (relProj k g ⟨x, hx⟩) = 1 := by
     rw [hδ (fun j i => Fin (B.1 i j)) (relProj k g ⟨x, hx⟩) (fun j _ => sv j)
       (fun j i => det_relProj g sv x hxj hx j i)]
-    simp only [Fintype.prod_bool, hsvT, hsvF, one_pow, map_one, _root_.one_zpow, one_mul, mul_one, absPow_half,
+    simp only [Fintype.prod_bool, hsvT, hsvF, map_one, _root_.one_zpow, one_mul, mul_one, absPow_half,
       modExp_false, modExp_true, Fintype.card_fin]
     rw [← _root_.zpow_add]
     convert zpow_zero (absPow k (1 / 2) s) using 2
@@ -314,7 +313,7 @@ theorem cell_scalar_case {W : Type} [AddCommGroup W] [Module ℂ W] (χ₁ χ₂
       (swapBlocks k (fun i j => Fin (B.1 i j)) (relProj k g ⟨x, hx⟩)) =
       absPow k (1 / 2) s ^ (((B.1 true true * B.1 true false + B.1 false true * B.1 false false : ℕ)) : ℤ) := by
     rw [hδ (fun i j => Fin (B.1 i j)) (swapBlocks k (fun i j => Fin (B.1 i j)) (relProj k g ⟨x, hx⟩)) (fun _ j => sv j) (fun i j => det_relProj g sv x hxj hx j i)]
-    simp only [Fintype.prod_bool, hsvT, hsvF, one_pow, map_one, _root_.one_zpow, one_mul, mul_one, absPow_half,
+    simp only [Fintype.prod_bool, hsvT, hsvF, map_one, _root_.one_zpow, one_mul, absPow_half,
       modExp_false, modExp_true, Fintype.card_fin]
     rw [← _root_.zpow_add]
     congr 1

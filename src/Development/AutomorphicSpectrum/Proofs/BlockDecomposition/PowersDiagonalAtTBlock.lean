@@ -1,6 +1,5 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.SatakeExponents.UniformizerValuations.LeviMatchingWords.MatchLM
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MatchingTransferOf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SphericalOneOfLocalAlgebra
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ConstantTermMultiplicative
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LocMIterateDiag

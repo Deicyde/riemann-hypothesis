@@ -1,13 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.ExistenceOfLattices.UnivFrame
-import Development.AbelianVarietyTheory.Definitions.ExistenceOfLattices.NormConst
-import Formalism.LocalToGlobal.ProjectiveLattices.CuspFree
-import Formalism.LocalToGlobal.ProjectiveLattices.RdOrbIntOfLatZ
-import Formalism.LocalToGlobal.ProjectiveLattices.AllTest
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.FundamentalDomainPointBound
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.SecBaseChangeAnySt
-import Development.AbelianVarietyTheory.PublishedTheorems.Landherr₂.ExistsNormTensor
-import Development.AbelianVarietyTheory.Statements.HyperbolicHypotheses.HypothesesInhabitedHyperbolic
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Analysis.Matrix.PosDef
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ThetaUnifAV
 open NumberField ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.FD Formalism.L2.Pj Formalism.L2.PjFree
 open AlgebraicGeometry CategoryTheory Limits ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory.Frames GlobalTheory.FrameUnif
 open scoped Matrix nonZeroDivisors
@@ -70,7 +67,7 @@ theorem _root_.GlobalTheory.ThetaAH.hermForm_pullback (h B : Matrix (Fin g) (Fin
     _root_.ReciprocityTheory.ChartRestriction.G.Geo.Tor.hermForm (hᵀ * B * h.map (starRingEnd ℂ)) z w = (h *ᵥ z) ⬝ᵥ B *ᵥ star (h *ᵥ w) := by
   have hs : h.map (starRingEnd ℂ) *ᵥ star w = star (h *ᵥ w) := by
     funext i
-    simp [Matrix.mulVec, dotProduct, star_sum, mul_comm]
+    simp [Matrix.mulVec, dotProduct, star_sum]
   unfold _root_.ReciprocityTheory.ChartRestriction.G.Geo.Tor.hermForm
   rw [← Matrix.mulVec_mulVec, ← Matrix.mulVec_mulVec, hs, Matrix.dotProduct_mulVec,
     Matrix.vecMul_transpose]

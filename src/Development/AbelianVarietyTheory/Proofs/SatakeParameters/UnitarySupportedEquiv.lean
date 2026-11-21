@@ -1,5 +1,7 @@
-import Mathlib
-import Formalism.SatakeDualWeyl.KpqSubgroupCompact
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SatakeDualWeyl.Statement
+import Mathlib.RingTheory.PiTensorProduct
 
 open Formalism.UG
 

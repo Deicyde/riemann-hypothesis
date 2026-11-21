@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.AdmissibleDesigns.InertiaActsTrivially
+import Formalism.SharpRestriction.LevelLetterCocycles.SecondPropositionEveryLocalisation
 
 variable [hT2Core : Fact ReciprocityTheory.ChartRestriction.T2.Core]
 

@@ -1,10 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.DisjointExceptional
-import Development.AbelianVarietyTheory.Definitions.HeightFunctions.NormComparisonConstants
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.NoCommonZeroSt
-import Formalism.LocalToGlobal.ProjectiveLattices.DepthTie
-import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.SzRowNumAt
-import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ExistsStdLarge
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.DataParamsT
 
 set_option autoImplicit false
 

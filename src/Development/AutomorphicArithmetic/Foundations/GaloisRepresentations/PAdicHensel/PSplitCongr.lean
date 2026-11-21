@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.PAdicHensel.PadicUnitNorm
 
 open NumberField IsDedekindDomain Matrix GlobalTheory.UPel.HT GlobalTheory.LKTrip GlobalTheory.LKMid GlobalTheory.LKDef GlobalTheory.CuspRep GlobalTheory.UnitaryBC UpperTheory.Gal.W2.Seed UpperTheory.Gal.G1
@@ -48,7 +48,7 @@ private theorem splitCore {n : ℕ} {B : Type*} [CommRing B] (s : B →+* B) (e 
     simp only [Matrix.transpose_add, Matrix.transpose_smul, Matrix.transpose_one, hAdef,
       Matrix.transpose_transpose, Matrix.add_mul, Matrix.mul_add, Matrix.smul_mul, Matrix.mul_smul,
       smul_add, smul_smul, Matrix.mul_one, Matrix.one_mul, Matrix.mul_assoc, hGiG, hGGi,
-      ← Matrix.mul_assoc Gi G, ← Matrix.mul_assoc G Gi, hee, he'e', hee', he'e, zero_smul,
+      ← Matrix.mul_assoc G Gi, hee, he'e', hee', he'e, zero_smul,
       add_zero, zero_add]
     first
       | rw [← add_smul, hsum, one_smul]

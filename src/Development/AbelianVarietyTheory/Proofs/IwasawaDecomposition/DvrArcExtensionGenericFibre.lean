@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CmIdempotentAddStarEqOne
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.GenericLieMultiplicitiesUniformisedGroup
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.DvrArcExtensionResidueStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.DvrArcExtensionSpecialStatement

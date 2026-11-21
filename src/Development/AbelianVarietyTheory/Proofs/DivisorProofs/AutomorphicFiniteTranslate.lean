@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.Gl2LocalToAdelicEmbedding
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.MemSpanCentreTranslates
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsConstAlongSingleton
 open scoped TensorProduct NNReal Matrix ComplexConjugate
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SiegelSet GlobalTheory.IdTorus GlobalTheory.GLTwoHecke
 open GlobalTheory.Doubling (absE)
@@ -101,7 +101,7 @@ theorem GlobalTheory.StdPar.isAutOn_mul_finPts : ∀ {F E : Type} [Field F] [Num
     rintro _ ⟨⟨k, hk⟩, rfl⟩
     refine ⟨fun g => f (g * k), Submodule.subset_span ⟨⟨k, hk⟩, rfl⟩, ?_⟩
     funext g
-    simp only [LinearMap.funLeft_apply, Function.comp]
+    simp only [LinearMap.funLeft_apply]
     rw [mul_assoc, mul_assoc, (commute_inf_fin (hK hk) efin).eq]
   · have := h.zfin
     refine Submodule.finiteDimensional_of_le

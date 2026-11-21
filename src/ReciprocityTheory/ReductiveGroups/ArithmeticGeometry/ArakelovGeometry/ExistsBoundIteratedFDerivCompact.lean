@@ -1,8 +1,8 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.AInterpSt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.ABridgeSt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.AParamSt
-import ReciprocityTheory.GeometryOfNumbers.PluriharmonicAnalysis.MorseGenSt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.PenMet
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.Topology.Separation.CompletelyRegular
+import ReciprocityTheory.GeometryOfNumbers.PluriharmonicAnalysis.BergmanDefs
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.IsBergDensity
 
 noncomputable section
 

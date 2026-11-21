@@ -1,7 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.GeometryOfNumbers.LatticeCovolumes.ConjSymm
-import ReciprocityTheory.GeometryOfNumbers.LatticeCovolumes.EllipsoidSt
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.MeasurePreservingSwapPi
+import Mathlib.Algebra.Module.ZLattice.Covolume
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 namespace ReciprocityTheory.GeometryOfNumbersTheory
 

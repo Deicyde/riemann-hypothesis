@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.CurveComp
 import Formalism.LocalToGlobal.ProjectiveLattices.LocalUnitReduction.IsUnitMkOfForallPrime
+import Formalism.LocalToGlobal.ProjectiveLattices.CurveFr
+import Formalism.LocalToGlobal.ProjectiveLattices.IntAtExtExtAll
 
 noncomputable section
 

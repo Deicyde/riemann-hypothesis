@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.RealMetaplecticRepresentation
 import GroundTheory.GlobalFields.TateThesis.GaussianSchwartz
+import Mathlib.Analysis.SpecialFunctions.Gaussian.FourierTransform
 open MeasureTheory GlobalTheory.RealWeil
 open scoped SchwartzMap
 

@@ -1,8 +1,8 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.LinksDefs
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.ChainMatrices
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.ExistsCongrIffTraceFormsIsometricCm
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.HasseNormTheoremQuadraticExtension
+import Formalism.LocalRingCardinality.DataSpaces
 
 open Formalism.BasicNotions IsDedekindDomain NumberField Matrix
 open scoped TensorProduct ComplexConjugate

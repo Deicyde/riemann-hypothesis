@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.IsPolLatticePlane
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.CompleteIntegersPropertiesStatement
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.PolarisedLatticeTowerExistsStatement
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.DivisibleGroupFromTowerStatement
@@ -7,7 +7,6 @@ import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.DivisibleGroupTowerC
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.DivisibleGroupTowerDualStatement
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.DivisibleGroupTowerFreeStatement
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.TateMapDualHomBidual
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConvEqOneOfForallPairing
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.ImportsBisRest
 open CategoryTheory AlgebraicGeometry MonoidalCategory CartesianMonoidalCategory MonObj TensorProduct NumberField GlobalTheory GlobalTheory.PDivGroup GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.BT GlobalTheory.CompanionTheory.Ar.HT ReciprocityTheory.ChartRestriction.G.Semi
 
@@ -69,7 +68,7 @@ def omAct (C : Type) [Field C] [Algebra O C] (c : E ≃+* E) {L : Type} [AddComm
     exact (congrArg _ (by ext x; simp [LinearMap.dualMap_apply])).trans (TensorProduct.tmul_zero _ _)
   map_add' a b := by
     ext w
-    simp [LinearMap.baseChange_tmul, TensorProduct.tmul_add]
+    simp [LinearMap.baseChange_tmul]
     exact (congrArg _ (by ext x; simp [LinearMap.dualMap_apply])).trans (TensorProduct.tmul_add _ _ _)
 
 theorem omAct_tmul (c : E ≃+* E) {L : Type} [AddCommGroup L] [Module O L]

@@ -1,4 +1,6 @@
-import Formalism.LocalToGlobal.Columns.HermitianFormLastCoordinateUniformizerVectorSelf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.Columns.TiedCF
 
 open NumberField IsDedekindDomain Module Matrix
 open scoped TensorProduct

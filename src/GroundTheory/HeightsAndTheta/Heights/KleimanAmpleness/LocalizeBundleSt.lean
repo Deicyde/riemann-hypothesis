@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Example
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.BaseChangeObj
+import Mathlib.RingTheory.DedekindDomain.Instances
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.Kleiman.SectionsOverLocalization

@@ -1,5 +1,7 @@
-import Formalism.LocalToGlobal.Columns.ReductionExistsInLatticeStabilizerHolds
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnfoldingEquivalence.CompSymmComp
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.Columns.FirstUnfoldingEqZeroOfNotIntegral
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnfoldingEquivalence.Points
 
 open NumberField IsDedekindDomain Module
 

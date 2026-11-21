@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.SplitEigenfunctions.SplitEig
 
 open NumberField IsDedekindDomain MeasureTheory Matrix Topology Filter

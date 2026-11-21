@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.GL2.GJFELeviMulti
-import GroundTheory.AutomorphicForms.InductionParabolic
+import Mathlib.Topology.Connected.Separation
+import Mathlib.Topology.Separation.Lemmas
 
 noncomputable section
 

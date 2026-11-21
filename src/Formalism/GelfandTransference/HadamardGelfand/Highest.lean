@@ -1,7 +1,7 @@
-import Mathlib
-import Formalism.GelfandTransference.Statement
-import Formalism.GelfandTransference.GelfandCentral
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.GelfandTransference.HadamardGelfand.Gelfand
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Finset
 

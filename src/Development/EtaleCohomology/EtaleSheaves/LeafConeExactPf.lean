@@ -1,4 +1,6 @@
-import Development.EtaleCohomology.EtaleSheaves.LeafDiagCut
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.GalMapMul
 
 noncomputable section
 open CategoryTheory Limits CochainComplex CochainComplex.HomComplex GlobalTheory.EtC

@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HomEqZeroOfIsConnOfIsEt
+import Development.AbelianVarietyTheory.Definitions.Divisors.ToBaseChangePtsBijective
 open CategoryTheory GlobalTheory GlobalTheory.PDiv GlobalTheory.PDivGroup
 
 open TensorProduct Coalgebra Bialgebra WithConv

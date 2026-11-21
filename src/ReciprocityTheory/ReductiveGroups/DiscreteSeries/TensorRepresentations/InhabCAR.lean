@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.CarSumSqZeroOfAnti
+import Mathlib.LinearAlgebra.CliffordAlgebra.Contraction
+import Mathlib.RingTheory.PiTensorProduct
 
 noncomputable section
 
@@ -34,7 +38,7 @@ theorem isCAR_fock : IsCAR (cpFock (n := n)) cmFock := by
       simp
     · rw [if_neg h]
       have hne : (i, a) ≠ (j, b) := fun e => h ⟨congrArg Prod.fst e, congrArg Prod.snd e⟩
-      simp [LinearMap.proj_apply, Pi.single_apply, hne]
+      simp [LinearMap.proj_apply, hne]
 
 theorem car_setting_inhabited :
     IsGlRep (0 : Fin n → Fin n → Module.End ℂ (Fock n)) ∧ IsCAR (cpFock (n := n)) cmFock ∧

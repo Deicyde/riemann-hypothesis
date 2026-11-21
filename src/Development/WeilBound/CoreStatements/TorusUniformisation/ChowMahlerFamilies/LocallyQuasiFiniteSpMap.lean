@@ -1,15 +1,9 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.BdryChart
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsFlatAnIffIsConstMul
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.LevelSectionsExactKernelLocusOpen
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.ClopenCondOnto
-import Development.AbelianVarietyTheory.Definitions.Uniformization.PointEqOfSubsingleton
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.BlowupProjections.BlowupProjStatement
-import Development.AutomorphicSpectrum.PublishedTheorems.Geometry₂.GagaSections
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsGenericFlag
 import Development.AbelianVarietyTheory.Proofs.ToricGeometry.ExistsContraction
 import Development.AbelianVarietyTheory.Proofs.ThetaLawProofs.SameCompOfIsHolTo
 import Development.AbelianVarietyTheory.Proofs.ThetaLawProofs.LiftIdempotentEqOfSameComplexComponent
+import Mathlib.AlgebraicGeometry.Morphisms.QuasiFinite
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Fl GlobalTheory.CompanionTheory.Ar.Flat Filter Topology Metric
 
@@ -182,8 +176,8 @@ theorem sameComp_baseChange {K F : Type} [Field K] [Field F] (e₀ : K →+* F) 
     intro p hp hp'
     apply pullback.hom_ext
     · apply pullback.hom_ext
-      · simp only [j, j₀, Category.assoc, pullback.lift_fst, pullback.lift_fst_assoc]
-      · simp only [j, j₀, Category.assoc, pullback.lift_fst, pullback.lift_snd, pullback.lift_fst_assoc,
+      · simp only [j, j₀, Category.assoc, pullback.lift_fst]
+      · simp only [j, j₀, Category.assoc, pullback.lift_fst, pullback.lift_snd,
           pullback.lift_snd_assoc, hp]
     · simp only [j, Category.assoc, pullback.lift_snd]
   refine ⟨by rw [hp, Category.id_comp], by rw [hq, Category.id_comp], fun z => ?_⟩

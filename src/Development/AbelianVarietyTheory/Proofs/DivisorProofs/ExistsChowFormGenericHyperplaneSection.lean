@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.AevalEqZeroOfMemConeIdeal
-import Development.AbelianVarietyTheory.Definitions.ThetaMetrics.ExistsAlgebraicIndependentGenericPoint
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ProjPointIdealMemProjComponentsOfIsProjPureDim
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsFormDegreeLeHilbertDegreeEvalNeZero
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.IrreducibleOfIrreducibleMap
+import Mathlib.Order.CompletePartialOrder
 
 set_option autoImplicit false
 
@@ -94,7 +92,7 @@ theorem _root_.GlobalTheory.ChowSpec.exists_isChowFormInt_generic_section : ∀ 
     | last =>
       have hg : g (_root_.GlobalTheory.Chow.blockWeight (Fin.last (D + 1), j)) = 0 := by
         funext i
-        simp [g, _root_.GlobalTheory.Chow.blockWeight, Pi.single_apply, Fin.castSucc_ne_last]
+        simp [g, _root_.GlobalTheory.Chow.blockWeight, Fin.castSucc_ne_last]
       rw [hφ, _root_.GlobalTheory.ChowSpec.lastSubst_last, hg]
       exact isWeightedHomogeneous_C _ _
     | cast i =>

@@ -1,4 +1,5 @@
-import ReciprocityTheory.DualLattices.SeriesState
+import BuildAid.Leniency.Variable
+import ReciprocityTheory.DualLattices.SqZeroOfSpan
 
 namespace ReciprocityTheory.PGsh
 

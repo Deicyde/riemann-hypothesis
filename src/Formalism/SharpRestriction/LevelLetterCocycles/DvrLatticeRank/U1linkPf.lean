@@ -1,8 +1,9 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.UniversalLiftFrame
 import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.UniversalLiftRingMembership
 import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.UniversalLiftValuationPoints
 import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.UniversalLiftFiltration
-import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.U3upPfFilCAnti
+import Formalism.SharpRestriction.LevelLetterCocycles.SecondPropositionHypothesis
 
 noncomputable section
 

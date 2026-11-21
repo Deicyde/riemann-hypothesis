@@ -1,7 +1,5 @@
-import Mathlib
-import GroundTheory.GlobalFields.KummerTheory.Degree
-import GroundTheory.GlobalFields.KummerTheory.Unramified
-import GroundTheory.GlobalFields.NormResidueSymbol.RestrictNormalInfiniteLocalSymbol
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.GlobalReciprocity.General
 import GroundTheory.GlobalFields.PowerSubgroupIndex.Existence
 

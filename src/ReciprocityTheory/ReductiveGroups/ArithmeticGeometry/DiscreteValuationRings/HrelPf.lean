@@ -1,8 +1,10 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.ExpandsAtScale
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.RValuePf
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.ProdNeg
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.CubeVal
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.ProdScalB
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.GenCalc
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.PhiGenPf
 
 set_option autoImplicit false
 
@@ -117,9 +119,9 @@ theorem hr_form (oa : D.toPre.OAct O) (a : O) (k N : ℕ) (χ : D.toPre.X) :
   simp only [Fintype.prod_sum_type, Sum.elim_inl, Sum.elim_inr, pullε]
   rw [p₃, SectionScalarValuation.prod_neg' _ _ p₄]
   simp only [Fin.prod_univ_succ, Fin.prod_univ_zero, Matrix.cons_val_zero, Matrix.cons_val_succ, rosatiφ, rosatiε,
-    Matrix.cons_val_one, Matrix.head_cons, i0, i1, i2, i3, i4, i5]
+    i0, i1, i2, i3, i4, i5]
   apply Additive.ofMul.injective
-  simp only [ofMul_mul, ofMul_inv, ofMul_zpow, ofMul_pow, ofMul_one]
+  simp only [ofMul_mul, ofMul_inv, ofMul_zpow, ofMul_one]
   push_cast
   module
 

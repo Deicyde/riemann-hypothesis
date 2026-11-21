@@ -1,8 +1,7 @@
-import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.TotallyRealRoots.GalOpen
-import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.TotallyRealRoots.NuFinite
-import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.CyclotomicTotient.NuBasic
-import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.CyclotomicTotient.TotientLeOfCycPowEqOne
-import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.HeckeCharacterChoice.NCField
+import BuildAid.Leniency.Variable
+import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.TotallyRealRoots.GalDefs
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 namespace KStar.TotallyRealRoots
 
@@ -31,7 +30,7 @@ private theorem cyclotomicCharacter_eq_of_ringEquiv_conj {L M : Type*} [Field L]
       rw [← map_pow, ht, map_one]
     have key := modularCyclotomicCharacter.spec L
       (HasEnoughRootsOfUnity.natCard_rootsOfUnity L (p ^ n)) g hs
-    simp only [Units.coe_map, Units.val_pow_eq_pow_val] at key
+    simp only [Units.coe_map] at key
     change g (φ.symm (t : M)) = (φ.symm (t : M)) ^ _ at key
     rw [RingEquiv.trans_apply, RingEquiv.trans_apply, key, map_pow, RingEquiv.apply_symm_apply]
   · have H' : ¬ ∀ i : ℕ, ∃ ζ : M, IsPrimitiveRoot ζ (p ^ i) := by
@@ -67,7 +66,7 @@ theorem mem_galImage_iff_of_equiv {E E' : Type*} [Field E] [CharZero E] [Field E
     · simp only [eps, MonoidHom.comp_apply]
       apply cyclotomicCharacter_eq_of_ringEquiv_conj l ε
       intro x
-      simp [gr, MulSemiringAction.toRingAut_apply, AlgEquiv.smul_def]
+      simp [gr, MulSemiringAction.toRingAut_apply]
   · rintro ⟨g, rfl⟩
     let sr := ε.trans (g.toRingEquiv.trans ε.symm)
     refine ⟨AlgEquiv.ofRingEquiv (f := sr) fun s ↦ ?_, ?_⟩
@@ -76,6 +75,6 @@ theorem mem_galImage_iff_of_equiv {E E' : Type*} [Field E] [CharZero E] [Field E
       symm
       apply cyclotomicCharacter_eq_of_ringEquiv_conj l ε
       intro x
-      simp [sr, MulSemiringAction.toRingAut_apply, AlgEquiv.smul_def]
+      simp [sr, MulSemiringAction.toRingAut_apply]
 
 end KStar.TotallyRealRoots

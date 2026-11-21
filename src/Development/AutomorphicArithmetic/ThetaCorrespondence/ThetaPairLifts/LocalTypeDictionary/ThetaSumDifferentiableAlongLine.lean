@@ -1,8 +1,6 @@
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.LocalTypeDictionary.DiscreteSpectrumResidualClassification
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.WeilModelStandardCharacter
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.LocalTypeDictionary.BernsteinUnitaryProductIrreducible
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.LocalTypeDictionary.TwistedSmoothLinePureWeight
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.WeilModelStandardCharacterStatement
 
 section
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix
@@ -72,7 +70,7 @@ theorem hasDerivAt_theta_sum_along_line : _root_.GlobalTheory.FunPr.ThetaLocalIn
     intro i
     rw [hasDerivAt_iff_tendsto_slope]
     refine ((Λ i).continuous.tendsto (g i) |>.comp (hlim i)).congr' (Filter.Eventually.of_forall fun t => ?_)
-    simp [slope_def_module, map_sub, map_smul]
+    simp [slope_def_module, map_sub]
   rw [hcurve, hend]
   have := HasDerivAt.sum (u := Finset.univ) fun i _ => hc0 i
   simpa [Finset.sum_fn] using this

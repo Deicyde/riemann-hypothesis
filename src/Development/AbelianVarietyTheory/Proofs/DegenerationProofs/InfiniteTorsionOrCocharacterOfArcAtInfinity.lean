@@ -1,11 +1,5 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.LawsChart
-import Development.AbelianVarietyTheory.Definitions.AbelianSchemeLaws.FirstCohomologyVanishesSpecOfIsLocalRing
-import Development.AbelianVarietyTheory.Definitions.Degenerations.OfDerivationFnOn
-import Development.AbelianVarietyTheory.Definitions.Degenerations.PlOrdSomeOfAssociated
-import Development.AbelianVarietyTheory.Statements.SemistableTorsion.SemistableFin
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.AlgOverHomSurjective
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsAffineUnitChartSmoothGroupSchemeStatement
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsBasicOpenFactorFieldPointAffineOpenStatement
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsArcQuotientTwoVariableCoordsStatement
@@ -30,7 +24,7 @@ abbrev toK (k : Type) [Field k] : PowerSeries k →ₐ[k] FractionRing (PowerSer
 theorem toK_injective : Function.Injective (toK k) := IsFractionRing.injective (PowerSeries k) _
 
 def ev0 (k : Type) [Field k] : PowerSeries k →ₐ[k] k :=
-  { PowerSeries.constantCoeff (R := k) with commutes' := fun c => by simp [PowerSeries.algebraMap_apply] }
+  { PowerSeries.constantCoeff (R := k) with commutes' := fun c => by simp }
 
 theorem laurentCoeffEvalLinear_apply (x : PowerSeries k) : ev0 k x = PowerSeries.constantCoeff x := rfl
 

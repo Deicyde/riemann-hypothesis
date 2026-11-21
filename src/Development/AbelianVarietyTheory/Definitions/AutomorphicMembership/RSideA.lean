@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CrdOver
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.BrgStdR
+import Formalism.LocalToGlobal.IndefiniteReal.LinksExistW
 
 noncomputable section
 

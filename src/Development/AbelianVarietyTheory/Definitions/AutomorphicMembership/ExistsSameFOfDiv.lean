@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.SameDegreeZeroFormsSelf
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ECure
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ColDictIsomReTr
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FinXSpectralRedivisionFullChoices
 

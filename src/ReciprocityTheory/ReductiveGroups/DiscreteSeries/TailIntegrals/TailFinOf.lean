@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TailIntegrals.CriticalExponentSucc
+import Mathlib.Tactic.ENatToNat
 
 open MeasureTheory
 open scoped ENNReal
@@ -23,7 +25,7 @@ lemma sum_Ioi {n : ℕ} (g : Fin (n + 1) → ℝ) (l : Fin (n + 1)) :
 
 lemma iic_zero {n : ℕ} (g : Fin (n + 1) → ℝ) : ∑ j ∈ Finset.Iic 0, g j = g 0 := by
   rw [sum_Iic]
-  simp [Fin.le_zero_iff]
+  simp
 
 lemma upd_eq {p : ℕ} (ν : Fin (p + 2) → ℝ) :
     Function.update (Fin.tail ν) 0 (ν 0 + Fin.tail ν 0) = fun j => ν j.succ + if j = 0 then ν 0 else 0 := by

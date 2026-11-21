@@ -1,7 +1,14 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.DiagMod
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsSlTwoIntSmulOfFixesJK
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.MemTranslationInvariantSubfieldIffExponents
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Rat.Star
+import Mathlib.NumberTheory.Modular
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open scoped MatrixGroups TensorProduct
 open Matrix GlobalTheory.KZ GlobalTheory.KZ.ES
@@ -232,7 +239,7 @@ private lemma exists_smul_ofSL_mul_of_sl_jK_eq {Ω : Type} [Field Ω] [Algebra �
     rw [hU]
     ext i j
     fin_cases i <;> fin_cases j <;>
-      simp [Matrix.mul_apply, Fin.sum_univ_two, Matrix.vecMul, dotProduct, h₁, h₂] <;>
+      simp [Fin.sum_univ_two, Matrix.vecMul, dotProduct, h₁, h₂] <;>
       field_simp
     · linear_combination hρ'
     · linear_combination hk'

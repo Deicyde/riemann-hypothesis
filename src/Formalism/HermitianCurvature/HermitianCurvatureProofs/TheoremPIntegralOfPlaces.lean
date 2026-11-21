@@ -1,8 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementJC
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.FrameIntegralJacobian
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.BlockEstimatesSumForm
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.BigCellZetaMinors
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.RegularisedPairingViaPhase
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LevelSizesJointMean
 
 open Formalism.FourierDecayAlt

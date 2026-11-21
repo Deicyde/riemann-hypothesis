@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RedMFrMapAdjZero
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThPDatumEq
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.IndefR.Mult Formalism.IndefR.FWT Formalism.L2.Pj
 open MeasureTheory IsDedekindDomain NumberField Matrix Complex
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.FD GlobalTheory GlobalTheory.ThFr GlobalTheory.Ker GlobalTheory.AdSpan
@@ -15,9 +15,9 @@ def vmvBil (E : Type) [Field E] [NumberField E] (n r : ℕ) :
     (Fin n → E) →ₗ[𝓞 E] (Fin r → E) →ₗ[𝓞 E] Matrix (Fin n) (Fin r) E :=
   LinearMap.mk₂ (𝓞 E) (fun v u => vecMulVec v u)
     (fun v v' u => by ext i j; simp [vecMulVec, add_mul])
-    (fun a v u => by ext i j; simp [vecMulVec, smul_mul_assoc])
+    (fun a v u => by ext i j; simp [vecMulVec])
     (fun v u u' => by ext i j; simp [vecMulVec, mul_add])
-    (fun a v u => by ext i j; simp [vecMulVec, mul_smul_comm])
+    (fun a v u => by ext i j; simp [vecMulVec])
 
 theorem tens_quot_finite {E : Type} [Field E] [NumberField E] {n r : ℕ} (Λ : Lt E n) (L : Lt E r)
     (hΛ : Λ.FG) (hL : L.FG) (𝔞 𝔪 : Ideal (𝓞 E)) (hm : 𝔪 ≠ ⊥) :

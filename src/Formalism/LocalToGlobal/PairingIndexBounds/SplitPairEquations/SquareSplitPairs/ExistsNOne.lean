@@ -1,5 +1,8 @@
-import Formalism.LocalToGlobal.PairingIndexBounds.SplitPairEquations.SquareSplitPairs.SumThreeComm
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.ExistsSmulMemLattice
+import Formalism.LocalToGlobal.PairingIndexBounds.SplitPairEquations.Reduction
+import Formalism.LocalToGlobal.PairingIndexBounds.SplitPairEquations.SquareSplitPairs.HomLMulPres
 
 noncomputable section
 open NumberField Formalism.BasicNotions Classical

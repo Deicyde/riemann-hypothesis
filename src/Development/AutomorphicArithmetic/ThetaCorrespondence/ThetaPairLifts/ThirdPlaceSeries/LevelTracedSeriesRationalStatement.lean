@@ -1,7 +1,6 @@
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCoefficientLatticeSpanStatement
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.CohomologicalCsdTempered
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.RowAtOfRatStep
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.LevelTracedSeriesRational
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.SeriesRatSOf
 
 set_option synthInstance.maxHeartbeats 200000
 

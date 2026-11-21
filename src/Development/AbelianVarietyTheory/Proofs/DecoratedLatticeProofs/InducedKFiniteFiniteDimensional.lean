@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.ContinuesConst
 
 open scoped NNReal
@@ -56,7 +56,7 @@ def evalForm {G : Type} [Group G] {P : Subgroup G} (δ : P →* ℝ≥0) (K : Su
     simp [transComb_apply, Finsupp.sum_add, mul_add]
   map_smul' a b := by
     ext c
-    simp only [transComb_apply, LinearMap.comp_apply, Submodule.liftQ_apply, LinearMap.coe_comp, Function.comp_apply,
+    simp only [transComb_apply, LinearMap.comp_apply, Submodule.liftQ_apply,
       Submodule.mkQ_apply, LinearMap.proj_apply, SetLike.val_smul, Pi.smul_apply, smul_eq_mul, RingHom.id_apply,
       LinearMap.smul_apply, Finsupp.mul_sum]
     congr 1; ext k z; ring

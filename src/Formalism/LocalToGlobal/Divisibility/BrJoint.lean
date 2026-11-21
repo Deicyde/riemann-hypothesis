@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.GTLower
 import Formalism.LocalRingCardinality.FactDelDualNabla
-import Formalism.SharpRestriction.Divisibility.PrimeDegreeVariant
 import Formalism.SharpRestriction.AdmissibleParameterJoins.SfromGLd
 
 noncomputable section

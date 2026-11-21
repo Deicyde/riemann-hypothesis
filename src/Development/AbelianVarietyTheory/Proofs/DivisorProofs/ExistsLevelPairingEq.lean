@@ -1,8 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsGPull
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsEtPlace
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsConjIdempotentModPrimePowStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLinearEquivOfAdjointSkewPairingsStatement
+import Mathlib.Data.Int.Star
+import Mathlib.RingTheory.PiTensorProduct
 
 noncomputable section
 

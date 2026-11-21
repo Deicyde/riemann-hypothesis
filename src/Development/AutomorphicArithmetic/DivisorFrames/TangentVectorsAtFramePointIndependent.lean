@@ -1,14 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.HtValOnSubset
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlatDegreeStatementOfDegreeTheorem
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrameCoord
-import Development.AbelianVarietyTheory.Definitions.Divisors.VolMeasureOfAdd
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.NonemptyUnitAt
-import Development.AbelianVarietyTheory.Definitions.Divisors.TorusExt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StepIdeal
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFibreUniformisationAppellHumbertUnitStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ComplexFibreIsoUniversalGroupFramedPoint
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLinearLiftPreservingAppellHumbertForm
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.EigenvectorLieDegree
+import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.CmCurveBaseChangeComp
 open AlgebraicGeometry CategoryTheory ReciprocityTheory.ChartRestriction.G.Semi NumberField IsDedekindDomain Module Formalism.BasicNotions Formalism.L2.Pj ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.FD GlobalTheory.AllWt GlobalTheory.FlatLine GlobalTheory.CompHt GlobalTheory.FlatCore GlobalTheory.IndefiniteRowSideFullHecke GlobalTheory.FlatDegreeCompare
 
 open Limits MonoidalCategory CartesianMonoidalCategory MonObj in
@@ -31,7 +24,7 @@ private theorem isTangent_of_isTanAt_sab {E : Type} [Field E] [NumberField E] [I
   · have a : η[t'.G].left ≫ t'.G.hom = 𝟙 _ := Over.w η[t'.G]
     rw [Category.assoc, hw, a, GlobalTheory.spMap_comp_spMap]
     have : (TrivSqZeroExt.fstHom S S S).toRingHom.comp (algebraMap S (DualNumber S)) = RingHom.id S := by
-      ext r; simp [TrivSqZeroExt.algebraMap_eq_inl]
+      ext r; simp
     rw [this]
     exact Spec.map_id _
 

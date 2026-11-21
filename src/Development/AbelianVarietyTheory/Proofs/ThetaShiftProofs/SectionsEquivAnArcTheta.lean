@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.CubeVal
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.DegExp
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.LBLocalC
 import Development.AbelianVarietyTheory.Definitions.ArchimedeanThetaValues.DegeneratingToriPeriodMapEqBaseOfYEqZero
 import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.ConstOfNormPeriodic
@@ -244,7 +244,7 @@ theorem exists_secFn_eq (h : u.IsAH Hm χ) (hj : j ≠ 0) (hθ : ∀ θ, u.IsThe
     have n := ahFactor_ne_zero h ⟨l, hl⟩ w
     simp only [Fintype.prod_sum_type, Sum.elim_inl, Sum.elim_inr, Fintype.prod_unique, Fin.prod_univ_four,
       Out.DegPre.famε, Matrix.cons_val, ahFactor_zero hL h, ahFactor_translate, exp_nsmul,
-      zpow_one, one_zpow, _root_.mul_one, zpow_sub₀ n, zpow_neg, zpow_natCast, mul_pow]
+      zpow_one, _root_.mul_one, zpow_sub₀ n, zpow_neg, zpow_natCast, mul_pow]
     field_simp) z 0
   have hne : V 0 ≠ 0 := (hV 0).symm ▸ genVal_ne_zero hL t (hz 0)
   obtain ⟨s, hs⟩ := hθ _ (isThetaFn_sub ((thetaShift u Hm χ j (j • b)).smul_mem (V 0)⁻¹ hm))

@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.JointSmooth
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SubMemOfMkEq
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HeisAvgInvariant
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SymplOInvSmulNsmul
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SymplOSmulAddSmulAdd

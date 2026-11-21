@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.CardPathsEqSubmodulePairs
 import Formalism.LocalToGlobal.Columns.MemOfSmulMemOfAddEqOne
 import Formalism.LocalToGlobal.Columns.NeighbourConjOfTopNeighbour

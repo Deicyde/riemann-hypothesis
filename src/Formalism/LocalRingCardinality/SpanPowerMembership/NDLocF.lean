@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.SpanPowerMembership.NDLocE
+import Mathlib.Topology.Algebra.Nonarchimedean.AdicTopology
 
 noncomputable section
 

@@ -1,5 +1,6 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.PlaceIntegralUnramified
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.ChartDirectionsIntegral
+import Formalism.LocalToGlobal.ProjectiveLattices.HasDataCondition
 
 noncomputable section
 

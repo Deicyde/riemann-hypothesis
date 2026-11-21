@@ -1,8 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.CuspidalExponentialDecay
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.MajorantNormalForms
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.HermitianLatticeMaps
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.IntegralBasisReduction
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.HermitianTraceFormVanishing
 
 namespace GlobalTheory.FlagMahler
 
@@ -211,7 +213,7 @@ theorem Kset_sub (R : ℝ) : Kset X R ⊆ X.dom := by
   have e : dmin X.Gm w τ i = ((psgn X.p0 i : ℝ) : ℂ) := by
     unfold dmin lminor
     rw [hg, submatrix_diagonal _ _ (Fin.castLE_injective _), det_diagonal]
-    simp only [psgn, Complex.ofReal_prod, Fin.val_castLE]
+    simp only [psgn, Complex.ofReal_prod]
     exact Fin.prod_univ_eq_prod_range (fun a => ((sgn X.p0 a : ℝ) : ℂ)) i
   rw [e, Complex.ofReal_re]
   have hne : psgn X.p0 i ≠ 0 :=
@@ -435,7 +437,7 @@ private theorem gram_map_mul_of_isUStab {γ : GL (Fin r) E} (hγ : _root_.Recipr
     ext a b
     have := hγ.1 (Pi.single a 1) (Pi.single b 1)
     unfold _root_.ReciprocityTheory.ChartRestriction.G.FD.herm at this
-    simp [mulVec_single, Pi.single_apply, apply_ite _root_.ReciprocityTheory.ChartRestriction.G.FD.cc, _root_.ReciprocityTheory.ChartRestriction.G.FD.cc_one, _root_.ReciprocityTheory.ChartRestriction.G.FD.cc_zero] at this
+    simp [mulVec_single, Pi.single_apply, apply_ite _root_.ReciprocityTheory.ChartRestriction.G.FD.cc] at this
     rw [← this]
     simp only [Matrix.mul_apply, transpose_apply, map_apply, Finset.sum_mul]
     rw [Finset.sum_comm]

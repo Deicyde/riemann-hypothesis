@@ -1,6 +1,7 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.AdmissibleFiniteLength
-import GroundTheory.AutomorphicForms.LeviCartan
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.AutomorphicForms.CuspidalAdmissible
+import GroundTheory.AutomorphicForms.SmoothRepContragredient
 set_option maxSynthPendingDepth 1
 
 noncomputable section

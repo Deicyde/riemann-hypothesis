@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.MinpolyIrreducibleNatDegreeOfRankOne
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToVInjective
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiniteOrbitsCxFNeZero
 
 noncomputable section

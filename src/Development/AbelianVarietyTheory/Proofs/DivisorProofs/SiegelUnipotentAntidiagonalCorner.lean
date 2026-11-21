@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.HilbertNinetyQuotientHomEqIff
+import Mathlib.Analysis.CStarAlgebra.CStarMatrix
+import Mathlib.RingTheory.PiTensorProduct
 open GlobalTheory.WeilM
 open scoped Matrix
 

@@ -1,6 +1,5 @@
-import Mathlib
-import GroundTheory.Brauer.CrossedProduct
-import GroundTheory.Brauer.CrossedProductSimple
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.Brauer.CrossedProductMaps
 set_option maxSynthPendingDepth 1
 

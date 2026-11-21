@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.GlobalHeightBoundIffAtGoodPrimes
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsTorsionFreeOfForallExists
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

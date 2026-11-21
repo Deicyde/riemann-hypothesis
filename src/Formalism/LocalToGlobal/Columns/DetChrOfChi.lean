@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.RecChainUnfOne
-import Formalism.LocalToGlobal.Columns.DetChrOf
 
 noncomputable section
 

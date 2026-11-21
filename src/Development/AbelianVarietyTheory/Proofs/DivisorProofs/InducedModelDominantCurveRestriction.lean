@@ -1,24 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.Definitions.Divisors.DualRef
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.NefFibOfCurveDegreesNonneg
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.NefFibOfInducedOfInduced
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.NefFibPowIff
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemConeOfMem
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormsComb
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinsumLifts
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormsTensorProduct
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormsTensorPower
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormsUnitRescaling
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoverRefinementGenericDegree
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RegularOfIntegralValuationBound
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CommonRefinementOfCoverAndModel
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NefAtOfPull
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormsPullbackAlongCoverStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NefFibreOfNormsPowerStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NefOverAntitoneCombStatement
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ExistsLiftPt
 
 set_option autoImplicit false
 
@@ -314,7 +298,7 @@ theorem norms_of_comb {V : Cover Y} {C : CxSt F} {A : Adl C Y} {ι : Type} [Fint
     have h₃ := h₁.iff_unitAt.1 h₂
     convert h₃ using 1
     simp only [genAt, Units.val_inv_eq_inv_val, Units.val_pow_eq_pow_val, Units.val_zpow_eq_zpow_val,
-      Units.coe_prod, inv_pow, inv_zpow', Finset.prod_inv_distrib]
+      Units.coe_prod, inv_pow, inv_zpow']
     simp only [zpow_neg, Finset.prod_inv_distrib, div_inv_eq_mul]
     rw [mul_comm, div_eq_mul_inv]
   have hP : ∀ x, (∏ i, genAt (ρ i).D x ^ b i) ≠ 0 := fun x =>

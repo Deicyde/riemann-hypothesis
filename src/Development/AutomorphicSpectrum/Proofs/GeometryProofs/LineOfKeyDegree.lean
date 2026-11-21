@@ -1,20 +1,12 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsThetaMeanSquareNorm
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.ZhangDimensionPushDownGrassmannianHeightBounds
-import GroundTheory.HeightsAndTheta.Heights.KernelsLattice
-import GroundTheory.HeightsAndTheta.Heights.LatticeLemmas.StatementsBundles
-import GroundTheory.HeightsAndTheta.Heights.LatticeLemmas.BaseChangeIndex
-import GroundTheory.HeightsAndTheta.Heights.FactorialBounds.Assembly
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsThetaSectionsBoundedStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.IteratedDerivBoundGaussianGrowthStatement
 import Development.AutomorphicSpectrum.Proofs.AdelicProofs.IntegralFlagEmbeddingCriterionStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.PolarizedDataFieldExtensionStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.SectionSupNormFieldExtensionStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ThetaFunctionArchimedeanFrameStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsIntegralJetBasisStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.ThetaDerivativeBoundStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.ExistsThetaSupBoundLogMeanStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ThetaMultiplierQuadraticCharacterStatement
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField MeasureTheory
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi
 open GroundTheory.Heights₂.Heights TensorProduct
@@ -58,7 +50,7 @@ theorem slope_sum {K : Type} [Field K] [NumberField K] (n' : ℕ) (hn' : 1 ≤ n
         Real.log_pow, Real.log_pow, Real.log_mul hT.ne' h2]
       ring
     simp only [this, Finset.sum_add_distrib, Finset.sum_const, Finset.card_univ, nsmul_eq_mul, ← Finset.mul_sum,
-      hcard, ← hSl, ← hSm, ← hdd]
+      hcard, ← hSl, ← hSm]
     ring
   simp only [e1] at h
   rw [sum_range_lin] at h
@@ -114,7 +106,7 @@ theorem sum_bound (a : ArchFrame P z g) (n r : ℕ) (f : Fin r → (Fin g → �
       intro j
       have h2 := hs j w
       simp only [ArchFrame.nrm] at h2
-      simp only [coe_normSeminorm, norm_mul, Complex.norm_real, Real.norm_eq_abs, abs_of_pos hk]
+      simp only [coe_normSeminorm, norm_mul, Complex.norm_real, Real.norm_eq_abs]
       have h3 : Mv⁻¹ * e * ‖f j w‖ = Mv⁻¹ * (‖f j w‖ * e) := by ring
       first
         | rw [abs_of_pos (inv_pos.2 hM), abs_of_pos hepos, h3, inv_mul_le_iff₀ hM, _root_.mul_one]

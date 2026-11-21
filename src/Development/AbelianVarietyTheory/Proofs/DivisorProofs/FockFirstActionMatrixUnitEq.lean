@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.Divisibility.SchurIrreducible
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsFockIPOfFockData
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SumLineMatrixKroneckerRightFactor
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUniqueJointTop
 
@@ -119,7 +118,7 @@ theorem mem_iff_jointTop (μ : Ix m 0 → ℚ) (μ' : Ix k l → ℚ) (P : Pol m
       (fun c => (shiftNu (cPair m 0) μ' (.inl c) : ℚ))
       (fun d => (-shiftNu (cPair m 0) μ' (.inr d.rev) : ℚ)) P := by
   simp only [Submodule.mem_inf, mem_hwSub_iff, mem_span_harm1_iff, mem_harm1_iff, JointTop,
-    Sum.forall, posC, IsEmpty.forall_iff, false_imp_iff, implies_true, and_true, true_and,
+    Sum.forall, posC, IsEmpty.forall_iff, implies_true, and_true, true_and,
     fockFirstAction_matrixUnit_eq, fock_action_left_block, if_true, shiftNu]
   have e1 : (∀ a b : Fin m, a < b → mixedOp ℂ (zVar m k l) (yVar' m k l) a b P +
       (if a = b then ((cPair k l : ℚ) : ℂ) else 0) • P = 0) ↔

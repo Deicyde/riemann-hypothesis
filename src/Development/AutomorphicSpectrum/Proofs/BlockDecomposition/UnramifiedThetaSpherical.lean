@@ -1,7 +1,5 @@
-import Mathlib
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.KFiniteThetaLifts.CasselmanShalikaStandardVector
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.BndIUnits
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntInd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ModulusEntryLeMRow
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntegrableIntIndMul
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SphericalSplitOfPointwise
@@ -14,6 +12,7 @@ import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.OrdEqZeroOfModu
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SplitOrInertOfUnramified
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsUnramifiedCharCompUnitsMap
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.AddCharConductorInv
+import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.KFiniteThetaLifts.PureThetaTransfer.PureTh
 open NumberField IsDedekindDomain MeasureTheory Matrix Filter Topology
 open GroundTheory.Global GroundTheory.LocalField GroundTheory.Automorphic GroundTheory.Automorphic.AutomorphicForm
 open GroundTheory.Automorphic.GodementSection (localChar)
@@ -123,8 +122,8 @@ theorem split_sph (F : Type) [Field F] [ValuativeRel F] [TopologicalSpace F]
         unfold sphJ
         rw [e1, char_eq_one hc₁ hu1, intInd_of_mem, intInd_of_mem]
         · simp
-        · rw [← modulus_le_one_iff]; simp [modulus_mul, hu1]
-        · rw [← modulus_le_one_iff]; simp [modulus_mul, modulus_inv, hu1]
+        · rw [← modulus_le_one_iff]; simp [hu1]
+        · rw [← modulus_le_one_iff]; simp [modulus_inv, hu1]
       · rw [Set.indicator_of_notMem hu]
         have hu1 : modulus (u : F) ≠ 1 := fun h => hu (mem_units_iff_modulus.2 h)
         unfold sphJ

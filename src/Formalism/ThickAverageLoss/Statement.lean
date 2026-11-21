@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.WideWeightTheorem.Statement
-import Formalism.StatementU
 
 open Finset ArithmeticFunction
 

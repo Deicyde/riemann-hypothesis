@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
 import Formalism.RealPlaceAnalysis.RealPlaceTaylor.ModularCharacterEqOneOnExpHermitian
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.Analysis.CStarAlgebra.ContinuousLinearMap
 
 open MeasureTheory Matrix
 open scoped InnerProductSpace ENNReal
@@ -190,12 +193,12 @@ def Tlin (h : SqRep μ ρ) (v : H) : H →ₗ[ℂ] Lp ℂ 2 μ where
     rw [← MemLp.toLp_add]
     congr 1
     funext g
-    simp [inner_add_right]
+    simp
   map_smul' c w := by
     rw [RingHom.id_apply, ← MemLp.toLp_const_smul]
     congr 1
     funext g
-    simp [inner_smul_right]
+    simp
 
 theorem Tlin_coe (h : SqRep μ ρ) (v w : H) : (Tlin h v w : G → ℂ) =ᵐ[μ] fun g => ⟪ρ g v, w⟫_ℂ := by
   first

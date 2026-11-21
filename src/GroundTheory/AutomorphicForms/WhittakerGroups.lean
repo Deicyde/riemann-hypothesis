@@ -1,10 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.FiniteBruhat
 import GroundTheory.AutomorphicForms.Iwasawa
-import GroundTheory.AutomorphicForms.GLnLocal
 import GroundTheory.AutomorphicForms.LocallyProfinite
 import GroundTheory.AutomorphicForms.MeasuresModulus
 import GroundTheory.PowerSubgroups.CountableNeighbourhoods.NormZpow
+import Mathlib.RingTheory.PiTensorProduct
 
 namespace GroundTheory.Automorphic
 

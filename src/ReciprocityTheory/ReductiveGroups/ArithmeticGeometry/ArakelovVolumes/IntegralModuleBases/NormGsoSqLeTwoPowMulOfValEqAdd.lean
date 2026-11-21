@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReducedBases.LatticeReduction
 import ReciprocityTheory.ReducedBases.TBInjective
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 

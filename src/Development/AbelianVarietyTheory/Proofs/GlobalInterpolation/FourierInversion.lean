@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.DecayZero
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ContinuousBdGen
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.HalfMulTwoAF
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.PoissonSummationAdelicTuplesStatement

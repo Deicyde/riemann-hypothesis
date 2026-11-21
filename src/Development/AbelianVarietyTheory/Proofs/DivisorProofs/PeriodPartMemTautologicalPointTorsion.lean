@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExtId
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsUnimodMod
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsTautologicalPointTorusExtensionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TautologicalPointTorusExtensionAddStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TautologicalPointZeroAndPeriodStatement

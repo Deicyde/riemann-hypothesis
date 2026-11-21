@@ -1,5 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.DixmierMalliavinBasic
+import Mathlib.Analysis.Calculus.InverseFunctionTheorem.ContDiff
+import Mathlib.Analysis.Calculus.ParametricIntegral
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Topology.Compactness.DeltaGeneratedSpace
+import Mathlib.Topology.Sheaves.Presheaf
 
 namespace GroundTheory.Automorphic
 

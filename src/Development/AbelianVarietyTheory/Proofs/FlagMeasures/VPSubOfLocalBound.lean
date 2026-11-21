@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.SiegelWeilLocal.OrbitStepSpace
-import Development.AbelianVarietyTheory.BlockTheory.SiegelWeilLocal.OrthonormalPlaceBasis
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsContinuousMultilinearMapOfInnerProd
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.HasDerivAtOrbitTens
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.StepSpacePropsOfDiff
 

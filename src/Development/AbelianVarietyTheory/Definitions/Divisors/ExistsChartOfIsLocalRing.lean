@@ -1,10 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.RegularCharts.MatrixTwoByTwoCongr
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.LieBridgeG
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.AbProj
 import Development.AbelianVarietyTheory.Proofs.GenericRegularity.ExistsFiniteMchartCover
-import Development.AbelianVarietyTheory.Proofs.GenericRegularity.NonemptyLift
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ClsLinCombSingle
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.LieBridgeA
 
 noncomputable section
 

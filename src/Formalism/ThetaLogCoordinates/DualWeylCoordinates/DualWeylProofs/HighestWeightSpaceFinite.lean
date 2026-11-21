@@ -1,4 +1,7 @@
-import Formalism.ThetaLogCoordinates.DualWeylCoordinates.DualWeylProofs.QcColHSuccLe
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.ThetaLogCoordinates.DualWeylCoordinates.DefsMod
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 

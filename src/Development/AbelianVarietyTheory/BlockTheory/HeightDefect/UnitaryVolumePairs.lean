@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.BesselHermitianTheta.IsAutFunDef
-import Formalism.LocalRingCardinality.DataTies
 import Development.AutomorphicArithmetic.WeightCongruences.ProdNegOneZpow
 
 noncomputable section

@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.SubClosed
+import Mathlib.Data.Finsupp.Pointwise
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open GlobalTheory.SeqCx Matrix
 
@@ -12,8 +16,7 @@ theorem bd_mapDomain {V W : Type} (e : V → W) (c : List V →₀ ℤ) :
     apply Finsupp.lhom_ext
     intro l n
     simp [bd, Finsupp.linearCombination_single, Finsupp.mapDomain_single, Finset.smul_sum,
-      Finsupp.mapDomain_finset_sum, Finsupp.mapDomain_smul, List.eraseIdx_map,
-      ← Finsupp.single_mul]
+      List.eraseIdx_map]
   exact LinearMap.congr_fun key c
 
 theorem chains_map {V W : Type} (e : V → W) (F : Set (List V)) (q : ℕ) :

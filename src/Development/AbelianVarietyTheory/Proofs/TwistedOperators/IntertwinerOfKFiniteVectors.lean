@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.PseudoCoefficientSeparation
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HarishChandraModulesOn
-import Formalism.RealPlaceAnalysis.StatementE
-import Formalism.RealPlaceAnalysis.StatementB
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.ExistsStandardIndModule
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.LowestKTypeMultiplicityOneLargeGaps
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MaxCompactIrreducibleHasHighestWeightAndIsoStatement
@@ -142,7 +139,7 @@ theorem ext_types (hUρ : IsURepOn (Kset ε) ρ) (hUπ : IsURepOn (Kset ε) π)
     ∀ y, IsKFin ε ρ y → ⟪a, y⟫_ℂ = ⟪w, T y⟫_ℂ := by
   intro y hy
   refine Submodule.iSup_induction (kIso ε ρ) (motive := fun y => ⟪a, y⟫_ℂ = ⟪w, T y⟫_ℂ) (hd y hy)
-    (fun Λ y hyΛ => ?_) (by simp) (fun y₁ y₂ h₁ h₂ => by simp [inner_add_right, h₁, h₂])
+    (fun Λ y hyΛ => ?_) (by simp) (fun y₁ y₂ h₁ h₂ => by simp [h₁, h₂])
   by_cases hΛ : Λ ∈ s
   · exact hs Λ hΛ y hyΛ
   · rw [finset_orth hUρ s hΛ a ha y hyΛ,

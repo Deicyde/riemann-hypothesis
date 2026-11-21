@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GenusGluing.GenusApproximation.FactsW
 import Formalism.LocalToGlobal.GenusGluing.GenusApproximation.GenusApproximationProofs.IdempotentCalculationHolds
 import Formalism.LocalToGlobal.GenusGluing.GenusApproximation.GenusApproximationProofs.GlueSmulSame
+import Formalism.LocalToGlobal.Columns.AdelicLemmas
 
 noncomputable section
 

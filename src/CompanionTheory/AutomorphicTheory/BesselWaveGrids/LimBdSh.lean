@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.AutomorphicTheory.SchurLimitBounds.ZuckermanDuality.Assemble
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.Cut_BPEq
 import CompanionTheory.AutomorphicTheory.BesselWaveGrids.LettersPoly

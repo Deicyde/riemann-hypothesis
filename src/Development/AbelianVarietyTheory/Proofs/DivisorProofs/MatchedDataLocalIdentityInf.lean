@@ -1,11 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.GLintEqKOAndPrincEqKOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsMaxThOne
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemFinPt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTranspAlt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CombineApply
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnramifiedCmDataStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SkewSpaceDetNeZeroStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SkewHermitianFormIntegralLatticeExistsStatement

@@ -1,11 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.IsIwVecTrivial
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.DepthZeroJacquetInjective
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HasFiniteLengthOfIsIrreducible
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsCuspidalIffCompositions
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.PrincipalSeriesSubquotientOfCharacters
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.JordanHolderMultiplicityJacquetEqBorelJacquetOfS
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.InstAddCommGroupTwo
 open GlobalTheory.PRep GlobalTheory.SmGL GlobalTheory.SplitWeil GlobalTheory.SplitRead GlobalTheory.ThetaGL GlobalTheory.TameIwahori ValuativeRel
 
 open GlobalTheory.SmGL.EmptyBlocks GlobalTheory.SmGL.Exponents
@@ -37,7 +32,7 @@ theorem eq_torusToLevi (n : ℕ) (g : Levi k (fun _ : Fin n => Fin 1)) :
   funext j; ext a b
   rw [val_torusToLevi]
   fin_cases a; fin_cases b
-  simp [Matrix.GeneralLinearGroup.val_det_apply, Matrix.det_fin_one]
+  simp [Matrix.GeneralLinearGroup.val_det_apply]
 
 theorem deltaHalf_eq (n : ℕ) (g : Levi k (fun _ : Fin n => Fin 1)) :
     deltaHalf k (fun _ : Fin n => Fin 1) g =

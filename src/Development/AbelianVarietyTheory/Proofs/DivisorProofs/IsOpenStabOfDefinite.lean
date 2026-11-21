@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsRationalDblCoord
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTopologicalRingAdeleE
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DefiniteCompactArchimedeanMaximal
+import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Matrix Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.Doubling GlobalTheory.Eis GlobalTheory.AutomorphicL2Unitary GlobalTheory.Cont
@@ -88,7 +89,7 @@ theorem exists_transfer {n : ℕ} {L : Submodule (𝓞 E) (Fin n → E)} (hL : L
       ext k
       by_cases hk : k = i
       · subst hk
-        simp only [Pi.single_eq_same, Pi.smul_apply, smul_eq_mul, mul_one, Algebra.smul_def]
+        simp only [Pi.single_eq_same, Pi.smul_apply, mul_one, Algebra.smul_def]
         rw [map_mul, mul_assoc, ← Algebra.smul_def (b : 𝓞 E) (x j), ← ho]
         ring
       · simp [Pi.single_eq_of_ne hk]

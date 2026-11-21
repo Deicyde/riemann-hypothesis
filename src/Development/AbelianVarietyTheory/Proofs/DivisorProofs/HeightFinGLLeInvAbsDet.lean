@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.LocPoly
-import GroundTheory.AutomorphicForms.GL2.GJMatrixAdelic
-import GroundTheory.AutomorphicForms.AutomorphicFormSpaces.Height
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.DifferentiableAtChart
 open NumberField IsDedekindDomain GlobalTheory.HenQ
 open GlobalTheory.CuspRep (GA Af finGL)
 

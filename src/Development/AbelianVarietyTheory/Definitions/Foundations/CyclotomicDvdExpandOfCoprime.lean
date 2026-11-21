@@ -1,5 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.PieriBlockIdeals.PieriColumnMinors.HeightDescentMinors
+import Mathlib.RingTheory.WittVector.Compare
+import Mathlib.RingTheory.WittVector.Complete
+import Mathlib.RingTheory.WittVector.DiscreteValuationRing
 
 noncomputable section
 

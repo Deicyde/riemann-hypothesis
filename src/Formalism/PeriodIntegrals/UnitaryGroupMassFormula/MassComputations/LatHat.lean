@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.MassComputations.IsCompactStabGLHat
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.MassComputations.ProdFirstProjectionSmul
 
@@ -102,7 +104,7 @@ theorem std_mult (L : Submodule (𝓞 E) (Fin n → E)) (hL : Submodule.span E (
     simp only [Pi.smul_apply, Finset.sum_apply, Pi.single_apply, smul_ite, smul_zero,
       Finset.sum_ite_eq, Finset.mem_univ, if_true]
     rw [← ha k, Algebra.linearMap_apply]
-    simp only [Algebra.smul_def, mul_one, eq_intCast, zsmul_eq_mul]
+    simp only [Algebra.smul_def, mul_one, eq_intCast]
     ring
   rw [e]
   exact Submodule.sum_mem _ fun j _ => Submodule.smul_mem _ _ (hN j)

@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.SplitEigenfunctions.OrbitMeasurability.PerCont
 import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.SummandsSpan
-import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.FormsIrr
 import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.ClsBasic
 import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.CuspRegions.ExCusp
 import GroundTheory.AutomorphicForms.GL2.GJGlobalMean

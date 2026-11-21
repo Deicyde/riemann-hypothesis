@@ -1,7 +1,6 @@
-import Mathlib
-import Formalism.LocalRingCardinality.DataCD
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.HaarUpqEqOfOmegaDensity
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.UpqDefiniteCompact
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 open Formalism.BasicNotions MeasureTheory Filter Topology
 

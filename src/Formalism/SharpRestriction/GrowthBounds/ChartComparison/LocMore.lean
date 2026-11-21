@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.ChartComparison.LocGoodLocJ
-import Formalism.SharpRestriction.GrowthBounds.ChartComparison.CmpJMemSpan
 
 noncomputable section
 

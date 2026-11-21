@@ -1,6 +1,8 @@
-import ReciprocityTheory.AnalyticForms.PotentialTheory.Degree
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PotentialTheory.PotentialContDiffAt
 import ReciprocityTheory.AnalyticForms.PotentialTheory.LocDens
+import ReciprocityTheory.AnalyticForms.PotentialTheory.Partition
 
 namespace ReciprocityTheory.AnForm.M
 

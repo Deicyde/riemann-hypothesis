@@ -1,9 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToNatLengthEqRangeAddRange
-import Development.AbelianVarietyTheory.Definitions.ThetaMetrics.CoeNonzeroLocusCanonicalEqComplRange
-import Development.AbelianVarietyTheory.Definitions.ShimuraVarieties.IsOpenOfMemIrreducibleComponentsOfFinite
 import Development.AbelianVarietyTheory.Definitions.ModuliSpaces.ExistsRetractTensorTriple
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsClosedImmersionGenericPoint
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsTorsionFreeOfForallExists
+import Mathlib.CategoryTheory.Abelian.DiagramLemmas.KernelCokernelComp
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

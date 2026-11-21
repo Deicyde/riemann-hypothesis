@@ -1,8 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.NotOrdGeOfNotMem
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsUnimodMod
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.NonemptyTorusExtensionOfIsAlgClosed
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsSiegPull
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsThetaCompact
 
 noncomputable section
 

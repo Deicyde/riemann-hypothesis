@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.CarrierJointQuotStVKer
 import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.UnipBasis
 
@@ -26,7 +27,7 @@ theorem mem_spanLt_r (e : Fin r → Fin n → ℂ) (x : Fin n → ℂ) (hx : x �
     rw [← Set.image_univ]
     congr 1
     ext b
-    simp [b.isLt]
+    simp
   unfold Formalism.L2.SG.HidaSetting.spanLt at hx
   rw [hset] at hx
   exact (Submodule.mem_span_range_iff_exists_fun ℂ).mp hx

@@ -1,6 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntDerApply
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TaylorIsRingHomStatement
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.MvPowerSeries.Order
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
 open IsLocalRing GlobalTheory.FormalOrigin MvPowerSeries
 
 noncomputable section
@@ -22,7 +26,7 @@ theorem iterOp_single {A : Type} {n : ℕ} (ds : Fin n → A → A) (a : Fin n) 
     funext i g
     by_cases h : i = a
     · subst h; simp
-    · simp [Finsupp.single_apply, Ne.symm h, h]
+    · simp [h]
   unfold iterOp
   rw [e, foldr_ite, List.count_eq_one_of_mem (List.nodup_finRange n) (List.mem_finRange a)]
   rfl

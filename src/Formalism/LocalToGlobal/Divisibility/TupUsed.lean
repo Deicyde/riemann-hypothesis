@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.HilbertRowConditions.ColumnsFunctionAtSubspaces
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Divisibility.MemberDIV
 import Formalism.LocalToGlobal.IndefiniteReal.RecTie
 

@@ -1,4 +1,4 @@
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsFirstChernClassOfLineBundle
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.Imports
 open GlobalTheory.NeedB Polynomial
 

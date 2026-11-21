@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.GaussJetBounds.StatementJ
 import Formalism.GaussJetBounds.GaussJetProofs.ThmAOp
 
@@ -227,7 +229,7 @@ lemma jetPair_monomial_right (P : MvPolynomial ι' K) (μ : ι' →₀ ℕ) :
       MvPolynomial.coeff μ P * ((mfact μ : ℕ) : K) := by
   classical
   rw [jetPair_eq_sum P _ (insert μ P.support) (Finset.subset_insert _ _), Finset.sum_eq_single μ]
-  · simp [MvPolynomial.coeff_coe]
+  · simp
   · intro κ _ hκ
     rw [MvPolynomial.coeff_coe, MvPolynomial.coeff_monomial, if_neg (Ne.symm hκ), mul_zero]
   · intro h
@@ -342,7 +344,7 @@ lemma frameM_genA {K : Type u} [Field K] {d N0 N1 : ℕ} [NeZero d] (TT : Finset
     frameM (N1 := N1) xg z i = ∑ y, frameM (N1 := N1) x z y * genA TT T i y := by
   classical
   rw [sum_ZV_slice z.1 z.2.2]
-  · simp only [frameM, genA, eq_self_iff_true, and_self, ↓reduceIte]
+  · simp only [frameM, genA, and_self, ↓reduceIte]
     by_cases h : i.1 = z.1 ∧ i.2.2 = z.2.2
     · rw [if_pos h, hxg]
       obtain ⟨h1, h2⟩ := h
@@ -362,7 +364,7 @@ lemma sum_genA_eq_rowOp {K : Type u} [Field K] {d N0 N1 : ℕ} [NeZero d] (TT : 
       MvPolynomial (ZV d N0 N1) K) = rowOp (N1 := N1) TT T s i b := by
   classical
   rw [sum_ZV_slice s b]
-  · simp only [genA, rowOp, effMat, eq_self_iff_true, and_self, ↓reduceIte]
+  · simp only [genA, rowOp, effMat, and_self, ↓reduceIte]
     by_cases h : s ∈ TT ∧ i.val = 0
     · simp only [if_pos h]
       rw [Finset.sum_eq_single i]

@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.LocalAtPlace
+import Mathlib.NumberTheory.LocalField.Basic
 
 open IsDedekindDomain IsDedekindDomain.HeightOneSpectrum NumberField WithZero
 

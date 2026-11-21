@@ -1,4 +1,7 @@
-import Formalism.LocalRingCardinality.SpanPowerMembership.NZRowY
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.SpanPowerMembership.NStageTrivialCharacterCoeffEq
+import Formalism.LocalRingCardinality.SpanPowerMembership.NZRowW
 
 noncomputable section
 

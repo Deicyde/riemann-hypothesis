@@ -1,4 +1,7 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.FirstDerivativeAtNormalSet
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.BaseIndexConstantInjective
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.OrbitalIntegralIdentities
 
 open Matrix Finset MeasureTheory
 open scoped ComplexConjugate

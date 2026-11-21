@@ -1,9 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.PolynomialProperness.TauDefs
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.HermitianFormFlagVector
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ConjugationInvarianceEverySetting
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.TwoByOneBlock
-import Formalism.FormalDegreeBessel.FormalDegreeRatio.UnitaryWeylNormalHolds
-import Formalism.FormalDegreeBessel.FormalDegreeRatio.GNonneg
 
 open Matrix Formalism.QuantumDeterminants Formalism.FourierDecayAlt Formalism.FourierDecayAlt.C2
 
@@ -88,7 +86,7 @@ lemma nEich_heis {k r : ℕ} {z : Fin (2 * r + k + 1) → ℂ} (hz : StdZ k r z)
         ((1 : ℂ) / (2 * ((Tz k r z : ℝ) : ℂ))) • xiV k r ξ) := by
   rw [nEich_mulVec, Formalism.FourierDecayAlt.P.B2x4.herm_smul_right]
   have hc : star ((1 : ℂ) / ((Tz k r z : ℝ) : ℂ)) = (1 : ℂ) / ((Tz k r z : ℝ) : ℂ) := by
-    simp [Complex.star_def]
+    simp
   rw [hc]
   funext i
   simp only [Pi.add_apply, Pi.sub_apply, Pi.neg_apply, Pi.smul_apply, smul_eq_mul]
@@ -99,9 +97,9 @@ theorem neFacts : NEFacts := by
   have hT := T_ne hz
   have hH := GBasic.Hpk_herm k r
   have hc : star ((1 : ℂ) / ((Tz k r z : ℝ) : ℂ)) = (1 : ℂ) / ((Tz k r z : ℝ) : ℂ) := by
-    simp [Complex.star_def]
+    simp
   have h2 : star ((1 : ℂ) / 2) = (1 : ℂ) / 2 := by
-    simp [Complex.star_def]
+    simp
   have hzW : ∀ i : Fin (2 * r + k + 1), r + k < i.val → z i = 0 := fun i hi => hz.1 i (Or.inr hi)
   have hξW : ∀ i : Fin (2 * r + k + 1), r + k < i.val → xiV k r ξ i = 0 :=
     fun i hi => xiV_hi k r ξ i (by omega)

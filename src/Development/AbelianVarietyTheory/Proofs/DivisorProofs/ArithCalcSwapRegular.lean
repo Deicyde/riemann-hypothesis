@@ -1,9 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OfSwap2
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OddHarmZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundlePullbackMetricSmoothStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundlePullbackMetricCurvatureStatement
 
@@ -71,7 +67,7 @@ theorem swapReg_swapG : ArCalc → SwapReg swapG := by
     ring
   have hmv : ∀ e : ℕ, m ^ e = aeval v ((C c * X 0 + X 1) ^ e) := by
     intro e
-    simp [hv, hm, map_pow, aeval_X, MvPolynomial.algebraMap_eq]
+    simp [hv, hm, map_pow, MvPolynomial.algebraMap_eq]
   have hhom : ∀ e : ℕ, ((C c * X 0 + X 1 : MvPolynomial (Fin 2) ℝ) ^ e).IsHomogeneous e := by
     intro e
     have h1 : (C c * X 0 + X 1 : MvPolynomial (Fin 2) ℝ).IsHomogeneous 1 :=

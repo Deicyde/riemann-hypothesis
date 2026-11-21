@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FiniteDiscriminantIdentity
-import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.InfinitesimalCharacterLimits.InfinitesimalCharacterGlue
 open scoped Classical
 namespace PositivityTheory.Rg.BcB.SpectralAccumulation
 set_option maxHeartbeats 1000000 in

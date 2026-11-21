@@ -1,10 +1,10 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.SquareIntegrableTempered.CasselmanCriterion.Zj
-import GroundTheory.AutomorphicForms.SupercuspidalCoefficients
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MeasureImageDoubleCoset
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MeasureImagePrincipalPosLtTop
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.BlockIndexMonotone
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.PadicIsNonarchimedeanLocalField
+import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsSubquotientDetRepParInd
+import GroundTheory.AutomorphicForms.GLnLocal
 
 open GlobalTheory.PRep GlobalTheory.SplitWeil GlobalTheory.SmGL GlobalTheory.LocGL GlobalTheory.JHMult
 
@@ -46,7 +46,7 @@ theorem sum_modExp {h : ℕ} (d : Fin h → ℕ) (j : Fin h) :
         split_ifs <;> ring
       · have hb' : j < b := not_le.1 hb
         have h3 : a < b := lt_of_le_of_lt ha hb'
-        simp [hb, hb', h3, h3.le, not_lt.2 h3.le]
+        simp [hb, hb', h3, not_lt.2 h3.le]
     · simp [ha]
   rw [Finset.sum_congr rfl fun a _ => h2 a, Finset.sum_add_distrib, ← hT, hT0, zero_add,
     Finset.sum_mul]

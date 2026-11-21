@@ -1,5 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsSummandTw
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.LevelLetterCocycles.LocCoh
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
 open Formalism Formalism.MainNotions Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.MainNotions.N Formalism.WeaklyAdmissibleFiltrations NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Module GlobalTheory.Pass Formalism.MainNotions.PairedCharacterCondition GlobalTheory.Pass.LocDual
 
 noncomputable section
@@ -92,7 +98,7 @@ theorem exists_dualLat_isOpen : ∀ {G : Type} [Group G] [TopologicalSpace G] {Q
     refine ⟨(Pi.single i (1 : O) : Module.Free.ChooseBasisIndex O LT.T → O) j, ?_⟩
     rcases eq_or_ne j i with rfl | h
     · simp
-    · simp [Pi.single_apply, h]
+    · simp [h]
   have hT'eq : T' = Submodule.span O (Set.range bf) := by
     apply le_antisymm
     · intro y hy

@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConstantTermUnipotentIntegral
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.ThK.DescB
@@ -179,7 +179,7 @@ theorem exists_rat_isLevi_one_skew : ∀ (F E : Type) [Field F] [NumberField F] 
     simp only [Matrix.map_mul] at this
     rw [← this]
     ext i j
-    simp only [Matrix.map_apply, Matrix.mul_apply, map_sum, map_mul]
+    simp only [Matrix.map_apply, Matrix.mul_apply]
     simp only [← map_mul, ← map_sum]
     rfl
 

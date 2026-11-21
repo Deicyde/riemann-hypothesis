@@ -1,9 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsHolPeriods
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsDerivAt0CompLinear
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HomomorphismDescendsToAlgebraic
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.EqZeroOfFderivEqZero
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.IsAbelianSchemeOfIsGrpPullback
+import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.FamilyUniformisationFibreTheta
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.PELU
@@ -67,7 +65,7 @@ theorem kernel_isFullLattice : ∀ (X : Scheme.{0}) (G : Over X) [GrpObj G] [IsC
       intro v
       unfold IsDerivAt0
       refine and_congr_right fun _ => forall_congr' fun U => forall_congr' fun hU => forall_congr' fun f => ?_
-      rw [map_zero, fderiv_apply_eq_zero _ w (fun t => by simp only [hconst t, zero_smul])]
+      rw [map_zero, fderiv_apply_eq_zero _ w (fun t => by simp only [hconst t])]
     obtain ⟨v, hv, -⟩ := hd1 w
     exact (hd2 v hv.1).unique hv ((hiff _).1 hv)
   let F' : (Fin g → ℂ) ≃ₗ[ℂ] (Fin g → ℂ) := LinearEquiv.ofInjectiveEndo F Finj

@@ -1,9 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ExistsIsHodgeFrameIff
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsExponentialChartAtPointStatement
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsConstantPeriodMarkingUniversalCover
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.RiemannFormFramePoint
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsFrPtPtFOfEigFrame
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MonoSpMapRingOfIntegersAlt
 open AlgebraicGeometry CategoryTheory Limits NumberField Matrix
 open ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.BasicNotions Formalism.L2.Pj GlobalTheory GlobalTheory.CxPts GlobalTheory.Toroidal GlobalTheory.LieMet GlobalTheory.GradedNorm GlobalTheory.Cartier GlobalTheory.ProjVar GlobalTheory.TrueGeo GlobalTheory.ShFam GlobalTheory.ShFam.Pad GlobalTheory.ShFam.Hor
 open scoped Topology ComplexOrder
@@ -41,9 +40,9 @@ theorem hermForm_pull {g g' : ℕ} (M : Matrix (Fin g') (Fin g) ℂ) (Hm : Matri
 def imBil {g : ℕ} (Hm : Matrix (Fin g) (Fin g) ℂ) : (Fin g → ℂ) →ₗ[ℝ] (Fin g → ℂ) →ₗ[ℝ] ℝ :=
   LinearMap.mk₂ ℝ (fun y w => (hermForm Hm y w).im)
     (fun a b w => by simp [hermForm, add_dotProduct])
-    (fun c a w => by simp [hermForm, smul_dotProduct, Complex.smul_im])
+    (fun c a w => by simp [hermForm, smul_dotProduct])
     (fun y a b => by simp [hermForm, Matrix.mulVec_add, dotProduct_add])
-    (fun c y a => by simp [hermForm, star_smul, Matrix.mulVec_smul, dotProduct_smul, Complex.smul_im])
+    (fun c y a => by simp [hermForm, star_smul, Matrix.mulVec_smul, dotProduct_smul])
 
 theorem eq_of_im_hermForm {g r : ℕ} {v : Fin r → Fin g → ℂ} (hv : Submodule.span ℝ (Set.range v) = ⊤)
     {H₁ H₂ : Matrix (Fin g) (Fin g) ℂ} (h : ∀ m m', (hermForm H₁ (v m) (v m')).im = (hermForm H₂ (v m) (v m')).im) :

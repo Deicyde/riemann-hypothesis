@@ -1,7 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CharacterGerms.CoeffOneSubstCurve
 import Formalism.LocalToGlobal.CharacterGerms.ConstantZeroCompCoordinate
-import Formalism.LocalToGlobal.CharacterGerms.PderivDoubleMultiplicationJacobian
 import Formalism.LocalToGlobal.CharacterGerms.RowTiePOActSelf
+import Formalism.LocalToGlobal.CharacterGerms.FirstVanishingAt
 
 set_option autoImplicit false
 

@@ -1,10 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.CapelliDeterminantAndBranching
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LemmaDDeterminantIdentity
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ChainRecursionFromSingleDescent
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.QuantumMinorCommutation
-import Formalism.RealPlaceAnalysis.RealPlaceTaylor.QuantumDetHighestWeightHolds
-import Formalism.RealPlaceAnalysis.RealPlaceTaylor.ShiftedGeneratorEqIteSmulAdd
-import Formalism.RealPlaceAnalysis.RealPlaceTaylor.GeneratorCommutatorQuantumDet
 
 open Finset
 
@@ -191,7 +189,7 @@ theorem comm_last {n : ℕ} (E : Fin (n + 1) → Fin (n + 1) → Module.End ℂ 
   refine Commute.sum_right _ _ _ (fun σ _ => ?_)
   refine Commute.mul_right (Int.cast_commute _ _).symm ?_
   refine Commute.list_prod_right _ _ (fun y hy => ?_)
-  simp only [List.mem_ofFn, Set.mem_range] at hy
+  simp only [List.mem_ofFn] at hy
   obtain ⟨k, rfl⟩ := hy
   exact hT _ _ _
 

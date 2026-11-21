@@ -1,7 +1,5 @@
-import Mathlib
-import Formalism.SatakeDualWeyl.KpqSubgroupCompact
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.StatementG
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.FiniteResidueFieldAdicCompletionIntegers
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ExistsDvrFrobeniusLift
 
 open IsDedekindDomain NumberField Formalism.UG GlobalTheory.SelfDualGenus

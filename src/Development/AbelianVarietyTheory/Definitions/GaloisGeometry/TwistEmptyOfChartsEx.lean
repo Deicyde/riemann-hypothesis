@@ -1,9 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ReadsMove
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PlaceProjectionZeroIntegralIffComponentsAbove
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LevOkTwists
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.TwistedLevelExtension
-import Formalism.LocalToGlobal.Divisibility.DivisibilityProofs.TuplesP
 import Formalism.LocalToGlobal.GlobalTheory.GL6.PBwLocBases
 
 noncomputable section
@@ -201,7 +199,7 @@ theorem chi_central (H : AdTie A dtU a) (h0 : 0 < D.R.m) (β : (St 0 h0.le).Ch) 
       ext i j
       by_cases e : i = j
       · subst e; simp [cT]
-      · simp [cT, Matrix.one_apply, e, Ne.symm e]
+      · simp [cT, e, Ne.symm e]
     rw [hκv, this]
     simp only [Matrix.smul_mul, Matrix.mul_smul, Matrix.one_mul, Matrix.mul_one, smul_smul]
     rw [mul_comm, hs, one_smul]
@@ -220,7 +218,7 @@ theorem chi_central (H : AdTie A dtU a) (h0 : 0 < D.R.m) (β : (St 0 h0.le).Ch) 
       rw [e, hc, Nat.cast_mul, Nat.cast_pow, ← map_natCast (iA D.host.F D.host.E) (qOf _), ← map_pow, mul_assoc, ← mul_assoc, ← map_mul,
         inv_mul_cancel₀ hq, map_one, one_mul]
       exact mul_mem (natCast_mem _ c) hr
-    · simp [Matrix.one_apply, hij]
+    · simp [hij]
   have hfr : ∀ P : SB t μ, InFrame t.seam (A.fb 0 h0.le β) (t.cst μ).D P κ⁻¹ 1 := fun P => by
     unfold InFrame NearAt
     have e : ((ratA D.host.F (A.fb 0 h0.le β P))⁻¹ * κ⁻¹ * ratA D.host.F (A.fb 0 h0.le β P))⁻¹ =
@@ -246,7 +244,7 @@ theorem chi_central (H : AdTie A dtU a) (h0 : 0 < D.R.m) (β : (St 0 h0.le).Ch) 
         ext i j
         by_cases hij : i = j
         · subst hij; simp [hoff v e]
-        · simp [Matrix.one_apply, hij]
+        · simp [hij]
       rw [map_inv, this, inv_one]
       exact one_mem _
   refine ⟨(inv_mem_iff).1 hm, ?_⟩
@@ -474,7 +472,7 @@ theorem exists_pt_one {x : (AfE D.host.F D.host.E)ˣ} (hx : x ∈ U1 (sigD D)) :
     rw [mul_comm]
     exact h2
   · apply Units.ext
-    simp [Matrix.GeneralLinearGroup.val_det_apply]
+    simp
 
 theorem exists_decomp (i : ℕ) (hi : i ≤ D.R.m) (β : (St i hi).Ch)
     (x : UPts (sigD D) (gramN D i hi) (FiniteAdeleRing (𝓞 D.host.F) D.host.F)) :

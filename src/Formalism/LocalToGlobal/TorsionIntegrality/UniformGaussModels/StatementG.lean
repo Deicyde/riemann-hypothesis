@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.UniformGaussModels.UniformGaussModelCondition
-import Formalism.LocalToGlobal.TorsionIntegrality.GaussSumParity.ThetaInZIsThetaLog
-import Formalism.LocalToGlobal.TorsionIntegrality.GaussSumParity.OneLetterGaussEvery
+import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.StatementG
 
 noncomputable section
 open scoped BigOperators

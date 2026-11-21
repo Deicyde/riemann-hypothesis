@@ -1,4 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HasTotalBiChains
 open CategoryTheory Limits Opposite AlgebraicTopology GlobalTheory.EZ
 universe u v

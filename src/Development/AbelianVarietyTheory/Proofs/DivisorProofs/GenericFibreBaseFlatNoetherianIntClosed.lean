@@ -1,8 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsorsTrivial
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OriginIdeal
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ClosureFiniteEtale
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsionFreeOver
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import Mathlib.RingTheory.Smooth.IntegralClosure
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open IsLocalRing Polynomial
 open scoped TensorProduct
 
@@ -38,7 +42,7 @@ theorem flat_noetherian_nzd_intClosed : ∀ (A : Type) [CommRing A] [IsDomain A]
     have h1 : ∀ z : R, algebraMap (Polynomial A) R Polynomial.X * z = 0 → z = 0 := by
       intro z hz
       apply hreg
-      simp only [Algebra.smul_def, smul_zero, mul_zero]
+      simp only [Algebra.smul_def, mul_zero]
       exact hz
     exact ⟨h1, fun z hz => h1 z (by rw [mul_comm]; exact hz)⟩
   · intro f hf

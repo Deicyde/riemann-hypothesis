@@ -1,4 +1,5 @@
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CompletionDegrees.IsEquivAdicAbvNormAbv
+import BuildAid.Leniency.Open
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CompletionDegrees.DenseSurj
 
 namespace PI.CompDegEF
 
@@ -70,7 +71,7 @@ private theorem norm_le_one_of_isIntegral_int' {l : ℕ} [Fact l.Prime] (z : Om 
           simp [IsUltrametricDist.norm_natCast_le_one])
   rw [hmon.as_sum] at hp
   simp only [Polynomial.eval₂_add, Polynomial.eval₂_finset_sum, Polynomial.eval₂_mul,
-    Polynomial.eval₂_C, Polynomial.eval₂_X_pow, eq_intCast] at hp
+    Polynomial.eval₂_X_pow, eq_intCast] at hp
   have hcast : ∀ c : ℤ, Polynomial.eval₂ (algebraMap ℤ (Om l)) z (c : Polynomial ℤ) = (c : Om l) :=
     fun c => map_intCast (Polynomial.eval₂RingHom (algebraMap ℤ (Om l)) z) c
   simp only [hcast] at hp

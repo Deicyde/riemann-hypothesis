@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.ContStepPf
+import Mathlib.AlgebraicGeometry.AffineTransitionLimit
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry GlobalTheory.EtC LateralTheory.E.t_E2Cut LateralTheory.E.ContPf

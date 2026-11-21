@@ -1,6 +1,5 @@
-import Development.AutomorphicArithmetic.ThickFrames.MarkedLow
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.IsResidueClassZero
-import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.ExplicitFormulaErrorOfHostConditions
 import Development.AutomorphicArithmetic.ThickFrames.topsFrame
 
 open Finset UpperTheory.BernoulliSumsFrobeniusOrbits Formalism.G0

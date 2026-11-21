@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.LocallyConstantMajorants.SmoothMajorants.Bounds
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsRightTranslate
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.VolumeSingularMatricesZero

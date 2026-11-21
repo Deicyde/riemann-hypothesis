@@ -1,7 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.TranslationZeroModeLift
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.SupRatioLeOfPhaseZero
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.ColAbelA
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.ColAbelB
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Analysis.Real.Pi.Bounds
+import Mathlib.Data.Int.Star
+import Mathlib.Topology.Sheaves.Presheaf
 
 namespace ReciprocityTheory.ChartRestriction.G.I2
 
@@ -256,7 +259,7 @@ private theorem Hf_e_e_eq_ite {ι : Type} [Fintype ι] {K : Submodule ℝ (Eucli
     Hf (Col.e K j) (Col.e K k) = if k = j then 1 else 0 := by
   have hre : (Hf (Col.e K j) (Col.e K k)).re = inner ℝ ((Col.ob K) k) ((Col.ob K) j) := by
     simp only [Submodule.coe_inner]
-    simp [Col.e, Hf, real_inner_eq_re_inner, PiLp.inner_apply, mul_comm]
+    simp [Col.e, Hf, real_inner_eq_re_inner, PiLp.inner_apply]
   have him : (Hf (Col.e K j) (Col.e K k)).im = 0 := hK _ (Col.ob K j).2 _ (Col.ob K k).2
   rw [orthonormal_iff_ite.mp (Col.ob K).orthonormal k j] at hre
   apply Complex.ext
@@ -511,7 +514,7 @@ theorem cab_YB_abs (hI : IsSplit P I) (hP : Ext.PackingCount) (q : ℕ) :
       have hzk : Col.z (IR I) k x = ((inner ℝ ((Col.ob (IR I)) k) (⟨x, hxK⟩ : IR I) : ℝ) : ℂ) := by
         apply Complex.ext
         · simp only [Complex.ofReal_re, Submodule.coe_inner]
-          simp [Col.z, Col.e, Hf, real_inner_eq_re_inner, PiLp.inner_apply, mul_comm]
+          simp [Col.z, Col.e, Hf, real_inner_eq_re_inner, PiLp.inner_apply]
         · simpa using hz k
       rw [hzk, RCLike.real_smul_eq_coe_smul (K := ℂ)]
       all_goals rfl
@@ -553,7 +556,7 @@ theorem cab_gB_le [IsCMField E] (K : Submodule ℝ (Vsp X.dim)) : Col.gB K ≤ X
   have h2 : Module.finrank ℂ (Vsp X.dim) = ∑ τ, X.dim τ := by
     simp [Vsp, Idx, finrank_euclideanSpace, Fintype.card_sigma]
   have hinv : Function.Involutive (NumberField.ComplexEmbedding.conjugate : (E →+* ℂ) → (E →+* ℂ)) :=
-    fun τ => RingHom.ext fun x => by simp [NumberField.ComplexEmbedding.conjugate_coe_eq]
+    fun τ => RingHom.ext fun x => by simp
   have hs : ∑ τ, X.dim (NumberField.ComplexEmbedding.conjugate τ) = ∑ τ, X.dim τ :=
     Fintype.sum_bijective _ hinv.bijective _ _ fun τ => rfl
   have h3 : 2 * ∑ τ, X.dim τ = Module.finrank ℚ E * X.r := by

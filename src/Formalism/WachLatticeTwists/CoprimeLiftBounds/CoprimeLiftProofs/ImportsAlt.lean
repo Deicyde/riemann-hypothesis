@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.CoprimeLiftBounds.Statement
-import Formalism.CharacterColumnKernels.IdempotentNormalForms.ColKerChiOne
+import Mathlib.Tactic.Polynomial.Basic
 
 open Finset
 
@@ -75,7 +76,7 @@ theorem rel : StatRel := by
       · funext k
         by_cases hk : k = l
         · subst hk
-          simp [colGenJ, Prod.snd_sum, Finset.sum_apply, funext_iff, Pi.single_apply]
+          simp [colGenJ, Prod.snd_sum, Finset.sum_apply]
           refine Prod.ext ?_ (Prod.ext ?_ ?_)
           · simp [Prod.fst_sum]
           · funext a

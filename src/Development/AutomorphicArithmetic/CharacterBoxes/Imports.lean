@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CoprimeRanks.SecondSetNoRelation
 
 noncomputable section

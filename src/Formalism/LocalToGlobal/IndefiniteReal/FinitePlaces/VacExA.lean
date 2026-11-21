@@ -1,4 +1,5 @@
-import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.TwoSplitIdem
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.IdemElt
 import Formalism.LocalToGlobal.IndefiniteReal.FockTheta.ConjPurelyImaginaryGenerator
 

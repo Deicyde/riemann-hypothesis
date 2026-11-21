@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Degenerations.PullChartIsLB
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.LinCombTrivG
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.LBLocal
 import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.LocallyOfFinitePresentationDiagMap
 import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.ExistsSplitExtDatumOfSplitTorusExtension
@@ -103,7 +104,7 @@ theorem wt_torusSec (d : ℕ) (x : AddMonoidAlgebra Γ(Sp k, ⊤) X) (α : X) (l
 theorem constFn_id_bijective (R : Type) [CommRing R] : Function.Bijective (constFn (𝟙 (Sp R)) ⊤) := by
   have e : constFn (𝟙 (Sp R)) ⊤ = (Scheme.ΓSpecIso (CommRingCat.of R)).inv.hom := by
     funext a
-    simp only [constFn, Scheme.Hom.appLE_eq_app, Scheme.Hom.id_app]
+    simp only [constFn]
     exact congrArg (fun φ => CommRingCat.Hom.hom φ _) ((Sp R).presheaf.map_id _)
   rw [e]
   exact ConcreteCategory.bijective_of_isIso (Scheme.ΓSpecIso (CommRingCat.of R)).inv
@@ -123,7 +124,7 @@ theorem torus_good (N : ℕ) (q : QuadraticMap ℤ X ℝ) (hq : Filter.Tendsto q
     rw [Finset.sum_eq_single i₀]
     · simp
     · intro i _ h
-      simp [Finsupp.single_apply, hinj.ne h]
+      simp [hinj.ne h]
     · simp
   refine ⟨hq, fun i => (hs _).2 ⟨i, rfl⟩, fun i β hβ => ?_, fun α hα φ _ => ?_, fun α hα a ha h => ?_⟩
   · obtain ⟨l, hl⟩ := hβ
@@ -243,7 +244,7 @@ example (k : Type) [Field k] :
   show _ ↔ α = 1
   by_cases h : α = 1
   · simp [h]
-  · simp [h, Finsupp.single_apply, Ne.symm h]
+  · simp [h, Ne.symm h]
 
 end GlobalTheory.ZH
 end

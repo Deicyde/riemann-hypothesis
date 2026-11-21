@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviBlockSizesSum
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsBlockCentre
-import Development.AbelianVarietyTheory.Definitions.Foundations.GLintEqKOAndPrincEqKOne
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LocalFieldNormValuation
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsSmoothModerateOfIsAutFunSm
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SmGL GlobalTheory.PRep GlobalTheory.SplitWeil GlobalTheory.LeviBlockExponent GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.UAut GlobalTheory.SiegelSet GlobalTheory.ThK.SquareIntegrability
 open scoped TensorProduct
 open Matrix
@@ -35,7 +33,7 @@ theorem rank_one_mulVec (s : K) (b l w : Fin n → K) :
   ext a
   simp only [Matrix.mulVec, dotProduct, Matrix.add_apply, Matrix.smul_apply, vecMulVec_apply, smul_eq_mul, add_mul,
     Finset.sum_add_distrib, Pi.add_apply, Pi.smul_apply, Matrix.one_apply, ite_mul, one_mul, zero_mul,
-    Finset.sum_ite_eq, Finset.mem_univ, if_true, Finset.sum_mul]
+    Finset.sum_ite_eq, Finset.mem_univ, if_true]
   congr 1
   rw [Finset.mul_sum, Finset.sum_mul]
   exact Finset.sum_congr rfl fun c _ => by ring
@@ -45,7 +43,7 @@ theorem rank_one_vecMul (s : K) (b l w : Fin n → K) :
   ext a
   simp only [Matrix.vecMul, dotProduct, Matrix.add_apply, Matrix.smul_apply, vecMulVec_apply, smul_eq_mul, mul_add,
     Finset.sum_add_distrib, Pi.add_apply, Pi.smul_apply, Matrix.one_apply, mul_ite, mul_one, mul_zero,
-    Finset.sum_ite_eq', Finset.mem_univ, if_true, Finset.sum_mul]
+    Finset.sum_ite_eq', Finset.mem_univ, if_true]
   congr 1
   rw [Finset.mul_sum, Finset.sum_mul]
   exact Finset.sum_congr rfl fun c _ => by ring
@@ -79,19 +77,19 @@ theorem pair_swap (hcm : IsCMExt F E σ) (hJ : IsHermND σ J) (p q : Fin n → E
 theorem cT_mul_mul_apply (P Q : Matrix (Fin n) (Fin r) E) (j i : Fin r) :
     (Formalism.UG.cT (σ : E →+* E) P * J * Q) j i = pair σ J (fun a => P a j) (fun c => Q c i) := by
   simp only [pair, Formalism.UG.cT, Matrix.mul_apply, Matrix.transpose_apply, Matrix.map_apply, Finset.sum_mul,
-    AlgHom.coe_toRingHom, RingHom.coe_coe]
+    RingHom.coe_coe]
   exact Finset.sum_comm
 
 theorem cT_mul_mulVec_apply (P : Matrix (Fin n) (Fin r) E) (z : Fin n → E) (j : Fin r) :
     ((Formalism.UG.cT (σ : E →+* E) P * J) *ᵥ z) j = pair σ J (fun a => P a j) z := by
   simp only [pair, Formalism.UG.cT, Matrix.mulVec, dotProduct, Matrix.mul_apply, Matrix.transpose_apply, Matrix.map_apply,
-    Finset.sum_mul, AlgHom.coe_toRingHom, RingHom.coe_coe]
+    Finset.sum_mul, RingHom.coe_coe]
   exact Finset.sum_comm
 
 theorem dot_row (t : E →ₐ[F] Fv F v) (Y : Matrix (Fin n) (Fin r) E) (i : Fin r) (q : Fin n → E) :
     (fun c => t ((Formalism.UG.cT (σ : E →+* E) Y * J) i c)) ⬝ᵥ (fun a => t (q a)) = t (pair σ J (fun a => Y a i) q) := by
   simp only [pair, Formalism.UG.cT, dotProduct, Matrix.mul_apply, Matrix.transpose_apply, Matrix.map_apply, map_sum, map_mul,
-    Finset.sum_mul, AlgHom.coe_toRingHom, RingHom.coe_coe]
+    Finset.sum_mul, RingHom.coe_coe]
   exact Finset.sum_comm
 
 theorem dot_conj (t : E →ₐ[F] Fv F v) (p q : Fin n → E) :
@@ -104,7 +102,7 @@ theorem vecMul_conj (t : E →ₐ[F] Fv F v) (Y : Matrix (Fin n) (Fin r) E) (i :
     (fun a => (t.comp σ) (Y a i)) ᵥ* J.map t = fun c => t ((Formalism.UG.cT (σ : E →+* E) Y * J) i c) := by
   funext c
   simp only [Formalism.UG.cT, Matrix.vecMul, dotProduct, Matrix.mul_apply, Matrix.transpose_apply, Matrix.map_apply, map_sum,
-    map_mul, AlgHom.comp_apply, AlgHom.coe_toRingHom, RingHom.coe_coe]
+    map_mul, AlgHom.comp_apply, RingHom.coe_coe]
 
 theorem col_ext (hcm : IsCMExt F E σ) (t : E →ₐ[F] Fv F v) (M : Matrix (Fin n) (Fin n) (Fv F v ⊗[F] E))
     (X : Matrix (Fin n) (Fin r) E) (d : Fin r → Fv F v ⊗[F] E)

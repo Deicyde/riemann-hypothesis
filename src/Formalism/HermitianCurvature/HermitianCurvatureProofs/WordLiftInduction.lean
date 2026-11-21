@@ -1,4 +1,5 @@
-import Formalism.HermitianCurvature.LevelRecursionCondNeeded
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ChebyshevExtremalPolynomials
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.TopDegreePolynomials
 

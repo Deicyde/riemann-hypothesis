@@ -1,26 +1,8 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.EdgesRouteSmall
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HarishChandraModulesOn
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.AdmissibleDiscreteSeriesOfHasParam
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.HasDRepIffHasDerivAt
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsNormLeHeightPow
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.DsExistsOfDiscreteSeriesExists
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.WeilRepresentationUnitaryPair
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.UnifModGrowthOfIsUnifModerate
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.NotIsCompactUnivFv
-import Development.AbelianVarietyTheory.Statements.HeckeThetaIntegrals.ThetaIntegralsAgree
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.UnitaryConjugation
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.LevelPlusSubgroup
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsStepWeil
-import Formalism.LocalToGlobal.IndefiniteReal.BaseLiftsPackageOfPrimitiveLinks
-import Formalism.LocalToGlobal.IndefiniteReal.RationalAdjoints.RatZOfTests
-import Formalism.LocalToGlobal.IndefiniteReal.LinksStage
-import Development.AutomorphicSpectrum.Proofs.MembershipProofs.WeilRepresentationSplittingsDiffer
-import Development.AutomorphicSpectrum.Proofs.MembershipProofs.ThetaSumTensorProduct
-import Development.AutomorphicSpectrum.Proofs.MembershipProofs.RationalUnitsHaarCharacterOneStatement
-import Development.AutomorphicSpectrum.Proofs.MembershipProofs.SplitQuadraticAlgebraOrder
-import Development.AutomorphicSpectrum.Proofs.DivisibilityProofs.FiniteNonunitMatrix
+import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsGivenStageEqOne
+import GroundTheory.GlobalFields.TateThesis.AdelicCharDual
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.DIV
 open Formalism.IndefR.Mult IsDedekindDomain NumberField MeasureTheory GlobalTheory.ChiGrid GlobalTheory.FunObj GlobalTheory.RowTest GlobalTheory.CompanionTheory.Ar.RT
 open scoped TensorProduct ComplexConjugate GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels
@@ -47,7 +29,7 @@ def splitAE : AE F E ≃ₐ[F] (Ainf F ⊗[F] E) × (Af F ⊗[F] E) :=
 theorem splitAE_tmul (a : AF F) (e : E) :
     splitAE F E (a ⊗ₜ[F] e) = (a.1 ⊗ₜ[F] e, a.2 ⊗ₜ[F] e) := by
   have h : (Algebra.TensorProduct.comm F (AF F) E) (a ⊗ₜ[F] e) = e ⊗ₜ[F] a := rfl
-  simp only [splitAE, AlgEquiv.trans_apply, h, Algebra.TensorProduct.prodRight_tmul]
+  simp only [splitAE, AlgEquiv.trans_apply]
   rfl
 
 theorem splitAE_smul (u : AF F) (x : AE F E) :

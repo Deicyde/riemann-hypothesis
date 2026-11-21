@@ -1,5 +1,6 @@
-import Formalism.LocalToGlobal.TorsionIntegrality.WeierstrassTwoTorsion.StatementI
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.CMGoodModels.Statement
+import Formalism.LocalToGlobal.TorsionIntegrality.WeierstrassTwoTorsion.CompInv
 
 open PowerSeries
 

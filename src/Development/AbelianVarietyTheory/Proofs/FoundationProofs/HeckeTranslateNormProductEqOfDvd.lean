@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.DiagMod
+import Development.AbelianVarietyTheory.Definitions.Foundations.OpLDOneSubMemTriv
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Topology.Sheaves.Presheaf
 open scoped MatrixGroups TensorProduct
 open Matrix GlobalTheory.KZ GlobalTheory.KZ.ES
 
@@ -12,7 +16,7 @@ theorem toGQ_mul_pos' (m m' : Matrix (Fin 2) (Fin 2) ℤ) (h : 0 < m.det) (h' : 
   rw [dif_pos hmm, dif_pos h, dif_pos h']
   apply Subtype.ext
   apply Units.ext
-  simp only [Matrix.GeneralLinearGroup.mkOfDetNeZero, Units.val_mul] at *
+  simp only [Matrix.GeneralLinearGroup.mkOfDetNeZero] at *
   exact Matrix.map_mul (f := Int.castRingHom ℚ)
 
 theorem sl_trans_of_lev {Ω : Type} [Field Ω] [Algebra ℚ Ω] {ε : Ω →+* ℂ} (X : Tower Ω ε) (M : ℕ) (f : X.K)

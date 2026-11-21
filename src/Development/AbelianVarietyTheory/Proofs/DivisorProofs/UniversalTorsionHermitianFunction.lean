@@ -1,9 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsTateZero
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaMetricChernFlat
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SiegelPeriodMapSimplyConnected
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PeriodMapRigidity
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MetricTranslationPullbackFlat
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsThetaOfPolAV
 open CategoryTheory AlgebraicGeometry Set Matrix ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open GlobalTheory GlobalTheory.CxPts GlobalTheory.ArInt GlobalTheory.TorsionForm GlobalTheory.ThetaRR
 open GlobalTheory.LB (toMod)
@@ -115,7 +114,7 @@ theorem univTorsion_hermFun : GlobalTheory.Published.BismutKoehlerTorsion → Na
       · simp only [hF, h0, if_true]
         exact (continuous_apply (∅ : Finset (Fin (n + n)))).comp_continuousOn hTc
       by_cases h1 : I = Finset.univ
-      · simp only [hF, h0, h1, if_false, if_true]
+      · simp only [hF, h1, if_true]
         refine continuousOn_finset_sum _ fun i _ => continuousOn_finset_sum _ fun k _ => ?_
         exact (((hr i).mul (hr k).star).continuousOn).mul
           ((continuous_apply _).comp_continuousOn hTc)

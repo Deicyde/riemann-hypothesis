@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsPrincipalMapDifferent
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsClosedFlagsIff
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ExistsTangentEquiv
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.PairVEqZeroOfMemLieSpan
 
 set_option autoImplicit false
 

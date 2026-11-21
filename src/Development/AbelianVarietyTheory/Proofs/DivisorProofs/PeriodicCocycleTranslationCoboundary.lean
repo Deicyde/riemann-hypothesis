@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SiegelReframe
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SummableExpNegL1Norm
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FourierCoeffExpDecayOnCompactStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HasSumFourierSeriesOfExpDecayStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DifferentiableOnFourierCoeffFamilyStatement

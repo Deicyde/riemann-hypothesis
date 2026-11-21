@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.DualLattices.CotangentSurjective
 import ReciprocityTheory.DualLattices.HtLinStatement
-import ReciprocityTheory.DualLattices.StThmAFull
+import Mathlib.RingTheory.MvPowerSeries.Basic
 
 noncomputable section
 

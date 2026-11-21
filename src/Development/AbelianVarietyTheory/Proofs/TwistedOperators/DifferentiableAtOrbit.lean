@@ -1,10 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.DSInfCharCap
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.PseudoCoefficientSeparation
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HarishChandraModulesOn
-import Formalism.RealPlaceAnalysis.StatementE
-import Formalism.RealPlaceAnalysis.StatementB
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DRepAddAndBracket
+import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.IsAdmissibleSubOfFiniteDimensional
 
 noncomputable section
 
@@ -322,16 +320,16 @@ theorem gAct_bracket (hρ : Formalism.QuantumDeterminants.IsCRepOn (UJset ε) ρ
         (X1 * Y1 - Y1 * X1) + Complex.I • (X1 * Y2 - Y2 * X1) + Complex.I • (X2 * Y1 - Y1 * X2) -
           (X2 * Y2 - Y2 * X2) := by
     intro X1 X2 Y1 Y2
-    simp only [add_mul, mul_add, smul_mul_assoc, mul_smul_comm, smul_smul, Complex.I_mul_I, neg_one_smul,
-      smul_sub, smul_add, smul_neg, neg_smul, Complex.I_mul_I]
+    simp only [add_mul, mul_add, smul_mul_assoc, mul_smul_comm, smul_smul, Complex.I_mul_I,
+      smul_sub, smul_add, neg_smul, Complex.I_mul_I]
     module
   have h := hm (cre ε X) (cim ε X) (cre ε Y) (cim ε Y)
   rw [cre_add_cim, cre_add_cim] at h
   rw [h, map_sub, map_add, map_add, map_smul, map_smul, gAct_bracket_of_mem hρ hV (cre_mem X) (cre_mem Y),
     gAct_bracket_of_mem hρ hV (cre_mem X) (cim_mem Y), gAct_bracket_of_mem hρ hV (cim_mem X) (cre_mem Y),
     gAct_bracket_of_mem hρ hV (cim_mem X) (cim_mem Y), gAct_decomp hρ hV X, gAct_decomp hρ hV Y]
-  simp only [add_mul, mul_add, smul_mul_assoc, mul_smul_comm, smul_smul, Complex.I_mul_I, neg_one_smul,
-    smul_sub, smul_add, smul_neg, neg_smul, Complex.I_mul_I]
+  simp only [add_mul, mul_add, smul_mul_assoc, mul_smul_comm, smul_smul, Complex.I_mul_I,
+    smul_sub, smul_add, neg_smul, Complex.I_mul_I]
   module
 
 end Act

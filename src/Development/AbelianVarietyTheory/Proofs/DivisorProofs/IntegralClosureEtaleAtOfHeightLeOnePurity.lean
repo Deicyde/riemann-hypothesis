@@ -1,10 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsorsTrivial
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OriginIdeal
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ClosureFiniteEtale
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PointAtZero
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GoodIffEtaleAt
-import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.IsDomainAndIsIntegrallyClosedAtPrimeOfSmoothOfCo
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CyclicTorsorEtale
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RegularHeightOneLocalization
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ClosureFiniteOverBase

@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.WickVanishing.SecondColumnOperator
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.GaugeExp
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.ChartChg
 
 set_option autoImplicit false
 
@@ -176,7 +179,7 @@ private lemma secondOrder_eq_zero_of_totalDegree_eq_zero {σ : Type} [Fintype σ
   rw [MvPolynomial.totalDegree_eq_zero_iff_eq_C] at hq
   rw [hq]
   unfold secondOrder
-  simp [MvPolynomial.pderiv_C]
+  simp
 
 private lemma iterate_secondOrder_eq_zero_of_totalDegree_lt {σ : Type} [Fintype σ] (c : σ → σ → k) (i : ℕ) :
     ∀ q : MvPolynomial σ k, q.totalDegree + 1 ≤ i → (secondOrder k c)^[i] q = 0 := by

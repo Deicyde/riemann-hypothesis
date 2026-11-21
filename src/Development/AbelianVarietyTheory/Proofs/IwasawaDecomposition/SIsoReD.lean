@@ -1,9 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ECure
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SpectralRedivisionTermEquivKeepsTermDataStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.KeepPuVolAR
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsoPairToTermSymm
-import Formalism.LocalToGlobal.IndefiniteReal.HeckeNonvanishing.Imports
 
 noncomputable section
 

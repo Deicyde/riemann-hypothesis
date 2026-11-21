@@ -1,5 +1,13 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsHolPeriods
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ThetaUnifAV
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo.Tor
 
@@ -183,7 +191,7 @@ theorem _root_.GlobalTheory.appellHumbert_trivial_of_nowhere_vanishing :
     refine Complex.ext ?_ ?_
     · simp only [Complex.zero_re]
       linarith
-    · simp [Complex.star_def] at h2
+    · simp at h2
       simpa using h2
   have hB0 : B = 0 := by
     ext i j

@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.PolynomialDifferentialWords.KappaRight
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.PolynomialDifferentialWords.KappaCoeff
 
 open MvPolynomial Finsupp
@@ -51,7 +50,7 @@ theorem symbolMapMulLeft : KappaLeft := by
   refine Finset.sum_congr rfl fun g _ => ?_
   rw [Module.End.mul_apply, Ed_val, Derivation.map_smul, mul_smul_comm]
   congr 1
-  simp only [Derivation.leibniz, pderiv_inl_xi, smul_zero, zero_add, add_zero, smul_eq_mul]
+  simp only [Derivation.leibniz, pderiv_inl_xi, smul_eq_mul]
   rw [pderiv_rename Sum.inl_injective, map_mul, rename_X]
   ring
 

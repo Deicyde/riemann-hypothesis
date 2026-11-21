@@ -1,7 +1,7 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.GenericCentreSpecializes
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.LocalComponentsSurjective
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.PropZ
+import Mathlib.AlgebraicGeometry.Morphisms.Separated
 open AlgebraicGeometry CategoryTheory Limits GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Flat
 
 namespace PositivityTheory.Xgn.CurvePositivity

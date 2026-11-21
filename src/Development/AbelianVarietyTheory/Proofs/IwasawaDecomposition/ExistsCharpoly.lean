@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.GoodChi
+import Mathlib.RepresentationTheory.Maschke
+import Mathlib.RingTheory.SimpleModule.IsAlgClosed
 
 noncomputable section
 open Formalism.BasicNotions GlobalTheory.Mem GlobalTheory.MemN NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Polynomial

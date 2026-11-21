@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.DefsCS
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Bridge
+import Mathlib.RingTheory.PicardGroup
 
 noncomputable section
 

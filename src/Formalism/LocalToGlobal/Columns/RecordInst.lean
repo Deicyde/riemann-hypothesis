@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.Record
 import Formalism.LocalToGlobal.Columns.NonDeg
-import Formalism.LocalToGlobal.Columns.RecLevelDiv
 
 open NumberField IsDedekindDomain Module Matrix
 

@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.LocalDoubleCosets.TracePow
-import GroundTheory.AutomorphicForms.LocallyConstantCompact
 
 noncomputable section
 

@@ -1,4 +1,4 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.ArithmeticCylinders
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.LabelDatum
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.CentralIdempotentIrreducibleCharacterProps
 open GlobalTheory.GLq Formalism.MainNotions.ArithmeticCylinders Polynomial

@@ -1,5 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsKMOne
+import Mathlib.NumberTheory.NumberField.CMField
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open NumberField Matrix GlobalTheory.AdLat GlobalTheory.UCls
 
 noncomputable section
@@ -21,7 +26,7 @@ theorem isTA_det_of_isUA {F E : Type} [Field F] [NumberField F] [Field E] [Algeb
     rw [Finset.sum_comm]
     convert h using 1
     · rfl
-    · simp [G', Pi.single_apply, apply_ite σ]
+    · simp [G', Pi.single_apply]
   have hdet := congrArg Matrix.det hM
   have hs : (g.map σ).det = σ g.det := by
     rw [show g.map σ = (σ : RA F E →+* RA F E).mapMatrix g from rfl, ← RingHom.map_det]; rfl

@@ -1,6 +1,16 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementB
 import Formalism.FormalDegreeBessel.FormalDegreeRatio.UnitaryWeylNormalHolds
 import Formalism.RealPlaceAnalysis.RealPlaceTaylor.CartanInvolutionConjTransposeMul
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.Analysis.Calculus.FDeriv.Symmetric
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Matrix Filter Topology
 
@@ -139,7 +149,7 @@ private lemma hpk_sq_lemma : Hpk k r * Hpk k r = 1 := by
     ⟨(if r ≤ i.val ∧ i.val ≤ r + k then i.val else 2 * r + k - i.val), by split_ifs <;> omega⟩
     (Finset.mem_univ _)]
   · unfold Hpk
-    simp only [Fin.ext_iff, Fin.val_mk]
+    simp only [Fin.ext_iff]
     split_ifs <;> first | (exfalso; omega) | norm_num
   · intro l _ hl
     rw [key l (fun h => hl (Fin.ext h)), MulZeroClass.zero_mul]

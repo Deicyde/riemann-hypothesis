@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
-import Formalism.HermitianLattices.StatementLat
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.UnitVectorOrthogonal
 import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.SelfDualLatticeComplements
 

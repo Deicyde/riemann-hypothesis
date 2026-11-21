@@ -1,6 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LengthCokerLsmulEqLengthKerAddSumStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LengthKerCokerLsmulQuotientSpanSwapStatement
+import Mathlib.Data.ENat.BigOperators
+import Mathlib.RingTheory.Ideal.Height
+import Mathlib.RingTheory.OrderOfVanishing.Basic
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Topology.Sheaves.Presheaf
 
 open IsLocalRing
 

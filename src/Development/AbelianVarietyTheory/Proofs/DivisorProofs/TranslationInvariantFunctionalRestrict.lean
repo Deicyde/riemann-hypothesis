@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TrPApply
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormIteratedFDerivRemCompLe
+import Mathlib.Analysis.Calculus.ParametricIntervalIntegral
 
 noncomputable section
 
@@ -249,7 +251,7 @@ theorem apply_linear_mul (T : 𝓢(Y, ℂ) →L[ℂ] ℂ) (L : Y →L[ℝ] ℝ)
     simp only [u, SchwartzMap.sub_apply, SchwartzMap.smul_apply, hft, hg, rem, smul_eq_mul]
     ring
   have hTu : ∀ t : ℝ, T (u t) = -I * T g := fun t => by
-    simp only [u, map_sub, map_smul, hTft, sub_self, smul_zero, smul_eq_mul, zero_sub]
+    simp only [u, map_sub, map_smul, hTft, sub_self, smul_eq_mul]
     ring
   have hlim : Tendsto u (nhdsWithin 0 {0}ᶜ) (nhds 0) := by
     rw [(schwartz_withSeminorms ℂ Y ℂ).tendsto_nhds u 0]

@@ -1,4 +1,7 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.MultihomogeneousIdeals.CurveFilt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Data.Finsupp.Interval
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.IsIntersectionFamily
 
 noncomputable section
 

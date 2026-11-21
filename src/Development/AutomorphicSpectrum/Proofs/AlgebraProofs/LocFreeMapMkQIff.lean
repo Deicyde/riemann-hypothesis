@@ -1,5 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.LieLatticeData
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 
@@ -135,7 +141,7 @@ theorem span_bcMap_annSub (Ω C : Type) [Field Ω] [Field C] [Algebra Ω C] (n i
       · intro j _ hjk
         by_cases hj : (j : ℕ) < i
         · simp [hj, bcMap]
-        · simp [hj, bcMap, Pi.single_apply, hjk.symm]
+        · simp [hj, bcMap, hjk.symm]
       · simp
     rw [this]
     refine Submodule.sum_mem _ fun j _ => Submodule.smul_mem _ _ (Submodule.subset_span ⟨_, ?_, rfl⟩)
@@ -144,7 +150,7 @@ theorem span_bcMap_annSub (Ω C : Type) [Field Ω] [Field C] [Algebra Ω C] (n i
     by_cases hj : (j : ℕ) < i
     · simp [hj]
     · have : k ≠ j := by rintro rfl; exact hj hk
-      simp [hj, Pi.single_apply, this]
+      simp [hj, this]
 
 theorem spanOver_swap {C V Z Vc Zc : Type} [Field C] [Algebra o C] (RC : Subalgebra o C)
     [AddCommGroup V] [AddCommGroup Z] [AddCommGroup Vc] [AddCommGroup Zc]

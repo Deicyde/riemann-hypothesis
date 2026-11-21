@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.DivisorCycles.CycleCount
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.Tactic.Polynomial.Basic
 
 open Matrix PositivityTheory.AutomorphicGaloisHodgeTate.Div
 

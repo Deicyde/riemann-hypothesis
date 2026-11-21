@@ -1,4 +1,9 @@
-import ReciprocityTheory.SemistableReduction.ShareBallA
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import ReciprocityTheory.SemistableReduction.ShareSt
 
 noncomputable section
 
@@ -130,7 +135,7 @@ theorem sb_cs {r : ℕ} (v w : Fin r → ℂ) : (star v ⬝ᵥ w).re ^ 2 ≤ nor
       unfold dotProduct
       exact norm_sum_le _ _
     have e3 : ∑ k, ‖star (v k) * w k‖ = ∑ k, ‖v k‖ * ‖w k‖ := by
-      simp [norm_mul, norm_star]
+      simp
     linarith
   have h2 := Finset.sum_mul_sq_le_sq_mul_sq Finset.univ (fun k => ‖v k‖) (fun k => ‖w k‖)
   have h3 : (star v ⬝ᵥ w).re ^ 2 ≤ (∑ k, ‖v k‖ * ‖w k‖) ^ 2 :=

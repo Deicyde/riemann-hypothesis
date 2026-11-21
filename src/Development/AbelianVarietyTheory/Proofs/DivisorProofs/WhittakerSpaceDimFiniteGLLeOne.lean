@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.SplitDoublingNBlock
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsColReduced
+import Mathlib.LinearAlgebra.Eigenspace.Triangularizable
 
 noncomputable section
 

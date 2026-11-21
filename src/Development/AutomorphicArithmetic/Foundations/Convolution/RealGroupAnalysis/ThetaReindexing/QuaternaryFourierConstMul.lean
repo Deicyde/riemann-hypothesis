@@ -1,7 +1,5 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.Smooth
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.ThetaReindexing.FtAct
-import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.ThetaReindexing.ActMat
-import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.WeilRepresentation.ImportsTer
 
 open NumberField IsDedekindDomain MeasureTheory Matrix Topology Filter
 open Neutral.B1 Formalism.L2.Host Formalism.ConjugateSelfDual GlobalTheory.CuspRep GlobalTheory.GalOfCusp UpperTheory.V UpperTheory.V.Af UpperTheory.V.Published GroundTheory.Global GroundTheory.Automorphic.GJMatrix
@@ -104,7 +102,7 @@ theorem UpperTheory.ConvolutionTheory.R2.D.comm :
         exact_mod_cast (idelicNorm_pos (nu F h)).ne'
       push_cast
       field_simp
-  | one => simp [diagonalConj_one]
+  | one => simp
   | mul x y _ _ hx hy =>
     rw [map_mul, diagonalConj_mul, map_mul, ← mul_assoc, hx, mul_assoc, hy, mul_assoc]
   | inv x _ hx =>

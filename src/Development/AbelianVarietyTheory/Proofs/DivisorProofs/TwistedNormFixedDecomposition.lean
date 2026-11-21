@@ -1,4 +1,39 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.GroupTheory.Commensurable
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
 open scoped Classical
 
 namespace GlobalTheory.TwistStab
@@ -136,7 +171,7 @@ theorem stable_subgroup : ∀ {H : Type} [Group H] (θ : H →* H) (K₀ : Subgr
       · exact Subgroup.subset_closure (Or.inl (Finset.mem_coe.mpr (Finset.mem_union_left _ hx)))
       · have hx' := Subgroup.mem_inf.mp hx
         have hx1 : x ∈ Z ⊓ K₀.map (MulAut.conj (1 : H)).toMonoidHom :=
-          Subgroup.mem_inf.mpr ⟨hx'.1, ⟨x, hx'.2, by simp [MulAut.conj_apply]⟩⟩
+          Subgroup.mem_inf.mpr ⟨hx'.1, ⟨x, hx'.2, by simp⟩⟩
         obtain ⟨f, hf, a, ha, rfl⟩ := hR x hx1
         exact Subgroup.mul_mem _
           (Subgroup.subset_closure (Or.inl (Finset.mem_coe.mpr (Finset.mem_union_right _ hf))))

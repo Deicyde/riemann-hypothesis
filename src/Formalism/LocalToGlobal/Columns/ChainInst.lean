@@ -1,8 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.FiniteSumNonzeroLargeDepth
-import Formalism.LocalToGlobal.Columns.NonDeg
 import Formalism.LocalToGlobal.Columns.CyclotomicIsCyclotomicExtension
 import Formalism.LocalToGlobal.Columns.AtTOwedC
+import Formalism.LocalToGlobal.Divisibility.DefGroupLemmas
 
 open NumberField IsDedekindDomain Module
 
@@ -861,7 +862,7 @@ theorem ciEN {n c p : ℕ} (hp : p < n) : Loc.eN E (n + c) p = Loc.inX E n c (Pi
   funext l
   rw [ciInX_apply]
   simp only [Loc.eN]
-  split_ifs <;> first | omega | rfl | simp_all [Pi.single_apply, Fin.ext_iff]
+  split_ifs <;> first | omega | rfl | simp_all [Fin.ext_iff]
 
 theorem ciAtN_inX {n c p : ℕ} (hp : p < n) (v : Fin n → E) : Loc.atN (Loc.inX E n c v) p = v ⟨p, hp⟩ := by
   simp [Loc.atN, ciInX_apply, hp, show p < n + c by omega]
@@ -1178,7 +1179,7 @@ theorem character_second_level_group (hX : X.Ok) (hPr : Pr.Ok) (w : Pr.vGs) (hw 
       refine Eq.trans ?_ (Matrix.det_submatrix_equiv_self secondBlockIndexEquiv _)
       congr 1
       ext s s'
-      simp only [Matrix.map_apply, Matrix.submatrix_apply, Matrix.toSquareBlock_def, Matrix.of_apply, hD]
+      simp only [Matrix.map_apply, Matrix.toSquareBlock_def, Matrix.of_apply, hD]
       rw [hM _ _ (by have := s.2; simp at this ⊢; omega) (by have := s'.2; simp at this ⊢; omega), ← ciEntry hred]
       rfl
     have hU : IsUnit (redP w.1 D.det) := by rw [hdet]; exact Units.isUnit _
@@ -1335,7 +1336,7 @@ theorem ciEntB_join {k₀ n' c' n c : ℕ} (hk : k₀ = n') (hc' : c' = 1) (hc :
   unfold LocE.entB joinCol atNL
   rw [ciFIdx (Or.inr rfl) (show p' < k₀ + 1 by omega), ciFIdx (Or.inl rfl) (show p < n + 0 by omega), ciScE_lt _ hp,
     dif_pos (show k₀ < k₀ + 1 by omega)]
-  simp only [LinearMap.comp_apply, LinearMap.add_apply, LinearMap.smulRight_apply, LinearMap.funLeft_apply, LinearMap.proj_apply]
+  simp only [LinearMap.comp_apply, LinearMap.add_apply, LinearMap.smulRight_apply, LinearMap.proj_apply]
   rw [ciAtN_inX hp]
   simp only [Pi.add_apply, Pi.smul_apply, smul_eq_mul]
   by_cases h : p' < k₀

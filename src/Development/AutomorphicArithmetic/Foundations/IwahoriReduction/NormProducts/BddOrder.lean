@@ -1,5 +1,7 @@
-import Development.AutomorphicArithmetic.Foundations.IwahoriReduction.NormProducts.LUnH
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.FiniteDimensionalLev
+import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.ResMapBijective
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open GlobalTheory.KZ GlobalTheory.K4 UpperTheory.Kd.K4 Polynomial
 open scoped Matrix MatrixGroups
 
@@ -66,7 +68,7 @@ private theorem near_one {Ω : Type} [Field Ω] [Algebra ℚ Ω] {ε : Ω →+* 
   rcases hw1 with e | e
   · have e' : φ w = φ' w := e
     rw [e']
-    simp only [Set.mem_setOf_eq, max_lt_iff] at hw3
+    simp only [max_lt_iff] at hw3
     exact (hB w hw3.1.2).trans (hs _ hw3.1.1.le)
   · exact absurd hw2 e
 

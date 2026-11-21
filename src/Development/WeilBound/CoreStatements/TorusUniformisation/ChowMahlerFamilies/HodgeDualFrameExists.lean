@@ -1,7 +1,6 @@
-import Mathlib
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.LieLatticeData
-import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.BundleObjects
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.Bundle
 
 open ReciprocityTheory.ChartRestriction.G.Geo (ChartBundle chartRing)
 open GlobalTheory.CompanionTheory.Ar.Num (dotDual)
@@ -84,7 +83,7 @@ theorem main {O Ω : Type} [CommRing O] [Field Ω] [Algebra O Ω] (R : Subalgebr
     by_cases hpq : p = q
     · subst hpq
       simp
-    · simp [hpq, Pi.single_eq_of_ne (Ne.symm hpq)]
+    · simp [hpq]
   have hcoord : ∀ (a : Fin r → Ω) q, b q ⬝ᵥ (∑ p, a p • d p) = a q := by
     intro a q
     rw [dotProduct_sum]

@@ -1,7 +1,15 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.AutomorphicKernels.BernsteinUnitaryProducts.BernsteinTheoremA.FrobeniusReciprocity.SupportedInIffOfFrob
-import GroundTheory.GlobalFields.TateThesis.NoSmallSubgroups
-import GroundTheory.AutomorphicForms.LocallyProfinite
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.MatrixMeasurableSpace
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Separation.Profinite
 
 noncomputable section
 
@@ -147,6 +155,6 @@ theorem exists_SB_integral_mul_char_eq_one : ∀ (G : Type) [Group G] [Topologic
     show ∫ x, (K : Set G).indicator (fun _ => (((μ (K : Set G)).toReal : ℂ))⁻¹) x * (χ x : ℂ) ∂μ = 1
     simp only [key]
     rw [integral_indicator_const _ hKm]
-    simp [Measure.real, hpos.ne', hfin.ne, hr]
+    simp [Measure.real, hr]
 
 end GlobalTheory.CompanionTheory.FrobNz

@@ -1,15 +1,13 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.CoefS
-import CompanionTheory.SpectralGeometry.CountingDefinitions.AdelicEulerProducts.IsEulerProd
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.SelfDualTransport
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.FiniteAdeleHaarEqProductLocalMeasures
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.CoordinateHomeomorphRankOneTuples
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.ExistsFiniteAdeleHaarNormalized
-import Development.AutomorphicSpectrum.Proofs.NonGaloisProofs.ExistsEqAdelicCharMul
-import GroundTheory.GlobalFields.TateThesis.AdeleMeasure
-import GroundTheory.GlobalFields.TateThesis.IdeleMeasure
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.LintegralFintypeProdEqProd
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.AdelicTupleProjectionsStatement
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerVolume.TensTop
+import GroundTheory.AutomorphicForms.ReductionMeasure
+import GroundTheory.LocalFields.LocalFourierHaar
+import Mathlib.Dynamics.Ergodic.Action.Regular
 
 noncomputable section
 open NumberField IsDedekindDomain MeasureTheory HeckeCharacterZeroLocus.SiegelWeilU GlobalTheory.CompanionTheory.SW GlobalTheory.CompanionTheory.SW.BB
@@ -165,7 +163,7 @@ theorem isFD_fundamentalSetInfinite (ν : Measure (InfiniteAdeleRing F)) :
     have hpre : fundamentalSetInfinite F =
         (fun x : InfiniteAdeleRing F => ((x, 0) : InfiniteAdeleRing F × FiniteAdeleRing (𝓞 F) F)) ⁻¹' fundamentalSet F := by
       ext x
-      simp [fundamentalSet, Set.mem_prod, Subring.zero_mem]
+      simp [fundamentalSet]
     rw [hpre]
     exact (measurable_prodMk_right hmeas).nullMeasurableSet
   · obtain ⟨z, hz, hu⟩ := existsUnique_sub_mem_fundamentalSetInfinite F x

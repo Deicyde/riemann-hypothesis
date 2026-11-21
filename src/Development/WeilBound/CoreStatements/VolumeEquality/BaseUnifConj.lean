@@ -1,5 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.VolumeEquality.BaseUnifConjA
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.ConjugateUniversalFamilyStatement
+import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HolomorphicFamilyConjugateStatement
+import Development.AutomorphicSpectrum.Proofs.GeometryProofs.IsExcisionNbhdAway
+import Development.WeilBound.CoreStatements.VolumeEquality.BaseUnifDefs
 
 noncomputable section
 

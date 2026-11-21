@@ -1,6 +1,7 @@
-import ReciprocityTheory.GroupCohomology.CupConnRightStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.GroupCohomology.HomogExistsStatement
-import ReciprocityTheory.GroupCohomology.DEqZeroOfMemB
+import Mathlib.Tactic.ENatToNat
 
 namespace ReciprocityTheory.Coh
 

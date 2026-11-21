@@ -1,6 +1,7 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.AutomorphicFormSpaces.GKStructure
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.HarishChandraRegularity.CartanBasis
+import GroundTheory.AutomorphicForms.AutomorphicFormSpaces.Archimedean
 
 open NumberField NumberField.mixedEmbedding NumberField.InfinitePlace Matrix
 open scoped NumberField.AdeleRing

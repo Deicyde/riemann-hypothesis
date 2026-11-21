@@ -1,6 +1,8 @@
-import ReciprocityTheory.AnalyticForms.MaIntEmpty
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.MdiscSt
 import ReciprocityTheory.AnalyticForms.AnalyticCharts.MaDensCompEqZeroOfRankLt
+import Mathlib.Analysis.Calculus.FDeriv.Symmetric
 
 namespace ReciprocityTheory.AnForm.M
 
@@ -97,8 +99,8 @@ theorem leviC_smul_right (H : (Fin D → ℂ) →L[ℝ] (Fin D → ℂ) →L[ℝ
     linear_combination ((c.im : ℂ) * b k) * Complex.I_sq
   unfold leviC
   rw [h2, h1]
-  simp only [map_add, map_sub, map_smul, ContinuousLinearMap.add_apply,
-    ContinuousLinearMap.sub_apply, ContinuousLinearMap.smul_apply, smul_eq_mul]
+  simp only [map_add, map_sub, map_smul,
+    smul_eq_mul]
   apply Complex.ext <;> simp <;> ring
 
 theorem sum_leviC_right (H : (Fin D → ℂ) →L[ℝ] (Fin D → ℂ) →L[ℝ] ℝ) (a x : Fin D → ℂ) :

@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecondCountableTopologySphere
-import ReciprocityTheory.L2DbarEstimates.ChartDerivatives.HoloSmooth
 open CategoryTheory AlgebraicGeometry Set Matrix MeasureTheory OnePoint
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open GlobalTheory.CxPts GlobalTheory.ArInt
@@ -53,7 +52,7 @@ theorem bcFld_eq_zero_of_isSplit {M : Type} [TopologicalSpace M] {n r s : ℕ} (
     · exact contDiffAt_const
     · exact contDiffAt_const
   have hPu : IsUnit (P x.crd).det := by
-    simp [hP, det_fromBlocks_zero₂₁]
+    simp [hP]
   have hP0 : ∀ η, mdbar P x.crd η = 0 := by
     intro η
     ext i j

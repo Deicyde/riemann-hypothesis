@@ -1,7 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsSmallSectionsSeparated
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsGridSeparation
 import GroundTheory.HeightsAndTheta.Heights.WeightedHomogeneous.PConeTrdeg
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.HilbertSamuel

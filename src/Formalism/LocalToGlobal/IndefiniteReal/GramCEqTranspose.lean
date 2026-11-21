@@ -1,4 +1,39 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.CStarAlgebra.Module.Constructions
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 
@@ -107,10 +142,10 @@ theorem pet_self (σ : LL →+* ℂ) (x : WL) : A.pet σ x x = ((A.nrmAt σ x : 
   simp [pet, nrmAt, inner_self_eq_norm_sq_to_K]
 
 theorem pet_add_left (σ : LL →+* ℂ) (x x' y : WL) : A.pet σ (x + x') y = A.pet σ x y + A.pet σ x' y := by
-  simp [pet, map_add, inner_add_right]
+  simp [pet, map_add]
 
 theorem pet_smul_left (σ : LL →+* ℂ) (a : LL) (x y : WL) : A.pet σ (a • x) y = σ a * A.pet σ x y := by
-  simp [pet, map_smulₛₗ, inner_smul_right]
+  simp [pet, map_smulₛₗ]
 
 theorem pet_conj_symm (σ : LL →+* ℂ) (x y : WL) : A.pet σ y x = starRingEnd ℂ (A.pet σ x y) := by
   simp [pet, inner_conj_symm]

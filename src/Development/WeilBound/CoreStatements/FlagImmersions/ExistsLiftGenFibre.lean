@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.FlagImmersions.FibSandwich
 import Development.WeilBound.CoreStatements.VolumeEquality.PrimeIdealOfFromSpec
 import Development.WeilBound.CoreStatements.VolumeEquality.ChartMeetsPoint
@@ -5,6 +7,7 @@ import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsFormNotInCoor
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.DvrModelOfNumberFieldPlace
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsUniqueValuationRingLift
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ValAtCompLocalHom
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.AbProj
 
 noncomputable section
 
@@ -268,7 +271,7 @@ theorem pointEx : PointEx := by
     change 𝔐.f (genPt 𝔐.ξ) ∉ C
     rw [CptIn.Intr.genPt_dominates 𝔐.fn_over, hgen]
     have h1 : genPt (Z.ξ₀ ≫ Y.j) = pullback.fst Y.s (spMap (algebraMap (𝓞 c.F) c.F)) (Y.jQ (genPt Z.ξ₀)) := by
-      simp [genPt, Model.j, Scheme.Hom.comp_apply]
+      simp [genPt, Model.j]
       rfl
     rw [h1]
     intro hin

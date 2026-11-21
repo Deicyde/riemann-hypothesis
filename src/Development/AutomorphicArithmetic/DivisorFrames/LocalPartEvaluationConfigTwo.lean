@@ -1,10 +1,8 @@
-import Mathlib
-import Development.AutomorphicArithmetic.LocalEmbeddings.ConeBumpB
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.DivisorFrames.LocalThetaPartitionTripleAlt
 import Development.AutomorphicArithmetic.DivisorFrames.UnitaryStabilizerLiftsToSmallerSpace
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBLocalEigenTriple
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalPartOperatorCompatibleStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaActionExistsStatement
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK

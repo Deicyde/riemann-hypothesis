@@ -1,4 +1,9 @@
-import Development.AbelianVarietyTheory.Definitions.Foundations.FinalTheorems
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import Formalism.ConjugateSelfDual.Statement
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.ReduceModChar
 
 namespace GlobalTheory.PadicIntegralNorm
 

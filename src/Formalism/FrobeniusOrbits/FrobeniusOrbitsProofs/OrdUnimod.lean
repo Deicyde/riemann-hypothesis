@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.FrobeniusOrbits.HostThickExists
-import Formalism.FrobeniusOrbits.RealSubfieldLeCompositum
-import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.Galois
 import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.FrobMulInertia
 import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.Decomp
 import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.SplitK

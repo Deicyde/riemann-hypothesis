@@ -1,5 +1,16 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.IsGaugeAll
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.RingTheory.Complex
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 open MeasureTheory NumberField Matrix Finset Formalism.MainNotions.S GlobalTheory.Count GlobalTheory.FlagMeas
 
 namespace GlobalTheory.TwoSidedJac
@@ -27,7 +38,7 @@ theorem det_twoSided {a b : ℕ} (A : Matrix (Fin a) (Fin a) ℂ) (B : Matrix (F
       intro M
       simp [Matrix.stdBasis]
     rw [hr]
-    simp [Matrix.mul_apply, Matrix.single, Finset.sum_mul, ite_and]
+    simp [Matrix.mul_apply, Matrix.single, ite_and]
   rw [h, Matrix.det_kronecker, Matrix.det_transpose]
   simp
 

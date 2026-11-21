@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.ThetaValues.LetAct
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.PolyFnLemmas
 
 set_option autoImplicit false
@@ -51,7 +50,7 @@ theorem eval_rowGen {K : Type} [Field K] {r n : ℕ} (a b : Fin r) (c : K) (f : 
     · rw [Finset.sum_eq_single v.1]
       · simp
       · intro x _ hx
-        simp [Matrix.one_apply, Ne.symm hx]
+        simp [Ne.symm hx]
       · simp
     · rw [Finset.sum_eq_single a]
       · by_cases hv : v.1 = b

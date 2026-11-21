@@ -1,5 +1,8 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.MeanHeightDescent.CombinedAverageDegreeBound
+import Formalism.MeanHeightDescent.BadRowsNumeric
+import Mathlib.Algebra.Order.Star.Real
 
 open Finset
 

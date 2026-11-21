@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlockMatrixMulVecBasis
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.InducedSectionZFinite
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.GelfandTransposeEqOfInvariantWords
@@ -103,7 +104,7 @@ theorem comm_rtr : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [NumberF
     intro p q r s
     simp only [X]
     rw [← hD.1, GlobalTheory.CapFrame.single_mul_single_one, GlobalTheory.CapFrame.single_mul_single_one]
-    split_ifs <;> simp [eq_comm]
+    split_ifs <;> simp
   have hu' : u ∈ Algebra.adjoin ℂ (Set.range fun p : Fin n × Fin n => X p.1 p.2) := by
     refine Algebra.adjoin_le ?_ hu
     rintro _ ⟨M, rfl⟩
@@ -124,7 +125,7 @@ theorem comm_rtr : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [NumberF
     congr 1
     refine Finset.sum_congr rfl fun c _ => Finset.sum_congr rfl fun e _ => ?_
     congr 1
-    simp [Matrix.mul_apply, Matrix.single_apply, ite_and, Finset.sum_ite_eq, Finset.sum_ite_eq']
+    simp [Matrix.mul_apply, Matrix.single_apply, ite_and, Finset.sum_ite_eq]
   have hcen : u ∈ Subalgebra.centralizer ℂ {rtr hcm a} := by
     refine Algebra.adjoin_le ?_ hz
     rintro _ ⟨k, rfl⟩ g hg'

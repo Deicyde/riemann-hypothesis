@@ -1,9 +1,12 @@
-import Mathlib
-import Formalism.DegreeFormula.FlagDegFormula
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.DegreeFormula.PointDegree.PowSum
 import Formalism.DegreeFormula.PointDegree.PermExpInj
 import Development.AbelianVarietyTheory.Definitions.Foundations.CurveCl
 import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.CompactGapsGE
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 noncomputable section
 
@@ -124,7 +127,7 @@ theorem deltaTerm_split {j p : ℕ} (hj : j ≤ N) (hp : 2 ≤ p) (τ : Ψ) (fr 
   have hp' : (2 : ℝ) ≤ p := by exact_mod_cast hp
   have h0 : (0 : ℝ) ≤ (p : ℝ)⁻¹ := by positivity
   have h1 : (p : ℝ)⁻¹ < 1 := inv_lt_one_of_one_lt₀ (by linarith)
-  simp only [deltaTerm, pLie, Nat.sub_self, pkLow_zero hj, degFl_C_mul, pow_one, pow_succ, pow_zero, one_mul]
+  simp only [deltaTerm, pLie, Nat.sub_self, pkLow_zero hj, degFl_C_mul, pow_succ, pow_zero, one_mul]
   rw [tsum_mul_right, tsum_mul_right, tsum_geometric_of_lt_one h0 h1]
   have : (p : ℝ) - 1 ≠ 0 := by linarith
   have : (p : ℝ) ≠ 0 := by linarith

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousCA
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NmatMulVec
@@ -87,7 +88,7 @@ theorem hmat_mul (hσ : ∀ a, σ (σ a) = a) (hJ : ∀ i j, σ (J j i) = J i j)
   have hxu : hA σ J x u = 0 := by rw [hA_herm σ J hσ hJ u x, hux, map_zero]
   refine hmat_ext fun v => ?_
   rw [← Matrix.mulVec_mulVec, hmat_mulVec, hmat_mulVec, hmat_mulVec]
-  simp only [hA_add_l, hA_sub_l, hA_smul_l, hA_add_r, hA_smul_r, hxx, hux, hu'x, hxu]
+  simp only [hA_add_l, hA_sub_l, hA_smul_l, hA_add_r, hxx, hu'x, hxu]
   ext i
   simp only [Pi.sub_apply, Pi.add_apply, Pi.smul_apply, smul_eq_mul]
   ring
@@ -122,7 +123,7 @@ theorem entry_J (i j : Fin n) :
   have hb : (fun l => cA σ ((Pi.single j 1 : Fin n → AE F E) l)) = Pi.single j 1 := by
     funext l; by_cases h : l = j
     · subst h; simp
-    · simp [Pi.single_apply, h]
+    · simp [h]
   rw [hA, hb, single_one_dotProduct, Matrix.mulVec_single_one]
   simp
 
@@ -267,7 +268,7 @@ theorem unip_eq_hmat (σ : E →ₐ[F] E) (hσ : ∀ a, σ (σ a) = a) {d d₁ :
     have h3 := inv (incV F H'.y) (incV F H'.y)
     rw [hgY] at h3
     simp only [hA_add_l, hA_add_r, hA_smul_l, hA_smul_r, hXX, hXY, hYX, hYY, hιX, hιY, hXι, hYι, mul_zero, mul_one,
-      zero_add, add_zero, one_smul, one_mul] at h3
+      zero_add, add_zero, one_smul] at h3
     linear_combination h3
   refine ⟨β, α, hα, ?_⟩
   have key : ∀ v, mat g *ᵥ v = hmat σ W.J (incV F H'.x) (incM F H'.ι *ᵥ β) α *ᵥ v := by
@@ -280,7 +281,7 @@ theorem unip_eq_hmat (σ : E →ₐ[F] E) (hσ : ∀ a, σ (σ a) = a) {d d₁ :
       mul_zero, zero_add, add_zero, one_smul, mul_one]
     rw [ha']
     funext i
-    simp only [Pi.add_apply, Pi.sub_apply, Pi.smul_apply, smul_eq_mul, Pi.neg_apply]
+    simp only [Pi.add_apply, Pi.sub_apply, Pi.smul_apply, smul_eq_mul]
     ring
   exact hmat_ext key
 

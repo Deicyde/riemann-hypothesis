@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.StabilizerCovolume.StIsotropicRank
 import GroundTheory.HeightsAndTheta.Heights.StabilizerCovolume.ShortIsotropic
+import Mathlib.RingTheory.PicardGroup
 set_option maxSynthPendingDepth 1
 
 noncomputable section

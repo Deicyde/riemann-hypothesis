@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.CrystallineTowers.LocTower
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.BocksteinBaseChange.SmoothGaloisGeometry.NormLtOneOfIrreducible
 
@@ -100,10 +102,9 @@ theorem goodOf : GoodOf := by
       (IsLocalization.algEquiv (.powers r) _ Γ(M.X, M.X.basicOpen r)).toRingEquiv hr
     ext a
     dsimp
-    simp only [IsScalarTower.algebraMap_apply (OK l K) Γ(M.X, V) (Localization _),
-      IsLocalization.map_eq]
-    simp only [RingHom.algebraMap_toAlgebra, RingHomCompTriple.comp_apply,
-      ← ConcreteCategory.comp_apply, Scheme.Hom.appLE_map]
+    simp only [IsScalarTower.algebraMap_apply (OK l K) Γ(M.X, V) (Localization _)]
+    simp only [RingHom.algebraMap_toAlgebra,
+      ← ConcreteCategory.comp_apply]
     rw [AlgEquiv.commutes]
     first
       | (rw [CommRingCat.comp_apply, ← Scheme.Hom.appLE_map (V := V) M.p le_top

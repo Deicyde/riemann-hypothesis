@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IsHeisTrivial
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.NormalizedHeisenbergIntertwinerComp
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsIntertwinerHeisenbergCocycleOfFixedVector
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.SumOpTransversalStatement
 
 open Classical GlobalTheory.FinWeil
 open scoped BigOperators

@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.ProjectionSurjective
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CompletionUniversalLocalHomStatement
 open IsLocalRing GlobalTheory.Pat
 

@@ -1,8 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HasPRatio
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.MultiplicationLatticeSecond
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LocalSystemModelMap
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsSMulRegularNatCast
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsProperToroidalModelStructureMap
 
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.DividesOfNormBoundedPointsStatement
 
@@ -89,7 +88,7 @@ theorem ratioAt_overlap_unit : ∀ (E : Type) [Field E] [NumberField E] [IsCMFie
     have gV : ⊤ ≤ y.gen ⁻¹ᵁ V := fun q _ => hV (Set.mem_univ (spMap (intO ↥y.C.S).subtype q))
     have gV' : ⊤ ≤ y.gen ⁻¹ᵁ V' := fun q _ => hV' (Set.mem_univ (spMap (intO ↥y.C.S).subtype q))
     have e := (hR.2.2 y a₀ φ hφ hV).symm.trans (hR'.2.2 y a₀ φ hφ hV')
-    simp only [Matrix.cons_val_fin_one, pi_norm_const, pi_norm_const'] at e
+    simp only [Matrix.cons_val_fin_one, pi_norm_const] at e
     have n1 := norm_pos_iff.2 (valF_ne_zero hp0 gV hA)
     have n2 := norm_pos_iff.2 (valF_ne_zero hp0 gV hB)
     have n3 := norm_pos_iff.2 (valF_ne_zero hp0 gV' hA')

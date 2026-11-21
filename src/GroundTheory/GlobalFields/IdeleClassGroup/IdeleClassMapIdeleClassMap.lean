@@ -1,6 +1,7 @@
-import Mathlib
-import GroundTheory.GlobalFields.CyclotomicCharacters.Character
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.IdeleGroups.IdeleNorms.InfiniteAdeleRingMapInfiniteAdeleRingMap
+import Mathlib.Topology.Sheaves.Presheaf
 
 namespace GroundTheory.Global
 

@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.TorusInvariance.TransferInvarianceCongruence
 
 namespace Formalism.FourierDecayAlt.Q.TInvW

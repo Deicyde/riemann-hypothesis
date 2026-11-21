@@ -1,8 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.BaseLevel
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.BaseFixed
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.BaseInputs
-import GroundTheory.ProfiniteCohomology.RestrictedRamification.Dimension
+import GroundTheory.ProfiniteCohomology.RestrictedRamification.BijectiveGsCompactZmodDualityMap
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

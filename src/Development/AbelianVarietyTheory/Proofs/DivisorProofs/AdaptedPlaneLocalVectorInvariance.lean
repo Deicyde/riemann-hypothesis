@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LogAbsEEqZero
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipAugLeJacKer
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviActionLocalGoodPlaceStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnramifiedLocalVectorSplitStatement
 

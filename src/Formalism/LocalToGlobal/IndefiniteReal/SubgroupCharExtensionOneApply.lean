@@ -1,4 +1,5 @@
-import Formalism.LocalToGlobal.BesselHermitianTheta.DefsReal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.BesselHermitianTheta.MinfDensity
 import Formalism.LocalToGlobal.Divisibility.DefGroup
 

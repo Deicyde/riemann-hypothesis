@@ -1,13 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ReadsZero
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.BoundaryExtensionIndependentOfModel
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.FlatSectionAndDegree
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.DeterminantSectionRule
-import Development.AbelianVarietyTheory.Counterexamples.ModuliSurvey.PremisesOfProper
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralEigenBasisTransportPullbackDvrStatement
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsFrPtOfEigFrame
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.UnifAt
-import Formalism.LocalToGlobal.ProjectiveLattices.VAtVNeBot
 open NumberField IsDedekindDomain Formalism.L2.Pj ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.AllWt GlobalTheory.BdryUnit
 open AlgebraicGeometry CategoryTheory Limits
 

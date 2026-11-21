@@ -1,8 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TprodMemDegLE
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CharacterPartTensorSpan
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockActionHomogeneousEigenvectorStatement
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LineMatrixKroneckerLeftFactorEqZeroOfIsPC
 
 noncomputable section
 

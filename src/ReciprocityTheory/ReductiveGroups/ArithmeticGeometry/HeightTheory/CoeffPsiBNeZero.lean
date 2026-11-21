@@ -1,4 +1,15 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.SemistableReduction.SphereLogIntegrableStatement
+import Mathlib.Algebra.AffineMonoid.UniqueSums
+import Mathlib.Algebra.MvPolynomial.Division
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace ReciprocityTheory.ChartRestriction.G.T0.MHF
 
@@ -16,7 +27,7 @@ theorem bw_single (b : Fin B) (v : Fin B × Fin n) (e : ℕ) :
   obtain ⟨i, j⟩ := v
   by_cases h : i = b
   · subst h; simp [bw, Finsupp.single_apply]
-  · simp [bw, Finsupp.single_apply, h]
+  · simp [bw, h]
 
 noncomputable def psiB (b : Fin B) :
     MvPolynomial (Fin B × Fin n) K →ₐ[K] Polynomial (MvPolynomial (Fin B × Fin n) K) :=
@@ -32,8 +43,8 @@ theorem psiB_monomial (b : Fin B) (s : Fin B × Fin n →₀ ℕ) (a : K) :
   · simp [psiB, bw, MvPolynomial.algebraMap_eq, Polynomial.algebraMap_apply]
   · rename_i v e f _ _ ih
     rw [monomial_single_add, map_mul, map_pow, ih, psiB_X, bw_add, bw_single]
-    split_ifs <;> simp only [map_mul, map_pow, mul_pow, ← pow_mul, pow_add, mul_one, mul_zero,
-      pow_zero, add_zero, zero_add] <;> ring
+    split_ifs <;> simp only [map_mul, map_pow, mul_pow, ← pow_mul, pow_add, mul_one,
+      pow_zero, zero_add] <;> ring
 
 theorem psiB_eq_of_hom (b : Fin B) (δ : ℕ) (f : MvPolynomial (Fin B × Fin n) K)
     (hf : ∀ s ∈ f.support, bw b s = δ) : psiB b f = Polynomial.C f * Polynomial.X ^ δ := by

@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.HahnPowOrderLeadingCoeff
+import Mathlib.NumberTheory.FunctionField
 
 open scoped MatrixGroups
 open Polynomial

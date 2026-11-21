@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.GenusMeanAsymptotics.UnimodularClassRepresentatives.ExistsIsomFrame
+import Mathlib.RingTheory.PiTensorProduct
 
 open Module
 
@@ -24,7 +27,7 @@ theorem exists_next_unit (hS : IsHermSemilocal S)
       h p p + m * h p q + star m * h q p + star m * m * h q q := by
     intro p q m
     simp only [map_add, map_smulₛₗ, LinearMap.add_apply, LinearMap.smul_apply, smul_eq_mul,
-      starRingEnd_apply, map_smul, RingHom.id_apply]
+      starRingEnd_apply, RingHom.id_apply]
     ring
   obtain ⟨hstar, -, hunram, hprinc, -⟩ := hS
   obtain ⟨hsm, hint, hdual, hspan⟩ := hM

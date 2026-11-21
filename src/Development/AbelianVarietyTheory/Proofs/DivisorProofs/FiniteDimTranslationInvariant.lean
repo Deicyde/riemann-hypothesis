@@ -1,5 +1,14 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemNilRad
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open Matrix GlobalTheory.TorFin
 open scoped ContDiff
 
@@ -21,7 +30,7 @@ theorem linear_ode_eq_exp {E : Type} [NormedAddCommGroup E] [NormedSpace ℝ E] 
     have h4 := h3.clm_apply (hy s)
     convert h4 using 1
     · rfl
-    · simp [Function.comp_def]
+    · simp
   have hc := is_const_of_deriv_eq_zero (fun s => (hd s).differentiableAt) (fun s => (hd s).deriv) t 0
   simpa [z] using hc
 
@@ -72,7 +81,7 @@ theorem mem_of_translate (G : Type) [Group G] (W : Submodule ℂ (G → ℂ)) (�
             (((hasDerivAt_exp_smul_const' L s).clm_apply (hasDerivAt_const s (Pi.single j (1:ℂ) : Fin d → ℂ))).const_smul (v j)).congr_deriv (by simp))
         simpa [y2] using this
       convert this using 1
-      simp [y2, hLs, hLc, ContinuousLinearMap.mul_apply]
+      simp [y2, hLs, hLc]
     have e1 := GlobalTheory.TransODE.linear_ode_eq_exp L y hy t
     have e2 := GlobalTheory.TransODE.linear_ode_eq_exp L y2 hy2 t
     have h0 : y 0 = y2 0 := by

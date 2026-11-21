@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsStdFr
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.FamCol
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.RescOne
+import Development.AbelianVarietyTheory.Definitions.LatticeFrames.PinColL
+import Development.AbelianVarietyTheory.Definitions.LatticeFrames.XiEqXiOffMul
 
 set_option genSizeOfSpec false
 set_option genInjectivity false

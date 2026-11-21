@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.GaussJetBounds.OneLetterGaussJets.OddLevelGainSum
-import Formalism.GaussJetBounds.StatementX
 import Formalism.GaussJetBounds.StatementU
+import Formalism.GaussJetBounds.StatementS
 
 noncomputable section
 open scoped BigOperators

@@ -1,11 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.IsNormalFormStabilizerMeasure
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.CommonStabilizerSetEqRangeNormalFormStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.StabilizerHaarUnimodularNormalStatement
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.IsotropicLeviEmbeddingHomomorphismProperties
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.IsotropicStabilizerRadicalStructure
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.MatGroupHaarUniqueFiniteCompactOpenPos
-import Formalism.FormalDegreeBessel.FinalG
 
 open MeasureTheory Matrix Formalism.QuantumDeterminants Formalism.MainNotions.S GlobalTheory.SgInf GlobalTheory.Amp Filter Topology
 open scoped InnerProductSpace ENNReal
@@ -563,7 +559,7 @@ theorem rEl_ee (j : ℕ) (β : Fin r → ℕ) (q : (UTin β → ℂ) × PTop k r
     · intro a'
       simp only [pTop, pOf, Rad.pEl_se, Rad.esI_ne_eI, if_false]
   simp only [rEl, Matrix.mul_apply, hcol, mul_ite, mul_one, mul_zero, Finset.sum_ite_eq',
-    Finset.sum_ite_eq, Finset.mem_univ, if_true, UEmb.u_ee]
+    Finset.mem_univ, if_true, UEmb.u_ee]
 
 theorem block_of_subset (j : ℕ) {β β' : Fin r → ℕ} (h : Set.range (rEl k r j β) ⊆ Set.range (rEl k r j β'))
     (p : UT r) (hp : β p.1.1 = β p.1.2) : β' p.1.1 = β' p.1.2 := by

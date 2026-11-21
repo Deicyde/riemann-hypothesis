@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.OneMeasureSizes
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TamagawaSpecialUnitary
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFullLevelMeasureStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SpecialUnitaryVolumeFamilyStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullLevelSelfDualLatticeStatement

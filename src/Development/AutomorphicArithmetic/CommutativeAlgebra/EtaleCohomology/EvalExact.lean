@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.ZeroPull
+import Mathlib.Algebra.Homology.ShortComplex.Ab
+import Mathlib.CategoryTheory.Limits.FunctorCategory.Finite
+import Mathlib.CategoryTheory.Limits.Shapes.Countable
 
 open CategoryTheory
 

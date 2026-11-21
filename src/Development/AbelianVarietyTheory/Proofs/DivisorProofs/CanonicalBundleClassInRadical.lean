@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeightOfRationalSectionViaDivisor
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TriModOfBlockTriangular
 open CategoryTheory AlgebraicGeometry NumberField IsDedekindDomain MvPolynomial ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -28,7 +28,7 @@ theorem can_zero_mem_rad : Hypotheses2 → ∀ (k : Type) [CommRing k] (X : Sche
       funext i
       refine Fin.cases ?_ (fun i => ?_) i
       · simp
-      · simp [Fin.tail, Function.update_of_ne (Fin.succ_ne_zero i)]
+      · simp [Fin.tail]
     rw [e, ← MultilinearMap.curryLeft_apply, hg]
     rfl
   intro v j

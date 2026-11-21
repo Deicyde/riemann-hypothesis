@@ -1,12 +1,9 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.IsSplitGaussChars
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.GapCondExample
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.BundleDegreeEqSumValuationsStatement
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.SubAndQuotientBundlesStatement
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.DegreeInvariantLinearEquivStatement
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.DegreeAdditiveSubQuotientStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.ShortExactFirstTermBundleStatement
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.DualLatticeDegreeNegStatement
+import Mathlib.Data.Int.Star
+import Mathlib.RingTheory.PicardGroup
 
 open GlobalTheory.CompanionTheory.Ar.Crv
 
@@ -19,7 +16,7 @@ variable {K : Type} [Field K] {C : ACurve K} {V : Type} [AddCommGroup V] [Module
 theorem basis_mem {i : C.I} {n : ℕ} {b : Module.Basis (Fin n) K V} {L : AddSubgroup V}
     (h : IsLatOf C i b L) (q : Fin n) : b q ∈ L := by
   refine (h _).2 fun r => ?_
-  by_cases e : q = r <;> simp [e, Finsupp.single_apply]
+  by_cases e : q = r <;> simp [e]
 
 theorem smul_mem_lat {i : C.I} {n : ℕ} {b : Module.Basis (Fin n) K V} {L : AddSubgroup V}
     (h : IsLatOf C i b L) {a : K} (ha : C.v i a ≤ 1) {x : V} (hx : x ∈ L) : a • x ∈ L := by

@@ -1,12 +1,10 @@
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ToFirst
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GermDJet
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.HodgeTatePoints.HtatLieBc
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsLieModel
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ChartJetTrD
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.FBMapPf
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.FBIdLB
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ValCalc
+import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GermCut
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.PullUUnitsCompatGeneric
 
 noncomputable section
 namespace PositivityTheory.Xgn.GermSystem.Bc
@@ -69,7 +67,7 @@ theorem comb_bc {n : ℕ} {v : Fin n → (Sp (DualNumber S) ⟶ t.G.left)} {a : 
     rw [hu, ← Category.assoc, ← Category.assoc, spMap_cp, spMap_cp]
     congr 2
     refine RingHom.ext fun s => ?_
-    ext <;> simp [GlobalTheory.CompanionTheory.Ar.dualMap, epsMul, GlobalTheory.CompanionTheory.Ar.epsMul, mul_comm]
+    ext <;> simp [GlobalTheory.CompanionTheory.Ar.dualMap, epsMul, mul_comm]
   · have := comp_listProd (epsBC f x) (List.ofFn u)
     rw [List.map_ofFn] at this
     exact (congrArg (fun q => q.left) this).symm

@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LocalTheory.DixmierCommutants.ExistsInvar
-import Development.WeilBound.ThetaLifts.LocalTheory.DixmierCommutants.SlopeTestRemainingChoices
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilObjectsInhabited
 
 noncomputable section
 

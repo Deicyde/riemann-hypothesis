@@ -1,4 +1,5 @@
-import Formalism.LocalToGlobal.IndefiniteReal.LinksLemmas
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.LinksStage
 
 noncomputable section

@@ -1,6 +1,4 @@
-import Mathlib
-import Formalism.LocalToGlobal.KernelLattices.TopPin
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.FormsPin
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.KernelOperatorMapsStabiliserEquivariantFormsStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ClassSumTermLawStabiliserTargetStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.KerTieEntire

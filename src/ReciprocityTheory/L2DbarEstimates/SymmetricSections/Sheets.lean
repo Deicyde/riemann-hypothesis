@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.L2DbarEstimates.SymmetricSections.HoloSectionStatement
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace ReciprocityTheory.L2DbarEstimates.Norm
 

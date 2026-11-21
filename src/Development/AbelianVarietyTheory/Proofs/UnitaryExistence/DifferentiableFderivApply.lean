@@ -1,6 +1,13 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.AnalyticCharts.Osgood
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsImEqLattice
+import Mathlib.Analysis.Complex.LocallyUniformLimit
+import Mathlib.Analysis.Complex.MeanValue
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.Topology.Algebra.Group.SubmonoidClosure
 
 open Matrix Filter Topology Metric
 open scoped ComplexOrder

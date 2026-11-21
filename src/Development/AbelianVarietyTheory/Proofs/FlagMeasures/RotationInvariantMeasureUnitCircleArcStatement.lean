@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.RotationInvariantMeasureUnitCircleArc
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.BlkExt
 open MeasureTheory Matrix Filter Topology Formalism.QuantumDeterminants Formalism.MainNotions.S GlobalTheory.SgInf GlobalTheory.Amp GlobalTheory.Tube
 open scoped InnerProductSpace ENNReal ComplexConjugate
 set_option maxHeartbeats 1000000 in

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.TensorLatticeBounds.DataLPa
 import Formalism.SharpRestriction.GrowthBounds.TensorLatticeBounds.DataLPb
 import Formalism.LocalToGlobal.GroupLattices.PerfectRings.JOInjective

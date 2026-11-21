@@ -1,7 +1,7 @@
-import Formalism.LocalToGlobal.Columns.AdelicLemmas
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.ColForms
-import Formalism.LocalToGlobal.Columns.DecoFin
-import Formalism.LocalRingCardinality.DataLevel
+import Formalism.LocalToGlobal.Columns.Adelic
 
 open NumberField IsDedekindDomain Matrix
 open scoped TensorProduct

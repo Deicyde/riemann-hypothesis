@@ -1,7 +1,8 @@
-import Development.AutomorphicArithmetic.CommutativeAlgebra.BconeDefs
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RestrictScalarsInjectiveSheafAcyclicStatement
 import Development.AutomorphicArithmetic.CommutativeAlgebra.SubsingletonHypercohomologyFreeOfSubsingletonCoh
 import Development.AutomorphicArithmetic.CommutativeAlgebra.AcyMiddleOfShortExact
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RestrPreservesHomology
 open CategoryTheory Limits AlgebraicGeometry Opposite CochainComplex CochainComplex.HomComplex GlobalTheory.EtC UpperTheory.Bc
 
 set_option backward.isDefEq.respectTransparency false in

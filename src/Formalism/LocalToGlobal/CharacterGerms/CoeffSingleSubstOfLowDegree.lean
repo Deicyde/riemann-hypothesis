@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CharacterGerms.AbstractGermZeroCondition
 import Formalism.LocalToGlobal.CharacterGerms.RowTieCartAdd
 
@@ -171,7 +173,7 @@ theorem coeff_single_substX_tyS {τ : Type} {l : ℕ} (hl : 2 ≤ l) (a : ℕ �
     first
     | (rw [show MvPowerSeries.coeff (Finsupp.single () 1) = PowerSeries.coeff (R := C) 1 from rfl,
         PowerSeries.coeff_mk]
-       simp [Finset.sum_range_succ, hl1])
+       simp [hl1])
     | (rw [show MvPowerSeries.coeff (Finsupp.single () 1) = PowerSeries.coeff C 1 from rfl,
         PowerSeries.coeff_mk]
        simp [Finset.sum_range_succ, hl1])
@@ -357,7 +359,7 @@ theorem lg_addS {σ : Type} (Y : FBChart C V O dd) (a b : Fin dd → MvPowerSeri
   have e := congrArg (MvPowerSeries.subst (fun q : Fin 2 × Fin dd => ![a, b] q.1 q.2)) hfb
   rw [MvPowerSeries.subst_comp_subst_apply hF hP, MvPowerSeries.subst_add hP,
     MvPowerSeries.subst_comp_subst_apply hX0 hP, MvPowerSeries.subst_comp_subst_apply hX1 hP] at e
-  simp only [pt, MvPowerSeries.subst_X hP, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons] at e
+  simp only [pt, MvPowerSeries.subst_X hP, Matrix.cons_val_zero, Matrix.cons_val_one] at e
   exact e
 
 theorem gsum_const {σ ι : Type} (Y : FBChart C V O dd) (Γ : ι → Fin dd → MvPowerSeries σ C)

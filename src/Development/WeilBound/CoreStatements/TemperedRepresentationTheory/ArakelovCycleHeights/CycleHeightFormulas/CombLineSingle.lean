@@ -1,26 +1,10 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.ArakelovCycleHeights.QpSndStr
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ResidueDegreeOfIsClosedImmersion
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ArFormExists
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.BlowupProjections.BlowupProjStatement
 import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.ArakelovCycleHeights.CycleHeightFormulas.TopSelfTower
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.RationalityOfResolutionStatement
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsSmoothHermCombLine
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsPermOfCntEq
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MixedCycleCodimensionOne
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MixedCurveIntersectionFormula
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HeightEqOfFullIntersectionSystem
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MixedPolarizationIdentity
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HermRepTensorPower
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MixedCycleReadExists
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MixedCycleReadCombination
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MixedCyclePointDictionary
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MixedCycleRationalExistsStatement
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MixedCycleOfRationalStatement
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ArchimedeanIntegralEqStatement
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ArchimedeanIntegrableOnStatement
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ImportsFurther
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MixedPointLengthFormula
 
 set_option autoImplicit false
 
@@ -76,7 +60,7 @@ theorem last_powLine (II : IntersectionSystem) (hII : IsFullIntersectionSystem I
       funext j
       refine Fin.lastCases ?_ (fun j => ?_) j
       · simp
-      · simp [Function.update_of_ne (Fin.castSucc_lt_last j).ne]
+      · simp
     simpa only [e₁] using h
   have hs : (Fin.snoc (fun _ : Fin e => A) A : Fin (e + 1) → HermLine (Bk n)) = fun _ => A := by
     funext j
@@ -209,7 +193,7 @@ theorem combLine_single [DecidableEq κ] (A : κ → HermLine ι)
       rw [if_pos hz, Finset.prod_eq_single o]
       · simp
       · intro b _ hb
-        simp [Pi.single_apply, hb]
+        simp [hb]
       · simp
     · simp only [combLine]
       rw [if_neg hz, cA o z hz]

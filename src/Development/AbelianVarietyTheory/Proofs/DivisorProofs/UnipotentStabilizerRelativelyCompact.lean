@@ -1,10 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeEvFun
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AbsPowApply
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviEmbeddingLocalMeasurable
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryAdelicGroupTopology
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalLatticeIsClosed
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HaarRightInvariantCompact
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.ThK.LemF
@@ -22,7 +18,7 @@ theorem mul_quad {R A : Type} [CommRing R] [Ring A] [Algebra R A] (M : A) (h : M
   have h3 : M ^ 2 * M ^ 2 = 0 := by rw [← pow_add, show 2 + 2 = 3 + 1 from rfl, pow_succ, h, zero_mul]
   have h4 : M * M = M ^ 2 := (pow_two M).symm
   simp only [mul_add, add_mul, one_mul, mul_one, smul_mul_assoc, mul_smul_comm, h1, h2, h3, h4, smul_zero, add_zero,
-    add_smul, smul_smul, mul_comm s' s]
+    add_smul]
   module
 
 theorem mul_mem_intAt {F : Type} [Field F] [NumberField F] {v : Pl F} {a b : AF F}

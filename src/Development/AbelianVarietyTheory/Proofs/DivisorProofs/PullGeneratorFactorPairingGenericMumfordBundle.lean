@@ -1,11 +1,7 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.FacAlg
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.FormalEnd
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.MumfordConstruction
-import Development.AbelianVarietyTheory.Definitions.Degenerations.AdmissibleBaseOfCompleteDvr
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsMumfordBundlePullbackGrpPullback
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.IsIsoOfSurjectivePrincipalPairing
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.PolBaseChangeOfRelAmpleLocal
+import Development.AbelianVarietyTheory.Definitions.Divisors.TateProductRigidificationTrivial
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj IsLocalRing NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open scoped CategoryTheory.Obj
@@ -96,13 +92,13 @@ theorem pull_gen_lam_generic : ∀ (R : Type) [CommRing R] [IsDomain R] [IsLocal
       rw [reassoc_of% hψ1]
       rw [hβ₂.1]
       rw [reassoc_of% hm1]
-      simp only [Category.assoc, hinc']
+      simp only [hinc']
     · simp only [Category.assoc, Category.comp_id]
       rw [hφ2, reassoc_of% hκ.2]
       rw [reassoc_of% hψ2]
       rw [hβ₂.2]
       rw [reassoc_of% hm2]
-      simp only [Category.assoc, hf']
+      simp only [hf']
       rw [reassoc_of% hinc']
   have eq2 : m ≫ γ₂ ≫ 𝟙 _ = χl := by
     apply left_tensor_ext

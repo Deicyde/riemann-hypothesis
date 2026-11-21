@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AutomorphicArithmetic.LocalEmbeddings.FinMatchDefs
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.DivisorFrames.MemIntAfAndInIdIffSplitComponents
 import Development.AutomorphicArithmetic.DivisorFrames.UnitCharIdempotentSumEqProdOverSplitPlaces
+import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsReading
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S IsDedekindDomain NumberField Matrix
 open Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.Datum GlobalTheory.IndefiniteRowSideFullHecke.MatchingAdjoints GlobalTheory.Grid GlobalTheory.ChainFr GlobalTheory.SquareComm GlobalTheory.FinMatch

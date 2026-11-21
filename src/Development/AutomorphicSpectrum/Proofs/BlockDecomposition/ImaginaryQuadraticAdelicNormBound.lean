@@ -1,8 +1,6 @@
-import Mathlib
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.KFiniteAdelicGaussians.UpperRightUnipotentInvariance
-import GroundTheory.AutomorphicForms.ReductionFinite
-import GroundTheory.AutomorphicForms.ReductionMahler
-import GroundTheory.GlobalFields.TateThesis.AdelePoissonUniform
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.AutomorphicForms.ReductionHeight
 
 noncomputable section
 

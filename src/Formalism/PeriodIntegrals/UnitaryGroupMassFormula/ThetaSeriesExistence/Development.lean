@@ -1,9 +1,8 @@
-import Mathlib
-import Formalism.PeriodIntegrals.LatDefs
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.SigmaStarEx
-import Formalism.PeriodIntegrals.AreaLat
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.AreaLat
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ThetaSeriesExistence.ThetaDerivNe
+import Mathlib.Tactic.Polynomial.Basic
 
 noncomputable section
 

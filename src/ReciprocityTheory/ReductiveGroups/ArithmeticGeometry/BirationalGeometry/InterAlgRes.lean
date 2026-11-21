@@ -1,7 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterPC
-import ReciprocityTheory.AnalyticForms.RegularLocalRings.ExistsAtlas
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.SNCstep
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.Immersion
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterRes
 
 noncomputable section
 

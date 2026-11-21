@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.GlobalFields.ComplexMultiplication.Differential
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.ComplexMultiplication.DifferentialSeparable
 
 namespace GroundTheory.Global

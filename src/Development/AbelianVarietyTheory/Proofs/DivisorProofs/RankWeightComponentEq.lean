@@ -1,14 +1,11 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.LinksChar
-import Formalism.LocalToGlobal.Divisibility.LiftLatLemmas
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.PolarisedDualSystem
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.SupportedSubgroupSplitCommutePrimeIdempotentsStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.InvolutionSphericalHeckeAntiStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LevelHyperspecialTrivialCharacterSplitsOffPlacesStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsMemNotMem
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinPartConjMem
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeckeEltInvDivAtSplitLab
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapMulScalar
 
 noncomputable section
 
@@ -88,7 +85,7 @@ theorem coeff_heckePolyOf (n q : ℕ) (a : ℕ → L) (k : ℕ) :
   unfold heckePolyOf
   simp only [finset_sum_coeff, coeff_C_mul_X_pow]
   rw [Finset.sum_ite_eq]
-  simp [Nat.lt_succ_iff]
+  simp
 
 theorem tri_identity {n k : ℕ} (h : k ≤ n) :
     k * (k - 1) / 2 + n * (n - 1) / 2 = (n - k) * (n - k - 1) / 2 + (n - 1) * k := by

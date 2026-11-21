@@ -1,4 +1,5 @@
-import CompanionTheory.RealGroups.DiscreteSeries.DiscreteSeriesClassification.HilbertSpaceModels.StepSqInt
+import BuildAid.Leniency.Open
+import CompanionTheory.RealGroups.DiscreteSeries.DiscreteSeriesClassification.HilbertSpaceModels.StepFormulaF
 
 noncomputable section
 

@@ -1,6 +1,11 @@
-import Mathlib
-import Formalism.PeriodIntegrals.CharIdem
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CharacterIdempotents.Development
+import Mathlib.Data.Finsupp.Pointwise
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open CategoryTheory
 

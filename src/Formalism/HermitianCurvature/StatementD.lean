@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementC
 import Formalism.HermitianCurvature.FiniteOrderIntersectionInSmooth
 import Formalism.HermitianCurvature.OperatorsCommuteTranslations

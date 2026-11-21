@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ExistsSingle
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.Divisibility.DefGroup
 open Matrix Formalism.UG Formalism.L2.DIV GlobalTheory.LevNorm
 
 namespace GlobalTheory

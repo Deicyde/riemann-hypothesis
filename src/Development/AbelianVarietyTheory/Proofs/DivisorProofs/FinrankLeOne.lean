@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigCongr
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsColumnCharacterEigenSubmoduleNeBotStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviWhittakerColumnCharacterEigenVecMulNeBotStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsBlockTriVecMulEqSinglePredStatement
@@ -36,7 +36,7 @@ theorem edgeSum_split (b : Fin r → ℕ) (k : Fin r) (p : blockTri (κ := F) b)
       have h0 := hp.2 i j h
       rw [Matrix.one_apply_ne hij] at h0
       simp [he, h0]
-    · simp [he, h]
+    · simp [h]
     · simp [he, h, h.ne']
   · simp [he]
 

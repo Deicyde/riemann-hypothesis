@@ -1,5 +1,16 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.FlagUnipotentLattices.UnipotentStabiliserCharacterisation
-import Formalism.FormalDegreeBessel.FinalG
+import Mathlib.Analysis.Fourier.Inversion
+import Mathlib.MeasureTheory.Measure.Lebesgue.VolumeOfBalls
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace Formalism.HermitianLatticeCounting.P
 section GrpL
@@ -143,8 +154,7 @@ open scoped ComplexConjugate fwdDiff
 
 theorem rank_two_operator_skew_hermitian : Formalism.HermitianLatticeCounting.ExpansionTerms.RankTwoOperatorSkewHermitian := by
   intro V _ _ h hs e v x y
-  simp only [map_sub, LinearMap.sub_apply, map_smul, LinearMap.smul_apply, map_smulₛₗ, smul_eq_mul,
-    RingHom.id_apply]
+  simp only [map_sub, LinearMap.sub_apply, map_smul, LinearMap.smul_apply, map_smulₛₗ, smul_eq_mul]
   rw [← hs y v, ← hs y e]
   ring
 
@@ -674,7 +684,7 @@ lemma gj_cols {m n : ℕ} (s : Matrix (Fin m) (Fin m) ℂ) (F : Matrix (Fin m) (
 
 lemma gj_fvec_apply (k r : ℕ) (z : Fin (2 * r + k + 1) → ℂ) (c : Fin (r + 1)) (hc : c.val < r)
     (i : Fin (2 * r + k + 1)) : fvec k r z c i = if i.val = c.val then 1 else 0 := by
-  simp only [fvec, dif_pos hc, bvec, eI, Pi.single_apply, Fin.ext_iff, Fin.val_mk]
+  simp only [fvec, dif_pos hc, bvec, eI, Pi.single_apply, Fin.ext_iff]
 
 def gj_h (k r : ℕ) (p : Matrix (Fin (2 * r + k + 1)) (Fin (2 * r + k + 1)) ℂ) :
     Matrix (Fin (2 * r + k + 1)) (Fin (2 * r + k + 1)) ℂ := fun i j =>

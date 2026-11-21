@@ -1,10 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KStab
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolEqISupFockDeg
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KEqOnId
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FixPartEqBotOfLt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TprodMemDegLE
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeakExponentialActionOnFockVectors
@@ -31,7 +25,7 @@ theorem jm_eq_diagonal (p q : ℕ) :
   simp only [Matrix.diagonal_one]
   congr 1
   ext i j
-  by_cases h : i = j <;> simp [h, Matrix.diagonal_apply]
+  by_cases h : i = j <;> simp [h]
 
 theorem not_sameBlock_symm {p q : ℕ} {a b : Formalism.BasicNotions.TH.Ix p q} (h : ¬ Formalism.BasicNotions.TH.sameBlock a b) :
     ¬ Formalism.BasicNotions.TH.sameBlock b a := by

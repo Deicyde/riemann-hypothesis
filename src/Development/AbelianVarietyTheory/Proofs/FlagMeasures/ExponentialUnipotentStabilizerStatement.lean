@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExponentialUnipotentStabilizer
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.OfRoots
 open NumberField Module Matrix Formalism.MainNotions.S GlobalTheory.LoopV
 open scoped ENNReal Classical
 set_option maxHeartbeats 1000000 in

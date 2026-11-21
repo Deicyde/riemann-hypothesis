@@ -1,5 +1,7 @@
-import Formalism.SharpRestriction.GrowthBounds.PlaneCoefficients.NoOpStep
-import Formalism.SharpRestriction.GrowthBounds.TwistedSubstitution.TwistedMonomialFiltration.TwistSubXMemSupported
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.Lemma5aAt
+import Formalism.SharpRestriction.GrowthBounds.TwistedSubstitution.TwistedMonomialFiltration.MaxTwistDegreePderivLeAddOne
 
 noncomputable section
 
@@ -56,7 +58,7 @@ theorem multideg_add_single (mo : ι × Fin n →₀ ℕ) (x0 : ι) (a : Fin n) 
   by_cases h : i = x0
   · subst h
     simp [Finsupp.single_apply]
-  · simp [Finsupp.single_apply, h, Ne.symm h]
+  · simp [h]
 
 theorem mem_Pol' {d : ι → ℕ} {F : MvPolynomial (ι × Fin n) R} :
     F ∈ Pol R n d ↔ ∀ m ∈ F.support, ∀ i, multideg m i = d i := by

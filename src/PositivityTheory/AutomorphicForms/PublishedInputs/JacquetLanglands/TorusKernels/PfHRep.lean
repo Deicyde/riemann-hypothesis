@@ -1,11 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.JacquetLanglands.TorusKernels.IsHolVOf
-import Development.AutomorphicArithmetic.AutomorphicVarieties.IdeleGenerators.HolomorphicIrreducibility.HolCap
 import Development.AutomorphicArithmetic.AutomorphicVarieties.IdeleGenerators.HolomorphicIrreducibility.UopSum
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.RDual2
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.TemperedLocalComponents.SatR
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CapCommuteRtInfGL
 import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.AbsPowOneNotIsAlgRat
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsUnitaryOfCharIff
+import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.RTwist
 
 noncomputable section
 
@@ -67,7 +65,7 @@ theorem lie_eq_sum (X : Matrix (Fin a) (Fin a) (TR.Rinf F)) :
   let L : Matrix (Fin a) (Fin a) (TR.Rinf F) →ₗ[ℝ] Module.End ℂ (TR.Sm F a) := TR.lie F a
   have e : X = ∑ v, ∑ i, ∑ j, X i j v • Matrix.single i j (Pi.single v 1 : TR.Rinf F) := by
     ext i j v
-    simp [Matrix.sum_apply, Matrix.single_apply, ite_and, Pi.single_apply, ite_apply]
+    simp [Matrix.sum_apply, Matrix.single_apply, ite_and, Pi.single_apply]
   change L X = _
   conv_lhs => rw [e]
   simp only [map_sum, map_smul]

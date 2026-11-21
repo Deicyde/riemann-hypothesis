@@ -1,5 +1,5 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.MirabolicDerivatives.TwistedKernels.ExPhiPlusOnto
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ThetaAEqOfUnip
 
 noncomputable section
@@ -25,7 +25,7 @@ theorem twKer_le_comap_levi (ψ : AddChar k Circle) {n : ℕ} {V : Type} [AddCom
   first
     | (obtain ⟨u, w, rfl⟩ := hx
        obtain ⟨hm, hc⟩ := GlobalTheory.CompanionTheory.BZMirabolic.thetaConj k ψ n a m u
-       simp only [SetLike.mem_coe, Submodule.mem_comap, map_sub, Units.smul_def, map_smul]
+       simp only [SetLike.mem_coe, Submodule.mem_comap, map_sub, map_smul]
        rw [key, hc]
        exact Submodule.subset_span ⟨⟨_, hm⟩, _, rfl⟩)
     | (obtain ⟨⟨u, w⟩, rfl⟩ := hx

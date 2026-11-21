@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.DifferentialTranslates.IntegralityGoodReduction
 import Mathlib.RepresentationTheory.Homological.GroupCohomology.LongExactSequence
-import Mathlib.LinearAlgebra.Dimension.Basic
+import Mathlib.Combinatorics.Quiver.ReflQuiver
+import Mathlib.RepresentationTheory.Coinduced
 
 noncomputable section
 

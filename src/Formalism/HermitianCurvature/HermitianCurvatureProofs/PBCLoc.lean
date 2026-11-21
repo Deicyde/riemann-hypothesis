@@ -1,7 +1,8 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.PBCStep
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.PBCLat
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.PBCBlk
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.PBBLiftV
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.StatementKB
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 namespace Formalism.FourierDecayAlt.P.PBC
 
@@ -81,7 +82,7 @@ theorem offdiag_bound {Z : Type} (w : Z → Z → ℂ) (a b : Z → Z → ℂ) (
   rw [Complex.nonneg_iff] at hd0 hd1
   have hw : ‖w p p‖ ^ 2 ≤ (a p p).re * (b p p).re := by
     have h3 := hdet.1
-    simp only [Complex.sub_re, Complex.mul_re, Complex.mul_conj, Complex.ofReal_re,
+    simp only [Complex.mul_re, Complex.mul_conj, Complex.ofReal_re,
       Complex.normSq_eq_norm_sq, ← hd0.2, ← hd1.2] at h3
     nlinarith [h3]
   calc ‖w p p‖ ^ 2 ≤ (a p p).re * (b p p).re := hw

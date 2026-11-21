@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdelicClassFiniteness.PartShortOf
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdelicClassFiniteness.HformSmulRight
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.Algebra.Ring.IsFormallyReal
 
 noncomputable section
 
@@ -64,7 +68,7 @@ theorem successive_vector_gram_det : SvGramDet := by
       by_cases h : a = i
       · subst h
         simp
-      · simp [Pi.single_apply, h]
+      · simp [h]
     rw [hs]
     first
       | rw [single_dotProduct, one_mul]

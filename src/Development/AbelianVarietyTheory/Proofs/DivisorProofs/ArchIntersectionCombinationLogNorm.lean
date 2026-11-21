@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.LineSCShortExact
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ChernPartOverProperClosedEqZero
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArithVarComplexPointsCompactStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ChernPartCombinationPowerStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeightedIntegralChernCombinationStatement

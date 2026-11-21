@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsMidJacAt
+import Mathlib.RingTheory.PicardGroup
 
 noncomputable section
 
@@ -53,7 +54,7 @@ theorem stab (k : Type) [Field k] (n x x' : ℕ) (hx : x < n) (t : kˣ) (X : Mat
         omega
       have hab' : a ≠ b := by rintro rfl; exact lt_irrefl _ hab
       rw [hpG, hP]
-      simp [vecMulVec_apply, hu, Pi.single_apply, hb, one_apply, hab']
+      simp [vecMulVec_apply, hu, hb, one_apply, hab']
     refine ⟨g0⁻¹, ⟨pG, hmem⟩, ?_, ?_⟩
     · have hT : (P)ᵀ = 1 + vecMulVec (c • u) (ψ ᵥ* X) := by
         rw [hP, transpose_add, transpose_one, transpose_vecMulVec]

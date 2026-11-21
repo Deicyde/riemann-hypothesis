@@ -1,9 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsFlagModelHermSum
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.EqOfIsometricTrivShift
-import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.ExistsLinearOfIsMonHom
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.HermFormPullEqOfLbIsoPow
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.EqZeroOfFderivEqZero
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.DifferentiableOnProdOfForall
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.LbIsoOfSameFactor
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.IsMonHomLift
@@ -100,7 +98,7 @@ theorem factor_diag (hT : ∀ z, u'.ex (T z) = u.ex z ≫ ψ) {H : Matrix (Fin g
   change ∏ k, u'.fr (i k) (![T + T, T, 0] k z) ^ (![1, -2, 1] k : ℤ) =
     _ * ∏ k, u'.fr (i k) (![T + T, T, 0] k (z + l)) ^ (![1, -2, 1] k : ℤ)
   simp only [Fin.prod_univ_three, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val, LinearMap.add_apply,
-    LinearMap.zero_apply, map_add, zpow_one, zpow_neg, zpow_ofNat]
+    LinearMap.zero_apply, map_add, zpow_neg, zpow_ofNat]
   rw [h0, h1, add_zero]
   simp only [hermForm, star_add, Matrix.mulVec_add, add_dotProduct, dotProduct_add]
   generalize (T z ⬝ᵥ H.mulVec (star (T l))) = a

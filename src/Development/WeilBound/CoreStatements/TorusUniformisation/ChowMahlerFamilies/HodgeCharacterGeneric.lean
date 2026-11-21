@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.GermSys
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsFlatAnIffIsConstMul
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Crv GlobalTheory.CompanionTheory.Ar.Conj GlobalTheory.CompanionTheory.Ar.Flat GlobalTheory.CompanionTheory.Ar.Fl
@@ -92,7 +91,7 @@ theorem charpoly_eq [Fintype (E →+* K)] [FiniteDimensional K V]
       rw [LinearMap.toMatrix_apply, mem_eigSp.1 (hb j) a, map_smul, b.repr_self, Matrix.diagonal_apply]
       by_cases hij : i = j
       · subst hij; simp
-      · simp [hij, Finsupp.single_apply, Ne.symm hij]
+      · simp [hij]
     rw [← LinearMap.charpoly_toMatrix _ b, hm, Matrix.charpoly_diagonal, Fintype.prod_sigma]
     simp
   · rw [Module.finrank_eq_card_basis b]
@@ -151,7 +150,7 @@ theorem charpoly_rhoH {O : Type} [CommRing O] [StarRing O] {d : ℕ} (B : Germ.F
         (Matrix.transpose (rho B (star a))) := by
     ext i j
     rcases i with i | i <;> rcases j with j | j <;>
-      simp [b, LinearMap.toMatrix_apply, rhoH, Matrix.toLin'_apply, Matrix.mulVec_single_one]
+      simp [b, LinearMap.toMatrix_apply, rhoH, Matrix.toLin'_apply]
   rw [← LinearMap.charpoly_toMatrix (rhoH B a) b, hM, Matrix.charpoly_fromBlocks_zero₁₂,
     Matrix.charpoly_transpose]
 

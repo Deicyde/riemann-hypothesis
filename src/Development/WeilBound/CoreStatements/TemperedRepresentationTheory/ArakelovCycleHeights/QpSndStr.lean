@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.AbelianHeightsDuality.ArakelovSingularities.ArMixIff
-import Development.WeilBound.CoreStatements.AbelianHeightsDuality.ArakelovSingularities.ExtLBAmb
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterNamed
+import GroundTheory.ArithmeticGeometry.SchemeCohomology.ProperCohomology.ChowProduct
 
 set_option autoImplicit false
 

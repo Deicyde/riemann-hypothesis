@@ -1,5 +1,4 @@
-import Mathlib
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.KFiniteThetaLifts.PureThetaTransfer.REALTH
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WeilModulusHypothesis
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FieldInducedMaxCompactVector
 open NumberField IsDedekindDomain MeasureTheory Matrix GroundTheory.Global GroundTheory.LocalField GroundTheory.Automorphic Ad3 Ad3.K Ad3.K.QuadraticBaseChangeGL3 Ad3.K.QuadraticBaseChangeGL3.Th ComplexConjugate
@@ -53,7 +52,7 @@ theorem sphf : Ad3.K.GL2LocalData.WPiRep → Ad3.K.QuadraticBaseChangeGL3.Th.PIK
     have hu1 : (u : F) ∈ 𝒪[F] := GlobalTheory.CompanionTheory.PiKFUnr.det_mem_of_entries hk1
     have hu2 : ((u⁻¹ : Fˣ) : F) ∈ 𝒪[F] := by
       have : ((u⁻¹ : Fˣ) : F) = ((k⁻¹ : GL (Fin 2) F).val).det := by
-        simp [u, map_inv]
+        simp [u]
       rw [this]
       exact GlobalTheory.CompanionTheory.PiKFUnr.det_mem_of_entries hk2
     have hex : ∃ t : Eˣ, Algebra.norm F (t : E) = (k.val).det :=

@@ -1,7 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.InertKernelTheory.DefsFrONB
 import Formalism.LocalToGlobal.InertKernelTheory.InertCoprimeLemmas.IntBasis
-import Formalism.LocalToGlobal.GlobalTheory.GL3.IsometryLinkageTrivialLevel
-import Formalism.LocalToGlobal.GlobalTheory.GL3.PSelfDual
 
 noncomputable section
 
@@ -244,7 +244,7 @@ theorem norm_le_one_of_int {k : Type*} [NormedField k] [IsUltrametricDist k] {y 
     have h := hP
     rw [hPm.as_sum] at h
     simp only [Polynomial.eval₂_add, Polynomial.eval₂_X_pow, Polynomial.eval₂_finset_sum,
-      Polynomial.eval₂_mul, Polynomial.eval₂_C, Polynomial.eval₂_X_pow, algebraMap_int_eq, eq_intCast] at h
+      Polynomial.eval₂_mul, Polynomial.eval₂_X_pow, algebraMap_int_eq, eq_intCast] at h
     refine eq_neg_of_add_eq_zero_left ?_
     rw [← h]
     congr 1

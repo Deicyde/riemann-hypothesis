@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Statements.AlgebraStatements.HodgeTateNormComparison
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.IsPolLatticePlane
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.HodgeTateChartDualPairingStatement
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.HodgeTateChartTestPointStatement
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.HodgeTateChartNonUnitPStatement

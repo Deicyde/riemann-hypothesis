@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HasFiniteLengthOfIsIrreducible
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.BlockTriangularOneAddMat
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IwasawaBlockTriangular
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IwahoriProjSurjective
 
 noncomputable section
 

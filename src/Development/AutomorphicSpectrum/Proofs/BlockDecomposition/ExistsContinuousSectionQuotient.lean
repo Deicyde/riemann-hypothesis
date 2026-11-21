@@ -1,5 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.LocallyProfinite
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Topology.Algebra.ProperAction.Basic
+import Mathlib.Topology.Compactness.Paracompact
+import Mathlib.Topology.Separation.Connected
+import Mathlib.Topology.Sheaves.Presheaf
 
 open Topology Filter Set
 

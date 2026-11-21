@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.OneMapT
 import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.SecBCAndCuspBC
 import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.ActLevAndActBC

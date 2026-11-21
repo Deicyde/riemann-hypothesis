@@ -1,4 +1,5 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.Rationality.FunKerSt
+import BuildAid.Leniency.Open
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.Rationality.DescSt
 
 namespace ReciprocityTheory.ChartRestriction.G.AR.Up
 

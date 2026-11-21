@@ -1,8 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SymTupOne
-import Development.AbelianVarietyTheory.Statements.TorsionEndomorphisms.EndDeterminedOnTorsion
-import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.MinSt2
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UniversalTripleFibrePrincipallyPolarisedDimensio
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UniformisedPointExtendsAlongThetaMapStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaMapAbelianSchemeNormalCharZeroBaseStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaMapPullO1PowerStatement
@@ -139,6 +135,6 @@ theorem umin_theta_compactification_exists : UMinSt := by
     exact ⟨ξ, h₃, by rw [reassoc_of% h₄, h₂]⟩
   · intro o' Ω _ _ _ _ S ρ u hu' _ M π hM hπ
     exact h_thint_P E H Dw l Xo c o _ n f hodd h3m hu hn hT o' Ω S ρ u hu' M (π ≫ p) (@GlobalTheory.IsNormalScheme.pred _ hM)
-      (by rw [reassoc_of% hπ]; simp only [Category.assoc, hif])
+      (by rw [reassoc_of% hπ]; simp only [hif])
 
 end GlobalTheory

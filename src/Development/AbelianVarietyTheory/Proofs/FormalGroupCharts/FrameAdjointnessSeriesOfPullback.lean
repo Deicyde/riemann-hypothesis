@@ -1,13 +1,8 @@
-import Mathlib
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GermCut
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GermBGen
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ChartPrimTrPfA
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.IntChartPf
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ExistsTruncatedIntegralChart
-import Formalism.LocalToGlobal.ProjectiveLattices.PlaceBelow
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.SecBaseChangeAnySt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.RosVal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FormalGroupCharts.FrameSymmetryIffPullback
+import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GermBPrim
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsMonHomOfMul
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj Formalism.MainNotions.ModuliIntegralCharts.H1
@@ -53,8 +48,8 @@ theorem subst_psIn (m : ℕ) {n n' : ℕ} (r : Fin n → Fin n') (g : Fin d → 
       MvPolynomial.rename fun p : Fin n × Fin d => (r p.1, p.2) := MvPolynomial.algHom_ext fun q => by simp
   apply GermD.jet_hom_ext
   intro p
-  simp only [jetSubstP, jetRen, AlgHom.comp_apply, GermD.jetMap_mk, MvPolynomial.aeval_X, map_sub, MvPolynomial.aeval_C,
-    MvPolynomial.algebraMap_eq, psIn, MvPolynomial.constantCoeff_rename, hr, MvPolynomial.rename_C]
+  simp only [jetSubstP, jetRen, AlgHom.comp_apply, GermD.jetMap_mk, MvPolynomial.aeval_X, map_sub,
+    psIn, MvPolynomial.constantCoeff_rename, hr, MvPolynomial.rename_C]
 
 end Pts
 

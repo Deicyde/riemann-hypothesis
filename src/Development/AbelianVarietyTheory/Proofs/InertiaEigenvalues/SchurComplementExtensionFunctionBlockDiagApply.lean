@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsIdempotentElemIdemSf
+import GroundTheory.AutomorphicForms.FourierWhittaker.UMatColXEqFromBlocks
 open NumberField IsDedekindDomain GlobalTheory.CuspRep GlobalTheory.SchurExt
 open scoped ContDiff Topology
 
@@ -48,7 +49,7 @@ theorem schurF_blockGL (E : Type) [Field E] [NumberField E] [IsTotallyComplex E]
     rw [chiF, h0]
     simp [zero_mem]
   rw [schurF, if_pos (by rw [hD]; simp), Xof, Scof, Yof, hA, hB, hC, hD]
-  simp only [inv_one, Matrix.mul_one, Matrix.zero_mul, Matrix.mul_zero, sub_zero, Matrix.zero_apply]
+  simp only [inv_one, Matrix.mul_one, Matrix.mul_zero, sub_zero, Matrix.zero_apply]
   rw [hpsi, hmk, hmk1, hchi, one_mul]
 
 end GlobalTheory.SchurExt

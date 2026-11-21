@@ -1,10 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.ExistsHeightLeTwoMulQuotHeight
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqZeroOfAtOfPiInf
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIdeleWithArchimedeanComponents
+import Mathlib.Topology.Algebra.Group.OpenMapping
+import Mathlib.Topology.Baire.LocallyCompactRegular
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK
@@ -248,7 +247,7 @@ theorem integrable_decay (k : ℕ) :
       ENNReal.inv_pow]
   have h1 : 0 ≤ decay (k + 1) N (toUnits b) := by rw [hd]; positivity
   have h2 : 0 ≤ ∏ i, (1 + ‖b i‖) ^ (-(3 : ℝ)) := Finset.prod_nonneg fun i _ => by positivity
-  simp only [Pi.mul_apply, Function.comp]
+  simp only [Pi.mul_apply]
   rw [hw, Real.enorm_eq_ofReal h1, Real.enorm_eq_ofReal h2, ← ENNReal.ofReal_mul (by positivity), hd]
   exact ENNReal.ofReal_le_ofReal (decay_bound k (fun i => ‖b i‖) hx)
 

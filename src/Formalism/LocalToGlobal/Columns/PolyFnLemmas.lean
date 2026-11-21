@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.PolyFn
-import Formalism.GradedWeylDivisibility.FinalD
-import Formalism.GradedWeylDivisibility.FockSpaceTableaux.LDlatLemmas
+import Formalism.GradedWeylDivisibility.FinalB
+import Formalism.GradedWeylDivisibility.FockSpaceTableaux.LClosedeqLemmas
 
 noncomputable section
 
@@ -32,7 +35,7 @@ theorem map_fockS (s : K →+* ℂ) (f g : MvPolynomial σ K) (hf : ∀ m, s (st
     fun x hx => Finset.mem_union_right _ (MvPolynomial.support_map_subset _ _ hx)
   rw [fockF_eq_sum _ _ _ hsg, map_sum, Finset.sum_subset hsf ?_]
   · refine Finset.sum_congr rfl fun m _ => ?_
-    simp only [MvPolynomial.coeff_map, map_mul, hf m, map_natCast, mfact, Finsupp.prod]
+    simp only [MvPolynomial.coeff_map, map_mul, hf m, map_natCast, mfact]
     ring
   · intro m _ hm
     have hc : f.coeff m = 0 := by simpa [MvPolynomial.mem_support_iff] using hm

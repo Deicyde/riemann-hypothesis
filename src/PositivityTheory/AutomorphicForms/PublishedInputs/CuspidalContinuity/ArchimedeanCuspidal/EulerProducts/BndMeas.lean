@@ -1,4 +1,6 @@
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.EulerProducts.GenStable
+import BuildAid.Leniency.Open
+import GroundTheory.GlobalFields.IdeleGroups.Rational
+import GroundTheory.GlobalFields.TateThesis.AdeleMeasure
 
 noncomputable section
 

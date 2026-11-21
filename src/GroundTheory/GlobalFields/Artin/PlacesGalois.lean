@@ -1,6 +1,7 @@
-import Mathlib
-import GroundTheory.GlobalFields.Artin.PlacesFrobenius
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.Artin.PlacesInfinite
+import GroundTheory.GlobalFields.Artin.Places
 set_option maxSynthPendingDepth 1
 
 noncomputable section

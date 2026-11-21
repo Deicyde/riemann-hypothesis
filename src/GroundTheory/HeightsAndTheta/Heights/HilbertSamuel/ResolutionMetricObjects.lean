@@ -1,7 +1,7 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsDefectMetricChange
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.IsBergDensity
-import ReciprocityTheory.AnalyticForms.PotentialTheory.IsPotentialOfFun
+import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.ArithRes
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.HilbertSamuel

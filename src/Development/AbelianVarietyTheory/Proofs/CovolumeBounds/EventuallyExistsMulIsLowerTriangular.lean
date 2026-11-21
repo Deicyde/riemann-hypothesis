@@ -1,7 +1,13 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.ThetaMetrics.SumFinsuppAntidiagProdPowDivMultiFactorial
-import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.ExistsMinorProdEqSmulColActBasePoly
-import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.IntegralConjInnerMulInnerOfIsEmptyEquiv
+import Development.AbelianVarietyTheory.Definitions.ThetaMetrics.IsWeightedHomogeneousOfMemOrbitSpan
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.TotallySplit
 
 open MvPolynomial Matrix Topology Filter
 open GlobalTheory.MvPoly
@@ -27,7 +33,7 @@ theorem pderiv_algHom_of_linear {R : Type*} [CommRing R]
       rw [Finset.sum_eq_single k]
       · simp [smul_eq_C_mul, mul_comm]
       · intro j _ hj
-        simp [pderiv_X, Pi.single_apply, hj.symm]
+        simp [pderiv_X, hj.symm]
       · simp
     rw [map_mul, Derivation.leibniz, hP, h1, smul_eq_mul, smul_eq_mul, ← h2, Finset.mul_sum,
       ← Finset.sum_add_distrib]
@@ -77,14 +83,14 @@ theorem fockInner_colSubst (A B : T → Matrix κ κ ℂ) (P Q : Poly ℂ T p q 
     Sum.elim (fun _ => A v.1 v.2.2 w.2.2) (fun _ => B v.1 w.2.2 v.2.2) v.2.1 else 0) ?_ ?_ P Q
   · rintro ⟨t, a | b, k⟩
     · rw [colSubst_X_xVar, xForm_apply]
-      simp [Fintype.sum_prod_type, ite_and, smul_eq_C_mul, apply_ite C]
+      simp [Fintype.sum_prod_type, ite_and, smul_eq_C_mul]
     · rw [colSubst_X_yVar, yForm_apply]
-      simp [Fintype.sum_prod_type, ite_and, smul_eq_C_mul, apply_ite C]
+      simp [Fintype.sum_prod_type, ite_and, smul_eq_C_mul]
   · rintro ⟨t, a | b, k⟩
     · rw [colSubst_X_xVar, xForm_apply]
-      simp [Fintype.sum_prod_type, ite_and, smul_eq_C_mul, apply_ite C, apply_ite star]
+      simp [Fintype.sum_prod_type, ite_and, smul_eq_C_mul, apply_ite star]
     · rw [colSubst_X_yVar, yForm_apply]
-      simp [Fintype.sum_prod_type, ite_and, smul_eq_C_mul, apply_ite C, apply_ite star]
+      simp [Fintype.sum_prod_type, ite_and, smul_eq_C_mul, apply_ite star]
 
 theorem fockInner_colAct [DecidableEq κ] (g : T → GL κ ℂ) (P Q : Poly ℂ T p q κ) :
     fockInner (colAct ℂ T p q κ g P) Q = fockInner P (colAct ℂ T p q κ (star g) Q) := by

@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.PrincipalLattices.LogHermFormOfUnitDiscriminant
-import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.MeanLogCovolumeEqMeanClassGroup
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.LogPiSubMeanLogLatticeNormDisc
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.HomDerivBaseChange
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.MultiplierIffExistsHom

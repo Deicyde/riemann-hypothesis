@@ -1,13 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAut
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RegFamOfContinuousAt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BoxC
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoubledModelDarbouxWeilActionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoubledPairEmbeddingBlockDiagonalStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoubledPairDarbouxSeesawStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepresentationPreservesSchwartz
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK
@@ -26,16 +21,15 @@ theorem topC_mul_blk {n d : ℕ} (u : Matrix (Fin n) (Fin (d + d)) (AE F E)) (A 
   simp only [topC, Matrix.submatrix_apply, Matrix.mul_apply, Matrix.transpose_apply, blkMat, id, Function.comp_apply]
   rw [← finSumFinEquiv.sum_comp]
   simp only [Equiv.symm_apply_apply, Fintype.sum_sum_type, Matrix.fromBlocks_apply₁₁, Matrix.fromBlocks_apply₁₂,
-    Matrix.fromBlocks_apply₂₁, Matrix.fromBlocks_apply₂₂, Matrix.zero_apply, mul_zero, Finset.sum_const_zero, add_zero,
-    zero_add]
+    Matrix.zero_apply, mul_zero, Finset.sum_const_zero, add_zero]
 
 theorem botC_mul_blk {n d : ℕ} (u : Matrix (Fin n) (Fin (d + d)) (AE F E)) (A C : Matrix (Fin d) (Fin d) (AE F E)) :
     botC (u * (blkMat finSumFinEquiv A C)ᵀ) = botC u * Cᵀ := by
   ext r j
   simp only [botC, Matrix.submatrix_apply, Matrix.mul_apply, Matrix.transpose_apply, blkMat, id, Function.comp_apply]
   rw [← finSumFinEquiv.sum_comp]
-  simp only [Equiv.symm_apply_apply, Fintype.sum_sum_type, Matrix.fromBlocks_apply₁₁, Matrix.fromBlocks_apply₁₂,
-    Matrix.fromBlocks_apply₂₁, Matrix.fromBlocks_apply₂₂, Matrix.zero_apply, mul_zero, Finset.sum_const_zero, add_zero,
+  simp only [Equiv.symm_apply_apply, Fintype.sum_sum_type,
+    Matrix.fromBlocks_apply₂₁, Matrix.fromBlocks_apply₂₂, Matrix.zero_apply, mul_zero, Finset.sum_const_zero,
     zero_add]
 
 theorem diag_box (σ : E →ₐ[F] E) (B : Base F E) (n d : ℕ) (Xs : Spc F E n) (W : Spc F E d) (M : Model σ Xs W)

@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.MemKFinOfIsLocallyConstant
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsLocallyConstantSplitOm
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLocallyConstantLinOm
 
 noncomputable section

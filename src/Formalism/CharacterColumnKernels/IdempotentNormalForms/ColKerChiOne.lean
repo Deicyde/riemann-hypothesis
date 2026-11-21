@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.CharacterColumnKernels.CharacterColumnKernelEqualityForm
 import Formalism.CharacterColumnKernels.IdempotentNormalForms.ColKer
-import Formalism.CharacterColumnKernels.IdempotentNormalForms.LengthKerSmulLe
 
 open Finset
 

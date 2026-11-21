@@ -1,6 +1,4 @@
-import Mathlib
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.DifferentialOperatorBracket
-import Formalism.RealPlaceAnalysis.ThirdArithmeticHolds
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.IntertwinerExpOfIntertwiner
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ExistsLinearEquivOfIrreducibleCapelli
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ExistsIsometryOfIntertwinerOfIrreducible

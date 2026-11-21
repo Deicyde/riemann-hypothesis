@@ -1,6 +1,6 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TailIntegrals.InductiveHeisenbergInputs
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TailIntegrals.ScaleInt
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TailIntegrals.HeisenbergMapContinuous
+import Mathlib.MeasureTheory.Constructions.HaarToSphere
 
 noncomputable section
 

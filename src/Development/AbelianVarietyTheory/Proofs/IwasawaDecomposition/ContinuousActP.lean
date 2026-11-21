@@ -1,7 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.Divisibility.CoefModLemmas
-import Formalism.LocalToGlobal.Columns.CoefModB
-import Formalism.LocalToGlobal.Columns.PolyFnLemmas
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.TensorMapDescent
 
 noncomputable section

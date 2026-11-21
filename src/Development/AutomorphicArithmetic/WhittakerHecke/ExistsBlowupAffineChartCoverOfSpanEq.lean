@@ -1,9 +1,5 @@
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.KunnethLefschetz.EtaleCharts.FinCover
-import GroundTheory.ArithmeticGeometry.SchemeCohomology.ProperCohomology.ProjSpaceHom
-import Development.ResolutionOfSingularities.Foundations.Blowup.AffineBlowupUniversal
+import BuildAid.Leniency.Open
 import Development.ResolutionOfSingularities.Foundations.Blowup.BlowupExistence
-import Development.ResolutionOfSingularities.Foundations.Blowup.AffineBlowupCartier
-import Development.ResolutionOfSingularities.Foundations.Schemes.IdealSheafData
 import Development.AutomorphicArithmetic.WhittakerHecke.SurjectiveEvalBlowupChartOfSpanEq
 
 open CategoryTheory Limits AlgebraicGeometry ReciprocityTheory.ChartRestriction.G.Geo.Tor FunctorialResolution.Blowup

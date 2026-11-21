@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.TiltComplexPadicIsAlgClosedUnitBall
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.ImportsAlt
-import GroundTheory.PAdicHodge.TiltField
 open Formalism.Per GlobalTheory.PSer
 open scoped Formalism.Per
 set_option maxHeartbeats 1000000 in

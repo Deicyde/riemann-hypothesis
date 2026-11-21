@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.HermitianColumns.InLocalDiscriminantKernel
-import Formalism.SatakeDualWeyl.DefsCS
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.CsGlob
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.CsApprox
 import Formalism.LocalRingCardinality.SpanPowerMembership.Spaces

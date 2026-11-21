@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.BsLApply
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLuSubring
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LowMulUpULeadMinorNeZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UpUUniqueOfLower

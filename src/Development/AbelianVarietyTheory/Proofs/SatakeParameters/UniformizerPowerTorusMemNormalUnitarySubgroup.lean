@@ -1,8 +1,8 @@
-import Mathlib
-import Formalism.SatakeDualWeyl.KpqSubgroupCompact
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.FIwasawa
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.FSatakeB
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.InvMemDoubleCosetAndComm
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.FIwasawaB
+import Mathlib.RingTheory.SimpleRing.Principal
+import Std.Tactic.BVDecide.Normalize.Prop
 open Formalism.UG Matrix
 
 noncomputable section
@@ -167,7 +167,7 @@ theorem exists_mem_pm (σ : L →+* L) {n : ℕ} (hσv : ∀ x, Valued.v (σ x) 
   congr 1 <;> funext i <;>
     rcases idx_cases i with ⟨h1, h2⟩ | ⟨h1, h2⟩ | ⟨h1, h2, h3⟩ <;>
     simp only [Fin.val_rev] at h1 h2 <;>
-    simp [hu, hl, h1, h2, Fin.rev_rev, hy0]
+    simp [hu, hl, h1, h2, hy0]
 
 end GlobalTheory.TorusNormal
 

@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.IdeleGroups.GaloisOnAdeles.Action
+import Mathlib.RepresentationTheory.Coinduced
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

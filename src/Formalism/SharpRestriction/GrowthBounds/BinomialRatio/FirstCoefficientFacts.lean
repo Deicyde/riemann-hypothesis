@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.BinomialRatio.RankDefs
 import Formalism.SharpRestriction.GrowthBounds.BinomialRatio.OtherStart
 import Formalism.SharpRestriction.GrowthBounds.BinomialRatio.CoarseDegreeAlternative

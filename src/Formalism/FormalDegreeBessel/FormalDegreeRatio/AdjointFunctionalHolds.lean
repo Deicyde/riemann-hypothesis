@@ -1,5 +1,13 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.FormalDegreeBessel.StatementWR
+import Mathlib.Analysis.Calculus.FDeriv.Star
+import Mathlib.Analysis.Calculus.LineDeriv.IntegrationByParts
+import Mathlib.Analysis.InnerProductSpace.Calculus
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Topology.Separation.CompletelyRegular
+import Mathlib.Topology.Sheaves.Presheaf
 
 open scoped ContDiff
 open MeasureTheory
@@ -29,7 +37,7 @@ theorem wirt_star_fun (l : Fin m) (g : (Fin m → ℂ) → ℂ) (x : Fin m → �
     wirt l (fun y => star (g y)) x = star (wirtBar l g x) := by
   unfold wirt wirtBar
   rw [fderiv_star]
-  simp only [ContinuousLinearMap.coe_comp', Function.comp_apply, ContinuousLinearMap.coe_coe,
+  simp only [ContinuousLinearMap.coe_comp', Function.comp_apply,
     ContinuousLinearEquiv.coe_coe, starL'_apply, smul_eq_mul, Complex.star_def, map_add, map_mul, map_div₀, map_one, map_ofNat,
     Complex.conj_I]
   ring
@@ -52,7 +60,7 @@ theorem uW_line (l : Fin m) (x : Fin m → ℂ) (a : ℂ) (t : ℝ) :
   have key : (star (x l) + (t : ℂ) * star a)⁻¹ =
       (x l + t * a) * (((Complex.normSq (x l + t * a))⁻¹ : ℝ) : ℂ) := by
     have e : star (x l) + (t : ℂ) * star a = (starRingEnd ℂ) (x l + t * a) := by
-      simp [Complex.star_def, map_add, map_mul, Complex.conj_ofReal]
+      simp [map_add, map_mul, Complex.conj_ofReal]
     rw [e, Complex.inv_def, Complex.conj_conj, Complex.normSq_conj]
   unfold uW
   rw [hprod, hl, key, mul_inv, Complex.ofReal_mul]
@@ -116,7 +124,7 @@ theorem tsupport_star_fun (g : (Fin m → ℂ) → ℂ) : tsupport (fun y => sta
   unfold tsupport
   congr 1
   ext x
-  simp [Function.mem_support, star_eq_zero]
+  simp [Function.mem_support]
 
 theorem integrable_of_on {φ h : (Fin m → ℂ) → ℂ} (hc : ContinuousOn φ (OmX m))
     (hs : tsupport φ ⊆ tsupport h) (hK : HasCompactSupport h) (hΩ : tsupport h ⊆ OmX m) :

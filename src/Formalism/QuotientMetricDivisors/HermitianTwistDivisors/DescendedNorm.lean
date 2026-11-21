@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.QuotientMetricDivisors.HeightBoundExactNorms
-import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.ReductionThirdStepMean
 import Formalism.HarderNarasimhan.HarderNarasimhanProofs.SlopeIneqMean
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.RingTheory.TotallySplit
 
 open Module NumberField
 open scoped Matrix ComplexOrder InnerProductSpace
@@ -21,7 +23,7 @@ theorem cnorm_nonneg {n : ℕ} (u : Fin n → ℂ) : 0 ≤ Formalism.HermitianLa
 
 theorem cnorm_star {n : ℕ} (u : Fin n → ℂ) : Formalism.HermitianLatticesTheory.cnorm (star u) = Formalism.HermitianLatticesTheory.cnorm u := by
   first
-    | simp [Formalism.HermitianLatticesTheory.cnorm, norm_star]
+    | simp [Formalism.HermitianLatticesTheory.cnorm]
     | simp [Formalism.HermitianLatticesTheory.cnorm, Complex.norm_conj]
 
 theorem norm_dot_le {n : ℕ} (y w : Fin n → ℂ) :
@@ -56,7 +58,7 @@ theorem opNorm_le_iff {a D : ℕ} (A : Matrix (Fin D) (Fin a) ℂ) (c : ℝ) (hc
         Formalism.HermitianLatticesTheory.cnorm (A.mulVec x) := by
     intro x
     rw [cnorm_eq]
-    simp [Matrix.toEuclideanLin_apply]
+    simp
   constructor
   · intro h x y
     have h2 : Formalism.HermitianLatticesTheory.cnorm (A.mulVec x) ≤ c * Formalism.HermitianLatticesTheory.cnorm x := by
@@ -634,7 +636,7 @@ theorem place_bound {K : Type} [Field K] [NumberField K] [StarRing K] {n D a b :
     by_cases h : i = j
     · subst h
       simp
-    · simp [Pi.single_apply, h]
+    · simp [h]
   have heig : ∀ q, ∀ x ∈ Qp q, A *ᵥ (fun i => v.embedding (x i)) =
       ((s q : ℝ) : ℂ) • (GQ *ᵥ (fun i => v.embedding (x i))) := by
     intro q x hx
@@ -665,7 +667,7 @@ theorem place_bound {K : Type} [Field K] [NumberField K] [StarRing K] {n D a b :
           simpa using hx
         · rw [Pi.single_eq_of_ne h]
           exact Submodule.zero_mem _
-      · rw [Finset.sum_eq_single q (fun r _ h => by simp [Pi.single_apply, h])
+      · rw [Finset.sum_eq_single q (fun r _ h => by simp [h])
           (fun h => absurd (Finset.mem_univ q) h)]
         simp
     · exact ⟨0, fun q => Submodule.zero_mem _, by simp⟩
@@ -696,7 +698,7 @@ theorem place_bound {K : Type} [Field K] [NumberField K] [StarRing K] {n D a b :
       by_cases h : j = i
       · subst h
         simp
-      · simp [Pi.single_apply, h]
+      · simp [h]
     obtain ⟨W, hW⟩ : ∃ W : Ix → Fin D → ℂ,
         ∀ q, W q = ∑ i, w i • fun j => v.embedding (f i q j) := ⟨_, fun q => rfl⟩
     have hWsum : ∑ q, W q = w := by
@@ -781,7 +783,7 @@ theorem place_bound {K : Type} [Field K] [NumberField K] [StarRing K] {n D a b :
     unfold nrm
     have e : WithLp.toLp 2 (M *ᵥ u) =
         LinearMap.toContinuousLinearMap (Matrix.toEuclideanLin M) (WithLp.toLp 2 u) := by
-      simp [Matrix.toEuclideanLin_apply]
+      simp
     rw [e]
     exact ContinuousLinearMap.le_opNorm _ _
   have h4 : fnorm (Xb v) ((col.map v.embedding) *ᵥ x) ≤ k * fnorm (Xa v) x := by

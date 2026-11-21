@@ -1,9 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.SecondCountableTopologyOfIsProjOver
 import Development.AbelianVarietyTheory.Definitions.Divisors.QuasiRegularAlongOfEtale
 import Development.AbelianVarietyTheory.Definitions.Divisors.LinearIndependentBasisCoords
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndepBaseChange
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NonemptyHomologyEquiv
+import Mathlib.FieldTheory.PurelyInseparable.Exponent
 
 set_option autoImplicit false
 
@@ -149,7 +151,7 @@ theorem linearIndependent_pullChart (h : W ≤ r ⁻¹ᵁ O) (h' : r ⁻¹ᵁ O 
       have hz' := hle hz.1
       have e := congrArg (germ d z (h' hz'.1) hd) hu
       simp only [map_sum, germ_smul, germ_pullChart, map_zero] at e
-      simp only [map_sum, map_mul, ger_algX, ger_appLE, ger_resG, map_zero]
+      simp only [map_sum, map_mul, ger_algX, ger_appLE, map_zero]
       refine Eq.trans (Finset.sum_congr rfl fun i _ => ?_) ((Finset.mul_sum _ _ _).symm.trans
         ((congrArg ((r.stalkMap z).hom (tr B (r z) c (a.idx d)).val * ·) e).trans (mul_zero _)))
       rw [mul_left_comm, ← map_mul]

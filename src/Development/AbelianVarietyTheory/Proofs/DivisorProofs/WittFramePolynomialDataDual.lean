@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WittRankLeSkewSignatureStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WittFrameDualSoTypeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WittFrameDualSoBoundStatement

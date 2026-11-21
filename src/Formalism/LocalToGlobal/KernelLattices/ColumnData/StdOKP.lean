@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.KernelLattices.ColumnData
-import Formalism.LocalToGlobal.KernelLattices.ColumnData.IsAdmissibleFlagPairOfUnitriangularLeftAutomorph
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.GL3.PStdChar
 import Formalism.LocalToGlobal.KernelLattices.ColumnData.Family
 

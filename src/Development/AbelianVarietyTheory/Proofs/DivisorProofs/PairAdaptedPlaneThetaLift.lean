@@ -1,12 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenRelationModelsMatrixSet
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicSchwartzFixedBySmallHeisenbergLattice
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsScaleMovedHeisenbergLatticePolynomialHeigh
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TraceDualUniformDenominator
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepRationalSupportCommonDenominator
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StandardAdelicCharacterNontrivialAtPlaces
 
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -111,7 +105,7 @@ theorem moved_coord_mem {F E : Type} [Field F] [NumberField F] [Field E] [Number
     set a : 𝓞 F := (m' : 𝓞 F) * ⟨(D₀ : F) * q, hq⟩
     have ha : ((m : F) * (a : F)) = ((m₁ * m₂ * D₀ : ℕ) : F) * q := by
       rw [hmm]
-      simp only [a, map_mul, map_natCast]
+      simp only [a]
       show (m : F) * ((m' : F) * ((D₀ : F) * q)) = _
       ring
     rw [hc, ← ha]

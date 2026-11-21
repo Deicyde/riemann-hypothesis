@@ -1,4 +1,4 @@
-import Formalism.SharpRestriction.Divisibility.ModuliIntegralCharts
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.ChainOperators.RankInputOfDualBound
 
 namespace Formalism.MainNotions.DIV.RankInputBounds

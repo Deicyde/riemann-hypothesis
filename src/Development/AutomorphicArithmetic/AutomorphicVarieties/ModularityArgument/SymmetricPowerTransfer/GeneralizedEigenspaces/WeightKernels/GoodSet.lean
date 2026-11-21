@@ -1,6 +1,7 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.UnrSplit
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.GeneralizedEigenspaces.IsLevel
-import Development.AutomorphicArithmetic.AutomorphicVarieties.HeckeAlgebras.Distinct
+import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.GalUnitary
 
 noncomputable section
 

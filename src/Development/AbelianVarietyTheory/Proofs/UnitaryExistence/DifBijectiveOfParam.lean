@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.IsChartIff
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.SabPull
 import Development.AbelianVarietyTheory.BlockTheory.ExistenceTori.JetChartLaws
 import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.GlobalBasisAlgebra

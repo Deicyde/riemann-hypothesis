@@ -1,4 +1,7 @@
-import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.ArchimedeanGelfandKernels.LeftEquivariantFunctions.GelfandFlags.GelFlagA
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.ArchimedeanGelfandKernels.LeftEquivariantFunctions.SymZeroCommFrame
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
 
 noncomputable section
 
@@ -18,7 +21,7 @@ def lmul (a b : Mat n) : Mat n →L[ℝ] Mat n :=
   LinearMap.toContinuousLinearMap
     { toFun := fun y => a * y * b
       map_add' := fun y z => by simp [Matrix.mul_add, Matrix.add_mul]
-      map_smul' := fun c y => by simp [Matrix.mul_smul, Matrix.smul_mul] }
+      map_smul' := fun c y => by simp }
 
 theorem lmul_apply (a b y : Mat n) : lmul a b y = a * y * b := rfl
 

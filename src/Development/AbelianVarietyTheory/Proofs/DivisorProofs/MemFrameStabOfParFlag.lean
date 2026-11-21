@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.LocallyCompactSpaceAxis
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.EisensteinResidueLine
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviDecompositionGradedIsotropicFlag
 open scoped TensorProduct NNReal ENNReal Matrix
 open NumberField MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SiegelSet GlobalTheory.StdPar GlobalTheory.ResLine
@@ -49,7 +49,7 @@ theorem scales_inv {x : Matrix (Fin n) (Fin 1) E} {p : GAd σ J} {l : (AF F ⊗[
   unfold Scales at *
   have := congrArg (fun Z => (l⁻¹).1 • ((matHom _ σ J p⁻¹).1 * Z)) e
   simp only [← Matrix.mul_assoc, ← Units.val_mul, ← map_mul, inv_mul_cancel, map_one, Units.val_one, Matrix.one_mul,
-    Matrix.mul_smul, smul_smul, Units.inv_mul, one_smul] at this
+    Matrix.mul_smul, smul_smul, one_smul] at this
   exact this.symm
 
 theorem levi_dec_line : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [NumberField E] [Algebra F E] (σ : E →ₐ[F] E) (n : ℕ) (J : Matrix (Fin n) (Fin n) E) (r : ℕ) (X Y : Matrix (Fin n) (Fin (r + 1)) E), IsCMExt F E σ → IsHermND σ J → IsWittFrame σ J X Y → ∀ p l, Scales σ J (col X) p l → ∃ u ∈ unipRad σ J (col X), ∃ m ∈ levi σ J X Y {0}, p = u * m ∧ Scales σ J (col X) m l ∧ (p ∈ ratPts σ J → m ∈ ratPts σ J) ∧ (absE F E l = 1 → m ∈ leviOne σ J X Y {0}) := by

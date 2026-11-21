@@ -1,6 +1,7 @@
-import Mathlib
-import Formalism.HermitianLattices.ThetaLEuclid
-import Formalism.AlphaUniqueness.Statement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.HermitianLattices.GenusCovolBound
+import Formalism.HermitianLattices.StatementTheta
 
 open Module Formalism.K
 

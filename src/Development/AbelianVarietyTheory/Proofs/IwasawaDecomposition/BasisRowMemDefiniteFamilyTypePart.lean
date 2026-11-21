@@ -1,10 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.HarishChandraFinite
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.HasDRepIffHasDerivAt
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HarishChandraModulesOn
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.AdmissibleDiscreteSeriesOfHasParam
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsNormLeHeightPow
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.StableIffCarrierEq
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.BasisRowRowsMemEigensystemTypePartStatement
 open Formalism.BasicNotions Formalism.MainNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix Formalism.L2.Theta Formalism.L2.DIV Formalism.L2.Indef Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.Mult Formalism.IndefR.Datum Formalism.IndefR.Cx
 open scoped TensorProduct InnerProductSpace
@@ -35,7 +29,7 @@ theorem row_type : (GlobalTheory.Published.DiscreteSeriesCover ∧ GlobalTheory.
   obtain ⟨hj1, hj2⟩ := Finset.mem_Icc.1 hj
   have hj' : j - 1 < D.R.m := by omega
   have e := h2 ⟨j - 1, hj'⟩ A3.A.μ0 (D.what₂.ft σ) (Or.inl Y.tup0) (hiso σ ⟨j - 1, hj'⟩)
-  simp only [Fin.val_mk, Nat.sub_add_cancel hj1, Y.tup0] at e
+  simp only [Nat.sub_add_cancel hj1, Y.tup0] at e
   unfold RealDat3.lamN
   rw [dif_pos hj', e]
   rfl

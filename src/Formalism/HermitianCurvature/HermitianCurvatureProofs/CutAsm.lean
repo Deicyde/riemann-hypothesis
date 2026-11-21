@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutMP2
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.LevelSystemAdmissibleSize
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutRegFF
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 open Formalism.FourierDecayAlt
 
@@ -125,7 +126,7 @@ theorem actA_one (P : M.Par) (x : M.Ty P → MA.SmQ P.r P.TT) : MA.actA P 1 x = 
   simp only [Formalism.FourierDecayAlt.MA.actA, Matrix.one_apply]
   erw [Finset.sum_eq_single π (fun b _ hb => by simp only [if_neg (Ne.symm hb)]; rfl)
     (fun h => absurd (Finset.mem_univ π) h)]
-  simp only [if_pos rfl]
+  simp only
   rfl
 
 theorem initial_coefficient_of_start_matrix (P : M.Par) (l : ℕ) (Y : ℂ) :

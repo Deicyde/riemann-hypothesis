@@ -1,4 +1,6 @@
-import Formalism.LocalToGlobal.CharacterGerms.ConstantZeroSecondCoordinate
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.CharacterGerms.UnitSeriesFrobenius
 
 noncomputable section
 

@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsChartImageNull
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.BaseChangeMinimal
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.ChartDimLtTorus

@@ -1,5 +1,6 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.StickelbergerCharacterEval.MemZpowersIff
+import BuildAid.Leniency.Open
 import Mathlib.NumberTheory.Padics.PadicIntegers
+import Development.AutomorphicArithmetic.AutomorphicVarieties.StickelbergerElements.CoefMapSingle
 
 open Finset UpperTheory.V.Bern UpperTheory.V.B4 UpperTheory.V.B5
 

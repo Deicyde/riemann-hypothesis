@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.EvBasicNEvalSubCoeffMem
-import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.CubWeilOfInjective
+import Formalism.LocalToGlobal.ProjectiveLattices.SubConstMemOrig
+import Mathlib.CategoryTheory.Monoidal.Cartesian.Over
 
 set_option autoImplicit false
 noncomputable section

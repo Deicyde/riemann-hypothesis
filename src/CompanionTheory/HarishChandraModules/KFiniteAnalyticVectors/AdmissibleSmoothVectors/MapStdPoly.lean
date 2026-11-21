@@ -1,5 +1,6 @@
-import Formalism.PeriodIntegrals.KFinSmooth
-import Formalism.PeriodIntegrals.IsLowUnitH
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.PeriodIntegrals.UpqRep
 
 open MeasureTheory Matrix
 

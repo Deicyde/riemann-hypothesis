@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.H1MapSubgroup
+import Mathlib.Algebra.Category.ModuleCat.EnoughInjectives
 
 open CategoryTheory GlobalTheory.SelFun
 

@@ -1,11 +1,8 @@
-import Mathlib
-import Formalism.SharpRestriction.Divisibility.OrbitPlaces
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.GaussianEigenFrames.StatementJ
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.StdBases
 import Formalism.LocalToGlobal.KernelLattices.KerStd
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ThetaZJetsThree
 import Formalism.LocalToGlobal.InertKernelTheory.StatementIota
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ColR
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.InertiaInvolutionRealPlacePairsStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.IntegralEigenCombination
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.PadicNormLeOneHostBaseModuleAtDStatement

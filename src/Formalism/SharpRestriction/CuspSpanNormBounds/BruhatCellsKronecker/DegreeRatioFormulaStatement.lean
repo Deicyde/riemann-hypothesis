@@ -1,14 +1,10 @@
-import Formalism.SharpRestriction.CuspSpanNormBounds.BruhatCellsKronecker.OwnEvIntro
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.BruhatCellsKronecker.NcardPrimesOverOfSplitsCompl
 import Formalism.SharpRestriction.CuspSpanNormBounds.LocalBesselAndTopKernel
-import Formalism.SharpRestriction.CuspSpanNormBounds.AuxiliaryNormPrimes
-import Formalism.SharpRestriction.CuspSpanNormBounds.NonGenericAndKTwoTheorems
 import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
-import Formalism.HermitianLattices.FinalMass
-import Formalism.GL3MeanSquares.GlobalBoundRefinementResults
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.MassRatioFormula
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CorollaryAOfPropositionA
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CriticalThresholdLowerBound
+import Formalism.GL3MeanSquares.HookFormulaTorsion.GlobalBoundRefinements
+import Formalism.HermitianLattices.HermitianLatticesProofs.MassTelescope
 
 noncomputable section
 
@@ -160,7 +156,7 @@ def SzaSpl (D : D7) : Prop :=
 
 theorem sza_prod_Icc (g : ℕ → ℝ) (k : ℕ) : ∏ i ∈ Icc 1 k, g i = ∏ j ∈ range k, g (j + 1) := by
   induction k with
-  | zero => simp [Finset.Icc_eq_empty]
+  | zero => simp
   | succ n ih => rw [Finset.prod_Icc_succ_top (Nat.le_add_left 1 n), ih, Finset.prod_range_succ]
 
 theorem sza_glCard (k : ℕ) (q : ℝ) :

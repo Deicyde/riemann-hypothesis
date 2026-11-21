@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.UnipotentAdelicQuotients.UnipotentStrongApprox
+import BuildAid.Leniency.Open
+import Formalism.UnipotentAdelicQuotients.ClassNumberFinite
 
 open NumberField IsDedekindDomain
 

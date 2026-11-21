@@ -1,8 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.CoordinateLengths.IntSpanLeRat
-import Formalism.LocalToGlobal.GlobalTheory.GL6.BwAValIntegralNonneg
-import Formalism.LocalToGlobal.GlobalTheory.GL6.WeylLengthDiagonalUnitUniformiser
 import Formalism.LocalToGlobal.GroupLattices.FockModels.SwRowGenMonomial
 import Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.UnitTraceSumBounds.RankConditionsOfLayerTwo
+import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.DualWeylModuleStable
 
 noncomputable section
 
@@ -66,7 +67,7 @@ theorem rat_diag (e : Fin N → ℂ) (he : ∀ j, e j ∈ ratO D) (he0 : ∀ j, 
         by_cases hj : j = i
         · subst hj
           simp [hi]
-        · simp [hj, Function.update_of_ne hj]
+        · simp [hj]
       rw [h2, Formalism.UG.P.wact_rowAct_mul, AlgHom.comp_apply]
       exact ih _ (rat_diag_step D ν hν i (e i) (he i) (he0 i) q hq)
   have h3 : (Matrix.diagonal fun j : Fin N => if j ∈ (Finset.univ : Finset (Fin N)) then e j else 1) = Matrix.diagonal e := by

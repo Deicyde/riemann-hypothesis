@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ResAlgSplitTwo
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ResidueAlgebraUnramified
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CardFibreGramDifferential
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.UnramifiedQuotientCard

@@ -1,7 +1,6 @@
-import Formalism.PieriBlockIdeals.LatticeInclusionFormsInjective
+import BuildAid.Leniency.Open
 import Formalism.PieriBlockIdeals.FactorialValuationSum
 import Formalism.PieriBlockIdeals.StatementLA
-import Formalism.PieriBlockIdeals.StatementC
 import Formalism.PieriBlockIdeals.LemmaWAssembled
 
 noncomputable section

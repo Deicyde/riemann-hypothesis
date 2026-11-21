@@ -1,4 +1,6 @@
-import Development.WeilBound.ThetaLifts.TowerModels.PlaneHerm
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 
 noncomputable section
 

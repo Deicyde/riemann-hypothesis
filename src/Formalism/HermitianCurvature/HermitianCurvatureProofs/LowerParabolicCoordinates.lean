@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.FiniteOrderIntersectionInSmooth
-import Formalism.FormalDegreeBessel.FinalG
+import Mathlib.Tactic.ENatToNat
 
 open Matrix Formalism.FourierDecayAlt Formalism.QuantumDeterminants
 open scoped ComplexConjugate

@@ -1,8 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.FixedCoefficientFieldInComplex
-import Development.AbelianVarietyTheory.PublishedTheorems.PublishedFoundations.NonemptyAlgHomOfIsRayOfDvd
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsUniqueHcharOfFiniteOrder
-import Development.AbelianVarietyTheory.PublishedTheorems.WeberRayClassFields.WeberRayFieldSt
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EllipticTorsionPointCoordinatesFinite
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsAlgebraicOfEllipticTorsionCoordinatesFinite
 
@@ -167,7 +163,7 @@ theorem finrank_torsionField_le : ∀ (d : ℕ) (F : IntermediateField ℚ ℂ) 
   set H := hilbertField d F with hHdef
   let A' : WeierstrassCurve H := A.map (IntermediateField.inclusion (le_sup_right : F ≤ H)).toRingHom
   have hA : A'.baseChange ℂ = A.baseChange ℂ := by
-    simp only [A', WeierstrassCurve.baseChange, WeierstrassCurve.map_map]
+    simp only [A', WeierstrassCurve.baseChange]
     rfl
   have : (A.baseChange ℂ).IsElliptic := inferInstanceAs (A.map _).IsElliptic
   have : A'.IsElliptic := by

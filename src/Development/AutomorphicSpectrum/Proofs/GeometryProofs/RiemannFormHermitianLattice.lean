@@ -1,5 +1,10 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.ExistsAdaptedUnimodular
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Topology.Sheaves.Presheaf
 
 open Filter Topology Matrix
 
@@ -182,7 +187,7 @@ theorem form_bounds : ∀ (g : ℕ) (Bs : Matrix (Fin g) (Fin g) ℤ) (τ G : Ma
       funext j
       simp [mulVec, dotProduct, Y, Complex.im_sum]
     simp only [e1] at h
-    simp only [Pi.zero_apply, Int.cast_zero, Complex.ofReal_zero] at h
+    simp only [Pi.zero_apply, Int.cast_zero] at h
     have e3 : (fun _ : Fin g => (0 : ℂ)) = 0 := rfl
     simp only [e3, mulVec_zero, add_zero, zero_add, single_one_dotProduct, zero_dotProduct,
       zero_sub] at h

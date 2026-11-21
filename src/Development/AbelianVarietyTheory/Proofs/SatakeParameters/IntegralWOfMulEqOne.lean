@@ -1,11 +1,10 @@
-import Mathlib
-import Formalism.SharpRestriction.Divisibility.OrbitPlaces
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.GaussSumParity.KurComplete
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.CoeffRenameEquiv
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.IntegralSubst
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.NormPowDivFactorialLe
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.PrimeOfLiesOver
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.DatumCurveIntegralUnitDiscModel
+import Development.AbelianVarietyTheory.BlockTheory.ThetaLiftGeometry.TeichmullerFactorisation
+import Formalism.SharpRestriction.Divisibility.ProductZerothFirstParts
 
 noncomputable section
 

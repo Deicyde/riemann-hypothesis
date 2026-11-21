@@ -1,6 +1,10 @@
-import Mathlib
-import Formalism.DoubleCosetMeasures.LatticeCoset
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.TorsionBlocks.LocalIntegralGL
+import Formalism.DoubleCosetMeasures.LowerUnipotentOrbits.LemmaU
+import Formalism.DoubleCosetMeasures.LowerUnipotentOrbits.MeasureUniformizerMatrixSetMulCard
+import Mathlib.RingTheory.PiTensorProduct
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 

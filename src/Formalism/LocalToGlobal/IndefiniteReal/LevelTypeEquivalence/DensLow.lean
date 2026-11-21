@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.VanishTranslates
 import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.ApproxId
+import Formalism.LocalToGlobal.IndefiniteReal.GvPairOfOrbitDerivCont
 
 noncomputable section
 

@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasBlockOfOccurs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LevelMapExists
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.JKInvOfTriv
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFrameOkEig

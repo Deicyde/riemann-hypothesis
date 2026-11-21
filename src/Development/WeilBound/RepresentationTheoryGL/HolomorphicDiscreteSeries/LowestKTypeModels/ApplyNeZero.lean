@@ -1,4 +1,6 @@
-import Development.WeilBound.RepresentationTheoryGL.HolomorphicDiscreteSeries.LowestKTypeModels.OfIntegralHolds
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.CoreStatements.BranchingTraces.ExistsIntertwiner
 
 noncomputable section
 

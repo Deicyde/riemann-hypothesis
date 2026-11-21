@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.Graded
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.KerPow
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.MemSpanVariable
 

@@ -1,10 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJABddSSn
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutEnTrSmooth
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutEnBetaFrame
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BigCellInversePair
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BigCellZetaMinors
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.IsOpenAdelicUnipotentTimesIntegralOutsideSet
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.NFRadRedS
 
 open Formalism.FourierDecayAlt
 

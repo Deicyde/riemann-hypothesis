@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.CotInd
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.DetLocus
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.CaCotQuot
 

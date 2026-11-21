@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.MultidegAdd
-import Formalism.SharpRestriction.GrowthBounds.CoarseMultiplicity.PsiRes0Ne
+import Formalism.SharpRestriction.GrowthBounds.CoarseMultiplicity.KeyOne
 
 noncomputable section
 

@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.KummerTheory.InjSlicePf
+import Mathlib.CategoryTheory.Preadditive.Injective.Preserves
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry Opposite GlobalTheory.EtC
@@ -125,8 +128,7 @@ def zAdj : (zFun : ((Over U)ᵒᵖ ⥤ A) ⥤ (Cᵒᵖ ⥤ A)) ⊣ (Functor.whis
                     all_goals rfl }
       left_triangle := by
         ext P X
-        simp only [NatTrans.comp_app, Functor.whiskerRight_app, Functor.associator_hom_app, Functor.whiskerLeft_app,
-          NatTrans.id_app, Category.id_comp]
+        simp only [NatTrans.comp_app, Functor.whiskerRight_app, Functor.associator_hom_app, Functor.whiskerLeft_app]
         erw [Category.id_comp]
         show zNatApp (zUnit P) X.unop ≫ zCoApp (zPre P) X.unop = 𝟙 _
         apply Sigma.hom_ext; intro s
@@ -135,7 +137,7 @@ def zAdj : (zFun : ((Over U)ᵒᵖ ⥤ A) ⥤ (Cᵒᵖ ⥤ A)) ⊣ (Functor.whis
       right_triangle := by
         ext Q V
         simp only [NatTrans.comp_app, Functor.whiskerRight_app, Functor.associator_inv_app, Functor.whiskerLeft_app,
-          NatTrans.id_app, Category.id_comp]
+          Category.id_comp]
         try erw [Category.id_comp]
         change Sigma.ι (fun s : V.unop.left ⟶ U => ((Over.forget U).op ⋙ Q).obj (op (Over.mk s))) V.unop.hom ≫
           zCoApp Q V.unop.left = 𝟙 _

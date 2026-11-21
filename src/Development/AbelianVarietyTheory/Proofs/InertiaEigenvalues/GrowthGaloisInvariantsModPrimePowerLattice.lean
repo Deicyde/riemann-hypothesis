@@ -1,12 +1,8 @@
-import Mathlib
-import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
-import Formalism.LocalRingCardinality.AdicCompletionLocal.LocTied
-import Formalism.SharpRestriction.LevelLetterCocycles.LocalSituation
-import Formalism.SharpRestriction.LevelLetterCocycles.LocCoh
-import Formalism.GaloisCohomology.LocalTateDualityK
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CoefficientRingIntegersCompactAdicProperties
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ImportsTail
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsFinsetFixedMemInvariants
+import Formalism.SharpRestriction.LevelLetterCocycles.DataNLoc
 open Formalism Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.WeaklyAdmissibleFiltrations Formalism.MainNotions.N TensorProduct Module
 
 namespace GlobalTheory.GrowthOfInvariants
@@ -296,7 +292,7 @@ theorem growth_core {G LL O V : Type} [Group G] [Field LL] [CommRing O] [IsDomai
       · have h0 : r - c = 0 := by omega
         refine ⟨(0, Submodule.Quotient.mk x0), ?_⟩
         simp only [F, LinearMap.coprod_apply, map_zero, zero_add, Submodule.liftQ_apply, f2,
-          LinearMap.comp_apply, Submodule.mkQ_apply, LinearMap.smul_apply, LinearMap.id_apply, h0,
+          LinearMap.comp_apply, Submodule.mkQ_apply, LinearMap.id_apply, h0,
           pow_zero, one_smul]
     choose σ hσ using hsurj
     have hσinj : Function.Injective σ := fun x y hxy =>

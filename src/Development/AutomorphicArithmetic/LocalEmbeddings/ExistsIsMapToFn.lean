@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.LocalEmbeddings.FrameCo
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsFlagFrame
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TriIff
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.DualGramInterpGram
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ValRSpMapFromSpecStalk
 
 set_option autoImplicit false
 

@@ -1,9 +1,4 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.EmbeddingTypeJumps
-import Formalism.SharpRestriction.LevelLetterCocycles.JointConditionsZpowers.CrysOnCond
-import Formalism.LocalRingCardinality.SpanPowerMembership.NDLocE
-import Development.AutomorphicArithmetic.ResidueCharacters.LocNum
-import Development.AutomorphicArithmetic.ResidueCharacters.LocRes
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ResidueCharacters.TransferMemBlochKatoCocycles
 import Development.AutomorphicArithmetic.ResidueCharacters.TbTop
 import Development.AutomorphicArithmetic.ResidueCharacters.TwistDef

@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.ExistenceTori.BlockPolyLevelMove
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ThExprUniqOfChartIndep2
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.BlockHarmLevOfBlockHarm
+import Development.AbelianVarietyTheory.Counterexamples.LevelGroupExamples.BaseClassMove
 
 set_option autoImplicit false
 

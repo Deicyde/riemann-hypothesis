@@ -1,5 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SpanningFamilies.IsHeatZero
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.SpanningFamilies.FirstCoordinateAdmissible
 open Matrix Complex NumberField GlobalTheory.SW Filter Topology
 open ReciprocityTheory.ChartRestriction.G.FD (cc herm)
 open scoped ComplexConjugate ComplexOrder Real
@@ -130,7 +132,7 @@ theorem ccT_one {α : Type} [DecidableEq α] : ccT (1 : Matrix α α E) = 1 := b
   ext i j
   by_cases h : i = j
   · subst h; simp [ccT, cc]
-  · simp [ccT, cc, Matrix.one_apply, h, Ne.symm h]
+  · simp [ccT, cc, h, Ne.symm h]
 
 theorem map_ccT {α β : Type} (τ : E →+* ℂ) (X : Matrix α β E) :
     (ccT X).map τ = (X.map τ)ᴴ := by
@@ -183,7 +185,7 @@ theorem map_mem (τ : E →+* ℂ) {γ : M2 E N} (h : γ ∈ UU E N) :
   have hJ : (Matrix.J (Fin N) E).map τ = Matrix.J (Fin N) ℂ := by
     ext i j
     rcases i with i | i <;> rcases j with j | j <;> by_cases hij : i = j <;>
-      simp [Matrix.J, Matrix.one_apply, hij]
+      simp [Matrix.J, hij]
   have h2 := congrArg (fun X => X.map τ) h1
   simp only [Matrix.map_mul, map_ccT, hJ] at h2
   exact h2

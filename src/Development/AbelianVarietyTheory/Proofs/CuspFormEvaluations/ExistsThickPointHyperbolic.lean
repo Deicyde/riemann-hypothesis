@@ -1,13 +1,9 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.CuspidalExponentialDecay
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.MajorantOperators
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.QuadraticCoefficientForms
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.HermitianTraceFormVanishing
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.DiscriminantEstimates.DiscriminantTheorems.ScaledBoundInequality
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.MinimumGrowthBounds
 import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.TraceHermNondegenerate
-import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.HyperbolicFlagDataBasePoint
-import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.FirstMinimumInvariantContinuousPosOnFrames
+import Development.AbelianVarietyTheory.Proofs.HermitianTraceForms.TraceFormDualOneTraceFormDual
 
 open NumberField ReciprocityTheory.ChartRestriction.G.FD Module Submodule
 open scoped nonZeroDivisors
@@ -170,7 +166,7 @@ theorem _root_.GlobalTheory.ThickPoint.traceFormOf_nondegenerate {G : Matrix (Fi
     funext b
     have hs : ∀ j, _root_.ReciprocityTheory.ChartRestriction.G.FD.cc ((Pi.single b (1 : E) : Fin r → E) j) =
         (Pi.single b (1 : E) : Fin r → E) j := fun j => by
-      by_cases hj : j = b <;> simp [hj, _root_.ReciprocityTheory.ChartRestriction.G.FD.cc, Pi.single_apply]
+      by_cases hj : j = b <;> simp [hj, _root_.ReciprocityTheory.ChartRestriction.G.FD.cc]
     have h := h1 (Pi.single b 1)
     simp only [_root_.ReciprocityTheory.ChartRestriction.G.FD.herm, hs] at h
     simpa [Matrix.vecMul, dotProduct, Pi.single_apply] using h

@@ -1,11 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.NVNeZero
-import Formalism.LocalToGlobal.Columns.MtHeckeSum
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.SplitHeckeElementLabelZerosThenNegOnes
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LevelCharEqOneInertPrimeOffLevel
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.IsPrimeIdemOfInert
 import Formalism.LocalToGlobal.Columns.RecLevelLocP
-import Formalism.LocalToGlobal.Columns.DecoFin
+import Formalism.LocalToGlobal.Columns.MtHeckeLoc
 open Formalism.BasicNotions Formalism.MainNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix Formalism.L2.Theta Formalism.L2.DIV Formalism.L2.Indef Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.Mult Formalism.IndefR.Datum Formalism.IndefR.Cx
 open scoped TensorProduct InnerProductSpace
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
@@ -68,7 +65,7 @@ theorem bc_prV_swap_eq_one_iff {D : D7} {m : ℕ} (w : HeightOneSpectrum (𝓞 D
       ((M : Matrix (Fin m) (Fin m) _).map
         (Algebra.TensorProduct.map (Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes.evalV D.host.F w) (AlgHom.id D.host.F D.host.E))).map τ := by
     ext i j
-    simp only [Formalism.UG.bc, Units.coe_map, MonoidHom.coe_coe, RingHom.mapMatrix_apply, Matrix.map_apply]
+    simp only [Formalism.UG.bc, Units.coe_map, Matrix.map_apply]
     exact prV_swap w _
   rw [e]
   constructor

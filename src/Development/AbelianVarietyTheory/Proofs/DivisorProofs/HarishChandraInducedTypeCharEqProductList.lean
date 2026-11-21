@@ -1,9 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LabelsCharOne
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CuspidalCharacterFormula
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.HarishChandraSeriesLabelExistsUniqueGLn
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.BlockParabolicUnitriangularSubgroupsGLnPrimeFiel
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TypeCharacterConjugateInverse
+import Mathlib.Data.Matrix.PEquiv
 
 noncomputable section
 

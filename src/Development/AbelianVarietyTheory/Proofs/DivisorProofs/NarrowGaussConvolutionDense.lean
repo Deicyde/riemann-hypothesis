@@ -1,6 +1,7 @@
-import Mathlib
-import GroundTheory.GlobalFields.TateThesis.GaussianSchwartz
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemClosureWideGaussianMulSchwartzStatement
+import Mathlib.Analysis.Fourier.Convolution
 open FourierTransform MeasureTheory Filter Topology
 
 namespace GlobalTheory.NarrowGauss

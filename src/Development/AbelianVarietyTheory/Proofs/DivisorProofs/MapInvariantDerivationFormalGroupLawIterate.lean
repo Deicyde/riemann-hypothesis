@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.EqZeroOfForallPowDvd
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InvDer
+import Mathlib.RingTheory.WittVector.IsPoly
 
 open MvPowerSeries GlobalTheory GlobalTheory.Katz GlobalTheory.QLog GlobalTheory.PDivGroup GlobalTheory.Sandwich GlobalTheory.IndefiniteRowSideFullHecke.EpsilonPairingZeta GlobalTheory.PDivLat GlobalTheory.LawDer
 
@@ -24,7 +24,7 @@ theorem map_atZero {R S : Type} [CommRing R] [CommRing S] (f : R →+* S) {d : �
 theorem map_smul_coeffChange {R S σ : Type} [CommRing R] [CommRing S] (f : R →+* S) (a : R)
     (H : MvPowerSeries σ R) : map f (a • H) = f a • map f H := by
   ext m
-  simp [MvPowerSeries.coeff_map, MvPowerSeries.coeff_smul]
+  simp [MvPowerSeries.coeff_map]
 
 theorem map_invDer {R S : Type} [CommRing R] [CommRing S] (f : R →+* S) {d : ℕ}
     (μ : Fin d → MvPowerSeries (Fin d ⊕ Fin d) R) (hμ : ∀ i, constantCoeff (μ i) = 0)

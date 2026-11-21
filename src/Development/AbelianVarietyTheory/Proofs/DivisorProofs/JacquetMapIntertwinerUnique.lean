@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndicatorIntMMemSB
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsJacMapZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InducedRepresentationIrreducible
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryCharInducedJacquetStatement
@@ -40,7 +39,7 @@ theorem val_mem (ν β : kˣ →* ℂˣ) (a b : ℕ) (F : PSp ν β a b) : indSc
     rw [h]
     obtain ⟨c, hc⟩ := (TensorProduct.lid ℂ ℂ).symm.surjective (F.1.1 x)
     rw [← hc]
-    simp only [MonoidHom.coe_comp, Function.comp_apply, twist_apply, MonoidHom.coe_coe]
+    simp only [MonoidHom.coe_comp, Function.comp_apply, twist_apply]
     simp [parChar, detRep, ofChar_apply]
     ring
 

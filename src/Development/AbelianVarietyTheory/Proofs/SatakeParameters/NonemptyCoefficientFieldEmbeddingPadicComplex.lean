@@ -1,7 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.GroupLattices.PendingLemmas.InvarianceIffAdditiveMapsExist
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.NonemptyPadicIntRingHomOfIsAdicComplete
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IsDiscreteValuationRingIntegralClosurePadicInt
+import Formalism.LocalToGlobal.GroupLattices.PendingLemmas.WittEmbeddingsCompatible
 
 open IsLocalRing
 

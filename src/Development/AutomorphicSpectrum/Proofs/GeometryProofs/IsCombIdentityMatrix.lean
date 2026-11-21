@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsFlatAnIffIsConstMul
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.IsExcisionNbhdAway
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsLieModel
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsHodgeGram
 
 noncomputable section
 

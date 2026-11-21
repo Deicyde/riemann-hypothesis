@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LinePlace
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipAugLeJacKer
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CellFunctorOfCharCentral
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SizeMatrixCharacterLeviBlockExists
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.GeometricLemmaFiltration
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CentralExponentBoundOver
 import Development.AutomorphicArithmetic.LocalEmbeddings.LineCellScalars
@@ -97,7 +94,7 @@ private theorem sizeMatrix_eq (a a' : ℕ) (h : 2 ≤ a + a')
   rw [Fin.sum_univ_three] at r r'
   fin_cases j
   · exact e0 i
-  · have := e0 i; have := e2 i; simp only [Fin.zero_eta, Fin.mk_one, Fin.reduceFinMk] at *; omega
+  · have := e0 i; have := e2 i; simp only [Fin.mk_one] at *; omega
   · exact e2 i
 
 end Main

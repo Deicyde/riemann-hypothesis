@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.HodgeComparisonCompatibility
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HodgeInnerProductPullbackIffStatement
 open AlgebraicGeometry CategoryTheory Limits NumberField ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.CompanionTheory.Ar
 open MonoidalCategory CartesianMonoidalCategory MonObj

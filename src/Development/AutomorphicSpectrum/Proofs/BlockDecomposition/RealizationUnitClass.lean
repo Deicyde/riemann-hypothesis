@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.LevelChainValuations.OneSTr
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
 
 open CrystallineSemistableComparison.Pb.Kap
 
@@ -33,7 +37,7 @@ theorem rho_one_eval : ∀ {Λ A B K : Type} [CommRing Λ] [CommRing A] [CommRin
     (hC.basis 0 bs (C.μ 0 P.oneV)).unique h2.symm h3
   have h5 : φ = ∑ s, φ (bs s) • bs.coord s := by
     refine bs.ext fun t => ?_
-    simp [Finset.sum_apply, Module.Basis.coord_apply, Finsupp.single_apply]
+    simp
   have h6 : φ P.oneV = ∑ s, bs.coord s P.oneV * φ (bs s) := by
     conv_lhs => rw [← bs.sum_repr P.oneV]
     rw [map_sum]

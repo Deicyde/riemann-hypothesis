@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsFlagModelHermSum
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsHolPeriods
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.TorsionEqAndWeilIsOfIsHolTo
-import Development.AbelianVarietyTheory.Proofs.ToricGeometry.WeilIsExpRiemannForm
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.IsValLineLogNormAtIffEmbedding
 
 set_option autoImplicit false
@@ -152,7 +151,7 @@ theorem sqFr_period {H : Matrix (Fin g) (Fin g) ℂ} {χ : u.Λ → ℂ} (hAH : 
   have v : ∀ a b : Fin g → ℂ, sqFr u ![1, -1, -1, 1] j (a, b) =
       u.fr (j 0) (a + b) * (u.fr (j 1) a)⁻¹ * (u.fr (j 2) b)⁻¹ * u.fr (j 3) 0 := fun a b => by
     simp [sqFr, sqPts, Fin.prod_univ_four]
-  simp only [sqPts, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val, add_dotProduct, mul_add,
+  simp only [add_dotProduct, mul_add,
     Complex.exp_add] at e₀ e₁ e₂
   rw [v, v, v, add_right_comm z, ← add_assoc z, HermFrame.form, HermFrame.form]
   constructor

@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Variable
 import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.TotallyRealRoots.PrincTop
-import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.TotallyRealRoots.NuBasic
 
 namespace KStar.TotallyRealRoots
 

@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteForms.IndefUse
-import Formalism.LocalToGlobal.IndefiniteForms.IndefExample
 import Formalism.LocalToGlobal.Divisibility.FramesLemmas
 import Formalism.QuotientMetricDivisors.FinalW
 import Formalism.LocalRingCardinality.Lemmas

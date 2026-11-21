@@ -1,9 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsSncModel
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.BlowupProjections.BlowupProjStatement
-import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.Proportional
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterBridge
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterRed
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterBridgeB
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterRedC
 
 open MvPolynomial MeasureTheory ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.AI.I2 ReciprocityTheory.ChartRestriction.G.AI.I4 ReciprocityTheory.AnForm.M GlobalTheory.CompanionTheory.Ar.Cmp GlobalTheory.CompanionTheory.Ar.PB Filter Topology
 
@@ -184,7 +183,7 @@ theorem evC_subst (G : Fin M → MRing ι) (z : (Σ k, ι k) → ℂ) (F : MRing
     congr 1
     obtain ⟨k | ⟨⟩, i⟩ := n
     · simp [subst, joinVec]
-    · simp [subst, joinVec, evC]
+    · simp [subst, joinVec]
 
 theorem subst_mem {Ω : Type} [Field Ω] (y : (Σ k, ι k) → Ω) (y' : (Σ _ : Unit, Fin M) → Ω)
     {G : Fin M → MRing ι} {g : K → ℕ} (hG : ∀ i, IsMultiHomog (G i) g)
@@ -210,7 +209,7 @@ theorem subst_mem {Ω : Type} [Field Ω] (y : (Σ k, ι k) → Ω) (y' : (Σ _ :
       simp [S, map_mul, mul_assoc]
   have h0 := AlgHom.congr_fun hc F
   have hF' : mConeMap (joinVec y y') F = 0 := hF
-  simp only [AlgHom.comp_apply, AlgHom.restrictScalars_apply, hF', map_zero] at h0
+  simp only [AlgHom.comp_apply, hF', map_zero] at h0
   exact h0
 
 theorem joinVec_mem {Ω : Type} [Field Ω] (y : (Σ k, ι k) → Ω) (y' : (Σ _ : Unit, Fin M) → Ω)

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsOpenAdditiveCharacterKernelStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsCompactOpenSubgroupMemStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsCompactSupAddSubgroupStatement
@@ -11,7 +12,6 @@ import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsGLVecMulE
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HermitianSemidefiniteNullRadicalStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SesquilinearEqZeroOfDiagZeroStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CosetSumTranslateInvariantStatement
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CosetSumsProportionalCard
 
 noncomputable section
 

@@ -1,11 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GenScal
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LevelCoverComponentOverBaseRationalIsometry
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LevelCoverFibreTorsorTrivialLevelChangesStatement
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsPullOfMoveInv
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RestrictedBlockSelfApply
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ActLevOfLiftsOfEqOne
 import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.ValuesAlgIffValuesUnitOfNe
+import Development.AbelianVarietyTheory.Definitions.Divisors.UnifOfSpaceEq
+import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.TransvectionEq
 open NumberField MeasureTheory Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions Formalism.L2.Theta Formalism.L2.Pj ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.FD ReciprocityTheory.ChartRestriction.G.AR.Inst ReciprocityTheory.ChartRestriction.G.AR.Up GlobalTheory.AllWt GlobalTheory.LevGeo GlobalTheory.LevPull GlobalTheory.FieldBC
 open scoped ENNReal
 
@@ -27,7 +26,7 @@ theorem card_lifts_const : ∀ (D : D7) (j : ℕ) (H : ReciprocityTheory.ChartRe
     obtain ⟨h1, h2⟩ := hL.inR
     have hk := D.R.m_add_three_le_k
     rw [hp, hq]
-    simp only [Ranks.sigW, Ranks.r]
+    simp only [Ranks.sigW]
     omega
   have hk : ∀ a : c.F, algebraMap d.c₂.F (CAt σ₂) (d.eF a) = algebraMap c.F (CAt σ₂) a := fun _ => rfl
   obtain ⟨lift, hlift⟩ := GlobalTheory.LevPullModel.exists_isLift (Dw := Dw) (l := d.l₂)

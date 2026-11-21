@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.FrobeniusSmoothVectors.EpresDefs
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.MemSpanVariable
+import Mathlib.RingTheory.SimpleRing.Principal
 
 open IsLocalRing Matrix UpperTheory.V.Alg UpperTheory.V.U3 UpperTheory.V.Fr
 

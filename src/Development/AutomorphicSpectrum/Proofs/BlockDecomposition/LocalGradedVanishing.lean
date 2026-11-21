@@ -1,13 +1,13 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.ConeSectionRestriction.LocDefs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.GlobalSerreRelations.GlobSerreSt
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.LocalisationLadders.CriterionTruncation
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.CechPairings.Imports
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RepUnique
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FiltrationCriticalComparisonMap
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GradedCohomologyOfFrame
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FrameFormRestrictionCocycle
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FrameFormCoboundaryRelation
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FrameFormRespectsFiltration
+import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.CechPairings.MemBoundariesZeroIff
 set_option backward.isDefEq.respectTransparency false
 set_option autoImplicit false
 set_option linter.unusedVariables false
@@ -74,7 +74,7 @@ theorem pull_form (Q : Poly Φ) {Fil : ℤ → IdF Φ.A} (hF : IsFil Φ Fil) (E 
 
 theorem coef {M : Type} [AddCommMonoid M] (u v : M) (n : ℕ) :
     (Finsupp.single 0 v : ℕ →₀ M) n = (Finsupp.single 0 u + Finsupp.single 1 v : ℕ →₀ M) (n + 1) := by
-  cases n <;> simp [Finsupp.single_apply]
+  cases n <;> simp
 
 theorem val_ev (Q : Poly Φ) (T : C) (u f : Φ.A.obj T) :
     (Q.X T + (Φ.A.map (Q.j T)).hom u) * (Φ.A.map (Q.j T)).hom f =

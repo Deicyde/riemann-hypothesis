@@ -1,10 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.GL2.GJStandardLTensor
 import GroundTheory.AutomorphicForms.RestrictedAddHaarProduct
-import GroundTheory.AutomorphicForms.GL2.GJMatrixLocal
 import GroundTheory.GlobalFields.TateThesis.RootNumberLocalPlace
-import GroundTheory.GlobalFields.TateThesis.HeckeLFunction
-import GroundTheory.LocalFields.LocalZetaEpsilon
+import GroundTheory.AutomorphicForms.GL2.IsAddHaarMeasureMatrixMeasureFinSq
 
 open MeasureTheory Filter Set Topology IsDedekindDomain NumberField NumberField.mixedEmbedding Matrix
 open scoped NumberField.AdeleRing RestrictedProduct SchwartzMap Classical ENNReal NNReal ValuativeRel nonZeroDivisors

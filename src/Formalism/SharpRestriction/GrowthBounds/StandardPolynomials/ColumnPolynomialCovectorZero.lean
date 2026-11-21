@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.RigFactorWeightedHomogeneousLetter
+import Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.PreDef
+import Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.ThresholdStandardSeventeen
 
 noncomputable section
 
@@ -23,7 +27,7 @@ theorem column_polynomial_covector_zero {w : O} (Cs : ∀ j, ColSys C0 CE1 CE2 X
       Finset.single_le_sum (f := (Cs j).pl) (fun _ _ => zero_le) (Finset.mem_univ a)
     have h2 := hle ((topEnd X j', false), c)
     rw [(Cs j).plSum] at h2
-    simp [Finsupp.single_apply] at h2
+    simp at h2
     exact h2
   simp [multideg, h]
 

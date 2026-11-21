@@ -1,9 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsDeltaDelAtOwnAt
-import Formalism.LocalToGlobal.Divisibility.NumbersLemmas
-import Formalism.LocalToGlobal.IndefiniteForms.IndefiniteTree.DepthCond
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.TraceLatticeLeThetaLatticeAtPlace
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.GoodLiftOnto
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsTieCoordBase
 
 set_option autoImplicit false

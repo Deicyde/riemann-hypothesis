@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.FramedTwoCoboundaries
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.CoMvps
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.CoSqz
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.ContSection
@@ -140,7 +140,7 @@ private theorem square_zero_extension_ring (O R S X : Type) [CommRing O] [IsLoca
     rw [Finset.sum_eq_single ⟨e, he⟩]
     · simp
     · intro b _ hb
-      simp [Pi.single_apply, hb]
+      simp [hb]
     · simp
 
 private theorem ker_span (O X R R' : Type) [CommRing O] [IsLocalRing O] [IsNoetherianRing O]

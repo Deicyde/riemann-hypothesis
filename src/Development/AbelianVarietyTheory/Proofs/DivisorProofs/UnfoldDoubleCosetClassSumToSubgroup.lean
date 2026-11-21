@@ -1,5 +1,14 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SimpleTwistedTraceFormulaStable
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.GroupTheory.DoubleCoset
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 open GlobalTheory.BCT
 
 noncomputable section
@@ -121,7 +130,7 @@ theorem fiber_count (ι : H →* G) (hι : Injective ι) (Γ : Subgroup G) (hΓ 
       obtain ⟨t, ht⟩ := QuotientGroup.mk_out_eq_mul T ((s : H) * h₀)
       rw [hsm, ht, DoubleCoset.eq]
       refine ⟨ι t, (hT t).1 t.2, x⁻¹ * ι s * x, (hS s).1 s.2, ?_⟩
-      simp only [map_mul, map_inv]
+      simp only [map_mul]
       group
   obtain ⟨g', k, hg', hk, hy⟩ := DoubleCoset.mk_out_eq_mul Γ' K ((ι h₀)⁻¹ * x)
   set y := Quotient.out (DoubleCoset.mk Γ' K ((ι h₀)⁻¹ * x)) with hydef

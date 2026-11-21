@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementTL
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LevelsOfBuiltSetting
 
@@ -140,21 +141,21 @@ theorem base_parameters_ok : P0.OK := by
   refine ⟨by simp [P0], by simp [P0], by simp [P0], ?_, ?_, ?_⟩
   · intro i hi
     have hi' : i = 1 ∨ i = 2 := by
-      simp [P0, Finset.mem_Icc, Set.mem_Icc] at hi
+      simp [P0, Finset.mem_Icc] at hi
       omega
     rcases hi' with rfl | rfl
     · exact ⟨0, by simp [P0]⟩
     · exact ⟨-1, by norm_num [P0]⟩
   · intro i hi
     have hi' : i = 1 ∨ i = 2 := by
-      simp [P0, Finset.mem_Icc, Set.mem_Icc] at hi
+      simp [P0, Finset.mem_Icc] at hi
       omega
     rcases hi' with rfl | rfl
     · exact ⟨0, by norm_num [P0]⟩
     · exact ⟨-1, by norm_num [P0]⟩
   · intro i hi
     have hi' : i = 1 := by
-      simp [P0, Finset.mem_Icc, Set.mem_Icc] at hi
+      simp [P0] at hi
       omega
     subst hi'
     norm_num [P0, M.Par.lo, M.Par.hi]

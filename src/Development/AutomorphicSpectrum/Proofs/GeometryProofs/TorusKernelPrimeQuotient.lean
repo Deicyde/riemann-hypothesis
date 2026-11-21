@@ -1,10 +1,9 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.EigLat
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsCocharLie
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsGrpPullback
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.CharValMultiplicativeStatement
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.CompactCentralizerTranslate
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.ExistsSurjectiveZmodOfNeZero
+import Mathlib.RingTheory.Bialgebra.Quotient
 
 noncomputable section
 
@@ -182,7 +181,7 @@ theorem killing_ideal_coideal (b : Sp k ⟶ S) (u : splitTorus S X ⟶ G) [IsMon
       intro χ
       rw [(GlobalTheory.T.charVal_multiplicative S X A a).2.1 t₁ t₂ χ, ht₁, ht₂]
       have e : (c : AddMonoidAlgebra k X →+* A) (AddMonoidAlgebra.single χ 1) = mkQ (AddMonoidAlgebra.single χ 1) ⊗ₜ mkQ (AddMonoidAlgebra.single χ 1) := by
-        simp [c, AddMonoidAlgebra.comul_single, CommSemiring.comul_apply]
+        simp [c]
       rw [e]
       change (mkQ (AddMonoidAlgebra.single χ 1) ⊗ₜ[k] (1 : Q)) * ((1 : Q) ⊗ₜ[k] mkQ (AddMonoidAlgebra.single χ 1)) = _
       rw [Algebra.TensorProduct.tmul_mul_tmul, _root_.mul_one, _root_.one_mul]

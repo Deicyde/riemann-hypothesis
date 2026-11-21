@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.HeckeCharEqOfLAdicRealisation
+import Mathlib.Topology.Connected.Separation
+import Mathlib.Topology.MetricSpace.Ultra.TotallySeparated
 open Formalism.BasicNotions Formalism.ConjugateSelfDual Formalism.MainNotions Formalism.MainNotions.N Polynomial NumberField IsDedekindDomain ReciprocityTheory.Gal GlobalTheory.StringRepresentationDecomposition
 
 noncomputable section
@@ -27,7 +30,7 @@ theorem muChar_holds : MuChar := by
     have h1 : z + (((D.R.t : ℂ) - 1) / 2 - ((0 : ℕ) : ℂ)) ∈ isoInf D.nd D.naut Pa τ := by
       refine mem_list_sum Pa _ hmem ?_
       refine mem_list_sum _ _ (a := ((0 : ℕ) : ℂ)) ?_ ?_
-      · simp only [List.mem_range]
+      · simp only
         simp
         exact ⟨0, D.R.t_odd.pos, by simp⟩
       · exact Multiset.mem_map_of_mem _ hz

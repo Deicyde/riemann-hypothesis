@@ -1,4 +1,4 @@
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RowGrpEq
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HaarTraceConjEqConstMulKernelImageStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RowPeriodSubgroupFinitePointsSemidirectStatement
 

@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleTrace.LadicH0LocallyConstant
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry GlobalTheory.EtC

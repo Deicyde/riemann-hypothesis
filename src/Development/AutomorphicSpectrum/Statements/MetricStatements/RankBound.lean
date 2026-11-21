@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.MetricPeriods.MainNotions
 
 namespace GlobalTheory.CompanionTheory.Ar.HS

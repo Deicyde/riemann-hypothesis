@@ -1,5 +1,5 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.PlaneSupports.PlaneSupp
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousSingleV
 open Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes IsDedekindDomain NumberField GlobalTheory.Published Sa2 GlobalTheory.CompanionTheory.SaGen
 open scoped TensorProduct Topology
@@ -36,8 +36,7 @@ theorem vmv_mul_mat (A : Matrix (Fin M) (Fin M) R) (u v : Fin M → R) :
 theorem vmv_mul_vmv (u v x y : Fin M → R) :
     vecMulVec u v * vecMulVec x y = (v ⬝ᵥ x) • vecMulVec u y := by
   ext i j
-  simp only [Matrix.mul_apply, vecMulVec_apply, dotProduct, Matrix.smul_apply, smul_eq_mul, Finset.sum_mul,
-    Finset.mul_sum]
+  simp only [Matrix.mul_apply, vecMulVec_apply, dotProduct, Matrix.smul_apply, smul_eq_mul, Finset.sum_mul]
   exact Finset.sum_congr rfl fun l _ => by ring
 
 theorem qr_mul (c : R →+* R) (Jm : Matrix (Fin M) (Fin M) R) (a : Fin M → R) (k₁ k₂ : R) :
@@ -112,9 +111,9 @@ theorem qr_unitary (c : R →+* R) (hc : ∀ x, c (c x) = x) (Jm : Matrix (Fin M
       exact Finset.sum_congr rfl fun l _ => mul_comm _ _
     by_cases hij : i = j
     · subst hij
-      simp [Formalism.UG.cT, qr_eq, ← hw, vecMulVec_apply, hcw, mul_assoc, mul_comm]
+      simp [Formalism.UG.cT, qr_eq, ← hw, vecMulVec_apply, hcw, mul_comm]
     · have hji : j ≠ i := fun h => hij h.symm
-      simp [Formalism.UG.cT, qr_eq, ← hw, vecMulVec_apply, hcw, Matrix.one_apply, hij, hji, mul_assoc, mul_comm]
+      simp [Formalism.UG.cT, qr_eq, ← hw, vecMulVec_apply, hcw, hij, hji, mul_comm]
   have hw' : (fun i => c (a i)) ᵥ* Jm = w := by
     ext j; simp [hw, wv, vecMul, dotProduct]
   have h1 : vecMulVec u (fun i => c (a i)) * Jm = vecMulVec u w := by rw [vmv_mul_mat, hw']

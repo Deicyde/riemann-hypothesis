@@ -1,10 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsGradedRankOne
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsX
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VanishingOnRegularFlagged
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VanishingEverywhereOfRegularAlteration
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.AffineSpaceCoveredSmoothOfRelativeDimensionAdd
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BaseLApply
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleChartBigCellStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleBigCellMetricStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FibreIntegrationDensitiesStatement
@@ -42,7 +40,7 @@ theorem smooth_chart {k : Type} [CommRing k] {X : Scheme.{0}} {p : X ⟶ Sp k} {
   rw [← Scheme.Hom.appLE_comp_appLE c.U.ι p ⊤ c.U ⊤ le_top (by simp)]
   ext a
   simp only [DVR.FlatBC.algX, Scheme.Opens.ι_appLE, RingHom.comp_apply, MvPolynomial.algebraMap_eq,
-    MvPolynomial.eval₂Hom_C, CommRingCat.hom_comp]
+    MvPolynomial.eval₂Hom_C]
   erw [Iso.hom_inv_id_apply]
   rfl
 
@@ -100,7 +98,7 @@ theorem sum_smul_blk {n D : ℕ} (ε : Fin D ≃ Fin n ⊕ (Σ a, Low (r a))) {�
   · simp [Matrix.sum_apply]
   · simp
   · simp
-  · by_cases h : a = b <;> simp [diagonal_apply, h]
+  · by_cases h : a = b <;> simp [h]
 
 open MvPolynomial in
 
@@ -170,7 +168,7 @@ theorem sum_mix {μ : Type} [Fintype μ] {e D : ℕ} (ε : Fin (D + 1) ≃ Fin (
     simp only [s, Matrix.mul_sum, Matrix.mul_smul, trace_sum, trace_smul, smul_eq_mul, Complex.re_sum,
       Complex.re_ofReal_mul]
     field_simp
-  simp only [map_sum, map_smul, map_pow, Finset.sum_mul, Finset.mul_sum, smul_mul_smul_comm, smul_eq_mul, Matrix.sum_mul,
+  simp only [map_sum, map_smul, map_pow, Finset.sum_mul, Finset.mul_sum, smul_mul_smul_comm, smul_eq_mul,
     Matrix.smul_mul, trace_sum, trace_smul, Complex.re_sum, Complex.re_ofReal_mul]
   rw [Finset.sum_comm (s := Finset.univ (α := Fin (r a)))]
   refine Finset.sum_congr rfl fun l _ => ?_

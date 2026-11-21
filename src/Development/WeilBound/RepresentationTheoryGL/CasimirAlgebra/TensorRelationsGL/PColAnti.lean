@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.CasimirAlgebra.TensorRelationsGL.PColAntiA
 import Development.WeilBound.RepresentationTheoryGL.CasimirAlgebra.TensorRelationsGL.PColAntiC
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
 
 noncomputable section
 
@@ -68,7 +71,7 @@ theorem Q_adj (E : Fin n → Fin n → Module.End ℂ M) (ℓ : M →ₗ[ℂ] �
   simp only [LinearMap.comp_apply, LinearMap.neg_apply, LinearMap.proj_apply]
   rw [e, key]
   simp only [LinearMap.sub_apply, LinearMap.add_apply, Module.End.mul_apply, Pi.sub_apply, Pi.add_apply,
-    pm_top, map_sub, map_add]
+    map_sub, map_add]
   simp only [hPdef, pm_top]
   ring
 

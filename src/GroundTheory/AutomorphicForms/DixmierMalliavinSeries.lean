@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.DixmierMalliavinBasic
 import GroundTheory.AutomorphicForms.GKModules.SmoothVectors
+import Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension
 
 namespace GroundTheory.Automorphic
 

@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.GeometricLemmaFiltration
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HasFiniteLengthOfIsIrreducible
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.BernsteinUnitaryProductIrreducible
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.NonemptyEquivOfRangeEq
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.GeometricLemmaCellOneBlockSwapEquiv
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CellFunctorTorusCharacter
 open GlobalTheory.PRep GlobalTheory.SmGL Matrix
@@ -22,15 +19,15 @@ theorem card_two_true' (a b : Type) [Fintype a] [Fintype b] :
 def sizeFirst (u v : ℕ) : SizeMatrix (Two (Fin u) (Fin (v + 1))) (Two (Fin (u + v)) (Fin 1)) :=
   ⟨fun i j => cond i (cond j 1 v) (cond j 0 u), by
     refine ⟨fun i => ?_, fun j => ?_⟩
-    · cases i <;> simp [Fintype.sum_bool, card_two_false', card_two_true'] <;> omega
-    · cases j <;> simp [Fintype.sum_bool, card_two_false', card_two_true'] <;> omega⟩
+    · cases i <;> simp <;> omega
+    · cases j <;> simp <;> omega⟩
 
 theorem eq_sizeFirst {u v : ℕ} (b : SizeMatrix (Two (Fin u) (Fin (v + 1))) (Two (Fin (u + v)) (Fin 1)))
     (h : b.1 false true = 0) : b = sizeFirst u v := by
   have r0 := b.2.1 false
   have r1 := b.2.1 true
   have c1 := b.2.2 true
-  simp only [Fintype.sum_bool, card_two_false', card_two_true', Fintype.card_fin] at r0 r1 c1
+  simp only [Fintype.sum_bool, Fintype.card_fin] at r0 r1 c1
   refine Subtype.ext (funext fun i => funext fun j => ?_)
   cases i <;> cases j <;> simp [sizeFirst] <;> omega
 

@@ -1,8 +1,7 @@
-import Mathlib
-import Formalism.PeriodIntegrals.DivisionRowsRationalLattice
-import Formalism.HarderNarasimhan.FinalCor
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IdempotentTransfer.TraceFormulaOfRankDegree
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IdempotentTransfer.CharacteristicPolynomialCompatibility
+import Formalism.HarderNarasimhan.ShiftInvariance
 
 noncomputable section
 
@@ -38,7 +37,7 @@ lemma sandwich (Y : Module.End K W) (hY : Y ≠ 0) :
   rw [Finset.sum_eq_single j]
   · simp [hφ]
   · intro i _ hij
-    simp [Finsupp.single_apply, Ne.symm hij]
+    simp [Ne.symm hij]
   · simp
 
 end Sandwich

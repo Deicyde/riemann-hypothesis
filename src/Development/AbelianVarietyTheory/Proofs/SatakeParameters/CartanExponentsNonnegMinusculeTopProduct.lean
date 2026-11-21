@@ -1,6 +1,6 @@
-import Mathlib
-import Formalism.SatakeDualWeyl.KpqSubgroupCompact
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ElementaryDivisorsMulMinusculeTopTerm
+import Formalism.SatakeDualWeyl.StatementE
 open IsDedekindDomain NumberField Matrix
 
 noncomputable section

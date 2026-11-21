@@ -1,5 +1,5 @@
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.AdelicGroupAlgebraActionInjective
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.PushInvertible
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.TwistedModuleFiniteProjectiveRankStatement
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.ExistsSectionLevel
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.SabMapIdStatement

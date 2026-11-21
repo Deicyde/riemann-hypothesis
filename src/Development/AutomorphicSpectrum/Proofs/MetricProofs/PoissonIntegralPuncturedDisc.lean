@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.HarmonicAnnulusMaximumPrincipleStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.IntegralAngMeas
 import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.PshPoisson
+import Mathlib.Topology.Sheaves.Presheaf
 
 open MeasureTheory Filter Topology GlobalTheory.CompanionTheory.Ar.PB.Flat
 open scoped ContDiff

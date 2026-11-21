@@ -1,12 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SymplecticPairRankOneTraceStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StandardCharacterKernelIntegralTraceStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianDualLatticeDenominatorStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ModelRankOneBoundedDenominatorStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzBruhatCongruenceLevelStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepresentationPreservesSchwartz
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedFiniteMapsRestriction
 
 open scoped TensorProduct NNReal Matrix
@@ -35,7 +33,7 @@ theorem schr_comm {R : Type} [CommRing R] [Invertible (2 : R)] (ψ : AddChar R �
     (w w' : (κ → R) × (κ → R)) (φ : (κ → R) → ℂ) :
     schr ψ w (schr ψ w' φ) = ψ (w.1 ⬝ᵥ w'.2 - w'.1 ⬝ᵥ w.2) • schr ψ w' (schr ψ w φ) := by
   funext x
-  simp only [schr, Pi.smul_apply, smul_eq_mul, ← mul_assoc, ← AddChar.map_add_eq_mul, add_dotProduct, dotProduct_add]
+  simp only [schr, Pi.smul_apply, smul_eq_mul, ← mul_assoc, ← AddChar.map_add_eq_mul, add_dotProduct]
   rw [show x + w'.1 + w.1 = x + w.1 + w'.1 by abel]
   congr 2
   ring
@@ -127,7 +125,7 @@ theorem main : GlobalTheory.ThK.KP → ∀ (F E : Type) [Field F] [NumberField F
   have hinv : M.co.rho B.ψ u (pureA F f g) = pureA F f g := by
     have hu' : u = t • incM F (Matrix.vecMulVec (fun i => (β i : E)) H'.x) := by
       ext i j
-      simp [hu, incM, incV, Matrix.vecMulVec_apply, smul_mul_assoc]
+      simp [hu, incM, incV, Matrix.vecMulVec_apply]
     obtain ⟨y, z, hyz⟩ := hD β
     show schr B.ψ (M.co.e u) _ = _
     rw [hu', map_smul, hyz]

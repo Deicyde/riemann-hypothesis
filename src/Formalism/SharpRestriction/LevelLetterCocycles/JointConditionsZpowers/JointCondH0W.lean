@@ -1,6 +1,6 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.JointConditionsZpowers.InvariantsConstantConditions
-import Formalism.SharpRestriction.LevelLetterCocycles.JointConditionsZpowers.JointConditionTame
-import Formalism.SharpRestriction.LevelLetterCocycles.ColumnH0Lengths
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.LevelLetterCocycles.JointConditionsZpowers.CommutingEndomorphismCondition
 
 noncomputable section
 

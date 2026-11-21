@@ -1,5 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsCliff
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.RealDescent.RealLeviDescent.IsCoreMod
+import Mathlib.LinearAlgebra.Eigenspace.Pi
 
 noncomputable section
 
@@ -117,7 +119,7 @@ theorem weight_of_torus (h : IsDerivK σ Kf) (μ : Fin n → ℤ) {v : V}
         by_cases hc : i = a
         · subst hc
           simp
-        · simp [Matrix.single_apply, hc, Ne.symm hc]
+        · simp [hc, Ne.symm hc]
       · rw [Matrix.diagonal_apply_ne _ hij, Matrix.smul_apply, Matrix.single_apply,
           if_neg (fun hh => hij (hh.1.symm.trans hh.2)), smul_zero]
     show NormedSpace.exp _ = _

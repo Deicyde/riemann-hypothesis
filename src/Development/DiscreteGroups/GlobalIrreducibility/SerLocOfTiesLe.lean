@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.HasLabelOfIsCuspOf
 import Development.DiscreteGroups.GlobalIrreducibility.IneEqOfHasGreenLe
 import Development.DiscreteGroups.GlobalIrreducibility.LocTypeOfSerParamLe

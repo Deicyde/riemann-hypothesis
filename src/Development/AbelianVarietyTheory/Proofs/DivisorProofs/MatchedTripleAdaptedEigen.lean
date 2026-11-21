@@ -1,27 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Definitions.Divisors.PairsOfSquareTriple
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsMaxThOne
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HoweDualityUnitary
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HoweDualityReal
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PureLApply
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeSocleOverOfSimple
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsMaxNotMem
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLinearUpdate
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsOfMemSpanImage
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFactorPureTensorComponentAtPlace
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqOfComponentTensorAdelicFunctionEq
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsMultilinearFactorization
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MultilinearQuotientFactorization
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SumMultilinearVacuumOutside
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StableComplementInSocle
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MaxThetaVanishingArchimedean
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaKernelCoinvariantStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepresentationCmExtensionStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaActionExistsStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedPairThetaExistsDataStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaPolynomialLinesInvarianceStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedThetaLiftCuspIntegralStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedTripleLowPartIdentityStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedDataLocalIdentityRealStatement
@@ -530,7 +514,7 @@ theorem pure_multilinear {κ : Type} [Fintype κ] (ζ : ∀ v : Pl F, (κ → Fv
   refine ⟨{ toFun := fun f => MultilinearMap.pi (fun x => (f (fun i => evI F (x i)) * c x) • P x),
             map_add' := ?_, map_smul' := ?_ }, ?_⟩
   · intro f g; ext φ x; simp [add_mul, add_smul]
-  · intro a f; ext φ x; simp [mul_assoc, smul_smul]
+  · intro a f; ext φ x; simp [mul_assoc]
   · intro f φ; funext x
     rw [GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.pure, hc x (fun v => π v (φ v)) _ (fun v h => by simp [h]) (fun v h => by simp [h])]
     simp [P, MultilinearMap.mkPiAlgebra_apply]

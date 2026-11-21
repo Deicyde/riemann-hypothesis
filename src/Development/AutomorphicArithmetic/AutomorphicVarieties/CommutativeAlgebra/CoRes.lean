@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.ResMapBijective
+import Mathlib.RingTheory.DualNumber
 
 open IsLocalRing MvPowerSeries UpperTheory.V.Alg
 

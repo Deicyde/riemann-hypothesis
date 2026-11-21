@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.Divisibility.WeightFamilies
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.LatticeGeometry.CmTypeMeetsConjugatePair
 import Development.AbelianVarietyTheory.BlockTheory.HeightDefect.TotallyPositiveExponents
 

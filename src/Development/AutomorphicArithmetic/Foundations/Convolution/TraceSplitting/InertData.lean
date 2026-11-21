@@ -1,10 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.TraceSplitting.SplitStable
 import Development.AutomorphicArithmetic.Foundations.Convolution.TraceSplitting.Places
 import Development.AutomorphicArithmetic.Foundations.Convolution.TraceSplitting.HoweType
 import Development.AutomorphicArithmetic.Foundations.Convolution.TwistedLocalOrbits.AtDown
 import Development.AutomorphicArithmetic.Foundations.Convolution.TwistedLocalOrbits.SbInv
-import Development.AutomorphicArithmetic.Foundations.Convolution.TwistedLocalOrbits.ValuationNatCastLeOne
 
 open MeasureTheory NumberField IsDedekindDomain ValuativeRel Filter
 open GroundTheory.Automorphic GroundTheory.Global GroundTheory.Global.SemiLocal

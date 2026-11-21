@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsMetricFrOfIsMetricOn
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ChernDegreeComplex
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TopPowerHermitianFormDensity
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TopDegreeFormCoeffEqTensorSquareTopCoefficient
 
@@ -81,7 +80,7 @@ theorem dens_prod {m : ℕ} (x : Fin m → Fin n × Fin n) :
         simp at hS
         omega
       rw [e]
-      simp [dens, Finsupp.single_apply, hne]
+      simp [dens, hne]
     · rw [prod_sym_not_inj x, Subalgebra.coe_zero, dens_zero']
       intro hi
       have := Fintype.card_le_of_injective _ hi

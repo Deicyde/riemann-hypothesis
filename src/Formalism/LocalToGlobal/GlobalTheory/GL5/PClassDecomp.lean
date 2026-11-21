@@ -1,7 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.GL5.FamilyMassVolumeIdentityOfClassDecomp
 import Formalism.LocalToGlobal.GlobalTheory.GL1.CompactFixesLattice.ExistsDenOfIsCompact
 import Formalism.LocalRingCardinality.PosOfIsomEmb
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.EmbeddingTypeJumps
+import Formalism.LocalToGlobal.GlobalTheory.GL1.CompactFixesLattice.Imports
 
 noncomputable section
 

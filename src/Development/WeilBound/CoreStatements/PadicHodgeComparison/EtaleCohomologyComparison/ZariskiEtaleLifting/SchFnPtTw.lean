@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.ZariskiEtaleLifting.MapAcrFromBase
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.FrobeniusElementAlt
-import BuildAid.D2
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

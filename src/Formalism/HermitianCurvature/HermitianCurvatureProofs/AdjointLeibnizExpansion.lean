@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.JfExhaustOfAvgCutoff
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.PositiveOrbitOpen
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 open Matrix MeasureTheory Filter Topology
 open scoped ContDiff
@@ -40,8 +44,8 @@ theorem hsVec_surjective :
   refine ⟨∑ i, (innerSL ℂ (stdOrthonormalBasis ℂ Wq i)).smulRight (WithLp.ofLp v i), ?_⟩
   first
   | (ext j
-     simp [hsVec, ContinuousLinearMap.sum_apply, ContinuousLinearMap.smulRight_apply, OrthonormalBasis.inner_eq_ite,
-       ite_smul, Finset.sum_ite_eq, Finset.sum_ite_eq'])
+     simp [hsVec, ContinuousLinearMap.smulRight_apply, OrthonormalBasis.inner_eq_ite,
+       ite_smul, Finset.sum_ite_eq'])
   | (apply WithLp.ofLp_injective
      funext j
      simp [hsVec, ContinuousLinearMap.sum_apply, ContinuousLinearMap.smulRight_apply, OrthonormalBasis.inner_eq_ite,
@@ -244,7 +248,7 @@ def adjOp (Θ : DiffOp k r Wp Wq) : DiffOp k r Wp Wq :=
 theorem foldr_max_le_iff (L : List ℕ) (n : ℕ) : L.foldr max 0 ≤ n ↔ ∀ x ∈ L, x ≤ n := by
   induction L with
   | nil => simp
-  | cons x L ih => simp [max_le_iff, ih]
+  | cons x L ih => simp [ih]
 
 theorem adjOp_order (Θ : DiffOp k r Wp Wq) : opOrder (adjOp Θ) = opOrder Θ := by
   have key : ∀ (L : List ℕ) (x : ℕ), x ∈ L → x ≤ L.foldr max 0 :=

@@ -1,9 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.BaseLocal
-import GroundTheory.ProfiniteCohomology.RestrictedRamification.MkFiniteEmbeddingGlobalUniformizer
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.BaseCupKummer
-import GroundTheory.ProfiniteCohomology.RestrictedRamification.BaseKummer
-import GroundTheory.ProfiniteCohomology.RestrictedRamification.BaseCupGlob
+import GroundTheory.ProfiniteCohomology.RestrictedRamification.BaseCupNat
+import GroundTheory.ProfiniteCohomology.RestrictedRamification.BaseFormal
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

@@ -1,3 +1,6 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.Resolvent
 
 noncomputable section
@@ -187,7 +190,7 @@ theorem ratioV_nonneg {μ : Fin n → ℝ} (hμ : Function.Injective μ) (hint :
       exact div_nonneg (by linarith) (by linarith)
   refine ⟨Finset.prod_nonneg hfac, ?_⟩
   rw [ratioV, Finset.prod_eq_zero_iff,
-    not_injective_shift_iff hμ s 1 (by simp) (fun x hx => by simp [Pi.single_apply, hx])]
+    not_injective_shift_iff hμ s 1 (by simp) (fun x hx => by simp [hx])]
   refine exists_congr fun s' => and_congr_right fun hs' => ?_
   have hd : μ s - μ s' ≠ 0 := sub_ne_zero.mpr (fun h => (Finset.mem_erase.mp hs').1 (hμ h).symm)
   rw [div_eq_zero_iff, or_iff_left hd, sub_eq_zero]
@@ -210,7 +213,7 @@ theorem ratioVd_nonneg {μ : Fin n → ℝ} (hμ : Function.Injective μ) (hint 
   refine ⟨Finset.prod_nonneg hfac, ?_⟩
   rw [ratioVd, Finset.prod_eq_zero_iff,
     not_injective_shift_iff hμ s (-1) (by simp [sub_eq_add_neg])
-      (fun x hx => by simp [Pi.single_apply, hx])]
+      (fun x hx => by simp [hx])]
   refine exists_congr fun s' => and_congr_right fun hs' => ?_
   have hd : μ s - μ s' ≠ 0 := sub_ne_zero.mpr (fun h => (Finset.mem_erase.mp hs').1 (hμ h).symm)
   rw [div_eq_zero_iff, or_iff_left hd]
@@ -228,7 +231,7 @@ theorem ratioVd_add_single_mul {μ : Fin n → ℝ} (s : Fin n) (hμ : Function.
     intro h
     apply hne
     apply hμs
-    simp [Pi.single_apply, hne]
+    simp [hne]
     linarith
   simp only [Pi.add_apply, Pi.single_eq_same, Pi.single_apply, hne, if_false, add_zero]
   rw [show μ s + 1 - 1 - μ s' = μ s - μ s' by ring]

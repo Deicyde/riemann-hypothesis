@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.SmallCones.SoDefs
 import Development.WeilBound.ThetaLifts.SmallCones.SoStab
 

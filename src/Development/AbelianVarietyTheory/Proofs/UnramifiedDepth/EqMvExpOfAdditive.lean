@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Jets.TwoPlaces
-import Formalism.LocalToGlobal.CharacterGerms.RowTieTop
-import Development.AbelianVarietyTheory.Definitions.TeichmullerDepth.HasTeich
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.CharacterBlocksAttainBound
 open scoped BigOperators TensorProduct
 open NumberField IsLocalRing Formalism.IncomingBounds Formalism.L2.FormalSeriesBounds Formalism.L2.Pj GlobalTheory.RowLaw ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Geo.Tor.Germ
@@ -44,7 +41,7 @@ theorem eq_mvExp_of_additive : ∀ (C : Type) [Field C] [CharZero C] (κ : Type)
     rw [Derivation.leibniz, Formalism.G.LogCR.pderiv_subst (by simp), Formalism.G.LogCR.pderiv_subst (by simp),
       Formalism.G.LogCR.pderiv_subst (by simp), Finset.sum_eq_single w, Finset.sum_eq_single w,
       Finset.sum_eq_zero] at h1
-    · simp [pderiv_X, Pi.single_apply] at h1
+    · simp at h1
       have h2 := congrArg (subst p) h1
       rw [subst_mul hp, subst_comp_subst_apply hA hp, subst_comp_subst_apply (hB 0) hp,
         subst_comp_subst_apply (hB 1) hp] at h2
@@ -55,7 +52,7 @@ theorem eq_mvExp_of_additive : ∀ (C : Type) [Field C] [CharZero C] (κ : Type)
       rw [hs, hs] at h2
       rw [h2, ← coeff_zero_eq_constantCoeff_apply, coeff_pderiv, smul_eq_C_mul, mul_comm]
       simp
-    all_goals simp +contextual [pderiv_X, Pi.single_apply]
+    all_goals simp +contextual
   have hF := GlobalTheory.CharBlock.isExp_mvExp (fun i => coeff (Finsupp.single i 1) U)
   ext m
   have hm : (mfact m : C) ≠ 0 := by

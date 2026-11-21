@@ -1,7 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.HomogeneousNonvanishing.YReadArchA
 import Development.WeilBound.CoreStatements.HomogeneousNonvanishing.YReadArchB
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.CompactificationCompEquivStatement
+import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.BcExAll
+import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HodgeCptFlagXdeg
+import Development.AutomorphicSpectrum.Proofs.GeometryProofs.RootOriginFrameSectionBound
+import Development.AutomorphicSpectrum.Proofs.MetricProofs.HodgeCompactificationInteriorPoint
 open NumberField IsDedekindDomain MeasureTheory Filter Topology
 open Formalism.L2.Pj ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.FD ReciprocityTheory.ChartRestriction.G.AR.Up ReciprocityTheory.ChartRestriction.G.AR.Inst Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.L2.Theta
 open GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Rec
@@ -59,7 +64,7 @@ theorem root_val {Fr : Small.GenFrame Or} {A : Subring RM.Ω} (hG : GoodRing Fr 
       (HodgeLine.isGrNorm_conj Or.𝔐.t Or.𝔐.M _ hν)
     obtain ⟨u', hu', eu'⟩ := hS'.2.2 ch fun k => (map_ne_zero _).2 (hch k)
     rw [CxVal.unique hu' (HodgeLine.valAt_conj hu)] at eu'
-    simp only [Complex.norm_conj, RCLike.norm_conj] at eu'
+    simp only [RCLike.norm_conj] at eu'
     exact mul_left_cancel₀ (zpow_pos hν.pos _).ne' (eu'.trans eu.symm)
 
 theorem norm_alg {I : Type} [Fintype I] (T T₀ h K : I → ℝ) (sg ex n : I → ℤ) (hT : ∀ i, 0 < T i)

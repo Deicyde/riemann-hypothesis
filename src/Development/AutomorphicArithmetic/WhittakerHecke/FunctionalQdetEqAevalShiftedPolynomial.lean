@@ -1,5 +1,6 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.BlockHeckeSlices.CapRDefs
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.SiegelHeights.MultiCentre
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ContinuousConjFin
 open MeasureTheory NumberField GlobalTheory.CuspRep GlobalTheory.CompanionTheory.CTFin
 open GroundTheory.Automorphic GroundTheory.Automorphic.Reduction GroundTheory.Automorphic.RightCosetSpace UpperTheory.ConvolutionTheory.BW
 

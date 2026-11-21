@@ -1,5 +1,4 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.MirabolicDerivatives.LeibnizDerivatives.GenericProdIff
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.OpenFns
 
 noncomputable section
@@ -150,7 +149,7 @@ theorem smInt_indicator {X W : Type} [MeasurableSpace X] [AddCommGroup W] [Modul
     · rw [hw, smul_zero]
     · have : (A.indicator fun _ => (0 : W)) ⁻¹' {w} = ∅ := by
         ext x
-        simp [Set.indicator_zero', Ne.symm hw]
+        simp [Ne.symm hw]
       rw [this, measure_empty]
       simp
   · rw [finsum_eq_single _ v]

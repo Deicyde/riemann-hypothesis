@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.UnramifiedQuadraticSetting
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
 
 noncomputable section
 
@@ -110,7 +115,7 @@ theorem hermite (L : Submodule W (Fin k → Q)) (hL : IsLattice W L) :
     have : (π ^ N') • (Pi.single c (1 : Q) : Fin k → Q) = ∑ j, a j • (fun i => g i j) := by
       funext i
       rw [Finset.sum_apply]
-      simp only [Pi.smul_apply, Algebra.smul_def, ha, smul_eq_mul]
+      simp only [Pi.smul_apply, Algebra.smul_def, ha]
       have h1 : (g * g⁻¹) i c = (1 : Matrix (Fin k) (Fin k) Q) i c := by rw [Matrix.mul_nonsing_inv g hg]
       rw [Matrix.mul_apply] at h1
       have h2 : ∑ j, π ^ N' * g⁻¹ j c * g i j = π ^ N' * ∑ j, g i j * g⁻¹ j c := by

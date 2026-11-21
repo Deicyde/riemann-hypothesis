@@ -1,8 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ThetaMod
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ExistsUniqueVec
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.ExistsUnitarySupportedAtPlaceOfMulEqIdem
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.FiniteAdelesCmFieldEqZeroOfComponents
+import Formalism.LocalRingCardinality.SpanPowerMembership.LocAtA
+import Formalism.SharpRestriction.CuspSpanNormBounds.BesselShellMomentBounds
 open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formalism.ConjugateSelfDual ReciprocityTheory.Gal ReciprocityTheory.Aut Formalism.AUTREP Formalism.L2 Formalism.L2.Host Formalism.L2.NT NumberField IsDedekindDomain Polynomial GlobalTheory.HeightCounting GlobalTheory.RowTie GlobalTheory.SplitRead GlobalTheory.NPin
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
@@ -26,7 +27,7 @@ theorem equivFinsuppOfBasisRight_rTensor {K M N N' ι : Type*} [Field K] [AddCom
       f (TensorProduct.equivFinsuppOfBasisRight b x i) := by
   induction x using TensorProduct.induction_on with
   | zero => simp
-  | tmul m n => simp [TensorProduct.equivFinsuppOfBasisRight_apply_tmul_apply]
+  | tmul m n => simp
   | add x y hx hy => simp only [map_add, Finsupp.add_apply, hx, hy]
 
 theorem rTensor_eq_zero {K M N P Q ι : Type*} [Field K] [AddCommGroup M] [Module K M]

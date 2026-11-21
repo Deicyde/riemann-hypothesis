@@ -1,6 +1,6 @@
-import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.IsPrimitiveSub
-import Formalism.SharpRestriction.CuspSpanNormBounds.StandingNumericalData
 import Formalism.SharpRestriction.CuspSpanNormBounds.NormalizedLocalScale
 
 noncomputable section

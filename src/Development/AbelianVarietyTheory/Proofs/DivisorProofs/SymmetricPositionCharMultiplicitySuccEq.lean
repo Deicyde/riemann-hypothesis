@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.SplitDoublingNBlock
+import Mathlib.Data.Matrix.PEquiv
 
 noncomputable section
 

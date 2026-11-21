@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.BranchSandwichDivisors.StatementL
 import Formalism.HarderNarasimhan.ShiftInvariance
+import Mathlib.Analysis.CStarAlgebra.ContinuousLinearMap
 
 open Module NumberField IsDedekindDomain
 open scoped Matrix ComplexOrder
@@ -83,14 +86,14 @@ theorem ms_opNorm_nat [Nonempty ι] (b : Basis ι K V) (X : InfinitePlace K → 
   have h1 : (LinearMap.toMatrix b b ((n : K) • (LinearMap.id : V →ₗ[K] V))).map v.embedding
       = (n : ℂ) • (1 : Matrix ι ι ℂ) := by
     ext i j
-    by_cases h : i = j <;> simp [LinearMap.toMatrix_id, Matrix.one_apply, h]
+    by_cases h : i = j <;> simp [h]
   have hM : (X v)⁻¹ * (LinearMap.toMatrix b b ((n : K) • (LinearMap.id : V →ₗ[K] V))).map
       v.embedding * X v = (n : ℂ) • (1 : Matrix ι ι ℂ) := by
     rw [h1, Matrix.mul_smul, Matrix.mul_one, Matrix.smul_mul, Matrix.nonsing_inv_mul _ (hX v)]
   have h3 : Matrix.toEuclideanLin (1 : Matrix ι ι ℂ) = LinearMap.id := by
     first
       | exact Matrix.toEuclideanLin_one
-      | (ext x i; simp [Matrix.toEuclideanLin_apply])
+      | (ext x i; simp)
       | (simp [Matrix.toEuclideanLin, Matrix.toLin'_one])
   have h4 : LinearMap.toContinuousLinearMap (Matrix.toEuclideanLin ((n : ℂ) • (1 : Matrix ι ι ℂ)))
       = (n : ℂ) • ContinuousLinearMap.id ℂ (EuclideanSpace ℂ ι) := by

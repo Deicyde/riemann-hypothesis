@@ -1,8 +1,7 @@
-import Mathlib
-import Formalism.SharpRestriction.InertJacobiLevels.AsmIface
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.SmallOrderPrimes
 import Formalism.SharpRestriction.Divisibility.LocalQuadraticParts
-import Formalism.CyclotomicNorms.StatementI
 import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.PairRowIffQdRows
 import Development.AutomorphicArithmetic.PrimeDiscriminants.Scales
 

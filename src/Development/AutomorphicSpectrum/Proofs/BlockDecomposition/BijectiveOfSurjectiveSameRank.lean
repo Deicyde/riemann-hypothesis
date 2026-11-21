@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IotaQInjective
+import BuildAid.Leniency.Open
+import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.HodgeWedgeFields.H1CommutesBaseChange
 
 open CategoryTheory AlgebraicGeometry TensorProduct Opposite MonoidalCategory CartesianMonoidalCategory MonObj ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory.CatCoh GlobalTheory.Cris GlobalTheory.CechDR MainStatements.Hodge GlobalTheory.CompanionTheory.WedgeOf
 
@@ -29,7 +29,7 @@ theorem bijective_of_surjective_of_VB : ∀ (R A B : Type) [CommRing R] [AddComm
   let E : (LinearMap.ker f × B) ≃ₗ[R] A :=
     LinearEquiv.ofLinear ((LinearMap.ker f).subtype.coprod g) (s.prod f)
       (by
-        ext a <;> simp [s, hg'])
+        ext a <;> simp [s])
       (by
         ext x <;> simp [s, hg'])
   have hsub : Subsingleton (LinearMap.ker f) := by

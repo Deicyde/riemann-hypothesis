@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.LocPoly
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SummableAbsNormRpowHeightOneSpectrum
+import Development.AbelianVarietyTheory.Definitions.Divisors.ZetaPair
 
 open NumberField IsDedekindDomain MeasureTheory Matrix Polynomial GroundTheory.Automorphic UpperTheory.V
 open GlobalTheory.CuspRep (GA Af Ad ratGL finGL locGL pFin)

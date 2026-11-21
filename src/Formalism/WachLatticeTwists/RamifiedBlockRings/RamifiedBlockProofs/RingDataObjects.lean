@@ -1,5 +1,6 @@
-import Formalism.WachLatticeTwists.RamifiedBlockRings.RamifiedBlockProofs.CharpolyRevMap
-import Formalism.CharacterColumnKernels.IdempotentNormalForms.IdemNormalForm
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.TruncatedSeriesCounting.LemmaDetPoly
 
 open Finset Classical
 

@@ -1,5 +1,11 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import CompanionTheory.HarishChandraModules.KFiniteAnalyticVectors.AdmissibleSmoothVectors.MapStdPoly
 import CompanionTheory.HarishChandraModules.KFiniteAnalyticVectors.AdmissibleSmoothVectors.IwaCore
+import Mathlib.Data.Int.Star
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 
@@ -212,7 +218,7 @@ theorem dec_Jm (ε : Fin n → Bool) : Dec (Jm ε) := by
   have hV : ∀ H : Matrix (Fin n) (Fin n) ℂ, V.conjTranspose * H * V = H.submatrix σ σ := by
     intro H
     ext a b
-    simp [V, Matrix.mul_apply, Matrix.one_apply, Matrix.submatrix_apply, Matrix.conjTranspose_apply]
+    simp [V, Matrix.mul_apply, Matrix.one_apply, Matrix.submatrix_apply]
   apply Dec.of_conj (V := V)
   · have h1 := hV 1
     rw [Matrix.mul_one] at h1

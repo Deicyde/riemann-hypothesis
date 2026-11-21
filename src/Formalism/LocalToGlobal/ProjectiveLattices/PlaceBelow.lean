@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.ChartDirectionsIntegral
-import Formalism.LocalToGlobal.ProjectiveLattices.VAtVNeBot
 import Formalism.LocalToGlobal.ProjectiveLattices.ThProps
 
 set_option autoImplicit false

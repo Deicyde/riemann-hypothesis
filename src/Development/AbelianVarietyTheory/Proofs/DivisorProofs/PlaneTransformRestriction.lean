@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VacGlueIndicator
 open scoped TensorProduct Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -18,7 +17,7 @@ theorem planeMat_mulVec_surjective {σ : E →ₐ[F] E} {B : Base F E} {n n₁ i
     obtain ⟨s, t, u, -, -, -, rfl⟩ := hA.split z hz
     refine ⟨Sum.elim u ![s, t], ?_⟩
     funext i
-    simp [Matrix.mulVecLin_apply, planeMat, Matrix.mulVec, dotProduct, Fintype.sum_sum_type, Fin.sum_univ_two]
+    simp [planeMat, Matrix.mulVec, dotProduct, Fintype.sum_sum_type, Fin.sum_univ_two]
     ring
   rw [hL.span_eq_top] at hle
   intro y

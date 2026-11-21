@@ -1,5 +1,6 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.NonzeroLocus
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ThetaUnifAV
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SemiabelianSchemes.PrecompleteBases.PsbLb
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.ProjDehomA
@@ -566,7 +567,7 @@ def baseChangeIso : LB.Iso ((O1 R N).pull (baseChange N φ)) (O1 R' N) where
 
 theorem baseChangeIso_isGen : (baseChangeIso N φ).IsGen := by
   rintro ⟨i, j⟩ ⟨i', j'⟩
-  simp only [LB.div, O1_g_eq_ratioUnit_chart_inf, baseChangeIso]
+  simp only [LB.div, baseChangeIso]
   erw [pullback_O1_transition_eq_blockUnit, res_ratioUnit, res_ratioUnit, res_ratioUnit, res_ratioUnit]
   erw [inv_ratioUnit, mul_right_comm, ratioUnit_mul_ratioUnit, ratioUnit_mul_ratioUnit]
 

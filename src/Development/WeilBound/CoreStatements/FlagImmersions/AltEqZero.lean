@@ -1,4 +1,10 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.FlagImmersions.AltCMul
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -112,7 +118,7 @@ theorem col_sum (τ : Ψ) (k m : ℕ) (hk : 1 ≤ k) (hkN : k ≤ N) (hm : 1 ≤
         · subst c1
           simp [lower, bump, hne, hne.symm]; omega
         · subst c2
-          simp [lower, bump, hne, hne.symm]; omega
+          simp [lower, bump, hne.symm]; omega
         · simp [lower, bump, c1, c2]
       · intro t ht
         funext c

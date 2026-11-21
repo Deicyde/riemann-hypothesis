@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsCompOfOne
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SubOrthProjPerpMem
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ActEqTranslateLiftV

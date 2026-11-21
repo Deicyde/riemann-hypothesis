@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.StatementsDivisorPreimageNull
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.StatementsParamImageNull
 import GroundTheory.HeightsAndTheta.Heights.Regularisation.GlueCharts

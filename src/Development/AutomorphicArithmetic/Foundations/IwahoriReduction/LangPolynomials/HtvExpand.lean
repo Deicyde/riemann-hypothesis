@@ -1,11 +1,9 @@
-import Development.AutomorphicArithmetic.Foundations.IwahoriReduction.LangPolynomials.FixedIntegersIsUnitOfNotMemPrimeSpan
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.IwahoriReduction.LangPolynomials.PresTr
 import Development.AutomorphicArithmetic.Foundations.IwahoriReduction.LangPolynomials.PresDl
 import Development.AutomorphicArithmetic.Foundations.IwahoriReduction.LangPolynomials.PresMono
-import Development.AutomorphicArithmetic.Foundations.IwahoriReduction.LangPolynomials.KumAlg
-import Development.AutomorphicArithmetic.Foundations.IwahoriReduction.LangPolynomials.WdVal
 import Development.AutomorphicArithmetic.Foundations.IwahoriReduction.LangPolynomials.PEvHom
-import Development.AutomorphicArithmetic.Foundations.IwahoriReduction.LangPolynomials.DvdOfNormLe
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.MainNotions.N GlobalTheory.GalOfCusp UpperTheory.V UpperTheory.V.Af UpperTheory.V.HV GlobalTheory.Ord2 GlobalTheory.KZ GlobalTheory.Col UpperTheory.Kd.C7
 
 namespace UpperTheory.Kd.C7.Cl1
@@ -64,7 +62,7 @@ private lemma eps_dl (Φ : Fr l A j) (ε : PowerSeries Φ.R →+* ℂ_[l]) (w : 
     rw [← map_mul, Ring.inverse_mul_cancel _ hP, map_one]
   unfold dl dd
   rw [map_mul, map_mul, h1, h2, hz, eps_ser Φ ε w hC hz, eps_ser Φ ε w hC hz, Polynomial.derivative_map]
-  simp only [map_div₀, map_mul, div_eq_mul_inv, map_inv₀]
+  simp only [map_mul, div_eq_mul_inv, map_inv₀]
 
 private lemma lam_act (Φ : Fr l A j) {c : Coef l} (β : Bas c) (a : c.O) (x : Fin β.d → Φ.R) :
     Φ.lam β (fun i => ∑ k, algebraMap ℤ_[l] Φ.R (β.mat a i k) * x k) =

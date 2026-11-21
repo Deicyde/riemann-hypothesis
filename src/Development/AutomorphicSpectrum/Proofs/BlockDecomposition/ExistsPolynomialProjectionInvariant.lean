@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MulEqOfRangeLe
-import GroundTheory.AutomorphicForms.AnisotropicHeight
 
 noncomputable section
 

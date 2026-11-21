@@ -1,8 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsBasisOfBot
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KerMapSubsetImMap
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SandwichDatumScalarAction
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FontaineAinfLocalDomainXiAdicOrder
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SandwichMaps
 open GlobalTheory.Sandwich GlobalTheory.IndefiniteRowSideFullHecke.SandwichMaps GlobalTheory.DetInv Matrix TensorProduct
 
 namespace GlobalTheory.DetInv
@@ -61,7 +60,7 @@ theorem ker_bC_eq_range_alC_and_ker_alC_eq_range_bC : ∀ (p : ℕ) [Fact p.Prim
     rw [Matrix.mulVec_mulVec, ← Matrix.map_mul, hXY]
     have : (mu ε • (1 : Matrix (Fin h) (Fin h) (Ainf p O))).map f = 0 := by
       ext i j
-      by_cases hij : i = j <;> simp [hij, Matrix.one_apply, hfmu]
+      by_cases hij : i = j <;> simp [hij, hfmu]
     rw [this, Matrix.zero_mulVec]
   have hb : ∀ z, bC C D z = D.G.map f *ᵥ z := fun z => by
     simp [bC, redC, Matrix.toLin'_apply, hf]

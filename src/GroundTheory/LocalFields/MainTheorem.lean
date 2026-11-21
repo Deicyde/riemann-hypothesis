@@ -1,8 +1,6 @@
-import Mathlib
-import GroundTheory.LocalFields.LocalArtinUniqueness
-import GroundTheory.LocalFields.LocalArtinCompletion
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.LocalFields.LocalArtinFunctoriality
-import GroundTheory.LocalFields.LocalArtinTransport
 
 noncomputable section
 

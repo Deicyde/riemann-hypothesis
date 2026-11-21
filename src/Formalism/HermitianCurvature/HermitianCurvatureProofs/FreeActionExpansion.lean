@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.PositionUpdateSums
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.GramProductIdentities
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.TransferMatrixFactorization
 
 namespace Formalism.FourierDecayAlt.P.FreeActionExpansion
 
@@ -207,7 +211,7 @@ theorem expand (ρ : Rep A V) (QQ : ℂ → M2 A) (f : A) (s : ℂ) (w : List (L
         -act G (C 0 • X) u := by
       intro u hu
       rw [act_ins, Fin.sum_univ_two, act_ins, act_ins]
-      simp [hu, Formalism.YangianSpanCharacter.T.J, Formalism.YangianSpanCharacter.T.Uinv, Fin.sum_univ_two, update_zero_of _ u hu]
+      simp [Formalism.YangianSpanCharacter.T.J, Formalism.YangianSpanCharacter.T.Uinv, Fin.sum_univ_two, update_zero_of _ u hu]
     have eA : F7.evR vA l.pt.re = evC vA l.pt := by unfold F7.evR evC; rw [← hpt]
     have eB : F7.evR vB l.pt.re = evC vB l.pt := by unfold F7.evR evC; rw [← hpt]
     have eAv : F7.evR vAv (l.pt.re + 1) = evC vAv (l.pt + 1) := by

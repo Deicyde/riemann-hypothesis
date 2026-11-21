@@ -1,4 +1,17 @@
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.FlatDegree
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.Data.Int.Star
+import Mathlib.NumberTheory.NumberField.Discriminant.Basic
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.TwoWeightEqOneAddRoot
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -52,7 +65,7 @@ theorem discriminant_bound_sqrt_neg_prime (b : Module.Basis J ℤ O) (d : ℕ) (
   let C : Matrix J J ℤ := fun i j => (Algebra.traceMatrix ℤ b * Algebra.leftMulMatrix b r) i j / d
   have hTL : Algebra.traceMatrix ℤ b * Algebra.leftMulMatrix b r = (d : ℤ) • C := by
     ext i j
-    simp only [C, Matrix.smul_apply, smul_eq_mul]
+    simp only [C]
     exact (Int.mul_ediv_cancel' (hent i j)).symm
   have hL2 : (Algebra.leftMulMatrix b r).det ^ 2 = (-(d : ℤ)) ^ Fintype.card J := by
     rw [sq, ← Matrix.det_mul, ← map_mul, ← sq, hr]

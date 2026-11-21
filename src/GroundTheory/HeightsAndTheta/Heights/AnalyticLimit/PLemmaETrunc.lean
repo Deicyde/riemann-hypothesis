@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.StLemmaETrunc
 import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.PListProductMass
 import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.PLemmaETruncSmooth

@@ -1,14 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.CMLattices.IntegralOf
-import Development.AbelianVarietyTheory.Statements.PrincipalLattices.ExistsPrincipalLattice
-import Development.AbelianVarietyTheory.Definitions.RegularCharts.BaseNorm
-import Formalism.LocalToGlobal.ProjectiveLattices.L2DefiniteCuspForms
-import Formalism.LocalToGlobal.ProjectiveLattices.NonnegIffOfLiesTotal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.NonemptyUnitAt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.NonvanishingNearMaximum
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.TraceMulConjIntIffMemOfMulDifferentEqOne
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.InvMulVecEqZero
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.FinrankInt
+import Development.AbelianVarietyTheory.Definitions.CMLattices.ExistsIsThetaDegOfIsLocalModel
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField IsDedekindDomain MeasureTheory
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.LamCM Formalism.L2.Pj
 open scoped ComplexOrder
@@ -111,7 +107,7 @@ theorem exists_cmLat (H : Host E) {r p q : ℕ} (Y : FD.Data E r) (x₀ : Y.dom)
   let hh : Fin p ⊕ Fin q → 𝓞 E := fun j =>
     -(s j.isLeft : 𝓞 E) * ⟨FD.herm X.Gm (lam (σ j)) (lam (σ j)), X.L'_int _ (hL _) _ (hL _)⟩
   have hhh : ∀ j, (hh j : E) = -(s j.isLeft : E) * FD.herm X.Gm (lam (σ j)) (lam (σ j)) := fun j => by
-    simp only [hh, map_mul, map_neg, map_intCast]
+    simp only [hh]
     rfl
   have hsq : ∀ τ : E →+* ℂ, τ (H.rt : E) = H.rt0 ∨ τ (H.rt : E) = -H.rt0 := fun τ => by
     refine sq_eq_sq_iff_eq_or_eq_neg.1 ?_

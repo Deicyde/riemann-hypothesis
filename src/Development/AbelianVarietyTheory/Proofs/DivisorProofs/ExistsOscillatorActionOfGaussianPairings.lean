@@ -1,7 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousFourierGau
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralGauTwistedConv
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PowMulNormGauLe
+import Mathlib.Analysis.CStarAlgebra.Module.Constructions
+import Mathlib.RingTheory.SimpleRing.Principal
 
 noncomputable section
 

@@ -1,5 +1,6 @@
-import Formalism.ThetaLogCoordinates.FockResolutionOnto.StatementG
+import BuildAid.Leniency.Open
 import Formalism.MahlerMeasure.MahlerMeasureProofs.MeanGam
+import Formalism.ThetaLogCoordinates.FockResolutionOnto.ShiftLastLetterThresholds
 
 namespace Formalism.InvariantFactorPaths.L4
 

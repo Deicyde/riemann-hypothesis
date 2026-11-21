@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsFrobGBaseChange
-import Development.AbelianVarietyTheory.Definitions.Divisors.NotCompactOfMEqOne
 
 noncomputable section
 

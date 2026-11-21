@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsValueTiedOfIsToricElt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToricSumEqHeckeLValueMulAuxiliaryFactorsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeckeLNeZeroNat
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinPartEqOneOfLevel
+import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ValApplySubLtOne
 
 noncomputable section
 

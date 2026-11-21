@@ -1,12 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.GlobalGaussLaws.GaussLaw
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.GlobalGaussLaws.LocInstSt
-import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.GlobalGaussLaws.LocCellSt
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.GlobalGaussLaws.LocCellA
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.GlobalGaussLaws.LocCellT
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ThetaIntegralContinuous
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.FockPolynomialSchwartzKilledByLongAnnihilation
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LintegralNormSqEqToL2
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ExistsGaussIndicator
 
 noncomputable section
 
@@ -142,7 +140,7 @@ theorem cov {m n : ℕ} (fr : Matrix (Fin m) (Fin m) ℂ) (hfr : IsUnit fr.det) 
     _ = ∫ y, f y ∂(Measure.map Te volume) := (integral_map_equiv Te f).symm
     _ = _ := by
       rw [hm, hmap, integral_smul_measure]
-      simp [ENNReal.toReal_ofReal (abs_nonneg _)]
+      simp
 
 theorem continuous_evX {m n : ℕ} (P : PX m n) : Continuous (evX P) := by
   unfold evX

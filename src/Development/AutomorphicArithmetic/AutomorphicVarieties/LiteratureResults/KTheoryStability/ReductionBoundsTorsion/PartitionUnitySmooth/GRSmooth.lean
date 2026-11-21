@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.KTheoryStability.ReductionBoundsTorsion.PartitionUnitySmooth.Smoothing
 import Development.AutomorphicArithmetic.AutomorphicVarieties.HermiteNormalForms.Locfin
+import Mathlib.Analysis.LocallyConvex.HahnBanach
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 

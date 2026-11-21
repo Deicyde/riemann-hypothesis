@@ -1,13 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.GermCompatId
 import Development.AutomorphicArithmetic.GenericGermInjectivity.CoverGeneric
-import Development.AutomorphicArithmetic.CommutativeAlgebra.FunctionFieldOfFiniteEtaleCover
-import Development.AutomorphicArithmetic.Foundations.PullbackRestriction.AppRes
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.FlatHermRootLineDegree
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.GenericGermDifferentialFormPullbackDominantStatement
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.RiemannFormHermitianLattice
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.CechHomologyEquivFamStatement
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.GenericGermDifferentialFormRestrictAffineOpenStatement
 
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory GlobalTheory.HodgeCoh GlobalTheory.CechDR GlobalTheory.PD KaehlerDifferential GlobalTheory.W1 GlobalTheory.W1.Lef
 
@@ -107,7 +101,7 @@ private theorem cubeSign_mul_sortSign_erase_eq_neg_of_collide {α β : Type} [Li
         rcases lt_or_gt_of_ne hyb with h2 | h2
       all_goals first
         | (exfalso; order)
-        | simp [h1, h2, h3, hya, hyb, lt_asymm h1, lt_asymm h2, lt_asymm h3]
+        | simp [h1, h2, h3, hya, lt_asymm h1, lt_asymm h2, lt_asymm h3]
     rw [Finset.prod_congr rfl pt, Finset.prod_mul_distrib, Finset.prod_ite_eq' s a, if_pos ha]
     ring
   have eA := sortSign_eq_sortSign_erase_mul τ ha
@@ -526,7 +520,7 @@ theorem lift_bijective (hc : c ≫ p = p') (a : ℕ) (W : Z.Opens) :
   letI := algΓ p; letI := algΓ p'
   show Function.Bijective (sectionsOn.mapOver (appTop_algebraMap hc) (𝟙 _) W)
   rw [sectionsOn.mapOver.eq_1]
-  simp only [LinearMap.coe_mk, AddHom.coe_mk]
+  simp only
   have key : ∀ y, (ConcreteCategory.hom
       (Scheme.Modules.Hom.app (𝟙 ((Scheme.Modules.pushforward c).obj (Omega p' a))) W)) y = y :=
     fun y => rfl

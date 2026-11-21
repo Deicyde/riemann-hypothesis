@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.SphericalGaloisCompatibility.PAdicSplitting.InfLifts
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.DeRhamDescends
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.JumpsDescend

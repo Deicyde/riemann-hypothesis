@@ -1,4 +1,7 @@
-import Development.EtaleCohomology.EtaleTrace.TorsionH0PointAndSections
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.PullHlComp
+import Mathlib.Tactic.Polynomial.Basic
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry GlobalTheory.EtC
@@ -28,7 +31,7 @@ theorem coh_of_succ (x : ∀ m : ℕ, ZMod (l ^ m))
     (h : ∀ m, ZMod.castHom (pow_dvd_pow l (Nat.le_succ m)) (ZMod (l ^ m)) (x (m + 1)) = x m) : x ∈ Coh l := by
   intro a b hab
   induction b, hab using Nat.le_induction with
-  | base => simp [ZMod.castHom_apply, ZMod.cast_id']
+  | base => simp
   | succ n hn ih => rw [← ih, ← h n, ← RingHom.comp_apply, ZMod.castHom_comp]
 
 theorem tensor_form {M : Type*} [AddCommGroup M] [Module ℤ_[l] M] (z : ℚ_[l] ⊗[ℤ_[l]] M) :

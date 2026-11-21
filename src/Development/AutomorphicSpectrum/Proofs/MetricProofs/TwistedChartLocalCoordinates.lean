@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.IsLocSec
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.MinorIJMap
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.TwistedChartTransitionAnalyticStatement
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.PFsInvPow
 import ReciprocityTheory.AnalyticForms.LeviForms.TailCutA

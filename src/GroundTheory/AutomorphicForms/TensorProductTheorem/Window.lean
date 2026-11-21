@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.SmoothRep
 import GroundTheory.AutomorphicForms.TensorProductTheorem.Operators
 import GroundTheory.AutomorphicForms.TensorProductTheorem.MatrixCoeff

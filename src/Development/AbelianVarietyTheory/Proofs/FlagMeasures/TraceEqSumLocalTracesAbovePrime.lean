@@ -1,6 +1,22 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.PsiEDef
-import Formalism.LocalRingCardinality.DataSpaces
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.NumberTheory.LocalField.Basic
+import Mathlib.NumberTheory.Padics.Complex
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.Valuation.Integral
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Topology.Connected.Separation
+import Mathlib.Topology.MetricSpace.Ultra.TotallySeparated
+import Mathlib.Topology.UniformSpace.Uniformizable
+import Std.Tactic.BVDecide.Normalize.Prop
 open NumberField IsDedekindDomain Formalism.MainNotions.S.Loc ValuativeRel
 open scoped nonZeroDivisors
 
@@ -88,7 +104,7 @@ theorem ker_isPrime (σ : F →+* Ω) : (ker σ).IsPrime := by
     rw [mem_ker] at hab
     by_contra h
     rw [not_or, mem_ker, mem_ker, not_lt, not_lt] at h
-    simp only [RingOfIntegers.coe_eq_algebraMap, map_mul, norm_mul] at hab
+    simp only [map_mul, norm_mul] at hab
     nlinarith [h.1, h.2]
 
 theorem norm_le_one (σ : F →+* Ω) (p : HeightOneSpectrum (𝓞 F)) (hp : p.asIdeal = ker σ)

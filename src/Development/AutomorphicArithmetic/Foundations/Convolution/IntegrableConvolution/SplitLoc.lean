@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.ThickFrames
 
 noncomputable section
@@ -145,7 +146,7 @@ private theorem diag_fac (hs : Function.Surjective (completionMap v w)) (ν : Fi
     rw [Cartan.coe_diagPow, Matrix.diagonal_map (map_zero _)]
     congr 1
     funext i
-    simp only [Function.comp_apply, map_zpow₀, ha]
+    simp only [map_zpow₀, ha]
   rw [Units.val_mul, hxm, hm, Cartan.coe_diagPow, Matrix.diagonal_mul_diagonal]
   congr 1
   funext i

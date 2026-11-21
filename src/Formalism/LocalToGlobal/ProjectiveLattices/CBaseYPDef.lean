@@ -1,6 +1,7 @@
-import Formalism.LocalToGlobal.ProjectiveLattices.AxHSup
-import Formalism.LocalToGlobal.ProjectiveLattices.SupNDataOfNonneg
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.L2DefiniteCuspForms
+import Formalism.LocalToGlobal.ProjectiveLattices.CompOrd
 
 noncomputable section
 

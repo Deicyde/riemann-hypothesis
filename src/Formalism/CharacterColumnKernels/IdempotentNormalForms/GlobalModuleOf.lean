@@ -1,6 +1,5 @@
-import Formalism.CharacterColumnKernels.StatGlobalModule
+import BuildAid.Leniency.Open
 import Formalism.CharacterColumnKernels.IdempotentNormalForms.GlobalConcreteOf
-import Formalism.CharacterColumnKernels.IdempotentNormalForms.GenFin
 import Formalism.CharacterColumnKernels.IdempotentNormalForms.CupKillAdm
 
 open Finset

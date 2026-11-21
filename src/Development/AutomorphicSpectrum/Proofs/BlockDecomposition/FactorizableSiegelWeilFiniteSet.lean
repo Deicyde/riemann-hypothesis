@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GramNear
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.PureCIsSchwartzBruhat
 open scoped Matrix NNReal ENNReal ComplexConjugate TensorProduct

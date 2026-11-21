@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.PoissonSummationThetaSeriesRowTermCoset
-import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.EchEqOneIff
 open Matrix Complex GlobalTheory.SW GlobalTheory.SW.FourierJ
 open scoped ComplexConjugate Real
 set_option maxHeartbeats 1000000 in

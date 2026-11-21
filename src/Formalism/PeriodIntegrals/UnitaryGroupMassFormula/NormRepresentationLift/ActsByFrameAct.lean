@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.IsPrimitiveSub
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.NormRepresentationLift.TvMapApply
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.NormRepresentationLift.ExistsMulEqOneAddSmulOfRowsGe
@@ -32,7 +33,7 @@ theorem tvMap_isom (e v : S.V) (l : E) (hee : S.hT e e = 0) (hev : S.hT e v = 0)
   rw [tvMap_apply, tvMap_apply]
   simp only [map_add, map_sub, map_smul, map_smulₛₗ, LinearMap.add_apply, LinearMap.sub_apply,
     LinearMap.smul_apply, hee, hev, hve, hxe, hxv, smul_eq_mul, starRingEnd_apply, star_mul',
-    mul_zero, zero_mul, add_zero, sub_zero, zero_add]
+    mul_zero, add_zero, sub_zero]
   linear_combination (star (S.hT e x) * S.hT e y) * hl
 
 def IntLat (Λ : Submodule (𝓞 E) S.V) : Prop := ∀ x ∈ Λ, ∀ y ∈ Λ, ∃ o : 𝓞 E, S.hT x y = (o : E)

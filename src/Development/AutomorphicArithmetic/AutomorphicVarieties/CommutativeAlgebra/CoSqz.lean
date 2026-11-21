@@ -1,5 +1,6 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.ResMapBijective
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.CoFinite
+import Mathlib.Algebra.TrivSqZeroExt.Basic
 
 open IsLocalRing MvPowerSeries UpperTheory.V.Alg
 

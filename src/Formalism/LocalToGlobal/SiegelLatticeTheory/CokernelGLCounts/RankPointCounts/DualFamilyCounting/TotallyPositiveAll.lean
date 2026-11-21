@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.DualFamilyCounting.DetNeOfTotPos
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CountingFormula.DensAtGoodOf
+import Formalism.SharpRestriction.CuspSpanNormBounds.NonemptyParameterModels.TermTiesEmptyOfLargeIndex
 
 noncomputable section
 
@@ -33,7 +35,7 @@ theorem emb_surj (D : Formalism.BasicNotions.D7) : Function.Surjective D.host.em
     exact h2
   obtain ⟨σ, hσ⟩ := key
   refine ⟨D.host.gal σ, ?_⟩
-  simp only [Equiv.symm_apply_apply, MulEquiv.symm_apply_apply]
+  simp only [MulEquiv.symm_apply_apply]
   exact hσ
 
 theorem totally_positive_all : TotPosAll := by

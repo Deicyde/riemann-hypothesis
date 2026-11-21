@@ -1,8 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormPowLeConstMulOneAddSumAbsBasisCoordPow
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsContOnOfLocal
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdeleJoinZero
 
 open IsDedekindDomain NumberField
 open scoped Classical

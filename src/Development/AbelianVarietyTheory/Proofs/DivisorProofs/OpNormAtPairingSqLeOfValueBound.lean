@@ -1,8 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.FactorBounds
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeightedNormSquareRows
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.OrthogonalNormSquareSum
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CosetRefinement
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.Lemmas
 open Module NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions Formalism.L2.DIV Formalism.L2.Indef Formalism.L2.Col Formalism.L2.Ker GlobalTheory.IndefiniteRowSideFullHecke.PlaceLogThetaBounds GlobalTheory.ColRows
 
@@ -16,7 +12,7 @@ theorem pairing_eq {K : Type} [Field K] (c n : ℕ) (g : (Fin c → K) →ₗ[K]
   rw [show (Pi.basisFun K (Fin c)).repr y = y from rfl] at h
   rw [h]
   conv_lhs => rw [← (Pi.basisFun K (Fin n)).sum_repr F]
-  simp [dotProduct, map_sum, Basis.dualBasis_repr, mul_comm]
+  simp [dotProduct, map_sum, Basis.dualBasis_repr]
 
 theorem continuous_cnorm {ι : Type} [Fintype ι] : Continuous (Formalism.HermitianLatticesTheory.cnorm : (ι → ℂ) → ℝ) := by
   unfold Formalism.HermitianLatticesTheory.cnorm

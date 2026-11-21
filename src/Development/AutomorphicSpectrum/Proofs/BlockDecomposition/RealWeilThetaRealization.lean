@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.KFiniteThetaLifts.PureThetaTransfer.REALTH
-import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.ImportsSideMore
+import GroundTheory.GlobalFields.TateThesis.GaussianSchwartz
 open NumberField IsDedekindDomain MeasureTheory Matrix GroundTheory.Global GroundTheory.LocalField GroundTheory.Automorphic Ad3 Ad3.K Ad3.K.QuadraticBaseChangeGL3 Ad3.K.QuadraticBaseChangeGL3.Th ComplexConjugate
 open GroundTheory.Automorphic.GodementSection (localChar)
 open scoped NumberField.AdeleRing ValuativeRel
@@ -108,7 +108,7 @@ theorem integrable_ibp_right (A : ℂ) (hA : 0 < A.re) (β : ℝ) (m : ℕ) (v :
   have h2 := (integrable_mono_gE A hA β m 1).const_mul (-A * conj v)
   have h3 := (integrable_mono_gE A hA β m 0).const_mul ((Complex.I * β) * (v + conj v))
   refine ((h1.add h2).add h3).congr (Filter.Eventually.of_forall fun u => ?_)
-  simp only [Pi.add_apply, pow_zero, pow_one, mul_one, pow_succ]
+  simp only [Pi.add_apply, pow_zero, mul_one, pow_succ]
   ring
 
 theorem ibp (A : ℂ) (hA : 0 < A.re) (β : ℝ) (m : ℕ) (v : ℂ) :
@@ -238,7 +238,7 @@ theorem gA_re (c d r : ℝ) (hr : 0 < r) : 0 < (gA c d r).re := by
     push_cast
     ring
   rw [e]
-  simp only [Complex.add_re, Complex.ofReal_re, Complex.re_ofReal_mul, Complex.mul_re,
+  simp only [Complex.add_re, Complex.ofReal_re, Complex.mul_re,
     Complex.I_re, Complex.ofReal_im, Complex.I_im, mul_zero, zero_mul, sub_zero, add_zero]
   positivity
 
@@ -340,7 +340,7 @@ theorem key_zero (n : ℤ) (a b c d r : ℝ) (hc : c = 0) (hdet : a * d - b * c 
     push_cast
     rw [mul_one]
   simp only [rWR, if_true, Complex.ofReal_zero, zero_mul, mul_zero, add_zero, map_one, mul_one,
-    Complex.normSq_apply, Complex.one_re, Complex.one_im, sub_zero]
+    Complex.normSq_apply]
   have hsg : sgR a * ((|a| : ℝ) : ℂ) = a := sgR_mul_abs a ha
   rw [mul_assoc (Complex.exp _) (sgR a), hsg]
   rw [show PhiInf n ((a : ℂ) * (r : ℂ)) = PhiInf n ((a : ℂ) * 1 * (r : ℂ)) by rw [mul_one], hphi]

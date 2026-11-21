@@ -1,5 +1,20 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import CompanionTheory.HarishChandraModules.KFiniteAnalyticVectors.FundamentalDomainCusps.CompactIntegralBoundedByQuotientNorm
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.CapelliComplements.FirstLemmaL
+import Mathlib.Analysis.CStarAlgebra.ContinuousMap
+import Mathlib.Analysis.Distribution.AEEqOfIntegralContDiff
+import Mathlib.Analysis.Distribution.SchwartzSpace.Fourier
+import Mathlib.Dynamics.Ergodic.Action.Regular
+import Mathlib.MeasureTheory.Function.LpSpace.DomAct.Continuous
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open MeasureTheory Topology Filter BoundedContinuousFunction
 open scoped ENNReal
@@ -149,7 +164,7 @@ theorem selTw : SelTw := by
       show ∫ y, φ y * (q s F (x * y) * eI (s * (Ht (x * y) - Ht x))) ∂μ = q s F x
       refine Eq.trans ?_ (reprod hφ hi ((kc s F).comp (continuous_const.prodMk continuous_id)) (kb s F x))
       refine integral_congr_ae (Eventually.of_forall fun y => ?_)
-      simp only [q, k, Function.comp_apply]
+      simp only [q, k]
       rw [← integral_mul_const]
       congr 1
       refine integral_congr_ae (Eventually.of_forall fun z => ?_)

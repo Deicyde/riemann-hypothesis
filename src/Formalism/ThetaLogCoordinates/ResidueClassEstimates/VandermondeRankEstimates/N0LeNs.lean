@@ -1,4 +1,15 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.ResidueClassEstimates.StatementT
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Bool
 
 noncomputable section
 
@@ -111,7 +122,7 @@ lemma HStrip.tailPos_le {n : ℕ} {a b : ℕ → ℤ} (h : HStrip n a b) (u : �
 lemma wsize_eq_tails (n : ℕ) (a : ℕ → ℤ) : wsize n a = tailPos n a 0 - tailPos n (revW n a) 0 := by
   unfold wsize tailPos revW
   rw [Finset.sum_filter, Finset.sum_filter]
-  simp only [Nat.zero_le, if_true, ite_true]
+  simp only [Nat.zero_le, if_true]
   have h := Finset.sum_range_reflect (fun m => max (-(a m)) 0) n
   try simp only at h
   rw [h, ← Finset.sum_sub_distrib]

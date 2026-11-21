@@ -1,7 +1,8 @@
-import Formalism.HarderNarasimhan.StatementFrameF
+import BuildAid.Leniency.Open
 import Formalism.SizeWindowBrackets.TraceSquareAndDiagBounds
 import Formalism.SizeWindowBrackets.SlopeExcessBoundExponentZero
 import Formalism.SizeWindowBrackets.SlopesHypothesisFinitePlaces
+import Formalism.CorankShare.StatementFR
 
 open Module NumberField Matrix
 open Formalism.CorankShareLayerCake.FR Formalism.HN

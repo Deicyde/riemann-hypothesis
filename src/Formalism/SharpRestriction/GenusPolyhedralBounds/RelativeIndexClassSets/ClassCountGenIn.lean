@@ -1,8 +1,5 @@
-import Mathlib
-import Formalism.SatakeDualWeyl.StatementC
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Levelv
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Levelaf
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.CsApprox
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.InclusionInjective
 import Formalism.SharpRestriction.GenusPolyhedralBounds.RelativeIndexClassSets.ClassCountConv
 

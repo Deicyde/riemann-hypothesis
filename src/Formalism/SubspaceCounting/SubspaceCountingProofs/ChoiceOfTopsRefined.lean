@@ -1,5 +1,10 @@
+import BuildAid.Leniency.Open
 import Formalism.SubspaceCounting.GoodOrbitIntervalTileCondition
 import Formalism.SubspaceCounting.SubspaceCountingProofs.TopsChoicePartA
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 

@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.FormalDegreeBessel.StatementIO
 
 open Matrix Formalism.REAL
@@ -53,7 +54,7 @@ private lemma qminorOp_comm_left_mul_of_Eop_comm_left_mul {n t : ℕ} {E : Type}
   congr 1
   rw [ioLeft_foldr_left h _ ?_ f]
   intro T hT f'
-  simp only [List.mem_ofFn, Set.mem_range] at hT
+  simp only [List.mem_ofFn] at hT
   obtain ⟨k, rfl⟩ := hT
   funext g
   simp only [Top, hE]

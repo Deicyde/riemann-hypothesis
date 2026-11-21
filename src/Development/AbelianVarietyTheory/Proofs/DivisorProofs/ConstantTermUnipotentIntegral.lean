@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK
@@ -87,7 +88,7 @@ theorem isClosed_line {d : ℕ} (x : Fin d → E) :
   · subst hx
     have h0 : incV F (0 : Fin d → E) = 0 := by ext i; simp [incV]
     have : (Set.range fun a : AE F E => a • incV F (0 : Fin d → E)) = {0} := by
-      ext v; simp [h0, eq_comm]
+      ext v; simp [h0]
     rw [this]; exact isClosed_singleton
   · obtain ⟨i, hi⟩ := Function.ne_iff.1 hx
     set c : AE F E := inclR (F := F) (AF F) (x i)⁻¹

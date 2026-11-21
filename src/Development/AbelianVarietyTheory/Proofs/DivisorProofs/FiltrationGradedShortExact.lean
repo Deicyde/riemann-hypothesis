@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsFrameCokernelP
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocalSection
-import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.RestrictPullbackIsoHomAppPullbackSections
 
 set_option autoImplicit false
 
@@ -49,7 +49,7 @@ theorem IsProj.repr_app {o : ι → ℕ} {T : ∀ a, E a ⟶ L} {u : ∀ a, E a 
       rw [dif_pos rfl, ← (hf' a).basis_apply h, Module.Basis.repr_self]
       simp [Finsupp.single_apply]
     · rw [dif_neg hab]
-      simp [Finsupp.single_apply, hab]
+      simp [hab]
   exact LinearMap.congr_fun key s
 
 theorem shortExact_stepMap : ∀ {X : Scheme.{0}} [IsIntegral X] {ι : Type} [Fintype ι] {L : X.Modules} {E E' : ι → X.Modules} {r : ι → ℕ}

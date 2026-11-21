@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AnalyticLogResolution
-import ReciprocityTheory.AnalyticForms.PotentialTheory.ContDiffAtOfIsPotential
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import ReciprocityTheory.AnalyticForms.PotentialTheory.IsPotentialOfFun
 
 namespace GlobalTheory.SNCComp
 

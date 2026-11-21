@@ -1,7 +1,10 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.HeightsOfSets.DegreeTopEqArithDegree
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HeightsOfSets.FiniteSupportHeight
 import GroundTheory.HeightsAndTheta.Heights.LatticeLemmas.StatementsBundles
+import GroundTheory.HeightsAndTheta.Heights.HeightsOfSets.LinearIndependentSumElimOfExact
+import Mathlib.NumberTheory.NumberField.Discriminant.Defs
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

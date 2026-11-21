@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ConjugateTransposeLeibniz.ExpMulVecFix
 import Formalism.RealPlaceAnalysis.RealPlaceTaylor.CartanInvolutionConjTransposeMul
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
 
 open Matrix Filter Topology
 open scoped ContDiff
@@ -56,13 +59,13 @@ lemma rdV_smul_of {E : Type} [NormedAddCommGroup E] [NormedSpace ℂ E]
 lemma single_mulVec_bvec (p s q : Fin n) :
     Matrix.single p s (1 : ℂ) *ᵥ bvec q = if q = s then bvec p else 0 := by
   funext j
-  simp only [bvec, Matrix.mulVec_single, Matrix.single_apply, mul_one]
+  simp only [bvec, Matrix.mulVec_single]
   by_cases h : q = s
   · subst h
     by_cases hj : j = p
     · subst hj
       simp
-    · simp [hj, Ne.symm hj, Pi.single_apply]
+    · simp [hj, Ne.symm hj]
   · simp [h, Ne.symm h]
 
 lemma single_conjTranspose (p s : Fin n) :
@@ -217,7 +220,7 @@ private theorem hasDerivAt_mul_exp_smul_zero' {n : ℕ} (g X : Matrix (Fin n) (F
   let large₂ : Matrix (Fin n) (Fin n) ℂ →L[ℝ] Matrix (Fin n) (Fin n) ℂ := LinearMap.toContinuousLinearMap
     { toFun := fun M => g * M
       map_add' := fun M N => Matrix.mul_add g M N
-      map_smul' := fun c M => by simp [Matrix.mul_smul] }
+      map_smul' := fun c M => by simp }
   have h := large₂.hasFDerivAt.comp_hasDerivAt (0 : ℝ) (hasDerivAt_matrix_exp_smul_at_zero X)
   exact h
 

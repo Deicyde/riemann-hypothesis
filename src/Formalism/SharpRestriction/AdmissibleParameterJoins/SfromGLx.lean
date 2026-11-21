@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.AdmissibleParameterJoins.SfromGLu
-import Formalism.SharpRestriction.CuspSpanNormBounds.BruhatCellsKronecker
+import Formalism.SharpRestriction.CuspSpanNormBounds.BruhatCellsKronecker.NcardPrimesOverOfSplitsCompl
 
 noncomputable section
 

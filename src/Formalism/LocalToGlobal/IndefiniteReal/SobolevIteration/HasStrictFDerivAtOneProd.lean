@@ -1,4 +1,6 @@
-import Formalism.LocalToGlobal.IndefiniteReal.SobolevIteration.HasStrictFDerivAtCay
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.IndefiniteReal.SobolevIteration.ArvOSobPfA
 
 noncomputable section
 

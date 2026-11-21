@@ -1,10 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormsComb
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConjugateWeightSmoothNormalizationStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormsUnitRescalingStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeModelInducesRootMetric
-import Development.AbelianVarietyTheory.Definitions.Divisors.ReferenceMetricMulDualEqOne
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.InducedMetricPow
 open CategoryTheory AlgebraicGeometry NumberField IsDedekindDomain ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open Formalism.BasicNotions GlobalTheory GlobalTheory.Cartier GlobalTheory.CxPts GlobalTheory.ProjVar GlobalTheory.TrueGeo GlobalTheory.Mean4O GlobalTheory.CoverNorm
 set_option autoImplicit false
@@ -41,7 +37,7 @@ theorem approx : ∀ (F : Type) [Field F] [NumberField F] (Y : Var F) (V : Cover
     have h₃ := h₁.iff_unitAt.1 h₂
     convert h₃ using 1
     simp only [genAt, Units.val_inv_eq_inv_val, Units.val_pow_eq_pow_val, Units.val_zpow_eq_zpow_val,
-      Units.coe_prod, inv_pow, inv_zpow', Finset.prod_inv_distrib]
+      Units.coe_prod, inv_pow, inv_zpow']
     simp only [zpow_neg, Finset.prod_inv_distrib, div_inv_eq_mul]
     rw [mul_comm, div_eq_mul_inv]
   have hP : ∀ x, (∏ i, genAt (ρ i).D x ^ b i) ≠ 0 := fun x =>

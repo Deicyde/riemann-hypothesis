@@ -1,8 +1,18 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasDefect
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasRigidChart
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ToroidalCompactificationBis
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigRank
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.CategoryTheory.Monoidal.Cartesian.Over
+import Mathlib.NumberTheory.NumberField.CMField
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry NumberField IsLocalRing
 open scoped CategoryTheory.Obj Matrix TensorProduct
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj
@@ -34,7 +44,7 @@ theorem finrank_range_eq_trace {k : Type} [Field k] {n : ℕ} (P : Matrix (Fin n
     (Module.finrank k (LinearMap.range (Matrix.vecMulLinear P)) : k) = P.trace := by
   have h1 : Matrix.vecMulLinear P = Matrix.toLin' Pᵀ := by
     ext c i
-    simp [Matrix.mulVec_transpose]
+    simp
   have hi : IsIdempotentElem (Matrix.toLin' Pᵀ) := by
     show Matrix.toLin' Pᵀ * Matrix.toLin' Pᵀ = Matrix.toLin' Pᵀ
     rw [Module.End.mul_eq_comp, ← Matrix.toLin'_mul, ← Matrix.transpose_mul, hP]

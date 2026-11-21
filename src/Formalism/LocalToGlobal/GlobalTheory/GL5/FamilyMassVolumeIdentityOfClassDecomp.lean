@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.GL5.TheoremTwoFamilyOfVolume
 
 noncomputable section
@@ -226,23 +228,23 @@ theorem HA_mat_one : HA.mat (AF F) σ J 1 = 1 := rfl
 
 theorem finMat_mul (h h' : HA (AF F) σ J) : finMat σ J (h * h') = finMat σ J h * finMat σ J h' := by
   first
-    | simp [finMat, HA_mat_mul, Units.val_mul, mapAlg_mul, Matrix.map_mul]
+    | simp [finMat, HA_mat_mul, Units.val_mul, Matrix.map_mul]
     | (unfold finMat; rw [HA_mat_mul]; done)
 
 theorem finMat_one : finMat σ J (1 : HA (AF F) σ J) = 1 := by
   first
-    | simp [finMat, HA_mat_one, mapAlg_one, Matrix.map_one]
+    | simp [finMat, HA_mat_one, Matrix.map_one]
     | (unfold finMat; rw [HA_mat_one]; done)
 
 theorem infMat_mul (θ : Ainf F ⊗[F] E →+* ℂ) (h h' : HA (AF F) σ J) :
     infMat σ J θ (h * h') = infMat σ J θ h * infMat σ J θ h' := by
   first
-    | simp [infMat, HA_mat_mul, Units.val_mul, mapAlg_mul, Matrix.map_mul]
+    | simp [infMat, HA_mat_mul, Units.val_mul, Matrix.map_mul]
     | (unfold infMat; rw [HA_mat_mul]; done)
 
 theorem infMat_one (θ : Ainf F ⊗[F] E →+* ℂ) : infMat σ J θ (1 : HA (AF F) σ J) = 1 := by
   first
-    | simp [infMat, HA_mat_one, mapAlg_one, Matrix.map_one]
+    | simp [infMat, HA_mat_one, Matrix.map_one]
     | (unfold infMat; rw [HA_mat_one]; done)
 
 end Mats

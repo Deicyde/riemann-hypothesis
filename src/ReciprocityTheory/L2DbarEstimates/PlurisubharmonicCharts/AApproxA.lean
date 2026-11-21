@@ -1,6 +1,7 @@
-import ReciprocityTheory.L2DbarEstimates.PlurisubharmonicCharts.GROWCountStatement
-import ReciprocityTheory.L2DbarEstimates.LeviForms.OfRealNormSqSumMul
+import BuildAid.Leniency.Open
 import ReciprocityTheory.L2DbarEstimates.LeviForms.LogNormSq
+import Mathlib.Analysis.Calculus.FDeriv.Star
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 namespace ReciprocityTheory.L2DbarEstimates.Y
 
@@ -92,7 +93,7 @@ theorem leviV_eq_dv {n : ℕ} {g : V n → ℂ} {y : V n} (hg : ContDiffAt ℝ 2
   simp only [wd]
   rw [hD.fderiv]
   simp only [ContinuousLinearMap.coe_sum', Finset.sum_apply, ContinuousLinearMap.coe_smul',
-    Pi.smul_apply, smul_eq_mul, WithLp.ofLp_toLp]
+    Pi.smul_apply, smul_eq_mul]
   rw [Finset.mul_sum, ← Finset.sum_sub_distrib, Finset.sum_div, Finset.sum_mul]
   refine Finset.sum_congr rfl fun k _ => ?_
   change _ = _ * ξ j

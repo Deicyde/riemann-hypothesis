@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.FibreStB
+import Mathlib.RingTheory.MvPolynomial.Symmetric.FundamentalTheorem
 
 noncomputable section
 
@@ -248,7 +251,7 @@ theorem exists_int_primitive {F E : Type*} [Field F] [Field E] [Algebra F E] [Ch
     obtain ⟨n, hα, hβ⟩ := exists_int_primitive_element_pair (F := F) (∑ i, (c i : E) * v i) (v j)
     refine ⟨c + Pi.single j n, ?_⟩
     have h2 : ∑ i, (((Pi.single j n : ι → ℤ) i : ℤ) : E) * v i = (n : E) * v j := by
-      rw [Fintype.sum_eq_single j (fun i hi => by simp [Pi.single_apply, hi])]
+      rw [Fintype.sum_eq_single j (fun i hi => by simp [hi])]
       simp
     have hsum : ∑ i, (((c + Pi.single j n : ι → ℤ) i : ℤ) : E) * v i =
         ∑ i, (c i : E) * v i + (n : E) * v j := by
@@ -332,6 +335,6 @@ theorem exists_clear {A K : Type*} [CommRing A] [IsDomain A] [Field K] [Algebra 
   · exact Finset.prod_ne_zero_iff.mpr fun i _ => nonZeroDivisors.coe_ne_zero (b i)
   · rw [Polynomial.map_mul, hb i, Polynomial.map_C, ← algebraMap_smul K (b i : A) (q i),
       Polynomial.smul_eq_C_mul, ← Finset.prod_erase_mul _ _ (Finset.mem_univ i)]
-    simp only [map_mul, Polynomial.C_mul, mul_assoc]
+    simp only [map_mul, mul_assoc]
 
 end ReciprocityTheory.ChartRestriction.G.ArakelovGeometry.Fib

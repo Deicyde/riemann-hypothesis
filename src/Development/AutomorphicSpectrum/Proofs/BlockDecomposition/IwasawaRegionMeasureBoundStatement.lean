@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IwasawaRegionMeasureBound
-import Mathlib
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.GaugeTopology.GTorus
 open MeasureTheory Matrix GroundTheory.LocalField GroundTheory.Automorphic
 open scoped ValuativeRel ENNReal
 set_option maxHeartbeats 1000000 in

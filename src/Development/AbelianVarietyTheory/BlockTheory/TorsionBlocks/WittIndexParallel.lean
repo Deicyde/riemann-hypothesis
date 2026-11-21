@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.KudlaSiegelWeil
-import Formalism.LocalToGlobal.BesselHermitianTheta.DefsReal
 
 noncomputable section
 

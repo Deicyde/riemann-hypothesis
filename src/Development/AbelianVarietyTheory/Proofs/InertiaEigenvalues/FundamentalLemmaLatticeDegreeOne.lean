@@ -1,12 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.TwistStep
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.FiltrationZeroMembership
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.DeRhamPeriodRingFieldTPowFiltrationUnitsStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.MooreDeterminantEqUnramifiedMulPeriodStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsIndependentFrobSolutionsCrisProofStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsSecondKindMatrixMooreDetNeZeroStatement
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.MooreDeterminantCrisPlusNeZeroStatement
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.BcrisPlusFrobeniusStableSubringInFilZeroStatement
 
 noncomputable section
 
@@ -326,7 +322,7 @@ theorem flAt_one : FLAt 1 := by
       by_cases hjx : j = x2
       · subst hjx; simp [eps, h2]
       · by_cases hjy : j = y2
-        · subst hjy; simp [eps, hjx, Ne.symm hjx]; rw [mul_comm]; exact ht
+        · subst hjy; simp [eps, hjx]; rw [mul_comm]; exact ht
         · simp [eps, hjx, hjy, tz_zero]
     have hUmV : Um * V = 1 := mul_eq_one_comm.1 hVU
     change (A⁻¹ * Bm).map (ev P ((0 : Fin 1) : ℕ)) = U0 * _ * (W : Matrix n n P.R.BdR)

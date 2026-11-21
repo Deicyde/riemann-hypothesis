@@ -1,4 +1,47 @@
-import Mathlib
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.AdicCompletion.Noetherian
+import Mathlib.RingTheory.AdicCompletion.RingHom
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.PowerSeries.Order
+import Mathlib.RingTheory.PowerSeries.Trunc
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open IsLocalRing
 
@@ -31,7 +74,7 @@ theorem UpperTheory.V.AlgebraTools.powerSeries_equiv_of_complete_dvr :
     intro n a hn
     rw [Polynomial.derivative_sub, Polynomial.derivative_X_pow, Polynomial.derivative_X]
     simp only [Polynomial.eval_sub, Polynomial.eval_mul, Polynomial.eval_C,
-      Polynomial.eval_natCast, Polynomial.eval_pow, Polynomial.eval_X, Polynomial.eval_one, hn,
+      Polynomial.eval_pow, Polynomial.eval_X, Polynomial.eval_one, hn,
       zero_mul, zero_sub]
   obtain ⟨nf, -, hq⟩ := FiniteField.card (ResidueField A) p
   set q := Fintype.card (ResidueField A) with hqdef
@@ -114,8 +157,8 @@ theorem UpperTheory.V.AlgebraTools.powerSeries_equiv_of_complete_dvr :
         intro i hi
         rw [← PowerSeries.trunc_trunc_mul_trunc, PowerSeries.coeff_trunc, if_pos hi,
           ← Polynomial.coe_mul, Polynomial.coeff_coe]
-      map_zero' := by simp [hev]
-      map_add' := fun f g' => by simp [hev, add_mul, Finset.sum_add_distrib] }
+      map_zero' := by simp
+      map_add' := fun f g' => by simp [hev] }
   have hg : ∀ {m n : ℕ} (hle : m ≤ n),
       (Ideal.Quotient.factorPow (maximalIdeal A) hle).comp (g n) = g m := by
     intro m n hle
@@ -172,7 +215,7 @@ theorem UpperTheory.V.AlgebraTools.powerSeries_equiv_of_complete_dvr :
     have hc : ∀ n, x = (PowerSeries.trunc n F).eval₂ s t + t ^ n * δ^[n] x := by
       intro n
       induction n with
-      | zero => simp [hev]
+      | zero => simp
       | succ n ih =>
         rw [hev, Finset.sum_range_succ, ← hev, Function.iterate_succ_apply']
         have hcn : PowerSeries.coeff n F = residue A (δ^[n] x) := PowerSeries.coeff_mk _ _

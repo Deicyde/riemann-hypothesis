@@ -1,4 +1,8 @@
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.JetSubstPSTrunc
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.ProjectiveLattices.IsExpChart
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ValCalc
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.LBPull
 
 set_option autoImplicit false
 
@@ -78,7 +82,7 @@ theorem prod_cφ2 {T : Over Xo.X} {U : Type} [CommGroup U] (h : (T.left ⟶ Xo.u
     pzero_eq_lemma_3, Finset.card_empty, Finset.card_singleton]
   clear hsum hU f0 f1 f2 f3 c3
   try norm_num only
-  try simp only [zpow_one, zpow_neg, zpow_neg_one]
+  try simp only [zpow_one, zpow_neg]
   rw [mul_assoc (h (Over.Hom.left (1 : T ⟶ Xo.univ.t.G))),
     mul_assoc (h (Over.Hom.left (1 : T ⟶ Xo.univ.t.G))), mul_assoc (h (xs 0 * 1).left)⁻¹]
 
@@ -113,7 +117,7 @@ theorem cocycle_product_three {T : Over Xo.X} {U : Type} [CommGroup U] (h : (T.l
     List.foldr_nil, padd_eq_lemma_2, pzero_eq_lemma_3, Finset.card_empty, Finset.card_singleton]
   clear hsum hU f0 f1 f2 f3 f4 f5 f6 f7 c4 c5 c6 c7
   try norm_num only
-  try simp only [zpow_one, zpow_neg, zpow_neg_one]
+  try simp only [zpow_one, zpow_neg]
   repeat rw [mul_assoc (h (1 : T ⟶ Xo.univ.t.G).left)⁻¹]
   repeat rw [mul_assoc (h (xs 0 * 1).left)]
   repeat rw [mul_assoc (h (xs 1 * 1).left)]
@@ -181,9 +185,9 @@ theorem exists_betaRaw (wP : PrimTy H Xo) (hwP : wP.IsGen) (a : 𝓞 E) (hbb : H
   intro U _ hU
   unfold betaφ betaε
   simp only [Fintype.prod_sum_type, Sum.elim_inl, Sum.elim_inr, Fin.prod_univ_one, Fin.prod_univ_four,
-    comp_cφ, comp_thφ, Category.comp_id, zpow_neg, zpow_one, neg_neg, Finset.prod_inv_distrib, prod_cφ2, cocycle_product_three,
+    comp_cφ, comp_thφ, Category.comp_id, zpow_neg, zpow_one, Finset.prod_inv_distrib, prod_cφ2, cocycle_product_three,
     Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_two, Matrix.cons_val_three, Matrix.head_cons,
-    Matrix.tail_cons, x3, lift_fst, lift_snd_assoc, lift_snd, lift_fst_assoc, Category.id_comp]
+    Matrix.tail_cons, x3, lift_fst, lift_snd_assoc, lift_snd, lift_fst_assoc]
   have h1 : ∀ p q : 𝓞 E, Xo.univ.t.act.act p * Xo.univ.t.act.act q = Xo.univ.t.act.act (p + q) :=
     fun p q => (Xo.univ.t.act.add p q).symm
   have h2 : ∀ p q : 𝓞 E, Xo.univ.t.act.act p ≫ Xo.univ.t.act.act q = Xo.univ.t.act.act (p * q) :=
@@ -194,7 +198,7 @@ theorem exists_betaRaw (wP : PrimTy H Xo) (hwP : wP.IsGen) (a : 𝓞 E) (hbb : H
   simp only [h3, h1, h2, hbb, h4, h5]
   ring_nf
   apply Additive.ofMul.injective
-  simp only [ofMul_mul, ofMul_inv, ofMul_zpow, ofMul_pow]
+  simp only [ofMul_mul, ofMul_inv, ofMul_zpow]
   abel
 
 end Formalism.MainNotions.ModuliIntegralCharts.H1.ExpGC

@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.CompletionAtPlace.Galois
 import GroundTheory.LocalFields.Ramification
+import Mathlib.NumberTheory.NumberField.Ideal.Basic
+import Mathlib.RingTheory.Frobenius
 
 noncomputable section
 

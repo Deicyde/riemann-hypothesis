@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.ThetaLiftIndependence.Statement
-import Formalism.HermitianLattices.HermitianLatticesProofs.IsomAct
 
 noncomputable section
 

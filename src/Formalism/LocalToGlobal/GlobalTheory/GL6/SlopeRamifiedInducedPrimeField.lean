@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.SliceIntegralDeltaNeBot
-import Formalism.LocalToGlobal.GlobalTheory.GL6.RamifiedLatticePropsOfModel
 import Formalism.LocalToGlobal.GlobalTheory.GL6.RamifiedLatticeOfRankSlopeLength
 
 noncomputable section

@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.Pr13Snd
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.FreeOnCechNerveExactAt
+import Std.Tactic.BVDecide.Normalize.Prop
 open CategoryTheory Limits AlgebraicGeometry Opposite GlobalTheory.Et GlobalTheory.Et.CovChar.Trip
 
 noncomputable section
@@ -106,7 +109,7 @@ theorem free_sheaf_cech_degree_two_exact (R : Type) [CommRing R] {X Y : Scheme.{
     change _ = ((AlgebraicTopology.alternatingFaceMapComplex (Shv R)).obj
         ((Arrow.mk f).cechNerve ⋙ freeOn R)).d 2 1 ≫ _
     rw [hd]
-    simp only [d2, Functor.mapIso_hom, Preadditive.comp_add, Preadditive.comp_sub, Preadditive.add_comp,
+    simp only [d2, Functor.mapIso_hom, Preadditive.add_comp,
       Preadditive.sub_comp, ← Functor.map_comp, cech_nerve_face_two_zero, cech_nerve_face_two_one, cech_nerve_face_two_two]
     simp only [Functor.map_comp]
     erw [Preadditive.comp_add, Preadditive.comp_sub]
@@ -119,7 +122,7 @@ theorem free_sheaf_cech_degree_two_exact (R : Type) [CommRing R] {X Y : Scheme.{
     change _ = ((AlgebraicTopology.alternatingFaceMapComplex (Shv R)).obj
         ((Arrow.mk f).cechNerve ⋙ freeOn R)).d 1 0 ≫ _
     rw [hd]
-    simp only [d1, Functor.mapIso_hom, Preadditive.comp_sub,
+    simp only [d1, Functor.mapIso_hom,
       Preadditive.sub_comp, ← Functor.map_comp, cech_nerve_face_one_zero, cech_nerve_face_one_one]
     simp only [Functor.map_comp]
     erw [Preadditive.comp_sub]

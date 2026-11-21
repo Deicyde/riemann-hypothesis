@@ -1,8 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.HTLawAt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.EeProd
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.GeNatCastIff
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsChooseSmallPadicValAxInductionStatement
+import Development.AbelianVarietyTheory.Definitions.Foundations.FinalTheorems
 
 open Polynomial
 

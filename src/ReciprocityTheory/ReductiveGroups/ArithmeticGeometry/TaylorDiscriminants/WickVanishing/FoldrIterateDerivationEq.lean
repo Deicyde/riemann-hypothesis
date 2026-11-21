@@ -1,4 +1,8 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.WickVanishing.SumSplitsEvalTwoWord
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.RingTheory.PiTensorProduct
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.ConnectionKillsSeries
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.WickVanishing.EvalZeroReplicateAppend
 
 set_option autoImplicit false
 
@@ -44,7 +48,7 @@ def rW (c : ι → ι → k) (n : ι →₀ ℕ) : k :=
 theorem secondOrder_add (c : ι → ι → k) (p q : MvPolynomial ι k) :
     secondOrder k c (p + q) = secondOrder k c p + secondOrder k c q := by
   unfold secondOrder
-  simp only [map_add, mul_add, add_mul, Finset.sum_add_distrib]
+  simp only [map_add, mul_add, Finset.sum_add_distrib]
   done
 
 theorem lamW_secondOrder (c : ι → ι → k) (P : MvPolynomial ι k) :

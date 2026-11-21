@@ -1,4 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.FockJointMultiplicity.GlobalTheory
+import Mathlib.Data.Int.Star
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -120,7 +126,7 @@ theorem getD_pad (x y : List ℤ) (k i : ℕ) : (pad x k y).getD i 0 =
   · rw [List.getElem?_append_left (by simp; omega), List.getElem?_append_left h1]
     simp [h1]
   · rw [List.getElem?_append_left (by simp; omega), List.getElem?_append_right (by omega)]
-    simp [List.getElem?_replicate, show i - x.length < k by omega]
+    simp [show i - x.length < k by omega]
   · rw [List.getElem?_append_right (by simp; omega)]
     simp only [List.length_append, List.length_replicate]
     rw [List.getD_eq_getElem?_getD]

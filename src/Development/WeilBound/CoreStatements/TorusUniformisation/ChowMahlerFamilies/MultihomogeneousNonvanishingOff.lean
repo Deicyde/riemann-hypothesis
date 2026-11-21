@@ -1,8 +1,8 @@
-import Mathlib
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsLatFlagPair
-import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.HeckeSectionsIsotropicCommutatorPairingPower
-import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.StatementsFlagIndependence
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.Objects
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open MvPolynomial
 

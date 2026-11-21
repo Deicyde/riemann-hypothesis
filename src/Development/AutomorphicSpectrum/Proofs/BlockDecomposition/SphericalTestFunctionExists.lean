@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.EisensteinSeries.SiegelEisensteinContinuation.IsEpCont
-import GroundTheory.AutomorphicForms.CuspidalDiscreteness.SiegelConj
 
 set_option maxSynthPendingDepth 1
 set_option synthInstance.maxSize 1000

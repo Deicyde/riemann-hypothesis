@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.ApplyEqOfMemAdjoin
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsTopWTopWOfExists
 open scoped MatrixGroups
 open GlobalTheory.KZ GlobalTheory.Glue GlobalTheory.K5 GlobalTheory.KummerEisensteinGalois
 
@@ -14,7 +13,7 @@ theorem exists_restrict : ∀ {Ω : Type} [Field Ω] [Algebra ℚ Ω] [IsAlgClos
     rw [RingHom.algebraMap_toAlgebra, eq_ratCast (algebraMap ℚ Ωl), eq_ratCast (algebraMap ℚ Ω), map_ratCast]
   haveI : Normal ℚ Ω := IsAlgClosure.normal ℚ Ω
   let gq : Ωl ≃ₐ[ℚ] Ωl := AlgEquiv.ofRingEquiv (f := g.toRingEquiv) (fun x => by
-    simp only [eq_ratCast, AlgEquiv.toRingEquiv_eq_coe, RingEquiv.coe_toEquiv, AlgEquiv.coe_ringEquiv]
+    simp only [eq_ratCast, AlgEquiv.coe_ringEquiv]
     exact map_ratCast g x)
   have hc : ∀ x, g (j x) = j (gq.restrictNormal Ω x) := fun x => by
     have := AlgEquiv.restrictNormal_commutes gq Ω x

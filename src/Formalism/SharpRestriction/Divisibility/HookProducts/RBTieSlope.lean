@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.HarderNarasimhan.ShiftInvariance
+import BuildAid.Leniency.Open
+import Formalism.HarderNarasimhan.HarderNarasimhanProofs.Rerealize
 
 open Module
 

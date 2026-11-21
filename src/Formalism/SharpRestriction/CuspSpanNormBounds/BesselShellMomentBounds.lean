@@ -1,8 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.FlagUnipotentLattices.AlgebraicIdentityHigherDegree
 import Formalism.FormalDegreeBessel.FinalG
 import Formalism.SharpRestriction.CuspSpanNormBounds.OnePlaceEstimates
 import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
-import Formalism.SharpRestriction.CuspSpanNormBounds.RotatedWeightedBound
 
 section PieceB2a
 

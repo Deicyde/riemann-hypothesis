@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.HodgePeriodGram
 import ReciprocityTheory.AnalyticForms.AnalyticCharts.Osgood
+import Mathlib.RingTheory.SimpleRing.Principal
+import Std.Tactic.BVDecide.Normalize.Prop
 open Matrix Complex Filter Topology
 open scoped ComplexOrder ContDiff ComplexConjugate
 open GlobalTheory.IndefiniteRowSideFullHecke.HodgePeriodGram GlobalTheory.HermFrame

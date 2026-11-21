@@ -1,5 +1,12 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.LinearDescent
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.UnitLemmaGroup
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.WittVector.Complete
+import Mathlib.RingTheory.WittVector.Isocrystal
 
 noncomputable section
 namespace GlobalTheory.UnitLemma

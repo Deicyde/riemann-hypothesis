@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.FrobeniusBaseCase.StatementFix
-import Formalism.FrobeniusBaseCase.FrobeniusBaseCaseProofs.BaseCaseFalseGeneralHolds
+import Formalism.FrobeniusBaseCase.FrobeniusBaseCaseProofs.SecondWayHolds
 
 open MvPowerSeries
 

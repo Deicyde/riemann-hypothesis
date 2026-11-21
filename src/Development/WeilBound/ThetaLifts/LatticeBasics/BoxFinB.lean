@@ -1,5 +1,6 @@
-import Mathlib
-import Development.WeilBound.ThetaLifts.LatticeBasics.BoxFinA
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.ThetaLifts.LatticeBasics.RealInv
 
 noncomputable section
 

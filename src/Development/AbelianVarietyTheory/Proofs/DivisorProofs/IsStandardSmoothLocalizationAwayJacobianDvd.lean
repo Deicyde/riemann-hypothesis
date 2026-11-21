@@ -1,7 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SameIdIff
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsCrystalPairing
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitsPatch
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.CategoryTheory.Monoidal.Cartesian.Over
+import Mathlib.RingTheory.Smooth.StandardSmooth
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open CategoryTheory CategoryTheory.Limits AlgebraicGeometry MonoidalCategory CartesianMonoidalCategory MonObj
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.AbLaw GlobalTheory.CechPic GlobalTheory.AbDual GlobalTheory.DualCon
 open scoped CategoryTheory.Obj
@@ -44,6 +47,6 @@ theorem isStandardSmoothOfRelativeDimension_localizationAway_of_det_dvd
   refine P'.isStandardSmoothOfRelativeDimension ?_
   change (Q.toPreSubmersivePresentation.comp P).dimension = _
   rw [Algebra.PreSubmersivePresentation.dimension_comp_eq_dimension_add_dimension]
-  simp [Algebra.Presentation.dimension, P]
+  simp [Algebra.Presentation.dimension]
 
 end GlobalTheory.Pinch

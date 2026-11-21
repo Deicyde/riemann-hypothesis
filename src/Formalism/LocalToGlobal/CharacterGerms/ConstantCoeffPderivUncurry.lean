@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CharacterGerms.RowTieChar
 import Formalism.LocalToGlobal.CharacterGerms.ValuationEqPairOfUnitGerm
 import Formalism.LocalToGlobal.CharacterGerms.MfactMulCoeffMvExpLinF

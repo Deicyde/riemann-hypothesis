@@ -1,5 +1,13 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.RealPlaceAnalysis.StatementU
-import Formalism.RealPlaceAnalysis.ThirdArithmeticHolds
+import Formalism.RealPlaceAnalysis.RealPlaceTaylor.CasComm
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open scoped InnerProductSpace
 open Finset
@@ -328,7 +336,7 @@ theorem factorAction_commutator {j : ℕ} (i : Fin j) (a b c d : Fin n) :
   apply LinearMap.ext; intro F
   apply arr_ext; intro α
   show factorAction i a b (factorAction i c d F) α - factorAction i c d (factorAction i a b F) α = _
-  split_ifs <;> simp [arr_sub_apply, arr_zero_apply, factorAction_apply'] <;> (try split_ifs) <;>
+  split_ifs <;> simp [factorAction_apply'] <;> (try split_ifs) <;>
     first | abel1 | (simp_all; done) | (simp_all; abel1) | (subst_vars; abel1) | (subst_vars; simp_all)
 
 end U1Arr2
@@ -415,11 +423,11 @@ theorem factorAction_adjoint {j : ℕ} (i : Fin j) (a b : Fin n) (F G : Arr V n 
   have hL : ∀ α, ⟪factorAction i a b F α, G α⟫_ℂ =
       (if (α i).1 = a then ⟪F (Function.update α i (b, (α i).2)), G α⟫_ℂ else 0) -
       (if (α i).2 = b then ⟪F (Function.update α i ((α i).1, a)), G α⟫_ℂ else 0) := by
-    intro α; rw [factorAction_apply']; split_ifs <;> simp [inner_sub_left]
+    intro α; rw [factorAction_apply']; split_ifs <;> simp
   have hR : ∀ β, ⟪F β, factorAction i b a G β⟫_ℂ =
       (if (β i).1 = b then ⟪F β, G (Function.update β i (a, (β i).2))⟫_ℂ else 0) -
       (if (β i).2 = a then ⟪F β, G (Function.update β i ((β i).1, b))⟫_ℂ else 0) := by
-    intro β; rw [factorAction_apply']; split_ifs <;> simp [inner_sub_right]
+    intro β; rw [factorAction_apply']; split_ifs <;> simp
   rw [PiLp.inner_apply, PiLp.inner_apply]
   simp only [hL, hR, Finset.sum_sub_distrib]
   rw [sum_update_first_index_swap i a b (fun α β => ⟪F β, G α⟫_ℂ), sum_update_second_index_swap i a b (fun α β => ⟪F β, G α⟫_ℂ)]
@@ -483,7 +491,7 @@ theorem commutator_word_operator_sum (E : Fin n → Fin n → Module.End ℂ V) 
       intro i v
       rw [word_product_succ]
       have hne : Fin.last j ≠ i.castSucc := (Fin.castSucc_lt_last i).ne'
-      simp [Function.update_apply, hne, Fin.init_update_castSucc]
+      simp [hne, Fin.init_update_castSucc]
     have hsplit : E c d * u1W E α - u1W E α * E c d =
         (E c d * E (α (Fin.last j)).1 (α (Fin.last j)).2 -
           E (α (Fin.last j)).1 (α (Fin.last j)).2 * E c d) * u1W E (Fin.init α) +

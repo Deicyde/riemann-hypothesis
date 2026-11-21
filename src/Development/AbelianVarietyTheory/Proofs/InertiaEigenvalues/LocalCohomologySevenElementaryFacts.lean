@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.TraceFormulas.LatDefs
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ValuationLtOneIff
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.PadicIntegersFiniteExtGoodCoefficientRing

@@ -1,18 +1,13 @@
-import Mathlib
-import Formalism.LocalRingCardinality.DataForms
-import Formalism.LocalToGlobal.Columns.ToHLat
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.ToHLatLemmas
-import Formalism.LocalToGlobal.Columns.PolyFn
-import Formalism.LocalToGlobal.Columns.PolyFnLemmas
 import Formalism.LocalToGlobal.Columns.AtTOwedC
 import Formalism.LocalToGlobal.Columns.AtTOwedS
 import Formalism.LocalToGlobal.Columns.AdjointFrobeniusPreservesRamified
-import Formalism.LocalToGlobal.Columns.FiniteSumNonzeroLargeDepth
 import Formalism.LocalToGlobal.Columns.RecLevel
-import Formalism.LocalToGlobal.Columns.InputsLemmas
-import Formalism.LocalToGlobal.Columns.CmUnramifiedOfFieldConditions
 import Formalism.LocalToGlobal.Columns.DGamAut
-import Formalism.LocalRingCardinality.MinkMEqMinkowskiNumber
+import Formalism.LocalToGlobal.Columns.AdelicLemmas
+import Formalism.LocalToGlobal.Columns.DiamondPreservesRamified
 
 open NumberField IsDedekindDomain Module Matrix
 open scoped TensorProduct
@@ -1904,8 +1899,7 @@ theorem recPer_lower_emb (hX : X.Ok) (σ₀ : X.K →+* ℂ) (hσ : ∀ x : X.K,
       (ptEv W ΛM σ₀ hσ).ev (brC W u ((φ : (stepGSD W Λ u R.m).D → (stepGSD W Λ u R.m).V)
         (tilR hSG u ((ptGSD W ΛM).outSec.rep c)))) := by
   first
-  | (simp only [recPer, LinearMap.pi_apply, LinearMap.comp_apply, LinearMap.proj_apply, GSD.Ev.evAt_apply,
-      GSD.Ev.atPt_emb, lowC_ev]; done)
+  | (simp only [recPer]; done)
   | (show lowC W Λ ΛM σ₀ hσ u ((stepEv W Λ σ₀ hσ u R.m).atPt (tilR hSG u ((ptGSD W ΛM).outSec.rep c))
         ((stepEv W Λ σ₀ hσ u R.m).emb φ)) = _
      rw [GSD.Ev.atPt_emb, lowC_ev])

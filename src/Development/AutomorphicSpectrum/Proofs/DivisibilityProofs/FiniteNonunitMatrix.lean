@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MembershipProofs.SplitQuadraticAlgebraOrder
 
 open Matrix GlobalTheory.WeilM GlobalTheory.CompanionTheory.SiegelChar

@@ -1,11 +1,14 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.T2SpaceAdeleRing
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ConstMemBddAut
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.ThetaSourceAction
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.TameAtOne
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.HalfLinearCocycle
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.TrivialParameterBound
-import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.UpNonzero
+import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.LabelSettingScalars
+import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.NormalFam
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InnerProductFormula
 
 noncomputable section
 

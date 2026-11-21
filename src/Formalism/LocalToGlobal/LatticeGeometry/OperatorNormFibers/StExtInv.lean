@@ -1,4 +1,7 @@
-import Formalism.LocalToGlobal.GlobalTheory.HLatOpsP
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.GlobalTheory.HLatOps
 
 open Module NumberField TensorProduct
 

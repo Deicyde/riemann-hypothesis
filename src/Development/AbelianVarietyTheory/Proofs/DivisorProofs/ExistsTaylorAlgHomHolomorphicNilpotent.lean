@@ -1,9 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsTaylorExpansionOrderOne
-import Development.AbelianVarietyTheory.Definitions.Divisors.FstTszeSec
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsPeriodHom
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TaylorPolynomialEvalAlgebraFormalProperties
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TaylorPolynomialEvalAlgebraMulOfProdEqZero
+import Development.AbelianVarietyTheory.Definitions.Divisors.FderivFnCongr
 
 set_option autoImplicit false
 

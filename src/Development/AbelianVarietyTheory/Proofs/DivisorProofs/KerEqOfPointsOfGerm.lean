@@ -1,6 +1,16 @@
-import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.ChainFibFinite
-import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.ChainOfKernelsUnique
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.WickVanishing.JetGlue
+import Mathlib.AlgebraicGeometry.AlgClosed.Basic
+import Mathlib.AlgebraicGeometry.Morphisms.Proper
+import Mathlib.AlgebraicGeometry.Morphisms.QuasiFinite
+import Mathlib.CategoryTheory.Monoidal.Cartesian.Grp
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsCompletedStrictHens
 
 set_option autoImplicit false
 noncomputable section
@@ -57,7 +67,7 @@ theorem inK_iff {A B : Over (Sp k)} [GrpObj B] (π : A ⟶ B) {T : Scheme.{0}} (
   refine ⟨fun ⟨z, hz⟩ => ?_, fun h => ⟨_, h.symm⟩⟩
   have e : z = y ≫ A.hom := by
     have := congrArg (· ≫ B.hom) hz
-    simp only [Category.assoc, hη, Category.comp_id, Over.w π] at this
+    simp only [Category.assoc, hη, Over.w π] at this
     exact this
   rw [← hz, e]
 

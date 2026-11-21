@@ -1,24 +1,13 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.StableIffCarrierEq
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsComp
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsLiftAt
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsotInDetectByEqvMap
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FiniteTypeVectorDetectedLocalComponentEquivarianStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsTrivOutsideLoc
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ReductionGLSurjective
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.TrivOutsideMul
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SplitPlacesInjective
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.RowsAtLevelsFixedPrincipalCongruenceTypePlacesStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.GoodProjectorEqGoodIdempotentTypePlacesStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SplitCompletionSymmContinuous
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.CenLocOfCenReal
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.CoreEq
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.NoFormsOff
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsRhoPtOfSplitting
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsComp
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.DepthZeroWild
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.DepthZeroSupport
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LocalGlobalAboveL
 
 noncomputable section
 
@@ -40,14 +29,14 @@ theorem pi_ind {ι : Type} [Fintype ι] [DecidableEq ι] {M : ι → Type} [∀ 
         funext i
         by_cases hi : i = a
         · subst hi; simp [ha]
-        · simp [Finset.mem_insert, hi, Pi.mulSingle_apply]
+        · simp [Finset.mem_insert, hi]
       rw [e]; exact hm _ _ _ ih
   simpa using key Finset.univ
 
 def conjL {X : Type} : (X → ℂ) →ₛₗ[starRingEnd ℂ] (X → ℂ) where
   toFun f := fun g => star (f g)
   map_add' f f' := by funext g; simp
-  map_smul' c f := by funext g; simp [mul_comm]
+  map_smul' c f := by funext g; simp
 
 theorem loc_piece {L : Type} [Field L] [NumberField L] [IsCMField L] {n g : ℕ} [Fact g.Prime] (π : NG.FinTyp L n)
     (s : SplitPlace L) {w : HeightOneSpectrum (𝓞 L)} (h : s.w = w)

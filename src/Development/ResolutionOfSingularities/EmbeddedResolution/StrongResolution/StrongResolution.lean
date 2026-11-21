@@ -1,5 +1,4 @@
-import Mathlib
-import Development.ResolutionOfSingularities.Foundations.BlowupUniversalProperty
+import BuildAid.Leniency.Open
 import Development.ResolutionOfSingularities.EmbeddedResolution.ResolutionOfSingularities
 universe u
 

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FiniteIntegralClosureOfEssFiniteTypeIntDomain
 open IsLocalRing
 
@@ -73,7 +74,7 @@ variable {T : Type} [CommRing T] [IsDomain T] (S : Finset T)
 theorem toFrac_mk' (a : gen S) (s : nonZeroDivisors (gen S)) :
     toFrac S (IsLocalization.mk' (FractionRing (gen S)) a s) =
       algebraMap T (FractionRing T) a / algebraMap T (FractionRing T) (s : gen S) := by
-  simp [toFrac, IsFractionRing.liftAlgHom_apply, IsFractionRing.lift_mk']
+  simp [toFrac]
   rfl
 
 theorem map_norm_eq [IsIntegrallyClosed T] :

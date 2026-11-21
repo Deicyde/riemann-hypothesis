@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.OneLtAbsNormReal
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CuspFormIntegralLatticeUnramifiedDescent
 
 set_option autoImplicit false

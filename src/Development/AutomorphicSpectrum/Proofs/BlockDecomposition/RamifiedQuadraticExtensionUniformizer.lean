@@ -1,8 +1,5 @@
-import Mathlib
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.KFiniteThetaLifts.RationalPrimesBelowPlaces
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntInd
-import GroundTheory.LocalFields.QuadraticAbelian.WeilRepQuadratic
-import GroundTheory.AutomorphicForms.MacdonaldWhittaker
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ModulusEntryLeMRow
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.OrdEqZeroOfModulusEqOne
 open NumberField IsDedekindDomain MeasureTheory Matrix Filter Topology

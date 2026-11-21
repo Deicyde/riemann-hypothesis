@@ -1,4 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.AutomorphicTheory.SchurLimitBounds.SchurOrthogonality.URepSchur
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.MeasureTheory.Function.L2Space
+import Mathlib.MeasureTheory.Group.ModularCharacter
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
 
 noncomputable section
 

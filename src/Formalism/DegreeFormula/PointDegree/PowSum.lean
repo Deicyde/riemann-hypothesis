@@ -1,5 +1,12 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.DegreeFormula.FlagDegFormula
-import Formalism.DegreeFormula.PointDegree.PermExpInj
+import Mathlib.RingTheory.MvPolynomial.Symmetric.NewtonIdentities
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open MvPolynomial
 
@@ -97,7 +104,7 @@ theorem rem_eq {ι : Type} [Fintype ι] [DecidableEq ι] {N : ℕ} (σ : ι → 
   by_cases ht : t = τ
   · subst ht
     by_cases h1 : σ t i = j
-    · simp [h1, hne, Ne.symm hne] <;> omega
+    · simp [h1, Ne.symm hne] <;> omega
     · by_cases h2 : σ t i = j'
       · simp [h2, hne, Ne.symm hne] <;> omega
       · simp [h1, h2, Ne.symm h1, Ne.symm h2]

@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Lpart
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DetThreePointsEqExpansion
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LocalIntegrandIntegrable
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntegrableTinvIff
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FunctionalEquationGeneric

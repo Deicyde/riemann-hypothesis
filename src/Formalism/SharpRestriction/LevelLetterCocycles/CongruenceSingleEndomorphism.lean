@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.LocalCongruenceBound
 import Formalism.SharpRestriction.LevelLetterCocycles.EndomorphismIndexBound
+import Mathlib.LinearAlgebra.Eigenspace.Pi
 
 open Module
 

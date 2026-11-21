@@ -1,10 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CurveV
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RootIdx
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsHomogeneousLinPow
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicLineBundleInducedArith
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolynomialNumeratorLinearExtension
 import Development.AutomorphicArithmetic.LocalEmbeddings.RootSymSupport

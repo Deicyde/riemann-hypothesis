@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.KernelLocalization.RangeOfBd
 import Development.EtaleCohomology.EtaleSheaves.TruncKerPf
 import Development.EtaleCohomology.EtaleSheaves.DescIntPf

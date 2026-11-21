@@ -1,6 +1,5 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.OddResidueBounds.ZeroMemUnrHom
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.OddResidueBounds.ActEx
-import Development.AutomorphicArithmetic.AutomorphicVarieties.OddResidueBounds.ActFacts
 import Development.AutomorphicArithmetic.AutomorphicVarieties.OddResidueBounds.ActConj
 import Development.AutomorphicArithmetic.AutomorphicVarieties.OddResidueBounds.ZKill
 import Development.AutomorphicArithmetic.AutomorphicVarieties.OddResidueBounds.AdjKill
@@ -45,7 +44,7 @@ theorem UpperTheory.V.Odd.killPow :
   obtain ⟨hconj, hne⟩ := actConj E Ω (N * l) ρ hρ
   have hlM : l ∣ N * l := dvd_mul_left l N
   have hcop : (2 * (N * l) + 1).Coprime (N * l) := by
-    simp [Nat.coprime_mul_left_add_left]
+    simp
   have hodd : Odd (2 * (N * l) + 1) := odd_two_mul_add_one _
   obtain ⟨z, hzI, hzK⟩ := zKill E Ω l D e (N * l) ρ hρ he hproc hlM _ hcop hodd
   have hφs : Function.Surjective ⇑((piQ ρ)⁻¹) := by

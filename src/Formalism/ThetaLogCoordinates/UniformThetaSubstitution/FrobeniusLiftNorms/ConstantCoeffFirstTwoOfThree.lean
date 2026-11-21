@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.FirstDeriv
 import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.FrobeniusLiftNorms.TopsChoicePartA
 
@@ -91,7 +92,7 @@ theorem partial_coboundary_product {F : MvPowerSeries (Fin 2) K} (hF : constantC
   rw [MvPowerSeries.subst_mul (has_subst_coboundary_first hF), MvPowerSeries.subst_mul (has_subst_last_pair 0), MvPowerSeries.subst_mul (has_subst_last_pair 1),
     subst_single_var (has_subst_coboundary_first hF), subst_single_var (has_subst_coboundary_first hF), subst_single_var (has_subst_last_pair 0), subst_single_var (has_subst_last_pair 0),
     subst_single_var (has_subst_last_pair 1), subst_single_var (has_subst_last_pair 1), include_three_coboundary hF]
-  simp only [Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons]
+  simp only [Matrix.cons_val_zero, Matrix.cons_val_one]
   unfold at1
   ring
 

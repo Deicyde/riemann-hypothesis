@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CharacterGerms.GeneralGermZero
 import Formalism.LocalToGlobal.CharacterGerms.RowTieSelf
 

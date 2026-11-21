@@ -1,9 +1,4 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterSt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.MultihomogeneousIdeals.ExistsUniqueStatement
-import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.HeckeSectionsIsotropicCommutatorPairingPower
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterNamed
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.KleimanNefness.KleimanSt
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.FlagImmersions.IntersectionMultilinearOneSlot
 
 open MvPolynomial ReciprocityTheory.ChartRestriction.G.Geo Filter Topology GlobalTheory.CompanionTheory.Ar.Top
@@ -48,7 +43,7 @@ theorem intersection_multilinear_expansion : ∀ II : IntersectionSystem, IsFull
     by_cases h : j' = j
     · subst h
       simp
-    · simp [Pi.single_apply, h]
+    · simp [h]
   calc II K ι P d (fun k => combLine ℓ (n k))
       = f (fun k => ∑ j, n k j • (Pi.single j (1 : ℤ) : J → ℤ)) := by
         rw [← hn]

@@ -1,6 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.TwistedPieces.LocalTraceForms.LocChi
 import Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.CompactOrbits.NilpotentOrbits.OrbitIntegrals.ZNClosed
-import GroundTheory.AutomorphicForms.WhittakerDistribution
+import GroundTheory.AutomorphicForms.MeasuresModulus
+import GroundTheory.AutomorphicForms.WhittakerCriterion
+import Mathlib.Topology.Algebra.Nonarchimedean.TotallyDisconnected
 
 noncomputable section
 

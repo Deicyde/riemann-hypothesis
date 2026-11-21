@@ -1,5 +1,15 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.MahlerMeasure.QuotientUpperBoundsOfPowerBounds
-import Formalism.MahlerMeasure.MahlerMeasureProofs.DeterminantBlockLeadingTerm
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 namespace Formalism.GM
 

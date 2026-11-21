@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.DualLattices.OneAddPowOfSq
 import ReciprocityTheory.DualLattices.StThmAFull
 import ReciprocityTheory.DualLattices.MapSmulOneMulVec

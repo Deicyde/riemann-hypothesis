@@ -1,6 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.IntegralLocallyConstCochainModPow
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.QNotPthPowInClosureAlgebraicPadicIntStatement
+import Mathlib.FieldTheory.Galois.Profinite
+import Mathlib.FieldTheory.KummerExtension
+import Mathlib.RingTheory.PicardGroup
 
 open GlobalTheory.K5 Polynomial IntermediateField
 

@@ -1,6 +1,5 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.HasArcDataIff
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.SecBaseChangeAnySt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.ArchimedeanThetaValues.ArcDictExpZeroSection
 import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.ToFSurjectiveFractionRing
 import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.FormalThetaSumShiftPeriodDiv
@@ -94,7 +93,7 @@ theorem genVal_phi (h : u.IsAH Hm χ) {b : TF (R := ℂ) ℂ ⟶ D.P.A} {bt : Fi
     simp only [hermForm_add_left, mul_add, Complex.exp_add, exp_nsmul] at e'
     simp only [Fintype.prod_sum_type, Fin.prod_univ_four, DegPre.deltaε, DegPre.famε, phiLift, Sum.elim_inl,
       Sum.elim_inr, Matrix.cons_val, ahFactor_zero D.P.isLB h, ahFactor_translate, zpow_neg, mul_zpow,
-      zpow_one, one_zpow, _root_.mul_one, zpow_sub₀ n, zpow_sub₀ n', zpow_natCast, Complex.exp_neg]
+      zpow_one, _root_.mul_one, zpow_sub₀ n, zpow_sub₀ n', zpow_natCast, Complex.exp_neg]
     field_simp
     linear_combination -e'
   have dH : Differentiable ℂ fun z => hermForm Hm z l := by

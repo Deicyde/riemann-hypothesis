@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.GlobalHeightBoundIffAtGoodPrimes
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ExistsVResEqZero
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 
 set_option autoImplicit false
 

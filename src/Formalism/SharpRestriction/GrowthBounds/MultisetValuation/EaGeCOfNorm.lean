@@ -1,6 +1,9 @@
-import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.EaRestSExpVOf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.EaNuTwoLeOne
 import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.FrobeniusLiftNorms.EGaussK
+import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.EntryAOneParity
+import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.NatCastInvMemRp
 
 noncomputable section
 

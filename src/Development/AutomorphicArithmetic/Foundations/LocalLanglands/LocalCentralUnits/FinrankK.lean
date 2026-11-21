@@ -1,12 +1,12 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.LocalLanglands.RecTTransport
 import Development.DiscreteGroups.GlobalIrreducibility.DzGalRes
 import Development.DiscreteGroups.GlobalIrreducibility.DzIneEq
 import Development.DiscreteGroups.GlobalIrreducibility.ExistsIneOfVEqOne
-import Development.DiscreteGroups.GlobalIrreducibility.DzNormV
-import Development.DiscreteGroups.GlobalIrreducibility.DzTameRec
-import Development.AutomorphicArithmetic.Foundations.LocalLanglands.LocalCentralUnits.ArtEx
-import Development.AutomorphicArithmetic.Foundations.LocalLanglands.LocalCentralUnits.TameArt
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.RestrictsExists
+import Development.DiscreteGroups.GlobalIrreducibility.DzTame
+import Development.WeilBound.CoreStatements.AutomorphicKernels.DepthZeroCuspidal.LeviInductionForms
 
 noncomputable section
 

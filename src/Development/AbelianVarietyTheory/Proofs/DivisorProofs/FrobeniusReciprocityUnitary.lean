@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.MatchingOfParts
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
-import Development.AbelianVarietyTheory.Definitions.Divisors.RankEqCardIffExistsFrameMatrixFirstColumnBlock
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzBruhatBoxDecomposition
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsOpenStabilizerSchwartzBruhat
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LinearChangeOfVariablesLocalFieldMatrix
@@ -54,7 +52,7 @@ theorem omA_inv_inv_apply {a d : ℕ} (ν β : kˣ →* ℂˣ) (g : GL (Fin a) k
     (Φ : Matrix (Fin a) (Fin d) k → ℂ) (X : Matrix (Fin a) (Fin d) k) :
     omA ν β g⁻¹ (invT D)⁻¹ Φ X = (ν (gdet g) : ℂ) * β (gdet D) * apow (gdet g) ((d : ℂ) / 2) *
       apow (gdet D) (-(a : ℂ) / 2) * Φ (g.val * X * (D⁻¹).val) := by
-  simp only [omA, map_inv, invT_invT, gdet_invT, inv_inv, apow_inv, Fintype.card_fin, Units.val_inv_eq_inv_val]
+  simp only [omA, map_inv, invT_invT, gdet_invT, inv_inv, apow_inv, Fintype.card_fin]
   ring_nf
 
 theorem apow_ofReal (x : kˣ) (t : ℝ) : apow x (t : ℂ) = ((GlobalTheory.SplitWeil.nabs k x ^ t : ℝ) : ℂ) :=
@@ -109,7 +107,7 @@ theorem integral_boxFn (ϖ : kˣ) (C : Matrix (Fin a) (Fin d) k) (m : ℕ) :
   have hm : MeasurableSet (box ϖ C (fun _ => m)) := (isClopen_box ϖ C _).isOpen.measurableSet
   have e : box ϖ C (fun _ => m) = (fun Y => -C + Y) ⁻¹' box ϖ 0 (fun _ => m) := by
     ext Y
-    simp only [box, Set.mem_setOf_eq, Set.mem_preimage, Matrix.add_apply, Matrix.neg_apply, Matrix.zero_apply,
+    simp only [box, Set.mem_setOf_eq, Set.mem_preimage, Matrix.zero_apply,
       sub_zero, neg_add_eq_sub, Matrix.sub_apply]
   show ∫ X, (box ϖ C (fun _ => m)).indicator 1 X ∂μ = _
   rw [integral_indicator hm]

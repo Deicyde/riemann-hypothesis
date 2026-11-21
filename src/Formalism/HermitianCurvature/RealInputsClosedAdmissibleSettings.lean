@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementKB
-import Formalism.HermitianCurvature.PositionExpansionTopCoefficients
 import Formalism.HermitianCurvature.WeylElementCommutesLevelOne
+import Formalism.HermitianCurvature.StatementTop
 
 namespace Formalism.FourierDecayAlt.KB
 

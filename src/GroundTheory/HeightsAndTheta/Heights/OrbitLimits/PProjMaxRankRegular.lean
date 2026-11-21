@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.PProjRegular
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StatementsProjMaxRankRegular
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
 set_option maxSynthPendingDepth 1
 
 noncomputable section

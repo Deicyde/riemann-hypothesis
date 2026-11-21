@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.RealPlaces.ConeDefs
 import GroundTheory.ProfiniteCohomology.CompactSupportCohomology.CupLeibniz
 import GroundTheory.ProfiniteCohomology.CoinducedModules.Acyclic

@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.TwistedSubstitution.PlaneCoeff
+import Formalism.SharpRestriction.GrowthBounds.ScaleEdges.SymbolRealisableBound
 
 noncomputable section
 

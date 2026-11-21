@@ -1,5 +1,5 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJAPRCoreCut
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.OppositeWeylSubgroupClosed
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJAPolyRadialCut
 
 open Formalism.REAL Formalism.QuantumDeterminants Formalism.FourierDecayAlt Formalism.FourierDecayAlt.Q NumberField
 open scoped ComplexConjugate Matrix

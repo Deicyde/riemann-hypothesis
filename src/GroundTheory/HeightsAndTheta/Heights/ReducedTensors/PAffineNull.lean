@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ReducedTensors.StatementsInj
 import GroundTheory.HeightsAndTheta.Heights.ReducedTensors.Imports
+import Mathlib.FieldTheory.PurelyInseparable.Exponent
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

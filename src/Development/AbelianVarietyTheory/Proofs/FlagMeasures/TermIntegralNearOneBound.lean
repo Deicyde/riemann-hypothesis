@@ -1,10 +1,6 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.FractionFieldToGenericStalkAlgebraMapEq
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsHermND
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ComplementReferenceCompactSubgroup
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.Cint
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.NoLeak
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.IsPrincipalIdealRingOfHenselian
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.HermitianDoubleCosetTermBasicFactsStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.QuadricCharacterLeakSharesFiniteStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.IndexMeasureIntegralEqMeanOverRepresentativesStatement
@@ -106,7 +102,7 @@ theorem exists_inv_one_add (L : LocE F E) (ϖ : 𝒪[F]) (hϖ : Irreducible ϖ) 
     (L.O.add_mem L.O.one_mem (L.O.mul_mem (hint ϖ) (GlobalTheory.UnramOrder.cj_mem L hx))), ?_⟩
   have h2 := congrArg (fun a : 𝒪[F] => algebraMap F E a) hv
   push_cast at h2
-  simp only [map_mul, map_add, map_one, ← ht, ← hs] at h2
+  simp only [← ht, ← hs] at h2
   linear_combination h2
 
 end
@@ -131,7 +127,7 @@ theorem inZ_add {Λ : Submodule L.O S.V} (hΛ : IsSD L S.Hm Λ) {N : ℕ} (hN : 
   simp only [hf_addl, hf_addr, hf_smull, hf_smulr, AlgEquiv.commutes, hc, hs]
   push_cast
   have h2 := congrArg (algebraMap F E) hpow
-  simp only [map_mul, map_add, map_pow, ← ht] at h2 ⊢
+  simp only [map_mul, map_pow, ← ht] at h2 ⊢
   linear_combination (hf L S.Hm u y + hf L S.Hm y u + algebraMap F E S.ϖ ^ N * algebraMap F E s) * h2
 
 theorem noLeak_add {Λ : Submodule L.O S.V} (hΛ : IsSD L S.Hm Λ) {N : ℕ} (hN : 1 ≤ N) {u y : S.V}

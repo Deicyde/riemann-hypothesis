@@ -1,5 +1,7 @@
-import Mathlib
-import GroundTheory.GlobalFields.GlobalReciprocity.PrimesAbove
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.GlobalFields.CyclotomicCharacters.DegreeDecomposition
+import GroundTheory.GlobalFields.NormResidueSymbol.CyclotomicCompositum
 
 namespace GroundTheory.Global
 

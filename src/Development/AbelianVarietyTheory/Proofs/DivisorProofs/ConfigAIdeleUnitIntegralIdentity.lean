@@ -1,11 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocCharEqValZpow
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.MemConfTOfDetNeZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeisenbergLatticeSelfDualEveryFinitePlace
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AddCharHalfTraceTensorLatticeHeisenbergCocycle
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EventuallySelfDualLatticeIndicatorIsVacuum
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatAtVAtStable
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedPlaneFormMemInverseDifferentStatement
 
 noncomputable section
@@ -156,7 +154,7 @@ theorem coef_mem [NumberField E] (σ : E →ₐ[F] E) (B : Base F E) {n n₁ d :
       refine Finset.sum_congr rfl fun i _ => ?_
       rw [Finset.smul_sum]
       refine Finset.sum_congr rfl fun j _ => ?_
-      simp only [incM, incV, Matrix.smul_apply, Matrix.map_apply, Matrix.vecMulVec_apply, map_mul, smul_mul_assoc,
+      simp only [incM, incV, Matrix.smul_apply, Matrix.map_apply, Matrix.vecMulVec_apply, map_mul,
         Algebra.smul_def]
       ring
     rw [he]

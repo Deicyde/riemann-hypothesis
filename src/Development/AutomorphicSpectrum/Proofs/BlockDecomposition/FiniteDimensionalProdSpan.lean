@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FinStable
 
 noncomputable section

@@ -1,5 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsLocIsoRefl
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsGivenStageEqOne
+import Development.AbelianVarietyTheory.Definitions.Divisors.LineOppositeParabolicUnitaryLeviSectionEq
+import Formalism.DoubleCosetMeasures.Statement
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.DIV
 open IsDedekindDomain NumberField MeasureTheory Matrix
@@ -46,7 +49,7 @@ theorem shellSum_mul_left {a : ℕ} (μ : Measure (GL (Fin a) k)) [μ.IsHaarMeas
     have hL : ∀ g : GL (Fin a) k, φ (g₀.val * g.val) * (ν (gdet g) : ℂ) * apow (gdet g) z =
         ((ν (gdet g₀) : ℂ))⁻¹ * F (g₀ * g) := by
       intro g
-      simp only [hF, gdet_mul, apow_mul, hz, map_mul, Units.val_mul, one_mul]
+      simp only [hF, apow_mul, hz, map_mul, Units.val_mul, one_mul]
       field_simp
     have hR : ∀ g : GL (Fin a) k, ((ν (gdet g₀) : ℂ))⁻¹ * φ g.val * (ν (gdet g) : ℂ) * apow (gdet g) z =
         ((ν (gdet g₀) : ℂ))⁻¹ * F g := by
@@ -124,7 +127,7 @@ theorem exists_smallF_rows {A A₁ C C₁ : Type} [Fintype A] [DecidableEq A] [F
       apow (gdet g) ((Fintype.card C : ℂ) / 2) = (lam * ((ν (gdet g₀) : ℂ))⁻¹ *
         (apow (gdet g₀) ((Fintype.card C : ℂ) / 2))⁻¹) * F (renum e (g₀ * g)) := by
     intro g
-    simp only [hF, renum_mul_reindex, gdet_renum, gdet_mul, map_mul, Units.val_mul, apow_mul, hCC,
+    simp only [hF, renum_mul_reindex, gdet_renum, map_mul, Units.val_mul, apow_mul, hCC,
       Matrix.mul_assoc]
     field_simp
   have h2 := hint F

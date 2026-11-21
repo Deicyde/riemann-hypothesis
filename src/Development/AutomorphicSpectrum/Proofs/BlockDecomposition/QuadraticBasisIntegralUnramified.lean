@@ -1,8 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsContent
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.TensorIntegerRingAlmostAllPlaces
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.LocalRankOneDensityUniformizerPower
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.IsSquareMulOfNonsquareUnits
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.Topology.Sheaves.Presheaf
 open HeckeCharacterZeroLocus.SiegelWeilU GlobalTheory.CompanionTheory.SW NumberField IsDedekindDomain MeasureTheory Topology
 open scoped TensorProduct ENNReal NNReal Matrix
 open GlobalTheory.CompanionTheory.WeilSiegel.Frame GlobalTheory.CompanionTheory.WeilSiegel.Free GlobalTheory.CompanionTheory.WeilSiegel.HypStep GlobalTheory.CompanionTheory.WeilSiegel.HypMass
@@ -136,7 +140,7 @@ theorem exists_factor (hϖ : w ϖ = WithZero.exp (-1 : ℤ)) (hB0 : B 0 = 1)
     have h : algebraMap K A a + algebraMap K A b * B 1 = a • B 0 + b • B 1 := by
       rw [hB0, Algebra.smul_def, Algebra.smul_def, mul_one]
     rw [h]
-    simp [Finsupp.single_apply]
+    simp
   obtain ⟨p, q, hxpq, hp, hq⟩ : ∃ p q : K, x = algebraMap K A p + algebraMap K A q * B 1 ∧
       w p ≤ 1 ∧ w q ≤ 1 := by
     refine ⟨B.repr x 0, B.repr x 1, ?_, hx 0, hx 1⟩

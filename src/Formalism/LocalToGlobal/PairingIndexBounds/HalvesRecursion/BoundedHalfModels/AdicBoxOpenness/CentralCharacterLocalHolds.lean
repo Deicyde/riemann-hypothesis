@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.PairingIndexBounds.HalvesRecursion.BoundedHalfModels.EqOffBound
-import Formalism.LocalToGlobal.GlobalTheory.GL3.PLinkThIndep
 import Formalism.LocalToGlobal.GlobalTheory.GL3.PHfGen
 
 noncomputable section

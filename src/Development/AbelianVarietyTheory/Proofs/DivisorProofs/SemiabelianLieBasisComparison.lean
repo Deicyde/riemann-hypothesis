@@ -1,11 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCochFrame
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FibreChangeOfPolarizedFieldStatement
-import Development.AbelianVarietyTheory.Proofs.ThetaLawProofs.IsDiffSumSmulOfIsLieComb
-import Development.AbelianVarietyTheory.Proofs.GenericRegularity.LieCombBaseChange
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.ExistsUniqueDifferentialMonHomLieBasis
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.FormEqPiMulHermForm
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.LinearIndependentFlagVec
+import Development.AbelianVarietyTheory.Definitions.Divisors.TorusExt
 open AlgebraicGeometry CategoryTheory Limits NumberField MonoidalCategory CartesianMonoidalCategory MonObj Matrix Topology
 open Formalism.BasicNotions ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.PullbackSections ReciprocityTheory.ChartRestriction.G.Pdiv ReciprocityTheory.GeometryOfNumbersTheory
 open scoped CategoryTheory.Obj ComplexOrder
@@ -109,7 +107,7 @@ by
   refine Complex.le_def.2 ⟨?_, (im_quad_eq_zero hM c).symm⟩
   rw [sub_mulVec, dotProduct_sub, smul_mulVec, dotProduct_smul, gram_quad_eq h' σ Hm W hf,
     ← GlobalTheory.LieMet.form_sum]
-  simp only [Complex.zero_re, Complex.sub_re, smul_eq_mul, Complex.re_ofReal_mul, Complex.mul_re,
+  simp only [Complex.zero_re, Complex.sub_re, smul_eq_mul, Complex.mul_re,
     Complex.ofReal_re, Complex.ofReal_im, zero_mul, sub_zero]
   have := key c
   linarith

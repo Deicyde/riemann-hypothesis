@@ -1,8 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.QuotientImageDivisibility.InIZero
 import Formalism.SharpRestriction.LevelLetterCocycles.QuotientImageDivisibility.H2Bound
 import Formalism.SharpRestriction.LevelLetterCocycles.QuotientImageDivisibility.ContentBoundLevel
 import Formalism.SharpRestriction.LevelLetterCocycles.QuotientImageDivisibility.RkFilLevEq
 import Formalism.SharpRestriction.LevelLetterCocycles.QuotientImageDivisibility.LemmaDN0
+import Formalism.SharpRestriction.LevelLetterCocycles.QuotientImageDivisibility.MemPreG
 
 noncomputable section
 open Classical

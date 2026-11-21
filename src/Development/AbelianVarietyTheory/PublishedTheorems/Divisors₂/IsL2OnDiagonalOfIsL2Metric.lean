@@ -1,8 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsFlagModelHermSum
-import Development.AbelianVarietyTheory.Definitions.Divisors.NefFibOfIsNef
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsTorsionFormWithPoint
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CharChPartZero
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TranslationInv
 
 set_option autoImplicit false
 
@@ -248,7 +248,7 @@ theorem BismutKoehlerTorsionWith.flat (H : BismutKoehlerTorsionWith) : BismutKoe
         IsHeatTrace τ M j h β b F := by
       intro F
       unfold IsHeatTraceWith IsHeatTrace
-      simp only [Matrix.of_apply, Pi.zero_apply, LinearMap.zero_apply]
+      simp only [Pi.zero_apply, LinearMap.zero_apply]
       simp [baseMul]
     unfold IsTorsionFormWith IsTorsionForm
     exact exists_congr fun F => and_congr_left' (key2 F)

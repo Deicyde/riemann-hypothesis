@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ReindexDblIncM
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LagrInt
 open scoped TensorProduct Matrix
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes MeasureTheory
 open GlobalTheory.WeilM GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels
@@ -38,7 +38,7 @@ def repL (F : Type) [Field F] [NumberField F] [Algebra F E] (n m : ℕ) :
   map_add' x y := by ext i j; simp [incM]
   map_smul' a x := by
     ext i j
-    simp [incM, inclR, TensorProduct.tmul_smul]
+    simp [incM, inclR]
 
 theorem repL_injective (n m : ℕ) : Function.Injective (repL (E := E) F n m) := by
   intro x y h

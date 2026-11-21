@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.QuadraticExtensions.ModulusAdjoinISqrtNegPrimes
+import Mathlib.Algebra.Order.Ring.Star
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.GaloisCohomology UpperTheory.V UpperTheory.V.LDataCardLeFinrank UpperTheory.V.Base UpperTheory.V.Kum UpperTheory.V.Two
 open scoped Pointwise
@@ -34,7 +36,7 @@ private theorem root_of_hasMu (l : ℕ) (A : AbF) (L : Type) [Field L] [NumberFi
 private theorem unitsMap_nat {m n a : ℕ} (h : m ∣ n) (u : (ZMod n)ˣ) (e : (u : ZMod n) = (a : ZMod n)) :
     ((ZMod.unitsMap h u : (ZMod m)ˣ) : ZMod m) = (a : ZMod m) := by
   rw [ZMod.unitsMap_def]
-  simp [Units.coe_map, ZMod.castHom_apply, e, ZMod.cast_natCast h]
+  simp [Units.coe_map, e]
 
 private theorem ker_sup {A B : AbF} {a : ℕ} (h : (A.sup B).ker a) : A.ker a ∧ B.ker a := by
   obtain ⟨u, ⟨hu1, hu2⟩, e⟩ := h

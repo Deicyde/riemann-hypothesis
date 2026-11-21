@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.LocalMaximality.LiftFactorization
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CechDeltaCupProduct
 
@@ -264,7 +265,7 @@ private theorem cup_edge (q : ℕ) (a : Finset β → E) (ha : ∀ I : Finset β
         have e2 : J.filter (J.min' hJ ≤ ·) = J :=
           Finset.filter_true_of_mem (fun x hx => J.min'_le x hx)
         simp only [filter_le_r, filter_ge_r, e1, e2, edge1, lft_uni, rgt_uni, Finset.card_singleton,
-          if_pos rfl, map_zsmul, LinearMap.smul_apply, if_true]
+          map_zsmul, LinearMap.smul_apply, if_true]
         by_cases hI : I.card = q + 1
         · rw [hI]
         · rw [ha I hI]

@@ -1,10 +1,7 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.ArithmeticCylinders
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.LabelDatum
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.HarishChandraFrobeniusReciprocityStatement
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.HarishChandraRestrictionTwoBlockCuspidalEqZeroStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.HarishChandraRestrictionCuspidalProductSumSubsetStatement
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CentralIdempotentOfIrrCharacterOrthogonalCentralStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.HarishChandraProductListIsCharacterAndPermInvariStatement
 
 noncomputable section
@@ -92,7 +89,7 @@ theorem mem_sort_map {L : List (Pc g)} {I : Finset (Fin L.length)} {p : Pc g}
   exact List.get_mem L j
 
 theorem ip_triv : ip (hcL ([] : List (Pc g)) 0) (hcL ([] : List (Pc g)) 0) = 1 := by
-  simp [ip, hcL_nil, Finset.card_univ]
+  simp [ip, hcL_nil]
 
 theorem entN_fin' {n : ℕ} (M : Mt g n) (u v : Fin n) : entN M u v = M u v := by
   unfold entN

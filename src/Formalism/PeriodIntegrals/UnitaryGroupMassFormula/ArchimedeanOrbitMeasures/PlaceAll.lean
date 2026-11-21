@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ArchimedeanOrbitMeasures.DetMulRCReal
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ArchimedeanOrbitMeasures.PiCoord
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 
@@ -109,7 +112,7 @@ theorem norm_reimE_sq {a b : ℕ} (M : Matrix (Fin a) (Fin b) ℂ) :
   rw [Fintype.sum_prod_type]
   refine Finset.sum_congr rfl fun j _ => ?_
   rw [Fintype.sum_bool, Complex.sq_norm, Complex.normSq_apply]
-  simp [reimE, reim, Real.norm_eq_abs, sq_abs, sq]
+  simp [reimE, reim, Real.norm_eq_abs, sq]
 
 set_option maxHeartbeats 800000 in
 

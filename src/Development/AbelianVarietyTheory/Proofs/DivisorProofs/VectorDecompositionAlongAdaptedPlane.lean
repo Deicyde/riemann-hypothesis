@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -29,6 +28,6 @@ theorem every_vector_adapted_plane : ∀ (F E : Type) [Field F] [NumberField F] 
   obtain ⟨a, rfl⟩ := Submodule.mem_span_singleton.mp hp1
   obtain ⟨u, rfl⟩ := hp2
   obtain ⟨b, rfl⟩ := Submodule.mem_span_singleton.mp hq
-  exact ⟨a, b, u, by simp [Matrix.mulVecLin_apply]⟩
+  exact ⟨a, b, u, by simp⟩
 
 end GlobalTheory.Decomp

@@ -1,7 +1,15 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.JacobiPathWeights.IndexWeightsDominance
-import Formalism.ThetaLogCoordinates.JacobiPathWeights.JacobiMinorProofs.LeIffLtColHeight
-import Formalism.ThetaLogCoordinates.JacobiPathWeights.JacobiMinorProofs.PathProductHighestWeight
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Bool
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -87,7 +95,7 @@ theorem weight_torus {n : ℕ} (isVec : ℕ → Bool) (e : ℕ × Fin n →₀ �
   · subst hx
     by_cases hv : isVec x.1 <;> simp [torusW, hv]
   · have hx' : m ≠ x.2 := fun h => hx h.symm
-    by_cases hv : isVec x.1 <;> simp [torusW, hv, hx, hx', Pi.single_apply]
+    by_cases hv : isVec x.1 <;> simp [torusW, hv, hx, hx']
 
 end A3comb
 
@@ -351,7 +359,7 @@ theorem cnt_init {n : ℕ} (J : Finset (Fin n)) (h j : ℕ) (hJ : J.card = (rows
     ((rowsLt n j).filter fun m => m ∈ J).card ≤ ((rowsLt n j).filter fun m => m ∈ rowsLt n h).card := by
   have e : ((rowsLt n j).filter fun m => m ∈ rowsLt n h) = rowsLt n (min j h) := by
     ext m
-    simp [rowsLt, lt_min_iff]
+    simp [rowsLt]
   rw [e, card_rowsLt_lemma]
   have h1 := Finset.card_le_card (Finset.filter_subset (fun m => m ∈ J) (rowsLt n j))
   have h2 : ((rowsLt n j).filter fun m => m ∈ J).card ≤ J.card :=
@@ -535,7 +543,7 @@ theorem weight_letter {n : ℕ} (i : ℕ) (e : ℕ × Fin n →₀ ℕ) :
     · by_cases hi : x1 = i
       · subst hi
         simp [Finsupp.single_apply]
-      · simp [Finsupp.single_apply, hi]
+      · simp [hi]
     · simp
 
 def mkMon {n N : ℕ} (d : Fin N → (Fin n →₀ ℕ)) : ℕ × Fin n →₀ ℕ :=

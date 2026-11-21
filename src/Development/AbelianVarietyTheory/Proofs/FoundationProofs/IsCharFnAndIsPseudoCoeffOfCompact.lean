@@ -1,7 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsAuxiliaryPlaceNotMemFinset
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.InnerEqZeroOfNotUEquiv
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.IntegralConjInnerMulInnerOfIsEmptyEquiv
+import Development.AbelianVarietyTheory.Definitions.Foundations.ContinuousOfMemCcSmooth
 
 open MeasureTheory Set GlobalTheory.AutomorphicL2Unitary GlobalTheory.OpTrace
 open scoped ComplexConjugate ContDiff InnerProductSpace

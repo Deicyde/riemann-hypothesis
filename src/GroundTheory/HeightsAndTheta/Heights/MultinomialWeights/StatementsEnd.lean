@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.MultinomialWeights.Statements
+import Std.Tactic.BVDecide.Normalize.Bool
 set_option maxSynthPendingDepth 1
 
 noncomputable section

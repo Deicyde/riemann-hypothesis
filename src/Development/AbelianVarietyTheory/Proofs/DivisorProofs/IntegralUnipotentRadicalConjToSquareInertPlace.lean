@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFinMapsOfForall
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FromBlocksMem
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitEqNormCompletionTensorOfIsInertAt
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.KFinLoc
@@ -30,7 +29,7 @@ theorem mul_atV (v : Pl F) (a : AF F) (x : Fv F v) : a * atV v x = atV v (evFin 
     intro w
     rw [RestrictedProduct.mul_apply]
     by_cases h : w = v
-    · subst h; simp [RestrictedProduct.single_eq_same]
+    · subst h; simp
     · simp [RestrictedProduct.single_eq_of_ne _ _ h]
   exact key a.2
 
@@ -127,8 +126,8 @@ theorem blk_unitary (d : ℕ) (σ : E →ₐ[F] E) (J : Matrix (Fin d) (Fin d) (
     (h1 : α * cA σ α - β * cA σ β = 1) (h2 : α * cA σ β = β * cA σ α) :
     (blk d α β)ᵀ * dbl J * (blk d α β).map (cA σ) = dbl J := by
   rw [blk_transpose, blk_map, dbl, blk, blk, fromBlocks_multiply, fromBlocks_multiply]
-  simp only [Matrix.smul_mul, Matrix.mul_smul, Matrix.one_mul, Matrix.mul_one, Matrix.zero_mul, Matrix.mul_zero,
-    add_zero, zero_add, Matrix.neg_mul, Matrix.mul_neg, smul_smul, smul_neg]
+  simp only [Matrix.smul_mul, Matrix.mul_smul, Matrix.one_mul, Matrix.mul_one, Matrix.mul_zero,
+    add_zero, zero_add, Matrix.mul_neg, smul_smul, smul_neg]
   congr 1
   all_goals
     ext i j
@@ -159,13 +158,13 @@ theorem blk_diag (d : ℕ) (x y : AE F E) :
     blk d x y * (diagCols (Fin d) : Matrix (Fin d ⊕ Fin d) (Fin d) (AE F E)) =
       (diagCols (Fin d) : Matrix (Fin d ⊕ Fin d) (Fin d) (AE F E)) * ((x + y) • (1 : Matrix (Fin d) (Fin d) (AE F E))) := by
   rw [diagCols, blk_mul_fromRows]
-  ext (i | i) j <;> simp [Matrix.mul_apply, Fintype.sum_sum_type, Matrix.one_apply, add_smul, add_comm]
+  ext (i | i) j <;> simp [Matrix.mul_apply, Matrix.one_apply, add_smul, add_comm]
 
 theorem blk_anti (d : ℕ) (x y : AE F E) :
     blk d x y * (antiCols (F := F) (E := E) d : Matrix (Fin d ⊕ Fin d) (Fin d) (AE F E)) =
       (antiCols (F := F) (E := E) d : Matrix (Fin d ⊕ Fin d) (Fin d) (AE F E)) * ((x - y) • (1 : Matrix (Fin d) (Fin d) (AE F E))) := by
   rw [antiCols, blk_mul_fromRows]
-  ext (i | i) j <;> simp [Matrix.mul_apply, Fintype.sum_sum_type, Matrix.one_apply, sub_smul] <;> ring
+  ext (i | i) j <;> simp [Matrix.mul_apply, Matrix.one_apply, sub_smul] <;> ring
 
 theorem cols_ext (d : ℕ) (X Y : Matrix (Fin d ⊕ Fin d) (Fin d ⊕ Fin d) (AE F E))
     (h1 : X * (diagCols (Fin d) : Matrix (Fin d ⊕ Fin d) (Fin d) (AE F E)) =
@@ -482,29 +481,29 @@ theorem conj_sq : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [NumberFi
     · refine key (1 - atV v 1 + 3 * ⅟2 * atV v (x : Fv F v)) (3 * ⅟2 * atV v (y : Fv F v)) ?_ ?_ _ ?_
       · simp only [map_add, map_sub, map_mul, map_one, map_ofNat, evFin_atV]
         repeat (first | exact one_mem _ | assumption | apply add_mem | apply sub_mem | apply mul_mem | apply neg_mem)
-      · simp only [map_add, map_sub, map_mul, map_one, map_ofNat, evFin_atV]
+      · simp only [map_mul, map_ofNat, evFin_atV]
         repeat (first | exact one_mem _ | assumption | apply add_mem | apply sub_mem | apply mul_mem | apply neg_mem)
       · simp only [map_add, map_sub, map_mul, map_one, map_ofNat]; ring
     · refine key (-(⅟2 * atV v (x : Fv F v))) (-(⅟2 * atV v (y : Fv F v))) ?_ ?_ _ ?_
-      · simp only [map_add, map_sub, map_mul, map_one, map_neg, map_ofNat, evFin_atV]
+      · simp only [map_mul, map_neg, evFin_atV]
         repeat (first | exact one_mem _ | assumption | apply add_mem | apply sub_mem | apply mul_mem | apply neg_mem)
-      · simp only [map_add, map_sub, map_mul, map_one, map_neg, map_ofNat, evFin_atV]
+      · simp only [map_mul, map_neg, evFin_atV]
         repeat (first | exact one_mem _ | assumption | apply add_mem | apply sub_mem | apply mul_mem | apply neg_mem)
-      · simp only [map_add, map_sub, map_mul, map_one, map_neg, map_ofNat]; ring
+      · simp only [map_mul, map_neg]; ring
     · refine key (1 - atV v 1 + 3 * ⅟2 * (atV v (x : Fv F v) - atV v (y : Fv F v) * algebraMap F (AF F) (b : F)))
         (-(3 * ⅟2 * atV v (y : Fv F v))) ?_ ?_ _ ?_
-      · simp only [map_add, map_sub, map_mul, map_one, map_neg, map_ofNat, evFin_atV, hev]
+      · simp only [map_add, map_sub, map_mul, map_one, map_ofNat, evFin_atV, hev]
         repeat (first | exact one_mem _ | assumption | apply add_mem | apply sub_mem | apply mul_mem | apply neg_mem)
-      · simp only [map_add, map_sub, map_mul, map_one, map_neg, map_ofNat, evFin_atV, hev]
+      · simp only [map_mul, map_neg, map_ofNat, evFin_atV]
         repeat (first | exact one_mem _ | assumption | apply add_mem | apply sub_mem | apply mul_mem | apply neg_mem)
       · simp only [map_add, map_sub, map_mul, map_one, map_neg, map_ofNat, AlgHom.commutes, hcA]; ring
     · refine key (⅟2 * (atV v (x : Fv F v) - atV v (y : Fv F v) * algebraMap F (AF F) (b : F)))
         (-(⅟2 * atV v (y : Fv F v))) ?_ ?_ _ ?_
-      · simp only [map_add, map_sub, map_mul, map_one, map_neg, map_ofNat, evFin_atV, hev]
+      · simp only [map_sub, map_mul, evFin_atV, hev]
         repeat (first | exact one_mem _ | assumption | apply add_mem | apply sub_mem | apply mul_mem | apply neg_mem)
-      · simp only [map_add, map_sub, map_mul, map_one, map_neg, map_ofNat, evFin_atV, hev]
+      · simp only [map_mul, map_neg, evFin_atV]
         repeat (first | exact one_mem _ | assumption | apply add_mem | apply sub_mem | apply mul_mem | apply neg_mem)
-      · simp only [map_add, map_sub, map_mul, map_one, map_neg, map_ofNat, AlgHom.commutes, hcA]; ring
+      · simp only [map_add, map_sub, map_mul, map_neg, AlgHom.commutes, hcA]; ring
   · intro b' hb'
     rw [sub_eq_iff_eq_add.mp R3, add_smul]
     have : (algebraMap (AF F) (AE F E) (atV v 1) - 1) • b' = 0 := by

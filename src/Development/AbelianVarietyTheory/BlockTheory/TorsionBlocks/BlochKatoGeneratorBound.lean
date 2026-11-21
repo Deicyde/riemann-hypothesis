@@ -1,6 +1,7 @@
-import Mathlib
-import Formalism.WeaklyAdmissibleFiltrations.Statement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.DataNLoc
+import Mathlib.Tactic.ENatToNat
 
 noncomputable section
 

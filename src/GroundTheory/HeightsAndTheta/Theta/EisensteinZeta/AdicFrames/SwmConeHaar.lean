@@ -1,10 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Theta.EisensteinZeta.AdicFrames.SwmConeStatements
-import GroundTheory.HeightsAndTheta.Theta.EisensteinZeta.AdicFrames.InstSecondCountableTopologyFrameSp
-import GroundTheory.HeightsAndTheta.Theta.EisensteinZeta.AdicFrames.FramePairAddRight
 import GroundTheory.HeightsAndTheta.Theta.EisensteinZeta.AdicFrames.ContinuousFramePairLeft
 import GroundTheory.HeightsAndTheta.Theta.SchroedingerTranslates.WmSysEquivDet
-import GroundTheory.HeightsAndTheta.Theta.LocallyCompactField.Countability
+import GroundTheory.LocalFields.LocalFourierHaar
 
 set_option linter.unusedSectionVars false
 

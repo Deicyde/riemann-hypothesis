@@ -1,6 +1,6 @@
-import Formalism.LocalToGlobal.GaloisLevelStructure.NGalTied
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.CohomologicalCsdTempered
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.DaAutRepSphAt
+import Formalism.LocalToGlobal.GaloisLevelStructure.TiedGal
 
 set_option synthInstance.maxHeartbeats 200000
 

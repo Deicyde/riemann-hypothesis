@@ -1,4 +1,5 @@
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.DensityLemma.PFibreBoundDefs
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.FiniteOrderIntersectionInSmooth
 
 open MeasureTheory Matrix Formalism.REAL Formalism.QuantumDeterminants Formalism.FourierDecayAlt Formalism.FourierDecayAlt.C6
 

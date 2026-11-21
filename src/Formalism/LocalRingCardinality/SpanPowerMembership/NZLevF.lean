@@ -1,8 +1,9 @@
-import Formalism.LocalRingCardinality.SpanPowerMembership.NZLevE
-import Formalism.LocalRingCardinality.SpanPowerMembership.NZLevA
-import Formalism.SharpRestriction.GrowthBounds.LatticeSystems
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.ClsLat
 import Formalism.LocalToGlobal.GroupLattices.FockModels.OperatorsPreserveLattices
+import Formalism.LocalRingCardinality.SpanPowerMembership.NZLevC
+import Formalism.LocalToGlobal.GroupLattices.FockModels.SwRowGenMonomial
 
 open MvPolynomial
 

@@ -1,9 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.SpectralTiesReal
 import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.InstExists
-import Formalism.LocalToGlobal.GroupLattices.DownNaturalLevelZero
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.RefilledStagesRecord
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.LevelMatchIff
+import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RowDict
 
 noncomputable section
 

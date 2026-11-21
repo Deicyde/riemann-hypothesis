@@ -1,6 +1,11 @@
-import Mathlib
-import Formalism.PeriodIntegrals.IdxCalc
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IndexCalculation.IsLocalizedModuleToSpan
+import Formalism.PeriodIntegrals.DivisionRowsRationalLattice
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 
@@ -216,7 +221,7 @@ private lemma lenS_split_lemma {R : Type*} [CommRing R] {W : Type*} [AddCommGrou
   rw [hbot _ inf_le_right, hz, zero_add] at h2
   have e : N.comap M.subtype = (M ⊓ N).comap M.subtype := by
     ext x
-    simp [Submodule.mem_inf, x.2]
+    simp
   have hc : lenS S M N = lenS S M (M ⊓ N) := by
     unfold lenS
     rw [e]
@@ -293,7 +298,7 @@ theorem idx_via (w : HeightOneSpectrum (𝓞 K)) (M N D : Submodule (𝓞 K) V) 
     have hc : lenS w.asIdeal.primeCompl M N = lenS w.asIdeal.primeCompl M (M ⊓ N) := by
       have e : N.comap M.subtype = (M ⊓ N).comap M.subtype := by
         ext x
-        simp [Submodule.mem_inf, x.2]
+        simp
       unfold lenS
       rw [e]
     rw [h1, hc, h2, add_comm]

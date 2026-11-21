@@ -1,6 +1,7 @@
-import Mathlib
-import Formalism.SatakeDualWeyl.KpqSubgroupCompact
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.InvMemDoubleCosetAndComm
+import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.FSatakeC
 
 noncomputable section
 

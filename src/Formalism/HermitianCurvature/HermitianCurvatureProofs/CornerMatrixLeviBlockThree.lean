@@ -1,4 +1,5 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CornerMatrixBlockThreeMul
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.IsOpenDomP
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.SmoothnessOnGoodSet
 
@@ -37,7 +38,7 @@ theorem corner_matrix_levi_block_three (z z' : Fin (2 * (p + ρ) + k + 1) → �
   have hw : ∀ M : Matrix (Fin p) (Fin p) ℂ, G.wMat p * (G.wMat p * M * G.wMat p) = M * G.wMat p := by
     intro M
     rw [← Matrix.mul_assoc, ← Matrix.mul_assoc, Ux3.wMat_mul_self, Matrix.one_mul]
-  congr 2 <;> simp only [Matrix.zero_mul, Matrix.one_mul, zero_add, add_zero, Matrix.mul_zero]
+  congr 2 <;> simp only [Matrix.zero_mul, Matrix.one_mul, zero_add, add_zero]
   · rw [← Matrix.mul_assoc, hw, Matrix.mul_assoc]
   · rw [← Matrix.mul_assoc (G.wMat p), hw]; simp only [Matrix.mul_assoc]
 

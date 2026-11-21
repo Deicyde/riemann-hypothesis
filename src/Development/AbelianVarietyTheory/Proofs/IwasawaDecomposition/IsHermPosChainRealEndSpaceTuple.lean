@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.IsMultMapUnivZero
-import Formalism.LocalToGlobal.IndefiniteReal.LinksStage
-import Formalism.LocalToGlobal.IndefiniteReal.BridgeSeed
 import Formalism.LocalToGlobal.IndefiniteReal.LinksExistW
 import Development.AbelianVarietyTheory.Counterexamples.RotationExamples.OneLeAPlLast
 

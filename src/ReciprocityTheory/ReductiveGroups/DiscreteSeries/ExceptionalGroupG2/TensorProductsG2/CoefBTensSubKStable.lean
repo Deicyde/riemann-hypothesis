@@ -1,15 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.HidaSetting
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.TensorV
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirAlgebra.CasimirKKhwVec
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirAlgebra.MulMulSubMulMulEqAdd
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.BochnerInequality.CasimirGapAtNoncompactWeight
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.ExceptionalGroupG2.BochnerG2.CasimirGapAtNoncompactWeight
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.BochnerInequality.KUnitB
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.CoefAInnerEqZero
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.ExceptionalGroupG2.StdGap
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.ExceptionalGroupG2.ExistenceG2.AnyDec
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.ExceptionalGroupG2.ExistenceG2.DataGenSubIrred
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.ExceptionalGroupG2.ExistenceG2.HasGelfandCharSigLam
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.AnalyticVectors.Closure
 
 noncomputable section
 
@@ -120,7 +115,7 @@ theorem coefTr_apply (A : Module.End ℂ (Fin n → D)) (u : WithLp 2 (Fin n →
 theorem coefTr_casimirK (ε : Fin n → Bool) (A : Fin n → Fin n → Module.End ℂ (Fin n → D)) :
     casimirK ε (fun a b => coefTr (A a b)) = coefTr (casimirK ε A) := by
   refine LinearMap.ext fun u => ?_
-  simp only [casimirK, LinearMap.sum_apply, Module.End.mul_apply, coefTr_apply, WithLp.ofLp_toLp,
+  simp only [casimirK, LinearMap.sum_apply, Module.End.mul_apply, coefTr_apply,
     WithLp.toLp_sum]
 
 theorem coefB_sum_ite_left (a : Fin n) (x : D) (v : Fin n → D) :
@@ -136,7 +131,7 @@ theorem coefB_sum_ite_right (a : Fin n) (x : D) (v : Fin n → D) :
 theorem coefB_isKUnitary (dual : Bool) {ε : Fin n → Bool} {E : Fin n → Fin n → Module.End ℂ D}
     (hU : IsKUnitary ε E) : IsKUnitary ε (fun a b => coefTr (tensF dual E a b)) := by
   intro a b hab u v
-  simp only [coefTr_apply, PiLp.inner_apply, PiLp.toLp_apply]
+  simp only [coefTr_apply, PiLp.inner_apply]
   cases dual
   · simp only [tensF, cond_false, tensV_coord, inner_add_left, inner_add_right,
       Finset.sum_add_distrib, hU a b hab, coefB_sum_ite_left, coefB_sum_ite_right]

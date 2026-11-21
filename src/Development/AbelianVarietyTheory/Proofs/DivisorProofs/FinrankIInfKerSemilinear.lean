@@ -1,9 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.GramCEqTranspose
-import Formalism.HarderNarasimhan.StatementPl
 import Development.AbelianVarietyTheory.Definitions.Divisors.BadElt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinrankIInfKerEqOfIsBaseChangeFamily
 import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.LengthCommensurableInfRestrictScalarsOfLeSpan
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FinrankIInfKerOfIsBaseChange
 
 noncomputable section
 

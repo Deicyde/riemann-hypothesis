@@ -1,8 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataLevel
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.ClosureUpperUni
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.OneAddPowOfMulSelfEqZero
 import Lemmata.GeneralBFactLeftTail.Imports
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 noncomputable section
 

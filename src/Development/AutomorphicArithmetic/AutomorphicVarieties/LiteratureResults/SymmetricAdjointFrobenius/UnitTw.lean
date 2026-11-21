@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.ArthurClozelDescent
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.JacquetLanglandsLattices.DiscOfCusp
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.NewformCoefficients.AbsExpo
+import Development.AutomorphicArithmetic.AutomorphicVarieties.IdeleGenerators.ShortLatticeUnitarize.CompactBoxLattices.CentChar
 
 noncomputable section
 
@@ -20,7 +23,7 @@ private abbrev sc (a : ℕ) (y : Rˣ) : GL (Fin a) R := GeneralLinearGroup.scala
 private theorem corner_scalar (s : R →ₙ+* S) (y : Rˣ) : cornerGL a s (sc a y) = sc a (Units.map (corner s) y) := by
   ext i j
   change (1 : Matrix (Fin a) (Fin a) S) i j - s ((1 : Matrix (Fin a) (Fin a) R) i j) + s (sc a y i j) = _
-  by_cases e : i = j <;> simp [corner, GeneralLinearGroup.scalar, e, Matrix.one_apply, Matrix.diagonal_apply]
+  by_cases e : i = j <;> simp [corner, e, Matrix.one_apply]
 
 private theorem sc_comm (y : Rˣ) (g : GL (Fin a) R) : g * sc a y = sc a y * g :=
   Units.ext (Matrix.scalar_commute (y : R) (fun _ => mul_comm _ _) g.val).eq.symm
@@ -151,7 +154,7 @@ private theorem scal_sign (h : UpperTheory.V.Published.AdmissibleReal) (π : Cus
   have hs' : (s : Rinf F) * s = 1 := congrArg Units.val hs
   have hk : (sc a s).val ∈ Matrix.unitaryGroup (Fin a) (Rinf F) := by
     rw [Matrix.mem_unitaryGroup_iff]
-    simp [GeneralLinearGroup.scalar, Matrix.star_eq_conjTranspose, hs']
+    simp [Matrix.star_eq_conjTranspose, hs']
   have e : Unitary.toUnits (⟨_, hk⟩ : Kinf F a) = sc a s := Units.ext rfl
   refine schur h π _ (fun φ hφ => ?_) fun o => ?_
   · rw [← inf_sc, ← e]; exact π.stable (.cpt _) φ hφ
@@ -257,7 +260,7 @@ private theorem main (h : UpperTheory.V.Published.AdmissibleReal) (π : CuspSub 
   refine Subtype.ext (funext fun x => ?_)
   have e : sc a (diagUnits F k) = ratGL F a (sc a k) := by
     ext i j
-    by_cases e : i = j <;> simp [GeneralLinearGroup.scalar, ratGL, diagUnits, e, Matrix.diagonal_apply]
+    by_cases e : i = j <;> simp [ratGL, diagUnits, e]
   rw [rt_apply, sc_comm, e]
   exact (π.cusp φ hφ).1.left _ _
 

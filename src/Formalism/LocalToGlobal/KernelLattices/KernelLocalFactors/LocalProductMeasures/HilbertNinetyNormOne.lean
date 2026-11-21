@@ -1,6 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.KernelLattices.MuProd
-import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.PenultimateKernelDiamondInvariant
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.KernelLattices.ThDistC
 
 open NumberField IsDedekindDomain
 

@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.GammaFactorNonvanishing.CritLine
 import Development.AutomorphicArithmetic.CharacterBoxes.ClaimStrip
 import Development.AutomorphicArithmetic.CharacterBoxes.MainConclusion

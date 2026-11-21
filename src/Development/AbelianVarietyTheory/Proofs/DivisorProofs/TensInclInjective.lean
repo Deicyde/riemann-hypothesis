@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAdaptedFrame
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsFockIPOfFockData
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockMap
 
 noncomputable section
 
@@ -20,7 +18,7 @@ def skipIx (r₀ : Fin (R + 1)) (s₀ : Fin (S + 1)) : Ix R S → Ix (R + 1) (S 
   | .inr j => .inr (s₀.succAbove j)
 
 theorem skipIx_injective (r₀ : Fin (R + 1)) (s₀ : Fin (S + 1)) : Function.Injective (skipIx r₀ s₀) := by
-  rintro (i | i) (j | j) h <;> simp_all [skipIx, Fin.succAbove_right_inj]
+  rintro (i | i) (j | j) h <;> simp_all [skipIx]
 
 end Index
 

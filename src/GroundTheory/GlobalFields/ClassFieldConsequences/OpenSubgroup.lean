@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.ClassFieldConsequences.CongruenceSubgroupLeStandardOpenSubgroup
+import GroundTheory.GlobalFields.TateThesis.HeckeCharRayClass
 
 open Topology Filter NumberField IsDedekindDomain Function
 open scoped NumberField.AdeleRing

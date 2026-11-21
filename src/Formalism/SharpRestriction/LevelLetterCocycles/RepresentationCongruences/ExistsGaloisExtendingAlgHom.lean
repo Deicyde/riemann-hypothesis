@@ -1,11 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.AdmBoundsBOfAdm
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.ArcGamLiftCore
-import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.ImportsAlt
-import Formalism.SharpRestriction.LevelLetterCocycles.AnnihilatorGeneralOfRingCondition
-import Formalism.SharpRestriction.LevelLetterCocycles.BaseChangePreservesUnitaryOf
-import Formalism.LocalRingCardinality.SpanPowerMembership.NDLocE
 import Formalism.SharpRestriction.LevelLetterCocycles.LetterConditionGlobal
+import Formalism.SharpRestriction.LevelLetterCocycles.CrystallineLiftingBounds
 
 noncomputable section
 

@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.IdeleGenerators.WeightChange
+import Formalism.SharpRestriction.GrowthBounds.MonomialOrderSegments.BrData
 
 noncomputable section
 

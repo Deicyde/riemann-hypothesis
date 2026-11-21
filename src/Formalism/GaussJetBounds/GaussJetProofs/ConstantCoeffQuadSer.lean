@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.GaussJetBounds.StatementN
 import Formalism.GaussJetBounds.GaussJetProofs.ConstantCoeffAevalLinP
 import Formalism.FormalGroupLog.FormalGroupLogProofs.ChainRule

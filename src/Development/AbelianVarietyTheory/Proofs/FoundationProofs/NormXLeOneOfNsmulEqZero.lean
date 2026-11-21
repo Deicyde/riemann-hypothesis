@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.NormAddOfLt
+import Mathlib.Algebra.Order.Ring.Star
 
 namespace GlobalTheory.TorsionIntegral
 
@@ -181,7 +183,7 @@ theorem norm_x_le_one_of_nsmul_eq_zero (K : Type) [NormedField K] [IsUltrametric
     induction k with
     | zero =>
       rw [zero_nsmul]
-      exact ⟨trivial, by simp [Affine.Point.zero_def, param]⟩
+      exact ⟨trivial, by simp [param]⟩
     | succ k ih =>
       obtain ⟨s1, s2⟩ := add_step hA hB hx _ _ ih.1 hP
       rw [succ_nsmul]
@@ -193,7 +195,7 @@ theorem norm_x_le_one_of_nsmul_eq_zero (K : Type) [NormedField K] [IsUltrametric
       ring
   have h1 := (key N).2
   rw [h0] at h1
-  simp only [Affine.Point.zero_def, param, zero_sub, norm_neg, norm_mul, hN, one_mul,
+  simp only [param, zero_sub, norm_neg, norm_mul, hN, one_mul,
     norm_div] at h1
   have he : y ^ 2 = x ^ 3 + A * x + B := by
     have := (Affine.equation_iff _ _).1 h.1

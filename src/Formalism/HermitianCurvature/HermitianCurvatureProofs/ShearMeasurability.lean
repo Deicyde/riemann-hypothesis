@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.FiniteOrderIntersectionInSmooth
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.LowerParabolicCoordinates
+import Mathlib.RingTheory.PiTensorProduct
 
 open Matrix MeasureTheory Formalism.FourierDecayAlt
 

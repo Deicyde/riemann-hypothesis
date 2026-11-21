@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.CoefModB
-import Formalism.LocalToGlobal.Columns.CoefficientsModP.LatticeBasisExistsHolds
 import Formalism.LocalToGlobal.Columns.CoefficientsModP.NablaIndependenceHolds
 import Formalism.LocalToGlobal.Columns.CoefficientsModP.TauLatticeLatticeHolds
 

@@ -1,9 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
-import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsCrystalPairing
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUniqueDetGen
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GaloisConjugateCmPointStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RationalFunctionRatioDeterminedStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GaloisActionRootsOfUnityStatement
@@ -66,7 +61,7 @@ theorem im_conj_form_eq : GlobalTheory.Published.PeriodComparison → GlobalTheo
     intro z hz
     have hz' : algebraMap E (Af E) z * (((y * (upIdele K E t)⁻¹)⁻¹ : (Af E)ˣ) : Af E) ∈ hatO c := hz
     convert hz' using 1
-    simp only [Nat.cast_one, div_one, zero_div, map_zero, sub_zero, mul_inv_rev, inv_inv, Units.val_mul]
+    simp only [Nat.cast_one, div_one, map_zero, sub_zero, mul_inv_rev, inv_inv, Units.val_mul]
     ring
   have htrw : ∀ w ∈ lattice c y,
       ((upIdele K E t : Af E) * algebraMap E (Af E) ((0 : E) / ((1 : ℕ) : E)) - algebraMap E (Af E) (w / ((1 : ℕ) : E))) *
@@ -75,7 +70,7 @@ theorem im_conj_form_eq : GlobalTheory.Published.PeriodComparison → GlobalTheo
     have hw' : algebraMap E (Af E) w * ((y⁻¹ : (Af E)ˣ) : Af E) ∈ hatO c := hw
     have e : ((upIdele K E t : Af E) * algebraMap E (Af E) ((0 : E) / ((1 : ℕ) : E)) - algebraMap E (Af E) (w / ((1 : ℕ) : E))) *
         ((y⁻¹ : (Af E)ˣ) : Af E) = -(algebraMap E (Af E) w * ((y⁻¹ : (Af E)ˣ) : Af E)) := by
-      simp only [Nat.cast_one, div_one, zero_div, map_zero, mul_zero, zero_sub, neg_mul]
+      simp only [Nat.cast_one, div_one, map_zero, mul_zero, zero_sub, neg_mul]
     rw [e]; exact (hatO c).neg_mem hw'
   have hEg : ∀ z ∈ lattice c (y * (upIdele K E t)⁻¹), ∀ z' ∈ lattice c (y * (upIdele K E t)⁻¹), ∃ n : ℤ,
       ((fun j ↦ g (φ (T.U.e j) z)) ⬝ᵥ Hm.mulVec (star fun j ↦ g (φ (T.U.e j) z'))).im = n := by

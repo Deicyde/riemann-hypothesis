@@ -1,11 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
-import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsCrystalPairing
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.PolarisationModuleIndex
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ConjugateOrderData
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsPlaceRing
 import Development.AbelianVarietyTheory.Proofs.ThetaLawProofs.IsDiffSumSmulOfIsLieComb
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLieCombIffIsCombAt
@@ -138,11 +133,11 @@ theorem isCMVec_of_mem_eigLat : GlobalTheory.Published.AbelianDeRham → GlobalT
     have h2 := congrArg (LinearMap.liftBaseChange (FractionRing R)
       ((Algebra.linearMap R (FractionRing R)) ∘ₗ LinearMap.proj k)) h1
     simp only [GlobalTheory.IndefiniteRowSideFullHecke.DifferentConductorValuations.inK, TensorProduct.mk_apply, LinearMap.baseChange_tmul, LinearMap.map_smul,
-      LinearMap.liftBaseChange_tmul, one_smul, smul_eq_mul, LinearMap.comp_apply, Algebra.linearMap_apply,
+      LinearMap.liftBaseChange_tmul, smul_eq_mul, LinearMap.comp_apply, Algebra.linearMap_apply,
       LinearMap.proj_apply] at h2
     have h3 := congrArg j h2
     have h4 : j (φK i b) = φ i b := by rw [← RingHom.comp_apply, hφK]
-    simp only [map_mul, map_one, one_mul, hj, h4] at h3
+    simp only [map_mul, map_one, hj, h4] at h3
     simpa using h3
   have hmodel : ∀ (b : orderC c) (α : X.A ⟶ X.A) [IsMonHom α], α.left ≫ p = p ≫ (cm.act b).left →
       push (dp0 ℂ) (𝟙 _) α yv = φ i b • yv := by
@@ -153,7 +148,7 @@ theorem isCMVec_of_mem_eigLat : GlobalTheory.Published.AbelianDeRham → GlobalT
     refine (hm.unique h1 fun c' ↦ ?_)
     have he : push (dp0 R) (𝟙 _) (cm.act b) (eH.symm g) = eH.symm (ρ b g) := by
       rw [← act_apply]
-      simp [ρ, LinearEquiv.conjRingEquiv, LinearEquiv.conj_apply]
+      simp [ρ, LinearEquiv.conjRingEquiv]
     rw [LinearMap.smul_apply, hyv c', smul_eq_mul, he]
     exact (coe_functional ((LinearMap.applyₗ c') ∘ₗ eH.symm.toLinearMap) _ _ _ (hcoord b)).symm
   have hΛ : ∀ (b : E) (α : X.A ⟶ X.A) [IsMonHom α],
@@ -198,7 +193,7 @@ theorem isCMVec_of_mem_eigLat : GlobalTheory.Published.AbelianDeRham → GlobalT
     have hle : Submodule.span ℝ (U.u.Λ : Set (Fin g0 → ℂ)) ≤ S := Submodule.span_le.2 hΛS
     rw [U.u.full] at hle
     have h1 := hle (Submodule.mem_top (x := Pi.single (U.e.symm i1) 1))
-    simp [S, Pi.single_apply, hk.symm] at h1
+    simp [S, hk.symm] at h1
   have hsep : ∀ k : Fin g0, k ≠ U.e.symm i → ∃ b : orderC c, φ (U.e k) b ≠ φ i b := by
     intro k hk
     have hne : φ (U.e k) ≠ φ i := fun h ↦ hk (U.e.eq_symm_apply.2 (hinj h))
@@ -244,7 +239,7 @@ theorem isCMVec_of_mem_eigLat : GlobalTheory.Published.AbelianDeRham → GlobalT
     funext k
     by_cases hk : k = U.e.symm i
     · subst hk; simp
-    · rw [hz k (Finset.mem_univ _) hk]; simp [Pi.single_apply, hk]
+    · rw [hz k (Finset.mem_univ _) hk]; simp [hk]
   rw [hf] at hv
   rw [hW] at hdv
   refine ⟨yv, lcW U.u f (U.e.symm i), ⟨fun b α _ hα ↦ hCM1 b α hα, v, hv, hdv⟩, hyv, ?_⟩

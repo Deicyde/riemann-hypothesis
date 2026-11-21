@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentCoordinatesInverse
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepresentationPreservesSchwartz
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenIntertwinerRestrictionPairStatement
 
 open scoped TensorProduct NNReal Matrix
@@ -101,7 +99,7 @@ theorem decompA {B : Base F E} {d d₁ r' s' i₀ i₁ : ℕ} {W : Spc F E d} {W
         (Pi.single i (1 : AE F E) : Fin d → AE F E) k := by
       by_cases hk : k = i
       · subst hk; simp
-      · simp [Pi.single_apply, hk]
+      · simp [hk]
     have h2 : inclR (F := F) (AF F) ((H'.ι *ᵥ u i) k) = (incM F H'.ι *ᵥ incV F (u i)) k := by
       simp [Matrix.mulVec, dotProduct, incM, incV, map_sum, map_mul]
     rw [h1, h2] at h
@@ -125,7 +123,7 @@ theorem fA_incM_mulVec_incV_eq_zero {B : Base F E} {d d₁ i₀ i₁ : ℕ} {W :
     funext j
     have h0 := (hA.orth (Pi.single j 1)).1
     rw [form, Matrix.mulVec_single_one] at h0
-    simp only [dotProduct, Matrix.mulVec, Matrix.transpose_apply, Matrix.col_apply] at h0
+    simp only [dotProduct, Matrix.mulVec, Matrix.col_apply] at h0
     have : ((incM F W.J *ᵥ fun i => cA σ (incV F H'.x i)) ᵥ* incM F H'.ι) j =
         inclR (F := F) (AF F) (∑ i, H'.ι i j * ∑ k, W.J i k * σ (H'.x k)) := by
       simp only [Matrix.vecMul, dotProduct, Matrix.mulVec, incM, incV, Matrix.map_apply, cA_inclR, map_sum, map_mul]

@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.MixedPositionHypothesis
 import Formalism.SharpRestriction.LevelLetterCocycles.MapCompZero
+import Formalism.SharpRestriction.LevelLetterCocycles.BaseChangePreservesUnitaryOf
 
 noncomputable section
 

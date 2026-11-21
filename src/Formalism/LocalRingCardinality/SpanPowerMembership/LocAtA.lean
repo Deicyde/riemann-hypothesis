@@ -1,5 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.SpanPowerMembership.Adelic
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.NumberTheory.LocalField.Basic
+import Mathlib.NumberTheory.Padics.RingHoms
+import Mathlib.Topology.Connected.Separation
+import Mathlib.Topology.MetricSpace.Ultra.TotallySeparated
 
 noncomputable section
 

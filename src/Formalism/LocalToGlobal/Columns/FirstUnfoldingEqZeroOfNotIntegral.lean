@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.OcbBEntEntB
+import Formalism.LocalToGlobal.Columns.ChainInst
+import Formalism.LocalToGlobal.Columns.SmulMemTrpSet
 
 open NumberField IsDedekindDomain Module
 

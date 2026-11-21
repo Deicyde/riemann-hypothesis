@@ -1,10 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.WickVanishing.CanonA
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.WickVanishing.ExpLaw
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.WickVanishing.CalcExp
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.WickVanishing.PderivSecondEvFirstPointEqZero
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.WickVanishing.DofComm
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.WickVanishing.GaugeTrans
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.ConnectionKillsSeries
 
 noncomputable section
 
@@ -409,121 +410,121 @@ theorem canonGauge : CanonGaugeSt := by
     (fun y w => by
       have h := tr ![ac ex y, ac ex w] (show E3 B.ph1 (0 : Q R d 2) (gen 0) (gen 1) = 1 from by
         simpa only [formalSeriesValueAtTwoPoints_eq_ev, formalSeriesValueAtThreePoints_eq_ev, ac_val, op_val, gen_val, ZeroMemClass.coe_zero] using B.cocycleLeft_zero_fst)
-      simp only [map_mul, map_one, map_eval_two, map_eval_three, mq_ac, mq_op, mq_gen, mq_zero, formalPointSubstitutionSeries_valueAtTwoPoints, formalPointSubstitutionSeries_valueAtThreePoints, sq_ac, sq_op, sq_gen, map_zero,
+      simp only [map_one, map_eval_three, mq_gen, mq_zero, formalPointSubstitutionSeries_valueAtThreePoints, sq_gen, map_zero,
         Matrix.cons_val] at h
-      have := sum_eq_of_exp [E3 p 0 (ac ex y) (ac ex w)] [] (by simp [cp, cq, cs, ca]) (by simp [cp, cq, cs, ca])
+      have := sum_eq_of_exp [E3 p 0 (ac ex y) (ac ex w)] [] (by simp [cp]) (by simp)
         (by simpa only [List.map_cons, List.map_nil, List.prod_cons, List.prod_nil, mul_one, ep, eq, es, ea, mul_assoc] using h)
       simpa only [E3x, E2x, he, ax, l00, List.sum_cons, List.sum_nil, add_zero, add_assoc] using this)
     (fun x y => by
       have h := tr ![ac ex x, ac ex y] (show E3 B.ph1 (gen 0 : Q R d 2) (gen 1) 0 = 1 from by
         simpa only [formalSeriesValueAtTwoPoints_eq_ev, formalSeriesValueAtThreePoints_eq_ev, ac_val, op_val, gen_val, ZeroMemClass.coe_zero] using B.cocycleLeft_zero_thd)
-      simp only [map_mul, map_one, map_eval_two, map_eval_three, mq_ac, mq_op, mq_gen, mq_zero, formalPointSubstitutionSeries_valueAtTwoPoints, formalPointSubstitutionSeries_valueAtThreePoints, sq_ac, sq_op, sq_gen, map_zero,
+      simp only [map_one, map_eval_three, mq_gen, mq_zero, formalPointSubstitutionSeries_valueAtThreePoints, sq_gen, map_zero,
         Matrix.cons_val] at h
-      have := sum_eq_of_exp [E3 p (ac ex x) (ac ex y) 0] [] (by simp [cp, cq, cs, ca]) (by simp [cp, cq, cs, ca])
+      have := sum_eq_of_exp [E3 p (ac ex x) (ac ex y) 0] [] (by simp [cp]) (by simp)
         (by simpa only [List.map_cons, List.map_nil, List.prod_cons, List.prod_nil, mul_one, ep, eq, es, ea, mul_assoc] using h)
       simpa only [E3x, E2x, he, ax, l00, List.sum_cons, List.sum_nil, add_zero, add_assoc] using this)
     (fun x w => by
       have h := tr ![ac ex x, ac ex w] (show E3 B.ph2 (gen 0 : Q R d 2) 0 (gen 1) = 1 from by
         simpa only [formalSeriesValueAtTwoPoints_eq_ev, formalSeriesValueAtThreePoints_eq_ev, ac_val, op_val, gen_val, ZeroMemClass.coe_zero] using B.cocycleRight_zero_snd)
-      simp only [map_mul, map_one, map_eval_two, map_eval_three, mq_ac, mq_op, mq_gen, mq_zero, formalPointSubstitutionSeries_valueAtTwoPoints, formalPointSubstitutionSeries_valueAtThreePoints, sq_ac, sq_op, sq_gen, map_zero,
+      simp only [map_one, map_eval_three, mq_gen, mq_zero, formalPointSubstitutionSeries_valueAtThreePoints, sq_gen, map_zero,
         Matrix.cons_val] at h
-      have := sum_eq_of_exp [E3 q (ac ex x) 0 (ac ex w)] [] (by simp [cp, cq, cs, ca]) (by simp [cp, cq, cs, ca])
+      have := sum_eq_of_exp [E3 q (ac ex x) 0 (ac ex w)] [] (by simp [cq]) (by simp)
         (by simpa only [List.map_cons, List.map_nil, List.prod_cons, List.prod_nil, mul_one, ep, eq, es, ea, mul_assoc] using h)
       simpa only [E3x, E2x, he, ax, l00, List.sum_cons, List.sum_nil, add_zero, add_assoc] using this)
     (fun x y w => by
       have h := tr ![ac ex x, ac ex y, ac ex w] (show E3 B.ph1 (gen 0 : Q R d 3) (gen 1) (gen 2) = E3 B.ph1 (gen 1) (gen 0) (gen 2) from by
         simpa only [formalSeriesValueAtTwoPoints_eq_ev, formalSeriesValueAtThreePoints_eq_ev, ac_val, op_val, gen_val] using ((formalSeriesValueAtThreePoints_eq_ev B.ph1 (gen 0) (gen 1) (gen 2)).symm.trans ((formalSeriesValueAtThreePoints_genericPoints _).trans B.cocycleLeft_comm.symm)))
-      simp only [map_mul, map_one, map_eval_two, map_eval_three, mq_ac, mq_op, mq_gen, mq_zero, formalPointSubstitutionSeries_valueAtTwoPoints, formalPointSubstitutionSeries_valueAtThreePoints, sq_ac, sq_op, sq_gen, map_zero,
+      simp only [map_eval_three, mq_gen, formalPointSubstitutionSeries_valueAtThreePoints, sq_gen,
         Matrix.cons_val] at h
-      have := sum_eq_of_exp [E3 p (ac ex x) (ac ex y) (ac ex w)] [E3 p (ac ex y) (ac ex x) (ac ex w)] (by simp [cp, cq, cs, ca]) (by simp [cp, cq, cs, ca])
+      have := sum_eq_of_exp [E3 p (ac ex x) (ac ex y) (ac ex w)] [E3 p (ac ex y) (ac ex x) (ac ex w)] (by simp [cp]) (by simp [cp])
         (by simpa only [List.map_cons, List.map_nil, List.prod_cons, List.prod_nil, mul_one, ep, eq, es, ea, mul_assoc] using h)
       simpa only [E3x, E2x, he, ax, l00, List.sum_cons, List.sum_nil, add_zero, add_assoc] using this)
     (fun x y w => by
       have h := tr ![ac ex x, ac ex y, ac ex w] (show E3 B.ph2 (gen 0 : Q R d 3) (gen 1) (gen 2) = E3 B.ph2 (gen 0) (gen 2) (gen 1) from by
         simpa only [formalSeriesValueAtTwoPoints_eq_ev, formalSeriesValueAtThreePoints_eq_ev, ac_val, op_val, gen_val] using ((formalSeriesValueAtThreePoints_eq_ev B.ph2 (gen 0) (gen 1) (gen 2)).symm.trans ((formalSeriesValueAtThreePoints_genericPoints _).trans B.cocycleRight_comm.symm)))
-      simp only [map_mul, map_one, map_eval_two, map_eval_three, mq_ac, mq_op, mq_gen, mq_zero, formalPointSubstitutionSeries_valueAtTwoPoints, formalPointSubstitutionSeries_valueAtThreePoints, sq_ac, sq_op, sq_gen, map_zero,
+      simp only [map_eval_three, mq_gen, formalPointSubstitutionSeries_valueAtThreePoints, sq_gen,
         Matrix.cons_val] at h
-      have := sum_eq_of_exp [E3 q (ac ex x) (ac ex y) (ac ex w)] [E3 q (ac ex x) (ac ex w) (ac ex y)] (by simp [cp, cq, cs, ca]) (by simp [cp, cq, cs, ca])
+      have := sum_eq_of_exp [E3 q (ac ex x) (ac ex y) (ac ex w)] [E3 q (ac ex x) (ac ex w) (ac ex y)] (by simp [cq]) (by simp [cq])
         (by simpa only [List.map_cons, List.map_nil, List.prod_cons, List.prod_nil, mul_one, ep, eq, es, ea, mul_assoc] using h)
       simpa only [E3x, E2x, he, ax, l00, List.sum_cons, List.sum_nil, add_zero, add_assoc] using this)
     (fun x y t w => by
       have h := tr ![ac ex x, ac ex y, ac ex t, ac ex w] (show E3 B.ph1 (gen 0 : Q R d 4) (gen 1) (gen 3) * E3 B.ph1 (op F₀ (gen 0) (gen 1)) (gen 2) (gen 3) = E3 B.ph1 (gen 1) (gen 2) (gen 3) * E3 B.ph1 (gen 0) (op F₀ (gen 1) (gen 2)) (gen 3) from by
         simpa only [formalSeriesValueAtTwoPoints_eq_ev, formalSeriesValueAtThreePoints_eq_ev, ac_val, op_val, gen_val, ZeroMemClass.coe_zero] using B.cocycleLeft_assoc)
-      simp only [map_mul, map_one, map_eval_two, map_eval_three, mq_ac, mq_op, mq_gen, mq_zero, formalPointSubstitutionSeries_valueAtTwoPoints, formalPointSubstitutionSeries_valueAtThreePoints, sq_ac, sq_op, sq_gen, map_zero,
+      simp only [map_mul, map_eval_three, mq_op, mq_gen, formalPointSubstitutionSeries_valueAtThreePoints, sq_op, sq_gen,
         Matrix.cons_val] at h
-      have := sum_eq_of_exp [E3 p (ac ex x) (ac ex y) (ac ex w), E3 p (op F (ac ex x) (ac ex y)) (ac ex t) (ac ex w)] [E3 p (ac ex y) (ac ex t) (ac ex w), E3 p (ac ex x) (op F (ac ex y) (ac ex t)) (ac ex w)] (by simp [cp, cq, cs, ca]) (by simp [cp, cq, cs, ca])
+      have := sum_eq_of_exp [E3 p (ac ex x) (ac ex y) (ac ex w), E3 p (op F (ac ex x) (ac ex y)) (ac ex t) (ac ex w)] [E3 p (ac ex y) (ac ex t) (ac ex w), E3 p (ac ex x) (op F (ac ex y) (ac ex t)) (ac ex w)] (by simp [cp]) (by simp [cp])
         (by simpa only [List.map_cons, List.map_nil, List.prod_cons, List.prod_nil, mul_one, ep, eq, es, ea, mul_assoc] using h)
       simpa only [E3x, E2x, he, ax, l00, List.sum_cons, List.sum_nil, add_zero, add_assoc] using this)
     (fun x y t w => by
       have h := tr ![ac ex x, ac ex y, ac ex t, ac ex w] (show E3 B.ph2 (gen 0 : Q R d 4) (gen 1) (gen 2) * E3 B.ph2 (gen 0) (op F₀ (gen 1) (gen 2)) (gen 3) = E3 B.ph2 (gen 0) (gen 2) (gen 3) * E3 B.ph2 (gen 0) (gen 1) (op F₀ (gen 2) (gen 3)) from by
         simpa only [formalSeriesValueAtTwoPoints_eq_ev, formalSeriesValueAtThreePoints_eq_ev, ac_val, op_val, gen_val, ZeroMemClass.coe_zero] using B.cocycleRight_assoc)
-      simp only [map_mul, map_one, map_eval_two, map_eval_three, mq_ac, mq_op, mq_gen, mq_zero, formalPointSubstitutionSeries_valueAtTwoPoints, formalPointSubstitutionSeries_valueAtThreePoints, sq_ac, sq_op, sq_gen, map_zero,
+      simp only [map_mul, map_eval_three, mq_op, mq_gen, formalPointSubstitutionSeries_valueAtThreePoints, sq_op, sq_gen,
         Matrix.cons_val] at h
-      have := sum_eq_of_exp [E3 q (ac ex x) (ac ex y) (ac ex t), E3 q (ac ex x) (op F (ac ex y) (ac ex t)) (ac ex w)] [E3 q (ac ex x) (ac ex t) (ac ex w), E3 q (ac ex x) (ac ex y) (op F (ac ex t) (ac ex w))] (by simp [cp, cq, cs, ca]) (by simp [cp, cq, cs, ca])
+      have := sum_eq_of_exp [E3 q (ac ex x) (ac ex y) (ac ex t), E3 q (ac ex x) (op F (ac ex y) (ac ex t)) (ac ex w)] [E3 q (ac ex x) (ac ex t) (ac ex w), E3 q (ac ex x) (ac ex y) (op F (ac ex t) (ac ex w))] (by simp [cq]) (by simp [cq])
         (by simpa only [List.map_cons, List.map_nil, List.prod_cons, List.prod_nil, mul_one, ep, eq, es, ea, mul_assoc] using h)
       simpa only [E3x, E2x, he, ax, l00, List.sum_cons, List.sum_nil, add_zero, add_assoc] using this)
     (fun x y v w => by
       have h := tr ![ac ex x, ac ex y, ac ex v, ac ex w] (show E3 B.ph1 (gen 0 : Q R d 4) (gen 1) (gen 2) * E3 B.ph1 (gen 0) (gen 1) (gen 3) * E3 B.ph2 (op F₀ (gen 0) (gen 1)) (gen 2) (gen 3) = E3 B.ph2 (gen 0) (gen 2) (gen 3) * E3 B.ph2 (gen 1) (gen 2) (gen 3) * E3 B.ph1 (gen 0) (gen 1) (op F₀ (gen 2) (gen 3)) from by
         simpa only [formalSeriesValueAtTwoPoints_eq_ev, formalSeriesValueAtThreePoints_eq_ev, ac_val, op_val, gen_val] using B.interchange)
-      simp only [map_mul, map_one, map_eval_two, map_eval_three, mq_ac, mq_op, mq_gen, mq_zero, formalPointSubstitutionSeries_valueAtTwoPoints, formalPointSubstitutionSeries_valueAtThreePoints, sq_ac, sq_op, sq_gen, map_zero,
+      simp only [map_mul, map_eval_three, mq_op, mq_gen, formalPointSubstitutionSeries_valueAtThreePoints, sq_op, sq_gen,
         Matrix.cons_val] at h
-      have := sum_eq_of_exp [E3 p (ac ex x) (ac ex y) (ac ex v), E3 p (ac ex x) (ac ex y) (ac ex w), E3 q (op F (ac ex x) (ac ex y)) (ac ex v) (ac ex w)] [E3 q (ac ex x) (ac ex v) (ac ex w), E3 q (ac ex y) (ac ex v) (ac ex w), E3 p (ac ex x) (ac ex y) (op F (ac ex v) (ac ex w))] (by simp [cp, cq, cs, ca]) (by simp [cp, cq, cs, ca])
+      have := sum_eq_of_exp [E3 p (ac ex x) (ac ex y) (ac ex v), E3 p (ac ex x) (ac ex y) (ac ex w), E3 q (op F (ac ex x) (ac ex y)) (ac ex v) (ac ex w)] [E3 q (ac ex x) (ac ex v) (ac ex w), E3 q (ac ex y) (ac ex v) (ac ex w), E3 p (ac ex x) (ac ex y) (op F (ac ex v) (ac ex w))] (by simp [cp, cq]) (by simp [cp, cq])
         (by simpa only [List.map_cons, List.map_nil, List.prod_cons, List.prod_nil, mul_one, ep, eq, es, ea, mul_assoc] using h)
       simpa only [E3x, E2x, he, ax, l00, List.sum_cons, List.sum_nil, add_zero, add_assoc] using this)
     (fun x v => by
       have h := tr ![ac ex x, ac ex v] (show E2 B.sy (gen 0 : Q R d 2) (gen 1) * E2 B.sy (gen 1) (gen 0) = 1 from by
         simpa only [formalSeriesValueAtTwoPoints_eq_ev, formalSeriesValueAtThreePoints_eq_ev, ac_val, op_val, gen_val] using ((congrArg₂ (· * ·) (formalSeriesValueAtTwoPoints_genericPoints B.sy) rfl).trans B.sy_inv))
-      simp only [map_mul, map_one, map_eval_two, map_eval_three, mq_ac, mq_op, mq_gen, mq_zero, formalPointSubstitutionSeries_valueAtTwoPoints, formalPointSubstitutionSeries_valueAtThreePoints, sq_ac, sq_op, sq_gen, map_zero,
+      simp only [map_mul, map_one, map_eval_two, mq_gen, formalPointSubstitutionSeries_valueAtTwoPoints, sq_gen,
         Matrix.cons_val] at h
-      have := sum_eq_of_exp [E2 s (ac ex x) (ac ex v), E2 s (ac ex v) (ac ex x)] [] (by simp [cp, cq, cs, ca]) (by simp [cp, cq, cs, ca])
+      have := sum_eq_of_exp [E2 s (ac ex x) (ac ex v), E2 s (ac ex v) (ac ex x)] [] (by simp [cs]) (by simp)
         (by simpa only [List.map_cons, List.map_nil, List.prod_cons, List.prod_nil, mul_one, ep, eq, es, ea, mul_assoc] using h)
       simpa only [E3x, E2x, he, ax, l00, List.sum_cons, List.sum_nil, add_zero, add_assoc] using this)
     (fun x v w => by
       have h := tr ![ac ex x, ac ex v, ac ex w] (show E3 B.ph2 (gen 0 : Q R d 3) (gen 1) (gen 2) * E2 B.sy (gen 0) (gen 1) * E2 B.sy (gen 0) (gen 2) = E2 B.sy (gen 0) (op F₀ (gen 1) (gen 2)) * E3 B.ph1 (gen 1) (gen 2) (gen 0) from by
         simpa only [formalSeriesValueAtTwoPoints_eq_ev, formalSeriesValueAtThreePoints_eq_ev, ac_val, op_val, gen_val] using ((congrArg (· * _ * _) (formalSeriesValueAtThreePoints_genericPoints B.ph2)).trans B.sy_law))
-      simp only [map_mul, map_one, map_eval_two, map_eval_three, mq_ac, mq_op, mq_gen, mq_zero, formalPointSubstitutionSeries_valueAtTwoPoints, formalPointSubstitutionSeries_valueAtThreePoints, sq_ac, sq_op, sq_gen, map_zero,
+      simp only [map_mul, map_eval_two, map_eval_three, mq_op, mq_gen, formalPointSubstitutionSeries_valueAtTwoPoints, formalPointSubstitutionSeries_valueAtThreePoints, sq_op, sq_gen,
         Matrix.cons_val] at h
-      have := sum_eq_of_exp [E3 q (ac ex x) (ac ex v) (ac ex w), E2 s (ac ex x) (ac ex v), E2 s (ac ex x) (ac ex w)] [E2 s (ac ex x) (op F (ac ex v) (ac ex w)), E3 p (ac ex v) (ac ex w) (ac ex x)] (by simp [cp, cq, cs, ca]) (by simp [cp, cq, cs, ca])
+      have := sum_eq_of_exp [E3 q (ac ex x) (ac ex v) (ac ex w), E2 s (ac ex x) (ac ex v), E2 s (ac ex x) (ac ex w)] [E2 s (ac ex x) (op F (ac ex v) (ac ex w)), E3 p (ac ex v) (ac ex w) (ac ex x)] (by simp [cq, cs]) (by simp [cp, cs])
         (by simpa only [List.map_cons, List.map_nil, List.prod_cons, List.prod_nil, mul_one, ep, eq, es, ea, mul_assoc] using h)
       simpa only [E3x, E2x, he, ax, l00, List.sum_cons, List.sum_nil, add_zero, add_assoc] using this)
     (fun a n x y v => by
       have h := tr ![ac ex x, ac ex y, ac ex v] (show E3 B.ph1 (ac (A₀ a) (gen 0 : Q R d 3)) (ac (A₀ a) (gen 1)) (gen 2) * E2 (B.ad a) (op F₀ (gen 0) (gen 1)) (gen 2) = E2 (B.ad a) (gen 0) (gen 2) * E2 (B.ad a) (gen 1) (gen 2) * E3 B.ph1 (gen 0) (gen 1) (ac (A₀ (star a)) (gen 2)) from by
         simpa only [formalSeriesValueAtTwoPoints_eq_ev, formalSeriesValueAtThreePoints_eq_ev, ac_val, op_val, gen_val] using B.adjoint_compat_left a)
-      simp only [map_mul, map_one, map_eval_two, map_eval_three, mq_ac, mq_op, mq_gen, mq_zero, formalPointSubstitutionSeries_valueAtTwoPoints, formalPointSubstitutionSeries_valueAtThreePoints, sq_ac, sq_op, sq_gen, map_zero,
+      simp only [map_mul, map_eval_two, map_eval_three, mq_ac, mq_op, mq_gen, formalPointSubstitutionSeries_valueAtTwoPoints, formalPointSubstitutionSeries_valueAtThreePoints, sq_ac, sq_op, sq_gen,
         Matrix.cons_val] at h
-      have := sum_eq_of_exp [E3 p (ac (A a) (ac ex x)) (ac (A a) (ac ex y)) (ac ex v), E2 (ad a) (op F (ac ex x) (ac ex y)) (ac ex v)] [E2 (ad a) (ac ex x) (ac ex v), E2 (ad a) (ac ex y) (ac ex v), E3 p (ac ex x) (ac ex y) (ac (A (star a)) (ac ex v))] (by simp [cp, cq, cs, ca]) (by simp [cp, cq, cs, ca])
+      have := sum_eq_of_exp [E3 p (ac (A a) (ac ex x)) (ac (A a) (ac ex y)) (ac ex v), E2 (ad a) (op F (ac ex x) (ac ex y)) (ac ex v)] [E2 (ad a) (ac ex x) (ac ex v), E2 (ad a) (ac ex y) (ac ex v), E3 p (ac ex x) (ac ex y) (ac (A (star a)) (ac ex v))] (by simp [cp, ca]) (by simp [cp, ca])
         (by simpa only [List.map_cons, List.map_nil, List.prod_cons, List.prod_nil, mul_one, ep, eq, es, ea, mul_assoc] using h)
       simpa only [E3x, E2x, he, ax, l00, List.sum_cons, List.sum_nil, add_zero, add_assoc] using this)
     (fun a n x v w => by
       have h := tr ![ac ex x, ac ex v, ac ex w] (show E3 B.ph2 (ac (A₀ a) (gen 0 : Q R d 3)) (gen 1) (gen 2) * E2 (B.ad a) (gen 0) (op F₀ (gen 1) (gen 2)) = E2 (B.ad a) (gen 0) (gen 1) * E2 (B.ad a) (gen 0) (gen 2) * E3 B.ph2 (gen 0) (ac (A₀ (star a)) (gen 1)) (ac (A₀ (star a)) (gen 2)) from by
         simpa only [formalSeriesValueAtTwoPoints_eq_ev, formalSeriesValueAtThreePoints_eq_ev, ac_val, op_val, gen_val] using B.adjoint_compat_right a)
-      simp only [map_mul, map_one, map_eval_two, map_eval_three, mq_ac, mq_op, mq_gen, mq_zero, formalPointSubstitutionSeries_valueAtTwoPoints, formalPointSubstitutionSeries_valueAtThreePoints, sq_ac, sq_op, sq_gen, map_zero,
+      simp only [map_mul, map_eval_two, map_eval_three, mq_ac, mq_op, mq_gen, formalPointSubstitutionSeries_valueAtTwoPoints, formalPointSubstitutionSeries_valueAtThreePoints, sq_ac, sq_op, sq_gen,
         Matrix.cons_val] at h
-      have := sum_eq_of_exp [E3 q (ac (A a) (ac ex x)) (ac ex v) (ac ex w), E2 (ad a) (ac ex x) (op F (ac ex v) (ac ex w))] [E2 (ad a) (ac ex x) (ac ex v), E2 (ad a) (ac ex x) (ac ex w), E3 q (ac ex x) (ac (A (star a)) (ac ex v)) (ac (A (star a)) (ac ex w))] (by simp [cp, cq, cs, ca]) (by simp [cp, cq, cs, ca])
+      have := sum_eq_of_exp [E3 q (ac (A a) (ac ex x)) (ac ex v) (ac ex w), E2 (ad a) (ac ex x) (op F (ac ex v) (ac ex w))] [E2 (ad a) (ac ex x) (ac ex v), E2 (ad a) (ac ex x) (ac ex w), E3 q (ac ex x) (ac (A (star a)) (ac ex v)) (ac (A (star a)) (ac ex w))] (by simp [cq, ca]) (by simp [cq, ca])
         (by simpa only [List.map_cons, List.map_nil, List.prod_cons, List.prod_nil, mul_one, ep, eq, es, ea, mul_assoc] using h)
       simpa only [E3x, E2x, he, ax, l00, List.sum_cons, List.sum_nil, add_zero, add_assoc] using this)
     (fun a b n x v => by
       have h := tr ![ac ex x, ac ex v] (show E2 (B.ad (a * b)) (gen 0 : Q R d 2) (gen 1) = E2 (B.ad a) (ac (A₀ b) (gen 0)) (gen 1) * E2 (B.ad b) (gen 0) (ac (A₀ (star a)) (gen 1)) from by
         simpa only [formalSeriesValueAtTwoPoints_eq_ev, formalSeriesValueAtThreePoints_eq_ev, ac_val, op_val, gen_val] using ((formalSeriesValueAtTwoPoints_genericPoints (B.ad (a * b))).trans (B.ad_mul a b)))
-      simp only [map_mul, map_one, map_eval_two, map_eval_three, mq_ac, mq_op, mq_gen, mq_zero, formalPointSubstitutionSeries_valueAtTwoPoints, formalPointSubstitutionSeries_valueAtThreePoints, sq_ac, sq_op, sq_gen, map_zero,
+      simp only [map_mul, map_eval_two, mq_ac, mq_gen, formalPointSubstitutionSeries_valueAtTwoPoints, sq_ac, sq_gen,
         Matrix.cons_val] at h
-      have := sum_eq_of_exp [E2 (ad (a * b)) (ac ex x) (ac ex v)] [E2 (ad a) (ac (A b) (ac ex x)) (ac ex v), E2 (ad b) (ac ex x) (ac (A (star a)) (ac ex v))] (by simp [cp, cq, cs, ca]) (by simp [cp, cq, cs, ca])
+      have := sum_eq_of_exp [E2 (ad (a * b)) (ac ex x) (ac ex v)] [E2 (ad a) (ac (A b) (ac ex x)) (ac ex v), E2 (ad b) (ac ex x) (ac (A (star a)) (ac ex v))] (by simp [ca]) (by simp [ca])
         (by simpa only [List.map_cons, List.map_nil, List.prod_cons, List.prod_nil, mul_one, ep, eq, es, ea, mul_assoc] using h)
       simpa only [E3x, E2x, he, ax, l00, List.sum_cons, List.sum_nil, add_zero, add_assoc] using this)
     (fun a b n x v => by
       have h := tr ![ac ex x, ac ex v] (show E3 B.ph1 (ac (A₀ a) (gen 0 : Q R d 2)) (ac (A₀ b) (gen 0)) (gen 1) * E2 (B.ad (a + b)) (gen 0) (gen 1) = E2 (B.ad a) (gen 0) (gen 1) * E2 (B.ad b) (gen 0) (gen 1) * E3 B.ph2 (gen 0) (ac (A₀ (star a)) (gen 1)) (ac (A₀ (star b)) (gen 1)) from by
         simpa only [formalSeriesValueAtTwoPoints_eq_ev, formalSeriesValueAtThreePoints_eq_ev, ac_val, op_val, gen_val] using ((congrArg (_ * ·) (formalSeriesValueAtTwoPoints_genericPoints (B.ad (a + b)))).trans ((B.ad_add a b).trans (congrArg₂ (· * · * _) (formalSeriesValueAtTwoPoints_genericPoints (B.ad a)).symm (formalSeriesValueAtTwoPoints_genericPoints (B.ad b)).symm))))
-      simp only [map_mul, map_one, map_eval_two, map_eval_three, mq_ac, mq_op, mq_gen, mq_zero, formalPointSubstitutionSeries_valueAtTwoPoints, formalPointSubstitutionSeries_valueAtThreePoints, sq_ac, sq_op, sq_gen, map_zero,
+      simp only [map_mul, map_eval_two, map_eval_three, mq_ac, mq_gen, formalPointSubstitutionSeries_valueAtTwoPoints, formalPointSubstitutionSeries_valueAtThreePoints, sq_ac, sq_gen,
         Matrix.cons_val] at h
-      have := sum_eq_of_exp [E3 p (ac (A a) (ac ex x)) (ac (A b) (ac ex x)) (ac ex v), E2 (ad (a + b)) (ac ex x) (ac ex v)] [E2 (ad a) (ac ex x) (ac ex v), E2 (ad b) (ac ex x) (ac ex v), E3 q (ac ex x) (ac (A (star a)) (ac ex v)) (ac (A (star b)) (ac ex v))] (by simp [cp, cq, cs, ca]) (by simp [cp, cq, cs, ca])
+      have := sum_eq_of_exp [E3 p (ac (A a) (ac ex x)) (ac (A b) (ac ex x)) (ac ex v), E2 (ad (a + b)) (ac ex x) (ac ex v)] [E2 (ad a) (ac ex x) (ac ex v), E2 (ad b) (ac ex x) (ac ex v), E3 q (ac ex x) (ac (A (star a)) (ac ex v)) (ac (A (star b)) (ac ex v))] (by simp [cp, ca]) (by simp [cq, ca])
         (by simpa only [List.map_cons, List.map_nil, List.prod_cons, List.prod_nil, mul_one, ep, eq, es, ea, mul_assoc] using h)
       simpa only [E3x, E2x, he, ax, l00, List.sum_cons, List.sum_nil, add_zero, add_assoc] using this)
     (fun a n x v => by
       have h := tr ![ac ex x, ac ex v] (show E2 (B.ad a) (gen 0 : Q R d 2) (gen 1) * E2 (B.ad (star a)) (gen 1) (gen 0) * E2 B.sy (ac (A₀ a) (gen 0)) (gen 1) = E2 B.sy (gen 0) (ac (A₀ (star a)) (gen 1)) from by
         simpa only [formalSeriesValueAtTwoPoints_eq_ev, formalSeriesValueAtThreePoints_eq_ev, ac_val, op_val, gen_val] using ((congrArg (· * _ * _) (formalSeriesValueAtTwoPoints_genericPoints (B.ad a))).trans (B.ad_sy a)))
-      simp only [map_mul, map_one, map_eval_two, map_eval_three, mq_ac, mq_op, mq_gen, mq_zero, formalPointSubstitutionSeries_valueAtTwoPoints, formalPointSubstitutionSeries_valueAtThreePoints, sq_ac, sq_op, sq_gen, map_zero,
+      simp only [map_mul, map_eval_two, mq_ac, mq_gen, formalPointSubstitutionSeries_valueAtTwoPoints, sq_ac, sq_gen,
         Matrix.cons_val] at h
-      have := sum_eq_of_exp [E2 (ad a) (ac ex x) (ac ex v), E2 (ad (star a)) (ac ex v) (ac ex x), E2 s (ac (A a) (ac ex x)) (ac ex v)] [E2 s (ac ex x) (ac (A (star a)) (ac ex v))] (by simp [cp, cq, cs, ca]) (by simp [cp, cq, cs, ca])
+      have := sum_eq_of_exp [E2 (ad a) (ac ex x) (ac ex v), E2 (ad (star a)) (ac ex v) (ac ex x), E2 s (ac (A a) (ac ex x)) (ac ex v)] [E2 s (ac ex x) (ac (A (star a)) (ac ex v))] (by simp [cs, ca]) (by simp [cs])
         (by simpa only [List.map_cons, List.map_nil, List.prod_cons, List.prod_nil, mul_one, ep, eq, es, ea, mul_assoc] using h)
       simpa only [E3x, E2x, he, ax, l00, List.sum_cons, List.sum_nil, add_zero, add_assoc] using this)
   obtain ⟨h, back⟩ : ∃ h : PS k 2 d, ∀ {n} (u v : Q k d n), E2 H (ac lg u) (ac lg v) = ev ![u.1, v.1] h :=

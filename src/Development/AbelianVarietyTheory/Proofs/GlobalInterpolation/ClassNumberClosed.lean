@@ -1,6 +1,4 @@
-import Mathlib
-import Formalism.SharpRestriction.ParamsHeightRankConstant
-import Formalism.SharpRestriction.GlobalSchurBounds.StandardLattice
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ClassNumberAll
 
 namespace GlobalTheory.ColClassNumber

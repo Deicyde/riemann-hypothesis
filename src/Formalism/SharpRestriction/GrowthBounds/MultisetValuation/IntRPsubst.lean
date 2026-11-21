@@ -1,5 +1,7 @@
-import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.AllPlacesOfRestrictions
-import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.FrobeniusLiftNorms.OmegaOfTraceDuality
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.FormalGroupSystem
+import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.FrobeniusLiftNorms.LogarithmEquivalence
 
 noncomputable section
 

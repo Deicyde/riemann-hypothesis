@@ -1,4 +1,5 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ConjugateRepresentations.LocalLimitConjugates.CasimirResolventProjection
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ConjugateRepresentations.LocalLimitConjugates.LocInt
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GenericFiniteByInduction
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LieSkewAdjointL2

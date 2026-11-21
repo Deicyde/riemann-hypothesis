@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.CasimirAlgebra.TensorRelationsGL.StepFormula
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.ClozelCohomologicalModel
 import Development.AbelianVarietyTheory.Definitions.Divisors.Tpr
+import Mathlib.Topology.Algebra.Star.Unitary
 
 noncomputable section
 

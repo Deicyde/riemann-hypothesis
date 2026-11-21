@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.StatementsComplementExtension
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.StatementsAdaptedReduction
+import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.SecondCountableTopologyArchUnitary
+import Mathlib.GroupTheory.FiniteAbelian.Basic
+import Mathlib.Order.CompletePartialOrder
 
 namespace GroundTheory.Heights₂.Heights.FiniteCovolume
 

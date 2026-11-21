@@ -1,5 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.ThetaSupremumBounds.StatementB
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open Finset
 

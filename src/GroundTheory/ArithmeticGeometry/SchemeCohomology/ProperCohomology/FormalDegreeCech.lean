@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ArithmeticGeometry.SchemeCohomology.ProperCohomology.FormalDegree
 import GroundTheory.ArithmeticGeometry.SchemeCohomology.ProperCohomology.ReesCech
+import GroundTheory.ArithmeticGeometry.SchemeCohomology.ProperCohomology.CechFamily
+import GroundTheory.ArithmeticGeometry.SchemeCohomology.ProperCohomology.ReesNatural
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Arith.SchemeCoh

@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.ArcLiftingSetup
 import Formalism.SharpRestriction.LevelLetterCocycles.NatCastEqZeroOfNotDvd
+import Mathlib.Algebra.Ring.IsFormallyReal
 
 noncomputable section
 

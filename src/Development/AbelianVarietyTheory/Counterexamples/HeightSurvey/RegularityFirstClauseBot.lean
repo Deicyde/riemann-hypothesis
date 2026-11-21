@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.RegQFree
+import Mathlib.RingTheory.AdicCompletion.Completeness
 
 noncomputable section
 

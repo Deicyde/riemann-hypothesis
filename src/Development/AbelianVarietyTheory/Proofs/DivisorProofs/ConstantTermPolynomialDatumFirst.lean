@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LogAbsEEqZero
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalThetaGoodPlaceLatticeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentIntegralAdaptedPlaneStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedPlaneLocalVectorInvarianceStatement

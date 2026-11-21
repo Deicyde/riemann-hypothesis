@@ -1,10 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsChartMember
-import ReciprocityTheory.AnalyticForms.RegularLocalRings.FinalTheorems
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsDominantToUnitLeft
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ThetaCoordinatesExistUniqueSeparatePoints
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FirstCohomology.SectionArithmetic
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.SabComp
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj IsLocalRing
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.DVR
@@ -381,7 +377,7 @@ theorem exists_vals [IsLocalRing V] {θ : Th D.P} (hθ : GenAll D.P θ) (N : ℕ
           h ((D.c χ).left ≫ ((toUnit D.P.A ≫ b c) * 𝟙 D.P.A).left) ^ (-(N : ℤ)) * _ = _
         rw [comp_transl, Category.comp_id, Category.id_comp, toUnit_unit, Category.id_comp]
         apply Additive.ofMul.injective
-        simp only [ofMul_mul, ofMul_inv, ofMul_zpow, ofMul_pow, ofMul_one, ← natCast_zsmul]
+        simp only [ofMul_mul, ofMul_zpow, ofMul_pow, ← natCast_zsmul]
         module)
     obtain ⟨s', hs'⟩ := exists_powSec hL θ (b c * D.c χ).left N u hu (K' := PEmpty) PEmpty.elim PEmpty.elim
       (fun U _ f => by simp)
@@ -417,7 +413,7 @@ theorem exists_vals [IsLocalRing V] {θ : Th D.P} (hθ : GenAll D.P θ) (N : ℕ
       show (_ ^ (((1 : ℕ) : ℤ) - 1) * _ ^ (1 : ℤ) * _ ^ (-1 : ℤ) * _ ^ (1 : ℤ)) ^ 1 *
         (h (toUnit (T₁ ⊗ D.P.A) ≫ D.c χ).left ^ (1 : ℤ) * h (1 : T₁ ⊗ D.P.A ⟶ D.P.A).left ^ (-1 : ℤ)) = _
       apply Additive.ofMul.injective
-      simp only [ofMul_mul, ofMul_inv, ofMul_zpow, ofMul_pow, ofMul_one]
+      simp only [ofMul_mul, ofMul_zpow, ofMul_pow]
       module)
   obtain ⟨lam, hlam⟩ := hθ (FractionRing V) T₁.hom t
   obtain ⟨z⟩ := exists_pt (R := V) (F := FractionRing V)

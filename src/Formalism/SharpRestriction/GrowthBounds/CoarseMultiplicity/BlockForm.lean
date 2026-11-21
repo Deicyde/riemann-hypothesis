@@ -1,7 +1,5 @@
-import Formalism.SharpRestriction.GrowthBounds.CoarseMultiplicity.MemIntPolOfCoeff
-import Formalism.SharpRestriction.GrowthBounds.CoarseMultiplicity.IoBlockMonomial
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.CoarseMultiplicity.SatBlock
-import Formalism.SharpRestriction.GrowthBounds.CoarseMultiplicity.CharZeroOfW
 import Formalism.SharpRestriction.GrowthBounds.CoarseMultiplicity.SymVarInlFst
 import Formalism.SharpRestriction.GrowthBounds.CoarseMultiplicity.LeadingExponentHomogeneous
 import Formalism.SharpRestriction.GrowthBounds.CoarseMultiplicity.GTheta

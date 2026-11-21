@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TopPairDForm
 open CategoryTheory AlgebraicGeometry TopologicalSpace Limits NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj Formalism.BasicNotions
@@ -200,7 +201,7 @@ theorem ksb_symPair_eq_zero (P : PairIx H Dw) (s t : FlatIx Dw) (h : t.1 ≠ ksb
   · rintro ⟨h1, h2⟩
     rw [e.injective.eq_iff] at h1 h2
     subst h1 h2
-    exact h (by simp only [ksbFst, ksbSnd, ksbConj_ksbConj])
+    exact h (by simp only [ksbFst, ksbSnd])
 
 theorem ksb_symPair_transpose (P : PairIx H Dw) : (symPair (R := R) e P)ᵀ = symPair e P := by
   ext x y

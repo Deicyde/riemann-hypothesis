@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.SecondCountableTopologyArchUnitary
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.StLenCauchySchwarz
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.PHermAtPlace
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.PArchInvariant

@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HolSprayApply
+import BuildAid.Leniency.Open
 import ReciprocityTheory.SemistableReduction.ShareDetA
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Analysis.CStarAlgebra.ContinuousLinearMap
 open Filter Topology Matrix
 open scoped ContDiff
 
@@ -37,10 +38,10 @@ theorem metric_pullback_contDiffOn : ∀ (d : ℕ) (U U' : Set (ReciprocityTheor
     have h := hpull v hv (EuclideanSpace.single k 1) (EuclideanSpace.single l 1)
     simp only [dotProduct, vecMul, Pi.star_apply] at h
     rw [← h]
-    simp [Pi.single_apply]
+    simp
   refine ContDiffOn.congr ?_ key
   refine ContDiffOn.sum fun j _ => ContDiffOn.mul ?_ ?_
   · exact ContDiffOn.sum fun i _ => (hD _ i).mul (hB i j)
-  · exact (Complex.conjCLE.contDiff.comp_contDiffOn (hD (EuclideanSpace.single l 1) j)).congr (fun x _ => by simp [Complex.conjCLE_apply, Complex.star_def])
+  · exact (Complex.conjCLE.contDiff.comp_contDiffOn (hD (EuclideanSpace.single l 1) j)).congr (fun x _ => by simp)
 
 end GlobalTheory

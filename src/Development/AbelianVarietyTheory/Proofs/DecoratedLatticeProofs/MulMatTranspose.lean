@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsRealCoord
-import Development.AbelianVarietyTheory.Definitions.AdelicHermitianForms.AdelicPair
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
 open NumberField Matrix Formalism.MainNotions.S GlobalTheory.CuspGeo GlobalTheory.ClassFin
 open scoped Topology
 

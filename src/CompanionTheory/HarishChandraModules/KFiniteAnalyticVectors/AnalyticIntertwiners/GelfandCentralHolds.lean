@@ -1,8 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.HarishChandraModules.KFiniteAnalyticVectors.AnalyticIntertwiners.SubquotientNontrivial
 import Development.WeilBound.HeckeVectors.SmoothVectors.SobolevApproximation.SobApproxHolds
 import Formalism.LocalToGlobal.IndefiniteReal.SmExpSmulContDiff
-import Formalism.LocalToGlobal.SiegelLatticeTheory.CasimirReductionTheory.OneParameterDerivatives.AdmissibleCasimirScalars.CasScalar
-import CompanionTheory.AutomorphicTheory.HarishChandraMultiplicity.HCMult
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.AnalyticVectors.Unitary
 
 open Matrix Topology Filter
 open scoped InnerProductSpace ComplexOrder

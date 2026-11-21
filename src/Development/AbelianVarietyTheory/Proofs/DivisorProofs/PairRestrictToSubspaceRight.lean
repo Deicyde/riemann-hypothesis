@@ -1,8 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepresentationPreservesSchwartz
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LagColsZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoubledDarbouxCoordsCompatStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoubledUnitaryBlockConjugateStatement
 
@@ -62,7 +60,7 @@ theorem symp_lagCols_eq_zero : ∀ (F E : Type) [Field F] [NumberField F] [Field
   have hform : ∀ m : Fin d₁, ∑ j, incM F H'.ι j m * ∑ l, incM F W.J j l * cA σ (incV F H'.x l) = 0 := by
     intro m
     have h := congrArg (inclR (F := F) (AF F)) (hH.orth (Pi.single m 1)).1
-    simp only [form, dotProduct, Matrix.mulVec, Matrix.mulVec_single, map_sum, map_mul, map_zero] at h
+    simp only [form, dotProduct, Matrix.mulVec, map_sum, map_mul, map_zero] at h
     simpa [incM, incV, adele_conj_inclR, Pi.single_apply, mul_ite, Finset.sum_ite_eq'] using h
 
   have v1 : (Matrix.fromRows (incM F H'.ι) (incM F H'.ι))ᵀ *ᵥ

@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ZAEqAlgebraMapPt
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsPotential
 
 noncomputable section
 

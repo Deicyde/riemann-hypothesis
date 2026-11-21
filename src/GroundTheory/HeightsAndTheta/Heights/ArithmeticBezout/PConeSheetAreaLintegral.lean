@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.StatementsConeSheetAreaLintegral
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.StatementsConeSheetParam
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.StatementsConeMapArea
+import Mathlib.RingTheory.PicardGroup
 set_option maxSynthPendingDepth 1
 
 noncomputable section

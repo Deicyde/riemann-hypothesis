@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.HDiscBDefs
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.SupportFreeOfBlockSubstInvariant
 
@@ -268,15 +270,15 @@ theorem de_pres (hd : d.AxH 𝒜) (h : d.S1) : ∃ a b : KTp K d.D d.N, d.IsPres
       rcases Fin.eq_self_or_eq_succAbove (d.jc c) j with rfl | ⟨k, rfl⟩
       · by_cases h0 : b' = 0
         · subst h0
-          simp [hsa, hβ, MvPolynomial.algebraMap_apply]
-        · simp [hsa, hβ, hβC, h0, Finset.mul_sum, mul_assoc, MvPolynomial.algebraMap_apply]
-      · simp [hsb, hβ, MvPolynomial.algebraMap_apply]
+          simp [hβ, MvPolynomial.algebraMap_apply]
+        · simp [hβ, hβC, h0, Finset.mul_sum, mul_assoc, MvPolynomial.algebraMap_apply]
+      · simp [hβ, MvPolynomial.algebraMap_apply]
     · rcases Fin.eq_self_or_eq_succAbove (d.jc c) j with rfl | ⟨k, rfl⟩
       · by_cases h0 : b' = 0
         · subst h0
-          simp [hsa, hβ, hbb, Ne.symm hbb]
-        · simp [hsa, hβ, hβC, h0, hbb]
-      · simp [hsb, hβ, hbb]
+          simp [hβ, hbb, Ne.symm hbb]
+        · simp [hβ, hβC, h0, hbb]
+      · simp [hβ, hbb]
   have ht : ∀ t : Fin (d.N + 1) → K, ∃ T : KTp K d.D d.N →ₐ[K] KTp K d.D d.N,
       (∀ v, T (MvPolynomial.X v) =
         if v.1 = 0 then MvPolynomial.X v + MvPolynomial.C (t v.2) else MvPolynomial.X v) ∧
@@ -305,11 +307,11 @@ theorem de_pres (hd : d.AxH 𝒜) (h : d.S1) : ∃ a b : KTp K d.D d.N, d.IsPres
       by_cases h0 : b' = 0
       · subst h0
         rcases Fin.eq_self_or_eq_succAbove (d.jc c) j with rfl | ⟨k, rfl⟩
-        · simp [hsa, hβ]
-        · simp [hsb, hβ]
+        · simp [hβ]
+        · simp [hβ]
       · rcases Fin.eq_self_or_eq_succAbove (d.jc c) j with rfl | ⟨k, rfl⟩
-        · simp [hsa, hβ, hβC, h0]
-        · simp [hsb, hβ, h0]
+        · simp [hβ, hβC, h0]
+        · simp [hβ, h0]
     refine ⟨eα.toAlgHom, fun v => ?_, fun p q hpq => ?_⟩
     · show eα (MvPolynomial.X v) = _
       rw [heα]

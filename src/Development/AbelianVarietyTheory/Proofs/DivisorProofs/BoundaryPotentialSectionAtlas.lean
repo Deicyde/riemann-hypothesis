@@ -1,10 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSNCAtlasOfIsEmpty
-import ReciprocityTheory.AnalyticForms.PotentialTheory.ContDiffAtOfIsPotential
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PotentialTheory.SNCAtlas
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SncAtlasRankDropPotential
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BoundarySectionPullbackBound
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsBdPullbackBoundary
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ProjectiveAtlasPositivePotentialStatement
 
 open MeasureTheory ReciprocityTheory.AnForm ReciprocityTheory.AnForm.M GlobalTheory.IndefiniteRowSideFullHecke.BoundaryPolynomialFunctions GlobalTheory.LogResInt GlobalTheory.SNCComp

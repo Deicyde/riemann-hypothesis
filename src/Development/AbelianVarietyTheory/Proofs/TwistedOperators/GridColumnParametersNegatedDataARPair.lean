@@ -1,15 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.NodeAgree
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.NormalFam
-import Formalism.LocalToGlobal.IndefiniteReal.LinksLemmas
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.AdmissibleDiscreteSeriesOfHasParam
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HarishChandraModulesOn
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.DiscreteSeriesUpqExistsIffDsExists
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsUniformRealThetaIntertwinerChainStep
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsItWOfGlobIt
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CartFrSgn
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RealThetaIntertwinerAdjointIsRealThetaIntertwine
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HasInfExpIffHasInfQ
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsStepWeil
+import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.NodeYPredEqChainVertexAtRowZeroLast
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix
 open Formalism.L2.Theta Formalism.L2.DIV Formalism.L2.Indef Formalism.DivisionValues
 open Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.Mult Formalism.IndefR.Datum
@@ -80,8 +71,8 @@ theorem recon_left (S : SPar) (c : ℚ) (hc : ∀ p ∈ S, p.1 ≠ c) :
     dualPar (signed (desc (lowS S c) ++ desc (highS S c)) ([] ++ desc (negS S c)) (-c)) = S := by
   ext ⟨x, b⟩
   rw [mem_dualPar_signed]
-  simp only [List.mem_append, mem_desc, mem_lowS, mem_highS, mem_negS, List.nil_append, List.not_mem_nil,
-    false_or, sub_sub_cancel]
+  simp only [List.mem_append, mem_desc, mem_lowS, mem_highS, mem_negS, List.nil_append,
+    sub_sub_cancel]
   cases b
   · simp
   · have := hc (x, true)

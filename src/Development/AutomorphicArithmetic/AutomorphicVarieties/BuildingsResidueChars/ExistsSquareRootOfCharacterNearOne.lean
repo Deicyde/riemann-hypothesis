@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Variable
 import Development.AutomorphicArithmetic.AutomorphicVarieties.IdeleGenerators.QuadraticSplitting.QuadSplit
 
 section

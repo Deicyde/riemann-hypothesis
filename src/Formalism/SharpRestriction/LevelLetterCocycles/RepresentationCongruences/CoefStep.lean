@@ -1,4 +1,5 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.ArcLiftingSetup
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.CoefStepOf
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.SaturationFractionModule
 

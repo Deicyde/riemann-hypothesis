@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.MeasurableSetNotUH
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.MulVecMapMem
+import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.EnergyIntLoc
+import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.WuDecayAll
 
 noncomputable section
 
@@ -117,9 +120,9 @@ theorem sum_low {n : ℕ} (Q : Matrix (Fin n) (Fin (2 * r + k + 1)) ℂ) (a : �
         have hne : j ≠ eI k r b := fun h => hb (Fin.ext (by
           have := congrArg Fin.val h
           rw [hv] at this
-          simp only [Fin.val_mk]
+          simp only
           omega))
-        simp [bvec, Pi.single_apply, hne]
+        simp [bvec, hne]
       · intro h
         exact absurd (Finset.mem_univ _) h
     · rw [hw j (by omega)]
@@ -129,7 +132,7 @@ theorem sum_low {n : ℕ} (Q : Matrix (Fin n) (Fin (2 * r + k + 1)) ℂ) (a : �
           have := congrArg Fin.val h
           rw [hv] at this
           omega)
-        simp [bvec, Pi.single_apply, hne]
+        simp [bvec, hne]
       · simp
   conv_lhs => rw [hw']
   simp only [← Matrix.mulVecLin_apply, map_sum, map_smul]

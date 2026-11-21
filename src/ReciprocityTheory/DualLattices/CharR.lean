@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.DualLattices.ExistsLimTensor
+import ReciprocityTheory.DualLattices.IsHeightUnique
+import ReciprocityTheory.DualLattices.NsmulKerZero
 
 noncomputable section
 

@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.IsParahoricVec
-import Development.AbelianVarietyTheory.Definitions.Foundations.SecondCountableAndT2LocalField
+import Development.AbelianVarietyTheory.Definitions.Foundations.SmoothPartStable
+import Mathlib.RepresentationTheory.Irreducible
 
 noncomputable section
 

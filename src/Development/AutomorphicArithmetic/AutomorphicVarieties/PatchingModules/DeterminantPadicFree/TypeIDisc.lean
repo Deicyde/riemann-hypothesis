@@ -1,9 +1,11 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.DeterminantPadicFree.FrameWith
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebraHeight.GGram
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebraHeight.DGmap
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebraHeight.DOfRep
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebraHeight.DToDet
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebraHeight.DToDetOfRep
+import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.PairedDualFirstOrderDualMatrixSpace
+import Mathlib.RingTheory.Ideal.Quotient.HasFiniteQuotients
 open Matrix IsLocalRing UpperTheory.V.Alg UpperTheory.V.W UpperTheory.V.Pa
 
 open UpperTheory.V.CA in
@@ -49,7 +51,7 @@ private theorem span_top {n : ℕ} {A L : Type} [CommRing A] [Field L] [Algebra 
   refine Submodule.sum_mem _ fun i _ => Submodule.sum_mem _ fun j _ => ?_
   have e : Matrix.single i j (Z i j) = Z i j • (algebraMap A L).mapMatrix (Matrix.single i j (1 : A)) := by
     ext a b
-    by_cases h : i = a ∧ j = b <;> simp [Matrix.single_apply, h]
+    by_cases h : i = a ∧ j = b <;> simp [h]
   rw [e]
   exact Submodule.smul_mem _ _ (h2 _)
 

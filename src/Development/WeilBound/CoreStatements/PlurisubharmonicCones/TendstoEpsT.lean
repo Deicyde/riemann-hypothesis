@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PlurisubharmonicCones.LevelFree
 import Development.WeilBound.CoreStatements.PlurisubharmonicCones.ExistsPshPull
 import Development.WeilBound.CoreStatements.VolumeEquality.DegPushPF
@@ -5,6 +7,10 @@ import Development.AutomorphicSpectrum.Proofs.MetricProofs.EvCEqZeroIffOfSameOrb
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.IsomorphicLinesPotentialDifference
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.IsoLineOnEquivalenceStatement
 import Development.AutomorphicSpectrum.Proofs.DivisibilityProofs.HermitianCombinationSmoothConjStatement
+import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.LineIsomorphismGroupoidLawsStatement
+import Development.AutomorphicSpectrum.Proofs.GeometryProofs.BlockExtensionArithVarStatement
+import Development.AutomorphicSpectrum.Proofs.MetricProofs.CommonResolutionPotentialComparisonStatement
+import ReciprocityTheory.AnalyticForms.LeviForms.TailCut
 
 open Filter Topology ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo GroundTheory.Heights₂.Heights.LowerBoundFree GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Cusp
 open ReciprocityTheory.ChartRestriction.G.AI.I1 ReciprocityTheory.ChartRestriction.G.AI.I4 ReciprocityTheory.AnForm.M ReciprocityTheory.AnForm.P GlobalTheory.CompanionTheory.Ar.Cmp GlobalTheory.CompanionTheory.Ar.Cmp.Build

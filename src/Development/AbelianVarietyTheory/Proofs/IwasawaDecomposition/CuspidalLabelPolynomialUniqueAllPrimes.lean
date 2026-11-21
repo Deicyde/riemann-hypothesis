@@ -1,8 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.NormalizedHeckeFactors.CoeffZeroNeOfMonicIrr
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.LabelDatum
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.GreenCuspidalIff
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CanonListLength
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CuspidalCharacterLabelUniqueGLn
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EsymmEqOfPsumEq
 open CategoryTheory Polynomial

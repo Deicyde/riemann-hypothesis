@@ -1,21 +1,16 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinRel
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TrPApply
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AtVecMulVecRight
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LagrangianSetAdditiveSubgroup
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviMapPreservesRationalPoints
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SkewHermitianDeterminantNeZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TrAEMixedNondeg
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqZeroOfTraceOrth
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SumThreeComm
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HTensEqTrace
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HTensVmvLeft
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianAdaptedMatrixDecompositionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SymplecticPairingAdaptedFormulaStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianSkewAdaptedPairingStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianSkewAdaptedPairingSecondStatement
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DarbouxLiftMulEqZero
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.Decompose
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MixedSpaceTraceFormNondegenerate
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TraceEvIDarboux
 open scoped TensorProduct Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.ArchSch GlobalTheory.ArchSchB
@@ -58,7 +53,7 @@ theorem nondeg : ∀ {F E : Type} [Field F] [NumberField F] [Field E] [NumberFie
       funext j
       by_cases hj : j = k
       · subst hj; simp [GlobalTheory.ArchTraceNondeg.cA_cAinv]
-      · simp [Pi.single_apply, hj]
+      · simp [hj]
     rw [hw, dotProduct_single] at h
     exact h
   calc b = b ᵥ* (incM F J * (incM F J)⁻¹) := by rw [Matrix.mul_nonsing_inv _ hdet, Matrix.vecMul_one]

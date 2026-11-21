@@ -1,10 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.SuppSat
 import Formalism.SharpRestriction.AdmissibleParameterJoins.GandSaa
 import Formalism.SharpRestriction.AdmissibleParameterJoins.GandSk
 import Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.GenericFramesLetters
-import Formalism.SharpRestriction.GrowthBounds.SmallOrderPrimes
-import Formalism.LocalRingCardinality.HostCls
 import Development.AutomorphicArithmetic.OrbitLabellings.EvenAddOrderOfHPOfPowLe
+import Formalism.SharpRestriction.GlobalSchurBounds.FrameCodeOfAdditive
 
 noncomputable section
 

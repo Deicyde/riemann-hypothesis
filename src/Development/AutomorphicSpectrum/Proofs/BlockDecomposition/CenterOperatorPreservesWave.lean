@@ -1,9 +1,9 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.ArchimedeanGelfandKernels.WaveSt
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsMultOfFintype
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.EventuallyEqOfAgreeGLs
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RdEqFderiv
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ZOpSmooth
+import Mathlib.Analysis.Calculus.FDeriv.Symmetric
 
 noncomputable section
 

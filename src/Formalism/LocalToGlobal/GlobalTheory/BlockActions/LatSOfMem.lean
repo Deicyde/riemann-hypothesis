@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.StatementC
 
 noncomputable section

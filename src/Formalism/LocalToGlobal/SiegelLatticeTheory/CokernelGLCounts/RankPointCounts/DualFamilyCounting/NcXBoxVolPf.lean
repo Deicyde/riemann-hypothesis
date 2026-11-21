@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.DualFamilyCounting.NcXBoxSteps
+import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.DualFamilyCounting.NcXFinVolSk
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeilStabilizerVolume.AdmCpt
 
 noncomputable section
 
@@ -19,15 +21,15 @@ theorem finprod_box {F E : Type} [Field F] [NumberField F] [Field E] [NumberFiel
   classical
   by_cases hx : ∀ v, projV v x ∈ C v
   · have hr : ({x : Fin a → Fin n → Af F ⊗[F] E | ∀ v, projV v x ∈ C v}.indicator 1 x : ℂ) = 1 := by
-      simp [Set.indicator_apply, hx]
+      simp [hx]
     rw [hr]
-    exact finprod_eq_one_of_forall_eq_one fun v => by simp [Set.indicator_apply, hx v]
+    exact finprod_eq_one_of_forall_eq_one fun v => by simp [hx v]
   · have hr : ({x : Fin a → Fin n → Af F ⊗[F] E | ∀ v, projV v x ∈ C v}.indicator 1 x : ℂ) = 0 := by
       simp only [Set.indicator_apply, Set.mem_setOf_eq, if_neg hx]
     rw [hr]
     push_neg at hx
     obtain ⟨v0, hv0⟩ := hx
-    refine finprod_eq_zero _ v0 (by simp [Set.indicator_apply, hv0]) ?_
+    refine finprod_eq_zero _ v0 (by simp [hv0]) ?_
     have hev : ∀ᶠ v in Filter.cofinite, projV v x ∈ C v := by
       filter_upwards [hCa, PI.VolStabW.AdmissibleCompactSupport.eventually_mem_latV b x] with v h1 h2
       rw [h1]
@@ -35,7 +37,7 @@ theorem finprod_box {F E : Type} [Field F] [NumberField F] [Field E] [NumberFiel
     refine (Filter.eventually_cofinite.mp hev).subset ?_
     intro v hv hc
     apply hv
-    simp [Set.indicator_apply, hc]
+    simp [hc]
 
 theorem box_volume_holds : BoxVol := by
   intro F E _ _ _ _ _ σ n J ψ a X0 hT νX hStd hdet ha hn hSWa hSWc hOm μinf νinf fibInf hμ hν hfib hne

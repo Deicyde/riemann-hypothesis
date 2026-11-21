@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.UnitLemmaGroup
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsPowerBasisOfCharpolySeparable
+import Mathlib.RingTheory.Artinian.Instances
+import Mathlib.RingTheory.PicardGroup
 
 namespace GlobalTheory.UnitLemma
 

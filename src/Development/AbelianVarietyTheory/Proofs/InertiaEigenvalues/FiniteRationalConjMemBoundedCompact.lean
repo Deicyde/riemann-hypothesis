@@ -1,8 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsWildInertiaCyclotomicElement
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.GaloisSideTwistedSelmerAuxiliaryPrimes
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SemisimpleOfInjective
-import Formalism.LocalToGlobal.NormalizedHeckeFactors.CoverStd
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.CsGlob
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.FiniteDimensionalForms
 import Formalism.LocalToGlobal.IndefiniteReal.CongNatCastEqOneTmul

@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LatticeBasics.LocDistA
+import Mathlib.Topology.Sheaves.Presheaf
 
 open Filter Topology GlobalTheory.WeilM
 

@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Open
 import Formalism.TowerValuationBounds.TowerValuationBoundIndexed
 import Formalism.TowerValuationBounds.TowerValuationProofs.SumAdditiveCharacterEqZero
+import Mathlib.Order.Interval.Finset.Box
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 namespace Formalism.ValuationGridEstimates
@@ -43,8 +46,8 @@ theorem valuation_ratio_index : TowerValuationBoundIndexed := by
     · rw [Finset.disjoint_left]; intro x hx hx'; simp only [Finset.mem_Icc] at hx hx'; omega
   have I2 : ∑ s ∈ Finset.Icc (1 - (P : ℤ)) 0, v (ρ s) = ∑ s ∈ Finset.Icc (1 : ℤ) P, v (ρ s) := by
     refine Finset.sum_nbij' (fun s => 1 - s) (fun t => 1 - t) ?_ ?_ ?_ ?_ ?_
-    · intro x hx; simp only [Finset.mem_Icc, Finset.mem_coe] at *; omega
-    · intro x hx; simp only [Finset.mem_Icc, Finset.mem_coe] at *; omega
+    · intro x hx; simp only [Finset.mem_Icc] at *; omega
+    · intro x hx; simp only [Finset.mem_Icc] at *; omega
     · intro x _; ring
     · intro x _; ring
     · intro s hs
@@ -55,18 +58,18 @@ theorem valuation_ratio_index : TowerValuationBoundIndexed := by
       ∑ t ∈ Finset.Icc ((P : ℤ) + 1) ((e : ℤ) + q), v (ρ t) := by
     refine Finset.sum_nbij' (fun k : ℕ => (e : ℤ) + q - k + 1)
       (fun t : ℤ => ((e : ℤ) + q + 1 - t).toNat) ?_ ?_ ?_ ?_ ?_
-    · intro x hx; simp only [Finset.mem_Icc, Finset.mem_coe] at *; omega
-    · intro x hx; simp only [Finset.mem_Icc, Finset.mem_coe] at *; omega
-    · intro x hx; simp only [Finset.mem_Icc, Finset.mem_coe] at *; omega
-    · intro x hx; simp only [Finset.mem_Icc, Finset.mem_coe] at *; omega
+    · intro x hx; simp only [Finset.mem_Icc] at *; omega
+    · intro x hx; simp only [Finset.mem_Icc] at *; omega
+    · intro x hx; simp only [Finset.mem_Icc] at *; omega
+    · intro x hx; simp only [Finset.mem_Icc] at *; omega
     · intro k _; rfl
   have I4 : ∑ k ∈ Finset.Icc 1 q, v (ρ ((e : ℤ) + k)) =
       ∑ t ∈ Finset.Icc ((e : ℤ) + 1) ((e : ℤ) + q), v (ρ t) := by
     refine Finset.sum_nbij' (fun k : ℕ => (e : ℤ) + k) (fun t : ℤ => (t - e).toNat) ?_ ?_ ?_ ?_ ?_
-    · intro x hx; simp only [Finset.mem_Icc, Finset.mem_coe] at *; omega
-    · intro x hx; simp only [Finset.mem_Icc, Finset.mem_coe] at *; omega
-    · intro x hx; simp only [Finset.mem_Icc, Finset.mem_coe] at *; omega
-    · intro x hx; simp only [Finset.mem_Icc, Finset.mem_coe] at *; omega
+    · intro x hx; simp only [Finset.mem_Icc] at *; omega
+    · intro x hx; simp only [Finset.mem_Icc] at *; omega
+    · intro x hx; simp only [Finset.mem_Icc] at *; omega
+    · intro x hx; simp only [Finset.mem_Icc] at *; omega
     · intro k _; rfl
   have ShiftFormula : ∑ t ∈ Finset.Icc (1 : ℤ) P, v (ρ t) +
       ∑ t ∈ Finset.Icc ((P : ℤ) + 1) ((e : ℤ) + q), v (ρ t) =

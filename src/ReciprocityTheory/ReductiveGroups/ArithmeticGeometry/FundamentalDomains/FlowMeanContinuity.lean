@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.RealEmbeddingCharacters
-import ReciprocityTheory.L2DbarEstimates.PlurisubharmonicCharts.FourSum
+import Mathlib.Dynamics.Ergodic.Action.Regular
+import ReciprocityTheory.L2DbarEstimates.PlurisubharmonicCharts.GROWCountStatement
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.TransvectionPeriodicity
 
 namespace ReciprocityTheory.ChartRestriction.G.FD.FlowMeanContinuity
 

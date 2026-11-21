@@ -1,10 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.ExistenceTori.HarmonicChartValues
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.DifBijectiveOfParam
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.SecondCubicalLawIffClause
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.IsGermGIffExistsFrame
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.NilpotentSubOrigin
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GermDPf
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ExpTie
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ThExprUniqOfChartIndep2
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.WickVanishing.GEWick

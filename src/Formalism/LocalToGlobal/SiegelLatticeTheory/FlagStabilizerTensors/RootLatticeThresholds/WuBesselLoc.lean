@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.Choice
 import Formalism.SharpRestriction.CuspSpanNormBounds.NonemptyParameterModels.AmpTensorDSdNonemptyOfSubsingleton
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.SettingConstruction
 
 noncomputable section
 
@@ -86,7 +88,7 @@ theorem theta_pos (C : Choice X θ) (u : D.what₂.Word) (τ : D.what₂.Tau) : 
     unfold Formalism.REAL.muG
     exact (isOpen_univ.measure_pos _ Set.univ_nonempty).ne'
   have h1 := hq (fun _ => 1) measurable_const
-  simp only [lintegral_const, Measure.coe_zero, Pi.zero_apply, zero_mul, lintegral_zero, mul_one] at h1
+  simp only [lintegral_const, Measure.coe_zero, Pi.zero_apply] at h1
   unfold muGB at h1
   rw [Measure.map_apply hmeas MeasurableSet.univ, Set.preimage_univ] at h1
   simp only [one_mul, mul_zero, zero_mul] at h1

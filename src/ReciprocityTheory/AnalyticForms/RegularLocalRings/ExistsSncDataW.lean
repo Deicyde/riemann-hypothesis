@@ -1,4 +1,5 @@
-import ReciprocityTheory.AnalyticForms.RegularLocalRings.ExistsClosedOfChartIdeal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.StalkIdEqMonomial
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.Surj
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.DivSheaf

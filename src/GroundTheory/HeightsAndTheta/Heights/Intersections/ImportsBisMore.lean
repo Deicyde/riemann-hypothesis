@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Intersections.ExistsIntValuationLtOne
 import GroundTheory.HeightsAndTheta.Heights.Intersections.ImportsMoreExtra
+import GroundTheory.HeightsAndTheta.Heights.Intersections.FunFieldLeLocRing
+import GroundTheory.HeightsAndTheta.Heights.Intersections.ImportsTerLast
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.Inter

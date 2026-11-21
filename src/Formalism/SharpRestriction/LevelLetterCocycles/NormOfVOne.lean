@@ -1,7 +1,7 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.T2SpaceLatticeVOfGoodSituation
-import Formalism.SharpRestriction.LevelLetterCocycles.ZlWCbInjective
-import Formalism.SharpRestriction.LevelLetterCocycles.NormLtOneIffToZMod
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.LevelLetterCocycles.DataNLoc
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 noncomputable section
 

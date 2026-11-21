@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.RowMinor
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.IntegralOfUnimodular
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.LinearFormsBoundedRepresentatives
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.EncardBiUnionLe
@@ -106,7 +106,7 @@ theorem exists_partner (hlat : Submodule.IsLattice E Λ) (hΛ : Formalism.Hermit
         apply RingOfIntegers.ext
         simp only [hψ, RingHom.id_apply, smul_eq_mul, map_mul, Submodule.coe_smul]
         rw [← algebraMap_smul E c (x : S.V), map_smul]
-        simp [hψ] }
+        simp }
   obtain ⟨w, hw⟩ := FunIdx.exists_dual_vec S M0 Λ hlat hprim ψ'
   refine ⟨w, ?_, fun j => ?_⟩
   · have := w.2.1

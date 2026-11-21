@@ -1,6 +1,4 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.FiniteTypeHarishChandra.SupportExistsAll
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ColGeR
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PatternSetCardColumnStepStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.AdditiveCharacterSumOrthogonalityStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WhittakerColumnRecursionStatement
@@ -25,7 +23,7 @@ theorem colGeR_single (K : Type) [Field K] (d j : ℕ) (hj : 1 ≤ j) :
       have hij : (⟨(i : ℕ), hlt⟩ : Fin j) = ⟨j - 1, by omega⟩ := Fin.ext (by simp; omega)
       simp only [colGeR, colGeE]
       rw [dif_pos ⟨hl, hlt⟩, hij]
-      simp [hl, hi]
+      simp [hl]
       omega
     · simp only [colGeR, colGeE]
       by_cases hlt : (i : ℕ) < j

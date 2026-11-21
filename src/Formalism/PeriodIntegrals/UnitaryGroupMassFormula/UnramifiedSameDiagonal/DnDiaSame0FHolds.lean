@@ -1,5 +1,5 @@
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CrossDiagonalMatching.DnDiaMatch0FHolds
-import Formalism.LocalToGlobal.GlobalTheory.UnramifiedDiagonal.DiaSame
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.UnramifiedDiagonal.DiaConj
 import Formalism.LocalToGlobal.GlobalTheory.UnramifiedDiagonal.DiaFun
 import Formalism.LocalToGlobal.GlobalTheory.UnramifiedDiagonal.HeckeRamifiedZeroOfMatchingsAndDu

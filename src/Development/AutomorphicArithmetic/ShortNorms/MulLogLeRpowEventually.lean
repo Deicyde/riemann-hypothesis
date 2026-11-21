@@ -1,7 +1,6 @@
-import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.PairRowIffQdRows
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ExplicitRanksBasicBoundsLargeScale
 import Development.AutomorphicArithmetic.CharacterBoxes.ExistsPageN
-import Development.AutomorphicArithmetic.CoprimeRanks.SecondSetNoRelation
 
 open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.Inhab Formalism.HC GlobalTheory.EX UpperTheory.Top HostParam.Seam
 

@@ -1,5 +1,48 @@
-import Mathlib
-import ReciprocityTheory.DualLattices.RidConvolutionDerivation
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.DualNumber
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.LinearAlgebra.Dual.BaseChange
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.HopfAlgebra.MonoidAlgebra
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -1031,7 +1074,7 @@ def tangentEquiv :
       (fun φ ψ => by
         have h := (mem_primitiveTensors_iff _).1 x.2 φ ψ
         ext
-        · simp [algebraMap_eq_inl', Algebra.TensorProduct.one_def]
+        · simp [algebraMap_eq_inl']
         · simp [algebraMap_eq_inl', h]),
     fun φ => by simp [algebraMap_eq_inl']⟩
   left_inv f := Subtype.ext (AlgHom.ext fun φ => by
@@ -1432,9 +1475,9 @@ theorem isGroupLikeElem_tensor_map {A B K K' : Type*} [CommSemiring A] [Algebra 
   rw [e2, h2, map_mul]
   congr 1
   · rw [← AlgHom.comp_apply, ← AlgHom.comp_apply]; congr 1
-    ext <;> simp [Algebra.TensorProduct.one_def]
+    ext <;> simp
   · rw [← AlgHom.comp_apply, ← AlgHom.comp_apply]; congr 1
-    ext <;> simp [Algebra.TensorProduct.one_def]
+    ext <;> simp
 
 variable {H K : Type*} [CommSemiring H] [Bialgebra R H] [CommSemiring K] [Bialgebra R K]
   {u : H ⊗[R] K}
@@ -1472,7 +1515,7 @@ theorem pairingMap_pairingBaseChange (u : H ⊗[R] K) (x : A ⊗[R] CartierDual 
       simp only [pairingMap, pairingBaseChange, tmul_add, map_add, LinearMap.add_apply,
         LinearMap.baseChange_tmul] at hs ht ⊢
       rw [hs, ht]
-    | tmul h k => simp [pairingBaseChange, smul_tmul', ← smul_tmul]
+    | tmul h k => simp [pairingBaseChange, smul_tmul']
 
 variable [Module.Finite R H] [Module.Projective R H] [Module.Finite R K] [Module.Projective R K]
 

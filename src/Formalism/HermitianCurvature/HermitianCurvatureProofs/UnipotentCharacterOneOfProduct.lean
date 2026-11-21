@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.MatExtMulVec
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.SubMulRight
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.SupportPhiZeroSubset
 
 namespace Formalism.FourierDecayAlt.P.StabilizerDisintegration.FB
 

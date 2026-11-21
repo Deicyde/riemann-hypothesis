@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.LinkedUnramifiedChains.AbsGood
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.DerHom
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.CoSqz

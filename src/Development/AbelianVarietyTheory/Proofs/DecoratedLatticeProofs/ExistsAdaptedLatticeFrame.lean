@@ -1,10 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.ContinuesConst
-import Development.AbelianVarietyTheory.PublishedTheorems.SiegelWeil₂.EisensteinMaximalParabolic
-import Development.AbelianVarietyTheory.PublishedTheorems.SiegelWeil₂.SiegelEisensteinContinuationOfDoublingMethod
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.MixSDblDecZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsIsLatticeFrameIsMajorantFrame
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsDualFamilyOfIsLattice
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.EventuallyAlgebraMapMemIntegers
+import Mathlib.Data.Matrix.ColumnRowPartitioned
 open scoped NNReal Matrix TensorProduct Topology
 open Filter NumberField IsDedekindDomain Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.L2.Theta Formalism.L2.Pj GlobalTheory.AdelicU GlobalTheory.Doubling GlobalTheory.Cont GlobalTheory.MixModel GlobalTheory.RegSW GlobalTheory.EisCont GlobalTheory.SiegelSet GlobalTheory.UAut GlobalTheory.EisLine
 open GlobalTheory.Core.Rk.SWLaw (dblDec zeroSp)
@@ -70,7 +69,7 @@ theorem exists_frame_hyp (hn : m + 2 * r = n) {X Y : Matrix (Fin n) (Fin r) R} {
   · rw [hΔ, hc, fromRows_mul _ _ J, fromRows_mul _ _ J, fromRows_mul_fromCols, fromRows_mul_fromCols, fromRows_mul, mul_fromCols]
     simp only [Matrix.add_mul, Matrix.sub_mul, Matrix.mul_add, Matrix.mul_sub, Matrix.smul_mul, Matrix.mul_smul, XX, YY, YX, XY,
       IX, IY, XI, YI, II, smul_zero, add_zero, zero_add, sub_zero, zero_sub, fromRows_zero, fromCols_zero, h1, sub_self,
-      neg_add_cancel, add_neg_cancel, ← neg_add', sub_neg_eq_add]
+      neg_add_cancel, ← neg_add']
   · rw [fromCols_mul_fromRows, fromCols_mul_fromRows, ← Matrix.add_mul]
     simp [← add_smul, smul_add, ht]
   · rw [fromCols_mul_fromRows, fromCols_mul_fromRows, ← smul_eq_mul_diagonal]

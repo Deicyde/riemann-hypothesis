@@ -1,7 +1,7 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.FrobeniusSmoothVectors.EpresGr
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.CoSurj
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.CoMvps
 import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.PredMulSumPadicValNatFactorialAddCardLe
+import Development.AutomorphicArithmetic.AutomorphicVarieties.FrobeniusSmoothVectors.PresDefs
 
 open IsLocalRing Matrix UpperTheory.V.Alg UpperTheory.V.U3 UpperTheory.V.Fr
 
@@ -25,7 +25,7 @@ private theorem ns_coeff {O σ : Type} [CommRing O] [DecidableEq σ] (s t : σ) 
   · rw [if_neg h, if_neg]
     intro hle
     have := hle t
-    simp [Finsupp.single_apply, Ne.symm h] at this
+    simp [Ne.symm h] at this
 
 private theorem ns_dec {O σ : Type} [CommRing O] [IsLocalRing O] [Fintype σ] (g : MvPowerSeries σ O)
     (hg : ∀ s, MvPowerSeries.coeff (Finsupp.single s 1) g ∈ maximalIdeal O) :

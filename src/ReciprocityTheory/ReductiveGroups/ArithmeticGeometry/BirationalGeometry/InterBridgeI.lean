@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterBridgeH
+import ReciprocityTheory.AnalyticForms.PotentialTheory.Partition
 
 noncomputable section
 

@@ -1,12 +1,13 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.BlockHeckeSlices.SliceShift
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.BlockHeckeSlices.CuspidalNormBounds.RapidDecay
 import Development.AutomorphicArithmetic.Foundations.Convolution.BlockHeckeSlices.CuspidalNormBounds.UmgOps
 import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.SummandsSpan
 import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.ExCusp
-import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.FormsIrr
 import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.ClsBasic
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CuspidalSatakeAlmostAll
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.DiscreteSpectrumOfResidual
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdelicLocalCompactness.AdeleLC
 
 open MeasureTheory NumberField IsDedekindDomain
 open GroundTheory.Automorphic GroundTheory.Automorphic.Reduction GroundTheory.Automorphic.RightCosetSpace
@@ -209,7 +210,7 @@ private theorem exists_fin {r : ℕ} (m : Multiset ℂ) (h : m.card = r) :
     refine ⟨l.get, fun u => ?_⟩
     rw [← List.prod_ofFn]
     conv_lhs => rw [← List.ofFn_get l]
-    simp [List.map_ofFn, Function.comp_def]
+    simp
 
 end UpperTheory.ConvolutionTheory.BW
 

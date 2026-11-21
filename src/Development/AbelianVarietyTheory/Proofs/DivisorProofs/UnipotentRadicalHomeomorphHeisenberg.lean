@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousCA
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NmatMulVec
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IncMMulVecIncV
 
 open scoped TensorProduct NNReal Matrix
@@ -60,7 +58,7 @@ theorem hA_single (σ : E →ₐ[F] E) {k : ℕ} (J₁ : Matrix (Fin k) (Fin k) 
   have hb : (fun l => cA σ ((Pi.single j 1 : Fin k → AE F E) l)) = Pi.single j 1 := by
     funext l; by_cases h : l = j
     · subst h; simp
-    · simp [Pi.single_apply, h]
+    · simp [h]
   rw [hA, hb, Matrix.mulVec_single_one]
   simp [Matrix.vecMul, dotProduct, Matrix.col]
 

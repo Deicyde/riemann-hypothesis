@@ -1,6 +1,6 @@
-import Mathlib
-import Formalism.SharpRestriction.GlobalSchurBounds.GL3Theta
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.UnitaryNorms.CharTied
+import Formalism.SharpRestriction.GlobalSchurBounds.GeneralLinearActions.IsDiscriminantTwelfthRootOfIdealLattice
 
 noncomputable section
 

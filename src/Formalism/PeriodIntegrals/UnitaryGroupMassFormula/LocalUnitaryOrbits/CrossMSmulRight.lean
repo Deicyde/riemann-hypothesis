@@ -1,5 +1,6 @@
-import Mathlib
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalUnitaryOrbits.IsCompactSpanRange
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalUnitaryOrbits.UnifExHolds
 
 noncomputable section
 
@@ -53,21 +54,19 @@ theorem hR_add_left (x x' y : Fin n → R ⊗[F] E) :
     hR R σ J (x + x') y = hR R σ J x y + hR R σ J x' y := by
   unfold hR
   simp only [Formalism.UG.hform]
-  simp [Finset.sum_add_distrib, add_mul, mul_add, map_add, Pi.add_apply, Matrix.mulVec_add,
-    Matrix.add_mulVec, dotProduct_add, add_dotProduct]
+  simp [Finset.sum_add_distrib, add_mul, map_add, Pi.add_apply]
 
 theorem hR_add_right (x y y' : Fin n → R ⊗[F] E) :
     hR R σ J x (y + y') = hR R σ J x y + hR R σ J x y' := by
   unfold hR
   simp only [Formalism.UG.hform]
-  simp [Finset.sum_add_distrib, add_mul, mul_add, map_add, Pi.add_apply, Matrix.mulVec_add,
-    Matrix.add_mulVec, dotProduct_add, add_dotProduct]
+  simp [Finset.sum_add_distrib, mul_add, Pi.add_apply]
 
 theorem gramR_add {a : ℕ} (x W : Fin a → Fin n → R ⊗[F] E) :
     gramR R σ J (x + W) = gramR R σ J x + crossM σ J x W + gramR R σ J W := by
   ext i j
   first
-  | (simp only [gramR, crossM, Matrix.add_apply, Pi.add_apply, Matrix.of_apply, hR_add_left, hR_add_right]; abel)
+  | (simp only [gramR, crossM, Matrix.add_apply, Pi.add_apply, hR_add_left, hR_add_right]; abel)
   | (simp [gramR, crossM, hR_add_left, hR_add_right]; abel)
 
 theorem crossM_add_left {a : ℕ} (x x' W : Fin a → Fin n → R ⊗[F] E) :

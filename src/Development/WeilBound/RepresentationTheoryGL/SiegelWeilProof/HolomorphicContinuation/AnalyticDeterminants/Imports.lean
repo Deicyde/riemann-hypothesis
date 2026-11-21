@@ -1,5 +1,12 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.AnalyticDeterminants.HermRealSmul
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.IsSingTest
+import Mathlib.Analysis.Matrix.Normed
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -28,7 +35,7 @@ theorem span_top (W : Submodule ℂ (M2 n))
     refine ⟨(1 / 2 : ℂ) • (B + Bᴴ), (-(Complex.I / 2)) • (B - Bᴴ), ?_, ?_, ?_⟩
     · rw [conjTranspose_smul, conjTranspose_add, conjTranspose_conjTranspose, add_comm]
       congr 1
-      simp [Complex.ext_iff]
+      simp
     · rw [conjTranspose_smul, conjTranspose_sub, conjTranspose_conjTranspose]
       rw [show (Bᴴ - B) = -(B - Bᴴ) by abel, smul_neg, ← neg_smul]
       congr 1
@@ -105,7 +112,7 @@ theorem span_top (W : Submodule ℂ (M2 n))
     rw [Matrix.sum_apply]
     by_cases h : i = j
     · subst h; simp [Matrix.single_apply]
-    · simp [Matrix.single_apply, Matrix.one_apply, h]
+    · simp [Matrix.single_apply, h]
   have hST : ∑ a, ιA (Matrix.single a a 1) + ∑ k, ιD (Matrix.single k k 1) ∈ W := by
     rw [← map_sum, ← map_sum, one_sum]
     have : ιA 1 + ιD 1 = (1 : M2 n) := by simp [ιA, ιD, fromBlocks_add, ← fromBlocks_one]

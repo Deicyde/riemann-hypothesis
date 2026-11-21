@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.GlobalClassFormation.IdeleLimits.Levels
-import GroundTheory.ProfiniteCohomology.FilteredHomology
 import GroundTheory.ProfiniteCohomology.Factor
 import GroundTheory.ProfiniteCohomology.InflationRestriction.DegreeOne
 set_option maxSynthPendingDepth 1
@@ -45,7 +45,7 @@ theorem levelCochains_injective (p : GLevel K) (m : ℕ) :
   have hσ : (fun i => restrictHom (E := p.1) (σ i)) = τ :=
     funext fun i => Function.surjInv_eq (restrictHom_surjective (F := K) (E := p.1)) (τ i)
   have h1 := congrFun (congrArg (fun c => ((cochainsComplexι (limitRep K)).f m).hom c) h) σ
-  simp only [cochainsComplexι_cochainsMapAlong_apply] at h1
+  simp only at h1
   change Additive.ofMul (of p.1 (((cochainsComplexι _).f m).hom y
       (fun i => restrictHom (E := p.1) (σ i))).toMul) =
     Additive.ofMul (of p.1 (((cochainsComplexι _).f m).hom y'

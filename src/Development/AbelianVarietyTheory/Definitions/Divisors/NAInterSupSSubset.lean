@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsRapidInf
 import GroundTheory.AutomorphicForms.MultiplicityOne.Equivariance
-import GroundTheory.GlobalFields.TateThesis.AdelicCharLocal
 
 noncomputable section
 

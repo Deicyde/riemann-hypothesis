@@ -1,6 +1,4 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterSt
-import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StatementsCurrent
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StPtsBilinear
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StSegrePartition
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StSegreChart

@@ -1,12 +1,10 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.HeckePairTop
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.IwLeviMul
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.IwLeviLevel
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.IwFactTorus
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.IwFundNorm
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.IwPermUnit
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.IwHkNorm
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.IwHeckePairIwC
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.IwMemIwC
 open ValuativeRel Matrix GlobalTheory.SmGL GlobalTheory.SplitWeil UpperTheory.V.Hi UpperTheory.V.AlgebraTools
 
 section SlopeTestRemainingChoices

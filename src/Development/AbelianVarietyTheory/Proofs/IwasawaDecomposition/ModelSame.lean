@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CrdOver
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMapOfOfExtends
+import Formalism.LocalToGlobal.IndefiniteReal.ConjSubConjSub
 
 noncomputable section
 

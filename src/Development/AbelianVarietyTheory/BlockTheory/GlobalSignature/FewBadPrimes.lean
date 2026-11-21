@@ -1,7 +1,6 @@
-import Mathlib
-import Formalism.SharpRestriction.InertJacobiLevels.AsmIface
-import Formalism.CyclotomicNorms.StatementI
-import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.PairRowIffQdRows
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.DisjointExceptional
 
 noncomputable section

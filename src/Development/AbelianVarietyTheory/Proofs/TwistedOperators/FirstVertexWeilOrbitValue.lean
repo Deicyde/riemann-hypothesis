@@ -1,20 +1,15 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.HeckeThetaIntegrals.StepUnfold
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.PairPtsClasses
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RowMapVUpdateZero
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.EdgeFactorNeZero
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.StepType
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.GridStandardVacuumScalarEqProdLocalPlaces
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LatHatStabOfHatL
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RowPt0InvMemStdLatIff
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.DetIdeleConjugatedTopPointEqProdLocal
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.DetUnitaryConjAtPlaceEqDetLatticeBasisComponent
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnderMemAndPlaceAboveEqOfMem
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiagonalBlockDetBlockTriangular
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GridRowLevelZeroInfUnitaryEqDatumLevel
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.RamificationIdxEqOneOfIsSquare
-import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.FinPartDetAtInvInt
+import Development.AbelianVarietyTheory.Statements.HeckeThetaIntegrals.FormulaAt
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.DIV
 open IsDedekindDomain NumberField MeasureTheory GlobalTheory.ChiGrid GlobalTheory.FunObj GlobalTheory.RowTest GlobalTheory.StdFrames GlobalTheory.RowClaim
@@ -107,7 +102,7 @@ theorem splitScal_eq (S : GridChoice W U) {μ₀ : T} (hL : L.Is μ₀) {t : T} 
     intro z
     have hx : Assignment.one.read (kapAt S t w.1 k) ∈ KO (Kw w.1) (Fin ((locGrid G t w.1).rank (0, D.R.m))) :=
       invT_mem_KO hKO
-    simp only [apow, gdet, GlobalTheory.LGrp.nabs_det_of_mem_KO hx, NNReal.coe_one, Complex.ofReal_one, Complex.one_cpow]
+    simp only [apow, gdet, GlobalTheory.LGrp.nabs_det_of_mem_KO hx, Complex.ofReal_one, Complex.one_cpow]
   have hd := detIdl_conj (GlobalTheory.RowVacScalar.isIdemAt_idemAt hL G t w.2) (G.V (.grid 0 D.R.m)) k
     (S.N.u (.grid 0 D.R.m)) (rank_vertex G t w.1 (X := (0, D.R.m)) ⟨Nat.zero_le _, le_rfl⟩) (S.B.β 0 D.R.m)
   simp only [GlobalTheory.RowVacScalar.splitScal, GlobalTheory.SplitFlip.Grid.edgeFactor, GlobalTheory.SplitFlip.Grid.kappa,
@@ -406,7 +401,7 @@ theorem endLamAt_eq {μ₀ : T} (hL : L.Is μ₀) (G : GridData L sc) (t : T) {j
     rw [show inBasis h β w (frGL β y) =
         (reGL (finCongr h.symm)) (GlobalTheory.StdFrames.loc w (MulAut.conj β⁻¹ (frGL β y))) from rfl, hc]
     ext i l
-    simp [GlobalTheory.TopLevelInv.val_loc, intGL, cptO_apply, ea, GlobalTheory.StepData.reGL, Formalism.UG.bc]
+    simp [intGL, cptO_apply, ea, GlobalTheory.StepData.reGL, Formalism.UG.bc]
   obtain ⟨hk', hlam⟩ := stepType_lam hL t hj w ha y.val (redFn β w (frGL β y)) hr _ hv hP hQ hk
   unfold endLamAt
   rw [dif_pos hk', hlam, Units.val_inv_eq_inv_val]

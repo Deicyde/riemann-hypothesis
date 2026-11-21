@@ -1,9 +1,7 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.SquareIntegrableTempered.CentredSegments.IrreducibleUnif
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.SquareIntegrableTempered.TemperedProducts.CentredSegSqInt
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IrreducibleAdmissibleGL
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.StandardFunctorsFiniteLength
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PiTensorIrreducibleNontrivial
+import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.SquareIntegrableTempered.CasselmanNecTemp
 
 noncomputable section
 
@@ -48,7 +46,7 @@ theorem leviEmb_scalar {s N : ℕ} (d : Fin s → ℕ) (hd : ∑ a, d a = N) (t 
     have : (stdBlocks d hd) ⟨a, i⟩ ≠ (stdBlocks d hd) ⟨b, j⟩ := fun h => by
       have := (stdBlocks d hd).injective h
       exact hab (congrArg Sigma.fst this)
-    simp [Matrix.scalar_apply, Matrix.diagonal_apply, this]
+    simp [Matrix.scalar_apply, this]
 
 theorem nabs_det_scalar (n : ℕ) (t : kˣ) :
     nabs k (Matrix.GeneralLinearGroup.det (Matrix.GeneralLinearGroup.scalar (Fin n) t)) =

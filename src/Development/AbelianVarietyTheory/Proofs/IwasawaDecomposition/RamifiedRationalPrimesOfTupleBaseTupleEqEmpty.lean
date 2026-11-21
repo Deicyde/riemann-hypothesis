@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.Divisibility.QLocTied
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.HostPins
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HeckeCharacterUnramifiedAeAndExistsLevel
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsTypeDimensionAndLocalIntegralsDegreeOneStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SingleBlockDoublingIntegralValueStatement

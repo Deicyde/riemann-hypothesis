@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.StatementsLines
+import GroundTheory.HeightsAndTheta.Heights.MatrixCharts.DetIneq
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

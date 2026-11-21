@@ -1,10 +1,6 @@
-import Development.AutomorphicArithmetic.BlowupCategories.SpanScale
-import Development.AutomorphicArithmetic.BlowupCategories.AffC
-import Development.AutomorphicArithmetic.CommutativeAlgebra.IsIsoOfBijectiveOnSimplices
-import Development.AutomorphicArithmetic.CommutativeAlgebra.MonoOfInjectiveOnSimplices
-import Development.AutomorphicArithmetic.CommutativeAlgebra.IsPullbackOfUniqueSimplicesPullback
-import Development.AutomorphicArithmetic.CommutativeAlgebra.SimplicesPullbackExistsUniqueOfMapEq
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CupHypercohomologyPullbackStatement
+import Development.AutomorphicArithmetic.CupPullbacks.ConstCompSingle
 open CategoryTheory Limits AlgebraicGeometry Opposite CochainComplex CochainComplex.HomComplex GlobalTheory.EtC UpperTheory.Pbf UpperTheory.Blow
 
 private theorem pull_bij (q : ℕ) {A B : Spc} (f : A ⟶ B) [IsIso f] (n i : ℤ) :

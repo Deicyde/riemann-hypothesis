@@ -1,6 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.InvAlg
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.EqLagIff
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.IdemLiftComplete
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Polynomial Matrix IsLocalRing TensorProduct UpperTheory.V.AlgebraTools
 

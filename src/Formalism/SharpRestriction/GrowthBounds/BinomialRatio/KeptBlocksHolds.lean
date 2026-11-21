@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.BinomialRatio.KeptBlocksOfSLine
 set_option maxHeartbeats 4000000
 

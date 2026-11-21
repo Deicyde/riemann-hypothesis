@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Statements.GeometryStatements.HTChartExists
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HodgeTateFunctionalMulStatement
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.HodgeTateLatticeBaseChangePairingStatement
@@ -175,7 +176,7 @@ theorem htChartExists : HTChartExists := by
     induction hy using AddSubgroup.closure_induction with
     | mem y hy =>
       obtain ⟨k, rfl⟩ := hy
-      have : h (b k) = wb k := by simp [h, Module.Basis.constr_basis]
+      have : h (b k) = wb k := by simp [h]
       rw [this]; exact hwb k
     | zero => rw [map_zero, show χ 0 = 1 from charOf_zero _ _ _ _ _ _ _]; exact hzero
     | add y y' _ _ h1 h2 =>

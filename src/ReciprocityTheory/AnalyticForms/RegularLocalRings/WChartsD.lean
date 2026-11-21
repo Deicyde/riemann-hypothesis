@@ -1,4 +1,7 @@
-import ReciprocityTheory.AnalyticForms.RegularLocalRings.WChartsA
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import ReciprocityTheory.AnalyticForms.RegularLocalRings.LogResStC
+import ReciprocityTheory.AnalyticForms.RegularLocalRings.ProjDehom
 
 namespace ReciprocityTheory.AnForm.R
 

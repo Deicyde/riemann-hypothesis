@@ -1,6 +1,10 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.LocalSituation
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.ValuationCoeEqNorm
+import Formalism.SharpRestriction.LevelLetterCocycles.DataNLoc
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.LocalProperties.Reduced
+import Mathlib.RingTheory.WittVector.Complete
 
 open Formalism.WeaklyAdmissibleFiltrations Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.MainNotions.N Formalism.MainNotions.LocalSituation
 
@@ -177,7 +181,7 @@ theorem step (S : Matrix p p (WittVector l R)) (S' : Matrix q q (WittVector l R)
     have := hr a b
     simp only [Matrix.map_apply] at this
     rw [← this]
-    simp [hι, Z₀, WittVector.map_coeff]
+    simp [hι, Z₀]
   choose Z' hZ' using h2
   have hZ : Z = Z₀.map ι + (l : WittVector l K) • Matrix.of Z' := by
     ext1 a b

@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.AdelicLattices.FactPrimes
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.LatNormGrLatNeZeroOfSpan
+import Mathlib.RingTheory.Valuation.LocalSubring
 
 noncomputable section
 
@@ -28,7 +29,7 @@ def unitBall : ValuationSubring K where
   neg_mem' := fun {a} ha => by
     simpa using ha
   mem_or_inv_mem' := fun a => by
-    simp only [Subring.mem_mk, Subsemiring.mem_mk, Submonoid.mem_mk, Subsemigroup.mem_mk,
+    simp only [
       Set.mem_setOf_eq, map_inv₀, norm_inv]
     rcases le_total ‖j a‖ 1 with h | h
     · exact Or.inl h

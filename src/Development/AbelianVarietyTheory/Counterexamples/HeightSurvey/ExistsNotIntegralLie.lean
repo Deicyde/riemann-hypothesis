@@ -1,11 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.IntFrames
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.LieFreePf
-import Formalism.LocalToGlobal.ProjectiveLattices.ThetaFramePf
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ChartPullbacks.CubePullbacks.CubePull
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.AbelianSchemeLawsUnconditional
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.FramedPointFieldFromTestRing
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.IntegralLatticeStructureUnique
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.ThetaFrameAllOfThetaFrame
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.IsTanAtOfGenericFibre
 

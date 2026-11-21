@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ScaledBoxRadiiAtEntry
 
 open ValuativeRel Matrix GlobalTheory.SplitFlip GlobalTheory.FullRankCoinv GlobalTheory.RankCoinv GlobalTheory.NormalCore
@@ -63,7 +64,7 @@ theorem preimage_box_scale_eq_ebox (k : Type) [Field k] [ValuativeRel k] [Topolo
         le_shift_up]
       simp only [scaledBoxRadiiAtEntry, hi, ne_eq, not_false_eq_true, and_self, if_true, false_and, if_false]
     · rw [Function.update_of_ne hi, Function.update_of_ne hj, Pi.one_apply, Pi.one_apply, one_mul, mul_one]
-      simp only [scaledBoxRadiiAtEntry, hi, hj, ne_eq, not_false_eq_true, false_and, and_false, if_false]
+      simp only [scaledBoxRadiiAtEntry, hi, hj, ne_eq, not_false_eq_true, false_and, if_false]
   · ext Y
     simp only [Set.mem_setOf_eq, box, ebox]
     refine forall₂_congr fun i j => ?_

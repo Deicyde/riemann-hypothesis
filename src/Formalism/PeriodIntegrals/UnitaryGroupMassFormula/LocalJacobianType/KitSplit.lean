@@ -1,9 +1,7 @@
-import Mathlib
-import Formalism.PeriodIntegrals.LocJacTyp
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalJacobianType.Development
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalJacobianType.RingTopologyInstances
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalDualGenerator.EpSelfDualSplit
-import Formalism.PeriodIntegrals.SplitIntLoc
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.SplitIntLoc
 
 noncomputable section

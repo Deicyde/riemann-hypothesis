@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.FrobeniusContraction.HighestWeightResidueAvoids
+import Formalism.FrobeniusContraction.StatementTop
+import Mathlib.LinearAlgebra.Charpoly.Basic
+import Mathlib.RingTheory.PowerSeries.Expand
+import Mathlib.RingTheory.SimpleRing.Principal
 
 noncomputable section
 

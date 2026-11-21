@@ -1,5 +1,7 @@
-import Mathlib
-import Development.AutomorphicArithmetic.LocalEmbeddings.ULieDefs
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.Polynomial.IsIntegral
+import Mathlib.RingTheory.SimpleRing.Principal
 
 open NumberField Matrix Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SiegelSet GlobalTheory.UAut GlobalTheory.ULie
 open scoped TensorProduct

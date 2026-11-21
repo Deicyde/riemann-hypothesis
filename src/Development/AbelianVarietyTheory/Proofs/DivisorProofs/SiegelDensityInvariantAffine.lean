@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsTateZero
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryInvariantHermitianFormSymmEqSmulTrace
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsThetaOfPolAV
 open CategoryTheory AlgebraicGeometry Set Matrix ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open GlobalTheory GlobalTheory.CxPts GlobalTheory.ArInt GlobalTheory.TorsionForm GlobalTheory.ThetaRR
 open GlobalTheory.LB (toMod)
@@ -24,7 +24,7 @@ theorem im_congr (A X : Matrix (Fin g) (Fin g) ℝ) (τ : Matrix (Fin g) (Fin g)
       = A.map (fun t : ℝ => (t : ℂ)) * (τ.map fun t => (t.im : ℂ))
         * (A.map (fun t : ℝ => (t : ℂ)))ᵀ := by
   ext i j
-  simp [Matrix.mul_apply, Complex.im_sum, Complex.re_sum, Finset.sum_mul]
+  simp [Matrix.mul_apply, Complex.im_sum, Finset.sum_mul]
 
 theorem star_congr (A : Matrix (Fin g) (Fin g) ℝ) (Z : Matrix (Fin g) (Fin g) ℂ) :
     (A.map (fun t : ℝ => (t : ℂ)) * Z * (A.map (fun t : ℝ => (t : ℂ)))ᵀ).map star

@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.NonemptyRayDataOfNeZero
-import Development.AbelianVarietyTheory.Definitions.Foundations.RayPrimes
 import Development.AbelianVarietyTheory.Definitions.Foundations.NormOneSevenOneTwo
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 

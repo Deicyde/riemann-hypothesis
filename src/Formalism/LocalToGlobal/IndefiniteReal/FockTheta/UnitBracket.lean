@@ -1,8 +1,6 @@
-import Formalism.LocalToGlobal.IndefiniteReal.DatumFock
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.DatumVec
-import Formalism.LocalToGlobal.BesselHermitianTheta.TiedSmooth
-import Formalism.RealPlaceAnalysis.FockPairGl
-import Formalism.LocalToGlobal.BesselHermitianTheta.LemmasSign
 
 noncomputable section
 

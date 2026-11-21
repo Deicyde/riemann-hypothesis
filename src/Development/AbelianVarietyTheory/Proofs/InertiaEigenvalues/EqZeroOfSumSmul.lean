@@ -1,6 +1,9 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.DataNLoc
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.GradedSeries
+import Mathlib.Order.Interval.Finset.Box
+import Mathlib.RingTheory.HahnSeries.PowerSeries
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 noncomputable section
 

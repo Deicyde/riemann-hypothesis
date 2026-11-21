@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.KisinCrystalline.TypeSt
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.CycFacts
+import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.KisinDefs
 open Formalism.BasicNotions Formalism.BasicNotions.Loc UpperTheory.V.Loc UpperTheory.V.Lit
 
 section
@@ -92,7 +95,7 @@ theorem UpperTheory.type_dual_twist_iff :
     | tmul v b =>
       refine LinearMap.ext fun w => ?_
       have e : colRep (dualTw χ ρ) g⁻¹ w = (χ g⁻¹ : B) • ((ρ g : Matrix (Fin n) (Fin n) B)ᵀ *ᵥ w) := by
-        simp [colRep, dualTw, Matrix.smul_mulVec]
+        simp [colRep, dualTw]
       have e' : resCoef ℚ_[l] (colRep ρ) g v = (ρ g : Matrix (Fin n) (Fin n) B) *ᵥ v := rfl
       rw [stRep_tmul, hΦ, LinearMap.comp_apply, LinearMap.comp_apply, hΦ, e, e', hχ', actBst,
         AlgebraTensorModule.map_tmul, dotProduct_smul, algebraMap_smul, LinearMap.id_apply, smul_tmul,

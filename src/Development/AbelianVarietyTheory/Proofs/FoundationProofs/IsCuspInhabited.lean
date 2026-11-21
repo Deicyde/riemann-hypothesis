@@ -1,16 +1,12 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.ApplyEqOfMemAdjoin
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsGaloisInvariantValuationIntegersEqIntegral
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.CompletedLaurentIsDVRStatement
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsCompletedLaurentQuotPrimeEquivLaurentFp
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsEqExpOfRat
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.AlgebraicElementApproximation
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.AutomorphismOnExtensionPointwiseStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.AutomorphismExtensionUniformStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.FrobeniusPowerBasisIndependentStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.FrobeniusPowerReductionCongruenceStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.LaurentSeriesAlgebraicConstantStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ResidueAlgebraicPolynomialDivisibleStatement
+import Mathlib.Algebra.Order.Star.Real
 
 noncomputable section
 
@@ -140,7 +136,7 @@ theorem approx (h : IsClo p Ωl) (hv : ∀ x : Ωl, v x ≤ 1 ↔ IsInt p x) (h1
     have hpO : (p : O0 p) ≠ 0 := by exact_mod_cast hp.out.ne_zero
     have h3 := ih g ((a - m) / p) (by rwa [hg, natDegree_C_mul hpO] at hf') (by
       have := congrArg (aeval (T.qq n)) hg
-      simp only [map_sub, map_mul, aeval_C, map_intCast, map_natCast, ha] at this
+      simp only [map_sub, map_mul, map_intCast, map_natCast, ha] at this
       rw [map_div₀, map_sub, map_intCast, map_natCast, this, mul_div_cancel_left₀ _ hpl])
     have h4 : s a - a = p * (s ((a - m) / p) - (a - m) / p) := by
       rw [map_div₀, map_sub, map_intCast, map_natCast]; field_simp; ring

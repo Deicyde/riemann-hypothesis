@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilActionIntegralPointCosetVectorEq
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsApprox
 
 open NumberField IsDedekindDomain
 open scoped Classical Pointwise

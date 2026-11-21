@@ -1,6 +1,6 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.Graded
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.OrbitVanishingLocal
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.PartSpan
+import Mathlib.Tactic.ENatToNat
 
 open IsLocalRing MvPowerSeries UpperTheory.V.Alg
 

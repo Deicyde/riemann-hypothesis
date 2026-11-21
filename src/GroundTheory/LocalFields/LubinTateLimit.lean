@@ -1,8 +1,9 @@
-import Mathlib
-import GroundTheory.LocalFields.LubinTatePrimitive
-import GroundTheory.LocalFields.LubinTateTowerMaps
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.LocalFields.LubinTateLimitGalois
 import GroundTheory.LocalFields.LubinTateUnramified
+import GroundTheory.LocalFields.MaximalUnramified
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
 
 noncomputable section
 

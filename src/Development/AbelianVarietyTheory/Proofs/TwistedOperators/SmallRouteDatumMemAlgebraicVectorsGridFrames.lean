@@ -1,11 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsIsGridFr
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SquareStanding
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.FockVectorsConjAdjointPullbackBijection
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.IsPolynomialFockThetaVectorOrthogonalBoxProduct
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ThetaHeisenbergConjugationNegHermitianSpace
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawOneSourceOrthogonalSumTargets
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaSquareProductRouteBEqExternalProduct
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SmallRouteCombinationMulLiftByDegree
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsFockVacAtOfIsThetaAt
 
@@ -194,7 +193,7 @@ theorem pr_single {a b n : ℕ} (j : Fin n) :
       rw [Matrix.mul_single_apply_same]
       simp [prL, prR, Matrix.one_apply, Matrix.single_apply, eq_comm]
     · rw [Matrix.mul_single_apply_of_ne _ _ _ _ _ h]
-      simp [Matrix.single_apply, Ne.symm h]
+      simp [Ne.symm h]
 
 theorem pr_unit {n : ℕ} (C : Matrix (Fin n) (Fin n) ℂ) (j : Fin n) :
     (∀ i : Fin U.rank, prL U.rank U'.rank * unitMap C ((GlobalTheory.SquareComm.frSum B B').onb τ) (Fin.castAdd _ i) j =

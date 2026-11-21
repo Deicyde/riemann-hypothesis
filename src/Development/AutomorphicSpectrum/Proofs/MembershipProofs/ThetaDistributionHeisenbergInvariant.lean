@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.HilbertNinetyQuotientHomEqIff
-import GroundTheory.GlobalFields.TateThesis.AdelicCharDual
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.TateThesis.RootNumberLocalPlace
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.ExistsInfiniteAdelicCharNeOne
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.FactorialTendstoZero

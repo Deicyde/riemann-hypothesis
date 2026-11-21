@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CharacterGerms.ConstantCoeffTripleSubstitution
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
 
 noncomputable section
 
@@ -193,7 +196,7 @@ theorem addOf_eq {n : ℕ} (a b : Pt C n dd) : addOf (Y.B.FK C) a b = addAt Y a 
       (MvPowerSeries.map (algebraMap C C) (Y.B.G.F i)) = MvPowerSeries.subst (P2 a b) (Y.B.G.F i)
   have hm : MvPowerSeries.map (algebraMap C C) (Y.B.G.F i) = Y.B.G.F i := by
     ext n
-    simp [MvPowerSeries.coeff_map]
+    simp
   rw [hm]
   congr 1
   funext q

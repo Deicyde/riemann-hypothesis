@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.OpApplyZeroNear
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.BaseCutoffIsTruncation
 
 open Matrix MeasureTheory Filter Topology
 open scoped ContDiff

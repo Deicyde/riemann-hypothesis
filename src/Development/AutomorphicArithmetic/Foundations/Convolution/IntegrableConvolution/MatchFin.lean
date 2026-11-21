@@ -1,9 +1,8 @@
-import Mathlib
-import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.ClosedProperAlt
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.MatchSplit
 import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.RegOkPi
 import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.PushTens
-import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.GlueBasic
+import GroundTheory.LocalFields.LocalFourierHaar
 
 open MeasureTheory NumberField IsDedekindDomain
 open GroundTheory.Global.SemiLocal PositivityTheory.Rg.Tf.Geo

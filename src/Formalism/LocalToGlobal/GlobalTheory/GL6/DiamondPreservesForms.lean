@@ -1,4 +1,5 @@
-import Formalism.LocalToGlobal.GlobalTheory.GL6.DiamondPreservesRationalFormZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.GL6.AdelicFunctionRightTranslateDiamond
 
 noncomputable section

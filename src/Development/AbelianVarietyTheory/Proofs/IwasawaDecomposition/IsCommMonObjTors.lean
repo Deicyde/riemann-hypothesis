@@ -1,7 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.LatAtOmPHtEval
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.ShimuraVarieties.MemPrimitiveTensorsIffIsPrimitiveElem
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.EqOneOfPowEqOneOfCompEqOne
+import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.HomBaseChangeBijectiveOfLeNilradical
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 set_option autoImplicit false
 
@@ -100,7 +102,7 @@ theorem powElt_zero : powElt N 0 = 1 := by
 
 theorem powElt_add (k l : ℤ) : powElt N (k + l) = powElt N k * powElt N l := by
   simp only [powElt, Finset.sum_mul_sum, Algebra.TensorProduct.tmul_mul_tmul,
-    AddMonoidAlgebra.single_mul_single, mul_one]
+    AddMonoidAlgebra.single_mul_single]
   refine Finset.sum_congr rfl fun a _ => ?_
   rw [Finset.sum_eq_single a (fun b _ hb => by rw [delta_mul, if_neg (Ne.symm hb), TensorProduct.tmul_zero])
     (fun h => (h (Finset.mem_univ a)).elim), delta_mul, if_pos rfl]

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.MetricPeriods.HasMultiplier
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsArith
 
@@ -81,13 +82,12 @@ theorem liesOver_rat [CharZero Ω] (y : (Σ k, ι k) → Ω) (sg : ℚ →+* ℂ
   have hom : IsMultiHomog (C (θ.den : ℤ) * g + -(C θ.num * h)) (0 + d) :=
     ProjLine.mhAdd (ProjLine.mhMul (hC _) hg) (ProjLine.mhNeg (ProjLine.mhMul (hC _) hh))
   have h0 := hz.2 _ (mem_of_aeval y hom (by
-    simp only [map_add, map_neg, map_mul, e, eq_intCast, map_intCast, map_natCast, eq_ratCast,
-      Int.cast_natCast]
+    simp only [map_add, map_neg, map_mul, e, eq_intCast, map_intCast, map_natCast, eq_ratCast]
     have : (θ.den : Ω) * (θ : Ω) = θ.num := by exact_mod_cast Rat.den_mul_eq_num θ
     rw [← this]; ring))
   rw [eval_map_eq] at h0
   rw [eval_map_eq, eval_map_eq]
-  simp only [map_add, map_neg, map_mul, eq_intCast, map_intCast, map_natCast, Int.cast_natCast] at h0
+  simp only [map_add, map_neg, map_mul, eq_intCast, map_intCast, map_natCast] at h0
   have h1 : (θ.den : ℂ) * (θ : ℂ) = θ.num := by exact_mod_cast Rat.den_mul_eq_num θ
   have h2 : (θ.den : ℂ) ≠ 0 := by exact_mod_cast θ.den_ne_zero
   rw [eq_ratCast]

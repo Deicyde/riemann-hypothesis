@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeadLApply
-import Development.AbelianVarietyTheory.Definitions.Divisors.LineSCShortExact
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ReprEqZeroOfCardNe
 
 set_option autoImplicit false
@@ -46,12 +45,12 @@ theorem mem_span_of_isType {n : ℕ} {η : Alt n} (h : IsType 1 1 η) :
 theorem pull_headL_dz {n : ℕ} (a : Fin n) :
     pull (headL n) (dz a) = dz a.castSucc ∧ pull (headL n) (dzb a) = dzb a.castSucc := by
   rw [(pull_dz _ a).1, (pull_dz _ a).2]
-  simp [headL_apply, coordVec, EuclideanSpace.single_apply]
+  simp [headL_apply, coordVec]
 
 theorem pull_fibL_castSucc {n : ℕ} (a : Fin n) :
     pull (fibL n) (dz a.castSucc) = 0 ∧ pull (fibL n) (dzb a.castSucc) = 0 := by
   rw [(pull_dz _ _).1, (pull_dz _ _).2]
-  simp [fibL_apply, EuclideanSpace.single_apply, Fin.castSucc_ne_last]
+  simp [fibL_apply, Fin.castSucc_ne_last]
 
 theorem pull_fibL_last {n : ℕ} :
     pull (fibL n) (dz (Fin.last n)) = dz 0 ∧ pull (fibL n) (dzb (Fin.last n)) = dzb 0 := by

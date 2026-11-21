@@ -1,8 +1,7 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.LocalHermitianForms.NormOneIsCoboundaryUnramifiedQuadratic
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.LocalHermitianForms.FixedPointCriteria.FixMlIff
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.LocalHermitianForms.LocalOrbitCounts.HsNE
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.LocalHermitianForms.LocalOrbitCounts.HsLaw
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.LocalHermitianForms.LocalOrbitCounts.NonsqMul
 import Development.AutomorphicArithmetic.AutomorphicVarieties.BuildingsResidueChars.CompactTorusUnitsEqTopOfNonsplit
 import Development.AutomorphicArithmetic.AutomorphicVarieties.BuildingsResidueChars.EvenValuationNormCompactUnitsOfSplit
 import Development.AutomorphicArithmetic.AutomorphicVarieties.BuildingsResidueChars.FinsumQuotientNormsOfNonsplit
@@ -13,6 +12,7 @@ import Development.AutomorphicArithmetic.AutomorphicVarieties.BuildingsResidueCh
 import Development.AutomorphicArithmetic.AutomorphicVarieties.BuildingsResidueChars.RelIndexStabilizerSuccEqCardResidueField
 import Development.AutomorphicArithmetic.AutomorphicVarieties.BuildingsResidueChars.RelIndexStabilizerLevelOneOfIsSquareUnit
 import Development.AutomorphicArithmetic.AutomorphicVarieties.BuildingsResidueChars.IsSquareSqSubFourIffIsSquareUnit
+import Mathlib.Data.Int.Star
 
 open QuadraticAlgebra UpperTheory.V.Z.Sym UpperTheory.V.Z.Sym.Loc
 
@@ -168,7 +168,7 @@ theorem UpperTheory.V.Z.Sym.Loc.pKappa :
       have e3 : ((PS.nU z : Kˣ) : K) ^ 2 * (QuadraticAlgebra.norm ((z ^ 2 * 1 * b⁻¹ : (Etau K τ)ˣ) : Etau K τ))⁻¹
           = algebraMap O K π := by
         rw [← PS.nU_val, ← hnb, ← PS.nU_val]
-        simp only [map_mul, map_pow, map_one, mul_one, map_inv, Units.val_mul, Units.val_pow_eq_pow_val,
+        simp only [map_mul, map_pow, mul_one, map_inv, Units.val_mul, Units.val_pow_eq_pow_val,
           Units.val_inv_eq_inv_val]
         field_simp
       rwa [e3] at h3

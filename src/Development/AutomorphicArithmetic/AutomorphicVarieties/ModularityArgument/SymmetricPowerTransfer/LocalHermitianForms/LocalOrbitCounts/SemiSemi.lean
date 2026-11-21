@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.LocalHermitianForms.ScalingExistence.ExistsScale
+import Mathlib.RingTheory.PicardGroup
 
 open QuadraticAlgebra UpperTheory.V.Z.Sym UpperTheory.V.Z.Sym.Loc Matrix
 
@@ -101,7 +104,7 @@ private def sigA : EL Δ τ →ₐ[O] EL Δ τ where
   map_one' := by ext <;> simp [sigL, QuadraticAlgebra.re_one, QuadraticAlgebra.im_one]
   map_mul' := sg_mul
   map_zero' := by ext <;> simp [sigL]
-  map_add' x y := by ext <;> simp [sigL, add_comm]
+  map_add' x y := by ext <;> simp [sigL]
   commutes' r := by
     rw [IsScalarTower.algebraMap_apply O (Lsq K Δ) (EL Δ τ), IsScalarTower.algebraMap_apply O K (Lsq K Δ)]
     ext <;> simp [sigL]
@@ -292,7 +295,7 @@ theorem UpperTheory.V.Z.Sym.Loc.finU :
   obtain ⟨b1, N, hN, b2⟩ := core h hd S h1 h2
   let col : Y → Fin 3 → Sp Δ τ := fun y j => P.symm ((y.1 : Matrix (Fin 3) (Fin 3) (Lsq K Δ)) *ᵥ Pi.single j 1)
   have hcol : ∀ y j, col y j ∈ S y := fun y j => ⟨Pi.single j 1, fun i => by
-    by_cases hij : i = j <;> simp [Pi.single_apply, hij, isIntegral_one, isIntegral_zero], P.apply_symm_apply _⟩
+    by_cases hij : i = j <;> simp [hij, isIntegral_one, isIntegral_zero], P.apply_symm_apply _⟩
   choose z hz using fun y : Y => tor_bound h hd.reg N (fun p : Bool × Fin 3 => cmp p.1 (col y p.2).2)
     fun p q => b2 y _ (hcol y p.2) _ (hcol y q.2) p.1 q.1
   obtain ⟨M, hM, hb⟩ := Bd.fin (κ := Fin 3) fun i =>
@@ -304,6 +307,6 @@ theorem UpperTheory.V.Z.Sym.Loc.finU :
   obtain ⟨x, hx, k, hk, e⟩ := hs (ι (z ⟨y, hy⟩) * y) fun i j => by
     have := hb (i, ⟨y, hy⟩, j)
     simp only [LinearMap.comp_apply, LinearMap.proj_apply, LinearEquiv.coe_coe, hP.tor, col, P.apply_symm_apply,
-      mulVec_mulVec, mulVec_single_one] at this
+      mulVec_single_one] at this
     exact this
   exact ⟨(z ⟨y, hy⟩)⁻¹, x, hx, k, hk, by rw [map_inv, mul_assoc, ← e, inv_mul_cancel_left]⟩

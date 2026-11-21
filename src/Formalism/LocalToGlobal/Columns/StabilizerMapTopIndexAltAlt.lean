@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.RecChainYKmap
 import Formalism.LocalToGlobal.Columns.StabilizerMapMaximalIndex
 

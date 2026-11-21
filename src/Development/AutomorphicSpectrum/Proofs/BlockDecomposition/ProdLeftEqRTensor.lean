@@ -1,5 +1,4 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.WittExactSequences.IsCompl
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SmulSmulMemRange
 
 open TensorProduct CrystallineSemistableComparison.D
@@ -51,7 +50,7 @@ theorem mv_prod : ∀ (p : ℕ) [Fact p.Prime] (A : Type) [CommRing A](B₁ : Ty
       intro t
       induction t with
       | zero => simp
-      | tmul b k => simp [ρ, TensorProduct.sub_tmul]
+      | tmul b k => simp [ρ]
       | add x y hx hy =>
         simp only [map_add, hx, hy]
         abel

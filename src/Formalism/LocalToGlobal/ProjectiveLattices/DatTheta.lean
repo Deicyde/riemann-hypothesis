@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Lemmata.FirstBlockLemmaH.Imports
 import Lemmata.GeneralBFactThirdVariant.Imports
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.RingTheory.SimpleRing.Principal
 
 noncomputable section
 

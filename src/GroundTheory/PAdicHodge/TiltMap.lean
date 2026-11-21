@@ -1,9 +1,8 @@
-import Mathlib
-import GroundTheory.PAdicHodge.PerfectoidField
-import GroundTheory.PAdicHodge.TiltValuation
+import BuildAid.Leniency.Variable
 import GroundTheory.PAdicHodge.TiltField
-import GroundTheory.PAdicHodge.KerTheta
 import GroundTheory.PAdicHodge.KerFontaineThetaCompFrobeniusEquivSymmPow
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
 set_option maxSynthPendingDepth 1
 
 noncomputable section

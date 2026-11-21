@@ -1,4 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.BesselHermitianTheta.DefsReal
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.L2.Theta Finset

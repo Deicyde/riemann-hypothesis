@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.DyadicStableLattices.AlgebraMapMkO
+import Mathlib.Data.Int.Star
+import Mathlib.NumberTheory.NumberField.ClassNumber
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 

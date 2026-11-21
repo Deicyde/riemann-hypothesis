@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DelOperatorAtDbarOperatorAtLeibnizOfCommute
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFormOneAddMulSmul
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DdcFormLocFormChernFormula
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DelDbarAdditiveComplexLinearOne
@@ -8,8 +8,8 @@ import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HolAtlasIsFormPullb
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DelDbarCommPullbackOfSmoothDelDbar
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PullbackPreservesFormType
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.BasSingleMulSelf
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsConjFsBasisOfUnitary
 import Development.AbelianVarietyTheory.Definitions.Divisors.CupPair
+import Development.AbelianVarietyTheory.Proofs.SatakeParameters.IsTorusActionRot
 
 set_option autoImplicit false
 

@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.ConnPhiExtensionGeneratorEqZeta
+import Mathlib.GroupTheory.SemidirectProduct
+import Mathlib.RepresentationTheory.Invariants
 
 noncomputable section
 

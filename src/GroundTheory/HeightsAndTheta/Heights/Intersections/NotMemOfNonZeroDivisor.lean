@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Intersections.ExistsFunFieldMulEq
 import GroundTheory.HeightsAndTheta.Heights.Intersections.ArithVarZero
 import GroundTheory.HeightsAndTheta.Heights.Intersections.NotIsHorizontalOfDimOne
+import Mathlib.RingTheory.LocalProperties.Reduced
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.Inter
@@ -35,7 +37,7 @@ theorem isMultiHomog_X_single [DecidableEq K] (k : K) (i : ι k) :
     simp [Finsupp.single_apply]
   · have : ∀ j : ι k', (⟨k, i⟩ : Σ k, ι k) ≠ ⟨k', j⟩ := fun j e => h (congrArg Sigma.fst e).symm
     classical
-    simp [Finsupp.single_apply, this, h, Pi.single_apply]
+    simp [h]
 
 def formSub (P : Ideal (MRing ι)) : Submonoid (MRing ι ⧸ P) :=
   Submonoid.closure {y | ∃ (v : MRing ι) (a : K → ℕ), IsMultiHomog v a ∧ v ∉ P ∧ Ideal.Quotient.mk P v = y}

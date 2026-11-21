@@ -1,9 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.WeightAlgebra
-import Formalism.SharpRestriction.Divisibility.IntegralModelsLocalData
-import Formalism.SharpRestriction.Divisibility.BoundaryLocalData
-import Formalism.SharpRestriction.Divisibility.WeightThresholdDefs
-import Formalism.SharpRestriction.Divisibility.AdmissibleRank.LogDiscriminantLeSquareSizeFamily
 
 namespace Formalism.MainNotions.DIV
 

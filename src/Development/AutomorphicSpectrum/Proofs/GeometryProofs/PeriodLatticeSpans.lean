@@ -1,15 +1,14 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ExponentialFamilyPeriods
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsHodgeGram
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Uniformization.PointEqOfSubsingleton
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExponentialSurjectiveSemiabelianStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsLinearLiftOfAdditiveFamily
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.ExistsIsClosedEmbeddingOfAffine
-import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.IsProjOverIffIsProperAndExistsIsAmpleLB
-import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.ExistsSymmetricVeryAmple
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.TorusExtensionPointsDivisible
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.IsHolToOfComponents
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.HolomorphicFamilies.HolPairA
+import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.HomBaseChangeBijectiveOfLeNilradical
+import Mathlib.Topology.Algebra.Group.OpenMapping
+import Mathlib.Topology.Baire.LocallyCompactRegular
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Fl GlobalTheory.CompanionTheory.Ar.Flat Filter Topology Metric
@@ -318,7 +317,7 @@ theorem isHolTo_torusExp : IsHolTo Set.univ (fun w => (torusExp (X := X) β w).l
     refine ReciprocityTheory.ChartRestriction.G.PullbackSections.isHolTo_of_affine (T := Spec (torusRing ZU X)) isOpen_univ fun r => ?_
     obtain ⟨α, rfl⟩ : ∃ α, r = (Scheme.ΓSpecIso (torusRing ZU X)).inv.hom α :=
       ⟨(Scheme.ΓSpecIso (torusRing ZU X)).hom.hom r, by simp⟩
-    simp only [valAt'_torusFst]
+    simp only
     exact (differentiable_torusExp_coord β α).differentiableOn.congr fun w _ => valAt'_torusFst _ α
   have h2 : IsHolTo (V := Fin d → ℂ) Set.univ (fun _ => 𝟙 (Sp ℂ)) :=
     fun U f => ⟨by simp only [Set.mem_univ, true_and]; exact isOpen_const, differentiableOn_const _⟩

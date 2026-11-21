@@ -1,6 +1,11 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.HolomorphicFamilies.ModelGamA
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.ModeHalfStatementPfB
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.PairUnfoldPfA
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.Signature
+import Std.Tactic.BVDecide.Normalize.Prop
 
 set_option autoImplicit false
 
@@ -169,7 +174,7 @@ theorem scalar_step {Ψ : Finset (E →+* ℂ)} (τ₀ : Ψ) (g : Matrix (Fin r)
     have h := hall (Pi.single a 1 + Pi.single b 1) a b
     rw [Matrix.mulVec_add] at h
     simp only [Pi.add_apply, hcolv] at h
-    simp [Pi.single_apply, hab, Ne.symm hab, hoff a b hab, hoff b a (Ne.symm hab)] at h
+    simp [hab, Ne.symm hab, hoff a b hab, hoff b a (Ne.symm hab)] at h
     linear_combination h
   refine ⟨M i0 i0, ?_⟩
   ext a b

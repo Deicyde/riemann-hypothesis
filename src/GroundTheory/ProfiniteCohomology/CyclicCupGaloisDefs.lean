@@ -1,8 +1,7 @@
-import Mathlib
-import GroundTheory.ProfiniteCohomology.CyclicCupDefs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.Characters
 import GroundTheory.ProfiniteCohomology.CupProducts
-import GroundTheory.ProfiniteCohomology.ContinuousCochains.Functoriality
 import GroundTheory.ProfiniteCohomology.GaloisModules.Discrete
 set_option maxSynthPendingDepth 1
 

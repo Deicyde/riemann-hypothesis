@@ -1,5 +1,6 @@
-import Mathlib
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ParahoricIndexCount.Development
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.PeriodIntegrals.ParahoricIdxZ
 
 noncomputable section
 
@@ -158,7 +159,7 @@ theorem cong_blockCond (hϖ : ϖ ∈ O) (hϖ0 : ϖ ≠ 0) (hloc : Formalism.Doub
   · intro i j
     show (g : Matrix (Fin (a + t)) (Fin (a + t)) F) (finSumFinEquiv (Sum.inl i)) (finSumFinEquiv (Sum.inr j)) ∈ O
     rw [hG]
-    exact O.add_mem (by simp [Matrix.one_apply, O.zero_mem]) (O.mul_mem hϖ (hXO _ _))
+    exact O.add_mem (by simp [O.zero_mem]) (O.mul_mem hϖ (hXO _ _))
   · simp only [Formalism.DoubleCosetMeasures.IIset, Set.mem_setOf_eq]
     intro i j
     refine ⟨_, hXO (finSumFinEquiv (Sum.inr i)) (finSumFinEquiv (Sum.inl j)), ?_⟩

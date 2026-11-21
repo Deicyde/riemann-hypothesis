@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGCoreGTSSCut
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGCoreGTCLocalCut
 

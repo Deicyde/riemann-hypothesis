@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.RootWeights.LaurentCoefficientsMemProperty
+import Formalism.SharpRestriction.GrowthBounds.RootWeights.BinomialStableContainsComponents
+import Mathlib.Order.Interval.Finset.Box
 
 noncomputable section
 

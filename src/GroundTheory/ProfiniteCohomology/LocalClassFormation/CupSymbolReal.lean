@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.LocalClassFormation.CupSymbol
-import GroundTheory.ProfiniteCohomology.CyclicCupBrauer
-import GroundTheory.ProfiniteCohomology.CyclicCup
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

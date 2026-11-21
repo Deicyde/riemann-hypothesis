@@ -1,6 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.HermSysHypOneLeLambdaZero
-import ReciprocityTheory.SemistableReduction.TorusL2CauchyInequality
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open NumberField MvPolynomial ReciprocityTheory.MultiplicativeHeights ReciprocityTheory.GeometryOfNumbersTheory
 open GlobalTheory GlobalTheory.ChowHt GlobalTheory.Adelic GlobalTheory.HermTools GlobalTheory.HilbertSamuel GlobalTheory.HSChoice GlobalTheory.HSShort
 
@@ -36,7 +38,7 @@ theorem coeff_det_eq {F τ : Type} [Field F] {d : ℕ} (P : Matrix (Fin d) (Fin 
   split_ifs with h
   · subst h
     refine Finset.sum_congr rfl (fun σ _ => ?_)
-    simp only [Units.smul_def, coeff_smul, coeff_monomial, if_pos rfl]
+    simp only [Units.smul_def, coeff_smul, coeff_monomial]
     rfl
   · refine Finset.sum_eq_zero (fun σ _ => ?_)
     simp only [Units.smul_def, coeff_smul, coeff_monomial, if_neg h, smul_zero]

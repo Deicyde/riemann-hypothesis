@@ -1,16 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ScholzeWeinsteinB
-import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.Definitions.Divisors.ChernOn
-import Development.AbelianVarietyTheory.Definitions.Divisors.NefFibOfIsNef
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.EqOfIsometricTrivShift
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PullbackSmoothFunctionCInfAt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArithmeticDegreeMixedLinearRoot
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsX
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LinAddSmul
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VanishRealOfVanishInt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousOfSmooth
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlatModelNumeratorBoundStatement
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Pj Formalism.BasicNotions.TH Formalism.L2.Theta ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.FD GlobalTheory.AllWt GlobalTheory.CompHt GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.Mean4 GlobalTheory.Mean4O ReciprocityTheory.AnForm ReciprocityTheory.AnForm.M
 open scoped ENNReal Classical
@@ -29,9 +19,9 @@ theorem sum_gen {D : D7} {Y : Formalism.BasicNotions.DV.ShimX D.what₂.Tau} (T 
     simp only [Finset.sum_apply, Pi.smul_apply, smul_eq_mul]
     rw [Fintype.sum_prod_type, Finset.sum_eq_single σ, Finset.sum_eq_single i]
     · simp
-    · intro b _ hb; simp [Pi.single_apply, hb.symm]
+    · intro b _ hb; simp [hb.symm]
     · simp
-    · intro b _ hb; simp [Pi.single_apply, Ne.symm hb]
+    · intro b _ hb; simp [Ne.symm hb]
     · simp
 
 theorem lin_elim {ι : Type} [Fintype ι] (b : ι → ℝ) :

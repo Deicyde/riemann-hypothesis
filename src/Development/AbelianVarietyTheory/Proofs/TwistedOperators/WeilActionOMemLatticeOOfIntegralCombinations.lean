@@ -1,19 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.TwistPlacesOffPrimeQZero
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
-import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.NormSmall
-import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.DictAt
-import Development.AbelianVarietyTheory.Statements.HeckeThetaIntegrals.ThetaIntegralsAgree
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.CuspAlongSmoothRows
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ToricSymbols
-import Development.AbelianVarietyTheory.Definitions.Foundations.NormSumPairRankZeroOfCurveCoordNorm
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.FrT
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SrcLat
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.CsSpan
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.CsApprox
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.SmulMemLatO
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.SelfDualSplitComponentIsLatticeStabilizerEq
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.UnitaryPairMapsCompletedHomLatticeOntoTranslate
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.DIV
 open IsDedekindDomain NumberField GlobalTheory.ChiGrid GlobalTheory.FunObj GlobalTheory.RowTest GlobalTheory.RowClaim
@@ -80,7 +66,7 @@ theorem act_gen_apply (S T : HSp D) (g : Formalism.L2.Theta.GA D S) (h : Formali
         ∑ m, cA D ((Formalism.L2.Theta.mt S g *ᵥ fun k => incA D (s k)) m) * incA D (S.gram m j)) := by
   rw [← row_move]
   simp only [actO, Matrix.mul_apply, Matrix.of_apply, GlobalTheory.LatMoveStd.gen_eq]
-  simp only [ Matrix.mul_apply, Matrix.of_apply, GlobalTheory.LatMoveStd.gen_eq, Matrix.mulVec, dotProduct,
+  simp only [ Matrix.mulVec, dotProduct,
     Finset.sum_mul, Finset.mul_sum]
   refine Finset.sum_congr rfl fun _ _ => Finset.sum_congr rfl fun _ _ => ?_
   ring

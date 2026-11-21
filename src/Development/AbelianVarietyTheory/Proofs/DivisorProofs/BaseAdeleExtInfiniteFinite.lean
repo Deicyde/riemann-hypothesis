@@ -1,9 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaActionExists
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAt
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -117,7 +114,7 @@ theorem spl_add {e f : AF F} (hef : e * f = 0) (A : Matrix (Fin n) (Fin n) (AE F
   have e3 : (1 - e) * (1 - f) = 1 - (e + f) := by linear_combination hef
   have e3' : (1 - f) * (1 - e) = 1 - (e + f) := by linear_combination hef
   simp only [spl, Matrix.add_mul, Matrix.mul_add, Matrix.smul_mul, Matrix.mul_smul, smul_add, smul_smul,
-    Matrix.one_mul, Matrix.mul_one, hef, hfe, e1, e1', e2, e2', e3, e3', zero_smul, zero_add, add_smul]
+    Matrix.one_mul, Matrix.mul_one, hfe, e1', e2', e3', zero_smul, zero_add, add_smul]
   abel
 
 def locU (v : Pl F) : UA σ J →* UA σ J := splU (idem {v}) (idem_mul_self {v})

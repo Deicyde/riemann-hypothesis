@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.LeafChartRing
 import Development.AutomorphicArithmetic.CommutativeAlgebra.CechNerveRepresentableDisjoint
 import Development.AutomorphicArithmetic.CommutativeAlgebra.CechNerveRestrictOpen

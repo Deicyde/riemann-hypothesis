@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.OfNatTrans
+import Mathlib.CategoryTheory.Monoidal.Mon
+import Mathlib.Tactic.ENatToNat
 
 set_option backward.isDefEq.respectTransparency false
 

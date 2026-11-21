@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.NumberFieldFamilies.ThetaCG
-import Formalism.LocalToGlobal.NumberFieldFamilies.ThetaCR
+import Formalism.LocalToGlobal.BesselHermitianTheta.TiedBessel
 
 noncomputable section
 

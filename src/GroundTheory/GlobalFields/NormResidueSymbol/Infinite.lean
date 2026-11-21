@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.InfiniteNormIndex.LocalSymbol
-import GroundTheory.GlobalFields.IdeleGroups.LocalNormGroups
 import GroundTheory.GlobalFields.NormResidueSymbol.RangeFiniteLocalNormLeKerLocalSymbol
 
 namespace GroundTheory.Global

@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.SandwichH1Classes.PerturbationForEveryTwist
+import Formalism.WachLatticeTwists.HodgeTateChains.HodgeTateFiltrations.UnitCongruenceGivesPerturbationStatement
 
 noncomputable section
 
@@ -18,7 +20,7 @@ lemma map_scalar {ℓ : ℕ} [Fact ℓ.Prime] {OC : Type} [CommRing OC] [Algebra
     (e : OC ≃ₐ[ℤ_[ℓ]] OC) :
     (((ℓ : OC)) • (1 : Matrix (Fin r) (Fin r) OC)).map e = (ℓ : OC) • (1 : Matrix (Fin r) (Fin r) OC) := by
   ext i j
-  by_cases h : i = j <;> simp [Matrix.one_apply, h]
+  by_cases h : i = j <;> simp [h]
 
 theorem interInv : StatInterInv := by
   intro ℓ _ G _ OC _ _ actO r S S' Y Y' hℓ hY h1 h2 g

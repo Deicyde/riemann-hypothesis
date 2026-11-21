@@ -1,14 +1,9 @@
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.IsPrincipalMapOfAlgHom
-import Development.AbelianVarietyTheory.PublishedTheorems.PublishedFoundations.NonemptyAlgHomOfIsRayOfDvd
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsUniqueHcharOfFiniteOrder
-import Development.AbelianVarietyTheory.PublishedTheorems.WeberRayClassFields.WeberRayFieldSt
-import Formalism.SharpRestriction.GlobalSchurBounds.ThickPlacesCorollaryOfAnyTranslate
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ThetaChr
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TiedSKOfStd
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsDetLiftLocal
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LowerMapTie
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LowerMapTwGen
-import Formalism.LocalToGlobal.HilbertRowConditions.RowPinMin
 open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.Inhab Formalism.L2.Host GlobalTheory.EX GlobalTheory.EX.OB GlobalTheory.Mem GlobalTheory.Mem.Col2 GlobalTheory.Mem.Top GlobalTheory.Mem.Top.GroupRetwisting GlobalTheory.Mem.Top.Bl NumberField IsDedekindDomain
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 attribute [local instance] GlobalTheory.Mem.Col2.starE
@@ -66,7 +61,7 @@ theorem GlobalTheory.Mem.Top.Bl.tiedSK_at_witnesses : ∀ (hL : GlobalTheory.Pub
     rw [h1, one_mul]
     have hY := hTw.1.eY u μ i hi
     rw [GlobalTheory.Mem.Col2.TC.KerSK.ch_cast he] at hY
-    simp only [twYS, Equiv.trans_apply, hY, Equiv.refl_symm, Equiv.refl_apply, eYS]
+    simp only [twYS, Equiv.trans_apply, hY, eYS]
     split_ifs with h
     · exact congrFun ((hC u).eY i hi h y).symm τ
     · exact congrFun ((hC u).eYC i _ _ y).symm τ

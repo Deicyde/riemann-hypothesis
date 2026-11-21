@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.TateTwists.EtaleLocallyExistsPrimitiveRootOfUnityOfInvertib
+import Mathlib.RingTheory.Etale.StandardEtale
 
 open CategoryTheory Limits AlgebraicGeometry Opposite GlobalTheory.EtC Polynomial
 

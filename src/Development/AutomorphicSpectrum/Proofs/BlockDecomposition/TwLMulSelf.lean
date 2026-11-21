@@ -1,7 +1,11 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.RealDescent.RealLeviDescent.InjectiveDecompositionAction
-import CompanionTheory.RealGroups.DiscreteSeries.DiscreteSeriesClassification.DiscreteSeriesExhaustion.FarRegularity.LKTExists
-import CompanionTheory.HarishChandraModules.LowKTypeMultiplicity.EigenspaceCyclicDensity.CreationOperators.DifferentialBoundedSupport
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.RealDescent.RealLeviDescent.IsLevPairA
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
+import Mathlib.Tactic.ENatToNat
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Finset PositivityTheory.RgBcC.RealD
 open CompanionTheory.D.LK (Pos key)
@@ -187,13 +191,13 @@ theorem liftL_annL (T : Module.End ℂ V) (l : Lt n) :
     ((liftL n T : Module.End ℂ (Cq n V)) * annL l : Module.End ℂ (Cq n V)) = annL l * (liftL n T : Module.End ℂ (Cq n V)) := by
   refine LinearMap.ext fun x => funext fun A => ?_
   simp only [Module.End.mul_apply, liftL_apply, annL_apply]
-  split_ifs <;> simp [liftL_apply]
+  split_ifs <;> simp
 
 theorem liftL_creL (T : Module.End ℂ V) (l : Lt n) :
     ((liftL n T : Module.End ℂ (Cq n V)) * creL l : Module.End ℂ (Cq n V)) = creL l * (liftL n T : Module.End ℂ (Cq n V)) := by
   refine LinearMap.ext fun x => funext fun A => ?_
   simp only [Module.End.mul_apply, liftL_apply, creL_apply]
-  split_ifs <;> simp [liftL_apply]
+  split_ifs <;> simp
 
 def adS (S : Lt n → Prop) (s : Bool) (p q : Fin n) : Module.End ℂ (Cq n V) :=
   open Classical in ∑ l : Lt n, ∑ k : Lt n, if S l then adCL s p q l k • (creL k * annL l) else 0

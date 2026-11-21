@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MeasAtOf
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.OneMeasureSizes
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneLeDimAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FundamentalDomainMeasureNeZeroStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FundamentalDomainMeasureNeTopStatement

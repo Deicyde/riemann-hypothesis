@@ -1,8 +1,9 @@
-import Mathlib
-import Formalism.CharacterColumnKernels.StatementRho
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.GaloisCohomology.LocalTateDualityK
-import ReciprocityTheory.Hypotheses.GalCohDefs
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LevRepZApply
+import Formalism.CharacterColumnKernels.Statement
+import Mathlib.RingTheory.LocalProperties.Reduced
 open ReciprocityTheory.Gal
 
 noncomputable section

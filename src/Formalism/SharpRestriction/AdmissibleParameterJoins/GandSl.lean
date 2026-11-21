@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.LocalQuadraticParts
 import Formalism.SharpRestriction.GrowthBounds.CornerGLContinuity
 import Formalism.SharpRestriction.GlobalTheoremInputs

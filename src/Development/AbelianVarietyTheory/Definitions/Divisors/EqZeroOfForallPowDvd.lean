@@ -1,6 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.GhostFrobenius
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.FormalCoboundarySmul
+import Development.AbelianVarietyTheory.Definitions.Divisors.XiMulNu
 
 set_option autoImplicit false
 

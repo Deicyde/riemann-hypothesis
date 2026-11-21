@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CharacterGerms.CoefficientIdentityOfCurve
 import Formalism.LocalToGlobal.CharacterGerms.FrobSerSt
 

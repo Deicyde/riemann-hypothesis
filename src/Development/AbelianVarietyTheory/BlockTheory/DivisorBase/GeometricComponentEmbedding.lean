@@ -1,4 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.PushInvertible
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsLieBasis
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.EigLatBasis
@@ -101,7 +103,7 @@ example {g : ℕ} (Hm : Matrix (Fin g) (Fin g) ℂ) (z : Fin 0 → (Fin g → �
   simp [gramSq]
 
 example (a : ℂ) : gramSq (1 : Matrix (Fin 1) (Fin 1) ℂ) (fun _ : Fin 1 => fun _ => a) = Real.pi * ‖a‖ ^ 2 := by
-  simp [gramSq, dotProduct, Complex.mul_conj, Complex.normSq_eq_norm_sq, ← Complex.ofReal_pow]
+  simp [gramSq, dotProduct, Complex.mul_conj, Complex.normSq_eq_norm_sq]
 
 example (Y : Model Xo c (RingHom.id c.F)) (U : (Xo.XF c).Opens) (τ : E →+* ℂ) :
     IsDetSection Y U τ (fun _ _ _ _ _ => 0) :=

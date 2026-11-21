@@ -1,12 +1,8 @@
-import Mathlib
-import ReciprocityTheory.DualLattices.TowerZeroSurjective
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.DualLattices.LinPairStatement
-import ReciprocityTheory.DualLattices.SubMemOfCompat
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ChartPullbacks.UniversalCharts.LePreimageOfNil
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.RosVal
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SemiabelianSchemes.Biextensions.GenericFiberCubeInclusion
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PlaceDivisors.AlWellDefSt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.Clauses
 
 noncomputable section
 
@@ -97,7 +93,7 @@ theorem grpPullback_prod_firstLaw_pow {T : Over S'} (a b c : T ⟶ G') {U : Type
     · exact (MonObj.comp_mul _ _ _).trans (by simp [x3])
     · simp [x3]
   have e₁ : lift A (lift B C) ≫ lift (x3 G 0) (x3 G 2) = lift A C := by simp [x3, comp_lift]
-  have e₂ : lift A (lift B C) ≫ lift (x3 G 1) (x3 G 2) = lift B C := by simp [x3, comp_lift]
+  have e₂ : lift A (lift B C) ≫ lift (x3 G 1) (x3 G 2) = lift B C := by simp [x3]
   rw [← e₀, ← e₁]
   exact congrArg₂ (· * ·) rfl (congrArg (fun q => (h q.left)⁻¹) e₂)
 

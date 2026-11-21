@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NablaSchur
-import Formalism.GradedWeylDivisibility.DualWeylDominanceOf
 import Formalism.GradedWeylDivisibility.FinalC
+import Mathlib.Algebra.AffineMonoid.Basic
 
 open MvPolynomial Formalism.GradedWeylDivisibility TensorProduct
 

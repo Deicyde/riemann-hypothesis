@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.RealPlaces.OrderTwoTate
 import GroundTheory.ProfiniteCohomology.PoincareDuality.Torsion
-import GroundTheory.ProfiniteCohomology.GaloisCohomology.Kummer
 set_option maxSynthPendingDepth 1
 
 noncomputable section

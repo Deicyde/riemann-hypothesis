@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SiegelReframe
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ChSingle
 import Development.AbelianVarietyTheory.Proofs.ThetaLawProofs.NormLeTsumOfCubeFourierCoeffLe
+import Mathlib.Topology.Sheaves.Presheaf
 open Matrix MeasureTheory GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe GlobalTheory.FamilyFourier
 open scoped Real ContDiff
 
@@ -12,7 +12,7 @@ theorem norm_ch {g : ℕ} (n : Fin g → ℤ) (z : Fin g → ℂ) :
     ‖ch n z‖ = Real.exp (-(2 * π * ∑ i, (n i : ℝ) * (z i).im)) := by
   rw [ch, Complex.norm_exp]
   congr 1
-  simp [Complex.mul_re, Complex.re_sum, Complex.im_sum, Finset.mul_sum]
+  simp [Complex.mul_re, Complex.re_sum, Finset.mul_sum]
 
 theorem coef_eq_shift {E : Type} {g : ℕ} (h : Pt E g → ℂ) (b : E)
     (hd : Differentiable ℂ (fun z => h (b, z)))

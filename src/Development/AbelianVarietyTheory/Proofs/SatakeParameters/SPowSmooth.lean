@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.HeckePowOne
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.GenericModelComplexSmooth
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.SmoothOfRelativeDimensionFibrePower

@@ -1,7 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.VolumeEquality.RootBranches
 import Development.WeilBound.CoreStatements.VolumeEquality.CoverRootsAlg
 import Development.WeilBound.CoreStatements.VolumeEquality.CoverRootsSch
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.AbProj
+import Development.AutomorphicSpectrum.Proofs.GeometryProofs.GenPtSpecializesOfSpecializes
 
 noncomputable section
 

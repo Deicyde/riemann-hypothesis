@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.StatementsFlagRatioTrdeg
 import GroundTheory.HeightsAndTheta.Heights.Intersections.PFlagPivotAlgIndep
 import GroundTheory.HeightsAndTheta.Heights.Intersections.PFlagPivotIdentity
+import Mathlib.RingTheory.PicardGroup
 set_option maxSynthPendingDepth 1
 
 noncomputable section

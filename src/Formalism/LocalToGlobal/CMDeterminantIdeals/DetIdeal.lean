@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.SemistableReduction.LatSemiSt
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.RingTheory.FractionalIdeal.Norm
 
 noncomputable section
 

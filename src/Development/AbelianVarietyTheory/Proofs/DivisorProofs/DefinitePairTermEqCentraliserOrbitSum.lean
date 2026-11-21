@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.TraceDefinitePairsEqAutomorphicTrace
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlatZeroFromResolutionAndGaga
 open Matrix NumberField GlobalTheory.LKTrip GlobalTheory.LKRes GlobalTheory.LKMid GlobalTheory.LKCount
 open scoped TensorProduct Classical
@@ -27,12 +27,12 @@ theorem finsum_dc_translate {H : Type} [Group H] (A B K : Subgroup H) (u : H)
       left_inv := fun q => by
         induction q using Quotient.inductionOn' with
         | h x =>
-          simp only [Quotient.map'_mk'', inv_mul_cancel_left, mul_inv_cancel_left]
+          simp only [Quotient.map'_mk'', inv_mul_cancel_left]
           rfl
       right_inv := fun q => by
         induction q using Quotient.inductionOn' with
         | h x =>
-          simp only [Quotient.map'_mk'', inv_mul_cancel_left, mul_inv_cancel_left]
+          simp only [Quotient.map'_mk'', mul_inv_cancel_left]
           rfl }
   have hF : ∀ x y : H, DoubleCoset.mk B K x = DoubleCoset.mk B K y → S₂ x = S₂ y := fun x y hxy => by
     obtain ⟨b, hb, k, hk, rfl⟩ := (DoubleCoset.eq B K x y).1 hxy
@@ -102,7 +102,7 @@ theorem termAt_eq (P : DPair G) (hm : (P.γ, P.c) ∈ GlobalTheory.LKCx.grp G P.
   have hle := cent_le_grp P
   have e1 : ∀ w, GlobalTheory.LKCx.toAfF G P.β x t hx (Subgroup.inclusion hle w) = P.toAf x t hx w := fun w => rfl
   have e2 : ∀ w, P.toQr 1 z w = z⁻¹ * GlobalTheory.LKCx.toP1 G P.β (Subgroup.inclusion hle w) * z := fun w => by
-    simp [DPair.toQr, GlobalTheory.LKCx.toP1, carry, MulAut.conj_apply]
+    simp [DPair.toQr, GlobalTheory.LKCx.toP1, carry]
   have eg : Subgroup.inclusion hle P.self = ⟨(P.γ, P.c), hm⟩ := rfl
   have hj2g : GlobalTheory.LKCx.toP1 G P.β ⟨(P.γ, P.c), hm⟩ = inclG G 1 P.atP := rfl
   have hC := centralizer_eq P hm

@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.AlgebraMapOLInjective
 import ReciprocityTheory.SemistableReduction.AlgAll
+import Mathlib.RingTheory.DedekindDomain.PID
 
 namespace ReciprocityTheory.ChartRestriction.G.T0
 

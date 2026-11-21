@@ -1,10 +1,5 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.Antisymmetric.Statements
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterSt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.MultihomogeneousIdeals.ExistsUniqueStatement
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.HeckeSectionsIsotropicCommutatorPairingPower
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterNamed
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.KleimanNefness.KleimanSt
 import Development.AutomorphicSpectrum.Proofs.DivisibilityProofs.FlagShiftTotalPowerSumStatement
 
 noncomputable section
@@ -81,7 +76,7 @@ theorem deltaTerm_eq : ∀ (Ψ : Type) [Fintype Ψ] [DecidableEq Ψ] (N : ℕ) (
       rw [← tsum_mul_right]
       exact tsum_congr (fun n => by rw [hrank]; ring)
     simp only [deltaTerm, restTerm, hsum]
-    simp only [if_true, Nat.one_lt_ofNat, Nat.not_ofNat_le_one, if_false]
+    simp only [if_true, Nat.not_ofNat_le_one, if_false]
     field_simp
     ring
   · have h2 : 2 ≤ k := by omega

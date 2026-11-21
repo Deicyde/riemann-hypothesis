@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CombRSingleNil
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaIntegralRealLineDerivativeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaIntegralRealLineSmoothStatement
 

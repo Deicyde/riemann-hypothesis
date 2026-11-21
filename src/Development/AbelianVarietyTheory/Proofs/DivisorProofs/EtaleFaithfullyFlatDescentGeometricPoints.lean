@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.IsReducedAlgebraOfSmoothOfIsNoetherianRing
+import Mathlib.RingTheory.TensorProduct.IncludeLeftSubRight
 
 set_option autoImplicit false
 

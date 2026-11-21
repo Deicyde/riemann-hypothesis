@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LatticeBasics.HypothesesE
 
 noncomputable section

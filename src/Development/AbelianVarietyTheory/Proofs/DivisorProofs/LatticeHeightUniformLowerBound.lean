@@ -1,10 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoreConcl
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTransv
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLineReps
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeVectorContentIdealNormProductStatement
 open scoped TensorProduct NNReal Matrix
 open NumberField MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SiegelSet GlobalTheory.EisRes
@@ -24,7 +19,7 @@ theorem sq_le_of_left_inv (M N : Matrix (Fin n) (Fin n) ℂ) (hNM : N * M = 1) :
     conv_lhs => rw [ht]
     simp only [Matrix.mulVec, dotProduct]
     refine (norm_sum_le _ _).trans (le_of_eq ?_)
-    simp [norm_mul]
+    simp
   have h2 := Finset.sum_mul_sq_le_sq_mul_sq Finset.univ (fun j => ‖N i j‖) (fun j => ‖(M *ᵥ t) j‖)
   have h3 : ∑ j, ‖N i j‖ ^ 2 ≤ ∑ k, ∑ j, ‖N k j‖ ^ 2 + 1 := by
     have := Finset.single_le_sum (f := fun k => ∑ j, ‖N k j‖ ^ 2) (fun k _ => by positivity) (Finset.mem_univ i)

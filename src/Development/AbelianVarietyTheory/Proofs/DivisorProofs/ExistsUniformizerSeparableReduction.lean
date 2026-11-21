@@ -1,6 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.TensorProductAction
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CharpolyEqQuotientCharpolyPow
+import Mathlib.LinearAlgebra.Charpoly.BaseChange
+import Mathlib.NumberTheory.Padics.RingHoms
+import Mathlib.Tactic.Polynomial.Basic
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open scoped TensorProduct nonZeroDivisors
 open Polynomial

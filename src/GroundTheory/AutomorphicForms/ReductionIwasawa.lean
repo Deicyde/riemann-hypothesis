@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.ReductionHeight
 import GroundTheory.AutomorphicForms.Iwasawa
 import GroundTheory.AutomorphicForms.RealGroupsIwasawa

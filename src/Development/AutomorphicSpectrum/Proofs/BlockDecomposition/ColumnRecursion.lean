@@ -1,5 +1,5 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.FiniteTypeHarishChandra.SupportExistsAll
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PatternGroupStatementStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WhittakerSymmetryStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RootExchangeStatement
@@ -199,9 +199,9 @@ def xs {N : ℕ} (b k : Fin N) (hbk : b ≠ k) (s : K) : GL (Fin N) K where
     · subst h1
       by_cases h2 : j = k
       · subst h2
-        simp [Matrix.add_apply, Matrix.single_apply, Matrix.one_apply, hbk, hbk.symm]
-      · simp [Matrix.add_apply, Matrix.single_apply, Matrix.one_apply, hbk.symm, h2, Ne.symm h2]
-    · simp [Matrix.add_apply, Matrix.single_apply, h1, Ne.symm h1]
+        simp [Matrix.add_apply, hbk]
+      · simp [Matrix.add_apply, Matrix.one_apply, Ne.symm h2]
+    · simp [Matrix.add_apply, h1, Ne.symm h1]
   inv_val := by
     ext i j
     rw [one_add_single_mul]
@@ -209,9 +209,9 @@ def xs {N : ℕ} (b k : Fin N) (hbk : b ≠ k) (s : K) : GL (Fin N) K where
     · subst h1
       by_cases h2 : j = k
       · subst h2
-        simp [Matrix.add_apply, Matrix.single_apply, Matrix.one_apply, hbk, hbk.symm]
-      · simp [Matrix.add_apply, Matrix.single_apply, Matrix.one_apply, hbk.symm, h2, Ne.symm h2]
-    · simp [Matrix.add_apply, Matrix.single_apply, h1, Ne.symm h1]
+        simp [Matrix.add_apply, hbk]
+      · simp [Matrix.add_apply, Matrix.one_apply, Ne.symm h2]
+    · simp [Matrix.add_apply, h1, Ne.symm h1]
 
 theorem xs_neg {N : ℕ} (b k : Fin N) (hbk : b ≠ k) (s : K) : xs b k hbk (-s) = (xs b k hbk s)⁻¹ := by
   apply Units.ext
@@ -315,7 +315,7 @@ theorem patChar_xs_conj {N k a : ℕ} (hb : a + 1 < k) (p b q : Fin N) (hpv : (p
           simp only [cutE]
           rw [if_pos (by omega)]
         rw [hE, hF]
-        simp [hpb, hbk, hbk.symm]
+        simp [hpb, hbk]
       · rw [if_neg h1, if_neg h1, if_neg h2]
         have h1' : ¬ ((i : ℕ) = a ∧ (j : ℕ) = k) := fun h =>
           h1 ⟨Fin.ext (h.1.trans hpv.symm), Fin.ext (h.2.trans hqv.symm)⟩

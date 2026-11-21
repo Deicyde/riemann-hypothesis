@@ -1,9 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.BaseCupFormula
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.BaseCupGlobal
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.IsDiscreteRepResIntRepTrivGs
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.BaseClassIdele
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.BaseKummerDelta
+import GroundTheory.ProfiniteCohomology.RestrictedRamification.MkFiniteEmbeddingGlobalUniformizer
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

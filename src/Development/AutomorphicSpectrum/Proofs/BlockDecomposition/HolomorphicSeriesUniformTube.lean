@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.EisensteinSeries.SiegelEisensteinContinuation.StripEntire
+import Mathlib.Analysis.Complex.LocallyUniformLimit
 open Filter Topology
 
 namespace GlobalTheory.CompanionTheory.RgEisCross

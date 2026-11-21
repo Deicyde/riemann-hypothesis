@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.RadialGaugeOfGaugeIdentitySlices
-import Formalism.SharpRestriction.CuspSpanNormBounds.BlockEstimateTheorem
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.PoissonSummationDecay
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.PsdFormConjRewrite
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.DualCovolumeChangeOfVariables
@@ -1553,7 +1554,7 @@ theorem fsum_pair_coe (S : Finset W) (θ : W × W →₀ ℝ) (hθ : ∀ q ∈ �
     rw [Finsupp.sum]
     refine Finset.sum_subset h1 fun w _ hw => ?_
     rw [Finsupp.notMem_support_iff.1 hw, zero_mul]
-  rw [h2, Finset.sum_product, Fintype.sum_prod_type, Finset.sum_comm' (t' := S) (s' := fun _ => S) (by simp [and_comm])]
+  rw [h2, Finset.sum_product, Fintype.sum_prod_type, Finset.sum_comm' (t' := S) (s' := fun _ => S) (by simp)]
   rw [← Finset.sum_coe_sort S]
   refine Finset.sum_congr rfl fun y1 _ => ?_
   rw [← Finset.sum_coe_sort S]

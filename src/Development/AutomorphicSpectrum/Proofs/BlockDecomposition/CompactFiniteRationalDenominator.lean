@@ -1,8 +1,7 @@
-import Mathlib
-import Development.WeilBound.ThetaLifts.Reductions.SiegelCore
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.StabUpTo
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.CuspidalDiscreteness.Counting
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.ImportsSide
+import Development.AbelianVarietyTheory.Definitions.Foundations.OfInfProjInfMulOfFinProjFin
 open NumberField MeasureTheory Matrix Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SiegelSet GlobalTheory.CompanionTheory.CFin
 open Formalism.UG (cT)
 open GlobalTheory.Orb (archMat)

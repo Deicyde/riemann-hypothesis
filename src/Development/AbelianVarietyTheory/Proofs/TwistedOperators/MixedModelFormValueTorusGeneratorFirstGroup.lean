@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsPairingSingleNe
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.SumOpTransversal
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HeisenbergQuotientOpSumVacuumCommensurableSelfDuStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsHeisenbergInvariantLinearFormIsotropicVacuStatement
 open Matrix Formalism.UG GlobalTheory.Hk3 GlobalTheory.FinWeil GlobalTheory.SphTheta ValuativeRel Classical
@@ -45,7 +45,7 @@ theorem dTor_mul {σ : L →+* L} {ϖ : L} (hσϖ : σ ϖ = ϖ) (hϖ : ϖ ≠ 0)
   by_cases h1 : j = lo n k
   · subst h1; simp [hne.symm, hσϖ, hϖ]
   by_cases h2 : j = (lo n k).rev
-  · subst h2; simp [hne, hne.symm, hσϖ, hϖ]
+  · subst h2; simp [hne.symm, hσϖ, hϖ]
   have h3 : j.rev ≠ lo n k := fun h => h2 (by rw [← h, Fin.rev_rev])
   have h4 : j.rev ≠ (lo n k).rev := fun h => h1 (Fin.rev_injective h)
   simp [h1, h2, h3, h4]

@@ -1,9 +1,9 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.WhittakerOrbit
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.WhittakerCriterion
-import GroundTheory.AutomorphicForms.WhittakerGroups
 import GroundTheory.AutomorphicForms.WhittakerDistribution
 import GroundTheory.AutomorphicForms.ContragredientTranspose.MatrixSimilarity
+import Mathlib.SetTheory.ZFC.PSet
 
 namespace GroundTheory.Automorphic.ContragredientTranspose
 

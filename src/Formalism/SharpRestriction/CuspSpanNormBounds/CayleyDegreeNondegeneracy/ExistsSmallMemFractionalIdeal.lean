@@ -1,5 +1,15 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.CayleyDegreeNondegeneracy.ShortVectorEveryPlace
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Data.Rat.Star
+import Mathlib.NumberTheory.NumberField.Discriminant.Basic
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 
@@ -44,7 +54,7 @@ theorem exists_small_mem_fractional_ideal (K : Type) [Field K] [NumberField K] [
   have hS : (∏ w, f w ^ w.mult) = NNReal.sqrt ‖discr K‖₊ := by
     apply NNReal.eq
     rw [NNReal.coe_prod, Real.coe_sqrt, coe_nnnorm, Int.norm_eq_abs, ← rootDiscr_pow_eq_sqrt_discr K]
-    simp only [hmult, f, NNReal.coe_pow, NNReal.sq_sqrt, Real.coe_toNNReal _ hr0, Finset.prod_const,
+    simp only [hmult, f, NNReal.sq_sqrt, Real.coe_toNNReal _ hr0, Finset.prod_const,
       Finset.card_univ, hcard]
   have hbound : minkowskiBound K I < MeasureTheory.volume (convexBodyLT K f) := by
     rw [convexBodyLT_volume, hS]
@@ -145,7 +155,7 @@ theorem lagrange_identity_orthCompanion (hspan : Submodule.span K (Set.range e) 
     h (orthCompanion h e x) v * star (h (orthCompanion h e x) v') = h x x * h v' v - h x v * h v' x := by
   rw [orthCompanion_inner_apply, orthCompanion_inner_apply, inner_eq_coords_orthonormal_pair h e hspan ho x x, inner_eq_coords_orthonormal_pair h e hspan ho v' v,
     inner_eq_coords_orthonormal_pair h e hspan ho x v, inner_eq_coords_orthonormal_pair h e hspan ho v' x]
-  simp only [star_add, star_mul', star_neg, star_star]
+  simp only [star_add, star_mul', star_neg]
   ring
 
 theorem inner_self_ne_zero_of_orthonormal (hcm : ∀ (φ : K →+* ℂ) (a : K), φ (star a) = starRingEnd ℂ (φ a))

@@ -1,5 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoefInjective
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.AdelicScalarSectionLift
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.HookProductDictionary
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCentralIdempotentOfGoodSeriesIdempotent
+import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ClassPresBasic
+import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IpMSelfEqZero
+import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.MemCuspSpaceIffOfFinite
 
 noncomputable section
 

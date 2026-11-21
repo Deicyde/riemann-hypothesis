@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.ModelKStep
 import Formalism.SharpRestriction.LevelLetterCocycles.DdRFull
 

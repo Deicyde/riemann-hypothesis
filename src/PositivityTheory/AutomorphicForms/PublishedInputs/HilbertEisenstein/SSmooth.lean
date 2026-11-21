@@ -1,6 +1,8 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PublishedTheorems.Hilbert
-import GroundTheory.GlobalFields.TateThesis.GlobalZetaSplit
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.TateThesis.SchwartzBruhatDual
+import Development.AutomorphicArithmetic.AutomorphicVarieties.IdeleGenerators.IsCondAt
+import GroundTheory.GlobalFields.TateThesis.IdeleMeasureQuotient
 
 noncomputable section
 

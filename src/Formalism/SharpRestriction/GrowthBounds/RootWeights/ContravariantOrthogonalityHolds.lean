@@ -1,6 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.RootWeights.MemWeightSpaceIffDiagonalRep
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.HwvLoweringSpanLower
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.IsotypicStableOperator
+import Formalism.SharpRestriction.GrowthBounds.RootWeights.ContravariantIsotypicOrthogonal
+import Mathlib.RingTheory.SimpleRing.Principal
 
 noncomputable section
 

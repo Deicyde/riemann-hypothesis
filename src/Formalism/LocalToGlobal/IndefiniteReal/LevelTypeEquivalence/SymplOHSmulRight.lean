@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.SobFrame
+import Formalism.LocalToGlobal.IndefiniteReal.LocalNewformFunction
 
 noncomputable section
 
@@ -36,11 +39,11 @@ theorem cA_smul (c : AF D.host.F) (z : AE D) : cA D (c • z) = c • cA D z := 
 
 theorem hO_smul_right (c : AF D.host.F) (x y : WO S T) : hO S T x (c • y) = c • hO S T x y := by
 
-  simp only [hO, Finset.smul_sum, Matrix.smul_apply, Pi.smul_apply, cA_smul, mul_smul_comm, smul_mul_assoc]
+  simp only [hO, Finset.smul_sum, Matrix.smul_apply, cA_smul, mul_smul_comm, smul_mul_assoc]
 
 theorem hO_smul_left (c : AF D.host.F) (x y : WO S T) : hO S T (c • x) y = c • hO S T x y := by
 
-  simp only [hO, Finset.smul_sum, Matrix.smul_apply, Pi.smul_apply, mul_smul_comm, smul_mul_assoc]
+  simp only [hO, Finset.smul_sum, Matrix.smul_apply, mul_smul_comm]
 
 theorem symplOH_smul_right (c : AF D.host.F) (x y : WO S T) : symplOH S T x (c • y) = c * symplOH S T x y := by
 

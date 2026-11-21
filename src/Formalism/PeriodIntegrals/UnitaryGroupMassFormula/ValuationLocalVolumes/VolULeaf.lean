@@ -1,6 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ValuationLocalVolumes.VolUHaar
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ValuationLocalVolumes.VolTProd
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalJacobianType.ComponentsOfD1EqZero
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalJacobianType.IsCompactDbox
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalJacobianType.KitScale
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.CategoryTheory.Countable
 
 noncomputable section
 
@@ -33,7 +39,7 @@ theorem sd_facts (hψ : IsCharAF F ψ) (hfin : Module.finrank F E = 2) (hann : A
     rw [hann y, Formalism.L2.SG.Pf.NcVal.VolTU.unit_mul_mem_iff v hunit]
   have hone : (1 : Fv F v ⊗[F] E) ∈ OEv (E := E) v := by
     have := PI.UnitaryGroupMassFormula.LocJacTyp.Sd.inclR_mem (E := E) v 1
-    simp only [OneMemClass.coe_one, map_one] at this
+    simp only [map_one] at this
     exact this
   have htr1 : Algebra.trace (Fv F v) (Fv F v ⊗[F] E) 1 = 2 := by
     have := PI.UnitaryGroupMassFormula.LocJacTyp.Sd.trace_inclR (E := E) v 1

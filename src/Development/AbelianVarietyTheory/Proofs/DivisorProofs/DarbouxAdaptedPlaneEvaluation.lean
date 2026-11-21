@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DarbouxCoordinatesInsertZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryLieElementsGenerateOneParamLines
 open scoped TensorProduct Matrix
@@ -130,7 +131,7 @@ theorem exists_plane_pair : ∀ (F E : Type) [Field F] [NumberField F] [Field E]
   have hz : M₁.co.e z = 0 := by
     refine Prod.ext (funext fun p => ?_) (funext fun p => ?_)
     · have e := congrArg (fun q => q.1 ((idx hd).symm (Sum.inl p))) hsum
-      simp only [Prod.fst_add, Pi.add_apply, h1 z, ha1, hb1 p, planeZeroInsertion_apply_inl, Pi.zero_apply, add_zero] at e
+      simp only [Prod.fst_add, Pi.add_apply, h1 z, ha1, hb1 p, planeZeroInsertion_apply_inl, add_zero] at e
       have key : L ((idx hd).symm (Sum.inl p)) = 0 := by
         rw [hLdef]
         exact inl_symm_eq_zero _ (hγ p)

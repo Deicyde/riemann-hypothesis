@@ -1,5 +1,8 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.IsClosedKset
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.ExpInPPosDef
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Analysis.Matrix.Order
+import Mathlib.Tactic.Polynomial.Basic
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.AnalyticVectors.PolarJmConjTranspose
 
 noncomputable section
 

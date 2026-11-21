@@ -1,4 +1,6 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.CharacteristicPolynomialRoots.LeKerPt
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.BlochKatoSelmerVanishes
+import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.ResMapBijective
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual Formalism.HC Formalism.MainNotions.N ReciprocityTheory.Gal IsLocalRing Polynomial UpperTheory.V UpperTheory.V.Base UpperTheory.V.Alg UpperTheory.V.HV UpperTheory.V.GradeZeroInterpolatingElement UpperTheory.V.Ws GlobalTheory.GalOfCusp
 
@@ -10,7 +12,7 @@ private theorem frob_back {F Ω : Type} [Field F] [NumberField F] [Field Ω] [Al
     rw [valuation_lt_one_iff', valuation_lt_one_iff',
       ValuationSubring.mem_pointwise_smul_iff_inv_smul_mem,
       ValuationSubring.mem_pointwise_smul_iff_inv_smul_mem]
-    simp [AlgEquiv.smul_def, map_inv₀]
+    simp [AlgEquiv.smul_def]
   refine ⟨?_, fun x hx => ?_⟩
   · have hs : σ • g • A = g • A := hσ.1
     show (g⁻¹ * σ * g) • A = A

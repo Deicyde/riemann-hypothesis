@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.PoitouTate.RealOdd
 import GroundTheory.ProfiniteCohomology.RealPlaces.Vanishing
 set_option maxSynthPendingDepth 1

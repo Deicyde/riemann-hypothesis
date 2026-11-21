@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.IsChart
-import Development.EtaleCohomology.EtaleSheaves.H0TwistOverClosedField
-import Development.EtaleCohomology.EtaleSheaves.LeafPicCut
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.LeafCurveVCut
 import Development.AutomorphicArithmetic.CommutativeAlgebra.IsFunctionFieldFractionRingOfDedekindFiniteType
 import Development.AutomorphicArithmetic.CommutativeAlgebra.IsFunctionFieldAndChartsOfIsCurveOfIsUnit

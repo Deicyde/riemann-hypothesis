@@ -1,4 +1,13 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.IsInfUnitary
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -11,7 +20,7 @@ variable {n : ℕ}
 def oppCount (ε : Fin n → Bool) (a : Fin n) : ℕ := (univ.filter fun b => ε b ≠ ε a).card
 
 theorem dot_root_right (u : Fin n → ℝ) (a b : Fin n) : dot u (root a b) = u a - u b := by
-  simp [dot, root, mul_sub, Finset.sum_sub_distrib, Pi.single_apply, mul_boole]
+  simp [dot, root, mul_sub, Finset.sum_sub_distrib, Pi.single_apply]
 
 theorem dot_sum_root_right (u : Fin n → ℝ) (Ph : Finset (Fin n × Fin n)) :
     dot u (∑ x ∈ Ph, root x.1 x.2) = ∑ x ∈ Ph, (u x.1 - u x.2) := by
@@ -44,12 +53,12 @@ theorem sum_root_apply (Ph : Finset (Fin n × Fin n)) (c : Fin n) :
     by_cases h : x.1 = c
     · rw [h]; simp
     · have h' : ¬ c = x.1 := fun e => h e.symm
-      simp [Pi.single_apply, h, h']
+      simp [h, h']
   · refine Finset.sum_congr rfl fun x _ => ?_
     by_cases h : x.2 = c
     · rw [h]; simp
     · have h' : ¬ c = x.2 := fun e => h e.symm
-      simp [Pi.single_apply, h, h']
+      simp [h, h']
 
 theorem card_fst_le (ε : Fin n → Bool) (Ph : Finset (Fin n × Fin n))
     (hnc : ∀ x ∈ Ph, ε x.1 ≠ ε x.2) (c : Fin n) :

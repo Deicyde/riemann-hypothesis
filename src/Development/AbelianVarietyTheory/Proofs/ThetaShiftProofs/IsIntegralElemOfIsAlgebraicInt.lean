@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.SectionOfLineBundleOne
 
 open NumberField ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj

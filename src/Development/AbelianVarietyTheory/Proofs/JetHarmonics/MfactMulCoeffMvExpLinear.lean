@@ -1,6 +1,9 @@
-import Mathlib
-import Formalism.LocalToGlobal.CharacterGerms.BiadditiveInSingleVariables
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.WickVanishing.CalcExp
+import Formalism.IncomingBounds.StatementThmP
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
+import Mathlib.Order.CompletePartialOrder
 
 open Formalism.L2.FormalSeriesBounds Formalism.IncomingBounds Formalism.UnitaryBoundIntegral
 

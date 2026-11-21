@@ -1,9 +1,8 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.ThetaBounds.UnfoldedThetaIntegralConvergesSimilitudeOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.ThetaBounds.ActCont
-import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.UnitaryActions.ContinuousQuaternaryQuadraticForm
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.KLevTop
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeightFinGLLeInvAbsDet
-import GroundTheory.AutomorphicForms.NormDetDiagUnitsPosRealToUnits
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.Tube
 
 open NumberField IsDedekindDomain MeasureTheory Matrix Topology Filter
@@ -64,7 +63,7 @@ private theorem eI_star (D : Dat F E) (k : GL (Fin 2) (Af E)) :
     by_cases hab : a = b
     · subst hab; simp
     · have hba : b ≠ a := fun h => hab h.symm
-      simp [Matrix.one_apply, hab, hba]
+      simp [hab, hba]
   rw [this]
 
 private theorem act_eI (D : Dat F E) (k : GL (Fin 2) (Af E)) (v : V4 F) :

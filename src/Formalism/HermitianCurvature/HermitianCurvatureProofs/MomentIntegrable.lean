@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Mathlib.Analysis.Fourier.Inversion
 import Mathlib.Analysis.Fourier.FourierTransformDeriv
-import Mathlib.Analysis.SpecialFunctions.JapaneseBracket
 
 open MeasureTheory Real Module
 open scoped FourierTransform

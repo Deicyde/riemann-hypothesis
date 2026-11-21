@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.MetaplecticRepresentation
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IteratedLineDerivMemWeylAlg
-import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.ExistsEqTransposeMulDiagonalMul
+import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.RealMetaplecticRepresentation
 open MeasureTheory Matrix Complex GlobalTheory.RealWeil
 open scoped Real SchwartzMap ComplexConjugate
 
@@ -14,7 +14,7 @@ theorem GlobalTheory.Proof.schrodinger_models_agree : ∀ (l : Type) [Fintype l]
     congr 1
     · congr 1
       push_cast
-      simp only [dotProduct, RCLike.inner_apply, conj_trivial, Finset.sum_div]
+      simp only [dotProduct, RCLike.inner_apply, conj_trivial]
       push_cast
       ring_nf
       rw [Finset.sum_congr rfl fun i _ => mul_comm ((q i : ℝ) : ℂ) ((p i : ℝ) : ℂ)]

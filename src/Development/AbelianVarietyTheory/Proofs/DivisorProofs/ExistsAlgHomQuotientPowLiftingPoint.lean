@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsionFreeOver
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FaithfullyFlatAdicCompletionSpan
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HasHartogsPropertyQuotientSpanPowRetractionStatement
 open IsLocalRing
@@ -210,7 +209,7 @@ theorem exists_algHom_quot_pow : ∀ (A R C : Type) [CommRing A] [IsDomain A] [I
         (S := Localization (Algebra.algebraMapSubmonoid B (p.primeCompl.map (algebraMap A R))))
         (f := ι) (fun y => IsLocalization.map_units L0 (⟨y, hle y.2⟩ : M0))
       have hj : ∀ b, j (algebraMap B _ b) = algebraMap B L0 b := fun b => by
-        simp only [j, IsLocalization.liftAlgHom_apply]
+        simp only [j]
         exact IsLocalization.lift_eq _ b
       have hjφ : j.comp φp = φ₀ := huniq _ _ (fun c => by
         have := map_dvd j (hφp c)

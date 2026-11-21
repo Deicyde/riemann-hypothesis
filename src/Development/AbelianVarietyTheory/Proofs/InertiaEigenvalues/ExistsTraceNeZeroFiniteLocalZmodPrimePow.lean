@@ -1,7 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.TraceAdjoinRootMapStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FiniteFieldExistsGeneratorMinpolyStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SpanPowersOfUniformizerOfNilpotentStatement
+import Mathlib.RingTheory.AdicCompletion.Noetherian
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.Tactic.ENatToNat
 open NumberField IsDedekindDomain Polynomial
 
 namespace GlobalTheory.LocalTraceNonzero

@@ -1,6 +1,10 @@
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnipotentCorrectionU1.CoreStar
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SumEqSumCompEmbedding
 import Lemmata.B110.ExistsMoved
+import Mathlib.Analysis.Matrix.Normed
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.Polynomial.Basic
 
 open Matrix
 

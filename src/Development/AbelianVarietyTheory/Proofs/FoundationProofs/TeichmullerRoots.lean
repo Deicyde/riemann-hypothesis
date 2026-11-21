@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.ArithmeticCylinders
 import Development.AbelianVarietyTheory.BlockTheory.TorsionBlocks.FactorSeriesSupport
 
@@ -191,7 +192,7 @@ theorem atPlace_eq (k : Fin 2) (v : D.nd.PlG k) (f : (ZMod (D.host.g k))[X]) :
   change _ = MonoidAlgebra.ofCoeff (Finsupp.mapDomain _ _)
   congr!
   funext h
-  simp only [MonoidHom.mulSingle_apply, MonoidHom.coe_coe]
+  simp only [MonoidHom.mulSingle_apply]
   congr!
 
 end GlobalTheory.Compare.TeichmullerRoots

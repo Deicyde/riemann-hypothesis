@@ -1,6 +1,8 @@
-import Formalism.LocalToGlobal.IndefiniteReal.TensCastR
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.CohomologicalCsdTempered
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.NGalTiedRowLoc
+import Formalism.LocalToGlobal.Columns.MtRowFrame
+import Formalism.LocalToGlobal.IndefiniteReal.ConjSubConjSub
 
 set_option synthInstance.maxHeartbeats 200000
 

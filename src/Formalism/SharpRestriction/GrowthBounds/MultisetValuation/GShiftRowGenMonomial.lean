@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.LatticeSystems
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Wlocal
-import Formalism.SharpRestriction.GrowthBounds.DataG
 
 noncomputable section
 
@@ -147,12 +148,12 @@ theorem g_weight {n : ℕ} (d : Fin r × Fin n →₀ ℕ) :
     refine Finset.sum_congr rfl fun a _ => ?_
     rw [map_add, Pi.add_apply, Nat.cast_add, mul_add]
   · intro v k
-    simp only [Finsupp.weight_apply, Finsupp.sum_single_index, zero_smul, implies_true]
+    simp only [Finsupp.weight_apply, Finsupp.sum_single_index, zero_smul]
     rw [Finset.sum_eq_single v.1]
     · simp [htW, rowW]
       try ring
     · intro b _ hb
-      simp [rowW, Pi.single_apply, hb]
+      simp [rowW, hb]
     · intro h
       exact absurd (Finset.mem_univ _) h
 
@@ -206,7 +207,7 @@ private theorem finsupp_weight_rowW_eq_rowDeg {k n : ℕ} (d : Fin k × Fin n �
     rw [map_add, Pi.add_apply, hf, hg]
     simp only [rowDeg, Finsupp.add_apply, Finset.sum_add_distrib]
   · intro v c
-    simp only [Finsupp.weight_apply, Finsupp.sum_single_index, zero_smul, implies_true]
+    simp only [Finsupp.weight_apply, Finsupp.sum_single_index, zero_smul]
     simp only [rowDeg, rowW, Pi.smul_apply, Pi.single_apply, smul_eq_mul, Finsupp.single_apply]
     by_cases h : a = v.1
     · subst h

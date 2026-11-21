@@ -1,5 +1,9 @@
-import Development.WeilBound.CoreStatements.HodgeTatePoints.TwpdivHopf
-import Development.WeilBound.CoreStatements.HodgeTatePoints.TwhopfInd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.DualOrder
+import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.TranslateMemIndOrder
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open GlobalTheory.CompanionTheory.Ar.BT
 

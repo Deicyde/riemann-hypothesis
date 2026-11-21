@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.AdmissibleDesigns.PiEquiv2
 import Formalism.AdmissibleDesigns.FiniteClassesContinuousLattice
+import Formalism.AdmissibleDesigns.DisplayForms
+import Formalism.AdmissibleDesigns.RealDisplayAllK
 
 variable [hT2Core : Fact ReciprocityTheory.ChartRestriction.T2.Core] [hH0Fin : Fact Formalism.MainNotions.N.K.H0.FinCore]
 

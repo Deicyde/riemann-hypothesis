@@ -1,7 +1,10 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.LevelChainValuations.LatDefs
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.SplittingFieldLattices.GrSplit
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MemLatticeSubIffSum
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Algebra.Ring.BooleanRing
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.Data.Rat.Star
 
 set_option autoImplicit false
 

@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.BruhatCellsKronecker.SphericalFunctionIntegrableOfLocal
-import Formalism.FlagUnipotentLattices.HalfDeltaL1Bound
 import Formalism.FlagUnipotentLattices.KappaAssemblyOf
 import Formalism.FlagUnipotentLattices.CuspThresholdBound
 

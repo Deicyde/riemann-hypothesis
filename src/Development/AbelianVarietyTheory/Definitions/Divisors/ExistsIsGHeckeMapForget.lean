@@ -1,9 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsGDatumOneOneOne
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsHeckeMap
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompEqOneOfTransl
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GenModelHomUnique
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsPrimitiveNormalisation
+import Development.AbelianVarietyTheory.Definitions.ModuliSpaces.IsGaloisCover
 
 noncomputable section
 

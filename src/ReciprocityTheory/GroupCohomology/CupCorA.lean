@@ -1,4 +1,5 @@
-import ReciprocityTheory.GroupCohomology.ContinuousContractNth
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.GroupCohomology.HomogExistsStatement
 
 namespace ReciprocityTheory.Coh.CCA

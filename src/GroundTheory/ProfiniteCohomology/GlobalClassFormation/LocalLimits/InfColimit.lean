@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.GlobalClassFormation.LocalLimits.InfRange
 import GroundTheory.ProfiniteCohomology.GlobalClassFormation.IdeleLimits.LocalTransition
-import GroundTheory.ProfiniteCohomology.FilteredHomology
+import GroundTheory.ProfiniteCohomology.GlobalClassFormation.LocalLimits.InfLiesOver
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

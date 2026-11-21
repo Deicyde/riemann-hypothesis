@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.StableIffCarrierEq
 open Formalism.BasicNotions Formalism.MainNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix Formalism.L2.Theta Formalism.L2.DIV Formalism.L2.Indef Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.Mult Formalism.IndefR.Datum Formalism.IndefR.Cx
 open scoped TensorProduct InnerProductSpace
@@ -161,7 +162,7 @@ theorem index_of_lvlTie {D : D7} {G : Type} [Group G] {Q0 : Subgroup G} {ψ0 : Q
         ((x PP : GL (Fin D.R.r) (kP PP.1)) : Matrix (Fin D.R.r) (Fin D.R.r) (kP PP.1))
           (symPos D.R.r D.R.rS D.R.k i) (symPos D.R.r D.R.rS D.R.k j) := by
     intro x PP i j
-    simp [φ, σ, Matrix.reindexAlgEquiv_apply, Matrix.reindex_apply]
+    simp [φ, σ, Matrix.reindex_apply]
   have hs : Nat.card Qs = Nat.card (PsharpSym Pg D.R.r D.R.rS D.R.k ψ).H := by
     refine Nat.card_congr ((eC.toEquiv.trans φ).subtypeEquiv fun g => ?_)
     rw [h.ps g]

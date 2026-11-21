@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GGMirabolic
+import Mathlib.Analysis.SpecialFunctions.Complex.CircleAddChar
+import Mathlib.RepresentationTheory.Rep.Basic
 
 namespace Formalism.L2.SG.GGMirabolic.Inhab
 

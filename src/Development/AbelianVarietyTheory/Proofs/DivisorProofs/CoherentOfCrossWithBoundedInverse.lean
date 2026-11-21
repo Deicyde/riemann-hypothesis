@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TriModOfBlockTriangular
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TriangularModulusInverseStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TriangularModulusProductsStatement
 open CategoryTheory AlgebraicGeometry NumberField IsDedekindDomain MvPolynomial ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -37,7 +37,7 @@ theorem triMod_of_cross (R : Subring K) (p : K) (k a : ℕ) (hs : Small R (p ^ (
   have mem3 : ∀ A B C : Matrix (Fin N) (Fin N) K, A ∈ R.matrix → p ^ a • B ∈ R.matrix → C ∈ R.matrix →
       p ^ a • (A * B * C) ∈ R.matrix := by
     intro A B C hA hB hC
-    rw [show p ^ a • (A * B * C) = A * (p ^ a • B) * C by simp [Matrix.mul_smul, Matrix.smul_mul]]
+    rw [show p ^ a • (A * B * C) = A * (p ^ a • B) * C by simp]
     exact mul_mem (mul_mem hA hB) hC
   have u : ∀ {A : Matrix (Fin N) (Fin N) K}, Fr R A → IsUnit A.det := fun h => isUnit_iff_ne_zero.2 h.1
   have inv3 : ∀ (A C : Matrix (Fin N) (Fin N) K), Fr R A → Fr R C → (A⁻¹ * P * C)⁻¹ = C⁻¹ * Q * A := by

@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.OmegaFactorization
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.TraceDualDifferent
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RepNeZero
+import Mathlib.NumberTheory.NumberField.Discriminant.Different
 open NumberField
 open scoped nonZeroDivisors
 

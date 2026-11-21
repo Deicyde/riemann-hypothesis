@@ -1,10 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.FaceOf3
-import Formalism.LocalToGlobal.IndefiniteReal.CxCoreRG
 import Formalism.LocalToGlobal.IndefiniteReal.LiftCoordinatesInGoodPartOfDefinite
 import Formalism.LocalToGlobal.IndefiniteReal.EigSumLeComapSemi
 import Formalism.LocalToGlobal.IndefiniteReal.CxHecke
-import Formalism.LocalToGlobal.IndefiniteReal.IsometricPeriodsOfHypotheses
 import Formalism.LocalToGlobal.IndefiniteReal.RationalAdjoints.RatZOfTests
 import Formalism.LocalToGlobal.IndefiniteReal.IsometricPeriodsOfUnitHypotheses
 

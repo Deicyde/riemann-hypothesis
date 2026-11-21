@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPreChain
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PresentationExtensionClosed
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsNormalModelRootsOfUnityStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RingChainExistsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RingChainMapStatement

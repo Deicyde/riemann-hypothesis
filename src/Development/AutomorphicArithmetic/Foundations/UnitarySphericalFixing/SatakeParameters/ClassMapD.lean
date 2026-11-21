@@ -1,10 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsRecTLocRecT
-import Development.AutomorphicArithmetic.Foundations.UnitarySphericalFixing.SatakeParameters.GoodLem
-import Development.DiscreteGroups.GlobalIrreducibility.SerLocOfTiesLe
-import Development.DiscreteGroups.GlobalIrreducibility.DzBigDef
-import Development.DiscreteGroups.GlobalIrreducibility.ActKEEqSelfLe
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.RowTruthOfLabelTie
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsComp
+import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.SerFixOne
 
 section
 noncomputable section

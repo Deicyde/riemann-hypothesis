@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.SemistableReduction.UnipotentA
 import ReciprocityTheory.SemistableReduction.UnipotentB
+import Mathlib.NumberTheory.NumberField.House
+import ReciprocityTheory.SemistableReduction.LatSemiSt
 
 namespace ReciprocityTheory.MultiplicativeHeights
 

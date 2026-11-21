@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.WCellMemOmPlus
+import Formalism.HermitianCurvature.TopDensNonnegOfKappa
 
 open Matrix Filter Topology
 open scoped ContDiff

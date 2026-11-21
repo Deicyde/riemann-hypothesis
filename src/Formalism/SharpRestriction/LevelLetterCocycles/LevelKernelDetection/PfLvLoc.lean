@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.MapEvalPsPi
+import Formalism.SharpRestriction.LevelLetterCocycles.SecondComparisonInCoordinates
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
 
 noncomputable section
 

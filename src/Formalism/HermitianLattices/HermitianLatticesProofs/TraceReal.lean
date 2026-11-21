@@ -1,7 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianLattices.DefsCS
 import Formalism.HermitianLattices.HermitianLatticesProofs.ThetaSummable
 import Lemmata.GeneralBFactSecondSide.Imports
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.Data.Int.Star
+import Mathlib.RingTheory.PiTensorProduct
 
 open Module Matrix
 

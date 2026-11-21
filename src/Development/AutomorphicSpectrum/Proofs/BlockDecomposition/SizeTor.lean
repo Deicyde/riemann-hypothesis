@@ -1,7 +1,10 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.AdmissibleCoordinatesBoundedRise
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SizeFinitePlaces
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ConjugatePlacesFacts
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LogAbsBasicFacts
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.NormCVPosIdele
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SizeBasicOfConjPlaces
+import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.EigenvalueSeparation.LeftInv
 
 noncomputable section
 

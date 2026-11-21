@@ -1,8 +1,6 @@
-import Mathlib
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.GeometricLemmaFiltration
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GlCastRfl
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CellFunctorTorusCharacter
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CellFunctorDeterminantPairEquivStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ParabolicInductionColumnEquivStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompositionSeriesIntertwiningChainStatement
@@ -114,7 +112,7 @@ private theorem exists_sep (x x' : ℕ) {χ₁ χ₂ : kˣ →* ℂˣ} (h : ∀ 
   · obtain ⟨a, ha⟩ := exists_ne h ((1 - ((x + 2 : ℕ) : ℝ)) / 2) ((1 - (x' : ℝ)) / 2)
     refine ⟨(a, 1), ?_⟩
     have h0' : b.1 false 0 = 0 := by omega
-    simp only [cellChar, Fintype.prod_bool, a1, a2, a3, a4, h0, h0', cond_true, cond_false, map_one, one_pow,
+    simp only [cellChar, Fintype.prod_bool, a1, a3, h0, h0', cond_true, cond_false, map_one, one_pow,
       pow_zero, pow_one, mul_one, one_mul]
     push_cast at ha ⊢
     exact ha
@@ -122,7 +120,7 @@ private theorem exists_sep (x x' : ℕ) {χ₁ χ₂ : kˣ →* ℂˣ} (h : ∀ 
   · obtain ⟨a, ha⟩ := exists_ne h ((((x + 2 : ℕ) : ℝ) - 1) / 2) (((x' : ℝ) - 1) / 2)
     refine ⟨(1, a), ?_⟩
     have h0' : b.1 false 2 = 0 := by omega
-    simp only [cellChar, Fintype.prod_bool, a1, a2, a3, a4, h2, h0', cond_true, cond_false, map_one, one_pow,
+    simp only [cellChar, Fintype.prod_bool, a2, a4, h2, h0', cond_true, cond_false, map_one, one_pow,
       pow_zero, pow_one, mul_one, one_mul]
     push_cast at ha ⊢
     exact ha

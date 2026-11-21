@@ -1,6 +1,4 @@
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.HalfIndexLattices.SplitStab
-import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.AutEtaB
-import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.LatRepBI
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeIntertwinerRepSplitPlacePositiveScalar
 import Development.AutomorphicArithmetic.IdeleLatticeFacts.ExistsPlaceOfSplitIdempotentCmExt
 import Development.AutomorphicArithmetic.IdeleLatticeFacts.EqZeroOfSplitIdempotentEvalPlaceEqZero

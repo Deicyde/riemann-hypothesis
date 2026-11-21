@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Intersections.ImportsMoreExtra
 import GroundTheory.HeightsAndTheta.Heights.Intersections.NotIsUnitOfNumMem
 import GroundTheory.HeightsAndTheta.Heights.Intersections.PHorizNotMem
+import GroundTheory.HeightsAndTheta.Heights.Intersections.LeOfHeightMapEqZero
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.Inter

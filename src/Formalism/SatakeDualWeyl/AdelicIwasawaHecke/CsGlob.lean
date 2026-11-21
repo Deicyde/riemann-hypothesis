@@ -1,6 +1,9 @@
-import Formalism.SatakeDualWeyl.DefsCS
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.AdelstabL
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.CsGlobApprox
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.TotallySplit
 
 noncomputable section
 

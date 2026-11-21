@@ -1,15 +1,9 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.CubeVal
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.RosVal
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.UnifUniqSt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.IsNsmul
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.QkToAkU
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Uniformization.PointEqOfSubsingleton
-import Development.AbelianVarietyTheory.Definitions.Uniformization.ExistsUniqueTorusCompat
 import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.ExistsIsGenOfUniqueFactorizationMonoid
 import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.RestrictPullbackIsoHomAppPullbackSections
 import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.BijectiveToPushforwardComp
-import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.IsDomainAndIsIntegrallyClosedAtPrimeOfSmoothOfCo
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.UniqueFactorizationMonoidAddMonoidAlgebraOfFree
 import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.ExistsUniqueCharacterOfMul
 import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.IsIntegralOfSmoothFieldOfConnectedSpace
@@ -457,7 +451,7 @@ theorem nonempty_biTriv [Module.Free ℤ X] [IsMonHom i] [IsIntegral (splitTorus
         rw [e, _root_.one_mul])
       (fun Z τ => ⟨lift 1 1, fun z J hJ => by
         simp only [MonObj.comp_mul, Category.assoc, lift_fst_assoc, lift_snd_assoc, lift_fst, lift_snd, MonObj.one_comp,
-          (isCub_cubV c hJ).face₃, _root_.one_mul, _root_.mul_one, h₂ Z _ z J hJ]⟩) Z t (lift t' x) z J hJ
+          (isCub_cubV c hJ).face₃, _root_.mul_one, h₂ Z _ z J hJ]⟩) Z t (lift t' x) z J hJ
     simpa only [MonObj.comp_mul, Category.assoc, lift_fst_assoc, lift_snd_assoc, lift_fst, lift_snd] using this
   · have := key (G ⊗ G) (fst _ _) (fst _ _) (fst _ _) ((snd _ _ ≫ fst _ _) * (snd _ _ ≫ snd _ _))
       (snd _ _ ≫ fst _ _) (snd _ _ ≫ snd _ _) (fst _ _ ≫ i) (snd _ _ ≫ fst _ _)
@@ -470,8 +464,8 @@ theorem nonempty_biTriv [Module.Free ℤ X] [IsMonHom i] [IsIntegral (splitTorus
         have e : ∀ x, val s (lift (1 : Z ⟶ splitTorus S X) x).left z J = 1 := fun x => h₁ Z x z J hJ
         simp only [lift_fst_assoc, lift_fst, MonObj.one_comp, (isCub_cubV c hJ).face, _root_.one_mul, e])
       (fun Z τ => ⟨lift 1 1, fun z J hJ => by
-        simp only [MonObj.comp_mul, Category.assoc, lift_fst_assoc, lift_snd_assoc, lift_fst, lift_snd, MonObj.one_comp,
-          (isCub_cubV c hJ).face₃, _root_.one_mul, _root_.mul_one, h₂ Z _ z J hJ]⟩) Z t (lift x x') z J hJ
+        simp only [MonObj.comp_mul, lift_fst_assoc, lift_snd_assoc, lift_fst, lift_snd,
+          (isCub_cubV c hJ).face₃, _root_.mul_one, h₂ Z _ z J hJ]⟩) Z t (lift x x') z J hJ
     simpa only [MonObj.comp_mul, Category.assoc, lift_fst_assoc, lift_snd_assoc, lift_fst, lift_snd] using this
 
 end Group

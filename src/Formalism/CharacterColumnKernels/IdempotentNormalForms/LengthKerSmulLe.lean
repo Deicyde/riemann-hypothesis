@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.CharacterColumnKernels.StatBlockRhoCount
 import Formalism.CharacterColumnKernels.IdempotentNormalForms.LengthEqKerAddRange
-import Formalism.CharacterColumnKernels.IdempotentNormalForms.LengthKerOfDetEqZero
 
 open Finset
 

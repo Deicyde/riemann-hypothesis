@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.DualLattices.IsUnitOfNotMem
+import Mathlib.NumberTheory.Padics.RingHoms
 
 noncomputable section
 

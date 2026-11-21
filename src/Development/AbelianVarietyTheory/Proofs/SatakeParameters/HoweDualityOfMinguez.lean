@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.HypothesesAbsDet
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.HoweDualityGL
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.OmQuotientTransposeInverseStatement
@@ -75,7 +76,7 @@ theorem exists_form_ne_zero {V W : Type} [AddCommGroup V] [Module ℂ V] [AddCom
     induction y using TensorProduct.induction_on with
     | zero => simp
     | tmul v w =>
-      simp [e, TensorProduct.equivFinsuppOfBasisLeft_apply_tmul_apply]
+      simp [e]
     | add y z hy hz => rw [map_add, map_add, hy, hz, map_add, Finsupp.add_apply]
   have hne : e x ≠ 0 := fun h => hx (e.injective (h.trans (map_zero e).symm))
   obtain ⟨i, hi⟩ := Finsupp.ne_iff.1 hne

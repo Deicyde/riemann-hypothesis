@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SiegelReframe
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ReQuad
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaFactorNormInvarianceStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PeriodQuadraticFormsSmoothStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.QuadraticFormFderivComplexStatement

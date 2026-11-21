@@ -1,4 +1,6 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.DvOZeroHigh
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.LevelLetterCocycles.LamZero
 
 noncomputable section
 

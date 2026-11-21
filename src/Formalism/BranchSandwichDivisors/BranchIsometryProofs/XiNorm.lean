@@ -1,11 +1,19 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.BranchSandwichDivisors.StatementW
-import Formalism.RealPlaceAnalysis.RealPlaceTaylor.ProdFactorialSupportSubSingle
-import Formalism.GradedWeylDivisibility.FockSpaceTableaux.LFocksLemmas
-import Formalism.GradedWeylDivisibility.FockSpaceTableaux.LFockbLemmas
 import Formalism.GradedWeylDivisibility.FockSpaceTableaux.LBidetMinor
 import Formalism.GradedWeylDivisibility.FockSpaceTableaux.LBidetLemmas
-import Formalism.GradedWeylDivisibility.FockSpaceTableaux.DualWeylNonDom
+import Formalism.GradedWeylDivisibility.FockSpaceTableaux.LNondomLemmas
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open MvPolynomial Formalism.GradedWeylDivisibility Formalism.REAL
 
@@ -99,7 +107,7 @@ lemma xn_part1 (ι : κ → Fin r) (hι : Function.Injective ι) {p : ℕ} (hp :
       have hjv : (j : ℕ) ≠ p := fun h => hj (Fin.ext (by simpa using h))
       rw [Derivation.leibniz, xn_pderiv_supported _ _ hns _ (xn_cof_supported ι hp a _), smul_zero,
         zero_add, MvPolynomial.pderiv_X, smul_eq_mul]
-      simp [Pi.single_apply, Fin.ext_iff, hjv]
+      simp [Fin.ext_iff, hjv]
     · simp
 
 lemma xn_part2 (ι : κ → Fin r) {p : ℕ} (hp : p + 1 ≤ n) (a : Fin p → κ)
@@ -219,14 +227,14 @@ private lemma prod_factorial_single_add_eq_mul' (v : Fin r × Fin n) (m : (Fin r
     have hkm : m k = 0 := by
       by_contra hm
       exact hc (Finset.mem_insert_of_mem (Finsupp.mem_support_iff.2 hm))
-    have h5 : (Finsupp.single v 1 + m : (Fin r × Fin n) →₀ ℕ) k = 0 := by simp [Finsupp.single_apply, Ne.symm hkv, hkm]
+    have h5 : (Finsupp.single v 1 + m : (Fin r × Fin n) →₀ ℕ) k = 0 := by simp [Ne.symm hkv, hkm]
     exact (Finsupp.mem_support_iff.1 hk) h5
   rw [hT _ hsub, hT m (Finset.subset_insert _ _)]
   have hrest : ∏ k ∈ T.erase v, ((Finsupp.single v 1 + m : (Fin r × Fin n) →₀ ℕ) k).factorial =
       ∏ k ∈ T.erase v, (m k).factorial := by
     refine Finset.prod_congr rfl fun k hk => ?_
     have hkv : k ≠ v := Finset.ne_of_mem_erase hk
-    simp [Finsupp.single_apply, Ne.symm hkv]
+    simp [Ne.symm hkv]
   rw [hrest]
   simp only [Finsupp.add_apply, Finsupp.single_eq_same]
   rw [add_comm 1, Nat.factorial_succ]
@@ -540,7 +548,7 @@ lemma xn_Eul_eq (s : Fin n) : ndEul ℂ r n s = ndE ℂ r n s s := by
   by_cases h : v2 = s
   · subst h
     simp
-  · simp [h, Pi.single_apply, Ne.symm h]
+  · simp [h, Ne.symm h]
 
 lemma xn_hR {μ : Fin n → ℕ} {f : MvPolynomial (Fin r × Fin n) ℂ} (hf : f ∈ dualWeyl ℂ r n μ)
     (t s : Fin n) (hts : t < s) : ∑ b : Fin r, X (b, t) * pderiv (b, s) f = 0 := by
@@ -561,8 +569,8 @@ lemma xn_hR {μ : Fin n → ℕ} {f : MvPolynomial (Fin r × Fin n) ℂ} (hf : f
     intro v
     simp only [colAddGen, aeval_X]
     split_ifs
-    · simp [Derivation.leibniz, MvPolynomial.pderiv_X, Pi.single_apply, hεX]
-    · simp [MvPolynomial.pderiv_X, Pi.single_apply]
+    · simp [Derivation.leibniz, MvPolynomial.pderiv_X, hεX]
+    · simp [MvPolynomial.pderiv_X]
   have hE : ∀ v : Fin r × Fin n, ndE ℂ r n t s (X v) = if v.2 = s then X (v.1, t) else 0 :=
     fun v => by simp only [ndE, MvPolynomial.mkDerivation_X]
   have key : ∀ g, ε (pderiv none (colAddGen ℂ t s g)) = ndE ℂ r n t s g := by
@@ -857,7 +865,7 @@ lemma xn_rowsB_inj {n : ℕ} (i : Fin n) : Function.Injective (rowsB i) := by
   all_goals first
     | (simpa using h)
     | (have h' := congrArg Fin.val h
-       simp only [Fin.val_last, Fin.val_mk] at h'
+       simp only [Fin.val_last] at h'
        omega)
     | omega
 
@@ -917,15 +925,14 @@ lemma xn_stage (n : ℕ) (lam sg : Fin n → ℕ) (hI : Interlace (lamZ lam) (fu
     have hf : (Finset.univ.filter fun i : Fin n => i.val < k + 1) =
         insert ⟨k, hkn⟩ (Finset.univ.filter fun i : Fin n => i.val < k) := by
       ext i
-      simp only [Finset.mem_filter, Finset.mem_univ, true_and, Finset.mem_insert, Fin.ext_iff,
-        Fin.val_mk]
+      simp only [Finset.mem_filter, Finset.mem_univ, true_and, Finset.mem_insert, Fin.ext_iff]
       constructor <;> intro h <;> omega
     have hnot : (⟨k, hkn⟩ : Fin n) ∉ (Finset.univ.filter fun i : Fin n => i.val < k) := by simp
     refine xnInv_congr H2 ?_ ?_ ?_
     · funext q
       have e1 : xnLam lam k = lam ⟨k, hkn⟩ := by simp [xnLam, hkn]
       have e2 : xnLam lam (k + 1) = nuNext lam ⟨k, hkn⟩ := by
-        simp only [xnLam, nuNext, Fin.val_mk]
+        simp only [xnLam, nuNext]
       have a1 := xnLam_anti lam sg hI (Nat.le_succ k)
       by_cases hq : q < k + 1
       · have a2 := xnLam_anti lam sg hI (show q ≤ k by omega)

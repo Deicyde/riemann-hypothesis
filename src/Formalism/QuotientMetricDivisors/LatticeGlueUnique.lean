@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.QuotientMetricDivisors.Statement
 
 open Module NumberField IsDedekindDomain

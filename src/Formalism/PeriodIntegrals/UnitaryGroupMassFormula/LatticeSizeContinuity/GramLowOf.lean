@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LatticeSizeContinuity.LatSizeContOfSteps
+import BuildAid.Leniency.Open
+import Formalism.PeriodIntegrals.LatSizeCont
 
 noncomputable section
 

@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.IsLatFamilyCongr
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.ChartSequenceHoldsStatement
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.OverZpOfInFibre
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ArithVarietyPrimeHodgeRelayStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ArithVarietyPrimeHodgeDegreeStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.CmEmbeddingConjugateCompatStatement

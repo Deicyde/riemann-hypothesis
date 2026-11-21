@@ -1,5 +1,10 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.IsClosedKset
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.InhabA
+import Mathlib.Topology.Sheaves.Presheaf
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.PsiExistsStatement
+import Std.Tactic.BVDecide.Normalize.BitVec
 
 noncomputable section
 
@@ -211,7 +216,7 @@ lemma lam_hol (p q : ℕ) (a b : ℤ) (i : Fin (p + q)) :
     have r3 : (((univ.filter fun b : Fin (p + q) => i < b ∧ epsHol p q b = epsHol p q i).card : ℕ) : ℝ) = (p : ℝ) - (i : ℕ) - 1 := by
       rw [card_filter_fin _ ((i : ℕ) + 1) (p) (by omega) fun b => by
           have := b.2
-          simp only [epsHol, Fin.lt_def, ne_eq, decide_eq_decide]
+          simp only [epsHol, Fin.lt_def, decide_eq_decide]
           omega,
         Nat.cast_sub (by omega)]
       all_goals (try push_cast)
@@ -219,7 +224,7 @@ lemma lam_hol (p q : ℕ) (a b : ℤ) (i : Fin (p + q)) :
     have r4 : (((univ.filter fun b : Fin (p + q) => b < i ∧ epsHol p q b = epsHol p q i).card : ℕ) : ℝ) = ((i : ℕ) : ℝ) := by
       rw [card_filter_fin _ (0) ((i : ℕ)) (by omega) fun b => by
           have := b.2
-          simp only [epsHol, Fin.lt_def, ne_eq, decide_eq_decide]
+          simp only [epsHol, Fin.lt_def, decide_eq_decide]
           omega,
         Nat.cast_sub (by omega)]
       all_goals (try push_cast)
@@ -245,7 +250,7 @@ lemma lam_hol (p q : ℕ) (a b : ℤ) (i : Fin (p + q)) :
     have r3 : (((univ.filter fun b : Fin (p + q) => i < b ∧ epsHol p q b = epsHol p q i).card : ℕ) : ℝ) = (p : ℝ) + q - (i : ℕ) - 1 := by
       rw [card_filter_fin _ ((i : ℕ) + 1) (p + q) (by omega) fun b => by
           have := b.2
-          simp only [epsHol, Fin.lt_def, ne_eq, decide_eq_decide]
+          simp only [epsHol, Fin.lt_def, decide_eq_decide]
           omega,
         Nat.cast_sub (by omega)]
       all_goals (try push_cast)
@@ -253,7 +258,7 @@ lemma lam_hol (p q : ℕ) (a b : ℤ) (i : Fin (p + q)) :
     have r4 : (((univ.filter fun b : Fin (p + q) => b < i ∧ epsHol p q b = epsHol p q i).card : ℕ) : ℝ) = ((i : ℕ) : ℝ) - p := by
       rw [card_filter_fin _ (p) ((i : ℕ)) (by omega) fun b => by
           have := b.2
-          simp only [epsHol, Fin.lt_def, ne_eq, decide_eq_decide]
+          simp only [epsHol, Fin.lt_def, decide_eq_decide]
           omega,
         Nat.cast_sub (by omega)]
       all_goals (try push_cast)

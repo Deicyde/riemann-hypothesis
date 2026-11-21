@@ -1,8 +1,5 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.ModGDefs
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.Interface
-import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.ModGBasic
-import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.IsIntegralOfRoot
 import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.ModFixJ
 import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.ModInertKur
 

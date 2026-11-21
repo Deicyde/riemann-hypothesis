@@ -1,4 +1,11 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.HolomorphicDiscreteSeries.HarishChandraDescent.Descent
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 
@@ -62,6 +69,6 @@ theorem approximation_of_square_identity : SqId → Approx := by
   rw [hkey]
   refine le_trans (Complex.re_le_norm _) (le_trans (norm_inner_le_norm _ _) ?_)
   gcongr
-  exact le_of_eq (by simp only [two_smul, two_nsmul])
+  exact le_of_eq (by simp only [two_smul])
 
 end PositivityTheory.RgHe3

@@ -1,7 +1,9 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.FockGramWindow.InitialPointNumericBound
 import Formalism.SharpRestriction.GrowthBounds.FockGramWindow.WinLvl
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.LatMin
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.DiagRank
+import Formalism.SharpRestriction.GrowthBounds.MonomialFactorials.ClosedOfMinimalVector
 
 noncomputable section
 

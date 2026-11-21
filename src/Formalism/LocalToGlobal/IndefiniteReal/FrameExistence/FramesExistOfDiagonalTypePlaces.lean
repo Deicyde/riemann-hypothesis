@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.FrameExistence.NormalisedAdaptedVectorZero
-import Formalism.LocalRingCardinality.SpanPowerMembership.RankRecordRowDimensionZero
+import Formalism.LocalRingCardinality.SpanPowerMembership.BaseFormAnisotropicOrthogonalSingle
 
 noncomputable section
 
@@ -104,7 +106,7 @@ theorem raw_ee {i l : ℕ} (hi : i < c / 2) (hl : l < c / 2) :
 include hn hneg in
 theorem raw_ff (lam : E) {i l : ℕ} (hi : i < c / 2) (hl : l < c / 2) :
     Examples₂.diagForm n neg (rawEv (E := E) n a c lam i) (rawEv n a c lam l) = 0 := by
-  simp only [rawEv, map_smulₛₗ, map_sub, LinearMap.smul_apply, LinearMap.sub_apply, map_smul, smul_eq_mul]
+  simp only [rawEv, map_smulₛₗ, map_sub, LinearMap.smul_apply, LinearMap.sub_apply, smul_eq_mul]
   rw [diag_one n neg _ _ (pos_lt n a c hn hi), diag_one n neg _ _ (pos_lt n a c hn hi),
     diag_one n neg _ _ (neg_lt n a c hn hi), diag_one n neg _ _ (neg_lt n a c hn hi),
     sgn_pos n a c neg hn hneg hi, sgn_neg n a c neg hn hneg, if_neg (pos_ne_neg a c i l hi),
@@ -154,7 +156,7 @@ theorem rawE_low (i : ℕ) (x : Fin n) (hx : (x : ℕ) < a) : rawE (E := E) n a 
 
 theorem rawEv_low (lam : E) (i : ℕ) (x : Fin n) (hx : (x : ℕ) < a) : rawEv (E := E) n a c lam i x = 0 := by
   simp only [rawEv, Pi.smul_apply, Pi.sub_apply, smul_eq_mul, sv_low n a (ixPos a i) (by unfold ixPos; omega) _ x hx,
-    sv_low n a (ixNeg a c i) (by unfold ixNeg; omega) _ x hx, sub_zero, smul_zero, mul_zero]
+    sv_low n a (ixNeg a c i) (by unfold ixNeg; omega) _ x hx, sub_zero, mul_zero]
 
 theorem rawZ_low (pz : E) (x : Fin n) (hx : (x : ℕ) < a) : rawZ n a c pz x = 0 :=
   sv_low n a (ixZ a c) (by unfold ixZ; omega) _ x hx
@@ -392,8 +394,8 @@ theorem diagonal_entries_exist (D : D7) (h : IsG2 D) : ∃ pz lam, DiagonalEntri
     simp only [Examples₂.extLE, LinearMap.coe_mk, AddHom.coe_mk]
     have hl := l.isLt
     split_ifs with h1 h2 h2
-    · simp [Pi.single_apply, Fin.ext_iff, h2]
-    · simp [Pi.single_apply, Fin.ext_iff, h2]
+    · simp [h2]
+    · simp [Fin.ext_iff, h2]
     · exfalso; change (r : ℕ) = (l : ℕ) at h2; change (l : ℕ) < D.R.N j at hl; omega
     · rfl
   · rw [hsp]; rintro i hi (r : Fin (D.R.rankY 0))
@@ -597,7 +599,7 @@ theorem frMat_solve (hn : n = a + c) (hka : k ≤ a) (h12 : l1 + l2 = 1) (hsc0 :
         funext r
         have := congrFun (solve_neg k a c l1 l2 sc pz h12 he1 (hsc0 e) (hsc0 _)) (r : ℕ)
         rw [single_eq_svN, hd, show a + d = ixNeg a c e by unfold ixNeg; omega, ← this]
-        simp only [Fin.val_mk]
+        simp only
         ring
 
 include n in
@@ -864,7 +866,7 @@ theorem xMat_mulVec_single {D : D7} {pz lam : D.host.E} (hF : DiagonalEntries D 
     (xMat (D := D) j).mulVec (fun l => if (l : ℕ) = b then (1 : EAf D) else 0) r = eToEAf D (svN b 1 (r : ℕ)) := by
   simp only [Matrix.mulVec, dotProduct]
   rw [Finset.sum_eq_single ⟨b, hb⟩]
-  · simp only [xMat, xInY, hF.xInY, Fin.val_mk, if_true, mul_one, svN]
+  · simp only [xMat, xInY, hF.xInY, if_true, mul_one, svN]
   · intro l _ hl
     have : (l : ℕ) ≠ b := fun h => hl (Fin.ext h)
     simp [this]
@@ -964,7 +966,7 @@ theorem lattice_frames_exist_of_diagonal {D : D7} {pz lam : D.host.E} (hF : Diag
     refine ⟨fun i hi col hcol' r => ?_, fun col hcol' => ?_⟩
     · rw [betaYOf_val βY j hjm.le, hcol]
       congr 2
-      simp only [frMat, Matrix.of_apply, Fin.val_mk, hcol', colN_at (pz := pz) Pg j PP i hi, nfScal_one, one_mul]
+      simp only [frMat, Matrix.of_apply, hcol', colN_at (pz := pz) Pg j PP i hi, nfScal_one, one_mul]
       simp only [scAt, scJ_succ D j i hj1, mul_one]
       congr 1
       simp only [adaptedVector, adaptedVectorOnIndices, eD, evD, zD]
@@ -988,7 +990,7 @@ theorem lattice_frames_exist_of_diagonal {D : D7} {pz lam : D.host.E} (hF : Diag
       rw [frame0_eq hF i hi r]
       congr 2
       have hc' : (col : ℕ) = D.R.k + i := by rw [hcol', N_zero]
-      simp only [frMat, Matrix.of_apply, Fin.val_mk, hc', colN_at (pz := pz) Pg 0 PP i (by omega), scAt]
+      simp only [frMat, Matrix.of_apply, hc', colN_at (pz := pz) Pg 0 PP i (by omega), scAt]
       ring
     · refine xSpan_of hF 0 h0m (scAt D Pg 0 PP) _ ei col (Or.inl (by rw [← N_zero D]; exact hcol')) fun r => ?_
       rw [betaYOf_val βY 0 (Nat.zero_le _), hcol]

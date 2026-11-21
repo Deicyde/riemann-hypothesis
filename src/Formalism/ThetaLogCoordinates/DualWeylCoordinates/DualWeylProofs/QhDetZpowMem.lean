@@ -1,4 +1,7 @@
-import Formalism.ThetaLogCoordinates.DualWeylCoordinates.StatementH
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.ThetaLogCoordinates.DualWeylCoordinates.DefsMod
+import Mathlib.RingTheory.PiTensorProduct
 
 noncomputable section
 

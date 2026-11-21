@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.WeilDeligneCrystalline.EpsilonConsistencyFiniteOrder
-import GroundTheory.GlobalFields.TateThesis.RootNumberLocalFinite
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsLocExtProper
+import GroundTheory.AutomorphicForms.GL2.GodementSectionFactor
 
 noncomputable section
 
@@ -343,7 +344,7 @@ theorem trW_char (h : IsPlaceOver A w) (ξ : Weil h →* ℂˣ) (hξ : GlobalThe
 
 theorem under_self (u : HeightOneSpectrum (𝓞 L)) : u.under (𝓞 L) = u := by
   ext x
-  simp [HeightOneSpectrum.under, Ideal.under, Ideal.mem_comap]
+  simp [HeightOneSpectrum.under, Ideal.under]
 
 theorem smooth_localChar (h : IsPlaceOver A w) (χ : G L Ω →* ℂˣ) (op : IsOpen (χ.ker : Set (G L Ω))) :
     IsSmoothChar (localChar (hk χ) w) := by

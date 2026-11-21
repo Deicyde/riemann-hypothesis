@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.IsTopologicalRingAE
-import Development.AbelianVarietyTheory.Counterexamples.HeightSurvey.StarPurelyImaginaryEqNeg
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.Imports
+import Formalism.LocalRingCardinality.DataHost
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.RingTheory.PiTensorProduct
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Matrix GlobalTheory.FockCompare GlobalTheory.IndefiniteRowSideFullHecke.FockOrthogonalDecomposition
 open scoped TensorProduct ContDiff ComplexOrder
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
@@ -32,16 +33,14 @@ theorem weyl_number : ∀ (M R : Type) [AddCommGroup M] [Module ℂ M] [AddCommG
       (Dop v - Complex.I • Dop (j v)) * (Dop u + Complex.I • Dop (j u)) +
         (2 * κ * ((om u v : ℝ) - Complex.I * (om u (j v) : ℝ))) • (1 : Module.End ℂ M) := by
     intro u v
-    simp only [add_mul, mul_add, sub_mul, mul_sub, smul_mul_assoc, mul_smul_comm, smul_smul,
-      Complex.I_mul_I]
+    simp only [add_mul, mul_add, sub_mul, mul_sub, smul_mul_assoc, mul_smul_comm]
     rw [hc u v, hc u (j v), hc (j u) v, hc (j u) (j v), hom, h1]
     push_cast
     match_scalars <;> (try ring_nf) <;> (try simp) <;> (try ring)
   have haa : ∀ u v, (Dop u + Complex.I • Dop (j u)) * (Dop v + Complex.I • Dop (j v)) =
       (Dop v + Complex.I • Dop (j v)) * (Dop u + Complex.I • Dop (j u)) := by
     intro u v
-    simp only [add_mul, mul_add, smul_mul_assoc, mul_smul_comm, smul_smul,
-      Complex.I_mul_I]
+    simp only [add_mul, mul_add, smul_mul_assoc, mul_smul_comm]
     rw [hc u v, hc u (j v), hc (j u) v, hc (j u) (j v), hom, h1]
     push_cast
     match_scalars <;> (try ring_nf) <;> (try simp) <;> (try ring)

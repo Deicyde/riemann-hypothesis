@@ -1,5 +1,5 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.SumInnerBasisSqEqAdjoint
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.PBridge
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.IntegrableOfContinuousCompact
 
 noncomputable section

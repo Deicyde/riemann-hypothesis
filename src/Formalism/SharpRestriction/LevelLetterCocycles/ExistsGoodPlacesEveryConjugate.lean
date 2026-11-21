@@ -1,10 +1,7 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.TwGood
-import Formalism.SharpRestriction.LevelLetterCocycles.VKEqOfFrac
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.JointConditionsZpowers.CommutingEndomorphismCondition
-import Formalism.SharpRestriction.LevelLetterCocycles.CommutingEndomorphismPreservesInvariants
-import Formalism.SharpRestriction.LevelLetterCocycles.LinearIndependentSmulOfNeZero
-import Formalism.CharacterColumnKernels.IdempotentNormalForms.LengthKerOfDetEqZero
-import Formalism.SharpRestriction.LevelLetterCocycles.EndomorphismIndexBound
+import Formalism.SharpRestriction.LevelLetterCocycles.LatticeVariant
 
 noncomputable section
 

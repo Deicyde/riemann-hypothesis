@@ -1,11 +1,8 @@
-import Mathlib
-import GroundTheory.PAdicHodge.RobbaSeries
-import GroundTheory.PAdicHodge.HighIndexSingleZeroOne
-import GroundTheory.PAdicHodge.RobbaBounded
-import GroundTheory.PAdicHodge.RobbaNewton
-import GroundTheory.PAdicHodge.RobbaClosed
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.PAdicHodge.RobbaUnitApprox
 import GroundTheory.PAdicHodge.RobbaMittagLeffler
+import Mathlib.Topology.Sheaves.Presheaf
 set_option maxSynthPendingDepth 1
 
 noncomputable section

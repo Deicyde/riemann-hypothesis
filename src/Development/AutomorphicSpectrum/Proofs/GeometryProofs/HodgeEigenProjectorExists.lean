@@ -1,11 +1,6 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.DomBy
-import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.GoodOrigin
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.SlopeBoundSt
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ArchBetween
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IntegralClosureHeightEqOneOfLiesOver
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.FlagLabelBasesExist
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.NotIsGenericFlagSelf
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.GlueApplyOfNotInFibre
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.EigenProjectorDenominatorStatement
 

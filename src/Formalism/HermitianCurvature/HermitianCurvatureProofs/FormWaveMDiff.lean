@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.WaveDiffForm
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.PBGSlice
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.IntegrableOfDecay4
 
 open Matrix
 

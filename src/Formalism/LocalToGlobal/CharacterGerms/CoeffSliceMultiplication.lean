@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CharacterGerms.RaiseSecondFirstEqZero
-import Formalism.LocalToGlobal.CharacterGerms.CoeffFirstPairingLinear
+import Formalism.LocalToGlobal.CharacterGerms.CanonicalGaugeFirstPartialLawEq
+import Formalism.LocalToGlobal.CharacterGerms.RowTiePGerm
 
 noncomputable section
 

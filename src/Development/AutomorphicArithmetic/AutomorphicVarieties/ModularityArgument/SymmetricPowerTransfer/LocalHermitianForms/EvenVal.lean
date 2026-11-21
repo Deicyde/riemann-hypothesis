@@ -1,4 +1,12 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.Wcount
+import Mathlib.Algebra.QuadraticAlgebra.Basic
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 
@@ -140,7 +148,7 @@ def KU : Subgroup (U3 Δ) where
   carrier := {g | ∀ i j, IsInt O ((g : Matrix (Fin 3) (Fin 3) (Lsq K Δ)) i j) ∧
     IsInt O (star ((g : Matrix (Fin 3) (Fin 3) (Lsq K Δ)) i j))}
   one_mem' i j := by
-    by_cases h : i = j <;> simp [Matrix.one_apply, h, isIntegral_one, isIntegral_zero]
+    by_cases h : i = j <;> simp [h, isIntegral_one, isIntegral_zero]
   mul_mem' {a b} ha hb i j := by
     rw [Submonoid.coe_mul, Matrix.mul_apply, Fin.sum_univ_three]
     refine ⟨(((ha _ _).1.mul (hb _ _).1).add ((ha _ _).1.mul (hb _ _).1)).add ((ha _ _).1.mul (hb _ _).1), ?_⟩

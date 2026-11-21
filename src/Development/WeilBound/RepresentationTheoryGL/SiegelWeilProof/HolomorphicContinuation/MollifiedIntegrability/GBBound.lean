@@ -1,5 +1,16 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.MollifiedIntegrability.ClsGainBSt
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Analysis.CStarAlgebra.Matrix
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -178,7 +189,7 @@ theorem pb_inv (a : ℂ) (ha : a = Complex.I ∨ a = -Complex.I) (lam : Fin n �
     rw [hx]
     by_cases hk : k = j
     · subst hk; simp [inv_mul_cancel₀ hwj.ne']
-    · simp [Pi.single_apply, hk]; exact mul_nonneg (by positivity) (pbwt_pos lam k).le) i
+    · simp [hk]; exact mul_nonneg (by positivity) (pbwt_pos lam k).le) i
   have e : (Y⁻¹ *ᵥ Pi.single j 1) i = Y⁻¹ i j := by
     simp [Matrix.mulVec, dotProduct, Pi.single_apply]
   rw [e] at key

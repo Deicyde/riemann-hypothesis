@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.IsSatVecUOfIsSphericalU
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Tjcosets
 open NumberField IsDedekindDomain
 
 namespace GlobalTheory.LFun
@@ -18,7 +17,7 @@ theorem tn_single (E : Type) [Field E] [NumberField E] (w : HeightOneSpectrum (�
     unfold Formalism.UG.diagJ
     ext i j
     by_cases h : i = j
-    · subst h; simp [i.2]
+    · subst h; simp
     · simp [Matrix.diagonal_apply_ne _ h, Matrix.one_apply_ne h]
   have hcomm : ∀ a : GL (Fin n) (w.adicCompletion E), g * a = a * g := fun a => by
     ext : 1

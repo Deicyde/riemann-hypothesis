@@ -1,9 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.IdeleGroups.LocalNorms
 import GroundTheory.GlobalFields.KummerTheory.Splitting
-import GroundTheory.LocalFields.ExistsUnitFiltrationUnitsLeRangeNormUnits
-import GroundTheory.LocalFields.UnramifiedNorms
-import GroundTheory.GlobalFields.CompletionAtPlace.Integers
+import GroundTheory.LocalFields.UnramifiedNormSurj
 
 namespace GroundTheory.Global
 

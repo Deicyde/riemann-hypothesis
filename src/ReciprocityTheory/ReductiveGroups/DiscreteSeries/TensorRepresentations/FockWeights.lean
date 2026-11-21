@@ -1,5 +1,6 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.DSymmHypsInhabited
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.LowFock
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.InhabCAR
 
 noncomputable section
 

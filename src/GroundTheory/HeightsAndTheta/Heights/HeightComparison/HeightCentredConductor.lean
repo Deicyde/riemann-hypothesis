@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.HeightOrbitChart
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.HeightSemilocalQuotCard
 set_option maxSynthPendingDepth 1

@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.WeaklyAdmissibleFiltrations.Statement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.WeaklyAdmissibleFiltrations.StatementTor
 import ReciprocityTheory.BasicDefinitions.AdRep
 

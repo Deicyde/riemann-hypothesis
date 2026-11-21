@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.RealPlaces.GSDefs
 import GroundTheory.ProfiniteCohomology.RealPlaces.VanishingIndex
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.Dimension
-import GroundTheory.ProfiniteCohomology.Colimit
 import GroundTheory.ProfiniteCohomology.RealPlaces.LocalDualityPlace
 set_option maxSynthPendingDepth 1
 

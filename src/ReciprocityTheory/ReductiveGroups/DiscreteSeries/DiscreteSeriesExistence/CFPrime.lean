@@ -1,7 +1,8 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.BochnerInequality.CasimirGapAtNoncompactWeight
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.CFPrimeB
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.LowFock
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.CARKinv
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.CARUnit
 
 noncomputable section
 

@@ -1,8 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.GermSys
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsFlatAnIffIsConstMul
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HodgeAt
+import Mathlib.RingTheory.PicardGroup
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Crv GlobalTheory.CompanionTheory.Ar.Conj GlobalTheory.CompanionTheory.Ar.Flat GlobalTheory.CompanionTheory.Ar.Fl
 open scoped CategoryTheory.Obj
@@ -35,7 +34,7 @@ theorem comb_single {R : Subring Ω} {g : ℕ} (ℓ : Fin g → Vs) (j : Fin g) 
     comb (R := R) ℓ (Pi.single j 1) = ℓ j := by
   classical
   unfold comb
-  rw [Finset.sum_eq_single j (fun i _ h => by simp [Pi.single_apply, h]) (by simp)]
+  rw [Finset.sum_eq_single j (fun i _ h => by simp [h]) (by simp)]
   simp
 
 theorem exists_comb {R : Subring Ω} {g : ℕ} {ℓ : Fin g → Vs} {v : Vs}
@@ -86,7 +85,7 @@ theorem finrank_eigSp_eval : ∀ (E : Type) [Field E] [NumberField E] (Ω Vs C :
     ext i
     by_cases h : i = j
     · subst h; simp
-    · simp [Pi.single_apply, h]
+    · simp [h]
   have tΩ : ∀ a, LinearMap.trace Ω Vs (ρ a) = ((∑ j, M a j j : R') : Ω) :=
     fun a => trace_of_comb hl hs (ρ a) (M a) (hM a)
   have tC : ∀ a, LinearMap.trace C (Fin g → C) (ρC a) = ψ (∑ j, M a j j) := by

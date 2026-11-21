@@ -1,13 +1,11 @@
-import Mathlib
-import Development.ResolutionOfSingularities.Statements
-import Development.AutomorphicSpectrum.PublishedTheorems.Geometry₂.NotSubsetOfDenseCompl
-import Development.ResolutionOfSingularities.Foundations.Blowup.BlowupCoproduct
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.ResolutionCharZero.SupportStrictTransformUnion
 import Development.ResolutionOfSingularities.HasSimpleNormalCrossingsOfInStrictNormalCrossing
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.PrincipalisationOfCharZero
 import Development.WeilBound.CoreStatements.ResolutionCharZero.ExistsFinsetComapProdIdealEqSpanProdCoord
 import Development.WeilBound.CoreStatements.ResolutionCharZero.FromResIso
 import Development.WeilBound.CoreStatements.ResolutionCharZero.FromResSnc
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 noncomputable section
 

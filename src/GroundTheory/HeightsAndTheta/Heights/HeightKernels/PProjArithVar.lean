@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.StatementsLineDegree
+import GroundTheory.HeightsAndTheta.Heights.HeightKernels.StatementsGrassHeight
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PicardGroup
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

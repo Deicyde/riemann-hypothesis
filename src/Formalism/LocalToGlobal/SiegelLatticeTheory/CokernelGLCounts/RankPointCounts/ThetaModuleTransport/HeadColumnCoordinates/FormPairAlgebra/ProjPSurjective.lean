@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.ThetaModuleTransport.HeadColumnCoordinates.FormPairAlgebra.BRawHeadColsRight
 
 noncomputable section
@@ -205,7 +207,7 @@ theorem adjV_comp (γ : MbMod Z₁ ≃ₗ[O] MbMod Z₂) (hb : γ (bCls Z₁) = 
       rw [Matrix.mulVec, dotProduct, Finset.sum_eq_single a]
       · simp
       · intro i _ hi
-        simp [Pi.single_apply, hi]
+        simp [hi]
       · simp
     have hj : ∀ j, ∑ a, cj ((Z₁.map O.subtype) a b) * ((y' j : E) * cj ((Z₁.map O.subtype)⁻¹ j a)) =
         (y' j : E) * cj (((Z₁.map O.subtype)⁻¹ * (Z₁.map O.subtype)) j b) := by

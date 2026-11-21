@@ -1,10 +1,9 @@
-import Mathlib
-import Formalism.LocalToGlobal.CharacterGerms.NondegenerateCharts
-import Formalism.LocalToGlobal.CharacterGerms.RowTieSelf
-import Formalism.LocalToGlobal.CharacterGerms.BlockAdmissibleChart
-import Formalism.LocalToGlobal.CharacterGerms.NegMem
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PlaceDivisors.StChartF
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.TeichmullerDepth.HasTeich
+import Formalism.LocalToGlobal.CharacterGerms.ValNonnegLeadingCoeffOfMemTySet
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.MvPowerSeries.Rename
 open scoped BigOperators
 open NumberField Formalism.IncomingBounds Formalism.L2.FormalSeriesBounds Formalism.L2.Pj GlobalTheory.RowLaw ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Geo.Tor.Germ
 
@@ -189,7 +188,7 @@ theorem exists_em (e : Fin 2 × κ →₀ ℕ) (he : Finsupp.weight (wz κ) e = 
   ext ⟨g, x⟩
   have := DFunLike.congr_fun hi x
   fin_cases g
-  · simp [em, emb_zero, Finsupp.single_apply]
+  · simp [em, emb_zero]
   · simpa [em, emb_one, Finsupp.single_apply] using this
 
 theorem dz_of_two (i : κ) {F : MvPowerSeries (Fin 2 × κ) C} (hF : F ∈ ordGe C (wz κ) 2) : dz i F = 0 := by
@@ -207,7 +206,7 @@ theorem dz_X_mul [DecidableEq κ] (i j : κ) (f : MvPowerSeries κ C) :
     rw [add_tsub_cancel_right, coeff_embDomain_rename]
   · rw [if_neg hij, if_neg, map_zero]
     rw [Finsupp.single_le_iff]
-    simp [em, emb_one, Finsupp.single_apply, hij]
+    simp [em, emb_one, hij]
 
 theorem taylor {F : MvPowerSeries (Fin 2 × κ) C} (hF : F ∈ ordGe C (wz κ) 1) :
     F - ∑ j, X ((1 : Fin 2), j) * rename (e0 κ) (dz j F) ∈ ordGe C (wz κ) 2 := by

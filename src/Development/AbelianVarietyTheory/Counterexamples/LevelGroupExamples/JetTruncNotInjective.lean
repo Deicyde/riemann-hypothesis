@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.SubConstMemOrig
+import Mathlib.RingTheory.MvPolynomial.Ideal
+import Mathlib.Tactic.Polynomial.Basic
 
 set_option autoImplicit false
 
@@ -16,7 +19,7 @@ theorem orig_eq : orig R ι = MvPolynomial.idealOfVars ι R := rfl
 theorem mk_eq_zero_iff (p : MvPolynomial ι R) :
     (Ideal.Quotient.mk _ p : Jet R ι m) = 0 ↔ ∀ e : ι →₀ ℕ, e.degree ≤ m → p.coeff e = 0 := by
   rw [Ideal.Quotient.eq_zero_iff_mem, orig_eq, MvPolynomial.mem_pow_idealOfVars_iff']
-  simp [Nat.lt_succ_iff]
+  simp
 
 theorem X_pow_ne_zero [Nontrivial R] (i : ι) :
     (Ideal.Quotient.mk _ (X i ^ m) : Jet R ι m) ≠ 0 := by

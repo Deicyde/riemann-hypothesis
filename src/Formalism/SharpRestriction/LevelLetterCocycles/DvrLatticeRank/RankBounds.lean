@@ -1,9 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.SecondPropositionRingAll
-import Formalism.SharpRestriction.LevelLetterCocycles.ModelKStep
 import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.RankInverseBounds
 import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.RankLinkProof
-import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.GradNPfB
 import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.FrobPiNPf
+import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.GradNPfA
 
 noncomputable section
 
@@ -104,7 +105,7 @@ theorem γA_letE (g : W.Gam) (i : ZMod n) : W.γA g (letE i : LetA O n) = letE i
   simp only [LocWach.γA, letγ, AlgHom.pi_apply, AlgHom.comp_apply, Pi.evalAlgHom_apply, letE]
   by_cases h : j = i
   · subst h; simp
-  · simp [Pi.single_apply, h]
+  · simp [h]
 
 variable (S : Submodule O (LcQ W T π' c))
 

@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.HsCodiscreteNeBot
+import Mathlib.Analysis.Complex.Convex
+import Mathlib.RingTheory.PiTensorProduct
 
 noncomputable section
 

@@ -1,5 +1,4 @@
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.AdelicGroupAlgebraActionInjective
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.PushInvertible
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.HomogeneousNonvanishing.TwMb
 import Development.WeilBound.CoreStatements.HomogeneousNonvanishing.TwSub
 import Development.WeilBound.CoreStatements.HomogeneousNonvanishing.TwTate

@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.LocalFields.UnramifiedNormSurj
 import GroundTheory.LocalFields.UnitsGalois
-import GroundTheory.LocalFields.CompleteTrivial
 import GroundTheory.LocalFields.HilbertCyclic
 
 noncomputable section

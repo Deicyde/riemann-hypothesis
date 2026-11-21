@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsConstAlongSingleton
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.NonarchimedeanGroupOfIsCompactIsOpen
+import Mathlib.Topology.Algebra.Nonarchimedean.TotallyDisconnected
 open scoped TensorProduct NNReal Matrix ComplexConjugate
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU
 
@@ -139,7 +139,7 @@ theorem exists_finDim_separating : ∀ (F E : Type) [Field F] [NumberField F] [F
       · intro h
         have := hWn _ hk' _ h
         simpa [mul_assoc] using this
-    simp only [e, LinearMap.funLeft_apply, Function.comp_apply, key]
+    simp only [e, LinearMap.funLeft_apply, key]
   refine ⟨Submodule.span ℂ S, FiniteDimensional.span_of_finite ℂ hfin, fun w hw =>
     ⟨hcont w (hinv w hw), hsm w (hinv w hw), ⟨U, hUo, fun u hu _ g => hinv w hw u hu g⟩,
       fun k hk => ⟨hleft k hk hw, hright k hk hw⟩⟩, e (projFin σ J x),

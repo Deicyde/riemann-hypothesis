@@ -1,9 +1,14 @@
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.HodgeBundleWeights.TamagawaNumberSpecialUnitary
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DescendedBundleHodgeClass
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.HodgeBundleWeights.CoveringTopologyRefinement
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.HodgeBundleWeights.ToKnownTheoremsOf
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.HodgeBundleWeights.IsNefHodgeBundleUnitWeight
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DescendedBundleHodgeClassStatement
+import Development.AbelianVarietyTheory.Definitions.Divisors.WellChosen
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CommonRestrIsoTens
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompactificationComponentIntegralSmoothProjectiv
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsWeightSectionsNonvanishingOpen
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsNefLineBundleOfPullbackSurjectiveProjective
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NefIsPsEffAndBigTensNef
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GrothendieckDeformation
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ToroidalCompactificationBis
 
 section
 open CategoryTheory AlgebraicGeometry TopologicalSpace Limits NumberField
@@ -37,7 +42,7 @@ theorem hodgeLineBundle_isBig : _root_.GlobalTheory.CovTop.PublishedHodgeBundleT
   have ew : 2 • hodgeWt Dw - χ = w := by
     funext τ i
     simp only [w, Finset.sum_apply, NefWt.unitWt_apply, Finset.sum_ite_eq, Finset.mem_univ, if_true, Pi.sub_apply,
-      Pi.smul_apply, hodgeWt, CompHt.barWt, χ, smul_eq_mul]
+      Pi.smul_apply, hodgeWt, CompHt.barWt, χ]
     split_ifs <;> norm_num
   have hwnef : (letI := algebraΓOfHom (str₀ TF.X Z); IsNef c.F (L₀ TF.X Z w)) := by
     letI := algebraΓOfHom (str₀ TF.X Z)

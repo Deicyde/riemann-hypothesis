@@ -1,14 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.BoundaryVanishingPullback
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.OpenClosedSequences
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.IrreducibleTensorCharacter
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.ExistsCellOfIsSubquotient
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HasFiniteLengthOfIsIrreducible
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.InductionContragredient
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LowerEquivUpperSwap
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ParIndJacPlacing
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CentralExponentBoundOver
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.AlgebraMapIntertwiningMapBijectiveOfIsSmooth
+import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.NontrivialOfIrreducible
 
 noncomputable section
 
@@ -168,7 +163,7 @@ theorem multiProd_scalar {α n : Type} {m : α → Type} [Fintype α] [LinearOrd
       rw [leviEmb_apply_same]
       simp [GeneralLinearGroup.scalar, diagonal_apply]
     · rw [leviEmb_apply_ne k e _ hab]
-      simp [GeneralLinearGroup.scalar, diagonal_apply, hab]
+      simp [GeneralLinearGroup.scalar, hab]
   refine Subtype.ext (Subtype.ext (funext fun x => ?_))
   have h2 := parInd_law e _ f ⟨_, leviEmb_mem_parab k e fun a => GeneralLinearGroup.scalar (m a) z⟩ x
   rw [leviProj_leviEmb, deltaHalf_scalar, piTensor_scalar ρ _ _ fun a => h a z] at h2

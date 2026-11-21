@@ -1,5 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.IntegrableOnIntegrand
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.LocalSituation
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.Topology.Sheaves.Presheaf
 
 set_option autoImplicit false
 

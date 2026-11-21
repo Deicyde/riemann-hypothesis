@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AutomorphicArithmetic.CyclotomicBounds.RootsOfUnity.MassNumeric
-import Development.AutomorphicArithmetic.CyclotomicBounds.RootsOfUnity.HostTorsionOrderLe
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FormOfClassSums
 
 noncomputable section

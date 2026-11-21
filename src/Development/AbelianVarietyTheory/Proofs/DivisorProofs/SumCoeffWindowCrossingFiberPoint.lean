@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SuperFact
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WinSet
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagDegreeEqFormDegree
+import Std.Tactic.BVDecide.Normalize.BitVec
 
 noncomputable section
 
@@ -47,13 +48,13 @@ theorem coeff_splitAt (z : σ) (Q : MvPolynomial σ ℝ) (e : σ →₀ ℕ) (he
         rw [Polynomial.coeff_mul_X, Finsupp.single_add, ← add_assoc, coeff_mul_X, hp e he]
     · rw [splitAt_ne hy, Polynomial.coeff_mul_C, coeff_mul_X', coeff_mul_X']
       have h1 : (y ∈ (e + Finsupp.single z k).support) ↔ y ∈ e.support := by
-        simp [Finsupp.single_apply, Ne.symm hy]
+        simp [Ne.symm hy]
       by_cases h2 : y ∈ e.support
       · rw [if_pos h2, if_pos (h1.2 h2), ← hp _ (by simp [he])]
         congr 1
         ext w
         by_cases hw : w = z
-        · subst hw; simp [he, Finsupp.single_apply, hy]
+        · subst hw; simp [he, hy]
         · simp [Finsupp.single_apply, Ne.symm hw]
       · rw [if_neg h2, if_neg (fun h => h2 (h1.1 h))]
 
@@ -143,7 +144,7 @@ theorem chain_coeff (blk : σ → β) (pos : σ → ℕ) (hinj : ∀ a b, blk a 
       simp [hg]
     have hE0 : chExp blk pos s z = 0 := by
       rw [chExp, Finsupp.finset_sum_apply]
-      exact Finset.sum_eq_zero fun p hp => by simp [Finsupp.single_apply, (hmem p hp).1]
+      exact Finset.sum_eq_zero fun p hp => by simp [(hmem p hp).1]
     have hdif : ∀ p ∈ chPairs blk pos s, splitAt z (dif p) = Polynomial.C (dif p) := by
       intro p hp
       rw [dif, map_sub, map_sub, splitAt_ne (hmem p hp).1, splitAt_ne (hmem p hp).2]
@@ -263,7 +264,7 @@ theorem chExp_eq {j : ℕ} (hj : j < N) (x : ι × Fin N) :
       simp [blkOf, Ne.symm ht]
     · simp
     · intro y _ hy
-      simp [Finsupp.single_apply, hy]
+      simp [hy]
     · simp
   rw [h]
   have := i.2

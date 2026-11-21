@@ -1,21 +1,14 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.RadialChainStatements
 import Formalism.SharpRestriction.CuspSpanNormBounds.ThinScalesBound
 import Formalism.SharpRestriction.CuspSpanNormBounds.ChainLength
-import Formalism.SharpRestriction.CuspSpanNormBounds.LocalBesselAndTopKernel
 import Formalism.SharpRestriction.CuspSpanNormBounds.AuxiliaryNormPrimes
 import Formalism.SharpRestriction.CuspSpanNormBounds.MassAndBranchingHypotheses
-import Formalism.SharpRestriction.CuspSpanNormBounds.NonGenericAndKTwoTheorems
-import Formalism.SharpRestriction.CuspSpanNormBounds.LatticeIndexAndWeightTheory
-import Formalism.SharpRestriction.CuspSpanNormBounds.UniformConstantsAndStatements
 import Formalism.SharpRestriction.CuspSpanNormBounds.PlaceDegreeData
-import Formalism.SharpRestriction.CuspSpanNormBounds.OnePlaceEstimates
-import Formalism.SharpRestriction.CuspSpanNormBounds.CayleySignature
 import Formalism.SharpRestriction.CuspSpanNormBounds.FrobeniusProjectedBounds
-import Formalism.SharpRestriction.CuspSpanNormBounds.AdmissibleBoundsFromSource
 import Formalism.SharpRestriction.CuspSpanNormBounds.PExtra
-import Formalism.SharpRestriction.CuspSpanNormBounds.SBridge
 import Formalism.YangianSpanCharacter.YangianRelationFirst
-import Formalism.FormalDegreeBessel.FinalG
 import Formalism.FormalDegreeBessel.FinalDS
 import Formalism.FormalDegreeBessel.FinalIO
 import Formalism.RealPlaceAnalysis.FinalF
@@ -265,7 +258,7 @@ theorem LatticeIndexAndWeightTheory.Hyp_of (D : D7) (large₂ : SizeData₂ D) (
 
 theorem lambda_low_index_eq_neg (k r : ℕ) (v : Fin (k - 1) → ℝ) (b : Fin (2 * r + 2) → ℝ) (j : ℕ) (hj : j < 2 * r + 2)
     (h' : k - 1 + j < 2 * r + k + 1) : CayleySignature.lam48 k r v b ⟨k - 1 + j, h'⟩ = -b ⟨j, hj⟩ := by
-  simp only [CayleySignature.lam48, Fin.val_mk]
+  simp only [CayleySignature.lam48]
   split_ifs with hh
   · omega
   · exact congrArg (fun x => -b x) (Fin.ext (by show k - 1 + j - (k - 1) = j; omega))

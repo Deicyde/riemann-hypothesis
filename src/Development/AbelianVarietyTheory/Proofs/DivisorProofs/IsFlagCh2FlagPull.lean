@@ -1,12 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsFlagModelHermSum
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.EqOfIsometricTrivShift
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdjacentRefl
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BcDensEqOfGram
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ResidueDegreeOfIsOpenImmersion
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFiniteExceptional
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GradedMetricPullbackIsometricStatement
-import ReciprocityTheory.AnalyticForms.RegularLocalRings.FinalTheorems
 
 set_option autoImplicit false
 

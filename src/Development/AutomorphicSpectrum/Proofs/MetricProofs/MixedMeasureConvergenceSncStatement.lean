@@ -1,8 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.MixedMeasureConvergenceSnc
-import Mathlib
-import ReciprocityTheory.AnalyticForms.LeviForms.UnifInt
-import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.UIObjects
 open MeasureTheory Metric Filter Topology ReciprocityTheory.AnForm ReciprocityTheory.AnForm.M ReciprocityTheory.AnForm.P ReciprocityTheory.AnForm.M.FinHolAtlas
 open scoped ContDiff
 set_option maxHeartbeats 1000000 in

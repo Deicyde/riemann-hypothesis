@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.LieLatticeData
-import Development.AutomorphicSpectrum.Statements.AlgebraStatements.PolarisedFlagStatement
+import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.IsTight
+import Mathlib.RingTheory.SimpleRing.Principal
 open GlobalTheory.CompanionTheory.Ar.Num GlobalTheory.CompanionTheory.Ar.GR ReciprocityTheory.PGsh.L2 ReciprocityTheory.PGsh.Up
 
 namespace PositivityTheory.Xgn.A_pt_af_type

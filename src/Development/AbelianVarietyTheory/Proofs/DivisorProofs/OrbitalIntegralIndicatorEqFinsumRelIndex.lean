@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsUnifAt
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.UnitLemmaGroup
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InertPlaceKappaOrbitalUnitEqSignedLatticeSumImpo
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ModelLat
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.SimpleTwistedTraceFormulaStable
 open NumberField IsDedekindDomain Matrix Polynomial Filter GlobalTheory.CuspRep GlobalTheory.PRep Formalism.UG Formalism.BasicNotions GlobalTheory.UnitaryBC Formalism.L2.Host GlobalTheory.BCT
 open scoped Classical TensorProduct
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
@@ -34,16 +31,16 @@ theorem twOrb_id_indicator (G : Type) [Group G] [TopologicalSpace G] (K : Subgro
     rw [he]
     by_cases h : Q⁻¹ * γ * Q ∈ K
     · have h' : (k : G)⁻¹ * (Q⁻¹ * γ * Q) * k ∈ K := K.mul_mem (K.mul_mem (K.inv_mem k.2) h) k.2
-      simp [Set.indicator_apply, h, h']
+      simp [h, h']
     · have h' : (k : G)⁻¹ * (Q⁻¹ * γ * Q) * k ∉ K := by
         intro h'
         apply h
         have := K.mul_mem (K.mul_mem k.2 h') (K.inv_mem k.2)
         simpa [mul_assoc] using this
-      simp [Set.indicator_apply, h, h']
+      simp [h, h']
   rw [hfun, avg_const_fun]
   by_cases h : Q⁻¹ * γ * Q ∈ K
-  · simp [Set.indicator_apply, h]
-  · simp [Set.indicator_apply, h]
+  · simp [h]
+  · simp [h]
 
 end GlobalTheory.OrbIndUnit

@@ -1,5 +1,8 @@
-import Formalism.LocalToGlobal.KernelLattices.ColumnData.ColumnDataEquations.SqLLaw
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.WeightThresholdDefs
+import Formalism.LocalToGlobal.KernelLattices.ColumnData.ColumnDataEquations.Reduction
+import Formalism.LocalToGlobal.KernelLattices.ColumnData.ColumnDataEquations.SqLMat
 
 noncomputable section
 open NumberField Formalism.BasicNotions Classical

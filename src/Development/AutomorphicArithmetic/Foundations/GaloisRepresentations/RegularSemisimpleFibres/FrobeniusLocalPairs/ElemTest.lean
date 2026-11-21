@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.RegularSemisimpleFibres.FrobeniusLocalPairs.MatchSmulAlt
 import Development.AutomorphicArithmetic.Foundations.Convolution.TwistedLocalOrbits.BallSub
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.TraceFormula.OrbitalIntegrals.QuotFubiniHolds
 
 open MeasureTheory NumberField IsDedekindDomain ValuativeRel Matrix GroundTheory.Global GroundTheory.Global.SemiLocal
 open GlobalTheory.PRep GlobalTheory.SplitWeil GlobalTheory.IndefiniteRowSideFullHecke.IwahoriDoubleCosets PositivityTheory.Rg.Tf.Loc UpperTheory.ConvolutionTheory.Loc
@@ -112,6 +112,6 @@ theorem elemTest : ElemTest := by
       ext
       simp [GeneralLinearGroup.val_det_apply, val_diagT, Matrix.det_diagonal]
     rw [map_mul, map_mul, hdiag]
-    simp only [mul_comm, mul_left_comm, mul_assoc]
+    simp only [mul_comm, mul_left_comm]
 
 end UpperTheory.Gal.InertialTypesAlt.L

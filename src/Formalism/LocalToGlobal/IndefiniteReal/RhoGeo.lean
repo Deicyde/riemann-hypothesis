@@ -1,5 +1,7 @@
-import Formalism.LocalToGlobal.IndefiniteReal.OneMapEq
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.FWTie
+import Formalism.LocalToGlobal.IndefiniteReal.OneMapT
 
 noncomputable section
 

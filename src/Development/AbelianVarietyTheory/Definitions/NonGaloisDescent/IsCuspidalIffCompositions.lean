@@ -1,8 +1,10 @@
-import Mathlib
-import Formalism.LocalToGlobal.Divisibility.DefGroup
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.PublishedFoundations.BlockTriangularOfSubOne
 import Development.AbelianVarietyTheory.Definitions.Foundations.SmoothPartStable
 import Development.AbelianVarietyTheory.Definitions.Divisors.SplitDoublingNBlock
+import Mathlib.LinearAlgebra.Matrix.Permutation
 
 noncomputable section
 

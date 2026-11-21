@@ -1,9 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TotalEqCurve
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdjacentPullPull
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GeometricallyConnectedOfIsIsoRestrict
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormDbarQuotientFormBound
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormDbarFormSubLogMetricLe
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExtTraceNonnegOfPosFrame
 open CategoryTheory AlgebraicGeometry TopologicalSpace Filter Topology MeasureTheory Matrix
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -20,7 +17,7 @@ open GlobalTheory.CurveDens ComplexConjugate
 theorem sum_formMat_eq {D : ℕ} (T : V D → V D → ℂ) (hT : IsSesq T) (ξ : V D) :
     ∑ j, ∑ l, ξ j * formMat T j l * starRingEnd ℂ (ξ l) = T ξ ξ / kappa := by
   have hv : ξ = ∑ j, ξ j • EuclideanSpace.single j (1 : ℂ) := by
-    ext i; simp [EuclideanSpace.single_apply, Pi.single_apply]
+    ext i; simp [Pi.single_apply]
   have hl : ∀ (s : Finset (Fin D)) (f : Fin D → V D) (y : V D), T (∑ i ∈ s, f i) y = ∑ i ∈ s, T (f i) y := by
     intro s f y
     induction s using Finset.induction_on with

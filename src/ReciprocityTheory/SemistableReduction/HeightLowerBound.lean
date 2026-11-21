@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.SemistableReduction.LogNormCoeffSubLeBlockSphereLogMean
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 namespace ReciprocityTheory.MultiplicativeHeights
 

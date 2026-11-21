@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PotentialTheory.PushAFinsumInter
+import ReciprocityTheory.AnalyticForms.PotentialTheory.AnalyticSubsetChartLocal
+import ReciprocityTheory.AnalyticForms.PotentialTheory.Partition
 
 namespace ReciprocityTheory.AnForm.M
 

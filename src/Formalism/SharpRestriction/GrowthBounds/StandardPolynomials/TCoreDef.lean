@@ -1,4 +1,6 @@
-import Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.ColGen
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.MultidegAdd
 
 noncomputable section
 

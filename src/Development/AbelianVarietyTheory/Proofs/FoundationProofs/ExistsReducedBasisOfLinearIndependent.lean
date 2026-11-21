@@ -1,8 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReducedBases.ExistsRedOf
 import ReciprocityTheory.ReducedBases.PrefixProdGeOne
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.IntegralModuleBases.NormGsoSqLeTwoPowMulOfValEqAdd
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsBimultiplicativeOfSecondQuotConst
+import Mathlib.Data.Int.Star
+import ReciprocityTheory.ReducedBases.ExistsBoundedBasis
 
 noncomputable section
 

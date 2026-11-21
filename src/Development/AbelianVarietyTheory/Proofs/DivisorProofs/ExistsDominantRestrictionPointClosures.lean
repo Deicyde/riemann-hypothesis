@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ResidueDegreeOfIsClosedImmersion
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsAmbOfIsArithVar
 open CategoryTheory AlgebraicGeometry TopologicalSpace MvPolynomial

@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.TraceDualDifferent
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RembApply
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LatticeTheta.ThetaShiftInversion
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiscreteTopologyFractionalIdealRealLatticeImageStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsZLatticeFractionalIdealRealLatticeImageStatement
@@ -9,6 +8,7 @@ import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DualLatticeImageEqL
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FourierLipschitzOneVariableKernelEqStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousIsBigORpowLipschitzProductKernelStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SummableLipschitzLatticeNormPowSummandStatement
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
 
 noncomputable section
 open NumberField nonZeroDivisors MeasureTheory
@@ -46,7 +46,7 @@ theorem summable_lhsTerm [IsTotallyReal F] (M : FractionalIdeal (𝓞 F)⁰ F) (
 
 theorem fourier_prod_coord (ι : Type) [Fintype ι] (f : ι → ℝ → ℂ) (x : EuclideanSpace ℝ ι) :
     𝓕 (fun ξ : EuclideanSpace ℝ ι => ∏ i, f i (ξ i)) x = ∏ i, 𝓕 (f i) (x i) := by
-  simp only [Real.fourier_eq', Real.fourier_real_eq]
+  simp only [Real.fourier_eq']
   rw [← integral_fintype_prod_volume_eq_prod,
     ← (PiLp.volume_preserving_toLp ι).integral_comp (MeasurableEquiv.toLp 2 (ι → ℝ)).measurableEmbedding]
   refine integral_congr_ae (Filter.Eventually.of_forall fun ξ => ?_)

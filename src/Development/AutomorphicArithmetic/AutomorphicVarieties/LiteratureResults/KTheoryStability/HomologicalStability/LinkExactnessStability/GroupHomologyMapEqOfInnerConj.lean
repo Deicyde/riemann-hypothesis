@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.PermRepSingle
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.KTheoryStability.HomologicalStability.LinkExactnessStability.InnerAutActsTriviallyGroupHomology
 open CategoryTheory CategoryTheory.Limits GlobalTheory.HomStab
 
@@ -25,7 +24,7 @@ theorem GlobalTheory.HomStab.groupHomology_map_conj : ∀ (k G H : Type) [CommRi
         (u₁ ≫ (Rep.resFunctor f₁).map (actHom B g)) n := by
     apply groupHomology.map_congr hf'
     ext a
-    simp [hu a, actHom_apply]
+    simp [hu a]
     rfl
   rw [e, groupHomology.map_comp, GlobalTheory.T.innerAut_acts_trivially_groupHomology k G g n B (actHom B g) (fun a => rfl),
     Category.comp_id]

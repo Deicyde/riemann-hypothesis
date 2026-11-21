@@ -1,4 +1,7 @@
-import Formalism.WachLatticeTwists.RamifiedBlockRings.RamifiedBlockProofs.CharpolyRevMap
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.WachLatticeTwists.RamifiedBlockRings.RamifiedBlockProofs.IdempotentImageSurjective
+import Mathlib.Algebra.Module.StablyFree.Basic
 
 open Module
 
@@ -97,7 +100,7 @@ theorem charpolyRev_conj [Nontrivial O] (P Q : Matrix r r O) (d : r → O)
   have hdiag : Matrix.diagonal (fun j => (1 : Polynomial O) - Polynomial.X * Polynomial.C (d j)) =
       1 - (Polynomial.X : Polynomial O) • Matrix.diagonal (fun j => Polynomial.C (d j)) := by
     ext i j
-    by_cases h : i = j <;> simp [h, Matrix.diagonal_apply, Matrix.one_apply]
+    by_cases h : i = j <;> simp [h]
   have key : (1 : Matrix r r (Polynomial O)) - (Polynomial.X : Polynomial O) •
       (P * Matrix.diagonal d * Q).map Polynomial.C =
       P.map Polynomial.C * Matrix.diagonal (fun j => 1 - Polynomial.X * Polynomial.C (d j)) *

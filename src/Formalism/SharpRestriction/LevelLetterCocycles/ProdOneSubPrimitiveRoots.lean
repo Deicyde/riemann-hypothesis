@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.DataNLoc
 import ReciprocityTheory.ClassFieldTheory.LocalClassField.ExistsDvdQKPowSubOne
 
@@ -202,7 +203,7 @@ theorem natDegree_minpoly_eq (hF : F ≤ MaximalUnramifiedExtension l) {k : ℕ}
     have hPdeg : P.natDegree = m.natDegree := natDegree_map _
     conv_lhs => rw [← prod_multiset_X_sub_C_of_monic_of_roots_card_eq hmon (hcard.trans hPdeg.symm)]
     rw [eval_multiset_prod, Multiset.map_map]
-    simp [Function.comp_def]
+    simp
   have hnorm : ‖(P.roots.map fun a => 1 - a).prod‖ = ‖1 - z‖ ^ m.natDegree := by
     rw [← hcard]
     have hr : ∀ a ∈ P.roots, ‖1 - a‖ = ‖1 - z‖ := fun a ha => norm_one_sub_eq (hroots a ha) hz

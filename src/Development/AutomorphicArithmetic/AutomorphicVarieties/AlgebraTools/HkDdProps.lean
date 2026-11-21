@@ -1,6 +1,7 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.HkDefs
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.HkDdSpec
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.DeEqDet
+import Mathlib.Algebra.AffineMonoid.UniqueSums
 
 open MvPolynomial Equiv UpperTheory.V.AlgebraTools.Hk
 
@@ -49,5 +50,5 @@ theorem UpperTheory.V.AlgebraTools.hkDdProps :
   refine ⟨{ toFun := fun x => ⟨dd x, (mem_symmetricSubalgebra _).mpr (hsym x)⟩
             map_add' := fun x y => Subtype.ext (hadd x y)
             map_smul' := fun c x => Subtype.ext ?_ }, fun x => rfl⟩
-  simp only [RingHom.id_apply, Subalgebra.smul_def, SetLike.val_smul]
+  simp only [RingHom.id_apply, Subalgebra.smul_def]
   exact hmul _ _ ((mem_symmetricSubalgebra _).mp c.2)

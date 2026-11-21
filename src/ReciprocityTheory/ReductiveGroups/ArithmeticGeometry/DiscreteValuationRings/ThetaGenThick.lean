@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.ThetaGenFlat
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.Tactic.ReduceModChar
 
 open CategoryTheory CategoryTheory.Limits AlgebraicGeometry
 

@@ -1,4 +1,45 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.LinearAlgebra.Matrix.Rank
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
 
 noncomputable section
 
@@ -63,11 +104,11 @@ theorem pidem_mul (I J : MaximalSpectrum A) : pidem A I * pidem A J = if I = J t
     rw [map_mul, Pi.mul_apply, equivPi_pidem]
     by_cases hL : L = I
     · subst hL; simp
-    · simp [Pi.single_apply, hL]
+    · simp [hL]
   · rw [map_mul, Pi.mul_apply, equivPi_pidem, equivPi_pidem, map_zero, Pi.zero_apply]
     by_cases hL : L = I
-    · subst hL; simp [Pi.single_apply, Ne.symm h]
-    · simp [Pi.single_apply, hL]
+    · subst hL; simp [Ne.symm h]
+    · simp [hL]
 
 theorem pidem_idem (I : MaximalSpectrum A) : IsIdempotentElem (pidem A I) := by
   have h := pidem_mul I I
@@ -79,7 +120,7 @@ theorem sum_pidem [Fintype (MaximalSpectrum A)] : ∑ I, pidem A I = 1 := by
   funext L
   rw [map_sum, Finset.sum_apply, map_one, Pi.one_apply]
   simp_rw [equivPi_pidem]
-  simp [Pi.single_apply]
+  simp
 
 theorem mul_pidem_of_mem (I : MaximalSpectrum A) {x : A} (hx : x ∈ I.asIdeal) : x * pidem A I = 0 := by
   apply (IsArtinianRing.equivPi A).injective
@@ -88,7 +129,7 @@ theorem mul_pidem_of_mem (I : MaximalSpectrum A) {x : A} (hx : x ∈ I.asIdeal) 
   by_cases hL : L = I
   · subst hL
     rw [IsArtinianRing.equivPi_apply, (Ideal.Quotient.eq_zero_iff_mem).2 hx, zero_mul]
-  · simp [Pi.single_apply, hL]
+  · simp [hL]
 
 end idem
 
@@ -175,8 +216,7 @@ theorem finrank_piece_rep (e : A) : finrank k (piece (Rep ρ) e) = (ρ e).rank :
   have hs : ((piece (Rep ρ) e).restrictScalars k : Submodule k (Fin N → k)) =
       LinearMap.range (ρ e).mulVecLin := by
     ext v
-    simp only [Submodule.restrictScalars_mem, piece, LinearMap.mem_range, LinearMap.lsmul_apply,
-      Matrix.mulVecLin_apply]
+    simp only [Submodule.restrictScalars_mem, piece, LinearMap.mem_range, LinearMap.lsmul_apply]
     rfl
   rw [Matrix.rank, ← hs]
   rfl

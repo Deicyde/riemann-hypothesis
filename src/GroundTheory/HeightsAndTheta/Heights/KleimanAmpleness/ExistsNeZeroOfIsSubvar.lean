@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.GenericPointSectionHypotheses
-import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.IsFieldSubalgebraSelf
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.ImportsExtraTer
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.ImportsTerAlt
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.ImportsMoreAlt

@@ -1,9 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsDeltaDelAtOwnAt
-import Formalism.LocalToGlobal.Divisibility.NumbersLemmas
-import Formalism.LocalToGlobal.IndefiniteForms.IndefiniteTree.DepthCond
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.TraceLatticeLeThetaLatticeAtPlace
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.GoodLiftOnto
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFullLift
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsTieCoordBase
 import Development.AbelianVarietyTheory.Counterexamples.RotationExamples.PhaseBreaksTargetParts

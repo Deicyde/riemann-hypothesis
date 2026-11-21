@@ -1,14 +1,14 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicCases.SymplecticGSp4
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.FlagL
 import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.EptInt
 import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.PtInSmul
-import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.LMemMax
 import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.IrrIff
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.Clifford
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CyclotomicInertiaSpan.IneSpan
 import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.SplittingFieldIsoQuadratic
-import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.SelmerTransport.Places
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.SelmerTransport.GalEmbTop
+import Mathlib.NumberTheory.LSeries.PrimesInAP
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal IsLocalRing UpperTheory.V UpperTheory.V.Base UpperTheory.V.Alg UpperTheory.V.HV UpperTheory.V.GradeZeroInterpolatingElement
 
 namespace UpperTheory.V.GradeZeroInterpolatingElement.ResidualIrreducibilityUnramified
@@ -175,7 +175,7 @@ private theorem matIrr (D : Raw Ω c) (hD : D.Good) (r : G ℚ Ω →* M4 (Padic
     (fun a b => ⟨by
       show a * b * a⁻¹ * b⁻¹ ∈ U
       simp only [Subgroup.mul_mem_iff_of_index_two h2, inv_mem_iff]
-      tauto, by simp [MonoidHom.mem_ker, mul_right_comm]⟩)
+      tauto, by simp⟩)
     (fun W hW => hirr.2.2 W le_top fun g => hW g trivial) hred
   have hM' : ∀ g, (M : M4 (PadicAlgCl l)) * ((φ g : PadicAlgCl l) • r g) = r g * M := fun g => hM g trivial
   have hiff : ∀ g, φ g = 1 ↔ (M : M4 (PadicAlgCl l)) * r g = r g * M := fun g =>

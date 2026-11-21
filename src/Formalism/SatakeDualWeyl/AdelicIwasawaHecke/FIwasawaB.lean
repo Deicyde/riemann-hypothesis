@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.FIwasawaA
+import Mathlib.RingTheory.PiTensorProduct
 
 open Formalism.UG Matrix
 

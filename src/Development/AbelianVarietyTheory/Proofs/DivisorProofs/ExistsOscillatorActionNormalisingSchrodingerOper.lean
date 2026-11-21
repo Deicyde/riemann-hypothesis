@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockMap
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.RealMetaplecticRepresentation
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUnitaryOsc
+import Formalism.LocalRingCardinality.DataTheta
 
 open scoped TensorProduct Matrix
 open MeasureTheory Formalism.BasicNotions.TH GlobalTheory.RealLift GlobalTheory.RealWeil Matrix
@@ -205,7 +206,7 @@ theorem coordOf_mulVec {G : Type} [Group G] (k : G →* (ι → Mat R S)) (hk : 
   rw [numHom_apply, reindex_apply, submatrix_mulVec_equiv]
   funext w
   ext a b
-  simp [coordOf, mulVec, dotProduct, blockDiagonal_apply, Fintype.sum_prod_type, mul_apply, Finset.mul_sum, ite_mul]
+  simp [coordOf, mulVec, dotProduct, blockDiagonal_apply, Fintype.sum_prod_type, mul_apply, ite_mul]
   rw [mul_add, Finset.mul_sum, Finset.mul_sum]
   congr 1 <;> exact Finset.sum_congr rfl fun _ _ => by ring
 

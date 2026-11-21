@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.RankEqCardIffExistsFrameMatrixFirstColumnBlock
+import Mathlib.Analysis.CStarAlgebra.CStarMatrix
 
 open MeasureTheory ValuativeRel Matrix
 open scoped NNReal ENNReal Pointwise

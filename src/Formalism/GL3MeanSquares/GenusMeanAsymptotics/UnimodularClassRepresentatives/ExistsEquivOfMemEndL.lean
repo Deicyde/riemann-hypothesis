@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.GenusMeanAsymptotics.UnimodularClassRepresentatives.ExistsMulDvdUnif
-import Formalism.HermitianLattices.HermitianLatticesProofs.DualLattice
 
 open NumberField Module
 

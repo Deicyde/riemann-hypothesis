@@ -1,4 +1,10 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.DoubleBlock
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.RingTheory.GradedAlgebra.Radical
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Topology.Sheaves.Presheaf
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.IsIntersectionFamily
 
 noncomputable section
 
@@ -24,11 +30,11 @@ theorem weight_lexW (e : K ≃ Fin n) (m : (Σ k, ι k) →₀ ℕ) :
   show (∑ p, m p • (Pi.single (e p.1) 1 : Fin n → ℕ)) = fun j => ∑ i, m ⟨e.symm j, i⟩
   funext j
   rw [Finset.sum_apply, Fintype.sum_sigma, Finset.sum_eq_single (e.symm j)]
-  · simp [Pi.single_apply]
+  · simp
   · intro k _ hk
     refine Finset.sum_eq_zero fun i _ => ?_
     have hjk : j ≠ e k := fun h => hk (by rw [h, Equiv.symm_apply_apply])
-    simp [Pi.single_apply, hjk]
+    simp [hjk]
   · simp
 
 theorem isMultiHomog_iff_lex (e : K ≃ Fin n) (f : MRing ι) (a : K → ℕ) :

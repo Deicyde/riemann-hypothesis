@@ -1,6 +1,7 @@
-import Mathlib
-import Formalism.PairingDivisors.StatementA
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsFinSetSplitPlacesCoprimeConductor
+import Mathlib.NumberTheory.NumberField.CMField
 
 open NumberField IsDedekindDomain GlobalTheory.CMVal
 

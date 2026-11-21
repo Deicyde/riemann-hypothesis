@@ -1,10 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.DivisionPairOfAdelicFormsFaceColumnsData
-import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.PUnfoldingIntegral
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.PDiscreteFundamentalDomain
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.PScalingLaw
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.PDualIndexFinite
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.ReindexBasis
+import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.PArchLatticeDiscrete
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.FiniteCovolume.HermitianSpaceComparison

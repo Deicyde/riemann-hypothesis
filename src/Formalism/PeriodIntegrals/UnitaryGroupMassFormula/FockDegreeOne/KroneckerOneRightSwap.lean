@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.FockDegreeOne.OneDegOfHalves
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.FockDegreeOne.OmEDiagMonomial
 
 noncomputable section
 
@@ -134,7 +135,7 @@ theorem rename_omE (l l' : Ln p q r s) (P : Pol p q r s) :
   · subst h
     simp
   · have h' : sw p q r s l ≠ sw p q r s l' := fun e => h ((sw p q r s).injective e)
-    simp [h, h']
+    simp [h]
 
 theorem rename_omAct (M : Matrix (Ln p q r s) (Ln p q r s) ℂ) (P : Pol p q r s) :
     rename (sw p q r s) (omAct p q r s M P) =

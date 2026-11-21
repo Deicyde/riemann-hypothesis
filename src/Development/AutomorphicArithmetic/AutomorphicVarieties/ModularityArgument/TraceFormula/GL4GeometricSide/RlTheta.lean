@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.TraceFormula.GL4GeometricSide.InnerEq
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsThetaInvolution
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.OnlyStableSubspaces
 
 open UpperTheory.V.Z.GSp4Splitting PositivityTheory.RgBcC PositivityTheory.RgBcC.RealD PositivityTheory.Rg.BcB.Desc
 

@@ -1,6 +1,4 @@
-import Mathlib
-import Formalism.LocalRingCardinality.DataCD
-import Formalism.SatakeDualWeyl.KpqSubgroupCompact
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.HaarUpqEqOfOmegaDensity
 
 open Formalism.BasicNotions MeasureTheory Filter Topology Matrix

@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.HodgePeriodGram
+import Mathlib.Analysis.Real.Pi.Bounds
 open Matrix Complex Filter Topology
 open scoped ComplexOrder ContDiff
 open GlobalTheory.IndefiniteRowSideFullHecke.HodgePeriodGram GlobalTheory.HermFrame

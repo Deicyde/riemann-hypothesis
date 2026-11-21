@@ -1,7 +1,4 @@
-import Mathlib
-import Formalism.LocalRingCardinality.DataExtra
-import Formalism.LocalRingCardinality.DataRRMetric
-import Formalism.LocalToGlobal.LatticeGeometry.DegFlLApply
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.LatticeGeometry.CmTypeMeetsConjugatePair
 
 noncomputable section

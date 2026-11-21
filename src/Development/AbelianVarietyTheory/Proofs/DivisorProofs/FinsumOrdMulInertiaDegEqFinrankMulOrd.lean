@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.LengthRestrictScalarsEqSumInertiaDegOfSubset
+import Mathlib.Data.ENat.BigOperators
+import Mathlib.RingTheory.OrderOfVanishing.Basic
 
 open IsLocalRing
 
@@ -49,7 +51,7 @@ private lemma isFiniteLength_of_nonZeroDivisor_smul_eq_zero {A X : Type*} [CommR
     · rw [Pi.single_eq_same]
       exact (Submodule.liftQ_apply _ _ 1).trans (one_smul A _)
     · intro j _ hj
-      simp [Pi.single_apply, hj]
+      simp [hj]
     · intro h
       exact absurd (Finset.mem_univ i) h
   have hQ : IsFiniteLength A (A ⧸ Ideal.span {c}) := isFiniteLength_quotient_span_singleton A hc

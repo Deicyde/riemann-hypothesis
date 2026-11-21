@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.FirstFrameStepImplication
-import Formalism.SharpRestriction.LevelLetterCocycles.MapCompZero
 import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.SumIocPadicValNatAddFactorial
 
 noncomputable section

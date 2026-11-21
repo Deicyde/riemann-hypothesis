@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PadicSubsetSums.CentralIdempotents.IsConstituent
+import Mathlib.Data.Finsupp.Pointwise
+import Mathlib.LinearAlgebra.PiTensorProduct.Finite
+import Mathlib.RingTheory.PicardGroup
 
 open Polynomial CategoryTheory
 noncomputable section
@@ -257,7 +262,7 @@ theorem zIdem_coeff [Fintype Γ] (τ : FDRep ℂ Γ) (γ : Γ) :
     (zIdem τ).coeff γ = (Module.finrank ℂ τ : ℂ) / Fintype.card Γ * LinearMap.trace ℂ τ (τ.ρ γ⁻¹) := by
   classical
   unfold zIdem
-  simp [MonoidAlgebra.coeff, Finsupp.finset_sum_apply, Finsupp.single_apply, MonoidAlgebra.single]
+  simp [Finsupp.finset_sum_apply, Finsupp.single_apply, MonoidAlgebra.single]
 end BaseChange
 
 variable (K : Type) [Field K] [Fintype K] [DecidableEq K]

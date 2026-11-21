@@ -1,5 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.IotaDictAll
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.BridgeRat
+import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.IotaBridgeHalves
 
 noncomputable section
 
@@ -94,7 +96,7 @@ theorem dense_hat (A : X.B.I.Gf) {Λ : Submodule (𝓞 D.host.E) (VS D).V}
         (⟨r, hr⟩ : IntAf X.B.I.F X.B.I.E) • PIW.AdelClassFin.iv X.B.I v + o • z',
         add_mem (Submodule.smul_mem _ _ (Submodule.subset_span ⟨⟨v, hv⟩, rfl⟩)) (Submodule.smul_mem _ _ hz'), ?_⟩
       rw [hiv_smul, Subring.smul_def, Subring.smul_def, Subring.smul_def, ho]
-      simp only [mul_add, add_mul, add_smul, smul_add, smul_smul, mul_comm, mul_assoc, mul_left_comm]
+      simp only [mul_add, add_smul, smul_add, smul_smul, mul_comm, mul_left_comm]
       abel
   obtain ⟨v, hv, z', hz', he⟩ := claim _ hM
   have hz'L : X.B.I.fmat A⁻¹ *ᵥ z' ∈ X.B.I.Lf := by

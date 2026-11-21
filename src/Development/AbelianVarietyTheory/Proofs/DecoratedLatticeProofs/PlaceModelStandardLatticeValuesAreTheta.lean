@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.TiedAt
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.TensorOneApply
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.FourUniq
 import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.IpTheta
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.InfPartOneSubEInfSmul

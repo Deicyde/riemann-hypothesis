@@ -1,7 +1,5 @@
-import Mathlib
-import Formalism.PairingDivisors.StatementA
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsFinSetSplitPlacesCoprimeConductor
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ValIotaLeOfMem
 open NumberField IsDedekindDomain GlobalTheory.CMVal GlobalTheory.CMVal.Euler
 
 namespace GlobalTheory.CMVal.CondExp

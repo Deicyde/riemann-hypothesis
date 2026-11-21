@@ -1,10 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.FormsOver
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TwoMulCardPsi
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsPadicPackageStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SmoothOfAlgClosedUnifStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsKeySectionUnifStatement
-import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.ExistsSmulOfPreservesFrameOrbits
 
 noncomputable section
 

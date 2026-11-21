@@ -1,7 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutNFTopDomPtw
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutFpmDecay
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutDec
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BetaSesquilinearity
 
 namespace Formalism.FourierDecayAlt.P.CutBP
 

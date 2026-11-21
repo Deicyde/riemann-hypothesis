@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.FormalGroupSystem
 import Formalism.SharpRestriction.GrowthBounds.LatticeSystems
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Wlocal

@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryGroupContinuousCharEqDetZpowStatement
+import Mathlib.Analysis.CStarAlgebra.CStarMatrix
 open Matrix
 open scoped ComplexOrder
 

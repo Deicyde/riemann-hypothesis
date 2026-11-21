@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Theta.AdelicFourierCoord
 import GroundTheory.GlobalFields.TateThesis.GaussianSchwartz
+import Mathlib.LinearAlgebra.BilinearForm.TensorProduct
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Theta

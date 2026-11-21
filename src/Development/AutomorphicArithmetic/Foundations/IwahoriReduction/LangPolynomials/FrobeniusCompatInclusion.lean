@@ -1,4 +1,8 @@
-import Development.AbelianVarietyTheory.Definitions.Foundations.NotZeroChi
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.CyclotomicDvdExpandOfCoprime
+import Development.AbelianVarietyTheory.Definitions.Foundations.HTLawAt
+import Development.AbelianVarietyTheory.Definitions.Foundations.IsLocallyConstantCycMod
 
 noncomputable section
 

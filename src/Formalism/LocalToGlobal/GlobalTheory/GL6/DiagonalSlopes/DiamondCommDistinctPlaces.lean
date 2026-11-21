@@ -1,6 +1,6 @@
-import Formalism.LocalToGlobal.GlobalTheory.GL6.DiamondPreservesRationalFormZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.GL6.DiagonalSlopes.AdelicFunctionRightTranslateDiamond
-import Formalism.LocalToGlobal.GlobalTheory.GL6.DiagonalSlopes.CharacterFiniteLevelZeroOfForms
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.AfsplitB
 
 noncomputable section

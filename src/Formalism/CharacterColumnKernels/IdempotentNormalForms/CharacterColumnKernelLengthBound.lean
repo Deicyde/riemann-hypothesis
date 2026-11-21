@@ -1,6 +1,10 @@
-import Formalism.CharacterColumnKernels.Statement
+import BuildAid.Leniency.Open
 import Formalism.CharacterColumnKernels.CharacterColumnKernelLengthBound
-import Formalism.CharacterColumnKernels.IdempotentNormalForms.ProdEraseZero
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
+import Mathlib.NumberTheory.Multiplicity
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open Finset
 

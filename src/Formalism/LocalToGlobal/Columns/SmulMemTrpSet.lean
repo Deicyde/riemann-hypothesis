@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.ScaledRamifiedLattice
-import Formalism.LogVandermondeBounds.FinrankFiberSumZero
-import Formalism.LogVandermondeBounds.GaussOperatorProductFormula
 
 open NumberField IsDedekindDomain Module
 

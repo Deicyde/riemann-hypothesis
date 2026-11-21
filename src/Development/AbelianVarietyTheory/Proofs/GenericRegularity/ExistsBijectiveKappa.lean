@@ -1,8 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.RatRgOfSecRat
-import Formalism.LocalToGlobal.ProjectiveLattices.CurveInstSt
-import Development.AbelianVarietyTheory.Proofs.GenericRegularity.EvaluationLawsGenericFramesAtlasHold
-import Development.AbelianVarietyTheory.Proofs.GenericRegularity.ExistsGenericComponentPointsOffMeagre
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GenericRegularity.EvCEqZeroIffRdUEqZero
 import Development.AbelianVarietyTheory.Proofs.GenericRegularity.CompUniqueOfReading
 import Development.AbelianVarietyTheory.Proofs.GenericRegularity.CountableFractionRingMvPolynomial

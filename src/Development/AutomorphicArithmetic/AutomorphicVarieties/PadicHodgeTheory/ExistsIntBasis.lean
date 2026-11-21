@@ -1,12 +1,7 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.LocalPublishedTheorems
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.OpenField
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.MemIK
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.IsCrysOfInertia
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.MatrixExtendByZeroApply
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.WtMatFix
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.UnramifiedIsCrysAndJumpEqZero
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.PeriodDataComparison
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.DeRhamComparisonIsFiltered
 open Formalism.WeaklyAdmissibleFiltrations Formalism.MainNotions.N Formalism.BasicNotions Formalism.BasicNotions.Loc ReciprocityTheory.Gal TensorProduct Module UpperTheory.V.Loc Topology
 
 private theorem exists_int_basis {l : ℕ} [Fact l.Prime] {G : Type} [Group G] [TopologicalSpace G] [CompactSpace G]
@@ -261,7 +256,7 @@ private noncomputable def extRep (c : G → V) (hc : ∀ g h, c (g * h) = c g + 
     simp [this]
   map_mul' g h := by
     refine LinearMap.ext fun p => ?_
-    simp [hc, add_assoc, add_comm, add_left_comm]
+    simp [hc, add_comm, add_left_comm]
 
 private theorem extRep_apply (c : G → V) (hc : ∀ g h, c (g * h) = c g + ρ g (c h)) (g : G) (p : V × ℚ_[l]) :
     extRep ρ c hc g p = (ρ g p.1 + p.2 • c g, p.2) := rfl

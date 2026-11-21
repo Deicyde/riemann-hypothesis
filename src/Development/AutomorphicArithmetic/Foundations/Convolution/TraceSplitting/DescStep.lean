@@ -1,13 +1,12 @@
-import Mathlib
-import Development.AutomorphicArithmetic.Foundations.Convolution.TraceSplitting.NormCharSplit
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.TraceSplitting.FamParts
 import Development.AutomorphicArithmetic.Foundations.Convolution.TraceSplitting.PowTwist
 import Development.AutomorphicArithmetic.Foundations.Convolution.TraceSplitting.CarryLift
 import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.ExTwist
-import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.ExCusp
 import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.LocIff
 import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.OccursIff
 import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.OccursBasics
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerOrbitVolume.DetAdmA
 
 open MeasureTheory NumberField IsDedekindDomain Filter
 open GroundTheory.Automorphic GroundTheory.Automorphic.Reduction GroundTheory.Automorphic.RightCosetSpace

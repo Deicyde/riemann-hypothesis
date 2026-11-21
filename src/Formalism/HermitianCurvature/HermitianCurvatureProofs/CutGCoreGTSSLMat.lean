@@ -1,10 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGCoreGTSSLocalCut
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGCRadSpSmooth
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGCoreGTConnGaugeA
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutEnBetaFrame
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.NormalFormOrderZeroOfParts
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.NfRadOrder0OfRadRed
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.NFRadRedF
 
 open Formalism.REAL Formalism.QuantumDeterminants Formalism.FourierDecayAlt
 open scoped ContDiff

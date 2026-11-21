@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemImLine
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviEmbeddingExistsDoublingConfiguration
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentCoordinateAdditive
@@ -39,7 +38,7 @@ theorem fA_gram (σ : E →ₐ[F] E) {b : ℕ} (J : Matrix (Fin (b + 2)) (Fin (b
   unfold fA
   rw [h1, Matrix.mulVec_mulVec, Matrix.dotProduct_mulVec, ← Matrix.vecMul_transpose, Matrix.vecMul_vecMul,
     ← Matrix.mul_assoc, hK, ← Matrix.dotProduct_mulVec]
-  simp [dotProduct, Fintype.sum_sum_type, fromBlocks_mulVec, swap2, Fin.sum_univ_two, Matrix.mulVec]
+  simp [dotProduct, Fintype.sum_sum_type, swap2, Fin.sum_univ_two, Matrix.mulVec]
   ring
 
 theorem fA_mat (σ : E →ₐ[F] E) {n : ℕ} (J : Matrix (Fin n) (Fin n) E) (g : UA σ J) (v w : Fin n → AE F E) :
@@ -117,7 +116,7 @@ theorem coA_coC_mul : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [Numb
   have hval : ∀ (j : Fin b) (c : AE F E),
       fA σ G.V.J (incM F H.ι *ᵥ Pi.single j 1 + c • incV F H.x) (incV F H.y) = c := by
     intro j c
-    rw [fA_add_left, fA_smul_left, ← hI, fPY, fXY]; simp [← Pi.zero_def]
+    rw [fA_add_left, fA_smul_left, ← hI, fPY, fXY]; simp
   have coord : ∀ n ∈ unip σ G.V H, ∃ u : Fin b ⊕ Fin 2 → AE F E, mat n *ᵥ incV F H.y = Pa *ᵥ u ∧
       u (Sum.inr 0) = coC σ G.V.J H n ∧ u (Sum.inr 1) = 1 ∧
       (fun i => u (Sum.inl i)) = betaOf σ G₁.V.J (coA σ G.V.J H n) := by
@@ -136,7 +135,7 @@ theorem coA_coC_mul : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [Numb
       funext j
       obtain ⟨a, ha⟩ := (unip_spec hn).2 (Pi.single j 1)
       have hcoA : coA σ G.V.J H n j = a := by simp only [coA]; rw [ha, hval]
-      have h0 : fA σ G.V.J (incM F H.ι *ᵥ Pi.single j 1) (incV F H.y) = 0 := by rw [← hI, fPY]; simp [← Pi.zero_def]
+      have h0 : fA σ G.V.J (incM F H.ι *ᵥ Pi.single j 1) (incV F H.y) = 0 := by rw [← hI, fPY]; simp
       have h := fA_mat σ G.V.J n (incM F H.ι *ᵥ Pi.single j 1) (incV F H.y)
       rw [ha, hu, h0, fA_add_left, fA_smul_left, ← hI, ← hX, gr, gr, ht] at h
       simp [← Pi.zero_def] at h

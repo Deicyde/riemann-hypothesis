@@ -1,4 +1,6 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.SelmerScaling.EpC
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.ResMapBijective
+import Mathlib.RingTheory.SimpleRing.Principal
 
 open IsLocalRing Matrix UpperTheory.V.Alg UpperTheory.V.W UpperTheory.V.AlgebraTools UpperTheory.V.Pa
 
@@ -123,4 +125,4 @@ theorem UpperTheory.V.Pa.linAlg :
     rw [← hrow a ha i]
     refine Finset.sum_congr rfl fun j _ => ?_
     simp only [Pi.basisFun_apply, Pi.single_apply, ite_mul, one_mul, zero_mul, Finset.sum_ite_eq',
-      Finset.sum_ite_eq, Finset.mem_univ, if_true, hXκ]
+      Finset.mem_univ, if_true, hXκ]

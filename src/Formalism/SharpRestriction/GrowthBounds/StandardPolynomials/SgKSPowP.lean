@@ -1,6 +1,5 @@
-import Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.IdentityLiftWeightedHomog
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.NormalWeightCovectorZero
-import Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.TopKeyFormSelfSoft
 
 noncomputable section
 

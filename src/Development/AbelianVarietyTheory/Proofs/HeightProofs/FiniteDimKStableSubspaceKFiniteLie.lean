@@ -1,8 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.BesselHermitianTheta.DefsReal
-import Formalism.LocalToGlobal.BesselHermitianTheta.TiedSmooth
-import Formalism.RealPlaceAnalysis.RealPlaceTaylor.CompactExponentialSurjective
-import Development.AbelianVarietyTheory.BlockTheory.HeightDefect.IsotypicSignedParameters
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.ExistsBlockOrd
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.S Formalism.L2.Theta GlobalTheory.RealPar Matrix MeasureTheory
 open scoped TensorProduct

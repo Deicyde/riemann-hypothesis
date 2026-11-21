@@ -1,8 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.HilbertRowConditions.ColumnsFunctionAtSubspaces
-import Formalism.LocalToGlobal.IndefiniteForms.IndefUse
 import Formalism.LocalToGlobal.Divisibility.TrivialExtensionSideWellFormed
-import Formalism.SharpRestriction.LevelLetterCocycles.ThetaScalarFamilyOfEigenvalue
-import Formalism.LocalToGlobal.NormalizedHeckeFactors.ExtNRowsGen
 
 noncomputable section
 

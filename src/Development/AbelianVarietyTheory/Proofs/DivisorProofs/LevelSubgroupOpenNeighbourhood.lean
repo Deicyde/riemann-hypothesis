@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemFinPt
 
@@ -56,7 +56,7 @@ def comp {e : R} (he : e * e = e) (g : UG c J) : UG c J :=
     show (e • ((g.1 : Matrix ι ι A) - 1) + 1)ᵀ * J * (e • ((g.1 : Matrix ι ι A) - 1) + 1).map c = J
     have h1 : (e • ((g.1 : Matrix ι ι A) - 1) + 1).map c = e • ((g.1 : Matrix ι ι A).map c - 1) + 1 := by
       ext i j
-      by_cases h : i = j <;> simp [Matrix.one_apply, h]
+      by_cases h : i = j <;> simp [h]
     rw [h1, Matrix.transpose_add, Matrix.transpose_smul, Matrix.transpose_sub, Matrix.transpose_one,
       comp_mul_mid he, hg, sub_self, smul_zero, zero_add]⟩
 

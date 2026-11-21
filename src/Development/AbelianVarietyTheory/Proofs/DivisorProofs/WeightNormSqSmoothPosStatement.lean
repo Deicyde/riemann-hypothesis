@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeightNormSqSmoothPos
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.HodgeFrameGram
 open Matrix Complex ComplexConjugate GlobalTheory.HermFrame GlobalTheory.IndefiniteRowSideFullHecke.HodgeFrameGram
 open scoped ComplexOrder ContDiff
 set_option maxHeartbeats 1000000 in

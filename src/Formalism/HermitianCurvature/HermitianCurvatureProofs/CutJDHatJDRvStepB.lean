@@ -1,5 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJDHatJDRvStepBRules
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJDHatJDCapRGrpMRad
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJDHatJDACapTodaVGrp
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJDHatJDACapTodaVRules
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJDHatJDRStepB
 
 open Matrix
 open scoped ContDiff
@@ -59,9 +64,9 @@ theorem stepBv_pt (z z' : Fin (2 * r + k + 1) → ℂ) (hz : inWb k r z) (hz' : 
   have hLv : LeftEq k r z 0 D (v₀ : Mx k r → E) := leftEq_cut z hN hLf
   set Λ := La hD v₀ x0 with hΛ
   set tt := r - l - 2 + k with htt
-  have hT : tt + 2 = r - (⟨l, by omega⟩ : Fin (r + 1)).val + k := by simp only [Fin.val_mk]; omega
-  have hT1 : tt + 1 = r - (⟨l + 1, by omega⟩ : Fin (r + 1)).val + k := by simp only [Fin.val_mk]; omega
-  have hT2 : tt = r - (⟨l + 2, by omega⟩ : Fin (r + 1)).val + k := by simp only [Fin.val_mk]; omega
+  have hT : tt + 2 = r - (⟨l, by omega⟩ : Fin (r + 1)).val + k := by simp only; omega
+  have hT1 : tt + 1 = r - (⟨l + 1, by omega⟩ : Fin (r + 1)).val + k := by simp only; omega
+  have hT2 : tt = r - (⟨l + 2, by omega⟩ : Fin (r + 1)).val + k := by simp only; omega
   set a := rowsNv k r ⟨l, by omega⟩ s ∘ Fin.cast hT with ha
   set b := rowsNv k r ⟨l, by omega⟩ t ∘ Fin.cast hT with hb
   have hav : ∀ m : Fin (tt + 2), (a m).val = if m.val < s.val then r + m.val else r + m.val + 1 := by
@@ -203,7 +208,7 @@ variable {k r : ℕ}
 
 theorem uCv_gauge (l : ℕ) (hl : l < r) (Y : ℂ) :
     Q.uC k r (Fin.last r) Y - 1 - ((r - l - 1 + k : ℕ) : ℂ) = Y - ((Mdim k r ⟨l, hl⟩ - 1 : ℕ) : ℂ) / 2 := by
-  simp only [Q.uC, Q.mdim, Mdim, Fin.val_last, Fin.val_mk, Nat.sub_self]
+  simp only [Q.uC, Q.mdim, Mdim, Fin.val_last, Nat.sub_self]
   have e1 : 2 * (r - l) + k + 1 - 1 = 2 * (r - l) + k := by omega
   have e2 : r - l = (r - l - 1) + 1 := by omega
   rw [e1, e2]
@@ -268,7 +273,7 @@ theorem mirror_residue_second_move : JDRvStepB := by
     unfold FNv NLv
     rw [resG_last]
     simp only [hfix c']
-  simp only [Pi.add_apply, Pi.sub_apply, Pi.smul_apply, Q.crd, cbOp, cbiOp]
+  simp only [Pi.sub_apply, Pi.smul_apply, Q.crd, cbOp, cbiOp]
   obtain ⟨F1, hF1⟩ : ∃ F1 : Fin (k + 1) → Fin (k + 1) → (Fin r → ℂ) → (Wq →L[ℂ] Wp), F1 = fun s t c' =>
     qminorOp (EH k r) (rowsNv k r ⟨l + 1, by omega⟩ s) (rowsNv k r ⟨l + 1, by omega⟩ t) (Q.uC k r (Fin.last r) Y - 1) J
       (wCell k r (Fin.last r) c' * g) := ⟨_, rfl⟩

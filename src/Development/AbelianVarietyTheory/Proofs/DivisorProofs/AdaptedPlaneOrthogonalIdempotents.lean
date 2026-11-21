@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.Idem3
 
 open scoped TensorProduct NNReal Matrix
@@ -14,7 +13,7 @@ variable {F E : Type} [Field F] [NumberField F] [Field E] [NumberField E] [Algeb
 theorem vmv_mul {n : ℕ} (a b c d : Fin n → E) :
     Matrix.vecMulVec a b * Matrix.vecMulVec c d = (b ⬝ᵥ c) • Matrix.vecMulVec a d := by
   ext i j
-  simp [Matrix.mul_apply, Matrix.vecMulVec_apply, dotProduct, Finset.smul_sum, Finset.sum_mul, Finset.mul_sum]
+  simp [Matrix.mul_apply, Matrix.vecMulVec_apply, dotProduct, Finset.sum_mul]
   refine Finset.sum_congr rfl fun k _ => by ring
 
 theorem cA_incl (σ : E →ₐ[F] E) (e : E) : cA σ (inclR (F := F) (AF F) e) = inclR (F := F) (AF F) (σ e) := by

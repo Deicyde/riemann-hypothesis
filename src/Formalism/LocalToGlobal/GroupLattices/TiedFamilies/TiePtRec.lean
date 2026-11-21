@@ -1,8 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.EqOneOfPh
 import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.RecAct
 import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.ClsOrb
 import Formalism.LocalToGlobal.GroupLattices.LevelGatherings.GramDetIsUnit
-import Formalism.LocalToGlobal.HermitianForms.RankEqFirstLevel
 
 noncomputable section
 

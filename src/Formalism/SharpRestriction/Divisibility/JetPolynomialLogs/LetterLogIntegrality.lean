@@ -1,5 +1,7 @@
-import Formalism.SharpRestriction.Divisibility.JetPolynomialLogs.DworkPowerSeriesWeights
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.GaussJetBounds.GaussJetProofs.ConstantCoeffEvenDerivativeEqZero
+import Formalism.SharpRestriction.Divisibility.ProductZerothFirstParts
 
 noncomputable section
 

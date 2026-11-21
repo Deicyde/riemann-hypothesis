@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.Pull1
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.MetricPeriods.IsPeriodOn
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.BlockDiagonalMinorVanishingStatement
+import Development.AutomorphicSpectrum.Proofs.MetricProofs.BlockDiagonalMinorVanishing
+import Development.AutomorphicSpectrum.Statements.MetricStatements.AgreementIffGuarded
 
 open MvPolynomial MeasureTheory Filter Topology Matrix ReciprocityTheory.AnForm ReciprocityTheory.AnForm.M ReciprocityTheory.AnForm.P ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.AI.I1 ReciprocityTheory.ChartRestriction.G.AI.I2 ReciprocityTheory.ChartRestriction.G.AI.I4 GlobalTheory.CompanionTheory.Ar.PB GroundTheory.Heights₂.Heights GroundTheory.Heights₂.Heights.LowerBoundFree
 open scoped ComplexOrder Classical
@@ -203,7 +204,7 @@ theorem blk_some {p : Ψ × Fin N} {k : FlBlock Ψ N} : blk Ψ N p = some k ↔ 
   unfold blk stp
   split_ifs with h
   · simp [Prod.ext_iff, Fin.ext_iff]
-  · simp only [reduceCtorEq, false_iff, Prod.mk.injEq, not_and]
+  · simp only [false_iff, Prod.mk.injEq, not_and]
     intro _ e
     apply h
     rw [e]
@@ -345,7 +346,7 @@ theorem periodGram : IsPeriodGram N (1 : Matrix (Fin N) (Fin N) ℂ) 1 := by
   · have hs : (diagonal fun i : Fin N => ((sigForm N N i : ℝ) : ℂ)) = 1 := by
       ext a b
       simp [sigForm, Matrix.diagonal_apply, Matrix.one_apply]
-    simp only [gramHead, gramOf, hs, one_mul, mul_one, Matrix.conjTranspose_one]
+    simp only [gramHead, gramOf, hs, one_mul, mul_one]
 
 theorem induced (zb) (p : Ψ × Fin N) : (model Ψ N).IsInducedAt (frame Ψ N) zb p 1 (yLineFl Ψ N p) := by
   intro z _ _ _ h _ _

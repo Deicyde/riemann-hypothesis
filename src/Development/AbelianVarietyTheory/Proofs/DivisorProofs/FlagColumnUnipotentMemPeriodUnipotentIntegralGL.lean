@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OrdL
+import Development.AbelianVarietyTheory.Definitions.Divisors.FlatTensorVacuum
 open GlobalTheory.FunObj GlobalTheory.SplitWeil GlobalTheory.SplitFlip GlobalTheory.RootEx GlobalTheory.DiagVol ValuativeRel Matrix
 
 namespace GlobalTheory.DiagVol
@@ -63,7 +64,7 @@ theorem colE_mem_symN_KO {k : Type} [Field k] [ValuativeRel k] [TopologicalSpace
       have hlt : ordL c r < ordL c (Sum.inl a0 : n ⊕ Fin c) := by
         by_contra h; exact hr (hz r h)
       cases r with
-      | inl a => simp [ordL, lev] at hlt ⊢
+      | inl a => simp [ordL] at hlt ⊢
       | inr i => simp [ordL, lev] at hlt ⊢; omega
   · refine (mem_KO_iff _).2 ⟨fun i j => ?_, fun i j => ?_⟩
     · show (1 + E) i j ∈ 𝒪[k]

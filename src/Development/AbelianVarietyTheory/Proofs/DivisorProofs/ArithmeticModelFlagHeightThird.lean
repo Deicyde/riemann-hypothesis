@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSplitting
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DualNumberMorphismEqOfLocalStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DualNumberLocalMorphismsGlueStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocalizationCoverOfPointStatement

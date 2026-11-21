@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.FockResolutionOnto.StatementE
-import Formalism.ThetaLogCoordinates.TraceIsometryWeights.StatementG
+import Formalism.MahlerMeasure.StatementTM
+import Formalism.ThetaLogCoordinates.TraceIsometryWeights.StatementC
 
 namespace Formalism.InvariantFactorPaths.L4
 

@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TranslationInv
-import Development.AbelianVarietyTheory.Definitions.ThetaMetrics.IsAddFundamentalDomainLatticeDomain
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiniteQuotientOfIsLatLeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FundamentalDomainIntegralRatioStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FundamentalDomainIntegralFinsetSumStatement
@@ -233,10 +231,10 @@ theorem coverSum : CoverSum := by
             (f := fun y' : Fin g → ℂ => (t, y', z')) y hA hB)
       have e1 : (fun t' => ((c : ℂ)⁻¹ • ∑ χ, K χ u hu t' z z') w) =
           fun t' => (c : ℂ)⁻¹ • ∑ χ, K χ u hu t' z z' w := by
-        funext t'; simp [ContinuousLinearMap.sum_apply]
+        funext t'; simp
       have e : (fun y => ((c : ℂ)⁻¹ • ∑ χ, K χ u hu t y z') w) =
           fun y => ∑ χ, (c : ℂ)⁻¹ • K χ u hu t y z' w := by
-        funext y; simp [ContinuousLinearMap.sum_apply, Finset.smul_sum]
+        funext y; simp [Finset.smul_sum]
       rw [e1, e, curv_sum hτ hmet.1 hmet.2.1 β b hb u Finset.univ (fun _ => (c : ℂ)⁻¹) _
         (fun χ _ => hsm χ) z]
       refine hd2.congr_deriv ?_

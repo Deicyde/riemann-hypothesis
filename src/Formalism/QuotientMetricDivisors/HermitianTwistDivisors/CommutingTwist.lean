@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.QuotientMetricDivisors.EigenRatHermLcv
 import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.ConjugateWeightLatticeOfGeneral
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.LinearAlgebra.Eigenspace.Pi
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
 
 open Module NumberField IsDedekindDomain
 open scoped Matrix ComplexOrder
@@ -46,12 +50,12 @@ theorem normal_idem {n : ℕ} {Hc : Matrix (Fin n) (Fin n) ℂ} (hH : Hc.PosDef)
   have h1 : M - M * E = 0 := by
     apply eq_zero_of_form hH
     simp only [Matrix.conjTranspose_sub, Matrix.conjTranspose_mul, sub_mul, mul_sub,
-      Matrix.mul_assoc, A, B, MM, EM, hM, hc]
+      Matrix.mul_assoc, A, B, MM, EM, hc]
     abel
   have h2 : E - M * E = 0 := by
     apply eq_zero_of_form hH
     simp only [Matrix.conjTranspose_sub, Matrix.conjTranspose_mul, sub_mul, mul_sub,
-      Matrix.mul_assoc, A, B, MM, EM, hM, hc]
+      Matrix.mul_assoc, A, B, MM, EM]
     abel
   rw [sub_eq_zero] at h1 h2
   exact h2.trans h1.symm

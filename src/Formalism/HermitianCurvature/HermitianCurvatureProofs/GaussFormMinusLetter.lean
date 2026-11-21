@@ -1,4 +1,5 @@
-import Formalism.HermitianCurvature.StatementFr
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.PositionInsertionDiagonalCompat
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.QuasiDeterminantFromEntries
 

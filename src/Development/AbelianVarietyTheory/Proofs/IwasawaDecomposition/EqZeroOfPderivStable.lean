@@ -1,12 +1,9 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.ExistsChosenExtremalVector
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.EqZeroOfLintegralEqZero
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.ExistsInverseChart
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.RealSymplecticFormAlternatingInvariantDefinite
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.ExistsRealPlaceSymplecticFormPositiveComplexStru
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.HeisenbergDirectionalDerivFormulaAndSmooth
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.HeisenbergDerivativeCommutatorRelation
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsCharFamIsVacVec
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR.Datum NumberField Matrix Complex
 open scoped Real Classical
@@ -117,7 +114,7 @@ theorem pure_injective {B : ι → (X → ℂ) → (X → ℂ)} {c : ι → ℂ}
       congr 1
       by_cases h : i = j
       · subst h; simp
-      · simp [h, Pi.single_apply, Ne.symm h]
+      · simp [h, Ne.symm h]
   rw [injective_iff_map_eq_zero]
   refine eq_zero_of_pderiv_stable (K := fun Q => pureTensorL A f Q = 0) (fun Q i h => ?_) fun a h => ?_
   · have h1 := key i Q

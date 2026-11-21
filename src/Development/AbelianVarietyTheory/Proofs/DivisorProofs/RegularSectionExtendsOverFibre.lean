@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SpecialFibreUnits
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsEqnIffGeneratesAtInv
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsReducedFibrePointStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsGlobalSectionUnitStalkStatement

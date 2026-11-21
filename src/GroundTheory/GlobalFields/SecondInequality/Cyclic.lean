@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.FirstInequality
 import GroundTheory.GlobalFields.SecondInequality.PowFinrankMemRangeInfiniteLocalNorm
 import GroundTheory.GlobalFields.SecondInequality.Reduction

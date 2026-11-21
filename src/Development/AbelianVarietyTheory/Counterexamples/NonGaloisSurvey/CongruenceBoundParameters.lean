@@ -1,6 +1,4 @@
-import Mathlib
-import Formalism.SharpRestriction.ParamsHeightRankConstant
-import Formalism.SharpRestriction.LevelLetterCocycles.QuotientHomNonvanishingBound
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.BaseSizes
 
 noncomputable section

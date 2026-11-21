@@ -1,5 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.JpUnif
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
 
 noncomputable section
 
@@ -76,7 +83,7 @@ lemma scM_val (w : Lˣ) : (scM (n := n) w).1 = (w : L) • (1 : Matrix (Fin n) (
 lemma tau_nU (w : Lˣ) (y : Matrix (Fin n) (Fin n) L) :
     tauM w * nU y = nU ((w⁻¹ : Lˣ).1 • y) * tauM w := by
   apply Units.ext
-  simp [tauM, pM, nU, fromBlocks_multiply, scM_val, Matrix.smul_mul, smul_smul]
+  simp [tauM, pM, nU, fromBlocks_multiply, scM_val, smul_smul]
 
 lemma h_key (hIw : JpIw) (hHgt : JpHgt) [Fintype (IsLocalRing.ResidueField O)] {ϖ : O} (hϖ : Irreducible ϖ)
     {w : Lˣ} (hw : (w : L) = algebraMap O L ϖ) {nv : Lˣ →* ℝ≥0} (hnv : NvOK (O := O) nv w)

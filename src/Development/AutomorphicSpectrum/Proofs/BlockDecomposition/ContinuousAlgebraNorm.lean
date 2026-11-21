@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GTil
+import BuildAid.Leniency.Open
+import GroundTheory.LocalFields.ExistsUnitFiltrationUnitsLeRangeNormUnits
 open MeasureTheory Matrix GroundTheory.LocalField GroundTheory.Automorphic Ad3 Ad3.K.GL2LocalData
 open scoped ValuativeRel NNReal ENNReal
 

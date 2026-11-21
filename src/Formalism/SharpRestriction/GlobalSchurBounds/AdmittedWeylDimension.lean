@@ -1,6 +1,10 @@
-import Formalism.SharpRestriction.GlobalSchurBounds.TheoremThreeOfExplicitAndCompact
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.PlaceDegreeData
 import Formalism.SharpRestriction.ParamsHeightRankConstant
+import Formalism.SharpRestriction.GlobalSchurBounds.StandardLattice
+import Mathlib.LinearAlgebra.PiTensorProduct.Basis
+import Mathlib.LinearAlgebra.PiTensorProduct.Finite
 
 noncomputable section
 

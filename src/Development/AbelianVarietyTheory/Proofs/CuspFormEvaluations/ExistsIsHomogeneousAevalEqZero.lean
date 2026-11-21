@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.IsGenFrGenFr
-import Formalism.LocalToGlobal.ProjectiveLattices.FnTrdegOf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.CompFin
 import Development.AbelianVarietyTheory.Proofs.GenericRegularity.EvaluationLawsGenericFramesAtlasHold
 import Development.AbelianVarietyTheory.Proofs.GenericRegularity.SectionEqZeroOfGenericFramedPointValues

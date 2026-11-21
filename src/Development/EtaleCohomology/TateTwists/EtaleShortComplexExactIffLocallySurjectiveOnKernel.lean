@@ -1,6 +1,6 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.DivisorSupportCondition
-import Development.AbelianVarietyTheory.Definitions.Divisors.SecClass
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.TateTwists.EtaleShortComplexExactIffLocallySurjectiveOnKern
+import Mathlib.CategoryTheory.Sites.EpiMono
 
 open CategoryTheory Limits AlgebraicGeometry Opposite GlobalTheory.EtC
 

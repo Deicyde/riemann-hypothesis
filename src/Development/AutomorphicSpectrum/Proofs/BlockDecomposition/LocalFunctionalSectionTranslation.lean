@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.GaugeTopology.SSmoothW
 open MeasureTheory Matrix GroundTheory.LocalField GroundTheory.Automorphic
 open scoped ValuativeRel

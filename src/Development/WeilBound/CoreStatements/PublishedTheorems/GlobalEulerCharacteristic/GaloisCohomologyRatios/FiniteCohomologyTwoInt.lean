@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PublishedTheorems.GlobalEulerCharacteristic.GaloisCohomologyRatios.NatCardInvariantsEqOfAddEquiv
-import GroundTheory.ProfiniteCohomology.PoitouTate.PoitouTateNineTermGs
+import Development.WeilBound.CoreStatements.PublishedTheorems.GlobalEulerCharacteristic.GaloisCohomologyRatios.NormalOfGsOpenSubgroupNormal
+import GroundTheory.ProfiniteCohomology.GlobalEulerCharacteristic.ShaCount
 
 open NumberField IsDedekindDomain CategoryTheory GroundTheory.ProfCoh GroundTheory.Global
 

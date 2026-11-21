@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.EndOmega
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.NormSubLeMaxOfUltrametricField
 

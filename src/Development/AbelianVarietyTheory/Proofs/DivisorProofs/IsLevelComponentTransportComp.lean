@@ -1,9 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTransp
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ActLevFullLevelGroupFramedPoints
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ModelAtBare
 import Development.AbelianVarietyTheory.Proofs.GenericRegularity.FrameBorelGroupoidProperties
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.FramedPointBaseChangeUniqueReflIff
 
 set_option autoImplicit false
 
@@ -39,7 +38,7 @@ theorem isTransp_comp : ∀ {D : D7} {L : SizeData₂ D} {hT : GatTies D} {Gi : 
     have ef : castFrame hm.psi (lact (a * a') x) =
         castFrame m₂.psi (lact a (castFrame m₁.psi (lact a' x))) := by
       funext τ
-      simp only [castFrame, lact, mat, Units.val_mul, Matrix.map_mul, Matrix.of_apply]
+      simp only [castFrame, lact, mat, Units.val_mul, Matrix.map_mul]
       rw [mul_assoc]
       rfl
     set Xo := (r.used v).full.Q.Xo ((i : ℕ) + 1)

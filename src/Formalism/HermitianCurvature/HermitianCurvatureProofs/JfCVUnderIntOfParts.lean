@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CvRhoOfParts
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.RegularisedPairingViaPhase
 
 open Matrix MeasureTheory Filter Topology
 open scoped ContDiff
@@ -227,7 +228,7 @@ theorem qminor_rep {O : Set (Mat k r)} (hO : IsOpen O) {t : ℕ} (p q : Fin t �
     intro σ
     have := fold_rep hO (tsOf p q u σ) (N := t) (by simp [tsOf]) f hf g hgO hgG
     simpa [tsOf, List.map_ofFn, Function.comp_def] using this
-  simp only [qminorOp, Finset.sum_apply, Pi.smul_apply, hfold, qmL, wsum_flatMap, wsum_scale, Finset.sum_toList]
+  simp only [qminorOp, Finset.sum_apply, Pi.smul_apply, hfold, qmL, wsum_flatMap, wsum_scale]
   first
   | exact (Finset.sum_toList _ _).symm
   | exact (Finset.sum_map_toList _ _).symm

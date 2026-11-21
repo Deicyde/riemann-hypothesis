@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntertwinerOfCoef
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LowestDegreeComponentNonzero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TensorIrreducibleModules
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockFirstActionMatrixUnitEq
 import Formalism.SharpRestriction.Divisibility.LocalNonemptiness.THProvA
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ExpFromBlocks
 
@@ -48,7 +48,7 @@ theorem isExp_taylor {L U : Module.End ℂ V} (hU : IsExp L U) (e : ℂ → V �
       funext s
       rw [(h s _).deriv, pow_succ', Module.End.mul_apply]
   have h1 := Complex.hasSum_taylorSeries_of_entire (f := fun s => e s v) (fun t => (h t v).differentiableAt) 0 1
-  simp only [hit, sub_zero, one_pow, one_smul, smul_eq_mul, one_mul] at h1
+  simp only [hit, sub_zero, one_pow, smul_eq_mul, one_mul] at h1
   exact (hU v (e 0)).unique h1
 
 end Taylor
@@ -134,7 +134,7 @@ theorem hasDerivAt_evZ (z : ℂ → Matrix (Ix P Q) (Ix R S) ℂ) (z' : Matrix (
     · exact Finset.sum_congr rfl fun _ _ => by ring
     · rw [Finset.sum_eq_single l]
       · simp [mul_comm]
-      · intro b _ hb; simp [Pi.single_apply, hb.symm]
+      · intro b _ hb; simp [hb.symm]
       · simp
 
 theorem isKC_eq_fromBlocks {Y : Mat R S} (hY : IsKC Y) : Y = Matrix.fromBlocks Y.toBlocks₁₁ 0 0 Y.toBlocks₂₂ := by

@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.IsAlgClosureField
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual Formalism.HC ReciprocityTheory.Gal IsLocalRing Polynomial UpperTheory.V UpperTheory.V.Base UpperTheory.V.Alg UpperTheory.V.HV UpperTheory.V.GradeZeroInterpolatingElement UpperTheory.V.Ws GlobalTheory.GalOfCusp
@@ -6,7 +7,7 @@ private theorem psi_map' {ι Γ R R' : Type} [Group Γ] [CommRing R] [CommRing R
     (v : ι) (i : Fin 4) (s : Γ) : (P.map f).ψ v i s = f (P.ψ v i s) := by
   have hadj : adj ((P.n v).map f) = (adj (P.n v)).map f := by
     ext a b
-    simp [adj_apply, Matrix.map_apply, map_zsmul]
+    simp [adj_apply, Matrix.map_apply]
   have hr : (mapRep f P.r) s = (P.r s).map f := by
     ext a b
     simp [mapRep_apply]

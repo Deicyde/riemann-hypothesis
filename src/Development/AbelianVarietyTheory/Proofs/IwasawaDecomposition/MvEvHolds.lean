@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.RelabelledWeight
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.GoodPartEq
 
 noncomputable section
 

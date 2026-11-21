@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AutomorphicArithmetic.LocalEmbeddings.ConsAgree
-import Development.AutomorphicArithmetic.LocalEmbeddings.ConsMatch
-import Development.AbelianVarietyTheory.PublishedTheorems.SemiabelianTori.GeometricallyConnectedSplitTorusAff
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.DualGramInterpGram
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsUniqueRuleOfRegular
 open AlgebraicGeometry CategoryTheory Limits NumberField IsLocalRing

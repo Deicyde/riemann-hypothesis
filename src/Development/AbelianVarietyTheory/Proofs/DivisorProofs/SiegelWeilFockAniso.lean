@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VacTheta
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.SiegelWeilFock
-import Formalism.LocalToGlobal.BesselHermitianTheta.TiedBessel
 
 noncomputable section
 

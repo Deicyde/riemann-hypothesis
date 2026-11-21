@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.MonomialOrderSegments.SecondValuationOfAdmitted
+import Formalism.SharpRestriction.GrowthBounds.ProjectionOfIsotypicDecomposition
 
 noncomputable section
 

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StatementsNefCountLower
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StatementsNefCountAlongMultiples
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StatementsNefSmallSectionEventually

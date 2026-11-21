@@ -1,9 +1,6 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.GlueApplyOfNotInFibre
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.GenMapStalkMap
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ProjectiveModelNonempty
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.VolumeEquality.RegularFunctionChartAdjoin
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsUniqueDominatingMapStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsNormalisationStatement
 open AlgebraicGeometry CategoryTheory GlobalTheory.CompanionTheory.Ar
 

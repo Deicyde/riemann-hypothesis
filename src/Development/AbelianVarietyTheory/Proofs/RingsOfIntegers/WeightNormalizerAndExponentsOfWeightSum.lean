@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.ShortVectorBound.ScaledLatticesInSupLattices
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.Divisibility.AbelianOpenPart.OEOsInjective
 
 set_option autoImplicit false
 noncomputable section

@@ -1,5 +1,4 @@
-import Formalism.HermitianCurvature.StatementSz
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.MassRatioFormula
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CorollaryAOfPropositionA
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.SumInvSqLeSub
 
@@ -473,7 +472,7 @@ lemma u_mid (c : Cfg) (de : ℕ → ℝ) (j : ℕ) (h1 : 1 ≤ j) (h2 : j + 2 �
   have h0 : j ≠ 0 := by omega
   have h1' : j + 1 ≠ 1 := by omega
   have h2' : j + 1 ≠ c.k := by omega
-  simp [Cfg.u, h0, h1', h2']
+  simp [Cfg.u, h0, h2']
 
 lemma u_last (c : Cfg) (de : ℕ → ℝ) (hk : 4 ≤ c.k) : c.u de c.k = c.ulast := by
   have h1' : c.k ≠ 1 := by omega

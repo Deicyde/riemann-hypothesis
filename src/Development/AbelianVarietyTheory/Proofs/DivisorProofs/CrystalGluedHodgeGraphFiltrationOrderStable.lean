@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CrysActApply
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsArtinianRingTsze
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GroupObjectLiftDividedPowers
+import Development.AbelianVarietyTheory.Definitions.Divisors.InfUniv
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open GlobalTheory.UPel.Sm GlobalTheory.Cris GlobalTheory.DeRham
@@ -35,7 +35,7 @@ theorem push_mem_glueFil : ∀ (p : ℕ) [Fact p.Prime] (D : GlobalTheory.UPel.H
   congr 2
   funext j
   rw [← push_apply, ← hg]
-  simp only [map_add, LinearMap.add_apply, LinearMap.sub_apply, map_sub]
+  simp only [map_add, LinearMap.add_apply, LinearMap.sub_apply]
   abel
 
 end GlobalTheory.HTGlue

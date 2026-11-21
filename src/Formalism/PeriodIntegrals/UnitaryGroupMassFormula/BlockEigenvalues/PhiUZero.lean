@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.DatumBlockEigen
-import Formalism.DoubleCosetMeasures.LowerUnipotentOrbits.LemmaU
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.BlockEigenvalues.IsIntInvOfUnit
 
 noncomputable section
 

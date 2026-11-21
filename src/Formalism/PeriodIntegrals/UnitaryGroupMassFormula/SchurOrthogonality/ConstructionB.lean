@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.SchurOrthogonality.InstMeasurableSpaceMat
+import Mathlib.Analysis.CStarAlgebra.Matrix
+import Mathlib.Topology.Algebra.Star.Unitary
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 

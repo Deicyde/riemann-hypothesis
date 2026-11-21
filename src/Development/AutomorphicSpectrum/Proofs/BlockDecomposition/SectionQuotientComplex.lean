@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.LocallyConstantMajorants.GammaSplitting.ComplexMatrixMajorantIntegrable
 
 noncomputable section
@@ -153,7 +153,7 @@ theorem secQ : SecQ := by
   refine integral_congr_ae (ae_of_all _ fun h => ?_)
   by_cases hd : (Matrix.of h).det = 0
   · have hn : (-(2 * (k : ℤ) - 2)) ≠ 0 := by omega
-    simp [hd, ph_zero hn]
+    simp [hd]
   · have hJ : ∫ t : ℂ, inn Ψ g (Matrix.of h) t * ph (4 * (k : ℤ) - 4) t =
         ∫ t : ℂ, ph (4 * (k : ℤ) - 4) t *
           ∫ y : ℂ, innQ Ψ g h 1 (Matrix.vecMul ![t, t * y] (Matrix.of h)⁻¹) * psiC (-y) := by

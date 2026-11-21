@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AdditiveValuationNorms.CokLenLeOfRangeLe
-import Formalism.GaloisCohomology.Statement
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.KummerTheory.QzBasic
 
 open UpperTheory.V UpperTheory.V.PropA Formalism.GaloisCohomology

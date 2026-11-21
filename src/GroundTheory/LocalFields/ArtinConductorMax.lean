@@ -1,5 +1,6 @@
-import Mathlib
-import GroundTheory.LocalFields.ArtinConductorDiscriminant
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.LocalFields.ConductorTransport
 
 noncomputable section
 

@@ -1,4 +1,4 @@
-import Formalism.LocalToGlobal.ProjectiveLattices.IsChartIff
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GermCut
 
 set_option autoImplicit false

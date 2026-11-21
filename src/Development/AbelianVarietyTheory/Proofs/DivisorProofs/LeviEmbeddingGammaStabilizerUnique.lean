@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitHomVal
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -162,7 +163,7 @@ theorem key {m : ℕ} (K : GL (Fin m) R) (l : Levi R (fun i : Fin 3 => Fin (blk3
   simp only [bd_mul]
   rcases (show a = 0 ∨ a = 1 ∨ a = 2 by fin_cases a <;> simp) with rfl | rfl | rfl <;>
   rcases (show b = 0 ∨ b = 1 ∨ b = 2 by fin_cases b <;> simp) with rfl | rfl | rfl
-  all_goals simp only [gamS_02, gamS_20, gamS_11, gamInv_02, gamInv_20, gamInv_11, gamS_00, gamInv_00, gamS_01, gamInv_01, gamS_10, gamInv_10, gamS_12, gamInv_12, gamS_21, gamInv_21, gamS_22, gamInv_22, mul_zero, zero_mul, Finset.sum_const_zero, add_zero, zero_add, mul_one]
+  all_goals simp only [gamS_02, gamS_20, gamS_11, gamS_00, gamS_01, gamS_10, gamS_12, gamS_21, gamS_22, mul_zero, zero_mul, Finset.sum_const_zero, mul_one]
   · exact corner_pos (l 0) i j
   · exact mid (l 1) K i j
   · exact corner_neg (l 2) i j

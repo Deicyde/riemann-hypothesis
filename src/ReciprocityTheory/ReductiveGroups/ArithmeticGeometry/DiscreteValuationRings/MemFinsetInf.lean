@@ -1,4 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.RsAppPullGen
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.ExpIdentRestrict
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.ValuationMultiplicationInvariance
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.UnifBaseChangeSt
 
 set_option autoImplicit false
 
@@ -429,7 +435,7 @@ theorem cross_vanish (hL4 : Laws4) {E : Type} [Field E] [NumberField E] [NumberF
       congr 1
       refine (Eq.trans ?_ hc.symm).trans ?_
       · exact (rs_rs _ _ _).symm
-      · simp only [LB.mulGen, Units.val_mul, map_mul, rs_mul]
+      · simp only [LB.mulGen, Units.val_mul, map_mul]
         congr 1
         · exact rs_rs _ _ _
         · exact (congrArg (rs _) (rs_rs _ _ _)).trans (rs_rs _ _ _)
@@ -465,7 +471,7 @@ theorem cross_vanish (hL4 : Laws4) {E : Type} [Field E] [NumberField E] [NumberF
           (pullSec P.U.LG.L _ _ (τ i') (t.act.act a).left)).f j)) = Z i * Y i' := by
         intro i i'
         rw [hY i']
-        simp only [mulSec, map_mul, rs_mul]
+        simp only [mulSec, map_mul]
         congr 1
         · exact (congrArg (rs hOW) (app_rs (fstG (maximalIdeal V) e t.G).left _ _)).trans (rs_rs _ _ _)
         · simp only [pullSec]

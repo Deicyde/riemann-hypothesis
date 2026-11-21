@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.ConjSubConjSub
-import Formalism.LocalToGlobal.IndefiniteReal.FixNLeMulRight
+import Formalism.LocalToGlobal.IndefiniteReal.PeterssonHilbertSpace
 
 noncomputable section
 

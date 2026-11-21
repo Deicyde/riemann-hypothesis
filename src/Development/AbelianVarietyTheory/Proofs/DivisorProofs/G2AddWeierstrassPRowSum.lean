@@ -1,6 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ZetaActRefl
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.EisensteinTranslationProducts.AnalyticIdentityTheorems.Legendre
+import Development.AbelianVarietyTheory.Definitions.Divisors.HasQIff
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
+import Mathlib.Topology.UniformSpace.Uniformizable
 
 noncomputable section
 

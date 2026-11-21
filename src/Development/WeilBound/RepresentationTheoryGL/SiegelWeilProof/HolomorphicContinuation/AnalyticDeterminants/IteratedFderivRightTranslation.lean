@@ -1,5 +1,5 @@
-import Mathlib
-import ReciprocityTheory.L2DbarEstimates.PlurisubharmonicCharts.ZeroDimA
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.AnalyticDeterminants.ScalarSectionCompactBlockInvariant
 
 noncomputable section

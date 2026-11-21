@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.ThetaMetrics.TwistingSheafOneChartEqPreimageStandardChart
 
 noncomputable section
@@ -73,7 +74,7 @@ theorem eq_zero_of_mul_ratio_pow {i j : Fin (N + 1)} (hij : j ≠ i) (k : ℕ) {
     · exact hm (by simpa using this)
     · intro hle'
       have := hle' i
-      simp [Finsupp.single_apply, hij] at this
+      simp [hij] at this
       omega
   subst hF0
   exact formOn_zero

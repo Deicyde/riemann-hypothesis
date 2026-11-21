@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.IntegralStructures.GeometricFlagBases.FlagBasis
+import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.SplitsSelfOfIso
+import GroundTheory.LocalFields.PadicLogSeries
 
 open CategoryTheory Limits AlgebraicGeometry NumberField GlobalTheory.EtC GlobalTheory.Et TensorProduct Polynomial
 open GlobalTheory.GalV (HTower Htot hop galV galTot)

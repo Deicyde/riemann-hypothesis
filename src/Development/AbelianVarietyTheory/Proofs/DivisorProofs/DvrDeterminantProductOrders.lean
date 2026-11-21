@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsBasisOfBot
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.LinearAlgebra.ExteriorPower.Basis
 open GlobalTheory.Sandwich GlobalTheory.IndefiniteRowSideFullHecke.SandwichMaps GlobalTheory.DetInv Matrix TensorProduct
 
 noncomputable section

@@ -1,5 +1,10 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StatementsArea
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.RingTheory.Complex
+import Mathlib.RingTheory.TotallySplit
+import Std.Tactic.BVDecide.Normalize.Prop
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights
@@ -14,9 +19,9 @@ theorem realForm_mul {p q r : ℕ} (A : Matrix (Fin p) (Fin q) ℂ) (B : Matrix 
   simp only [realForm, Matrix.mul_apply, Matrix.of_apply, Fintype.sum_prod_type, Fin.sum_univ_two,
     Complex.re_sum, Complex.im_sum]
   fin_cases a <;> fin_cases c <;>
-    simp only [Complex.mul_re, Complex.mul_im, ← Finset.sum_add_distrib, ← Finset.sum_sub_distrib,
+    simp only [Complex.mul_re, Complex.mul_im,
       ← Finset.sum_neg_distrib, Fin.zero_eta, Fin.mk_one, Fin.isValue, Matrix.cons_val_zero,
-      Matrix.cons_val_one, Matrix.cons_val_fin_one, Matrix.head_cons] <;>
+      Matrix.cons_val_one, Matrix.cons_val_fin_one] <;>
     refine Finset.sum_congr rfl fun j _ => by ring
 
 theorem realForm_add {p q : ℕ} (A B : Matrix (Fin p) (Fin q) ℂ) :

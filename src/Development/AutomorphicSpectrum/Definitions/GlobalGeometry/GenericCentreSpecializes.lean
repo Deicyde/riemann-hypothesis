@@ -1,7 +1,12 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.LevelSectionsExactKernelLocusOpen
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.IsSplitGaussChars
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ProjectiveLinePlaceTrivialOnConstants
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ExistsCoordsAtOfCoordTie
+import Development.AutomorphicSpectrum.Proofs.GeometryProofs.IsVBOneOfChartGenerators
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Data.Int.Star
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 noncomputable section
 

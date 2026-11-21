@@ -1,4 +1,6 @@
-import ReciprocityTheory.L2DbarEstimates.JacobianInterpolationStatement
+import BuildAid.Leniency.Open
+import Mathlib.LinearAlgebra.Matrix.PosDef
+import ReciprocityTheory.L2DbarEstimates.IsLocalHomeomorph
 
 namespace ReciprocityTheory.ChartRestriction.G.AR.Up
 

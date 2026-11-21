@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.PAdicHodge.DMTeichBasic
-import GroundTheory.PAdicHodge.DMTeichPow
+import GroundTheory.PAdicHodge.ExistsWeightLeOfConvergesAt
 set_option maxSynthPendingDepth 1
 
 noncomputable section

@@ -1,7 +1,4 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ClassCounting.SChain
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ClassCounting.SPrism
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ClassCounting.SPrismMul
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ClassCounting.FirstFace
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.CyclotomicDiscriminants.FinSRel
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ClassCounting.STrans
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ClassCounting.FProd
@@ -19,7 +16,6 @@ import Development.EtaleCohomology.CyclotomicDiscriminants.FinSLayer
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ClassCounting.ExponentLe
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ClassCounting.NumThree
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ClassCounting.SFinal
-import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.FinalU
 
 open Formalism.GaloisCohomology
 

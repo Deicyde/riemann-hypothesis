@@ -1,4 +1,4 @@
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsTransition
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.SesquilinearFractions.GBridge
 import Development.WeilBound.CoreStatements.SesquilinearFractions.GModel
 import Development.WeilBound.CoreStatements.SesquilinearFractions.FrameBCLin

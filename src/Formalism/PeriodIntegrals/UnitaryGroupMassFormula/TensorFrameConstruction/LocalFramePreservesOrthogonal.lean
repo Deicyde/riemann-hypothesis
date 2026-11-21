@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.ScPiExists
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 noncomputable section
 
@@ -58,7 +61,7 @@ lemma hJ_nondeg_right (y : Fin n → ℂ) (h : ∀ x, hJ ε x y = 0) : y = 0 := 
     by_cases hj : j = i
     · subst hj
       simp
-    · simp [Pi.single_apply, hj]
+    · simp [hj]
   have e : hJ ε (Pi.single i 1) y = (if ε i then 1 else -1) * y i := by
     first
       | rw [hJ, hs, single_dotProduct, one_mul, Formalism.REAL.Jm, Matrix.mulVec_diagonal]

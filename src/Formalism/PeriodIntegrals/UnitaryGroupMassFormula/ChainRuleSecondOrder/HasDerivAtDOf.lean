@@ -1,4 +1,11 @@
-import Formalism.HermitianCurvature.FiniteOrderIntersectionInSmooth
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.StatementB
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 open Matrix Filter Topology
 
@@ -39,10 +46,10 @@ theorem hpk_mul_self : Hpk k r * Hpk k r = 1 := by
   rw [Matrix.mul_apply, Matrix.one_apply]
   rw [Finset.sum_eq_single (⟨sgI k r i.val, sgI_lt i⟩ : Fin (2 * r + k + 1))]
   · rw [hpk_apply, hpk_apply]
-    simp only [Fin.val_mk, sgI_sgI, sgI_eq_iff, eq_self_iff_true, if_true]
+    simp only [sgI_sgI, sgI_eq_iff, if_true]
     by_cases hij : i = j
     · subst hij
-      simp only [eq_self_iff_true, if_true]
+      simp only [if_true]
       split_ifs <;> norm_num
     · have hji : j.val ≠ i.val := fun h => hij (Fin.ext h).symm
       simp [hij, hji]

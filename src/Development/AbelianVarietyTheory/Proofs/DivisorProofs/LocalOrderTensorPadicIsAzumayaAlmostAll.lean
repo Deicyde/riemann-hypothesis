@@ -1,9 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CentreCompat
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsScalarTowerCenAlgebra
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CycleListPermInvariant
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BijectiveIffIsUnitDet
 import GroundTheory.Brauer.IsBrauerEquivalentIffNonemptyAlgEquiv
+import Mathlib.Tactic.ENatToNat
 
 noncomputable section
 open scoped TensorProduct

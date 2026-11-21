@@ -1,14 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OfSwap2
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OddHarmZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsTwoEmbeddingsOfTranscendental
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArithIntersectionFormExists
-import Development.AbelianVarietyTheory.Definitions.Divisors.GenericPointAsIdeal
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NontrivialIsomClassInt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GradedMetricPullbackIsometric
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RankTwoGradedDeterminantIsometric
 
 set_option autoImplicit false
@@ -84,7 +77,7 @@ theorem arFun_sumLine_base_eq_zero : ArCalc → ∀ (k : Type) [CommRing k] (B Y
     ((aeval fun j => lin fun i => ((T j i : ℤ) : ℝ)).comp (aeval (![X 3, X 2] : Fin 2 → MvPolynomial (Fin 4) ℝ))) P
   congr 1
   ext i
-  fin_cases i <;> simp [T, lin, Fin.sum_univ_four, Pi.single_apply]
+  fin_cases i <;> simp [T, lin, Fin.sum_univ_four]
 
 end GlobalTheory.CovTest.SwapLine
 

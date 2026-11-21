@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AutomorphicArithmetic.AutomorphicVarieties.LayeredIsomorphisms.SecondBound
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LayeredIsomorphisms.Layeremb
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LayeredIsomorphisms.Imports
 

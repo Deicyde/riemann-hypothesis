@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.LocalEmbeddings.RootFrame
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CyclotomicBounds.TraceDuality.Casimir
 import Development.AutomorphicArithmetic.CyclotomicBounds.TraceDuality.LocalGen
 import Development.AutomorphicArithmetic.CyclotomicBounds.TraceDuality.NormGen
@@ -26,7 +26,7 @@ private theorem exists_higman_linear_map {R La : Type} [CommRing R] [AddCommGrou
   simp only [← map_smul s, ← map_sum s]
   congr 1
   ext l
-  simp only [Finset.sum_apply, Pi.smul_apply, map_smul, smul_eq_mul, nsmul_eq_mul, Pi.mul_apply, Pi.natCast_apply, ← h1,
+  simp only [Finset.sum_apply, Pi.smul_apply, map_smul, smul_eq_mul, nsmul_eq_mul, ← h1,
     zsmul_eq_mul, mul_comm]
 
 private theorem projective_of_torsion_free_finite (E : Type) [Field E] [NumberField E] (La : Type) [AddCommGroup La] [Module (𝓞 E) La]

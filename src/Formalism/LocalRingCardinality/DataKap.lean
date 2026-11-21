@@ -1,4 +1,5 @@
-import Formalism.LocalRingCardinality.DataDIV
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataDIVDefs
 import Formalism.LocalRingCardinality.PrincipalHermitianLattice
 

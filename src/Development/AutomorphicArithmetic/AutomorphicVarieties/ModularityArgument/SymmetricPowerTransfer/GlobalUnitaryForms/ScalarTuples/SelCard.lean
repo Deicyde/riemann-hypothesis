@@ -1,7 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.GlobalUnitaryForms.HodgeTateFromSandwich
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.TraceFormulaEigenvalues.FormsFin
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.KummerTheory.CardSel
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.KummerTheory.CardSUnit
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Algebra.Ring.IsFormallyReal
 
 open NumberField IsDedekindDomain
 
@@ -43,7 +46,7 @@ private theorem dvd_of_ev (v : Pl F) (a : Fˣ) (h : EvenVal (Ov v) (cv v (a : F)
     rw [HeightOneSpectrum.valuationOfNeZero_eq, ← hva, hv, WithZero.coe_pow, hw]
   have h3 := WithZero.coe_inj.mp h2
   refine ⟨-Multiplicative.toAdd w, ?_⟩
-  simp only [Kum.ordv, h3, toAdd_pow, smul_eq_mul]
+  simp only [Kum.ordv, h3, toAdd_pow]
   push_cast
   ring
 

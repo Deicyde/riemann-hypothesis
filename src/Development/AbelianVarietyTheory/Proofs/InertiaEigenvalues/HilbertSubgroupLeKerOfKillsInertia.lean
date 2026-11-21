@@ -1,7 +1,5 @@
-import Mathlib
-import ReciprocityTheory.GaloisValuations.Global
+import BuildAid.Leniency.Open
 import ReciprocityTheory.GaloisValuations.ArithOfA
-import ReciprocityTheory.NeutralLocalFields.HilbertClassField
 import ReciprocityTheory.NeutralLocalFields.LocalFieldComparison.HilbertClassFieldA
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.InertiaElementEqOneOrLiesAboveFinitePlace
 

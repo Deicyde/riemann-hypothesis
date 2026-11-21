@@ -1,9 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CosetRefinement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsDeterminingLattice
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LogClassNumberAtLe
-import Formalism.LocalToGlobal.Columns.RowFormsLemmas
-import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
 
 noncomputable section
 

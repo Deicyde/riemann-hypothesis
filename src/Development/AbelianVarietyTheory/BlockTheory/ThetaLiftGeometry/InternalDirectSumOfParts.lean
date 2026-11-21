@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.Params
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.Tactic.ENatToNat
 
 namespace GlobalTheory.IndefiniteRowSideFullHecke.InternalDirectSumCriteria
 open Formalism.BasicNotions

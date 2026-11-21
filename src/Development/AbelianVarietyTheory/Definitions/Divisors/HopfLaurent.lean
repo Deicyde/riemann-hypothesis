@@ -1,5 +1,13 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ComparisonMemCechHodgeFiltration
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.TrivSqZeroExt.Basic
+import Mathlib.AlgebraicGeometry.Group.Affine
+import Mathlib.RingTheory.HopfAlgebra.MonoidAlgebra
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsCompletedStrictHens
 
 set_option autoImplicit false
 
@@ -170,7 +178,7 @@ def tanRep : TanRep (G R) R where
       simp [φ, u, LaurentPolynomial.eval₂_T]
     have hC : φ.comp (algebraMap R _) = (TrivSqZeroExt.inlHom B M).comp (algebraMap R B) := by
       refine RingHom.ext fun r => ?_
-      simp [φ, ← LaurentPolynomial.C_eq_algebraMap]
+      simp [φ]
     refine ⟨spMap φ, ⟨(lifts_iff φ).2 ⟨hC, by simp [hT]⟩, ?_⟩, ?_⟩
     · ext; simp [pre_spMap, hT]
     · rintro z ⟨hz, hl⟩

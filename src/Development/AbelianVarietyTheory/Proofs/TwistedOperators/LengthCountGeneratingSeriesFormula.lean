@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HasLenOfLatLen
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.Topology.Separation.CompletelyRegular
 
 open GlobalTheory.InertZeta
 

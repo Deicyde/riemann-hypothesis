@@ -1,9 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GeometricallyConnectedOfIsIsoRestrict
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsLocModelIsPrimeOf
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.NotDominatesTopPlace
-import Development.AbelianVarietyTheory.Definitions.Divisors.DominatesIffIsLocalHom
-import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.IsDomainAndIsIntegrallyClosedAtPrimeOfSmoothOfCo
 open CategoryTheory AlgebraicGeometry TopologicalSpace
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open GlobalTheory GlobalTheory.Cartier GlobalTheory.TopForm GlobalTheory.Discrepancy GlobalTheory.FieldPair
@@ -78,7 +74,7 @@ private lemma formallyEtale_quotient_last {A T : Type} [CommRing A] [CommRing T]
     · intro a; simp [σ, φ, φ']
     · intro j
       refine Fin.lastCases ?_ (fun i => ?_) j
-      · simp [σ, φ, φ', I, Ideal.Quotient.eq_zero_iff_mem, Ideal.mem_span_singleton_self]
+      · simp [σ, φ, φ', I]
       · simp [σ, φ, φ']
   letI := φ.toAlgebra
   letI := φ'.toAlgebra

@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LeKerOfLocalFiniteLengthToSimpleStatement
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SimpleOver
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.EqTopOfPureTensorsOfFactorGenerators
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
 
 open scoped TensorProduct
 

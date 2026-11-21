@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.HolomorphicDiscreteSeries.WordSpans.WordSpan
-import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.QmRowExp
-import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.QmColExp
 
 noncomputable section
 
@@ -113,7 +113,7 @@ theorem algId : AlgId := by
   unfold Th
   simp only [← zsmul_eq_mul, Finset.smul_sum, Finset.sum_mul, smul_mul_assoc]
   simp only [LinearMap.add_apply, Module.End.mul_apply, LinearMap.smul_apply, LinearMap.sum_apply,
-    Finset.sum_apply, LinearMap.pi_apply, LinearMap.comp_apply, LinearMap.proj_apply]
+    LinearMap.pi_apply, LinearMap.comp_apply, LinearMap.proj_apply]
   rw [add_comm, sub_eq_add_neg (a := (qdet (fun a b : Fin (N + 1) => E (ι a) (ι b)) (u - 1))
     ((Tm E u z z) v))]
   congr 1

@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.AlgResPropsPf
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 open CategoryTheory LateralTheory.E.t_E3Cut
 

@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.FrobeniusFibreCurves.CurveHyp
+import Mathlib.NumberTheory.Padics.PadicIntegers
 
 noncomputable section
 

@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.CoeffOneAlongCvLg
+import Formalism.LocalToGlobal.CharacterGerms.MaximalOfValuationGeOne
 
 noncomputable section
 

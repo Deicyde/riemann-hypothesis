@@ -1,11 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.ArithmeticCylinders
-import Formalism.SharpRestriction.LevelLetterCocycles.ResidualIrreducibleOfTheoremThreePrime
-import Formalism.CyclotomicNorms.IrreducibilityOfGoodTuple
-import Formalism.PadicSubsetSums.StableGradedCounts.PropositionOneCentralCount
 import Formalism.PadicSubsetSums.StableGradedCounts.LocalEstimateIVOfTypeSetWeight
-import Formalism.PadicSubsetSums.StableGradedCounts.TWCentralIdempotentIntegral
-import Formalism.SharpRestriction.LevelLetterCocycles.PrimesOverLiterature.RayPrimeCountAllToSquarefree
 
 noncomputable section
 

@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.InFlagDomainOne
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PluriharmonicCharts.ProjectiveLineNormalFrame
 
 open Matrix GlobalTheory.CompanionTheory.Ar.PB

@@ -1,5 +1,12 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.EisensteinSeries.SiegelEisensteinContinuation.ConvGrOf
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.MulConjTransposeEqOneOfOrthonormal
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.Tactic.ENatToNat
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -143,8 +150,8 @@ theorem block_of_cmp {E : Type} [Field E] (M : Matrix ι ι E) (t₀ : Sub ι m)
       ext a b
       by_cases hb : b = i
       · subst hb
-        simp [updateCol_apply, v, f]
-      · simp [updateCol_apply, hb, f, Function.update_of_ne hb, hBdef]
+        simp [v, f]
+      · simp [hb, f, hBdef]
     rw [h4, det_transpose, h3]
   have hv : v = 0 := by
     have h5 := mulVec_cramer Bᵀ v

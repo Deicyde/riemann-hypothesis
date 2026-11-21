@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.GlobAut
+import Mathlib.Analysis.InnerProductSpace.Completion
+import Mathlib.Analysis.InnerProductSpace.TensorProduct
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 open MeasureTheory Formalism.MainNotions.S
 open scoped InnerProductSpace TensorProduct

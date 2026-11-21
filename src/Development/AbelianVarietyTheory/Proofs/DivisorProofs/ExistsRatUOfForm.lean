@@ -1,17 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocUnifSum
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemCtIntSub
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DisjointLineMid
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NeOfReNe
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsShear
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUnitaryScalingVector
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RationalUnitaryLeviLift
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviMapPreservesRationalPoints
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CharacterMultiplicativeStabilizer
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsConeRepresentatives
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK
@@ -91,7 +81,7 @@ theorem mem_ratU_of_mulVec {n : ℕ} {J : Matrix (Fin n) (Fin n) E} (g : UA σ J
   have hs : ∀ j : Fin n, incV F (Pi.single j (1 : E)) = Pi.single j 1 := fun j => by
     ext k; by_cases hk : k = j
     · subst hk; simp [incV]
-    · simp [incV, Pi.single_apply, hk]
+    · simp [incV, hk]
   have hm : mat g = incM F Q := by
     ext i j
     have := congrFun (hW (Pi.single j 1)) i

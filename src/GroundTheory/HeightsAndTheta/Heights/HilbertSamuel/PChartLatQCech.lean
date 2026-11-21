@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsChartLatQCech
-import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PGenOnFibres
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PZeroCocycleSection
 set_option maxSynthPendingDepth 1
 

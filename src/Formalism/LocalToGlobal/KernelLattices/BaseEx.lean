@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.KernelLattices.LateralTheory
 import Formalism.PeriodIntegrals.KerIso
-import Formalism.PeriodIntegrals.SelfDualOfDiff
-import Formalism.PeriodIntegrals.KerLat
 
 noncomputable section
 open scoped BigOperators ComplexConjugate Pointwise

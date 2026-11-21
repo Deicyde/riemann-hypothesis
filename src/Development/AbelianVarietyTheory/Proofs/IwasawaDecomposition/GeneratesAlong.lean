@@ -1,5 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.Proportional
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.AlgebraicGeometry.IdealSheaf.Basic
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SemiabelianSchemes.CubicalStructures.CubeSymmetricSwapFirst
 
 noncomputable section
 

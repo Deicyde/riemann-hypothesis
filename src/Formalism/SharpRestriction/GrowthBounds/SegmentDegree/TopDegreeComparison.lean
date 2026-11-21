@@ -1,5 +1,6 @@
-import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.DiscriminantMultihomogeneous
-import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.TopOccursInAtMostTwoSegments
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.SegmentProductDegreeDetermined
 
 noncomputable section
 

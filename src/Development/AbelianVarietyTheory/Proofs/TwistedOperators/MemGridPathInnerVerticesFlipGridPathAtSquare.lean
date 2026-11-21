@@ -1,4 +1,3 @@
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.RankEqCardIffExistsFrameMatrixFirstColumnBlock
 
 namespace GlobalTheory.SplitFlip
@@ -6,7 +5,7 @@ namespace GlobalTheory.SplitFlip
 def pathInnerDiff (X : ℕ × ℕ) : ℤ := (X.1 : ℤ) - X.2
 
 theorem pathInnerDiff_tgt (e : Edge) : pathInnerDiff e.tgt = pathInnerDiff e.src + 1 := by
-  cases e <;> simp [pathInnerDiff, Edge.tgt, Edge.src] <;> push_cast <;> ring
+  cases e <;> simp [pathInnerDiff] <;> push_cast <;> ring
 
 theorem IsPath.pairwise_lt_source_index_difference_along_path {γ : List Edge} (hγ : IsPath γ) :
     (γ.map fun e => pathInnerDiff e.src).Pairwise (· < ·) := by

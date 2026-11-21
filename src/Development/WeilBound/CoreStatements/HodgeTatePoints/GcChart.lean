@@ -1,8 +1,9 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.LeadMinor
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.HodgeTatePoints.GcIncl
 import Development.WeilBound.CoreStatements.HodgeTatePoints.GcDescend
 import Development.WeilBound.CoreStatements.HodgeTatePoints.GcBase
+import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.IsCompactUnitaryPointsAtPlaceFstMemCompact
 
 open Module NumberField GlobalTheory.CompanionTheory.Ar.HT TensorProduct
 

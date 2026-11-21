@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.ArchimedeanThetaValues.FinLocalCutAt
-import Development.AbelianVarietyTheory.Definitions.RegularCharts.ModelAt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.UnifUniqSt
-import Formalism.LocalToGlobal.ProjectiveLattices.FrameCharts
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.IntegralFrameChangeIntegralInvertibleMatrix
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField IsDedekindDomain
@@ -111,7 +108,7 @@ theorem integral_chg (T : CDVR) (io : c.F →+* T.Fr) : letI := io.toAlgebra
   have ep : pm = 𝟙 _ := by
     apply pullback.hom_ext
     · refine h2.trans ?_
-      simp only [spMap, CommRingCat.ofHom_id, Spec.map_id, Category.comp_id, Category.id_comp]
+      simp only [spMap, CommRingCat.ofHom_id, Spec.map_id, Category.id_comp]
       rfl
     · exact h1.trans (Category.id_comp _).symm
   subst ep

@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SiegelReframe
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FactorOfAutomorphyLogarithmStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaQuasiPeriodicNormalFormStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdditivePeriodExponentLinearStatement
@@ -73,7 +73,7 @@ theorem per_neg (τ : Matrix (Fin g) (Fin g) ℂ) (l : Fl g) : per τ (-l) = -pe
 
 theorem mulN_neg_one_transl (τ : E → Matrix (Fin g) (Fin g) ℂ) (l : Fl g) (P : Pt E g) :
     mulN (-1) (transl τ l P) = transl τ ((-1 : ℤ) • l) (mulN (-1) P) := by
-  simp [mulN, transl, per_neg, neg_add]
+  simp [mulN, transl, per_neg]
 
 theorem iso_negPull {U : Set E} {τ : E → Matrix (Fin g) (Fin g) ℂ}
     {j j' : Fl g → Pt E g → ℂ} {φ : Pt E g → ℂ}

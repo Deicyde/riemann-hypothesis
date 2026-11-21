@@ -1,10 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.EvalTOntoExt
-import Formalism.LocalToGlobal.SiegelLatticeTheory.CasimirReductionTheory.AutoReg
-import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.EvalTEquiv
-import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.EvalTIota
-import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RowsJoinPinned
-import Formalism.LocalToGlobal.IndefiniteReal.RankZerothComponentEq
+import Formalism.LocalToGlobal.IndefiniteReal.ScalarOnPartsFull
 
 noncomputable section
 

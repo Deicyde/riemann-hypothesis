@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.GeometryOfNumbers.SphericalMonomials.MonomSt
-import ReciprocityTheory.GeometryOfNumbers.PluriharmonicAnalysis.BergmanDefs
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace ReciprocityTheory.GeometryOfNumbersTheory
 

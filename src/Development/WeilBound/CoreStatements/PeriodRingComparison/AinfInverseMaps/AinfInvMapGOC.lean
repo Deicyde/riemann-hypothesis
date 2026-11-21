@@ -1,11 +1,9 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.PeriodRingComparison.CrystallinePeriodRings.GammaEqDpow
-import Development.WeilBound.CoreStatements.PeriodRingComparison.CrystallinePeriodRings.AcrisNAlgebraMapAinf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PeriodRingComparison.AinfAlgebraMaps.CAAlgebraMapGOC
 import Development.WeilBound.CoreStatements.PeriodRingComparison.PadicPeriodAlgebraMaps.CPAlgebraMapPadic
 import Development.WeilBound.CoreStatements.PeriodRingComparison.ThetaKernelDeRham.KerThetaEqSpanSymmTBdR
 import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.Action
-import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.DeRhamMap
 import Development.WeilBound.CoreStatements.CrystallinePeriodRings.PhiGalCris
 
 noncomputable section

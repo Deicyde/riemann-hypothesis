@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.RadialIdentityOfQuadratic
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.RuleInv
 
 open scoped Matrix
 
@@ -19,8 +20,8 @@ theorem tvl_conjT (L : R.LevelData A r) (hS : StarCoords L) (Y : ℂ) (hY : star
     (L.Tvl Y l)ᴴ = (L.Tl Y l)ᵀ := by
   ext i j
   fin_cases i <;> fin_cases j <;>
-    simp [R.LevelData.Tl, R.LevelData.Tvl, Matrix.conjTranspose_apply, (hS l).1, (hS l).2.1,
-      (hS l).2.2.1, (hS l).2.2.2.1, (hS l).2.2.2.2.1, (hS l).2.2.2.2.2, ← algebraMap_star_comm, hY]
+    simp [R.LevelData.Tl, R.LevelData.Tvl, Matrix.conjTranspose_apply, (hS l).2.1,
+      (hS l).2.2.2.1, (hS l).2.2.2.2.2, ← algebraMap_star_comm, hY]
 
 theorem tJt (L : R.LevelData A r) (Y : ℂ) (l : Fin r) : (L.Tl (Y + 1) l)ᵀ * Jm * L.Tl Y l = Jm := by
   have e1 : L.p l * L.ci l = L.ci l * L.p l - L.ci l := by simpa using L.p_ci l l
@@ -342,7 +343,7 @@ theorem radial_rearrangement : RDRearr := by
     rw [show thR L st Y 0 = L.Drb * L.Avr (Y + 1) from rfl,
       show thR L st Y 1 = L.Dri * L.Drbi * L.GGi * st.xi Y *
         (L.Drb * (st.QQ Y 1 0 * L.Ar Y + st.QQ Y 1 1 * L.Br Y)) from rfl, hLS.tau, star_mul, hsDb]
-    simp only [mul_add, add_mul, mul_assoc]
+    simp only [mul_add, mul_assoc]
     all_goals abel
   have E2 : star (thR L st Y 2) * f * thR L st Y 3 =
       star (L.Bvr (Y + 1)) * (st.x (Y + 1) * (L.GG * (L.Drb * (st.xi (Y + 1) * (L.GGi * (L.Dri *

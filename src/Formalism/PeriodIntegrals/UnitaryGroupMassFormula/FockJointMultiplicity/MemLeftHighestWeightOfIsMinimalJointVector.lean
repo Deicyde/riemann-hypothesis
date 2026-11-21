@@ -1,4 +1,16 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.FockJointMultiplicity.CauchyHW
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.Data.Int.Star
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Bool
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -371,7 +383,7 @@ theorem leftRootOperator_eq_signedPolarization {p q r s : ℕ} (a b : Ix p q) (h
     simp
   · have hne : ((b, c) : Ln p q r s) ≠ (a, c) := fun e => hab (Prod.ext_iff.mp e).1.symm
     simp only [if_neg h]
-    simp [Derivation.leibniz, pderiv_X_of_ne hne, hne]
+    simp [Derivation.leibniz, pderiv_X_of_ne hne]
 
 theorem rightRootOperator_eq_signedPolarization {p q r s : ℕ} (c d : Ix r s) (hcd : c ≠ d)
     (hsame : ∀ a : Ix p q, linePos ((a, d) : Ln p q r s) = linePos ((a, c) : Ln p q r s)) (P : Pol p q r s) :
@@ -389,7 +401,7 @@ theorem rightRootOperator_eq_signedPolarization {p q r s : ℕ} (c d : Ix r s) (
     simp
   · have hne : ((a, d) : Ln p q r s) ≠ (a, c) := fun e => hcd (Prod.ext_iff.mp e).2.symm
     simp only [if_neg h]
-    simp [Derivation.leibniz, pderiv_X_of_ne hne, hne]
+    simp [Derivation.leibniz, pderiv_X_of_ne hne]
 
 theorem ker_of_hw {p q : ℕ} {V : Type*} [AddCommGroup V] [Module ℂ V] {act : Mat p q →ₗ[ℂ] Module.End ℂ V}
     {μ : Ix p q → ℚ} {v : V} (hv : v ∈ hwSub act μ) (a b : Ix p q) (hab : posC a b) : act (Eab a b) v = 0 := by

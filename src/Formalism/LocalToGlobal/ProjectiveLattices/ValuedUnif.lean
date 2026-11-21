@@ -1,4 +1,7 @@
-import Formalism.LocalToGlobal.ProjectiveLattices.RealPt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.ProjectiveLattices.NormalizedValuationMul
+import Formalism.LocalToGlobal.ProjectiveLattices.SecPtOrd
 
 noncomputable section
 

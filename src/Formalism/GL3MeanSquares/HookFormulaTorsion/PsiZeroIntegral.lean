@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.PrimeCountAsymptoticInProgressions
 import Formalism.LandauZeroFreeBounds.SiegelWalfiszAPOfSiegelLower
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.NumberTheory.LSeries.SumCoeff
 
 open Finset Filter Topology ArithmeticFunction MeasureTheory
 
@@ -218,7 +220,7 @@ private lemma zeta_logderiv_limit :
       (𝓝 (Real.eulerMascheroniConstant : ℂ)) := by
   obtain ⟨g, hg⟩ : ∃ g : ℂ → ℂ, g = Function.update (fun s => (s - 1) * riemannZeta s) 1 1 := ⟨_, rfl⟩
   have hgs : ∀ s : ℂ, s ≠ 1 → g s = (s - 1) * riemannZeta s := fun s hs => by
-    simp [hg, Function.update_apply, hs]
+    simp [hg, hs]
   have h1 : g 1 = 1 := by simp [hg]
   have hdiff : Differentiable ℂ g := by
     have hon : DifferentiableOn ℂ g (Set.univ \ {1}) := by

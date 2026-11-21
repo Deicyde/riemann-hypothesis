@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.LocalMaximality.DualForm
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiniteCoverRingLocalizationChart
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MulMemOmAOfMemRA
@@ -39,7 +40,7 @@ private theorem stab_tensor (f : S →ₐ[ℂ] Module.End ℂ E) (g : S' →ₐ[
       simp only [Submodule.mem_comap, TensorProduct.mk_apply, TensorProduct.map_tmul]
       exact Submodule.apply_mem_map₂ _ (hP _ a.2 _ hp) (hQ _ b.2 _ hq)
     have h2 := hle hm
-    simp only [AlgHom.comp_apply, Algebra.TensorProduct.map_tmul, Subalgebra.coe_val]
+    simp only [AlgHom.comp_apply]
     exact h2
   | add p q hp hq =>
     rw [map_add, map_add, LinearMap.add_apply]

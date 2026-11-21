@@ -1,6 +1,10 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SecondCountableHermC
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousBlkM
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Analysis.Matrix.Spectrum
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
 open MeasureTheory Matrix
 open GlobalTheory.CompanionTheory.SiegelND.Integ.Arch GlobalTheory.CompanionTheory.SiegelND.Integ.Arch.HuaInt
 

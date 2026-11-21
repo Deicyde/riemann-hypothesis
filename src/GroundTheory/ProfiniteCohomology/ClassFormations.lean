@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.ProfiniteCohomology.ClassFormationDefs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.ClassFormations.IsIsoCohomologyMapAlongResSubgroupOfHom
 import GroundTheory.ProfiniteCohomology.ClassFormations.Quotient
 import GroundTheory.ProfiniteCohomology.ClassFormations.Finite

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.WeierstrassTwoTorsion.StatementT
 
 open PowerSeries
@@ -14,7 +16,7 @@ theorem dL_coeff (f : LaurentSeries R) (n : ℤ) :
     (dL f).coeff n = ((n + 1 : ℤ) : R) * f.coeff (n + 1) := by
   show (LaurentSeries.hasseDeriv R 1 f).coeff n = _
   rw [LaurentSeries.hasseDeriv_coeff]
-  simp [Ring.choose_one_right, zsmul_eq_mul]
+  simp [zsmul_eq_mul]
 
 theorem uPow_mul_coeff (m n : ℤ) (f : LaurentSeries R) :
     (uPow m * f).coeff n = f.coeff (n - m) := by
@@ -134,7 +136,7 @@ theorem dL_mul (f g : LaurentSeries R) : dL (f * g) = f * dL g + g * dL f := by
       = HahnSeries.C ((m : ℤ) : R) + HahnSeries.C ((k : ℤ) : R) := by
     rw [Int.cast_add, map_add]
   rw [e, dL_uPow_mul, dL_toL, Derivation.leibniz]
-  simp only [dL_uPow_mul, dL_toL, Derivation.leibniz, smul_eq_mul, map_add, map_mul]
+  simp only [dL_uPow_mul, dL_toL, smul_eq_mul, map_add, map_mul]
   linear_combination (toL F * toL (derivative R G) + toL G * toL (derivative R F)) * h0
     + (toL F * toL G * uPow (m + k - 1)) * h3
     + (HahnSeries.C ((m : ℤ) : R) * toL F * toL G) * h1

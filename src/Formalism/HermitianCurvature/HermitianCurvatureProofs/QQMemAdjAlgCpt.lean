@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CsliceContinuous
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.InvMemOfKappa
 
 open Matrix MeasureTheory
 open scoped ComplexConjugate InnerProductSpace ContDiff

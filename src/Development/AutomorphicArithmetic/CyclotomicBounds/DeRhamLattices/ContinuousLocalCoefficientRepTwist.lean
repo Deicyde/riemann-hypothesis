@@ -1,8 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LiftQMk
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ConstOneMem
-import Development.AutomorphicArithmetic.CyclotomicBounds.DeRhamLattices.HasPres
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.TwistedDualFamiliesContinuous
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ContinuousLoc
 set_option synthInstance.maxHeartbeats 400000
 set_option maxHeartbeats 1000000

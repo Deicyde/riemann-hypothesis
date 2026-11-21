@@ -1,10 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ConstMemBddAut
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FiniteVolumeAdelicUnitaryQuotient
 import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsNormLeHeightPow
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.AdelicUnitaryTopology
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.AdelicUnitaryUnimodularExistsFundamentalDomain
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.IntegrableOnFundamentalDomainMulRight
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InnerProductFormula
 
 noncomputable section
 
@@ -89,7 +91,7 @@ theorem petersson_self_re_pos_of_ne_zero (hν : ν.IsHaarMeasure) (h𝓕 : IsFun
   set U : Set (GA D V) := {x | (f : GA D V → ℂ) x ≠ 0} with hUdef
   have hsupp : Function.support (fun x => Complex.normSq ((f : GA D V → ℂ) x)) = U := by
     ext x
-    simp [U, Complex.normSq_eq_zero]
+    simp [U]
   rw [hsupp]
   have hU : IsOpen U := isOpen_ne_fun hc continuous_const
   have hne : U.Nonempty := by

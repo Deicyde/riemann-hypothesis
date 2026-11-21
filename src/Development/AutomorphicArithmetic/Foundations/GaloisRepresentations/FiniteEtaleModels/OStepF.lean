@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.FiniteEtaleModels.LiftUnit
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.FiniteEtaleModels.OEpsEx
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.FiniteEtaleModels.ODownEx
 import Development.AutomorphicArithmetic.CommutativeAlgebra.ExistsGenericModuliPoint
@@ -13,7 +13,6 @@ import Development.AutomorphicArithmetic.CommutativeAlgebra.TraceEtaIdentity
 import Development.AutomorphicArithmetic.CommutativeAlgebra.MultiplierIsUnit
 import Development.AutomorphicArithmetic.CommutativeAlgebra.TracePullbackIdentity
 import Development.AutomorphicArithmetic.CommutativeAlgebra.TraceUnitOfPullbackMultiplier
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LevelPosOfCoprime
 
 set_option autoImplicit false
 

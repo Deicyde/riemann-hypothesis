@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.GL3Columns
-import Formalism.LocalToGlobal.KernelLattices.ThDistC
-import Formalism.GaussJetBounds.StatementN
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.DerivationCoordinateChange
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.IsRBasisOfLocBasis
 

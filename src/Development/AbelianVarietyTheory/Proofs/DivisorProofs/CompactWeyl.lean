@@ -1,4 +1,4 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasTypeVec
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.DiscreteSeriesCharacter
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CompactUnitaryTorusRealPlaceTensorEqComplexPowStatement
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.ExistsHasCls

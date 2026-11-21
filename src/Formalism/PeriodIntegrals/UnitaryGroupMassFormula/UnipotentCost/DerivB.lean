@@ -1,7 +1,10 @@
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnipotentCost.DerivA
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.SymmetricScalarBlockMatrixMul
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.Block3MulBlocks
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.BetaSesquilinearity
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.DirectionsInParabolic
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnipotentCost.LetterSize
 
 open Matrix Filter Topology
 open Formalism.FourierDecayAlt Formalism.FourierDecayAlt.U Formalism.REAL

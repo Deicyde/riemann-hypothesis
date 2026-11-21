@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.TranslateMemIndOrder
 import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.DualOrder
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 open GlobalTheory.CompanionTheory.Ar.BT TensorProduct
 
 namespace PositivityTheory.HtPt.Twhopf

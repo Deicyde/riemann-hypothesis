@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasTypeVec
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.ExponentSeparation
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IntegralMulRightOfCompact
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LevelFamOfNotMem
 open MeasureTheory Set Filter NumberField IsDedekindDomain

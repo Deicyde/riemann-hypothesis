@@ -1,5 +1,16 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.SameFormAllLevels
+import Mathlib.Algebra.Azumaya.Basic
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 
@@ -56,7 +67,7 @@ theorem eS_mul (z : MonoidAlgebra K G) : eS T s * z = theta T s ((T.tau s).asAlg
     rw [Representation.asAlgebraHom_single, eS, Finset.sum_mul]
     refine Fintype.sum_equiv (Equiv.mulRight g) _ _ (fun x => ?_)
     simp only [Equiv.coe_mulRight, smul_mul_assoc, MonoidAlgebra.of_apply, MonoidAlgebra.single_mul_single,
-      one_mul, smul_smul, smul_mul_assoc, mul_smul_comm, LinearMap.map_smul, smul_eq_mul]
+      one_mul, smul_mul_assoc, LinearMap.map_smul, smul_eq_mul]
     rw [← map_mul, mul_inv_rev, mul_inv_cancel_left, MonoidAlgebra.smul_single', MonoidAlgebra.smul_single', mul_one]
     congr 1
     ring

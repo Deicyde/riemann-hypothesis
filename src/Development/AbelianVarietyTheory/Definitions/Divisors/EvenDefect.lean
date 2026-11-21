@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsUnifOfIsMumfordOf
-import Development.AbelianVarietyTheory.Definitions.Uniformization.PointEqOfSubsingleton
 
 noncomputable section
 

@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.IsGaugeAll
+import Mathlib.LinearAlgebra.LinearIndependent.BaseChange
 
 open MeasureTheory NumberField Matrix Finset
 

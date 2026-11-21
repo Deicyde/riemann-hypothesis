@@ -1,6 +1,4 @@
-import Mathlib
-import Development.WeilBound.ThetaLifts.LeviDeterminants.MixedModels.MixedModelPlanes.Imports
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LeviDeterminants.MixedModels.MixedModelPlanes.HermitianAdaptedPairOfPair
 import Development.WeilBound.ThetaLifts.LeviDeterminants.MixedModels.MixedModelPlanes.HermitianAdaptedPairConverse
 import Development.WeilBound.ThetaLifts.LeviDeterminants.MixedModels.MixedModelPlanes.HermitianAdaptedPlaneLocal

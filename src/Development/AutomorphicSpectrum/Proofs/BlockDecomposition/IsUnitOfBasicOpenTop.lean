@@ -1,22 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.BaseCompat
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.Coords
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.LocalisationLadders.CriterionTruncation
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.CechPairings.Imports
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.PolynomialSiteTraces.AdmissibleMap
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ToH0BijectiveOfInitial
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MapHBijOfRes
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FlatBaseChangeCohomology
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CechRefinementCohomologyBijective
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FlatOfEtalePoly
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ChartIsGood
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsSmoothCoordinateCover
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CoordinatesRestrictAffineOpen
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GradedCohomologyOfFrame
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DividedPowerEnvelopeUniversal
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DividedPowerEnvelopeExpansion
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.TruncatedEnvelopeFiltrationQuotient
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.TruncatedEnvelopeTorsionFree
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.StdSomeZero
 
 set_option autoImplicit false
@@ -434,7 +419,7 @@ theorem chart_loc (c : Chart γ p q κ V d) (c' : Chart γ p q κ V' d) (e : c.D
   have hv : ∀ z, s₁.φ (ℓ z) = z := by
     have : s₁.φ.comp ℓ = RingHom.id _ := by
       refine IsLocalization.ringHom_ext (Submonoid.powers g) (RingHom.ext fun x => ?_)
-      simp only [RingHom.comp_apply, RingHom.id_apply, hℓ]
+      simp only [RingHom.comp_apply, hℓ]
       exact congrArg (fun f => f.φ x) hes
     exact fun z => RingHom.congr_fun this z
   have hw : ∀ y, ℓ (s₁.φ y) = y := fun y => congrArg (fun f => f.φ y) hu

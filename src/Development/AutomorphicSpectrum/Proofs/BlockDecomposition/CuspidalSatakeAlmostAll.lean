@@ -1,10 +1,11 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.AbelianHeightsDuality.GelfandKazhdanDuality.IsCuspFormDualMap
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.HasSatakeGLOfIsSatVecGL
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EventuallyMemFixed
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.AlgebraMapIntertwiningMapBijectiveOfIsSmooth
 import Formalism.LocalToGlobal.NumberFieldFamilies.ThetaCT
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.ImportsRestTail
+import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
 
 noncomputable section
 

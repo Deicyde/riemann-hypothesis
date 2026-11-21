@@ -1,7 +1,5 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.RealDescent.RealLeviDescent.InjectiveDecompositionAction
-import CompanionTheory.RealGroups.DiscreteSeries.DiscreteSeriesClassification.DiscreteSeriesExhaustion.FarRegularity.LKTExists
-import CompanionTheory.HarishChandraModules.LowKTypeMultiplicity.EigenspaceCyclicDensity.CreationOperators.DifferentialBoundedSupport
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.TwLMulSelf
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.CanonicalAnticommutationRelationsConsequence
 
@@ -75,7 +73,7 @@ theorem half_two (z0 z1 y0 y1 : R) :
     ((1 / 2 : ℂ) • (z0 + (1 : ℂ) • z1)) * (y0 + (1 : ℂ) • y1)
       + ((1 / 2 : ℂ) • (z0 + (-1 : ℂ) • z1)) * (y0 + (-1 : ℂ) • y1)
       = z1 * y1 + z0 * y0 := by
-  simp only [add_mul, mul_add, smul_mul_assoc, mul_smul_comm, smul_add, smul_smul, mul_assoc]
+  simp only [add_mul, mul_add, smul_mul_assoc, mul_smul_comm, smul_add, smul_smul]
   module
 
 end RingId
@@ -184,8 +182,7 @@ theorem cE_dE (σ ρ : ℂ) (a b a' b' : Fin n) :
       = ((1 + σ * ρ) / 2) • (if a = a' ∧ b = b' ∧ tau lev a b then 1 else 0) := by
   simp only [cE, dE, smul_mul_assoc, mul_smul_comm, ← smul_add]
   rw [anti_comb, cT_dT, cT_dT, cT_dT, cT_dT]
-  simp only [Bool.false_eq_true, Bool.true_eq_false, false_and, true_and, if_false, smul_zero, add_zero,
-    ite_false]
+  simp only [Bool.false_eq_true, Bool.true_eq_false, false_and, true_and, if_false, smul_zero, add_zero]
   module
 
 theorem LT_cT (E : Fin n → Fin n → Module.End ℂ V) (a b a' b' : Fin n) (s : Bool) :

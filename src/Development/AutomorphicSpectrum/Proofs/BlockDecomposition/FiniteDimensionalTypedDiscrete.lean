@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FinStable
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.AdmissibleDiscreteSpaces
+import Development.WeilBound.RepresentationTheoryGL.ResidualSpectrum.SliceTensors.PPrAdm
 
 noncomputable section
 

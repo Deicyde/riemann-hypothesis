@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.GammaSemisimpleLocalOfConsequences
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.ArcLiftingSetup
 import Formalism.SharpRestriction.LevelLetterCocycles.WachCoordinates
 import Formalism.SharpRestriction.LevelLetterCocycles.HerrClassFieldOfNorms

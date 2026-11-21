@@ -1,13 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.RealPoints
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.AdelicUnitaryLatticeSelfDualTraceForm
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.InvolutionSphericalHeckeAnti
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SplitPlaceHeckeDoubleCosetCardGaussBinom
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.RelativeLatticeVolumeOfDetValuation
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.OneSubIdempotentSmulMemCompletionPrimeMul
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.AdelicCompletionRationalPointsAndApproximation
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ZeroMemLatOf
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.SplitChartUniformiserAndResidueCard
+import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.ExistsSmulOfMapResidueEqZero
 open Formalism.BasicNotions Formalism.MainNotions Formalism.BasicNotions.TH Formalism.L2.Theta Formalism.L2.DIV Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.FWT Formalism.L2.Pj
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 noncomputable section
@@ -252,7 +249,7 @@ theorem exists_local_matrix : ∀ (D : D7) (P : Formalism.L2.DIV.Pl D.host.E) (e
     obtain ⟨u, hu⟩ : ∃ u, u = (t⁻¹ • (T⁻¹).1) *ᵥ (Pi.single j 1 : Fin n → Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes.Fv D.host.F v) := ⟨_, rfl⟩
     have hTu : (t • T.1) *ᵥ u = Pi.single j 1 := by
       rw [hu, Matrix.mulVec_mulVec]
-      simp only [Matrix.smul_mul, Matrix.mul_smul, smul_smul, inv_mul_cancel₀ ht, mul_inv_cancel₀ ht, one_smul,
+      simp only [Matrix.smul_mul, Matrix.mul_smul, smul_smul, inv_mul_cancel₀ ht, one_smul,
         Units.mul_inv, Matrix.one_mulVec]
     have hy := (hΛ (fun i => finPart D (s (u i)))).2 (by
       intro l
@@ -362,7 +359,7 @@ theorem exists_local_matrix : ∀ (D : D7) (P : Formalism.L2.DIV.Pl D.host.E) (e
     obtain ⟨u, hud⟩ : ∃ u, u = (t⁻¹ • (T⁻¹).1) *ᵥ (fun j => (b j : v.adicCompletion D.host.F)) := ⟨_, rfl⟩
     have hTu : (t • T.1) *ᵥ u = fun j => (b j : v.adicCompletion D.host.F) := by
       rw [hud, Matrix.mulVec_mulVec]
-      simp only [Matrix.smul_mul, Matrix.mul_smul, smul_smul, inv_mul_cancel₀ ht, mul_inv_cancel₀ ht, one_smul,
+      simp only [Matrix.smul_mul, Matrix.mul_smul, smul_smul, inv_mul_cancel₀ ht, one_smul,
         Units.mul_inv, Matrix.one_mulVec]
     have hy := (hΛ (fun i => finPart D (s (u i)))).2 (by
       intro l

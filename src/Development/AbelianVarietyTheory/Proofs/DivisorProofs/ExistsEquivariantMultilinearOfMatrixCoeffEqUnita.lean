@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsSmoothVector
 
 open NumberField IsDedekindDomain MeasureTheory Matrix Formalism.BasicNotions Formalism.MainNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S Formalism.L2.Theta Formalism.L2.DIV Formalism.IndefR.Links Formalism.IndefR.Mult Formalism.IndefR.Lev Formalism.IndefR.Datum Formalism.L2.Pj Formalism.IndefR.FWT Formalism.IndefR GlobalTheory.HolDict
@@ -131,7 +131,7 @@ theorem exists_continuousMultilinearMap_of_inner_eq_prod {ι : Type} [Fintype ι
   change ‖F y‖ ≤ _
   have h := congrArg norm (hF3 y)
   simp only [inner_self_eq_norm_sq_to_K, norm_mul, norm_prod, norm_pow, Complex.coe_algebraMap,
-    Complex.norm_real, norm_norm, Real.norm_eq_abs, Finset.prod_pow] at h
+    Complex.norm_real, Real.norm_eq_abs, Finset.prod_pow] at h
   refine le_of_eq ?_
   refine (pow_left_inj₀ (n := 2) (by positivity) (by positivity) two_ne_zero).1 ?_
   rw [mul_pow, Real.sq_sqrt (abs_nonneg c)]

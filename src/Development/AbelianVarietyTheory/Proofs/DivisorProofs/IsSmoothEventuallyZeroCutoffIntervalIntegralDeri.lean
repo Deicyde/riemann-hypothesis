@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.TCoefMInMMul
+import Mathlib.Analysis.Calculus.ParametricIntervalIntegral
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 open scoped ContDiff

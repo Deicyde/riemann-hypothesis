@@ -1,7 +1,6 @@
-import Mathlib
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.LocalWhittakerDuality.WSteps
-import GroundTheory.LocalFields.QuadraticAbelian.WeilRepQuadratic
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.UnstatedLocalWeilLemma
+import Mathlib.Topology.LocallyConstant.Algebra
 
 open MeasureTheory Matrix GroundTheory.LocalField GroundTheory.Automorphic Ad3 Ad3.K.GL2LocalData
 open GroundTheory.LocalField.FiltrationCocycleLiftCriterion.WeilRep

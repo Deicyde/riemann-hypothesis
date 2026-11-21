@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.LocalRingCardinality.DataTheta
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.OscActMonomialOfUnique
 
 noncomputable section

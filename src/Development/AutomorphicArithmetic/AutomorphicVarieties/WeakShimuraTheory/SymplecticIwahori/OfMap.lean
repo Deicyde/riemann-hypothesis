@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.RedIdeal
 
 noncomputable section
@@ -14,7 +16,7 @@ def Dist {A : Type} [CommRing A] (I : Ideal A) (p : A[X]) : Prop := p.Monic ∧ 
 example {A : Type} [CommRing A] : SpTri (fun _ : Unit => (0 : M4 A)) (fun _ _ => X) (RingHom.id A) 1 := by
   refine ⟨?_, fun _ => ⟨fun i j _ => by simp, fun i => by simp⟩⟩
   ext i j
-  fin_cases i <;> fin_cases j <;> simp [adj_apply, sgn, Fin.rev, Matrix.one_apply]
+  fin_cases i <;> fin_cases j <;> simp [adj_apply, sgn, Fin.rev]
 
 example {A : Type} [CommRing A] (I : Ideal A) : Dist I 1 := ⟨monic_one, by simp⟩
 

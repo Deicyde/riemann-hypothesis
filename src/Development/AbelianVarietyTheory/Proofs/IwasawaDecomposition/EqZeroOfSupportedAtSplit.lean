@@ -1,6 +1,8 @@
-import Mathlib
-import Formalism.LocalToGlobal.GaloisLevelStructure.DefsAut
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.CmFieldAdeleSplitPlaceSupportIntegral
+import Formalism.AlgebraicWeights.IsAlgWeight
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.RingTheory.PicardGroup
 
 open NumberField IsDedekindDomain ReciprocityTheory.Aut Formalism.AUTREP Formalism.L2 TensorProduct
 

@@ -1,9 +1,6 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.SatakeExponents.UniformizerValuations.FrameReading.FmTools
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FinsumOutOfLe
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LevelFamInf
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousPairProjection
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RelIndexNeZeroOfIsOpen
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.SatakeExponents.UniformizerValuations.AdelRep
 
 noncomputable section
 

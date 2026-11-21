@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockMap
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzLogDerivativeGaussianStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairExistsArchimedeanTranslatesStatement
 open scoped TensorProduct NNReal Matrix
@@ -14,7 +12,7 @@ def trL {F : Type} [Field F] [NumberField F] {κ : Type} [Fintype κ] (b : κ �
     (κ → mixedEmbedding.mixedSpace F) →ₗ[ℝ] ℝ where
   toFun x := Algebra.trace ℝ (mixedEmbedding.mixedSpace F) (∑ i, x i * b i)
   map_add' x y := by simp only [Pi.add_apply, add_mul, Finset.sum_add_distrib, map_add]
-  map_smul' c x := by simp [smul_mul_assoc, ← Finset.smul_sum]
+  map_smul' c x := by simp [← Finset.smul_sum]
 
 open scoped Classical in
 

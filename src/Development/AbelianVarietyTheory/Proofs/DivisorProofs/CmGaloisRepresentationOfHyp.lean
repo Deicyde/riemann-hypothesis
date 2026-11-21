@@ -1,19 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HasString
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.IsTemperedGLOfIsUnitaryLSeg
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.ClozelCohomologicalModel
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsUniqueHcharOfFiniteOrder
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.ChebotarevDegreeOneIffCheb
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.IsNormalisedOfIsDiscrete
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.GaloisRepOfPolarizedCuspidal
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.BaseChangeDefiniteUnitary
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.BhattScholzeCrystallineLattices
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.HeckeLAdicCharacterAboveIff
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.BaseChangeSpehOfDiscreteSeries
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SatakeParameterSphericalProductSpehQuotients
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.BlockIsTheRun
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.CharAbove
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.LocalLanglandsGL
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CmGaloisRepresentationCrystallineStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSphericalOfIsCompAlongSplit
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HasSatGLOfIsCompAlongSplit
@@ -54,7 +41,7 @@ theorem charpoly_eq_of_one {K : Type} [CommRing K] {N : ℕ} (hN : N = 1) (M : M
   subst hN
   rw [Matrix.det_fin_one]
   ext k
-  simp [Matrix.charpoly, Matrix.det_fin_one, Matrix.charmatrix_apply]
+  simp [Matrix.charpoly]
 
 theorem lift_eq (T : Multiset ℂˣ) :
     (T.map (fun z : ℂ => z) : Multiset ℂ) = T.map (fun z : ℂˣ => (z : ℂ)) := by
@@ -117,7 +104,7 @@ theorem crystallineHodgeTate_det_rankOne {E Ω : Type} [Field E] [NumberField E]
   have : GlobalTheory.TripleGal.rk1 (Matrix.GeneralLinearGroup.det.comp r) = r := by
     ext g i j
     fin_cases i; fin_cases j
-    simp [GlobalTheory.TripleGal.rk1, Matrix.det_fin_one]
+    simp [GlobalTheory.TripleGal.rk1]
   rwa [this]
 
 end GlobalTheory.GalAut

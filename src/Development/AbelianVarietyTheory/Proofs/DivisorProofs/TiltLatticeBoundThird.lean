@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SandwichMaps
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InjectiveIntoLineSpanEqSmulSpan
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DeterminantLatticePrincipalStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SandwichDatumEigenMultiplicityStatement

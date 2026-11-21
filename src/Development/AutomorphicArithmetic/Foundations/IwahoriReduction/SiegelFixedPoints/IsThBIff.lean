@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.IsZetaTW
-import Development.AbelianVarietyTheory.Definitions.Foundations.ApplyEqOfMemAdjoin
 
 noncomputable section
 

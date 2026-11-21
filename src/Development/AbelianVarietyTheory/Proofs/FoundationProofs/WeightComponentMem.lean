@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.Divisibility.SchurIrreducible
-import Development.AbelianVarietyTheory.BlockTheory.TorsionBlocks.HeckeCharacterParameters
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.DataTheta
 
 namespace GlobalTheory.WeightSubspaceComponent
 

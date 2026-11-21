@@ -1,9 +1,10 @@
-import Formalism.LocalToGlobal.Divisibility.CoefModLemmas
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.PolyFnLemmas
-import Formalism.LocalToGlobal.Columns.LocWLemmas
 import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
 import Formalism.LocalToGlobal.Columns.CoefficientsModP.LatticeBasisExistsHolds
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SpanLocalIff
+import Formalism.GradedWeylDivisibility.FockSpaceTableaux.NablaLTwist
 
 open MvPolynomial NumberField IsDedekindDomain
 open scoped Matrix Pointwise

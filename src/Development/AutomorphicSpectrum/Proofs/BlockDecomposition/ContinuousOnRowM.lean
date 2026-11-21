@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.AvgVanish
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MirabolicDoubleCosetDecomposition
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousMirProj
+import GroundTheory.AutomorphicForms.GLnLocal
 
 noncomputable section
 

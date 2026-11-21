@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsNonarchimedeanW
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.NatCastNeZeroG
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ReversedFlagLocalHeightLogFormula
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ChartRegularTriangularBaseStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ValuationPowerBoundsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsConstantEmbeddingCoverStatement

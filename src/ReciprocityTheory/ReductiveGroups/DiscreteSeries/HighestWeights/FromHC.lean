@@ -1,7 +1,8 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.PsiExistsStatement
-import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.HighestWeights.ContinuousRepresentations.DerivExistsAllPosStatement
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.HighestWeights.FromHCB
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.HighestWeights.FromHCA
 
 noncomputable section
 
@@ -32,8 +33,7 @@ theorem derivExists_allPos : DerivExistsAllPosStatement := by
       refine Finset.sum_congr rfl fun j _ => ?_
       rw [map_smul, inner_smul_right, hL i j X hX, mul_comm]
     rw [hv]
-    simp [LinearMap.smulRight_apply, ContinuousLinearMap.smulRight_apply, smul_smul,
-      ContinuousLinearMap.sum_apply]
+    simp [ContinuousLinearMap.smulRight_apply, smul_smul]
   rw [key]
   exact derOp_hasDeriv _ τ hτ X hX γ hγ
 

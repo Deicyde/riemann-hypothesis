@@ -1,7 +1,9 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.BlockHeckeSlices.CapRDefs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.BorelHarmonicForms.OneParam
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.L2Cusps.SplitEq
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.MovedPointDeterminant
+import GroundTheory.AutomorphicForms.ReductionSplitting
+import Mathlib.Analysis.Calculus.Deriv.Star
 open MeasureTheory NumberField GlobalTheory.CuspRep GlobalTheory.CompanionTheory.CTFin
 open GroundTheory.Automorphic GroundTheory.Automorphic.Reduction GroundTheory.Automorphic.RightCosetSpace UpperTheory.ConvolutionTheory.BW
 

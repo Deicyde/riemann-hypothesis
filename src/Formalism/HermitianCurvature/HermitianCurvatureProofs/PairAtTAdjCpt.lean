@@ -1,5 +1,7 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.HerAnalyticFOfCls
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.InvariantOperatorUnderJacquet
+import Formalism.HermitianCurvature.CompositeFormulaLevelZero
 
 open Matrix MeasureTheory
 open scoped ComplexConjugate InnerProductSpace

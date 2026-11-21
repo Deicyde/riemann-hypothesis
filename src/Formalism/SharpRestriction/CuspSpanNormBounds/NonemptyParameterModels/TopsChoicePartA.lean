@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.DiagonalEntryIdentity
+import Mathlib.Algebra.Group.MinimalAxioms
 
 noncomputable section
 

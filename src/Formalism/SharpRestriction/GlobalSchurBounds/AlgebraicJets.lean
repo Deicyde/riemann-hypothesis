@@ -1,11 +1,5 @@
-import Mathlib
-import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
-import Formalism.LocalRingCardinality.DataKerP
-import Formalism.SharpRestriction.ParConsts
-import Formalism.SharpRestriction.GlobalSchurBounds.GeneralLinearActions.IsDiscriminantTwelfthRootOfIdealLattice
-import Formalism.SharpRestriction.GlobalSchurBounds.TaylorLogMetric
-import Formalism.SharpRestriction.GlobalSchurBounds.GL3Theta
-import Formalism.SharpRestriction.GlobalSchurBounds.StandardLatticesGL3
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.GL3Columns
 
 noncomputable section

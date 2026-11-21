@@ -1,11 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsMaxThOne
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HoweDualityReal
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PureLApply
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedPairThetaIdentityStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RealLinePolynomialEquivarianceStatement
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK
 open scoped TensorProduct
 
@@ -67,7 +62,7 @@ theorem tens_mem_schA_of_ne {f : SInf F κ} (hf : f ≠ 0) {r : (κ → AF F) �
   have hev : (fun i => evI F (pt (fun i => (x i).2) i)) = y₀ := by
     funext i
     simp [pt, evI, e]
-  simp only [tens, pureA, Pi.smul_apply, smul_eq_mul, L, LinearMap.funLeft_apply, Function.comp_def]
+  simp only [tens, pureA, Pi.smul_apply, smul_eq_mul, L, LinearMap.funLeft_apply]
   rw [hev, hrx]
   simp only [evI]
   field_simp

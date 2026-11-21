@@ -1,7 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.ConjugateSelfDual.StatementRest
 import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
 import Formalism.SharpRestriction.LevelLetterCocycles.QuotientHomNonvanishingBound
-import ReciprocityTheory.GaloisValuations.SeparatedDvrSecondCohomologyMem
 
 noncomputable section
 

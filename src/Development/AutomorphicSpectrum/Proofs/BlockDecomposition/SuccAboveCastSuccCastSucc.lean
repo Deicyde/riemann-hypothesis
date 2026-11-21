@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.HolomorphicDiscreteSeries.WordSpans.WordSpan
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.QmColExp
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.QmRowExp
@@ -76,9 +77,9 @@ theorem algId : PositivityTheory.RgHe.SM.AlgId := by
     refine Finset.sum_congr rfl fun l _ => ?_
     have h1 : (r ∘ (Fin.castSucc c).succAbove) ∘ Fin.castSucc = ι ∘ c.succAbove := by
       funext j
-      simp [succAbove_castSucc_castSucc, rc]
+      simp [rc]
     have h2 : (r ∘ (Fin.castSucc c).succAbove) (Fin.last N) = z := by
-      simp [succAbove_castSucc_last, rl]
+      simp [rl]
     rw [h1, h2, tm_of_ne E _ (hz l)]
   rw [qdet_eq_qminor E hE r hr u, quantum_minor_row_expansion.2 (Module.End ℂ V) (N + 2) (N + 1) E hE r r u,
     Fin.sum_univ_castSucc, hrc, rl, LinearMap.add_apply, LinearMap.sum_apply]

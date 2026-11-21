@@ -1,11 +1,9 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.LevelCohomology.SoDefs
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LevelCohomology.SoContLev
-import Development.AutomorphicArithmetic.AutomorphicVarieties.LevelCohomology.SoLevFacts
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LevelCohomology.SoLocCard
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LevelCohomology.SoScal
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LevelCohomology.SoDualEmb
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LevelCohomology.SoDecNe
-import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.SelmerTransport.QoFacts
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.GaloisCohomology IsLocalRing UpperTheory.V UpperTheory.V.Base UpperTheory.V.X
 
@@ -119,7 +117,7 @@ theorem UpperTheory.V.X.So.locKill :
       rw [hc, ← Units.val_mul]
       congr 1
       simp only [map_inv, MonoidHom.mul_apply, MonoidHom.inv_apply, MonoidHom.zpow_apply, zpow_sub,
-        zpow_one, mul_inv, div_eq_mul_inv, mul_comm, mul_left_comm, mul_assoc]
+        zpow_one, mul_inv, mul_left_comm]
     have hmem : ∀ φ : H0 τ, ι (φ : TDual (ZMod (l ^ r)) M) ∈ Set.range ι₀ := by
       intro φ
       rw [← hι₀rng]

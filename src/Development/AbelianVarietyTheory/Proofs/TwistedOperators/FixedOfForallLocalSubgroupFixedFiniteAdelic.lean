@@ -1,9 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasTypeVec
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.ExponentSeparation
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IntegralMulRightOfCompact
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LevelFamOfNotMem
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.AdelicUnitaryClosureLocalComponentsOpen
+import Development.AbelianVarietyTheory.Definitions.Foundations.ForallEventuallyFinLocIff
 open MeasureTheory Set Filter NumberField IsDedekindDomain
 open GlobalTheory.AdelicU GlobalTheory.OpTrace GlobalTheory.Orb GlobalTheory.AutomorphicL2Unitary GlobalTheory.AutMult Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.L2.Theta Formalism.IndefR.Mult
@@ -69,7 +66,7 @@ theorem fixed_of_forall_finLoc_mem : ∀ (D : D7) (V : HSp D) (W : Type) [AddCom
           · simp only [k', map_mul, fl_ne v a h, one_mul]
             exact h1 v hv (by simp [h, hvT])
       have hkk : k = locFin V a (finLoc V a k) * k' := by
-        simp [k', ← mul_assoc, ← map_mul]
+        simp [k', ← mul_assoc]
       rw [hkk, map_mul, Module.End.mul_apply, hfix]
       exact hx a _ (hk a)
   exact step S g hg (fun v hv hvS => absurd hv hvS)

@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FockTranslateSchwartzMajorant
+import Mathlib.MeasureTheory.Measure.CharacteristicFunction.Basic
 
 noncomputable section
 open MeasureTheory Filter Topology

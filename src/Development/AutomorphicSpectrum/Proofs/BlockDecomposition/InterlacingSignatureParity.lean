@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.HolomorphicDiscreteSeries.EmbeddedFrames.PfD
-import Formalism.RealPlaceAnalysis.Complexify
 import Development.WeilBound.CoreStatements.BranchingTraces.HeBranching
 
 open Finset Matrix PositivityTheory.RgHe.Frame

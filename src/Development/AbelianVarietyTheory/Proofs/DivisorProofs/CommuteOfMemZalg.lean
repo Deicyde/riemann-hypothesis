@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.CoreFinite
-import Development.AbelianVarietyTheory.Definitions.Divisors.CentralNilGL
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.LanglandsSquareIntegrable
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ContinuousConjFin
 
 noncomputable section
 
@@ -91,7 +90,7 @@ theorem comm_Tm {e : Fin n → Fin n → A} (he : GlRel e) (u : ℂ) (p q i j : 
     · simp
   rw [this, h]
   by_cases h1 : q = i <;> by_cases h2 : j = p
-  · subst h1 h2; simp [eq_comm]
+  · subst h1 h2; simp
   · subst h1; simp [h2, Ne.symm h2]
   · subst h2; simp [h1, Ne.symm h1]
   · simp [h1, h2]

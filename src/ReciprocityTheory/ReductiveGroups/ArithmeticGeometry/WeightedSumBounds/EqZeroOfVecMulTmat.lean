@@ -1,5 +1,7 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.WeightedSumBounds.TangentEqLcZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.RingTheory.SimpleRing.Principal
+import ReciprocityTheory.DualLattices.VEqZeroOfPowEqOne
 
 namespace ReciprocityTheory.ChartRestriction.G.Sh.PTb
 
@@ -112,7 +114,7 @@ theorem vecMul_tmat_support {h : ℕ} (ty : Fin d → ZMod h) {γ : Fin d → Fi
       · simp [hx', hb']
       · have hb2 : ty b' = τ := not_not.mp hb'
         have h1 : tangent (γ b') c = 0 := ht b' c (by rw [hb2]; exact hc)
-        simp [hx', hb', tmat, h1]
+        simp [hx', tmat, h1]
   have h3 := congrFun (eq_zero_of_vecMul_tmat hdet hz) b
   simpa [hx', hb] using h3
 

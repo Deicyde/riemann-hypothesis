@@ -1,7 +1,9 @@
-import Mathlib
-import GroundTheory.GlobalFields.SemilocalAlgebras.ContinuousCompletionMap
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.SemilocalAlgebras.Approximation
 import GroundTheory.GlobalFields.SemilocalAlgebras.LocalDegree
+import Mathlib.Topology.Connected.Separation
+import Mathlib.Topology.MetricSpace.Ultra.TotallySeparated
 
 namespace GroundTheory.Global
 

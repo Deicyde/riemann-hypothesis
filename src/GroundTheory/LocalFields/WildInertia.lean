@@ -1,8 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.LocalFields.TameExtension
-import GroundTheory.ProfiniteCohomology.IsProPGroupSubgroupIffIsPGroupMap
-import GroundTheory.ProfiniteCohomology.NotDvdSuperIndexIffMap
-import GroundTheory.ProfiniteCohomology.GaloisModules.FixedField
 set_option maxSynthPendingDepth 1
 
 noncomputable section

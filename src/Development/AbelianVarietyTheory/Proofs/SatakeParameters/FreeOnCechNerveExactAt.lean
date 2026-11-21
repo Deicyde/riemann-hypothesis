@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.IsMatrixForm
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.CechAcyclic
+import Mathlib.AlgebraicTopology.ExtraDegeneracy
 open CategoryTheory Limits AlgebraicGeometry Opposite Abelian Simplicial GlobalTheory.Et
 universe v u
 

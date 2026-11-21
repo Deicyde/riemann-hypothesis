@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.UnramifiedTrace.DuFormulaOfFibreCount
 import Formalism.LocalToGlobal.GlobalTheory.UnramifiedTrace.CardFilterSubtype
 

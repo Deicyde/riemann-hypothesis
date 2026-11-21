@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.PairRelationOfScaledRatio
-import GroundTheory.HeightsAndTheta.Heights.Antisymmetric.Statements
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PluriharmonicCharts.XPolyTowtBound
 open MvPolynomial GlobalTheory.CompanionTheory.Ar.PB GroundTheory.Heights₂.Heights
 

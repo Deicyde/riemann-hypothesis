@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.LocalMaximality.MonoM
+import Mathlib.RingTheory.Regular.RegularSequence
 
 set_option autoImplicit false
 

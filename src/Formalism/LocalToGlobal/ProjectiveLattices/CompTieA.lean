@@ -1,6 +1,8 @@
-import Formalism.LocalToGlobal.ProjectiveLattices.CompHt
-import Formalism.LocalToGlobal.ProjectiveLattices.NonnegIffOfLiesTotal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.RegularityR2Quotient
+import Formalism.LocalToGlobal.ProjectiveLattices.CompData
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.TheoremA
 
 noncomputable section
 

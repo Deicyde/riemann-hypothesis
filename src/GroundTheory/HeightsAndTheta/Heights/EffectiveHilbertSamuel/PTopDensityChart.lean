@@ -1,6 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.EffectiveHilbertSamuel.StatementsTopDensityChart
 import GroundTheory.HeightsAndTheta.Heights.EffectiveHilbertSamuel.PExtension
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.RingTheory.Complex
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Topology.Separation.CompletelyRegular
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.EffectiveHS

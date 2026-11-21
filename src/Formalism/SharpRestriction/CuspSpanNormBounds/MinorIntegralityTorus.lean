@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.KTwoMinorIntegrality
+import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
 
 noncomputable section
 

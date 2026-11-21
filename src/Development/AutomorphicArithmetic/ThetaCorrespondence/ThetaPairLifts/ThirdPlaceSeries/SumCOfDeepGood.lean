@@ -1,6 +1,6 @@
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SumConstantOfDeepGood
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.CohomologicalCsdTempered
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.LiftLambdaBound
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SumComponentDegreesDivLeLatticeSlopeStatement
 
 set_option synthInstance.maxHeartbeats 200000
 

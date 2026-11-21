@@ -1,8 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsoLBCover
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.HolomorphicFamilies.AnGerm
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ChartFrameTrA
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.GlobalFnsHolds
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.IsAbelianSchemeOfIsGrpPullback
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open GlobalTheory.EndLoc
@@ -47,7 +45,7 @@ theorem GlobalTheory.HomFixIndep.pulled_basis_indep : ∀ (Rg : Type) [CommRing 
   intro Rg _ A _ L k mA bA hB R _ t A' _ φA' ψA hT hψ d hloc
   let t'' : Spec (CommRingCat.of R) ⟶ (topS Rg).left :=
     IsOpenImmersion.lift (⊤ : (Sp Rg).Opens).ι t (by rw [Scheme.Opens.range_ι]; exact fun _ _ => trivial)
-  have ht'' : (baseAt t'').hom = t := by simp [t'', baseAt, topS, overRes, baseOver]
+  have ht'' : (baseAt t'').hom = t := by simp [t'', baseAt, overRes, baseOver]
   set T := baseAt t'' with hTdef
   have hw : (snd T A).left ≫ A.hom = (fst T A).left ≫ t := by
     rw [← ht'', Over.w (snd T A), Over.w (fst T A)]

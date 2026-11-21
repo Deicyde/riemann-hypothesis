@@ -1,8 +1,10 @@
-import Mathlib
-import Formalism.LocalToGlobal.Divisibility.Inputs
-import Formalism.MirabolicMackeyTheory.MirabolicIsMackey
-import Formalism.GaussJetBounds.ThmAEntryFull
-import Formalism.GaussJetBounds.OneLetterGaussJets.GainDominatesOddLevelSum
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.GaussJetBounds.OneLetterGaussJets.OddLevelGainSum
+import Formalism.GaussJetBounds.StatementS
+import Formalism.GaussJetBounds.StatementW
+import Formalism.MirabolicMackeyTheory.StatementT
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 open Module NumberField IsDedekindDomain
 open scoped BigOperators

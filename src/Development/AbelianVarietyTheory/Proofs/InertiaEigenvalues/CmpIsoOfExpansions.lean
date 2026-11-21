@@ -1,12 +1,12 @@
-import Mathlib
-import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.NotFullBot
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.NBasisLoc
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.WachLevelExpansionAtRootOfUnity
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CrystallineFrobeniusBijOnLettersDirectSumStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.WachExpansionBasisDivisibilityStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.WachLatticeEqStdPowerSeriesAtZeroStatement
 import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.WachCrystallineComparison
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.MkMemAdmissibleAtIffCocycle
 
 noncomputable section
 
@@ -109,7 +109,7 @@ theorem const_lev (i : ZMod n) (a : LetA O n) :
     (a - algebraMap O (LetA O n) (PowerSeries.constantCoeff (a i)) - letπ * fun _ => b) (by
       simp only [Pi.sub_apply, Pi.mul_apply, letπ, Pi.algebraMap_apply]
       rw [← hb]
-      simp [PowerSeries.algebraMap_apply])
+      simp)
   rw [map_sub, map_sub, map_mul, AlgHom.commutes] at h
   have h2 := congrArg PowerSeries.constantCoeff h
   rw [map_sub, map_sub, map_mul, const_lev_π, zero_mul, sub_zero, map_zero, sub_eq_zero] at h2

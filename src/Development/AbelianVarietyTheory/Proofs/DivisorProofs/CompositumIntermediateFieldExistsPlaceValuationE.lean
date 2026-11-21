@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.OneLtAbsNormReal
+import Mathlib.NumberTheory.NumberField.Discriminant.Different
+import Mathlib.NumberTheory.RamificationInertia.Valuation
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 open NumberField IsDedekindDomain
 

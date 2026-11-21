@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ArchBetween
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.RootHeightDifferenceBoundStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.JoinModelPointsLiftStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.BoundedHeightPointsDenseStatement

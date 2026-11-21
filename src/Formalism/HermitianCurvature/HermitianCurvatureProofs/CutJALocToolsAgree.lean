@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.cut_JA_LocLemmas
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.BigCellDiagonalMap
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJDJDJComm
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.OrbitalIntegralIdentities
 
 open Formalism.REAL Formalism.QuantumDeterminants Formalism.FourierDecayAlt
 

@@ -1,4 +1,5 @@
-import Formalism.LocalToGlobal.InertKernelTheory.DefsRepRec
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.PairingIndexBounds.OrthogonalChartLevels.SameChart
 
 noncomputable section

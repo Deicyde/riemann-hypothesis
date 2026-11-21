@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.RealDescent.RSplitCore2
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ContinuousOfIsOpenStab
 
@@ -89,7 +91,7 @@ theorem twTrEx_holds : TwTrEx := by
   have hj : Function.Injective j := by
     intro a b hab
     have h := congrArg Subtype.val hab
-    simp only [j, LinearMap.codRestrict_apply, LinearMap.comp_apply, Submodule.subtype_apply] at h
+    simp only [j] at h
     exact Subtype.ext (Subtype.ext h)
   have := hWfd
   have : FiniteDimensional ℂ (LinearMap.range L) := FiniteDimensional.of_injective j hj

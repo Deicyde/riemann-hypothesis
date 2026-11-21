@@ -1,7 +1,9 @@
-import Mathlib
-import Formalism.MeanHeightDescent.AverageDegreeBounds.Assembly
+import BuildAid.Leniency.Open
 import Formalism.HarderNarasimhan.HarderNarasimhanProofs.SizeMu
-import Formalism.HarderNarasimhan.HarderNarasimhanProofs.DiscreteSpanOfLinIndep
+import Formalism.MeanHeightDescent.MuMaxMinkowski
+import Formalism.MeanHeightDescent.StatementA
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.TotallySplit
 
 open Module NumberField
 

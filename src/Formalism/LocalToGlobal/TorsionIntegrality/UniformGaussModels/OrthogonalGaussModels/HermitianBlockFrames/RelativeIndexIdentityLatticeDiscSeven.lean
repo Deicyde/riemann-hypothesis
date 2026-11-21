@@ -1,6 +1,9 @@
-import Formalism.LocalToGlobal.TorsionIntegrality.UniformGaussModels.OrthogonalGaussModels.HermitianBlockFrames.AreaCmLNe
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.UniformGaussModels.OrthogonalGaussModels.HermitianBlockFrames.MkLeOfDenseRange
 import Formalism.LocalToGlobal.TorsionIntegrality.UniformGaussModels.OrthogonalGaussModels.HermitianBlockFrames.Inert57
+import Formalism.LocalToGlobal.TorsionIntegrality.UniformGaussModels.OrthogonalGaussModels.HermitianBlockFrames.MemLatticeFourfoldOfMemDualLattice
+import Formalism.LocalToGlobal.TorsionIntegrality.UniformGaussModels.OrthogonalGaussModels.HermitianBlockFrames.PadicNormDivLeOne
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
 
 noncomputable section
 open scoped BigOperators ComplexConjugate
@@ -17,7 +20,7 @@ theorem sqrt_seven_pos : 0 < Real.sqrt 7 := Real.sqrt_pos.mpr (by norm_num)
 
 theorem area_discriminant_seven_lattice : area L7 = Real.sqrt 7 / 2 := by
   rw [area, period_lattice_disc_seven_first_period, period_lattice_disc_seven_second_period]
-  simp [cmTheta, Complex.div_im]
+  simp [cmTheta]
   positivity
 
 abbrev h7 : Matrix (Fin 1) (Fin 1) ℂ := (((area L7 : ℝ) : ℂ)⁻¹) • (1 : Matrix (Fin 1) (Fin 1) ℂ)
@@ -26,8 +29,8 @@ theorem block_diag_hermitian_form_disc_seven : blk4 h7 = (((area L7 : ℝ) : ℂ
   ext ⟨a, i⟩ ⟨b, j⟩
   fin_cases i; fin_cases j
   by_cases hab : a = b
-  · subst hab; simp [blk4, Matrix.one_apply]
-  · simp [blk4, Matrix.one_apply, hab]
+  · subst hab; simp [blk4]
+  · simp [blk4, hab]
 
 theorem theta7_sq : cmTheta 1 7 * cmTheta 1 7 = cmTheta 1 7 - 2 := by
   have h := sq_mul_sq 7
@@ -50,8 +53,8 @@ theorem cmTheta_smul_mem_stdLat : ∀ x ∈ stdLat L7 (Fin 1), cmTheta 1 7 • x
   push_cast
   linear_combination (-(k : ℂ)) * this
 
-theorem theta7_re : (cmTheta 1 7).re = 1 / 2 := by simp [cmTheta, Complex.div_re]
-theorem theta7_im : (cmTheta 1 7).im = Real.sqrt 7 / 2 := by simp [cmTheta, Complex.div_im]
+theorem theta7_re : (cmTheta 1 7).re = 1 / 2 := by simp [cmTheta]
+theorem theta7_im : (cmTheta 1 7).im = Real.sqrt 7 / 2 := by simp [cmTheta]
 
 theorem selfDualBis : IsSelfDual (matH h7) (stdLat L7 (Fin 1)) := by
   have hmat : matH h7 = stdH L7 (Fin 1) := rfl
@@ -78,16 +81,16 @@ theorem selfDualBis : IsSelfDual (matH h7) (stdLat L7 (Fin 1)) := by
     refine PeriodPair.mem_lattice.mpr ⟨-m₂, m₁, ?_⟩
     rw [period_lattice_disc_seven_first_period, period_lattice_disc_seven_second_period]
     apply Complex.ext
-    · simp only [Complex.add_re, Complex.mul_re, Complex.intCast_re, Complex.intCast_im, Complex.one_re,
-        Complex.one_im, theta7_re, theta7_im, mul_one, mul_zero, sub_zero]
+    · simp only [Complex.add_re, Complex.mul_re, Complex.intCast_re, Complex.intCast_im,
+        theta7_re, theta7_im, mul_one]
       have h : (Real.sqrt 7 / 2) * ((-m₂ : ℤ) + (m₁ : ℝ) * (1 / 2) - (x 0).re) = 0 := by
         push_cast
         linear_combination hm₂ - (1 / 2) * hm₁
       have := (mul_eq_zero.mp h).resolve_left hs2
       push_cast at this ⊢
       linarith
-    · simp only [Complex.add_im, Complex.mul_im, Complex.intCast_re, Complex.intCast_im, Complex.one_re,
-        Complex.one_im, theta7_re, theta7_im, mul_one, mul_zero, zero_mul, add_zero, zero_add]
+    · simp only [Complex.add_im, Complex.mul_im, Complex.intCast_re, Complex.intCast_im,
+        theta7_re, theta7_im, mul_one, zero_mul, add_zero, zero_add]
       linarith
   · intro hx y hy
     exact stdLat_int L7 hx hy

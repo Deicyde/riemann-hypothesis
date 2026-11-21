@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrameDualGram
 
@@ -22,10 +22,10 @@ theorem vmv_map (c : A →+* A) (u : m → A) (w : n → A) : (vecMulVec u w).ma
 
 theorem vmv_mul_vmv (a : m → A) (b : n → A) (u : n → A) (w : k → A) :
     vecMulVec a b * vecMulVec u w = (b ⬝ᵥ u) • vecMulVec a w := by
-  ext i j; simp [vecMulVec_apply, mul_apply, dotProduct, Finset.sum_mul, Finset.mul_sum, mul_comm, mul_left_comm, mul_assoc]
+  ext i j; simp [vecMulVec_apply, mul_apply, dotProduct, Finset.mul_sum, mul_comm, mul_left_comm]
 
 theorem vmv_mulVec (u : m → A) (w : n → A) (z : n → A) : vecMulVec u w *ᵥ z = (w ⬝ᵥ z) • u := by
-  ext i; simp [vecMulVec_apply, mulVec, dotProduct, Finset.mul_sum, mul_comm, mul_left_comm, mul_assoc]
+  ext i; simp [vecMulVec_apply, mulVec, dotProduct, Finset.mul_sum, mul_comm, mul_left_comm]
 
 theorem proj_core {d d₁ : Type} [Fintype d] [Fintype d₁] [DecidableEq d] [DecidableEq d₁] (c : A →+* A)
     (P J : Matrix d d A) (J₁ : Matrix d₁ d₁ A) (ι : Matrix d d₁ A) (π : Matrix d₁ d A) (x y : d → A)

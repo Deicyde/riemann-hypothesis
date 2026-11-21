@@ -1,8 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.OrthSubrepresentation
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CharacterTheory.CharacterCosetSumEqZeroOfSubgroupSum
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsBlockParabolicSubgroupLeviProjectionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinsumMemEq
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Polynomial GlobalTheory.CuspGL GlobalTheory.BI GlobalTheory.Shin SemidirectProduct Matrix
 open scoped Classical
@@ -154,7 +156,7 @@ theorem sec1 (a b : ℕ) (f : Fin (a + b) → F) (hf : (fun i => f (Fin.castAdd 
     obtain ⟨k, rfl⟩ : ∃ k : Fin b, i = Fin.natAdd a k := ⟨⟨i - a, by omega⟩, Fin.ext (by simp; omega)⟩
     have hne : Fin.natAdd a k ≠ j := fun h => by rw [← h] at hj; simp at hj
     rw [hc]
-    simp [vt, vecMulVec, Matrix.one_apply, hne]
+    simp [vt, vecMulVec, hne]
   · unfold tlG
     conv_rhs => rw [← toG_val u]
     congr 1
@@ -197,7 +199,7 @@ theorem sec2 (a b : ℕ) (f : Fin (a + b) → F) (h0 : (fun i => f (Fin.castAdd 
     have hne : Fin.natAdd a k ≠ Fin.castAdd b l := fun h => by
       have := congrArg Fin.val h; simp at this; omega
     rw [hc]
-    simp [vecMulVec, Matrix.one_apply, hne, h0']
+    simp [vecMulVec, hne, h0']
   · unfold tlG
     rw [← toG_val (1 : GL (Fin a) F)]
     congr 1

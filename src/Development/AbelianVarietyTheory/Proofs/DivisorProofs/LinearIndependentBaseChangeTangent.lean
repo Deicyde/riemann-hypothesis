@@ -1,17 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermFamGramPosSemidef
-import Development.AbelianVarietyTheory.Definitions.Divisors.KernelSt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LieCoordLat
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.DemaillyRegularisation
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.MatrixLemma
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.AbsoluteSiegel
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ScholzeWeinsteinB
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.QuasiPlurisubharmonic
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.LieAlgebraMaps
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.GradedLineBundleExists
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.LinearIndependentFlagVec
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TangentVectorsUniversalBasis
 open AlgebraicGeometry CategoryTheory NumberField
 open Formalism.BasicNotions Formalism.MainNotions ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.PullbackSections ReciprocityTheory.GeometryOfNumbersTheory
 open MonoidalCategory CartesianMonoidalCategory MonObj ReciprocityTheory.ChartRestriction.G.Semi Formalism.L2.Pj
@@ -48,8 +36,7 @@ theorem linearIndependent_bcTan : ∀ {E : Type} [Field E] [NumberField E] [IsCM
   have hB : ∀ j, B2 (e (Sum.inl j)) = b j := by
     intro j
     rw [Module.Basis.reindex_apply, Equiv.symm_apply_apply]
-    simp only [B, Module.Basis.sumExtend, Module.Basis.reindex_apply, Module.Basis.coe_extend,
-      Equiv.symm_symm, Equiv.trans_apply, Equiv.sumCongr_apply]
+    simp only [B, Module.Basis.sumExtend, Module.Basis.reindex_apply, Module.Basis.coe_extend]
     rfl
   have hv : ∀ i, IsTanAtG t x (tv (B2 i)).left := fun i => isTan_tv (B2 i)
   have hbas : ∀ w, IsTanAtG t x w → ∃! cf, IsCombAtG t x (fun i => (tv (B2 i)).left) cf w := by

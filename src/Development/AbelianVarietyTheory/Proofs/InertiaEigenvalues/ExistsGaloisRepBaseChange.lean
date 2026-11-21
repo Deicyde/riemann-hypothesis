@@ -1,6 +1,4 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.SumRepresentations
-import Formalism.SharpRestriction.LevelLetterCocycles.ExistsInertiaCharpolyFactorOfTameType
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsGaloisRepTwistStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.WeightLocalisationRegularAlgebraicStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.GaloisRepMultisetJumpsStatement
@@ -157,7 +155,7 @@ theorem good_part (D : D7) (h0 : SumRepresentations.tie0 D) (h2 : SumRepresentat
     simp only [Function.comp_apply, Multiset.map_map]
     congr 1
     funext z
-    simp only [Function.comp_apply, he]
+    simp only [he]
     push_cast; ring
 
 theorem galRep_isobaric : ∀ D : D7, SumRepresentations.tie0 D → SumRepresentations.adm2 D → ∀ (i : D.nd.Loc) (P : D.naut.AV i) (Pa : List (Formalism.BasicNotions.Part D.naut.CG)), IsBCV D.nd D.naut i P Pa → ∃ ρ : GE D.nd →* GL (Fin D.R.nV) (Qbar (D.nd.l i)), (SumRepresentations.At.ContQ D.nd i ρ ∧ IsSSRep ρ ∧ (∀ w, D.naut.wdOf i ρ w = D.naut.lpTw (isoLoc D.nd D.naut Pa w) ((1 - (D.R.nV : ℝ)) / 2)) ∧ ∀ w ∈ placesOver D.host.E (D.nd.l i), D.naut.IsdRW i ρ w ∧ ∀ τ, InducesW D.nd i τ w → (D.naut.jumpsW i ρ τ).map (fun n : ℤ => (n : ℂ)) = (D.naut.infWt i ((D.naut.iotaQC i).toRingHom.comp τ)).map (fun z => -z + ((D.R.nV : ℂ) - 1) / 2)) := by

@@ -1,8 +1,7 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.FormSmulL
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutIntervalLong
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.FrameThresholdBoundHolds
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.AdmissibleAtOfAdmissibleList
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.PBGWave
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.PBCutInside
 
 namespace Formalism.FourierDecayAlt.P.PBL
 

@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Variable
 import Development.AutomorphicArithmetic.ResidueCharacters.InvariantsKilledOverCyclotomicAlt
 import Development.AutomorphicArithmetic.ResidueCharacters.NumBounds
 

@@ -1,5 +1,4 @@
-import Development.AutomorphicArithmetic.ThickFrames.MarkedLow
-import Formalism.SharpRestriction.GrowthBounds.UnramifiedQuadraticSetting
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThickFrames.select
 import Development.AutomorphicArithmetic.ThickFrames.orbitSum
 import Development.AutomorphicArithmetic.ThickFrames.SharesOfCounts

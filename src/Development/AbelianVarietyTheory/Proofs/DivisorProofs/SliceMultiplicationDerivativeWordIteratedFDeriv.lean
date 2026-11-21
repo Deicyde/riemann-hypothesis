@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsContOnOfLocal
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdeleJoinZero
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchroedingerDerivativeSliceDirectionalAddPhaseStatement
 
 open IsDedekindDomain NumberField
@@ -49,7 +47,7 @@ theorem slice_word_mul_fderivs : ∀ (F : Type) [Field F] [NumberField F] [Inver
     let L : (κ → mixedEmbedding.mixedSpace F) →ₗ[ℝ] ℝ :=
       ℓ ∘ₗ ∑ k, (LinearMap.mulRight ℝ (u k)) ∘ₗ LinearMap.proj k
     have hLe : (fun x : κ → mixedEmbedding.mixedSpace F => ℓ (∑ k, x k * u k)) = L := by
-      funext x; simp [L, LinearMap.sum_apply]
+      funext x; simp [L]
     rw [hLe]
     exact (LinearMap.toContinuousLinearMap L).contDiff
   have hc : ContDiff ℝ ((⊤ : ℕ∞) : WithTop ℕ∞)

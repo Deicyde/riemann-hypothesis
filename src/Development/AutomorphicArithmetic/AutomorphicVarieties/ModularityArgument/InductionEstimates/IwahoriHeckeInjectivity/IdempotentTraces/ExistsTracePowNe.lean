@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.InductionEstimates.IwahoriHeckeInjectivity.HeckeInj
 import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.AlgTrace
 

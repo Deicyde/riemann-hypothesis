@@ -1,4 +1,5 @@
-import Formalism.PeriodIntegrals.HwConjInf
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.GaloisLevelStructure.DefsAut
 
 noncomputable section
 

@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.FixedVectorEqOfStandardData
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsTwIffCanonEq
 import Formalism.LocalToGlobal.ClassSK
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TrueColumnSpacesStandardInFrameCoords
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Col Formalism.L2.DIV Formalism.L2.Ker Formalism.UG Formalism.L2.Forms GlobalTheory.Mem GlobalTheory.Mem.Chr GlobalTheory.Mem.Col2 GlobalTheory.Mem.Col2.TC Matrix
@@ -49,7 +49,7 @@ theorem GlobalTheory.Mem.Col2.TC.tiedSK_of_std : ∀ {B : Base} {X : PreX B.toPr
     rw [h1, one_mul]
     have hY := hTw.1.eY u μ i hi
     rw [KerSK.ch_cast he] at hY
-    simp only [twYS, Equiv.trans_apply, hY, Equiv.refl_symm, Equiv.refl_apply, eYS]
+    simp only [twYS, Equiv.trans_apply, hY, eYS]
     split_ifs with h
     · exact congrFun ((hC u).eY i hi h y).symm τ
     · exact congrFun ((hC u).eYC i _ _ y).symm τ

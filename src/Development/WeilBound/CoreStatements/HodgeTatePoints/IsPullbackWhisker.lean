@@ -1,24 +1,22 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.HodgeTatePoints.Comp1PointPowerExpand
 import Development.WeilBound.CoreStatements.HodgeTatePoints.HtatLieBc
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsLieModelStatement
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ChartJetTrD
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.FBMapPf
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.FBIdLB
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ValCalc
 import Development.WeilBound.CoreStatements.HodgeTatePoints.CdLocal
 import Development.WeilBound.CoreStatements.HodgeTatePoints.CdUniv
 import Development.WeilBound.CoreStatements.HodgeTatePoints.CbFrob
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsCocharLieLieModel
-import Mathlib
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.GtPtsVal
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ChartPullbacks.TangentLinearity.FnOfComp
 import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.ExistsUniqueCharacterOfMul
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.PullUUnitsCompatGeneric
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.NonzeroLocus
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.ProdIso
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.LBLocal
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SemiabelianSchemes.PrecompleteBases.PsbLb
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ChartPullbacks.GeneratorPullback.PullAlong
+import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.HomBaseChangeBijectiveOfLeNilradical
+import Mathlib.Algebra.Module.StablyFree.Basic
 
 section
 
@@ -871,7 +869,7 @@ theorem twist_coeff {R : Type} [CommRing R] (u : Multiplicative X →* R) (a : A
     by_cases h : x = 0
     · subst h
       simp
-    · simp [Finsupp.single_apply, h]
+    · simp [h]
 
 theorem const_apply {R : CommRingCat.{0}} (r : R) : (const X R).hom r = single 0 r := by
   simp [const, AddMonoidAlgebra.coe_algebraMap]

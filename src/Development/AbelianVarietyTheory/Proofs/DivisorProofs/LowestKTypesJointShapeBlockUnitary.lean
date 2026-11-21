@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.Divisibility.SchurIrreducible
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsFockIPOfFockData
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.DataTheta
 open Formalism.BasicNotions.TH Formalism.MainNotions.SchurIrreducible GlobalTheory.FockAlg MvPolynomial
 
 namespace GlobalTheory.LowestTypes
@@ -313,7 +312,7 @@ theorem length_block (t : ℕ) : (block t).length = t := by simp [block]
 
 theorem block_eq (t : ℕ) :
     block t = (List.range t).map fun m : ℕ => ((t : ℚ) - 1) / 2 - (m : ℚ) := by
-  simp [block, List.flatMap_singleton', ← List.map_eq_flatMap, Function.comp_def]
+  simp [block, ← List.map_eq_flatMap, Function.comp_def]
 
 theorem mem_block {t : ℕ} {v : ℚ} (h : v ∈ block t) :
     -(((t : ℚ) - 1) / 2) ≤ v ∧ v ≤ ((t : ℚ) - 1) / 2 ∧ ∃ k : ℤ, v = ((t : ℚ) + 1) / 2 + k := by

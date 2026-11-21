@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Variable
 import Formalism.ThetaLiftIndependence.Statement
 
 namespace Formalism.ThetaLiftIndependence

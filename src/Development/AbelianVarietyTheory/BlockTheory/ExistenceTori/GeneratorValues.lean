@@ -1,5 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.RosatiAdj
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.NumberTheory.Padics.PadicIntegers
+import Mathlib.RingTheory.Valuation.Discrete.IsDiscreteValuationRing
 
 set_option autoImplicit false
 

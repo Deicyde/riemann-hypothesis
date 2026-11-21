@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LatticeTheta.Statement
 
 open MeasureTheory Filter Asymptotics Complex

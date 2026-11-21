@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WirtConst
 open Matrix GlobalTheory.MatDeriv
 open scoped Topology
@@ -39,7 +39,7 @@ theorem hasFDerivAt_det {E : Type} [NormedAddCommGroup E] [NormedSpace ℂ E] {n
       ((HasFDerivAt.finset_prod (u := Finset.univ) (g := fun i w' => B w' (σ i) i)
         (fun i _ => (hB (σ i) i).hasFDerivAt)).const_smul (Equiv.Perm.sign σ : ℂ)))
   refine h2.congr_of_eventuallyEq (Filter.Eventually.of_forall fun w' => ?_)
-  simp only [det_apply', Finset.sum_apply, Pi.smul_apply, smul_eq_mul, Units.smul_def, Int.cast_smul_eq_zsmul]
+  simp only [det_apply', Finset.sum_apply, Pi.smul_apply, Int.cast_smul_eq_zsmul]
   simp [zsmul_eq_mul]
 
 theorem jacobi_fderiv_det : ∀ {E : Type} [NormedAddCommGroup E] [NormedSpace ℂ E] {n : ℕ}
@@ -50,6 +50,6 @@ theorem jacobi_fderiv_det : ∀ {E : Type} [NormedAddCommGroup E] [NormedSpace �
   have h := hasFDerivAt_det B w hB
   refine ⟨h.differentiableAt, fun ξ => ?_⟩
   rw [h.fderiv, trace_adjugate_mul_eq_sum_perm']
-  simp [dMat, ContinuousLinearMap.sum_apply, Finset.smul_sum, smul_eq_mul, Finset.mul_sum]
+  simp [dMat, Finset.smul_sum, smul_eq_mul, Finset.mul_sum]
 
 end GlobalTheory.MatDeriv

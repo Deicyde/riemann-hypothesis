@@ -1,5 +1,13 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsAlgHomOfComp
+import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsUniqueSubMemInitSpan
+import Development.AbelianVarietyTheory.Definitions.Foundations.IsProbabilityMeasureMuPart
+import Development.AbelianVarietyTheory.Proofs.GenericRegularity.EvaluationLawsGenericFramesAtlasHold
+import Development.AbelianVarietyTheory.Proofs.GenericRegularity.ExistsFrPtTie
+import Development.AbelianVarietyTheory.Proofs.GenericRegularity.TieBaseChange
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.FrMapComp
 
 noncomputable section
 
@@ -688,13 +696,13 @@ theorem Llam_single_big (τ : Psi H) (i : Fin (Dw.mult τ.1)) (hi : (i : ℕ) < 
     · subst e
       simp [Pi.single_apply, Fin.ext_iff]
     · have : τ'.1 ≠ τ.1 := fun h => e (Subtype.ext h)
-      simp [Pi.single_apply, e, this]
+      simp [e, this]
   · have : conjEmb τ'.1 ≠ τ.1 := fun h => GlobalTheory.AllWt.conj_not_mem τ' (h ▸ τ.2)
     have h2 : Dw.p + (Dw.q - 1 - j) ≠ i := by have := i.2; omega
     by_cases e : τ' = τ
     · subst e
-      simp [Pi.single_apply, Fin.ext_iff, this, h2]
-    · simp [Pi.single_apply, e, this]
+      simp [Fin.ext_iff, this, h2]
+    · simp [e, this]
 
 open Classical in
 
@@ -707,15 +715,15 @@ theorem Llam_single_small (τ : Psi H) (i : Fin (Dw.mult (conjEmb τ.1)))
     have h2 : (j : ℕ) ≠ Dw.p + (Dw.q - 1 - i) := by have := j.2; have := mult_of_mem (Dw := Dw) τ'; omega
     by_cases e : τ' = τ
     · subst e
-      simp [Pi.single_apply, Fin.ext_iff, this, h2]
-    · simp [Pi.single_apply, e, this]
+      simp [Fin.ext_iff, this, h2]
+    · simp [e, this]
   · by_cases e : τ' = τ
     · subst e
       have : Dw.q - 1 - j = Dw.q - 1 - i ↔ (j : ℕ) = i := by have := i.2; have := j.2; omega
       by_cases h : (j : ℕ) = i <;> simp [Pi.single_apply, Fin.ext_iff, this, h]
     · have : conjEmb τ'.1 ≠ conjEmb τ.1 := fun h => e (Subtype.ext (by
         rw [← GlobalTheory.AllWt.conjEmb_conjEmb τ'.1, h, GlobalTheory.AllWt.conjEmb_conjEmb]))
-      simp [Pi.single_apply, e, this]
+      simp [e, this]
 
 example (k k' : X.F.J) : (X.LL 0).g k k' = 1 := Finset.prod_eq_one fun _ _ => zpow_zero _
 

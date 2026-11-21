@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.ArithmeticGeometry.AbelianVarieties.DivisorsNorm
+import Mathlib.Data.Int.Star
 
 namespace GroundTheory.Arith.Abelian
 

@@ -1,9 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenIntertwinerGoodModels
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepresentationPreservesSchwartz
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaTransformRationalTranslateQuasiInvariant
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawPairAdaptedPlanes
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsStdCharNegOneOfStandardTraceAdelicAddChar
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LocalComponentsNontrivialAdelicCharacter
@@ -151,7 +147,7 @@ theorem GlobalTheory.MixedLagrOrth.mem_iso_zero_of_orth : ∀ (F E : Type) [Fiel
       funext j
       by_cases hj : j = i
       · subst hj; simp
-      · simp [Pi.single_apply, hj]
+      · simp [hj]
     simp only at h
     rw [hs, single_dotProduct, one_mul] at h
     exact h

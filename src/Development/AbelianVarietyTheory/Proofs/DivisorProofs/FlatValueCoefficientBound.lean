@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.SlopeTestRemainingChoices
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ComponentMean
-import Formalism.SharpRestriction.Divisibility.LatticeTransfer
 import Formalism.DegreeFormula.PointDegree.PermExpInj
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ShiftFunctionalPowerSum
 

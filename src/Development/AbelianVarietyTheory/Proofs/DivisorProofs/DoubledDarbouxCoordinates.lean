@@ -1,12 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAut
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RegFamOfContinuousAt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BoxC
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SymplecticChangeOfGoodModelsIntertwines
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompReixMemAdm
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTopologicalRingAdeleE
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK
@@ -146,7 +142,7 @@ theorem rat_symp : ∀ (F : Type) [Field F] [NumberField F] (ι : Type) [Fintype
   simp only
   rw [Matrix.map_mul, Matrix.map_mul, Matrix.transpose_map, hM]
   have key : ∀ (X : Matrix (ι ⊕ ι) (ι ⊕ ι) (AF F)) i j, X i j = Pi.single i 1 ⬝ᵥ (X *ᵥ Pi.single j 1) := fun X i j => by
-    simp [Matrix.mulVec_single_one]
+    simp
   refine Matrix.ext fun i j => (key _ i j).trans (Eq.trans ?_ (key _ i j).symm)
   rw [← Matrix.mulVec_mulVec, ← Matrix.mulVec_mulVec, Matrix.dotProduct_mulVec, Matrix.vecMul_transpose,
     LinearMap.toMatrix'_mulVec, LinearMap.toMatrix'_mulVec, hJ, hJ, hGs, hGs]
@@ -240,7 +236,7 @@ theorem doubling_intertwiner : ∀ (F E : Type) [Field F] [NumberField F] [Field
     obtain ⟨u', rfl⟩ := D.surjective w'
     rw [hG, hG, hdot, hdot, ← co.form, hJ, GlobalTheory.DefDoubling.incM_dblGram, symp_dblGram_right, co'.form, co'.form,
       hD, hD]
-    simp only [dblE, topC, botC, sumElim_dotProduct_sumElim, dotProduct_neg, neg_dotProduct]
+    simp only [dblE, topC, botC, sumElim_dotProduct_sumElim, dotProduct_neg]
     ring
   obtain ⟨a, ha, hGa⟩ := rat_symp F _ G.toLinearMap hGrat hGω
   obtain ⟨e₀, c, ei, ev, h⟩ := GlobalTheory.RatWeilOp.hasOp_of_symplectic hB.cm.1 hB.std a ha

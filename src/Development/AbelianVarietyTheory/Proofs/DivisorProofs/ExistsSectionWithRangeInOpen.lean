@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.TateProductRigidificationTrivial
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.ThetaLawProofs.ExistsSectionOfTransversal
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj IsLocalRing NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open scoped CategoryTheory.Obj
@@ -40,7 +40,7 @@ theorem exists_lift_mem_open (R R' : Type) [CommRing R] [CommRing R'] [IsLocalRi
           U.left.fromSpecStalk y = x₀ := by
         rw [← Spec.map_comp_assoc, hg', hχ₀]
       have h2 := congrArg (fun h => h (closedPoint (ResidueField R'))) h1
-      simp only [Scheme.Hom.comp_apply] at h2
+      simp only at h2
       rw [hy] at h2
       refine Eq.trans ?_ h2
       exact congrArg (Spec.map (CommRingCat.ofHom g.toRingHom) ≫ U.left.fromSpecStalk y)

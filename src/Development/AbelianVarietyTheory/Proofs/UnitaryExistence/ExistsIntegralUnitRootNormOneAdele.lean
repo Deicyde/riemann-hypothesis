@@ -1,6 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.ExistenceOfLattices.Hat1
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.AdelicCompletionFractionalIdealProperties
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
 
 open NumberField IsDedekindDomain GlobalTheory.AdLat
 open scoped TensorProduct Topology Matrix
@@ -518,7 +522,7 @@ theorem _root_.GlobalTheory.AdLat.exists_integral_unit_root : ∀ (F E : Type) [
     have hdv : d v = (p (ij v).1 (ij v).2 v)⁻¹ := rfl
     simp only [map_sum, map_mul]
     simp only [hevv, hev, hdv, ite_mul, one_mul, zero_mul, mul_ite, mul_one,
-      mul_zero, Finset.sum_ite_eq, Finset.sum_ite_eq', Finset.mem_univ, if_true]
+      mul_zero, Finset.sum_ite_eq, Finset.mem_univ, if_true]
     exact inv_mul_cancel₀ (hne v)
   refine ⟨∑ q, (e q ⊗ₜ[F] (1 : E)) * m q.1, ?_, ⟨(d ⊗ₜ[F] (1 : E)) *
     ∑ q, (e q ⊗ₜ[F] (1 : E)) * σ (m q.2), ?_, ?_⟩, ?_⟩

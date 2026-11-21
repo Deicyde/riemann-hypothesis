@@ -1,18 +1,9 @@
-import Mathlib
-import Development.AutomorphicSpectrum.PublishedTheorems.Metrics₂.PoincareLelong
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.PublishedTheorems.Metrics₂.SheetDensityEqSetSheetDensity
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterRed
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterRedF
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterGood
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterDivSupp
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterSheet
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterFib
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.CxPosDens
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.CxSimple
-import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.SegreChartProjObjects
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.MemChartComponents
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.PSegreCoordGoodProj
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.MemConePtsIffChartIdeal
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
 open MvPolynomial MeasureTheory ReciprocityTheory.ChartRestriction.G.Geo GlobalTheory.CompanionTheory.Ar.Pub.CxInt GlobalTheory.CompanionTheory.Ar.Pub.CxComp Filter Topology
 open ReciprocityTheory.AnForm.R (conePts)
 open GlobalTheory.CompanionTheory.Ar.Pub.CxChart (chartSet chartComponents chartSection domCell absLogNorm)
@@ -393,7 +384,7 @@ theorem exists_goodProj_coord (K : Type) [Fintype K] (ι : K → Type) [∀ k, F
       simp only [RingHom.coe_coe, evC_segC, GroundTheory.Heights₂.Heights.SegreCoordGoodProj.segre_scaleBlock,
         hzi, mul_zero, Polynomial.eval₂_at_zero, map_zero, RingHom.comp_apply] at this
       rw [← this]
-      simp only [AlgHom.coe_toRingHom, RingHom.coe_coe, evC_aeval]
+      simp only [evC_aeval]
       refine congrArg (fun v => aeval v c0) (funext fun j => ?_)
       rw [evC_forms]
       simp only [GroundTheory.Heights₂.Heights.SegreCoordGoodProj.segre_scaleBlock, hudef, hVdef, Finset.mul_sum]

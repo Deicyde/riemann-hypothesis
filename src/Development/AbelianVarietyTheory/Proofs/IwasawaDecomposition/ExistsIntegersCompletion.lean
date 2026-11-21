@@ -1,8 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.GoodChi
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.NormEqZpowOfMemMaxUnramifiedSubfield
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ResEqIff
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.NormPowSubPowLe
+import Mathlib.Algebra.Ring.IsFormallyReal
 open Formalism.BasicNotions GlobalTheory.Mem GlobalTheory.MemN NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Polynomial
 
 noncomputable section

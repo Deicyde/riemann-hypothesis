@@ -1,8 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.LinkedUnramifiedChains.TeichmullerParts.UnramifiedTrivialInertialType
 import Development.AutomorphicArithmetic.AutomorphicVarieties.HeckeAlgebras.UpOperatorEigenvalues.MemOrdC
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.CuspidalIrreducibleSubrep
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.SpecialLinearTensor
-import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.SpecialLinearMap
 
 open UpperTheory.V.Z.J.D UpperTheory.V.Hi
 open scoped TensorProduct

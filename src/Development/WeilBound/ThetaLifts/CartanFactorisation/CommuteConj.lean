@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.CartanFactorisation.ActsComp
 import Development.WeilBound.ThetaLifts.CartanFactorisation.RinfZero
-import Development.WeilBound.ThetaLifts.CartanFactorisation.CountableCompactOpen
 
 noncomputable section
 

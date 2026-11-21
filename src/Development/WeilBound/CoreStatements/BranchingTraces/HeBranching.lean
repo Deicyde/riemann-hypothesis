@@ -1,4 +1,5 @@
-import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.DSInfCharCap
 import Formalism.LocalToGlobal.BesselHermitianTheta.TiedType
 

@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.IsBergDensity
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.LemCone
+import Mathlib.Topology.Algebra.MvPolynomial
+import ReciprocityTheory.GeometryOfNumbers.PluriharmonicAnalysis.BergmanDefs
 
 noncomputable section
 

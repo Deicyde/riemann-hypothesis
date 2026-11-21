@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.RealPlaceAnalysis.SmoothOnGVIff
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.RealPlaceAnalysis.RealPlaceTaylor.VectorComplexifiedDerivativeCommutator
 import Formalism.RealPlaceAnalysis.RealPlaceTaylor.LieOperatorConjHolds
 import Development.AbelianVarietyTheory.BlockTheory.SiegelWeilLocal.OrbitStepSpace

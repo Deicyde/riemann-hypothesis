@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ExistsIsHaarMeasureSUJ
-import Formalism.RealPlaceAnalysis.RealPlaceTaylor.CartanInvolutionConjTransposeMul
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.RealPlaceAnalysis.RealPlaceTaylor.ComplexifiedDerivativeCommutator
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.UnitaryToSpecialUnitaryLocalStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.SmoothOnGroupOfSpecialStatement
@@ -46,7 +45,7 @@ theorem inUJ_smul {ε : Fin n → Bool} {z : ℂ} (hz : ‖z‖ = 1) {x : Matrix
   have h1 : star z * z = 1 := by
     rw [Complex.star_def, ← Complex.normSq_eq_conj_mul_self, Complex.normSq_eq_norm_sq, hz]; norm_num
   have h2 : z * star z = 1 := by rw [mul_comm]; exact h1
-  simp only [Matrix.conjTranspose_smul, Matrix.smul_mul, Matrix.mul_smul, smul_smul, hx, h1, h2, one_smul]
+  simp only [Matrix.conjTranspose_smul, Matrix.smul_mul, Matrix.mul_smul, smul_smul, hx, h2, one_smul]
 
 def Cent (ε : Fin n → Bool) (m : ℤ) (G : Matrix (Fin n) (Fin n) ℂ → ℂ) : Prop :=
   ∀ z : ℂ, ‖z‖ = 1 → ∀ x, inUJ ε x → G (z • x) = z ^ m * G x

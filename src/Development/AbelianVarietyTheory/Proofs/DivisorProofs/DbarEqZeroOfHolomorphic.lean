@@ -1,5 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TranslationInv
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsTorsionFormPoint
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
+import Mathlib.RingTheory.SimpleRing.Principal
 
 set_option autoImplicit false
 noncomputable section

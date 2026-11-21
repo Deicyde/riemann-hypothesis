@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.LFunctionPositiveConductorFourEight
 import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.RayPrincipalIdeals
+import Mathlib.GroupTheory.FiniteAbelian.Duality
 
 noncomputable section
 

@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.GlobalFields.ComplexMultiplication.FrobeniusAtPrimes
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.ComplexMultiplication.DegreeOneAutomorphismPoints
 import GroundTheory.GlobalFields.ComplexMultiplication.DegreeOneAutomorphismLift
 import GroundTheory.GlobalFields.ComplexMultiplication.MainTheoremPointHom

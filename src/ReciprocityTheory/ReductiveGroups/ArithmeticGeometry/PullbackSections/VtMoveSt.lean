@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.VtMoveSym
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.RegTie
 
 set_option autoImplicit false
 set_option synthInstance.maxHeartbeats 400000

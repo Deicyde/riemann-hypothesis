@@ -1,7 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.RStatement
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GCorSt
 import Formalism.LocalToGlobal.ProjectiveLattices.DepRun
-import Formalism.LocalToGlobal.ProjectiveLattices.CrudeVal
 
 set_option autoImplicit false
 

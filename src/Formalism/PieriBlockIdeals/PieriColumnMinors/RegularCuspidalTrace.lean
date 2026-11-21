@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.PieriBlockIdeals.LemmaWAssembled
 import Formalism.PieriBlockIdeals.PieriColumnMinors.MinorValuationBoundHolds
 import Formalism.PieriBlockIdeals.PieriColumnMinors.WeightExchangeChainHolds
+import Mathlib.RingTheory.PowerSeries.NoZeroDivisors
 
 noncomputable section
 

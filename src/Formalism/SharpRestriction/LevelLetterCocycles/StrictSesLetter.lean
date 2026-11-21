@@ -1,7 +1,6 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.CrystallineMapLemmas
-import Formalism.SharpRestriction.LevelLetterCocycles.FrobeniusPowUniformizerFactorisation
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.LemmasUnramifiedOfRingCondition
-import Formalism.SharpRestriction.LevelLetterCocycles.ArcLiftingSetup
 
 noncomputable section
 

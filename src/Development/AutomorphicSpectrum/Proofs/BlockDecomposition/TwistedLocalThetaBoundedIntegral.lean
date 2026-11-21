@@ -1,9 +1,11 @@
-import Mathlib
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.KFiniteThetaLifts.PureThetaTransfer.ConstantTermModerateGrowth
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LFunctionEquationGlobal
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SplitInducedRepresentationHypothesis
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WeilInducedRepresentationHypothesisStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SplitWeilActionTorusEquivariantStatement
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GlobalRankinSelbergBasicFacts
+import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.KFiniteThetaLifts.PureThetaTransfer.AdmM
 open NumberField IsDedekindDomain MeasureTheory GroundTheory.Global GroundTheory.LocalField GroundTheory.Automorphic Ad3 Ad3.K Ad3.K.QuadraticBaseChangeGL3 Ad3.K.QuadraticBaseChangeGL3.Th
 open GroundTheory.Automorphic.GodementSection (localChar)
 open GroundTheory.Automorphic.Reduction (finAt infAt maxCompact)
@@ -141,7 +143,7 @@ theorem bound_sp (h2 : Module.finrank ℚ K = 2) (c : HeckeCharacter K) (v : Pl)
   have hs : ((dg1 v w₁ ξ, dg1 v w₂ ξ) : Qv v × Qv v) ∈ m '' (T ×ˢ tsupport f) := by
     refine ⟨(τ, (dg1 v w₁ ξ, dg1 v w₂ ξ) * ((τ : Qv v), ((τ⁻¹ : (Qv v)ˣ) : Qv v))),
       ⟨hτ, subset_tsupport f hz⟩, ?_⟩
-    ext <;> simp [m, mul_assoc]
+    ext <;> simp [m]
   have e₁ : algebraMap K (Kv K w₁) ξ ∈ algebraMap (Qv v) (Kv K w₁) '' (Prod.fst '' (m '' (T ×ˢ tsupport f))) :=
     ⟨dg1 v w₁ ξ, ⟨_, hs, rfl⟩, algebraMap_degreeOneEmbedding v w₁ d1 ξ⟩
   have e₂ : algebraMap K (Kv K w₂) ξ ∈ algebraMap (Qv v) (Kv K w₂) '' (Prod.snd '' (m '' (T ×ˢ tsupport f))) :=

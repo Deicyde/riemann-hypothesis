@@ -1,11 +1,7 @@
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
-import Development.AbelianVarietyTheory.Definitions.Degenerations.OfDerivationFnOn
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.SmoothGrpSchemeDescendsToFgSubring
-import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.MorphismsSpreadOutToFgSubalgebra
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsFramesOnUniformisedModelFibre
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.SmConnModelDescends
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsGrpPullbackFactor
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.SabComp
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalizationAwayDescentRangeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalizationAwayPolynomialSubringLiftInjectiveStatement
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry
@@ -137,7 +133,7 @@ theorem group_sections_curve_descend : ∀ (k : Type) [Field k] (G : Over (Sp k)
     intro r
     rw [IsScalarTower.algebraMap_apply R' (Polynomial R') (Localization.Away P₁), hLm,
       IsLocalization.Away.lift_eq]
-    simp [Polynomial.algebraMap_apply, IsScalarTower.algebraMap_apply k (Polynomial k) L]
+    simp [IsScalarTower.algebraMap_apply k (Polynomial k) L]
 
   have hcl : Subring.closure (Set.range (algebraMap R₀ L) ∪ (T : Set L)) ≤ Lm.range := by
     rw [Subring.closure_le]

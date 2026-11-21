@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.MaxWeightGL1EqOne
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlockParOpp
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocPartMul
 open MeasureTheory Matrix
 open scoped Classical
 
@@ -45,7 +43,7 @@ theorem blockUni_conj_mem (K : Type) [Field K] (ι : Type) [Fintype ι] [Decidab
   rw [hP21, hQ21] at hPQ ⊢
   rw [Matrix.fromBlocks_multiply, ← Matrix.fromBlocks_one, Matrix.fromBlocks_inj] at hPQ
   obtain ⟨h11, h12, -, h22⟩ := hPQ
-  simp only [Matrix.fromBlocks_multiply, Matrix.zero_mul, Matrix.mul_zero, Matrix.mul_one, Matrix.one_mul,
+  simp only [Matrix.fromBlocks_multiply, Matrix.zero_mul, Matrix.mul_zero, Matrix.mul_one,
     add_zero, zero_add] at h11 h12 h22 ⊢
   rw [h11, h22]
   congr 1

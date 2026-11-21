@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.SplitEigenfunctions.ThetaLiftEqAnisotropicPart
-import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.CuspRegions.CarrierEq
 
 noncomputable section
 

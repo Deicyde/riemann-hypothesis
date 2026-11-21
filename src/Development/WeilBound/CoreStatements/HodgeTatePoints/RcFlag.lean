@@ -1,10 +1,7 @@
-import Mathlib
-import ReciprocityTheory.DualLattices.CotangentSurjective
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.IsTight
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.StepOrderRes
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.HodgeTatePoints.RangeSubtypeEq
 import Development.WeilBound.CoreStatements.HodgeTatePoints.Invres
-import Development.WeilBound.CoreStatements.HodgeTatePoints.HasLenOfEquiv
 
 noncomputable section
 
@@ -106,7 +103,7 @@ lemma flag_ind [IsAlgClosed C] [CharZero C] (hv : v.Integers R) [Fintype F] [Dec
       unfold flagSub
       have hu : {j : Fin n | (j : ℕ) < n} = Set.univ := by
         ext j
-        simp [j.isLt]
+        simp
       rw [hu, Set.image_univ, b.span_eq]
     haveI : Subsingleton Q := by
       constructor

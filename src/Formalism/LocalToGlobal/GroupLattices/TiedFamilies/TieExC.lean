@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.ChiMemSubfield
-import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.TiePtOneRec
 import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.TiePtC
 import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.TieEvR
 

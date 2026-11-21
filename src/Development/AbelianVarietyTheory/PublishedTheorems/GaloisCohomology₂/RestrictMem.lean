@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.DepthZeroTypeInertia
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.TauOneCharacter
 
@@ -122,7 +123,7 @@ theorem tauOne_hyp (θ : (ZMod g)ˣ →* ℂˣ) : IsRegularChar g 1 θ ∧ IsCus
     funext y
     exact tauOne_character θ y
   · have hcp : (y : Mt g 1).charpoly = X - C ((y : Mt g 1) 0 0) := by
-      simp [Matrix.charpoly, Matrix.det_fin_one]
+      simp [Matrix.charpoly]
     rw [hcp] at hz
     have : Matrix.GeneralLinearGroup.det y = z := Units.ext (by
       simp only [map_sub, aeval_X, aeval_C] at hz

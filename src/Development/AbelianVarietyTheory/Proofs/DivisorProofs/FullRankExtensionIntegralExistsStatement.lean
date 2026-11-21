@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRankExtensionIntegralExists
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRk
 open scoped Matrix
 open GlobalTheory.WeilM GlobalTheory.FullRankCoinv MeasureTheory
 

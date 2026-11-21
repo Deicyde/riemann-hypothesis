@@ -1,7 +1,9 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.ArakelovInstances.LeviVReLine
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.MajorantNormalForms
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.DetSubUpper
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.ArakelovInstances.KappaStatementHolds
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.ReduceModChar
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.Signature
 
 set_option autoImplicit false
 
@@ -64,6 +66,6 @@ theorem tr_D_conj (A : Matrix (Fin r) (Fin r) ℂ) (D : Fin r → ℝ) :
   · ext i j
     simp [Matrix.conjTranspose_apply]
   · ext i j
-    by_cases h : i = j <;> simp [Matrix.diagonal_apply, h]
+    by_cases h : i = j <;> simp [h]
 
 end ReciprocityTheory.ChartRestriction.G.AR.Inst.CurvPf

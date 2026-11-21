@@ -1,6 +1,7 @@
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.LocalTypeDictionary.DiscreteSpectrumResidualClassification
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.TripleGeometryUnitaryStatement
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.LocalTypeDictionary.BernsteinUnitaryProductIrreducible
+import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsThetaSubSelf
+import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaEqB
 
 section
 open NumberField IsDedekindDomain

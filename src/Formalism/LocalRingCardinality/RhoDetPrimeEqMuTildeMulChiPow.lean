@@ -1,15 +1,9 @@
-import Mathlib
-import Formalism.LocalRingCardinality.Params
-import Formalism.LocalRingCardinality.DataHost
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataSpaces
-import Formalism.LocalRingCardinality.DataCoeff
-import Formalism.LocalRingCardinality.DataArith
-import Formalism.LocalRingCardinality.DataKernels
-import Formalism.LocalRingCardinality.DataRows
 import Formalism.SharpRestriction.CuspSpanNormBounds.DataS
 import Formalism.SharpRestriction.GrowthBounds.DataG
 import Formalism.SharpRestriction.LevelLetterCocycles.DataN
-import Formalism.SharpRestriction.LevelLetterCocycles.DataNLoc
 import Formalism.LocalRingCardinality.AdicCompletionLocal.LocTied
 import Formalism.LocalRingCardinality.DataForms
 import Formalism.LocalRingCardinality.DataJet

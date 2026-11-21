@@ -1,6 +1,8 @@
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormNotMemPrimeAwayFromMu
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.CohomologicalCsdTempered
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.Realised
+import Development.AbelianVarietyTheory.Definitions.Divisors.TieTest
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NuHTwisted
+import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.NormSmall
 
 set_option synthInstance.maxHeartbeats 200000
 

@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.ThetaValues.ExistsUniqueSecIsFnAt
-import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.AppellHumbertTrivialOfNowhereVanishing
 
 set_option autoImplicit false
 
@@ -131,7 +131,7 @@ theorem exists_isPullConst (hL : L.IsLB) {Hm : Matrix (Fin g) (Fin g) ℂ} {χ :
       have hj' := hj
       rw [← exAt_add_period u p z l l.2] at hj'
       rw [hrj _ _ hj', hrj _ _ hj, exAt_add_period u p z l l.2]
-      simp only [Matrix.cons_val_zero, Matrix.cons_val_one, ContinuousLinearMap.coe_coe,
+      simp only [Matrix.cons_val_zero, Matrix.cons_val_one,
         LinearMap.coe_toContinuousLinearMap']
       rw [hAH.2.2.2 l i z hi, hAH.2.2.2 ⟨Φ l, map_mem_period hΦ l.2⟩ i' (Φ z) hi', map_add,
         hBf, hBf]

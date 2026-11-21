@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.KernelTrace
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.TraceFormulaConvolution
 
 open MeasureTheory Topology Filter Set Function

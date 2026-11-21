@@ -1,6 +1,6 @@
-import Development.WeilBound.RepresentationTheoryGL.ResidualSpectrum.SliceTensors.PProjA
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsUnipLevIntegral
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GenericFiniteByInduction
 
 noncomputable section
 

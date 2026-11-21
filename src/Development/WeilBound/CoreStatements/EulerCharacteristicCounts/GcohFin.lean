@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.EulerCharacteristicCounts.GcohCmp
-import Development.WeilBound.CoreStatements.EulerCharacteristicCounts.GcohTateA
+import GroundTheory.ProfiniteCohomology.LocalTateDuality.TensorHomDualRepRootsOfUnityIsoCartierPairing
 
 open CategoryTheory GroundTheory.ProfCoh ReciprocityTheory.Gal ValuativeRel Formalism.GaloisCohomology
 

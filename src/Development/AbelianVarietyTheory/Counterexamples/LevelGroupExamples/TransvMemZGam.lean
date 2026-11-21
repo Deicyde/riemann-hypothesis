@@ -1,5 +1,8 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.SpanRatSmulMem
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.ProjectiveLattices.IntegrableOnIntegrand
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.TotallySplit
 
 open NumberField ReciprocityTheory.ChartRestriction.G.FD Formalism.L2.Pj.FJ
 open scoped ComplexConjugate

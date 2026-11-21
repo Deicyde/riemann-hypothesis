@@ -1,6 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.NormalizedHeckeFactors.CoeffZeroNeOfMonicIrr
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.LabelDatum
+import Formalism.PadicSubsetSums.CentralIdempotents.GaloisConjCentralIdempotent
 
 noncomputable section
 

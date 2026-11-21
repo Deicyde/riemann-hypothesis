@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.StatementsZhangLowerX
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PCurvePointsFinite
 set_option maxSynthPendingDepth 1

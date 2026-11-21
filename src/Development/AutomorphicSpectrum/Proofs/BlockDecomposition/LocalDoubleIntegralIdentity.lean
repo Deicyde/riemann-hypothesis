@@ -1,5 +1,4 @@
-import Mathlib
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.GaugeTopology.GTorus
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IwasawaDecompositionGlTwoHoldsStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IwasawaCoordinatesBoundedRegionStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IwasawaRegionMeasureBoundStatement
@@ -73,7 +72,7 @@ theorem gInt2 : Ad3.LFS.GInt2 := by
     refine IsLocallyConstant.continuous ?_
     rw [IsLocallyConstant.iff_exists_open]
     intro g
-    refine ⟨{x | g⁻¹ * x ∈ U}, U.isOpen.preimage (continuous_const.mul continuous_id), by simp [U.one_mem],
+    refine ⟨{x | g⁻¹ * x ∈ U}, U.isOpen.preimage (continuous_const.mul continuous_id), by simp,
       fun x hx => ?_⟩
     have := hU g _ hx
     simpa using this

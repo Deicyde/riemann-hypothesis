@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.FrobeniusOrbits.HostThickExists
-import Formalism.FrobeniusOrbits.HostOrbitCountSg
 import Formalism.SatakeDualWeyl.StatementC
+import Formalism.FrobeniusOrbits.HostOrbitsPlaces
+import Mathlib.Algebra.AffineMonoid.Basic
 
 open NumberField IntermediateField Ideal IsDedekindDomain
 open scoped Pointwise TensorProduct

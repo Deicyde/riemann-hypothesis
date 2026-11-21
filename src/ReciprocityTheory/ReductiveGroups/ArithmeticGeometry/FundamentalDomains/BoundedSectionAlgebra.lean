@@ -1,5 +1,7 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.ModerateCoefficientPositivity
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.TransvectionPeriodicity
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 namespace ReciprocityTheory.ChartRestriction.G.FD.BoundedSectionAlgebra
 

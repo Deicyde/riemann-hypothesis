@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ModelGramPosSemidef
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HodgeSmoothConj
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsUnitCharts
 
 set_option autoImplicit false
 

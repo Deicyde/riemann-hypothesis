@@ -1,8 +1,6 @@
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CartFrSgn
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.ChainParSucc
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.AdmissibleDiscreteSeriesOfHasParam
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HarishChandraModulesOn
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.HasDRepIffHasDerivAt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ChosenSeries
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.S Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.Mult Formalism.IndefR.Datum MeasureTheory NumberField Matrix
 open GlobalTheory.Chain GlobalTheory.ChainFr GlobalTheory.PairLift GlobalTheory.Chain.RealIt
@@ -81,7 +79,7 @@ lemma swapHom_pderiv (n : Fin b × Fin a) (Q : LPol b a) :
       linear_combination (-(swapHom ε ε' p)) * hs
     · have h' : m.swap ≠ n.swap := fun e => h (Prod.swap_injective e).symm
       simp only [pderiv_mul, pderiv_X_of_ne (Ne.symm h), pderiv_X_of_ne h', map_mul, hp, swapHom_X,
-        pderiv_C, mul_zero, zero_mul, add_zero, zero_add]
+        pderiv_C, mul_zero, zero_mul, add_zero]
       ring
 
 lemma swapHom_rai (i : Fin b) (j : Fin a) (Q : LPol b a) :
@@ -90,11 +88,11 @@ lemma swapHom_rai (i : Fin b) (j : Fin a) (Q : LPol b a) :
   have hs := C_sg_mul_self (σ := Fin a × Fin b) (ε j)
   by_cases h : ε' i = ε j
   · rw [if_pos h, if_pos h.symm]
-    simp only [LinearMap.smul_apply, LinearMap.mulLeft_apply, swapHom_smul, swapHom_C, map_mul, swapHom_X, conj_sg,
+    simp only [LinearMap.smul_apply, LinearMap.mulLeft_apply, swapHom_C, map_mul, swapHom_X, conj_sg,
       swSign, smul_eq_C_mul, Prod.swap_prod_mk]
     linear_combination (C (GlobalTheory.IndefiniteRowSideFullHecke.RaisingLoweringOperators.sgn (ε' i)) * X (j, i) * swapHom ε ε' Q) * hs
   · rw [if_neg h, if_neg (Ne.symm h)]
-    simp only [LinearMap.smul_apply, LinearMap.neg_apply, Derivation.coeFn_coe, map_neg, swapHom_smul, swapHom_C,
+    simp only [LinearMap.smul_apply, LinearMap.neg_apply, Derivation.coeFn_coe, map_neg, swapHom_C,
       swapHom_pderiv, map_mul, conj_sg, swSign, smul_eq_C_mul, Prod.swap_prod_mk]
     linear_combination (-(C (GlobalTheory.IndefiniteRowSideFullHecke.RaisingLoweringOperators.sgn (ε' i)) * pderiv (j, i) (swapHom ε ε' Q))) * hs
 
@@ -104,11 +102,11 @@ lemma swapHom_low (i : Fin b) (j : Fin a) (Q : LPol b a) :
   have hs := C_sg_mul_self (σ := Fin a × Fin b) (ε j)
   by_cases h : ε' i = ε j
   · rw [if_pos h, if_pos h.symm]
-    simp only [LinearMap.smul_apply, Derivation.coeFn_coe, swapHom_smul, swapHom_C, swapHom_pderiv, map_mul, conj_sg,
+    simp only [LinearMap.smul_apply, Derivation.coeFn_coe, swapHom_C, swapHom_pderiv, map_mul, conj_sg,
       swSign, smul_eq_C_mul, Prod.swap_prod_mk]
     linear_combination (C (GlobalTheory.IndefiniteRowSideFullHecke.RaisingLoweringOperators.sgn (ε' i)) * pderiv (j, i) (swapHom ε ε' Q)) * hs
   · rw [if_neg h, if_neg (Ne.symm h)]
-    simp only [LinearMap.smul_apply, LinearMap.mulLeft_apply, swapHom_smul, swapHom_C, map_mul, swapHom_X, conj_sg,
+    simp only [LinearMap.smul_apply, LinearMap.mulLeft_apply, swapHom_C, map_mul, swapHom_X, conj_sg,
       swSign, smul_eq_C_mul, Prod.swap_prod_mk]
     linear_combination (C (GlobalTheory.IndefiniteRowSideFullHecke.RaisingLoweringOperators.sgn (ε' i)) * X (j, i) * swapHom ε ε' Q) * hs
 

@@ -1,7 +1,8 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.FrobeniusFields.ExistsDecompositionElementAtLXiPowFourNeOne
 import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.FrobeniusFields.BarFacts
 import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.DirichletGroupPowers.RedOne
-import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.ExistsStrictHenselianAbsolutelyClosedLocalRing
+import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.FrobeniusFields.ExistsResQ
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual Formalism.HC ReciprocityTheory.Gal IsLocalRing Polynomial UpperTheory.V UpperTheory.V.Base UpperTheory.V.Alg UpperTheory.V.HV UpperTheory.V.GradeZeroInterpolatingElement UpperTheory.V.Ws
 
@@ -116,7 +117,7 @@ theorem UpperTheory.V.Keep.loc2 {Ω : Type} [Field Ω] [CharZero Ω] [IsAlgClosu
   · rw [hs]
     simp [Raw.bar, hom]
   · rw [hfacts, hs]
-    simp only [wPs, pow_zero, one_mul]
+    simp only [wPs]
     have e : Raw.bar D.Psi (g ^ 2) = 1 := by
       simp only [Raw.bar, map_pow, Units.val_pow_eq_pow_val]
       have : (residue c.O) (↑(D.Psi g) : c.O) = 1 := hPs
@@ -124,7 +125,7 @@ theorem UpperTheory.V.Keep.loc2 {Ω : Type} [Field Ω] [CharZero Ω] [IsAlgClosu
     rw [e]
     split_ifs <;> simp
   · rw [hfacts, hs]
-    simp only [wAl, Int.reduceNeg, neg_zero, zpow_zero, mul_one, zpow_one, ite_self]
+    simp only [wAl, neg_zero, zpow_zero, mul_one, zpow_one, ite_self]
     intro h
     apply hξ
     have e : Raw.bar D.ξ (g ^ 2) = Raw.bar D.ξ g ^ 2 := by

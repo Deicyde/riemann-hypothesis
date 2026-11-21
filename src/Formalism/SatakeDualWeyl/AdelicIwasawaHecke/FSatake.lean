@@ -1,4 +1,5 @@
-import Formalism.SatakeDualWeyl.StatementF
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.FSatakeC
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.HeckeActMem
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.HeckeConvolutionMemHolds

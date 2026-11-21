@@ -1,6 +1,6 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.HermitianBinaryValues
-import GroundTheory.AutomorphicForms.HermitianLocalForms
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.AutomorphicForms.HermitianLocalSplit
 
 noncomputable section
 

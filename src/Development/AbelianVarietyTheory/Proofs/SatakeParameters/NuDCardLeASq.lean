@@ -1,7 +1,4 @@
-import Mathlib
-import Formalism.SharpRestriction.ParConsts
-import Formalism.LocalRingCardinality.DataKerI
-import Formalism.LocalRingCardinality.CoeNeZeroOfNotMem
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.NuRowNonnegLeTenMul
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ScaleFamilySizeRelationsEventually
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.YoungDiagramCardEqSumRowLenRange

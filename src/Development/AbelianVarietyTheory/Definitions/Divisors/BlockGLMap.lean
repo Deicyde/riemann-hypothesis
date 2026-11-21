@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.GalMapMul
+import Mathlib.RepresentationTheory.Homological.GroupHomology.Basic
+import Mathlib.Tactic.Polynomial.Basic
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry Opposite
@@ -111,7 +113,7 @@ theorem _root_.GlobalTheory.EtC.blockGL_map (a b : ℕ) {A B : Type} [CommRing A
       Matrix.GeneralLinearGroup.map f (_root_.GlobalTheory.EtC.blockGL a b A g h) := by
   ext i j
   simp only [_root_.GlobalTheory.EtC.blockGL_val, Matrix.GeneralLinearGroup.map_apply,
-    Matrix.reindex_apply, Matrix.submatrix_apply, RingHom.mapMatrix_apply, Matrix.map_apply]
+    Matrix.reindex_apply, Matrix.submatrix_apply]
   rcases finSumFinEquiv.symm i with i | i <;> rcases finSumFinEquiv.symm j with j | j <;> simp
 
 def blockFun (a b : ℕ) (A : Type) [CommRing A] :

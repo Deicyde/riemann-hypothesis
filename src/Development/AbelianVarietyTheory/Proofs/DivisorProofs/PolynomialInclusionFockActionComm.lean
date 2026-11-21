@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IncMatTransposeConjTranspose
 open scoped TensorProduct Matrix
 open NumberField Formalism.BasicNotions.TH GlobalTheory.RealLift GlobalTheory.FockIncl GlobalTheory.FockInclK
@@ -57,11 +58,11 @@ theorem extMat_Eab (c d : Ix R S) : extMat r₀ s₀ (Eab c d) = Eab (skipIx r�
   · simp only [Eab, Matrix.single_apply]
     by_cases ha : a = skipIx r₀ s₀ c <;> by_cases hb : b = skipIx r₀ s₀ d <;> simp [ha, hb, eq_comm]
   · intro e _ he
-    simp [Eab, Matrix.single_apply, Ne.symm he]
+    simp [Eab, Ne.symm he]
   · simp
   · intro e _ he
     refine Finset.sum_eq_zero fun g _ => ?_
-    simp [Eab, Matrix.single_apply, Ne.symm he]
+    simp [Eab, Ne.symm he]
   · simp
 
 theorem polIncl_comp_fockAct2 (P Q R S : ℕ) (r₀ : Fin (R + 1)) (s₀ : Fin (S + 1)) (Y : Mat R S) :

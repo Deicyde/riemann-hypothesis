@@ -1,5 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OriginIdeal
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import Mathlib.RingTheory.Smooth.Fiber
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open IsLocalRing Polynomial
 
 open scoped TensorProduct
@@ -36,7 +42,7 @@ theorem etale_of_isZTorsor (B D : Type) [CommRing B] [CommRing D] [Algebra B D] 
       funext g
       by_cases hg : g = 1
       · subst hg; simp [hx0]
-      · simp [Pi.single_apply, hg]
+      · simp [hg]
     rw [hxe]
     exact Ideal.mul_mem_mul hx heI
   haveI : Subsingleton Ω[D⁄B] := (Ideal.cotangent_subsingleton_iff _).2 hidem

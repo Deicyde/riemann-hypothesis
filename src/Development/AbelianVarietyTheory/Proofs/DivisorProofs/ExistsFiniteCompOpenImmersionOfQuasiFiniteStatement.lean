@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFiniteCompOpenImmersionOfQuasiFinite
 open AlgebraicGeometry CategoryTheory Limits
 set_option maxHeartbeats 1000000 in

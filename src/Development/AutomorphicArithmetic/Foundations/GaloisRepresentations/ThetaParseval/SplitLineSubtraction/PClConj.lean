@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.SplitLineSubtraction.SubtractOf
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinrankDdREqOfEquiv
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.WdConjAbove

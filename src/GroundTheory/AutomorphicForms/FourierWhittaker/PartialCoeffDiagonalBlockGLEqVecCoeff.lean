@@ -1,6 +1,8 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.FourierWhittaker.AdelicCharPairTorusPtSingle
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.FourierWhittaker.UMatColXEqFromBlocks
+import GroundTheory.AutomorphicForms.AutomorphicFormSpaces.HasModerateGrowthZero
+import GroundTheory.AutomorphicForms.FourierWhittaker.Series
 
 open NumberField MeasureTheory Topology Set Filter IsDedekindDomain Matrix
 open scoped NumberField.AdeleRing
@@ -130,7 +132,7 @@ theorem isLastRowUnit_blockMat {j : ℕ} (h : Matrix (Fin j) (Fin j) K) :
   funext c
   rw [vecMul_lastVec _ _ (Nat.succ_pos j)]
   simp only [blockMat_apply, lastVec]
-  split_ifs <;> (first | rfl | (exfalso; (try simp only [Fin.ext_iff, Fin.lt_def] at *); omega) | ((try simp only [Fin.ext_iff, Fin.lt_def] at *); omega) | simp_all [Fin.ext_iff])
+  split_ifs <;> (first | rfl | (exfalso; (try simp only [Fin.ext_iff] at *); omega) | ((try simp only [Fin.ext_iff, Fin.lt_def] at *); omega) | simp_all [Fin.ext_iff])
 
 theorem isLastRowUnit_colX {j : ℕ} (ξ : Fin j → K) :
     IsLastRowUnit (uMat (colX (n := j + 1) j ξ)) := by
@@ -196,7 +198,7 @@ theorem stepCoeff_diagonal_blockGL {j : ℕ} (hj : j < n) (h : GL (Fin j) K)
   have := setIntegral_comp_matVec (h⁻¹) hH
   simp only [H, hmv] at this
   rw [this]
-  simp only [H, pair_matVec]
+  simp only [pair_matVec]
 
 open AutomorphicForm in
 

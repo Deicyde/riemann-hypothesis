@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.VecZero
 import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.SumTransportAlt
 import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.NatCastQb

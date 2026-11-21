@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.DualLattices.LiftMonomialDeterminantStatementHolds
+import Mathlib.Tactic.ENatToNat
 
 noncomputable section
 
@@ -27,7 +30,7 @@ theorem unitVector_val (l j : Ix g) : ((e1 (p := p) l) j).val = if j = l then 1 
   by_cases h : j = l
   · subst h
     simp [ZMod.val_one]
-  · simp [Pi.single_apply, h]
+  · simp [h]
 
 theorem prod_pow_unitVector_val {M : Type} [CommMonoid M] (f : Ix g → M) (l : Ix g) :
     ∏ j, f j ^ ((e1 (p := p) l) j).val = f l := by

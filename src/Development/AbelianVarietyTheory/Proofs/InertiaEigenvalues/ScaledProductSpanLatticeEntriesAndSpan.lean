@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.TupMemLatT
 open Formalism Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.WeaklyAdmissibleFiltrations Formalism.MainNotions.N TensorProduct PowerSeries GlobalTheory.Prism GlobalTheory.BKReal GlobalTheory.Per GlobalTheory.BSP GlobalTheory.MemLoc GlobalTheory.Pst GlobalTheory.BKLim GlobalTheory.Cong Matrix
 open scoped Formalism.Per NNReal
@@ -26,7 +26,7 @@ theorem latT_entries_and_span : ∀ (l : ℕ) [Fact l.Prime] (Γ : Type) [Group 
     intro k y hy k' i j
     by_cases h : k' = k
     · subst h; simpa using hy i j
-    · simp [Pi.single_apply, h, (L k').1.zero_mem]
+    · simp [h, (L k').1.zero_mem]
   have hle : latT ρs t M ≤ S := by
     refine sup_le ?_ ?_
     · rw [Submodule.span_le]

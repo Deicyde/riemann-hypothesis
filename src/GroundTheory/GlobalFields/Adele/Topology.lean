@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.LocalAtPlace
 import GroundTheory.GlobalFields.Adele.Approximation
-import GroundTheory.GlobalFields.IdeleGroups.InfiniteProjInfiniteEmbeddingOfNe
 import GroundTheory.GlobalFields.IdeleGroups.Restricted
 
 open NumberField IsDedekindDomain Topology Filter

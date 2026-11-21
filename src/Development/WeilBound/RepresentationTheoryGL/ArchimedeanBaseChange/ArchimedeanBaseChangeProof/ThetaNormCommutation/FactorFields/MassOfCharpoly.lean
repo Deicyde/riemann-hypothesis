@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TwistedGLMassFormula
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TwistedCentralizerMassEqOfTopEquiv
 open NumberField IsDedekindDomain Matrix Polynomial Filter GlobalTheory.CuspRep GlobalTheory.PRep Formalism.UG Formalism.BasicNotions GlobalTheory.UnitaryBC Formalism.L2.Host GlobalTheory.BCT
 open scoped Classical TensorProduct
 
@@ -47,13 +47,13 @@ theorem mass_of_charpoly (m : ℕ) (δ₁ δ₂ : GL (Fin m) E)
   have hf : ∀ t : twCent (thF E m) (ratF E m δ₂), y⁻¹ * (t : GL (Fin m) (Af E)) * y ∈ twCent (thF E m) (ratF E m δ₁) := by
     intro t
     rw [hT]
-    exact ⟨t, t.2, by simp [MulAut.conj_apply]⟩
+    exact ⟨t, t.2, by simp⟩
   have hg : ∀ s : twCent (thF E m) (ratF E m δ₁), y * (s : GL (Fin m) (Af E)) * y⁻¹ ∈ twCent (thF E m) (ratF E m δ₂) := by
     intro s
     have hs' : (s : GL (Fin m) (Af E)) ∈ (twCent (thF E m) (ratF E m δ₂)).map (MulAut.conj y⁻¹).toMonoidHom :=
       hT ▸ s.2
     obtain ⟨t, ht, he⟩ := hs'
-    have : (s : GL (Fin m) (Af E)) = y⁻¹ * t * y := by rw [← he]; simp [MulAut.conj_apply]
+    have : (s : GL (Fin m) (Af E)) = y⁻¹ * t * y := by rw [← he]; simp
     rw [this]; simpa [mul_assoc] using ht
   let e : twCent (thF E m) (ratF E m δ₂) ≃ₜ* twCent (thF E m) (ratF E m δ₁) :=
     { toFun := fun t => ⟨y⁻¹ * t * y, hf t⟩

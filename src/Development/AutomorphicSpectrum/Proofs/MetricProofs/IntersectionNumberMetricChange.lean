@@ -1,8 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.PositionPot
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterNamed
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterDerived
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ArithmeticHilbertSamuelLowerBound
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField Matrix Filter Topology
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi
 open GroundTheory.Heights₂.Heights.LowerBoundFree GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Cusp
@@ -164,7 +163,7 @@ theorem word_step (hLoc : ReciprocityTheory.ChartRestriction.G.AI.I2.MetricLocal
       simp only [p, h1, h2, if_true]
     · by_cases h3 : (q : ℕ) = i
       · have h2 : (q : ℕ) < i + 1 := by omega
-        simp [p, h1, h2, hq.2 h3]
+        simp [p, hq.2 h3]
       · have h2 : ¬ (q : ℕ) < i + 1 := by omega
         have h4 : q ≠ p := fun e => h3 (hq.1 e)
         simp [p, h1, h2, h4]

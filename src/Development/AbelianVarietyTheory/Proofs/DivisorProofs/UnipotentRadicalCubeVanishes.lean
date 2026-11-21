@@ -1,10 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeEvFun
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AbsPowApply
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviEmbeddingLocalMeasurable
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryAdelicGroupTopology
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalLatticeIsClosed
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HaarRightInvariantCompact
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemUnipFix
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedPlaneAdelicDecompositionStatement
 open scoped TensorProduct NNReal Matrix
@@ -70,7 +64,7 @@ theorem unip_sub_one_pow_three : ∀ (F E : Type) [Field F] [NumberField F] [Fie
   have hsingle : ∀ j : Fin n₁, (Pi.single j 1 : Fin n₁ → AE F E) = incV F (Pi.single j 1) := by
     intro j; funext i; by_cases h : i = j
     · subst h; simp [incV]
-    · simp [incV, Pi.single_apply, h]
+    · simp [incV, h]
   have hιx : ∀ z, fA (ι *ᵥ z) x = 0 := by
     intro z
     have hj : ∀ j, fA (ι *ᵥ Pi.single j 1) x = 0 := by

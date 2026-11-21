@@ -1,8 +1,8 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJAGQQSSFCut
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.DiagonalTransferAction
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGCoreGenTransferFn
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGCRadSpSmooth
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CoordinateCommuteRaisingConstant
 
 open Formalism.REAL Formalism.QuantumDeterminants Formalism.FourierDecayAlt NumberField
 

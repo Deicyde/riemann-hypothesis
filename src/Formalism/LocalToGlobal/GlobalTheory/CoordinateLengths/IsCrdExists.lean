@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.CoordinateLengths.LenLen2OfCoord
 import Formalism.LocalToGlobal.GroupLattices.DownNaturalLevelZero
 

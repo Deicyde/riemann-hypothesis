@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsTypeIsRealConst
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ClosedFormsMulClosed
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DelAtEqSumDOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DifferentiableAtReprPullbackHolomorphicFderiv
 open Set Matrix MeasureTheory Filter Topology
 open GlobalTheory.HermFrame
@@ -118,7 +116,7 @@ theorem delAt_pull_fderiv_ι {φ : V n → V n} {v : V n} (hφ : ContDiffAt ℂ 
       simp [del_mul_const (hEr _ _), hdel, Finset.sum_apply, Pi.single_apply, hs]
     · simp only [Sum.elim_inr]
       rw [del_sum (fun c _ => (hEc b c).mul_const _), ContinuousLinearMap.sum_apply]
-      simp [del_mul_const (hEc _ _), hdelc, Finset.sum_apply, Pi.single_apply]
+      simp [del_mul_const (hEc _ _), hdelc, Finset.sum_apply]
   rw [hF, delAt_ι hu]
   simp only [hw, map_sum, map_smul, Finset.mul_sum, mul_smul_comm]
   exact sum_symm_dz_mul s fun a b => by simp only [hs, hsymm (coordVec a) (coordVec b)]

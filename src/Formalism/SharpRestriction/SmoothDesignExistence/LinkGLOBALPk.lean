@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.LinkPk
 import Formalism.SharpRestriction.AdmissibleParameterJoins.DIVfromGLbud
-import Formalism.SharpRestriction.SmoothDesignExistence.DGamSmooth
 
 noncomputable section
 

@@ -1,10 +1,12 @@
-import Formalism.LocalToGlobal.TorsionIntegrality.WeierstrassTwoTorsion.StatementG
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.WeierstrassTwoTorsion.WeierstrassSubstitution.CompInv
 import Formalism.LocalToGlobal.TorsionIntegrality.WeierstrassTwoTorsion.WeierstrassSubstitution.CurveSer
 import Formalism.LocalToGlobal.TorsionIntegrality.WeierstrassTwoTorsion.WeierstrassSubstitution.FlowBasic
 import Formalism.LocalToGlobal.TorsionIntegrality.WeierstrassTwoTorsion.WeierstrassSubstitution.EqWSerSubst
 import Formalism.LocalToGlobal.TorsionIntegrality.WeierstrassTwoTorsion.WeierstrassSubstitution.LogExp
 import Formalism.LocalToGlobal.TorsionIntegrality.WeierstrassTwoTorsion.WeierstrassSubstitution.FormalGroupEqWSeries
+import Mathlib.Algebra.AffineMonoid.Basic
 
 open PowerSeries
 
@@ -72,7 +74,7 @@ theorem cc_subst {g s : R⟦X⟧} (hs : constantCoeff s = 0) :
   erw [PowerSeries.constantCoeff_subst (HasSubst.of_constantCoeff_zero hs), finsum_eq_single _ 0]
   · simp
   · intro d hd
-    simp [hs, hd]
+    simp
     rw [show MvPowerSeries.constantCoeff s = 0 from hs, zero_pow hd, mul_zero]
 
 theorem coeff_one_subst {f s : R⟦X⟧} (hs : constantCoeff s = 0) :

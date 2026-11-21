@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.PermRepSingle
 
 open CategoryTheory CategoryTheory.Limits GlobalTheory.HomStab
@@ -12,8 +12,8 @@ theorem chainsMap_id_add {k G : Type} [CommRing k] [Group G] {A B : Rep k G} (f 
   apply groupHomology.inhomogeneousChains.ext
   intro x
   ext a : 2
-  simp only [groupHomology.chainsMap_f_single, HomologicalComplex.add_f_apply]
-  simp [groupHomology.chainsMap_f_single]
+  simp only [HomologicalComplex.add_f_apply]
+  simp
   rw [← Finsupp.single_add]
   rfl
 

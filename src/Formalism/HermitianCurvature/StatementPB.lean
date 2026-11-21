@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementTC
 import Formalism.FlagUnipotentLattices.CardSubmodulesAndLinearEquivBounds
+import Mathlib.Order.CompletePartialOrder
 
 namespace Formalism.FourierDecayAlt.PB
 

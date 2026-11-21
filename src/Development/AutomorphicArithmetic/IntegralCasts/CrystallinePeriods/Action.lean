@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.ExistsFactorialMulEqPow
 import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.DeRhamMap
 
@@ -114,7 +115,7 @@ instance BdR.mulSemiringAction : MulSemiringAction G (BdR p R) :=
     (fun g h x => by
       have : MulSemiringAction.toRingEquiv G R (g * h) =
           (MulSemiringAction.toRingEquiv G R h).trans (MulSemiringAction.toRingEquiv G R g) := by
-        ext; simp [mul_smul]
+        ext; simp
       simp [this, BdR.map_map])
 
 theorem BdR.smul_def (g : G) (x : BdR p R) :

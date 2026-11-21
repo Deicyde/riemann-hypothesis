@@ -1,8 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TotalEqCurve
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdjacentPullPull
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GeometricallyConnectedOfIsIsoRestrict
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UniREqUni
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EtalePolynomialSubstitutionStatement
 open CategoryTheory AlgebraicGeometry TopologicalSpace Filter Topology MeasureTheory Matrix
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -230,10 +228,10 @@ def chart : OpenPartialHomeomorph (CxPts p σ) (V (d + 1)) where
   continuousOn_toFun := by
     refine (PiLp.continuous_toLp 2 _).comp_continuousOn (continuousOn_pi.2 fun j => ?_)
     rcases h : e j with _ | s
-    · simp only [h, Option.elim]
+    · simp only [Option.elim]
       exact (PiLp.continuous_apply 2 _ 0).comp_continuousOn
         (c.e.continuousOn.comp (PtsOver.continuous_map π w _).continuousOn fun y hy => hy.1)
-    · simp only [h, Option.elim]
+    · simp only [Option.elim]
       exact (continuousOn_ev (n s)).mono inter_subset_right
   continuousOn_invFun := (holo_of_affine hWa (c.e.open_target.preimage (differentiable_base e).continuous)
     (fun v hv => inv_mem π w y₀ hv) fun g => holo_inv π w y₀ g).1

@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.WeilGroupCharacters.RepAlg
+import Mathlib.Tactic.Polynomial.Basic
 
 open Polynomial UpperTheory.V.W
 

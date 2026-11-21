@@ -1,13 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Divisibility.LiftLat
 import Formalism.LocalToGlobal.Divisibility.RowLatLemmas
-import Formalism.LocalToGlobal.Divisibility.ProjLemmas
-import Formalism.LocalToGlobal.Divisibility.FramesLemmas
-import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.ConjugateWeightLatticeOfGeneral
 import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.CommutingTwist
-import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.ClassSumDualGeOfFamily
-import Formalism.HermitianLattices.HermitianLatticesProofs.IndexBasic
-import Formalism.HermitianLattices.HermitianLatticesProofs.DualLattice
 import Formalism.MirabolicMackeyTheory.MirabolicMackeyProofs.RamBasic
 
 open Module NumberField IsDedekindDomain Polynomial
@@ -421,7 +416,7 @@ theorem opMat_gaMat (hG : ∀ i g, Commute (B.op i) (B.r g)) (i : B.Pl × ℕ) (
 
 private theorem hform_eq_star_dotProduct_mulVec {n : ℕ} (H : Matrix (Fin n) (Fin n) K) (u v : Fin n → K) :
     hform H u v = star u ⬝ᵥ (H *ᵥ v) := by
-  simp [hform, Matrix.toLinearMapₛₗ₂'_apply, dotProduct, Matrix.mulVec, Finset.mul_sum, mul_assoc]
+  simp [hform, Matrix.toLinearMapₛₗ₂'_apply, dotProduct, Matrix.mulVec, Finset.mul_sum]
   simp only [starRingEnd_apply]
   exact Finset.sum_congr rfl fun i _ => Finset.sum_congr rfl fun j _ => by ring
 

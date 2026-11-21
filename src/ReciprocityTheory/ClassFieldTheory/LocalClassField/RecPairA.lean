@@ -1,7 +1,6 @@
-import Mathlib
-import ReciprocityTheory.ClassFieldTheory.LocalClassField.RecPairDefs
-import ReciprocityTheory.GroupCohomology.ComapZeroCoboundariesEqBot
-import ReciprocityTheory.GroupCohomology.DEqZeroOfMemB
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import ReciprocityTheory.ClassFieldTheory.LocalClassField.ExistsIntEKMulVbar
 
 namespace ReciprocityTheory.DiscreteGroups.LocalClassField
 

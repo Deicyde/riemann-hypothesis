@@ -1,21 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GrothendieckDeformation
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GoodWeightAntitoneGapStatement
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsCoreGoodMatch
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSemilinearL2Independent
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeightLatticeSpanEqStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeightLatticeFinitelyGeneratedAltBis
-import Development.AbelianVarietyTheory.Definitions.Divisors.CovolXOfCovol
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.Definitions.Divisors.CuspIso
-import Development.AbelianVarietyTheory.Definitions.Divisors.WellChosen
-import Development.AbelianVarietyTheory.Definitions.Divisors.MeanLogLeOfBounds
-import Development.AbelianVarietyTheory.Definitions.Divisors.WedgeNrmLeOfWedgeNormLe
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsHomWeightHomWeight
-import Development.AbelianVarietyTheory.Definitions.Divisors.MemLevEigenIffTransl
-import Formalism.LocalToGlobal.IndefiniteForms.IndefiniteTree.RealCubicMeans.LogMeanShares.LogMeanStatements.HSClaim
-import Development.AbelianVarietyTheory.Definitions.Divisors.GenRatios
-import Development.AbelianVarietyTheory.Definitions.Divisors.BadElt
 open CategoryTheory AlgebraicGeometry NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Theta
 open GlobalTheory GlobalTheory.CompHS GlobalTheory.CovTop GlobalTheory.BigTop GlobalTheory.HSApp GlobalTheory.DegVal GlobalTheory.DegCmp
@@ -65,7 +52,7 @@ theorem goodAt_shiftG : Hypotheses2 → ∀ (D : D7) (T : CoreJ D), LawsJ T → 
       simp only [Pi.smul_apply]
       unfold gap at this ⊢
       split_ifs at this ⊢ with h1
-      · simp only [Pi.smul_apply, smul_eq_mul, nsmul_eq_mul] at this ⊢
+      · simp only [Pi.smul_apply, nsmul_eq_mul] at this ⊢
         have hk : (1 : ℤ) ≤ ((k + 1 : ℕ) : ℤ) := by exact_mod_cast Nat.succ_pos k
         rw [← mul_sub]
         exact this.trans (le_mul_of_one_le_left (by linarith) hk)

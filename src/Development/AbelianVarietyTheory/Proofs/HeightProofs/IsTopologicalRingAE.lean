@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.BesselHermitianTheta.TiedKfin
-import Formalism.LocalToGlobal.BesselHermitianTheta.LemmasWeil
-import Formalism.LocalToGlobal.BesselHermitianTheta.LemmasSign
 import Development.AbelianVarietyTheory.BlockTheory.HeightDefect.FockOrthogonalDecomposition
 
 noncomputable section

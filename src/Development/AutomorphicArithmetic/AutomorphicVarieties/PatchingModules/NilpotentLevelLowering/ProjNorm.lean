@@ -1,4 +1,6 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.NilpotentLevelLowering.ActUVariableEqPow
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsContinuousPadic
+import Mathlib.Order.CompletePartialOrder
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.BasicNotions Formalism.MainNotions.N ValuativeRel IsLocalRing
 open GlobalTheory.CuspRep GlobalTheory.WeilDeligne GlobalTheory.LocLanglands GlobalTheory.LocGL GlobalTheory.GalOfCusp GlobalTheory.SmGL GlobalTheory.SplitWeil
 open UpperTheory.V.Alg UpperTheory.V.W UpperTheory.V.Hi UpperTheory.V.AlgebraTools UpperTheory.V.Pa UpperTheory.V.Pa.Lev
@@ -9,7 +11,7 @@ private theorem coeffSum (Λ G : Type) [CommRing Λ] [Group G] [Fintype G] (x : 
     ∑ g : G, (MonoidAlgebra.single g (1:Λ)) * MonoidAlgebra.single (1:G) (((MonoidAlgebra.single g⁻¹ (1:Λ)) * x).coeff 1) = x := by
   classical
   ext h
-  simp [MonoidAlgebra.single_mul_single, Finsupp.single_apply]
+  simp [MonoidAlgebra.single_mul_single]
 
 private theorem higman (Λ G N : Type) [CommRing Λ] [Group G] [Fintype G] [AddCommGroup N]
     [Module (MonoidAlgebra Λ G) N] (h : Module.Projective (MonoidAlgebra Λ G) N) :
@@ -41,7 +43,7 @@ theorem UpperTheory.V.Pa.Lev.projNorm :
     rw [← this]
     conv_lhs => rw [this]
     refine Finset.sum_congr rfl fun g _ => ?_
-    simp [Representation.asModuleEquiv_map_smul, Representation.asModuleEquiv_symm_map_rho]
+    simp [Representation.asModuleEquiv_symm_map_rho]
     rfl
   refine ⟨fun m hm => ⟨φ m, ?_⟩, fun S hS m hm => ?_⟩
   · simpa only [hm] using hφ m

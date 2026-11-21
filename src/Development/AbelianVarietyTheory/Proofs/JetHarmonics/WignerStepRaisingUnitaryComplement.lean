@@ -1,9 +1,4 @@
-import Mathlib
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.DifferentialOperatorBracket
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.FrameExtension
-import Formalism.RealPlaceAnalysis.ThirdArithmeticHolds
-import Development.AbelianVarietyTheory.Definitions.Jets.Imports
-import Development.AbelianVarietyTheory.Definitions.Jets.WigMap
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.OpNormSumSmulSqLe
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.HypAndAdj
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.PieriRaisingSubmoduleGlSuccStatement

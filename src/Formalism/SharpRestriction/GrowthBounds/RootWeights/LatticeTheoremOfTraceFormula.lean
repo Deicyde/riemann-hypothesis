@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.RootWeights.InvariantProjectionRangeTrivial
+import Formalism.SharpRestriction.GrowthBounds.RootWeights.CyclicSubmoduleIsSubrepresentation
+import Formalism.SharpRestriction.GrowthBounds.RootWeights.HomLatticeDividedPowerStable
 
 noncomputable section
 

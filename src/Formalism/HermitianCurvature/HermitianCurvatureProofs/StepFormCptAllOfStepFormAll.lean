@@ -1,7 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HerGenC
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.QQMemAdjAlgCpt
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.HerAnalyticFAllOfTop
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.ThmPActualOfAnalytic
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.SfiniteOfIsHaarOn
 
 open MeasureTheory
 

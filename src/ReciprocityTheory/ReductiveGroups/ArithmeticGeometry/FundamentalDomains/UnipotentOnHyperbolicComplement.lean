@@ -1,4 +1,7 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.MajPos
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.LinearAlgebra.Matrix.Hermitian
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.FlowMatMulVec
 
 namespace ReciprocityTheory.ChartRestriction.G.FD
 

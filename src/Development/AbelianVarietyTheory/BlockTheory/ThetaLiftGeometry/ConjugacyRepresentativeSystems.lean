@@ -1,9 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataKerI
-import Formalism.LocalRingCardinality.DataErr
-import Formalism.SharpRestriction.ElevenLe
 import Formalism.SharpRestriction.GlobalSchurBounds.StandardLattice
-import Formalism.LocalToGlobal.Columns.DecorationStabilizerTrivialUnipotent
+import Formalism.LocalToGlobal.Columns.GenericUnipotentCharacter
+import Formalism.LocalToGlobal.Columns.StdLatUnimodular
 
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.L2.Col
 

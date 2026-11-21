@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.WeightedSumBounds.LgCurvePcurve
 
 namespace ReciprocityTheory.ChartRestriction.G.Sh.PTb

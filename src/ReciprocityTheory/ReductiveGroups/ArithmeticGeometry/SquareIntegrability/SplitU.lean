@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.SplitC
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.TransferenceMinima
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.SplitB
 
 namespace ReciprocityTheory.ChartRestriction.G.I2
 
@@ -39,7 +42,7 @@ end lin
 
 theorem eq_zero_of_im_L (X : PT E) {a : Vsp X.dim} (h : ∀ y ∈ X.L, (Hf y a).im = 0) : a = 0 := by
   have hH : ∀ y, Hf y a = inner ℂ a y := fun y => by
-    simp [Hf, PiLp.inner_apply, mul_comm]
+    simp [Hf, PiLp.inner_apply]
   have hf : (Complex.imLm.comp ((innerₛₗ ℂ a).restrictScalars ℝ) : Vsp X.dim →ₗ[ℝ] ℝ) = 0 :=
     X.b.ext fun i => by
       simpa [← hH] using h (X.b i) (Submodule.subset_span ⟨i, rfl⟩)

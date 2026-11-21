@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsTestRep
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LocallyCompactModuleTopology
+import Mathlib.LinearAlgebra.Charpoly.ToMatrix
 
 open Polynomial Matrix MeasureTheory Filter Topology
 

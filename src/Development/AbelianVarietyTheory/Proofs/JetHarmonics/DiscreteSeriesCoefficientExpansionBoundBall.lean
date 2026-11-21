@@ -1,12 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Jets.SupWOfSup
-import Development.AbelianVarietyTheory.Definitions.Jets.SumIoPr
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.NormSqUnitNormalizationLe
-import CompanionTheory.AutomorphicTheory.BesselWaveGrids.WaveBallEstimateWeightedDualAlt
+import BuildAid.Leniency.Open
 import CompanionTheory.AutomorphicTheory.BesselWaveGrids.WaveInputsOfHypothesesGlobal
 import CompanionTheory.AutomorphicTheory.PieriRules.InfinitesimalCharacterDiscreteSeries
 import CompanionTheory.AutomorphicTheory.ZuckermanCommutation.ZuckermanFunctors.ZuckermanGapSmall
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.CapelliKFiniteCoefficient
 
 open BranchingSupport BpJoin Formalism.FourierDecayAlt Formalism.FourierDecayAlt.ThreeDimData Matrix MeasureTheory Finset
 open scoped InnerProductSpace ENNReal

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.LinkedUnramifiedChains.TeichmullerParts.UnramifiedTrivialInertialType
 import Development.AutomorphicArithmetic.AutomorphicVarieties.HeckeAlgebras.OrdinaryHeckeCharacters.PlaceBetween
 import Development.AutomorphicArithmetic.AutomorphicVarieties.BuildingsResidueChars.ExistsTensorDualEmbeddingOfHasWeightAt
@@ -219,7 +221,7 @@ private theorem span_pi {I : Type} [Finite I] {M : I → Type} [∀ i, AddCommGr
     · subst e
       simp [B]
     · obtain ⟨i, hi⟩ := Function.ne_iff.1 e
-      rw [Finset.prod_eq_zero (Finset.mem_univ i) (by simp [Finsupp.single_apply, hi, Ne.symm hi]), zero_smul]
+      rw [Finset.prod_eq_zero (Finset.mem_univ i) (by simp [hi]), zero_smul]
   rw [this]
   exact hf _
 

@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.GL2Classical.Adelic
 import GroundTheory.AutomorphicForms.GL2Classical.Iwasawa
 import GroundTheory.AutomorphicForms.AutomorphicFormSpaces.HasModerateGrowthZero
+import Mathlib.NumberTheory.ModularForms.SlashInvariantForms
 
 open NumberField Matrix CongruenceSubgroup UpperHalfPlane ModularForm
 open scoped MatrixGroups ModularForm

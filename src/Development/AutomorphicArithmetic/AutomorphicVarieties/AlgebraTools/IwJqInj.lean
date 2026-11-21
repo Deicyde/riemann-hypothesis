@@ -1,8 +1,7 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.HeckePairTop
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.TameParahoricRepSplitsAsProduct
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.IwDomSum
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.IwDomMul
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsLocallyConstantOrbit
 open ValuativeRel Matrix GlobalTheory.SmGL GlobalTheory.SplitWeil UpperTheory.V.Hi UpperTheory.V.AlgebraTools GlobalTheory.PRep
 
 section

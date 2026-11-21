@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnitaryApproximation.MemIntOEOfIsIntegral
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnitaryApproximation.Development
+import Mathlib.Algebra.AffineMonoid.Basic
 
 noncomputable section
 

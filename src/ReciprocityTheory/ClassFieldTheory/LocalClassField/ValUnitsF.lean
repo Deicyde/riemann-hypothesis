@@ -1,4 +1,6 @@
-import ReciprocityTheory.ClassFieldTheory.LocalClassField.ValUnitsE
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import ReciprocityTheory.ClassFieldTheory.LocalClassField.ValUnitsC
 
 namespace ReciprocityTheory.DiscreteGroups.LocalClassField
 

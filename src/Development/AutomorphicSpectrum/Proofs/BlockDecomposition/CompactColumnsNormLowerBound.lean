@@ -1,8 +1,5 @@
-import Mathlib
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.KFiniteAdelicGaussians.UpperRightUnipotentInvariance
-import GroundTheory.AutomorphicForms.ReductionFinite
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.ReductionMahler
-import GroundTheory.GlobalFields.TateThesis.AdelePoissonUniform
 
 open NumberField IsDedekindDomain MeasureTheory Matrix Filter Topology GroundTheory.Global GroundTheory.Automorphic GroundTheory.Automorphic.AutomorphicForm Ad3 Ad3.K Ad3.K.GA
 open scoped NumberField.AdeleRing Classical

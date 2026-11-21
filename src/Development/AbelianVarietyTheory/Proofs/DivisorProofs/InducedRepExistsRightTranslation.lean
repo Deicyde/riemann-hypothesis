@@ -1,15 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InducedRepresentationIrreducible
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsSubquotientDetRepParInd
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocFieldFv
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedLocalInducedSpaceIsoStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaActionExistsStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalUnitaryMatrixSurjectiveStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SplitPlaceCharacterComponentSmoothUnitaryConductStatement
-import Development.AbelianVarietyTheory.Definitions.Divisors.PairsOfSquareTriple
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.IndLine
@@ -37,7 +28,7 @@ theorem lid_law (ν β : kˣ →* ℂˣ) (a b : ℕ) (p : parab k (blocks a b)) 
   induction t using TensorProduct.induction_on with
   | zero => simp
   | tmul c d =>
-    simp only [MonoidHom.coe_comp, Function.comp_apply, twist_apply, MonoidHom.coe_coe]
+    simp only [MonoidHom.coe_comp, Function.comp_apply, twist_apply]
     simp [parChar, detRep, ofChar_apply]
     ring
   | add s t hs ht => simp only [map_add, hs, ht]
@@ -77,12 +68,12 @@ def rep (ν β : kˣ →* ℂˣ) (a b : ℕ) : Representation ℂ (GL (Fin (a + 
     prod₂ (detRep (Fin a) (ν * β)) (detRep (Fin b) β) g ∘ₗ (scalEquiv ν β a b).toLinearMap
   map_one' := by
     ext f : 1
-    simp only [LinearMap.comp_apply, LinearEquiv.coe_coe, map_one, map_mul, Module.End.one_apply,
-    Module.End.mul_apply, LinearEquiv.symm_apply_apply, LinearEquiv.apply_symm_apply]
+    simp only [LinearMap.comp_apply, LinearEquiv.coe_coe, map_one, Module.End.one_apply,
+    LinearEquiv.symm_apply_apply]
   map_mul' g h := by
     ext f : 1
-    simp only [LinearMap.comp_apply, LinearEquiv.coe_coe, map_one, map_mul, Module.End.one_apply,
-    Module.End.mul_apply, LinearEquiv.symm_apply_apply, LinearEquiv.apply_symm_apply]
+    simp only [LinearMap.comp_apply, LinearEquiv.coe_coe, map_mul,
+    Module.End.mul_apply, LinearEquiv.apply_symm_apply]
 
 theorem rep_apply (ν β : kˣ →* ℂˣ) (a b : ℕ) (g : GL (Fin (a + b)) k) (f : indScal ν β a b) (x : GL (Fin (a + b)) k) :
     ((rep ν β a b g f : indScal ν β a b) : GL (Fin (a + b)) k → ℂ) x = (f : GL (Fin (a + b)) k → ℂ) (x * g) :=

@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.KernelLattices.MuProd
 import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.ThDistC
-import Formalism.LocalToGlobal.GroupLattices.LevelGatherings.ComplSmulMapENe
-import Formalism.LocalToGlobal.Divisibility.TuplesLemmas
 
 open NumberField IsDedekindDomain IsDedekindDomain.HeightOneSpectrum
 open scoped TensorProduct

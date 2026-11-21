@@ -1,11 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocUnifSum
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemCtIntSub
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DisjointLineMid
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NeOfReNe
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsShear
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -82,7 +77,7 @@ theorem exists_incM_of_span {d : ℕ} (M : Matrix (Fin d) (Fin d) (AE F E)) (S :
   ext i j
   have h1 := congrFun (hf (Pi.single j 1)) i
   have h2 : incV F (Pi.single j (1 : E)) = Pi.single j 1 := by
-    ext k; by_cases hk : k = j <;> simp [incV, Pi.single_apply, hk]
+    ext k; by_cases hk : k = j <;> simp [incV, hk]
   rw [h2, Matrix.mulVec_single_one] at h1
   simpa [incM, incV] using h1
 

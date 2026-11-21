@@ -1,4 +1,5 @@
-import Formalism.SatakeDualWeyl.Statement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.GlintPrincRelIndexNeZero
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Stabstd
 

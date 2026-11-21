@@ -1,7 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsBasisOfBot
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PadicRingHomEqCanonical
 import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.ValuationCoeEqNorm
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsDetEltOne
+import Mathlib.Topology.Sheaves.Presheaf
 open GlobalTheory.Sandwich GlobalTheory.IndefiniteRowSideFullHecke.SandwichMaps GlobalTheory.DetInv Matrix TensorProduct
 
 namespace GlobalTheory.EmbConj

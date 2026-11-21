@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.ThetaCellCovers.VecClose
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Topology.Compactness.Paracompact
+import Mathlib.Topology.Separation.CompletelyRegular
 
 open MeasureTheory PositivityTheory.Rg.BcB.E1
 

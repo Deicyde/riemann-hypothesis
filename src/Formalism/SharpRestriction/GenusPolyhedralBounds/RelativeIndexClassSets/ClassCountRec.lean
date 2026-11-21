@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GenusPolyhedralBounds.RelativeIndexClassSets.ClassCount
 import Formalism.SharpRestriction.GenusPolyhedralBounds.RelativeIndexClassSets.ParOfEqBase
 import Formalism.SharpRestriction.GenusPolyhedralBounds.RelativeIndexClassSets.FibreRankGat

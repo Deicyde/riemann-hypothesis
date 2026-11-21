@@ -1,9 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FactorResIEqResS
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.CompletedLatticeEqAdelicCompletionAndGram
 import Development.AbelianVarietyTheory.Proofs.RingsOfIntegers.IsPrincipalIdealRingLoc
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsRootNear
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NatMulIntegral
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.TameInvariantLevelAction
 
 set_option autoImplicit false
 
@@ -75,7 +76,7 @@ theorem exists_glued {O E R : Type} [CommRing O] [Field E] [Algebra O E] [CommRi
       change ∑ j, (e • γ.val.map φ + (1 - e) • (1 : Matrix (Fin n) (Fin n) R)) i j * w j = _
       refine Finset.sum_congr rfl fun j _ => ?_
       rw [hef]
-      by_cases h : i = j <;> simp [h, Matrix.one_apply, Pi.single_apply] <;> ring
+      by_cases h : i = j <;> simp [h] <;> ring
     rw [hz']
     refine Submodule.sum_mem _ fun j _ => Submodule.smul_mem _ _ (add_mem ?_ ?_)
     · exact Submodule.smul_mem _ _ (Submodule.subset_span ⟨_, h3 j, rfl⟩)

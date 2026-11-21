@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.StatementW
-import Formalism.GradedWeylDivisibility.DualWeylDominanceOf
+import Mathlib.RingTheory.PiTensorProduct
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open MvPolynomial
 
@@ -174,7 +177,7 @@ lemma wlocal_L_insert {r : ℕ} (k a : Fin r) (c : Fin r → R) (s : Finset (Fin
     by_cases hj : j = k
     · rw [hj]
       simp [hak, ha]
-    · simp [hak, ha, hj, Ne.symm hj]
+    · simp [hak, hj, Ne.symm hj]
   · simp [hi]
 
 lemma wlocal_good_L {r n : ℕ} (hn : n ≤ r) (ν : Fin n → ℕ) (k : Fin r) (c : Fin r → R) :

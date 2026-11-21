@@ -1,11 +1,10 @@
-import Mathlib
-import ReciprocityTheory.ClassFieldTheory.LocalClassField.ExistsIntEKMulVbar
-import ReciprocityTheory.ClassFieldTheory.LocalClassField.GalBasic
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ClassFieldTheory.LocalClassField.Herbrand
 import ReciprocityTheory.ClassFieldTheory.LocalClassField.UnitsHerbrand
-import ReciprocityTheory.ClassFieldTheory.LocalClassField.ValUnitsG
 import ReciprocityTheory.ClassFieldTheory.LocalClassField.RestrictedMultiplicativeH1Subsingleton
 import ReciprocityTheory.ClassFieldTheory.LocalClassField.FinCoh
+import ReciprocityTheory.ClassFieldTheory.LocalClassField.ValUnitsE
 
 namespace ReciprocityTheory.DiscreteGroups.LocalClassField
 

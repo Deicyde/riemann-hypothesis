@@ -1,7 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.DframeCommute
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.HermitianFormAnisotropicPart
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.UnipotentLevelZeroEqOne
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.LevelsOfBuiltSetting
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.GenCapRepIntertwine
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.HeadCorrespondenceOfParts
 
 noncomputable section
 

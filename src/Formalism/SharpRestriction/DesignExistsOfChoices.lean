@@ -1,7 +1,9 @@
-import Formalism.SharpRestriction.MuTuOfTuSize
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.MainIn
 import Formalism.SharpRestriction.LevelLetterCocycles.AlignN
 import Formalism.LocalRingCardinality.MinkMEqMinkowskiNumber
+import Formalism.SharpRestriction.GlobalTheoremInputs
+import Formalism.SharpRestriction.ParamsHeightRankConstant
 
 noncomputable section
 

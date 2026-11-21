@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.IsMirClass
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsBilinCyclic
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.LabelDatum
 
 noncomputable section
 

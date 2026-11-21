@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.ChordSecondLogDeriv
-import Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.PhNormClosed
 import Formalism.LocalToGlobal.TorsionIntegrality.SecondCoefficientNorms.JetExpShape
 
 noncomputable section

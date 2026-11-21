@@ -1,6 +1,6 @@
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsNormElementCongruenceStatement
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.CohomologicalCsdTempered
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.PublishedInputsThirdLayer
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.StrictHenselianAcyclic
 
 set_option synthInstance.maxHeartbeats 200000
 

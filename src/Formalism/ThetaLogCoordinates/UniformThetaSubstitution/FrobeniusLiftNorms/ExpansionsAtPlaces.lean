@@ -1,8 +1,7 @@
-import Mathlib
-import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.FirstDeriv
-import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.ThmSUniform
-import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.FrobeniusLiftNorms.EDecomp
-import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.FrobeniusLiftNorms.MPlaces
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.FormalGroupWitt.FormalGroupWittProofs.IntegralSubstVector
+import Formalism.GaussJetBounds.Statement
 
 noncomputable section
 

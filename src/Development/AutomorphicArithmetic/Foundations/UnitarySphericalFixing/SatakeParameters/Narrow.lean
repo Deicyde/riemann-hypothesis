@@ -1,6 +1,8 @@
-import Development.AutomorphicArithmetic.Foundations.UnitarySphericalFixing.SatakeParameters.AbsCentral
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.UnitarySphericalFixing.SatakeParameters.SwOn
 import Development.DiscreteGroups.GlobalIrreducibility.DzMatchCut
+import Development.AutomorphicArithmetic.Foundations.LocalLanglands.IsRecTOfIsRec
 
 noncomputable section
 

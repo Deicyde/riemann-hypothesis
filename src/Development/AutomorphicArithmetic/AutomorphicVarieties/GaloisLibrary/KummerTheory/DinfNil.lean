@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.KummerTheory.Mk0IdMapCongr
-import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.KummerTheory.LevCompact
-import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.KummerTheory.QzBasic
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Topology.Connected.Separation
+import Mathlib.Topology.MetricSpace.Ultra.TotallySeparated
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.GaloisCohomology UpperTheory.V UpperTheory.V.LDataCardLeFinrank UpperTheory.V.Base UpperTheory.V.Kum
 
@@ -106,7 +108,7 @@ theorem UpperTheory.V.Kum.dinfNil :
   have stabC : ∀ γ ∈ cycU l U, ∀ x, φ (conjHom (cycU l U) γ x) = φ x := by
     intro γ hγ x
     have e : conjHom (cycU l U) γ x = (⟨γ, hγ⟩ : cycU l U)⁻¹ * x * ⟨γ, hγ⟩ :=
-      Subtype.ext (by simp only [conj_val, Subgroup.coe_mul, Subgroup.coe_inv, Subgroup.coe_mk])
+      Subtype.ext (by simp only [conj_val, Subgroup.coe_mul, Subgroup.coe_inv])
     rw [e, hadd, hadd, hinv]
     abel
   have stabW : ∀ γ ∈ W.toSubgroup, ∀ x, φ (conjHom (cycU l U) γ x) = φ x := by
@@ -118,7 +120,7 @@ theorem UpperTheory.V.Kum.dinfNil :
       have h2 := mul_mem (inv_mem hγ) h3
       simpa [mul_assoc] using h2
     have e : conjHom (cycU l U) γ x = ⟨_, hdC⟩ * x :=
-      Subtype.ext (by simp only [conj_val, Subgroup.coe_mul, Subgroup.coe_mk]; group)
+      Subtype.ext (by simp only [conj_val, Subgroup.coe_mul]; group)
     rw [e, hadd, hWker _ hdC hdW, zero_add]
   have stabMul : ∀ a b : G F Ω, (∀ x, φ (conjHom (cycU l U) a x) = φ x) →
       (∀ x, φ (conjHom (cycU l U) b x) = φ x) → ∀ x, φ (conjHom (cycU l U) (a * b) x) = φ x := by

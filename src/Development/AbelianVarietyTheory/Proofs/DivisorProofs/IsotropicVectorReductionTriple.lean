@@ -1,12 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocUnifSum
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemCtIntSub
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DisjointLineMid
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NeOfReNe
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsShear
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaTowerPropertiesStatement
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -34,7 +26,7 @@ theorem dot_ne_zero_of_hasSig_pos {n : ℕ} (M : Matrix (Fin n) (Fin n) ℂ) (h 
   have hy0 : y ≠ 0 := by
     intro h0; apply hx; rw [← hxy, h0, Matrix.mulVec_zero]
   have hsx : star x = A.map star *ᵥ star y := by
-    rw [← hxy]; ext i; simp [Matrix.mulVec, dotProduct, star_sum, mul_comm]
+    rw [← hxy]; ext i; simp [Matrix.mulVec, dotProduct, star_sum]
   have key : x ⬝ᵥ M *ᵥ star x = y ⬝ᵥ star y := by
     rw [hsx, Matrix.mulVec_mulVec, ← hxy, ← Matrix.vecMul_transpose, ← Matrix.dotProduct_mulVec,
       Matrix.mulVec_mulVec, h1, Matrix.one_mulVec]

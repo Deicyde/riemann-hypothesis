@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.ExpUpper
-import Development.AbelianVarietyTheory.Definitions.Foundations.Imports
+import Development.AbelianVarietyTheory.Definitions.Foundations.CthFac
+import Mathlib.Analysis.Complex.UpperHalfPlane.Topology
 
 noncomputable section
 

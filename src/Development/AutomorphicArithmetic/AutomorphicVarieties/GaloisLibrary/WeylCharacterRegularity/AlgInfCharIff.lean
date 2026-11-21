@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.HasCohomology
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.ProjectionCompact
 

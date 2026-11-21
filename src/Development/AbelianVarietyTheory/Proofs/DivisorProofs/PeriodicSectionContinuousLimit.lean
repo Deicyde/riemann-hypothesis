@@ -1,6 +1,13 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NonvanishingSectionQuotientLimitStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LogOfExpContinuityStatement
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Analysis.Convex.Contractible
+import Mathlib.Analysis.Real.Pi.Bounds
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Topology.Homotopy.Lifting
 
 open Set
 

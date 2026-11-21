@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PeriodQuadFormExtendsHolomorphicPunctPolydisc
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PerValNeZero
 open GlobalTheory.ShFam.Hor
 
 set_option maxHeartbeats 1000000 in

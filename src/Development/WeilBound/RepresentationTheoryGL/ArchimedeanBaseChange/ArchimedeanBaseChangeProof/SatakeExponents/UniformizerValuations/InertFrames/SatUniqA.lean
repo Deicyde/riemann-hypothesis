@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.SatakeExponents.UniformizerValuations.FrameInert
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsSatVecUOfIsSphericalU
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.BcParamEqOfSatUEq
 
 noncomputable section

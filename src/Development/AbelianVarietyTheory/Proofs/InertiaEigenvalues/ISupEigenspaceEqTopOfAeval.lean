@@ -1,4 +1,12 @@
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.OffRange
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.LinearAlgebra.Eigenspace.Pi
+import Mathlib.LinearAlgebra.Eigenspace.Semisimple
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
 open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.IntegralHeckeForms Formalism.ConjugateSelfDual ReciprocityTheory.Gal NumberField IsDedekindDomain Polynomial GlobalTheory.LiftLeaf GlobalTheory.SupLaw
 open scoped TensorProduct
 
@@ -10,8 +18,8 @@ theorem aeval_restrict_coe {K V : Type} [Field K] [AddCommGroup V] [Module K V]
   induction q using Polynomial.induction_on' with
   | add p q hp hq => simp [hp, hq]
   | monomial n c =>
-    simp only [aeval_monomial, Module.End.mul_apply, Module.algebraMap_end_apply, Module.End.pow_restrict,
-      LinearMap.restrict_apply, Submodule.coe_smul]
+    simp only [aeval_monomial, Module.End.mul_apply, Module.algebraMap_end_apply,
+      Submodule.coe_smul]
     rw [Module.End.pow_restrict n hW]
     rfl
 

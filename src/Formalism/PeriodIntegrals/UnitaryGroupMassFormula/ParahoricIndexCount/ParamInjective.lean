@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ParahoricIndexCount.CardRangeRedJ
 
 noncomputable section
@@ -80,7 +81,7 @@ theorem image_eq (hϖ0 : ϖ ≠ 0) (hloc : Formalism.DoubleCosetMeasures.IsLocal
     have h2 : theta kI (-(kI * BF * DI)) 0 DI * theta kM BF 0 DM = 1 := by
       rw [theta_mul]
       simp only [Matrix.mul_zero, Matrix.zero_mul, add_zero, zero_add, Matrix.neg_mul,
-        Matrix.mul_assoc, hkk', hDD', Matrix.mul_one, add_neg_cancel, neg_zero, zero_add, theta_one]
+        Matrix.mul_assoc, hkk', hDD', Matrix.mul_one, add_neg_cancel, zero_add, theta_one]
     obtain ⟨hF, hFv, hFi⟩ : ∃ g : GL (Fin (a + t)) F, (g : Matrix (Fin (a + t)) (Fin (a + t)) F) = theta kM BF 0 DM ∧
         ((g⁻¹ : GL (Fin (a + t)) F) : Matrix (Fin (a + t)) (Fin (a + t)) F) = theta kI (-(kI * BF * DI)) 0 DI :=
       ⟨⟨_, _, h1, h2⟩, rfl, rfl⟩

@@ -1,5 +1,9 @@
-import Development.WeilBound.ThetaLifts.SmallCones.SliceAd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.SmallCones.IdeleTop
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepresentationPreservesSchwartz
+import Development.WeilBound.ThetaLifts.LatticeBasics.IsCompactIntV
+import Development.WeilBound.ThetaLifts.SmallCones.ThetaUniq
 
 noncomputable section
 

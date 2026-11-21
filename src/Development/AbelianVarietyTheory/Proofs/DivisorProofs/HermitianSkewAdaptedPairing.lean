@@ -1,16 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinRel
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TrPApply
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AtVecMulVecRight
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LagrangianSetAdditiveSubgroup
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviMapPreservesRationalPoints
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SkewHermitianDeterminantNeZero
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TrAEMixedNondeg
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqZeroOfTraceOrth
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SumThreeComm
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HTensEqTrace
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HTensVmvLeft
 open scoped TensorProduct Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -112,4 +102,4 @@ theorem GlobalTheory.ArchSchB.symp_levi_pair_eq_trace : ∀ {F E : Type} [Field 
   rw [sum_sum_eq_dot, Matrix.add_mulVec, Matrix.add_mulVec, Matrix.add_mulVec, vecMulVec_mulVec', vecMulVec_mulVec',
     vecMulVec_mulVec', ← Matrix.mulVec_mulVec, h2, h3, h4]
   simp only [Matrix.mulVec_zero, zero_smul, add_zero, dotProduct_add, dotProduct_smul, smul_eq_mul, h1, mul_zero,
-    zero_add, dotProduct_zero, neg_smul, one_smul, dotProduct_neg, h5, neg_one_mul, neg_neg]
+    zero_add, neg_smul, one_smul, dotProduct_neg, h5, neg_one_mul, neg_neg]

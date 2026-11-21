@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.SpanPowerMembership.NZLevC
+import Formalism.LocalToGlobal.GroupLattices.FockModels.SwRowGenMonomial
 
 open MvPolynomial
 
@@ -146,7 +149,7 @@ theorem bV_top (v : Fin P.nV) (s : Fin (P.n' v)) (i : IdxV P v s) (h : rowWt i.1
 theorem prodF_smul (c : ∀ v, Fin (P.n' v) → Kf) (F : ∀ v, Fin (P.n' v) → MvPolynomial (Fin (P.m + 1) × Fin (P.m + 1)) Kf) :
     prodF P (fun v s => c v s • F v s) = (∏ v, ∏ s, c v s) • prodF P F := by
   simp only [prodF, smul_eq_C_mul, map_mul, Finset.prod_mul_distrib, map_prod]
-  simp [Places.vEmb, blockEmb, rename_C, ← map_prod]
+  simp [Places.vEmb, blockEmb, ← map_prod]
 
 abbrev LamTot : Fin P.nV × Fin (P.m + 1) → ℕ := wtOf P (nuV P)
 

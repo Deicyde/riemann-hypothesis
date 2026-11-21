@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.SmallCones.KerGeo
 import Development.WeilBound.ThetaLifts.LeviDeterminants.MCSpan
+import Development.WeilBound.ThetaLifts.SmallCones.ExpAlg
 
 set_option linter.unusedSectionVars false
 

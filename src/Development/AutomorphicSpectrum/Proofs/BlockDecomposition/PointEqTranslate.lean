@@ -1,5 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsFieldIdemOne
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open MeasureTheory Topology Filter GlobalTheory.CompanionTheory.NullFr
 open scoped NNReal ENNReal Matrix
 
@@ -45,7 +51,7 @@ theorem mul_gD_apply' {m : ℕ} (M : Fx A m t) (i : Fin t) (u : A) (p : Fin m) (
   by_cases h : j = i
   · subst h
     simp [mul_comm]
-  · simp [h, Function.update_apply]
+  · simp [h]
 
 theorem mul_gU_gD_apply {m : ℕ} (M : Fx A m t) (i : Fin t) (c : Fin t → A) (u' : A) (p : Fin m)
     (j : Fin t) :
@@ -75,7 +81,7 @@ theorem gD_mul (i : Fin t) (u' u : A) (h : u' * u = 1) : gD i u' * gD i u = 1 :=
     by_cases hpi : p = i
     · subst hpi
       simp [h]
-    · simp [Function.update_apply, hpi]
+    · simp [hpi]
   · simp [hpq]
 
 end GlobalTheory.CompanionTheory.NullFr.CoverStep

@@ -1,18 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GrothendieckDeformation
-import Development.AbelianVarietyTheory.Definitions.Divisors.CovolXOfCovol
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.Definitions.Divisors.CuspIso
-import Development.AbelianVarietyTheory.Definitions.Divisors.WellChosen
-import Development.AbelianVarietyTheory.Definitions.Divisors.MeanLogLeOfBounds
-import Development.AbelianVarietyTheory.Definitions.Divisors.WedgeNrmLeOfWedgeNormLe
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsHomWeightHomWeight
-import Development.AbelianVarietyTheory.Definitions.Divisors.MemLevEigenIffTransl
-import Formalism.LocalToGlobal.IndefiniteForms.IndefiniteTree.RealCubicMeans.LogMeanShares.LogMeanStatements.HSClaim
-import Development.AbelianVarietyTheory.Definitions.Divisors.GenRatios
-import Development.AbelianVarietyTheory.Definitions.Divisors.BadElt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.BarCompSubsetClosure
-import Development.AbelianVarietyTheory.Definitions.Divisors.QuoIff
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HostBoundHolds
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeightBoundHolds
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoversOfLifts
@@ -72,7 +60,7 @@ theorem T₁_mul_u₁_add_rem (ha : P.a < Dw.p + Dw.q) (τ : Psi H) (i : Fin (Dw
 
 theorem wt_apply (j : ℕ) (τ : Psi H) (i : Fin (Dw.p + Dw.q)) :
     P.wt j τ i = FlagTan.kap Dw τ i + P.rem τ i + ((dimFlag Dw : ℤ) + j + 1) * P.u₁ τ i := by
-  simp only [WtPar.wt, WtPar.uc, WtPar.u₂, Pi.add_apply, Pi.smul_apply, nsmul_eq_mul, Pi.mul_apply, Pi.natCast_apply]
+  simp only [WtPar.wt, WtPar.uc, WtPar.u₂, Pi.add_apply, nsmul_eq_mul, Pi.mul_apply, Pi.natCast_apply]
   ring
 
 end GlobalTheory.CovTop.WtRun

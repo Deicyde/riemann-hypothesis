@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.Embedding
 import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.Residue
 import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.Coefficients

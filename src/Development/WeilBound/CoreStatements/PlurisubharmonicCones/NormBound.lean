@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.StabilizerCovolume.PDifferentExtNorm
 import GroundTheory.HeightsAndTheta.Heights.LatticeLemmas.PRootsOfUnityValuation
 open NumberField IsDedekindDomain

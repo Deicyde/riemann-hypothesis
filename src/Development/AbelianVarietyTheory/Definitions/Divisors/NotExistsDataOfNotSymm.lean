@@ -1,8 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsOfPoint
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsTauLattice
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.AbelianSchemeLawsUnconditional
-import Development.AbelianVarietyTheory.Definitions.AbelianSchemeLaws.ExistsUniqueEqConstMulEllTheta
 import Development.AbelianVarietyTheory.Definitions.Divisors.PerFactor
 
 noncomputable section

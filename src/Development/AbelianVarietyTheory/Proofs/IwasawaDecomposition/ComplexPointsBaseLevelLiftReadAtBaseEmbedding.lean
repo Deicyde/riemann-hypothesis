@@ -1,16 +1,7 @@
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsBaseEnlargementFixedCoefFieldOfCoeffEnlargemen
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.CoefAEqOfHeq
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.Forms
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.AdmissibleDiscreteSeriesOfHasParam
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HarishChandraModulesOn
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.HasDRepIffHasDerivAt
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.GreenCuspidalIff
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ExistsIsBIffCoreB
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.WeilRepresentationUnitaryPair
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.DsExistsOfDiscreteSeriesExists
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.HarishChandraFinite
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsNormLeHeightPow
-import Formalism.LocalToGlobal.IndefiniteReal.LinksStage
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.IndefiniteReal.ConjSubConjSub
+import Formalism.LocalToGlobal.IndefiniteReal.ZeroPartEigenvalueConvention
+import Mathlib.LinearAlgebra.LinearIndependent.BaseChange
 open Formalism.BasicNotions Formalism.MainNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField
 open Formalism.L2.Theta Formalism.L2.DIV Formalism.L2.Indef Formalism.L2.Rows Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.Lev Formalism.IndefR.Cx Formalism.IndefR.RecTie
 open scoped TensorProduct InnerProductSpace ComplexOrder
@@ -99,7 +90,7 @@ theorem exists_mat {K K' : Type} [Field K] [Field K'] (φ : K →+* K') {n n' : 
       simpa [Submodule.coe_sum] using this
     rw [e1]
     have e2 : ((∑ i, φ (y i) • bc i : V') : Fin n → K') = ∑ i, φ (y i) • c i := by
-      simp [Submodule.coe_sum, bc, cV]
+      simp [bc, cV]
     rw [e2, ← hΦsum]
 
 theorem lat_coords {K K' : Type} [Field K] [Field K'] [NumberField K] [NumberField K'] (φ : K →+* K') {n n' d d' : ℕ}

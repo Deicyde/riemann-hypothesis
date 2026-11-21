@@ -1,4 +1,9 @@
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Rr
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Analysis.Matrix.Normed
+import Mathlib.Tactic.Monotonicity.Lemmas
 open MeasureTheory Matrix Finset
 open scoped ContDiff ComplexConjugate InnerProductSpace
 open PositivityTheory.RgBcC GlobalTheory.CompanionTheory.WaveSpd

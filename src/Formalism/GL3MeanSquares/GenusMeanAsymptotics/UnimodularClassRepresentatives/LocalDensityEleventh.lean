@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.GenusMeanAsymptotics.UnimodularClassRepresentatives.ExistsNotMemOfSol
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 open NumberField Module Matrix
 
@@ -156,8 +159,7 @@ theorem fm_smul (hF : IsFixF K F) (H : Matrix m m (𝓞 K)) (a : 𝓞 F) (y : m 
     fm H (fun i => ι a * y i) (fun i => ι a * y i) = ι (a * a) * fm H y y := by
   have hs : ∀ i, star (ι a * y i) = ι a * star (y i) := fun i => by
     rw [star_mul', idealPowerSpanBounds.star_def (ι a), conjO_map hF]
-  simp only [fm, dotProduct, Matrix.mulVec, Pi.star_apply, hs, map_mul, Finset.mul_sum,
-    Finset.sum_mul]
+  simp only [fm, dotProduct, Matrix.mulVec, Pi.star_apply, hs, map_mul, Finset.mul_sum]
   refine Finset.sum_congr rfl (fun i _ => Finset.sum_congr rfl (fun j _ => ?_))
   ring
 

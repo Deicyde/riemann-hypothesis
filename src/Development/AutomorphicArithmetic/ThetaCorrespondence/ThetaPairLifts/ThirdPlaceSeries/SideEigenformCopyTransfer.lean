@@ -1,15 +1,18 @@
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EnlargedBaseLb2Rows
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.CohomologicalCsdTempered
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.PublishedInputsThirdLayer
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.SameGaloisLevelExists
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.HeckeOpen
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.RootsOfUnityRingLeWittIntegers
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.ThetaLocalInputs
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.GalExOfCgTrue
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.ExistsTheta
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.GaloisRepTransportOfCopyAll
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.EigOfRatAd
-import Development.AutomorphicArithmetic.Foundations.LocalLanglands.IsRecTOfIsRec
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.CenUsedOfCenReal
+import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsDescentMapNonzeroOfSmallFieldFormStatement
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ChebSplitNd
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.DofOTw
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ThetaPsi
+import Development.AutomorphicArithmetic.UnitTensorPairings.HeckeEigenspaceDescentOfEquivariantEquiv
+import Development.AutomorphicArithmetic.UnitTensorPairings.NonemptyCoefficientRingDataOfIsomorphicCMDatum
+import Development.AutomorphicArithmetic.UnitTensorPairings.SidePlaceExistsOfCopyAll
 
 set_option synthInstance.maxHeartbeats 200000
 
@@ -77,7 +80,7 @@ private theorem psi_law_transfer (h : CopyAll D D' ι e) {S : RatDat D.ntw} {S' 
       ((psiUOf D.nd (NX.xiRed D) θ ⟨u, hu'⟩ : (↥D.LL0)ˣ) : ↥D.LL0) := by
     apply (embLL0 D).injective
     rw [h.cp.embLL0_eq, a1]
-    simp only [hxi]
+    simp only
     exact (by with_unfolding_all exact (a2 :))
   have a4 := h3 i b u hu hu'
   rw [← a3] at a4

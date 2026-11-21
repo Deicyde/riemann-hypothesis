@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.GeneralLinearLevel.ExpMulVecFix
 import Formalism.FormalDegreeBessel.FinalG
-import Formalism.FormalDegreeBessel.FinalIO
+import Formalism.HermitianCurvature.StatementQ
 
 open Matrix Filter Topology
 open scoped ContDiff
@@ -162,7 +164,7 @@ lemma out_of_sig {i : Fin (r + 1)} {q v : Fin (2 * r + k + 1)} (hq : Out k r i q
   unfold Out at hq ⊢
   unfold GBasic.sig at hq
   split_ifs at hq with h
-  · rcases hq with hq | hq <;> (try simp only [Fin.val_mk] at hq) <;> omega
+  · rcases hq with hq | hq <;> (try simp only at hq) <;> omega
   · exact hq
 
 lemma col_HZH {i : Fin (r + 1)} {Z : Mx k r} (hZ : InV k r i Z) {q : Fin (2 * r + k + 1)}

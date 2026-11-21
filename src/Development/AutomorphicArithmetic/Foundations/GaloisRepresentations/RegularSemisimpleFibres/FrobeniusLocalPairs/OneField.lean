@@ -1,10 +1,7 @@
-import Mathlib
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.RegularSemisimpleFibres.FrobeniusLocalPairs.MatchSmulAlt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.RegularSemisimpleFibres.FrobeniusLocalPairs.StrictNear
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.RegularSemisimpleFibres.FrobeniusLocalPairs.CosetSum
-import Development.AutomorphicArithmetic.Foundations.Convolution.TwistedLocalOrbits.StrictNormal
-import Development.AutomorphicArithmetic.Foundations.Convolution.TwistedLocalOrbits.BallSub
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.TraceFormula.OrbitalIntegrals.QuotFubiniHolds
 
 open MeasureTheory ValuativeRel Matrix
 open GlobalTheory.PRep GlobalTheory.SplitWeil GlobalTheory.IndefiniteRowSideFullHecke.IwahoriDoubleCosets PositivityTheory.Rg.Tf.Loc UpperTheory.ConvolutionTheory.Loc
@@ -32,7 +29,7 @@ omit [ValuativeRel E] [TopologicalSpace E] [IsNonarchimedeanLocalField E] in
 private theorem map_diag {F : Type} [Field F] (f : E →+* F) (u : Fin n → Eˣ) :
     Matrix.GeneralLinearGroup.map f (diagT E (Fin n) u) = diagT F (Fin n) fun i => Units.map (f : E →* F) (u i) := by
   ext i j
-  simp only [Matrix.GeneralLinearGroup.map_apply, val_diagT, RingHom.mapMatrix_apply, Matrix.map_apply,
+  simp only [Matrix.GeneralLinearGroup.map_apply, val_diagT,
     Matrix.diagonal_apply]
   split_ifs <;> simp
 
@@ -60,7 +57,7 @@ private theorem cent_diag {σ : E ≃+* E} {q : ℕ} (hσ : Cyc σ q) {d : Fin n
       _ = c * δ := by rw [hc]
   have key : (y⁻¹ * c * y)⁻¹ * diagT E (Fin n) d * sg σ (y⁻¹ * c * y) = diagT E (Fin n) d := by
     rw [← hy]
-    simp only [map_mul, map_inv, _root_.mul_inv_rev, inv_inv, mul_assoc, mul_inv_cancel_left, inv_mul_cancel_left]
+    simp only [map_mul, map_inv, _root_.mul_inv_rev, inv_inv, mul_assoc, mul_inv_cancel_left]
     rw [← mul_assoc δ, hc2]
     simp only [mul_assoc, inv_mul_cancel_left]
   exact strictNormal E n σ q hσ d d hd hd _ key

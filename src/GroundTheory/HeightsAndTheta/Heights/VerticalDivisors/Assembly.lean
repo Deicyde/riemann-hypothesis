@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.VerticalDivisors.AssemblyPartial
 import GroundTheory.HeightsAndTheta.Heights.VerticalDivisors.PSecAlgFinite
 import GroundTheory.HeightsAndTheta.Heights.VerticalDivisors.PChartDomain
@@ -32,16 +32,9 @@ import GroundTheory.HeightsAndTheta.Heights.VerticalDivisors.PNormIdentity
 import GroundTheory.HeightsAndTheta.Heights.VerticalDivisors.POrdEq
 import GroundTheory.HeightsAndTheta.Heights.VerticalDivisors.PGaussEq
 import GroundTheory.HeightsAndTheta.Heights.VerticalDivisors.IsChowFormCMul
-import GroundTheory.HeightsAndTheta.Heights.VerticalDivisors.StatementsGenSecKer
-import GroundTheory.HeightsAndTheta.Heights.VerticalDivisors.StatementsChart
-import GroundTheory.HeightsAndTheta.Heights.VerticalDivisors.StatementsOrd
-import GroundTheory.HeightsAndTheta.Heights.VerticalDivisors.StatementsFibreCut
 import GroundTheory.HeightsAndTheta.Heights.ChowForms.Assembly
 import GroundTheory.HeightsAndTheta.Heights.ChowForms.PIncIdealBelow
 import GroundTheory.HeightsAndTheta.Heights.ChowForms.PAffineChartTrdeg
-import GroundTheory.HeightsAndTheta.Heights.ChowForms.PIncIdealDim
-import GroundTheory.HeightsAndTheta.Heights.ChowForms.PConeDimOfChowForm
-import GroundTheory.HeightsAndTheta.Heights.ChowForms.PChowFormExists
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.PIncidenceZeroLocus
 set_option maxSynthPendingDepth 1
 

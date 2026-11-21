@@ -1,11 +1,8 @@
-import Mathlib
-import GroundTheory.GlobalFields.SemilocalAlgebras.Galois
-import GroundTheory.GlobalFields.CompletionAtPlace.Inertia
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.Artin.MemInvariantsCompSubtypeIff
 import GroundTheory.GlobalFields.TateThesis.ChebotarevAbelian
-import GroundTheory.GlobalFields.TateThesis.ConductorIdeal
 import GroundTheory.LocalFields.ArtinConductorBrauer
-import GroundTheory.LocalFields.ConductorTransport
 
 noncomputable section
 

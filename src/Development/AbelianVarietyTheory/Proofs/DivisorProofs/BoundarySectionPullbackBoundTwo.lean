@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AnalyticLogResolution
-import ReciprocityTheory.AnalyticForms.PotentialTheory.ContDiffAtOfIsPotential
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSNCAtlasOfIsEmpty
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SncComponentHolomorphicAtlasStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SncAtlasRankDropPotentialStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BoundaryPotentialSectionAtlasStatement

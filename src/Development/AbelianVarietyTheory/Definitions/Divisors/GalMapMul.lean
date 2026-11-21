@@ -1,5 +1,14 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.IsStrictlySemistableAlt
+import Mathlib.Algebra.Homology.HomotopyCategory.HomComplexCohomology
+import Mathlib.AlgebraicTopology.AlternatingFaceMapComplex
+import Mathlib.AlgebraicTopology.CechNerve
+import Mathlib.AlgebraicTopology.SimplicialSet.Nerve
+import Mathlib.CategoryTheory.Abelian.Injective.Extend
+import Mathlib.CategoryTheory.Abelian.Injective.Resolution
+import Mathlib.CategoryTheory.SingleObj
+import Mathlib.RingTheory.Henselian
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry Opposite CochainComplex CochainComplex.HomComplex
@@ -154,7 +163,7 @@ theorem _root_.GlobalTheory.EtC.pull_id (E : _root_.GlobalTheory.EtC.Spc)
   obtain ⟨x, rfl⟩ := x.mk_surjective
   simp only [_root_.GlobalTheory.EtC.pull, _root_.GlobalTheory.EtC.HK.pull,
     _root_.GlobalTheory.EtC.HK.pre,
-    _root_.GlobalTheory.EtC.cpre_mk, Functor.map_id]
+    _root_.GlobalTheory.EtC.cpre_mk]
   congr 1
   ext : 1
   simp [_root_.GlobalTheory.EtC.zcomp]

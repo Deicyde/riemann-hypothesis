@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.RealDescent.RealLeviDescent.InjectiveDecompositionAction
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.InjectiveWedgeHighestCoefficient
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PairMultiplicityGenericUnitaryStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PairMultiplicityTopCycleStatement
 

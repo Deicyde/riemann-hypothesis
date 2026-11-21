@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.TateThesis.PrimeSumBounded
-import GroundTheory.GlobalFields.TateThesis.HeckeCharRayClass
 import GroundTheory.GlobalFields.TateThesis.DegreeOneDensity
+import Mathlib.Analysis.Fourier.FiniteAbelian.PontryaginDuality
 
 open NumberField IsDedekindDomain Topology Filter Set
 

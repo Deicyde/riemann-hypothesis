@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HolomorphicConnectionAddSection
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlatFormSmoothOnCover
 
 open Matrix Set Filter Topology GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe GlobalTheory.TorsionForm
 open scoped Real ContDiff

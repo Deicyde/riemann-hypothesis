@@ -1,7 +1,9 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.CuspidalExponentialDecay
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.WeightFunctionOnFrames
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.ExistsIntMulIntegral
+import Mathlib.Tactic.ENatToNat
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.FundamentalDomainPointBound
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open NumberField ReciprocityTheory.ChartRestriction.G.FD ReciprocityTheory.ChartRestriction.G.AR.Inst ReciprocityTheory.ChartRestriction.G.AR.Up MeasureTheory Topology
 open scoped ComplexOrder ENNReal Matrix
@@ -36,7 +38,7 @@ theorem gamDisc : (∀ (r : ℕ) (X : Data E r) (H : Subgroup (X.Ψ → GL (Fin 
       ((Units.continuous_val.comp
         ((continuous_apply τ).comp continuous_subtype_val)).matrix_elem a b).norm
     refine hc.continuousAt.eventually_lt continuousAt_const ?_
-    by_cases h : a = b <;> simp [Matrix.one_apply, h]
+    by_cases h : a = b <;> simp [h]
   refine ⟨_, Filter.inter_mem hC hV, ?_⟩
   rintro g ⟨γ, hγ, hg⟩ ⟨h1, h2⟩
   by_contra hne

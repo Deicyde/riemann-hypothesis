@@ -1,5 +1,4 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.UnipotentIdempotents.TCont
-import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.UnipotentIdempotents.PlusEq
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.UnipotentIdempotents.PlacesEq
 import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.UnipotentIdempotents.GExRtZero
 import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.UnipotentIdempotents.RangeOpen
@@ -99,7 +98,7 @@ theorem UpperTheory.V.Ws.Lk.setEx :
     change ((bu T.L (D.ps (lab T.pr i)) g : ResidueField c.O)) = (bu T.L (D.ps (lab T.pr j)) g : ResidueField c.O)
     rw [key, key]
     congr 1
-    simp only [map_pow, map_zpow]
+    simp only [map_zpow]
     exact congrArg (· ^ n) hg0'
   · obtain ⟨d, hd, hdU⟩ := hBone
     refine ⟨d, by rw [hs0]; exact hd, ?_⟩

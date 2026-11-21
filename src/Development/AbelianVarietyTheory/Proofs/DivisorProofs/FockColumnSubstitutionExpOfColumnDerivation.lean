@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ColDerApply
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsDensityOfImmersion
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IntegralDetCharacterFockColumnSubstitutionEqZero
+import Mathlib.Algebra.Module.StablyFree.Basic
 
 noncomputable section
 

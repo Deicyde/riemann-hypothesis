@@ -1,4 +1,8 @@
-import Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.LocalWeilOperators.OppositeUnipotentWeylConj
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.WittVector.IsPoly
 
 noncomputable section
 
@@ -20,7 +24,7 @@ theorem gram_loc {m n : ℕ} (fr : Matrix (Fin m) (Fin m) ℂ) (J : Matrix (Fin 
     rw [mul_smul, ← hfr, smul_smul, inv_mul_cancel₀ hζ, one_smul]
   have hmap : (fr * u.map star).map star = fr.map star * u := by
     ext i j
-    simp [Matrix.mul_apply, star_sum]
+    simp [Matrix.mul_apply]
   rw [hmap, Matrix.transpose_mul]
   calc (u.map star)ᵀ * frᵀ * J * (fr.map star * u)
         = (u.map star)ᵀ * (frᵀ * J * fr.map star) * u := by simp only [Matrix.mul_assoc]

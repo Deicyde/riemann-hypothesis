@@ -1,4 +1,38 @@
-import Mathlib
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
 open scoped NNReal ENNReal
 open MeasureTheory
 open scoped Pointwise
@@ -181,7 +215,7 @@ theorem foldBound_le : ∀ {G G₁ L Kt : Type} [Group G] [MeasurableSpace G] [G
         exfalso
         exact hy (Set.mem_iUnion.2 ⟨q, Set.mem_iUnion.2 ⟨q₀, Set.mem_iUnion.2 ⟨hq, hqD, hq₀⟩⟩⟩)
     · push_neg at h
-      simp [Set.indicator_apply, h]
+      simp [h]
   have hpull : ∀ Z : Set G, MeasurableSet Z → μG Z = 0 →
       ∀ᵐ k ∂μK, ∀ᵐ l ∂μL, ∀ᵐ g₀ ∂ν, ∀ᵐ n ∂μN, n.1 * m l g₀ * kk k ∉ Z := by
     intro Z hZ hZ0
@@ -227,7 +261,7 @@ theorem foldBound_le : ∀ {G G₁ L Kt : Type} [Group G] [MeasurableSpace G] [G
           rw [mul_assoc]; exact hfN _ n.2 _
         by_cases hD : n.1 * m l g₀ * kk k ∈ D₀
         · simp [Set.indicator_of_mem hD, h1, h2]
-        · simp [Set.indicator_apply, hD]
+        · simp [hD]
     _ ≤ c * ∫⁻ k, ∫⁻ l, μN 𝓕 * ∫⁻ g₀ in dom, f (m l g₀ * kk k) * w l ∂ν ∂μL ∂μK := by
         gcongr c * ?_
         refine lintegral_mono_ae (hgood.mono fun k hk => ?_)

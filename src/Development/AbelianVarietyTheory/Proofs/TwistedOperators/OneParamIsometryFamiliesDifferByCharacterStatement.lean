@@ -1,8 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.OneParamIsometryFamiliesDifferByCharacter
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.RealMetaplecticRepresentation
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsScalarOfCommuteSchrodingerOperatorsStatement
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MultiplicativeHasDerivAtZeroStatement
 open GlobalTheory.RealWeil MeasureTheory
 open scoped SchwartzMap Matrix
 set_option maxHeartbeats 1000000 in

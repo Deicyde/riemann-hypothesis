@@ -1,14 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.TrueColumnTupleTrivialEqOne
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.StdLvPr
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PsiGTrue
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FinAfMemIntUIff
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsIntegralHalf
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsCharOfTrace
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.BaseFieldsPrimesOk
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsBaseChangeFiniteAdeleRingEquiv
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.InertAtLeCongN
-import Formalism.LocalToGlobal.JointCharacters.LocEMulLocE
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.LatAtLattice
 
 noncomputable section
 

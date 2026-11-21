@@ -1,7 +1,6 @@
-import Mathlib
-import Formalism.GaussJetBounds.StatementP
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.IsLawOfLog
-import Formalism.FormalGroupWitt.ShiftSOneLetter
 
 noncomputable section
 open scoped BigOperators

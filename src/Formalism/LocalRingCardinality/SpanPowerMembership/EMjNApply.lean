@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.SpanPowerMembership.EmbeddingBaseFieldCondition
+import Formalism.LocalRingCardinality.DataIdx
+import Formalism.SharpRestriction.InertJacobiLevels.ExtraVal
 
 noncomputable section
 

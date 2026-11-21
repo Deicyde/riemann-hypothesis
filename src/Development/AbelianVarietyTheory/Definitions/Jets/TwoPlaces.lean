@@ -1,7 +1,9 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.DepRun
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PlaceDivisors.StChartF
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion
+import Formalism.LocalToGlobal.ProjectiveLattices.ChartDirectionsIntegral
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 set_option autoImplicit false
 

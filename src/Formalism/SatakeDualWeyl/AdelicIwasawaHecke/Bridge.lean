@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.StatementB
 
 noncomputable section
@@ -41,7 +42,7 @@ theorem hform_single {A : Type} [CommRing A] {n : Type} [Fintype n] [DecidableEq
     by_cases hk : k = i
     · subst hk
       simp
-    · simp [Pi.single_apply, hk]
+    · simp [hk]
   rw [hs]
   simp [mulVec_single]
 
@@ -53,7 +54,7 @@ theorem hform_gram {K : Type} [Field K] [StarRing K] {n : Type} [Fintype n] [Dec
     funext k
     simp [Finset.sum_apply, Pi.single_apply]
   conv_lhs => rw [hx x, hx y]
-  simp only [map_sum, map_smulₛₗ, LinearMap.sum_apply, LinearMap.smul_apply, map_smul, smul_eq_mul,
+  simp only [map_sum, map_smulₛₗ, LinearMap.sum_apply, LinearMap.smul_apply, smul_eq_mul,
     Finset.mul_sum]
   unfold Formalism.UG.hform Formalism.UG.gram
   conv_lhs => rw [Finset.sum_comm]

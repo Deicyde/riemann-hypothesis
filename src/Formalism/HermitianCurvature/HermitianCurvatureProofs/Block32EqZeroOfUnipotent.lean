@@ -1,5 +1,9 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.MemParahoricTimesPrincipalCongruenceIff
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.Minors
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
 
 namespace Formalism.FourierDecayAlt.P.S3x9
 

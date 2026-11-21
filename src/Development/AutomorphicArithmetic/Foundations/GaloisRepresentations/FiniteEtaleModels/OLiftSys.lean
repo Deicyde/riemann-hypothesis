@@ -1,5 +1,5 @@
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.FiniteEtaleModels.LiftUnit
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.FiniteEtaleModels.Bezout
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.FiniteEtaleModels.LiftOfEq
 
 set_option autoImplicit false
@@ -90,7 +90,7 @@ private theorem cg_bil {n : ℕ} (B : LinearMap.BilinForm ℤ M) {x x' y y' : M}
   obtain ⟨u, rfl⟩ := hx
   obtain ⟨v, rfl⟩ := hy
   refine ⟨B x' v + B u y' + n * B u v, ?_⟩
-  simp [nsmul_eq_mul]
+  simp
   ring
 
 end Congruences

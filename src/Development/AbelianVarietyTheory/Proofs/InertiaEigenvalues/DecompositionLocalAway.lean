@@ -1,15 +1,12 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.EmbeddingTypes
-import Formalism.SharpRestriction.LevelLetterCocycles.SumRepresentations
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.JointConditionsZpowers.CoefficientCompatibilityOf
-import Formalism.SharpRestriction.LevelLetterCocycles.JointConditionsZpowers.BaseFont
-import Formalism.SharpRestriction.LevelLetterCocycles.JointConditionsZpowers.LiftingConditionOfWindows
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.TateDualMatrixRepContinuousCrystalline
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.UnitSumTensorDualOfWachMonoidal
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.BlockCharactersCrystallineOfRules
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsCrysInclusion
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LocChiEpsUEqCycLL
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CrystallineTwistCrystallineCharacterJumpsShift
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ContinuousTwistedDualRhoO
+import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LocChiEpsU
 open NumberField IsDedekindDomain Formalism Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.MainNotions Formalism.MainNotions.N Formalism.WeaklyAdmissibleFiltrations Module
 
 noncomputable section
@@ -139,7 +136,7 @@ theorem decomp_chi (r : D.nd.X i → (GE D.nd →* GL (Fin D.R.nV) (D.nd.O i)))
       by_cases hc : c = c0
       · subst hc
         simp [chiM, twistM, mapM, Matrix.mulVec, dotProduct, c0]
-      · simp [Pi.single_apply, hc]
+      · simp [hc]
 
 theorem chiM_cont (c : ℕ) : Continuous fun g => chiM (D := D) (i := i) c g := by
   have : (fun g => chiM (D := D) (i := i) c g) = fun g => ((D.nd.chi i c g : (D.nd.O i)ˣ) : D.nd.O i) • (1 : Matrix (Fin 1) (Fin 1) (D.nd.O i)) := by
@@ -231,7 +228,7 @@ theorem locC_rDuO (C : TruncatedSeriesCountingIdentities.CoefExt D i w hw) (r : 
       C.inc ((D.nbr i w hw).toLL (rTwO D.nd i r x (decS D.nd w (Br.iota D.nbr i w hw g⁻¹)) b a))
   rw [← map_mul, ← map_mul, map_inv, map_inv]
   congr 2
-  all_goals (simp [rDuO, rTwO, T2O, WpO, twistM, dualM] <;> ring)
+  all_goals (simp [rDuO, rTwO, twistM, dualM] <;> ring)
 
 theorem locC_T2O (C : TruncatedSeriesCountingIdentities.CoefExt D i w hw) (ρ : D.nd.X i → (GE D.nd →* GL (Fin D.R.r) (D.nd.O i)))
     (π : D.nd.X i) :

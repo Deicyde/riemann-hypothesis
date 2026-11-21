@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.GoodIdempotentFixesOfOnlySeriesOfLabelActs
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.TPeriodInt
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.JointCondOfDefinite

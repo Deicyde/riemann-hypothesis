@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SpecialFibreUnits
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsEqnIffGeneratesAtInv
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ValuationConstantOfPowerEqStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsRatSecUnitGenericFibreStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlatSchemeSpecialFibreNonemptyStatement

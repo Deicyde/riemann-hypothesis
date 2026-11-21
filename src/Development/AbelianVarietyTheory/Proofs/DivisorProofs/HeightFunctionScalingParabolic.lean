@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.LocallyCompactSpaceAxis
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.EisensteinResidueLine
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeightFunctionCompactLevelContinuousStatement
 
 open scoped TensorProduct NNReal ENNReal Matrix

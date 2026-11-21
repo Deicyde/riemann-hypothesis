@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsOrbitProd
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsLevelProjLevelProj
 

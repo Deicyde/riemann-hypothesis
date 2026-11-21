@@ -1,14 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.UsedLocalConclusion
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.NotFullBot
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsWeakTopologyWittTiltTensor
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ZlTowerGen
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.EtaleComparisonPiWachLatticeClosedWeak
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.JDANEqRange
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ContinuousGaloisOrbitWittTensorLatticeWeakTopoloStatement
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ContinuousOneTmulStatement
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CompactSpaceATopStatement
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ContinuousWittCbInclusionSmulWeakTopologyStatement
 
 noncomputable section
 
@@ -41,7 +32,7 @@ theorem jD_aN_eq_range_gen {l : ℕ} [Fact l.Prime] {P : LocPrime l} {AI : LocAi
     rw [hspan] at hm
     obtain ⟨c, rfl⟩ := (Submodule.mem_span_range_iff_exists_fun (AA K LL)).1 hm
     refine ⟨c, ?_⟩
-    simp only [smulA, LinearMap.smul_apply, LinearMap.id_apply, Finset.smul_sum, map_sum]
+    simp only [smulA, LinearMap.smul_apply, LinearMap.id_apply, map_sum]
     refine Finset.sum_congr rfl fun i _ => ?_
     simp only [GlobalTheory.NL.WkRange.jD_smul_letter]
     exact smul_comm _ _ _

@@ -1,10 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocUnifSum
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RatStab
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RatFixLeRatStab
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawEvaluationHaarNormalizedStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawEvaluationHaarGlobalFactor
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawEvaluationHaarVolume

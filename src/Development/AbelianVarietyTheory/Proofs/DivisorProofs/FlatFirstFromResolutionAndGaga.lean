@@ -1,15 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsGPull
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsMoritaLatticeQuotientTorsion
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlatLocalResidueTensorInjective
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CardTorsionBySetPowOfDivisibleNumberField
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsionBySetPowFreeOfCardPowNumberField
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPowEqOfIsAlgClosed
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PowerSumsVanishAtPlaces
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AbelianVarietyEndCharpolySpec
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsogenyDegreeEqCardKernelOfKilledByInvertible
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsRelativeDimensionAbelianVarietyField
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.SabPull
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.UPel.HT GlobalTheory.UPel.HT.Gen
 
@@ -65,7 +60,7 @@ theorem HasLev.mul {I J : Ideal A} (hIJ : I ⊔ J = ⊤) (hI : HasLev O L M I) (
     obtain ⟨y₂, hy₂⟩ := s₂ (a • g) fun c hc => by
       rw [smul_smul, mul_comm]; exact hg _ (Ideal.mul_mem_mul ha hc)
     refine ⟨b • y₁ + a • y₂, ?_⟩
-    simp only [LinearMap.add_apply, map_add, LinearMap.map_smul_of_tower, smul_add]
+    simp only [LinearMap.add_apply, map_add, LinearMap.map_smul_of_tower]
     rw [u₁, u₂, t₁ a ha, t₂ b hb, hy₁, hy₂, add_zero, zero_add, ← add_smul, add_comm, hab, one_smul]
 
 theorem hasLev_of_prime_pow [IsDedekindDomain A] (q : A) (hq : q ≠ 0) (e : ℕ)

@@ -1,9 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsSummandTw
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.PotentiallyCrystallineModuleEqCrystallineRestric
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.TwistedDualFamiliesContinuous
 import Formalism.SharpRestriction.LevelLetterCocycles.JointConditionsZpowers.BaseFont
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FinrankEqOfNondegenerate
+import Formalism.SharpRestriction.LevelLetterCocycles.PairedCharacterCondition
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.RingTheory.Etale.Weakly
 open Formalism Formalism.MainNotions Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.MainNotions.N Formalism.WeaklyAdmissibleFiltrations NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Module GlobalTheory.Pass Formalism.MainNotions.PairedCharacterCondition GlobalTheory.Pass.LocDual
 
 noncomputable section
@@ -75,7 +77,7 @@ theorem exists_rep (φ : (Fin a → Fin n → LL) →ₗ[LL] LL) :
   refine ⟨fun b k => φ (Pi.single b (Pi.single k 1)), fun u => ?_⟩
   have hu : u = ∑ b, ∑ k, u b k • (Pi.single b (Pi.single k 1) : Fin a → Fin n → LL) := by
     funext b' k'
-    simp [Finset.sum_apply, Pi.single_apply, ite_apply, Finset.sum_ite_eq, Finset.sum_ite_eq']
+    simp [Finset.sum_apply, Pi.single_apply, ite_apply, Finset.sum_ite_eq]
   conv_lhs => rw [hu]
   rw [pr_apply]
   simp [map_sum, dotProduct]

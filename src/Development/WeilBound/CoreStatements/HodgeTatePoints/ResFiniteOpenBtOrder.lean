@@ -1,11 +1,6 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SemiabelianSchemes.AbelianSchemeQuotients.IsAbelianScheme
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.TranslateMemIndOrder
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ExistsUnitFormLocalizationEtaleNbhd
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.DualOrder
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.BtOrderComapHomStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.BaseChangePointsCompatStatement
-import Development.WeilBound.CoreStatements.HodgeTatePoints.TwhopfInd
 import Development.WeilBound.CoreStatements.HodgeTatePoints.HtatHopf
 import Development.WeilBound.CoreStatements.HodgeTatePoints.HtatHens
 import Development.WeilBound.CoreStatements.HodgeTatePoints.HtatBcPull

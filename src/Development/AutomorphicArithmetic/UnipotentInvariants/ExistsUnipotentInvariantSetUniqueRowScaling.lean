@@ -1,10 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.SplitEigenfunctions.ThetaLiftEqAnisotropicPart
-import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.GaussianProducts.ExistsRowSec
 import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.ReductionDomains.ContinuousEntry
-import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.ReductionDomains.RowCosets
-import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.UnitaryActions.ContinuousQuaternaryQuadraticForm
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.ExistsIsFundamentalDomainAndQuotMeasureEq
-import GroundTheory.GlobalFields.TateThesis.IdeleMeasure
 open NumberField IsDedekindDomain MeasureTheory Matrix Topology Filter
 open Neutral.B1 Formalism.L2.Host Formalism.ConjugateSelfDual GlobalTheory.CuspRep GlobalTheory.GalOfCusp UpperTheory.V UpperTheory.V.Af UpperTheory.V.Published GroundTheory.Global GroundTheory.Automorphic.GJMatrix
 open UpperTheory.ConvolutionTheory.R2 UpperTheory.ConvolutionTheory.R2.Ff UpperTheory.ConvolutionTheory.RankTwoDescent
@@ -52,7 +49,7 @@ private theorem tri {E : Type} [Field E] [NumberField E] (g h : Matrix.SpecialLi
     · simp only [nU, mD, Matrix.mul_apply, Fin.sum_univ_two, d2]
       simp [← map_mul]
     · simp [nU, mD, Matrix.mul_apply, Fin.sum_univ_two, e0]
-    · simp [nU, mD, Matrix.mul_apply, Fin.sum_univ_two, d2, e1]
+    · simp [nU, mD, Matrix.mul_apply, Fin.sum_univ_two, e1]
   have hgk : g = k * h := by rw [hk, inv_mul_cancel_right]
   calc ratS E g = ratS E (k * h) := by rw [← hgk]
     _ = _ := by rw [map_mul, hkm]

@@ -1,4 +1,40 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.Matrix.ColumnRowPartitioned
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
 
 set_option linter.unusedSectionVars false
 
@@ -185,7 +221,7 @@ theorem IsFr.stab (h : IsFr c ε J J₁ ι x y A') {t t' : R} (ht : t * t' = 1) 
   rw [Matrix.fromBlocks_transpose, Matrix.fromBlocks_multiply, Matrix.fromBlocks_map,
     Matrix.fromBlocks_multiply, Matrix.fromBlocks_inj] at hQ'
   obtain ⟨e11, e12, -, -⟩ := hQ'
-  simp only [Matrix.mul_zero, Matrix.zero_mul, add_zero, zero_add] at e11 e12
+  simp only [Matrix.mul_zero, add_zero, zero_add] at e11 e12
   have ha1 : ∀ i, a0 1 i = 0 := by
     intro i
     have h12 := congrFun (congrFun e12 i) 0
@@ -257,7 +293,7 @@ theorem IsFr.fix_y (h : IsFr c ε J J₁ ι x y A') (hcc : ∀ a, c (c a) = a) {
   rw [Matrix.fromBlocks_transpose, Matrix.fromBlocks_multiply, Matrix.fromBlocks_map,
     Matrix.fromBlocks_multiply, Matrix.fromBlocks_inj] at hQ'
   obtain ⟨-, -, -, e22⟩ := hQ'
-  simp only [Matrix.mul_zero, Matrix.zero_mul, add_zero, zero_add] at e22
+  simp only [Matrix.mul_zero, add_zero, zero_add] at e22
   have h22 := congrFun (congrFun e22 0) 1
   simp [Matrix.mul_apply, Fin.sum_univ_two, hb0', ← hs00, ← hs10] at h22
   have hs11 : s0 1 1 = 1 := by rw [← hcc (s0 1 1), h22, map_one]

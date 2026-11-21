@@ -1,4 +1,5 @@
-import Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.LatticeMapsOfFunctorComparison
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.RhoLowerBoundLargeConductor
 
 noncomputable section
 

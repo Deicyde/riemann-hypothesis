@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.IdeleGenerators.ConstSmall
+import Mathlib.NumberTheory.ModularForms.EisensteinSeries.QExpansion
 
 open UpperHalfPlane CongruenceSubgroup UpperTheory.V.Af
 open scoped MatrixGroups ModularForm

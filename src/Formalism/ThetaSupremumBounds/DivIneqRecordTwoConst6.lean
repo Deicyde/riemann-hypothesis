@@ -1,5 +1,4 @@
-import Formalism.ThetaSupremumBounds.LiftOperatorBoundOfFockJet
-import Formalism.ThetaSupremumBounds.FinalJ
+import BuildAid.Leniency.Open
 import Formalism.ThetaSupremumBounds.GaussianShiftBounds.GlobalBoundRefinements
 
 open Finset

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.LocModelKS
 
 noncomputable section
@@ -49,7 +50,7 @@ theorem modK_twist {δ : ∀ p : PlF D, (D.s.atP p).Fp} {M : ∀ p : PlF D, Loc.
     · simp only [twist, hsp]
       apply sg.e.injective
       rw [map_mul, map_one]
-      simp only [map_one, RingEquiv.apply_symm_apply, AlgEquiv.apply_symm_apply]
+      simp only [AlgEquiv.apply_symm_apply]
       refine Prod.ext ?_ ?_ <;> first | (simp; done) | (simp [← mul_pow]; done) | (simp; rw [← mul_pow]; norm_num)
   have hu : IsUnit (twist p s 1) := ⟨⟨twist p s 1, twist p s 1, htw1, htw1⟩, rfl⟩
   have hsq : A5.modK (M p).R (twist p s 1) * A5.modK (M p).R (twist p s 1) = 1 := by
@@ -201,7 +202,7 @@ theorem modK_tMod {δ : ∀ p : PlF D, (D.s.atP p).Fp} {M : ∀ p : PlF D, Loc.M
     · simp only [twist, hsp]
       apply sg.e.injective
       rw [map_mul]
-      simp only [map_one, RingEquiv.apply_symm_apply, AlgEquiv.apply_symm_apply]
+      simp only [map_one, AlgEquiv.apply_symm_apply]
       refine Prod.ext ?_ ?_ <;> first | (simp; done) | (simp; ring) | ring
   have htw1 : twist p s 1 * twist p s 1 = 1 := by
     rcases hsp : (D.s.atP p).split with _ | sg
@@ -209,7 +210,7 @@ theorem modK_tMod {δ : ∀ p : PlF D, (D.s.atP p).Fp} {M : ∀ p : PlF D, Loc.M
     · simp only [twist, hsp]
       apply sg.e.injective
       rw [map_mul, map_one]
-      simp only [map_one, RingEquiv.apply_symm_apply, AlgEquiv.apply_symm_apply]
+      simp only [AlgEquiv.apply_symm_apply]
       refine Prod.ext ?_ ?_ <;> first | (simp; done) | (simp [← mul_pow]; done) | (simp; rw [← mul_pow]; norm_num)
   have htw1u : IsUnit (twist p s 1) := ⟨⟨twist p s 1, twist p s 1, htw1, htw1⟩, rfl⟩
   have hδu : IsUnit (algebraMap (D.s.atP p).Fp (D.s.atP p).Ep (δ p)) :=

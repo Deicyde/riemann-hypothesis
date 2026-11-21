@@ -1,5 +1,9 @@
-import Mathlib
-import ReciprocityTheory.DualLattices.CharTableIsUnit
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
+import ReciprocityTheory.DualLattices.TensorSpan
 
 noncomputable section
 
@@ -19,7 +23,7 @@ theorem vdet_le_of_span_le (v : Valuation C NNReal) (hv : ∀ r : R, v (algebraM
   have hB : B = B' * (Matrix.of fun i j => c j i).map (algebraMap R C) := by
     ext x j
     have := congrFun (hc j) x
-    simp only [Finset.sum_apply, Pi.smul_apply, Algebra.smul_def] at this
+    simp only [Finset.sum_apply, Algebra.smul_def] at this
     rw [← this, Matrix.mul_apply]
     exact Finset.sum_congr rfl fun i _ => by simp [mul_comm]
   have hd : ((Matrix.of fun i j => c j i).map (algebraMap R C)).det
@@ -47,7 +51,7 @@ theorem intFun_eq_span {X : Type} [Fintype X] [DecidableEq X] :
     rintro f ⟨j, rfl⟩ x
     by_cases h : x = j
     · exact ⟨1, by simp [Matrix.one_apply, h]⟩
-    · exact ⟨0, by simp [Matrix.one_apply, h]⟩
+    · exact ⟨0, by simp [h]⟩
 
 theorem hasColen_intFun (v : Valuation C NNReal) {X : Type} [Fintype X] [DecidableEq X] :
     HasColen R v (intFun (C := C) R X) 1 := ⟨1, intFun_eq_span, by simp⟩

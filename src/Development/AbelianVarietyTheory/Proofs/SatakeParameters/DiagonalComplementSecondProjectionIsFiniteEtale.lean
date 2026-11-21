@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.FibrePointsLEId
+import Mathlib.AlgebraicGeometry.Morphisms.Etale
 open CategoryTheory Limits AlgebraicGeometry
 
 namespace GlobalTheory.EtC.Tr

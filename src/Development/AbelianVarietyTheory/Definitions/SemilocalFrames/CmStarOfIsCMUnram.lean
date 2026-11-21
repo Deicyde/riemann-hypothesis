@@ -1,5 +1,6 @@
-import Mathlib
-import Formalism.LocalRingCardinality.DataSpaces
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.SpanPowerMembership.Spaces
 
 noncomputable section

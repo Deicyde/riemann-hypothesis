@@ -1,4 +1,6 @@
-import ReciprocityTheory.L2DbarEstimates.LeviForms.BergmanExistsStatement
+import BuildAid.Leniency.Open
+import ReciprocityTheory.L2DbarEstimates.IsLocalHomeomorph
+import ReciprocityTheory.L2DbarEstimates.MinimalSolutions.MinimalSolutionStatement
 
 namespace ReciprocityTheory.L2DbarEstimates.I
 

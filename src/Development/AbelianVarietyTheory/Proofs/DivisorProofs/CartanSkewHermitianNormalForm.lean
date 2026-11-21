@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CombineApply
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK
 open scoped Matrix TensorProduct
 
@@ -59,7 +59,7 @@ theorem frame (n : ℕ) (M θ : Matrix (Fin n) (Fin n) ℂ) (z : ℂ) (hz : star
   have hNs : N.map star = Nᵀ := by
     ext i j
     rw [map_apply, transpose_apply, hNe, hNe, star_mul', hM j i]
-    simp [Complex.star_def, Complex.conj_I]
+    simp [Complex.conj_I]
   have hT : (Nᵀ)ᴴ = Nᵀ := by
     rw [conjTranspose, transpose_transpose, hNs]
   have hθc : θᴴ = (θ.map star)ᵀ := by ext i j; rfl
@@ -158,7 +158,7 @@ theorem frame (n : ℕ) (M θ : Matrix (Fin n) (Fin n) ℂ) (z : ℂ) (hz : star
     simp only [Matrix.smul_mul, Matrix.mul_smul, smul_smul]
     rw [hQ]
     congr 1
-    rw [← hrr]; simp [Complex.star_def]; ring
+    rw [← hrr]; simp; ring
   · rw [hJ]
     simp only [Matrix.smul_mul, Matrix.mul_smul, smul_smul, hθQ]
 

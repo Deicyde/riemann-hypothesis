@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.LeafCompPf
 import Development.EtaleCohomology.EtaleSheaves.LSchClsPfYon
 import Development.EtaleCohomology.WeilConjectures.GlueOfSig

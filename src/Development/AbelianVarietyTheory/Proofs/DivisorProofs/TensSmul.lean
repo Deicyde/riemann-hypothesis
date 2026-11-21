@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocFieldLP
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepRationalDarbouxFixesThetaDistributionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DarbouxSymplecticHermitianSkewStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AutomorphicIntegrableOnDomainStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzSpanLocalTensorsStatement
@@ -27,7 +25,7 @@ theorem conj_mem_SB {X : Type} [TopologicalSpace X] {Ψ : X → ℂ} (hΨ : Ψ �
   ⟨hΨ.1.comp _, hΨ.2.comp_left (map_zero _)⟩
 
 theorem norm_chrW (χ : Chr F E) {v : Pl F} (τ : E →ₐ[F] Fv F v) (x : (Fv F v)ˣ) : ‖((chrW χ τ x : ℂˣ) : ℂ)‖ = 1 := by
-  simp only [chrW, GlobalTheory.LFun.locChar, MonoidHom.comp_apply, Circle.toUnits_apply, Units.val_mk]
+  simp only [chrW, GlobalTheory.LFun.locChar, MonoidHom.comp_apply, Circle.toUnits_apply]
   first | exact Circle.norm_coe _ | simp
 
 theorem tens_add {R κ : Type} (ev : AF F → R) (φ₁ φ₂ : (κ → R) → ℂ) (r : (κ → AF F) → ℂ) :
@@ -99,7 +97,7 @@ theorem exists_pairing (hK : GlobalTheory.ThK.KP) (hcm : IsCMExt F E σ) (ψ : A
           fun h => rtr (L a) f h * (starRingEnd ℂ) (thetaSum F (om (g, h) Φ)) := funext fun h => by
         rw [omg, mul_inv_cancel_right]; rfl
       rwa [e] at h2
-    | zero => intro Φ _; simp [integrableOn_zero]
+    | zero => intro Φ _; simp
     | add u w _ _ hu hw =>
       intro Φ hΦ
       refine ((hu Φ hΦ).add (hw Φ hΦ)).congr (Eventually.of_forall fun h => ?_)

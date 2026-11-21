@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.DualWeylCoordinates.DualWeylProofs.MemSpanStandardIffProjZero
+import Formalism.ThetaLogCoordinates.DualWeylCoordinates.FiltrationTheoremOfClauses
 
 noncomputable section
 

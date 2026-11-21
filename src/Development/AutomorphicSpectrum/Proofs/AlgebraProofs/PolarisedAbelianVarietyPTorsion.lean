@@ -1,17 +1,8 @@
-import Mathlib
-import ReciprocityTheory.DualLattices.CotangentSurjective
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.IsTight
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.StepOrderRes
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.NonzeroLocus
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.IsFinFlatSub
-import Development.AutomorphicSpectrum.PublishedTheorems.Algebra₂.QuotientByFiniteFlatStatement
-import Development.AutomorphicSpectrum.PublishedTheorems.Algebra₂.ZarhinStatement
-import Development.AutomorphicSpectrum.Statements.AlgebraStatements.HodgeTateDatumStatement
-import Development.AutomorphicSpectrum.Statements.AlgebraStatements.OrdinaryCurveStatement
-import Development.AutomorphicSpectrum.Statements.AlgebraStatements.PolarisedFlagStatement
-import Development.AbelianVarietyTheory.Definitions.ShimuraVarieties.ExistsLiftAddOfIsReducedEq
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.ExistsGrpObjPolarised
 import GroundTheory.ArithmeticGeometry.AbelianVarieties.DivisionPoints
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ChartPullbacks.UniversalCharts.LePreimageOfNil
 open ReciprocityTheory.PGsh.L2 ReciprocityTheory.PGsh.Up GlobalTheory.CompanionTheory.Ar.GR
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi
@@ -336,7 +327,7 @@ private theorem coeff_prod_lt (S : Multiset C) (hS : ∀ r ∈ S, 1 < v r) :
     have hpos : 0 < v (h.coeff 0) := pos_iff_ne_zero.mpr h0
     have hc0 : (((r ::ₘ S).map fun r => X - Polynomial.C r).prod).coeff 0 = -r * h.coeff 0 := by
       rw [Multiset.map_cons, Multiset.prod_cons, ← hh, sub_mul]
-      simp [Polynomial.coeff_X_mul_zero]
+      simp
     have hcd : ∀ d, (((r ::ₘ S).map fun r => X - Polynomial.C r).prod).coeff (d + 1) =
         h.coeff d - r * h.coeff (d + 1) := by
       intro d

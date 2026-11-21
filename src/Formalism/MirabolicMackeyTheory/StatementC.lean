@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.MirabolicMackeyTheory.StatementT
 
 open Module NumberField IsDedekindDomain

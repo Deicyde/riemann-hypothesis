@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.IsLatFamilyCongr
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HodgeTateChartIntegralStatement
 import Development.WeilBound.CoreStatements.HodgeTatePoints.PointHTOfFargues
@@ -194,7 +195,7 @@ noncomputable def scalePt (P : HTPoint C O c κ N V Ω) (a : Oˣ) : HTPoint C O 
     adj := fun b x y => by simp [P.adj]
     lagr := fun x => by
       rw [P.lagr]
-      simp [ha] }
+      simp }
 
 end Scale
 

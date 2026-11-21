@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CombineApply
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchPartFinIncl
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsArchimedeanPairNegativeSymplecticPairing
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CmArchimedeanSplitBijectiveStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdeleArchimedeanInclusionContinuousStatement

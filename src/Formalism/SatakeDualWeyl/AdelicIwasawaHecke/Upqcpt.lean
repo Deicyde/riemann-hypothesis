@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.Statement
+import Mathlib.Algebra.Order.Star.Real
 
 noncomputable section
 
@@ -94,10 +98,10 @@ theorem Jpq_eq_diagonal (p q : ℕ) :
   unfold Formalism.UG.Jpq
   ext i j
   rcases i with i | i <;> rcases j with j | j
-  · by_cases h : i = j <;> simp [h, Matrix.one_apply, Matrix.diagonal_apply]
-  · simp [Matrix.diagonal_apply]
-  · simp [Matrix.diagonal_apply]
-  · by_cases h : i = j <;> simp [h, Matrix.one_apply, Matrix.diagonal_apply]
+  · by_cases h : i = j <;> simp [h]
+  · simp
+  · simp
+  · by_cases h : i = j <;> simp [h]
 
 theorem Jpq_mul_self (p q : ℕ) : Formalism.UG.Jpq p q * Formalism.UG.Jpq p q = 1 := by
   rw [Jpq_eq_diagonal, Matrix.diagonal_mul_diagonal, ← Matrix.diagonal_one]

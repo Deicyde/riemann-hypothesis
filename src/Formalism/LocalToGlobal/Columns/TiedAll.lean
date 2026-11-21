@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.TiedLv
 import Formalism.LocalToGlobal.Columns.TiedValAll
 import Formalism.LocalToGlobal.Columns.TiedBack

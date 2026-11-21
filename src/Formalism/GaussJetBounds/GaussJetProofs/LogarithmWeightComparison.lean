@@ -1,7 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.GaussJetBounds.GaussJetProofs.SubstitutionWeightBound
 import Formalism.FormalGroupWitt.FormalGroupWittProofs.SolveV
 import Formalism.FormalGroupWitt.FormalGroupWittProofs.EqSingleOfDegreeEqOne
 import Formalism.IncomingBounds.FlowDegreeBounds.PadicValFactorialRatioProd
+import Mathlib.Data.Int.Star
 
 noncomputable section
 open scoped BigOperators

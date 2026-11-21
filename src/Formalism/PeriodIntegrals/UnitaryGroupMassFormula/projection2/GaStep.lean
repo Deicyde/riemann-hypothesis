@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.projection2.MemFlagUnipotent
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.projection2.KappaZero
+import Mathlib.Tactic.Polynomial.Basic
 
 noncomputable section
 

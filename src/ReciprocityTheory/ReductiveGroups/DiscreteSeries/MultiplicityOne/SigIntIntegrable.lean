@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.HpkMulVecMulVec
 
 noncomputable section
@@ -63,7 +65,7 @@ theorem test_bound {φ : Mat k r → ℂ} (hφ : IsTestG φ) :
       rw [Set.indicator_of_mem hx', Pi.one_apply, mul_one]
       exact (hM x hx').trans (le_max_left _ _)
     · rw [hK0 x hx hxK]
-      simp [Set.indicator_apply, hxK]
+      simp [hxK]
 
 theorem int_ind (D : RealPlaceData k r Wp Wp) {K : Set (Mat k r)} (hK : IsCompact K) :
     Integrable (fun x : Mt k r => K.indicator (1 : Mat k r → ℝ) (Matrix.of x)) D.μG := by

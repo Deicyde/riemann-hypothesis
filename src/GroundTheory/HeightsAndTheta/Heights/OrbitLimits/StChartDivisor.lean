@@ -1,8 +1,7 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterSt
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StatementsCurrent
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StChartSection
-import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.LelongChartLimit
+import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StokesObjects
 set_option maxSynthPendingDepth 1
 
 noncomputable section

@@ -1,7 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.CBaseYPDef
-import Formalism.LocalToGlobal.ProjectiveLattices.AxHSupA
 import Formalism.LocalToGlobal.ProjectiveLattices.ReadProofs
 import Formalism.LocalToGlobal.ProjectiveLattices.AllTest
+import Formalism.LocalToGlobal.ProjectiveLattices.FrameCharts
 
 noncomputable section
 

@@ -1,5 +1,14 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.InvIdealIdxPi
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -12,7 +21,7 @@ theorem map_compLeft_pi {ι : Type} {G G' : Type*} [AddGroup G] [AddGroup G'] (�
     (AddSubgroup.pi Set.univ A).map (φ.compLeft ι) =
       AddSubgroup.pi Set.univ (fun i => (A i).map φ) := by
   ext y
-  simp only [AddSubgroup.mem_map, AddSubgroup.mem_pi, Set.mem_univ, true_implies, forall_const]
+  simp only [AddSubgroup.mem_map, AddSubgroup.mem_pi, Set.mem_univ, forall_const]
   constructor
   · rintro ⟨x, hx, rfl⟩ i
     exact ⟨x i, hx i, rfl⟩

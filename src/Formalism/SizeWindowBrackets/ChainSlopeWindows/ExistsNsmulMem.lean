@@ -1,10 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.SizeWindowBrackets.SlopesHypothesisFinitePlaces
-import Formalism.HarderNarasimhan.HarderNarasimhanProofs.DiscreteSpanOfLinIndep
-import Formalism.HarderNarasimhan.HarderNarasimhanProofs.SizeMu
 import Formalism.HarderNarasimhan.HarderNarasimhanProofs.HtGram
-import Formalism.HarderNarasimhan.HarderNarasimhanProofs.MuChar
 import Formalism.HarderNarasimhan.HarderNarasimhanProofs.DualPl
 import Formalism.SizeWindowBrackets.ChainSlopeWindows.WeightedMeanLemmaNeedsDegree
+import Mathlib.Algebra.Module.LocalizedModule.Exact
 
 open Module NumberField
 

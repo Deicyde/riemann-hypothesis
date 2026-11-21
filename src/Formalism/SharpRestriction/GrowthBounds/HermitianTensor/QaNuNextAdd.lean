@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.HermitianTensor.CoeffSumMonomialLinear
-import Formalism.GradedWeylDivisibility.FockSpaceTableaux.LSatLemmas
 
 noncomputable section
 

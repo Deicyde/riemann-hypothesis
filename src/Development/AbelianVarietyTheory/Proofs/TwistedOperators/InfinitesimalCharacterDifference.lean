@@ -1,9 +1,5 @@
-import Mathlib
-import Formalism.PeriodIntegrals.DSInfCharCap
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.PseudoCoefficientSeparation
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HarishChandraModulesOn
-import Formalism.RealPlaceAnalysis.StatementE
-import Formalism.RealPlaceAnalysis.StatementB
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HighestWeightFunctionalCharacterStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CapelliOfGelfandStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.GlRelationsOnKFiniteVectorsStatement
@@ -213,16 +209,16 @@ theorem infChar_sub_eq_of_line : GlobalTheory.Published.LanglandsClassification 
     rw [e, Matrix.mul_add, Matrix.add_mul, Matrix.mul_smul, Matrix.mul_smul, Matrix.smul_mul, Matrix.smul_mul]
   have hDp : P * Matrix.single p p 1 * P⁻¹ = (1 / 2 : ℂ) • H₀ + (-(Complex.I / 2)) • Tc := hdiag _ _ p fun i => by
     by_cases hi : i = p
-    · subst hi; simp [Pi.single_apply, hpq.symm]; ring_nf; rw [Complex.I_sq]; ring
+    · subst hi; simp [hpq.symm]; ring_nf; rw [Complex.I_sq]; ring
     · by_cases hi' : i = q
-      · subst hi'; simp [Pi.single_apply, hi]; ring_nf; rw [Complex.I_sq]; ring
-      · simp [Pi.single_apply, hi, hi']
+      · subst hi'; simp [hi]; ring_nf; rw [Complex.I_sq]; ring
+      · simp [hi, hi']
   have hDq : P * Matrix.single q q 1 * P⁻¹ = (-(1 / 2) : ℂ) • H₀ + (-(Complex.I / 2)) • Tc := hdiag _ _ q fun i => by
     by_cases hi : i = p
-    · subst hi; simp [Pi.single_apply, hpq]; ring_nf; rw [Complex.I_sq]; ring
+    · subst hi; simp [hpq]; ring_nf; rw [Complex.I_sq]; ring
     · by_cases hi' : i = q
-      · subst hi'; simp [Pi.single_apply, hi]; ring_nf; rw [Complex.I_sq]; ring
-      · simp [Pi.single_apply, hi, hi']
+      · subst hi'; simp [hi]; ring_nf; rw [Complex.I_sq]; ring
+      · simp [hi, hi']
   set α : ℂ := (1 / 2 : ℂ) * (I.s ⟨0, h⟩ + n - 1) + (-(Complex.I / 2)) * γ with hα
   set β : ℂ := (-(1 / 2) : ℂ) * (I.s ⟨0, h⟩ + n - 1) + (-(Complex.I / 2)) * γ with hβ
   have hdp : ∀ v : Y, ℓ' (E' p p v) = α * ℓ' v := fun v => by

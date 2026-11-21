@@ -1,9 +1,10 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.SecondCountableTopologyArchUnitary
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.StBoundedGenerators
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.StReducedBasisBound
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.StArchCovolumeBound
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.StMajorantTransport
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 namespace GroundTheory.Heights₂.Heights.FiniteCovolume
 

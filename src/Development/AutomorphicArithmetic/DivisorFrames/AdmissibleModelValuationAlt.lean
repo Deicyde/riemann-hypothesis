@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AutomorphicArithmetic.LocalEmbeddings.VertCmp
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsModelPresentingDivisor
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LocalSystemModelMap
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.DivisorFrames.AdmissibleModelValuation
 import Development.AutomorphicArithmetic.DivisorFrames.ExistsSphericallyCompleteIsometric
 import Development.AutomorphicArithmetic.DivisorFrames.TangentModelsCompat

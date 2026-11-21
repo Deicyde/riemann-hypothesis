@@ -1,12 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.SameOffRefl
-import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.TiePtOne
-import Formalism.SharpRestriction.GrowthBounds.ChartedClasses.ToLEInvApply
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ExistsMidLevIff
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.MemStabGLAdeleIff
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.QuotientHeightLowerBoundShortIsotropicVector
-import Formalism.LocalToGlobal.PairingIndexBounds.OrthogonalChartLevels.IsOrthCo
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ImportsFurther
+import Formalism.LocalRingCardinality.SpanPowerMembership.LocAtA
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.G Formalism.L2.G Formalism.L2.G.Cmp Formalism.L2.Forms Formalism.UG Formalism.L2.DIV Formalism.L2.G.Pend Formalism.L2.PairingIndexBounds.F Formalism.MainNotions.G.KAat GlobalTheory.TwV GlobalTheory.TwV.Xc TensorProduct
 
 noncomputable section
@@ -101,7 +99,7 @@ theorem exists_nsmul_mem_hatL {N : ℕ} (Lb : Submodule (𝓞 E) (Fin N → E))
       (fun j => inclE (F := F) 𝔸 ((d₁ • (Pi.single i (1 : E) : Fin N → E)) j)) := by
     funext j
     rw [Finset.sum_apply, Finset.sum_eq_single j]
-    · simp only [Submonoid.smul_def, Pi.smul_apply, smul_eq_mul, Pi.single_eq_same, nsmul_eq_mul, mul_one, map_natCast]
+    · simp only [Pi.smul_apply, Pi.single_eq_same, nsmul_eq_mul, mul_one, map_natCast]
       show _ = ((d₂ : E ⊗[F] 𝔸) * z j) * _
       rw [Nat.cast_mul]; ring
     · intro i _ hij
@@ -145,7 +143,7 @@ theorem exists_nsmul_mulVec_mem_hatL {N : ℕ} (Lb : Submodule (𝓞 E) (Fin N �
     have e2 : (fun i => inclE (F := F) 𝔸 (w i)) = ∑ j, m j • fun i => inclE (F := F) 𝔸 ((s j : Fin N → E) i) := by
       funext i
       rw [e]
-      simp [Finset.sum_apply, map_sum, map_zsmul]
+      simp [Finset.sum_apply, map_sum]
     show (fun i => inclE (F := F) 𝔸 (w i)) ∈ Q
     rw [e2]
     have hj : ∀ j, (fun i => inclE (F := F) 𝔸 ((s j : Fin N → E) i)) ∈ Q := fun j => hDj j

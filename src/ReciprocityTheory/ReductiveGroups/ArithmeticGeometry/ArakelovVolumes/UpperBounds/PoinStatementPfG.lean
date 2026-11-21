@@ -1,7 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.PoinStatementPfF
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.LUStatementPf
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.MeasInvStatementPf
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.PairUnfoldPf
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.SumBoundStatementPfC
 
 namespace ReciprocityTheory.ChartRestriction.G.AR.Up.PoinPf
 
@@ -165,7 +168,7 @@ theorem cont_dmin (X : Data E r) (τ : X.Ψ) (i : Fin (r + 1)) :
   refine Continuous.matrix_det (Continuous.matrix_submatrix ?_ _ _)
   refine continuous_matrix fun a b => ?_
   unfold hermC col mat
-  simp only [Matrix.of_apply, Matrix.mul_apply]
+  simp only [Matrix.of_apply]
   fun_prop
 
 theorem cont_lminor_gM (X : Data E r) (x0 : Frame X.Ψ r) (τ : X.Ψ) (i : Fin (r + 1)) :

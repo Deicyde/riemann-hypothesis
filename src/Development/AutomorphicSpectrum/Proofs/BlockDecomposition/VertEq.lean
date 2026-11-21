@@ -1,11 +1,8 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsSmoothHermCombLine
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.DivisibilityProofs.CoheightEqOneOfDimClosure
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsLineBundleSectionsGenerateIdealSheaf
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ClosedSubschemeModLProjective
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DimOfIsArithVar
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DimClosureOfCoheightField
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PointIdealMultiprojectivePrime
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HermRepClassDecompositionStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.O1ClassPullbackNaturalityStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GenericPointNonvanishingCoordinateSectionStatement
@@ -75,7 +72,7 @@ theorem key (p : ℕ) [Fact p.Prime] {m : ℕ} {n : Fin (m + 1) → ℕ} (a : Fi
       funext i
       refine Fin.cases ?_ (fun i => ?_) i
       · simp
-      · simp [Function.update_of_ne (Fin.succ_ne_zero i)]
+      · simp
     simp only [upd] at e
     have e0 : (Fin.cons L (fun _ : Fin d => L) : Fin (d + 1) → LB Z) = fun _ => L := by
       funext i

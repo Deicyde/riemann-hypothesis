@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.LamXEquivariant
-import Formalism.HarderNarasimhan.ShiftInvariance
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.CsGlob
 
 open NumberField Matrix

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.CoefCol
 import Formalism.LocalToGlobal.Divisibility.CoefModLemmas
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Bridge

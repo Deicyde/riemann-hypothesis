@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ArithmeticGeometry.SchemeCohomology.ConsCompSuccAboveZero
-import GroundTheory.ArithmeticGeometry.SchemeCohomology.InjectiveCech
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.AddCommGrpCat
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Arith.SchemeCoh

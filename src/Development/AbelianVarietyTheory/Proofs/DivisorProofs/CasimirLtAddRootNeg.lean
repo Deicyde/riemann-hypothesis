@@ -1,9 +1,7 @@
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockMap
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockHarmonicHomogeneousOfKType
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MinFirst
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockMinimalKTypeSecondMember
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockDualPairSwapSymmetryStatement
 open scoped TensorProduct GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels
 
 open Formalism.BasicNotions.TH MvPolynomial
@@ -161,7 +159,7 @@ theorem cauchy_u {P' Q' R S : ℕ} (Q : ℕ) (hS : Q + P' ≤ S) (f : Pol P' Q' 
       -∑ i : Fin P', X ((.inl i, .inr l') : Ix P' Q' × Ix R S) * pderiv (.inl i, .inr l₀) f := by
     intro l' hne
     rw [fockAct2_Eab, LinearMap.sum_apply, Fintype.sum_sum_type]
-    simp [omE, raiB, lowB, linePos, hne, Derivation.leibniz, pderiv_X_of_ne, hpt, Finset.sum_neg_distrib]
+    simp [omE, raiB, lowB, linePos, hne, Derivation.leibniz, hpt, Finset.sum_neg_distrib]
   have hg := det_kill (n := P')
     (fun mi => ((.inl mi.2, .inr ⟨Q + mi.1, by omega⟩) : Ix P' Q' × Ix R S))
     (by
@@ -187,7 +185,7 @@ theorem cauchy_w {P' Q' R S : ℕ} (P : ℕ) (hR : P + Q' ≤ R) (f : Pol P' Q' 
       -∑ j : Fin Q', X ((.inr j, .inl k') : Ix P' Q' × Ix R S) * pderiv (.inr j, .inl k₀) f := by
     intro k' hne
     rw [fockAct2_Eab, LinearMap.sum_apply, Fintype.sum_sum_type]
-    simp [omE, raiB, lowB, linePos, hne, Derivation.leibniz, pderiv_X_of_ne, hps, Finset.sum_neg_distrib]
+    simp [omE, raiB, lowB, linePos, hne, Derivation.leibniz, hps, Finset.sum_neg_distrib]
   have hg := det_kill (n := Q')
     (fun mj => ((.inr mj.2, .inl ⟨P + mj.1, by omega⟩) : Ix P' Q' × Ix R S))
     (by
@@ -380,10 +378,10 @@ theorem steep_small : ∀ (P Q P' Q' R S : ℕ) (κ : ℤ), GlobalTheory.RealLif
   ·
     have hνl : ∀ k : Fin (P + Q'), shiftNu (cPair P' Q') μ (.inl k) =
         (if (k : ℕ) < P then 0 else -((κ : ℚ) / 2 - cPair (P + Q') (Q + P'))) + (if k = k₀ then 1 else 0) := by
-      intro k; rw [hnu_l]; simp only [Sum.inl.injEq, Sum.inr.injEq, reduceCtorEq, if_false]; ring
+      intro k; rw [hnu_l]; simp only [Sum.inl.injEq, reduceCtorEq, if_false]; ring
     have hνr : ∀ l : Fin (Q + P'), shiftNu (cPair P' Q') μ (.inr l) =
         (if (l : ℕ) < Q then 0 else -((κ : ℚ) / 2 + cPair (P + Q') (Q + P'))) - (if l = l₁ then 1 else 0) := by
-      intro l; rw [hnu_r]; simp only [Sum.inl.injEq, Sum.inr.injEq, reduceCtorEq, if_false]; ring
+      intro l; rw [hnu_r]; simp only [Sum.inr.injEq, reduceCtorEq, if_false]; ring
     have hνr0 : ∀ l, shiftNu (cPair P' Q') μ (.inr l) ≤ 0 := by
       intro l; rw [hνr l]; split_ifs <;> linarith
     have hk0 : (k₀ : ℕ) < P := by
@@ -425,7 +423,7 @@ theorem steep_small : ∀ (P Q P' Q' R S : ℕ) (κ : ℤ), GlobalTheory.RealLif
       have hz := cauchy_u Q (by omega) f l₁ hl ht hE α hα
       have h := ((col_min hf hα).2 l₁).2
       rw [hνr l₁] at h
-      simp only [hz, Nat.cast_zero, Finset.sum_const_zero, if_pos hl, if_pos rfl] at h
+      simp only [hz, Nat.cast_zero, Finset.sum_const_zero, if_pos hl] at h
       norm_num at h
     rw [casK_lr]
     simp only [hΛ, GlobalTheory.RealLift.lam, if_pos hk0, if_neg (not_lt.2 hl0), cPair]
@@ -436,10 +434,10 @@ theorem steep_small : ∀ (P Q P' Q' R S : ℕ) (κ : ℤ), GlobalTheory.RealLif
   ·
     have hνl : ∀ k : Fin (P + Q'), shiftNu (cPair P' Q') μ (.inl k) =
         (if (k : ℕ) < P then 0 else -((κ : ℚ) / 2 - cPair (P + Q') (Q + P'))) - (if k = k₁ then 1 else 0) := by
-      intro k; rw [hnu_l]; simp only [Sum.inl.injEq, Sum.inr.injEq, reduceCtorEq, if_false]; ring
+      intro k; rw [hnu_l]; simp only [Sum.inl.injEq, reduceCtorEq, if_false]; ring
     have hνr : ∀ l : Fin (Q + P'), shiftNu (cPair P' Q') μ (.inr l) =
         (if (l : ℕ) < Q then 0 else -((κ : ℚ) / 2 + cPair (P + Q') (Q + P'))) + (if l = l₀ then 1 else 0) := by
-      intro l; rw [hnu_r]; simp only [Sum.inl.injEq, Sum.inr.injEq, reduceCtorEq, if_false]; ring
+      intro l; rw [hnu_r]; simp only [Sum.inr.injEq, reduceCtorEq, if_false]; ring
     have hνl0 : ∀ k, shiftNu (cPair P' Q') μ (.inl k) ≤ 0 := by
       intro k; rw [hνl k]; split_ifs <;> linarith
     have hl0 : (l₀ : ℕ) < Q := by
@@ -481,7 +479,7 @@ theorem steep_small : ∀ (P Q P' Q' R S : ℕ) (κ : ℤ), GlobalTheory.RealLif
       have hz := cauchy_w P (by omega) f k₁ hk hs hE α hα
       have h := ((col_min hf hα).1 k₁).2
       rw [hνl k₁] at h
-      simp only [hz, Nat.cast_zero, Finset.sum_const_zero, if_pos hk, if_pos rfl] at h
+      simp only [hz, Nat.cast_zero, Finset.sum_const_zero, if_pos hk] at h
       norm_num at h
     rw [casK_rl]
     simp only [hΛ, GlobalTheory.RealLift.lam, if_pos hl0, if_neg (not_lt.2 hk0), cPair]

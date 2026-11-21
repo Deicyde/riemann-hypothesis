@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.VpBounds
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.DefiningCoordinates
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TwistedTransport
+import Mathlib.Analysis.Normed.Field.Instances
 
 noncomputable section
 

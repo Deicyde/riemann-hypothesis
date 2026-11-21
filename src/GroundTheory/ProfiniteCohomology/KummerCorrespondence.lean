@@ -1,6 +1,7 @@
-import Mathlib
-import GroundTheory.ProfiniteCohomology.KummerBasic
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.KummerFinite
+import Mathlib.FieldTheory.KummerExtension
 
 namespace GroundTheory.ProfCoh
 

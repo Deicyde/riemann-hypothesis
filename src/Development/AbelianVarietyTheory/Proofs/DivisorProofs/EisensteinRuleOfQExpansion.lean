@@ -1,9 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ZetaValueIdeals
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorusPointPermutationSignStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DeterminantNonzeroDifferentialsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolydiscCmUniformizationStatement
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HilbertKodairaSpencer
 
 set_option autoImplicit false
 

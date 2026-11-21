@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Rr
+import Mathlib.Analysis.Calculus.FDeriv.Symmetric
 
 noncomputable section
 

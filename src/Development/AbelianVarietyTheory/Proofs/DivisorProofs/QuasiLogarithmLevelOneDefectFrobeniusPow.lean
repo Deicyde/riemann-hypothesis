@@ -1,11 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.EqZeroOfForallPowDvd
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OmegaBaseChangeFiniteProjectiveReflexive
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PadicContinuousEvaluationExistsUniqueSubstNatura
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SubstSubIn
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NmulSucc
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DividedInOfQuasiLogarithmStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PDivGroupFormalChartEvNatMultipleEqConvPowerStatement
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.EpsilonPairingZeta
+import Mathlib.RingTheory.MvPowerSeries.Expand
 open MvPowerSeries GlobalTheory GlobalTheory.Katz GlobalTheory.QLog GlobalTheory.PDivGroup GlobalTheory.Sandwich GlobalTheory.IndefiniteRowSideFullHecke.EpsilonPairingZeta GlobalTheory.PDivLat
 
 set_option autoImplicit false
@@ -243,7 +243,7 @@ theorem defect_frob_pow : ∀ (p : ℕ) [Fact p.Prime] (C : Type) [Field C] [IsA
     have e' : b - a ^ p - T = -(a ^ p - expand p hp (map F.σ a)) - kB - (p : F.B) • h₀ := by
       rw [hbeq]; abel
     rw [e']
-    simp only [map_sub, map_neg, coeff_smul, smul_eq_mul]
+    simp only [map_sub, map_neg, coeff_smul]
     refine sub_mem (sub_mem (neg_mem (pow_sub_expand_mem p F.σ F.σ_pow huB a α)) (hkJ α)) ?_
     exact Ideal.mul_mem_right _ _ (Ideal.mem_span_singleton_self _)
   obtain ⟨w', hw'⟩ := exists_eq_p_mul p _ hW

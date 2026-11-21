@@ -1,4 +1,7 @@
-import Formalism.SharpRestriction.GrowthBounds.MonomialOrderSegments.IntegralMonomial
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.MonomialOrderSegments.SegDefs
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -151,8 +154,8 @@ theorem TL_preimage (m : Fin D.r) :
     rw [first_embedding_natAdd]
     have hm := m.2
     have hm' := m'.2
-    simp only [TLset, Finset.mem_union, Finset.mem_image, Finset.mem_filter, Finset.mem_univ, true_and, mb, mlab, mtp,
-      reduceCtorEq, and_false, exists_false, false_or, or_false, Sum.inr.injEq, Sum.inl.injEq, Prod.mk.injEq,
+    simp only [TLset, Finset.mem_union, Finset.mem_image, Finset.mem_filter, Finset.mem_univ, true_and, mb, mlab,
+      reduceCtorEq, and_false, exists_false, false_or, Sum.inr.injEq, Sum.inl.injEq, Prod.mk.injEq,
       exists_eq_right, Fin.coe_natAdd, stg]
     rw [Fin.lt_iff_val_lt_val, Fin.val_rev]
     omega
@@ -178,16 +181,16 @@ theorem YP_preimage1 (m : Fin D.r) :
     have hm' := m'.2
     split_ifs with h0
     · simp only [YPset, Finset.mem_union, Finset.mem_image, Finset.mem_filter, Finset.mem_univ, true_and, mb, mlab, mtp,
-      reduceCtorEq, and_false, exists_false, false_or, or_false, Sum.inr.injEq, Sum.inl.injEq, Prod.mk.injEq,
-      exists_eq_right, Fin.coe_natAdd, stg]
+      reduceCtorEq, and_false, exists_false, or_false, Sum.inr.injEq,
+      Fin.coe_natAdd, stg]
       rw [Fin.val_rev] at h0
       constructor
       · intro h
         exact h.elim
       · intro h
         omega
-    · simp only [YPset, Finset.mem_union, Finset.mem_image, Finset.mem_filter, Finset.mem_univ, true_and, mb, mlab, mtp,
-      reduceCtorEq, and_false, exists_false, false_or, or_false, Sum.inr.injEq, Sum.inl.injEq, Prod.mk.injEq,
+    · simp only [YPset, Finset.mem_union, Finset.mem_image, Finset.mem_filter, Finset.mem_univ, true_and, mb, mtp,
+      reduceCtorEq, and_false, exists_false, false_or, Sum.inr.injEq, Prod.mk.injEq,
       exists_eq_right, Fin.coe_natAdd, stg]
       rw [Fin.val_rev] at h0
       rw [Fin.lt_iff_val_lt_val, Fin.val_rev]

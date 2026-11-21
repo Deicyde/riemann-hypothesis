@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeilStabilizerVolume.SdUniq
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeilStabilizerVolume.DensInfAll
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.RealCharacter
+import Mathlib.Analysis.Distribution.SchwartzSpace.Fourier
 
 noncomputable section
 

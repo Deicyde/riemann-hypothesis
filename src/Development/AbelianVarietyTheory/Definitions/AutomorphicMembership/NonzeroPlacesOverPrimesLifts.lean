@@ -1,8 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.BrgStdR
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ReadPk
 import Formalism.SharpRestriction.Divisibility.WeightDegreeSizes
-import BuildAid.D3
 
 noncomputable section
 

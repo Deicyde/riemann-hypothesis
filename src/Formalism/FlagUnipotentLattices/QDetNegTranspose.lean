@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.FlagUnipotentLattices.InterlaceBlocksW
 
 open Finset TensorProduct

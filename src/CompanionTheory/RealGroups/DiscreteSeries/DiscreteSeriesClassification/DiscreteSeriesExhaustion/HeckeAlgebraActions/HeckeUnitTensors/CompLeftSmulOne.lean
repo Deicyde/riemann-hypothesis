@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.RealGroups.DiscreteSeries.DiscreteSeriesClassification.DiscreteSeriesExhaustion.HeckeAlgebraActions.HeckeUnitTensors.ContOfFnProd
+import CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.PrincipalSumStatement
+import CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.QuantumDeterminantTensor
+import Mathlib.Algebra.Module.StablyFree.Basic
 
 noncomputable section
 

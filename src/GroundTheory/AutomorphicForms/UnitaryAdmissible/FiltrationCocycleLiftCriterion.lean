@@ -1,9 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.GKModules.GKModule
-import GroundTheory.AutomorphicForms.ArchimedeanWhittaker.MultOne
-import GroundTheory.AutomorphicForms.ArchimedeanWhittaker.ComplexWhittaker.MultOneC
-import GroundTheory.AutomorphicForms.ArchimedeanWhittaker.ComplexWhittaker.KTypeExist
-import GroundTheory.AutomorphicForms.HarishChandraRegularity.CartanBasis
 
 namespace GroundTheory.Automorphic
 

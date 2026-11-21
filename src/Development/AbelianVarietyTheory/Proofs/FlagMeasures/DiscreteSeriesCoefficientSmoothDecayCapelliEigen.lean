@@ -1,8 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.UniqGapOfUniq
 import Development.AbelianVarietyTheory.Definitions.Jets.SupWOfSup
-import Development.AbelianVarietyTheory.Definitions.Jets.SumIoPr
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.NormSqUnitNormalizationLe
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.CapelliKFiniteCoefficient
 import CompanionTheory.AutomorphicTheory.PieriRules.ThetaBesselIsometries.BesselPeriodAdjointPairStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.CapelliDiscreteSeriesInfChar

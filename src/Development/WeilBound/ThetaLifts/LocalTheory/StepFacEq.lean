@@ -1,4 +1,6 @@
-import Development.WeilBound.ThetaLifts.LocalTheory.MemPolData
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.ThetaLifts.LocalTheory.UnramifiedMultiplicityOneProportional
 
 noncomputable section
 

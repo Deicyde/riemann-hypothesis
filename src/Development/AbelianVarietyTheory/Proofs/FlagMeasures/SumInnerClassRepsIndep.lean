@@ -1,5 +1,10 @@
-import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
-import Formalism.LocalToGlobal.HermitianForms.IsLocBasis
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Analysis.CStarAlgebra.Module.Constructions
+import Mathlib.RepresentationTheory.Basic
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open Formalism.BasicNotions Formalism.MainNotions.S Formalism.L2.Forms Formalism.UG Matrix NumberField IsDedekindDomain
 open scoped InnerProductSpace TensorProduct
 
@@ -33,7 +38,7 @@ theorem sum_inner_classReps_indep : ∀ (Γ Gi Gf : Type) [Group Γ] [Group Gi] 
       obtain ⟨c, ⟨γ, κ, h⟩, -⟩ := hs (s' c')
       refine ⟨c, (hs' (s c)).unique (hg c) ⟨γ⁻¹, κ⁻¹, ?_⟩⟩
       rw [h]
-      simp only [map_mul, map_inv, Subgroup.coe_mul, Subgroup.coe_inv]
+      simp only [map_inv, Subgroup.coe_inv]
       group
   refine Fintype.sum_bijective g hbij _ _ (fun c => ?_)
   obtain ⟨γ, κ, h⟩ := hg c

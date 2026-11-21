@@ -1,5 +1,16 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.VecPairApply
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.Ideal.Quotient.Index
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Polynomial
 
@@ -238,7 +249,7 @@ theorem exists_truncation {R L : Type} [CommRing R] [Finite R] [Field L] (ψ : R
   have hA'coeff : ∀ j, A'.coeff j = if j < d0 then c j else 0 := by
     intro j
     rw [hA', Polynomial.finsetSum_coeff]
-    simp [Polynomial.coeff_C_mul_X_pow]
+    simp
   have hQ : X ^ d0 ∣ P - C π * A' := by
     rw [Polynomial.X_pow_dvd_iff]
     intro j hj

@@ -1,5 +1,10 @@
-import Development.AutomorphicArithmetic.PrimitiveCosets.CoreAtH
-import Development.AutomorphicArithmetic.PrimitiveCosets.ToEBij
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.PrimitiveCosets.RecH
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.HostFacts
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.PrimePairSizeCondition
+import Formalism.SizeWindowBrackets.ChainSlopeWindows.GaloisMapComplexConjugation
+import Formalism.SizeWindowBrackets.GrowthBoundGivesRiemannHypothesis
 
 open UpperTheory.Comparison₂ Deduction.CH Formalism Formalism.HC Formalism.D5 Formalism.LFunctionChainParameters.characterSumData Formalism.LFunctionChainParameters.ThickSetMeanBounds Formalism.LFunctionChainParameters.LHost NumberField Ideal
 

@@ -1,8 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MulPowLeRpow
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ComparableHermitianFormsDetBounds
+import Development.AbelianVarietyTheory.Definitions.Divisors.ReferenceMetricMulDualEqOne
 
 set_option autoImplicit false
 
@@ -90,7 +89,7 @@ theorem lminor_eq (M : Matrix (Fin n) (Fin n) ℂ) (k : Fin (n + 1)) :
   unfold lminor
   congr 1
   ext i j
-  simp [mul_apply, conjTranspose_apply, Finset.sum_ite_eq', Finset.sum_ite_eq]
+  simp [mul_apply, conjTranspose_apply, Finset.sum_ite_eq']
 
 theorem Cmp.lminor_le {m : ℝ} {A B : Matrix (Fin n) (Fin n) ℂ} (h : Cmp m A B) (hA : A.PosDef) (hm : 0 ≤ m)
     (k : Fin (n + 1)) : (lminor A k).re ≤ m ^ (k : ℕ) * (lminor B k).re := by

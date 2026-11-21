@@ -1,5 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.QuadraticSemicharacters.KerPNonzero
 import Formalism.LocalToGlobal.TorsionIntegrality.QuadraticSemicharacters.CayleyGaussianIntegrals.MatrixFormFourfoldBlock
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
+import Mathlib.Topology.UniformSpace.Uniformizable
 
 noncomputable section
 open scoped BigOperators ComplexConjugate Nat
@@ -168,8 +173,8 @@ def kL (H : Sesq V) (w x : V) : V →L[ℂ] ℂ :=
 
 theorem term_eq (H : Sesq V) (α : V → ℂ) (w x z : V) :
     α x * opU H x (kerK H w) z = kC H α w x * Complex.exp (kL H w x z) := by
-  simp only [opU, kerK, kC, kL, ContinuousLinearMap.smul_apply, LinearMap.coe_toContinuousLinearMap',
-    LinearMap.flip_apply, smul_eq_mul, map_add, map_sub, LinearMap.add_apply]
+  simp only [opU, kerK, kC, kL, ContinuousLinearMap.smul_apply,
+    smul_eq_mul, map_add, map_sub, LinearMap.add_apply]
   rw [mul_assoc]
   congr 1
   rw [← Complex.exp_add, ← Complex.exp_add]

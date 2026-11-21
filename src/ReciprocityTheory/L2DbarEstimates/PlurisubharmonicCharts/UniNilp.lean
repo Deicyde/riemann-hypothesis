@@ -1,5 +1,9 @@
-import ReciprocityTheory.L2DbarEstimates.PlurisubharmonicCharts.GROWCountStatement
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.TracePowEqZeroOfLeDim
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.Tactic.Polynomial.Basic
 
 namespace ReciprocityTheory.L2DbarEstimates.Y
 

@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepresentationPreservesSchwartz
 
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -40,7 +40,7 @@ theorem hTens_incM (σ : E →ₐ[F] E) {n d : ℕ} (JA : Matrix (Fin n) (Fin n)
 theorem lhs_eq {n d : ℕ} (b : E) (x : Fin n → E) (y' : Fin d → E) :
     inclR (F := F) (AF F) b • Matrix.vecMulVec (incV F x) (incV F y') = incM F (Matrix.vecMulVec (b • x) y') := by
   ext i j
-  simp [incM, incV, Matrix.vecMulVec_apply, mul_assoc]
+  simp [incM, incV, Matrix.vecMulVec_apply]
 
 theorem rhs_eq {n d : ℕ} (t : E) (y : Fin n → E) (x' : Fin d → E) :
     Matrix.vecMulVec (inclR (F := F) (AF F) t • incV F y) (incV F x') = incM F (Matrix.vecMulVec (t • y) x') := by

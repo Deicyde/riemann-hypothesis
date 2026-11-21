@@ -1,11 +1,13 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.MonodromyZeroOfWeilDeligneRepClassIff
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.TeichmullerRoots
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.DepthZeroLabelsOfLabelLaws
 import Development.AbelianVarietyTheory.Proofs.CharacterTheory.RootsCharpolyPowEqMapPow
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsTameGenAt
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsTeichmullerMaps
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsCongOfCongOnFixed
+import Mathlib.NumberTheory.Padics.HeightOneSpectrum
 
 noncomputable section
 

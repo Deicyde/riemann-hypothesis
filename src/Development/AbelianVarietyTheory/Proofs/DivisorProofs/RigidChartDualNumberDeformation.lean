@@ -1,13 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasDefect
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.RigidForFan
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ToroidalCompactificationBis
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPolAVInterior
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCechOneCoboundaryOfRefinementStatement
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsUnitExtendOfGeneric
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.LevelLabelExtendsOfOrthogonalToExtended
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.GradedLineBundleExists
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsBlockMetricDiagForm
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GroupPullbackTangentVectorsCompat
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry NumberField IsLocalRing
 open scoped CategoryTheory.Obj Matrix TensorProduct
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj
@@ -159,8 +156,7 @@ theorem theta_eq_fibre (P₀ : Out.PolAV (Sp K)) {n : ℕ} (u : Fin n → (epsR 
     have k8 : m ⁻¹ᵁ Wp p ⊓ m ⁻¹ᵁ Wp p' ≤ m ⁻¹ᵁ L.U (j' p.2) ⊓ m ⁻¹ᵁ L.U (j p.1) := k2.trans k6
     have k9 : m ⁻¹ᵁ Wp p ⊓ m ⁻¹ᵁ Wp p' ≤ m ⁻¹ᵁ L.U (j' p'.2) ⊓ m ⁻¹ᵁ L.U (j p'.1) := k3.trans k7
     have k10 : m ⁻¹ᵁ Wp p ⊓ m ⁻¹ᵁ Wp p' ≤ m ⁻¹ᵁ L.U (j p.1) ⊓ m ⁻¹ᵁ L.U (j p'.1) := k4
-    simp (disch := assumption) only [lc, rsT_sub, rsT_neg, rsT_sum, rsT_mul, rsT_rsT, rsT_constFn, constFn_sub,
-      sub_mul, Finset.sum_sub_distrib]
+    simp (disch := assumption) only [lc, rsT_sub, rsT_neg, rsT_sum, rsT_mul, rsT_rsT, rsT_constFn]
     have E' : ∑ b, (constFn P₀.A.hom (m ⁻¹ᵁ Wp p ⊓ m ⁻¹ᵁ Wp p') (θ a b) *
           rsT (φ b (j p.1) (j p'.1)) (m ⁻¹ᵁ Wp p ⊓ m ⁻¹ᵁ Wp p') -
         constFn P₀.A.hom (m ⁻¹ᵁ Wp p ⊓ m ⁻¹ᵁ Wp p') (θ' a b) *

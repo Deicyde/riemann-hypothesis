@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ChowlaSelberg.HeckeRatios
-import GroundTheory.HeightsAndTheta.Heights.ChowlaSelberg.StatementsWitness
+import GroundTheory.HeightsAndTheta.Heights.ChowlaSelberg.Statements
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.ChowlaSelberg

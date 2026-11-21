@@ -1,8 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.GlobalEulerCharacteristic.DefsForms
-import ReciprocityTheory.GaloisValuations.SeparatedDvrSecondCohomologyMem
-import GroundTheory.ProfiniteCohomology.RestrictedRamification.LocalMaps
-import Development.WeilBound.CoreStatements.PublishedTheorems.GlobalEulerCharacteristic.RatioOneKilled
-import Development.WeilBound.CoreStatements.PublishedTheorems.GlobalFiniteness.Transport
+import Development.AutomorphicSpectrum.Proofs.GlobalProofs.CohomologicalDimensionTopologicalIso
+import Development.AutomorphicSpectrum.Proofs.GlobalProofs.GaloisUnramifiedOutsideCohomologyStatement
+import Development.AutomorphicSpectrum.Proofs.GlobalProofs.NormalSubgroupLeUnramifiedFixingStatement
+import Development.WeilBound.CoreStatements.EulerCharacteristicCounts.GcohCmp
+import ReciprocityTheory.NeutralLocalFields.LocalFieldComparison.Transport
 
 open NumberField IsDedekindDomain CategoryTheory GroundTheory.ProfCoh GroundTheory.Global
 
@@ -73,7 +76,7 @@ theorem mem_Zn_zero_iff {R G M : Type*} [CommRing R] [Group G] [TopologicalSpace
     intro g'
     rw [ReciprocityTheory.Gal.dn_apply]
     have e1 : (fun i : Fin 0 => g' i.succ) = Fin.elim0 := Subsingleton.elim _ _
-    simp only [e1, e, Fin.sum_univ_one]
+    simp only [e1, e]
     simp [sub_eq_add_neg]
   constructor
   · rintro ⟨_, hk⟩ g
@@ -215,7 +218,7 @@ theorem isCCAt_conj {w : InfinitePlace F} (hw : w.IsReal) {c c' : G F Ω} (hc : 
     · exact h
     · calc j'.comp (algebraMap F Ω)
           = ComplexEmbedding.conjugate (ComplexEmbedding.conjugate (j'.comp (algebraMap F Ω))) :=
-            by ext x; simp [ComplexEmbedding.conjugate_coe_eq]
+            by ext x; simp
         _ = ComplexEmbedding.conjugate (j.comp (algebraMap F Ω)) := by rw [h]
         _ = j.comp (algebraMap F Ω) := ComplexEmbedding.isReal_iff.1 hreal
   let _ : Algebra Ω ℂ := j.toAlgebra

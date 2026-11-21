@@ -1,10 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VacGlueIndicator
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TensorLatticeAtFinitePlaceEqIntegralSpanGenerato
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TensorLatticeLocalDarbouxCoordsBounded
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.FinPartIdemMulMemIff
 open scoped TensorProduct Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.ThK.PlaneCo
@@ -30,7 +27,7 @@ theorem planeCoef_mul_planeMat (σ : E →ₐ[F] E) (B : Base F E) {n n₁ j₀ 
       refine ⟨(Sum.elim u ![s, t]) ∘ e.symm, ?_⟩
       rw [Matrix.mulVecLin_apply, hQ', Matrix.submatrix_mulVec_equiv]
       funext i
-      simp only [Equiv.symm_symm, Function.comp_apply, Equiv.symm_apply_apply, id]
+      simp only [Equiv.symm_symm, Function.comp_apply, id]
       have : (fun x => (Sum.elim u ![s, t] ∘ e.symm) (e x)) = Sum.elim u ![s, t] := by
         funext x; simp
       rw [Function.comp_def, this]
@@ -107,7 +104,7 @@ theorem span_vecMulVec {n d : ℕ} (LX : Submodule (𝓞 E) (Fin n → E)) (LW :
         exact add_mem ha hb
       | smul c a _ ha =>
         rw [show Matrix.vecMulVec x (c • a) = c • Matrix.vecMulVec x a by
-          ext; simp [Matrix.vecMulVec_apply, mul_smul_comm]]
+          ext; simp [Matrix.vecMulVec_apply]]
         exact Submodule.smul_mem _ _ ha
     | zero =>
       rw [show Matrix.vecMulVec (0 : Fin n → E) y = 0 by ext; simp [Matrix.vecMulVec_apply]]; exact zero_mem _
@@ -117,7 +114,7 @@ theorem span_vecMulVec {n d : ℕ} (LX : Submodule (𝓞 E) (Fin n → E)) (LW :
       exact add_mem ha hb
     | smul c a _ ha =>
       rw [show Matrix.vecMulVec (c • a) y = c • Matrix.vecMulVec a y by
-        ext; simp [Matrix.vecMulVec_apply, smul_mul_assoc]]
+        ext; simp [Matrix.vecMulVec_apply]]
       exact Submodule.smul_mem _ _ ha
   refine Submodule.eq_top_iff'.2 fun m => ?_
   rw [Matrix.matrix_eq_sum_single m]

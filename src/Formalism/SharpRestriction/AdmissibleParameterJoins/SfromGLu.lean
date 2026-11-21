@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.AdmissibleParameterJoins.SfromGLq
 import Formalism.SharpRestriction.AdmissibleParameterJoins.SfromGLt
-import Formalism.SharpRestriction.ElevenLe
 
 noncomputable section
 

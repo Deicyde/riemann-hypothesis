@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeilStabilizerVolume.LocDensHI
-import ReciprocityTheory.Automorphisms.InstMainA
 import ReciprocityTheory.ResidueCardinality.ArtinOntoB
 
 noncomputable section

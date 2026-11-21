@@ -1,6 +1,6 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.BaseIdealIdeal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ProjectiveNotIsUnit
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsProjectiveAlgebraisationFormalCompleteLoca
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsIsAffineOpenPreimageEqOfIsNilpotent
 
 open CategoryTheory CategoryTheory.Limits AlgebraicGeometry

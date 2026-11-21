@@ -1,5 +1,10 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.HtDefs
-import ReciprocityTheory.SemistableReduction.AlgAll
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Topology.Sheaves.Presheaf
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.TheoremA
+import ReciprocityTheory.SemistableReduction.ComapInclusionIsLocalHom
 
 namespace ReciprocityTheory.ChartRestriction.G.T0
 

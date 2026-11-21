@@ -1,10 +1,9 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.Intersections.ImportsTerTer
-import GroundTheory.HeightsAndTheta.Heights.Intersections.ImportsTerMore
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StLocRingPow
 import GroundTheory.HeightsAndTheta.Heights.Intersections.PLocRingFrac
 import GroundTheory.HeightsAndTheta.Heights.Intersections.LogCardLocIdealUnitMul
 import GroundTheory.HeightsAndTheta.Heights.Intersections.ArithVarZero
+import Mathlib.Algebra.Ring.IsFormallyReal
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.Inter

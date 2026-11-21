@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.VerticalStrips.UnramifiedEulerProductIntegral
 
 noncomputable section
@@ -25,7 +26,7 @@ theorem ord_one' : ord (1 : F) = 0 := by
 
 def ordH : Fˣ →* Multiplicative ℤ where
   toFun x := Multiplicative.ofAdd (ord (x : F))
-  map_one' := by simp [ord_one']
+  map_one' := by simp
   map_mul' x y := by rw [ord_units_mul, ofAdd_add]
 
 theorem ord_zpow (x : Fˣ) (n : ℤ) : ord ((x ^ n : Fˣ) : F) = n * ord (x : F) := by
@@ -36,7 +37,7 @@ theorem ord_zpow (x : Fˣ) (n : ℤ) : ord ((x ^ n : Fˣ) : F) = n * ord (x : F)
 
 def unrC (z : ℂˣ) : Fˣ →* ℂˣ where
   toFun x := z ^ ord (x : F)
-  map_one' := by simp [ord_one']
+  map_one' := by simp
   map_mul' x y := by rw [ord_units_mul, _root_.zpow_add]
 
 theorem unrC_apply (z : ℂˣ) (x : Fˣ) : unrC z x = z ^ ord (x : F) := rfl

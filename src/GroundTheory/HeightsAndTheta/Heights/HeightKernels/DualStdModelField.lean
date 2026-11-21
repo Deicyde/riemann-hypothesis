@@ -1,6 +1,7 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.HeightKernels.ImportsFurther
-import GroundTheory.HeightsAndTheta.Heights.Intersections.IsPrimeSpanXb
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
+import GroundTheory.HeightsAndTheta.Heights.HeightKernels.SingleMemDualLatticeStandard
+import Mathlib.RingTheory.Henselian
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

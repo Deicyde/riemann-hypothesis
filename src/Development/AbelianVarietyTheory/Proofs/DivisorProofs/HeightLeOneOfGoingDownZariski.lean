@@ -1,6 +1,13 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FunctionFieldMapCompConstFn
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NadelVanishingCanonicalAddBoundary
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.IntegralClosure.GoingDown
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open CategoryTheory AlgebraicGeometry TopologicalSpace
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open GlobalTheory GlobalTheory.Cartier GlobalTheory.TopForm GlobalTheory.Discrepancy
@@ -39,7 +46,7 @@ theorem mem_of_nonunits_of_localization {L : Type} [Field L] (V : ValuationSubri
   obtain ⟨b, d, hd0, hdinv, hwbd⟩ := hloc (w : L) w.2
   have hL : ι x ^ n = ι y * (ι b / ι d) := by
     have := congrArg Subtype.val hw
-    simp only [SubmonoidClass.coe_pow, Subring.coe_mul] at this
+    simp only [SubmonoidClass.coe_pow] at this
     rw [this, ← hwbd]
     rfl
   have hA : x ^ n * d = y * b := by

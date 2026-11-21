@@ -1,8 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.HzUnit
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsNormLeHeightPow
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.AdmissibleDiscreteSeriesOfHasParam
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HarishChandraModulesOn
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.SeeSawWeilBiActionCommutesStatement
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.WittDecompositionMixedCoordsRankZero
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.SetIntegralFundamentalDomainRightTranslateInvari
@@ -193,7 +191,7 @@ theorem flatBF_rankZero : ∀ (D : D7) (ψ : AddChar (AF D.host.F) ℂ) (B : Bes
   simp only [flatBF, flat, flatAt, flatFun, evalAt, hS, hT]
   have hpsi : ∀ u : UX D 0, psiUni ψ u.1 = 1 := fun u => by
     simp [psiUni, upSum, psiE]
-  simp only [hpsi, star_one, one_mul, integral_const, smul_eq_mul]
+  simp only [hpsi, star_one, one_mul, integral_const]
   obtain ⟨-, 𝓤, -, h𝓤⟩ := s.vU.unit
   have hsub : Subsingleton (UX D 0) := by
     refine ⟨fun x y => Subtype.ext (Units.ext (Subsingleton.elim _ _))⟩

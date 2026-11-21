@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsDualFamilyOfIsLattice
 import ReciprocityTheory.NeutralLocalFields.LocalFieldComparison.HCFFromRecipA
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
 
 noncomputable section
 

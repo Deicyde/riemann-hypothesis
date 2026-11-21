@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsRealFam
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsCombAt
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.CuspAlongSmoothRows
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LastRowUnfoldingBasicHypothesesStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MovedVectorsAreCombinationsOfVacuaOfLargeDepthStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ColumnRealDatumFockCombinationLargeDepthStatement
@@ -70,7 +67,7 @@ theorem liftA_smul_right (W : G.Weil) (M : Vol G) (a : Arrow T) (ha : ∀ i, a �
   congr 1; funext h
   cases a with
   | coreUp i => exact absurd rfl (ha i)
-  | _ => simp only [GridData.Weil.kerA, GridData.Weil.ker, thetaKO, map_smul, LinearMap.smul_apply, Module.End.smul_def, Pi.smul_apply, smul_eq_mul]; ring
+  | _ => simp only [GridData.Weil.kerA, GridData.Weil.ker, thetaKO, map_smul, Pi.smul_apply, smul_eq_mul]; ring
 
 theorem pathLift_column_smul_univ (W : G.Weil) (M : Vol G) (t : T) : ∀ (n : ℕ) (s : Fin n → ℂ) (g : ∀ j : Fin n, Sch G (.col t j))
     (φ : Fn G (.top 0)), liftP W M (colPath t n) (colFam t n fun j => s j • g j) φ =

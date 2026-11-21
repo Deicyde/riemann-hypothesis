@@ -1,15 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.FixedVectorEqOfStandardData
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsTwIffCanonEq
-import Formalism.LocalToGlobal.KernelLattices.TopPin
-import Formalism.LocalToGlobal.KernelLattices.InterlaceAll
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.JetsInIffStepField
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HermitianChartComplexRationalIntegralFormsStatement
-import Formalism.LocalToGlobal.KernelLattices.ColumnData.DiagramFitsSourceRank
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.UnipotentAdelicQuotients.WeylLatDual
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PolFunApply
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EvalTwSubK
-import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.TiedRec
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.LatAtLattice
+import Formalism.LocalRingCardinality.SpanPowerMembership.EntPlNonempty
+import Formalism.SharpRestriction.Divisibility.OrbitPlaces
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Col Formalism.L2.DIV Formalism.L2.Ker Formalism.UG Formalism.L2.Forms GlobalTheory.Mem GlobalTheory.Mem.Chr GlobalTheory.Mem.Col2 GlobalTheory.Mem.Col2.TC Matrix
 attribute [local instance] GlobalTheory.Mem.Col2.starE Formalism.BasicNotions.Host.cmStar
 open GlobalTheory.IntegralityCompare
@@ -216,7 +211,7 @@ theorem polFun_smul_ten {K ι : Type} [CommRing K] [Fintype ι] {n : ℕ} (r : K
     polFun (r • map (Int.castRingHom K) (Formalism.L2.Forms.ten f)) =
       fun y => r * ∏ τ, eval (fun k : Fin n × Fin n => y τ k.1 k.2) (map (Int.castRingHom K) (f τ)) := by
   funext y
-  simp [polFun, Formalism.L2.Forms.ten, smul_eq_C_mul, map_prod, eval_prod, eval_rename, Function.comp_def, map_rename]
+  simp [polFun, Formalism.L2.Forms.ten, smul_eq_C_mul, map_prod, eval_rename, Function.comp_def, map_rename]
 
 end GlobalTheory.IntSpanCmp
 

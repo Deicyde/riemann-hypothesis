@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.AMassStA
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.StatementsChartDensityIntegrable
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.ChartMassAffine
+import Mathlib.RingTheory.PiTensorProduct
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

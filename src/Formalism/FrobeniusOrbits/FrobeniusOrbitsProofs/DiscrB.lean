@@ -1,8 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.FrobeniusOrbits.DiscrMaximalRealCyclotomic
 import Formalism.FrobeniusOrbits.RealSubfieldLeCompositum
 import Formalism.DirichletDensity.HostDensityArith
-import Formalism.CMTypeGalois.HalfTypesFromGeneral
+import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.RealCyclotomicSubfield
 
 open NumberField IntermediateField NumberField.InfinitePlace
 

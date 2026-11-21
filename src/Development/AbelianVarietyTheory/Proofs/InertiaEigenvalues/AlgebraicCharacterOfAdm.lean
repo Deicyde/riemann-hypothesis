@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.JumpDictCrysAtOfWeights
-import Formalism.SharpRestriction.LevelLetterCocycles.SumRepresentations
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.GaloisAdmissibleIffRepPureAvatar
 
 noncomputable section
@@ -11,7 +10,7 @@ namespace GlobalTheory.AlgCharFromGal
 
 theorem charpoly_fin_one {K : Type*} [CommRing K] (M : Matrix (Fin 1) (Fin 1) K) :
     M.charpoly = X - C (M 0 0) := by
-  simp [Matrix.charpoly, Matrix.det_fin_one, Matrix.charmatrix_apply]
+  simp [Matrix.charpoly]
 
 theorem main : ∀ D : D7, SumRepresentations.adm2 D → GlobalTheory.JumpDictionaryFoundation.AlgebraicCharacter_at D := by
   intro D hA i π s z hz

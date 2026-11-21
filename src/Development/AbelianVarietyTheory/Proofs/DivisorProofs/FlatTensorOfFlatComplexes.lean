@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.DivisorSupportCondition
-import Development.AbelianVarietyTheory.Definitions.Divisors.SecClass
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocForallFinset
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry Opposite CochainComplex CochainComplex.HomComplex GlobalTheory.EtC
@@ -69,7 +69,7 @@ def tensP {ι : Type} (A B : ι → Scheme.{0}ᵒᵖ ⥤ ModuleCat.{1} (ULift.{1
     classical
     ext1
     refine DirectSum.linearMap_ext _ fun i => TensorProduct.ext' fun a b => ?_
-    simp [DirectSum.lof_eq_of, DirectSum.lmap_of]
+    simp [DirectSum.lof_eq_of]
   map_comp f g := by
     classical
     ext1

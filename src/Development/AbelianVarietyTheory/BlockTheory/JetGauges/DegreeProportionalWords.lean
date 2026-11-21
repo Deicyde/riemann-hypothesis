@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.FormalDegreeBessel.StatementDS
 
 open Finset
@@ -130,10 +131,10 @@ example : OneStep (A := ℤ) (V := ℂˣ → ℂ) (ι := Unit) (fun k => |(k : �
   intro i μ _
   refine ⟨Finsupp.single 1 1, ?_, ?_, ?_⟩
   · funext x
-    simp [comb, Finsupp.support_single_ne_zero, zpow_add₀, mul_comm]
+    simp [comb, zpow_add₀, mul_comm]
   · intro ν hν
     rw [Finsupp.support_single_ne_zero _ one_ne_zero, mem_singleton] at hν
     simp [hν]
-  · simp [l1, Finsupp.support_single_ne_zero]
+  · simp [l1]
 
 end GlobalTheory.IndefiniteRowSideFullHecke.DegreeProportionalWords

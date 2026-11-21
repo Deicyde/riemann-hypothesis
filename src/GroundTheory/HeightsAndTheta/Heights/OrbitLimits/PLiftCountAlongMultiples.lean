@@ -1,9 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.LiftBlockSections
-import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsSupBoundCount
-import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsSmallPacking
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.AevalMulMemChartRingZ
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PSectionLatticeFinite
+import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StatementsLiftBlockDatum
+import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StatementsLiftCountAlongMultiples
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.Targets

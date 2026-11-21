@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.PhiGenPf
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.RosatiAdj
 
 noncomputable section
 
@@ -159,8 +160,7 @@ theorem prod_ros (f g : A ⟶ A) {T : Over S} (x y : T ⟶ A) {U : Type} [CommGr
       | (simp only [padd, comp_lift_assoc]; rfl)
       | (simp only [padd, ← Category.assoc, comp_lift]; rfl)
   simp only [Fin.prod_univ_succ, Fin.prod_univ_zero, rosatiφ, rosatiε, Matrix.cons_val_zero,
-    Matrix.cons_val_succ, e, m1, lift_fst, lift_snd, lift_fst_assoc, lift_snd_assoc, zpow_one, zpow_neg,
-    mul_one]
+    Matrix.cons_val_succ, e, m1, lift_fst, lift_snd, lift_fst_assoc, lift_snd_assoc, zpow_one, zpow_neg]
   first
     | ac_rfl
     | (simp only [mul_comm, mul_assoc, mul_left_comm]; done)

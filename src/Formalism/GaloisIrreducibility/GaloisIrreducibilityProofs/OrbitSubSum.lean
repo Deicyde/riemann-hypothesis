@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.GaloisIrreducibility.Statement
+import Mathlib.Tactic.ENatToNat
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace Formalism.GaloisIrreducibility
 

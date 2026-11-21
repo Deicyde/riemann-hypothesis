@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.MultihomogeneousSquares.SingSt
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.DominatingRegularPushStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.DominatingCoordsReindexedStatement

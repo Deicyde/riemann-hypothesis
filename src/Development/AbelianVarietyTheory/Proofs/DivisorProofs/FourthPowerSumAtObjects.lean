@@ -1,13 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsX
-import Development.AbelianVarietyTheory.Definitions.Divisors.HypothesesX
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PrismaticDieudonnePerfd
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ScholzeWeinsteinB
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HasChainW
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsHomogeneousAevalOfWeighted
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ChainStatementOfPublishedInputsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalOfHasChainAtPrime
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TerminalChainOfPublishedInputsStatement
@@ -58,7 +50,7 @@ theorem homog_rename_dr {Tau : Type} [Fintype Tau] {N : ℕ} (d : Rt Tau N →�
 
 theorem tagDR_toR {Tau : Type} [Fintype Tau] {N : ℕ} (G : MvPolynomial (Rt Tau N) ℚ) :
     tagDR Tau N (Formalism.MainNotions.LatticeTransfer.toR G) = Formalism.MainNotions.LatticeTransfer.toR (rename (fun x => (Sum.inl (false, x) : Vm Tau N)) G) := by
-  simp only [tagDR, Formalism.MainNotions.LatticeTransfer.toR, AlgHom.coe_toRingHom]
+  simp only [tagDR, Formalism.MainNotions.LatticeTransfer.toR]
   rw [map_rename]
 
 theorem collapse_toR {D : D7} {N : ℕ} (G : MvPolynomial (Rt D.what₂.Tau N) ℚ) :

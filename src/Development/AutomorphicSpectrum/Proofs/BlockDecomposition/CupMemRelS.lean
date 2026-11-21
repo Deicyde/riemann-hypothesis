@@ -1,12 +1,6 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.HodgeSurjectivity.FormUniq
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.HodgeSurjectivity.NLeA
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.CechPairings.Imports
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.ChartGrConst
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FormConsMul
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LamFamily
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.AppendCons
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.AffineFinsetInf
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false
@@ -23,7 +17,7 @@ variable {K : Type} [Field K] {W Y : Scheme.{0}} {q : Y ⟶ Spec (CommRingCat.of
 theorem rs_topIso {V V' : Y.Opens} (h : V' ≤ V) (x : Γ(V, ⊤)) :
     rs h (V.topIso.hom.hom x) = V'.topIso.hom.hom ((Y.homOfLE h).appTop.hom x) := by
   rw [Scheme.homOfLE_appTop]
-  simp only [rs, Scheme.Opens.topIso_hom, CommRingCat.comp_apply]
+  simp only [rs, Scheme.Opens.topIso_hom]
   rw [← CommRingCat.comp_apply, ← CommRingCat.comp_apply, ← Functor.map_comp, ← Functor.map_comp]
   rfl
 

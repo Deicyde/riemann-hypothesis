@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SubspaceCounting.DetQuotVal
 import Formalism.SubspaceCounting.SubspaceCountingProofs.DetVal
+import Mathlib.Algebra.AffineMonoid.UniqueSums
+import Mathlib.Tactic.ENatToNat
 
 noncomputable section
 open scoped BigOperators

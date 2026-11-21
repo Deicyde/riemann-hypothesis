@@ -1,8 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CharacterGerms.RowTiePTyp
 import Formalism.LocalToGlobal.CharacterGerms.RowTiePAllOps
-import Formalism.LocalToGlobal.CharacterGerms.RowTieGermI
 import Formalism.LocalToGlobal.CharacterGerms.RowTiePIndAr
-import Formalism.LocalToGlobal.CharacterGerms.RowTiePLimTy
+import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
 
 noncomputable section
 

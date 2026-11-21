@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SecondCountableHermC
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HuaDeterminantIntegrableOfLtStatement
+import Mathlib.MeasureTheory.Integral.Pi
 open MeasureTheory
 open GlobalTheory.CompanionTheory.SiegelND.Integ.Arch
 

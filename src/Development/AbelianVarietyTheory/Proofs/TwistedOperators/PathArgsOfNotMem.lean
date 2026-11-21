@@ -1,14 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RangeSndRel
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.CuspAlongSmoothRows
-import Development.AbelianVarietyTheory.Statements.HeckeThetaIntegrals.ThetaIntegralsAgree
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.PathConvZipFock
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsHasLocalSmall
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SchrodingerIntertwinerInjectiveSchwartzBruhat
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SchrodingerIntertwinerSchwartzBruhatIsTheta
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SpecialisedUniversalSeriesEqTwistedThetaSeries
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.DIV
 open IsDedekindDomain NumberField MeasureTheory GlobalTheory.ChiGrid GlobalTheory.FunObj GlobalTheory.RowTest GlobalTheory.StdFrames GlobalTheory.RowClaim GlobalTheory.FlipRun
@@ -43,14 +38,14 @@ theorem onGrid_comp {m : ℕ} {t : T} {X Y Z : Node} {p : Path T X Y} {q : Path 
 
 theorem onGrid_routeSmall {m : ℕ} (t : T) {i j : ℕ} (hi : i < m) (hj : j < m) : OnGrid m t (routeSmall t i j) := by
   intro a ha
-  simp only [routeSmall, Path.arrows, List.nil_append, List.cons_append, List.mem_cons, List.not_mem_nil, or_false] at ha
+  simp only [Path.arrows, List.nil_append, List.cons_append, List.mem_cons, List.not_mem_nil, or_false] at ha
   rcases ha with rfl | rfl
   · exact Or.inr ⟨i, j, hi.le, hj, rfl⟩
   · exact Or.inl ⟨i, j, hi, hj.le, rfl⟩
 
 theorem onGrid_routeBig {m : ℕ} (t : T) {i j : ℕ} (hi : i < m) (hj : j < m) : OnGrid m t (routeBig t i j) := by
   intro a ha
-  simp only [routeBig, Path.arrows, List.nil_append, List.cons_append, List.mem_cons, List.not_mem_nil, or_false] at ha
+  simp only [Path.arrows, List.nil_append, List.cons_append, List.mem_cons, List.not_mem_nil, or_false] at ha
   rcases ha with rfl | rfl
   · exact Or.inl ⟨i, j + 1, hi, hj, rfl⟩
   · exact Or.inr ⟨i + 1, j, hi, hj, rfl⟩

@@ -1,9 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecondChernDensity
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleAffinePolynomialCoords
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CellChart
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCellFrameOfSpans
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EtalePolynomialSubstitution
 
 open CategoryTheory AlgebraicGeometry TopologicalSpace Filter Topology MeasureTheory Matrix NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -178,10 +178,10 @@ def chart : OpenPartialHomeomorph (CxPts p σ) (V D) where
   continuousOn_toFun := by
     refine (PiLp.continuous_toLp 2 _).comp_continuousOn (continuousOn_pi.2 fun j => ?_)
     rcases h : e j with a | s
-    · simp only [h, Sum.elim_inl]
+    · simp only [Sum.elim_inl]
       exact (PiLp.continuous_apply 2 _ a).comp_continuousOn
         (c.e.continuousOn.comp (PtsOver.continuous_map π w _).continuousOn fun y hy => hy.1)
-    · simp only [h, Sum.elim_inr]
+    · simp only [Sum.elim_inr]
       exact (continuousOn_ev (n s)).mono Set.inter_subset_right
   continuousOn_invFun := (holo_of_affine hWa (c.e.open_target.preimage (differentiable_base e).continuous)
     (fun v hv => inv_mem π w y₀ hv) fun g => holo_inv π w y₀ g).1

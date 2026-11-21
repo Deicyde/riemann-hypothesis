@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DualMapCompDualMap
+import Development.AbelianVarietyTheory.Definitions.ThetaMetrics.MemRangeCompIffOfIsClosedImmersion
 open CategoryTheory AlgebraicGeometry MonoidalCategory CartesianMonoidalCategory MonObj
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj
 open GlobalTheory.CatCoh GlobalTheory.Cris GlobalTheory.DeRham GlobalTheory.CechKS
@@ -101,7 +104,7 @@ theorem exists_sec_of_isNat (R : Type) [CommRing R] (X : Scheme.{0}) (s : X ⟶ 
     have := key (V' y) (i y) (hi y)
     change (CechDR.secMap (𝟙 (Sp P.B)) (V' y).1).hom (F P) =
       (CechDR.secMap (𝟙 (Sp P.B)) (V' y).1).hom (valR P.x U f) at this
-    simp only [CechDR.secMap, Scheme.Hom.appLE, Scheme.Hom.id_app, CommRingCat.hom_comp, RingHom.comp_apply] at this
+    simp only [CechDR.secMap] at this
     exact this
   exact (Scheme.ΓSpecIso (CommRingCat.of P.B)).symm.commRingCatIsoToRingEquiv.injective key2
 

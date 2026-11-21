@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.OverExtAlgebraMap
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsLocalRingOfIdem
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.UnitLemmaGroup
+import Mathlib.Tactic.ENatToNat
 open GlobalTheory.UnitLemma GlobalTheory.UnitLemma.Unr Polynomial
 
 namespace GlobalTheory.UnitLemma.Unr
@@ -19,7 +19,7 @@ theorem conj_matrix_det_isUnit : ∀ (K K' : UQ) (d : ℕ) (φ : K.E →+* K'.E)
       rw [w.repr_self]
       by_cases h : l = k
       · subst h; exact ⟨1, by simp⟩
-      · exact ⟨0, by simp [Finsupp.single_apply, h]⟩
+      · exact ⟨0, by simp [h]⟩
     obtain ⟨y, hy⟩ := h1
     obtain ⟨y', hy'⟩ := K'.c_int y
     have h2 : ∃ y : K'.O, algebraMap K'.O K'.E y = K'.c (w l) := ⟨y', by rw [← hy', hy]⟩

@@ -1,12 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.EqOfIsometricTrivShift
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeightOfRationalSectionViaDivisorStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VanishRealOfVanishInt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HomogeneousMemSpanLinearRoots
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemConeOfMem
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormsOfInduces
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Pj Formalism.BasicNotions.TH Formalism.L2.Theta ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.FD GlobalTheory.AllWt GlobalTheory.CompHt GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.Mean4 GlobalTheory.Mean4O
 open scoped ENNReal Classical
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory GlobalTheory.ArInt GlobalTheory.ProjVar GlobalTheory.TrueGeo GlobalTheory.ShFam.Pad GlobalTheory.VertForm GlobalTheory.CoverNorm
@@ -51,8 +47,8 @@ theorem num_cons_eq {num : Form (Cl p) D} (hn : IsArForm D num) (M : HermLB p) (
   congr 1
   funext j
   refine Fin.cases ?_ (fun j => ?_) j
-  · simp [Fintype.sum_option, Pi.single_apply]
-  · simp [Fintype.sum_option, Pi.single_apply]
+  · simp [Pi.single_apply]
+  · simp [Pi.single_apply]
 
 theorem num_fnB_const (hP : Hypotheses2) (hX : IsArithVar p D) {num : Form (Cl p) D} (hn : IsArForm D num)
     (N : Fin D → HermLB p) (c : ℝ) :

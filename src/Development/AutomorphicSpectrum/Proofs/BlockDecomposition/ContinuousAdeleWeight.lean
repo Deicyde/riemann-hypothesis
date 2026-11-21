@@ -1,6 +1,6 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.EisensteinSeries.SiegelEisensteinContinuation.IsEpCont
-import GroundTheory.GlobalFields.TateThesis.TateMain
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.GlobalFields.TateThesis.GlobalZetaFinite
 set_option maxSynthPendingDepth 1
 
 namespace GlobalTheory.CompanionTheory.EpConvB

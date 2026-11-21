@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.LenCob
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.IdempotentChoiceDepthZero
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.InertiaCocyclesCharBlockOtherTypePrime
 

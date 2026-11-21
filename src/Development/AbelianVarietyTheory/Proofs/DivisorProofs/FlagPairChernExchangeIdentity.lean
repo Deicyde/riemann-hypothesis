@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.GlobalHeightBoundIffAtGoodPrimes
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BracketIndepOfCofactors
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KoszulSyzygyAntisymmetricCoefficients
+import Formalism.LocalRingCardinality.DataDIV
 
 open MvPolynomial Finset Formalism.BasicNotions Formalism.BasicNotions.DV
 

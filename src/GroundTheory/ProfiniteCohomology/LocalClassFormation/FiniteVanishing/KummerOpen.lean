@@ -1,12 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.LocalClassFormationAlt
 import GroundTheory.ProfiniteCohomology.GaloisCohomology.Kummer
-import GroundTheory.ProfiniteCohomology.CohomologicalDimension.SubsingletonCohomologyOfPrimaryOfFinite
-import GroundTheory.ProfiniteCohomology.CohomologyFunctoriality.QuotientToInvariantsFunctorPreservesZeroMorphism
 import GroundTheory.ProfiniteCohomology.ClassFormations.Corestriction
-import GroundTheory.LocalFields.UnitsPowers
-import GroundTheory.LocalFields.SeparableClosure
-import GroundTheory.LocalFields.IntermediateField
 import GroundTheory.ProfiniteCohomology.TorsionDualFinite
 import GroundTheory.ProfiniteCohomology.LocalClassFormation.FiniteVanishing.Devissage
 set_option maxSynthPendingDepth 1

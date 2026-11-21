@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsDiagonalLagrangianInvariantForm
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConjMapApply
 
 open scoped TensorProduct NNReal Matrix
@@ -18,7 +16,7 @@ def conjSch {D : Type} [NormedAddCommGroup D] [NormedSpace ℝ D] :
     SchwartzMap D ℂ →SL[starRingEnd ℂ] SchwartzMap D ℂ :=
   SchwartzMap.mkCLM (𝕜 := ℂ) (𝕜' := ℂ) (σ := starRingEnd ℂ) (fun f x => star (f x))
     (fun f g x => by simp [star_add])
-    (fun a f x => by simp [smul_eq_mul, mul_comm])
+    (fun a f x => by simp [smul_eq_mul])
     (fun f => Complex.conjCLE.contDiff.comp (f.smooth ⊤))
     (fun n => ⟨{n}, 1, zero_le_one, fun f x => by
       have h : (fun x => star (f x)) = (Complex.conjLIE : ℂ ≃ₗᵢ[ℝ] ℂ) ∘ f := rfl

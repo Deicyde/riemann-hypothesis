@@ -1,4 +1,7 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.FlowMatMulVec
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.FundamentalDomainPointBound
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.IsIntegralCc
 
 namespace ReciprocityTheory.ChartRestriction.G.FD.TraceFormIndependence
 
@@ -24,16 +27,16 @@ lemma trace_re (X : Data E r) (z : E) :
     rw [← h', h]
     exact Fintype.sum_equiv (RingHom.equivRatAlgHom E ℂ).symm _ _ (fun σ => rfl)
   have hcc : ∀ σ : E →+* ℂ, ComplexEmbedding.conjugate (ComplexEmbedding.conjugate σ) = σ :=
-    fun σ => RingHom.ext fun x => by simp [ComplexEmbedding.conjugate_coe_eq]
+    fun σ => RingHom.ext fun x => by simp
   have hconj : ∑ σ ∈ X.Ψᶜ, σ z = ∑ σ ∈ X.Ψ, conj (σ z) := by
     apply Finset.sum_nbij' (fun σ => ComplexEmbedding.conjugate σ)
       (fun σ => ComplexEmbedding.conjugate σ)
     · intro σ hσ
-      simp only [Finset.mem_compl, Finset.mem_coe] at hσ ⊢
+      simp only [Finset.mem_compl] at hσ ⊢
       rw [X.cmType, hcc]
       exact hσ
     · intro σ hσ
-      simp only [Finset.mem_compl, Finset.mem_coe] at hσ ⊢
+      simp only [Finset.mem_compl] at hσ ⊢
       exact (X.cmType σ).mp hσ
     · intro σ _
       exact hcc σ
@@ -126,7 +129,7 @@ lemma eq_zero_of_indep (X : Data E r) (d : X.Ψ → ℂ)
     d τ0 = 0 := by
   classical
   have hcc : ∀ σ : E →+* ℂ, ComplexEmbedding.conjugate (ComplexEmbedding.conjugate σ) = σ :=
-    fun σ => RingHom.ext fun x => by simp [ComplexEmbedding.conjugate_coe_eq]
+    fun σ => RingHom.ext fun x => by simp
   let d' : (E →+* ℂ) → ℂ := fun σ => if hσ : σ ∈ X.Ψ then d ⟨σ, hσ⟩ else 0
   have hd' : ∀ τ : X.Ψ, d' τ.1 = d τ := fun τ => by simp [d', τ.2]
   let c : (E →+* ℂ) → ℂ := fun σ =>
@@ -148,18 +151,18 @@ lemma eq_zero_of_indep (X : Data E r) (d : X.Ψ → ℂ)
       apply Finset.sum_nbij' (fun σ => ComplexEmbedding.conjugate σ)
         (fun σ => ComplexEmbedding.conjugate σ)
       · intro σ hσ
-        simp only [Finset.mem_compl, Finset.mem_coe] at hσ ⊢
+        simp only [Finset.mem_compl] at hσ ⊢
         rw [X.cmType, hcc]
         exact hσ
       · intro σ hσ
-        simp only [Finset.mem_compl, Finset.mem_coe] at hσ ⊢
+        simp only [Finset.mem_compl] at hσ ⊢
         exact (X.cmType σ).mp hσ
       · intro σ _
         exact hcc σ
       · intro σ _
         exact hcc σ
       · intro σ hσ
-        simp only [Finset.mem_compl, Finset.mem_coe] at hσ
+        simp only [Finset.mem_compl] at hσ
         simp [c, hσ, ComplexEmbedding.conjugate_coe_eq]
     rw [h1, h2, ← Finset.sum_add_distrib, ← hb']
     exact Finset.sum_congr rfl fun σ _ => add_comm _ _

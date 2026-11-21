@@ -1,11 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasTypeVec
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.PseudoCoefficientUpqTrivial
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IntegralIndicatorProjFinSmul
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.InnerEqZeroOfMemClosureSpan
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HeckeOperatorConvolutionAndLeftTranslate
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsLocallyConstantCosetInd
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdmissibleRepHasTraceFiniteAdelicPureTensorFunct
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.AdmissibleIrreducibleTorusCharacters
 open MeasureTheory Set Filter NumberField IsDedekindDomain
 open GlobalTheory.AdelicU GlobalTheory.OpTrace GlobalTheory.Orb GlobalTheory.AutomorphicL2Unitary GlobalTheory.AutMult Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -108,8 +106,8 @@ theorem hasTrace_repOp_of_isCopyFinDS : ∀ (D : D7) (V : HSp D) (lam : D.what�
       intro z hz
       let l : W →ₗ[ℂ] ℂ :=
         { toFun := fun v => bePi (Tm v) (Tm z)
-          map_add' := fun a b => by simp [bePi, inner_add_right]
-          map_smul' := fun a b => by simp [bePi, inner_smul_right] }
+          map_add' := fun a b => by simp [bePi]
+          map_smul' := fun a b => by simp [bePi] }
       have hl : ∀ g ∈ K, l (σ g w) = l w := fun g hg => by
         have hz' : σ g z = z := mem_fixed.1 hz g hg
         show bePi (Tm (σ g w)) (Tm z) = bePi (Tm w) (Tm z)

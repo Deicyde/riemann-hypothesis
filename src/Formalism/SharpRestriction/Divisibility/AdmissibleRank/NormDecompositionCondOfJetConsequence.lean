@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.ChainOperators.CutKapD
 import Formalism.SharpRestriction.Divisibility.WeightDegreeSizes
-import Formalism.SharpRestriction.Divisibility.AdmissibleRank.PropositionATypePrimesAdmissible
 import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.ValBasic
 import Formalism.LocalRingCardinality.ColumnWeightSpreadOffTop
 import Formalism.LocalRingCardinality.IntCastDvdOfDvdIntegers

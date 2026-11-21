@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.WachLatticeTwists.LatticeDualFibres.FibreDualStable
-import Formalism.GaloisCohomology.StatementLoc
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.TraceFormulas.LatDefs
 
 open ReciprocityTheory.Gal Formalism.RepresentationBoundsCohomology.LOC

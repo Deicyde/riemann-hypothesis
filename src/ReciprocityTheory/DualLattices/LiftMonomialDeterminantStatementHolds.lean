@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.DualLattices.LiftMonomialDeterminantStatement
 import ReciprocityTheory.DualLattices.ProdEraseUpdate
-import ReciprocityTheory.DualLattices.IsLocalOfIntegers
 
 noncomputable section
 

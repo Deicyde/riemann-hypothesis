@@ -1,5 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.Columns.AtTLemmas
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.Columns.DecoFin
 
 open NumberField IsDedekindDomain Module
 

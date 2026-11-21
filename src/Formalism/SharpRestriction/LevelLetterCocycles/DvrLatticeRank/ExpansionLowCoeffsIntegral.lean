@@ -1,7 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.PolyExpand
-import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.DescentValuation
 import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.DvdOfCoeffSubstXPowNeZero
 import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.ConstantCoeffQZeroEqP
+import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.U3downPfFildRConst
 
 noncomputable section
 
@@ -283,7 +285,7 @@ theorem fact2 {ζU ζD : LL} (hU : IsPrimitiveRoot ζU PD.p) (hD : IsPrimitiveRo
     have h2 : constantCoeff (Formalism.MainNotions.DeltaInvariantLattices.Eat E π' c) = rU * rD * a₂ := by
       show constantCoeff (Polynomial.aeval (π' c) (E c)) = _
       rw [hE₁, hE₂, ← ha₂]
-      simp [hπ0, PowerSeries.algebraMap_apply]
+      simp [hπ0]
       ring
     have h3 : constantCoeff (W.q c) = (PD.p : O) := Formalism.MainNotions.N.Ln34.CrystallineExponents.constantCoeff_q_zero_eq_p W
     rw [Pi.mul_apply, map_mul, h2, h3] at h1

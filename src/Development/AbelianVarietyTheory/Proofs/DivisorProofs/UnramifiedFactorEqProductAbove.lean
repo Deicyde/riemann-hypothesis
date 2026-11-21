@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocCharEqValZpow
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TmulMemLocId
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConjugateCurvePointAdditionCompat
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ContinuousConjFin
 
 noncomputable section
 

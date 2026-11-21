@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.QuotientMetricDivisors.Statement
+import Mathlib.Analysis.CStarAlgebra.Module.Constructions
 
 open Module NumberField IsDedekindDomain
 open scoped Matrix ComplexOrder InnerProductSpace

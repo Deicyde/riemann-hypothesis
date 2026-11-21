@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.AdmissibleDesigns.TensSubsingleton
 import Formalism.AdmissibleDesigns.InvariantsEqBotIff
-import Formalism.AdmissibleDesigns.CohomZeroEquivContinuous
+import ReciprocityTheory.ReductiveGroups.TraceFormulas.LatDefs
 
 variable [hT2Core : Fact ReciprocityTheory.ChartRestriction.T2.Core]
 

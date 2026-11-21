@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.IsLocSec
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.FlagAdjacentTwistedMeasureStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.TwistedChartHolomorphicStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.TwistedChartHolomorphicAltBis

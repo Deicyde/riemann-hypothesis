@@ -1,8 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.OneMemH0WeightZero
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.NotIsCompactUnivFv
-import GroundTheory.GlobalFields.IdeleGroups.IdeleNorms
-import GroundTheory.AutomorphicForms.ReductionFinite
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicMinkowskiExistsShortRationalVectorStatement
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.QSA GlobalTheory.Published
 open Matrix
@@ -75,19 +73,19 @@ theorem continuous_ofCoords : Continuous (ofCoords : (Fin 4 → R) → ℍ[R, a,
 
 theorem continuous_star' : Continuous (star : ℍ[R, a, b] → ℍ[R, a, b]) := by
   refine continuous_induced_rng.2 (continuous_pi fun i => ?_)
-  fin_cases i <;> simp [coords, Function.comp_def] <;> fun_prop
+  fin_cases i <;> simp [coords] <;> fun_prop
 
 theorem continuous_mul' : Continuous fun p : ℍ[R, a, b] × ℍ[R, a, b] => p.1 * p.2 := by
   refine continuous_induced_rng.2 (continuous_pi fun i => ?_)
-  fin_cases i <;> simp [coords, Function.comp_def] <;> fun_prop
+  fin_cases i <;> simp [coords] <;> fun_prop
 
 theorem continuous_star_mul : Continuous fun p : ℍ[R, a, b] × ℍ[R, a, b] => star p.1 * p.2 := by
   refine continuous_induced_rng.2 (continuous_pi fun i => ?_)
-  fin_cases i <;> simp [coords, Function.comp_def] <;> fun_prop
+  fin_cases i <;> simp [coords] <;> fun_prop
 
 theorem continuous_const_mul' (c : ℍ[R, a, b]) : Continuous fun u : ℍ[R, a, b] => c * u := by
   refine continuous_induced_rng.2 (continuous_pi fun i => ?_)
-  fin_cases i <;> simp [coords, Function.comp_def] <;> fun_prop
+  fin_cases i <;> simp [coords] <;> fun_prop
 
 end GlobalTheory.QSA.FujisakiQ
 

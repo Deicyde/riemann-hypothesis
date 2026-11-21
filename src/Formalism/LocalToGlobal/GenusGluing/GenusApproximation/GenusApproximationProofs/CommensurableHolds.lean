@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GenusGluing.GenusApproximation.GlueExists
+import Formalism.HermitianLattices.HermitianLatticesProofs.LocBasic
 
 noncomputable section
 

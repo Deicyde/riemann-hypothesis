@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.Cut_BPEq
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BetaCongrRight
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutFpmDecay
 
 namespace Formalism.FourierDecayAlt.P.CutBPEq
 

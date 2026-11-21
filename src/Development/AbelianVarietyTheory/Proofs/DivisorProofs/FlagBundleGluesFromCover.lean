@@ -1,12 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ScholzeWeinsteinB
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PullFlag
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MonoPullbackOfIsOpenImmersion
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleUniqueUpToIso
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.IsRepresentableOfCover
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BcDensEqOfGram
 
 open NumberField MvPolynomial Filter Topology Formalism.BasicNotions Formalism.MainNotions Formalism.DegreeFormula GlobalTheory.FlagPoly GlobalTheory.Mean4 GlobalTheory.Mean4O GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.CovTest GlobalTheory.Published
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory GlobalTheory.ArInt
@@ -148,7 +145,7 @@ theorem FPt.map_comp {R S T : Scheme.{0}} (b : R ⟶ S) (a : S ⟶ T) (x : FPt E
   rw [fpt_map (b ≫ a) fl (Category.assoc b a g), fpt_map a fl rfl, fpt_map b _ rfl, fpt_eq_iff]
   intro c i
   refine ⟨((pcmp b a (b ≫ a) rfl).app ((fl c).F i)).symm, ?_⟩
-  simp only [pullFl_ι, ofIso_ι, Iso.symm_hom, Iso.app_inv, Iso.app_hom, Functor.map_comp, Category.assoc]
+  simp only [pullFl_ι, Iso.symm_hom, Iso.app_inv, Functor.map_comp, Category.assoc]
   rw [pcmp_assoc b a g (a ≫ g) rfl (b ≫ a ≫ g) rfl (b ≫ a) rfl (Category.assoc b a g), pcmp_nat_assoc,
     Iso.inv_hom_id_app_assoc]
 
@@ -201,7 +198,7 @@ theorem FPt.exists_glue {Z : Scheme.{0}} (𝒰 : Z.OpenCover) (x : ∀ i, FPt E 
     rw [← same_comp_iff ((pcmp (c ≫ 𝒰.f j) f (c ≫ (x j).1) w5).hom.app (E a))]
     simp only [G, ofIso_ι, Iso.symm_hom, Iso.app_inv, Functor.map_comp, Category.assoc]
     rw [← pcmp_hom_app_assoc, ← pcmp_rfl_hom_app, ← e1, ← e2]
-    simp only [← Functor.map_comp_assoc, Category.assoc, Iso.inv_hom_id_app, Category.comp_id]
+    simp only [← Functor.map_comp_assoc, Iso.inv_hom_id_app, Category.comp_id]
     exact h1
   choose fl₀ hfl₀ using fun a => exists_flag_of_cover 𝒰.f 𝒰.exists_eq (fun i => G i a) (hG a)
   refine ⟨fpt f fl₀, fun i => ((fpt_map _ fl₀ (hf i)).trans ?_).trans (x i).eta.symm⟩

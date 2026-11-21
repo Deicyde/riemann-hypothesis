@@ -1,11 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ExistsIsHaarMeasureSUJ
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.SmulOneMem
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.HarishChandraParameterDescentStatement
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExtensionPreservesPropertiesStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.LowestTypeParameterAscentStatement
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.UnitaryToSpecialUnitaryLocalStatement
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.SquareIntegrableIffExtensionStatement
 open MeasureTheory Matrix Finset Formalism.MainNotions.S Formalism.REAL Formalism.QuantumDeterminants GlobalTheory.Dec GlobalTheory.DSId GlobalTheory.DSSU
 open scoped InnerProductSpace
 

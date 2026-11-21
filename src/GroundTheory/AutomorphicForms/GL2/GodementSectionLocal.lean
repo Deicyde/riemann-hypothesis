@@ -1,6 +1,8 @@
-import Mathlib
-import GroundTheory.LocalFields.LocalZeta
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.GLnLocal
+import GroundTheory.LocalFields.LocalZetaIntegral
+import GroundTheory.LocalFields.PadicLogHom
 
 open MeasureTheory Matrix Filter Topology
 open scoped NNReal ValuativeRel
@@ -841,7 +843,7 @@ theorem localSection_boxInd_zero_of_mem {χ₁ χ₂ : Fˣ →* ℂˣ} (h₁ : C
   have hne : 1 - (((χ₁ * χ₂⁻¹) (unifUnit F) : ℂˣ) : ℂ) * (residueCard F : ℂ) ^ (-(2 * s)) ≠ 0 :=
     one_sub_quasiChar_unifUnit_mul_qpow_ne_zero (continuous_mul_inv h₁ h₂) (by simpa using hs)
   have h := congrFun (one_sub_mul_localSection_boxInd h₁ h₂ hs 0) k
-  simp only [Pi.smul_apply, smul_eq_mul, zpow_zero, mul_one, one_mul,
+  simp only [Pi.smul_apply, smul_eq_mul, zpow_zero, mul_one,
     localSection_shellInd_of_mem hu₁ hu₂ s hk] at h
   rw [localLFactor_of_isUnramified hμ]
   exact eq_inv_of_mul_eq_one_right h

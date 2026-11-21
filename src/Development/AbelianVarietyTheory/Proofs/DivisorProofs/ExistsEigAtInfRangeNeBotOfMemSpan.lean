@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.LocalToGlobal.Columns.HeckeSp
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ISupIndepEigAtOfAnyFamily
 
 open Formalism.L2.Col

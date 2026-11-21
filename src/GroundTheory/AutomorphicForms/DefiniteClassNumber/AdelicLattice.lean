@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.DefiniteClassNumber.Places
 import GroundTheory.AutomorphicForms.AdelicUnitaryGroups.LatticeCompact
 import GroundTheory.AutomorphicForms.StrongApproximationSLDense
-import GroundTheory.GlobalFields.Adele.Topology
 
 noncomputable section
 

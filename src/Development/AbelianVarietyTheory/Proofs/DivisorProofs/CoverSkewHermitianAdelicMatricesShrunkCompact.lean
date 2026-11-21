@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsLv
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsAdeleCoverModFieldShrunkCompactStatement
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.SkewHermitianAdelicCoverOfAdeleCoverStatement
 open scoped TensorProduct NNReal ENNReal Matrix
 open NumberField MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SiegelSet GlobalTheory.UAut GlobalTheory.EisLine GlobalTheory.SphEis
 open GlobalTheory.ResLine (IsHt SemiLat)
@@ -108,7 +112,7 @@ theorem cover (F E : Type) [Field F] [NumberField F] [Field E] [NumberField E] [
         hsi, hd] at e1 e2
       rw [hx1] at e2
       simp only [Matrix.add_apply, Matrix.mul_diagonal, Matrix.diagonal_mul, adMat, Matrix.map_apply,
-        Matrix.of_apply, sk, map_mul, map_sub, inclR_alg]
+        Matrix.of_apply, sk, map_mul, map_sub]
       rw [hc_def, inclR_alg, ← hh_def]
       linear_combination hh * e1 - hh * e2 - x i k * h2
 end GlobalTheory.SkewAdCover

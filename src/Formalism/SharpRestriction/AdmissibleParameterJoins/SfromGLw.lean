@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.SchurIrreducible
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Stdform
 
 noncomputable section
 
@@ -46,7 +45,7 @@ theorem aniso_of_definite {E : Type} [Field E] [NumberField E] [StarRing E] (S :
               simp [v, Matrix.reindex_apply]
           _ = τ (S.hT x x) := by
               rw [hT_frame]
-              simp [map_sum, map_mul, hτ, Complex.star_def, mul_assoc]
+              simp [map_sum, map_mul, hτ, mul_assoc]
       rw [hexp, hx0, map_zero]
     let w : Fin p ⊕ Fin q → ℂ := Matrix.mulVec (↑P⁻¹ : Matrix (Fin p ⊕ Fin q) (Fin p ⊕ Fin q) ℂ) v
     have hvw : v = Matrix.mulVec (↑P : Matrix (Fin p ⊕ Fin q) (Fin p ⊕ Fin q) ℂ) w := by
@@ -58,7 +57,7 @@ theorem aniso_of_definite {E : Type} [Field E] [NumberField E] [StarRing E] (S :
       rw [hvw, h, Matrix.mulVec_zero]
     have hcT : Formalism.UG.cT (starRingEnd ℂ) (↑P : Matrix (Fin p ⊕ Fin q) (Fin p ⊕ Fin q) ℂ) = Matrix.conjTranspose (↑P : Matrix (Fin p ⊕ Fin q) (Fin p ⊕ Fin q) ℂ) := by
       ext i j
-      simp [Formalism.UG.cT, Matrix.conjTranspose_apply, Complex.star_def]
+      simp [Formalism.UG.cT, Matrix.conjTranspose_apply]
     have hQ' : dotProduct (star w) (Matrix.mulVec (Formalism.UG.Jpq p q) w) = 0 := by
       rw [← hP, hcT, ← Matrix.mulVec_mulVec, ← Matrix.mulVec_mulVec, Matrix.dotProduct_mulVec,
         ← Matrix.star_mulVec, ← hvw]

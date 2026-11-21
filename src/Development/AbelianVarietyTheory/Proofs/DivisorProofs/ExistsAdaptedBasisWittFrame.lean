@@ -1,14 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviBlockSizesSum
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WittRankLeSkewSignature
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IsSplitChartSplitChart
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MeasureFundDomLtTop
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TripSizesSum
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsBlockEmb
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsConstAlongSingleton
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SmGL GlobalTheory.PRep GlobalTheory.SplitWeil GlobalTheory.LeviBlockExponent GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels
   GlobalTheory.UAut GlobalTheory.SiegelSet GlobalTheory.ThK.SquareIntegrability GlobalTheory.CuspBlock GlobalTheory.LFun.SplitTie
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
@@ -50,7 +43,7 @@ include hAX hBX in
 theorem proj_X (j : Fin r) : proj X Y A B (X.col j) = 0 := by
   rw [← Matrix.mulVec_single_one, proj_apply, Matrix.mulVec_mulVec (M := A) (N := X),
     Matrix.mulVec_mulVec (M := B) (N := X), hAX, hBX]
-  simp only [Matrix.one_mulVec, Matrix.zero_mulVec, Matrix.mulVec_zero, sub_zero, sub_self]
+  simp only [Matrix.one_mulVec, Matrix.zero_mulVec, Matrix.mulVec_zero, sub_self]
 
 include hAY hBY in
 theorem proj_Y (j : Fin r) : proj X Y A B (Y.col j) = 0 := by
@@ -96,7 +89,7 @@ theorem coord_fam (i : Fin r ⊕ Fin m ⊕ Fin r) :
     simp only [coord, fam, LinearMap.pi_apply, Sum.elim_inl, Sum.elim_inr, LinearMap.comp_apply,
       Matrix.mulVecLin_apply, LinearMap.proj_apply, hBXc, hAXc, hAYc, hBYc, (hWk _).1, (hWk _).2, hPX, hPY, hPW,
       map_zero, Basis.coord_apply, Basis.repr_self, Pi.single_apply, Finsupp.single_apply, Sum.inl.injEq,
-      Sum.inr.injEq, reduceCtorEq, if_false, Pi.zero_apply, Finsupp.coe_zero, LinearEquiv.map_zero] <;>
+      Sum.inr.injEq, reduceCtorEq, if_false] <;>
     simp [eq_comm]
 
 include hAX hAY hBX hBY in
@@ -127,7 +120,7 @@ theorem exists_adapted : 2 * r ≤ n ∧ ∃ C : GL (Fin n) K,
     exact (Pi.basisFun K (Fin r ⊕ Fin m ⊕ Fin r)).linearIndependent
   have h1 := hli.fintype_card_le_finrank
   have h2 := LinearMap.finrank_le_finrank_of_injective (coord_injective hAX hAY hBX hBY bW)
-  simp only [Module.finrank_fin_fun, Module.finrank_pi, Fintype.card_sum, Fintype.card_fin] at h1 h2
+  simp only [Module.finrank_pi, Fintype.card_sum, Fintype.card_fin] at h1 h2
   have hn : r + (m + r) = n := le_antisymm h1 h2
   let g : Fin r ⊕ Fin m ⊕ Fin r → Fin n := fun s => match s with
     | .inl j => ⟨j.val, by omega⟩

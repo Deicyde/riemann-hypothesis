@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.CuspFrameWeights.ConvolutionSmoothL2
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.IsProjOnOne
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.MeasureLeCardMul
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsOrthonormalBasis
@@ -111,7 +110,7 @@ theorem continuous_expU {n : ℕ} {ε : Fin n → Bool} (X : gLie ε) : Continuo
   exact h2
 
 theorem hs_eq_trace {n : ℕ} (X : Matrix (Fin n) (Fin n) ℂ) : hs X = ((X * Xᴴ).trace).re := by
-  simp [hs, Matrix.trace, Matrix.mul_apply, Complex.mul_conj, Complex.normSq_eq_norm_sq, ← Complex.ofReal_pow]
+  simp [hs, Matrix.trace, Matrix.mul_apply, Complex.mul_conj, Complex.normSq_eq_norm_sq]
 
 noncomputable def onePar (B : RowsAut) (E : gInf B) (t : ℝ) : B.I.GA := ((fun v => expU (t • E v)), 1)
 

@@ -1,8 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.HalfData
-import Development.AbelianVarietyTheory.PublishedTheorems.SiegelWeil₂.SiegelWeilUnitaryConvergent
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsCompactAdele
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsCMFamHost
+import Development.AbelianVarietyTheory.Definitions.Foundations.HermitianSpaceBaseLatticeEqFrameLattice
 
 noncomputable section
 
@@ -25,7 +25,7 @@ theorem eq_zero_of_map_eq_zero {F E A : Type} [Field F] [Field E] [Algebra F E] 
     intro i y k
     induction y using TensorProduct.induction_on with
     | zero => simp
-    | tmul a e => simp [Algebra.smul_def, mul_comm]
+    | tmul a e => simp
     | add x y hx hy => simp only [map_add, Finsupp.add_apply, hx, hy]
   apply (Algebra.TensorProduct.basis A b).repr.injective
   ext k

@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DiagPairs
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MeasureCballZpow
+import Mathlib.Order.Interval.Finset.Box
 
 noncomputable section
 

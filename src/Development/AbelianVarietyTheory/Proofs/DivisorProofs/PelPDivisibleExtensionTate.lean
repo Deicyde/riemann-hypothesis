@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsMulVal
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.CubicalWeilPairingEq
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.CubWeilOneLeft
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RationalPointSection
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiniteHopfPointsSeparate
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CubWeilEqTransport

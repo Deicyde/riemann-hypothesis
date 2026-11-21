@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LevelPointCoordinates
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.SliceInductionLevel
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.MemLevelZeroOfMemGroup
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.PrStarFst
 
 open Matrix MeasureTheory
 open scoped ComplexConjugate

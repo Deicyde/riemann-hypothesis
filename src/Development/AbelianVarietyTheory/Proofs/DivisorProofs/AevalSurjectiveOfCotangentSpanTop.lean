@@ -1,4 +1,4 @@
-import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.FinrankOfIsStandardSmoothOfRelativeDimension
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSpanSubMemSq
 open GlobalTheory
 open scoped Pointwise

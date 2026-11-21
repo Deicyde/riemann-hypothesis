@@ -1,5 +1,6 @@
-import Formalism.LocalToGlobal.CharacterGerms.IndependenceBoundRaw
-import Formalism.LocalToGlobal.CharacterGerms.RowTiePHStab
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.CharacterGerms.RowTieFB
 
 noncomputable section
 

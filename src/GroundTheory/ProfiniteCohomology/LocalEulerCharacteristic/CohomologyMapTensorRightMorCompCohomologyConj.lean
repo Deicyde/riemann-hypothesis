@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.LocalEulerCharacteristic.TwistDefs
+import GroundTheory.ProfiniteCohomology.LocalEulerCharacteristic.Descent
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

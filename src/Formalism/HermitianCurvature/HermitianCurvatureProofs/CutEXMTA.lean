@@ -1,5 +1,8 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutEXMkTopCut
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LowerParabolicCoordinates
+import Mathlib.Analysis.Matrix.PosDef
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 

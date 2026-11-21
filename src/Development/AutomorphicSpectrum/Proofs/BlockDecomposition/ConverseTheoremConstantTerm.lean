@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.AdelicGaussians.UpperRightUnipotentInvariance
 
 noncomputable section
@@ -95,7 +95,7 @@ theorem continuous_uni {X : Type*} [TopologicalSpace X] {y z : X → 𝔸[ℚ]} 
     (hz : Continuous z) : Continuous fun t => (uni 0 (y t) (z t) : G3) := by
   refine Units.continuous_iff.2 ⟨continuous_pi fun a => continuous_pi fun b => ?_,
     continuous_pi fun a => continuous_pi fun b => ?_⟩
-  · fin_cases a <;> fin_cases b <;> simp [uni, Function.comp_def] <;> first | exact continuous_const | assumption
+  · fin_cases a <;> fin_cases b <;> simp [uni] <;> first | exact continuous_const | assumption
   · show Continuous fun t => (!![1, -0, 0 * z t - y t; 0, 1, -z t; 0, 0, 1] : Matrix (Fin 3) (Fin 3) 𝔸[ℚ]) _ _
     fin_cases a <;> fin_cases b <;> simp <;> first | exact continuous_const | fun_prop
 

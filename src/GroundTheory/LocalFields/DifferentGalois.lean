@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.LocalFields.Different
 import GroundTheory.LocalFields.LowerIndexQuotient
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.MinpolyProductMap

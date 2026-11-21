@@ -1,12 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AvgFormApply
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DarbouxCoordsGoodModel
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeylElementOperatorBijectiveStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RationalDarbouxCoordinatesCompare
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SymplecticGroupGeneratedByElementary
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StandardCharacterAlmostUnramified
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedPlaneDarbouxCoordinatesExist
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConjLinApply
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenIntertwinerGoodModels
@@ -47,7 +42,7 @@ theorem exists_dbl (G : Matrix (κ ⊕ κ) (κ ⊕ κ) F) (hG : IsSymp G) :
       Matrix.mul_zero, Matrix.mul_one, Matrix.mul_neg, zero_add, add_zero, Matrix.neg_mul, Matrix.transpose_zero,
       Matrix.transpose_neg, Matrix.zero_mul, Matrix.fromBlocks_neg, Matrix.fromBlocks_add, neg_zero, neg_neg]
     rw [← Matrix.fromBlocks_zero, ← Matrix.fromBlocks_one, Matrix.fromBlocks_neg]
-    simp only [Matrix.fromBlocks_inj, neg_zero, h1, h2, h3, h4, true_and, and_true]
+    simp only [Matrix.fromBlocks_inj, neg_zero, h1, h2, h3, h4, true_and]
     refine ⟨?_, ?_⟩
     · rw [← neg_eq_zero, ← h1]; abel
     · rw [← neg_eq_zero, ← h4]; abel
@@ -285,7 +280,7 @@ theorem exists_mixedEv : GlobalTheory.FunPr.Hypotheses₂ → ∀ (F E : Type) [
     rw [Darboux.rho, hheis _ Φ hΦ, hdd, hact, e0, e0, hGe, hGe]
   have hv : ∀ (u : Fin d → AE F E) (z : Fin n ⊕ Fin n → AE F E), Matrix.vecMulVec u z =
       Matrix.fromCols (Matrix.vecMulVec (z ∘ Sum.inl) u)ᵀ (Matrix.vecMulVec (z ∘ Sum.inr) u)ᵀ := fun u z => by
-    ext i j; cases j <;> simp [Matrix.vecMulVec_apply, mul_comm]
+    ext i j; cases j <;> simp [Matrix.vecMulVec_apply]
   refine ⟨LinearMap.funLeft ℂ ℂ (fun b => glue (eps hd) 0 b) ∘ₗ U, fun Φ hΦ => slice_mem_schA (eps hd) 0 (hmaps Φ hΦ),
     fun z Φ hΦ => ?_, fun z Φ hΦ => ?_, fun l hl => ?_, fun φ hφ => ?_⟩
   · rw [← Matrix.fromCols_toCols z, Matrix.mul_fromCols, LinearMap.comp_apply, key _ _ Φ hΦ, Matrix.transpose_mul,

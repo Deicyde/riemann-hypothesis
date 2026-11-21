@@ -1,4 +1,7 @@
-import Development.WeilBound.CoreStatements.AmpleLineBundles.SpanLeOfMem
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.HeightsAndTheta.Heights.HeightsOfSets.DegreeTopEqArithDegree
+import Mathlib.RingTheory.Ideal.Quotient.HasFiniteQuotients
 
 open GroundTheory.Heights₂.Heights NumberField TensorProduct ComplexAt GlobalTheory.CompanionTheory.Ar Matrix
 open scoped BigOperators ComplexOrder

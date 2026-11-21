@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.PieriBlockIdeals.StatementLC
+import BuildAid.Leniency.Open
 import Formalism.PieriBlockIdeals.StatementLP
 import Formalism.PieriBlockIdeals.StatementLR
 

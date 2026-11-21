@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.ThickAverageLoss.Statement
 
 open Finset ArithmeticFunction

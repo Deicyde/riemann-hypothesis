@@ -1,7 +1,7 @@
-import Development.WeilBound.CoreStatements.AutomorphicKernels.LocalLanglandsExistence.KernelCond
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.AutomorphicKernels.LocalLanglandsExistence.KernelCondGlob
 import Development.WeilBound.CoreStatements.AutomorphicKernels.LocalLanglandsExistence.HasExponentMulOfIsUnram
-import Development.WeilBound.CoreStatements.AutomorphicKernels.LocalLanglandsExistence.LaurentMonomialEqOneOfCircle
 import Development.WeilBound.CoreStatements.AutomorphicKernels.LocalLanglandsExistence.KernelCondTwCircleOfRootsOfUnity
 
 noncomputable section

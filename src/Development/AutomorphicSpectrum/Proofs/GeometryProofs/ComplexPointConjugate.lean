@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ExistsPowSubMemSpanOfIsUnitModOfIsAlgClosed
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.RationalSections.ThmISt
 
 noncomputable section
 
@@ -13,7 +12,7 @@ theorem evC_conj {K : Type} {ι : K → Type} (z : (Σ k, ι k) → ℂ) (g : MR
   induction g using MvPolynomial.induction_on with
   | C a => simp [evC]
   | add p q hp hq =>
-    simp only [evC, Polynomial.map_add, map_add] at hp hq ⊢
+    simp only [evC, map_add] at hp hq ⊢
     rw [hp, hq]
   | mul_X p i hp =>
     simp only [evC, map_mul, map_X, eval_X] at hp ⊢

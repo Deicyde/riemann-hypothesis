@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousIteratedFDerivApply
+import Mathlib.Analysis.Normed.Module.HahnBanach
+import Mathlib.Tactic.Monotonicity.Lemmas
 open MeasureTheory
 
 namespace GlobalTheory.SchwClm

@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.CapelliDeterminantAndBranching
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.QuantumMinorCommutation
+import Mathlib.LinearAlgebra.Lagrange
 
 open Finset Polynomial
 
@@ -214,7 +217,7 @@ theorem isCov_D (hE : GlRel E) {η : Fin n → A} (h : IsCov E η) : IsCov E (fu
   by_cases hbc : b = c
   · subst hbc
     simp [sub_mul, Finset.sum_add_distrib, Finset.sum_sub_distrib]
-  · simp [hbc, sub_mul, Finset.sum_add_distrib, Finset.sum_sub_distrib]
+  · simp [hbc, Finset.sum_add_distrib]
 
 end ring
 
@@ -306,7 +309,7 @@ theorem eval_prod_lin {ι : Type} (S : Finset ι) (m : ι → ℂ) (u : ℂ) :
 theorem deg_prod_lin {ι : Type} (S : Finset ι) (m : ι → ℂ) :
     (∏ j ∈ S, ((Polynomial.X : ℂ[X]) + C (m j))).natDegree ≤ S.card := by
   refine (Polynomial.natDegree_prod_le _ _).trans ?_
-  simp [Polynomial.natDegree_X_add_C]
+  simp
 
 theorem basis_mul {N : ℕ} (m : Fin (N + 1) → ℂ) (i : Fin (N + 1)) :
     ∃ w : ℂ, ((Polynomial.X : ℂ[X]) + C (m i)) * Lagrange.basis Finset.univ (fun j => -m j) i =

@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.WittOnFalse
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.FormalCoboundarySmul
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SymmCocycleApplyFinsetSumStatement
 

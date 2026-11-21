@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecondChernDensity
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SmoothOnNhdOffBoundary
+import Development.AbelianVarietyTheory.Definitions.Divisors.AnalyticOnNhdFinChartIff
 open CategoryTheory AlgebraicGeometry TopologicalSpace Filter Topology MeasureTheory Matrix NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open GlobalTheory GlobalTheory.Points GlobalTheory.CxPts GlobalTheory.VB GlobalTheory.HermFrame GlobalTheory.ArInt GlobalTheory.CovTest GlobalTheory.VdmRec GlobalTheory.ArchLim
@@ -37,7 +39,7 @@ theorem smoothOn_chart_up_off_boundary : ∀ (D : D7) (A : Amb D) (N j : ℕ) (S
       (h2'.mono fun w (hw : w ∈ c.e.target ∩ c.e.symm ⁻¹' O') => ⟨hw.1, (hO₁U hw.2.1).1⟩)).add
       (h3'.mono fun w (hw : w ∈ c.e.target ∩ c.e.symm ⁻¹' O') => ⟨hw.1, hw.2.2⟩)
     refine h4.congr fun w _ => ?_
-    simp only [Function.comp_apply, Pi.add_apply, Pi.sub_apply, hP]
+    simp only [Function.comp_apply, hP]
     ring
   set O : Set (V n) := ch.e.target ∩ ch.e.symm ⁻¹' (up jm hq σ ⁻¹' (c.e.source ∩ O')) with hOdef
   have hOo : IsOpen O := ch.e.isOpen_inter_preimage_symm

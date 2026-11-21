@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GermDJet
 
 set_option autoImplicit false
@@ -185,7 +187,7 @@ theorem psTrunc_mem_orig {τ : Type} [Fintype τ] [DecidableEq τ] (m : ℕ) (g 
           | simp [Finsupp.single_apply]
         · first
           | (simp only [Finsupp.coe_add, Finsupp.coe_tsub, Pi.add_apply, Pi.sub_apply,
-              Finsupp.single_eq_of_ne h, Finsupp.single_eq_of_ne (Ne.symm h)]; omega)
+              Finsupp.single_eq_of_ne h]; omega)
           | simp [Finsupp.single_apply, h, Ne.symm h]
       rw [MvPolynomial.X, MvPolynomial.monomial_mul, mul_one, hs]
     rw [key]

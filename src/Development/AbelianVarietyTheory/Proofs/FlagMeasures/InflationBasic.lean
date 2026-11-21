@@ -1,8 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.GlobAut
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ExistsReduction
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.CongruenceNormalFiniteIndex
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.AdelicLatticeStabiliserIsCompactIsOpen
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsCountData
 
 open MeasureTheory Formalism.MainNotions.S GlobalTheory.RowLev NumberField IsDedekindDomain Matrix

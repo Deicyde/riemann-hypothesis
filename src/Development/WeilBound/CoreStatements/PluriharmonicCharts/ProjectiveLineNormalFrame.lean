@@ -1,6 +1,11 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.InFlagDomainOne
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PluriharmonicCharts.TripleDeriv
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
+import Mathlib.Analysis.Matrix.Order
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open Matrix GlobalTheory.CompanionTheory.Ar.PB
 open scoped ComplexOrder
 

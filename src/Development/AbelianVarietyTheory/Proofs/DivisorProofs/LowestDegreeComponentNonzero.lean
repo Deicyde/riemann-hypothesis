@@ -1,9 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TprodMemTensSpan
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FormExists
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NonzeroEquivariantPairingHasForm
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FischerPairingAdjointMixedLower
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockFirstActionMatrixUnitEq
 
 noncomputable section
 
@@ -30,7 +28,7 @@ theorem fockAct1_detR_pow (h : P ≤ R) (k : ℕ) (i j : Ix P Q) (hij : sameBloc
     rw [Finset.sum_eq_single j (fun b _ hb => by simp [Ne.symm hb]) (by simp)]
     simp only [and_self, if_true]
     rcases i with a | b <;> rcases j with a' | b'
-    · simp only [opR, derM, mulM, LinearMap.add_apply, LinearMap.sum_apply, Module.End.mul_apply, Derivation.map_one_eq_zero]
+    · simp only [opR, derM, mulM, LinearMap.add_apply, LinearMap.sum_apply, Module.End.mul_apply]
       simp only [Sum.inl.injEq]
       split_ifs <;> simp
     · exact absurd hij (by simp [sameBlock])

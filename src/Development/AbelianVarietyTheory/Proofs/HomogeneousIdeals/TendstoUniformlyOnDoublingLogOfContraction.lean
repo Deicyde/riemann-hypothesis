@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.DifferentiableOnOfTendstoLocallyUniformlyOn
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Metric Set Filter Asymptotics
 open scoped Topology
@@ -21,7 +25,7 @@ theorem isBigO_sub_linear_sq_of_analyticAt {f : E → F} {L : E →L[ℂ] F} (hf
   simp [FormalMultilinearSeries.partialSum, Finset.sum_range_succ, hp.coeff_zero, h0, h2]
   congr 1
   ext i
-  simp [Fin.snoc]
+  simp
 
 theorem map_zero_of_isBigO_sq {f : E → F} {L : E →L[ℂ] F}
     (h : (fun x => f x - L x) =O[𝓝 0] fun x => ‖x‖ ^ 2) : f 0 = 0 := by

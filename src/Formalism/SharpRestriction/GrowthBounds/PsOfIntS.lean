@@ -1,4 +1,7 @@
-import Formalism.LocalToGlobal.CharacterGerms.CoeffFirstPairingLinear
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.CharacterGerms.GeOfPowEqOne
+import Formalism.LocalToGlobal.CharacterGerms.RowTiePGerm
 
 noncomputable section
 

@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.CoeIntEmbEmbP
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MulCoeEqZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HomSquareZeroAdditiveStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsSquareZeroLiftLocalStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SquareZeroInclusionHomExtStatement
@@ -9,6 +7,7 @@ import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.JetScaleOfTr
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.JetOrderOneTangentDecompStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.DiagonalJetSumScaleTwoStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.JetLocalTruncKerSqAugmentStatement
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ApolarMonomial
 
 set_option autoImplicit false
 

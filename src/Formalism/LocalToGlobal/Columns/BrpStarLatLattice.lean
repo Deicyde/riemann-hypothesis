@@ -1,11 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.SummandSlopeOfThreeLemmas
 import Formalism.LocalToGlobal.Columns.BzdConjTTranspose
 import Formalism.LocalToGlobal.Columns.SliceIntegralDeltaNeBot
-import Formalism.LocalToGlobal.Columns.CoefficientsModP
-import Formalism.LocalToGlobal.Columns.DecoFin
 import Formalism.MonomialMeanResidues.ZerosPerVariable
-import Formalism.LocalToGlobal.GlobalTheory.HLatOpsP
 
 open NumberField IsDedekindDomain Module
 open scoped Matrix ComplexOrder
@@ -257,7 +255,7 @@ theorem brp_gram_star (hc : ∀ (φ : K →+* ℂ) (x : K), φ (star x) = starRi
   ext a c
   simp only [Formalism.HN.gramPl, Matrix.of_apply, Matrix.map_apply, Formalism.HermitianLatticesTheory.majAt, Formalism.HermitianLatticesTheory.fcoord, Formalism.HermitianLatticesTheory.vecAt,
     inv_one, Matrix.one_mulVec, Pi.basisFun_repr, Pi.star_apply, hc, map_sum, map_mul]
-  simp [Complex.star_def]
+  simp
 
 variable [IsTotallyComplex K]
 

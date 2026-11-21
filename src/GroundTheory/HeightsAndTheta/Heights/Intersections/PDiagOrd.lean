@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsDiagDiv
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsDiagOffUnit
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsDiagOrdOne

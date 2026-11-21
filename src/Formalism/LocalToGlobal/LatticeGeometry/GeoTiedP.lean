@@ -1,5 +1,8 @@
-import Formalism.LocalToGlobal.LatticeGeometry.GeoTiedN
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.LatticeGeometry.GeometryDefinitions.ClsSum
+import Formalism.LocalToGlobal.LatticeGeometry.GeoTied
+import Formalism.LocalToGlobal.LatticeGeometry.Inhabited
 
 noncomputable section
 

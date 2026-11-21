@@ -1,9 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.QuotientHomNonvanishingBound
-import Formalism.SharpRestriction.LevelLetterCocycles.DataNLoc
-import Formalism.WeaklyAdmissibleFiltrations.StatementTor
 import ReciprocityTheory.BasicDefinitions.AdRep
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.PowerSeriesOneAddConstMulXMulInv
+import Mathlib.Order.Interval.Finset.Box
+import Mathlib.Topology.Order.Hom.Esakia
 
 noncomputable section
 

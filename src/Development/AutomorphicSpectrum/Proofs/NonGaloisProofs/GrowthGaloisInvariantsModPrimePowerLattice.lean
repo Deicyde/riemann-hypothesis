@@ -1,8 +1,5 @@
-import Mathlib
-import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
-import Formalism.LocalRingCardinality.AdicCompletionLocal.LocTied
-import Formalism.SharpRestriction.LevelLetterCocycles.ChainRows
-import Development.AutomorphicSpectrum.Definitions.NonGaloisLines.TopLine
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.NonGaloisProofs.GoodOAdicCompleteCompactBasisStatement
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.ExistsSmulMemBis
 open NumberField IsDedekindDomain Formalism Formalism.ConjugateSelfDual Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.MainNotions Formalism.MainNotions.N Formalism.WeaklyAdmissibleFiltrations Module GlobalTheory.CompanionTheory.LocDual
@@ -20,7 +17,7 @@ theorem card_quot_pow {O : Type} [CommRing O] [IsDomain O] (ϖ : O) (hϖ : ϖ �
     have : Subsingleton (O ⧸ Ideal.span {ϖ ^ 0}) := by
       rw [pow_zero, Ideal.span_singleton_one]
       exact Ideal.Quotient.subsingleton_iff.mpr rfl
-    simp [Nat.card_of_subsingleton (0 : O ⧸ Ideal.span {ϖ ^ 0})]
+    simp
   | succ n ih =>
     let f : O →+ O := AddMonoidHom.mulLeft (ϖ ^ n)
     have hle : Submodule.toAddSubgroup (Ideal.span {ϖ ^ (n + 1)} : Ideal O) ≤

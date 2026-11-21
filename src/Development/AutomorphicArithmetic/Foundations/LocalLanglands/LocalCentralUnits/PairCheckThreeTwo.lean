@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.LocalLanglands.RecTTransport
 import Development.AutomorphicArithmetic.Foundations.LocalLanglands.LocalCentralUnits.PinFld
+import Development.AutomorphicArithmetic.Foundations.LocalLanglands.LocalCentralUnits.PinChar
 
 open Finset
 

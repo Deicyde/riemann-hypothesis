@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.WeightAlgebra
-import Formalism.FilteredPoleLength.ReducedBasisBounds.GradedFreeLengthFiltered
-import Formalism.FilteredPoleLength.ReducedBasisBounds.BetaSesquilinearity
+import Formalism.LogFactorialIndices.StatementIdx
 
 noncomputable section
 

@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.SeparableMatrixStability.MapEta
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.SeparableMatrixStability.PlGen
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.FreeProf
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.GenExt

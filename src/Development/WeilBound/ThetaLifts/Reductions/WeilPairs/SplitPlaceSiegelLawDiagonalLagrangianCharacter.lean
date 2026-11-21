@@ -1,7 +1,4 @@
-import Mathlib
-import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.WeilPairData.ImportsAlt
-import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.WeilPairData.WeilDatumDoubledTargetSiegelRuleImports
-import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.SplitPlaceSiegelLawDiagonalLagrangianCharacterIm
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.CAFInvol
 import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.ExistsForm
 open scoped TensorProduct Matrix

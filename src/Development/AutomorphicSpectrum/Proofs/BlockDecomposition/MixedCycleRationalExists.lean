@@ -1,11 +1,10 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsSmoothHermCombLine
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RestrictedFormNonzeroOnGenericPoint
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HermRepMetricSmooth
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PointIdealMultiprojectivePrime
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IsDiscreteValuationRingStalkGeneric
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HermitianO1PullbackFubiniStudyMetric
-import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.ArithModel
 
 set_option autoImplicit false
 
@@ -283,9 +282,9 @@ theorem existsRat : ExistsRat := by
   have hfm := mhMul hF₁ (isMultiHomog_mono (ptChart (i (genericPoint X))) fun k => (δ k).toNat)
   have hgm := mhMul hG₁ (isMultiHomog_mono (ptChart (i (genericPoint X))) fun k => (-δ k).toNat)
   have ef : fnAt i _ hc (F₁ * mono (ptChart (i (genericPoint X))) fun k => (δ k).toNat) = fnAt i _ hc F₀ := by
-    simp only [fnAt, map_mul, dehomog_mono, eF, map_one, mul_one]
+    simp only [fnAt, map_mul, dehomog_mono, eF, mul_one]
   have eg : fnAt i _ hc (G₁ * mono (ptChart (i (genericPoint X))) fun k => (-δ k).toNat) = fnAt i _ hc G₀ := by
-    simp only [fnAt, map_mul, dehomog_mono, eG, map_one, mul_one]
+    simp only [fnAt, map_mul, dehomog_mono, eG, mul_one]
   have he : fnI i _ hb (u b _).val * (r (fun _ => b) : X.functionField) ≠ 0 :=
     mul_ne_zero ((u b _).isUnit.map (fnI i _ hb)).ne_zero (r _).ne_zero
   have hF₀ : fnAt i _ hc F₀ ≠ 0 := hq ▸ mul_ne_zero he hG₀

@@ -1,5 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.MollifiedIntegrability.GWickB
+import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.MollifiedIntegrability.GWickA
+import Mathlib.Analysis.Matrix.Hermitian
+import Mathlib.LinearAlgebra.Matrix.DotProduct
+import Mathlib.RingTheory.SimpleRing.Principal
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -78,9 +84,9 @@ theorem evX_pderiv_phiP (ε : Fin m → Bool) (c t : ℝ) (b : Matrix (Fin n) (F
     (a : Fin m) (j : Fin n) :
     evX (pderiv (a, j, false) (phiP ε c t b)) x = -∑ k, (Amat ε c t b a) k j * star (x a k) := by
   simp only [phiP, map_neg, map_sum, pderiv_mul, pderiv_C, pderiv_X, Pi.single_apply]
-  simp only [evX, map_neg, map_sum, map_mul, Prod.ext_iff]
-  simp only [mul_zero, mul_one, zero_mul, Pi.single_apply, Prod.mk.injEq, and_true, Bool.false_eq_true, and_false,
-    if_false, map_zero, add_zero, zero_add]
+  simp only [evX, map_neg, map_sum, Prod.ext_iff]
+  simp only [zero_mul, and_true,
+    zero_add]
   rw [neg_inj, Finset.sum_eq_single a]
   · refine Finset.sum_congr rfl fun k _ => ?_
     rw [Finset.sum_eq_single j]

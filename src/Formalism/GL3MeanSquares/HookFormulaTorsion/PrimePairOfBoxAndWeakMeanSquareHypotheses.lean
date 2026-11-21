@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.PrimePairOfBoxAndWeakMeanSquareHypotheses
-import Formalism.GL3MeanSquares.HookFormulaTorsion.WeightedVonMangoldtSumIdentity
 import Formalism.GL3MeanSquares.HookFormulaTorsion.NumericalZeroDensityBound
 
 open Filter

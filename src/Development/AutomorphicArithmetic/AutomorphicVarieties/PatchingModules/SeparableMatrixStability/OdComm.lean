@@ -1,4 +1,9 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.SeparableMatrixStability.MapEta
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.PairedDualFirstOrderDualMatrixSpace
+import Mathlib.LinearAlgebra.Eigenspace.Triangularizable
+import Mathlib.LinearAlgebra.Eigenspace.Zero
+import Mathlib.RingTheory.TotallySplit
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open IsLocalRing Matrix Filter UpperTheory.V.Alg UpperTheory.V.W UpperTheory.V.AlgebraTools UpperTheory.V.Pa
 
@@ -87,8 +92,8 @@ theorem UpperTheory.V.Pa.od_comm :
   rw [Matrix.zero_apply]
   by_cases hi : (i : ℕ) < a <;> by_cases hj : (j : ℕ) < a
   · exact hZ' i j (by simp [hi, hj])
-  · simp only [e, hi, hj, ↓reduceIte, mul_one, mul_zero, one_mul, zero_mul] at h5
+  · simp only [e, hi, hj, ↓reduceIte, mul_zero, one_mul] at h5
     exact h5.symm
-  · simp only [e, hi, hj, ↓reduceIte, mul_one, mul_zero, one_mul, zero_mul] at h5
+  · simp only [e, hi, hj, ↓reduceIte, mul_one, zero_mul] at h5
     exact h5
   · exact hZ' i j (by simp [hi, hj])

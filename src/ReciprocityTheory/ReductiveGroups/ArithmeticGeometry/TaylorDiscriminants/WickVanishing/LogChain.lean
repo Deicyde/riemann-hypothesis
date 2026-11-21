@@ -1,5 +1,11 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.Models.FiniteGeneration.FiniteGenerationProofs.SolveV
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.FormalGroupWitt.FormalGroupWittProofs.SolveV
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Rat.Star
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Tactic.Polynomial.Basic
 
 set_option autoImplicit false
 
@@ -98,8 +104,7 @@ theorem pderiv_aeval [Fintype σ] (a : σ → MvPowerSeries τ k) (p : MvPolynom
   next p s0 hp =>
     rw [map_mul, MvPolynomial.aeval_X, Derivation.leibniz, hp, smul_eq_mul, smul_eq_mul, Finset.mul_sum]
     simp only [Derivation.leibniz, MvPolynomial.pderiv_X, Pi.single_apply, smul_eq_mul, map_add, map_mul,
-      MvPolynomial.aeval_X, add_mul, Finset.sum_add_distrib, mul_ite, mul_one, mul_zero, map_one, map_zero,
-      ite_mul, zero_mul, Finset.sum_ite_eq, Finset.sum_ite_eq', Finset.mem_univ, if_true]
+      MvPolynomial.aeval_X, add_mul, Finset.sum_add_distrib, mul_ite, mul_one, mul_zero]
     simp only [apply_ite (MvPolynomial.aeval a), map_zero, ite_mul, zero_mul, Finset.sum_ite_eq,
       Finset.mem_univ, if_true, mul_assoc]
     try ring
@@ -159,8 +164,8 @@ theorem pderiv_comm (u v : τ) (g : MvPowerSeries τ k) : pderiv k u (pderiv k v
   by_cases huv : u = v
   · subst huv
     rfl
-  · have h1 : (n + Finsupp.single u 1 : τ →₀ ℕ) v = n v := by simp [Finsupp.single_apply, huv]
-    have h2 : (n + Finsupp.single v 1 : τ →₀ ℕ) u = n u := by simp [Finsupp.single_apply, Ne.symm huv]
+  · have h1 : (n + Finsupp.single u 1 : τ →₀ ℕ) v = n v := by simp [huv]
+    have h2 : (n + Finsupp.single v 1 : τ →₀ ℕ) u = n u := by simp [Ne.symm huv]
     rw [h1, h2, add_right_comm n]
     ring
 

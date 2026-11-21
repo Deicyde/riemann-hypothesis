@@ -1,6 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.DetLowW
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutHLNf
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutHBPts
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ProperDomP
 
 open Matrix MeasureTheory

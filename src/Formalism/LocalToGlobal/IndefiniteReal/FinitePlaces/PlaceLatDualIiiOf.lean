@@ -1,8 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.PlaceDualASt
-import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.TwoSplitIdem
-import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.LatMod
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.SplitInt
-import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.CharLem
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.InfPartSplitIdem
 
 noncomputable section

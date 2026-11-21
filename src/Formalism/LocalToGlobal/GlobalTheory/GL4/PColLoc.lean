@@ -1,6 +1,8 @@
-import Mathlib
-import Formalism.SharpRestriction.GlobalSchurBounds.SlopeMaxOpenOfHookTwoLeV
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.GL4.PTenFrames
+import Formalism.LocalToGlobal.Divisibility.CoefMod
+import Formalism.SharpRestriction.GlobalSchurBounds.FlipTwoThree
 
 open Module NumberField IsDedekindDomain MvPolynomial
 open scoped Matrix

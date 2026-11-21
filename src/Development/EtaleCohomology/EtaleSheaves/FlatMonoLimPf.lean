@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.NbIsoPf
+import Mathlib.AlgebraicGeometry.Morphisms.FlatMono
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry

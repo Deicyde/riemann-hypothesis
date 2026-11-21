@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalMassType.CongruenceLiftOfBasis
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalMassType.IdxTop
 

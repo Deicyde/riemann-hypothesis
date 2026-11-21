@@ -1,5 +1,6 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.TLPlanAsm
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BasicLift
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.StatementTL
 
 namespace Formalism.FourierDecayAlt.TL
 

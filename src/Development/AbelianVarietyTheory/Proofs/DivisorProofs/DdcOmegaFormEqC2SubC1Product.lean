@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.LineSCShortExact
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsPosFrameQuotIn
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SubquotientCurvatureStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExtTraceChartIndepStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContDiffOnExtTraceStatement
@@ -10,7 +9,6 @@ import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ChernAtTwoEqStateme
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OfValuesMulOfValuesStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FirstChernIsometricEq
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RankTwoFlagRationalSections
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DetMetricShortExactIsoIsometric
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ChernOneEqNegDdcLogDet
 
 set_option autoImplicit false

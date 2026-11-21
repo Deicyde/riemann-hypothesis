@@ -1,4 +1,6 @@
-import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.ColumnWordReductionOfFour
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.ValuationLowestDegreeMapFractionField
 
 noncomputable section
 

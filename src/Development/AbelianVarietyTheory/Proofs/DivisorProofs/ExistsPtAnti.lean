@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlockMatrixTwoByTwoFinTranspose
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzCoordinatesInInfiniteFamily
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviChartBlockDiagonalAdjointStatement
+import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.SiegelParabolicUnnMatrixBlockUpperTriangular
 
 noncomputable section
 
@@ -47,7 +48,7 @@ theorem mat_inv_weyl {w : StdUnn.G D n} (hw : StdUnn.mat w = StdUnn.blk4 0 1 (-1
     rw [← StdUnn.LeftInvSect.mat_mul, inv_mul_cancel, StdUnn.LeftInvSect.mat_one]
   have h2 : (StdUnn.blk4 0 1 (-1) 0 : Mx D (n + n) (n + n)) * StdUnn.blk4 0 (-1) 1 0 = 1 := by
     rw [StdUnn.Model.submatrix_fromBlocks_mul, ← StdUnn.Model.block_matrix_one]
-    simp only [mul_zero, zero_mul, mul_one, add_zero, zero_add, mul_neg, neg_zero, neg_neg]
+    simp only [mul_zero, mul_one, add_zero, zero_add, mul_neg, neg_zero, neg_neg]
   rw [← Matrix.mul_one (StdUnn.mat w⁻¹), ← h2, ← hw, ← Matrix.mul_assoc, h1, Matrix.one_mul]
 
 theorem zmul {a b c : ℕ} (y : Mx D b c) : ((0 : Mx D a b) ⬝ y : Mx D a c) = 0 := Matrix.zero_mul y

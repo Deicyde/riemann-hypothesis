@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.UnitLemmaGroup
+import Mathlib.RingTheory.Ideal.Quotient.Index
 open GlobalTheory.UnitLemma Polynomial
 
 namespace GlobalTheory.UnitLemma

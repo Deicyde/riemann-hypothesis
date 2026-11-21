@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutLimENF
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutDec
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.LimitOfModuleForms
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutERCap
 
 namespace Formalism.FourierDecayAlt.P.CutBP

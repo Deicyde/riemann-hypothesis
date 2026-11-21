@@ -1,11 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.LanglandsSquareIntegrable
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPurelyImaginaryElement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsHermNDSmulSkewForm
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsSmoothModerateOfIsAutFunSm
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.SiegelSet GlobalTheory.UAut GlobalTheory.ThK.SquareIntegrability
@@ -66,7 +61,7 @@ theorem unipRad_map (J : Matrix (Fin n) (Fin n) E) {k : E} (hk : k ≠ 0) {r : �
   ext x
   obtain ⟨y, rfl⟩ := (toJ (σ := σ) J hk).surjective x
   rw [Set.mem_image_iff_of_inverse (f := (toJ J hk).toMonoidHom) (g := (toJ J hk).symm) (fun a => by simp) (fun a => by simp)]
-  simp only [Set.mem_setOf_eq, MulEquiv.coe_toMonoidHom, MulEquiv.symm_apply_apply]
+  simp only [Set.mem_setOf_eq, MulEquiv.symm_apply_apply]
   have hm : matHom (AF F) σ J (toJ J hk y) = matHom (AF F) σ (k • J) y := rfl
   have hu : IsUnit (inclR (F := F) (AF F) k) := (IsUnit.mk0 k hk).map _
   have ha : adMat F (Formalism.UG.cT (σ : E →+* E) C * k • J) = inclR (F := F) (AF F) k • adMat F (Formalism.UG.cT (σ : E →+* E) C * J) := by

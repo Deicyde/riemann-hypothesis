@@ -1,7 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.AevalDiagMonomial
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.CIndFrFix
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ThetaSwapFirstTwo
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.WickVanishing.GaugeBilinearTermEqNegDoubleSum
+import Formalism.LocalToGlobal.ProjectiveLattices.ThGerm
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.TaylorDiscriminants.ChartChg
 
 set_option autoImplicit false
 
@@ -149,7 +150,7 @@ theorem formal_group_linear_second (G : FGLaw S d) (i j : Fin d) :
         obtain rfl | rfl : q1 = 0 ∨ q1 = 1 := by fin_cases q1 <;> simp
         · simp
         · have hq : q2 ≠ j := fun h => he (by rw [h])
-          simp [pt, MvPowerSeries.coeff_X, Finsupp.single_left_inj one_ne_zero, hq, Ne.symm hq]
+          simp [pt, MvPowerSeries.coeff_X, Finsupp.single_left_inj one_ne_zero, Ne.symm hq]
       · have h0 := order_prod_lemma_5 _ hσ e (Finsupp.single ((0 : Fin 1), j) 1) (by omega)
         first
           | simp only [h0, smul_zero]
@@ -204,7 +205,7 @@ theorem formal_group_linear_first (G : FGLaw S d) (i j : Fin d) :
         obtain rfl | rfl : q1 = 0 ∨ q1 = 1 := by fin_cases q1 <;> simp
         · simp [pt, MvPowerSeries.coeff_X, Finsupp.single_left_inj one_ne_zero]
         · have hq : q2 ≠ j := fun h => he (by rw [h])
-          simp [pt, MvPowerSeries.coeff_X, Finsupp.single_left_inj one_ne_zero, hq, Ne.symm hq]
+          simp [pt, MvPowerSeries.coeff_X, Finsupp.single_left_inj one_ne_zero, Ne.symm hq]
       · have h0 := order_prod_lemma_5 _ hσ e (Finsupp.single ((0 : Fin 2), j) 1) (by omega)
         first
           | simp only [h0, smul_zero]
@@ -260,7 +261,7 @@ private theorem coeff_psTrunc_lemma_2 {κ : Type} [Fintype κ] [DecidableEq κ] 
     (x : κ →₀ ℕ) : coeff x (psTrunc n f) = if x.degree ≤ n then MvPowerSeries.coeff x f else 0 := by
   unfold psTrunc
   rw [coeff_sum]
-  simp only [coeff_monomial, Finset.sum_ite_eq', Finset.sum_ite_eq]
+  simp only [coeff_monomial, Finset.sum_ite_eq']
   by_cases h : x.degree ≤ n
   · rw [if_pos (mem_degLE_lemma h), if_pos h]
   · have h' : x ∉ degLE n := by
@@ -325,9 +326,9 @@ theorem sil_inj {i l i0 l0 : Fin d} : sil i l = sil i0 l0 ↔ i = i0 ∧ l = l0 
     have h2 := DFunLike.congr_fun h ((1 : Fin 2), l)
     constructor
     · by_contra hne
-      simp [sil, Finsupp.single_apply, hne, Ne.symm hne] at h1
+      simp [sil, hne] at h1
     · by_contra hne
-      simp [sil, Finsupp.single_apply, hne, Ne.symm hne] at h2
+      simp [sil, hne] at h2
   · rintro ⟨rfl, rfl⟩
     rfl
 
@@ -400,7 +401,7 @@ open Formalism.MainNotions.ModuliIntegralCharts.H1.CIndFrExp1
 
 theorem eval_pair_bilinear {τ : Type} (M : Fin d → Fin d → S) (u v : Fin d → MvPolynomial τ S) :
     ev2 (bil M) u v = ∑ i, ∑ l, C (M i l) * (u i * v l) := by
-  simp [ev2, bil, map_sum, map_mul, aeval_C, aeval_X, algebraMap_eq]
+  simp [ev2, bil, map_sum, map_mul, algebraMap_eq]
 
 theorem lead_bil {P : MvPolynomial (Fin 2 × Fin d) S} {m : ℕ} (hm : 2 ≤ m)
     (fF : Fin d → MvPolynomial (Fin 3 × Fin d) S)
@@ -458,7 +459,7 @@ theorem coeff_linR (Ab B : Fin d → Fin d → S) (i0 l0 : Fin d) :
     by_cases h : i = i0 ∧ j = l0
     · rw [if_pos (sil_inj.2 h), if_pos h, mul_one]
     · rw [if_neg (fun h' => h (sil_inj.1 h')), if_neg h, mul_zero]
-  simp only [PairEvaluation.lin, xs, Finset.sum_mul, Finset.mul_sum, coeff_sum, key]
+  simp only [PairEvaluation.lin, xs, Finset.mul_sum, coeff_sum, key]
   rw [Finset.sum_eq_single i0 (fun i _ hi => Finset.sum_eq_zero fun l _ => Finset.sum_eq_zero fun j _ => by simp [hi]) (by simp)]
   refine Finset.sum_congr rfl fun l _ => ?_
   rw [Finset.sum_eq_single l0 (fun j _ hj => by simp [hj]) (by simp), if_pos ⟨rfl, rfl⟩]
@@ -529,7 +530,7 @@ theorem psIn_act_sub_mem (φ : Fin d → PS S 1 d) (hφ : ∀ i, MvPowerSeries.c
   congr 1
   all_goals first
     | rfl
-    | simp [PairEvaluation.lin, map_sum, rename_X, rename_C]
+    | simp [PairEvaluation.lin, map_sum, rename_X]
 
 end Act
 

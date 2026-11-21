@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.GL4.PLemTSpan
+import Formalism.LocalToGlobal.GlobalTheory.GL4.PLemTGeo
 
 noncomputable section
 

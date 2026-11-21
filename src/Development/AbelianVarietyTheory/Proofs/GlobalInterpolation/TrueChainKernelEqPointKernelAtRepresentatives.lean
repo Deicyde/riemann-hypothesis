@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.MoveStep
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.KmapOfOkOfVecP
+import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.JetStepEqZeroExample
+import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.IntAtOfLocTop
 
 noncomputable section
 

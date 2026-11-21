@@ -1,5 +1,18 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.MollifiedIntegrability.GaussS
+import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.MollifiedIntegrability.ClsBoundAlt
+import Mathlib.LinearAlgebra.Matrix.DotProduct
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Algebra.MvPolynomial
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -21,7 +34,7 @@ theorem herm_isHermitian (y : E n) : (herm y).IsHermitian := by
 theorem gramX_isHermitian (ε : Fin m → Bool) (x : Fin m → Fin n → ℂ) : (gramX ε x).IsHermitian := by
   ext i j
   simp only [gramX, Qp, Qb, evX, conjTranspose_apply, map_sub, map_sum, map_mul, eval_X, star_sub, star_sum,
-    star_mul', star_star]
+    star_mul']
   simp only [if_true, Bool.false_eq_true, if_false]
   congr 1 <;> (refine Finset.sum_congr rfl fun a _ => ?_; rw [star_star, mul_comm])
 
@@ -189,7 +202,7 @@ theorem key (hI : IntegP) (hW : Wick) (hR : Rot) (ε : Fin m → Bool) {c : ℝ}
           intro j
           by_cases hj : j = k
           · subst hj; simp; omega
-          · simp [Finsupp.single_apply, Ne.symm hj]
+          · simp [Ne.symm hj]
         have hsum' : d'.sum (fun _ e => e) + 1 = N := by
           rw [← hd, hdd, Finsupp.sum_add_index' (fun _ => rfl) (fun _ _ _ => rfl)]
           simp [Finsupp.sum_single_index]; ring
@@ -208,7 +221,7 @@ theorem key (hI : IntegP) (hW : Wick) (hR : Rot) (ε : Fin m → Bool) {c : ℝ}
             have hle : Finsupp.single ((a, j, false) : Fin m × Fin n × Bool) 1 ≤ d' := by
               intro l; by_cases hl : l = (a, j, false)
               · subst hl; simp; omega
-              · simp [Finsupp.single_apply, Ne.symm hl]
+              · simp [Ne.symm hl]
             have e2 : d' = Finsupp.single ((a, j, false) : Fin m × Fin n × Bool) 1 +
                 (d' - Finsupp.single (a, j, false) 1) := by rw [add_comm, tsub_add_cancel_of_le hle]
             have : (d' - Finsupp.single (a, j, false) 1).sum (fun _ e => e) + 1 = d'.sum (fun _ e => e) := by

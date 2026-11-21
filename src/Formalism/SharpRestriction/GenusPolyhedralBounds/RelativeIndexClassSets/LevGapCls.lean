@@ -1,8 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GenusPolyhedralBounds.RelativeIndexClassSets.LevGapFacts
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.ClassSet
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Afsplit
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Stdform
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Levelaf
 
 noncomputable section
 

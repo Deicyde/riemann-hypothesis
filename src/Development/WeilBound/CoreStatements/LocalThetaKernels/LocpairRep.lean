@@ -1,7 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.LocalThetaKernels.LocpairAlg
-import Development.WeilBound.CoreStatements.LocallyConstantCoinvariants.PfDictAd
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.GlobalUnitScalingHaarProductFormula
-import Development.AutomorphicSpectrum.Proofs.MembershipProofs.BoxFunMemSB
 
 noncomputable section
 

@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.PartsOrth
-import Formalism.LocalToGlobal.IndefiniteReal.HeckeTupleStatement
 import Formalism.LocalToGlobal.GlobalTheory.DivPassage
 
 open Module NumberField IsDedekindDomain

@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlkLat
-import Formalism.LocalToGlobal.InertKernelTheory.StatementAlg
+import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.IsAdmissibleFlagPairOfUnitriangularLeftAutomorph
 open NumberField Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Ker Formalism.L2.Th1.H GlobalTheory.BaseVacuum
 open Classical
 
@@ -39,7 +39,7 @@ theorem blockVacuum_coordinate_eq_coordinateEquiv_numbering (D : D7) (cc : Ideal
     simp only [xv, LinearEquiv.apply_symm_apply]
     by_cases h : w' = w
     · subst h; simp
-    · simp [Pi.single_apply, h]
+    · simp [h]
   have hA : ((Formalism.L2.Th1.F.area B.L : ℝ) : ℂ) ≠ 0 := by
     exact_mod_cast (Formalism.L2.Th1.F.areaPos_thm B.L).ne'
   have hI := B.isomOK (blk D k z) (emb4 D (xv B w))

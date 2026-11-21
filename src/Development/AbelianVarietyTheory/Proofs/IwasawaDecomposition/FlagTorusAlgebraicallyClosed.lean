@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PtFJQOver
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsEquivComp
-import Formalism.LocalToGlobal.ProjectiveLattices.CompSplitPfD
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.HolomorphicFamilies.NoBase
 
 set_option autoImplicit false

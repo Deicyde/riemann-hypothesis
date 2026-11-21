@@ -1,9 +1,12 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.NonemptyCuspFrame
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsConjFsBasisOfUnitary
 import Development.AbelianVarietyTheory.Proofs.GenericRegularity.ProdSplitConjugateEmbeddings
 import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.NormBcharMulNfacRmul
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.BoundedSectionAlgebra
+import Development.AbelianVarietyTheory.Definitions.Divisors.BarCompSubsetClosure
+import Development.AbelianVarietyTheory.Proofs.GenericRegularity.NormDiagEqNormBdiag
 
 set_option autoImplicit false
 

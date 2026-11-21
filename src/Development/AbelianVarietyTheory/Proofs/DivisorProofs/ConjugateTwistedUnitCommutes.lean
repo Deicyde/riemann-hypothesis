@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.PointsNonemptyUnitaryRankOne
 open Matrix NumberField GlobalTheory.LKTrip GlobalTheory.LKRes GlobalTheory.LKMid GlobalTheory.LKCount GlobalTheory.LKCx
 open scoped TensorProduct Classical
@@ -35,7 +35,7 @@ theorem unit_conj_form_props {p : ℕ} [Fact p.Prime] (G : HTGroup p) (β Y c : 
   · have h2 : (Y : G.C) * (u * β * sh G u) * sh G Y = S * (u * β * sh G u) := by
       calc (Y : G.C) * (u * β * sh G u) * sh G Y
           = u * (((c : G.C) * Y * u) * β * sh G ((c : G.C) * Y * u)) * sh G u := by
-            simp only [shm, mul_assoc, hA, hB, hB', mul_one]
+            simp only [shm, mul_assoc, hA, hB, mul_one]
         _ = S * (u * β * sh G u) := by
             rw [h1, hS, ← mul_assoc, ← Algebra.commutes s u]; simp only [mul_assoc]
     have e1 : (Y : G.C) * (u * β * sh G u * bi) = S * ((u * β * sh G u) * (shYi * bi)) := by

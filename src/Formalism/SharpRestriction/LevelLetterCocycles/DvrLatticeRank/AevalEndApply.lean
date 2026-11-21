@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.LevConstOfEv
-import Formalism.SharpRestriction.LevelLetterCocycles.DvrLatticeRank.ModelFPfB
-import Formalism.SharpRestriction.LevelLetterCocycles.FrobeniusPowUniformizerFactorisation
 
 noncomputable section
 
@@ -55,7 +55,7 @@ private theorem gammaA_letE_eq_letE (g : W.Gam) (c : ZMod n) : W.γA g (letE c :
   unfold letE
   by_cases h : i = c
   · subst h; simp
-  · simp [Pi.single_apply, h]
+  · simp [h]
 
 theorem twA_pow_letE (uE' : LetA O n) (h' : ℕ) (c : ZMod n) (k : ℕ) (a : LetA O n) :
     (twA W uE' h' ^ k) ((letE c : LetA O n) * a) = (letE c : LetA O n) * (twA W uE' h' ^ k) a := by
@@ -166,7 +166,7 @@ theorem ev_aeval_twA (c : ZMod n) (ζ : LL) (Eπ : LetA O n) (h' : ℕ)
     unfold ev
     split_ifs
     · first
-      | (simp only [map_smul, smul_mul_assoc, PowerSeries.coeff_smul, Algebra.smul_def]; done)
+      | (simp only [Algebra.smul_def]; done)
       | (rw [map_smul, smul_mul_assoc, PowerSeries.coeff_smul, Algebra.smul_def])
       | (simp [Algebra.smul_def, mul_assoc]; done)
     · simp

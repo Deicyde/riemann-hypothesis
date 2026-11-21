@@ -1,5 +1,5 @@
-import Mathlib
-import ReciprocityTheory.AnalyticForms.PotentialTheory.PshShiftA
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.PshRegMax
 import GroundTheory.HeightsAndTheta.Heights.Regularisation.PChartLeviThGe
 import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.StLemmaEWeight

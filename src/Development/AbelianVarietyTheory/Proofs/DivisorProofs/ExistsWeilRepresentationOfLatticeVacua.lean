@@ -1,11 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IsHeisTrivial
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.SumOpTransversal
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.HeisenbergIntertwiningSumsCompEqIndex
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.NormalizedHeisenbergIntertwinerComp
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsIntertwinerHeisenbergCocycleOfFixedVector
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsWeilRepresentationHeisenberg
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.SpanHeisenbergTranslatesVacuumEqTop
 
 open Classical GlobalTheory.FinWeil
 open scoped BigOperators
@@ -178,7 +172,7 @@ private theorem isHeis_sum_map_eq_zero_of_sum_eq_zero {R X M : Type} [CommRing R
     _ = W (ρ x0) (L u) := by
         rw [map_sum, ← map_sum]
         congr 1
-        simp only [u, map_sum, map_smul]
+        simp only [map_smul]
     _ = 0 := by rw [hu, map_zero, map_zero]
 
 open Classical in

@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.TraceIsometryWeights.StatementB
 import Formalism.ThetaLogCoordinates.TraceIsometryWeights.SchurTraceProofs.HomRelationHolds
 import Formalism.ThetaLogCoordinates.TraceIsometryWeights.SchurTraceProofs.InvInt
+import Formalism.PolynomialDimension.MultinomialDepth.MonoCount
 
 namespace Formalism.InvariantFactorPaths.PW
 
@@ -136,7 +139,7 @@ theorem QQ_id (hNat : InvNat) (G₁ : GlW K U n) (G₂ : GlW K V n) (S : Finset 
   have htr : ∀ i, LinearMap.trace K U ((b.coord i).smulRight y) = b.coord i y := by
     intro i
     rw [LinearMap.trace_eq_matrix_trace K b, Matrix.trace]
-    simp [LinearMap.toMatrix_apply, Finsupp.single_apply]
+    simp
     simp [Matrix.vecMulVec_apply, Module.Basis.repr_self, Finsupp.single_apply]
   have key : ∀ i, Psi G₁ G₂ S l ((b.coord i).smulRight (θ y)) (b i) = (b.coord i y / (k : K)) • θ (b i) := by
     intro i

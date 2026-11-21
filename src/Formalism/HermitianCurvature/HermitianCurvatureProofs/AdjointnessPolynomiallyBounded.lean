@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementB
+import Mathlib.Algebra.Ring.IsFormallyReal
 
 open Matrix MeasureTheory Filter Topology
 open scoped ComplexConjugate ENNReal
@@ -98,22 +100,22 @@ theorem dilation_big_cell_formula : Formalism.FourierDecayAlt.B.DilBigCell := by
   beta_reduce
   split_ifs
   all_goals try first
-    | (exfalso; (try simp only [Fin.ext_iff, Fin.val_mk] at *); omega)
+    | (exfalso; (try simp only [Fin.ext_iff] at *); omega)
     | rfl
     | (rw [one_mul, mul_one])
     | exact (congrArg (· * (1 : ℂ)) (one_mul _)).trans (mul_one _)
     | (simp; done)
     | (have e : (i : ℕ) - (r + k) = r - (j : ℕ) := by
-          (try simp only [Fin.ext_iff, Fin.val_mk] at *); omega
+          (try simp only [Fin.ext_iff] at *); omega
        rw [e]
-       try simp only [Fin.val_mk]
+       try simp only
        push_cast
        simp only [inv_pow, inv_inv]
        ring)
     | (have e1 : r - (i : ℕ) = (j : ℕ) - (r + k) := by
           (try simp only [Fin.ext_iff, Fin.val_mk] at *); omega
        have e2 : r - (2 * r + k - (j : ℕ)) = (j : ℕ) - (r + k) := by omega
-       simp only [Fin.val_mk, e1, e2, star_mul', star_ofReal_eq]
+       simp only [e1, e2, star_mul', star_ofReal_eq]
        push_cast
        ring)
 
@@ -133,7 +135,7 @@ theorem dilation_mem_group : Formalism.FourierDecayAlt.B.DilMem := by
   all_goals (try simp only [star_ofReal_eq_self, star_one, mul_one, one_mul, mul_zero, zero_mul, mul_neg])
   all_goals try first
     | rfl
-    | (exfalso; (try simp only [Fin.ext_iff, Fin.val_mk] at *); omega)
+    | (exfalso; (try simp only [Fin.ext_iff] at *); omega)
     | (rw [show (j : ℕ) - (r + k) = r - (i : ℕ) by omega, ← Complex.ofReal_mul,
           mul_inv_cancel₀ (hp _), Complex.ofReal_one])
     | (rw [show (i : ℕ) - (r + k) = r - (j : ℕ) by omega, ← Complex.ofReal_mul,

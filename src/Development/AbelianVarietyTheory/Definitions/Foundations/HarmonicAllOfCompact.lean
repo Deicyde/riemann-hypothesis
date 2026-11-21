@@ -1,6 +1,6 @@
-import Mathlib
-import Formalism.LocalRingCardinality.DataTheta
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.IsFockIPOfFockData
+import Mathlib.Analysis.InnerProductSpace.l2Space
 
 noncomputable section
 namespace GlobalTheory.FockAlg.Model
@@ -63,13 +63,13 @@ theorem not_mem_harm2 :
   intro h
   have h1 := h (Eab (.inr 0) (.inl 0)) (by
     intro a b hab
-    rcases a with a | a <;> rcases b with b | b <;> simp_all [Eab, sameBlock, Matrix.single_apply])
+    rcases a with a | a <;> rcases b with b | b <;> simp_all [Eab, sameBlock])
   have hom : (X (.inl 0, .inl 0) * X (.inr 0, .inl 0) : Pol 1 1 1 0).IsHomogeneous 2 :=
     (isHomogeneous_X _ _).mul (isHomogeneous_X _ _)
   unfold minusPart at h1
   rw [finsum_eq_single _ 0] at h1
   · rw [homogeneousComponent_of_mem hom, fockAct1_Eab] at h1
-    simp [omE, raiB, lowB, linePos, pderiv_X, Pi.single_apply] at h1
+    simp [omE, raiB, lowB, linePos, pderiv_X] at h1
   · intro d hd
     rw [homogeneousComponent_of_mem hom, if_neg (by omega)]; simp
 
@@ -163,8 +163,7 @@ theorem intw_vac : Intw (charMod 1 0 (1 / 2)) (charMod 1 0 (1 / 2)) vac ∧ vac 
   refine ⟨⟨fun Z => ?_, fun Z => ?_⟩, fun h => ?_⟩
   · refine (basisMonomials _ ℂ).ext fun α => ?_
     rw [mat_eq Z]
-    simp only [coe_basisMonomials, LinearMap.comp_apply, map_smul, LinearMap.smul_apply, cartan1,
-      vac_monomial]
+    simp only [coe_basisMonomials, LinearMap.comp_apply, map_smul, LinearMap.smul_apply, cartan1]
     erw [vac_monomial]
     split_ifs with e
     · subst e
@@ -173,8 +172,7 @@ theorem intw_vac : Intw (charMod 1 0 (1 / 2)) (charMod 1 0 (1 / 2)) vac ∧ vac 
     · simp
   · refine (basisMonomials _ ℂ).ext fun α => ?_
     rw [mat_eq Z]
-    simp only [coe_basisMonomials, LinearMap.comp_apply, map_smul, LinearMap.smul_apply, cartan2,
-      vac_monomial]
+    simp only [coe_basisMonomials, LinearMap.comp_apply, map_smul, LinearMap.smul_apply, cartan2]
     erw [vac_monomial]
     split_ifs with e
     · subst e

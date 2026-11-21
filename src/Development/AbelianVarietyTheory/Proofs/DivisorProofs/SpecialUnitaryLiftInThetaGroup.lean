@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ImportsRestFurther
 import Development.AbelianVarietyTheory.Definitions.Foundations.ClassMassEqSumOfBijective
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.EmbGLMemRealSU
 open NumberField Formalism.BasicNotions Formalism.MainNotions Formalism.L2 Formalism.L2.DIV Formalism.IndefR.Links Formalism.IndefR.FWT GlobalTheory.CovTop
 open scoped TensorProduct
 
@@ -28,12 +29,12 @@ theorem key {F E : Type} [Field F] [NumberField F] [Field E] [Algebra F E]
     | add a b ha hb => simp only [map_add, ha, hb]
   ext a b
   have e := hs'.2 (Pi.single b 1) (Pi.single a 1)
-  simp only [GlobalTheory.AdLat.hermA, Matrix.mulVec_single, mul_one] at e
+  simp only [GlobalTheory.AdLat.hermA, Matrix.mulVec_single] at e
   simp only [Matrix.mul_apply, Formalism.UG.cT, JR, inclR, Matrix.transpose_apply, Matrix.map_apply, hsg, Finset.sum_mul]
   simp only [MulOpposite.op_one, one_smul, Matrix.col_apply, Matrix.transpose_apply, Pi.single_apply, ite_mul, one_mul,
     zero_mul] at e
   simp only [apply_ite (GlobalTheory.AdLat.sg (FiniteAdeleRing (𝓞 F) F) c), map_one, map_zero, mul_ite, mul_one, mul_zero,
-    Finset.sum_ite_irrel, Finset.sum_ite_eq', Finset.sum_ite_eq, Finset.mem_univ, if_true, Finset.sum_const_zero] at e
+    Finset.sum_ite_irrel, Finset.sum_ite_eq', Finset.mem_univ, if_true, Finset.sum_const_zero] at e
   simp only [RingHom.coe_coe, AlgHom.toRingHom_eq_coe, Algebra.TensorProduct.includeRight_apply]
   refine Eq.trans ?_ e
   exact Finset.sum_congr rfl fun x _ => Finset.sum_congr rfl fun i _ => by ring

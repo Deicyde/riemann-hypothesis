@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.ConcavityEquidistribution
 import Formalism.LogVandermondeBounds.LogVandermondeProofs.GammaIntegralPolynomialBound
+import Mathlib.Analysis.Real.Pi.Bounds
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.Topology.Sheaves.Presheaf
 
 namespace Formalism.HermitianLattices.TraceIntegrality
 

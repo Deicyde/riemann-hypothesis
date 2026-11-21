@@ -1,9 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Statements.GeometryStatements.NonemptyEquivOfCardHom
 import Development.AutomorphicSpectrum.ParallelStatements.ParallelGeometry.TensorOrderReduction
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.CharacterSectionMultiplicative
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.BtOrderValueEval
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.TorusPointOverFractionField
+import Mathlib.RingTheory.PiTensorProduct
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 

@@ -1,4 +1,6 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.LieGeometryGrowth.FNonneg
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.LieGeometryGrowth.PairFactsAlt
 
 noncomputable section
 
@@ -71,7 +73,7 @@ private theorem lie_one_eq_zero (u : Sm E a) (hu : ∀ t g, u.1 (GlobalTheory.Un
   have hc : ∀ t, infGL E a (c t) = GlobalTheory.UnitaryBC.splitCentre E a t := fun _ => rfl
   have hval : ∀ t : ℝ, toL (c t).val = Complex.exp t • oneL E a := fun t => by
     ext i j w
-    by_cases h : i = j <;> simp [c, expU, toL, oneL, h, Matrix.scalar_apply, Matrix.one_apply, Matrix.diagonal_apply]
+    by_cases h : i = j <;> simp [c, expU, toL, oneL, h, Matrix.scalar_apply]
   have h0 : c 0 = 1 := Units.ext (by
     have h := hval 0
     rw [Complex.ofReal_zero, Complex.exp_zero, one_smul] at h

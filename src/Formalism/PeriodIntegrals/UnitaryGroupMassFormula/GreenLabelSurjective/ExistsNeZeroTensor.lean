@@ -1,5 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PadicSubsetSums.CentralIdempotents.IsConstituent
+import Mathlib.Algebra.Category.ModuleCat.Projective
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.LinearAlgebra.PiTensorProduct.Dual
 
 open Polynomial CategoryTheory Formalism.IrreducibleCountingLemmas.TYPES
 

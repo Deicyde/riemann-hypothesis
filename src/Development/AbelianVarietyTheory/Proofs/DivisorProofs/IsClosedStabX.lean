@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.JacqExists
+import Mathlib.MeasureTheory.Group.ModularCharacter
+import Mathlib.MeasureTheory.Measure.Haar.MulEquivHaarChar
 
 noncomputable section
 

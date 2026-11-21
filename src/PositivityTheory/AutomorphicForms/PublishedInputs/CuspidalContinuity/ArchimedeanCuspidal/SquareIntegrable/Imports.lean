@@ -1,4 +1,7 @@
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.SquareIntegrable.SSmooth
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.LocalFields.LocalZeta
+import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.AdFormOf
 
 noncomputable section
 
@@ -43,7 +46,7 @@ theorem inner_eq (ψ : AddChar F Circle) (hψ : IsStd ψ) (y c : F) (hy : y ≠ 
   rw [modulus_of_ne_zero hy]
   by_cases h : ord y ≤ 0
   · rw [if_pos (htriv.2 h), if_pos h, hvol]
-    simp only [NNReal.coe_zpow, NNReal.coe_natCast, Complex.ofReal_one, smul_eq_mul]
+    simp only [NNReal.coe_zpow, NNReal.coe_natCast, Complex.ofReal_one]
     rw [Complex.real_smul]
     push_cast
     rw [_root_.zpow_neg, inv_inv]

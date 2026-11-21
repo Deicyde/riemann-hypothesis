@@ -1,4 +1,4 @@
-import GroundTheory.GlobalFields.HasseNorm
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.IdeleGroups.LocalNormsEverywhere
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.FerreroWashingtonIndex.CycRepApply
 

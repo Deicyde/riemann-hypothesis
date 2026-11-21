@@ -1,8 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGCoreGTRRotCut
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.NFRadRedA
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.TwoByOneBlock
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.SumDualVectorEqZeta
-import Formalism.RealPlaceAnalysis.RealPlaceTaylor.CartanInvolutionConjTransposeMul
 
 open Formalism.REAL Formalism.QuantumDeterminants Formalism.FourierDecayAlt
 open scoped ContDiff
@@ -115,9 +113,9 @@ theorem hs_apply (p i m : Fin (2 * r + k + 1)) :
     (Hpk k r * Matrix.single p p (1 : ℂ)) i m = if m = p then Hpk k r i p else 0 := by
   rw [Matrix.mul_apply, Finset.sum_eq_single p]
   · by_cases hm : m = p
-    · subst hm; simp [Matrix.single_apply]
-    · simp [Matrix.single_apply, Ne.symm hm, hm]
-  · intro l _ hl; simp [Matrix.single_apply, Ne.symm hl]
+    · subst hm; simp
+    · simp [Ne.symm hm, hm]
+  · intro l _ hl; simp [Ne.symm hl]
   · intro h; exact absurd (Finset.mem_univ p) h
 
 theorem hpk_single (p : Fin (2 * r + k + 1)) (hp : r ≤ p.val ∧ p.val ≤ r + k) :

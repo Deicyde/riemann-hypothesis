@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.LocalToGlobal.CharacterGerms.ValuationChoiceHypothesis
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.LevelsUsedBalancedValueOrbitSums
 
 open Formalism.L2.FormalSeriesBounds Formalism.IncomingBounds Formalism.UnitaryBoundIntegral

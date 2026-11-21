@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.AffineOpenChartCompStructureEqSpMap
-import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.ExistsUniqueLiftSpecOfIsLocalizationAway
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsLeftInverseOfFibrewiseInjectiveStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsNormalMvPolynomialOfIsNormalStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.AffineChartOfLeftInverseMatrixStatement
@@ -291,7 +290,7 @@ theorem exists_closure (O : Type) [CommRing O] [IsDedekindDomain O] [CharZero O]
     (fun k => ⟨U k.1 k.2 ⊓ p₁ ⁻¹ᵁ (ch.χ k.1).opensRange, by
       rw [hU, ← union_inter s Em D k.1]
       ext y
-      simp only [Set.mem_inter_iff, TopologicalSpace.Opens.coe_inf, Scheme.Hom.coe_opensRange]
+      simp only [Set.mem_inter_iff, TopologicalSpace.Opens.coe_inf]
       constructor
       · rintro ⟨⟨h1, h2⟩, h3⟩; exact ⟨h1, h3, h2⟩
       · rintro ⟨h1, h3, h2⟩; exact ⟨⟨h1, h2⟩, h3⟩⟩)

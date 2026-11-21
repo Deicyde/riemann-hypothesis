@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.BinomialRatio.FockZeroRight
-import Formalism.SharpRestriction.GrowthBounds.BinomialRatio.FactorsOfPerturb
+import Mathlib.RingTheory.LocalProperties.Reduced
 
 noncomputable section
 

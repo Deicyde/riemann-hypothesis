@@ -1,6 +1,6 @@
-import Development.DiscreteGroups.GlobalIrreducibility.DzBigDef
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.CohomologicalCsdTempered
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.LocalLanglands.IsRecTOfIsRec
+import Formalism.LocalToGlobal.NormalizedHeckeFactors.TypesDefs
 
 set_option synthInstance.maxHeartbeats 200000
 

@@ -1,6 +1,16 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.DegExp
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SemiabelianSchemes.PrecompleteBases.Torus2GammaBijective
+import Mathlib.AlgebraicGeometry.Morphisms.SchemeTheoreticallyDominant
+import Mathlib.AlgebraicGeometry.Morphisms.WeaklyEtale
+import Mathlib.AlgebraicGeometry.Sites.Fpqc
+import Mathlib.AlgebraicGeometry.ValuativeCriterion
+import Mathlib.CategoryTheory.ExtremalEpi
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PowerSeries.Inverse
+import Mathlib.RingTheory.PowerSeries.Substitution
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SemiabelianSchemes.PrecompleteBases.PsaRos
 
 open CategoryTheory CategoryTheory.Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out
@@ -95,7 +105,7 @@ lemma units_family_trivial {B : Over (Spec (CommRingCat.of K))} [GrpObj B] [IsPr
     simp
   have h2 : ev.comp c = AlgHom.id K L := by
     ext a
-    simp [hev, c, PowerSeries.algebraMap_apply]
+    simp [hev, c]
   have hX : j X ≠ 0 := fun h => X_ne_zero (hj (h.trans (map_zero j).symm))
   let u : Fˣ := Units.mk0 (j X) hX
   obtain ⟨b, hb⟩ := point_extend (K := K) (V := L⟦X⟧) (Φ F u)

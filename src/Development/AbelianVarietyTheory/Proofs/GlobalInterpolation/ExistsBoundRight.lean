@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.LogDerivLFunctionStrip
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ImportsMore
+import Mathlib.NumberTheory.LSeries.Nonvanishing
 open Complex DirichletCharacter ArithmeticFunction MeasureTheory Filter Topology
 
 namespace GlobalTheory.GoodHeight

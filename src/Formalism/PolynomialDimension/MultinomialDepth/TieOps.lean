@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PolynomialDimension.MultinomialDepth.PartnerM
 import Formalism.MahlerMeasure.MahlerMeasureProofs.WeightSpaceDimensionMonotone
 import Formalism.MahlerMeasure.MahlerMeasureProofs.GamInt
@@ -25,7 +27,7 @@ theorem cas_hw {μ : Fin r → ℤ} {x : V} (h : G.IsHW μ x) : G.Cas x = ((GlW.
     · subst hab
       rw [hd, map_smul, hd, smul_smul, Int.cast_mul]
     · have hc := G.comm a b b a x
-      simp only [if_true, eq_self_iff_true] at hc
+      simp only [if_true] at hc
       rw [hr a b hlt, map_zero, sub_zero] at hc
       rw [hc, hd, hd, ← sub_smul, Int.cast_sub]
     · have hba : b < a := lt_of_le_of_ne (not_lt.mp hlt) (Ne.symm hab)
@@ -80,7 +82,7 @@ private theorem cas_wt_lemma_2 {U : Submodule K V} (hU : G.Stable U) {μ : Fin r
       rw [hd, map_smul, hd, smul_smul, Int.cast_mul, sub_self]
       exact zero_mem _
     · have hc := G.comm a b b a v
-      simp only [if_true, eq_self_iff_true] at hc
+      simp only [if_true] at hc
       have e : G.E a b (G.E b a v) - (((μ a - μ b : ℤ)) : K) • v = G.E b a (G.E a b v) := by
         rw [Int.cast_sub, sub_smul, ← hd a, ← hd b, ← hc]
         abel
@@ -532,7 +534,7 @@ theorem frst_isF (m : σ →₀ ℕ) : ∀ v, frst fs m v ≠ 0 → fs v := by
 theorem ltr_isL (m : σ →₀ ℕ) : ∀ v, ltr fs m v ≠ 0 → ¬ fs v := by
   intro v hv h
   unfold ltr at hv
-  simp [Finsupp.filter_apply, h] at hv
+  simp [h] at hv
 
 noncomputable def ext (φ : MvPolynomial σ K →ₗ[K] MvPolynomial σ K) : MvPolynomial σ K →ₗ[K] MvPolynomial σ K :=
   (basisMonomials σ K).constr K (fun m => φ (monomial (frst fs m) 1) * monomial (ltr fs m) 1)
@@ -815,7 +817,7 @@ theorem slc_pol (L : Letters N) (j0 : ℕ) (m : Fin N × Fin r →₀ ℕ) {x : 
       refine Finset.sum_congr rfl fun c _ => ?_
       simp [frst, Finsupp.filter_apply, fsj, hi]
     · refine Finset.sum_eq_zero fun c _ => ?_
-      simp [frst, Finsupp.filter_apply, fsj, hi]
+      simp [frst, fsj, hi]
   · simp at hde
 
 theorem isF_of_polLz (L : Letters N) (j0 : ℕ) {y : MvPolynomial (Fin N × Fin r) ℚ_[p]}
@@ -851,7 +853,7 @@ theorem mul_ltr_pol (L : Letters N) (j0 : ℕ) {g : MvPolynomial (Fin N × Fin r
   split_ifs at h1 with hi
   · rw [h1]
     have h3 : ∑ c, ltr (fsj N r j0) m' (i, c) = 0 :=
-      Finset.sum_eq_zero fun c _ => by simp [ltr, Finsupp.filter_apply, fsj, hi]
+      Finset.sum_eq_zero fun c _ => by simp [ltr, fsj, hi]
     rw [h3, add_zero]
   · rw [h1, zero_add, ← h2]
     refine Finset.sum_congr rfl fun c _ => ?_

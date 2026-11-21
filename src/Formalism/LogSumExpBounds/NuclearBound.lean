@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.LogSumExpBounds.StatementD
+import Mathlib.Analysis.Matrix.Spectrum
 
 namespace Formalism.NuclearRankWeightBounds.D
 

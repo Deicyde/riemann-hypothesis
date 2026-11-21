@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.RealObj
 
 noncomputable section
@@ -51,7 +52,7 @@ theorem rank_one_smul_isometry (a b : ℂ) (A : V ≃ₗᵢ[ℂ] V) (B : V' ≃�
   ext x
   have key : ⟪B w, x⟫_ℂ = ⟪w, B.symm x⟫_ℂ := by
     rw [← B.inner_map_map w (B.symm x), LinearIsometryEquiv.apply_symm_apply]
-  simp [TermOp.rk1, inner_smul_left, smul_smul, key, map_smul]
+  simp [TermOp.rk1, smul_smul, key, map_smul]
   try ring_nf
 
 theorem OO_equiv {G : Type*} [Group G] [MeasurableSpace G] [MeasurableMul G] (μ : Measure G) [μ.IsMulLeftInvariant]

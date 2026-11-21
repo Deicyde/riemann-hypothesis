@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsPairingStdP
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchrodingerTranslationSeminormBoundStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchrodingerSmallTranslationContinuityStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchrodingerInvariantOperatorTranslateStatement

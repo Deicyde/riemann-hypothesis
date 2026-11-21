@@ -1,6 +1,4 @@
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.GaloisFamilyLocalConditionStatement
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.CohomologicalCsdTempered
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.HeckeOpen
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.EqOfEigen
 
 set_option synthInstance.maxHeartbeats 200000

@@ -1,12 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousOfMemSchA
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsHaarOfIsCompact
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsClosedAdelicLatticeClosureStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RelativelyCompactStabilizerStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryAdelicGroupTopology
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepresentationPreservesSchwartz
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EvaluationTriplePeriodCaseAStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EvaluationTriplePeriodCaseASecondStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EvaluationTriplePeriodCaseAThirdStatement
@@ -79,7 +72,7 @@ theorem continuous_weilOp_cone : GlobalTheory.ThK.KP → ∀ (F E : Type) [Field
     have hm : om (k, 1) Ψ ∈ schA F _ := hsp.pres _ _ hΨ
     rw [hint _ (GlobalTheory.HeisSchA.rho_mem_schA G.M B.ψ hstd _ _ hm), hsp.impl g _ _ hm, hact l,
       ← Module.End.mul_apply, ← map_mul, Prod.mk_mul_mk, mul_one]
-  simp only [hF, LinearMap.smul_apply, Pi.smul_apply, smul_eq_mul, mul_assoc, integral_const_mul]
+  simp only [hF, Pi.smul_apply, smul_eq_mul, mul_assoc, integral_const_mul]
   refine continuous_const.mul ?_
 
   haveI := GlobalTheory.AdelicUnitaryTop.secondCountable_adele F

@@ -1,5 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormsAtOfNorms
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.DegFrame
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsAlgAtlasAtlasOf
 
 set_option autoImplicit false
 

@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AbelianSchemeLaws.FirstCohomologyVanishesSpecOfIsLocalRing
-import Development.AbelianVarietyTheory.Definitions.Uniformization.ExistsInKNeOne
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.CubWeilOneLeft
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.CubWeilOfGen
 import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.OverPointsExtOfInjective
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsFiniteEtaleLatticeTorsionHom

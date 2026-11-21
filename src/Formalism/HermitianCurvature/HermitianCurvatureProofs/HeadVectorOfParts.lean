@@ -1,6 +1,7 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.HeadTypesAtOfWeight
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.PolynomialHeadTypes
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CompactCoefficientAppend
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.UnipotentLevelZeroEqOne
 
 noncomputable section
 
@@ -56,7 +57,7 @@ theorem head_vector_of_parts : PBI.HeadVecOfParts := by
     have hb : b = Fin.last _ := Fin.ext (by have := b.isLt; simp only [Fin.val_last]; omega)
     subst ha hb
     rw [← PBI.zetaL_eq_zhat, hζ]
-    simp [D.ptMatN, D.ptEntry, hr]
+    simp [D.ptMatN, D.ptEntry]
   have hγGG : 0 < Q.GGl P.k (P.r - P.r) (p.T.bs P.r).z (p.T.bs P.r).z' γ₀ := by
     show 0 < Complex.normSq (Q.zetaL P.k (P.r - P.r) (p.T.bs P.r).z (p.T.bs P.r).z' (Fin.last _) γ₀) -
       Tz P.k (P.r - P.r) (p.T.bs P.r).z * Tz P.k (P.r - P.r) (p.T.bs P.r).z'

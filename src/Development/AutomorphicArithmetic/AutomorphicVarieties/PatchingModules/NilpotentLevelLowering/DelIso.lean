@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.NilpotentLevelLowering.ActUVariableEqPow
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.IwIwQuot
 

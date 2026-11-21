@@ -1,5 +1,7 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.RepVVAeval
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.ArcGamLiftCore
+import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.InFPOfMul
 
 noncomputable section
 

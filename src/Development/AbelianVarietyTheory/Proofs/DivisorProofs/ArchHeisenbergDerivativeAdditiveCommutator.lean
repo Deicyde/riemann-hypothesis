@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockMap
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
+import Mathlib.Analysis.Calculus.FDeriv.Symmetric
 open scoped TensorProduct Matrix Classical GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels
 open NumberField Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.BasicNotions.TH GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.FockAlg GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.RealLift
 
@@ -22,7 +23,7 @@ noncomputable def trPair (w : κ → mixedEmbedding.mixedSpace F) :
   map_add' a b := by
     simp only [Pi.add_apply, add_mul, Finset.sum_add_distrib, map_add, Complex.ofReal_add]
   map_smul' c a := by
-    simp [smul_mul_assoc, ← Finset.smul_sum, Complex.real_smul]
+    simp [← Finset.smul_sum, Complex.real_smul]
 
 lemma trPair_apply (w y : κ → mixedEmbedding.mixedSpace F) :
     trPair w y = ((Algebra.trace ℝ (mixedEmbedding.mixedSpace F) (∑ i, y i * w i) : ℝ) : ℂ) := rfl
@@ -33,7 +34,7 @@ lemma trPair_add (w w' y : κ → mixedEmbedding.mixedSpace F) :
 
 lemma trPair_smul (r : ℝ) (w y : κ → mixedEmbedding.mixedSpace F) :
     trPair (r • w) y = (r : ℂ) * trPair w y := by
-  simp [trPair_apply, mul_smul_comm, ← Finset.smul_sum]
+  simp [trPair_apply, ← Finset.smul_sum]
 
 lemma hasFDerivAt_trPair (w x : κ → mixedEmbedding.mixedSpace F) :
     HasFDerivAt (fun y => trPair w y) (LinearMap.toContinuousLinearMap (trPair w)) x :=

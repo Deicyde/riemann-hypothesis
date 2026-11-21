@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DerivCompM
+import Mathlib.Tactic.Polynomial.Basic
 
 open GlobalTheory.Nef
 
@@ -42,6 +43,6 @@ theorem firstOrder_isJet : ∀ (A B R : Type) [CommRing A] [CommRing B] [CommRin
   · intro f
     simp
   · intro f
-    simp [coeff_C, coeff_C_mul, coeff_X]
+    simp [coeff_C]
 
 end GlobalTheory.Nef.PathJet

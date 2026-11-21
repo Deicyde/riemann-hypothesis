@@ -1,10 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutSE2
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.PBFVpic
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.PBFVstep
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.PBFVnice
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BigCellZetaMinors
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutFpmDecay
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.HermMulVecMulVec
 
 open MeasureTheory Filter Topology
 open scoped Matrix ComplexConjugate ContDiff

@@ -1,7 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJAFFStableAdjIntCut
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJAFFStableAdjCont
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.TriangleInequalityAtPlace
-import Formalism.FormalDegreeBessel.FinalG
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.AdjointLeibnizExpansion
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.BetaSesquilinearity
 
 open Formalism.REAL Formalism.QuantumDeterminants Formalism.FourierDecayAlt MeasureTheory Filter Topology
 

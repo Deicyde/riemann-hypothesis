@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Open
 import CompanionTheory.HarishChandraModules.BesselParameterIntegrals.BesselOrbitConvolutions.AtFormAdmOneOfSteps
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.DiscreteSeriesFormOneReduction
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.L2NormScaling
 
 open MeasureTheory Matrix
 open scoped InnerProductSpace ENNReal ComplexConjugate

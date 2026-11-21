@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.PairingIndexBounds.OrthogonalChartLevels.IsOrthCo
 import Formalism.LocalToGlobal.Columns.RecLevel
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.AlgebraMapApply

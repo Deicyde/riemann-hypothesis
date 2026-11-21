@@ -1,4 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.CartanFactorisation.ExistsBeta
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HoweDualityReal
+import Development.WeilBound.ThetaLifts.CartanFactorisation.RadOfZero
+import Development.WeilBound.ThetaLifts.CartanFactorisation.Unimod
+import Development.WeilBound.ThetaLifts.ConeHypotheses.PureEqPureA
 
 noncomputable section
 

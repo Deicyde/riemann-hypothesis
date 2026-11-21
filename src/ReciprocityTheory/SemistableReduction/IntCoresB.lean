@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.SemistableReduction.IntCoresA
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.MeasureTheory.Measure.RegularityCompacts
+import Mathlib.Topology.UniformSpace.Uniformizable
 
 noncomputable section
 
@@ -60,7 +64,7 @@ theorem blockPoly_claim (hSJ : SJStatement) (n : ℕ) : ∀ (k : ℕ) (a : Fin k
     have hHm : Measurable H := hcont.measurable.comp e2.symm.measurable
     have hsymm : ∀ z' w, e2.symm (z', w) = Fin.cons w z' := by
       intro z' w
-      simp [e2, e, MeasurableEquiv.piFinSuccAbove_symm_apply, Fin.insertNth_zero']
+      simp [e2, e, MeasurableEquiv.piFinSuccAbove_symm_apply]
       rfl
     have hH : ∀ z' w, H (z', w) = F (Fin.cons (spherePoint w) (fun b => spherePoint (z' b))) := by
       intro z' w

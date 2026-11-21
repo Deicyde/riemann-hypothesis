@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReducedBases.LatDefs
 import Development.AbelianVarietyTheory.Definitions.ThetaMetrics.ExistsEventuallyNormRiemannThetaTermLe
+import Mathlib.Data.Int.Star
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 

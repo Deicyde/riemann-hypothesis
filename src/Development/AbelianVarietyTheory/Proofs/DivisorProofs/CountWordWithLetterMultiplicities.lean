@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.HasLevelStd
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasQIff
 
 open NumberField UpperHalfPlane GlobalTheory.HilbFam GlobalTheory.QFam
 open scoped Classical MatrixGroups nonZeroDivisors

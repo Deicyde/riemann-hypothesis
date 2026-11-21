@@ -1,8 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsFlatSecRankZero
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsNumberFieldPoint
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.FlatSecInhabited
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.MemSuppOnIffIdemMulOfNatural
+import Mathlib.Data.Nat.GCD.Prime
 
 set_option synthInstance.maxHeartbeats 400000
 

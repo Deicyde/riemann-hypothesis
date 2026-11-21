@@ -1,5 +1,6 @@
-import Formalism.GL3MeanSquares.GenusMeanAsymptotics.JacobiCharacterSums.PNTExplDefs
-import Formalism.LandauZeroFreeBounds.SiegelWalfiszAPOfSiegelLower
+import BuildAid.Leniency.Open
+import Formalism.ZeroFreeRegion.FinalZFR
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Complex Classical
 
@@ -81,7 +82,7 @@ private theorem exists_factor_zeros_differentiableOn_nonvanishing (f : ℂ → �
       simp [hρ]
     · have hwZ : w ∉ Z := by
         intro hwZ
-        exact hw1 (by simp [Finset.mem_erase, hwρ, hwZ])
+        exact hw1 (by simp [hwρ, hwZ])
       rw [hg]
       simp only [if_neg hwZ]
       exact hw2 hwρ

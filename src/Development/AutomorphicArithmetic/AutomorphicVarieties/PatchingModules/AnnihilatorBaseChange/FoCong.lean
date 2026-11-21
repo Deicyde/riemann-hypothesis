@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.AnnihilatorBaseChange.SpecializationMapCompUniversalSection
+import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.PatchedSupportCompletions
 
 open IsLocalRing Matrix Filter UpperTheory.V.Alg UpperTheory.V.W UpperTheory.V.AlgebraTools UpperTheory.V.Pa UpperTheory.V.Pa.Core
 open scoped TensorProduct
@@ -29,7 +31,7 @@ theorem UpperTheory.V.Pa.Core.foCong :
     rw [← map_one (Ideal.Quotient.mk I)]
     exact Ideal.Quotient.eq.mpr (hq jj)
   have hmod : Ideal.Quotient.mk I (fo W) = Ideal.Quotient.mk I (fEl (T.Nq N) W.t.U) := by
-    simp only [fo, fEl, map_prod, map_mul, map_sub, hq', Nat.cast_one, map_one, one_mul]
+    simp only [fo, fEl, map_prod, map_mul, map_sub, hq', Nat.cast_one, one_mul]
   have hdiff : fo W - fEl (T.Nq N) W.t.U ∈ I := Ideal.Quotient.eq.mp hmod
   obtain ⟨c, hc⟩ := Ideal.mem_span_singleton.mp hdiff
   refine ⟨?_, ?_, ⟨c, hc⟩⟩

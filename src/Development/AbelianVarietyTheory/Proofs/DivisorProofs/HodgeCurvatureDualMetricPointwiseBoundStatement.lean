@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HodgeCurvatureDualMetricPointwiseBound
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.HodgePeriodGram
 open Matrix Complex Filter Topology
 open scoped ComplexOrder ContDiff
 open GlobalTheory.IndefiniteRowSideFullHecke.HodgePeriodGram GlobalTheory.HermFrame

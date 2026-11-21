@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.PartialDerivativeMinors.PMinorAff
 
 noncomputable section
@@ -56,7 +57,7 @@ theorem coeff_lapT (t : H) (Q : PolyXZ H N0 N1) (ν : XZ (Bool × H) N0 N1 →�
   refine Finset.sum_congr rfl fun a _ => Finset.sum_congr rfl fun b _ => ?_
   have hne : (ν + Finsupp.single (Sum.inr (zF t a b)) 1 : XZ (Bool × H) N0 N1 →₀ ℕ) (Sum.inr (zT t a b)) =
       ν (Sum.inr (zT t a b)) := by
-    simp [Finsupp.single_apply, zF, zT]
+    simp [zF, zT]
   rw [hne]
   ring
 
@@ -66,8 +67,7 @@ theorem symm_add_single (m : XV H N0 →₀ ℕ) (κ : ZV H N0 N1 →₀ ℕ) (v
       Finsupp.sumFinsuppEquivProdFinsupp.symm (m, κ + Finsupp.single v 1) := by
   ext x
   rcases x with x | x <;>
-    simp [Finsupp.single_apply, Finsupp.sumFinsuppEquivProdFinsupp_symm_inl,
-      Finsupp.sumFinsuppEquivProdFinsupp_symm_inr]
+    simp [Finsupp.single_apply]
 
 theorem symm_inr (m : XV H N0 →₀ ℕ) (κ : ZV H N0 N1 →₀ ℕ) (v : ZV H N0 N1) :
     (Finsupp.sumFinsuppEquivProdFinsupp.symm (m, κ) : XZ (Bool × H) N0 N1 →₀ ℕ) (Sum.inr v) = κ v := rfl
@@ -376,8 +376,8 @@ theorem bridge_list (L : List H) (P : PolyXZ H N0 N1) (m : XV H N0 →₀ ℕ) (
       intro u
       by_cases h : u = s
       · subst h
-        simp [List.count_cons]
-      · simp [List.count_cons, h, Ne.symm h]
+        simp
+      · simp [h, Ne.symm h]
     rw [prod_factorial_eq_succ_mul_of_update (fun u => (s :: L).count u) (fun u => L.count u) s hn]
     rw [List.map_cons, List.prod_cons, (show ∀ (f g : Module.End ℤ (PolyXZ H N0 N1)) (x : PolyXZ H N0 N1), (f * g) x = f (g x) from fun _ _ _ => rfl), coeff_lapT]
     simp only [symm_add_single, symm_inr, ← ih]
@@ -410,7 +410,7 @@ private theorem count_flatMap_replicate (n : H → ℕ) (s : H) (l : List H) :
     by_cases h : x = s
     · subst h
       simp [ih]
-    · simp [ih, h, Ne.symm h, List.count_replicate, List.count_append]
+    · simp [ih, h, List.count_replicate, List.count_append]
 
 theorem count_list (n : H → ℕ) (s : H) :
     ((Finset.univ : Finset H).toList.flatMap fun t => List.replicate (n t) t).count s = n s := by

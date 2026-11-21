@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSectionOfChg
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsIntegralGeometricallyConnectedOpenModuli
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.CompactificationOpenOfClosed
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsProperToroidalModelStructureMap

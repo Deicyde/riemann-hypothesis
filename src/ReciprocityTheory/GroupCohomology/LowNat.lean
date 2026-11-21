@@ -1,7 +1,5 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.GroupCohomology.TransgressionStatement
-import ReciprocityTheory.GroupCohomology.DEqZeroOfMemB
-import ReciprocityTheory.GroupCohomology.LowHolds
-import ReciprocityTheory.GroupCohomology.ContractNthCastAddCastSucc
 
 namespace ReciprocityTheory.Coh
 

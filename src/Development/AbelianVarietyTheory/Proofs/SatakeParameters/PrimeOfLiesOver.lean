@@ -1,11 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.HostCls
-import Development.AutomorphicArithmetic.CyclotomicBounds.RamifiedDiscriminants.OffSmall
-import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
-import Development.AbelianVarietyTheory.BlockTheory.ThetaLiftGeometry.ShapeDegreeParity
-import Development.AbelianVarietyTheory.BlockTheory.ThetaLiftGeometry.TeichmullerFactorisation
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.TauPlBijective
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.NatCastMemPrimeOf
+import Development.AutomorphicArithmetic.CyclotomicBounds.ZmodTwoQuadraticNeZero
 
 noncomputable section
 

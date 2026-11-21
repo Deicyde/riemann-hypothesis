@@ -1,5 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.FWExist
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.HeckeThetaElements.DefsWt
+import Formalism.LocalToGlobal.ProjectiveLattices.FamilyUniformisationBasePointOrthogonalBis
 
 noncomputable section
 

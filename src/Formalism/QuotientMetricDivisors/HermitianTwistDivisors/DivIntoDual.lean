@@ -1,7 +1,8 @@
-import Mathlib
-import Formalism.QuotientMetricDivisors.ProdFormula
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.QuotientMetricDivisors.DivIntoDual
-import Formalism.QuotientMetricDivisors.ReductionLemmaZero
+import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.VwEqZeroOfNotMem
+import Mathlib.Tactic.ENatToNat
 
 open Module NumberField IsDedekindDomain
 open scoped Matrix

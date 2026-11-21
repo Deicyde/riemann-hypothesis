@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.GlobalHeightBoundIffAtGoodPrimes
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AppInjectiveOfFrames
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsIsoGenResMapSmulHom
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 set_option autoImplicit false
 noncomputable section
@@ -26,10 +26,9 @@ theorem cmp'_assoc {A B C D : Scheme.{0}} (u : A ⟶ B) (v : B ⟶ C) (t : C ⟶
   simp only [NatTrans.comp_app, Functor.whiskerRight_app, Functor.associator_hom_app,
     Functor.whiskerLeft_app, Category.id_comp, eqToHom_app] at e
   simp only [cmp', Scheme.Modules.pullbackCongr, Iso.trans_hom, eqToIso.hom, NatTrans.comp_app, eqToHom_app,
-    eqToHom_refl, Category.comp_id, Functor.map_comp, Category.assoc]
+    eqToHom_refl, Category.comp_id]
   rw [← e]
-  simp only [Iso.hom_inv_id_app_assoc, ← Functor.map_comp_assoc, Iso.hom_inv_id_app, Functor.map_id,
-    Category.id_comp]
+  simp only [Iso.hom_inv_id_app_assoc, ← Functor.map_comp_assoc, Iso.hom_inv_id_app]
   erw [CategoryTheory.Functor.map_id, Category.id_comp]
 
 theorem cmp'_rfl_hom_app {A B C : Scheme.{0}} (u : A ⟶ B) (v : B ⟶ C) (M : C.Modules) :
@@ -98,8 +97,7 @@ theorem sqIso_pull_comp {X X₁ X₂ G G₁ G₂ : Scheme.{0}} (f : X₁ ⟶ X) 
       (Scheme.Modules.pullback b).map ((sqIso f ι ι₁ a h₁).hom.app E'))]
     conv_rhs => rw [← Category.assoc, K']
     simp only [Category.assoc, ← CategoryTheory.Functor.map_comp_assoc, Iso.hom_inv_id_app,
-      Iso.hom_inv_id_app_assoc, Iso.inv_hom_id_app_assoc, CategoryTheory.Functor.map_id,
-      Category.id_comp, Category.comp_id]
+      Iso.inv_hom_id_app_assoc]
     erw [CategoryTheory.Functor.map_id, Category.id_comp, Iso.hom_inv_id_app_assoc]
     exact (Category.comp_id _).symm
   have nat := (cmp' b a c hc).hom.naturality φ

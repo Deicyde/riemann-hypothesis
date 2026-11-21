@@ -1,14 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.IsTwiceDifferentiableAt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.CompRightEqZero
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.KappaSt
-import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsFibreLocal
-import GroundTheory.HeightsAndTheta.Heights.Antisymmetric.Statements
-import GroundTheory.HeightsAndTheta.Heights.ElementarySymmetric.PDiagFibreFubini
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.SphereMeasureStereographicIntegralStatement
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.XiPotentialHessianDecompositionStatement
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.MixedDiscriminantCofactorExpansionStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.EvalW
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
 open MvPolynomial MeasureTheory Filter Topology Matrix ReciprocityTheory.AnForm ReciprocityTheory.AnForm.M ReciprocityTheory.AnForm.P GlobalTheory.CompanionTheory.Ar.PB GroundTheory.Heights₂.Heights
 open scoped ComplexOrder
 open GlobalTheory.CompanionTheory.Ar.PB.FibN ReciprocityTheory.ChartRestriction.G.AI GroundTheory.Heights₂.Heights.Inter
@@ -35,7 +28,7 @@ theorem pderiv_fin_prod {σ : Type*} (k : σ) : ∀ (d : ℕ) (f : Fin (d + 1) �
       ring
 
 theorem pderiv_row_weight (c v : ℝ) : pderiv (some 0 : Option (Fin 2)) (rowW ![c, 0] v) = C c := by
-  simp [rowW, pderiv_X, Pi.single_apply]
+  simp [rowW, pderiv_X]
 
 theorem eval_row_weight (n : Fin 3 → ℝ) (c v : ℝ) :
     evalW n n (rowW ![c, 0] v) = lin4 (fun i => c * n i) + C v * X none := by
@@ -44,7 +37,7 @@ theorem eval_row_weight (n : Fin 3 → ℝ) (c v : ℝ) :
     refine Finset.sum_congr rfl fun i _ => ?_
     ring
   rw [h]
-  simp [rowW, evalW, aeval_def, algebraMap_eq]
+  simp [rowW, evalW, algebraMap_eq]
 
 theorem extract_one : ∀ (d : ℕ) (T : Fin 3 → Matrix (Fin d) (Fin d) ℂ) (H : Matrix (Fin d) (Fin d) ℂ)
     (L : MvPolynomial (Option (Fin 3)) ℝ →ₗ[ℝ] ℂ),
@@ -64,7 +57,7 @@ theorem extract_one : ∀ (d : ℕ) (T : Fin 3 → Matrix (Fin d) (Fin d) ℂ) (
   have h3 := hL (fun s i => c (r.succAbove s) * n i) (fun s => v (r.succAbove s))
   rw [h3, pderiv_row_weight, map_mul (evalW n n), map_prod (evalW n n)]
   simp only [eval_row_weight]
-  have h4 : evalW n n (C (c r)) = C (c r) := by simp [evalW, aeval_def, algebraMap_eq]
+  have h4 : evalW n n (C (c r)) = C (c r) := by simp [evalW, algebraMap_eq]
   rw [h4, C_mul', map_smul, Complex.real_smul]
   ring
 

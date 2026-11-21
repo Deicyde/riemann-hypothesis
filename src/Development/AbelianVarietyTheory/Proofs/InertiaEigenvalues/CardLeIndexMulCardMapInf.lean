@@ -1,4 +1,7 @@
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.NoTowerQ
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Topology.Sheaves.Presheaf
 open Formalism.BasicNotions Formalism.BasicNotions.Loc ValuativeRel GroundTheory.LocalField GlobalTheory.PMon.Ram
 
 namespace GlobalTheory.PMon.Ram

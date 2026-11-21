@@ -1,7 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.StatementC
 import Formalism.SubspaceCounting.SubspaceCountingProofs.QVandermonde
 import Formalism.ArtinHasse.ArtinHasseProofs.SymmSeries
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
+import Mathlib.RingTheory.SimpleRing.Principal
 
 noncomputable section
 

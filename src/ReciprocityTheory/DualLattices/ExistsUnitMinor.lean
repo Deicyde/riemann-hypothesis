@@ -1,4 +1,6 @@
-import ReciprocityTheory.DualLattices.ColengthSqBlockVandermonde
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import ReciprocityTheory.DualLattices.DiscriminantColengthStatement
 
 noncomputable section
 

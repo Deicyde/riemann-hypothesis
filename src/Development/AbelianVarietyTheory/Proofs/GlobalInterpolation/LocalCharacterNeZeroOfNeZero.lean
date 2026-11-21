@@ -1,10 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.Columns.FiniteSumNonzeroLargeDepth
-import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.SandwichNormalForm
-import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.SourceLatticeInvariance
-import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.LatticeNormalFormUnipotent
-import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.NormalFormAtPrime
-import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.UnipotentCharacterArgumentMulStabilizer
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.IntegralPowerExpansion
 
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.HermitianLatticesTheory Formalism.L2.DIV Formalism.L2.Col GlobalTheory.QNormal
@@ -30,7 +25,7 @@ theorem exists_isUnit_reduction_div_pow {P : HeightOneSpectrum (𝓞 E)} (hP : G
   have hv : P.valuation E a ≠ 0 := (Valuation.ne_zero_iff _).2 ha
   refine ⟨-WithZero.log (P.valuation E a), isUnit_reduction_of_valuation_eq_one P ?_⟩
   rw [map_div₀, map_zpow₀, IntegralPowerExpansion.val_q hP, ← WithZero.exp_zsmul]
-  simp only [smul_neg, neg_smul, neg_neg, smul_eq_mul, mul_one, mul_neg, neg_mul]
+  simp only [neg_neg, smul_eq_mul, mul_one, mul_neg]
   rw [WithZero.exp_log hv, div_self hv]
 
 theorem locChar_ne_zero : ∀ (E : Type) [Field E] [NumberField E] (K : Type) [Field K] (P : HeightOneSpectrum (𝓞 E)),

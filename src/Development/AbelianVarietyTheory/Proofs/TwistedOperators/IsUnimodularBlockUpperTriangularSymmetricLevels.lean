@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.FourierJacobiAverage
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsMulLeftInvariantVolGL
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.GlCharacterEqOneOfTransposeInv
+import Mathlib.Topology.Separation.Connected
 
 open MeasureTheory ValuativeRel Matrix GlobalTheory.SplitWeil GlobalTheory.RootEx GlobalTheory.IndefiniteRowSideFullHecke.FourierJacobiAverage
 open scoped Topology
@@ -100,8 +101,8 @@ variable {k : Type} [Field k] {ι : Type} [Fintype ι] [DecidableEq ι]
 def levDiag (lev : ι → ℕ) (t : kˣ) : GL ι k where
   val := diagonal fun r => (t : k) ^ lev r
   inv := diagonal fun r => ((t⁻¹ : kˣ) : k) ^ lev r
-  val_inv := by simp [diagonal_mul_diagonal, ← mul_pow]
-  inv_val := by simp [diagonal_mul_diagonal, ← mul_pow]
+  val_inv := by simp [diagonal_mul_diagonal]
+  inv_val := by simp [diagonal_mul_diagonal]
 
 theorem levDiag_inv (lev : ι → ℕ) (t : kˣ) : (levDiag lev t)⁻¹ = levDiag lev t⁻¹ := by
   ext1; rfl

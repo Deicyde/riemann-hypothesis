@@ -1,7 +1,8 @@
-import Mathlib
-import Formalism.PeriodIntegrals.IsLowUnitH
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LowerSmoothStability.ExistsFinStableOfMemSSup
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.CayleyExistsAndAny
+import Mathlib.MeasureTheory.Function.L2Space
 
 open Matrix MeasureTheory
 open scoped InnerProductSpace ENNReal

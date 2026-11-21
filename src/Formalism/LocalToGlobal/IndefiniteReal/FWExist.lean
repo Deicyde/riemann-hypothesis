@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.FWTie
 import Formalism.LocalToGlobal.IndefiniteReal.ConcretePkgSpec
+import Mathlib.LinearAlgebra.LinearIndependent.BaseChange
 
 noncomputable section
 

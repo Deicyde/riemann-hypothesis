@@ -1,5 +1,7 @@
-import ReciprocityTheory.GroupCohomology.CupConnRightStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.GroupCohomology.HomogExistsStatement
+import Mathlib.Tactic.Polynomial.Basic
 
 namespace ReciprocityTheory.Coh
 

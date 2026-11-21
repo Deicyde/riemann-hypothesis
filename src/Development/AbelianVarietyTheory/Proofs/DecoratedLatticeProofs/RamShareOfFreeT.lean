@@ -1,8 +1,6 @@
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.NotInhAbsOfGamLe
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.ChainParSucc
-import Formalism.LocalRingCardinality.HeightBoundGeFourthPowerRank
-import Formalism.SharpRestriction.GlobalSchurBounds.FiniteModelOfAdmissibleTransports
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.GL6.DiagonalSlopes.SlopeLineRamifiedFormula
+import Development.AbelianVarietyTheory.Definitions.LatticeFrames.MiPinnedWithFinIff
 open Formalism.BasicNotions Formalism.MainNotions.S GlobalTheory.Core.Rk
 
 noncomputable section

@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CommutativeAlgebra.MayerVietorisConnectingExistsUniqueAdditiveExact
 import Development.AutomorphicArithmetic.CommutativeAlgebra.MayerVietorisConnectingCupPullback
-import Development.AutomorphicArithmetic.CupPullbacks.ConstCompSingle
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CupHypercohomologyPullbackStatement
 
 open CategoryTheory Limits AlgebraicGeometry Opposite CochainComplex CochainComplex.HomComplex GlobalTheory.EtC UpperTheory.Pbf
@@ -174,18 +175,18 @@ private theorem lh_pullback_map_fst_snd_of_lh (q : ℕ) {U V E X : Spc} (f : U �
     (by
       apply pullback.hom_ext
       · apply pullback.hom_ext
-        · simp only [Category.assoc, Category.id_comp, pullback.lift_fst, pullback.lift_fst_assoc, pullback.lift_snd, pullback.lift_snd_assoc, pullback.map]
-        · simp only [Category.assoc, Category.id_comp, pullback.lift_fst, pullback.lift_fst_assoc, pullback.lift_snd, pullback.lift_snd_assoc, pullback.map]
+        · simp only [Category.assoc, Category.id_comp, pullback.lift_fst, pullback.map]
+        · simp only [Category.assoc, Category.id_comp, pullback.lift_fst, pullback.lift_snd, pullback.lift_snd_assoc, pullback.map]
       · apply pullback.hom_ext
-        · simp only [Category.assoc, Category.id_comp, pullback.lift_fst, pullback.lift_fst_assoc, pullback.lift_snd, pullback.lift_snd_assoc, pullback.map]
+        · simp only [Category.assoc, Category.id_comp, pullback.lift_fst, pullback.lift_snd, pullback.map]
           exact pullback.condition
-        · simp only [Category.assoc, Category.id_comp, pullback.lift_fst, pullback.lift_fst_assoc, pullback.lift_snd, pullback.lift_snd_assoc, pullback.map])
+        · simp only [Category.assoc, Category.id_comp, pullback.lift_snd, pullback.lift_snd_assoc, pullback.map])
     (by
       apply pullback.hom_ext
-      · simp only [Category.assoc, Category.id_comp, pullback.lift_fst, pullback.lift_fst_assoc, pullback.lift_snd, pullback.lift_snd_assoc, pullback.map]
+      · simp only [Category.assoc, Category.id_comp, pullback.lift_fst, pullback.lift_fst_assoc, pullback.map]
       · apply pullback.hom_ext
-        · simp only [Category.assoc, Category.id_comp, pullback.lift_fst, pullback.lift_fst_assoc, pullback.lift_snd, pullback.lift_snd_assoc, pullback.map]
-        · simp only [Category.assoc, Category.id_comp, pullback.lift_fst, pullback.lift_fst_assoc, pullback.lift_snd, pullback.lift_snd_assoc, pullback.map])
+        · simp only [Category.assoc, Category.id_comp, pullback.lift_fst, pullback.lift_fst_assoc, pullback.lift_snd, pullback.map]
+        · simp only [Category.assoc, Category.id_comp, pullback.lift_snd, pullback.lift_snd_assoc, pullback.map])
     d e _ hUV
   have e1 : pullback.lift _ _ hφ ≫ pullback.snd π (pullback.fst f g ≫ f) =
       pullback.map (pullback.fst π f) (pullback.fst π g) f g (pullback.snd π f) (pullback.snd π g) π

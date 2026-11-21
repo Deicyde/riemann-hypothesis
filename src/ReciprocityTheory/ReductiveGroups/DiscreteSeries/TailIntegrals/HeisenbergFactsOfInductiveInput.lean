@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TailIntegrals.HeisenbergRankOneDecomposition
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TailIntegrals.RankOneLeviComm
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TailIntegrals.HpkNegMp
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TailIntegrals.EIntBound
 
 noncomputable section

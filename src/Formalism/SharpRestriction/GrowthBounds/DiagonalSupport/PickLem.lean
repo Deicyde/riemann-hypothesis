@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.DiagonalSupport.PickDefs
-import Formalism.SharpRestriction.GrowthBounds.DiagonalSupport.Proposition5OfThreeParts
+import Formalism.SharpRestriction.GrowthBounds.DiagonalSupport.DecompositionOfThreeParts
 
 noncomputable section
 

@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.GenFibreChartDeg
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StChartScalingIndep
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StAdjoinIndepRelfinrank

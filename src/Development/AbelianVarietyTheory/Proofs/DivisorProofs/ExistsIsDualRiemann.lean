@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsFlagModelHermSum
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.EqOfIsometricTrivShift
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSymTranslate
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RiemannDualFormIndep
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCovEqMulVec

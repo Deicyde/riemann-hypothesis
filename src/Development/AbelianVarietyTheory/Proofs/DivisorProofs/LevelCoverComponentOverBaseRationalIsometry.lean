@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GenScal
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CoverReadingEqPowMulMovedFrameReading
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.NormGenEqOneOfFrOver
@@ -6,6 +7,7 @@ import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ExistsRationalIsomet
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.RationalIsometryMapsFlagDomainFrames
 import Development.AbelianVarietyTheory.Counterexamples.HeightSurvey.ExistsNotIntegralLie
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsUnfFamily
+import Development.AbelianVarietyTheory.Definitions.Divisors.UnifOfSpaceEq
 open NumberField MeasureTheory Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions Formalism.L2.Theta Formalism.L2.Pj ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.FD ReciprocityTheory.ChartRestriction.G.AR.Inst ReciprocityTheory.ChartRestriction.G.AR.Up GlobalTheory.AllWt GlobalTheory.LevGeo GlobalTheory.LevPull GlobalTheory.FieldBC
 open scoped ENNReal
 
@@ -116,7 +118,7 @@ theorem over_comp : ∀ (D : D7) (j : ℕ) (H : ReciprocityTheory.ChartRestricti
     obtain ⟨h1, h2⟩ := hL.inR
     have hk := D.R.m_add_three_le_k
     rw [hp, hq]
-    simp only [Ranks.sigW, Ranks.r]
+    simp only [Ranks.sigW]
     omega
   have hle : KA l ≤ KA d.l₂ := by rw [KA, KA, hA, hA₂]
   have hinc : (σ₂.comp (IntermediateField.inclusion d.c₂.le).toRingHom).comp

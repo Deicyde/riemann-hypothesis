@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousFourierGau
+import Mathlib.Analysis.Calculus.ContDiff.FiniteDimension
 
 open MeasureTheory Complex Matrix GlobalTheory.RealWeil
 open scoped RealInnerProductSpace ContDiff Real ComplexOrder
@@ -85,7 +86,7 @@ theorem sm_of_weak_deriv_closed : ∀ (V : Type) [NormedAddCommGroup V] [NormedS
       rw [e]
       refine b3.congr_fderiv ?_
       ext z
-      simp [← hgd, h.1, hD, lsm, hx]
+      simp [← hgd, h.1, hD, hx]
       ring
   have ind : ∀ n : ℕ, ∀ f ∈ Θ, ContDiff ℝ n fun v => ρ v f := by
     intro n

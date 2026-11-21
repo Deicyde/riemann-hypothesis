@@ -1,5 +1,6 @@
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.PAdicWittLattices.SplitsBasic
-import Mathlib.AlgebraicGeometry.Morphisms.FormallyUnramified
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.PAdicWittLattices.IsAdmissibleIntegralBasisChangeOne
+import Mathlib.AlgebraicGeometry.Morphisms.FlatMono
 
 open CategoryTheory Limits AlgebraicGeometry UpperTheory.Gal.G3
 

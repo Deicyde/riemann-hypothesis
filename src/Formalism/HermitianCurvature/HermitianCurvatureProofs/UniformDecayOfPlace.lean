@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.BuiltBoundsCompactOfParts
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.WaveDiffForm
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.GramLocSetCApp

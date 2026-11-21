@@ -1,9 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrobPullHomExtAffine
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrobTwistBaseChangeHomApp
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsUniquePairsToTower
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CubeTheorem
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPdivGroupForPoint
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsDeRhamSheafIffAlt
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ConjugateFiltration
 
 set_option autoImplicit false
 

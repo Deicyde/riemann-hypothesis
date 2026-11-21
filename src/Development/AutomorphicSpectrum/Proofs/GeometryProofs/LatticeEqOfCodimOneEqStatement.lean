@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LatticeEqOfCodimOneEq
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.EigLat
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj GlobalTheory.CompanionTheory.Ar
 open scoped CategoryTheory.Obj
 set_option maxHeartbeats 1000000 in

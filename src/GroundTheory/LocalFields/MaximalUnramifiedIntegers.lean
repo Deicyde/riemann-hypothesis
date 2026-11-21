@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.LocalFields.MaximalUnramified
 import GroundTheory.LocalFields.SeparableClosureValuation
 set_option maxHeartbeats 4000000

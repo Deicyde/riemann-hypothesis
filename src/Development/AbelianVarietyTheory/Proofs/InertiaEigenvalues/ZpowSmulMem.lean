@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.PowerSeriesOneAddConstMulXMulInv
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SubIdBijOfContracting
+import Mathlib.RingTheory.PiTensorProduct
 
 noncomputable section
 namespace GlobalTheory.PhiGam.TwistShift

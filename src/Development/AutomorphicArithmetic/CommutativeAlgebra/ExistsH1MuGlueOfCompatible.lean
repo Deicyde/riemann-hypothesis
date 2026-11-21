@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.IsChart
-import Development.EtaleCohomology.EtaleSheaves.H0TwistOverClosedField
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CommutativeAlgebra.H1PlEqZeroOfLeISupOfLocalZero
 import Development.AutomorphicArithmetic.Foundations.EtaleClopenDescent.OffDiagonalContinuationInductive
 import Development.EtaleCohomology.WeilConjectures.EmptyVan2

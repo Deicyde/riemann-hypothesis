@@ -1,9 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsWeilChar
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CommonRefinementOfCoverAndModel
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormsTensorPower
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoverNormsPullbackPower
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.InducedMetricPullback
 
 set_option autoImplicit false
 

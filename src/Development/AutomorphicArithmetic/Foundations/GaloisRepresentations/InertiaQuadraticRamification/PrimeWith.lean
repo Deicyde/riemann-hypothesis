@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.InertiaQuadraticRamification.InertSplitAlt
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.ChebotarevDegreeOneIffCheb
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ChebotarevDegreeOne
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ExistsOpenNormalFiniteIndexLeAbsGaloisGroup
+import GroundTheory.GlobalFields.ExistenceTheorem.ExistsIsAbelianGaloisRangeIdeleClassNormEqOfFini
 
 open NumberField IsDedekindDomain Formalism.L2.Host Formalism.ConjugateSelfDual ReciprocityTheory.Gal GlobalTheory.HeckeGal GlobalTheory.CuspRep UpperTheory.V.Published GlobalTheory.RealGal GlobalTheory.UnitaryBC
 open UpperTheory.Gal.UnramifiedFromSplittingCriterion
@@ -139,7 +138,7 @@ theorem UpperTheory.Gal.UnramifiedFromSplittingCriterion.primeWith :
     · intro w hw
       simp only [hSdef, Set.mem_setOf_eq, pw_normV] at hw
       simp only [Set.mem_preimage, Set.mem_iUnion, Set.mem_setOf_eq, Finset.mem_range,
-        Finset.mem_coe, exists_prop]
+        exists_prop]
       exact ⟨_, by omega, rfl⟩
   obtain ⟨v, hvS, -, B0, hB0, hIne, φ, hφ, hφg⟩ :=
     GlobalTheory.Published.chebotarevDegreeOne' ℚ Ω L (AlgEquiv.restrictNormalHom L gA) S hS

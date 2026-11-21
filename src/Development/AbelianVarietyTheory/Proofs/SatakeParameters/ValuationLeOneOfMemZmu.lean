@@ -1,8 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LatticeFactsAt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.FiniteDivLatticeQuotient
 import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.RedPEqZeroOfDiv
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ChainWideTwistTransport
+import Development.AbelianVarietyTheory.Proofs.SatakeParameters.JetOpIntegral
+import Development.AbelianVarietyTheory.Proofs.SatakeParameters.NotDvdCardOfInjective
 
 noncomputable section
 

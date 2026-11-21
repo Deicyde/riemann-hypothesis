@@ -1,13 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.UnifOfSpaceEq
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.WeightFunctionOnFrames
-import Development.AbelianVarietyTheory.BlockTheory.ExistenceTori.UnitaryHaarVolume
 import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.ExistsThickPointHyperbolic
 import Development.AbelianVarietyTheory.Proofs.TorusHaarMeasure.MajLactRmul
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.LminorSubmatrixCastSucc
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EncardSelfDualLatticeBoundedMajorantLeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MajorantChartPointCentreFactorTwoStatement
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.ModeHalfStatementPfA
 open NumberField MeasureTheory ReciprocityTheory.ChartRestriction.G.FD ReciprocityTheory.ChartRestriction.G.AR.Inst ReciprocityTheory.ChartRestriction.G.AR.Up ReciprocityTheory.L2DbarEstimates GlobalTheory.LevGeo
 open scoped ENNReal
 
@@ -71,7 +68,7 @@ theorem gramPos_rmul (X : Data E r) (y : Frame X.Ψ r) {b : Frame X.Ψ r} (hb : 
   ext a c
   rw [Data.gramPos_apply, colP_rmul_eq X y hb, colP_rmul_eq X y hb, hermC_sum_left]
   simp only [Matrix.mul_apply, Matrix.transpose_apply, Matrix.map_apply, Data.gramPos_apply,
-    hermC_smul_left, hermC_sum_right, hermC_smul_right, Finset.sum_mul, Finset.mul_sum]
+    hermC_smul_left, hermC_sum_right, hermC_smul_right, Finset.sum_mul]
   rw [Finset.sum_comm]
   refine Finset.sum_congr rfl fun l _ => Finset.sum_congr rfl fun k _ => by ring
 

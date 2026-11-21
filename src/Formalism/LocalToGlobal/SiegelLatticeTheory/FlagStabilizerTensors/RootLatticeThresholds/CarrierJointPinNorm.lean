@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.CarrierJointPin
 import Formalism.HermitianCurvature.HeisenbergConjugationMeasurePreserving
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.OrbitalIntegralIdentities
 
 noncomputable section
 
@@ -226,7 +226,7 @@ theorem relDiag_holds : RelDiag := by
     simp only [List.mem_map, List.mem_ofFn] at hb
     obtain ⟨t, ⟨a, rfl⟩, rfl⟩ := hb
     exact ⟨le_refl _, hd a⟩
-  · simp only [Formalism.FourierDecayAlt.D.ptSize, List.map_map, List.map_ofFn, List.sum_ofFn, Function.comp_def,
+  · simp only [Formalism.FourierDecayAlt.D.ptSize, List.map_ofFn, List.sum_ofFn, Function.comp_def,
       Finset.sum_const, Finset.card_univ, Fintype.card_fin, smul_eq_mul, mul_one]
   · rw [hZ]
     ext i j

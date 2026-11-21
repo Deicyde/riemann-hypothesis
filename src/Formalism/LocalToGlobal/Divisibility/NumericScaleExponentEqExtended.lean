@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Divisibility.ZscOfNum
 import Formalism.LocalToGlobal.Divisibility.HeckeRI
 

@@ -1,10 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.FamilyUniformisationBasePointOrthogonalBis
 import Formalism.LocalToGlobal.ProjectiveLattices.FreeBridge
-import Formalism.LocalToGlobal.ProjectiveLattices.DatProofs
-import Development.AbelianVarietyTheory.BlockTheory.ExistenceTori.LatticeEmbeddingHalf
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ConjEquivApply
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.OrthogonalFrameIff
+import Formalism.LocalToGlobal.ProjectiveLattices.HalfOneAddSqrtNegIsIntegral
 
 noncomputable section
 

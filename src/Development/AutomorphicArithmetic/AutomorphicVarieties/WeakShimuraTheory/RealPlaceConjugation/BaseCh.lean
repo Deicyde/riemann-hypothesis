@@ -1,5 +1,8 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.WeakShimuraTheory.RbUVal
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PublishedTheorems.FerreroWashington
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.ResMapBijective
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.Polynomial.Basic
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual Formalism.HC ReciprocityTheory.Gal IsLocalRing UpperTheory.V.Base UpperTheory.V.HV UpperTheory.V.GradeZeroInterpolatingElement UpperTheory.V.Ws UpperTheory.V.Two
 open scoped Classical
@@ -37,7 +40,7 @@ private theorem rank_span_range_le_of_linearForm_comp_mem {X k₀ k : Type} [Fie
     have h2 := hψL (j : Submodule.span k₀ (Set.range z)).2
     rw [LinearMap.mem_ker, LinearMap.sum_apply] at h2
     simp only [LinearMap.smul_apply, hφ, smul_eq_mul, mul_ite, mul_one, mul_zero,
-      Finset.sum_ite_eq', Finset.sum_ite_eq, hj, if_true] at h2
+      Finset.sum_ite_eq, hj, if_true] at h2
     exact h2
   have hc := hw.cardinal_le_rank
   rw [Cardinal.mk_coe_finset] at hc

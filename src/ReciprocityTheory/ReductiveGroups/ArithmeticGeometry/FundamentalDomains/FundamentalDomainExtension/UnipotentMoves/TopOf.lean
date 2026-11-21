@@ -1,4 +1,11 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.FundamentalDomainExtension.UnipotentMoves.KatoClassHeckeEulerFactorRelation
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
 
 namespace UnipMove
 
@@ -23,7 +30,7 @@ theorem top_of (hemb : SEmb E) (hN1 : RadiusPosLeTenth) (hN2 : KatoClassHeckeEul
     linarith
   rcases Nat.eq_zero_or_pos n' with rfl | hn'pos
   · have hone : X.lmulC (fun _ => (1 : Matrix (Fin r) (Fin r) ℂ)) (X.lmulC h1 z0) = X.lmulC h1 z0 := by
-      funext τ; simp only [Data.lmulC, one_mul, mat, Matrix.of_apply]; rfl
+      funext τ; simp only [Data.lmulC, one_mul, mat]; rfl
     refine ⟨fun _ => 1, Z1, ?_, ?_, ?_, ?_, ?_, hZ1'⟩
     · intro τ u v; simp
     · intro τ; simp

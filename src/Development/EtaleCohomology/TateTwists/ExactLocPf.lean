@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.TateTwists.EtaleSheafInjectiveResolutionInitialShortComplex
+import Mathlib.CategoryTheory.Sites.EpiMono
 
 open CategoryTheory Limits AlgebraicGeometry Opposite GlobalTheory.EtC
 

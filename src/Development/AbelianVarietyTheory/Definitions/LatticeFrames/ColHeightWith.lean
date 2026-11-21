@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.TopPlaceLogTheta
-import Formalism.LocalToGlobal.Columns.ToHLat
-import Formalism.HarderNarasimhan.QuotRealize
 
 noncomputable section
 

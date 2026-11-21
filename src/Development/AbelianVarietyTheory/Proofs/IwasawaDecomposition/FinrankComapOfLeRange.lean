@@ -1,13 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.GoodPartHasComplexCoordinates
-import Formalism.LocalToGlobal.IndefiniteReal.BaseLiftsPackageOfPrimitiveLinks
-import Formalism.LocalToGlobal.IndefiniteReal.EvTieP
-import Formalism.LocalToGlobal.Divisibility.DivisionCompatibleToSub2Indef2
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.SpOfRwRange
 import Formalism.LocalToGlobal.IndefiniteReal.EvalTieTOne
-import Formalism.LocalToGlobal.IndefiniteReal.LinksStage
-import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RowsJoinPinned
-import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RowLevelMatch
+import Formalism.LocalToGlobal.IndefiniteReal.ZeroPartEigenvalueConvention
 
 noncomputable section
 

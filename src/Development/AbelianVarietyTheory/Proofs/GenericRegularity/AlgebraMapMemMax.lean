@@ -1,9 +1,7 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.IsUnitOfValEqZero
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.WeakApprox
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.AlgebraicCurves.PlacesRestrictInjective
 import Formalism.LocalToGlobal.ProjectiveLattices.LocalIntegralPolynomials.ExistsValuationAdaptedIndex
-import Formalism.LocalToGlobal.ProjectiveLattices.OneLtAbsNormReal
 
 open NumberField IsDedekindDomain ReciprocityTheory.ChartRestriction.G.T0 IsLocalRing MvPolynomial
 

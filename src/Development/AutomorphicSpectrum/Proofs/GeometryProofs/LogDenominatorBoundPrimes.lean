@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IntegralClosureHeightEqOneOfLiesOver
+import Mathlib.Algebra.Ring.IsFormallyReal
 
 open GlobalTheory.CompanionTheory.Ar
 

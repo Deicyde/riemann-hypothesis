@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.ImportsAlt
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.CrystallinePeriods.RingBasics
 
 open Formalism.Per GlobalTheory.PSer

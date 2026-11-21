@@ -1,7 +1,5 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.LeviForms.IsRegFamilyInhabitStatement
-import ReciprocityTheory.AnalyticForms.PotentialTheory.PshShiftA
-import ReciprocityTheory.AnalyticForms.PotentialTheory.ContDiffAtOfIsPotential
-import ReciprocityTheory.AnalyticForms.PotentialTheory.Pullback
 
 namespace ReciprocityTheory.AnForm.P
 

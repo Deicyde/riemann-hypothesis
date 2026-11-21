@@ -1,7 +1,9 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.IsClosedKset
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.PhiFacts
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.PhiCasA
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.PhiCasB
+import Mathlib.RingTheory.PiTensorProduct
 
 noncomputable section
 

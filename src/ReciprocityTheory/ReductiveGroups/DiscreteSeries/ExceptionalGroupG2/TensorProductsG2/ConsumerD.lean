@@ -1,13 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.ConsumerC
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.ExceptionalGroupG2.TensorProductsG2.ConsumerA
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.PuniqSmoothAddSmul
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.Compact
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.ExpInPPosDef
 import Formalism.PeriodIntegrals.ZuckTensor
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.ExceptionalGroupG2.StdGap
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.ExceptionalGroupG2.ExistenceG2.AnyDec
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.ExceptionalGroupG2.ExistenceG2.DataGenSubIrred
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.ExceptionalGroupG2.ExistenceG2.HasGelfandCharSigLam
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.DiscreteSeriesExistence.EquivSigLamOfIsDS
 
 noncomputable section
 
@@ -98,12 +94,12 @@ private theorem term_lemma_3 {ε : Fin n → Bool} {a b : Fin n} (he : ε a = ε
   · have e' : ε c = ε b := e.trans he
     refine ⟨?_, fun _ => ?_⟩
     all_goals
-      simp only [e', he, ne_eq, not_true_eq_false, and_false, and_true, if_false, if_true,
+      simp only [e', he, ne_eq, not_true_eq_false, and_false, and_true, if_false,
         Fin.lt_iff_val_lt_val, Fin.le_iff_val_le_val]
       split_ifs <;> first | (exfalso; omega) | norm_num
   · have e' : ¬ ε c = ε b := fun h => e (h.trans he.symm)
     refine ⟨?_, fun h => absurd h e⟩
-    simp only [e, e', ne_eq, not_false_eq_true, and_false, and_true, if_false, if_true,
+    simp only [e, e', ne_eq, not_false_eq_true, and_false, and_true, if_false,
       Fin.lt_iff_val_lt_val, Fin.le_iff_val_le_val]
     split_ifs <;> first | (exfalso; omega) | norm_num
 
@@ -240,7 +236,7 @@ theorem cns_zuck_cpt {ε : Fin n → Bool} (hpq : pOf ε = 0 ∨ qOf ε = 0) {μ
     have e2 : lamS s = lamS s' := by
       funext a
       have := congrFun e a
-      simp only [Formalism.QuantumDeterminants.lowK, PI.UpqRep.lowK, lowK, Pi.add_apply, Pi.sub_apply] at this
+      simp only [Formalism.QuantumDeterminants.lowK, Pi.add_apply, Pi.sub_apply] at this
       linarith
     rw [hsh s (mem_filter.1 hs).2, hsh s' (mem_filter.1 hs').2] at e2
     exact cns_shift_inj false μ e2
@@ -254,7 +250,7 @@ theorem cns_zuck_cpt {ε : Fin n → Bool} (hpq : pOf ε = 0 ∨ qOf ε = 0) {μ
     rw [← U0.apply_symm_apply v, ← U0.apply_symm_apply w, ← hU0, LinearIsometryEquiv.inner_map_map,
       cns_coefV (fun _ => T.op k) (S7.toMK k) (U0.symm v) (U0.symm w) x y]
     have h1 := cns_key_std T k (WithLp.toLp 2 (fun d => x d • U0.symm v)) (WithLp.toLp 2 (fun c => y c • U0.symm w))
-    simp only [PiLp.toLp_apply] at h1
+    simp only at h1
     rw [← h1, ha, hb, map_sum,
       show (∑ s ∈ univ.filter (fun s => S7.IsHCParam (shiftF false μ s)), HW.tensOp T (HW.stdRho ε) k (j s (a s))) =
         ∑ s ∈ univ.filter (fun s => S7.IsHCParam (shiftF false μ s)), j s ((Ts s).op k (a s)) from
@@ -327,7 +323,7 @@ theorem cns_zuckd_cpt {ε : Fin n → Bool} (hpq : pOf ε = 0 ∨ qOf ε = 0) {�
     have e2 : lamS s = lamS s' := by
       funext a
       have := congrFun e a
-      simp only [Formalism.QuantumDeterminants.lowK, PI.UpqRep.lowK, lowK, Pi.add_apply, Pi.sub_apply] at this
+      simp only [Formalism.QuantumDeterminants.lowK, Pi.add_apply, Pi.sub_apply] at this
       linarith
     rw [hsh s (mem_filter.1 hs).2, hsh s' (mem_filter.1 hs').2] at e2
     exact cns_shift_inj true μ e2
@@ -342,7 +338,7 @@ theorem cns_zuckd_cpt {ε : Fin n → Bool} (hpq : pOf ε = 0 ∨ qOf ε = 0) {�
       cns_coefVd (fun _ => T.op k) (S7.toMK k) (U0.symm v) (U0.symm w) x y]
     have h1 := cns_key_dual T k (WithLp.toLp 2 (fun d => star (y d) • U0.symm v))
       (WithLp.toLp 2 (fun c => star (x c) • U0.symm w))
-    simp only [PiLp.toLp_apply] at h1
+    simp only at h1
     rw [← h1, ha, hb, map_sum,
       show (∑ s ∈ univ.filter (fun s => S7.IsHCParam (shiftF true μ s)), HW.tensOp T (HW.rhoDual ε) k (j s (a s))) =
         ∑ s ∈ univ.filter (fun s => S7.IsHCParam (shiftF true μ s)), j s ((Ts s).op k (a s)) from

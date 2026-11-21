@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.MtAdWt
+import Mathlib.Algebra.Module.StablyFree.Basic
 
 open NumberField IsDedekindDomain ReciprocityTheory.Aut Formalism.AUTREP MvPolynomial
 

@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.HeightLocalQuotCentred
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.HeightCentredRingNormal
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.HeightLocalNormalIndex

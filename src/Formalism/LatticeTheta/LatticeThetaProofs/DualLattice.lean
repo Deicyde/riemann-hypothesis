@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Variable
 import Formalism.LatticeTheta.Statement
 
 noncomputable section
@@ -24,7 +25,7 @@ lemma innerₗ_isSymm : LinearMap.BilinForm.IsSymm (innerₗ V) := by
     | exact fun x y => by
         simp only [innerₗ_apply_apply, RingHom.id_apply]; exact real_inner_comm _ _
     | exact ⟨fun x y => by
-        simp only [innerₗ_apply_apply, RingHom.id_apply]; exact real_inner_comm _ _⟩
+        simp only [innerₗ_apply_apply]; exact real_inner_comm _ _⟩
     | (intro x y; simp only [innerₗ_apply_apply, RingHom.id_apply]; exact real_inner_comm _ _)
     | (constructor; intro x y; simp only [innerₗ_apply_apply, RingHom.id_apply]; exact real_inner_comm _ _)
 

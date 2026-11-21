@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.JumpDictCrysAtOfWeights
-import Formalism.LocalToGlobal.UnitaryNorms.CharTied
 import Formalism.LocalToGlobal.UnitaryNorms.CharShare
 
 noncomputable section

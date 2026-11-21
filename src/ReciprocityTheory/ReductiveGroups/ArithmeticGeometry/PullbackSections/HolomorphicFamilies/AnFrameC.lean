@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.NonemptyUnitAt
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.HolomorphicFamilies.CmHostUnitAddConjEqOne
 
@@ -57,7 +59,7 @@ theorem cube_rho (z l : Fin 3 → Fin g → ℂ) :
     Finset.sum_powerset_insert (show (2 : Fin 3) ∉ (∅ : Finset (Fin 3)) by decide), Finset.powerset_empty,
     Finset.sum_singleton]
   simp [Finset.sum_insert, Finset.card_insert_of_notMem]
-  simp only [rho, hermForm_add_left, hermForm_add_right, hermForm_zero_left, hermForm_zero_right,
+  simp only [rho, hermForm_add_left, hermForm_add_right, hermForm_zero_right,
     Complex.add_re, Complex.zero_re]
   norm_num
   ring

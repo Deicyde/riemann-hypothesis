@@ -1,7 +1,10 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.StatementsChartEnergyDiagonal
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.StatementsChartEnergyInvariant
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.StatementsChartEnergyCocycle
+import Mathlib.Analysis.Matrix.PosDef
+import Mathlib.LinearAlgebra.Matrix.Permutation
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

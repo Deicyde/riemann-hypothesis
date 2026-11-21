@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.IsMatrixForm
 import Development.AbelianVarietyTheory.BlockTheory.CMModuli.ProjectiveSpaceOverSpec
+import Mathlib.NumberTheory.Padics.PadicIntegers
+import Mathlib.RingTheory.AdicCompletion.Completeness
 
 noncomputable section
 
@@ -230,7 +234,7 @@ theorem pushAut_comp {X' : Scheme.{0}} (π : X' ⟶ X) (g g' : X' ⟶ X') (hg : 
   erw [← GlobalTheory.Et.pull_comp, ← gfibMap_comp]
   congr 2
   apply pullback.hom_ext <;> simp only [pullback.map, Category.assoc, pullback.lift_fst, pullback.lift_snd,
-    pullback.lift_fst_assoc, pullback.lift_snd_assoc, Category.comp_id]
+    pullback.lift_fst_assoc, Category.comp_id]
 
 theorem pushAut_inertia {X' : Scheme.{0}} (π : X' ⟶ X) (g : X' ⟶ X') (hg : g ≫ π = π) (n : ℕ) (x : SpecialPoint p)
     (L : StrictLoc X x.1) (σ : K ≃ₐ[O] K) :

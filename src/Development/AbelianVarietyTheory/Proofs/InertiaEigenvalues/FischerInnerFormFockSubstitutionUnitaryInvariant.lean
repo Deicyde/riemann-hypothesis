@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FisSelfReNonneg
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.TranslateMemCoefLatFn
-import ReciprocityTheory.DualLattices.FischerSelfNeZero
+import ReciprocityTheory.DualLattices.ConstantCoeffRowSubst
 
 noncomputable section
 

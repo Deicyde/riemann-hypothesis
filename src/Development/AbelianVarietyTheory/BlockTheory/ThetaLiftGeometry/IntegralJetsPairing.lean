@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataKerI
-import Formalism.SharpRestriction.GlobalSchurBounds.GL3Theta
 import Formalism.LocalToGlobal.KernelLattices.LateralTheory
 
 open Formalism.MainNotions.G Formalism.BasicNotions Formalism.MainNotions NumberField

@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.KernelLattices.ColInst
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.LatAtLattice
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.JetsInIffStepField
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.KernelAtPointPenultimateStepFirstCoupledKernel
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.YsAtFiniteNonempty
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LevQFiniteIndexAndRoot
@@ -10,6 +10,7 @@ import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.FirstCoupledK
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.KAtTopEquiv
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.KmapOfOkOfVecP
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ChThOkOfColIn
+import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.IntAtOfLocTop
 
 noncomputable section
 

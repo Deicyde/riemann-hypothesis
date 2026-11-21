@@ -1,7 +1,9 @@
-import Formalism.HermitianCurvature.StatementHeads
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.RadialTransportPlus
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.IntegrableOfDecay4
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.SumPairAtStarMul
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.SliceCompactSupportCoefficient
 
 open Matrix MeasureTheory
 open scoped ComplexConjugate

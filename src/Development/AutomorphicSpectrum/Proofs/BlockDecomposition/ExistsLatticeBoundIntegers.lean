@@ -1,5 +1,4 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.LevelChainValuations.LatCDefs
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntegerMemLatticeSubBoundStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsFinsetGenerators
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PadicIntMemSub

@@ -1,4 +1,6 @@
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.GelfandTsetlinLowering.LiftTupleC
+import BuildAid.Leniency.Open
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.GelfandTsetlinLowering.LiftTupleM
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 

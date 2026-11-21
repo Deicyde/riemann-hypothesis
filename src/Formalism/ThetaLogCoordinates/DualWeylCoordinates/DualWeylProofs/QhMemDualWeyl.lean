@@ -1,5 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.DualWeylCoordinates.DualWeylProofs.QhDetZpowMem
-import Formalism.GradedWeylDivisibility.FinalC
+import Formalism.GradedWeylDivisibility.StatementA
+import Mathlib.Order.Interval.Finset.Box
+import Mathlib.Tactic.ENatToNat
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 

@@ -1,7 +1,7 @@
-import Formalism.SharpRestriction.CuspSpanNormBounds.BruhatCellsKronecker.OwnEvIntro
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.BruhatCellsKronecker.StandardHypothesesOfScaleHyp
 import Formalism.SharpRestriction.CuspSpanNormBounds.NonemptyParameterModels.TopsChoicePartA
-import Formalism.SharpRestriction.CuspSpanNormBounds.LocalBesselAndTopKernel
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LocalVolumePositivity
 
 noncomputable section
@@ -21,7 +21,7 @@ theorem ThA_congr {CA : ℝ} {u u' : D.what₂.Word} {x : D.what₂.Tau → Loca
   have hP : L.aaP = L0.aaP := funext fun i => funext fun s => (h i s).2.1.trans (h0 i s).2.1.symm
   have hr : L.ρ = L0.ρ := funext fun i => funext fun s => (h i s).2.2.trans (h0 i s).2.2.symm
   unfold ThA ThS ThInvF
-  simp only [hV, hP, hr]
+  simp only [hV, hP]
 
 theorem rho_eq {L : LatticeDataWithDual D} (h : IsLatGLOB D L) : L.ρ = rhoReal D := by
   funext i s

@@ -1,5 +1,7 @@
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.TypeConditions.TrivialLocalCondition
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsWildInertiaCyclotomicElement
+import Formalism.SharpRestriction.LevelLetterCocycles.AdmissibleParameterJ
 
 noncomputable section
 

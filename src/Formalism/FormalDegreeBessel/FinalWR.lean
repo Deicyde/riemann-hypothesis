@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Variable
 import Formalism.FormalDegreeBessel.FormalDegreeRatio.WRPres
 import Formalism.FormalDegreeBessel.FormalDegreeRatio.WRWeyl
-import Formalism.FormalDegreeBessel.FormalDegreeRatio.AdjointFunctionalHolds
 import Formalism.YangianSpanCharacter.StatementT
 
 noncomputable section

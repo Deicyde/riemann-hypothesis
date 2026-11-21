@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.DepthPays
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.ProjExists
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.Adapted
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.DiscreteSeriesModelOfDualParameter
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.EmbLEqEmbOptL
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsUnitaryEmbeddingStabilizer
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.IndefR.Mult Formalism.L2.DIV
@@ -72,7 +70,7 @@ theorem eu_vecOpt (y : Fin m → ℂ) (a : ℂ) : eu (vecOpt e y a) ^ 2 = eu y ^
 theorem vecOpt_zero_one : vecOpt e 0 1 = Pi.single (e none) 1 := by
   funext b
   obtain ⟨b, rfl⟩ := e.surjective b
-  cases b <;> simp [vecOpt, Pi.single_apply]
+  cases b <;> simp [vecOpt]
 
 def colM (F : Matrix (Fin N) (Fin m) ℂ) (z : Matrix (Fin N) (Fin 1) ℂ) : Matrix (Fin N) (Fin N) ℂ :=
   fun i b => (e.symm b).elim (z i 0) (F i)

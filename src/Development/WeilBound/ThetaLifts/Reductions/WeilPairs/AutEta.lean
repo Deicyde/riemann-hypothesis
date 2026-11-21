@@ -1,4 +1,5 @@
-import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.AutDef
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.AutEtaC
 
 noncomputable section

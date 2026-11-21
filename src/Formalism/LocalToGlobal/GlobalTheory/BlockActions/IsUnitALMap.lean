@@ -1,4 +1,7 @@
-import Formalism.LocalToGlobal.GlobalTheory.BlockActions.NormalFormAgree
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.GlobalTheory.BlockActions.ArchimedeanSignatureMatchingOfTrivialBranchingSymm
+import Formalism.LocalToGlobal.GlobalTheory.BlockActions.NormOneOfPow
 
 noncomputable section
 

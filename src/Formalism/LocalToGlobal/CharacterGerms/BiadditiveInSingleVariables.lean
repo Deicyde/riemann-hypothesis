@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.DropLevelBounds.Statement
+import Mathlib.RingTheory.Binomial
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
 
 noncomputable section
 open scoped BigOperators

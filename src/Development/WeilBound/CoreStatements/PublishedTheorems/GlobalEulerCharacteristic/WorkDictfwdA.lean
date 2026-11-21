@@ -1,8 +1,7 @@
-import Development.WeilBound.CoreStatements.PublishedTheorems.GlobalEulerCharacteristic.Narrow
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PublishedTheorems.GlobalEulerCharacteristic.RatioOneKilled
-import Development.WeilBound.CoreStatements.PublishedTheorems.GlobalFiniteness.Transport
 import GroundTheory.ProfiniteCohomology.GlobalEulerCharacteristic.ShapiroCoind
-import GroundTheory.ProfiniteCohomology.GlobalEulerCharacteristic.DefsForms
 import Development.WeilBound.CoreStatements.PublishedTheorems.GlobalEulerCharacteristic.WorkDictfwdB
 
 open NumberField IsDedekindDomain CategoryTheory GroundTheory.ProfCoh GroundTheory.Global ReciprocityTheory.Gal Formalism.ConjugateSelfDual

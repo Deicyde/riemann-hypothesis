@@ -1,5 +1,4 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.LayerLe
-import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.ProjFacts
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.CompAlg
 import Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.HostIndex
 

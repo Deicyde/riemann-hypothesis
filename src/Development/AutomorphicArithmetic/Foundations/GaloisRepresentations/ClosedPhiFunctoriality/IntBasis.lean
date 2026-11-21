@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ClosedPhiFunctoriality.IntBasisAlt
 
 noncomputable section
@@ -37,7 +37,7 @@ private theorem linearIndependent_update_sum_of_ne_zero {l : ℕ} [Fact (Nat.Pri
         ring
       · rw [Function.update_of_ne h, if_neg h, add_zero]
     rw [Finset.sum_congr rfl (fun j _ => h1 j), Finset.sum_congr rfl (fun j _ => h2 j)]
-    simp only [Finset.sum_add_distrib, Finset.sum_sub_distrib, Finset.sum_ite_eq', Finset.sum_ite_eq,
+    simp only [Finset.sum_add_distrib, Finset.sum_sub_distrib, Finset.sum_ite_eq',
       Finset.mem_univ, if_true, ← Finset.mul_sum]
     ring
   have hz := hLI _ key
@@ -93,7 +93,7 @@ private theorem exists_bounded_coeffs_after_update {l : ℕ} [Fact (Nat.Prime l)
         push_cast
         ring
     rw [Finset.sum_congr rfl (fun j _ => h1 j)]
-    simp only [Finset.sum_add_distrib, Finset.sum_sub_distrib, Finset.sum_ite_eq', Finset.sum_ite_eq,
+    simp only [Finset.sum_add_distrib, Finset.sum_sub_distrib, Finset.sum_ite_eq',
       Finset.mem_univ, if_true, ← Finset.mul_sum, ← hy]
     ring
 
@@ -142,11 +142,11 @@ private theorem exists_bounded_independent_spanning_family {l : ℕ} [Fact (Nat.
               by_cases h : j = j0
               · subst h
                 simp
-              · simp [Pi.single_apply, h]
+              · simp [h]
             · rw [Finset.sum_eq_single j0]
               · simp
               · intro j _ h
-                simp [Pi.single_apply, h]
+                simp [h]
               · simp
           | cast i =>
             obtain ⟨c, hc1, hc2⟩ := hc i

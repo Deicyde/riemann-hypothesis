@@ -1,5 +1,6 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.ThmPActualCptOfOuter
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.ContinuousExtensionOfFourierDecay
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.HerGenC
 
 open MeasureTheory Filter Topology
 

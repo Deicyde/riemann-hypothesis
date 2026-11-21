@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.MemLocDIffSpan
+import Std.Tactic.BVDecide.Normalize.Prop
 open NumberField
 
 namespace GlobalTheory.CoprimeBasis
@@ -71,7 +72,7 @@ theorem exists_coprime_basis : ∀ (F : Type) [Field F] [NumberField F] (M : Typ
       | mem y hy =>
         obtain ⟨i, rfl⟩ := hy
         exact ⟨s i, x i, Submodule.subset_span ⟨i, rfl⟩, key i⟩
-      | zero => exact ⟨1, 0, P.zero_mem, by simp [LocalizedModule.zero_mk]⟩
+      | zero => exact ⟨1, 0, P.zero_mem, by simp⟩
       | add y z _ _ hy hz =>
         obtain ⟨t, m, hm, h⟩ := hy
         obtain ⟨t', m', hm', h'⟩ := hz

@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HomExtNormalSt
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.FlatBCSec
 open AlgebraicGeometry CategoryTheory Limits IsLocalRing
@@ -40,7 +40,7 @@ theorem local_ascent (k K : Type) [Field k] [Field K] (ι : k →+* K) (X X' : S
   let lam' : K →ₗ[k] k :=
     { toFun := lam, map_add' := lam.map_add
       map_smul' := fun c y => by
-        simp only [Algebra.smul_def, RingHom.algebraMap_toAlgebra, RingHom.id_apply, smul_eq_mul]
+        simp only [Algebra.smul_def, RingHom.algebraMap_toAlgebra, RingHom.id_apply]
         exact hlam c y }
   let t : Γ(X, V) ⊗[k] K := ∑ i, ReciprocityTheory.ChartRestriction.G.DVR.rs hVU (B i) ⊗ₜ[k] d i
   have ht : t = 0 := by
@@ -49,7 +49,7 @@ theorem local_ascent (k K : Type) [Field k] [Field K] (ι : k →+* K) (X X' : S
     apply fn_ext
     intro z hz
     have hzV : φ z ∈ V := hz.1
-    simp only [t, map_sum, ReciprocityTheory.ChartRestriction.G.DVR.FlatBC.eTens_tmul]
+    simp only [t, map_sum]
     rw [gs_zero', gs_sum' _ _ _ hz, ← hv z (hVU hzV)]
     refine Finset.sum_congr rfl fun i _ => ?_
     have et := ReciprocityTheory.ChartRestriction.G.DVR.FlatBC.eTens_tmul p p' φ H V hV (ReciprocityTheory.ChartRestriction.G.DVR.rs hVU (B i)) (d i)

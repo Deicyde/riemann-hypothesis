@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LatticeSlopes.Statement
+import Mathlib.Order.CompletePartialOrder
 
 open Module Submodule
 

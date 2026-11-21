@@ -1,7 +1,6 @@
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.SameOffRefl
-import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.TiePtOne
-import Formalism.SharpRestriction.GrowthBounds.ChartedClasses.ToLEInvApply
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ExistsMidLevIff
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.SpanPowerMembership.LocAtA
+import Formalism.LocalToGlobal.Divisibility.Tuples
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.G Formalism.L2.G Formalism.L2.G.Cmp Formalism.L2.Forms Formalism.UG Formalism.L2.DIV Formalism.L2.G.Pend Formalism.L2.PairingIndexBounds.F Formalism.MainNotions.G.KAat GlobalTheory.TwV GlobalTheory.TwV.Xc TensorProduct
 
 noncomputable section
@@ -18,7 +17,7 @@ theorem adic_ringEquiv_eq_self {F : Type} [Field F] [NumberField F] (w : HeightO
   have hval : ∀ b : F, Valued.v (algebraMap F (w.adicCompletion F) b) = w.valuation F b := by
     intro b
     rw [HeightOneSpectrum.algebraMap_adicCompletion]
-    simp [HeightOneSpectrum.valuedAdicCompletion_eq_valuation']
+    simp
 
   have hcmp : ∀ (b : F) (u : w.adicCompletion F), b ≠ 0 →
       (Valued.v u ≤ Valued.v (algebraMap F (w.adicCompletion F) b) ↔
@@ -90,7 +89,7 @@ theorem firstFactor_agree : ∀ (F E : Type) [Field F] [NumberField F] [Field E]
       Valued.v (algebraMap F (v.adicCompletion F) b) = v.valuation F b := by
     intro v b
     rw [HeightOneSpectrum.algebraMap_adicCompletion]
-    simp [HeightOneSpectrum.valuedAdicCompletion_eq_valuation']
+    simp
   have hww : w = w' := by
     by_contra hne
     have hle : ¬ w.asIdeal ≤ w'.asIdeal := fun h =>

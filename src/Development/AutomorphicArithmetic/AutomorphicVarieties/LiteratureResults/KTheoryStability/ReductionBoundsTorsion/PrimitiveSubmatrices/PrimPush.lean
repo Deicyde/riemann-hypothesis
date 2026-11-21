@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.KTheoryStability.ReductionBoundsTorsion.SBridgeAlt
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.KTheoryStability.ReductionBoundsTorsion.PrimitiveSubmatrices.GlobalTheory
+import Mathlib.Data.Matrix.PEquiv
 
 noncomputable section
 
@@ -123,7 +126,7 @@ private theorem isBd_cmap_pi_sub_sum_cmap_mulSingle_of_isPrim (hC : SChain) {G :
       cases j using Fin.cases <;> simp [φ]
     have e2 : φ.comp (MonoidHom.inl G G) = MonoidHom.mulSingle (fun _ : Fin (q + 2) => G) 0 := by
       refine MonoidHom.ext fun a => funext fun j => ?_
-      cases j using Fin.cases <;> simp [φ, Pi.mulSingle_apply]
+      cases j using Fin.cases <;> simp [φ]
     have e3 : φ.comp (MonoidHom.inr G G) = ψ.comp (MonoidHom.pi fun _ => MonoidHom.id G) := by
       refine MonoidHom.ext fun a => funext fun j => ?_
       cases j using Fin.cases <;> simp [φ, ψ]

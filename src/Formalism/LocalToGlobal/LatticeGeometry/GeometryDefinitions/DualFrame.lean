@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianLattices.HermitianLatticesProofs.DualLattice
 import Formalism.QuotientMetricDivisors.Statement
 import Formalism.SatakeDualWeyl.Statement
@@ -33,7 +35,7 @@ theorem dual_frame (h : V →ₗ⋆[K] V →ₗ[K] K) (hs : h.IsSymm) (hnd : h.N
   have hcoord : ∀ z : V, z = ∑ j, h (bs j) z • b j := by
     have hlin : (LinearMap.id : V →ₗ[K] V) = ∑ j, (h (bs j)).smulRight (b j) := by
       apply b.ext; intro k
-      simp [LinearMap.smulRight_apply, hbs']
+      simp [hbs']
     intro z
     simpa using congrArg (fun F : V →ₗ[K] V => F z) hlin
 

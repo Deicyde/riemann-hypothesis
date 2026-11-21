@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RestrActApply
 open Formalism.BasicNotions.TH Formalism.MainNotions.SchurIrreducible GlobalTheory.FockAlg GlobalTheory.SteepMult
 
@@ -66,14 +67,14 @@ lemma bracket_eNC {Z : Mat R S} (hZ : IsKC Z) (x : NC R S) :
       have : ¬ (u = c ∧ v = d) := by
         rintro ⟨rfl, rfl⟩
         exact huv hcd
-      simp [eNC, Eab, Matrix.single_apply, this]
+      simp [eNC, Eab, this]
   · rw [Finset.sum_eq_single (⟨(c, d), hcd⟩ : NC R S)]
     · simp [eNC, Eab, adP]
     · rintro ⟨⟨u, v⟩, huv⟩ _ hne
       have : ¬ (u = c ∧ v = d) := by
         rintro ⟨rfl, rfl⟩
         exact hne rfl
-      simp [eNC, Eab, Matrix.single_apply, this]
+      simp [eNC, Eab, this]
     · simp
 
 lemma sum_update_swap {ι B : Type} [Fintype ι] [DecidableEq ι] [AddCommMonoid B] {k : ℕ} (i : Fin k)

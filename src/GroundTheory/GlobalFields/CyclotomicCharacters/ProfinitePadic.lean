@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.CyclotomicCharacters.Character
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.ContinuousToZModPow
+import Mathlib.Algebra.Group.Pi.Units
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Topology.MetricSpace.Ultra.TotallySeparated
 
 open scoped GroundTheory.LocalField.Abstract
 

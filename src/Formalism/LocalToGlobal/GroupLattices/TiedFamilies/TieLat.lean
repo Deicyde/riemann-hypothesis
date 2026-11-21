@@ -1,10 +1,12 @@
-import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.CmpCMemMIff
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.ExistsPrimeToLe
 import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.MRatSpanOfRatInv
 import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.MRatSpanOfWeak
 import Formalism.LocalToGlobal.GroupLattices.StdSubAtOfRing
 import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.IsUnitDetBlockPreimage
 import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.TiePtRec
+import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.SpanImageOfSurj
 
 noncomputable section
 

@@ -1,13 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.MetricPeriods.IsTwiceDifferentiableAt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.CompRightEqZero
-import GroundTheory.HeightsAndTheta.Heights.Antisymmetric.Statements
 import ReciprocityTheory.AnalyticForms.LeviForms.Energy
 import ReciprocityTheory.AnalyticForms.LeviForms.TailBoundA
-import ReciprocityTheory.AnalyticForms.PotentialTheory.ProjectiveLineFubiniStudyFacts
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.LoglogQuotNonneg
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.FixedMemberBase
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.SingularWeightMonotoneRegularizationStatement
+import ReciprocityTheory.AnalyticForms.PotentialTheory.MaMeasure
 open MvPolynomial MeasureTheory Filter Topology Matrix ReciprocityTheory.AnForm ReciprocityTheory.AnForm.M ReciprocityTheory.AnForm.P GlobalTheory.CompanionTheory.Ar.PB GroundTheory.Heights₂.Heights
 open scoped ComplexOrder
 
@@ -98,19 +96,19 @@ theorem abs_mInt_le_of_words [CompactSpace X] [T2Space X] (A : FinHolAtlas e X) 
         funext k
         by_cases hk : k = i
         · subst hk; simp
-        · simp [Function.update_of_ne hk, Finset.mem_insert, hk]
+        · simp [Finset.mem_insert, hk]
       have e2 : (fun k => if k ∈ D then P k else if k ∈ insert i T then P k + Θ else Θ) =
           Function.update (fun k => if k ∈ D then P k else if k ∈ T then P k + Θ else Θ) i (P i + Θ) := by
         funext k
         by_cases hk : k = i
         · subst hk; simp [hi]
-        · simp [Function.update_of_ne hk, Finset.mem_insert, hk]
+        · simp [Finset.mem_insert, hk]
       have e3 : (fun k => if k ∈ D then P k else if k ∈ T.erase i then P k + Θ else Θ) =
           Function.update (fun k => if k ∈ D then P k else if k ∈ T then P k + Θ else Θ) i Θ := by
         funext k
         by_cases hk : k = i
         · subst hk; simp [hi]
-        · simp [Function.update_of_ne hk, Finset.mem_erase, hk]
+        · simp [Finset.mem_erase, hk]
       have hadd := update_add A _ i (P i) Θ hF (hP i) hΘ g hg
       rw [← e1, ← e2, ← e3] at hadd
       have h1 := ih (insert i T)

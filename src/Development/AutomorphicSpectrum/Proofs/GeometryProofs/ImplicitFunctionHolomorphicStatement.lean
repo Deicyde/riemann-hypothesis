@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ImplicitFunctionHolomorphic
 open Filter Topology Metric
 set_option maxHeartbeats 1000000 in

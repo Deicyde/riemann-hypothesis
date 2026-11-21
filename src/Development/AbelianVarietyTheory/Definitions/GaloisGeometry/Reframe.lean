@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.JointCmpEmbeddingY
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.NatCastMemOfPlace
-import Formalism.LocalToGlobal.InertKernelTheory.SubBSplit
+import Formalism.LocalToGlobal.InertKernelTheory.DelPolOfTies
 
 noncomputable section
 

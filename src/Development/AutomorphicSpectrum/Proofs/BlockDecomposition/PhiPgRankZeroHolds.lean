@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MvecLeviMulUv
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsMemTwKerPolyBall
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MirabolicFourierExpansion
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GpProjContinuous
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsInducedBallIndicatorStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LocallyConstantFiniteBallSumStatement

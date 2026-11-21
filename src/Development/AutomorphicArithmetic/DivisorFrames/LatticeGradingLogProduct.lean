@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinPart
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticePadicGradingDetStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullLatticePrimeToPBasis
 import Development.AutomorphicArithmetic.DivisorFrames.IdealNormLogHeight

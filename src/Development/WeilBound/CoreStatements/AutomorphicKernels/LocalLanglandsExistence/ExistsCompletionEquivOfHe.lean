@@ -1,7 +1,8 @@
-import Development.WeilBound.CoreStatements.AutomorphicKernels.LocalLanglandsExistence.KernelCondGlob
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.AutomorphicKernels.LocalLanglandsExistence.WeilEquivOfLocalDegreeOne
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.WeilGroupRestriction
 import GroundTheory.GlobalFields.CompletionAtPlace.Degree
+import GroundTheory.LocalFields.PadicLogSeries
 
 noncomputable section
 

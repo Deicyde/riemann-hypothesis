@@ -1,6 +1,6 @@
-import Development.WeilBound.CoreStatements.PeriodRingComparison.CrystallinePeriodRings.Assembly
-import Development.AutomorphicArithmetic.ThetaCorrespondence.CrystallineComparison.IotaBounded
-import Development.AutomorphicArithmetic.ThetaCorrespondence.CrystallineComparison.EqToBdRPlusOfBounded
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.CoreStatements.PeriodRingComparison.PadicPeriodAlgebraMaps.CPAlgebraMapPadic
 
 noncomputable section
 

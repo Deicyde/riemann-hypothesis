@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ContinuousMapPFin
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSystemOf
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TotalDegreeLeOfColW
 open NumberField IsDedekindDomain GlobalTheory.CuspRep GlobalTheory.UnitaryBC GlobalTheory.DefU Formalism.BasicNotions Formalism.CohomologicalDescent.DepthNonnegative GlobalTheory.ExpFrame GlobalTheory.FrameAut
@@ -55,7 +54,7 @@ theorem continuous_det_units (n : ℕ) : Continuous (Matrix.GeneralLinearGroup.d
     exact Units.continuous_val.matrix_det
   · have e : ∀ g : GL (Fin n) ℂ, ((Matrix.GeneralLinearGroup.det g)⁻¹ : ℂˣ) = Matrix.GeneralLinearGroup.det g⁻¹ :=
       fun g => (map_inv _ g).symm
-    simp only [Function.comp_def, e, Matrix.GeneralLinearGroup.val_det_apply]
+    simp only [e, Matrix.GeneralLinearGroup.val_det_apply]
     exact Units.continuous_coe_inv.matrix_det
 
 theorem grp_tprod' (n : ℕ) {ι : Type} [DecidableEq ι] (mu : ι → ℕ → ℕ) (h : ι → GL (Fin n) ℂ)

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.ThetaModuleTransport.HeadColumnCoordinates.DeterminantUnitTheta.MemSpanOfSharpG
 
 noncomputable section
@@ -101,8 +103,8 @@ theorem mmInt_G {g : SplitG M.L} {t : Term V M r} (hg : GoodG H g t) (hT : t.T �
           linear_combination hc0
         · have h' : ¬(b = Fin.last r ∧ a = Fin.last r) := fun h'' => h ⟨h''.2, h''.1⟩
           simp only [cor, h, h', if_false] at A2 ⊢
-          simp only [map_mul, map_add, ecj, eal, Prod.fst_mul, Prod.fst_add, Prod.fst_swap, map_zero,
-            Prod.fst_zero, add_zero]
+          simp only [map_mul, ecj, eal, Prod.fst_mul, Prod.fst_swap,
+            add_zero]
           convert neg_mem A2 using 1
           field_simp
           ring
@@ -114,8 +116,8 @@ theorem mmInt_G {g : SplitG M.L} {t : Term V M r} (hg : GoodG H g t) (hT : t.T �
           field_simp
           ring
         · simp only [cor, h, if_false] at A1 ⊢
-          simp only [map_mul, map_add, ecj, eal, Prod.snd_mul, Prod.snd_add, Prod.snd_swap, map_zero,
-            Prod.snd_zero, add_zero]
+          simp only [map_mul, ecj, eal, Prod.snd_mul, Prod.snd_swap,
+            add_zero]
           convert A1 using 1
           field_simp
           ring
@@ -132,7 +134,7 @@ theorem mmInt_G {g : SplitG M.L} {t : Term V M r} (hg : GoodG H g t) (hT : t.T �
           ring
         · have h' : ¬(b = Fin.last r ∧ a = Fin.last r) := fun h'' => h ⟨h''.2, h''.1⟩
           simp only [cor, h, h', if_false] at A1 ⊢
-          simp only [map_mul, map_add, eal, Prod.fst_mul, Prod.fst_add, map_zero, Prod.fst_zero, add_zero]
+          simp only [map_mul, eal, Prod.fst_mul, add_zero]
           convert A1 using 1
           field_simp
           ring
@@ -144,7 +146,7 @@ theorem mmInt_G {g : SplitG M.L} {t : Term V M r} (hg : GoodG H g t) (hT : t.T �
           field_simp
           linear_combination hc0
         · simp only [cor, h, if_false] at A2 ⊢
-          simp only [map_mul, map_add, eal, Prod.snd_mul, Prod.snd_add, map_zero, Prod.snd_zero, add_zero]
+          simp only [map_mul, eal, Prod.snd_mul, add_zero]
           convert neg_mem A2 using 1
           field_simp
           ring
@@ -162,8 +164,8 @@ theorem mmInt_G {g : SplitG M.L} {t : Term V M r} (hg : GoodG H g t) (hT : t.T �
           first | linear_combination A3 | linear_combination -A3 | linear_combination (g.q : F) * A3 | linear_combination -(g.q : F) * A3
         · have h' : ¬(b = Fin.last r ∧ a = Fin.last r) := fun h'' => h ⟨h''.2, h''.1⟩
           simp only [cor, h, h', if_false] at A3 ⊢
-          simp only [map_mul, map_add, map_sub, map_neg, ecj, eal, Prod.fst_mul, Prod.fst_add,
-            Prod.fst_sub, Prod.fst_neg, Prod.fst_swap, map_zero, Prod.fst_zero, sub_zero]
+          simp only [map_mul, map_sub, map_neg, ecj, eal, Prod.fst_mul,
+            Prod.fst_sub, Prod.fst_neg, Prod.fst_swap, sub_zero]
           convert neg_mem c.2 using 1
           field_simp at A3 ⊢
           first | linear_combination A3 | linear_combination -A3 | linear_combination (g.q : F) * A3 | linear_combination -(g.q : F) * A3
@@ -176,8 +178,8 @@ theorem mmInt_G {g : SplitG M.L} {t : Term V M r} (hg : GoodG H g t) (hT : t.T �
           field_simp at A3' ⊢
           first | linear_combination A3' | linear_combination -A3' | linear_combination (g.q : F) * A3' | linear_combination -(g.q : F) * A3'
         · simp only [cor, h, if_false] at A3' ⊢
-          simp only [map_mul, map_add, map_sub, map_neg, ecj, eal, Prod.snd_mul, Prod.snd_add,
-            Prod.snd_sub, Prod.snd_neg, Prod.snd_swap, map_zero, Prod.snd_zero, sub_zero]
+          simp only [map_mul, map_sub, map_neg, ecj, eal, Prod.snd_mul,
+            Prod.snd_sub, Prod.snd_neg, Prod.snd_swap, sub_zero]
           convert neg_mem c'.2 using 1
           field_simp at A3' ⊢
           first | linear_combination A3' | linear_combination -A3' | linear_combination (g.q : F) * A3' | linear_combination -(g.q : F) * A3'

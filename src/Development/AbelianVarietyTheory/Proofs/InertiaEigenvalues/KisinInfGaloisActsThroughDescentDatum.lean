@@ -1,10 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsPotential
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.OneSubPhiOntoOfFilZero
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.BhattScholzeCrystallineLattices
-import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.ConductorExponents
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.BreuilKisinLatticeExponentsAinfComparisonStatement
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.TeichmullerSubOneAinfPropertiesCompatibleRootsStatement
 open Formalism Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.WeaklyAdmissibleFiltrations TensorProduct PowerSeries GlobalTheory.Prism GlobalTheory.BK GlobalTheory.BKReal GlobalTheory.BKGal GlobalTheory.Per Matrix
 open scoped Formalism.Per
 
@@ -62,12 +58,12 @@ theorem galOCr_iC_of_covers {h : GQ l} {γ : TameGal K l e a} (hc : Covers K t �
         ZMod a → S O K e) = Pi.single τ (1 : S O K e) := funext fun σ => Subtype.ext (by
       by_cases hσ : σ = τ
       · subst hσ; simp
-      · simp [Pi.single_apply, hσ])
+      · simp [hσ])
     have := hA (Pi.single τ (1 : A O K))
     rwa [e1] at this
   have hx : f = ∑ τ, Pi.single τ (1 : S O K e) * d (f τ) := by
     ext1 σ
-    rw [Finset.sum_apply, Finset.sum_eq_single σ (fun τ _ hτ => by simp [d, Pi.single_apply, Ne.symm hτ])
+    rw [Finset.sum_apply, Finset.sum_eq_single σ (fun τ _ hτ => by simp [d, Ne.symm hτ])
       (by simp)]
     simp only [Pi.mul_apply, Pi.single_eq_same, one_mul]
     rfl

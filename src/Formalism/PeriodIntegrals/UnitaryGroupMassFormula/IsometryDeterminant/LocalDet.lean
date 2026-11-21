@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IsometryDeterminant.LocalLat
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 noncomputable section
 
@@ -152,7 +155,7 @@ theorem std_map_diagonal (D : ι → K) :
         Submodule R K)) := by
   ext x
   simp only [Submodule.mem_map, std, Submodule.mem_pi, Set.mem_univ, true_implies, Submodule.mem_one,
-    FractionalIdeal.mem_coe, FractionalIdeal.mem_spanSingleton, mR_apply, Matrix.mulVec_diagonal]
+    FractionalIdeal.mem_coe, FractionalIdeal.mem_spanSingleton, mR_apply]
   constructor
   · rintro ⟨y, hy, rfl⟩ i
     obtain ⟨w, hw⟩ := hy i

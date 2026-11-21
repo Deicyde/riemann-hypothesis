@@ -1,16 +1,13 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsRatDatum
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.ValueDoubleExact
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ClassSumIntegral
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IntegralFundamentalDomainEqSumDoubleCosetAvg
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsMulRightInvariantHaarAdelicUnitaryGroupHermiti
-import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.LevelADef
 import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.GEqBase
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.ChartNonempty
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicFormsFiniteStabilisers
 import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.AdelicUnitaryTopCong
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsRepsOfOpenCompact
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.LatHatOpenAndContinuous
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.MeasureToRealEqMass
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.Forms Formalism.UG
 open NumberField IsDedekindDomain Matrix MeasureTheory GlobalTheory.Mem GlobalTheory.Mem.Col2 GlobalTheory.MixPer GlobalTheory.Core.Rk GlobalTheory.AdForm
 open scoped TensorProduct Classical ComplexOrder
@@ -58,7 +55,7 @@ def swapL : letI : Algebra (FiniteAdeleRing (𝓞 F) F) (E ⊗[F] FiniteAdeleRin
       | tmul e b =>
         rw [Algebra.smul_def, show algebraMap (FiniteAdeleRing (𝓞 F) F) (E ⊗[F] FiniteAdeleRing (𝓞 F) F) a = (1 : E) ⊗ₜ a from rfl,
           Algebra.TensorProduct.tmul_mul_tmul, one_mul]
-        simp [mul_comm]
+        simp
         rw [TensorProduct.smul_tmul', smul_eq_mul]
       | add x y hx hy => simp_all [smul_add] }
 

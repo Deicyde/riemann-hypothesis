@@ -1,6 +1,7 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.ModerateCoefficientPositivity
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.MajorantFamilyNorms
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.TelescopingWeightedSums
+import Mathlib.Algebra.Order.Star.Real
 
 namespace ReciprocityTheory.ChartRestriction.G.FD
 
@@ -120,8 +121,7 @@ private theorem ratio_tau {r : ℕ} (X : Data E r) (e : X.Ψ → Fin r → ℂ) 
     have h1 := (hx' τ).2 ⟨i, Nat.lt_succ_of_le hi⟩
     have h2 := (hT' τ).2 ⟨i, Nat.lt_succ_of_le hi⟩
     rw [hd'] at h2
-    simp only [Complex.mul_re, Complex.ofReal_re, Complex.ofReal_im, mul_zero, sub_zero,
-      Fin.val_mk] at h1 h2
+    simp only [Complex.mul_re, Complex.ofReal_re, Complex.ofReal_im, mul_zero, sub_zero] at h1 h2
     by_contra hle
     push_neg at hle
     nlinarith [mul_le_mul_of_nonneg_left hle h1.le]
@@ -175,7 +175,7 @@ private theorem ratio_tau {r : ℕ} (X : Data E r) (e : X.Ψ → Fin r → ℂ) 
   have hlb : ∀ k, k < r → (⨅ i, (la τ i : ℝ)) ≤ l k ∧ l k ≤ ⨆ i, (la τ i : ℝ) := by
     intro k hk
     have h1 := hli ⟨k, hk⟩
-    simp only [Fin.val_mk] at h1
+    simp only at h1
     rw [h1]
     exact ⟨ciInf_le (Finite.bddBelow_range _) _, le_ciSup (Finite.bddAbove_range (fun i => (la τ i : ℝ))) ⟨k, hk⟩⟩
   have hxg : ∀ (i : ℕ) (h : i ≤ r),

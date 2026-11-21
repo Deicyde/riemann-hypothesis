@@ -1,7 +1,8 @@
-import Formalism.LocalToGlobal.CMDeterminantIdeals.StatementS
-import Formalism.LocalToGlobal.CMDeterminantIdeals.CmNumbersLink
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CMDeterminantIdeals.CMIdealValuations.FiniteDetAddSmulOneEqZero
 import Formalism.LocalToGlobal.CMDeterminantIdeals.CMIdealValuations.LargeResidueExtensionLemma
+import Formalism.LocalToGlobal.CMDeterminantIdeals.CMIdealValuations.AbsNormSpanGalois
 
 noncomputable section
 

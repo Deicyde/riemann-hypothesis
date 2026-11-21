@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ContinuousOfMemSmoothSpan
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.MeasurePreservingToMixedPiSymm
 open NumberField Matrix MeasureTheory GlobalTheory.CuspRep GlobalTheory.CuspRep.CuspidalL2GL GlobalTheory.ThetaPoisson GroundTheory.Global GroundTheory.Global.IdeleGroup
 open scoped ComplexConjugate nonZeroDivisors ContDiff
 
@@ -89,10 +90,10 @@ theorem pairL_dirv (u : Fin n → Cinf E) (k : Fin n × InfinitePlace E × Bool)
   rw [pairL_apply, Finset.sum_eq_single i, Finset.sum_eq_single w]
   · simp [dirv]
   · intro w' _ hw
-    simp [dirv, Pi.single_apply, hw]
+    simp [dirv, hw]
   · simp
   · intro j _ hj
-    simp [dirv, Pi.single_apply, hj]
+    simp [dirv, hj]
   · simp
 
 theorem norm_le_sum_pairL (u : Fin n → Cinf E) : ‖u‖ ≤ ∑ k, |pairL u (dirv k)| := by
@@ -151,7 +152,7 @@ theorem GlobalTheory.fourier_decay_family : ∀ (E : Type) [Field E] [NumberFiel
       intro k
       rw [infFourier_fderiv hsm hcs, norm_mul]
       have : ‖(2 * π * I * (pairL u (dirv k) : ℂ))‖ = 2 * π * |pairL u (dirv k)| := by
-        simp [norm_mul, Complex.norm_real, abs_of_pos pi_pos]
+        simp [Complex.norm_real, abs_of_pos pi_pos]
       rw [this]
       field_simp
     have hN := norm_le_sum_pairL u

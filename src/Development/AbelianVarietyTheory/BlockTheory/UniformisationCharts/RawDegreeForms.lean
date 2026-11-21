@@ -1,5 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.NonzeroLocus
+import Mathlib.NumberTheory.Padics.PadicIntegers
+import Mathlib.RingTheory.AdicCompletion.Completeness
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
 
 set_option autoImplicit false
 
@@ -187,7 +193,7 @@ structure IsDeg (I : Ideal R) : Prop where
 theorem res_res {Y : Scheme.{0}} {U V W : Y.Opens} (h : V ≤ U) (h' : W ≤ V) (u : Γ(Y, U)ˣ) :
     res h' (res h u) = res (h'.trans h) u := by
   ext
-  simp only [res, Units.coe_map, RingHom.toMonoidHom_eq_coe, MonoidHom.coe_coe]
+  simp only [res, Units.coe_map, MonoidHom.coe_coe]
   rw [← CommRingCat.comp_apply, ← Functor.map_comp]
   rfl
 
@@ -224,7 +230,7 @@ theorem res_pull_res {Y Z : Scheme.{0}} (f : Z ⟶ Y) {U V : Y.Opens} (h : V ≤
     (k : W ≤ f ⁻¹ᵁ V) (k' : W ≤ f ⁻¹ᵁ U) (u : Γ(Y, U)ˣ) :
     res k (pullU f V (res h u)) = res k' (pullU f U u) := by
   ext
-  simp only [res, pullU, Units.coe_map, RingHom.toMonoidHom_eq_coe, MonoidHom.coe_coe]
+  simp only [res, pullU, Units.coe_map, MonoidHom.coe_coe]
   change ((Y.presheaf.map (homOfLE h).op ≫ f.appLE V W k).hom _) = (f.appLE U W k').hom _
   rw [Scheme.Hom.map_appLE]
 
@@ -249,7 +255,7 @@ theorem ψAt_trans (χ : D.X) (i i' : D.P.L.ι) {V V' W} (h h') (k : W ≤ V) (k
   rw [map_mul, res_res, res_res] at H
   refine (res_res _ _ _).trans (H.trans ?_)
   refine congrArg₂ (· * ·) ?_ ?_
-  · simp only [LB.LinComb, Finset.univ_unique, Finset.prod_singleton, map_zpow, zpow_neg, zpow_one, map_inv]
+  · simp only [LB.LinComb, Finset.univ_unique, Finset.prod_singleton, zpow_neg, zpow_one]
     exact congrArg (·⁻¹) (res_res _ _ _)
   · exact (res_res _ _ _).symm
 

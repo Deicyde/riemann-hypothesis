@@ -1,4 +1,7 @@
-import ReciprocityTheory.L2DbarEstimates.Mollifiers.HasCompactSupport
+import BuildAid.Leniency.Open
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Topology.UniformSpace.Uniformizable
+import ReciprocityTheory.L2DbarEstimates.Mollifiers.MollifierL2LocTendsto
 
 namespace ReciprocityTheory.L2DbarEstimates.B
 

@@ -1,13 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.HeckeLAdicCharacterDeRham
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.DeRhamJacobian.IsdRJ
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.UnramifiedIsCrysAndJumpEqZero
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.DeRhamComponentsCrystallineLettersFinrank
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.RestrictCrystallineDeRhamFiniteExt
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsDeRhamOfIsCrystallineSpan
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.PeriodDataComparison
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.DeRhamJumpDescent
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.UnramifiedCharIsCrystallineHodgeTateZero
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.FiniteDimensionalLetter
 
 noncomputable section
 
@@ -110,7 +106,7 @@ def lineLattice (hO : Function.Injective (algebraMap O LL)) (ρ : Representation
       refine ⟨b * a, ?_⟩
       rw [hρ, ← hb]
       funext i
-      simp [φ, Algebra.smul_def]
+      simp [φ]
     fg := by
       rw [LinearMap.range_eq_map]
       exact Submodule.FG.map _ Module.Finite.fg_top

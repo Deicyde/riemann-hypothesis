@@ -1,21 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolEqISupFockDeg
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OffPartLe
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsArchOperatorCompactUnitaryWStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KEqOnId
-import Development.AbelianVarietyTheory.Definitions.Divisors.GenSubHwOfSurjective
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAThetaLiftCompatible
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchActionReadingsCompatible
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAThetaLocalFactorStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LowPartInvariantSubmoduleEquivStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviLiftMaximalCompact
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CartanEigenOrthonormalFrameExists
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolynomialFockSpaceStableArchimedeanMaximalCompaStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntertwinerOfCoef
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeadMinorMulDiagonal
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RestrictsToQuadraticPowOfRestrictsToQuadraticSig
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.EvenCardOfNotLone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AtAlgebraMapSgnAdSubOne
@@ -120,7 +103,7 @@ theorem even_mα_add : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [Num
     obtain ⟨x, y, hxy, -⟩ := (hh (AF F)).1 (n : AE F E)
     have E0 : sgnAd w = algebraMap F (AF F) (t : F) * (x ^ 2 - algebraMap F (AF F) δ * y ^ 2) := by
       have := congrArg (fun q : (AF F)ˣ => (q : AF F)) htn
-      simp only [Units.val_mul, Units.coe_map, MonoidHom.coe_coe] at this
+      simp only [Units.val_mul, Units.coe_map] at this
       rw [← hxy]
       exact this.symm
 

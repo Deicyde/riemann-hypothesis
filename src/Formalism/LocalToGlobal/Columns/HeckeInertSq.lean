@@ -1,4 +1,5 @@
-import Formalism.LocalToGlobal.Columns.HeckeInertLemmas
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.MemOfSmulMemOfAddEqOne
 
 noncomputable section

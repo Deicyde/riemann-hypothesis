@@ -1,5 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.MinimalPrimeDimensions.DimClosureAddOneLe
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.ChartResidueDegreeAlgClosedClosed
+import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.PChowDegreeSection
+import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.PFundCycleBaseChange
+import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.PMinimalPrimeComap
+import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.PSectionOrderAlgClosed
 
 set_option autoImplicit false
 set_option linter.style.haveILetI false
@@ -65,8 +71,7 @@ theorem eq_comp_spMap (h : algX p ⊤ = (algX q ⊤).comp π) : q ≫ spMap π =
   ext r
   have key := congrArg (fun φ => φ.hom r) (Scheme.ΓSpecIso_inv_naturality (CommRingCat.ofHom π))
   simp only [CommRingCat.hom_comp, RingHom.comp_apply, CommRingCat.hom_ofHom] at key
-  simp only [algX, Scheme.Hom.appLE, spMap, Scheme.Hom.comp_app, CommRingCat.hom_comp, RingHom.comp_apply,
-    RingHom.coe_comp, Function.comp_apply]
+  simp only [algX, Scheme.Hom.appLE, spMap, Scheme.Hom.comp_app, CommRingCat.hom_comp, RingHom.comp_apply]
   rw [key]
   rfl
 
@@ -78,7 +83,7 @@ theorem emb_base (h : algX p ⊤ = (algX q ⊤).comp π) (hE : Emb p s) : Emb q 
   obtain ⟨P, rfl⟩ := hs x
   refine ⟨MvPolynomial.map π P, ?_⟩
   rw [algX_eq_comp h]
-  simp [MvPolynomial.eval₂_map]
+  simp
 
 theorem ptIdeal_base (h : algX p ⊤ = (algX q ⊤).comp π) (z : Z) :
     ptIdeal p s z = (ptIdeal q s z).comap (MvPolynomial.map π) := by

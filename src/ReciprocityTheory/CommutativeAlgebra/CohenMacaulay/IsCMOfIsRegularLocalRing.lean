@@ -1,5 +1,6 @@
-import ReciprocityTheory.CommutativeAlgebra.CohenMacaulay.ModDepthGE
+import BuildAid.Leniency.Open
 import ReciprocityTheory.CommutativeAlgebra.CohenMacaulay.RegGens
+import ReciprocityTheory.CommutativeAlgebra.ChainConnInDim
 
 namespace ReciprocityTheory.CA
 

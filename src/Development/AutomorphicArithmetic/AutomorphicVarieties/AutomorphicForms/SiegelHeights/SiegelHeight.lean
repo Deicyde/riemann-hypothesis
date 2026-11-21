@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.SiegelHeights.InfEmbGrpEq
+import GroundTheory.AutomorphicForms.AutomorphicFormSpaces.ConstantTerm
+import GroundTheory.AutomorphicForms.ReductionSiegel
 
 noncomputable section
 

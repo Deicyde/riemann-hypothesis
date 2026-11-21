@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.stupidPf
 
 noncomputable section
@@ -47,7 +49,7 @@ lemma nat {K L : CochainComplex C ℤ} [K.IsStrictlyLE 0] [L.IsStrictlyLE 0] (g 
   ext i
   by_cases h : i = 0
   · subst h
-    simp only [HomologicalComplex.comp_f, stupidTruncGEZeroIsoSingle_hom_f_zero, cochainComplex_singleFunctor_zero_map_f_zero, Category.assoc, Iso.inv_hom_id_assoc]
+    simp only [HomologicalComplex.comp_f, stupidTruncGEZeroIsoSingle_hom_f_zero, cochainComplex_singleFunctor_zero_map_f_zero]
     erw [HomologicalComplex.stupidTruncMap_stupidTruncXIso_hom_assoc]
     first
     | (apply Eq.symm; refine (Category.assoc _ _ _).trans ?_; congr 1; exact Iso.inv_hom_id_assoc _ _)

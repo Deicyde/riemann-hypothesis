@@ -1,4 +1,5 @@
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.ParBoundW
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.NormEulerPolySubOneLe
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix
 open Formalism.L2.Theta Formalism.L2.DIV Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.Mult Formalism.IndefR.Datum
 open scoped TensorProduct InnerProductSpace ComplexConjugate
@@ -37,7 +38,7 @@ theorem small_entries_and_strings_avoid_excluded : ∀ (K : Type) [Field K] [Num
         linarith
       linarith
   · intro x hx1 hxne β hβ heq
-    simp only [GlobalTheory.LFun.seg, Multiset.mem_map, Finset.mem_range] at hβ
+    simp only [GlobalTheory.LFun.seg, Multiset.mem_map] at hβ
     obtain ⟨i, -, rfl⟩ := hβ
     set c : ℂ := (k : ℂ) / 2 - (((t : ℂ) - 1) / 2 - (i : ℂ)) with hc
     have hsplit : GlobalTheory.LFun.npow w ((k : ℂ) / 2) =

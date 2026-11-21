@@ -1,7 +1,7 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.MrelConjTranspose
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.ConjugationContinuousOnInvertible
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CompactGroupHaarExists
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.OppositeWeylSubgroupClosed
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.ActualAdjointnessFromHermitian
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.LongWeylElement
 
 open Matrix MeasureTheory Filter Topology
 open scoped ComplexConjugate ContDiff ENNReal

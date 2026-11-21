@@ -1,6 +1,8 @@
-import Mathlib
-import GroundTheory.GlobalFields.TateThesis.GlobalZetaSplit
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.TateThesis.AdelePoissonUniform
+import GroundTheory.GlobalFields.TateThesis.GlobalZeta
+import GroundTheory.GlobalFields.TateThesis.IdeleMeasureQuotient
 
 open NumberField IsDedekindDomain Topology Filter MeasureTheory
 open scoped NumberField.AdeleRing Pointwise

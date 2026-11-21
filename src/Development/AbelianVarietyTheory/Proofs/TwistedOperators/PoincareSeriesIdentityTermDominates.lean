@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.DepthPays
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsUnitaryEmbeddingStabilizerStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LongElementEmbeddingNormStatement
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LatticeSumProdNormLeOfProdNormLowerBoundStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.UnfoldTsumAlongSubgroupStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ContinuousRealPlacesMatrixCoefficientProductStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsOpenCongruenceEmbeddingStatement
@@ -226,7 +224,7 @@ theorem identity_dominates : ∀ (D : D7) (θ : InfFam D), IsInfFam θ → ∀ (
     refine hβ's.tsum_le_of_sum_le fun t => ?_
     rw [← Finset.sum_erase t (a := q₁) (by simp)]
     calc _ = ∑ q ∈ t.erase q₁, β q := Finset.sum_congr rfl fun q hq => by
-            simp [Function.update_apply, Finset.ne_of_mem_erase hq]
+            simp [Finset.ne_of_mem_erase hq]
       _ ≤ Bt := htail t
   rw [hI0, add_zero, zero_sub, norm_neg, hT1, norm_mul] at hnorm
   have hRpos : 0 < R := by linarith

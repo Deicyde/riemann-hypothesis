@@ -1,14 +1,12 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.KunnethLefschetz.BasisOne
 import Development.EtaleCohomology.EtaleTrace.TorsionH0PointOfTwistCoverCocycle
 import Development.EtaleCohomology.EtaleTrace.PtCoverPf
 import Development.EtaleCohomology.EtaleTrace.TwZeroPfSplit
 import Development.EtaleCohomology.EtaleTrace.PrimSplitPf
 import Development.EtaleCohomology.EtaleTrace.CocEqPf
-import Development.EtaleCohomology.EtaleTrace.EtaleTateTwistSectionConstantOnPointsOfConnected
 import Development.EtaleCohomology.EtaleTrace.PtCovPf
 import Development.EtaleCohomology.EtaleTrace.TateTwistSectionConstantOnPointsOfTwLocPtCov
-import Development.EtaleCohomology.TateTwists.TwLocPfR
-import Development.EtaleCohomology.TateTwists.TwSecLocPfZarR
 import Development.EtaleCohomology.TateTwists.AlgPowPfR
 import Development.EtaleCohomology.TateTwists.TwTorsPfR
 
@@ -49,7 +47,7 @@ private theorem res_twGen_zero_eq_twGen_prim_map {q : ℕ} {U V : Scheme.{0}} (x
   have hn := congrArg (fun φ => (ModuleCat.Hom.hom φ)
     (Submodule.Quotient.mk (Finsupp.single ζ 1) : (Scheme.Γ ⋙ twF q 0).obj (Opposite.op U)))
     ((toSheafify Scheme.etaleTopology (Scheme.Γ ⋙ twF q 0)).naturality x.op)
-  simp only [ModuleCat.hom_comp, LinearMap.comp_apply] at hn
+  simp only [ModuleCat.hom_comp] at hn
   refine hn.symm.trans ?_
   refine congrArg (ModuleCat.Hom.hom ((toSheafify Scheme.etaleTopology (Scheme.Γ ⋙ twF q 0)).app (Opposite.op V))) ?_
   exact congrArg Submodule.Quotient.mk Finsupp.mapDomain_single

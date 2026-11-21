@@ -1,5 +1,6 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.SegreChartProjObjects
+import BuildAid.Leniency.Open
+import ReciprocityTheory.AnalyticForms.MaIntEmpty
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterSt
 set_option maxSynthPendingDepth 1
 
 noncomputable section

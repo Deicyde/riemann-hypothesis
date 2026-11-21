@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.DimOfMinimal
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.LengthLocQuotEqZero
 
 noncomputable section
 
@@ -91,7 +94,7 @@ theorem block_step {L : ℝ} {m p : ℕ} (hp : p.Prime) {W : Ideal (MRing ι)} (
     have := ha k
     by_cases hk : k = b
     · subst hk; simp; omega
-    · simp [Pi.single_apply, hk]
+    · simp [hk]
   have hstep := lg_step hWm hs (q := W)
     (fun g => ⟨fun h => W.mul_mem_right _ h, fun h => (hWp.mem_or_mem h).resolve_right hi⟩)
     hb1 hp.pos hpW

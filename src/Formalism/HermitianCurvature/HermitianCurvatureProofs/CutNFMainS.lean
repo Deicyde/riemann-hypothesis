@@ -1,9 +1,13 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutNFDomS
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutNFFormIdS
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutNFTopFormDone
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutLimENFMainS
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutNFLeibMain
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutNFTopPtw
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutNFIdBetaLim
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutNFIdPairPtw
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutNFIdPolPair
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutNFIdPolTop
 
 namespace Formalism.FourierDecayAlt.P.CutBP
 

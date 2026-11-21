@@ -1,5 +1,5 @@
-import Formalism.LocalToGlobal.GlobalTheory.UnramifiedTrace.MulLatSupSpan
-import Formalism.LocalToGlobal.GlobalTheory.GL6.BwAValIntegralNonneg
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CrossDiagonalMatching.DnkLkLocP
 
 noncomputable section

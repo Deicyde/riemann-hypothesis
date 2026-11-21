@@ -1,9 +1,6 @@
-import Mathlib
-import CompanionTheory.SpectralGeometry.CountingDefinitions.AdelicEulerProducts.IsEulerProd
+import BuildAid.Leniency.Open
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.InfiniteAdelesLocalRingTotallyReal
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.InfiniteAdeleHaarMapEqScaledVolume
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsUniqueSelfDualHaarMeasureInfiniteAdeles
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LocalComponentsNontrivialAdelicCharacterStatement
 
 open HeckeCharacterZeroLocus.SiegelWeilU GlobalTheory.CompanionTheory.SW NumberField IsDedekindDomain MeasureTheory Topology
 open scoped TensorProduct ENNReal NNReal Matrix
@@ -70,7 +67,7 @@ theorem selfDual_rationalForm_Ainf_unique : ∀ (F : Type) [Field F] [NumberFiel
   obtain ⟨a, ha, ha'⟩ := GlobalTheory.GaugeEx.SdInf.exists_equiv_Ainf F
   have hpc : Continuous (psiInf F ψ) := hψ.1.comp (continuous_id.prodMk continuous_const)
   have hadd : ∀ x y, psiInf F ψ (x + y) = psiInf F ψ x * psiInf F ψ y := fun x y => by
-    simp only [psiInf, map_add, ← AddChar.map_add_eq_mul]
+    simp only [psiInf, ← AddChar.map_add_eq_mul]
     congr 1
     exact Prod.ext rfl (add_zero _).symm
   have hAR : (A.map (algebraMap F (Ainf F)))ᵀ = A.map (algebraMap F (Ainf F)) := by

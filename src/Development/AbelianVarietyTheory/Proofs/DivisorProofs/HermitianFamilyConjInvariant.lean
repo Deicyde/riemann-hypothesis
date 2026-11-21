@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SecJets4
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.AbsoluteSiegel
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LieAlgebraMetricConjEmbeddingEqConj
 
@@ -43,7 +43,7 @@ theorem single_conj (F : SemiFib K) (h : HermFam K (Fin F.P₀.g → K))
   unfold hermForm
   rw [map_mul, Complex.conj_ofReal, star_star]
   congr 1
-  simp [dotProduct, Matrix.mulVec, map_sum, Complex.star_def]
+  simp [dotProduct, Matrix.mulVec, map_sum]
 
 theorem conjInv : ∀ (K : Type) [Field K] [NumberField K] (F : SemiFib K) (h : HermFam K (Fin F.P₀.g → K)),
     F.IsHerm h → GlobalTheory.Published.ConjInv h :=

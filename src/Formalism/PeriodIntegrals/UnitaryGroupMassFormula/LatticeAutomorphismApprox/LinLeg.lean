@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LatticeAutomorphismApprox.LinBase
 
 noncomputable section
@@ -63,7 +64,7 @@ theorem leg (hP : ∀ β ∈ Λ2, ∀ x ∈ Λ1, pr P β x ∈ O) {up φp uq φq
   have hγ2P : γ2 ᵥ* P = φq ᵥ* P - (pr P φq up * (pr P φp up)⁻¹) • (φp ᵥ* P) := by
     subst hγ2
     first
-    | (simp only [sub_vecMul, vecMul_smul]; done)
+    | (simp only [sub_vecMul]; done)
     | (simp only [sub_vecMul, smul_vecMul]; done)
     | (simp [sub_vecMul]; done)
     | (ext j; simp [vecMul, dotProduct, sub_mul, Finset.sum_sub_distrib, Finset.mul_sum, mul_assoc]; done)

@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.PullbackBijectiveDegreesOneTwo
 import Development.AbelianVarietyTheory.Definitions.Divisors.RatBasisLinearIndependentInt
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.BijectiveCechDeRhamComparisonDegreeOne
+import Mathlib.LinearAlgebra.CliffordAlgebra.Contraction
 
 set_option autoImplicit false
 

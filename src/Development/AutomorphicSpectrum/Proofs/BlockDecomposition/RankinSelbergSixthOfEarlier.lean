@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.VerticalStrips.UnramifiedEulerProductIntegral
 
 noncomputable section
@@ -472,7 +473,7 @@ theorem integral_polar (ψ : AddChar F Circle) (ν c : Fˣ →* ℂˣ) (s : ℂ)
     ring
   simp only [Complex.real_smul, hsl, ENNReal.toReal_ofReal (sq_nonneg (modulus (z : F) : ℝ))]
   rw [← e, hp, Iker_smul]
-  simp only [MonoidHom.mul_apply, MonoidHom.inv_apply, inv_inv, Units.val_mul]
+  simp only [MonoidHom.mul_apply, inv_inv, Units.val_mul]
   ring
 
 theorem zv_eq_trilinear : Ad3.R.A1 → Ad3.R.A3 → Ad3.R.A4 → Ad3.R.A5 → Ad3.R.A6 := by

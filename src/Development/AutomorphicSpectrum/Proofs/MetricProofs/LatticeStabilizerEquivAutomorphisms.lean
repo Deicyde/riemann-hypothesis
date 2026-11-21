@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.GroupDict
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsSheetCover
-import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.StatementsProved
-import GroundTheory.HeightsAndTheta.Heights.CountingLowerBound.Assembly
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.IntEmbInjective
 open NumberField Matrix MeasureTheory Filter Topology GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Cusp ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor GroundTheory.Heights₂.Heights.FiniteCovolume GroundTheory.Automorphic GlobalTheory.CompanionTheory.Ar.Cusp.Dict
 open scoped ENNReal InnerProductSpace
@@ -97,7 +94,7 @@ theorem eq_zero_of_trace {xi u : E} (hxi : xi ≠ 0)
     IsIntegralClosure.algebraMap_mk' (𝓞 E) _ hint] at h1
   have h2 : xi * (m • (z / (xi * u)) * u) = (m : ℚ) • z := by
     rw [zsmul_eq_mul, Algebra.smul_def]
-    simp only [eq_intCast, map_intCast]
+    simp only [map_intCast]
     field_simp
   rw [h2, map_smul, hz] at h1
   simp at h1

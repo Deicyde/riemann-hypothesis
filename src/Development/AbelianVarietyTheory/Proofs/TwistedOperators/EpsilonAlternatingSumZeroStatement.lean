@@ -1,8 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.EpsilonAlternatingSumZero
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.InverseChamberMap
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.EpsOfCZero
 open MeasureTheory Finset GlobalTheory.Chamber
 open scoped InnerProductSpace
 set_option maxHeartbeats 1000000 in

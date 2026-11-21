@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.LocalFields.AbstractLocalReciprocity.UniqueQuotientSubgroupOfSelf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.LocalFields.AbstractLocalReciprocity.Frobenius
 import GroundTheory.LocalFields.AbstractLocalReciprocity.Unramified
 

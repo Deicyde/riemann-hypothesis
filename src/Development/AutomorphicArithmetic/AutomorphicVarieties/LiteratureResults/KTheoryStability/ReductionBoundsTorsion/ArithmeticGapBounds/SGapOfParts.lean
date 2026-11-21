@@ -1,6 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.KTheoryStability.ReductionBoundsTorsion.ArithmeticGapBounds.PGlueG
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.KTheoryStability.ReductionBoundsTorsion.ArithmeticGapBounds.PGlueM
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.KTheoryStability.ReductionBoundsTorsion.ArithmeticGapBounds.PGlueK
+import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.KTheoryStability.ReductionBoundsTorsion.SBridgeAlt
+import Mathlib.Algebra.Order.Star.Real
 
 noncomputable section
 
@@ -27,7 +31,7 @@ theorem coset_inv (π : 𝓞 L) (hπ : π ≠ 0) (f : Gp L N → ℝ) (hf : ∀ 
   obtain ⟨k, ⟨γ', rfl⟩, hk⟩ := Subgroup.mem_map.mp (Subgroup.mem_comap.mp hh)
   have e : qel L N π hπ * toK L N h = toK L N γ' * qel L N π hπ := by
     rw [← hk]
-    simp [MulAut.conj_apply, mul_assoc]
+    simp [mul_assoc]
   rw [(toK L N).map_mul h γ, ← mul_assoc, e, mul_assoc, (toP L N).map_mul, ← emb_eq, mul_assoc, hf]
 
 end Glue

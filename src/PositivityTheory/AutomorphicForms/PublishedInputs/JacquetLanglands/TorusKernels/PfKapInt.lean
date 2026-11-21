@@ -1,4 +1,9 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.JacquetLanglands.TorusKernels.MultivariableReproducingFormula
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.MeasureTheory.Integral.Pi
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 noncomputable section
 

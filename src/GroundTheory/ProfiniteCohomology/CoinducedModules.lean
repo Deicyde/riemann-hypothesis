@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.DiscreteModules.IsDiscreteRepIffForallExistsOpenNormalSubgroup
+import Mathlib.Algebra.Homology.ShortComplex.ModuleCat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Topology.LocallyConstant.Algebra
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

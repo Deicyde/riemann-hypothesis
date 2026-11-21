@@ -1,10 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.CohomologicalDimension.Subgroup
 import GroundTheory.ProfiniteCohomology.CohomologicalDimension.NotDvdSuperIndexBotOfIsProPGroup
-import GroundTheory.ProfiniteCohomology.CohomologicalDimension.CdpOpenSubgroupLe
-import GroundTheory.ProfiniteCohomology.CohomologicalDimension.Closed
-import GroundTheory.ProfiniteCohomology.NotDvdSuperIndexIffMap
-import GroundTheory.ProfiniteCohomology.LocalClassFormation.FiniteVanishing.Vanishing
+import GroundTheory.ProfiniteCohomology.CartierDual
 set_option maxSynthPendingDepth 1
 
 noncomputable section

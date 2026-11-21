@@ -1,18 +1,8 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.ZeroPartEigenvalueConvention
-import Formalism.LocalToGlobal.IndefiniteReal.EvalTieTOne
-import Formalism.LocalToGlobal.IndefiniteReal.RationalEmbedding
-import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RowLevelMatch
-import Development.AbelianVarietyTheory.PublishedTheorems.DiscreteSeriesUnitary₂.DiscreteSeriesClassificationIff
-import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.EvalTOntoRep
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.PiCongrLeftUpdate
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.AdelicIdentificationRespectsRealFinite
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ExistsContinuousLeftInvariantRepConjugateTensor
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.AdelicTransportMeasureSecond
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.AdelicTransportMeasureThird
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.IntegralInvOfSupport
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EquivariantMultilinearMapsSmoothVectorsIntertwin
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BoundedHolomorphicFormEqMultiplicitySpaceValue
+import Formalism.LocalToGlobal.IndefiniteReal.LinksLemmas
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.S Formalism.L2.Theta Formalism.L2.DIV Formalism.IndefR.Links Formalism.IndefR.Lev Formalism.IndefR.Mult Formalism.IndefR.AutomorphicEvaluation Formalism.L2.SG.RowDict Formalism.L2.SG.RowsJoinPinned Formalism.L2.SG.RowLevelMatch Formalism.L2.SG.PoincareInHH.PoincareSetting MeasureTheory NumberField IsDedekindDomain
 open scoped InnerProductSpace
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
@@ -66,7 +56,7 @@ theorem word_fun {θ : InfFam D} {V : HSp D} {S : D.what₂.Tau → SPar} {M : D
     by_cases h : τ = p.1
     · subst h; simp [GlobalTheory.BackForm.lettersAt]
     · have h' : ¬ p.1 = τ := fun e => h e.symm
-      simp [GlobalTheory.BackForm.lettersAt, Function.update_of_ne h, List.filter_cons, h']
+      simp [GlobalTheory.BackForm.lettersAt, Function.update_of_ne h, h']
 
 end GlobalTheory.ConjRowCont
 

@@ -1,7 +1,19 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.UnFree
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.FundamentalDomainPointBound
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.FourierCoefficientDomain
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Baire.LocallyCompactRegular
+import Mathlib.Topology.UniformSpace.Uniformizable
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.Signature
 
 open NumberField ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.FD Formalism.L2.Pj
 open scoped Matrix
@@ -201,8 +213,7 @@ theorem _root_.GlobalTheory.OrbitScalar.exists_smul_of_orbits : ∀ (E : Type) [
             rw [(hb τ).2 k i0 (Fin.lt_def.mpr (Nat.pos_of_ne_zero fun h0 => hk (Fin.ext h0))),
               mul_zero]) (by simp)
         rw [hR] at h
-        simp only [Matrix.mulVec, dotProduct, col, Pi.smul_apply, smul_eq_mul, Matrix.of_apply,
-          Matrix.mul_apply] at h ⊢
+        simp only [Matrix.mulVec, dotProduct, col, Pi.smul_apply, smul_eq_mul] at h ⊢
         rw [h, mul_comm]
         rfl
       rw [hcol]

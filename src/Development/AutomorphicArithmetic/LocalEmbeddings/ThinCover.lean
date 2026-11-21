@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LevelCoverComponentOverBaseRationalIsometry
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LevelCoverPullbackReadingEqUnitConstPowMulStatement
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PeterssonLevelCoverPullbackProbability
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUniqueCuspFormPullbackGoodCover
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CoverPullbackMemBoundedCuspidalHolomorphic
@@ -29,7 +27,7 @@ theorem over_comp_lat : ∀ (D : D7) (j : ℕ) (H : ReciprocityTheory.ChartRestr
     obtain ⟨h1, h2⟩ := hL.inR
     have hk := D.R.m_add_three_le_k
     rw [hp, hq]
-    simp only [Ranks.sigW, Ranks.r]
+    simp only [Ranks.sigW]
     omega
   have hle : KA l ≤ KA d.l₂ := by rw [KA, KA, hA, hA₂]
   have hinc : (σ₂.comp (IntermediateField.inclusion d.c₂.le).toRingHom).comp

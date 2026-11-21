@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RestrActApply
 open Formalism.BasicNotions.TH Formalism.MainNotions.SchurIrreducible GlobalTheory.FockAlg GlobalTheory.SteepMult
 
@@ -59,6 +60,6 @@ theorem sum_adP_mul_adP (R S : ℕ) (z w : NC R S) :
   all_goals
     simp [Fintype.sum_sum_type, Formalism.BasicNotions.TH.sameBlock, Finset.sum_add_distrib]
   all_goals
-    by_cases h1 : z1 = w1 <;> by_cases h2 : z2 = w2 <;> simp [h1, h2, eq_comm, add_comm]
+    by_cases h1 : z1 = w1 <;> by_cases h2 : z2 = w2 <;> simp [h1, h2, eq_comm]
 
 end GlobalTheory.SteepMult.AdPCasimir

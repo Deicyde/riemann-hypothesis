@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.ContReal
+import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.SobPhase
+import Formalism.LocalToGlobal.IndefiniteReal.LevelTypeEquivalence.Sobolev2
 
 noncomputable section
 

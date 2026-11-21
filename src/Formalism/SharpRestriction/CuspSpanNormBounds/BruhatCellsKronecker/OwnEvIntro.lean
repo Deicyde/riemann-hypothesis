@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.LeSCSCl
-import Formalism.SharpRestriction.CuspSpanNormBounds.CntPartners
 
 noncomputable section
 

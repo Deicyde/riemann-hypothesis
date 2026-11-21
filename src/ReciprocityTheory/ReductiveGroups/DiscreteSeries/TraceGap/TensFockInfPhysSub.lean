@@ -1,6 +1,9 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TraceGap.WKTensFockGenSub
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TraceGap.DetOneSubEqSumMinors
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TraceGap.TraceEqTraceRestrictOfRangeLe
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TraceGap.ActDiagMemOfWK
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TraceGap.InvoluteFfMapsTo
 
 noncomputable section
 
@@ -30,7 +33,7 @@ theorem tco_physSub_zero {y : TensorProduct ℂ N (Fock n)} (hy : y ∈ physical
   · intro S _ hS
     simp only [LinearMap.coe_comp, Function.comp_apply, lf_num_basis]
     split_ifs
-    · simp [Module.Basis.coord_apply, Finsupp.single_apply, Ne.symm hS]
+    · simp [Module.Basis.coord_apply, Ne.symm hS]
     · simp
   · simp
 

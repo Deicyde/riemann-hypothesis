@@ -1,7 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.RegroupPfTermCar
-import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.AdmNPf
-import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.ParCols
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdelicClassFiniteness.DictRing
 
 noncomputable section
 
@@ -131,7 +130,7 @@ theorem frame_congruence_holds : FrameCongC := by
       exact hξ0 c a
     · subst h
       refine ⟨0, zero_mem _, ?_⟩
-      simp only [hξd, lt_irrefl, if_false, if_pos rfl, ht1, mul_zero, add_zero, hs]
+      simp only [hξd, lt_irrefl, if_false, ht1, mul_zero, add_zero, hs]
       simp
     · refine ⟨0, zero_mem _, ?_⟩
       have hna : ¬ a < c := not_lt.2 h.le

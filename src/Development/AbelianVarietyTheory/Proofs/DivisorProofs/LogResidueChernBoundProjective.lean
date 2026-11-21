@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AnalyticLogResolution
-import ReciprocityTheory.AnalyticForms.PotentialTheory.ProjectiveLineFubiniStudyFacts
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PotentialChartContDiffAtTwo
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SectionPullbackHolomorphicStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SncPullbackSectionBoundStatement

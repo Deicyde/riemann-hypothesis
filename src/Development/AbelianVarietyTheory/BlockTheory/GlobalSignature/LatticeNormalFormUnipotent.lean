@@ -1,4 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.FiniteSumNonzeroLargeDepth
 
 noncomputable section
@@ -84,7 +86,7 @@ example {O : Type} [CommRing O] [Algebra O F] [Module O Y] (q : O) (M : Submodul
   simp
 
 example : IsFrame (F := ℚ) (LinearMap.range (LinearMap.inl ℚ ℚ ℚ)) (fun _ : Fin 1 => ((0, 1) : ℚ × ℚ)) := by
-  refine ⟨by simp [linearIndependent_unique_iff], ?_⟩
+  refine ⟨by simp, ?_⟩
   have h : Submodule.span ℚ (Set.range (fun _ : Fin 1 => ((0, 1) : ℚ × ℚ))) = LinearMap.range (LinearMap.inr ℚ ℚ ℚ) := by
     ext x
     simp only [Set.range_const, Submodule.mem_span_singleton, LinearMap.mem_range, LinearMap.coe_inr]

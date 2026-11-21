@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.SplitEigenfunctions.Entire
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.WhittakerHecke.SummableTsumInvOneAddHeightPowLe
 import Development.AutomorphicArithmetic.WhittakerHecke.SchwartzBruhatTranslateDecayBound
 import Development.AutomorphicArithmetic.WhittakerHecke.ExistsCommonDenomOfIsCompactUnipotentTranslates

@@ -1,14 +1,7 @@
-import Mathlib
-import Formalism.PieriBlockIdeals.StatementLA
-import Formalism.LocalToGlobal.Divisibility.CoefMod
-import Formalism.LocalToGlobal.Divisibility.RowLat
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PieriBlockIdeals.PieriColumnMinors.ProdInitialMinorsMemDetSpan
-import Formalism.LocalToGlobal.Columns.CoefficientsModP
 import Formalism.MirabolicMackeyTheory.MirabolicMackeyProofs.RamBasic
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FinAfMemIntUIff
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.StandardWeylLatticesFockDual
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.SmulMemLocPOfVal
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.WeylRowActionMemWeylLatticeSquare
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.MemClosureIff
 
 open NumberField IsDedekindDomain MvPolynomial Formalism.BasicNotions Formalism.L2.DIV
@@ -101,7 +94,7 @@ theorem tensor_mem (w : HeightOneSpectrum (𝓞 K)) {ι : Type} [Fintype ι] {n 
         Submodule.subset_span ⟨_, hFt', rfl⟩
       have e2 : (∏ τ, Formalism.GradedWeylDivisibility.blockEmb K τ ((algebraMap (𝓞 K) K (t τ) * c ^ e τ) • F τ)) =
           ((algebraMap (𝓞 K) K (∏ τ, t τ)) * c ^ ∑ τ, e τ) • ∏ τ, Formalism.GradedWeylDivisibility.blockEmb K τ (F τ) := by
-        simp only [map_smul, MvPolynomial.smul_eq_C_mul, Finset.prod_mul_distrib, map_prod, map_mul,
+        simp only [MvPolynomial.smul_eq_C_mul, Finset.prod_mul_distrib, map_prod, map_mul,
           Formalism.GradedWeylDivisibility.blockEmb, MvPolynomial.rename_C]
         congr 2
         rw [← map_prod, Finset.prod_pow_eq_pow_sum]

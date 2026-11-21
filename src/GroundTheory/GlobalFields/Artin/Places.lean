@@ -1,6 +1,7 @@
-import Mathlib
-import GroundTheory.GlobalFields.Artin.MackeyFrobeniusEmbed
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.Artin.MemInvariantsCompSubtypeIff
+import GroundTheory.GlobalFields.Artin.Mackey
 set_option maxSynthPendingDepth 1
 
 noncomputable section

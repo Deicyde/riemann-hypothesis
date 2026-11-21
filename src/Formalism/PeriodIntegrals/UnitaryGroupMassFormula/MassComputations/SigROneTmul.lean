@@ -1,6 +1,8 @@
-import Mathlib
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.MassComputations.StrongApproxN
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LevelStructures.FrameStd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Batteries.Data.Nat.Gcd
+import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.HidaSetting
+import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Bridge
 
 noncomputable section
 

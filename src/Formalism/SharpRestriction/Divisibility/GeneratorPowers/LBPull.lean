@@ -1,6 +1,8 @@
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.FBIdLB
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ThetaPt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ValCalc
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.AppCompatGeneric
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ThetaVV
 
 set_option autoImplicit false
 
@@ -138,14 +140,13 @@ theorem isPullSec_comp {T T' T'' : Over S0} {h : T' ⊗ A ⟶ T ⊗ A} {hh : h �
     IsPullSec A L a (h' ≫ h) (by rw [Category.assoc, hh, hh']) s s'' := by
   intro j
   rw [h2 j, h1 j]
-  simp only [Over.comp_left, Scheme.Hom.comp_app, Scheme.Hom.app_eq_appLE, ← CommRingCat.comp_apply,
-    Category.assoc, Scheme.Hom.appLE_map, Scheme.Hom.map_appLE, Scheme.Hom.appLE_comp_appLE,
-    Scheme.Hom.appLE_map_assoc, Scheme.Hom.appLE_comp_appLE_assoc]
+  simp only [Over.comp_left, Scheme.Hom.app_eq_appLE, ← CommRingCat.comp_apply,
+    Scheme.Hom.appLE_map, Scheme.Hom.appLE_comp_appLE]
 
 theorem isPullSec_id {T : Over S0} (hh : 𝟙 (T ⊗ A) ≫ snd T A = snd T A) (s : LB.Sec (LPow A L a T)) :
     IsPullSec A L a (𝟙 (T ⊗ A)) hh s s := by
   intro j
-  simp only [Over.id_left, Scheme.Hom.id_app, CommRingCat.id_apply]
+  simp only [Over.id_left, Scheme.Hom.id_app]
   rw [show (homOfLE (chart_le_res A L (𝟙 (T ⊗ A)) hh a j)).op = 𝟙 _ from Subsingleton.elim _ _]
   erw [CategoryTheory.Functor.map_id]
   erw [CommRingCat.hom_id]

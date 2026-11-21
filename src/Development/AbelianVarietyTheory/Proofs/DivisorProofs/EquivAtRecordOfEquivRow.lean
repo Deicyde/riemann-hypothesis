@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.OneMapT
 import Formalism.LocalToGlobal.IndefiniteReal.FWTie
 import Formalism.LocalToGlobal.ProjectiveLattices.FnDefC
@@ -6,6 +7,8 @@ import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ColumnDataLaws
 import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.ActLevAndActBC
 import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.ExistsEmbExt
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.WeightExponentsEmbeddingsDegree
+import Development.AbelianVarietyTheory.Counterexamples.LevelGroupExamples.SectionBaseChangeOfBasis
+import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.RuleBaseChangeSectionValuesSemilinearStatement
 
 set_option autoImplicit false
 

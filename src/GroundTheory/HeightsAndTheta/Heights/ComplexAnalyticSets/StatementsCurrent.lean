@@ -1,9 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.MaIntEmpty
-import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.Statements
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.Characterised
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.MahlerSectionBasic
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.Statements
+import Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.PullUUnitsCompatGeneric
 
 set_option autoImplicit false
@@ -70,7 +72,7 @@ lemma HasGen.add {F G : (Y ⟶ X) →₀ ℤ} (hF : HasGen L F) (hG : HasGen L G
         res hW ((LB.LinComb L φ ε).g (i ∘ Sum.inl) (j ∘ Sum.inl)) *
           res hW' ((LB.LinComb L φ' ε').g (i ∘ Sum.inr) (j ∘ Sum.inr)) := by
       first
-        | (simp only [LB.LinComb, Fintype.prod_sum_type, map_prod, map_zpow, res_res]; rfl)
+        | (simp only [LB.LinComb, Fintype.prod_sum_type, map_prod, map_zpow]; rfl)
         | (simp [LB.LinComb, Fintype.prod_sum_type, map_prod, map_zpow]
            congr 1 <;> refine Finset.prod_congr rfl fun k _ => ?_ <;> erw [res_res] <;> try rfl)
         | (simp [LB.LinComb, Fintype.prod_sum_type, map_prod, map_zpow]

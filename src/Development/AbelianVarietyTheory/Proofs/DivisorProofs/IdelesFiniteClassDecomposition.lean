@@ -1,6 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.Divisibility.Tuples
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ExistsPowNormOneIdeleEqPrincipalMulIntegralUnit
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ExistsMidLevIff
+import ReciprocityTheory.NeutralLocalFields.LocalFieldComparison.HCFFromRecipA
 open NumberField IsDedekindDomain Formalism.L2.DIV Formalism.UG
 
 noncomputable section

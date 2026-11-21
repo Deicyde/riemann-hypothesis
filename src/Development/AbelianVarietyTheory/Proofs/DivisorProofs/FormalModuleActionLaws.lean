@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsEtLevOver
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.RangeSubsetOfGeom
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EpsZeroPtEpsScalePt
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsEtPlace
+import Mathlib.Algebra.AffineMonoid.Basic
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.UPel.HT GlobalTheory.UPel.HT.Hecke GlobalTheory.UPel.HT.EtLev
 
@@ -200,7 +201,7 @@ theorem core {p : ℕ} [Fact p.Prime] (D : Datum p) {R : Type} [CommRing R] (b :
     have h := congrArg (fun g => g v2) (congrArg L hcef)
     simp only [map_add, map_mul, map_sub, map_one, Module.End.mul_apply, LinearMap.add_apply, LinearMap.sub_apply,
       Module.End.one_apply, L_int, L_nat, k2 c hc] at h
-    simp only [zero_add, add_zero] at h
+    simp only [zero_add] at h
     rw [← hTω, e2, hr2, map_smul, sub_self, hp, zero_smul, map_zero, add_zero] at h
     exact h.symm
   rw [hv12, z1, z2, add_zero]

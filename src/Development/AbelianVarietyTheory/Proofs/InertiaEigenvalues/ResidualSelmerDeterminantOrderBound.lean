@@ -1,9 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsDualDualRep
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.PoitouTateNineTermTransgressionZeroApply
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.CohDimTwoLocalOfLocalFiniteness
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.ContinuousCycMod
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsPlaceOverMoveValCc
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.GaloisTwistedSelmerAuxprimesOfMatrixAndBounds
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.NotXPowSuccDvdDetOfFirstOrderKernelEqZeroStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsNotXPowDvdAdjugateOfFirstOrderKernelStatement
@@ -14,6 +10,7 @@ import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.TameLocalRelat
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ContinuousAndResidualTrivComplexConjStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.RelaxedResidualSelmerMemUnrelaxedStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.MatrixComputesTwistedSelmerResidualTransferStatement
+import Mathlib.Algebra.DualNumber
 
 noncomputable section
 
@@ -38,7 +35,7 @@ theorem aeval_eps {K : Type} [Field K] (p : Polynomial K) :
   | add p q hp hq => simp [hp.1, hp.2, hq.1, hq.2]
   | monomial n a =>
     rcases n with _ | _ | n
-    · simp [Polynomial.coeff_monomial, TrivSqZeroExt.algebraMap_eq_inl]
+    · simp [TrivSqZeroExt.algebraMap_eq_inl]
     · simp [Polynomial.coeff_monomial, TrivSqZeroExt.algebraMap_eq_inl]
     · have : (DualNumber.eps : DualNumber K) ^ (n + 1 + 1) = 0 := by
         rw [pow_succ, pow_succ, mul_assoc, DualNumber.eps_mul_eps, mul_zero]

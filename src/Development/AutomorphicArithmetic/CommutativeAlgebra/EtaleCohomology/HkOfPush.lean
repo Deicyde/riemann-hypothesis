@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.VecZero
 import Development.EtaleCohomology.EtaleTrace.LadicH0LocallyConstant
 

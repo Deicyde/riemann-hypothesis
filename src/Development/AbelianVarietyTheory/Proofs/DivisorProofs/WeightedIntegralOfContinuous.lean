@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.LineSCShortExact
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TopDegreeDensityPullbackEqNormSqDetMul
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GlueMeasUnivNeTopOfCompact
@@ -86,8 +87,8 @@ theorem glue_mul {r : A.ι → V n → ℝ} (hr : ∀ i, ContinuousOn (r i) (A.e
       ((ENNReal.continuous_ofReal.comp_continuousOn (hr i)).aemeasurable (A.e i).open_target.measurableSet))]
   refine lintegral_congr fun v => ?_
   by_cases hv : (A.e i).symm v ∈ S
-  · simp only [Function.comp_apply, indicator_of_mem hv, one_mul, ofReal_mul_eq]
-  · simp only [Function.comp_apply, indicator_of_notMem hv, zero_mul, add_zero]
+  · simp only [indicator_of_mem hv, one_mul, ofReal_mul_eq]
+  · simp only [indicator_of_notMem hv, zero_mul, add_zero]
 
 end Chart
 

@@ -1,9 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConvUAbsU
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemShellUIffDepth
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SwapLtSwapIffOfAddTwo
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AntiJMulApply
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IsOpenIsCompactUnitaryIntegralPoints
+import Formalism.DoubleCosetMeasures.LowerUnipotentOrbits.RelIndexMulMeasure
 
 noncomputable section
 

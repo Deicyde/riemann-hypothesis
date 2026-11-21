@@ -1,6 +1,8 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StPuncturedBranchInOneBranch
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StBranchImageNhdOffCentre
+import Mathlib.Analysis.Complex.Convex
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

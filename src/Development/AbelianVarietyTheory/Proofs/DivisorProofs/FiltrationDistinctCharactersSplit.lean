@@ -1,5 +1,12 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorusThreeBlockApply
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 open GlobalTheory.SmGL GlobalTheory.PRep GlobalTheory.LeviBlockExponent GlobalTheory.IndJacBlock
 
 namespace GlobalTheory.ChainSplit
@@ -115,12 +122,12 @@ theorem chain_split : ∀ {V : Type} [AddCommGroup V] [Module ℂ V] {G : Type} 
       · intro t g
         by_cases ht : t = k
         · subst ht; simp [heig, hweig, smul_add]
-        · simp [Pi.single_apply, ht, heig]
+        · simp [ht, heig]
       · intro t ht
         have htk : t ≠ k := by
           rintro rfl; exact absurd ht (not_le.mpr (Fin.castSucc_lt_succ (i := t)))
         have : k.castSucc ≤ t.castSucc := le_trans (Fin.castSucc_lt_succ (i := k)).le ht
-        simp [Pi.single_apply, htk, hsupp t this]
+        simp [htk, hsupp t this]
   intro v hv
   obtain ⟨w, h1, h2, _⟩ := main _ v hv
   exact ⟨w, h1, h2⟩

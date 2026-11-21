@@ -1,5 +1,5 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.ArchimedeanGelfandKernels.FriedrichsKernels.Friedrichs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RdSkewEqConst
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CasimirOperatorFormula
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SobolevIntegrationByPartsStatement
@@ -47,12 +47,12 @@ theorem single_conj (a b : Fin n) (c : ℂ) : (Matrix.single a b c)ᴴ = Matrix.
 
 theorem skewY (a c : Fin n) :
     (Matrix.single a c (1 : ℂ) - Matrix.single c a (1 : ℂ) : Mat n)ᴴ = -(Matrix.single a c (1 : ℂ) - Matrix.single c a 1) := by
-  simp [Matrix.conjTranspose_sub, single_conj]
+  simp [Matrix.conjTranspose_sub]
 
 theorem skewZ (a c : Fin n) :
     (Matrix.single a c Complex.I + Matrix.single c a Complex.I : Mat n)ᴴ =
       -(Matrix.single a c Complex.I + Matrix.single c a Complex.I) := by
-  simp [Matrix.conjTranspose_add, single_conj, Matrix.single_neg, add_comm]
+  simp [Matrix.conjTranspose_add, Matrix.single_neg, add_comm]
 
 section L2
 

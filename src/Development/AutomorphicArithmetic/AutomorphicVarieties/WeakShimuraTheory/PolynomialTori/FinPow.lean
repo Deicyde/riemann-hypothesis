@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.LocalRingsCompletion.nakayama
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.FinitelyGeneratedModPow
+import Mathlib.RingTheory.AdicCompletion.Noetherian
+import Mathlib.RingTheory.PicardGroup
 
 open IsLocalRing
 

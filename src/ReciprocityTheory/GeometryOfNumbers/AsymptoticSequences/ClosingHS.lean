@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.GeometryOfNumbers.AsymptoticSequences.DefectSt
-import Mathlib
 
 namespace ReciprocityTheory.GeometryOfNumbersTheory
 

@@ -1,4 +1,6 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.ArcLiftingSetup
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 noncomputable section
 

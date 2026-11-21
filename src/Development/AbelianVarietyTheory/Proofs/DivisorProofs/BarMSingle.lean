@@ -1,5 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.TCoefMInMMul
+import Mathlib.RingTheory.Derivation.Lie
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open MvPolynomial GlobalTheory.PsCo.Pc1 GlobalTheory.PsCo.Pc1.A
 
@@ -27,11 +34,11 @@ theorem dM_inl (ε : Fin n → Bool) (x : Mode ε) (i j : Fin n) :
   · by_cases h : j = x.1.1
     · subst h
       simp [Matrix.single_apply, apply_ite]
-    · simp [Matrix.single_apply, h, Ne.symm h]
+    · simp [h, Ne.symm h]
   · by_cases h : i = x.1.2
     · subst h
       simp [Matrix.single_apply, apply_ite]
-    · simp [Matrix.single_apply, h, Ne.symm h]
+    · simp [h, Ne.symm h]
 
 theorem dM_inr (ε : Fin n → Bool) (x : Mode ε) (i j : Fin n) :
     dM ε x (X (Sum.inr (i, j))) = (if j = x.1.2 then X (Sum.inr (i, x.1.1)) else 0)
@@ -41,11 +48,11 @@ theorem dM_inr (ε : Fin n → Bool) (x : Mode ε) (i j : Fin n) :
   · by_cases h : j = x.1.2
     · subst h
       simp [Matrix.single_apply, apply_ite]
-    · simp [Matrix.single_apply, h, Ne.symm h]
+    · simp [h, Ne.symm h]
   · by_cases h : i = x.1.1
     · subst h
       simp [Matrix.single_apply, apply_ite]
-    · simp [Matrix.single_apply, h, Ne.symm h]
+    · simp [h, Ne.symm h]
 
 theorem mode_ne (ε : Fin n → Bool) (w x : Mode ε) : x.1.2 ≠ w.1.1 := by
   intro h

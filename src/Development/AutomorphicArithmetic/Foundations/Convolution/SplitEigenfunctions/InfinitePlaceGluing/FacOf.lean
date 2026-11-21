@@ -1,5 +1,4 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.SplitEigenfunctions.Entire
-import Development.AutomorphicArithmetic.Foundations.Convolution.SplitEigenfunctions.CharacterNorms.FacDefs
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.WhittakerHecke.IntegralMaxCompactEqCircleAverage
 import Development.AutomorphicArithmetic.WhittakerHecke.CongruenceSubgroupVolumePos
 import Development.AutomorphicArithmetic.WhittakerHecke.FiniteIdeleCongruenceVolumePos

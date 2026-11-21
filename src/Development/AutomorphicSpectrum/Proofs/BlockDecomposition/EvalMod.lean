@@ -1,11 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.HeckeLAdicCharacterDeRham
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.DeRhamJacobian.IsdRJ
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HasPeriods
-import Development.WeilBound.CoreStatements.CrystallinePeriodRings.TiedAInvOfTheta
-import GroundTheory.PAdicHodge.BCrisEigen
-import GroundTheory.PAdicHodge.BCrisRegularSenTate
-import Development.WeilBound.CoreStatements.CrystallinePeriodRings.MaximalIdealEqSpanT
+import Development.WeilBound.CoreStatements.CrystallinePeriodRings.InstCommRingBcris
+import GroundTheory.PAdicHodge.BdRAlgCl
 
 noncomputable section
 

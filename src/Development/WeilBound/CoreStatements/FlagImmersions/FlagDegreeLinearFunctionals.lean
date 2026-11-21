@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.CompactGapsGE
 import Formalism.DegreeFormula.PointDegree.PowSum
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
 
 open MvPolynomial Filter Topology GlobalTheory.CompanionTheory.Ar.Top
 

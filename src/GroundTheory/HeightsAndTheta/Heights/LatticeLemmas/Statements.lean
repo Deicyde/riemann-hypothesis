@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.LatticeLemmas.StatementsExamples
+import GroundTheory.HeightsAndTheta.Heights.LatticeLemmas.StatementsBundles
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.LatticeLemmas

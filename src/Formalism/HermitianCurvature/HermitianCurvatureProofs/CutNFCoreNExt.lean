@@ -1,6 +1,6 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutNFTopDomCore
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutFpmDecay
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutNFTopDomVMul
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutNFTopDomPtw
 
 namespace Formalism.FourierDecayAlt.P.CutBP
 

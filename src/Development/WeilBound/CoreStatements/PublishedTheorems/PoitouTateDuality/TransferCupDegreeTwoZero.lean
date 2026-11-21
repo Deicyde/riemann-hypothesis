@@ -1,6 +1,6 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.PublishedTheorems.PoitouTateDuality.PtfsCup
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.EulerCharacteristicCounts.GcohCmp
+import GroundTheory.ProfiniteCohomology.CupProducts.Pairing
 
 noncomputable section
 

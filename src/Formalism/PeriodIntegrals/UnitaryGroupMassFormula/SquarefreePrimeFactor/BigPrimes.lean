@@ -1,5 +1,5 @@
-import Formalism.PeriodIntegrals.SqfPrimeFactor
-import Formalism.PeriodIntegrals.PrimesDyadicRS
+import BuildAid.Leniency.Open
+import Formalism.PeriodIntegrals.SqfLab
 
 open Polynomial
 

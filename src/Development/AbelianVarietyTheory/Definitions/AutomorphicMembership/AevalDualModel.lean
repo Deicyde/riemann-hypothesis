@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.PolyRep
 
 set_option autoImplicit false
@@ -59,7 +60,7 @@ theorem aeval_dual_model {σ : Type} [Fintype σ] {R : Type} [CommRing R] (x a :
     rw [map_mul, hp]
     ext
     · simp
-    · simp [add_mul, Finset.sum_add_distrib, Pi.single_apply, Finset.mul_sum, apply_ite]
+    · simp [add_mul, Finset.sum_add_distrib, Pi.single_apply, apply_ite]
       rw [Finset.sum_mul]; exact Finset.sum_congr rfl fun _ _ => by ring
 
 set_option autoImplicit false in
@@ -84,7 +85,7 @@ private lemma aeval_dualNumber_inl_add_inr {σ : Type} [Fintype σ] {R : Type} [
         TrivSqZeroExt.fst_inl, TrivSqZeroExt.snd_inl, TrivSqZeroExt.fst_inr, TrivSqZeroExt.snd_inr,
         Derivation.leibniz, pderiv_X, smul_eq_mul, map_add, map_mul, aeval_X, add_mul,
         Finset.sum_add_distrib]
-      simp [Pi.single_apply, Finset.mul_sum, Finset.sum_mul, mul_comm, mul_left_comm, add_comm]
+      simp [Pi.single_apply, Finset.mul_sum, mul_comm, mul_left_comm, add_comm]
 
 set_option autoImplicit false in
 open MvPolynomial in

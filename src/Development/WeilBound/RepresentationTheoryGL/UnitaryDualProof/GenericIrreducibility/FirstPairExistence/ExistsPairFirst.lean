@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.GenericIrreducibility.CentralProd2
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ReverseOrderedProductPermEquiv
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.UnlinkedCommuteOfIrreducible
+import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.BernsteinZelevinskyGL.TopAdm
 
 noncomputable section
 
@@ -260,7 +265,7 @@ theorem moveFirst : FactorIrr k → Comm2Irr k → MoveFirst k := by
       · rw [Fin.append_right]
         have e1 : Fin.cast (Nat.add_comm 1 r) (Fin.natAdd 1 b) = b.succ := by
           ext
-          simp [Nat.add_comm]
+          simp
         simp only [Function.comp_apply, e1, Fin.cons_succ]
     have hy : ∑ _a : Fin 1, (x j).1 = (x j).1 := by simp
     have hApp : ∑ a, (Fin.append (fun _ : Fin 1 => x j) (x ∘ j.succAbove) a).1 =

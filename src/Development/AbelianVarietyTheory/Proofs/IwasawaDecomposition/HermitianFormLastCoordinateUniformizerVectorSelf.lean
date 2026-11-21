@@ -1,11 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.LatAtLattice
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TrueColumnSpacesStandardInFrameCoordsStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TrueColumnsPeriodMapDatumOkAndOverLevelPrime
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExtMCastSuccLast
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ValDetSubOneLt
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ValuedLtOfMem
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FiniteOrbitsOfFiniteFibres
+import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.InclusionInjective
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Col Formalism.L2.DIV Formalism.L2.Ker Formalism.UG Formalism.L2.Forms GlobalTheory.Mem GlobalTheory.Mem.Chr GlobalTheory.Mem.Col2 GlobalTheory.Mem.Col2.TC Matrix
 attribute [local instance] GlobalTheory.Mem.Col2.starE Formalism.BasicNotions.Host.cmStar
 
@@ -640,7 +640,7 @@ theorem til_L_eq {N n : ℕ} (hN : N = n + 1) {ST SG : Finset (HeightOneSpectrum
     · simp [z0, eLast]
     · have h1 : ¬ (i.1 + 1 = n + 1) := by omega
       have h2 : i.1 ≠ n := i.2.ne
-      simp [z0, eLast, h1, h2, (Fin.castSucc_lt_last i).ne]
+      simp [z0, eLast, h2, (Fin.castSucc_lt_last i).ne]
   rw [e1, e2]
   show (DecoSet.til (ST := ST) pi d).1.L = _
   rw [DecoSet.til_val d hT hG]
@@ -969,7 +969,7 @@ theorem eq_extM_of_ext (φ : E →+* R) {a : E} (ha : a ≠ 0) {M : Matrix (Fin 
     rw [e]
     refine Fin.lastCases ?_ (fun i => ?_) b
     · have h3 : ∀ l : Fin n, Fin.last n ≠ Br.iC (rfl : n + 1 = n + 1) l := fun l => (Fin.castSucc_lt_last l).ne'
-      simp [hM, h3, extM_last_castSucc]
+      simp [hM, h3]
       exact (extM_last_castSucc g' j).symm
     · have h3 : ∀ l : Fin n, (i.castSucc = Br.iC (rfl : n + 1 = n + 1) l) ↔ i = l := fun l => Fin.castSucc_inj
       simp [hM, h3]

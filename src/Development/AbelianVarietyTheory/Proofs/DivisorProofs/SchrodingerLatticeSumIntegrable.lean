@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AveragedIntegralFunctional
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzBruhatIntegrable
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsStdCharNegOneOfStandardTraceAdelicAddChar
 
@@ -101,11 +99,11 @@ theorem exists_schwartz_comp {κ : Type} [Fintype κ] {r : ℕ} (c d : Fin r →
   let Lc : (Fin r → mixedEmbedding.mixedSpace F) →ₗ[ℝ] (κ → mixedEmbedding.mixedSpace F) :=
     { toFun := linC c
       map_add' := by intro y z; funext k; simp [linC, add_mul, Finset.sum_add_distrib]
-      map_smul' := by intro a y; funext k; simp [linC, Finset.smul_sum, smul_mul_assoc] }
+      map_smul' := by intro a y; funext k; simp [linC, Finset.smul_sum] }
   let Ld : (κ → mixedEmbedding.mixedSpace F) →ₗ[ℝ] (Fin r → mixedEmbedding.mixedSpace F) :=
     { toFun := linD d
       map_add' := by intro y z; funext k; simp [linD, mul_add, Finset.sum_add_distrib]
-      map_smul' := by intro a y; funext k; simp [linD, Finset.smul_sum, mul_smul_comm] }
+      map_smul' := by intro a y; funext k; simp [linD, Finset.smul_sum] }
   let Lc' := LinearMap.toContinuousLinearMap Lc
   let Ld' := LinearMap.toContinuousLinearMap Ld
   have hb : ∃ (k : ℕ) (C : ℝ), ∀ y, ‖y‖ ≤ C * (1 + ‖Lc' y‖) ^ k := by

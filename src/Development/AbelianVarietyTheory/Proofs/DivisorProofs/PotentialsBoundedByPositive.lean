@@ -1,8 +1,8 @@
-import Mathlib
-import ReciprocityTheory.AnalyticForms.PotentialTheory.IsPotentialOfFun
-import ReciprocityTheory.AnalyticForms.PotentialTheory.PshShiftA
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PositivePotentialMinusSmallMultiplePsh
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.BoundaryPolynomialFunctions
+import Mathlib.RingTheory.PiTensorProduct
 
 namespace GlobalTheory.PosDom
 

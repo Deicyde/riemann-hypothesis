@@ -1,6 +1,15 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.GelfA
 import Formalism.RealPlaceAnalysis.StatementB
+import Formalism.GradedWeylDivisibility.StatementA
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -21,7 +30,7 @@ theorem _root_.GlobalTheory.Mem.GelfCheck.rowE_X (R : Type) [CommRing R] (r n : 
   simp only [pderiv_X, Pi.single_apply, Prod.ext_iff]
   split_ifs with hbc
   · subst hbc
-    simp [Finset.sum_ite_eq']
+    simp
   · have hcb : ¬c = b := fun h => hbc h.symm
     simp [hcb]
 
@@ -97,7 +106,7 @@ private theorem gradedWeyl_gen_coeff_one_and_coeff_zero (R : Type) [CommRing R] 
       congr 1
       · ring
       · exact Finset.sum_congr rfl fun _ _ => by ring
-    · simp [Pi.single_apply, Prod.ext_iff, hib, Polynomial.coeff_mul_C, hp0, hp1, Finset.sum_mul]
+    · simp [Prod.ext_iff, hib, Polynomial.coeff_mul_C, hp0, hp1, Finset.sum_mul]
       exact Finset.sum_congr rfl fun _ _ => by ring
 
 open MvPolynomial in
@@ -164,7 +173,7 @@ variable {R : Type} [CommRing R] {V : Type} [AddCommGroup V] [Module R V] {N : �
 theorem upper_kill (h : GlRel E) (hv : ∀ a b, a < b → E a b v = 0) (k : ℕ) (a b : Fin N) (hab : a < b) :
     (E ^ k) a b v = 0 := by
   induction k generalizing a b with
-  | zero => simp [Matrix.one_apply, hab.ne]
+  | zero => simp [hab.ne]
   | succ k ih =>
     rw [pow_succ', Matrix.mul_apply, LinearMap.sum_apply]
     refine Finset.sum_eq_zero fun c _ => ?_
@@ -172,7 +181,7 @@ theorem upper_kill (h : GlRel E) (hv : ∀ a b, a < b → E a b v = 0) (k : ℕ)
     · simp [ih c b hc]
     · have := congrArg (fun f : Module.End R V => f v) (pow_cov h k c b a c)
       simp only [LinearMap.sub_apply, Module.End.mul_apply, hv a c (hab.trans_le hc), map_zero, sub_zero,
-        if_true, if_neg hab.ne', LinearMap.zero_apply, ih a b hab] at this
+        if_true, if_neg hab.ne', ih a b hab] at this
       simpa using this
 
 theorem diag_pow (h : GlRel E) (hw : ∀ a, E a a v = μ a • v) (hv : ∀ a b, a < b → E a b v = 0) (k : ℕ)
@@ -225,7 +234,7 @@ theorem _root_.GlobalTheory.Mem.GelfCheck.trace_pow_apply (h : _root_.GlobalTheo
     induction k with
     | zero =>
       refine ⟨fun a b hab => ?_, fun a => ?_⟩
-      · simp [Matrix.one_apply, hab.ne]
+      · simp [hab.ne]
       · simp [Matrix.one_apply]
     | succ k ih =>
       obtain ⟨ih1, ih2⟩ := ih
@@ -242,7 +251,7 @@ theorem _root_.GlobalTheory.Mem.GelfCheck.trace_pow_apply (h : _root_.GlobalTheo
           simp [hw]
         · have hc := congrArg (fun f : Module.End R V => f v)
             (_root_.GlobalTheory.Mem.GelfCheck.pow_cov h k a m m b)
-          simp only [LinearMap.sub_apply, Module.End.mul_apply, if_pos rfl] at hc
+          simp only [LinearMap.sub_apply, Module.End.mul_apply] at hc
           rw [ih1 a m (lt_of_le_of_lt hab hmb), map_zero, zero_sub] at hc
           rw [if_neg (not_lt.mpr hmb.le), if_neg hmb.ne', ← neg_neg ((E ^ k) a m (E m b v)), hc]
           split_ifs <;> simp

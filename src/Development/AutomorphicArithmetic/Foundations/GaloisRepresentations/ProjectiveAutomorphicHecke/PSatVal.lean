@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ProjectiveAutomorphicHecke.CentralEig2
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.IntegralDeterminants.EigAll
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.MkMemAdmissibleAtIffCocycle
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsPolarizedTwistAbsPow
 
 open NumberField IsDedekindDomain Matrix Neutral.B1 Formalism.L2.Host Formalism.ConjugateSelfDual Formalism.BasicNotions Formalism.MainNotions.N GlobalTheory.CuspRep GlobalTheory.UnitaryBC GlobalTheory.GalOfCusp UpperTheory.V.Af
 open GlobalTheory.DefU GlobalTheory.PRep GlobalTheory.HeckeGal UpperTheory.Gal.CertificateRingHomMap
@@ -154,12 +156,12 @@ theorem UpperTheory.Gal.CertificateRingHomMap.pSatVal_of :
   · have hz : ∀ g, (((algRep W).comp (locF hw)) g f).1 v = 0 := fun g => by
       rw [← hrep, h0, map_zero]
     have e1 : (∑ g ∈ R, ((algRep W).comp (locF hw)) g f).1 v = ∑ g ∈ R, (((algRep W).comp (locF hw)) g f).1 v := by
-      simp [AddSubmonoidClass.coe_finset_sum, LinearMap.sum_apply]
+      simp [LinearMap.sum_apply]
     rw [e1, Finset.sum_eq_zero fun g _ => hz g]
     simp [h0]
   · have h1 := (hsat v h0).2.2.2 ϖ hϖ j hj
     rw [hRe] at h1
     have e1 : (∑ g ∈ R, ((algRep W).comp (locF hw)) g f).1 v = ∑ g ∈ R, (((algRep W).comp (locF hw)) g f).1 v := by
-      simp [AddSubmonoidClass.coe_finset_sum, LinearMap.sum_apply]
+      simp [LinearMap.sum_apply]
     rw [e1, Finset.sum_congr rfl fun g _ => (hrep g v).symm, h1]
     rfl

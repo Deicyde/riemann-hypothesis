@@ -1,5 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.CoreProofs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.ProjectiveLattices.VAtVNeBot
 
 noncomputable section
 

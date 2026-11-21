@@ -1,7 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ClassFieldTheory.LocalClassField.ExistsIntEKMulVbar
-import ReciprocityTheory.ClassFieldTheory.LocalClassField.UnrExtD
-import ReciprocityTheory.ClassFieldTheory.LocalClassField.UnrExtE
-import ReciprocityTheory.ClassFieldTheory.LocalClassField.GalBasic
 
 namespace ReciprocityTheory.DiscreteGroups.LocalClassField
 

@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AutomorphicArithmetic.CyclotomicBounds.RamifiedDiscriminants.OffSmall
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.KernelLattices.ThDistC
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.NormPadicEmbeddingLeOneOfMemInverseHalfDifferent
 open NumberField Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.TaylorLogMetric Classical

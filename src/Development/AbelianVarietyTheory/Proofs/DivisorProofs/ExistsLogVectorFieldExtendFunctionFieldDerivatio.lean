@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TopPairDForm
 open CategoryTheory AlgebraicGeometry TopologicalSpace Limits NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj Formalism.BasicNotions
@@ -64,7 +65,7 @@ theorem exists_genDer_extend : ∀ (E : Type) [Field E] [NumberField E] [IsCMFie
   set η₀ := genericPoint (X₀ TF.Y Z) with hη₀
   have hη : W.ι η₀ ∈ U.1 := by
     have e := congrArg (fun f : Sp (X₀ TF.Y Z).functionField ⟶ TF.Y.X => f (IsLocalRing.closedPoint _)) hρ
-    simp only [Scheme.Hom.comp_apply] at e
+    simp only at e
     show W.ι η₀ ∈ (U.1 : Set TF.Y.X)
     rw [← U.2.range_fromSpec]
     refine ⟨_, e.trans ?_⟩

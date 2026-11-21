@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsHolPeriods
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCountableCharts
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ComplexUniformisationsSamePointDifferByIsometryStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeOfCountableHolomorphicImagesCoverStatement
@@ -227,7 +227,7 @@ theorem dim_eq : ∀ (O : Type) [Ring O] (bar : O → O) (g : ℕ) (ρ : O →+*
           apply Matrix.toLin'.injective
           apply LinearMap.ext
           intro v
-          simp [M₀, M₁, Matrix.toLin'_mul, LinearMap.toMatrix'_mulVec]
+          simp [M₀, M₁, Matrix.toLin'_mul]
         exact Matrix.isUnit_det_of_right_inverse this
       · apply Matrix.toLin'.injective
         apply LinearMap.ext

@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.BlockActions.InJSymRestrict
-import Formalism.LocalToGlobal.GlobalTheory.BlockActions.StabiliserBijectiveOfInjection
+import Formalism.LocalToGlobal.GlobalTheory.BlockActions.TilEqLevel
 
 noncomputable section
 

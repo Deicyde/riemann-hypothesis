@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.FrameDefinitions.Values
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.FrameDefinitions.Weights
 set_option maxSynthPendingDepth 1
@@ -98,7 +99,7 @@ theorem frame_first_basis_vector (hfr : IsFrameOver yLine (trivialBundle (segreC
   refine mem_trivLat.2 fun r => ?_
   by_cases h : r = 0
   · subst h; simp
-  · simp [Pi.single_apply, h]
+  · simp [h]
 
 variable {z : (Σ _ : Unit, Fin 2) → ℂ}
 
@@ -178,7 +179,7 @@ theorem norm_muFrameAt : d.norm = 1 := by
     obtain ⟨a, ha, he⟩ := frame_first_basis_vector hfr
     have e1 := congrFun he 1
     have e0 := congrFun he 0
-    simp only [Pi.single_apply, Fin.sum_univ_two, Finset.sum_apply, Pi.add_apply, Pi.smul_apply,
+    simp only [Pi.single_apply, Fin.sum_univ_two, Finset.sum_apply, Pi.smul_apply,
       smul_eq_mul, fb_zero_one d] at e1 e0
     change (0 : Ω) = a 0 * 0 + a 1 * fb d 1 1 at e1
     have ha1 : a 1 = 0 := by

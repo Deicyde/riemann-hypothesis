@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsMulVal
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HenselianLocalRingOfIsAlgClosed
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PowFlatLocallyQuasiFinite
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PDivisibleExtensionUniqueness
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SemiAbelianMulNatSurjectiveStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFiniteFlatQuasiSectionStatement

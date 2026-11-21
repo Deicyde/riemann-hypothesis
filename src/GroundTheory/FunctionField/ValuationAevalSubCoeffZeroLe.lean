@@ -1,6 +1,6 @@
-import Mathlib
-import GroundTheory.FunctionField.PlaceDefs
-import GroundTheory.FunctionField.PlaceBasic
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.FunctionField.Approximation
 set_option maxSynthPendingDepth 1
 

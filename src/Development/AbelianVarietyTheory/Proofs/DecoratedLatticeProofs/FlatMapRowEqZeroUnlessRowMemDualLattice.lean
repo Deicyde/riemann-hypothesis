@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.ContrFactor
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.AllPositions
 open MeasureTheory ValuativeRel Matrix GlobalTheory.SplitWeil GlobalTheory.RootEx GlobalTheory.StepData GlobalTheory.SymChain
 
 noncomputable section
@@ -36,7 +35,7 @@ theorem flRow_eq_zero_of_not_mem_box : ∀ (k : Type) [Field k] [ValuativeRel k]
     exact hx fun i => h i
   unfold flRow opE
   refine (integral_congr_ae (Filter.Eventually.of_forall fun e => ?_)).trans (integral_zero _ _)
-  simp only [Pi.zero_apply]
+  simp only
   refine mul_eq_zero_of_left ?_ _
   by_contra hne
   have h1 := val_row_le_of_Phi_ne_zero S t j c H r hc _ hne y

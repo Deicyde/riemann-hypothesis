@@ -1,9 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.PointsNonemptyUnitaryRankOne
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicHaarMeasureScaling
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StandardAdelicCharacter
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenvalueNormSqOfSimilitudeHermitianSignature
+import BuildAid.Leniency.Open
 import GroundTheory.Brauer.BaseChangeCSA
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsCyclotomicExtensionQI
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open Matrix NumberField GlobalTheory.LKTrip GlobalTheory.LKRes GlobalTheory.LKMid GlobalTheory.LKCount GlobalTheory.LKCx
 open scoped TensorProduct Classical
 

@@ -1,5 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.IsMatrixForm
+import Mathlib.Algebra.Category.ModuleCat.Descent
+import Mathlib.Algebra.Homology.DerivedCategory.Ext.Map
+import Mathlib.AlgebraicGeometry.Sites.ElladicCohomology
+import Mathlib.CategoryTheory.Preadditive.Injective.Preserves
+import Mathlib.CategoryTheory.Sites.Adjunction
+import Mathlib.NumberTheory.Padics.MahlerBasis
 
 noncomputable section
 
@@ -251,7 +258,7 @@ theorem nonempty_equiv_ellAdicCohomology (l : ℕ) [Fact l.Prime] (X : Scheme.{0
   intro F G g f
   apply (e' _).injective
   rw [he']
-  simp only [Equiv.trans_apply]
+  simp only
   erw [Equiv.apply_symm_apply, Equiv.apply_symm_apply]
   exact freeOnEquiv_comp _ X g f
 

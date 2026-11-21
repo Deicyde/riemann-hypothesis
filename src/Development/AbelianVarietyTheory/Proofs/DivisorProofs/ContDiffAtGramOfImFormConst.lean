@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.LeTwoMulOfForallScale
+import Mathlib.Topology.Sheaves.Presheaf
 
 open GlobalTheory
 open scoped ContDiff
@@ -55,7 +56,7 @@ theorem contDiffAt_gram_of_im_form_const (g m : ℕ) (J : Type)
   let Z : (Fin m → ℂ) → ((S → ℝ) →L[ℝ] (Fin g → ℂ)) := fun b =>
     ∑ s, (ContinuousLinearMap.proj s : (S → ℝ) →L[ℝ] ℝ).smulRight (ζ (t s) b)
   have hZapp : ∀ b c, Z b c = ∑ s, c s • ζ (t s) b := fun b c => by
-    simp [Z, ContinuousLinearMap.sum_apply]
+    simp [Z]
   have hZ : ContDiffAt ℝ ∞ Z b₀ := by
     refine ContDiffAt.sum fun s _ => ?_
     exact (ContinuousLinearMap.smulRightL ℝ (S → ℝ) (Fin g → ℂ)

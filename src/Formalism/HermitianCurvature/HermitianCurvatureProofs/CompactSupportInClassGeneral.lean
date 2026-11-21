@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJASAPairL
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.JfBetaAdjCOfLemmaBNorm
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.BXiAsm
 
 open Matrix MeasureTheory Filter Topology

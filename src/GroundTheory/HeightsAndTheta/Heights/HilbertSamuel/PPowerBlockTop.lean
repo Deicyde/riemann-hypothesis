@@ -1,12 +1,9 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.MixedFieldContraction.ContractMixedFieldStatement
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterRedF
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Intersections.TableDegreeThreeBase
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.ImageCoord
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.ArithSystem
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PCoordArithOfFnField
-import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsPowerBlock
-import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsChangeOfModel
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsAddBlockIsometric
 set_option maxSynthPendingDepth 1
 

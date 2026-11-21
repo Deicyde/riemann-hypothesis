@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockMap
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TrPairApply
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsAtEvIPiInfEq
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqZeroOfAtOfPiInf
@@ -21,7 +21,7 @@ def mulC (t : mixedEmbedding.mixedSpace F) :
     (κ → mixedEmbedding.mixedSpace F) →ₗ[ℝ] (κ → mixedEmbedding.mixedSpace F) where
   toFun x := fun i => t * x i
   map_add' x y := by funext i; simp [mul_add]
-  map_smul' r x := by funext i; simp [mul_smul_comm]
+  map_smul' r x := by funext i; simp
 
 def mulP (t : mixedEmbedding.mixedSpace F) :
     ((κ → mixedEmbedding.mixedSpace F) × (κ → mixedEmbedding.mixedSpace F)) →ₗ[ℝ]
@@ -138,7 +138,7 @@ theorem piInf_algebraMap {w : InfinitePlace F} (τ : EmbOver E w) (a : AF F) :
     piInf τ (algebraMap (AF F) (AE F E) a) = InfinitePlace.Completion.extensionEmbedding w (a.1 w) := by
   rw [Algebra.TensorProduct.algebraMap_apply]
   show infEmb τ (compInf F E w (a ⊗ₜ[F] (1 : E))) = _
-  simp only [compInf, AlgHom.toRingHom_eq_coe, RingHom.coe_coe, Algebra.TensorProduct.map_tmul, AlgHom.id_apply,
+  simp only [compInf, AlgHom.toRingHom_eq_coe, RingHom.coe_coe, Algebra.TensorProduct.map_tmul,
     infEmb_tmul, map_one, mul_one]
   rfl
 

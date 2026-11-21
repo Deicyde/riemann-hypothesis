@@ -1,7 +1,8 @@
-import Mathlib
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.DifferentialOperatorBracket
-import Formalism.RealPlaceAnalysis.ThirdArithmeticHolds
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ExistsUnitaryWFrameToFrame
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.FrameCompletion
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.FrameExtension
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.HermitianFormRankFour
 open Matrix Formalism.QuantumDeterminants Formalism.FourierDecayAlt.Q Formalism.FourierDecayAlt.Qr
 open Formalism.REAL (qdet GlRel IsHW)
 
@@ -53,7 +54,7 @@ private theorem exists_unit_orth_in_Wb {n r : ℕ} {z : Fin (2 * r + (n + 1) + 1
     intro i hi
     have hip : i ≠ p := fun h => by rw [h] at hi; simp [hp] at hi
     have hiq : i ≠ q := fun h => by rw [h] at hi; simp [hq] at hi
-    simp [hvdef, Pi.single_apply, hip, hiq]
+    simp [hvdef, hip, hiq]
   have hpval : (p : ℕ) ≠ r + (n + 1) := by simp [hp]
   have hqval : (q : ℕ) = r + (n + 1) := by simp [hq]
   have hHv : _root_.Formalism.QuantumDeterminants.Hpk (n + 1) r *ᵥ v = Pi.single p (star (z q)) - Pi.single q (star (z p)) := by
@@ -61,10 +62,10 @@ private theorem exists_unit_orth_in_Wb {n r : ℕ} {z : Fin (2 * r + (n + 1) + 1
     funext i
     by_cases hip : i = p
     · rw [hip, if_neg hpval, hvdef]
-      simp [hpq, hpq.symm]
+      simp [hpq]
     · by_cases hiq : i = q
       · rw [hiq, if_pos hqval, hvdef]
-        simp [hpq, hpq.symm]
+        simp [hpq.symm]
       · have : (i : ℕ) ≠ r + (n + 1) := fun h => hiq (Fin.ext (h.trans hqval.symm))
         rw [if_neg this, hvdef]
         simp [hip, hiq]

@@ -1,8 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.CMTypeEmbeddings
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.HeckeSplitOne
-import Formalism.SharpRestriction.LevelLetterCocycles.ExistsInertiaCharpolyFactorOfTameType
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.SplitLiftOfLiftParam
 
 noncomputable section
 

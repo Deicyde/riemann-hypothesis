@@ -1,12 +1,6 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.GoodOrigin
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.SlopeBoundSt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ArchBetween
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IntegralClosureHeightEqOneOfLiesOver
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.FlatLineGenerator
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.FlagLabelBasesExist
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.GlueApplyOfNotInFibre
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.DomBy
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ValuationRingCentreInChartStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HodgeCompCompareGenericStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HodgeCompCompareFlagStatement
@@ -16,6 +10,7 @@ import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LatticeSpanProjecti
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.RootLinesFlagDegreeStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ChartLatticeNormMembershipStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LogDenominatorBoundPrimesStatement
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.TowerOrigin
 
 noncomputable section
 

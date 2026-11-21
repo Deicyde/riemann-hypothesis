@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.CentreAtOfIsAt
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsLogMult
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LogResolutionMultLtOfConnectednessStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLogResolutionLocalVanishingStatement
 open CategoryTheory AlgebraicGeometry TopologicalSpace Filter

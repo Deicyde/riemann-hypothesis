@@ -1,7 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.IsStrictlySemistable
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.RatBasisLinearIndependentInt
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.ZariskiEtaleLifting.XSmulSucc
+import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.IsDPMorphismBot
+import Mathlib.RingTheory.RingHom.Etale
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

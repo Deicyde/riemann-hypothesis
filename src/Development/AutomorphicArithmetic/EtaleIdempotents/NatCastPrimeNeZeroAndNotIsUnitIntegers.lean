@@ -1,5 +1,5 @@
-import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.VecZero
-import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.SplitOnOfDisj
+import BuildAid.Leniency.Open
+import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.HarishChandraFormulaStatement
 
 set_option synthInstance.maxHeartbeats 200000
 set_option backward.isDefEq.respectTransparency false
@@ -8,7 +8,7 @@ open CategoryTheory Limits AlgebraicGeometry GroundTheory.PAdicHodge Crystalline
 
 private theorem norm_l_val {l : ℕ} [Fact l.Prime] : ‖(l : PadicAlgCl l)‖ = (l : ℝ)⁻¹ := by
   have h : ((l : ℕ) : PadicAlgCl l) = ((l : ℚ_[l]) : PadicAlgCl l) := by
-    simp [PadicAlgCl.coe_eq]
+    simp
   rw [h, PadicAlgCl.norm_extends, Padic.norm_p]
 
 theorem UpperTheory.natCast_prime_ne_zero_and_not_isUnit_integers :

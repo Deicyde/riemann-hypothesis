@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsSmoothModerateOfIsAutFunSm
 
 open NumberField MeasureTheory Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.AdelicU GlobalTheory.SiegelSet GlobalTheory.UAut GlobalTheory.ThK.SquareIntegrability
 
@@ -52,7 +53,7 @@ theorem le_of_isotropic_sig {n m s r : ℕ} (M : Matrix (Fin n) (Fin n) ℂ) (hS
     · exact congrFun hy i
     · exact congrFun hx' i
   have h := LinearMap.finrank_le_finrank_of_injective hinj
-  simp only [Module.finrank_fin_fun, Module.finrank_fintype_fun_eq_card, Fintype.card_sum, Fintype.card_fin] at h
+  simp only [Module.finrank_fintype_fun_eq_card, Fintype.card_sum, Fintype.card_fin] at h
   omega
 
 theorem wittIndex_le : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [NumberField E] [Algebra F E] (σ : E →ₐ[F] E)

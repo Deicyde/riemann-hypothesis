@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Variable
 import Formalism.LagrangeIdealLifts.Statement
 import Formalism.WindowSums.AnnihilatorPolynomials.ValProd
 import Formalism.WindowSums.AnnihilatorPolynomials.ZpowVal

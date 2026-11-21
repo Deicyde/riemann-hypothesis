@@ -1,8 +1,9 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.Pull1
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.TsgPolyVolPolyCoeffEven
-import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsFibreLocal
-import Development.AutomorphicSpectrum.Statements.MetricStatements.AgreementIffGuarded
+import BuildAid.Leniency.Open
+import Development.AutomorphicSpectrum.Definitions.MetricPeriods.PairRelationOfScaledRatio
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.CompRightEqZero
 
 open MvPolynomial MeasureTheory Filter Topology ReciprocityTheory.AnForm ReciprocityTheory.AnForm.M ReciprocityTheory.AnForm.P ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.AI ReciprocityTheory.ChartRestriction.G.AI.I1 ReciprocityTheory.ChartRestriction.G.AI.I2 ReciprocityTheory.ChartRestriction.G.AI.I4 GlobalTheory.CompanionTheory.Ar.PB GroundTheory.Heights₂.Heights GroundTheory.Heights₂.Heights.LowerBoundFree
 
@@ -20,10 +21,10 @@ theorem toWt_inj (Ψ : Type) (N : ℕ) :
     split_ifs with h
     · have h2 : Finset.Ioi i = Finset.Ici (⟨i.1 + 1, h⟩ : Fin N) := by
         ext k
-        simp only [Finset.mem_Ioi, Finset.mem_Ici, Fin.lt_iff_val_lt_val, Fin.le_iff_val_le_val, Fin.val_mk]
+        simp only [Finset.mem_Ioi, Finset.mem_Ici, Fin.lt_iff_val_lt_val, Fin.le_iff_val_le_val]
         omega
       have hn : i ∉ Finset.Ici (⟨i.1 + 1, h⟩ : Fin N) := by
-        simp only [Finset.mem_Ici, Fin.le_iff_val_le_val, Fin.val_mk]
+        simp only [Finset.mem_Ici, Fin.le_iff_val_le_val]
         omega
       simp only [S, map_sub, aeval_X, h1, h2]
       rw [Finset.sum_insert hn]
@@ -38,7 +39,7 @@ theorem toWt_inj (Ψ : Type) (N : ℕ) :
           omega
         · intro hk
           simp at hk
-      simp only [S, map_sub, map_zero, aeval_X, h1, h2, sub_zero]
+      simp only [S, aeval_X, h1, h2, sub_zero]
       simp
   have hcomp : (aeval S).comp (toWt : MvPolynomial (Ψ × Fin N) ℝ →ₐ[ℝ] _) = AlgHom.id ℝ _ := by
     apply MvPolynomial.algHom_ext

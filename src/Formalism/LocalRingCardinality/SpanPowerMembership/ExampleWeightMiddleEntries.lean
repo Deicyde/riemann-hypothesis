@@ -1,5 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
 import Formalism.LocalRingCardinality.SpanPowerMembership.ExampleRanksRankComplement
+import Mathlib.Algebra.Order.PUnit
+import Mathlib.Analysis.SpecialFunctions.Complex.CircleAddChar
+import Mathlib.RingTheory.Etale.Weakly
 
 noncomputable section
 

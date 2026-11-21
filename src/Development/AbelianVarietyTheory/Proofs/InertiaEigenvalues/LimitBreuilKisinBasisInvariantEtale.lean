@@ -1,9 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.TrivIsCr
-import Formalism.SharpRestriction.LevelLetterCocycles.LocCoh
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.TwistStep
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.AcrisTorsionFreeComplete
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.DeRhamPotSemistable
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IntegralElementsUnitFactorization
 
 noncomputable section
@@ -171,7 +168,7 @@ theorem main : ∀ (l : ℕ) [Fact l.Prime] (K : FinExt l) (bk : BK K) (τ : Ain
           (bk.evW bk.E ^ (2 * N)) • (1 : Matrix (Fin (tw.d' n)) (Fin (tw.d' n)) (WCb l)) := by
         rw [← Matrix.map_mul, (F n).A_mul]
         refine Matrix.ext fun i j => ?_
-        by_cases hij : i = j <;> simp [Matrix.one_apply, hij]
+        by_cases hij : i = j <;> simp [hij]
       have hs : e ^ N * (e ^ N * bk.evW bk.E ^ (2 * N)) = 1 := by
         linear_combination (bk.evW bk.E ^ N * e ^ N + 1) * heN
       rw [hφ n, Matrix.mul_assoc]

@@ -1,7 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.GaussSumParity.StatementN
 import Formalism.LocalToGlobal.TorsionIntegrality.GaussSumParity.KurComplete
-import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.KernelFromKOne
-import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.FinalS
 
 noncomputable section
 open scoped BigOperators

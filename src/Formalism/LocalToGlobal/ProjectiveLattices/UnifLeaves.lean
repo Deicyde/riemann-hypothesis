@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.FamilyUniformisationBasePointOrthogonal
 import Formalism.LocalToGlobal.ProjectiveLattices.UnifGen
 import Formalism.LocalToGlobal.ProjectiveLattices.UnifDom

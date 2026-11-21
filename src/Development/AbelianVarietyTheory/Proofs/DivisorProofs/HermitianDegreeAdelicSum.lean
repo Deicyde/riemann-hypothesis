@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinPart
+import BuildAid.Leniency.Open
 import ReciprocityTheory.GeometryOfNumbers.LatticeCovolumes.ArakelovDegreeEqDegreeOfFamily
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullLatticeContainsScaledBasisStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ScaledStandardLatticePadicSumStatement
@@ -58,7 +57,7 @@ theorem HermFam.gram_natCast_smul_single {K : Type} [Field K] {g : ℕ} (h : Her
       ((D : ℂ) ^ 2) • h.gram σ (fun k => (Pi.single k 1 : Fin g → K)) := by
   ext i j
   simp only [HermFam.gram, Matrix.of_apply, Matrix.smul_apply, smul_eq_mul, HermFam.form_smul_left', h.smul_right,
-    map_natCast, Complex.conj_natCast]
+    map_natCast]
   ring
 
 theorem HermFam.log_det_gram_natCast_smul_single {K : Type} [Field K] {g : ℕ} (h : HermFam K (Fin g → K)) (σ : K →+* ℂ) (D : ℕ)

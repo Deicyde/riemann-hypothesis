@@ -1,8 +1,8 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.ReductionMahler
-import GroundTheory.GlobalFields.TateThesis.AdeleMeasurable
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.TateThesis.AdeleMeasure
 import GroundTheory.GlobalFields.TateThesis.IdeleMeasure
+import GroundTheory.AutomorphicForms.ReductionHeight
 
 open NumberField IsDedekindDomain Topology Filter Set MeasureTheory TopologicalSpace
 open scoped NumberField.AdeleRing RestrictedProduct ENNReal

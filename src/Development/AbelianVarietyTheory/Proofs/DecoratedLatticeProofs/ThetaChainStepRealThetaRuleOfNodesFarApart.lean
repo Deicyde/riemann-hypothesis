@@ -1,11 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaChainStepCentredBlockParameters
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ChainParIffStepGap
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CartFrSgn
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.ChainParSucc
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.AdmissibleDiscreteSeriesOfHasParam
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HarishChandraModulesOn
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.HasDRepIffHasDerivAt
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.S Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.Mult Formalism.IndefR.Datum MeasureTheory NumberField Matrix
 open GlobalTheory.Chain GlobalTheory.ChainFr GlobalTheory.PairLift GlobalTheory.Chain.RealIt
@@ -30,11 +24,11 @@ theorem chainPar_of_nodeGap : ∀ D : D7, GlobalTheory.IndefiniteRowSideFullHeck
     · have ho : Odd ((k : ℕ) + 1) := hk.add_one
       have hne : ¬ Odd (k : ℕ) := Nat.not_odd_iff_even.mpr hk
       have hne2 : ¬ Even ((k : ℕ) + 1) := Nat.not_even_iff_odd.mpr ho
-      simp [ho, hk, hne, hne2] <;> ring
+      simp [ho, hk] <;> ring
     · have ho : Even ((k : ℕ) + 1) := hk.add_one
       have hne : ¬ Even (k : ℕ) := Nat.not_even_iff_odd.mpr hk
       have hne2 : ¬ Odd ((k : ℕ) + 1) := Nat.not_odd_iff_even.mpr ho
-      simp [ho, hk, hne, hne2] <;> ring
+      simp [hne, hne2] <;> ring
   · rw [h2]
     clear hc h1 h2 h
     congr 1
@@ -43,10 +37,10 @@ theorem chainPar_of_nodeGap : ∀ D : D7, GlobalTheory.IndefiniteRowSideFullHeck
     · have ho : Odd ((k : ℕ) + 1) := hk.add_one
       have hne : ¬ Odd (k : ℕ) := Nat.not_odd_iff_even.mpr hk
       have hne2 : ¬ Even ((k : ℕ) + 1) := Nat.not_even_iff_odd.mpr ho
-      simp [ho, hk, hne, hne2] <;> ring
+      simp [ho, hk] <;> ring
     · have ho : Even ((k : ℕ) + 1) := hk.add_one
       have hne : ¬ Even (k : ℕ) := Nat.not_even_iff_odd.mpr hk
       have hne2 : ¬ Odd ((k : ℕ) + 1) := Nat.not_odd_iff_even.mpr ho
-      simp [ho, hk, hne, hne2] <;> ring
+      simp [hne, hne2] <;> ring
 
 end GlobalTheory.Corev.ChainParOfGap

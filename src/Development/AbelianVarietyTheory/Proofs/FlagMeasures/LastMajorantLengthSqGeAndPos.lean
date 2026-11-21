@@ -1,12 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.OnePlaceKF
-import Development.AbelianVarietyTheory.Definitions.Jets.SumIoPr
-import Formalism.SharpRestriction.CuspSpanNormBounds.LeadMinorK
-import Development.AbelianVarietyTheory.Statements.CuspFrameWeights.DiscreteSpectrumKFiniteDecomposition
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.DegVand
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.IsNormalFormStabilizerMeasure
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.MomAllP
-import Formalism.LocalRingCardinality.DataTies
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.LenEqOfUnitriangular
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.IsFRepOnePlusDet
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.TwoByOneBlock

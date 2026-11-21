@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CharacterGerms.LogCoordOfDpull
 
 noncomputable section
@@ -47,7 +49,7 @@ theorem pderiv_rowOf {n : ℕ} (b b' : Fin n) (w : WVO I) (E : MvPowerSeries (WV
   by_cases h : b' = b
   · subst h
     simp [MvPowerSeries.pderiv_X, Pi.single_apply, Prod.ext_iff]
-  · simp [MvPowerSeries.pderiv_X, Pi.single_apply, Prod.ext_iff, h]
+  · simp [Prod.ext_iff, h]
 
 theorem constantCoeff_two_points_zero {n : ℕ} (b : Fin n) (q : Fin 2 × Fin dd) :
     MvPowerSeries.constantCoeff ((![pt C dd b, 0] : Fin 2 → Pt C n dd) q.1 q.2) = 0 := by

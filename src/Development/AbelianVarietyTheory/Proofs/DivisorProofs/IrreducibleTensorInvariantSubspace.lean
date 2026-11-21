@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TprodMemTensSpan
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TensorIrreducibleModules
 open scoped TensorProduct
@@ -148,7 +149,7 @@ theorem tensSpan_irr : ∀ (ι : Type) [Fintype ι] [DecidableEq ι] (V Z : Type
         funext j
         by_cases h : j = a
         · subst h; simp [ha]
-        · simp [Function.update_of_ne h, Finset.mem_insert, h]
+        · simp [Finset.mem_insert, h]
       rw [e]
       exact hst a _ (ih x hx)
   have h1 := key Finset.univ y hy

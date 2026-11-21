@@ -1,11 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CosetRefinement
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.TopPlaceLogTheta
-import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.SignedLogMeans
-import Formalism.LocalToGlobal.GlobalTheory.GL3.ConjugateTorsionPointExists
-import Formalism.LocalToGlobal.GlobalTheory.GL3.PStdOK
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.VacuumNormConjCmPointsAllEmbeddings
-import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.ExistsPowPrincipalFractionalIdeal
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormalisedFamilyEqTensorPowerVacuumStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsThetaZeroMeanLogLeConstMulStatement
 

@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GenusPolyhedralBounds.RelativeIndexClassSets.LargeConstantLeParamCube
-import Formalism.SharpRestriction.GenusPolyhedralBounds.RelativeIndexClassSets.SubsingletonQuotientOfIdealEqTop
-import Formalism.SharpRestriction.InertJacobiLevels.AsmIface
+import Formalism.LocalRingCardinality.DataParamsT
+import Formalism.SharpRestriction.ElevenLe
 
 noncomputable section
 

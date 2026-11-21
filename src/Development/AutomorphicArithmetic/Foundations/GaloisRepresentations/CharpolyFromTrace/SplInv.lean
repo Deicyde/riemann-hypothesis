@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.CharpolyFromTrace.KillTransfer
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.CharpolyFromTrace.SplitOff
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.StringRepresentations.ScalarOfCharpoly
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.MainNotions.N Polynomial
 open GlobalTheory.WeilDeligne GlobalTheory.Cong UpperTheory.Gal.NearKilling
 
@@ -143,7 +143,7 @@ theorem UpperTheory.Gal.NearKilling.IneRelInv.spl {E Ω : Type} [Field E] [Numbe
   let Φ := f.conjAlgEquiv ℂ
   have hΦ : ∀ σ, Φ ((y.sum u).ρ σ) = (a.sum b).ρ σ := fun σ => LinearMap.ext fun v => by
     obtain ⟨r, rfl⟩ := f.surjective v
-    simp only [Φ, LinearEquiv.conjAlgEquiv_apply, LinearEquiv.conj_apply_apply, LinearEquiv.symm_apply_apply,
+    simp only [Φ, LinearEquiv.conjAlgEquiv_apply, LinearEquiv.symm_apply_apply,
       LinearMap.comp_apply, LinearEquiv.coe_coe]
     exact f1 σ r
   have hZ1 : ∀ s : ↥(Ine (F := E) A), ((y.sum u).ρ (ineIncl h s) - c s • 1) * aeval ((y.sum u).ρ (ineIncl h γ')) q = 0 := fun s =>

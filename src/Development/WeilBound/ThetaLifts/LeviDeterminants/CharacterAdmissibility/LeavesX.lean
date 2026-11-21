@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LeviDeterminants.CharacterAdmissibility.DetNeHerm
 import Development.WeilBound.ThetaLifts.LeviDeterminants.LagrangianUniqueness.LagLine
 

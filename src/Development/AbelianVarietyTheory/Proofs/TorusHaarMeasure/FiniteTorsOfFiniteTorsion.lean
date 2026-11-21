@@ -1,7 +1,12 @@
-import Mathlib
-import ReciprocityTheory.DualLattices.FormalChartAtZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.PoincareCuspForms.FormalGroupTorsionCharts
 import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.EvBasicNEvalSubCoeffMem
+import Mathlib.Algebra.DualNumber
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
 
 noncomputable section
 
@@ -92,7 +97,7 @@ theorem _root_.GlobalTheory.ChartCompare.subst_C_eq (f : MvPowerSeries σ R₀) 
   refine finsum_congr fun d => ?_
   have hC : (d.prod fun s n => (C (a s) : MvPowerSeries Empty S) ^ n) =
       C (d.prod fun s n => a s ^ n) := by
-    simp [map_finsuppProd]
+    simp
   rw [hC, coeff_zero_C, _root_.GlobalTheory.IndefiniteRowSideFullHecke.FormalGroupTorsionCharts.evalTerm]
 
 open IsLocalRing TensorProduct in

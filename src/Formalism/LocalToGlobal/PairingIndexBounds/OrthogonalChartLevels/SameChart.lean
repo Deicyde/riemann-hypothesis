@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.PairingIndexBounds.OrthogonalChartLevels.UnitOfBr
-import Formalism.LocalToGlobal.HermitianColumns.ZeroPointScaledByCharacter
 import Formalism.LocalToGlobal.GroupLattices.LevelGatherings.PosCompatOfBase
 import Formalism.LocalToGlobal.InertKernelTheory.DefsRepRec
 

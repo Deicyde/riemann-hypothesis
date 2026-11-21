@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.TermLoc
 
 noncomputable section
@@ -757,7 +758,7 @@ theorem local_split_type_zero_second (Z : LocDat D) (Λ : Submodule (𝓞 D.host
   simp only [Loc.HermSp.ZZplus, Loc.HermSp.ZZplusOf, hM, Matrix.map_apply, Matrix.of_apply, hge, hgq,
     Matrix.sub_apply, Matrix.smul_apply, smul_eq_mul, map_sub, snd_proj_symm, apply_ite (p2 sg.e), map_zero, zhat_loc,
     map_mul, Prod.fst_mul, Prod.snd_mul, ← adeleInfiniteComponent_apply, ← adele_ext_components, hs', hs1, hcj2, hs2, hf1, hf2, Ecorner, hT',
-    Matrix.mul_diagonal, Matrix.diagonal_mul, Sg, hA, Amat, hφ2, RingHom.comp_apply, map_pow, map_neg, map_one, hqd,
+    Matrix.mul_diagonal, Matrix.diagonal_mul, Sg, hA, Amat, hφ2, RingHom.comp_apply, hqd,
     Matrix.transpose_apply]
   split_ifs <;> ring
 

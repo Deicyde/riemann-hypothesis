@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.NotCoboundaryConstantOne
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.PicardGroup
 open GlobalTheory.K5
 
 noncomputable section

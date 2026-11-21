@@ -1,4 +1,8 @@
-import Formalism.PeriodIntegrals.WeylForU
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.PeriodIntegrals.WeylForK
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 

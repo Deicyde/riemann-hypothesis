@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaBasicPropertiesStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTorusUOne
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzSiegelDomainDecayStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSiegelDomainReductionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SoDecayOfUnifStatement

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.QuotientRightRegular
 import GroundTheory.AutomorphicForms.HilbertSchmidtKernel
 import GroundTheory.AutomorphicForms.HilbertSchmidtCompact

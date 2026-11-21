@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
 open scoped TensorProduct NNReal Matrix
@@ -103,7 +103,7 @@ theorem conj_eq_pow {n n₁ : ℕ} {J : Matrix (Fin n) (Fin n) E} {x y : Fin n �
   have wy : mat w *ᵥ y = y + (4 * c) • x + (2 : AE F E) • (ι *ᵥ z₀) := by
     rw [hw, mulVec_mul, mulVec_mul, miy, Matrix.mulVec_smul, huy, Matrix.mulVec_smul, Matrix.mulVec_add,
       Matrix.mulVec_add, Matrix.mulVec_smul, hmi, hmx, smul_add, smul_add, hmy]
-    ext i; simp only [Pi.add_apply, Pi.sub_apply, Pi.smul_apply, smul_eq_mul]; ring
+    ext i; simp only [Pi.add_apply, Pi.smul_apply, smul_eq_mul]; ring
   set v := u⁻¹ * u⁻¹ * w with hv
   have vx : mat v *ᵥ x = x := by rw [hv, mulVec_mul, mulVec_mul, wx, uix, uix]
   have vi : ∀ z, mat v *ᵥ (ι *ᵥ z) = ι *ᵥ z := by
@@ -129,7 +129,7 @@ theorem conj_eq_pow {n n₁ : ℕ} {J : Matrix (Fin n) (Fin n) E} {x y : Fin n �
         rw [← hu.smul_left_cancel, mulVec_mul m' v, mulVec_mul _ m', ← Matrix.mulVec_smul (mat (v ^ (t ^ 2))), hm'y,
           pow_mulVec_shear vx vy, vy, Matrix.mulVec_add, Matrix.mulVec_smul, hm'x, smul_add, hm'y]
         push_cast
-        ext i; simp only [Pi.add_apply, Pi.sub_apply, Pi.smul_apply, smul_eq_mul]; ring
+        ext i; simp only [Pi.add_apply, Pi.smul_apply, smul_eq_mul]; ring
     · intro z
       rw [mulVec_mul m' v, mulVec_mul _ m', vi, hm'i, pow_mulVec_fix (vi z)]
   rw [key, mul_inv_cancel_right]

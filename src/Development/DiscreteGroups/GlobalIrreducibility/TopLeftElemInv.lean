@@ -1,4 +1,6 @@
-import Development.DiscreteGroups.GlobalIrreducibility.TopLeftXAInv
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.DiscreteGroups.GlobalIrreducibility.RankOneTopLeftZero
 
 noncomputable section
 

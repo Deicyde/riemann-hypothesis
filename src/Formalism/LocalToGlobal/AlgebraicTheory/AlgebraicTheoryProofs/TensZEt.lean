@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.AlgebraicTheory.StatementC
-import Formalism.LocalToGlobal.TorsionIntegrality.GaussianEigenFrames.GramFrameComposition.IntOpTwoFreeOf
+import Formalism.LocalToGlobal.TorsionIntegrality.QuadraticSemicharacters.QuadraticSemicharactersFactTer
 
 noncomputable section
 open scoped BigOperators
@@ -34,7 +35,7 @@ theorem qint_smul_mem {n : Type} (Λ : AddSubgroup (n → ℂ)) (b : ℤ) (d : �
       = (m - n' * k) • x + n' • (Formalism.L2.Th1.F.cmTheta b d • x) := by
     ext i
     simp only [Pi.add_apply, Pi.smul_apply, smul_eq_mul, zsmul_eq_mul, omegaK,
-      Formalism.L2.Th1.F.cmTheta, hk, Pi.mul_apply, Pi.sub_apply, Pi.intCast_apply]
+      Formalism.L2.Th1.F.cmTheta, hk, Pi.mul_apply, Pi.intCast_apply]
     push_cast
     ring
   rw [key]

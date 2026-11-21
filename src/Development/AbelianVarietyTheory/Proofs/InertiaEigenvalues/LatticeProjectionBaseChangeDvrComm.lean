@@ -1,7 +1,8 @@
-import Mathlib
-import Formalism.LocalToGlobal.Columns.AlgebraMapMemMaximalIdealPowIff
-import Formalism.SharpRestriction.LevelLetterCocycles.DataN
-import Formalism.LocalToGlobal.NormalizedHeckeFactors.CoverAlg
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
 open Formalism.BasicNotions Formalism.L2 NumberField IsDedekindDomain Module
 
 namespace GlobalTheory

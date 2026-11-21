@@ -1,5 +1,5 @@
-import Formalism.LocalToGlobal.IndefiniteReal.ScalarOnPartsFull
-import Formalism.LocalToGlobal.IndefiniteReal.HaarTransfer.SchurClosable
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.SmExpSmulContDiff
 import Formalism.SharpRestriction.CuspSpanNormBounds.BridgeCSchur
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.SchurClosable
@@ -31,8 +31,8 @@ theorem polar {X H' : Type*} [AddCommGroup X] [Module ℂ X] [NormedAddCommGroup
   have e11 := h11 x y
   have e1i := h1i x y
   simp only [LinearMap.add_apply, LinearMap.smul_apply, inner_add_left, inner_add_right, inner_smul_left,
-    inner_smul_right, one_smul, zero_smul, add_zero, zero_add, map_one, map_zero, one_mul, zero_mul,
-    inner_zero_left, inner_zero_right, Complex.conj_I] at e10 e01 e11 e1i
+    inner_smul_right, one_smul, zero_smul, add_zero, zero_add,
+    Complex.conj_I] at e10 e01 e11 e1i
   linear_combination (1 / 2 : ℂ) * (e11 - e10 - e01) - (Complex.I / 2) * (e1i - e10 - e01) +
     ((⟪A₁ x, A₂ y⟫_ℂ - ⟪A₂ x, A₁ y⟫_ℂ) / 2 - Complex.I * ⟪A₂ x, A₂ y⟫_ℂ / 2) * Complex.I_sq
 

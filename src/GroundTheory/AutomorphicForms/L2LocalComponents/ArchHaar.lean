@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.GL2.GJGlobalHaar
-import GroundTheory.AutomorphicForms.MultiplicityOne.FiniteAdelicHaar
+import GroundTheory.AutomorphicForms.CuspidalDiscreteness.Smoothing
+import GroundTheory.AutomorphicForms.GKModules.Garding
 
 open MeasureTheory Measure Topology Filter Set IsDedekindDomain NumberField
 

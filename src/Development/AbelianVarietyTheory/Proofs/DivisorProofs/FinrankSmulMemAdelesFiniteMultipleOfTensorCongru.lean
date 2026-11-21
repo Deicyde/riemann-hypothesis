@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntFOneMul
 open scoped TensorProduct Matrix
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -16,7 +17,7 @@ def trAF : AF F ⊗[F] E →ₗ[AF F] AF F :=
 
 theorem trAF_tmul (s : AF F) (e : E) :
     trAF (s ⊗ₜ[F] e) = algebraMap F (AF F) (Algebra.trace F E e) * s := by
-  simp [trAF, Algebra.TensorProduct.rid_tmul, Algebra.smul_def]
+  simp [trAF, Algebra.smul_def]
 
 theorem gen_eq (s : AF F) (o : 𝓞 E) :
     algebraMap (AF F) (AF F ⊗[F] E) s * incAF F E o = s ⊗ₜ[F] (o : E) := by

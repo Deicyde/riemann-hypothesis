@@ -1,7 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.BridgeTie
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MvPolynomialClearDenominatorsEval
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.CmTypeRestrictRealSubfieldInfinitePlaceBijective
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RelIndexLevelSelfDualStabilizerEqProdLocal
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MvPolynomialEqZeroOfVanishSkewHermitianStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CayleyTransformSkewMemUnitaryGroupStatement
@@ -28,7 +26,7 @@ theorem blockAct_univ {K : Type} [Field K] {ι : Type} {n : ℕ} (F : MvPolynomi
       fun g => ?_⟩
     rw [map_mul, map_mul, hU]
     congr 1
-    simp [Formalism.GradedWeylDivisibility.blockAct, MvPolynomial.aeval_X]
+    simp [Formalism.GradedWeylDivisibility.blockAct]
 
 theorem lin_map_eval {K σ τ : Type} [Field K] (ℓ : MvPolynomial σ K →ₗ[K] K)
     (U : MvPolynomial σ (MvPolynomial τ K)) (p : τ → K) :

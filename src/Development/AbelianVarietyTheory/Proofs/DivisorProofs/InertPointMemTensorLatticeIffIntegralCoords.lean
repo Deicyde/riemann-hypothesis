@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InclRMulPtAt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatAtVAtStable
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.KFinLoc GlobalTheory.InertCoord
 open scoped TensorProduct Matrix
 
@@ -118,7 +118,7 @@ theorem vecMulVec_mem {p : Fin n → w.adicCompletion E} (hp : p ∈ latAt w X.L
       ring
   | zero =>
     convert zero_mem (latAtV X Y v) using 1
-    ext k l; simp [Matrix.vecMulVec_apply]
+    ext k l; simp
   | add p p' _ _ h1 h2 =>
     convert add_mem h1 h2 using 1
     ext k l; simp [Matrix.vecMulVec_apply, add_mul]

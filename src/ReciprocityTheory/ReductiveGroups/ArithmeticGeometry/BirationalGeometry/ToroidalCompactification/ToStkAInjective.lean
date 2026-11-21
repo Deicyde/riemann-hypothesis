@@ -1,4 +1,6 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.ExistsIsoPairOfEq
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.PullCub
 
 noncomputable section
 
@@ -158,7 +160,7 @@ theorem gm_pullGen' (L : LB X) {K : Type} [Fintype K] (φ : K → (Y ⟶ X)) (ε
   by_cases hz : r z ∈ LB.wchart L (fun k => h ≫ φ k) j
   · exact (gm_res r z _ hz (pullU h _ (t.s j))).trans (gm_pullU_eq_gm_comp h r z _ _)
   · have hz' : (r ≫ h) z ∉ LB.wchart L φ j := fun H => hz (Set.mem_iInter.2 fun k => Set.mem_iInter.1 H k)
-    simp only [gm, dif_neg hz, dif_neg hz', MonoidHom.one_apply]
+    simp only [gm, dif_neg hz, dif_neg hz']
     rfl
 
 theorem pmaps_pullGen {L : LB X} {L' : LB X'} {F : X' ⟶ X} {w : LB.Iso L' (L.pull F)} {K : Type} [Fintype K]

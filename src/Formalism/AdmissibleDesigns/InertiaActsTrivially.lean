@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.AdmissibleDesigns.NonemptyPl
+import Formalism.SharpRestriction.LevelLetterCocycles.RingDataOfIdempotents
+import Formalism.WachLatticeTwists.RealClassMaps.RealClassMapSecondPlace
 
 variable [hT2Core : Fact ReciprocityTheory.ChartRestriction.T2.Core]
 

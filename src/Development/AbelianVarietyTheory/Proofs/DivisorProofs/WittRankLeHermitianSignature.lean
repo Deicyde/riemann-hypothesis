@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeOfIsotropicSignature
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsSmoothModerateOfIsAutFunSm
 open scoped TensorProduct NNReal Matrix ENNReal
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK
@@ -67,7 +67,7 @@ theorem wittFrame_le_signature : ∀ (F E : Type) [Field F] [NumberField F] [Fie
       rcases i with i | i <;> rcases j with j | j <;> simp [Matrix.one_apply] <;> split_ifs <;> simp
     rw [hD] at h
     rw [Formalism.UG.Jpq, ← h]
-    congr 2 <;> ext i j <;> simp [conjTranspose_apply]
+    congr 2 <;> ext i j <;> simp
   refine le_of_isotropic_diag hrs _ A hA' (Xf.map τ) (Yf.map τ) ?_ ?_
   · rw [← hmap, hW.xx, Matrix.map_zero _ (map_zero _)]
   · rw [← hmap, hW.xy, Matrix.map_one _ (map_zero _) (map_one _)]

@@ -1,5 +1,5 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.KillWinFromCut
-import Formalism.SharpRestriction.LevelLetterCocycles.MapEvalPsPi
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.PrecompConst
 import Formalism.SharpRestriction.LevelLetterCocycles.LocalInputsFromLiterature
 

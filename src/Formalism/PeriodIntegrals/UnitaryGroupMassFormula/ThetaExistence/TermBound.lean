@@ -1,4 +1,5 @@
-import Formalism.PeriodIntegrals.ThGExist
+import BuildAid.Leniency.Variable
+import Formalism.PeriodIntegrals.ThGDefs
 
 namespace PI.ThGW
 

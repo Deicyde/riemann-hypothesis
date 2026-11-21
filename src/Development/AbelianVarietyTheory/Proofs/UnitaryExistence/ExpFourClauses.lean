@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.FrameEx
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.IsEigAtIffOfIsDerivAt0
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.IsCombAtIffIsDerivAt0
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExponentialDerivativeAtZeroIsTangent
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.UniformizationPeriodLatticeChange
 import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.ExistsInvariantNatLengthLattice
 
@@ -55,7 +55,7 @@ theorem lieEig : LieEig e F := by
         rw [Equiv.apply_symm_apply] at this
         exact hτ this
       rw [h0]
-      simp [Finset.sum_apply, eb_apply, Sigma.mk.inj_iff, hτ]
+      simp [Finset.sum_apply, eb_apply, hτ]
   rw [hsum]
   exact hw
 

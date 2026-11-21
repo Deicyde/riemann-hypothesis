@@ -1,5 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SemiabelianSchemes.CubicalStructures.CubeSymmetricSwapFirst
+import Mathlib.CategoryTheory.Limits.Shapes.Countable
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 namespace GlobalTheory.IndefiniteRowSideFullHecke.TrivialBiextension
 
@@ -128,7 +134,7 @@ lemma pt₃_law₂φ {T : Over S} (a b b' : T ⟶ G) :
     (fun k => pt₃ G a b b' ≫ law₂φ G (x3 G 0) (x3 G 1) (x3 G 2) k) = law₂φ G a b b' := by
   funext ⟨k⟩
   fin_cases k <;> refine (pt₃_pt G _ _ _ _ _).trans ?_ <;>
-    simp [law₂φ, padd, x3, comp_lift_assoc]
+    simp [law₂φ, padd, x3]
 
 lemma sum_ulift_three (f : ULift.{u} (Fin 3) → ℤ) : ∑ k, f k = f ⟨0⟩ + f ⟨1⟩ + f ⟨2⟩ := by
   rw [← Equiv.ulift.symm.sum_comp, Fin.sum_univ_three]; rfl

@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.SplitComps
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.GenPtSpecializes
+import Mathlib.RingTheory.PicardGroup
 
 noncomputable section
 

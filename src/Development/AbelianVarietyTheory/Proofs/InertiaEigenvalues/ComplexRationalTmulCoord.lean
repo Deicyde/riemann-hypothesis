@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.IntegralHeckeForms
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Counterexamples.NonGaloisSurvey.ThetaSeriesDatumMemLevelTypeForms
 
 noncomputable section
@@ -353,7 +353,7 @@ theorem goodProj : cx.GoodProj ⊤ pr := by
     revert x
     intro (x : EuclideanSpace ℂ (Fin 2)) _ _
     show inner ℂ (x - x 0 • EuclideanSpace.single (0 : Fin 2) (1 : ℂ)) (c • EuclideanSpace.single (0 : Fin 2) (1 : ℂ)) = 0
-    simp [inner_smul_right, EuclideanSpace.inner_single_right]
+    simp [EuclideanSpace.inner_single_right]
 
 theorem all_hold : cls.ClassSum lat LinearMap.id ∧ cls.SeriesLaw ∧ cls.LatticeLaw ∧ cx.OrthSum ⊤ ∧
     cx.PosScalar LinearMap.id ∧ cx.GoodProj ⊤ pr ∧ pr ≠ 0 ∧ pr ≠ LinearMap.id ∧ ∀ h, Nat.card (cls.Gam h) = 2 := by

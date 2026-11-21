@@ -1,7 +1,7 @@
-import Mathlib
-import Formalism.HermitianLattices.StatementLat
+import BuildAid.Leniency.Variable
 import Formalism.HermitianLattices.StatementTheta
 import Formalism.SatakeDualWeyl.Statement
+import Mathlib.Analysis.CStarAlgebra.Module.Constructions
 
 noncomputable section
 

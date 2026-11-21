@@ -1,5 +1,6 @@
-import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.ThRestGcVOf
-import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.FrobeniusLiftNorms.TheoremSFromKOneOf
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.TwoSumsCondition
 
 noncomputable section
 

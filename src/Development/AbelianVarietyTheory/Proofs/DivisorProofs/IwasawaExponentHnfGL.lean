@@ -1,5 +1,7 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.SphericalIntegral
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.AutomorphicForms.GLnLocal
+import Mathlib.RingTheory.Henselian
 
 open GroundTheory.Automorphic GLnLocal Iwasawa
 open scoped ValuativeRel

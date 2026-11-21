@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsCoordArithOfFnField
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.PCoordConeArithVar
-import GroundTheory.HeightsAndTheta.Heights.WeightedHomogeneous.PConeTrdeg
 import GroundTheory.HeightsAndTheta.Heights.WeightedHomogeneous.PIntDomainDim
 set_option maxSynthPendingDepth 1
 

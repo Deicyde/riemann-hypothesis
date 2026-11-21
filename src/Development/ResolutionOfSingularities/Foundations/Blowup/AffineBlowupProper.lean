@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.ResolutionOfSingularities.Foundations.Blowup.AffineBlowup
-import Development.ResolutionOfSingularities.Foundations.Blowup.ReesGrading
+import Mathlib.AlgebraicGeometry.ProjectiveSpectrum.Proper
 open CategoryTheory AlgebraicGeometry
 
 namespace FunctorialResolution.Blowup

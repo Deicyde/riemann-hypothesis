@@ -1,7 +1,6 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.KatoQuadraticCharacters.EulerFactorBounds.KatoTwistedClassNormCompatibleCyclotomic
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.KatoQuadraticCharacters.EulerFactorBounds.KmapComp
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.KatoQuadraticCharacters.EulerFactorBounds.SCls
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.KatoQuadraticCharacters.EulerFactorBounds.CdFacts
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.KatoQuadraticCharacters.EulerFactorBounds.CoeffSlD
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.KatoQuadraticCharacters.EulerFactorBounds.SCycZ
 
@@ -122,7 +121,7 @@ theorem UpperTheory.V.Z.Kato.Nb.sXiTw :
     rw [hgr x m, hgr y m]
     refine term X l n N hN s _ _ _ _ ?_
     rw [dvd_iff]
-    simp only [map_sub, map_mul, map_pow, map_add, map_natCast, (hent 0).1, (hent 0).2]
+    simp only [map_mul, map_pow, map_add, map_natCast, (hent 0).1, (hent 0).2]
     have hdl : Units.map (ZMod.castHom hlM (ZMod (l ^ n)) : ZMod M →* ZMod (l ^ n)) d = cycM (l ^ n) s :=
       (hcyc M s).2.2.2.2 (l ^ n) hlM
     have hχ : PadicInt.toZModPow n (((cyclotomicCharacter Ω l) s.toRingEquiv : ℤ_[l]ˣ) : ℤ_[l]) =
@@ -132,10 +131,10 @@ theorem UpperTheory.V.Z.Kato.Nb.sXiTw :
     have hc : (((cyc (l ^ n) s).val : ℕ) : ZMod (l ^ n)) = ZMod.castHom hlM (ZMod (l ^ n)) (d : ZMod M) := by
       rw [ZMod.natCast_zmod_val, (hcyc (l ^ n) s).1, ← hdl]
       rfl
-    simp only [hc, hχ, val_cast hlM, Units.val_mul, mul_inv_rev, inv_inv, map_mul]
+    simp only [hc, val_cast hlM, Units.val_mul, mul_inv_rev, inv_inv, map_mul]
     clear hcyc hgr hcd hC hP hdl hone hinv hent hdet h
     set φ := ZMod.castHom hlM (ZMod (l ^ n))
-    simp only [Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_fin_one, Matrix.head_cons, map_mul, hχ]
+    simp only [Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_fin_one, map_mul, hχ]
     have hdd : φ ((d⁻¹ : (ZMod M)ˣ) : ZMod M) * φ (d : ZMod M) = 1 := by
       rw [← map_mul, Units.inv_mul, map_one]
     have key : φ ((m : Matrix (Fin 2) (Fin 2) (ZMod M)) 0 1) * φ ((d⁻¹ : (ZMod M)ˣ) : ZMod M) *

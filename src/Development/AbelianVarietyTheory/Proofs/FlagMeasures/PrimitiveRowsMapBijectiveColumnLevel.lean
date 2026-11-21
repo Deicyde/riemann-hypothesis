@@ -1,7 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.Divisibility.DivisionCompatibleToSub2Indef2
-import Formalism.LocalToGlobal.IndefiniteReal.PrimitivePackageFullHecke
-import Formalism.LocalToGlobal.GroupLattices.JointServices.LevelOperatorFixesImage
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.IndefiniteReal.BaseLiftsPackageOfPrimitiveLinks
 
 open Formalism.BasicNotions Formalism.L2.DIV Formalism.L2.Indef Formalism.IndefR.Links Formalism.IndefR.Cx NumberField
 

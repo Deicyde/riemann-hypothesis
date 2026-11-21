@@ -1,4 +1,6 @@
-import Development.EtaleCohomology.EtaleDuality.PointClasses
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.GalMapMul
+import Mathlib.Order.CompletePartialOrder
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry GlobalTheory.EtC Opposite CochainComplex.HomComplex

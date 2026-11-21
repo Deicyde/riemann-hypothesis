@@ -1,12 +1,8 @@
-import Mathlib
-import Formalism.LocalToGlobal.KernelLattices.KerStd
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ThetaZJetsThree
-import Formalism.LocalToGlobal.InertKernelTheory.StatementIota
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.FourthPowerTheta
 import Formalism.LocalToGlobal.GlobalTheory.GL3.CubicFields.PeriodRelations.ConjCls
 import Formalism.LocalToGlobal.GlobalTheory.GL3.CubicFields.WeierstrassUniqueness.ExistsPeriodPairOfIsLat
-import Formalism.LocalToGlobal.TorsionIntegrality.EisensteinTranslationProducts.MulStableIntegral
-import Formalism.LocalToGlobal.TorsionIntegrality.UniformGaussModels.StatementH
 open NumberField Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Ker Formalism.L2.Col Classical
 open Formalism.L2.Th1.H (cmL CmOK matH IsIsom taylorMv)
 open Formalism.L2.Th1.GD (LocNorm InMul frameM thetaLin)
@@ -77,10 +73,10 @@ theorem goodModelTwo_scaleOne : GlobalTheory.ThLoc.Inputs → ∀ (D : D7) (cc :
   · rw [WeierstrassCurve.variableChange_a₃, hCu]
     simp only [C, zero_mul, mul_zero, add_zero, norm_mul, norm_pow, hun, one_pow, one_mul]; exact h3
   · rw [WeierstrassCurve.variableChange_a₄, hCu]
-    simp only [C, zero_mul, mul_zero, sub_zero, add_zero, zero_add, zero_pow two_ne_zero, norm_mul, norm_pow, hun,
+    simp only [C, zero_mul, mul_zero, sub_zero, add_zero, zero_pow two_ne_zero, norm_mul, norm_pow, hun,
       one_pow, one_mul]; exact h4
   · rw [WeierstrassCurve.variableChange_a₆, hCu]
-    simp only [C, zero_mul, mul_zero, sub_zero, add_zero, zero_add, zero_pow two_ne_zero, zero_pow three_ne_zero,
+    simp only [C, zero_mul, mul_zero, sub_zero, add_zero, zero_pow two_ne_zero, zero_pow three_ne_zero,
       norm_mul, norm_pow, hun, one_pow, one_mul]; exact h6
   · rw [WeierstrassCurve.variableChange_Δ, hCu, norm_mul, norm_pow, hun, one_pow, one_mul]; exact hΔ
   · rw [WeierstrassCurve.variableChange_a₁, hCu]

@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.ArcLiftingSetup
-import Formalism.WindowSums.PowerSeriesRelationList
-import Formalism.TruncatedSeriesCounting.EtaDeterminantPolynomialIdentities
-import Formalism.DistinguishedUnitIdeals.DescentLemmasAllHold
+import Formalism.DistinguishedUnitIdeals.DistinguishedOrderProofs.AevalApplySubEvalOneMem
+import Formalism.TruncatedSeriesCounting.TruncatedSeriesProofs.KapWin
 
 noncomputable section
 

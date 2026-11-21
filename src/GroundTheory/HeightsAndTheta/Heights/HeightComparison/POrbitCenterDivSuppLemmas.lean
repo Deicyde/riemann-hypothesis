@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.HeightComparison.HeightOrbitCenter
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.PHeightRecR
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.HeightOrbitCenterMemIff
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.HeightSubringPrimeMaximal

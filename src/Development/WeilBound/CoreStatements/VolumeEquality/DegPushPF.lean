@@ -1,9 +1,13 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.VolumeEquality.DegPushPFc
 import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.AssemblyBridgeFull
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.PFsInvPow
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PLiftBirationalNef
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.DegreeGenericOfDegree
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterDerived
+import Development.WeilBound.CoreStatements.VolumeEquality.DegPushPFa
+import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.InstFintypeSumElim
 
 noncomputable section
 

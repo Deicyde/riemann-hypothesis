@@ -1,7 +1,6 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.PlaneSupports.PlaneSupp
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HermitianPlaneStrongApprox
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ConjMemSupp
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ConjTransposeFrameEmbedding
 
 noncomputable section
@@ -261,7 +260,7 @@ theorem exists_frame (hcm : IsCMExt F E σ) (hJ : IsHermND σ J) {u₀ u₁ : Fi
     rw [Matrix.smul_apply, Matrix.mul_apply, Matrix.mul_apply, Fin.sum_univ_two]
     fin_cases k
     · change ∑ j, J i j * v₀ j = A • (σ (A⁻¹ * rowJ σ J v₀ i) * 1 + σ (B⁻¹ * rowJ σ J v₁ i) * 0)
-      simp only [map_mul, map_inv₀, RingHom.coe_coe, hσA, conj_row hσ hJ.1, smul_eq_mul]
+      simp only [map_mul, map_inv₀, hσA, conj_row hσ hJ.1, smul_eq_mul]
       field_simp
       simp
     · change ∑ j, J i j * v₁ j = A • (σ (A⁻¹ * rowJ σ J v₀ i) * 0 + σ (B⁻¹ * rowJ σ J v₁ i) * (B / A))

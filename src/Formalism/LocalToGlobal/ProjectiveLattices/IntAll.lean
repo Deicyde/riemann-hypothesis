@@ -1,4 +1,7 @@
-import Formalism.LocalToGlobal.ProjectiveLattices.NonnegIffOfLiesTotal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.ProjectiveLattices.VAtVNeBot
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 noncomputable section
 

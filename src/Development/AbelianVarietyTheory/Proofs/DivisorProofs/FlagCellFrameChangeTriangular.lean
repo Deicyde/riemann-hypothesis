@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.NonemptyCuspFrame
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsFlagModelField
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsFrameCover
 

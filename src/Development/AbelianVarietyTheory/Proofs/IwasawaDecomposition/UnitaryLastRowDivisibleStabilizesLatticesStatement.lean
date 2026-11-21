@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.UnitaryLastRowDivisibleStabilizesLattices
-import Mathlib
-import Formalism.LocalToGlobal.Columns.RecLevelLocK
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.UG Formalism.L2.Col Formalism.L2.DIV Matrix
 open scoped TensorProduct
 set_option maxHeartbeats 1000000 in

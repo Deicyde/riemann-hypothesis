@@ -1,13 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaBasicPropertiesStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MeasureFundDomLtTop
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsNatMulIntegralOfIsCompact
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LintegralSiegelConeInvModulusLtTopWeil
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LintegralFundamentalDomainLeOfMeetsOrbits
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SiegelSetWittFrameDomainStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WittRankLeHermitianSignatureStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilConvergenceOfKernel
 
 noncomputable section
@@ -145,7 +137,7 @@ theorem GlobalTheory.ThetaDom.theta_dominated : GlobalTheory.ThK.KP → ∀ (F E
   have hcht : Continuous fun h : UA σ G.W.J => (ht h : ℝ) :=
     NNReal.continuous_coe.comp ((GlobalTheory.Grow.continuous_heightGL F).comp continuous_subtype_val)
   set U : Set (UA σ G.W.J) := {h | (ht h : ℝ) < H} with hUdef
-  have hU : U ∈ 𝓝 h₀ := (isOpen_lt hcht continuous_const).mem_nhds (by simp [hUdef, hHdef])
+  have hU : U ∈ 𝓝 h₀ := (isOpen_lt hcht continuous_const).mem_nhds (by simp [hHdef])
 
   set bE : UA σ G.V.J → ℝ≥0∞ := fun g => ⨆ h ∈ U, ‖theta om Φ g h‖ₑ with hbEdef
   have contθ : ∀ h, Continuous fun g => theta om Φ g h := fun h =>

@@ -1,4 +1,7 @@
-import Formalism.LocalToGlobal.Columns.TiedUpDnLoc
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.Columns.RecLevelCls
+import Formalism.LocalToGlobal.Columns.RecLevelLoc
 
 open NumberField IsDedekindDomain Matrix
 open scoped TensorProduct

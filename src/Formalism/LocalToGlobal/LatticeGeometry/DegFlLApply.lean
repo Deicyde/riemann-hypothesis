@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataDIV
-import Formalism.DegreeFormula.FlagDegFormula
 import Formalism.DegreeFormula.Statement
 import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
 

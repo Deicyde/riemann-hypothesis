@@ -1,10 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RegFlagged
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleSectionLiftsMetric
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicLineBundleInducedArith
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleMetricSetupStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TautologicalFlagGradedIsometric
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DeterminantMetricIsometric
 
 set_option autoImplicit false
 

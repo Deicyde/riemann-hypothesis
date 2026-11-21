@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.PConeMapArea
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.PConeMapAreaOne
 import GroundTheory.HeightsAndTheta.Heights.ArithmeticBezout.PAreaFormulaInj

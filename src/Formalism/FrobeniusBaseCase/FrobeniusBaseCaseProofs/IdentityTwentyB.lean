@@ -1,4 +1,11 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
 import Formalism.FrobeniusBaseCase.Statement
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Data.Int.Star
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 namespace Formalism.BaseCaseIdentities
 

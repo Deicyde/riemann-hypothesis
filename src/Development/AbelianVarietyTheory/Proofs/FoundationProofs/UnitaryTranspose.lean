@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.ClassMassEqSumOfBijective
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsUnitaryClassRepTrivialAtCm
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.ClassSet
-import Formalism.HermitianLattices.HermitianLatticesProofs.LocBasic
 
 noncomputable section
 

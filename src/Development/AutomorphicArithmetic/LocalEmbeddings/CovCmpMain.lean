@@ -1,13 +1,11 @@
-import Mathlib
-import Development.AutomorphicArithmetic.LocalEmbeddings.CovCmp
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.DivisorFrames.PullbackDegreeOfLineBundles
 import Development.AutomorphicArithmetic.DivisorFrames.PullbackDegreeGenericResidue
 import Development.AutomorphicArithmetic.DivisorFrames.ComparisonOfLineBundleSections
 import Development.AutomorphicArithmetic.DivisorFrames.NormalModelComplexCompatAlt
-import Development.AutomorphicArithmetic.DivisorFrames.PdegEqOfIsDeg
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CommonRefinementCovers
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoverRefinementGenericDegree
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ClosedSubschemeModLProjectiveStatement
 
 set_option autoImplicit false
 

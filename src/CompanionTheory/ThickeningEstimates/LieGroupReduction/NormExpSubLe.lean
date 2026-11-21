@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.ThickeningEstimates.LieGroupReduction.IsoOfIntegral
+import CompanionTheory.ThickeningEstimates.LieGroupReduction.HasDerivAtSchwartzToL2
 
 noncomputable section
 

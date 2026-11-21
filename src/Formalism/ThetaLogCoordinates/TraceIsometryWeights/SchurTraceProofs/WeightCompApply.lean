@@ -1,4 +1,6 @@
-import Formalism.ThetaLogCoordinates.TraceIsometryWeights.HasLatBasis
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.MahlerMeasure.MahlerMeasureProofs.WeightSpaceDimensionMonotone
 
 namespace Formalism.InvariantFactorPaths.PW
 

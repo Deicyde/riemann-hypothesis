@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.SpanPowerMembership.ThetaFullColIsom
-import Formalism.SharpRestriction.CuspSpanNormBounds.CayleySignature
 import Formalism.SharpRestriction.Divisibility.InnerProductFormulaField
 
 noncomputable section

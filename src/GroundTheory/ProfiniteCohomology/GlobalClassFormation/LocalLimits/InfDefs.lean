@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.GlobalClassFormation.LocalLimits.IsScalarTowerFiniteSubfieldAlgebraicClosure
-import GroundTheory.GlobalFields.SemilocalAlgebras.Infinite
-import GroundTheory.GlobalFields.IdeleGroups.LocalHerbrandInfinite
-import GroundTheory.GlobalFields.IdeleGroups.GaloisOnAdeles.Places
+import GroundTheory.ProfiniteCohomology.GlobalClassFormation.IdeleCohomology.Infinite
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

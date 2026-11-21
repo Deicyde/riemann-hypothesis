@@ -1,4 +1,15 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.GlobalUnitaryForms.HodgeTateFromSandwich
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.Valuation.LocalSubring
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 noncomputable section
 
@@ -118,10 +129,10 @@ theorem stab_den_loc (v : Pl F) {d : Kv v} (x : Lsq (Kv v) d) :
     have him : ∀ r : Ov v, (algebraMap (Ov v) (Lsq (Kv v) d) r).im = 0 := fun r => rfl
     apply QuadraticAlgebra.ext
     · simp only [pow_two, QuadraticAlgebra.re_add, QuadraticAlgebra.re_sub, QuadraticAlgebra.re_mul,
-        QuadraticAlgebra.im_mul, QuadraticAlgebra.re_smul, QuadraticAlgebra.im_smul, smul_eq_mul, hre, him,
+        QuadraticAlgebra.re_smul, QuadraticAlgebra.im_smul, smul_eq_mul, hre, him,
         QuadraticAlgebra.re_zero]
       ring
-    · simp only [pow_two, QuadraticAlgebra.im_add, QuadraticAlgebra.im_sub, QuadraticAlgebra.re_mul,
+    · simp only [pow_two, QuadraticAlgebra.im_add, QuadraticAlgebra.im_sub,
         QuadraticAlgebra.im_mul, QuadraticAlgebra.re_smul, QuadraticAlgebra.im_smul, smul_eq_mul, hre, him,
         QuadraticAlgebra.im_zero]
       ring
@@ -370,7 +381,7 @@ theorem finG_stab [IsTotallyReal F] (hneg : ∀ σ : F →+* ℝ, σ Δ < 0) (ι
   apply Set.Finite.of_finite_image (f := fun γ : U3 Δ => (γ : Matrix (Fin 3) (Fin 3) (Lsq F Δ)))
   · refine (Set.Finite.pi (fun _ : Fin 3 => Set.Finite.pi (fun _ : Fin 3 => hL))).subset ?_
     rintro _ ⟨γ, hγ, rfl⟩
-    simp only [Set.mem_pi]
+    simp only
     intro i _ j _
     exact key γ hγ i j
   · intro a _ b _ hab

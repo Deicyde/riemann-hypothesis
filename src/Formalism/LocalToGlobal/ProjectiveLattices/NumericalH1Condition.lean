@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.CompTie
 import Formalism.LocalToGlobal.ProjectiveLattices.ValSetAlgSubset
 import Formalism.LocalToGlobal.ProjectiveLattices.PlaceBelow
+import Formalism.LocalToGlobal.ProjectiveLattices.CompHt
 
 noncomputable section
 

@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.SphericalLattices.FunDefs
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.FinPartIdemMulMemIff
+import Development.WeilBound.CoreStatements.LocalThetaKernels.IwasAd
 
 noncomputable section
 

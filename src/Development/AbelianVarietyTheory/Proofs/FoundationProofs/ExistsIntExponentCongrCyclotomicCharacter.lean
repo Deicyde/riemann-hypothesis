@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.EigenOfTwoStep
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.Letter
+import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
 
 open scoped MatrixGroups TensorProduct
 open Matrix GlobalTheory.KZ

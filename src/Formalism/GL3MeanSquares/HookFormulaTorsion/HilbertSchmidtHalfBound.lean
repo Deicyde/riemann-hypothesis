@@ -1,5 +1,19 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.QuadraticFormLowerBound
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.Analysis.Complex.ExponentialBounds
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.Series
+import Mathlib.Data.Int.Star
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace Formalism.HermitianLattices.CumulantEstimateDefs.CumulantEstimates
 
@@ -89,7 +103,7 @@ theorem hsHalf : Formalism.HermitianLattices.CumulantEstimateDefs.HilbertSchmidt
   have hdiag : ∀ i, (1:ℝ) / 4 ≤ ‖A i i‖ ^ 2 := by
     intro i
     have h0 := (Complex.le_def.1 (hA.diag_nonneg (i := i))).1
-    simp [Matrix.sub_apply, Matrix.one_apply] at h0
+    simp [Matrix.sub_apply] at h0
     have hn := Complex.re_le_norm (A i i)
     have h1 : 1 / 2 ≤ ‖A i i‖ := by linarith
     nlinarith [h1]

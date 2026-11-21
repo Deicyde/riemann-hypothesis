@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterRes
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterBridgeB
+import Mathlib.RingTheory.PicardGroup
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace PositivityTheory.UnitarySelfGeneration.HolomorphicMinorCharts
 

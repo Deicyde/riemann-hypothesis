@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.FrobeniusContraction.Statement
+import BuildAid.Leniency.Open
 import Formalism.FrobeniusContraction.HighestWeightResidueAvoids
 
 noncomputable section

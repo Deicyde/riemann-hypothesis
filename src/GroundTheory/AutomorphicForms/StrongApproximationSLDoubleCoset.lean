@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.StrongApproximationSLDense
 import GroundTheory.GlobalFields.ClassFieldConsequences.RayClass
-import GroundTheory.GlobalFields.IdeleGroups.ClassGroup
+import Mathlib.GroupTheory.DoubleCoset
 
 open NumberField IsDedekindDomain Topology Filter Set Matrix
 open scoped RestrictedProduct

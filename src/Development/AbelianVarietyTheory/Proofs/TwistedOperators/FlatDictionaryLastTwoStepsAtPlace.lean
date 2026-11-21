@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.EpsVEqOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LastBiExpand
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.FlatMapBesselToFourierJacobiLocalModel
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ExistsIsModelChg
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.TopOrthAtEmb
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LastTwoStepsLocalModelFlatMapFourierJacobiStepStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LastTwoStepsLocalModelExtendByZeroTopStepStatement
@@ -151,7 +149,7 @@ theorem GlobalTheory.FlatPlace.lastStep_eventually : Big fun ch => ChrP ch → A
         (Fin.castLE (show (locGrid ch.G t w).rank ((locGrid ch.G t w).m, j + 1 + 1) ≤ _ by simp only [hm]; omega))
         (Fin.cast (show (locGrid ch.G t w).rank ((locGrid ch.G t w).m, j + 1) = _ by simp only [hm]; omega)) := by
       funext a b
-      simp only [Matrix.submatrix_apply, Matrix.toRows₁_apply, id]
+      simp only [Matrix.submatrix_apply, Matrix.toRows₁_apply]
       exact congrArg (fun z => y' z (Fin.cast h₄ b)) (hsymm a).symm
     have hy' : (y'.submatrix e.symm id) (topLast (locGrid ch.G t w) (j + 1 + 1)) = y' (Sum.inr ()) := by
       funext b

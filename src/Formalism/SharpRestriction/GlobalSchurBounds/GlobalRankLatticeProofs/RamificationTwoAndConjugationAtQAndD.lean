@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.PointsPropertyOfD7
+import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.NcardEqTwoIff
 
 noncomputable section
 

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.PeriodRingBases.AinfPlusInjectivity.ABInjective
 
 set_option backward.isDefEq.respectTransparency false

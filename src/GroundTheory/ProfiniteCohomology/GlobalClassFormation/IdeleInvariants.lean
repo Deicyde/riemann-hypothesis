@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.GlobalClassFormation.ABHNPrep
 import GroundTheory.ProfiniteCohomology.GlobalClassFormation.IdeleInvariants.LocalInf
-import GroundTheory.ProfiniteCohomology.GlobalClassFormation.RealPlaces
+import GroundTheory.ProfiniteCohomology.GlobalClassFormation.IdeleInvariants.BrauerInvZOfIsSepClosureIdelesLocalResIdelesResF
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

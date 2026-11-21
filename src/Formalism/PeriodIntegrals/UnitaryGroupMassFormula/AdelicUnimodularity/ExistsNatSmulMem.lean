@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdelicUnimodularity.SmulEqAlgebraMapMul
 import Lemmata.GeneralBFactThirdMore.Key
+import Formalism.SharpRestriction.CuspSpanNormBounds.GlobAut
+import Mathlib.RingTheory.PiTensorProduct
 
 noncomputable section
 
@@ -46,13 +50,11 @@ theorem exists_lower (b : Module.Basis ι F E) (L : Submodule (𝓞 E) (Fin n �
       funext i
       by_cases hij : i = j
       · subst hij
-        simp only [Pi.smul_apply, Pi.single_eq_same, Subring.smul_def, smul_eq_mul, Formalism.UG.inclE,
-          Algebra.TensorProduct.includeLeftRingHom_apply, Algebra.TensorProduct.tmul_mul_tmul, one_mul,
-          mul_one]
+        simp only [Pi.smul_apply, Pi.single_eq_same, Subring.smul_def, smul_eq_mul]
         rw [← Nat.cast_smul_eq_nsmul F, ← Nat.cast_smul_eq_nsmul F, TensorProduct.smul_tmul']
         simp only [inclV, Pi.smul_apply, Pi.single_eq_same, Formalism.UG.inclE,
           Algebra.TensorProduct.includeLeftRingHom_apply, Algebra.TensorProduct.tmul_mul_tmul, one_mul, mul_one]
-      · simp [Pi.single_eq_of_ne hij, Subring.smul_def, Formalism.UG.inclE, inclV]
+      · simp [Pi.single_eq_of_ne hij, Formalism.UG.inclE, inclV]
     rw [heq]
     exact Submodule.smul_mem _ _ (inclV_mem hw)
   have hy' : y = ∑ j, ∑ k, (Pi.single j (b k ⊗ₜ[F] coord b (y j) k) : Fin n → E ⊗[F] Af) := by

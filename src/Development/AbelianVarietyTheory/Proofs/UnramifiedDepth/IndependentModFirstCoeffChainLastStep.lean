@@ -1,7 +1,4 @@
-import Mathlib
-import Formalism.LocalToGlobal.CharacterGerms.LatticeInclusionFormsInjective
-import Formalism.LocalToGlobal.CharacterGerms.CartesianBoundOnCurves
-import Formalism.LocalToGlobal.CharacterGerms.CoeffIterateZero
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CharacterGerms.CharacteristicFromRanks
 import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.TwoMulChainStartIndexAddOneOfOdd
 import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.PowAdditiveAndRoots

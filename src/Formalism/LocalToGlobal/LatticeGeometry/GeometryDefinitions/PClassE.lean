@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.LatticeGeometry.GeometryDefinitions.PClassD
+import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.AdelstabL
 
 noncomputable section
 
@@ -193,7 +196,7 @@ theorem gen_lat (Λ : Submodule (𝓞 E) (n → E)) {p : ℕ} (w : Fin p → Λ)
     funext i
     show inclE (F := F) 𝔸 (lam i) = _
     rw [hl]
-    simp [Finset.sum_apply, Subring.smul_def, Algebra.smul_def, map_sum, map_mul]
+    simp [Finset.sum_apply, Algebra.smul_def, map_sum, map_mul]
     exact Finset.sum_congr rfl fun l _ => rfl
   | zero => exact ⟨0, by simp⟩
   | add a b _ _ ha hb =>

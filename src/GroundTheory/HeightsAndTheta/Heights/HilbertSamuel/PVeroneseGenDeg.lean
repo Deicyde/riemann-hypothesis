@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsSecondVeroneseParts
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PSectionsRank
+import Mathlib.Algebra.Group.ForwardDiff
+import Mathlib.Data.Rat.Star
+import Mathlib.RingTheory.Polynomial.HilbertPoly
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.HilbertSamuel

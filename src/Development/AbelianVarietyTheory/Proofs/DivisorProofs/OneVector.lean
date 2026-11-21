@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TranslationInv
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PullFullL
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeatKernelFundamentalDomainPullStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeatKernelTraceIntegrableStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StrPullOperatorEqStatement
@@ -52,10 +50,10 @@ theorem oneVector : OneVector := by
     have h1 : (Finset.univ : Finset (Fin (1 + 1))) ≠ ∅ := Finset.univ_nonempty.ne_empty
     have h2 : (Finset.univ : Finset (Fin (1 + 1))) ≠ {Fin.castAdd 1 (0 : Fin 1)} := by
       intro h; have := Finset.mem_univ (Fin.natAdd 1 (0 : Fin 1)); rw [h] at this
-      simp [Fin.ext_iff] at this
+      simp at this
     have h3 : (Finset.univ : Finset (Fin (1 + 1))) ≠ {Fin.natAdd 1 (0 : Fin 1)} := by
       intro h; have := Finset.mem_univ (Fin.castAdd 1 (0 : Fin 1)); rw [h] at this
-      simp [Fin.ext_iff] at this
+      simp at this
     rw [pullBase, if_neg h1, if_neg h2, if_neg h3]
 
 end GlobalTheory.TorsionForm.OneVec

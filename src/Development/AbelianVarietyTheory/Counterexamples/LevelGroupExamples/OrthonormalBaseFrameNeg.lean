@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.FamilyUniformisationBasePointOrthogonalBis
 import Formalism.LocalToGlobal.ProjectiveLattices.DatProofs
-import Formalism.LocalToGlobal.ProjectiveLattices.HostRank
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.IsInfEmbUnique
 
 noncomputable section

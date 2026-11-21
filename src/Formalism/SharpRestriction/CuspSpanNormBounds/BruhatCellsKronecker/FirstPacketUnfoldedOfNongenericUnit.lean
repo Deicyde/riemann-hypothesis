@@ -1,8 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.BruhatCellsKronecker.NcardPrimesOverOfSplitsCompl
-import Formalism.SharpRestriction.CuspSpanNormBounds.UniformConstantsAndStatements
 import Formalism.SharpRestriction.CuspSpanNormBounds.BesselShellMomentBounds
-import Formalism.SharpRestriction.CuspSpanNormBounds.LocalModelPeriodLattices
 import Formalism.SharpRestriction.CuspSpanNormBounds.PExtra
+import Formalism.SharpRestriction.CuspSpanNormBounds.BruhatCellsKronecker.OwnEvIntro
 
 noncomputable section
 

@@ -1,9 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.SatakeExponents.UniformizerValuations.FrameReading.FmTools
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HintConstMul
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntegralOfTwistConjugatePlace
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousMapGLSpl
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThUContinuousInvol
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HasSatGLOfInvT
 
 noncomputable section
 

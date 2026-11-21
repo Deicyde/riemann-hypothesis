@@ -1,5 +1,7 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsLatBasisZero
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SpanPeriodLatticeComplexSemiAbelianEqTopStatement
+import Mathlib.Data.Int.Star
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj GlobalTheory GlobalTheory.Toroidal GlobalTheory.ShFam GlobalTheory.ShFam.Pad GlobalTheory.ShFam.Hor GlobalTheory.ShFam.Hor.LogCh
 open scoped Matrix CategoryTheory.Obj Topology
@@ -98,7 +100,7 @@ theorem exp_lattice_torsion_count : ∀ (Q : Type) [Group Q] (g r N : ℕ) (e : 
       obtain ⟨a, ha⟩ := hsurj p.1 p.2
       exact ⟨fun j => (a j : ZMod N), Subtype.ext (by show F _ = _; rw [hFval, ha])⟩
     rw [← Nat.card_eq_of_bijective _ hbij]
-    simp [Nat.card_eq_fintype_card, Fintype.card_fun, ZMod.card]
+    simp [Nat.card_eq_fintype_card, ZMod.card]
   refine ⟨{s | F s ∈ T}, ?_, ?_⟩
   · have hS : Nat.card {s | F s ∈ T} = Nat.card T := by
       have hbij : Function.Bijective (fun s : {s | F s ∈ T} => (⟨F s.1, s.2⟩ : T)) := by

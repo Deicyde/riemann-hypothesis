@@ -1,7 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.LaplaceOperators.LaplaceFoundations.AssemblyStatement
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.LaplaceOperators.LaplaceFoundations.UnipotentExpHaarSqrtBound
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.PhiDecayCore
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.ExpInPPosDef
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.HighestWeights.HWExists
 
 noncomputable section
@@ -437,7 +438,7 @@ theorem assembly : AssemblyStatement := by
     intro H i
     rw [show Formalism.QuantumDeterminants.herm H (Formalism.QuantumDeterminants.bvec i) (Formalism.QuantumDeterminants.bvec i) =
       ∑ j, star (Formalism.QuantumDeterminants.bvec i j) * (H *ᵥ Formalism.QuantumDeterminants.bvec i) j from rfl]
-    rw [Finset.sum_eq_single i (fun j _ hj => by simp [Formalism.QuantumDeterminants.bvec, Pi.single_apply, hj]) (by simp)]
+    rw [Finset.sum_eq_single i (fun j _ hj => by simp [Formalism.QuantumDeterminants.bvec, hj]) (by simp)]
     simp [Formalism.QuantumDeterminants.bvec, Matrix.mulVec, dotProduct, Pi.single_apply]
   have hTz1 : Formalism.QuantumDeterminants.Tz k r (z0 k r) = 1 := by
     rw [Formalism.QuantumDeterminants.Tz, z0, key]

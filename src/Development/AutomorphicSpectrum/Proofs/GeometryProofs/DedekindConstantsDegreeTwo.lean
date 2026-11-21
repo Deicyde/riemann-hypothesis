@@ -1,11 +1,8 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsLatFlagPair
-import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.HeckeSectionsIsotropicCommutatorPairingPower
-import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.StatementsFlagIndependence
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.DedekindConstantsDegreeOneStatement
 import Development.AutomorphicSpectrum.Proofs.DivisibilityProofs.LocalizationModelOverPlaceStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.RegAtIffChartLocalization
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.PrimeChartExistsUniquePoint
+import Mathlib.GroupTheory.FiniteAbelian.Basic
 open AlgebraicGeometry CategoryTheory NumberField MvPolynomial ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Num GlobalTheory.CompanionTheory.Ar.Top
 open GroundTheory.Heights₂.Heights.NumbersDVR (pointIdeal segreVec IsFlagFrame IsFlagPair SameGenericFibre IsModelOver)
 
@@ -330,7 +327,7 @@ theorem cone_eq {h : MvPolynomial (Σ k, J k) O} {b : K → ℕ}
   refine Finset.sum_congr rfl fun d hd => ?_
   have hw : Finsupp.weight (blockWeight J) d = b := hh (mem_support_iff.1 hd)
   rw [GroundTheory.Heights₂.Heights.NumbersDVR.pointConeMap, aeval_monomial, aeval_monomial, cone_prod, hw, map_mul]
-  simp only [MvPolynomial.algebraMap_apply, Algebra.algebraMap_self, RingHom.id_apply, _root_.mul_assoc]
+  simp only [MvPolynomial.algebraMap_apply, _root_.mul_assoc]
 
 theorem sub_mem_pointIdeal {h h' : MvPolynomial (Σ k, J k) O} {b : K → ℕ}
     (hh : GroundTheory.Heights₂.Heights.NumbersDVR.IsMultiHomog h b) (hh' : GroundTheory.Heights₂.Heights.NumbersDVR.IsMultiHomog h' b)

@@ -1,8 +1,10 @@
-import Mathlib
-import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.MdiscSt
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.StatementsChartCutoffEnergy
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.PChartHessCompare
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.PHermFormCompare
+import Mathlib.Algebra.Lie.OfAssociative
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
+import Mathlib.Topology.UniformSpace.Uniformizable
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

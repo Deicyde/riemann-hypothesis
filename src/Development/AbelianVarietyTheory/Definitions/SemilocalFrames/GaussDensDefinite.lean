@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.GaugeUnfold
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsFrameOfHasSignature
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.AutPointLatticeIntersectionSelfDualProperties
+import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.LamXEquivariant
 
 open MeasureTheory NumberField Matrix Finset
 
@@ -81,7 +83,7 @@ theorem isPerpInst_ofSigns (cm : Formalism.BasicNotions.CMData F E) {n : ℕ} (s
     simp [signMat, sgn, dotProduct, Fin.sum_univ_succ, Matrix.mulVec_diagonal]
   · show star (Pi.single (0 : Fin (n + 1)) (1 : E)) ᵥ* (signMat E (Fin.cons s ε : Fin (n + 1) → Bool) * (Matrix.of fun (i : Fin (n + 1)) (j : Fin n) => if i = j.succ then (1 : E) else 0)) = 0
     funext j
-    simp [signMat, Matrix.vecMul, dotProduct, Fin.sum_univ_succ, Matrix.diagonal_mul, (Fin.succ_ne_zero j).symm]
+    simp [signMat, Matrix.vecMul, dotProduct, Matrix.diagonal_mul]
   · show (Matrix.of fun (i : Fin (n + 1)) (j : Fin n) => if i = j.succ then (1 : E) else 0)ᴴ * signMat E (Fin.cons s ε : Fin (n + 1) → Bool) * (Matrix.of fun (i : Fin (n + 1)) (j : Fin n) => if i = j.succ then (1 : E) else 0) = (signMat E ε).map (RingEquiv.refl E)
     ext i j
     rw [Matrix.mul_apply]

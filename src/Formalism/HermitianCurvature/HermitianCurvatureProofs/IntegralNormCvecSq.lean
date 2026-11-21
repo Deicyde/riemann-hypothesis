@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.TendstoSmulCocompact
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.LastBlockDecay
+import Mathlib.Algebra.Ring.IsFormallyReal
 
 namespace Formalism.FourierDecayAlt.P.PBK
 

@@ -1,9 +1,4 @@
-import Mathlib
-import ReciprocityTheory.DualLattices.CotangentSurjective
-import ReciprocityTheory.DualLattices.CyclicRecursionStatement
-import Development.AbelianVarietyTheory.Definitions.Divisors.XiMulNu
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FontaineAinfLocalDomainXiAdicOrder
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MuCoeffZeroNeZero
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsRepBasisCharpolyStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CharpolyEqOfIntertwined
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WittRepReductionStructureStatement

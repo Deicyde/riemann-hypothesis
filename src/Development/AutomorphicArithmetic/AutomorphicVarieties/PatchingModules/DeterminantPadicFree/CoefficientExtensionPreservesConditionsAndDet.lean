@@ -1,5 +1,7 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.DeterminantPadicFree.FrameWith
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.DeterminantPadicFree.ExtFree
+import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.PatchedSupportCompletions
+import Mathlib.RingTheory.Ideal.Quotient.HasFiniteQuotients
 
 open Matrix IsLocalRing UpperTheory.V.Alg UpperTheory.V.W UpperTheory.V.Pa
 
@@ -100,7 +102,7 @@ theorem UpperTheory.V.Pa.Det.coefficientExtension_preserves_conditions_and_det :
     intro B _ _ y
     show Matrix.det _ = Matrix.det _
     congr 1
-    simp only [MonoidHom.coe_coe, AlgHom.coe_toRingHom, GDet.repAlg]
+    simp only [GDet.repAlg]
     congr 2
     apply congrArg
     ext g a b

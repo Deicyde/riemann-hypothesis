@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.HighDecomp
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.HighProcyclic
+import GroundTheory.ProfiniteCohomology.RestrictedRamification.SurjectiveOfInjectiveOfInjective
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

@@ -1,4 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.DualWeylCoordinates.DualWeylProofs.QcEvGLDetUZpow
+import Formalism.ThetaLogCoordinates.DualWeylCoordinates.StatementA
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
 
 noncomputable section
 
@@ -105,7 +111,7 @@ lemma qc_two (hβ : IsSMu M mu β) (ph : Matrix M.ι (TIdx mu) ℤ) (hph : ∀ I
       ∑ j, evGL g ((ph.map (Int.castRingHom (GLCoord ℤ n)) * TMat mu : Matrix _ _ _) j I) * evGL x (β j) := by
   have e1 : evGL (x * g) (brk mu I) = ∑ j, evGL g ((M.A * ph.map (Int.castRingHom (GLCoord ℤ n)) : Matrix _ _ _) j I) * evGL x (β j) := by
     rw [← hph I]
-    simp only [map_sum, map_zsmul, hβ.2.2, Matrix.mul_apply, Matrix.map_apply, Finset.sum_mul, map_mul, eq_intCast,
+    simp only [map_sum, hβ.2.2, Matrix.mul_apply, Matrix.map_apply, Finset.sum_mul, map_mul, eq_intCast,
       map_intCast, zsmul_eq_mul, Finset.mul_sum]
     rw [Finset.sum_comm]
     refine Finset.sum_congr rfl fun j _ => Finset.sum_congr rfl fun k _ => ?_

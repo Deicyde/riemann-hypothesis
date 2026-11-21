@@ -1,11 +1,9 @@
-import Mathlib
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ProjectiveAutomorphicHecke.MapWopWmap
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ContinuousMapPFin
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SplitPlaceUnitaryLocalPointsEquivGL
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.LatticeDataThicknessBound
-import Development.AbelianVarietyTheory.Definitions.Divisors.EntireEqOfHalfPlane
-import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.DefiniteUnitaryRealApproxAndFiniteInfiniteSplit
 import GroundTheory.GlobalFields.Adele.BaseChange.FiniteMap
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.DefiniteUnitaryClassSetFinite
+import Development.AbelianVarietyTheory.Statements.EllipticCurveLevels.ClosedAtLConclusionOfMem
 
 noncomputable section
 
@@ -74,7 +72,7 @@ def rat : Gam0 E n →* GUf E n :=
           (algebraMap ℚ E y.1.2 • (1 : Matrix (Fin n) (Fin n) E)).map (algebraMap E (Af E)) := by
         rw [finiteAdeleMap_algebraMap]
         ext i j : 1
-        by_cases hij : i = j <;> simp [hij, Matrix.one_apply]
+        by_cases hij : i = j <;> simp [hij]
       exact (congrArg (· * _) e1).trans (h'.trans e2.symm)
 
 def ofU : finU E n →* GUf E n :=

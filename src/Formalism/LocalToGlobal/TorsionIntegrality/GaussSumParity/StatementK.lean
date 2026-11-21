@@ -1,5 +1,6 @@
-import Formalism.LocalToGlobal.TorsionIntegrality.GaussSumParity.StatementB
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.CMGoodModels.Statement
+import Formalism.LocalToGlobal.TorsionIntegrality.GaussSumParity.TrDual
 
 noncomputable section
 open scoped BigOperators

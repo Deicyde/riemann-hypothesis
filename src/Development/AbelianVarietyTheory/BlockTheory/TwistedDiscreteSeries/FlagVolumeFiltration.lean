@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.HasConductorMulShift
+import Mathlib.Order.CompletePartialOrder
 
 open MeasureTheory ValuativeRel Matrix IsLocalRing
 open scoped Pointwise NNReal ENNReal

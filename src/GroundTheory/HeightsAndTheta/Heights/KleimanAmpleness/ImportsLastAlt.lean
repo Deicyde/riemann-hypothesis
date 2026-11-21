@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.IsModelWithBaseExOPnPt
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.OneBlockPnPt
 set_option maxSynthPendingDepth 1

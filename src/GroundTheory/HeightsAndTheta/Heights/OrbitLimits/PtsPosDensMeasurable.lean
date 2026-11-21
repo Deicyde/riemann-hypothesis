@@ -1,7 +1,11 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StPtsPosDensIntegrable
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.PtsSumMeasurableA
 import GroundTheory.HeightsAndTheta.Heights.Intersections.NoCommonComponentCoordinatesPlane
+import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StPtsPosPartProjIndep
+import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StokesObjects
+import Mathlib.Algebra.Order.Ring.Star
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterSheet
 set_option maxSynthPendingDepth 1
 
 noncomputable section

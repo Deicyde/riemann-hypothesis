@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NonemptyLink
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ResidueDegreeGenericNeZeroEquidimensional
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemNonzeroLocusFormMap
 
 set_option autoImplicit false
 

@@ -1,6 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.OneMapEq
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.IotaEmbeddingColumns
+import Formalism.LocalToGlobal.IndefiniteReal.OneMapT
 
 set_option autoImplicit false
 

@@ -1,10 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Divisibility.QLocTied
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.HostPins
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsIsUnrM
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsIsNrm
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsAddHaarCompletionIntegralMatricesVolOne
-import Development.AbelianVarietyTheory.Definitions.Divisors.T2SpaceGeneralLinearGroup
 
 noncomputable section
 

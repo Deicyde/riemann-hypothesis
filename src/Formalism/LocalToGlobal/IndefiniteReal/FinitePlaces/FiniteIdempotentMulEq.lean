@@ -1,4 +1,7 @@
-import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.LatAnn
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.CharStd
+import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.LatMod
 
 noncomputable section
 

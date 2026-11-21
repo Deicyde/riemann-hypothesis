@@ -1,9 +1,10 @@
-import Mathlib
-import Formalism.LocalToGlobal.PairingIndexBounds.OrthogonalChartLevels.FdOfCharts
-import Formalism.LocalToGlobal.GroupLattices.PendingLemmas.InvarianceRepresentativesLaw
-import Formalism.LocalToGlobal.GroupLattices.PendingLemmas.InvarianceRepresentativesTrivial
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.NatCastMemOfPlace
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.MemHomLat
+import Formalism.SharpRestriction.GlobalSchurBounds.GeneralLinearActions.IsDiscriminantTwelfthRootOfIdealLattice
+import Mathlib.LinearAlgebra.SymmetricAlgebra.Basis
+import Mathlib.LinearAlgebra.TensorAlgebra.Basis
+import Mathlib.RingTheory.TotallySplit
 
 noncomputable section
 
@@ -299,7 +300,7 @@ theorem homLat_le_span (P : HeightOneSpectrum O) {p : ℕ} (ρ : E →+* Qq) (hp
         simp only [A, Matrix.smul_mulVec, Matrix.vecMulVec_mulVec, Pi.smul_apply, smul_eq_mul,
           Algebra.smul_def]
         rw [← hr']
-        simp [Matrix.mulVec, mul_comm, mul_assoc, mul_left_comm]
+        simp [Matrix.mulVec, mul_comm, mul_assoc]
       rw [e]
       exact N'.smul_mem r hn'
     obtain ⟨t, ht, htY⟩ := hY A hA

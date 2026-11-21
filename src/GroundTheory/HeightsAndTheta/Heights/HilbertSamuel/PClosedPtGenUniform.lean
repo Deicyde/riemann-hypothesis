@@ -1,10 +1,13 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Intersections.AvoidRing
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsClosedPtGenUniform
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsGradedSubmodules
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsClosedPtFibreLift
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsChartNakayamaGen
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsGenNearMul
+import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PQuotPartGraded
+import Mathlib.RingTheory.PicardGroup
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.HilbertSamuel
@@ -128,7 +131,7 @@ theorem ClosedPtGenUniform.proof (hG : GradedSubmodules.Statement) (hF : ClosedP
   have htw : e + cM • N + a • (0 + n₁ • N) + s • (0 + (n₁ + 1) • N) = e + c • N := by
     rw [hca]
     funext k
-    simp only [Pi.add_apply, Pi.smul_apply, Pi.zero_apply, smul_eq_mul, zero_add]
+    simp only [Pi.add_apply, Pi.smul_apply, zero_add]
     push_cast
     ring
   rw [htw] at hB

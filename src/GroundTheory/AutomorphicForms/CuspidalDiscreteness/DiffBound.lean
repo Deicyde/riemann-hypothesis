@@ -1,6 +1,7 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.CuspidalDiscreteness.SmoothingFinite
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.CuspidalDiscreteness.MixedDifference
+import GroundTheory.AutomorphicForms.CuspidalDiscreteness.Smoothing
 
 open MeasureTheory Set Filter Topology Function
 open NumberField IsDedekindDomain

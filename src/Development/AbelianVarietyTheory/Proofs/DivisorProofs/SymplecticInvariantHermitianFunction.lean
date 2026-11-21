@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsTateZero
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryInvariantHermitianFormSymmEqSmulTrace
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PosDefEqMulTransposeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SiegelActionFormulaAndDerivativeStatement
@@ -38,7 +37,7 @@ theorem sesq_polar {W : Type*} [AddCommGroup W] [Module ℂ W] (B : W → W → 
   have b2 : ∀ (a : ℂ) v w, B w (a • v) = star a * B w v := fun a v w => by
     rw [hh, a2, star_mul', ← hh]
   simp only [a1, b1, a2, b2]
-  have hI : star Complex.I = -Complex.I := by simp [Complex.star_def]
+  have hI : star Complex.I = -Complex.I := by simp
   rw [hI]
   ring_nf
   simp only [show Complex.I ^ 3 = -Complex.I by rw [pow_succ, Complex.I_sq]; ring, Complex.I_sq]
@@ -166,7 +165,7 @@ theorem invHermFun_eq_const_and_smul_sdens : ∀ (g : ℕ) (F : symMat g → sym
   set P := A'⁻¹
   have hW : Wᵀ = W := (tauU_isSymm v).eq
   have hPW : (P * W * Pᵀ).IsSymm := by
-    simp only [hW, Matrix.IsSymm, Matrix.transpose_mul, Matrix.transpose_transpose, (tauU_isSymm v).eq,
+    simp only [hW, Matrix.IsSymm, Matrix.transpose_mul, Matrix.transpose_transpose,
       Matrix.mul_assoc]
   set u := symPart (P * W * Pᵀ)
   have hAu : A' * tauU u * A'ᵀ = W := by

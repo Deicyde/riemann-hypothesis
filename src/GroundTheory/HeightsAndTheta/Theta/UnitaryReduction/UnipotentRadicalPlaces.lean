@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Theta.UnitaryReduction.UnipotentRadical
+import Mathlib.Analysis.InnerProductSpace.Adjoint
+import Mathlib.RingTheory.DedekindDomain.Different
 set_option maxSynthPendingDepth 1
 
 noncomputable section

@@ -1,7 +1,5 @@
-import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
-import Formalism.LocalRingCardinality.DataLatDefs
-import Formalism.LocalRingCardinality.DataErr
-import Formalism.SharpRestriction.ParConsts
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.ParamsHeightRankConstant
 import Formalism.SharpRestriction.GlobalSchurBounds.TaylorLogMetric
 import Formalism.SharpRestriction.Divisibility.PrimeDegreeVariant

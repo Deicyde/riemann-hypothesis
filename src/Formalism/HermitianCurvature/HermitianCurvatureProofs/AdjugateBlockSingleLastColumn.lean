@@ -1,6 +1,7 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.VectorVanishesBigCell
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.SymmetricScalarBlockMatrixMul
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.DirectionsInParabolic
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.Block3MulBlocks
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.UnipotentCoordinatesMeasurePreserving
 
 open Matrix Formalism.REAL Formalism.QuantumDeterminants Formalism.FourierDecayAlt Formalism.FourierDecayAlt.U
 
@@ -256,9 +257,9 @@ theorem hpk_mulVec_e (u : Fin (2 * (j + 0) + k + 1) → ℂ) (a : Fin j) :
     (Hpk k (j + 0) *ᵥ u) (eB k j 0 (Sum.inl (Sum.inl a))) = u (eB k j 0 (Sum.inr a.rev)) := by
   rw [Ux3.hpkBlocks k j 0, mulVec_eB]
   simp only [Ux3.block3_apply]
-  simp [Fintype.sum_sum_type, Matrix.fromBlocks_apply₁₁, Matrix.fromBlocks_apply₁₂, Matrix.fromBlocks_apply₂₁,
-    Matrix.fromBlocks_apply₂₂, Matrix.fromRows_apply_inl, Matrix.fromRows_apply_inr, Matrix.fromCols_apply_inl,
-    Matrix.fromCols_apply_inr, G.wMat]
+  simp [Fintype.sum_sum_type, Matrix.fromBlocks_apply₁₁, Matrix.fromBlocks_apply₁₂,
+    Matrix.fromRows_apply_inl,
+    G.wMat]
 
 theorem hpk_mulVec_es (u : Fin (2 * (j + 0) + k + 1) → ℂ) (a : Fin j) :
     (Hpk k (j + 0) *ᵥ u) (eB k j 0 (Sum.inr a)) = u (eB k j 0 (Sum.inl (Sum.inl a.rev))) := by

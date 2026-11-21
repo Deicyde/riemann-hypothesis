@@ -1,4 +1,8 @@
-import Formalism.SharpRestriction.GenusPolyhedralBounds.RelativeIndexClassSets.ConclOfHyp
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GenusPolyhedralBounds.RelativeIndexClassSets.QlenEqZeroOfLe
+import Formalism.SharpRestriction.GenusPolyhedralBounds.RelativeIndexClassSets.ThetaLeMsupOfSetC
+import Mathlib.Algebra.Order.PUnit
 
 noncomputable section
 

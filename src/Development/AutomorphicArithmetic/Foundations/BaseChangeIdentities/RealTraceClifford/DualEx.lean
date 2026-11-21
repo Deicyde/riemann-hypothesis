@@ -1,5 +1,7 @@
-import Mathlib
-import Development.AutomorphicArithmetic.Foundations.BaseChangeIdentities.RealTraceClifford.ClifMod
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.Foundations.BaseChangeIdentities.RealTraceClifford.RealTrOfAll
+import Mathlib.Topology.Algebra.Star.Unitary
 
 noncomputable section
 
@@ -22,10 +24,10 @@ private def eD : (V →L[ℂ] ℂ) ≃ₗ[ℂ] EuclideanSpace ℂ (Fin (Module.f
     ext v
     have h := (stdOrthonormalBasis ℂ V).sum_repr' v
     conv_rhs => rw [← h]
-    simp [ContinuousLinearMap.sum_apply, map_sum, mul_comm]
+    simp [map_sum, mul_comm]
   right_inv y := by
     ext j
-    simp [ContinuousLinearMap.sum_apply, OrthonormalBasis.inner_eq_ite]
+    simp [OrthonormalBasis.inner_eq_ite]
 
 private theorem eD_apply (ξ : V →L[ℂ] ℂ) (i) : eD ξ i = ξ (stdOrthonormalBasis ℂ V i) := rfl
 
@@ -75,11 +77,11 @@ private theorem trace_pr (A : V →L[ℂ] V) :
   simp only [Matrix.trace, Matrix.diag, LinearMap.toMatrix_apply]
   refine Finset.sum_congr rfl fun i _ => ?_
   simp only [OrthonormalBasis.coe_toBasis_repr_apply, OrthonormalBasis.coe_toBasis, OrthonormalBasis.repr_apply_apply,
-    EuclideanSpace.basisFun_apply, EuclideanSpace.basisFun_repr, ContinuousLinearMap.coe_coe, pr_apply, eD_apply]
+    EuclideanSpace.basisFun_apply, ContinuousLinearMap.coe_coe, pr_apply]
   rw [EuclideanSpace.inner_single_left, map_one, one_mul, eD_apply, ContinuousLinearMap.comp_apply]
   show (∑ j, (EuclideanSpace.single i (1 : ℂ)) j • innerSL ℂ (stdOrthonormalBasis ℂ V j))
     (A (stdOrthonormalBasis ℂ V i)) = _
-  simp [ContinuousLinearMap.sum_apply, EuclideanSpace.single_apply]
+  simp
 
 end SlopeTestRemainingChoices
 

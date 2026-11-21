@@ -1,6 +1,7 @@
-import Mathlib
-import ReciprocityTheory.DualLattices.VEqZeroOfPowEqOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.WeightedSumBounds.PtSolveMapFixedIff
+import Mathlib.RingTheory.SimpleRing.Principal
 
 namespace ReciprocityTheory.ChartRestriction.G.Sh
 

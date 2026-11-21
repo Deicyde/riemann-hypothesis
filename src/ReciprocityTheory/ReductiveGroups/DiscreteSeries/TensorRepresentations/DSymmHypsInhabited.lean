@@ -1,5 +1,5 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.InhabCAR
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.CARUnit
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.FockTA
 
 noncomputable section

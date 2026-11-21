@@ -1,10 +1,11 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.WittExactSequences.IsCompl
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.OneTmulMemRangeIff
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsPQ
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PqLift
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FrobeniusPowerSolutionLift
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PerfectFrobeniusRootSolution
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open TensorProduct CrystallineSemistableComparison.D
 open scoped LaurentPolynomial

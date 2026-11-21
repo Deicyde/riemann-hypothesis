@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EabIsKCInr
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockFirstActionMatrixUnitEq
 
 open MvPolynomial Formalism.BasicNotions.TH
 
@@ -23,9 +24,9 @@ theorem fockAct2_posOnly (P Q R S : ℕ) (f : Pol P Q R S) (hf : ∀ l ∈ f.var
     simp only [zR, Equiv.symm_apply_apply,
       GlobalTheory.CompactHarm.omE_pp (Sum.inl _, Sum.inl _) (Sum.inl _, Sum.inl _) rfl rfl,
       GlobalTheory.CompactHarm.omE_nn (Sum.inr _, Sum.inl _) (Sum.inr _, Sum.inl _) rfl rfl,
-      h0 (Sum.inr _, Sum.inl _) rfl, mul_zero, neg_zero, zero_sub, add_zero,
+      h0 (Sum.inr _, Sum.inl _) rfl, mul_zero, neg_zero, zero_sub,
       Finset.sum_add_distrib, Finset.sum_neg_distrib, Prod.mk.injEq, Sum.inl.injEq, true_and,
-      Sum.inr.injEq, Finset.sum_const, Finset.card_univ, Fintype.card_fin, ← Nat.cast_smul_eq_nsmul ℂ]
+      Finset.sum_const, Finset.card_univ, Fintype.card_fin, ← Nat.cast_smul_eq_nsmul ℂ]
     split_ifs
     · module
     · simp
@@ -35,9 +36,9 @@ theorem fockAct2_posOnly (P Q R S : ℕ) (f : Pol P Q R S) (hf : ∀ l ∈ f.var
     simp only [yS, Equiv.symm_apply_apply,
       GlobalTheory.CompactHarm.omE_pp (Sum.inr _, Sum.inr _) (Sum.inr _, Sum.inr _) rfl rfl,
       GlobalTheory.CompactHarm.omE_nn (Sum.inl _, Sum.inr _) (Sum.inl _, Sum.inr _) rfl rfl,
-      h0 (Sum.inl _, Sum.inr _) rfl, mul_zero, neg_zero, zero_sub, zero_add,
+      h0 (Sum.inl _, Sum.inr _) rfl, mul_zero, neg_zero, zero_sub,
       Finset.sum_add_distrib, Finset.sum_neg_distrib, Prod.mk.injEq, Sum.inr.injEq, true_and,
-      Sum.inl.injEq, Finset.sum_const, Finset.card_univ, Fintype.card_fin, ← Nat.cast_smul_eq_nsmul ℂ]
+      Finset.sum_const, Finset.card_univ, Fintype.card_fin, ← Nat.cast_smul_eq_nsmul ℂ]
     split_ifs
     · module
     · simp

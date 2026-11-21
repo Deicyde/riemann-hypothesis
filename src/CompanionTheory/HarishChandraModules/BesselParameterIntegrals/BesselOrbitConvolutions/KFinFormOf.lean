@@ -1,7 +1,9 @@
+import BuildAid.Leniency.Open
 import CompanionTheory.HarishChandraModules.BesselParameterIntegrals.BesselOrbitConvolutions.BesselNonvanishingReduction
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.L2NormScaling
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.BesselNeZeroOfCyclicOrbit
 import CompanionTheory.HarishChandraModules.BesselParameterIntegrals.SmoothCyclicVectors.SmoothCyc
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.SmoothAdd
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.UhMeasurableSet
 
 open MeasureTheory Matrix
 open scoped InnerProductSpace ENNReal

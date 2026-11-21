@@ -1,4 +1,6 @@
-import Formalism.SharpRestriction.GrowthBounds.CoarseMultiplicity.LevOfSymVar
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.CoarseMultiplicity.BFDefs
 
 noncomputable section
 

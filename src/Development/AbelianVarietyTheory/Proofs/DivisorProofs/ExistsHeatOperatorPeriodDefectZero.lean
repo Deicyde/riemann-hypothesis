@@ -1,11 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasDefect
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasRigidChart
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ToroidalCompactificationBis
-import Development.AbelianVarietyTheory.Definitions.QuasicoherentCohomology.BijectiveSmulChartSec
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.LeISupInfPreimage
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTorFieldZero
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsTorusInvariantFieldConstCoeffsStatement
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSymmetricSecondOrderOperatorOfCharacterForStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RaynaudFourierTermChartRestrictionIsWeightStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsRaynaudTorusWeightFunctionSubConstMulStatement
@@ -78,7 +71,7 @@ theorem defect_cancel {R X : Type} [CommRing R] [AddCommGroup X] (w : X → X �
     induction m with
     | zero =>
       have := hπ 0 0
-      simp only [add_zero, map_zero, AddMonoidHom.zero_apply] at this
+      simp only [add_zero, map_zero] at this
       simp only [zero_smul, Nat.cast_zero]
       linear_combination -this
     | succ m ih =>

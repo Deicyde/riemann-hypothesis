@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.RootWeights.GeneratedWeightLemmaOfFormulas
 import Formalism.SharpRestriction.GrowthBounds.RootWeights.DescendingProdEqFactorialChoose
 

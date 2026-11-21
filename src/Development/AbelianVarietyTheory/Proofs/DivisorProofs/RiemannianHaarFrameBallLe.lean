@@ -1,15 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PermMMulTranspose
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TangentHaarRealSUOfMap
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RiemannianHaarLeOneOfDimZeroStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TangentNormalizedHaarLeTwoMulLieHaarStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrameBallSubsetExpChartImageFrameBoxStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RiemannianLieMeasureFrameBoxLeStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RiemannianHaarIndependentOfOrthonormalFrame
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PrincipalCongruenceConjMemArithmeticGroup
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.UpqLocallyCompactGroup
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LocallyCompactSecondCountableBorelCountable
-import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.MuCardLeTwo
 open NumberField IsDedekindDomain MeasureTheory Matrix GlobalTheory.AdLat GlobalTheory.UCls GlobalTheory.SUVol ReciprocityTheory.ChartRestriction.G.FD ReciprocityTheory.ChartRestriction.G.AR.Up GlobalTheory.CovTop.VolUp
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.L2.Theta Formalism.MainNotions.StandardLattice Formalism.IndefR.Lev Formalism.IndefR.Datum GlobalTheory.AdelicScalar
 open scoped ENNReal
@@ -132,7 +126,7 @@ theorem riemHaar_frBall_le : ∀ (E : Type) [Field E] [NumberField E] [IsCMField
   set s : Set (realLie Ψ G) := {X : realLie Ψ G | ‖X‖ < δ ∧ ∀ τ a b,
     ‖((mat x τ)⁻¹ * Matrix.of (X.1 τ) * mat x τ) a b‖ < 2 * ε} with hs
   have hs' : s = Metric.ball 0 δ ∩ Subtype.val ⁻¹' S := by
-    ext X; simp [hs, hS, mem_ball_zero_iff]
+    ext X; simp [hs, hS]
   have hsm : MeasurableSet s := by
     rw [hs']; exact measurableSet_ball.inter (measurable_subtype_coe hSm)
   have hsb : s ⊆ Metric.ball 0 δ := by rw [hs']; exact Set.inter_subset_left

@@ -1,7 +1,6 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.InvariantsGenerators
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.JSmul
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsTopData
+import Formalism.SharpRestriction.LevelLetterCocycles.TableLineDegreeTwo
 
 namespace GlobalTheory.TopWindow
 

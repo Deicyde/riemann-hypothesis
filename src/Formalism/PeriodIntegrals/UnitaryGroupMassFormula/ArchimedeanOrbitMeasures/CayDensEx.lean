@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ArchimedeanOrbitMeasures.SumLPresHolds
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ArchimedeanOrbitMeasures.PsiInv
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ArchimedeanOrbitMeasures.CayDensExHaar
@@ -50,10 +51,10 @@ theorem rA_Jm : rA ε (Formalism.REAL.Jm ε) = HcS.UG.Jpq (pP ε) (pQ ε) := by
   simp only [rA, reindexAlgEquiv_apply, Matrix.reindex_apply, Matrix.submatrix_apply, Formalism.REAL.Jm, HcS.UG.Jpq,
     Matrix.diagonal_apply, (eS ε).symm.injective.eq_iff]
   rcases i with a | a <;> rcases j with b | b
-  · by_cases h : a = b <;> simp [h, eS_symm_inl, Matrix.one_apply]
+  · by_cases h : a = b <;> simp [h, eS_symm_inl]
   · simp
   · simp
-  · by_cases h : a = b <;> simp [h, eS_symm_inr, Matrix.one_apply]
+  · by_cases h : a = b <;> simp [h, eS_symm_inr]
 
 theorem rA_mem_iff (M : Matrix (Fin n) (Fin n) ℂ) :
     (rA ε M)ᴴ * HcS.UG.Jpq (pP ε) (pQ ε) * rA ε M = HcS.UG.Jpq (pP ε) (pQ ε) ↔ Formalism.REAL.inUJ ε M := by

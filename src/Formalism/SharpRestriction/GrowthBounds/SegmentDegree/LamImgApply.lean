@@ -1,4 +1,6 @@
-import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.LamSatRestrict
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.RestLamOfRests
 
 noncomputable section
 

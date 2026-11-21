@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.LocalRepresentationL2
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.ClsBasic
 import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.FormsIrr
 

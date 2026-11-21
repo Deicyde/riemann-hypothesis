@@ -1,7 +1,9 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.LocalSystemQuotients.FlatL
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MapHCompEqSmul
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MkOfMemB
+import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.TwistedRepresentations.Tens
+import Mathlib.Topology.Sheaves.Presheaf
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

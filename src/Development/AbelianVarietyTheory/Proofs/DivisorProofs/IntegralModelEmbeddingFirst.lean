@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecValAt
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IntegralPointPullbackComparison
 
 set_option autoImplicit false
@@ -45,7 +44,7 @@ theorem sp_fst_alg (K : Type) [CommRing K] :
     spMap (TrivSqZeroExt.fstHom K K K).toRingHom ≫ spMap (algebraMap K (DualNumber K)) = 𝟙 _ := by
   rw [← sp_comp]
   have : (TrivSqZeroExt.fstHom K K K).toRingHom.comp (algebraMap K (DualNumber K)) = RingHom.id K := by
-    ext x; simp [TrivSqZeroExt.algebraMap_eq_inl]
+    ext x; simp
   rw [this]
   simp [spMap]
 
@@ -157,7 +156,7 @@ theorem lift_tan_eig : ∀ (E : Type) [Field E] [NumberField E] [IsCMField E] (H
     have key : w ≫ (Y.oF.t.act.act a).left = spMap (epsMul (io (embK c σ a))) ≫ w := by
       apply hc.hom_ext
       · rw [Category.assoc, Category.assoc, Y.m.act a, ← Category.assoc, hE a]
-        simp only [RingHom.comp_apply, hχ a, Category.assoc]
+        simp only [RingHom.comp_apply, hχ a]
       · rw [Category.assoc, Category.assoc, Over.w, hwb, ← Category.assoc, sp_eps_alg]
     show w ≫ ν.φ ≫ _ = spMap (epsMul (io (embK c σ a))) ≫ w ≫ ν.φ
     rw [← ν.act a, ← Category.assoc, key, Category.assoc]

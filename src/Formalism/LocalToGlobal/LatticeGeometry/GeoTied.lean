@@ -1,4 +1,7 @@
-import Formalism.LocalToGlobal.LatticeGeometry.Inhabited
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.LatticeGeometry.LevPrPrime
+import Formalism.LocalToGlobal.LatticeGeometry.ShimuraSheafOfIndefiniteSubspace
 
 noncomputable section
 

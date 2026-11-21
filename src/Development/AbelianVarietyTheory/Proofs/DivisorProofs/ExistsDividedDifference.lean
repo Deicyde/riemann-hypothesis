@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataDIV
-import Formalism.SharpRestriction.Divisibility.LatticeTransfer
 
 open Formalism.BasicNotions Formalism.BasicNotions.DV
 

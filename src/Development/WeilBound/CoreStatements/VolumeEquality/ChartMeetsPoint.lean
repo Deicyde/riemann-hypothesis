@@ -1,4 +1,6 @@
-import Development.WeilBound.CoreStatements.VolumeEquality.ChartMeetsForm
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LocalRingPointsExistsUnique
 
 noncomputable section
 

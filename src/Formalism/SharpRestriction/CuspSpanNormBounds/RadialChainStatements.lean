@@ -1,6 +1,5 @@
-import Formalism.SharpRestriction.CuspSpanNormBounds.DiagonalEntryIdentity
-import Formalism.SharpRestriction.CuspSpanNormBounds.LocalDataRealPlace
-import Formalism.SharpRestriction.CuspSpanNormBounds.IsGramNorm
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.PSDKOnOfPSDK
 import Formalism.SharpRestriction.CuspSpanNormBounds.FamilyBlockLiftEstimate
 import Formalism.SharpRestriction.ParamsHeightRankConstant

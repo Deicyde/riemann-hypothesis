@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.NormSqColGrLineOfOrthogonal
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.EqOfIsometricTrivShift
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagOrbitMapSurjectiveStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPermRowsLeadingMinorsNeZeroOfDetNeZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlockLuDecompositionExistsStatement

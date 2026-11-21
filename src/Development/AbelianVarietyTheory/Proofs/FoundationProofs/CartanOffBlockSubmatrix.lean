@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.TorsionBlocks.SingularValueFrame
 import Development.AbelianVarietyTheory.BlockTheory.TorsionBlocks.CartanCoshPower
 import Formalism.LocalRingCardinality.SpanPowerMembership.SignSplitEquivInl
@@ -92,7 +92,7 @@ theorem cartan_reindex_diag : ∀ (n : ℕ) (ε : Fin n → Bool) (u : Formalism
     · apply reindex_unitary
       rw [Matrix.mem_unitaryGroup_iff] at hk₁ hk₂ ⊢
       rw [Matrix.star_eq_conjTranspose, Matrix.fromBlocks_conjTranspose, Matrix.fromBlocks_multiply]
-      simp only [← Matrix.star_eq_conjTranspose, hk₁, hk₂, star_zero, mul_zero, zero_mul, add_zero, zero_add,
+      simp only [← Matrix.star_eq_conjTranspose, hk₁, hk₂, add_zero, zero_add,
         Matrix.conjTranspose_zero, Matrix.mul_zero, Matrix.zero_mul, Matrix.fromBlocks_one]
     · intro i j hij
       rw [Matrix.reindex_apply, Matrix.submatrix_apply]
@@ -103,7 +103,7 @@ theorem cartan_reindex_diag : ∀ (n : ℕ) (ε : Fin n → Bool) (u : Formalism
         simp_all
     · intro i j hij
       have : i ≠ j := fun h => hij (h ▸ rfl)
-      simp [Matrix.one_apply, this]
+      simp [this]
     · rw [mul_one, exp_reindex, hu]
       change Matrix.reindexAlgEquiv ℂ ℂ (e0 ε) (Matrix.fromBlocks k₁ 0 0 k₂ * NormedSpace.exp P) = _
       rw [map_mul]

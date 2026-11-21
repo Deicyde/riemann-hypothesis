@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.ImportsFurther
 import GroundTheory.HeightsAndTheta.Heights.Intersections.PChartRankAdjoin
 import GroundTheory.ArithmeticGeometry.ToricVarieties.Dimension

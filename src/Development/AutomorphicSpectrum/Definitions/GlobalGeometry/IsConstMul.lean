@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.AdelicLattices.FactPrimes
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsHodgeGram
+import Mathlib.Data.Matrix.ColumnRowPartitioned
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsHolPeriods
 
 noncomputable section
 

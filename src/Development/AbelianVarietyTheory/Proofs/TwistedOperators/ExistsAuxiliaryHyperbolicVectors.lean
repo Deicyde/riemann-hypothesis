@@ -1,6 +1,4 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.LinksDefs
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.ChainMatrices
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CongrOfSignatureOfAdelicNorm
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.OneTmulSmulEqAddOfAlgebraMapEqAdd
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HasSignatureFromBlocks
@@ -57,7 +55,7 @@ theorem gram_comb {E : Type} [Field E] [NumberField E] [StarRing E] (Y : HSpace 
     (P : Matrix (Fin c) (Fin c) E) (k l : Fin c) :
     Y.hT (∑ i, P i k • b i) (∑ i, P i l • b i) = (Pᴴ * (Matrix.of fun i l => Y.hT (b i) (b l)) * P) k l := by
   simp only [Matrix.of_apply, Matrix.mul_apply, Matrix.conjTranspose_apply, map_sum, map_smul,
-    LinearMap.map_smulₛₗ₂, LinearMap.sum_apply, LinearMap.smul_apply, smul_eq_mul,
+    LinearMap.map_smulₛₗ₂, LinearMap.sum_apply, smul_eq_mul,
     starRingEnd_apply, Finset.sum_mul, Finset.mul_sum]
   refine Finset.sum_congr rfl fun _ _ => Finset.sum_congr rfl fun _ _ => ?_
   ring

@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.GeometryOfNumbers.LatticeCovolumes.CountStB
+import ReciprocityTheory.GeometryOfNumbers.LatticeCovolumes.EllipsoidSt
 
 namespace ReciprocityTheory.GeometryOfNumbersTheory
 
@@ -51,7 +54,7 @@ private lemma qR_map_re_eq_qC_ofReal {r : ℕ} (G : Matrix (Fin r) (Fin r) ℂ) 
   refine Finset.sum_congr rfl fun i _ => ?_
   rw [Complex.re_sum]
   refine Finset.sum_congr rfl fun j _ => ?_
-  simp [Complex.re_ofReal_mul, Complex.re_mul_ofReal, Matrix.map_apply] <;> ring
+  simp [Matrix.map_apply] <;> ring
 
 theorem gramR_posDef (h : HermFam K V) {r : ℕ} {v : Fin r → V} (hli : LinearIndependent K v)
     (w : {w : InfinitePlace K // w.IsReal}) : (gramR h v w).PosDef := by
@@ -59,7 +62,7 @@ theorem gramR_posDef (h : HermFam K V) {r : ℕ} {v : Fin r → V} (hli : Linear
   refine ⟨Matrix.IsHermitian.ext fun i j => ?_, fun y hy => ?_⟩
   · simp only [gramR, Matrix.map_apply, star_trivial]
     rw [← hG.1.apply i j]
-    simp [Complex.star_def]
+    simp
   · have hz : Finsupp.mapRange (fun a : ℝ => (a : ℂ)) Complex.ofReal_zero y ≠ 0 := by
       intro h0
       apply hy

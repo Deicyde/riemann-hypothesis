@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Intersections.NotIsHorizontalOfDimOne
 import GroundTheory.HeightsAndTheta.Heights.Intersections.PConsequences
 set_option maxSynthPendingDepth 1

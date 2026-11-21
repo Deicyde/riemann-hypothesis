@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.BelowFiniteNonempty
-import Development.AbelianVarietyTheory.PublishedTheorems.GlobalTheta.WeylDualWeylLatticesAgreeOfLowestAlcove
-import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.SubstitutionAdjoint
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.LocPDelAtrEqLocPNabAtr
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ExistsMulOfApprox
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.CharacterValueAtT
@@ -10,7 +9,6 @@ import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ValuationLeOneOf
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.SubHalfRankInt
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.PlaceOverPInducedByAlgebraicPadicEmbedding
 import Formalism.LocalToGlobal.Columns.BtExistsSmulLeOfFg
-import Formalism.LocalToGlobal.Columns.AtTLemmas
 
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.HermitianLatticesTheory Formalism.MainNotions Formalism.L2.DIV Formalism.L2.Col Formalism.L2.Ker GlobalTheory.KerT
 open scoped Matrix
@@ -263,7 +261,7 @@ theorem exists_basis_ker {d : Deco E n ST SG} (hd : d.Ok) (P : ST) (hs : d.at P.
     intro j
     funext a
     by_cases ha : a = i <;> by_cases hj : j = i <;>
-      simp [B₀, t, ha, hj, Matrix.updateRow_apply, Matrix.one_apply, Pi.single_apply, Function.update_apply, eq_comm]
+      simp [B₀, t, ha, hj, Matrix.updateRow_apply, Matrix.one_apply, Pi.single_apply, eq_comm]
   refine ⟨Matrix.GeneralLinearGroup.mkOfDetNeZero _ (hdet' ▸ hT0), hdet', le_antisymm ?_ ?_⟩
   · intro x hx
     obtain ⟨hx1, hx2⟩ := (hd.mem_locP_L P x).1 hx

@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.FrameEstimates.TowerRallisLemma
 import Development.WeilBound.ThetaLifts.FrameEstimates.BlockForm
 import Development.WeilBound.ThetaLifts.CartanFactorisation.IntegrableOnRight

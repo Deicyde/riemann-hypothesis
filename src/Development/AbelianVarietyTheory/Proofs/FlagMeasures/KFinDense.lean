@@ -1,6 +1,4 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
-import Formalism.PeriodIntegrals.IsLowUnitH
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.DsigWSubAvg
 open Formalism.MainNotions.S
 

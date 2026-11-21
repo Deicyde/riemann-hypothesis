@@ -1,11 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.KatoUse
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.RtDual
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.BkAbove
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.PtCont
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.PtFinFinite
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.SelmerTransport.Places
-import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.SelmerTransport.DvrFacts
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.LocalRingsCompletion.dvrFinite
+import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.RhoKApply
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.MainNotions.N Formalism.BasicNotions Formalism.BasicNotions.Loc GlobalTheory.GalOfCusp Matrix IsLocalRing
 open UpperTheory.V UpperTheory.V.Base UpperTheory.V.HV UpperTheory.V.Alg UpperTheory.V.U3
@@ -65,12 +65,12 @@ private def fstM (F : R →ₐ[O] DualNumber κ) : Matrix (Fin 3) (Fin 3) R →+
 private theorem sndM_mul (F : R →ₐ[O] DualNumber κ) (X Y : Matrix (Fin 3) (Fin 3) R) :
     sndM F (X * Y) = fstM F X * sndM F Y + sndM F X * fstM F Y := by
   ext a b
-  simp [sndM, fstM, dualFst, Matrix.mul_apply, Fin.sum_univ_three, DualNumber.snd_mul]
+  simp [sndM, fstM, dualFst, Matrix.mul_apply, Fin.sum_univ_three]
   ring
 
 private theorem sndM_one (F : R →ₐ[O] DualNumber κ) : sndM F 1 = 0 := by
   ext a b
-  by_cases h : a = b <;> simp [sndM, Matrix.one_apply, h]
+  by_cases h : a = b <;> simp [sndM, h]
 
 private theorem sndM_J (F : R →ₐ[O] DualNumber κ) : sndM F (Jmat R 3) = 0 := by
   ext a b

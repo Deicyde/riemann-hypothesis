@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PlaceDivisors.ChartPointCongruence.InChartSt
+import Mathlib.Algebra.Order.Star.Real
 
 set_option autoImplicit false
 

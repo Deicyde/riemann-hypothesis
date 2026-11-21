@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.FrobeniusFibreCurves.StatementA
-import Formalism.LocalToGlobal.TorsionIntegrality.FrobeniusFibreCurves.StatementB
-import Formalism.LocalToGlobal.TorsionIntegrality.FrobeniusFibreCurves.LogarithmicSubstitution.OneAddMulDerivLogSubst
 import Formalism.LocalToGlobal.TorsionIntegrality.FrobeniusFibreCurves.LogarithmicSubstitution.ConstantCoeffSeriesAtVariable
 
 noncomputable section
@@ -50,12 +49,12 @@ theorem subst_parallelogram_defect (f : PowerSeries K) {U V : MvPowerSeries ι K
       PowerSeries.subst (U + V) f + PowerSeries.subst (U - V) f - 2 * PowerSeries.subst U f -
         2 * PowerSeries.subst V f := by
   have hb : MvPowerSeries.HasSubst ![U, V] :=
-    ⟨fun s => by fin_cases s <;> simp [hU, hV, IsNilpotent.zero], fun _ => Set.toFinite _⟩
+    ⟨fun s => by fin_cases s <;> simp [hU, hV], fun _ => Set.toFinite _⟩
   have key : ∀ a : MvPowerSeries (Fin 2) K, MvPowerSeries.constantCoeff a = 0 →
       MvPowerSeries.subst ![U, V] (PowerSeries.subst a f) =
         PowerSeries.subst (MvPowerSeries.subst ![U, V] a) f := fun a ha =>
     MvPowerSeries.subst_comp_subst_apply
-      (⟨fun _ => by simp [ha, IsNilpotent.zero], fun _ => Set.toFinite _⟩ :
+      (⟨fun _ => by simp [ha], fun _ => Set.toFinite _⟩ :
         MvPowerSeries.HasSubst (fun _ : Unit => a)) hb f
   have hX : ∀ s : Fin 2, MvPowerSeries.subst ![U, V] (MvPowerSeries.X s : MvPowerSeries (Fin 2) K) = ![U, V] s :=
     fun s => MvPowerSeries.subst_X hb s
@@ -102,7 +101,7 @@ theorem ParEFormula_of (hA : AddSigma1Log) : ParEFormula := by
       rw [hat]
       exact cc_subst_lemma (MvPowerSeries.constantCoeff_X 1) hI.1
     have hc : MvPowerSeries.HasSubst ![(MvPowerSeries.X (0 : Fin 2) : MvPowerSeries (Fin 2) K), at1 (1 : Fin 2) i] :=
-      ⟨fun s => by fin_cases s <;> simp [hci, IsNilpotent.zero], fun _ => Set.toFinite _⟩
+      ⟨fun s => by fin_cases s <;> simp [hci], fun _ => Set.toFinite _⟩
     have hneg : at1 (1 : Fin 2) (-l) = -at1 (1 : Fin 2) l := by
       rw [hat, hat, ← PowerSeries.coe_substAlgHom
         (PowerSeries.HasSubst.of_constantCoeff_zero (MvPowerSeries.constantCoeff_X (1 : Fin 2))), map_neg]
@@ -111,7 +110,7 @@ theorem ParEFormula_of (hA : AddSigma1Log) : ParEFormula := by
       MvPowerSeries.coe_substAlgHom hc, hat 0 l, hat 1 l,
       mvSubst_powerSeries_subst_eq_subst_mvSubst hc (MvPowerSeries.constantCoeff_X 0) l, mvSubst_powerSeries_subst_eq_subst_mvSubst hc (MvPowerSeries.constantCoeff_X 1) l,
       MvPowerSeries.subst_X hc, MvPowerSeries.subst_X hc]
-    simp only [Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons]
+    simp only [Matrix.cons_val_zero, Matrix.cons_val_one]
     rw [← subst_inVar (1 : Fin 2) l hI.1, hI.2.2, hneg, hat 1 l]
     ring
   have hP : PowerSeries.subst (at1 (0 : Fin 2) l + at1 (1 : Fin 2) l) (sigmaOneSeries e1 kap w) +
@@ -122,7 +121,7 @@ theorem ParEFormula_of (hA : AddSigma1Log) : ParEFormula := by
   have hFL : MvPowerSeries.subst ![at1 (0 : Fin 2) l, at1 (1 : Fin 2) l] (fLog (1 - MvPowerSeries.C kap * at1 (0 : Fin 2) w * at1 (1 : Fin 2) w)) =
       fLog (1 - MvPowerSeries.C kap * at1 (0 : Fin 2) (PowerSeries.subst l w) * at1 (1 : Fin 2) (PowerSeries.subst l w)) := by
     have hab : MvPowerSeries.HasSubst ![at1 (0 : Fin 2) l, at1 (1 : Fin 2) l] :=
-      ⟨fun s => by fin_cases s <;> simp [hx0, IsNilpotent.zero], fun _ => Set.toFinite _⟩
+      ⟨fun s => by fin_cases s <;> simp [hx0], fun _ => Set.toFinite _⟩
     have hw0 : ∀ x : Fin 2, MvPowerSeries.constantCoeff (at1 x w) = 0 := fun x => by
       rw [hat]
       exact cc_subst_lemma (MvPowerSeries.constantCoeff_X x) hW.1

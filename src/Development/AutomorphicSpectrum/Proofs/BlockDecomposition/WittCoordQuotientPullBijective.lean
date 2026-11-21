@@ -1,9 +1,10 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.LocalSystemQuotients.InUQT
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.ChartGrConst
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WittChartDescendLevelStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MapHBijOfRes
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FlatOfEtalePoly
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ChartIsGood
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

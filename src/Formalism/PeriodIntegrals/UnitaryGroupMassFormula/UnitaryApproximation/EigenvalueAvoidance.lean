@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnitaryApproximation.WeakApproxF
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
 
 noncomputable section
 
@@ -24,7 +26,7 @@ theorem ea_finite_bad {E R : Type*} [Field E] [CommRing R] (ι : E →+* R)
     rw [h]
     congr 1
     ext i j
-    by_cases hij : i = j <;> simp [Matrix.one_apply, hij] <;> ring
+    by_cases hij : i = j <;> simp [hij] <;> ring
   have hP0 : P ≠ 0 := by
     intro h
     have h0 := hev 0
@@ -43,7 +45,7 @@ theorem ea_finite_bad {E R : Type*} [Field E] [CommRing R] (ι : E →+* R)
   rw [RingHom.map_det] at h1
   convert h1 using 2
   ext i j
-  by_cases hij : i = j <;> simp [f, gb, Matrix.one_apply, hij]
+  by_cases hij : i = j <;> simp [f, gb, hij]
 
 theorem ea_artinian {F E : Type} [Field F] [NumberField F] [Field E] [NumberField E] [Algebra F E]
     (v : HeightOneSpectrum (𝓞 F)) : IsArtinianRing (E ⊗[F] v.adicCompletion F) := by

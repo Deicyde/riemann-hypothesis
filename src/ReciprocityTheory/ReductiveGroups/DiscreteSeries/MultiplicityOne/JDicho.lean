@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.TransposeUnitary
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.JDichoA
+import Formalism.SharpRestriction.CuspSpanNormBounds.BridgeCSchur
 
 noncomputable section
 

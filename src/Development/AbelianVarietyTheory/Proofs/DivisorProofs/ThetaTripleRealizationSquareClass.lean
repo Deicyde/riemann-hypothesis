@@ -1,17 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsLocIsoRefl
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlipAtEq
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsNatDatumSquareFlip
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OrientedHermitianFormQuadSumEqTrace
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsNegConjMemberHermitianLatticeSpaceData
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsHomSuppSplit
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicHeisenbergActsByLocalSchrodinger
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchrodingerPreservesSchwartzBruhat
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StandardAdelicCharacterNontrivialAtPlaces
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsComplementaryAdelicSchwartzRestFunction
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TraceSymplecticSelfZeroSplitSupported
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianSelfDualLatticeSpaceFormHermitianNondeg
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsIsSplitChartOne
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqSmulOfCommuteHeisenbergLinearModelSchwartzBruhStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepresentationLocalityTensorModelVWStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsPartialFourierColumnBlockSchwartzBruhatStatement
@@ -20,6 +12,7 @@ import Development.AbelianVarietyTheory.Proofs.TwistedOperators.TensorSymplectic
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HeisenbergOperatorIsotropicTranslationCharSplitStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsPlaceIsoReadingComponentsCharactersStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsMixedLagrangianChartIntegralRowChangeStatement
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SquareStanding
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.DIV
 open IsDedekindDomain NumberField MeasureTheory Matrix
@@ -427,8 +420,8 @@ theorem smul_blk_sub_one {R S : Type} [Ring S] [SMulZeroClass R S] {p q d : ℕ}
   have c2 := fun r s => congrFun (congrFun hB r) s
   rcases r with r | r <;> rcases s with s | s
   · simpa [GlobalTheory.IndefiniteRowSideFullHecke.UnitaryConjugation.blk, Matrix.one_apply] using c1 r s
-  · simp [GlobalTheory.IndefiniteRowSideFullHecke.UnitaryConjugation.blk, Matrix.one_apply]
-  · simp [GlobalTheory.IndefiniteRowSideFullHecke.UnitaryConjugation.blk, Matrix.one_apply]
+  · simp [GlobalTheory.IndefiniteRowSideFullHecke.UnitaryConjugation.blk]
+  · simp [GlobalTheory.IndefiniteRowSideFullHecke.UnitaryConjugation.blk]
   · simpa [GlobalTheory.IndefiniteRowSideFullHecke.UnitaryConjugation.blk, Matrix.one_apply] using c2 r s
 
 attribute [local instance] GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.measFv GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.borelFv

@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.SplitLem
-import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.PlaceFinal
+import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.AffineProjectionSplitting
+import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.InvForm
+import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.LatLevel
 
 set_option synthInstance.maxHeartbeats 100000
 set_option maxHeartbeats 1600000

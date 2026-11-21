@@ -1,4 +1,12 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.LatticeSlopes.Statement
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
+import Mathlib.Analysis.InnerProductSpace.NormDet
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open Module
 
@@ -84,7 +92,7 @@ theorem det_gram_eq_normDet_sq {E : Type*} [NormedAddCommGroup E] [InnerProductS
   have hv : v = fun i => linearCombinationMap v (EuclideanSpace.basisFun ι ℝ i) := by
     funext i
     rw [linearCombinationMap_apply]
-    simp [EuclideanSpace.basisFun_apply, EuclideanSpace.single_apply, ite_smul]
+    simp [EuclideanSpace.basisFun_apply, ite_smul]
   have h1 : (Matrix.gram ℝ v).det = LinearMap.det (LinearMap.adjoint (linearCombinationMap v).rangeRestrict ∘ₗ
       (linearCombinationMap v).rangeRestrict) := by
     conv_lhs => rw [hv]

@@ -1,12 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RedMFrMapAdjZero
-import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.CompletedTensorLatticeStrongApproxOpenCompact
-import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.CompletedTensorLatticeLatticeVacuumTransport
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HformZeroRight
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LevelCharacterEmbeddingCompat
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LevelHyperspecialTrivialCharacterSplitsOffPlaces
-import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.TensorLatticeSelfDualSemicharacterIndex
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.MemLatOIffExistsActO
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MemHatAStdLIff
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MemHatLConjIIffHform
 
@@ -54,7 +48,7 @@ theorem adj_int_iff : ∀ (D : D7) (S T : HSp D), S.gram = 1 → ∀ (ΛT : Lt D
     funext k j
     obtain ⟨s, hsI, hs⟩ := h k j
     have hse : (⟨adjA S T βS βT 1 x k j, hint k j⟩ : Formalism.L2.Herm.intAf D.host.F D.host.E) = s := Subtype.ext hs.symm
-    simp only [Matrix.zero_apply, Pi.zero_apply, dif_pos (hint k j), hse]
+    simp only [Matrix.zero_apply, dif_pos (hint k j), hse]
     exact GlobalTheory.LiftLevel.resS_eq_zero hPP hsI
 
 end GlobalTheory.DualRed

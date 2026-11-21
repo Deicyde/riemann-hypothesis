@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.TwChrOne
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.NumberTheory.NumberField.Ideal.Basic
+import Mathlib.Tactic.Polynomial.Basic
 
 open NumberField IsDedekindDomain
 

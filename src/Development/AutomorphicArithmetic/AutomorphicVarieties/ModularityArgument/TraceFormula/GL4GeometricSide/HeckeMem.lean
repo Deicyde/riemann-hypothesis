@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.TraceFormula.GL4GeometricSide.InnerEq
 
 noncomputable section
@@ -113,7 +115,7 @@ theorem heckeMem : HeckeMem := by
       have e' : ψ.1.1 (x * finGL E n g * finGL E n k) = ψ.1.1 (x * finGL E n g) := e
       simpa [mul_assoc] using e')
     rw [heckeOp, hinv]
-    simp [c, Submodule.coe_sum, Finset.sum_apply]
+    simp [c, Finset.sum_apply]
     rfl
   refine ⟨s, c, ⟨_, hmem⟩, rfl, hop, fun k hk => ?_⟩
   refine Subtype.ext (funext fun x => ?_)

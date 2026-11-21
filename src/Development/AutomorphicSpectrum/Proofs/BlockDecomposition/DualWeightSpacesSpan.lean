@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsCliff
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CPoly
-import GroundTheory.GlobalFields.TateThesis.ArchCharsUnitary
+import GroundTheory.GlobalFields.TateThesis.ArchCharsUnits
+import Mathlib.Analysis.InnerProductSpace.JointEigenspace
 
 noncomputable section
 

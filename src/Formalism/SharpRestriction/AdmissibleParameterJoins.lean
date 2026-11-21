@@ -1,4 +1,5 @@
-import Formalism.SharpRestriction.GlobalTheoremInputs
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.DataParams₂
 
 namespace Formalism.MainNotions
 

@@ -1,10 +1,14 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.ArcCoordinatesOfMembership
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.ExistsPhiBridge
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.AcoordSumVecMul
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.LemGBInImgIff
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.RingDataOfCaseAOfP9
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.ArcGamLiftCore
-import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.ArcLengthFourCostBound
+import Formalism.SharpRestriction.LevelLetterCocycles.AdmBoundsBOfAdm
+import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.Pi0MemADelta
+import Mathlib.Order.Interval.Finset.Box
 
 noncomputable section
 
@@ -68,7 +72,7 @@ theorem dvO_single (T : LocLat G Qp LL O) (e : ℕ) {d : ℕ} (b : Fin d → W.D
   funext m
   by_cases hm : m = k
   · subst hm; simp
-  · simp [Pi.single_apply, hm]
+  · simp [hm]
 
 theorem filV_mono (T : LocLat G Qp LL O) {u u' : ℤ} (h : u ≤ u') :
     FilV PD (LL := LL) (V := T.V) u' ≤ FilV PD (LL := LL) (V := T.V) u := by
@@ -275,7 +279,7 @@ theorem exists_horizontal_lift_of_len_three_of_up [NeZero n] [Fintype (K →ₐ[
       simp only [Fin.sum_univ_one]
       by_cases hk : k = k₀
       · subst hk; simp [hf₂, lE]
-      · simp [hf₂, hk, lE, Pi.single_apply]
+      · simp [hf₂, hk, lE]
   obtain ⟨x₂, hx₂N, hx₂R⟩ := D5₂ f₂ hf₂NL
 
   have hK : Formalism.MainNotions.LiftingTheory.KillsΔ W F (c - 2) (W.π₀ ^ AI) := (hWR hcase T₁ T₂ F Mi hi hsur hJL (c - 2)).2.1
@@ -371,7 +375,7 @@ theorem exists_horizontal_lift_of_len_three_of_up [NeZero n] [Fintype (K →ₐ[
     simp only [Br.cst_C]
     by_cases hk : k = k₀
     · rw [if_pos hk] at h2 ⊢
-      simp only [map_mul, map_sub, map_sum, map_pow, map_natCast, map_one, map_neg, lA, lE, mul_one] at h3 h2 ⊢
+      simp only [map_mul, map_sub, map_sum, map_pow, map_natCast, lA, lE, mul_one] at h3 h2 ⊢
       linear_combination (algebraMap (LetA O n) W.EE (qA W)) ^ G₀ * h3 - ((PD.p : ℕ) : W.EE) ^ Kc * hsum +
         (algebraMap (LetA O n) W.EE E * ((PD.p : ℕ) : W.EE) ^ Kc * ((PD.p : ℕ) : W.EE) ^ σ *
           (algebraMap (LetA O n) W.EE W.π₀) ^ AI * ((PD.p : ℕ) : W.EE) ^ σ) * h2 +
@@ -380,7 +384,7 @@ theorem exists_horizontal_lift_of_len_three_of_up [NeZero n] [Fintype (K →ₐ[
         (algebraMap (LetA O n) W.EE E * algebraMap (LetA O n) W.EE (Br.cst (G₂ k)) *
           (algebraMap (LetA O n) W.EE (qA W)) ^ (2 * G₀)) * hq
     · rw [if_neg hk] at h2 ⊢
-      simp only [map_mul, map_sub, map_sum, map_pow, map_natCast, map_one, map_neg, map_zero, lA, lE, mul_one,
+      simp only [map_mul, map_sub, map_sum, map_pow, map_natCast, lA, lE,
         sub_zero] at h3 h2 ⊢
       linear_combination (algebraMap (LetA O n) W.EE (qA W)) ^ G₀ * h3 - ((PD.p : ℕ) : W.EE) ^ Kc * hsum +
         (algebraMap (LetA O n) W.EE E * ((PD.p : ℕ) : W.EE) ^ Kc * ((PD.p : ℕ) : W.EE) ^ σ *

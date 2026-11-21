@@ -1,7 +1,9 @@
-import Mathlib
-import GroundTheory.GlobalFields.ComplexMultiplication.ClassGroupAction
-import GroundTheory.GlobalFields.ComplexMultiplication.BaseChangeField
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ArithmeticGeometry.AbelianVarieties.Endomorphisms
+import GroundTheory.GlobalFields.ComplexMultiplication.BaseChangeDescent
+import GroundTheory.GlobalFields.ComplexMultiplication.ClassGroupActionIso
+import GroundTheory.GlobalFields.ComplexMultiplication.DifferentialConstantField
 
 open WeierstrassCurve GroundTheory.Arith.Abelian
 open WeierstrassCurve.Affine (Point)

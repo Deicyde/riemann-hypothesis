@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterRes
-import GroundTheory.HeightsAndTheta.Heights.Intersections.SameOrbitOneSpecZ
-import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.BirationalYPt
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.CurveCountObjects
 set_option maxSynthPendingDepth 1
 

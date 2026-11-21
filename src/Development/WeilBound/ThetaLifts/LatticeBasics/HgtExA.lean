@@ -1,9 +1,9 @@
-import Mathlib
-import Development.WeilBound.ThetaLifts.LatticeBasics.PairsStable
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LatticeBasics.HgtFin
 import Development.WeilBound.ThetaLifts.LatticeBasics.HgtArch
-import Development.WeilBound.CoreStatements.LocalThetaKernels.IwasAd
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsSiegelHProjArchEq
+import Development.WeilBound.ThetaLifts.LatticeBasics.Hypotheses2
 
 noncomputable section
 

@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.MoveStep
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ExistsMulEqOfUnif
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.PTermOfStd
@@ -6,6 +6,7 @@ import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.SubAddLeSprea
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.RatTermOfRatStep
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.RatStepOfChThOk
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.KmapOfOkOfVecP
+import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.JetsAllOfColIn
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.L2.DIV Formalism.L2.Ker GlobalTheory.Mem GlobalTheory.Mem.Col2 GlobalTheory.LvT GlobalTheory.LvT.Built GlobalTheory.LvT.Built.TrueLaws
 
 noncomputable section

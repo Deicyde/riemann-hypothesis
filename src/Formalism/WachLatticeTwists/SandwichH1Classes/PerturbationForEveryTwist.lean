@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.SandwichH1Classes.Statement
+import Formalism.WachLatticeTwists.HodgeTateChains.Statement
 
 noncomputable section
 

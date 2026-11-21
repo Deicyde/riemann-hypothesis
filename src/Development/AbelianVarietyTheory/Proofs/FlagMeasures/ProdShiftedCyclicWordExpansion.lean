@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ExistsIsHaarMeasureSUJ
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.PosPartUnitaryMul
 open MeasureTheory Matrix Finset Formalism.MainNotions.S Formalism.REAL Formalism.QuantumDeterminants GlobalTheory.Dec GlobalTheory.DSId GlobalTheory.DSSU
 open scoped InnerProductSpace
 
@@ -43,7 +44,7 @@ theorem sum_cycWord_eq_trace (M : Matrix (Fin n) (Fin n) R) (k : ℕ) :
   · simp
   · have e : finRotate (k + 1) l.castSucc = l.succ := by
       ext
-      simp [Fin.val_add_one_of_lt (Fin.castSucc_lt_last l)]
+      simp
     rw [e, Fin.cons_succ, Fin.snoc_castSucc]
 
 theorem trace_add_algebraMap_pow [Algebra ℂ R] (M : Matrix (Fin n) (Fin n) R) (c : ℂ) (k : ℕ) :

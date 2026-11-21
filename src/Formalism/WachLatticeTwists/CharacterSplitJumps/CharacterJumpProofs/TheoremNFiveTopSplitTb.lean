@@ -1,8 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.CharacterSplitJumps.WachTwistSplitTheoremFromTorsionBound
-import Formalism.WachLatticeTwists.CharacterSplitJumps.CharacterJumpProofs.HZeroInvariantsKilled
-import Formalism.WachLatticeTwists.TorsionKernelSplitting.TorsionKernelProofs.SplitText
-import Formalism.WachLatticeTwists.TorsionKernelSplitting.TorsionKernelProofs.TheoremNFiveTopSplitOfSplit
-import Formalism.WachLatticeTwists.TheoremNFiveSplit
+import Formalism.WachLatticeTwists.CharacterSplitJumps.CharacterJumpProofs.HZeroSplitAllPlaces
 
 open Finset Classical
 

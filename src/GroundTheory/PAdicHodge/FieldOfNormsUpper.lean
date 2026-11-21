@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.LocalFields.ConductorTransport
-import GroundTheory.LocalFields.SeparableClosure
+import Mathlib.Algebra.Lie.OfAssociative
+import Mathlib.FieldTheory.Galois.Profinite
+import Mathlib.Topology.Connected.Separation
 set_option maxSynthPendingDepth 1
 
 noncomputable section

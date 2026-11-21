@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.TruncatedSeriesCounting.LemmaDetPoly
 
 open Formalism.NG

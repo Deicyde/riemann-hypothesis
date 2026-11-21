@@ -1,6 +1,5 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.FramedDConst
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HoweDualityReal
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolEval
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.DataTheta
 open scoped TensorProduct Matrix Classical GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels
 open NumberField MeasureTheory Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.BasicNotions.TH GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.FockAlg GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.RealLift
 open GlobalTheory.HoweD
@@ -28,7 +27,7 @@ theorem upq_span (p q : ℕ) (Z : Mat p q) : ∃ X ∈ upq p q, ∃ Y ∈ upq p 
       Matrix.conjTranspose_conjTranspose, hJh, Matrix.smul_mul, Matrix.mul_smul, Matrix.sub_mul, Matrix.mul_sub,
       Matrix.mul_assoc, hJJ, Matrix.mul_one]
     rw [← Matrix.mul_assoc J J, hJJ, Matrix.one_mul]
-    have : star (1 / 2 : ℂ) = 1 / 2 := by simp [star_div₀]
+    have : star (1 / 2 : ℂ) = 1 / 2 := by simp
     rw [this]
     module
   · show _ = _

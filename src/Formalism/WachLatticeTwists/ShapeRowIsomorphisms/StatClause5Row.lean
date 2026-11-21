@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.ShapeRowIsomorphisms.StatBKInIso
-import Formalism.WachLatticeTwists.CoprimeLiftBounds.StatBridgeChiOne
 
 open Formalism.NG
 open ReciprocityTheory.Gal Formalism.RepresentationBoundsCohomology.LOC Formalism.RepresentationBoundsCohomology.JT Formalism.RepresentationBoundsCohomology.BR

@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.GKModules.SmoothVectors
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RepresentationTheory.Irreducible
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 namespace GroundTheory.Automorphic
 
@@ -71,7 +75,7 @@ variable {E : Type*} [NormedAddCommGroup E] [NormedSpace ℂ E]
 noncomputable def toRepresentation (π : BanachRep K' E) : Representation ℂ K' E where
   toFun k := (π k : E →ₗ[ℂ] E)
   map_one' := by ext v; simp
-  map_mul' k k' := by ext v; simp [map_mul_apply]
+  map_mul' k k' := by ext v; simp
 
 @[simp] theorem toRepresentation_apply (π : BanachRep K' E) (k : K') (v : E) :
     π.toRepresentation k v = π k v := rfl
@@ -236,7 +240,7 @@ noncomputable def kRepGK : Representation ℂ K (h.gkVectors π K) where
       map_add' := fun v w => by ext; simp
       map_smul' := fun c v => by ext; simp }
   map_one' := by ext v; simp
-  map_mul' k k' := by ext v; simp [BanachRep.map_mul_apply]
+  map_mul' k k' := by ext v; simp
 
 @[simp] theorem coe_kRepGK (k : K) (v : h.gkVectors π K) :
     ((h.kRepGK π K k v : h.gkVectors π K) : E) = π k v := rfl

@@ -1,6 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.NormalizedHeckeFactors.TwDefs
-import Formalism.LocalRingCardinality.DataNChoice
-import Formalism.LocalRingCardinality.DataIdx
 import Formalism.LocalToGlobal.GaloisLevelStructure.TiedGal
 import Formalism.LocalToGlobal.UnitaryNorms.LeastSplitAuxiliaryPrimeThetaChainSpec
 

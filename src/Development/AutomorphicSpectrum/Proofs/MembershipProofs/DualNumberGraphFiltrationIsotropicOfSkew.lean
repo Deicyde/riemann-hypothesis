@@ -1,6 +1,8 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.MembershipCriteria.OrderOKOneInert
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.AddCharConductorAndHaarIntegersExist
+import Development.AutomorphicSpectrum.Definitions.MembershipCriteria.GoodChar
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 open GlobalTheory.CompanionTheory.VacLoc ValuativeRel GlobalTheory.SplitWeil
 

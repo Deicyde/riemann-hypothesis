@@ -1,6 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SysExOfPol
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.HeightDefect.LatticeModelCharts
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsProperToroidalModelStructureMap
+import Formalism.LocalToGlobal.ProjectiveLattices.EmbKCoe
+import Formalism.LocalToGlobal.ProjectiveLattices.OneLtAbsNormReal
 
 open AlgebraicGeometry CategoryTheory Limits NumberField IsLocalRing TopologicalSpace
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj

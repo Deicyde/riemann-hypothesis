@@ -1,5 +1,18 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SecondCountableHermC
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.Analysis.Distribution.SchwartzSpace.Fourier
+import Mathlib.MeasureTheory.Measure.RegularityCompacts
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
+import Mathlib.Topology.UniformSpace.Uniformizable
 
 open MeasureTheory Real Complex SchwartzMap FourierTransform
 open scoped ENNReal NNReal RealInnerProductSpace Topology ContDiff Manifold
@@ -307,7 +320,7 @@ def pairC (n : ℕ) (c : W → ℝ) : (W → hermC n) →ₗ[ℝ] (W → hermC n
       refine Finset.sum_congr rfl fun w _ => ?_
       ring)
     (fun u v v' => by
-      simp [Matrix.mul_add, Matrix.trace_add, mul_add, Finset.sum_add_distrib])
+      simp [Matrix.trace_add, mul_add, Finset.sum_add_distrib])
     (fun r u v => by
       simp [coe_smul_hermC, Matrix.trace_smul, Finset.mul_sum]
       refine Finset.sum_congr rfl fun w _ => ?_

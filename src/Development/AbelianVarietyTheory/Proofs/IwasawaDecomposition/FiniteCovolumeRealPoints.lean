@@ -1,9 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.CdScaleTieIff
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.CuspidalExponentialDecay
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.IsIntegralCc
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.WeightFunctionOnFrames
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsUniqueInfEmb
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsArchAdeleTensorEquivComplexCmType
 
 open Formalism.BasicNotions Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix GlobalTheory.Mem.Vol
@@ -39,7 +36,7 @@ theorem isometry_iff {A : Type} [CommRing A] {M : ℕ} (s : A →+* A) (J g : Ma
     have := h (Pi.single b 1) (Pi.single a 1)
     have e : s ∘ (Pi.single a 1 : Fin M → A) = Pi.single a 1 := by
       funext k
-      by_cases hk : k = a <;> simp [Pi.single_apply, hk]
+      by_cases hk : k = a <;> simp [hk]
     rw [e] at this
     simpa using this
   · intro h u w

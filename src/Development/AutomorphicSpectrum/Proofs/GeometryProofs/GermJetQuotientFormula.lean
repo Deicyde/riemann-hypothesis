@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.TranslDiffEq
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.FBIdJet
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.JetSubstPSEqJetMap
+import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.GermComp1ZeroPointLeft
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj Formalism.MainNotions.ModuliIntegralCharts.H1 GlobalTheory.CompanionTheory.Ar.Crv GlobalTheory.CompanionTheory.Ar.Conj GlobalTheory.CompanionTheory.Ar.Coc
 open scoped CategoryTheory.Obj
@@ -42,7 +43,7 @@ theorem aeval_firstOrder {B A : Type} [CommRing B] [Algebra k B] [CommRing A] [A
           MvPolynomial.pderiv_X]
         by_cases hij : j = i
         · subst hij; simp
-        · simp [Pi.single_apply, hij, Ne.symm hij]
+        · simp [hij]
       simp only [key, mul_ite, mul_zero, Finset.sum_ite_eq, Finset.mem_univ, if_true]
       have hX : θ (P * MvPolynomial.X ((0 : Fin 2), j)) = 0 := by simp [hθ]
       rw [hX, map_zero, zero_add]

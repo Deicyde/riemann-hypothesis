@@ -1,12 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.T2SpaceAdelicGeneralLinearGroupNumberField
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FiniteVolumeAdelicUnitaryQuotient
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsMulRightInvariantOfFundamentalDomain
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.DefClassNum
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IdeleClassFiniteness.BorelGL
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IdeleClassFiniteness.LatticeIdealNonzero
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnipotentApproximation.AddDense
 import ReciprocityTheory.GeneralLinearIntegers.AlgebraMapIntMemOint
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.RingTheory.PiTensorProduct
 
 noncomputable section
 
@@ -100,7 +98,7 @@ theorem unipApprox : PIW.ClassFinD.UnipApprox := by
   let Y : Matrix (Fin n) (Fin n) F := fun i k => y i k
   have hdet : Y.det = 1 := by
     rw [det_of_upperTriangular (fun i k hki => hy0 i k hki)]
-    simp [Y, hy1]
+    simp [hy1]
   let Yg : GL (Fin n) F :=
     ((Matrix.isUnit_iff_isUnit_det Y).mpr (by rw [hdet]; exact isUnit_one)).unit
 

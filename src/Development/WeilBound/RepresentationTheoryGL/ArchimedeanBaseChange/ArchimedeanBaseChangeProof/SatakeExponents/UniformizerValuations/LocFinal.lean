@@ -1,10 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HeckeAlgebraStructureStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FiniteLengthOfProductsStatement
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SubquotientOfEigencharacter
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsolateRepresentationAtCharacterStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SubquotientOfNonNilpotentVariantStatement
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FiniteSubquotientsStatement
 
 namespace PositivityTheory.Rg.BcN.F2.Final
 

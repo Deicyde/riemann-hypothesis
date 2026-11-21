@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.HermitianLattices.StatementLat
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianLattices.DefsCS
 import Formalism.GelfandTransference.EnergyIdentity
 

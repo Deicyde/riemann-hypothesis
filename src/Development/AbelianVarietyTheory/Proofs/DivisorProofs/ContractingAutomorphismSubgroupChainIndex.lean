@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.SatakeDualWeyl.KpqSubgroupCompact
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AntiJMulApply
 
 open Formalism.UG GlobalTheory.SatakeWeyl

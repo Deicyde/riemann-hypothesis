@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.LatticeGeometry.PluckerHadamard.BlockVandermondeForms
 import Formalism.DegreeFormula.PointDegree.FlagDeg
 
@@ -67,7 +69,7 @@ theorem Qp_eq (ℓ : ι → R) (s : Finset ι) : ∀ k ≤ s.card,
       rw [if_pos rfl, Finset.sum_eq_single 0]
       · rw [ih _ (by omega), if_pos (by omega), Finset.prod_insert ha, Nat.factorial_succ]
         push_cast
-        simp only [Nat.choose_one_right, zero_add, pow_one]
+        simp only [Nat.choose_one_right, pow_one]
         push_cast
         ring
       · intro m hm hm0

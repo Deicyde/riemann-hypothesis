@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.TupleActions.InstMulActionTup
 
 open TensorProduct
@@ -19,7 +20,7 @@ private theorem ladder {X Y : Type} [DecidableEq X] [DecidableEq Y] (f : (X →�
         rw [TensorProduct.finsuppScalarRight_apply_tmul_apply]
         by_cases hx : x = x'
         · subst hx; simp
-        · simp [Finsupp.single_apply, hx]
+        · simp [hx]
       have e2 : Finsupp.single x n = n • Finsupp.single x (1 : ℤ) := by simp
       ext y
       rw [e1, map_smul, LinearMap.lTensor_tmul, TensorProduct.finsuppScalarRight_apply_tmul_apply, e2, map_smul,

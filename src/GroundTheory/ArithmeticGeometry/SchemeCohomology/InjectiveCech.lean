@@ -1,5 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ArithmeticGeometry.SchemeCohomology.ConsCompSuccAboveZero
+import Mathlib.Algebra.Category.Grp.Colimits
+import Mathlib.Algebra.Category.Grp.EpiMono
+import Mathlib.Algebra.Category.Grp.FilteredColimits
+import Mathlib.Topology.Sheaves.SheafOfFunctions
+import Mathlib.Topology.Sheaves.Stalks
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Arith.SchemeCoh

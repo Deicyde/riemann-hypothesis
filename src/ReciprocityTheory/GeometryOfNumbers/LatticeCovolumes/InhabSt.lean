@@ -1,4 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.GeometryOfNumbers.LatticeCovolumes.ArakelovDegreeEqDegreeOfFamily
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Tactic.Polynomial.Basic
 
 noncomputable section
 
@@ -83,7 +89,7 @@ theorem deg_stdLat (m : ℕ) : deg (stdHerm K m) (stdLat K m) = 0 := by
     · by_cases h : i = j
       · subst h
         simp
-      · simp [h, Pi.single_apply, Ne.symm h]
+      · simp [h]
     · intro b _ hb
       simp [Pi.single_apply, hb]
     · simp

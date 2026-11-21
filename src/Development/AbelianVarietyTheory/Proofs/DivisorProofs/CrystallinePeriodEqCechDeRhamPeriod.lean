@@ -1,9 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsPeriodHom
 import Development.AbelianVarietyTheory.Definitions.Divisors.FstTszeSec
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsRatioCover
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
-import Development.AbelianVarietyTheory.Proofs.ToricGeometry.TopLePreimageOfValAtNeZero
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.DifferentiableOnOfTendstoLocallyUniformlyOn
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UniformisationPreimageValueRulesStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UniformisedOneFormEvaluationRulesStatement
@@ -118,7 +116,7 @@ def phi {B O : Type} [CommRing B] [Algebra ℂ B] [CommRing O] [Algebra ℂ O] (
     refine TrivSqZeroExt.ext (by simp) ?_
     have : (a * b).snd = a.fst • b.snd + b.fst • a.snd := TrivSqZeroExt.snd_mul a b
     rw [TrivSqZeroExt.snd_mul]
-    simp [this, h]
+    simp [h]
 
 theorem fst_phi {B O : Type} [CommRing B] [Algebra ℂ B] [CommRing O] [Algebra ℂ O] (α : B →ₐ[ℂ] O) (ℓ : Ω[B⁄ℂ] →+ (Fin g → O))
     (h : ∀ (b : B) ω, ℓ (b • ω) = α b • ℓ ω) (c : TrivSqZeroExt B Ω[B⁄ℂ]) : (phi α ℓ h c).fst = α c.fst := add_zero _

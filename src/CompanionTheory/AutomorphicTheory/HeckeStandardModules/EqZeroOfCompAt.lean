@@ -1,7 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.Automorphisms.SplitCoeAlgebraMap
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Levelaf
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ExistsIntegerUnitSplitPlaceConjugatePrime
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.CmFieldAdeleSplitPlaceSupportIntegral
+import Mathlib.RingTheory.PicardGroup
 
 open NumberField IsDedekindDomain ReciprocityTheory.Aut TensorProduct
 

@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.GenericUnitaryGL.ComplementarySeries.Complementary
+import Mathlib.LinearAlgebra.Eigenspace.Triangularizable
 
 noncomputable section
 

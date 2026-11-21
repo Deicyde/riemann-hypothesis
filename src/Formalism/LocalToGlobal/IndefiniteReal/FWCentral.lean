@@ -1,10 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.FWExist
-import Formalism.LocalToGlobal.IndefiniteReal.ConjLemmas
-import Formalism.LocalToGlobal.IndefiniteReal.MultGood
-import Formalism.LocalToGlobal.ProjectiveLattices.MuValFix
 import Formalism.LocalToGlobal.IndefiniteReal.ZeroPartEigenvalueConvention
-import Formalism.LocalToGlobal.IndefiniteReal.CxLemmas
-import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.ImageLcv
 import Formalism.LocalToGlobal.IndefiniteReal.OneMapT
 
 noncomputable section

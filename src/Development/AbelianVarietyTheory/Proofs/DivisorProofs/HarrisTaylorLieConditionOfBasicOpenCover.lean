@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LieRankAt
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.LieBridgeA
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DualNumberMorphismEqOfLocal
@@ -105,7 +106,7 @@ theorem tan_iff (x : Sp R' ⟶ S) (v : epsPtR x ⟶ A) :
   have e1 : spMap (TrivSqZeroExt.fstHom R' R' R').toRingHom ≫ spMap (algebraMap R' (DualNumber R')) = 𝟙 _ := by
     rw [spMap_comp_loc]
     have : (TrivSqZeroExt.fstHom R' R' R').toRingHom.comp (algebraMap R' (DualNumber R')) = RingHom.id R' := by
-      ext r; simp [TrivSqZeroExt.algebraMap_eq_inl]
+      ext r; simp
     rw [this]
     exact Spec.map_id _
   let j : Over.mk x ⟶ epsPtR x := Over.homMk (spMap (TrivSqZeroExt.fstHom R' R' R').toRingHom) (by

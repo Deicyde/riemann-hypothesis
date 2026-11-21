@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.DiscreteSeriesCharacterSUTrivialTwo
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.SquareIntegrableIffExtension
 open MeasureTheory Matrix Formalism.REAL Formalism.MainNotions.S GlobalTheory.OpTrace GlobalTheory.HCChar GlobalTheory.SUChar
@@ -97,7 +97,7 @@ theorem charFn_central_mul : ∀ (n : ℕ) (ε : Fin n → Bool) (μ : Measure (
         ← (ρ c).integral_comp_comm (hρ.isRepOp hfc hf.1 v).1,
         ← integral_mul_left_eq_self (fun x => f₂ x • ρ x v) c]
       refine integral_congr_ae (.of_forall fun x => ?_)
-      simp [hf₂, map_mul, ContinuousLinearMap.mul_apply]
+      simp [hf₂, map_mul]
     have hint : ∫ g, f g * Θ₂ g ∂μ = χ⁻¹ * ∫ g, f₂ g * Θ g ∂μ := by
       rw [← integral_mul_left_eq_self (fun x => f₂ x * Θ x) c, ← integral_const_mul]
       refine integral_congr_ae (.of_forall fun x => ?_)

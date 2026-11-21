@@ -1,6 +1,5 @@
+import BuildAid.Leniency.Open
 import Development.DiscreteGroups.GlobalIrreducibility.SerLocOfTiesLe
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.CohomologicalCsdTempered
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.LocComp
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.LocTypeOfSerParamLe
 
 set_option synthInstance.maxHeartbeats 200000

@@ -1,4 +1,6 @@
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ConstMemBddAut
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.NotIsSplitOfIsInertAt
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InnerProductFormula
 
 noncomputable section
 

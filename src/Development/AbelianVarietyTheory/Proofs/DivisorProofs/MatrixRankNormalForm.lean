@@ -1,8 +1,12 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.MatchingOfParts
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
-import Development.AbelianVarietyTheory.Definitions.Divisors.RankEqCardIffExistsFrameMatrixFirstColumnBlock
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SubMemTwistSpan
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.LinearAlgebra.Matrix.Rank
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.TotallySplit
 open ValuativeRel Matrix
 
 namespace GlobalTheory
@@ -34,6 +38,6 @@ theorem rank_frame_exists :
   rw [this]
   ext k
   rw [Module.Basis.equivFun_self]
-  simp [Pi.single_apply, Finsupp.single_apply, eq_comm]
+  simp [Pi.single_apply, eq_comm]
 
 end GlobalTheory

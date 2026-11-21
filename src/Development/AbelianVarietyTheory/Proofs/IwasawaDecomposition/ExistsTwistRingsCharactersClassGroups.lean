@@ -1,12 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ConcreteTwistFrameExtraExcludedOverSmallPrimes
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsUniqueHcharOfFiniteOrder
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.InertialOrderFifteenCharAuxiliaryPrimeSpec
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsRingClassHost
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FiniteDimensionalAdjoinRange
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsCmConjugationOmega
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FiniteResidueField
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsCyclotomicUnramifiedCompletedIntegersStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CardPadicAlgClPadicComplexEqComplexStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsRingEquivAlgClosedOverNumberFieldCompEqStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MemFiniteExtPadicRingOfIntegersIffNormLeOneStatement
@@ -409,7 +404,7 @@ theorem exists_ringSpec (hA : GlobalTheory.Published.GlobalArtinReciprocity) : �
       (j := (liftC w).comp (mapO w)) (k := (algebraMap (PadicAlgCl (lw w)) ℂ_[lw w]).comp (κ w)) (RingHom.ext fun y => by
         simp only [RingHom.comp_apply]
         rw [hκy]
-        simp only [mapO, liftC, IsFractionRing.map, IsLocalization.map_eq, IsFractionRing.lift_algebraMap]
+        simp only [mapO, liftC, IsFractionRing.map, IsLocalization.map_eq]
         erw [IsFractionRing.lift_algebraMap]
         exact htoO w y)
     exact DFunLike.congr_fun h z

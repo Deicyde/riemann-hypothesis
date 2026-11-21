@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.IsPolLatticePlane
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.PairingExtends
 
 noncomputable section
 

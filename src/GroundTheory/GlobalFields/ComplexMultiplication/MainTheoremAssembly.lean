@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.ComplexMultiplication.MainTheoremLattice
-import GroundTheory.GlobalFields.ComplexMultiplication.MainTheoremFrobenius
 import GroundTheory.GlobalFields.ComplexMultiplication.MainTheoremIdeles
 import GroundTheory.GlobalFields.ComplexMultiplication.AnalyticUniformizationClassification
 set_option maxSynthPendingDepth 1

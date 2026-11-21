@@ -1,6 +1,9 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.MultiplicityDescent.BesselIsometryScalar
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.MultiplicityDescent.LocalSquareIntegrableKFinite
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.JDichoWA
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.MeasureTheory.Integral.BoundedContinuousFunction
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.WeightedL1OfL2
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.MultiplicityOne.ZeroOfOrbit
 
 noncomputable section
 

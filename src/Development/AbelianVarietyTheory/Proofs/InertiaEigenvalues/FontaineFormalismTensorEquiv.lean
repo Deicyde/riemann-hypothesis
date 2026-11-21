@@ -1,6 +1,13 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.TensorMultiplication
 import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.CrystallineSubrepresentation
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.RepresentationTheory.Rep.Basic
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.Tactic.ENatToNat
 
 noncomputable section
 
@@ -412,12 +419,12 @@ variable (LL V) in
 def actKK (τ : K₀ →ₐ[Qp] LL) : K₀ ⊗[Qp] K₀ →+ (V ⊗[Qp] B →ₗ[LL] V ⊗[Qp] B) :=
   liftAddHom (AddMonoidHom.mk' (fun a => AddMonoidHom.mk'
       (fun c => τ a • mB LL (algebraMap K₀ B c))
-      (fun c c' => by ext x; simp [mB_add, add_mul, tmul_add]))
+      (fun c c' => by ext x; simp [add_mul, tmul_add]))
       (fun a a' => by ext c x; simp [add_smul]))
     (fun r a c => by
       ext v b
       simp only [AddMonoidHom.mk'_apply, map_smul, AlgebraTensorModule.curry_apply,
-        LinearMap.restrictScalars_self, curry_apply, LinearMap.coe_restrictScalars,
+        curry_apply, LinearMap.coe_restrictScalars,
         LinearMap.smul_apply, mB_tmul]
       rw [smul_assoc, smul_comm r, ← tmul_smul, ← smul_mul_assoc, Algebra.smul_def r c, map_mul,
         ← IsScalarTower.algebraMap_apply, ← Algebra.smul_def])

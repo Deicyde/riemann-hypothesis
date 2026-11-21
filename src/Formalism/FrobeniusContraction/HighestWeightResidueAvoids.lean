@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.FrobeniusContraction.Statement
-import Formalism.FrobeniusContraction.StatementTop
 
 noncomputable section
 

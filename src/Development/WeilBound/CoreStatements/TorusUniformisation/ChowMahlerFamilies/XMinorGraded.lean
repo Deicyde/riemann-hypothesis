@@ -1,6 +1,15 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.FlagMinor
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.ExistsUniformDenominator
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open GlobalTheory.CompanionTheory.Ar.Num
 
@@ -116,7 +125,7 @@ private theorem refl_lemma_4 {o Ω : Type} [CommRing o] [Field Ω] [Algebra o Ω
     · by_cases h : q = q'
       · subst h
         simpa using R.one_mem
-      · simp [Pi.single_apply, h]
+      · simp [h]
     · simp [Pi.single_apply]
   choose n₁ hn₁ using hgen
   have h2 : ∀ l l' q' q, ∃ n, f l ^ n * (B l).repr (f l' ^ n₁ l' q' • b l' q') q ∈ R :=
@@ -225,7 +234,7 @@ theorem PositivityTheory.Xgn.t_minor_graded : ∀ {o Ω : Type} [CommRing o] [Fi
       unfold flagMinor
       congr 1
       ext r d
-      simp [Matrix.updateCol_ne (Fin.castSucc_ne_last d), A]
+      simp [A]
     simp only [hsub] at key
     have hA0 : A.det ≠ 0 := hdetA ▸ hJ
     refine ⟨∑ x : Fin ((i : ℕ) + 1), (-1) ^ ((x : ℕ) + ((Fin.last (i : ℕ) : Fin ((i : ℕ) + 1)) : ℕ)) *
@@ -250,7 +259,7 @@ theorem PositivityTheory.Xgn.t_minor_graded : ∀ {o Ω : Type} [CommRing o] [Fi
         unfold flagMinor
         rw [Matrix.det_succ_row _ (Fin.last _)]
         refine Finset.sum_congr rfl fun j _ => ?_
-        simp [sub, Fin.snoc_last, Fin.snoc_castSucc, Fin.succAbove_last]
+        simp [sub, Fin.snoc_last, Fin.succAbove_last]
         left
         congr 1
         ext r d

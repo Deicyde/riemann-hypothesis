@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJAStarOp2
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJAGroupAdjCut
 
 open Formalism.FourierDecayAlt
 open scoped ComplexConjugate

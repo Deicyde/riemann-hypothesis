@@ -1,5 +1,8 @@
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnitaryClassFiniteness.Development
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdelicClassFiniteness.DictRing
+import Formalism.PeriodIntegrals.UJClassFin
+import Mathlib.RingTheory.PiTensorProduct
 
 noncomputable section
 

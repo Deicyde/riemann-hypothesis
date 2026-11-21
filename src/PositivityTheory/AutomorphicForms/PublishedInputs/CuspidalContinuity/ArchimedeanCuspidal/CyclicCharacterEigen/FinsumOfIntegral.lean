@@ -1,12 +1,15 @@
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.CyclicCharacterEigen.PropEG
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.TemperedLocalComponents.PCuspSSDB
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.SiegelHeights.CoeSmEqSymm
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.SmoothRepresentationsGL.SphZero
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.SmoothRepresentationsGL.SphDict
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.SmoothRepresentationsGL.MemIffLocal
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.SmoothRepresentationsGL.PsiLoc
-import Development.AutomorphicArithmetic.AutomorphicVarieties.IdeleGenerators.HolomorphicIrreducibility.HolRep
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CentralCharacters.QdetMemAdjSub
+import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.GalUnitary
+import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.TemperedLocalComponents.LocCompR
+import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.TemperedLocalComponents.SatLoc
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.StabilizerOrbitVolume.DetAdmA
+import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.AdFormOf
 
 noncomputable section
 
@@ -361,7 +364,7 @@ private theorem lie_eq_sum (X : Matrix (Fin a) (Fin a) (TR.Rinf F)) :
   let L : Matrix (Fin a) (Fin a) (TR.Rinf F) →ₗ[ℝ] Module.End ℂ (TR.Sm F a) := TR.lie F a
   have e : X = ∑ v, ∑ i, ∑ j, X i j v • Matrix.single i j (Pi.single v 1 : TR.Rinf F) := by
     ext i j v
-    simp [Matrix.sum_apply, Matrix.single_apply, ite_and, Pi.single_apply, ite_apply]
+    simp [Matrix.sum_apply, Matrix.single_apply, ite_and, Pi.single_apply]
   change L X = _
   conv_lhs => rw [e]
   simp only [map_sum, map_smul]
@@ -620,7 +623,7 @@ theorem phi_loc (D : Ad3.Dat) (w : Ad3.Pl) (hg : UpperTheory.V.Af.Smo.GoodAt w (
     obtain ⟨g1, x1, h⟩ := sph_transl D w W.1 hs g
     have e1 := h k
     have e2 := h 1
-    simp only [fg, map_one, mul_one] at e2
+    simp only [map_one, mul_one] at e2
     simp only [fg] at e1 ⊢
     rw [e1, e2, sph_inv w hg _ x1 hk]
   have hWeig : ∀ j ≤ 3, ∀ g, ∑ᶠ c : GL (Fin 3) (Ad3.Qv w) ⧸ GlobalTheory.LFun.KGL w 3,

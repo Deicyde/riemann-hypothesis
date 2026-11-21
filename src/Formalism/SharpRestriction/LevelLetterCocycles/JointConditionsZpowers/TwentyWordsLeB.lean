@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.JointConditionsZpowers.IsTwistedDualOfGaloisRep
+import Formalism.SharpRestriction.LevelLetterCocycles.RamifiedCoefficientChains
 
 noncomputable section
 

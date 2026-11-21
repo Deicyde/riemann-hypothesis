@@ -1,10 +1,7 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.ArithmeticCylinders
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.LabelDatum
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.IsCharIffCoord
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.IsCharTraceOfMul
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsListProdStatement
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.IsCharacterOfFDRepCompHomAndMul
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.BlockParabolicUnitriangularSubgroupsGLnPrimeFiel
 open GlobalTheory.GLq Formalism.MainNotions.ArithmeticCylinders Polynomial
 open scoped Classical
@@ -19,7 +16,7 @@ theorem sum_subgroup {G : Type} [Group G] [Fintype G] (P : Subgroup G) (Φ : P �
     (by simp) (fun x => if h : x ∈ P then Φ ⟨x, h⟩ else 0)
   rw [Finset.sum_filter] at e
   refine (Eq.trans ?_ e.symm).trans ?_
-  · apply Finset.sum_congr rfl; intro a _; simp [dif_pos a.2]
+  · apply Finset.sum_congr rfl; intro a _; simp
   · apply Finset.sum_congr rfl; intro x _; split_ifs <;> rfl
 
 theorem toG_val {g m : ℕ} [Fact g.Prime] {M : Mt g m} (h : IsUnit M) : ((toG M : Gn g m) : Mt g m) = M := by

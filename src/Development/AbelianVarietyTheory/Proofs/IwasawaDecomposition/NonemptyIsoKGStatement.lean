@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.NonemptyIsoKG
-import Mathlib
-import Formalism.LocalToGlobal.KernelLattices.LateralTheory
 open NumberField IsDedekindDomain Formalism.L2.Ker Matrix
 open scoped BigOperators
 set_option maxHeartbeats 1000000 in

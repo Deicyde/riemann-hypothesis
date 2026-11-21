@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.PerpBasisExistence
+import Mathlib.Topology.Sheaves.Presheaf
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.IsIntegralCc
 
 namespace ReciprocityTheory.ChartRestriction.G.FD.PerpLatticeTransfer
 
@@ -134,7 +138,7 @@ lemma Sform_h (c c' : Fin n → E) :
   simp only [Sform, Matrix.of_apply]
   rw [Finset.sum_comm]
   refine Finset.sum_congr rfl fun k _ => Finset.sum_congr rfl fun l _ => ?_
-  try simp only [cc, RingEquiv.toRingHom_eq_coe, RingEquiv.coe_toRingHom, AlgEquiv.toRingEquiv_eq_coe,
+  try simp only [cc, RingEquiv.toRingHom_eq_coe, RingEquiv.coe_toRingHom,
     AlgEquiv.coe_ringEquiv]
   ring
 

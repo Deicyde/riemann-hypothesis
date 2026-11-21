@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousOnOfHoloOn
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.ExistsNeZeroIsStandardSmoothOfRelativeDimension
-import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.RingKrullDimQuotientEqOfMemMinimalPrimes
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.FlatBCSec
 open CategoryTheory AlgebraicGeometry TopologicalSpace Filter Topology MeasureTheory Matrix NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open GlobalTheory GlobalTheory.Points GlobalTheory.CxPts GlobalTheory.VB GlobalTheory.HermFrame GlobalTheory.ArInt GlobalTheory.CovTest GlobalTheory.VdmRec GlobalTheory.ArchLim
@@ -127,7 +127,7 @@ theorem exists_affine_smooth_prime : ∀ (k : Type) [CommRing k] (X : Scheme.{0}
         IsScalarTower.algebraMap_apply ℂ Γ(Y, V) (Γ(Y, V) ⧸ Q), Ideal.Quotient.algebraMap_eq,
         Ideal.Quotient.algebraMap_eq, Ideal.Quotient.algebraMap_quotient_map_quotient]
       congr 1
-      simp only [RingHom.algebraMap_toAlgebra, hres, ReciprocityTheory.ChartRestriction.G.DVR.FlatBC.algX, RingHom.comp_apply]
+      simp only [RingHom.algebraMap_toAlgebra, ReciprocityTheory.ChartRestriction.G.DVR.FlatBC.algX, RingHom.comp_apply]
       change _ = ((Scheme.ΓSpecIso (CommRingCat.of ℂ)).inv ≫ q.appLE ⊤ V _ ≫
         Y.presheaf.map (homOfLE hWV).op).hom c
       have e1 : q.appLE ⊤ V (by simp) ≫ Y.presheaf.map (homOfLE hWV).op = q.appLE ⊤ W (by simp) :=

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.Reductions.SiegelCore
 import Development.WeilBound.ThetaLifts.FrameEstimates.LeHeightOfIsTorusElt
 
@@ -41,7 +43,7 @@ theorem norm_evInf_rId [IsTotallyReal F] (w : InfinitePlace F) (c : ℝ) : ‖ev
   have e := rId_inf (F := F) w c
   have e2 : evInf F w (rId F c) = (rId F c).1 w := rfl
   rw [e2, ← (InfinitePlace.Completion.isometry_extensionEmbedding w).norm_map_of_map_zero (map_zero _) ((rId F c).1 w), e]
-  simp [Real.abs_exp]
+  simp
 
 theorem absE_rIdU [IsTotallyReal F] (h2 : Module.finrank F E = 2) (c : ℝ) :
     (GlobalTheory.Doubling.absE F E (rIdU F E c) : ℝ) = Real.exp (2 * Module.finrank ℚ F * c) := by

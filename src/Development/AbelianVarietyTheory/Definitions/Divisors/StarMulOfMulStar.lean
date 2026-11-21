@@ -1,4 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.MemShaKernelIffLocallyTrivial
 import Development.AbelianVarietyTheory.Definitions.Divisors.SubsingletonComplex
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CentralizerSimilitudeBaseChange
@@ -214,7 +216,7 @@ open GlobalTheory.LKInv
 example : invCls (k := ℝ) (AlgHom.id ℝ ℂ) (fun _ _ h => h) (Units.mk0 Complex.I Complex.I_ne_zero)
     (fun x => ⟨fun _ => ⟨x, rfl⟩, fun _ => mul_comm _ _⟩) (Complex.conjAe : ℂ →ₐ[ℝ] ℂ) (fun _ => rfl)
     (StConj.refl' (Units.mk0 Complex.I Complex.I_ne_zero) 1 (by
-      simp [Complex.ext_iff])) = 1 :=
+      simp)) = 1 :=
   invCls_self _ _ _ _ _ _ _
 
 example (x : ℂˣ) (h : star (x : ℂ) * x = 2) : (x : ℂ) * star (x : ℂ) = 2 :=

@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralModelPAdicComparison
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PAdicPointPairingCompatibleStatement
 

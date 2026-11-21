@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.HodgeFrameGram
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Matrix Complex ComplexConjugate GlobalTheory.HermFrame GlobalTheory.IndefiniteRowSideFullHecke.HodgeFrameGram
 open scoped ComplexOrder ContDiff
@@ -25,7 +27,7 @@ theorem stepIdx_injective (i : Fin n) : Function.Injective (stepIdx i) := by
 theorem stepIncl_gram (i : Fin n) (K : Matrix (Fin n) (Fin n) ℂ) :
     (stepIncl i)ᵀ * K * (stepIncl i)ᴴᵀ = stepGram K i := by
   ext b c
-  simp [stepIncl, mul_apply, ite_mul, mul_ite, Finset.sum_ite_eq, Finset.sum_ite_eq']
+  simp [stepIncl, mul_apply, ite_mul, mul_ite, Finset.sum_ite_eq]
   rcases b with b | b <;> rcases c with c | c <;> rfl
 
 theorem form_stepIncl (i : Fin n) (K : Matrix (Fin n) (Fin n) ℂ) (u w : Fin i ⊕ Unit → ℂ) :

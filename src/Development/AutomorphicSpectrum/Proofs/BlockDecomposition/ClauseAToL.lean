@@ -1,9 +1,6 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.FiniteTypeHarishChandra.SupportExistsAll
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PatternGroupStatement
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ColumnRecursion
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RowToColumnReduction
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CardJPat
 
 open ReciprocityTheory.Ty.Fin
 

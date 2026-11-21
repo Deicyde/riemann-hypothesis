@@ -1,9 +1,6 @@
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.HsEighthLeOfSmall
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.ProdSubLtEqFactorial
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.FdScale
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.JacBound
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.PolarBasic
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.PBridge
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.IntegrableOfContinuousCompact
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.FdUpperA
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.FdUpperB

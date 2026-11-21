@@ -1,10 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.PrinInf
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsThetaFam
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.SkewGramHalfModule
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsNormLeHeightPow
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.PairwiseDisjointCell
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HeckeLPartialContinuationHolds
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.OmegaCentreLinearStatement
 open scoped ComplexConjugate Matrix NNReal
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.L2.Theta Formalism.L2.Pj Formalism.IndefR.Datum MeasureTheory IsDedekindDomain NumberField
@@ -52,7 +46,7 @@ theorem GlobalTheory.Core.Rk.regRes_linear : ∀ (D : D7) (ψ : AddChar (AF D.ho
       rw [← mul_add, ← MeasureTheory.integral_add (hconv f hf g s hs).to_average (hconv f' hf' g s hs).to_average]
       congr 1
       refine congrArg _ (funext fun q => ?_)
-      simp only [AutomorphicL2Unitary.descend, thetaKO, map_add, LinearMap.add_apply, Pi.add_apply, add_mul]
+      simp only [AutomorphicL2Unitary.descend, thetaKO, map_add, Pi.add_apply, add_mul]
     exact (((hcoef f hf g).add (hcoef f' hf' g)).congr e).laurent_eq
   · have e : EqRight (fun s => c * regInt omh mW θ τ d₀ b' zH P f g s) (regInt omh mW θ τ d₀ b' zH P (c • f) g) := by
       refine ⟨0, fun s _ => ?_⟩
@@ -60,5 +54,5 @@ theorem GlobalTheory.Core.Rk.regRes_linear : ∀ (D : D7) (ψ : AddChar (AF D.ho
       rw [mul_left_comm, ← MeasureTheory.integral_const_mul]
       congr 1
       refine congrArg _ (funext fun q => ?_)
-      simp only [AutomorphicL2Unitary.descend, thetaKO, map_smul, LinearMap.smul_apply, Pi.smul_apply, smul_eq_mul, mul_assoc]
+      simp only [AutomorphicL2Unitary.descend, thetaKO, map_smul, Pi.smul_apply, smul_eq_mul, mul_assoc]
     exact (((hcoef f hf g).const_mul c).congr e).laurent_eq

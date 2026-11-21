@@ -1,10 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.GroupDict
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsSheetCover
-import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.StatementsProved
-import GroundTheory.HeightsAndTheta.Heights.CountingLowerBound.Assembly
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.IntEmbInjective
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.BlockGLSupportedMemMirabolicSupported
 open NumberField Matrix MeasureTheory Filter Topology GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Cusp ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor GroundTheory.Heights₂.Heights.FiniteCovolume GroundTheory.Automorphic GlobalTheory.CompanionTheory.Ar.Cusp.Dict
 open scoped ENNReal InnerProductSpace
 open scoped ComplexOrder
@@ -79,11 +74,11 @@ theorem span_eq_top {E : Type} [Field E] {Ψ : Type} [Fintype Ψ] (N : ℕ) (s :
             (LinearMap.single ℝ (fun _ : Fin N => ℂ) i (s τ x)) := by
         funext τ' j
         rw [Finset.sum_apply, Finset.sum_apply, Finset.sum_eq_single τ'
-          (fun b _ hb => by simp [Pi.single_apply, hb.symm]) (by simp)]
+          (fun b _ hb => by simp [hb.symm]) (by simp)]
         by_cases hj : j = i
         · subst hj
           simp
-        · simp [Pi.single_apply, hj]
+        · simp [hj]
       rw [LinearMap.mem_ker, hsum, map_sum] at hmem
       exact hmem) τ
     have h1 : l i τ 1 = 0 := by

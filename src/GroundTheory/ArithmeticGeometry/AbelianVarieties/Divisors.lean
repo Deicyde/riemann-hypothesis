@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ArithmeticGeometry.AbelianVarieties.FunctionFieldPoint
+import Mathlib.RingTheory.DedekindDomain.PID
 
 namespace GroundTheory.Arith.Abelian
 

@@ -1,9 +1,10 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.AutomorphicKernels.UnitarySchrodingerModel.LocalDefs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ResAlgSplitTwo
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FixedNondeg
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.UnramifiedQuotientCardStatement
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.SumCompSurj
+import Mathlib.Tactic.ENatToNat
 open PositivityTheory.PfSWUS.Loc GlobalTheory.CompanionTheory.UnrDens GlobalTheory.CompanionTheory.SiegLoc Filter Topology
 
 noncomputable section
@@ -110,7 +111,7 @@ theorem gauss_image_level : ∀ (R : Type) [CommRing R] (σ : R →+* R) (ϖ : R
     refine ⟨0, Nat.zero_le _, ?_, ?_⟩
     · have : (Set.range fun w : R ⧸ lev ϖ k => w * Ideal.Quotient.mk (lev ϖ k) d) = {0} := by
         ext z
-        simp [hz, eq_comm]
+        simp [hz]
       rw [this]
       simp
     · intro a _ _

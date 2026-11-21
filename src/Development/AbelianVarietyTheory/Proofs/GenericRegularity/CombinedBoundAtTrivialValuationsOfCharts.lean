@@ -1,13 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.RegModelC
 import Development.AbelianVarietyTheory.Definitions.RegularCharts.SCharts
-import Formalism.LocalToGlobal.ProjectiveLattices.FrameCharts
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.SecBaseChangeAnySt
 import Formalism.LocalToGlobal.ProjectiveLattices.RegQFree
-import Formalism.LocalToGlobal.ProjectiveLattices.FnTrdegOf
-import Formalism.LocalToGlobal.ProjectiveLattices.RealPtGeo
-import Formalism.LocalToGlobal.ProjectiveLattices.IntAllProofFree
 
 noncomputable section
 

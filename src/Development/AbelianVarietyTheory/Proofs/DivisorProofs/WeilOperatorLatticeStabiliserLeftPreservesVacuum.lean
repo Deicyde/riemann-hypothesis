@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFinMapsOfForall
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ComplementaryAdelicSchwartzOfNonzeroLocal
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.KFinLoc
@@ -52,7 +52,7 @@ theorem vecMulVec_mem_left {n d : ℕ} (X : Spc F E n) (W : Spc F E d) (v : Pl F
     rintro z ⟨a, ha, hai, x, hx, rfl⟩
     refine AddSubgroup.subset_closure ⟨a, ha, hai, x, hx, y, hy, ?_⟩
     ext i j
-    simp only [f, AddMonoidHom.coe_mk, ZeroHom.coe_mk, Matrix.vecMulVec_apply, Pi.smul_apply, Matrix.smul_apply, incM,
+    simp only [f, AddMonoidHom.coe_mk, ZeroHom.coe_mk, Matrix.vecMulVec_apply, Matrix.smul_apply, incM,
       Matrix.map_apply, map_mul, Algebra.smul_def, Pi.mul_apply, Pi.algebraMap_apply]
     ring
   exact this hz
@@ -75,7 +75,7 @@ theorem inv_mul_mem {n d : ℕ} (X : Spc F E n) (W : Spc F E d) (v : Pl F) {k : 
           (fun j => inclR (F := F) (AF F) (y j)) := by
       ext i j
       simp only [Matrix.mul_apply, Matrix.vecMulVec_apply, Matrix.smul_apply, Matrix.mulVec,
-        dotProduct, Pi.smul_apply, incM, Matrix.map_apply, map_mul, Algebra.smul_def, Pi.mul_apply, Pi.algebraMap_apply,
+        dotProduct, incM, Matrix.map_apply, map_mul, Algebra.smul_def, Pi.mul_apply, Pi.algebraMap_apply,
         Finset.sum_mul]
       refine Finset.sum_congr rfl fun l _ => ?_
       ring

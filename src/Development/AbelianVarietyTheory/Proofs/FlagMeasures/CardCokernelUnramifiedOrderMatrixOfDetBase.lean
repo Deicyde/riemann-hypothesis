@@ -1,9 +1,6 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.FractionFieldToGenericStalkAlgebraMapEq
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsHermND
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ComplementReferenceCompactSubgroup
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.IsPrincipalIdealRingOfHenselian
-import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.LengthCommensurableSpanSpanOfDetNeZero
+import Mathlib.RingTheory.TotallySplit
 
 open ValuativeRel Formalism.MainNotions.S.Loc GlobalTheory.HL MeasureTheory
 open scoped Pointwise ENNReal Classical
@@ -75,7 +72,7 @@ theorem _root_.GlobalTheory.UnramOrder.card_coker_eq_pow_addVal_det {R : Type*} 
       by_cases hij : i = j
       · subst hij
         simp
-      · simp [hij, Finsupp.single_apply, Ne.symm hij]
+      · simp [hij]
     rw [hmat, Matrix.det_diagonal]
   let h : M →ₗ[R] M := e.symm.toLinearMap ∘ₗ f.rangeRestrict
   have hfgh : f = g ∘ₗ h := by

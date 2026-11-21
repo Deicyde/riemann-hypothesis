@@ -1,4 +1,17 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.MahlerMeasure.LevelLattice
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace Formalism.GM.M.SSD
 
@@ -461,7 +474,7 @@ lemma lv_castSucc (j : Fin t → ℕ) (jp : ℕ) (k : Fin t) : lv j jp (Fin.cast
   simp [lv, Finset.sum_apply, Pi.single_apply, Fin.castSucc_inj, Fin.castSucc_ne_last]
 
 lemma lv_last (j : Fin t → ℕ) (jp : ℕ) : lv j jp (Fin.last t) = jp := by
-  simp [lv, Finset.sum_apply, Pi.single_apply, (Fin.castSucc_ne_last _).symm]
+  simp [lv, Finset.sum_apply, (Fin.castSucc_ne_last _).symm]
 
 lemma lv_inj {j j' : Fin t → ℕ} {jp jp' : ℕ} (h : lv j jp = lv j' jp') : j = j' ∧ jp = jp' := by
   refine ⟨funext fun k => ?_, ?_⟩
@@ -491,7 +504,7 @@ lemma intPol_iff_isInt (f : MvPolynomial σ ℚ_[p]) : f ∈ IntPol p σ ↔ IsI
 
 lemma intPol_iff' (F : MvPolynomial σ ℚ_[p]) :
     F ∈ IntPol p σ ↔ ∃ F₀ : MvPolynomial σ ℤ_[p], map (algebraMap ℤ_[p] ℚ_[p]) F₀ = F := by
-  simp [IntPol, LinearMap.mem_range, MvPolynomial.mapAlgHom_apply, Algebra.ofId_apply]
+  simp [IntPol, LinearMap.mem_range, MvPolynomial.mapAlgHom_apply]
 
 lemma intPol_mul' {F G : MvPolynomial σ ℚ_[p]} (hF : F ∈ IntPol p σ) (hG : G ∈ IntPol p σ) :
     F * G ∈ IntPol p σ := by

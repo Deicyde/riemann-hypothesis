@@ -1,10 +1,14 @@
-import Formalism.HermitianCurvature.StatementB
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.IntegralZeroFrequencyInvariant
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.AdjointnessPolynomiallyBounded
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.DilationUnipotentWeylMeasure
-import Formalism.FormalDegreeBessel.FormalDegreeRatio.UnitaryWeylNormalHolds
 import Formalism.FormalDegreeBessel.FormalDegreeRatio.BesselUnitaryEquivHolds
-import Formalism.RealPlaceAnalysis.RealPlaceTaylor.CartanInvolutionConjTransposeMul
+import Mathlib.Analysis.CStarAlgebra.ContinuousLinearMap
+import Mathlib.Analysis.Calculus.ParametricIntegral
+import Mathlib.Analysis.InnerProductSpace.Calculus
+import Mathlib.MeasureTheory.Order.Group.Lattice
+import Mathlib.Topology.UniformSpace.Uniformizable
 
 open Matrix MeasureTheory Filter Topology
 open scoped ComplexConjugate ENNReal

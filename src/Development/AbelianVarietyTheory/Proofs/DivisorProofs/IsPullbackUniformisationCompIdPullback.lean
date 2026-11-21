@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GalMap
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UniformisationDeterminedByDegenerationDataNormalStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UniformisedGroupGaloisMapMul
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NonemptyIsPullDegCompOfInjective
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj IsLocalRing NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open scoped CategoryTheory.Obj
@@ -155,7 +153,7 @@ theorem isPullUnif_comp_id : ∀ (R R' : Type) [CommRing R] [IsDomain R] [CommRi
     have := pullIdIso_fst φ G
     simp only [bc'', Iso.trans_hom, Over.comp_left, Category.assoc, this, Functor.mapIso_hom]
     congr 1
-    simp only [Over.pullback, pullback.map]
+    simp only [Over.pullback]
     erw [pullback.lift_fst_assoc]
     rfl
   refine ⟨r, bc'', GalMul.isPullUnif_comp (i := φ) (j := RingHom.id R') r₁ r₂ r₃ T

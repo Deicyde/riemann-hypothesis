@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.KunnethLefschetz.BasisOne
 import Development.EtaleCohomology.EtaleTrace.FrobTraceOf
 import Development.EtaleCohomology.EtaleTrace.LPdCut
+import Mathlib.Algebra.Module.StablyFree.Basic
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry GlobalTheory.EtC LateralTheory.EtaleTrace

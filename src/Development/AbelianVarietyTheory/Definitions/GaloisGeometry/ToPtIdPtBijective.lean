@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ConeClZeroBijective
-import Development.AbelianVarietyTheory.Definitions.Divisors.ComparisonMemCechHodgeFiltration
+import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.CoeEqAlgebraMapZeroEquiv
 
 set_option autoImplicit false
 
@@ -308,7 +310,7 @@ theorem HdR.ofForm_tdt_ne_zero [Nontrivial k] (h2 : (2 : k) = 0) : HdR.ofForm 1 
   rw [coe_dOm, coe_eq_algebraMap_zeroEquiv η, dDR_algebraMap] at e1
   have e2 := ExteriorAlgebra.ι_inj k[X] _ _ |>.1 e1
   have f3 := congrArg (polynomialEquiv k) e2
-  simp only [Derivation.coeFn_coe, map_smul, polynomialEquiv_D, derivative_X, smul_eq_mul,
+  simp only [map_smul, polynomialEquiv_D, derivative_X, smul_eq_mul,
     mul_one] at f3
   have := congrArg (coeff · 1) f3
   simp only [coeff_derivative, coeff_X_one] at this

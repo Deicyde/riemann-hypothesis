@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.LocalFields.LubinTateTowerMaps
-import GroundTheory.LocalFields.ExamplesLaurent
+import Mathlib.Topology.Algebra.Ring.Compact
 
 noncomputable section
 

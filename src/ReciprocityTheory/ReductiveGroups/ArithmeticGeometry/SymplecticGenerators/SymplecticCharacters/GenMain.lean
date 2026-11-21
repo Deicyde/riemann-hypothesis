@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SymplecticGenerators.SymplecticCharacters.GenFin
 
 open Matrix
@@ -18,14 +20,14 @@ theorem col_inr_step (k : Fin g) (M : Matrix (Fin g ⊕ Fin g) (Fin g ⊕ Fin g)
   have hlow : ∀ i : Fin g, (i : ℕ) < k → M (Sum.inr i) (Sum.inr k) = 0 := by
     intro i hi
     have hik : i ≠ k := by intro h; subst h; omega
-    rw [row_inr_of_col_inl hM (hF i hi).1]; simp [Matrix.one_apply, hik]
+    rw [row_inr_of_col_inl hM (hF i hi).1]; simp [hik]
   set c' : Fin g → ℤ := fun l => if (k : ℕ) < l then M (Sum.inr l) (Sum.inr k) else 0 with hc'
   have hdot : c' ⬝ᵥ Pi.single k 1 = 0 := by rw [dotProduct_single]; simp [hc']
   have hDmem : spDiag (rkU _ _ hdot) ∈ spH g := spDiag_mem _
   have hDF : ColsFixed k (spDiag (rkU _ _ hdot)) := by
     refine colsFixed_spDiag_rk hdot (fun i hi => ?_) (fun i hi => ?_)
     · have hik : i ≠ k := by intro h; subst h; omega
-      simp [Pi.single_apply, hik]
+      simp [hik]
     · simp only [hc']
       rw [if_neg (by omega)]
   have hDk : ∀ r, spDiag (rkU _ _ hdot) r (Sum.inl k) =
@@ -47,14 +49,14 @@ theorem col_inr_step (k : Fin g) (M : Matrix (Fin g ⊕ Fin g) (Fin g ⊕ Fin g)
       if_true, hck, mul_one, hc']
     rcases lt_trichotomy (l : ℕ) k with h | h | h
     · have hlk : l ≠ k := by intro e; subst e; omega
-      rw [if_neg (by omega), hlow l h]; simp [Matrix.one_apply, hlk]
+      rw [if_neg (by omega), hlow l h]; simp [hlk]
     · have e : l = k := Fin.ext h
       subst e; rw [if_neg (lt_irrefl _), hck]; simp
     · have hlk : l ≠ k := by intro e; subst e; omega
-      rw [if_pos h]; simp [Matrix.one_apply, hlk]
+      rw [if_pos h]; simp [hlk]
   have ha1 : ∀ i : Fin g, (i : ℕ) < k → M1 (Sum.inl i) (Sum.inr k) = 0 := by
     intro i hi
-    rw [row_inl_of_col_inr hM1sp (hM1F i hi).2]; simp [Matrix.one_apply]
+    rw [row_inl_of_col_inr hM1sp (hM1F i hi).2]; simp
   set S : Matrix (Fin g) (Fin g) ℤ := Matrix.of fun l m =>
     if m = k then (if l = k then -M1 (Sum.inl k) (Sum.inr k) else -M1 (Sum.inl l) (Sum.inr k))
     else (if l = k then -M1 (Sum.inl m) (Sum.inr k) else 0) with hS
@@ -108,7 +110,7 @@ private theorem mem_symplecticGroup_of_mem_spH (g : ℕ) :
       (first | rw [SymplecticGroup.mem_iff] | rw [Matrix.mem_symplecticGroup_iff])
       rw [spDiag, Matrix.J, Matrix.fromBlocks_transpose,
         Matrix.fromBlocks_multiply, Matrix.fromBlocks_multiply]
-      simp [hU, hU2]
+      simp
       rw [← Matrix.transpose_mul]
       first
       | rw [Matrix.mul_nonsing_inv _ (Matrix.isUnits_det_units U), Matrix.transpose_one]
@@ -201,7 +203,7 @@ theorem closure_spGens_eq (g : ℕ) :
     (first | rw [SymplecticGroup.mem_iff] | rw [Matrix.mem_symplecticGroup_iff])
     rw [spDiag, Matrix.J, Matrix.fromBlocks_transpose,
       Matrix.fromBlocks_multiply, Matrix.fromBlocks_multiply]
-    simp [hU, hU2]
+    simp
     rw [← Matrix.transpose_mul]
     first
     | rw [Matrix.mul_nonsing_inv _ (Matrix.isUnits_det_units U), Matrix.transpose_one]

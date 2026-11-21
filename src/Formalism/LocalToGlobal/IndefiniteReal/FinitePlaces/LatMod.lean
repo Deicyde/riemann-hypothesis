@@ -1,4 +1,6 @@
-import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.IdemFin
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.IdemUniq
 
 noncomputable section
 

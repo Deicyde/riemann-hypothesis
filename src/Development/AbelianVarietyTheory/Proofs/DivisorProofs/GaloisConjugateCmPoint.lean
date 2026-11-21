@@ -1,15 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsCrystalPairing
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUniqueDetGen
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.NotWeilIsGrpPullbackNoncomm
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.UnitOnInjectiveOfCommRing
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.WeilIsAlternatingSkewNatural
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.GlobalFnsHolds
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsProjectiveModel
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.BCTools
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilPairingRiemannFormStatement
 open CategoryTheory CategoryTheory.Limits AlgebraicGeometry MonoidalCategory CartesianMonoidalCategory MonObj NumberField IsDedekindDomain
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory.Cris GlobalTheory.DeRham GlobalTheory.RealMult GlobalTheory.CMVal GlobalTheory.LatVal GlobalTheory.LatJet
@@ -71,7 +66,7 @@ theorem weil_transport : GlobalTheory.Published.PeriodComparison → GlobalTheor
   have mem : ∀ v, v ∈ lattice c y → (fun j ↦ φ (T.U.e j) v) ∈ T.U.u.Λ := fun v hv ↦
     (T.U.lat _).2 ⟨v, hv, funext fun j ↦ by simp [GlobalTheory.IndefiniteRowSideFullHecke.DefiningCoordinates.defCoord]⟩
   have divk : ∀ v : E, (fun j ↦ φ (T.U.e j) (v / k)) = (k : ℂ)⁻¹ • fun j ↦ φ (T.U.e j) v := by
-    intro v; funext j; simp [map_div₀, div_eq_inv_mul]
+    intro v; funext j; simp [div_eq_inv_mul]
   set c₁ : ℂˣ := Units.mk0 _ (Complex.exp_ne_zero (-(2 * Real.pi * Complex.I) *
     ((((fun j ↦ φ (T.U.e j) w) ⬝ᵥ (Matrix.diagonal fun j ↦ (T.U.h (T.U.e j) : ℂ)).mulVec
       (star fun j ↦ φ (T.U.e j) w')).im : ℝ) : ℂ) / k)) with hc₁
@@ -92,13 +87,13 @@ theorem weil_transport : GlobalTheory.Published.PeriodComparison → GlobalTheor
     rw [← u₀.ker, hex₀, u'.ker]
     exact (hlat _).2 ⟨v, hv, funext fun j ↦ by simp [GlobalTheory.IndefiniteRowSideFullHecke.DefiningCoordinates.defCoord]⟩
   have divg : ∀ v : E, (fun j ↦ g (φ (T.U.e j) (v / k))) = (k : ℂ)⁻¹ • fun j ↦ g (φ (T.U.e j) v) := by
-    intro v; funext j; simp [map_div₀, div_eq_inv_mul]
+    intro v; funext j; simp [div_eq_inv_mul]
   set c₂ : ℂˣ := Units.mk0 _ (Complex.exp_ne_zero (-(2 * Real.pi * Complex.I) *
     ((((fun j ↦ g (φ (T.U.e j) z)) ⬝ᵥ Hm.mulVec (star fun j ↦ g (φ (T.U.e j) z'))).im : ℝ) : ℂ) / k)) with hc₂
   have H4 := GlobalTheory.T.weil_pairing_torsion_points X'.A X'.ab _ hL' _ u₀ Hm χ hAH k _ _ c₂ hk (memg z hz) (memg z' hz') rfl
   rw [hex₀, ← divg, ← divg] at H4
   have e := congrArg Units.val (GlobalTheory.weilIs_unique_fieldPoint (Sp ℂ) X'.A _ hL' ℂ (𝟙 (Sp ℂ)) k _ _ _ _ H4 H3)
-  simp only [hc₁, hc₂, Units.val_mk0, Units.coe_map, MonoidHom.coe_coe] at e
+  simp only [hc₁, hc₂, Units.val_mk0, Units.coe_map] at e
   have hs : ((fun j ↦ φ (T.U.e j) w) ⬝ᵥ (Matrix.diagonal fun j ↦ (T.U.h (T.U.e j) : ℂ)).mulVec
       (star fun j ↦ φ (T.U.e j) w')).im = ∑ i, T.U.h i * (φ i w * starRingEnd ℂ (φ i w')).im := by
     simp only [dotProduct, Matrix.mulVec_diagonal, Pi.star_apply, RCLike.star_def, Complex.im_sum]

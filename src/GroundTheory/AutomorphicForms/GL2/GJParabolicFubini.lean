@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.GL2.GJZetaDefs
-import GroundTheory.AutomorphicForms.Measures
+import GroundTheory.AutomorphicForms.CuspidalAdmissible
+import Mathlib.CategoryTheory.Countable
 set_option maxSynthPendingDepth 1
 
 noncomputable section

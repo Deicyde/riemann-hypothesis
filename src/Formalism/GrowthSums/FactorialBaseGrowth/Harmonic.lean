@@ -1,4 +1,17 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.GrowthSums.StatementA
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.Data.Int.Star
+import Mathlib.Data.Rat.Star
+import Mathlib.NumberTheory.BernoulliPolynomials
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
 
 open scoped BigOperators
 open Finset
@@ -70,7 +83,7 @@ theorem powerSumPolynomial : PowerSumPoly := by
   have hcoeff : (Polynomial.bernoulli (s + 1)).coeff (s + 1) = 1 := by
     rw [Polynomial.bernoulli_def, Polynomial.finset_sum_coeff,
       Finset.sum_eq_single (s + 1)]
-    · simp [Polynomial.coeff_monomial]
+    · simp
     · intro b _ hb
       rw [Polynomial.coeff_monomial, if_neg hb]
     · intro h

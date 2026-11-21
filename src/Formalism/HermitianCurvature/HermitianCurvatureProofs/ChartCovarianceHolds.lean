@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ChartEqsOfParts
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.SigmaFiniteOfHaar
-import Formalism.FormalDegreeBessel.FinalG
 
 open Formalism.REAL Formalism.QuantumDeterminants Formalism.FourierDecayAlt Matrix
 open scoped ContDiff

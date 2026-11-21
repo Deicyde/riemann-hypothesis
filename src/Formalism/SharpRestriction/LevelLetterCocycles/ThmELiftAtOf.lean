@@ -1,4 +1,5 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.CoordHomMapTrace
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.LiftFOf
 import Formalism.SharpRestriction.LevelLetterCocycles.ExponentWindowSubsetShort
 import Formalism.DistinguishedUnitIdeals.DistinguishedOrderProofs.ThmEFinal

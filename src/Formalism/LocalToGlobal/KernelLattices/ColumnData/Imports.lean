@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.KernelLattices.ColumnData.LinkChi
-import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.MuCardLeTwo
-import Development.AutomorphicArithmetic.WeightCongruences.IsRootOfIntegral
 
 noncomputable section
 

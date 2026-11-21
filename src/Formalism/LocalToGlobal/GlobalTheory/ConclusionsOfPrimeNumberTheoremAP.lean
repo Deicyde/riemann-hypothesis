@@ -1,11 +1,8 @@
-import Formalism.LocalToGlobal.GlobalTheory.AnalyticConclusionCompatibleMeanSquare
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.SizeWindowBrackets.Losses5OfLossHypD
-import Formalism.SizeWindowBrackets.ChainSlopeWindows.ChainAnalyticVariantOfTop
-import Formalism.SizeWindowBrackets.ChainSlopeWindows.DiscriminantSettingSatisfied
 import Formalism.SizeWindowBrackets.FixedEpsilonConcreteGrowthBound
-import Formalism.SizeWindowBrackets.ChainSlopeWindows.ErrorExponentBelowOnesFalse
-import Mathlib
-import Formalism.GL3MeanSquares.GenusMeanAsymptotics.JacobiCharacterSums.PNTBridge
+import Formalism.LocalToGlobal.GlobalTheory.AnalyticConclusionOfProp25
 
 noncomputable section
 

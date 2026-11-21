@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.InHHNeat
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.ReHermitianCombinationNonpos
+import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.InHHDef
 
 noncomputable section
 
@@ -58,7 +60,7 @@ theorem matE_crdC (M : GL (Fin X.B.I.n) X.B.I.E) (y : (VS D).V) :
   simp only [Module.Basis.equivFun_apply] at h
   simp only [Formalism.L2.SG.HidaSetting.HidaSetting.crd, Formalism.L2.SG.HidaSetting.crdOf, h, Matrix.mulVec, dotProduct, mapMC,
     RingHom.mapMatrix_apply, Matrix.map_apply, map_sum, map_mul, RingEquiv.coe_toRingHom,
-    RingEquiv.symm_apply_apply, Module.Basis.equivFun_apply]
+    RingEquiv.symm_apply_apply]
 
 theorem matE_inclC (M : GL (Fin X.B.I.n) X.B.I.E) (y : (VS D).V) :
     incl X.B.I (X.crd (matEC X M y)) =
@@ -107,7 +109,7 @@ theorem mapM_unitaryC (M : GL (Fin X.B.I.n) X.B.I.E) (hM : M ∈ Formalism.UG.UJ
   rw [map_mul, map_mul] at h1
   have h2 : mapMC X (Formalism.UG.cT (starRingEnd X.B.I.E) (M : Matrix _ _ _)) = (mapMC X (M : Matrix _ _ _))ᴴ := by
     ext i j
-    simp [Formalism.UG.cT, Matrix.conjTranspose_apply, hc]
+    simp [Formalism.UG.cT, Matrix.conjTranspose_apply]
     all_goals first
       | (rw [starRingEnd_apply]; exact hc _)
       | exact hc _
@@ -173,7 +175,7 @@ theorem crd_bas (i : Fin X.B.I.n) : X.crd (X.bas i) = Pi.single i 1 := by
   by_cases h : j = i
   · subst h
     simp [Formalism.L2.SG.HidaSetting.HidaSetting.crd, Formalism.L2.SG.HidaSetting.crdOf]
-  · simp [Formalism.L2.SG.HidaSetting.HidaSetting.crd, Formalism.L2.SG.HidaSetting.crdOf, h, Ne.symm h, Finsupp.single_apply]
+  · simp [Formalism.L2.SG.HidaSetting.HidaSetting.crd, Formalism.L2.SG.HidaSetting.crdOf, h]
 
 theorem incl_single (i : Fin X.B.I.n) : incl X.B.I (Pi.single i 1) = Pi.single i 1 := by
   funext j
@@ -237,9 +239,9 @@ theorem decomp (v : (VS D).V) : ∃ s ∈ Submodule.span D.host.E (Set.range X.e
       intro x hx
       rcases hx with (⟨b, rfl⟩ | ⟨b, rfl⟩) | hz
       · simp [map_sub, map_add, map_sum, map_smul, smul_eq_mul, X.ee, X.ef, (X.zu_orth u b).1,
-          mul_ite, Finset.sum_ite_eq, Finset.sum_ite_eq']
+          mul_ite, Finset.sum_ite_eq]
       · simp [map_sub, map_add, map_sum, map_smul, smul_eq_mul, X.ff, hfe, (X.zu_orth u b).2,
-          mul_ite, Finset.sum_ite_eq, Finset.sum_ite_eq']
+          mul_ite, Finset.sum_ite_eq']
       · rw [Set.mem_singleton_iff] at hz
         subst hz
         simp [map_sub, map_add, map_sum, map_smul, smul_eq_mul, hze, hzf, hzz]

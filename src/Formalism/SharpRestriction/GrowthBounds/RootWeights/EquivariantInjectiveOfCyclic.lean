@@ -1,4 +1,7 @@
-import Formalism.SharpRestriction.GrowthBounds.RootWeights.EquivariantKillsCyclicOfZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.CovariantDegrees
+import Formalism.SharpRestriction.GrowthBounds.RootWeights.OperatorsKillInvariantProjection
 
 noncomputable section
 

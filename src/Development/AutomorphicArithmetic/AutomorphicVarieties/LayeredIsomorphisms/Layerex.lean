@@ -1,5 +1,7 @@
-import Mathlib
-import Development.AutomorphicArithmetic.AutomorphicVarieties.LayeredIsomorphisms.SecondBound
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.AutomorphicVarieties.GeneratorCountTuples.LemmaK
+import Development.AutomorphicArithmetic.AutomorphicVarieties.StmtFields
+import Mathlib.Algebra.Order.Ring.Star
 
 open NumberField Formalism.GaloisCohomology UpperTheory.Top UpperTheory.V UpperTheory.V.LDataCardLeFinrank UpperTheory.V.Win
 open Polynomial

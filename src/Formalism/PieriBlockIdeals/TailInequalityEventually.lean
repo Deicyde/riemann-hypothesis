@@ -1,5 +1,5 @@
-import Formalism.PieriBlockIdeals.MertensReciprocalElementary
-import Formalism.PieriBlockIdeals.HidaLatticeInclusionAtCoarseWeightBound
+import BuildAid.Leniency.Open
+import Formalism.PieriBlockIdeals.LatticeInclusionRealSettingAlt
 
 noncomputable section
 

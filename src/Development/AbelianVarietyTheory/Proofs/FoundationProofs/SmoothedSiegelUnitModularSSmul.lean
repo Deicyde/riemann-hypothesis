@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.Imports
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasQIff
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.SmoothedThetaQProductModularSTransformStatement
 open scoped UpperHalfPlane MatrixGroups Manifold
 open GlobalTheory.Sieg GlobalTheory.QFam
@@ -19,7 +17,7 @@ theorem sg_S : ∀ (c : ℕ) (x : Fin 2 → ℚ) (τ : ℍ), admitted c x →
   have hτ : (τ : ℂ) ≠ 0 := τ.ne_zero
   have h1 : pt x (ModularGroup.S • τ) = z / (τ : ℂ) := by
     rw [pt, UpperHalfPlane.modular_S_smul, hz]
-    simp only [UpperHalfPlane.coe_mk]
+    simp only
     field_simp
     ring
   have h2 : pt (act x ModularGroup.S) τ = z := by

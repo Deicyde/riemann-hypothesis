@@ -1,4 +1,11 @@
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.MulMatMemUnitaryGroup
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsTestRep
+import Mathlib.LinearAlgebra.Charpoly.BaseChange
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.TensorProduct.IsBaseChangeFree
+import Mathlib.RingTheory.TotallySplit
 open GlobalTheory.JR Matrix MeasureTheory Filter Topology
 
 noncomputable section
@@ -68,8 +75,8 @@ theorem main : ∀ (F E : Type) [NontriviallyNormedField F] [NontriviallyNormedF
     simp only [LinearEquiv.conj_apply_apply, LinearEquiv.symm_apply_apply]
     induction t using TensorProduct.induction_on with
     | zero => simp
-    | tmul a x => simp [IsBaseChange.equiv_tmul, mul_smul_comm, map_mul]
-    | add s t hs ht => simp only [map_add, hs, ht, mul_add]
+    | tmul a x => simp [IsBaseChange.equiv_tmul, map_mul]
+    | add s t hs ht => simp only [map_add, hs, ht]
   have hT : Matrix.toLin' B = j.conj (Algebra.lmul E A.L (algebraMap A.K A.L τ)) := by
     apply LinearMap.ext
     intro v

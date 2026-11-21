@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NmatMulVec
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -61,7 +60,7 @@ theorem nmat_mul_nmat : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [Nu
       nmat σ J x (u + u') (c + c' - hA σ J u' u) *ᵥ v := by
     intro v
     rw [← Matrix.mulVec_mulVec, nmat_mulVec, nmat_mulVec, nmat_mulVec]
-    simp only [hA_add_left, hA_sub_left, hA_smul_left, hA_add_right, hxx, hux, hu'x, hxu]
+    simp only [hA_add_left, hA_sub_left, hA_smul_left, hA_add_right, hxx, hu'x, hxu]
     ext i
     simp only [Pi.sub_apply, Pi.add_apply, Pi.smul_apply, smul_eq_mul]
     ring

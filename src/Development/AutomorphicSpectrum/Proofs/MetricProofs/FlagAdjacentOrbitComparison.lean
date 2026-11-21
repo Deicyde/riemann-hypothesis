@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.IsLocSec
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.MinorIJMap
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.IsFibreChartIff
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.FlagCoverTwoFramesComparison
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.FlagModelBaseProjectionPoints
@@ -140,7 +139,7 @@ theorem fac_ne_zero (hj : j ≤ N) (i : Fin N) {h : Matrix (Fin N) (Fin N) ℂ} 
   have hN : 0 < N := by have := i.2; omega
   have hd' := GlobalTheory.CompanionTheory.Ar.PB.CPts.detFac_ne_zero hj (⟨N - 1, by omega⟩ : Fin N) hh hd
   have e1 : j ≤ N - 1 + 1 := by omega
-  simp only [detFac, if_pos e1, show N - 1 + 1 = N by omega, if_true, if_pos hj] at hd'
+  simp only [detFac, show N - 1 + 1 = N by omega, if_true, if_pos hj] at hd'
   simp only [Fib.facOf]
   have := left_ne_zero_of_mul hd'
   have := right_ne_zero_of_mul hd'

@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PlurisubharmonicCones.PhiTransport
 import Development.WeilBound.CoreStatements.PlurisubharmonicCones.TorusExpEqOne
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.IsDerivAt0CompLinMap
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ExistsUniqueLeftBasisCoordsAdicCompletion
+import Development.AutomorphicSpectrum.Proofs.GeometryProofs.PrincipalNearBoundary
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField TensorProduct Filter Topology Matrix
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory.CompanionTheory.Ar
 
@@ -73,7 +75,7 @@ theorem centre_ident (e : FamExp t.G M B ψ) {b : Fin n → ℂ} (hb : b ∈ B) 
           (t3 A φ g' u ℓ hφ hℓ _).2 ⟨_, rfl⟩⟩)
         by_cases hc : c = a
         · subst hc; simp
-        · simp [hc, Finsupp.single_apply]
+        · simp [hc]
       rw [e1, map_sum, star_sum, Matrix.mulVec_sum]
       refine Finset.sum_eq_zero fun a _ => ?_
       rw [map_smul, star_smul, Matrix.mulVec_smul, e2, smul_zero]

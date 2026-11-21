@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RowShiftEq
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.MemLatOIffExistsActO
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.OmVacuumEqSplitFacSmulSum
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.IdemSplit
+import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.IdemOrth
 
 noncomputable section
 

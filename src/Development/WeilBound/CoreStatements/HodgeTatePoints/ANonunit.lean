@@ -1,6 +1,5 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.HodgeTatePoints.RomNonunit
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.TeichmullerCharacterExists
 import Development.WeilBound.CoreStatements.HodgeTatePoints.ProdDigits
 
 open ReciprocityTheory.PGsh.L2 ReciprocityTheory.PGsh.Up GlobalTheory.CompanionTheory.Ar.GR

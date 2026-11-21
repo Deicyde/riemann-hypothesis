@@ -1,5 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.CarrierBase
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.StepPtRepPfA
+import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.StepPtRepPfB
 
 noncomputable section
 
@@ -270,7 +272,7 @@ private lemma eq_frame_expansion_hJ (G : PtRepPf.Fr ε r k) (v : Fin n → ℂ) 
       Finset.mem_univ, if_true, sub_self]
   · intro b
     simp only [PtRepPf.hJ_sub_right, PtRepPf.hJ_add_right, hJ_sum_right_root_lattice_thresholds, PtRepPf.hJ_smul_right, fe, G.ff,
-      G.fz, G.fw, mul_zero, Finset.sum_const_zero, zero_add, add_zero, mul_ite, mul_one, Finset.sum_ite_eq',
+      G.fz, G.fw, mul_zero, Finset.sum_const_zero, add_zero, mul_ite, mul_one, Finset.sum_ite_eq',
       Finset.mem_univ, if_true, sub_self]
   · simp only [PtRepPf.hJ_sub_right, PtRepPf.hJ_add_right, hJ_sum_right_root_lattice_thresholds, PtRepPf.hJ_smul_right, ze, zf,
       G.zz, G.zw, mul_zero, Finset.sum_const_zero, zero_add, add_zero]

@@ -1,24 +1,19 @@
-import Mathlib
-import Development.AutomorphicArithmetic.LocalEmbeddings.ExistsIsMapToFn
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFlagBundleIff
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleExistsArithmeticVarietyAltAlt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DimEqDimGrAdd
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EigenMetricSmoothOfHodge
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HodgeMetricSmoothOffBoundary
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MetricConjugationSymmetry
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DegreeComparisonRootMetrics
 import Development.AutomorphicArithmetic.DivisorFrames.ExistsTrueModelOver
 import Development.AutomorphicArithmetic.DivisorFrames.ExistsVectorBundleGluing
 import Development.AutomorphicArithmetic.DivisorFrames.FrameGenericChart
 import Development.AutomorphicArithmetic.DivisorFrames.FrameGenericChartNorm
-import Development.AutomorphicArithmetic.DivisorFrames.FrameGenericValuation
 import Development.AutomorphicArithmetic.DivisorFrames.FrameGenericIntegral
 import Development.AutomorphicArithmetic.DivisorFrames.ExistsGradedSectionFlag
-import Development.AutomorphicArithmetic.DivisorFrames.TrueModelChartDivisor
 import Development.AutomorphicArithmetic.DivisorFrames.TrueModelChartDivisorMetric
 import Development.AutomorphicArithmetic.DivisorFrames.TrueModelChartDivisorAlt
 import Development.AutomorphicArithmetic.DivisorFrames.FlagCompactVectorBundle
-import Development.AutomorphicArithmetic.DivisorFrames.FlagConnectionAdapted
 import Development.AutomorphicArithmetic.DivisorFrames.IsPullbackOfUniquePoints
 import Development.AutomorphicArithmetic.DivisorFrames.FlagCompactTriangularOver
 import Development.AutomorphicArithmetic.DivisorFrames.FlagPolynomialDimension
@@ -218,7 +213,7 @@ theorem nonempty_bunModel {D : D7} (O : Setup D) (hC : O.Core) {R : ℝ} (hR : 2
   have hi := i.2
   obtain ⟨τ, _ | _⟩ := a
   · simp only [rkB, cond_false] at hi
-    simp only [rootSym, cond_false, Bool.not_false, cond_true, pos, Fin.val_rev, rkB]
+    simp only [rootSym, cond_false, Bool.not_false, cond_true, pos, rkB]
     rw [if_neg (by omega)]
     congr 5
     change _ = ((Fin.rev i : Fin _) : ℕ)

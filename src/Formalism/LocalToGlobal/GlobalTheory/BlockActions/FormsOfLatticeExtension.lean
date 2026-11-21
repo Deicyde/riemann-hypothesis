@@ -1,8 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.GL6.ValuationClassTranslateMem
 import Formalism.LocalToGlobal.GlobalTheory.BlockActions.ClassMapEstimateOfPartial
 import Formalism.LocalToGlobal.GlobalTheory.BlockActions.ExistsOnOfPosDef
 import Formalism.LocalToGlobal.GlobalTheory.BlockActions.TilEqLevel
 import Formalism.LocalToGlobal.GlobalTheory.BlockActions.DefNOfFact
+import Formalism.LocalToGlobal.GlobalTheory.BlockActions.RestrictionSymmetric
 
 noncomputable section
 

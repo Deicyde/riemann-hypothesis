@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.HaarTransfer.SchurClosable
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.ReduceModChar
 
 namespace PI.UnitaryGroupMassFormula.SchurClosable.Main
 

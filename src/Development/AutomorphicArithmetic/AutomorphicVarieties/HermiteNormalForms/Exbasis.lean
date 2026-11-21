@@ -1,4 +1,8 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.HermiteNormalForms.SmulNeZeroLat
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.AutomorphicVarieties.HermiteNormalForms.SmulStrictMono
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
 
 open NumberField Matrix UpperTheory.V UpperTheory.V.KT
 open scoped ComplexOrder
@@ -29,7 +33,7 @@ theorem UpperTheory.V.KT.exbasis :
   let A : Matrix (Fin N) (Fin N) (𝓞 L) := fun i a => y a i
   have hCA : C = (algebraMap (𝓞 L) L).mapMatrix A := by
     ext i a
-    simp only [C, A, RingHom.mapMatrix_apply, Matrix.map_apply, ← hy]
+    simp only [C, A, ← hy]
     rfl
   have hdet : C.det = algebraMap (𝓞 L) L A.det := by
     rw [hCA]

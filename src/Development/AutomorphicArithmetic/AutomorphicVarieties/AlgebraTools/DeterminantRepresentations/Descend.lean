@@ -1,10 +1,6 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.WeilGroupCharacters.RepAlg
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.DeterminantRepresentations.ExtendPoly
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.DeterminantRepresentations.GenEval
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.DeterminantRepresentations.GenSpan
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.DeterminantRepresentations.MapApi
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.DeterminantRepresentations.InjTest
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.DeterminantRepresentations.ExtGen
 
 open Polynomial UpperTheory.V.W
 
@@ -26,7 +22,7 @@ private theorem exists_isCompact_preimage_eq_of_isLimit_of_isAffineHom {n : ℕ}
   have hx : MonoidAlgebra.mapRingHom G (MvPolynomial.map ι) (∑ j, b j • MonoidAlgebra.mapRingHom G (algebraMap A (MvPolynomial σ A)) (MonoidAlgebra.single (g j) 1)) = ∑ j, (MvPolynomial.map ι (b j)) • MonoidAlgebra.mapRingHom G (algebraMap A' (MvPolynomial σ A')) (MonoidAlgebra.single (g j) 1) := by
     simp [map_sum, MonoidAlgebra.mapRingHom_single]
   rw [hx, key, ← hQ, MvPolynomial.map_aeval]
-  simp [MvPolynomial.aeval_def, MvPolynomial.eval₂_map]
+  simp
   rw [MvPolynomial.bind₁, MvPolynomial.aeval_def, MvPolynomial.eval₂_map]
   rfl
 
@@ -81,7 +77,7 @@ theorem UpperTheory.V.AlgebraTools.Det.descend :
     have hs : MonoidAlgebra.mapRingHom G (MvPolynomial.map ι) (b • x) =
         MvPolynomial.map ι b • MonoidAlgebra.mapRingHom G (MvPolynomial.map ι) x := by
       ext g
-      simp [MonoidAlgebra.mapRingHom_apply]
+      simp
     rw [hd, map_mul, map_pow, hd, hs, D'.homog]
   obtain ⟨D, hD⟩ := UpperTheory.V.AlgebraTools.Det.extendPoly d hnat hhom
   have hex : D.map ι = D' := by

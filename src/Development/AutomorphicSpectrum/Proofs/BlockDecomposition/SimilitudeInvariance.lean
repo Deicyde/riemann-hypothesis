@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ScalHHermScal
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SimilitudeBetweenNonemptySpheresStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ThetaMeasureIndependentChoicesStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ThetaMeasureSimilitudeStatement

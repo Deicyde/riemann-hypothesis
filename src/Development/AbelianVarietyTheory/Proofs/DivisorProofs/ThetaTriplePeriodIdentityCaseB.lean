@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocOpInfMul
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilActionMapsSchwartz
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBLocalEigenTripleStatement
 
 noncomputable section

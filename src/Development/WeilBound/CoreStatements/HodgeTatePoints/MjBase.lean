@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.TranslateMemIndOrder
 import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.DualOrder
-import Development.WeilBound.CoreStatements.HodgeTatePoints.TwhopfInd
 
 open GlobalTheory.CompanionTheory.Ar.BT TensorProduct
 

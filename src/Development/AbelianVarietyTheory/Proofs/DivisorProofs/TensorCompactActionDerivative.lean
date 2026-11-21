@@ -1,5 +1,6 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.Tpr
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.PosPartUnitaryMul
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.IsTemperedGLOfIsUnitaryLSeg
 open NumberField Matrix GlobalTheory.CuspRep GlobalTheory.GKCoh GlobalTheory.WignerGL GlobalTheory.WigAlg Formalism.REAL
 open scoped TensorProduct
 

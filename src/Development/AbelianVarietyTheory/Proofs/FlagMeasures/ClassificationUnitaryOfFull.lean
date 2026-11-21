@@ -1,9 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ExistsIsHaarMeasureSUJ
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.HarishChandraPermuteStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.SignKeyTrueLtFalse
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.SqIntIrrPerm
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.UnitaryGroupStructuresPermConjInvariant
 open MeasureTheory Matrix Finset Formalism.MainNotions.S Formalism.REAL Formalism.QuantumDeterminants GlobalTheory.Dec GlobalTheory.DSId GlobalTheory.DSSU
 open scoped InnerProductSpace
 
@@ -53,18 +50,18 @@ theorem classU_of_classF : ∀ n : ℕ, (∀ ε : Fin n → Bool, ClassF ε) →
         simp only [Equiv.trans_apply]
         rw [e1a, hw, ← e1a ε ((t ε).symm a), Equiv.apply_symm_apply]
       · funext a
-        simp [Equiv.symm_trans_apply]
+        simp
     obtain ⟨T2, hT2⟩ := hC (std ε) lam₀ _ hpar₀ hconj
     refine ⟨T.trans T2, ?_⟩
     intro g hg v
     have hcomp : std ε ∘ (s.trans (t ε)) = ε ∘ s := by
-      funext a; simp [Equiv.trans_apply, e1a]
+      funext a; simp [e1a]
     have hh : g.submatrix (s.trans (t ε)).symm (s.trans (t ε)).symm ∈ UJset (std ε) :=
       (((GlobalTheory.Dec.PermGroup.permGroup n (std ε) (s.trans (t ε))).1 g).1).mp (by rw [hcomp]; exact hg)
     have hσh : σ₀ (g.submatrix (s.trans (t ε)).symm (s.trans (t ε)).symm) = σ' (g.submatrix s.symm s.symm) := by
       show σ' ((g.submatrix _ _).submatrix (t ε) (t ε)) = _
       rw [Matrix.submatrix_submatrix]
-      congr 2 <;> funext a <;> simp [Equiv.symm_trans_apply]
+      congr 2 <;> funext a <;> simp
     simp only [LinearIsometryEquiv.trans_apply]
     rw [← hσh, hT _ hh, hT2 _ hh]
 

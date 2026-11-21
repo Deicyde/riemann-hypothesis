@@ -1,16 +1,14 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.NormalFam
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ClassSumsSpan
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OscillatorModelExtensionSecond
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeEmbeddingIdealLevel
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ModelsAtRecordCore
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LettersEqFockVarsCore
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFrameConstantsOfCharacterisationCoreStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCuspFormClassSumNormalisedData
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsAdelicLiftEqGeometricClassSumAllTuplesStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockCoefficientMapExtremalEqPhaseSmulLettersStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaKernelOneClassEqClassicalShortSeriesStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaKernelFinitePointMemSpanRationalFormLiftsStatement
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsOmegaField
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LevelMapExtension
+import Formalism.LocalToGlobal.ProjectiveLattices.DepthTie
 
 set_option autoImplicit false
 set_option synthInstance.maxHeartbeats 400000
@@ -258,7 +256,7 @@ theorem kernel_eq_shortVal (hC : GlobalTheory.Hk3.Core R F) (hT : TieIn T R κ v
   refine Eq.trans (congrArg (fun z => ka * (_ * z)) e1.symm) ?_
   refine Eq.trans ?_ (congrArg (fun z => _ * z) hgeo.symm)
   have halg : ∀ s : O.c'.F, algebraMap O.c'.F ℂ s = inC O.c' s := fun _ => rfl
-  simp only [cmpConst, halg, map_mul, map_inv₀, map_natCast, map_one, inv_one, one_mul]
+  simp only [cmpConst, halg, map_mul, map_inv₀, map_natCast, inv_one, one_mul]
   have key : ∀ s c m k e a z n th : ℂ, ka * (s * (c * m * k) * (e * a * z) * n * th) =
       ka * s * c * m * e * (a * n * z * k * th) := fun s c m k e a z n th => by ring
   exact key _ _ _ _ _ _ _ _ _

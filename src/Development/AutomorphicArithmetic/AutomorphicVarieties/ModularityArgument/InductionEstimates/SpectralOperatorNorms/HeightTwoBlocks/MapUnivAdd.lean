@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.InductionEstimates.SpectralOperatorNorms.HeightTwoBlocks.Blo
 import Development.AutomorphicArithmetic.Foundations.Convolution.BlockHeckeSlices.CuspidalNormBounds.NearBlo
 import Development.AutomorphicArithmetic.Foundations.Convolution.BlockHeckeSlices.CuspidalNormBounds.ResTyp
@@ -67,7 +69,7 @@ private theorem step_key {r s : ℕ} (b : Blo S r) (d : Dat S s) :
       simpa [par] using hΛ τ
     · rw [ptS_cons]
       have := ht w hw
-      simp only [par, key, if_neg hw] at this
+      simp only [par, if_neg hw] at this
       rw [this, ht' w hw]
       simp
   · rintro ⟨(z : Fin (d.len + 1) → ℂ), rfl, ht⟩

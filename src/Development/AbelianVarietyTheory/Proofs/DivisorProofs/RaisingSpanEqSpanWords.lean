@@ -1,6 +1,4 @@
-import Mathlib
-import CompanionTheory.HarishChandraModules.LowKTypeMultiplicity.EigenspaceCyclicDensity.LowKMultOneP
-import CompanionTheory.HarishChandraModules.LowKTypeMultiplicity.DiscreteSeriesCharacters.DiscreteSeriesInfinitesimalCharacter
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HolomorphicDiscreteSeries
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ComplexifiedDerivedActionEqSumKFiniteModuleStatement
 open Matrix GlobalTheory.HolDS
@@ -68,11 +66,11 @@ theorem raisingSpan_eq_span_words : ∀ (n : ℕ) (ε : Fin n → Bool) (H : Typ
         congr 1
         rw [Finset.sum_eq_single p.1, Finset.sum_eq_single p.2]
         · simp
-        · intro b _ hb; simp [Matrix.single_apply, Ne.symm hb]
+        · intro b _ hb; simp [Ne.symm hb]
         · simp
         · intro a _ ha
           refine Finset.sum_eq_zero fun b _ => ?_
-          simp [Matrix.single_apply, Ne.symm ha]
+          simp [Ne.symm ha]
         · simp
     refine Submodule.subset_span ⟨l.map fun p : Fin n × Fin n => Matrix.single p.1 p.2 (1 : ℂ), ?_, (x : H), hx, key l⟩
     intro Z hZ

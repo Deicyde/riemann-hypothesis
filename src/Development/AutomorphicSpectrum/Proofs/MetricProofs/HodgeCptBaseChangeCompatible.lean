@@ -1,19 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.ColFlags
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.AdelicGroupAlgebraActionInjective
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsHTFormOver
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.PushInvertible
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.GlueApplyOfNotInFibre
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsHodgeLine
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.SabComp
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.PullCub
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.LawsProved
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.GenBridgeA
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsLieModel
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LieModelExistsUniqueAct
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.GenMapStalkMap
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.OmegaLatticeDominantCompatStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LieLatticeDominantCompatStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.FullTorsionIntegrallyClosedStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.RegAtNoetherianModelNoetherianStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.NotInFibreOfIsUnit
@@ -28,13 +17,7 @@ import Development.AutomorphicSpectrum.Proofs.GeometryProofs.IntegralElementRegu
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.DifferentIdealLocalGeneratorStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.DifferentScaledLatticeExtensionStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.AbelianSchemePointObjectStatement
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.GlobalSectionsRankAlgClosed
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.SabPull
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.PushInvertibleIffOfIsReduced
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.GenWeil
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HodgeTateOmegaCoherentStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LieOmegaLatticeVectorBundleStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsGenericWeilPairingStatement
 import Development.AutomorphicSpectrum.Proofs.DivisibilityProofs.HodgeComponentFactorPoint
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.GenericPointNormalCoords
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.GenericPointComponentLocalRing
@@ -100,7 +83,7 @@ theorem flat_ker {R R' : Type} [CommRing R] [CommRing R'] (φ : R →+* R') (hφ
     simp only [LinearMap.comp_apply, LinearMap.zero_apply, Finsupp.coe_zero, Pi.zero_apply] at h1
     have h2 : f (Pi.single k 1) = ∑ r, A k r • (Pi.single r 1 : Ix → R) := by
       funext t
-      simp [f, Matrix.mulVec_single_one, Finset.sum_apply, Pi.single_apply]
+      simp [f, Finset.sum_apply, Pi.single_apply]
     rw [h2, map_sum] at h1
     simpa [Matrix.mulVec, dotProduct, Finsupp.finset_sum_apply] using h1
   · have h1 := congrArg (fun g => g (Pi.single k 1)) hxy
@@ -308,7 +291,7 @@ theorem flat_dual (hφ : φ.Flat) (hφi : ∀ a, (φ a : Ω') = i a) (hj : IsExt
         rw [hω']
         exact Submodule.subset_span ⟨_, hm, rfl⟩)
       rw [hev] at h2
-      simp only [LinearMap.smul_apply, hBb, smul_eq_mul, mul_ite, mul_one, mul_zero, apply_ite i, map_natCast, map_zero,
+      simp only [LinearMap.smul_apply, hBb, smul_eq_mul, mul_ite, mul_zero, apply_ite i, map_zero,
         Finset.sum_ite_eq', Finset.mem_univ, if_true] at h2
       rw [_root_.mul_one, map_natCast] at h2
       rw [mul_comm]

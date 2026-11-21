@@ -1,4 +1,7 @@
-import Development.EtaleCohomology.CohomologicalPurity.LeafIndExc
+import BuildAid.Leniency.Open
+import Development.EtaleCohomology.CohomologicalPurity.InrFold
+import Mathlib.Tactic.Polynomial.Basic
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry Opposite GlobalTheory.EtC

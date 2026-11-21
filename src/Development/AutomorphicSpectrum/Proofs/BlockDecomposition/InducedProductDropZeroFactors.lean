@@ -1,9 +1,7 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.ZelevinskyJacquet.ZelevinskyCosocles.LUnlinkedComm
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DropHom
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.StandardBlocksReindexStrictMono
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.TensorProductDropZeroFactors
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.JordanHolderMultiplicityJacquetEqBorelJacquetOfS
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ParIndJacPlacing
 
 noncomputable section

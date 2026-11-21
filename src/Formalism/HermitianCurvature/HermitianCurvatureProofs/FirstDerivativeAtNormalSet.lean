@@ -1,5 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.SmoothLevOfLoc
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.DegLiftOf
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.BaseIndexConstantInjective
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.PBGSlice
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.SigmaFiniteOfHaar
+import Formalism.HermitianCurvature.StatementHeads
 
 open Matrix Finset MeasureTheory
 open scoped ComplexConjugate

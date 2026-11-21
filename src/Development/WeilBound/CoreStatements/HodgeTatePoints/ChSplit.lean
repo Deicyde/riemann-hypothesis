@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.EigenProjectorsSplitActionStatement
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.HodgeTatePoints.DegLeOfEquiv
+import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.EigenProjectorsSplitAction
+import Mathlib.Order.CompletePartialOrder
 
 open GlobalTheory.CompanionTheory.Ar.Crv
 
@@ -102,7 +103,7 @@ private theorem deg_eq_zero_of_finrank_eq_zero {K : Type} [Field K] (C : ACurve 
     rw [h]
     infer_instance
   unfold deg
-  simp [Module.Basis.det_apply, Matrix.det_isEmpty]
+  simp
 
 private theorem subDeg_top_eq_sum_subDeg_of_all_eq_bot {K : Type} [Field K] (C : ACurve K) {V : Type} [AddCommGroup V]
     [Module K V] [FiniteDimensional K V] (L : C.I → AddSubgroup V) {S : Type} [Fintype S]

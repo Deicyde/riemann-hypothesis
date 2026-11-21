@@ -1,4 +1,7 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.GammaLaurentFactors.LaurentBlockInduction.LdDefs
+import BuildAid.Leniency.Open
+import Formalism.DoubleCosetMeasures.Statement
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import GroundTheory.AutomorphicForms.GL2.GJFEDefs
 
 noncomputable section
 

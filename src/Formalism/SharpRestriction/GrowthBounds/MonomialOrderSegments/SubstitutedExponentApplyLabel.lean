@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.MonomialOrderSegments.GlobalTheory
+import Formalism.SharpRestriction.GrowthBounds.MonomialOrderSegments.DigitPartMonomial
+import Formalism.SharpRestriction.GrowthBounds.MonomialOrderSegments.TestBoundOfRhoAndNormSets
 
 noncomputable section
 

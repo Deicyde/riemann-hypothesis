@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.IntegralStructures.ZetaCharacterDivisibility.CharOfZeta
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SplitPlaceUnitaryLocalPointsEquivGL
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.OnlyStableSubspaces
 
 open NumberField IsDedekindDomain Neutral.B1 Formalism.L2.Host Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.MainNotions.N Polynomial
 open GlobalTheory.CuspRep GlobalTheory.WeilDeligne GlobalTheory.Pst GlobalTheory.HeckeGal GlobalTheory.UnitaryBC GlobalTheory.Cong GlobalTheory.CongL GlobalTheory.RoadWGeo
@@ -17,7 +20,7 @@ private theorem map_scalar' {R S : Type} [CommRing R] [CommRing S] (f : R →+* 
   ext i j
   by_cases h : i = j
   · subst h; simp [Matrix.GeneralLinearGroup.scalar]
-  · simp [Matrix.GeneralLinearGroup.scalar, Matrix.diagonal_apply, h]
+  · simp [Matrix.GeneralLinearGroup.scalar, h]
 
 section
 

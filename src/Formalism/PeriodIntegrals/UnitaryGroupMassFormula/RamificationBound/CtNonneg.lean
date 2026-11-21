@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.RamBound
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
 
 open Finset MvPolynomial PI.RamBound
 

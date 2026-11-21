@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.Statement
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.HeckeActMem
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.Heckebasic
 
 noncomputable section
 

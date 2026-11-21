@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.GL2Classical.Smooth
-import GroundTheory.AutomorphicForms.HarishChandraCentre
 import GroundTheory.AutomorphicForms.AutomorphicFormSpaces.SmoothKZ
+import GroundTheory.AutomorphicForms.HarishChandraCentre.Consequences
 
 open NumberField Matrix
 

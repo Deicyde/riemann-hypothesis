@@ -1,9 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsIsCan
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.M3bExpHolds
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.ModerateCoefficientPositivityHolds
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.BoundedSectionAlgebra
 import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.FjCauchyBound
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Analysis.Normed.Group.Tannery
 open NumberField AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.FD Formalism.L2.Pj GlobalTheory.HeckeEx
 open GlobalTheory.Dict (castFr)
 open GlobalTheory.FrameNorm (IsUnitFr)
@@ -17,7 +18,7 @@ theorem bddSec_tendsto_constTerm : ∀ (E : Type) [Field E] [NumberField E] [IsC
     GlobalTheory.FjCauchy.flow_mem_dom X hξ hx _ fun τ => by
       have := GlobalTheory.FjCauchy.tt_pos X hξ hx τ
       simp only [Complex.mul_im, Complex.I_re, Complex.I_im, Complex.ofReal_re, Complex.ofReal_im,
-        zero_mul, one_mul, zero_add]
+        zero_mul, zero_add]
       linarith
   refine ⟨hdom, ?_⟩
   have hexp := m3bExp_holds (E := E) r X la P hP.1 ξ hξ x hx

@@ -1,5 +1,8 @@
-import Mathlib
-import GroundTheory.FunctionField.PlaceBridge
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.FunctionField.PlaceDefs
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.FieldTheory.SeparablyGenerated
 
 namespace GroundTheory.Arith.SchemeCoh
 

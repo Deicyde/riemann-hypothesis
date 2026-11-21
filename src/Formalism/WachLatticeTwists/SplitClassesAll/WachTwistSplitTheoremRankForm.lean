@@ -1,4 +1,6 @@
-import Formalism.WachLatticeTwists.SplitClassesAll.WachTwistSplitTheoremAllTwists
+import BuildAid.Leniency.Open
+import Formalism.WachLatticeTwists.CharacterSplitJumps.WachTwistSplitTheoremFromTorsionBound
+import Formalism.WachLatticeTwists.SplitClassesAll.Statement
 
 open Finset Classical
 

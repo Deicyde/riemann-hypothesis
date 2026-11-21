@@ -1,5 +1,16 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.ConeSectionRestriction.SeamDefs
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false
@@ -22,7 +33,7 @@ theorem ra_tpow_zero {d : ℕ} (t : Fin d → Rˣ) : tpow t 0 = 1 := by
 
 theorem ra_tpow_single {d : ℕ} (t : Fin d → Rˣ) (k : Fin d) (z : ℤ) : tpow t (Pi.single k z) = ((t k ^ z : Rˣ) : R) := by
   unfold tpow
-  rw [Finset.prod_eq_single k (fun j _ hj => by simp [Pi.single_apply, hj]) (by simp)]
+  rw [Finset.prod_eq_single k (fun j _ hj => by simp [hj]) (by simp)]
   simp
 
 theorem ra_unit_pow_eq {d : ℕ} (t : Fin d → Rˣ) (k : Fin d) (N : ℕ) :

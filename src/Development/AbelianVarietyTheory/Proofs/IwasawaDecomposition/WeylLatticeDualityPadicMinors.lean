@@ -1,11 +1,6 @@
-import Mathlib
-import Formalism.UnipotentAdelicQuotients.WeylLatDual
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.DualWeylEqSpanColProd
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.StandardWeylLatticesFockDual
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.GramInjectivity.InstFintypeColChoice
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.WwCauchyBinet
-import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.WwInjective
-import Formalism.LocalToGlobal.Columns.CoefficientsModP.FkPderivBlockEmbNe
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ColumnMinorProductsFockReproducingDualWeylStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ColumnProductTransitionMatricesStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.WeylLatticeIntegralColumnMinorExpansionStatement
@@ -142,7 +137,7 @@ theorem nint {p : ℕ} [Fact p.Prime] (z : ℤ) : ‖(z : ℂ_[p])‖ ≤ 1 := I
 
 theorem sum_prod_eq {Lt : Type} [Fintype Lt] [DecidableEq Lt] {κ : Lt → Type} [∀ s, Fintype (κ s)] {R : Type} [CommRing R]
     (f : ∀ s, κ s → R) : ∑ J : (∀ s, κ s), ∏ s, f s (J s) = ∏ s, ∑ j, f s j :=
-  (Finset.prod_univ_sum (fun s => (Finset.univ : Finset (κ s))) f).symm.trans (by simp [Fintype.piFinset_univ])
+  (Finset.prod_univ_sum (fun s => (Finset.univ : Finset (κ s))) f).symm.trans (by simp)
 
 theorem colLen_le {N : ℕ} (Y : YoungDiagram) (h0 : ∀ r, N ≤ r → Y.rowLen r = 0) : Y.colLen 0 ≤ N := by
   by_contra h

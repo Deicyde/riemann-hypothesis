@@ -1,10 +1,6 @@
-import Mathlib
-import Formalism.SharpRestriction.GlobalSchurBounds.StandardLattice
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousAtPlace
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.LcscAdelicUnitaryGroup
 import Development.WeilBound.ThetaLifts.TowerModels.TwistedSums.IsLocallyConstantHeisenbergLatticeVacuumFunction
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSplittingSplitOm
 
 open Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice
 open IsDedekindDomain NumberField MeasureTheory Matrix
@@ -97,7 +93,7 @@ theorem exists_dual_nbhd : ∀ {F : Type} [Field F] [NumberField F] (v : GlobalT
         convert hinv using 1
         simp only [Pi.single_eq_same, hb]
         field_simp
-      · simp [Pi.single_apply, hj]
+      · simp [hj]
     apply ht₀
     convert hw' _ hw using 2
     simp [dotProduct_single]
@@ -115,7 +111,7 @@ theorem exists_dual_nbhd : ∀ {F : Type} [Field F] [NumberField F] (v : GlobalT
         convert this using 1
         simp only [Pi.single_eq_same, hb]
         field_simp
-      · simp [Pi.single_apply, hj]
+      · simp [hj]
     apply ht₀
     convert hw' _ hw using 2
     simp [single_dotProduct]

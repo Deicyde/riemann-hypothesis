@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.IsNormalFormStabilizerMeasure
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.ExistsOrthonormalOfLinearIndependent
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Analysis.CStarAlgebra.Module.Constructions
 open MeasureTheory Matrix
 open scoped InnerProductSpace ENNReal
 
@@ -21,7 +22,7 @@ theorem det_inner_sum_smul {E : Type} [NormedAddCommGroup E] [InnerProductSpace 
   rw [← Matrix.det_mul]
   congr 1
   ext a a'
-  simp [Matrix.mul_apply, inner_sum, inner_smul_right, mul_comm]
+  simp [Matrix.mul_apply, mul_comm]
 
 theorem norm_det_inner_le_of_det_eq_one (n b : ℕ) (v u : Fin b → EuclideanSpace ℂ (Fin n))
     (t : Matrix (Fin b) (Fin b) ℂ) (ht : t.det = 1)

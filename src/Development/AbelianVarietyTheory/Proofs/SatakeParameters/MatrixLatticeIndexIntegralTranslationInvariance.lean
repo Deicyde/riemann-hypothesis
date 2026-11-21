@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.HoweUnram
+import BuildAid.Leniency.Variable
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.MemIntMat
 
 noncomputable section

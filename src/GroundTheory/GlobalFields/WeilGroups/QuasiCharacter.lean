@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.TateThesis.HeckeChar
-import GroundTheory.GlobalFields.IdeleGroups.IdeleNorms
 import GroundTheory.GlobalFields.IdeleGroups.NormOneCompact
 import GroundTheory.GlobalFields.TateThesis.IdeleMeasureNormOne
 

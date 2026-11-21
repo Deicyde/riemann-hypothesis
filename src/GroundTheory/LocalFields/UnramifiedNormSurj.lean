@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.LocalFields.UnramifiedDefs
 import GroundTheory.LocalFields.ExistsUnitFiltrationUnitsLeRangeNormUnits
-import GroundTheory.LocalFields.FilteredSurj
 import GroundTheory.GlobalFields.KummerTheory.LocalIndex
 
 noncomputable section

@@ -1,6 +1,6 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.ArithmeticCylinders
-import Formalism.SharpRestriction.LevelLetterCocycles.TwGood
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.LevelLetterCocycles.IntegralHeckeForms
 
 noncomputable section
 

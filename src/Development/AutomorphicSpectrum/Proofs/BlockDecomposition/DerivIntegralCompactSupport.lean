@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Rr
 open MeasureTheory Matrix Finset
 open scoped ContDiff ComplexConjugate InnerProductSpace Topology

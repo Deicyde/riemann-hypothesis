@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.FinalTheorems
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.CupProductCoboundaryMod
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.MainNotions.N GlobalTheory.GalOfCusp UpperTheory.V UpperTheory.V.Af UpperTheory.V.HV GlobalTheory.Ord2
 open scoped Matrix
@@ -151,7 +151,7 @@ theorem twoCocycleModPow_coboundary_of_frobenius_split (l : ℕ) [Fact l.Prime] 
   · rw [continuousOn_iff_continuous_restrict]
     have hc : Continuous (fun s : ↥D => T (k s)) :=
       ((isLocallyConstant_hom d hker).comp fun z => T (Multiplicative.toAdd z).val).continuous
-    exact hc.congr fun s => by simp [Set.restrict, s.2]
+    exact hc.congr fun s => by simp [s.2]
   · intro s; dsimp only; split_ifs
     · exact Tr_mem c ξ g hint _
     · exact zero_mem _

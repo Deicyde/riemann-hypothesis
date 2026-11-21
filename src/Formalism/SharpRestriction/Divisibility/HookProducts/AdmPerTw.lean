@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.Divisibility.WeightDegreeSizes
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.OrbitPlaces
 import Formalism.SharpRestriction.Divisibility.StatementFT.PeriodPointConditions
 

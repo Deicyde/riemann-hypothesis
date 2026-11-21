@@ -1,6 +1,6 @@
-import Mathlib
-import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.DCdE
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchurLemmaHeisenbergCommutingThetaOperator
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ReindexDblIncM
 open scoped TensorProduct Matrix
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes MeasureTheory
 open GlobalTheory.WeilM GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels

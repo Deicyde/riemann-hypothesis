@@ -1,4 +1,5 @@
-import Formalism.ThetaLiftIndependence.Statement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianLattices.FinalNeighbourConstruct
 import Formalism.ThetaLiftIndependence.ThetaOrbitSums.LatLiftIndep
 

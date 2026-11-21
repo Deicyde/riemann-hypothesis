@@ -84,7 +84,7 @@ theorem hessCRestrict_thm : HessCRestrictStatement := by
     rw [hLc]
     funext m
     by_cases hm : m = j
-    · rw [hm]; simp [Pi.single_apply, (Fin.succAbove_ne j i).symm]
+    · rw [hm]; simp [(Fin.succAbove_ne j i).symm]
     · obtain ⟨k, rfl⟩ := Fin.exists_succAbove_eq hm
       simp [Pi.single_apply]
   have hs1 : ∀ i : Fin n, Lc (Pi.single i 1) = Pi.single (j.succAbove i) 1 := by

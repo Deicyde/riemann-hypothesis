@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.LocalEmbeddings.ConeBDefs
 import Development.AutomorphicArithmetic.DivisorFrames.GaussianFourierConjPower
+import Mathlib.MeasureTheory.Constructions.HaarToSphere
+import Std.Tactic.BVDecide.Normalize.Prop
 open MeasureTheory FreeSingleHomotopyEquivDiscreteChains.UpperTheory.Dv.ConeB
 
 private lemma rad_int (p : ℝ) (hp : -2 < p) :

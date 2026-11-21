@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.TauL
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.LocalFields.LocalFourier
 
 noncomputable section
 

@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.HarishChandraModules.LowKTypeMultiplicity.DiscreteSeriesCharacters.CapelliDeterminantBlockProduct
-import Formalism.RealPlaceAnalysis.ThirdArithmeticHolds
+import Mathlib.Analysis.Normed.Algebra.MatrixExponential
+import Mathlib.Tactic.ENatToNat
 
 open Matrix Finset
 
@@ -193,7 +195,7 @@ theorem wtLink : CompanionTheory.D.DSIC.WtLink := by
       rw [Finset.sum_eq_single a]
       · simp [θ]
       · intro b _ hb
-        simp [θ, Pi.single_apply, hb]
+        simp [θ, hb]
       · intro ha
         exact absurd (Finset.mem_univ a) ha
     rw [hsum] at hu

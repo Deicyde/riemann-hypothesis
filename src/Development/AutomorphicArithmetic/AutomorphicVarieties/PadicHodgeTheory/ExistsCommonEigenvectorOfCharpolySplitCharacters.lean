@@ -1,10 +1,7 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.HeckeAlgebras.Distinct
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.WdDefs
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PadicHodgeTheory.LocalPublishedTheorems
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.DeRhamPotSemistable
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.CharAbove
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.WdParameterMonodromyZeroIffPotentiallyCrystallin
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FiniteDimensionalFilDR
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsContinuousPadic
+import Mathlib.LinearAlgebra.Eigenspace.Charpoly
+import Mathlib.RingTheory.PiTensorProduct
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.WeaklyAdmissibleFiltrations Formalism.MainNotions.N GlobalTheory.WeilDeligne GlobalTheory.Pst Polynomial Module Matrix UpperTheory.V.W UpperTheory.V.Hi
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
@@ -98,7 +95,7 @@ theorem UpperTheory.exists_common_eigenvector_of_charpoly_split_characters :
     have key : ∀ y (hy : y ∈ E), Polynomial.aeval (ρ Φ) p y = ((Polynomial.aeval A p) ⟨y, hy⟩ : W) := by
       intro y hy
       rw [Polynomial.aeval_eq_sum_range, Polynomial.aeval_eq_sum_range]
-      simp [A, Module.End.pow_restrict, LinearMap.sum_apply]
+      simp [A, LinearMap.sum_apply]
       refine Finset.sum_congr rfl (fun m _ => ?_)
       rw [Module.End.pow_restrict]
       rfl

@@ -1,19 +1,10 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FreeCell
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LocalWittIsotropicToE0Statement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.OrbitIntegralInvariantE0Statement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.UnitaryMovingUnitVectorStatement
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FreeCellOpenIndependentStatement
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeil.ArchimedeanSiegelWeil.PlaceIntegrals.LocalGramFibreIntegralEq
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LocalGramFibrationDisintegration
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GlobalVolumeRankOneProduct
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HyperbolicSumNondegenerateFrame
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LinearlyIndependentFramesOpenStatement
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.TensorLocallyCompactRingStatement
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.AdelicUnitaryGroupLocallyCompactStatement
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.CoordinateHaarMeasureStatement
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.HermitianMatricesLocallyCompactBorelStatement
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.DisintegrationDensityExists
 open HeckeCharacterZeroLocus.SiegelWeilU GlobalTheory.CompanionTheory.SW NumberField IsDedekindDomain MeasureTheory Topology
 open scoped TensorProduct ENNReal NNReal Matrix
 open GlobalTheory.CompanionTheory.WeilSiegel.Frame GlobalTheory.CompanionTheory.WeilSiegel.Free GlobalTheory.CompanionTheory.WeilSiegel.HypStep GlobalTheory.CompanionTheory.WeilSiegel.HypStage
@@ -41,7 +32,7 @@ theorem isotropic_cvec_apply_basis_zero (σ : E →ₐ[F] E) {M : ℕ} (J : Matr
   have h1 : (Fin.cons 1 fun _ => 0 : Fin (M + 2) → R ⊗[F] E) 1 = 0 := rfl
   have h2 : (Fin.cons 1 fun _ => 0 : Fin (M + 2) → R ⊗[F] E) 0 = 1 := rfl
   conv_rhs => rw [← vH_eta x]
-  simp only [cvec, tHalf, ht, h0, h1, h2, hR_tail_zero, mul_zero, zero_mul, sub_zero, mul_one, one_mul, add_zero]
+  simp only [cvec, tHalf, ht, h0, h1, h2, hR_tail_zero, mul_zero, sub_zero, mul_one, one_mul, add_zero]
   congr 1
   funext i
   have : (Fin.cons 1 fun _ => 0 : Fin (M + 2) → R ⊗[F] E) i.succ.succ = 0 := rfl
@@ -72,7 +63,7 @@ theorem gramR_e0 (σ : E →ₐ[F] E) {M : ℕ} (J : Matrix (Fin M) (Fin M) E) :
   show hR R σ (hypOne J) (Fin.cons 1 fun _ => 0) (Fin.cons 1 fun _ => 0) = 0
   simp only [hR, hform, JR]
   rw [Fin.sum_univ_succ]
-  simp [Fin.sum_univ_succ, hypOne_zero_zero, hypOne_zero_one]
+  simp [Fin.sum_univ_succ, hypOne_zero_zero]
 
 end Local
 

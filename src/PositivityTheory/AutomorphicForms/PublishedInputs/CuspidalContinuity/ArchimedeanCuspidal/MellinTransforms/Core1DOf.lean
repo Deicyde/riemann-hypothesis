@@ -1,8 +1,5 @@
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.AdFormOf
-import GroundTheory.GlobalFields.TateThesis.IdeleMeasureNormOne
-import GroundTheory.GlobalFields.TateThesis.IdeleMeasureQuotient
-import GroundTheory.GlobalFields.TateThesis.ConductorIdeal
-import GroundTheory.GlobalFields.TateThesis.HeckeChar
 
 noncomputable section
 

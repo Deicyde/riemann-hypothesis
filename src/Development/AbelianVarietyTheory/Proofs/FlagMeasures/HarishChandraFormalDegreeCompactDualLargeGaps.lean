@@ -1,11 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.BridgeLitG
-import Development.AbelianVarietyTheory.Definitions.Foundations.CdScaleTieIff
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.FdCons
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.HaarVolumes.OmegaDensityUnique
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.LaplaceOperators.LaplaceFoundations.PsiFor
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.LaplaceOperators.KTypeLemma.StdGapOfGapLap
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.HighestWeights.Exists
+import Formalism.SharpRestriction.CuspSpanNormBounds.BruhatCellsKronecker.FamilyFormalDegreeLowerBound
 
 noncomputable section
 

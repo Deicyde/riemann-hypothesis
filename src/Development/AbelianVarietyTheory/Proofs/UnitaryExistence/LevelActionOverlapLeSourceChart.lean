@@ -1,6 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.IsLevMove
-import Development.AbelianVarietyTheory.BlockTheory.ExistenceTori.LevelPairAction
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.ProjectiveLattices.IsCombAt
 
 noncomputable section
 

@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.AlgebraicTheory.StatementEig
 import ReciprocityTheory.EigenFrames.EigenSt
 
@@ -56,7 +57,7 @@ theorem CapelliMinorMembership.key_term {X : Fields} (A : Amb X) {a b : ℕ} {p 
 theorem CapelliMinorMembership.collapse {K κ B C : Type} [AddCommMonoid K] [Fintype κ] [Fintype B] [DecidableEq B]
     [Fintype C] [DecidableEq C] (g : κ → K) (β₁ : B) (α₁ : C) :
     ∑ i, ∑ β : B, ∑ α : C, (if α = α₁ then (if β = β₁ then g i else 0) else 0) = ∑ i, g i := by
-  simp [Finset.sum_ite_eq', Finset.sum_ite_eq]
+  simp [Finset.sum_ite_eq']
 
 theorem kerFrame_of (h : EigenFrameDual) : KerFrame := by
   intro X A a b N N' L p _ ι hd hinj hcD hn

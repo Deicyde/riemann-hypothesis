@@ -1,5 +1,12 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FirstCohomology.ReducedBasisStatement
-import ReciprocityTheory.ReducedBases.LatticeReduction
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import ReciprocityTheory.ReducedBases.GsInnerBOfLt
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 

@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StHolGermsIntegrallyClosed
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StHolGermsUFD
+import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PHolGermsDomain
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.IndefiniteRowSideFullHecke.ComplexSets

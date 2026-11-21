@@ -1,8 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MonoSpMapRingOfIntegersAlt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.ExhaustFStatementPfB
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.SCoordStatementPf
 import ReciprocityTheory.SemistableReduction.ShareDetA
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Analysis.Complex.BranchLogRoot
+import Mathlib.Analysis.Convex.Contractible
 
 noncomputable section
 
@@ -106,7 +109,7 @@ theorem transvection_factor {i j : Fin N} (hij : i ≠ j) {t : ℂ} (ht : t ≠ 
       transvection j i (-1 : ℂ) * transvection i j 1 * transvection j i (-1) * transvection i j (-t⁻¹) := by
   have hji := hij.symm
   simp only [transvection, mul_add, add_mul, Matrix.mul_one, Matrix.one_mul, single_mul_single_same,
-    single_mul_single_of_ne _ _ _ _ hij, single_mul_single_of_ne _ _ _ _ hji, Matrix.zero_mul, add_zero]
+    single_mul_single_of_ne _ _ _ _ hij, single_mul_single_of_ne _ _ _ _ hji, add_zero]
   ext a c
   simp only [Matrix.add_apply, single_apply]
   split_ifs <;> simp_all <;> field_simp <;> ring

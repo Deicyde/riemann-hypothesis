@@ -1,8 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.StatementsBirationalRatioClosure
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.StatementsPlueckerRatioFieldEq
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.StatementsFlagRatioTrdeg
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.PFnFieldTrdeg
+import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.StatementsPlueckerRatioTrdeg
 set_option maxSynthPendingDepth 1
 
 noncomputable section

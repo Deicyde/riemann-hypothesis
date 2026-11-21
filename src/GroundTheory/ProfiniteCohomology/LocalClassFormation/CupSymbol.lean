@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.LocalClassFormation.CupSymbolPrime
-import GroundTheory.LocalFields.LocalArtinMap
-import GroundTheory.LocalFields.LocalReciprocityUniversal
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

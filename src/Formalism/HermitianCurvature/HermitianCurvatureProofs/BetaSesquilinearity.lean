@@ -1,7 +1,14 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementB
 import Formalism.FormalDegreeBessel.FinalG
 import Formalism.RealPlaceAnalysis.RealPlaceTaylor.CartanInvolutionConjTransposeMul
 import Formalism.RealPlaceAnalysis.RealPlaceTaylor.ComplexifiedDerivativeCommutator
+import Mathlib.Analysis.CStarAlgebra.ContinuousLinearMap
+import Mathlib.Analysis.SpecialFunctions.PolarCoord
+import Mathlib.MeasureTheory.Function.L2Space
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 open Matrix MeasureTheory Filter Topology
 open scoped ComplexConjugate ENNReal
@@ -1134,8 +1141,8 @@ lemma lint_μQ (D : RealPlaceData k r Wp Wq) (f : (Fin r → ℂ) × ℂ → ℝ
   congr 1
   funext q
   by_cases hq : q ∈ Qset D
-  · simp [Set.indicator_apply, hq]
-  · simp [Set.indicator_apply, hq, wt_eq_zero D hq]
+  · simp [hq]
+  · simp [hq, wt_eq_zero D hq]
 
 lemma normSqTau_eq (D : RealPlaceData k r Wp Wq) (τ : ℝ × ℝ) (F : Mat k r → (Wq →L[ℂ] Wp)) :
     normSqTau D τ F = ∫⁻ q, ‖Jv D τ F q‖ₑ ^ 2 ∂μQ D := by

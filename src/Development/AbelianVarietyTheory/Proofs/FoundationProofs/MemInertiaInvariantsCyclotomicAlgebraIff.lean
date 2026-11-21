@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.MemCycAlgOfPow
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsPolynomialInPrimitiveRootOfInertiaFixedStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.FixedCycModOfFixedCycZ

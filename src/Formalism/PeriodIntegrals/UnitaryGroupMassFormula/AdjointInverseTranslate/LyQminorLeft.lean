@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdjointInverseTranslate.CoefLeftAaVector
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Matrix Finset
 
@@ -41,7 +43,7 @@ theorem ly_qminor_left {n : ℕ} {E : Type*} [NormedAddCommGroup E] [NormedSpace
   congr 1
   rw [ly_foldr_comm (fun f y => f (s * y)) _ ?_ F]
   intro T hT f
-  simp only [List.mem_ofFn, Set.mem_range] at hT
+  simp only [List.mem_ofFn] at hT
   obtain ⟨i, rfl⟩ := hT
   exact ly_Top_left H _ _ _ f s
 

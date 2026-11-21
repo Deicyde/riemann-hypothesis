@@ -1,5 +1,5 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.QuotientHomNonvanishingBound
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.CentralIdemCoeff
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.GlobalCore
 
 noncomputable section

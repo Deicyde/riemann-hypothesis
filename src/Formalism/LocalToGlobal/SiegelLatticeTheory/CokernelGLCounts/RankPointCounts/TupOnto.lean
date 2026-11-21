@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.TupLift
 import Formalism.LocalToGlobal.SiegelLatticeTheory.TraceIntegralEstimates.LatSpanLeSpan
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IdentityCellTrace.TraceOneHolds
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.TermsFiniteAtPoint.FrameL
 
 noncomputable section
 
@@ -177,7 +178,7 @@ theorem eich_exists {T : E} (Λ : Submodule (𝓞 E) S.V) (hUn : Formalism.Hermi
       abel)
     (LinearMap.ext fun v => by
       simp only [LinearMap.comp_apply, LinearMap.add_apply, LinearMap.sub_apply, LinearMap.id_apply,
-        map_add, map_sub, h3]
+        map_add, h3]
       abel)
   have hn : ∀ v, n v = v + N v := fun v => rfl
   have hninv : ∀ v, n.symm v = v - N v + N (N v) := fun v => rfl

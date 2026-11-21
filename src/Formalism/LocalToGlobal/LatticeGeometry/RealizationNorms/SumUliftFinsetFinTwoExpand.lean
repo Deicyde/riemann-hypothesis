@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HarderNarasimhan.HarderNarasimhanProofs.DiscreteSpanOfLinIndep
-import Formalism.GelfandTransference.EnergyIdentity
-import Formalism.LocalToGlobal.LatticeGeometry.RealizationNorms.ExistsStarMulSelf
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open NumberField NumberField.InfinitePlace Module Matrix
 
@@ -23,7 +24,7 @@ theorem sum_ulift_finset_fin_two_expand (g : Fin 2 → ℝ) : ∑ k, g k = g 0 +
 
 theorem inner_mkE (a c : InfinitePlace K → Fin n → ℂ) :
     inner ℝ (mkE a) (mkE c) = ∑ v, ∑ i, (star (a v i) * c v i).re := by
-  simp only [mkE, PiLp.inner_apply, PiLp.toLp_apply, Fintype.sum_prod_type, sum_ulift_finset_fin_two_expand]
+  simp only [mkE, PiLp.inner_apply, Fintype.sum_prod_type, sum_ulift_finset_fin_two_expand]
   refine Finset.sum_congr rfl fun v _ => Finset.sum_congr rfl fun i _ => ?_
   simp [Complex.mul_re]
   ring
@@ -98,7 +99,7 @@ private theorem trace_re_lemma (a : K) :
         · right
           rw [← h]
           ext x
-          simp [NumberField.ComplexEmbedding.conjugate_coe_eq]
+          simp
       · rintro (h | h)
         · rw [h]
           exact InfinitePlace.mk_embedding v

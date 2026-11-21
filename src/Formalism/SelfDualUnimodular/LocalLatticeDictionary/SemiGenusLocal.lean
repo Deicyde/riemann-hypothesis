@@ -1,5 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SelfDualUnimodular.LocalLatticeDictionary.SelfDualRestr
+import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.LatDictZAbs
+import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.WittExtensionTheorem
+import Formalism.SelfDualUnimodular.LocalLatticeDictionary.ExistsUnitNorm
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.TotallySplit
 
 noncomputable section
 

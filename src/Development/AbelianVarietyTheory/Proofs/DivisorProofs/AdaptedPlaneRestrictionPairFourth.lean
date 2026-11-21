@@ -1,5 +1,4 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoubledUnitaryCharacterTrivialOfSiegelStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DetNeZeroOfIsSkew
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairRestrictToSubspaceLeftStatement

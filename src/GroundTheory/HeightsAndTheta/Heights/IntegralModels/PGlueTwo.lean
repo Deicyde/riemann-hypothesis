@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.IntegralModels.StatementsGlueTwo
 import GroundTheory.HeightsAndTheta.Heights.IntegralModels.PGlueModulesStar
 import GroundTheory.HeightsAndTheta.Heights.IntegralModels.GlueCoherence
+import Mathlib.CategoryTheory.Limits.Shapes.FiniteMultiequalizer
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.Model

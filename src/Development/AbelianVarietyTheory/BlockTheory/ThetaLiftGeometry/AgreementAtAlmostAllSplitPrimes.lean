@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.DataN
-import Formalism.LocalRingCardinality.DataRows
 
 open Formalism.BasicNotions Formalism.MainNotions.N
 

@@ -1,4 +1,8 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.WeilGroupCharacters.Inertia
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.ResMapBijective
+import Mathlib.NumberTheory.Padics.RingHoms
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Topology.Connected.Separation
 
 open IsLocalRing UpperTheory.V.Alg UpperTheory.V.W
 

@@ -1,5 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.SimpleSum
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open MeasureTheory ValuativeRel Matrix
 open scoped NNReal ENNReal
@@ -75,12 +81,12 @@ theorem simple_entry_mul {p : ℕ} {g h : GL (n ⊕ Fin c) k} (hg : InN p g) (hh
       rw [hg _ t (by omega)]
       by_cases hti : t = Sum.inr i
       · subst hti; simp [htj]
-      · simp [htj, hti, Matrix.one_apply, Ne.symm hti]
+      · simp [htj, hti, Ne.symm hti]
     · have hti : t ≠ Sum.inr i := by rintro rfl; omega
       rw [hh t _ (by omega)]
       by_cases htj : t = Sum.inr j
       · subst htj; simp [hti]
-      · simp [htj, hti, Matrix.one_apply]
+      · simp [htj, hti]
   simp [key, Finset.sum_add_distrib]
 
 theorem simpleSum_mul {p : ℕ} {g h : GL (n ⊕ Fin c) k} (hg : g ∈ N k n c p) (hh : h ∈ N k n c p) :
@@ -134,7 +140,7 @@ theorem simpleSum_row_col (l : Fin c) (hl : l.val + 1 < c) (u β : n → k) :
       simp [Matrix.mul_apply, Matrix.one_apply, dotProduct, hi, hj, Fin.val_inj]
   simp only [simpleSum, hv]
   rw [Finset.sum_eq_single l, Finset.sum_eq_single ⟨l.val + 1, hl⟩]
-  · simp [Matrix.one_apply, Fin.ext_iff]
+  · simp [Fin.ext_iff]
   · intro j _ hj
     rw [if_neg]; intro h; exact hj (Fin.ext h)
   · simp

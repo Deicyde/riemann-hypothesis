@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.CompletionAtPlace.Galois
-import GroundTheory.GlobalFields.SemilocalAlgebras.Galois
-import GroundTheory.GlobalFields.IdeleGroups.LocalNormGroups
 import GroundTheory.GlobalFields.IdeleGroups.LocalNormsEverywhere
 import GroundTheory.LocalFields.LocalReciprocityUniversal
 

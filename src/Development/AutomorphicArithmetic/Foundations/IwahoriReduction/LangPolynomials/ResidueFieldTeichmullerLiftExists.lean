@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.IwahoriReduction.LangPolynomials.InertiaInvariantValuationUniformizerBound
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.MainNotions.N GlobalTheory.GalOfCusp UpperTheory.V UpperTheory.V.Af UpperTheory.V.HV GlobalTheory.Ord2 GlobalTheory.KZ GlobalTheory.Col UpperTheory.Kd.C7
@@ -110,7 +111,7 @@ private theorem exists_r0_valuation_sub_lt_one_of_isAlgebraic {Ω : Type} [Field
   have hev : T.eval (a : Ω) = (T.roots.map fun w => (a : Ω) - w).prod := by
     conv_lhs => rw [hprod]
     rw [Polynomial.eval_multiset_prod, Multiset.map_map]
-    simp [Function.comp_def]
+    simp
   have hv : A.valuation (T.eval (a : Ω)) < 1 := by simpa [T] using haq
   rw [hev, map_multiset_prod, Multiset.map_map] at hv
   obtain ⟨w, hw, hwv⟩ : ∃ w ∈ T.roots, A.valuation ((a : Ω) - w) < 1 := by

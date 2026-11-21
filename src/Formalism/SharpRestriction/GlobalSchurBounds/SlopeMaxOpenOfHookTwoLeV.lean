@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.IntegrableOfContinuousCircleMeasure
-import Formalism.GradedWeylDivisibility.StatementB
 
 noncomputable section
 

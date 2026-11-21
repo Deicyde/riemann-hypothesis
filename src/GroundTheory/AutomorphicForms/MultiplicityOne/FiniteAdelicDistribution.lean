@@ -1,5 +1,6 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.MultiplicityOne.FiniteAdelicGroups
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.AutomorphicForms.LocallyConstantCompact
 
 open IsDedekindDomain IsDedekindDomain.HeightOneSpectrum NumberField Topology Filter Set
 

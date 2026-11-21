@@ -1,10 +1,6 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.TorusAtData
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.FundamentalDomainPointBound
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.ModerateCoefficientPositivity
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.TorusAtDataPf
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.DimStatement
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.L2NormFundamentalDomain
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.HfRsmulRight
 import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.PointwiseNormSqPullbackTensorEqProd
 import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.ExistsBasisSpanEqOfCommensurable
@@ -142,7 +138,7 @@ theorem hermC_map_mulVec (G : Matrix (Fin r) (Fin r) E) {γ : Matrix (Fin r) (Fi
       ∑ k, u k • Data.emb τ (P.mulVec (Pi.single k 1)) := by
     intro P u
     funext j
-    simp [Data.emb, Matrix.mulVec, dotProduct, Pi.single_apply, mul_comm, apply_ite τ]
+    simp [Data.emb, Matrix.mulVec, dotProduct, mul_comm]
   have hexp : ∀ P : Matrix (Fin r) (Fin r) E,
       hermC τ G ((P.map τ).mulVec u) ((P.map τ).mulVec w) = ∑ k, ∑ l, u k * (conj (w l) *
         τ (herm G (P.mulVec (Pi.single k 1)) (P.mulVec (Pi.single l 1)))) := by
@@ -246,7 +242,7 @@ theorem exists_unit_frame (X : Data E r) {x b : Frame X.Ψ r} (hb : b ∈ Bor X.
           exact Submodule.zero_mem _
       · funext j
         simp only [Matrix.mulVecLin_apply, Matrix.mulVec, dotProduct, col, mat, lact, rmul,
-          Matrix.of_apply, Matrix.mul_apply, Finset.sum_apply, Pi.smul_apply, smul_eq_mul, hg,
+          Matrix.of_apply, Finset.sum_apply, Pi.smul_apply, smul_eq_mul, hg,
           mul_comm]
         rfl) a
   refine ⟨conj u, by rw [Complex.norm_conj, hu], fun v => ?_⟩

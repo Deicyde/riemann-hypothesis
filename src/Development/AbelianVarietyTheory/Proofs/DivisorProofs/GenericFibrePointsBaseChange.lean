@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ComapMaximalIdealEqOrigin
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsMulMemIntegralClosureOverGenericFibre
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PointAtZero
+import Mathlib.Tactic.ENatToNat
 open IsLocalRing Polynomial
 open scoped TensorProduct
 

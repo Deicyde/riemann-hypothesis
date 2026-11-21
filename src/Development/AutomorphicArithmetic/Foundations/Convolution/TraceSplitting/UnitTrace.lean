@@ -1,11 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.TraceSplitting.SplitStable
 import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.OccursBasics
-import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.SummandFactorAlt
-import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.OlocEx
-import Development.AutomorphicArithmetic.Foundations.Convolution.IntegrableConvolution.EigBasic
-import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.LocFlath
-import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.LocUApply
 import Development.AutomorphicArithmetic.TwistedTraces.SummandLeClosureSpanLocalTypeImages
 
 open MeasureTheory NumberField IsDedekindDomain Filter GroundTheory.Automorphic GroundTheory.Automorphic.Reduction GroundTheory.Automorphic.RightCosetSpace

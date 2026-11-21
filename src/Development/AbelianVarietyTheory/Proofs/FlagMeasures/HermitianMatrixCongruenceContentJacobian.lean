@@ -1,12 +1,10 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.FractionFieldToGenericStalkAlgebraMapEq
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsHermND
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ComplementReferenceCompactSubgroup
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.HermLat
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.IsPrincipalIdealRingOfHenselian
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsEqZpowMulUnit
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.RelVolMul
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.RelativeLatticeVolumeOfDetValuationStatement
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.TotallySplit
 
 noncomputable section
 open ValuativeRel Formalism.MainNotions.S.Loc GlobalTheory.HL MeasureTheory
@@ -180,7 +178,7 @@ theorem cont_congr : ∀ {F : Type} [Field F] [ValuativeRel F] [TopologicalSpace
     { toFun := fun X => cT L A * X * A
       invFun := fun X => (cT L A)⁻¹ * X * A⁻¹
       left_inv := fun X => by
-        simp only [Matrix.mul_assoc, Matrix.mul_nonsing_inv_cancel_left _ _ hA',
+        simp only [Matrix.mul_assoc,
           Matrix.nonsing_inv_mul_cancel_left _ _ hA', Matrix.mul_nonsing_inv _ hA, Matrix.mul_one]
       right_inv := fun X => by
         simp only [Matrix.mul_assoc, Matrix.mul_nonsing_inv_cancel_left _ _ hA',

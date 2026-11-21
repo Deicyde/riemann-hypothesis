@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.DedekindZetaFactorizationRay
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.NonemptyRayDataOfNeZero
 open NumberField IsDedekindDomain GlobalTheory.Mem Complex
 open scoped ComplexOrder
 set_option maxHeartbeats 1000000 in

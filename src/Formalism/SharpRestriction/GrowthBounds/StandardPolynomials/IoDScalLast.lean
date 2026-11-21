@@ -1,4 +1,7 @@
-import Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.IoBlockNeZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.TCoreDef
+import Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.TopKeyFormSelfSoft
 
 noncomputable section
 

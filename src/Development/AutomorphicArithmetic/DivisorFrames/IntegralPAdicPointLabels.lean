@@ -1,5 +1,4 @@
-import Development.AutomorphicArithmetic.LocalEmbeddings.RootFrame
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.HodgeTateKernel
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.DivisorFrames.PAdicPointTorsionFrame
 import Development.AutomorphicArithmetic.DivisorFrames.TorsionCharacterIntegralPoint
 import Development.AutomorphicArithmetic.DivisorFrames.PAdicLatticeMembershipApproximated

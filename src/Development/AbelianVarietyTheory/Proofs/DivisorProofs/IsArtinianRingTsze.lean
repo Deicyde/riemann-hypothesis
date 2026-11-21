@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.NotCompactOfMEqOne
-import Development.AbelianVarietyTheory.Definitions.Divisors.InfUniv
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SumProjSingle
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsBCTrivSqZeroExt
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
@@ -46,7 +45,7 @@ def glueFil (A₀ : Over (Sp k)) [GrpObj A₀] (f : Fin d → (HdR A₀ →ₗ[k
     ext
     · simp
     · simp only [TrivSqZeroExt.snd_add, TrivSqZeroExt.snd_inl, TrivSqZeroExt.snd_inr, Pi.add_apply, map_add,
-        LinearMap.add_apply, zero_add, Pi.zero_apply, add_zero]
+        LinearMap.add_apply, zero_add, Pi.zero_apply]
       ring
   zero_mem' := ⟨0, zero_mem _, 0, fun _ => zero_mem _, fun c => by rw [LinearMap.zero_apply]; ext <;> simp⟩
   smul_mem' := by
@@ -58,7 +57,7 @@ def glueFil (A₀ : Over (Sp k)) [GrpObj A₀] (f : Fin d → (HdR A₀ →ₗ[k
     · simp
     · simp only [TrivSqZeroExt.snd_mul, TrivSqZeroExt.fst_add, TrivSqZeroExt.fst_inl, TrivSqZeroExt.fst_inr,
         TrivSqZeroExt.snd_add, TrivSqZeroExt.snd_inl, TrivSqZeroExt.snd_inr, Pi.add_apply, Pi.smul_apply,
-        map_smul, map_add, LinearMap.add_apply, LinearMap.smul_apply, smul_eq_mul, add_zero, zero_add,
+        map_smul, LinearMap.add_apply, LinearMap.smul_apply, smul_eq_mul, add_zero, zero_add,
         MulOpposite.smul_eq_mul_unop, MulOpposite.unop_op, Pi.zero_apply]
       ring
 

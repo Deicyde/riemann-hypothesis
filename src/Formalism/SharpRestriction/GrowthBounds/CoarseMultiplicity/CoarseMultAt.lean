@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.CoarseMultiplicity.LeadingExponentHomogeneous
+import Formalism.SharpRestriction.GrowthBounds.CoarseMultiplicity.Kummer
+import Formalism.SharpRestriction.GrowthBounds.CoarseMultiplicity.SymVarInlFst
 
 noncomputable section
 

@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.ComplexMultiplication.BaseChangeDescent
-import GroundTheory.GlobalFields.ComplexMultiplication.AutCFixed
 import GroundTheory.ArithmeticGeometry.AbelianVarieties.WeilGaloisFunctionField
 
 namespace GroundTheory.Global

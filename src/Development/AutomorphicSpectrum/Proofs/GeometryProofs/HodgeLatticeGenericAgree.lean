@@ -1,13 +1,14 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.LinearIndependentEigProj
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.WedgeEqSpanOfIsFrameAt
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LatticeEigenVectorBundle
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsUnitWedge
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExtFrameOfQuotientKernel
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.MatrixEqOfLinearIndependent
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.AdaptedSpan
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.EigProjMemOfFree
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsFrameInter
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ExistsGenOfIsVBOne
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsLineGenOn
 
 open AlgebraicGeometry CategoryTheory Limits NumberField GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Flat
 
@@ -159,7 +160,7 @@ theorem key (𝓗 : HodgeLat L ρ bar (p + q)) {σ σ' : E →+* Ω} {v : Fin p 
     have hreg' : ∀ j, θ (b j) ∈ regAt ξ x := fun j => hθL _ (hbL j)
     have e : ((0 : V), θ) = ∑ j, (⟨θ (b j), hreg' j⟩ : regAt ξ x) • c j := by
       have e0 : ∀ j, (⟨θ (b j), hreg' j⟩ : regAt ξ x) • c j = θ (b j) • c j := fun j => rfl
-      simp only [e0, hc]
+      simp only [hc]
       refine Prod.ext ?_ ?_
       · simp [Prod.fst_sum]
       · simp only [Prod.snd_sum, Prod.smul_snd]

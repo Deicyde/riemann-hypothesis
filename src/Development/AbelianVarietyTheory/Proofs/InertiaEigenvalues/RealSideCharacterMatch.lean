@@ -1,7 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.LinksW
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.BridgeLemmas
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsStepWeil
 open Formalism.BasicNotions Formalism.MainNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix Formalism.L2.Theta Formalism.L2.DIV Formalism.L2.Indef Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.Mult Formalism.IndefR.Datum
 open scoped TensorProduct InnerProductSpace
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
@@ -54,7 +53,7 @@ theorem stabK_one' {y : G} : stabK ι (1 : stab ι J y) = 1 := by
 
 theorem stabK_mul' {y : G} (a b : stab ι J y) : stabK ι (a * b) = stabK ι b * stabK ι a := by
   apply Subtype.ext
-  simp only [stabK, Subgroup.coe_mul, map_mul, Subgroup.coe_inv, InvMemClass.coe_inv]
+  simp only [stabK, Subgroup.coe_mul, map_mul]
   group
 
 variable (P : ClassPres ι S σ ρ J χ) (χ' : J →* ℂˣ) (hχ' : ∀ k, ∃ b : K, σ b = (χ' k : ℂ))
@@ -78,7 +77,7 @@ def rhoE (c : S.Cl) (g : S.Gam c) : Module.End K S.V where
   map_smul' b x := by
     apply coef_injective P
     rw [map_smulₛₗ, coef_cinv P (rhoF_rg P χ' hχ' hρ _ _ _), coef_cinv P (rhoF_rg P χ' hχ' hρ _ _ _)]
-    simp only [rhoF, map_smulₛₗ, RingHom.id_apply, map_smul]
+    simp only [rhoF, map_smulₛₗ, RingHom.id_apply]
     rw [smul_comm]
 
 theorem coef_rhoE (c : S.Cl) (g : S.Gam c) (x : S.V) :

@@ -1,9 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeisZero
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsUnitDetAdaptedBasisStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoordsPreserveGramMatrixStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeisMulHeisStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoordsMultiplicativeConjugationStatement
+import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.QhtUnip
@@ -28,12 +28,12 @@ theorem conj_mulVec_eq {n : ℕ} {P M : Matrix (Fin n) (Fin n) (AE F E)} (hP : I
 theorem incM_basQ_col {m : ℕ} (H : Plane E (m + 2) m) (j : Ix m) :
     incM F (basQ H) *ᵥ Pi.single ((ixE m).symm j) 1 = fun r => inclR (F := F) (AF F) (basP H r j) := by
   funext r
-  simp [Matrix.mulVec_single_one, incM, basQ, Matrix.transpose_apply]
+  simp [incM, basQ]
 
 theorem crd_apply {σ : E →ₐ[F] E} {m : ℕ} {J : Matrix (Fin (m + 2)) (Fin (m + 2)) E} (H : Plane E (m + 2) m)
     (g : UA σ J) (i j : Ix m) : crd H g i j =
       (((incM F (basQ H))⁻¹ * mat g * incM F (basQ H)) *ᵥ Pi.single ((ixE m).symm j) 1) ((ixE m).symm i) := by
-  simp [crd, Matrix.mulVec_single_one, Matrix.transpose_apply]
+  simp [crd]
 
 theorem isUnit_det_incM_basQ {m : ℕ} (H : Plane E (m + 2) m) : IsUnit (basQ H).det → IsUnit (incM F (basQ H)).det := by
   intro hP
@@ -54,7 +54,7 @@ theorem crd_eq_heis_of_gen (σ : E →ₐ[F] E) (hσ : ∀ e, σ (σ e) = e) {m 
   have cx : Q *ᵥ Pi.single ((ixE m).symm (Sum.inl (Sum.inl 0))) 1 = incV F H.x := by
     rw [incM_basQ_col]; rfl
   have cι : ∀ k, Q *ᵥ Pi.single ((ixE m).symm (Sum.inl (Sum.inr k))) 1 = incM F H.ι *ᵥ Pi.single k 1 := by
-    intro k; rw [incM_basQ_col]; funext r; simp [Matrix.mulVec_single_one, incM, basP, Matrix.transpose_apply]
+    intro k; rw [incM_basQ_col]; funext r; simp [incM, basP]
   have hcx : ((Q⁻¹ * mat u * Q) *ᵥ Pi.single ((ixE m).symm (Sum.inl (Sum.inl 0))) 1) =
       Pi.single ((ixE m).symm (Sum.inl (Sum.inl 0))) 1 := conj_mulVec_eq hQ (by rw [cx, hx])
   have hcι : ∀ k, ((Q⁻¹ * mat u * Q) *ᵥ Pi.single ((ixE m).symm (Sum.inl (Sum.inr k))) 1) =

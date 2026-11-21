@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PositiveQuadraticLowerBoundStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolynomialMultipleInSubmoduleStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GaussianPolynomialDensityStatement

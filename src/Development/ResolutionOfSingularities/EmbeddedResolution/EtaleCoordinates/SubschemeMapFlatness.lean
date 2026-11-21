@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.ResolutionOfSingularities.EmbeddedResolution.EtaleCoordinates.IdealSheafOpenRestriction
-import Development.ResolutionOfSingularities.EmbeddedResolution.EtaleCoordinates.StrictNormalCrossings
+import Mathlib.AlgebraicGeometry.Morphisms.WeaklyEtale
 universe u
 
 open CategoryTheory AlgebraicGeometry TopologicalSpace

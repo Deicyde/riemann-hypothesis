@@ -1,6 +1,14 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RembApply
-import Formalism.LatticeTheta.Statement
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
 
 open NumberField nonZeroDivisors MeasureTheory GlobalTheory.LipschitzTR GlobalTheory.IndefiniteRowSideFullHecke.TraceDualDifferent
 open scoped FourierTransform RealInnerProductSpace
@@ -56,7 +64,7 @@ theorem continuous_lipschitzOneVariableKernel {k : ℕ} (hk : 2 ≤ k) {w : ℂ}
   refine continuous_if (fun a ha => ?_) hg.continuousOn continuous_const.continuousOn
   have h0 := frontier_lt_subset_eq (continuous_const (y := (0 : ℝ)))
     (continuous_const.mul continuous_id (f := fun _ : ℝ => (SignType.sign w.im : ℝ))) ha
-  simp only [Set.mem_setOf_eq, id] at h0
+  simp only [Set.mem_setOf_eq] at h0
   have ha0 : a = 0 := by
     rcases mul_eq_zero.1 h0.symm with h | h
     · exfalso

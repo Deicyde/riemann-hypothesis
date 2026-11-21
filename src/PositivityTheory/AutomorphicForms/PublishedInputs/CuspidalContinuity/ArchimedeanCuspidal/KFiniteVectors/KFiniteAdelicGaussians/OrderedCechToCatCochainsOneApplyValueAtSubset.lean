@@ -1,6 +1,5 @@
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.KFiniteAdelicGaussians.UpperRightUnipotentInvariance
-import GroundTheory.AutomorphicForms.ReductionFinite
-import GroundTheory.AutomorphicForms.ReductionMahler
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.TateThesis.AdelePoissonUniform
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SummableLatticeHeightSeriesStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CompactColumnsNormLowerBoundStatement
@@ -404,7 +403,7 @@ theorem row_two {m : G3K K} {t : (𝔸[K])ˣ} (r20 : (m : M3A) 2 0 = 0) (r21 : (
     (r22 : (m : M3A) 2 2 = t) :
     (Pi.single 2 (1 : 𝔸[K]) : Fin 3 → 𝔸[K]) ᵥ* (m : M3A) = (t : 𝔸[K]) • (Pi.single 2 (1 : 𝔸[K]) : Fin 3 → 𝔸[K]) := by
   ext j
-  fin_cases j <;> simp [Matrix.vecMul, dotProduct, Fin.sum_univ_three, Pi.single_apply, r20, r21, r22]
+  fin_cases j <;> simp [Matrix.vecMul, dotProduct, Pi.single_apply, r20, r21, r22]
 
 theorem xiV_apply (γ : GL (Fin 2) K) :
     ((e2 K γ * sw K : GL (Fin 3) K) : Matrix (Fin 3) (Fin 3) K) =

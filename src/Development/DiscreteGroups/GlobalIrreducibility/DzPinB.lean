@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.DiscreteGroups.GlobalIrreducibility.DzPinA
 import Development.DiscreteGroups.GlobalIrreducibility.DzStickTeich
+import Mathlib.NumberTheory.NumberField.Cyclotomic.Basic
 
 noncomputable section
 

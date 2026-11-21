@@ -1,9 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HarderNarasimhan.QuotRealize
-import Formalism.LatticeSlopes.ExistsSaturatedSlopeEqMuMax
-import Formalism.HarderNarasimhan.HarderNarasimhanProofs.DiscreteSpanOfLinIndep
-import Formalism.HarderNarasimhan.HarderNarasimhanProofs.ExistsSmulMemOfFinrankEq
-import Formalism.HarderNarasimhan.HarderNarasimhanProofs.SatBasic
-import Formalism.HarderNarasimhan.HarderNarasimhanProofs.ShiftInvariance
 import Formalism.HarderNarasimhan.HarderNarasimhanProofs.SlopeIneqMean
 
 open Module NumberField
@@ -46,7 +43,7 @@ private theorem det_gram_basis_eq' {ι : Type} [Fintype ι] [DecidableEq ι] (L 
       P.transpose * Matrix.gram ℝ (fun i => ((C i : L) : F)) * P := by
     ext i j
     simp only [Matrix.gram, Matrix.of_apply, Matrix.mul_apply, Matrix.transpose_apply, hC', sum_inner,
-      inner_sum, real_inner_smul_left, real_inner_smul_right, Finset.sum_mul, Finset.mul_sum]
+      inner_sum, real_inner_smul_left, real_inner_smul_right, Finset.sum_mul]
     first
       | (refine Finset.sum_congr rfl fun k _ => Finset.sum_congr rfl fun l _ => ?_; ring)
       | (rw [Finset.sum_comm]; refine Finset.sum_congr rfl fun k _ => Finset.sum_congr rfl fun l _ => ?_; ring)

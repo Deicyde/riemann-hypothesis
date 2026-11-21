@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
 import Formalism.GL3MeanSquares.GenusMeanAsymptotics.UnimodularClassRepresentatives.ExistsNormOneOfPair
 import Formalism.GL3MeanSquares.GenusMeanAsymptotics.UnimodularClassRepresentatives.ExistsIsomFix
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -75,7 +77,7 @@ theorem exists_next (hS : IsHermSemilocal S) (hs : h.IsSymm) (hM : IsSelfDualMod
     intro k hk
     rw [map_sub, map_sum]
     simp only [hr, hx]
-    simp [Finset.sum_ite_eq, Finset.sum_ite_eq', hk]
+    simp [Finset.sum_ite_eq, hk]
   have hvw : h (a2 • x j) (w1 - ∑ i ∈ s, (h (x i) w1) • x i) = 1 := by
     rw [map_sub, map_sum, Finset.sum_eq_zero, sub_zero, hl, hw1, ha2, star_star,
       inv_mul_cancel₀ hα0]

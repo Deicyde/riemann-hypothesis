@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.PAdicHodge.ExtRobbaBounded
 import GroundTheory.PAdicHodge.RobbaNewton
+import Mathlib.Analysis.Normed.Unbundled.RingSeminorm
+import Mathlib.Topology.Sheaves.Presheaf
+import Mathlib.Topology.UniformSpace.Uniformizable
 set_option maxSynthPendingDepth 1
 
 noncomputable section

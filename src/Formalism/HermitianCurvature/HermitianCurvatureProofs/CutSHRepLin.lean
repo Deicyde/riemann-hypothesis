@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutSH2
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.JfBetaAdjCOfLemmaBNorm
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LiftClosedUnderOperations
 
 open scoped ContDiff

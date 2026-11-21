@@ -1,12 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsSelfDualE
-import Formalism.LocalToGlobal.Columns.CoefficientsModP.PairingNondegenerateHolds
-import Formalism.LocalToGlobal.Columns.CoefficientsModP.FkPderivBlockEmbNe
-import Formalism.GradedWeylDivisibility.StatementE
-import Formalism.HarderNarasimhan.ShiftInvariance
-import Formalism.QuotientMetricDivisors.ReductionLemmaZero
-import Formalism.QuotientMetricDivisors.ProdFormula
-import Formalism.LocalToGlobal.IndefiniteForms.IndefiniteTree.RealCubicMeans.LeafBounds.MeanMaxLeaf.LeafMMFree
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.Divisibility.CoefModLemmas
 open NumberField IsDedekindDomain MvPolynomial Formalism.BasicNotions Formalism.L2.DIV Formalism.DivisionValues GlobalTheory.TestLat Formalism.L2.Indef.Tree.ArchimedeanLeafBounds.Cuts
 open scoped Matrix ComplexOrder
 
@@ -24,7 +18,7 @@ theorem int_of_mem_colLat_one {x : Fin n → K} (hx : x ∈ colLat (1 : GL (Fin 
     obtain ⟨j, rfl⟩ := h
     by_cases h : a = j
     · exact ⟨1, by simp [h]⟩
-    · exact ⟨0, by simp [Matrix.one_apply, h]⟩
+    · exact ⟨0, by simp [h]⟩
   | zero => exact ⟨0, by simp⟩
   | add x y _ _ hx hy =>
     obtain ⟨u, hu⟩ := hx

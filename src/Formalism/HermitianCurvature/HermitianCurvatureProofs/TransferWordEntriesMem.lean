@@ -1,4 +1,7 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.InvMemOfKappa
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.ReflectionTransposeEntriesMem
+import Formalism.HermitianCurvature.TopDensNonnegOfKappa
 
 open Matrix MeasureTheory
 open scoped ComplexConjugate

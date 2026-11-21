@@ -1,7 +1,8 @@
-import Mathlib
-import GroundTheory.AutomorphicForms.MacdonaldFormula
-import GroundTheory.AutomorphicForms.SatakeNormalized
-import GroundTheory.AutomorphicForms.IwahoriFactorization
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
+import GroundTheory.AutomorphicForms.AffineBruhat
+import GroundTheory.AutomorphicForms.MacdonaldAlternant
 
 noncomputable section
 

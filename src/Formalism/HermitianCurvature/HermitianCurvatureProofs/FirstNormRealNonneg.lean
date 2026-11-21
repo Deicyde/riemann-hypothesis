@@ -1,8 +1,10 @@
-import Formalism.HermitianCurvature.StatementC
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LevelZeroEstimateProduct
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.PeriodLatticeFactsSplitOfGeneral
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LocalisationScaledIdealMemIff
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.TwistedIsRealOrderLattice
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.JointInstanceTheoremA
 
 namespace Formalism.FourierDecayAlt.P
 

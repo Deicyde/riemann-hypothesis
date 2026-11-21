@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.ArchimedeanWhittaker.ComplexWhittaker.IsClosedDivisorComponent
+import GroundTheory.AutomorphicForms.RealGroupsKAK
 
 namespace GroundTheory.Automorphic.ArchWhittakerC
 

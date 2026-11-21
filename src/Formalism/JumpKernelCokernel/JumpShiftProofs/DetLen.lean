@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Open
 import Formalism.JumpKernelCokernel.Statement
+import Mathlib.RingTheory.OrderOfVanishing.Basic
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 namespace Formalism.KernelCokernelLengths.DeterminantLengthLemmas
 

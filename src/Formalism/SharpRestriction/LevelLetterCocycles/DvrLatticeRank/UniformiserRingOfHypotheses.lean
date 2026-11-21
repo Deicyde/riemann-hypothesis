@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.MixedPositionHypothesis
 
 noncomputable section
@@ -22,7 +23,7 @@ theorem uniformiser_ring_of_hypotheses (D : D7) (HW : HWOf D.loc) (F : FonOf D.l
     | rfl
   obtain ⟨-, ⟨π', E, hr, -⟩, -⟩ := h9 hs (by rw [hpe]; exact hl)
   refine ⟨π', E, ?_⟩
-  convert hr using 2 <;> first | rfl | (simp only [eK, sK, hpe]) | (unfold eK sK; simp [hpe])
+  convert hr using 2 <;> first | rfl | (simp only [hpe]) | (unfold eK sK; simp [hpe])
 
 end Formalism.MainNotions.N.Ln34
 

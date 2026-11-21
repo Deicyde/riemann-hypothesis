@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.StandardChartsLineZero
+import Development.EtaleCohomology.EtaleSheaves.LZProperCut
+import Mathlib.RingTheory.PiTensorProduct
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry LateralTheory.E.StandardEtaleChartsIdempotentGluing

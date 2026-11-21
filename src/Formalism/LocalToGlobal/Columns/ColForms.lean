@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.RhoEqOfSmulEq
 import Formalism.LocalToGlobal.Columns.GenericUnipotentCharacter
-import Formalism.LocalToGlobal.Columns.AbelianHostFieldConditions
-import Formalism.LocalToGlobal.Columns.StdLatUnimodular
 import Formalism.LocalToGlobal.Columns.CoefCol
 
 open NumberField IsDedekindDomain Module

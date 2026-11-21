@@ -1,4 +1,7 @@
-import Formalism.WachLatticeTwists.LatticeDualFibres.Statement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.CharacterColumnKernels.Statement
+import Mathlib.RepresentationTheory.Basic
 
 universe u
 

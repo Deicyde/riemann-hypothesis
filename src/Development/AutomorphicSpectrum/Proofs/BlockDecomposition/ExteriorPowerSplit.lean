@@ -1,5 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.HermitianTraceForms.ExistsDetEquivOfSubsingleton
+import Mathlib.LinearAlgebra.CliffordAlgebra.Prod
+import Mathlib.LinearAlgebra.ExteriorAlgebra.Basis
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
+import Mathlib.Topology.Sheaves.Presheaf
 
 open TensorProduct Module Function
 

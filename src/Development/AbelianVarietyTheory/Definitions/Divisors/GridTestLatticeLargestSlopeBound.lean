@@ -1,8 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.BasePlaceNotMemChiGridBadPlaces
 import Development.AbelianVarietyTheory.Statements.CuspidalUnitaryTwists.IsCyclotomicExtensionFourSlopeModelField
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.AutPointLatticeIntersectionSelfDualProperties
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ContinuousCoeffBlockAct
+import Development.AbelianVarietyTheory.Statements.CuspidalUnitaryTwists.SlopeE
 
 noncomputable section
 
@@ -169,7 +172,7 @@ theorem testFunction_value_at_rep (rp : ClassReps G) (hN : rp.Neat) {n : ℕ} (e
   split_ifs with h1 h2 h2
   · simp [h2.2]
   · have : ¬ (e a).2 = i := fun h => h2 ⟨h1, h.symm⟩
-    simp [Finsupp.single_apply, this]
+    simp [this]
   · exact absurd h2.1 h1
   · simp
 

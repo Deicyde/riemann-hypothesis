@@ -1,11 +1,10 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.HeckeKer
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.RigidSys
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.Splits
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.GtBaseChangeSt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.ModuliSpaces.AuxiliaryInertOddPrime
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.IntOfPrimeMulSq
+import Mathlib.RingTheory.DedekindDomain.Different
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 namespace GlobalTheory.BaseRing
 
@@ -78,7 +77,7 @@ theorem natCast_mul_mem_of_isIntegral (K : IntermediateField ℚ ℂ) [FiniteDim
   convert h2 using 1
   obtain ⟨m, rfl⟩ : ∃ m, n = m + 1 := ⟨n - 1, by omega⟩
   have hxc : (x : ℂ) = ζ := rfl
-  simp [derivative_X_pow, hxc]
+  simp [hxc]
   linear_combination (-(m + 1 : ℂ) * z) * hζ
 
 open IntermediateField in

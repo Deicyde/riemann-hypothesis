@@ -1,11 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsQuasiFam
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.RealSizeNonneg
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.UnifModGrowthOfIsUnifModerate
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.ThetaAbsoluteSum
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.TransvectionAction
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.WeilDatumExistence
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsMulRightInvariantOfFundamentalDomain
+import Mathlib.MeasureTheory.Measure.Haar.DistribChar
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR.Datum MeasureTheory IsDedekindDomain NumberField Matrix
 open GlobalTheory.MixModel GlobalTheory.MixPer GlobalTheory.Grow
 open scoped TensorProduct
@@ -188,7 +184,7 @@ theorem trunc_zero (u : Mx D ρ ρ) : trunc u 0 = 1 := by
   ext i j; simp [trunc]
 
 theorem trunc_top (u : Mx D ρ ρ) : trunc u ρ = u := by
-  ext i j; simp [trunc, j.2]
+  ext i j; simp [trunc]
 
 theorem colPart_mem (u : Mx D ρ ρ) (k : ℕ) : colPart u k ∈ supMx D ρ := by
   intro i j h
@@ -208,7 +204,7 @@ theorem trunc_succ {u : Mx D ρ ρ} (hu : u ∈ GlobalTheory.UnitU.uniSet D ρ) 
   · simp [h, Nat.lt_succ_of_lt h, h.ne]
   · have h1 : j.1 < k + 1 := by omega
     have h2 : ¬ j.1 < k := by omega
-    simp only [h1, if_true, h2, if_false, h, true_and]
+    simp only [h, true_and]
     rcases lt_trichotomy i j with hij | rfl | hij
     · simp [hij, one_apply_ne hij.ne]
     · simp [(hu i i).2]

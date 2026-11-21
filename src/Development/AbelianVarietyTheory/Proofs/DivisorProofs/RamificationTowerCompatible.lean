@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSmoothCharCompNormU
+import GroundTheory.GlobalFields.CompletionAtPlace.Integers
+import GroundTheory.LocalFields.LocalFourierHaar
+import Mathlib.Algebra.Module.StablyFree.Basic
 open NumberField IsDedekindDomain
 
 noncomputable section
@@ -33,7 +36,7 @@ theorem normU_comp_normU {K M L : Type} [Field K] [NumberField K] [Field M]
   haveI : IsScalarTower (v.adicCompletion K) (u.adicCompletion M) (w.adicCompletion L) :=
     .of_algebraMap_eq' (adicCompletionMap_comp_adicCompletionMap v u w).symm
   refine MonoidHom.ext fun x => Units.ext ?_
-  simp only [normU, MonoidHom.comp_apply, Units.coe_map, MonoidHom.coe_coe]
+  simp only [normU, MonoidHom.comp_apply, Units.coe_map]
   exact Algebra.norm_norm (R := v.adicCompletion K) (S := u.adicCompletion M) (a := (x : w.adicCompletion L))
 
 end GlobalTheory.BCChar

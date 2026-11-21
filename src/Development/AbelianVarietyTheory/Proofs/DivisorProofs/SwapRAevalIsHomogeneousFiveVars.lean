@@ -1,8 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OfSwap2
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SwapSumSwap
 import Development.AbelianVarietyTheory.Definitions.Divisors.LineSCShortExact
 
@@ -108,13 +105,13 @@ theorem eval_swapPow {S : Type*} [CommRing S] [Algebra ℝ S] (a b : ℤ) (x : F
   have hs : (aeval ![x 0 + x 1, x 2]).toRingHom (linearSum a b) =
       (algebraMap ℝ S a * x 0 + algebraMap ℝ S b * x 1 + x 2) + (algebraMap ℝ S b * x 0 + algebraMap ℝ S a * x 1 + x 2) := by
     simp only [linearSum, AlgHom.toRingHom_eq_coe, RingHom.coe_coe, map_add, map_mul, aeval_C, aeval_X, map_ofNat,
-      Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons]
+      Matrix.cons_val_zero, Matrix.cons_val_one]
     ring
   have hp : (aeval ![x 0 + x 1, x 2]).toRingHom (quadraticPart a b) +
       (aeval ![x 0 + x 1, x 2]).toRingHom (C (((a : ℝ) - b) ^ 2)) * (x 0 * x 1) =
       (algebraMap ℝ S a * x 0 + algebraMap ℝ S b * x 1 + x 2) * (algebraMap ℝ S b * x 0 + algebraMap ℝ S a * x 1 + x 2) := by
     simp only [quadraticPart, AlgHom.toRingHom_eq_coe, RingHom.coe_coe, map_add, map_mul, map_pow, map_sub, aeval_C, aeval_X,
-      Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons]
+      Matrix.cons_val_zero, Matrix.cons_val_one]
     ring
   have key : ∀ n, Polynomial.eval₂ (aeval ![x 0 + x 1, x 2]).toRingHom (x 0 * x 1) (swapPow a b n) =
       (algebraMap ℝ S a * x 0 + algebraMap ℝ S b * x 1 + x 2) ^ n +
@@ -127,7 +124,7 @@ theorem eval_swapPow {S : Type*} [CommRing S] [Algebra ℝ S] (a b : ℤ) (x : F
     | zero =>
       refine ⟨?_, ?_⟩
       · rw [swapPow, Polynomial.eval₂_C]
-        simp only [AlgHom.toRingHom_eq_coe, RingHom.coe_coe, aeval_C, map_ofNat]
+        simp only [AlgHom.toRingHom_eq_coe, map_ofNat]
         ring
       · simp only [swapPow, Polynomial.eval₂_C]
         rw [hs]; ring
@@ -147,7 +144,7 @@ theorem aeval_swapSum {S : Type*} [CommRing S] [Algebra ℝ S] (d : ℕ) (a b : 
   rw [Polynomial.eval₂_eq_sum_range' _ (swapPow_natDegree_lt a b (d + 2))] at h1
   have h2 : aeval x (swapSum d a b) = (algebraMap ℝ S a * x 0 + algebraMap ℝ S b * x 1 + x 2) ^ (d + 2) +
       (algebraMap ℝ S b * x 0 + algebraMap ℝ S a * x 1 + x 2) ^ (d + 2) := by
-    simp only [swapSum, lin, map_add, map_pow, map_sum, map_mul, aeval_C, aeval_X, Fin.sum_univ_three,
+    simp only [swapSum, lin, map_add, map_pow, map_mul, aeval_C, aeval_X, Fin.sum_univ_three,
       Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_two, Matrix.head_cons, Matrix.tail_cons, map_one, one_mul]
   rw [h2, ← h1]
   exact Finset.sum_congr rfl fun i _ => mul_comm _ _
@@ -215,7 +212,7 @@ theorem aeval_fibPoly (m : ℕ) (a b : ℝ) :
   simp_rw [hI]
   rw [intervalIntegral.integral_finsetSum fun j _ => by apply Continuous.intervalIntegrable; fun_prop]
   simp only [fibPoly, map_sum, map_mul, map_pow, aeval_C, aeval_X, Matrix.cons_val_zero, Matrix.cons_val_one,
-    Matrix.head_cons, Algebra.algebraMap_self, RingHom.id_apply]
+    Algebra.algebraMap_self, RingHom.id_apply]
   refine Finset.sum_congr rfl fun j _ => ?_
   rw [intervalIntegral.integral_const_mul]
   ring
@@ -223,7 +220,7 @@ theorem aeval_fibPoly (m : ℕ) (a b : ℝ) :
 theorem fibPoly_aeval_isHomogeneous (m : ℕ) :
     (aeval ![X 0 + X 1, X 0 * X 1] (fibPoly m) : MvPolynomial (Fin 3) ℝ).IsHomogeneous (2 * m) := by
   simp only [fibPoly, map_sum, map_mul, map_pow, aeval_C, aeval_X, Matrix.cons_val_zero, Matrix.cons_val_one,
-    Matrix.head_cons, algebraMap_eq]
+    algebraMap_eq]
   refine IsHomogeneous.sum _ _ _ fun j hj => ?_
   have hj := Finset.mem_range.1 hj
   have h0 := isHomogeneous_X ℝ (0 : Fin 3)
@@ -303,8 +300,7 @@ theorem pm_aeval_isHomogeneous (m : ℕ) :
     have := isHomogeneous_C (Fin 3) (4 : ℝ)
     rwa [map_ofNat] at this
   rw [map_mul, map_mul, aeval_C, algebraMap_eq]
-  simp only [map_mul, map_pow, map_sub, map_ofNat, aeval_X, Matrix.cons_val_zero, Matrix.cons_val_one,
-    Matrix.head_cons]
+  simp only [map_mul, map_pow, map_sub, map_ofNat, aeval_X, Matrix.cons_val_zero, Matrix.cons_val_one]
   have hq : ((X 0 + X 1) ^ 2 - 4 * (X 0 * X 1) : MvPolynomial (Fin 3) ℝ).IsHomogeneous 2 :=
     (hom_cast ((h0.add h1).pow 2) (by omega)).sub (hom_cast (h4.mul (h0.mul h1)) (by omega))
   exact hom_cast (((isHomogeneous_C _ _).mul ((h0.mul h1).pow (m - j))).mul (hq.pow j)) (by omega)

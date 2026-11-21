@@ -1,5 +1,6 @@
-import Mathlib
-import ReciprocityTheory.AnalyticForms.PotentialTheory.IsPotentialPullbackStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.LeviForms.IsRegFamilyInhabitStatement
 import Development.AbelianVarietyTheory.Definitions.Divisors.SlopeTestRemainingChoices
 

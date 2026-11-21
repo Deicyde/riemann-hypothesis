@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.FrobeniusOrbits.Statement
+import BuildAid.Leniency.Open
 import Formalism.FrobeniusOrbits.DiscrMaximalRealCyclotomic
 import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.Galois
 import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.FrobMulInertia

@@ -1,9 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HermitianLattice
 import GroundTheory.HeightsAndTheta.Heights.ComplexMetrics.Statements
 import GroundTheory.HeightsAndTheta.Heights.ComplexPointsBase
 import GroundTheory.HeightsAndTheta.Heights.FubiniStudy
 import GroundTheory.ArithmeticGeometry.SchemeCohomology.ProjectiveCohomology.PSpaceFinite
+import Mathlib.AlgebraicGeometry.Morphisms.Flat
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

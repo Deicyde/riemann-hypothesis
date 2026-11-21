@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.RealPlaceAnalysis.UJLocCompact
-import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.IsInducingCoeMatrix
 
 open Matrix Topology
 

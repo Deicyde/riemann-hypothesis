@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.HasseNorm
+import Mathlib.Algebra.QuadraticAlgebra.NormDeterminant
 
 namespace GroundTheory.Automorphic
 

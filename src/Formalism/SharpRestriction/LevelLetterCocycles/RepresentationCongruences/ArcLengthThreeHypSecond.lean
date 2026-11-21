@@ -1,4 +1,5 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.ImportsAlt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.RepVVSmulA
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.CmpDSmulLetter
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.RingDataOfCaseAOfP9
@@ -88,7 +89,7 @@ theorem arc_length_three_hyp_second (W : LocWach PD LL O v n) (hcase : Formalism
       rw [smul_smul, smul_smul, pow_two, Module.End.mul_apply]
       congr 1
       rw [hQ, map_pow, map_mul, hps1, hu]
-      simp only [Units.val_mul, Units.val_pow_eq_pow_val, Units.coe_map, MonoidHom.coe_coe, mul_pow]
+      simp only [mul_pow]
       have h1' : ((u⁻¹ : (LetA O n)ˣ) : LetA O n) * (u : LetA O n) = 1 := Units.inv_mul u
       rw [hu] at h1'
       simp only [Units.val_mul, Units.val_pow_eq_pow_val, Units.coe_map, MonoidHom.coe_coe] at h1'

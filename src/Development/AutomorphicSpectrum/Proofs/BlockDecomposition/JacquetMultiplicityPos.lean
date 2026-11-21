@@ -1,9 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.ZelevinskyJacquet.LSegJacquet
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IrreducibleAdmissibleGL
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.JhMultSubAddQuot
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SchurAdmissibleAlt
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ParabolicInductionTensorProductHasFiniteLength
+import Development.AbelianVarietyTheory.Definitions.Divisors.LineOppositeParabolicUnitaryLeviSectionEq
 
 noncomputable section
 
@@ -125,7 +125,7 @@ theorem twKer_le_ker_evalOne (e : (Σ a, m a) ≃ n) {τ : Representation ℂ (G
   have hu : evalOne e f (τ (u : GL n k) v) = evalOne e f v := by
     show (f (τ (u : GL n k) v)).1.1 1 = (f v).1.1 1
     rw [eval_map, eval_unipRad e (f v) u]
-  simp only [SetLike.mem_coe, LinearMap.mem_ker, map_sub, map_smul, hu, MonoidHom.one_apply,
+  simp only [SetLike.mem_coe, LinearMap.mem_ker, map_sub, hu, MonoidHom.one_apply,
     Units.val_one, one_smul, sub_self]
 
 def frobMap (e : (Σ a, m a) ≃ n) {τ : Representation ℂ (GL n k) V} {ρ : Representation ℂ (Levi k m) W}

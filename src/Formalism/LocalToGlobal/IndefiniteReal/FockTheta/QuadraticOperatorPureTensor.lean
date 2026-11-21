@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.FockTheta.NormDeltaLowOfFockDeltaLow
-import Formalism.LocalToGlobal.IndefiniteReal.FockTheta.ConjPurelyImaginaryGenerator
 
 noncomputable section
 
@@ -676,7 +677,7 @@ theorem fCoordFacts : FCoordFacts := by
       obtain ⟨rfl, rfl⟩ := hk
       simp
     · have hk' : ¬ (i = a ∧ c = b) := fun h => hk (by rw [h.1, h.2])
-      simp [Matrix.single_apply, hk', hk]
+      simp [hk', hk]
 
 end FCoordPf
 
@@ -757,7 +758,7 @@ theorem expand_unit {pS pT : ℕ} {GS sS BS : Matrix (Fin n) (Fin n) ℂ} {GT sT
     intro W
     ext i c
     rw [Matrix.sum_apply, Finset.sum_eq_single (i, c)]
-    · simp [Matrix.single_apply]
+    · simp
     · intro b _ hb
       simp only [Matrix.smul_apply, Matrix.single_apply, smul_eq_mul]
       rw [if_neg]
@@ -808,8 +809,8 @@ theorem mn_F {pS pT : ℕ} {GS sS BS XS : Matrix (Fin n) (Fin n) ℂ} {GT sT BT 
   rw [mCoef, nCoef, fCoord_half, fCoord_half, fCoord_sub, fCoord_add, hJ, hJu, adX_smul, fCoord_smul]
   simp only [twF]
   by_cases hk : PosF pS pT k.1 k.2 <;> by_cases hl : PosF pS pT l.1 l.2 <;>
-    simp only [hk, hl, if_true, if_false, iff_self, iff_true, true_iff, iff_false, false_iff, not_true_eq_false,
-      not_false_eq_true, map_neg, Complex.conj_I] <;>
+    simp only [hk, hl, if_true, if_false, iff_self, iff_true, iff_false, not_true_eq_false,
+      map_neg, Complex.conj_I] <;>
     constructor <;>
     first
       | linear_combination (-(fCoord BS BT pS pT (adX XS XT (unitMap BS BT l.1 l.2)) k / 2)) * Complex.I_sq
@@ -916,9 +917,9 @@ theorem qGen_X (ι : K → σ) (hι : Function.Injective ι) (M N : K → K → 
   unfold qGen
   rw [Finset.mul_sum, ← Finset.sum_sub_distrib]
   simp only [Finset.mul_sum, ← Finset.sum_sub_distrib, term]
-  simp only [Finset.sum_sub_distrib, Finset.sum_ite_eq', Finset.sum_ite_eq, Finset.mem_univ, if_true]
+  simp only [Finset.sum_sub_distrib, Finset.sum_ite_eq', Finset.mem_univ, if_true]
   rw [Finset.sum_comm (f := fun k l => if k = j then _ else _)]
-  simp only [Finset.sum_ite_eq', Finset.sum_ite_eq, Finset.mem_univ, if_true]
+  simp only [Finset.sum_ite_eq', Finset.mem_univ, if_true]
 
 theorem qGen_D (ι : K → σ) (hι : Function.Injective ι) (M N : K → K → ℂ) (j : K) (P : MvPolynomial σ ℂ) :
     qGen ι M N (MvPolynomial.pderiv (ι j) P) - MvPolynomial.pderiv (ι j) (qGen ι M N P) =
@@ -943,11 +944,11 @@ theorem qGen_D (ι : K → σ) (hι : Function.Injective ι) (M N : K → K → 
   unfold qGen
   rw [map_sum, ← Finset.sum_sub_distrib]
   simp only [map_sum, ← Finset.sum_sub_distrib, term]
-  simp only [Finset.sum_sub_distrib, Finset.sum_neg_distrib, Finset.sum_ite_eq', Finset.sum_ite_eq, Finset.mem_univ,
+  simp only [Finset.sum_sub_distrib, Finset.sum_neg_distrib, Finset.sum_ite_eq', Finset.mem_univ,
     if_true]
   rw [Finset.sum_comm (f := fun k l => if k = j then MvPolynomial.C (M j l) * _ else 0),
     Finset.sum_comm (f := fun k l => if k = j then MvPolynomial.C (N j l / 2) * _ * P else 0)]
-  simp only [Finset.sum_ite_eq', Finset.sum_ite_eq, Finset.mem_univ, if_true]
+  simp only [Finset.sum_ite_eq', Finset.mem_univ, if_true]
 
 theorem qGen_dGen (ι : K → σ) (hι : Function.Injective ι) (M N : K → K → ℂ) (c d c' d' : K → ℂ)
     (hc : ∀ k, c' k = ∑ j, (M k j * c j + (N k j + N j k) / 2 * d j))
@@ -972,7 +973,7 @@ theorem qGen_dGen (ι : K → σ) (hι : Function.Injective ι) (M N : K → K �
   rw [hc k, hd k, map_sum, map_sum]
   simp only [Finset.sum_mul, ← Finset.sum_sub_distrib]
   refine Finset.sum_congr rfl fun j _ => ?_
-  simp only [add_div, map_add, map_sub, map_mul, map_neg]
+  simp only [add_div, map_add, map_sub, map_mul]
   ring
 
 end QuadGen
@@ -1042,15 +1043,15 @@ theorem mn_skew_sym {pS pT : ℕ} {GS sS BS XS : Matrix (Fin n) (Fin n) ℂ} {GT
     dsimp only
     by_cases h2 : k2 = l2 <;> by_cases h1 : k1 = l1
     · subst h2; subst h1
-      simp only [if_true, map_sub, Complex.conj_ofReal]
+      simp only [if_true, map_sub]
       linear_combination hYT k1 k1 - hYS k2 k2 +
         ((εT k1 : ℂ) * εT k1 * starRingEnd ℂ ((BT⁻¹ * XT * BT) k1 k1)) * hεS2 k2 -
         ((εS k2 : ℂ) * εS k2 * starRingEnd ℂ ((BS⁻¹ * XS * BS) k2 k2)) * hεT2 k1
     · subst h2
-      simp only [if_true, if_neg h1, if_neg (Ne.symm h1), sub_zero, Complex.conj_ofReal]
+      simp only [if_true, if_neg h1, if_neg (Ne.symm h1), sub_zero]
       linear_combination hYT l1 k1 + ((εT l1 : ℂ) * εT k1 * starRingEnd ℂ ((BT⁻¹ * XT * BT) k1 l1)) * hεS2 k2
     · subst h1
-      simp only [if_true, if_neg h2, if_neg (Ne.symm h2), zero_sub, map_neg, Complex.conj_ofReal]
+      simp only [if_true, if_neg h2, if_neg (Ne.symm h2), zero_sub, map_neg]
       linear_combination (-1 : ℂ) * hYS k2 l2 -
         ((εS k2 : ℂ) * εS l2 * starRingEnd ℂ ((BS⁻¹ * XS * BS) l2 k2)) * hεT2 k1
     · simp only [if_neg h1, if_neg (Ne.symm h1), if_neg h2, if_neg (Ne.symm h2), sub_zero, map_zero, mul_zero]
@@ -1059,7 +1060,7 @@ theorem mn_skew_sym {pS pT : ℕ} {GS sS BS XS : Matrix (Fin n) (Fin n) ℂ} {GT
   rw [(mn_F hS hT l k).1, (mn_F hS hT k l).1, (mn_F hS hT l k).2, (mn_F hS hT k l).2, hF, hF, hrel k l, he, he]
   simp only [twF]
   by_cases hk : PosF pS pT k.1 k.2 <;> by_cases hl : PosF pS pT l.1 l.2 <;>
-    simp [hk, hl, map_neg, map_mul, Complex.conj_conj]
+    simp [hk, hl, map_neg]
 
 open Classical in
 
@@ -1158,7 +1159,7 @@ theorem dRhoPoly_of (hT : ThetaDRho D) (hL : DRhoLin D) (hC : DRhoComm D) : DRho
       (pureTensorL aP f P)) x
     have e2 := congrFun (aMinusAll_eq (heisO ψ S T) θ (fun τ => cplxO (sS τ) (sT τ)) BS BT (τ, l.1, l.2)
       (pureTensorL aP f P)) x
-    simp only [Pi.add_apply, Pi.smul_apply, Pi.sub_apply, smul_eq_mul] at e1 e2 ⊢
+    simp only [Pi.add_apply, Pi.smul_apply, smul_eq_mul] at e1 e2 ⊢
     rw [show aP (τ, l.1, l.2) (pureTensorL aP f P) x = _ from e1, show aM (τ, l.1, l.2) (pureTensorL aP f P) x = _ from e2]
     field_simp
     ring_nf

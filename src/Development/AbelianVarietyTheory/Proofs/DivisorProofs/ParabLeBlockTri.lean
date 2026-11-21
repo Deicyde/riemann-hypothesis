@@ -1,6 +1,8 @@
-import Mathlib
-import Formalism.PadicSubsetSums.CentralIdempotents.GaloisConjCentralIdempotent
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.CuspidalProductMultiplicity
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.Divisibility.DefGroup
+import Formalism.PadicSubsetSums.CentralIdempotents.IsConstituent
+import Mathlib.LinearAlgebra.PiTensorProduct.Basis
 
 noncomputable section
 

@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.LogFactorialIndices.StatementSize
+import Mathlib.NumberTheory.Harmonic.EulerMascheroni
 
 open Finset
 open scoped Real

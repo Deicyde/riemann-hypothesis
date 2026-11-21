@@ -1,8 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.DiscreteGroups.GlobalIrreducibility.DzMatchCut
 import Development.DiscreteGroups.GlobalIrreducibility.FLRight
 import Development.DiscreteGroups.GlobalIrreducibility.DzRedInt
 import Development.DiscreteGroups.GlobalIrreducibility.LConvSepI
+import Development.DiscreteGroups.GlobalIrreducibility.ExistsFunctionalNe
 
 noncomputable section
 

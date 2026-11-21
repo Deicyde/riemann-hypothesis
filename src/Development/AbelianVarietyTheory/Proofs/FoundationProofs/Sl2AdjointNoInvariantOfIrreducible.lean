@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.FinalTheorems
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.CoordConjOfCoord
+import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.BlochKatoSelmerVanishes
+import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.ResMapBijective
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.MainNotions.N GlobalTheory.GalOfCusp UpperTheory.V UpperTheory.V.Af UpperTheory.V.HV GlobalTheory.Ord2
 open scoped Matrix
 open GlobalTheory.Sl2Ad
@@ -42,7 +43,7 @@ theorem ad_invariant_eq_zero_of_isIrr {K : Type} [Field K] [IsAlgClosed K] [Char
     rw [this, Matrix.smul_apply, Matrix.one_apply, smul_eq_mul]
     by_cases hij : i = j
     · subst hij; simp
-    · simp [hij, Pi.single_apply, Ne.symm hij]
+    · simp [hij]
   have htr : (2 : K) * μ = 0 := by
     have := trace_ofCoord v
     rw [← hY, hYμ, Matrix.trace_smul, Matrix.trace_one] at this

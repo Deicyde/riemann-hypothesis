@@ -1,13 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.KernelSt
-import Development.AbelianVarietyTheory.Definitions.Divisors.ReferenceMetricMulDualEqOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.AdelicDivisorInducedNeg
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HtTrivAndNefIff
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeightWeightRootChange
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConjInvGradedReferenceLines
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeightAdditiveInSymbols
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ProductFormulaRationalFunction
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalHeightSupportFinite
 
 set_option autoImplicit false
 

@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.PartialDifferential.SqrtSumPdTMulSubLe
+import Mathlib.Topology.UniformSpace.Uniformizable
 
 namespace GroundTheory.Automorphic.Sobolev
 

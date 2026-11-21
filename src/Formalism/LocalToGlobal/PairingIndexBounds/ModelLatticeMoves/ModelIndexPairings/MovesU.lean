@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.PairingIndexBounds.ModelLatticeMoves.ModelIndexPairings.HeisenbergUnitaryHolds
+import Formalism.LocalToGlobal.PairingIndexBounds.ModelLatticeMoves.ModelMoves
 
 noncomputable section
 open scoped BigOperators
@@ -229,7 +232,7 @@ theorem MovesU_of (hMv : Moves) (hID : IndexDual) : MovesU := by
   have hpb : (0 : ℝ) < SB.card := by rw [hSBc]; exact_mod_cast Nat.pos_of_ne_zero hfinB
   have hv : volA A Λ₀ Λ₁ = (SA.card : ℝ) / SB.card := by unfold volA; rw [hA', hB']
   rw [hv, ← sqrt_div_mul_eq_sqrt_mul _ _ hpa hpb]
-  simp only [Pi.smul_apply, Complex.real_smul, Nat.cast_mul]
+  simp only [Pi.smul_apply, Nat.cast_mul]
   push_cast
   ring
 

@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.BcPartsTempered
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Counterexamples.NonGaloisSurvey.EmbeddingValuationsAnti
 import Formalism.LocalToGlobal.GlobalTheory.GL3.PLinkThU
 

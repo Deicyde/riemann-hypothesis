@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsEqOfNatCastMulMem
-import GroundTheory.GlobalFields.ComplexMultiplication.MainTheorem
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PeriodExistenceCm
 import CompanionTheory.AutomorphicTheory.PlaceSeparation.IsOpenQuotientMapArt0
 open NumberField

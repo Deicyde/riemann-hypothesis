@@ -1,11 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.KerBF
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.ThetaAbsoluteSum
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.TransvectionAction
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.WeilDatumExistence
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.AdelicUnitaryTopology
-import Formalism.LocalToGlobal.GlobalTheory.GL5.FamilyMassVolumeIdentityOfClassDecomp
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.WeilStabilizerVolume.TopoPolish
+import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsThetaFam
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR.Datum MeasureTheory IsDedekindDomain NumberField Matrix
 open GlobalTheory.MixModel GlobalTheory.MixPer GlobalTheory.Grow
 open scoped TensorProduct
@@ -218,7 +215,7 @@ theorem isFundamentalDomain_semi (N : Subgroup G) (s : K →* G) (hN : IsClosed 
         have heq : ((⟨u, huG⟩ : ΓG.subgroupOf N)⁻¹ • c ((⟨m, hm⟩ : N)⁻¹ * n)) =
             c ((⟨m', hm'⟩ : N)⁻¹ * n) := by
           apply Subtype.ext
-          simp only [Subgroup.smul_def, smul_eq_mul, Subgroup.coe_mul, Subgroup.coe_inv, hudef, hcdef, conjN_apply,
+          simp only [Subgroup.smul_def, smul_eq_mul, Subgroup.coe_mul, hudef, hcdef, conjN_apply,
             InvMemClass.coe_inv, map_inv]
           group
         rw [heq]; exact h2

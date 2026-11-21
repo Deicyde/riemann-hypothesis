@@ -1,35 +1,26 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.KFiniteThetaLifts.PureThetaTransfer.FourierExpansionCentral
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsReps
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CentralScalarEqWhittakerScalar
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HasseNormGroupProperty
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WhittakerSupportProperty
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.TwistedDatumValueAtZero
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsFinsetFinAtMemIntegralGL
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.AdelicRealPartPropertiesStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GlobalWhittakerCentralCharacterStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.NormGlobalCentralScalarEqOneStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsRepresentativesForAdmissibleDataStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FiniteNormOneUnitsTrivialValuationStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HasSumOverCosetRepresentativesStatement
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RealWeilActionDiagonalStatement
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RealWeilActionUnitRotationStatement
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ProductFormulaGlobalCharacterStatement
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ProductFormulaModulusRationalStatement
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.NormEqualsComplexAbsSqStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ProductIntegralUnitShiftStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntegralUnitTranslateValuationStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ThetaZeroTermUnipotentInvariantStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ThetaFourierCoefficientHasSumStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GlobalUnitIntegralAlmostEverywhereStatement
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ValuationVectorHomomorphismStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MeasurableLocalThetaCoefficientStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.BoundedLocalThetaCoefficientStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LocalThetaCoefficientUnitInvariantStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.StandardLocalCoefficientValuesStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SplitCoefficientVanishesAtLargeOrderStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SplitCoefficientNormOneTwistStatement
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FieldCoefficientNormOneTwistStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SplitWhittakerDiagonalNormStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FieldWhittakerDiagonalNormStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ThetaZeroTermNormInvarianceStatement
@@ -367,7 +358,7 @@ theorem expansion (h2 : Module.finrank ℚ K = 2) (hC : IsTotallyComplex K) {DK 
       · exact absurd ⟨Units.mk0 x h0, rfl⟩ hx)).2 h1'
     have e : (Function.update I 0 0 ∘ ((↑) : Kˣ → K)) = fun κ : Kˣ => I (κ : K) := by
       funext κ
-      simp [Function.update_of_ne κ.ne_zero]
+      simp
     rwa [e] at h2'
   have hF := hU.tsum_fiberwise (Units.map (Algebra.norm ℚ : K →* ℚ))
   have hst := L_stab K h2 hC c M hM

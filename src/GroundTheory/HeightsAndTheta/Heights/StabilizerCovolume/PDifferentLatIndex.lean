@@ -1,7 +1,8 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.StabilizerCovolume.DifferentLatIndex
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.StabilizerCovolume.PTorusIndex
 import GroundTheory.HeightsAndTheta.Heights.StabilizerCovolume.DiffLatStep
+import GroundTheory.HeightsAndTheta.Heights.StabilizerCovolume.PDifferentExtNorm
+import Mathlib.LinearAlgebra.LinearIndependent.BaseChange
 set_option maxSynthPendingDepth 1
 
 noncomputable section

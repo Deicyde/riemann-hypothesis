@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.SmoothedEisensteinFxSumRowLiftsDistribution
-import Development.AbelianVarietyTheory.Definitions.Foundations.PieceEqPieceT
 open GlobalTheory.KummerEisensteinGalois Finset
 open scoped Classical
 set_option maxHeartbeats 1000000 in

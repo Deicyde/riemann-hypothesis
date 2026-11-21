@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.GL2.GJFEDefs
-import GroundTheory.AutomorphicForms.MeasuresGL
-import GroundTheory.AutomorphicForms.MeasuresParabolic
 
 noncomputable section
 

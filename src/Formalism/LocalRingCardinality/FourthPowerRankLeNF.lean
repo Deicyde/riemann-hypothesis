@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.ElevenLe
-import Formalism.LocalRingCardinality.NFLeTwoMulTSq
 
 namespace Formalism.BasicNotions
 

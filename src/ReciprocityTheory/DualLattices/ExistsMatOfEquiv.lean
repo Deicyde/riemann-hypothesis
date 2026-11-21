@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.DualLattices.MemDualLat
-import ReciprocityTheory.DualLattices.MapTensorSpan
 
 noncomputable section
 

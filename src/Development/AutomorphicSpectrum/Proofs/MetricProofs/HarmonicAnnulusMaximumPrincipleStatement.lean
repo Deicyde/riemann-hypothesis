@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.HarmonicAnnulusMaximumPrinciple
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.IntegralAngMeas
 open MeasureTheory Filter Topology GlobalTheory.CompanionTheory.Ar.PB.Flat
 open scoped ContDiff
 set_option maxHeartbeats 1000000 in

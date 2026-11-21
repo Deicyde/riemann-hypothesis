@@ -1,10 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.AutomorphicDetection.Imports
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.AutomorphicDetection.CohLim
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.AutomorphicDetection.AnnBc
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.AutomorphicDetection.GalOut
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.AnnihilatorBaseChange.FiniteOpenHomsToFiniteGroup
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.AnnihilatorBaseChange.RmapsEx
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.AnnihilatorBaseChange.SpoCo
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.AnnihilatorBaseChange.CharpolyElementEqAevalGroupElement
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.AnnihilatorBaseChange.PiSurj
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.AnnihilatorBaseChange.EventuallyExistsPatchedModuleQuotientMaps
@@ -20,20 +21,12 @@ import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.An
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.AnnihilatorBaseChange.MapRingHomSingleMulCharpolyElement
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.AnnihilatorBaseChange.MapRingHomSingleMulPartialCharpolyElement
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.AnnihilatorBaseChange.OoPair
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.AnnihilatorBaseChange.OoMaps
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.AnnihilatorBaseChange.InjOfProd
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.AnnihilatorBaseChange.NonssT
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.AnnihilatorBaseChange.ChainAbs
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.AnnihilatorBaseChange.SpRoots
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.AnnihilatorBaseChange.ChiRes
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.PatchingBaseChange.ChainLift
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.PatchingBaseChange.DiscStMap
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.SeparableMatrixStability.SecondSelmerSpanBoundAtAllLevels
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.CaOverLift
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.CoQuot
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.CoMvps
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebraHeight.DGmap
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebraHeight.DOfRep
 
 open IsLocalRing Filter UpperTheory.V.Alg UpperTheory.V.W UpperTheory.V.AlgebraTools UpperTheory.V.Pa.Core
 open scoped TensorProduct
@@ -64,7 +57,7 @@ private theorem lift_pt (hA : Adapted T (r := r))
           rw [Matrix.charpoly]
           congr 1
           ext i j : 2
-          by_cases hij : i = j <;> simp [GDet.repAlg, Matrix.charmatrix_apply, hij, Matrix.one_apply, Matrix.diagonal_apply]
+          by_cases hij : i = j <;> simp [GDet.repAlg, hij]
         rw [e2, (x.eig p.1).2]
         exact Polynomial.Splits.prod fun i _ => Polynomial.Splits.X_sub_C _) P hP h
   refine ⟨{ x' with commutes' := fun a => ?_ }, fun b => DFunLike.congr_fun h1 b, h2⟩

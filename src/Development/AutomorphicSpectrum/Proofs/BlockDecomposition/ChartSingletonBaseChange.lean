@@ -1,7 +1,6 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.PadicHodgeComparison.HodgeSurjectivity.NLeA
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.AlgebraMapConeRing
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ToConeSurjective
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
 
 set_option autoImplicit false
 noncomputable section

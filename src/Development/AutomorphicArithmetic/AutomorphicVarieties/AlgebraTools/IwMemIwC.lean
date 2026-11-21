@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.HeckePairTop
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IwahoriProjSurjective
 

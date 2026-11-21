@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CoordEquivApply
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.StarStarOfInvol
 open MeasureTheory Set Filter Polynomial NumberField IsDedekindDomain

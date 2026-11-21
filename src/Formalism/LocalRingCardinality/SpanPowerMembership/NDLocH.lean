@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.DataN
 import Formalism.LocalRingCardinality.SpanPowerMembership.NDLocG
+import Formalism.LocalRingCardinality.SpanPowerMembership.NDLocD
 
 noncomputable section
 

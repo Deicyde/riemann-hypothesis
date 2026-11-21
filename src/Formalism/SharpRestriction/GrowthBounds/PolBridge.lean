@@ -1,10 +1,13 @@
-import Formalism.SharpRestriction.GrowthBounds.ObjSeg
-import Formalism.SharpRestriction.GrowthBounds.CovariantDegrees
-import Formalism.SharpRestriction.GrowthBounds.GLWeightTheory
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.ProjectionOfIsotypicDecomposition
 import Formalism.SharpRestriction.GrowthBounds.ValuationLowestDegreeMapFractionField
 import Formalism.SharpRestriction.GrowthBounds.FlipOneThree
-import Formalism.SharpRestriction.GrowthBounds.StatementOfDegreeAndBound
+import Formalism.SharpRestriction.GrowthBounds.RootWeights.ExistsHighestWeightVectorFindim
+import Formalism.SharpRestriction.GrowthBounds.RootWeights.GeneratedModuleWeightLemmaPartB
+import Formalism.SharpRestriction.GrowthBounds.RootWeights.GeneratedWeightLemmaOfReducibility
+import Formalism.SharpRestriction.GrowthBounds.RootWeights.HighestWeightDominantHolds
+import Formalism.SharpRestriction.GrowthBounds.RootWeights.IntegralEnvelopingPreservesStable
 
 noncomputable section
 
@@ -181,7 +184,7 @@ theorem ycond_top (LL : ChainLetters N) (j : ℕ) : YCond K (r := r) LL j ⊤ = 
   apply le_sSup
   refine ⟨?_, ?_⟩
   · intro x _
-    simp [MvPolynomial.mem_restrictSupport_iff]
+    simp
   · intro c d x _
     exact Submodule.mem_top
 

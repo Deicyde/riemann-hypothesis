@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.CommutativeAlgebra.AbByPOfComm
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CharacterTheory.IsCharacterOverSubfieldOfRepresentation
+import Mathlib.LinearAlgebra.PID
+import Mathlib.RingTheory.WittVector.IsPoly
 open GlobalTheory.BI
 noncomputable section
 namespace GlobalTheory.BI

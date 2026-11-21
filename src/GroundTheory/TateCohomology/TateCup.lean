@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.TateCohomology.TateTheorem
 import GroundTheory.TateCohomology.TateCupUnit
 set_option maxSynthPendingDepth 1

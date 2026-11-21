@@ -1,5 +1,12 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.WeylElementCommutesLevelOne
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.BetaSesquilinearity
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
+import Mathlib.RingTheory.Complex
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.Topology.Separation.CompletelyRegular
 
 open Matrix MeasureTheory Filter Topology
 open scoped ComplexConjugate ENNReal NNReal ComplexOrder
@@ -268,28 +275,28 @@ theorem hsblock : Formalism.FourierDecayAlt.B2.HSBlock := by
   have hH2 : Hpk k r * Hpk k r = 1 := (hpkFacts k r).2.1
   have hAA : Ppos k r * Ppos k r = Ppos k r := by
     unfold Ppos
-    simp only [Matrix.smul_mul, Matrix.mul_smul, smul_smul, Matrix.add_mul, Matrix.mul_add, Matrix.one_mul,
+    simp only [Matrix.smul_mul, Matrix.mul_smul, Matrix.add_mul, Matrix.mul_add, Matrix.one_mul,
       Matrix.mul_one, hH2]
     ext i j
     simp only [Matrix.smul_apply, Matrix.add_apply, smul_eq_mul]
     ring
   have hDD : Pneg k r * Pneg k r = Pneg k r := by
     unfold Pneg
-    simp only [Matrix.smul_mul, Matrix.mul_smul, smul_smul, Matrix.sub_mul, Matrix.mul_sub, Matrix.one_mul,
+    simp only [Matrix.smul_mul, Matrix.mul_smul, Matrix.sub_mul, Matrix.mul_sub, Matrix.one_mul,
       Matrix.mul_one, hH2]
     ext i j
     simp only [Matrix.smul_apply, Matrix.sub_apply, smul_eq_mul]
     ring
   have hAD : Ppos k r * Pneg k r = 0 := by
     unfold Ppos Pneg
-    simp only [Matrix.smul_mul, Matrix.mul_smul, smul_smul, Matrix.add_mul, Matrix.mul_sub, Matrix.one_mul,
+    simp only [Matrix.smul_mul, Matrix.mul_smul, Matrix.add_mul, Matrix.mul_sub, Matrix.one_mul,
       Matrix.mul_one, hH2]
     ext i j
     simp only [Matrix.smul_apply, Matrix.sub_apply, Matrix.add_apply, Matrix.zero_apply, smul_eq_mul]
     ring
   have hDA : Pneg k r * Ppos k r = 0 := by
     unfold Ppos Pneg
-    simp only [Matrix.smul_mul, Matrix.mul_smul, smul_smul, Matrix.sub_mul, Matrix.mul_add, Matrix.one_mul,
+    simp only [Matrix.smul_mul, Matrix.mul_smul, Matrix.sub_mul, Matrix.mul_add, Matrix.one_mul,
       Matrix.mul_one, hH2]
     ext i j
     simp only [Matrix.smul_apply, Matrix.sub_apply, Matrix.add_apply, Matrix.zero_apply, smul_eq_mul]

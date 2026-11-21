@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SetIntegralEqZeroOfMulRight
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepresentationPreservesSchwartz
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUnipotentFundamentalDomain
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StandardAdelicCharExistsNeOne
 
@@ -151,7 +149,7 @@ theorem eq_zero_of_vecMul_gram {σ : E →ₐ[F] E} {B : Base F E} {n n₁ r s i
   have h2 : (fun k => σ ((Pi.single i (1 : E) : Fin n → E) k)) = Pi.single i 1 := by
     ext k; by_cases hk : k = i
     · subst hk; simp
-    · simp [Pi.single_apply, hk]
+    · simp [hk]
   simp only [form, h2] at h1
   rw [Matrix.dotProduct_mulVec, dotProduct_single, mul_one] at h1
   simpa using h1
@@ -172,7 +170,7 @@ theorem hA_single {n : ℕ} (σ : E →ₐ[F] E) (J : Matrix (Fin n) (Fin n) E) 
   have h1 : (fun i => cA σ ((Pi.single j β : Fin n → AE F E) i)) = Pi.single j (cA σ β) := by
     ext k; by_cases hk : k = j
     · subst hk; simp
-    · simp [Pi.single_apply, hk]
+    · simp [hk]
   simp only [hA, h1, Matrix.mulVec_single]
   simp [dotProduct, incV, incM, Matrix.vecMul, map_sum, Finset.sum_mul, mul_assoc, mul_comm]
   exact Finset.sum_congr rfl fun _ _ => by ring

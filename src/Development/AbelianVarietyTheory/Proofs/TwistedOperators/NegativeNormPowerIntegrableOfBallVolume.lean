@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.OneMemNbh
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.DiscreteBranchingUpq
 open MeasureTheory Matrix Finset Formalism.MainNotions.S Formalism.REAL Formalism.QuantumDeterminants GlobalTheory.Ell
 open scoped InnerProductSpace
 open GlobalTheory.SepReal
@@ -12,8 +12,8 @@ theorem one_le_hsn {m : ℕ} {ε : Fin m → Bool} (hm : 1 ≤ m) (g : UJ ε) : 
   set a : Fin m := ⟨0, hm⟩
   have h : (umat g)ᴴ * Jm ε * umat g = Jm ε := g.2
   have h2 := congrFun (congrFun h a) a
-  simp only [Jm, Matrix.mul_diagonal, Matrix.diagonal_apply_eq] at h2
-  simp only [Matrix.mul_apply, Matrix.diagonal_apply, mul_ite, mul_zero, Finset.sum_ite_eq, Finset.sum_ite_eq', Finset.mem_univ, if_true, Matrix.conjTranspose_apply] at h2
+  simp only [Jm, Matrix.diagonal_apply_eq] at h2
+  simp only [Matrix.mul_apply, Matrix.diagonal_apply, mul_ite, mul_zero, Finset.sum_ite_eq', Finset.mem_univ, if_true, Matrix.conjTranspose_apply] at h2
   have hn : (1 : ℝ) ≤ ∑ l, ‖umat g l a‖ ^ 2 := by
     have e1 : ‖((if ε a = true then 1 else -1 : ℂ))‖ = 1 := by split_ifs <;> simp
     rw [← e1, ← h2]

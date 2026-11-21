@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.HeckeAlgebra
 import GroundTheory.AutomorphicForms.SmoothRepContragredient
 import GroundTheory.AutomorphicForms.SmoothRepSchur
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 noncomputable section
 

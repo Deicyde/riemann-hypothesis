@@ -1,5 +1,13 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.OpenCellDecomposition.OpenCellBlockShapes.DistribHaarCharPi
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.LeviEmbMemNormalizerLower
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.NumberTheory.LocalField.Basic
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
 
 open Matrix GlobalTheory.SmGL ValuativeRel
 open scoped Pointwise
@@ -41,7 +49,7 @@ theorem blockE_apply (Y : Fin m × Fin r → k) (i : Fin m) (j : Fin r) :
   congr 2
   all_goals
     apply Fin.ext
-    simp [rowI, colI]
+    simp [colI]
 
 theorem one_rowI_colI (i : Fin m) (j : Fin r) : (1 : Matrix (Fin (r + m)) (Fin (r + m)) k) (rowI i) (colI j) = 0 := by
   rw [Matrix.one_apply_ne]
@@ -71,7 +79,7 @@ theorem eq_one_add_blockE {u : Matrix (Fin (r + m)) (Fin (r + m)) k} (hu : IsBlo
     congr 1
     all_goals
       apply Fin.ext
-      simp only [rowI, colI]
+      simp only [colI]
       try omega
   · rw [dif_neg hij, add_zero]
     by_contra h

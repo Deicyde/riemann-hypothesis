@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.AdelicGLn
 import GroundTheory.GlobalFields.IdeleGroups.IdeleNorms
+import Mathlib.Algebra.Order.Positive.Field
 
 namespace GroundTheory.Variant₂.N1
 

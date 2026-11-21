@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.ArchimedeanThetaValues.CarchAt
 import Development.AbelianVarietyTheory.Definitions.ThetaValues.GamAt
-import Formalism.LocalToGlobal.ProjectiveLattices.ArchimedeanQuadraticData.QatOfBridgeAlt
 import Formalism.LocalToGlobal.ProjectiveLattices.RecConj
 import Development.AbelianVarietyTheory.Proofs.GenericRegularity.NumericalConsequencesOfPins
 import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.NormCmArcCoefficientFunctionalLeStatement
@@ -12,6 +11,7 @@ import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.ArcDatumCoeffici
 import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.LamDegreeParameters
 import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.ModelsAtOfGoodLevel
 import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.TransvInOfHasPrinc
+import Formalism.LocalToGlobal.ProjectiveLattices.FreeBridge
 
 noncomputable section
 

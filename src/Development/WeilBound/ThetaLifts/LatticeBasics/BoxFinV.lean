@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LatticeBasics.BoxFinB
+import Development.WeilBound.ThetaLifts.LatticeBasics.BoxFinA
 
 noncomputable section
 

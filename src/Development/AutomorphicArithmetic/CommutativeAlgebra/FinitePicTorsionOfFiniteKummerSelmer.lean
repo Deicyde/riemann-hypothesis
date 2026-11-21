@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCohomology.IsChart
 import Development.EtaleCohomology.EtaleSheaves.LeafPicCut
 import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.ExistsUniqueIdeleOfLinearEquivQuotientLocal
+import GroundTheory.FunctionField.PlaceBridge
+import GroundTheory.FunctionField.ValuationAevalSubCoeffZeroLe
 open GroundTheory.FunctionField UpperTheory.Et.Sel
 open scoped TensorProduct
 

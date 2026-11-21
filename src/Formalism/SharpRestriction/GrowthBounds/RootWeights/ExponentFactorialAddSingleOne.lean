@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.RootWeights.PolynomialMemWeightSpaceIff
+import Formalism.SharpRestriction.GrowthBounds.RootWeights.ContravariantIsotypicOrthogonal
 
 noncomputable section
 
@@ -61,7 +64,7 @@ theorem exponent_factorial_add_single_one {σ : Type} [Fintype σ] (u : σ →�
       ((u + Finsupp.single v 1 : σ →₀ ℕ) i).factorial = (u i).factorial := by
     intro i hi
     rw [Finset.mem_compl, Finset.mem_singleton] at hi
-    simp [Finsupp.single_apply, Ne.symm hi]
+    simp [Ne.symm hi]
   rw [Finset.prod_congr rfl h1]
   simp only [Finsupp.add_apply, Finsupp.single_eq_same, Nat.factorial_succ]
   ring

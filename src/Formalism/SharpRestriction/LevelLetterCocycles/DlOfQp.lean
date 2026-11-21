@@ -1,7 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.JumpsInLetterOfEvenIndex
 import Formalism.SharpRestriction.LevelLetterCocycles.DvOZeroHigh
-import Formalism.SharpRestriction.LevelLetterCocycles.QuotientImageDivisibility.RkMultVNonneg
-import Formalism.SharpRestriction.LevelLetterCocycles.QuotientImageDivisibility.ExistsXPowMul
 import Formalism.SharpRestriction.LevelLetterCocycles.EvaluationAtUniformizerPower
 
 noncomputable section

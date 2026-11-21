@@ -1,8 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.NormalFormDualOrthogonalLast
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.IsNormalFormStabilizerMeasure
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.IsFundOne
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.UEmbMulPEl
+import Mathlib.CategoryTheory.Countable
+import Mathlib.Topology.Separation.CompletelyRegular
 
 noncomputable section
 

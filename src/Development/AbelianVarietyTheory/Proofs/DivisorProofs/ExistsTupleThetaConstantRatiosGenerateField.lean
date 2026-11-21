@@ -1,7 +1,6 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsProjOverWeierstrass
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.MumfordConstruction
-import Development.AbelianVarietyTheory.Definitions.Degenerations.AdmissibleBaseOfCompleteDvr
-import Development.AbelianVarietyTheory.Statements.SemistableTorsion.ImmersedBy
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Degenerations.ArithBase
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj IsLocalRing NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open scoped CategoryTheory.Obj
@@ -27,7 +26,7 @@ theorem thetaSys_gen_tuple (o Ω : Type) [CommRing o] [Field Ω] [Algebra o Ω] 
     intro y hy
     apply Subfield.subset_closure
     refine Or.inr ⟨(x₀, none), (x₀, some ⟨y, hy⟩), ?_⟩
-    simp only [t₀, mul_one]
+    simp only [t₀]
     field_simp
   let KA : Subalgebra o Ω :=
     { K.toSubring with algebraMap_mem' := hbase }

@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.SRelOneOneIff
-import Development.AbelianVarietyTheory.Definitions.ModuliSpaces.IsGaloisCover
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.SiegelToroidalIntegral
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.CardTorsionAbelianVariety
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.RatioTranslate
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.CubicalStrOfTrivTheta
@@ -12,13 +11,9 @@ import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsIsSymplect
 import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.CubeTrivialAndFiniteFlatSurjectiveMulAbelianSche
 import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.ExistsGenThetaOfIsAbelianScheme
 import Development.AbelianVarietyTheory.Proofs.ThetaFamilyOrigin.ExistsStdSympZmod
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.WeilIsValueEq
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.AbelianSchemeLawsUnconditional
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.CubWeilOneLeft
 import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.ConnectedSpaceSpecOfIsLocalRing
 import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.CardTorsionGeometricPointOfField
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.LBLocalC
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.BCTools
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -227,7 +222,7 @@ theorem exists_lift {h n d : ℕ} {k : Type} [Field k] [IsAlgClosed k] (b : TBas
         have e₃ : c.lev (n • fun i => a i / n) = 1 := (g₁ _).2 ⟨_, rfl⟩
         rw [e₃, _root_.mul_one] at e₂
         refine e₂.symm.trans (congrArg c.lev (funext fun i => ?_))
-        simp only [ZMod.val_intCast, Pi.add_apply, Pi.smul_apply, nsmul_eq_mul]
+        simp only [ZMod.val_intCast, Pi.add_apply, nsmul_eq_mul]
         exact Int.emod_add_mul_ediv _ _
     have e := (Nat.card_congr (Equiv.ofBijective F hF)).trans (card k (𝟙 _) n hnk)
     rw [Nat.card_fun, Nat.card_zmod, Nat.card_sum, Nat.card_eq_fintype_card, Fintype.card_fin] at e

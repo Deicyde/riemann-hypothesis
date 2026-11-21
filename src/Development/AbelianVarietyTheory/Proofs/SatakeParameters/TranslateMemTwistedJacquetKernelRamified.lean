@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.SatakeDualWeyl.KpqSubgroupCompact
-import Development.AbelianVarietyTheory.Definitions.Foundations.SmoothPartStable
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.IsSatVecUOfIsSphericalU
 open NumberField IsDedekindDomain
 

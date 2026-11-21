@@ -1,14 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.SiegelWeil₂.EisensteinMaximalParabolic
-import Development.AbelianVarietyTheory.BlockTheory.SiegelEisenstein.DeterminantHeightFlags
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.IwasawaDecompositionIsotropicStabilizerArchimedean
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IwasawaDecompositionAdelic
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LocalDecompositionNonsplitPlace
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LocalDecompositionSplitPlace
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ExistsConjStabilizersSelfDualLatticesUnramified
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ExistsIntegerAddConjEqOneOfFormallyUnramified
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsUniqueIsConjAt
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.WittTheoremAdelicOneVector
+import Development.AbelianVarietyTheory.Definitions.Divisors.LocallyCompactUnipFlag
 
 open GlobalTheory GlobalTheory.UAut GlobalTheory.AdelicU GlobalTheory.SiegelSet GlobalTheory.Doubling Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes NumberField GlobalTheory.EisLine GlobalTheory.Eis
   IsDedekindDomain TensorProduct
@@ -26,7 +21,7 @@ theorem coord_map {ι : Type} [DecidableEq ι] (b : Module.Basis ι F E) {R R' :
       f (equivFinsuppOfBasisRight b x i) := by
   induction x using TensorProduct.induction_on with
   | zero => simp
-  | tmul a e => simp [equivFinsuppOfBasisRight_apply_tmul_apply]
+  | tmul a e => simp
   | add x y hx hy => simp [hx, hy]
 
 omit [NumberField E] in

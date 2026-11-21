@@ -1,8 +1,6 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.GenericPointSectionHypotheses
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.RestrLenPrimeOfEqFinrank
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PRestrLenRestrict
-import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.AssemblyBase
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PIdealTwistFamily
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PTildeVanish
 set_option maxSynthPendingDepth 1

@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementFr
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.PositionInsertionDiagonalCompat
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.QEFirstMulSecondEqSwap
 
 open Matrix Formalism.YangianSpanCharacter.T Formalism.YangianSpanCharacter.Y Formalism.FourierDecayAlt.R Formalism.FourierDecayAlt.Wd Formalism.FourierDecayAlt.Fr
@@ -156,7 +157,7 @@ lemma gauss_entries (Fs dd ls l p t F : SlopeTestRemainingChoices S A) :
       !![Fs * (dd * p + ls * (dd * t) * l) * F, Fs * (ls * (dd * t)) * F;
         Fs * (dd * t * l) * F, Fs * (dd * t) * F] := by
   first
-  | (simp only [d0_eq_diagonal, Matrix.mul_fin_two, mul_one, one_mul, mul_zero, zero_mul, add_zero, zero_add,
+  | (simp only [d0_eq_diagonal, Matrix.mul_fin_two, mul_one, mul_zero, zero_mul, add_zero, zero_add,
       mul_add, add_mul, mul_assoc]; done)
   | (refine Matrix.ext fun i j => ?_
      fin_cases i <;> fin_cases j <;>
@@ -375,7 +376,7 @@ lemma diag_entries (p1 p2 w c1 c2 e1 e2 : SlopeTestRemainingChoices S A) :
     !![p1, 0; 0, p2] * d0 w * !![c1, 0; 0, c2] * !![e1, 0; 0, e2] =
       !![p1 * w * c1 * e1, 0; 0, p2 * w * c2 * e2] := by
   first
-  | (simp only [d0_eq_diagonal, Matrix.mul_fin_two, mul_one, one_mul, mul_zero, zero_mul, add_zero, zero_add,
+  | (simp only [d0_eq_diagonal, Matrix.mul_fin_two, mul_zero, zero_mul, add_zero, zero_add,
       mul_assoc]; done)
   | (refine Matrix.ext fun i j => ?_
      fin_cases i <;> fin_cases j <;>
@@ -465,7 +466,7 @@ theorem plusForm (L : LevelData A r) (f : FrameData S A) (a : S) (Ya : ℂ) (H :
   have hZ : (!![io L.ζi, 0; 0, io L.ζbi] * !![1, 0; io L.GG * f.l L Ya, io L.GG] : M2 (SlopeTestRemainingChoices S A)) =
       !![io L.ζi, 0; 0, io L.ζbi * io L.GG] * !![1, 0; f.l L Ya, 1] := by
     rw [Matrix.mul_fin_two, Matrix.mul_fin_two]
-    simp only [mul_one, mul_zero, zero_mul, add_zero, zero_add, one_mul, mul_assoc]
+    simp only [mul_one, mul_zero, zero_mul, add_zero, zero_add, mul_assoc]
   show f.RR * ins a (f.TT Ya) =
     star (ins a (!![io L.ζi, 0; 0, io L.ζbi] * !![1, 0; io L.GG * f.l L Ya, io L.GG]) * f.F) *
       ((wt L : SlopeTestRemainingChoices S A) ^ (f.N + 1) * (f.c * ins a !![f.q Ya • f.xi (Ya + 1), 0; 0, f.x Ya])) *

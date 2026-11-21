@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import CompanionTheory.AutomorphicTheory.BesselWaveGrids.PStarTie
 import CompanionTheory.AutomorphicTheory.BesselWaveGrids.CfgTie
 
@@ -225,7 +226,7 @@ theorem nq_of_lamData (P : M.Par) (hOK : P.OK) (l : ℕ) (hl1 : 1 ≤ l) (hlk : 
     obtain ⟨h1, h2⟩ := Finset.mem_Icc.1 hs
     simp only [lamN]
     rw [dif_pos (by omega)]
-    simp only [Fin.val_mk, Nat.sub_add_cancel h1]
+    simp only [Nat.sub_add_cancel h1]
   have hb : (0 : ℝ) ≤ b ^ (8 * P.r + 20) / (P.T * P.T') :=
     div_nonneg (pow_nonneg (by linarith [hL.b_ge_three]) _) (mul_pos hOK.T_pos hOK.T'_pos).le
   rw [e, e, nqΛ, Real.sq_sqrt hb]
@@ -254,17 +255,17 @@ theorem Pc_OK : Pc.OK := by
     obtain ⟨h1, h2⟩ := Finset.mem_Icc.1 hi'
     interval_cases i
     · exact ⟨0, by simp⟩
-    · exact ⟨-281, by simp [Pc, cfgPar, Sz.Cfg.u, Sz.Cfg.v, Sz.Cfg.ulast, cfg₁, cfg₀]; norm_num⟩
-    · exact ⟨-341, by simp [Pc, cfgPar, Sz.Cfg.u, Sz.Cfg.v, Sz.Cfg.ulast, cfg₁, cfg₀]; norm_num⟩
-    · exact ⟨-401, by simp [Pc, cfgPar, Sz.Cfg.u, Sz.Cfg.v, Sz.Cfg.ulast, cfg₁, cfg₀]; norm_num⟩
+    · exact ⟨-281, by simp [Pc, cfgPar, Sz.Cfg.u, Sz.Cfg.v, cfg₁, cfg₀]; norm_num⟩
+    · exact ⟨-341, by simp [Pc, cfgPar, Sz.Cfg.u, Sz.Cfg.v, cfg₁, cfg₀]; norm_num⟩
+    · exact ⟨-401, by simp [Pc, cfgPar, Sz.Cfg.u, Sz.Cfg.ulast, cfg₁, cfg₀]; norm_num⟩
   · intro i hi
     have hi' : i ∈ Finset.Icc 1 4 := hi
     obtain ⟨h1, h2⟩ := Finset.mem_Icc.1 hi'
     interval_cases i
     · exact ⟨0, by simp [Pc, cfgPar, Sz.Cfg.u]⟩
-    · exact ⟨-296, by simp [Pc, cfgPar, Sz.Cfg.u, Sz.Cfg.v, Sz.Cfg.ulast, cfg₁, cfg₀]; norm_num⟩
-    · exact ⟨-341, by simp [Pc, cfgPar, Sz.Cfg.u, Sz.Cfg.v, Sz.Cfg.ulast, cfg₁, cfg₀]; norm_num⟩
-    · exact ⟨-401, by simp [Pc, cfgPar, Sz.Cfg.u, Sz.Cfg.v, Sz.Cfg.ulast, cfg₁, cfg₀]; norm_num⟩
+    · exact ⟨-296, by simp [Pc, cfgPar, Sz.Cfg.u, Sz.Cfg.v, cfg₁, cfg₀]; norm_num⟩
+    · exact ⟨-341, by simp [Pc, cfgPar, Sz.Cfg.u, Sz.Cfg.v, cfg₁, cfg₀]; norm_num⟩
+    · exact ⟨-401, by simp [Pc, cfgPar, Sz.Cfg.u, Sz.Cfg.ulast, cfg₁, cfg₀]; norm_num⟩
   · intro i hi
     have hi' : i ∈ Finset.Icc 1 3 := hi
     obtain ⟨h1, h2⟩ := Finset.mem_Icc.1 hi'
@@ -279,6 +280,6 @@ theorem ex_cfg : NQ Pc (PStar (fun s : Fin (2 * Pc.r + Pc.k + 1) => cfg₁.lam (
   simp only [Finset.mem_insert, Finset.mem_singleton] at hy
   right
   rcases hy with rfl | rfl | rfl <;>
-    simp [Pc, cfgPar, Sz.Cfg.u, Sz.Cfg.v, Sz.Cfg.ulast, cfg₁, cfg₀] <;> norm_num
+    simp [Pc, cfgPar, Sz.Cfg.u, Sz.Cfg.v, cfg₁, cfg₀] <;> norm_num
 
 end CompanionTheory.WaveGrid.Inhab

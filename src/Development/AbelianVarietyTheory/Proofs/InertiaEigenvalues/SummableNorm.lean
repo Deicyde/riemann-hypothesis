@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CompleteSpaceFinExt
+import Mathlib.Topology.UniformSpace.Uniformizable
 
 noncomputable section
 
@@ -107,7 +109,7 @@ theorem ev_map {O : Type} [CommRing O] (j : O →+* K) (hν : Small ν) (hc : Bd
     have e : (mk (∑ k ∈ Ico 0 m, Polynomial.monomial k (coeff k a)).coeff : O⟦X⟧) =
         ∑ k ∈ range m, C (coeff k a) * X ^ k := by
       ext n
-      simp [coeff_X_pow, Polynomial.coeff_monomial, Polynomial.finset_sum_coeff]
+      simp [coeff_X_pow, Polynomial.coeff_monomial]
     rw [e, map_sum]
     simp only [map_mul, map_pow, hX, hC, coeff_map]
   simp only [key]

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsAdmOnOfFiniteDimensional
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.IsClosedMatrixGroupImage
 open Matrix Topology Filter

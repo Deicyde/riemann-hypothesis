@@ -1,8 +1,4 @@
-import Mathlib
-import Development.AutomorphicArithmetic.ThetaCorrespondence.RealBands.IsBand
-import Development.AutomorphicArithmetic.ThetaCorrespondence.RealBands.ConvEig
-import Development.AutomorphicArithmetic.ThetaCorrespondence.RealBands.ConvAssoc
-import Development.AutomorphicArithmetic.ThetaCorrespondence.RealBands.BandCc
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.RealBands.KillsOfIdem
 import Development.AutomorphicArithmetic.ThetaCorrespondence.RealBands.BandKill
 import Development.AutomorphicArithmetic.ThetaCorrespondence.RealBands.Unfold

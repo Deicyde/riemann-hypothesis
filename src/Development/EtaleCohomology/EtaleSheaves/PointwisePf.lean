@@ -1,4 +1,6 @@
-import Development.EtaleCohomology.EtaleSheaves.CokernelKilling.KillCokOf
+import BuildAid.Leniency.Open
+import Development.EtaleCohomology.EtaleSheaves.CokernelKilling
+import Mathlib.CategoryTheory.WithTerminal.Lemmas
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry GlobalTheory.EtC LateralTheory.E.t_E3Cut

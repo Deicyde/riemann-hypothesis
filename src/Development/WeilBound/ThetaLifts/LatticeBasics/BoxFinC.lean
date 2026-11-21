@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LatticeBasics.BoxFinV
 import Development.WeilBound.ThetaLifts.LatticeBasics.SecondFromFirstStatement
 import Development.WeilBound.ThetaLifts.LatticeBasics.ThetaBox
+import Mathlib.Analysis.Calculus.Deriv.Star
 
 noncomputable section
 

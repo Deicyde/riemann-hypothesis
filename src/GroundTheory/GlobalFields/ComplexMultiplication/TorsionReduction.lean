@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.ComplexMultiplication.ReductionNonsingularPoints
 import GroundTheory.ArithmeticGeometry.AbelianVarieties.SingularCubic
 import GroundTheory.ArithmeticGeometry.AbelianVarieties.KodairaNeron

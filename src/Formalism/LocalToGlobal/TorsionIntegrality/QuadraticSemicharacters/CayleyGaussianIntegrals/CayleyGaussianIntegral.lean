@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.QuadraticSemicharacters.CayleyGaussianIntegrals.CayleyIdentity
+import Formalism.LocalToGlobal.TorsionIntegrality.QuadraticSemicharacters.KerPNonzero
+import Mathlib.Analysis.SpecialFunctions.Gaussian.FourierTransform
+import Mathlib.RingTheory.PicardGroup
 
 noncomputable section
 open scoped BigOperators ComplexConjugate

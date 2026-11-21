@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsAddBlockIsometric
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PSectionPointValue
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsSemilocRing

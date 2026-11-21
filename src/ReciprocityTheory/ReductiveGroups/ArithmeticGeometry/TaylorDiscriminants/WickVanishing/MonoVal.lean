@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.CocycleRightZeroThd
+import Mathlib.Tactic.ENatToNat
 
 set_option autoImplicit false
 
@@ -53,7 +56,7 @@ theorem coeff_fold {ι : Type} (cd : ι → σ) (hc : Function.Injective cd) (m 
       apply List.map_congr_left
       intro l' hl'
       have hne : cd l ≠ cd l' := fun h => hnd.1 (by rw [hc h]; exact hl')
-      simp [Finsupp.single_apply, hne]
+      simp [hne]
     rw [hprod, List.map_cons, List.sum_cons, List.map_cons, List.prod_cons, add_assoc]
     ring
 
@@ -83,14 +86,14 @@ theorem dof_single (d : ℕ) (i : Fin d) :
     intro j
     rw [Finset.sum_eq_single j]
     · have hd : pderiv k ((1 : Fin 2), j) (addF k d j) = 1 := by
-        simp [addF, MvPowerSeries.pderiv_X, Pi.single_apply]
+        simp [addF]
       rw [hd, ev1, mul_one]
       by_cases hji : j = i
       · subst hji; simp
-      · simp [Pi.single_apply, hji]
+      · simp [hji]
     · intro b _ hb
       have hd : pderiv k ((1 : Fin 2), b) (addF k d j) = 0 := by
-        simp [addF, MvPowerSeries.pderiv_X, Pi.single_apply, Ne.symm hb]
+        simp [addF, Ne.symm hb]
       rw [hd, ev0, mul_zero]
     · intro h
       exact absurd (Finset.mem_univ j) h
@@ -109,7 +112,7 @@ theorem monoVal : MonoValSt := by
   · haveI : Subsingleton k := subsingleton_of_zero_eq_one h01.symm
     exact Subsingleton.elim _ _
   · simp only [DpolyOf, MvPolynomial.support_monomial, if_neg h01, Finset.sum_singleton,
-      MvPolynomial.coeff_monomial, if_pos rfl, map_one, one_mul, DmonOf, dof_single]
+      MvPolynomial.coeff_monomial, DmonOf, dof_single]
     rw [← MvPowerSeries.coeff_zero_eq_constantCoeff_apply]
     simp only [ite_true, map_one, one_mul]
     have hcd : Function.Injective (fun l : ι => ((0 : Fin 1), j l)) :=

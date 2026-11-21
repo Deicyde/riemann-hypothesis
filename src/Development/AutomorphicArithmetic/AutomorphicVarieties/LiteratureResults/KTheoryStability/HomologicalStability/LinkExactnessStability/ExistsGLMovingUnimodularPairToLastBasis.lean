@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.SubClosed
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.TensorHomCubes.StabDirectedSystem
+import Mathlib.RingTheory.PiTensorProduct
 
 open GlobalTheory.SeqCx Matrix UpperTheory.V.KL
 

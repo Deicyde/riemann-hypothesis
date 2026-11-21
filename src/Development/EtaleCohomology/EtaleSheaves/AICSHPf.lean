@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.EtaleBaseChangeFractionFieldIndEtaleOverPolynomi
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 noncomputable section
 open Polynomial GlobalTheory.EtC

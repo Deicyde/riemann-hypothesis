@@ -1,7 +1,7 @@
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RowOfCovolumeOntoGrid
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.CohomologicalCsdTempered
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.SummandFunctionalBound
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.PtOf
+import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.CountsIrreducibilityConstants
+import Formalism.LocalToGlobal.Divisibility.TupUsed
 
 set_option synthInstance.maxHeartbeats 200000
 

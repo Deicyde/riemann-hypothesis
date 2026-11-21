@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.PlaceDegreeData
 import Formalism.SharpRestriction.CuspSpanNormBounds.AdmissibleBoundsFromSource
-import Formalism.SharpRestriction.ParamsHeightRankConstant
 import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
 import Formalism.LocalRingCardinality.SpanPowerMembership.ExampleLayerExistsGenerators
 

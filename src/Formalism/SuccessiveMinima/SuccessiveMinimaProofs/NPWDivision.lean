@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SuccessiveMinima.DefsNP
 import Formalism.SuccessiveMinima.SuccessiveMinimaProofs.NewtonSlope
 

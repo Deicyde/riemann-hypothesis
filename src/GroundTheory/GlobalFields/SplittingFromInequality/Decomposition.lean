@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.SplittingFromInequality.Galois
-import GroundTheory.GlobalFields.SemilocalAlgebras.Galois
 import GroundTheory.GlobalFields.CompletionAtPlace.Inertia
 import GroundTheory.LocalFields.UnramifiedGalois
 

@@ -1,7 +1,7 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.DefsObj
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.CentreSplitting.RhoLoc
 import GroundTheory.IdeleRoots.TorusPowers.SatakeBoundAdic
-import GroundTheory.GlobalFields.LocalFieldAtPlace
 
 open MeasureTheory NumberField IsDedekindDomain
 open GroundTheory.Automorphic GroundTheory.Automorphic.Reduction GroundTheory.Automorphic.RightCosetSpace

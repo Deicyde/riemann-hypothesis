@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.LocalRingCardinality.DataArith
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.SlopeStep
 
 noncomputable section

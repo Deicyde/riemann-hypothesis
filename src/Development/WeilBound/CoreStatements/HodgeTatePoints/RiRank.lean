@@ -1,10 +1,10 @@
-import ReciprocityTheory.DualLattices.CotangentSurjective
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.IsTight
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.StepOrderRes
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.CharacterIdealPrincipalEigen
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.TeichmullerCharacterOrderGenerates
-import ReciprocityTheory.DualLattices.VIntCastLtOneOfDvd
-import ReciprocityTheory.DualLattices.PowMemCarrier
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
 
 open ReciprocityTheory.PGsh.L2 ReciprocityTheory.PGsh.Up GlobalTheory.CompanionTheory.Ar.GR
 open scoped Matrix
@@ -363,7 +363,7 @@ theorem r_decomp : ∀ (p : ℕ) [Fact p.Prime] (C : Type) [Field C] [IsAlgClose
       (fun m hm => by rw [if_neg (by simp at hm; omega), if_neg (by simp at hm; omega)])]
     by_cases hy : y = 0
     · subst hy
-      simp only [if_true, map_one, one_mul, apply_ite (algebraMap R C), map_neg, map_zero, mul_ite, mul_neg, mul_one, mul_zero]
+      simp only [if_true, map_one, apply_ite (algebraMap R C), map_neg, map_zero, mul_ite, mul_neg, mul_one, mul_zero]
       rw [Finset.sum_ite_eq' (Finset.Icc 1 n) n, if_pos (Finset.mem_Icc.mpr ⟨hn1, le_rfl⟩), hσn]
       by_cases hx : x = 0
       · subst hx
@@ -436,7 +436,7 @@ theorem r_decomp : ∀ (p : ℕ) [Fact p.Prime] (C : Type) [Field C] [IsAlgClose
     have h7 := hreP (fun k => v (if k = 0 then 1 else algebraMap R C (c k)))
     simp only at h7
     rw [show (∏ j, v (d j)) = ∏ j, v (if (e j : ℕ) = 0 then 1 else algebraMap R C (c (e j))) from rfl, h7]
-    simp only [↓reduceIte, if_true, map_one, one_mul]
+    simp only [↓reduceIte, map_one, one_mul]
     refine Finset.prod_congr rfl fun m hm => ?_
     rw [if_neg (by simp at hm; omega)]
 

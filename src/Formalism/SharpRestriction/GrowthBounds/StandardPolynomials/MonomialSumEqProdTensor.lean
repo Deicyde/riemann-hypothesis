@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.StandardPolynomials.PreSys
-import Formalism.SharpRestriction.GrowthBounds.CoarseMultiplicity.DivDerZero
 
 noncomputable section
 

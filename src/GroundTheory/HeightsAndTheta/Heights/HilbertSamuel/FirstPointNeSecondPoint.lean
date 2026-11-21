@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.FderivFderivLogRho
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.LemCone
+import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.IsConeAnalyticSubset
+import Mathlib.Algebra.AffineMonoid.Basic
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.IndefiniteRowSideFullHecke.HilbertSamuel
@@ -85,7 +87,7 @@ theorem isMultiHomog_homog (p : Polynomial ℤ) (d : ℕ) :
   obtain ⟨⟩ := k
   have hi' : i ≤ d := Nat.lt_succ_iff.mp (Finset.mem_range.mp hi)
   rw [Fin.sum_univ_two]
-  simp [Finsupp.single_apply, p0, p1]
+  simp [p0, p1]
   omega
 
 theorem homog_add (p q : Polynomial ℤ) (d : ℕ) : homog (p + q) d = homog p d + homog q d := by
@@ -99,15 +101,15 @@ theorem homog_C_mul_X_pow (c : ℤ) {j d : ℕ} (hj : j ≤ d) :
   rw [homog, Finset.sum_eq_single j]
   · simp
   · intro i _ hij
-    simp [Polynomial.coeff_C_mul_X_pow, hij]
+    simp [hij]
   · intro h
     exact absurd (Finset.mem_range.mpr (by omega)) h
 
 theorem finsupp_twoPoint_eq (m : J2 →₀ ℕ) : m = Finsupp.single p1 (m p1) + Finsupp.single p0 (m p0) := by
   ext q
   rcases twoPoint_cases q with rfl | rfl
-  · simp [Finsupp.single_apply, firstPoint_ne_secondPoint.symm]
-  · simp [Finsupp.single_apply, firstPoint_ne_secondPoint]
+  · simp [firstPoint_ne_secondPoint.symm]
+  · simp [firstPoint_ne_secondPoint]
 
 theorem homog_dehom {f : MvPolynomial J2 ℤ} {d : ℕ} (hf : f.IsHomogeneous d) :
     homog (dehom f) d = f := by

@@ -1,19 +1,16 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.LineSCShortExact
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousOnCosSq
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPullbackFrameSpanningFlag
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleCarriesBaseChange
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PullbackUnipotentFrameUnique
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PullbackUnipotentFrameIsFrame
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFlagSpannedFrame
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagsSameFrameIso
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CarriedFlagTriangularFrame
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPolynomialChartOfFlagBundle
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolynomialPointFactorsThroughChart
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUnipotentTriangularFactor
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TriangularChangeSpansFlag
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCellFrameOfSpans
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EtalePolynomialSubstitution
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsTypeIsRealConst
 
 open CategoryTheory AlgebraicGeometry TopologicalSpace Filter Topology
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -45,7 +42,7 @@ theorem exists_cell (B Y : Scheme.{0}) (π : Y ⟶ B) (ι : Type) [Fintype ι] (
   let g : Spec A ⟶ B := Spec.map (CommRingCat.ofHom
     (MvPolynomial.C : Γ(B, U) →+* MvPolynomial (Σ a, Low (r a)) Γ(B, U))) ≫ hU.fromSpec
   have hgU : (⊤ : (Spec A).Opens) ≤ g ⁻¹ᵁ U := by
-    simp [g, Scheme.Hom.comp_preimage, hU.fromSpec_preimage_self]
+    simp [g, hU.fromSpec_preimage_self]
   let n' : (Σ a, Low (r a)) → Γ(Spec A, ⊤) := fun s => (Scheme.ΓSpecIso A).inv.hom (MvPolynomial.X s)
   have hfr : ∀ a, IsFrame (pullCol g (eU a) hgU (uniR fun s => n' ⟨a, s⟩)) := fun a =>
     UniColFrame.isFrame_pullCol_uniR _ _ g (E a) (r a) (hE a) U (eU a) (heU a) ⊤ hgU _

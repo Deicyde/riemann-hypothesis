@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.ChartConeObjects
-import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.SegreChartObjects
 set_option maxSynthPendingDepth 1
 
 noncomputable section

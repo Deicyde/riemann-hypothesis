@@ -1,8 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.CrystallineTowers.LocTower
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.OfShortExact
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCommonModel
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsModelOfMem
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FiniteDimensionalFilDR
 
 noncomputable section
 

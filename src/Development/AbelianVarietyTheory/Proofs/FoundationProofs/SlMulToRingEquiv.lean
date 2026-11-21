@@ -1,5 +1,7 @@
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsLocallyConstantCycMod
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.Letter
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.MainNotions.N GlobalTheory.GalOfCusp UpperTheory.V UpperTheory.V.Af UpperTheory.V.HV GlobalTheory.Ord2 GlobalTheory.KZ
 open scoped Matrix
 
@@ -12,7 +14,7 @@ theorem toGQ_mul_of_pos (m m' : Matrix (Fin 2) (Fin 2) ℤ) (h : 0 < m.det) (h' 
   rw [dif_pos hmm, dif_pos h, dif_pos h']
   apply Subtype.ext
   apply Units.ext
-  simp only [Matrix.GeneralLinearGroup.mkOfDetNeZero, Units.val_mul] at *
+  simp only [Matrix.GeneralLinearGroup.mkOfDetNeZero] at *
   exact Matrix.map_mul (f := Int.castRingHom ℚ)
 
 theorem mZl_mul (l : ℕ) [Fact l.Prime] (m m' : Matrix (Fin 2) (Fin 2) ℤ) :

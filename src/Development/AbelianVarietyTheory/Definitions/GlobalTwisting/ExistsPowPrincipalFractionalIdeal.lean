@@ -1,19 +1,12 @@
-import Mathlib
-import Formalism.SharpRestriction.GlobalSchurBounds.GeneralLinearActions.IsDiscriminantTwelfthRootOfIdealLattice
-import Formalism.SharpRestriction.GlobalSchurBounds.GL3Theta
-import Formalism.SharpRestriction.GlobalSchurBounds.StandardLatticesGL3
-import Formalism.LocalRingCardinality.DataForms
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.CmThetaTaylorCoeffAlgebraicAndConjugate
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsTwoTorsionCMPointAllConjugates
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.CmThetaComplexConjugationCompatible
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ConjugateCurveDatumLatticeIsCurveLattice
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.VacuumTranslateConjugateJetBound
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.MeanSquareEvenThetaConjugateLattice
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.OrthonormalRealBasisComplexCoordinates
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.CmFiniteAdeleStrongApproxModAdelicIdeal
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsTraceDualFamilyInverseHalfDifferent
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IntegralJAndAlgebraicData
-import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.IntegersMemInverseHalfDifferent
 
 noncomputable section
@@ -211,8 +204,7 @@ theorem index_span_mul (c : 𝓞 M) {a : M} (ha : a ≠ 0) :
   have h2 : (Submodule.span (𝓞 M) {c • a}).toAddSubgroup =
       (Ideal.span {c} : Ideal (𝓞 M)).toAddSubgroup.map f.toAddMonoidHom := by
     ext x
-    simp only [Submodule.mem_toAddSubgroup, Submodule.mem_span_singleton, AddSubgroup.mem_map,
-      Ideal.mem_span_singleton']
+    simp only [Submodule.mem_toAddSubgroup, Submodule.mem_span_singleton, AddSubgroup.mem_map]
     constructor
     · rintro ⟨r, rfl⟩
       exact ⟨r * c, ⟨r, rfl⟩, by simp [f, mul_smul]⟩

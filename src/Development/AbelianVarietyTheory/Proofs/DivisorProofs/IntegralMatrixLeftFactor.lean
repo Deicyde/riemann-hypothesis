@@ -1,8 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndicatorIntMMemSB
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ScaledIntegerPeriodic
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MulRightMemSB
 open MeasureTheory ValuativeRel Matrix GlobalTheory.SplitWeil GlobalTheory.SplitFlip GlobalTheory.KSplit GlobalTheory.GJReg
 open Classical
 
@@ -26,7 +23,7 @@ theorem exists_gl_rowSpan_int (k : Type) [Field k] [ValuativeRel k] [Topological
     exact smul_right_injective _ h0 this⟩
   haveI : Module.Free 𝒪[k] L := Module.free_of_finite_type_torsion_free'
   have hSdet : S.det ≠ 0 := by
-    simp [hS, Matrix.det_smul, hs]
+    simp [hS, hs]
   have hSli : LinearIndependent k (fun i => S i) := by
     exact Matrix.linearIndependent_rows_of_isUnit ((Matrix.isUnit_iff_isUnit_det S).2 (isUnit_iff_ne_zero.2 hSdet))
   have hSmem : ∀ i, S i ∈ L := fun i => Submodule.subset_span ⟨Sum.inr i, rfl⟩
@@ -74,8 +71,8 @@ theorem exists_gl_rowSpan_int (k : Type) [Field k] [ValuativeRel k] [Topological
     have hv2 : ∀ j, v (Sum.inr j) = S j := fun _ => rfl
     rw [Fintype.sum_sum_type] at this
     simp only [hv1, hv2] at this
-    simp only [Finset.sum_apply, Pi.add_apply, Pi.smul_apply, Subring.smul_def, smul_eq_mul, v, Sum.elim_inl,
-      Sum.elim_inr, hS, Matrix.smul_apply, Matrix.one_apply, mul_ite, mul_one, mul_zero,
+    simp only [Finset.sum_apply, Pi.add_apply, Pi.smul_apply, Subring.smul_def, smul_eq_mul,
+      hS, Matrix.smul_apply, Matrix.one_apply, mul_ite, mul_one, mul_zero,
       Finset.sum_ite_eq', Finset.mem_univ, if_true] at this
     simp only [H, A, B, Matrix.add_apply, Matrix.mul_apply, Matrix.smul_apply, Matrix.of_apply, smul_eq_mul]
     rw [← this]

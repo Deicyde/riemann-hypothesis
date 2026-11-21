@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.PolynomialDimension.StatementNum
 import Formalism.PolynomialDimension.DigitClassSize
 

@@ -1,6 +1,6 @@
-import Development.AutomorphicArithmetic.ThetaCorrespondence.FockModels.TiltedDrinfeld.LinearIndepOnOfInvariant
-import Development.AutomorphicArithmetic.ThetaCorrespondence.FockModels.TiltedDrinfeld.ExistsBeta
-import Development.AutomorphicArithmetic.ThetaCorrespondence.LocalComparison.LocTied6
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.RepresentationTheoryGL.PeriodRingBases.FixedBaseSurjectivity.GaloisPeriodCyclotomic
 
 set_option backward.isDefEq.respectTransparency false
 

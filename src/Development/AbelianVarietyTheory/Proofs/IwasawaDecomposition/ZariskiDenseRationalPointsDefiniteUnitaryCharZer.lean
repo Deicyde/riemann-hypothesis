@@ -1,8 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IncludeLInjective
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CayleyTransformMemRationalUnitaryGroup
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsFinBasisCoeffsEmbeddingsEvalStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsNormOneCmFieldDetOneAddNeZeroCharZeroStatement
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formalism.ConjugateSelfDual ReciprocityTheory.Gal ReciprocityTheory.Aut Formalism.AUTREP Formalism.L2 Formalism.L2.Host Formalism.L2.NT Formalism.IndefR.NX GlobalTheory.HeightCounting GlobalTheory.HeightCounting.FormsStep NumberField IsDedekindDomain Polynomial
 open scoped TensorProduct
 
@@ -89,7 +90,7 @@ theorem skewRat_map (σ : L →+* K) (x : Fin (Module.finrank ℚ L) × Fin n ×
 theorem skewRat_skew (x : Fin (Module.finrank ℚ L) × Fin n × Fin n → ℚ) :
     skewRat L n x + ((skewRat L n x).map (IsCMField.complexConj L : L →+* L))ᵀ = 0 := by
   ext a b
-  simp [skewRat, Matrix.add_apply, Matrix.transpose_apply, map_sub, complexConj_invol]
+  simp [skewRat, Matrix.add_apply, Matrix.transpose_apply, map_sub]
 
 end
 end GlobalTheory.UnitaryDense
@@ -336,7 +337,7 @@ theorem unitary_points_dense : ∀ (L : Type) [Field L] [NumberField L] [IsCMFie
       have : conjT c (Matrix.scalar (Fin n) (c u)) = Matrix.scalar (Fin n) u := by
         ext i j
         by_cases hij : i = j
-        · subst hij; simp [conjT, hc, complexConj_invol]
+        · subst hij; simp [conjT, hc]
         · simp [conjT, Matrix.scalar_apply, Matrix.diagonal_apply_ne _ hij, Matrix.diagonal_apply_ne _ (Ne.symm hij)]
       rw [this, ← map_mul, hcu, map_one]
     have hQ : ∀ γ₀ : GL (Fin n) L, γ₀ ∈ GQ0 L n →

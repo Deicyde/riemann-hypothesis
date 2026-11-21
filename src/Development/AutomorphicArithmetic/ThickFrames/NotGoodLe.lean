@@ -1,5 +1,4 @@
-import Development.AutomorphicArithmetic.ThickFrames.MarkedLow
-import Development.AutomorphicArithmetic.ThickFrames.expectationSpec
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThickFrames.TailLe
 import Development.AutomorphicArithmetic.ThickFrames.TilesLe
 

@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.RemainderTerms.PSameFactorFormula
 import GroundTheory.HeightsAndTheta.Heights.RemainderTerms.PowerSums
 set_option maxSynthPendingDepth 1
@@ -89,11 +89,11 @@ theorem LinearTermValue.proof (hA : LemmaA.Statement) (hB : LemmaB.Statement)
     rw [hP, hGF, dividedDifference_eq_of_hasDD (hasDD_gmf hF 1 r a .last κ hκ 0 _)]
   have herase : (Finset.univ : Finset (Fin 1)).erase 0 = ∅ := by decide
   have hres := restrict_gmfOut 1 r a .last κ 0 (1 * (r * a) + 1) 0
-    (fun σ hσ => absurd (Subsingleton.elim σ 0) hσ) (by simp [herase])
+    (fun σ hσ => absurd (Subsingleton.elim σ 0) hσ) (by simp)
   have hm : mstar 1 r a 0 (1 * (r * a) + 1) 0 = fun _ => r * a + 1 := by
     funext σ
     rw [Subsingleton.elim σ 0]
-    simp [mstar, herase]
+    simp [mstar]
   rw [hm, herase, Finset.prod_empty, Pi.zero_apply,
     toN_blockOut r a .last κ 0 (r * a + 1) 1 (by omega), partitionsOf_one r hr,
     Finset.sum_singleton, schur_rowOne _ r hr] at hres
@@ -123,7 +123,7 @@ theorem LinearTermValue.proof (hA : LemmaA.Statement) (hB : LemmaB.Statement)
     first | done | ring
   rw [hS'eq, one_mul] at hI
   rw [hI, hJ]
-  simp only [coeff_C_mul, coeff_X, mul_one]
+  simp only [coeff_C_mul, coeff_X]
   rw [← hb']
   have h01 : (⟨1 - 1, by omega⟩ : Fin (r + a)) = ⟨0, by omega⟩ := rfl
   have hfac : ((r * a).factorial : ℚ) ≠ 0 := by positivity

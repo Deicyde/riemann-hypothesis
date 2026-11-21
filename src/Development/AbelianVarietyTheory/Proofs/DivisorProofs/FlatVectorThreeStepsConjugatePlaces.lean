@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SuppAtMul
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.SqEqOneOfFixDat
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinPartConjMem
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NabBaseChange
 
 set_option autoImplicit false
 noncomputable section

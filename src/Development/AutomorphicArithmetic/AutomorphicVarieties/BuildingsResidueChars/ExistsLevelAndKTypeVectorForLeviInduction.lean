@@ -1,9 +1,6 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.InductionEstimates.IntegralCompression.LAbove
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.InductionEstimates.UnipotentBlockMatrices.ClosedKernelMinors.BlkInvVal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.InductionEstimates.IntegralCompression.ContinuousEntryCharacters.CoLaws
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.InductionEstimates.IntegralCompression.ContinuousEntryCharacters.PiLaws
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.InductionEstimates.IntegralCompression.ContinuousEntryCharacters.LongWeylSwapsBlockDiagonal
-import Development.AutomorphicArithmetic.AutomorphicVarieties.BuildingsResidueChars.MaximalCompactUniqueArchFiniteDecomposition
 import Development.AutomorphicArithmetic.AutomorphicVarieties.BuildingsResidueChars.UnipotentMemMaximalCompactFiniteIntegral
 import Development.AutomorphicArithmetic.AutomorphicVarieties.BuildingsResidueChars.ExistsLevelIndicatorUnipotentInvariant
 import Development.AutomorphicArithmetic.AutomorphicVarieties.BuildingsResidueChars.HaarDecompositionNormOneGl2
@@ -315,7 +312,7 @@ private theorem blockEx (β : KG K (2 + 2) → AdelicGLn.integralFiniteGL K (2 +
         (⟨_, hm p.1 p.2⟩ : KG K (2 + 2)) := Continuous.subtype_mk h2 _
     exact hβ.comp h3
   · apply huniq 1 1
-    simp only [OneMemClass.coe_one, finite_projection_one, archimedean_projection_one, one_mul, mul_one]
+    simp only [OneMemClass.coe_one, finite_projection_one, archimedean_projection_one, mul_one]
     exact (blkLaws (K := K)).2.2.1
 
 private theorem compact_integral_finite_gl2 : CompactSpace (AdelicGLn.integralFiniteGL K 2) := by

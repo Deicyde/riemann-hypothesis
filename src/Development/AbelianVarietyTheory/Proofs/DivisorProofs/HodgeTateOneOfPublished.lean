@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatHalfSt
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsNormalModelWithPresentationStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalModelLettersPresentationStatement
 

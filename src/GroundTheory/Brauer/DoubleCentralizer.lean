@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.Brauer.TensorSimple
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.Brauer.SkolemNoether
 set_option maxSynthPendingDepth 1
 

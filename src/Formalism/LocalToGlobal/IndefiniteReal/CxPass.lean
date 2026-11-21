@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.CxToPkgFamIn
 import Formalism.LocalToGlobal.IndefiniteReal.IndefiniteEpsilonOperator
 import Formalism.LocalToGlobal.IndefiniteReal.TransferStatement

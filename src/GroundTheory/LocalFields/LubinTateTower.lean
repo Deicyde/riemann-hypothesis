@@ -1,5 +1,6 @@
-import Mathlib
-import GroundTheory.LocalFields.LubinTatePoints
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import GroundTheory.LocalFields.LubinTateTorsion
 import GroundTheory.LocalFields.Eisenstein
 import GroundTheory.LocalFields.UnitsBasic

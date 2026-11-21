@@ -1,7 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.HeckeGaloisCriteria.OptInEqSome
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.HeckeGaloisCriteria.LengthLeOfSpan
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsTypeLocus
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsOfMemCcAt
 
 noncomputable section
 

@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FactorRapid
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.Topology.UniformSpace.Uniformizable
 
 noncomputable section
 

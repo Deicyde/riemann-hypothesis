@@ -1,9 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.BlowPolSt
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.AdmissibleBaseOfCompleteNormalLocalCharZero
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PolynomialSupportHolds
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PullbackModelArcPeriod
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.BoundaryFormNonlocalMaximalStatement
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.AmplePointsLocalizedModel
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PolarizationTransferModels
 open AlgebraicGeometry CategoryTheory Limits NumberField IsLocalRing TopologicalSpace
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.AnForm.R Formalism.L2.Pj
 open GlobalTheory GlobalTheory.Toroidal GlobalTheory.Models GlobalTheory.LN GlobalTheory.ShFam GlobalTheory.LocM GlobalTheory.PolFan GlobalTheory.TorRef
@@ -64,7 +63,7 @@ theorem order_of_local : ∀ (E : Type) [Field E] [NumberField E] [IsCMField E] 
     · fin_cases i; simpa [hbe'] using hk
     · have e0 : f r = ϖ ^ k * ((v⁻¹ : Wˣ) : W) := by rw [← hv]; simp [mul_assoc]
       have e1 : (u : W) * f r = ((u * v⁻¹ : Wˣ) : W) * ∏ i, ![ϖ] i ^ ![k] i := by
-        rw [e0]; simp [Fin.prod_univ_one]; ring
+        rw [e0]; simp; ring
       rw [← e1]; exact hu
   obtain ⟨n, hn, hid⟩ := hphi W hW ϖ hϖ (spMap f ≫ ξ) t' mt'' P' hr be' hmem hmon
   refine ⟨n, ?_, hid⟩

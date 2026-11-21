@@ -1,10 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsSelfDualLatticeNormOneIdealRankOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.RamifiedColumnsTrueColumnsEqConcrete
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ColMatchAll
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.NrmStepZeroEq
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsEquivOfRangeEq
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.SameForm
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ColRecCEvBijective
 
 noncomputable section
 

@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MulTransposeInjective
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinrankIsotropicLeCardStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DetNeZeroOfHasSigStatement
@@ -119,7 +118,7 @@ theorem piece_ix (hH : H.IsAdapted σ B X X₁ j₀ j₁) (z : Matrix (Fin n₁)
     rw [← Matrix.mulVec_mulVec]
     change (fun i => incM F H.ι i m) ⬝ᵥ _ = 0
     have : (fun i => incM F H.ι i m) = incV F (H.ι *ᵥ Pi.single m 1) := by
-      funext i; simp [incM, incV, Matrix.mulVec_single_one]
+      funext i; simp [incM, incV]
     rw [this, incl_form, (hH.orth _).1, map_zero]
   rw [incM_one, Matrix.transpose_one, Matrix.mul_one, Matrix.transpose_mul, hm, Matrix.mul_assoc, Matrix.mul_assoc,
     ← Matrix.mul_assoc (incM F H.ι)ᵀ, Matrix.mul_vecMulVec, hv, Matrix.zero_vecMulVec, Matrix.mul_zero]

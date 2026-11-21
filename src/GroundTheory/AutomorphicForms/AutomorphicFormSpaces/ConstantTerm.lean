@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.AutomorphicFormSpaces.Uniform
-import GroundTheory.GlobalFields.TateThesis.AdeleMeasure
+import GroundTheory.AutomorphicForms.ReductionMeasure
+import Mathlib.CategoryTheory.Countable
+import Mathlib.Dynamics.Ergodic.Action.Regular
 
 open NumberField IsDedekindDomain Topology Filter Set MeasureTheory
 open scoped NumberField.AdeleRing

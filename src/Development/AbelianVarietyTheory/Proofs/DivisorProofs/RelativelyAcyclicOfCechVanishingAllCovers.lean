@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.Tri
+import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CharChPartZero
 
 set_option autoImplicit false
 

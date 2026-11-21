@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsUnitaryOfTraceEq
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsWeightZeroSectionOfPeriodSpaceFunction
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.ExistsDatumRankOne
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.CoeffFieldAlgClosedFunctionFieldOfTorsionDefined
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsCoeffFieldCurveStatement

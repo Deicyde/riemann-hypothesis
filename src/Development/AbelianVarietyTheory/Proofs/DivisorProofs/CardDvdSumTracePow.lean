@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.FlagUnipotentLattices.MemOfOrthogonalAnisotropic
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.CardFiniteSubgroupGLIntDvd
+import Mathlib.LinearAlgebra.Matrix.Charpoly.FiniteField
+import Mathlib.RingTheory.Artinian.Instances
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.PicardGroup
 
 namespace GlobalTheory.MinkowskiExact
 

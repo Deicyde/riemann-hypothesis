@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.PlaceDegreeData
-import Formalism.FlagUnipotentLattices.HalfDifferenceL1Bound
 import Formalism.FlagUnipotentLattices.CoveringRadius2
 
 noncomputable section

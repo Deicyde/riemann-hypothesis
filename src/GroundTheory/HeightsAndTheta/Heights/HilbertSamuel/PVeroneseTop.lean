@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsVeroneseGraph
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PSecondVeronese
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PBlockImageTop

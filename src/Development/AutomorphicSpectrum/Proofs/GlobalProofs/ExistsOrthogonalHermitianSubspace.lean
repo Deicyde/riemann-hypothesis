@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.RealPlaceAnalysis.SmoothOnGVIff
-import Formalism.FormalDegreeBessel.StatementG
+import Mathlib.RingTheory.PicardGroup
 open Matrix
 
 noncomputable section

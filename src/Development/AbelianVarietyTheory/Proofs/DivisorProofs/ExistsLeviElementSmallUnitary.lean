@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrameDualGram
 
@@ -33,7 +33,7 @@ theorem levi_unit_alg {R : Type} [CommRing R] (c : R →+* R) {d d₁ : ℕ} (Jd
     rw [← Matrix.mul_assoc, hPIc, Matrix.one_mul]
   rw [Matrix.transpose_add, Matrix.transpose_one, Matrix.transpose_mul, Matrix.transpose_mul,
     Matrix.map_add _ (map_add c), Matrix.map_one _ (map_zero c) (map_one c), Matrix.map_mul, Matrix.map_mul]
-  simp only [Matrix.add_mul, Matrix.mul_add, Matrix.one_mul, Matrix.mul_one, Matrix.mul_assoc, hc', hd', hp', hc]
+  simp only [Matrix.add_mul, Matrix.mul_add, Matrix.one_mul, Matrix.mul_one, Matrix.mul_assoc, hd', hp', hc]
   have key : Pᵀ * ((Dᵀ * J₁ + J₁ * D.map c + Dᵀ * (J₁ * D.map c)) * P.map c) = 0 := by
     rw [hD, Matrix.zero_mul, Matrix.mul_zero]
   simp only [Matrix.add_mul, Matrix.mul_add, Matrix.mul_assoc] at key

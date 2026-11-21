@@ -1,7 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.SpanPowerMembership.RangeInclEqSpan
-import Formalism.LocalRingCardinality.DataIdx
 import Formalism.LocalRingCardinality.DataNChTie
-import Formalism.SharpRestriction.InertJacobiLevels.ResCharConj
 
 noncomputable section
 

@@ -1,7 +1,15 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.KernelLattices.DeterminantCokernelCount.CokernelIndexFactors.StatementB
-import Development.AbelianVarietyTheory.Definitions.Jets.CmLatticeCommutatorPairingPowEqOneOfGoodLift
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.OpUConstMul
+import Mathlib.Data.Int.Star
+import Mathlib.Data.Rat.Star
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open GlobalTheory.MomOne Formalism.L2.Ker.JMB
 open scoped ComplexConjugate BigOperators ComplexOrder
 
@@ -145,7 +153,7 @@ theorem _root_.GlobalTheory.MomOne.lift_change : ∀ (q : ℕ) [Fact q.Prime] (l
   have hOKim : ∀ {u u' : ℤ}, ((u : ℂ) + (u' : ℂ) * _root_.Formalism.L2.Ker.JMB.w0 S.d).im = u' * (√(S.d : ℝ) / 2) := by
     intro u u'
     rw [hw0]
-    simp [Complex.add_im, Complex.mul_im, Complex.div_im]
+    simp [Complex.add_im, Complex.mul_im]
   have hbetaim : ∀ x w, (_root_.Formalism.L2.Ker.JMB.beta S.d S.Hm x w).im = √(S.d : ℝ) / 2 * (_root_.Formalism.L2.Ker.JMB.hf S.Hm x w).im := by
     intro x w
     unfold _root_.Formalism.L2.Ker.JMB.beta

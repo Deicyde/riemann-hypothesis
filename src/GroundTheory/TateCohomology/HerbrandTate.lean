@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.TateCohomology.HerbrandRep
 import GroundTheory.TateCohomology.TateLow
+import Mathlib.RepresentationTheory.Homological.FiniteCyclic
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.GroupCoh

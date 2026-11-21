@@ -1,10 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.StdLvPr
 import Formalism.LocalToGlobal.HermitianForms.TiedTwSymAll
-import Formalism.LocalToGlobal.HermitianForms.ExtraSym
 import Formalism.LocalToGlobal.KernelLattices.AdaptedEnt
-import Formalism.LocalToGlobal.KernelLattices.KerMtPin
-import Formalism.LocalToGlobal.KernelLattices.KerMemPin
 
 noncomputable section
 

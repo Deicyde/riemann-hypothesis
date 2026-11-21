@@ -1,10 +1,10 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.GradedModulesLength.ToDegInjective
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.GradedModulesLength.LaDifPerm
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.GradedModulesLength.FrobeniusInclusionXEqMulQ
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.GradedModulesLength.ReesGradedPieceSurjection
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.GradedModulesLength.LkHolds
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.GradedModulesLength.GrEqRange
-import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.GradedModulesLength.FgHolds
 import Formalism.SharpRestriction.ValuationFrobeniusEpsilon.LeastPrimeTwists.QuotientShiftIrreducible.NoetherianQuotientCalc.RuleMono
 import Formalism.SharpRestriction.ValuationFrobeniusEpsilon.LeastPrimeTwists.QuotientShiftIrreducible.NoetherianQuotientCalc.RuleCong
 
@@ -146,7 +146,7 @@ private theorem e_nn {k : ℕ} (i : Fin k) : 0 ≤ e i := by
   simp only [e, Pi.zero_apply]
   rcases eq_or_ne j i with rfl | h
   · simp
-  · simp [Pi.single_apply, h]
+  · simp [h]
 
 private theorem dif_congr {k : ℕ} (h h' : Deg k → ℤ) (hh : ∀ᶠ d in atTop, h d = h' d) (L : List (Deg k)) :
     ∀ᶠ d in atTop, dif L h d = dif L h' d := by

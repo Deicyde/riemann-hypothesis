@@ -1,5 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.WeilRangeOfAll
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsWeilFormulas
+import Development.AbelianVarietyTheory.Definitions.Foundations.AnalyticOnNhdTsumNpow
 
 noncomputable section
 

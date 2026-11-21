@@ -1,6 +1,8 @@
-import Formalism.TorsionNormIteration.LTLemma
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.TorsionNormIteration.InverseIntegralClasses.InvInt
 import Formalism.TorsionNormIteration.InverseIntegralClasses.MemSpanOfNormLe
+import Formalism.TorsionNormIteration.Statement
 
 noncomputable section
 

@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LogAbsEEqZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
 open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK
@@ -29,7 +30,7 @@ theorem levM_mul (hax : a ⬝ᵥ x = 1) (hay : a ⬝ᵥ y = 0) (hbx : b ⬝ᵥ x
     rw [vecMulVec_mul_vecMulVec, hbx, zero_smul]; ext i j; simp [vecMulVec_apply]
   have hQQ : vecMulVec y b * vecMulVec y b = vecMulVec y b := by rw [vecMulVec_mul_vecMulVec, hby, one_smul]
   simp only [levM, add_mul, mul_add, Matrix.one_mul, Matrix.mul_one, smul_mul_assoc, mul_smul_comm, hPP, hPQ, hQP, hQQ,
-    smul_zero, add_zero, zero_add, smul_smul]
+    smul_zero, add_zero]
   module
 
 theorem levM_one : levM x y a b 1 1 = 1 := by simp [levM]
@@ -68,12 +69,11 @@ theorem levM_unitary (c : R →+* R) (hc : ∀ r, c (c r) = r) {J : Matrix n n R
   have d4 : (c ∘ a) ⬝ᵥ (c ∘ y) = 0 := by rw [← RingHom.map_dotProduct, hay, map_zero]
   rw [levM_map, levM]
   simp only [levM, transpose_add, transpose_one, transpose_smul, transpose_vecMulVec, add_mul, mul_add, Matrix.one_mul,
-    Matrix.mul_one, smul_mul_assoc, mul_smul_comm, vecMulVec_mul, mul_vecMulVec, hxJ, hyJ, ha, hb, vecMulVec_mul_vecMulVec,
-    neg_dotProduct, d1, d2, d3, d4, smul_smul]
-  simp only [vecMulVec_mulVec, op_smul_eq_smul, d1, d2, d3, d4, dotProduct_neg, neg_dotProduct, Matrix.vecMulVec_neg,
-    Matrix.neg_vecMulVec, Matrix.smul_vecMulVec, zero_smul, one_smul, neg_zero, smul_zero, add_zero, neg_neg]
-  simp only [Matrix.neg_mulVec, vecMulVec_mulVec, op_smul_eq_smul, d1, d2, d3, d4, Matrix.zero_vecMulVec, Matrix.neg_vecMulVec,
-    Matrix.smul_vecMulVec, zero_smul, one_smul, neg_zero, smul_zero, add_zero, neg_neg, smul_neg]
+    Matrix.mul_one, smul_mul_assoc, mul_smul_comm, vecMulVec_mul, mul_vecMulVec, hxJ, hyJ, ha, hb]
+  simp only [vecMulVec_mulVec, op_smul_eq_smul, d1, d2, Matrix.vecMulVec_neg,
+    Matrix.neg_vecMulVec, zero_smul, one_smul]
+  simp only [Matrix.neg_mulVec, vecMulVec_mulVec, op_smul_eq_smul, d3, d4, Matrix.zero_vecMulVec, Matrix.neg_vecMulVec,
+    zero_smul, one_smul, neg_zero, smul_zero, add_zero, smul_neg]
   linear_combination (norm := module) h1 • vecMulVec a (c ∘ b) - h2 • vecMulVec b (c ∘ a)
 
 end Alg

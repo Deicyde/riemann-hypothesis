@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.PeriodIntegrals.StrongApproxE
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.CuspSpanNormBounds.PsiEDef
 
 noncomputable section
 

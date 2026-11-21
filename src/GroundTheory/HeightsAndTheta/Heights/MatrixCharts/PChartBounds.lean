@@ -1,8 +1,6 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.MatrixCharts.Statements
-import GroundTheory.HeightsAndTheta.Heights.MatrixCharts.DetIneq
-import GroundTheory.HeightsAndTheta.Heights.MatrixCharts.BoundsY
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.MatrixCharts.Bounds
+import Mathlib.Topology.Sheaves.Presheaf
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

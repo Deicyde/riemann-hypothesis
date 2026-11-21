@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnipotentCost.LetterSize
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.SymmetricScalarBlockMatrixMul
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.BetaSesquilinearity
+import Mathlib.LinearAlgebra.Matrix.Permutation
 
 open Matrix Filter Topology
 open Formalism.FourierDecayAlt Formalism.FourierDecayAlt.U Formalism.REAL

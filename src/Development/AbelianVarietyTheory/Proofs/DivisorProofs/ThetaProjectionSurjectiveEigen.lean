@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IotaScalarOne
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaProjectionEigenImageStatement
+import Mathlib.RingTheory.PicardGroup
 open GlobalTheory.Sandwich GlobalTheory.IndefiniteRowSideFullHecke.SandwichMaps GlobalTheory.DetInv Matrix TensorProduct
 
 namespace GlobalTheory.DetInv
@@ -45,7 +45,7 @@ theorem projEigenspaceEquiv (p : ℕ) [Fact p.Prime] (O : Type) [CommRing O] [Fa
       ext k
       by_cases hk : k = i
       · subst hk; simp [hr]
-      · simp [Pi.single_apply, hk]
+      · simp [hk]
     rw [← LinearMap.range_eq_top, eq_top_iff, ← (Pi.basisFun C (Fin N)).span_eq,
       Submodule.span_le]
     rintro _ ⟨i, rfl⟩

@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Divisibility.ClassSum
+import Mathlib.RepresentationTheory.Character
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.TotallySplit
 
 open Module NumberField IsDedekindDomain
 open scoped Matrix ComplexOrder

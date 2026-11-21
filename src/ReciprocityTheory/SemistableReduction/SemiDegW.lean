@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.SemistableReduction.SemiDegQ
+import ReciprocityTheory.SemistableReduction.SemiDegI
+import ReciprocityTheory.SemistableReduction.SemiDegN
 
 noncomputable section
 

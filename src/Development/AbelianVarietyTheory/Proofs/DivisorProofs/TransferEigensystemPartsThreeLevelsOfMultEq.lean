@@ -1,9 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.TwistedPlacesOfCondition
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinrankWEigenpartEqRowsFullHecke
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SignAtBasePlaceEqEmbedding
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsHeckeOpFullIffIndependentOfBlockLevelStatement
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.IdemSum
+import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.PartW
 
 noncomputable section
 

@@ -1,8 +1,8 @@
-import Mathlib
-import Formalism.LocalToGlobal.TieTwRecOf
-import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.JoinSISel
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.HilbertRowConditions.AllJoinP
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.AdmissibleLabelWeightsOfGreenCuspidalParametrisa
+import Formalism.LocalToGlobal.ClassOfRecordOfChoice
+import Formalism.LocalToGlobal.GlobalTheory.ConcNP
 
 noncomputable section
 

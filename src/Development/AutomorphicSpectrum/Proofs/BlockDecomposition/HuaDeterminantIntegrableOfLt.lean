@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SecondCountableHermC
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousBlkM
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DetWEqNormSqDetOneAddIStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.OneLeDetWStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DetWBlockMatrixFormulaStatement

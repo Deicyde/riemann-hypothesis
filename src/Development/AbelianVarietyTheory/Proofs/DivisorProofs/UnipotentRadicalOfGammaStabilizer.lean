@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitHomVal
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -36,17 +37,17 @@ theorem g21 (j : Fin m) : gamS K (i2 m) (i1 j) = 0 := rfl
 theorem g12 (j : Fin m) : gamS K (i1 j) (i2 m) = 0 := rfl
 
 theorem left0 (y : Ix m) : (gamS K * A) (i0 m) y = A (i2 m) y := by
-  rw [Matrix.mul_apply, sum_ix]; simp only [g02, g20, g11, g00, g22, g01, g10, g21, g12]; simp
+  rw [Matrix.mul_apply, sum_ix]; simp only [g02, g00, g01]; simp
 theorem left2 (y : Ix m) : (gamS K * A) (i2 m) y = - A (i0 m) y := by
-  rw [Matrix.mul_apply, sum_ix]; simp only [g02, g20, g11, g00, g22, g01, g10, g21, g12]; simp
+  rw [Matrix.mul_apply, sum_ix]; simp only [g20, g22, g21]; simp
 theorem left1 (i : Fin m) (y : Ix m) : (gamS K * A) (i1 i) y = ∑ k, K i k * A (i1 k) y := by
-  rw [Matrix.mul_apply, sum_ix]; simp only [g02, g20, g11, g00, g22, g01, g10, g21, g12]; simp
+  rw [Matrix.mul_apply, sum_ix]; simp only [g11, g10, g12]; simp
 theorem right0 (x : Ix m) : (A * gamS K) x (i0 m) = - A x (i2 m) := by
-  rw [Matrix.mul_apply, sum_ix]; simp only [g02, g20, g11, g00, g22, g01, g10, g21, g12]; simp
+  rw [Matrix.mul_apply, sum_ix]; simp only [g20, g00, g10]; simp
 theorem right2 (x : Ix m) : (A * gamS K) x (i2 m) = A x (i0 m) := by
-  rw [Matrix.mul_apply, sum_ix]; simp only [g02, g20, g11, g00, g22, g01, g10, g21, g12]; simp
+  rw [Matrix.mul_apply, sum_ix]; simp only [g02, g22, g12]; simp
 theorem right1 (x : Ix m) (j : Fin m) : (A * gamS K) x (i1 j) = ∑ k, A x (i1 k) * K k j := by
-  rw [Matrix.mul_apply, sum_ix]; simp only [g02, g20, g11, g00, g22, g01, g10, g21, g12]; simp
+  rw [Matrix.mul_apply, sum_ix]; simp only [g11, g01, g21]; simp
 
 theorem unipRad_dual (R : Type) [Field R] (m n : ℕ) (e : GlobalTheory.SplitCoord.Ix m ≃ Fin n) (K : GL (Fin m) R)
     (N N' : GL (Fin n) R) (hN : N ∈ GlobalTheory.SmGL.unipRad R e)

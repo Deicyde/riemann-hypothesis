@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.LabRange
-import Development.AbelianVarietyTheory.Statements.SemistableTorsion.ImmersedBy
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSemiabelianModelProperOverThetaSetupStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLabelledLatticeEquivOfCommonFibreStatement
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory IsLocalRing
@@ -42,7 +40,7 @@ theorem exists_diag {Y Y' : Type} [AddCommGroup Y] [AddCommGroup Y'] (θ : (Fin 
     intro y; funext a; rw [hθ]
     by_cases ha : a = 0
     · subst ha; simp
-    · simp [Pi.single_apply, ha]
+    · simp [ha]
   have inj : Function.Injective κ0 := by
     intro y y' hy
     have : θ (Pi.single 0 y) = θ (Pi.single 0 y') := by rw [hsingle, hsingle, hy]

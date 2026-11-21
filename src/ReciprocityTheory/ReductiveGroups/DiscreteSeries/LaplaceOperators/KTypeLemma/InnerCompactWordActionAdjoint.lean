@@ -1,5 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.LaplaceOperators.KTypeLemma.IsKRelationCompactWordAction
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.BochnerInequality.KUnitB
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.Data.Set.Finite.List
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.LaplaceOperators.KTypeLemma.DerivEntries
 
 noncomputable section
 

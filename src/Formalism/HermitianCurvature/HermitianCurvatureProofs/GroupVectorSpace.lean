@@ -1,7 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.RightTypeAction0
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.SigmaFiniteOfHaar
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.MulVecBvecApply
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.TwoByOneBlock
 
 open Formalism.REAL Formalism.QuantumDeterminants Formalism.FourierDecayAlt Matrix
 open scoped ContDiff

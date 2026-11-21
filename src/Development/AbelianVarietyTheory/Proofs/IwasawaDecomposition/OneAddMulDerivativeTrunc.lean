@@ -1,6 +1,4 @@
-import Mathlib
-import Formalism.LocalRingCardinality.AdicCompletionLocal.LocTied
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsCrisP
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.CrystallinePeriods.RingIface
 import Development.AbelianVarietyTheory.CrystallinePeriods.CrisIncl
 import Development.AbelianVarietyTheory.CrystallinePeriods.RingBasics

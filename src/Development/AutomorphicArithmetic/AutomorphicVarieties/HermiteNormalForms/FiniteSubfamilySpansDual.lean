@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.HermiteNormalForms.SmulNeZeroLat
 import Development.AutomorphicArithmetic.AutomorphicVarieties.HermiteNormalForms.Rankhs
 

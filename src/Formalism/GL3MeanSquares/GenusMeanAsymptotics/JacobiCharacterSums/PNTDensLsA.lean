@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LFunctionBounds.LFunctionBoundsProofs.LFunctionEqGOfOneLt
 
 open Complex Filter Topology

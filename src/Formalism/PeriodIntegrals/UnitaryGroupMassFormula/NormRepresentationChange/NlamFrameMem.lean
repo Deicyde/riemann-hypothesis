@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.PeriodIntegrals.PairValDefs
-import Formalism.PeriodIntegrals.NormRepChange
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.NormRepresentationChange.Development
 
 noncomputable section

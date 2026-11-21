@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.LengthPosOfPosDef
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsWeilDatumOOneOfRankZero
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsNormLeHeightPow
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LocallyCompactSecondCountableT2
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix
 open Formalism.L2.Theta Formalism.L2.DIV Formalism.L2.Indef
 open Formalism.IndefR.Lev Formalism.IndefR.Mult Formalism.IndefR.Datum Formalism.IndefR.Cx Formalism.IndefR.Links
@@ -47,7 +44,7 @@ theorem rallis_kernel_step : ∀ D : D7, KerAbs D → SWPair D → ∀ (ψ : Add
     intro h
     refine ((hB₁ h).1.norm).mono' (((hk f₁ hf₁).comp (continuous_const.prodMk continuous_id)).mul
       hφ₁.cont.star).aestronglyMeasurable (ae_of_all _ fun g => ?_)
-    simp [norm_mul]
+    simp
   have hI2 : ∀ h, Integrable (fun g => star (thetaKO om h g f₂) * φ₂ g) μG := fun h => (hB₂ h).1
   have hFh : ∀ h, star (upLift om νW 𝓖 f₁ φ₁ h) * upLift om νW 𝓖 f₂ φ₂ h = ∫ p, F h p ∂(μG.prod μG) := by
     intro h
@@ -59,7 +56,7 @@ theorem rallis_kernel_step : ∀ D : D7, KerAbs D → SWPair D → ∀ (ψ : Add
     rw [← integral_conj]
     congr 1
     funext g
-    simp [Complex.star_def]
+    simp
   have hB₁0 : 0 ≤ B₁ := le_trans (integral_nonneg fun g => by positivity) ((hB₁ 1).2)
   have hB₂0 : 0 ≤ B₂ := le_trans (integral_nonneg fun g => by positivity) ((hB₂ 1).2)
   have hnorm : ∀ h, ∫ p, ‖F h p‖ ∂(μG.prod μG) =
@@ -68,7 +65,7 @@ theorem rallis_kernel_step : ∀ D : D7, KerAbs D → SWPair D → ∀ (ψ : Add
     rw [← integral_prod_mul (fun g => ‖thetaKO om h g f₁‖ * ‖φ₁ g‖) (fun g => ‖thetaKO om h g f₂‖ * ‖φ₂ g‖)]
     congr 1
     funext p
-    simp [hF, norm_mul]
+    simp [hF]
   have hInt : Integrable (Function.uncurry F) (μH.prod (μG.prod μG)) := by
     rw [integrable_prod_iff hFm]
     refine ⟨ae_of_all _ fun h => (hI1 h).mul_prod (hI2 h), ?_⟩

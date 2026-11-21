@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.ImportsMoreMore
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.KerAltSucc
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.ImportsBisFurther

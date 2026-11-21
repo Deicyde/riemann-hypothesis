@@ -1,8 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutERCapAdjSCut
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutERCapAdjFrom
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.LemmaDDeterminantIdentity
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.OperatorPreservesFusionForms
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CapelliUnderIntegral
 
 namespace Formalism.FourierDecayAlt.P.CutMP.ER
 

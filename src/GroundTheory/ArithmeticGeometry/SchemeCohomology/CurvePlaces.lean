@@ -1,6 +1,14 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ArithmeticGeometry.SchemeCohomology.CurveBase
 import GroundTheory.FunctionField.PlaceDefs
+import GroundTheory.ArithmeticGeometry.SchemeCohomology.WeilDivisorLocal
+import GroundTheory.ArithmeticGeometry.SchemeCohomology.WeilDivisorSheaf
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.AlgebraicGeometry.ValuativeCriterion
+import Mathlib.CategoryTheory.EffectiveEpi.Comp
+import Mathlib.CategoryTheory.ExtremalEpi
+import Mathlib.Data.Int.Star
 set_option maxSynthPendingDepth 1
 
 open CategoryTheory AlgebraicGeometry Order Topology

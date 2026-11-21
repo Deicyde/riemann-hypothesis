@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.RkLe
-import Formalism.LocalToGlobal.InertKernelTheory.InertCoprimeLemmas.SharpPoly
 
 noncomputable section
 

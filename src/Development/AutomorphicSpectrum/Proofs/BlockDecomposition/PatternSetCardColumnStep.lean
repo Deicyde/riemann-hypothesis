@@ -1,5 +1,4 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.FiniteTypeHarishChandra.SupportExistsAll
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ColGeR
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PatternGroupStatement
 

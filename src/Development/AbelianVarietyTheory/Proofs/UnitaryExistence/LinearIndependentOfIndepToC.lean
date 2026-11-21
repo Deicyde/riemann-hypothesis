@@ -1,7 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.TieUpA
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.ExistenceTori.BaseChangeTensorProduct
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.SiegelSpaceAlgebraHolds
 
 set_option synthInstance.maxHeartbeats 400000
 

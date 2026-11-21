@@ -1,9 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsQuasiFam
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.ThetaAbsoluteSum
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.TransvectionAction
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.WeilDatumExistence
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.AdjointIsotropicDecomposition
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR.Datum MeasureTheory IsDedekindDomain NumberField Matrix
 open GlobalTheory.MixModel GlobalTheory.MixPer GlobalTheory.Grow
 open scoped TensorProduct
@@ -119,8 +116,8 @@ theorem prod_jY :
     Matrix.mul_sub, d.levi_jY, cancel₂ (d.wittDecomp_levi_inclAnisotropic _), cancel₂ (d.levi_jX _)]
   rw [hm, hm']
   simp only [skewPart, adj_sub, adj_mul, adj_adj, adj_one, Matrix.mul_add, Matrix.add_mul, Matrix.mul_sub,
-    Matrix.mul_smul, smul_add, smul_zero, Matrix.mul_assoc, cancel₂ h,
-    Matrix.zero_mul, Matrix.mul_zero, Matrix.one_mul, Matrix.mul_one, add_zero, sub_zero, zero_add]
+    Matrix.mul_smul, smul_add, Matrix.mul_assoc, cancel₂ h,
+    Matrix.zero_mul, Matrix.mul_zero, Matrix.one_mul, Matrix.mul_one, add_zero]
   generalize half D • (d.jX ⬝ (A ⬝ (adj γ ⬝ (α ⬝ adj A)))) = t at hh ⊢
   rw [← hh]
   abel

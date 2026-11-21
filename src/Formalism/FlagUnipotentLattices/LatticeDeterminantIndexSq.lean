@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.FlagUnipotentLattices.UnitSumBound
+import Formalism.FlagUnipotentLattices.DetIndexProductHyperbolicInequality
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.NumberTheory.NumberField.ClassNumber
 
 open Module NumberField nonZeroDivisors Finset
 

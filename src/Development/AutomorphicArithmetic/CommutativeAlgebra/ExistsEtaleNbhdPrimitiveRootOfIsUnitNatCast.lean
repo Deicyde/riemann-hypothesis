@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.DerivUnit
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IsEquivalenceFiniteEtaleBaseChangeResidueField
 open CategoryTheory AlgebraicGeometry GlobalTheory.EtC

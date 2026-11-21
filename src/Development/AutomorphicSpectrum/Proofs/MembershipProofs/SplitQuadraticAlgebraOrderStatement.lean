@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MembershipProofs.SplitQuadraticAlgebraOrder
-import Development.AbelianVarietyTheory.Definitions.Divisors.HilbertNinetyQuotientHomEqIff
 open Matrix ValuativeRel GlobalTheory.WeilM MeasureTheory
 open scoped ComplexConjugate NNReal
 set_option maxHeartbeats 1000000 in

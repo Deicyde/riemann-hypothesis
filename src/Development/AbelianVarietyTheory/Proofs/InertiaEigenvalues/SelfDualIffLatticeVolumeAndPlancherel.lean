@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsTestRep
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SelfDualMeasureExistsUniqueFourierInversionStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.UnramifiedStandardAddCharConductorPropertiesStatement
 open GlobalTheory.JR Matrix MeasureTheory Filter Topology
@@ -150,7 +149,7 @@ theorem GlobalTheory.JR.selfDual_iff_lattice_volume_and_plancherel : ∀ (F E : 
         show y ∈ P ↔ fourB ν (fun x y => ψ (β x y)) g y = ((ν M).toReal : ℂ)
         rw [h1]
         by_cases hy : y ∈ P
-        · simp [Set.indicator_of_mem hy, hy]
+        · simp [hy]
         · rw [Set.indicator_of_notMem hy]; exact ⟨fun h => absurd h hy, fun h => absurd h.symm hc⟩
       rw [this]; exact (hft.1.isOpen_fiber _).measurableSet
     have h2 := hν.2 g hgt 0

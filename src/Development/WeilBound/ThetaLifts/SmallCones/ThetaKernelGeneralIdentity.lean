@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.SmallCones.ThetaUniq
+import Development.WeilBound.ThetaLifts.TowerModels.PlaneHerm
 
 set_option linter.unusedSectionVars false
 

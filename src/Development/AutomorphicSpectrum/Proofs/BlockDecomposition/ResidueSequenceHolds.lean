@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.GenericUnitaryGL.LeibnizOrders.LeibnizOrd
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.EGPgTrueEqLastIff
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SectionConstructedFromDoubleCosetStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.InducedFunctionFromCompactDataStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CompactTransversalDoubleCosetStatement
@@ -16,6 +16,8 @@ import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MemHPGIffConjug
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ClosedCellInducingCharacterStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.OpenCellInducingCharacterStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SmoothParabolicInductionProductStatement
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousLeviProjTwo
+import Development.AbelianVarietyTheory.Proofs.TwistedOperators.EventuallyInv
 
 noncomputable section
 
@@ -149,7 +151,7 @@ theorem two_orbits [NonarchimedeanGroup G] {Q P : Subgroup G} {w : G}
     ⟨(resInd σ H₁ hH₁ τ₁ E₁ hE₁).codRestrict _ mem1, fun p => by
       ext f y
       show E₁ (f.1.1 ((1 : G) * (y : G) * (p : G))) = E₁ (f.1.1 ((1 : G) * ((y * p : P) : G)))
-      simp [mul_assoc]⟩
+      simp⟩
   have hRs : Function.Surjective R := fun φ => by
     obtain ⟨f, hf, -⟩ := exists_lift h1 σ hσ H₁ hH₁ τ₁ E₁ hE₁ Set.univ isOpen_univ (fun _ => trivial) φ
     exact ⟨f, Subtype.ext hf⟩

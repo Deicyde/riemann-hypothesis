@@ -1,4 +1,4 @@
-import Formalism.DoubleCosetMeasures.Statement
+import BuildAid.Leniency.Open
 import Formalism.DoubleCosetMeasures.LowerUnipotentOrbits.DoubleCosetEqPreimage
 import Formalism.DoubleCosetMeasures.LowerUnipotentOrbits.TwoSided
 import Formalism.DoubleCosetMeasures.LowerUnipotentOrbits.IsIntOfLatOfLe
@@ -7,9 +7,7 @@ import Formalism.DoubleCosetMeasures.LowerUnipotentOrbits.IsOpenIsIntSet
 import Formalism.DoubleCosetMeasures.LowerUnipotentOrbits.MulInvBlockDiagApplySameBlock
 import Formalism.DoubleCosetMeasures.LowerUnipotentOrbits.ExistsContinuousLowerUpperEntry
 import Formalism.DoubleCosetMeasures.LowerUnipotentOrbits.IsClosedLowUni
-import Formalism.DoubleCosetMeasures.StatementZ
 import Formalism.DoubleCosetMeasures.LowerUnipotentOrbits.LemmaU
-import Formalism.DoubleCosetMeasures.StatementV
 import Formalism.DoubleCosetMeasures.LowerUnipotentOrbits.RelIndexMulMeasure
 import Formalism.DoubleCosetMeasures.LowerUnipotentOrbits.MeasureUniformizerMatrixSetMulCard
 

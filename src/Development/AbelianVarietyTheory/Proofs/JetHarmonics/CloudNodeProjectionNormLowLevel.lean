@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Jets.SumIoPr
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.CardFilterFinBounds
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.CardFilterLeSuccAndSqSumLePow
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.NormEigenLePowMulNormSum
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.SplitCasEigenvalueSummand

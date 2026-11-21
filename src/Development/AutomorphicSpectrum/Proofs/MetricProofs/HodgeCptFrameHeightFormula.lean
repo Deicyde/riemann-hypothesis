@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.ColFlags
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.GrGenOfIsFlagVBOn
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsChartOfLineBundle
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.MinorRatioRegularOfInverseStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.ProdIicBlockDiagDetFactorsStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.EqNegSumIicDifferencesStatement

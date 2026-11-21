@@ -1,8 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.ExceptionalGroupG2.TensorProductsG2.HasDerivAtInvExpCurveEntry
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.ExceptionalGroupG2.StdGap
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.ExceptionalGroupG2.ExistenceG2.AnyDec
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.ExceptionalGroupG2.ExistenceG2.DataGenSubIrred
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.ExceptionalGroupG2.ExistenceG2.HasGelfandCharSigLam
+import Formalism.SharpRestriction.CuspSpanNormBounds.BridgeCSchur
 
 noncomputable section
 
@@ -46,7 +45,7 @@ theorem tensor_phi_of_unitary {g : Matrix (Fin n) (Fin n) ℂ} (hg : inUJ ε g) 
   cases dual
   · rfl
   · unfold inUJ at hg
-    simp only [PI.UpqRep.Jm, Formalism.REAL.Jm, ReciprocityTheory.ChartRestriction.DS.Jm] at hg
+    simp only [ReciprocityTheory.ChartRestriction.DS.Jm] at hg
     set J : Matrix (Fin n) (Fin n) ℂ := Matrix.diagonal fun a => if ε a then (1 : ℂ) else -1 with hJdef
     have hJJ : J * J = 1 := by
       rw [hJdef, Matrix.diagonal_mul_diagonal, ← Matrix.diagonal_one]

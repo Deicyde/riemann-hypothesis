@@ -1,5 +1,7 @@
-import Mathlib
-import GroundTheory.GlobalFields.TateThesis.HeckeTheoremTrivial
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.GlobalFields.TateThesis.HeckeTheoremConj
+import GroundTheory.GlobalFields.TateThesis.HeckeTheoremScaling
 
 open NumberField InfinitePlace IsDedekindDomain MeasureTheory Complex Topology Filter Set
 open scoped NumberField.AdeleRing ComplexConjugate Real

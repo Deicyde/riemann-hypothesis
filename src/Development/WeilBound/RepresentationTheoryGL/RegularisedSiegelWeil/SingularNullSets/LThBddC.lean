@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.RegularisedSiegelWeil.SingularNullSets.LThBddB
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SubstMemAndComm
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LeftInvSubtypeSum
 
 noncomputable section
 

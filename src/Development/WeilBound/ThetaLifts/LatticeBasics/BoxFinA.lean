@@ -1,5 +1,7 @@
-import Mathlib
-import Development.WeilBound.ThetaLifts.LatticeBasics.RealInv
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicSpectrum.Proofs.TwistedProofs.SchwartzLogDerivLinearGaussian
+import Development.WeilBound.ThetaLifts.LatticeBasics.RealInvL
 
 noncomputable section
 

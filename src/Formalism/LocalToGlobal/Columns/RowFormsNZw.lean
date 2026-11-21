@@ -1,7 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.Columns.AbelianHostFieldConditions
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.BaseLemmas
-import Formalism.LocalToGlobal.Columns.GenericUnipotentCharacter
 import Formalism.LocalToGlobal.Columns.RowForms
 
 open NumberField IsDedekindDomain

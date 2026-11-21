@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SplitHomeoApply
+import Mathlib.Tactic.Monotonicity.Lemmas
 open MeasureTheory Topology
 open scoped ENNReal NNReal Matrix Pointwise
 

@@ -1,8 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ToFirst
 import Development.AbelianVarietyTheory.Counterexamples.JetSurvey.WitnessIsFormalParam
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GermBPf
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.FBIdAd
+import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.ExistsIsChartGOfBasis
 
 noncomputable section
 namespace GlobalTheory.CompanionTheory.Ar.Conj.GermInh

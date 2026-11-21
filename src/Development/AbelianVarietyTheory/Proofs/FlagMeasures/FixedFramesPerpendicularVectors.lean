@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.RowMinor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.StandardBaseFlagComplementIntegralLatticeStatement
 import Formalism.FlagUnipotentLattices.CardSubgroupsOfIndexLe
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ImportsExtra

@@ -1,5 +1,6 @@
-import Formalism.SharpRestriction.GrowthBounds.DiagonalSupport.PosULeIff
-import Formalism.SharpRestriction.GrowthBounds.DiagonalSupport.PosTLSurj
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.TwistedSubstitution.PlaneCoeff
 
 noncomputable section
 

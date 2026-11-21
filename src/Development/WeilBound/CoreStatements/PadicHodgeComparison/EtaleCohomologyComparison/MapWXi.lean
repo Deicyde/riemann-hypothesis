@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.PAdicHodge.BStPeriod
-import GroundTheory.PAdicHodge.ACrisPhi
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.OfNatTrans
+import Mathlib.Combinatorics.Quiver.ReflQuiver
 
 noncomputable section
 

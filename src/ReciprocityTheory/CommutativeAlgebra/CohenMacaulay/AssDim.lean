@@ -1,5 +1,12 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.CommutativeAlgebra.CohenMacaulay.ModDepthGE
 import Lemmata.GeneralBFactRest.Imports
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
 
 namespace ReciprocityTheory.CA
 

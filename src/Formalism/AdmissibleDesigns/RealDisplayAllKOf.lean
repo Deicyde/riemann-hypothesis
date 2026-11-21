@@ -1,4 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.AdmissibleDesigns.RealDisplayAllK
+import Formalism.WachLatticeTwists.RamifiedBlockRings.LocalToDisplayFree
+import Formalism.WachLatticeTwists.RealClassMaps.RealClassMapProofs.TheoremNFiveRealAllLiftThird
 
 variable [hT2Core : Fact ReciprocityTheory.ChartRestriction.T2.Core]
 

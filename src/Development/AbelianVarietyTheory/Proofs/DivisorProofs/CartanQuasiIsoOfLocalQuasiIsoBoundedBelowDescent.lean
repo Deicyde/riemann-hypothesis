@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IndEtOfForallFinset
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CartanZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeMapFApply
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExactAtOfProd

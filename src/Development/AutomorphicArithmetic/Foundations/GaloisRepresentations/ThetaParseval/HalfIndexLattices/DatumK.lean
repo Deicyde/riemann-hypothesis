@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.HalfIndexLattices.SplitStab
+import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.IsScalarOneOfComm
 
 noncomputable section
 

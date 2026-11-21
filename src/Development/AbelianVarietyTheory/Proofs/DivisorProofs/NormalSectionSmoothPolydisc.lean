@@ -1,10 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ModelDdcForms
 import ReciprocityTheory.AnalyticForms.PotentialTheory.PLCurveA
 import ReciprocityTheory.AnalyticForms.PotentialTheory.AtlasIndep
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HolomorphicVanishingDivisibleCoordStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InverseMapCoordDerivativeNeZeroStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalSmoothPotentialGlueStatement
+import Mathlib.Algebra.Ring.IsFormallyReal
 
 open ReciprocityTheory.AnForm ReciprocityTheory.AnForm.M GlobalTheory.IndefiniteRowSideFullHecke.ModelDdcForms MeasureTheory Filter Topology
 open scoped ContDiff
@@ -61,9 +63,9 @@ theorem key_factor (A : FinHolAtlas e X) {m : ℕ} (L : Fin m → LocPot X) (s :
     rw [hs y hy]
     congr 1
     rw [Finset.prod_eq_single i]
-    · cases h : σ' i <;> simp [h]
+    · cases h : σ' i <;> simp
     · intro k' _ hk'
-      cases h : σ' k' <;> simp [h, Pi.single_apply, hk']
+      cases h : σ' k' <;> simp [hk']
     · simp
 
   have hnorm : ∀ z ∈ Ω, normSec (L i) (s i) (ψ.symm z) ^ 2 =
@@ -142,7 +144,7 @@ theorem key_factor (A : FinHolAtlas e X) {m : ℕ} (L : Fin m → LocPot X) (s :
           hg.continuousOn.isOpen_inter_preimage Metric.isOpen_ball isOpen_compl_singleton,
           ⟨Metric.mem_ball_self hr, hne⟩, g, hg.mono Set.inter_subset_left, fun z hz => hz.2,
           fun z hz => ?_⟩
-        simp only [hmf, hj, hσ, Option.elim]
+        simp only [hmf, hj, Option.elim]
         rw [hgeq z hz.1, norm_mul, mul_pow]
       · have hVo : IsOpen (Ω ∩ {z | z k ≠ 0}) :=
           hΩ.inter (isOpen_ne_fun (continuous_apply k) continuous_const)
@@ -158,7 +160,7 @@ theorem key_factor (A : FinHolAtlas e X) {m : ℕ} (L : Fin m → LocPot X) (s :
           cases hk'
           exact hz.2 hzk'
         · have h2 : z k ≠ 0 := hz.2
-          simp only [hσ, Option.elim]
+          simp only [Option.elim]
           rw [norm_div, div_pow]
           field_simp
   obtain ⟨V, hVΩ, hV, hz0V, a, ha, ha0, hma⟩ := key

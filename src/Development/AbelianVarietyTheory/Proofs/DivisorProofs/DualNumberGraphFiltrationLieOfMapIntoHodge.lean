@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCoords
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CanonicalOfAbelianDeRham
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CrysActApply
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open GlobalTheory.UPel.Sm GlobalTheory.Cris GlobalTheory.DeRham
@@ -66,7 +67,7 @@ theorem algAct_single (o₀ : GlobalTheory.UPel.HT.Obj b N s) (c : 𝓞 D.F) :
 
 theorem algChar_single (β : R →+* k) (i : Fin D.a) (c : 𝓞 D.F) :
     algChar b β i (MonoidAlgebra.single c (1 : k)) = β (b.t i c) := by
-  simp [algAct, algChar]
+  simp [algChar]
 
 theorem algAct_mem_lieZ (o₀ : GlobalTheory.UPel.HT.Obj b N s) (β : R →+* k) (g : MonoidAlgebra k (𝓞 D.F))
     (hg : ∀ i, algChar b β i g = 0) {y : HdR o₀.A} (hy : y ∈ GlobalTheory.HTCount.rhoPart o₀ β) :

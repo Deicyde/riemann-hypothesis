@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.RestrictsSelf
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.IsLAdicCharOfUnique
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.IsLocCompTrivIff
+import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.PolarizedPairLineIff
 
 noncomputable section
 
@@ -225,7 +226,7 @@ theorem irr_std {k : Type} [Field k] : Irr (MonoidHom.id (GL (Fin 2) k)) := by
     ext i; fin_cases i <;> simp [s, Matrix.mulVec, dotProduct]
   have ht : ∀ w ∈ W, ![w 1, 0] ∈ W := fun w hw => by
     convert W.sub_mem (hW t w hw) hw using 1
-    ext i; fin_cases i <;> simp [t, Matrix.mulVec, dotProduct]
+    ext i; fin_cases i <;> simp [t, dotProduct]
   have h1 : (![1, 0] : Fin 2 → k) ∈ W := by
     by_cases e : u 1 = 0
     · have e0 : u 0 ≠ 0 := fun e0 => h0 (by ext i; fin_cases i <;> simp [e, e0])

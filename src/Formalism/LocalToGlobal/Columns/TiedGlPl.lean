@@ -1,5 +1,8 @@
-import Formalism.LocalToGlobal.Columns.TiedGlCore
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.RecLevelHost
+import Formalism.LocalToGlobal.Columns.RecLevelLocP
+import Formalism.LocalToGlobal.Columns.TiedGlLoc
 
 open NumberField IsDedekindDomain Matrix
 open scoped TensorProduct

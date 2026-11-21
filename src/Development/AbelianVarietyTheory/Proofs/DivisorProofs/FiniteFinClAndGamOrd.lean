@@ -1,8 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocCO
-import Development.AbelianVarietyTheory.Definitions.Divisors.BplusOfEquivariant
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsRepsOfOpenCompact
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.MeasureToRealEqMass
+import Development.AbelianVarietyTheory.Definitions.Divisors.InvVolConjLevelOne
+import Development.AbelianVarietyTheory.Proofs.HeightProofs.IsFundamentalDomainOfHaar
 
 noncomputable section
 

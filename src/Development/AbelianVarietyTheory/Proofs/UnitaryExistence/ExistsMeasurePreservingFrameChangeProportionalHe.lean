@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.IsProbabilityMeasureAutQuotientNormalized
 
 set_option autoImplicit false
@@ -244,7 +245,7 @@ theorem _root_.GlobalTheory.PeterssonFrameChange.frame_change : ∀ (E : Type) [
           (B τ * (_root_.ReciprocityTheory.ChartRestriction.G.FD.mat y' (τ' τ))⁻¹) := by simp only [Matrix.mul_assoc]
       _ = _ := by
         rw [h1, h2]
-        simp only [Matrix.smul_mul, Matrix.mul_smul, smul_smul, mul_inv_cancel₀ hc0, inv_mul_cancel₀ hc0,
+        simp only [Matrix.smul_mul, Matrix.mul_smul, smul_smul, mul_inv_cancel₀ hc0,
           one_smul]
 
 end GlobalTheory.PeterssonFrameChange

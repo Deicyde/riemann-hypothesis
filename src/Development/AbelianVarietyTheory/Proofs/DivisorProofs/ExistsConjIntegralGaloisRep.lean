@@ -1,6 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasBlockOfOccurs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.SpanPowerMembership.NDLocE
+import Formalism.ConjugateSelfDual.Statement
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.FieldTheory.Galois.Profinite
+import Mathlib.RingTheory.PiTensorProduct
 
 set_option autoImplicit false
 set_option synthInstance.maxHeartbeats 200000

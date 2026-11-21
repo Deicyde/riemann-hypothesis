@@ -1,8 +1,9 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.HermiteNormalForms.SmulNeZeroLat
-import Development.AutomorphicArithmetic.AutomorphicVarieties.HermiteNormalForms.Grampd
-import Development.AutomorphicArithmetic.AutomorphicVarieties.HermiteNormalForms.RealVec
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.HermiteNormalForms.Gramdet
 import Development.AutomorphicArithmetic.AutomorphicVarieties.HermiteNormalForms.Rypos
+import Mathlib.Data.Int.Star
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 open NumberField Matrix UpperTheory.V UpperTheory.V.KT
 open scoped ComplexOrder

@@ -1,5 +1,5 @@
-import Development.EtaleCohomology.WeilConjectures.FermatCount
-import Development.EtaleCohomology.KummerTheory.AdicLimPf
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.GalMapMul
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry GlobalTheory.EtC GlobalTheory.Et

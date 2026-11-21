@@ -1,4 +1,5 @@
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.QuadraticFormTwoTwo.GANormSqStar
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.QuadraticFormTwoTwo.AdUnitBCtMulVec
 
 open Matrix Finset Filter Topology
@@ -43,7 +44,7 @@ theorem adK_smul {F : Mx k r → (Wq →L[ℂ] Wp)} (hF : F ∈ AdK k r z π D) 
     intro g hg hgl
     simp [hE₁ g hg hgl]
   · intro x hx h hh
-    simp [hF.2 x hx h hh, ContinuousLinearMap.comp_smul]
+    simp [hF.2 x hx h hh]
 
 theorem adK_zero : (0 : Mx k r → (Wq →L[ℂ] Wp)) ∈ AdK k r z π D := by
   refine ⟨?_, ?_⟩

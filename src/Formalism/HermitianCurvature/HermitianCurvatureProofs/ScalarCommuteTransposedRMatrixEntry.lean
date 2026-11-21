@@ -1,4 +1,5 @@
-import Formalism.HermitianCurvature.StatementWd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.EntryCommuteTransposedRMatrix
 
 namespace Formalism.FourierDecayAlt.P.Wd7

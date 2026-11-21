@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.PairingIndexBounds.SplitPairEquations.PullIopOf
 import Formalism.LocalToGlobal.PairingIndexBounds.SplitPairEquations.ReductionOf
+import Formalism.LocalToGlobal.PairingIndexBounds.SplitPairEquations.NormOneUnitIdeal
 
 noncomputable section
 open NumberField Formalism.BasicNotions Classical

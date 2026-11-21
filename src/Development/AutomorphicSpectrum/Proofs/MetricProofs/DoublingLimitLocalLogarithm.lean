@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.IterDifferentiableOn
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.Tactic.Polynomial.Basic
 open Set Filter Topology Metric
 
 namespace GlobalTheory.CompanionTheory.Ar.Flat.LocalLog

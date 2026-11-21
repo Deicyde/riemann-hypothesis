@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.DualWeylCoordinates.DualWeylProofs.BCoreT
+import Formalism.ThetaLogCoordinates.DualWeylCoordinates.FiltrationTheoremOfClauses
+import Mathlib.RingTheory.PiTensorProduct
 
 noncomputable section
 

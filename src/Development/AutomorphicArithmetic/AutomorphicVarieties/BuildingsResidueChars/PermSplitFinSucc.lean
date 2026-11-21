@@ -1,5 +1,4 @@
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.TupleActions.InstMulActionTup
-import Mathlib.GroupTheory.Perm.Fin
 
 private theorem cycle_range_conjugate_succAbove {n : ℕ} (i j : Fin (n + 1)) (τ : Equiv.Perm (Fin n)) (k : Fin n) :
     ((Fin.cycleRange i)⁻¹ * Equiv.Perm.decomposeFin.symm (0, τ) * Fin.cycleRange j : Equiv.Perm (Fin (n + 1)))
@@ -51,6 +50,6 @@ theorem UpperTheory.perm_split_fin_succ :
   refine ⟨?_, fun k => cycle_range_conjugate_succAbove i j τ k⟩
   show ((Equiv.Perm.sign (F (i, τ)) : ℤ) : _) = _
   simp only [F, map_mul, map_inv, Fin.sign_cycleRange,
-    Equiv.Perm.decomposeFin.symm_sign, if_pos rfl, one_mul, inv_pow, Int.units_inv_eq_self]
+    Equiv.Perm.decomposeFin.symm_sign, Int.units_inv_eq_self]
   push_cast
   ring

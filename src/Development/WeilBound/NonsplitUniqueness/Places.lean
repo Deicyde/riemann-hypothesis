@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.TraceSplitting.NormCharSplit
-import GroundTheory.GlobalFields.KummerTheory.Splitting
 import GroundTheory.GlobalFields.TateThesis.DegreeOneDensity
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LatticeIndices.CharZeroAdicCompletion
+import Formalism.SharpRestriction.GrowthBounds.MonomialOrderSegments.BrData
 
 noncomputable section
 

@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ChartLatticeSpecializationValue
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LabelSigBijective
 open ReciprocityTheory.ChartRestriction.G.Geo GlobalTheory.CompanionTheory.Ar
 
 set_option maxHeartbeats 1000000 in

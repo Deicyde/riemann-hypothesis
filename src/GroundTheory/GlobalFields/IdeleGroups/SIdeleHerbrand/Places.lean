@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.IdeleGroups.SIdeleHerbrand.Product
-import GroundTheory.GlobalFields.IdeleGroups.SIdeleGroups.Decomposition
 import GroundTheory.GlobalFields.IdeleGroups.LocalHerbrandInfinite
+import GroundTheory.GlobalFields.IdeleGroups.SIdeleGroups.InfinitePlaces
+import GroundTheory.GlobalFields.IdeleGroups.SIdeleGroups.IntegerUnits
 
 namespace GroundTheory.Global
 

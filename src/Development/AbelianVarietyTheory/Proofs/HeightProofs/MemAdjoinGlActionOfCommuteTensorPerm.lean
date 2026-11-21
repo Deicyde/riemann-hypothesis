@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.IsLieDataCircle
+import Mathlib.Analysis.SpecialFunctions.RegularizedHypergeometric
+import Mathlib.Tactic.ENatToNat
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open GlobalTheory.SmoothForms NumberField Matrix
 open scoped ContDiff Topology

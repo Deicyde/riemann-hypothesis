@@ -1,4 +1,39 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.CStarAlgebra.Module.Constructions
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
 
 open MeasureTheory
 open scoped InnerProductSpace
@@ -43,7 +78,7 @@ private lemma mul_conj_eq_polarization (a b : ℂ) :
       - Complex.I * ((a - Complex.I * b) * conj (a - Complex.I * b))) := by
   simp only [map_add, map_sub, map_mul, Complex.conj_I]
   ring_nf
-  simp only [Complex.I_sq, Complex.I_pow_three]
+  simp only [Complex.I_sq]
   ring
 
 open MeasureTheory in
@@ -56,7 +91,7 @@ private lemma inner_swap_eq_polarization (x x' : H) :
   simp only [inner_add_left, inner_sub_left, inner_smul_left, inner_add_right,
     inner_sub_right, inner_smul_right, Complex.conj_I]
   ring_nf
-  simp only [Complex.I_sq, Complex.I_pow_three]
+  simp only [Complex.I_sq]
   ring
 
 open MeasureTheory in
@@ -77,8 +112,7 @@ private lemma integral_matrixCoeff_mul_star_same_left
         - Complex.I * (⟪y, σ g (x - Complex.I • x')⟫_ℂ * star ⟪y, σ g (x - Complex.I • x')⟫_ℂ)) := by
     intro g
     rw [Complex.star_def, mul_conj_eq_polarization ⟪y, σ g x⟫_ℂ ⟪y, σ g x'⟫_ℂ]
-    simp only [map_add, map_sub, map_smul, inner_add_right, inner_sub_right, inner_smul_right,
-      Complex.star_def]
+    simp only [map_add, map_sub, map_smul, inner_add_right, inner_sub_right, inner_smul_right]
   rw [integral_congr_ae (Filter.Eventually.of_forall hpt), integral_const_mul,
     integral_sub, integral_add, integral_sub, integral_const_mul, integral_const_mul,
     hdiag, hdiag, hdiag, hdiag, inner_swap_eq_polarization x x']
@@ -96,7 +130,7 @@ private lemma mul_conj_eq_polarization_four (a a' b b' : ℂ) :
       + Complex.I * ((a + Complex.I * a') * conj (b + Complex.I * b'))) := by
   simp only [map_add, map_sub, map_mul, Complex.conj_I]
   ring_nf
-  simp only [Complex.I_sq, Complex.I_pow_three]
+  simp only [Complex.I_sq]
   ring
 
 open MeasureTheory in
@@ -109,7 +143,7 @@ private lemma inner_eq_polarization (w w' : H) :
   simp only [inner_add_left, inner_sub_left, inner_smul_left, inner_add_right,
     inner_sub_right, inner_smul_right, Complex.conj_I]
   ring_nf
-  simp only [Complex.I_sq, Complex.I_pow_three]
+  simp only [Complex.I_sq]
   ring
 
 open MeasureTheory in
@@ -129,7 +163,7 @@ theorem _root_.GlobalTheory.polarised_schur_relations :
     intro g
     rw [Complex.star_def, mul_conj_eq_polarization_four ⟪w, σ g v⟫_ℂ ⟪w', σ g v⟫_ℂ
       ⟪w, σ g v'⟫_ℂ ⟪w', σ g v'⟫_ℂ]
-    simp only [inner_add_left, inner_sub_left, inner_smul_left, Complex.conj_I, Complex.star_def,
+    simp only [inner_add_left, inner_sub_left, inner_smul_left, Complex.conj_I,
       neg_mul, ← sub_eq_add_neg, sub_neg_eq_add]
   rw [integral_congr_ae (Filter.Eventually.of_forall hpt), integral_const_mul,
     integral_add, integral_sub, integral_sub, integral_const_mul, integral_const_mul,

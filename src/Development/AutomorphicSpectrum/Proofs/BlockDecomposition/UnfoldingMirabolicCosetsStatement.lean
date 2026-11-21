@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.VerticalStrips.UnramifiedEulerProductIntegral
+import GroundTheory.GlobalFields.TateThesis.IdeleMeasureQuotient
 
 noncomputable section
 
@@ -50,12 +53,12 @@ def pp (α : ℚˣ) (b : ℚ) : GL (Fin 2) ℚ := dg2 α 1 * uni2 b
 theorem rationalEmbedding_unipotent (b : ℚ) : dia2 (uni2 b) = uni2 (algebraMap ℚ 𝔸[ℚ] b) := by
   apply Units.ext
   ext i j
-  fin_cases i <;> fin_cases j <;> simp [uni2, AdelicGLn.diagonal]
+  fin_cases i <;> fin_cases j <;> simp [uni2]
 
 theorem rationalEmbedding_diagonal (α : ℚˣ) : dia2 (dg2 α 1) = dg2 (pri α) 1 := by
   apply Units.ext
   ext i j
-  fin_cases i <;> fin_cases j <;> simp [dg2, pri, AdelicGLn.diagonal]
+  fin_cases i <;> fin_cases j <;> simp [dg2, pri]
 
 theorem mirabolic_mul_iwasawa_coordinates (α : ℚˣ) (b : ℚ) (x : 𝔸[ℚ]) (a z : Jd) (κ : G2) :
     dia2 (pp α b) * pt x a z κ =
@@ -73,7 +76,7 @@ theorem row_dia (ξ : Fin 2 → ℚ) (γ : GL (Fin 2) ℚ) (g : G2) :
   rw [Units.val_mul, ← Matrix.vecMul_vecMul]
   congr 1
   ext j
-  simp [Matrix.vecMul, dotProduct, Fin.sum_univ_two, AdelicGLn.diagonal]
+  simp [Matrix.vecMul, dotProduct, Fin.sum_univ_two]
 
 theorem bottom_row_iwasawa_coordinates (x : 𝔸[ℚ]) (a z : Jd) (κ : G2) : row e0 (pt x a z κ) = lrow z κ := by
   have h0 : (fun i => algebraMap ℚ 𝔸[ℚ] (e0 i)) = ![0, 1] := by
@@ -270,7 +273,7 @@ theorem lintegral_adeles_rational_translates (α : ℚˣ) (K : 𝔸[ℚ] → ℝ
     (fun b : ℚ => MeasurableEquiv.addRight (-algebraMap ℚ 𝔸[ℚ] b))
     (fun b => measurePreserving_add_right _ _) ?_ (fun x => K ((pri α : 𝔸[ℚ]) * x))]
   · refine tsum_congr fun b => ?_
-    simp [sub_eq_add_neg]
+    simp
   · intro x
     simpa [sub_eq_add_neg] using existsUnique_sub_mem_fundamentalSet ℚ x
 
@@ -384,7 +387,7 @@ theorem ae_unique {μ : Measure G2} {𝓕 : Set G2}
     apply Units.ext
     ext i j
     have h1 := congrArg (fun q : G2 => (q : Matrix (Fin 2) (Fin 2) 𝔸[ℚ]) i j) h
-    simp only [AdelicGLn.diagonal] at h1
+    simp only at h1
     exact AdeleRing.algebraMap_injective (𝓞 ℚ) ℚ (by simpa using h1)
   have hinj : ∀ {γ γ' : GL (Fin 2) ℚ}, dia2 γ * g ∈ 𝓕 → dia2 γ' * g ∈ 𝓕 → γ = γ' := by
     intro γ γ' h h'

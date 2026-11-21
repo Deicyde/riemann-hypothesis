@@ -1,9 +1,9 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.BdryChart
-import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.IsPshLocallyIntegrableStatement
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.FlatDegree
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.NineGeoU
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Regularisation.PosSemidefOfIntQuadNonneg
+import Development.AutomorphicSpectrum.Definitions.MetricPeriods.ClopenCondOnto
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
+import Mathlib.NumberTheory.NumberField.CMField
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField Matrix Filter Topology
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi
 open GroundTheory.Heights₂.Heights.LowerBoundFree GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Cusp
@@ -102,7 +102,7 @@ theorem real_indep {J : Type*} [Fintype J] (b : Module.Basis J ℤ Λ) {w : Fin 
     rw [h2, hu]
     simp [Module.Basis.coord_apply, Finsupp.single_apply]
   have h2 := congrArg ψ h
-  simp only [map_sum, map_smul, h1, map_zero, smul_eq_mul, mul_ite, mul_one, mul_zero,
+  simp only [map_sum, map_smul, h1, map_zero, smul_eq_mul, mul_ite, mul_zero,
     Finset.sum_ite_eq', Finset.mem_univ, if_true] at h2
   simpa using h2
 

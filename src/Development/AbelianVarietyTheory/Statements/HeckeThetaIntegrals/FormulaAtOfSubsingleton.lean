@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CyclotomicBounds.RamifiedDiscriminants.FunKit
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.HeckeThetaIntegrals.FormulaAt
 
 noncomputable section

@@ -1,4 +1,10 @@
-import Formalism.GradedWeylDivisibility.StatementD
+import BuildAid.Leniency.Open
+import Formalism.GradedWeylDivisibility.StatementA
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 open MvPolynomial Finset
 
@@ -62,7 +68,7 @@ lemma ldrow_weight_rowW {k n : ℕ} (m : Fin k × Fin n →₀ ℕ) (a : Fin k) 
   · intro b _ hb
     apply Finset.sum_eq_zero
     intro s _
-    simp [rowW, Pi.single_apply, Ne.symm hb]
+    simp [rowW, Ne.symm hb]
   · intro h
     exact absurd (Finset.mem_univ a) h
 

@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.PredMemGamRanks
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ExtUHInjective
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PrimeToLevelOfDvdTrueDGam
-import Formalism.SharpRestriction.GlobalSchurBounds.MainIn
 
 noncomputable section
 

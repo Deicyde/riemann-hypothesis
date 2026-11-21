@@ -1,7 +1,7 @@
-import Formalism.SharpRestriction.GrowthBounds.HermitianTensor.TieDefs
-import Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.FinrankLetter
-import Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.OneMemDualWeyl
-import Formalism.PolynomialDimension.FinalHar
+import BuildAid.Leniency.Open
+import Formalism.GradedWeylDivisibility.FockSpaceTableaux.LBidetLemmas
+import Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.DeltaPsiH
+import Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.SingleWeightLatticeComparison
 
 noncomputable section
 
@@ -84,7 +84,7 @@ theorem delta_twoSp (K : Type) [Field K] (m a b : ℕ) (hm : 1 ≤ m) :
     rw [delta_prod]
     have h1 := hF true
     have h2 := hF false
-    simp only [eq_self_iff_true, if_true, Bool.false_eq_true, if_false] at h1 h2
+    simp only [if_true, Bool.false_eq_true, if_false] at h1 h2
     exact Formalism.GradedWeylDivisibility.dualWeyl_mul h1 h2
   | zero => simp
   | add y z _ _ hy hz =>

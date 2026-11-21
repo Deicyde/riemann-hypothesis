@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.IntegralStructures.CrystallineInputs.OfInputs
-import Development.AbelianVarietyTheory.Statements.EllipticCurveLevels.IsQg
+import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.CyclicStrongAtCusp
 
 noncomputable section
 

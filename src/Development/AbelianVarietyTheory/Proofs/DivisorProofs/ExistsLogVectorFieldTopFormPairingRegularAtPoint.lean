@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ChartRestrEqGerm
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrameEqUnitSmulDForm
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.Monomial

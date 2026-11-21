@@ -1,8 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AdelicHermitianForms.IsHermHyperbolic
-import Development.AbelianVarietyTheory.Definitions.ExistenceOfLattices.Hat1
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.TransvectionIdentitiesUnitaryStatement
-import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.SpecialUnitaryHyperbolicPlaneMemTransvections
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.AdelicHermitianForms.NontrivialTransvection
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
 open NumberField IsDedekindDomain Matrix GlobalTheory.UTrans GlobalTheory.AdLat
 open scoped TensorProduct
 
@@ -81,17 +82,17 @@ private lemma quasiReflection_eq_transvectionGen_mul_shifted {E : Type} [Field E
   have hσN : σ N = N := by rw [hN]; simp only [map_mul, hinv]; ring
   have trA : A + σ A = 0 := by
     rw [hA]
-    simp only [map_div₀, map_mul, map_neg, map_sub, map_one, map_add, map_pow, hinv, hsu, hαr, hσD, hσN]
+    simp only [map_div₀, map_mul, map_neg, map_sub, map_one, map_add, hinv, hsu, hαr, hσD, hσN]
     field_simp
     ring
   have trB : B + σ B = 0 := by
     rw [hB]
-    simp only [map_div₀, map_mul, map_neg, map_sub, map_one, map_add, map_pow, hinv, hsu, hαr, hσD, hσN]
+    simp only [map_div₀, map_mul, map_sub, map_one, map_add, map_pow, hinv, hsu, hαr, hσD, hσN]
     field_simp
     ring
   have trR : R + σ R = 0 := by
     rw [hR]
-    simp only [map_div₀, map_mul, map_neg, map_sub, map_one, map_add, map_pow, hinv, hsu, hαr, hσD, hσN]
+    simp only [map_div₀, map_mul, map_neg, map_sub, map_one, map_add, hinv, hsu, hαr, hσD, hσN]
     field_simp
     ring
   obtain ⟨w, hw⟩ : ∃ w, w = z + (c * σ β) • x := ⟨_, rfl⟩

@@ -1,9 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.ToHLatLemmas
 import Development.AbelianVarietyTheory.Definitions.Divisors.FactorBounds
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeightedNormSquareRows
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.OrthogonalNormSquareSum
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CosetRefinement
 
 namespace GlobalTheory.FamilyFrames
 

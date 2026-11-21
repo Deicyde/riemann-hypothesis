@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.TateThesis.TateMain
+import Mathlib.Analysis.Normed.Module.Connected
 
 open NumberField Topology Filter Complex Set
 open scoped NumberField.AdeleRing

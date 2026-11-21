@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.PropFTop
+import BuildAid.Leniency.Open
+import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.Birational
 
 noncomputable section
 
@@ -82,7 +82,7 @@ theorem arMono_add_single (Ψ : Type) [Fintype Ψ] [DecidableEq Ψ] (N : ℕ) (M
     refine Fin.lastCases ?_ (fun k => ?_) j
     · intro hj
       have : ((Finsupp.toMultiset (m.mapDomain some)).toList ++ [some r])[((Fin.last (dimFl Ψ N) : Fin _) : ℕ)] = some r := by
-        simp [List.getElem_append, hlen₀]
+        simp [hlen₀]
       rw [this, hL, Fin.snoc_last]
       rfl
     · intro hj

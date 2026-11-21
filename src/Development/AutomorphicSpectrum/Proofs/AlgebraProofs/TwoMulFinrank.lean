@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.OmStable
+import Mathlib.LinearAlgebra.BilinearForm.Orthogonal
 
 noncomputable section
 
@@ -95,7 +97,7 @@ theorem two_mul_finrank : 2 * finrank C Ω = finrank C V := by
   have hrefl : LinearMap.BilinForm.IsRefl P.e := fun x y h => by rw [e_skew P y x, h, neg_zero]
   have horth : LinearMap.BilinForm.orthogonal P.e (LinearMap.ker P.ht) = LinearMap.ker P.ht := by
     ext x
-    simp only [LinearMap.BilinForm.mem_orthogonal_iff, LinearMap.BilinForm.isOrtho_def,
+    simp only [LinearMap.BilinForm.mem_orthogonal_iff,
       LinearMap.mem_ker]
     rw [P.lagr x]
     refine forall₂_congr fun y _ => ?_

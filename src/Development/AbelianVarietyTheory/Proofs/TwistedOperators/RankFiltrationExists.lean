@@ -1,9 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.OpenClosedSequences
 import Development.AbelianVarietyTheory.Definitions.Foundations.SecondCountableAndT2LocalField
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.PadicIsNonarchimedeanLocalField
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsOpenSetOfLeRank
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LocallyConstantExtensionByZero
+import Mathlib.Topology.Algebra.Nonarchimedean.TotallyDisconnected
 
 noncomputable section
 

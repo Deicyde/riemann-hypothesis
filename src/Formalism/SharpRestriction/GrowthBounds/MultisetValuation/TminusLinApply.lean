@@ -1,5 +1,7 @@
-import Formalism.SharpRestriction.GrowthBounds.MultisetValuation.TheoremOfAlternateForm
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.LatticeSystems
+import Formalism.SharpRestriction.GrowthBounds.FormalGroupSystem
 
 noncomputable section
 

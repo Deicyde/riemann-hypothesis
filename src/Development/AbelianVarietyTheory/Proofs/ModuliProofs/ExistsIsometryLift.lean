@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.CMModuli.LevelActionTransitions
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ModNOfDvdModulus
 

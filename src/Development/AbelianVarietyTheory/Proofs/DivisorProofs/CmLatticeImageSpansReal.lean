@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.PolarisationModuleIndex
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsFinSetSplitPlacesCoprimeConductor
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.NumberTheory.NumberField.CMField
 open NumberField GlobalTheory.CMVal GlobalTheory.LatJet GlobalTheory.RealMult
 open GlobalTheory.IndefiniteRowSideFullHecke.PolarisationModuleIndex (latMod polMod dualLat TrInt bar)
 
@@ -16,7 +17,7 @@ theorem functional_single {n : ℕ} (f : (Fin n → ℂ) →ₗ[ℝ] ℝ) (j : F
       z.re • (Pi.single j (1:ℂ) : Fin n → ℂ) + z.im • (Pi.single j Complex.I : Fin n → ℂ) := by
     ext k
     by_cases h : k = j
-    · subst h; simp [Complex.ext_iff]
+    · subst h; simp
     · simp [h]
   rw [hz, map_add, map_smul, map_smul]
   simp only [map_div₀, map_sub, map_mul, Complex.conj_ofReal, Complex.conj_I, map_ofNat]

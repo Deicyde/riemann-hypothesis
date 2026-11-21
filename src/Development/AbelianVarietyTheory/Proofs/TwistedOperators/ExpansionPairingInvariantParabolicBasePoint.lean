@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.PairPtsEq
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.FockCompMulFin
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.PairVecSumEqOfProdEq
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.UnfoldingExpansionProductFunctionFixedByKplusStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.VecIsThetaFunO

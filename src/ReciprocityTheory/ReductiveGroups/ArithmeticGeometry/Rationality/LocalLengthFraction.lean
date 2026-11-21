@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.Rationality.QuotShiftPf
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.Rationality.FreeQuotPf
+import Mathlib.Topology.Sheaves.Presheaf
 
 namespace ReciprocityTheory.ChartRestriction.G.FreeQuotientRank.LocalLengthFraction
 

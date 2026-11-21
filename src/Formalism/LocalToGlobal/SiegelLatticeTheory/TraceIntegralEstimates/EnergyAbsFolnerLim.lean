@@ -1,7 +1,9 @@
-import Mathlib
-import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.EnergyAbs
-import Formalism.LocalToGlobal.SiegelLatticeTheory.TraceIntegralEstimates.EnergyAbsBasic
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.TraceIntegralEstimates.EnergyAbsFolnerExp
+import Mathlib.MeasureTheory.Function.L2Space
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 
@@ -99,14 +101,14 @@ theorem integral_inner_mul_inner_eq_norm_sq_div {μ : Measure G} [μ.IsMulLeftIn
       conj (((1 / d : ℝ) : ℂ) * ⟪W z, ((d : ℂ) * conj ⟪w, σ y w⟫_ℂ) • W (z * y)⟫_ℂ) := by
     intro y
     rw [hσ.2.1 z y, ContinuousLinearMap.mul_apply, hσ.2.2.1, inner_smul_right]
-    simp only [map_mul, Complex.conj_conj, Complex.conj_ofReal, inner_conj_symm]
+    simp only [map_mul, Complex.conj_ofReal, inner_conj_symm]
     push_cast
     first | (field_simp; ring) | field_simp | ring
   simp_rw [hpt]
   have hself : ⟪W z, W z⟫_ℂ = ((‖W z‖ ^ 2 : ℝ) : ℂ) := by
     refine Complex.ext ?_ ?_
     · first
-        | simp [inner_self_eq_norm_sq]
+        | simp
         | (rw [Complex.ofReal_re]; exact inner_self_eq_norm_sq (𝕜 := ℂ) (W z))
     · first
         | simp

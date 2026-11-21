@@ -1,7 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFinMapsOfForall
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAt
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.HoweUnram
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.XmApply
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.KFinLoc
 open scoped TensorProduct Matrix
@@ -89,9 +88,9 @@ theorem mem_KAt_of_frame : ∀ (F E : Type) [Field F] [NumberField F] [Field E] 
     ext i j
     by_cases hij : i = j
     · subst hij
-      simp [Matrix.one_apply, map_sub]
+      simp [map_sub]
       ring
-    · simp [Matrix.one_apply, hij]
+    · simp [hij]
   rw [hm]
   ext i j
   simp only [Matrix.smul_apply, Matrix.map_apply, Matrix.zero_apply]

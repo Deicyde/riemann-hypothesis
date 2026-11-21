@@ -1,8 +1,10 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.IsChartIff
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.AbelianOpenPart.IsOpenPart
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.CmHostRootComplexEqPmSqrt
 import Development.AbelianVarietyTheory.Definitions.Foundations.IsProbabilityMeasureMuPart
+import Formalism.LocalToGlobal.LatticeGeometry.AmpleOnAbelianBase
 
 noncomputable section
 

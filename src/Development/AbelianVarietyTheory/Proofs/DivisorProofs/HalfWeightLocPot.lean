@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.EqOfIsometricTrivShift
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ChernOn
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RestrictChernPart
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FirstChernClassPotential

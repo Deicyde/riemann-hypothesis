@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.LocVol
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.LocFramePrimJoint
 
 noncomputable section
@@ -268,7 +268,7 @@ theorem crd_cinv (x : Fin X.B.I.n → X.B.I.E) : crd X (cinv X x) = x := by
   funext i
   simp only [crd, crdOf, cinv, map_sum, map_smul, Module.Basis.repr_self, Finsupp.coe_finset_sum,
     Finset.sum_apply, Finsupp.smul_apply, Finsupp.single_apply, smul_eq_mul, mul_ite, mul_one, mul_zero,
-    Finset.sum_ite_eq, Finset.sum_ite_eq', Finset.mem_univ, if_true, RingEquiv.symm_apply_apply]
+    Finset.sum_ite_eq', Finset.mem_univ, if_true, RingEquiv.symm_apply_apply]
 
 theorem cinv_add (x y : Fin X.B.I.n → X.B.I.E) : cinv X (x + y) = cinv X x + cinv X y := by
   simp only [cinv, Pi.add_apply, map_add, add_smul, Finset.sum_add_distrib]

@@ -1,7 +1,8 @@
-import Mathlib
-import Formalism.WachLatticeTwists.LagrangeExtensionCocycles.DualWByLettersExtended
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.FrobeniusPowUniformizerFactorisation
-import Formalism.SharpRestriction.LevelLetterCocycles.CrystallineLiftingBounds
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
 
 noncomputable section
 

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.ComplexMultiplication.AnalyticAlgebraicConverse
 
 open Filter Topology Set Polynomial WeierstrassCurve.Affine GroundTheory.Arith.Abelian

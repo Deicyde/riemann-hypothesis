@@ -1,4 +1,4 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsAdmissibleIntegralBasisChangeOne
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TwistAtOfNe
 
 open scoped IntermediateField Polynomial RatFunc

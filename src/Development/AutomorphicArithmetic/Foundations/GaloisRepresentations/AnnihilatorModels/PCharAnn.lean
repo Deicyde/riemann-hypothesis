@@ -1,5 +1,11 @@
-import Mathlib
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.AnnihilatorModels.SameNormBasic
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.AnnihilatorModels.GenericMulOfProd
+import Mathlib.FieldTheory.IsAlgClosed.Spectrum
+import Mathlib.LinearAlgebra.Matrix.Charpoly.Eigs
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.Polynomial.Basic
 
 open CategoryTheory AlgebraicGeometry TensorProduct
 open UpperTheory.Gal.crystallineComparison
@@ -14,7 +20,7 @@ theorem UpperTheory.Gal.crystallineComparison.charAnn_of :
   set M' : Matrix (Fin n) (Fin n) L := M.map f
   have hchar : M'.charpoly = M.charpoly.map f := Matrix.charpoly_map M f
   have hpmap : (rootPol s).map f = (Multiset.map (fun a => Polynomial.X - Polynomial.C a) (s.map f)).prod := by
-    simp [rootPol, Polynomial.map_multiset_prod, Multiset.map_map, Function.comp_def]
+    simp [rootPol, Polynomial.map_multiset_prod, Multiset.map_map]
   have hannL : Polynomial.aeval M' (rootPol s) = 0 := by
     have h1 : M' = (Algebra.ofId K L).mapMatrix M := by
       rw [AlgHom.mapMatrix_apply]; rfl

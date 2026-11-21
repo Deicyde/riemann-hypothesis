@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.GlobalClassFormation.LocalLimits.ApplyCompletionEmbeddingOfLocalDecompHomEqOne
 import GroundTheory.ProfiniteCohomology.GlobalClassFormation.IdeleLimits.LocalTransition
-import GroundTheory.ProfiniteCohomology.FilteredHomology
 import GroundTheory.ProfiniteCohomology.Factor
 set_option maxSynthPendingDepth 1
 

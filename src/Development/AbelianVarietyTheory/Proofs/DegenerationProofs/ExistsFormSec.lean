@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Degenerations.PullChartIsLB
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsUnitCharts
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.CoeffSymmSum
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry
@@ -99,7 +99,7 @@ theorem valHom_constFn {R : Type} [CommRing R] {X : Scheme.{0}} (p : X ⟶ Sp R)
     revert h₁
     rw [hx]
     intro h₁
-    simp only [Scheme.Hom.appLE, Scheme.Hom.id_app, Category.id_comp]
+    simp only [Scheme.Hom.appLE, Scheme.Hom.id_app]
     exact (Category.id_comp _).trans ((Sp R).presheaf.map_id _)
   change ((Scheme.ΓSpecIso (CommRingCat.of R)).inv ≫ (p.appLE ⊤ U (fun _ _ => trivial) ≫ x.appLE U ⊤ h) ≫
     (Scheme.ΓSpecIso (CommRingCat.of R)).hom).hom a = a

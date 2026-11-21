@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CharacterGerms.ChartHypothesisOfCharacters
+import Formalism.LocalToGlobal.CharacterGerms.CharacteristicFromRanks
 
 set_option autoImplicit false
 

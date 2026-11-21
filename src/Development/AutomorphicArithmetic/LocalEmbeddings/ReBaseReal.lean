@@ -1,9 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RealMapsRelevantSpace
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepresentationUnitaryEquiv
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepresentationUnitaryUnique
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepresentationUnitaryCompat
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilModelLineActionExists
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.WeilLineGoodModelAction
 
 open scoped TensorProduct

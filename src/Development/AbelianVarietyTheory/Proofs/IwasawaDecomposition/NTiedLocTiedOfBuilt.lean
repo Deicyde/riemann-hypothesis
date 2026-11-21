@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.NonemptyAllIff
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.NormEqOneOfVEqZero
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.RingSpecNormalisedCharacterEq
 
 noncomputable section
 

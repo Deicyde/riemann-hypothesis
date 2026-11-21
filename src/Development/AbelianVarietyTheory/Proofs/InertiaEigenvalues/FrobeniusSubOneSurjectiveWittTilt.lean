@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.CrystallinePeriods.RingBasics
 import Formalism.SharpRestriction.LevelLetterCocycles.ElementDenominator
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.ASWitt

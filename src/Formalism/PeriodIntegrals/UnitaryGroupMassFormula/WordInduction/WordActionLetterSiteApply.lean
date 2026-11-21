@@ -1,4 +1,7 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.LevelZeroKernel
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.DifferentiableAtOfPuncturedSmooth
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.FsvMulFsvNeg
 
 open scoped ContDiff ComplexConjugate
 

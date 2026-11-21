@@ -1,15 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HilbertKodairaSpencer
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAHOfIsFactorAH
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RiemannTheoremNonprincipalPolarisedTorusStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SmoothOfRelativeDimensionOfHolUnif
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsAppellHumbertFactorStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianFormsAddOfFactorProductStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AppellHumbertHomCompatibleStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RelAmpleOfAppellHumbertStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsFactorAHLamDiag
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LineBundleEndoFactorPullbackStatement
-import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.IsProjOverMorphismRestrictOfRelAmple
 
 set_option autoImplicit false
 
@@ -102,7 +95,7 @@ theorem exists_obj_of_polarised_torus : ∀ (F : Type) [Field F] [NumberField F]
           rw [form, form]
           refine Finset.sum_congr rfl fun i _ ↦ ?_
           have hcoe : algebraMap (𝓞 F) F a = (a : F) := rfl
-          simp only [hρ, Submodule.coe_smul, Algebra.smul_def, hcoe, map_mul, Complex.ofReal_mul, Complex.conj_ofReal]
+          simp only [hρ, Algebra.smul_def, hcoe, map_mul, Complex.ofReal_mul, Complex.conj_ofReal]
           ring)
         (fun z w ↦ by
           rw [form, form, hρ, hρ]
@@ -183,7 +176,7 @@ theorem exists_obj_of_polarised_torus : ∀ (F : Type) [Field F] [NumberField F]
       add := fun x x' ↦ GlobalTheory.T.hermitian_forms_add_of_factor_product _ A ab hproj (M x) (M x') (M (x + x')) (u x) (u x') (u (x + x'))
         (Hc x) (Hc x') (Hc (x + x')) (χ x) (χ x') (χ (x + x')) (hM x) (hM x') (hM _)
         ((hex x').trans (hex x).symm) ((hex _).trans (hex x).symm) (hf x) (hf x') (hf _) (by
-          simp only [Hc, Submodule.coe_add, map_add, Matrix.diagonal_add]
+          simp only [Hc, map_add, Matrix.diagonal_add]
           congr 1
           funext i
           push_cast

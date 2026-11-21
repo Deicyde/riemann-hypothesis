@@ -1,7 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.PAdicHodge.TateCpTwist
 import GroundTheory.PAdicHodge.AxLemma
 import GroundTheory.PAdicHodge.TateNormalizedTrace
+import Mathlib.Data.Int.Star
+import Mathlib.RepresentationTheory.Homological.ContCohomology.LowDegree
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.PAdicHodge

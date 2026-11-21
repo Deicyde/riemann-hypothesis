@@ -1,4 +1,5 @@
-import ReciprocityTheory.ThetaQuasiPeriods.ThetaQuasiPeriodStatement
+import BuildAid.Leniency.Open
+import ReciprocityTheory.ThetaQuasiPeriods.PeriodLattice
 
 noncomputable section
 

@@ -1,11 +1,7 @@
-import Mathlib
-import Formalism.PeriodIntegrals.DSInfCharCap
-import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.PseudoCoefficientSeparation
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HarishChandraModulesOn
-import Formalism.RealPlaceAnalysis.StatementE
-import Formalism.RealPlaceAnalysis.StatementB
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.InducedKFiniteRestrictionStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CommutingIsometriesCommonEigenvectorStatement
+import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.LanglandsClassification
 open MeasureTheory Matrix Formalism.REAL Formalism.MainNotions.S Formalism.L2.Theta GlobalTheory.FlagMeas GlobalTheory.GKModule GlobalTheory.RealInd GlobalTheory.OpTrace
 open GlobalTheory.SmoothGlob (lieSet)
 open GlobalTheory.Dec (IsHaarSub HasInfChar UEquiv gelfVal)
@@ -138,7 +134,7 @@ theorem functional : GlobalTheory.Published.Langlands.Induced → ∀ (n : ℕ) 
       rw [pairing, Finset.sum_eq_single ⟨0, h⟩]
       · simp [hj, rho, hIio]
         left; ring
-      · intro b _ hb; simp [Pi.single_apply, hb]
+      · intro b _ hb; simp [hb]
       · simp
     have hfun : (fun t : ℝ => g.1 (expG ε H₀ t)) = fun t : ℝ => Complex.exp ((I.s ⟨0, h⟩ + n - 1) * t) • g.1 1 :=
       funext fun t => by

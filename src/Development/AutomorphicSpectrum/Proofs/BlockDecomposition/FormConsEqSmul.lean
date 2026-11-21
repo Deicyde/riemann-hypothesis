@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.HodgeSurjectivity.FormLaws
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.ReduceModChar
 open CrystallineSemistableComparison.Onto
 
 set_option autoImplicit false
@@ -38,7 +42,7 @@ theorem form_cons_eq_smul {a : ℕ} (f h g₀ : A) (g : Fin a → A) (k : Fin a)
     by_cases hi : i = k.succ
     · subst hi
       simp [v]
-    · simp [Function.update_apply, hi]
+    · simp [hi]
   have hv2 : exteriorPower.ιMulti A (a + 1) (Function.update v k.succ (KaehlerDifferential.D K A f)) = 0 := by
     apply AlternatingMap.map_eq_zero_of_eq _ _ (i := 0) (j := k.succ)
     · simp [v, Function.update_apply, (Fin.succ_ne_zero k).symm]

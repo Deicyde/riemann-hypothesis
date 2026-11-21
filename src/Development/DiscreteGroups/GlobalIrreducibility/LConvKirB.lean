@@ -1,6 +1,7 @@
-import Mathlib
-import Development.DiscreteGroups.GlobalIrreducibility.InHCorner
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.TateThesis.NoSmallSubgroups
+import Development.DiscreteGroups.GlobalIrreducibility.LConvKirA
 
 noncomputable section
 open Matrix GlobalTheory.SmGL GlobalTheory.Whittaker GlobalTheory.LocLanglands ValuativeRel Filter Topology

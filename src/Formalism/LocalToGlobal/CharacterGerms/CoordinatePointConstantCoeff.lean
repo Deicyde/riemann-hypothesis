@@ -1,6 +1,7 @@
-import Formalism.LocalToGlobal.CharacterGerms.UnitSeriesFrobenius
-import Formalism.LocalToGlobal.CharacterGerms.CoeffPowCharFrobenius
-import Formalism.LocalToGlobal.CharacterGerms.RowTiePGerm
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Tactic.ENatToNat
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.CocycleRightZeroThd
 
 set_option autoImplicit false
 

@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedPlaneRestrictionIsPair
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SymplecticIsotropicPlaneVanishesAdelicStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SymplecticIsotropicEmbeddedVanishesAdelicStatement
@@ -97,7 +97,7 @@ theorem symp_mixedA {B : Base F E} {j₀ j₁ i₀ i₁ : ℕ} {H : Plane E n n�
     simp only [incM_one, Matrix.transpose_one, Matrix.mul_one] at e1 e2
     have : symp (cA σ) (-1) (incM F X.J) (incM F W₁.J) (incM F H.ι * z) (incM F H.ι * z') =
         symp (cA σ) (-1) (incM F X₁.J) (incM F W₁.J) z z' := by
-      simp only [symp, hTens_eq, e1, e2]
+      simp only [symp, hTens_eq, e1]
     rw [this, M₁.co.form, hz, hz', zero_dotProduct, zero_dotProduct, sub_self]
   rw [← piece_b_eq] at h_ba' h_b'a
   rw [← piece_c_left_identity] at h_ca' h_c'a

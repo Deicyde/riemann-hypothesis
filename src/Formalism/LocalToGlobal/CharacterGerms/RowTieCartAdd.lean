@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CharacterGerms.RowTieCartFB
 
 noncomputable section
@@ -62,7 +64,7 @@ theorem intS_ps {f : PowerSeries C} : IntS V f ↔ ∀ n, V.Ge 0 (PowerSeries.co
   · intro h μ
     have hμ : μ = Finsupp.single () (μ ()) := by
       ext
-      simp [Finsupp.single_apply]
+      simp
     rw [hμ]
     exact h (μ ())
 

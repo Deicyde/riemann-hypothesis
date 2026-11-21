@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.DualWeylCoordinates.DualWeylProofs.EvalIdBracketCanonical
 import Formalism.ThetaLogCoordinates.DualWeylCoordinates.DualWeylProofs.QnEvalMap
+import Formalism.ThetaLogCoordinates.DualWeylCoordinates.StatementH
 
 open MvPolynomial
 

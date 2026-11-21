@@ -1,8 +1,5 @@
-import Mathlib
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.KFiniteThetaLifts.CasselmanShalikaStandardVector
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.BndIUnits
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntegrablePowerWeightUnits
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ValMeasurableEmbedding
+import BuildAid.Leniency.Open
+import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.LocalWhittakerDuality.LocalFunctionalEquationFinite
 open NumberField IsDedekindDomain MeasureTheory Matrix Filter Topology
 open GroundTheory.Global GroundTheory.LocalField GroundTheory.Automorphic GroundTheory.Automorphic.AutomorphicForm
 open GroundTheory.Automorphic.GodementSection (localChar)
@@ -23,7 +20,7 @@ theorem emR_coe (h : GL (Fin 2) ℝ) : (GL2LocalData.emR h).val =
       Matrix (Fin 3) (Fin 3) ℝ).det ≠ 0 := by
     have h1 : (!![h.val 0 0, h.val 0 1, 0; h.val 1 0, h.val 1 1, 0; 0, 0, 1] :
         Matrix (Fin 3) (Fin 3) ℝ).det = (h.val).det := by
-      simp [Matrix.det_succ_row_zero, Fin.sum_univ_succ, Matrix.det_fin_two, Fin.succAbove]
+      simp [Matrix.det_succ_row_zero, Fin.sum_univ_succ, Fin.succAbove]
     rw [h1]
     exact ((Matrix.isUnit_iff_isUnit_det _).1 h.isUnit).ne_zero
   rw [GL2LocalData.emR, dif_pos hd]

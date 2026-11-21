@@ -1,5 +1,8 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterRedB
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterBridgeD
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Separation.CompletelyRegular
 
 noncomputable section
 

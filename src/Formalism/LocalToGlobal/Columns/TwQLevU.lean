@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.TwQGrp
+import Formalism.LocalRingCardinality.SpanPowerMembership.LocAtA
+import Formalism.LocalToGlobal.Columns.TwQCmp
+import Formalism.LocalToGlobal.Columns.TwQThetaOpen
 
 open NumberField IsDedekindDomain
 

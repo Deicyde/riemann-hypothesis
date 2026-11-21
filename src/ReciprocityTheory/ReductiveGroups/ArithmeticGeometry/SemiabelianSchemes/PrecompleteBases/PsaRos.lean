@@ -1,5 +1,41 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SemiabelianSchemes.SplitTori.SplitTorusIsCommMonObjSt
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Algebra.AffineMonoid.UniqueSums
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.Int.Star
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
 
 open AddMonoidAlgebra
 
@@ -15,7 +51,7 @@ theorem eq_single_of_mul_eq_one {R A : Type*} [CommRing R] [IsDomain R] [AddComm
   have hone1 : ∀ x : A, x ≠ 0 → (1 : AddMonoidAlgebra R A).coeff x = 0 := by
     intro x hx
     rw [AddMonoidAlgebra.one_def, AddMonoidAlgebra.coeff_single]
-    simp only [Finsupp.single_apply, hx, Ne.symm hx, if_false]
+    simp only [Finsupp.single_apply, Ne.symm hx, if_false]
   have hf : f ≠ 0 := by
     rintro rfl
     rw [zero_mul] at h
@@ -66,7 +102,7 @@ theorem eq_single_of_mul_eq_one {R A : Type*} [CommRing R] [IsDomain R] [AddComm
     by_cases hx : x = a
     · subst hx
       rw [Finsupp.single_eq_same]
-    · simp only [Finsupp.single_apply, hx, Ne.symm hx, if_false]
+    · simp only [Finsupp.single_apply, Ne.symm hx, if_false]
       by_contra hne
       have hmem : x ∈ f.coeff.support := Finsupp.mem_support_iff.mpr hne
       rw [ha, Finset.mem_singleton] at hmem
@@ -78,7 +114,7 @@ theorem eq_single_of_mul_eq_one {R A : Type*} [CommRing R] [IsDomain R] [AddComm
     by_cases hx : x = b
     · subst hx
       rw [Finsupp.single_eq_same]
-    · simp only [Finsupp.single_apply, hx, Ne.symm hx, if_false]
+    · simp only [Finsupp.single_apply, Ne.symm hx, if_false]
       by_contra hne
       have hmem : x ∈ g.coeff.support := Finsupp.mem_support_iff.mpr hne
       rw [hb, Finset.mem_singleton] at hmem

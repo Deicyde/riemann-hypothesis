@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsSupBoundBlock
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsBergman
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsResolutionPullback

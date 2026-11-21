@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocCharEqValZpow
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TmulMemLocId
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ValuedCompW
 open scoped TensorProduct NNReal Matrix nonZeroDivisors
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -30,7 +28,7 @@ theorem exists_unif_above (v : HeightOneSpectrum (𝓞 F)) (w : HeightOneSpectru
     (fun i => if i = w then 2 else 1) (fun i _ => i.prime) (fun i _ j _ hij h => hij (HeightOneSpectrum.ext h))
     (fun i => if i.1 = w then π else 1)
   have hw := hy w (Finset.mem_insert_self _ _)
-  simp only [if_pos rfl] at hw
+  simp only at hw
   have hyw : y ∈ w.asIdeal := by
     have := Ideal.pow_le_self two_ne_zero hw
     simpa using w.asIdeal.add_mem this hπ

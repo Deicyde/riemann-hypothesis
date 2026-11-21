@@ -1,9 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RunModel
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ExistsIsometryOfSabMap
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Counterexamples.ThetaValuation.UniformMultiplier
-import Development.AbelianVarietyTheory.Counterexamples.JetSurvey.LatticeAndConstantUnique
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.HolomorphicFamilies.ModelLatA
+import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.SingleIndexPlacesAreTwisted
 
 set_option autoImplicit false
 

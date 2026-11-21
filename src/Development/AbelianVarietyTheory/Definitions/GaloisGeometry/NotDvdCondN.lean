@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.QuotientHomNonvanishingBound
-import Formalism.SharpRestriction.LevelLetterCocycles.LocalSituation
-import Formalism.LocalRingCardinality.DataParams
 import Formalism.LocalRingCardinality.DataDIV
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.Alternates
 

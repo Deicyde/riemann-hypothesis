@@ -1,5 +1,7 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.WeightedSumBounds.TangentEqLcZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.RingTheory.PowerSeries.Expand
+import ReciprocityTheory.DualLattices.VEqZeroOfPowEqOne
 
 namespace ReciprocityTheory.ChartRestriction.G.Sh.PTb
 

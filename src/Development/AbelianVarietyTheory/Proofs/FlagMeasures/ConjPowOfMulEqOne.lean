@@ -1,14 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Statements.CuspFrameWeights.ConvolutionSmoothL2
-import Development.AbelianVarietyTheory.Statements.CuspFrameWeights.DiscreteSpectrumKFiniteDecomposition
-import Formalism.HarderNarasimhan.ShiftInvariance
 import Formalism.RealPlaceAnalysis.FinalF
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.LamXEquivariant
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.UnipotentOfTracePowEqSize
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.RingOfIntegersEqZeroOfNatCastDvdOfNormEmbeddingL
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.NormExpSubOneLeExpNorm
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.NormPosOfIsUnit
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.AutPointLatticeIntersectionSelfDualProperties
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.IsIntegralOfLeftEigenvectorOfLattice
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.LatUnipMapMulVec
 
@@ -26,7 +23,7 @@ theorem conj_pow_of_mul_eq_one {A n : Type} [CommRing A] [Fintype n] [DecidableE
   | succ m ih =>
     rw [pow_succ, ih, pow_succ]
     calc Y * G ^ m * X * (Y * G * X) = Y * G ^ m * (X * Y) * G * X := by simp only [mul_assoc]
-      _ = _ := by rw [h]; simp only [mul_assoc, mul_one, one_mul]
+      _ = _ := by rw [h]; simp only [mul_assoc, mul_one]
 
 theorem trace_conj_pow {A n : Type} [CommRing A] [Fintype n] [DecidableEq n]
     (X Y G : Matrix n n A) (h : X * Y = 1) (m : ℕ) : ((Y * G * X) ^ m).trace = (G ^ m).trace := by

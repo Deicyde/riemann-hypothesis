@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.CrystallineComparison.CFDefs
+import Development.AutomorphicArithmetic.ThetaCorrespondence.CrystallineComparison.InclDone
 
 noncomputable section
 

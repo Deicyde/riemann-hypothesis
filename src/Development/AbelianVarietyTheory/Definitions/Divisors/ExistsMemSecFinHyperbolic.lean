@@ -1,11 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.MemKFinOfIsLocallyConstant
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsotropicComplGram
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StandardCompactUnderWittChart
-import Development.AbelianVarietyTheory.PublishedTheorems.SiegelWeil₂.EisensteinMaximalParabolic
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsLocallyConstantLinOm
-import Development.AbelianVarietyTheory.Definitions.Divisors.EventuallyMemIntMatIff
-import Development.AbelianVarietyTheory.Definitions.Foundations.GLintEqKOAndPrincEqKOne
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsStdMulShift
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StandardAdelicAddCharNontrivialFinitePlace
 

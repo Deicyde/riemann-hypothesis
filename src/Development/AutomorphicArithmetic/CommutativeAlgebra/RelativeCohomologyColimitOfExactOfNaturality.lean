@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.BridgeYfiPf
 import Development.EtaleCohomology.EtaleSheaves.GlueRelPfCone
 

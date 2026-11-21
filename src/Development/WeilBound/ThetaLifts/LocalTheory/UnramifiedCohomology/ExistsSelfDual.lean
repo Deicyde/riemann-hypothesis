@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.CompactAveragingSplitting.EigenvectorLifting.VaceigenDual
 import Development.WeilBound.CoreStatements.LocalThetaKernels.IwasFrame
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsDualFamilyOfIsLattice
@@ -90,7 +92,7 @@ theorem exists_selfDual {B : Base F E} (hB : B.IsGood σ) {Y : Spc F E n} {r s :
       selfDual_of (hdet 1 one_ne_zero) hY.lat (fun y hy x hx => SelfDual.inclR_mem_intLoc v ?_) (s := 1)
         ((Ideal.ne_top_iff_one _).1 v.isPrime.ne_top) fun y hy => ?_⟩
     · rw [hE_smul, one_mul]; exact ⟨⟨_, (hY.dual y).1 hy x hx⟩, rfl⟩
-    · simp only [OneMemClass.coe_one, map_one, one_smul]
+    · simp only [map_one, one_smul]
       refine (hY.dual y).2 fun x hx => ?_
       obtain ⟨o, ho⟩ := hy x hx
       rw [hE_smul, one_mul] at ho

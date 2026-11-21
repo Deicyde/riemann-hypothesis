@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinsumLifts
@@ -59,7 +59,7 @@ theorem dom : GlobalTheory.Published.ArExists → ∀ {F : Type} [Field F] [Numb
   have hcomb := (GlobalTheory.T.point_height_dual_and_linear_comb hE _ V.X V.p _ V.ar (V.j w) halg).2 (Fin 2) ![L, M] ![a, b]
     (fun j => by fin_cases j <;> assumption) ![(n : ℤ), 1]
   have h1 := hc i (V.j w) hi halg _ hcomb
-  simp only [Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons, Int.cast_natCast,
+  simp only [Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, Int.cast_natCast,
     Int.cast_one, one_mul] at h1
   have h2 : c i ≤ ∑ j, |c j| := (le_abs_self _).trans
     (Finset.single_le_sum (f := fun j => |c j|) (fun j _ => abs_nonneg _) (Finset.mem_univ i))

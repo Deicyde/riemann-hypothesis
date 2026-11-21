@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.TypePrimeCongruences
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.CongruenceAnnihilatesCharacterPart
 import Formalism.SharpRestriction.LevelLetterCocycles.SecondPropositionEveryLocalisation
 import Formalism.SharpRestriction.LevelLetterCocycles.JointConditionsZpowers.GaloisConditionFiveExtraOf

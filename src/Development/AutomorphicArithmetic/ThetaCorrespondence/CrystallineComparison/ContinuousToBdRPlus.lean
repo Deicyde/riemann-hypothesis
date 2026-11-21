@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.Comparison
 import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.Topology
 

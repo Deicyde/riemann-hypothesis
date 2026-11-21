@@ -1,6 +1,4 @@
-import Mathlib
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsEtCoord
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinrankKaehlerResidueField
 open CategoryTheory AlgebraicGeometry TopologicalSpace Limits
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor

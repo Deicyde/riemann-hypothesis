@@ -1,10 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.WhiskerLeftEqLift
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsCrystalPairing
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PullLiftOneEqZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PullUnitEqZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RepresentableOver
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsGeomPointThrough
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 set_option autoImplicit false
 noncomputable section

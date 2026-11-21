@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EvaluationMapAdaptedPlaneContinuous
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawPairPlaneDescentFirstStatement
 
@@ -52,7 +51,7 @@ theorem exists_decomp {n d₂ : ℕ} (J : Matrix (Fin n) (Fin n) E) (hJ : ∀ i 
       ((LinearMap.fst E E (Fin d₂ → E)).comp (LinearMap.snd E E (E × (Fin d₂ → E)))).smulRight y +
       (Matrix.mulVecLin ι).comp ((LinearMap.snd E E (Fin d₂ → E)).comp (LinearMap.snd E E (E × (Fin d₂ → E))))
   have hL : ∀ p : E × E × (Fin d₂ → E), L p = p.1 • x + p.2.1 • y + ι *ᵥ p.2.2 := fun p => by
-    simp [L, Matrix.mulVecLin_apply]
+    simp [L]
   have hinjL : Function.Injective L := by
     rw [← LinearMap.ker_eq_bot, LinearMap.ker_eq_bot']
     intro p hp
@@ -69,7 +68,7 @@ theorem exists_decomp {n d₂ : ℕ} (J : Matrix (Fin n) (Fin n) E) (hJ : ∀ i 
     exact Prod.ext ha (Prod.ext hb hu)
   have hsurj : Function.Surjective L := by
     refine (LinearMap.injective_iff_surjective_of_finrank_eq_finrank ?_).mp hinjL
-    simp [Module.finrank_prod, Module.finrank_fin_fun]
+    simp [Module.finrank_prod]
     omega
   obtain ⟨p, hp⟩ := hsurj r
   rw [hL] at hp

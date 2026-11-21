@@ -1,7 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.LaplaceOperators.LaplaceEstimates.HaarRightStatement
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.LaplaceOperators.LaplaceEstimates.HasDerivAtExp
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.LaplaceOperators.LaplaceEstimates.SmoothMatrixMaps.TMapSpec
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.LaplaceOperators.LaplaceEstimates.SmoothMatrixMaps.IntOfBound
 
 noncomputable section
 
@@ -72,14 +72,14 @@ theorem isGlRep_resE {n : ℕ} (E : Fin n → Fin n → Module.End ℂ M) (S : S
   simp only [LinearMap.sub_apply, Module.End.mul_apply, resE, Submodule.coe_sub,
     LinearMap.coe_restrict_apply]
   rw [this]
-  split_ifs <;> simp [resE, LinearMap.coe_restrict_apply]
+  split_ifs <;> simp [LinearMap.coe_restrict_apply]
 
 theorem frameE_eq_actM {n : ℕ} (Q : Matrix (Fin n) (Fin n) ℂ) (E : Fin n → Fin n → Module.End ℂ M)
     (i j : Fin n) : frameE Q E i j = actM E (Q⁻¹ * Matrix.single i j 1 * Q) := by
   unfold frameE actM
   refine Finset.sum_congr rfl fun a _ => Finset.sum_congr rfl fun b _ => ?_
   congr 1
-  simp [Matrix.mul_apply, Matrix.single_apply, ite_and, Finset.sum_ite_eq, Finset.sum_ite_eq', ite_mul]
+  simp [Matrix.mul_apply, Matrix.single_apply, ite_and, Finset.sum_ite_eq, ite_mul]
 
 end CapelliMinorRestriction
 
@@ -167,12 +167,12 @@ theorem tMap_sum {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℂ H]
 theorem coefX_add {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℂ H] (σ : Mat k r → (H →L[ℂ] H))
     (x₀ : Mat k r) (w m₁ m₂ : H) (G : Mat k r) :
     coefX σ x₀ w (m₁ + m₂) G = coefX σ x₀ w m₁ G + coefX σ x₀ w m₂ G := by
-  simp [coefX, inner_add_right]
+  simp [coefX]
 
 theorem coefX_smul {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℂ H] (σ : Mat k r → (H →L[ℂ] H))
     (x₀ : Mat k r) (w m : H) (a : ℂ) (G : Mat k r) :
     coefX σ x₀ w (a • m) G = a * coefX σ x₀ w m G := by
-  simp [coefX, inner_smul_right]
+  simp [coefX]
 
 variable {Vp : Type*} [NormedAddCommGroup Vp] [InnerProductSpace ℂ Vp] [CompleteSpace Vp]
 

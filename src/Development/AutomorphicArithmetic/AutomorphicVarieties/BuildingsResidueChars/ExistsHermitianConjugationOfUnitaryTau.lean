@@ -1,4 +1,7 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.GlobalUnitaryForms.HodgeTateFromSandwich
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.GlobalUnitaryForms.LevelTwoFiniteIndex
+import Mathlib.RingTheory.PiTensorProduct
 
 open UpperTheory.V.Z.Sym UpperTheory.V.Z.Sym.Loc UpperTheory.V.Z.Sym.Glob Matrix
 
@@ -40,7 +43,7 @@ private theorem core_lemma {R A : Type} [CommRing R] [Ring A] [Algebra R A] {t c
     rw [h, hMP]
   have hPP : P * P = (2 - t) • P := by
     nth_rewrite 1 [hP]
-    simp only [add_mul, sub_mul, smul_mul_assoc, one_mul, mul_assoc, hMP2, hMP]
+    simp only [add_mul, sub_mul, smul_mul_assoc, one_mul, mul_assoc, hMP]
     module
   have key : (c * (2 - t)) • P = P := by rw [hc, one_smul]
   have hcc : c * c * (2 - t) = c := by rw [mul_assoc, hc, mul_one]
@@ -63,8 +66,7 @@ private theorem H_affine_combination_eq_of_quadratic_relation {R A : Type} [Comm
     simp only [Psi, mul_add, mul_smul_comm, sub_mul, one_mul, hee, hEME, sub_self, smul_zero,
       add_zero]
   have h1 : Psi t M E z * (1 - E) = 0 := by
-    simp only [Psi, add_mul, smul_mul_assoc, mul_sub, mul_one, hee, hMEE, sub_self, smul_zero,
-      add_zero]
+    simp only [Psi, add_mul, smul_mul_assoc, mul_sub, mul_one, hee, hMEE, sub_self]
   have h2 : (1 - E) * (1 - E) = 1 - E := by
     simp only [mul_sub, sub_mul, one_mul, mul_one, hee, sub_self, sub_zero]
   rw [add_mul, mul_add, mul_add, Psi_mul hee hc hn, h0, h1, h2, add_zero, zero_add]

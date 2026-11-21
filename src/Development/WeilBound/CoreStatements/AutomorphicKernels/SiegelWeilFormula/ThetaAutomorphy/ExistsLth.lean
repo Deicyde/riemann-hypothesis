@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.AutomorphicKernels.SiegelWeilFormula.ThetaAutomorphy.ThetaSumSRat
 import Development.WeilBound.ThetaLifts.LatticeBasics.FdEqZero
 import Development.WeilBound.ThetaLifts.FrameEstimates.GrpTop
@@ -6,7 +8,6 @@ import Development.WeilBound.ThetaLifts.FrameEstimates.SiegelAll
 import Development.WeilBound.ThetaLifts.FrameEstimates.FundamentalDomainFiniteVolume
 import Development.WeilBound.ThetaLifts.CartanFactorisation.Unimod
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsAdmittedFormEqAdelicThetaDistributionStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzMapBarrelledSpaceStatement
 
 noncomputable section
 

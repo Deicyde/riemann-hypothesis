@@ -1,10 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HeckeTateFunctionalEquationCM
-import GroundTheory.GlobalFields.TateThesis.RootNumberLocalFinite
-import GroundTheory.GlobalFields.AnalyticClassNumber.HeckeContinued
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.ContinuousIdeleCircle
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EtaTildeIsUnitArgAtCmTypePlaces
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCMTypeOfEmbeddingsCardEqFinrank
+import Development.AbelianVarietyTheory.Proofs.AdelicLatticeProofs.ExistsUniqueIdeleOfLinearEquivQuotientLocal
+import GroundTheory.GlobalFields.IdeleGroups.IdeleNorms
 open NumberField IsDedekindDomain GlobalTheory.CMVal GlobalTheory.IndefiniteRowSideFullHecke.CompletedLStripBounds GlobalTheory.HeckeEps GlobalTheory.CompanionTheory.HeckeBridge GroundTheory.Global GroundTheory.LocalField GroundTheory.Global.IdeleGroup
 open GroundTheory.Automorphic.GodementSection (localChar)
 open Formalism.L2.Host (unif atFin unif_spec)
@@ -162,7 +160,7 @@ theorem comp_eq {E : Type} [Field E] [NumberField E] {I : Type} [Fintype I] {φ 
   · simp [c]
   · intro j _ hj
     have hw : InfinitePlace.mk (φ j) ≠ InfinitePlace.mk (φ i) := fun h => hj (hb.1 h)
-    simp only [Units.coe_map, MonoidHom.coe_mulSingle, MonoidHom.mulSingle_apply]
+    simp only [Units.coe_map, MonoidHom.mulSingle_apply]
     rw [Pi.mulSingle_eq_of_ne hw]
     simp
   · intro h

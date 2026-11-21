@@ -1,11 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.StabilizerCovolume.StatementsVerticalGeneric
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.ExistsLinearIndependentOfGenerates
-import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.Cartier
 import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.PRepresentative
 import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.PIntNumRatSection
 import GroundTheory.HeightsAndTheta.Heights.FieldsOfNumbers.Assembly
-import GroundTheory.HeightsAndTheta.Heights.HeightComparison.IsMultiHomogIdealIff
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.NineStatements

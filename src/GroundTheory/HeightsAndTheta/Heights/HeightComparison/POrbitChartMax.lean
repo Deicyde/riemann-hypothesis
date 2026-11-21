@@ -1,8 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.HeightOrbitChartMax
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.PSubringPrimeMaximal
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.POrbitCurve
 import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.PMinimalPrimeMultiHomog
+import Mathlib.Algebra.Order.Sub.Prod
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

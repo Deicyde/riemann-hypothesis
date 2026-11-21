@@ -1,4 +1,6 @@
-import ReciprocityTheory.L2DbarEstimates.ChartDerivatives.DifferentiableAtChart
+import BuildAid.Leniency.Open
+import Mathlib.Tactic.Polynomial.Basic
+import ReciprocityTheory.L2DbarEstimates.IsLocalHomeomorph
 
 namespace ReciprocityTheory.L2DbarEstimates.Y
 
@@ -12,7 +14,7 @@ theorem fc_clm_decomp (n : ℕ) (D : V n →L[ℝ] ℂ) (u : V n) :
       (D (bas n a) + Complex.I * D (Complex.I • bas n a)) / 2 * (starRingEnd ℂ) (u a)) := by
   have hu : u = ∑ a, ((u a).re • bas n a + (u a).im • (Complex.I • bas n a)) := by
     ext b
-    simp [bas, EuclideanSpace.single_apply, Finset.sum_add_distrib, Complex.real_smul,
+    simp [bas, Finset.sum_add_distrib, Complex.real_smul,
       Pi.single_apply, mul_ite, mul_one, mul_zero]
   conv_lhs => rw [hu]
   rw [map_sum]

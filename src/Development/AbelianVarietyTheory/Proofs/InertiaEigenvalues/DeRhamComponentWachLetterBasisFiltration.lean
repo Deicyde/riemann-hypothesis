@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.NotFullBot
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FinrankDcrisLetterDeRhamComponentEqDim
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.UnramifiedSubfieldLeCyclotomicExt
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsDeRhamOfIsCrystallineSpan
@@ -156,7 +155,7 @@ theorem coords_surj {n : ℕ} (v : Basis (Fin n) LL V) (ι : LL →ₐ[Qp] R) :
   rw [map_sum, Finset.sum_apply, Finset.sum_eq_single j]
   · simp [coords_tmul]
   · intro k _ hk
-    simp [coords_tmul, Finsupp.single_apply, hk]
+    simp [coords_tmul, hk]
   · simp
 
 end Tens

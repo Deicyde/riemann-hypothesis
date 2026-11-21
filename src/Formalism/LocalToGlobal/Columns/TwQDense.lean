@@ -1,4 +1,8 @@
-import Formalism.LocalToGlobal.Columns.TwQSpP
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.Columns.RecLevel
+import Formalism.LocalToGlobal.Columns.TiedGlLoc
+import Formalism.LocalToGlobal.Columns.TwQLevU
 
 open NumberField IsDedekindDomain
 

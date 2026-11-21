@@ -1,10 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SepAtBIff
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsDominantToUnitLeft
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUniqueScalar
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.CubeVal
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ValMemOfCorrPull
-import Development.AbelianVarietyTheory.Proofs.RingsOfIntegers.ValuationThetaRatioEqBilinear
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FromBaseWith
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GaloisGen
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsTorsionNe

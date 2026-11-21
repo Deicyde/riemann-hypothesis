@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.TrueColumnChoicesHeckeCharReferenceEqOne
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TameHeckeCharacterValueViaPowerGenerator
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TypeNormOfKummer
-import Formalism.LocalToGlobal.UnitaryNorms.CharUniq
 
 noncomputable section
 

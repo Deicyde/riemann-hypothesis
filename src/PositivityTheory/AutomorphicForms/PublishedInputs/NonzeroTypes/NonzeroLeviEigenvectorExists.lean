@@ -1,5 +1,5 @@
-import PositivityTheory.AutomorphicForms.PublishedInputs.NonzeroTypes.CIface
-import PositivityTheory.AutomorphicForms.PublishedInputs.NonzeroTypes.GIface
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.NonzeroTypes.TensorProductVectors
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.Brauer
 

@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.NumberFieldFamilies.ThetaCS
-import Formalism.LocalToGlobal.NumberFieldFamilies.ThetaCT
 
 noncomputable section
 

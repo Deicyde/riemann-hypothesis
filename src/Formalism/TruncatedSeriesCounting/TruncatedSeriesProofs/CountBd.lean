@@ -1,4 +1,7 @@
-import Formalism.TruncatedSeriesCounting.WindowSeparated
+import BuildAid.Leniency.Open
+import Formalism.FrobeniusContraction.HighestWeightResidueAvoids
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 

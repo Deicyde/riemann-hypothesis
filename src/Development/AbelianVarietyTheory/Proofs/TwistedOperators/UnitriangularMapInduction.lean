@@ -1,5 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.AdjointRadical
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
 
 open MeasureTheory Matrix
 open scoped Pointwise
@@ -82,7 +88,7 @@ private theorem measurePreserving_transvection_mulVec (t : TransvectionStruct κ
         Equiv.piEquivPiSubtypeProd, Matrix.single, ite_and, Matrix.one_apply, ite_mul]
       ring
     · simp [e, G, g, p, TransvectionStruct.toMatrix, transvection, mulVec, dotProduct,
-        add_mul, Finset.sum_add_distrib, MeasurableEquiv.piEquivPiSubtypeProd,
+        MeasurableEquiv.piEquivPiSubtypeProd,
         Equiv.piEquivPiSubtypeProd, h, Matrix.single, ite_and, Ne.symm h, Matrix.one_apply,
         ite_mul]
   rw [hmv]

@@ -1,4 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.FundamentalEquivalence.AdBridge
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Data.Int.Star
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 noncomputable section
 
@@ -194,7 +200,7 @@ theorem lat_gen (i : Fin I.n) : (Pi.single i (mm I : EAf I) : Fin I.n → EAf I)
     by_cases hk : k = i
     · subst hk
       simp
-    · simp [Pi.single_apply, hk]
+    · simp [hk]
   rw [h]
   exact Submodule.subset_span ⟨⟨_, mm_single I i⟩, rfl⟩
 
@@ -962,7 +968,7 @@ def FmInf (v : InfinitePlace I.F) : HAd I →* Formalism.REAL.UJ (I.ε v) :=
       simp [ofHAInf, Pu, Formalism.UG.bc, matHom_apply, Matrix.coe_units_inv])
 
 theorem FmInf_val (v : InfinitePlace I.F) (h : HAd I) : uMat (FmInf I v h) = ofHAInf I h v := by
-  simp [FmInf, Pu, Formalism.UG.bc, matHom_apply, Matrix.coe_units_inv, ofHAInf, MulAut.conj_apply, mul_assoc,
+  simp [FmInf, Pu, Formalism.UG.bc, matHom_apply, Matrix.coe_units_inv, ofHAInf, mul_assoc,
     Formalism.MainNotions.S.uMat]
 
 def FmF : HAd I →* I.Gf :=
@@ -1118,7 +1124,7 @@ theorem Fm_surjective : Function.Surjective (Fm I) := by
           (thetaV I v) = (Z v)ᴴ := by
         rw [← hθ1 v]
         ext a b
-        simp [Formalism.UG.cT, Matrix.conjTranspose_apply, thetaV_sigR, Complex.star_def]
+        simp [Formalism.UG.cT, Matrix.conjTranspose_apply, thetaV_sigR]
       have hJ : (Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes.JR (Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes.AF I.F) I.J).map (thetaV I v) =
           I.J.map (I.φ v) := by
         ext a b

@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsKSValueOneOfRetraction
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VanishingH1InvertingMorphisms
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocalization
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsNilpotentOfMemSmallCover

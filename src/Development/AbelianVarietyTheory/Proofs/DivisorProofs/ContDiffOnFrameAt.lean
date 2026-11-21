@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrameAtApply
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DbarAddVectorScalar
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PeriodMapMoebiusDenomUnit
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlatFormSmoothOnCover
 
@@ -77,7 +77,7 @@ theorem contDiffOn_genProd {m : ℕ} {φ : E → Matrix (Fin m) (Fin m) ℂ} (h�
 theorem extMap_eq_sum {m : ℕ} (φ : Matrix (Fin m) (Fin m) ℂ) :
     extMap φ = ∑ S, (ContinuousLinearMap.proj S : Ext m →L[ℂ] ℂ).smulRight (genProd φ S) := by
   ext w : 1
-  simp [extMap_apply, ContinuousLinearMap.sum_apply]
+  simp [extMap_apply]
 
 theorem contDiffOn_extMap {m : ℕ} {φ : E → Matrix (Fin m) (Fin m) ℂ} (hφ : EntSmooth φ B) :
     ContDiffOn ℝ ∞ (fun b => extMap (φ b)) B := by

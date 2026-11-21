@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.AltCoeffRho
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HookDeterminantRatioStatement
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 open MvPolynomial Finset GlobalTheory.FlagHook Formalism.DegreeFormula
 

@@ -1,12 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsAuxiliaryVectorWittDec
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MxAtOfMemDepLat
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.AdelicPointComponentsAtPlacesLatticesVacua
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.FractionalIdealCompletionPropertiesAtPlace
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.PeriodIdealZpowCompletionAdeleConjIff
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.LineVectorPairingMemInverseIdealCompletion
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemMulInvIff
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ModulusIdealOffS0Trivial
+import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.TowerEx
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links MeasureTheory IsDedekindDomain NumberField Matrix
 open GlobalTheory.MixModel GlobalTheory.MixPer GlobalTheory.Grow GlobalTheory.Unf GlobalTheory.ChiGrid GlobalTheory.FunObj GlobalTheory.SepRows GlobalTheory.Asc
 open scoped TensorProduct
@@ -68,7 +66,7 @@ theorem scaled_auxiliary_vector_mem_lattice_completion {A B : HSp D} {c : ℕ} {
         · subst hp; simpa using ha
         · rw [Pi.single_eq_of_ne hp]; exact (𝔟 p).zero_mem
       · funext k
-        simp [Matrix.mulVec_single, mul_comm]
+        simp [Matrix.mulVec_single]
     · funext k
       simp only [Pi.smul_apply, smul_eq_mul, ratV, one_mul]
       show _ * (1 ⊗ₜ[D.host.F] d.a k q) = _

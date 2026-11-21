@@ -1,29 +1,13 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
-import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThLiftDef
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThLiftMemLiftSpace
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HasLocType
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CharacterAtUniformizerNotRootOfUnity
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedLocalRealPlaceScalingStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeckeHyperbolicPlaneResidueStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocFieldLP
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndicatorIntMMemSB
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LinearWeilFunctionalSphericalValue
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedTripleIsotropicTowerStepTen
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LinearBarModelUnitaryAction
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LinearBarModelUnitaryActionStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLinearWittModelLocalStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaActionExistsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsGoodSchrodingerModelStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DarbouxCoordinatesGoodModelStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ComplementaryAdelicSchwartzOfNonzeroLocalStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SplitPlaceEmbeddingExistsStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SplitPlaceCharacterComponentSmoothUnitaryConductStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DarbouxSymplecticHermitianSkewStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AutomorphicIntegrableOnDomainStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzSpanLocalTensorsStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepRationalDarbouxFixesThetaDistributionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DeterminantInducedIrreducibleAdmissibleStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SmoothUnitaryHomSpaceDimensionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsNonzeroInvariantTrilinearForm
@@ -31,6 +15,7 @@ import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InvariantSubmoduleI
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SkewPlaneGramOfComplementStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzFunctionFactorizesAlmostAllStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalFactorSchwartzBruhatStatement
+import GroundTheory.GlobalFields.CompletionAtPlace.Integers
 
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -402,7 +387,7 @@ theorem quotTriv_of_model (hK : GlobalTheory.ThK.KP) (hcm : IsCMExt F E σ) (ψ 
           fun h => rt a f h * (starRingEnd ℂ) (thetaSum F (om (g, h) Φ)) := funext fun h => by
         rw [omg, mul_inv_cancel_right, mul_one]; rfl
       rwa [e] at h2
-    | zero => intro Φ _; simp [integrableOn_zero]
+    | zero => intro Φ _; simp
     | add u w _ _ hu hw =>
       intro Φ hΦ
       refine ((hu Φ hΦ).add (hw Φ hΦ)).congr (Eventually.of_forall fun h => ?_)

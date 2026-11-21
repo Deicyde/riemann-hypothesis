@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.AutomorphicRankinSelberg.StripInt
+import Mathlib.NumberTheory.ModularForms.EisensteinSeries.Summable
 
 open Filter Topology Set
 
@@ -28,7 +30,7 @@ private lemma not_summable_two : ¬ Summable fun x : Fin 2 → ℤ => ‖x‖ ^ 
           fin_cases i
           · simp [g, Int.norm_eq_abs]
             rw [abs_of_nonneg (by positivity)]
-          · simp [g, Int.norm_eq_abs]
+          · simp [g]
             have : (b : ℝ) ≤ a := by exact_mod_cast hb'
             linarith
         · have h := norm_le_pi_norm (g (a, b)) 0

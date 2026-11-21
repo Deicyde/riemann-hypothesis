@@ -1,8 +1,5 @@
-import Mathlib
-import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataMink
-import Formalism.LocalRingCardinality.DataErr
-import Formalism.LocalToGlobal.GlobalTheory.IsResidueClassZero
 open NumberField Formalism.BasicNotions
 
 namespace GlobalTheory

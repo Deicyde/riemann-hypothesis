@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PluriharmonicCharts.IsBlockMapInitialVertex
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.ElementaryFactorCommutation
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.BlockDiagonalMinorVanishing
 open MvPolynomial Matrix ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.AI.I1 ReciprocityTheory.ChartRestriction.G.AI.I4 GlobalTheory.CompanionTheory.Ar.PB GroundTheory.Heights₂.Heights GroundTheory.Heights₂.Heights.LowerBoundFree
 open scoped Classical
 
@@ -62,7 +62,7 @@ theorem minor_elementary_column_op (h : Matrix (Fin N) (Fin N) R) (S I : Finset 
       rw [hi₀, Matrix.mul_single_apply_same]
       simp [mul_comm]
     · have hne : f x ≠ ca := fun h' => ex (f.injective (h'.trans hi₀.symm))
-      rw [show (h * single cb ca t) (g r) (f x) = 0 by simp [Matrix.mul_apply, Matrix.single_apply, hne.symm], add_zero]
+      rw [show (h * single cb ca t) (g r) (f x) = 0 by simp [Matrix.mul_apply, hne.symm], add_zero]
       rfl
   rw [e1, Matrix.det_updateCol_add, Matrix.det_updateCol_smul]
   congr 2

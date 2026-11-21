@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.WachLatticeTwists.RamifiedBlockRings.LocalToDisplayFree
-import Formalism.CharacterColumnKernels.StatementBC
 
 open Finset Classical
 

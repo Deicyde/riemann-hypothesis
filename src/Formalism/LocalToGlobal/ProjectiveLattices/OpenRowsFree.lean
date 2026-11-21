@@ -1,5 +1,6 @@
-import Formalism.LocalToGlobal.ProjectiveLattices.CuspFree
-import Formalism.LocalToGlobal.ProjectiveLattices.IntegrableOnIntegrand
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.ProjectiveLattices.UnFree
 
 noncomputable section
 

@@ -1,6 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.FlagImmersions.FibSandwich
 import Development.WeilBound.CoreStatements.HodgeTatePoints.GhModel
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.DifferentGeneratorDualIntegral
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ProjectiveLinePlaceTrivialOnConstants
 
 set_option backward.isDefEq.respectTransparency false
 set_option linter.unusedSectionVars false
@@ -87,7 +89,7 @@ private theorem exists_eigSp_projector_sum_mem_and_discr_smul (E : Type) [Field 
       _ = ∑ j, χ (a * z j) • ρ (B j) w := by
           refine Finset.sum_congr rfl fun j _ => ?_
           rw [hza a j, map_sum, Finset.sum_smul]
-          simp only [map_zsmul, zsmul_eq_mul, map_mul, map_intCast]
+          simp only [zsmul_eq_mul, map_mul, map_intCast]
       _ = χ a • ∑ k, χ (z k) • ρ (B k) w := by
           simp [Finset.smul_sum, smul_smul, map_mul]
   · intro hw

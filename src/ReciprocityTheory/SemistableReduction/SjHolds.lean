@@ -1,5 +1,13 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.SemistableReduction.MeasurePreservingSphereMap
 import ReciprocityTheory.SemistableReduction.LogNormEvalZeroLeCircleAverage
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.MeasureTheory.Measure.RegularityCompacts
+import Mathlib.RingTheory.MvPolynomial.IrreducibleQuadratic
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Algebra.MvPolynomial
+import Mathlib.Topology.UniformSpace.Uniformizable
 
 noncomputable section
 
@@ -128,7 +136,7 @@ theorem sj_holds (hLin : SphereLinLogStatement) : SJStatement := by
     have hI : ∫ θ in Set.Ioc 0 (2 * π), (M - L (rotS hu θ z)) =
         2 * π * M - ∫ θ in Set.Ioc 0 (2 * π), L (rotS hu θ z) := by
       rw [integral_sub (integrable_const M) hint, integral_const]
-      simp [Measure.real, Real.volume_Ioc, ENNReal.toReal_ofReal hT.le, smul_eq_mul, Real.pi_pos.le]
+      simp [Measure.real, Real.volume_Ioc, smul_eq_mul, Real.pi_pos.le]
     have hnn : 0 ≤ ∫ θ in Set.Ioc 0 (2 * π), (M - L (rotS hu θ z)) :=
       setIntegral_nonneg measurableSet_Ioc (fun θ _ => sub_nonneg.2 (hLM _))
     have hhz : 2 * π * h z = 2 * π * M - 2 * π * (Real.log ‖MvPolynomial.eval (WithLp.ofLp u) f‖ +

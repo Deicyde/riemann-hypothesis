@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.SecMapApply
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ConclusionRankZero
 
@@ -135,7 +136,7 @@ theorem wittStep_plane : IsWittStep c 1 (!![0, 1; 1, 0] : Matrix (Fin 2) (Fin 2)
   refine ⟨rfl, Matrix.of fun i j => Sum.elim (fun x => x.elim0) (Sum.elim (fun _ => if i = 0 then 1 else 0)
     (fun _ => if i = 1 then 1 else 0)) j, ?_⟩
   ext (i | i | i) (j | j | j) <;> first | exact i.elim0 | exact j.elim0 |
-    simp [Matrix.mul_apply, Fin.sum_univ_two, Matrix.one_apply, Subsingleton.elim i j]
+    simp [Matrix.mul_apply, Subsingleton.elim i j]
 
 theorem not_wittStep_aniso {a a' r : ℕ} (hr : 0 < r) (JA : Matrix (Fin a) (Fin a) E) (JA' : Matrix (Fin a') (Fin a') E)
     (h : ∀ x : Fin a → E, x ⬝ᵥ JA *ᵥ (c ∘ x) = 0 → x = 0) : ¬ IsWittStep c r JA JA' := by
@@ -157,8 +158,8 @@ variable {k : Type} [Field k] [Invertible (2 : k)] {E : Type} [Field E] [Algebra
 omit [Invertible (2 : k)] in
 theorem lagr_plane : IsLagr c (!![0, 1; -1, 0] : Matrix (Fin 2) (Fin 2) E) (!![1; 0] : Matrix (Fin 2) (Fin 1) E) := by
   refine ⟨?_, !![0; 1], Matrix.fromRows !![1, 0] !![0, 1], ?_, ?_, ?_⟩
-  · ext i j; simp [Matrix.mul_apply, Fin.sum_univ_two, Matrix.vecMul, dotProduct]
-  · ext i j; simp [Matrix.mul_apply, Fin.sum_univ_two, Matrix.vecMul, dotProduct]
+  · ext i j; simp [Matrix.mul_apply, Fin.sum_univ_two]
+  · ext i j; simp [Matrix.mul_apply, Fin.sum_univ_two]
   · ext i j; fin_cases i <;> fin_cases j <;> simp [Matrix.mul_apply, Fintype.sum_sum_type]
   · ext (i | i) (j | j) <;> simp [Matrix.mul_apply, Fin.sum_univ_two, Matrix.one_apply, Subsingleton.elim i j]
 

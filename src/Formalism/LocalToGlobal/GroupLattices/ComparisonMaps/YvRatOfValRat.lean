@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.FockModels.OperatorsPreserveLattices
-import Formalism.LocalRingCardinality.DataLatDefs
+import Mathlib.Algebra.Module.StablyFree.Basic
 
 open MvPolynomial
 

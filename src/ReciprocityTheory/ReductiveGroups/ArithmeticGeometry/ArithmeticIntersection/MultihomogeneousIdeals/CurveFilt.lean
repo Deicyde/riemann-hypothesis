@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.MultihomogeneousIdeals.CurvePt
+import Mathlib.Algebra.AffineMonoid.UniqueSums
+import Mathlib.Algebra.Order.Sub.Prod
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.LengthCokerEqKerAddDimOneOrderSum
 
 noncomputable section
 
@@ -268,7 +273,7 @@ theorem weighted_le_of_irrel {P : Ideal (MRingOver F ι)} {k : K}
       by_cases hk : k' = k
       · subst hk
         simp [hcon j]
-      · simp [Pi.single_apply, Ne.symm hk]
+      · simp [Ne.symm hk]
     rw [hw] at h0
     omega
   have hle : Finsupp.single (⟨k, i⟩ : Σ k, ι k) 1 ≤ m := by

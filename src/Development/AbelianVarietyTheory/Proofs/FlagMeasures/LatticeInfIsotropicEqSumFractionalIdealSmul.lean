@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.IsPrimitiveSub
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.Ia
 
 noncomputable section
 

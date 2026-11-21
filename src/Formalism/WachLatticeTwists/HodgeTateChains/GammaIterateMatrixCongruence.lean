@@ -1,4 +1,7 @@
-import Formalism.WachLatticeTwists.HodgeTateChains.FrobeniusPowerCongruence
+import BuildAid.Leniency.Open
+import Formalism.WachLatticeTwists.HodgeTateChains.XiAdicFiltrationData
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 

@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.StatementF
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.AevalRootEqZeroIff
-import GroundTheory.LocalFields.FilteredSurj
 
 noncomputable section
 

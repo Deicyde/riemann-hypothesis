@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ArchBetween
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.RefLowerOfFibreInputStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.TowerI5OfReferenceStatement
 

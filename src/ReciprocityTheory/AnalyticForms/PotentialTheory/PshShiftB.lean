@@ -1,5 +1,11 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PotentialTheory.IsPotentialPullbackStatement
 import ReciprocityTheory.AnalyticForms.PotentialTheory.PshShiftA
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
 
 namespace ReciprocityTheory.AnForm.M
 
@@ -66,8 +72,8 @@ theorem pshShift_local (A : FinHolAtlas e X) (Ω : LocPot X) (hΩ : IsPotential 
   · have ht : 0 < ‖u‖ := norm_pos_iff.2 hu
     obtain ⟨s, v, hv, rfl⟩ : ∃ s : ℝ, ∃ v ∈ Metric.sphere (0 : Fin e → ℂ) 1, u = s • v := by
       refine ⟨‖u‖, ‖u‖⁻¹ • u, ?_, ?_⟩
-      · simp [norm_smul, hu, ht.ne']
-      · simp [smul_smul, hu, ht.ne']
+      · simp [norm_smul, ht.ne']
+      · simp [smul_smul, ht.ne']
     have hq : ((y, v) : (Fin e → ℂ) × (Fin e → ℂ)) ∈ K := ⟨hy, hv⟩
     have h1 := hM ⟨(y, v), hq, rfl⟩
     have h2 := hposK _ hq

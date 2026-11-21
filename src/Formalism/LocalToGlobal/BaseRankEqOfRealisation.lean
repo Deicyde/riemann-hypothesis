@@ -1,6 +1,7 @@
-import Formalism.LocalToGlobal.IndefiniteReal.RealRec
-import Formalism.LocalRingCardinality.Lemmas
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Divisibility.TupUsed
+import Formalism.LocalToGlobal.IndefiniteReal.TrISepWith
 
 noncomputable section
 

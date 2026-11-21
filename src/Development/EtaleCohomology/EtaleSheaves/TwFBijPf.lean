@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.SHEqvPf
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry GlobalTheory.EtC Polynomial IsLocalRing

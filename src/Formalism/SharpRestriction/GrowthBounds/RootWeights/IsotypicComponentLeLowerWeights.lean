@@ -1,4 +1,8 @@
-import Formalism.SharpRestriction.GrowthBounds.RootWeights.CrCCommApply
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GrowthBounds.RootWeights.CrRootMem
+import Mathlib.Algebra.Lie.Sl2
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 noncomputable section
 

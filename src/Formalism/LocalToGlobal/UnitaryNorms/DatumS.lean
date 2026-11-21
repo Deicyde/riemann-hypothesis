@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ClassS
 import Formalism.LocalToGlobal.UnitaryNorms.DefsDatum
 

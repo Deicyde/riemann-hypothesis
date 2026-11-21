@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SpanningFamilies.IMemSiegel
-import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.RationalSchwartzBruhatAlgebraIntegralLinearStatement
-import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.SchwartzBruhatInvariantIntegralMatrixMulStatement
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.RationalSchwartzBruhatAlgebraIntegralLinear
+import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.SchwartzBruhatInvariantIntegralMatrixMul
+import Mathlib.LinearAlgebra.SymplecticGroup
 
 open Matrix Complex GlobalTheory.SW
 open scoped ComplexConjugate Real
@@ -214,7 +214,7 @@ theorem _root_.GlobalTheory.SW.Parab.trans_parabolic : ∀ (κ ι : Type) [Finty
       simp [_root_.GlobalTheory.SW.qm]
     unfold _root_.GlobalTheory.SW.thS _root_.GlobalTheory.SW.spAct _root_.GlobalTheory.SW.spDen
     rw [h0, ← hA, ← hB, ← hD]
-    simp only [zero_mul, zero_add, Matrix.mul_zero, zero_mulVec, dotProduct_zero, Finset.sum_const_zero,
+    simp only [zero_mul, zero_add, zero_mulVec, dotProduct_zero, Finset.sum_const_zero,
       mul_zero, Complex.exp_zero, mul_one, hqD, Pi.smul_apply, smul_eq_mul]
     conv_rhs => rw [← e.tsum_eq, ← tsum_mul_left]
     congr 1

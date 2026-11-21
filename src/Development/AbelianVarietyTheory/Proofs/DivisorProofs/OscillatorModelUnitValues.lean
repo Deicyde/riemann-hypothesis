@@ -1,26 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.GenReads
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.ThExprUniqOfChartIndep2
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.NormalFam
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMapOfOfExtends
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HolSub0LeSpanRaw
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RawSeriesMoveDatum
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnfoldingFrameDeltaChange
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OscillatorModelValuesThird
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsRepsOfFiniteIndex
-import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.AdelicLinearIndependent
-import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.GamAtOfLawsJ
-import Development.AbelianVarietyTheory.Proofs.GenericRegularity.BddSecCuspCongr
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.CuspFDOfCuspFiniteClaim
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsOmegaField
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsHomogeneousOfRowDeg
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OscillatorModelExtensionSecond
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeEmbeddingIdealLevel
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ModelsAtRecordCore
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LettersEqFockVarsCore
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCuspFormClassSumNormalisedData
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockCoefficientMapExtremalEqPhaseSmulLettersStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaKernelOneClassEqClassicalShortSeriesStatement
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LevelMapExtension
+import Formalism.LocalToGlobal.ProjectiveLattices.DepthTie
 
 set_option autoImplicit false
 set_option synthInstance.maxHeartbeats 400000
@@ -213,7 +196,7 @@ theorem kernel_eq_shortVal (hC : GlobalTheory.Hk3.Core R F) (hT : TieIn T R κ v
   refine Eq.trans (congrArg (fun z => ka * (_ * z)) e1.symm) ?_
   refine Eq.trans ?_ (congrArg (fun z => _ * z) hgeo.symm)
   have halg : ∀ s : O.c'.F, algebraMap O.c'.F ℂ s = inC O.c' s := fun _ => rfl
-  simp only [cmpConst, halg, map_mul, map_inv₀, map_natCast, map_one, inv_one, one_mul]
+  simp only [cmpConst, halg, map_mul, map_inv₀, map_natCast, inv_one, one_mul]
   have key : ∀ s c m k e a z n th : ℂ, ka * (s * (c * m * k) * (e * a * z) * n * th) =
       ka * s * c * m * e * (a * n * z * k * th) := fun s c m k e a z n th => by ring
   exact key _ _ _ _ _ _ _ _ _

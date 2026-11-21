@@ -1,5 +1,5 @@
-import ReciprocityTheory.GeometryOfNumbers.LatticeCovolumes.ArakelovDegreeEqDegreeOfFamily
-import ReciprocityTheory.GeometryOfNumbers.LatticeCovolumes.GramSt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.GeometryOfNumbers.LatticeCovolumes.HadStA
 
 namespace ReciprocityTheory.GeometryOfNumbersTheory

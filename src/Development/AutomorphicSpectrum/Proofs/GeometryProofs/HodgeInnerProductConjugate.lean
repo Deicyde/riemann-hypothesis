@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsHodgeLine
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.HodgeIPIffHodgeFormConj
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory.CompanionTheory.Ar
@@ -279,7 +280,7 @@ theorem isAH_cjU (u : HolUnif A L g) {Hm : Matrix (Fin g) (Fin g) ℂ} {χ : u.�
     show starRingEnd ℂ (u.fr i (star z)) = starRingEnd ℂ (χ ⟨star l.1, l.2⟩) * _ *
       starRingEnd ℂ (u.fr i (star (z + l.1)))
     rw [e, star_add, map_mul, map_mul, ← Complex.exp_conj, form_conj, form_conj]
-    simp only [map_add, map_mul, Complex.conj_conj, Complex.conj_ofReal, map_div₀, Complex.conj_ofNat,
+    simp only [map_add, map_mul, Complex.conj_ofReal, map_div₀, Complex.conj_ofNat,
       star_star]
 
 def cjV (v : epsR ℂ ⟶ A) : epsR ℂ ⟶ tw A :=

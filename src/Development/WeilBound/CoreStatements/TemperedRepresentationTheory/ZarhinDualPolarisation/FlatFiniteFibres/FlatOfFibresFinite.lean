@@ -1,5 +1,6 @@
-import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.ZarhinDualPolarisation.DualPolarisationOC
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.IsFinFlatSub
+import Development.AutomorphicSpectrum.Statements.AlgebraStatements.IsPolarisationOfRelAmple
 
 set_option autoImplicit false
 

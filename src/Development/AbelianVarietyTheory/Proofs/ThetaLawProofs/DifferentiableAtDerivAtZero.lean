@@ -1,5 +1,15 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsLieBasis
+import Mathlib.Data.Int.Star
+import Mathlib.NumberTheory.ModularForms.LevelOne.DimensionFormula
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -203,7 +213,7 @@ private lemma eighthPower_slash_S :
   ext τ
   rw [ModularForm.SL_slash_apply, ModularGroup.denom_S, UpperHalfPlane.modular_S_smul]
   unfold _root_.GlobalTheory.JacobiDeriv.eighthPower
-  simp only [UpperHalfPlane.coe_mk]
+  simp only
   have hτ : (τ : ℂ) ≠ 0 := τ.ne_zero
   set t : ℂ := (τ : ℂ) with ht
   rw [derivAtZero_neg_inv t hτ]

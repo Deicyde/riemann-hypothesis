@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsNsmulFix
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SigmaSigmaOfCm
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousPlaceAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCompactShellNsmul

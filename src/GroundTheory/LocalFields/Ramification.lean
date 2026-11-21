@@ -1,9 +1,8 @@
-import Mathlib
-import GroundTheory.LocalFields.Interface
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.LocalFields.Uniqueness
-import GroundTheory.LocalFields.Integers
 import GroundTheory.LocalFields.UnitsBasic
-import GroundTheory.LocalFields.UnitsPowers
+import Mathlib.Order.CompletePartialOrder
 
 noncomputable section
 

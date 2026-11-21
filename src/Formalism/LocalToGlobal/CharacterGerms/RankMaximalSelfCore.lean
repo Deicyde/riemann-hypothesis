@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CharacterGerms.UncurryLinearCombination
 import Formalism.LocalToGlobal.CharacterGerms.ConstantZeroFirstThenZero
 import Formalism.LocalToGlobal.CharacterGerms.ConstantZeroDoubleMultiplicationPair

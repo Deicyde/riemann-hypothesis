@@ -1,8 +1,6 @@
-import Mathlib
-import Formalism.LocalRingCardinality.DataParams
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.ShortPlace
-import Development.AbelianVarietyTheory.BlockTheory.GoodPlaces.ShortAtLevelPrime
-import Development.AbelianVarietyTheory.Counterexamples.JetSurvey.OwnPrimeIntegralOfBqd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow
 
 noncomputable section
 

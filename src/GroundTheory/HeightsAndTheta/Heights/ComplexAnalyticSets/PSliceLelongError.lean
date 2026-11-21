@@ -1,8 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceLelongError
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceCutChain
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceWeightBound
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceBandEnergy
+import Mathlib.Algebra.Order.Star.Real
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

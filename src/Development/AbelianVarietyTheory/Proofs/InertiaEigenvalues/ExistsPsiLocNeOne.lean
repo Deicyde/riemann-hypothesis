@@ -1,7 +1,7 @@
-import Mathlib
-import CompanionTheory.AutomorphicTheory.SegmentRepresentations.RapidDecayFamilies.WhittakerVanishingImpliesZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MembershipProofs.ThetaDistributionHeisenbergInvariant
-import GroundTheory.GlobalFields.TateThesis.SchwartzBruhatDual
+import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.UnipotentBlockColumnIndex
 
 noncomputable section
 

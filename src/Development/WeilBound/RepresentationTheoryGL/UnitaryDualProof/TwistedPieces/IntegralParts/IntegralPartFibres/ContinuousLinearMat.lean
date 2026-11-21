@@ -1,8 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.TwistedPieces.IntegralParts.IntegralPartFibres.Zpart
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzLocallyConstantSupport
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.NormalizedAbsCharacterization
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.PadicIsNonarchimedeanLocalField
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.IwasawaMeasureExistence.LocallyCompactAEf
+import Development.AbelianVarietyTheory.Definitions.Divisors.LineOppositeParabolicUnitaryLeviSectionEq
+import GroundTheory.AutomorphicForms.MeasuresModulus
 
 noncomputable section
 
@@ -75,7 +75,7 @@ private theorem exists_pow_smul_mem_nhds_of_isCompact {t : kˣ} (ht : nabs k t <
     intro γ _
     obtain ⟨m, hm⟩ := exists_pow_lt₀ hv γ
     filter_upwards [eventually_ge_atTop m] with j hj
-    simp only [Set.mem_setOf_eq, map_pow]
+    simp only [map_pow]
     exact lt_of_le_of_lt (pow_le_pow_right_of_le_one' hv.le hj) hm
   have hev : ∀ᶠ s in 𝓝 (0 : k), ∀ x ∈ K, s • x ∈ W := by
     apply hK.eventually_forall_of_forall_eventually

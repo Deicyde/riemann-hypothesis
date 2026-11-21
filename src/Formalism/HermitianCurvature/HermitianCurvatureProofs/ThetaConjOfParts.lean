@@ -1,7 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.RadialAdjointOfParts
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.WordIntegralScaling
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.SmoothWordsAll
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.SandwichRhoAction
 
 open Matrix MeasureTheory Filter Topology
 open scoped ContDiff

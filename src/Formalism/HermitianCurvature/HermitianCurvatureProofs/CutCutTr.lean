@@ -1,8 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutMP2
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.BetaCutoffLimit
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BigCellHermitian
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.WordKeyIdentity
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BigCellOpenDomain
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.AdjointLeibnizExpansion
 
 open Formalism.REAL Formalism.QuantumDeterminants Formalism.FourierDecayAlt

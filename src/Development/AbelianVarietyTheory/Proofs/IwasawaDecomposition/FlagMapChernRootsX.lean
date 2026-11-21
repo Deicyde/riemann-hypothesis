@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SchubGamApply
-import Formalism.DegreeFormula.PointDegree.PowSum
 
 noncomputable section
 

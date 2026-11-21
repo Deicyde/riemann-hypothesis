@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGermTopVec
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.NormSumLeOfGram
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.OneSubPowLe
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutGermParts
 
 namespace Formalism.FourierDecayAlt.P.CutBP.GT
 
@@ -148,7 +149,7 @@ theorem germDataTopAll_of_parts (hTG : TopGram1) (hTC : TopCore1) (hFT : FibreTo
         · unfold PBK.mainD
           rw [← Finset.sum_neg_distrib]
           refine Finset.sum_congr rfl fun z hzm => ?_
-          simp only [hbt, btT, if_neg (hroot z hzm), coT, ptT, smul_smul, neg_smul, neg_mul]
+          simp only [hbt, btT, if_neg (hroot z hzm), coT, ptT, smul_smul, neg_smul]
       rw [hsum]
       have hk : ∀ j ∈ Finset.insertNone (G.rootSet s (epsT s * D)), ∀ l ∈ Finset.insertNone (G.rootSet s (epsT s * D)),
           ⟪vecT p w.length c Fi L (ptT s h x D j), vecT p w.length c Fi L (ptT s h x D l)⟫_ℂ =

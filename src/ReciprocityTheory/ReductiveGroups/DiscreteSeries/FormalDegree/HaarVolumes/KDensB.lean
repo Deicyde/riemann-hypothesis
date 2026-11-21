@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.HaarVolumes.KDensA
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.HaarVolumes.DensOn
 
 noncomputable section
 
@@ -197,7 +200,7 @@ lemma kd_skMat_injective : Function.Injective (skMat (N := N)) := by
   have hd : ∀ a b, skMat x a b = skMat y a b := fun a b => by rw [h]
   refine Prod.ext (funext fun a => ?_) (funext fun ab => ?_)
   · have := hd a a
-    simp only [skMat, if_pos rfl] at this
+    simp only [skMat] at this
     exact_mod_cast mul_left_cancel₀ Complex.I_ne_zero this
   · obtain ⟨⟨a, b⟩, hab⟩ := ab
     have hab' : b < a := hab

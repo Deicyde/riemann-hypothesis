@@ -1,10 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DeterminantInducedRepEquivProduct
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsMidJacAt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSmoothDetPair
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CellFunctorTorusCharacter
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InducedCharIntertwiningUnif
 open scoped TensorProduct
 open GlobalTheory.SmGL GlobalTheory.PRep GlobalTheory.IndLineGL
 set_option maxHeartbeats 1000000 in

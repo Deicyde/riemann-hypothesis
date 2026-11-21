@@ -1,4 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.RegularisedSiegelWeil.SingularNullSets.LThProdA
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HeckeCharacterEtaCondition
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ProductMeasureStatement
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ProductThetaOfSchwartzTensor
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SchwartzTensorDensity
 
 noncomputable section
 

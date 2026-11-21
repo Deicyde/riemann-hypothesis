@@ -1,6 +1,5 @@
+import BuildAid.Leniency.Open
 import CompanionTheory.AutomorphicTheory.PadicCyclotomicFields.GcohDefs
-import GroundTheory.LocalFields.Examples
-import GroundTheory.LocalFields.FiniteExtension
 import GroundTheory.ProfiniteCohomology.LocalEulerCharacteristic.MainCount
 
 open CategoryTheory GroundTheory.ProfCoh ReciprocityTheory.Gal ValuativeRel

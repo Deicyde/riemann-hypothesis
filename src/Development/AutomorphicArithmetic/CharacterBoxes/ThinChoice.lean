@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.ThinScalesIffHostBound
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.LogCondLeThree
 import Development.AutomorphicArithmetic.MeanSquareBounds.Thin
 import Development.AutomorphicArithmetic.MeanSquareBounds.SmallZeros

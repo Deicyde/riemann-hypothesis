@@ -1,4 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.FlatBCSec
 import Development.AbelianVarietyTheory.Definitions.QuasicoherentCohomology.BijectiveSmulChartSec
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ClsLinCombSingle
@@ -852,10 +854,10 @@ example {p : Y ⟶ Sp k} [SmoothOfRelativeDimension 1 p] (K : CanonLB p 1) (i j 
   have h₁ := K.jacobian_inv i inf_le_left _ _ e
   have h₂ : K.jacobian i inf_le_left ![resG Y (inf_le_left : _ ⊓ K.bundle.U j ≤ _) x] = 1 := by
     rw [← K.coeff_om i inf_le_left, hx, resForm_dOn, jacobian]
-    simp only [Matrix.vec_single_eq_const, Function.const_apply]
+    simp only [Matrix.vec_single_eq_const]
   have h₃ : K.jacobian j inf_le_right ![resG Y (inf_le_right : K.bundle.U i ⊓ _ ≤ _) y] = 1 := by
     rw [← K.coeff_om j inf_le_right, hy, resForm_dOn, jacobian]
-    simp only [Matrix.vec_single_eq_const, Function.const_apply]
+    simp only [Matrix.vec_single_eq_const]
   rwa [K.jacobian_change i j _ inf_le_right, h₂, h₃, mul_one, mul_one, resG_self] at h₁
 
 section AffineSpace

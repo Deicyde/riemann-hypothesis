@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasQIff
-import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.ModQPrin
-import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.ModJTau
+import BuildAid.Leniency.Open
 import ReciprocityTheory.DualLattices.QExpansionMonoWCoeffZero
+import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.ModDefs
 
 open scoped UpperHalfPlane MatrixGroups ModularForm Manifold BigOperators
 open ReciprocityTheory.ChartRestriction.L1 (IsMF)

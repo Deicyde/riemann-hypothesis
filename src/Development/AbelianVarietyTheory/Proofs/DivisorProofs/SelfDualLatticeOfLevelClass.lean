@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ImportsRestFurther
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.DefiniteBound
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsSelfDualCoordLatticeOfSelfDualFrame
@@ -87,14 +87,14 @@ theorem selfDualLat_of {D : D7} (V : HSp D) {r : ℕ} (h : V.rank = r)
         rw [Submodule.mem_comap]
         convert hx' using 1
         funext j
-        simp only [LinearMap.funLeft_apply, Function.comp_apply, Fin.cast_cast, Fin.cast_eq_self]
+        simp only [LinearMap.funLeft_apply, Fin.cast_cast, Fin.cast_eq_self]
       have hb := H _ hy
       rw [herm_eq V h] at hb
       have e : (∑ i, ∑ j, star ((LinearMap.funLeft (𝓞 D.host.E) D.host.E (Fin.cast h.symm) x') (Fin.cast h i)) *
             V.gram i j * x (Fin.cast h j)) =
           ∑ i, ∑ j, star (x' i) * V.gram i j * (LinearMap.funLeft (𝓞 D.host.E) D.host.E (Fin.cast h) x) j := by
         refine Finset.sum_congr rfl fun i _ => Finset.sum_congr rfl fun j _ => ?_
-        simp only [LinearMap.funLeft_apply, Function.comp_apply, Fin.cast_cast, Fin.cast_eq_self]
+        simp only [LinearMap.funLeft_apply, Fin.cast_cast, Fin.cast_eq_self]
       rw [e] at hb
       exact ⟨⟨_, hb⟩, rfl⟩
     · intro H y hy

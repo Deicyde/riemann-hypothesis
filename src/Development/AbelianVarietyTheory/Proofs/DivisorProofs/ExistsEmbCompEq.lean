@@ -1,7 +1,7 @@
-import Mathlib
-import Formalism.SharpRestriction.Divisibility.WeightThresholdDefs
-import Formalism.LocalToGlobal.LatticeGeometry.CmTypeMeetsConjugatePair
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ExistsPlTieOfInertCore
+import Formalism.LocalRingCardinality.DataDIV
+import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
 
 open Formalism.BasicNotions Formalism.BasicNotions.DV Formalism.DegreeFormula NumberField IsDedekindDomain
 

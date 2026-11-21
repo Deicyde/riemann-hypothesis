@@ -1,9 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemBand
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.ReductionSiegel
-import GroundTheory.AutomorphicForms.ReductionIwasawa
-import GroundTheory.AutomorphicForms.ReductionDirichlet
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ContinuousOfIsOpenStab
+import Development.AbelianVarietyTheory.Definitions.Divisors.CentralNilGL
 open NumberField MeasureTheory GlobalTheory.CuspRep GlobalTheory.HCF Topology GroundTheory.Automorphic.Reduction
 open scoped ContDiff
 

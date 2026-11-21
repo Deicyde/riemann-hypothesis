@@ -1,10 +1,9 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.CurveSemiAbelianConjecture
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.SeparableFormGroupElementFixesUniquePositiveLine
-import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.Proportional
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.ExistsCurveOfFunctionField
 import ReciprocityTheory.CommutativeAlgebra.PolynomialHeights.HeightAddRingKrullDimQuotientMvPolynomialField
 import Development.WeilBound.CoreStatements.HodgeTatePoints.GfForms
+import Mathlib.RingTheory.LocalProperties.Reduced
 
 noncomputable section
 

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.ThetaNormCommutation.LocalComparisonSplitting.EulerFactorLevels.LocCompareSplit
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocEqOneOfMemGam
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemKGLIffVal

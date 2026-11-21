@@ -1,8 +1,10 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.PsiEDef
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsContinuousPadic
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsIrreducible
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.NegOneNormFromCmFieldFiniteAdeles
+import Formalism.SharpRestriction.CuspSpanNormBounds.FractionFieldToGenericStalkAlgebraMapEq
+import Mathlib.RingTheory.Valuation.Extension
+import Mathlib.Topology.UniformSpace.Uniformizable
 
 noncomputable section
 open ValuativeRel IsDedekindDomain NumberField Formalism.MainNotions.S.Loc MeasureTheory

@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.GL6.PBwLcInt
-import Formalism.LocalToGlobal.GlobalTheory.GL6.RamifiedLatticePropsOfModel
 import Formalism.LocalToGlobal.GlobalTheory.GL6.PBwLocGlob
 
 noncomputable section

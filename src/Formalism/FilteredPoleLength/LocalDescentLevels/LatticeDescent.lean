@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.FilteredPoleLength.ReducedBasisBounds.BetaSesquilinearity
-import Formalism.LogFactorialIndices.LogProductFormula
+import Formalism.LogFactorialIndices.SignedSubspaceIndex.IdxBase
 
 noncomputable section
 

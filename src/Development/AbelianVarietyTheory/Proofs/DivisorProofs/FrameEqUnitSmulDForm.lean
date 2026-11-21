@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AlgebraMapCompStalkAlg
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CotangentImagesLinearIndependent
 open CategoryTheory AlgebraicGeometry TopologicalSpace Limits NumberField

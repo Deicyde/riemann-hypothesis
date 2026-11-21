@@ -1,6 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.PsiEDef
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.LcscAdelicUnitaryGroup
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.Analysis.Normed.Ring.Ultra
+import Mathlib.NumberTheory.Ostrowski
+import Mathlib.NumberTheory.Padics.RingHoms
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 noncomputable section
 

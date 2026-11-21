@@ -1,6 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.FlagUnipotentLattices.LatticeDeterminantIndexSq
 import Formalism.FlagUnipotentLattices.SignaturePreservingEntryNorms
+import Mathlib.Analysis.Complex.ExponentialBounds
+import Mathlib.Analysis.SpecialFunctions.Stirling
+import Mathlib.NumberTheory.Harmonic.Bounds
+import Mathlib.NumberTheory.NumberField.Units.DirichletTheorem
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Topology.UniformSpace.Uniformizable
 
 open Module NumberField nonZeroDivisors Finset
 

@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.PotentialsBoundedRegSettingEqReference
-import GroundTheory.HeightsAndTheta.Heights.Regularisation.BoundedStatements
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterSt
 import GroundTheory.HeightsAndTheta.Heights.ElementarySymmetric.PMuLineNormEq
 import GroundTheory.HeightsAndTheta.Heights.ElementarySymmetric.PMuFrameExists
 import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.PWedgeTransition

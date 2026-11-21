@@ -1,5 +1,5 @@
-import Mathlib
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.KFiniteThetaLifts.RationalPrimesBelowPlaces
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CosetInd
 open NumberField IsDedekindDomain MeasureTheory Matrix Filter Topology
 open GroundTheory.Global GroundTheory.LocalField GroundTheory.Automorphic GroundTheory.Automorphic.AutomorphicForm
@@ -104,8 +104,7 @@ theorem exists_of_lt (n : ℤ) (x₁ x₂ : F)
   simp only [Set.mem_preimage, hact, Ln, spanSet, Set.mem_setOf_eq, hball]
   constructor
   · rintro ⟨a, ha, h₁, h₂⟩
-    simp only [Prod.mk_sub_mk, Prod.smul_mk, smul_eq_mul, Prod.fst_sub, Prod.snd_sub,
-      Prod.smul_fst, Prod.smul_snd] at h₁ h₂
+    simp only [Prod.mk_sub_mk, Prod.smul_mk, smul_eq_mul] at h₁ h₂
     have he : normalizedValuation F ((v₁ - a * x₁) * x₁⁻¹) ≤ 1 :=
       (mul_inv_le_one_iff hx).2 ((mem_ball_iff.1 h₁).trans hn.le)
     have hv : v₁ * x₁⁻¹ = a + (v₁ - a * x₁) * x₁⁻¹ := by

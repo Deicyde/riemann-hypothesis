@@ -1,12 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsSelfDualE
-import Formalism.LocalToGlobal.Columns.CoefficientsModP.PairingNondegenerateHolds
-import Formalism.LocalToGlobal.Columns.CoefficientsModP.FkPderivBlockEmbNe
-import Formalism.GradedWeylDivisibility.StatementE
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HarderNarasimhan.ShiftInvariance
-import Formalism.QuotientMetricDivisors.ReductionLemmaZero
-import Formalism.QuotientMetricDivisors.ProdFormula
-import Formalism.LocalToGlobal.IndefiniteForms.IndefiniteTree.RealCubicMeans.LeafBounds.MeanMaxLeaf.LeafMMFree
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.PosDefExistsFrame
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.EmbGramDetConjugate
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.MulVecInjectiveMapOfLinearIndependent
@@ -58,7 +52,7 @@ theorem gram_single {d : ℕ} (X : InfinitePlace K → Matrix (Fin d) (Fin d) �
     ext a b
     by_cases hab : a = b
     · subst hab; simp
-    · simp [hab, Matrix.one_apply]
+    · simp [hab]
   rw [gram_eq, h, Matrix.mul_one]
 
 end GlobalTheory.LcvSub

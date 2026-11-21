@@ -1,5 +1,13 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsCoType
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.MatrixMeasurableSpace
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open ValuativeRel GlobalTheory.SplitWeil
 
 namespace GlobalTheory.ScaledIdealIndex
@@ -10,7 +18,7 @@ theorem relIndex_comap_mulLeft (a : kˣ) (H K : AddSubgroup k) :
     (H.comap (AddMonoidHom.mulLeft (a : k))).relIndex (K.comap (AddMonoidHom.mulLeft (a : k))) =
       H.relIndex K := by
   have hs : Function.Surjective (AddMonoidHom.mulLeft (a : k)) := fun y =>
-    ⟨((a⁻¹ : kˣ) : k) * y, by simp [← mul_assoc]⟩
+    ⟨((a⁻¹ : kˣ) : k) * y, by simp⟩
   rw [AddSubgroup.relIndex_comap, AddSubgroup.map_comap_eq_self_of_surjective hs]
 
 theorem relIndex_maxIdeal (L : AddSubgroup k) (hL : ∀ x, x ∈ L ↔ valuation k x < 1) :

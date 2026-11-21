@@ -1,5 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.AdmittedWeylDimension
-import Formalism.SharpRestriction.CuspSpanNormBounds.StandingHypothesesHoldFamily
 
 noncomputable section
 

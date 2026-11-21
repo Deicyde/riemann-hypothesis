@@ -1,4 +1,13 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.LatticeTheta.LatticeSummableDecay
+import Mathlib.Algebra.Module.ZLattice.Summable
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
 
 open MeasureTheory Filter Asymptotics Complex Metric
 open scoped RealInnerProductSpace
@@ -89,7 +98,7 @@ lemma summable_one_add_norm (Λ : Submodule ℤ V) [DiscreteTopology Λ] [IsZLat
     (hs.add (hasSum_ite_eq (0 : Λ) (1 : ℝ)).summable)
   by_cases h : l = 0
   · subst h
-    simp only [if_pos rfl, ZeroMemClass.coe_zero, norm_zero, add_zero, Real.one_rpow, if_true, ↓reduceIte]
+    simp only [ZeroMemClass.coe_zero, norm_zero, add_zero, Real.one_rpow, ↓reduceIte]
     linarith [Real.rpow_nonneg (le_refl (0 : ℝ)) (-b)]
   · have hl : 0 < ‖(l : V)‖ := norm_pos_iff.mpr (by simpa using h)
     rw [if_neg h, add_zero]

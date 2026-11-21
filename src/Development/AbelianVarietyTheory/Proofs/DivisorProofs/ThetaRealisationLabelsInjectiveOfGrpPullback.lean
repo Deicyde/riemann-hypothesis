@@ -1,14 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.LamRange
-import ReciprocityTheory.AnalyticForms.RegularLocalRings.FinalTheorems
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiagonalEndOfEighthPowerOfPolAVPullback
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LineBundleSymmetryHypothesisOfPolAVPullback
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsNormalisationModelFiniteExtension
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsArithBaseFiniteContainingRootOfUnity
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.E8ThetaSetupGenericPointExists
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SharpPolarizationPullbackStable
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.IsFractionRingOfForallDiv
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsThetaSystemOfPolarisedLevel
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Degenerations.RigGen
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj IsLocalRing
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open GlobalTheory.Toroidal GlobalTheory.LocM GlobalTheory.PolFan GlobalTheory.ZM GlobalTheory.SiegelTor GlobalTheory.TorRef GlobalTheory.PolDeg
@@ -31,7 +23,7 @@ theorem realPt_inj_of_grpPullback : ∀ {o₂ Ω₂ : Type} [CommRing o₂] [Fie
   intro o₂ Ω₂ _ _ _ S₂ ρ₂ T G _ f φ hφ x y hxy
   have hpt : ρ₂.pt x = ρ₂.pt y := by
     ext
-    exact hφ.1.hom_ext hxy (by simp only [Category.assoc, Over.w])
+    exact hφ.1.hom_ext hxy (by simp only [Over.w])
   have hzero : ρ₂.pt 0 = 1 := by
     have h := ρ₂.pt_add 0 0
     rw [add_zero] at h
@@ -46,7 +38,7 @@ theorem realPt_inj_of_grpPullback : ∀ {o₂ Ω₂ : Type} [CommRing o₂] [Fie
     rw [← hsmul]
     have : (S₂.r * S₂.N) • a = 0 := by
       funext i
-      simp [Pi.smul_apply, nsmul_eq_mul, ZMod.natCast_self]
+      simp [Pi.smul_apply, nsmul_eq_mul]
     rw [this, hzero]
   let K := AlgebraicClosure Ω₂
   let x₀ : Sp K ⟶ Sp S₂.R := spMap ((algebraMap Ω₂ K).comp (S₂.R.val : S₂.R →+* Ω₂))

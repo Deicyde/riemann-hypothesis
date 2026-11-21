@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.GCauchyStatement
+import Mathlib.Analysis.Calculus.ContDiff.WithLp
+import Mathlib.RingTheory.PiTensorProduct
 
 namespace GlobalTheory
 

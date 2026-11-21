@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.T2SpaceAdeleRing
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StrongApproximationLatticeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BoundedCountFiniteIndexSubgroupsStatement
 open scoped TensorProduct NNReal ENNReal Matrix
@@ -15,7 +15,7 @@ variable {ι A G : Type} [AddCommGroup A] [Group G] {V : ι → Type} [∀ i, Ad
 def sub (g : G) : AddSubgroup A := ⨅ i, ((Λ i).map (m • (ρ i g : V i →+ V i))).comap (φ i)
 
 theorem mem_sub {g : G} {x : A} : x ∈ sub Λ φ ρ m g ↔ ∀ i, ∃ y ∈ Λ i, m • ρ i g y = φ i x := by
-  simp only [sub, AddSubgroup.mem_iInf, AddSubgroup.mem_comap, AddSubgroup.mem_map]
+  simp only [sub, AddSubgroup.mem_iInf, AddSubgroup.mem_comap]
   rfl
 
 theorem act_mul (i : ι) (g h : G) (y : V i) : ρ i (g * h) y = ρ i g (ρ i h y) := by

@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.HodgeFrameGram
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ModelHodgeGram
+import Development.AbelianVarietyTheory.Definitions.Divisors.LeTwoMulOfForallScale
 open Matrix
 open scoped ComplexOrder
 open GlobalTheory.HodgeLocGeo
@@ -19,14 +19,14 @@ theorem modelHodgeGram_eq_fromBlocks {p q : ℕ} (Z : Matrix (Fin p) (Fin q) ℂ
 theorem push_expand {p q : ℕ} (X : Matrix (Fin p) (Fin q) ℂ) (Y : Matrix (Fin q) (Fin p) ℂ)
     (N : Matrix (Fin q) (Fin q) ℂ) :
     (1 - X * Y) * (1 + X * N * Y) = 1 + X * ((1 - Y * X) * N - 1) * Y := by
-  simp only [Matrix.mul_sub, Matrix.sub_mul, Matrix.mul_add, Matrix.add_mul, Matrix.mul_one, Matrix.one_mul,
+  simp only [Matrix.mul_sub, Matrix.sub_mul, Matrix.mul_add, Matrix.mul_one, Matrix.one_mul,
     Matrix.mul_assoc]
   abel
 
 theorem push_expand' {p q : ℕ} (X : Matrix (Fin p) (Fin q) ℂ) (Y : Matrix (Fin q) (Fin p) ℂ)
     (N : Matrix (Fin q) (Fin q) ℂ) :
     (1 + X * N * Y) * (1 - X * Y) = 1 + X * (N * (1 - Y * X) - 1) * Y := by
-  simp only [Matrix.mul_sub, Matrix.sub_mul, Matrix.mul_add, Matrix.add_mul, Matrix.mul_one, Matrix.one_mul,
+  simp only [Matrix.mul_sub, Matrix.sub_mul, Matrix.add_mul, Matrix.mul_one, Matrix.one_mul,
     Matrix.mul_assoc]
   abel
 

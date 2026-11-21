@@ -1,8 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StepIdeal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HodgeMetricFrameEqRiemannFormAtInteriorPoint
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IoOfLeOneIff
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SemiFibrationLieLatticeFullStatement
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ExistsIsHodgeFrameIff
+import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsUniqueLiesUnder
 
 section SlopeTestRemainingChoices
 open AlgebraicGeometry CategoryTheory Limits MvPolynomial NumberField ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj GlobalTheory.Toroidal GlobalTheory.ShFam GlobalTheory.ProjVar GlobalTheory.FlagBundle GlobalTheory.GoodMetric GlobalTheory.LieBase
@@ -44,7 +44,7 @@ private theorem herm_orth {U : Formalism.L2.PjFree.Unf Xo c σ r} (hσ : Formali
   ext b b'
   rw [of_apply, ← key, hcol, hcol]
   have hi : ∀ j j' : Fin (Dw.mult τ), W.e.symm ⟨τ, j⟩ = W.e.symm ⟨τ, j'⟩ ↔ j = j' := fun j j' => by simp
-  simp [hermForm, smul_mulVec, sum_dotProduct, dotProduct_sum, star_sum, Pi.single_apply, hi, mul_apply, mul_comm]
+  simp [hermForm, smul_mulVec, dotProduct_sum, star_sum, Pi.single_apply, hi, mul_apply, mul_comm]
 
 private theorem herm_exp {U : Formalism.L2.PjFree.Unf Xo c σ r} (hσ : Formalism.L2.PjFree.GoodEmb c σ)
     (hU : Formalism.L2.PjFree.IsUnf U)

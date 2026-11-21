@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.MaxWeightGL1EqOne
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlockParOpp
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocPartMul
 open MeasureTheory Matrix
 open scoped Classical
@@ -110,7 +109,7 @@ theorem dsum_eq_zero_of_par (H : Type) [Group H] (T P L U : Subgroup H) (Ψ : H 
     ← finsum_mem_image hinj, himg]
   refine (finsum_mem_eq_sum_of_inter_support_eq F ?_).symm
   ext q
-  simp [Finset.mem_filter, Set.Finite.mem_toFinset]
+  simp [Set.Finite.mem_toFinset]
   tauto
 
 end GlobalTheory.OrbDesc

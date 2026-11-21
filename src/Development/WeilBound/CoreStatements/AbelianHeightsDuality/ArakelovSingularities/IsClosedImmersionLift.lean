@@ -1,7 +1,8 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.AbelianHeightsDuality.ArakelovSingularities.ArMixIff
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ArithmeticGeometry.SchemeCohomology.ProperCohomology.ChowSegre
 import Development.WeilBound.CoreStatements.AbelianHeightsDuality.ArakelovSingularities.TopologicalKrullDimOfPolyCovered
+import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsClosedImmersionGenericPoint
 
 set_option autoImplicit false
 

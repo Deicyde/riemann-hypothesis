@@ -1,9 +1,6 @@
-import Mathlib
-import ReciprocityTheory.DualLattices.CotangentSurjective
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.DualLattices.EigenLengthProductStatementHolds
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.IsTight
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.StepOrderRes
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.ComapFgOfValuationRing
 import Development.WeilBound.CoreStatements.HodgeTatePoints.RbProj
 import Development.WeilBound.CoreStatements.HodgeTatePoints.RbTriang
 
@@ -43,7 +40,7 @@ theorem Phi_basis (l : Fin n × Fin f → R) (s : Fin f) (hl : ∀ j, j.2 ≠ s 
     by_cases ht : t = s
     · subst ht
       have : j ≠ i := fun h => hne (by rw [h])
-      simp [Finsupp.single_apply, this.symm, MulChar.map_zero]
+      simp [this.symm, MulChar.map_zero]
     · rw [hl (j, t) ht, zero_mul]
   · simp
 

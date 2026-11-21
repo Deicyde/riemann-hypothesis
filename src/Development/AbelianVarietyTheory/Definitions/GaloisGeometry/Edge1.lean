@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.TcoMem
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.VerticalBoundHeightCompare
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.KaehlerOneFormsToExtensionDeRhamMulSelf
+import Development.AbelianVarietyTheory.Definitions.Divisors.DlogRatioVolumeFormNeZero
 
 set_option autoImplicit false
 

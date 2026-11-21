@@ -1,7 +1,13 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.RationalMatrixPrimeOrderBound
-import Formalism.GL3MeanSquares.HookFormulaTorsion.FourierCommutesHeckeScalar
 import Formalism.LogVandermondeBounds.LogVandermondeProofs.LengthQuotientLeOfLatticeSandwich
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace Formalism.HermitianLattices.RamifiedHeckeModels
 
@@ -105,13 +111,13 @@ theorem imprimitive_case_count : ImprimitiveOrbitCondition := by
         rw [Finset.sum_eq_single j]
         · simp [mul_comm]
         · intro b _ hb
-          simp [Pi.single_apply, hb]
+          simp [hb]
         · simp
       rwa [hs] at h
     · rw [Finset.sum_eq_single j]
       · simp
       · intro b _ hb
-        simp [Pi.single_apply, hb]
+        simp [hb]
       · simp
 
 theorem prime_order_element : RationalMatrixPrimeOrderBound := by

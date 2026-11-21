@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.GlobalClassFormation.SignsCup
 import GroundTheory.ProfiniteCohomology.GlobalClassFormation.SymbolBridgeCyclotomic
-import GroundTheory.ProfiniteCohomology.GlobalClassFormation.EqZeroOfBrauerLocalApplyEqZero
-import GroundTheory.GlobalFields.NormResidueSymbol.CyclotomicCompositum
 import GroundTheory.GlobalFields.NormResidueSymbol.Rational
 set_option maxSynthPendingDepth 1
 

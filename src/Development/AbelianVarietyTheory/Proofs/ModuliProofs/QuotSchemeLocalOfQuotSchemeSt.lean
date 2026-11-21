@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.LocalTrivialization.LocTrivOfRetraction
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.CMModuli.TorusQuotientTorsionLift
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.FlatQuotientIsoOfSameKernel
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FirstCohomology.DimSplitPf
 
 set_option autoImplicit false
 

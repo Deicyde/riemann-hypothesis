@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Example
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.StatementsDualTopSubLattice
+import Mathlib.Data.Rat.Star
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights

@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ReadsHecke
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SplitPlaceHeckeOperatorScalarOnSpherical
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.UnitaryFiniteAdelesSplitPlaceDecomposition
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.RelIndexStabilizerEqLocalRelIndexStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.RelIndexLevelUnipotentCoprimePrimeStatement
 open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formalism.L2 Formalism.L2.Host Formalism.L2.NT Formalism.IndefR.NX Formalism.ConjugateSelfDual ReciprocityTheory.Gal ReciprocityTheory.Aut NumberField IsDedekindDomain GlobalTheory.Mem GlobalTheory.Mem.Col2 GlobalTheory.Mem.Top GlobalTheory.Mem.Top.GroupRetwisting GlobalTheory.Mem.Top.Bl GlobalTheory.Mem.R3 GlobalTheory.Mem.R3.Rw GlobalTheory.HeightCounting GlobalTheory.HeightCounting.Up
@@ -77,7 +76,7 @@ theorem tv_apply {n : ℕ} {R : Type} [CommRing R] (i j : Fin n) (c : R) (a b : 
   · have h' : ¬(i = a ∧ j = b) := by
       rintro ⟨rfl, rfl⟩
       exact h ⟨rfl, rfl⟩
-    simp [Matrix.transvection, Matrix.one_apply, Matrix.single_apply, h', h]
+    simp [Matrix.transvection, Matrix.one_apply, h', h]
 
 def tvGL {n : ℕ} {R : Type} [CommRing R] {i j : Fin n} (hij : i ≠ j) (c : R) : GL (Fin n) R :=
   ⟨Matrix.transvection i j c, Matrix.transvection i j (-c),

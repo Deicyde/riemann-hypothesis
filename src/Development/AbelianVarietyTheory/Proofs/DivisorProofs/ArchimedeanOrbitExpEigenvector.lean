@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.CcGASmoothAndRderMem
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MaxCompactConjugate
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoordsSecondKindFormPreservingGroup
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsAuxiliaryPlaceNotMemFinset
 open scoped TensorProduct Matrix
 open NumberField Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU
 
@@ -59,7 +56,7 @@ theorem mat_extH_eq {F E R R' : Type} [Field F] [Field E] [Algebra F E] [CommRin
   rw [mat_extH]
   by_cases h : r = s
   · subst h; simp [map_sub]; ring
-  · simp [Matrix.one_apply, h]
+  · simp [h]
 
 theorem mulVec_embArch_eq_smul : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [NumberField E] [Algebra F E] (σ : E →ₐ[F] E), IsCMExt F E σ →
     ∀ (n : ℕ) (J : Matrix (Fin n) (Fin n) E) (x : Fin n → E), x ≠ 0 → ∀ (w : InfinitePlace F) (τ : EmbOver E w) (Z : Matrix (Fin n) (Fin n) ℂ) (l : ℂ),

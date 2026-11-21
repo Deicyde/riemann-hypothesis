@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJAPRCPDecompDefs
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJAPRCoreCut
 
 open Formalism.REAL Formalism.QuantumDeterminants Formalism.FourierDecayAlt Formalism.FourierDecayAlt.Q NumberField
 open scoped ComplexConjugate Matrix
@@ -54,7 +57,7 @@ private lemma Hpk_mul_Em_eq_Em_mul_Hb : Hpk k r * Em k r = Em k r * Hb k := by
   ext i m
   rw [Matrix.mul_apply, Matrix.mul_apply,
     Finset.sum_eq_single (wI k r m) (fun j _ hj => by simp [Em, hj]) (fun h => absurd (Finset.mem_univ _) h),
-    Finset.sum_eq_single m (fun j _ hj => by simp [Formalism.QuantumDeterminants.Hb, Matrix.diagonal_apply, hj])
+    Finset.sum_eq_single m (fun j _ hj => by simp [Formalism.QuantumDeterminants.Hb, hj])
       (fun h => absurd (Finset.mem_univ _) h)]
   simp only [Em, Hpk_apply_wI_right_eq_ite]
   split_ifs <;> simp_all
@@ -67,7 +70,7 @@ private lemma Em_transpose_mul_Hpk_eq_Hb_mul_transpose : (Em k r)ᵀ * Hpk k r =
   ext m i
   rw [Matrix.mul_apply, Matrix.mul_apply,
     Finset.sum_eq_single (wI k r m) (fun j _ hj => by simp [Em, hj]) (fun h => absurd (Finset.mem_univ _) h),
-    Finset.sum_eq_single m (fun j _ hj => by simp [Formalism.QuantumDeterminants.Hb, Matrix.diagonal_apply, Ne.symm hj])
+    Finset.sum_eq_single m (fun j _ hj => by simp [Formalism.QuantumDeterminants.Hb, Ne.symm hj])
       (fun h => absurd (Finset.mem_univ _) h)]
   simp only [Matrix.transpose_apply, Em, Hpk_wI_apply_left_eq_ite]
   split_ifs <;> simp_all
@@ -117,7 +120,7 @@ lemma wbPart_e (a : Fin r) : wbPart k r (bvec (eI k r a)) = 0 := by
   simp only [wbPart, bvec, Pi.zero_apply]
   rw [Pi.single_eq_of_ne]
   intro h
-  simp only [wI, eI, Fin.ext_iff, Fin.val_mk] at h
+  simp only [wI, eI, Fin.ext_iff] at h
   omega
 
 lemma wbPart_es (a : Fin r) : wbPart k r (bvec (esI k r a)) = 0 := by
@@ -127,7 +130,7 @@ lemma wbPart_es (a : Fin r) : wbPart k r (bvec (esI k r a)) = 0 := by
   simp only [wbPart, bvec, Pi.zero_apply]
   rw [Pi.single_eq_of_ne]
   intro h
-  simp only [wI, esI, Fin.ext_iff, Fin.val_mk] at h
+  simp only [wI, esI, Fin.ext_iff] at h
   omega
 
 lemma embed_mem_unitary_lie_algebra (z : Fin (2 * r + k + 1) → ℂ) (Y : Mb k) (hY : Yᴴ * Hb k + Hb k * Y = 0)

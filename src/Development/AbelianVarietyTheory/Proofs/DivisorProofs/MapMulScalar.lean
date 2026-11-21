@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.LocalToGlobal.IndefiniteReal.LinksChar
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.IndefiniteReal.ScalarOnPartsFull
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S IsDedekindDomain NumberField Formalism.L2.Theta Formalism.L2.NTheta Formalism.IndefR.Mult
 open scoped TensorProduct
@@ -24,16 +24,16 @@ theorem exists_scalar {A : Type} [CommRing A] (σ : A →+* A) {n : ℕ} (J : Ma
     ∃ z : Formalism.UG.UJ σ J, ((z : GL (Fin n) A) : Matrix (Fin n) (Fin n) A) = u • (1 : Matrix (Fin n) (Fin n) A) := by
   have hu' : σ u * u = 1 := by rw [mul_comm, hu]
   refine ⟨⟨⟨u • 1, σ u • 1, ?_, ?_⟩, ?_⟩, rfl⟩
-  · simp [smul_smul, hu, hu']
-  · simp [smul_smul, hu, hu']
+  · simp [smul_smul, hu']
+  · simp [smul_smul, hu]
   · show Formalism.UG.cT σ (u • (1 : Matrix (Fin n) (Fin n) A)) * J * (u • (1 : Matrix (Fin n) (Fin n) A)) = J
     have : Formalism.UG.cT σ (u • (1 : Matrix (Fin n) (Fin n) A)) = σ u • (1 : Matrix (Fin n) (Fin n) A) := by
       ext i j
       by_cases h : i = j
       · subst h; simp [Formalism.UG.cT]
-      · simp [Formalism.UG.cT, Matrix.one_apply, h, Ne.symm h]
+      · simp [Formalism.UG.cT, h, Ne.symm h]
     rw [this]
-    simp [smul_smul, hu, hu']
+    simp [smul_smul, hu]
 
 theorem supp_scalar {A : Type} [CommRing A] {n : ℕ} (f u : A) (h : f * (u - 1) = u - 1) (i j : Fin n) :
     f * (u • (1 : Matrix (Fin n) (Fin n) A) - 1) i j = (u • (1 : Matrix (Fin n) (Fin n) A) - 1) i j := by

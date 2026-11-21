@@ -1,5 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.RootSubgroupBasics.TriShear
+import Mathlib.Analysis.Complex.Isometry
+import Mathlib.CategoryTheory.Countable
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ReduceModChar
 
 open MeasureTheory Matrix
 

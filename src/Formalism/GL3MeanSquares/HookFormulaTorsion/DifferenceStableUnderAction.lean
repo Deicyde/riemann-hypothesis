@@ -1,9 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.GL3MeanSquares.OrbitPointsDistinct
-import Formalism.FrobeniusOrbits.HostCorollaries
-import Formalism.SatakeDualWeyl.KpqSubgroupCompact
-import Formalism.BehrendSets.TranslateMean
-import Formalism.BehrendSets.FinalE
+import Mathlib.RingTheory.PiTensorProduct
 
 namespace Formalism.HermitianLattices.FiltrationBoundaryCriterion
 

@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.SummandSlopeAtDecoratedLattice
 import Formalism.LocalToGlobal.Columns.ToHLatLemmas
-import Formalism.LocalToGlobal.Columns.CoefficientsModP
-import Formalism.LocalToGlobal.GlobalTheory.HLatOpsP
 
 open NumberField IsDedekindDomain Module
 open scoped Matrix ComplexOrder

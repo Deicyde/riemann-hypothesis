@@ -1,15 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.PairPtsClasses
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.PairPtsEqSum
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MovFn
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.DetIdlVal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.WeilLatticeVacuumEqProdSplitPlaceFactorsStatement
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.VecOfEqIntertwiner
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ValuationLeOneOfMem
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SumOKEx
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.LatNotSelfDual
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.RamificationIdxEqOneOfIsSquare
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.WeilDataLines
+import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ParahoricLevelLiftsExist
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.DIV
 open IsDedekindDomain NumberField MeasureTheory GlobalTheory.ChiGrid GlobalTheory.FunObj GlobalTheory.ExpansionInvariance GlobalTheory.RowVertexInv GlobalTheory.SplitFlip
 attribute [local instance] Formalism.BasicNotions.Host.cmStar GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField borelKw borelSpaceKw
@@ -74,7 +70,7 @@ theorem GlobalTheory.RowVacScalar.vacScalar_eq_prod : ∀ {D : D7} {T : Type} {L
   intro D T L sc G W U S μ₀ hL t i hi q hq1 hq2 hS hT c hc
   classical
   have hp : (Pair.chi i D.R.m : Pair T).InRange D.R.m := by
-    simp only [Pair.InRange, Pair.big, Node.InRange]; omega
+    simp only [Pair.InRange, Node.InRange]; omega
   have hW := W.om_is (.chi i D.R.m) hp
   have sd := GlobalTheory.RowVertexInv.FactorTheta.selfDual S hi
   have hv := (S.Z.vac_is (.chi i D.R.m) ⟨hi, rfl⟩).2

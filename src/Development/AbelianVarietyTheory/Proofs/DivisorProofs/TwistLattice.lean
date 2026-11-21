@@ -1,10 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.MemPass
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsTrSelf
 import Development.AbelianVarietyTheory.Definitions.Divisors.ZetaActRefl
-import Development.AbelianVarietyTheory.Definitions.Divisors.TorsTransport
 import ReciprocityTheory.ReductiveGroups.UnramifiedIntegrals.ModDefs
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLatticeDecompositionOfIdeleApprox
+import Development.AbelianVarietyTheory.Definitions.Divisors.HasLevelStd
 open NumberField IsDedekindDomain GlobalTheory.CMVal GlobalTheory.HilbFam GlobalTheory.WpFam GlobalTheory.QFam ReciprocityTheory.ChartRestriction.L1
 open scoped UpperHalfPlane nonZeroDivisors Matrix
 
@@ -282,9 +282,9 @@ theorem twist_lattice : ∀ (K : Type) [Field K] [NumberField K] (ι : K →+* �
     obtain ⟨k, k', hk, hk', hT⟩ := htor v
     have hNC : (N : ℂ) ≠ 0 := Nat.cast_ne_zero.2 hN
     have ek : (((v 0).val : ℤ) : K) * θ₀ + (((v 1).val : ℤ) : K) = N * k := ι.injective (by
-      simp only [map_add, map_mul, map_intCast, map_natCast, hk, hθ, tors, Int.cast_natCast]; field_simp)
+      simp only [map_add, map_mul, map_natCast, hk, hθ, tors, Int.cast_natCast]; field_simp)
     have ek' : (((vmul v A 0).val : ℤ) : K) * κ₁ + (((vmul v A 1).val : ℤ) : K) * κ₂ = N * k' := ι.injective (by
-      simp only [map_add, map_mul, map_intCast, map_natCast, hk', hκ₁, hκ₂, tors, Int.cast_natCast]; field_simp)
+      simp only [map_add, map_mul, map_natCast, hk', hκ₁, hκ₂, tors, Int.cast_natCast]; field_simp)
     obtain ⟨r0, r1⟩ := (hW.of_dvd (D' := N) ⟨_, rfl⟩).row hO hI hN (mem_intA.2 hT)
       (p := (vmul v A 0).val) (q := (vmul v A 1).val) (r := (v 0).val) (s := (v 1).val) (by
         rw [ek, ek', map_mul, map_mul, map_natCast]; ring)

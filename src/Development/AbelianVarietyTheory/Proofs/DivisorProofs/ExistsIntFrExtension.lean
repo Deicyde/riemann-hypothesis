@@ -1,11 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.NonemptyValExtOfOverLa
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsResidueFactor
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralFrameExtensionExists
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFinitePointMemClosed
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsSecUnitClosedFibre
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsUniformisationTrivialTorusAbelianLocus
 import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.AllSixAbelianSchemeLawsHold
+import Formalism.LocalToGlobal.ProjectiveLattices.ThetaFramePf
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 set_option autoImplicit false
 set_option synthInstance.maxHeartbeats 400000

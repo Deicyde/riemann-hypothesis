@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ElementarySymmetric.StInterNumEventual
 import GroundTheory.HeightsAndTheta.Heights.ElementarySymmetric.PRestrLenEuler
-import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PSnapper
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PSnapperSection
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.PSnapperDiffPoly
 set_option maxSynthPendingDepth 1

@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ModelDdcForms
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PotentialSmoothInChartStatement
+import Mathlib.Analysis.InnerProductSpace.Calculus
 
 open ReciprocityTheory.AnForm ReciprocityTheory.AnForm.M GlobalTheory.IndefiniteRowSideFullHecke.ModelDdcForms MeasureTheory
 open scoped ContDiff Topology

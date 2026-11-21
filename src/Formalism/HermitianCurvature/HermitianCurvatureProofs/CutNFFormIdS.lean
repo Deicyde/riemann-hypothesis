@@ -1,8 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutNFHypS
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutNFIdPolAll
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutNFIdPairPtw
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutNFIdBetaLim
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutNFTopFormDone
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutNFIdPol
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutNFTopForm
 
 namespace Formalism.FourierDecayAlt.P.CutBP
 

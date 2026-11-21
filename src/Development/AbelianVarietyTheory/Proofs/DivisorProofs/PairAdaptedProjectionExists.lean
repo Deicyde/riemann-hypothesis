@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AveragedIntegralFunctional
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoubledDarbouxCoordsCompat
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqZeroOfTraceOrth
@@ -113,7 +112,7 @@ theorem symp_eq (σ : E →ₐ[F] E) {n n₁ d : ℕ} (JX : Matrix (Fin n) (Fin 
   have e3 : vdiff σ c = (fun l => cA σ (c (Sum.inl l))) - fun l => cA σ (c (Sum.inr l)) := rfl
   rw [e1, e2, dbl, Matrix.fromBlocks_mulVec, e3, Matrix.mulVec_sub]
   simp only [dotProduct, Fintype.sum_sum_type, Sum.elim_inl, Sum.elim_inr, Matrix.zero_mulVec, add_zero, zero_add,
-    Matrix.neg_mulVec, Pi.neg_apply, Pi.sub_apply, Pi.add_apply, mul_neg, mul_sub, Finset.sum_sub_distrib,
+    Matrix.neg_mulVec, Pi.neg_apply, Pi.sub_apply, mul_neg,
     Finset.sum_neg_distrib, sub_eq_add_neg]
   simp only [mul_add, mul_neg, Finset.sum_add_distrib, Finset.sum_neg_distrib]
   rfl

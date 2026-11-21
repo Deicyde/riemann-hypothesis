@@ -1,8 +1,6 @@
-import Mathlib
-import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataMink
-import Formalism.LocalRingCardinality.DataErr
-import Formalism.LocalToGlobal.GlobalTheory.IsResidueClassZero
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ImportsTer
 open NumberField Formalism.BasicNotions
 

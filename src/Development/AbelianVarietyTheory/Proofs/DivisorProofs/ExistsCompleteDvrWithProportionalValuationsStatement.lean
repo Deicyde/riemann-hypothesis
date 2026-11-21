@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCompleteDvrWithProportionalValuations
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCdvrDominating
 open IsLocalRing
 
 set_option maxHeartbeats 1000000 in

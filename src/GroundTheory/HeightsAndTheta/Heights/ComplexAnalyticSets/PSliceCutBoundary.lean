@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceCutBoundary
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceBoundaryBound
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StSliceCutDecay

@@ -1,11 +1,12 @@
-import Mathlib
-import Formalism.LocalToGlobal.BesselHermitianTheta.AllTied
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.HaarUpqEqOfOmegaDensity
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsPosFiniteDensityOfAlmostTranslationInvaria
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.TranslateChartBallDistortion
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ReImMapSurjective
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.CompactSpaceUpqTZeroRight
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExpBallUMemNhds
+import Mathlib.Topology.Separation.CompletelyRegular
 
 open Formalism.BasicNotions MeasureTheory Filter Topology Metric Set
 open scoped ENNReal NNReal

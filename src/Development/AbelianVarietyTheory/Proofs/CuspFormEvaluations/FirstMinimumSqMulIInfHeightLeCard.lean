@@ -1,11 +1,10 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.TorusAtData
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.FundamentalDomainPointBound
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.ModerateCoefficientPositivity
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.TorusAtPf
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.TorusAtDataPf
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.SplitC
 import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.ExistsThetaRunParametersUniformTorusStatement
+import Mathlib.Data.Int.Star
 
 open NumberField ReciprocityTheory.ChartRestriction.G.FD ReciprocityTheory.ChartRestriction.G.I2
 
@@ -109,7 +108,7 @@ theorem two_le_rank (X : Data E r) (ξ : Fin r → E) (h : X.IsIso ξ) : 2 ≤ r
   · exfalso
     have hd := X.Gm_det
     have h0 : ξ 0 ≠ 0 := fun h0 => h2 (funext fun i => by fin_cases i; exact h0)
-    simp only [herm, cc, Nat.reduceAdd, Fin.sum_univ_one, Matrix.det_fin_one, mul_eq_zero,
+    simp only [herm, cc, Nat.reduceAdd, Matrix.det_fin_one, mul_eq_zero,
       map_eq_zero, Finset.univ_unique, Finset.sum_singleton, Fin.default_eq_zero] at h1 hd
     simp_all
   · omega

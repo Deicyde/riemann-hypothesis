@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.FirstInequality
 import GroundTheory.GlobalFields.ExistenceTheorem.IndexRangePowMonoidHomAdicCompletionMulNorm
-import GroundTheory.GlobalFields.KummerTheory.KummerIndexLemma
 
 namespace GroundTheory.Global
 

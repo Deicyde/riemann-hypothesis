@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.PlaceBelow
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.ExistsIntegralBasisLinearCoordinates
 import Development.AbelianVarietyTheory.Proofs.UnramifiedDepth.MemHHaOfCoeffFunctional
 open scoped BigOperators

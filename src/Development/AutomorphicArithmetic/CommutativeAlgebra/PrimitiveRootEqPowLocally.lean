@@ -1,5 +1,5 @@
-import Mathlib
-import Development.EtaleCohomology.EtaleSheaves.DerivUnit
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.PullHlComp
 
 open CategoryTheory AlgebraicGeometry GlobalTheory.EtC
 

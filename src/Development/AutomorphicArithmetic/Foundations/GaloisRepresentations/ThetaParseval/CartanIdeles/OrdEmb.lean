@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.CartanIdeles.SpacesExOf
 import GroundTheory.IdeleRoots.TorusPowers.HeckeIdem
 open scoped nonZeroDivisors Matrix NumberField.AdeleRing

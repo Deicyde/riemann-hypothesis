@@ -1,8 +1,7 @@
-import Formalism.SharpRestriction.CuspSpanNormBounds.CayleyDegreeNondegeneracy.IsPositiveDefiniteForm
-import Formalism.SharpRestriction.CuspSpanNormBounds.MassAndBranchingHypotheses
-import Formalism.SharpRestriction.CuspSpanNormBounds.BruhatCellsKronecker.MinkowskiDividesFactorialOfBound
-import Formalism.FlagUnipotentLattices.CardSubgroupsOfIndexLe
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianLattices.HermitianLatticesProofs.MassBasic
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 noncomputable section
 

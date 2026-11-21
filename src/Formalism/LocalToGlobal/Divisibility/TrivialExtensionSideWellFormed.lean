@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Divisibility.HeckeRI
 import Formalism.LocalToGlobal.Divisibility.InertPartitionLePartF
 import Formalism.LocalToGlobal.Divisibility.LiftLatLemmas

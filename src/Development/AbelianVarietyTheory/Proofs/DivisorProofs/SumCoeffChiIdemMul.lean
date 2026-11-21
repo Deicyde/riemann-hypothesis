@@ -1,5 +1,4 @@
-import Mathlib
-import Formalism.LocalToGlobal.Divisibility.GoodPartHermitianSpec
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Divisibility.ProjLemmas
 
 open Formalism.L2.DIV

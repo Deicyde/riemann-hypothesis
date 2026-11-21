@@ -1,4 +1,9 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.TheoremsMuLinked.NormsAndPolarizations.CjApply
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.AutomorphicVarieties.WeilGroupCharacters.UniversalOrdinaryDeterminantRing
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.RingTheory.TotallySplit
+import Std.Tactic.BVDecide.Normalize.Prop
 open IsLocalRing Matrix NumberField Formalism.ConjugateSelfDual ReciprocityTheory.Gal UpperTheory.V UpperTheory.V.Alg UpperTheory.V.W UpperTheory.V.Pa UpperTheory.V.HV UpperTheory.V.Th UpperTheory.V.Th.Nm GlobalTheory.GalOfCusp
 
 private theorem UpperTheory.V.Th.Nm.trZero_inner {K : Type} [Field K] {n : ℕ}
@@ -14,14 +19,14 @@ private theorem UpperTheory.V.Th.Nm.trZero_inner {K : Type} [Field K] {n : ℕ}
     by_cases hb : o = b
     · subst hb
       simp [Matrix.sum_apply, Matrix.single_apply]
-    · simp [Matrix.sum_apply, Matrix.single_apply, hb, Matrix.mul_apply]
+    · simp [Matrix.sum_apply, hb, Matrix.mul_apply]
   have h2 : ∀ j, single o j (1 : K) * A = ∑ i, A j i • single o i (1 : K) := by
     intro j
     ext a b
     by_cases ha : o = a
     · subst ha
       simp [Matrix.sum_apply, Matrix.single_apply]
-    · simp [Matrix.sum_apply, Matrix.single_apply, ha, Matrix.mul_apply]
+    · simp [Matrix.sum_apply, ha, Matrix.mul_apply]
   have h3 : ∑ i, single i o (1 : K) * single o i (1 : K) = (1 : Matrix (Fin n) (Fin n) K) := by
     simp only [Matrix.single_mul_single_same, mul_one]
     exact Matrix.sum_single_one

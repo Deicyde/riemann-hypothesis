@@ -1,13 +1,13 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.EqOneOfHeckeEigNeBot
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasDivPlace
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.IsMonHomIdPow
 import Development.AbelianVarietyTheory.Definitions.Divisors.NontrivialOfArtinQE
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FibrePowerMapOfTotalSpacesIsPullback
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLevelEqKN
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.HodgePullHodgePull
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ConjMemOfMemHeckeLevel
-import Formalism.SatakeDualWeyl.KpqSubgroupCompact
 
 set_option autoImplicit false
 
@@ -26,7 +26,7 @@ variable {Γ : Type} [Group Γ]
 
 theorem mem_heckeLevel_inv {K : Subgroup Γ} {h u : Γ} : u ∈ heckeLevel K h⁻¹ ↔ u ∈ K ∧ h * u * h⁻¹ ∈ K := by
   refine ⟨fun hu => ⟨heckeLevel_le K h⁻¹ hu, by simpa using conj_mem_of_mem_heckeLevel hu⟩, fun hu => ⟨hu.1, ?_⟩⟩
-  exact ⟨h * u * h⁻¹, hu.2, by simp [MulAut.conj_apply, _root_.mul_assoc]⟩
+  exact ⟨h * u * h⁻¹, hu.2, by simp [_root_.mul_assoc]⟩
 
 theorem heckeLevel_inv_of_comm (K : Subgroup Γ) {h : Γ} (hc : ∀ u, h * u = u * h) : heckeLevel K h⁻¹ = K := by
   ext u

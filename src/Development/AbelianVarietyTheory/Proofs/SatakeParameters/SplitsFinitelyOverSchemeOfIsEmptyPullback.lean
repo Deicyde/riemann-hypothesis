@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.FibrePointsLEId
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Proofs.SatakeParameters.CoveringOfForallMem
 open CategoryTheory Limits AlgebraicGeometry
 
 namespace GlobalTheory.EtC.Tr

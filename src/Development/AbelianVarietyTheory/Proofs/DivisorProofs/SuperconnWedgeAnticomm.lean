@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HolomorphicConnectionAddSection
 
 set_option autoImplicit false
@@ -120,6 +121,6 @@ theorem superconn_wedge (τ : E → Matrix (Fin g) (Fin g) ℂ) (h : Pt E g → 
       -wedge (k.castAdd g) (dbarAdj τ h σ P) := by
     simp only [dbarAdj, nab10_wedge_eq_wedge_nab10 h _ hσ, contr_wedge (dzb_ne k _), smul_neg,
       Finset.sum_neg_distrib, wedge_neg, wedge_sum, wedge_smul]
-  simp only [superconn, e1, e2, e3, wedge_add, wedge_smul, wedge_neg, smul_add, smul_neg, neg_add]
+  simp only [superconn, e1, e2, e3, wedge_add, wedge_smul, smul_add, smul_neg, neg_add]
 
 end GlobalTheory.TorsionForm.Odd

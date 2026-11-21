@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TprodMemTensSpan
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TensorPlaceActionInjective
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MinFirst
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TprodMemDegLE
 open scoped TensorProduct
 
 noncomputable section
@@ -164,7 +165,7 @@ theorem mem_span_tprod_chiOne : ∀ (ι : Type) [Fintype ι] [DecidableEq ι] (P
         by_cases hw : w = a
         · subst hw
           simp [ha]
-        · simp [hw, Function.update_of_ne hw]
+        · simp [hw]
       rw [e, PiTensorProduct.map_comp, LinearMap.comp_apply, ih]
       exact hfix a
   have hT' : PiTensorProduct.map p T = T := by

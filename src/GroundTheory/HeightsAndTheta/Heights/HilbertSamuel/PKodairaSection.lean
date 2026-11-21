@@ -1,9 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsKodairaSection
-import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsKodairaGeneric
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsChartDenominator
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsSectionSupBound
-import GroundTheory.HeightsAndTheta.Heights.Intersections.Statements
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsAntisym
 set_option maxSynthPendingDepth 1
 

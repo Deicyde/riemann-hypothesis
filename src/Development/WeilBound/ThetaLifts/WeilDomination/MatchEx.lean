@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.WeilBound.ThetaLifts.ConeHypotheses.IsLocallyConstantFinprodEvalV
+import Development.AbelianVarietyTheory.Definitions.Divisors.MatchingOfParts
 
 noncomputable section
 

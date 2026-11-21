@@ -1,8 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.MemL2OfBoundedContinuousInvariant
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.SetIntegralNormRmulLe
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ContinuousIntegralInvMulOfLocallyIntegrable
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.MemExtSubSpanDepth
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ConstantTermAlongFlagEqZeroOfCuspidalStatement
 
 open MeasureTheory Set GlobalTheory.AutomorphicL2Unitary GlobalTheory.Cusp

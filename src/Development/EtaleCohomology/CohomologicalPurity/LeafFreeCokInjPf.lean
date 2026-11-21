@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.CohomologicalPurity.LeafFreeCokPfSurj
 
 open CategoryTheory Limits AlgebraicGeometry Opposite GlobalTheory.EtC

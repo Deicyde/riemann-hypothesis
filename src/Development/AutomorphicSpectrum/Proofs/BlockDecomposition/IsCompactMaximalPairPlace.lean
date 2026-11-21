@@ -1,9 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.SatakeExponents.UniformizerValuations.FrameReading.FmTools
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FinsumOutOfLe
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LevelFamInf
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThLInvolutive
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsNormalisedThetaSub
+import GroundTheory.GlobalFields.LocalFieldAtPlace
 
 noncomputable section
 

@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.RankOneTensors
+import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.InfCut
 
 noncomputable section
 
@@ -127,7 +129,7 @@ private theorem lintegral_pi_fin_prod_eq_prod_lintegral {n : ℕ} {E : Type*} [M
             (MeasurableEquiv.measurableEmbedding _)]
           simp_rw [Fin.succAbove_zero, MeasurableEquiv.piFinSuccAbove_symm_apply, Fin.insertNthEquiv,
             Fin.prod_univ_succ, Fin.insertNth_zero]
-          simp [Fin.succAbove_zero]
+          simp
       _ = (∫⁻ x, f 0 x ∂(μ 0)) * ∏ i : Fin n, ∫⁻ x, f (Fin.succ i) x ∂(μ (Fin.succ i)) := by
           rw [← ih (fun i => f (Fin.succ i)) (fun i => hf _)]
           exact lintegral_prod_mul (hf 0).aemeasurable

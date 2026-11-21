@@ -1,9 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.ColTorusA
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.L2NormFundamentalDomain
 import Development.AbelianVarietyTheory.Definitions.ThetaValues.ExistsMemRowHighestTotalDegreeEqTwo
 import Development.AbelianVarietyTheory.Definitions.ThetaValues.PolyDerivSmulLetter
-import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.CardToMultisetEqDegree
 
 open MvPolynomial
 open ReciprocityTheory.ChartRestriction.G.I2
@@ -97,7 +96,7 @@ theorem eigen_of_triangular (f : (J → V) → ℂ) (lt : J → J → Prop) (rk 
         by_cases h : lt i j
         · rw [if_neg fun hS => (hmin i hS).not_gt (hrk i j h)]
         · rw [hN i j (Finset.ne_of_mem_erase hi) h, zero_smul, zero_smul]
-      · simp [Function.update_of_ne hj, hj]
+      · simp [hj]
   simpa using key Finset.univ
 
 end Triangular

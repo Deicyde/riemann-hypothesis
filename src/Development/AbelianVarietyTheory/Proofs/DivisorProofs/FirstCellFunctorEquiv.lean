@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.GeometricLemmaFiltration
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HasFiniteLengthOfIsIrreducible
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.BernsteinUnitaryProductIrreducible
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SubSmulMemOfEquiv
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviBlockRepEquivFirst
 open GlobalTheory.PRep GlobalTheory.SmGL Matrix
@@ -25,7 +23,7 @@ def what₂ (u v : ℕ) : ∀ i, (Σ j, Fin ((cellFirst u v).1 i j)) ≃ Two (Fi
 
 theorem modExp_bool (m : Bool → Type) [∀ a, Fintype (m a)] :
     modExp m false = Fintype.card (m true) ∧ modExp m true = -Fintype.card (m false) := by
-  constructor <;> simp [modExp, Finset.sum_filter, Fintype.sum_bool]
+  constructor <;> simp [modExp, Finset.sum_filter]
 
 theorem card_b (u v : ℕ) (i j : Bool) : Fintype.card (Fin ((cellFirst u v).1 i j)) = (cellFirst u v).1 i j :=
   Fintype.card_fin _
@@ -42,7 +40,7 @@ theorem modExp_colT (u v : ℕ) : modExp (fun i => Fin ((cellFirst u v).1 i true
 
 theorem modExp_two (u v : ℕ) : modExp (Two (Fin u) (Fin v)) false = v ∧
     modExp (Two (Fin u) (Fin v)) true = -u := by
-  constructor <;> simp [modExp, Finset.sum_filter, Fintype.sum_bool]
+  constructor <;> simp [modExp, Finset.sum_filter]
 
 variable {k : Type} [Field k] [ValuativeRel k] [TopologicalSpace k] [IsNonarchimedeanLocalField k]
 

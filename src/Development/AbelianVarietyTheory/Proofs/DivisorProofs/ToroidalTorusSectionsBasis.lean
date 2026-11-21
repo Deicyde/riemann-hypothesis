@@ -1,10 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsWeilChar
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatMatTransposeMulGram
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LengthLetters
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ObjIsAbelianSchemeDimRigidifiedSym
 import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.LocallyOfFiniteTypeKer
-import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsSpecialisationWithThetaPoint
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsUnitOfPowEqOne
 
 set_option autoImplicit false
@@ -35,7 +32,7 @@ theorem chars_transform {G T U : Type} [CommGroup G] [CommGroup T] [CommGroup U]
   have h2 : k' = ∏ i, (∏ j, σ j ^ M j i) ^ n i :=
     hinj (by simp only [hk', hk, map_prod, map_pow, map_zpow, hA])
   rw [h2, h1]
-  simp only [map_prod, map_pow, map_zpow, hχ, ← zpow_natCast, ← zpow_mul, prod_zpow_eq]
+  simp only [map_prod, map_zpow, hχ, ← zpow_natCast, ← zpow_mul, prod_zpow_eq]
   congr 1
   have h3 : ∀ i, ∑ j, B j m * M j i = ∑ j, B i j * M' j m := fun i => by
     have := congrFun (congrFun hM i) m

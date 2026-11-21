@@ -1,8 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.KernelLattices.ThDistC
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Divisibility.CoefMod
 import Formalism.GradedWeylDivisibility.FockSpaceTableaux.LDrowLemmas
-import Formalism.GradedWeylDivisibility.FinalD
 
 open Formalism.L2.Ker MvPolynomial
 
@@ -19,7 +17,7 @@ lemma weight_colW_apply {r n : ℕ} (m : Fin r × Fin n →₀ ℕ) (t : Fin n) 
     simp [Formalism.GradedWeylDivisibility.colW]
   · intro s _ hs
     refine Finset.sum_eq_zero fun a _ => ?_
-    simp [Formalism.GradedWeylDivisibility.colW, Pi.single_apply, Ne.symm hs]
+    simp [Formalism.GradedWeylDivisibility.colW, Ne.symm hs]
   · simp
 
 theorem rowAct_scalar_dualWeyl {r n : ℕ} (ν : Fin n → ℕ) (c : ℂ) (F : MvPolynomial (Fin r × Fin n) ℂ)

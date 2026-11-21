@@ -1,8 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.PairPtsClasses
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.PairPtsEqSum
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MovFn
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.DetIdlVal
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.GridStandardVacuumScalarEqProdLocalPlaces
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LatHatStabOfHatL
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SplitPlaceScalarsMulEqOppositePathEdgeFactorsStatement

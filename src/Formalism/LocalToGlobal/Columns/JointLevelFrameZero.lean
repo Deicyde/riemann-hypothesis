@@ -1,5 +1,7 @@
-import Formalism.LocalToGlobal.Columns.CharactersLevelZeroAgree
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.TiedGlRec
+import Formalism.LocalToGlobal.Columns.HermOwed
 
 open NumberField IsDedekindDomain Module Matrix
 open scoped TensorProduct

@@ -1,8 +1,12 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LatticeBasics.CommuteTheta
 import Development.WeilBound.ThetaLifts.LatticeBasics.BadStmt
 import Development.WeilBound.ThetaLifts.LatticeBasics.SchrUnit
 import Development.WeilBound.ThetaLifts.LeviDeterminants.CharacterAdmissibility.AdelInt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenIntertwinerTransitive
+import Development.WeilBound.ThetaLifts.LatticeBasics.BoxSecX
+import Development.WeilBound.ThetaLifts.LatticeBasics.ContinuousFlat
 
 noncomputable section
 

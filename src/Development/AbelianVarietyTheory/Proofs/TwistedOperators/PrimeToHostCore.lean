@@ -1,8 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.RealLowestKTypeCoeffSquareIntegrable
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IntegralTsumOfFactor
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicScalarBase
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.NormLiftFormsFiniteGroupAction
+import Development.AbelianVarietyTheory.Counterexamples.RotationExamples.LevelVectorSizeBounds
 
 noncomputable section
 

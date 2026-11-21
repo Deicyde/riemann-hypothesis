@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.SettingsFormsExistGrid
 import Development.AbelianVarietyTheory.Definitions.Divisors.NonemptyGridDataIff
 

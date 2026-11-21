@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsCoType
 
 noncomputable section
@@ -110,11 +111,11 @@ theorem liftS_diag (ξ : kˣ →* ℂˣ) (ψ : Matrix D D' k → ℂ) (y : Matri
     · exact zero_mem _
     · exact hy i j
   have : Units.mk0 _ h.det_ne = 1 := by ext; simp
-  simp [liftS, schur, datum, dif_pos h, this]
+  simp [liftS, schur, datum, dif_pos h]
 
 theorem segL_one (ϖ : kˣ) (z : ℂˣ) : segL ϖ z 1 = {z} := by
-  have : absPow k 0 ϖ = 1 := by ext; simp [val_absPow]
-  simp [segL, this]
+  have : absPow k 0 ϖ = 1 := by ext; simp
+  simp [segL]
 
 theorem exists_reps {G : Type} [Group G] [TopologicalSpace G] [IsTopologicalGroup G] (J : Subgroup G)
     (ho : IsOpen (J : Set G)) (hc : IsCompact (J : Set G)) (g : G) :

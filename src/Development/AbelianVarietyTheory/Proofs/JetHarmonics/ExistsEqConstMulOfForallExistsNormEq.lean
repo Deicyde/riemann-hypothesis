@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.HolomorphicFamilies.EqZeroOfMulEqZero
+import Mathlib.Analysis.Complex.AbsMax
+import Mathlib.Analysis.InnerProductSpace.OfNorm
+import Mathlib.Topology.Baire.LocallyCompactRegular
+import Mathlib.Topology.UniformSpace.Uniformizable
 
 namespace GlobalTheory
 

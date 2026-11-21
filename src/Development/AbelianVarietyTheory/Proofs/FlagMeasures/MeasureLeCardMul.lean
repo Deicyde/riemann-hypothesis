@@ -1,8 +1,9 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.GlobAut
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.CsSpan
 import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.CsGlobApprox
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.FiniteAdelicUnitaryCongruenceTopology
+import Mathlib.GroupTheory.IndexNSmul
 
 open MeasureTheory Formalism.MainNotions.S NumberField Matrix
 open scoped TensorProduct

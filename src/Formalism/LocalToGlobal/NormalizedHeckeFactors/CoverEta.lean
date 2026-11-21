@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.NormalizedHeckeFactors.CoverThm
 import Formalism.LocalToGlobal.NormalizedHeckeFactors.CoverLen
 

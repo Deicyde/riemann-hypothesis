@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.HookBound
 import Formalism.GradedWeylDivisibility.DualWeylDominanceOf
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Rat.Star
+import Mathlib.Topology.Sheaves.Presheaf
 
 open MvPolynomial Formalism.GradedWeylDivisibility
 

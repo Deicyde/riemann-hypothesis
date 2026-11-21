@@ -1,14 +1,5 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterNamed
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterSt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterRes
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.BlowupProjections.BlowupProjStatement
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovGeometry.MoriwakiSt
-import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsArith
-import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsPieceDegree
-import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsEmbeddingPieces
-import GroundTheory.HeightsAndTheta.Heights.Intersections.Statements
-import GroundTheory.HeightsAndTheta.Heights.HodgeLowerBound.StatementsPushDown
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PSectionOrderAtPoint
 open MvPolynomial ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.ArakelovGeometry Filter Topology NumberField
 
@@ -52,7 +43,7 @@ theorem exists_monic_rel (y : (Σ k, ι k) → Ω) {f g : MRing ι} {d : K → �
     convert h1 using 1
     have hj' : j ≤ n := (Finset.mem_range.mp hj).le
     funext k
-    simp only [Pi.add_apply, Pi.smul_apply, Pi.zero_apply, smul_eq_mul, zero_add]
+    simp only [Pi.add_apply, Pi.smul_apply, smul_eq_mul, zero_add]
     rw [← add_mul, Nat.add_sub_cancel' hj']
   · have hsum : ∀ j ∈ Finset.range n,
         aeval y (C (p.coeff j) * f ^ j * g ^ (n - j)) =

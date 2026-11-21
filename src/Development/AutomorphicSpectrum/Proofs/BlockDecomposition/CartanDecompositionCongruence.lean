@@ -1,10 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.SquareIntegrableTempered.CentredSegments.IrreducibleUnif
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IrreducibleAdmissibleGL
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.StandardFunctorsFiniteLength
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.CartanExists
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsFractionRingInteger
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FiniteCosetsPrincipalCongruence
+import Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Basic
 
 open Filter Topology MeasureTheory GlobalTheory.PRep GlobalTheory.SplitWeil GlobalTheory.SmGL GlobalTheory.LocGL GlobalTheory.JHMult ValuativeRel
 
@@ -127,7 +127,7 @@ theorem cartan_cover : ∀ (k : Type) [Field k] [ValuativeRel k] [TopologicalSpa
     change incl k N U * (Zls.diagPow k N (Zls.lamOf g) * z) * incl k N V =
       incl k N p₁ * ((incl k N p₁)⁻¹ * incl k N U) * Zls.diagPow k N (Zls.lamOf g) *
         (incl k N V * (incl k N p₂)⁻¹) * incl k N p₂ * z
-    simp only [mul_assoc, inv_mul_cancel_left, inv_mul_cancel, mul_one]
+    simp only [mul_assoc, inv_mul_cancel, mul_one]
     rw [hzc (incl k N V), mul_inv_cancel_left]
 
 end GlobalTheory.CompanionTheory.Dblock.CartanCover

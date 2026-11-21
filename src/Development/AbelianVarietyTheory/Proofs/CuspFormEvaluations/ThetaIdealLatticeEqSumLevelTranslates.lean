@@ -1,13 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SpanningFamilies.IsStabForm
-import Development.AbelianVarietyTheory.Definitions.ThetaValues.FlatMemLatIffStdLat
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.IsotropicCoefficientSplitting
-import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.HermitianFormAtFrameLaws
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.FockHxDifferentiable
 import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.LevelOneThetaEqSmulOfSelfDualLattice
-import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.TensorLatticeSelfDualSemicharacterIndex
 import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.LevelStructureProperties
 import Development.AbelianVarietyTheory.Proofs.ToricGeometry.AdditionLevelTwoMul
+import Mathlib.Analysis.Calculus.FDeriv.Pi
+import Mathlib.Analysis.Fourier.FiniteAbelian.Orthogonality
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField Matrix Complex
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.FD GlobalTheory GlobalTheory.ThFr
@@ -321,7 +319,7 @@ theorem theta_eq_sum_translates : ∀ (E : Type) [Field E] [NumberField E] [IsCM
       funext b'
       rcases eq_or_ne b' b with rfl | hb
       · simp
-      · simp [Pi.single_eq_of_ne hb, pv_zero, hb]
+      · simp [pv_zero, hb]
     · intro b' _ hb
       simp [Pi.single_eq_of_ne hb, pv_zero, fock_hx_zero_right]
     · simp

@@ -1,15 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviBlockSizesSum
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WittRankLeSkewSignature
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IsSplitChartSplitChart
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MeasureFundDomLtTop
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TripSizesSum
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsBlockEmb
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocAdMul
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalUnipotentEmbeddingActionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalSpanColumnInclusionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SplitProjectionColumnSpanMemStatement
@@ -139,7 +130,7 @@ theorem emb_mem_unip : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [Num
       by_contra hc; exact hne (Pi.single_eq_of_ne hc 1)
     rw [hj', hbl' k, hbl' _] at hkj
     have := tri_lt hkj
-    simp only [Fin.val_mk] at this
+    simp only at this
     exact ⟨⟨k.val, by omega⟩, this, (hcol k (by omega)).symm⟩
 
   have G3 : ∀ (x' : GLoc σ J v) (g' : GL (Fin n) (Fv F v)), g' ∈ GlobalTheory.SmGL.unipRad (Fv F v) (tripPlace hld) →

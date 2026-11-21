@@ -1,5 +1,10 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.FourierCoefficientDomain
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.FlowCoefficientBounds
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.Tactic.ENatToNat
 
 namespace ReciprocityTheory.ChartRestriction.G.FD.CuspCoefficientFlow
 

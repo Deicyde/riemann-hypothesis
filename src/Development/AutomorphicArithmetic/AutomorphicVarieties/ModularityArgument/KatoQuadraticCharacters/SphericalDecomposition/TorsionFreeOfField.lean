@@ -1,7 +1,7 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.KatoQuadraticCharacters.SphericalDecomposition.SphOfWit
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.RTwist
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.TemperedLocalComponents.PRepNew
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExpoEqZeroOfPow
+import Development.AbelianVarietyTheory.Statements.CuspidalUnitaryTwists.TwNewQ
 
 noncomputable section
 

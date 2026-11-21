@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.TensorProductTheorem.GKTensor
-import GroundTheory.AutomorphicForms.GKModules.Casimir
 import GroundTheory.AutomorphicForms.AutomorphicFormSpaces.GKStableLaplacian
 
 namespace GroundTheory.Automorphic

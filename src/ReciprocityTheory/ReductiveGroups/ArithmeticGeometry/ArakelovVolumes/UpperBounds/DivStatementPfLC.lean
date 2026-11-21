@@ -1,7 +1,9 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.WeightFunctionOnFrames
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.OntoStatementPfB
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.FourierCoefficientDomain
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.DivStatementPfLB
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.BasePsiLeviLowerBound
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.DivStatementPfLA
 
 namespace ReciprocityTheory.ChartRestriction.G.AR.Up.DivLC
 
@@ -17,11 +19,11 @@ theorem nmat_zero' (τ : X.Ψ) : mat (nmat X (0 : V (nd X))) τ = 1 := by
   ext a b
   by_cases h : b < a
   · have hab : a ≠ b := by rintro rfl; exact lt_irrefl _ h
-    simp [mat, nmat, h, hab, Matrix.one_apply]
+    simp [mat, nmat, h, hab]
     rfl
   · by_cases hab : a = b
     · subst hab; simp [mat, nmat]
-    · simp [mat, nmat, h, hab, Matrix.one_apply]
+    · simp [mat, nmat, h, hab]
 
 theorem cpt_zero' (x0 : Frame X.Ψ r) : cpt X x0 0 = x0 := by
   funext τ

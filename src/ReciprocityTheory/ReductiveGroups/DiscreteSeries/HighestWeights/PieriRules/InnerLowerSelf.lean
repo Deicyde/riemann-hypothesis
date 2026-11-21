@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.HighestWeights.PieriRules.KTypeIntDomStatement
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.HighestWeights.Weight
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.HighestWeights.PieriRules.KtintExpApplyOfEig

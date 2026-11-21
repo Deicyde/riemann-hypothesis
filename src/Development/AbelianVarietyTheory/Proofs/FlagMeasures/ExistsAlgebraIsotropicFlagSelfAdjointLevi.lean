@@ -1,5 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.CuspFrameWeights.SameKindIsometric
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.DefClassNum
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
+import Mathlib.RingTheory.TotallySplit
 
 open scoped ComplexOrder
 open MeasureTheory NumberField Matrix Finset Formalism.MainNotions.S GlobalTheory.Count GlobalTheory.FlagMeas
@@ -348,13 +353,13 @@ theorem exists_levi_algebra : ∀ (n : ℕ) (ε : Fin n → Bool) (a : ℕ) (j :
       rw [mul_sub, sub_mul, sub_mul]
       rcases lt_or_gt_of_ne hik with h | h
       · have h' : (i : ℕ) < k := h
-        rw [hPP' i.succ k.succ (by simp only [Fin.le_def, Fin.val_succ, Fin.val_castSucc]; omega), hPP' i.castSucc k.succ (by simp only [Fin.le_def, Fin.val_succ, Fin.val_castSucc]; omega),
+        rw [hPP' i.succ k.succ (by simp only [Fin.le_def, Fin.val_succ]; omega), hPP' i.castSucc k.succ (by simp only [Fin.le_def, Fin.val_succ, Fin.val_castSucc]; omega),
           hPP' i.succ k.castSucc (by simp only [Fin.le_def, Fin.val_succ, Fin.val_castSucc]; omega),
-          hPP' i.castSucc k.castSucc (by simp only [Fin.le_def, Fin.val_succ, Fin.val_castSucc]; omega), sub_self]
+          hPP' i.castSucc k.castSucc (by simp only [Fin.le_def, Fin.val_castSucc]; omega), sub_self]
       · have h' : (k : ℕ) < i := h
-        rw [hPP k.succ i.succ (by simp only [Fin.le_def, Fin.val_succ, Fin.val_castSucc]; omega), hPP k.succ i.castSucc (by simp only [Fin.le_def, Fin.val_succ, Fin.val_castSucc]; omega),
+        rw [hPP k.succ i.succ (by simp only [Fin.le_def, Fin.val_succ]; omega), hPP k.succ i.castSucc (by simp only [Fin.le_def, Fin.val_succ, Fin.val_castSucc]; omega),
           hPP k.castSucc i.succ (by simp only [Fin.le_def, Fin.val_succ, Fin.val_castSucc]; omega),
-          hPP k.castSucc i.castSucc (by simp only [Fin.le_def, Fin.val_succ, Fin.val_castSucc]; omega)]
+          hPP k.castSucc i.castSucc (by simp only [Fin.le_def, Fin.val_castSucc]; omega)]
         simp
   have hcomm : ∀ X : Matrix (Fin n) (Fin n) ℂ, (∀ i, X * P i = P i * X) ↔ ∀ i, X * u i = u i * X := by
     intro X

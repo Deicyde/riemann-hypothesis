@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LeviDeterminants.MixedModels.PlaneAd
 
 open scoped TensorProduct NNReal Matrix

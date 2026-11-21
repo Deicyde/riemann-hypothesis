@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
-import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.FirstChernLeviEqConstant
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Pj Formalism.BasicNotions.TH Formalism.L2.Theta ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.FD GlobalTheory.AllWt GlobalTheory.CompHt GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.Mean4 GlobalTheory.Mean4O
 open scoped ENNReal Classical
 
@@ -61,7 +60,7 @@ theorem num_lin {V : Type} [AddCommGroup V] [Module ℝ V] {n : ℕ}
       funext j
       refine Fin.cases ?_ (fun k => ?_) j
       · simp
-      · simp [Function.update, Equiv.swap_apply_def]
+      · simp [Function.update]
     rw [← h4, hf]
   simp only [Function.Embedding.coeFn_mk, h3, Finset.sum_const, Finset.card_univ, Fintype.card_fin, nsmul_eq_mul]
   push_cast

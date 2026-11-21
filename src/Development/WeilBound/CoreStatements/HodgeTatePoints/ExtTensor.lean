@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.CommutativeAlgebra.TranslateMemIndOrder
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.HodgeTatePoints.TwhopfInd
 import Development.WeilBound.CoreStatements.HodgeTatePoints.HtatDesc
+import Mathlib.RingTheory.PicardGroup
 open GlobalTheory.CompanionTheory.Ar.BT TensorProduct
 
 namespace PositivityTheory.HtPt.Mh

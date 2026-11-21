@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.OrderedCechToCatCochainsOneApplyValueAtSubset
 import Development.AutomorphicSpectrum.Proofs.HermitianForms.Imports
+import Mathlib.Analysis.ODE.ExistUnique
 
 noncomputable section
 
@@ -31,7 +33,7 @@ theorem real_linear_skew (L : Mat n →ₗ[ℝ] ℂ) (X : Mat n) (hX : Xᴴ = -X
     ext i j
     by_cases h : i = a ∧ j = b
     · obtain ⟨rfl, rfl⟩ := h
-      simp [Complex.ext_iff]
+      simp
     · have : ∀ w : ℂ, Matrix.single a b w i j = 0 := fun w => by
         rw [Matrix.single_apply_of_ne]
         tauto
@@ -82,7 +84,7 @@ theorem AX_apply (X : Mat n) (hX : Xᴴ = -X) (w : GlobalTheory.CompanionTheory.
   let L : Mat n →ₗ[ℝ] ℂ := ((fderiv ℝ w.1 g).comp (GlobalTheory.CompanionTheory.RCalc.mulL g)).toLinearMap
   have hL : ∀ v, L v = Rd v w.1 g := fun _ => rfl
   have e : (AX X w).1 g = ∑ a, ∑ b, X a b * (GlobalTheory.CompanionTheory.ModelS.Kf a b w).1 g := by
-    simp [AX, LinearMap.sum_apply, Submodule.coe_sum, Finset.sum_apply]
+    simp [AX, LinearMap.sum_apply, Finset.sum_apply]
   rw [e, ← hL X, real_linear_skew L X hX]
   refine Finset.sum_congr rfl fun a _ => Finset.sum_congr rfl fun b _ => ?_
   rw [Kf_apply a b w hg]

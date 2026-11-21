@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.UniformContinuousConstSMulOfIsIsometricSMul
-import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.ExistsFactorialMulEqPow
-import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.DeRham
-import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.DeRhamMap
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods.Embedding
 import Development.AutomorphicArithmetic.CrystallineRing.Acris0
 

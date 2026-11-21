@@ -1,9 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.LayerProd
-import Formalism.RealPlaceAnalysis.FinalF
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.NormPosOfIsUnit
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.HaarBallGrowthUnitaryJStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.IntegrableExpNegMulOfSublevelGrowthStatement
+import Mathlib.Topology.Connected.Separation
+import Mathlib.Topology.Separation.Lemmas
 
 open MeasureTheory Matrix Finset Formalism.MainNotions.S Formalism.REAL Formalism.QuantumDeterminants GlobalTheory.Count
 open scoped InnerProductSpace
@@ -43,10 +43,10 @@ theorem dOp_eq_zero {n : ℕ} (ε : Fin n → Bool) (h0 : rkR ε = 0) (g : UJ ε
     rcases hall with hf | ht
     · right
       ext i j
-      by_cases hij : i = j <;> simp [Jm, Matrix.diagonal_apply, Matrix.one_apply, hf, hij]
+      by_cases hij : i = j <;> simp [Jm, hf, hij]
     · left
       ext i j
-      by_cases hij : i = j <;> simp [Jm, Matrix.diagonal_apply, Matrix.one_apply, ht, hij]
+      by_cases hij : i = j <;> simp [Jm, Matrix.one_apply, ht, hij]
   have hg : inUJ ε (uMat g) := g.2
   have hu : uMat g ∈ Matrix.unitaryGroup (Fin n) ℂ := by
     rw [Matrix.mem_unitaryGroup_iff', Matrix.star_eq_conjTranspose]

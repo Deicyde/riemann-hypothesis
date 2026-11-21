@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockMap
 open scoped Matrix
 open GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.RealLift Formalism.BasicNotions.TH Matrix
@@ -13,7 +13,7 @@ lemma entry_eq {m α β : Type} [Fintype m] (A : Matrix m α ℂ) (M : Matrix m 
 
 lemma map_star_mul {m k l : Type} [Fintype k] (A : Matrix m k ℂ) (B : Matrix k l ℂ) :
     (A * B).map star = A.map star * B.map star := by
-  ext i j; simp [Matrix.mul_apply, star_sum]
+  ext i j; simp [Matrix.mul_apply]
 
 lemma Jm_apply (p q : ℕ) (a b : Ix p q) : Jm p q a b =
     match a, b with

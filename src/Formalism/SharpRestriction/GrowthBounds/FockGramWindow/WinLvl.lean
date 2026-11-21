@@ -1,4 +1,10 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.FockGramWindow.LettersAtUPos
+import Formalism.SharpRestriction.GrowthBounds.FockGramWindow.GramWindow2Proved
+import Formalism.SharpRestriction.GrowthBounds.FockGramWindow.NeglogPowMul
+import Formalism.SharpRestriction.GrowthBounds.FockGramWindow.NormFockLe
+import Formalism.SharpRestriction.GrowthBounds.MonomialFactorials.DegFactNeZero
 
 noncomputable section
 

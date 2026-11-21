@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.ThetaExistenceInductiveFromPieces
+import Mathlib.Analysis.Fourier.FiniteAbelian.PontryaginDuality
+import Mathlib.Analysis.InnerProductSpace.Positive
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.MetricSpace.Sequences
 
 noncomputable section
 

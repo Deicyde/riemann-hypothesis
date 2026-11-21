@@ -1,8 +1,7 @@
-import Mathlib
-import GroundTheory.ProfiniteCohomology.ContinuousCochains.LongExactSequence
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.CohomologicalDimension.SubsingletonCohomologyOfPrimaryOfFinite
 import GroundTheory.ProfiniteCohomology.KummerBasic
-import GroundTheory.ProfiniteCohomology.GaloisCohomology.UnitsInflationCochainsFHomApply
 import GroundTheory.ProfiniteCohomology.GaloisCohomology.IsZeroGroupCohomologyQuotientToInvariantsGalAdd
 set_option maxSynthPendingDepth 1
 

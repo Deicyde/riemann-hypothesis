@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCellOfIsFrameMat
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsAffineEigenframeNearImage
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsBaseFrame
 
 set_option autoImplicit false
 

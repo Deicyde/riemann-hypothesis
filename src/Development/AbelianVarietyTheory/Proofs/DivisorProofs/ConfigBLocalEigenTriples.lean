@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocOpInfMul
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalWeilOperatorMulStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ParabolicLineScalarCharacterStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaTriplePeriodIdentityCaseBStatement

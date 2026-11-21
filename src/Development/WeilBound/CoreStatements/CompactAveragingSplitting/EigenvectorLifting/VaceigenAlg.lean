@@ -1,5 +1,8 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.MembershipCriteria.LaEqSqrtSmulLam
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 noncomputable section
 

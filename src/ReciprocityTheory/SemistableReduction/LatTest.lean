@@ -1,4 +1,17 @@
+import BuildAid.Leniency.Example
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import ReciprocityTheory.SemistableReduction.LatSemiSt
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.NumberTheory.NumberField.CMField
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -150,7 +163,7 @@ theorem cover_QI (φ : QI →+* ℂ) (w : ℂ) : ∃ l : QI, IsIntegralElt l ∧
   set b : ℤ := round w.im with hb_def
   refine ⟨(a : QI) + ((s * b : ℤ) : QI) * ζ, ?_, ?_⟩
   · refine ⟨(a : 𝓞 QI) + ((s * b : ℤ) : 𝓞 QI) * ⟨ζ, hint⟩, ?_⟩
-    simp only [map_add, map_mul, map_intCast]
+    simp only [map_add, map_intCast]
     rfl
   · have hs' : (s : ℂ) ^ 2 = 1 := by exact_mod_cast hs
     have h1 : φ ((a : QI) + ((s * b : ℤ) : QI) * ζ) = (a : ℂ) + (b : ℂ) * Complex.I := by

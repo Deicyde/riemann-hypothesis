@@ -1,6 +1,5 @@
-import Mathlib
-import Formalism.PairingDivisors.StatementA
-import Formalism.PairingDivisors.StatementN
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.PairingDivisors.PairingDivisorProofs.Height
 
 open Module NumberField IsDedekindDomain Finset

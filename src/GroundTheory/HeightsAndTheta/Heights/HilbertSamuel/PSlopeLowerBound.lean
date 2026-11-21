@@ -1,9 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsArith
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsHilbert
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsGenericFibre
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsSectionsRank
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsDegreePositive
+import Mathlib.Analysis.Asymptotics.SpecificAsymptotics
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.HilbertSamuel

@@ -1,7 +1,10 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.Graded
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.OrbitVanishingLocal
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.WPresGrZeroIsCOOfMemMaximalIdeal
 import Development.AutomorphicArithmetic.AutomorphicVarieties.CommutativeAlgebra.GrGen
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.RingTheory.TotallySplit
 
 open IsLocalRing MvPowerSeries UpperTheory.V.Alg
 

@@ -1,8 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.BranchingTraces.HeBranching
-import Development.WeilBound.HeckeVectors.HeckeDoubleCosets.HeckeCoefficientDegrees.DegreeHcOfGoodPresentFamily
-import CompanionTheory.HarishChandraModules.BesselParameterIntegrals.SmoothCyclicVectors.SmoothVec
-import Formalism.SharpRestriction.CuspSpanNormBounds.BridgeCSchur
-import Formalism.SharpRestriction.CuspSpanNormBounds.BruhatCellsKronecker.FamilyProjectorSectionLocal
 
 noncomputable section
 
@@ -128,7 +126,7 @@ theorem jm_emb (hF : Fits ε ε' e) : Jm ε = emb e (Jm ε') := by
   obtain ⟨y, rfl⟩ := e.surjective j
   simp only [emb, Jm, Matrix.reindex_apply, Matrix.submatrix_apply, Equiv.symm_apply_apply,
     Matrix.diagonal_apply, e.injective.eq_iff]
-  rcases x with x | ⟨⟩ <;> rcases y with y | ⟨⟩ <;> simp [Matrix.diagonal_apply, h0, h1, Matrix.one_apply]
+  rcases x with x | ⟨⟩ <;> rcases y with y | ⟨⟩ <;> simp [Matrix.diagonal_apply, h0, h1]
 
 theorem emb_ct (a : Matrix (Fin n) (Fin n) ℂ) : (emb e a)ᴴ = emb e aᴴ := by
   simp [emb, Matrix.fromBlocks_conjTranspose]

@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.UnipLat
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.NumberTheory.NumberField.CanonicalEmbedding.Basic
 
 open NumberField NumberField.InfinitePlace
 

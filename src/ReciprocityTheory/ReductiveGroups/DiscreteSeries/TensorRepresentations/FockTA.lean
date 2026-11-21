@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.InhabCAR
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.TensorRepresentations.CARUnit
 
 noncomputable section
 

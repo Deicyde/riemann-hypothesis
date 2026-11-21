@@ -1,4 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.SymplecticGSp4.MapRepApply
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 open UpperTheory.V.GradeZeroInterpolatingElement
 
 section SlopeTestRemainingChoices
@@ -16,7 +23,7 @@ private theorem adj_adj' (X : M4 R) : adj (adj X) = X := by
 
 private theorem adj_one' : adj (1 : M4 R) = 1 := by
   ext i j
-  fin_cases i <;> fin_cases j <;> simp [adj_apply, sgn, Fin.rev, Matrix.one_apply]
+  fin_cases i <;> fin_cases j <;> simp [adj_apply, sgn, Fin.rev]
 
 private theorem adj_add' (X Y : M4 R) : adj (X + Y) = adj X + adj Y := by
   ext i j

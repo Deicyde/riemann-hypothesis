@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.EnvOfMat
-import Formalism.HermitianCurvature.StatementB
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.BetaSesquilinearity
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
 
 open Matrix
 

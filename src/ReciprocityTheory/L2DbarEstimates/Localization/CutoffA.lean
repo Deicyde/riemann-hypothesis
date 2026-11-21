@@ -1,5 +1,10 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import ReciprocityTheory.L2DbarEstimates.Localization.UnweightBackStatement
-import ReciprocityTheory.L2DbarEstimates.ChartDerivatives.Imports
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Topology.Sheaves.Presheaf
 
 namespace ReciprocityTheory.L2DbarEstimates.F
 
@@ -155,7 +160,7 @@ private lemma norm_wd_ofReal_eq_norm_wdb_ofReal (n : ℕ) (j : Fin n) (h : V n �
   unfold wd wdb
   rw [← Complex.norm_conj]
   congr 1
-  simp only [map_div₀, map_sub, map_add, map_mul, key, Complex.conj_I, map_ofNat]
+  simp only [map_div₀, map_sub, map_mul, key, Complex.conj_I, map_ofNat]
   ring
 
 theorem cut_norm_d_eq {M : Type*} [TopologicalSpace M] (n : ℕ) (z : M → V n) (j : Fin n)

@@ -1,14 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.IsTwiceDifferentiableAt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.CompRightEqZero
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.KappaSt
-import GroundTheory.HeightsAndTheta.Heights.Intersections.StatementsFibreLocal
-import GroundTheory.HeightsAndTheta.Heights.Antisymmetric.Statements
-import GroundTheory.HeightsAndTheta.Heights.ElementarySymmetric.PDiagFibreFubini
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.SphereMeasureStereographicIntegralStatement
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.XiPotentialHessianDecompositionStatement
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.MixedDiscriminantCofactorExpansionStatement
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.EvalW
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.MixedDiscriminantLinearFunctionalStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.MixedDiscriminantTwoRowExpansionStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.MixedDiscriminantOneRowExpansionStatement
@@ -148,7 +139,7 @@ theorem fibre_integral_normal : GroundTheory.Heights₂.Heights.Inter.FibreLocal
           simp only [DiagonalFibreFubini.wordCoef]
           split_ifs <;> rfl
         by_cases hr : (r : ℕ) < 2 * k
-        · simp only [hr, if_true, hcoef, hf, Fin.tail, Fin.cons_zero, Fin.cons_succ]
+        · simp only [hr, if_true, hcoef, hf, Fin.cons_zero]
           simp
         · simp [hr]
     simp_rw [hpt]

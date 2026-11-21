@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.ContDiffAtFrameEntry
-import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.LintegralImageEqLintegralNormSqDetMul
+import Mathlib.RingTheory.Complex
+import Mathlib.RingTheory.SimpleRing.Principal
 open MeasureTheory Filter Topology Matrix GlobalTheory.CompanionTheory.Ar.PB
 open scoped ComplexOrder
 
@@ -187,7 +189,7 @@ theorem integral_mob_sq (hg : IsUnit g.det) (f : ℂ × ℂ → ℝ) :
     setIntegral_univ, setIntegral_univ] at hcv
   rw [hcv]
   refine integral_congr_ae (Eventually.of_forall fun p => ?_)
-  simp only [GlobalTheory.CompanionTheory.Ar.PB.FibPt.CovSq.det_prodMap, Prod.map_apply, smul_eq_mul]
+  simp only [GlobalTheory.CompanionTheory.Ar.PB.FibPt.CovSq.det_prodMap, smul_eq_mul]
   rw [abs_of_nonneg (mul_nonneg (Complex.normSq_nonneg _) (Complex.normSq_nonneg _))]
   rfl
 

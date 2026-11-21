@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviBlockSizesSum
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsBlockCentre
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SmGL GlobalTheory.PRep GlobalTheory.SplitWeil GlobalTheory.LeviBlockExponent GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.UAut GlobalTheory.SiegelSet GlobalTheory.ThK.SquareIntegrability
 open scoped TensorProduct
 
@@ -27,7 +26,7 @@ theorem modExp_position (n i : ℕ) (h : i + 1 ≤ n) :
     rw [Finset.sum_congr rfl (g := fun _ => (1 : ℤ)) (fun b hb => by
       simp only [Finset.mem_filter, Finset.mem_univ, true_and, Fin.lt_def] at hb
       simp only [blockSizes₂]; rw [if_pos (by omega)]; simp)]
-    simp only [Finset.sum_const, smul_eq_mul, mul_one]
+    simp only [Finset.sum_const]
     have : Finset.univ.filter (fun b : Fin (i + 2) => b < (⟨i, by omega⟩ : Fin (i + 2))) =
         (Finset.univ.filter (fun b : Fin (i + 2) => (b : ℕ) < i)) := by
       ext b; simp [Fin.lt_def]

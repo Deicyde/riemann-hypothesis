@@ -1,7 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.ShimuraVarieties.MemPrimitiveTensorsIffIsPrimitiveElem
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IsLeftCoactionIffIsCoactionComm
 import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.PredMulSumPadicValNatFactorialAddCardLe
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
 
 noncomputable section
 
@@ -305,7 +310,7 @@ theorem ker_eq_span_one_sub {ε : A →ₐ[R] R} {e : A}
     RingHom.ker ε = Ideal.span {1 - e} := by
   refine le_antisymm (fun w hw => Ideal.mem_span_singleton'.2 ⟨w, ?_⟩) ?_
   · rw [mul_sub, mul_one, mem_annihilator_iff_forall_mul.1 he w hw, sub_zero]
-  · simp [Ideal.span_singleton_le_iff_mem, RingHom.mem_ker, he1]
+  · simp [RingHom.mem_ker, he1]
 
 theorem annihilator_ker_eq_span {ε : A →ₐ[R] R} {e : A}
     (he : e ∈ (RingHom.ker ε).annihilator) (he1 : ε e = 1) :

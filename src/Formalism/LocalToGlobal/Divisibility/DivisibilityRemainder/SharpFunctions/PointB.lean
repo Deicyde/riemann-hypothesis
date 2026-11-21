@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.PtKOfReal
-import Formalism.SharpRestriction.Divisibility.HookProducts.SharpFunctionalBoundFamily
+import Formalism.SharpRestriction.Divisibility.HookProducts.NormAtEqSqrtMajAt
 
 noncomputable section
 

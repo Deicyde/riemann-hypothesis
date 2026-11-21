@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.EtaleSheaves.LeafChartRing
 
 noncomputable section
@@ -254,7 +255,7 @@ theorem ratio1_const (d : ℕ) : (ratio1 D d).Const := by
     y.1.1.2 j.castSucc * Ring.inverse (y.1.1.2 (Fin.last d))
   rw [hx, congrFun h2 j.castSucc, ← hw, ← Units.val_mul, Ring.inverse_unit, Ring.inverse_unit, mul_inv, Units.val_mul,
     mul_comm ((u⁻¹ : Aˣ) : A)]
-  simp only [Units.val_mul, mul_assoc]
+  simp only [mul_assoc]
   linear_combination ((y.1.1.2 j.castSucc) * ((w⁻¹ : Aˣ) : A)) * Units.mul_inv u
 
 theorem ratio_both_constant (d : ℕ) : (ratioBoth D d).Const := by

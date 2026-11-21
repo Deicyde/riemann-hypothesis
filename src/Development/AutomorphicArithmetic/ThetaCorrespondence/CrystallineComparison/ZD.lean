@@ -1,5 +1,8 @@
-import Formalism.LocalRingCardinality.AdicCompletionLocal.LocTied
-import Development.WeilBound.CoreStatements.CrystallinePeriodRings.LocTied6
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.CoreStatements.CrystallinePeriodRings.InstCommRingBcris
+import Formalism.LocalRingCardinality.AdicCompletionLocal.InstIsAdicCompleteOCSpanSingletonSetCast
+import Formalism.SharpRestriction.LevelLetterCocycles.DataNLoc
 
 noncomputable section
 

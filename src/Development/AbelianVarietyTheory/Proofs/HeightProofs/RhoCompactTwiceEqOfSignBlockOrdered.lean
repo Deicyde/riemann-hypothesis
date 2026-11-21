@@ -1,23 +1,17 @@
-import Mathlib
-import Formalism.LocalToGlobal.BesselHermitianTheta.DefsReal
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.BesselHermitianTheta.TiedSmooth
-import Formalism.RealPlaceAnalysis.RealPlaceTaylor.CompactExponentialSurjective
 import Development.AbelianVarietyTheory.BlockTheory.HeightDefect.IsotypicSignedParameters
 import Formalism.SharpRestriction.GlobalSchurBounds.ThickPlacesCorollaryOfAnyTranslate
 import Development.AbelianVarietyTheory.Counterexamples.HeightSurvey.BlattnerShiftsSignedParameters
 import Development.AbelianVarietyTheory.Counterexamples.HeightSurvey.ExistsGoodFamily
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.ExistsBlockOrd
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.NotTrivialAndTwist
-import Formalism.LocalToGlobal.GlobalTheory.GL5.Statement
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.TorusWeightVectorIffCartanWeightVectorStatement
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.FiniteDimKStableSubspaceKFiniteLieStatement
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.IsKStableOnOfLieStableFiniteDimStatement
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.HighestWeightGeneratedWeightsBelowStatement
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.DiscreteSeriesCoverIrreducibleUnitaryStatement
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.BlockOrderedSquareIntegrableStatement
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.HaarUpqEqOfOmegaDensity
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.AtPlaceIffEqAtTau
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.SchurOrthogonalityIndefiniteUnitaryGroupStatement
 
 noncomputable section
 
@@ -537,7 +531,7 @@ theorem blattner_int (P : SignedPar n) (h : BlockOrd e P.sgn) (a : Ix p q) :
   have h1 := GlobalTheory.SignedParTest.blattner_add_rho2C hp a
   have h2 : ((Finset.univ.filter fun b => blockPar P e b < blockPar P e a).card : ℚ) +
       (Finset.univ.filter fun b => blockPar P e a < blockPar P e b).card + 1 = n := by
-    have h3 : (n : ℚ) = ∑ _b : Ix p q, 1 := by simp [← Fintype.card_sum, Fintype.card_congr e]
+    have h3 : (n : ℚ) = ∑ _b : Ix p q, 1 := by simp [Fintype.card_congr e]
     have h4 : (1 : ℚ) = ∑ b : Ix p q, if b = a then 1 else 0 := by simp
     rw [h3, Finset.card_filter, Finset.card_filter]
     nth_rw 1 [h4]

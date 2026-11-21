@@ -1,8 +1,8 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsThetaMeanSquareNorm
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.ZhangDimensionPushDownGrassmannianHeightBounds
-import GroundTheory.HeightsAndTheta.Heights.KernelsLattice
-import GroundTheory.HeightsAndTheta.Heights.LatticeLemmas.StatementsBundles
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.LieModel
+import Mathlib.Tactic.Monotonicity.Lemmas
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsLieBasis
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField MeasureTheory
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi
 open GroundTheory.Heights₂.Heights TensorProduct
@@ -119,7 +119,7 @@ theorem tr_fst (v : epsAt (𝟙 (Sp R)) ⟶ G) (hv : IsTanAt G (𝟙 (Sp R)) v) 
       rw [← Category.assoc, ← Spec.map_comp, ← CommRingCat.ofHom_comp]
       have : (TrivSqZeroExt.fstHom C C C).toRingHom.comp (algebraMap C (DualNumber C)) = RingHom.id C := by
         refine RingHom.ext fun r => ?_
-        simp [TrivSqZeroExt.algebraMap_eq_inl]
+        simp
       rw [show ((algebraMap C (DualNumber C) : C →+* DualNumber C)) = algebraMap C (DualNumber C) from rfl]
       erw [this]
       simp)
@@ -129,7 +129,7 @@ theorem tr_fst (v : epsAt (𝟙 (Sp R)) ⟶ G) (hv : IsTanAt G (𝟙 (Sp R)) v) 
     rw [← Spec.map_comp, ← CommRingCat.ofHom_comp]
     have : (TrivSqZeroExt.fstHom C C C).toRingHom.comp (algebraMap C (DualNumber C)) = RingHom.id C := by
       refine RingHom.ext fun r => ?_
-      simp [TrivSqZeroExt.algebraMap_eq_inl]
+      simp
     erw [this]
     simp
   have h2 : δ ≫ rhoE (y ≫ G.hom) ≫ v = 1 := by

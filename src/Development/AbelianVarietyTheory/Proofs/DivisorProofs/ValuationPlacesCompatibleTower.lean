@@ -1,9 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.Statement
-import ReciprocityTheory.GaloisValuations.Global
-import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.Imports
-import CompanionTheory.EightfoldTheory.VariationTheory.AutomorphicForms.RealStructures.Imports
-import CompanionTheory.EightfoldTheory.VariationTheory.AutomorphicForms.ImportsBis
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.RealGaloisRepresentations.IwahoriSphericalTransfer.RamificationIdxEqOneAndInertiaDegEqOne
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual
 set_option synthInstance.maxHeartbeats 400000

@@ -1,9 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.RealAt
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.RkLe
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.EquivFrameBTheta
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.KernelSiteModelStageWeightsEqChainWeightsStatement
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.DetRationalUnitaryOrthonormalChangeMatricesStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.StepCharacterDetRationalIsometryStatement
 open Formalism.BasicNotions NumberField IsDedekindDomain Formalism.MainNotions.G Formalism.MainNotions.FormalGroupSystem Formalism.L2.G.Pend Formalism.MainNotions Formalism.L2.Ker Formalism.L2.PairingIndexBounds.F Formalism.L2.KerInert Formalism.UG Formalism.L2.G.Cmp Formalism.L2.Forms Formalism.L2.KerInert.SecondKernelProjection Formalism.L2.KerInert.QuadraticBaseChangeGL3 Formalism.L2.KerInert.SecondKernelDifference Formalism.L2.KerInert.SecondKernelHermitian Formalism.MainNotions.G.KAat Formalism.MainNotions.G.CmpJ Formalism.L2.KerInert.SecondKernelInstances Formalism.L2.KerInert.SecondKernelSeries GlobalTheory.TwV GlobalTheory.TwV.DelB GlobalTheory.TwV.DelA
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
@@ -66,7 +63,7 @@ theorem target_scalar : AllSites (fun {D L hT Gi Gl Kc Dx cX ex u μ w hg Lv I H
     have h1 := hb τ
     have h2 := hg0 τ
     have h3 := hq τ
-    simp only [div_zpow, mul_zpow, zpow_neg, zpow_sub₀ h1, zpow_sub₀ h2, zpow_add₀ h1, zpow_add₀ h2, zpow_add₀ h3]
+    simp only [div_zpow, mul_zpow, zpow_neg, zpow_sub₀ h1, zpow_sub₀ h2, zpow_add₀ h2, zpow_add₀ h3]
     field_simp
   have hprod := Finset.prod_congr rfl (fun τ (_ : τ ∈ Finset.univ) => key τ)
   simp only [Finset.prod_mul_distrib] at hprod

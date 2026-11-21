@@ -1,4 +1,11 @@
-import ReciprocityTheory.SemistableReduction.SemiDegT
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import ReciprocityTheory.SemistableReduction.SemiDegE
 
 noncomputable section
 

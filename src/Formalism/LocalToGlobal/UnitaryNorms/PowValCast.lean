@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.UnitaryNorms.Lemmas
+import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
 
 noncomputable section
 

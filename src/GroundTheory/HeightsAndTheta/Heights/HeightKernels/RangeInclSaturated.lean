@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ArithDegreeExact
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.ImportsExtra
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.StdCoordMapInjective

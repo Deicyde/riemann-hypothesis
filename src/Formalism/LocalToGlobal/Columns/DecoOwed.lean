@@ -1,7 +1,6 @@
-import Mathlib
-import Formalism.LocalToGlobal.Columns.DecoFin
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.SmulMemTrpSet
-import Formalism.HermitianLattices.HermitianLatticesProofs.NeighbourConstruct
 
 open NumberField IsDedekindDomain Module
 

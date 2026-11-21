@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.SameForm
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.TiedColumnData
-import Formalism.LocalToGlobal.KernelLattices.ColumnData.KerEntHyp
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsLayerParametersAdmissible
 
 noncomputable section

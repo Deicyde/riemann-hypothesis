@@ -1,8 +1,7 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.KTheoryStability.ReductionBoundsTorsion.MomentEntryBounds.InstLCSL
-import GroundTheory.AutomorphicForms.ReductionSiegel
-import GroundTheory.AutomorphicForms.NormDetDiagUnitsPosRealToUnits
-import GroundTheory.AutomorphicForms.ReductionLocalVolume
-import GroundTheory.GlobalFields.Adele.Discrete
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.KTheoryStability.ReductionBoundsTorsion.ActLPos
+import GroundTheory.AutomorphicForms.ReductionHeight
 
 noncomputable section
 

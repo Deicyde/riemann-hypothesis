@@ -1,5 +1,8 @@
-import Mathlib
-import GroundTheory.ArithmeticGeometry.SchemeCohomology.WeilDivisorTensor
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.ArithmeticGeometry.SchemeCohomology.InvertibleSheaf
+import GroundTheory.ArithmeticGeometry.SchemeCohomology.WeilDivisorLocal
+import GroundTheory.ArithmeticGeometry.SchemeCohomology.WeilDivisorSheaf
 
 namespace GroundTheory.Arith.SchemeCoh
 

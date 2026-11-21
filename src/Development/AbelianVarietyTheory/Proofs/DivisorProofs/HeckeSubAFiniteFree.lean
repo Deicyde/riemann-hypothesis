@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompEqOneOfTransl
+import Batteries.Data.Nat.Gcd
+import Mathlib.GroupTheory.FiniteAbelian.Basic
 
 noncomputable section
 

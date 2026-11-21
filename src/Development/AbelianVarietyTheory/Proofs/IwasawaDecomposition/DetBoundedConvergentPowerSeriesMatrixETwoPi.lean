@@ -1,5 +1,8 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.HasArcDataIff
+import Mathlib.Analysis.Normed.Group.Tannery
+import Mathlib.Tactic.Monotonicity.Lemmas
 open ReciprocityTheory.ChartRestriction.G.Geo.Tor
 
 namespace GlobalTheory

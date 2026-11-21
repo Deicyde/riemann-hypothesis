@@ -1,7 +1,8 @@
-import Mathlib
-import Formalism.HermitianLattices.StatementMass
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ClassNumberMulRegulatorLeSqrtDiscrRpowStatement
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.RootDiscrGeThreeHalvesOfIsTotallyComplexStatement
+import Mathlib.Analysis.Complex.ExponentialBounds
+import Mathlib.NumberTheory.NumberField.DedekindZeta
 open MeasureTheory NumberField Finset
 
 namespace GlobalTheory

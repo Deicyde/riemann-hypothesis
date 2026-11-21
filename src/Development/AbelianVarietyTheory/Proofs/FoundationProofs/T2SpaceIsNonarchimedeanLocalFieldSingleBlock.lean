@@ -1,8 +1,10 @@
-import Mathlib
-import Formalism.DoubleCosetMeasures.LatticeCoset
-import Development.AbelianVarietyTheory.BlockTheory.TorsionBlocks.LocalIntegralGL
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.FromBlocksMulInv
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.HasCompactSupportPhiU
+import Formalism.DoubleCosetMeasures.LowerUnipotentOrbits.IsClosedLowUni
+import Formalism.DoubleCosetMeasures.LowerUnipotentOrbits.RelIndexMulMeasure
+import Mathlib.Topology.UniformSpace.Uniformizable
 
 noncomputable section
 

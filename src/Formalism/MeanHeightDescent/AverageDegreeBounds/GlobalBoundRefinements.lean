@@ -1,12 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.MeanHeightDescent.CovolumeEstimateAnchoredWeights
-import Formalism.MeanHeightDescent.AverageDegreeBounds.CovolumeAssemblyHolds
 import Formalism.MeanHeightDescent.AverageDegreeBounds.CovolumeFullAssemblyHolds
-import Formalism.MeanHeightDescent.AverageDegreeBounds.CovolumeIntoDivisionHolds
-import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.TheoremDivIneq
 import Formalism.MeanHeightDescent.AverageDegreeBounds.SpanMuMin
-import Formalism.MeanHeightDescent.AverageDegreeBounds.TwistLower
 import Formalism.MeanHeightDescent.AverageDegreeBounds.MuMaxMinkowski
+import Mathlib.Algebra.Ring.IsFormallyReal
 
 namespace Formalism.ExtensionFiltration
 
@@ -175,7 +173,7 @@ theorem mk_lt (K : Type) [Field K] [NumberField K] [IsTotallyComplex K]
     rw [← ENNReal.toReal_lt_toReal hL hR, convexBodyLT_volume]
     unfold minkowskiBound
     rw [volume_fundamentalDomain_fractionalIdealLatticeBasis, volume_fundamentalDomain_latticeBasis, hd]
-    simp [hm, hr, convexBodyLTFactor, f, hmx]
+    simp [hr, convexBodyLTFactor, f, hmx]
     rw [ENNReal.toReal_ofReal (by first | exact_mod_cast FractionalIdeal.absNorm_nonneg _ | positivity),
       Int.norm_eq_abs]
     have e : ∀ N s : ℝ, N * (((2:ℝ) ^ nrComplexPlaces K)⁻¹ * s) * (2:ℝ) ^ (2 * nrComplexPlaces K) =

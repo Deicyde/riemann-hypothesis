@@ -1,5 +1,5 @@
-import Mathlib
-import GroundTheory.ArithmeticGeometry.AbelianVarieties.WeilTranslate
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ArithmeticGeometry.AbelianVarieties.WeilFixedField
 
 namespace GroundTheory.Arith.Abelian

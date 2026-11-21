@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsMetricFrOfIsMetricOn
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ChernDegreeComplex
+import Mathlib.Analysis.CStarAlgebra.CStarMatrix
 open CategoryTheory AlgebraicGeometry MvPolynomial MeasureTheory Filter Topology
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open ReciprocityTheory.L2DbarEstimates (V)
@@ -94,7 +96,7 @@ theorem submatrix_ld_eq_updateRow (X : Matrix (Fin s) (Fin s) ℂ) (i j : Fin s)
   ext a c
   rw [Matrix.updateRow_apply]
   by_cases h : a.1 = j
-  · simp [h, (eq_ldTop_iff a).2 h]
+  · simp [(eq_ldTop_iff a).2 h]
   · have : a ≠ ldTop j := fun e => h ((eq_ldTop_iff a).1 e)
     simp [h, this]
 

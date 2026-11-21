@@ -1,9 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.LiftCurveSt
 import Formalism.LocalToGlobal.ProjectiveLattices.IntAtExtExtAll
 import Formalism.LocalToGlobal.ProjectiveLattices.IsGenFrGenFr
-import Formalism.LocalToGlobal.ProjectiveLattices.EquivariantFiniteGroup
-import Formalism.LocalToGlobal.ProjectiveLattices.PetersonNormSubspace
 
 noncomputable section
 

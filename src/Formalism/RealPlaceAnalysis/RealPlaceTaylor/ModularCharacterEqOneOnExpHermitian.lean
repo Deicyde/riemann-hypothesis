@@ -1,8 +1,11 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.RealPlaceAnalysis.InstMeasurableSpaceUJ
 import Formalism.RealPlaceAnalysis.RealPlaceTaylor.MemUnitaryGroupIffMulConjTranspose
 import Formalism.RealPlaceAnalysis.RealPlaceTaylor.IndefiniteUnitaryPreservesForm
 import Formalism.RealPlaceAnalysis.RealPlaceTaylor.ComplexificationHolds
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.InvolutionInvariants
+import Mathlib.MeasureTheory.Group.ModularCharacter
 
 open MeasureTheory Matrix Topology
 open scoped NNReal ENNReal

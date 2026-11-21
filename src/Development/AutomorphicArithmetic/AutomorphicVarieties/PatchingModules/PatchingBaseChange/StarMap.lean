@@ -1,4 +1,5 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.PatchingBaseChange.AlgebraMapEq
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.AutomorphicVarieties.WeilGroupCharacters.UniversalOrdinaryDeterminantRing
 
 open IsLocalRing UpperTheory.V.Alg UpperTheory.V.W UpperTheory.V.Pa
 open scoped TensorProduct
@@ -41,4 +42,4 @@ theorem UpperTheory.V.Pa.BC.star_map :
   · intro n v ψ γ
     simp only [GFrame.oEl, map_list_prod, List.map_ofFn]
     refine congrArg List.prod (congrArg List.ofFn (funext fun i => ?_))
-    simp [Function.comp_def, map_sub, MonoidAlgebra.mapRingHom_single, pushCh]
+    simp [map_sub, MonoidAlgebra.mapRingHom_single, pushCh]

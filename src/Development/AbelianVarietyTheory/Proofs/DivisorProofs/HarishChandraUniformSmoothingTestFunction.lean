@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CasKOp
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqZeroOfMemWeakIn
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemZalgCommuteLieAction
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ChartLeftInvariantLaplacianOpPowEqIterateStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsEllipticReproducingTestFunctionLaplacianStatement
@@ -8,6 +7,7 @@ import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CasimirGlFactorEmbe
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPolyMaximalCompactCasimirKillsKTypeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeftInvariantLaplacianEqCasimirDecompositionStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPolyAnnihilatesCommutingLinearCombinationStatement
+import Development.AbelianVarietyTheory.Definitions.Divisors.CentralNilGL
 
 noncomputable section
 
@@ -74,7 +74,7 @@ theorem foldr_replicate (z : Module.End ℂ (Sm E a)) (χ : Module.End ℂ (Sm E
   | zero => simp
   | succ n ih =>
     rw [List.replicate_succ, List.foldr_cons, ih, pow_succ', map_mul, Module.End.mul_apply]
-    simp [sub_smul, Polynomial.aeval_X, Polynomial.aeval_C]
+    simp [Polynomial.aeval_X, Polynomial.aeval_C]
 
 theorem exists_alpha_smoothing : ∀ (E : Type) [Field E] [NumberField E] [IsTotallyComplex E] (a : ℕ)
     (L : Subgroup (GL (Fin a) (Af E))), IsOpen (L : Set (GL (Fin a) (Af E))) → ∀ W : Submodule ℂ (Kinf E a → ℂ),

@@ -1,9 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.FamRows
-import Formalism.LocalToGlobal.IndefiniteForms.IndefUse
-import Formalism.LocalToGlobal.Divisibility.LiftLatLemmas
-import Formalism.QuotientMetricDivisors.FinalW
-import Formalism.HarderNarasimhan.HarderNarasimhanProofs.DualPl
-import Formalism.LocalToGlobal.GlobalTheory.FamColP
 
 open Module NumberField IsDedekindDomain Matrix
 

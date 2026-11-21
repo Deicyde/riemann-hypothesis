@@ -1,4 +1,5 @@
-import ReciprocityTheory.GroupCohomology.TransgressionStatement
+import BuildAid.Leniency.Open
+import ReciprocityTheory.GroupCohomology.ContinuousContractNth
 
 namespace ReciprocityTheory.Coh
 

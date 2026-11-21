@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.StatementsNefGeneric
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.StatementsFibreHilbertFlat
 import GroundTheory.HeightsAndTheta.Heights.KleimanAmpleness.StatementsFibreCycleDegree

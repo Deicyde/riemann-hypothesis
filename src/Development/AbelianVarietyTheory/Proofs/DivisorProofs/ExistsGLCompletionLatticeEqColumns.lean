@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.LinearDescent
-import Development.AbelianVarietyTheory.Definitions.Divisors.GaloisRepOfPolarizedCuspidal
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MulMat
 open NumberField GlobalTheory.UnitaryBC IsDedekindDomain Matrix Polynomial GlobalTheory.CuspRep Formalism.UG GlobalTheory.BCT
 open scoped Classical
@@ -40,7 +38,7 @@ theorem exists_GLw_lat_eq : ∀ (E : Type) [Field E] [NumberField E] [IsCMField 
   let v' : Fin m → B.A := v ∘ finCongr hnm.symm
   let bE' := bE.reindex (finCongr hnm)
   have hv' : ∀ j, bE' j = v' j := by
-    intro j; simp [bE', v', bE, Module.Basis.mk_apply]
+    intro j; simp [bE', v', bE]
   let M : Matrix (Fin m) (Fin m) K.E := b.toMatrix bE'
   have hM : IsUnit M := by
     haveI := b.invertibleToMatrix bE'

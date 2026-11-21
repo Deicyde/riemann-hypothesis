@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.MatrixMeasurableSpace
-import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsSubquotientDetRepParInd
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VanishAt
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.Data.Matrix.PEquiv
+import Mathlib.Order.CompletePartialOrder
 
 open ValuativeRel Topology Matrix
 
@@ -127,8 +129,8 @@ def swapH (i : Fin (m + 1)) :
 
 def permGL' (σ : Equiv.Perm (Fin (m + 1))) : GL (Fin (m + 1)) k :=
   ⟨σ.toPEquiv.toMatrix, σ.symm.toPEquiv.toMatrix, by
-    rw [PEquiv.toMatrix_toPEquiv_mul]; ext i j; simp [PEquiv.toMatrix_apply, Matrix.one_apply, eq_comm], by
-    rw [PEquiv.toMatrix_toPEquiv_mul]; ext i j; simp [PEquiv.toMatrix_apply, Matrix.one_apply, eq_comm]⟩
+    rw [PEquiv.toMatrix_toPEquiv_mul]; ext i j; simp [PEquiv.toMatrix_apply, Matrix.one_apply], by
+    rw [PEquiv.toMatrix_toPEquiv_mul]; ext i j; simp [PEquiv.toMatrix_apply, Matrix.one_apply]⟩
 
 lemma mul_permGL' (σ : Equiv.Perm (Fin (m + 1))) (X : Matrix (Fin (n + 1)) (Fin (m + 1)) k) :
     X * ((permGL' σ : GL (Fin (m + 1)) k) : Matrix (Fin (m + 1)) (Fin (m + 1)) k) = X.submatrix id σ.symm := by

@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RembApply
-import Formalism.LatticeTheta.Statement
+import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.TraceDualDifferent
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
+import Mathlib.Topology.Separation.CompletelyRegular
 open NumberField nonZeroDivisors MeasureTheory GlobalTheory.LipschitzTR GlobalTheory.IndefiniteRowSideFullHecke.TraceDualDifferent
 open scoped FourierTransform RealInnerProductSpace
 

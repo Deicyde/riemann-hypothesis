@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.LiftCurveSt
 import Formalism.LocalToGlobal.ProjectiveLattices.SecPtRed
 

@@ -1,6 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.GlobalReductionOfCompatibleFamily
-import Formalism.LocalToGlobal.GlobalTheory.GL1.AdelicLatticeLinkFamily
-import Formalism.SharpRestriction.SmoothDesignExistence.LinkGLOBALPk
 import Formalism.LocalToGlobal.GlobalTheory.FamCol
 import Formalism.LocalToGlobal.GlobalTheory.AnalyticConclusionOfProp25
 

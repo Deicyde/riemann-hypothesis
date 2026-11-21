@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.HermiteNormalForms.Torsfree
 import Development.AutomorphicArithmetic.AutomorphicVarieties.HermiteNormalForms.Cardsep
 

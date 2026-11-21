@@ -1,12 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.GeneralLinearGroups.FirstIn
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.ExistsCellOfIsSubquotient
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HasFiniteLengthOfIsIrreducible
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.LanglandsClassificationCuspidalSupport
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.LanglandsDistinctCuspidalPairEmbedding
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CuspidalMultiplicityProductZero
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ExistsEmbeddingParIndOfJacquetNontrivial
-import GroundTheory.AutomorphicForms.CuspidalSplittingIsotypic
 
 open Filter Topology GlobalTheory.PRep GlobalTheory.SplitWeil GlobalTheory.SmGL GlobalTheory.LocGL GlobalTheory.JHMult UpperTheory.Lit.Cas UpperTheory.Lit.Red
 
@@ -249,7 +245,7 @@ theorem exists_jac_quot (hBZ : GlobalTheory.Published.BernsteinZelevinskyFiniten
         by_cases ha : a = i
         · subst ha
           simpa [ψ] using hc z hz v
-        · simp [ψ, Pi.mulSingle_eq_of_ne ha, ha]) y
+        · simp [ψ, ha]) y
     simpa using h1
   have h5 : IsSubquotient (q i).rep ((piTensor fun a => (q a).rep).comp ψ : Representation ℂ _ _) :=
     GlobalTheory.CompanionTheory.Hypotheses₂.TD.isSubquotient_comp_mulSingle (fun a => (q a).rep) (fun a => (q a).2.rep.irr) i

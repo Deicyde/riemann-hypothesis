@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.EqZeroOfForallPowDvd
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConstantCoeffNmul
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FormalGroupLawCoboundaryOneSubstOfEndomorphism
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConstantCoeffUpNmul
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsHausdorffOfProjective

@@ -1,8 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.VolumeCarry.VolumeTheoremTwoOfC3Stable
-import Mathlib
 import Formalism.PeriodIntegrals.GaugeGap
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.HermitianFrameIso.MulFirstColumnOfUnitColumn
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.FrameTransport.InstIsModTopTens
 
 noncomputable section
 

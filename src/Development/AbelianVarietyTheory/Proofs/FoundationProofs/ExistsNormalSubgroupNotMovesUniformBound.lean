@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.CosetTrace
+import Mathlib.Algebra.Order.Star.Real
 
 open GlobalTheory.AlmostEt
 open scoped NNReal

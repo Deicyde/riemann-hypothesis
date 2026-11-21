@@ -1,6 +1,6 @@
-import Formalism.LocalToGlobal.KernelLattices.KerStd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.BaseEx
-import Formalism.LocalToGlobal.GlobalTheory.GL3.PStdOK
 import Formalism.LocalToGlobal.GlobalTheory.GL3.NormNatCoprime
 
 noncomputable section

@@ -1,10 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ProductRepresentationReorderEquiv
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MultiProdCompInvTranspose
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCosocleComp
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CuspidalInvTranspose
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TwistInvTransposeDetChar
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContragredientEqInvTransposeClass
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsIrreducibleComp
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SegDualExistsTerms
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PrecedesOfSegDualPrecedes

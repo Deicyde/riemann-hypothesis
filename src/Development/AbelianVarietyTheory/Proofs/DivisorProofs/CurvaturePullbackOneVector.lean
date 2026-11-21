@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TranslationInv
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PullFullL
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SuperconnectionDifferentiable
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WedgeWedgeAnticomm
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SgnInsertOfNotMemNe
@@ -287,10 +286,9 @@ theorem pullBase_wedge_castAdd {n : ℕ} (a : Fin n → ℂ) (i : Fin n) (y : Ex
   rcases finset_fin_two_eq_cases S with rfl | rfl | rfl | rfl
   · simp [pullBase, wedge]
   · simp [pullBase, wedge, sgn, Finset.filter_singleton]
-  · simp [pullBase, wedge, sgn, Finset.filter_singleton, castAdd_ne_addNat]
+  · simp [pullBase, wedge, castAdd_ne_addNat]
   · simp [pullBase, wedge, sgn, Finset.filter_singleton, Finset.filter_insert, castAdd_ne_addNat,
-      not_addNat_lt_castAdd, f1, f2, f3, f7, Finset.mul_sum, Finset.erase_insert_eq_erase,
-      Finset.erase_singleton]
+      not_addNat_lt_castAdd, f1, f2, f3, Finset.mul_sum, Finset.erase_insert_eq_erase]
     rw [if_neg (by decide)]
     exact Finset.sum_congr rfl fun _ _ => by ring
 
@@ -300,10 +298,10 @@ theorem pullBase_wedge_natAdd {n : ℕ} (a : Fin n → ℂ) (i : Fin n) (y : Ext
   obtain ⟨f1, f2, f3, f4, f5, f6, f7, f8⟩ := fin_two_finset_facts
   rcases finset_fin_two_eq_cases S with rfl | rfl | rfl | rfl
   · simp [pullBase, wedge]
-  · simp [pullBase, wedge, sgn, Finset.filter_singleton, addNat_ne_castAdd]
-  · simp [pullBase, wedge, sgn, Finset.filter_singleton, f7]
+  · simp [pullBase, wedge, addNat_ne_castAdd]
+  · simp [pullBase, wedge, sgn, Finset.filter_singleton]
   · simp [pullBase, wedge, sgn, Finset.filter_singleton, Finset.filter_insert, addNat_ne_castAdd,
-      castAdd_lt_addNat, f1, f2, f4, f5, f6, Finset.mul_sum, Finset.erase_insert_of_ne (castAdd_ne_addNat _ _),
+      castAdd_lt_addNat, f1, f2, f4, f5, Finset.mul_sum, Finset.erase_insert_of_ne (castAdd_ne_addNat _ _),
       Finset.erase_singleton]
     rw [if_neg (by decide)]
     exact congrArg Neg.neg (Finset.sum_congr rfl fun _ _ => by ring)
@@ -417,7 +415,7 @@ theorem superconn_comp {n : ℕ} (τ : E → Matrix (Fin g) (Fin g) ℂ) (h : Pt
     simp only [← smul_add]
     simp only [map_sum, map_smul]
     simp only [wedge_sum', wedge_smul', hdt, hdtb]
-    simp only [map_sum, Finset.smul_sum, map_add, smul_add, Finset.sum_add_distrib]
+    simp only [Finset.smul_sum, map_add, smul_add, Finset.sum_add_distrib]
   have hdbar : dbarV (fun Q => L (s Q)) P = ε • L (dbarV s P) := by
     unfold dbarV
     simp only [d01_comp_continuousLinearMap L s P _ hs, hzw, map_sum, Finset.smul_sum]
@@ -469,7 +467,7 @@ theorem pull_dzb (k : Fin g) (x : Ext (n + n + g)) :
     wedge (dzb 1 k) ((c • (lamL S).comp (pullFullL a)) x) =
       epsS S • (c • (lamL S).comp (pullFullL a)) (wedge (dzb n k) x) := by
   simp only [ContinuousLinearMap.smul_apply, ContinuousLinearMap.comp_apply, pullFullL_apply,
-    pullFull_wedge_dzb, map_smul, lamL_wedge, wedge_smul', smul_smul]
+    pullFull_wedge_dzb, lamL_wedge, wedge_smul', smul_smul]
   congr 1
   linear_combination (-c) * epsS_mul_self S
 
@@ -477,7 +475,7 @@ theorem pull_contr (k : Fin g) (x : Ext (n + n + g)) :
     contr (dzb 1 k) ((c • (lamL S).comp (pullFullL a)) x) =
       epsS S • (c • (lamL S).comp (pullFullL a)) (contr (dzb n k) x) := by
   simp only [ContinuousLinearMap.smul_apply, ContinuousLinearMap.comp_apply, pullFullL_apply,
-    pullFull_contr_dzb, map_smul, lamL_contr, contr_smul', smul_smul]
+    pullFull_contr_dzb, lamL_contr, contr_smul', smul_smul]
   congr 1
   linear_combination (-c) * epsS_mul_self S
 

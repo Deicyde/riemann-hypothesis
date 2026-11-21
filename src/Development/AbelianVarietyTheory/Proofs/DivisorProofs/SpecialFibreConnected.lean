@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SpecialFibreUnits
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThickFibIsPullback
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIdempotentOfClopenStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IdempotentEqOfBasicOpenEqStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ProperFlatAdicSectionsLiftStatement

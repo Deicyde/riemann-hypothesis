@@ -1,9 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.LocalEulerCharacteristic.VanishingCore
 import GroundTheory.ProfiniteCohomology.LocalEulerCharacteristic.VanishingUnits
-import GroundTheory.ProfiniteCohomology.LocalEulerCharacteristic.Cohomology
-import GroundTheory.LocalFields.SeparableClosure
 import GroundTheory.ProfiniteCohomology.LocalClassFormation.FiniteVanishing.Vanishing
+import GroundTheory.ProfiniteCohomology.LocalEulerCharacteristic.CohomologyKummer
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.NewformCoefficients.CuspCritAlt
+import Mathlib.Analysis.Calculus.Deriv.Abs
 
 open UpperHalfPlane hiding I
 open scoped Manifold ContDiff

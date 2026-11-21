@@ -1,14 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairBaseIff
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleExistsArithmeticVarietyAltAlt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormalOfGenericFibrePullback
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RationalDegreePullbackFinite
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsMemChart
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DimensionOfDominantFlatCover
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.FiniteIntegralClosureOfEssFiniteTypeField
-import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.IsIsoNormalizationPullbackOfToIntegralClosure
-import Development.AbelianVarietyTheory.Definitions.ShimuraVarieties.IsOpenOfMemIrreducibleComponentsOfFinite
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompleteCurveArithModelClosure
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RegFlagged
 open NumberField MvPolynomial Filter Topology Formalism.BasicNotions Formalism.MainNotions Formalism.DegreeFormula GlobalTheory.FlagPoly GlobalTheory.Mean4 GlobalTheory.Mean4O GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.CovTest GlobalTheory.Published
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory GlobalTheory.ArInt
 open Formalism.BasicNotions.DV Formalism.MainNotions.WeightThresholdDefs GlobalTheory.FlagAr GlobalTheory.ShFam.Pad GlobalTheory.VB GlobalTheory.ShFam GlobalTheory.TrueGeo Formalism.L2.Pj GlobalTheory.Toroidal GlobalTheory.ArLieBase
@@ -73,7 +68,7 @@ theorem exists_fac_comp {G X P Y : Scheme.{0}} (j : G ⟶ X) (ν : X ⟶ P) (π 
     have e : ε.hom.app E = (Scheme.Modules.pullbackComp j (ν ≫ π)).hom.app E ≫ eqToHom (by simp) := by
       simp [ε, Scheme.Modules.pullbackCongr]
     rw [e, ← h]
-    simp only [← Category.assoc, ← Functor.map_comp, Iso.hom_inv_id_app, Iso.hom_inv_id_app_assoc]
+    simp only [← Category.assoc, Iso.hom_inv_id_app]
     simp
   refine ⟨ε.hom.app A ≫ t ≫ (Scheme.Modules.pullbackComp j ν).inv.app B, ?_⟩
   rw [← cancel_mono (ε.hom.app E)]

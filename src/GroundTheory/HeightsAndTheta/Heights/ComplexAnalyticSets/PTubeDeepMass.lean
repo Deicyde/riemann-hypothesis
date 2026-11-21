@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StTubeDeepMass
-import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StTubeDeepRankOne
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StTubeDeepAreaCount
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StTubeDeepWeightMass
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.PCutOffTube

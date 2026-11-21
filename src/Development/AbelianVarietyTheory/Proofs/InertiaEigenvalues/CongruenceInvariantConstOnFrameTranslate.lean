@@ -1,4 +1,41 @@
-import Mathlib
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.Matrix.ColumnRowPartitioned
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
 open MeasureTheory Filter Topology
 open scoped InnerProductSpace BigOperators
 
@@ -29,8 +66,8 @@ theorem invariant_const_on_translate : ∀ (O K : Type) [CommRing O] [IsDomain O
   have key : M * e = e + ϖ • z := by
     ext (a | a) b <;>
       simp [hMdef, hedef, z₁, z₂, Matrix.mul_apply, Fintype.sum_sum_type, Matrix.fromBlocks,
-        Matrix.fromRows_apply_inl, Matrix.fromRows_apply_inr, Matrix.toRows₁, Matrix.toRows₂, Matrix.one_apply, add_mul, Sum.elim_inl,
-        Sum.elim_inr, mul_ite, ite_mul, Finset.sum_add_distrib, Finset.sum_ite_eq, Finset.sum_ite_eq']
+        Matrix.fromRows_apply_inl, Matrix.fromRows_apply_inr, Matrix.toRows₁, Matrix.toRows₂, Matrix.one_apply, Sum.elim_inl,
+        Sum.elim_inr, mul_ite, Finset.sum_ite_eq']
   have h1 : ∀ a b, (h : Matrix (Fin r ⊕ Fin t) (Fin r ⊕ Fin t) O) (Sum.inl a) (Sum.inl b) -
       (1 : Matrix (Fin r) (Fin r) O) a b ∈ Ideal.span {ϖ} := by
     intro a b

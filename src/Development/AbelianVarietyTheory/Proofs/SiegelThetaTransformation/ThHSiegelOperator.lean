@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.SpanningFamilies.IsHeatZero
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.GCauchyStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.HermitianThetaSummableAndDeterminesTestFn
+import Mathlib.Analysis.Normed.Group.Tannery
 open Matrix Complex NumberField GlobalTheory.SW Filter Topology
 open ReciprocityTheory.ChartRestriction.G.FD (cc herm)
 open scoped ComplexConjugate ComplexOrder Real Classical
@@ -86,8 +86,8 @@ private lemma pushZ_single_zero_mem_Hn_of_nonneg (Z : _root_.GlobalTheory.SW.CM 
   convert h using 1
   ext a b
   simp only [Matrix.add_apply, Matrix.sub_apply, Matrix.smul_apply, conjTranspose_apply,
-    vecMulVec_apply, smul_eq_mul, star_add, star_smul, Pi.star_apply]
-  simp only [star_mul', Complex.star_def, map_mul, Complex.conj_I, Complex.conj_ofReal,
+    vecMulVec_apply, smul_eq_mul, star_add, Pi.star_apply]
+  simp only [star_mul', Complex.star_def, Complex.conj_I, Complex.conj_ofReal,
     Complex.conj_conj, Complex.real_smul]
   have hI : (2 * I) ≠ 0 := mul_ne_zero two_ne_zero I_ne_zero
   field_simp
@@ -107,7 +107,7 @@ private lemma dotProduct_add_smul_vecMulVec_single_zero_mulVec (M : Matrix (Fin 
     by_cases h : a = 0
     · subst h
       simp
-    · simp [Pi.single_apply, h]
+    · simp [h]
   rw [hs, add_mulVec, dotProduct_add, smul_mulVec, dotProduct_smul]
   congr 1
   simp [vecMulVec, mulVec, dotProduct, Pi.single_apply, Complex.mul_conj]

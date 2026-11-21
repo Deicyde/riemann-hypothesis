@@ -1,4 +1,6 @@
-import Development.AutomorphicArithmetic.ThetaCorrespondence.CrystallineComparison.LeafDefs
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.CoreStatements.PeriodRingComparison.CrystallinePeriodRings.GammaEqDpow
 noncomputable section
 namespace Formalism.BasicNotions.CmpTie.Incl
 open GroundTheory.PAdicHodge

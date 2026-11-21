@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.GeneralizedEigenspaces.SmoothDepth.ContCoef
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.GeneralizedEigenspaces.SmoothDepth.DcMap
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.GeneralizedEigenspaces.SmoothDepth.OpenLevelSubgroups.AutProj
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.GeneralizedEigenspaces.SmoothDepth.OpenLevelSubgroups.CoefAut
@@ -26,7 +26,7 @@ theorem UpperTheory.V.Z.Sym.Al.proj :
   have hF : ∀ k (f : V →ₗ[ℂ] ℂ) g, f (F k g) = (P k (C f)).1 g := by
     intro k f g
     conv_rhs => rw [← b.sum_dual_apply_smul_coord f]
-    simp only [F, map_sum, map_smul, smul_eq_mul, Submodule.coe_sum, Finset.sum_apply,
+    simp only [F, map_sum, map_smul, smul_eq_mul, Finset.sum_apply,
       Submodule.coe_smul, Pi.smul_apply, AddSubmonoidClass.coe_finset_sum]
     exact Finset.sum_congr rfl fun i _ => mul_comm _ _
   have hext : ∀ {v v' : V}, (∀ f : V →ₗ[ℂ] ℂ, f v = f v') → v = v' := fun h =>

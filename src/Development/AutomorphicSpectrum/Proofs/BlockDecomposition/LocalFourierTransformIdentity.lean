@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.GaugeTopology.GTorus
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LocalFunctionalSectionSupport
 open MeasureTheory Matrix GroundTheory.LocalField GroundTheory.Automorphic
@@ -25,7 +26,7 @@ def bx (ι : Type) (F : Type) [Field F] [ValuativeRel F] [TopologicalSpace F]
   Set.pi Set.univ fun _ ↦ (valBall F n : Set F)
 
 theorem mem_bx {ι : Type} {n : ℤ} {x : ι → F} : x ∈ bx ι F n ↔ ∀ i, x i ∈ valBall F n := by
-  simp [bx, Set.mem_univ_pi]
+  simp [bx]
 
 theorem isOpen_bx {ι : Type} [Fintype ι] (n : ℤ) : IsOpen (bx ι F n) :=
   isOpen_set_pi Set.finite_univ fun _ _ ↦ isOpen_valBall n

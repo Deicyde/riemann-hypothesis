@@ -1,10 +1,6 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.FiniteDimensionalOfSlices
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsBlockEmb
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsSmoothAutomorphicFunctionTranslateAtRealPlace
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.RightTranslateCommutesCenterAction
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.GodementSectionSmoothBounded
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.DiscreteSpectrumOfResidual
 import Formalism.LocalToGlobal.NumberFieldFamilies.ThetaCI
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CapelliConstantTermVanishing
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlockEmbNormalises
@@ -16,6 +12,7 @@ import Development.AutomorphicSpectrum.Proofs.GlobalProofs.AdaptedBasisBlockEntr
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.AdaptedBasisConjugateZeroEntriesStatement
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.ConjugatedMatrixUnitEntriesStatement
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.OrthogonalSubspaceWittFrameExtensionStatement
+import Development.AutomorphicSpectrum.Proofs.GlobalProofs.MemFormsOnOfMemSpan
 
 noncomputable section
 
@@ -125,7 +122,7 @@ theorem parts_mem {n : ℕ} (H : Matrix (Fin n) (Fin n) ℂ) (hH : Hᴴ = H) (hu
     rw [← Matrix.mul_assoc, ← Matrix.mul_assoc, mul_nonsing_inv _ hu, Matrix.one_mul]
   have hc' : star c = s * c := hc
   simp only [conjTranspose_smul, conjTranspose_add, conjTranspose_neg, Matrix.add_mul, Matrix.smul_mul, Matrix.neg_mul,
-    Matrix.mul_smul, Matrix.mul_add, Matrix.mul_neg, e1, e2, hss, hc', smul_add, smul_neg, smul_smul]
+    Matrix.mul_smul, Matrix.mul_add, Matrix.mul_neg, e1, e2, hc', smul_add, smul_neg, smul_smul]
   have hcs : star (c * s) = c := by
     rw [star_mul', hc', hss, mul_comm (s * c), ← mul_assoc, h2, one_mul]
   rw [hcs, mul_comm c s]
@@ -454,7 +451,7 @@ theorem monic_block : ∀ (D : D7) [IsTotallyComplex D.host.E] (θ : D.what₂.T
     · have e' : τ = NumberField.ComplexEmbedding.conjugate (tauE D τ') := by
         rw [e]
         ext x
-        simp [NumberField.ComplexEmbedding.conjugate_coe_eq]
+        simp
       subst e'
       refine core hθ T ι hN hsm τ' _ (c τ') (fun p q => -(P * Matrix.single q.rev p.rev 1 * Q)) (glRel_conj_rev P Q hQP)
         (span_conj_rev P Q hPQ hQP) (fun p q hpq H hH x => ?_)

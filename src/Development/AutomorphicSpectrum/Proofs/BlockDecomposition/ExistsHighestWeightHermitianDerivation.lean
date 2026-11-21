@@ -1,6 +1,5 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.RealDescent.RealLeviDescent.HighestVectorsRegularLine
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WtRInjective
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DifferentiableCoeffRowAct
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HasDerivAtMulVec
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LineInverse
@@ -10,6 +9,8 @@ import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GelfandInfinite
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SumMemOfStable
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiniteDimTranslationRepUnitaryModel
 import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.HwIrred
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsCliff
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CompactGroupIntegrability.InstCompactUG
 
 noncomputable section
 
@@ -233,7 +234,7 @@ theorem herm_frame (a b : Fin n) (x y : Jd n ν → ℂ) :
   have s1 : (Matrix.single a b (1 : ℂ) + (-1 : ℂ) • Matrix.single b a (1 : ℂ) : Mat n)ᴴ =
       -(Matrix.single a b (1 : ℂ) + (-1 : ℂ) • Matrix.single b a (1 : ℂ)) := by
     rw [conjTranspose_add, conjTranspose_smul, InjHw.single_conjT, InjHw.single_conjT]
-    simp [add_comm]
+    simp
   have s2 : (Complex.I • (Matrix.single a b (1 : ℂ) + Matrix.single b a (1 : ℂ)) : Mat n)ᴴ =
       -(Complex.I • (Matrix.single a b (1 : ℂ) + Matrix.single b a (1 : ℂ))) := by
     rw [conjTranspose_smul, conjTranspose_add, InjHw.single_conjT, InjHw.single_conjT]

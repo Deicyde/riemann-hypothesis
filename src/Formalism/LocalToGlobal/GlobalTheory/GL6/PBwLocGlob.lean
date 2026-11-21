@@ -1,5 +1,7 @@
-import Formalism.LocalToGlobal.GlobalTheory.GL6.LatticeInclusionOfDecompGlob
-import Formalism.LocalToGlobal.GlobalTheory.GL6.PBwLocBases
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.Columns.CoefficientsModP.LatticeBasisExistsHolds
+import Formalism.LocalToGlobal.GlobalTheory.GL6.LatticeInclusionOfSubIntegral
 
 noncomputable section
 

@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsZModTorsorIff
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsColimitPushoutUnder
+import Mathlib.Algebra.Category.Ring.FinitePresentation
+import Mathlib.RingTheory.RingHom.FinitePresentation
 open CategoryTheory Limits TensorProduct
 
 namespace GlobalTheory.TorsorColim

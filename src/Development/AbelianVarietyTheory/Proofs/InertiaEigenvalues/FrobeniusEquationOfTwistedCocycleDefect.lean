@@ -1,4 +1,39 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Floor.Extended
+import Mathlib.Algebra.Order.Interval.Basic
+import Mathlib.Analysis.Complex.UpperHalfPlane.Basic
+import Mathlib.Analysis.SpecialFunctions.Bernstein
+import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Combinatorics.Enumerative.DyckWord
+import Mathlib.Combinatorics.SimpleGraph.Triangle.Removal
+import Mathlib.Data.NNRat.Floor
+import Mathlib.Data.Nat.Choose.Multinomial
+import Mathlib.Geometry.Euclidean.Altitude
+import Mathlib.NumberTheory.Chebyshev
+import Mathlib.NumberTheory.Height.NumberField
+import Mathlib.NumberTheory.Height.Projectivization
+import Mathlib.NumberTheory.LucasLehmer
+import Mathlib.NumberTheory.SelbergSieve
+import Mathlib.RingTheory.Radical.NatInt
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.NormNum.Irrational
+import Mathlib.Tactic.NormNum.IsCoprime
+import Mathlib.Tactic.NormNum.IsSquare
+import Mathlib.Tactic.NormNum.LegendreSymbol
+import Mathlib.Tactic.NormNum.ModEq
+import Mathlib.Tactic.NormNum.NatFib
+import Mathlib.Tactic.NormNum.NatLog
+import Mathlib.Tactic.NormNum.NatSqrt
+import Mathlib.Tactic.NormNum.Ordinal
+import Mathlib.Tactic.NormNum.Parity
+import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Init
 
 namespace GlobalTheory.FrobeniusDefect
 
@@ -55,7 +90,7 @@ theorem mul_comm_of_nzd {c : R} (hc : ∀ x : R, c * x = 0 → x = 0)
 theorem map_smul_one (f : R →+* R) (c : R) :
     (c • (1 : Matrix (Fin d) (Fin d) R)).map f = f c • (1 : Matrix (Fin d) (Fin d) R) := by
   ext i j
-  by_cases hij : i = j <;> simp [Matrix.one_apply, hij]
+  by_cases hij : i = j <;> simp [hij]
 
 theorem map_smul' (f : R →+* R) (c : R) (M : Matrix (Fin d) (Fin d) R) :
     (c • M).map f = f c • M.map f := by
@@ -142,7 +177,7 @@ theorem frobenius_defect_eq (R : Type) [CommRing R] (φ σ : R →+* R) (d N k :
           rw [h2, h4, h3]
       _ = ((e * e₀) ^ N * (σ e * e) ^ N * (σ e * e₀) ^ N) • (e₀ ^ (2 * N) • (Q' * ε * Q.map σ)) := by
           simp only [Matrix.mul_assoc, mul_left_of hAA', mul_left_of hBB', mul_left_of hσBB', hAA',
-            Matrix.mul_smul, Matrix.smul_mul, Matrix.mul_one, smul_smul]
+            Matrix.mul_smul, Matrix.mul_one, smul_smul]
           congr 1; ring
   have hLφ : A₀ * (lr ^ (2 * k) • (1 : Matrix (Fin d) (Fin d) R)).map φ * A₀' =
       e₀ ^ (2 * N) • (lr ^ (2 * k) • (1 : Matrix (Fin d) (Fin d) R)) := by

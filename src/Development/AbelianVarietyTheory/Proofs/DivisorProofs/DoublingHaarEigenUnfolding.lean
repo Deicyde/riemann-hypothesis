@@ -1,8 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepresentationPreservesSchwartz
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsLevi
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoublingLeviTranslationIdentity
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigurationStabiliserMeasureStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigurationStabiliserIntegralStatement
@@ -57,7 +53,7 @@ theorem cone_comm : GlobalTheory.ThK.KP → ∀ (F E : Type) [Field F] [NumberFi
       have hy := hm.2.1
       simp only [inv_one, Units.val_one, map_one, one_smul] at hy
       unfold actAB shiftA
-      simp only [Prod.fst, Prod.snd, OneMemClass.coe_one, Units.val_one, Matrix.one_mul, Matrix.smul_mul]
+      simp only [OneMemClass.coe_one, Units.val_one, Matrix.one_mul, Matrix.smul_mul]
       congr 1
       ext i j
       simp only [Matrix.vecMulVec, Matrix.mul_apply, Matrix.of_apply, Matrix.transpose_apply]

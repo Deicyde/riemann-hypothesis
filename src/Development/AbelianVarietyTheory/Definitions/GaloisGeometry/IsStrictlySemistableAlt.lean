@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.IsMatrixForm
+import Mathlib.AlgebraicGeometry.Modules.Sheaf
+import Mathlib.LinearAlgebra.PiTensorProduct.Basic
+import Mathlib.Tactic.ENatToNat
 
 noncomputable section
 

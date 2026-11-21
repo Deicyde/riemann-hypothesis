@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.TermDef
 import Formalism.LocalToGlobal.SiegelLatticeTheory.SiegelMassRatios.LemmaN
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
 
 noncomputable section
 

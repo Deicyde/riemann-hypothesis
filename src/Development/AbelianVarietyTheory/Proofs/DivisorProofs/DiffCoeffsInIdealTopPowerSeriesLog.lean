@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.EqZeroOfForallPowDvd
+import Mathlib.RingTheory.PowerSeries.Log
 
 set_option autoImplicit false
 

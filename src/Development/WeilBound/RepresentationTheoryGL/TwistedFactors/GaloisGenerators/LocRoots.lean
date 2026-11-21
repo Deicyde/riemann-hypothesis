@@ -1,5 +1,5 @@
-import Development.WeilBound.RepresentationTheoryGL.TwistedFactors.GaloisGenerators.ChapterR
-import Development.WeilBound.RepresentationTheoryGL.JacquetShalikaBounds.AbsoluteRigidity.NewtonLow
+import BuildAid.Leniency.Open
+import Development.WeilBound.RepresentationTheoryGL.TwistedFactors.GaloisGenerators.IsGalGen
 
 noncomputable section
 

@@ -1,7 +1,5 @@
-import Mathlib
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ExistsPowSubMemSpanOfIsUnitModOfIsAlgClosed
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.RationalSections.ThmISt
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PNonvanishingDense
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PRatPrimeDense
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.PFiniteSeparatingModel

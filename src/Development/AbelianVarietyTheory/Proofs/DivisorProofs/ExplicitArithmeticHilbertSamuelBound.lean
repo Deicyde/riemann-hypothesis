@@ -1,7 +1,4 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.InclEquiv
-import Development.AbelianVarietyTheory.Definitions.Divisors.IntegralBound
-import Development.AbelianVarietyTheory.Definitions.Divisors.HermSysHypOneLeLambdaZero
-import Development.AbelianVarietyTheory.Definitions.Divisors.IrreducibleOfIrreducibleMap
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FormEqOfCsq
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HilbertSamuelFiltrationAtGoodSectionsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HilbertSamuelLatticeSystemHypStatement

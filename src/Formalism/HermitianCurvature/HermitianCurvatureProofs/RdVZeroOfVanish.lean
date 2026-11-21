@@ -1,5 +1,10 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.PbWords
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.LeftFubiniNormalizedTower
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.LocOfSmoothOnH
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.NegMulCCancel
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.OpNormPiLe
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.PsiContOf
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.RightAverageSmoothComm
 
 open Matrix MeasureTheory Filter Topology
 

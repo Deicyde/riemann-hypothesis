@@ -1,15 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsLevMeas
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.TransferOn
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CartFrSgn
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.HarishChandraFinite
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsNormLeHeightPow
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.AdmissibleDiscreteSeriesOfHasParam
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HarishChandraModulesOn
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.HasDRepIffHasDerivAt
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.HoweUnram
-import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.PairwiseDisjointCell
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CardGLFiniteFieldEqPowMulProd
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsContinuousPadic
+import Formalism.LocalToGlobal.Divisibility.DefGroup
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix
 open Formalism.L2.Theta Formalism.L2.DIV Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.Mult Formalism.IndefR.Datum
 open scoped TensorProduct InnerProductSpace ComplexConjugate
@@ -88,7 +81,7 @@ noncomputable def blockTriangularEquiv (r s : ℕ) :
   invFun x := ⟨Matrix.GeneralLinearGroup.mk'' _ (isUnit_det_fromBlocks x.1 x.2.1 x.2.2), by
     rw [mem_blockUpperTriangularTwo_iff_lowerLeft_zero]
     ext i j
-    simp [toSum, Matrix.toBlocks₂₁, val_mk']⟩
+    simp [toSum, Matrix.toBlocks₂₁]⟩
   left_inv g := by
     apply Subtype.ext
     apply Units.ext
@@ -102,11 +95,11 @@ noncomputable def blockTriangularEquiv (r s : ℕ) :
     rcases x with ⟨A, D, B⟩
     refine Prod.ext (Units.ext ?_) (Prod.ext (Units.ext ?_) ?_)
     · show (toSum _).toBlocks₁₁ = _
-      ext i j; simp [toSum, Matrix.toBlocks₁₁, val_mk']
+      ext i j; simp [toSum, Matrix.toBlocks₁₁]
     · show (toSum _).toBlocks₂₂ = _
-      ext i j; simp [toSum, Matrix.toBlocks₂₂, val_mk']
+      ext i j; simp [toSum, Matrix.toBlocks₂₂]
     · show (toSum _).toBlocks₁₂ = _
-      ext i j; simp [toSum, Matrix.toBlocks₁₂, val_mk']
+      ext i j; simp [toSum, Matrix.toBlocks₁₂]
 
 theorem natCard_blockUpperTriangularTwo_finiteField (κ : Type) [Field κ] [Finite κ] (r s : ℕ) :
     Nat.card (Formalism.L2.DIV.blockTri (κ := κ) (Formalism.L2.DIV.blk2 (n := r + s) r)) =

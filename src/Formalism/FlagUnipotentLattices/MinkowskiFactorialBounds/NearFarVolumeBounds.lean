@@ -1,5 +1,13 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.FlagUnipotentLattices.CoveringRadius2
 import Formalism.LogSumExpBounds.CharacterSumPhase.NuclearNormBoundHolds
+import Mathlib.Analysis.Normed.Algebra.MatrixExponential
+import Mathlib.Data.Int.Star
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Topology.Sheaves.Presheaf
 
 open Finset MeasureTheory NumberField Matrix
 open scoped ComplexOrder

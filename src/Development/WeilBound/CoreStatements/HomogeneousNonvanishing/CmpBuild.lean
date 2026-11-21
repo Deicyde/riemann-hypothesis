@@ -1,12 +1,9 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.CmpSt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.BlowupProjections.BlowupProjStatement
-import Development.AutomorphicSpectrum.Definitions.DivisibilityTowers.Proportional
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.AnalyticForms.PotentialTheory.DegreeInhab
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.BlockExtensionArithVar
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.LineIsomorphismGroupoidLawsStatement
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.LineIsomorphismDefectFunctionStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.BlockJoinInclusionsCompatStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.BlockPullbackHermLineStatement
 import Development.WeilBound.CoreStatements.HomogeneousNonvanishing.RCombine
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.LogResolutionCoversComplexPointsStatement
@@ -71,14 +68,14 @@ theorem sum_mapDomain {κ : K → K'} {v : (Σ k, ι k) → Σ k, ι' k} (hv : �
       rw [Finset.sum_eq_single p]
       · simp
       · intro q _ hq
-        simp [Finsupp.single_apply, Ne.symm hq]
+        simp [Ne.symm hq]
       · simp
     have hL : ∀ q : Σ k, ι' k, ∑ i, (Finsupp.single q n) ⟨k', i⟩ = if q.1 = k' then n else 0 := by
       rintro ⟨kq, iq⟩
       by_cases h : kq = k'
       · subst h
         simp [Finsupp.single_apply]
-      · simp [Finsupp.single_apply, h]
+      · simp [h]
     rw [Finsupp.mapDomain_single, hL, hR, hv]
 
 theorem isMultiHomog_rename {κ : K → K'} {v : (Σ k, ι k) → Σ k, ι' k} (hb : IsBlockMap κ v) {f : MRing ι}

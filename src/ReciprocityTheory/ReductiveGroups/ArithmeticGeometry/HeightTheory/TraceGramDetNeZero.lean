@@ -1,5 +1,10 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.HDiscBDefs
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.KTFiniteDimensional
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.HDiscDefs
 
 namespace ReciprocityTheory.ChartRestriction.G.T0
 
@@ -32,7 +37,7 @@ theorem trace_gram_det_ne_zero {F : Type} [Field F] [CharZero F] {κ : Type} [Fi
     have hx : ∀ c, x c * y c = ∑ k, μ k • (b k c * y c) := by
       intro c
       rw [hμ c, Finset.sum_mul]
-      simp [smul_mul_assoc]
+      simp
     simp only [hx, map_sum, map_smul, smul_eq_mul]
     rw [Finset.sum_comm]
     simp [← Finset.mul_sum, hk]
@@ -47,7 +52,7 @@ theorem trace_gram_det_ne_zero {F : Type} [Field F] [CharZero F] {κ : Type} [Fi
         mul_one] at ht
       exact (Nat.cast_ne_zero.mpr (Module.finrank_pos (R := F) (M := E c0)).ne') ht
     · intro c _ hc
-      simp [Pi.single_apply, hc]
+      simp [hc]
     · intro h
       exact absurd (Finset.mem_univ c0) h
   exact hv0 (hind v fun c => by simpa [hy] using congrFun hy0 c)

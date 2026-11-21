@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.PlaneSupports.PlaneSupp
 
 noncomputable section
@@ -24,7 +25,7 @@ theorem trunc_mul {d : R} (hd : d * d = d) (A B : Matrix n n R) :
     rw [Matrix.smul_mul, Matrix.mul_smul, smul_smul, hd]
   unfold trunc
   rw [Matrix.add_mul, Matrix.mul_add, Matrix.mul_add, h]
-  simp only [Matrix.one_mul, Matrix.mul_one, Matrix.sub_mul, Matrix.mul_sub, smul_sub, smul_add]
+  simp only [Matrix.one_mul, Matrix.mul_one, Matrix.sub_mul, Matrix.mul_sub, smul_sub]
   abel
 
 theorem mul_det_congr (d : R) {A B : Matrix n n R} (h : ∀ i j, d * A i j = d * B i j) :

@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsMulVal
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiniteHopfPointsSeparate
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsAlgHomCompEq
+import Development.AbelianVarietyTheory.Definitions.ShimuraVarieties.MemPrimitiveTensorsIffIsPrimitiveElem
 set_option autoImplicit false
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry MonoidalCategory CartesianMonoidalCategory MonObj NumberField WithConv
@@ -67,7 +67,7 @@ theorem integral_of_integral_tensor : ∀ (R K : Type) [CommRing R] [IsDomain R]
   have hBv : ∀ s, B (v s) = (p s).toLinearMap := fun s => by
     ext a
     have := CartierDual.baseChangeLinear_tmul_tmul (R := R) K 1 1 (toConv s.toLinearMap : CartierDual R A) a
-    simp only [LinearMap.comp_apply, TensorProduct.AlgebraTensorModule.curry_apply, TensorProduct.curry_apply, LinearMap.restrictScalars_apply, AlgHom.toLinearMap_apply, hp]
+    simp only [TensorProduct.AlgebraTensorModule.curry_apply, TensorProduct.curry_apply, LinearMap.restrictScalars_apply, AlgHom.toLinearMap_apply, hp]
     refine this.trans ?_
     simp [Algebra.smul_def]
   have hmem : B ((1 : K) ⊗ₜ[R] l) ∈ Submodule.span K (Set.range fun s => B (v s)) := by

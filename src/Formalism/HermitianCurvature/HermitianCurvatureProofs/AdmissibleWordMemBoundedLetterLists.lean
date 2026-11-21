@@ -1,9 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.PBBStmt
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.TheoremPIntegralOfPlaces
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.JointInstanceTheoremA
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.UnipotentCoordinatesMeasurePreserving
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.PeriodLatticeFactsSplitOfGeneral
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.PoissonJointFirstReduction
 
 open Formalism.FourierDecayAlt
 

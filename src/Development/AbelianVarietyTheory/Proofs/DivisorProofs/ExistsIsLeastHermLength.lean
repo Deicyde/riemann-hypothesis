@@ -1,8 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SecJets4
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.LinearIndependentOfIsLieBasis
 import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.ThetaUniformisationComplexAbelianVariety
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.AbelianSchemeLawsUnconditional
+import Development.AbelianVarietyTheory.Definitions.Divisors.TorusExt
 
 open AlgebraicGeometry CategoryTheory Limits MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.GeometryOfNumbersTheory
@@ -53,7 +53,7 @@ theorem exists_isLeast_hermLength {g : ℕ} (hg : 0 < g) (Λ : Submodule ℤ (Fi
     fun_prop
   have hsm : ∀ (c : ℝ) (z : Fin g → ℂ), q (c • z) = c ^ 2 * q z := fun c z => by
     simp only [hq, hermForm, Matrix.mulVec_smul, dotProduct_smul, smul_dotProduct, star_smul, star_trivial]
-    simp [Complex.smul_re]
+    simp
     ring
   haveI : Nonempty (Fin g) := ⟨⟨0, hg⟩⟩
   obtain ⟨z₁, hz₁, hmin⟩ := (isCompact_sphere (0 : Fin g → ℂ) 1).exists_isMinOn

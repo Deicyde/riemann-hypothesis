@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.HerbrandQuotients.Permutation
 import GroundTheory.GlobalFields.HerbrandQuotients.LatticeBridge
 import GroundTheory.GlobalFields.SemilocalAlgebras.Galois
+import Mathlib.RingTheory.Ideal.Quotient.HasFiniteQuotients
 
 namespace GroundTheory.Global
 

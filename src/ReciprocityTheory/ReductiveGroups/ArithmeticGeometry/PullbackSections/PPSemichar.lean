@@ -1,11 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.NonemptyUnitAt
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.BCTools
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.Semichar
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.HolomorphicFamilies.AnFrameA
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.HolomorphicFamilies.AnFrameB
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.HolomorphicFamilies.AnHolFamOfHolTo
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.HolomorphicFamilies.CmHostUnitAddConjEqOne
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.GermBPrim
+import Formalism.LocalToGlobal.ProjectiveLattices.IsChartIff
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.HolomorphicFamilies.HolJetB
 
 noncomputable section
 
@@ -173,7 +170,7 @@ theorem chiL_add {U : Unf Xo c σ r} {k : U.Comp} {x : (U.X k).dom} (W : UnfAt U
     rw [hermForm_add_left, hermForm_add_right, hermForm_add_right,
       hermForm_swap Wu.herm (W.Pm a) (W.Pm b)]
     have hc1 := Wu.c1 a b
-    apply Complex.ext <;> simp [Complex.star_def, Complex.conj_re, Complex.conj_im, hc1] <;> ring
+    apply Complex.ext <;> simp [Complex.conj_re, Complex.conj_im, hc1] <;> ring
   rw [show ((-1 : ℂ)) ^ ((W.F.Di (W.ik k)).EF a b) =
       Complex.exp (((W.F.Di (W.ik k)).EF a b : ℂ) * (Real.pi * Complex.I)) by
     rw [Complex.exp_int_mul, Complex.exp_pi_mul_I]]

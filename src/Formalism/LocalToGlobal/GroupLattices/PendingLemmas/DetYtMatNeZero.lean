@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.FormalGroupSystem
+import Mathlib.Algebra.AffineMonoid.UniqueSums
 
 open Formalism.MainNotions.G Formalism.MainNotions.FormalGroupSystem Finset
 

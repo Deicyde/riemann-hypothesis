@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.Adele.BaseChange.FiniteCoord
+import GroundTheory.GlobalFields.Adele.BaseChange.FiniteMap
 
 namespace GroundTheory.Global
 

@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SysExOfPol
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsGenericFibreOpenEmbeddingStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.OpenEmbeddingOfLevelOneStatement
 

@@ -1,5 +1,9 @@
-import Mathlib
-import Formalism.FrobeniusOrbits.HostThickExists
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.FrobeniusOrbits.Statement
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.NumberTheory.NumberField.Discriminant.Defs
+import Mathlib.RingTheory.DedekindDomain.Different
 
 open NumberField IntermediateField
 open scoped Pointwise

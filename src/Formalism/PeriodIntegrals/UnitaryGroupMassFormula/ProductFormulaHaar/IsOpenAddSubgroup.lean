@@ -1,5 +1,12 @@
-import Mathlib
-import Formalism.PeriodIntegrals.ProdFormulaE
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.CuspSpanNormBounds.FractionFieldToGenericStalkAlgebraMapEq
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
 
 noncomputable section
 
@@ -49,7 +56,7 @@ theorem isOpen_O (L : Formalism.MainNotions.S.Loc.LocE F E) : IsOpen (L.O : Set 
     (isOpen_set_pi Set.finite_univ fun _ _ => hcont.isOpen_preimage _ isOpen_integer)
   refine isOpen_addSubgroup L.O.toAddSubgroup U hUo ?_ ?_
   · intro i _
-    simp [U, f]
+    simp [f]
   · intro x hx
     have hx' : ∀ i, b.repr x i * ((D : 𝒪[F]) : F)⁻¹ ∈ 𝒪[F] := fun i => hx i (Set.mem_univ i)
     show x ∈ L.O

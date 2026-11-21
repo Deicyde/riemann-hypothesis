@@ -1,16 +1,12 @@
-import Mathlib
-import Development.AutomorphicArithmetic.IntegralCasts.Imports
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.EvalProd
-import Formalism.LocalToGlobal.UnitaryNorms.IsUnitaryNormOf
-import Formalism.RealPlaceAnalysis.ThirdArithmeticHolds
-import Development.AbelianVarietyTheory.Definitions.Foundations.SmoothPartStable
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.TwConj
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ContinuousOfValuedEq
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsOpenKerFinIdele
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.DifferentiableAtChart
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ContinuousConjFin
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsIrreducibleIff
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HeckeCharacterUnramifiedAeAndExistsLevel
+import Development.AutomorphicArithmetic.IntegralCasts.RegAlgFam
+import Mathlib.Topology.Algebra.Group.Matrix
 
 noncomputable section
 

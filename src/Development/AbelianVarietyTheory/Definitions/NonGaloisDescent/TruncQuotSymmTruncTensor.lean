@@ -1,7 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.DieuUnifDiagNotSurjective
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToBaseChangePtsBijective
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.LubinTateDeformation
+import Mathlib.RingTheory.AdicCompletion.RingHom
 
 noncomputable section
 

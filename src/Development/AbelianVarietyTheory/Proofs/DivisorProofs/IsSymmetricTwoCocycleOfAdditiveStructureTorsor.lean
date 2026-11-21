@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsDatNeZero
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NaturalPointwiseCochainConstOfGlobalSectionsBaseStatement
 import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.GlobalFnsHolds
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.AbelianSchemeGerms
 open CategoryTheory AlgebraicGeometry MonoidalCategory CartesianMonoidalCategory MonObj TensorProduct WithConv
 open ReciprocityTheory.ChartRestriction.G.Geo.Tor (Sp spMap epsR IsTangent IsGrpPullback)
 open ReciprocityTheory.ChartRestriction.G.Semi (IsAbelianScheme LB RigLB CubicalStr Theta thφ thε thK x3)
@@ -49,7 +47,7 @@ theorem isSymCoc_of_isAdd : ∀ (R : Type) [CommRing R] (A : Over (Sp R)) [GrpOb
       have h4 := hfg E E' φ (w ≫ fst _ _) (w ≫ snd _ _ ≫ fst A A)
       rw [_root_.mul_assoc] at h2
       simp only [MonObj.comp_mul] at h2 h3
-      simp only [k, Fn1.zero, Category.assoc, map_sub, map_add, MonObj.comp_mul]
+      simp only [k, Fn1.zero, Category.assoc, map_sub, map_add]
       linear_combination h2 - h1 - h3 + h4
     obtain ⟨r, hr⟩ := GlobalTheory.T.natural_pointwiseCochain_const_of_globalSections_base R (A ⊗ (A ⊗ A)) Unit (whole _) (by simp [whole])
       (GlobalTheory.globalFns_holds (Sp R) (A ⊗ (A ⊗ A))
@@ -58,8 +56,7 @@ theorem isSymCoc_of_isAdd : ∀ (R : Type) [CommRing R] (A : Over (Sp R)) [GrpOb
     intro x y z
     have e1 := hr D (lift x (lift y z)) (sm_whole _)
     have e0 := hr D (lift 1 (lift 1 1)) (sm_whole _)
-    simp only [k, lift_fst, lift_snd, lift_fst_assoc, lift_snd_assoc, _root_.mul_one, sub_self, add_sub_cancel_right,
-      sub_add_cancel] at e0 e1
+    simp only [k, lift_fst, lift_snd, lift_snd_assoc, _root_.mul_one, sub_self, add_sub_cancel_right] at e0 e1
     rw [← e0] at e1
     exact e1
 

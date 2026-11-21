@@ -1,4 +1,6 @@
-import Development.WeilBound.RepresentationTheoryGL.RegularisedSiegelWeil.ThetaIdempotents.MapsExist
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.EventuallyEqOfIsPreconnected
+import Formalism.LocalToGlobal.BesselHermitianTheta.DefsReal
 
 noncomputable section
 

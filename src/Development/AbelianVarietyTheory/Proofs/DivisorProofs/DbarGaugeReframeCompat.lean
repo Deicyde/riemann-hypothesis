@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrameAtApply
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DbarAddVectorScalar
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ReframeVerticalDerivativeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrameMapWedgeCompatStatement
@@ -32,7 +32,7 @@ private theorem d01_csmul (f : Pt E g → Ext m) (Q v : Pt E g) (z : ℂ) :
   rw [hz, Pullback.dbar_add_vector, Pullback.dbar_real_smul, Pullback.dbar_real_smul, Pullback.dbar_smul_I]
   conv_rhs => rw [← Complex.re_add_im (star z)]
   simp only [Complex.star_def, Complex.conj_re, Complex.conj_im, add_smul, mul_smul, Complex.coe_smul]
-  simp only [Complex.ofReal_neg, neg_smul, smul_neg, smul_comm (z.im) Complex.I, neg_smul]
+  simp only [neg_smul, smul_neg, smul_comm (z.im) Complex.I, neg_smul]
 
 private theorem wedge_sum' (i : Fin m) {ι : Type} (t : Finset ι) (w : ι → Ext m) :
     wedge i (∑ j ∈ t, w j) = ∑ j ∈ t, wedge i (w j) := by

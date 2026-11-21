@@ -1,5 +1,7 @@
-import Mathlib
-import Formalism.GaloisCohomology.LocalTateDualityK
+import BuildAid.Leniency.Open
+import Mathlib.NumberTheory.Padics.ProperSpace
+import Mathlib.Topology.Instances.ZMod
+import ReciprocityTheory.GaloisValuations.SeparatedDvrSecondCohomologyMem
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.GaloisCohomology
 
 namespace GlobalTheory.PadicH2Separated

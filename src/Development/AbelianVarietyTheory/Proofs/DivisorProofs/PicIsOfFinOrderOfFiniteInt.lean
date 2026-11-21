@@ -1,5 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsOfFinOrderOfIsOfFinOrderMapRingHomStatement
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.GroupTheory.FiniteAbelian.Basic
+import Mathlib.NumberTheory.NumberField.ClassNumber
+import Mathlib.RingTheory.Artinian.Instances
+import Mathlib.RingTheory.Ideal.Quotient.HasFiniteQuotients
+import Mathlib.Tactic.ENatToNat
 
 set_option autoImplicit false
 open NumberField

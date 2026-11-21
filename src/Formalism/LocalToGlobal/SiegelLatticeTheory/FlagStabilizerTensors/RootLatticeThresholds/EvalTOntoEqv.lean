@@ -1,6 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.RootLatticeThresholds.EvalTOntoPsi
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.SchurOrthogonality
+import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.HidaSetting
 
 noncomputable section
 

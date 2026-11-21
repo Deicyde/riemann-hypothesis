@@ -1,6 +1,5 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.InertJacobiLevels.SecondTorsionCardPos
-import Formalism.SharpRestriction.InertJacobiLevels.AsmErr
-import Formalism.SharpRestriction.InertJacobiLevels.AsmKap
 
 noncomputable section
 

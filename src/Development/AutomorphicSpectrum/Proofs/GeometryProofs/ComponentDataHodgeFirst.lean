@@ -1,10 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.BdryChart
-import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.IsPshLocallyIntegrableStatement
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.FlatDegree
-import Development.AutomorphicSpectrum.Statements.GeometryStatements.NineGeoU
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ValAtIffValueAtStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.HodgeCompDescentFourth
+import BuildAid.Leniency.Open
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsPeriodAtRestrict
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField Matrix Filter Topology
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi
 open GroundTheory.Heights₂.Heights.LowerBoundFree GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Cusp
@@ -46,10 +41,10 @@ private theorem isMultiHomog_X_geometry {K : Type} {Jt : K → Type} [∀ k, Fin
     rw [Finset.sum_eq_single i]
     · simp
     · intro b _ hb
-      simp [Finsupp.single_apply, Ne.symm hb]
+      simp [Ne.symm hb]
     · intro h; exact absurd (Finset.mem_univ i) h
   · have hk' : k ≠ k' := Ne.symm hk
-    simp [Finsupp.single_apply, hk, hk']
+    simp [hk]
 
 private theorem isMultiHomog_prod_X_one {K : Type} [Fintype K] {Jt : K → Type} [∀ k, Fintype (Jt k)]
     (ch : (k : K) → Jt k) :

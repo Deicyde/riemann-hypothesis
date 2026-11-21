@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.MemCycAlgOfPow
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsTowerUnionZetaDerivationModIntegralClosure
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.CyclotomicDvdOfAevalPrimitiveRootInertiaFixedStatement
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.MainNotions.N GlobalTheory.GalOfCusp UpperTheory.V UpperTheory.V.Af UpperTheory.V.HV GlobalTheory.Ord2 GlobalTheory.KZ GlobalTheory.RecOne GlobalTheory.AlmostEt
@@ -87,7 +87,7 @@ theorem cyc_rel [CharZero Ω] {p : ℕ} [hp : Fact p.Prime] {A : ValuationSubrin
     exact hzA.isRoot_cyclotomic hpos
   have hid := congrArg (fun f => aeval z (derivative f))
     (cyclotomic_prime_pow_mul_X_pow_sub_one R p m)
-  simp only [derivative_mul, derivative_sub, derivative_X_pow, derivative_one, map_add, map_mul,
+  simp only [derivative_mul, derivative_X_pow, derivative_one, map_add, map_mul,
     map_sub, hroot, zero_mul, add_zero, sub_zero] at hid
   rw [frac_smul_mk]
   set F := aeval z (derivative (cyclotomic (p ^ (m + 1)) R))

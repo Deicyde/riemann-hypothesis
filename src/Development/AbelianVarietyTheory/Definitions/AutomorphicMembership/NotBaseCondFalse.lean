@@ -1,8 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.RationalRootsDef
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.RecExGOfRecAtG
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SpreadLamOfLe
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ToMapSurj
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ExistsBaseJointFld
 
 noncomputable section
 

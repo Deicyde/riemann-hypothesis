@@ -1,6 +1,7 @@
-import Mathlib
-import Formalism.SatakeDualWeyl.Statement
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemMatLat
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
 open Polynomial Matrix GlobalTheory.LatOrb
 
 namespace GlobalTheory.LatOrb
@@ -15,7 +16,7 @@ theorem isIntegral_of_mapsTo_lattice : ∀ {O K : Type} [CommRing O] [Field K] [
       map_add' := fun x y => by ext1; simp [Matrix.mulVec_add]
       map_smul' := fun a x => by
         ext1
-        simp only [Submodule.coe_smul, RingHom.id_apply, SetLike.val_smul]
+        simp only [RingHom.id_apply, SetLike.val_smul]
         rw [Matrix.mulVec_smul] }
   have hpow : ∀ k : ℕ, ∀ v : M, (c ^ k) *ᵥ (v : Fin n → K) = (((f ^ k) v : M) : Fin n → K) := by
     intro k

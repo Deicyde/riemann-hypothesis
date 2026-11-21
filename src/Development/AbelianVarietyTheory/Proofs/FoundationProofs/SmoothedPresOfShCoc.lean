@@ -1,14 +1,18 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.IsZetaSystemFixedExponent
 import Development.AbelianVarietyTheory.Definitions.Foundations.AdmissibleNewformZetaData
 import Development.AbelianVarietyTheory.Definitions.Foundations.AdmissibleHodgeTateZetaClassParams
-import Development.AbelianVarietyTheory.Definitions.Foundations.HTPresNuOfPolys
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsLamF
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsLamFROfIsLamF
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsLamFR2
-import Development.AbelianVarietyTheory.Definitions.Foundations.ChiProj
-import Development.AbelianVarietyTheory.Definitions.Foundations.CoPtMu
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ContinuousOfCg
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ApplyProdInv
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.DepthZeroLabelsOfLabelLaws
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsHtPresNu7
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsKummerElementFixedFieldClosedSubgroup
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsPolynomialPrimitiveRootOfCyclotomicInertia
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.IsClosedInertiaCyclotomicKernel
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.NormLeOneOfIsIntegral
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.UntwistedRepresentationOrdinaryTriangularShape
+import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CyclotomicCharInertiaSurjective
 
 noncomputable section
 
@@ -189,7 +193,7 @@ theorem smoothed_pres_of_shCoc [IsAlgClosure ℚ Ω] (A : ValuationSubring Ω) (
   · have := congrFun (hY r s u x) 1
     show Y r (s * u) x 1 = Y r s x 1 + (ν s : Qbar l) * Y r u (x * (cycMod ℚ Ω l r s)⁻¹) 1
     rw [this, hν s hs]
-    simp [Matrix.mulVec, dotProduct, Fin.sum_univ_two, hD s hs]
+    simp [hD s hs]
   · obtain ⟨E0, hE⟩ := hc r n
     exact ⟨E0, fun s s' h => hE s s' 1 h⟩
   · exact Units.ext (by rw [hν s (Ine_le_Dec A hs), hI s hs, Units.val_one])

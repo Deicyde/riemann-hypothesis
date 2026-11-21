@@ -1,5 +1,5 @@
-import Mathlib
-import Development.WeilBound.CoreStatements.PublishedTheorems.PoitouTateDuality.FinalGenDefs
+import BuildAid.Leniency.Open
+import GroundTheory.GlobalFields.TateThesis.ChebotarevAbelian
 
 noncomputable section
 

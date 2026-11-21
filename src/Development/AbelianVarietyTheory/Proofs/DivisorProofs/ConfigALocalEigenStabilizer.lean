@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeEvFun
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalPartEvalStabilizerStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalWeilActionCompatibilityStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalOperatorMulOfPrintsStatement
 import Development.AbelianVarietyTheory.Definitions.Divisors.PairsOfSquareTriple
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviElementLocalIdeleExistsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawTypeALocalPartTripleStatement
@@ -64,7 +63,7 @@ theorem cone_as_integral : GlobalTheory.FunPr.Hypotheses₂ → ∀ (F E : Type)
       rw [GlobalTheory.StabHaar.mat_one]
       simp only [Matrix.transpose_one, Matrix.one_apply, mul_ite, mul_one, mul_zero, Finset.sum_ite_eq',
         Finset.mem_univ, if_true]
-      simp only [shiftA, Matrix.smul_apply, Matrix.vecMulVec_apply, Units.val_one, one_smul, smul_eq_mul]
+      simp only [shiftA, Matrix.smul_apply, Matrix.vecMulVec_apply, Units.val_one, smul_eq_mul]
       have h := congrFun hlev.1 i
       simp only [Matrix.mulVec, dotProduct, Pi.smul_apply, smul_eq_mul] at h
       rw [← mul_assoc, ← h, Finset.sum_mul]

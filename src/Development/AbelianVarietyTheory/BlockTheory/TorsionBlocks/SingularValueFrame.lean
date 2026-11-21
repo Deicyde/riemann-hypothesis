@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.T2SpaceAdeleRing
+import Mathlib.Analysis.InnerProductSpace.SingularValues
 
 noncomputable section
 

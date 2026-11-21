@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import Mathlib.RingTheory.Finiteness.ModuleFinitePresentation
 
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -74,7 +75,7 @@ theorem exists_swap (hσ : ∀ z, σ (σ z) = z) (hJ : ∀ i j, σ (J j i) = J i
     intro z
     rw [hgdef, Matrix.add_mulVec, Matrix.add_mulVec, Matrix.one_mulVec, Matrix.vecMulVec_mulVec, Matrix.vecMulVec_mulVec]
     ext i
-    simp [form, la, lb, dotProduct_comm _ z, dotProduct_sub, dotProduct_smul, sub_dotProduct, smul_dotProduct]
+    simp [form, la, lb, dotProduct_comm _ z, dotProduct_sub, dotProduct_smul]
     ring
   refine ⟨g, unitary_of_form g fun z z' => ?_, ?_⟩
   · rw [hg, hg]

@@ -1,6 +1,5 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.HDiscBDefs
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.AGFrameNonneg
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.DePres
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.FprodNeZero
 
 namespace ReciprocityTheory.ChartRestriction.G.T0

@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataSpaces
 import Formalism.LocalToGlobal.Divisibility.TuplesLemmas
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.L2.DIV
 
 namespace GlobalTheory

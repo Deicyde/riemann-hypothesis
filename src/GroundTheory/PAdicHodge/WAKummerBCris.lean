@@ -1,5 +1,7 @@
-import Mathlib
-import GroundTheory.PAdicHodge.ExistsNormLeOfNormLtOneFinite
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.PAdicHodge.FundamentalSeqBCris
+import GroundTheory.PAdicHodge.WAKummerLog
 set_option maxSynthPendingDepth 1
 
 noncomputable section

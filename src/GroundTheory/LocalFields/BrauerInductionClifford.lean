@@ -1,6 +1,7 @@
-import Mathlib
-import GroundTheory.LocalFields.BrauerInductionCharacters
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.LocalFields.BrauerInductionInduced
+import Mathlib.Tactic.Monotonicity.Lemmas
 
 noncomputable section
 

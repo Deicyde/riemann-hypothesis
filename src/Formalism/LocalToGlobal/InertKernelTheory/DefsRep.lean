@@ -1,7 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.InertKernelTheory.FirstKernelGeneratorOfOrthogonal
-import Formalism.LocalToGlobal.InertKernelTheory.StatementBeCob
-import Formalism.LocalToGlobal.InertKernelTheory.StatementInt
-import Formalism.LocalToGlobal.PairingIndexBounds.PendingAdmissibility.LocalFDerivAdmissibility.RepRed
+import Formalism.LocalToGlobal.GroupLattices.PendingLemmas.InvarianceIffAdditiveMapsExist
 
 noncomputable section
 

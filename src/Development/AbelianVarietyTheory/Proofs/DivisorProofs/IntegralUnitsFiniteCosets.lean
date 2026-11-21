@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Divisibility.Tuples
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.FiniteAdeleStrongApproximationModNat
 open NumberField IsDedekindDomain Formalism.L2.DIV Formalism.UG
@@ -49,7 +50,7 @@ theorem mk_mem_range (N : ℕ) (hN : 0 < N) (z : RInt F E) :
 theorem finite_quot (N : ℕ) (hN : 0 < N) : Finite (RInt F E ⧸ Ideal.span {(N : RInt F E)}) := by
   haveI : Finite (𝓞 E ⧸ Ideal.span {(N : 𝓞 E)}) := by
     apply Ideal.finiteQuotientOfFreeOfNeBot
-    simp [Ideal.span_singleton_eq_bot]; omega
+    simp; omega
   have hN0 : Ideal.Quotient.mk (Ideal.span {(N : RInt F E)}) (N : RInt F E) = 0 :=
     Ideal.Quotient.eq_zero_iff_mem.2 (Ideal.subset_span rfl)
   let φ : 𝓞 E ⧸ Ideal.span {(N : 𝓞 E)} →+* RInt F E ⧸ Ideal.span {(N : RInt F E)} :=

@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.MeasInvStatementPfB
+import Mathlib.Tactic.ENatToNat
 
 namespace ReciprocityTheory.ChartRestriction.G.AR.Up.MI
 

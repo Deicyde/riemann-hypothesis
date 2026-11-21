@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.AnisotropicRestrict
-import GroundTheory.AutomorphicForms.AdelicUnitaryGroups
+import GroundTheory.AutomorphicForms.AdelicUnitaryGroups.Anisotropic
 set_option maxSynthPendingDepth 1
 
 open Module Matrix TensorProduct

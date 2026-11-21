@@ -1,7 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.TraceFormula.GL4GeometricSide.InnerEq
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsIntegralEqSum
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsThetaInvolution
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ContinuousMapGL
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.OnlyStableSubspaces
 
 noncomputable section
 

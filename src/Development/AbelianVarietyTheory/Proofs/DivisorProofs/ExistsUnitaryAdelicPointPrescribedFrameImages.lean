@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsLv
+import Development.AbelianVarietyTheory.Definitions.Divisors.LocallyCompactUnipFlag
 open scoped TensorProduct NNReal ENNReal Matrix
 open NumberField MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SiegelSet GlobalTheory.UAut GlobalTheory.EisLine GlobalTheory.SphEis
 open GlobalTheory.ResLine (IsHt SemiLat)
@@ -43,7 +45,7 @@ theorem gram_comb {n j m : ℕ} (J : Matrix (Fin n) (Fin n) S) (J0 : Matrix (Fin
   have h2 : cT s Z * (J * (A * pX + Z * p0 + B * pY)) = J0 * p0 := by
     simp only [Matrix.mul_add, ← Matrix.mul_assoc, za, zz, zb, Matrix.zero_mul, zero_add, add_zero]
   have h3 : cT s B * (J * (A * pX + Z * p0 + B * pY)) = pX := by
-    simp only [Matrix.mul_add, ← Matrix.mul_assoc, ba, bz, bb, Matrix.zero_mul, Matrix.one_mul, zero_add, add_zero]
+    simp only [Matrix.mul_add, ← Matrix.mul_assoc, ba, bz, bb, Matrix.zero_mul, Matrix.one_mul, add_zero]
   rw [cT_add', cT_add', cT_mul, cT_mul, cT_mul]
   simp only [Matrix.add_mul, Matrix.mul_assoc, h1, h2, h3]
 

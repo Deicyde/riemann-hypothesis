@@ -1,11 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.ModuliSpaces.IsSeparatedOfIsQProjOver
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.SiegelToroidalIntegral
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.FormalAlgebraisation
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsWeilIsDiagRoot
-import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.WeilIsAlternatingSkewNatural
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.SiegelObjectPullbackExistsAndPrincipal
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsWeilIsRoot
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open GlobalTheory.ZM GlobalTheory.SiegelTor
@@ -163,7 +158,7 @@ theorem weil_geom : ∀ g n : ℕ, 3 ≤ n → Odd n → ∀ (R : Type) [CommRin
         exact mul_inv_cancel _
     have hmem : (w : R) - 1 ∈ I := by
       have e₁ := congrArg (fun q : (R ⧸ I ^ (0 + 1))ˣ => (q : R ⧸ I ^ (0 + 1))) hmk
-      simp only [Units.coe_map, Units.val_one, MonoidHom.coe_coe] at e₁
+      simp only [Units.coe_map, Units.val_one] at e₁
       have e₂ : mk (w : R) = mk 1 := by rw [map_one]; exact e₁
       have := Ideal.Quotient.eq.1 e₂
       simpa using this

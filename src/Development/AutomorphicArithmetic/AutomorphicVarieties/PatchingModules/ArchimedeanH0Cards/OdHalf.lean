@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.ArchimedeanH0Cards.InV
 import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.DegreeCountCohomology.TyCard
+import Development.AutomorphicArithmetic.AutomorphicVarieties.PatchingModules.ArchimedeanH0Cards.ObstructionBoundFromDuality
 
 open Matrix Filter ReciprocityTheory.Gal UpperTheory.V.W UpperTheory.V.Pa UpperTheory.V.Pa.B2
 
@@ -256,7 +258,7 @@ theorem UpperTheory.V.Pa.B2.odHalf :
         simp [Matrix.mul_add, Matrix.add_mul]
       map_smul' := fun c m => by
         funext p
-        simp [Matrix.mul_smul, Matrix.smul_mul] }
+        simp }
   have hsurj : Function.Surjective gmap := by
     intro t
     let Y : Matrix (Fin n) (Fin n) X := Matrix.of fun i j =>

@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.LevelKernelDetection.IdempotentMemInvariants
-import Formalism.SharpRestriction.LevelLetterCocycles.LevelKernelDetection.ExistsBasisOfSurjective
+import Mathlib.RingTheory.TensorProduct.IsBaseChangeFree
 
 noncomputable section
 

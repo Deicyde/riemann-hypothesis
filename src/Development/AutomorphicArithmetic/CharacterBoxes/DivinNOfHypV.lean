@@ -1,5 +1,7 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalTheoremInputs
 import Development.AutomorphicArithmetic.CharacterBoxes.ExistsPageN
+import Formalism.SharpRestriction.ParamsHeightRankConstant
 
 noncomputable section
 

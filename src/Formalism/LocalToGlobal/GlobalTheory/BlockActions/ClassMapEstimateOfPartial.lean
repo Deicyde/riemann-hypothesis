@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.BlockActions.ArchimedeanSignatureMatchingOfTrivialBranchingSymm
 import Formalism.LocalToGlobal.HilbertRowConditions.RowPin
-import Formalism.SharpRestriction.GlobalSchurBounds.FiniteModelOfAdmissibleTransports
 
 noncomputable section
 

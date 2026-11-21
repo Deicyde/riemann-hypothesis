@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.GlobalEulerCharacteristic.ShapiroDefs
-import GroundTheory.ProfiniteCohomology.EulerChar
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.BaseChangeModules
+import GroundTheory.ProfiniteCohomology.EulerCharDefs
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

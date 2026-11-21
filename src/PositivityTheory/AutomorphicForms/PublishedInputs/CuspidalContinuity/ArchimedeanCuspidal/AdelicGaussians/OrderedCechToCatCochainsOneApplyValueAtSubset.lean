@@ -1,6 +1,4 @@
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.AdelicGaussians.UpperRightUnipotentInvariance
-import GroundTheory.AutomorphicForms.ReductionFinite
-import GroundTheory.AutomorphicForms.ReductionMahler
+import BuildAid.Leniency.Open
 import GroundTheory.AutomorphicForms.GL2Classical.ExistsIntOfMemIntegralFiniteAdeles
 import GroundTheory.GlobalFields.TateThesis.AdelePoissonUniform
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SummableLatticeWeightThreeStatement
@@ -392,7 +390,7 @@ theorem row_two {m : G3} {t : (𝔸[ℚ])ˣ} (r20 : (m : M3A) 2 0 = 0) (r21 : (m
     (r22 : (m : M3A) 2 2 = t) :
     (Pi.single 2 (1 : 𝔸[ℚ]) : Fin 3 → 𝔸[ℚ]) ᵥ* (m : M3A) = (t : 𝔸[ℚ]) • (Pi.single 2 (1 : 𝔸[ℚ]) : Fin 3 → 𝔸[ℚ]) := by
   ext j
-  fin_cases j <;> simp [Matrix.vecMul, dotProduct, Fin.sum_univ_three, Pi.single_apply, r20, r21, r22]
+  fin_cases j <;> simp [Matrix.vecMul, dotProduct, Pi.single_apply, r20, r21, r22]
 
 theorem xiV_apply (γ : GL (Fin 2) ℚ) :
     ((e2 γ * sw : GL (Fin 3) ℚ) : Matrix (Fin 3) (Fin 3) ℚ) =

@@ -1,6 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.LineOppositeParabolicUnitaryLeviSectionEq
-import Formalism.SatakeDualWeyl.StatementE
 
 open GlobalTheory.LGrp Formalism.UG
 
@@ -121,7 +122,7 @@ theorem _root_.GlobalTheory.BorelUMod.adjJ_one (σ : L →+* L) :
   by_cases h : i = j
   · subst h; simp [_root_.GlobalTheory.BorelUMod.adjJ]
   · have h' : j.rev ≠ i.rev := fun e => h (Fin.rev_injective e).symm
-    simp [_root_.GlobalTheory.BorelUMod.adjJ, Matrix.one_apply, h, h']
+    simp [_root_.GlobalTheory.BorelUMod.adjJ, h, h']
 
 variable {L : Type} [Field L] [Valued L (WithZero (Multiplicative ℤ))] {n : ℕ} in
 omit [Valued L (WithZero (Multiplicative ℤ))] in

@@ -1,9 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.CardStabilizerForgetFr
 import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.IntegralGLSuccEmbeddingMemParahoricTimesPrincipa
-import Formalism.LocalToGlobal.Columns.LevGCount
-import Formalism.LocalToGlobal.Columns.RowFormsLemmas
-import Formalism.LocalToGlobal.Columns.ColFormsLemmas
 
 noncomputable section
 

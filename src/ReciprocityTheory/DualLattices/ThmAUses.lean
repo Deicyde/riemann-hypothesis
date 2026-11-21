@@ -1,5 +1,10 @@
-import ReciprocityTheory.DualLattices.StThmAFull
-import ReciprocityTheory.DualLattices.VDetEqOneOfIntegral
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import ReciprocityTheory.DualLattices.SmallLevelClassSet
 
 noncomputable section
 

@@ -1,4 +1,5 @@
-import GroundTheory.GlobalFields.Adele.Compact
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.MultilinearSubMem
 import Development.WeilBound.CoreStatements.EqualVolumeCompactOpens.InclAdInjective
 import Development.WeilBound.CoreStatements.EqualVolumeCompactOpens.CongCompactOpen

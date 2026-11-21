@@ -1,7 +1,6 @@
-import Formalism.LocalToGlobal.Columns.ChainTwTopQ
-import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.TopLawQ
-import Formalism.LocalToGlobal.KernelLattices.KernelLocalFactors.LocalProductMeasures.HilbertNinetyNormOne
-import Formalism.LocalToGlobal.Columns.ChainTwFrA
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.Columns.KOneCharacterTrivialNearOne
 
 open NumberField IsDedekindDomain Module
 

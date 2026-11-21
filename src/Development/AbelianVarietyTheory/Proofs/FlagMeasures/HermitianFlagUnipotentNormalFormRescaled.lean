@@ -1,11 +1,6 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.FractionFieldToGenericStalkAlgebraMapEq
-import Formalism.SharpRestriction.CuspSpanNormBounds.PsiEDef
-import Development.AbelianVarietyTheory.Definitions.Foundations.IsHermND
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ComplementReferenceCompactSubgroup
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.GFrames
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.MemFlagUnipotentIffOrderedEichlerProductStatement
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.EichlerIsometry
 open ValuativeRel Formalism.MainNotions.S.Loc GlobalTheory.HL NumberField IsDedekindDomain
 open scoped Pointwise ENNReal Classical
 
@@ -18,7 +13,7 @@ variable (L : LocE F E) {n : ℕ} (Hm : Matrix (Fin n) (Fin n) E)
 
 theorem eich_smul_base (c : E) (hc : L.cj c = c) (x u : Fin n → E) (s : E) (v : Fin n → E) :
     eich L Hm (c • x) u s v = eich L Hm x (c • u) (c ^ 2 * s) v := by
-  simp only [eich, Eichler.hf_smul_r, Eichler.hf_smul_l, hc]
+  simp only [eich, Eichler.hf_smul_r, hc]
   module
 
 theorem cj_alg (a : F) : L.cj (algebraMap F E a) = algebraMap F E a := L.cj.commutes a

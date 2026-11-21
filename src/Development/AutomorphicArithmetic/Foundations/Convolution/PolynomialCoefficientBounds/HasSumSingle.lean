@@ -1,6 +1,6 @@
-import Mathlib
-import Development.WeilBound.RepresentationTheoryGL.TwistedFactors.AffineCharacterGenerators.Generators
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.PolynomialCoefficientBounds.PieceAdd
+import Mathlib.Analysis.CStarAlgebra.Classes
 
 open MvPolynomial Filter Topology PositivityTheory.Rg.Fx
 
@@ -43,7 +43,7 @@ theorem UpperTheory.ConvolutionTheory.FX.piece_sum :
     exact hf.add hg
   | single v p =>
     have hv : ev Λ (AddMonoidAlgebra.single v p : EP ι) = Complex.exp (eval Λ (lin v)) * eval Λ p := by
-      simp [ev, PositivityTheory.Rg.Fx.lift, expChar, lin, mul_comm, aeval_eq_eval]
+      simp [ev, PositivityTheory.Rg.Fx.lift, expChar, lin, mul_comm]
     rw [hv]
     convert hasSum_single' v p Λ using 2 with k
     rw [(UpperTheory.ConvolutionTheory.FX.piece_add ι k).2.2 v p, map_sum]

@@ -1,9 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataHost
 import Formalism.LocalToGlobal.UnitaryNorms.RealCyclotomicTwoPower
-import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.HostFacts
 import Development.AutomorphicArithmetic.PrimeDiscriminants.CycImage
-import Development.AutomorphicArithmetic.PrimeDiscriminants.RamDiscr
+import Mathlib.FieldTheory.Minpoly.IsConjRoot
+import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
 
 open NumberField
 

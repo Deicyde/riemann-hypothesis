@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.InfCut
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.StepPtRepPfD
 import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.UnitaryHaarProducts.InHHAlg
@@ -119,7 +120,7 @@ theorem real_point_representative_diagonal : StepPtRepDiag := by
         · simp [ha, Ne.symm ha]
       · by_cases hb : b = i0 v
         · subst hb; simp [hab]
-        · simp [hab, hb, Ne.symm hb]
+        · simp [hab, Ne.symm hb]
     rw [hm1, hm2]
     exact hD v
 

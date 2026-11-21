@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.DiagonalSupport.DigAbs
 import Formalism.SharpRestriction.GrowthBounds.ProjectionOfIsotypicDecomposition
 import Formalism.SharpRestriction.GrowthBounds.GLWeightTheory

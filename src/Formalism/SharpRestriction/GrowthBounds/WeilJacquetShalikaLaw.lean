@@ -1,13 +1,9 @@
-import Formalism.LocalRingCardinality.DataExtra
-import Formalism.LocalRingCardinality.HostCls
-import Formalism.LocalRingCardinality.DataDIVDefs
-import Formalism.SharpRestriction.ParConsts
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.ParamsHeightRankConstant
 import Formalism.SharpRestriction.GrowthBounds.SmallOrderPrimes
 import Formalism.SharpRestriction.GrowthBounds.FormalGroupSystem
-import Formalism.SharpRestriction.Divisibility.LocalQuadraticParts
 import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.DvdCondNIffCls
-import Development.AutomorphicArithmetic.OrbitLabellings.NotIsCsOfGIdx
 
 noncomputable section
 

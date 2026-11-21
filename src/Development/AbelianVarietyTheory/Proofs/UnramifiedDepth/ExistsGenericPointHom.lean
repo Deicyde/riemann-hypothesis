@@ -1,9 +1,5 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PlaceDivisors.StChartFH
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.GlobalSectionsRankAlgClosed
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.TwoWeightEqOneAddRoot
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Statements.ChartPoints.ChartPt
-import Development.AbelianVarietyTheory.Definitions.TeichmullerDepth.IsEigBasisIff
 
 set_option autoImplicit false
 noncomputable section

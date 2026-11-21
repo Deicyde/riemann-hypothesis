@@ -1,6 +1,5 @@
-import Mathlib
-import ReciprocityTheory.CommutativeAlgebra.PolynomialHeights.HeightAddRingKrullDimQuotientMvPolynomialField
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeightMaximalLePrimeAddDim
+import BuildAid.Leniency.Open
+import ReciprocityTheory.CommutativeAlgebra.PolynomialHeights.PolyCM
 
 namespace GlobalTheory.FieldExtHeight
 

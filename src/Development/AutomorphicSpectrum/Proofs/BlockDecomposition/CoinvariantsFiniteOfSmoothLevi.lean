@@ -1,9 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FibRepApply
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HasFiniteLengthOfFiniteDimensional
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LeviIntegralFacts
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsOpenNormalisedSubgroupSubset
 import GroundTheory.AutomorphicForms.FiniteLengthLattice
+import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SmIndCoinvariants
 
 noncomputable section
 

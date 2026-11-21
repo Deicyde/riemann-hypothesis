@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsSpanStepHomog
 import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.StatementsSpanStepLocal
 set_option maxSynthPendingDepth 1

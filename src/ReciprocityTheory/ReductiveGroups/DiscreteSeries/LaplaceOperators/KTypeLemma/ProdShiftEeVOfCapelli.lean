@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.LaplaceOperators.KTypeLemma.QuotientHighestWeightTensorStandard
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.LaplaceOperators.CapelliIdentity.Expand
+import Mathlib.Algebra.Module.StablyFree.Basic
 
 noncomputable section
 
@@ -236,7 +239,7 @@ theorem shiftPoly_natDegree_lt (θ : Fin (m + 1) → ℝ) : (shiftPoly θ).natDe
   unfold shiftPoly
   calc _ ≤ ∑ t : Fin (m + 1), (Polynomial.X + Polynomial.C ((θ t : ℝ) : ℂ)).natDegree := by
         apply Polynomial.natDegree_prod_le
-    _ = m + 1 := by simp [Polynomial.natDegree_X_add_C]
+    _ = m + 1 := by simp
     _ < m + 2 := by omega
 
 theorem shiftPoly_eval (θ : Fin (m + 1) → ℝ) (ω : ℂ) :

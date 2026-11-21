@@ -1,18 +1,13 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DHRealAdSmul
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicThetaSumNormLePolynomialScale
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StandardCharacterTrivialImpliesIntegralTrace
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TraceDualLatticeBoundedDenominator
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeisenbergDerivativePreservesSchwartz
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeisenbergDerivativeEquivarianceStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchimedeanUnitHeightBoundStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeisenbergWordL2Bound
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PeriodicityLevelHeightBound
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SobolevUniformBoundPeriodicStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EvIInfScaleMul
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WittFrameDarbouxCoordinatesStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DarbouxCoordsRationalPointsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorusActionModelCoordinatesStatement
@@ -140,7 +135,7 @@ theorem fin_step' {κ : Type} [Fintype κ] [DecidableEq κ] (ψ : AddChar (AF F)
     (hx : ∀ i, (x i).2 = (algebraMap F (AF F) (ξ i)).2) (hξ : Ψ x ≠ 0) (i : κ) (t : AF F) (ht0 : t.1 = 0)
     (ht1 : ∀ v, ‖evFin F v t‖ ≤ 1) : ψ (algebraMap F (AF F) ((K : F) * ξ i) * t) = 1 := by
   have e1 := congrFun (hfix _ (isMulInt_single K i t ht0 ht1)) x
-  simp only [schr, dotProduct_single, zero_dotProduct, Pi.zero_apply, zero_mul, mul_zero, add_zero] at e1
+  simp only [schr, dotProduct_single, Pi.zero_apply, zero_mul, mul_zero, add_zero] at e1
   have e2 := (mul_eq_right₀ hξ).1 e1
   rw [← e2]
   congr 1

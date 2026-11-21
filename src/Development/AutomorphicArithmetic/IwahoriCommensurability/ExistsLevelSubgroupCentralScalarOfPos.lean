@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ScalarCommutation.ExistsIdempotentHeckeOperatorWithRegularSupportAlt
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.IntegralStructures.GeometricFlagBases.PrimeLevelLocalization.NsmulIntegIff
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.IntegralStructures.GeometricFlagBases.PrimeLevelLocalization.PrimeProj
 open NumberField IsDedekindDomain Matrix GlobalTheory.CuspRep GlobalTheory.UnitaryBC GlobalTheory.DefU GlobalTheory.UPel.HT GlobalTheory.LKTrip GlobalTheory.LKGeo
 open UpperTheory.Gal.CertificateRingHomMap (GUf Gam0 Plc comp mat rat mem_Sim)
 open UpperTheory.Gal.W2.Seed UpperTheory.Gal.Int.Geo UpperTheory.Gal.Int.Geo.Pl
@@ -30,13 +29,13 @@ theorem UpperTheory.exists_levelSubgroup_central_scalar_of_pos :
   have hmat : (mat (rat y)).val = ((c : FiniteAdeleRing (𝓞 E) E)) • (1 : Matrix (Fin n) (Fin n) (FiniteAdeleRing (𝓞 E) E)) := by
     show ((c : E) • (1 : Matrix (Fin n) (Fin n) E)).map (algebraMap E (FiniteAdeleRing (𝓞 E) E)) = _
     ext i k
-    by_cases hik : i = k <;> simp [hik, Matrix.one_apply]
+    by_cases hik : i = k <;> simp [hik]
   have hcomp : ∀ w : Plc E, (comp w (rat y)).val = (c : w.adicCompletion E) • (1 : Matrix (Fin n) (Fin n) (w.adicCompletion E)) := by
     intro w
     show ((mat (rat y)).val).map (pLoc E w) = _
     rw [hmat]
     ext i k
-    by_cases hik : i = k <;> simp [hik, Matrix.one_apply]
+    by_cases hik : i = k <;> simp [hik]
   have hcen : ∀ g : GUf E n, rat y * g = g * rat y := by
     intro g
     refine Subtype.ext (Prod.ext (Units.ext ?_) (mul_comm _ _))

@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.HRatInvOfTriv
 import Formalism.LocalRingCardinality.Lemmas
+import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.ProdMemSpan
+import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.RatActGOf
 
 open MvPolynomial
 

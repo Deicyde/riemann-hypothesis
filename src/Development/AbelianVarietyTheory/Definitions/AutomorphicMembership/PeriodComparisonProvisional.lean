@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.FormsOver
+import Formalism.LocalToGlobal.LatticeGeometry.ViewsB
 
 noncomputable section
 

@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.RosatiLatticeNorms.LamPtClauses
 import Formalism.LocalToGlobal.ProjectiveLattices.HostSize
 import Development.AbelianVarietyTheory.BlockTheory.EvidentLattices.LatticeLetterSources

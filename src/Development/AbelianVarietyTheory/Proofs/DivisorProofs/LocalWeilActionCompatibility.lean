@@ -1,6 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaActionExistsStatement
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
 
 noncomputable section
 

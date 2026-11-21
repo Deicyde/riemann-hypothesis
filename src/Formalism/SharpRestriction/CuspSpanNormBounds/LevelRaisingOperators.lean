@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.FormalDegreeBessel.FormalDegreeRatio.WRWeyl
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.RuleGD
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.RuleSS
@@ -6,6 +8,7 @@ import Formalism.FormalDegreeBessel.FinalIO
 import Formalism.FormalDegreeBessel.FinalBF
 import Formalism.SharpRestriction.CuspSpanNormBounds.ChoiceOfModulusAndDiscriminant
 import Formalism.SharpRestriction.CuspSpanNormBounds.RadialRules
+import Mathlib.Analysis.SpecialFunctions.Complex.Analytic
 
 open scoped ContDiff Topology
 open Filter
@@ -901,11 +904,11 @@ theorem mul_X (k : Fin (r + 1)) (i : Fin 6) : IsMul (S.X k i) (coef k i) := IsMu
 theorem mul_Dr : IsMul S.lev.Dr (Dr (r := r)) :=
   (IsMul.prod r _ _ (fun i => S.mul_X i.castSucc 1)).congr (fun x _ => by simp [Dr, cOf, coef])
 theorem mul_Drb : IsMul S.lev.Drb (fun x => star (Dr (r := r) x)) :=
-  (IsMul.prod r _ _ (fun i => S.mul_X i.castSucc 4)).congr (fun x _ => by simp [Dr, cOf, coef, map_prod])
+  (IsMul.prod r _ _ (fun i => S.mul_X i.castSucc 4)).congr (fun x _ => by simp [Dr, cOf, coef])
 theorem mul_Dri : IsMul S.lev.Dri (fun x => (Dr (r := r) x)⁻¹) :=
   (IsMul.prod r _ _ (fun i => S.mul_X i.castSucc 2)).congr (fun x _ => by simp [Dr, cOf, coef])
 theorem mul_Drbi : IsMul S.lev.Drbi (fun x => (star (Dr (r := r) x))⁻¹) :=
-  (IsMul.prod r _ _ (fun i => S.mul_X i.castSucc 5)).congr (fun x _ => by simp [Dr, cOf, coef, map_prod])
+  (IsMul.prod r _ _ (fun i => S.mul_X i.castSucc 5)).congr (fun x _ => by simp [Dr, cOf, coef])
 theorem mul_GG : IsMul S.lev.GG (GG S.T S.T') := IsMul.fn S.hGG
 theorem mul_GGi : IsMul S.lev.GGi (fun x => (GG S.T S.T' x)⁻¹) := IsMul.fn S.hGGi
 theorem multiplier_coordinate : IsMul S.lev.ζ (zOf (r := r)) := S.mul_X _ 1

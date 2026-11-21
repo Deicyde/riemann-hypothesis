@@ -1,12 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DblOpOfConst
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OnlyTrivialPartner
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeFixedAtOfSummands
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsComplAtBot
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IdemSmulUnitary
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InertPlaceTripleStabilizerFixed
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DefiniteCompactArchimedeanMaximal
 open scoped TensorProduct NNReal Matrix
@@ -75,9 +68,9 @@ theorem finPart_inf {n : ℕ} (J : Matrix (Fin n) (Fin n) E) (g : UA σ J) :
   ext i j
   by_cases h : i = j
   · subst h
-    simp [Matrix.map_apply, Matrix.add_apply, Matrix.smul_apply, tmap_smul, fstA_eInf, Matrix.one_apply]
+    simp [Matrix.map_apply, Matrix.add_apply, Matrix.smul_apply, tmap_smul, fstA_eInf]
     exact Algebra.TensorProduct.one_def.symm
-  · simp [Matrix.map_apply, Matrix.add_apply, Matrix.smul_apply, tmap_smul, fstA_eInf, Matrix.one_apply, h]
+  · simp [Matrix.map_apply, Matrix.add_apply, Matrix.smul_apply, tmap_smul, fstA_eInf, h]
 
 theorem span_finiteDimensional : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [NumberField E] [Algebra F E] (σ : E →ₐ[F] E) (B : Base F E) (n s : ℕ) (X : Spc F E n), B.IsGood σ → X.IsHerm σ B 0 s →
     ∀ (V : Type) [AddCommGroup V] [Module ℂ V] (ρ : UA σ X.J →* Module.End ℂ V) (x : V) (S : Submodule ℂ V), FiniteDimensional ℂ S →

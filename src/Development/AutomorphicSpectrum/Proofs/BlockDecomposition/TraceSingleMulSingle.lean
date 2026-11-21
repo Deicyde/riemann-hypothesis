@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.DiscreteSeriesTopClasses.StTopClass
 
 open Matrix MvPolynomial
@@ -24,7 +25,7 @@ def secDer (d : Mat n) : Mat n →ₗ[ℂ] Mat n where
 theorem trace_single_mul_single (a b c e : Fin n) :
     trace (Matrix.single a b (1 : ℂ) * Matrix.single c e 1) = if a = e ∧ b = c then 1 else 0 := by
   simp only [Matrix.trace, Matrix.diag, Matrix.mul_apply, Matrix.single_apply]
-  by_cases h1 : a = e <;> by_cases h2 : b = c <;> simp [h1, h2, ite_and, Finset.sum_ite_eq', eq_comm]
+  by_cases h1 : a = e <;> by_cases h2 : b = c <;> simp [h1, h2, ite_and]
 
 theorem sqrt_two_inv_sq : ((Real.sqrt 2)⁻¹ : ℂ) * ((Real.sqrt 2)⁻¹ : ℂ) = 1 / 2 := by
   rw [← mul_inv, ← Complex.ofReal_mul, Real.mul_self_sqrt (by norm_num)]
@@ -56,7 +57,7 @@ theorem hbB_apply (p : Fin n × Fin n) : hbB n p = hb p := by
 
 theorem hbB_repr (X : Mat n) (q : Fin n × Fin n) : (hbB n).repr X q = trace (X * hb q) := by
   conv_rhs => rw [← (hbB n).sum_repr X]
-  simp [Finset.sum_mul, Matrix.trace_sum, Matrix.smul_mul, trace_smul, hbB_apply, trace_hb_mul_hb]
+  simp [Finset.sum_mul, Matrix.trace_sum, trace_smul, hbB_apply, trace_hb_mul_hb]
 
 theorem det_of_trace (L : Mat n →ₗ[ℂ] Mat n) :
     (Matrix.of fun p q : Fin n × Fin n => trace (L (hb p) * hb q)).det = LinearMap.det L := by
@@ -80,7 +81,7 @@ def cjEquiv (U : Mat n) (hU : IsUnit U.det) : Mat n ≃ₗ[ℂ] Mat n where
   toFun X := U⁻¹ * X * U
   invFun X := U * X * U⁻¹
   map_add' X Y := by simp [Matrix.mul_add, Matrix.add_mul]
-  map_smul' c X := by simp [Matrix.mul_smul, Matrix.smul_mul]
+  map_smul' c X := by simp
   left_inv X := by
     simp only [Matrix.mul_assoc]
     rw [Matrix.mul_nonsing_inv U hU, Matrix.mul_one, ← Matrix.mul_assoc, Matrix.mul_nonsing_inv U hU, Matrix.one_mul]

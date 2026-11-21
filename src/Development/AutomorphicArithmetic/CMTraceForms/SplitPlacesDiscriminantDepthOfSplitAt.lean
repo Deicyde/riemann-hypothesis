@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AutomorphicArithmetic.CMTraceForms.Places
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CMTraceForms.ExistsPrimitiveOrthogonalIdempotentsSumEqOfNoeth
 import Development.AutomorphicArithmetic.CMTraceForms.ExistsSplitIdempotentOfSplitAt
 import Development.AutomorphicArithmetic.CMTraceForms.TraceFormDecompositionCMDatum

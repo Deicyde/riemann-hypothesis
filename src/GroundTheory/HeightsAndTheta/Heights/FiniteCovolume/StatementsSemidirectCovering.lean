@@ -1,5 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.SecondCountableTopologyArchUnitary
+import Mathlib.Topology.Connected.Separation
+import Mathlib.Topology.Instances.ZMod
+import Mathlib.Topology.Separation.Lemmas
 
 namespace GroundTheory.Heights₂.Heights.FiniteCovolume
 

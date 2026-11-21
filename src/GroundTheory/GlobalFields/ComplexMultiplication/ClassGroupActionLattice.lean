@@ -1,5 +1,7 @@
-import Mathlib
-import GroundTheory.GlobalFields.ComplexMultiplication.ClassGroupActionIso
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import GroundTheory.GlobalFields.ComplexMultiplication.AnalyticAlgebraic
+import Mathlib.NumberTheory.NumberField.FractionalIdeal
 
 open NumberField Module
 open scoped nonZeroDivisors
@@ -72,9 +74,9 @@ theorem exists_rat_eq_of_im_eq_zero {x : K} (hx : (σ x).im = 0) : ∃ q : ℚ, 
     intro y
     rw [← b.sum_repr y, Fin.sum_univ_two]
     simp only [b, coe_basisOfLinearIndependentOfCardEqFinrank, Matrix.cons_val_zero,
-      Matrix.cons_val_one, Matrix.cons_val_fin_one, map_add, Rat.smul_def, map_mul, map_one,
+      Matrix.cons_val_one, Matrix.cons_val_fin_one, map_add, Rat.smul_def, map_mul,
       mul_one, map_ratCast, Complex.add_im, Complex.mul_im, Complex.ratCast_im, Complex.ratCast_re,
-      hx, Complex.one_im, zero_mul, mul_zero, add_zero]
+      hx, zero_mul, mul_zero, add_zero]
   have hR : ComplexEmbedding.IsReal σ := by
     rw [ComplexEmbedding.isReal_iff]
     ext y

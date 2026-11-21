@@ -1,11 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StandardTraceAddCharIsStandardCharOfAdmissibleCM
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepresentationPreservesSchwartz
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StarMemAdelicSchwartzSpaceNumberField
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSchwartzNe
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ProductFunctionOnSumCoordsMemAdelicSchwartzSpace
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConjLinApply
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SkewAdaptedPlanePairConverseStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzTensorLeftFactorStatement
@@ -42,9 +38,9 @@ theorem rho_fromCols_zero_boxFun {E : Type} [CommRing E] [Algebra R E] (c : E �
   funext y
   obtain ⟨u, v, rfl⟩ : ∃ u v, y = Sum.elim u v := ⟨_, _, (Sum.elim_comp_inl_inr y).symm⟩
   have h' := h 0 w
-  simp only [Darboux.rho, boxFun, h', schr, map_zero, Prod.fst_zero, Prod.snd_zero, neg_zero,
-    sumElim_dotProduct_sumElim, Sum.elim_add_add, Sum.elim_comp_inl, Sum.elim_comp_inr, AddChar.inv_apply,
-    dotProduct_zero, zero_dotProduct, add_zero, zero_add, mul_zero, dotProduct_neg]
+  simp only [Darboux.rho, boxFun, h', schr, map_zero, Prod.fst_zero, Prod.snd_zero,
+    sumElim_dotProduct_sumElim, Sum.elim_comp_inl, Sum.elim_comp_inr, AddChar.inv_apply,
+    dotProduct_zero, zero_add, dotProduct_neg]
   have e1 : (Sum.elim u v + Sum.elim (0 : κ → R) (d.e w).1) ∘ Sum.inl = u := funext fun i => by simp
   have e2 : (Sum.elim u v + Sum.elim (0 : κ → R) (d.e w).1) ∘ Sum.inr = v + (d.e w).1 := funext fun i => by simp
   rw [e1, e2, neg_add, mul_neg]
@@ -70,7 +66,7 @@ theorem conj_schr' {κ : Type} [Fintype κ] (w : (κ → R) × (κ → R)) (φ :
 
 theorem conj_schr_inv' {κ : Type} [Fintype κ] (w : (κ → R) × (κ → R)) (φ : (κ → R) → ℂ) (x : κ → R) :
     starRingEnd ℂ (schr ψ⁻¹ w φ x) = schr ψ w (fun x => starRingEnd ℂ (φ x)) x := by
-  simp only [schr, map_mul, AddChar.inv_apply, conj_psi' ψ hψ, inv_inv, neg_neg]
+  simp only [schr, map_mul, AddChar.inv_apply, conj_psi' ψ hψ, neg_neg]
 
 end Heis
 
@@ -112,7 +108,7 @@ theorem admissible_of_slice_zero {κ κ' : Type} [Fintype κ] [Fintype κ'] (p�
   rw [LinearMap.comp_apply, ContinuousLinearMap.comp_apply, ← hT]
   congr 1
   funext t
-  simp only [LinearMap.funLeft_apply, Function.comp_apply, pureA, hTsl]
+  simp only [LinearMap.funLeft_apply, pureA, hTsl]
   congr 2 <;> funext k <;> rcases k with k | k <;> rfl
 
 theorem adm_of_box {κ κ₁ κ' κ₁' : Type} [Fintype κ] [Fintype κ₁] [Fintype κ'] [Fintype κ₁']

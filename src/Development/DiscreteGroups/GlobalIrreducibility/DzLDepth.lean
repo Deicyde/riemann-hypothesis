@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.DiscreteGroups.GlobalIrreducibility.DzTypeCut
 import Development.DiscreteGroups.GlobalIrreducibility.ExistsOfMemKOne
 

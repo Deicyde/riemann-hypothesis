@@ -1,5 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.ChartMeasApplyOfSubset
+import Mathlib.Topology.Sheaves.Presheaf
 open Set MeasureTheory
 open ReciprocityTheory.L2DbarEstimates (V)
 open scoped ENNReal

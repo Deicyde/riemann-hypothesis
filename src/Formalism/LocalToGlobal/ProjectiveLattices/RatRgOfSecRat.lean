@@ -1,9 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.ProjectiveLattices.TieGenRg
-import Formalism.LocalToGlobal.ProjectiveLattices.TieGenR
-import Formalism.LocalToGlobal.ProjectiveLattices.UnifGen
-import Formalism.LocalToGlobal.ProjectiveLattices.ZeroWeightAlgebraicPart
-import Formalism.LocalToGlobal.ProjectiveLattices.AxHSupA
-import Formalism.LocalToGlobal.ProjectiveLattices.ReadProofs
+import Formalism.LocalToGlobal.ProjectiveLattices.TieGen
 
 noncomputable section
 

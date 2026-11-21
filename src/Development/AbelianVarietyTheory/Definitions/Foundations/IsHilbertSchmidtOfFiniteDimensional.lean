@@ -1,5 +1,20 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.SmoothPartStable
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.Analysis.CStarAlgebra.Module.Constructions
+import Mathlib.Analysis.Complex.Circle
+import Mathlib.Analysis.InnerProductSpace.StarOrder
+import Mathlib.Analysis.InnerProductSpace.Trace
+import Mathlib.Analysis.InnerProductSpace.l2Space
+import Mathlib.MeasureTheory.Function.L2Space
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
+import Mathlib.Topology.UniformSpace.Uniformizable
 
 open MeasureTheory ContinuousLinearMap
 open scoped InnerProductSpace Pointwise
@@ -271,7 +286,7 @@ theorem trace_sum {α : Type*} (s : Finset α) {T : α → (H →L[ℂ] H)}
   simpa only [trace, ContinuousLinearMap.sum_apply, inner_sum] using this.tsum_eq
 
 theorem trace_smul (c : ℂ) (T : H →L[ℂ] H) : trace (c • T) = c * trace T := by
-  simp [trace, inner_smul_right, tsum_mul_left]
+  simp [trace, tsum_mul_left]
 
 theorem IsTraceClass.trace_comp_comp {T : H →L[ℂ] H} (h : IsTraceClass T) (A : H →L[ℂ] K)
     (A' : K →L[ℂ] H) : trace (A ∘L T ∘L A') = trace (T ∘L A' ∘L A) := by
@@ -330,7 +345,7 @@ example (n : ℕ) : HasTrace (ContinuousLinearMap.id ℂ (EuclideanSpace ℂ (Fi
   ⟨isTraceClass_of_finiteDimensional _, by simp [trace_eq_linearMap_trace]⟩
 
 example : trace (Complex.I • ContinuousLinearMap.id ℂ ℂ) = Complex.I := by
-  simp [trace_smul, trace_eq_linearMap_trace]
+  simp [trace_eq_linearMap_trace]
 
 end Hilbert
 
@@ -521,7 +536,7 @@ theorem repTrace_charRep {χ : G →* Circle} (hχ : Continuous χ) (hf : Contin
     simp [charRep]
   refine ⟨isTraceClass_of_finiteDimensional _, ?_⟩
   rw [h]
-  simp [trace_smul, trace_eq_linearMap_trace]
+  simp [trace_eq_linearMap_trace]
 
 end Unitary
 

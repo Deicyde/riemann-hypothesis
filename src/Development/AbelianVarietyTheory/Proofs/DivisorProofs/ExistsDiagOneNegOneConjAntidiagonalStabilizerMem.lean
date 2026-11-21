@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFinMapsOfForall
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AntiCols
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatAtVAtStable
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.KFinLoc
@@ -163,14 +162,14 @@ theorem idem_smul_mem_latAt {d : ℕ} (W : Spc F E d) (v : Pl F) {y : Fin d → 
 theorem flipAt_mulVec_inl (v : Pl F) {d : ℕ} (z : Fin d ⊕ Fin d → AE F E) (i : Fin d) :
     (flipAt v d *ᵥ z) (Sum.inl i) = z (Sum.inl i) := by
   simp [flipAt, flipM, Matrix.mulVec, dotProduct, Fintype.sum_sum_type, Matrix.one_apply, add_mul, Finset.sum_add_distrib,
-    ite_mul, smul_mul_assoc, neg_mul, Finset.sum_neg_distrib]
+    ite_mul]
   rw [← add_smul, sub_add_cancel, one_smul]
 
 theorem flipAt_mulVec_inr (v : Pl F) {d : ℕ} (z : Fin d ⊕ Fin d → AE F E) (i : Fin d) :
     (flipAt v d *ᵥ z) (Sum.inr i) =
       z (Sum.inr i) - (GlobalTheory.LatVac.liftV v 1 : AF F) • z (Sum.inr i) - (GlobalTheory.LatVac.liftV v 1 : AF F) • z (Sum.inr i) := by
   simp [flipAt, flipM, Matrix.mulVec, dotProduct, Fintype.sum_sum_type, Matrix.one_apply, add_mul, Finset.sum_add_distrib,
-    ite_mul, smul_mul_assoc, neg_mul, Finset.sum_neg_distrib]
+    ite_mul, neg_mul, Finset.sum_neg_distrib]
   rw [sub_smul, one_smul]; abel
 
 theorem flipAt_mulVec_mem_latD (v : Pl F) {d : ℕ} (W : Spc F E d) {z : Fin d ⊕ Fin d → AE F E} (hz : z ∈ latD W v) :

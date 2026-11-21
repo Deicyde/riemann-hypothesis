@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AutomorphicArithmetic.Foundations.EtaleClopenDescent.EFam
-import Development.AutomorphicArithmetic.Foundations.EtaleClopenDescent.IsSeparatedOfProj
-import Development.AutomorphicArithmetic.Foundations.EtaleClopenDescent.IsIntegralRBIff
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.CommutativeAlgebra.EtaleCorrespondenceFunctionFieldStatementOne
 import Development.AutomorphicArithmetic.CommutativeAlgebra.ComplexPointsBijectiveAlgHomAffineOpen
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory GlobalTheory.HodgeCoh GlobalTheory.CechDR GlobalTheory.PD KaehlerDifferential GlobalTheory.W1 GlobalTheory.WH

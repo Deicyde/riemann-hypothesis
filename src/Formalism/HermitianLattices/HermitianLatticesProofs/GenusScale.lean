@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.HermitianLattices.DefsCS
 import Formalism.HermitianLattices.HermitianLatticesProofs.GenusBasic
+import Mathlib.Data.Int.Star
+import Mathlib.RingTheory.SimpleRing.Principal
 
 open NumberField
 

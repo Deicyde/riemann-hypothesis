@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.Statement
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 namespace Formalism.FourierDecayAlt.P
 

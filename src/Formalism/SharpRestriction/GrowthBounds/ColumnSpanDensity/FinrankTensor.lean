@@ -1,7 +1,7 @@
-import Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.MeanDefs
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.ColumnSpanDensity.RhoLowerBoundOfEdgeCount
-import Formalism.PolynomialDimension.MultinomialDepth.WeylDimPosOfAntitone
 import Formalism.GradedWeylDivisibility.FinalD
+import Formalism.PolynomialDimension.DigitClassSize
 
 noncomputable section
 
@@ -102,7 +102,7 @@ theorem weylDim_hwt_eq (m A B : ℕ) : weylDim (m + 2) (hwt m A B) = (dimHar (m 
   rw [weylDim_cons_eq_prod_mul, weylDim_snoc_eq_mul_prod, weylDim_const, one_mul, Fin.prod_univ_castSucc]
   simp only [Fin.snoc_castSucc, Fin.snoc_last, Fin.coe_castSucc, Fin.val_last]
   push_cast
-  try simp only [sub_zero, zero_sub, neg_neg, sub_neg_eq_add, zero_add]
+  try simp only [sub_zero, sub_neg_eq_add, zero_add]
   rw [prodA m A, prodB m B]
   unfold dimHar dimPol
   have hle : (if A = 0 ∨ B = 0 then 0 else (A - 1 + (m + 1)).choose (m + 1) * (B - 1 + (m + 1)).choose (m + 1)) ≤

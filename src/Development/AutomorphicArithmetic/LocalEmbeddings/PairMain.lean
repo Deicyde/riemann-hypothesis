@@ -1,17 +1,16 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VdivLnIdFalse
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TopologicalKrullDimComponent
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFiniteSetResidueLogBound
-import Development.AutomorphicArithmetic.LocalEmbeddings.VertCmp
-import Development.AutomorphicArithmetic.DivisorFrames.PdegEqOfIsDeg
 import Development.AutomorphicArithmetic.DivisorFrames.GenericIsoSectionsLog
 import Development.AutomorphicArithmetic.DivisorFrames.ExistsMetricGenericOpen
 import Development.AutomorphicArithmetic.DivisorFrames.ArithmeticFunctionInducedBound
-import Development.AutomorphicArithmetic.DivisorFrames.AdmissiblePointDiscreteValuation
 import Development.AutomorphicArithmetic.DivisorFrames.AdmissiblePointCharts
 import Development.AutomorphicArithmetic.DivisorFrames.NormalModelComplexCompatAlt
 import Development.AutomorphicArithmetic.DivisorFrames.AdmissiblePointLatticeNorm
 import Development.AutomorphicArithmetic.DivisorFrames.AdmissiblePointHeightCompat
+import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
+import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ArTopTrue
 
 set_option autoImplicit false
 
@@ -91,7 +90,7 @@ private theorem parOf_lnSym (a : ℕ → Bool) (R : Option ℝ) (l : Ln Dw) : pa
   have h : (lnSym a R l).support.Nonempty := by
     obtain ⟨n, hn, e⟩ := lnSym_eq l
     rw [e]
-    rcases hn with rfl | rfl <;> simp [Finsupp.support_single_ne_zero]
+    rcases hn with rfl | rfl <;> simp
   rw [parOf, dif_pos h]
   exact (mem_support_lnSym h.choose_spec).2
 

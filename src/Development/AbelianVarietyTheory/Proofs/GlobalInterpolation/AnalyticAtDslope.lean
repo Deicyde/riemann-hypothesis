@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.BdIntEqZeroOfPrimitive
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.CompletedLFunctionNeZeroOfReNonpos
+import Mathlib.AlgebraicTopology.FundamentalGroupoid.SimplyConnected
+import Mathlib.Analysis.SpecialFunctions.Complex.Analytic
+import Mathlib.Order.CompletePartialOrder
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Complex DirichletCharacter ArithmeticFunction MeasureTheory Filter Topology
 

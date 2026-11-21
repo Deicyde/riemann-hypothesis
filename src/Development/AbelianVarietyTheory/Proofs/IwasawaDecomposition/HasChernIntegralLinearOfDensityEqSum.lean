@@ -1,9 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.PolyRep
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.GoodTopChernForm
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ChernWeilNumbers
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HasChernIntegralOfEqMul
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsHolomorphicInvertibleFrameCoordinates
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ChernDensityFrameIndepChartJacobianFactorStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MeasurableChernPolyTopDensityStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.GluedChartDensityMeasureAddOfCompatibleOnStatement
@@ -331,8 +327,7 @@ theorem GlobalTheory.GoodMetric.hasChernIntegral_of_eq_sum : ∀ (F : Type) [Fie
     ENNReal.toReal_sum fun j _ => ENNReal.add_ne_top.2
       ⟨ENNReal.mul_ne_top ENNReal.ofReal_ne_top (hq1 j), ENNReal.mul_ne_top ENNReal.ofReal_ne_top (hq2 j)⟩] at hr
   simp only [ENNReal.toReal_add (ENNReal.mul_ne_top ENNReal.ofReal_ne_top (hq1 _))
-      (ENNReal.mul_ne_top ENNReal.ofReal_ne_top (hq2 _)), ENNReal.toReal_mul,
-    ENNReal.toReal_ofReal (le_max_right _ _)] at hr
+      (ENNReal.mul_ne_top ENNReal.ofReal_ne_top (hq2 _)), ENNReal.toReal_mul] at hr
   have hap : ∀ j, (ENNReal.ofReal (ap j)).toReal = ap j := fun j => ENNReal.toReal_ofReal (le_max_right _ _)
   have han : ∀ j, (ENNReal.ofReal (an j)).toReal = an j := fun j => ENNReal.toReal_ofReal (le_max_right _ _)
   simp only [hap, han] at hr

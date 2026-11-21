@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.LocalEmbeddings.ExistsIsMapToFn
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFlagBundleIff
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TangentSectionsOnNormalModel
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TangentBasisOfSplitTorsion
 open CategoryTheory AlgebraicGeometry NumberField IsDedekindDomain Matrix

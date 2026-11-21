@@ -1,9 +1,8 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.NonvanishingNearMaximum
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.HermCOrthonormalCoordinates
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.PositiveSpanMatrices
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.IsotropicCombinations
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.HermitianPairingAlgebra
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.FlowMatMulVec
 
 namespace ReciprocityTheory.ChartRestriction.G.FD.MajorantOrthogonality
 
@@ -94,8 +93,8 @@ lemma maj_ortho (X : Data E r) {x : Frame X.Ψ r} (hx : x ∈ X.dom) (ho : X.IsO
     ext a b
     by_cases hab : a = b
     · subst hab
-      simp [Matrix.diagonal_apply, sgn, a.isLt]
-    · simp [Matrix.diagonal_apply, Matrix.one_apply, hab, Fin.castLE_inj]
+      simp [sgn, a.isLt]
+    · simp [hab, Fin.castLE_inj]
   have hpos : X.posPart x τ v = ∑ a : Fin X.p0, ‖c (Fin.castLE X.p0_le a)‖ ^ 2 := by
     unfold Data.posPart
     rw [hgp, inv_one]

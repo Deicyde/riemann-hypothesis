@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.DiscreteValuationRings.PhiGen
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.CubeVal
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.GlobalSectionsRankAlgClosed
@@ -352,7 +354,7 @@ theorem tr_comm (m m' : TF (R := R) F ⟶ D.P.A) :
   · simp only [Category.assoc, tr_fst]
   · show _ ≫ DegPre.prB D F = _ ≫ DegPre.prB D F
     simp only [Category.assoc, tr_pr, MonObj.comp_mul]
-    simp only [← Category.assoc, tr_fst, tr_pr]
+    simp only [← Category.assoc, tr_fst]
     exact mul_right_comm _ _ _
 
 omit hG hw in

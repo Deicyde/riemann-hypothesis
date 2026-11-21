@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.DivisorSupportCondition
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.SecClass
+import Mathlib.Algebra.Homology.GrothendieckAbelian
 open CategoryTheory Limits AlgebraicGeometry Opposite CochainComplex CochainComplex.HomComplex GlobalTheory.EtC
 
 noncomputable section
@@ -72,7 +73,7 @@ theorem biproduct_push : ∀ (R : Type) [CommRing R] {ι : Type} [Fintype ι] (L
     intro n
     have := (HomologicalComplex.eval _ (ComplexShape.up ℤ) n).map_sum (fun j => biproduct.π L j ≫ biproduct.ι L j) Finset.univ
     rw [biproduct.total] at this
-    simp only [Functor.map_id, Functor.map_comp, HomologicalComplex.eval_map] at this
+    simp only [HomologicalComplex.eval_map] at this
     exact this.symm
   refine ⟨⨁ L, biproduct.desc g, ?_, ?_, ?_⟩
   · rw [CochainComplex.isStrictlyGE_iff]

@@ -1,4 +1,6 @@
-import Development.WeilBound.ThetaLifts.LocalTheory.UnramifiedDeterminedBySpherical
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
 noncomputable section
 

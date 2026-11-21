@@ -1,5 +1,7 @@
-import Mathlib
-import Formalism.LocalToGlobal.CharacterGerms.NegMem
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.CharacterGerms.IntSubst
+import Formalism.LocalToGlobal.CharacterGerms.RowTieDefs
 
 noncomputable section
 

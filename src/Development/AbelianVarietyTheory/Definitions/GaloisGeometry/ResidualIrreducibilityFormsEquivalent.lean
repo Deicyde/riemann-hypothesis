@@ -1,11 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.GoodIdempotentFixesOfOnlySeriesOfLabelActs
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.DecompositionInvariantsCondition
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsWildInertiaCyclotomicElement
 import Development.AbelianVarietyTheory.BlockTheory.TorsionBlocks.JumpDictionary
-import Formalism.SharpRestriction.LevelLetterCocycles.AdmissibleThreePrime
-import Formalism.SharpRestriction.LevelLetterCocycles.AutomorphicSideWildInertia
-import Formalism.SharpRestriction.LevelLetterCocycles.EmbeddingTypeJumps
 
 noncomputable section
 

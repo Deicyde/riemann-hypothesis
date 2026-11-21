@@ -1,8 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.FrobFieldExists
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EndCharpolyTateDetDegreeTraceStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TateModuleFreeFinrankTwoMulDim
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CharpolyDvdPowFinrankOfAevalEqZero
 import ReciprocityTheory.ReductiveGroups.Lattices.LatUnrCharA
 open CategoryTheory Polynomial NumberField IsDedekindDomain AlgebraicGeometry
 open scoped TensorProduct

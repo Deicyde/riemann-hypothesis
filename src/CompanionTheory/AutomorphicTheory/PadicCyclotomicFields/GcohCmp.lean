@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.AutomorphicTheory.PadicCyclotomicFields.GcohCmpA
+import CompanionTheory.AutomorphicTheory.PadicCyclotomicFields.GcohDefs
 
 open CategoryTheory GroundTheory.ProfCoh ReciprocityTheory.Gal ValuativeRel
 

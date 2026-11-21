@@ -1,9 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsUnifAt
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.UnitLemmaGroup
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsAevalEqOfSeparable
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SesqAsym
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.AntidiagTwistedNorm
+import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ContinuousConjFin
+import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsContinuousPadic
 open NumberField IsDedekindDomain Matrix Polynomial Filter GlobalTheory.CuspRep GlobalTheory.PRep Formalism.UG Formalism.BasicNotions GlobalTheory.UnitaryBC Formalism.L2.Host GlobalTheory.BCT
 open scoped Classical TensorProduct
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
@@ -103,7 +103,7 @@ theorem exists_trace_form : ∀ (K : GlobalTheory.UnitLemma.UQ) (B : GlobalTheor
     change Sᵀ * N' = _ at h0
     rw [h0]
     ext i j
-    simp [f, hf, hε, Matrix.map_apply, Matrix.smul_apply]
+    simp [f, hε, Matrix.map_apply, Matrix.smul_apply]
     exact hf _
   have hSc : S.map K.c = ε • (Sᵀ * N') := by rw [hkey, smul_smul, hεε, one_smul]
   set Y := ((δ.val * GlobalTheory.Tw.Phi a L)ᵀ).map f with hY

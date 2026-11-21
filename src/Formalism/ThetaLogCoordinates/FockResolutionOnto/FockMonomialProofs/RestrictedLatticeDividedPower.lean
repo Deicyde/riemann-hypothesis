@@ -1,6 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.ThetaLogCoordinates.FockResolutionOnto.FockMonomialProofs.LatDefs
-import Formalism.ThetaLogCoordinates.FockResolutionOnto.MulEarlyModP
-import Formalism.ThetaLogCoordinates.TraceIsometryWeights.DischargeHeightBound
+import Formalism.ThetaLogCoordinates.FockResolutionOnto.FockMonomialProofs.OmegaInjectiveHolds
+import Formalism.ThetaLogCoordinates.FockResolutionOnto.StatementG
+import Formalism.ThetaLogCoordinates.TraceIsometryWeights.SchurTraceProofs.FischerAdjointnessHolds
 
 namespace Formalism.InvariantFactorPaths.L4
 

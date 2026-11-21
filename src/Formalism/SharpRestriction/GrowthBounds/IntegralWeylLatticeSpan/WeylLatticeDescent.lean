@@ -1,4 +1,6 @@
-import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.TieLat
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.MapNatActR
 
 open MvPolynomial Matrix Formalism.GradedWeylDivisibility Formalism.MainNotions.G Formalism.BasicNotions Formalism.L2.Forms
 

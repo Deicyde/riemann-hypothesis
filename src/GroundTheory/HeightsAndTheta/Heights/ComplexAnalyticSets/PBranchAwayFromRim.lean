@@ -1,10 +1,13 @@
-import Mathlib
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StBranchAwayFromRim
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StNormalModelExists
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StNormalModelProper
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StBranchLift
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StNormalLocallyIrreducible
 import GroundTheory.HeightsAndTheta.Heights.ComplexAnalyticSets.StBranchContainsNormalPoint
+import Mathlib.Topology.Algebra.MvPolynomial
+import Mathlib.Topology.MetricSpace.Sequences
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.IndefiniteRowSideFullHecke.ComplexSets

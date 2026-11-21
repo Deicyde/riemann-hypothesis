@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.InHHClassFin
 import Formalism.SatakeDualWeyl.KpqSubgroupCompact
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.CsEasy
 
 noncomputable section
 

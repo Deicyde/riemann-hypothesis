@@ -1,8 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GlobalTheory.ConcTop
 import Formalism.LocalToGlobal.GlobalTheory.GL5.PNamed
 import Formalism.LocalToGlobal.GlobalTheory.GL5.PClassItems
 import Formalism.LocalToGlobal.GlobalTheory.GL5.LocalEndomorphismContinuous
 import Formalism.SharpRestriction.GenusPolyhedralBounds.RelativeIndexClassSets.ClassCountRec
+import Formalism.LocalToGlobal.GlobalTheory.GL5.VolumeAndDsigCompatOfCompatibleData
 
 noncomputable section
 

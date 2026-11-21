@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsCompOfOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsTrivOutsideLoc
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HeckeDoubleCosetOperatorsStandardFacts
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsSplitPlaceWPlGw
@@ -7,6 +7,7 @@ import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SplitPlacesInj
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.SplitPlaceProjectionEqZeroOfPlaceComponentEqZero
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.AlgHomEqOrConj
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.BlockLiftActionOnPrincipalCongruenceFixedVectors
+import Formalism.SharpRestriction.Divisibility.LiftErrorLocal
 open Formalism.BasicNotions Formalism.MainNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice IsDedekindDomain NumberField Formalism.L2 Formalism.L2.Theta Formalism.L2.DIV Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.Lev Formalism.IndefR.RecTie GlobalTheory.Mem GlobalTheory.Mem.R3 GlobalTheory.HeightCounting GlobalTheory.CenFrame
 open scoped TensorProduct
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
@@ -27,7 +28,7 @@ theorem bz_map_zmod (r t p : ℕ) [Fact p.Prime] (γ : GL (Fin r) (ZMod p)) :
   ext a b
   rw [GlobalTheory.SerSys.BlockLift.bm_apply]
   simp only [Matrix.map_apply, bz]
-  split_ifs <;> simp [ZMod.natCast_zmod_val]
+  split_ifs <;> simp
 
 theorem bz_det_ne (r t p : ℕ) [Fact p.Prime] (γ : GL (Fin r) (ZMod p)) :
     (((bz r (r + t) p γ).det : ℤ) : ZMod p) ≠ 0 := by

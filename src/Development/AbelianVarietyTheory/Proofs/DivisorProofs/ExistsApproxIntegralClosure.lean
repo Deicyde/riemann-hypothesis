@@ -1,6 +1,15 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsChartMember
-import ReciprocityTheory.AnalyticForms.RegularLocalRings.FinalTheorems
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.CategoryTheory.Monoidal.Cartesian.Over
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace GlobalTheory.DecompFixed
 
@@ -76,10 +85,10 @@ theorem exists_unit (q : Ideal B) [q.IsMaximal] :
     rw [Finset.smul_prod']
     refine Finset.prod_nbij' (fun g => h * g) (fun g => h⁻¹ * g) ?_ ?_ ?_ ?_ ?_
     · intro g hg
-      simp only [hD, Finset.mem_coe, Finset.mem_filter, Finset.mem_univ, true_and] at hg ⊢
+      simp only [hD, Finset.mem_filter, Finset.mem_univ, true_and] at hg ⊢
       rw [mul_smul, hg, hh]
     · intro g hg
-      simp only [hD, Finset.mem_coe, Finset.mem_filter, Finset.mem_univ, true_and] at hg ⊢
+      simp only [hD, Finset.mem_filter, Finset.mem_univ, true_and] at hg ⊢
       rw [mul_smul, hg, inv_smul_eq_iff, hh]
     · intro g _; simp
     · intro g _; simp

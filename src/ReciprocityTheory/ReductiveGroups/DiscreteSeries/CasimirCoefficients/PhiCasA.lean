@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.CasimirCoefficients.IsClosedKset
+import Mathlib.Analysis.Calculus.FDeriv.Symmetric
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.Tactic.ENatToNat
 
 noncomputable section
 

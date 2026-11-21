@@ -1,10 +1,8 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.IntegrableOfDecay4
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.OpApplyContinuousOn
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.ThetaCompactSupport
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ContinuousZetaL
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ComponentFamilySettingOfSettingBis
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.RestrictionIrrelevantDoubleLevelOperator
-import Formalism.HermitianCurvature.HerGenC
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.OpApplyZeroNear
 
 open Matrix MeasureTheory
 

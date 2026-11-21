@@ -1,6 +1,8 @@
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.QuadraticZetaNeOneAtPlace
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.CohomologicalCsdTempered
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.NormChoiceFacts
+import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.BaseSizes
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.GlobalCore
+import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.TameDescentConditionsEveryLocalisation
 
 set_option synthInstance.maxHeartbeats 200000
 

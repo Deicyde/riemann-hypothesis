@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.WeightAlgebra
 
 set_option autoImplicit false

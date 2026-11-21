@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.TwistedPieces.FiniteDimensionalDescent.RestrictedCharpolys.PrimIdemZ
 
 namespace PositivityTheory.RgUd.TP.Desc.Restr.Pphi1

@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.IsTopologicalRingAE
-import Development.AbelianVarietyTheory.Counterexamples.HeightSurvey.StarPurelyImaginaryEqNeg
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Matrix GlobalTheory.FockCompare GlobalTheory.IndefiniteRowSideFullHecke.FockOrthogonalDecomposition
 open scoped TensorProduct ContDiff ComplexOrder
@@ -43,7 +43,7 @@ theorem re_ne_zero (h : M →ₗ⋆[E] M →ₗ[E] E) (hs : h.IsSymm) (hn : h.No
   refine Finset.sum_eq_zero fun j _ => ?_
   by_cases hj : i = j
   · rw [← hj, h3, mul_zero]
-  · simp [Finsupp.single_apply, hj]
+  · simp [hj]
 
 def coordSub (b : Module.Basis ι E M) (p : ι → Prop) : Submodule E M where
   carrier := {x | ∀ i, ¬ p i → b.repr x i = 0}
@@ -66,10 +66,10 @@ theorem isCompl_coordSub (b : Module.Basis ι E M) (p : ι → Prop) :
     by_cases hi : p i
     · refine Submodule.mem_sup_left (S := coordSub b p) fun j hj => ?_
       have : i ≠ j := fun e => hj (e ▸ hi)
-      simp [Finsupp.single_apply, this]
+      simp [this]
     · refine Submodule.mem_sup_right (T := coordSub b fun i => ¬ p i) fun j hj => ?_
       have : i ≠ j := fun e => hj (e ▸ hi)
-      simp [Finsupp.single_apply, this]
+      simp [this]
 
 theorem sum_pos_of_coord (b : Module.Basis ι E M) (t : E →+* ℂ) (p : ι → Prop) (d : ι → ℝ) (hd : ∀ i, p i → 0 < d i)
     (x : M) (hx : x ∈ coordSub b p) (h0 : x ≠ 0) : 0 < ∑ i, Complex.normSq (t (b.repr x i)) * d i := by

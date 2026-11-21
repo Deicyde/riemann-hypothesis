@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.HomogeneousLocalization
 import GroundTheory.HeightsAndTheta.Heights.ArithDegreeExact
 set_option maxSynthPendingDepth 1

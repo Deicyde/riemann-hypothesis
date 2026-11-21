@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.SpecialLinearCosets.GoodU
 import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.SpecialLinearCosets.MkLaws
 import Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.UnramifiedSplitting.SgLaws
@@ -84,7 +86,7 @@ theorem UpperTheory.ConvolutionTheory.R2.I.actN :
   refine ⟨?_, fun X => ?_⟩
   · have : Matrix.GeneralLinearGroup.det (nbar D v θ s) = 1 := by
       apply Units.ext
-      simp [nbar, Matrix.det_fin_two]
+      simp [nbar]
     rw [nu, this, map_one]
   set a := sg v (s / 2) with ha
   set b := sg v (-(s / (2 * θ))) with hb

@@ -1,10 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.AdIPowLe
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.BhattScholzeIntegral
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsPrismCoverReceivingBreuilKisinStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.BreuilKisinHomEisensteinSpanAndNonZeroDivisorStatement
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.PrismCoverInjectiveAndDescentStatement
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FiniteProjectiveModuleElementDescentEqualizerStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.InjectiveAndRangeOfPrismCoverStatement
 open Formalism Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.WeaklyAdmissibleFiltrations TensorProduct PowerSeries GlobalTheory.Prism GlobalTheory.BKReal GlobalTheory.Per GlobalTheory.BSP
 open scoped Formalism.Per NNReal
@@ -111,7 +108,7 @@ theorem semiBC_frob {Q : Type} [CommRing Q] {d : ℕ} {α β : B →+* Q} (σ : 
       show W' (fun j => σ ((Pi.single i (1 : Q) : Fin d → Q) j)) = W' (Pi.single i 1)
       congr 1; funext j; by_cases hj : j = i
       · subst hj; simp
-      · simp [Pi.single_apply, hj]
+      · simp [hj]
     rw [← h3, h1]
 
 end Algebra
@@ -221,7 +218,7 @@ theorem map_A_mul {l : ℕ} [Fact l.Prime] {K : FinExt l} {bk : BK K} {d : ℕ} 
     (g : bk.S →+* R) : S.A.map g * S.A'.map g = g bk.E ^ S.b • (1 : Matrix (Fin d) (Fin d) R) := by
   rw [← Matrix.map_mul, S.A_mul]
   ext i j
-  by_cases hij : i = j <;> simp [Matrix.one_apply, hij]
+  by_cases hij : i = j <;> simp [hij]
 
 theorem exists_kappa {l : ℕ} [Fact l.Prime] {K : FinExt l} {bk : BK K} {d : ℕ} {S : Strat bk d}
     {B : Obj l ↥(OL K)} {N : Type} [AddCommGroup N] [Module B.A N] (V : Eval S B N) {P : Type} [AddCommGroup P]

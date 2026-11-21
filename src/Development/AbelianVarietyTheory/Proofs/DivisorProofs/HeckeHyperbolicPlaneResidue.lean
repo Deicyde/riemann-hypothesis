@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HasLocType
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBThetaDescentIdentity
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GlCastRfl
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConstantTermUnipotentIntegralBis
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SkewHermitianPlaneUnipotentIdentityStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviCharacterCuspIntegralStatement

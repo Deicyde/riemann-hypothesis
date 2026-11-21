@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Formalism.FockGram.StatementTensor
 
 open Matrix LinearMap Module TensorProduct
@@ -36,7 +38,7 @@ theorem hermitian_tensor_mul_hermitian : HTmulHerm := by
     | zero => simp
     | tmul y₁ y₂ =>
       simp only [htmul, tensorFunctional] at *
-      simp [← h₁ x₁ y₁, ← h₂ x₂ y₂, starRingEnd_apply, mul_comm]
+      simp [← h₁ x₁ y₁, ← h₂ x₂ y₂, starRingEnd_apply]
     | add a b ha hb => simp_all
   | add a b ha hb => simp_all
 

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.SiegelWeilProof.HolomorphicContinuation.GlobalGaussLaws.LocVacB
 
 noncomputable section
@@ -35,7 +37,7 @@ theorem nbar_zero : nbar (n := n) 0 = 1 := by simp [nbar, fromBlocks_one]
 
 theorem inG_nbar (s : ℝ) : InG (nbar (n := n) s) := by
   unfold InG
-  simp [nbar, JJ, fromBlocks_conjTranspose, fromBlocks_multiply, Matrix.conjTranspose_smul, Complex.conj_ofReal]
+  simp [nbar, JJ, fromBlocks_conjTranspose, fromBlocks_multiply, Matrix.conjTranspose_smul]
 
 def nbE (s : ℝ) : GR n :=
   ⟨⟨nbar s, nbar (-s), by rw [nbar_mul, add_neg_cancel, nbar_zero], by rw [nbar_mul, neg_add_cancel, nbar_zero]⟩, inG_nbar s⟩

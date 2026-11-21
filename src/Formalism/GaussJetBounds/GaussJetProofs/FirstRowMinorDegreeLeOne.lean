@@ -1,7 +1,6 @@
-import Formalism.GaussJetBounds.StatementN
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.GaussJetBounds.GaussJetProofs.ConstantCoeffAevalLinP
-import Formalism.GaussJetBounds.GaussJetProofs.ThmAOp
-import Formalism.GaussJetBounds.MonoShapeTop
 import Formalism.GaussJetBounds.GaussJetProofs.NormDetLeOneOfEntries
 import Formalism.GaussJetBounds.GaussJetProofs.MfactEqProdUniv
 

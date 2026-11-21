@@ -1,5 +1,5 @@
-import Mathlib
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.LocalWhittakerDuality.WhittakerFunctionalEquationAdditive
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Th
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IwasawaDecompositionGlTwoHolds
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.TestVectorNonvanishingLocal
@@ -190,7 +190,7 @@ theorem iwM_right (ψ : AddChar F Circle) {k : GL (Fin 2) F} (hk : k ∈ GLnLoca
   rw [lintegral_map hf (measurable_mul_const k), lintegral_iwM ψ (f := fun a => f (a * k)) (hf.comp (measurable_mul_const k)),
     lintegral_iwM ψ hf, ← hτ.lintegral_comp (measurable_Hf ψ hf)]
   refine lintegral_congr fun p => ?_
-  simp only [Hf, Function.comp]
+  simp only [Hf]
   refine lintegral_congr fun x => ?_
   have e : uni2 x * hI p * k = uni2 x * hI (p.1, p.2.1, p.2.2 * k) := by
     simp only [hI, mul_assoc]
@@ -210,7 +210,7 @@ theorem iwM_left_uni (ψ : AddChar F Circle) (y : F) :
     lintegral_iwM ψ (f := fun a => f (uni2 y * a)) (hf.comp (measurable_const_mul _)),
     lintegral_iwM ψ hf]
   refine lintegral_congr fun p => ?_
-  simp only [Hf, Function.comp]
+  simp only [Hf]
   have e : ∀ x : F, uni2 y * (uni2 x * hI p) = uni2 (y + x) * hI p := fun x => by
     rw [← mul_assoc, unipotent_mul_unipotent_add]
   simp_rw [e]
@@ -259,7 +259,7 @@ theorem iwM_left_dg (ψ : AddChar F Circle) (s t : Fˣ) :
     rw [wE_eq, wE_eq]
     simp only [Units.val_mul, modulus_mul, ENNReal.coe_mul]
     rw [ENNReal.mul_inv (Or.inl hm0) (Or.inl ENNReal.coe_ne_top)]
-  simp only [Hf, Function.comp]
+  simp only [Hf]
   simp_rw [e]
   rw [lintegral_comp_mul_left (selfDualMeasure ψ) a₀.ne_zero
     (fun x => wE p * f (uni2 x * hI (a₀ * p.1, t * p.2.1, p.2.2))), hw]

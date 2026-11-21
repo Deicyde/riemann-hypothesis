@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.IntegralModels.StatementsSpreadStep
 import GroundTheory.HeightsAndTheta.Heights.IntegralModels.StatementsSpreadGlue
 import GroundTheory.HeightsAndTheta.Heights.IntegralModels.PSpreadBundle
+import GroundTheory.HeightsAndTheta.Heights.IntegralModels.StatementsSpreadIsoLoc
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.Model

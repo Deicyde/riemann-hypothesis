@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.Intersections.ImportsMoreSide
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StChartSpecCount
 import GroundTheory.HeightsAndTheta.Heights.Intersections.StChartNormPts

@@ -1,14 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinRel
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSplittingSplitOm
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicHeisenbergActsByLocalSchrodinger
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchrodingerPreservesSchwartzBruhat
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StandardAdelicCharacterNontrivialAtPlaces
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatAtVAtStable
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousAtPlace
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianTensorSkewHermitianLatticeOpenCompact
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsotropicOrbitOrthogonalAtPlace
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -80,7 +71,7 @@ theorem vanish_lin (σ : E →ₐ[F] E) (hσ : ∀ x, σ (σ x) = x) {k : ℕ} (
       rw [← h yv hyv, h1]
       congr 3
       simp only [Matrix.one_apply, mul_ite, mul_one, mul_zero, ite_mul, zero_mul, Finset.sum_ite_eq,
-        Finset.sum_ite_eq', Finset.mem_univ, if_true, cA_cA hσ, dotProduct])
+        Finset.mem_univ, if_true, cA_cA hσ, dotProduct])
   funext i
   rw [Pi.zero_apply, ← cA_cA hσ (β i)]
   have := congrFun h0 i
@@ -95,7 +86,7 @@ theorem eq_zero_of_plane {n n₁ : ℕ} (x y : Fin n → E) (ι : Matrix (Fin n)
   funext j
   have h1 : δ j = ∑ l, inclR (F := F) (AF F) (s j * x l + ∑ q, ι l q * U q j + t j * y l) * δ l := by
     simp only [hE, apply_ite (inclR (F := F) (AF F)), map_one, map_zero, ite_mul, one_mul, zero_mul,
-      Finset.sum_ite_eq', Finset.sum_ite_eq, Finset.mem_univ, if_true]
+      Finset.sum_ite_eq', Finset.mem_univ, if_true]
   have h2 : ∑ l, inclR (F := F) (AF F) (s j * x l + ∑ q, ι l q * U q j + t j * y l) * δ l =
       inclR (F := F) (AF F) (s j) * (incV F x ⬝ᵥ δ) +
         ∑ q, inclR (F := F) (AF F) (U q j) * ((incM F ι)ᵀ *ᵥ δ) q +

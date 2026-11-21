@@ -1,5 +1,21 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.MatrixMeasurableSpace
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.Analysis.SpecialFunctions.Complex.CircleAddChar
+import Mathlib.NumberTheory.Padics.ProperSpace
+import Mathlib.NumberTheory.Padics.ValuativeRel
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Connected.Separation
+import Mathlib.Topology.MetricSpace.Ultra.TotallySeparated
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open MeasureTheory ValuativeRel Matrix
 open scoped NNReal ENNReal Pointwise
@@ -205,7 +221,7 @@ theorem not_isSelfDual_one (ν : Measure k) : ¬ IsSelfDual (1 : AddChar k Circl
   obtain ⟨_, _⟩ := secondCountable_and_t2_local_field (k := k)
   have := noncompact (k := k)
   have h := h2 _ indicator_mem_SB
-  simp [Measure.real, measure_univ_of_isAddLeftInvariant ν, Set.indicator_of_mem (zero_mem 𝒪[k] : (0 : k) ∈ (𝒪[k] : Set k))] at h
+  simp [Measure.real, measure_univ_of_isAddLeftInvariant ν] at h
 
 omit [MeasurableSpace k] [BorelSpace k] in
 

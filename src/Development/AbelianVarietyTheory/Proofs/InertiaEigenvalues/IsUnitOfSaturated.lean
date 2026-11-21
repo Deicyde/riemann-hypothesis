@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsStratHom
-import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.BhattScholzeIntegral
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsKernelVectorMemOEOfFrobeniusStableStatement
 open Formalism Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.WeaklyAdmissibleFiltrations TensorProduct PowerSeries GlobalTheory.Prism GlobalTheory.BKReal GlobalTheory.Per GlobalTheory.BSP
 open scoped Formalism.Per NNReal
@@ -15,7 +13,7 @@ theorem perfectRing_tilt_fraction_field (l : ℕ) [Fact l.Prime] : PerfectRing (
   obtain ⟨a', rfl⟩ := surjective_frobenius (OCb l) l a
   obtain ⟨b', rfl⟩ := surjective_frobenius (OCb l) l b
   exact ⟨algebraMap (OCb l) (Cb l) a' / algebraMap (OCb l) (Cb l) b', by
-    simp [frobenius_def, div_pow, map_pow]⟩
+    simp [frobenius_def, map_pow]⟩
 
 theorem constantCoeff_frobW (l : ℕ) [Fact l.Prime] (x : WCb l) :
     WittVector.constantCoeff (frobW l x) = frobenius (Cb l) l (WittVector.constantCoeff x) :=

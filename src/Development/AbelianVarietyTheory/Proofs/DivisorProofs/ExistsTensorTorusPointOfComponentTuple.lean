@@ -1,7 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsProjOverWeierstrass
-import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.MumfordConstruction
-import Development.AbelianVarietyTheory.Definitions.Degenerations.AdmissibleBaseOfCompleteDvr
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TensFacts
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj IsLocalRing NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -40,7 +37,7 @@ theorem cube_corr {G U : Type} [CommGroup G] [CommGroup U] {θ : G → G → G �
   have k20 := E (h.coc b (p * q) b' a')
   apply Additive.ofMul.injective
   simp only [ofMul_mul] at *
-  simp only [mul_comm, mul_assoc, mul_left_comm, h.s01, h.s12] at *
+  simp only [mul_comm, mul_left_comm, h.s01, h.s12] at *
   linear_combination (norm := abel) k0 - k1 - k2 + k3 + k4 - k5 - k6 + k7 - k8 - k9 - k10 - k11 + k12 - k13 - k14 - k15 + k16 - k17 - k18 + k19 + k20
 
 end GlobalTheory.Mum.TensTor.VExist

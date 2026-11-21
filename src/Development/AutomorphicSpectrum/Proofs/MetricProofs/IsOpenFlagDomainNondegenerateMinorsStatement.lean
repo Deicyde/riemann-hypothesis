@@ -1,6 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.IsOpenFlagDomainNondegenerateMinors
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.InFlagDomainOne
 open Matrix GlobalTheory.CompanionTheory.Ar.PB
 open scoped ComplexOrder
 set_option maxHeartbeats 1000000 in

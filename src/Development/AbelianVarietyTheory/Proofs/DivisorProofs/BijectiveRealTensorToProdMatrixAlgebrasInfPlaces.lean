@@ -1,7 +1,9 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsRootSelectionUnitaryRankOne
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EmbOverSumInjective
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SpanRangeEmbeddingEqTop
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsCyclotomicExtensionQI
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 
 noncomputable section
 
@@ -24,7 +26,7 @@ variable {p : ℕ} [Fact p.Prime]
 
 theorem psiR_tmul (G : HTGroup p) (v : InfinitePlace G.F) (r : ℝ) (c : G.C) :
     G.psiR v (r ⊗ₜ c) = r • G.psi v c := by
-  simp only [psiR, Algebra.TensorProduct.lift_tmul, Algebra.ofId_apply, Algebra.smul_def]
+  simp only [psiR, Algebra.smul_def]
   rfl
 
 theorem psiR_pi_bijective (G : HTGroup p) :
@@ -43,7 +45,7 @@ theorem psiR_pi_bijective (G : HTGroup p) :
         simp only [Pi.smul_apply, RingHom.id_apply]
         rw [Matrix.scalar_apply, Matrix.scalar_apply]
         ext i j
-        by_cases h : i = j <;> simp [Matrix.diagonal_apply, h] }
+        by_cases h : i = j <;> simp [h] }
   have hscS : ∀ c : InfinitePlace G.F → ℂ, sc c ∈ S := by
     have htop := span_real_embedding_places G.F
     have hle : Submodule.span ℝ (Set.range fun (a : G.F) (v : InfinitePlace G.F) => v.embedding a) ≤

@@ -1,7 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.LeviSmoothLocalization.AdjointEta.EtaOK
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GluePlaces
-import GroundTheory.GlobalFields.GlobalReciprocity.General
-import GroundTheory.GlobalFields.ClassFieldConsequences.RayClassFieldLocal
 
 section
 

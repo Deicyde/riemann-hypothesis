@@ -1,9 +1,9 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.WeightFunctionOnFrames
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.ModeHalfStatementPfC
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.ExtFStatementPfB
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.ArakelovInstances.PointwiseNormInvarianceHolds
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.ModelNefness
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.BoundedSectionAlgebra
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.BasePsiLeviLowerBound
 
 namespace ReciprocityTheory.ChartRestriction.G.AR.Up
 
@@ -158,7 +158,7 @@ private theorem sum_mul_mul_cc_eq_of_herm_mulVec {G g : Matrix (Fin r) (Fin r) E
   rw [Fintype.sum_eq_single a, Fintype.sum_eq_single b]
   · simp
   · intro l hl
-    simp [Pi.single_apply, hl]
+    simp [hl]
   · intro k hk
     simp [Pi.single_apply, hk]
 

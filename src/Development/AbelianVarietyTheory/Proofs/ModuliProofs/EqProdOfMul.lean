@@ -1,5 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.EqOfNormResultantEqStatement
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.NumberTheory.Padics.Complex
+import Mathlib.NumberTheory.Padics.PadicIntegers
+import Mathlib.Tactic.ENatToNat
+import Std.Tactic.BVDecide.Normalize.Prop
 open Polynomial
 
 namespace GlobalTheory.PolyNorm
@@ -176,7 +182,7 @@ theorem monic_ev {m : ℕ} {Φ : MvPolynomial (Fin 2) ℚ} (h : Φ.IsHomogeneous
     have := hd d hd'
     by_cases h0 : d 1 = 0
     · have : d 0 = m := by omega
-      simp [coeff_monomial, h0, this]
+      simp [h0, this]
     · have : d 0 ≠ m := by omega
       simp [coeff_monomial, h0, this, coeff_one]
   exact ⟨monic_of_natDegree_le_of_coeff_eq_one m hle hc,

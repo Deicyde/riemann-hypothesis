@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.LevelLetterCocycles.ClassMapInjectiveBijectiveNorms
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.TableLineDegreeTwo
 import Formalism.SharpRestriction.LevelLetterCocycles.ExtensionClauses
 

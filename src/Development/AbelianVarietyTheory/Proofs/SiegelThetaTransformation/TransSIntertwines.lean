@@ -1,7 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.SpanningFamilies.IntMIffInt
-import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.SymplecticSiegelActionMemUpperHalfSpaceAndCocycl
-import Development.AbelianVarietyTheory.Proofs.SiegelThetaTransformation.HeisenbergOperatorRationalPointLaws
+import Mathlib.LinearAlgebra.SymplecticGroup
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.SimpleRing.Principal
 
 open Matrix Complex GlobalTheory.SW GlobalTheory.Phase GlobalTheory.SiegelAction
 open scoped ComplexConjugate Real
@@ -49,7 +52,7 @@ private lemma inverse_block_combination_eq_fst (A B C D : Matrix ι ι ℚ) (a b
     (b * Dᵀ - a * Cᵀ) * B + (a * Aᵀ - b * Bᵀ) * D = a := by
   have e : (b * Dᵀ - a * Cᵀ) * B + (a * Aᵀ - b * Bᵀ) * D =
       b * (Dᵀ * B + -(Bᵀ * D)) - a * (Cᵀ * B + -(Aᵀ * D)) := by
-    simp only [Matrix.mul_add, Matrix.add_mul, Matrix.sub_mul, Matrix.mul_sub, Matrix.mul_neg,
+    simp only [Matrix.mul_add, Matrix.sub_mul, Matrix.mul_neg,
       Matrix.mul_assoc]; abel
   rw [e, h, h']; simp
 
@@ -61,7 +64,7 @@ private lemma inverse_block_combination_eq_snd (A B C D : Matrix ι ι ℚ) (a b
     (b * Dᵀ - a * Cᵀ) * A + (a * Aᵀ - b * Bᵀ) * C = b := by
   have e : (b * Dᵀ - a * Cᵀ) * A + (a * Aᵀ - b * Bᵀ) * C =
       b * (Dᵀ * A + -(Bᵀ * C)) - a * (Cᵀ * A + -(Aᵀ * C)) := by
-    simp only [Matrix.mul_add, Matrix.add_mul, Matrix.sub_mul, Matrix.mul_sub, Matrix.mul_neg,
+    simp only [Matrix.mul_add, Matrix.sub_mul, Matrix.mul_neg,
       Matrix.mul_assoc]; abel
   rw [e, h, h']; simp
 
@@ -73,7 +76,7 @@ private lemma block_combination_mul_transpose_sub_eq_fst (A B C D : Matrix ι ι
     (b * B + a * D) * Aᵀ - (b * A + a * C) * Bᵀ = a := by
   have e : (b * B + a * D) * Aᵀ - (b * A + a * C) * Bᵀ =
       b * (B * Aᵀ + -(A * Bᵀ)) + a * (D * Aᵀ + -(C * Bᵀ)) := by
-    simp only [Matrix.mul_add, Matrix.add_mul, Matrix.sub_mul, Matrix.mul_sub, Matrix.mul_neg,
+    simp only [Matrix.mul_add, Matrix.add_mul, Matrix.mul_neg,
       Matrix.mul_assoc]; abel
   rw [e, h, h']; simp
 
@@ -85,7 +88,7 @@ private lemma block_combination_mul_transpose_sub_eq_snd (A B C D : Matrix ι ι
     (b * A + a * C) * Dᵀ - (b * B + a * D) * Cᵀ = b := by
   have e : (b * A + a * C) * Dᵀ - (b * B + a * D) * Cᵀ =
       -(b * (B * Cᵀ + -(A * Dᵀ))) - a * (D * Cᵀ + -(C * Dᵀ)) := by
-    simp only [Matrix.mul_add, Matrix.add_mul, Matrix.sub_mul, Matrix.mul_sub, Matrix.mul_neg,
+    simp only [Matrix.mul_add, Matrix.add_mul, Matrix.mul_neg,
       Matrix.mul_assoc]; abel
   rw [e, h, h']; simp
 
@@ -196,7 +199,7 @@ private lemma isUnit_det_spDen_of_mem_siegel {σ : Matrix (ι ⊕ ι) (ι ⊕ ι
     simp only [hτc, Matrix.transpose_apply, Matrix.map_apply, h]
   have hs : ∀ (M : Matrix ι ι ℂ) (w : ι → ℂ),
       M.map (starRingEnd ℂ) *ᵥ star w = star (M *ᵥ w) := fun M w ↦ by
-    ext i; simp [mulVec, dotProduct, map_sum, Complex.star_def]
+    ext i; simp [mulVec, dotProduct]
   have e : _root_.GlobalTheory.SW.qm σ.toBlocks₂₁ * τc + _root_.GlobalTheory.SW.qm σ.toBlocks₂₂ =
       (_root_.GlobalTheory.SW.qm σ.toBlocks₂₁ * τ + _root_.GlobalTheory.SW.qm σ.toBlocks₂₂).map
         (starRingEnd ℂ) := by

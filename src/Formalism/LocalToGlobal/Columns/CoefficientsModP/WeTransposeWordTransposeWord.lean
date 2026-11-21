@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.GradedWeylDivisibility.FinalD
-import Formalism.GradedWeylDivisibility.StatementE
 import Formalism.GradedWeylDivisibility.FockSpaceTableaux.FockQHW
 import Formalism.GradedWeylDivisibility.FockSpaceTableaux.FockQWordAdj
 import Formalism.GradedWeylDivisibility.FockSpaceTableaux.LClosedeqLemmas

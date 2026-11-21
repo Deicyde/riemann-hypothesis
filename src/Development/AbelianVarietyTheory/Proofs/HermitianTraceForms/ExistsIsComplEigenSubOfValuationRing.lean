@@ -1,8 +1,13 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.QuasicoherentCohomology.MemSaturatedOrderIsoSubspaceSpanSymmApply
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.MapSpanBaseChangeEquivSubmoduleOf
 import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.IsSaturatedSubmoduleIffExistsIsComplOfValuationR
 import Development.AbelianVarietyTheory.Proofs.HermitianTraceForms.IsLocallyConstantRankAtStalkEigenSub
+import Mathlib.RingTheory.Etale.Weakly
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.TotallySplit
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open scoped TensorProduct NumberField
 open Polynomial
@@ -108,7 +113,7 @@ theorem eigenSub_baseChangeAction_of_flat (χ : O →+* R) :
   rw [baseChange_ker]
   congr 1
   ext x
-  simp [TensorProduct.tmul_sub]
+  simp
 
 theorem isBaseChange_eigenMapAlgebra_of_flat (hf : ∀ a x, f (ρ a x) = ρ' a (f x))
     (hb : IsBaseChange R' f) (χ : O →+* R) : IsBaseChange R' (eigenMapAlgebra hf χ) :=

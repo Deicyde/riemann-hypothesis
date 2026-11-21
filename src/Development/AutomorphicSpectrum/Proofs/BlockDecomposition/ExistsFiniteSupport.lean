@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.SmoothPartStable
+import Mathlib.Topology.Sheaves.Presheaf
 
 open GlobalTheory.PRep
 

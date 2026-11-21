@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJAPolyRadialCut
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJASSnRepThtFacts
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutJATCDtrSIo

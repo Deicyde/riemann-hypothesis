@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Divisibility.JetBounds.IsExpansion
+import Formalism.LocalToGlobal.IndefiniteForms.IndefSide
 
 open Module NumberField IsDedekindDomain
 open scoped BigOperators

@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TriModOfBlockTriangular
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TriangularFrameDiagonalRatiosStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TriangularModulusProductsStatement
 
@@ -24,7 +24,7 @@ theorem dg_inv_mul_dg (j : Fin N) {γ : K} (hγ : γ ≠ 0) : dg j γ⁻¹ * dg 
   funext i
   by_cases h : i = j
   · subst h; simp [hγ]
-  · simp [Function.update_apply, h]
+  · simp [h]
 
 theorem dg_inv (j : Fin N) {γ : K} (hγ : γ ≠ 0) : (dg j γ)⁻¹ = dg j γ⁻¹ :=
   Matrix.inv_eq_left_inv (dg_inv_mul_dg j hγ)
@@ -36,7 +36,7 @@ theorem dg_mem (R : Subring K) (j : Fin N) {γ : K} (hγ : γ ∈ R) : dg j γ �
     rw [Matrix.diagonal_apply_eq]
     by_cases h : i = j
     · subst h; simpa using hγ
-    · simp [Function.update_apply, h, one_mem]
+    · simp [h, one_mem]
   · unfold dg
     rw [Matrix.diagonal_apply_ne _ h]
     exact zero_mem _

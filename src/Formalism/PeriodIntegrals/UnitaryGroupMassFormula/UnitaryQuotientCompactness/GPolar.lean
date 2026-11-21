@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnitaryQuotientCompactness.MaximalCompactIsCompact
+import Mathlib.Analysis.Matrix.Order
 
 open Matrix
 open scoped MatrixOrder ComplexOrder

@@ -1,15 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsIsLieBase
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.HodgePeriodGram
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HodgeChartBoundsOfSchurLemW
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PerValNeZero
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsExponentialChartAtPoint
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsExponentialOfSemiAbelianFibreLinearChange
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CombMatAddMul
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EqOnBallOfEqOnPunctPolydiscCoveringExpImageStatement
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EqOnBallOfEqOnPunctPolydiscCoveringExpImage
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsConstantPeriodMarkingUniversalCover
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PunctPolydiscUniversalCoverOpenConvexExpAnalytic
+import Mathlib.Analysis.InnerProductSpace.OfNorm
 open AlgebraicGeometry CategoryTheory MvPolynomial NumberField ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj GlobalTheory.Toroidal GlobalTheory.ShFam GlobalTheory.ProjVar GlobalTheory.FlagBundle GlobalTheory.GoodMetric GlobalTheory.LieBase
 open Classical
 open Matrix
@@ -46,7 +38,7 @@ theorem posDef_im_on_ball_of_logExp : ∀ (n a : ℕ) (J : Type) [Fintype J] [De
   have hqim : ∀ w, (q w).im = star x ⬝ᵥ ((Δ w).map Complex.im *ᵥ x) := by
     intro w
     simp [q, dotProduct, mulVec, Complex.im_sum, Complex.mul_im, Finset.mul_sum, mul_comm,
-      mul_left_comm, mul_assoc]
+      mul_left_comm]
   have hqd : DifferentiableOn ℂ q U := by
     rw [hq]
     apply DifferentiableOn.fun_sum
@@ -73,7 +65,7 @@ theorem posDef_im_on_ball_of_logExp : ∀ (n a : ℕ) (J : Type) [Fintype J] [De
   set F : (Fin n → ℂ) → ℂ := fun w => Complex.exp (Complex.I * q w) with hF
   have hFn : ∀ w, ‖F w‖ = Real.exp (-(q w).im) := by
     intro w
-    simp [F, Complex.norm_exp, Complex.I_mul_re]
+    simp [F, Complex.norm_exp]
   have hFd : DifferentiableOn ℂ F U := (hqd.const_mul Complex.I).cexp
   have hmax : IsMaxOn (norm ∘ F) U z := by
     intro w hw

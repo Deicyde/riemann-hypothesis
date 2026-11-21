@@ -1,4 +1,5 @@
-import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.FrameInt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.IdemFin
 import Formalism.LocalToGlobal.IndefiniteReal.FockTheta.ConjPurelyImaginaryGenerator
 

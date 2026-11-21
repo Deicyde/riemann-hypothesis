@@ -1,8 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.SlopeExcess.ConstRankBaseLePolyFourth
 import Formalism.SharpRestriction.GrowthBounds.TopChoiceBounds
 import Formalism.SharpRestriction.GrowthBounds.JointsLit
 import Formalism.SharpRestriction.GrowthBounds.LogarithmicSums.NotSingularOfCentral
-import Formalism.SharpRestriction.GrowthBounds.AdmissibleIntegers.FirstTermSizeBound
 import Formalism.SharpRestriction.Divisibility.WeightDegreeSizes
 
 noncomputable section

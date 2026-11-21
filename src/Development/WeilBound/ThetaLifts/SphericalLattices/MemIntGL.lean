@@ -1,4 +1,6 @@
-import Development.WeilBound.ThetaLifts.SphericalLattices.LocCommSt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.WeilBound.ThetaLifts.SphericalLattices.LocModSt
 
 noncomputable section
 
@@ -52,7 +54,7 @@ theorem lev_mem (hc : ∀ x, c (c x) = x) (t : GL (Fin m) L) : lev L c m t ∈ P
   rw [hlev, hW]
   simp only [fromBlocks_transpose, fromBlocks_map, fromBlocks_multiply, h3, h4,
     Matrix.transpose_zero, Matrix.map_zero _ (map_zero c), Matrix.mul_zero, Matrix.zero_mul,
-    Matrix.mul_one, Matrix.one_mul, add_zero, zero_add, h1, h2]
+    Matrix.mul_one, add_zero, zero_add, h1, h2]
 
 def un (X : Matrix (Fin m) (Fin m) L) : GL (Fin m ⊕ Fin m) L :=
   ⟨fromBlocks 1 X 0 1, fromBlocks 1 (-X) 0 1, by simp [fromBlocks_multiply, fromBlocks_one],
@@ -101,7 +103,7 @@ theorem decomp (hc : ∀ x, c (c x) = x) {p : GL (Fin m ⊕ Fin m) L} (hp : p �
   rw [hPb, hW] at hiso
   simp only [fromBlocks_transpose, fromBlocks_map, fromBlocks_multiply,
     Matrix.transpose_zero, Matrix.map_zero _ (map_zero c), Matrix.mul_zero, Matrix.zero_mul,
-    Matrix.mul_one, Matrix.one_mul, add_zero, zero_add, Matrix.fromBlocks_inj] at hiso
+    Matrix.mul_one, add_zero, zero_add, Matrix.fromBlocks_inj] at hiso
   obtain ⟨-, h12, h21', h22⟩ := hiso
   set A := P.toBlocks₁₁ with hA
   set B := P.toBlocks₁₂ with hB

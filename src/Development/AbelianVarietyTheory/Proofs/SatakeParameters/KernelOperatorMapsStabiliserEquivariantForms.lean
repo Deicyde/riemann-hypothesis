@@ -1,6 +1,4 @@
-import Mathlib
-import Formalism.LocalToGlobal.KernelLattices.FirstKernelLawReading
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.FormsAre
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.PairKernelMapsStepWeightValuesStatement
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.PairKernelTermTargetStabiliserLawStatement
 

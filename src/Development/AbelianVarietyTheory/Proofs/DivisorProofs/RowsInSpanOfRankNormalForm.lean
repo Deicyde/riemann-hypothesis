@@ -1,8 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.MatchingOfParts
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
-import Development.AbelianVarietyTheory.Definitions.Divisors.RankEqCardIffExistsFrameMatrixFirstColumnBlock
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SubMemTwistSpan
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.LinearAlgebra.Matrix.Rank
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
 open ValuativeRel Matrix
 
 namespace GlobalTheory
@@ -35,6 +37,6 @@ theorem rows_mem_span_of_isUnit_mul (K : Type) [Field K] (A D : Type) [Fintype A
   refine ⟨c, ?_⟩
   rw [← hc]
   ext d
-  simp [Matrix.vecMul, dotProduct, Finset.sum_apply, mul_comm]
+  simp [Matrix.vecMul, dotProduct, Finset.sum_apply]
 
 end GlobalTheory

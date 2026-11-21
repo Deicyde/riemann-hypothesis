@@ -1,4 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.TorsionIntegrality.UniformGaussModels.OrthogonalGaussModels.HermitianBlockFrames.IsUnitaryK
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.NumberTheory.Padics.Hensel
+import Mathlib.NumberTheory.Padics.RingHoms
+import Mathlib.Topology.Connected.Separation
+import Mathlib.Topology.MetricSpace.Ultra.TotallySeparated
 
 noncomputable section
 open scoped BigOperators

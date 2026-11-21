@@ -1,8 +1,6 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.LieGeometryGrowth.ThStmt
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GeometricSideEstimates.PointEvaluationMultiplicativeTsum
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GeometricSideEstimates.SmoothSumLeftRightMulOrder
-import Development.AutomorphicArithmetic.AutomorphicVarieties.GeometricSideEstimates.SumDer
-import Development.AutomorphicArithmetic.AutomorphicVarieties.GeometricSideEstimates.QuadraticFormGradientFormula
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GeometricSideEstimates.DerivSimilitudeCharAtOneEqTrace
 import Development.AutomorphicArithmetic.AutomorphicVarieties.GeometricSideEstimates.GeometryOfNumbersLatticeEstimate
 open UpperTheory.V.Lit.Geo
@@ -57,7 +55,7 @@ theorem UpperTheory.hermitian_chart_scalar_invariance :
     have hc := HasFDerivAt.comp (f := fun y : Lie E a => sc (Matrix.of y) • y) (oneL E a) hF1 hSd
     change fderiv ℝ (chart (gsum L (pg P)) g) (oneL E a) X = _
     rw [e.fderiv_eq, hc.fderiv]
-    simp only [ContinuousLinearMap.comp_apply, ContinuousLinearMap.add_apply, ContinuousLinearMap.smul_apply,
+    simp only [ContinuousLinearMap.comp_apply, ContinuousLinearMap.add_apply,
       ContinuousLinearMap.id_apply, ContinuousLinearMap.smulRight_apply, h1', one_smul, hd, id]
     rw [hF']
     refine tsum_congr fun v => ?_

@@ -1,6 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAHOfIsFactorAH
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.ThetaLawProofs.ExistsHolomorphicUniformisationPowerThetaKeyDatu
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open CategoryTheory CategoryTheory.Limits AlgebraicGeometry MonoidalCategory CartesianMonoidalCategory MonObj
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi
 attribute [local instance] Over.cartesianMonoidalCategory
@@ -54,12 +55,11 @@ def appendL (g : ℕ) : (Fin g → ℂ) →ₗ[ℝ] (Fin (g + g) → ℂ) where
   map_add' x y := by
     funext q
     refine Fin.addCases (fun k => ?_) (fun k => ?_) q <;>
-      simp only [Fin.append_left, Fin.append_right, Pi.add_apply, Pi.smul_apply, Pi.zero_apply, add_zero,
-        smul_zero, RingHom.id_apply]
+      simp only [Fin.append_left, Fin.append_right, Pi.add_apply, Pi.zero_apply, add_zero]
   map_smul' c x := by
     funext q
     refine Fin.addCases (fun k => ?_) (fun k => ?_) q <;>
-      simp only [Fin.append_left, Fin.append_right, Pi.add_apply, Pi.smul_apply, Pi.zero_apply, add_zero,
+      simp only [Fin.append_left, Fin.append_right, Pi.smul_apply, Pi.zero_apply,
         smul_zero, RingHom.id_apply]
 
 def appendR (g : ℕ) : (Fin g → ℂ) →ₗ[ℝ] (Fin (g + g) → ℂ) where
@@ -67,12 +67,11 @@ def appendR (g : ℕ) : (Fin g → ℂ) →ₗ[ℝ] (Fin (g + g) → ℂ) where
   map_add' x y := by
     funext q
     refine Fin.addCases (fun k => ?_) (fun k => ?_) q <;>
-      simp only [Fin.append_left, Fin.append_right, Pi.add_apply, Pi.smul_apply, Pi.zero_apply, add_zero,
-        smul_zero, RingHom.id_apply]
+      simp only [Fin.append_left, Fin.append_right, Pi.add_apply, Pi.zero_apply, add_zero]
   map_smul' c x := by
     funext q
     refine Fin.addCases (fun k => ?_) (fun k => ?_) q <;>
-      simp only [Fin.append_left, Fin.append_right, Pi.add_apply, Pi.smul_apply, Pi.zero_apply, add_zero,
+      simp only [Fin.append_left, Fin.append_right, Pi.smul_apply, Pi.zero_apply,
         smul_zero, RingHom.id_apply]
 
 theorem sqLat_full (Λ : Submodule ℤ (Fin g → ℂ)) (h : Submodule.span ℝ (Λ : Set (Fin g → ℂ)) = ⊤) :

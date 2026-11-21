@@ -1,6 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.PairInfApply
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsComplexStructureGaussVacuumFockEquations
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TraceSympNegOne
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TensorCartanInvolutionInvariantAndPositiveStatement
@@ -50,7 +49,7 @@ theorem exists_pos_complex_structure : ∀ (F E : Type) [Field F] [NumberField F
     refine eq_of_map_piInf hcm B.emb (hRat _) (fun c hc => by rw [smul_add, hRat u c hc, hRat v c hc, add_zero])
       fun w => ?_
     rw [hRmap, Matrix.map_add _ (map_add _), Matrix.map_add _ (map_add _), hRmap, hRmap]
-    simp only [Matrix.map_add _ (map_add _), Matrix.mul_add, Matrix.add_mul, smul_add]
+    simp only [Matrix.mul_add, Matrix.add_mul, smul_add]
   have hRsmul : ∀ (c : AF F) u, R (c • u) = c • R u := by
     intro c u
     refine eq_of_map_piInf hcm B.emb (hRat _) (fun c' hc' => by rw [smul_comm, hRat u c' hc', smul_zero])

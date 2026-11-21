@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.NeZeroTop
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.DecoratedPointClassesBijectiveDoubleCosetsStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsK1PointCongruentStatement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MemFramedLevelIffTwoAdelicPointsStatement
@@ -8,6 +8,7 @@ import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsStepLe
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.QbKLeLocLev
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.StabIffMemConj
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PlaceProjectionZeroIntegralIffComponentsAboveStatement
+import Formalism.LocalToGlobal.Columns.TiedCls
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Col Formalism.L2.DIV Formalism.L2.Ker Formalism.UG Formalism.L2.Forms GlobalTheory.Mem GlobalTheory.Mem.Chr GlobalTheory.Mem.Col2 GlobalTheory.Mem.Col2.TC GlobalTheory.Mem.Col2.TopCh GlobalTheory.Mem.ColAd Matrix
 open scoped TensorProduct
 attribute [local instance] GlobalTheory.Mem.Col2.starE Formalism.BasicNotions.Host.cmStar
@@ -80,7 +81,7 @@ theorem topU_dense {U : Subgroup (GL (Fin n) (AfE F E))} {Λ : LevFam E K n SG} 
       have e3 : t⁻¹ * ((k * t) * z * (k * t)⁻¹) * t⁻¹⁻¹ = t⁻¹ * k * t * z * t⁻¹ * k⁻¹ * t := by group
       show rhoP F P.1 (t⁻¹ * ((k * t) * z * (k * t)⁻¹) * t⁻¹⁻¹) = _
       rw [e3]
-      simp only [map_mul, map_inv, hrk P, inv_one, mul_one, inv_mul_cancel, one_mul, mul_inv_cancel_right]
+      simp only [map_mul, map_inv, hrk P, inv_one, mul_one, inv_mul_cancel, one_mul]
       group
     refine Subgroup.mem_comap.2 ?_
     rw [e2]

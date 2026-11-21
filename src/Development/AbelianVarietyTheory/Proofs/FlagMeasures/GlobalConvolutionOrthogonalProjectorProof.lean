@@ -1,11 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.CuspFrameWeights.ConvolutionSmoothL2
-import Development.AbelianVarietyTheory.Statements.CuspFrameWeights.DiscreteSpectrumKFiniteDecomposition
-import Formalism.HarderNarasimhan.ShiftInvariance
-import Formalism.RealPlaceAnalysis.RealPlaceTaylor.ModularCharacterEqOneOnExpHermitian
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.RightRegularRepUnitaryStronglyContinuous
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.CompletedTensorDiscreteSeriesIrreducibleFormalDeStatement
-import Development.AbelianVarietyTheory.Proofs.FlagMeasures.IsIrrAndDenseOfIsFdegG
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.ProjAbsHolds
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.IntegralInvOfSupport
 
@@ -144,7 +138,7 @@ theorem abstract_count {G H L : Type} [NormedAddCommGroup H] [InnerProductSpace 
       rintro ⟨y, hy⟩
       obtain ⟨z, rfl⟩ := LinearMap.mem_range.1 hy
       obtain ⟨A, ⟨hA, hAw⟩, -⟩ := hex _ (by
-        simp only [ContinuousLinearMap.coe_coe, ContinuousLinearMap.comp_apply]
+        simp only [ContinuousLinearMap.comp_apply]
         exact hQQ z)
       exact ⟨⟨A, hA⟩, Subtype.ext hAw⟩
     exact ⟨LinearEquiv.ofBijective f ⟨hinj, hsurj⟩⟩

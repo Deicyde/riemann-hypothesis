@@ -1,5 +1,9 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.FormalDegreeBessel.StatementDS
 import Formalism.RealPlaceAnalysis.RealPlaceTaylor.QuantumDetHighestWeightHolds
+import Mathlib.Tactic.ENatToNat
+import Std.Tactic.BVDecide.Normalize.Prop
 
 open Finset Formalism.REAL
 
@@ -24,7 +28,7 @@ theorem formalDegreeShiftRatio_holds : FdegRatio := by
   have hN : ∀ a b : Fin n, a < b → |μ a - μ b| ≠ 0 := fun a b h =>
     abs_ne_zero.mpr (sub_ne_zero.mpr (hinj.ne h.ne))
   have es : ((μ + Pi.single s 1 : Fin n → ℝ)) s = μ s + 1 := by simp
-  have eo : ∀ t, t ≠ s → ((μ + Pi.single s 1 : Fin n → ℝ)) t = μ t := fun t ht => by simp [Pi.single_apply, ht]
+  have eo : ∀ t, t ≠ s → ((μ + Pi.single s 1 : Fin n → ℝ)) t = μ t := fun t ht => by simp [ht]
   set h : Fin n → ℝ := fun t => (μ s + 1 - μ t) / (μ s - μ t) with hh
   have hsign : ∀ t, t ≠ s → |μ s + 1 - μ t| / |μ s - μ t| = h t := by
     intro t ht

@@ -1,5 +1,14 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.BochnerInequality.Permute
-import ReciprocityTheory.ReductiveGroups.DiscreteSeries.BochnerInequality.LayerBasic
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
+import ReciprocityTheory.ReductiveGroups.DiscreteSeries.BochnerInequality.CasValK
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -88,7 +97,7 @@ theorem sum_ite_update_reindex {k : ℕ} (i : Fin k) (P Q : Fin n × Fin n → P
   refine Finset.sum_nbij' (fun κ => Function.update κ i (f (κ i)))
     (fun κ => Function.update κ i (g (κ i))) ?_ ?_ ?_ ?_ ?_ <;>
   intro κ hκ <;>
-  simp only [Finset.mem_coe, Finset.coe_filter, Set.mem_setOf_eq, Finset.mem_filter,
+  simp only [Finset.mem_filter,
     Finset.mem_univ, true_and] at hκ ⊢
   · simpa using hf _ hκ
   · simpa using hg _ hκ
@@ -203,7 +212,7 @@ theorem wordContraction_prepend {k : ℕ} (p : Fin n × Fin n) (G : Big n k M) :
   rw [← Finset.sum_filter]
   refine Finset.sum_nbij' (fun κ => Fin.tail κ) (fun κ' => Fin.cons p κ') ?_ ?_ ?_ ?_ ?_ <;>
   intro κ hκ <;>
-  simp only [Finset.mem_coe, Finset.coe_filter, Set.mem_setOf_eq, Finset.mem_filter,
+  simp only [Finset.mem_filter,
     Finset.mem_univ, true_and] at hκ ⊢
   · simp
   · rw [← hκ]; exact Fin.cons_self_tail κ

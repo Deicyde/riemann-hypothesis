@@ -1,14 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.MatchingOfParts
-import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
-import Development.AbelianVarietyTheory.Definitions.Divisors.RankEqCardIffExistsFrameMatrixFirstColumnBlock
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatAtVAtStable
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SwapNegApply
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsLocIsoRefl
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousAtPlace
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqSmulOfCommuteHeisenbergLinearModelSchwartzBruh
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchrodingerPreservesSchwartzBruhat
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StandardAdelicCharacterNontrivialAtPlaces
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeisSliceT
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsAtCoord
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalIdempotentCharacterValue
@@ -184,7 +175,7 @@ theorem GlobalTheory.SwapSchur.sliceT_swap_eq_smul : ∀ (F E : Type) [Field F] 
     intro π x; ext i j; simp
   have coXneg : ∀ x : Matrix (Fin a') (Fin (a + a')) (AE F E),
       GlobalTheory.FlipMatch.coX t 1 1 (-x) = -GlobalTheory.FlipMatch.coX t 1 1 x := by
-    intro x; simp only [GlobalTheory.FlipMatch.coX, mapNeg]; simp [Matrix.mul_neg, Matrix.neg_mul]
+    intro x; simp only [GlobalTheory.FlipMatch.coX, mapNeg]; simp [Matrix.mul_neg]
   have coYneg : ∀ x : Matrix (Fin a') (Fin (a + a')) (AE F E),
       GlobalTheory.FlipMatch.coY σ G.V' G.W t 1 1 (-x) = -GlobalTheory.FlipMatch.coY σ G.V' G.W t 1 1 x := by
     intro x; simp only [GlobalTheory.FlipMatch.coY, mapNeg]; simp [Matrix.mul_neg, Matrix.neg_mul]

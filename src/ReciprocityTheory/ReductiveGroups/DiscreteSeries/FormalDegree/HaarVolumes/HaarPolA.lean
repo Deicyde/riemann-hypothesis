@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.DiscreteSeries.FormalDegree.HaarVolumes.DensOn
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
 
 noncomputable section
 
@@ -156,7 +159,7 @@ theorem gMat_cLin {ε : Fin n → Bool} {Y : Matrix (Fin n) (Fin n) ℂ} (h : in
     have h2 : ¬ b < a := not_lt_of_gt hab
     cases ha : ε a <;> cases hb : ε b <;>
       simp only [sg, ha, hb, ↓reduceIte, Bool.false_eq_true] at hE <;>
-      simp [ha, hb, h1, h2, hab] <;>
+      simp [h1, h2, hab] <;>
       (try simp only [Complex.star_def] at hE) <;>
       first | linear_combination hE | linear_combination -hE
   · have h0 : star (Y a a) + Y a a = 0 := by
@@ -169,7 +172,7 @@ theorem gMat_cLin {ε : Fin n → Bool} {Y : Matrix (Fin n) (Fin n) ℂ} (h : in
     apply Complex.ext <;> simp [hre]
   · have h1 : a ≠ b := ne_of_gt hab
     have h2 : ¬ a < b := not_lt_of_gt hab
-    cases ha : ε a <;> cases hb : ε b <;> simp [ha, hb, h1, h2, hab]
+    cases ha : ε a <;> cases hb : ε b <;> simp [h1, h2, hab]
 
 theorem sg_eq {ε : Fin n → Bool} {i j : Fin n} (h : ε i = ε j) : sg ε i = sg ε j := by
   simp [sg, h]

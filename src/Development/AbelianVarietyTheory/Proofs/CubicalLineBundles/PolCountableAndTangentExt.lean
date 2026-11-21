@@ -1,7 +1,5 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsHolPeriods
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.GlobalSectionsRankAlgClosed
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.BCTools
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.ExistsLinearOfIsMonHom
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.SpecialisationNumberFieldAndCountableValues
 import Development.AbelianVarietyTheory.Proofs.CubicalLineBundles.MorphismsSpreadOutToFgSubalgebra
@@ -110,7 +108,7 @@ theorem basis_repr_map {J : Type} (b : Module.Basis J k B) (ρ : R →ₐ[k] S) 
   induction x using TensorProduct.induction_on with
   | zero => simp
   | tmul a m =>
-    simp [Algebra.TensorProduct.basis_repr_tmul, Algebra.smul_def]
+    simp [Algebra.TensorProduct.basis_repr_tmul]
   | add x y hx hy => simp [hx, hy]
 
 end Algebra

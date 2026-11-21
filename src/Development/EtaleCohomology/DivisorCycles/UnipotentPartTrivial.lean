@@ -1,4 +1,6 @@
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.DivisorCycles.OpenCoset
+import Mathlib.Tactic.Polynomial.Basic
 
 open Matrix
 namespace LateralTheory.DivDb.UnipotentPartTrivial

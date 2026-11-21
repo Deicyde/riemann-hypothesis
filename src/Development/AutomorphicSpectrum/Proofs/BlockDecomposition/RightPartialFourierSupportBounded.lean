@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.Lpart
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.PartialFourierInversion
 open MeasureTheory Matrix GroundTheory.LocalField GroundTheory.Automorphic Ad3 Ad3.K.GL2LocalData GlobalTheory.CompanionTheory.GL2DualWhittakerPair
@@ -77,7 +78,7 @@ theorem continuous_concatenate_single_entry (i j : Fin 2) :
     Continuous fun t : F => cat3 (Matrix.single i j t) (0 : Fin 2 → F) := by
   refine continuous_matrix fun a b => ?_
   fin_cases i <;> fin_cases j <;> fin_cases a <;> fin_cases b <;>
-    simp [cat3, Matrix.single_apply] <;> first | exact continuous_id | exact continuous_const
+    simp [cat3] <;> first | exact continuous_id | exact continuous_const
 
 theorem entry_sum (Z A : Matrix (Fin 2) (Fin 2) F) (i j : Fin 2) (t : F) :
     (Z * Matrix.single i j t * A) 0 1 + (Z * Matrix.single i j t * A) 1 0 =

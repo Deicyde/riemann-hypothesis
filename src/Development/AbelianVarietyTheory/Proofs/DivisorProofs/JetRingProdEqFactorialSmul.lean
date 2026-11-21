@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 open GlobalTheory.LatJet
 open scoped Classical
@@ -11,7 +11,7 @@ theorem count_cons_eq_single_add {I : Type} [DecidableEq I] (a : I) (l : List I)
   by_cases h : i = a
   · subst h; simp [add_comm]
   · have h' : ¬ a = i := fun e => h e.symm
-    simp [h, h', Pi.single_apply]
+    simp [h, h']
 
 theorem prod_map_t_eq_smul_b : ∀ {R : Type} [CommRing R] {I : Type} [Fintype I] {n : ℕ} (J : JetRing R I n) (l : List I)
     (hc : ∑ i, l.count i ≤ n + 1),
@@ -41,7 +41,7 @@ theorem prod_map_t_eq_smul_b : ∀ {R : Type} [CommRing R] {I : Type} [Fintype I
       rw [count_cons_eq_single_add]
       by_cases h : i = a
       · subst h; simp [Nat.factorial_succ, add_comm]
-      · simp [Pi.single_apply, h]
+      · simp [h]
     rw [hidx, hprod, mul_comm]
 
 end GlobalTheory.LatJet

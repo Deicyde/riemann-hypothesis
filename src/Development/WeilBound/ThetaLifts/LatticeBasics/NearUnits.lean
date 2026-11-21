@@ -1,8 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LatticeBasics.MemLam
 import Development.WeilBound.ThetaLifts.LatticeBasics.BadStmt
 import Development.WeilBound.ThetaLifts.LatticeBasics.LocMeas
 import Development.WeilBound.CoreStatements.CompactAveragingSplitting.EigenvectorLifting.PfDict
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCompactOpenAddSubgroup
 
 noncomputable section
 

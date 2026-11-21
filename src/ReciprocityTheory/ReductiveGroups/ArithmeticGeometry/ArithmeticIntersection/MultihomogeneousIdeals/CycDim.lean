@@ -1,7 +1,14 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.MultihomogeneousIdeals.IsFieldIntersection
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterDivSuppAC
 import Lemmata.GeneralBFactBis.Imports
 import Lemmata.FirstBlockLemmaB.Imports
+import Mathlib.RingTheory.GradedAlgebra.Radical
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.TotallySplit
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterDivSuppAA
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 

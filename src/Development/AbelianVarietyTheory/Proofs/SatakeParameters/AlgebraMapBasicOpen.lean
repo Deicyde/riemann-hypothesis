@@ -1,7 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.FRatioSelf
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsAffCoverSpec
 import Development.AbelianVarietyTheory.Definitions.Divisors.ComparisonMemCechHodgeFiltration
+import Development.AbelianVarietyTheory.Definitions.Divisors.DetJacMatCoordsEqTransitionJacobianDet
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory GlobalTheory.CechDR GlobalTheory.PD
 
 set_option autoImplicit false
@@ -33,7 +35,7 @@ theorem exists_linear_mod_sq {A : Type} [CommRing A] [Algebra ℂ A] {ι : Type}
         rw [Finset.sum_eq_single l]
         · simp
         · intro b _ hb
-          simp [Pi.single_apply, hb]
+          simp [hb]
         · simp
       rw [hs, sub_self]
       exact zero_mem _

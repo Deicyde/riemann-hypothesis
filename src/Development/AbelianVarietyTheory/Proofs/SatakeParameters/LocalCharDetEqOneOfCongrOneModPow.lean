@@ -1,5 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ExistsMoveRight
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.MemZmuOfPowPred
 
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.HermitianLatticesTheory Formalism.L2.DIV Formalism.L2.Col GlobalTheory.TopStep
@@ -40,7 +39,7 @@ theorem muAt_det_congr_one : ∀ {X : Fields} {Pr : Primes X} {R : Ranks} (Ch : 
     rw [LinearEquiv.coe_det, ← LinearMap.det_toMatrix (Pi.basisFun X.E (Fin n)), hM]
   have hA1 : (Matrix.of fun a b => A a b) = 1 := by
     ext a b
-    simp [hA, Pi.single_apply, Matrix.one_apply, eq_comm]
+    simp [hA, Pi.single_apply, Matrix.one_apply]
   have hred : redP P.1 ((LinearEquiv.det k : X.Eˣ) : X.E) = redP P.1 (1 : X.E) := by
     rw [hdet, LastSteps.redP_det_add_q hAi hZi, hA1, Matrix.det_one]
   have h1 : IsUnit (redP P.1 (1 : X.E)) := by

@@ -1,5 +1,10 @@
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThickFrames.MarkedLow
 import Formalism.SharpRestriction.GrowthBounds.UnramifiedQuadraticSetting
+import Mathlib.Analysis.Complex.ExponentialBounds
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
 
 open Finset UpperTheory.BernoulliSumsFrobeniusOrbits Formalism.G0
 

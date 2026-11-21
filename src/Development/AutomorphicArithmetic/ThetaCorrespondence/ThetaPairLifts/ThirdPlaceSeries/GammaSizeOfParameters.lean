@@ -1,7 +1,7 @@
-import Formalism.LocalToGlobal.Divisibility.DivisibilityConstruction.GammaSizeOfParameters
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.CohomologicalCsdTempered
-import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.LinkedFamiliesKernelFrame
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.RowSideDetermined
+import Formalism.LocalToGlobal.Divisibility.DivisibilityConstruction.RBDGam
 
 set_option synthInstance.maxHeartbeats 200000
 

@@ -1,7 +1,9 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.MultinomialWeights.StatementsEnd
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.MultinomialWeights.StatementsHomDecomp
 import GroundTheory.HeightsAndTheta.Heights.StabilizerCovolume.RecordEigenInputs
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.Tactic.Monotonicity.Lemmas
 set_option maxSynthPendingDepth 1
 
 noncomputable section

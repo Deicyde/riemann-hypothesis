@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.ModuliSpaces.AllTorsMap
-import Development.AbelianVarietyTheory.Definitions.Uniformization.TXFrame
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsTorsionPairRepresentativeStatement
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsTorsionHomImageStatement
 

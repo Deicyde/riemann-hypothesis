@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Divisibility.ColPins
-import Formalism.LocalToGlobal.Divisibility.HeckeCSDICommTrRep
 
 open Module NumberField IsDedekindDomain
 open scoped Matrix ComplexOrder

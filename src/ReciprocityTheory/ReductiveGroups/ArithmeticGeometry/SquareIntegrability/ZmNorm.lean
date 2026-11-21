@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.SquareIntegrability.WhatContinuous
 
 namespace ReciprocityTheory.ChartRestriction.G.I2

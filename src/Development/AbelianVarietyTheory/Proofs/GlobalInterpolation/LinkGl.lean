@@ -1,9 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GlobalSchurBounds.TuSizeOfRealPlaceSecondLayer
-import Formalism.SharpRestriction.GlobalSchurBounds.LogXLowerFamilyOfTheorems
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.HermRepUnram
-import Formalism.LocalToGlobal.TieTwRecOf
-import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.JoinSISel
+import Formalism.LocalToGlobal.ClassOfRecordOfChoice
 
 noncomputable section
 

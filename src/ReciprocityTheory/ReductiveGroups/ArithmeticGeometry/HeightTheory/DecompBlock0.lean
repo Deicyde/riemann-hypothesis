@@ -1,6 +1,7 @@
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.BasisExtend
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.FracFieldPositiveRowsOmega
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.HtDefs
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.HeightTheory.HeightIntegralEstimates
 
 namespace ReciprocityTheory.ChartRestriction.G.T0
 
@@ -43,7 +44,7 @@ theorem finYX4 (hd : d.AxH 𝒜) (h : d.S1) (c : ι) :
         (ratio (Ω := Ω c) (d.thp (hd.sel k) c) (e c)) := by
       have h1 := hp c
       first
-        | (simp only [dif_pos (rfl : c = c)] at h1; exact h1)
+        | (simp only at h1; exact h1)
         | simpa using h1
     have hq0 := hq c
     have hKT : ∀ r : KTp K d.D d.N, d.KTtoS h c (algebraMap _ _ r) = d.sH c r := fun r => by

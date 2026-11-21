@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.PublishedTheorems.JacquetShalikaBound.FormQuasiInvariantMirabolic
+import GroundTheory.AutomorphicForms.MacdonaldWhittakerHecke
 set_option maxSynthPendingDepth 1
 
 noncomputable section

@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsTypeIsRealConst
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HolAtlasIsFormDelStatement
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFormDbarStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFormMulStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DelMulOfDelEqZeroStatement

@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlockMatrixMulVecBasis
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -10,7 +10,7 @@ namespace GlobalTheory.LeviHC
 theorem commutator_add_I_smul {R : Type} [Ring R] [Algebra ℂ R] (u v u' v' : R) :
     (u + Complex.I • v) * (u' + Complex.I • v') - (u' + Complex.I • v') * (u + Complex.I • v) =
       (u * u' - u' * u) + Complex.I • (u * v' - v' * u) + Complex.I • (v * u' - u' * v) - (v * v' - v' * v) := by
-  simp only [add_mul, mul_add, smul_mul_assoc, mul_smul_comm, smul_smul]
+  simp only [add_mul, mul_add, smul_mul_assoc, mul_smul_comm]
   linear_combination (norm := module) Complex.I_mul_I • (v * v' - v' * v)
 
 theorem re_im_smul_add_I_smul {M : Type} [AddCommGroup M] [Module ℂ M] (a b : ℝ) (u v : M) :

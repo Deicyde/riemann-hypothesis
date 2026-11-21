@@ -1,6 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SizeWindowBrackets.GaloisToProductIsIso
-import Formalism.SizeWindowBrackets.GrowthBoundGivesRiemannHypothesis
-import Formalism.SizeWindowBrackets.SecondKindBucket
 import Formalism.SizeWindowBrackets.SlopeExcessBoundExponentZero
 import Formalism.SizeWindowBrackets.ErrorFormsWeakWindowsFalse
 

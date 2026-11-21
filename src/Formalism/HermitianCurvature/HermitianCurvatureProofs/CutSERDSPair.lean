@@ -1,5 +1,6 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutSERDIdentSpec
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutSERDBeta
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutSERDResRad
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.CompactSupportInClassGeneral
 

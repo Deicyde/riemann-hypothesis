@@ -1,6 +1,5 @@
-import Mathlib
-import CompanionTheory.SpectralGeometry.CountingDefinitions.AdelicEulerProducts.CountData
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.FiniteAdeleTopologyStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.AdelicHaarMeasureScalingStatement
 
 open NumberField IsDedekindDomain MeasureTheory Matrix Topology GlobalTheory.CompanionTheory.SW.Core
@@ -99,7 +98,7 @@ theorem measurePreserving_transvection (lf : Measure R) [SigmaFinite lf] [lf.IsA
     · subst hk
       simp [transvection, add_mulVec, single_mulVec, hij.symm]
     · simp [transvection, add_mulVec, single_mulVec, hk, hij.symm]
-  simp only [Function.comp_apply, hup]
+  simp only [hup]
   exact lintegral_add_right_eq_self
     (fun xᵢ ↦ Set.indicator (Set.univ.pi s) 1 (Function.update x i xᵢ)) (c * x j)
 

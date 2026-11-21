@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.HermitianForms.SelfAdjointForms.FixK
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.BlockHomomorphism
+import Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.HermitianForms.AvgData
 
 noncomputable section
 

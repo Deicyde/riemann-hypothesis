@@ -1,4 +1,6 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.BoxDefs
+import BuildAid.Leniency.Open
+import Development.AutomorphicArithmetic.AutomorphicVarieties.UnitaryThreeGroups.UnitaryThreeReflectionRight
+import Mathlib.Algebra.Order.Ring.Star
 
 open Matrix IsLocalRing UpperTheory.V.U3 UpperTheory.V.Alg
 
