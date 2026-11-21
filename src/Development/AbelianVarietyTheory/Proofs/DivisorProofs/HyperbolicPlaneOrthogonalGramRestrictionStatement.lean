@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.hyperbolic_plane_orthogonal_gram_restriction : ∀
         ∃ X' Y' : Matrix (Fin n) (Fin (r + 1)) E, GlobalTheory.SiegelSet.IsWittFrame σ (c₀ • W.J.map σ) X' Y' ∧
           (∀ k, X' k 0 = H.x k) ∧ (∀ k, Y' k 0 = c₀⁻¹ * H.y k) ∧
           ∀ (k : Fin n) (i : Fin r), X' k i.succ = (H.ι * Xf) k i ∧ Y' k i.succ = (H.ι * Yf) k i := by
-  first | exact @GlobalTheory.PlaneFrameCons.exists_isWittFrame_cons | exact GlobalTheory.PlaneFrameCons.exists_isWittFrame_cons | (intros; apply GlobalTheory.PlaneFrameCons.exists_isWittFrame_cons <;> assumption)
+  exact @GlobalTheory.PlaneFrameCons.exists_isWittFrame_cons

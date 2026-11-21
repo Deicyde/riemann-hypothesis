@@ -11,4 +11,4 @@ open Formalism.BasicNotions Formalism.DegreeFormula GlobalTheory GlobalTheory.Ar
 open scoped Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.vanishing_on_regular_flagged : GlobalTheory.CovTop.Hypotheses2 → VanishOn RegFlagged := by
-  first | exact @GlobalTheory.TwoLat.vanishOn_regFlagged | exact GlobalTheory.TwoLat.vanishOn_regFlagged | (intros; apply GlobalTheory.TwoLat.vanishOn_regFlagged <;> assumption)
+  exact @GlobalTheory.TwoLat.vanishOn_regFlagged

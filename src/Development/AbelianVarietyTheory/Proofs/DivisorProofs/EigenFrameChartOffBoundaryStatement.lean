@@ -30,4 +30,4 @@ theorem _root_.GlobalTheory.T.eigen_frame_chart_off_boundary : ∀ (D : D7) (A :
           ∀ f : (Φ.C k).FrameAt (c'.finChart.symm v), Fr.IsMap (evHom hv) f → ∀ τ,
             ((x.hodge (embOf κ.e σ)).gram ((Φ.C k).down (c'.finChart.symm v)) f τ)ᵀ =
               (cc τ : ℂ) • (G v τ * GlobalTheory.PointChern.modelGram A.H S.Dw (z v) τ * (G v τ)ᴴ) := by
-  first | exact @GlobalTheory.HodgeFlagModel.hodge_gram_model_good | exact GlobalTheory.HodgeFlagModel.hodge_gram_model_good | (intros; apply GlobalTheory.HodgeFlagModel.hodge_gram_model_good <;> assumption)
+  exact @GlobalTheory.HodgeFlagModel.hodge_gram_model_good

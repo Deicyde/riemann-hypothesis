@@ -8,4 +8,4 @@ attribute [local instance] Over.cartesianMonoidalCategory
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_conj_compatible_kaehler_forms : ∀ (k : Type) [Field k] (Y : Scheme.{0}) (p : Y ⟶ Sp k) (d : ℕ) [SmoothOfRelativeDimension d p], IsProjOver p → ∃ a : ∀ σ : k →+* ℂ, ChartForm p σ d, (∀ σ, IsKaehlerForm (AnRead.all p σ d) (a σ)) ∧ ∀ σ σ' (j : CxPts p σ' → CxPts p σ), IsConjMap j → ∀ W φ, IsPotential (AnRead.all p σ d) (a σ) W φ → IsPotential (AnRead.all p σ' d) (a σ') (j ⁻¹' W) (φ ∘ j) := by
-  first | exact @GlobalTheory.KaehlerFamily.exists_kaehlerFamily | exact GlobalTheory.KaehlerFamily.exists_kaehlerFamily | (intros; apply GlobalTheory.KaehlerFamily.exists_kaehlerFamily <;> assumption)
+  exact @GlobalTheory.KaehlerFamily.exists_kaehlerFamily

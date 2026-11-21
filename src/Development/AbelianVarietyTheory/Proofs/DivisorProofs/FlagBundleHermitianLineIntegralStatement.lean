@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.flag_bundle_hermitian_line_integral : ∀ (k : Typ
     IsFlagBundle π (fun _ : Unit => E) (fun _ => 2) (fun _ => fl) → ∀ (A : HermLB q) (σ : k →+* ℂ),
     ∀ v : CxPts p σ → ℝ, GlobalTheory.CurveDens.IsCosSq ((h.pull π w).met σ) (fl.ι 1) ((Scheme.Modules.pullback π).map (flB.ι 1)) v →
     (∀ y, 0 ≤ v y ∧ v y ≤ 1) ∧ Continuous v ∧ (hY.atlas σ).SmoothOn Set.univ (fun y => (v y : ℂ)) := by
-  first | exact @GlobalTheory.CosSqSmooth.cosSq_smooth | exact GlobalTheory.CosSqSmooth.cosSq_smooth | (intros; apply GlobalTheory.CosSqSmooth.cosSq_smooth <;> assumption)
+  exact @GlobalTheory.CosSqSmooth.cosSq_smooth

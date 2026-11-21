@@ -18,4 +18,4 @@ theorem _root_.GlobalTheory.T.jacquet_mirabolic_induction_character : ∀ {k : T
         ∀ t, t ≠ t₀ → ∃ q : Polynomial ℂ, q.eval (ξ ϖ : ℂ) ≠ 0 ∧ ∀ w ∈ (S t.succ).toSubmodule,
           Polynomial.aeval (jac₂ e (ind₂ e (extTensor (detRep (Fin 1) ξ) τ))
             (GeneralLinearGroup.scalar (Fin 1) ϖ, 1)) q w ∈ (S t.castSucc).toSubmodule := by
-  first | exact @GlobalTheory.JacLineFiltration.jacquet_line_filtration | exact GlobalTheory.JacLineFiltration.jacquet_line_filtration | (intros; apply GlobalTheory.JacLineFiltration.jacquet_line_filtration <;> assumption)
+  exact @GlobalTheory.JacLineFiltration.jacquet_line_filtration

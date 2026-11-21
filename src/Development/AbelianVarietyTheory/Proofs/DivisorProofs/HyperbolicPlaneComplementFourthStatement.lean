@@ -36,4 +36,4 @@ theorem _root_.GlobalTheory.T.hyperbolic_plane_complement_fourth : ∀ (F E : Ty
         μ₁.IsHaarMeasure → IsFundamentalDomain ((ratPts σ (c₀ • W₁.J.map σ)).subgroupOf (GlobalTheory.StdPar.leviOne σ (c₀ • W₁.J.map σ) Xf Yf S')) 𝓕₁ μ₁ →
         IntegrableOn (fun m : GlobalTheory.StdPar.leviOne σ (c₀ • W₁.J.map σ) Xf Yf S' => a m) 𝓕₁ μ₁ ∧
         ∫ m in 𝓕₁, a m ∂μ₁ = 0 := by
-  first | exact @GlobalTheory.ThK.DescGenCusp.integral_leviOne_eq_zero_of_factor | exact GlobalTheory.ThK.DescGenCusp.integral_leviOne_eq_zero_of_factor | (intros; apply GlobalTheory.ThK.DescGenCusp.integral_leviOne_eq_zero_of_factor <;> assumption)
+  exact @GlobalTheory.ThK.DescGenCusp.integral_leviOne_eq_zero_of_factor

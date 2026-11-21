@@ -10,4 +10,4 @@ theorem _root_.GlobalTheory.T.dbar_squared_eq_zero : ∀ {g : ℕ} (f : (Fin g �
     (hf1 : ∀ v, Differentiable ℝ (fun z => d01 f z v))
     (hsym : ∀ z v w, d01 (fun z' => d01 f z' v) z w = d01 (fun z' => d01 f z' w) z v)
     (z : Fin g → ℂ), dbarF (dbarF f) z = 0 := by
-  first | exact @GlobalTheory.TorsionForm.FlatAcyc.dbarF_dbarF | exact GlobalTheory.TorsionForm.FlatAcyc.dbarF_dbarF | (intros; apply GlobalTheory.TorsionForm.FlatAcyc.dbarF_dbarF <;> assumption)
+  exact @GlobalTheory.TorsionForm.FlatAcyc.dbarF_dbarF

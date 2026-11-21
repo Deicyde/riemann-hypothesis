@@ -10,4 +10,4 @@ open GlobalTheory.IndefiniteRowSideFullHecke.GenericFiniteMaps
 open GlobalTheory
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.short_exact_vector_bundles_rank_add : ∀ (X : Scheme.{0}) (S : ShortComplex X.Modules) (r s : ℕ), S.ShortExact → IsVB S.X₁ r → IsVB S.X₃ s → IsVB S.X₂ (r + s) := by
-  first | exact @GlobalTheory.VBExt.isVB_X₂_of_shortExact | exact GlobalTheory.VBExt.isVB_X₂_of_shortExact | (intros; apply GlobalTheory.VBExt.isVB_X₂_of_shortExact <;> assumption)
+  exact @GlobalTheory.VBExt.isVB_X₂_of_shortExact

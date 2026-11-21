@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.adele_base_change_mem_ideal : ∀ {F E : Type} [Fi
     (𝔞 : FractionalIdeal (𝓞 E)⁰ E) (h𝔞 : 𝔞 ≠ 0) (z : AE F E),
     (∀ v : Pl F, compFin F E v z ∈ GlobalTheory.LocIdeal.locId v 𝔞) →
     (GroundTheory.Global.AdeleBaseChange.adeleTensorAlgEquivLeft F E z).2 ∈ GroundTheory.Global.idealFiniteAdeles (Units.mk0 𝔞 h𝔞) := by
-  first | exact @GlobalTheory.LocIdealAdele.mem_idealFiniteAdeles_of_locId | exact GlobalTheory.LocIdealAdele.mem_idealFiniteAdeles_of_locId | (intros; apply GlobalTheory.LocIdealAdele.mem_idealFiniteAdeles_of_locId <;> assumption)
+  exact @GlobalTheory.LocIdealAdele.mem_idealFiniteAdeles_of_locId

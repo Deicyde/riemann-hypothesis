@@ -17,4 +17,4 @@ theorem _root_.GlobalTheory.T.restricted_witt_frame : ∀ (F E : Type) [Field F]
     (J : Matrix (Fin n) (Fin n) E) (r : ℕ) (X Y : Matrix (Fin n) (Fin (r + 1)) E),
     IsCMExt F E σ → IsHermND σ J → IsWittFrame σ J X Y →
     IsWittFrame σ (J0 σ J X Y) (X0 σ J X Y) (Y0 σ J X Y) := by
-  first | exact @GlobalTheory.EisRestrict.isWittFrame_restrict | exact GlobalTheory.EisRestrict.isWittFrame_restrict | (intros; apply GlobalTheory.EisRestrict.isWittFrame_restrict <;> assumption)
+  exact @GlobalTheory.EisRestrict.isWittFrame_restrict

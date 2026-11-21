@@ -27,4 +27,4 @@ theorem _root_.GlobalTheory.T.hyperbolic_plane_form_hermitian : GlobalTheory.ThK
         ∀ K : Subgroup (GAd σ (c₀ • W₁.J.map σ)), GlobalTheory.UAut.IsMaxCpt σ (c₀ • W₁.J.map σ) K →
         ∀ (r : ℕ) (Xf Yf : Matrix (Fin n₁) (Fin r) E), GlobalTheory.SiegelSet.IsWittFrame σ (c₀ • W₁.J.map σ) Xf Yf →
           ∀ S' : Finset (Fin r), ¬ (∀ k ∈ S', ∀ l ≤ k, l ∈ S') → GlobalTheory.StdPar.IsCuspComp σ (c₀ • W₁.J.map σ) Xf Yf S' K φ' 0 := by
-  first | exact @GlobalTheory.ThK.DescStepCusp.cuspComp_alphaSpan_eq_zero | exact GlobalTheory.ThK.DescStepCusp.cuspComp_alphaSpan_eq_zero | (intros; apply GlobalTheory.ThK.DescStepCusp.cuspComp_alphaSpan_eq_zero <;> assumption)
+  exact @GlobalTheory.ThK.DescStepCusp.cuspComp_alphaSpan_eq_zero

@@ -7,4 +7,4 @@ open scoped TensorProduct
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.unitaryRationalPointMatrixHom_surjective_onto : ∀ (L : Type) [Field L] [NumberField L] [IsCMField L] (n : ℕ) (γ₀ : GL (Fin n) L), γ₀ ∈ GQ0 L n →
     ∃ γ : GQ L n, GlobalTheory.AlgWtF.ratHom γ = γ₀ := by
-  first | exact @GlobalTheory.AlgWtF.ratHom_surjective | exact GlobalTheory.AlgWtF.ratHom_surjective | (intros; apply GlobalTheory.AlgWtF.ratHom_surjective <;> assumption)
+  exact @GlobalTheory.AlgWtF.ratHom_surjective

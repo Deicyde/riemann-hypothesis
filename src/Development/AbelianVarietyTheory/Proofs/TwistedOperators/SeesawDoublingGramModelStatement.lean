@@ -32,4 +32,4 @@ theorem _root_.GlobalTheory.T.seesaw_doubling_gram_model : GlobalTheory.FunPr.Hy
       (∀ i, Ψ i ∈ algD Γ.M' Bs.ψ Bs.emb ∧
         ∀ x, HasDerivAt (fun t : ℝ => om' (1, kapX X e hJ (oneP θ X (l.get i).1 (l.get i).2 t)) ΦD x) (Ψ i x) 0) ∧
       Φ₁D = ∑ i, Ψ i := by
-  first | exact @GlobalTheory.LineSumV'.derSum | exact GlobalTheory.LineSumV'.derSum | (intros; apply GlobalTheory.LineSumV'.derSum <;> assumption)
+  exact @GlobalTheory.LineSumV'.derSum

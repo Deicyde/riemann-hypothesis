@@ -24,4 +24,4 @@ theorem _root_.GlobalTheory.T.vacuum_value_algebraic_congruence : ∀ {D : D7} {
     {i j : Fin D.R.m} {A A' WW : HSp D} {X : Tri T A A' WW}, GlobalTheory.FunPr.Hypotheses₂ → (∀ D, GlobalTheory.NormSum.Inp D) → L.Is μ₀ →
     IsBottomTri W i j X → ∀ (t : T), ∃ N : ℕ, 0 < N ∧ ∀ k ∈ GfC A, ∀ k' ∈ GfC WW, GlobalTheory.Member.FinCong A N k →
       GlobalTheory.Member.FinCong WW N k' → ∃ ζ : ℂ, IsAlgebraic ℚ ζ ∧ X.ω t (k, k') X.vac = ζ • X.vac := by
-  first | exact @GlobalTheory.LevelVac.level_vac_alg | exact GlobalTheory.LevelVac.level_vac_alg | (intros; apply GlobalTheory.LevelVac.level_vac_alg <;> assumption)
+  exact @GlobalTheory.LevelVac.level_vac_alg

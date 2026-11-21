@@ -30,4 +30,4 @@ theorem _root_.GlobalTheory.T.seesaw_unfolding_global_integral : GlobalTheory.Fu
     ∀ γ ∈ GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.Lines D.sp.cm.sig Γ.W, ∀ ΦD ∈ algD Γ.M Bs.ψ Bs.emb, ∀ Φ₁D ∈ algD Γ.M Bs.ψ Bs.emb,
     (∀ x, HasDerivAt (fun t : ℝ => om (1, γ (Multiplicative.ofAdd t)) ΦD x) (Φ₁D x) 0) → ∀ Φ Φ₁,
     IsDatum Γ.M ψ cA ΦD Φ → IsDatum Γ.M ψ cA Φ₁D Φ₁ → p Φ = 0 → p Φ₁ = 0 := by
-  first | exact @GlobalTheory.LineKerW.ker_p_line | exact GlobalTheory.LineKerW.ker_p_line | (intros; apply GlobalTheory.LineKerW.ker_p_line <;> assumption)
+  exact @GlobalTheory.LineKerW.ker_p_line

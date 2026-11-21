@@ -17,4 +17,4 @@ theorem _root_.GlobalTheory.T.moderate_eisenstein_holomorphic_derivative : ∀ (
     ∀ z : List (ℝ → GAd σ J) →₀ ℂ, (∀ l ∈ z.support, ∀ γ ∈ l, IsRealLine σ J γ) → ∀ g,
       GlobalTheory.UAut.dop z (fun g => circleIntegral (fun w => (w - s₀) ^ j * H₀ w g) s₀ r) g =
         circleIntegral (fun w => (w - s₀) ^ j * GlobalTheory.UAut.dop z (H₀ w) g) s₀ r := by
-  first | exact @GlobalTheory.CircleDop.dop_circleIntegral | exact GlobalTheory.CircleDop.dop_circleIntegral | (intros; apply GlobalTheory.CircleDop.dop_circleIntegral <;> assumption)
+  exact @GlobalTheory.CircleDop.dop_circleIntegral

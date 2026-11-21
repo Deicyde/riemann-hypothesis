@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.invariant_pairing_segment_product : ∀ {k : Type}
       (∀ g v v', B ((((gOf σ).tw 1).prod (gOf σ)).cast (size_eq m) |>.ρ g v)
         (((gDual σ).prod ((gDual σ).tw (-1))).cast (size_eq m) |>.ρ g v') = B v v') ∧
       ∀ v, v ≠ 0 → ∃ v', B v v' ≠ 0 := by
-  first | exact @GlobalTheory.CompanionTheory.BZShell.SwapPair.exists_invariant_pairing | exact GlobalTheory.CompanionTheory.BZShell.SwapPair.exists_invariant_pairing | (intros; apply GlobalTheory.CompanionTheory.BZShell.SwapPair.exists_invariant_pairing <;> assumption)
+  exact @GlobalTheory.CompanionTheory.BZShell.SwapPair.exists_invariant_pairing

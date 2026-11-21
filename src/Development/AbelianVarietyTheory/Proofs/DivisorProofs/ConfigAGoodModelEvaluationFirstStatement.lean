@@ -25,4 +25,4 @@ theorem _root_.GlobalTheory.T.config_a_good_model_evaluation_first : ∀ (F E : 
     ∀ (a n N : ℕ), ∃ (s : Finset (ℕ × ℕ)) (C : ℝ), ∀ (h : SInf F (Fin (b + 2) × Fin (b + 2 + a'))) (l : (AE F E)ˣ), l ∈ idelesAt E (evI F) →
       (1 + ∑ w, ‖piInf (B.emb w) (l : AE F E)‖) ^ N * SchwartzMap.seminorm ℂ a n (ei (locOpInf (G.M.co.rho B.ψ (partInf F (shiftA H H' l))) h)) ≤
         C * (s.sup (schwartzSeminormFamily ℂ (Fin (b + 2) × Fin (b + 2 + a') → mixedEmbedding.mixedSpace F) ℂ)) h := by
-  first | exact @GlobalTheory.ShiftDecayA.decay | exact GlobalTheory.ShiftDecayA.decay | (intros; apply GlobalTheory.ShiftDecayA.decay <;> assumption)
+  exact @GlobalTheory.ShiftDecayA.decay

@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.chart_regular_triangular_base : ∀ {F : Type} [Fi
     ∃ (U' : V.X.Opens) (Um : Matrix (Fin (g + g)) (Fin g) V.X.functionField)
       (Lf : Matrix (Fin g) (Fin (g + g)) V.X.functionField) (c : Fin g → V.G.functionFieldˣ),
       U' ≤ U ∧ x ∈ U' ∧ FrameOn V W U' H d T A p Um Lf c := by
-  first | exact @GlobalTheory.ConstLat.CramerFrame.frameOn_near | exact GlobalTheory.ConstLat.CramerFrame.frameOn_near | (intros; apply GlobalTheory.ConstLat.CramerFrame.frameOn_near <;> assumption)
+  exact @GlobalTheory.ConstLat.CramerFrame.frameOn_near

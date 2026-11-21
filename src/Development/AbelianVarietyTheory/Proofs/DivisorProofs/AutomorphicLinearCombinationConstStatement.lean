@@ -18,4 +18,4 @@ theorem _root_.GlobalTheory.T.automorphic_linear_combination_const : ∀ (F E : 
         GlobalTheory.StdPar.IsAutOn σ J X Y ∅ K φ₁ → GlobalTheory.StdPar.IsAutOn σ J X Y ∅ K φ₂ →
         GlobalTheory.StdPar.IsCuspComp σ J X Y S K φ₁ a₁ → GlobalTheory.StdPar.IsCuspComp σ J X Y S K φ₂ a₂ →
         GlobalTheory.StdPar.IsCuspComp σ J X Y S K (fun g => φ₁ g - z * φ₂ g) (fun g => a₁ g - z * a₂ g) := by
-  first | exact @GlobalTheory.CuspCompLin.isCuspComp_sub | exact GlobalTheory.CuspCompLin.isCuspComp_sub | (intros; apply GlobalTheory.CuspCompLin.isCuspComp_sub <;> assumption)
+  exact @GlobalTheory.CuspCompLin.isCuspComp_sub

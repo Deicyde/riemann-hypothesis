@@ -35,4 +35,4 @@ theorem _root_.GlobalTheory.T.cusp_form_finite_dim_frame_stable : GlobalTheory.F
       (∀ x ∈ GlobalTheory.CuspGK.gkGen θ M ψ, e (e x) = e x) ∧
       (∀ x ∈ GlobalTheory.CuspGK.gkGen θ M ψ, ∀ y ∈ GlobalTheory.CuspGK.gkGen θ M ψ, b (e x) y = b x (e y)) ∧
       FiniteDimensional ℂ ((GlobalTheory.CuspGK.gkGen θ M ψ).map e) := by
-  first | exact @GlobalTheory.KTypeProj.ktype_proj | exact GlobalTheory.KTypeProj.ktype_proj | (intros; apply GlobalTheory.KTypeProj.ktype_proj <;> assumption)
+  exact @GlobalTheory.KTypeProj.ktype_proj

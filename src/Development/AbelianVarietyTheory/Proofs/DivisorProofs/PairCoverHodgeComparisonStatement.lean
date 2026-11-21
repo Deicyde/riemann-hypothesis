@@ -24,4 +24,4 @@ theorem _root_.GlobalTheory.T.pair_cover_hodge_comparison : GlobalTheory.CovTop.
     ∀ st, letterOf O.S.Dw st = some ⟨σ, i⟩ →
       IsRatSec ((VMetric.grLB F i ((HM.pull π rfl).pull ρ rfl)).B.pull j) r ∧
       ∀ ch, ∀ x ∈ ((VMetric.grLB F i ((HM.pull π rfl).pull ρ rfl)).B.pull j).U ch, UnitAt x (φ (genAt (lineAdl O R c st 1).D (πG x)) ^ 1 * r ch) := by
-  first | exact @GlobalTheory.PairCovRat.isRatSec_and_unitAt | exact GlobalTheory.PairCovRat.isRatSec_and_unitAt | (intros; apply GlobalTheory.PairCovRat.isRatSec_and_unitAt <;> assumption)
+  exact @GlobalTheory.PairCovRat.isRatSec_and_unitAt

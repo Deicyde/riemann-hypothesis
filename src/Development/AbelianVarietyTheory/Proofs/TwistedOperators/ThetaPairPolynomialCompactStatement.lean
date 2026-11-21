@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.theta_pair_polynomial_compact : GlobalTheory.FunPr
     ∀ f ∈ M.Pol B.ψ B.emb, ∃ S : Submodule ℂ (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.SInf F (Fin n × Fin d)), FiniteDimensional ℂ S ∧
       ∀ k ∈ GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.KInf σ X B.emb, ∀ f₁ : GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.SInf F (Fin n × Fin d),
         GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.Acts (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.evI F) (om (k, 1)) f f₁ → f₁ ∈ S := by
-  first | exact @GlobalTheory.FockKFin.kFinite | exact GlobalTheory.FockKFin.kFinite | (intros; apply GlobalTheory.FockKFin.kFinite <;> assumption)
+  exact @GlobalTheory.FockKFin.kFinite

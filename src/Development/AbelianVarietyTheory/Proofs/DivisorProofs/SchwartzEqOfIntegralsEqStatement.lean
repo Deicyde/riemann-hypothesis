@@ -12,4 +12,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.schwartz_eq_of_integrals_eq : ∀ (F : Type) [Field F] [NumberField F] (κ : Type) [Fintype κ], ∀ f ∈ schA F κ, ∀ g ∈ schA F κ,
     (∀ μ : @Measure (κ → AF F) (borel _), @Measure.IsAddHaarMeasure _ _ _ (borel _) μ → ∀ ψ ∈ schA F κ,
       ∫ x, f x * starRingEnd ℂ (ψ x) ∂μ = ∫ x, g x * starRingEnd ℂ (ψ x) ∂μ) → f = g := by
-  first | exact @GlobalTheory.SchAPairing.eq_of_pairing | exact GlobalTheory.SchAPairing.eq_of_pairing | (intros; apply GlobalTheory.SchAPairing.eq_of_pairing <;> assumption)
+  exact @GlobalTheory.SchAPairing.eq_of_pairing

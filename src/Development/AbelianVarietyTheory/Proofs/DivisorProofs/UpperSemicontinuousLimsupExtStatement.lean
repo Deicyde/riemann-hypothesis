@@ -9,4 +9,4 @@ import ReciprocityTheory.AnalyticForms.PotentialTheory.PshShiftA
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.upperSemicontinuous_limsupExt : ∀ (Y : Type) [TopologicalSpace Y] (S : Set Y) (u : Y → ℝ), UpperSemicontinuous (GlobalTheory.IndefiniteRowSideFullHecke.QuasiPlurisubharmonic.limsupExt S u) := by
-  first | exact @GlobalTheory.limsupExt_usc_all | exact GlobalTheory.limsupExt_usc_all | (intros; apply GlobalTheory.limsupExt_usc_all <;> assumption)
+  exact @GlobalTheory.limsupExt_usc_all

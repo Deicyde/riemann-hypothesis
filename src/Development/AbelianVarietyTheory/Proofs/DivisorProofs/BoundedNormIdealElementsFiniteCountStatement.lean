@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.bounded_norm_ideal_elements_finite_count : ∀ (F 
         {c : E | c ∈ 𝔞 ∧ ∀ w, ‖Algebra.norm w.Completion (inclR (F := F) w.Completion c)‖ ≤ T w}.Finite ∧
         ({c : E | c ∈ 𝔞 ∧ ∀ w, ‖Algebra.norm w.Completion (inclR (F := F) w.Completion c)‖ ≤ T w}.ncard : ℝ) ≤
           1 + C * (∏ w, T w) / (FractionalIdeal.absNorm 𝔞 : ℝ) := by
-  first | exact @GlobalTheory.CountBox.count_ideal_points | exact GlobalTheory.CountBox.count_ideal_points | (intros; apply GlobalTheory.CountBox.count_ideal_points <;> assumption)
+  exact @GlobalTheory.CountBox.count_ideal_points

@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.reduction_theory_anisotropic_compact_quotient : Gl
       ∃ C : Set (UA σ X.J), IsCompact C ∧ ∀ g, ∃ γ ∈ ratU σ X.J, ∃ c ∈ C, g = γ * c) ∧
     ∀ (d r₁ s₁ : ℕ) (W : Spc F E d), W.IsSkew σ B r₁ s₁ → min r₁ s₁ = 0 → (∀ x, form σ W.J x x = 0 → x = 0) ∧
       ∃ C : Set (UA σ W.J), IsCompact C ∧ ∀ h, ∃ γ ∈ ratU σ W.J, ∃ c ∈ C, h = γ * c := by
-  first | exact @GlobalTheory.ThK.DefCocompact.cocompact_of_definite | exact GlobalTheory.ThK.DefCocompact.cocompact_of_definite | (intros; apply GlobalTheory.ThK.DefCocompact.cocompact_of_definite <;> assumption)
+  exact @GlobalTheory.ThK.DefCocompact.cocompact_of_definite

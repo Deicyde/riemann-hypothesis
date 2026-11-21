@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.eisenstein_constant_term_setting : GlobalTheory.Pu
       IsFundamentalDomain ((ratPts σ J).subgroupOf (unipRad σ J (col0 X))) 𝓕 μ → μ 𝓕 = 1 →
       ∀ s : ℂ, ((n : ℝ) - 1) / 2 < s.re → ∀ g, ∫ u in 𝓕, Eis s (u.1 * g) ∂μ =
         (h g : ℂ) ^ (s + (((n : ℂ) - 1) / 2)) + mid s g + c s * (h g : ℂ) ^ (-s + (((n : ℂ) - 1) / 2))) := by
-  first | exact @GlobalTheory.EisCT.constTerm | exact GlobalTheory.EisCT.constTerm | (intros; apply GlobalTheory.EisCT.constTerm <;> assumption)
+  exact @GlobalTheory.EisCT.constTerm

@@ -18,4 +18,4 @@ theorem _root_.GlobalTheory.T.lie_commutator_action_invariant : ∀ {ι V : Type
     (∀ w X, Formalism.BasicNotions.TH.IsKC X → (∀ a, X a (.inl r₀) = 0 ∧ X (.inl r₀) a = 0 ∧ X a (.inr s₀) = 0 ∧ X (.inr s₀) a = 0) →
       ∀ v ∈ N, act w X v ∈ N) →
     N = ⊥ ∨ N = T := by
-  first | exact @GlobalTheory.BranchTop.top_irreducible | exact GlobalTheory.BranchTop.top_irreducible | (intros; apply GlobalTheory.BranchTop.top_irreducible <;> assumption)
+  exact @GlobalTheory.BranchTop.top_irreducible

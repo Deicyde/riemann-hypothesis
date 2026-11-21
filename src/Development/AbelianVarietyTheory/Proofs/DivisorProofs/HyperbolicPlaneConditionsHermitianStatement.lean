@@ -23,4 +23,4 @@ theorem _root_.GlobalTheory.T.hyperbolic_plane_conditions_hermitian : ∀ (F E :
       mat m' *ᵥ incV F H.x = (t : AE F E) • incV F H.x → (t : AE F E) • (mat m' *ᵥ incV F H.y) = incV F H.y →
       (∀ z : Fin d₂ → AE F E, mat m' *ᵥ (incM F H.ι *ᵥ z) = incM F H.ι *ᵥ z) →
       m' * (u⁻¹ * u⁻¹ * (m * u * m⁻¹)) * m'⁻¹ = (u⁻¹ * u⁻¹ * (m * u * m⁻¹)) ^ (t ^ 2) := by
-  first | exact @GlobalTheory.UnipLineHyp.conj_commutator_eq_pow | exact GlobalTheory.UnipLineHyp.conj_commutator_eq_pow | (intros; apply GlobalTheory.UnipLineHyp.conj_commutator_eq_pow <;> assumption)
+  exact @GlobalTheory.UnipLineHyp.conj_commutator_eq_pow

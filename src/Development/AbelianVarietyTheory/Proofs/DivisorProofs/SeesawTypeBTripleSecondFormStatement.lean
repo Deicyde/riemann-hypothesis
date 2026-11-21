@@ -23,4 +23,4 @@ theorem _root_.GlobalTheory.T.seesaw_type_b_triple_second_form : ∀ {F E : Type
     ∀ ι ι₁, G.M'.IsLinBar B.ψ B.τ₁ 1 1 ι → G₁.M'.IsLinBar B.ψ B.τ₁ 1 1 ι₁ →
     ∀ (r : Fin (a + (b + 2)) → Fv F B.v₁) (c : Fin b → Fv F B.v₁), ∀ φ ∈ SB (Fin (b + 2) × Fin (a + (b + 2)) → Fv F B.v₁), ∃ φ' ∈ SB (Fin (b + 2) × Fin (a + (b + 2)) → Fv F B.v₁), L φ' = L φ ∧
       ∀ Z, ι φ' Z = ι φ (Z + GlobalTheory.PlaneBasis.crdP B.τ₁ H * insS (0 : Matrix (Fin b) (Fin (a + b)) (Fv F B.v₁)) r c 0 * GlobalTheory.PlaneBasis.crdQ B.τ₁ H') := by
-  first | exact @GlobalTheory.PlaneTransl.transl_inv | exact GlobalTheory.PlaneTransl.transl_inv | (intros; apply GlobalTheory.PlaneTransl.transl_inv <;> assumption)
+  exact @GlobalTheory.PlaneTransl.transl_inv

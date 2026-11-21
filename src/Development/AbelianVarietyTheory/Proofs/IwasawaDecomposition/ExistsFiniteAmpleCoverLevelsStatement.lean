@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.exists_finite_ample_cover_levels : ∀ (E : Type) 
             (∀ x, ((b₀ x : c.V W) : c.F) = (x : c.F)) →
             ∃ (i : I) (b' : R i →+* c.V W), b'.comp (b i) = b₀ ∧ (c.V W).subtype.comp b' = ω i ∧
               Dominates (C i) (s.Y p W hp hW ⟨l, c, hg p hp⟩) b' := by
-  first | exact @GlobalTheory.CoverFin.coverSt_fin | exact GlobalTheory.CoverFin.coverSt_fin | (intros; apply GlobalTheory.CoverFin.coverSt_fin <;> assumption)
+  exact @GlobalTheory.CoverFin.coverSt_fin

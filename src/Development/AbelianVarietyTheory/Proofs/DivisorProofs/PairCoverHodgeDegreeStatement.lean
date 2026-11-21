@@ -27,4 +27,4 @@ theorem _root_.GlobalTheory.T.pair_cover_hodge_degree : GlobalTheory.CovTop.Hypo
       z ≫ πG = y.1 → spMap e.O.subtype ≫ yt = z ≫ j → ⊤ ≤ yt ⁻¹ᵁ (VMetric.grLB F i ((HM.pull π rfl).pull ρ rfl)).B.U (ch PUnit.unit) →
         ((1 : ℕ) : ℝ) * (lineAdl O R c (.inl (σ, (i : ℕ))) 1).lg v e y =
           Real.log (e.w (valAt z (φ (genAt (lineAdl O R c (.inl (σ, (i : ℕ))) 1).D (below y.1)) ^ 1 * (r ch : Gs.functionField)))) := by
-  first | exact @GlobalTheory.PairCov.FinLine.lg_line_eq | exact GlobalTheory.PairCov.FinLine.lg_line_eq | (intros; apply GlobalTheory.PairCov.FinLine.lg_line_eq <;> assumption)
+  exact @GlobalTheory.PairCov.FinLine.lg_line_eq

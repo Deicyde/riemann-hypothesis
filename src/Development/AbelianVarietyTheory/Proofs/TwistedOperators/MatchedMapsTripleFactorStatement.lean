@@ -18,4 +18,4 @@ theorem _root_.GlobalTheory.T.matched_maps_triple_factor : GlobalTheory.FunPr.Hy
     ∃ K, GlobalTheory.CoinvKer.IsThetaSub om Bs.emb (GlobalTheory.SquareAgree.algD G.M Bs.ψ Bs.emb) K ∧
       K ≠ GlobalTheory.SquareAgree.algD G.M Bs.ψ Bs.emb ∧
       ∀ ΦD ∈ GlobalTheory.SquareAgree.algD G.M Bs.ψ Bs.emb, (ΦD ∈ K ↔ GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.PolMatch Bs G Xc R Rf ΦD 0) := by
-  first | exact @GlobalTheory.PolKer.polMatch_zero_thetaSub | exact GlobalTheory.PolKer.polMatch_zero_thetaSub | (intros; apply GlobalTheory.PolKer.polMatch_zero_thetaSub <;> assumption)
+  exact @GlobalTheory.PolKer.polMatch_zero_thetaSub

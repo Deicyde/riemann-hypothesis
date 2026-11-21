@@ -8,4 +8,4 @@ open GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe GlobalTheory.TorsionF
 open scoped Real ContDiff
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.phi_pull_base_comm : ∀ {n : ℕ} (a : Fin n → ℂ) (y : Ext (n + n)), phi (pullBaseL a y) = pullBaseL a (phi y) := by
-  first | exact @GlobalTheory.TorsionForm.OneVec.phi_pullBaseL | exact GlobalTheory.TorsionForm.OneVec.phi_pullBaseL | (intros; apply GlobalTheory.TorsionForm.OneVec.phi_pullBaseL <;> assumption)
+  exact @GlobalTheory.TorsionForm.OneVec.phi_pullBaseL

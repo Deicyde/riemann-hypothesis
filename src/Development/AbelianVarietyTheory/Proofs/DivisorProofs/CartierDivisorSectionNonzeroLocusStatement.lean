@@ -22,4 +22,4 @@ theorem _root_.GlobalTheory.T.cartier_divisor_section_nonzero_locus : ∀ (X Z :
     (∀ (z : Z) (a : B.ι), i z ∈ B.U a → GlobalTheory.Cartier.RegAt (i z) (f * R a)) →
     ∃ s : (B.pull i).Sec, ∀ (z : Z) (a : B.ι), i z ∈ B.U a →
       (z ∈ ReciprocityTheory.ChartRestriction.G.Out.nonzeroLocus s ↔ GlobalTheory.Cartier.UnitAt (i z) (f * R a)) := by
-  first | exact @GlobalTheory.PullRatSec.exists_sec_pull | exact GlobalTheory.PullRatSec.exists_sec_pull | (intros; apply GlobalTheory.PullRatSec.exists_sec_pull <;> assumption)
+  exact @GlobalTheory.PullRatSec.exists_sec_pull

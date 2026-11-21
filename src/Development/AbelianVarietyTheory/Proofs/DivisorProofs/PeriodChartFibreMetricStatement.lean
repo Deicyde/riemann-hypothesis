@@ -13,4 +13,4 @@ open GlobalTheory GlobalTheory.TorsionForm
 open scoped ContDiff Real CategoryTheory.Obj ComplexOrder
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.period_chart_fibre_metric : ∀ (k : Type) [CommRing k] (S : Scheme.{0}) (p : S ⟶ Sp k) (D : ℕ) (A : Over S) [GrpObj A] (g : ℕ), IsAbelianScheme A → SmoothOfRelativeDimension g A.hom → ∃ φ : (Scheme.Modules.pullback A.hom).obj (omega A) ≅ relCot A.hom, ∀ (w : VMetric p (omega A) g) (σ : k →+* ℂ), ∀ (c : AlgChart p σ D) (τ : V D → Matrix (Fin g) (Fin g) ℂ) (ex : Pt (V D) g → CxPts (A.hom ≫ p) σ), IsPeriodChart w c τ ex → IsFibreMetric ((w.pull A.hom rfl).map φ) c.e.target τ ex := by
-  first | exact @GlobalTheory.RelCotAb.relCot_isFibreMetric | exact GlobalTheory.RelCotAb.relCot_isFibreMetric | (intros; apply GlobalTheory.RelCotAb.relCot_isFibreMetric <;> assumption)
+  exact @GlobalTheory.RelCotAb.relCot_isFibreMetric

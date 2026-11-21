@@ -11,4 +11,4 @@ theorem _root_.GlobalTheory.T.parabolic_projection_to_levi : ∀ (n a : ℕ) (ε
       (∀ p ∈ parab ε W, ∀ q ∈ parab ε W, μ (p * q) = μ p * μ q) ∧
       ∀ u ∈ flagN ε W, ∀ m ∈ leviOne ε W, ∀ (x : Fin a → ℝ) (t : UJ ε), IsSplit ε W x t →
         u * m * t ∈ parab ε W ∧ μ (u * m * t) = m := by
-  first | exact @GlobalTheory.LeviProj.exists_leviOne_part | exact GlobalTheory.LeviProj.exists_leviOne_part | (intros; apply GlobalTheory.LeviProj.exists_leviOne_part <;> assumption)
+  exact @GlobalTheory.LeviProj.exists_leviOne_part

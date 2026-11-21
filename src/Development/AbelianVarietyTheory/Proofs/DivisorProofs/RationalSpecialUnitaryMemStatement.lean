@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.rational_special_unitary_mem : ∀ (E : Type) [Fie
       ∃ δ : Matrix (Fin r) (Fin r) E, IsSA G (GlobalTheory.UCls.ratM (maximalRealSubfield E) δ) ∧
         (∀ ρ : Ψ, infMat (IsCMField.complexConj E).toAlgHom Gᵀ (θ ρ) γ.1 = δ.map ρ.1) ∧
         finMat (IsCMField.complexConj E).toAlgHom Gᵀ γ.1 = GlobalTheory.UCls.ratM (maximalRealSubfield E) δ := by
-  first | exact @GlobalTheory.TamUnf.RatIn.exists_rat | exact GlobalTheory.TamUnf.RatIn.exists_rat | (intros; apply GlobalTheory.TamUnf.RatIn.exists_rat <;> assumption)
+  exact @GlobalTheory.TamUnf.RatIn.exists_rat

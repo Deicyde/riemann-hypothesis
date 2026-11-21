@@ -26,4 +26,4 @@ theorem _root_.GlobalTheory.T.pullback_model_arc_torus : ∀ (E : Type) [Field E
         IsArcBase O' ϖ → IsArcChart Y (GlobalTheory.PolArc.moveV bV hbV b' a) ϖ χ₀ →
         ∀ x₀ : Sp (FractionRing (PowerSeries O')) ⟶ Xo.XF c, Out.jK (PowerSeries O') ≫ χ₀ = x₀ ≫ Y.j →
         ∃ χ : Sp (PowerSeries O') ⟶ Z.X, Out.jK (PowerSeries O') ≫ χ = x₀ ≫ Z.j := by
-  first | exact @GlobalTheory.PolArcExtend.extend | exact GlobalTheory.PolArcExtend.extend | (intros; apply GlobalTheory.PolArcExtend.extend <;> assumption)
+  exact @GlobalTheory.PolArcExtend.extend

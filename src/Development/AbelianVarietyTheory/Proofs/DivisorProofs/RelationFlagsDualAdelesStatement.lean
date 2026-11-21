@@ -10,4 +10,4 @@ theorem _root_.GlobalTheory.T.relation_flags_dual_adeles : ∀ {F : Type} [Field
     p.Prime → n ≠ 0 → DualAt A B p → DualAt A' B' p → (∀ k, RelData A A' p n k) →
     ∀ k, RelFlag (fun i : Fin (g + g) => Sum.elim A B (finSumFinEquiv.symm i))
       (fun i : Fin (g + g) => Sum.elim A' B' (finSumFinEquiv.symm i)) p n k := by
-  first | exact @GlobalTheory.RelGlue.relFlag_glue | exact GlobalTheory.RelGlue.relFlag_glue | (intros; apply GlobalTheory.RelGlue.relFlag_glue <;> assumption)
+  exact @GlobalTheory.RelGlue.relFlag_glue

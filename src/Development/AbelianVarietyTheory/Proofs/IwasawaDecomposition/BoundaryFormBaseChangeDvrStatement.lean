@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.boundary_form_base_change_dvr : ∀ (E : Type) [Fi
     ∀ (t' : SAB H (Sp W)) (_ : SABMap t' t (spMap g)) (P' : PELUnif (maximalIdeal W) t'),
       ∃ ρ : P.D.toPre.X →ₗ[𝓞 E] P'.D.toPre.X, Function.Surjective ρ ∧
         ∀ (y : P.D.toPre.X) (r : R) (r' : W), PsiCoord P.D.toPre y r → PsiCoord P'.D.toPre (ρ y) r' → Associated (g r) r' := by
-  first | exact @GlobalTheory.TraitCmp.main | exact GlobalTheory.TraitCmp.main | (intros; apply GlobalTheory.TraitCmp.main <;> assumption)
+  exact @GlobalTheory.TraitCmp.main

@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.rosati_polarization_finite_extension : ∀ (O : Ty
     (j : OAct O P.A) (ψ : P.A.left ⟶ B.left), IsActPull j j₀ (spMap (algebraMap K Ω)) ψ → IsRosati c P j →
     ∃ F : IntermediateField K Ω, FiniteDimensional K F ∧ ∃ (P₁ : Out.PolAV (Sp F)) (j₁ : OAct O P₁.A)
       (ψ₁ : P₁.A.left ⟶ B.left), IsActPull j₁ j₀ (spMap (algebraMap K F)) ψ₁ ∧ IsRosati c P₁ j₁ := by
-  first | exact @GlobalTheory.TorusPart.exists_finite_polDescent | exact GlobalTheory.TorusPart.exists_finite_polDescent | (intros; apply GlobalTheory.TorusPart.exists_finite_polDescent <;> assumption)
+  exact @GlobalTheory.TorusPart.exists_finite_polDescent

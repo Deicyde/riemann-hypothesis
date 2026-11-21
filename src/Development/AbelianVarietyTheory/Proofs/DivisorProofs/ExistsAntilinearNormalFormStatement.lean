@@ -10,4 +10,4 @@ theorem _root_.GlobalTheory.T.exists_antilinear_normal_form : ∀ (g : ℕ) (T :
       (∀ v, D (T v) = fun j ↦ v j + β j / α j * starRingEnd ℂ (v j)) ∧
       ∀ (c : Fin g → ℝ) (M : (Fin g → ℂ) →ₗ[ℂ] (Fin g → ℂ)), (∀ v, T (fun m ↦ (c m : ℂ) * v m) = M (T v)) →
         ∀ w, D (M w) = fun j ↦ (c j : ℂ) * D w j := by
-  first | exact @GlobalTheory.coordsDiag | exact GlobalTheory.coordsDiag | (intros; apply GlobalTheory.coordsDiag <;> assumption)
+  exact @GlobalTheory.coordsDiag

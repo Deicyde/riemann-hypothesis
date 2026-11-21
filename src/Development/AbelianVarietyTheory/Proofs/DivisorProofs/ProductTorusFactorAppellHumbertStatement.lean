@@ -23,4 +23,4 @@ theorem _root_.GlobalTheory.T.product_torus_factor_appell_humbert : ∀ (A : Ove
     (∀ x y, U.ex (Fin.append x y) = lift (u.ex x) (u.ex y)) → GlobalTheory.TorusRM.IsFactorAH U H χ' →
     (∀ z w : Fin g → ℂ, hermForm H (Fin.append z 0) (Fin.append w 0) = 0) →
     ∀ (m : U.Λ) (l : Fin g → ℂ), (m : Fin (g + g) → ℂ) = Fin.append l 0 → χ' m = 1 := by
-  first | exact @GlobalTheory.TorusRM.char_axis_eq_one_of_herm_axis_zero | exact GlobalTheory.TorusRM.char_axis_eq_one_of_herm_axis_zero | (intros; apply GlobalTheory.TorusRM.char_axis_eq_one_of_herm_axis_zero <;> assumption)
+  exact @GlobalTheory.TorusRM.char_axis_eq_one_of_herm_axis_zero

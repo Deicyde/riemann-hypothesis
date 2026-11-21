@@ -17,4 +17,4 @@ theorem _root_.GlobalTheory.T.lattice_vector_content_ideal_norm_product : ∀ (F
       ∃ I : FractionalIdeal (nonZeroDivisors (𝓞 E)) E, I ≠ 0 ∧ (∀ c : E, c ∈ I ↔ c • u ∈ L) ∧
         ∏ᶠ v, (GlobalTheory.EisMidHt.normFin F L v (fun i => compFin F E v (GlobalTheory.EisMidHt.adVec F u i)) : ℝ) =
           (FractionalIdeal.absNorm I : ℝ) := by
-  first | exact @GlobalTheory.LatHtFinPart.finprod_normFin_eq_absNorm | exact GlobalTheory.LatHtFinPart.finprod_normFin_eq_absNorm | (intros; apply GlobalTheory.LatHtFinPart.finprod_normFin_eq_absNorm <;> assumption)
+  exact @GlobalTheory.LatHtFinPart.finprod_normFin_eq_absNorm

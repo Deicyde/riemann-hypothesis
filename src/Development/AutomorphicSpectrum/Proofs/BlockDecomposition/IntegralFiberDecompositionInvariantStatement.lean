@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.integral_fiber_decomposition_invariant : ∀ {H X 
   ∀ S : Set (X → X), (∀ s ∈ S, ∀ i x, s x ∈ D i ↔ x ∈ D i) → (∀ s ∈ S, ∀ i x, s x ∈ Z i ↔ x ∈ Z i) →
   (∀ s ∈ S, ∀ h, ∃ s' ∈ S, ∀ x, act h (s x) = s' (act h x)) →
   ∃ ρ : X → ℝ≥0∞, Measurable ρ ∧ (∀ x, ∫⁻ h, ρ (act h x) ∂ν = 1) ∧ ∀ s ∈ S, ∀ x, ρ (s x) = ρ x := by
-  first | exact @GlobalTheory.CompanionTheory.LocVan.NormaliserAbs.exists_normaliser | exact GlobalTheory.CompanionTheory.LocVan.NormaliserAbs.exists_normaliser | (intros; apply GlobalTheory.CompanionTheory.LocVan.NormaliserAbs.exists_normaliser <;> assumption)
+  exact @GlobalTheory.CompanionTheory.LocVan.NormaliserAbs.exists_normaliser

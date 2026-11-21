@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.true_geometry_joint_twist_value : ∀ {B : GlobalT
     (col : ∀ t : W.P.T, ColCh (D := I.rec7 l Z) u ((I.rec7 l Z).chTw u (W.P.I.tup t))) (hCh : ∀ t, (col t).Ch = (J t).Ch) (sc cT : ℕ → ℂ) t, ∀ j,
     GlobalTheory.FinPl.CombAt (· ∈ ((famOf a J row col hCh t).pinTup sc cT).Q) (((famOf a J row col hCh t).pinTup sc cT).eQ j) ∧ (∀ h, GlobalTheory.FinPl.CombAt (· ∈ ((famOf a J row col hCh t).pinTup sc cT).Q) (((famOf a J row col hCh t).pinTup sc cT).eQT j h)) ∧
     ∀ α γ, GlobalTheory.FinPl.CombAt (· ∈ ((famOf a J row col hCh t).pinTup sc cT).Q) (((famOf a J row col hCh t).pinTup sc cT).dQ j α γ) := by
-  first | exact @GlobalTheory.QPl.PinComb.famOf_pinTup_combAt | exact GlobalTheory.QPl.PinComb.famOf_pinTup_combAt | (intros; apply GlobalTheory.QPl.PinComb.famOf_pinTup_combAt <;> assumption)
+  exact @GlobalTheory.QPl.PinComb.famOf_pinTup_combAt

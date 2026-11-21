@@ -10,4 +10,4 @@ theorem _root_.GlobalTheory.T.exists_finite_normalization_iso : ∀ (K : Type) [
     ReciprocityTheory.ChartRestriction.G.Geo.Tor.IsNormalScheme V.toScheme → Flat (V.ι ≫ s) →
     ∃ (N : Scheme.{0}) (ν : N ⟶ X), IsFinite ν ∧ ReciprocityTheory.ChartRestriction.G.Geo.Tor.IsNormalScheme N ∧ IsProjOver (ν ≫ s) ∧
       Flat (ν ≫ s) ∧ IsIso (ν ∣_ V) ∧ Dense ((ν ⁻¹ᵁ V : N.Opens) : Set N) := by
-  first | exact @GlobalTheory.ProjBlowup.exists_normal_model_ringOfIntegers | exact GlobalTheory.ProjBlowup.exists_normal_model_ringOfIntegers | (intros; apply GlobalTheory.ProjBlowup.exists_normal_model_ringOfIntegers <;> assumption)
+  exact @GlobalTheory.ProjBlowup.exists_normal_model_ringOfIntegers

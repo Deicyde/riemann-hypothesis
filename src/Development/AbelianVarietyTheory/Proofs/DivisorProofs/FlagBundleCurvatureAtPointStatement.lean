@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.flag_bundle_curvature_at_point : ∀ (k : Type) [C
       ContinuousOn (fun z => G (GlobalTheory.LineCos.base z)) O ∧
       ∀ z ∈ O, (G (GlobalTheory.LineCos.base z)).PosDef ∧
         v (c.e.symm z) = GlobalTheory.LineCos.cosSq s (G (GlobalTheory.LineCos.base z)) (GlobalTheory.LineCos.fib z) := by
-  first | exact @GlobalTheory.LineChart.exists_chart_cosSq | exact GlobalTheory.LineChart.exists_chart_cosSq | (intros; apply GlobalTheory.LineChart.exists_chart_cosSq <;> assumption)
+  exact @GlobalTheory.LineChart.exists_chart_cosSq

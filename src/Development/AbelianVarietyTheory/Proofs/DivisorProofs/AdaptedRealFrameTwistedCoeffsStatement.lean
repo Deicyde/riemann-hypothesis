@@ -32,4 +32,4 @@ theorem _root_.GlobalTheory.T.adapted_real_frame_twisted_coeffs : ∀ (F E : Typ
       ∀ (t : (AE F E)ˣ) (h₁ : UA σ W₁.J) (k : UA σ W.J), k ∈ KInf σ W B.emb → IsLevi H' t h₁ k →
         (mat k).map (piInf (B.emb w)) *ᵥ ε = piInf (B.emb w) t.1 • ε ∧
         (mat k).map (piInf (B.emb w)) *ᵥ φ = piInf (B.emb w) t.1 • φ := by
-  first | exact @GlobalTheory.TwCoefFrame.exists_extFrame_adapted | exact GlobalTheory.TwCoefFrame.exists_extFrame_adapted | (intros; apply GlobalTheory.TwCoefFrame.exists_extFrame_adapted <;> assumption)
+  exact @GlobalTheory.TwCoefFrame.exists_extFrame_adapted

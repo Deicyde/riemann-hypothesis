@@ -22,4 +22,4 @@ theorem _root_.GlobalTheory.T.exists_rational_finite_translate : GlobalTheory.Fu
     (ch : Choice R), ch.Is → ∀ (X : Node), DefNode D.R.m X → ∀ (Q : Finset ℕ), (∀ q ∈ Q, q.Prime) → ∀ x : FinPt ch.G X,
     ∃ r s x₀ : FinPt ch.G X, GlobalTheory.MovedKappaEx.RatFin _ r ∧ s ∈ GlobalTheory.MovedKappaEx.splitOff _ Q ∧
       GlobalTheory.SumSize.latAt ch.S.toGridChoice X x₀ = stdL D _ ∧ (∀ q ∈ Q, EqAt D q (GlobalTheory.SumSize.latAt ch.S.toGridChoice X (s * x₀)) (stdL D _)) ∧ x = r * s * x₀ := by
-  first | exact @GlobalTheory.MovedKappaDec.exists_dec | exact GlobalTheory.MovedKappaDec.exists_dec | (intros; apply GlobalTheory.MovedKappaDec.exists_dec <;> assumption)
+  exact @GlobalTheory.MovedKappaDec.exists_dec

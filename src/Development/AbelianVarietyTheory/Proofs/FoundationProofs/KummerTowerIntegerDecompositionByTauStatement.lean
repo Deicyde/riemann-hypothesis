@@ -10,4 +10,4 @@ theorem _root_.GlobalTheory.T.kummerTower_integer_decomposition_by_tau : ∀ (p 
   ∃ o w : Ω, IsInt p o ∧ (∀ g ∈ Ggeo p Ω, g o = o) ∧ IsInt p w ∧
     (∀ g ∈ Ggeo p Ω ⊓ MulAction.stabilizer (Gal p Ω) (T.qq N), g w = w) ∧
     (T.ζ 1 - 1) * y = (T.ζ 1 - 1) * o + (τ w - w) := by
-  first | exact @GlobalTheory.K5.Decomp.decomp | exact GlobalTheory.K5.Decomp.decomp | (intros; apply GlobalTheory.K5.Decomp.decomp <;> assumption)
+  exact @GlobalTheory.K5.Decomp.decomp

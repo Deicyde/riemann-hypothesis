@@ -10,4 +10,4 @@ theorem _root_.GlobalTheory.T.theta_integral_linear_combination : ∀ (F E : Typ
     (om : Rep σ G.V G.W) (om' : Rep σ G.V' G.W), GlobalTheory.ThK.KP → IsTriple B G X om om' →
     ∀ (ι : Type) [Fintype ι] (z : ι → ℂ) (Ψ : ι → (Fin a × Fin (a + a') → AF F) → ℂ), (∀ i, Ψ i ∈ GlobalTheory.ThK.PolData B G.M) →
       ∀ h, G.M.I om (∑ i, z i • Ψ i) h = ∑ i, z i * G.M.I om (Ψ i) h := by
-  first | exact @GlobalTheory.ThK.ThetaLinSum.I_finset_sum | exact GlobalTheory.ThK.ThetaLinSum.I_finset_sum | (intros; apply GlobalTheory.ThK.ThetaLinSum.I_finset_sum <;> assumption)
+  exact @GlobalTheory.ThK.ThetaLinSum.I_finset_sum

@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.small_place_finite_set : ∀ {D : D7} {L : SizeDat
     ∀ w ∈ p.R.twPl, W.WRange P (Formalism.EigenvalueLevelCeiling.plc w) → SmallAt p j P w →
     {v : HeightOneSpectrum (𝓞 D.host.E) | (Ideal.absNorm v.asIdeal).Prime ∧
       ¬ ∃ Q : (blk p j (p.R.mu w)).Pl, ((Formalism.EigenvalueLevelCeiling.plc w : ℕ) : 𝓞 D.host.E) ∉ (plOf p j (p.R.mu w) Q).asIdeal ∧ labOf p j (p.R.mu w) Q = v}.Finite := by
-  first | exact @GlobalTheory.FrameAutCof.cofinite_labels_at | exact GlobalTheory.FrameAutCof.cofinite_labels_at | (intros; apply GlobalTheory.FrameAutCof.cofinite_labels_at <;> assumption)
+  exact @GlobalTheory.FrameAutCof.cofinite_labels_at

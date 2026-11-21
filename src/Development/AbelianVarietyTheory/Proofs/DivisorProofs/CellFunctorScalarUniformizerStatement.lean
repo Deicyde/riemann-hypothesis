@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.cell_functor_scalar_uniformizer : ∀ {k : Type} [
           (leviTwo k (Fin u) (Fin (v + 1))).symm.toMonoidHom)
         (leviTwo k (Fin (u + v)) (Fin 1) (1, GeneralLinearGroup.scalar (Fin 1) ϖ)) w =
         (((χ₁ * absPow k (((u : ℂ) - 1) / 2)) ϖ : ℂˣ) : ℂ) • w := by
-  first | exact @GlobalTheory.CellScalarTwo.cellFunctor_scalar | exact GlobalTheory.CellScalarTwo.cellFunctor_scalar | (intros; apply GlobalTheory.CellScalarTwo.cellFunctor_scalar <;> assumption)
+  exact @GlobalTheory.CellScalarTwo.cellFunctor_scalar

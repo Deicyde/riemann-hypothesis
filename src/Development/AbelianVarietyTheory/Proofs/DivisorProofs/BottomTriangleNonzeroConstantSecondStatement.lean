@@ -23,4 +23,4 @@ theorem _root_.GlobalTheory.T.bottom_triangle_nonzero_constant_second : GlobalTh
           ∀ (ea : P'.a = A'.rank) (ed : P'.d = WW.rank) (h : GA D P'.d) (g : GA D WW), GlobalTheory.BotFormula.IsFinPt WW g h →
             ∀ (x : GA D P'.a) (g' : GA D A'), GlobalTheory.BotFormula.IsFinPt A' g' x → ∀ T' : Tup D P'.a P'.d P'.n,
               X.ker' W.ψ W.θ s (GlobalTheory.BotFormula.minorF ea ed T') g g' = Ω₂ * u * P'.term x h T' := by
-  first | exact @GlobalTheory.BotSmallDict.kernel_eq_term | exact GlobalTheory.BotSmallDict.kernel_eq_term | (intros; apply GlobalTheory.BotSmallDict.kernel_eq_term <;> assumption)
+  exact @GlobalTheory.BotSmallDict.kernel_eq_term

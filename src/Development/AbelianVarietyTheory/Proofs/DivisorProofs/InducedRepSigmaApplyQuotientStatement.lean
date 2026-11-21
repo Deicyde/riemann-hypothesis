@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.induced_rep_sigma_apply_quotient : ∀ {k : Type} 
           ⟨p.1 false, (mem_relParab_colEq _).1 p.2⟩ false)) *
         (χ₂ * absPow k (-(1 / 2))) (GeneralLinearGroup.det (leviProj k (two (stdSum (rfl : u + v = u + v)))
           ⟨p.1 false, (mem_relParab_colEq _).1 p.2⟩ true))) : ℂˣ) : ℂ) • Submodule.Quotient.mk w := by
-  first | exact @GlobalTheory.CellDetFirst.sigmaC_mk_scalar | exact GlobalTheory.CellDetFirst.sigmaC_mk_scalar | (intros; apply GlobalTheory.CellDetFirst.sigmaC_mk_scalar <;> assumption)
+  exact @GlobalTheory.CellDetFirst.sigmaC_mk_scalar

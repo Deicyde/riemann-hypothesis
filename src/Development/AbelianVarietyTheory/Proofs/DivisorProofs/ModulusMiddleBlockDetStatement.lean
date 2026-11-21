@@ -18,4 +18,4 @@ theorem _root_.GlobalTheory.T.modulus_middle_block_det : ∀ (k : Type) [Field k
     (l d N : ℕ), l + d ≤ N → ∀ g : GL (Fin d) k,
     GlobalTheory.SmGL.deltaHalf k (fun j : Fin 3 => Fin (GlobalTheory.CuspBlock.tripSizes l d N j)) (GlobalTheory.CuspBlock.midHom k l d N g) =
       GlobalTheory.SmGL.detChar (Fin d) (GlobalTheory.SmGL.absPow k (((N : ℂ) - 2 * l - d) / 2)) g := by
-  first | exact @GlobalTheory.CuspBlock.deltaHalf_midHom | exact GlobalTheory.CuspBlock.deltaHalf_midHom | (intros; apply GlobalTheory.CuspBlock.deltaHalf_midHom <;> assumption)
+  exact @GlobalTheory.CuspBlock.deltaHalf_midHom

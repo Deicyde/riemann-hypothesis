@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.line_parabolic_unipotent_blocks : ∀ (k : Type) [
       ∃ (X : Matrix (Fin 1) (Fin m ⊕ Fin 1) k) (Y : Matrix (Fin m) (Fin 1) k),
         (n : Matrix (Fin N) (Fin N) k).submatrix (GlobalTheory.LineFrame.frameEquiv hr) (GlobalTheory.LineFrame.frameEquiv hr) =
           Matrix.fromBlocks 1 X 0 (Matrix.fromBlocks 1 Y 0 1) := by
-  first | exact @GlobalTheory.LineFrame.unipRad_frame_blocks | exact GlobalTheory.LineFrame.unipRad_frame_blocks | (intros; apply GlobalTheory.LineFrame.unipRad_frame_blocks <;> assumption)
+  exact @GlobalTheory.LineFrame.unipRad_frame_blocks

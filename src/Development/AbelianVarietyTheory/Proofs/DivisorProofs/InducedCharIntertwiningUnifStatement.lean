@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.induced_char_intertwining_unif : GlobalTheory.Publ
       ∃ T : IndSp (e2 a a') (ofChar (GlobalTheory.ThK.DetProd.twoDet a a' (ν * β) β)) →ₗ[ℂ] W,
         (∀ h y, T (detInd a a' (ν * β) β h y) = R h (T y)) ∧
         ∀ Ψ ∈ GlobalTheory.WeilM.SB (Matrix (Fin a) (Fin (a + a')) k), ∃ y, L Ψ = T y := by
-  first | exact @GlobalTheory.DetIndScal.factor_through_detInd | exact GlobalTheory.DetIndScal.factor_through_detInd | (intros; apply GlobalTheory.DetIndScal.factor_through_detInd <;> assumption)
+  exact @GlobalTheory.DetIndScal.factor_through_detInd

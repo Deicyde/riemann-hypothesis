@@ -26,4 +26,4 @@ theorem _root_.GlobalTheory.T.local_evaluation_iso_case_a : ∀ (F E : Type) [Fi
     ∀ f : SInf F (Fin (b + 2) × Fin (b + 2 + a')), ∃ g : SInf F (Fin b × Fin (b + a')),
       ⇑g = coneInfFun B G.M om ei K μKi μEi (shiftA H H') X.ν ((b + 2 - a') / 2) f ∧
       (f ∈ G.M.Pol B.ψ B.emb → g ∈ G₁.M.Pol B.ψ B.emb) := by
-  first | exact @GlobalTheory.ThK.ConeEuler.coneInf_schwartz_pol | exact GlobalTheory.ThK.ConeEuler.coneInf_schwartz_pol | (intros; apply GlobalTheory.ThK.ConeEuler.coneInf_schwartz_pol <;> assumption)
+  exact @GlobalTheory.ThK.ConeEuler.coneInf_schwartz_pol

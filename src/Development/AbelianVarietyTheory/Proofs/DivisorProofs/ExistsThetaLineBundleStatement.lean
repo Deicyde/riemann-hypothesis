@@ -12,4 +12,4 @@ open Filter Topology
 open scoped ContDiff
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_theta_line_bundle : ∀ (k : Type) [CommRing k] (S : Scheme.{0}) (p : S ⟶ Sp k), IsRegSurf p → ∀ (P : PPAS S), P.HasTheta → ∃ L : LB P.A.left, IsTheta P L := by
-  first | exact @GlobalTheory.ThetaRR.exists_isTheta | exact GlobalTheory.ThetaRR.exists_isTheta | (intros; apply GlobalTheory.ThetaRR.exists_isTheta <;> assumption)
+  exact @GlobalTheory.ThetaRR.exists_isTheta

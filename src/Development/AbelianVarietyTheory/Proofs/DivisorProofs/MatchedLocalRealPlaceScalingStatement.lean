@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.matched_local_real_place_scaling : GlobalTheory.Th
     (herm : ∀ i j, σ (G.W.J j i) = algebraMap F E ε * G.W.J i j) (hJ : IsUnit (G.W.J.map τ).det) (x : ℕ), x = a →
     ∀ e : Fin (x + a') ≃ Fin (a + a'), ∀ f ∈ Diffs B G X om om' R Rf c,
       HasLocType hcm τ G.W.J ε herm hJ e (chrW X.α τ) (chrW X.β τ) f := by
-  first | exact @GlobalTheory.LocTypeDiffs.diffs_locType | exact GlobalTheory.LocTypeDiffs.diffs_locType | (intros; apply GlobalTheory.LocTypeDiffs.diffs_locType <;> assumption)
+  exact @GlobalTheory.LocTypeDiffs.diffs_locType

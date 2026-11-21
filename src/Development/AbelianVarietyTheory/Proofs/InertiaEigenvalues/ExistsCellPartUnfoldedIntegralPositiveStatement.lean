@@ -38,4 +38,4 @@ theorem _root_.GlobalTheory.T.exists_cellPart_unfoldedIntegral_positive : ∀ (E
       (∀ g ∉ GlobalTheory.CellDec.C0 E (m + 1) S, f g = 0) ∧
       (∀ g ∈ GlobalTheory.CellDec.C0 E (m + 1) S, GlobalTheory.ZEul.uInt φ φ Φ N 0 g = (f g : ℂ)) ∧
       ∀ (x : ℝ) (g : GA E (m + 1)), (GlobalTheory.RSJ.detPow E (m + 1) x g : ℂ) = Complex.exp (x * t g) := by
-  first | exact @GlobalTheory.CellBump.exists_cellPart_unfoldedIntegral_positive_alt | exact GlobalTheory.CellBump.exists_cellPart_unfoldedIntegral_positive_alt | (intros; apply GlobalTheory.CellBump.exists_cellPart_unfoldedIntegral_positive_alt <;> assumption)
+  exact @GlobalTheory.CellBump.exists_cellPart_unfoldedIntegral_positive_alt

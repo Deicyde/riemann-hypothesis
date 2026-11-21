@@ -10,4 +10,4 @@ theorem _root_.GlobalTheory.T.quaternion_class_number_finite : ∀ {F : Type} [F
   ∃ C : Set (Q d β (AF F))ˣ, IsCompact C ∧ ∀ y : (Q d β (AF F))ˣ, ∃ c ∈ C, ∃ δ : (Q d β F)ˣ, ∃ z : (AF F)ˣ,
     y = c * Units.map (rat (R := AF F) : Q d β F →+* Q d β (AF F)).toMonoidHom δ *
       Units.map (algebraMap (AF F) (Q d β (AF F))).toMonoidHom z := by
-  first | exact @GlobalTheory.CompanionTheory.PlaneSA.Compact.exists_isCompact_units | exact GlobalTheory.CompanionTheory.PlaneSA.Compact.exists_isCompact_units | (intros; apply GlobalTheory.CompanionTheory.PlaneSA.Compact.exists_isCompact_units <;> assumption)
+  exact @GlobalTheory.CompanionTheory.PlaneSA.Compact.exists_isCompact_units

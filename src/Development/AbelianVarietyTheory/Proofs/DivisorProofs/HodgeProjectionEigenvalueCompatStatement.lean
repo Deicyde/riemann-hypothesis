@@ -9,4 +9,4 @@ theorem _root_.GlobalTheory.T.hodge_projection_eigenvalue_compat : ∀ (W : Type
     (∀ a (x y : Λ), (y : Fin g → ℂ) = (fun j ↦ χ a j * (x : Fin g → ℂ) j) → T a (P x) = P y) →
     ∀ ψ : O → ℂ, (∀ j, ∃ a, χ a j ≠ ψ a) →
     (⨅ a, Module.End.eigenspace (T a) (ψ a) : Submodule ℂ W) ≤ LinearMap.ker Q := by
-  first | exact @GlobalTheory.eigenvector_mem_ker_of_ne_coord_char | exact GlobalTheory.eigenvector_mem_ker_of_ne_coord_char | (intros; apply GlobalTheory.eigenvector_mem_ker_of_ne_coord_char <;> assumption)
+  exact @GlobalTheory.eigenvector_mem_ker_of_ne_coord_char

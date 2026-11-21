@@ -8,4 +8,4 @@ theorem _root_.GlobalTheory.T.gelfand_pair_irreducible_pairing_symmetric : ∀ (
     ∀ (V : Type) [AddCommGroup V] [Module ℂ V] (ρ : Representation ℂ G V), Module.rank ℂ V ≤ Cardinal.aleph0 →
     (∀ N : Submodule ℂ V, (∀ g, ∀ x ∈ N, ρ g x ∈ N) → N = ⊥ ∨ N = ⊤) →
     ∀ x y : V, (∀ k ∈ K, ρ k x = x) → (∀ k ∈ K, ρ k y = y) → x ≠ 0 → ∃ c : ℂ, y = c • x := by
-  first | exact @GlobalTheory.fixed_line_of_gelfand_countable | exact GlobalTheory.fixed_line_of_gelfand_countable | (intros; apply GlobalTheory.fixed_line_of_gelfand_countable <;> assumption)
+  exact @GlobalTheory.fixed_line_of_gelfand_countable

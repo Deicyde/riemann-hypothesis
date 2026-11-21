@@ -27,4 +27,4 @@ theorem _root_.GlobalTheory.T.p_adic_point_tangent_map_formula : BridgeSt → �
       (∀ j, LieTie Q (Q.gen ≫ π) (xx j) (u j)) → (∀ i, IsCombAtG Z.t (yy ≫ Z.j) u (g i) (u' i)) →
       ∀ (a : Fin n → ℂ_[p]) (w : Sp (DualNumber ℂ_[p]) ⟶ Z.t.G.left), IsCombAtG Z.t (yy ≫ Z.j) u' a w →
         (w ∈ GlobalTheory.ShFam.Pad.latHT Z.t p (yy ≫ Z.j) ↔ ∑ i, a i • ∑ j, g i j • Q.bLie (xx j) ∈ Q.latT) := by
-  first | exact @GlobalTheory.DetHT.BridgeBasis.mem_latHT_iff_changeBasis | exact GlobalTheory.DetHT.BridgeBasis.mem_latHT_iff_changeBasis | (intros; apply GlobalTheory.DetHT.BridgeBasis.mem_latHT_iff_changeBasis <;> assumption)
+  exact @GlobalTheory.DetHT.BridgeBasis.mem_latHT_iff_changeBasis

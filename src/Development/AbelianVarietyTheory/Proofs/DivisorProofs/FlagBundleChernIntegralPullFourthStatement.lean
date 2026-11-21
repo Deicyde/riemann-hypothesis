@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.flag_bundle_chern_integral_pull_fourth : ∀ (k : 
     (∀ α : (hY.atlas σ).Fld, (hY.atlas σ).IsForm α → ∀ ε : ℤˣ, Integrable (fun y => Real.log (1 - v y) / 2) ((hY.atlas σ).part α ε)) ∧
       ∀ φ : (hB.atlas σ).Fld, (hB.atlas σ).IsForm φ →
         wInt (hY.atlas σ) (fun y => Real.log (1 - v y) / 2) (evalF (hY.atlas σ) (fun i => c1F hY σ (fam5 π w H flB fl A i)) (X 0 - X 3) * pullF hB hY σ π w φ) = 1 / 2 * (hB.atlas σ).integral φ := by
-  first | exact @GlobalTheory.FibLog.wInt_log_one_sub | exact GlobalTheory.FibLog.wInt_log_one_sub | (intros; apply GlobalTheory.FibLog.wInt_log_one_sub <;> assumption)
+  exact @GlobalTheory.FibLog.wInt_log_one_sub

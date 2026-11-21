@@ -22,4 +22,4 @@ theorem _root_.GlobalTheory.T.siegel_map_integrable_distribution : ∀ (F : Type
       ∀ g ∈ SB (κ → FiniteAdeleRing (𝓞 F) F), ∃ T : SchwartzMap (κ → mixedEmbedding.mixedSpace F) ℂ →L[ℂ] ℂ,
         ∀ f : SchwartzMap (κ → mixedEmbedding.mixedSpace F) ℂ, (letI : MeasurableSpace (ι → AF F) := borel _;
           ∫ w, pureA F f g (D.map (algebraMap F (AF F)) *ᵥ w) ∂ν) = T f := by
-  first | exact @GlobalTheory.integral_pull_injective | exact GlobalTheory.integral_pull_injective | (intros; apply GlobalTheory.integral_pull_injective <;> assumption)
+  exact @GlobalTheory.integral_pull_injective

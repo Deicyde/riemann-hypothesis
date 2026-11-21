@@ -33,4 +33,4 @@ theorem _root_.GlobalTheory.T.theta_pair_list_action : GlobalTheory.FunPr.Hypoth
     GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.ActsD (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.evI F) (fun t => om (γ (Multiplicative.ofAdd t), 1)) f f₁ →
     (∀ i, GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.ActsD (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.evI F) (fun t => om (γs i (Multiplicative.ofAdd t), 1)) f (fs i)) →
     f₁ = (l.map fs).sum := by
-  first | exact @GlobalTheory.LineAdd.deriv_prod_lines | exact GlobalTheory.LineAdd.deriv_prod_lines | (intros; apply GlobalTheory.LineAdd.deriv_prod_lines <;> assumption)
+  exact @GlobalTheory.LineAdd.deriv_prod_lines

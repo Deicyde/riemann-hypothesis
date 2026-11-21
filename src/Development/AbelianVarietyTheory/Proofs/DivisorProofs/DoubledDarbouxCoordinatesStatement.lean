@@ -26,4 +26,4 @@ theorem _root_.GlobalTheory.T.doubled_darboux_coordinates : ∀ (F E : Type) [Fi
       (∀ l ∈ (adeleClass F).adm (Fin n × Fin (d + d)), l ∘ₗ e ∈ (adeleClass F).adm (Fin n × Fin d ⊕ Fin n × Fin d)) ∧
       (∀ u, ∀ Ψ ∈ schA F (Fin n × Fin d ⊕ Fin n × Fin d), e (schr B.ψ (dblE co' u) Ψ) = co.rho B.ψ u (e Ψ)) ∧
       ∀ Ψ ∈ schA F (Fin n × Fin d ⊕ Fin n × Fin d), thetaSum F (e Ψ) = c * thetaSum F Ψ := by
-  first | exact @GlobalTheory.DblIntw.doubling_intertwiner | exact GlobalTheory.DblIntw.doubling_intertwiner | (intros; apply GlobalTheory.DblIntw.doubling_intertwiner <;> assumption)
+  exact @GlobalTheory.DblIntw.doubling_intertwiner

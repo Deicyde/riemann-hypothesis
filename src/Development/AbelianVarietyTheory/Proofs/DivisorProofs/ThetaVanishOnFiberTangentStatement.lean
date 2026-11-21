@@ -11,4 +11,4 @@ theorem _root_.GlobalTheory.T.theta_vanish_on_fiber_tangent : ∀ (E : Type) [No
     (A e : E → Matrix (Fin n) (Fin n) ℂ),
     IsPosFrame U H → IsFlagFamily Y U π A → IsUnitaryFlagFrame Y H π A e → ∀ y ∈ Y, ∀ ξ, fderiv ℂ π y ξ = 0 → (∀ i l, i < l → thetaOneZero H π e y ξ l i = 0) →
       FixesFlag A y ξ := by
-  first | exact @GlobalTheory.VertFlag.vertical_fixesFlag | exact GlobalTheory.VertFlag.vertical_fixesFlag | (intros; apply GlobalTheory.VertFlag.vertical_fixesFlag <;> assumption)
+  exact @GlobalTheory.VertFlag.vertical_fixesFlag

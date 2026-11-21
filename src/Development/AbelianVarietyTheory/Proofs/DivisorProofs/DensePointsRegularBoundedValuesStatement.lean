@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.dense_points_regular_bounded_values : ∀ (F : Typ
       (∀ (σ : F →+* ℂ) (z : Pts Y σ), under z = x → ∀ i, ‖ratVal (f i) z‖ ≤ a) ∧
       (∀ (v : HeightOneSpectrum (𝓞 F)) (e : Ext v) (y : AlgPt Y), below y.1 = x → ∀ i,
         e.w (valAt y.1 (f i)) ≤ Real.exp (b v)) := by
-  first | exact @GlobalTheory.dense_closedPoints_bounded | exact GlobalTheory.dense_closedPoints_bounded | (intros; apply GlobalTheory.dense_closedPoints_bounded <;> assumption)
+  exact @GlobalTheory.dense_closedPoints_bounded

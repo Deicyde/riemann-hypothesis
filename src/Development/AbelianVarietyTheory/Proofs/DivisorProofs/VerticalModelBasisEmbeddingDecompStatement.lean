@@ -29,4 +29,4 @@ theorem _root_.GlobalTheory.T.vertical_model_basis_embedding_decomp : ∀ {D : D
       ∀ (τ : Emb D p) (r : ℕ) vb vb' iso, IsLatPres z.Z (f.f ≫ (nmodel z.Z).compι c) (xLie S jc τ) false
         ⟨r, (partF (fun k => B.const (cf τ k)) b).obj P.E, (partF (fun k => B.const (cf τ k)) b).obj P.E', vb, vb',
           (partF (fun k => B.const (cf τ k)) b).map P.ψ, iso⟩ := by
-  first | exact @GlobalTheory.ChainParts.LatPart.isLatPres_xLie | exact GlobalTheory.ChainParts.LatPart.isLatPres_xLie | (intros; apply GlobalTheory.ChainParts.LatPart.isLatPres_xLie <;> assumption)
+  exact @GlobalTheory.ChainParts.LatPart.isLatPres_xLie

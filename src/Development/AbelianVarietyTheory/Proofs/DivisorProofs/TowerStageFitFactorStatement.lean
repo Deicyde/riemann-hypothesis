@@ -31,4 +31,4 @@ theorem _root_.GlobalTheory.T.tower_stage_fit_factor : GlobalTheory.FunPr.Hypoth
           GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.IsConst Bs Γ (GlobalTheory.SqStep.chs G i j μ₀) om₀ om₀' R Rf₀ c₀ →
           ∃ k : (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.AE D.host.F D.host.E)ˣ, c * lam μ₀ =
             (((GlobalTheory.SqStep.chs G i j t).ν k / (GlobalTheory.SqStep.chs G i j μ₀).ν k : Circle) : ℂ) * (c₀ * lam t) := by
-  first | exact @GlobalTheory.SqStepBig.dict_stage | exact GlobalTheory.SqStepBig.dict_stage | (intros; apply GlobalTheory.SqStepBig.dict_stage <;> assumption)
+  exact @GlobalTheory.SqStepBig.dict_stage

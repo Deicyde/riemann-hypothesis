@@ -26,4 +26,4 @@ theorem _root_.GlobalTheory.T.pullback_model_arc_valuation : ∀ (E : Type) [Fie
         IsArcBase O' ϖ → IsArcChart Y (GlobalTheory.PolArc.moveV bV hbV b' a) ϖ χ₀ →
         ∃ χV : Sp (PowerSeries O') ⟶ pullback Z.s (spMap bV),
           χV ≫ f = χ₀ ∧ χV ≫ pullback.snd Z.s (spMap bV) = spMap (PowerSeries.C (R := O')) ≫ spMap b' := by
-  first | exact @GlobalTheory.PolArcExist.main | exact GlobalTheory.PolArcExist.main | (intros; apply GlobalTheory.PolArcExist.main <;> assumption)
+  exact @GlobalTheory.PolArcExist.main

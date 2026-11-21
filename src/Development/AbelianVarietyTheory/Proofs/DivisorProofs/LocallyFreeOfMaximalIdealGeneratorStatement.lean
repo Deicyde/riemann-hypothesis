@@ -18,4 +18,4 @@ theorem _root_.GlobalTheory.T.locally_free_of_maximal_ideal_generator : ∀ (R O
       (∀ c : J →₀ R, Finsupp.linearCombination R (fun i => b i • m) c = 0 → ∃ n : ℕ, g ^ n • c = 0)) →
     letI : Module (R ⊗[ℤ] O) M := TensorProduct.Algebra.module
     Module.Invertible (R ⊗[ℤ] O) M := by
-  first | exact @GlobalTheory.InvGlue.invertible_of_locally_singly_generated | exact GlobalTheory.InvGlue.invertible_of_locally_singly_generated | (intros; apply GlobalTheory.InvGlue.invertible_of_locally_singly_generated <;> assumption)
+  exact @GlobalTheory.InvGlue.invertible_of_locally_singly_generated

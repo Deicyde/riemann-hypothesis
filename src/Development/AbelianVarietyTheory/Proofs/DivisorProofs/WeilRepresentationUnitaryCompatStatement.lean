@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.weil_representation_unitary_compat : GlobalTheory.
     ∀ γ ∈ Lines σ W, ∀ f ∈ M.Pol B.ψ B.emb, ∀ f₁ : SInf F (Fin n × Fin d),
       ActsD (evI F) (fun t => om (1, γ (Multiplicative.ofAdd t))) f f₁ →
       ActsD (evI F) (fun t => om (1, h * γ (Multiplicative.ofAdd t) * h⁻¹)) (T f) (T f₁) := by
-  first | exact @GlobalTheory.ConjLineSecond.actsD_conj | exact GlobalTheory.ConjLineSecond.actsD_conj | (intros; apply GlobalTheory.ConjLineSecond.actsD_conj <;> assumption)
+  exact @GlobalTheory.ConjLineSecond.actsD_conj

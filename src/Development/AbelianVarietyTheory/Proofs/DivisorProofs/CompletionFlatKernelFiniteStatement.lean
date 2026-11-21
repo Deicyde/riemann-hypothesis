@@ -8,4 +8,4 @@ theorem _root_.GlobalTheory.T.completion_flat_kernel_finite : ∀ (A : Type) [Co
   Module.Projective (AdicCompletion (Ideal.span {f}) A) (TensorProduct A (AdicCompletion (Ideal.span {f}) A) M) →
   ∀ (n : ℕ) (π : (Fin n → A) →ₗ[A] M), Function.Surjective π →
   Module.Finite (AdicCompletion (Ideal.span {f}) A) (TensorProduct A (AdicCompletion (Ideal.span {f}) A) (LinearMap.ker π)) := by
-  first | exact @GlobalTheory.adicCompletion_tensor_ker_finite | exact GlobalTheory.adicCompletion_tensor_ker_finite | (intros; apply GlobalTheory.adicCompletion_tensor_ker_finite <;> assumption)
+  exact @GlobalTheory.adicCompletion_tensor_ker_finite

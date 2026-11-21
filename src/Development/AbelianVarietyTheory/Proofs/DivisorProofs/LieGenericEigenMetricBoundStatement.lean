@@ -37,4 +37,4 @@ theorem _root_.GlobalTheory.T.lie_generic_eigen_metric_bound : ∀ (D : D7) (O :
         ‖ratVal ((((r a i ch)⁻¹ : G.functionFieldˣ) : G.functionField) *
           φ ((prodPow t (rootEx O.S.Dw (DV.tauEmb D a.1) (cond a.2 0 O.j + i)) : (O.var c).Fnˣ) : (O.var c).Fn)) z‖ ^ 2 *
           (O.Φ.C c).genSq (Gm (embOf O.κ.e σ)) (rootEx O.S.Dw (DV.tauEmb D a.1) (cond a.2 0 O.j + i)) g := by
-  first | exact @GlobalTheory.FlagCovDualNorm.weight_dual | exact GlobalTheory.FlagCovDualNorm.weight_dual | (intros; apply GlobalTheory.FlagCovDualNorm.weight_dual <;> assumption)
+  exact @GlobalTheory.FlagCovDualNorm.weight_dual

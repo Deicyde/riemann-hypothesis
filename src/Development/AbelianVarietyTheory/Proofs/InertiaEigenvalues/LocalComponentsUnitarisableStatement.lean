@@ -26,4 +26,4 @@ open GlobalTheory.PRep GlobalTheory.SmGL GlobalTheory.SplitWeil GlobalTheory.The
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.local_components_unitarisable : PrN → ∀ hL : GlobalTheory.Published.LocalLanglandsGL, GlobalTheory.LiftRef.AtRows hL fun D _ rep _ _ _ => ∀ (j : ℕ) (σ : D.what₂.FT), D.what₂.isot j σ ≠ ⊥ → ∀ s : SplitPlace D.host.E, ∃ τ : GlobalTheory.SmGL.IrrRep (GL (Fin D.R.r) (s.w.adicCompletion D.host.E)), IsLocS (rep σ).S s τ ∧ GlobalTheory.SmGL.IsUnitarisable τ.ρ := by
-  first | exact @GlobalTheory.RowSplitUnit.finTyp_rows_locS_unitarisable | exact GlobalTheory.RowSplitUnit.finTyp_rows_locS_unitarisable | (intros; apply GlobalTheory.RowSplitUnit.finTyp_rows_locS_unitarisable <;> assumption)
+  exact @GlobalTheory.RowSplitUnit.finTyp_rows_locS_unitarisable

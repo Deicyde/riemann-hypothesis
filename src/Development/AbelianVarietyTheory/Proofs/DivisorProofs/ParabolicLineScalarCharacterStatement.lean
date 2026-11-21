@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.parabolic_line_scalar_character : ∀ (F E : Type)
     ∀ p ∈ UAt σ G.V' (evI F), ∀ t : (AE F E)ˣ, mat p *ᵥ incV F H.x = t.1 • incV F H.x →
       t ∈ idelesAt E (evI F) ∧ ∃ (n m : UA σ G.V'.J) (g₀ : UA σ G₁.V'.J), n ∈ unip σ G.V' H ∧ n ∈ UAt σ G.V' (evI F) ∧
         IsLevi (W₁ := G₁.V') H t g₀ m ∧ m ∈ UAt σ G.V' (evI F) ∧ g₀ ∈ UAt σ G₁.V' (evI F) ∧ p = n * m := by
-  first | exact @GlobalTheory.LineStabLevi.stab_line_levi | exact GlobalTheory.LineStabLevi.stab_line_levi | (intros; apply GlobalTheory.LineStabLevi.stab_line_levi <;> assumption)
+  exact @GlobalTheory.LineStabLevi.stab_line_levi

@@ -31,4 +31,4 @@ theorem _root_.GlobalTheory.T.adapted_plane_pair_restriction_third : GlobalTheor
       ∀ (p : UG (cA σ) (dbl (incM F W.J))) (t : GL (Fin d) (AE F E)),
         (p.1.1 : Matrix _ _ (AE F E)) * diagCols (Fin d) = diagCols (Fin d) * t.1 →
       ∀ a : ℂ, (∀ Φ ∈ schA F (Fin n × Fin d ⊕ Fin n × Fin d), ed (omd p Φ) = a • omd₁ p (ed Φ)) → a = 1 := by
-  first | exact @GlobalTheory.DblSiegelX.main | exact GlobalTheory.DblSiegelX.main | (intros; apply GlobalTheory.DblSiegelX.main <;> assumption)
+  exact @GlobalTheory.DblSiegelX.main

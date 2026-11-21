@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.matched_real_map_archimedean_action : ∀ (F E : T
     (R : RealMaps F a a') (Rf : FinMaps F a a'), IsMatched B G X om om' R Rf →
     ∀ k ∈ KInf σ G.W B.emb, ∀ f ∈ G.M.Pol B.ψ B.emb, ∀ f₁ : SInf F (Fin a × Fin (a + a')),
       Acts (evI F) (om (1, k)) f f₁ → R.p f ∈ lowPartInf B G.M R.p → R.p f₁ ∈ lowPartInf B G.M R.p := by
-  first | exact @GlobalTheory.LowKTypeStab.lowPartInf_stable | exact GlobalTheory.LowKTypeStab.lowPartInf_stable | (intros; apply GlobalTheory.LowKTypeStab.lowPartInf_stable <;> assumption)
+  exact @GlobalTheory.LowKTypeStab.lowPartInf_stable

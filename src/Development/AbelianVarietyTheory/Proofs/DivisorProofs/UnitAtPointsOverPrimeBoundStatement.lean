@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.unit_at_points_over_prime_bound : GlobalTheory.Det
     ∀ (e : TrueGeo.Ext v) (z : Sp (AlgebraicClosure F) ⟶ V.G) (yt : Sp e.O ⟶ V.X),
       z ≫ V.π ≫ Y.str = spMap (algebraMap F (AlgebraicClosure F)) → spMap e.O.subtype ≫ yt = z ≫ V.j → ⊤ ≤ yt ⁻¹ᵁ U →
       UnitAt (below (z ≫ V.j)) h ∧ Real.log (e.w (TrueGeo.valAt (z ≫ V.j) h)) = ρ := by
-  first | exact @GlobalTheory.NormExt.main | exact GlobalTheory.NormExt.main | (intros; apply GlobalTheory.NormExt.main <;> assumption)
+  exact @GlobalTheory.NormExt.main

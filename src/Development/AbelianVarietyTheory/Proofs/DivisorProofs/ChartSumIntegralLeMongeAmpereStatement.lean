@@ -10,4 +10,4 @@ theorem _root_.GlobalTheory.T.chart_sum_integral_le_monge_ampere : ∀ (n : ℕ)
     [BorelSpace Y] (B : FinHolAtlas n Y) (Ψ : LocPot Y), IsPotential B Ψ → IsPsh B Ψ →
     ∀ (U : Set Y) (g : Y → ℝ≥0∞), Measurable g →
       chartSumInt B Ψ U g ≤ (B.n : ℝ≥0∞) * ∫⁻ y, g y ∂maMeasure B (fun _ => Ψ) := by
-  first | exact @GlobalTheory.ChartSumBound.chartSumInt_le_card_mul | exact GlobalTheory.ChartSumBound.chartSumInt_le_card_mul | (intros; apply GlobalTheory.ChartSumBound.chartSumInt_le_card_mul <;> assumption)
+  exact @GlobalTheory.ChartSumBound.chartSumInt_le_card_mul

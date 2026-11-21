@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.config_b_levi_evaluation_compatible : GlobalTheory
       ∀ X om om' om₁ om₁', IsTriple B G X om om' → IsTriple B G₁ X om₁ om₁' →
       ∀ h₁ m, IsLevi H' 1 h₁ m → ∀ Ψ ∈ schA F (Fin (b + 2) × Fin (a + (b + 2))),
         e' (om' (1, m) Ψ) = om₁' (1, h₁) (e' Ψ) := by
-  first | exact @GlobalTheory.ThK.LeviEqvB.levi_eqv | exact GlobalTheory.ThK.LeviEqvB.levi_eqv | (intros; apply GlobalTheory.ThK.LeviEqvB.levi_eqv <;> assumption)
+  exact @GlobalTheory.ThK.LeviEqvB.levi_eqv

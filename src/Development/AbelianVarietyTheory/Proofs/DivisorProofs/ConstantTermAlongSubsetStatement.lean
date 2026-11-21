@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.constant_term_along_subset : ∀ (F E : Type) [Fie
     ∀ (n : ℕ) (J : Matrix (Fin n) (Fin n) E), IsHermND σ J → ∀ (r : ℕ) (X Y : Matrix (Fin n) (Fin r) E), IsWittFrame σ J X Y →
       ∀ φ : GAd σ J → ℂ, Continuous φ → (∀ γ ∈ ratPts σ J, ∀ g, φ (γ * g) = φ g) → ∀ S T : Finset (Fin r), T ⊆ S →
         GlobalTheory.StdPar.IsConstAlong σ J X T φ 0 → GlobalTheory.StdPar.IsConstAlong σ J X S φ 0 := by
-  first | exact @GlobalTheory.ConstTrans.isConstAlong_zero_of_subset | exact GlobalTheory.ConstTrans.isConstAlong_zero_of_subset | (intros; apply GlobalTheory.ConstTrans.isConstAlong_zero_of_subset <;> assumption)
+  exact @GlobalTheory.ConstTrans.isConstAlong_zero_of_subset

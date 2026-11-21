@@ -17,4 +17,4 @@ theorem _root_.GlobalTheory.T.idele_norm_integral_fractional_ideal : ∀ {F E : 
     ∀ (𝔞 : FractionalIdeal (𝓞 E)⁰ E), 𝔞 ≠ 0 →
     Integrable (fun l : (AE F E)ˣ => g l * (if ∀ v : Pl F, compFin F E v (l : AE F E) ∈ locId v 𝔞 then (1 : ℝ) else 0) *
       (absE F E l : ℝ) ^ s) μ := by
-  first | exact @GlobalTheory.TateIdelic.integrable_tate | exact GlobalTheory.TateIdelic.integrable_tate | (intros; apply GlobalTheory.TateIdelic.integrable_tate <;> assumption)
+  exact @GlobalTheory.TateIdelic.integrable_tate

@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.arithmetic_height_polynomial_in_degrees : ∀ (k :
     [Algebra (ZMod ℓ) Γ(Z, ⊤)] (e : ℕ), topologicalKrullDim Z = e → ∀ (ι : Type) [Fintype ι] (L : ι → HermLB p),
     ∃ T : MvPolynomial ι ℝ →ₗ[ℝ] ℝ, ∀ (n : ι → ℤ) (g : Y → ℝ), (comb L n).IsArithHeight g →
       g (i (genericPoint Z)) = T (lin (fun j => (n j : ℝ)) ^ e) := by
-  first | exact @GlobalTheory.VertFun.exists_vertical_functional | exact GlobalTheory.VertFun.exists_vertical_functional | (intros; apply GlobalTheory.VertFun.exists_vertical_functional <;> assumption)
+  exact @GlobalTheory.VertFun.exists_vertical_functional

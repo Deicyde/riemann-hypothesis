@@ -22,4 +22,4 @@ theorem _root_.GlobalTheory.T.exists_level_change_map : ∀ (E : Type) [Field E]
       (r₀ : Xo'.X ⟶ Xo.X) (_ : SABMap Xo'.univ.t Xo.univ.t r₀),
       r ≫ pullback.fst _ _ = pullback.fst _ _ ≫ r₀ ∧ IsFinite (pullback.lift r _ h) ∧ Etale (pullback.lift r _ h) ∧
         Surjective (pullback.lift r _ h) := by
-  first | exact @GlobalTheory.LevelMapBase.levelMap_coeff_le | exact GlobalTheory.LevelMapBase.levelMap_coeff_le | (intros; apply GlobalTheory.LevelMapBase.levelMap_coeff_le <;> assumption)
+  exact @GlobalTheory.LevelMapBase.levelMap_coeff_le

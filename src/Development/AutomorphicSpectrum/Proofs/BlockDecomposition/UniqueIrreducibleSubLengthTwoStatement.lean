@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.unique_irreducible_sub_length_two : (∀ (k : Type
           S'.toRepresentation.IsIrreducible → S' = S) ∧
         Nonempty ((jac (GlobalTheory.Published.consecBlocks 2 d) S.toRepresentation).Equiv (piTensor (segTerm σ.ρ 2)))) →
   GlobalTheory.Published.SegmentRepresentation := by
-  first | exact @GlobalTheory.CompanionTheory.SegZRep.segmentRepresentation_of_two | exact GlobalTheory.CompanionTheory.SegZRep.segmentRepresentation_of_two | (intros; apply GlobalTheory.CompanionTheory.SegZRep.segmentRepresentation_of_two <;> assumption)
+  exact @GlobalTheory.CompanionTheory.SegZRep.segmentRepresentation_of_two

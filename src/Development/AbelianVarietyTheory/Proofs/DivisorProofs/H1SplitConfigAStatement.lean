@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.indLineFin_alpha_of_isMatched_of_nonempty_algHom :
       (om₁ : Rep σ G₁.V G₁.W) (om₁' : Rep σ G₁.V' G₁.W) (R₁ : RealMaps F b a') (Rf₁ : FinMaps F b a'),
       IsMatched B G X om om' R Rf → IsMatched B G₁ X om₁ om₁' R₁ Rf₁ →
       ∀ v : Pl F, Nonempty (E →ₐ[F] Fv F v) → IndLineFin v om om₁ (Rf.p v) (Rf₁.p v) H' X.α ((a' : ℝ) / 2) := by
-  first | exact @GlobalTheory.IndLineSplitA.main | exact GlobalTheory.IndLineSplitA.main | (intros; apply GlobalTheory.IndLineSplitA.main <;> assumption)
+  exact @GlobalTheory.IndLineSplitA.main

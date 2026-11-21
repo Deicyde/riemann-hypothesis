@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.eisenstein_transverse_term_formula : ∀ (F E : Ty
     ∀ T, GlobalTheory.EisCT.IsTransv σ J (col0 X) T → ∀ ν ∈ ratPts σ J, ν ∈ unipRad σ J (col0 X) → ∀ (s : ℝ) (g : GAd σ J),
       ∑' t : GlobalTheory.EisCT.midSet σ J (col0 X) T, ENNReal.ofReal (h (t.1.1 * (ν * g)) ^ s) =
         ∑' t : GlobalTheory.EisCT.midSet σ J (col0 X) T, ENNReal.ofReal (h (t.1.1 * g) ^ s) := by
-  first | exact @GlobalTheory.EisCTMid.midSumReal_left_invariant | exact GlobalTheory.EisCTMid.midSumReal_left_invariant | (intros; apply GlobalTheory.EisCTMid.midSumReal_left_invariant <;> assumption)
+  exact @GlobalTheory.EisCTMid.midSumReal_left_invariant

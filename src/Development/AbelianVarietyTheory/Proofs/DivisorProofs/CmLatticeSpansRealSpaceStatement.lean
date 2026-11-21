@@ -24,4 +24,4 @@ theorem _root_.GlobalTheory.T.cm_lattice_spans_real_space : ∀ (K : Type) [Fiel
           N⁻¹ * ∑ i, h i * (φ i x * starRingEnd ℂ (φ i x')).im) →
         ∃ h' : I → ℝ, Hm = Matrix.diagonal (fun j ↦ (h' (e j) : ℂ)) ∧
           ∀ i, g ((h i : ℂ) * (Real.sqrt d : ℝ)) = (N : ℂ) * ((h' i : ℂ) * (Real.sqrt d : ℝ)) := by
-  first | exact @GlobalTheory.HermDiagCM.diagonal_of_conj_form | exact GlobalTheory.HermDiagCM.diagonal_of_conj_form | (intros; apply GlobalTheory.HermDiagCM.diagonal_of_conj_form <;> assumption)
+  exact @GlobalTheory.HermDiagCM.diagonal_of_conj_form

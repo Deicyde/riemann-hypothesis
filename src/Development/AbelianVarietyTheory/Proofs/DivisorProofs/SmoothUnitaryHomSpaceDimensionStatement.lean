@@ -17,4 +17,4 @@ theorem _root_.GlobalTheory.T.smooth_unitary_hom_space_dimension : GlobalTheory.
         (∀ (g : GL (Fin n) k) (h : GL (Fin d) k) (Ψ Ψ' : GlobalTheory.SplitWeil.SB (Matrix (Fin n) (Fin d) k)),
           (Ψ' : Matrix (Fin n) (Fin d) k → ℂ) = GlobalTheory.SplitFlip.omB ν α g h Ψ → ∀ u, P' Ψ' (π h u) = ρ' g (P' Ψ u)) →
         Nonempty (ρ.Equiv ρ') := by
-  first | exact @GlobalTheory.HoweFlipPair.uniq | exact GlobalTheory.HoweFlipPair.uniq | (intros; apply GlobalTheory.HoweFlipPair.uniq <;> assumption)
+  exact @GlobalTheory.HoweFlipPair.uniq

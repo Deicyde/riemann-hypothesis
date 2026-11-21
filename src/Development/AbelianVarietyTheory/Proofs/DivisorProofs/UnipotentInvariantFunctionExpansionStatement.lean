@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.unipotent_invariant_function_expansion : ∀ (F E 
     ∀ (μ' : Measure (unipRad σ J (col0 X))) (𝓕' : Set (unipRad σ J (col0 X))), μ'.IsHaarMeasure →
       IsFundamentalDomain ((ratPts σ J).subgroupOf (unipRad σ J (col0 X))) 𝓕' μ' → μ' 𝓕' = 1 →
     ∫ u in 𝓕, Φ u ∂μ = ∫ u in 𝓕', Φ u ∂μ' := by
-  first | exact @GlobalTheory.EisCT.Indep.integral_indep | exact GlobalTheory.EisCT.Indep.integral_indep | (intros; apply GlobalTheory.EisCT.Indep.integral_indep <;> assumption)
+  exact @GlobalTheory.EisCT.Indep.integral_indep

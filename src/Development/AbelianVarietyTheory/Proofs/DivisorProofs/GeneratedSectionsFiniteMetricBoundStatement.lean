@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.generated_sections_finite_metric_bound : ∀ (F : 
       ∀ (v : HeightOneSpectrum (𝓞 F)) (e : Ext v) (y : AlgPt Y), ∃ j,
         Real.exp (-c v) ≤ e.w (valAt y.1 (s j * (eqn A.D (below y.1) : Y.Fn) ^ (k : ℕ))) *
           Real.exp ((k : ℕ) * A.lg v e y) := by
-  first | exact @GlobalTheory.TrueGeo.FinLow.main | exact GlobalTheory.TrueGeo.FinLow.main | (intros; apply GlobalTheory.TrueGeo.FinLow.main <;> assumption)
+  exact @GlobalTheory.TrueGeo.FinLow.main

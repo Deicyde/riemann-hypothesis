@@ -25,4 +25,4 @@ theorem _root_.GlobalTheory.T.bottom_triangle_nonzero_constant_first : GlobalThe
               X.I' W.ψ W.θ s (GlobalTheory.BotFormula.minorF ea ed T') g =
                 Ω₁ * ∑ᶠ x, ((GlobalTheory.NormSum.gam D (GlobalTheory.NormSum.intG D P'.a) x.out : ℂ))⁻¹ *
                   X.ker' W.ψ W.θ s (GlobalTheory.BotFormula.minorF ea ed T') g (gx x) := by
-  first | exact @GlobalTheory.BotClassSumSmall.classSum_small | exact GlobalTheory.BotClassSumSmall.classSum_small | (intros; apply GlobalTheory.BotClassSumSmall.classSum_small <;> assumption)
+  exact @GlobalTheory.BotClassSumSmall.classSum_small

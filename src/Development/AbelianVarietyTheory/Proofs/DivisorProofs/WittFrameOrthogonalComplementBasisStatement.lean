@@ -21,4 +21,4 @@ theorem _root_.GlobalTheory.T.witt_frame_orthogonal_complement_basis : ∀ (F E 
       Q * X = 0 ∧ Q * Y = 0 ∧ Q * I = 1 ∧ (cT (σ : E →+* E) I * J * I) * Q = cT (σ : E →+* E) I * J ∧
       X * (cT (σ : E →+* E) Y * J) + I * Q + Y * (cT (σ : E →+* E) X * J) = 1 ∧
       IsHermND σ (cT (σ : E →+* E) I * J * I) := by
-  first | exact @GlobalTheory.WittCompl.exists_complement_data | exact GlobalTheory.WittCompl.exists_complement_data | (intros; apply GlobalTheory.WittCompl.exists_complement_data <;> assumption)
+  exact @GlobalTheory.WittCompl.exists_complement_data

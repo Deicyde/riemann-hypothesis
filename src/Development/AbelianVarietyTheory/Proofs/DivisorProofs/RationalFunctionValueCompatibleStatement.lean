@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.rational_function_value_compatible : ∀ {k : Type
     (σ : k →+* ℂ) (z : CxPts (πG ≫ qX) σ) (y : CxPts qX σ), y.1 = z.1 ≫ πG → ∀ f : X.functionField,
     (RegAt (under y) f → RegAt (under z) (φ f) ∧ ratVal (φ f) z = ratVal f y) ∧
       (UnitAt (under y) f → UnitAt (under z) (φ f)) := by
-  first | exact @GlobalTheory.RatValPull.regAt_ratVal_pull | exact GlobalTheory.RatValPull.regAt_ratVal_pull | (intros; apply GlobalTheory.RatValPull.regAt_ratVal_pull <;> assumption)
+  exact @GlobalTheory.RatValPull.regAt_ratVal_pull

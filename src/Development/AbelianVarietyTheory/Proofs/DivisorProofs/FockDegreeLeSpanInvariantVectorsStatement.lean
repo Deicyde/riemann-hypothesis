@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.fock_degree_le_span_invariant_vectors : ∀ (F E :
     B.IsGood σ → X.IsHerm σ B r s → W.IsSkew σ B r' s' → M.IsGood B.ψ → M.IsWeil B.ψ χ₁ χ₂ om →
     ∀ k ∈ KInf σ W B.emb, ∀ j : ℕ, fockDeg M B.ψ B.emb j ≤ Submodule.span ℂ {f | f ∈ fockDeg M B.ψ B.emb j ∧
       ∃ c : ℂ, ∀ f₁ : SInf F (Fin n × Fin d), Acts (evI F) (om (1, k)) (⇑f) (⇑f₁) → f₁ = c • f} := by
-  first | exact @GlobalTheory.FockDiag.fockDeg_le_span_eigen | exact GlobalTheory.FockDiag.fockDeg_le_span_eigen | (intros; apply GlobalTheory.FockDiag.fockDeg_le_span_eigen <;> assumption)
+  exact @GlobalTheory.FockDiag.fockDeg_le_span_eigen

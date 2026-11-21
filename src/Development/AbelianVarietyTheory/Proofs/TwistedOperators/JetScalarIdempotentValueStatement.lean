@@ -24,4 +24,4 @@ theorem _root_.GlobalTheory.T.jet_scalar_idempotent_value : GlobalTheory.FunPr.H
     SuppAt e _ (s : GA D (ch.G.V p.small)) → SuppAt e _ (s' : GA D (ch.G.V p.big)) →
     ∃ c : ℂ, Mod1All c ∧ (∀ (q : ℕ) [Fact q.Prime], GlobalTheory.MovedKappaEx.OffPrime e q → GlobalTheory.MovedKappaEx.UnitAt q c) ∧
       GlobalTheory.MovedKappaEx.JetKap ch p (s * x) (s' * y) (c * κ) := by
-  first | exact @GlobalTheory.SplitMoveKappa.moved_split | exact GlobalTheory.SplitMoveKappa.moved_split | (intros; apply GlobalTheory.SplitMoveKappa.moved_split <;> assumption)
+  exact @GlobalTheory.SplitMoveKappa.moved_split

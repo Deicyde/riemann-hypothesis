@@ -22,4 +22,4 @@ theorem _root_.GlobalTheory.T.matched_maps_gaussian_sum : GlobalTheory.FunPr.Hyp
         StrictMono N → (∀ i, GlobalTheory.Published.ThetaSub om' v (N i)) → m ≤ L) ∧
       ∀ N : Submodule ℂ ((Fin a' × Fin (a + a') → Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes.Fv F v) → ℂ), GlobalTheory.Published.ThetaSub om' v N →
         N ≠ GlobalTheory.WeilM.SB _ → ∀ φ ∈ N, Rf.p' v φ = 0 := by
-  first | exact @GlobalTheory.HoweSplitSmall.howe_split_ker_small | exact GlobalTheory.HoweSplitSmall.howe_split_ker_small | (intros; apply GlobalTheory.HoweSplitSmall.howe_split_ker_small <;> assumption)
+  exact @GlobalTheory.HoweSplitSmall.howe_split_ker_small

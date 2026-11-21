@@ -20,4 +20,4 @@ theorem _root_.GlobalTheory.T.conjugate_filtration_de_rham_first : ∀ (p : ℕ)
       GlobalTheory.ConjSeq.frobDR p Γ(T, V) (GlobalTheory.SS.FrobField.cast_zero (GlobalTheory.VB.natCast_eq_zero T p (ZMod p)) V)
         (onAff A hV) (e V hV s)) →
     Ψ ≫ cokernel.π C.incl = 0 := by
-  first | exact @GlobalTheory.ConjSeq.frobLin_comp_cokernel_π_eq_zero | exact GlobalTheory.ConjSeq.frobLin_comp_cokernel_π_eq_zero | (intros; apply GlobalTheory.ConjSeq.frobLin_comp_cokernel_π_eq_zero <;> assumption)
+  exact @GlobalTheory.ConjSeq.frobLin_comp_cokernel_π_eq_zero

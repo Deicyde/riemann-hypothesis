@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.separate_points_smooth_finite_span : ∀ (F E : Ty
         (∀ w ∈ V, Continuous w ∧ GlobalTheory.UAut.IsSm σ J w ∧
           (∃ U : Subgroup (GAd σ J), IsOpen (U : Set (GAd σ J)) ∧ ∀ u ∈ U, u ∈ finPts σ J → ∀ g, w (g * u) = w g) ∧
           ∀ k ∈ Kc, (fun g => w (k * g)) ∈ V ∧ (fun g => w (g * k)) ∈ V) ∧ ∃ f ∈ V, f x ≠ f y := by
-  first | exact @GlobalTheory.FinSep.exists_finDim_separating | exact GlobalTheory.FinSep.exists_finDim_separating | (intros; apply GlobalTheory.FinSep.exists_finDim_separating <;> assumption)
+  exact @GlobalTheory.FinSep.exists_finDim_separating

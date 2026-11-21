@@ -11,4 +11,4 @@ theorem _root_.GlobalTheory.T.locally_constant_max_compact_action : ∀ {F E : T
     ∀ (K : Subgroup (UA σ G.V'.J)), IsStab B K → ∀ φ ∈ SB (Fin a' × Fin (a + a') → Fv F B.v₁),
       IsLocallyConstant (fun k : KAt K (evFin F B.v₁) => locOp B.v₁ (om' (k.1, 1)) φ) ∧
         (Set.range fun k : KAt K (evFin F B.v₁) => locOp B.v₁ (om' (k.1, 1)) φ).Finite := by
-  first | exact @GlobalTheory.KPartLocConst.locOp_kpart | exact GlobalTheory.KPartLocConst.locOp_kpart | (intros; apply GlobalTheory.KPartLocConst.locOp_kpart <;> assumption)
+  exact @GlobalTheory.KPartLocConst.locOp_kpart

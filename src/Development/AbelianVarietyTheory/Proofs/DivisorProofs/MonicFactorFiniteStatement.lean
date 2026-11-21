@@ -9,4 +9,4 @@ open GlobalTheory.SiegelSet GlobalTheory.UAut GlobalTheory.LeviHC
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.monicFactorFinite' : MonicFactorFinite := by
-  first | exact @GlobalTheory.LeviHC.monicFactorFinite | exact GlobalTheory.LeviHC.monicFactorFinite | (intros; apply GlobalTheory.LeviHC.monicFactorFinite <;> assumption)
+  exact @GlobalTheory.LeviHC.monicFactorFinite

@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.jacquet_subquotient_restriction : GlobalTheory.Pub
     ∀ (Y : Type) [AddCommGroup Y] [Module ℂ Y] (η : Representation ℂ (GL (Fin n) k) Y) (f : Q.IntertwiningMap η), f ≠ 0 →
       ∃ ρ : GlobalTheory.CuspRep.SmIrr (GL (Fin n) k), IsSubquotient ρ.ρ ((jacU (tripPlace h) π).comp (midHom k l n N)) ∧
         ∃ g : ρ.ρ.IntertwiningMap η, g ≠ 0 := by
-  first | exact @GlobalTheory.MidIrr.exists_smIrr_subquotient_map | exact GlobalTheory.MidIrr.exists_smIrr_subquotient_map | (intros; apply GlobalTheory.MidIrr.exists_smIrr_subquotient_map <;> assumption)
+  exact @GlobalTheory.MidIrr.exists_smIrr_subquotient_map

@@ -22,4 +22,4 @@ theorem _root_.GlobalTheory.T.config_a_idele_unit_integral_identity : ∀ {F E :
       ∃ γ : Matrix (Fin (b + 2)) (Fin (b + 2 + a')) (AE F E), At (evFin F v) γ ∧ γ ∈ iso0 (F := F) (b + 2) H' ∧
         γ ∈ latAtV G.V G.W v ∧
         GlobalTheory.LatVac.psiAt B.ψ v (evFin F v (symp (cA σ) (-1) (incM F G.V.J) (incM F G.W.J) γ (shiftA H H' l))) ≠ 1 := by
-  first | exact @GlobalTheory.SuppOut.exists_lat_pair_ne_one | exact GlobalTheory.SuppOut.exists_lat_pair_ne_one | (intros; apply GlobalTheory.SuppOut.exists_lat_pair_ne_one <;> assumption)
+  exact @GlobalTheory.SuppOut.exists_lat_pair_ne_one

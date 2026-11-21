@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.rankinSelbergThetaIntegral_unfold_mirabolic : ∀ 
     (∀ γ g, φ' (ratGL E (m + 1) γ * g) = φ' g) → ∀ (N : ℕ) (Φ : (Fin (m + 1) → Cinf E) → ℂ), Continuous Φ → ∀ x : ℝ,
     ∫⁻ g in 𝓕P, ‖Psi φ φ' Φ N g (GlobalTheory.ZEul.lastRow g) * (detPow E (m + 1) x g : ℂ)‖ₑ ∂μ ≠ ⊤ →
     Zint μ 𝓕 φ φ' Φ N x = ∫ g in 𝓕P, Psi φ φ' Φ N g (GlobalTheory.ZEul.lastRow g) * (detPow E (m + 1) x g : ℂ) ∂μ := by
-  first | exact @GlobalTheory.ZUnfTheta.zint_eq_mirabolic | exact GlobalTheory.ZUnfTheta.zint_eq_mirabolic | (intros; apply GlobalTheory.ZUnfTheta.zint_eq_mirabolic <;> assumption)
+  exact @GlobalTheory.ZUnfTheta.zint_eq_mirabolic

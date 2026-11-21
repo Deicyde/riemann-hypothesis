@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.triple_pair_local_part_case_a : GlobalTheory.FunPr
         (∃ C : Set (Fv F v ⊗[F] E), IsCompact C ∧ ∀ x ∉ C, Gh x = 0) ∧
         ∀ l ∈ idelesAt E (evFin F v), ev v (locOp v (G.M.co.rho B.ψ (partFin v (shiftA H H' l))) ψ) =
           Gh ((GlobalTheory.Doubling.unitFin F E v l : (Fv F v ⊗[F] E)ˣ) : Fv F v ⊗[F] E) := by
-  first | exact @GlobalTheory.LamSupp.lam_supp | exact GlobalTheory.LamSupp.lam_supp | (intros; apply GlobalTheory.LamSupp.lam_supp <;> assumption)
+  exact @GlobalTheory.LamSupp.lam_supp

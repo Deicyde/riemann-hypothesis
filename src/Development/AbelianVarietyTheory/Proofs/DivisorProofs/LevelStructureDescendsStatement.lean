@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.level_structure_descends : ∀ {F : Type} [Field F
     (∀ (Ω : Type) [Field Ω] [IsAlgClosed Ω] (t : Sp Ω ⟶ S), ∃ t₀ : Sp Ω ⟶ S₀, t₀ ≫ b = t) →
     ∀ {N : ℕ} (α₀ : X₀.Level N) (q : Fin 2 → (𝟙_ (Over S) ⟶ X.A)), (∀ k, q k ^ N = 1) →
     (∀ k, (α₀.pt k).left ≫ i = b ≫ (q k).left) → Nonempty (X.Level N) := by
-  first | exact @GlobalTheory.RealMult.level_descend | exact GlobalTheory.RealMult.level_descend | (intros; apply GlobalTheory.RealMult.level_descend <;> assumption)
+  exact @GlobalTheory.RealMult.level_descend

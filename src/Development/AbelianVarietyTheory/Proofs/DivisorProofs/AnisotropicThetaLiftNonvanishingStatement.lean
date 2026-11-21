@@ -18,4 +18,4 @@ theorem _root_.GlobalTheory.T.anisotropic_theta_lift_nonvanishing : GlobalTheory
       ∀ c₀ : E, c₀ ≠ 0 → ∀ φ' : GAd σ (c₀ • G.W.J.map σ) → ℂ,
         (∀ (g : UA σ G.W.J) (g' : GAd σ (c₀ • G.W.J.map σ)), g.1 = g'.1 → φ' g' = G.M.I om Φ g - c * G.M'.I om' Φ' g) →
         GlobalTheory.SiegelSet.IsCuspidal σ (c₀ • G.W.J.map σ) φ' := by
-  first | exact @GlobalTheory.ThKOrthCusp.cusp | exact GlobalTheory.ThKOrthCusp.cusp | (intros; apply GlobalTheory.ThKOrthCusp.cusp <;> assumption)
+  exact @GlobalTheory.ThKOrthCusp.cusp

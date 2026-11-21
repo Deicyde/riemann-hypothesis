@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.lattice_deformation_multiplication : ∀ (Ω : Typ
       ∀ z ∈ V', ∀ a (M : (Fin g → ℂ) →ₗ[ℂ] (Fin g → ℂ)),
         (∀ x x' : Λ, (x' : Fin g → ℂ) = (fun j ↦ ρ a j * (x : Fin g → ℂ) j) → τ z x' = M (τ z x)) →
         ∀ w, D z (M w) = fun j ↦ ρ a j * D z w j := by
-  first | exact @GlobalTheory.diag_coords_of_holomorphic_lattice_family | exact GlobalTheory.diag_coords_of_holomorphic_lattice_family | (intros; apply GlobalTheory.diag_coords_of_holomorphic_lattice_family <;> assumption)
+  exact @GlobalTheory.diag_coords_of_holomorphic_lattice_family

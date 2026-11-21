@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.frobenius_pullback_de_rham_map_exists : GlobalTheo
         (le_refl V) s)) =
       GlobalTheory.ConjSeq.frobDR p Γ(T, V) (GlobalTheory.SS.FrobField.cast_zero (GlobalTheory.VB.natCast_eq_zero T p (ZMod p)) V)
         (onAff A hV) (e V hV s) := by
-  first | exact @GlobalTheory.LinFrob.exists_linFrob | exact GlobalTheory.LinFrob.exists_linFrob | (intros; apply GlobalTheory.LinFrob.exists_linFrob <;> assumption)
+  exact @GlobalTheory.LinFrob.exists_linFrob

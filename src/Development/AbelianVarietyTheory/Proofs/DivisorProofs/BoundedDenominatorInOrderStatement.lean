@@ -16,4 +16,4 @@ open TensorProduct
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.bounded_denominator_in_order : ∀ (E : Type) [Field E] [NumberField E] [IsCMField E] (c : Ideal (OF E)), c ≠ ⊥ →
     ∀ x : E, ∃ n : ℕ, n ≠ 0 ∧ (n : E) * x ∈ orderC c := by
-  first | exact @GlobalTheory.ConductorMult.exists_natMul_mem_orderC | exact GlobalTheory.ConductorMult.exists_natMul_mem_orderC | (intros; apply GlobalTheory.ConductorMult.exists_natMul_mem_orderC <;> assumption)
+  exact @GlobalTheory.ConductorMult.exists_natMul_mem_orderC

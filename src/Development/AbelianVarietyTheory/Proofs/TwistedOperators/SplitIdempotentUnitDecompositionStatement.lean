@@ -25,4 +25,4 @@ theorem _root_.GlobalTheory.T.split_idempotent_unit_decomposition : GlobalTheory
     (Mod1All ((ch.G.chrS p x₀ : Circle) : ℂ) ∧ Mod1All ((ch.G.chrT p x₀ : Circle) : ℂ)) ∧
     ∀ (q : ℕ) [Fact q.Prime], GlobalTheory.MovedKappaEx.OffPrime e q →
       GlobalTheory.MovedKappaEx.UnitAt q ((ch.G.chrS p x₀ : Circle) : ℂ) ∧ GlobalTheory.MovedKappaEx.UnitAt q ((ch.G.chrT p x₀ : Circle) : ℂ) := by
-  first | exact @GlobalTheory.SplitCharValue.split_chars | exact GlobalTheory.SplitCharValue.split_chars | (intros; apply GlobalTheory.SplitCharValue.split_chars <;> assumption)
+  exact @GlobalTheory.SplitCharValue.split_chars

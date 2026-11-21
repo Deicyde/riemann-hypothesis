@@ -7,4 +7,4 @@ open ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestric
 open Formalism.MainNotions
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.one_measure_of_classicalTheorems : Hypotheses2 → ∀ D : D7, GlobalTheory.IndefiniteRowSideFullHecke.OneMeasureSizes.OneMeasure D := by
-  first | exact @GlobalTheory.OneMeasureAll.oneMeasure | exact GlobalTheory.OneMeasureAll.oneMeasure | (intros; apply GlobalTheory.OneMeasureAll.oneMeasure <;> assumption)
+  exact @GlobalTheory.OneMeasureAll.oneMeasure

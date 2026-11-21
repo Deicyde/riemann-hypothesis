@@ -10,4 +10,4 @@ theorem _root_.GlobalTheory.T.normal_noetherian_generic_fiber : ∀ (R K : Type)
     ReciprocityTheory.ChartRestriction.G.Geo.Tor.IsNormalScheme N → IsLocallyNoetherian N →
     ReciprocityTheory.ChartRestriction.G.Geo.Tor.IsNormalScheme (pullback g (spMap (algebraMap R K))) ∧
       IsLocallyNoetherian (pullback g (spMap (algebraMap R K))) := by
-  first | exact @GlobalTheory.GenFibre.normal_genericFibre | exact GlobalTheory.GenFibre.normal_genericFibre | (intros; apply GlobalTheory.GenFibre.normal_genericFibre <;> assumption)
+  exact @GlobalTheory.GenFibre.normal_genericFibre

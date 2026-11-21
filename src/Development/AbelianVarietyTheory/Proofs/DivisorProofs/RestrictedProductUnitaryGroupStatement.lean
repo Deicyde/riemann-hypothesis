@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.restricted_product_unitary_group : ∀ (F E : Type
       (fun _ => (compArch σ X.J).codRestrict (UAtSub σ X (evI F)) compArch_mem)
       (fun v => (compAt σ X.J v).codRestrict (UAtSub σ X (evFin F v)) (compAt_mem v))
       (fun v => K.subgroupOf (UAtSub σ X (evFin F v))) := by
-  first | exact @GlobalTheory.UnitaryRestr.isRestrGroup_UA | exact GlobalTheory.UnitaryRestr.isRestrGroup_UA | (intros; apply GlobalTheory.UnitaryRestr.isRestrGroup_UA <;> assumption)
+  exact @GlobalTheory.UnitaryRestr.isRestrGroup_UA

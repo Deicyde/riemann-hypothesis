@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.jet_morphism_determinant_generator : GlobalTheory.
         (v : Fin (Module.finrank ℚ F) → X.Lie) (v' : Fin (Module.finrank ℚ F) → X'.Lie),
         (∀ j, IsJetElt J X N m (x j) (d j) ∧ IsLieImage (x j) (v j).hom ∧ IsLieImage (crysToDR J.κ pull.grp (d j)) (v' j).hom) →
           δ'.1 v' = algebraMap R J.B (δ.1 v) := by
-  first | exact @GlobalTheory.JetGen.main | exact GlobalTheory.JetGen.main | (intros; apply GlobalTheory.JetGen.main <;> assumption)
+  exact @GlobalTheory.JetGen.main

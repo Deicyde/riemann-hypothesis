@@ -30,4 +30,4 @@ theorem _root_.GlobalTheory.T.adapted_plane_pair_vacuum : GlobalTheory.FunPr.Hyp
         ∃ l₁ : ((Fin n₁ × Fin d ⊕ Fin n₁ × Fin d → AF F) → ℂ) →ₗ[ℂ] ℂ, l₁ ∈ (adeleClass F).adm (Fin n₁ × Fin d ⊕ Fin n₁ × Fin d) ∧
         (∀ (z : Matrix (Fin n₁) (Fin d) (AE F E)), ∀ φ ∈ schA F (Fin n₁ × Fin d ⊕ Fin n₁ × Fin d), l₁ (dd₁.rho B.ψ (z * (diagCols (Fin d))ᵀ) φ) = l₁ φ) ∧
         ∃ Φ ∈ schA F (Fin n × Fin d ⊕ Fin n × Fin d), ∫ u, GlobalTheory.DblSiegelX.avgFun dd B.ψ (GlobalTheory.DblSiegelX.zs H) (l₁ ∘ₗ ed) Φ u ∂μ ≠ 0 := by
-  first | exact @GlobalTheory.DblSiegelNZ.main | exact GlobalTheory.DblSiegelNZ.main | (intros; apply GlobalTheory.DblSiegelNZ.main <;> assumption)
+  exact @GlobalTheory.DblSiegelNZ.main

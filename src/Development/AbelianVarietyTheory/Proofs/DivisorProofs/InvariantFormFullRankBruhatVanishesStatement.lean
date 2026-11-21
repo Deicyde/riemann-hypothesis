@@ -17,4 +17,4 @@ theorem _root_.GlobalTheory.T.invariant_form_full_rank_bruhat_vanishes : GlobalT
       (∀ (Ψ₁ : fullRk k n d) (Ψ₂ : SB (Matrix (Fin l) (Fin d) k)),
         (∀ Y : Matrix (Fin l) (Fin d) k, Y.rank < n → Ψ₂.1 Y = 0) → Bf Ψ₁ Ψ₂ = 0) →
       ∀ Ψ₁ Ψ₂, Bf Ψ₁ Ψ₂ = 0 := by
-  first | exact @GlobalTheory.RankStrata.pairing_eq_zero_of_kills_lowRank | exact GlobalTheory.RankStrata.pairing_eq_zero_of_kills_lowRank | (intros; apply GlobalTheory.RankStrata.pairing_eq_zero_of_kills_lowRank <;> assumption)
+  exact @GlobalTheory.RankStrata.pairing_eq_zero_of_kills_lowRank

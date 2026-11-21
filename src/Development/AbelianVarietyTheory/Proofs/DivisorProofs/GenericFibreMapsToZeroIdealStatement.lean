@@ -19,4 +19,4 @@ open CategoryTheory AlgebraicGeometry GlobalTheory GlobalTheory.Mean4O GlobalThe
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.generic_fibre_maps_to_zero_ideal : ∀ (F : Type) [Field F] [NumberField F] (X : Scheme.{0}) [IsIntegral X] (p : X ⟶ Sp (𝓞 F)) (e : ℕ),
     IsArithVar p e → ∀ z : X, GlobalTheory.SteinFibre.under z = ⊥ → (p z).asIdeal = ⊥ := by
-  first | exact @GlobalTheory.IsArithVar.asIdeal_eq_bot_of_under_eq_bot | exact GlobalTheory.IsArithVar.asIdeal_eq_bot_of_under_eq_bot | (intros; apply GlobalTheory.IsArithVar.asIdeal_eq_bot_of_under_eq_bot <;> assumption)
+  exact @GlobalTheory.IsArithVar.asIdeal_eq_bot_of_under_eq_bot

@@ -8,4 +8,4 @@ theorem _root_.GlobalTheory.T.cont_diff_of_partial_derivative_closure : ∀ (k :
       (∀ i, ContDiff ℝ ∞ (c i)) ∧ (∀ i, g i ∈ S) ∧
       ∀ t, HasDerivAt (fun s : ℝ => f (t + s • Pi.single j 1)) (∑ i, c i t * g i t) 0) →
     ∀ f ∈ S, ContDiff ℝ ∞ f := by
-  first | exact @GlobalTheory.contDiff_of_partials_in_smooth_span | exact GlobalTheory.contDiff_of_partials_in_smooth_span | (intros; apply GlobalTheory.contDiff_of_partials_in_smooth_span <;> assumption)
+  exact @GlobalTheory.contDiff_of_partials_in_smooth_span

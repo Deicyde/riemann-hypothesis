@@ -20,4 +20,4 @@ theorem _root_.GlobalTheory.T.bottom_triangle_theta_eval : GlobalTheory.FunPr.Hy
       (X : Tri T A A' WW), IsBottomTri W i j X → ∀ (t : T) (Pf : PolF D WW.rank A.rank) (g : Formalism.L2.Theta.GA D WW) (n : ℕ) (x : Formalism.MainNotions.StandardLatticesGL3.GA D n)
         (k : Formalism.L2.Theta.GA D A), x ∈ GlobalTheory.NormSum.intG D n → GlobalTheory.BotFormula.IsFinPt A k x →
         ∀ y, X.ker W.ψ W.θ t Pf g (y * k) = X.ker W.ψ W.θ t Pf g y := by
-  first | exact @GlobalTheory.BotBigLevel.ker_mul_level | exact GlobalTheory.BotBigLevel.ker_mul_level | (intros; apply GlobalTheory.BotBigLevel.ker_mul_level <;> assumption)
+  exact @GlobalTheory.BotBigLevel.ker_mul_level

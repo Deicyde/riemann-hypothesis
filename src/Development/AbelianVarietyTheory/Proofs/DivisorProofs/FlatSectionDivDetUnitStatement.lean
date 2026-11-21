@@ -22,4 +22,4 @@ open GlobalTheory.ProjVar GlobalTheory.TrueGeo GlobalTheory.Cartier GlobalTheory
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.flat_section_div_det_unit : ∀ (D : D7) (O : Setup D) (c : O.s.Comp) (B : ℝ) (τ : D.what₂.Tau) (z : (O.var c).X),
     UnitAt z (flatSec O.s O.Φ c τ / detFn O c B τ z) := by
-  first | exact @GlobalTheory.FlatSecCover.unitAt_flatSec_div_detFn | exact GlobalTheory.FlatSecCover.unitAt_flatSec_div_detFn | (intros; apply GlobalTheory.FlatSecCover.unitAt_flatSec_div_detFn <;> assumption)
+  exact @GlobalTheory.FlatSecCover.unitAt_flatSec_div_detFn

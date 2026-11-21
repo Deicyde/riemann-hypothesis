@@ -34,4 +34,4 @@ theorem _root_.GlobalTheory.T.seesaw_unfolding_doubling : GlobalTheory.FunPr.Hyp
     (∀ i, ActsD (evI D.host.F) (fun t => om (1, γ (Multiplicative.ofAdd t))) (f i) (f₁ i)) →
     IsDatum Γ.M ψ cA (∑ i, pure (f i) (φ i)) Φ →
     ∀ Φ'D, IsDatum Γ.M ψ cA Φ'D Φ' → Φ'D = ∑ i, pure (f₁ i) (φ i) := by
-  first | exact @GlobalTheory.SquareAgree.DatA.datum_lieDer | exact GlobalTheory.SquareAgree.DatA.datum_lieDer | (intros; apply GlobalTheory.SquareAgree.DatA.datum_lieDer <;> assumption)
+  exact @GlobalTheory.SquareAgree.DatA.datum_lieDer

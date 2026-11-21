@@ -19,4 +19,4 @@ open GlobalTheory.OpenOmega
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.spec_property_of_torsion_bijective : ∀ (p : ℕ) [Fact p.Prime] (R : Type) [CommRing R] (G : Over (Sp R)) [GrpObj G] (GG : PDivGroup p R) (θ : TorsionMap G GG) (n : ℕ) (hs : PtSurj θ n), PtInj θ n → SpecProp θ n hs := by
-  first | exact @GlobalTheory.OpenOmega.specProp_of_ptInj | exact GlobalTheory.OpenOmega.specProp_of_ptInj | (intros; apply GlobalTheory.OpenOmega.specProp_of_ptInj <;> assumption)
+  exact @GlobalTheory.OpenOmega.specProp_of_ptInj

@@ -18,4 +18,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.split_value_zero_diagonal_norm : ∀ (K : Type) [Field K] [NumberField K], Module.finrank ℚ K = 2 → ∀ (c : HeckeCharacter K) (v : Pl) (L : LM c v),
   L.ok → L.IsSp → ∀ (g : GL (Fin 2) (Qv v)) (κ : Kˣ),
     L.val (dg2 (nv v κ) 1 * g) 0 = c0 L κ * mp (nv v κ) (1 / 2) * L.val g 0 := by
-  first | exact @GlobalTheory.CompanionTheory.FexTheta.value_zero_diagonal_norm | exact GlobalTheory.CompanionTheory.FexTheta.value_zero_diagonal_norm | (intros; apply GlobalTheory.CompanionTheory.FexTheta.value_zero_diagonal_norm <;> assumption)
+  exact @GlobalTheory.CompanionTheory.FexTheta.value_zero_diagonal_norm

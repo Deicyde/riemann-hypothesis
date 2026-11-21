@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.galois_conjugate_holomorphic_uniformization : Glob
     ∃ u' : HolUnif X'.A (X'.diag c) n, ∀ (w : Fin n → ℂ) (v : epsR ℂ ⟶ X.A) (v' : epsR ℂ ⟶ X'.A),
       v'.left ≫ p = spMap (Chart.dualMapR (g : ℂ →+* ℂ)) ≫ v.left → u.IsDiff w v →
         u'.IsDiff (fun j ↦ g (Ω₀ * w j) / Ω₁) v' := by
-  first | exact @GlobalTheory.ConjTangent.exists_conj_holUnif_tangent | exact GlobalTheory.ConjTangent.exists_conj_holUnif_tangent | (intros; apply GlobalTheory.ConjTangent.exists_conj_holUnif_tangent <;> assumption)
+  exact @GlobalTheory.ConjTangent.exists_conj_holUnif_tangent

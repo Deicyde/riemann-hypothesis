@@ -17,4 +17,4 @@ theorem _root_.GlobalTheory.T.eisenstein_haar_stabilizer_unfolding : GlobalTheor
     IsStab B K → μK.IsHaarMeasure → μ.IsHaarMeasure →
     ∀ X om om' om₁ om₁', IsTriple B G X om om' → IsTriple B G₁ X om₁ om₁' →
     ∀ Φ' ∈ PolData B G.M' ⊓ G.M'.So B.ψ B.τ₁, ∀ h, DifferentiableOn ℂ (fun z => GlobalTheory.ConeSmall.coneI B G G₁ H H' e' K μK μ X.ν om' om₁' Φ' z h) {z : ℂ | 1 < z.re} := by
-  first | exact @GlobalTheory.ConeSmallHol.coneI_differentiableOn | exact GlobalTheory.ConeSmallHol.coneI_differentiableOn | (intros; apply GlobalTheory.ConeSmallHol.coneI_differentiableOn <;> assumption)
+  exact @GlobalTheory.ConeSmallHol.coneI_differentiableOn

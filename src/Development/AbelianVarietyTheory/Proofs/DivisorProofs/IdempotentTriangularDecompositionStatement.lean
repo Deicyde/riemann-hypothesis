@@ -8,4 +8,4 @@ theorem _root_.GlobalTheory.T.idempotent_triangular_decomposition : ∀ (F : Typ
     ∃ (b : Fin N → ι) (U L : Matrix (Fin N) (Fin N) F), (∀ i j, U i j ∈ R ∧ L i j ∈ R) ∧
       (∀ s, (e (b s)).mulVec (fun i => U i s) = fun i => U i s) ∧
       ∀ r s, b r = b s → (L * U) r s = if r = s then 1 else 0 := by
-  first | exact @GlobalTheory.exists_integral_block_bases_of_projectors | exact GlobalTheory.exists_integral_block_bases_of_projectors | (intros; apply GlobalTheory.exists_integral_block_bases_of_projectors <;> assumption)
+  exact @GlobalTheory.exists_integral_block_bases_of_projectors

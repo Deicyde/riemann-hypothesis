@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.det_generator_pullback_rule : ∀ {F : Type} [Fiel
     IsDPModel N s U α V → ∀ {R₀ : Type} [CommRing R₀] {k : ℕ} (r₀ : Rule (rapObj 𝔠) R₀ k)
     {W : M.Opens} (hW : IsAffineOpen W) {Y : Obj F 𝔠 (Sp Γ(M, W))} {φY : Y.A.left ⟶ U.A.left}, Y.IsPullBy U hW.fromSpec φY →
     ∀ {δY : Y.DetGen} {h h' : R₀ ⊗[ℤ] Γ(M, W)}, IsChartFun r₀ Y δY h → IsChartFun r₀ Y δY h' → h = h' := by
-  first | exact @GlobalTheory.RealMult.isChartFun_unique | exact GlobalTheory.RealMult.isChartFun_unique | (intros; apply GlobalTheory.RealMult.isChartFun_unique <;> assumption)
+  exact @GlobalTheory.RealMult.isChartFun_unique

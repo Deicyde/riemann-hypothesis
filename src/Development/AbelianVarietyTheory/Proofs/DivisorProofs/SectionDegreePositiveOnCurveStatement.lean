@@ -22,4 +22,4 @@ theorem _root_.GlobalTheory.T.section_degree_positive_on_curve : ∀ (k : Type) 
       [Algebra κ Γ(Z, ⊤)], topologicalKrullDim Z = 1 → ∀ (M : ReciprocityTheory.ChartRestriction.G.Semi.LB Z), M.IsLB → ∀ s : M.Sec,
       (∃ z, z ∈ ReciprocityTheory.ChartRestriction.G.Out.nonzeroLocus s) → (∃ z, z ∉ ReciprocityTheory.ChartRestriction.G.Out.nonzeroLocus s) →
       0 < topSelfIntersection κ M 1 := by
-  first | exact @GlobalTheory.CurveSecDeg.topSelf_pos_of_sec | exact GlobalTheory.CurveSecDeg.topSelf_pos_of_sec | (intros; apply GlobalTheory.CurveSecDeg.topSelf_pos_of_sec <;> assumption)
+  exact @GlobalTheory.CurveSecDeg.topSelf_pos_of_sec

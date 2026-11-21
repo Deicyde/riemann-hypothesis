@@ -20,4 +20,4 @@ theorem _root_.GlobalTheory.T.algebraic_endomorphism_corank_de_rham : GlobalTheo
       Module.rank Qb (HdR X₀.A ⧸ LinearMap.range (act (dp0 Qb) (𝟙 _) X₀.rm b - β • 1)) ≤ 2 ∧
       Disjoint (LinearMap.ker (act (dp0 Qb) (𝟙 _) X₀.rm b - β • 1))
         (LinearMap.range (act (dp0 Qb) (𝟙 _) X₀.rm b - β • 1)) := by
-  first | exact @GlobalTheory.DescRank.desc_of_baseChange | exact GlobalTheory.DescRank.desc_of_baseChange | (intros; apply GlobalTheory.DescRank.desc_of_baseChange <;> assumption)
+  exact @GlobalTheory.DescRank.desc_of_baseChange

@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.matched_local_induced_space_iso : GlobalTheory.ThK
           Acts (evFin F v) (om (1, h)) φ φ₁ → ∀ g : GL (Fin (a + a')) (Fv F v),
             (e (Rf.p v φ₁) : GL (Fin (a + a')) (Fv F v) → ℂ) g =
               (e (Rf.p v φ) : GL (Fin (a + a')) (Fv F v) → ℂ) (g * GlobalTheory.KSplit.locMat t c h) := by
-  first | exact @GlobalTheory.KSplitIdent.exists_equiv_indSp | exact GlobalTheory.KSplitIdent.exists_equiv_indSp | (intros; apply GlobalTheory.KSplitIdent.exists_equiv_indSp <;> assumption)
+  exact @GlobalTheory.KSplitIdent.exists_equiv_indSp

@@ -13,4 +13,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.local_span_translates_of_nonzero_schwartz : ∀ {F : Type} [Field F] [NumberField F] (ψ : AddChar (AF F) ℂ) (v : Pl F), Continuous (psiLoc ψ v) →
     (∃ x : Fv F v, psiLoc ψ v x ≠ 1) → ∀ {κ : Type} [Fintype κ] (φ₀ φ : (κ → Fv F v) → ℂ), φ₀ ∈ SB _ → φ₀ ≠ 0 →
     φ ∈ SB _ → φ ∈ Submodule.span ℂ (Set.range fun p => GlobalTheory.FinComm.locOp ψ v p φ₀) := by
-  first | exact @GlobalTheory.SchrCyclic.mem_span_locOp | exact GlobalTheory.SchrCyclic.mem_span_locOp | (intros; apply GlobalTheory.SchrCyclic.mem_span_locOp <;> assumption)
+  exact @GlobalTheory.SchrCyclic.mem_span_locOp

@@ -18,4 +18,4 @@ theorem _root_.GlobalTheory.T.alternating_pairing_on_lattice : ∀ (E : Type) [F
     ∃ ω₁ ω₂ : E, (∀ x, x ∈ lattice c y ↔ ∃ m ∈ dualLat 𝔞, ∃ β ∈ 𝔟.elt, x = (m : E) * ω₁ + (β : E) * ω₂) ∧
       ∀ m ∈ dualLat 𝔞, ∀ β ∈ 𝔟.elt, ∀ m' ∈ dualLat 𝔞, ∀ β' ∈ 𝔟.elt,
         P ((m : E) * ω₁ + (β : E) * ω₂) ((m' : E) * ω₁ + (β' : E) * ω₂) = β * m' - m * β' := by
-  first | exact @GlobalTheory.AltLattice.main | exact GlobalTheory.AltLattice.main | (intros; apply GlobalTheory.AltLattice.main <;> assumption)
+  exact @GlobalTheory.AltLattice.main

@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.archimedean_special_unitary_iso : ∀ (E : Type) [
         ((HA.mat (Ainf (maximalRealSubfield E)) (IsCMField.complexConj E).toAlgHom Gᵀ g.1 :
           GL (Fin r) (Ainf (maximalRealSubfield E) ⊗[maximalRealSubfield E] E)) :
             Matrix (Fin r) (Fin r) (Ainf (maximalRealSubfield E) ⊗[maximalRealSubfield E] E)).map (θ ρ) := by
-  first | exact @GlobalTheory.InfUnitarySU.infSU_equiv_realSU | exact GlobalTheory.InfUnitarySU.infSU_equiv_realSU | (intros; apply GlobalTheory.InfUnitarySU.infSU_equiv_realSU <;> assumption)
+  exact @GlobalTheory.InfUnitarySU.infSU_equiv_realSU

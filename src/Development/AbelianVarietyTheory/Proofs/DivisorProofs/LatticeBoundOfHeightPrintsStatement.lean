@@ -15,4 +15,4 @@ attribute [local instance] algPadicInt algPadicField towerPadic factPadic Global
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.lattice_bound_of_height : Hypotheses2 → GlobalTheory.CovHt.HTDiag.LatBound := by
-  first | exact @GlobalTheory.CovHt.HTLatB.latBound | exact GlobalTheory.CovHt.HTLatB.latBound | (intros; apply GlobalTheory.CovHt.HTLatB.latBound <;> assumption)
+  exact @GlobalTheory.CovHt.HTLatB.latBound

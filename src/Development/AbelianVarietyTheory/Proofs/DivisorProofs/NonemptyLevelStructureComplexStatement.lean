@@ -9,4 +9,4 @@ attribute [local instance] Over.cartesianMonoidalCategory
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.nonempty_level_structure_complex : ∀ (F : Type) [Field F] [NumberField F] [IsTotallyReal F] (𝔠 : FracId F) (N : ℕ), 1 ≤ N →
     ∀ X : Obj F 𝔠 (Sp ℂ), Nonempty (X.Level N) := by
-  first | exact @GlobalTheory.RealMult.Obj.nonempty_level_complex | exact GlobalTheory.RealMult.Obj.nonempty_level_complex | (intros; apply GlobalTheory.RealMult.Obj.nonempty_level_complex <;> assumption)
+  exact @GlobalTheory.RealMult.Obj.nonempty_level_complex

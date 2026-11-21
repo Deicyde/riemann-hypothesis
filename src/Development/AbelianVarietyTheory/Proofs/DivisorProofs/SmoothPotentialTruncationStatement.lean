@@ -10,4 +10,4 @@ open MvPolynomial Formalism.DegreeFormula Formalism.BasicNotions.DV Formalism.Ma
 open GlobalTheory.ArDegIndep
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.smooth_potential_truncation : Hypotheses2 → HypothesesH → OnObj fun D O A T H h => ∀ x' : GlobalTheory.ShFam.ToroidalCompactificationData O.s, ∀ R : ℝ, 2 ≤ R → ∀ (u : Wt O.Y) (c : O.Y.Comp), (T.M c).Smooth (psiOf h x' R u c) := by
-  first | exact @GlobalTheory.ArDegIndep.psiOf_smooth | exact GlobalTheory.ArDegIndep.psiOf_smooth | (intros; apply GlobalTheory.ArDegIndep.psiOf_smooth <;> assumption)
+  exact @GlobalTheory.ArDegIndep.psiOf_smooth

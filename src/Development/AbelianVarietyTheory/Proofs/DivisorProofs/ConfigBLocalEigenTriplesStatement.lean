@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.config_b_local_eigen_triples : GlobalTheory.FunPr.
         GlobalTheory.ThK.InfB.coneFun B G.M' om' ei' μ (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) l f (p * g) =
           (((absE F E t : ℝ) ^ (b + 1) : ℝ) : ℂ) *
             GlobalTheory.ThK.InfB.coneFun B G.M' om' ei' μ (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) l f g := by
-  first | exact @GlobalTheory.ThK.InfB.coneFun_mul_left | exact GlobalTheory.ThK.InfB.coneFun_mul_left | (intros; apply GlobalTheory.ThK.InfB.coneFun_mul_left <;> assumption)
+  exact @GlobalTheory.ThK.InfB.coneFun_mul_left

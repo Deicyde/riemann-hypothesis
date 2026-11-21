@@ -36,4 +36,4 @@ theorem _root_.GlobalTheory.T.skew_plane_measure_normalization : ∀ (F E : Type
       (IsCompact Kc ∧ (1 : GAd σ (c₀ • W.J.map σ)) ∈ Kc ∧ ∀ k ∈ Kc, ∀ k' ∈ K', k * k' ∈ Kc) ∧ (∃ U : Subgroup (GAd σ (c₀ • W.J.map σ)), IsOpen (U : Set (GAd σ (c₀ • W.J.map σ))) ∧ ∀ u ∈ U, u ∈ finPts σ (c₀ • W.J.map σ) → ∀ k ∈ Kc, k * u ∈ Kc ∧ ∀ i, a i (k * u) = a i k) ∧ (∀ i, ContinuousOn (a i) Kc) ∧ (∀ i, ∀ k ∈ Kc, ∀ (e : ℕ) (γ : Fin e → ℝ → GAd σ (c₀ • W.J.map σ)), (∀ j, GlobalTheory.SiegelSet.IsRealLine σ (c₀ • W.J.map σ) (γ j)) → (∀ j s, γ j s ∈ K') →
         ContDiff ℝ ((⊤ : ℕ∞) : WithTop ℕ∞) fun t : Fin e → ℝ => a i (k * (List.ofFn fun j => γ j (t j)).prod)) ∧ (∃ (e : ℕ) (b : Fin e → GAd σ (c₀ • W.J.map σ) → ℂ), (∀ j, ContinuousOn (b j) Kc) ∧ (∀ i, ∃ c : Fin e → ℂ, ∀ k ∈ Kc, a i k = ∑ j, c j * b j k) ∧
         ∀ j, ∀ k' ∈ K', ∃ c : Fin e → ℂ, ∀ k ∈ Kc, b j (k * k') = ∑ l, c l * b l k) := by
-  first | exact @GlobalTheory.ThK.InducedCons.exists_induced | exact GlobalTheory.ThK.InducedCons.exists_induced | (intros; apply GlobalTheory.ThK.InducedCons.exists_induced <;> assumption)
+  exact @GlobalTheory.ThK.InducedCons.exists_induced

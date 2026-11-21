@@ -32,4 +32,4 @@ theorem _root_.GlobalTheory.T.cm_abelian_variety_good_reduction_model : GlobalTh
     ∀ (i : I) (g : Fin n → R), g ∈ GlobalTheory.IndefiniteRowSideFullHecke.DifferentConductorValuations.eigLat (eH.conjRingEquiv.toRingHom.comp (act (dp0 R) (𝟙 _) cm)) (φK i) →
     ∃ (yv : HdR X.A) (w : ℂ), U.IsCMVec i yv w ∧ m.Corr (eH.symm g) yv ∧
       ((e i (hL.toLie X₀.rm (eH.symm g)) : R) : ℂ) = a i * w := by
-  first | exact @GlobalTheory.CMVecBC.isCMVec_of_mem_eigLat | exact GlobalTheory.CMVecBC.isCMVec_of_mem_eigLat | (intros; apply GlobalTheory.CMVecBC.isCMVec_of_mem_eigLat <;> assumption)
+  exact @GlobalTheory.CMVecBC.isCMVec_of_mem_eigLat

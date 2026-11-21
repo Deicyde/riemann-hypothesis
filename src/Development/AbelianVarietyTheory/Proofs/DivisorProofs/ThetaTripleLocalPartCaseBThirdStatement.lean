@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.theta_triple_local_part_case_b_third : GlobalTheor
       (∀ g₀ ∈ UAt σ G₁.V' (evFin F v), ∀ ψ ∈ SB (Fin b × Fin (a + b) → Fv F v), l (locOp v (om₁' (g₀, 1)) ψ) = l ψ) →
       ∀ φ ∈ SB (Fin (b + 2) × Fin (a + (b + 2)) → Fv F v), ∀ u ∈ unip σ G.V' H, u ∈ UAt σ G.V' (evFin F v) →
         ∀ g ∈ UAt σ G.V' (evFin F v), coneLin B G.M' om' v (ev' v) μ (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) l φ (u * g) = coneLin B G.M' om' v (ev' v) μ (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) l φ g := by
-  first | exact @GlobalTheory.ThK.LemF.ConeUnipB.coneLin_unip | exact GlobalTheory.ThK.LemF.ConeUnipB.coneLin_unip | (intros; apply GlobalTheory.ThK.LemF.ConeUnipB.coneLin_unip <;> assumption)
+  exact @GlobalTheory.ThK.LemF.ConeUnipB.coneLin_unip

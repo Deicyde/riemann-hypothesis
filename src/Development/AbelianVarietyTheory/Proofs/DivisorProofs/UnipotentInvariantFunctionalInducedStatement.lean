@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.unipotent_invariant_functional_induced : GlobalThe
     (∀ u : GL (Fin d) k, GlobalTheory.JacBlock₂.IsUnipStd u → ∀ f ∈ GlobalTheory.FullRankCoinv.indSp k n d ν, ℓ (fun h => f (h * u)) = ℓ f) →
     ∀ f ∈ GlobalTheory.FullRankCoinv.indSp k n d ν, ∃ p q : ℂ, ∀ x : kˣ,
       ℓ (fun h => f (h * GlobalTheory.JacBlock₂.diagFirst x)) = p + q * (((ν x)⁻¹ : ℂˣ) : ℂ) * GlobalTheory.SplitFlip.apow x (((d : ℂ) - 2 * (n : ℂ)) / 2) := by
-  first | exact @GlobalTheory.IndJacBlock.position_coeff | exact GlobalTheory.IndJacBlock.position_coeff | (intros; apply GlobalTheory.IndJacBlock.position_coeff <;> assumption)
+  exact @GlobalTheory.IndJacBlock.position_coeff

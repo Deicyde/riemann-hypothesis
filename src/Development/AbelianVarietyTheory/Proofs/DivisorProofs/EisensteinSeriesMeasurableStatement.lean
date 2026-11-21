@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.eisenstein_series_measurable : GlobalTheory.ThK.KP
     (B : Base F E) {n : ℕ} (X : Spc F E n) (r s' : ℕ), B.IsGood σ → X.IsHerm σ B r s' →
     ∀ K : Subgroup (UA σ X.J), IsStab B K → ∀ (x : Fin n → E) (Eis : ℂ → UA σ X.J → ℂ), GlobalTheory.ConeSmall.IsEisSer K x Eis →
     ∀ s : ℂ, ((n : ℝ) - 1) / 2 < s.re → Measurable (Eis s) := by
-  first | exact @GlobalTheory.ConeSmallMeas.eis_measurable | exact GlobalTheory.ConeSmallMeas.eis_measurable | (intros; apply GlobalTheory.ConeSmallMeas.eis_measurable <;> assumption)
+  exact @GlobalTheory.ConeSmallMeas.eis_measurable

@@ -9,4 +9,4 @@ theorem _root_.GlobalTheory.T.exists_geometric_point_algebraic : ∀ {A : Type} 
     [IsAlgClosed K'] (ι : B.residueField (f x) →+* K'),
     ∃ ψ₁ : A →+* K', spMap ψ₁ ≫ f = spMap ι ≫ B.fromSpecResidueField (f x) ∧
       ∀ r, @IsAlgebraic (B.residueField (f x)) K' _ _ ι.toAlgebra (ψ₁ r) := by
-  first | exact @GlobalTheory.exists_algebraic_point_of_fiber | exact GlobalTheory.exists_algebraic_point_of_fiber | (intros; apply GlobalTheory.exists_algebraic_point_of_fiber <;> assumption)
+  exact @GlobalTheory.exists_algebraic_point_of_fiber

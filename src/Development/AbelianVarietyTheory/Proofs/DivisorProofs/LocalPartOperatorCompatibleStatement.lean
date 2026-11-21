@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.local_part_operator_compatible : ∀ (F E : Type) 
       (∀ φ ∈ SB (Fin n × Fin d → Fv F v), ∃ φ₁ ∈ SB (Fin n × Fin d → Fv F v), Acts (evFin F v) T φ φ₁) →
       (∀ φ ∈ SB (Fin n₁ × Fin d₁ → Fv F v), ∃ φ₁ ∈ SB (Fin n₁ × Fin d₁ → Fv F v), Acts (evFin F v) T₁ φ φ₁) →
       ∀ φ ∈ SB (Fin n × Fin d → Fv F v), ev v (locOp v T φ) = locOp v T₁ (ev v φ) := by
-  first | exact @GlobalTheory.ThK.LemF.locLaw_of_globalLaw | exact GlobalTheory.ThK.LemF.locLaw_of_globalLaw | (intros; apply GlobalTheory.ThK.LemF.locLaw_of_globalLaw <;> assumption)
+  exact @GlobalTheory.ThK.LemF.locLaw_of_globalLaw

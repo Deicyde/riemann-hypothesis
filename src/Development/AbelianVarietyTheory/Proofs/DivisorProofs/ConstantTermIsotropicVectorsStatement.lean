@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.constant_term_isotropic_vectors : ∀ (F E : Type)
     ∀ (n : ℕ) (J : Matrix (Fin n) (Fin n) E), IsHermND σ J → ∀ φ : GAd σ J → ℂ, (∀ γ ∈ ratPts σ J, ∀ g, φ (γ * g) = φ g) →
       ∀ x₀ x : Matrix (Fin n) (Fin 1) E, x₀ ≠ 0 → Formalism.UG.cT (σ : E →+* E) x₀ * J * x₀ = 0 → x ≠ 0 →
         Formalism.UG.cT (σ : E →+* E) x * J * x = 0 → IsConstTerm σ J x₀ φ 0 → IsConstTerm σ J x φ 0 := by
-  first | exact @GlobalTheory.WittLineCT.isConstTerm_zero_of_isConstTerm_zero | exact GlobalTheory.WittLineCT.isConstTerm_zero_of_isConstTerm_zero | (intros; apply GlobalTheory.WittLineCT.isConstTerm_zero_of_isConstTerm_zero <;> assumption)
+  exact @GlobalTheory.WittLineCT.isConstTerm_zero_of_isConstTerm_zero

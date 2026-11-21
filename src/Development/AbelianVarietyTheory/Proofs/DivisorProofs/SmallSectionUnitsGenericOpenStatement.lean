@@ -22,4 +22,4 @@ theorem _root_.GlobalTheory.T.small_section_units_generic_open : ∀ (F : Type) 
     ∀ (V' : Cover Y) (π : V'.X ⟶ V.X) (hπ : π (genericPoint V'.X) ⤳ genericPoint V.X), Lies V' V π →
     ∀ (L : LB V'.X) (m : ℕ), NormsAt V' L p ⊤ (fun x => genAt A.D x ^ m) (fun v e y => m * A.lg v e y) →
       GlobalTheory.FrameGlue.PowOfFrames p (fun a => π ⁻¹ᵁ U a) (fun a => Units.map (GlobalTheory.TrueGeo.SmallSec.fnMap π hπ).toMonoidHom (c' a)) m L := by
-  first | exact @GlobalTheory.FrameGlue.powOfFrames_of_normsAt | exact GlobalTheory.FrameGlue.powOfFrames_of_normsAt | (intros; apply GlobalTheory.FrameGlue.powOfFrames_of_normsAt <;> assumption)
+  exact @GlobalTheory.FrameGlue.powOfFrames_of_normsAt

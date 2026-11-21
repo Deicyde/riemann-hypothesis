@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.parabolic_line_stabilizer_decomposition : ∀ (F E
     B.IsGood σ → X.IsHerm σ B r s → H.IsAdapted σ B X X₁ i₀ i₁ → ∀ K : Subgroup (UA σ X.J), IsStab B K →
     ∀ g ∈ UAt σ X (evI F), ∃ p ∈ UAt σ X (evI F), (∃ t : (AE F E)ˣ, mat p *ᵥ incV F H.x = t.1 • incV F H.x) ∧
       ∃ k ∈ KAt K (evI F), g = p * k := by
-  first | exact @GlobalTheory.IwasawaInf.exists_stab_mul_KAt | exact GlobalTheory.IwasawaInf.exists_stab_mul_KAt | (intros; apply GlobalTheory.IwasawaInf.exists_stab_mul_KAt <;> assumption)
+  exact @GlobalTheory.IwasawaInf.exists_stab_mul_KAt

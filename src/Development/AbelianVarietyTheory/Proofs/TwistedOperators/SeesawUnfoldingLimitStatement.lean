@@ -29,4 +29,4 @@ theorem _root_.GlobalTheory.T.seesaw_unfolding_limit : GlobalTheory.FunPr.Hypoth
     GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.IsTriple Bs Γ Xc om om' →
     ∀ Pi rf rl p p', IsMatch ψ θ A A₁ B α β ωA ωB Pi rf rl p p' →
     ∀ k ∈ GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.KInf D.sp.cm.sig Γ.W Bs.emb, ∀ Φ ∈ kerPD ψ θ A₁ B Bs Γ cB p', om' (1, k) Φ ∈ kerPD ψ θ A₁ B Bs Γ cB p' := by
-  first | exact @GlobalTheory.SquareAgree.KerStabCpt.stabCpt_mem_kerPD | exact GlobalTheory.SquareAgree.KerStabCpt.stabCpt_mem_kerPD | (intros; apply GlobalTheory.SquareAgree.KerStabCpt.stabCpt_mem_kerPD <;> assumption)
+  exact @GlobalTheory.SquareAgree.KerStabCpt.stabCpt_mem_kerPD

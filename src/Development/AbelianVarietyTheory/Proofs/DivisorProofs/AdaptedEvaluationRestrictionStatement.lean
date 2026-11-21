@@ -17,4 +17,4 @@ theorem _root_.GlobalTheory.T.adapted_evaluation_restriction : GlobalTheory.ThK.
     ∃ C : ℂ, C ≠ 0 ∧ ∀ φ ∈ schA F (Fin n × Fin d₁),
       Summable (fun w : Fin d₁ → E => thetaSum F (e' (M₁.co.rho B.ψ (Matrix.vecMulVec (incV F H.y) (incV F w)) φ))) ∧
       thetaSum F φ = C * ∑' w : Fin d₁ → E, thetaSum F (e' (M₁.co.rho B.ψ (Matrix.vecMulVec (incV F H.y) (incV F w)) φ)) := by
-  first | exact @GlobalTheory.ThKExpandX.thetaSum_eq_mixedX | exact GlobalTheory.ThKExpandX.thetaSum_eq_mixedX | (intros; apply GlobalTheory.ThKExpandX.thetaSum_eq_mixedX <;> assumption)
+  exact @GlobalTheory.ThKExpandX.thetaSum_eq_mixedX

@@ -7,4 +7,4 @@ open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.S
 open GlobalTheory.Toroidal GlobalTheory.Models GlobalTheory.LN GlobalTheory.ShFam GlobalTheory.LocM GlobalTheory.PolFan GlobalTheory.TorRef
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.detOm_isLB_of_ample : ∀ (E : Type) [Field E] [NumberField E] [IsCMField E] (H : Host E) (D : Datum H) (l : Level H) (Xo : Moduli D l) (c : Coeff l) (O : Type) [CommRing O] (β : O →+* c.F) (Y : Model Xo c β) (m : ℕ) (BD : GlobalTheory.EffCartierData Y.X), GlobalTheory.IsAmpleLB (polOf Y m BD) → (GlobalTheory.FlagMod.detOm Y).IsLB := by
-  first | exact @GlobalTheory.PolDet.isLB_detOm_of_ample | exact GlobalTheory.PolDet.isLB_detOm_of_ample | (intros; apply GlobalTheory.PolDet.isLB_detOm_of_ample <;> assumption)
+  exact @GlobalTheory.PolDet.isLB_detOm_of_ample

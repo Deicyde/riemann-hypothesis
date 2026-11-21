@@ -20,4 +20,4 @@ theorem _root_.GlobalTheory.T.hermitian_adapted_plane_seesaw : GlobalTheory.FunP
       (∀ u ∈ {u | ∃ z, u = Matrix.vecMulVec (incV F H.x) z}, ∀ Φ ∈ schA F (Fin n × Fin d), e' (M.co.rho B.ψ u Φ) = e' Φ) →
       (∀ l ∈ (adeleClass F).adm (Fin n₁ × Fin d), l ∘ₗ e' ∈ (adeleClass F).adm (Fin n × Fin d)) →
       ∃ c : ℂ, ∀ Φ ∈ schA F (Fin n × Fin d), e' Φ = c • e Φ := by
-  first | exact @GlobalTheory.MixXEvUniq.main | exact GlobalTheory.MixXEvUniq.main | (intros; apply GlobalTheory.MixXEvUniq.main <;> assumption)
+  exact @GlobalTheory.MixXEvUniq.main

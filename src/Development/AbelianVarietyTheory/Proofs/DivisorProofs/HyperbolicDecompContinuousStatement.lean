@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.hyperbolic_decomp_continuous : ∀ (F E : Type) [F
     ∀ f : (AE F E)ˣ × UA σ J₁ → Matrix (Fin n) (Fin n) (AE F E),
       (∀ p, f p *ᵥ incV F x = (p.1 : AE F E) • incV F x ∧ f p *ᵥ incV F y = cA σ ((p.1⁻¹ : (AE F E)ˣ) : AE F E) • incV F y ∧
         f p * incM F ι = incM F ι * mat p.2) → Continuous f := by
-  first | exact @GlobalTheory.LeviCont.levi_continuous | exact GlobalTheory.LeviCont.levi_continuous | (intros; apply GlobalTheory.LeviCont.levi_continuous <;> assumption)
+  exact @GlobalTheory.LeviCont.levi_continuous

@@ -24,4 +24,4 @@ theorem _root_.GlobalTheory.T.isCuspOn_translate_mem_sm : ∀ (F E : Type) [Fiel
       ∀ (ψ : GAd σ J → ℂ), GlobalTheory.StdPar.IsCuspOn σ J Xf Yf S K ψ → ∀ g₀ : GAd σ J,
         (∀ k : GlobalTheory.CuspRep.Kinf E d, g₀⁻¹ * ι (GlobalTheory.CuspRep.infGL E d (Unitary.toUnits k)) * g₀ ∈ K) →
         (fun x => ψ (ι x * g₀)) ∈ GlobalTheory.CuspRep.Sm E d := by
-  first | exact @GlobalTheory.CuspSmooth.mem_Sm_blockEmb | exact GlobalTheory.CuspSmooth.mem_Sm_blockEmb | (intros; apply GlobalTheory.CuspSmooth.mem_Sm_blockEmb <;> assumption)
+  exact @GlobalTheory.CuspSmooth.mem_Sm_blockEmb

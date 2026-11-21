@@ -9,4 +9,4 @@ theorem _root_.GlobalTheory.T.line_chern_product_sum : ∀ (E : Type) [NormedAdd
     (T : Type) [Fintype T] (f : T → E → ℝ) (y : E),
     (∀ τ, ContDiffAt ℝ 2 (f τ) y) → (∀ τ, 0 < f τ y) → ∀ ξ η,
       lineChern (fun x => ∏ τ, f τ x) y ξ η = ∑ τ, lineChern (f τ) y ξ η := by
-  first | exact @GlobalTheory.ChernProd.lineChern_prod | exact GlobalTheory.ChernProd.lineChern_prod | (intros; apply GlobalTheory.ChernProd.lineChern_prod <;> assumption)
+  exact @GlobalTheory.ChernProd.lineChern_prod

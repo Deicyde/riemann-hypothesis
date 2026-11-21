@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.siegel_lagrangian_vecMulVec_coords : ∀ (F E : Ty
     ∀ (w : Fin d → E) (t : Fin n × Fin (Module.finrank F E) → AF F),
       De (Matrix.vecMulVec (incV F w) (Sum.elim (GlobalTheory.SiegelConv.basisMap F E n t) (GlobalTheory.SiegelConv.basisMap F E n t))) =
         GlobalTheory.SiegelConv.extA (D ∘ₗ GlobalTheory.SiegelConv.vvMap F (n := n) w) t := by
-  first | exact @GlobalTheory.SiegelConv.De_vecMulVec_basisMap | exact GlobalTheory.SiegelConv.De_vecMulVec_basisMap | (intros; apply GlobalTheory.SiegelConv.De_vecMulVec_basisMap <;> assumption)
+  exact @GlobalTheory.SiegelConv.De_vecMulVec_basisMap

@@ -28,4 +28,4 @@ theorem _root_.GlobalTheory.T.toroidal_metrized_bundle_flag_pullback : Hypothese
             (adlOf (O.Φ.C c) (O.met.hm c)
               (rootSym O.S.Dw (ArIn.ind (setB O.Y B)) (some R) (DV.tauEmb D a.1) (cond a.2 0 O.j + i)))
             (VMetric.grLB (fl a) i ((H a).pull π rfl)) 1 := by
-  first | exact @GlobalTheory.CovTest.exists_base_flagInduces | exact GlobalTheory.CovTest.exists_base_flagInduces | (intros; apply GlobalTheory.CovTest.exists_base_flagInduces <;> assumption)
+  exact @GlobalTheory.CovTest.exists_base_flagInduces

@@ -27,4 +27,4 @@ theorem _root_.GlobalTheory.T.seesaw_weil_archimedean_factor : GlobalTheory.Publ
       ∀ R Rf, GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.IsMatched Bs Γ Xc om om' R Rf →
         (∀ g ∈ GfC X, ∀ Φ ∈ algF ψ θ true A B, GlobalTheory.TripleAssembly.mapA ψ e Bs Γ R Rf (ωA (1, g) Φ) = GlobalTheory.TripleAssembly.opFin ωA (algF ψ θ true A B) (GlobalTheory.TripleAssembly.mapA ψ e Bs Γ R Rf) g (GlobalTheory.TripleAssembly.mapA ψ e Bs Γ R Rf Φ)) ∧
           ∀ g ∈ GfC X, ∀ Φ ∈ algF ψ θ false A₁ B, GlobalTheory.TripleAssembly.mapB ψ e Bs Γ R Rf (ωB (1, g) Φ) = GlobalTheory.TripleAssembly.opFin ωA (algF ψ θ true A B) (GlobalTheory.TripleAssembly.mapA ψ e Bs Γ R Rf) g (GlobalTheory.TripleAssembly.mapB ψ e Bs Γ R Rf Φ) := by
-  first | exact @GlobalTheory.TripleAssembly.EqFin.mapA_mapB_equivariant_fin | exact GlobalTheory.TripleAssembly.EqFin.mapA_mapB_equivariant_fin | (intros; apply GlobalTheory.TripleAssembly.EqFin.mapA_mapB_equivariant_fin <;> assumption)
+  exact @GlobalTheory.TripleAssembly.EqFin.mapA_mapB_equivariant_fin

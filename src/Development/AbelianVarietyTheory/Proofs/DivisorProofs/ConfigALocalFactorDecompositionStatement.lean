@@ -27,4 +27,4 @@ theorem _root_.GlobalTheory.T.config_a_local_factor_decomposition : ∀ (F E : T
         coneInfInt B G.M om ei (shiftA H H') X.ν z f (compArch σ G.V.J k) (unitArch F E l) (fun i => evI F (y i)) *
           ∏ᶠ v, coneFinInt B G.M om v (ev v) (shiftA H H') X.ν z (φ v) (compAt σ G.V.J v k) (unitAt E v l)
             (fun i => evFin F v (y i)) := by
-  first | exact @GlobalTheory.ThK.ConeEulerFac.integrand_fac | exact GlobalTheory.ThK.ConeEulerFac.integrand_fac | (intros; apply GlobalTheory.ThK.ConeEulerFac.integrand_fac <;> assumption)
+  exact @GlobalTheory.ThK.ConeEulerFac.integrand_fac

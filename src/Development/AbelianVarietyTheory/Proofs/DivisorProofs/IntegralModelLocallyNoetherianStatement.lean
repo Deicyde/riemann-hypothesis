@@ -21,4 +21,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.integral_model_locally_noetherian : ∀ (E : Type) [Field E] [NumberField E] [IsCMField E] (H : Host E) (Dw : Datum H) (l' : Level H)
     (Xo' : Moduli Dw l') (c' : Coeff l') (W : ValuationSubring ℂ) (Y : Model Xo' c' (c'.V W).subtype) (p : ℕ),
     p.Prime → (p : ℂ) ∈ W.nonunits → IsLocallyNoetherian Y.X := by
-  first | exact @GlobalTheory.ModelNoeth.isLocallyNoetherian_model | exact GlobalTheory.ModelNoeth.isLocallyNoetherian_model | (intros; apply GlobalTheory.ModelNoeth.isLocallyNoetherian_model <;> assumption)
+  exact @GlobalTheory.ModelNoeth.isLocallyNoetherian_model

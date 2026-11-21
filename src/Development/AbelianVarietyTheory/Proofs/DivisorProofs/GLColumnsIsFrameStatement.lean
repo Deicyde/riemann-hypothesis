@@ -19,4 +19,4 @@ open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.S
 open GlobalTheory.FlagZ
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.GL_columns_isFrame : ∀ (N : ℕ) (X : Scheme.{0}) (U : X.Opens) (M : GL (Fin N) Γ(X, U)), GlobalTheory.VB.IsFrame (GlobalTheory.FlagZ.TautCell.colOn M.1) := by
-  first | exact @GlobalTheory.FlagZ.TautCell.isFrame_colOn | exact GlobalTheory.FlagZ.TautCell.isFrame_colOn | (intros; apply GlobalTheory.FlagZ.TautCell.isFrame_colOn <;> assumption)
+  exact @GlobalTheory.FlagZ.TautCell.isFrame_colOn

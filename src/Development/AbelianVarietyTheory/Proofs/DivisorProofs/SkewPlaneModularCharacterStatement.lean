@@ -36,4 +36,4 @@ theorem _root_.GlobalTheory.T.skew_plane_modular_character : ∀ (F E : Type) [F
         (∀ p, (φ p : GAd σ (c₀ • W.J.map σ)) ∈ ratPts σ (c₀ • W.J.map σ) ↔
           (p.1 : GAd σ (c₀ • W.J.map σ)) ∈ ratPts σ (c₀ • W.J.map σ) ∧
           (p.2 : GAd σ (c₀ • W₁.J.map σ)) ∈ ratPts σ (c₀ • W₁.J.map σ)) := by
-  first | exact @GlobalTheory.LeviSplit.leviOne_prod | exact GlobalTheory.LeviSplit.leviOne_prod | (intros; apply GlobalTheory.LeviSplit.leviOne_prod <;> assumption)
+  exact @GlobalTheory.LeviSplit.leviOne_prod

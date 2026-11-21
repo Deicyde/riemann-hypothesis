@@ -12,4 +12,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.arch_bound_coordinates : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [NumberField E] [Algebra F E], ∃ K : ℝ, 0 ≤ K ∧
     ∀ (y : AE F E) (B : ℝ), 0 ≤ B → (∀ (w : InfinitePlace F) (τ : EmbOver E w), ‖piInf τ y‖ ≤ B) →
     ∀ r w, ‖archAt F w ((coB F E).repr y r)‖ ≤ K * B := by
-  first | exact @GlobalTheory.ThetaDecay.Coord.coord_bound | exact GlobalTheory.ThetaDecay.Coord.coord_bound | (intros; apply GlobalTheory.ThetaDecay.Coord.coord_bound <;> assumption)
+  exact @GlobalTheory.ThetaDecay.Coord.coord_bound

@@ -7,4 +7,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.hecke_standard_twist : ∀ (hL : GlobalTheory.Published.LocalLanglandsGL) (D : D7) (P : Pin hL D), HeckeStdTw P.H.cover.B := by
-  first | exact @GlobalTheory.NPin.heckeStdTw_cover | exact GlobalTheory.NPin.heckeStdTw_cover | (intros; apply GlobalTheory.NPin.heckeStdTw_cover <;> assumption)
+  exact @GlobalTheory.NPin.heckeStdTw_cover

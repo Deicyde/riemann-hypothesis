@@ -9,4 +9,4 @@ theorem _root_.GlobalTheory.T.exists_finite_set_residue_log_bound : ∀ {F : Typ
     ∃ S : Finset (HeightOneSpectrum (𝓞 F)), (∀ v, v ∈ S ↔ resP v ∈ T) ∧
       ∑ v ∈ S, (-Real.log (NumberField.HeightOneSpectrum.adicAbv F v (resP v : F)) / Real.log (resP v)) * g (resP v) ≤
         (Module.finrank ℚ F : ℝ) * ∑ p ∈ T, g p := by
-  first | exact @GlobalTheory.PlaceSum.sum_localDeg_le | exact GlobalTheory.PlaceSum.sum_localDeg_le | (intros; apply GlobalTheory.PlaceSum.sum_localDeg_le <;> assumption)
+  exact @GlobalTheory.PlaceSum.sum_localDeg_le

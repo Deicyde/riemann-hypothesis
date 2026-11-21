@@ -34,4 +34,4 @@ theorem _root_.GlobalTheory.T.configuration_b_archimedean_integral : GlobalTheor
         ∀ k₁ ∈ KInf σ G₁.W B.emb, ∀ k ∈ KInf σ G.W B.emb, IsLevi H' 1 k₁ k → ∀ T T₁ : Tens F P Q R₀ S₀,
           Acts (evI F) (om₁ (1, k₁)) (Φ₁ T) (Φ₁ T₁) →
           Acts (evI F) (om (1, k)) (Φ (tensIncl F P Q r₀ s₀ T)) (Φ (tensIncl F P Q r₀ s₀ T₁)) := by
-  first | exact @GlobalTheory.FockInclK.tensIncl_acts | exact GlobalTheory.FockInclK.tensIncl_acts | (intros; apply GlobalTheory.FockInclK.tensIncl_acts <;> assumption)
+  exact @GlobalTheory.FockInclK.tensIncl_acts

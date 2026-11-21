@@ -11,4 +11,4 @@ theorem _root_.GlobalTheory.T.weight_norm_sq_smooth_pos : ∀ (E : Type) [Normed
     (A : E → Matrix (Fin n) (Fin n) ℂ),
     IsPosFrame U H → IsFlagFamily Y U π A → ∀ y ∈ Y, ∀ lam : Fin n → ℝ,
       ContDiffAt ℝ 2 (weightNormSq H π A lam) y ∧ 0 < weightNormSq H π A lam y := by
-  first | exact @GlobalTheory.WeightSmooth.weightNormSq_contDiffAt_pos | exact GlobalTheory.WeightSmooth.weightNormSq_contDiffAt_pos | (intros; apply GlobalTheory.WeightSmooth.weightNormSq_contDiffAt_pos <;> assumption)
+  exact @GlobalTheory.WeightSmooth.weightNormSq_contDiffAt_pos

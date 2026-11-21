@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.compact_torus_quotient_invariance : ∀ (G : Type)
     ∀ hn : (∀ t, ∀ q ∈ Q, (m t)⁻¹ * q * m t ∈ Q),
     (∀ μ : Measure Q, μ.IsHaarMeasure → ∀ t, μ.map (fun q : Q => (⟨(m t)⁻¹ * q * m t, hn t q q.2⟩ : Q)) = δ t • μ) →
     ∀ s, (GlobalTheory.ParabolicCoord.coordMeasure Q κ m δ μQ μT μK).map (fun x => m s * x) = GlobalTheory.ParabolicCoord.coordMeasure Q κ m δ μQ μT μK := by
-  first | exact @GlobalTheory.ParabolicCoord.coordMeasure_map_mul_left_m | exact GlobalTheory.ParabolicCoord.coordMeasure_map_mul_left_m | (intros; apply GlobalTheory.ParabolicCoord.coordMeasure_map_mul_left_m <;> assumption)
+  exact @GlobalTheory.ParabolicCoord.coordMeasure_map_mul_left_m

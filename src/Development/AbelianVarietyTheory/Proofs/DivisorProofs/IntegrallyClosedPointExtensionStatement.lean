@@ -30,4 +30,4 @@ theorem _root_.GlobalTheory.T.integrally_closed_point_extension : ∀ (E : Type)
         ∀ (β : P'.B →+* 𝓞_ℂ_[p]) (w : Sp 𝓞_ℂ_[p] ⟶ Y.t.G.left), P'.At x0 w β →
         ∀ z : GlobalTheory.ChTor.Pts P.A.A, z.left ≫ P.gen ≫ π = spMap (algebraMap 𝓞_ℂ_[p] ℂ_[p]) ≫ w →
           algebraMap 𝓞_ℂ_[p] ℂ_[p] (β b) = (weil P.A (p ^ n) (tt.lev n) z : ℂ_[p]) := by
-  first | exact @GlobalTheory.FlatModel.exists_weil_character | exact GlobalTheory.FlatModel.exists_weil_character | (intros; apply GlobalTheory.FlatModel.exists_weil_character <;> assumption)
+  exact @GlobalTheory.FlatModel.exists_weil_character

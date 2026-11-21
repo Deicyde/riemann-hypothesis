@@ -22,4 +22,4 @@ theorem _root_.GlobalTheory.T.pair_adapted_plane_second_form : GlobalTheory.ThK.
     ∀ Φ ∈ schA F (Fin n × Fin d), ∀ u' ∈ unip σ W H',
       ∫ u in 𝓕, thetaSum F (M₁.co.rho B.ψ (Matrix.vecMulVec (vf u) (incV F H'.x)) (e (om (1, u') Φ))) ∂μ =
         ∫ u in 𝓕, thetaSum F (M₁.co.rho B.ψ (Matrix.vecMulVec (vf u) (incV F H'.x)) (e Φ)) ∂μ := by
-  first | exact @GlobalTheory.NwAvgInv.avg_invariant | exact GlobalTheory.NwAvgInv.avg_invariant | (intros; apply GlobalTheory.NwAvgInv.avg_invariant <;> assumption)
+  exact @GlobalTheory.NwAvgInv.avg_invariant

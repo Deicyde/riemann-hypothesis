@@ -20,4 +20,4 @@ theorem _root_.GlobalTheory.T.diagonal_appell_humbert_real_mult : ∀ (F : Type)
         2 * ((Algebra.trace ℚ F ((c : F) * P l l') : ℚ) : ℝ)) ∧
       (∀ l l' : u.Λ, P l l' ∈ dualLat 𝔠) ∧
       (∀ t ∈ dualLat 𝔠, t ∈ Submodule.span (𝓞 F) {t | ∃ l l' : u.Λ, t = P l l'}) := by
-  first | exact @GlobalTheory.TorusRiem.riemannForm_eq_two_trace | exact GlobalTheory.TorusRiem.riemannForm_eq_two_trace | (intros; apply GlobalTheory.TorusRiem.riemannForm_eq_two_trace <;> assumption)
+  exact @GlobalTheory.TorusRiem.riemannForm_eq_two_trace

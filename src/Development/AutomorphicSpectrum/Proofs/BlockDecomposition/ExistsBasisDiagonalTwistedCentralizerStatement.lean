@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.exists_basis_diagonal_twisted_centralizer : ∀ (n
     (∀ t ∈ twCent (thC n) d, ∃ a : Fin n → ℂ, (P⁻¹ * t * P).val = Matrix.diagonal a) ∧
     (∀ X ∈ nilrad W₁ W₂, ∀ i, ((P⁻¹ : GL (Fin n) ℂ).val * X * P.val) i i = 0) ∧
     (∀ t ∈ twCent (thC n) d, img t W₁ = W₁ ∧ img t W₂ = W₂) := by
-  first | exact @GlobalTheory.CompanionTheory.LocVan.Frame.eigenframe | exact GlobalTheory.CompanionTheory.LocVan.Frame.eigenframe | (intros; apply GlobalTheory.CompanionTheory.LocVan.Frame.eigenframe <;> assumption)
+  exact @GlobalTheory.CompanionTheory.LocVan.Frame.eigenframe

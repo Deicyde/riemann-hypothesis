@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.rational_function_ratio_determined : ∀ (S : Type
     (∀ k : ℕ, 0 < k → ∃ (a : ℤ) (b : ℕ), 0 < b ∧ Nat.Coprime b k ∧ IsCoprime a (k : ℤ) ∧
       ∀ s, (∃ n : ℤ, (b : ℝ) / A * f s = n) ∧ ∃ n : ℤ, f' s - a * ((b : ℝ) / A * f s) = k * n) →
     (∃ s, f s ≠ 0 ∧ 0 < f s * f' s) → ∀ s, f' s = f s / A := by
-  first | exact @GlobalTheory.ConjArith.form_eq_div | exact GlobalTheory.ConjArith.form_eq_div | (intros; apply GlobalTheory.ConjArith.form_eq_div <;> assumption)
+  exact @GlobalTheory.ConjArith.form_eq_div

@@ -28,4 +28,4 @@ theorem _root_.GlobalTheory.T.arithmetic_bundle_normal_base_setup : Hypotheses2 
     G.fromSpecStalk (genericPoint G) ≫ πG = spMap φ ≫ (O.var c).X.fromSpecStalk (genericPoint (O.var c).X) ∧
     ∀ a (hr : rkB D.what₂.Tau O.N O.j a = O.S.Dw.mult (embB D a)),
       GlobalTheory.FlagCov.FlagAgree (fun a => (h a).isVB) jB πB u π₀ fl₀ j φ jG a hr := by
-  first | exact @GlobalTheory.BcRead.classifyingMap | exact GlobalTheory.BcRead.classifyingMap | (intros; apply GlobalTheory.BcRead.classifyingMap <;> assumption)
+  exact @GlobalTheory.BcRead.classifyingMap

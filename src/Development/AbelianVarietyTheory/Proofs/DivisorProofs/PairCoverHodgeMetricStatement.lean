@@ -31,4 +31,4 @@ theorem _root_.GlobalTheory.T.pair_cover_hodge_metric : GlobalTheory.CovTop.Hypo
             ((cxSt D.what₂.LL).cx (O.var c) τ (genAt (lineAdl O R c st 1).D (under y))) y) ^ 1 =
         ‖ratVal (φ (genAt (lineAdl O R c st 1).D (under y)) ^ 1 * (r ch : Gs.functionField)) z‖ ^ 2 *
           Real.exp (-((VMetric.grLB F i ((HM.pull π rfl).pull ρ rfl)).φ _).φ (ch PUnit.unit) y') := by
-  first | exact @GlobalTheory.PairCovCx.frameSecX_norm_cx | exact GlobalTheory.PairCovCx.frameSecX_norm_cx | (intros; apply GlobalTheory.PairCovCx.frameSecX_norm_cx <;> assumption)
+  exact @GlobalTheory.PairCovCx.frameSecX_norm_cx

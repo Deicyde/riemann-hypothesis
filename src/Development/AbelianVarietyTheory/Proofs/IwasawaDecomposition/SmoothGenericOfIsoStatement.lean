@@ -7,4 +7,4 @@ open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.S
 open GlobalTheory.Toroidal GlobalTheory.Models GlobalTheory.LN GlobalTheory.ShFam GlobalTheory.LocM GlobalTheory.PolFan GlobalTheory.TorRef
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.smooth_generic_of_iso : ∀ (E : Type) [Field E] [NumberField E] [IsCMField E] (H : Host E) (D : Datum H) (l : Level H) (Xo : Moduli D l) (c : Coeff l) (Y : Model Xo c (RingHom.id c.F)) (Z : GMod Xo c) (e : gen Y ≅ gen Z), Y.jQ ≫ e.hom = Z.jQ → SmoothOfRelativeDimension D.dim (genStr Y) → SmoothOfRelativeDimension D.dim (genStr Z) := by
-  first | exact @GlobalTheory.TorRef.smooth_genStr_of_iso | exact GlobalTheory.TorRef.smooth_genStr_of_iso | (intros; apply GlobalTheory.TorRef.smooth_genStr_of_iso <;> assumption)
+  exact @GlobalTheory.TorRef.smooth_genStr_of_iso

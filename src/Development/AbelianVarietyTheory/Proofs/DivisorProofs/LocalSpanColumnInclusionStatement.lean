@@ -23,4 +23,4 @@ theorem _root_.GlobalTheory.T.local_span_column_inclusion : ∀ {F E : Type} [Fi
     (X : Matrix (Fin n) (Fin r) E) (I : Set (Fin r)) (u : Fin n → Fv F v),
     u ∈ Submodule.span (Fv F v) ((fun i k => τ (X k i)) '' I) →
     (fun k => GlobalTheory.UnipEmb.locInc F E v (splitIncl h τ u k)) ∈ GlobalTheory.StdPar.colSpan F X I := by
-  first | exact @GlobalTheory.UnipEmb.PlaceSpan.locInc_splitIncl_mem_colSpan | exact GlobalTheory.UnipEmb.PlaceSpan.locInc_splitIncl_mem_colSpan | (intros; apply GlobalTheory.UnipEmb.PlaceSpan.locInc_splitIncl_mem_colSpan <;> assumption)
+  exact @GlobalTheory.UnipEmb.PlaceSpan.locInc_splitIncl_mem_colSpan

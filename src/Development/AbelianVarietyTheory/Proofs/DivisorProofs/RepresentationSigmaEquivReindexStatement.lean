@@ -31,4 +31,4 @@ theorem _root_.GlobalTheory.T.representation_sigma_equiv_reindex : ∀ (k : Type
         (GlobalTheory.SmGL.ofChar (ψ.comp (MonoidHom.mulSingle (fun j => GlobalTheory.SmGL.Levi k (c j)) j₀))))
         (ν.comp (MonoidHom.mulSingle (fun j => GL (m' j) k) j₀))) ∧
       ∃ F' : Q'.IntertwiningMap Y, F' ≠ 0 := by
-  first | exact @GlobalTheory.CellColumn.exists_subquotient_column | exact GlobalTheory.CellColumn.exists_subquotient_column | (intros; apply GlobalTheory.CellColumn.exists_subquotient_column <;> assumption)
+  exact @GlobalTheory.CellColumn.exists_subquotient_column

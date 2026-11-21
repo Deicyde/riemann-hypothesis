@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.perfect_pairing_dual_symplectic : ∀ (R : Type) [
       (∀ P : PrimeSpectrum R, Module.rankAtStalk S P = g) →
       (∀ x y : Module.Dual R N, (∀ c ∈ S, x c = 0) → (∀ c ∈ S, y c = 0) → φ x y = 0) →
       ∀ u v : M, e u ∈ S → e v ∈ S → b u v = 0 := by
-  first | exact @GlobalTheory.AnnIso.pairing_vanishes_of_annihilator_isotropic | exact GlobalTheory.AnnIso.pairing_vanishes_of_annihilator_isotropic | (intros; apply GlobalTheory.AnnIso.pairing_vanishes_of_annihilator_isotropic <;> assumption)
+  exact @GlobalTheory.AnnIso.pairing_vanishes_of_annihilator_isotropic

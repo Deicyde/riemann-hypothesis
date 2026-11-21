@@ -7,4 +7,4 @@ theorem _root_.GlobalTheory.T.schwartz_fourier_superposition : ∀ {V : Type} [N
     ∃ (m : ℕ) (A : EuclideanSpace ℝ (Fin m) →L[ℝ] (V →L[ℝ] ℝ)) (φ : EuclideanSpace ℝ (Fin m) → ℂ),
       Continuous φ ∧ (∀ n : ℕ, Integrable (fun w => (1 + ‖w‖) ^ n * ‖φ w‖)) ∧
       ∀ x, ψ x = ∫ w, φ w * Complex.exp ((A w x : ℂ) * Complex.I) := by
-  first | exact @GlobalTheory.fourier_inversion_real_linear_forms | exact GlobalTheory.fourier_inversion_real_linear_forms | (intros; apply GlobalTheory.fourier_inversion_real_linear_forms <;> assumption)
+  exact @GlobalTheory.fourier_inversion_real_linear_forms

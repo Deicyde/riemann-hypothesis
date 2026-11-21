@@ -50,4 +50,4 @@ theorem _root_.GlobalTheory.T.chain_frame_signature_data : GlobalTheory.Publishe
     (∀ (κ : D.what₂.Tau → Matrix.unitaryGroup (Fin WW.rank) ℂ), ∀ P ∈ GlobalTheory.MinorFrame.inv (ι := D.what₂.Tau) A'.rank WW.rank n₀,
       q' (GlobalTheory.MinorFrame.rowSub (fun τ => (κ τ : Matrix (Fin WW.rank) (Fin WW.rank) ℂ)) P) =
         GlobalTheory.MinorFrame.detChar n₀ (fun τ => (κ τ : Matrix (Fin WW.rank) (Fin WW.rank) ℂ)) • σ (fun τ => (κ τ : Matrix (Fin WW.rank) (Fin WW.rank) ℂ)) (q' P)) := by
-  first | exact @GlobalTheory.RealQuotBot.real_quot_inv_equiv | exact GlobalTheory.RealQuotBot.real_quot_inv_equiv | (intros; apply GlobalTheory.RealQuotBot.real_quot_inv_equiv <;> assumption)
+  exact @GlobalTheory.RealQuotBot.real_quot_inv_equiv

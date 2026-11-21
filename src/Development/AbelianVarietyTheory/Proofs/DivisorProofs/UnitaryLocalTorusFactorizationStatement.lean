@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.unitary_local_torus_factorization : ∀ (F E : Typ
     B.IsGood σ → W.IsSkew σ B r s → W₁.IsSkew σ B r₁ s₁ → H'.IsAdapted σ B W W₁ i₀ i₁ →
     ∀ (v : Pl F) (t : (AE F E)ˣ), At (F := F) (evFin F v) (t.1 - 1) → ∀ h₁ : UA σ W₁.J, h₁ ∈ UAt σ W₁ (evFin F v) →
       ∃ m : UA σ W.J, IsLevi H' t h₁ m ∧ m ∈ UAt σ W (evFin F v) := by
-  first | exact @GlobalTheory.PlaneLeviAt.exists_isLevi_at | exact GlobalTheory.PlaneLeviAt.exists_isLevi_at | (intros; apply GlobalTheory.PlaneLeviAt.exists_isLevi_at <;> assumption)
+  exact @GlobalTheory.PlaneLeviAt.exists_isLevi_at

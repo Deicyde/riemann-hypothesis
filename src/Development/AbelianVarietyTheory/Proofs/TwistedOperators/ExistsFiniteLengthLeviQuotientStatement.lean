@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.exists_finite_length_levi_quotient : ∀ (k : Type
             GlobalTheory.ThetaGLSub.aug m χ ⊔ GlobalTheory.ThetaGLRank.rkSub k n m (ρ + 1)) ∧
         GlobalTheory.ThetaGLRank.rkSub k n m ρ ≤
           GlobalTheory.ThetaGLSub.aug m χ ⊔ GlobalTheory.ThetaGLRank.rkSub k n m (ρ + 1) ⊔ LinearMap.range f := by
-  first | exact @GlobalTheory.ThetaGLCover.layer_cover | exact GlobalTheory.ThetaGLCover.layer_cover | (intros; apply GlobalTheory.ThetaGLCover.layer_cover <;> assumption)
+  exact @GlobalTheory.ThetaGLCover.layer_cover

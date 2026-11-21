@@ -31,4 +31,4 @@ theorem _root_.GlobalTheory.T.integral_model_level_p_power : GlobalTheory.Indefi
         ∃ (σ : Equiv.Perm (Ind Dw τ.1)) (K₁ : Fin (Dw.mult τ.1) → Fin g) (K₂ : Fin (Dw.mult (conjEmb τ.1)) → Fin g),
           ((p : ℝ)⁻¹ ^ n < ‖((pairDet (covec β T h (σ ∘ Sum.inl)) (U₁ ∘ K₁) *
         pairDet (covec β S h (σ ∘ Sum.inr)) (U₂ ∘ K₂) : 𝓞_ℂ_[p]) : ℂ_[p])‖) := by
-  first | exact @GlobalTheory.FlatModel.exists_large_minors | exact GlobalTheory.FlatModel.exists_large_minors | (intros; apply GlobalTheory.FlatModel.exists_large_minors <;> assumption)
+  exact @GlobalTheory.FlatModel.exists_large_minors

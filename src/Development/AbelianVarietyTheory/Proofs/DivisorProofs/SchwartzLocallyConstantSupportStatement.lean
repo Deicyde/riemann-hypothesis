@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.schwartz_locally_constant_support : ∀ (k : Type)
     t ≠ 0 → valuation k t < 1 → ∀ φ : Matrix (Fin n) (Fin n) k → ℂ, φ ∈ SB (Matrix (Fin n) (Fin n) k) →
     ∃ N M : ℕ, (∀ X, φ X ≠ 0 → t ^ N • X ∈ intM k (Fin n) (Fin n)) ∧
       ∀ X E, E ∈ intM k (Fin n) (Fin n) → φ (X + t ^ M • E) = φ X := by
-  first | exact @GlobalTheory.SBBounds.sb_bounds | exact GlobalTheory.SBBounds.sb_bounds | (intros; apply GlobalTheory.SBBounds.sb_bounds <;> assumption)
+  exact @GlobalTheory.SBBounds.sb_bounds

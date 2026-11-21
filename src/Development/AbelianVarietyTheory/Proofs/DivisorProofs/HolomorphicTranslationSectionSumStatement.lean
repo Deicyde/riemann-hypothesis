@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.holomorphic_translation_section_sum : ∀ {k : Typ
     fderiv ℂ (fun u => ev (A.hom ≫ p) σ W F (cv u)) 0 =
       ∑ a, ev (A.hom ≫ p) σ T (α a) (cv 0) •
         fderiv ℂ (fun u => ev _ σ (W' a) (G a) (GlobalTheory.RelCotAb.pairPt A (cv 0) (cv u) (hcv u))) 0 := by
-  first | exact @GlobalTheory.CurveDer.fderiv_ev_eq_sum | exact GlobalTheory.CurveDer.fderiv_ev_eq_sum | (intros; apply GlobalTheory.CurveDer.fderiv_ev_eq_sum <;> assumption)
+  exact @GlobalTheory.CurveDer.fderiv_ev_eq_sum

@@ -21,4 +21,4 @@ theorem _root_.GlobalTheory.T.model_change_of_field_points_b : ∀ {E : Type} [F
     IsVB M r → IsVB M' r → IsLieFrames Z e jB πB M r τ false t → IsLieFrames Z e jB πB M' r τ false t' →
     IsLieLat Z e jB πB M r τ (ArIn.ind ∅) (fun _ => True) t → GlobalTheory.TwoLat.IsGrLat Z e jB πB M' r τ t' →
     ∃ g : M ⟶ M', GlobalTheory.TwoLat.Matches Z jB πB g t t' := by
-  first | exact @GlobalTheory.TwoLat.exists_incl_matches | exact GlobalTheory.TwoLat.exists_incl_matches | (intros; apply GlobalTheory.TwoLat.exists_incl_matches <;> assumption)
+  exact @GlobalTheory.TwoLat.exists_incl_matches

@@ -34,4 +34,4 @@ theorem _root_.GlobalTheory.T.pair_adapted_plane_compatible : GlobalTheory.FunPr
         ∀ φ ∈ schA F ((Fin n × Fin d₁) ⊕ (Fin n × Fin d₁)), ∃ Φ ∈ schA F ((Fin n × Fin d) ⊕ (Fin n × Fin d)),
           ∃ g : (Fin n → AE F E) → ℂ, (letI : MeasurableSpace (Fin n → AE F E) := borel _; Integrable g μ ∧ ∫ y, g y ∂μ ≠ 0) ∧
             ∀ y, T (GlobalTheory.SiegelAvg.starFam dd B.ψ (incV F H'.y) y Φ) = g y • φ := by
-  first | exact @GlobalTheory.MixedVec.exists_mixedEv | exact GlobalTheory.MixedVec.exists_mixedEv | (intros; apply GlobalTheory.MixedVec.exists_mixedEv <;> assumption)
+  exact @GlobalTheory.MixedVec.exists_mixedEv

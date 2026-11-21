@@ -24,4 +24,4 @@ theorem _root_.GlobalTheory.T.k_fixed_irreducible_lowest_degree : ∀ (ι : Type
       (∀ w (Z : Formalism.BasicNotions.TH.Mat R S), Formalism.BasicNotions.TH.IsKC Z → ∀ T ∈ N,
         GlobalTheory.RealLift.atPl (V := fun _ : ι => Formalism.BasicNotions.TH.Pol P Q R S) w (Formalism.BasicNotions.TH.fockAct2 P Q R S Z) T ∈ N) →
       N = ⊥ ∨ N = GlobalTheory.KFixIrr.chiPart ι P Q R S x ⊓ GlobalTheory.KFixIrr.degLE ι P Q R S m := by
-  first | exact @GlobalTheory.KFixIrr.lowest_irr | exact GlobalTheory.KFixIrr.lowest_irr | (intros; apply GlobalTheory.KFixIrr.lowest_irr <;> assumption)
+  exact @GlobalTheory.KFixIrr.lowest_irr

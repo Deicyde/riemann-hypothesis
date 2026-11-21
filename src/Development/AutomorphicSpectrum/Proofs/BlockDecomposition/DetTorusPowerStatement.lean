@@ -9,4 +9,4 @@ open scoped ValuativeRel
 open GlobalTheory.CompanionTheory.LFUDom
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.det_torus_power : ∀ (F : Type) [Field F] [ValuativeRel F] [TopologicalSpace F] [IsNonarchimedeanLocalField F] (n : ℕ) (l : Fin n → ℤ), GeneralLinearGroup.det (torusPow F n l) = uniformizerUnit F ^ (∑ i, l i) := by
-  first | exact @GlobalTheory.CompanionTheory.LFUDom.det_torusPow_eq | exact GlobalTheory.CompanionTheory.LFUDom.det_torusPow_eq | (intros; apply GlobalTheory.CompanionTheory.LFUDom.det_torusPow_eq <;> assumption)
+  exact @GlobalTheory.CompanionTheory.LFUDom.det_torusPow_eq

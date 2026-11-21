@@ -11,4 +11,4 @@ theorem _root_.GlobalTheory.T.quotient_haar_measure_normal : ∀ (G M : Type) [G
     [μM.IsHaarMeasure] (d : M → ENNReal), Continuous d → (∀ x y, d (x * y) = d x * d y) → (∀ x, d x ≠ 0 ∧ d x ≠ ⊤) →
     (∀ x (f : G → ENNReal), Measurable f → ∫⁻ u, f (m x * u.1 * (m x)⁻¹) ∂μN = d x * ∫⁻ u, f u.1 ∂μN) →
     ∃ ν : Measure Q, ν.IsHaarMeasure ∧ ∀ φ : G → ENNReal, Measurable φ → ∫⁻ q, φ q.1 ∂ν = ∫⁻ x, ∫⁻ u, φ (u.1 * m x) * d x ∂μN ∂μM := by
-  first | exact @GlobalTheory.leftHaar_semidirect_coords | exact GlobalTheory.leftHaar_semidirect_coords | (intros; apply GlobalTheory.leftHaar_semidirect_coords <;> assumption)
+  exact @GlobalTheory.leftHaar_semidirect_coords

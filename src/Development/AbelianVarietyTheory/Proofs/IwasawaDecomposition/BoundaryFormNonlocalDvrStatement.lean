@@ -17,4 +17,4 @@ theorem _root_.GlobalTheory.T.boundary_form_nonlocal_dvr : ∀ (E : Type) [Field
         (be' : LinearMap.BilinForm ℤ P'.D.toPre.X) (ρ : P.D.toPre.X →ₗ[𝓞 E] P'.D.toPre.X),
         be' ∈ levelForms H 1 P'.D.toPre.X ∧ Function.Surjective ρ ∧ (∀ a b, be' (ρ a) (ρ b) = be a b) ∧
         IsMonomial P'.D.toPre ![f ϖ] ![be'] := by
-  first | exact @GlobalTheory.TraitQuot.main | exact GlobalTheory.TraitQuot.main | (intros; apply GlobalTheory.TraitQuot.main <;> assumption)
+  exact @GlobalTheory.TraitQuot.main

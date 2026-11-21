@@ -22,4 +22,4 @@ theorem _root_.GlobalTheory.T.local_schwartz_membership_criterion : GlobalTheory
     IsTriple B G X om om' →
     ∀ ι, G.M'.IsLinBar B.ψ B.τ₁ 1 1 ι → ∀ φ ∈ GlobalTheory.WeilM.SB (Fin a' × Fin (a + a') → Fv F B.v₁),
       (φ ∈ G.M'.SoLoc B.ψ B.τ₁ ↔ ∀ Y : Matrix (Fin a') (Fin (a + a')) (Fv F B.v₁), Y.rank ≠ a' → ι φ Y = 0) := by
-  first | exact @GlobalTheory.SoLocAnyIntertwiner.soLoc_iff | exact GlobalTheory.SoLocAnyIntertwiner.soLoc_iff | (intros; apply GlobalTheory.SoLocAnyIntertwiner.soLoc_iff <;> assumption)
+  exact @GlobalTheory.SoLocAnyIntertwiner.soLoc_iff

@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.config_a_local_eigen_triples : GlobalTheory.FunPr.
         (∀ g ∈ UAt σ G.V (evFin F v), ∀ x ∈ UAt σ G.V (evFin F v),
           coneEvFun B G H H' om v (ev v) l (locOp v (om (g, 1)) φ) x = coneEvFun B G H H' om v (ev v) l φ (x * g)) ∧
         Continuous (fun x : UAtSub σ G.V (evFin F v) => coneEvFun B G H H' om v (ev v) l φ x.1) := by
-  first | exact @GlobalTheory.ThK.EvFunProps.evFunProps | exact GlobalTheory.ThK.EvFunProps.evFunProps | (intros; apply GlobalTheory.ThK.EvFunProps.evFunProps <;> assumption)
+  exact @GlobalTheory.ThK.EvFunProps.evFunProps

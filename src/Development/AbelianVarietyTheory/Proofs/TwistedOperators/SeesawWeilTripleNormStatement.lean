@@ -32,4 +32,4 @@ theorem _root_.GlobalTheory.T.seesaw_weil_triple_norm : GlobalTheory.Published.H
             GlobalTheory.TripleRead.thO Γ.M ψ (sgn true W).gram e Ψ = Φ) ∧
           ∀ Φ ∈ algF ψ θ false A₁ B, ∃ Ψ ∈ GlobalTheory.TripleAssembly.darbAlg Γ.M' Bs.ψ Bs.emb,
             GlobalTheory.TripleRead.thO Γ.M' ψ (sgn false W₁).gram e Ψ = Φ := by
-  first | exact @GlobalTheory.TripleInv.theta_surj | exact GlobalTheory.TripleInv.theta_surj | (intros; apply GlobalTheory.TripleInv.theta_surj <;> assumption)
+  exact @GlobalTheory.TripleInv.theta_surj

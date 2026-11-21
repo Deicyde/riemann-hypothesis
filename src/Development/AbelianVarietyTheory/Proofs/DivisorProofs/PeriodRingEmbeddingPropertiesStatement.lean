@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.period_ring_embedding_properties : ∀ (l : ℕ) [
       (∀ b, Ψ b ∈ (P.PD K).Fil 0) ∧
       (∀ x : AK K, thetaK K x = 0 → Ψ (toB K (ofA K x)) ∈ (P.PD K).Fil 1) ∧
       (∀ x : AK K, thetaK K x = 0 → x ∉ RingHom.ker (thetaK K) ^ 2 → Ψ (toB K (ofA K x)) ∉ (P.PD K).Fil 2) := by
-  first | exact @GlobalTheory.CrisToDR.exists_map | exact GlobalTheory.CrisToDR.exists_map | (intros; apply GlobalTheory.CrisToDR.exists_map <;> assumption)
+  exact @GlobalTheory.CrisToDR.exists_map

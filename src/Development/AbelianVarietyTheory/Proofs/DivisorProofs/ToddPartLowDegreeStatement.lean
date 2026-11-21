@@ -15,4 +15,4 @@ open scoped ContDiff Real CategoryTheory.Obj ComplexOrder
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.todd_part_low_degree : ∀ r : ℕ, tdPart r 1 = (1 / 2 : ℚ) • chPart r 1 ∧ tdPart r 2 = (1 / 8 : ℚ) • chPart r 1 ^ 2 - (1 / 12 : ℚ) • chPart r 2 := by
-  first | exact @GlobalTheory.ToddLow.tdPart_low | exact GlobalTheory.ToddLow.tdPart_low | (intros; apply GlobalTheory.ToddLow.tdPart_low <;> assumption)
+  exact @GlobalTheory.ToddLow.tdPart_low

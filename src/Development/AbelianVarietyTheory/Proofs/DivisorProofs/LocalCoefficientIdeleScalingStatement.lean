@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.local_coefficient_idele_scaling : ∀ {F E : Type}
       (GlobalTheory.LatVac.locCo G.M'.co v (GlobalTheory.VanishLoc.uAt H H' v t)).1 ⬝ᵥ (GlobalTheory.LatVac.locCo G.M'.co v (shiftB σ H H' l)).2 -
         (GlobalTheory.LatVac.locCo G.M'.co v (shiftB σ H H' l)).1 ⬝ᵥ (GlobalTheory.LatVac.locCo G.M'.co v (GlobalTheory.VanishLoc.uAt H H' v t)).2 =
       Algebra.trace (Fv F v) (Fv F v ⊗[F] E) (t * compFin F E v l.1) := by
-  first | exact @GlobalTheory.LocPair.pair_trace | exact GlobalTheory.LocPair.pair_trace | (intros; apply GlobalTheory.LocPair.pair_trace <;> assumption)
+  exact @GlobalTheory.LocPair.pair_trace

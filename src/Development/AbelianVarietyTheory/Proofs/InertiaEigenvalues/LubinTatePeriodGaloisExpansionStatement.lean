@@ -10,4 +10,4 @@ theorem _root_.GlobalTheory.T.lubin_tate_period_galois_expansion : ∀ (l : ℕ)
     ∃ ω : AK K, ω ≠ 0 ∧ thetaK K ω = 0 ∧ frobq K ω = inO K π * ω + ω ^ resCard K ∧
       ∀ (g : ↥(GK K)) (a : ↥(OL K)) (φ : PowerSeries ↥(OL K)), (a : ↥K.1) = (χ g : ↥K.1) → IsLTEndo K π a φ →
         ∀ n : ℕ, gal K g ω - ∑ j ∈ Finset.range n, inO K (PowerSeries.coeff j φ) * ω ^ j ∈ RingHom.ker (thetaK K) ^ n := by
-  first | exact @GlobalTheory.LTOmega.main | exact GlobalTheory.LTOmega.main | (intros; apply GlobalTheory.LTOmega.main <;> assumption)
+  exact @GlobalTheory.LTOmega.main

@@ -7,4 +7,4 @@ theorem _root_.GlobalTheory.T.fractional_ideal_inverse_bounded_index : ∀ (A K 
     [Field K] [Algebra A K] [IsFractionRing A K],
     ∃ M : ℤ, M ≠ 0 ∧ ∀ I J : Submodule A K, I * J = 1 →
       ∃ x : K, x ≠ 0 ∧ Submodule.span A {x} * I ≤ 1 ∧ (M : K) ∈ Submodule.span A {x} * I := by
-  first | exact @GlobalTheory.exists_principal_mul_integral_ideal_contains_int | exact GlobalTheory.exists_principal_mul_integral_ideal_contains_int | (intros; apply GlobalTheory.exists_principal_mul_integral_ideal_contains_int <;> assumption)
+  exact @GlobalTheory.exists_principal_mul_integral_ideal_contains_int

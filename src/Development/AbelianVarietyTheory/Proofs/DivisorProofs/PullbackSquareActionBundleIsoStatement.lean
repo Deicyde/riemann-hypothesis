@@ -18,4 +18,4 @@ theorem _root_.GlobalTheory.T.pullback_square_action_bundle_iso : ∀ {F : Type}
       LBIso ((X.P c).pull φ₂) (((X.P c).pull φ₂).pull (lift (snd A' A') (fst A' A')).left) ∧
       LBIso ((X.P c').pull φ₂) (LB.div ((X.P (c + c')).pull φ₂) ((X.P c).pull φ₂)) ∧
       LBIso ((X.P (a • c)).pull φ₂) (((X.P c).pull φ₂).pull (lift (fst A' A') (snd A' A' ≫ rm'.act a)).left) := by
-  first | exact @GlobalTheory.RealMult.PullPol.pol_pull | exact GlobalTheory.RealMult.PullPol.pol_pull | (intros; apply GlobalTheory.RealMult.PullPol.pol_pull <;> assumption)
+  exact @GlobalTheory.RealMult.PullPol.pol_pull

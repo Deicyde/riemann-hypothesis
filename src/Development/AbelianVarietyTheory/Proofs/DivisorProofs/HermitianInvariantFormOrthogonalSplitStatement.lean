@@ -23,4 +23,4 @@ theorem _root_.GlobalTheory.T.hermitian_invariant_form_orthogonal_split : ∀ {V
     ∃ Z : Submodule ℂ V, Z ≤ P ∧ (∀ g, ∀ x ∈ Z, ρ g x ∈ Z) ∧ (∃ z ∈ Z, B z z ≠ 0) ∧
       ∀ Z₁ : Submodule ℂ V, Z₁ ≤ Z → (∀ g, ∀ x ∈ Z₁, ρ g x ∈ Z₁) →
         (∀ z ∈ Z₁, B z z = 0) ∨ ∀ z ∈ Z, ∃ z₁ ∈ Z₁, B (z - z₁) (z - z₁) = 0 := by
-  first | exact @GlobalTheory.StableMinFix.exists_minimal_simple_mod_radical | exact GlobalTheory.StableMinFix.exists_minimal_simple_mod_radical | (intros; apply GlobalTheory.StableMinFix.exists_minimal_simple_mod_radical <;> assumption)
+  exact @GlobalTheory.StableMinFix.exists_minimal_simple_mod_radical

@@ -12,4 +12,4 @@ open Filter Topology
 open scoped ContDiff
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.invariance_rational_to_real_symplectic : ∀ (g : ℕ) (F : symMat g → symMat g → Ext (1 + 1)), IsHermFun g F → (∀ γ : GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe.Sp g, (∀ i l, ∃ r : ℚ, γ.mat i l = r) → IsInvFun F γ) → ∀ γ : GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe.Sp g, IsInvFun F γ := by
-  first | exact @GlobalTheory.ThetaRR.isInvFun_of_rat | exact GlobalTheory.ThetaRR.isInvFun_of_rat | (intros; apply GlobalTheory.ThetaRR.isInvFun_of_rat <;> assumption)
+  exact @GlobalTheory.ThetaRR.isInvFun_of_rat

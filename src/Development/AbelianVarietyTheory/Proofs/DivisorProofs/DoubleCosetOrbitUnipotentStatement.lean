@@ -22,4 +22,4 @@ theorem _root_.GlobalTheory.T.double_coset_orbit_unipotent : ∀ (F E : Type) [F
         ∃ a : Fin j → E, y = Y *ᵥ a)) →
     ∀ g ∈ ratU σ W.J, γ * i (1, g) * γ⁻¹ ∈ siegelOf finSumFinEquiv (UG (cA σ) (incM F W₂.J)).subtype →
       ∀ n ∈ GlobalTheory.ThKLiftCusp.unipSp σ W Y, g * n * g⁻¹ ∈ GlobalTheory.ThKLiftCusp.unipSp σ W Y := by
-  first | exact @GlobalTheory.UnipSpNorm.conj_mem_unipSp | exact GlobalTheory.UnipSpNorm.conj_mem_unipSp | (intros; apply GlobalTheory.UnipSpNorm.conj_mem_unipSp <;> assumption)
+  exact @GlobalTheory.UnipSpNorm.conj_mem_unipSp

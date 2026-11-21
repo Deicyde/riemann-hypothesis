@@ -11,4 +11,4 @@ theorem _root_.GlobalTheory.T.exists_symmetric_form_along_dvr : ∀ (R : Type) [
     ∀ (Dg : DegData R (maximalIdeal R)) (W : Type) [CommRing W] [IsDomain W] [IsDiscreteValuationRing W] (f : R →+* W),
     Function.Injective f → ∀ ϖ : W, Irreducible ϖ →
     ∃ be : LinearMap.BilinForm ℤ Dg.toPre.X, (∀ y z, be y z = be z y) ∧ FormAt Dg.toPre f ϖ be := by
-  first | exact @GlobalTheory.PreValForm.main | exact GlobalTheory.PreValForm.main | (intros; apply GlobalTheory.PreValForm.main <;> assumption)
+  exact @GlobalTheory.PreValForm.main

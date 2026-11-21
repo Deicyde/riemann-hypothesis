@@ -27,4 +27,4 @@ theorem _root_.GlobalTheory.T.doubled_pair_darboux_seesaw : ∀ (F E : Type) [Fi
       (∀ u, ∀ Ψ ∈ schA F (Fin n × Fin d ⊕ Fin n × Fin d), e (schr B.ψ (dblE M.co u) Ψ) = co.rho B.ψ u (e Ψ)) →
     ∀ h : UA σ W.J, ∀ Φ₁ ∈ schA F (Fin n × Fin d), ∀ Φ₂ ∈ schA F (Fin n × Fin d),
       e (boxC (om (1, h) Φ₁) (om (1, h) Φ₂)) 0 = e (boxC Φ₁ Φ₂) 0 := by
-  first | exact @GlobalTheory.DblPairInv.pairing_invariant | exact GlobalTheory.DblPairInv.pairing_invariant | (intros; apply GlobalTheory.DblPairInv.pairing_invariant <;> assumption)
+  exact @GlobalTheory.DblPairInv.pairing_invariant

@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.appell_humbert_diagonal_real : ∀ (F : Type) [Fie
     ∀ (c' : 𝔠.elt) (l l' : u.Λ), ∃ n : ℤ,
       (∑ j, (h j : ℂ) * (((e j ((c' : F) / (2 * (c : F))) : ℂ) * (l : Fin (Module.finrank ℚ F) → ℂ) j) *
         starRingEnd ℂ ((l' : Fin (Module.finrank ℚ F) → ℂ) j))).im = n := by
-  first | exact @GlobalTheory.RiemInt.riemannForm_int | exact GlobalTheory.RiemInt.riemannForm_int | (intros; apply GlobalTheory.RiemInt.riemannForm_int <;> assumption)
+  exact @GlobalTheory.RiemInt.riemannForm_int

@@ -8,4 +8,4 @@ open GlobalTheory GlobalTheory.Toroidal GlobalTheory.Cartier GlobalTheory.ProjVa
 open scoped TensorProduct ContDiff
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.ample_eventually_of_local : ∀ {F : Type} [Field F] (Y : Var F) {S T : Scheme.{0}} (f : Y.X ⟶ S) (g : S ⟶ T), IsAffineHom g → ∀ (H : LB T), IsAmpleLB H → ∀ (Δ Λ : Y.Dv), LBIso (Y.lb Δ) (H.pull (f ≫ g)) → (∀ z : S, ∃ V : S.Opens, z ∈ V ∧ IsAffineOpen V ∧ IsAmpleLB ((Y.lb Λ).pull (f ⁻¹ᵁ V).ι)) → ∃ n₀ : ℕ, ∀ n : ℕ, n₀ ≤ n → Y.ample (n • Δ + Λ) := by
-  first | exact @GlobalTheory.AmpleTwistBase.ample_nsmul_add | exact GlobalTheory.AmpleTwistBase.ample_nsmul_add | (intros; apply GlobalTheory.AmpleTwistBase.ample_nsmul_add <;> assumption)
+  exact @GlobalTheory.AmpleTwistBase.ample_nsmul_add

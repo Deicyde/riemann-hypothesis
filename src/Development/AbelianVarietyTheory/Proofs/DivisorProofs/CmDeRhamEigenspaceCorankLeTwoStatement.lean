@@ -17,4 +17,4 @@ theorem _root_.GlobalTheory.T.cm_de_rham_eigenspace_corank_le_two : GlobalTheory
       Module.rank ℂ (HdR X.A ⧸ LinearMap.range (act (dp0 ℂ) (𝟙 _) X.rm b₀ - φ i ((b₀ : FR E) : E) • 1)) ≤ 2 ∧
       Disjoint (LinearMap.ker (act (dp0 ℂ) (𝟙 _) X.rm b₀ - φ i ((b₀ : FR E) : E) • 1))
         (LinearMap.range (act (dp0 ℂ) (𝟙 _) X.rm b₀ - φ i ((b₀ : FR E) : E) • 1)) := by
-  first | exact @GlobalTheory.RealMultEigen.rank_coker_le_two | exact GlobalTheory.RealMultEigen.rank_coker_le_two | (intros; apply GlobalTheory.RealMultEigen.rank_coker_le_two <;> assumption)
+  exact @GlobalTheory.RealMultEigen.rank_coker_le_two

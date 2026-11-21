@@ -10,4 +10,4 @@ open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G Recip
 open scoped Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.generic_degree_pullback_formula : GdegPull := by
-  first | exact @GlobalTheory.CovTest.gdegPull | exact GlobalTheory.CovTest.gdegPull | (intros; apply GlobalTheory.CovTest.gdegPull <;> assumption)
+  exact @GlobalTheory.CovTest.gdegPull

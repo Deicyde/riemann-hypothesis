@@ -18,4 +18,4 @@ open GlobalTheory.OpenOmega
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.lie_pairing_eq_invariant_differential : ∀ (R : Type) [CommRing R] (G : Over (Sp R)) [GrpObj G] [QuasiSeparated G.hom] (x : Pdiv.LieG G) (h : zeroSec R R ≫ x.1 = η[G]) (w : Wmod G), Phi x.1 h w = (GlobalTheory.LieVB.toOmega G w).1 x := by
-  first | exact @GlobalTheory.OpenOmega.phi_tangent_eq_toOmega | exact GlobalTheory.OpenOmega.phi_tangent_eq_toOmega | (intros; apply GlobalTheory.OpenOmega.phi_tangent_eq_toOmega <;> assumption)
+  exact @GlobalTheory.OpenOmega.phi_tangent_eq_toOmega

@@ -17,4 +17,4 @@ theorem _root_.GlobalTheory.T.restricted_hermitian_nondegenerate : ∀ (F E : Ty
     (J : Matrix (Fin n) (Fin n) E) (r : ℕ) (X Y : Matrix (Fin n) (Fin (r + 1)) E),
     IsCMExt F E σ → IsHermND σ J → IsWittFrame σ J X Y →
     IsHermND σ (J0 σ J X Y) := by
-  first | exact @GlobalTheory.EisRestrict.isHermND_restrictedForm | exact GlobalTheory.EisRestrict.isHermND_restrictedForm | (intros; apply GlobalTheory.EisRestrict.isHermND_restrictedForm <;> assumption)
+  exact @GlobalTheory.EisRestrict.isHermND_restrictedForm

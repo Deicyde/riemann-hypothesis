@@ -15,4 +15,4 @@ open scoped ContDiff ComplexOrder ENNReal Classical
 open GlobalTheory.HorComp
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.range_uniformization_eq_points_of_subvariety : ∀ (D : D7) (A : Amb D) (N j : ℕ) (S : Sig A N j) (κ : Lv A) (s : FinalTheorems S κ) (σ : κ.c.F →+* ℂ) (Y : Scheme.{0}) [IsIntegral Y] (q : Y ⟶ Sp (𝓞 κ.c.F)) (jm : Y ⟶ s.T.Z.X) [IsClosedImmersion jm] (hq : jm ≫ s.T.Z.s = q) (n : ℕ), IsArithVar q n → Set.range (up jm hq σ) = ptsOf s.T.Z (Set.range (toGenCx jm hq σ)) := by
-  first | exact @GlobalTheory.HorComp.range_up_eq_ptsOf_range_toGenCx_of_isArithVar | exact GlobalTheory.HorComp.range_up_eq_ptsOf_range_toGenCx_of_isArithVar | (intros; apply GlobalTheory.HorComp.range_up_eq_ptsOf_range_toGenCx_of_isArithVar <;> assumption)
+  exact @GlobalTheory.HorComp.range_up_eq_ptsOf_range_toGenCx_of_isArithVar

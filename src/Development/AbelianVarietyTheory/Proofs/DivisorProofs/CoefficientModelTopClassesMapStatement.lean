@@ -30,4 +30,4 @@ theorem _root_.GlobalTheory.T.coefficient_model_top_classes_map : GlobalTheory.F
               U D (tor0 D D.host.ccK ch.S.Z.δ) (s i) (Iop D (tor0 D D.host.ccK ch.S.Z.δ)
                 (La0 D (tor0 D D.host.ccK ch.S.Z.δ) _ _) (La D (tor0 D D.host.ccK ch.S.Z.δ) Ls Lt) e0) z))
             (nuEnd ch.G (.top A.μ0 j)) (GlobalTheory.CoefModel.mapVV σ _ u) := by
-  first | exact @GlobalTheory.KerConjTransport.conj_top_transport | exact GlobalTheory.KerConjTransport.conj_top_transport | (intros; apply GlobalTheory.KerConjTransport.conj_top_transport <;> assumption)
+  exact @GlobalTheory.KerConjTransport.conj_top_transport

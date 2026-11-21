@@ -17,4 +17,4 @@ theorem _root_.GlobalTheory.T.config_A_local_part_compare : GlobalTheory.FunPr.H
         ei (locOpInf (G.M.co.rho B.ψ (partInf F (shiftA H H' 1))) (locOpInf (om (m, 1)) f)) =
           (((X.ν l : ℂ))⁻¹ * (((absE F E l : ℝ) ^ (((b + a' : ℕ) : ℝ) / 2) : ℝ) : ℂ)) •
             ei (locOpInf (G.M.co.rho B.ψ (partInf F (shiftA H H' l⁻¹))) f) := by
-  first | exact @GlobalTheory.ShiftInfA.evShift_levi | exact GlobalTheory.ShiftInfA.evShift_levi | (intros; apply GlobalTheory.ShiftInfA.evShift_levi <;> assumption)
+  exact @GlobalTheory.ShiftInfA.evShift_levi

@@ -8,4 +8,4 @@ theorem _root_.GlobalTheory.T.exists_imaginary_generator_cm_type : ∀ (E : Type
     (∀ ξ ∈ M, IsCMField.complexConj E ξ = -ξ) → ∀ (I : Type) (φ : I → E →+* ℂ), IsCMType φ → ∀ (e₀ : ℤˣ) (l : ℕ), l.Prime →
     ∃ ξ ∈ M, (∀ i, 0 < ((e₀ : ℤ) : ℝ) * (φ i ξ).im) ∧
       ∀ η ∈ M, ∃ n : ℕ, n.Coprime l ∧ ∃ a : OF E, (n : E) * η = algebraMap (OF E) E a * ξ := by
-  first | exact @GlobalTheory.SignGen.exists_signed_generator | exact GlobalTheory.SignGen.exists_signed_generator | (intros; apply GlobalTheory.SignGen.exists_signed_generator <;> assumption)
+  exact @GlobalTheory.SignGen.exists_signed_generator

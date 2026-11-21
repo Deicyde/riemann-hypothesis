@@ -22,4 +22,4 @@ theorem _root_.GlobalTheory.T.exists_blowup_normalization_cartier : ∀ (F : Typ
     ∃ (X'' X' : Scheme.{0}) (b : X'' ⟶ X) (ν : X' ⟶ X''), ReciprocityTheory.AnForm.R.FinalTheorems.EffCartier (J.comap b) ∧
       IsIntegral X' ∧ ReciprocityTheory.ChartRestriction.G.Geo.Tor.IsNormalScheme X' ∧ IsProjOver (ν ≫ b ≫ s) ∧ Flat (ν ≫ b ≫ s) ∧
       IsProper (ν ≫ b) ∧ IsIso ((ν ≫ b) ∣_ X.basicOpen (p : Γ(X, ⊤))) := by
-  first | exact @GlobalTheory.FlatModel.exists_normBlowup_off_basicOpen | exact GlobalTheory.FlatModel.exists_normBlowup_off_basicOpen | (intros; apply GlobalTheory.FlatModel.exists_normBlowup_off_basicOpen <;> assumption)
+  exact @GlobalTheory.FlatModel.exists_normBlowup_off_basicOpen

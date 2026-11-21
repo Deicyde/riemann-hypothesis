@@ -33,4 +33,4 @@ theorem _root_.GlobalTheory.T.seesaw_identity_config_a_first : ∀ (F E : Type) 
             GlobalTheory.KSplit.locMat t (1 : GL (Fin (b + a')) (Fv F v)) h₁ = l 1 ∧
             (X.α s : ℂ) * (((absE F E s : ℝ) ^ ((a' : ℝ) / 2) : ℝ) : ℂ) =
               ((ξ₁ (Matrix.GeneralLinearGroup.det (l 0)) * ξ₂ (Matrix.GeneralLinearGroup.det (l 2)) : ℂˣ) : ℂ) := by
-  first | exact @GlobalTheory.PlaneCoordAt.coord | exact GlobalTheory.PlaneCoordAt.coord | (intros; apply GlobalTheory.PlaneCoordAt.coord <;> assumption)
+  exact @GlobalTheory.PlaneCoordAt.coord

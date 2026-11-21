@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.seesaw_evaluation_haar_unfolding : GlobalTheory.Th
         ∀ (k : K) (l : (AE F E)ˣ) (s : Fin b × Fin (a + b) → InfiniteAdeleRing F),
           (fun z : Fin b × Fin (a + b) → FiniteAdeleRing (𝓞 F) F =>
             e' (G.M'.co.rho B.ψ (shiftB σ H H' l) (om' (k.1, h) Φ')) (fun i => ((s i, z i) : AdeleRing (𝓞 F) F))) ∈ Submodule.span ℂ (Set.range g) := by
-  first | exact @GlobalTheory.ConeFinSlices.finite_slices | exact GlobalTheory.ConeFinSlices.finite_slices | (intros; apply GlobalTheory.ConeFinSlices.finite_slices <;> assumption)
+  exact @GlobalTheory.ConeFinSlices.finite_slices

@@ -6,4 +6,4 @@ theorem _root_.GlobalTheory.T.translation_invariant_schwartz_unique : ∀ {V : T
     (∀ (a : V) (f g : SchwartzMap V ℂ), ⇑g = (fun x => f (x + a)) → μ g = μ f) →
     (∀ (a : V) (f g : SchwartzMap V ℂ), ⇑g = (fun x => f (x + a)) → μ' g = μ' f) →
     μ ≠ 0 → ∃ c : ℂ, μ' = c • μ := by
-  first | exact @GlobalTheory.TransInvSchwartz.dim_le_one | exact GlobalTheory.TransInvSchwartz.dim_le_one | (intros; apply GlobalTheory.TransInvSchwartz.dim_le_one <;> assumption)
+  exact @GlobalTheory.TransInvSchwartz.dim_le_one

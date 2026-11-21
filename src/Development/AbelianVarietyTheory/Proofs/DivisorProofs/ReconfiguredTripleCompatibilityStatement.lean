@@ -28,4 +28,4 @@ theorem _root_.GlobalTheory.T.reconfigured_triple_compatibility : ∀ (F E : Typ
     (∀ c c' : E, GlobalTheory.ConeSmallSer.StabLn H'.x (w * nn (inclR (F := F) (AF F) c) * (w * nn (inclR (F := F) (AF F) c'))⁻¹) → c = c') ∧
     (∀ δ ∈ ratU σ G.W.J ⊓ unip σ G.W H', ∃ a₀ : E, ∀ c : E,
       GlobalTheory.ConeSmallSer.StabLn H'.x (w * nn (inclR (F := F) (AF F) c) * δ * (w * nn (inclR (F := F) (AF F) (c + a₀)))⁻¹)) := by
-  first | exact @GlobalTheory.SwapShearLines.swap_shear_lines | exact GlobalTheory.SwapShearLines.swap_shear_lines | (intros; apply GlobalTheory.SwapShearLines.swap_shear_lines <;> assumption)
+  exact @GlobalTheory.SwapShearLines.swap_shear_lines

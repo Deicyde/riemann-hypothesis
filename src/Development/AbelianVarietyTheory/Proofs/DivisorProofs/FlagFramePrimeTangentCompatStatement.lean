@@ -71,4 +71,4 @@ theorem _root_.GlobalTheory.T.flag_frame_prime_tangent_compat : ∀ (E : Type) [
     y.1).hom) ≫ GlobalTheory.ShFam.stalkPt Y (below y.1) ≫ ρ) (decide (resP v =
     q))) (fun l => spMap (dualMap ((ioOf (resP v) ε).comp (Scheme.stalkClosedPointTo
     y.1).hom)) ≫ f (below y.1) l) (Fin.castLE hk l) := by
-  first | exact @GlobalTheory.HtGen.FlagPoint.pairDet_values | exact GlobalTheory.HtGen.FlagPoint.pairDet_values | (intros; apply GlobalTheory.HtGen.FlagPoint.pairDet_values <;> assumption)
+  exact @GlobalTheory.HtGen.FlagPoint.pairDet_values

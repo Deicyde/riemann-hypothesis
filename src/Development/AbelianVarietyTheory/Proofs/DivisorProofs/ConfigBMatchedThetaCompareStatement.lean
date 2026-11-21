@@ -27,4 +27,4 @@ theorem _root_.GlobalTheory.T.config_B_matched_theta_compare : GlobalTheory.ThK.
           ∀ g ∈ G₁.M.Pol B.ψ B.emb, ∀ g₁ : SInf F (Fin a × Fin (a + b)), Acts (evI F) (om₁ (1, k₁)) g g₁ →
           R₁.p g ∈ lowPartInf B G₁.M R₁.p → ∀ f ∈ G.M.Pol B.ψ B.emb, ∀ f₁ : SInf F (Fin a × Fin (a + (b + 2))),
           Acts (evI F) (om (1, k)) f f₁ → ψ (R₁.p g) = R.p f → ψ (R₁.p g₁) = R.p f₁ := by
-  first | exact @GlobalTheory.BranchMapB.exists_map | exact GlobalTheory.BranchMapB.exists_map | (intros; apply GlobalTheory.BranchMapB.exists_map <;> assumption)
+  exact @GlobalTheory.BranchMapB.exists_map

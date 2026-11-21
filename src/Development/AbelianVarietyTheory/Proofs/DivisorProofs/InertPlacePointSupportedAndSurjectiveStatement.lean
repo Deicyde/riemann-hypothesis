@@ -11,4 +11,4 @@ theorem _root_.GlobalTheory.T.inertPlacePoint_supported_and_surjective : ∀ (F 
     (∀ x, At (evFin F v) (kap hw h (A : Matrix (Fin m) (Fin m) (w.adicCompletion E)) (Bm : Matrix (Fin n) (Fin n) (w.adicCompletion E)) x)) ∧
     ∀ γ : Matrix (Fin m) (Fin n) (AE F E), At (evFin F v) γ →
       ∃ x, kap hw h (A : Matrix (Fin m) (Fin m) (w.adicCompletion E)) (Bm : Matrix (Fin n) (Fin n) (w.adicCompletion E)) x = γ := by
-  first | exact @GlobalTheory.InertCoord.kap_at_and_onto | exact GlobalTheory.InertCoord.kap_at_and_onto | (intros; apply GlobalTheory.InertCoord.kap_at_and_onto <;> assumption)
+  exact @GlobalTheory.InertCoord.kap_at_and_onto

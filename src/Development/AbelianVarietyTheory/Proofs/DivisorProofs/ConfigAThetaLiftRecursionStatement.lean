@@ -27,4 +27,4 @@ theorem _root_.GlobalTheory.T.config_a_theta_lift_recursion : GlobalTheory.ThK.K
             R₁.p g ∈ lowPartInf B G₁.M R₁.p →
           ∀ f ∈ G.M.Pol B.ψ B.emb, ∀ f₁ : SInf F (Fin (b + 2) × Fin (b + 2 + a')), Acts (evI F) (om (1, k)) f f₁ →
             s (R₁.p g) = R.p f → s (R₁.p g₁) = R.p f₁ := by
-  first | exact @GlobalTheory.IndLine.twPart_le_map_lowPart | exact GlobalTheory.IndLine.twPart_le_map_lowPart | (intros; apply GlobalTheory.IndLine.twPart_le_map_lowPart <;> assumption)
+  exact @GlobalTheory.IndLine.twPart_le_map_lowPart

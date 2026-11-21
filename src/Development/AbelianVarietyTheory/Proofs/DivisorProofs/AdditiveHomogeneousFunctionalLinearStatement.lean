@@ -18,4 +18,4 @@ theorem _root_.GlobalTheory.T.additive_homogeneous_functional_linear : GlobalThe
         ∀ f : SInf F (Fin n × Fin d), L (pureA F f g) = T f) →
       (∀ x : Matrix (Fin n) (Fin d) E, ∀ Ψ ∈ schA F (Fin n × Fin d), L (M.co.rho B.ψ (incM F x) Ψ) = L Ψ) →
       ∃ c : ℂ, ∀ Ψ ∈ schA F (Fin n × Fin d), L Ψ = c * thetaSum F Ψ := by
-  first | exact @GlobalTheory.ThetaUniq.unique_of_ratInv | exact GlobalTheory.ThetaUniq.unique_of_ratInv | (intros; apply GlobalTheory.ThetaUniq.unique_of_ratInv <;> assumption)
+  exact @GlobalTheory.ThetaUniq.unique_of_ratInv

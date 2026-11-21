@@ -33,4 +33,4 @@ theorem _root_.GlobalTheory.T.exists_character_local_functional_equivariant : Gl
       ∀ c : ℂ, (∀ φ ∈ GlobalTheory.WeilM.SB (Fin a' × Fin (a + a') → Fv F B.v₁), ∀ φ₁ ∈ GlobalTheory.WeilM.SB (Fin a' × Fin (a + a') → Fv F B.v₁),
         Acts (evFin F B.v₁) (om' (1, h)) φ φ₁ → ι φ₁ = c • fun Y => ι φ (Y * (mat h).map (piW B.τ₁))) →
         c = (χ (Matrix.GeneralLinearGroup.det (GlobalTheory.LocalUnitSubgroupClosure.cmpGL B.τ₁ h)) : ℂ) := by
-  first | exact @GlobalTheory.WeilTransferW.exists_char_right_scalar | exact GlobalTheory.WeilTransferW.exists_char_right_scalar | (intros; apply GlobalTheory.WeilTransferW.exists_char_right_scalar <;> assumption)
+  exact @GlobalTheory.WeilTransferW.exists_char_right_scalar

@@ -12,4 +12,4 @@ open Filter Topology
 open scoped ContDiff
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_tate_weight_doubling : ∀ (k : Type) [CommRing k] (X : Scheme.{0}) (p : X ⟶ Sp k) (D : ℕ), IsArithVar p D → ∀ (f : X ⟶ X) (hf : f ≫ p = p) (L : HermLB p) (w : LB.Iso (L.pull f hf).B (L.pow 4).B), w.IsGen → ∃ u : ∀ σ : k →+* ℂ, CxPts p σ → ℝ, (∀ σ, Continuous (u σ)) ∧ (∀ σ σ', (Weight.ofFun (u σ)).IsConj (Weight.ofFun (u σ'))) ∧ IsTate f hf L w u := by
-  first | exact @GlobalTheory.ThetaRR.exists_isTate_continuous | exact GlobalTheory.ThetaRR.exists_isTate_continuous | (intros; apply GlobalTheory.ThetaRR.exists_isTate_continuous <;> assumption)
+  exact @GlobalTheory.ThetaRR.exists_isTate_continuous

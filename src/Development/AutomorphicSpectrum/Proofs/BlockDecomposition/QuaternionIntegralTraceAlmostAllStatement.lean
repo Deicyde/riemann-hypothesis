@@ -9,4 +9,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.quaternion_integral_trace_almost_all : ∀ {F : Type} [Field F] [NumberField F] (d β : F), d ≠ 0 → β ≠ 0 →
   ∀ᶠ v in Filter.cofinite (α := HeightOneSpectrum (𝓞 F)), ∀ t ∈ Ov v,
     ∃ b : Q d β (Kp (Sum.inr v : Pl F)), qn b = 1 ∧ 2 * b.re = t ∧ IntQ v b := by
-  first | exact @GlobalTheory.CompanionTheory.PlaneSA.exists_integral_norm_one_trace | exact GlobalTheory.CompanionTheory.PlaneSA.exists_integral_norm_one_trace | (intros; apply GlobalTheory.CompanionTheory.PlaneSA.exists_integral_norm_one_trace <;> assumption)
+  exact @GlobalTheory.CompanionTheory.PlaneSA.exists_integral_norm_one_trace

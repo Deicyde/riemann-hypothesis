@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.lie_algebra_rep_derivation_matrix : ∀ (n : ℕ) 
     (∀ X X', Xᴴ * A + A * X = 0 → X'ᴴ * A + A * X' = 0 → ρ (X * X' - X' * X) = ρ X * ρ X' - ρ X' * ρ X) →
     ∃ D : Matrix (Fin n) (Fin n) ℂ →ₗ[ℂ] B, (∀ X X', D (X * X' - X' * X) = D X * D X' - D X' * D X) ∧
       ∀ X, Xᴴ * A + A * X = 0 → D X = ρ X := by
-  first | exact @GlobalTheory.LeviHC.exists_complexLinear_bracket_ext | exact GlobalTheory.LeviHC.exists_complexLinear_bracket_ext | (intros; apply GlobalTheory.LeviHC.exists_complexLinear_bracket_ext <;> assumption)
+  exact @GlobalTheory.LeviHC.exists_complexLinear_bracket_ext

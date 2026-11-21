@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.flag_bundle_hermitian_line_integral_formula : ∀ 
     ∀ φ : (hB.atlas σ).Fld, (hB.atlas σ).IsForm φ → ∀ ε : ℤˣ,
       Measure.map v ((hY.atlas σ).part (evalF (hY.atlas σ) (fun i => c1F hY σ (fam5 π w H flB fl A i)) (X 0 - X 3) * pullF hB hY σ π w φ) ε) =
         (hB.atlas σ).part φ (-ε) Set.univ • volume.restrict (Set.Icc (0 : ℝ) 1) := by
-  first | exact @GlobalTheory.FibCos.map_part | exact GlobalTheory.FibCos.map_part | (intros; apply GlobalTheory.FibCos.map_part <;> assumption)
+  exact @GlobalTheory.FibCos.map_part

@@ -33,4 +33,4 @@ theorem _root_.GlobalTheory.T.one_over_l_idele_character_value : GlobalTheory.Pu
       (Matrix.detRowAlternating.compLinearMap (LinearMap.pi fun k ↦ e (U.e k)) : X₀.DetOmega) = u₀ • δ₀.1 ∧
       GlobalTheory.IndefiniteRowSideFullHecke.DifferentConductorValuations.val_vp R l (algebraMap R (FractionRing R) u₀) ≤
         Fintype.card I • GlobalTheory.IndefiniteRowSideFullHecke.DifferentConductorValuations.val_vp R l (algebraMap R (FractionRing R) D) := by
-  first | exact @GlobalTheory.LatModel.exists_detGen_wedge_val_le | exact GlobalTheory.LatModel.exists_detGen_wedge_val_le | (intros; apply GlobalTheory.LatModel.exists_detGen_wedge_val_le <;> assumption)
+  exact @GlobalTheory.LatModel.exists_detGen_wedge_val_le

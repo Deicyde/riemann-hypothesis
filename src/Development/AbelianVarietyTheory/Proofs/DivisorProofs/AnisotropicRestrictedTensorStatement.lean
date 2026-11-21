@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.anisotropic_restricted_tensor : GlobalTheory.ThK.K
     ∀ (f : SInf F (Fin a' × Fin (a + a'))) (φ φ' : ∀ v : Pl F, (Fin a' × Fin (a + a') → Fv F v) → ℂ), f ∈ G.M'.Pol B.ψ B.emb →
       (∀ v, φ v ∈ SB _) → (∀ᶠ v in cofinite, φ v = G.M'.vac v) → φ' B.v₁ ∈ SB _ → (∀ v, v ≠ B.v₁ → φ' v = φ v) →
       φ B.v₁ - φ' B.v₁ ∈ augAt om' B.v₁ → G.M'.I om' (pure f φ') = G.M'.I om' (pure f φ) := by
-  first | exact @GlobalTheory.ThKKill.kill | exact GlobalTheory.ThKKill.kill | (intros; apply GlobalTheory.ThKKill.kill <;> assumption)
+  exact @GlobalTheory.ThKKill.kill

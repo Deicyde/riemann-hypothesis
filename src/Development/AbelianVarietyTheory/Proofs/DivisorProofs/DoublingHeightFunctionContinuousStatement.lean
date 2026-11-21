@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.doubling_height_function_continuous : ∀ (F E : T
     Continuous (fun g : UA σ X.J => hgtOf finSumFinEquiv (UG (cA σ) (incM F X₂.J)).subtype (absE F E) K₂ (i (g, 1))) ∧
     ∃ R : ℝ, ∀ μ : Measure (UA σ X.J), μ.IsHaarMeasure → ∀ t : ℝ, R < t →
       Integrable (fun g : UA σ X.J => ((hgtOf finSumFinEquiv (UG (cA σ) (incM F X₂.J)).subtype (absE F E) K₂ (i (g, 1)) : ℝ≥0) : ℝ) ^ t) μ := by
-  first | exact @GlobalTheory.DblHeightHerm.continuous_integrable_hgt | exact GlobalTheory.DblHeightHerm.continuous_integrable_hgt | (intros; apply GlobalTheory.DblHeightHerm.continuous_integrable_hgt <;> assumption)
+  exact @GlobalTheory.DblHeightHerm.continuous_integrable_hgt

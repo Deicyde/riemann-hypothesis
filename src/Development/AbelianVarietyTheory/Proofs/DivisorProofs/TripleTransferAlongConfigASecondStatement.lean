@@ -23,4 +23,4 @@ theorem _root_.GlobalTheory.T.triple_transfer_along_config_a_second : GlobalTheo
     ∀ l : SInf F (Fin b × Fin (b + a')) →L[ℂ] ℂ, l ≠ 0 →
       (∀ g ∈ UAt σ G₁.V (evI F), ∀ f f₁ : SInf F (Fin b × Fin (b + a')), Acts (evI F) (om₁ (g, 1)) f f₁ → l f₁ = l f) →
       ∃ f ∈ G.M.Pol B.ψ B.emb, l (coneInf B G.M om ei K μK μ (shiftA H H') X.ν ((b + 2 - a') / 2) f) ≠ 0 := by
-  first | exact @GlobalTheory.ThK.nzInf_exists_pol | exact GlobalTheory.ThK.nzInf_exists_pol | (intros; apply GlobalTheory.ThK.nzInf_exists_pol <;> assumption)
+  exact @GlobalTheory.ThK.nzInf_exists_pol

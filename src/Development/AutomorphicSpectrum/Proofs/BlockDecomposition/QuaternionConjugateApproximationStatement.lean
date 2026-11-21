@@ -22,4 +22,4 @@ theorem _root_.GlobalTheory.T.quaternion_conjugate_approximation : ∀ {F : Type
   ∀ a ∈ SuppAt d β {w}, (qmap (proj w) a).re ^ 2 ≠ 1 → ∀ V ∈ 𝓝 a,
     ∃ b ∈ V, ∃ y : (Q d β (AF F))ˣ, ∃ x : Q d β F, qn x = 1 ∧ ∃ h ∈ SuppAt d β {s},
       (y : Q d β (AF F)) * rat x * ((y⁻¹ : (Q d β (AF F))ˣ) : Q d β (AF F)) = b * h := by
-  first | exact @GlobalTheory.CompanionTheory.PlaneSA.KeyApprox.keyapprox | exact GlobalTheory.CompanionTheory.PlaneSA.KeyApprox.keyapprox | (intros; apply GlobalTheory.CompanionTheory.PlaneSA.KeyApprox.keyapprox <;> assumption)
+  exact @GlobalTheory.CompanionTheory.PlaneSA.KeyApprox.keyapprox

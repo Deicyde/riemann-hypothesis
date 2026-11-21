@@ -26,4 +26,4 @@ theorem _root_.GlobalTheory.T.adapted_plane_restriction_pair_finite : ∀ (F E :
         (∀ φ₁ ∈ schA F (Fin n × Fin d), ∀ φ₁' ∈ schA F (Fin n × Fin d), ∀ φ₂ ∈ schA F (Fin n × Fin d), ∀ c : ℂ,
           e φ₁' = c • e φ₁ → l (boxFun φ₁' φ₂) = c * l (boxFun φ₁ φ₂)) ∧
         ∃ φ₁ ∈ schA F (Fin n × Fin d), ∃ φ₂ ∈ schA F (Fin n × Fin d), l (boxFun φ₁ φ₂) ≠ 0 := by
-  first | exact @GlobalTheory.doubledEv_form | exact GlobalTheory.doubledEv_form | (intros; apply GlobalTheory.doubledEv_form <;> assumption)
+  exact @GlobalTheory.doubledEv_form

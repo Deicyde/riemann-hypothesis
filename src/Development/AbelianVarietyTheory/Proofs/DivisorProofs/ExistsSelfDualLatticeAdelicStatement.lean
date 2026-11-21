@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.exists_self_dual_lattice_adelic : ∀ (A : Type) [
     ∃ L : Submodule R (Fin n → A), L.FG ∧ IsOpen (L : Set (Fin n → A)) ∧ IsCompact (L : Set (Fin n → A)) ∧
       (∀ u ∈ L, ∀ v ∈ L, Formalism.UG.hform σ J u v ∈ R) ∧ (∀ u ∈ L, ∃ b ∈ R, Formalism.UG.hform σ J u u = b + σ b) ∧
       ∀ x : Fin n → A, Formalism.UG.hform σ J x x = 0 → (∀ v ∈ L, Formalism.UG.hform σ J x v ∈ R) → x ∈ L := by
-  first | exact @GlobalTheory.MaxEvenLat.exists_maximal_even_lattice | exact GlobalTheory.MaxEvenLat.exists_maximal_even_lattice | (intros; apply GlobalTheory.MaxEvenLat.exists_maximal_even_lattice <;> assumption)
+  exact @GlobalTheory.MaxEvenLat.exists_maximal_even_lattice

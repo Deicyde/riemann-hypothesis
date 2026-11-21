@@ -15,4 +15,4 @@ open GlobalTheory.CompanionTheory.FexTheta
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.bounded_local_theta_coefficient : ∀ (K : Type) [Field K] [NumberField K], Module.finrank ℚ K = 2 → ∀ (c : HeckeCharacter K) (v : Pl) (L : LM c v),
   L.ok → ∀ (g : GL (Fin 2) (Qv v)) (ξ : K), ∃ C : ℝ, ∀ x, ‖fL L g ξ x‖ ≤ C := by
-  first | exact @GlobalTheory.CompanionTheory.FexBound.bounded | exact GlobalTheory.CompanionTheory.FexBound.bounded | (intros; apply GlobalTheory.CompanionTheory.FexBound.bounded <;> assumption)
+  exact @GlobalTheory.CompanionTheory.FexBound.bounded

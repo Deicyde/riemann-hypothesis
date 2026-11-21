@@ -7,4 +7,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.local_reciprocity_unramified_spherical : ∀ (hL : GlobalTheory.Published.LocalLanglandsGL) (D : D7) (π : NG.AutRep D.host.E D.R.nV) (s : SplitPlace D.host.E) x,
     GlobalTheory.AutQuot.LocAt π s.w x → π.SphAt s.v → (GlobalTheory.CuspRep.ParLaws.locRec hL (D.nd.plOm.2 s.w) x).unr := by
-  first | exact @GlobalTheory.SphLoc.main | exact GlobalTheory.SphLoc.main | (intros; apply GlobalTheory.SphLoc.main <;> assumption)
+  exact @GlobalTheory.SphLoc.main

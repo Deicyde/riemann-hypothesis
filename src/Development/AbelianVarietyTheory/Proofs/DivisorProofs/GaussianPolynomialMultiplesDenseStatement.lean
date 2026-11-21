@@ -8,4 +8,4 @@ theorem _root_.GlobalTheory.T.gaussian_polynomial_multiples_dense : ∀ (V : Typ
     ∀ N : Submodule ℂ (SchwartzMap V ℂ), g ∈ N →
     (∀ f ∈ N, ∀ ℓ : V →ₗ[ℝ] ℝ, ∃ f₁ ∈ N, ∀ x, f₁ x = (ℓ x : ℂ) * f x) →
     Dense (N : Set (SchwartzMap V ℂ)) := by
-  first | exact @GlobalTheory.GaussDense.gauss_dense | exact GlobalTheory.GaussDense.gauss_dense | (intros; apply GlobalTheory.GaussDense.gauss_dense <;> assumption)
+  exact @GlobalTheory.GaussDense.gauss_dense

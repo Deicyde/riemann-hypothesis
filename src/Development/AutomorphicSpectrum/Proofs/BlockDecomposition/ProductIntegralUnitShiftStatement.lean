@@ -18,4 +18,4 @@ theorem _root_.GlobalTheory.T.product_integral_unit_shift : ∀ (Sp : Pl → Pro
   (∀ v, Sp v → ∃ N : ℕ, ∀ k : ℤ, (N : ℤ) < |k| → ∀ u ∈ unQ v, f v (unifUnit (Qv v) ^ k * u) = 0) →
   (Function.mulSupport (locF Sp f)).Finite ∧
     HasSum (fun m : {m : Pl →₀ ℤ // ∀ v, m v ≠ 0 → Sp v} => ∫ u, ∏ᶠ v, f v (tu Sv m.1 u v) ∂muU Sv) (∏ᶠ v, locF Sp f v) := by
-  first | exact @GlobalTheory.CompanionTheory.FexTheta.ProdSum.hasSum_integral_finprod | exact GlobalTheory.CompanionTheory.FexTheta.ProdSum.hasSum_integral_finprod | (intros; apply GlobalTheory.CompanionTheory.FexTheta.ProdSum.hasSum_integral_finprod <;> assumption)
+  exact @GlobalTheory.CompanionTheory.FexTheta.ProdSum.hasSum_integral_finprod

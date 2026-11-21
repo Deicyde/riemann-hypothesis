@@ -17,4 +17,4 @@ theorem _root_.GlobalTheory.T.config_A_local_part_equal : GlobalTheory.FunPr.Hyp
     ∀ f : SInf F (Fin (b + 2) × Fin (b + 2 + a')),
       Integrable (fun p : KAt K (evI F) × idelesAt E (evI F) =>
         l (coneInfInt B G.M om ei (shiftA H H') X.ν ((b + 2 - a') / 2) f p.1.1 p.2.1)) (μK.prod μ) := by
-  first | exact @GlobalTheory.ConeArchA.integrable_cone | exact GlobalTheory.ConeArchA.integrable_cone | (intros; apply GlobalTheory.ConeArchA.integrable_cone <;> assumption)
+  exact @GlobalTheory.ConeArchA.integrable_cone

@@ -9,4 +9,4 @@ open GlobalTheory.SiegelSet GlobalTheory.UAut GlobalTheory.LeviHC
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.relativeCentre' : RelativeCentre := by
-  first | exact @GlobalTheory.LeviHC.relativeCentre | exact GlobalTheory.LeviHC.relativeCentre | (intros; apply GlobalTheory.LeviHC.relativeCentre <;> assumption)
+  exact @GlobalTheory.LeviHC.relativeCentre

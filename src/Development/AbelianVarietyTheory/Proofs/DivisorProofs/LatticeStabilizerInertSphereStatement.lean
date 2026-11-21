@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.lattice_stabilizer_inert_sphere : ∀ (F E : Type)
     ∀ (m : ℕ) (x y : Fin m → Fin n → E), (∀ i, x i ∈ X.L ∧ y i ∈ X.L) → ∑ i, form σ X.J (x i) (y i) = 1 →
     ∀ (v : Pl F) (k : UA σ W.J), (∀ γ, γ * Matrix.transpose (mat k) ∈ latAtV X W v ↔ γ ∈ latAtV X W v) →
     ∀ z ∈ GlobalTheory.InertSph.latAt W v, mat k *ᵥ z ∈ GlobalTheory.InertSph.latAt W v ∧ mat k⁻¹ *ᵥ z ∈ GlobalTheory.InertSph.latAt W v := by
-  first | exact @GlobalTheory.LatStabTensor.latAt_stab | exact GlobalTheory.LatStabTensor.latAt_stab | (intros; apply GlobalTheory.LatStabTensor.latAt_stab <;> assumption)
+  exact @GlobalTheory.LatStabTensor.latAt_stab

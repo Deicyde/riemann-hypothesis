@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.split_weil_equivariant_functional_block : ∀ (k :
             (Pi.mulSingle (1 : Fin 2) g) : GL (Fin (x + m)) k) : Matrix (Fin (x + m)) (Fin (x + m)) k))) →
         L Φ' = (μ (Matrix.GeneralLinearGroup.det g) : ℂ) * L Φ) →
       L = 0 := by
-  first | exact @GlobalTheory.DetEqv.BlockForm.eq_zero_of_vanishAt | exact GlobalTheory.DetEqv.BlockForm.eq_zero_of_vanishAt | (intros; apply GlobalTheory.DetEqv.BlockForm.eq_zero_of_vanishAt <;> assumption)
+  exact @GlobalTheory.DetEqv.BlockForm.eq_zero_of_vanishAt

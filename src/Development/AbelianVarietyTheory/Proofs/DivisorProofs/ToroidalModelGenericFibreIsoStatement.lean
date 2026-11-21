@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.toroidal_model_generic_fibre_iso : ∀ {E : Type} 
     (hf : ∀ i, VB.IsFrame (f i)) (f' : ∀ i, Fin r → Γ(M', U i)) (hf' : ∀ i, VB.IsFrame (f' i))
     (A : ∀ i, Matrix (Fin r) (Fin r) Γ(X, U i)), (∀ i, GlobalTheory.TwoLat.IsCoordMat Z jB πB t t' (hf i) (hf' i) (A i)) →
     ∀ g : M ⟶ M', (∀ i a, g.app (U i) (f i a) = ∑ b, A i b a • f' i b) → GlobalTheory.TwoLat.Matches Z jB πB g t t' := by
-  first | exact @GlobalTheory.TwoLat.matches_of_charts | exact GlobalTheory.TwoLat.matches_of_charts | (intros; apply GlobalTheory.TwoLat.matches_of_charts <;> assumption)
+  exact @GlobalTheory.TwoLat.matches_of_charts

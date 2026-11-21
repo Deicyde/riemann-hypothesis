@@ -15,4 +15,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] Formalism.BasicNotions.Host.cmStar GlobalTheory.TypeRec.factG
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.central_character_integral : ∀ hL : GlobalTheory.Published.LocalLanglandsGL, AtMem hL fun _ _ _ _ w Z _ _ _ _ _ _ => GlobalTheory.PendOf.CenInt (w.D Z) := by
-  first | exact @GlobalTheory.CenIntAtLoc.cenInt_at | exact GlobalTheory.CenIntAtLoc.cenInt_at | (intros; apply GlobalTheory.CenIntAtLoc.cenInt_at <;> assumption)
+  exact @GlobalTheory.CenIntAtLoc.cenInt_at

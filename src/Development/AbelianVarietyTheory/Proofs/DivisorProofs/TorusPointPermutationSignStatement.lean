@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.torus_point_permutation_sign : ∀ (F : Type) [Fie
     (π : Equiv.Perm (Fin (Module.finrank ℚ F))) (𝔞 𝔟 : FracId F) (z : (F →+* ℝ) → ℂ)
     (X : Obj F (𝔞 * 𝔟⁻¹) (Sp ℂ)) (δ : X.DetOmega),
     IsTorusPoint e 𝔞 𝔟 z X δ → IsTorusPoint (π.trans e) 𝔞 𝔟 z X ((((Equiv.Perm.sign π : ℤˣ) : ℤ) : ℂ) • δ) := by
-  first | exact @GlobalTheory.TorusRenumber.isTorusPoint_perm | exact GlobalTheory.TorusRenumber.isTorusPoint_perm | (intros; apply GlobalTheory.TorusRenumber.isTorusPoint_perm <;> assumption)
+  exact @GlobalTheory.TorusRenumber.isTorusPoint_perm

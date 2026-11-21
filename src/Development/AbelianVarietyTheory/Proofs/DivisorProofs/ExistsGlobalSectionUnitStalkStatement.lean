@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.exists_global_section_unit_stalk : ∀ (Y Z : Sche
     ReciprocityTheory.ChartRestriction.G.Geo.Tor.resG Z (inf_le_right : D.U i ⊓ D.U j ≤ D.U j) (a j)) →
   ∃ h : Γ(Y, ⊤), ∀ (i : D.ι) (y : Y) (hy : ι y ∈ D.U i), ∃ u : (Y.presheaf.stalk y)ˣ,
     (Y.presheaf.germ ⊤ y trivial).hom h = (ι.stalkMap y).hom ((Z.presheaf.germ (D.U i) (ι y) hy).hom (a i)) * (u : Y.presheaf.stalk y) := by
-  first | exact @GlobalTheory.DivGlue.glue | exact GlobalTheory.DivGlue.glue | (intros; apply GlobalTheory.DivGlue.glue <;> assumption)
+  exact @GlobalTheory.DivGlue.glue

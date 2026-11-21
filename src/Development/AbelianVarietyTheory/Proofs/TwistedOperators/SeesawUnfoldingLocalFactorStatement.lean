@@ -34,4 +34,4 @@ theorem _root_.GlobalTheory.T.seesaw_unfolding_local_factor : GlobalTheory.FunPr
     (∀ i, ActsD (evI D.host.F) (fun t => om' (1, γ (Multiplicative.ofAdd t))) (f i) (f₁ i)) →
     IsDatum Γ.M' ψ cB (∑ i, pure (f i) (φ i)) Φ →
     ∀ Φ'D, IsDatum Γ.M' ψ cB Φ'D Φ' → Φ'D = ∑ i, pure (f₁ i) (φ i) := by
-  first | exact @GlobalTheory.SquareAgree.LieDat.datum_der_B | exact GlobalTheory.SquareAgree.LieDat.datum_der_B | (intros; apply GlobalTheory.SquareAgree.LieDat.datum_der_B <;> assumption)
+  exact @GlobalTheory.SquareAgree.LieDat.datum_der_B

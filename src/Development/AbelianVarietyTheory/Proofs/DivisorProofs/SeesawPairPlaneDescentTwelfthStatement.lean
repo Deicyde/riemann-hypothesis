@@ -20,4 +20,4 @@ theorem _root_.GlobalTheory.T.seesaw_pair_plane_descent_twelfth : GlobalTheory.T
       ∃ (C : ℝ) (k : ℕ), ∀ u ∈ K, ∀ h : UA σ W.J,
         Summable (fun w : Fin d → E => ‖thetaSum F (e (M.co.rho B.ψ (Matrix.vecMulVec (incV F H.y) (incV F w)) (om (u, 1) (om (g, h) Φ))))‖) ∧
         ∑' w : Fin d → E, ‖thetaSum F (e (M.co.rho B.ψ (Matrix.vecMulVec (incV F H.y) (incV F w)) (om (u, 1) (om (g, h) Φ))))‖ ≤ C * (ht h : ℝ) ^ k := by
-  first | exact @GlobalTheory.KernelBoundOnK.main | exact GlobalTheory.KernelBoundOnK.main | (intros; apply GlobalTheory.KernelBoundOnK.main <;> assumption)
+  exact @GlobalTheory.KernelBoundOnK.main

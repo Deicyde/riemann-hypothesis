@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.local_free_lagrangian_complement : ∀ (R : Type) 
         (f : M →ₗ[R] M'), IsLocalizedModule (Submonoid.powers r) f →
         ∃ c : Module.Basis (Fin (2 * g)) R' M',
           Submodule.span R' (f '' P) = Submodule.span R' (c '' {j | (j : ℕ) < g}) := by
-  first | exact @GlobalTheory.AdaptedBasis.exists_adapted_basis_away | exact GlobalTheory.AdaptedBasis.exists_adapted_basis_away | (intros; apply GlobalTheory.AdaptedBasis.exists_adapted_basis_away <;> assumption)
+  exact @GlobalTheory.AdaptedBasis.exists_adapted_basis_away

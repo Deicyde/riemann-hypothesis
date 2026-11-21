@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.config_b_evaluation_intertwines_theta : ∀ {F E :
     ∃ ι₁ : ((Fin b × Fin (a + b) → Fv F B.v₁) → ℂ) →ₗ[ℂ] (Matrix (Fin b) (Fin (a + b)) (Fv F B.v₁) → ℂ),
       G₁.M'.IsLinBar B.ψ B.τ₁ 1 1 ι₁ ∧ ∀ φ ∈ G.M'.SoLoc B.ψ B.τ₁, ∀ l : (AE F E)ˣ, ∀ Y : Matrix (Fin b) (Fin (a + b)) (Fv F B.v₁),
         Y.rank ≠ b → ι₁ (ev B.v₁ (locOp B.v₁ (G.M'.co.rho B.ψ (partFin B.v₁ (shiftB σ H H' l))) φ)) Y = 0 := by
-  first | exact @GlobalTheory.ConeSoB.ev_shift_vanish_off_rank | exact GlobalTheory.ConeSoB.ev_shift_vanish_off_rank | (intros; apply GlobalTheory.ConeSoB.ev_shift_vanish_off_rank <;> assumption)
+  exact @GlobalTheory.ConeSoB.ev_shift_vanish_off_rank

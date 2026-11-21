@@ -7,4 +7,4 @@ open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.G
 attribute [local instance] Over.cartesianMonoidalCategory
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.ample_rigid_finite_order : GlobalTheory.AmpleRigid.ConstSt → GlobalTheory.AmpleRigid.CubeSt → GlobalTheory.AmpleRigid.FiniteOrderSt := by
-  first | exact @GlobalTheory.AmpleFiniteOrder.finiteOrder_of_const_of_cube | exact GlobalTheory.AmpleFiniteOrder.finiteOrder_of_const_of_cube | (intros; apply GlobalTheory.AmpleFiniteOrder.finiteOrder_of_const_of_cube <;> assumption)
+  exact @GlobalTheory.AmpleFiniteOrder.finiteOrder_of_const_of_cube

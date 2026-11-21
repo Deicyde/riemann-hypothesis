@@ -15,4 +15,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] Formalism.BasicNotions.Host.cmStar GlobalTheory.TypeRec.factG
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_twisted_place : ∀ hL : GlobalTheory.Published.LocalLanglandsGL, AtMem hL fun _ _ _ _ w Z _ _ _ _ _ _ => ∃ v, TwistedAt (w.D Z) v := by
-  first | exact @GlobalTheory.GalLoc.twistedAt_atMem | exact GlobalTheory.GalLoc.twistedAt_atMem | (intros; apply GlobalTheory.GalLoc.twistedAt_atMem <;> assumption)
+  exact @GlobalTheory.GalLoc.twistedAt_atMem

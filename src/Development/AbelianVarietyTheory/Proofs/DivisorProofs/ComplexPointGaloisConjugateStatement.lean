@@ -25,4 +25,4 @@ theorem _root_.GlobalTheory.T.complex_point_galois_conjugate : GlobalTheory.Publ
       ∃ T' : CxPt 𝔠 (fun i ↦ (g : ℂ →+* ℂ).comp (φ i)) L', T'.IsOver ((g : ℂ →+* ℂ).comp σ) X₀ δ₀ N ∧
         T'.C * κ ^ Fintype.card I = g T.C ∧
         ∀ i, T'.U.h i = U'.h i ∧ T'.s i * T'.w i ^ 2 = κ ^ 2 * g (T.s i * T.w i ^ 2) := by
-  first | exact @GlobalTheory.ConjTransport.exists_conj_point | exact GlobalTheory.ConjTransport.exists_conj_point | (intros; apply GlobalTheory.ConjTransport.exists_conj_point <;> assumption)
+  exact @GlobalTheory.ConjTransport.exists_conj_point

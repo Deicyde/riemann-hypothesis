@@ -20,4 +20,4 @@ theorem _root_.GlobalTheory.T.log_residue_chern_bound_projective : ∀ (d : ℕ)
         -(K * (1 + ∑ i, Real.log (rFun (Λ i) (σ i) x))) ≤ w R x ∧ w R x ≤ 0) →
     ∀ [MeasurableSpace Y] [BorelSpace Y], ∃ C : ℝ≥0∞, C < ∞ ∧ ∀ R,
       ∫⁻ y, absLogNorm L s (μ y) ∂maMeasure B (fun _ => (α + LocPot.ofFun (w R)).pullback μ hμ.1) ≤ C := by
-  first | exact @GlobalTheory.LogResBound.bound | exact GlobalTheory.LogResBound.bound | (intros; apply GlobalTheory.LogResBound.bound <;> assumption)
+  exact @GlobalTheory.LogResBound.bound

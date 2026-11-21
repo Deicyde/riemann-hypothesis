@@ -29,4 +29,4 @@ theorem _root_.GlobalTheory.T.adapted_plane_pair_restriction_second : GlobalTheo
         (∃ Φ ∈ schA F (Fin n × Fin d ⊕ Fin n × Fin d), ed Φ ≠ 0) →
       ∃ cd : UG (cA σ) (dbl (incM F W.J)) →* ℂˣ, Continuous cd ∧
         ∀ g, ∀ Φ ∈ schA F (Fin n × Fin d ⊕ Fin n × Fin d), ed (omd g Φ) = (cd g : ℂ) • omd₁ g (ed Φ) := by
-  first | exact @GlobalTheory.MixXDblChar.exists_cont_char | exact GlobalTheory.MixXDblChar.exists_cont_char | (intros; apply GlobalTheory.MixXDblChar.exists_cont_char <;> assumption)
+  exact @GlobalTheory.MixXDblChar.exists_cont_char

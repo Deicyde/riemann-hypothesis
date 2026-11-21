@@ -8,4 +8,4 @@ theorem _root_.GlobalTheory.T.unfolding_integral_coset_representatives : ∀ {G 
     ∀ {ι : Type} [Countable ι] (γ : ι → G), (∀ i, γ i ∈ Γ) → (∀ δ ∈ Γ, ∃! i, δ * (γ i)⁻¹ ∈ Q) →
     ∀ f : G → ℂ, (∀ q ∈ Q, ∀ g, f (q * g) = f g) → IntegrableOn f D μ →
       ∫ g in D₀, ∑' i, f (γ i * g) ∂μ = ∫ g in D, f g ∂μ := by
-  first | exact @GlobalTheory.integral_tsum_cosetReps_eq_integral_fundamentalDomain | exact GlobalTheory.integral_tsum_cosetReps_eq_integral_fundamentalDomain | (intros; apply GlobalTheory.integral_tsum_cosetReps_eq_integral_fundamentalDomain <;> assumption)
+  exact @GlobalTheory.integral_tsum_cosetReps_eq_integral_fundamentalDomain

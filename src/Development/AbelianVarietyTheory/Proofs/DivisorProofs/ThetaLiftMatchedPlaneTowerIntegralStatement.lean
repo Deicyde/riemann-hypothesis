@@ -24,4 +24,4 @@ theorem _root_.GlobalTheory.T.theta_lift_matched_plane_tower_integral : GlobalTh
         (Matrix.of fun k (_ : Fin 1) => (pl i).x k) ≠ 0 ∧
         Formalism.UG.cT (σ : E →+* E) (Matrix.of fun k (_ : Fin 1) => (pl i).x k) * (c₀ • (sp i).J.map σ) * (Matrix.of fun k (_ : Fin 1) => (pl i).x k) = 0 ∧
         GlobalTheory.UAut.IsConstTerm σ (c₀ • (sp i).J.map σ) (Matrix.of fun k (_ : Fin 1) => (pl i).x k) φ' 0 := by
-  first | exact @GlobalTheory.IsoLineCT.isConstTerm_isoPlane | exact GlobalTheory.IsoLineCT.isConstTerm_isoPlane | (intros; apply GlobalTheory.IsoLineCT.isConstTerm_isoPlane <;> assumption)
+  exact @GlobalTheory.IsoLineCT.isConstTerm_isoPlane

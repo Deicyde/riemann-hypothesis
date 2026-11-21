@@ -17,4 +17,4 @@ theorem _root_.GlobalTheory.T.doubling_configuration_eigen_integral : GlobalTheo
           thetaSum F (om₁ (g₀, 1) (e (G.M.co.rho B.ψ (shiftA H H' l⁻¹) (om (k.1, h) Φ)))) *
           (((absE F E l : ℝ) ^ (1 - ((b + 2 : ℕ) : ℝ)) : ℝ) : ℂ) ∂G₁.M.μ ∂μ ∂μK =
         G₁.M.I om₁ (cone B G.M om e K μK μ (shiftA H H') X.ν ((b + 2 - a') / 2) (om (1, h) Φ)) 1 := by
-  first | exact @GlobalTheory.XTermExch.iterated_eq_cone | exact GlobalTheory.XTermExch.iterated_eq_cone | (intros; apply GlobalTheory.XTermExch.iterated_eq_cone <;> assumption)
+  exact @GlobalTheory.XTermExch.iterated_eq_cone

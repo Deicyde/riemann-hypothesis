@@ -8,4 +8,4 @@ open scoped ENNReal Classical
 open MvPolynomial Formalism.DegreeFormula Formalism.BasicNotions.DV Formalism.MainNotions.WeightThresholdDefs Filter Topology ReciprocityTheory.AnForm ReciprocityTheory.AnForm.M GlobalTheory.FlagPoly GlobalTheory.FlagAr
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.arithmetic_degree_of_known_theorems : Hypotheses2 → HypothesesH → OnObj fun _ _ A _ _ _ => TieAr A := by
-  first | exact @GlobalTheory.Mean4O.TieArObj.tieAr_onObj | exact GlobalTheory.Mean4O.TieArObj.tieAr_onObj | (intros; apply GlobalTheory.Mean4O.TieArObj.tieAr_onObj <;> assumption)
+  exact @GlobalTheory.Mean4O.TieArObj.tieAr_onObj

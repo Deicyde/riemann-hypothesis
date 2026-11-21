@@ -13,4 +13,4 @@ open GlobalTheory GlobalTheory.TorsionForm
 open scoped ContDiff Real CategoryTheory.Obj ComplexOrder
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_positive_arithmetic_kaehler_form : ∀ (k : Type) [CommRing k] (S : Scheme.{0}) (p : S ⟶ Sp k) (D : ℕ) (h : IsRegVar p D), ∃ κ : h.Fld, h.IsArForm 1 κ ∧ ∀ σ, (h.atlas σ).del (κ σ) = 0 ∧ (h.atlas σ).dbar (κ σ) = 0 ∧ ∀ x, (hermMat (κ σ x)).PosDef := by
-  first | exact @GlobalTheory.BaseKaehler.exists_kaehler | exact GlobalTheory.BaseKaehler.exists_kaehler | (intros; apply GlobalTheory.BaseKaehler.exists_kaehler <;> assumption)
+  exact @GlobalTheory.BaseKaehler.exists_kaehler
