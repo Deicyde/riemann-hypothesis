@@ -85,6 +85,29 @@ The statements were read by hand:
 - Every `1 / 2` is compared with `s.re`, so it is real division.
 - Dedekind zeta functions and other L-functions are not covered.
 
+## A signed estimate for the finite-group signal
+
+Alpöge's `ThickSetMeanBounds.CR.signal_term` needs a lower bound for the real part of
+`Gsig` at a node within one unit of a base point $x$. Write $G_\psi$ for `GPsi D ell ψ`
+and $T=\operatorname{Re}(G_{\rm chC}+G_{\rm chpsC}-G_{\rm psC})$. Then
+$\operatorname{Re}G_{\rm sig}=G_\zeta-T$. For $x\ge3$ and $0<\varepsilon\le1/2$,
+the single upper bound $T(x)\le3x^{1/2+\varepsilon}$ gives
+
+$$
+\operatorname{Re}G_{\rm sig}(y)\ge
+G_\zeta(x)-3x^{1/2+\varepsilon}-(22+\log 4)
+\qquad (|y-x|\le1).
+$$
+
+The weighted Lipschitz estimate applied to $xG_\psi(y)-yG_\psi(x)$ cancels the linear
+term containing `ell ψ`. The constant is uniform in the host. The submitted
+`SizeWindows` hypotheses absorb it, giving the lower bound $G_\zeta(x)-4x^{1/2+\varepsilon}$
+used in the numerical comparison. The signed estimate at the base point is a
+hypothesis of this local result. [Lean verification](SignedSignal.lean) ·
+[Principia research notes](https://principia-math.com/projects/d16ab288ed353bc5b10e292ace0ddbc1/notes).
+
+With the project and Mathlib caches installed, run `lake env lean verification/SignedSignal.lean`.
+
 ## Dependencies
 
 Each pin in `lake-manifest.json` was compared with its repository on GitHub.
