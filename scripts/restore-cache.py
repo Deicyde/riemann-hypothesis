@@ -134,7 +134,7 @@ def main():
     print(f"Restoring {len(jobs)} modules with stock leantar ({args.jobs} workers)...", flush=True)
     subprocess.run([str(lean.with_name("leantar")), "--jobs", str(args.jobs), "-f", "-x", "-j", "-"],
                    input=json.dumps(jobs), text=True, cwd=root, env=env, check=True)
-    print("Restored. Check with: lake --no-build --rehash build Main", flush=True)
+    print("Restored. Check with: lake build --no-build", flush=True)
 
 
 if __name__ == "__main__":

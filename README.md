@@ -23,14 +23,20 @@ Fetch and restore Mathlib and this project's compiled modules:
 
 ```bash
 lake exe cache get
-lake --no-build --rehash build Main
+lake build --no-build
 ```
 
 The cache settings are in `lakefile.toml`; no user configuration is needed. The first command
-fetches both caches anonymously and extracts the oleans to `.lake/build`. The second confirms
-that Lake considers all Main dependencies up to date, without compiling them. The project cache
-is 4.94 GB and contains portable Lean outputs and generated C. Subsequent ordinary builds
-compile changed modules and their dependents.
+fetches both caches anonymously and extracts the oleans to `.lake/build`. It prefers a successful
+CI build matching the current clean source, configuration, dependency manifest and toolchain;
+documentation-only commits can reuse the same cache. Otherwise it tries the original published
+cache. The second command checks the default build targets without compiling them. The original
+project cache is 4.94 GB and contains portable Lean outputs and generated C. Subsequent ordinary
+builds compile changed modules and their dependents.
+
+The community cache includes outputs from **untrusted pull requests and volunteer machines**.
+Download integrity checks do not verify proofs. Use an independent fresh build when you need
+to trust the result.
 
 The [cache notes](verification/CACHE.md) describe the pinned published archive, the cheaper
 bootstrap that reuses its proofs, and how to produce and publish future caches. For independent

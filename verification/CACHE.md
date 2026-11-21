@@ -45,10 +45,14 @@ The public cache uses the direct R2 custom domain `https://rh-cache.taucetiproje
 
 ```bash
 lake exe cache get
-lake --no-build --rehash build Main
+lake build --no-build
 ```
 
 The project's `cache` executable delegates to Mathlib's qualified `mathlib/cache` executable, then downloads the root package with stock Lake and bulk-restores the verified archives. It internally selects the lakefile's service, uses a temporary curl configuration for 500 parallel transfers, and raises only its child process file-descriptor limit for Mathlib's unpacker. No user configuration or upload credential is needed. Bare `lake cache get` is stock Lake's separate built-in command and does not select this root-package service automatically in Lean 4.33.1.
+
+`ci-cache-get.py` first looks for a successful public CI receipt matching the current clean Git source tree and the actual lakefile, dependency-manifest and toolchain bytes. It checks the input-fingerprint index, then a bounded set of equivalent ancestors, so documentation-only revisions can reuse a cache. A matching receipt selects immutable, SHA256-addressed map and module-manifest objects; a mutable PR revision map is never substituted. Stock Lake fetches the selected map's archives, and the existing path and per-archive SHA256 checks run before bulk restoration. Missing or nonmatching successful CI results select the original published-cache fallback; corrupt matching metadata or archives stop with an error.
+
+These caches include outputs from **untrusted pull requests and volunteer machines**. The metadata and digest checks establish which bytes were published for which inputs; they do not verify proofs. An independent fresh build is needed when you need to trust the result. This CI cache path performs builds and cache restoration, without export or Comparator checks.
 
 The full anonymous cold native download passed with all **175,187 archives / 4,938,217,979 bytes** in 4 minutes 47 seconds. Stock Lake spent approximately three minutes processing the index before transfers began. The default-concurrency control also ran without errors before the faster complete test superseded it.
 
@@ -71,4 +75,4 @@ The publisher reads a mode-0600 account R2 token from `~/.riemann-hypothesis-tau
 
 The original published olean archive and Lake-extras mirrors remain in the separate Riemann Hypothesis Cloudflare account. Production native-cache downloads use the custom domain above; the `r2.dev` development URL throttles a full 175,187-artifact download.
 
-For future source revisions, use a completed stock Lake build and `lake cache stage` to create staging; the archive bootstrap deliberately rejects changed sources. Publish a map for the exact source revision. A map can also be published with `--map-only-after-sync --platform x86_64-unknown-linux-gnu` for clients predating the portable-cache setting.
+For future source revisions, successful community CI publishes a receipt, an immutable complete map and a matching module manifest under `ci/`. `lake exe cache get` consumes these through the matching-input lookup above. Failed CI builds can supply incremental producer caches, but the public client only restores a complete successful receipt. The original archive bootstrap remains pinned and deliberately rejects changed sources; its guard is not relaxed for dynamic CI restoration. Manual publication from a completed stock Lake build remains available through `lake cache stage` and the original publisher, including `--platform x86_64-unknown-linux-gnu` for clients predating the portable-cache setting.
