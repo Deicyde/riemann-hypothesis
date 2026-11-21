@@ -113,6 +113,8 @@ def recovery_tests(ci):
         for name, dep_hash in (("Complete", "1" * 16), ("Partial", "2" * 16)):
             (project / "src" / (name + ".lean")).write_text("-- authored recovery fixture\n")
             (library / (name + ".trace")).write_text(json.dumps({"depHash": dep_hash}))
+            for directory, extension in ((library, ".olean"), (library, ".ilean"), (ir, ".c")):
+                (directory / (name + extension)).write_bytes(b"completed fixture output")
             (ir / (name + ".ltar")).write_bytes((name + " compressed bytes").encode())
         # Hash opaque test bytes with stock Lake; recovery checks completed-cache
         # identity, while archive parsing is covered by the real integration suite.
@@ -130,6 +132,10 @@ def recovery_tests(ci):
             ci.recover_completed_map(project, cache, toolchain, work, destination, known)
             assert hasher.call_args.args[1] == [aliases[1]]
         assert ci.load_map(destination) == {"1" * 16: hashes["Complete.ltar"] + ".ltar"}
+        aliases[0].unlink()
+        ci.recover_completed_map(project, cache, toolchain, work, destination, known,
+                                 known_mappings={"1" * 16: known_name})
+        assert ci.load_map(destination) == {"1" * 16: known_name}, "cached LTAR hits need not leave a local archive alias"
     print("PASS missing-map recovery: completed cached LTAR retained; partial cache/trace discarded")
 
 
@@ -167,6 +173,7 @@ def main():
         run(["git", "clone", "-q", str(origin), str(packages / "external")], temporary)
         run(["git", "config", "http.extraHeader", "Authorization: fixture-private-git-header"], packages / "external")
         config = '''name = "ciFixture"
+platformIndependent = true
 srcDir = "src"
 defaultTargets = ["Main"]
 [[require]]
