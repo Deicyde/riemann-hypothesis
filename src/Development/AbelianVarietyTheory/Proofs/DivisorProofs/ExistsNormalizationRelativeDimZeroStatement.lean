@@ -8,4 +8,4 @@ open ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestrictio
 open GlobalTheory GlobalTheory.QCoh GlobalTheory.CechPic GlobalTheory.Vert GlobalTheory.ShFam GlobalTheory.ShFam.Pad GlobalTheory.Mean4O GlobalTheory.MixedLocalChains
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_normalization_relative_dim_zero : ∀ (O : Type) [CommRing O] [IsDomain O] [IsDiscreteValuationRing O] [CharZero O] (Z : GlobalTheory.Vert.Model O), ∃ (Z' : GlobalTheory.Vert.Model O) (n : GlobalTheory.Vert.Model.Hom Z' Z), GlobalTheory.IsNormalScheme Z'.X ∧ n.relDim = 0 := by
-  first | exact @GlobalTheory.Vert.Model.exists_normal_hom | exact GlobalTheory.Vert.Model.exists_normal_hom | (intros; apply GlobalTheory.Vert.Model.exists_normal_hom <;> assumption)
+  exact @GlobalTheory.Vert.Model.exists_normal_hom

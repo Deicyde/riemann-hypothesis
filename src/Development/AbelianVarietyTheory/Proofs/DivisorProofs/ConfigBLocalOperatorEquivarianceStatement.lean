@@ -17,4 +17,4 @@ theorem _root_.GlobalTheory.T.config_b_local_operator_equivariance : GlobalTheor
     GlobalTheory.ThK.EvUniqB.FinRel B G.M' G₁.M' H.ι H'.ι (isoB H H') v T → GlobalTheory.ThK.EvUniqB.FinRel B G.M' G₁.M' H.ι H'.ι (isoB H H') v T' →
     (SB _).map T = SB _ → (SB _).map T' = SB _ → T (G.M'.vac v) = G₁.M'.vac v → T' (G.M'.vac v) = G₁.M'.vac v →
     ∀ φ ∈ SB (Fin (b + 2) × Fin (a + (b + 2)) → Fv F v), T' φ = T φ := by
-  first | exact @GlobalTheory.ThK.EvUniqB.finRel_unique | exact GlobalTheory.ThK.EvUniqB.finRel_unique | (intros; apply GlobalTheory.ThK.EvUniqB.finRel_unique <;> assumption)
+  exact @GlobalTheory.ThK.EvUniqB.finRel_unique

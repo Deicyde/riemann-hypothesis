@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.cover_chart_lattice_transform : ∀ {F : Type} [Fi
     AtTest V W p (fun _ e _ z yt => ⊤ ≤ yt ⁻¹ᵁ U → ∀ i j,
       e.w (valAt (z ≫ V.j) ((Um.transpose * ((Q.map κ).transpose * J.map (Int.castRingHom V.X.functionField) * Q.map κ) *
         Um) i j)) ≤ e.w (p : AlgebraicClosure F) ^ k / e.w (n : AlgebraicClosure F) ^ 2) := by
-  first | exact @GlobalTheory.ConstLat.IsoSecond.form_frame_second_le | exact GlobalTheory.ConstLat.IsoSecond.form_frame_second_le | (intros; apply GlobalTheory.ConstLat.IsoSecond.form_frame_second_le <;> assumption)
+  exact @GlobalTheory.ConstLat.IsoSecond.form_frame_second_le

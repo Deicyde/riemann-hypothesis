@@ -23,4 +23,4 @@ theorem _root_.GlobalTheory.T.cuspidal_component_constant_term : ∀ (F E : Type
       (∀ a b : ℂ, GlobalTheory.StdPar.IsCuspComp σ J Xf Yf S K (a • φ + b • ψ) (a • φc + b • ψc)) ∧
       ∀ (v : HeightOneSpectrum (𝓞 F)) (x : GLoc σ J v),
         GlobalTheory.StdPar.IsCuspComp σ J Xf Yf S K (fun y => φ (y * emb σ J v x)) (fun y => φc (y * emb σ J v x)) := by
-  first | exact @GlobalTheory.CuspCompLin.isCuspComp_linear_transl | exact GlobalTheory.CuspCompLin.isCuspComp_linear_transl | (intros; apply GlobalTheory.CuspCompLin.isCuspComp_linear_transl <;> assumption)
+  exact @GlobalTheory.CuspCompLin.isCuspComp_linear_transl

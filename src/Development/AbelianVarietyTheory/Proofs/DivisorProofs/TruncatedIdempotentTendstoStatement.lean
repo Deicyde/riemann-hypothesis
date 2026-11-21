@@ -12,4 +12,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.truncated_idempotent_tendsto : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [NumberField E] [Algebra F E] (c : AE F E),
     (∀ u : AF F, At (evI F) u → u • c = 0) →
     Tendsto (fun T : Finset (Pl F) => GlobalTheory.TruncFix.idem T • c) atTop (𝓝 c) := by
-  first | exact @GlobalTheory.TruncFix.tendsto_idem_smul | exact GlobalTheory.TruncFix.tendsto_idem_smul | (intros; apply GlobalTheory.TruncFix.tendsto_idem_smul <;> assumption)
+  exact @GlobalTheory.TruncFix.tendsto_idem_smul

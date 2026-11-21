@@ -10,4 +10,4 @@ theorem _root_.GlobalTheory.T.quaternion_trace_open : ∀ {F K : Type} [Field F]
   (a : Q d β K), qn a = 1 → a.re ^ 2 ≠ 1 →
   (∀ V ∈ 𝓝 (1 : K), ∀ᶠ x in 𝓝 (1 : K), ∃ μ ∈ V, μ ^ 2 = x) →
   ∀ U ∈ 𝓝 a, ∀ᶠ r in 𝓝 a.re, ∃ b ∈ U, qn b = 1 ∧ b.re = r := by
-  first | exact @GlobalTheory.CompanionTheory.PlaneSA.re_normOne_open_of_sq_ne_one | exact GlobalTheory.CompanionTheory.PlaneSA.re_normOne_open_of_sq_ne_one | (intros; apply GlobalTheory.CompanionTheory.PlaneSA.re_normOne_open_of_sq_ne_one <;> assumption)
+  exact @GlobalTheory.CompanionTheory.PlaneSA.re_normOne_open_of_sq_ne_one

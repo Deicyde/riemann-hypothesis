@@ -30,4 +30,4 @@ theorem _root_.GlobalTheory.T.config_b_stabilizer_ideles_haar_third : GlobalTheo
           ((absE F E l : ℝ) : ℂ) ^ (s + ((a : ℂ) + 1) / 2) ∂μ ∂μK) C ∧
         GlobalTheory.ConeSmallMid.JRel W₂ H₂ X.α (((b : ℕ) : ℂ) / 2) X.β (((a : ℕ) : ℂ) / 2) C ∧
         GlobalTheory.ConeSmallMid.JRel W₂ H₂ X.β (((a : ℕ) : ℂ) / 2) X.α (((b : ℕ) : ℂ) / 2) C := by
-  first | exact @GlobalTheory.ConeJBPass.pass | exact GlobalTheory.ConeJBPass.pass | (intros; apply GlobalTheory.ConeJBPass.pass <;> assumption)
+  exact @GlobalTheory.ConeJBPass.pass

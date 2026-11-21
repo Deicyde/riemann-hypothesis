@@ -25,4 +25,4 @@ theorem _root_.GlobalTheory.T.tangent_basis_generic_point : ∀ (E : Type) [Fiel
     ∀ (L : Type) [CommRing L] (io : A →+* L) (yL : Sp L ⟶ Xo'.XF c'), yL ≫ Y.j = spMap io ≫ ξ →
     ∀ cf : Fin g → L, ∃ w : Sp (DualNumber L) ⟶ Y.oF.t.G.left,
       IsCombAtG Y.t (yL ≫ Y.j) (bcV Y.t io e) cf (w ≫ Y.m.φ) ∧ IsTanAtG Y.oF.t yL w := by
-  first | exact @GlobalTheory.FlatModel.LiftGen.exists_lift_comb | exact GlobalTheory.FlatModel.LiftGen.exists_lift_comb | (intros; apply GlobalTheory.FlatModel.LiftGen.exists_lift_comb <;> assumption)
+  exact @GlobalTheory.FlatModel.LiftGen.exists_lift_comb

@@ -35,4 +35,4 @@ theorem _root_.GlobalTheory.T.weil_model_cm_extension : GlobalTheory.FunPr.Hypot
     ∀ c : ℝ → GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.SInf F (Fin n × Fin d),
       (∀ t : ℝ, om (1, γ (Multiplicative.ofAdd t)) (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.pure f φ) = GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.pure (c t) φ) →
       ∃ g : GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.SInf F (Fin n × Fin d), Tendsto (fun t : ℝ => t⁻¹ • (c t - c 0)) (𝓝[≠] 0) (𝓝 g) := by
-  first | exact @GlobalTheory.Twist.SmoothLine.smooth_line_pure | exact GlobalTheory.Twist.SmoothLine.smooth_line_pure | (intros; apply GlobalTheory.Twist.SmoothLine.smooth_line_pure <;> assumption)
+  exact @GlobalTheory.Twist.SmoothLine.smooth_line_pure

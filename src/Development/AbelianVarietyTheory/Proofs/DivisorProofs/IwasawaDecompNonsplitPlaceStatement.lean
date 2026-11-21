@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.iwasawa_decomp_nonsplit_place : ∀ (F E : Type) [
     ∀ h ∈ UAt σ W (evFin F v), ∃ (n m k : UA σ W.J) (t : (AE F E)ˣ) (h₁ : UA σ W₁.J), n ∈ unip σ W H' ∧
       n ∈ UAt σ W (evFin F v) ∧ m ∈ UAt σ W (evFin F v) ∧ h₁ ∈ UAt σ W₁ (evFin F v) ∧ IsLevi H' t h₁ m ∧
       k ∈ KAt σ W v ∧ h = n * m * k := by
-  first | exact @GlobalTheory.IwLineInert.iwasawa_line | exact GlobalTheory.IwLineInert.iwasawa_line | (intros; apply GlobalTheory.IwLineInert.iwasawa_line <;> assumption)
+  exact @GlobalTheory.IwLineInert.iwasawa_line

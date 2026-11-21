@@ -23,4 +23,4 @@ theorem _root_.GlobalTheory.T.pullback_model_arc_polarization : ∀ (E : Type) [
         IsArcBase O' ϖ → IsArcChart Y (GlobalTheory.PolArc.moveV bV hbV b' a) ϖ χ₀ →
         ∀ x₀ : Sp (FractionRing (PowerSeries O')) ⟶ Xo.XF c, Out.jK (PowerSeries O') ≫ χ₀ = x₀ ≫ Y.j →
         ∃ e : LB.Gen ((GlobalTheory.FlagMod.detOm Z).pull (x₀ ≫ Z.j)), e.IsGen ∧ GlobalTheory.TraitGen.ExtAt (GlobalTheory.FlagMod.detOm Z) (x₀ ≫ Z.j) e := by
-  first | exact @GlobalTheory.TraitGen.exists_detOm_gen_extends | exact GlobalTheory.TraitGen.exists_detOm_gen_extends | (intros; apply GlobalTheory.TraitGen.exists_detOm_gen_extends <;> assumption)
+  exact @GlobalTheory.TraitGen.exists_detOm_gen_extends

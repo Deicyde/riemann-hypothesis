@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.local_section_of_coefficient_spec : ∀ (M : Schem
     ∃ (f : R) (_ : f ∉ x.asIdeal) (g : R₀ ⊗[ℤ] Γ(M, W) →ₐ[R₀] Localization.Away f),
       spMap (g : R₀ ⊗[ℤ] Γ(M, W) →+* Localization.Away f) ≫ coefSpecMap hW R₀ =
         spMap (algebraMap R (Localization.Away f)) ≫ b := by
-  first | exact @GlobalTheory.exists_away_factor_coefSpecMap | exact GlobalTheory.exists_away_factor_coefSpecMap | (intros; apply GlobalTheory.exists_away_factor_coefSpecMap <;> assumption)
+  exact @GlobalTheory.exists_away_factor_coefSpecMap

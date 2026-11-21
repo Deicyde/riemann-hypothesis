@@ -26,4 +26,4 @@ theorem _root_.GlobalTheory.T.unimodular_quotient_integral_formula : ∀ (G T L 
       IntegrableOn A 𝓕 μ ∧ ∫ m in 𝓕, A m ∂μ = 0) →
     ∀ (μ₁ : Measure L) (𝓕₁ : Set L), μ₁.IsHaarMeasure → IsFundamentalDomain ΓL 𝓕₁ μ₁ →
       IntegrableOn a 𝓕₁ μ₁ ∧ ∫ m in 𝓕₁, a m ∂μ₁ = 0 := by
-  first | exact @GlobalTheory.ProdFundDom.setIntegral_eq_zero_of_prod | exact GlobalTheory.ProdFundDom.setIntegral_eq_zero_of_prod | (intros; apply GlobalTheory.ProdFundDom.setIntegral_eq_zero_of_prod <;> assumption)
+  exact @GlobalTheory.ProdFundDom.setIntegral_eq_zero_of_prod

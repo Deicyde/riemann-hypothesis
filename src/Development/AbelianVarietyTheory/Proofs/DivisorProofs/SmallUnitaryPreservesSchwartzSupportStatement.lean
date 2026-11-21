@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.small_unitary_preserves_schwartz_support : ∀ {F 
           ((M.co.e (actAB (cA σ) ((1 : UA σ X.J), k) (M.co.e.symm w)) - w).2 i).1 = 0) ∧
         (fun i => ((M.co.e (actAB (cA σ) ((1 : UA σ X.J), k) (M.co.e.symm w)) - w).1 i).2) ∈ Mo ∧
         (fun i => ((M.co.e (actAB (cA σ) ((1 : UA σ X.J), k) (M.co.e.symm w)) - w).2 i).2) ∈ Mo := by
-  first | exact @GlobalTheory.WeilSmallAct.smallAct | exact GlobalTheory.WeilSmallAct.smallAct | (intros; apply GlobalTheory.WeilSmallAct.smallAct <;> assumption)
+  exact @GlobalTheory.WeilSmallAct.smallAct

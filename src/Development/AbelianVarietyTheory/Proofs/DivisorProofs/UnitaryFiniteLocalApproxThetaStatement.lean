@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.unitary_finite_local_approx_theta : GlobalTheory.T
         ∃ φ₁ : ∀ v : Pl F, (Fin n × Fin d → Fv F v) → ℂ,
           (∀ v, φ₁ v ∈ SB _ ∧ Acts (evFin F v) (om (1, h v)) (φ v) (φ₁ v)) ∧ (∀ v ∉ T, φ₁ v = M.vac v) ∧
           om (1, hf) (pure f φ) = pure f φ₁ := by
-  first | exact @GlobalTheory.FinFactor.om_pure_factor | exact GlobalTheory.FinFactor.om_pure_factor | (intros; apply GlobalTheory.FinFactor.om_pure_factor <;> assumption)
+  exact @GlobalTheory.FinFactor.om_pure_factor

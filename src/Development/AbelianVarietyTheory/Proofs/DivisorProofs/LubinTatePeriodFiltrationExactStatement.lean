@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.lubin_tate_period_filtration_exact : ∀ (l : ℕ)
     ∃ x ∈ DdRE (P.PD K) (lineRep (K := K) (LL := LL) (ltChar τ₀ χ⁻¹)) τ₀,
       x ∈ FilV (P.PD K) (LL := ↥LL.1) (V := Fin 1 → ↥LL.1) 1 ∧
       x ∉ FilV (P.PD K) (LL := ↥LL.1) (V := Fin 1 → ↥LL.1) 2 := by
-  first | exact @GlobalTheory.PMC.PeriodVector.exists_degree_one | exact GlobalTheory.PMC.PeriodVector.exists_degree_one | (intros; apply GlobalTheory.PMC.PeriodVector.exists_degree_one <;> assumption)
+  exact @GlobalTheory.PMC.PeriodVector.exists_degree_one

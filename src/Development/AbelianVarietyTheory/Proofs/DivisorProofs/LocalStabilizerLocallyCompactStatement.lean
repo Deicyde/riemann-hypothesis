@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.local_stabilizer_locally_compact : ∀ (F E : Type
     LocallyCompactSpace (UAtSub σ G.V (evFin F v)) ∧ SecondCountableTopology (UAtSub σ G.V (evFin F v)) ∧
       T2Space (UAtSub σ G.V (evFin F v)) ∧
       ∀ μ : Measure (UAtSub σ G.V (evFin F v)), μ.IsHaarMeasure → μ.IsMulRightInvariant := by
-  first | exact @GlobalTheory.LocUnitaryUnimod.lcsc_unimodular_UAtSub | exact GlobalTheory.LocUnitaryUnimod.lcsc_unimodular_UAtSub | (intros; apply GlobalTheory.LocUnitaryUnimod.lcsc_unimodular_UAtSub <;> assumption)
+  exact @GlobalTheory.LocUnitaryUnimod.lcsc_unimodular_UAtSub

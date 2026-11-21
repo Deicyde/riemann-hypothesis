@@ -8,4 +8,4 @@ theorem _root_.GlobalTheory.T.torsion_basis_relations_divisible : ∀ (F : Type)
     ∀ p : Fin 2 → M, (∀ i, N • p i = 0) →
     (∀ y : M, N • y = 0 → ∃ a b : 𝓞 F, y = a • p 0 + b • p 1) →
     ∀ a b : 𝓞 F, a • p 0 + b • p 1 = 0 → (N : 𝓞 F) ∣ a ∧ (N : 𝓞 F) ∣ b := by
-  first | exact @GlobalTheory.dvd_of_two_gens_of_card_torsion | exact GlobalTheory.dvd_of_two_gens_of_card_torsion | (intros; apply GlobalTheory.dvd_of_two_gens_of_card_torsion <;> assumption)
+  exact @GlobalTheory.dvd_of_two_gens_of_card_torsion

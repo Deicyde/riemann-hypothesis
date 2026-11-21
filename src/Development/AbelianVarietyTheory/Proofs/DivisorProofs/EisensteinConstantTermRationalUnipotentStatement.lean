@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.eisenstein_constant_term_rational_unipotent : ∀ 
     (a : GL (Fin n) (AF F ⊗[F] E)) (h : GAd σ J → ℝ), HidaSetting σ J X Y L a h →
     ∀ T, GlobalTheory.EisCT.IsTransv σ J (col0 X) T → ∀ ν ∈ ratPts σ J, ν ∈ unipRad σ J (col0 X) → ∀ (s : ℂ) (g : GAd σ J),
     GlobalTheory.EisCT.midSum σ J (col0 X) T h s (ν * g) = GlobalTheory.EisCT.midSum σ J (col0 X) T h s g := by
-  first | exact @GlobalTheory.EisCTMid.midSum_left_invariant | exact GlobalTheory.EisCTMid.midSum_left_invariant | (intros; apply GlobalTheory.EisCTMid.midSum_left_invariant <;> assumption)
+  exact @GlobalTheory.EisCTMid.midSum_left_invariant

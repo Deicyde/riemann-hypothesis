@@ -29,4 +29,4 @@ theorem _root_.GlobalTheory.T.hyperbolic_plane_orbit_measure : ∀ (F E : Type) 
       (∀ (k : Fin n) (i : Fin r), X' k i.succ = (H.ι * Xf) k i ∧ Y' k i.succ = (H.ι * Yf) k i) → GlobalTheory.ThK.InducedCons.IsParDec hσ W W₁ H hc₀ X' M 1 1 1 ∧ IsClosed {g : GAd σ (c₀ • W.J.map σ) | ∃ t y, GlobalTheory.ThK.InducedCons.IsParDec hσ W W₁ H hc₀ X' M t y g} ∧
       ∃ (τ : GAd σ (c₀ • W.J.map σ) → (AE F E)ˣ) (η : GAd σ (c₀ • W.J.map σ) → GAd σ (c₀ • W₁.J.map σ)), ContinuousOn τ {g : GAd σ (c₀ • W.J.map σ) | ∃ t y, GlobalTheory.ThK.InducedCons.IsParDec hσ W W₁ H hc₀ X' M t y g} ∧
         ContinuousOn η {g : GAd σ (c₀ • W.J.map σ) | ∃ t y, GlobalTheory.ThK.InducedCons.IsParDec hσ W W₁ H hc₀ X' M t y g} ∧ ∀ t y g, GlobalTheory.ThK.InducedCons.IsParDec hσ W W₁ H hc₀ X' M t y g → τ g = t ∧ η g = y := by
-  first | exact @GlobalTheory.ThK.InducedCons.parDec_coords | exact GlobalTheory.ThK.InducedCons.parDec_coords | (intros; apply GlobalTheory.ThK.InducedCons.parDec_coords <;> assumption)
+  exact @GlobalTheory.ThK.InducedCons.parDec_coords

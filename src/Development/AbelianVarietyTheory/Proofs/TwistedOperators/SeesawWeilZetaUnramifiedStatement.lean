@@ -35,4 +35,4 @@ theorem _root_.GlobalTheory.T.seesaw_weil_zeta_unramified : GlobalTheory.Publish
           ∃ L : ℝ →+ WO (sgn true W) X, Continuous L ∧ (∀ t, (L t).map (finPart D) = 0) ∧
             GlobalTheory.TripleRead.thO Γ.M ψ (sgn true W).gram e (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.pure f₁ φ) =
               fun x => deriv (fun t : ℝ => heisO ψ (sgn true W) X (L t) (GlobalTheory.TripleRead.thO Γ.M ψ (sgn true W).gram e (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.pure f φ)) x) 0 := by
-  first | exact @GlobalTheory.ThetaDer.thO_pure_deriv_first | exact GlobalTheory.ThetaDer.thO_pure_deriv_first | (intros; apply GlobalTheory.ThetaDer.thO_pure_deriv_first <;> assumption)
+  exact @GlobalTheory.ThetaDer.thO_pure_deriv_first

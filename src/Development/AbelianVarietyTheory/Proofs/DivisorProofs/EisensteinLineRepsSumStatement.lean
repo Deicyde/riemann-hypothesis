@@ -17,4 +17,4 @@ theorem _root_.GlobalTheory.T.eisenstein_line_reps_sum : GlobalTheory.Published.
     (a : GL (Fin n) (AF F ⊗[F] E)) (h : GAd σ J → ℝ), HidaSetting σ J X Y L a h →
       ∀ Yr : Set (Fin n → E), GlobalTheory.EisMidHt.IsLineReps σ J (GlobalTheory.EisMidHt.firstColumn X) (GlobalTheory.EisMidHt.firstColumn Y) Yr →
       ∀ s : ℝ, (n : ℝ) - 3 < s → ∑' y : Yr, ENNReal.ofReal (GlobalTheory.EisMidHt.ht L a (GlobalTheory.EisMidHt.adVec F y.1) ^ (-s)) < ⊤ := by
-  first | exact @GlobalTheory.EisMidHt.midLines_sum_rpow_lt_top | exact GlobalTheory.EisMidHt.midLines_sum_rpow_lt_top | (intros; apply GlobalTheory.EisMidHt.midLines_sum_rpow_lt_top <;> assumption)
+  exact @GlobalTheory.EisMidHt.midLines_sum_rpow_lt_top

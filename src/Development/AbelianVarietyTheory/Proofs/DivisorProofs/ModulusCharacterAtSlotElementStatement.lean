@@ -10,4 +10,4 @@ theorem _root_.GlobalTheory.T.modulus_character_at_position_element : ∀ (k : T
     (n i : ℕ), i + 1 ≤ n → ∀ (ϖ : kˣ),
       ((deltaHalf k (fun j : Fin (i + 2) => Fin (blockSizes₂ n i j)) (blockScalar₂ k n i ϖ) : ℂˣ) : ℂ) =
         ((nabs k ϖ ^ (((n : ℝ) - 1) / 2 - (i : ℝ)) : ℝ) : ℂ) := by
-  first | exact @GlobalTheory.LeviBlockExponent.deltaHalf_positionElt | exact GlobalTheory.LeviBlockExponent.deltaHalf_positionElt | (intros; apply GlobalTheory.LeviBlockExponent.deltaHalf_positionElt <;> assumption)
+  exact @GlobalTheory.LeviBlockExponent.deltaHalf_positionElt

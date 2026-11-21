@@ -32,4 +32,4 @@ theorem _root_.GlobalTheory.T.matched_maps_fourier_identity : GlobalTheory.FunPr
     GlobalTheory.HoweGlobal.relInf Bs G om ≤ LinearMap.ker (R.p ∘ₗ (G.M.Pol Bs.ψ Bs.emb).subtype) ∧
     ∀ g ∈ GlobalTheory.HoweGlobal.opInf Bs G om, ∀ x ∈ LinearMap.ker (R.p ∘ₗ (G.M.Pol Bs.ψ Bs.emb).subtype),
       g x ∈ LinearMap.ker (R.p ∘ₗ (G.M.Pol Bs.ψ Bs.emb).subtype) := by
-  first | exact @GlobalTheory.HoweGlobal.RealTransfer.realTransfer | exact GlobalTheory.HoweGlobal.RealTransfer.realTransfer | (intros; apply GlobalTheory.HoweGlobal.RealTransfer.realTransfer <;> assumption)
+  exact @GlobalTheory.HoweGlobal.RealTransfer.realTransfer

@@ -18,4 +18,4 @@ theorem _root_.GlobalTheory.T.constant_term_nonzero_vector : ∀ (F E : Type) [F
       (Matrix.of fun i (_ : Fin 1) => H'.x i) ≠ 0 ∧
       Formalism.UG.cT (σ : E →+* E) (Matrix.of fun i (_ : Fin 1) => H'.x i) * (c • W.J.map σ) * (Matrix.of fun i (_ : Fin 1) => H'.x i) = 0 ∧
       IsConstTerm σ (c • W.J.map σ) (Matrix.of fun i (_ : Fin 1) => H'.x i) (fun x => f ((toGAd hσ W.J hc).symm x)) 0 := by
-  first | exact @GlobalTheory.LineCT.isConstTerm_line | exact GlobalTheory.LineCT.isConstTerm_line | (intros; apply GlobalTheory.LineCT.isConstTerm_line <;> assumption)
+  exact @GlobalTheory.LineCT.isConstTerm_line

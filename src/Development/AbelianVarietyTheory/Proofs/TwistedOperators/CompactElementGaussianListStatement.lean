@@ -25,4 +25,4 @@ theorem _root_.GlobalTheory.T.compact_element_gaussian_list : GlobalTheory.FunPr
       (∀ q ∈ l, q.2 ∈ lieAt W q.1 ∧ ∀ t : ℝ,
         GlobalTheory.IndefiniteRowSideFullHecke.UnitaryConjugation.conjU W 1 hJ (oneP θ W q.1 q.2 t) ∈ GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.KInf D.sp.cm.sig V Bs.emb) ∧
       k = (l.map fun q => GlobalTheory.IndefiniteRowSideFullHecke.UnitaryConjugation.conjU W 1 hJ (oneP θ W q.1 q.2 1)).prod := by
-  first | exact @GlobalTheory.KInfLines.prod_lines | exact GlobalTheory.KInfLines.prod_lines | (intros; apply GlobalTheory.KInfLines.prod_lines <;> assumption)
+  exact @GlobalTheory.KInfLines.prod_lines

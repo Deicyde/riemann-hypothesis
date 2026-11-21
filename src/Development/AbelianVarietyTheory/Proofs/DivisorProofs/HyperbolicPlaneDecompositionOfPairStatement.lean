@@ -21,4 +21,4 @@ theorem _root_.GlobalTheory.T.hyperbolic_plane_decomposition_of_pair : ∀ (F E 
           ∃ z : Matrix (Fin d₂) (Fin d) (AE F E), (M₁.co.e z).1 = 0 ∧ ∀ φ : Fn F n d,
             schr B.ψ (t • ((fun i => algebraMap F (AF F) (w.1 i)), (fun i => algebraMap F (AF F) (w.2 i)))) φ =
               M.co.rho B.ψ u (M.co.rho B.ψ (incM F H.ι * z * (incM F (1 : Matrix (Fin d) (Fin d) E))ᵀ) φ) := by
-  first | exact @GlobalTheory.MixedLagrXPlain.mixed_lagrangian_plane | exact GlobalTheory.MixedLagrXPlain.mixed_lagrangian_plane | (intros; apply GlobalTheory.MixedLagrXPlain.mixed_lagrangian_plane <;> assumption)
+  exact @GlobalTheory.MixedLagrXPlain.mixed_lagrangian_plane

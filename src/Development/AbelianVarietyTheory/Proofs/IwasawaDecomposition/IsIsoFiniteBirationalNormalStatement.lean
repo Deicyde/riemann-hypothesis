@@ -9,4 +9,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.isIso_finite_birational_normal : ∀ (V S T : Scheme.{0}) (e : S ⟶ T) (jS : V ⟶ S) (jT : V ⟶ T), IsFinite e → IsReduced S →
     ReciprocityTheory.ChartRestriction.G.Geo.Tor.IsNormalScheme T → IsLocallyNoetherian T → IsOpenImmersion jS → IsOpenImmersion jT →
     jS ≫ e = jT → Dense (Set.range jS) → Dense (Set.range jT) → e ⁻¹' Set.range jT = Set.range jS → IsIso e := by
-  first | exact @GlobalTheory.FiniteBirationalIso.main | exact GlobalTheory.FiniteBirationalIso.main | (intros; apply GlobalTheory.FiniteBirationalIso.main <;> assumption)
+  exact @GlobalTheory.FiniteBirationalIso.main

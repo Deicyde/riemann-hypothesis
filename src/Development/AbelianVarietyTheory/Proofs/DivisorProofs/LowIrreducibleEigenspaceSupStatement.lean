@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.low_irreducible_eigenspace_sup : ∀ (P Q R S : �
     ∀ (r : Fin R) (s : Fin S), GlobalTheory.KFixIrr.lowOne P Q R S x (P * k + Q * k') ≤ ⨆ n : ℕ × ℕ,
       Module.End.eigenspace (Formalism.BasicNotions.TH.fockAct2 P Q R S (Formalism.BasicNotions.TH.Eab (.inl r) (.inl r))) (((P : ℂ) - Q) / 2 + n.1) ⊓
       Module.End.eigenspace (Formalism.BasicNotions.TH.fockAct2 P Q R S (Formalism.BasicNotions.TH.Eab (.inr s) (.inr s))) (-(((P : ℂ) - Q) / 2) + n.2) := by
-  first | exact @GlobalTheory.FockLowWt.lowOne_le_wt | exact GlobalTheory.FockLowWt.lowOne_le_wt | (intros; apply GlobalTheory.FockLowWt.lowOne_le_wt <;> assumption)
+  exact @GlobalTheory.FockLowWt.lowOne_le_wt

@@ -22,4 +22,4 @@ theorem _root_.GlobalTheory.T.module_action_fraction_field : ∀ (R O : Type) [C
       Module.Invertible (K ⊗[ℤ] O) N) →
     ∃ m : M, Function.Bijective
       (Finsupp.linearCombination K (fun i => (1 : K) ⊗ₜ[R] (b i • m))) := by
-  first | exact @GlobalTheory.exists_fibre_generator_basis | exact GlobalTheory.exists_fibre_generator_basis | (intros; apply GlobalTheory.exists_fibre_generator_basis <;> assumption)
+  exact @GlobalTheory.exists_fibre_generator_basis

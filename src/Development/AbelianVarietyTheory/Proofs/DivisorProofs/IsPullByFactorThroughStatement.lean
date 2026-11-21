@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.isPullBy_factor_through : ∀ {F : Type} [Field F]
     {b : S' ⟶ S} {b' : S'' ⟶ S'} {φ : X'.A.left ⟶ X.A.left} {χ : X''.A.left ⟶ X.A.left},
     X''.IsPullBy X (b' ≫ b) χ → X'.IsPullBy X b φ →
     ∃ ψ : X''.A.left ⟶ X'.A.left, X''.IsPullBy X' b' ψ ∧ ψ ≫ φ = χ := by
-  first | exact @GlobalTheory.RealMult.Obj.IsPullBy.exists_of_comp | exact GlobalTheory.RealMult.Obj.IsPullBy.exists_of_comp | (intros; apply GlobalTheory.RealMult.Obj.IsPullBy.exists_of_comp <;> assumption)
+  exact @GlobalTheory.RealMult.Obj.IsPullBy.exists_of_comp

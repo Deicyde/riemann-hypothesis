@@ -9,4 +9,4 @@ theorem _root_.GlobalTheory.T.dual_points_generic_finite : ∀ (R K : Type) [Com
       [Module.Finite (Localization.Away r) C] [Module.Free (Localization.Away r) C],
       (∀ (k : Type) [Field k] [Algebra R k] [Algebra K k] [IsScalarTower R K k] (ψ : C →ₐ[R] DualNumber k),
         ψ = ((TrivSqZeroExt.inlAlgHom R k k).comp (TrivSqZeroExt.fstHom R k k)).comp ψ) → IsReduced C := by
-  first | exact @GlobalTheory.isReduced_of_dualNumber_points_trivial | exact GlobalTheory.isReduced_of_dualNumber_points_trivial | (intros; apply GlobalTheory.isReduced_of_dualNumber_points_trivial <;> assumption)
+  exact @GlobalTheory.isReduced_of_dualNumber_points_trivial

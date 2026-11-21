@@ -31,4 +31,4 @@ theorem _root_.GlobalTheory.T.bottom_triangle_constant_exists : GlobalTheory.Fun
             GlobalTheory.BotFormula.IsFinPt WW g h → GlobalTheory.BotFormula.IsFinPt A y x →
             GlobalTheory.AdForm.xiN W.θ A WW ea.symm ed.symm r rc (fun w => starRingEnd ℂ (X.ω s (y, g) (X.f s) w)) =
               P.W.Om x h (GlobalTheory.AdForm.xiN W.θ A WW ea.symm ed.symm r rc (fun w => starRingEnd ℂ (X.f s w))) := by
-  first | exact @GlobalTheory.BotIntertw.bottom_intertwining | exact GlobalTheory.BotIntertw.bottom_intertwining | (intros; apply GlobalTheory.BotIntertw.bottom_intertwining <;> assumption)
+  exact @GlobalTheory.BotIntertw.bottom_intertwining

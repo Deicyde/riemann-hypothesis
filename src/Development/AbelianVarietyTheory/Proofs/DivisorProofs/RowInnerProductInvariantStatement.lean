@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.row_inner_product_invariant : ∀ {D : D7} {L : Si
         ((p.R.toRealDat.FW i).j (sgAt D.what₂.embLL (InfinitePlace.mk σ)) ((p.R.toRealDat.FW i).ρ g y)) =
       inner ℂ ((p.R.toRealDat.FW i).j (sgAt D.what₂.embLL (InfinitePlace.mk σ)) x)
         ((p.R.toRealDat.FW i).j (sgAt D.what₂.embLL (InfinitePlace.mk σ)) y) := by
-  first | exact @GlobalTheory.CovTop.geoUnitary_tied | exact GlobalTheory.CovTop.geoUnitary_tied | (intros; apply GlobalTheory.CovTop.geoUnitary_tied <;> assumption)
+  exact @GlobalTheory.CovTop.geoUnitary_tied

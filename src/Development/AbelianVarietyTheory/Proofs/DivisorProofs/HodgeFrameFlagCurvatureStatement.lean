@@ -24,4 +24,4 @@ theorem _root_.GlobalTheory.T.hodge_frame_flag_curvature : GlobalTheory.Indefini
             (fun i => lam (Fin.castAdd q i)) y) ξ +
           diagVal (horizForm (fun x => (b : ℂ) • -subGram (ψ x)) π eω
             (fun i => lam (Fin.natAdd p i)) y) ξ) := by
-  first | exact @GlobalTheory.HodgeHoriz.hodge_horiz | exact GlobalTheory.HodgeHoriz.hodge_horiz | (intros; apply GlobalTheory.HodgeHoriz.hodge_horiz <;> assumption)
+  exact @GlobalTheory.HodgeHoriz.hodge_horiz

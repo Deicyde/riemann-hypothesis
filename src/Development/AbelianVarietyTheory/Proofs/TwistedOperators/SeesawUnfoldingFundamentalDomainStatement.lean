@@ -29,4 +29,4 @@ theorem _root_.GlobalTheory.T.seesaw_unfolding_fundamental_domain : GlobalTheory
     ∀ Pi rf rl p p', IsMatch ψ θ A A₁ B α β ωA ωB Pi rf rl p p' →
     ∃ N : Submodule ℂ ((Fin W₁.rank × Fin (W.rank + W₁.rank) → AF D.host.F) → ℂ), (∀ Φ₀D, Φ₀D ∈ N ↔ Φ₀D ∈ algD Γ.M' Bs.ψ Bs.emb ∧ ∃ Φ₀ ∈ algF ψ θ false A₁ B, IsDatum Γ.M' ψ cB Φ₀D Φ₀ ∧ p' Φ₀ = 0) ∧
       IsThetaSubG Γ.M' Bs.ψ Bs.emb om' N ∧ N ≠ algD Γ.M' Bs.ψ Bs.emb := by
-  first | exact @GlobalTheory.SquareAgree.exists_kerPD_thetaSub | exact GlobalTheory.SquareAgree.exists_kerPD_thetaSub | (intros; apply GlobalTheory.SquareAgree.exists_kerPD_thetaSub <;> assumption)
+  exact @GlobalTheory.SquareAgree.exists_kerPD_thetaSub

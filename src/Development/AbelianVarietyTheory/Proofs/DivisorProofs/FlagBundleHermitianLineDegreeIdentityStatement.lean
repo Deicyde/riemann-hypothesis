@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.flag_bundle_hermitian_line_degree_identity : ∀ (
     ∀ v : CxPts p σ → ℝ, GlobalTheory.CurveDens.IsCosSq ((h.pull π w).met σ) (fl.ι 1) ((Scheme.Modules.pullback π).map (flB.ι 1)) v →
     ∀ α : (hY.atlas σ).Fld, (hY.atlas σ).IsForm α → ∀ ε : ℤˣ,
       ∃ C : ENNReal, C ≠ ⊤ ∧ Measure.map v ((hY.atlas σ).part α ε) ≤ C • volume.restrict (Set.Icc (0 : ℝ) 1) := by
-  first | exact @GlobalTheory.LineCos.map_cosSq_part_le | exact GlobalTheory.LineCos.map_cosSq_part_le | (intros; apply GlobalTheory.LineCos.map_cosSq_part_le <;> assumption)
+  exact @GlobalTheory.LineCos.map_cosSq_part_le

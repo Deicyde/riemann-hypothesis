@@ -37,4 +37,4 @@ theorem _root_.GlobalTheory.T.central_frame_split_nontrivial_at : ∀ hL : Globa
         (i.val < (w.st Z).toD7.R.r → i = j → (b * Matrix.GeneralLinearGroup.map φ y * b⁻¹).val i j = 1)) →
         ∃ c : ℂ, ∀ g, f (g * κ) = c * f g) ∧
       (Matrix.GeneralLinearGroup.map φ y = 1 → ∀ g, f (g * κ) = f g)) := by
-  first | exact @GlobalTheory.FrameTypes.main | exact GlobalTheory.FrameTypes.main | (intros; apply GlobalTheory.FrameTypes.main <;> assumption)
+  exact @GlobalTheory.FrameTypes.main

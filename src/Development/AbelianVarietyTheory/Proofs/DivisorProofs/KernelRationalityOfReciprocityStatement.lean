@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.adapted_evaluation_block_transform : ∀ {F E : Ty
     (∀ z, T (incM F ι * z * (incM F ι')ᵀ) = ((0, 0), z)) → (∀ u ∈ I, (T u).1.1 = 0 ∧ (T u).2 = 0) →
     (∀ v, l v ∈ SB _ ∧ l v 0 = 1) → (∀ v, M₁.vac v ∈ SB _) →
     IsEv B (Model.mk (glueDarboux M₁.co eq T hf) (fun v => vacGlue eq (l v) (M₁.vac v)) μ D) M₁ ι ι' I (restr eq) := by
-  first | exact @GlobalTheory.ThK.PlaneCo.GlueEv.restr_isEv | exact GlobalTheory.ThK.PlaneCo.GlueEv.restr_isEv | (intros; apply GlobalTheory.ThK.PlaneCo.GlueEv.restr_isEv <;> assumption)
+  exact @GlobalTheory.ThK.PlaneCo.GlueEv.restr_isEv

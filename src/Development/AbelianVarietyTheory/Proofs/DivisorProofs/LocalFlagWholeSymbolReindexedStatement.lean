@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.local_flag_whole_symbol_reindexed : Hypotheses2 �
     ∃ e : Fin (2 * (D.R.f * O.N)) ≃ Fin (D.R.f * O.N) ⊕ Fin (D.R.f * O.N),
       LocFlag (fun i => adlOf (O.Φ.C c) (O.met.hm c)
         (wholeSym (Function.update (ArIn.ind Sx) p true) (some R) (e i))) p := by
-  first | exact @GlobalTheory.WholeFlag.locFlag_whole | exact GlobalTheory.WholeFlag.locFlag_whole | (intros; apply GlobalTheory.WholeFlag.locFlag_whole <;> assumption)
+  exact @GlobalTheory.WholeFlag.locFlag_whole

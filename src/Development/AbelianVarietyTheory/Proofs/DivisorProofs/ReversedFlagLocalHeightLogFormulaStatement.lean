@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.reversed_flag_local_height_log_formula : ∀ {F : 
       Real.log (e.w (GlobalTheory.TrueGeo.valAt y.1 (genAt (B k).D (below y.1) * genAt (A (Fin.rev k)).D (below y.1))))) →
     HalfFlag A p →
     LocFlag (fun i : Fin N => Sum.elim A B (finSumFinEquiv.symm (finCongr h i))) p := by
-  first | exact @GlobalTheory.HalfGlue.locFlag_of_halfFlag | exact GlobalTheory.HalfGlue.locFlag_of_halfFlag | (intros; apply GlobalTheory.HalfGlue.locFlag_of_halfFlag <;> assumption)
+  exact @GlobalTheory.HalfGlue.locFlag_of_halfFlag

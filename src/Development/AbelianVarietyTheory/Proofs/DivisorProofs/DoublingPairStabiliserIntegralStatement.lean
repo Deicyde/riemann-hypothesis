@@ -20,4 +20,4 @@ theorem _root_.GlobalTheory.T.doubling_pair_stabiliser_integral : ∀ (F E : Typ
     ∀ K₂ : Subgroup (UA σ W₂.J), IsStab B K₂ → ∀ N ∈ 𝓝 (1 : UA σ W₂.J),
       ∃ s : Finset (UA σ W₂.J), (∀ k ∈ s, k ∈ K₂ ∧ k ∈ UAt σ W₂ (sndA F)) ∧
         ∀ f ∈ K₂, f ∈ UAt σ W₂ (sndA F) → ∃ k ∈ s, k⁻¹ * f ∈ N ∧ k⁻¹ * f ∈ UAt σ W₂ (sndA F) := by
-  first | exact @GlobalTheory.DblKFinCpt.finite_cover | exact GlobalTheory.DblKFinCpt.finite_cover | (intros; apply GlobalTheory.DblKFinCpt.finite_cover <;> assumption)
+  exact @GlobalTheory.DblKFinCpt.finite_cover

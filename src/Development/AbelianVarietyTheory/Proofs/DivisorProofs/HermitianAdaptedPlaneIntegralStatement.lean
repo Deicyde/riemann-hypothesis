@@ -17,4 +17,4 @@ theorem _root_.GlobalTheory.T.hermitian_adapted_plane_integral : GlobalTheory.Fu
       ∀ (t : (AE F E)ˣ) (m : UA σ X.J), IsLevi (W₁ := X₁) H t 1 m →
         ∀ k : ℂ, (∀ Φ ∈ schA F (Fin n × Fin d), e (om (m, 1) Φ) = k • e Φ) → (∃ Φ ∈ schA F (Fin n × Fin d), e Φ ≠ 0) →
         k = (χW t : ℂ) * (((absE F E t : ℝ) ^ ((d : ℝ) / 2) : ℝ) : ℂ) := by
-  first | exact @GlobalTheory.MixXTorusValue.torus_value | exact GlobalTheory.MixXTorusValue.torus_value | (intros; apply GlobalTheory.MixXTorusValue.torus_value <;> assumption)
+  exact @GlobalTheory.MixXTorusValue.torus_value

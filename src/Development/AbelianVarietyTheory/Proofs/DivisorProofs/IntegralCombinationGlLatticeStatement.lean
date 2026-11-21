@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.integral_combination_gl_lattice : ∀ (k : Type) [
     ∃ A : Set (Matrix (Fin n) (Fin d) k → ℂ), A.Finite ∧ (∀ a ∈ A, a ∈ GlobalTheory.SplitWeil.SB (Matrix (Fin n) (Fin d) k)) ∧
       ∀ φ ∈ GlobalTheory.SplitWeil.SB (Matrix (Fin n) (Fin d) k), (∀ g ∈ K, ∀ Y, φ ((g : Matrix (Fin n) (Fin n) k) * Y) = φ Y) →
         φ ∈ Submodule.span ℂ {χ : Matrix (Fin n) (Fin d) k → ℂ | ∃ a ∈ A, ∃ h : GL (Fin d) k, χ = fun Y => a (Y * (h : Matrix (Fin d) (Fin d) k))} := by
-  first | exact @GlobalTheory.SBInvSpan.span_translates_of_invariant | exact GlobalTheory.SBInvSpan.span_translates_of_invariant | (intros; apply GlobalTheory.SBInvSpan.span_translates_of_invariant <;> assumption)
+  exact @GlobalTheory.SBInvSpan.span_translates_of_invariant

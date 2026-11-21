@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.mixed_dbar_partial_commutation : ∀ {g : ℕ} (G 
       -(∑ a, ∑ c, G a c • (d10 (fun z' => d01 f z' (ev c)) z (ev a) + d10 ψ z (ev a) • d01 f z (ev c))) -
       ∑ a, ∑ c, ∑ d, (G a c * d01 (fun z' => d10 ψ z' (ev a)) z (ev d)) •
         wedge (dzb 0 d) (contr (dzb 0 c) (f z)) := by
-  first | exact @GlobalTheory.TorsionForm.FlatAcyc.Cross.dbarF_dbarAdjF_add | exact GlobalTheory.TorsionForm.FlatAcyc.Cross.dbarF_dbarAdjF_add | (intros; apply GlobalTheory.TorsionForm.FlatAcyc.Cross.dbarF_dbarAdjF_add <;> assumption)
+  exact @GlobalTheory.TorsionForm.FlatAcyc.Cross.dbarF_dbarAdjF_add

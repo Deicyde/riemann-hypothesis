@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.levi_unipotent_product_decomposition : ∀ (F E : 
     X.IsHerm σ B r s → X₁.IsHerm σ B r₁ s₁ → H.IsAdapted σ B X X₁ i₀ i₁ →
     ∀ (t : (AE F E)ˣ) (a : UA σ X.J) (g₀ : UA σ X₁.J) (g' : UA σ X.J),
     IsLevi (W₁ := X₁) H t 1 a → IsLevi H 1 g₀ g' → a * g' = g' * a := by
-  first | exact @GlobalTheory.LeviComm.levi_comm | exact GlobalTheory.LeviComm.levi_comm | (intros; apply GlobalTheory.LeviComm.levi_comm <;> assumption)
+  exact @GlobalTheory.LeviComm.levi_comm

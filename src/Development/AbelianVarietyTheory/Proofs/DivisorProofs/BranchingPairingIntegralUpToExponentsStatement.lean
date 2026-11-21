@@ -26,4 +26,4 @@ theorem _root_.GlobalTheory.T.branchingPairing_integral_upToExponents : ∀ {E K
     GlobalTheory.BrPairF.brPairF σ hN Λ u v = 0 ∨
       -Formalism.DivisionValues.vw w (((Formalism.EigenvalueLevelCeiling.plc w : ℕ) : K) ^ (∑ τ, Formalism.CohomologicalDescent.LA.exZ N N le_rfl (Λ τ).natW (Formalism.EigenvalueLevelCeiling.plc w))) ≤
         Formalism.DivisionValues.vw w (GlobalTheory.BrPairF.brPairF σ hN Λ u v) := by
-  first | exact @GlobalTheory.BrPairLocal.finLocal | exact GlobalTheory.BrPairLocal.finLocal | (intros; apply GlobalTheory.BrPairLocal.finLocal <;> assumption)
+  exact @GlobalTheory.BrPairLocal.finLocal

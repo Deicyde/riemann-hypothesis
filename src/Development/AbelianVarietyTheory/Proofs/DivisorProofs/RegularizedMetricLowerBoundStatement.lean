@@ -20,4 +20,4 @@ theorem _root_.GlobalTheory.T.regularized_metric_lower_bound : HessSt → CentSt
     ∀ c σ (u : D.what₂.Tau → Fin O.N → ℝ), Dom u → ∀ ch : AlgChart (O.var c).str σ (O.var c).dim, ∀ y ∈ ch.e.source, ∀ ξ,
       -(C * ‖u‖ * (Real.log (Real.log (1 / t)) / Real.log (1 / t)) * P.om c σ ch y ξ) ≤
         thW (refMet x O.Φ) c σ u ch y ξ + ddcForm (P.reg c σ u t) ch y ξ := by
-  first | exact @GlobalTheory.RegCurvAlg.curv_lower | exact GlobalTheory.RegCurvAlg.curv_lower | (intros; apply GlobalTheory.RegCurvAlg.curv_lower <;> assumption)
+  exact @GlobalTheory.RegCurvAlg.curv_lower

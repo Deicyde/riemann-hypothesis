@@ -11,4 +11,4 @@ theorem _root_.GlobalTheory.T.etale_space_covering_map : ∀ {X : Type} [Topolog
     (∀ x, ∃ O f, x ∈ O ∧ P O f) →
     (∀ O f g, P O f → P O g → IsOpen {y | y ∈ O ∧ f y = g y}) →
     IsCoveringMap (GlobalTheory.PrimLift.Etale.proj P) := by
-  first | exact @GlobalTheory.PrimLift.Etale.isCoveringMap_proj | exact GlobalTheory.PrimLift.Etale.isCoveringMap_proj | (intros; apply GlobalTheory.PrimLift.Etale.isCoveringMap_proj <;> assumption)
+  exact @GlobalTheory.PrimLift.Etale.isCoveringMap_proj

@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.unitary_stabilizer_isotropic_decomposition : ∀ (
     ∃ (n m : UA σ W.J) (t : (AE F E)ˣ) (h₁ : UA σ W₁.J), n ∈ unip σ W H' ∧
       n ∈ UAt σ W (evFin F v) ∧ m ∈ UAt σ W (evFin F v) ∧ h₁ ∈ UAt σ W₁ (evFin F v) ∧ IsLevi H' t h₁ m ∧
       p = n * m := by
-  first | exact @GlobalTheory.PlaneParabolic.parabolic_decomp | exact GlobalTheory.PlaneParabolic.parabolic_decomp | (intros; apply GlobalTheory.PlaneParabolic.parabolic_decomp <;> assumption)
+  exact @GlobalTheory.PlaneParabolic.parabolic_decomp

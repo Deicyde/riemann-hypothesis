@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.weil_line_good_model_action : GlobalTheory.FunPr.H
     (∀ t : ℝ, om (γ (Multiplicative.ofAdd t), 1) (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.tens (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.evI F) (h t) r) =
       GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.tens (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.evI F) (k t) r) →
     Filter.Tendsto h (nhds 0) (nhds h₀) → Filter.Tendsto k (nhds 0) (nhds h₀) := by
-  first | exact @GlobalTheory.ArchJointCont.tendsto_line | exact GlobalTheory.ArchJointCont.tendsto_line | (intros; apply GlobalTheory.ArchJointCont.tendsto_line <;> assumption)
+  exact @GlobalTheory.ArchJointCont.tendsto_line

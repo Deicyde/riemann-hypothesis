@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.split_weil_equivariant_functional_unique : ∀ (k 
       ∀ Φ : GlobalTheory.SplitWeil.SB (Y × Matrix (Fin (n + 1)) (Fin (m + 1)) k),
         (∀ (y : Y) (X : Matrix (Fin (n + 1)) (Fin (m + 1)) k), X 0 0 = 0 → (Φ : Y × Matrix (Fin (n + 1)) (Fin (m + 1)) k → ℂ) (y, X) = 0) →
         L Φ = 0 := by
-  first | exact @GlobalTheory.DetEqv.OpenPart.vanish_of_vanish_on_corner_zero | exact GlobalTheory.DetEqv.OpenPart.vanish_of_vanish_on_corner_zero | (intros; apply GlobalTheory.DetEqv.OpenPart.vanish_of_vanish_on_corner_zero <;> assumption)
+  exact @GlobalTheory.DetEqv.OpenPart.vanish_of_vanish_on_corner_zero

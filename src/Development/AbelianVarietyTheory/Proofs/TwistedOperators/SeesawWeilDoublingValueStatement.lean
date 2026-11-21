@@ -35,4 +35,4 @@ theorem _root_.GlobalTheory.T.seesaw_weil_doubling_value : GlobalTheory.Publishe
           (∑ i, GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.pure (f₁ i) (φ i)) ∈ GlobalTheory.TripleAssembly.darbAlg Γ.M Bs.ψ Bs.emb ∧
           Φ = GlobalTheory.TripleRead.thO Γ.M ψ (sgn true W).gram e (∑ i, GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.pure (f i) (φ i)) ∧
           Φ' = GlobalTheory.TripleRead.thO Γ.M ψ (sgn true W).gram e (∑ i, GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.pure (f₁ i) (φ i)) := by
-  first | exact @GlobalTheory.TripleAssembly.exists_pure_lieDer_left | exact GlobalTheory.TripleAssembly.exists_pure_lieDer_left | (intros; apply GlobalTheory.TripleAssembly.exists_pure_lieDer_left <;> assumption)
+  exact @GlobalTheory.TripleAssembly.exists_pure_lieDer_left

@@ -10,4 +10,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Pj GlobalTheory G
 open scoped Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.flag_at_of_local_flag : ∀ (F : Type) [Field F] [NumberField F] (Y : Var F) (C : CxSt F) (N : ℕ) (A : Fin N → Adl C Y) (p : ℕ), p.Prime → LocFlag A p → FlagAt A p := by
-  first | exact @GlobalTheory.FrameGlue.flagAt_of_locFlag | exact GlobalTheory.FrameGlue.flagAt_of_locFlag | (intros; apply GlobalTheory.FrameGlue.flagAt_of_locFlag <;> assumption)
+  exact @GlobalTheory.FrameGlue.flagAt_of_locFlag

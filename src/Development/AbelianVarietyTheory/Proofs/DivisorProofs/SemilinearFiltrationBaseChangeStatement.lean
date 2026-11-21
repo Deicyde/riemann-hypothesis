@@ -20,4 +20,4 @@ theorem _root_.GlobalTheory.T.semilinear_filtration_base_change : ∀ {R R' : Ty
     (hF : ∃ N : Submodule R M, IsCompl F N) (F' : Submodule R' M') (hF' : F' = Submodule.span R' (f '' (F : Set M)))
     (g : Module.Dual R M →ₛₗ[algebraMap R R'] Module.Dual R' M') (hg : ∀ h c, g h (f c) = algebraMap R R' (h c)),
    Submodule.span R' (g '' (F.dualAnnihilator : Set (Module.Dual R M))) = F'.dualAnnihilator := by
-  first | exact @GlobalTheory.annihilator_baseChange | exact GlobalTheory.annihilator_baseChange | (intros; apply GlobalTheory.annihilator_baseChange <;> assumption)
+  exact @GlobalTheory.annihilator_baseChange

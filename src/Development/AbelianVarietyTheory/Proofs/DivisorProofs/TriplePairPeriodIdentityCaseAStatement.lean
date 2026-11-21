@@ -23,4 +23,4 @@ theorem _root_.GlobalTheory.T.triple_pair_period_identity_case_a : ∀ (F E : Ty
     ∀ (y : Fin (b + 2) → AE F E) (f g : SInf F (Fin (b + 2) × Fin (b + 2 + a'))),
       ⇑g = GlobalTheory.ArchUniq.schrF (GlobalTheory.ArchUniq.trP F (Fin (b + 2) × Fin (b + 2 + a')))
         (GlobalTheory.ArchUniq.Coord.coordI G.M (Matrix.vecMulVec y (incV F H'.x))) ⇑f → ei g = ei f := by
-  first | exact @GlobalTheory.ThK.HeisInvInf.ei_schr_eq | exact GlobalTheory.ThK.HeisInvInf.ei_schr_eq | (intros; apply GlobalTheory.ThK.HeisInvInf.ei_schr_eq <;> assumption)
+  exact @GlobalTheory.ThK.HeisInvInf.ei_schr_eq

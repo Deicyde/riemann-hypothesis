@@ -22,4 +22,4 @@ theorem _root_.GlobalTheory.T.config_A_haar_stabilizer : ∀ (F E : Type) [Field
     ∀ g ∈ UAt σ G.V (evI F),
       ∫ k, ∫ l, L (m l.1⁻¹ * k.1 * g) * (((absE F E l.1 : ℝ) ^ ((b + 1 : ℕ) : ℝ) : ℝ) : ℂ) ∂μ ∂μK =
         ∫ k, ∫ l, L (m l.1⁻¹ * k.1) * (((absE F E l.1 : ℝ) ^ ((b + 1 : ℕ) : ℝ) : ℝ) : ℂ) ∂μ ∂μK := by
-  first | exact @GlobalTheory.IwasawaConeA.kInt_cone_right_inv | exact GlobalTheory.IwasawaConeA.kInt_cone_right_inv | (intros; apply GlobalTheory.IwasawaConeA.kInt_cone_right_inv <;> assumption)
+  exact @GlobalTheory.IwasawaConeA.kInt_cone_right_inv

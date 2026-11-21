@@ -10,4 +10,4 @@ theorem _root_.GlobalTheory.T.valuation_power_bounds : ∀ {F : Type} [Field F] 
     ∀ v : HeightOneSpectrum (𝓞 F), resP v = p → ∀ e : Ext v,
       e.w (p : AlgebraicClosure F) ^ k' / e.w (n : AlgebraicClosure F) ^ 3 ≤ e.w (p : AlgebraicClosure F) ^ k ∧
       e.w (p : AlgebraicClosure F) ^ k' / e.w (n : AlgebraicClosure F) ^ 2 < 1 ∧ e.w (p : AlgebraicClosure F) ^ k' < 1 := by
-  first | exact @GlobalTheory.ConstLat.exists_prec_consts | exact GlobalTheory.ConstLat.exists_prec_consts | (intros; apply GlobalTheory.ConstLat.exists_prec_consts <;> assumption)
+  exact @GlobalTheory.ConstLat.exists_prec_consts

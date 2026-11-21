@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.stabilizer_local_part_case_b : GlobalTheory.FunPr.
       ∀ φ ∈ SB (Fin (b + 2) × Fin (a + (b + 2)) → Fv F v),
         l (coneFin B G.M' om' v (ev' v) K μK μ (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) φ) =
           ∫ k, coneLin B G.M' om' v (ev' v) μ (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) l φ k.1 ∂μK := by
-  first | exact @GlobalTheory.ThK.LemF.ConePass.linear_coneFin_eq | exact GlobalTheory.ThK.LemF.ConePass.linear_coneFin_eq | (intros; apply GlobalTheory.ThK.LemF.ConePass.linear_coneFin_eq <;> assumption)
+  exact @GlobalTheory.ThK.LemF.ConePass.linear_coneFin_eq

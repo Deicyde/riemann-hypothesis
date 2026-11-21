@@ -15,4 +15,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.norm_equals_complex_abs_sq : ∀ (K : Type) [Field K] [NumberField K], Module.finrank ℚ K = 2 → IsTotallyComplex K → ∀ κ : Kˣ,
   (((Units.map (Algebra.norm ℚ : K →* ℚ) κ : ℚˣ) : ℚ) : ℝ) = ‖((embU κ : ℂˣ) : ℂ)‖ ^ 2 ∧
   ((RationalIdeles.realPart (pri (Units.map (Algebra.norm ℚ : K →* ℚ) κ)) : ℝˣ) : ℝ) = ‖((embU κ : ℂˣ) : ℂ)‖ ^ 2 := by
-  first | exact @GlobalTheory.CompanionTheory.FexTheta.norm_eq_normSq_embU | exact GlobalTheory.CompanionTheory.FexTheta.norm_eq_normSq_embU | (intros; apply GlobalTheory.CompanionTheory.FexTheta.norm_eq_normSq_embU <;> assumption)
+  exact @GlobalTheory.CompanionTheory.FexTheta.norm_eq_normSq_embU

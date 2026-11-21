@@ -35,4 +35,4 @@ theorem _root_.GlobalTheory.T.log_metric_norm_divisor_sum : ∀ (D : D7) (O : Se
           ((cxSt D.what₂.LL).cx (O.var c) σ
             ((eqn (adlOf (O.Φ.C c) (O.met.hm c) (Finsupp.single (a i) 1)).D x)⁻¹ : (O.var c).Fnˣ)) z) / 2) +
         Real.log ‖ratVal (eqnRatio (O.Φ.C c) s a n x : (O.var c).Fn) z‖ := by
-  first | exact @GlobalTheory.HtAddCx.log_pn_comb | exact GlobalTheory.HtAddCx.log_pn_comb | (intros; apply GlobalTheory.HtAddCx.log_pn_comb <;> assumption)
+  exact @GlobalTheory.HtAddCx.log_pn_comb

@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.theta_convergence_at_scale : GlobalTheory.FunPr.Hy
     HidaSetting large₂ R F → ∀ (ch : Choice R), ch.Is → ∀ (CF : ℝ), ch.AtScale CF large₂.sc.b → ∀ (a : Fin ch.n) (u : R.HE.H),
     ThetaConv ch.W ch.M ch.ρ (ch.Phi a) (ch.form u) ∧
       IsAutFun (ch.G.V (.grid D.R.m 0)) (thetaChi ch.W ch.M ch.ρ (ch.Phi a) (ch.form u)) := by
-  first | exact @GlobalTheory.thetaConv_and_isAutFun_thetaChi_of_hidaSetting | exact GlobalTheory.thetaConv_and_isAutFun_thetaChi_of_hidaSetting | (intros; apply GlobalTheory.thetaConv_and_isAutFun_thetaChi_of_hidaSetting <;> assumption)
+  exact @GlobalTheory.thetaConv_and_isAutFun_thetaChi_of_hidaSetting

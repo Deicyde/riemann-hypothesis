@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.lattice_real_multiplication_integral : ∀ (F : Ty
       (∀ l l' : Λ, (∑ j, (h j : ℂ) * ((l : Fin (Module.finrank ℚ F) → ℂ) j * starRingEnd ℂ ((l' : Fin (Module.finrank ℚ F) → ℂ) j))).im =
         2 * ((Algebra.trace ℚ F ((c : F) * P l l') : ℚ) : ℝ)) ∧
       (∀ l l' : Λ, P l l' ∈ dualLat 𝔠) := by
-  first | exact @GlobalTheory.RealMult.exists_trace_pairing_of_integral | exact GlobalTheory.RealMult.exists_trace_pairing_of_integral | (intros; apply GlobalTheory.RealMult.exists_trace_pairing_of_integral <;> assumption)
+  exact @GlobalTheory.RealMult.exists_trace_pairing_of_integral

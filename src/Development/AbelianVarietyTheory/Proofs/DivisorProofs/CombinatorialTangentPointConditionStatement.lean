@@ -24,4 +24,4 @@ theorem _root_.GlobalTheory.T.combinatorial_tangent_point_condition : ∀ (E : T
     (a a' : Fin (Dw.mult σ) → S) (w : Sp (DualNumber S) ⟶ Z.t.G.left),
     IsCombAtG Z.t (GlobalTheory.AllWt.ptF P ≫ Z.j) ((frameOf Z P).v σ) a w →
     IsCombAtG Z.t (GlobalTheory.AllWt.ptF P ≫ Z.j) ((frameOf Z P).v σ) a' w → a = a' := by
-  first | exact @GlobalTheory.FramedPointCoeffs.coeffs_unique | exact GlobalTheory.FramedPointCoeffs.coeffs_unique | (intros; apply GlobalTheory.FramedPointCoeffs.coeffs_unique <;> assumption)
+  exact @GlobalTheory.FramedPointCoeffs.coeffs_unique

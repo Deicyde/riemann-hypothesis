@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.column_minor_norm_inequality : ∀ {K : Type} [Fie
         colMinor w H (insert i S) ≤ colMinor w H S * supN w (H.mulVec u)) ∧
       ∃ u : Fin g → K, u i = 1 ∧ (∀ l, l ∉ S → l ≠ i → u l = 0) ∧
         colMinor w H (insert i S) = colMinor w H S * supN w (H.mulVec u)) := by
-  first | exact @GlobalTheory.ConstLat.MinorQuot.colMinor_pos_and_quotient | exact GlobalTheory.ConstLat.MinorQuot.colMinor_pos_and_quotient | (intros; apply GlobalTheory.ConstLat.MinorQuot.colMinor_pos_and_quotient <;> assumption)
+  exact @GlobalTheory.ConstLat.MinorQuot.colMinor_pos_and_quotient

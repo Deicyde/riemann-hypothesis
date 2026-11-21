@@ -22,4 +22,4 @@ theorem _root_.GlobalTheory.T.cone_series_representatives_sum : ∀ (F E : Type)
     ∀ (S : Type) (φ : S → UA σ J), (∀ s, φ s ∈ ratU σ J) → (∀ s s', GlobalTheory.ConeSmallSer.StabLn x (φ s * (φ s')⁻¹) → s = s') →
     ∀ (g : UA σ J) (C : ℝ), Summable (fun t : T => ‖f (t.1 * g)‖) → ∑' t : T, ‖f (t.1 * g)‖ ≤ C →
       Summable (fun s => ‖f (φ s * g)‖) ∧ ∑' s, ‖f (φ s * g)‖ ≤ C := by
-  first | exact @GlobalTheory.ConeSmallSerInt.summable_norm_le_of_distinct | exact GlobalTheory.ConeSmallSerInt.summable_norm_le_of_distinct | (intros; apply GlobalTheory.ConeSmallSerInt.summable_norm_le_of_distinct <;> assumption)
+  exact @GlobalTheory.ConeSmallSerInt.summable_norm_le_of_distinct

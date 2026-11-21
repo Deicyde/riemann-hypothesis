@@ -23,4 +23,4 @@ theorem _root_.GlobalTheory.T.pair_cover_compatibility : ∀ (D : D7) (O : Setup
       (∀ i, GlobalTheory.PairCov.IsFrameSecX (O := O) (c := c) σ hM jB πB t π ρ F j φ jG i (r i)) →
     ∀ i, ∃ r' : ((F'.root i).pull j).ι → Gs.functionFieldˣ,
       GlobalTheory.PairCov.IsFrameSecX (O := O) (c := c) σ hM' jB πB t' π ρ F' j φ jG i r' := by
-  first | exact @GlobalTheory.PairCov.exists_isFrameSecX_of_compat | exact GlobalTheory.PairCov.exists_isFrameSecX_of_compat | (intros; apply GlobalTheory.PairCov.exists_isFrameSecX_of_compat <;> assumption)
+  exact @GlobalTheory.PairCov.exists_isFrameSecX_of_compat

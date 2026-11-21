@@ -10,4 +10,4 @@ theorem _root_.GlobalTheory.T.hasse_principle_norm_trace : ∀ {F : Type} [Field
   (∀ u : Pl F, (∀ x : Q d β (Kp u), qn x = 0 → x = 0) →
     ∀ r : Kp u, r ^ 2 ≠ algebraMap F (Kp u) (t ^ 2 - 4)) →
   ∃ x : Q d β F, qn x = 1 ∧ 2 * x.re = t := by
-  first | exact @GlobalTheory.CompanionTheory.PlaneSA.GlobalTrace.exists_qn_eq_one_two_mul_re | exact GlobalTheory.CompanionTheory.PlaneSA.GlobalTrace.exists_qn_eq_one_two_mul_re | (intros; apply GlobalTheory.CompanionTheory.PlaneSA.GlobalTrace.exists_qn_eq_one_two_mul_re <;> assumption)
+  exact @GlobalTheory.CompanionTheory.PlaneSA.GlobalTrace.exists_qn_eq_one_two_mul_re

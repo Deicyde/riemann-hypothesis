@@ -17,4 +17,4 @@ open ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestrictio
 open GlobalTheory.IndefiniteRowSideFullHecke.LieAlgebraMaps (torus lieMap lieAdd LieCongr IsLieLinear lieCoord)
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.torus_lie_algebra_retraction_exists : ∀ (R : Type) [CommRing R] [IsLocalRing R] (G : Over (Spec (CommRingCat.of R))) [GrpObj G], Smooth G.hom → ∀ (r : ℕ) (u : torus R r ⟶ G) [IsMonHom u], IsClosedImmersion ((GlobalTheory.IndefiniteRowSideFullHecke.LieAlgebraMaps.baseChange R (IsLocalRing.ResidueField R)).map u).left → ∃ ρ : LieG G → LieG (torus R r), IsLieLinear ρ ∧ ∀ x, ρ (lieMap u x) = x := by
-  first | exact @GlobalTheory.TorusLieRetraction.main | exact GlobalTheory.TorusLieRetraction.main | (intros; apply GlobalTheory.TorusLieRetraction.main <;> assumption)
+  exact @GlobalTheory.TorusLieRetraction.main

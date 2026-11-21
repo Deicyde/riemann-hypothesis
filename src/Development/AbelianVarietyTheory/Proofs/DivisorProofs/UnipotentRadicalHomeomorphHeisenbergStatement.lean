@@ -17,4 +17,4 @@ theorem _root_.GlobalTheory.T.unipotent_radical_homeomorph_heisenberg : ∀ (F E
       ∀ (l : (AE F E)ˣ) (g₀ : UA σ X₁.J) (m : UA σ X.J), IsLevi H l g₀ m → ∀ a b,
         ∃ p : (Fin n₁ → AE F E) × imA σ, m * ((Ψ (a, b) : unip σ X H) : UA σ X.J) * m⁻¹ = ((Ψ p : unip σ X H) : UA σ X.J) ∧
           p.1 = cA σ l • (mat g₀ *ᵥ a) ∧ ((p.2 : imA σ) : AE F E) = l * cA σ l * b := by
-  first | exact @GlobalTheory.LeviModulus.HCoord.heis_coords | exact GlobalTheory.LeviModulus.HCoord.heis_coords | (intros; apply GlobalTheory.LeviModulus.HCoord.heis_coords <;> assumption)
+  exact @GlobalTheory.LeviModulus.HCoord.heis_coords

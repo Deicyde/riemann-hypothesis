@@ -11,4 +11,4 @@ theorem _root_.GlobalTheory.T.independence_generic_of_special : ∀ (R : Type) [
     (b : Fin n → LB.Sec (LPow G L (N : ℤ) (Over.mk (𝟙 (Sp R))))) (K : Type) [Field K] (V : ValuationSubring K)
     (g : R →+* V), Flat G.hom → L.IsLB → IndepAlong G L N (toBase ((IsLocalRing.residue V).comp g)) b →
     IndepAlong G L N (toBase (V.subtype.comp g)) b := by
-  first | exact @GlobalTheory.IndepFibre.indepAlong_generic | exact GlobalTheory.IndepFibre.indepAlong_generic | (intros; apply GlobalTheory.IndepFibre.indepAlong_generic <;> assumption)
+  exact @GlobalTheory.IndepFibre.indepAlong_generic

@@ -24,4 +24,4 @@ theorem _root_.GlobalTheory.T.bottom_triangle_exists_nonzero : GlobalTheory.FunP
             X.I W.ψ W.θ s (GlobalTheory.BotFormula.minorF ea ed T) g =
               v * ∑ᶠ x : GlobalTheory.NormSum.Cls D P.a (GlobalTheory.NormSum.intG D P.a),
                 ((GlobalTheory.NormSum.gam D (GlobalTheory.NormSum.intG D P.a) x.out : ℂ))⁻¹ * X.ker W.ψ W.θ s (GlobalTheory.BotFormula.minorF ea ed T) g (pt x.out) := by
-  first | exact @GlobalTheory.BotFormula.theta_integral_classSum | exact GlobalTheory.BotFormula.theta_integral_classSum | (intros; apply GlobalTheory.BotFormula.theta_integral_classSum <;> assumption)
+  exact @GlobalTheory.BotFormula.theta_integral_classSum

@@ -18,4 +18,4 @@ open GlobalTheory.BoxLattice GlobalTheory.EvAdm
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.rational_approx_scaled : ∀ (F : Type) [Field F] [NumberField F] (κ : Type) [Fintype κ] (a : F), a ≠ 0 →
     ∀ r : κ → FiniteAdeleRing (𝓞 F) F, ∃ ρ : κ → F, ratFin F κ ρ - r ∈ scaledInt F κ a := by
-  first | exact @GlobalTheory.BoxLattice.exists_ratFin_coset | exact GlobalTheory.BoxLattice.exists_ratFin_coset | (intros; apply GlobalTheory.BoxLattice.exists_ratFin_coset <;> assumption)
+  exact @GlobalTheory.BoxLattice.exists_ratFin_coset

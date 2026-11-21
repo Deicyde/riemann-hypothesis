@@ -23,4 +23,4 @@ theorem _root_.GlobalTheory.T.lagrangian_span_finrank : ∀ (F : Type) [Field F]
           l (schr ψ (∑ i, t i • ((fun k => algebraMap F (AF F) ((w i).1 k)), (fun k => algebraMap F (AF F) ((w i).2 k)))) φ)) ν) ∧
       ∃ l' ∈ (adeleClass F).adm κ, ∀ φ ∈ schA F κ, l' φ = ∫ t, l (schr ψ (∑ i, t i •
           ((fun k => algebraMap F (AF F) ((w i).1 k)), (fun k => algebraMap F (AF F) ((w i).2 k)))) φ) ∂ν := by
-  first | exact @GlobalTheory.LagrangianAverage.main | exact GlobalTheory.LagrangianAverage.main | (intros; apply GlobalTheory.LagrangianAverage.main <;> assumption)
+  exact @GlobalTheory.LagrangianAverage.main

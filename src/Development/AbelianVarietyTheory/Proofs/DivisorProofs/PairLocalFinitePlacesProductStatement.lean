@@ -20,4 +20,4 @@ theorem _root_.GlobalTheory.T.pair_local_finite_places_product : ∀ (F E : Type
       (∀ᶠ v in Filter.cofinite, φ v = M.vac v) →
       (∀ v ∈ l, φ₁ v ∈ SB _ ∧ Acts (evFin F v) (om (1, h v)) (φ v) (φ₁ v)) → (∀ v, v ∉ l → φ₁ v = φ v) →
       om (1, (l.map h).prod) (pure f φ) = pure f φ₁ := by
-  first | exact @GlobalTheory.ListProdFactor.om_listProd_pure | exact GlobalTheory.ListProdFactor.om_listProd_pure | (intros; apply GlobalTheory.ListProdFactor.om_listProd_pure <;> assumption)
+  exact @GlobalTheory.ListProdFactor.om_listProd_pure

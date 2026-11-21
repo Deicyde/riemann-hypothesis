@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.symplectic_form_right_mul_transpose : ∀ {R S : T
     {α β β' : Type} [Fintype α] [DecidableEq α] [Fintype β] [DecidableEq β] [Fintype β'] [DecidableEq β']
     (JA : Matrix α α S) (JB : Matrix β β S) (Q : Matrix β β' S) (z z' : Matrix α β' S),
     symp c ξ JA JB (z * Qᵀ) (z' * Qᵀ) = symp c ξ JA (Qᵀ * JB * Q.map c) z z' := by
-  first | exact @GlobalTheory.SympRight.symp_mul_transpose_right | exact GlobalTheory.SympRight.symp_mul_transpose_right | (intros; apply GlobalTheory.SympRight.symp_mul_transpose_right <;> assumption)
+  exact @GlobalTheory.SympRight.symp_mul_transpose_right

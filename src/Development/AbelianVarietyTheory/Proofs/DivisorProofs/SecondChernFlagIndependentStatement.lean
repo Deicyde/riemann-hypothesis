@@ -9,4 +9,4 @@ open scoped Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.secondChern_flag_independent : ∀ (k : Type) [CommRing k] (X : Scheme.{0}) [IsIntegral X] (p : X ⟶ Sp k) (D : ℕ) (hX : IsRegVar p D) (σ : k →+* ℂ),
     ∀ (E : X.Modules) (h : VMetric p E 2) (H : h.IsCInf) (fl fl' : Vert.Flag E 2), c2F hX σ h fl = c2F hX σ h fl' := by
-  first | exact @GlobalTheory.LineForm.c2F_flag_indep | exact GlobalTheory.LineForm.c2F_flag_indep | (intros; apply GlobalTheory.LineForm.c2F_flag_indep <;> assumption)
+  exact @GlobalTheory.LineForm.c2F_flag_indep

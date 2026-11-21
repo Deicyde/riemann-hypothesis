@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.eigen_intertwiner_restriction_rank : GlobalTheory.
     ∃ C₀ : ℂ, C₀ ≠ 0 ∧ ∀ Ψ ∈ schA F (Fin n × Fin d),
       Summable (fun ξ : Fin n → E => thetaSum F (e₀ (M.co.rho B.ψ (Matrix.vecMulVec (incV F ξ) (incV F H'.y)) Ψ))) ∧
       thetaSum F Ψ = C₀ * ∑' ξ : Fin n → E, thetaSum F (e₀ (M.co.rho B.ψ (Matrix.vecMulVec (incV F ξ) (incV F H'.y)) Ψ)) := by
-  first | exact @GlobalTheory.ThKExpand.thetaSum_eq_mixed | exact GlobalTheory.ThKExpand.thetaSum_eq_mixed | (intros; apply GlobalTheory.ThKExpand.thetaSum_eq_mixed <;> assumption)
+  exact @GlobalTheory.ThKExpand.thetaSum_eq_mixed

@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.vacuum_invariant_nonsplit_place : GlobalTheory.ThK
     (B : Base F E) (a a' : ℕ) (G : Geo σ a a') (X : Chars F E) (om : Rep σ G.V G.W) (om' : Rep σ G.V' G.W),
     IsTriple B G X om om' → ∀ (v : Pl F), IsEmpty (E →ₐ[F] Fv F v) → v ∉ X.T →
       ∀ k ∈ KAt σ G.W v, Acts (evFin F v) (om (1, k)) (G.M.vac v) (G.M.vac v) := by
-  first | exact @GlobalTheory.VacStabNonSplit.fixesVac | exact GlobalTheory.VacStabNonSplit.fixesVac | (intros; apply GlobalTheory.VacStabNonSplit.fixesVac <;> assumption)
+  exact @GlobalTheory.VacStabNonSplit.fixesVac

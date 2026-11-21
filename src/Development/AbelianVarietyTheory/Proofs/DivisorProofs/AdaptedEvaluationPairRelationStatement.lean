@@ -21,4 +21,4 @@ theorem _root_.GlobalTheory.T.adapted_evaluation_pair_relation : GlobalTheory.Th
       mat u⁻¹ *ᵥ incV F H'.y = incV F H'.y + incM F H'.ι *ᵥ z + β • incV F H'.x → ∀ Ψ ∈ schA F (Fin n × Fin d),
       e₀ (M.co.rho B.ψ (Matrix.vecMulVec (incV F H.x) (incV F H'.y)) (om (1, u) Ψ)) =
         M₁.co.rho B.ψ (Matrix.vecMulVec (incV F H.x) z) (e₀ (M.co.rho B.ψ (Matrix.vecMulVec (incV F H.x) (incV F H'.y)) Ψ)) := by
-  first | exact @GlobalTheory.ThK.IsoStep.ev_step | exact GlobalTheory.ThK.IsoStep.ev_step | (intros; apply GlobalTheory.ThK.IsoStep.ev_step <;> assumption)
+  exact @GlobalTheory.ThK.IsoStep.ev_step

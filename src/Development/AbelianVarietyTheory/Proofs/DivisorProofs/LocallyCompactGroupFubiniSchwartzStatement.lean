@@ -21,4 +21,4 @@ theorem _root_.GlobalTheory.T.locally_compact_group_fubini_schwartz : ∀ {G V Z
   ∀ (f : G → G) (A : V ≃ₜ V) (C : Z ≃ₜ Z) (a c : ENNReal), a ≠ ⊤ → c ≠ ⊤ → νV.map A = a • νV → νZ.map C = c • νZ →
   (∀ u, Φ (f u) = (A (Φ u).1, C (Φ u).2)) →
   ∀ μ : Measure G, μ.IsHaarMeasure → ∀ S : Set G, μ (f ⁻¹' S) = a * c * μ S := by
-  first | exact @GlobalTheory.heisenberg_preimage_haar | exact GlobalTheory.heisenberg_preimage_haar | (intros; apply GlobalTheory.heisenberg_preimage_haar <;> assumption)
+  exact @GlobalTheory.heisenberg_preimage_haar

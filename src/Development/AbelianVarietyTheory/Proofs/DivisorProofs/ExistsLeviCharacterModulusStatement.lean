@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.exists_levi_character_modulus : ∀ (F E : Type) [
     ∀ X om om', IsTriple B G X om om' →
       ∃ (t : (AE F E)ˣ) (m : UA σ G.W.J), IsLevi (W₁ := G₁.W) H' t 1 m ∧
         (X.α t : ℂ) * (((absE F E t : ℝ) ^ ((a' : ℝ) / 2) : ℝ) : ℂ) ≠ (X.β t : ℂ) * (((absE F E t : ℝ) ^ (((b + 2 : ℕ) : ℝ) / 2) : ℝ) : ℂ) := by
-  first | exact @GlobalTheory.ThK.LawSep.lawSep | exact GlobalTheory.ThK.LawSep.lawSep | (intros; apply GlobalTheory.ThK.LawSep.lawSep <;> assumption)
+  exact @GlobalTheory.ThK.LawSep.lawSep

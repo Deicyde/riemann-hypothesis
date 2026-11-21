@@ -8,4 +8,4 @@ theorem _root_.GlobalTheory.T.chain_length_bound_of_sup_inf : ∀ {α : Type} [L
     (∀ (r : ℕ) (N : Fin r → α), StrictMono N → (∀ i, Q1 (N i)) → r ≤ L1) →
     (∀ (r : ℕ) (N : Fin r → α), StrictMono N → (∀ i, Q2 (N i)) → r ≤ L2) →
     ∀ (r : ℕ) (N : Fin r → α), StrictMono N → (∀ i, Q (N i)) → r ≤ L1 + L2 := by
-  first | exact @GlobalTheory.modular_chain_bound_add | exact GlobalTheory.modular_chain_bound_add | (intros; apply GlobalTheory.modular_chain_bound_add <;> assumption)
+  exact @GlobalTheory.modular_chain_bound_add

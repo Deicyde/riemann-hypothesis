@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.cuspidal_block_levi_semisimple : GlobalTheory.Publ
     (τ : Representation ℂ (GlobalTheory.SmGL.Levi k (fun j : Fin 3 => Fin (GlobalTheory.CuspBlock.tripSizes l n N j))) Z),
     GlobalTheory.PRep.IsSmooth τ → τ.IsIrreducible →
       Representation.IsSemisimpleRepresentation (τ.comp (GlobalTheory.CuspBlock.midHom k l n N)) := by
-  first | exact @GlobalTheory.CuspBlock.isSemisimple_restrict_mid | exact GlobalTheory.CuspBlock.isSemisimple_restrict_mid | (intros; apply GlobalTheory.CuspBlock.isSemisimple_restrict_mid <;> assumption)
+  exact @GlobalTheory.CuspBlock.isSemisimple_restrict_mid

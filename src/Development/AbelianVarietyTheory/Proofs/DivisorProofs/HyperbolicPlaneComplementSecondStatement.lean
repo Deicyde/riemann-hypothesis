@@ -34,4 +34,4 @@ theorem _root_.GlobalTheory.T.hyperbolic_plane_complement_second : ∀ (F E : Ty
         μ₁.IsHaarMeasure → IsFundamentalDomain ((ratPts σ (c₀ • W₁.J.map σ)).subgroupOf (GlobalTheory.StdPar.unip σ (c₀ • W₁.J.map σ) Xf S')) 𝓕₁ μ₁ →
         μ₁ 𝓕₁ = 1 → ∀ G : UA σ W.J,
         c'' (GlobalTheory.ThK.SquareIntegrability.toGAd hσ W.J hc₀ G) = ∫ u in 𝓕₁, fa (M ((GlobalTheory.ThK.SquareIntegrability.toGAd hσ W₁.J hc₀).symm (u : GAd σ (c₀ • W₁.J.map σ))) * G) ∂μ₁ := by
-  first | exact @GlobalTheory.ConstStageFlag.constTerm_stage | exact GlobalTheory.ConstStageFlag.constTerm_stage | (intros; apply GlobalTheory.ConstStageFlag.constTerm_stage <;> assumption)
+  exact @GlobalTheory.ConstStageFlag.constTerm_stage

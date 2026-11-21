@@ -14,4 +14,4 @@ open GlobalTheory.CompanionTheory.FexTheta
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.finite_norm_one_units_trivial_valuation : ∀ (K : Type) [Field K] [NumberField K], Module.finrank ℚ K = 2 → IsTotallyComplex K →
   ∀ (c : HeckeCharacter K) (M : ∀ v : Pl, LM c v), AdmM M → Finite {κ : K1 K // vK M (κ : Kˣ) = 0} := by
-  first | exact @GlobalTheory.CompanionTheory.FexTheta.finite_stabiliser | exact GlobalTheory.CompanionTheory.FexTheta.finite_stabiliser | (intros; apply GlobalTheory.CompanionTheory.FexTheta.finite_stabiliser <;> assumption)
+  exact @GlobalTheory.CompanionTheory.FexTheta.finite_stabiliser

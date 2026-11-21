@@ -43,4 +43,4 @@ theorem _root_.GlobalTheory.T.config_b_theta_descent_identity : GlobalTheory.ThK
               (fun x => (chrW X.β t x : ℂ) * GlobalTheory.SplitFlip.apow x ((a : ℂ) / 2))
               (fun y => (chrW X.β t y : ℂ) * GlobalTheory.SplitFlip.apow y (-(a : ℂ) / 2))
               (eS.toLinearMap ∘ₗ φ ∘ₗ eB.symm.toLinearMap) := by
-  first | exact @GlobalTheory.JacGeom.isJacMap_of_equivariant | exact GlobalTheory.JacGeom.isJacMap_of_equivariant | (intros; apply GlobalTheory.JacGeom.isJacMap_of_equivariant <;> assumption)
+  exact @GlobalTheory.JacGeom.isJacMap_of_equivariant

@@ -38,4 +38,4 @@ theorem _root_.GlobalTheory.T.isogeny_good_reduction_extension : ∀ (l : ℕ) [
         ∀ (v : epsR R₁ ⟶ P.A) (v' : epsR ℂ ⟶ A'), IsTangent v →
           v'.left ≫ φ' = spMap (Chart.dualMapR R₁.subtype) ≫ v.left →
           ∃ v₀ : epsR R₀ ⟶ G₀, IsTangent v₀ ∧ (v' ≫ α).left ≫ p₀ = spMap (Chart.dualMapR R₀.subtype) ≫ v₀.left := by
-  first | exact @GlobalTheory.QuotModel.exists_quotModel | exact GlobalTheory.QuotModel.exists_quotModel | (intros; apply GlobalTheory.QuotModel.exists_quotModel <;> assumption)
+  exact @GlobalTheory.QuotModel.exists_quotModel

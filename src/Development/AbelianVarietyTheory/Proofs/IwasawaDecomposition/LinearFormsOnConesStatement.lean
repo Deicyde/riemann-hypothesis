@@ -17,4 +17,4 @@ theorem _root_.GlobalTheory.T.linear_forms_on_cones : ∀ (E : Type) [Field E] [
           (∃ c : Fin m → ℝ, (∀ i, 0 ≤ c i) ∧ GlobalTheory.PolFan.toReal be = ∑ i, c i • GlobalTheory.PolFan.toReal (γ i)) →
             ψ.evalZ be = ℓ be ∧ 0 ≤ ℓ be) →
     HasCones Cn Z → ∃ BD, IsPhiDiv ψ Z BD := by
-  first | exact @GlobalTheory.TorRef.exists_isPhiDiv_of_cones | exact GlobalTheory.TorRef.exists_isPhiDiv_of_cones | (intros; apply GlobalTheory.TorRef.exists_isPhiDiv_of_cones <;> assumption)
+  exact @GlobalTheory.TorRef.exists_isPhiDiv_of_cones

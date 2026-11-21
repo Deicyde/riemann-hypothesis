@@ -37,4 +37,4 @@ theorem _root_.GlobalTheory.T.cm_uniformization_algebraic_model : GlobalTheory.P
       (∀ a : OF E, cmQ.act (GlobalTheory.IndefiniteRowSideFullHecke.DifferentConductorValuations.ofF c a) = XQ.rm.act a) ∧
       ∀ (a : orderC c) (α : X.A ⟶ X.A), IsMonHom α →
         (∀ w, U.u.ex (fun j ↦ φ (U.e j) (a : E) * w j) = U.u.ex w ≫ α) → α.left ≫ pQ = pQ ≫ (cmQ.act a).left := by
-  first | exact @GlobalTheory.CMModel.exists_qbModel_of_subring | exact GlobalTheory.CMModel.exists_qbModel_of_subring | (intros; apply GlobalTheory.CMModel.exists_qbModel_of_subring <;> assumption)
+  exact @GlobalTheory.CMModel.exists_qbModel_of_subring

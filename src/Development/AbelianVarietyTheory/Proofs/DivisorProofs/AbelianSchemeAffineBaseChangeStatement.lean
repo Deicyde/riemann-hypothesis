@@ -11,4 +11,4 @@ theorem _root_.GlobalTheory.T.abelian_scheme_affine_base_change : ∀ {T : Schem
     ∃ (φ : (onAff A hV').left ⟶ (onAff A hV).left)
       (_ : IsGrpPullback (onAff A hV') (onAff A hV) (spMap (algebraMap Γ(T, V) Γ(T, V'))) φ),
       φ ≫ pullback.fst A.hom hV.fromSpec = pullback.fst A.hom hV'.fromSpec := by
-  first | exact @GlobalTheory.HodgeSub.exists_proj | exact GlobalTheory.HodgeSub.exists_proj | (intros; apply GlobalTheory.HodgeSub.exists_proj <;> assumption)
+  exact @GlobalTheory.HodgeSub.exists_proj

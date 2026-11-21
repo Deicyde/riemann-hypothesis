@@ -7,4 +7,4 @@ open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions F
 open scoped Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.weighted_boundary_divisor_sum : ∀ {D : D7} (O : Setup D) (c : O.s.Comp) (la : D.what₂.Tau → Fin O.N → ℤ), ∑ x : DV.Rt D.what₂.Tau O.N, (-la x.1 x.2) • GlobalTheory.ShFam.Pad.divOf (O.Φ.C c) (O.ex x) = O.s.Lw O.L O.Φ c la := by
-  first | exact @GlobalTheory.RootWeight.sum_neg_smul_divOf_ex_eq_Lw | exact GlobalTheory.RootWeight.sum_neg_smul_divOf_ex_eq_Lw | (intros; apply GlobalTheory.RootWeight.sum_neg_smul_divOf_ex_eq_Lw <;> assumption)
+  exact @GlobalTheory.RootWeight.sum_neg_smul_divOf_ex_eq_Lw

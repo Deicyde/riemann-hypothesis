@@ -14,4 +14,4 @@ open GlobalTheory.CompanionTheory.FexTheta
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_representatives_for_admissible_data : ∀ (K : Type) [Field K] [NumberField K], Module.finrank ℚ K = 2 → IsTotallyComplex K →
   ∀ (c : HeckeCharacter K) (M : ∀ v : Pl, LM c v), AdmM M → ∃ R : Finset (Pl →₀ ℤ), IsReps M R := by
-  first | exact @GlobalTheory.CompanionTheory.KOneReps.exists_isReps | exact GlobalTheory.CompanionTheory.KOneReps.exists_isReps | (intros; apply GlobalTheory.CompanionTheory.KOneReps.exists_isReps <;> assumption)
+  exact @GlobalTheory.CompanionTheory.KOneReps.exists_isReps

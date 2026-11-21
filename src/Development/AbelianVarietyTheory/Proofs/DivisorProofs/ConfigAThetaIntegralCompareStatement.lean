@@ -23,4 +23,4 @@ theorem _root_.GlobalTheory.T.config_A_theta_integral_compare : ∀ (hKP : Globa
     (l : SInf F (Fin b × Fin (b + a')) →L[ℂ] ℂ) (hl : l ≠ 0)
     (hinv : ∀ g ∈ UAt σ G₁.V (evI F), ∀ f f₁ : SInf F (Fin b × Fin (b + a')), Acts (evI F) (om₁ (g, 1)) f f₁ → l f₁ = l f),
     ∃ f : SInf F (Fin (b + 2) × Fin (b + 2 + a')), l (coneInfInt B G.M om ei (shiftA H H') X.ν ((b + 2 - a') / 2) f 1 1) ≠ 0 := by
-  first | exact @GlobalTheory.ConeInfNe.exists_ne_zero | exact GlobalTheory.ConeInfNe.exists_ne_zero | (intros; apply GlobalTheory.ConeInfNe.exists_ne_zero <;> assumption)
+  exact @GlobalTheory.ConeInfNe.exists_ne_zero

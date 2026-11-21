@@ -17,4 +17,4 @@ open GlobalTheory.OpenOmega
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.torsion_points_injective_open_near_zero : ∀ (p : ℕ) [Fact p.Prime] (R : Type) [CommRing R] (G : Over (Sp R)) [GrpObj G] (GG : PDivGroup p R) (θ : TorsionMap G GG), θ.IsOpenNearZero → ∀ n, PtInj θ n := by
-  first | exact @GlobalTheory.OpenOmega.ptInj_of_isOpenNearZero | exact GlobalTheory.OpenOmega.ptInj_of_isOpenNearZero | (intros; apply GlobalTheory.OpenOmega.ptInj_of_isOpenNearZero <;> assumption)
+  exact @GlobalTheory.OpenOmega.ptInj_of_isOpenNearZero

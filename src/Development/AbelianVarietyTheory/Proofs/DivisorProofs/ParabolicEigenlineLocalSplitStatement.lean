@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.parabolic_eigenline_local_split : ∀ (F E : Type)
     ∀ (v : Pl F) (p : UA σ W.J), p ∈ UAt σ W (evFin F v) → ∀ t : (AE F E)ˣ, mat p *ᵥ incV F H'.x = t.1 • incV F H'.x →
       ∃ u ∈ unip σ W H', u ∈ UAt σ W (evFin F v) ∧ ∃ (h₁ : UA σ W₁.J) (m : UA σ W.J),
         IsLevi H' t h₁ m ∧ m ∈ UAt σ W (evFin F v) ∧ h₁ ∈ UAt σ W₁ (evFin F v) ∧ p = u * m := by
-  first | exact @GlobalTheory.LeviLineAt.levi_line_at | exact GlobalTheory.LeviLineAt.levi_line_at | (intros; apply GlobalTheory.LeviLineAt.levi_line_at <;> assumption)
+  exact @GlobalTheory.LeviLineAt.levi_line_at

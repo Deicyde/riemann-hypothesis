@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.nondegenerate_unipotent_pairing_schwartz : ∀ {k 
     (hr : ∀ x v, R'.ρ (uM d x) v - v ∈ LinearMap.range ι')
     (hC : ∀ f f' x, B (ι f) (ι' (shiftF x f')) = B (ι f) (ι' f')),
     False := by
-  first | exact @GlobalTheory.CompanionTheory.BZShell.Radical.false_of_translation_invariant | exact GlobalTheory.CompanionTheory.BZShell.Radical.false_of_translation_invariant | (intros; apply GlobalTheory.CompanionTheory.BZShell.Radical.false_of_translation_invariant <;> assumption)
+  exact @GlobalTheory.CompanionTheory.BZShell.Radical.false_of_translation_invariant

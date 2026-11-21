@@ -10,4 +10,4 @@ theorem _root_.GlobalTheory.T.charpoly_eq_quotient_charpoly_pow : ∀ (K : Type)
     (_ : ∀ x, t x = 0 → x ∈ LinearMap.range (t ^ (e - 1)))
     (hT : LinearMap.range t ≤ (LinearMap.range t).comap T),
     LinearMap.charpoly T = (LinearMap.charpoly ((LinearMap.range t).mapQ (LinearMap.range t) T hT)) ^ e := by
-  first | exact @GlobalTheory.NilpFiltration.charpoly_eq_charpoly_mapQ_pow | exact GlobalTheory.NilpFiltration.charpoly_eq_charpoly_mapQ_pow | (intros; apply GlobalTheory.NilpFiltration.charpoly_eq_charpoly_mapQ_pow <;> assumption)
+  exact @GlobalTheory.NilpFiltration.charpoly_eq_charpoly_mapQ_pow

@@ -17,4 +17,4 @@ attribute [local instance] Formalism.BasicNotions.Host.cmStar GlobalTheory.TypeR
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.row_parameter_of_local_langlands : PrN → SerN → ∀ hL : GlobalTheory.Published.LocalLanglandsGL, AtMem hL fun _ _ _ _ w Z _ _ t nch n c =>
     ∀ Rw : RowSide (w.D Z), HEq Rw.locR c.a.nt.A.row.locR → GlobalTheory.TwInputs.RowParam (w.D Z) Rw := by
-  first | exact @GlobalTheory.GalLoc.RowParamAt.rowParam_atMem | exact GlobalTheory.GalLoc.RowParamAt.rowParam_atMem | (intros; apply GlobalTheory.GalLoc.RowParamAt.rowParam_atMem <;> assumption)
+  exact @GlobalTheory.GalLoc.RowParamAt.rowParam_atMem

@@ -7,4 +7,4 @@ open ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestric
 open Formalism.MainNotions
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.log_ratio_lower_bound : Hypotheses2 → Closed FamHyp fun Fm _ => ∃ K : ℝ, 0 ≤ K ∧ EvTied Fm fun _ _ _ p => ∀ i, -(K * unitE p) ≤ Real.log (ratAt p i) := by
-  first | exact @GlobalTheory.CovTop.MeasLow.lower | exact GlobalTheory.CovTop.MeasLow.lower | (intros; apply GlobalTheory.CovTop.MeasLow.lower <;> assumption)
+  exact @GlobalTheory.CovTop.MeasLow.lower

@@ -6,4 +6,4 @@ theorem _root_.GlobalTheory.T.exists_coordinate_projection_complex : ∀ (g : �
     ∀ (T : (Fin g → ℂ) →ₗ[ℝ] (Fin g → ℂ)),
     (∀ a, ∃ M : (Fin g → ℂ) →ₗ[ℂ] (Fin g → ℂ), ∀ v, T (fun m ↦ (ρ a m : ℂ) * v m) = M (T v)) →
     ∀ j : Fin g, ∃ q : (Fin g → ℂ) →ₗ[ℂ] (Fin g → ℂ), ∀ v, q (T v) = T (Pi.single j (v j)) := by
-  first | exact @GlobalTheory.realDiag_conj_coordProj | exact GlobalTheory.realDiag_conj_coordProj | (intros; apply GlobalTheory.realDiag_conj_coordProj <;> assumption)
+  exact @GlobalTheory.realDiag_conj_coordProj

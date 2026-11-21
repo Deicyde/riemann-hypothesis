@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.exists_normal_isFlagBundle_isArithVar : ∀ (k : T
     ∃ (Y : Scheme.{0}) (_ : IsIntegral Y) (π : Y ⟶ B) (fl : ∀ a, Vert.Flag ((Scheme.Modules.pullback π).obj (E a)) (r a)),
       IsFlagBundle π E r fl ∧ IsArithVar (π ≫ q) (d + ∑ a, r a * (r a - 1) / 2) ∧
         ReciprocityTheory.ChartRestriction.G.Geo.Tor.IsNormalScheme Y := by
-  first | exact @GlobalTheory.FlagEx.main | exact GlobalTheory.FlagEx.main | (intros; apply GlobalTheory.FlagEx.main <;> assumption)
+  exact @GlobalTheory.FlagEx.main

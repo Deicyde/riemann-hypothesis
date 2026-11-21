@@ -31,4 +31,4 @@ theorem _root_.GlobalTheory.T.square_commutation_integral_identity : GlobalTheor
     ∃ c : ℂ, c ≠ 0 ∧ ∀ Φ ∈ GlobalTheory.SquareComm.algF ψ θ true A B, ∀ Φ' ∈ GlobalTheory.SquareComm.algF ψ θ false A₁ B,
       (∀ h, MeasureTheory.IntegrableOn (fun g => thetaKO ωB g h Φ') 𝓕₁ ν₁) → p Φ = p' Φ' →
       GlobalTheory.SquareComm.thetaInt ωA ν 𝓕 Φ = c • GlobalTheory.SquareComm.thetaInt ωB ν₁ 𝓕₁ Φ' := by
-  first | exact @GlobalTheory.ThetaAgreeConv.thetaIntegralsAgree_of_integrable | exact GlobalTheory.ThetaAgreeConv.thetaIntegralsAgree_of_integrable | (intros; apply GlobalTheory.ThetaAgreeConv.thetaIntegralsAgree_of_integrable <;> assumption)
+  exact @GlobalTheory.ThetaAgreeConv.thetaIntegralsAgree_of_integrable

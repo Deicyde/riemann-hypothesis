@@ -23,4 +23,4 @@ theorem _root_.GlobalTheory.T.unitary_char_induced_jacquet : GlobalTheory.ThK.KP
       ∀ (e : (Σ i : Fin 3, Fin (blk3 m i)) ≃ Fin (a + a')) (ξ₁ ξ₂ : kˣ →* ℂˣ)
         (A A' : P →ₗ[ℂ] (GL (Fin (a + a')) k → P₁)),
         IsGLIndMap e π σ₁ ξ₁ ξ₂ A → IsGLIndMap e π σ₁ ξ₁ ξ₂ A' → A = 0 ∨ ∃ c : ℂ, A' = c • A := by
-  first | exact @GlobalTheory.IndLineGL.proportional_of_glInd | exact GlobalTheory.IndLineGL.proportional_of_glInd | (intros; apply GlobalTheory.IndLineGL.proportional_of_glInd <;> assumption)
+  exact @GlobalTheory.IndLineGL.proportional_of_glInd

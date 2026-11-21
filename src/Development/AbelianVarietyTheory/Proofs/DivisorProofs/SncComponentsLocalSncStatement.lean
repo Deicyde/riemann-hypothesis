@@ -8,4 +8,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Pj Formalism.L2.G
 open GlobalTheory GlobalTheory.Toroidal GlobalTheory.Cartier GlobalTheory.ProjVar GlobalTheory.TrueGeo GlobalTheory.CxPts GlobalTheory.ShFam GlobalTheory.ShFam.Pad GlobalTheory.Mean4 GlobalTheory.Mean4O
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.snc_components_local_snc : ∀ (X : Scheme.{0}) [IsNoetherian X] (B : Closeds X) (m : ℕ) (C : Fin m → Closeds X), Snc (Scheme.IdealSheafData.vanishingIdeal B) → CompList (B : Set X) C → ∀ x : X, LSncAt X C x := by
-  first | exact @GlobalTheory.SncLocal.lSncAt_of_snc' | exact GlobalTheory.SncLocal.lSncAt_of_snc' | (intros; apply GlobalTheory.SncLocal.lSncAt_of_snc' <;> assumption)
+  exact @GlobalTheory.SncLocal.lSncAt_of_snc'

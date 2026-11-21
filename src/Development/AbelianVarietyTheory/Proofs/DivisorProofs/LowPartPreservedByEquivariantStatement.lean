@@ -17,4 +17,4 @@ theorem _root_.GlobalTheory.T.lowPart_preserved_by_equivariant : GlobalTheory.Th
     (R : RealMaps F a a') (Rf : FinMaps F a a'), IsMatched B G X om om' R Rf →
       ∀ T : R.Pi →ₗ[ℂ] R.Pi, KEqOn B G.M om R.p (lowPartInf B G.M R.p) T →
         ∀ x ∈ lowPartInf B G.M R.p, T x ∈ lowPartInf B G.M R.p := by
-  first | exact @GlobalTheory.LowKInto.lowPart_map_into | exact GlobalTheory.LowKInto.lowPart_map_into | (intros; apply GlobalTheory.LowKInto.lowPart_map_into <;> assumption)
+  exact @GlobalTheory.LowKInto.lowPart_map_into

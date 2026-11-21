@@ -18,4 +18,4 @@ theorem _root_.GlobalTheory.T.pair_double_adapted_restriction : GlobalTheory.ThK
     ∀ (l : (AE F E)ˣ) (g₀ : UA σ X₁.J) (m : UA σ X.J), IsLevi (W₁ := X₁) H l g₀ m →
     ∀ c : ℂ, (∀ Φ ∈ schA F (Fin n × Fin d), e (om (m, 1) Φ) = c • om₁ (g₀, 1) (e Φ)) →
       ‖c‖ = (absE F E l : ℝ) ^ ((d₁ : ℝ) / 2) := by
-  first | exact @GlobalTheory.ThK.LeviModulus.norm_const_eq | exact GlobalTheory.ThK.LeviModulus.norm_const_eq | (intros; apply GlobalTheory.ThK.LeviModulus.norm_const_eq <;> assumption)
+  exact @GlobalTheory.ThK.LeviModulus.norm_const_eq

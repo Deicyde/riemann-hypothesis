@@ -32,4 +32,4 @@ theorem _root_.GlobalTheory.T.doubledWeilOperator_diagonalIntegral_heisenberg_po
     Acts (evFin F v) (omd p) Φ Φ₁ → ∀ z : Matrix (Fin n) (Fin m) (AE F E), At (evFin F v) z →
       diagW (psiAt ψ v) μ Φ₁ (locCo M.co v (z * Cᵀ)) = ρ₀ * diagW (psiAt ψ v) μ Φ (locCo M.co v
         (((((p⁻¹).1.1 : Matrix (Fin n ⊕ Fin n) (Fin n ⊕ Fin n) (AE F E)).toBlocks₁₁ - ((p⁻¹).1.1 : Matrix (Fin n ⊕ Fin n) (Fin n ⊕ Fin n) (AE F E)).toBlocks₂₁) * z) * Cᵀ)) := by
-  first | exact @GlobalTheory.InertLagChar.diagW_omd_point | exact GlobalTheory.InertLagChar.diagW_omd_point | (intros; apply GlobalTheory.InertLagChar.diagW_omd_point <;> assumption)
+  exact @GlobalTheory.InertLagChar.diagW_omd_point

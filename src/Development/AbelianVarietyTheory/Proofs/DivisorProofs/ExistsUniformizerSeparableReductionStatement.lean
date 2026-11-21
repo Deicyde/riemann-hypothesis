@@ -11,4 +11,4 @@ theorem _root_.GlobalTheory.T.exists_uniformizer_separable_reduction : ∀ (l : 
       aeval a h ∈ Ideal.span {π} ∧ e * h.natDegree = Module.finrank ℤ_[l] O ∧
       ∀ (κ : Type) [Field κ] [CharP κ l] (ψ : ℤ_[l] →+* κ), (h.map ψ).Separable ∧
         (LinearMap.charpoly (LinearMap.mulLeft ℤ_[l] a)).map ψ = (h.map ψ) ^ e := by
-  first | exact @GlobalTheory.UnramifiedGenerator.exists_ramification_and_generator | exact GlobalTheory.UnramifiedGenerator.exists_ramification_and_generator | (intros; apply GlobalTheory.UnramifiedGenerator.exists_ramification_and_generator <;> assumption)
+  exact @GlobalTheory.UnramifiedGenerator.exists_ramification_and_generator

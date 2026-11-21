@@ -12,4 +12,4 @@ open Filter Topology
 open scoped ContDiff
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.abelian_scheme_arith_variety : ∀ (k : Type) [CommRing k] (S : Scheme.{0}) (p : S ⟶ Sp k), IsRegSurf p → ∀ (P : PPAS S), IsArithVar (P.A.hom ≫ p) (P.g + 1) := by
-  first | exact @GlobalTheory.PPAS.isArithVar_total | exact GlobalTheory.PPAS.isArithVar_total | (intros; apply GlobalTheory.PPAS.isArithVar_total <;> assumption)
+  exact @GlobalTheory.PPAS.isArithVar_total

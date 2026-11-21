@@ -8,4 +8,4 @@ theorem _root_.GlobalTheory.T.plucker_minors_proportional : ∀ {K : Type} [Fiel
   (∃ π₁ : Equiv.Perm (Fin p ⊕ Fin q), (β.submatrix id (π₁ ∘ Sum.inr)).det ≠ 0) →
   ∃ lam : K, ∀ π : Equiv.Perm (Fin p ⊕ Fin q),
     ((Equiv.Perm.sign π : ℤ) : K) * (α.submatrix id (π ∘ Sum.inl)).det = lam * (β.submatrix id (π ∘ Sum.inr)).det := by
-  first | exact @GlobalTheory.jacobi_complementary_minors | exact GlobalTheory.jacobi_complementary_minors | (intros; apply GlobalTheory.jacobi_complementary_minors <;> assumption)
+  exact @GlobalTheory.jacobi_complementary_minors

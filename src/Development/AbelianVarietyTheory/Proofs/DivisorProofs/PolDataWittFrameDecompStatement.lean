@@ -22,4 +22,4 @@ theorem _root_.GlobalTheory.T.pol_data_witt_frame_decomp : ∀ (F E : Type) [Fie
               X.Good (w.under (𝓞 F)) ∧ (GlobalTheory.CuspRep.CG.mk τ).IsUnitary ∧ τ.IsLocComp w ρ ∧
                 GlobalTheory.ThK.MidJac.IsMidJacAt w a a' l h (GlobalTheory.LFun.locChar X.α w * GlobalTheory.ThK.MidJac.absPowAt w (z : ℂ))
                   (GlobalTheory.LFun.locChar X.β w * GlobalTheory.ThK.MidJac.absPowAt w (z : ℂ)) ρ.ρ := by
-  first | exact @GlobalTheory.ThK.MidJacGlobal.main | exact GlobalTheory.ThK.MidJacGlobal.main | (intros; apply GlobalTheory.ThK.MidJacGlobal.main <;> assumption)
+  exact @GlobalTheory.ThK.MidJacGlobal.main

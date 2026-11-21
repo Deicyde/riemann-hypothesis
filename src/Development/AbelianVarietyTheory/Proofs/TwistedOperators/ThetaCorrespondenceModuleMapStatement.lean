@@ -26,4 +26,4 @@ theorem _root_.GlobalTheory.T.theta_correspondence_module_map : GlobalTheory.Fun
     ∀ γ ∈ GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.Lines D.sp.cm.sig Vs, ∀ Ψ ∈ algF ψ θ false A₁ B, ∀ Ψ₁ ∈ algF ψ θ false A₁ B,
     (∀ z, HasDerivAt (fun t : ℝ => ωB (GlobalTheory.ConjUTransport.conjUInv W₁ (-1) (neg_ne_zero.2 one_ne_zero) hJ
       (γ (Multiplicative.ofAdd t)), 1) Ψ z) (Ψ₁ z) 0) → p' Ψ₁ = 0 := by
-  first | exact @GlobalTheory.CoinvLine.coinv_kills_line_deriv | exact GlobalTheory.CoinvLine.coinv_kills_line_deriv | (intros; apply GlobalTheory.CoinvLine.coinv_kills_line_deriv <;> assumption)
+  exact @GlobalTheory.CoinvLine.coinv_kills_line_deriv

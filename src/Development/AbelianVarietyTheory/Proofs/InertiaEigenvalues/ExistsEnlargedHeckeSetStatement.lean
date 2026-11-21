@@ -18,4 +18,4 @@ theorem _root_.GlobalTheory.T.exists_enlarged_hecke_set : PrN → SerN → ∀ h
     ∀ Sb : Finset (PlE (w.D Z).host), (∀ i, Sb ⊆ (w.D Z).ntw.S0 i) → ∃ Sb' : Finset (PlE (w.D Z).host), Sb ⊆ Sb' ∧
       (∀ i, Sb' ⊆ (w.D Z).ntw.S0 i) ∧ GlobalTheory.TwInputs.Eig.Low (w.D Z) Sb' ∧
       GlobalTheory.HeightCounting.RatSide.HeckeRd t.r.z.R t.r.z.cG c.row.kKs c.row.hk Sb' c.row.hecke.hL := by
-  first | exact @GlobalTheory.HeckeSbLayer.exists_sb_layer | exact GlobalTheory.HeckeSbLayer.exists_sb_layer | (intros; apply GlobalTheory.HeckeSbLayer.exists_sb_layer <;> assumption)
+  exact @GlobalTheory.HeckeSbLayer.exists_sb_layer

@@ -22,4 +22,4 @@ theorem _root_.GlobalTheory.T.invariant_bilinear_nontrivial_character : ∀ (k :
     ∀ Z₁ ∈ GlobalTheory.RankCoinv.box ϖ Y₁ (fun _ => 1), ∀ Z₂ ∈ GlobalTheory.RankCoinv.box ϖ Y₂ (fun _ => 1), ∀ N : ℕ, 1 ≤ N →
       ∀ Ψ₁ Ψ₂ : GlobalTheory.FullRankCoinv.fullRk k n d, Ψ₁.1 = GlobalTheory.RankCoinv.boxFn ϖ Z₁ (fun _ => N) →
         Ψ₂.1 = GlobalTheory.RankCoinv.boxFn ϖ Z₂ (fun _ => N) → Bf Ψ₁ Ψ₂ = 0 := by
-  first | exact @GlobalTheory.NormalCore.normal_core | exact GlobalTheory.NormalCore.normal_core | (intros; apply GlobalTheory.NormalCore.normal_core <;> assumption)
+  exact @GlobalTheory.NormalCore.normal_core

@@ -17,4 +17,4 @@ theorem _root_.GlobalTheory.T.real_maps_relevant_space : GlobalTheory.ThK.KP →
     (∀ w, (mat h).map (piInf (B.emb w)) * G.W.θ w = W.θ w * (mat h).map (piInf (B.emb w))) →
     ∃ R₃ : RealMaps F a a', IsRealMaps B G om om' R₃ ∧ ∀ (Rf : FinMaps F a a') Φ Φ', PolMatch B G X R₃ Rf Φ Φ' →
         PolMatch B (reG G V V' W) X R₂ Rf (om (g, h) Φ) (om' (g', h) Φ') := by
-  first | exact @GlobalTheory.MajTransport.transport | exact GlobalTheory.MajTransport.transport | (intros; apply GlobalTheory.MajTransport.transport <;> assumption)
+  exact @GlobalTheory.MajTransport.transport

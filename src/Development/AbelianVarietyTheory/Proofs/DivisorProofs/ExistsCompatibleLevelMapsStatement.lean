@@ -11,4 +11,4 @@ theorem _root_.GlobalTheory.T.exists_compatible_level_maps : ∀ {E : Type} [Fie
     (∀ n : ℕ, 0 < n → ∀ a : D.La, ∃ b : D.La, D.ModN n (f n b - a)) ∧
     (∀ n : ℕ, 0 < n → ∀ a : D.La, D.ModN n (f n a) → D.ModN n a) ∧
     (∀ n : ℕ, 0 < n → ∀ a b : D.La, (n : ℤ) ∣ D.EF (f n a) (f n b) - D.EF a b) := by
-  first | exact @GlobalTheory.TwistIsom.exists_semilinear_isometry | exact GlobalTheory.TwistIsom.exists_semilinear_isometry | (intros; apply GlobalTheory.TwistIsom.exists_semilinear_isometry <;> assumption)
+  exact @GlobalTheory.TwistIsom.exists_semilinear_isometry

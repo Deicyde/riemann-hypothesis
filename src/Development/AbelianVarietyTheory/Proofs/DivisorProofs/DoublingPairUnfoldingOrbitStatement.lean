@@ -27,4 +27,4 @@ theorem _root_.GlobalTheory.T.doubling_pair_unfolding_orbit : ∀ (F E : Type) [
     ∀ f ∈ Model.Pol ({ co := co, vac := fun _ _ => 0, μ := 0, dom := ∅ } : Model σ Xs W₂) B.ψ B.emb,
     ∀ g ∈ SB (Fin n × Fin (d + d) → Af F),
       FiniteDimensional ℂ (Submodule.span ℂ {Ψ | ∃ a ∈ KInf σ W₂ B.emb, Ψ = om₂ (1, a) (pureA F f g)}) := by
-  first | exact @GlobalTheory.DblKInfFin.dbl_kInf_finite | exact GlobalTheory.DblKInfFin.dbl_kInf_finite | (intros; apply GlobalTheory.DblKInfFin.dbl_kInf_finite <;> assumption)
+  exact @GlobalTheory.DblKInfFin.dbl_kInf_finite

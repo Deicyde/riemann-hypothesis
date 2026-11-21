@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.exists_unique_base_change_volume_form : ∀ (R R' 
     (n : ℕ) (δ : M [⋀^Fin n]→ₗ[R] R), Submodule.span R {δ} = ⊤ →
     ∃! δ' : N [⋀^Fin n]→ₗ[R'] R', Submodule.span R' {δ'} = ⊤ ∧
       ∀ v : Fin n → M, δ' (fun i ↦ e (1 ⊗ₜ v i)) = algebraMap R R' (δ v) := by
-  first | exact @GlobalTheory.AltBaseChange.exists_unique_baseChange_generator | exact GlobalTheory.AltBaseChange.exists_unique_baseChange_generator | (intros; apply GlobalTheory.AltBaseChange.exists_unique_baseChange_generator <;> assumption)
+  exact @GlobalTheory.AltBaseChange.exists_unique_baseChange_generator

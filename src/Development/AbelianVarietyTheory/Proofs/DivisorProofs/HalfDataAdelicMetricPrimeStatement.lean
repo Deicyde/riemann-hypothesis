@@ -23,4 +23,4 @@ theorem _root_.GlobalTheory.T.half_data_adelic_metric_prime : Hypotheses2 → Hy
     HalfDataC (fun k : Fin (D.R.f * O.N) => adlOf (O.Φ.C c) (O.met.hm c)
       (wholeSym (Function.update (ArIn.ind Sx) p true) (some R)
         (Sum.inl k : Fin (D.R.f * O.N) ⊕ Fin (D.R.f * O.N)))) p := by
-  first | exact @GlobalTheory.HalfGeo.halfData_whole | exact GlobalTheory.HalfGeo.halfData_whole | (intros; apply GlobalTheory.HalfGeo.halfData_whole <;> assumption)
+  exact @GlobalTheory.HalfGeo.halfData_whole

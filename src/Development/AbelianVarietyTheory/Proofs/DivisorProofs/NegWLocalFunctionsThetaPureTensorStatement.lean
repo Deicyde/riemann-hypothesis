@@ -22,4 +22,4 @@ theorem _root_.GlobalTheory.T.negW_local_functions_theta_pure_tensor : ∀ {D : 
       ∀ ε, IsIdemSum ε (locPl G t) → ∀ Ξ F, IsLinA B t i j ρ ε Ξ F →
       ∀ φ, IsFinPart Γ.M X.T φ → (∀ w ∈ locPl G t, ι w (φ (w.under (𝓞 D.host.F))) = Ξ w) →
         GlobalTheory.SquareAgree.IsDatum Γ.M W.ψ (ptA e) (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.pure ((∏ w ∈ locPl G t, ι w (Γ.M.vac _) 0) • f₀) φ) F := by
-  first | exact @GlobalTheory.TopFlip.LinGlob.isDatum_linA | exact GlobalTheory.TopFlip.LinGlob.isDatum_linA | (intros; apply GlobalTheory.TopFlip.LinGlob.isDatum_linA <;> assumption)
+  exact @GlobalTheory.TopFlip.LinGlob.isDatum_linA

@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.cm_type_lattice_symplectic_basis : ∀ (E : Type) 
     (∀ α, (ρ α).transpose * J = J * ρ (bar α)) → ∀ p : ℕ, p.Prime →
     ∃ (n : ℕ) (P Q : Matrix (Fin N) (Fin N) F), n ≠ 0 ∧
       EigBasis ρ J (fun τ => if τ ∈ Φ then vDiff E p else 0) p n P Q := by
-  first | exact @GlobalTheory.EigArith.exists_eigBasis | exact GlobalTheory.EigArith.exists_eigBasis | (intros; apply GlobalTheory.EigArith.exists_eigBasis <;> assumption)
+  exact @GlobalTheory.EigArith.exists_eigBasis

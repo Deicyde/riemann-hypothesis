@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.step_map_section_range : ∀ (ι : Type) [Fintype 
       (v : Fin N → A),
     vecSec y v ∈ Set.range ((stepMap ι N fl (flagPt (Prod.fst : ι × Fin (N + 1) → ι) Prod.snd h) y hy a l).app ⊤) ↔
       v ∈ Submodule.span A (Set.range fun j : Fin l => fun i => (h a).1 i (Fin.castLE l.is_le j)) := by
-  first | exact @GlobalTheory.FlagZ.TautUniq.vecSec_mem_range_stepMap_iff | exact GlobalTheory.FlagZ.TautUniq.vecSec_mem_range_stepMap_iff | (intros; apply GlobalTheory.FlagZ.TautUniq.vecSec_mem_range_stepMap_iff <;> assumption)
+  exact @GlobalTheory.FlagZ.TautUniq.vecSec_mem_range_stepMap_iff

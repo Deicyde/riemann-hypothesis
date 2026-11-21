@@ -24,4 +24,4 @@ theorem _root_.GlobalTheory.T.local_norm_of_valuation_profile : ∀ (F E : Type)
         ∀ w : HeightOneSpectrum (𝓞 E), w.under (𝓞 F) = v → GlobalTheory.UnrTate.valAt v w c ≤ WithZero.exp (-e w)) →
       (GlobalTheory.EisMidHt.normFin F L v y : ℝ) =
         ∏ w ∈ Formalism.L2.Host.aboveF (L := E) F v, (Ideal.absNorm w.asIdeal : ℝ) ^ e w := by
-  first | exact @GlobalTheory.EisMidHt.normFin_eq_prod_absNorm_of_valAt | exact GlobalTheory.EisMidHt.normFin_eq_prod_absNorm_of_valAt | (intros; apply GlobalTheory.EisMidHt.normFin_eq_prod_absNorm_of_valAt <;> assumption)
+  exact @GlobalTheory.EisMidHt.normFin_eq_prod_absNorm_of_valAt

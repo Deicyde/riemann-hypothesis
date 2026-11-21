@@ -21,4 +21,4 @@ theorem _root_.GlobalTheory.T.seesaw_pair_plane_descent_second : GlobalTheory.Th
     ∀ Ψ ∈ schA F (Fin n × Fin d),
       Summable (fun w : Fin d → E => ∫ u in 𝓕, thetaSum F (e (M.co.rho B.ψ (Matrix.vecMulVec (incV F H.y) (incV F w)) (om (u.1, 1) Ψ))) ∂μ) ∧
       ∫ u in 𝓕, (∑' w : Fin d → E, thetaSum F (e (M.co.rho B.ψ (Matrix.vecMulVec (incV F H.y) (incV F w)) (om (u.1, 1) Ψ)))) ∂μ = ∑' w : Fin d → E, ∫ u in 𝓕, thetaSum F (e (M.co.rho B.ψ (Matrix.vecMulVec (incV F H.y) (incV F w)) (om (u.1, 1) Ψ))) ∂μ := by
-  first | exact @GlobalTheory.ThKTermX.termwise | exact GlobalTheory.ThKTermX.termwise | (intros; apply GlobalTheory.ThKTermX.termwise <;> assumption)
+  exact @GlobalTheory.ThKTermX.termwise

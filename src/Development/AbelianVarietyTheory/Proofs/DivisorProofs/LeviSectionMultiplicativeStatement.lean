@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.levi_section_multiplicative : ∀ (F E : Type) [Fi
     (H : Plane E (b + 2) b) (H' : Plane E (b + 2 + a') (b + a')), CfgA B G G₁ H H' → B.IsGood σ → G.IsGood B → G₁.IsGood B →
     ∀ m : (AE F E)ˣ → UA σ G₁.V.J → UA σ G.V.J, (∀ l g₀, IsLevi H l g₀ (m l g₀)) →
     (∀ l l' g₀ g₀', m (l * l') (g₀ * g₀') = m l g₀ * m l' g₀') ∧ Continuous (fun x : (AE F E)ˣ × UA σ G₁.V.J => m x.1 x.2) := by
-  first | exact @GlobalTheory.LeviHom.levi_hom | exact GlobalTheory.LeviHom.levi_hom | (intros; apply GlobalTheory.LeviHom.levi_hom <;> assumption)
+  exact @GlobalTheory.LeviHom.levi_hom

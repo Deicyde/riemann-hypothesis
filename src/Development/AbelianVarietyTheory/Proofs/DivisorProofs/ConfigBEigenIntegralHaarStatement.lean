@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.config_b_eigen_integral_haar : GlobalTheory.ThK.KP
       ∀ X om om' om₁ om₁', IsTriple B G X om om' → IsTriple B G₁ X om₁ om₁' →
       ∀ Φ' ∈ G.M'.So B.ψ B.τ₁,
         HasLaw G₁.W H' X.β ((a : ℝ) / 2) (GlobalTheory.ConeSmall.coneI B G G₁ H H' e' K μK μ X.ν om' om₁' Φ' (((a - (b + 2)) / 2 + 1 : ℕ) : ℂ)) := by
-  first | exact @GlobalTheory.ConeSmallLaw.coneI_law | exact GlobalTheory.ConeSmallLaw.coneI_law | (intros; apply GlobalTheory.ConeSmallLaw.coneI_law <;> assumption)
+  exact @GlobalTheory.ConeSmallLaw.coneI_law

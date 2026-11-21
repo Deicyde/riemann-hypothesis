@@ -8,4 +8,4 @@ open GlobalTheory GlobalTheory.Toroidal GlobalTheory.Cartier GlobalTheory.ProjVa
 open scoped TensorProduct ContDiff
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.flag_boundary_iso : ∀ (D : D7) (A : Amb D) (N j : ℕ) (S : Sig A N j) (κ : Lv A) (s : FinalTheorems S κ) (Φ : s.Flag) (k : s.Comp), LBIso ((Φ.C k).Y.lb (bdPull Φ k)) (s.T.BD.lb.pull ((Φ.C k).π ≫ genι s.T.Z)) := by
-  first | exact @GlobalTheory.ShFam.lbIso_bdPull | exact GlobalTheory.ShFam.lbIso_bdPull | (intros; apply GlobalTheory.ShFam.lbIso_bdPull <;> assumption)
+  exact @GlobalTheory.ShFam.lbIso_bdPull

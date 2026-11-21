@@ -24,4 +24,4 @@ theorem _root_.GlobalTheory.T.cusp_form_finite_dim_stable : GlobalTheory.FunPr.H
     (∃ W : Submodule ℂ (GA D V → ℂ), FiniteDimensional ℂ W ∧ ψ ∈ W ∧ ∀ τ, ∀ g ∈ Formalism.QuantumDeterminants.UH (gramAt D V τ),
       M.fr τ * g * (M.fr τ)⁻¹ ∈ Formalism.REAL.Kset (M.ε τ) → ∀ f ∈ W, rTr V (atTau θ V τ g) f ∈ W) →
     ψ ∈ ⨆ (A : Submodule ℂ (GA D V → ℂ)) (_ : A ≤ GlobalTheory.CuspGK.gkGen θ M ψ ∧ GlobalTheory.CuspGK.IsIrrGKSub θ M A), A := by
-  first | exact @GlobalTheory.CuspGK.mem_iSup_irr | exact GlobalTheory.CuspGK.mem_iSup_irr | (intros; apply GlobalTheory.CuspGK.mem_iSup_irr <;> assumption)
+  exact @GlobalTheory.CuspGK.mem_iSup_irr

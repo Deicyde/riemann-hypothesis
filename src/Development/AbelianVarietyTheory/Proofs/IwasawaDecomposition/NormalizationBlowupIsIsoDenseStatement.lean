@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.normalization_blowup_isIso_dense : ∀ (R K : Type
         (by simp) (by simp) = jV ∧
       pullback.map (ν ≫ b ≫ s) (spMap (algebraMap R K)) s (spMap (algebraMap R K)) (ν ≫ b) (𝟙 _) (𝟙 _)
         (by simp) (by simp) ⁻¹' Set.range jV = Set.range jN := by
-  first | exact @GlobalTheory.BlowOpen.lifts_to_normalisation | exact GlobalTheory.BlowOpen.lifts_to_normalisation | (intros; apply GlobalTheory.BlowOpen.lifts_to_normalisation <;> assumption)
+  exact @GlobalTheory.BlowOpen.lifts_to_normalisation

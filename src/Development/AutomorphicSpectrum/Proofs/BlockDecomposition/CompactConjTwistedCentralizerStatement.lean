@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.compact_conj_twisted_centralizer : ∀ (n : ℕ) [
     μd {t : twCent (thC n) d | (t : GL (Fin n) ℂ) * g ∈ nSet W₁ W₂ C} ≠ ⊤) →
   ∃ ρ : GL (Fin n) ℂ → ℝ≥0∞, IsQuotNormaliser (twCent (thC n) d) μd ρ ∧
     ∀ (X : nilrad W₁ W₂) (g : GL (Fin n) ℂ), ρ (uOf X * g) = ρ g := by
-  first | exact @GlobalTheory.CompanionTheory.LocVan.tNormaliser | exact GlobalTheory.CompanionTheory.LocVan.tNormaliser | (intros; apply GlobalTheory.CompanionTheory.LocVan.tNormaliser <;> assumption)
+  exact @GlobalTheory.CompanionTheory.LocVan.tNormaliser

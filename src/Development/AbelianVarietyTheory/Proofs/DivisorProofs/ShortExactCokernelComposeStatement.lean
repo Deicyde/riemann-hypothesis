@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.short_exact_cokernel_compose : ∀ (X : Scheme.{0}
     (ShortComplex.mk a b h).ShortExact → ∀ (f : A ⟶ E₂) (e : A ⟶ E₁) [IsIso e], f = e ≫ a →
     ∀ (ι : F ⟶ E₃), IsZero F → ∃ hz : f ≫ b ≫ cokernel.π ι = 0,
       (ShortComplex.mk f (b ≫ cokernel.π ι) hz).ShortExact := by
-  first | exact @GlobalTheory.ses_precomp_iso_postcomp_coker_zero | exact GlobalTheory.ses_precomp_iso_postcomp_coker_zero | (intros; apply GlobalTheory.ses_precomp_iso_postcomp_coker_zero <;> assumption)
+  exact @GlobalTheory.ses_precomp_iso_postcomp_coker_zero

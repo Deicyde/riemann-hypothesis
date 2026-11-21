@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.jacquet_hom_equiv_transfer : ∀ (k : Type) [Field
     Nonempty (π.Equiv π') →
     HomLeOne (jac e π') (twist (leviTgt σ₁ ξ₁ ξ₂) (deltaHalf k fun i : Fin 3 => Fin (blk3 m i))⁻¹) →
     HomLeOne (jacU e π) (leviTgt σ₁ ξ₁ ξ₂) := by
-  first | exact @GlobalTheory.JacTransport.homLeOne_jacU_of_equiv | exact GlobalTheory.JacTransport.homLeOne_jacU_of_equiv | (intros; apply GlobalTheory.JacTransport.homLeOne_jacU_of_equiv <;> assumption)
+  exact @GlobalTheory.JacTransport.homLeOne_jacU_of_equiv

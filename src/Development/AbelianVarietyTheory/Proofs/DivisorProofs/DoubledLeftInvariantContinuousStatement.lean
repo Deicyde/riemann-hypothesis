@@ -30,4 +30,4 @@ theorem _root_.GlobalTheory.T.doubled_left_invariant_continuous : ∀ (F E : Typ
     ∀ (h : UA σ W.J) (D : Set (UA σ W.J)), IsFundamentalDomain S D μ →
       IntegrableOn (fun x => f x * (Φ (γ * i (h, x)) * w x)) D μ →
       ∫ x in D, f x * (Φ (γ * i (h, x)) * w x) ∂μ = 0 := by
-  first | exact @GlobalTheory.OrbitVanish.integral_eq_zero | exact GlobalTheory.OrbitVanish.integral_eq_zero | (intros; apply GlobalTheory.OrbitVanish.integral_eq_zero <;> assumption)
+  exact @GlobalTheory.OrbitVanish.integral_eq_zero

@@ -22,4 +22,4 @@ theorem _root_.GlobalTheory.T.tangent_vectors_localization_lift : ∀ {R : Type}
         IsGrpPullback G' G (spMap (algebraMap R (Localization.AtPrime p))) ψ →
         ∀ v : Fin n → (epsR (Localization.AtPrime p) ⟶ G'),
           (∀ i, GlobalTheory.IsVecOver (algebraMap R (Localization.AtPrime p)) ψ (w i) (v i)) → IsLieBasis v) := by
-  first | exact @GlobalTheory.exists_tangent_isLieBasis_atPrime | exact GlobalTheory.exists_tangent_isLieBasis_atPrime | (intros; apply GlobalTheory.exists_tangent_isLieBasis_atPrime <;> assumption)
+  exact @GlobalTheory.exists_tangent_isLieBasis_atPrime

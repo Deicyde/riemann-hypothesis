@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.hermitian_vector_eigen_decomposition : ∀ {n : �
       e ⬝ᵥ M *ᵥ star e = 1 ∧ f ⬝ᵥ M *ᵥ star f = -1 ∧ e ⬝ᵥ M *ᵥ star f = 0 ∧ f ⬝ᵥ M *ᵥ star e = 0 ∧
       ∀ u : Fin n → ℂ, u ⬝ᵥ M *ᵥ star x = 0 → u ⬝ᵥ M *ᵥ star (θ *ᵥ x) = 0 →
         u ⬝ᵥ M *ᵥ star e = 0 ∧ u ⬝ᵥ M *ᵥ star f = 0 ∧ e ⬝ᵥ M *ᵥ star u = 0 ∧ f ⬝ᵥ M *ᵥ star u = 0 := by
-  first | exact @GlobalTheory.hyperbolic_pair_of_cartan_isotropic | exact GlobalTheory.hyperbolic_pair_of_cartan_isotropic | (intros; apply GlobalTheory.hyperbolic_pair_of_cartan_isotropic <;> assumption)
+  exact @GlobalTheory.hyperbolic_pair_of_cartan_isotropic

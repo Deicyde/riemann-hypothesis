@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.nonreal_char_functional_unique : ∀ (k : Type) [F
         Ψ'.1 = (fun Y => Ψ.1 (Y * (Matrix.reindex finSumFinEquiv finSumFinEquiv (Matrix.fromBlocks g.1 0 0 (1 : Matrix (Fin b) (Fin b) k))))) →
         L Ψ' = ((χ (Matrix.GeneralLinearGroup.det g) : ℂ) * GlobalTheory.SplitFlip.apow (Matrix.GeneralLinearGroup.det g) (s : ℂ)) * L Ψ) →
       L = 0 := by
-  first | exact @GlobalTheory.LineZeroForm.conjForm_eq_zero | exact GlobalTheory.LineZeroForm.conjForm_eq_zero | (intros; apply GlobalTheory.LineZeroForm.conjForm_eq_zero <;> assumption)
+  exact @GlobalTheory.LineZeroForm.conjForm_eq_zero

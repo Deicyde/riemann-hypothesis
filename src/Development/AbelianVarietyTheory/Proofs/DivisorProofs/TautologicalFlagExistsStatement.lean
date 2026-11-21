@@ -13,4 +13,4 @@ open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G Recip
 open scoped Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.tautological_flag_exists : ∀ (ι : Type) [Fintype ι] (N : ℕ), ∃ fl : ∀ _ : ι, GlobalTheory.Vert.Flag ((Scheme.Modules.pullback (GlobalTheory.FlagZ.flStr ι N)).obj (GlobalTheory.FlagZ.Taut.stdE N)) N, GlobalTheory.FlagZ.Taut.IsTaut ι N fl := by
-  first | exact @GlobalTheory.FlagZ.exists_isTaut | exact GlobalTheory.FlagZ.exists_isTaut | (intros; apply GlobalTheory.FlagZ.exists_isTaut <;> assumption)
+  exact @GlobalTheory.FlagZ.exists_isTaut

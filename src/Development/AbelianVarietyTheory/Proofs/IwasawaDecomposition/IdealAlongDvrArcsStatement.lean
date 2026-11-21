@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.ideal_along_dvr_arcs : ∀ (X : Scheme.{0}) (BD : 
       (∀ r, gam (algebraMap R _ r) = algebraMap V _ (ψ r)) →
       ∀ χ : Sp V ⟶ X, spMap gam ≫ x = Out.jK V ≫ χ → GlobalTheory.LocM.idlAlong BD.idealSheaf χ = Ideal.span {ψ u ^ n}) →
     ∃ e : LB.Gen ((GlobalTheory.CechPic.dual BD.lb).pull x), e.IsGen ∧ GlobalTheory.TraitGen.ExtAt (GlobalTheory.CechPic.dual BD.lb) x e := by
-  first | exact @GlobalTheory.TraitGen.exists_dual_gen_extAt | exact GlobalTheory.TraitGen.exists_dual_gen_extAt | (intros; apply GlobalTheory.TraitGen.exists_dual_gen_extAt <;> assumption)
+  exact @GlobalTheory.TraitGen.exists_dual_gen_extAt

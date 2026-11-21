@@ -10,4 +10,4 @@ theorem _root_.GlobalTheory.T.theta_submodule_sup_ne_top : GlobalTheory.FunPr.Hy
     [IsNonarchimedeanLocalField k] (n m : ℕ), 1 ≤ n → 1 ≤ m → ∀ χ : GL (Fin n) k →* ℂˣ, IsOpen {g | χ g = 1} →
     ∀ N N' : Submodule ℂ (Matrix (Fin n) (Fin m) k → ℂ), GlobalTheory.ThetaGLSub.IsSub χ N → GlobalTheory.ThetaGLSub.IsSub χ N' →
       N ≠ GlobalTheory.SplitWeil.SB _ → N' ≠ GlobalTheory.SplitWeil.SB _ → N ⊔ N' ≠ GlobalTheory.SplitWeil.SB _ := by
-  first | exact @GlobalTheory.ThetaGLSub.SumProper.main | exact GlobalTheory.ThetaGLSub.SumProper.main | (intros; apply GlobalTheory.ThetaGLSub.SumProper.main <;> assumption)
+  exact @GlobalTheory.ThetaGLSub.SumProper.main

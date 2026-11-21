@@ -10,4 +10,4 @@ theorem _root_.GlobalTheory.T.finite_of_localization_and_completion : ∀ (A : T
   Module.Finite (Localization.Away f) (LocalizedModule (Submonoid.powers f) N) →
   Module.Finite (AdicCompletion (Ideal.span {f}) A) (TensorProduct A (AdicCompletion (Ideal.span {f}) A) N) →
   Module.Finite A N := by
-  first | exact @GlobalTheory.module_finite_of_localization_of_completion | exact GlobalTheory.module_finite_of_localization_of_completion | (intros; apply GlobalTheory.module_finite_of_localization_of_completion <;> assumption)
+  exact @GlobalTheory.module_finite_of_localization_of_completion

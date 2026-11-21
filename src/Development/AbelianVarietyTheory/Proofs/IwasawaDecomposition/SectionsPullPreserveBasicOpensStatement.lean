@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.sections_pull_preserve_basic_opens : ∀ (X X' : S
     ∀ (V : X.Opens) (θ : ∀ j, Γ(X, V ⊓ L.U j)), θ ∈ secOn L V → ∀ (W : X'.Opens), W ≤ F ⁻¹ᵁ V →
     ∃ θ' : (∀ i, Γ(X', W ⊓ L'.U i)), θ' ∈ secOn L' W ∧ ∀ (g : X') (i : L'.ι) (j : L.ι), g ∈ W → g ∈ L'.U i → F g ∈ L.U j →
       (g ∈ X'.basicOpen (θ' i) ↔ F g ∈ X.basicOpen (θ j)) := by
-  first | exact @GlobalTheory.SecPullIso.secOn_pull_of_iso | exact GlobalTheory.SecPullIso.secOn_pull_of_iso | (intros; apply GlobalTheory.SecPullIso.secOn_pull_of_iso <;> assumption)
+  exact @GlobalTheory.SecPullIso.secOn_pull_of_iso

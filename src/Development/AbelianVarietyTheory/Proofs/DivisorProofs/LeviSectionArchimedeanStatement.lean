@@ -11,4 +11,4 @@ theorem _root_.GlobalTheory.T.levi_section_archimedean : ∀ (F E : Type) [Field
     (G : Geo σ (b + 2) a') (G₁ : Geo σ b a') (H : Plane E (b + 2) b) (H' : Plane E (b + 2 + a') (b + a')), CfgA B G G₁ H H' →
     B.IsGood σ → G.IsGood B → G₁.IsGood B →
     ∃ m : (AE F E)ˣ → UA σ G.V.J, ∀ l ∈ idelesAt E (evI F), IsLevi (W₁ := G₁.V) H l 1 (m l) ∧ m l ∈ UAt σ G.V (evI F) := by
-  first | exact @GlobalTheory.LeviSupp.levi_section | exact GlobalTheory.LeviSupp.levi_section | (intros; apply GlobalTheory.LeviSupp.levi_section <;> assumption)
+  exact @GlobalTheory.LeviSupp.levi_section

@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.tensor_rational_injectivity : ∀ (N : ℕ) (I A :
       (∀ i, LinearMap.rTensor (ZMod p) (φ i).toAddMonoidHom.toIntLinearMap h = 0) → h = 0) →
     ∀ (L : Type) [AddCommGroup L] (h : A ⊗[ℤ] L),
       (∀ i, LinearMap.rTensor L (φ i).toAddMonoidHom.toIntLinearMap h = 0) → h = 0 := by
-  first | exact @GlobalTheory.jointInj_tensor_of_rat_and_zmod | exact GlobalTheory.jointInj_tensor_of_rat_and_zmod | (intros; apply GlobalTheory.jointInj_tensor_of_rat_and_zmod <;> assumption)
+  exact @GlobalTheory.jointInj_tensor_of_rat_and_zmod

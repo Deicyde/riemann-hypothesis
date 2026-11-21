@@ -28,4 +28,4 @@ theorem _root_.GlobalTheory.T.adapted_model_local_place_descent : ∀ (F E : Typ
     ∀ u ∈ isoA (F := F) H H', At (evFin F v) u → ∀ u' ∈ isoA (F := F) H H', At (evFin F v) u' →
       (GlobalTheory.LatVac.locCo M.co v u).1 ⬝ᵥ (GlobalTheory.LatVac.locCo M.co v u').2 -
         (GlobalTheory.LatVac.locCo M.co v u').1 ⬝ᵥ (GlobalTheory.LatVac.locCo M.co v u).2 = 0 := by
-  first | exact @GlobalTheory.IsoOrthLocA.isoA_iso_at | exact GlobalTheory.IsoOrthLocA.isoA_iso_at | (intros; apply GlobalTheory.IsoOrthLocA.isoA_iso_at <;> assumption)
+  exact @GlobalTheory.IsoOrthLocA.isoA_iso_at

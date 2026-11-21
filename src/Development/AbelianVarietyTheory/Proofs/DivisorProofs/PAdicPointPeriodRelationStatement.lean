@@ -25,4 +25,4 @@ theorem _root_.GlobalTheory.T.p_adic_point_period_relation : ∀ (E : Type) [Fie
     letI := H.starRing; ∀ (Q : PtP E p) (π : Q.G.left ⟶ Z.t.G.left) (ψ : Q.A.A.left ⟶ Z.oF.t.G.left),
       PtAt Z yb yy Q π ψ → ∀ (σ : E →+* ℂ) (j : Fin (Dw.mult σ)) (xx : LieG Q.Gt),
       LieTie Q (ψ ≫ Z.m0.toSABMap.φ) xx (z.u σ j) → AvDefs.IsEig Q.Gt Q.oGt (embInt c Q.integers σ) xx := by
-  first | exact @GlobalTheory.DetHT.ptAt_tangent_isEig | exact GlobalTheory.DetHT.ptAt_tangent_isEig | (intros; apply GlobalTheory.DetHT.ptAt_tangent_isEig <;> assumption)
+  exact @GlobalTheory.DetHT.ptAt_tangent_isEig

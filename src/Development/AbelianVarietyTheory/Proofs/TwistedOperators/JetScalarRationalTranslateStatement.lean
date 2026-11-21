@@ -26,4 +26,4 @@ theorem _root_.GlobalTheory.T.jet_scalar_rational_translate : GlobalTheory.FunPr
         EqAt D q (GlobalTheory.SumSize.latAt ch.S.toGridChoice p.small (r * x)) (stdL D _) → EqAt D q (GlobalTheory.SumSize.latAt ch.S.toGridChoice p.big (r' * y)) (stdL D _) →
         GlobalTheory.MovedKappaEx.UnitAt q c) ∧
       GlobalTheory.MovedKappaEx.JetKap ch p (r * x) (r' * y) (c * κ) := by
-  first | exact @GlobalTheory.RatMoveJets.exists_rat_move | exact GlobalTheory.RatMoveJets.exists_rat_move | (intros; apply GlobalTheory.RatMoveJets.exists_rat_move <;> assumption)
+  exact @GlobalTheory.RatMoveJets.exists_rat_move

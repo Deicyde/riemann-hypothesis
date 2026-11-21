@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.pair_adapted_model_restriction : ∀ (F E : Type) 
       H'.IsAdapted σ B W W₁ i₀ i₁ → IsPair B M₁ χX χW om₁ r s r₁ s₁ →
       Function.Injective (GlobalTheory.SiegelConv.lagP n H'.ι H'.x) ∧
       ∀ y : Fin n → E, Matrix.vecMulVec H'.y (Sum.elim y y) ∈ LinearMap.range (GlobalTheory.SiegelConv.lagP n H'.ι H'.x) → y = 0 := by
-  first | exact @GlobalTheory.SiegelConv.lagrangian_injective_diagonal | exact GlobalTheory.SiegelConv.lagrangian_injective_diagonal | (intros; apply GlobalTheory.SiegelConv.lagrangian_injective_diagonal <;> assumption)
+  exact @GlobalTheory.SiegelConv.lagrangian_injective_diagonal

@@ -30,4 +30,4 @@ theorem _root_.GlobalTheory.T.seesaw_unfolding_positive : GlobalTheory.FunPr.Hyp
     ∀ N, GlobalTheory.CoinvKer.IsStabW om Bs.emb (algD Γ.M Bs.ψ Bs.emb) N → ∀ τ, ∀ Y ∈ lieAt X τ, ∀ ΦD ∈ N, ∀ Φ,
     IsDatum Γ.M ψ cA ΦD Φ → ∃ Φ₁D ∈ N, ∃ Φ₁ ∈ algF ψ θ true A B, IsDatum Γ.M ψ cA Φ₁D Φ₁ ∧
       IsDer θ X (fun h => ωA (1, h)) τ Y Φ Φ₁ := by
-  first | exact @GlobalTheory.SquareAgree.MaxLie.maxLie | exact GlobalTheory.SquareAgree.MaxLie.maxLie | (intros; apply GlobalTheory.SquareAgree.MaxLie.maxLie <;> assumption)
+  exact @GlobalTheory.SquareAgree.MaxLie.maxLie

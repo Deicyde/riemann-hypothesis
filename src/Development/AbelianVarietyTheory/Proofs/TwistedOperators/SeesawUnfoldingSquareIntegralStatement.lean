@@ -28,4 +28,4 @@ theorem _root_.GlobalTheory.T.seesaw_unfolding_square_integral : GlobalTheory.Fu
     GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.IsTriple Bs Γ Xc om om' →
     ∀ Pi rf rl p p', IsMatch ψ θ A A₁ B α β ωA ωB Pi rf rl p p' →
     ∀ k ∈ GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.KInf D.sp.cm.sig Γ.W Bs.emb, ∀ ΦD ∈ algD Γ.M Bs.ψ Bs.emb, om (1, k) ΦD ∈ algD Γ.M Bs.ψ Bs.emb := by
-  first | exact @GlobalTheory.SquareAgree.StabKW.stab_kW | exact GlobalTheory.SquareAgree.StabKW.stab_kW | (intros; apply GlobalTheory.SquareAgree.StabKW.stab_kW <;> assumption)
+  exact @GlobalTheory.SquareAgree.StabKW.stab_kW

@@ -17,4 +17,4 @@ theorem _root_.GlobalTheory.T.normalized_blowup_polarization : ∀ (E : Type) [F
     Dense ((ν ⁻¹ᵁ (b ⁻¹ᵁ (((BY.idealSheaf ^ n).comap (genι Y)).map (ρ ≫ genι X)).support.compl) : N.Opens) : Set N) →
     ∃ e : gen Y ≅ pullback (ν ≫ b ≫ X.s) (spMap (algebraMap (𝓞 c.F) c.F)),
       e.hom ≫ pullback.snd _ _ = genStr Y ∧ e.hom ≫ pullback.fst _ _ ≫ ν ≫ b = ρ ≫ genι X := by
-  first | exact @GlobalTheory.TorRef.genFibre_normBlowup_iso | exact GlobalTheory.TorRef.genFibre_normBlowup_iso | (intros; apply GlobalTheory.TorRef.genFibre_normBlowup_iso <;> assumption)
+  exact @GlobalTheory.TorRef.genFibre_normBlowup_iso

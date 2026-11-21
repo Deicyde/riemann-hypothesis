@@ -26,4 +26,4 @@ theorem _root_.GlobalTheory.T.matched_maps_gaussian_kernel : ∀ (F E : Type) [F
         N ≠ G.M'.Pol Bs.ψ Bs.emb → ∀ f ∈ N, R.p' f = 0) →
     ∀ N : Submodule ℂ ((Fin a' × Fin (a + a') → AF F) → ℂ), GlobalTheory.SquareAgree.IsThetaSubG G.M' Bs.ψ Bs.emb om' N →
       N ≠ GlobalTheory.SquareAgree.algD G.M' Bs.ψ Bs.emb → ∀ Φ ∈ N, GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.PolMatch Bs G Xc R Rf 0 Φ := by
-  first | exact @GlobalTheory.HoweGlobalPair.allInKer | exact GlobalTheory.HoweGlobalPair.allInKer | (intros; apply GlobalTheory.HoweGlobalPair.allInKer <;> assumption)
+  exact @GlobalTheory.HoweGlobalPair.allInKer

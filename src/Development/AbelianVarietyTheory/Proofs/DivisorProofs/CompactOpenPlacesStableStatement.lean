@@ -20,4 +20,4 @@ theorem _root_.GlobalTheory.T.compact_open_places_stable : GlobalTheory.ThK.KP �
       (∀ (f : SInf F (Fin a' × Fin (a + a'))) (φ : ∀ w : Pl F, (Fin a' × Fin (a + a') → Fv F w) → ℂ),
         (∀ w, φ w ∈ SB (Fin a' × Fin (a + a') → Fv F w)) → (∀ w ∉ T, φ w = G.M'.vac w) →
         om' (1, k) (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.pure f φ) = GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.pure f φ) := by
-  first | exact @GlobalTheory.TruncFix.fix_off_bad | exact GlobalTheory.TruncFix.fix_off_bad | (intros; apply GlobalTheory.TruncFix.fix_off_bad <;> assumption)
+  exact @GlobalTheory.TruncFix.fix_off_bad

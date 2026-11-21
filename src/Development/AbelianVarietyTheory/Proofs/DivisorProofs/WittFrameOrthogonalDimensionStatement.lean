@@ -17,4 +17,4 @@ theorem _root_.GlobalTheory.T.witt_frame_orthogonal_dimension : ∀ (F E : Type)
     (J : Matrix (Fin n) (Fin n) E) (r : ℕ) (X Y : Matrix (Fin n) (Fin (r + 1)) E),
     IsCMExt F E σ → IsHermND σ J → IsWittFrame σ J X Y →
     dim σ J X Y + 2 = n := by
-  first | exact @GlobalTheory.EisRestrict.dim_add_two | exact GlobalTheory.EisRestrict.dim_add_two | (intros; apply GlobalTheory.EisRestrict.dim_add_two <;> assumption)
+  exact @GlobalTheory.EisRestrict.dim_add_two

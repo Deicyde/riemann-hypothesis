@@ -31,4 +31,4 @@ theorem _root_.GlobalTheory.T.matched_maps_gaussian_transform : ∀ (F E : Type)
         (∀ g ∈ GlobalTheory.HoweGlobal.opFin G om v, ∀ x ∈ N, g x ∈ N) → N ≠ ⊤ → N ≤ LinearMap.ker (Rf.p v ∘ₗ (GlobalTheory.WeilM.SB (Fin a × Fin (a + a') → Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes.Fv F v)).subtype)) ∧
     GlobalTheory.HoweGlobal.relFin G om v ≤ LinearMap.ker (Rf.p v ∘ₗ (GlobalTheory.WeilM.SB (Fin a × Fin (a + a') → Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes.Fv F v)).subtype) ∧
     ∀ g ∈ GlobalTheory.HoweGlobal.opFin G om v, ∀ x ∈ LinearMap.ker (Rf.p v ∘ₗ (GlobalTheory.WeilM.SB (Fin a × Fin (a + a') → Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes.Fv F v)).subtype), g x ∈ LinearMap.ker (Rf.p v ∘ₗ (GlobalTheory.WeilM.SB (Fin a × Fin (a + a') → Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes.Fv F v)).subtype) := by
-  first | exact @GlobalTheory.HoweGlobal.fin_place_howe | exact GlobalTheory.HoweGlobal.fin_place_howe | (intros; apply GlobalTheory.HoweGlobal.fin_place_howe <;> assumption)
+  exact @GlobalTheory.HoweGlobal.fin_place_howe

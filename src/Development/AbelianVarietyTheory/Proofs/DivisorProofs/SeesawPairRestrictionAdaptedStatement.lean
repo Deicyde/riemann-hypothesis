@@ -33,4 +33,4 @@ theorem _root_.GlobalTheory.T.seesaw_pair_restriction_adapted : ∀ (F E : Type)
           dN.e (Matrix.vecMulVec (incV F H'.x) y) = (0, GlobalTheory.ThK.Adapt.glue ε q 0)) ∧
         (∀ y : Fin n → AE F E, dN.e (Matrix.vecMulVec (incV F H'.y) (Sum.elim y y)) =
           (GlobalTheory.ThK.Adapt.glue ε (fun k => ∑ j, Algebra.trace (AF F) (AE F E) (inclR (F := F) (AF F) (C k j) * y j)) 0, 0)) := by
-  first | exact @GlobalTheory.MixedCoord.exists_coord | exact GlobalTheory.MixedCoord.exists_coord | (intros; apply GlobalTheory.MixedCoord.exists_coord <;> assumption)
+  exact @GlobalTheory.MixedCoord.exists_coord

@@ -10,4 +10,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.first_chern_form_pullback : ∀ (k : Type) [CommRing k] (X : Scheme.{0}) [IsIntegral X] (p : X ⟶ Sp k) (D : ℕ) (hX : IsRegVar p D) (σ : k →+* ℂ),
     ∀ (Y : Scheme.{0}) (p' : Y ⟶ Sp k) (D' : ℕ) (hY : IsRegVar p' D') (π : Y ⟶ X) (w : π ≫ p = p'),
     ∀ L : HermLB p, fld _ (c1F hY σ (L.pull π w)) = pullF hX hY σ π w (fld _ (c1F hX σ L)) := by
-  first | exact @GlobalTheory.ChernPull.c1F_pull_eq_pullF_c1F | exact GlobalTheory.ChernPull.c1F_pull_eq_pullF_c1F | (intros; apply GlobalTheory.ChernPull.c1F_pull_eq_pullF_c1F <;> assumption)
+  exact @GlobalTheory.ChernPull.c1F_pull_eq_pullF_c1F

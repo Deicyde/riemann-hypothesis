@@ -20,4 +20,4 @@ theorem _root_.GlobalTheory.T.polarization_refined_fan : ∀ (E : Type) [Field E
       ∀ (ψ : R →+* V) (gam : FractionRing R →+* FractionRing V), (∀ r, gam (algebraMap R _ r) = algebraMap V _ (ψ r)) →
       ∀ χ : Sp V ⟶ X.X, spMap gam ≫ y ≫ X.j = jK V ≫ χ → ∀ be ∈ levelForms H 1 P.D.toPre.X, FormAt P.D.toPre ψ ϖ be →
         ∃ n : ℕ, (n : ℝ) = d * (resInt (𝓞 E) φs).evalZ be ∧ idlAlong DX.idealSheaf χ = Ideal.span {ϖ ^ n} := by
-  first | exact @GlobalTheory.ChartOrder.order_eq | exact GlobalTheory.ChartOrder.order_eq | (intros; apply GlobalTheory.ChartOrder.order_eq <;> assumption)
+  exact @GlobalTheory.ChartOrder.order_eq

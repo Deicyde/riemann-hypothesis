@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.outer_zeta_integrand_bound : ForS fun F _ _ _ _ _ 
   (∀ A ξ, ‖pFT ψ Φ A ξ‖ ≤ C₂ ∧ (pFT ψ Φ A ξ ≠ 0 → (∀ i j, (modulus (A i j) : ℝ) ≤ R) ∧ mx ξ ≤ R)) →
   ∀ (g : GL (Fin 2) F) (p : Fˣ × Fˣ × GL (Fin 2) F), p.2.2 ∈ K2 F →
     ‖Bq ψ W₀ W' Φ s g (hI p)‖ ≤ C₀ * C₁ * C₂ * Mj R B s.re ε g p := by
-  first | exact @GlobalTheory.CompanionTheory.GL2Unfolding.PtB.main | exact GlobalTheory.CompanionTheory.GL2Unfolding.PtB.main | (intros; apply GlobalTheory.CompanionTheory.GL2Unfolding.PtB.main <;> assumption)
+  exact @GlobalTheory.CompanionTheory.GL2Unfolding.PtB.main

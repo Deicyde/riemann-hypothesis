@@ -11,4 +11,4 @@ theorem _root_.GlobalTheory.T.schwartz_valued_integral_linear : ∀ {D₁ D₂ �
     (∀ a n : ℕ, ∃ (s : Finset (ℕ × ℕ)) (C : ℝ) (w : Ω₂ → ℝ), Integrable w m₂ ∧
       ∀ f k l, SchwartzMap.seminorm ℂ a n (G f k l) ≤ C * w l * (s.sup (schwartzSeminormFamily ℂ D₁ ℂ)) f) →
     ∃ T : SchwartzMap D₁ ℂ →L[ℂ] SchwartzMap D₂ ℂ, ∀ f, ⇑(T f) = fun y => ∫ k, ∫ l, G f k l y ∂m₂ ∂m₁ := by
-  first | exact @GlobalTheory.ParamSchwartz.iteratedIntegral_clm | exact GlobalTheory.ParamSchwartz.iteratedIntegral_clm | (intros; apply GlobalTheory.ParamSchwartz.iteratedIntegral_clm <;> assumption)
+  exact @GlobalTheory.ParamSchwartz.iteratedIntegral_clm

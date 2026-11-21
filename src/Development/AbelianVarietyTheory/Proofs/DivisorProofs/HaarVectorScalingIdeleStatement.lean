@@ -11,4 +11,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.haar_vector_scaling_idele : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [NumberField E] [Algebra F E] (σ : E →ₐ[F] E) (m : ℕ) (v : Pl F)
     (t : (AE F E)ˣ), t ∈ idelesAt E (evFin F v) → ∀ ν : Measure (vecAt F E m (evFin F v)), ν.IsAddHaarMeasure →
       ν.map (vecAtSmul (cA σ (t⁻¹ : (AE F E)ˣ).1)) = (absE F E t ^ m) • ν := by
-  first | exact @GlobalTheory.ThK.LemF.QuotInv.map_vecAtSmul_cA_inv | exact GlobalTheory.ThK.LemF.QuotInv.map_vecAtSmul_cA_inv | (intros; apply GlobalTheory.ThK.LemF.QuotInv.map_vecAtSmul_cA_inv <;> assumption)
+  exact @GlobalTheory.ThK.LemF.QuotInv.map_vecAtSmul_cA_inv

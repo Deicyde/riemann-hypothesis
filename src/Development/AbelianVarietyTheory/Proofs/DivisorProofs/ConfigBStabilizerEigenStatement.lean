@@ -24,4 +24,4 @@ theorem _root_.GlobalTheory.T.config_b_stabilizer_eigen : GlobalTheory.FunPr.Hyp
       IsNormK K (evFin F B.v₁) μK₁ ∧ IsNormE E B.v₁ μ₁ ∧ (∀ v, ψ v ∈ SB _) ∧ (∀ᶠ v in cofinite, ψ v = G₁.M'.vac v) ∧
       ψ B.v₁ = coneFin B G.M' om' B.v₁ (ev B.v₁) K μK₁ μ₁ (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) (φ B.v₁) ∧
       cone B G.M' om' e' K μK μ (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) (pure f φ) = c • pure f₁ ψ := by
-  first | exact @GlobalTheory.ConeSoB.cone_pure_euler | exact GlobalTheory.ConeSoB.cone_pure_euler | (intros; apply GlobalTheory.ConeSoB.cone_pure_euler <;> assumption)
+  exact @GlobalTheory.ConeSoB.cone_pure_euler

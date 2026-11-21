@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.flag_bundle_hermitian_line_pullback_form : ∀ (k 
     IsFlagBundle π (fun _ : Unit => E) (fun _ => 2) (fun _ => fl) → ∀ (A : HermLB q) (σ : k →+* ℂ),
     ∀ v : CxPts p σ → ℝ, GlobalTheory.CurveDens.IsCosSq ((h.pull π w).met σ) (fl.ι 1) ((Scheme.Modules.pullback π).map (flB.ι 1)) v →
     Measurable v := by
-  first | exact @GlobalTheory.CosSqMeas.measurable_cosSq | exact GlobalTheory.CosSqMeas.measurable_cosSq | (intros; apply GlobalTheory.CosSqMeas.measurable_cosSq <;> assumption)
+  exact @GlobalTheory.CosSqMeas.measurable_cosSq

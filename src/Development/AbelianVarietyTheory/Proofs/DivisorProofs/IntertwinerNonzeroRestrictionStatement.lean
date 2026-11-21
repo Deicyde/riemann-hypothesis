@@ -8,4 +8,4 @@ theorem _root_.GlobalTheory.T.intertwiner_nonzero_restriction : ∀ {H V U Y : T
     (R S : Subrepresentation ρ) (φ : S.toRepresentation.IntertwiningMap θ) (s : S.toSubmodule),
     (s : V) ∈ R.toSubmodule → φ s ≠ 0 → (∀ v ∈ R.toSubmodule, (∀ i, E i v = 0) → v = 0) →
     ∃ (S' : Subrepresentation σ) (φ' : S'.toRepresentation.IntertwiningMap θ), φ' ≠ 0 := by
-  first | exact @GlobalTheory.intertwining_peel | exact GlobalTheory.intertwining_peel | (intros; apply GlobalTheory.intertwining_peel <;> assumption)
+  exact @GlobalTheory.intertwining_peel

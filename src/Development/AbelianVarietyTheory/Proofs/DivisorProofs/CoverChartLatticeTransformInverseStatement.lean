@@ -33,4 +33,4 @@ theorem _root_.GlobalTheory.T.cover_chart_lattice_transform_inverse : ∀ {F : T
           valAt z ((Sum.elim c' (fun l => (c' l.rev)⁻¹) (finSumFinEquiv.symm i) /
             Sum.elim c (fun l => (c l.rev)⁻¹) (finSumFinEquiv.symm i) : V.G.functionFieldˣ) : V.G.functionField)) ≤
           e.w (p : AlgebraicClosure F) ^ k := by
-  first | exact @GlobalTheory.TestChange.change_tri | exact GlobalTheory.TestChange.change_tri | (intros; apply GlobalTheory.TestChange.change_tri <;> assumption)
+  exact @GlobalTheory.TestChange.change_tri

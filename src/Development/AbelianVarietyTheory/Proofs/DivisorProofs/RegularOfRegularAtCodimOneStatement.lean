@@ -11,4 +11,4 @@ theorem _root_.GlobalTheory.T.regular_of_regular_at_codim_one : ∀ (X : Scheme.
   (∀ x : X, IsIntegrallyClosed (X.presheaf.stalk x)) →
   ∀ (φ : X.functionField) (x : X),
     (∀ z : X, z ⤳ x → IsDiscreteValuationRing (X.presheaf.stalk z) → RegAt z φ) → RegAt x φ := by
-  first | exact @GlobalTheory.Hartogs.regAt_of_forall_dvr | exact GlobalTheory.Hartogs.regAt_of_forall_dvr | (intros; apply GlobalTheory.Hartogs.regAt_of_forall_dvr <;> assumption)
+  exact @GlobalTheory.Hartogs.regAt_of_forall_dvr

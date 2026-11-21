@@ -20,4 +20,4 @@ theorem _root_.GlobalTheory.T.standard_character_decompose : ∀ (F : Type) [Fie
     ∀ (x : κ → AF F) (z : κ → F), ψ (x ⬝ᵥ fun i => algebraMap F (AF F) (z i)) =
       Complex.exp (-(2 * Real.pi * Complex.I) * (GlobalTheory.VacLn.trPair F κ (fun i => evI F (x i)) (ratInf F κ z) : ℂ)) *
         ψ (pairA F 0 ((fun i => (x i).2) ⬝ᵥ ratFin F κ z)) := by
-  first | exact @GlobalTheory.PsiSplit.psi_split | exact GlobalTheory.PsiSplit.psi_split | (intros; apply GlobalTheory.PsiSplit.psi_split <;> assumption)
+  exact @GlobalTheory.PsiSplit.psi_split

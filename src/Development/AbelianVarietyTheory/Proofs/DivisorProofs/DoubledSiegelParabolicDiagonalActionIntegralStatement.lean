@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.doubledSiegelParabolic_diagonal_action_integral : 
       At (evFin F v) ((t : Matrix (Fin d) (Fin d) (AE F E)) - 1) ∧
       ∀ z ∈ GlobalTheory.InertSph.latAt W v, (t : Matrix (Fin d) (Fin d) (AE F E)) *ᵥ z ∈ GlobalTheory.InertSph.latAt W v ∧
         ((t⁻¹ : GL (Fin d) (AE F E)) : Matrix (Fin d) (Fin d) (AE F E)) *ᵥ z ∈ GlobalTheory.InertSph.latAt W v := by
-  first | exact @GlobalTheory.InertDbl.parD_diag_action | exact GlobalTheory.InertDbl.parD_diag_action | (intros; apply GlobalTheory.InertDbl.parD_diag_action <;> assumption)
+  exact @GlobalTheory.InertDbl.parD_diag_action

@@ -13,4 +13,4 @@ open GlobalTheory.Doubling (absE)
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.adele_vector_haar_exists : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [NumberField E] [Algebra F E] (d : ℕ),
     ∃ μ : @Measure (Fin d → AE F E) (borel _), @Measure.IsAddHaarMeasure _ _ _ (borel _) μ := by
-  first | exact @GlobalTheory.AdelicHaarCoord.exists_addHaar_borel | exact GlobalTheory.AdelicHaarCoord.exists_addHaar_borel | (intros; apply GlobalTheory.AdelicHaarCoord.exists_addHaar_borel <;> assumption)
+  exact @GlobalTheory.AdelicHaarCoord.exists_addHaar_borel

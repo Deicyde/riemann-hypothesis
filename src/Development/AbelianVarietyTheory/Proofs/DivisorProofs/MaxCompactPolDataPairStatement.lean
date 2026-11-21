@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.max_compact_pol_data_pair : ∀ (F E : Type) [Fiel
       ∃ K, IsMaxCpt σ (c • G.W.J.map σ) K ∧
         IsAut σ (c • G.W.J.map σ) K (fun x => G.M.I om Φ ((toGAd hσ G.W.J hc).symm x)) ∧
         IsAut σ (c • G.W.J.map σ) K (fun x => G.M'.I om' Φ' ((toGAd hσ G.W.J hc).symm x)) := by
-  first | exact @GlobalTheory.ThKAutBoth.isAut_both | exact GlobalTheory.ThKAutBoth.isAut_both | (intros; apply GlobalTheory.ThKAutBoth.isAut_both <;> assumption)
+  exact @GlobalTheory.ThKAutBoth.isAut_both

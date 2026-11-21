@@ -17,4 +17,4 @@ theorem _root_.GlobalTheory.T.adapted_models_eigen_extension : GlobalTheory.ThK.
     ∃ (y : Fin d₁ → AE F E) (b : AE F E), incM F H'.ι *ᵥ y = mat u⁻¹ *ᵥ incV F H'.y - incV F H'.y - b • incV F H'.x ∧
       ∀ Ψ ∈ schA F (Fin n × Fin d), e₀ (M.co.rho B.ψ (Matrix.vecMulVec (incV F H.x) (incV F H'.y)) (om (1, u) Ψ)) =
         M₁.co.rho B.ψ (Matrix.vecMulVec (incV F H.x) y) (e₀ (M.co.rho B.ψ (Matrix.vecMulVec (incV F H.x) (incV F H'.y)) Ψ)) := by
-  first | exact @GlobalTheory.ThK.IsoDecomp.decomp_ev | exact GlobalTheory.ThK.IsoDecomp.decomp_ev | (intros; apply GlobalTheory.ThK.IsoDecomp.decomp_ev <;> assumption)
+  exact @GlobalTheory.ThK.IsoDecomp.decomp_ev

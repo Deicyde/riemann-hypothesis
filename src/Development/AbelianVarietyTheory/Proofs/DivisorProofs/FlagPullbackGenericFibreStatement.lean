@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.flag_pullback_generic_fibre : ∀ (F : Type) [Fiel
     ∃ (X : Scheme.{0}) (_ : IsIntegral X) (ρ : X ⟶ Y) (fl' : ∀ a, Vert.Flag ((Scheme.Modules.pullback ρ).obj (N' a)) (n a)) (j : Gs ⟶ X),
       j ≫ ρ = jY ∧ IsPullback j s (ρ ≫ p) (spMap (algebraMap (𝓞 F) F)) ∧ FlagChain.IsCov p d ρ ∧
       ReciprocityTheory.ChartRestriction.G.Geo.Tor.IsNormalScheme X ∧ ∀ a, Compat ((Scheme.Modules.pullback ρ).map (u a)) ((fl a).pull ρ) (fl' a) := by
-  first | exact @GlobalTheory.FlagExtend.main | exact GlobalTheory.FlagExtend.main | (intros; apply GlobalTheory.FlagExtend.main <;> assumption)
+  exact @GlobalTheory.FlagExtend.main

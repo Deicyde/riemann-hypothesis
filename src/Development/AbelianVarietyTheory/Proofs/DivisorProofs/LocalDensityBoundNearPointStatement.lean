@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.local_density_bound_near_point : ∀ (d : ℕ) (T 
       Measure.map (fun z => GlobalTheory.LineCos.cosSq s (G (GlobalTheory.LineCos.base z)) (GlobalTheory.LineCos.fib z))
           ((volume.restrict N).withDensity fun z => ENNReal.ofReal (ρ z)) ≤
         C • volume.restrict (Set.Icc (0 : ℝ) 1) := by
-  first | exact @GlobalTheory.LineCos.exists_map_cosSq_le | exact GlobalTheory.LineCos.exists_map_cosSq_le | (intros; apply GlobalTheory.LineCos.exists_map_cosSq_le <;> assumption)
+  exact @GlobalTheory.LineCos.exists_map_cosSq_le

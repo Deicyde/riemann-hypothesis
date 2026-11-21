@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.true_geometry_row_family_value : ∀ {B : GlobalTh
           (Formalism.L2.Col.frsF I.sel (I.tup (W.P.I.tup t)) (J.A.p0 ((a.G n).s + 1) (J.ι _ γ)).1.1 P) (GlobalTheory.QTw.homOf I l Z (a.G n).s hj z))
         ((Formalism.L2.Col.frsF I.sel (I.tup (W.P.I.tup t)) (J.A.p0 ((a.G n).s + 1) (J.ι _ γ)).1.1 P).symm
           (Formalism.L2.Col.repY (J.A.p0 ((a.G n).s + 1) (J.ι _ γ)).1.2))) = c * GlobalTheory.Fam.PenLoc.penXi a n z := by
-  first | exact @GlobalTheory.Fam.PenLoc.pen_match | exact GlobalTheory.Fam.PenLoc.pen_match | (intros; apply GlobalTheory.Fam.PenLoc.pen_match <;> assumption)
+  exact @GlobalTheory.Fam.PenLoc.pen_match

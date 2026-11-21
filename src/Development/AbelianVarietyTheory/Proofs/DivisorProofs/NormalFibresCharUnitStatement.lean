@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.normal_fibres_char_unit : ∀ (N : ℕ) (M : Schem
     ∀ (K : Type) [Field K], (N : K) ≠ 0 → ∀ (W : M.Opens) (hW : IsAffineOpen W),
       IsReduced (Γ(M, W) ⊗[ℤ] K) ∧ ∀ q (hq : q ∈ minimalPrimes (Γ(M, W) ⊗[ℤ] K)),
         hW.fromSpec (PrimeSpectrum.comap (Algebra.TensorProduct.includeLeftRingHom (R := ℤ) (A := Γ(M, W)) (B := K)) ⟨q, hq.1.1⟩) ∈ V := by
-  first | exact @GlobalTheory.RealMult.fibre_tensor_reduced_minimalPrimes | exact GlobalTheory.RealMult.fibre_tensor_reduced_minimalPrimes | (intros; apply GlobalTheory.RealMult.fibre_tensor_reduced_minimalPrimes <;> assumption)
+  exact @GlobalTheory.RealMult.fibre_tensor_reduced_minimalPrimes

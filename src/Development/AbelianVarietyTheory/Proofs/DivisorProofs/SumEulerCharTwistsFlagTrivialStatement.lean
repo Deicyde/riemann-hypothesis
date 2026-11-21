@@ -10,4 +10,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Pj GlobalTheory G
 open scoped Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.sum_euler_char_twists_flag_trivial : ∀ (k : Type) [Field k] (Z : Scheme.{0}) [IsIntegral Z] [Algebra k Γ(Z, ⊤)], FiniteCohTwists k (structureModule Z) → ∀ (N : ℕ) (g : Fin N → Pic Z), FlagOfTriv g → ∀ c : Pic Z, ∑ i, chiPic k (structureModule Z) (g i + c) = (N : ℤ) * chiPic k (structureModule Z) c := by
-  first | exact @GlobalTheory.FlagChi.sum_chiPic_flag | exact GlobalTheory.FlagChi.sum_chiPic_flag | (intros; apply GlobalTheory.FlagChi.sum_chiPic_flag <;> assumption)
+  exact @GlobalTheory.FlagChi.sum_chiPic_flag

@@ -9,4 +9,4 @@ theorem _root_.GlobalTheory.T.quotient_integral_equivariant_complex : ∀ (G : T
       (∀ g : G, AEMeasurable (fun x => Φ (a x * g)) μ) → ∀ g : G, ∫⁻ x, Φ (a x * g) ∂μ = ∫⁻ x, Φ (a x) ∂μ) →
     ∀ Ψ : G → ℂ, (∀ g : G, Integrable (fun x => Ψ (a x * g)) μ) → (∀ (p : P) (g : G), Ψ ((p : G) * g) = (δ p : ℂ) * Ψ g) →
     ∀ g : G, ∫ x, Ψ (a x * g) ∂μ = ∫ x, Ψ (a x) ∂μ := by
-  first | exact @GlobalTheory.lintegral_translation_identity_to_complex | exact GlobalTheory.lintegral_translation_identity_to_complex | (intros; apply GlobalTheory.lintegral_translation_identity_to_complex <;> assumption)
+  exact @GlobalTheory.lintegral_translation_identity_to_complex

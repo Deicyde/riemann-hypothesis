@@ -17,4 +17,4 @@ theorem _root_.GlobalTheory.T.low_part_endomorphism_scalar : GlobalTheory.ThK.KP
     (R : RealMaps F a a') (Rf : FinMaps F a a'), IsMatched B G X om om' R Rf →
       ∀ T : R.Pi →ₗ[ℂ] R.Pi, KEqOn B G.M om R.p (lowPartInf B G.M R.p) T →
         ∃ c : ℂ, ∀ x ∈ lowPartInf B G.M R.p, T x = c • x := by
-  first | exact @GlobalTheory.LowKScalar.lowPart_scalar_of_kEqOn | exact GlobalTheory.LowKScalar.lowPart_scalar_of_kEqOn | (intros; apply GlobalTheory.LowKScalar.lowPart_scalar_of_kEqOn <;> assumption)
+  exact @GlobalTheory.LowKScalar.lowPart_scalar_of_kEqOn

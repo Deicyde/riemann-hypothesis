@@ -32,4 +32,4 @@ theorem _root_.GlobalTheory.T.siegel_set_line_decomposition : ∀ (F E : Type) [
         ∀ k ∈ S, ∃ (c : Fin e → ℂ) (c' : Fin e' → ℂ), (∀ j, ‖c j‖ ≤ C) ∧ (∀ j, ‖c' j‖ ≤ C) ∧
           ∀ f, GlobalTheory.UAut.IsSm σ J f → GlobalTheory.SiegelSet.lineDer γ f =
             ∑ j, c j • GlobalTheory.SiegelSet.lineDer (fun s => k⁻¹ * β j s * k) f + ∑ j, c' j • GlobalTheory.SiegelSet.lineDer (ζ j) f := by
-  first | exact @GlobalTheory.GrowthDec.dec | exact GlobalTheory.GrowthDec.dec | (intros; apply GlobalTheory.GrowthDec.dec <;> assumption)
+  exact @GlobalTheory.GrowthDec.dec

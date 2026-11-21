@@ -26,4 +26,4 @@ theorem _root_.GlobalTheory.T.riemann_data_linear_chart : ∀ (k : Type) [CommRi
         HermFrame.form ((2 : ℂ) • τ₀.map fun t => (t.im : ℂ))
           (fun a => fderiv ℂ (fun z => ev (P.A.hom ≫ p) σ W f (e z)) 0 (Pi.single a 1))
           (fun a => fderiv ℂ (fun z => ev (P.A.hom ≫ p) σ W f' (e z)) 0 (Pi.single a 1)) := by
-  first | exact @GlobalTheory.PeriodChart.dualRiemann_half_form_eq | exact GlobalTheory.PeriodChart.dualRiemann_half_form_eq | (intros; apply GlobalTheory.PeriodChart.dualRiemann_half_form_eq <;> assumption)
+  exact @GlobalTheory.PeriodChart.dualRiemann_half_form_eq

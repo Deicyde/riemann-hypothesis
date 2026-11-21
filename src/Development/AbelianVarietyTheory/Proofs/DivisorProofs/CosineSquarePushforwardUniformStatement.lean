@@ -10,4 +10,4 @@ theorem _root_.GlobalTheory.T.cosine_square_pushforward_uniform : ∀ (G : Matri
         (volume.withDensity fun x : ℂ => ENNReal.ofReal (G.det.re /
           (Real.pi * (GlobalTheory.LineCos.hform G (GlobalTheory.LineCos.lineVec s x) (GlobalTheory.LineCos.lineVec s x)).re ^ 2))) =
       volume.restrict (Set.Icc (0 : ℝ) 1) := by
-  first | exact @GlobalTheory.LineCos.FsLaw.map_cosSq_fs | exact GlobalTheory.LineCos.FsLaw.map_cosSq_fs | (intros; apply GlobalTheory.LineCos.FsLaw.map_cosSq_fs <;> assumption)
+  exact @GlobalTheory.LineCos.FsLaw.map_cosSq_fs

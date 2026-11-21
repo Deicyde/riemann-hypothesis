@@ -17,4 +17,4 @@ theorem _root_.GlobalTheory.T.constant_term_linear_continuous : ∀ (F E : Type)
         (∀ γ ∈ GlobalTheory.AdelicU.ratPts σ J, ∀ g, φ₂ (γ * g) = φ₂ g) →
         GlobalTheory.StdPar.IsCuspComp σ J X Y S K φ₁ 0 → GlobalTheory.StdPar.IsCuspComp σ J X Y S K φ₂ 0 →
         GlobalTheory.StdPar.IsCuspComp σ J X Y S K (fun g => φ₁ g - z * φ₂ g) 0 := by
-  first | exact @GlobalTheory.CuspCompZeroLin.isCuspComp_sub_zero | exact GlobalTheory.CuspCompZeroLin.isCuspComp_sub_zero | (intros; apply GlobalTheory.CuspCompZeroLin.isCuspComp_sub_zero <;> assumption)
+  exact @GlobalTheory.CuspCompZeroLin.isCuspComp_sub_zero

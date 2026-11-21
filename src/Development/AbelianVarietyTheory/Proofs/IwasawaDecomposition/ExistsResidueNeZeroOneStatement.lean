@@ -21,4 +21,4 @@ open Formalism.L2.DIV Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.L
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_residue_ne_zero_one : ∀ hL : GlobalTheory.Published.LocalLanglandsGL, AtMem hL fun _ _ _ _ w Z _ _ t _ _ c =>
   ∀ PP ∈ t.r.z.R.Pg, ∃ x : Formalism.L2.DIV.kP PP, x ≠ 0 ∧ x ≠ 1 := by
-  first | exact @GlobalTheory.ResThree.main | exact GlobalTheory.ResThree.main | (intros; apply GlobalTheory.ResThree.main <;> assumption)
+  exact @GlobalTheory.ResThree.main

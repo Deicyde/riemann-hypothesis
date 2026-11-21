@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.low_part_compact_stable : GlobalTheory.ThK.KP → 
     (B : Base F E) (a a' : ℕ) (G : Geo σ a a') (X : Chars F E) (om : Rep σ G.V G.W) (om' : Rep σ G.V' G.W)
     (R : RealMaps F a a') (Rf : FinMaps F a a'), IsMatched B G X om om' R Rf →
       KStab B G.M om R.p (lowPartInf B G.M R.p) := by
-  first | exact @GlobalTheory.IndLine.lowPartInf_kStab | exact GlobalTheory.IndLine.lowPartInf_kStab | (intros; apply GlobalTheory.IndLine.lowPartInf_kStab <;> assumption)
+  exact @GlobalTheory.IndLine.lowPartInf_kStab

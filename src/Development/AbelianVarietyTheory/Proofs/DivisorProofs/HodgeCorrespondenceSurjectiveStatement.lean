@@ -9,4 +9,4 @@ theorem _root_.GlobalTheory.T.hodge_correspondence_surjective : GlobalTheory.Cov
     IsAbelianScheme A → SmoothOfRelativeDimension g A.hom →
     ∀ (V : T.Opens) (hV : IsAffineOpen V) (c : primDR (onAff A hV)), c ∈ PrimitiveSubmodule (onAff A hV) →
       ∃ s, GlobalTheory.HodgeSub.Corr A hV s c := by
-  first | exact @GlobalTheory.HodgeSubSurj.main | exact GlobalTheory.HodgeSubSurj.main | (intros; apply GlobalTheory.HodgeSubSurj.main <;> assumption)
+  exact @GlobalTheory.HodgeSubSurj.main

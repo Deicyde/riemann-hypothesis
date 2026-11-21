@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.exists_compatible_power_series_value : ∀ (l : �
     (∀ n, HasSum (fun i => ((intToOC K (PowerSeries.coeff i G) * thetaK K (ω n) ^ i : OC l) : ℂ_[l])) (u n : ℂ_[l])) →
     ∃ y : ℕ → AK K, (∀ n, frobq K (y (n + 1)) = y n) ∧ (∀ n, thetaK K (y n) = u n) ∧
       ∀ M : ℕ, ω 0 ^ M ∣ y 0 - ∑ j ∈ Finset.range M, inO K (PowerSeries.coeff j G) * ω 0 ^ j := by
-  first | exact @GlobalTheory.FrobChainSeries.main | exact GlobalTheory.FrobChainSeries.main | (intros; apply GlobalTheory.FrobChainSeries.main <;> assumption)
+  exact @GlobalTheory.FrobChainSeries.main

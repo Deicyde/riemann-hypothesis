@@ -11,4 +11,4 @@ theorem _root_.GlobalTheory.T.exists_p_adic_arc_base : ∀ (E : Type) [Field E] 
     [CommRing O'] [IsDomain O'] [CharZero O'] (b : 𝓞 c.F →+* O') (ϖ : O'), IsArcBase O' ϖ →
     ∃ (p : ℕ) (W : ValuationSubring ℂ) (_ : p.Prime) (_ : (p : ℂ) ∈ W.nonunits) (bV : 𝓞 c.F →+* c.V W)
       (b' : c.V W →+* O'), (∀ x, ((bV x : c.V W) : c.F) = (x : c.F)) ∧ b'.comp bV = b := by
-  first | exact @GlobalTheory.ArcBaseFactor.factor | exact GlobalTheory.ArcBaseFactor.factor | (intros; apply GlobalTheory.ArcBaseFactor.factor <;> assumption)
+  exact @GlobalTheory.ArcBaseFactor.factor

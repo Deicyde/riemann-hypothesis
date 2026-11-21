@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.second_lattice_regular_at_p : ∀ {F : Type} [Fiel
       RegAt x ((P.map κ * (J.map (Int.castRingHom V.X.functionField))⁻¹ * (P.map κ).transpose) i j) ∧
       RegAt x ((J.map (Int.castRingHom V.X.functionField))⁻¹ i j) ∧ RegAt x ((n : V.X.functionField) * P.map κ i j) ∧
       RegAt x (J.map (Int.castRingHom V.X.functionField) i j) := by
-  first | exact @GlobalTheory.ConstLat.regAt_secondLat | exact GlobalTheory.ConstLat.regAt_secondLat | (intros; apply GlobalTheory.ConstLat.regAt_secondLat <;> assumption)
+  exact @GlobalTheory.ConstLat.regAt_secondLat

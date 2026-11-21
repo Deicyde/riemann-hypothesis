@@ -11,4 +11,4 @@ theorem _root_.GlobalTheory.T.flag_weight_gram_curvature : ∀ (E : Type) [Norme
     (A e : E → Matrix (Fin n) (Fin n) ℂ),
     IsPosFrame U H → IsFlagFamily Y U π A → IsUnitaryFlagFrame Y H π A e → ∀ y ∈ Y, ∀ (lam : Fin n → ℝ) (G : (ι → ℂ) → Matrix ι ι ℂ) (C : ℝ), TwoFormBound U H G (curv H) C →
       FormAbsLe (horizForm H π e lam y) (1 / (2 * Real.pi) * (∑ i, |lam i|) * C) (pullForm G π y) := by
-  first | exact @GlobalTheory.horizForm_formAbsLe | exact GlobalTheory.horizForm_formAbsLe | (intros; apply GlobalTheory.horizForm_formAbsLe <;> assumption)
+  exact @GlobalTheory.horizForm_formAbsLe

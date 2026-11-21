@@ -10,4 +10,4 @@ theorem _root_.GlobalTheory.T.morphism_extension_from_generic_point : ∀ (A R :
     (∀ a, γ (algebraMap A _ a) = algebraMap R _ (φ a)) → ∀ (Y : Scheme.{0})
     (ψ₀ : Sp (FractionRing A) ⟶ Y) (χ : Sp R ⟶ Y), jK R ≫ χ = spMap γ ≫ ψ₀ →
     ∃ ψ : Sp A ⟶ Y, jK A ≫ ψ = ψ₀ ∧ spMap φ ≫ ψ = χ := by
-  first | exact @GlobalTheory.extension_descends_of_flat | exact GlobalTheory.extension_descends_of_flat | (intros; apply GlobalTheory.extension_descends_of_flat <;> assumption)
+  exact @GlobalTheory.extension_descends_of_flat

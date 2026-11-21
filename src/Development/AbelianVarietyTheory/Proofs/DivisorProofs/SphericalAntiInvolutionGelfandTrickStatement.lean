@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.spherical_anti_involution_gelfand_trick : ∀ (F E
     ∃ θ : GlobalTheory.SphLine.locU σ G.W v → GlobalTheory.SphLine.locU σ G.W v, (∀ x y, θ (x * y) = θ y * θ x) ∧ (∀ x, θ (θ x) = x) ∧
       ∀ g, ∃ a ∈ (GlobalTheory.SphLine.locK σ G.W v).subgroupOf (GlobalTheory.SphLine.locU σ G.W v),
         ∃ b ∈ (GlobalTheory.SphLine.locK σ G.W v).subgroupOf (GlobalTheory.SphLine.locU σ G.W v), θ g = a * g * b := by
-  first | exact @GlobalTheory.SphLine.gelfand_inv | exact GlobalTheory.SphLine.gelfand_inv | (intros; apply GlobalTheory.SphLine.gelfand_inv <;> assumption)
+  exact @GlobalTheory.SphLine.gelfand_inv

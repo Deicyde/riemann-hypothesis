@@ -30,4 +30,4 @@ theorem _root_.GlobalTheory.T.latticeStabilizers_fix_vacua_fixes_pureTensor : �
     ∀ (f : GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.SInf F (Fin n × Fin d)) (φ : ∀ w : GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.Pl F, (Fin n × Fin d → Fv F w) → ℂ),
       (∀ w, φ w ∈ GlobalTheory.WeilM.SB (Fin n × Fin d → Fv F w)) → (∀ w, w ∉ S → φ w = M.vac w) →
       om (1, k) (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.pure f φ) = GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.pure f φ := by
-  first | exact @GlobalTheory.SphGlob.fixes_pure | exact GlobalTheory.SphGlob.fixes_pure | (intros; apply GlobalTheory.SphGlob.fixes_pure <;> assumption)
+  exact @GlobalTheory.SphGlob.fixes_pure

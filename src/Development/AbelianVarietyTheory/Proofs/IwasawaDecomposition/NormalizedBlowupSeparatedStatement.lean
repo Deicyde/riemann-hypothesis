@@ -8,4 +8,4 @@ open GlobalTheory.Toroidal GlobalTheory.Models GlobalTheory.LN GlobalTheory.ShFa
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.normalized_blowup_separated : ∀ (K : Type) [Field K] [NumberField K] (X X' N : Scheme.{0}) (s : X ⟶ Sp (𝓞 K)) (J : X.IdealSheafData) (b : X' ⟶ X)
     (ν : N ⟶ X'), IsProjOver s → FinalTheorems.Blowup b J → IsFinite ν → IsLocallyNoetherian N ∧ IsSeparated (ν ≫ b ≫ s) := by
-  first | exact @GlobalTheory.TorRef.blowup_finite_noeth_sep | exact GlobalTheory.TorRef.blowup_finite_noeth_sep | (intros; apply GlobalTheory.TorRef.blowup_finite_noeth_sep <;> assumption)
+  exact @GlobalTheory.TorRef.blowup_finite_noeth_sep

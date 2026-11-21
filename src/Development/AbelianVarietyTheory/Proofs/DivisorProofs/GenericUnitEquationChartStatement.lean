@@ -30,4 +30,4 @@ theorem _root_.GlobalTheory.T.generic_unit_equation_chart : ∀ (D : D7) (A : Am
         ∀ r : DV.Rt D.what₂.Tau N, (metsOf x Φ k none σ (rootEx S.Dw (DV.tauEmb D r.1) r.2)).h
             (prodPow t (rootEx S.Dw (DV.tauEmb D r.1) r.2)) (c'.finChart.symm v) =
           rootNorm N j (cW r.1) (cΩ r.1) (GW r.1 v) (GΩ r.1 v) (Zm r.1 v) r.2 := by
-  first | exact @GlobalTheory.HodgeLocGeo.RootModel.hodge_root_norm_model | exact GlobalTheory.HodgeLocGeo.RootModel.hodge_root_norm_model | (intros; apply GlobalTheory.HodgeLocGeo.RootModel.hodge_root_norm_model <;> assumption)
+  exact @GlobalTheory.HodgeLocGeo.RootModel.hodge_root_norm_model

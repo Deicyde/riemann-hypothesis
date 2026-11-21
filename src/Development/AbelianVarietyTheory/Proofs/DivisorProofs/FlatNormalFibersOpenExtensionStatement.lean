@@ -23,4 +23,4 @@ theorem _root_.GlobalTheory.T.flat_normal_fibers_open_extension : ∀ (F : Type)
     ∀ (YC : Obj F 𝔠 (Sp (R₀ ⊗[ℤ] Γ(M, W)))) (ψ : YC.A.left ⟶ Y.A.left),
       YC.IsPullBy Y (spMap (Algebra.TensorProduct.includeRight : Γ(M, W) →ₐ[ℤ] R₀ ⊗[ℤ] Γ(M, W)).toRingHom) ψ →
       ∀ (h : IsUnit ((6 : ℕ) : R₀ ⊗[ℤ] Γ(M, W))) (δ : YC.DetGen), s.val _ YC h δ = t.val _ YC h δ := by
-  first | exact @GlobalTheory.RealMult.rule_eq_on_extend_chart | exact GlobalTheory.RealMult.rule_eq_on_extend_chart | (intros; apply GlobalTheory.RealMult.rule_eq_on_extend_chart <;> assumption)
+  exact @GlobalTheory.RealMult.rule_eq_on_extend_chart

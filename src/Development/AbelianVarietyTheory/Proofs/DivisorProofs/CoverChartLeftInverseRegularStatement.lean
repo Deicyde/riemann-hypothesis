@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.cover_chart_left_inverse_regular : ∀ {F : Type} 
     AtTest V W p (fun _ e _ z yt => ⊤ ≤ yt ⁻¹ᵁ U → ∀ i j,
       e.w (valAt (z ≫ V.j) ((Um.transpose * Jx * Um) i j)) < 1) →
     ∀ x ∈ U, ¬ IsUnit (p : V.X.presheaf.stalk x) → UnitAt x (compl Um Lf Jix).det := by
-  first | exact @GlobalTheory.ConstLat.unitAt_det_compl_of_atTest | exact GlobalTheory.ConstLat.unitAt_det_compl_of_atTest | (intros; apply GlobalTheory.ConstLat.unitAt_det_compl_of_atTest <;> assumption)
+  exact @GlobalTheory.ConstLat.unitAt_det_compl_of_atTest

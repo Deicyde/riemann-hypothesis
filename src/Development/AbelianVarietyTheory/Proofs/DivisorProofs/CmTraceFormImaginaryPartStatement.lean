@@ -10,4 +10,4 @@ theorem _root_.GlobalTheory.T.cm_trace_form_imaginary_part : ∀ (E : Type) [Fie
     ∀ (n : ℕ) (e : Fin n ≃ I) (t₁ : E) (ρ : ℝ), (∀ i, φ i t₁ = -Complex.I * ((ρ / 2 : ℝ) : ℂ)) →
     ∀ (a : FR E) (x y : E), ((Algebra.trace ℚ E ((a : E) * t₁ * x * bar y) : ℚ) : ℝ) =
       (∑ j, (φ (e j) (a : E) * (ρ : ℂ)) * φ (e j) x * starRingEnd ℂ (φ (e j) y)).im := by
-  first | exact @GlobalTheory.trace_riemannForm_eq_im | exact GlobalTheory.trace_riemannForm_eq_im | (intros; apply GlobalTheory.trace_riemannForm_eq_im <;> assumption)
+  exact @GlobalTheory.trace_riemannForm_eq_im

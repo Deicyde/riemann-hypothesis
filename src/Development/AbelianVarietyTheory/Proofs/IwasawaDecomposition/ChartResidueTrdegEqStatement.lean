@@ -10,4 +10,4 @@ theorem _root_.GlobalTheory.T.chart_residue_trdeg_eq : ∀ {E : Type} [Field E] 
     (Z : Mdl Y i₀), (∀ τ k, k ≤ Dw.mult τ → k ∈ Z.ty τ) → ∀ (a : Fin Z.m) (x : Sp Γ(Z.X, (Z.U a).1)),
     @Algebra.trdeg ((Y Z.i).X.residueField ((Z.chart a ≫ Z.π) x)) ((Sp Γ(Z.X, (Z.U a).1)).residueField x) _ _
       ((Z.chart a ≫ Z.π).residueFieldMap x).hom.toAlgebra ≤ ((∑ τ : E →+* ℂ, (Dw.mult τ).choose 2 : ℕ) : Cardinal) := by
-  first | exact @GlobalTheory.LocM.FibTrdeg.trdeg_residueField_le | exact GlobalTheory.LocM.FibTrdeg.trdeg_residueField_le | (intros; apply GlobalTheory.LocM.FibTrdeg.trdeg_residueField_le <;> assumption)
+  exact @GlobalTheory.LocM.FibTrdeg.trdeg_residueField_le

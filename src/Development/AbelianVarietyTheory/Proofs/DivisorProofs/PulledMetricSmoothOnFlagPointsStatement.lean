@@ -32,4 +32,4 @@ theorem _root_.GlobalTheory.T.pulled_metric_smooth_on_flag_points : ∀ (D : D7)
       GlobalTheory.CoverNorm.Norms (h.mdl (GlobalTheory.FlagAr.setB O.Y B) c).V (comb (fun o : Option (Option (D.what₂.Tau × Fin O.N)) => o.elim (fnB ((T.M c).pull ε π ((2 : ℝ) • (g - (fun _ _ => O.Y.htDetT B c τ : (T.M c).Fun)))) hu hc)
       ((h.mdl (GlobalTheory.FlagAr.setB O.Y B) c).gens (GlobalTheory.FlagAr.setB O.Y B))) (fun o : Option (Option (D.what₂.Tau × Fin O.N)) => o.elim (1 : ℤ) fun o' => o'.elim 0 fun x => if x.1 = τ then (-1 : ℤ) else 0))
         (detFn O c B τ) (fun σ y => detLn O c B τ σ y - (gY σ y - O.Y.htDetT B c τ)) l := by
-  first | exact @GlobalTheory.FlatSecCover.norms_flat_comb | exact GlobalTheory.FlatSecCover.norms_flat_comb | (intros; apply GlobalTheory.FlatSecCover.norms_flat_comb <;> assumption)
+  exact @GlobalTheory.FlatSecCover.norms_flat_comb

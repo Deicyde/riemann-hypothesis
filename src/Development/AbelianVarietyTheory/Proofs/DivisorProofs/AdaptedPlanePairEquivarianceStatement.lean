@@ -33,4 +33,4 @@ theorem _root_.GlobalTheory.T.adapted_plane_pair_equivariance : GlobalTheory.Fun
         ∀ (z : Matrix (Fin n) (Fin d) (AE F E)), ∀ Φ ∈ schA F (Fin n × Fin d ⊕ Fin n × Fin d),
           GlobalTheory.DblSiegelX.avgL dd B.ψ (GlobalTheory.DblSiegelX.zs H) (l₁ ∘ₗ ed) μ (dd.rho B.ψ (z * (diagCols (Fin d))ᵀ) Φ) =
             GlobalTheory.DblSiegelX.avgL dd B.ψ (GlobalTheory.DblSiegelX.zs H) (l₁ ∘ₗ ed) μ Φ := by
-  first | exact @GlobalTheory.DblSiegelInv.main | exact GlobalTheory.DblSiegelInv.main | (intros; apply GlobalTheory.DblSiegelInv.main <;> assumption)
+  exact @GlobalTheory.DblSiegelInv.main

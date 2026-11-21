@@ -32,4 +32,4 @@ theorem _root_.GlobalTheory.T.k_finite_functions_compact_bound : ∀ (F E : Type
         (∃ C : ℝ, ∀ k ∈ S, ‖l.foldr GlobalTheory.SiegelSet.lineDer a k‖ ≤ C) ∧
         ∀ ζ : ℝ → GAd σ J, GlobalTheory.SiegelSet.IsRealLine σ J ζ → (∀ s, ζ s ∈ K) → ∀ k ∈ S,
           DifferentiableAt ℝ (fun t => l.foldr GlobalTheory.SiegelSet.lineDer a (k * ζ t)) 0 := by
-  first | exact @GlobalTheory.ThK.KFinCoef.bounded_differentiable_foldr_lineDer | exact GlobalTheory.ThK.KFinCoef.bounded_differentiable_foldr_lineDer | (intros; apply GlobalTheory.ThK.KFinCoef.bounded_differentiable_foldr_lineDer <;> assumption)
+  exact @GlobalTheory.ThK.KFinCoef.bounded_differentiable_foldr_lineDer

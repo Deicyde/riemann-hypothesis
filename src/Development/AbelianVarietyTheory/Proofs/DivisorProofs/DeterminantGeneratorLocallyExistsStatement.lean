@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.determinant_generator_locally_exists : ∀ (F : Ty
     (R₀ : Type) [CommRing R₀] (m : M), ∃ (W : M.Opens) (hW : IsAffineOpen W), m ∈ W ∧
       ∀ (X : Obj F 𝔠 (Sp (R₀ ⊗[ℤ] Γ(M, W)))) (φ : X.A.left ⟶ U.A.left),
         X.IsPullBy U (coefSpecMap hW R₀) φ → Nonempty X.DetGen := by
-  first | exact @GlobalTheory.RealMult.LocalGen.exists_affine_detGen | exact GlobalTheory.RealMult.LocalGen.exists_affine_detGen | (intros; apply GlobalTheory.RealMult.LocalGen.exists_affine_detGen <;> assumption)
+  exact @GlobalTheory.RealMult.LocalGen.exists_affine_detGen

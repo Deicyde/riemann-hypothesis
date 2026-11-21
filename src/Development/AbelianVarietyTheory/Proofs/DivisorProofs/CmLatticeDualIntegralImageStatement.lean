@@ -10,4 +10,4 @@ theorem _root_.GlobalTheory.T.cm_lattice_dual_integral_image : ∀ (E : Type) [F
     Submodule.span ℝ (Φ '' L) = ⊤ →
     (∀ x y : E, ∃ q : ℚ, (∑ j, (ρ : ℂ) * Φ x j * starRingEnd ℂ (Φ y j)).im = q) →
     ∀ w : Fin n → ℂ, (∀ x ∈ L, ∃ m : ℤ, (∑ j, (ρ : ℂ) * w j * starRingEnd ℂ (Φ x j)).im = m) → ∃ x : E, w = Φ x := by
-  first | exact @GlobalTheory.CxDescent.mem_range_of_int_pairing | exact GlobalTheory.CxDescent.mem_range_of_int_pairing | (intros; apply GlobalTheory.CxDescent.mem_range_of_int_pairing <;> assumption)
+  exact @GlobalTheory.CxDescent.mem_range_of_int_pairing

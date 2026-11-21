@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.frame_descends_subfield : ∀ {E : Type} [Field E]
         IsFrame t ((Subfield.inclusion hL).comp f) (spMap (Subfield.inclusion hL) ≫ y₀) uL ∧
         IsFrame t (L₀.subtype.comp f) (spMap L₀.subtype ≫ y₀) (uL.bc L.subtype) ∧
         SameFlag ty t (spMap L₀.subtype ≫ y₀) u (uL.bc L.subtype) := by
-  first | exact @GlobalTheory.FrameDescent.exists_frame_flag | exact GlobalTheory.FrameDescent.exists_frame_flag | (intros; apply GlobalTheory.FrameDescent.exists_frame_flag <;> assumption)
+  exact @GlobalTheory.FrameDescent.exists_frame_flag

@@ -10,4 +10,4 @@ theorem _root_.GlobalTheory.T.schrodinger_partial_fourier_intertwine : ∀ {V U 
       (∀ (s : U) (g : SchwartzMap V ℂ), ⇑g = GlobalTheory.ArchUniq.schrF P (Λ₁ s, Λ₂ s) ⇑f₀ →
         ℓ g = Complex.exp (2 * Real.pi * Complex.I * ((inner ℝ s ξ : ℝ) : ℂ)) * ℓ f₀) →
       ℓ f = φ ξ * ℓ f₀ := by
-  first | exact @GlobalTheory.SchrPairing.exists_multiplier | exact GlobalTheory.SchrPairing.exists_multiplier | (intros; apply GlobalTheory.SchrPairing.exists_multiplier <;> assumption)
+  exact @GlobalTheory.SchrPairing.exists_multiplier

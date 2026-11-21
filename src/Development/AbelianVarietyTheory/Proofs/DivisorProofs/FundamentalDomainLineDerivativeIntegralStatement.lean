@@ -9,4 +9,4 @@ theorem _root_.GlobalTheory.T.fundamental_domain_line_derivative_integral : ∀ 
     (∀ δ ∈ Γ, ∀ g, f (δ * g) = f g) → Continuous f → Continuous f' → IntegrableOn f D μ → IntegrableOn b D μ →
     (∀ g, HasDerivAt (fun s => f (g * γ s)) (f' g) 0) → (∀ g ∈ D, ∀ t ∈ Set.Ioo (-1 : ℝ) 1, ‖f' (g * γ t)‖ ≤ b g) →
     ∫ g in D, f' g ∂μ = 0 := by
-  first | exact @GlobalTheory.setIntegral_fundamentalDomain_deriv_eq_zero | exact GlobalTheory.setIntegral_fundamentalDomain_deriv_eq_zero | (intros; apply GlobalTheory.setIntegral_fundamentalDomain_deriv_eq_zero <;> assumption)
+  exact @GlobalTheory.setIntegral_fundamentalDomain_deriv_eq_zero

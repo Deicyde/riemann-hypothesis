@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.polynomial_data_local_expansion : ∀ (F E : Type)
         ∀ ψ₁ ∈ GlobalTheory.WeilM.SB (Fin a × Fin (a + a') → Fv F B.v₁), Acts (evFin F B.v₁) (om (1, h)) ψ ψ₁ →
           ∀ y, L j ψ₁ y = L j ψ (y * h)) ∧
       G.M.I om Φ = ∑ j, L j (φ j) := by
-  first | exact @GlobalTheory.ThKGlobLoc.exists_sum_local | exact GlobalTheory.ThKGlobLoc.exists_sum_local | (intros; apply GlobalTheory.ThKGlobLoc.exists_sum_local <;> assumption)
+  exact @GlobalTheory.ThKGlobLoc.exists_sum_local

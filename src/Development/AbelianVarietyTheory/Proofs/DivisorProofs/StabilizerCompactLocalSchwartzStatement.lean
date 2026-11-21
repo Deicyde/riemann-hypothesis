@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.stabilizer_compact_local_schwartz : GlobalTheory.F
     ∀ (K : Subgroup (UA σ G.V.J)), IsStab B K → ∀ (v : Pl F), ∀ φ ∈ SB (Fin a × Fin (a + a') → Fv F v),
       IsCompact (KAt K (evFin F v) : Set (UA σ G.V.J)) ∧
         IsLocallyConstant (fun k : KAt K (evFin F v) => locOp v (om (k.1, 1)) φ) := by
-  first | exact @GlobalTheory.KFin.kFinite | exact GlobalTheory.KFin.kFinite | (intros; apply GlobalTheory.KFin.kFinite <;> assumption)
+  exact @GlobalTheory.KFin.kFinite

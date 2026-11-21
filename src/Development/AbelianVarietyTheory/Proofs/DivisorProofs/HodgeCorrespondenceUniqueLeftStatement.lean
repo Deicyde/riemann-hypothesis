@@ -9,4 +9,4 @@ theorem _root_.GlobalTheory.T.hodge_correspondence_unique_left : GlobalTheory.Co
     IsAbelianScheme A → SmoothOfRelativeDimension g A.hom →
     ∀ (V : T.Opens) (hV : IsAffineOpen V) (s s' : Γ(GlobalTheory.IndefiniteRowSideFullHecke.ZeroSectionBase.hodge A, V)) (c : primDR (onAff A hV)),
       GlobalTheory.HodgeSub.Corr A hV s c → GlobalTheory.HodgeSub.Corr A hV s' c → s = s' := by
-  first | exact @GlobalTheory.HodgeSubInj.eq_of_corr | exact GlobalTheory.HodgeSubInj.eq_of_corr | (intros; apply GlobalTheory.HodgeSubInj.eq_of_corr <;> assumption)
+  exact @GlobalTheory.HodgeSubInj.eq_of_corr

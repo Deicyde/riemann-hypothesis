@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.exists_rational_point_swapping_first_columns : ∀
     (J : Matrix (Fin n) (Fin n) E) (r : ℕ) (X Y : Matrix (Fin n) (Fin (r + 1)) E),
     IsCMExt F E σ → IsHermND σ J → IsWittFrame σ J X Y →
     ∃ w ∈ ratPts σ J, (matHom _ σ J w).1 * adMat F (col0 Y) = adMat F (col0 X) := by
-  first | exact @GlobalTheory.EisCT.exists_ratPts_swap_col0 | exact GlobalTheory.EisCT.exists_ratPts_swap_col0 | (intros; apply GlobalTheory.EisCT.exists_ratPts_swap_col0 <;> assumption)
+  exact @GlobalTheory.EisCT.exists_ratPts_swap_col0

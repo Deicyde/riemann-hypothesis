@@ -9,4 +9,4 @@ open GlobalTheory.Cartier GlobalTheory.CxPts GlobalTheory.ProjVar
 open GlobalTheory.FlagCls
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.bijective_embB : ∀ D : D7, Function.Bijective (embB D) := by
-  first | exact @GlobalTheory.FlagCls.embB_bijective | exact GlobalTheory.FlagCls.embB_bijective | (intros; apply GlobalTheory.FlagCls.embB_bijective <;> assumption)
+  exact @GlobalTheory.FlagCls.embB_bijective

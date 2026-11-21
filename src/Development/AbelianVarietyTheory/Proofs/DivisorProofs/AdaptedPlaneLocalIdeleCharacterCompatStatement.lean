@@ -23,4 +23,4 @@ theorem _root_.GlobalTheory.T.adapted_plane_local_idele_character_compat : ∀ (
       (mat m).map (piW t) = GlobalTheory.JacBridge.adaptQ t H' * (GlobalTheory.JacBlock₂.diagFirst (e x)).1 * (GlobalTheory.JacBridge.adaptQ t H')⁻¹) ∧
     ∀ u₀ : GL (Fin d) (Fv F v), GlobalTheory.JacBlock₂.IsUnipStd u₀ → ∀ n : UA σ W.J, n ∈ UAt σ W (evFin F v) →
       (mat n).map (piW t) = GlobalTheory.JacBridge.adaptQ t H' * u₀.1 * (GlobalTheory.JacBridge.adaptQ t H')⁻¹ → n ∈ unip σ W H' := by
-  first | exact @GlobalTheory.JacBridge.Geom.adapted_basis_levi_unip | exact GlobalTheory.JacBridge.Geom.adapted_basis_levi_unip | (intros; apply GlobalTheory.JacBridge.Geom.adapted_basis_levi_unip <;> assumption)
+  exact @GlobalTheory.JacBridge.Geom.adapted_basis_levi_unip

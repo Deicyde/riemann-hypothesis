@@ -11,4 +11,4 @@ theorem _root_.GlobalTheory.T.exists_level_form_along_dvr : ∀ (E : Type) [Fiel
     ∀ (V : Type) [CommRing V] [IsDomain V] [IsLocalRing V], CDvr V → ∀ ϖ : V, Irreducible ϖ →
       ∀ (ψ : R →+* V) (gam : FractionRing R →+* FractionRing V), (∀ r, gam (algebraMap R _ r) = algebraMap V _ (ψ r)) →
       ∃ be ∈ levelForms H 1 P.D.toPre.X, FormAt P.D.toPre ψ ϖ be := by
-  first | exact @GlobalTheory.ChartForm.exists_balanced_formAt | exact GlobalTheory.ChartForm.exists_balanced_formAt | (intros; apply GlobalTheory.ChartForm.exists_balanced_formAt <;> assumption)
+  exact @GlobalTheory.ChartForm.exists_balanced_formAt

@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.local_zeta_integral_unramified : ∀ {F E : Type} 
     ∀ 𝔞 : FractionalIdeal (𝓞 E)⁰ E, 𝔞 ≠ 0 → ∀ s : ℕ, 1 ≤ s →
     ∫ l : idelesAt E (evFin F v), (if compFin F E v (l.1 : AE F E) ∈ locId v 𝔞 then
       (ν l.1 : ℂ) * ((absE F E l.1 : ℝ) : ℂ) ^ s else 0) ∂μ = unrFac ν 𝔞 (s : ℂ) v := by
-  first | exact @GlobalTheory.TateUnr.tate_unr | exact GlobalTheory.TateUnr.tate_unr | (intros; apply GlobalTheory.TateUnr.tate_unr <;> assumption)
+  exact @GlobalTheory.TateUnr.tate_unr

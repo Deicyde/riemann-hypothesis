@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.bottom_constant_of_bottom_pair : GlobalTheory.FunP
       NumbersIn D.what₂.embLL S μ₀ → ∀ (i j : Fin D.R.m) (A A' WW : HSp D) (X : Tri T A A' WW) (B B' WW₁ : HSp D)
       (Y : Tri T B B' WW₁) (c : T → ℂ), IsBottomTri W i j X → IsBottomTri W i j Y → Y.IsConst W.ψ W.θ c →
       ∃ u : T → D.what₂.LLˣ, X.IsConst W.ψ W.θ fun t => D.what₂.embLL (u t) * c t := by
-  first | exact @GlobalTheory.BotTransfer.bottom_const_transfer | exact GlobalTheory.BotTransfer.bottom_const_transfer | (intros; apply GlobalTheory.BotTransfer.bottom_const_transfer <;> assumption)
+  exact @GlobalTheory.BotTransfer.bottom_const_transfer

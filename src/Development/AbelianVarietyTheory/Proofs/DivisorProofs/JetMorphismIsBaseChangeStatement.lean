@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.jet_morphism_is_base_change : GlobalTheory.Publish
     {R : Type} [CommRing R] {I : Type} [Fintype I] {n : ℕ} (J : JetRing R I n) (X : Obj F 𝔠 (Sp R))
     (m : GrpMor (dp0 R) (𝟙 _) X.A J.κ (spMap J.π) X.A (algebraMap R J.B) (𝟙 _) (Over.Hom.left (𝟙 X.A))),
     m.IsBC := by
-  first | exact @GlobalTheory.LatJet.grpMor_isBC | exact GlobalTheory.LatJet.grpMor_isBC | (intros; apply GlobalTheory.LatJet.grpMor_isBC <;> assumption)
+  exact @GlobalTheory.LatJet.grpMor_isBC

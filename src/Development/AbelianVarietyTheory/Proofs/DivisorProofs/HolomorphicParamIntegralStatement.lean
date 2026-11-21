@@ -9,4 +9,4 @@ theorem _root_.GlobalTheory.T.holomorphic_param_integral : ∀ {α β : Type} [M
     (∀ a, DifferentiableOn ℂ (fun s => H s a) (Metric.ball s₀ r)) →
     (∀ s ∈ Metric.ball s₀ r, ∀ b a, ‖θ b a * H s a‖ ≤ M) →
     DifferentiableOn ℂ (fun s => ∫ b, ∫ a, θ b a * H s a ∂μ ∂ν) (Metric.ball s₀ r) := by
-  first | exact @GlobalTheory.differentiableOn_double_integral_of_bounded_holomorphic | exact GlobalTheory.differentiableOn_double_integral_of_bounded_holomorphic | (intros; apply GlobalTheory.differentiableOn_double_integral_of_bounded_holomorphic <;> assumption)
+  exact @GlobalTheory.differentiableOn_double_integral_of_bounded_holomorphic

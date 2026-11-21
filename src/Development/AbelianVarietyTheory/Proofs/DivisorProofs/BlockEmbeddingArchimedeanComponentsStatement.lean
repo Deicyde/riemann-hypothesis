@@ -32,4 +32,4 @@ theorem _root_.GlobalTheory.T.block_embedding_archimedean_components : ∀ (F E 
             (Formalism.UG.cT (σ : E →+* E) (GlobalTheory.BlockForms.blkCols h Yf) * J).map (inclR (F := F) w.Completion) +
           (GlobalTheory.BlockForms.blkCols h Yf).map (inclR (F := F) w.Completion) * (Formalism.UG.cT (sigR w.Completion σ) ((Matrix.GeneralLinearGroup.map (ρ w) y)⁻¹).1 - 1) *
             (Formalism.UG.cT (σ : E →+* E) (GlobalTheory.BlockForms.blkCols h Xf) * J).map (inclR (F := F) w.Completion) := by
-  first | exact @GlobalTheory.BlockForms.exists_archComp_of_isBlockEmb | exact GlobalTheory.BlockForms.exists_archComp_of_isBlockEmb | (intros; apply GlobalTheory.BlockForms.exists_archComp_of_isBlockEmb <;> assumption)
+  exact @GlobalTheory.BlockForms.exists_archComp_of_isBlockEmb

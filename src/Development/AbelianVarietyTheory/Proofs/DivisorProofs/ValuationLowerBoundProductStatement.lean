@@ -27,4 +27,4 @@ theorem _root_.GlobalTheory.T.valuation_lower_bound_product : ∀ (R : Type) [Co
       GlobalTheory.IndefiniteRowSideFullHecke.DifferentConductorValuations.val_vp R l a ≤ (ca : WithTop ℚ) → GlobalTheory.IndefiniteRowSideFullHecke.DifferentConductorValuations.val_vp R l b ≤ 0 →
       GlobalTheory.IndefiniteRowSideFullHecke.DifferentConductorValuations.val_vp R l δ = (cd : WithTop ℚ) →
       ((-(ca + cd) : ℚ) : WithTop ℚ) ≤ GlobalTheory.IndefiniteRowSideFullHecke.DifferentConductorValuations.val_vp R l ((algebraMap R (FractionRing R) (u : R)) ^ 2 / (a * (δ * b))) := by
-  first | exact @GlobalTheory.ValArith.val_sq_div_ge | exact GlobalTheory.ValArith.val_sq_div_ge | (intros; apply GlobalTheory.ValArith.val_sq_div_ge <;> assumption)
+  exact @GlobalTheory.ValArith.val_sq_div_ge

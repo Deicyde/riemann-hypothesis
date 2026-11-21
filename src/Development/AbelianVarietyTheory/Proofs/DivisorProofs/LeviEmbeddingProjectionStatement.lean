@@ -21,4 +21,4 @@ open GlobalTheory.Chamber GlobalTheory.TruncKer GlobalTheory.Cusp
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.levi_embedding_projection : ∀ (D : D7) (V : HSp D) (Φ : WittFrame V) (P : Finset (SV (wittIndex V))) (S : Finset (HeightOneSpectrum (𝓞 D.host.F))) (t : GAd D.sp.cm.sig V.gram), t ∈ Φ.levi D.sp.cm (AF D.host.F) P → embAt D.sp.cm.sig V.gram S (projAt D.sp.cm.sig V.gram S t) ∈ Φ.levi D.sp.cm (AF D.host.F) P := by
-  first | exact @GlobalTheory.LeviAt.embAt_projAt_mem_levi | exact GlobalTheory.LeviAt.embAt_projAt_mem_levi | (intros; apply GlobalTheory.LeviAt.embAt_projAt_mem_levi <;> assumption)
+  exact @GlobalTheory.LeviAt.embAt_projAt_mem_levi

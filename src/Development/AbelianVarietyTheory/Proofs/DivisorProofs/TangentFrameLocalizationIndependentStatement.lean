@@ -23,4 +23,4 @@ theorem _root_.GlobalTheory.T.tangent_frame_localization_independent : ∀ {R O 
         ∀ v : Fin n → (epsR (Localization.AtPrime p) ⟶ G'),
           (∀ i, GlobalTheory.IsVecOver (algebraMap R (Localization.AtPrime p)) ψ (w i).hom (v i)) → IsLieBasis v) →
     ∀ l : GlobalTheory.Serre.Lie a, ∃ s ∉ p, s • l ∈ Submodule.span R (Set.range w) := by
-  first | exact @GlobalTheory.LieSpanLoc.exists_smul_mem_span | exact GlobalTheory.LieSpanLoc.exists_smul_mem_span | (intros; apply GlobalTheory.LieSpanLoc.exists_smul_mem_span <;> assumption)
+  exact @GlobalTheory.LieSpanLoc.exists_smul_mem_span

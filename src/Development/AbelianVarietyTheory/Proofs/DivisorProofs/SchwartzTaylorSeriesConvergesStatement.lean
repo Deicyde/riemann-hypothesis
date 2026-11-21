@@ -8,4 +8,4 @@ theorem _root_.GlobalTheory.T.schwartz_taylor_series_converges : ∀ {V : Type} 
     (ψ : SchwartzMap V ℂ) (A ρ : ℝ), (∀ (j : ℕ) (y : V), ‖iteratedFDeriv ℝ j ψ y‖ ≤ A * ρ ^ j) →
     ∀ x : V, Tendsto (fun m : ℕ => ∑ j ∈ Finset.range (m + 1),
       ((j ! : ℝ))⁻¹ • iteratedFDeriv ℝ j ψ 0 (fun _ => x)) atTop (𝓝 (ψ x)) := by
-  first | exact @GlobalTheory.tendsto_taylor_sum_of_deriv_bound | exact GlobalTheory.tendsto_taylor_sum_of_deriv_bound | (intros; apply GlobalTheory.tendsto_taylor_sum_of_deriv_bound <;> assumption)
+  exact @GlobalTheory.tendsto_taylor_sum_of_deriv_bound

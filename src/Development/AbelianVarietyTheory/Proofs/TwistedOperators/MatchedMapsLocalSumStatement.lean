@@ -21,4 +21,4 @@ theorem _root_.GlobalTheory.T.matched_maps_local_sum : GlobalTheory.FunPr.Hypoth
         StrictMono N → (∀ i, GlobalTheory.Published.ThetaSub om v (N i)) → m ≤ L) ∧
       ∀ N : Submodule ℂ ((Fin a × Fin (a + a') → Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes.Fv F v) → ℂ), GlobalTheory.Published.ThetaSub om v N →
         N ≠ GlobalTheory.WeilM.SB _ → ∀ φ ∈ N, Rf.p v φ = 0 := by
-  first | exact @GlobalTheory.HoweSplitPlace.main | exact GlobalTheory.HoweSplitPlace.main | (intros; apply GlobalTheory.HoweSplitPlace.main <;> assumption)
+  exact @GlobalTheory.HoweSplitPlace.main

@@ -10,4 +10,4 @@ theorem _root_.GlobalTheory.T.integrable_power_norm_compact : ∀ {F E : Type} [
     (μ : Measure (idelesAt E (evFin F v))), IsNormE E v μ → ∀ (C : Set (Fv F v ⊗[F] E)), IsCompact C → ∀ z : ℕ, 1 ≤ z →
       Integrable (fun l : idelesAt E (evFin F v) =>
         C.indicator (fun _ => ((GlobalTheory.Doubling.absE F E l.1 : ℝ)) ^ z) (compFin F E v l.1)) μ := by
-  first | exact @GlobalTheory.LocTateInt.integrable_indicator_absE_pow | exact GlobalTheory.LocTateInt.integrable_indicator_absE_pow | (intros; apply GlobalTheory.LocTateInt.integrable_indicator_absE_pow <;> assumption)
+  exact @GlobalTheory.LocTateInt.integrable_indicator_absE_pow

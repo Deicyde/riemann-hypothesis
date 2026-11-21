@@ -18,4 +18,4 @@ open GlobalTheory.BoxLattice GlobalTheory.EvAdm
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.box_lattice_discrete : ∀ (F : Type) [Field F] [NumberField F] (κ : Type) [Fintype κ] (a : F),
     DiscreteTopology (boxLat F κ a) := by
-  first | exact @GlobalTheory.BoxLattice.boxLat_discrete | exact GlobalTheory.BoxLattice.boxLat_discrete | (intros; apply GlobalTheory.BoxLattice.boxLat_discrete <;> assumption)
+  exact @GlobalTheory.BoxLattice.boxLat_discrete

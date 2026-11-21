@@ -23,4 +23,4 @@ theorem _root_.GlobalTheory.T.det_lie_trivialized_by_tangent_basis : ∀ (E : Ty
     (∀ (S S' : Type) [CommRing S] [CommRing S'] (φ : S →+* S') (x : Sp S ⟶ W) (x' : Sp S' ⟶ W)
       (e : spMap φ ≫ x = x') (j : Fin d), tanPull φ e (B S x j) = B S' x' j) →
     GlobalTheory.CechPic.pull p (GlobalTheory.CechPic.cls _ hL) = 0 := by
-  first | exact @GlobalTheory.PolFin.pull_cls_detLie_eq_zero_of_frame | exact GlobalTheory.PolFin.pull_cls_detLie_eq_zero_of_frame | (intros; apply GlobalTheory.PolFin.pull_cls_detLie_eq_zero_of_frame <;> assumption)
+  exact @GlobalTheory.PolFin.pull_cls_detLie_eq_zero_of_frame

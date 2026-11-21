@@ -23,4 +23,4 @@ theorem _root_.GlobalTheory.T.fock_degree_even_map_le : GlobalTheory.ThK.KP → 
         (fockDeg G.M B.ψ B.emb (lowDegInf B G.M R.p + 2 * j)).map R.p ⊔
           Submodule.span ℂ {x : R.Pi | ∃ γ ∈ Lines σ G.W, ∃ f ∈ fockDeg G.M B.ψ B.emb (lowDegInf B G.M R.p + 2 * j),
             ∃ f₁ : SInf F (Fin a × Fin (a + a')), ActsD (evI F) (fun t => om (1, γ (Multiplicative.ofAdd t))) f f₁ ∧ x = R.p f₁} := by
-  first | exact @GlobalTheory.LieGenStep.map_fockDeg_add_two_le | exact GlobalTheory.LieGenStep.map_fockDeg_add_two_le | (intros; apply GlobalTheory.LieGenStep.map_fockDeg_add_two_le <;> assumption)
+  exact @GlobalTheory.LieGenStep.map_fockDeg_add_two_le

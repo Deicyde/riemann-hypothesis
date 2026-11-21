@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.iwasawa_quotient_integral_formula : ∀ (G : Type)
     (∀ (p : P) (g : G), U ((p : G) * g) = (δ p : ℝ≥0∞) * U g) → (∀ p : P, (p : G) ∈ K → δ p = 1) →
     ∀ Φ : G → ℝ≥0∞, (∀ (p : P) (g : G), Φ ((p : G) * g) = (δ p : ℝ≥0∞) * Φ g) →
     AEMeasurable (fun k : K => Φ (k : G)) μK → AEMeasurable Φ μG := by
-  first | exact @GlobalTheory.EquivAEMeas.aemeasurable_of_equivariant | exact GlobalTheory.EquivAEMeas.aemeasurable_of_equivariant | (intros; apply GlobalTheory.EquivAEMeas.aemeasurable_of_equivariant <;> assumption)
+  exact @GlobalTheory.EquivAEMeas.aemeasurable_of_equivariant

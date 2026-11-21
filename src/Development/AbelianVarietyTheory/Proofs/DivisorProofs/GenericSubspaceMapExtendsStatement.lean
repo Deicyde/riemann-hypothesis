@@ -20,4 +20,4 @@ theorem _root_.GlobalTheory.T.generic_subspace_map_extends : ∀ (X : Scheme.{0}
     (∀ t ∈ N, GlobalTheory.QCoh.stalkLinear u (genericPoint X) t ∈ N') →
     ∃ v : (GlobalTheory.VB.Sub.ofGeneric N).toMod ⟶ (GlobalTheory.VB.Sub.ofGeneric N').toMod,
       v ≫ (GlobalTheory.VB.Sub.ofGeneric N').incl = (GlobalTheory.VB.Sub.ofGeneric N).incl ≫ u := by
-  first | exact @GlobalTheory.VB.exists_ofGeneric_hom_of_mapsTo | exact GlobalTheory.VB.exists_ofGeneric_hom_of_mapsTo | (intros; apply GlobalTheory.VB.exists_ofGeneric_hom_of_mapsTo <;> assumption)
+  exact @GlobalTheory.VB.exists_ofGeneric_hom_of_mapsTo

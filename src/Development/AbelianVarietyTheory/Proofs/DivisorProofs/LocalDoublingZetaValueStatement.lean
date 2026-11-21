@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.local_doubling_zeta_value : GlobalTheory.FunPr.Hyp
       coef m om (tens (evFin F v) (M.vac v) ρ) g =
         (chrW χW t ϖ : ℂ) ^ (∑ j, e j) * (((qV F v : ℝ) ^ (-((d : ℝ) / 2) * ((∑ j, |e j| : ℤ) : ℝ)) : ℝ) : ℂ) *
           coef m om (tens (evFin F v) (M.vac v) ρ) 1 := by
-  first | exact @GlobalTheory.ThK.Bot.SplitCoef.coef_split | exact GlobalTheory.ThK.Bot.SplitCoef.coef_split | (intros; apply GlobalTheory.ThK.Bot.SplitCoef.coef_split <;> assumption)
+  exact @GlobalTheory.ThK.Bot.SplitCoef.coef_split

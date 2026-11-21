@@ -23,4 +23,4 @@ theorem _root_.GlobalTheory.T.conjugate_linear_tensor_module_decomposition : ∀
     ∀ M : Matrix (m ⊕ n) (m ⊕ n) R, (∀ k, f (M (Sum.inl k)) = φ₁ k (f₁ 1)) →
       (∀ k, f (M (Sum.inr k)) = φ₂ k (f₂ 1)) →
       Associated (M.det * cR M.det) (ι (g₁.det * g₂.det)) := by
-  first | exact @GlobalTheory.CMNorm.associated_det_mul_conj | exact GlobalTheory.CMNorm.associated_det_mul_conj | (intros; apply GlobalTheory.CMNorm.associated_det_mul_conj <;> assumption)
+  exact @GlobalTheory.CMNorm.associated_det_mul_conj

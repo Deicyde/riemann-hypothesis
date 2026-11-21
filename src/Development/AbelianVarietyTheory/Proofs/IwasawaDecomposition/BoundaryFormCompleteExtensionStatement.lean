@@ -17,4 +17,4 @@ theorem _root_.GlobalTheory.T.boundary_form_complete_extension : ∀ (E : Type) 
     ∀ u : SAB H (Sp T.V), SABMap u t (spMap f ≫ spMap ψ) → ∀ (P' : PELUnif (maximalIdeal T.V) u),
     ∃ r : P.D.toPre.X →ₗ[𝓞 E] P'.D.toPre.X, Function.Surjective r ∧
       ∀ y, ∃ (a : R) (b : T.V), PsiCoord P.D.toPre y a ∧ PsiCoord P'.D.toPre (r y) b ∧ Associated (f (ψ a)) b := by
-  first | exact @GlobalTheory.TraitCharRestrict.main | exact GlobalTheory.TraitCharRestrict.main | (intros; apply GlobalTheory.TraitCharRestrict.main <;> assumption)
+  exact @GlobalTheory.TraitCharRestrict.main

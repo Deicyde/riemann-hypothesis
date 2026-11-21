@@ -29,4 +29,4 @@ open GlobalTheory.RefPair
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_row_theta_module : PrN → ∀ hL : GlobalTheory.Published.LocalLanglandsGL, GlobalTheory.LiftRef.AtRows hL fun D cf rep _ _ M => ∀ (j : ℕ) (h1 : 1 ≤ j) (h2 : j ≤ D.R.m), ∃ X : RowMod D rep j, HasThetaAt D (M D.what₂.mu0 j h1 h2) X (cf.mu0 ⟨j - 1, by omega⟩) cf.eta := by
-  first | exact @GlobalTheory.RefTheta.main | exact GlobalTheory.RefTheta.main | (intros; apply GlobalTheory.RefTheta.main <;> assumption)
+  exact @GlobalTheory.RefTheta.main

@@ -12,4 +12,4 @@ open Formalism.BasicNotions.DV Formalism.MainNotions.WeightThresholdDefs GlobalT
 open CategoryTheory.Limits
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.vector_bundle_over_field_has_flag : ∀ (K : Type) [Field K] (E : (Spec (CommRingCat.of K)).Modules) (n : ℕ), GlobalTheory.VB.IsVB E n → Nonempty (Vert.Flag E n) := by
-  first | exact @GlobalTheory.Vert.Flag.nonempty_of_field | exact GlobalTheory.Vert.Flag.nonempty_of_field | (intros; apply GlobalTheory.Vert.Flag.nonempty_of_field <;> assumption)
+  exact @GlobalTheory.Vert.Flag.nonempty_of_field

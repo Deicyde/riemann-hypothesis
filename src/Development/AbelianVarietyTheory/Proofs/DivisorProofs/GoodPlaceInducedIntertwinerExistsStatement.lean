@@ -24,4 +24,4 @@ theorem _root_.GlobalTheory.T.good_place_induced_intertwiner_exists : GlobalTheo
         (mat h).map (piW t) = ((c * g * c⁻¹ : GL (Fin (a + a')) (Fv F v)) : Matrix (Fin (a + a')) (Fin (a + a')) (Fv F v)) →
         ∀ φ ∈ SB (Fin a × Fin (a + a') → Fv F v), ∀ φ₁ ∈ SB (Fin a × Fin (a + a') → Fv F v),
           Acts (evFin F v) (om (1, h)) φ φ₁ → P φ₁ = indAA (Fv F v) a a' ![chrW X.α t, chrW X.β t] g (P φ) := by
-  first | exact @GlobalTheory.ZetaCoinvSplit.zeta_coinv | exact GlobalTheory.ZetaCoinvSplit.zeta_coinv | (intros; apply GlobalTheory.ZetaCoinvSplit.zeta_coinv <;> assumption)
+  exact @GlobalTheory.ZetaCoinvSplit.zeta_coinv

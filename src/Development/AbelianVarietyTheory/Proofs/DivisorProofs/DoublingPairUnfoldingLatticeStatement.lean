@@ -32,4 +32,4 @@ theorem _root_.GlobalTheory.T.doubling_pair_unfolding_lattice : ∀ (F E : Type)
         (∀ i, f i ∈ Model.Pol ({ co := co, vac := fun _ _ => 0, μ := 0, dom := ∅ } : Model σ Xs W₂) B.ψ B.emb ∧
           g i ∈ SB (Fin n × Fin (d + d) → Af F)) ∧
         e (boxC Φ₁ Φ₂) = ∑ i, pureA F (f i) (g i) := by
-  first | exact @GlobalTheory.DblPolArch.dbl_pol | exact GlobalTheory.DblPolArch.dbl_pol | (intros; apply GlobalTheory.DblPolArch.dbl_pol <;> assumption)
+  exact @GlobalTheory.DblPolArch.dbl_pol

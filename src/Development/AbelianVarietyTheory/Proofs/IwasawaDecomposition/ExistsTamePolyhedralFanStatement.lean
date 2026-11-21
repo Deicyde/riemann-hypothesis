@@ -7,4 +7,4 @@ open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.S
 open GlobalTheory.Toroidal GlobalTheory.LocM GlobalTheory.PolFan GlobalTheory.ZM GlobalTheory.SiegelTor GlobalTheory.TorRef GlobalTheory.ShFam GlobalTheory.Models GlobalTheory.SiegLoc
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_tame_polyhedral_fan : ∀ (g : ℕ) (φ : InvFun ℤ), IsPolFan id g φ → ∃ φs : InvFun ℤ, IsPolFan id g φs ∧ IsTame φs ∧ AgreesPsd g φs φ := by
-  first | exact @GlobalTheory.PolFan.TameZ.exists_tame | exact GlobalTheory.PolFan.TameZ.exists_tame | (intros; apply GlobalTheory.PolFan.TameZ.exists_tame <;> assumption)
+  exact @GlobalTheory.PolFan.TameZ.exists_tame

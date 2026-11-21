@@ -21,4 +21,4 @@ theorem _root_.GlobalTheory.T.cm_periods_algebraic_nonzero : GlobalTheory.Publis
       (∀ (b : 𝓞 (FR E)) (β : Qb), algebraMap Qb ℂ β = φ i ((b : FR E) : E) →
         ∀ x, f (act (dp0 Qb) (𝟙 _) X₀.rm b x) = β * f x ∧ f' (act (dp0 Qb) (𝟙 _) X₀.rm b x) = β * f' x) →
       ∀ x y, f x * f' y = f y * f' x := by
-  first | exact @GlobalTheory.EigenFunctional.mul_comm_of_eigen | exact GlobalTheory.EigenFunctional.mul_comm_of_eigen | (intros; apply GlobalTheory.EigenFunctional.mul_comm_of_eigen <;> assumption)
+  exact @GlobalTheory.EigenFunctional.mul_comm_of_eigen

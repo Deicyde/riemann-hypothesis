@@ -18,4 +18,4 @@ theorem _root_.GlobalTheory.T.polarisedThetaIntegral_unfold_whittaker : ∀ (E :
     ∀ x : ℝ, 1 < x → ∫⁻ g in 𝓕₀, ‖GlobalTheory.ZEul.uInt φ φ Φ N x g‖ₑ ∂μ ≠ ⊤ → ∫⁻ g in 𝓕₀, ‖GlobalTheory.ZEul.uInt φ' φ' Φ N x g‖ₑ ∂μ ≠ ⊤ →
       IntegrableOn (GlobalTheory.ZEul.uInt φ φ' Φ N x) 𝓕₀ μ ∧
         GlobalTheory.RSJ.Zint μ 𝓕 φ φ' Φ N x = (c : ℂ) * ∫ g in 𝓕₀, GlobalTheory.ZEul.uInt φ φ' Φ N x g ∂μ := by
-  first | exact @GlobalTheory.ZUnf.zint_unfold | exact GlobalTheory.ZUnf.zint_unfold | (intros; apply GlobalTheory.ZUnf.zint_unfold <;> assumption)
+  exact @GlobalTheory.ZUnf.zint_unfold

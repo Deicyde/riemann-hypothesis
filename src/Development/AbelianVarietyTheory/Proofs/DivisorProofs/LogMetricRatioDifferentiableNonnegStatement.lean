@@ -21,4 +21,4 @@ theorem _root_.GlobalTheory.T.log_metric_ratio_differentiable_nonneg : Hypothese
       ∀ ξ : ReciprocityTheory.L2DbarEstimates.V (O.var c).dim,
         |fderiv ℝ (lnRatio (metsOf x O.Φ c none σ (O.ex ρ)) (refMet x O.Φ c σ (O.ex ρ)) ∘ ch.e.symm) (ch.e y) ξ| ≤
           C * O.met.r c σ y ^ μ * Real.exp (O.met.r c σ y / 2) * √(P.om c σ ch y ξ.ofLp) := by
-  first | exact @GlobalTheory.HodgeGradNear.abs_fderiv_lnRatio_le_near | exact GlobalTheory.HodgeGradNear.abs_fderiv_lnRatio_le_near | (intros; apply GlobalTheory.HodgeGradNear.abs_fderiv_lnRatio_le_near <;> assumption)
+  exact @GlobalTheory.HodgeGradNear.abs_fderiv_lnRatio_le_near

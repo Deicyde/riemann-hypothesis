@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.schrodinger_invariant_operator_bound : ∀ {V V₁
       ⇑g = GlobalTheory.ArchUniq.schrF P w ⇑h →
       (1 + ∑ j, |GlobalTheory.ArchUniq.omega P w (U j)|) ^ N * SchwartzMap.seminorm ℂ a n (T g) ≤
         C * (1 + ‖w‖) ^ M * (s.sup (schwartzSeminormFamily ℂ V ℂ)) h := by
-  first | exact @GlobalTheory.ArchUniq.rapidDecay_omega_of_invariant | exact GlobalTheory.ArchUniq.rapidDecay_omega_of_invariant | (intros; apply GlobalTheory.ArchUniq.rapidDecay_omega_of_invariant <;> assumption)
+  exact @GlobalTheory.ArchUniq.rapidDecay_omega_of_invariant

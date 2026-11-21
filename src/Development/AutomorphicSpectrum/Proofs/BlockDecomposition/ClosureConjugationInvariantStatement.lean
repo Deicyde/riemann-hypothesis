@@ -11,4 +11,4 @@ theorem _root_.GlobalTheory.T.closure_conjugation_invariant : ∀ {F : Type} [Fi
   ∀ s w : Pl F, ∀ a ∈ SuppAt d β {w}, ∀ c : (Q d β (AF F))ˣ,
     ((c⁻¹ : (Q d β (AF F))ˣ) : Q d β (AF F)) * a * (c : Q d β (AF F)) ∈ closure (SAQ d β s) →
     a ∈ closure (SAQ d β s) := by
-  first | exact @GlobalTheory.CompanionTheory.PlaneSA.MemConj.mem_closure_of_conj_mem | exact GlobalTheory.CompanionTheory.PlaneSA.MemConj.mem_closure_of_conj_mem | (intros; apply GlobalTheory.CompanionTheory.PlaneSA.MemConj.mem_closure_of_conj_mem <;> assumption)
+  exact @GlobalTheory.CompanionTheory.PlaneSA.MemConj.mem_closure_of_conj_mem

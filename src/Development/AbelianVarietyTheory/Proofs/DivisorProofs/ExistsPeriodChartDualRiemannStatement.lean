@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.exists_period_chart_dual_riemann : ∀ (k : Type) 
     ∃ (c : AlgChart p σ 1) (τ : V 1 → Matrix (Fin P.g) (Fin P.g) ℂ)
       (ex : Pt (V 1) P.g → CxPts (P.A.hom ≫ p) σ),
       y ∈ c.e.source ∧ Convex ℝ c.e.target ∧ IsPeriodChart h c τ ex := by
-  first | exact @GlobalTheory.PeriodChartExists.exists_periodChart | exact GlobalTheory.PeriodChartExists.exists_periodChart | (intros; apply GlobalTheory.PeriodChartExists.exists_periodChart <;> assumption)
+  exact @GlobalTheory.PeriodChartExists.exists_periodChart

@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.jet_morphism_admissible_connection : GlobalTheory.
     ∀ (m : GrpMor (dp0 R) (𝟙 _) X.A J.κ (spMap J.π) X.A (algebraMap R J.B) (𝟙 _) (Over.Hom.left (𝟙 X.A))),
     ∃ (X' : Obj F 𝔠 (Sp J.B)) (i : X.A.left ⟶ X'.A.left) (pull : X.IsPullBy X' (spMap J.π) i),
       liftFil J.κ pull.grp = Submodule.span J.B {d | ∃ x ∈ Fil X.A, IsJetElt J X N m x d} := by
-  first | exact @GlobalTheory.JetLiftMain.exists_jetLift | exact GlobalTheory.JetLiftMain.exists_jetLift | (intros; apply GlobalTheory.JetLiftMain.exists_jetLift <;> assumption)
+  exact @GlobalTheory.JetLiftMain.exists_jetLift

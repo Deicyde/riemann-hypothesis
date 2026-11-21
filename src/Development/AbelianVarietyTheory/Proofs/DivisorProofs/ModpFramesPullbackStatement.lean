@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.modp_frames_pullback : ∀ (X X' : Scheme.{0}) [Is
     GlobalTheory.FrameGlue.ModPFrames p U M c →
     GlobalTheory.FrameGlue.ModPFrames p (fun a => π ⁻¹ᵁ U a) (fun a => (M a).map (GlobalTheory.TrueGeo.SmallSec.fnMap π hπ))
       (fun a i => Units.map (GlobalTheory.TrueGeo.SmallSec.fnMap π hπ).toMonoidHom (c a i)) := by
-  first | exact @GlobalTheory.FrameGlue.modPFrames_pull | exact GlobalTheory.FrameGlue.modPFrames_pull | (intros; apply GlobalTheory.FrameGlue.modPFrames_pull <;> assumption)
+  exact @GlobalTheory.FrameGlue.modPFrames_pull

@@ -20,4 +20,4 @@ theorem _root_.GlobalTheory.T.wittFrame_line_coset_representatives : ∀ (F E : 
     ∀ z : Fin n → E, z ≠ 0 → hE σ J z z = 0 →
       ∃ t ∈ T, ∃ c : E, c ≠ 0 ∧
         (matHom _ σ J (t : GAd σ J)⁻¹).1 *ᵥ GlobalTheory.EisMidHt.adVec F (GlobalTheory.EisMidHt.firstColumn X) = GlobalTheory.EisMidHt.adVec F (c • z) := by
-  first | exact @GlobalTheory.IsoLineCarry.main | exact GlobalTheory.IsoLineCarry.main | (intros; apply GlobalTheory.IsoLineCarry.main <;> assumption)
+  exact @GlobalTheory.IsoLineCarry.main

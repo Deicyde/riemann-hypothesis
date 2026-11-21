@@ -11,4 +11,4 @@ theorem _root_.GlobalTheory.T.lubin_tate_period_theta_kernel : ∀ (l : ℕ) [Fa
       (∀ (g : ↥(GK K)) (a : ↥(OL K)) (φ : PowerSeries ↥(OL K)), (a : ↥K.1) = (χ g : ↥K.1) → IsLTEndo K π a φ →
         ∀ n : ℕ, gal K g ω - ∑ j ∈ Finset.range n, inO K (PowerSeries.coeff j φ) * ω ^ j ∈ RingHom.ker (thetaK K) ^ n) →
       ω ∉ RingHom.ker (thetaK K) ^ 2 := by
-  first | exact @GlobalTheory.LTPeriodKerSq.main | exact GlobalTheory.LTPeriodKerSq.main | (intros; apply GlobalTheory.LTPeriodKerSq.main <;> assumption)
+  exact @GlobalTheory.LTPeriodKerSq.main

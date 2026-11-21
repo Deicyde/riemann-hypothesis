@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.log_green_difference_determinant_le : HTBoundSt �
         lgOf (fl.C k) (detSym S.Dw (fun _ => false) none τ) v ε y| ≤
       if resP v ∈ T then |Real.log (ε.w (resP v)) / Real.log (resP v)| *
         (N * (Real.log (resP v) / ((resP v : ℝ) - 1) + vDiff D.host.E (resP v) * Real.log (resP v))) else 0 := by
-  first | exact @GlobalTheory.LgDiff.abs_lgOf_detSym_sub_le | exact GlobalTheory.LgDiff.abs_lgOf_detSym_sub_le | (intros; apply GlobalTheory.LgDiff.abs_lgOf_detSym_sub_le <;> assumption)
+  exact @GlobalTheory.LgDiff.abs_lgOf_detSym_sub_le

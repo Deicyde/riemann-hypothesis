@@ -18,4 +18,4 @@ theorem _root_.GlobalTheory.T.weil_invariant_functional_induction : ∀ (k : Typ
       ∀ Φ : GlobalTheory.SplitWeil.SB (Y × Matrix (Fin (n + 1)) (Fin (m + 1)) k),
         (∀ (y : Y) (X : Matrix (Fin (n + 1)) (Fin (m + 1)) k), X 0 = 0 → (Φ : Y × Matrix (Fin (n + 1)) (Fin (m + 1)) k → ℂ) (y, X) = 0) →
         L Φ = 0 := by
-  first | exact @GlobalTheory.RowCut.eq_zero_of_row_vanish | exact GlobalTheory.RowCut.eq_zero_of_row_vanish | (intros; apply GlobalTheory.RowCut.eq_zero_of_row_vanish <;> assumption)
+  exact @GlobalTheory.RowCut.eq_zero_of_row_vanish
