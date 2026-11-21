@@ -108,6 +108,31 @@ hypothesis of this local result. [Lean verification](SignedSignal.lean) ·
 
 With the project and Mathlib caches installed, run `lake env lean verification/SignedSignal.lean`.
 
+## A conductor-one reduction of ordinary RH
+
+Principia's collaborative RH project found the following specialization of Alpöge's
+argument to the trivial Dirichlet character. The theorem
+`Principia.Ordinary.ConductorOneRH.rh` concludes Mathlib's `RiemannHypothesis`
+from three explicit inputs.
+
+1. Weber's odd-class-number theorem for the cyclotomic fields of 2-power conductor.
+2. A uniform polynomial bound on the odd-prime cohomology of the admissible
+   principal hosts. The relevant summand is the eigenspace of complex conjugation
+   with eigenvalue $(-1)^e$ at twist $e$. Its finiteness and the bound are stated in `Height`.
+3. A construction taking a principal host at window exponent $3/2$ to a connected
+   family for the same character. Its precise type is the last argument of `rh`.
+
+The second and third inputs remain open in this reduction. At conductor one the
+base degree is one, so the adjustable term in the archive's minus-part estimate
+vanishes. Weber supplies the dyadic rank bound, and the connected-family comparison
+applies directly to the L-function modulo one. [Lean source](OrdinaryRH.lean) ·
+[Principia research notes](https://principia-math.com/projects/d16ab288ed353bc5b10e292ace0ddbc1/notes).
+
+The file has 552 lines including imports and axiom reports. Its 33 direct imports
+reach 3,857 submitted modules, in addition to Mathlib. With the caches restored,
+run `lake env lean -j1 verification/OrdinaryRH.lean`. The five axiom reports
+list `propext`, `Classical.choice`, and `Quot.sound`.
+
 ## Dependencies
 
 Each pin in `lake-manifest.json` was compared with its repository on GitHub.
